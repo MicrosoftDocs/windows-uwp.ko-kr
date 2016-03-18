@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "ab2ee048f4f65fcbe4f52d5138d2554747d29c73",
+  "LastProcessedCommit": "f2f8c66022803c418a3bda4b2f74189973d4edf3",
   "LastTranslatedCommit": null,
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -47270,6 +47270,34 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.ko-kr.xlf",
       "HandoffFileCommit": "47aa128cb61231167599ef6a86f7cb5dea5994ef",
       "HandoffDateTime": "2016-03-17T21:23:35.2411178Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "fd6dae54e3f57d2fd13663f70c9c9f7223783660": {
+      "FileHash": "fd6dae54e3f57d2fd13663f70c9c9f7223783660",
+      "SourceFileCommit": "f2f8c66022803c418a3bda4b2f74189973d4edf3",
+      "SourceFilePath": "windows-apps-src\\TOC.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "FilePathList": [
+        "windows-apps-src\\TOC.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf",
+      "HandoffFileCommit": "64f23b52b5ceac373909f136bff3d787b24f9558",
+      "HandoffDateTime": "2016-03-18T19:25:26.6818282Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
