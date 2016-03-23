@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1939)
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/70439cad75e13d6345f3afadc1e457ceca79b2eb/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#79ebf52bc42f2afb7d367e24d44a98439d06b8292059)
+ [windows-apps-src\audio-video-camera\audio-device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/d8e1e309b88f51a420eb9a4359081f354a8c3486/windows-apps-src/audio-video-camera/audio-device-information-properties.md) | HandedOffSuccess | [Details](#b01b83b61995d55cafc7918a1ae0183ff50124d6125)
+ [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/d8e1e309b88f51a420eb9a4359081f354a8c3486/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#cff85c5a2446c6c16faba670ad43135a8be6afc71939)
 
 ## Item Details
-##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1939'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
+##### <a name='b01b83b61995d55cafc7918a1ae0183ff50124d6125'></a> Source: [windows-apps-src\audio-video-camera\audio-device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/d8e1e309b88f51a420eb9a4359081f354a8c3486/windows-apps-src/audio-video-camera/audio-device-information-properties.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/102a667006448a54af3e30d8b5bdf29a4fbe4815/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-03-23 19:41:58
+* Handoff File: [audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/aeb4c0a6f199689ead5ee2955177fd29574bdd59/ol-handoff/Microsoft/windows-apps.ko-kr/master/audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf)
+* Handoff Datetime: 2016-03-23 23:10:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='79ebf52bc42f2afb7d367e24d44a98439d06b8292059'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/70439cad75e13d6345f3afadc1e457ceca79b2eb/windows-apps-src/gaming/e2e.md)
+##### <a name='cff85c5a2446c6c16faba670ad43135a8be6afc71939'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/d8e1e309b88f51a420eb9a4359081f354a8c3486/windows-apps-src/devices-sensors/3d-print-from-app.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/102a667006448a54af3e30d8b5bdf29a4fbe4815/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
-* Handoff Datetime: 2016-03-23 19:41:58
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/aeb4c0a6f199689ead5ee2955177fd29574bdd59/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handoff Datetime: 2016-03-23 23:10:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
