@@ -1,19 +1,32 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/1f2fb14a5f727d1ea426f9d9d4c9a720b46a37ee/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#cff85c5a2446c6c16faba670ad43135a8be6afc71901)
+ [windows-apps-src\controls-and-patterns\media-playback.md](https://github.com/Microsoft/windows-apps/blob/5726d0be9de8efcee29077284a8976dcb8c72c2d/windows-apps-src/controls-and-patterns/media-playback.md) | HandedOffSuccess | [Details](#8dcaf9b6ef396a551e2f84faeccc95f008e1340f1793)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1902)
 
 ## Item Details
-##### <a name='cff85c5a2446c6c16faba670ad43135a8be6afc71901'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/1f2fb14a5f727d1ea426f9d9d4c9a720b46a37ee/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='8dcaf9b6ef396a551e2f84faeccc95f008e1340f1793'></a> Source: [windows-apps-src\controls-and-patterns\media-playback.md](https://github.com/Microsoft/windows-apps/blob/5726d0be9de8efcee29077284a8976dcb8c72c2d/windows-apps-src/controls-and-patterns/media-playback.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b6a0c2311c5376d5637d3f836cbcdfb1e6df7269/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-03-24 01:39:23
+* Handoff File: [media-playback.3001f92351099634b42aa54598e15a2f9957d9dd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/6fae62d6170e0e21484d37a14a92294278ab52a3/ol-handoff/Microsoft/windows-apps.ko-kr/master/media-playback.3001f92351099634b42aa54598e15a2f9957d9dd.ko-kr.xlf)
+* Handoff Datetime: 2016-03-24 17:43:12
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1902'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/6fae62d6170e0e21484d37a14a92294278ab52a3/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handoff Datetime: 2016-03-24 17:43:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
