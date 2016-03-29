@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e860cf24e4756139f4bc6ef52b4a4a4ba6155048/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#cff85c5a2446c6c16faba670ad43135a8be6afc71926)
- [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps/blob/e860cf24e4756139f4bc6ef52b4a4a4ba6155048/windows-apps-src/maps-and-location/get-location.md) | HandedOffSuccess | [Details](#787989c37f45df3fe5f452e8bcf81feaa8dacaea3103)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1927)
+ [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/0d22828981ebef279bfa779994a16021eade6b8b/windows-apps-src/publish/package-flights.md) | HandedOffSuccess | [Details](#32d8bda5bf7b7f3e384dd9ecf0742740fa62754b3344)
 
 ## Item Details
-##### <a name='cff85c5a2446c6c16faba670ad43135a8be6afc71926'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e860cf24e4756139f4bc6ef52b4a4a4ba6155048/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1927'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/1a200e72e40b8f6b864e5c664b479f83ba9f43bc/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-03-29 19:14:57
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c41a4ef7cc467805a9f3624b8cf67a49bc2ac889/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handoff Datetime: 2016-03-29 19:45:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='787989c37f45df3fe5f452e8bcf81feaa8dacaea3103'></a> Source: [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps/blob/e860cf24e4756139f4bc6ef52b4a4a4ba6155048/windows-apps-src/maps-and-location/get-location.md)
+##### <a name='32d8bda5bf7b7f3e384dd9ecf0742740fa62754b3344'></a> Source: [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/0d22828981ebef279bfa779994a16021eade6b8b/windows-apps-src/publish/package-flights.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/1a200e72e40b8f6b864e5c664b479f83ba9f43bc/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-location.0207e7bc18a4623b2c1141391e7792506f51e45b.ko-kr.xlf)
-* Handoff Datetime: 2016-03-29 19:14:57
+* Handoff File: [package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c41a4ef7cc467805a9f3624b8cf67a49bc2ac889/ol-handoff/Microsoft/windows-apps.ko-kr/master/package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.ko-kr.xlf)
+* Handoff Datetime: 2016-03-29 19:45:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
