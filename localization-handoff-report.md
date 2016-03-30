@@ -1,20 +1,21 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/9c235a689755da283034dc48109a307df4f5bf64/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#cff85c5a2446c6c16faba670ad43135a8be6afc71927)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/9c235a689755da283034dc48109a307df4f5bf64/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#f5e5e6c34dd40d43d690c5c819f3542e66583ff53602)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1928)
+ [windows-apps-src\home.md](https://github.com/Microsoft/windows-apps/blob/e58e04e3e7163763d702805de0045c55e0e6bab9/windows-apps-src/home.md) | HandedOffSuccess | [Details](#5d0cca643c26458165c388215d34eec76dfe8cf62553)
+ [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps/blob/e58e04e3e7163763d702805de0045c55e0e6bab9/windows-apps-src/index.md) | HandedOffSuccess | [Details](#a6d8e074c3ba464be3cb55765bb9783bb681cffe2564)
 
 ## Item Details
-##### <a name='cff85c5a2446c6c16faba670ad43135a8be6afc71927'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/9c235a689755da283034dc48109a307df4f5bf64/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1928'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/afff7c44842aac018fe56cb3c4da5f5bf46435b0/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-03-30 16:49:06
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7993c8990c4a493a3205a7881e701628d168a040/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handoff Datetime: 2016-03-30 20:19:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,11 +23,23 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f5e5e6c34dd40d43d690c5c819f3542e66583ff53602'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/9c235a689755da283034dc48109a307df4f5bf64/windows-apps-src/TOC.md)
+##### <a name='5d0cca643c26458165c388215d34eec76dfe8cf62553'></a> Source: [windows-apps-src\home.md](https://github.com/Microsoft/windows-apps/blob/e58e04e3e7163763d702805de0045c55e0e6bab9/windows-apps-src/home.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/afff7c44842aac018fe56cb3c4da5f5bf46435b0/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-03-30 16:49:06
+* Handoff File: [home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7993c8990c4a493a3205a7881e701628d168a040/ol-handoff/Microsoft/windows-apps.ko-kr/master/home.c2e75b5d0f1c7d5d476b0f47240addd323d5103c.ko-kr.xlf)
+* Handoff Datetime: 2016-03-30 20:19:06
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='a6d8e074c3ba464be3cb55765bb9783bb681cffe2564'></a> Source: [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps/blob/e58e04e3e7163763d702805de0045c55e0e6bab9/windows-apps-src/index.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7993c8990c4a493a3205a7881e701628d168a040/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf)
+* Handoff Datetime: 2016-03-30 20:19:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
