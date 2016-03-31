@@ -1,45 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/bc7b9ace2749f047ecf9f3429103abf30e09b1cf/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#11f140741fd89bb21f453be33aff87057b6455391927)
- [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1928)
- [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/bc7b9ace2749f047ecf9f3429103abf30e09b1cf/windows-apps-src/devices-sensors/generate-3mf.md) | HandedOffSuccess | [Details](#c7ace72ad2acf1b8041a2171968d9b98dec3b95c1965)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/40b765df53bfa140e6c2d56a6e4e6714728aafad/windows-apps-src/xbox-apps/known-issues.md) | HandedOffSuccess | [Details](#e1caf0c44620d9054ea18bc4d86155d7832965203699)
 
 ## Item Details
-##### <a name='11f140741fd89bb21f453be33aff87057b6455391927'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/bc7b9ace2749f047ecf9f3429103abf30e09b1cf/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='e1caf0c44620d9054ea18bc4d86155d7832965203699'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/40b765df53bfa140e6c2d56a6e4e6714728aafad/windows-apps-src/xbox-apps/known-issues.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2941b49b027d45339a0428c3c71e5d7a1096e7c5/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf)
-* Handoff Datetime: 2016-03-31 21:21:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1928'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2941b49b027d45339a0428c3c71e5d7a1096e7c5/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-03-31 21:21:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='c7ace72ad2acf1b8041a2171968d9b98dec3b95c1965'></a> Source: [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/bc7b9ace2749f047ecf9f3429103abf30e09b1cf/windows-apps-src/devices-sensors/generate-3mf.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2941b49b027d45339a0428c3c71e5d7a1096e7c5/ol-handoff/Microsoft/windows-apps.ko-kr/master/generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf)
-* Handoff Datetime: 2016-03-31 21:21:04
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b74adfd0e64c39097ff2a3054d4f48ab01674e52/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Handoff Datetime: 2016-03-31 21:51:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
