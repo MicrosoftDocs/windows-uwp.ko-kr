@@ -1,19 +1,45 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\create-app-descriptions.md](https://github.com/Microsoft/windows-apps/blob/1b2d564edee79b0ac4807519a8458e7c5d840bff/windows-apps-src/publish/create-app-descriptions.md) | HandedOffSuccess | [Details](#77c61acd49e41ed3d7edb02318fdf971b5afcb763354)
+ [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/debug-test-perf/device-portal-api-core.md) | HandedOffSuccess | [Details](#f3dbd46f0c5ef656a76065845704d5c5e36971041858)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#45051cc1731c1b1b2a48be53f4df7c7a2b38772f3603)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/xbox-apps/known-issues.md) | HandedOffSuccess | [Details](#2dd21ced402c1e0c10425fc10d67a700b241376f3699)
 
 ## Item Details
-##### <a name='77c61acd49e41ed3d7edb02318fdf971b5afcb763354'></a> Source: [windows-apps-src\publish\create-app-descriptions.md](https://github.com/Microsoft/windows-apps/blob/1b2d564edee79b0ac4807519a8458e7c5d840bff/windows-apps-src/publish/create-app-descriptions.md)
+##### <a name='f3dbd46f0c5ef656a76065845704d5c5e36971041858'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/debug-test-perf/device-portal-api-core.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-app-descriptions.242ecb1953f0e70d44ab6177552a1db70ce3b29f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/01ecc7760272857331f83878743ebea8a1b8aa57/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-app-descriptions.242ecb1953f0e70d44ab6177552a1db70ce3b29f.ko-kr.xlf)
-* Handoff Datetime: 2016-04-01 19:48:59
+* Handoff File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/38d2afdde20c2ffd241d9024dd1aa93adcd1dfd6/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf)
+* Handoff Datetime: 2016-04-01 21:51:05
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='45051cc1731c1b1b2a48be53f4df7c7a2b38772f3603'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/38d2afdde20c2ffd241d9024dd1aa93adcd1dfd6/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Handoff Datetime: 2016-04-01 21:51:05
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='2dd21ced402c1e0c10425fc10d67a700b241376f3699'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/0189cf2891134aa2915f163bb8f769b845753c23/windows-apps-src/xbox-apps/known-issues.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/38d2afdde20c2ffd241d9024dd1aa93adcd1dfd6/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Handoff Datetime: 2016-04-01 21:51:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

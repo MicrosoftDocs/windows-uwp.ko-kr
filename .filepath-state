@@ -4853,6 +4853,9 @@
   "f418ec9cfe9f8f26b6c74e5b5ae42098f0e4f9cf": [
     "windows-apps-src\\threading-async\\use-a-timer-to-submit-a-work-item.md"
   ],
+  "45051cc1731c1b1b2a48be53f4df7c7a2b38772f": [
+    "windows-apps-src\\TOC.md"
+  ],
   "f5e5e6c34dd40d43d690c5c819f3542e66583ff5": [
     "windows-apps-src\\TOC.md"
   ],
@@ -5496,6 +5499,9 @@
   "40df2f4ef7b188f55666f22650bc99cfb5862c46": [
     "windows-apps-src\\debug-test-perf\\device-portal.md"
   ],
+  "f3dbd46f0c5ef656a76065845704d5c5e3697104": [
+    "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
+  ],
   "4ca691115f64fec0d84f181e2439fc176c0c7e76": [
     "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
   ],
@@ -5885,6 +5891,9 @@
   ],
   "e5d8c55bfd4baf52e06ad3f46034e7e47eda17b7": [
     "windows-apps-src\\xbox-apps\\introduction-to-xbox-tools.md"
+  ],
+  "2dd21ced402c1e0c10425fc10d67a700b241376f": [
+    "windows-apps-src\\xbox-apps\\known-issues.md"
   ],
   "236ad62b6b114b04f8a23c1d75513f55f4509d05": [
     "windows-apps-src\\xbox-apps\\known-issues.md"
