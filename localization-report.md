@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 3705
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 1881
+[ Handoff Success Files ](#handoff-success-list)| 1880
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 1824
+[ Ignored Files ](#ignored-list)| 1825
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -1893,7 +1893,6 @@
  [windows-apps-src\xbox-apps\images\windowsdeviceportal_2.png](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/xbox-apps/images/windowsdeviceportal_2.png) | HandedOffSuccess | [Details](#72706a1901d7b8fcd3ef265d5d230da44d9398003695)
  [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps/blob/fb3671f7366eadf71151f5783bd3f50ab2b45511/windows-apps-src/xbox-apps/index.md) | HandedOffSuccess | [Details](#6ef95bc227725a0a8962a77e77aab8e10491cd7e3697)
  [windows-apps-src\xbox-apps\introduction-to-xbox-tools.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/xbox-apps/introduction-to-xbox-tools.md) | HandedOffSuccess | [Details](#e5d8c55bfd4baf52e06ad3f46034e7e47eda17b73698)
- [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/40b765df53bfa140e6c2d56a6e4e6714728aafad/windows-apps-src/xbox-apps/known-issues.md) | HandedOffSuccess | [Details](#e1caf0c44620d9054ea18bc4d86155d7832965203699)
  [windows-apps-src\xbox-apps\multi-user-applications.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/xbox-apps/multi-user-applications.md) | HandedOffSuccess | [Details](#3b49b485a2ea927f9f7b9bbabaab8da8bb6e4d733700)
  [windows-apps-src\xbox-apps\samples.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/xbox-apps/samples.md) | HandedOffSuccess | [Details](#fcfaa3faadc8ea788ab2863660b0b33fdcafece73703)
  [windows-apps-src\xbox-apps\samples-xaml-dev.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/xbox-apps/samples-xaml-dev.md) | HandedOffSuccess | [Details](#2db012c2b445b296300559f90ffdf840799e8f1e3701)
@@ -3737,6 +3736,7 @@
  [windows-apps-src\xbox-apps\images\vs_universal1.jpg](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/xbox-apps/images/vs_universal1.jpg) | Ignored | [Details](#793e593f7616bf637ebbf1fef781cf55bfbe79e43690)
  [windows-apps-src\xbox-apps\images\wdp-xbox.png](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/xbox-apps/images/wdp-xbox.png) | Ignored | [Details](#59a6c0f0321fdb65c7cc47eb5f25e38ec7d926463693)
  [windows-apps-src\xbox-apps\images\xboxone-modes.jpg](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/xbox-apps/images/xboxone-modes.jpg) | Ignored | [Details](#071dde50c1a424ab68cf7b47eb2cfddae30f9ee13696)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/xbox-apps/known-issues.md) | Ignored | [Details](#236ad62b6b114b04f8a23c1d75513f55f4509d053699)
 
 ## Item Details
 ##### <a name='cbed467678cc7243e97f7f2a055e1c090b8625be0'></a> Source: [.gitignore](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/.gitignore)
@@ -49313,12 +49313,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e1caf0c44620d9054ea18bc4d86155d7832965203699'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/40b765df53bfa140e6c2d56a6e4e6714728aafad/windows-apps-src/xbox-apps/known-issues.md)
-* Status: HandedOffSuccess
+##### <a name='236ad62b6b114b04f8a23c1d75513f55f4509d053699'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/xbox-apps/known-issues.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b74adfd0e64c39097ff2a3054d4f48ab01674e52/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
-* Handoff Datetime: 2016-03-31 21:51:54
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
