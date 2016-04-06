@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 3733
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 1908
+[ Handoff Success Files ](#handoff-success-list)| 1907
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 1825
+[ Ignored Files ](#ignored-list)| 1826
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -643,7 +643,6 @@
  [windows-apps-src\controls-and-patterns\lists.md](https://github.com/Microsoft/windows-apps/blob/e7ac89968b0549459a946e532062555b6de8006a/windows-apps-src/controls-and-patterns/lists.md) | HandedOffSuccess | [Details](#204b33ef3f9e1587695a0406f241cb8ea488feed1820)
  [windows-apps-src\controls-and-patterns\master-details.md](https://github.com/Microsoft/windows-apps/blob/2b275fea01db21850ec5245deb67a479422dee6e/windows-apps-src/controls-and-patterns/master-details.md) | HandedOffSuccess | [Details](#5fe2f4cf574c0d592b2c7fdc179c7c5d97f62a031821)
  [windows-apps-src\controls-and-patterns\media-playback.md](https://github.com/Microsoft/windows-apps/blob/5726d0be9de8efcee29077284a8976dcb8c72c2d/windows-apps-src/controls-and-patterns/media-playback.md) | HandedOffSuccess | [Details](#8dcaf9b6ef396a551e2f84faeccc95f008e1340f1822)
- [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/8603569e780b9804d116f7e3151a72b2c4d627a8/windows-apps-src/controls-and-patterns/nav-pane.md) | HandedOffSuccess | [Details](#3d64d5496d25a525a7c49b848482db9d84aa73df1823)
  [windows-apps-src\controls-and-patterns\password-box.md](https://github.com/Microsoft/windows-apps/blob/2b275fea01db21850ec5245deb67a479422dee6e/windows-apps-src/controls-and-patterns/password-box.md) | HandedOffSuccess | [Details](#223b952d17c321159b7e97d9acc5da38ee1499f91824)
  [windows-apps-src\controls-and-patterns\progress-controls.md](https://github.com/Microsoft/windows-apps/blob/e7ac89968b0549459a946e532062555b6de8006a/windows-apps-src/controls-and-patterns/progress-controls.md) | HandedOffSuccess | [Details](#48ac2285275f9685dd67b187fe8b852beec006091825)
  [windows-apps-src\controls-and-patterns\radio-button.md](https://github.com/Microsoft/windows-apps/blob/e7ac89968b0549459a946e532062555b6de8006a/windows-apps-src/controls-and-patterns/radio-button.md) | HandedOffSuccess | [Details](#1d14ed97fd7f7bdb6adc312177553187e507fd2d1826)
@@ -3138,6 +3137,7 @@
  [windows-apps-src\controls-and-patterns\images\zoom.png](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/controls-and-patterns/images/zoom.png) | Ignored | [Details](#bbf8fb980b617de95ddb9a8ef7995e2023ed82541816)
  [windows-apps-src\controls-and-patterns\images\zoomin.png](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/controls-and-patterns/images/zoomin.png) | Ignored | [Details](#1f51b418666450fb832bdfd52bb79153e7f1b6b41817)
  [windows-apps-src\controls-and-patterns\images\zoomout.png](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/controls-and-patterns/images/zoomout.png) | Ignored | [Details](#10964baff2bb53bf96ce2b220239d2322ac7a5941818)
+ [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/controls-and-patterns/nav-pane.md) | Ignored | [Details](#1fa2c14aa52fa433587d8d9af21c75cc78148edb1823)
  [windows-apps-src\devices-sensors\code\.vs\3DPrintHowTo\v14\.suo](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/devices-sensors/code/.vs/3DPrintHowTo/v14/.suo) | Ignored | [Details](#11db3734297eb69b8104de98fa131ee5ac8447e71962)
  [windows-apps-src\devices-sensors\code\3DPrintHowTo.sln](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/devices-sensors/code/3DPrintHowTo.sln) | Ignored | [Details](#3de61ed0f356e89cc1da5a9f4ee4f41f0d54bb8d1963)
  [windows-apps-src\devices-sensors\code\3dprinthowto\cs\3DPrintHowTo.csproj](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/devices-sensors/code/3dprinthowto/cs/3DPrintHowTo.csproj) | Ignored | [Details](#e91c0b71f49e00d1c193291492bb469b70a041831964)
@@ -26182,12 +26182,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3d64d5496d25a525a7c49b848482db9d84aa73df1823'></a> Source: [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/8603569e780b9804d116f7e3151a72b2c4d627a8/windows-apps-src/controls-and-patterns/nav-pane.md)
-* Status: HandedOffSuccess
+##### <a name='1fa2c14aa52fa433587d8d9af21c75cc78148edb1823'></a> Source: [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/f5c6bac498de9d93f2513b532b0ecc2c6fa7a7a9/windows-apps-src/controls-and-patterns/nav-pane.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/455e810732ba82ddedaa883cd201aab54d0ec976/ol-handoff/Microsoft/windows-apps.ko-kr/master/nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.ko-kr.xlf)
-* Handoff Datetime: 2016-03-24 01:13:21
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
