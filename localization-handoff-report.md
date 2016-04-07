@@ -1,58 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\opening-a-developer-account.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/opening-a-developer-account.md) | HandedOffSuccess | [Details](#6cfa07e5c6adea8bedaf0f9ab56848f439df5b1d3414)
- [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/pubcenter-dev-center-integration.md) | HandedOffSuccess | [Details](#0d1790d80d2e3ed97b41f07cbc138758499315653419)
- [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md) | HandedOffSuccess | [Details](#47f789cc54c1ff53e91891ec3745769dcf82493e3420)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#0db23c440d5f5d73731979ae38fb3aefbe49ded83632)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/02be8dc1f691685cab98f416226081dbd59a9afd/windows-apps-src/xbox-apps/known-issues.md) | HandedOffSuccess | [Details](#e4589c61507b7404531d584388f4162bb3f356363728)
 
 ## Item Details
-##### <a name='6cfa07e5c6adea8bedaf0f9ab56848f439df5b1d3414'></a> Source: [windows-apps-src\publish\opening-a-developer-account.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/opening-a-developer-account.md)
+##### <a name='e4589c61507b7404531d584388f4162bb3f356363728'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/02be8dc1f691685cab98f416226081dbd59a9afd/windows-apps-src/xbox-apps/known-issues.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [opening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/04585688f882580ce1f0741efd782f1bccbfaaac/ol-handoff/Microsoft/windows-apps.ko-kr/master/opening-a-developer-account.e6ad57f5ecc4903fa66445564d8d99a243bd1db7.ko-kr.xlf)
-* Handoff Datetime: 2016-04-07 21:09:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='0d1790d80d2e3ed97b41f07cbc138758499315653419'></a> Source: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/pubcenter-dev-center-integration.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/04585688f882580ce1f0741efd782f1bccbfaaac/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf)
-* Handoff Datetime: 2016-04-07 21:09:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='47f789cc54c1ff53e91891ec3745769dcf82493e3420'></a> Source: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/04585688f882580ce1f0741efd782f1bccbfaaac/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf)
-* Handoff Datetime: 2016-04-07 21:09:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='0db23c440d5f5d73731979ae38fb3aefbe49ded83632'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/64e96cffef27a41f14c7f31dc79c8430656a8328/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/04585688f882580ce1f0741efd782f1bccbfaaac/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-04-07 21:09:57
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d3520183b09c924eb4c7407fbfcbecc0a406b745/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Handoff Datetime: 2016-04-07 22:06:37
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
