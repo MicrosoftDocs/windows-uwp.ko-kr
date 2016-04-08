@@ -5559,6 +5559,9 @@
   "390c5083a3f9b257512a3d7c483d16f8a1bb5138": [
     "windows-apps-src\\style\\images\\themes-light-list.png"
   ],
+  "20b909ee22b8dc714579c1c0a8d28f83099a0d1d": [
+    "windows-apps-src\\debug-test-perf\\device-portal.md"
+  ],
   "40df2f4ef7b188f55666f22650bc99cfb5862c46": [
     "windows-apps-src\\debug-test-perf\\device-portal.md"
   ],
@@ -5579,6 +5582,9 @@
   ],
   "5e214f9c0f2698cb9f51340bb987be745df79bb4": [
     "windows-apps-src\\debug-test-perf\\device-portal-mobile.md"
+  ],
+  "235deea8371b0652e1332418447c934fafeaf3a2": [
+    "windows-apps-src\\debug-test-perf\\device-portal-xbox.md"
   ],
   "03ae12c5a9f8ee30e96647b5db37992875dc45ee": [
     "windows-apps-src\\debug-test-perf\\device-portal-xbox.md"
@@ -6086,5 +6092,8 @@
   ],
   "ab80b002d3db8089f4f6c9aafcad90890b8bfa82": [
     "windows-apps-src\\porting\\desktop-to-uwp-run-desktop-app-converter.md"
+  ],
+  "6e2bdc86eecfbba5858faa451f0f603ed7074a6d": [
+    "windows-apps-src\\debug-test-perf\\device-portal-desktop.md"
   ]
 }
