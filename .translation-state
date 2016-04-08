@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "0db460b8f965be759f448e6b2021e00289ad1e3b",
+  "LastProcessedCommit": "ec3ba5402ab4dc42e9f584e6956fe23487a36f3e",
   "LastTranslatedCommit": null,
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -61212,6 +61212,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\device-portal-xbox.99bf4955fdefdf6b9c5dfab22556e4df4c7dd8b6.ko-kr.xlf",
       "HandoffFileCommit": "787b7837433d8d88e7da9defb7ac0f9be5adf8a7",
       "HandoffDateTime": "2016-04-08T22:38:52.1384793Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "e073ddda47d9461a687bdf277e60a20dc103e3fd": {
+      "FileHash": "e073ddda47d9461a687bdf277e60a20dc103e3fd",
+      "SourceFileCommit": "ec3ba5402ab4dc42e9f584e6956fe23487a36f3e",
+      "SourceFilePath": "windows-apps-src\\security\\companion-device-unlock.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\security\\companion-device-unlock.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf",
+      "HandoffFileCommit": "303dccb43505770aea617c3556dc14e453b76946",
+      "HandoffDateTime": "2016-04-08T23:09:27.3927431Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
