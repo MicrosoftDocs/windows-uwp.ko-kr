@@ -1,19 +1,33 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e749e470c283de3337ad2428ef398f58b0441f68/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#dd94b0ff290e24c215307035d577d1b8e60443032082)
+ [windows-apps-src\get-started\images\universalapps-overview.png](https://github.com/Microsoft/windows-apps/blob/73cda4f697120f9851344680d1a18910ca3a33f3/windows-apps-src/get-started/images/universalapps-overview.png) | HandedOffSuccess | [Details](#ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e2376)
+ [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/73cda4f697120f9851344680d1a18910ca3a33f3/windows-apps-src/get-started/universal-application-platform-guide.md) | HandedOffSuccess | [Details](#67b2137f8ffeffc6428047583736dbf9e82307662532)
 
 ## Item Details
-##### <a name='dd94b0ff290e24c215307035d577d1b8e60443032082'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e749e470c283de3337ad2428ef398f58b0441f68/windows-apps-src/gaming/e2e.md)
+##### <a name='ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e2376'></a> Source: [windows-apps-src\get-started\images\universalapps-overview.png](https://github.com/Microsoft/windows-apps/blob/73cda4f697120f9851344680d1a18910ca3a33f3/windows-apps-src/get-started/images/universalapps-overview.png)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2f929ffdeb29dc6b043920cf1540d55b7ebd1efa/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
-* Handoff Datetime: 2016-04-11 17:35:04
+* Handoff File: [ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e.png](https://github.com/Microsoft/WDG.handoff/blob/885c745695684f36979e96950150f5a86e0f9e0c/ol-handoff/Microsoft/windows-apps.ko-kr/master/ef5e5d3d444ca57a8ae13980cb4a45d0a51d488e.png)
+* Handoff Datetime: 2016-04-11 21:06:56
+* Handoff Reason: IsDependency
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Dependency From: windows-apps-src\get-started\universal-application-platform-guide.md
+* [Back to Top](#report-top)
+
+##### <a name='67b2137f8ffeffc6428047583736dbf9e82307662532'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/73cda4f697120f9851344680d1a18910ca3a33f3/windows-apps-src/get-started/universal-application-platform-guide.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/885c745695684f36979e96950150f5a86e0f9e0c/ol-handoff/Microsoft/windows-apps.ko-kr/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf)
+* Handoff Datetime: 2016-04-11 21:06:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
