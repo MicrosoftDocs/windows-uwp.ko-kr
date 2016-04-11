@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/264b13a3abd266da3a7212fa8926d74dd15f3873/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md) | HandedOffSuccess | [Details](#d8a64552426e5ea60619bb2c3f7da71cf4deda523230)
+ [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e749e470c283de3337ad2428ef398f58b0441f68/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#dd94b0ff290e24c215307035d577d1b8e60443032082)
 
 ## Item Details
-##### <a name='d8a64552426e5ea60619bb2c3f7da71cf4deda523230'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/264b13a3abd266da3a7212fa8926d74dd15f3873/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+##### <a name='dd94b0ff290e24c215307035d577d1b8e60443032082'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/e749e470c283de3337ad2428ef398f58b0441f68/windows-apps-src/gaming/e2e.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/382b0c84739734e3746a5de1ee0b3361c0128e14/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf)
-* Handoff Datetime: 2016-04-11 16:11:06
+* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2f929ffdeb29dc6b043920cf1540d55b7ebd1efa/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
+* Handoff Datetime: 2016-04-11 17:35:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
