@@ -1,19 +1,58 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\files\quickstart-listing-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/00a89155136cd754d7f9b60a4c7d969688a492d9/windows-apps-src/files/quickstart-listing-files-and-folders.md) | HandedOffSuccess | [Details](#515edfea148f0c677ed544feb1f5d5f1b6311b262056)
+ [windows-apps-src\app-to-app\receive-data.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/app-to-app/receive-data.md) | HandedOffSuccess | [Details](#0311e6ac1293f3841a596aa4ee99066a3c4ff35d121)
+ [windows-apps-src\layout\boxpanel-example-custom-panel.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/layout/boxpanel-example-custom-panel.md) | HandedOffSuccess | [Details](#ee4b680f4517ddc50ca08d6cf2c3ba5af0fcb7632920)
+ [windows-apps-src\layout\custom-panels-overview.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/layout/custom-panels-overview.md) | HandedOffSuccess | [Details](#a9033672d04e09dc029cf3da7d95c27327ba01cb2923)
+ [windows-apps-src\xaml-platform\binding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/xaml-platform/binding-markup-extension.md) | HandedOffSuccess | [Details](#3a79cc61f39fbb803deebe621966b9b6d4b39de23655)
 
 ## Item Details
-##### <a name='515edfea148f0c677ed544feb1f5d5f1b6311b262056'></a> Source: [windows-apps-src\files\quickstart-listing-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/00a89155136cd754d7f9b60a4c7d969688a492d9/windows-apps-src/files/quickstart-listing-files-and-folders.md)
+##### <a name='0311e6ac1293f3841a596aa4ee99066a3c4ff35d121'></a> Source: [windows-apps-src\app-to-app\receive-data.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/app-to-app/receive-data.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ed49ef534f1f758d73ce2e41f1e3896681310d36/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf)
-* Handoff Datetime: 2016-04-12 22:07:22
+* Handoff File: [receive-data.f19df9b3eaaa5031aaff9466ca58c05d88244e16.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ada75e3bf7d658fee4ee17b9a5e17dc1b3d671d5/ol-handoff/Microsoft/windows-apps.ko-kr/master/receive-data.f19df9b3eaaa5031aaff9466ca58c05d88244e16.ko-kr.xlf)
+* Handoff Datetime: 2016-04-12 23:37:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='ee4b680f4517ddc50ca08d6cf2c3ba5af0fcb7632920'></a> Source: [windows-apps-src\layout\boxpanel-example-custom-panel.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/layout/boxpanel-example-custom-panel.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ada75e3bf7d658fee4ee17b9a5e17dc1b3d671d5/ol-handoff/Microsoft/windows-apps.ko-kr/master/boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf)
+* Handoff Datetime: 2016-04-12 23:37:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='a9033672d04e09dc029cf3da7d95c27327ba01cb2923'></a> Source: [windows-apps-src\layout\custom-panels-overview.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/layout/custom-panels-overview.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [custom-panels-overview.423abd174e674623fd68be188279782ddf319cd8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ada75e3bf7d658fee4ee17b9a5e17dc1b3d671d5/ol-handoff/Microsoft/windows-apps.ko-kr/master/custom-panels-overview.423abd174e674623fd68be188279782ddf319cd8.ko-kr.xlf)
+* Handoff Datetime: 2016-04-12 23:37:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='3a79cc61f39fbb803deebe621966b9b6d4b39de23655'></a> Source: [windows-apps-src\xaml-platform\binding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/xaml-platform/binding-markup-extension.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ada75e3bf7d658fee4ee17b9a5e17dc1b3d671d5/ol-handoff/Microsoft/windows-apps.ko-kr/master/binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf)
+* Handoff Datetime: 2016-04-12 23:37:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
