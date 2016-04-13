@@ -1,0 +1,171 @@
+---
+ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
+디바이스 정보 속성
+각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다.
+---
+# 장치 정보 속성
+
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
+
+** 중요 API **
+
+-   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+
+각 장치에는 특정 정보가 필요하거나 장치 선택기를 빌드할 때 사용할 수 있는 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 속성이 연결되어 있습니다. 이러한 속성은 지정된 특성의 장치를 찾기 위해 열거하는 장치를 제한하는 AQS 필터로 지정할 수 있습니다. 또한 이러한 속성을 사용하여 각 장치에 대해 반환할 정보를 지정할 수도 있습니다. 이를 통해 응용 프로그램으로 반환되는 장치 정보를 지정할 수 있습니다.
+
+장치 선택기에서 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 속성을 사용하는 방법에 대한 자세한 내용은 [장치 선택기 빌드](build-a-device-selector.md)를 참조하세요. 이 항목에서는 정보 속성을 요청하는 방법을 자세히 설명하고 일부 공용 속성 및 해당 용도도 나열합니다.
+
+[
+            **DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체는 ID([**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)), 종류([**DeviceInformation.Kind**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)) 및 속성 모음([**DeviceInformation.Properties**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx))으로 구성됩니다. **DeviceInformation** 개체의 다른 속성은 모두 **Properties** 속성 모음에서 파생됩니다. 예를 들어 [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name)은 **System.ItemNameDisplay**에서 파생됩니다. 즉, 속성 모음에는 다른 속성을 결정하는 데 필요한 정보가 항상 포함되어 있습니다.
+
+## 속성 요청
+
+[
+            **DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체에는 [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 및 [**Kind**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)와 같은 몇 가지 기본 속성이 있지만 대부분의 속성은 [**Properties**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx) 아래의 속성 모음에 저장됩니다. 이 때문에 속성 모음에는 속성 모음의 외부 속성을 가져오는 데 사용되는 속성이 포함되어 있습니다. 예를 들어 [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770)를 사용하여 [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name) 속성을 가져옵니다. 이는 사용자에게 친숙한 이름을 가진 잘 알려진 공용 속성의 경우입니다. Windows에서는 속성을 더 쉽게 쿼리할 수 있도록 사용자에게 친숙한 이러한 이름을 여럿 제공합니다.
+
+속성을 요청할 때 사용자에게 친숙한 이름의 공용 속성만 요청할 수 있는 것은 아닙니다. 기본 GUID와 PID(속성 ID)를 지정하면 개별 장치나 드라이버에서 제공하는 사용자 지정 속성을 비롯하여 사용 가능한 모든 속성을 요청할 수 있습니다. 사용자 지정 속성을 지정하는 형식은 "`{GUID} PID`"입니다. 예를 들어 "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`"입니다.
+
+일부 속성은 모든 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind) 개체에서 공통적으로 사용되지만 대부분은 특정 종류에 고유합니다. 다음 섹션에는 몇 가지 공통 속성이 개별 **DeviceInformationKind**별로 정렬되어 있습니다. 여러 종류가 서로 어떤 관련성을 가지는지에 대한 자세한 내용은 **DeviceInformationKind**를 참조하세요.
+
+## DeviceInterface 속성
+
+**DeviceInterface**는 앱 시나리오에 사용되는 가장 일반적인 기본 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/BR225393kind) 개체입니다. 장치 API에서 다른 특정 **DeviceInformationKind**를 지정하지 않는 경우 이 개체 종류를 사용해야 합니다.
+
+| 이름                                  | 유형    | 설명                                                                                                                                                                                                                                                                                                                                                                                               |
+|---------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.ContainerId**        | GUID    | 이 **DeviceInterface**가 포함된 **Device**를 포함하는 **DeviceInformationKind.DeviceContainer**의 ID입니다. 이 값을 **DeviceInformationKind.DeviceContainer**와 함께 [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.createfromidasync)에 전달하여 적절한 컨테이너를 찾을 수 있습니다.                                                                                    |
+| **System.Devices.InterfaceClassGuid** | GUID    | 이 인터페이스가 나타내는 인터페이스 클래스 GUID입니다.                                                                                                                                                                                                                                                                                                                                                       |
+| **System.Devices.DeviceInstanceId**   | 문자열  | 부모 **DeviceInformationKind.Device**의 ID입니다. 이 값을 **DeviceInformationKind.Device**와 함께 [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.createfromidasync)에 전달하여 적절한 디바이스를 찾을 수 있습니다.                                                                                                                                                                   |
+| **System.Devices.InterfaceEnabled**   | 부울 | 인터페이스를 사용할 수 있는지 여부를 나타냅니다. [
+            **DeviceInformation.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.isenabled)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                           |
+| **System.Devices.GlyphIcon**          | 문자열  | 문자 모양의 아이콘 경로입니다.                                                                                                                                                                                                                                                                                                                                                                                  |
+| **System.Devices.IsDefault**          | 부울 | 이 장치가 **System.Devices.InterfaceClassGuid**의 기본 장치인지 여부를 나타냅니다. 주로 프린터에 사용됩니다. 여러 오디오 기본값이 있으므로 오디오에는 작동하지 않습니다. [
+            **GetDefaultAudioRenderId**](https://msdn.microsoft.com/library/windows/apps/BR226819) 또는 [**GetDefaultAudioCaptureId**](https://msdn.microsoft.com/library/windows/apps/BR226818)를 사용하여 오디오 기본값을 가져옵니다. |
+| **System.Devices.Icon**               | 문자열  | 아이콘 경로입니다.                                                                                                                                                                                                                                                                                                                                                                                                |
+| **System.ItemNameDisplay**            | 문자열  | 장치 개체의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                              |
+
+ 
+
+## 장치 속성
+
+| 이름                                  | 유형       | 설명                                                                                                                                                                                                                                                                              |
+|---------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.ClassGuid**          | GUID       | 장치 설치 중에 사용되는 장치 클래스입니다. 자세한 내용은 [장치 설치 클래스](https://msdn.microsoft.com/library/windows/hardware/Ff541509)를 참조하세요.                                                                                                                                                            |
+| **System.Devices.CompatibleIds**      | 문자열\[\] | 장치의 호환 가능 ID입니다. Windows에서 장치에 설치할 가장 적합한 드라이버를 결정할 때 사용됩니다. 자세한 내용은 [호환 가능 ID](https://msdn.microsoft.com/library/windows/hardware/Ff539950)를 참조하세요.                                                                                                |
+| **System.Devices.ContainerId**        | GUID       | 이 장치를 포함하는 **DeviceInformationKind.DeviceContainer**의 ID입니다. 이 값을 **DeviceInformationKind.DeviceContainer**와 함께 [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.createfromidasync)에 전달하여 적절한 컨테이너를 찾을 수 있습니다.          |
+| **System.Devices.DeviceCapabilities** | UInt32     | **CfgMgr32.h**에 정의된 CM\_DEVCAP\_X 기능 플래그의 비트 OR입니다. 자세한 내용은 [**DEVPKEY\_Device\_Capabilities**](https://msdn.microsoft.com/library/windows/hardware/Ff542373)를 참조하세요.                                                                                             |
+| **System.Devices.DeviceHasProblem**   | 부울    | 장치가 현재 문제가 있으며 제대로 작동하지 않을 수 있습니다. 오래되거나 누락되거나 잘못된 드라이버 때문일 수 있습니다.                                                                                                                                                |
+| **System.Devices.DeviceInstanceId**   | 문자열     | 장치의 ID입니다. [
+            **DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다.                                                                                                                                                                       |
+| **System.Devices.DeviceManufacturer** | 문자열     | 장치의 제조업체입니다.                                                                                                                                                                                                                                                          |
+| **System.Devices.HardwareIds**        | 문자열\[\] | 장치의 하드웨어 ID입니다. Windows에서 설치할 가장 적합한 드라이버를 결정할 때 이러한 ID를 사용합니다. 장치 공급업체에서는 이 속성을 사용하여 앱에서 해당 장치를 식별할 수 있습니다. 자세한 내용은 [하드웨어 ID](https://msdn.microsoft.com/library/windows/hardware/Ff546152)를 참조하세요.                                         |
+| **System.Devices.Parent**             | 문자열     | 부모 장치의 [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)입니다. 이는 **DeviceContainer** 부모가 아니라 연결 부모입니다.                                                                                                                                 |
+| **System.Devices.Present**            | 부울    | 장치가 현재 존재하고 사용 가능한지 여부를 나타냅니다.                                                                                                                                                                                                                         |
+| **System.ItemNameDisplay**            | 문자열     | 이 장치 개체의 가장 적합한 표시 이름입니다. 이 경우 사용자에게 가장 적합한 이름일 필요는 없습니다. 사용자에게 친숙한 이름이 될 가능성이 높은 후보는 연결된 **DeviceContainer** 또는 **DeviceInterface**의 **System.ItemNameDisplay**를 참조하여 찾을 수 있습니다. |
+
+ 
+
+## DeviceContainer 속성
+
+| 이름                              | 유형       | 설명                                                                                                                                                        |
+|-----------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.Category**       | 문자열\[\] | 장치가 속한 범주에 대한 설명 목록입니다. 이 목록은 단수 범주로 제공됩니다. 예를 들면 "Display", "Phone" 또는 "Audio device"입니다.  |
+| **System.Devices.CategoryIds**    | 문자열\[\] | 이 장치가 속한 범주 목록을 포함합니다. 예를 들면 **Audio.Headphone**, **Display.Monitor** 또는 **Input.Gaming**입니다.                                  |
+| **System.Devices.CateogryPlural** | 문자열\[\] | 장치가 속한 범주에 대한 설명 목록입니다. 이 목록은 복수 범주로 제공됩니다. 예를 들면 "Displays", "Phones" 또는 "Audio devices"입니다. |
+| **System.Devices.CompatibleIds**  | 문자열\[\] | 모든 자식 **DeviceInformationKind.Device** 개체의 호환 가능 ID 컬렉션입니다.                                                                       |
+| **System.Devices.Connected**      | 부울    | 장치가 현재 시스템에 연결되어 있는지 여부를 나타냅니다.                                                                                          |
+| **System.Devices.GlyphIcon**      | 문자열     | 문자 모양의 아이콘 경로입니다.                                                                                                                                           |
+| **System.Devices.HardwareIds**    | 문자열\[\] | 모든 자식 **DeviceInformationKind.Device** 개체의 하드웨어 ID 컬렉션입니다.                                                                         |
+| **System.Devices.Icon**           | 문자열     | 아이콘 경로입니다.                                                                                                                                                         |
+| **System.Devices.LocalMachine**   | 부울    | 이 **DeviceContainer**가 시스템 자체를 나타내면 **True**이고, 장치가 시스템 외부 장치이면 **false**입니다.                                              |
+| **System.Devices.Manufacturer**   | 문자열     | 장치의 제조업체입니다.                                                                                                                                    |
+| **System.Devices.ModelName**      | 문자열     | 장치 컨테이너의 모델 이름입니다.                                                                                                                                |
+| **System.Devices.Paired**         | 부울    | 자식 **DeviceInformationKind.Device** 개체 중에 현재 시스템과 페어링된 무선 또는 네트워크 장치가 있는지 여부를 나타냅니다.             |
+| **System.ItemNameDisplay**        | 문자열     | 이 장치의 가장 적합한 표시 이름입니다.                                                                                                                             |
+
+ 
+
+## DeviceInterfaceClass 속성
+
+| 이름                       | 유형   | 설명                            |
+|----------------------------|--------|----------------------------------------|
+| **System.ItemNameDisplay** | 문자열 | 이 장치의 가장 적합한 표시 이름입니다. |
+
+ 
+
+## AssociationEndpoint 속성
+
+| 이름                                  | 유형       | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|---------------------------------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.Aep.AepId**          | 문자열     | 이 장치의 ID입니다. [
+            **DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다.                                                                                                                                                                                                                                                                                                                                                                        |
+| **System.Devices.Aep.CanPair**        | 부울    | 장치를 시스템과 페어링할 수 있는지 여부를 나타냅니다. [
+            **DeviceInformationPairing.CanPair**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_canpair)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                       |
+| **System.Devices.Aep.Category**       | 문자열\[\] | 장치의 범주입니다. 예를 들면 프린터 또는 카메라입니다.                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **System.Devices.Aep.ContainerId**    | GUID       | 부모 **AssociationEndpointContainer** 개체의 ID입니다.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **System.Devices.Aep.DeviceAddress**  | 문자열     | 장치의 주소입니다. 장치가 네트워크 장치인 경우 이는 IP 주소입니다.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **System.Devices.Aep.IsConnected**    | 부울    | 장치가 현재 시스템에 연결되어 있는지 여부를 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **System.Devices.Aep.IsPaired**       | 부울    | 장치가 현재 페어링되어 있는지 여부를 나타냅니다. [
+            **DeviceInformationPairing.IsPaired**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_ispaired)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                                      |
+| **System.Devices.Aep.IsPresent**      | 부울    | 장치가 현재 있는지 여부 즉, 장치가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 장치는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 장치가 자동으로 검색됩니다. 이 때문에 쿼리에서 장치가 검색되는 것만으로 장치가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
+| **System.Devices.Aep.Manufacturer**   | 문자열     | 장치의 제조업체입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **System.Devices.Aep.ModelId**        | GUID       | 장치의 모델 ID입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **System.Devices.Aep.ModelName**      | 문자열     | 장치의 모델 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **System.Devices.Aep.ProtocolId**     | GUID       | 이 **AssocationEndpoint** 장치를 검색하는 데 사용된 프로토콜을 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **System.Devices.Aep.SignalStrength** | Int32      | 장치의 신호 강도입니다. 이 속성은 일부 프로토콜에만 적용됩니다.                                                                                                                                                                                                                                                                                                                                                                                                |
+| **System.ItemNameDisplay**            | 문자열     | 장치의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+ 
+
+## AssociationEndpointContainer 속성
+
+| 이름                                                | 유형       | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-----------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.AepContainer.Categories**          | 문자열\[\] | 장치의 범주입니다. 예를 들면 프린터 또는 카메라입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **System.Devices.AepContainer.Children**            | 문자열\[\] | 이 컨테이너에 속한 **AssocationEndpoint** 개체의 ID 컬렉션입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **System.Devices.AepContainer.CanPair**             | 부울    | 자식 **AssociationEndpoint** 장치 중 하나를 시스템과 페어링할 수 있는지 여부를 나타냅니다. [
+            **DeviceInformationPairing.CanPair**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_canpair)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                       |
+| **System.Devices.AepContainer.ContainerId**         | GUID       | 이 장치의 ID입니다. 이는 [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 하지만 GUID 형식입니다.                                                                                                                                                                                                                                                                                                                                                                                            |
+| **System.Devices.AepContainer.IsPaired**            | 부울    | 자식 **AssociationEndpoint** 장치 중 하나가 현재 페어링되었는지 여부를 나타냅니다. [
+            **DeviceInformationPairing.IsPaired**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_ispaired)는 이 속성에서 파생됩니다.                                                                                                                                                                                                                                                                                                                      |
+| **System.Devices.AepContainer.IsPresent**           | 부울    | 자식 **AssociationEndpoint** 장치 중 하나가 있는지 여부 즉, 장치가 라이브이며 네트워크 또는 무선 프로토콜을 통해 검색되는지 여부를 나타냅니다. 시스템과 페어링된 장치는 캐시됩니다. 그 이후에는 **AssociationEndpoint** 개체를 쿼리할 때 장치가 자동으로 검색됩니다. 이 때문에 쿼리에서 장치가 검색되는 것만으로 장치가 현재 사용 가능하다고 할 수는 없습니다. 이 속성이 중요한 이유입니다. |
+| **System.Devices.AepContainer.Manufacturer**        | 문자열     | 장치의 제조업체입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **System.Devices.AepContainer.ModelIds**            | 문자열\[\] | 장치의 모델 ID 목록입니다. 각 모델은 문자열 형식의 GUID입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **System.Devices.AepContainer.ModelName**           | 문자열     | 장치의 모델 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **System.Devices.AepContainer.ProtocolIds**         | GUID\[\]   | 이 **AssociationEndpointContainer** 개체를 빌드하는 데 참여한 프로토콜 ID 목록입니다. **AssociationEndpointContainer** 장치는 동일한 실제 장치에 대해 다른 프로토콜을 통해 검색된 모든 **AssociationEndpoint** 장치를 수집하여 만듭니다.                                                                                                                                                                                                                           |
+| **System.Devices.AepContainer.SupportedUriSchemes** | 문자열\[\] | 이 장치에서 지원되는 캐스팅 URI 스키마 목록입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **System.Devices.AepContainer.SupportsAudio**       | 부울    | 이 장치가 오디오 캐스팅을 지원하는지 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **System.Devices.AepContainer.SupportsImages**      | 부울    | 이 장치가 이미지 캐스팅을 지원하는지 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **System.Devices.AepContainer.SupportsVideo**       | 부울    | 이 장치가 비디오 캐스팅을 지원하는지 나타냅니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **System.ItemNameDisplay**                          | 문자열     | 장치의 가장 적합한 표시 이름입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+ 
+
+## AssociationEndpointService 속성
+
+| 이름                                            | 유형    | 설명                                                                                                      |
+|-------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
+| **System.Devices.AepService.AepId**             | 문자열  | 부모 **AssociationEndpoint** 개체의 식별자입니다.                                                     |
+| **System.Devices.AepService.ContainerId**       | GUID    | 부모 **AssociationEndpointContainer** 개체의 식별자입니다.                                            |
+| **System.Devices.AepService.ParentAepIsPaired** | 부울 | 부모 **AssociationEndpoint** 개체가 시스템과 페어링되었는지 여부를 나타냅니다.                           |
+| **System.Devices.AepService.ProtocolId**        | GUID    | 이 장치를 검색하는 데 사용된 프로토콜의 ID입니다.                                                           |
+| **System.Devices.AepService.ServiceClassId**    | GUID    | 이 장치가 나타내는 서비스의 ID입니다.                                                             |
+| **System.Devices.AeoService.ServiceId**         | 문자열  | 이 서비스의 ID입니다. [
+            **DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) 값이기도 합니다. |
+| **System.ItemNameDisplay**                      | 문자열  | 서비스의 가장 적합한 표시 이름입니다.                                                                           |
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

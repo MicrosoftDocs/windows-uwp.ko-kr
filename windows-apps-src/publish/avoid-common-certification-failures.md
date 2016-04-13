@@ -1,0 +1,44 @@
+---
+이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
+일반적인 인증 실패 방지
+ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+---
+
+# 일반적인 인증 실패 방지
+
+
+이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
+
+> **참고** [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 검토하여 앱이 해당 정책에 나열된 모든 요구 사항을 충족하는지 확인해야 합니다.
+
+ 
+
+-   완료된 앱만 제출합니다. 앱 설명을 사용하여 제공 예정인 기능을 언급할 수 있지만 앱에 불완전한 조항, 생성 중인 웹 페이지 링크 또는 앱이 불완전하다는 인상을 고객에게 주는 다른 사항이 앱에 포함되지 않도록 하세요.
+
+-   앱을 제출하기 전에 [Windows 앱 인증 키트로 앱을 테스트합니다](https://msdn.microsoft.com/library/windows/apps/mt186449).
+
+-   여러 다른 구성에서 앱을 테스트하여 안정적인지 확인합니다.
+
+-   네트워크에 연결되지 않아도 앱 크래시가 발생하지 않도록 합니다. 실제로 앱을 사용하는 데 연결이 필요한 경우에도 연결되지 않았을 때 적절하게 작동해야 합니다.
+-   앱이 수행하는 역할을 앱 설명이 명확하게 나타내는지 확인합니다. 도움이 필요하면 [유용한 앱 설명 작성](write-a-great-app-description.md)에 있는 지침을 참조하세요.
+
+-   [연령별 등급](age-ratings.md) 섹션의 모든 질문에 대해 완전하고 정확한 답변을 제시해야 합니다.
+
+-   앱이 [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197) 네임스페이스의 상거래 API를 사용하는 경우 앱을 테스트하고 일반적인 예외가 처리되는지 확인합니다. 또한 앱이 테스트용으로만 사용되는 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 클래스가 아닌 [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스를 사용하는지 확인합니다.
+
+-   앱을 특별히 엔지니어링하고 접근성 시나리오를 테스트하지 않은 경우 [앱을 접근성 있음으로 선언](app-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines)하지 마세요.
+
+-   앱을 사용하기 위해 사용자가 서비스에 로그인해야 하는 경우 테스트 계정의 사용자 이름 및 암호, 숨겨진 기능 또는 잠긴 기능을 액세스하는 데 필요한 단계 등 앱을 사용하는 데 [필요한 정보를 제공](notes-for-certification.md)합니다.
+
+ 
+
+ 
+
+
+
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+

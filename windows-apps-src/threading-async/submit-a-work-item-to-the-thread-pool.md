@@ -1,0 +1,264 @@
+---
+ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
+스레드 풀에 작업 항목 제출
+스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다.
+---
+# 스레드 풀에 작업 항목 제출
+
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
+** 중요 API **
+
+-   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
+-   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
+
+스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요. 스레드 풀을 사용하면 오랜 시간이 걸리는 작업을 완료하는 동시에 응답하는 UI를 유지하고 여러 작업을 병렬로 완료할 수 있습니다.
+
+## 작업 항목 만들기 및 제출
+
+[
+            **RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 호출하여 작업 항목을 만듭니다. 작업을 수행할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). **RunAsync**는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) 개체를 반환합니다. 다음 단계에서 사용하기 위해 이 개체를 저장합니다.
+
+선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
+
+**참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 작업 항목의 진행률을 표시합니다.
+
+다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
+
+> [!div class="tabbedCodeSnippets"]
+``` cpp
+// The nth prime number to find.
+const unsigned int n = 9999;
+
+// A shared pointer to the result.
+// We use a shared pointer to keep the result alive until the 
+// thread is done.
+std::shared_ptr&lt;unsigned long&gt; nthPrime = make_shared&lt;unsigned long int&gt;(0);
+
+// Simulates work by searching for the nth prime number. Uses a
+// naive algorithm and counts 2 as the first prime number.
+auto workItem = ref new WorkItemHandler(
+    \[this, n, nthPrime](IAsyncAction^ workItem)
+{
+    unsigned int progress = 0; // For progress reporting.
+    unsigned int primes = 0;   // Number of primes found so far.
+    unsigned long int i = 2;   // Number iterator.
+
+    if ((n &gt;= 0) &amp;&amp; (n &lt;= 2))
+    {
+        *nthPrime = n;
+        return;
+    }
+
+    while (primes &lt; (n - 1))
+    {
+        if (workItem-&gt;Status == AsyncStatus::Canceled)
+        {
+            break;
+        }
+
+        // Go to the next number.
+        i++;
+
+        // Check for prime.
+        bool prime = true;
+        for (unsigned int j = 2; j &lt; i; ++j)
+        {
+            if ((i % j) == 0)
+            {
+                prime = false;
+                break;
+            }
+        };
+
+        if (prime)
+        {
+            // Found another prime number.
+            primes++;
+
+            // Report progress at every 10 percent.
+            unsigned int temp = progress;
+            progress = static_cast&lt;unsigned int&gt;(10.f*primes / n);
+
+            if (progress != temp)
+            {
+                String^ updateString;
+                updateString = "Progress to " + n + "th prime: "
+                    + (10 * progress).ToString() + "%\n";
+
+                // Update the UI thread with the CoreDispatcher.
+                CoreApplication::MainView-&gt;CoreWindow-&gt;Dispatcher-&gt;RunAsync(
+                    CoreDispatcherPriority::High,
+                    ref new DispatchedHandler([this, updateString]()
+                {
+                    UpdateUI(updateString);
+                }));
+            }
+        }
+    }
+
+    // Return the nth prime number.
+    *nthPrime = i;
+});
+
+auto asyncAction = ThreadPool::RunAsync(workItem);
+
+// A reference to the work item is cached so that we can trigger a 
+// cancellation when the user presses the Cancel button.
+m_workItem = asyncAction;
+```
+``` csharp
+// The nth prime number to find.
+const uint n = 9999;
+
+// A shared pointer to the result.
+// We use a shared pointer to keep the result alive until the 
+// thread is done.
+ulong nthPrime = 0;
+
+// Simulates work by searching for the nth prime number. Uses a
+// naive algorithm and counts 2 as the first prime number.
+IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
+    (workItem) =&gt;
+{
+    uint  progress = 0; // For progress reporting.
+    uint  primes = 0;   // Number of primes found so far.
+    ulong i = 2;        // Number iterator.
+
+    if ((n &gt;= 0) &amp;&amp; (n &lt;= 2))
+    {
+        nthPrime = n;
+        return;
+    }
+
+    while (primes &lt; (n - 1))
+    {
+        if (workItem.Status == AsyncStatus.Canceled)
+        {
+            break;
+        }
+
+        // Go to the next number.
+        i++;
+
+        // Check for prime.
+        bool prime = true;
+        for (uint j = 2; j &lt; i; ++j)
+        {
+            if ((i % j) == 0)
+            {
+                prime = false;
+                break;
+            }
+        };
+
+        if (prime)
+        {
+            // Found another prime number.
+            primes++;
+
+            // Report progress at every 10 percent.
+            uint temp = progress;
+            progress = (uint)(10.0*primes/n);
+
+            if (progress != temp)
+            {
+                String updateString;
+                updateString = "Progress to " + n + "th prime: "
+                    + (10 * progress) + "%\n";
+
+                // Update the UI thread with the CoreDispatcher.
+                CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
+                    CoreDispatcherPriority.High,
+                    new DispatchedHandler(() =&gt;
+                {
+                    UpdateUI(updateString);
+                }));
+            }
+        }
+    }
+
+    // Return the nth prime number.
+    nthPrime = i;
+});
+
+// A reference to the work item is cached so that we can trigger a
+// cancellation when the user presses the Cancel button.
+m_workItem = asyncAction;
+```
+
+[
+            **RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) 호출 뒤에 이 작업 항목은 스레드 풀에 의해 대기되고 스레드를 사용할 수 있게 되면 실행됩니다. 스레드 풀 작업 항목은 비동기적으로 실행되며 순서에 관계없이 실행될 수 있으므로 작업 항목이 독립적으로 작동하는지 확인합니다.
+
+작업 항목은 [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) 속성을 검사하고, 작업 항목이 취소된 경우 종료됩니다.
+
+## 작업 항목 완료 처리
+
+작업 항목의 [**IAsyncAction.Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
+
+다음 예제에서는 1단계에서 제출된 작업 항목의 결과로 UI를 업데이트합니다.
+
+> [!div class="tabbedCodeSnippets"]
+``` cpp
+asyncAction-&gt;Completed = ref new AsyncActionCompletedHandler(
+    \[this, n, nthPrime](IAsyncAction^ asyncInfo, AsyncStatus asyncStatus)
+{
+    if (asyncStatus == AsyncStatus::Canceled)
+    {
+        return;
+    }
+    
+    String^ updateString;
+    updateString = "\n" + "The " + n + "th prime number is " 
+        + (*nthPrime).ToString() + ".\n";
+
+    // Update the UI thread with the CoreDispatcher.
+    CoreApplication::MainView-&gt;CoreWindow-&gt;Dispatcher-&gt;RunAsync(
+        CoreDispatcherPriority::High,
+        ref new DispatchedHandler([this, updateString]()
+    {
+        UpdateUI(updateString);
+    }));
+});
+```
+``` csharp
+asyncAction.Completed = new AsyncActionCompletedHandler(
+    (IAsyncAction asyncInfo, AsyncStatus asyncStatus) =&gt;
+{
+    if (asyncStatus == AsyncStatus.Canceled)
+    {
+        return;
+    }
+
+    String updateString;
+    updateString = "\n" + "The " + n + "th prime number is " 
+        + nthPrime + ".\n";
+
+    // Update the UI thread with the CoreDispatcher.
+    CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
+        CoreDispatcherPriority.High,
+        new DispatchedHandler(()=&gt;
+    {
+        UpdateUI(updateString);
+    }));
+});
+```
+
+완료 처리기는 UI 업데이트를 디스패치하기 전에 작업 항목이 취소되었는지 여부를 확인합니다.
+
+## 요약 및 다음 단계
+
+Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http://go.microsoft.com/fwlink/p/?LinkID=328569)의 이 빠른 시작에서 코드를 다운로드하고 win\_unap Windows 10 앱에서 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
+
+## 관련 항목
+
+* [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
+* [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
+* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
+ 
+
+
+
+<!--HONumber=Mar16_HO1-->
+
+
