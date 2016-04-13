@@ -1,7 +1,7 @@
 ---
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
-배터리 정보 가져오기
-Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
+title: 배터리 정보 가져오기
+description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
 ---
 # 배터리 정보 가져오기
 

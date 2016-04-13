@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
-UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1
+description: 이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
+title: UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1
 ---
 
 # UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore1

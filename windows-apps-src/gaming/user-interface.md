@@ -1,6 +1,6 @@
 ---
-DirectX 게임 프로젝트 템플릿
-UWP(유니버설 Windows 플랫폼) 및 DirectX 게임을 만드는 템플릿에 대해 알아봅니다.
+title: DirectX 게임 프로젝트 템플릿
+description: UWP(유니버설 Windows 플랫폼) 및 DirectX 게임을 만드는 템플릿에 대해 알아봅니다.
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
 ---
 

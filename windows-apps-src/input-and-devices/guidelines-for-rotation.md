@@ -1,8 +1,8 @@
 ---
-이 항목에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
-회전
+Description: 이 항목에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
+title: 회전
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
-회전
+label: 회전
 template: detail.hbs
 ---
 

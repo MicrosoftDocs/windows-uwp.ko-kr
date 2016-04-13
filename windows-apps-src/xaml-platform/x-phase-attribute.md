@@ -1,6 +1,6 @@
 ---
-xPhase 특성
-xBind 태그 확장과 함께 xPhase를 사용하여 ListView 및 GridView 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다.
+title: xPhase 특성
+description: xBind 태그 확장과 함께 xPhase를 사용하여 ListView 및 GridView 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ---
 

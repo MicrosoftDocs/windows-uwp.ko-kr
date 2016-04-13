@@ -1,9 +1,9 @@
 ---
-이 문서에서는 Segoe MDL2 자산 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
+Description: 이 문서에서는 Segoe MDL2 자산 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
 Search.Refinement.TopicID: 184
-Segoe MDL2 아이콘 지침
+title: Segoe MDL2 아이콘 지침
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-Segoe MDL2 아이콘
+label: Segoe MDL2 아이콘
 template: detail.hbs
 ---
 

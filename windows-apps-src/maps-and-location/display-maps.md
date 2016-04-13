@@ -1,6 +1,6 @@
 ---
-'2D, 3D 및 Streetside 뷰가 있는 지도 표시'
-MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다.
+title: '2D, 3D 및 Streetside 뷰가 있는 지도 표시'
+description: MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다.
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
 ---
 

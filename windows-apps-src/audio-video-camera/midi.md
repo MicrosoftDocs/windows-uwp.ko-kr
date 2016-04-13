@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다.
-MIDI
+description: 이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다.
+title: MIDI
 ---
 
 # MIDI

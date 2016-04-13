@@ -1,8 +1,8 @@
 ---
-원시 알림은 짧고 일반적인 목적의 알림으로,
-원시 알림 개요
+Description: 원시 알림은 짧고 일반적인 목적의 알림으로,
+title: 원시 알림 개요
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
-TBD
+label: TBD
 template: detail.hbs
 ---
 

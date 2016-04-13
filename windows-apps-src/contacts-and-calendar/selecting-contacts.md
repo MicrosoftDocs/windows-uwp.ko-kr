@@ -1,6 +1,6 @@
 ---
-Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다.
-연락처 선택
+description: Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다.
+title: 연락처 선택
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
 키워드: 연락처, 선택
 키워드: 단일 연락처 선택

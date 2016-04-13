@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
-Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
+title: 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
+description: Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
 ---
 # 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
 

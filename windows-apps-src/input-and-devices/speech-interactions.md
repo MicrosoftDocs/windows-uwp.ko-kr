@@ -1,8 +1,8 @@
 ---
-Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다.
-음성 조작
+Description: Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다.
+title: 음성 조작
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
-음성 조작
+label: 음성 조작
 template: detail.hbs
 ---
 

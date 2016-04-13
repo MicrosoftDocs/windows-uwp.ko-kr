@@ -1,6 +1,6 @@
 ---
-Marble Maze 샘플에 입력 및 대화형 작업 추가
-UWP(유니버설 Windows 플랫폼) 앱 게임은 데스크톱 컴퓨터, 노트북, 태블릿 등의 다양한 디바이스에서 실행됩니다.
+title: Marble Maze 샘플에 입력 및 대화형 작업 추가
+description: UWP(유니버설 Windows 플랫폼) 앱 게임은 데스크톱 컴퓨터, 노트북, 태블릿 등의 다양한 디바이스에서 실행됩니다.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ---
 

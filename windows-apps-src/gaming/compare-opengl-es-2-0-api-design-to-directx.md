@@ -1,6 +1,6 @@
 ---
-OpenGL ES 2.0에서 Direct3D로의 포팅 계획
-iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다.
+title: OpenGL ES 2.0에서 Direct3D로의 포팅 계획
+description: iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다.
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ---
 

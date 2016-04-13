@@ -1,6 +1,6 @@
 ---
-DirectX 11 API에 DirectX 9 기능 매핑
-Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
+title: DirectX 11 API에 DirectX 9 기능 매핑
+description: Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ---
 

@@ -1,6 +1,6 @@
 ---
-이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다.
-종속성 속성 개요
+description: 이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다.
+title: 종속성 속성 개요
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 ---
 

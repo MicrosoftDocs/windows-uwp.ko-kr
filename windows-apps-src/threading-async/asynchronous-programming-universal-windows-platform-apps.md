@@ -1,7 +1,7 @@
 ---
 ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
-비동기 프로그래밍
-이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\+\+ 구성 요소 확장(C\+\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다.
+title: 비동기 프로그래밍
+description: 이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\+\+ 구성 요소 확장(C\+\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다.
 ---
 # 비동기 프로그래밍
 

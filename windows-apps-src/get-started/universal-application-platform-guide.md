@@ -1,6 +1,6 @@
 ---
-UWP(유니버설 Windows 플랫폼) 앱 지침
-이 가이드에서는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
+title: UWP(유니버설 Windows 플랫폼) 앱 지침
+description: 이 가이드에서는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 ---
 

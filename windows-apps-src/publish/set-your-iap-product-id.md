@@ -1,6 +1,6 @@
 ---
-Windows 개발자 센터 대시보드에서 IAP(앱에서 바로 구매 제품)를 제출하는 첫 번째 단계입니다.
-IAP 제품 ID 설정
+Description: Windows 개발자 센터 대시보드에서 IAP(앱에서 바로 구매 제품)를 제출하는 첫 번째 단계입니다.
+title: IAP 제품 ID 설정
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ---
 

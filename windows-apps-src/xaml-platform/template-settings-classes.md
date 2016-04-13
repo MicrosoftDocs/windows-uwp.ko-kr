@@ -1,6 +1,6 @@
 ---
-Template settings 클래스
-Template settings 클래스
+description: Template settings 클래스
+title: Template settings 클래스
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ---
 

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
-C++의 비동기 프로그래밍
+description: 이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
+title: C++의 비동기 프로그래밍
 ---
 
 # C++의 비동기 프로그래밍

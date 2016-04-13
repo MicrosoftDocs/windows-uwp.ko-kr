@@ -1,8 +1,8 @@
 ---
-Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
-언어 및 지역 관리
+Description: Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
+title: 언어 및 지역 관리
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
-언어 및 지역 관리
+label: 언어 및 지역 관리
 template: detail.hbs
 ---
 

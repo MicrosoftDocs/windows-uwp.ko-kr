@@ -1,7 +1,7 @@
 ---
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
-Bluetooth RFCOMM
-이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다.
+title: Bluetooth RFCOMM
+description: 이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다.
 ---
 # Bluetooth RFCOMM
 

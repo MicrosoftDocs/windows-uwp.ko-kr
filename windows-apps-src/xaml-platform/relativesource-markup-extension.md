@@ -1,6 +1,6 @@
 ---
-런타임 개체 그래프에 있는 상대적 관계의 측면에서 바인딩의 원본을 지정하는 수단을 제공합니다.
-RelativeSource 태그 확장
+description: 런타임 개체 그래프에 있는 상대적 관계의 측면에서 바인딩의 원본을 지정하는 수단을 제공합니다.
+title: RelativeSource 태그 확장
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 ---
 

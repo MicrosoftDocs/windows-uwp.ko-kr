@@ -1,6 +1,6 @@
 ---
-게임용 터치 컨트롤
-DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다.
+title: 게임용 터치 컨트롤
+description: DirectX를 사용하는 UWP(유니버설 Windows 플랫폼) C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다.
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
 ---
 

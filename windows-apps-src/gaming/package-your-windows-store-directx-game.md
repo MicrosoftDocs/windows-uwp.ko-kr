@@ -1,6 +1,6 @@
 ---
-UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
-대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다.
+title: UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
+description: 대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다.
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
 ---
 

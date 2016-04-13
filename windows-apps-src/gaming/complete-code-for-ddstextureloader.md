@@ -1,6 +1,6 @@
 ---
-DDSTextureLoader의 전체 코드
-메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다.
+title: DDSTextureLoader의 전체 코드
+description: 메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
 ---
 

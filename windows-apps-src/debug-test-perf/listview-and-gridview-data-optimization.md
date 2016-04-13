@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
-ListView 및 GridView 데이터 가상화
-데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다.
+title: ListView 및 GridView 데이터 가상화
+description: 데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다.
 ---
 # ListView 및 GridView 데이터 가상화
 

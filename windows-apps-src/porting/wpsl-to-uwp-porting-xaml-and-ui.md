@@ -1,6 +1,6 @@
 ---
-선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
-Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
+description: 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
+title: Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 ---
 

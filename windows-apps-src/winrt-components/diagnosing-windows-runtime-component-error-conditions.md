@@ -1,6 +1,6 @@
 ---
-Windows 런타임 구성 요소 오류 조건 진단
-이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다.
+title: Windows 런타임 구성 요소 오류 조건 진단
+description: 이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ---
 

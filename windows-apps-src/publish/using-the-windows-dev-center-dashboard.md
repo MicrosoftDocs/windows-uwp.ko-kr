@@ -1,6 +1,6 @@
 ---
-Windows 개발자 센터 대시보드에서는 모든 Windows 디바이스용 앱을 한곳에서 관리하고 제출할 수 있습니다.
-Windows 개발자 센터 대시보드 사용
+Description: Windows 개발자 센터 대시보드에서는 모든 Windows 디바이스용 앱을 한곳에서 관리하고 제출할 수 있습니다.
+title: Windows 개발자 센터 대시보드 사용
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
 ---
 

@@ -1,8 +1,8 @@
 ---
-음성 명령을 사용하여 앱에서 제공하는 기능으로 Cortana를 확장합니다.
-Cortana 디자인 지침
+Description: 음성 명령을 사용하여 앱에서 제공하는 기능으로 Cortana를 확장합니다.
+title: Cortana 디자인 지침
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
-지침
+label: 지침
 template: detail.hbs
 ---
 

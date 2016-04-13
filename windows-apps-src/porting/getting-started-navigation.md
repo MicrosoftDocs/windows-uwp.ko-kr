@@ -1,6 +1,6 @@
 ---
-탐색 시작
-탐색 시작
+title: 탐색 시작
+description: 탐색 시작
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 ---
 

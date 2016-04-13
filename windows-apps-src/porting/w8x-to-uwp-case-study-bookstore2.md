@@ -1,7 +1,7 @@
 ---
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다.
-Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2
+description: 이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다.
+title: Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2
 ---
 
 # Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2

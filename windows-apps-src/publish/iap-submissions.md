@@ -1,6 +1,6 @@
 ---
-IAP는 Windows 개발자 센터 대시보드를 통해 게시됩니다.
-IAP 제출
+Description: IAP는 Windows 개발자 센터 대시보드를 통해 게시됩니다.
+title: IAP 제출
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ---
 

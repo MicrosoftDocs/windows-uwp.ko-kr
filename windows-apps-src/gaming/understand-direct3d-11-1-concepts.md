@@ -1,6 +1,6 @@
 ---
-Direct3D 9에서 Direct3D 11로의 중요 변경 사항
-이 항목에서는 DirectX 9와 DirectX 11의 전반적인 차이점을 설명합니다.
+title: Direct3D 9에서 Direct3D 11로의 중요 변경 사항
+description: 이 항목에서는 DirectX 9와 DirectX 11의 전반적인 차이점을 설명합니다.
 ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
 ---
 

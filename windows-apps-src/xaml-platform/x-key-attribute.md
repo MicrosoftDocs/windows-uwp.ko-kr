@@ -1,6 +1,6 @@
 ---
-리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다.
-xKey 특성
+description: 리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다.
+title: xKey 특성
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ---
 

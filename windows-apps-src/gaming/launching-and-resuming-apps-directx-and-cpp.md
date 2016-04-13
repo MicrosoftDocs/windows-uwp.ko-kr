@@ -1,6 +1,6 @@
 ---
-앱 시작 및 다시 시작(DirectX 및 C++)
-UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다시 시작하는 방법을 알아봅니다.
+title: 앱 시작 및 다시 시작(DirectX 및 C++)
+description: UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다시 시작하는 방법을 알아봅니다.
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
 ---
 

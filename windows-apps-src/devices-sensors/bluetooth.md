@@ -1,7 +1,7 @@
 ---
 ms.assetid: 404783BA-8859-4BFB-86E3-3DD2042E66F5
-Bluetooth
-이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어 있습니다.
+title: Bluetooth
+description: 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어 있습니다.
 ---
 # Bluetooth
 

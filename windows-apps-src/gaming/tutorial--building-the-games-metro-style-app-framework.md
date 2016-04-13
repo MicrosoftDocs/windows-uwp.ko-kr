@@ -1,6 +1,6 @@
 ---
-게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
-DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다.
+title: 게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
+description: DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ---
 

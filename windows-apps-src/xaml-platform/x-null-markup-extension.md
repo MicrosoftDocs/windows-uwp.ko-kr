@@ -1,6 +1,6 @@
 ---
-XAML 태그에는 속성의 null 값을 지정합니다.
-xNull 태그 확장
+description: XAML 태그에는 속성의 null 값을 지정합니다.
+title: xNull 태그 확장
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ---
 

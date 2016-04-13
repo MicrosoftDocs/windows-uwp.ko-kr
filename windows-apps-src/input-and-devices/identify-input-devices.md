@@ -1,8 +1,8 @@
 ---
-UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
-입력 디바이스 식별
+Description: UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
+title: 입력 디바이스 식별
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
-입력 디바이스 식별
+label: 입력 디바이스 식별
 template: detail.hbs
 ---
 

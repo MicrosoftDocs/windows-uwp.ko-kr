@@ -1,7 +1,7 @@
 ---
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다.
-PlayReady를 사용한 적응 스트리밍
+description: 이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다.
+title: PlayReady를 사용한 적응 스트리밍
 ---
 
 # PlayReady를 사용한 적응 스트리밍

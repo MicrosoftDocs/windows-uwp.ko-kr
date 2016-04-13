@@ -1,8 +1,8 @@
 ---
-하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
-하이퍼링크
+Description: 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
+title: 하이퍼링크
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
-하이퍼링크
+label: 하이퍼링크
 template: detail.hbs
 ---
 # 하이퍼링크

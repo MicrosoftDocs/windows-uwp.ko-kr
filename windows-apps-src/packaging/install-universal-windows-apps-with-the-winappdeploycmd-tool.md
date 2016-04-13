@@ -1,7 +1,7 @@
 ---
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
-WinAppDeployCmd.exe 도구를 사용하여 앱 설치
-Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 컴퓨터에서 Windows 10 Mobile 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다.
+title: WinAppDeployCmd.exe 도구를 사용하여 앱 설치
+description: Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 컴퓨터에서 Windows 10 Mobile 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다.
 ---
 # WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 

@@ -1,7 +1,7 @@
 ---
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-C++로 "hello world" 앱 만들기(Windows 10)
-Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)을 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
+title: C++로 "hello world" 앱 만들기(Windows 10)
+description: Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)을 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 ---
 
 # C++로 "hello world" 앱 만들기(Windows 10)

@@ -1,6 +1,6 @@
 ---
-Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
-바인딩 태그 확장
+description: Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
+title: 바인딩 태그 확장
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ---
 

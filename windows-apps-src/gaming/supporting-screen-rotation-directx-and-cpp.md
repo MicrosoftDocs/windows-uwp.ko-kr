@@ -1,6 +1,6 @@
 ---
-화면 방향 지원(DirectX 및 C++)
-여기서는 Windows 10 디바이스의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다.
+title: 화면 방향 지원(DirectX 및 C++)
+description: 여기서는 Windows 10 디바이스의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ---
 

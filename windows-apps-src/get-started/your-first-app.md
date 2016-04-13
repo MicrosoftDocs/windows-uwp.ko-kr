@@ -1,7 +1,7 @@
 ---
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
-첫 번째 앱 만들기
-생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
+title: 첫 번째 앱 만들기
+description: 생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 ---
 # 첫 번째 앱 만들기
 

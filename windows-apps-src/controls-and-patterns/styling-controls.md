@@ -1,11 +1,11 @@
 ---
-스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
+Description: 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
 MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-컨트롤 스타일 지정
+title: 컨트롤 스타일 지정
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
-컨트롤 스타일 지정
+label: 컨트롤 스타일 지정
 template: detail.hbs
 ---
 

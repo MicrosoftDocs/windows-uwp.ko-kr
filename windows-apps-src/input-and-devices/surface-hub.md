@@ -1,8 +1,8 @@
 ---
 Description: 
-Surface Hub
+title: Surface Hub
 ms.assetid: d970bd76-06b3-474a-b325-e616fe03a36e
-Surface Hub
+label: Surface Hub
 template: detail.hbs
 ---
 

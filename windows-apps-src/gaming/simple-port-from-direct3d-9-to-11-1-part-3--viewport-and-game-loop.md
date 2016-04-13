@@ -1,6 +1,6 @@
 ---
-게임 루프 포팅
-IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다.
+title: 게임 루프 포팅
+description: IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 ---
 

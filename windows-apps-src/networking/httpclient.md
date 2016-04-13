@@ -1,6 +1,6 @@
 ---
-HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
-HttpClient
+description: HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
+title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 ---
 

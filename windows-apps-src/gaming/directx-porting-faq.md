@@ -1,6 +1,6 @@
 ---
-DirectX 11 포팅 FAQ
-UWP(유니버설 Windows 플랫폼)로 게임을 포팅하는 방법에 대한 질문과 대답입니다.
+title: DirectX 11 포팅 FAQ
+description: UWP(유니버설 Windows 플랫폼)로 게임을 포팅하는 방법에 대한 질문과 대답입니다.
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ---
 

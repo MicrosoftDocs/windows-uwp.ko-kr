@@ -1,6 +1,6 @@
 ---
-Windows.Web.Syndication 네임스페이스의 기능을 사용하여 RSS 및 Atom 표준에 따라 생성된 신디케이티드 피드로 인기 있는 최신 웹 콘텐츠를 검색하거나 만듭니다.
-RSS/Atom 피드
+description: Windows.Web.Syndication 네임스페이스의 기능을 사용하여 RSS 및 Atom 표준에 따라 생성된 신디케이티드 피드로 인기 있는 최신 웹 콘텐츠를 검색하거나 만듭니다.
+title: RSS/Atom 피드
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ---
 

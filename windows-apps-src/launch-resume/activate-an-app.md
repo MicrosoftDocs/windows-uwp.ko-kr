@@ -1,6 +1,6 @@
 ---
-앱 활성화 처리
-OnLaunched 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다.
+title: 앱 활성화 처리
+description: OnLaunched 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ---
 

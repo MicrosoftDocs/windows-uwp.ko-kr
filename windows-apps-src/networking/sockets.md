@@ -1,6 +1,6 @@
 ---
-UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다.
-소켓
+description: UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다.
+title: 소켓
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 ---
 

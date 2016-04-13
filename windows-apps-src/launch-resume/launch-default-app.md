@@ -1,6 +1,6 @@
 ---
-URI에 대한 기본 앱 시작
-URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다.
+title: URI에 대한 기본 앱 시작
+description: URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다.
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
 ---
 

@@ -1,11 +1,11 @@
 ---
-XAML의 테마 리소스는 활성 상태인 시스템 테마에 따라 다른 값을 적용하는 리소스 집합입니다.
+Description: XAML의 테마 리소스는 활성 상태인 시스템 테마에 따라 다른 값을 적용하는 리소스 집합입니다.
 MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_theme\_resources'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-XAML 테마 리소스
+title: XAML 테마 리소스
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
-XAML 테마 리소스
+label: XAML 테마 리소스
 template: detail.hbs
 ---
 

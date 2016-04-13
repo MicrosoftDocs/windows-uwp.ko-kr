@@ -1,8 +1,8 @@
 ---
-레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다.
-UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
+Description: 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다.
+title: UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
-레이아웃 패널
+label: 레이아웃 패널
 template: detail.hbs
 ---
 # 레이아웃 패널

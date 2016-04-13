@@ -1,6 +1,6 @@
 ---
-이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 ResourceDictionary에 정의되며 StaticResource 사용은 ResourceDictionary의 리소스 키를 참조합니다.
-StaticResource 태그 확장
+description: 이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 ResourceDictionary에 정의되며 StaticResource 사용은 ResourceDictionary의 리소스 키를 참조합니다.
+title: StaticResource 태그 확장
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 ---
 

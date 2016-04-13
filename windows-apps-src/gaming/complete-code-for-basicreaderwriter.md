@@ -1,6 +1,6 @@
 ---
-BasicReaderWriter의 전체 코드
-일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다.
+title: BasicReaderWriter의 전체 코드
+description: 일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 ---
 

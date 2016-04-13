@@ -1,9 +1,9 @@
 ---
-세계화는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다.
+Description: 세계화는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다.
 Search.SourceType: Video
-세계화 및 지역화
+title: 세계화 및 지역화
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
-소개
+label: 소개
 template: detail.hbs
 ---
 

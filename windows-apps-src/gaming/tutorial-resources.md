@@ -1,6 +1,6 @@
 ---
-게임 샘플 확장
-축하합니다! 이제 기본 UWP(유니버설 Windows 플랫폼) DirectX 3D 게임의 주요 구성 요소에 대해 이해하셨습니다.
+title: 게임 샘플 확장
+description: 축하합니다! 이제 기본 UWP(유니버설 Windows 플랫폼) DirectX 3D 게임의 주요 구성 요소에 대해 이해하셨습니다.
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 키워드: ["DirectX, XAML"]
 ---

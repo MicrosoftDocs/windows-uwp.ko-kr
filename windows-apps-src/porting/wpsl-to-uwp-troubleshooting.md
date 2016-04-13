@@ -1,6 +1,6 @@
 ---
-이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요.
-Windows Phone Silverlight를 UWP로 포팅하는 문제 해결
+description: 이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요.
+title: Windows Phone Silverlight를 UWP로 포팅하는 문제 해결
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
 ---
 

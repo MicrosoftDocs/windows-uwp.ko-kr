@@ -1,6 +1,6 @@
 ---
-Visual Studio 둘러보기
-Visual Studio 둘러보기
+description: Visual Studio 둘러보기
+title: Visual Studio 둘러보기
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
 ---
 

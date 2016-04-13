@@ -1,6 +1,6 @@
 ---
-XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다.
-XAML 및 공백
+description: XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다.
+title: XAML 및 공백
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 ---
 

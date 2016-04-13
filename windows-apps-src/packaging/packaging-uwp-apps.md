@@ -1,7 +1,7 @@
 ---
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
-UWP 앱 패키징
-UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다.
+title: UWP 앱 패키징
+description: UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다.
 ---
 # UWP 앱 패키징
 

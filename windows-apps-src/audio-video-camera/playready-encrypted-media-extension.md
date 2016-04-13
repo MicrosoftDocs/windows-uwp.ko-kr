@@ -1,7 +1,7 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다.
-PlayReady 암호화된 미디어 확장
+description: 이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다.
+title: PlayReady 암호화된 미디어 확장
 ---
 
 # PlayReady 암호화된 미디어 확장

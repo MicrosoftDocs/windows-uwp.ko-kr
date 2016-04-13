@@ -1,6 +1,6 @@
 ---
-Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다.
-Windows 런타임 8.x에서 UWP로 이동'
+description: Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다.
+title: Windows 런타임 8.x에서 UWP로 이동'
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ---
 

@@ -1,6 +1,6 @@
 ---
-Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다.
-Windows Phone Silverlight에서 UWP로 이동
+description: Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다.
+title: Windows Phone Silverlight에서 UWP로 이동
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 ---
 

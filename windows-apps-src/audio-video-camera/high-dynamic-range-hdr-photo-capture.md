@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다.
-HDR(High Dynamic Range) 사진 캡처
+description: AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다.
+title: HDR(High Dynamic Range) 사진 캡처
 ---
 
 # HDR(High Dynamic Range) 사진 캡처

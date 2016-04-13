@@ -1,6 +1,6 @@
 ---
-Azure Active Directory를 사용하여 개발자 센터 계정에 사용자를 추가할 수 있습니다.
-계정 사용자 관리
+Description: Azure Active Directory를 사용하여 개발자 센터 계정에 사용자를 추가할 수 있습니다.
+title: 계정 사용자 관리
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ---
 

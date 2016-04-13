@@ -1,6 +1,6 @@
 ---
-UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다.
-Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
+description: UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다.
+title: Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ---
 

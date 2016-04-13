@@ -1,6 +1,6 @@
 ---
-Marble Maze 응용 프로그램 구조
-DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다.
+title: Marble Maze 응용 프로그램 구조
+description: DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다.
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 ---
 

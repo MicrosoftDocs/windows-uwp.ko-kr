@@ -1,6 +1,6 @@
 ---
-OpenGL ES 2.0에서 Direct3D 11로 포팅
-OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅에 대한 문서, 개요 및 설명이 포함되어 있습니다.
+title: OpenGL ES 2.0에서 Direct3D 11로 포팅
+description: OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅에 대한 문서, 개요 및 설명이 포함되어 있습니다.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
 ---
 

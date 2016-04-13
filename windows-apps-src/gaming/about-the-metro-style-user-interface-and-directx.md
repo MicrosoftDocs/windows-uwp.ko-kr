@@ -1,6 +1,6 @@
 ---
-앱 개체 및 DirectX
-DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다.
+title: 앱 개체 및 DirectX
+description: DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 ---
 

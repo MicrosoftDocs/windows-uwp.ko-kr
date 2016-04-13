@@ -1,6 +1,6 @@
 ---
-Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
-Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다.
+title: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
+description: Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ---
 

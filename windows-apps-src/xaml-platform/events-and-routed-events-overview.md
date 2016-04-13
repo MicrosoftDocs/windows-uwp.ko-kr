@@ -1,6 +1,6 @@
 ---
-프로그래밍 언어로 C#, Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX)을 사용하고 UI 정의에 XAML을 사용하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 대해 설명합니다.
-이벤트 및 라우트된 이벤트 개요
+description: 프로그래밍 언어로 C#, Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX)을 사용하고 UI 정의에 XAML을 사용하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 대해 설명합니다.
+title: 이벤트 및 라우트된 이벤트 개요
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ---
 

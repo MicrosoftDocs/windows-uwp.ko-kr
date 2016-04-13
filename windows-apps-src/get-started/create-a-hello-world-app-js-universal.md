@@ -1,7 +1,7 @@
 ---
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-"Hello, world" 앱 만들기(JS)
-이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 &\#0034;Hello, world&\#0034; 앱을 만드는 방법을 설명합니다.
+title: "Hello, world" 앱 만들기(JS)
+description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 &\#0034;Hello, world&\#0034; 앱을 만드는 방법을 설명합니다.
 ---
 # "Hello, world" 앱 만들기(JS)
 

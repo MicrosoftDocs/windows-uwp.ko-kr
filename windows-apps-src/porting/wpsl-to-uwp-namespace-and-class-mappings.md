@@ -1,6 +1,6 @@
 ---
-이 항목에서는 Windows Phone Silverlight API를 해당 UWP(유니버설 Windows 플랫폼) API에 포괄적으로 매핑합니다.
-Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑
+description: 이 항목에서는 Windows Phone Silverlight API를 해당 UWP(유니버설 Windows 플랫폼) API에 포괄적으로 매핑합니다.
+title: Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ---
 

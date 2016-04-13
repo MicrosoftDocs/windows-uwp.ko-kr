@@ -1,6 +1,6 @@
 ---
-태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다.
-xUid 지시어
+description: 태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다.
+title: xUid 지시어
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 ---
 

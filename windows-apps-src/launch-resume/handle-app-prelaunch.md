@@ -1,6 +1,6 @@
 ---
-앱 사전 실행 처리
-OnLaunched 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
+title: 앱 사전 실행 처리
+description: OnLaunched 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 ---
 

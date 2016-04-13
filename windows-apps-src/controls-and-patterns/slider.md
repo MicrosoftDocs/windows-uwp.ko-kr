@@ -1,8 +1,8 @@
 ---
-사용자가 지정된 범위의 값을 설정할 수 있습니다.
-슬라이더
+Description: 사용자가 지정된 범위의 값을 설정할 수 있습니다.
+title: 슬라이더
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
-슬라이더
+label: 슬라이더
 template: detail.hbs
 ---
 # 슬라이더

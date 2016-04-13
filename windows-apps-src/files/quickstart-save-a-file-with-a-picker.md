@@ -1,7 +1,7 @@
 ---
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
-선택기를 사용하여 파일 저장
-사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다.
+title: 선택기를 사용하여 파일 저장
+description: 사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다.
 ---
 
 # 선택기를 사용하여 파일 저장

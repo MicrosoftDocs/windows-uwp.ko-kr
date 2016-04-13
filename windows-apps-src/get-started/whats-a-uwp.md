@@ -1,7 +1,7 @@
 ---
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
-UWP(유니버설 Windows 플랫폼) 앱이란?
-유니버설 Windows 앱이라 불리는 다양한 유형의 앱(Windows 스토어 앱, Windows Phone 스토어 앱 및 Windows 런타임 앱)에 대해 알아보세요.
+title: UWP(유니버설 Windows 플랫폼) 앱이란?
+description: 유니버설 Windows 앱이라 불리는 다양한 유형의 앱(Windows 스토어 앱, Windows Phone 스토어 앱 및 Windows 런타임 앱)에 대해 알아보세요.
 ---
 
 # UWP(유니버설 Windows 플랫폼) 앱이란?

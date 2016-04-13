@@ -1,7 +1,7 @@
 ---
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
-네트워크를 통해 디바이스 열거
-로컬로 연결된 디바이스를 검색하는 것 외에 Windows.Devices.Enumeration API를 사용하여 무선 및 네트워크 프로토콜을 통해 디바이스를 열거할 수 있습니다.
+title: 네트워크를 통해 디바이스 열거
+description: 로컬로 연결된 디바이스를 검색하는 것 외에 Windows.Devices.Enumeration API를 사용하여 무선 및 네트워크 프로토콜을 통해 디바이스를 열거할 수 있습니다.
 ---
 # 네트워크를 통해 디바이스 열거
 

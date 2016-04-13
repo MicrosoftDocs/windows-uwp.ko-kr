@@ -1,6 +1,6 @@
 ---
-pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다.
-pubCenter-개발자 센터 통합
+Description: pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다.
+title: pubCenter-개발자 센터 통합
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 ---
 

@@ -1,7 +1,7 @@
 ---
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-Bookstore에 제공된 정보를 기반으로 하는 이 사례 연구는 LongListSelector에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다.
-UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore2
+description: Bookstore에 제공된 정보를 기반으로 하는 이 사례 연구는 LongListSelector에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다.
+title: UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore2
 ---
 
 # UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore2

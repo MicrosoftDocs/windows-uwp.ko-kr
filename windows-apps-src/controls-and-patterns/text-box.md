@@ -1,6 +1,6 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
-입력란
+label: 입력란
 template: detail.hbs
 ---
 # 입력란

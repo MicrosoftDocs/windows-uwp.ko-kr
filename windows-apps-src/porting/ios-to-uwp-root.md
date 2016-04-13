@@ -1,7 +1,7 @@
 ---
-iOS에서 UWP로 이동
+description: iOS에서 UWP로 이동
 Search.SourceType: Video
-iOS에서 UWP로 이동
+title: iOS에서 UWP로 이동
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
 ---
 

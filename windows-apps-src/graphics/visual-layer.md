@@ -1,7 +1,7 @@
 ---
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
-시각적 계층
-Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다.
+title: 시각적 계층
+description: Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다.
 ---
 # 시각적 계층
 

@@ -1,5 +1,5 @@
 ---
-Windows 런타임 구성 요소에서 이벤트 발생
+title: Windows 런타임 구성 요소에서 이벤트 발생
 ms.assetid: 3F7744E8-8A3C-4203-A1CE-B18584E89000
 description: 
 ---

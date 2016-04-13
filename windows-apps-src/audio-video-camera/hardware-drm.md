@@ -1,7 +1,7 @@
 ---
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
-이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다.
-하드웨어 DRM
+description: 이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다.
+title: 하드웨어 DRM
 ---
 
 # 하드웨어 DRM

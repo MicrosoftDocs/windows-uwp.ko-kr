@@ -1,6 +1,6 @@
 ---
-C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
-.NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다.
+title: C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
+description: .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다.
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ---
 

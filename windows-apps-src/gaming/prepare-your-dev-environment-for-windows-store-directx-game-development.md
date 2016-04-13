@@ -1,6 +1,6 @@
 ---
-게임용 프로젝트 템플릿 및 도구
-UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래밍을 시작하는 데 필요한 사항을 보여 줍니다.
+title: 게임용 프로젝트 템플릿 및 도구
+description: UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래밍을 시작하는 데 필요한 사항을 보여 줍니다.
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
 ---
 

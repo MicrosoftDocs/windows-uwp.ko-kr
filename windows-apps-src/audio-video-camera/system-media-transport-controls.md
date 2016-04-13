@@ -1,7 +1,7 @@
 ---
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-SystemMediaTransportControls 클래스를 사용하면 Windows에서 기본 제공되는 앱에서 시스템 미디어 전송 컨트롤을 사용하고 앱이 현재 재생 중인 미디어에 대해 컨트롤이 표시하는 메타데이터를 업데이트할 수 있습니다.
-시스템 미디어 전송 컨트롤
+description: SystemMediaTransportControls 클래스를 사용하면 Windows에서 기본 제공되는 앱에서 시스템 미디어 전송 컨트롤을 사용하고 앱이 현재 재생 중인 미디어에 대해 컨트롤이 표시하는 메타데이터를 업데이트할 수 있습니다.
+title: 시스템 미디어 전송 컨트롤
 ---
 
 # 시스템 미디어 전송 컨트롤

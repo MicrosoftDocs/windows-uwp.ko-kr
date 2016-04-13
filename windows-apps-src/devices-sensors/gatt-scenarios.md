@@ -1,7 +1,7 @@
 ---
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
-Bluetooth GATT
-이 문서에서는 세 가지 일반적인 GATT 시나리오에 대한 샘플 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth GATT(일반 특성 프로필) 개요를 제공합니다.
+title: Bluetooth GATT
+description: 이 문서에서는 세 가지 일반적인 GATT 시나리오에 대한 샘플 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth GATT(일반 특성 프로필) 개요를 제공합니다.
 ---
 # Bluetooth GATT
 

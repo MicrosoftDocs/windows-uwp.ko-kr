@@ -1,7 +1,7 @@
 ---
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
-C# 또는 Visual Basic에서 비동기식 API 호출
-UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다.
+title: C# 또는 Visual Basic에서 비동기식 API 호출
+description: UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다.
 ---
 # C# 또는 Visual Basic에서 비동기식 API 호출
 

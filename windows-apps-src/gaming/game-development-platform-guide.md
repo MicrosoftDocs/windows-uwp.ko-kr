@@ -1,6 +1,6 @@
 ---
-UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
-이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
+title: UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
+description: 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ---
 

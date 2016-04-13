@@ -1,11 +1,11 @@
 ---
-'ResourceDictionary 요소와 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다.'
+Description: 'ResourceDictionary 요소와 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다.'
 MS-HAID: 'dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-ResourceDictionary 및 XAML 리소스 참조
+title: ResourceDictionary 및 XAML 리소스 참조
 ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
-ResourceDictionary 및 XAML 리소스 참조
+label: ResourceDictionary 및 XAML 리소스 참조
 template: detail.hbs
 ---
 

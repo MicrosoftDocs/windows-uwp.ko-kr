@@ -1,7 +1,7 @@
 ---
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
-파일 속성 가져오기
-StorageFile 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
+title: 파일 속성 가져오기
+description: StorageFile 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
 ---
 # 파일 속성 가져오기
 

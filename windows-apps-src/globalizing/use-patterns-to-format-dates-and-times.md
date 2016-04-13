@@ -1,8 +1,8 @@
 ---
-정확히 개발자가 원하는 날짜 및 시간을 표시하려면 Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 사용하세요.
-날짜 및 시간 형식 지정 패턴 사용
+Description: 정확히 개발자가 원하는 날짜 및 시간을 표시하려면 Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 사용하세요.
+title: 날짜 및 시간 형식 지정 패턴 사용
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
-날짜 및 시간 형식 지정 패턴 사용
+label: 날짜 및 시간 형식 지정 패턴 사용
 template: detail.hbs
 ---
 

@@ -1,6 +1,6 @@
 ---
-OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
-개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다.
+title: OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
+description: 개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다.
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 ---
 

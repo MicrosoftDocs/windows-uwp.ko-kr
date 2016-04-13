@@ -1,8 +1,8 @@
 ---
-RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
-RichTextBlock
+Description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
+title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
-서식 있는 텍스트 블록
+label: 서식 있는 텍스트 블록
 template: detail.hbs
 ---
 # 서식 있는 텍스트 블록

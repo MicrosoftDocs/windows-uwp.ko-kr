@@ -1,7 +1,7 @@
 ---
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다.
-CameraCaptureUI를 사용하여 사진 및 비디오 캡처
+description: 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다.
+title: CameraCaptureUI를 사용하여 사진 및 비디오 캡처
 ---
 
 # CameraCaptureUI를 사용하여 사진 및 비디오 캡처

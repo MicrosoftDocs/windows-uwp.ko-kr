@@ -1,5 +1,5 @@
 ---
-앱 설치 광고 보고서
+title: 앱 설치 광고 보고서
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
 ---

@@ -1,6 +1,6 @@
 ---
-Windows 런타임 형식의 .NET Framework 매핑
-다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다.
+title: Windows 런타임 형식의 .NET Framework 매핑
+description: 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 ---
 

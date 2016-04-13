@@ -1,6 +1,6 @@
 ---
-지오코딩 및 리버스 지오코딩 수행
-Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
+title: 지오코딩 및 리버스 지오코딩 수행
+description: Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 ---
 

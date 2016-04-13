@@ -1,7 +1,7 @@
 ---
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
-ListView 및 GridView UI 최적화
-UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다.
+title: ListView 및 GridView UI 최적화
+description: UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다.
 ---
 # ListView 및 GridView UI 최적화
 

@@ -1,6 +1,6 @@
 ---
-Windows 런타임 구성 요소
-Windows 런타임 구성 요소는 C#, Visual Basic, JavaScript, C++ 등 모든 언어에서 인스턴스화하고 사용할 수 있는 자체 포함된 개체입니다.
+title: Windows 런타임 구성 요소
+description: Windows 런타임 구성 요소는 C#, Visual Basic, JavaScript, C++ 등 모든 언어에서 인스턴스화하고 사용할 수 있는 자체 포함된 개체입니다.
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
 ---
 

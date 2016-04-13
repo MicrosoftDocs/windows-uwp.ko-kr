@@ -1,8 +1,8 @@
 ---
-알림 시각화 도우미는 스토어의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움을 줍니다.
-알림 시각화 도우미
+Description: 알림 시각화 도우미는 스토어의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움을 줍니다.
+title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
-TBD
+label: TBD
 template: detail.hbs
 ---
 

@@ -1,6 +1,6 @@
 ---
-현재 Mac 컴퓨터를 사용하여 Windows용 앱을 개발합니다.
-Windows 10에서 Mac 설정
+description: 현재 Mac 컴퓨터를 사용하여 Windows용 앱을 개발합니다.
+title: Windows 10에서 Mac 설정
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
 ---
 

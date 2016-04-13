@@ -1,6 +1,6 @@
 ---
-이전에 Microsoft Advertising 수익을 위해 pubCenter 지급 계좌를 설정한 경우 2016년 4월 1일부터 더 이상 해당 계좌로 지급되지 않습니다. 이제 지급액은 개발자 센터 지급 계좌를 통해 지급됩니다.
-pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
+Description: 이전에 Microsoft Advertising 수익을 위해 pubCenter 지급 계좌를 설정한 경우 2016년 4월 1일부터 더 이상 해당 계좌로 지급되지 않습니다. 이제 지급액은 개발자 센터 지급 계좌를 통해 지급됩니다.
+title: pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
 ---
 

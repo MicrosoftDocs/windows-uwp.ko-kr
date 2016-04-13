@@ -1,6 +1,6 @@
 ---
-선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
-Windows 런타임 8.x XAML 및 UI를 UWP로 포팅'
+description: 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
+title: Windows 런타임 8.x XAML 및 UI를 UWP로 포팅'
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 ---
 

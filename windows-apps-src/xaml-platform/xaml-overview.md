@@ -1,6 +1,6 @@
 ---
-Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다.
-XAML 개요
+description: Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다.
+title: XAML 개요
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 ---
 

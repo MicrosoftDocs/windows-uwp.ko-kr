@@ -1,8 +1,8 @@
 ---
-긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다.
-연속 받아쓰기 사용
+Description: 긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다.
+title: 연속 받아쓰기 사용
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
-연속 받아쓰기
+label: 연속 받아쓰기
 template: detail.hbs
 ---
 

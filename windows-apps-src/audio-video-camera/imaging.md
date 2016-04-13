@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
-이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다.
-이미징
+description: 이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다.
+title: 이미징
 ---
 
 # 이미징

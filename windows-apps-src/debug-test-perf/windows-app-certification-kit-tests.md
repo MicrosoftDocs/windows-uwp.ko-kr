@@ -1,7 +1,7 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-Windows 앱 인증 키트 테스트
-Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다.
+title: Windows 앱 인증 키트 테스트
+description: Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다.
 ---
 ## Windows 앱 인증 키트 테스트
 

@@ -1,6 +1,6 @@
 ---
-'지도에 POI(관심 지점) 표시'
-고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다.
+title: '지도에 POI(관심 지점) 표시'
+description: 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 ---
 

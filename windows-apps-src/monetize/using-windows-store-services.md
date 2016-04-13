@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-Windows 스토어는 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 특정 유형의 데이터를 프로그래밍 방식으로 액세스하기 위해 REST API를 통해 호출할 수 있는 여러 서비스를 표시합니다.
-Windows 스토어 서비스 사용
+description: Windows 스토어는 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 특정 유형의 데이터를 프로그래밍 방식으로 액세스하기 위해 REST API를 통해 호출할 수 있는 여러 서비스를 표시합니다.
+title: Windows 스토어 서비스 사용
 ---
 
 # Windows 스토어 서비스 사용

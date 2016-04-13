@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
-이 메서드를 사용하여 Windows 스토어 키를 갱신합니다.
-Windows 스토어 ID 키 갱신
+description: 이 메서드를 사용하여 Windows 스토어 키를 갱신합니다.
+title: Windows 스토어 ID 키 갱신
 ---
 
 # Windows 스토어 ID 키 갱신

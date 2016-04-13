@@ -1,6 +1,6 @@
 ---
-컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결합니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다.
-TemplateBinding 태그 확장
+description: 컨트롤 템플릿의 속성 값을 템플릿 기반 컨트롤에서 노출되는 몇몇 다른 속성 값에 연결합니다. TemplateBinding은 XAML의 ControlTemplate 정의 내에서만 사용할 수 있습니다.
+title: TemplateBinding 태그 확장
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 ---
 

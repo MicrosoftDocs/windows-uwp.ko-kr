@@ -1,6 +1,6 @@
 ---
-간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
-이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
+title: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
+description: 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ---
 

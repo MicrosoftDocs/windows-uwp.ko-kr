@@ -1,6 +1,6 @@
 ---
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
-텍스트 블록
+label: 텍스트 블록
 template: detail.hbs
 ---
 # 텍스트 블록

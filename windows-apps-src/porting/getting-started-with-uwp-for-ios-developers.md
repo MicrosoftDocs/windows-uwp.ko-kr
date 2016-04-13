@@ -1,6 +1,6 @@
 ---
-iOS 개발자용 UWP 시작
-iOS 개발자용 UWP 시작
+description: iOS 개발자용 UWP 시작
+title: iOS 개발자용 UWP 시작
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
 ---
 

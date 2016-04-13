@@ -1,6 +1,6 @@
 ---
-앱 다시 시작 방법(DirectX 및 C++)
-이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 다시 시작할 때 중요한 응용 프로그램 데이터를 복원하는 방법을 보여 줍니다.
+title: 앱 다시 시작 방법(DirectX 및 C++)
+description: 이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 다시 시작할 때 중요한 응용 프로그램 데이터를 복원하는 방법을 보여 줍니다.
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ---
 

@@ -1,9 +1,9 @@
 ---
-암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
-암호 상자에 대한 지침
+Description: 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
+title: 암호 상자에 대한 지침
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
-암호 상자
+label: 암호 상자
 template: detail.hbs
 ---
 # 비밀번호 상자

@@ -1,6 +1,6 @@
 ---
-현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다.
-ThemeResource 태그 확장
+description: 현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다.
+title: ThemeResource 태그 확장
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ---
 

@@ -1,6 +1,6 @@
 ---
-xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
-xBind 태그 확장
+description: xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
+title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ---
 

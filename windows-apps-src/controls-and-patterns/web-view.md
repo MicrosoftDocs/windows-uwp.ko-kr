@@ -1,8 +1,8 @@
 ---
-웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
-웹 보기
+Description: 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
+title: 웹 보기
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
-웹 보기
+label: 웹 보기
 template: detail.hbs
 ---
 

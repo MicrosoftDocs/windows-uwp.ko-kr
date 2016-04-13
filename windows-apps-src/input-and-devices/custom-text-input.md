@@ -1,8 +1,8 @@
 ---
-Windows.UI.Text.Core 네임스페이스의 코어 텍스트 API를 통해 UWP(유니버설 Windows 플랫폼) 앱은 Windows 디바이스에서 지원되는 모든 텍스트 서비스에서 텍스트 입력을 받을 수 있습니다.
-사용자 지정 텍스트 입력 개요
+Description: Windows.UI.Text.Core 네임스페이스의 코어 텍스트 API를 통해 UWP(유니버설 Windows 플랫폼) 앱은 Windows 디바이스에서 지원되는 모든 텍스트 서비스에서 텍스트 입력을 받을 수 있습니다.
+title: 사용자 지정 텍스트 입력 개요
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
-사용자 지정 텍스트 입력
+label: 사용자 지정 텍스트 입력
 template: detail.hbs
 ---
 

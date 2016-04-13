@@ -1,8 +1,8 @@
 ---
-두 가지 주요 XAML 클래스인 Image 및 ImageBrush의 API를 사용하는 방법을 비롯하여 앱에 이미지를 통합하는 방법을 알아봅니다.
-이미지 및 이미지 브러시
+Description: 두 가지 주요 XAML 클래스인 Image 및 ImageBrush의 API를 사용하는 방법을 비롯하여 앱에 이미지를 통합하는 방법을 알아봅니다.
+title: 이미지 및 이미지 브러시
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
-이미지 및 이미지 브러시
+label: 이미지 및 이미지 브러시
 template: detail.hbs
 ---
 # 이미지 및 이미지 브러시

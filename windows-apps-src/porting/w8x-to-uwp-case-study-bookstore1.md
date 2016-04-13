@@ -1,7 +1,7 @@
 ---
-Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1
+title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
+description: 이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
 ---
 
 # Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1

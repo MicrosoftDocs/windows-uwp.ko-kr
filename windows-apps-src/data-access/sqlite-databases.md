@@ -1,7 +1,7 @@
 ---
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
-SQLite 데이터베이스
-SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다.
+title: SQLite 데이터베이스
+description: SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다.
 ---
 # SQLite 데이터베이스
 

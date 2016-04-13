@@ -1,7 +1,7 @@
 ---
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
-프로파일링 및 성능 도구
-Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상시킬 수 있는 여러 가지 도구를 제공합니다.
+title: 프로파일링 및 성능 도구
+description: Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상시킬 수 있는 여러 가지 도구를 제공합니다.
 ---
 # 프로파일링 및 성능 도구
 

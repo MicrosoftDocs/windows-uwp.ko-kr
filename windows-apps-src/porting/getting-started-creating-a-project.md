@@ -1,7 +1,7 @@
 ---
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다.
-Visual Studio에서 프로젝트 만들기
+description: Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다.
+title: Visual Studio에서 프로젝트 만들기
 ---
 
 # 시작: 프로젝트 만들기

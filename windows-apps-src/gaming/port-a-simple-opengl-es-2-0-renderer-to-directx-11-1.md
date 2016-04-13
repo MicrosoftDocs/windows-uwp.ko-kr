@@ -1,6 +1,6 @@
 ---
-방법 - 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
-첫 번째 포팅 연습에 대한 기본 사항인 Visual Studio 2015에서 DirectX 11 앱(유니버설 Windows) 템플릿을 일치시키는 것과 같이, 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져오기에 먼저 살펴보겠습니다.
+title: 방법 - 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
+description: 첫 번째 포팅 연습에 대한 기본 사항인 Visual Studio 2015에서 DirectX 11 앱(유니버설 Windows) 템플릿을 일치시키는 것과 같이, 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져오기에 먼저 살펴보겠습니다.
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ---
 

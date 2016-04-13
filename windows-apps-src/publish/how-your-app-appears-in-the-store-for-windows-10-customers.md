@@ -1,6 +1,6 @@
 ---
-이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다.
-앱이 Windows 10 고객용 스토어에 표시되는 방법
+Description: 이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다.
+title: 앱이 Windows 10 고객용 스토어에 표시되는 방법
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 ---
 

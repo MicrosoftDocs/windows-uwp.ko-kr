@@ -1,6 +1,6 @@
 ---
-연습 - 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
-이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다.
+title: 연습 - 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
+description: 이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다.
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ---
 

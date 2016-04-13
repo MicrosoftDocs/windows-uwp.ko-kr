@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
-디바이스 정보 속성
-각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다.
+title: 디바이스 정보 속성
+description: 각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다.
 ---
 # 장치 정보 속성
 

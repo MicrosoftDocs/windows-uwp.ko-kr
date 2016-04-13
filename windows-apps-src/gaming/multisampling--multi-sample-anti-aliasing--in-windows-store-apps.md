@@ -1,6 +1,6 @@
 ---
-UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
-Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다.
+title: UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
+description: Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ---
 
