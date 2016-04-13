@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 3738
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 1913
+[ Handoff Success Files ](#handoff-success-list)| 1912
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 1825
+[ Ignored Files ](#ignored-list)| 1826
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -1622,7 +1622,6 @@
  [windows-apps-src\porting\wpsl-to-uwp-porting-xaml-and-ui.md](https://github.com/Microsoft/windows-apps/blob/2b275fea01db21850ec5245deb67a479422dee6e/windows-apps-src/porting/wpsl-to-uwp-porting-xaml-and-ui.md) | HandedOffSuccess | [Details](#4a9e71a4ec58278205bb325fd875959ff9948fb53359)
  [windows-apps-src\porting\wpsl-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/2b275fea01db21850ec5245deb67a479422dee6e/windows-apps-src/porting/wpsl-to-uwp-root.md) | HandedOffSuccess | [Details](#b55a4f942eb5d8e80d50dcc7a8b418680a8deb883360)
  [windows-apps-src\porting\wpsl-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/2b275fea01db21850ec5245deb67a479422dee6e/windows-apps-src/porting/wpsl-to-uwp-troubleshooting.md) | HandedOffSuccess | [Details](#cb09ba3c6a44ec7eef1ccb9e80609352582a0e3e3361)
- [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/publish/about-affiliate-ads.md) | HandedOffSuccess | [Details](#5e13fea9b0846e7e3e49e4b9a9693d3f239905483362)
  [windows-apps-src\publish\about-community-ads.md](https://github.com/Microsoft/windows-apps/blob/f1b52280b9b473b8353983fa5a4a57f3164fdf5b/windows-apps-src/publish/about-community-ads.md) | HandedOffSuccess | [Details](#0e8a118804a36ad1bff0d21344cb375aaac6565d3363)
  [windows-apps-src\publish\about-house-ads.md](https://github.com/Microsoft/windows-apps/blob/f1b52280b9b473b8353983fa5a4a57f3164fdf5b/windows-apps-src/publish/about-house-ads.md) | HandedOffSuccess | [Details](#db35abe3198933a4758a54f80b44d96ecaf65f613364)
  [windows-apps-src\publish\account-types-locations-and-fees.md](https://github.com/Microsoft/windows-apps/blob/5adfc59d4d1d1c289ac4d723ad103d088aae12c3/windows-apps-src/publish/account-types-locations-and-fees.md) | HandedOffSuccess | [Details](#22f1983bdc028657552d8144bffa9071a352606a3365)
@@ -3703,6 +3702,7 @@
  [windows-apps-src\networking\code\backgroundtransfer\download_quickstartcs\cs\main.xaml.cs](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/networking/code/backgroundtransfer/download_quickstartcs/cs/main.xaml.cs) | Ignored | [Details](#4d2b2e0b87673696d9c7fcfb48cc309729099f303249)
  [windows-apps-src\networking\code\backgroundtransfer\upload_quickstart\js\main.js](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/networking/code/backgroundtransfer/upload_quickstart/js/main.js) | Ignored | [Details](#1af01b63e3a1c6178ab3c6f62ae57ea1b9fdb81e3250)
  [windows-apps-src\porting\images\ios-to-uwp\porting-your-android-or-ios-app-video-thumbnail.png](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/porting/images/ios-to-uwp/porting-your-android-or-ios-app-video-thumbnail.png) | Ignored | [Details](#cfee271c3f827566bb7691296cc82b7bd8ea42ae3294)
+ [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/publish/about-affiliate-ads.md) | Ignored | [Details](#b56706396d32ef16c33cd167d8ccabf5e3d9ef8c3362)
  [windows-apps-src\style\assets\color\feature.png](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/style/assets/color/feature.png) | Ignored | [Details](#ab915b9db9e855d875cdbcfc40d06e02cae21bde3505)
  [windows-apps-src\style\assets\color\variants.png](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/style/assets/color/variants.png) | Ignored | [Details](#94ddff1b7ec6706599884fe2fcaa8e73f5d6b5ae3507)
  [windows-apps-src\style\assets\sound\BackButtonClick.mp3](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/style/assets/sound/BackButtonClick.mp3) | Ignored | [Details](#58937f557a9bf078a8395d5d50e0a1fa15688f493508)
@@ -45204,12 +45204,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5e13fea9b0846e7e3e49e4b9a9693d3f239905483362'></a> Source: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/33d01ee7d684fdd3d17e323d9a3d9b4da25b2074/windows-apps-src/publish/about-affiliate-ads.md)
-* Status: HandedOffSuccess
+##### <a name='b56706396d32ef16c33cd167d8ccabf5e3d9ef8c3362'></a> Source: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/183aee7a262d7120692e051c484199a1eeca0c96/windows-apps-src/publish/about-affiliate-ads.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c4ddd7612b16a599f4b106e13f282beef6b903ee/ol-handoff/Microsoft/windows-apps.ko-kr/master/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf)
-* Handoff Datetime: 2016-03-30 15:54:15
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
