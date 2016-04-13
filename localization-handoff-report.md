@@ -1,27 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/cad401dfc1345b0def2586720b517f460d7c9e58/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | OutofSyncHandedBackSuccess | [Details](#b8d3ce9b0934ae57180c152111e056f74bfdad153269)
+ [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/about-affiliate-ads.md) | OutofSyncHandedBackSuccess | [Details](#b78d9669d9f1f86e94e383e63de9a813cc87cba63357)
+ [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/affiliates-performance-report.md) | OutofSyncHandedBackSuccess | [Details](#3fb62d220b6f93c74a3c91dbc9d40beddd4e31003364)
 
 ## Item Details
-##### <a name='b8d3ce9b0934ae57180c152111e056f74bfdad153269'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/cad401dfc1345b0def2586720b517f460d7c9e58/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+##### <a name='b78d9669d9f1f86e94e383e63de9a813cc87cba63357'></a> Source: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/about-affiliate-ads.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0ea4568cf13fed71842379fd6497661c7e0a22d7/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.ko-kr.xlf)
-* Handoff Datetime: 2016-04-13 21:15:41
+* Handoff File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/a69db4fda710902480db524cd389b24718ef6785/ol-handoff/Microsoft/windows-apps.ko-kr/master/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf)
+* Handoff Datetime: 2016-04-13 22:09:25
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d499f6a834615ec1d1c2f5f73cbfed67421e6d0b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
-* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/087354d2844b2617618ac9b937d764e55e2d18e4/ol-handback/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.ko-kr.xlf)
-* Current Handback Datetime: 2016-04-13 18:18:21
+* Current Target File: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/publish/about-affiliate-ads.md)
+* Current Handback File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf)
+* Current Handback Datetime: 2016-04-13 21:01:02
+* [Back to Top](#report-top)
+
+##### <a name='3fb62d220b6f93c74a3c91dbc9d40beddd4e31003364'></a> Source: [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/affiliates-performance-report.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/a69db4fda710902480db524cd389b24718ef6785/ol-handoff/Microsoft/windows-apps.ko-kr/master/affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf)
+* Handoff Datetime: 2016-04-13 22:09:25
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/publish/affiliates-performance-report.md)
+* Current Handback File: [affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf)
+* Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
 
