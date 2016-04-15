@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "f4ab3610a3ad3df90e06fd2f23e8244ce8449916",
+  "LastProcessedCommit": "6eca7156c8f81a9a89e006c09a232a255f3a8725",
   "LastTranslatedCommit": "1fdc882c3a37fa54830124185cb6b2b359017b04",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -82298,6 +82298,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.ko-kr.xlf",
       "HandoffFileCommit": "3e1e45f42aee43092f6d7222cfc7ed81efa86b77",
       "HandoffDateTime": "2016-04-15T18:13:36.9250968Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "9d2d58f2423688f895da1de56eef6448bb42692d": {
+      "FileHash": "9d2d58f2423688f895da1de56eef6448bb42692d",
+      "SourceFileCommit": "6eca7156c8f81a9a89e006c09a232a255f3a8725",
+      "SourceFilePath": "windows-apps-src\\devices-sensors\\enumerate-devices-over-a-network.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\devices-sensors\\enumerate-devices-over-a-network.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.ko-kr.xlf",
+      "HandoffFileCommit": "d77bf4e79a3fdfefef5b7ddd2a47c9374caa7e4e",
+      "HandoffDateTime": "2016-04-15T21:14:00.2166891Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
