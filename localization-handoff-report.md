@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps/blob/6eca7156c8f81a9a89e006c09a232a255f3a8725/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md) | OutofSyncHandedBackSuccess | [Details](#9d2d58f2423688f895da1de56eef6448bb42692d1991)
+ [windows-apps-src\layout\test.md](https://github.com/Microsoft/windows-apps/blob/186b4d554d4b8a19be4df89075da30cd5965c313/windows-apps-src/layout/test.md) | HandedOffSuccess | [Details](#2c991b63f7cf41c9950d274272b604b9bd5b007c3165)
 
 ## Item Details
-##### <a name='9d2d58f2423688f895da1de56eef6448bb42692d1991'></a> Source: [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps/blob/6eca7156c8f81a9a89e006c09a232a255f3a8725/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='2c991b63f7cf41c9950d274272b604b9bd5b007c3165'></a> Source: [windows-apps-src\layout\test.md](https://github.com/Microsoft/windows-apps/blob/186b4d554d4b8a19be4df89075da30cd5965c313/windows-apps-src/layout/test.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d77bf4e79a3fdfefef5b7ddd2a47c9374caa7e4e/ol-handoff/Microsoft/windows-apps.ko-kr/master/enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.ko-kr.xlf)
-* Handoff Datetime: 2016-04-15 21:14:00
+* Handoff File: [test.cdcf91b592fe1e9eb688524669174320f25c7f54.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/9c9f92df21791c0d9f71f9e6a39b04879cf75fce/ol-handoff/Microsoft/windows-apps.ko-kr/master/test.cdcf91b592fe1e9eb688524669174320f25c7f54.ko-kr.xlf)
+* Handoff Datetime: 2016-04-15 21:43:09
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\devices-sensors\enumerate-devices-over-a-network.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/devices-sensors/enumerate-devices-over-a-network.md)
-* Current Handback File: [enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/enumerate-devices-over-a-network.389d6d6a3fd86f8097e453e300c1ae4c6a425044.ko-kr.xlf)
-* Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
 
