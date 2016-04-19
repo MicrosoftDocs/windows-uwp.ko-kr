@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "9836775732280f58b3e914f5173438d32a6874e9",
+  "LastProcessedCommit": "9dc480a47368c8b87e788281395e80ebaf33784c",
   "LastTranslatedCommit": "1fdc882c3a37fa54830124185cb6b2b359017b04",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -82675,6 +82675,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf",
       "HandoffFileCommit": "78fe93c75ad8f4e2267d63206ceb1ba484e15f33",
       "HandoffDateTime": "2016-04-18T23:22:35.0014323Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "78029778e4ac7fdc5adf622084ba56f5424a7a92": {
+      "FileHash": "78029778e4ac7fdc5adf622084ba56f5424a7a92",
+      "SourceFileCommit": "9dc480a47368c8b87e788281395e80ebaf33784c",
+      "SourceFilePath": "windows-apps-src\\monetize\\troubleshoot-ad-mediation.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\monetize\\troubleshoot-ad-mediation.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.ko-kr.xlf",
+      "HandoffFileCommit": "0f24458f3094179771bc2c9d35a568107fb85e9f",
+      "HandoffDateTime": "2016-04-19T17:48:23.1822998Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
