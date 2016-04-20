@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "d4d418bc6b267528aa7089692b2babfa54223c50",
+  "LastProcessedCommit": "0165f08fd380b6262049b51d682c46acafa59729",
   "LastTranslatedCommit": "1fdc882c3a37fa54830124185cb6b2b359017b04",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -82791,6 +82791,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf",
       "HandoffFileCommit": "a2c3714eb3592d01a899044cb8121e28f50e3275",
       "HandoffDateTime": "2016-04-20T16:19:10.8607684Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "4d31e180dc3e92177f945f1157ae4ebc9cd76797": {
+      "FileHash": "4d31e180dc3e92177f945f1157ae4ebc9cd76797",
+      "SourceFileCommit": "f1c0513dd8ef004c2f686e098b54b5e163f08330",
+      "SourceFilePath": "windows-apps-src\\audio-video-camera\\adaptive-streaming-with-playready.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\audio-video-camera\\adaptive-streaming-with-playready.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\adaptive-streaming-with-playready.fc985ed1b1d3c9fa50b477f463313823801d7872.ko-kr.xlf",
+      "HandoffFileCommit": "568bacba928e491cd615247412bec1afd51032e7",
+      "HandoffDateTime": "2016-04-20T22:14:27.0425911Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
