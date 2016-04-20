@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/34089c2943c5f639bf969753d82e36c36b1ac07f/windows-apps-src/devices-sensors/out-of-band-pairing.md) | OutofSyncHandedBackSuccess | [Details](#10630ccf572cabf7d1b70dfee60b0af74a7eba212022)
+ [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/a48dadbd16de6de12714e479cbf4d70255555d07/windows-apps-src/input-and-devices/designing-for-tv.md) | OutofSyncHandedBackSuccess | [Details](#bdd174527463aa009b503513ab17e35809b793ae2602)
 
 ## Item Details
-##### <a name='10630ccf572cabf7d1b70dfee60b0af74a7eba212022'></a> Source: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/34089c2943c5f639bf969753d82e36c36b1ac07f/windows-apps-src/devices-sensors/out-of-band-pairing.md)
+##### <a name='bdd174527463aa009b503513ab17e35809b793ae2602'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/a48dadbd16de6de12714e479cbf4d70255555d07/windows-apps-src/input-and-devices/designing-for-tv.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5eea67b37ec0010f406041112e88e5551267e95b/ol-handoff/Microsoft/windows-apps.ko-kr/master/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf)
-* Handoff Datetime: 2016-04-19 23:15:07
+* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/a2c3714eb3592d01a899044cb8121e28f50e3275/ol-handoff/Microsoft/windows-apps.ko-kr/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
+* Handoff Datetime: 2016-04-20 16:19:10
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/devices-sensors/out-of-band-pairing.md)
-* Current Handback File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf)
+* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
 * Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 

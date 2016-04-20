@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "8a4864dae0cb42b696a98733f8373c928fc2a3ab",
+  "LastProcessedCommit": "d4d418bc6b267528aa7089692b2babfa54223c50",
   "LastTranslatedCommit": "1fdc882c3a37fa54830124185cb6b2b359017b04",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -82762,6 +82762,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf",
       "HandoffFileCommit": "5eea67b37ec0010f406041112e88e5551267e95b",
       "HandoffDateTime": "2016-04-19T23:15:07.5626592Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "bdd174527463aa009b503513ab17e35809b793ae": {
+      "FileHash": "bdd174527463aa009b503513ab17e35809b793ae",
+      "SourceFileCommit": "a48dadbd16de6de12714e479cbf4d70255555d07",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\designing-for-tv.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\designing-for-tv.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf",
+      "HandoffFileCommit": "a2c3714eb3592d01a899044cb8121e28f50e3275",
+      "HandoffDateTime": "2016-04-20T16:19:10.8607684Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
