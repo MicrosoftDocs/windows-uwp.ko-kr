@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/c16b1bdd00533fac332904a36b1530aa961427ef/windows-apps-src/debug-test-perf/test-with-the-emulator.md) | OutofSyncHandedBackSuccess | [Details](#91649e31303803f6d156cdc1886992ddc7f559a41952)
- [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps/blob/4557fa59d377edc2ae5bf5a9be63516d152949bb/windows-apps-src/networking/sockets.md) | OutofSyncHandedBackSuccess | [Details](#432d9849335c537836fd23a4cd95c79c51bc881d3316)
+ [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/0ecd53a1cbfe0efc4cef9bbb3ffac872247dd407/windows-apps-src/debug-test-perf/test-with-the-emulator.md) | OutofSyncHandedBackSuccess | [Details](#a47a00042725bcc0826e1371f1c35560b6e3db551952)
+ [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://github.com/Microsoft/windows-apps/blob/3a6011f5735d69b1981b2e4dbd3a154f5b6b182b/windows-apps-src/monetize/ui-and-user-experience-guidelines.md) | HandedOffSuccess | [Details](#e7ef8b3361baebbab243254f78b25d3f3404aa5e3299)
 
 ## Item Details
-##### <a name='91649e31303803f6d156cdc1886992ddc7f559a41952'></a> Source: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/c16b1bdd00533fac332904a36b1530aa961427ef/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
+##### <a name='a47a00042725bcc0826e1371f1c35560b6e3db551952'></a> Source: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/0ecd53a1cbfe0efc4cef9bbb3ffac872247dd407/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/dae2b923c0ff556060b8db131fdfec00a865a571/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf)
-* Handoff Datetime: 2016-04-22 21:45:13
+* Handoff File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/1ba00784440da330133131c30fa6b1647f0b90a9/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf)
+* Handoff Datetime: 2016-04-22 22:14:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -25,19 +25,16 @@
 * Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
-##### <a name='432d9849335c537836fd23a4cd95c79c51bc881d3316'></a> Source: [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps/blob/4557fa59d377edc2ae5bf5a9be63516d152949bb/windows-apps-src/networking/sockets.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='e7ef8b3361baebbab243254f78b25d3f3404aa5e3299'></a> Source: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://github.com/Microsoft/windows-apps/blob/3a6011f5735d69b1981b2e4dbd3a154f5b6b182b/windows-apps-src/monetize/ui-and-user-experience-guidelines.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/dae2b923c0ff556060b8db131fdfec00a865a571/ol-handoff/Microsoft/windows-apps.ko-kr/master/sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf)
-* Handoff Datetime: 2016-04-22 21:45:13
+* Handoff File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/1ba00784440da330133131c30fa6b1647f0b90a9/ol-handoff/Microsoft/windows-apps.ko-kr/master/ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf)
+* Handoff Datetime: 2016-04-22 22:14:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/networking/sockets.md)
-* Current Handback File: [sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf)
-* Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
 
