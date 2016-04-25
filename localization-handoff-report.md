@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/2e646aca576b248ae9c940af980b18a3f24bd4df/windows-apps-src/security/companion-device-unlock.md) | OutofSyncHandedBackSuccess | [Details](#a262c06fec086ab6a37e7033f4d6b19607722b443511)
+ [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps/blob/93e12837aec151b0cd1fa711c9e04081d74a3962/windows-apps-src/publish/advertising-performance-report.md) | OutofSyncHandedBackSuccess | [Details](#1617005cff264a89eb66e326e2bedf9f6641a3da3430)
 
 ## Item Details
-##### <a name='a262c06fec086ab6a37e7033f4d6b19607722b443511'></a> Source: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/2e646aca576b248ae9c940af980b18a3f24bd4df/windows-apps-src/security/companion-device-unlock.md)
+##### <a name='1617005cff264a89eb66e326e2bedf9f6641a3da3430'></a> Source: [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps/blob/93e12837aec151b0cd1fa711c9e04081d74a3962/windows-apps-src/publish/advertising-performance-report.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5646e2cfd955b7f28f15bbb4c1816edcb137ced1/ol-handoff/Microsoft/windows-apps.ko-kr/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
-* Handoff Datetime: 2016-04-25 18:41:04
+* Handoff File: [advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fb01d0a928877dbebe789c75abb065e15b846193/ol-handoff/Microsoft/windows-apps.ko-kr/master/advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf)
+* Handoff Datetime: 2016-04-25 19:12:03
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/security/companion-device-unlock.md)
-* Current Handback File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
+* Current Target File: [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/publish/advertising-performance-report.md)
+* Current Handback File: [advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf)
 * Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
