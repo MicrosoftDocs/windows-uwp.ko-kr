@@ -65,7 +65,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 먼저 비디오 컴퍼지션을 표시할 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 컨트롤을 XAML 페이지에 추가합니다.
 
-[!code-cs[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
+[!code-xml[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
 프로젝트에 [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 및 [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) 네임스페이스를 추가합니다.
 
