@@ -35,7 +35,7 @@ title: 간단한 카메라 미리 보기 액세스
 [
             **MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 및 [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx)의 API도 사용합니다.
 
-[!code-cs[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
+[!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
 using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페이스를 포함합니다.
 
