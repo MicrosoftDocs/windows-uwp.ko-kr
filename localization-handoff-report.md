@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/9084d723835c7132f33109cdd8561fb6b4e6c2f4/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md) | OutofSyncHandedBackSuccess | [Details](#d1069234ce1a40028dc69d6fad7e960827a8bd463310)
+ [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/c663692e31a62fdf40df9d706070d0d2ce0e1cdd/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md) | OutofSyncHandedBackSuccess | [Details](#0b2a0cb240431a49ef2bdb82a188f3dcb0294fc52090)
 
 ## Item Details
-##### <a name='d1069234ce1a40028dc69d6fad7e960827a8bd463310'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/9084d723835c7132f33109cdd8561fb6b4e6c2f4/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+##### <a name='0b2a0cb240431a49ef2bdb82a188f3dcb0294fc52090'></a> Source: [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/c663692e31a62fdf40df9d706070d0d2ce0e1cdd/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/141447176d8693a88404329f97c9f0c04bd22615/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf)
-* Handoff Datetime: 2016-04-29 20:14:03
+* Handoff File: [adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/336f43c5fd6a59d39a375b4a52577fc5092b7846/ol-handoff/Microsoft/windows-apps.ko-kr/master/adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf)
+* Handoff Datetime: 2016-04-29 21:13:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
-* Current Handback File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf)
+* Current Target File: [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1fdc882c3a37fa54830124185cb6b2b359017b04/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md)
+* Current Handback File: [adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1d0c8e5a2cec55c8c145ce5ff5509a8fa65bc126/ol-handback/Microsoft/windows-apps.ko-kr/master/adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf)
 * Current Handback Datetime: 2016-04-13 21:01:02
 * [Back to Top](#report-top)
 
