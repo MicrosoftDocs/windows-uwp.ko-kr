@@ -130,7 +130,5 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ## 관련 문서
 * [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)
 
-
 <!--HONumber=Mar16_HO5-->
-
 
