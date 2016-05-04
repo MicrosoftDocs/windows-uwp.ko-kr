@@ -59,7 +59,7 @@ ButtonName.ElementSoundState = ElementSoundMode.Off;
 
 일반적으로 이 소리는 사용자가 [입력 디바이스](/input-and-devices/guidelines-for-interactions/)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
 
-<여기에 SelectButtonClick.mp3 사운드 클립 포함>
+<SelectButtonClick.mp3 sound clip here>
 
 컨트롤 이벤트에서 이 소리를 재생하려면 **ElementSoundPlayer**에서 Play 메서드를 호출하고 **ElementSound.Invoke**를 전달합니다.
 ```C#
@@ -71,14 +71,14 @@ XAML에는 많은 플라이아웃, 대화 상자 및 해제 가능한 UI가 있�
 
 오버레이 콘텐츠 창이 표시되는 경우 **Show** 소리를 호출해야 합니다.
 
-<여기에 OverlayIn.mp3 사운드 클립 포함>
+<OverlayIn.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```
 반대로, 오버레이 콘텐츠 창이 닫히거나 빠른 해제되는 경우 **숨기기** 소리를 호출해야 합니다.
 
-<여기에 OverlayOut.mp3 사운드 클립 포함>
+<OverlayOut.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
@@ -90,14 +90,14 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 
 목록의 *다음 항목*으로 간주되는 보기/패널로 이동하는 경우 다음을 호출합니다.
 
-<여기에 PageTransitionRight.mp3 사운드 클립 포함>1
+<PageTransitionRight.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```
 또한 목록에서 *이전 항목*으로 간주되는 이전 보기/패널로 이동하는 경우 다음을 호출합니다.
 
-<여기에 PageTransitionLeft.mp3 사운드 클립 포함>1
+<PageTransitionLeft.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
@@ -105,7 +105,7 @@ ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ### 뒤로 탐색
 현재 페이지에서 앱 내의 이전 페이지로 이동하는 경우 **GoBack** 소리를 호출해야 합니다.
 
-<여기에 BackButtonClick.mp3 사운드 클립 포함>
+<BackButtonClick.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
@@ -117,7 +117,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 컨트롤이 포커스를 받을 때 **Focus** 소리를 재생하도록 컨트롤을 설정하려면 다음을 호출합니다.
 
-<여기에 ElementFocus1.mp3 사운드 클립 포함>
+<ElementFocus1.mp3 sound clip here>
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
