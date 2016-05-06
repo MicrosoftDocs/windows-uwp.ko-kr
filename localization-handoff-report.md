@@ -1,26 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 8
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\convert-ink-to-text.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/convert-ink-to-text.md) | HandedOffSuccess | [Details](#bdc431d15742261d96b88b97d256b14156f2088c2624)
- [windows-apps-src\input-and-devices\cortana-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/cortana-design-guidelines.md) | HandedOffSuccess | [Details](#31442ed17b9b463cbf10cecb564278b86086bbf22625)
- [windows-apps-src\input-and-devices\enable-continuous-dictation.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/enable-continuous-dictation.md) | HandedOffSuccess | [Details](#a142592f878fa539d6c40ea2abfcbf834b2de34d2633)
- [windows-apps-src\input-and-devices\guidelines-for-textselection.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-textselection.md) | HandedOffSuccess | [Details](#a47b48f9315c51505b2c487c140011e0531055562640)
- [windows-apps-src\input-and-devices\guidelines-for-visualfeedback.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-visualfeedback.md) | HandedOffSuccess | [Details](#287ec24dbc60be39c0f944c6d4a86205961fb7702642)
- [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md) | HandedOffSuccess | [Details](#218fae32f8b63c8fe5499af7d3fe6c1f0404334c2891)
- [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/save-and-load-ink.md) | HandedOffSuccess | [Details](#0f2e95146281fb992af1201c408ed62705c777412893)
- [windows-apps-src\input-and-devices\support-natural-language-voice-commands-in-cortana.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/support-natural-language-voice-commands-in-cortana.md) | HandedOffSuccess | [Details](#c9cd6894c61f3d6cfe770d197317a97a804b41192898)
+ [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/9321e975c455ff61f7977e9972aee7c5d92a7add/windows-apps-src/debug-test-perf/device-portal-desktop.md) | HandedOffSuccess | [Details](#9021ca85f188d8f41fd297a873915709c9b2708c1912)
+ [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md) | HandedOffSuccess | [Details](#eeeb8f98d97468544cc30e3d9884cce15cb913a91914)
 
 ## Item Details
-##### <a name='bdc431d15742261d96b88b97d256b14156f2088c2624'></a> Source: [windows-apps-src\input-and-devices\convert-ink-to-text.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/convert-ink-to-text.md)
+##### <a name='9021ca85f188d8f41fd297a873915709c9b2708c1912'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/9321e975c455ff61f7977e9972aee7c5d92a7add/windows-apps-src/debug-test-perf/device-portal-desktop.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
+* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d890fd591829520a32723e423b22c7f5eb61163d/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-06 14:51:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -28,83 +22,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='31442ed17b9b463cbf10cecb564278b86086bbf22625'></a> Source: [windows-apps-src\input-and-devices\cortana-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/cortana-design-guidelines.md)
+##### <a name='eeeb8f98d97468544cc30e3d9884cce15cb913a91914'></a> Source: [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a142592f878fa539d6c40ea2abfcbf834b2de34d2633'></a> Source: [windows-apps-src\input-and-devices\enable-continuous-dictation.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/enable-continuous-dictation.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [enable-continuous-dictation.be0535fc00f8d4ae06ae902c0e15be805570d134.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-continuous-dictation.be0535fc00f8d4ae06ae902c0e15be805570d134.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a47b48f9315c51505b2c487c140011e0531055562640'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-textselection.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-textselection.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='287ec24dbc60be39c0f944c6d4a86205961fb7702642'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-visualfeedback.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-visualfeedback.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='218fae32f8b63c8fe5499af7d3fe6c1f0404334c2891'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='0f2e95146281fb992af1201c408ed62705c777412893'></a> Source: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/save-and-load-ink.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='c9cd6894c61f3d6cfe770d197317a97a804b41192898'></a> Source: [windows-apps-src\input-and-devices\support-natural-language-voice-commands-in-cortana.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/support-natural-language-voice-commands-in-cortana.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ccd8e61c6cda998403e9f82d87751069551acea1/ol-handoff/Microsoft/windows-apps.ko-kr/master/support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf)
-* Handoff Datetime: 2016-05-06 00:50:34
+* Handoff File: [device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d890fd591829520a32723e423b22c7f5eb61163d/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-06 14:51:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
