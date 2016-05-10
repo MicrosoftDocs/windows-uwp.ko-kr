@@ -1,89 +1,88 @@
 ---
-description: 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다.
-title: 백그라운드 전송
+author: DelfCo
+description: Use the background transfer API to copy files reliably over the network.
+title: Background transfers
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 ---
 
-# 백그라운드 전송
+# Background transfers
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**중요 API**
+**Important APIs**
 
 -   [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242)
 -   [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)
 -   [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)
 
-백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
+Use the background transfer API to copy files reliably over the network. The background transfer API provides advanced upload and download features that run in the background during app suspension and persist beyond app termination. The API monitors network status and automatically suspends and resumes transfers when connectivity is lost, and transfers are also Data Sense-aware and Battery Sense-aware, meaning that download activity adjusts based on your current connectivity and device battery status. The API is ideal for uploading and downloading large files using HTTP(S). FTP is also supported, but only for downloads.
 
-백그라운드 전송은 호출 앱과 별도로 실행되며, 주로 동영상, 음악, 큰 이미지와 같은 리소스에 대한 장기 전송 작업에 사용하도록 설계되었습니다. 이러한 시나리오에서는 앱이 일시 중단된 경우에도 다운로드가 계속 진행되기 때문에 백그라운드 전송을 사용해야 합니다.
+Background Transfer runs separately from the calling app and is primarily designed for long-term transfer operations for resources like video, music, and large images. For these scenarios, using Background Transfer is essential because downloads continue to progress even when the app is suspended.
 
-빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) API를 사용해야 합니다.
+If you are downloading small resources that are likely to complete quickly, you should use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) APIs instead of Background Transfer.
 
-## Windows.Networking.BackgroundTransfer 사용
+## Using Windows.Networking.BackgroundTransfer
 
 
-### 백그라운드 전송 기능은 어떻게 작동하나요?
+### How does the Background Transfer feature work?
 
-앱에서 백그라운드 전송을 사용하여 전송을 시작하면 [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) 또는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) 클래스 개체를 사용하여 요청이 구성 및 초기화됩니다. 각 전송 작업은 호출 앱과는 별도로 시스템에서 개별적으로 처리됩니다. 앱의 UI를 통해 사용자에게 상태를 제공하려는 경우 진행률 정보를 사용할 수 있으며, 전송 중에도 앱이 일시 중지, 다시 시작 또는 취소되거나 데이터를 읽을 수 있습니다. 시스템에서 전송을 처리하는 방법에서는 스마트 전원 사용이 이루어지며, 연결된 앱에서 앱 일시 중단, 종료 또는 갑작스러운 네트워크 상태 변경 등의 이벤트 발생 시 생길 수 있는 문제가 방지됩니다.
+When an app uses Background Transfer to initiate a transfer, the request is configured and initialized using [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) or [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) class objects. Each transfer operation is handled individually by the system and separate from the calling app. Progress information is available if you want to give status to the user in your app's UI, and your app can pause, resume, cancel, or even read from the data while the transfer is occurring. The way transfers are handled by the system promotes smart power usage and prevents problems that can arise when a connected app encounters events such as app suspension, termination, or sudden network status changes.
 
-### 백그라운드 전송을 사용하여 인증된 파일 요청 수행
+### Performing authenticated file requests with Background Transfer
 
-백그라운드 전송은 기본 서버 및 프록시 자격 증명, 쿠키를 지원하는 방법을 제공하는 것은 물론, 각 전송 작업에 대한 사용자 지정 HTTP 헤더 사용([**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)를 통해)도 지원합니다.
+Background Transfer provides methods that support basic server and proxy credentials, cookies, and the use of custom HTTP headers (via [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)) for each transfer operation.
 
-### 이 기능은 네트워크 상태 변경 또는 예기치 못한 종료 시 어떻게 대응하나요?
+### How does this feature adapt to network status changes or unexpected shutdowns?
 
-백그라운드 전송 기능은 네트워크 상태 변경 발생 시 각 전송 작업에 대해 일관된 환경을 유지 관리하여, [연결](https://msdn.microsoft.com/library/windows/apps/hh452990) 기능이 제공하는 연결 및 통신사 요금제 상태 정보를 지능적으로 활용합니다. 네트워크 시나리오별 동작을 정의하기 위해 앱은 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 정의된 값을 사용하여 각 작업에 대한 비용 정책을 설정합니다.
+The Background Transfer feature maintains a consistent experience for each transfer operation when network status changes occur, by intelligently leveraging connectivity and carrier data-plan status information provided by the [Connectivity](https://msdn.microsoft.com/library/windows/apps/hh452990) feature. To define behavior for different network scenarios, an app sets a cost policy for each operation using values defined by [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138).
 
-예를 들어 작업에 대해 정의되는 비용 정책에서는 장치가 데이터 통신 연결 네트워크를 사용 중인 경우 작업을 자동으로 일시 중지하도록 나타낼 수 있습니다. 그런 다음 "무제한" 네트워크에 연결되면 전송이 자동으로 다시 시작됩니다. 비용을 기준으로 네트워크를 정의하는 방법에 대한 자세한 내용은 [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292)을 참조하세요.
+For example, the cost policy defined for an operation can indicate that the operation should be paused automatically when the device is using a metered network. The transfer is then automatically resumed (or restarted) when a connection to an "unrestricted" network has been established. For more information on how networks are defined by cost, see [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292).
 
-백그라운드 전송 기능은 네트워크 상태 변경을 처리하는 자체 메커니즘을 가지고 있지만, 네트워크에 연결된 앱에 대한 다른 일반적인 연결 고려 사항도 있습니다. 자세한 내용은 [사용 가능한 네트워크 연결 정보 활용](https://msdn.microsoft.com/library/windows/apps/hh452983)을 읽어보세요.
+While the Background Transfer feature has its own mechanisms for handling network status changes, there are other general connectivity considerations for network-connected apps. Read [Leveraging available network connection information](https://msdn.microsoft.com/library/windows/apps/hh452983) for additional info.
 
-> **참고** 모바일 디바이스에서 실행되는 앱에는 연결 형식, 로밍 상태 및 사용자의 데이터 요금제에 따라 전송되는 데이터 양을 사용자가 모니터링하고 제한할 수 있는 기능이 있습니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
+> **Note**  For apps running on mobile devices, there are features that allow the user to monitor and restrict the amount of data that is transferred based on the type of connection, roaming status, and the user's data plan. Because of this, background transfers may be paused on the phone even when the [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) indicates that the transfer should proceed.
 
-다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [
-            **ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
+The following table indicates when background transfers are allowed on the phone for each [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) value, given the current state of the phone. You can use the [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) class to determine the phone's current state.
 
-| 장치 상태                                                                                                                      | UnrestrictedOnly | 기본값 | 항상 |
+| Device State                                                                                                                      | UnrestrictedOnly | Default | Always |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------|---------|--------|
-| WiFi에 연결됨                                                                                                                 | 허용            | 허용   | 허용  |
-| 데이터 통신 연결, 로밍 안 함, 데이터 제한 적용, 제한 아래로 유지됨                                                   | 거부             | 허용   | 허용  |
-| 데이터 통신 연결, 로밍 안 함, 데이터 제한 적용, 제한 초과                                                       | 거부             | 거부    | 허용  |
-| 데이터 통신 연결, 로밍 중, 데이터 제한 아래                                                                                     | 거부             | 거부    | 허용  |
-| 데이터 통신 연결, 데이터 제한 초과. 이 상태는 사용자가 Data Sense UI에서 "백그라운드 데이터 제한"을 사용하도록 설정한 경우에만 발생합니다. | 거부             | 거부    | 거부   |
+| Connected to WiFi                                                                                                                 | Allow            | Allow   | Allow  |
+| Metered Connection, not roaming, under data limit, on track to stay under limit                                                   | Deny             | Allow   | Allow  |
+| Metered Connection, not roaming, under data limit, on track to exceed limit                                                       | Deny             | Deny    | Allow  |
+| Metered Connection, roaming, under data limit                                                                                     | Deny             | Deny    | Allow  |
+| Metered Connection, over data limit. This state only occurs when the user enables "Restrict background data in the Data Sense UI. | Deny             | Deny    | Deny   |
 
- 
+ 
 
-## 파일 업로드
+## Uploading files
 
 
-백그라운드 전송을 사용할 경우 업로드는 작업을 다시 시작하거나 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **UploadOperation**별로 자동으로 처리되며 업로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 또한 [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 업로드를 시작할지를 나타냅니다.
+When using Background Transfer an upload exists as an [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) that exposes a number of control methods that are used to restart or cancel the operation. App events (e.g. suspension or termination) and connectivity changes are handled automatically by the system per **UploadOperation**; uploads will continue during app suspension periods or pause and persist beyond app termination. Additionally, setting the [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) property will indicate whether or not your app will start uploads while a metered network is being used for Internet connectivity.
 
-다음 예에서는 기본 업로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
+The following examples will walk you through the creation and initialization of a basic upload and how to enumerate and reintroduce operations persisted from a previous app session.
 
-### 단일 파일 업로드
+### Uploading a single file
 
-업로드 만들기는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)로 시작합니다. 이 클래스는 결과 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 개체를 만들기 전에 앱에서 업로드를 구성할 수 있는 방법을 제공합니다. 다음 예에서는 필요한 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 이 작업을 수행하는 방법을 보여 줍니다.
+The creation of an upload begins with [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140). This class is used to provide the methods that enable your app to configure the upload before creating the resultant [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224). The following example shows how to do this with the required [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) and [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) objects.
 
-**파일 및 업로드 대상 식별**
+**Identify the file and destination for the upload**
 
-[
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 만들기를 시작하려면 먼저 업로드할 위치의 URI 및 업로드할 파일을 식별해야 합니다. 다음 예에서는 UI 입력의 문자열을 사용하여 *uriString* 값을 채우고 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) 작업에서 반환한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 *file* 값을 채웁니다.
+Before we can begin with the creation of an [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), we first need to identify the URI of the location to upload to, and the file that will be uploaded. In the following example, the *uriString* value is populated using a string from UI input, and the *file* value using the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object returned by a [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) operation.
 
 [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "Identify the file and destination for the upload")]
 
-**업로드 작업 만들기 및 초기화**
+**Create and initialize the upload operation**
 
-이전 단계에서는 *uriString* 및 *file* 값을 다음 예 UploadOp의 인스턴스에 전달하여 새로운 업로드 작업을 구성하고 시작하는 데 사용합니다. 먼저 *uriString*을 구문 분석하여 필요한 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체를 만듭니다.
+In the previous step the *uriString* and *file* values are passed to an instance of our next example, UploadOp, where they are used to configure and start the new upload operation. First, *uriString* is parsed to create the required [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) object.
 
-그런 다음 제공된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)(*file*)의 속성을 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 사용하여 요청 헤더를 채우고 *SourceFile* 속성을 **StorageFile** 개체로 설정합니다. 그런 다음 문자열로 제공된 파일 이름 정보 및 [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220) 속성을 삽입하도록 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) 메서드가 호출됩니다.
+Next, the properties of the provided [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (*file*) are used by [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) to populate the request header and set the *SourceFile* property with the **StorageFile** object. The [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) method is then called to insert the file name, provided as a string, and the [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220) property.
 
-마지막으로 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)(*upload*)을 만듭니다.
+Finally, [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) creates the [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*).
 
 [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Create and initialize the upload operation")]
 
-JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유의하세요. 마지막 예제에서 다음 줄을 봅니다.
+Note the asynchronous method calls defined using JavaScript promises. Looking at a line from the last example:
 
 ```javascript
 promise = upload.startAsync().then(complete, error, progress);
@@ -91,9 +90,9 @@ promise = upload.startAsync().then(complete, error, progress);
 
     The async method call is followed by a then statement which indicates methods, defined by the app, that are called when a result from the async method call is returned. For more information on this programming pattern, see [Asynchronous programming in JavaScript using promises](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
-### 여러 파일 업로드
+### Uploading multiple files
 
-**파일 및 업로드 대상 식별**
+**Identify the files and destination for the upload**
 
     In a scenario involving multiple files transferred with a single [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), the process begins as it usually does by first providing the required destination URI and local file information. Similar to the example in the previous section, the URI is provided as a string by the end-user and [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) can be used to provide the ability to indicate files through the user interface as well. However, in this scenario the app should instead call the [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) method to enable the selection of multiple files through the UI.
 
@@ -118,7 +117,7 @@ function uploadFiles() {
     }
 ```
 
-**제공된 매개 변수에 대한 개체 만들기**
+**Create objects for the provided parameters**
 
     The next two examples use code contained in a single example method, **startMultipart**, which was called at the end of the last step. For the purpose of instruction the code in the method that creates an array of [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects has been split from the code that creates the resultant [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224).
 
@@ -138,7 +137,7 @@ upload.startMultipart = function (uriString, files) {
             });
 ```
 
-**다중 파트 업로드 작업 만들기 및 초기화**
+**Create and initialize the multi-part upload operation**
 
     With our contentParts array populated with all of the [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects representing each [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) for upload, we are ready to call [**CreateUploadAsync**](https://msdn.microsoft.com/library/windows/apps/hh923973) using the [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) to indicate where the request will be sent.
 
@@ -157,76 +156,71 @@ upload.startMultipart = function (uriString, files) {
      };
 ```
 
-### 중단된 업로드 작업 다시 시작
+### Restarting interrupted upload operations
 
-[
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 장치 리소스를 계속해서 차지하게 됩니다.
+On completion or cancellation of an [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), any associated system resources are released. However, if your app is terminated before either of these things can occur, any active operations are paused and the resources associated with each remain occupied. If these operations are not enumerated and re-introduced to the next app session, they will not be completed and will continue to occupy device resources.
 
-1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 개체를 포함할 배열을 만들어야 합니다.
+1.  Before defining the function that enumerates persisted operations, we need to create an array that will contain the [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) objects that it will return:
 
 [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "Restart interrupted upload operation")]
 
-2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. [
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)에 콜백을 다시 할당하기 위해 호출된 **load** 메서드는 앱이 종료될 때까지 지속되는 경우 이 섹션의 뒷부분에서 정의하는 UploadOp 클래스에 있습니다.
+2.  Next we define the function that enumerates persisted operations and stores them in our array. Note that the **load** method called to re-assign callbacks to the [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), should it persist through app termination, is in the UploadOp class we define later in this section.
 
 [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Enumerate persisted operations")]
 
-## 파일 다운로드
+## Downloading files
 
-백그라운드 전송을 사용할 경우 각 다운로드는 작업을 일시 중지, 다시 시작 및 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **DownloadOperation**별로 자동으로 처리되며 다운로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 모바일 네트워크 시나리오의 경우 [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 다운로드를 시작하거나 계속할지를 나타냅니다.
+When using Background Transfer, each download exists as a [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) that exposes a number of control methods used to pause, resume, restart, and cancel the operation. App events (e.g. suspension or termination) and connectivity changes are handled automatically by the system per **DownloadOperation**; downloads will continue during app suspension periods or pause and persist beyond app termination. For mobile network scenarios, setting the [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) property will indicate whether or not your app will begin or continue downloads while a metered network is being used for Internet connectivity.
 
-빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) API를 사용해야 합니다.
+If you are downloading small resources that are likely to complete quickly, you should use [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) APIs instead of Background Transfer.
 
-다음 예에서는 기본 다운로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
+The following examples will walk you through the creation and initialization of a basic download, and how to enumerate and reintroduce operations persisted from a previous app session.
 
-### 백그라운드 전송 파일 다운로드 구성 및 시작
+### Configure and start a Background Transfer file download
 
-다음 예에서는 URI 및 파일 이름을 나타내는 문자열을 사용하여 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체 및 요청한 파일을 포함할 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들 수 있는 방법을 보여 줍니다. 이 예에서 새 파일은 미리 정의된 위치에 자동으로 배치됩니다. 또는 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 장치에서 파일을 저장할 위치를 나타내도록 할 수 있습니다. [
-            **DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 앱 종료 기간 동안 지속될 경우 이 섹션의 뒷 부분에서 정의하는 DownloadOp 클래스에 있습니다.
+The following example demonstrates how strings representing a URI and a file name can be used to create a [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) object and the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) that will contain the requested file. In this example, the new file is automatically placed in a pre-defined location. Alternatively, [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) can be used allow users to indicate where to save the file on the device. Note that the **load** method called to re-assign callbacks to the [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154), should it persist through app termination, is in the DownloadOp class defined later in this section.
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_A)]
 
-JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유의하세요. 이전 코드 예에서 17줄을 봅니다.
+Note the asynchronous method calls defined using JavaScript promises. Looking at line 17 from the previous code example:
 
 ```javascript
 promise = download.startAsync().then(complete, error, progress);
 ```
 
-비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
+The async method call is followed by a then statement which indicates methods, defined by the app, that are called when a result from the async method call is returned. For more information on this programming pattern, see [Asynchronous programming in JavaScript using promises](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
 
-### 작업 컨트롤 메서드 추가
+### Adding additional operation control methods
 
-제어 수준은 추가 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 메서드를 구현하여 높일 수 있습니다. 예를 들어 위의 예에 다음 코드를 추가하여 다운로드 취소 기능을 적용할 수 있습니다.
+The level of control can be increased by implementing additional [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) methods. For example, adding the following code to the example above will introduce the ability to cancel the download.
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_B)]
 
-### 시작할 때 지속형 작업 열거
+### Enumerating persisted operations at start-up
 
-[
-            **DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 이러한 이벤트가 발생하기 이전에 앱이 종료될 경우 다운로드는 일시 중지되고 백그라운드에서 지속됩니다. 다음 예에서는 지속형 다운로드를 새 앱 세션에서 다시 사용하는 방법을 보여 줍니다.
+On completion or cancellation of a [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154), any associated system resources are released. However, if your app is terminated before either of these events occur, downloads will pause and persist in the background. The following examples demonstrate how to re-introduce persisted downloads into a new app session.
 
-1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 개체를 포함할 배열을 만들어야 합니다.
+1.  Before defining the function that enumerates persisted operations, we need to create an array that will contain the [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) objects that it will return:
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_D)]
 
-2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. 지속형 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 대한 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 이 섹션의 뒷 부분에서 정의하는 DownloadOp 예에 있습니다.
+2.  Next we define the function that enumerates persisted operations and stores them in our array. Note that the **load** method called to re-assign callbacks for a persisted [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) is in the DownloadOp example we define later in this section.
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_E)]
 
-3.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
+3.  You can now use the populated list to restart pending operations.
 
-## 사후 처리
+## Post-processing
 
-Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우에도 백그라운드 전송 완료 시 응용 프로그램 코드를 실행하는 기능입니다. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
+A new feature in Windows 10 is the ability to run application code at the completion of a background transfer even when the app is not running. For example, your app might want to update a list of available movies after a movie has finished downloading, rather than have your app scan for new movies every time it starts. Or your app might want to handle a failed file transfer by trying again using a different server or port. Post-processing is invoked for both successful and failed transfers, so you can use it to implement custom error-handling and retry logic.
 
-사후 처리에서는 기존 백그라운드 작업 인프라를 사용합니다. 전송을 시작하기 전에 백그라운드 작업을 만들고 전송과 연결합니다. 그러면 백그라운드에서 전송이 실행되고, 완료되면 사후 처리를 수행하기 위해 백그라운드 작업이 호출됩니다.
+Postprocessing uses the existing background task infrastructure. You create a background task and associate it with your transfers before you start the transfers. The transfers are then executed in the background, and when they are complete, your background task is called to perform post-processing.
 
-사후 처리에서는 새 클래스 [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209)을 사용합니다. 이 클래스는 백그라운드 전송 작업을 그룹화할 수 있는 기존 [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030)과 유사하지만 **BackgroundTransferCompletionGroup**은 전송이 완료되면 실행할 백그라운드 작업을 지정할 수 있는 기능을 추가합니다.
+Post-processing uses a new class, [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209). This class is similar to the existing [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030) in that it allows you to group background transfers together, but **BackgroundTransferCompletionGroup** adds the ability to designate a background task to be run when the transfer is complete.
 
-다음과 같이 사후 처리를 사용하여 백그라운드 전송을 시작합니다.
+You initiate a background transfer with post-processing as follows.
 
-1.  [
-            **BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) 개체를 만듭니다. 그런 다음 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 만듭니다. 작성기 개체의 **Trigger** 속성을 완료 그룹 개체로 설정하고, 작성기의 **TaskEngtyPoint** 속성을 전송 완료 시 실행해야 하는 백그라운드 작업의 진입점으로 설정합니다. 마지막으로 [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 호출하여 백그라운드 작업을 등록합니다. 여러 완료 작업이 하나의 백그라운드 작업 진입점을 공유할 수 있지만 백그라운드 작업 등록당 하나의 완료 그룹만 유지할 수 있습니다.
+1.  Create a [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) object. Then, create a [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) object. Set the **Trigger** property of the builder object to the completion group object, and the **TaskEngtyPoint** property of the builder to the entry point of the background task that should execute on transfer completion. Finally, call the [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) method to register your background task. Note that many completion groups can share one background task entry point, but you can have only one completion group per background task registration.
 
    ```csharp
     var completionGroup = new BackgroundTransferCompletionGroup();
@@ -280,7 +274,7 @@ There are two primary connection timeout scenarios to take into consideration:
 
 -   After a connection has been established, an HTTP request message that has not received a response within two minutes is aborted.
 
-> **Note**  In either scenario, assuming there is Internet connectivity, Background Transfer will retry a request up to three times automatically. In the event Internet connectivity is not detected, additional requests will wait until it is.
+> **Note**  In either scenario, assuming there is Internet connectivity, Background Transfer will retry a request up to three times automatically. In the event Internet connectivity is not detected, additional requests will wait until it is.
 
 ## Debugging guidance
 
@@ -304,7 +298,7 @@ To work around this issue, completely uninstall all versions of the app and re-d
 
 An exception is thrown when an invalid string for a the Uniform Resource Identifier (URI) is passed to the constructor for the [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) object.
 
-**.NET:  **The [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) type appears as [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in C# and VB.
+**.NET:  **The [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) type appears as [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in C# and VB.
 
 In C# and Visual Basic, this error can be avoided by using the [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) class in the .NET 4.5 and one of the [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) methods to test the string received from the app user before the URI is constructed.
 
@@ -315,9 +309,4 @@ The [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/libra
 An error encountered on an asynchronous method in the [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) namespace is returned as an **HRESULT** value. The [**BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) method is used to convert a network error from a background transfer operation to a [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) enumeration value. Most of the **WebErrorStatus** enumeration values correspond to an error returned by the native HTTP or FTP client operation. An app can filter on specific **WebErrorStatus** enumeration values to modify app behavior depending on the cause of the exception.
 
 For parameter validation errors, an app can also use the **HRESULT** from the exception to learn more detailed information on the error that caused the exception. Possible **HRESULT** values are listed in the *Winerror.h* header file. For most parameter validation errors, the **HRESULT** returned is **E\_INVALIDARG**.
-
-
-
-<!--HONumber=Mar16_HO1-->
-
 

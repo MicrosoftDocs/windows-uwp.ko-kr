@@ -1,75 +1,67 @@
 ---
+author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: 컴퍼지션 시각적 트리
-description: 컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다.
+title: Composition visual tree
+description: Composition Visuals make up the visual tree structure which all other features of the composition API use and build on. The API allows developers to define and create one or many visual objects each representing a single node in a visual tree.
 ---
-# 컴퍼지션 시각적 트리
+# Composition visual tree
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다.
+Composition Visuals make up the visual tree structure which all other features of the composition API use and build on. The API allows developers to define and create one or many visual objects each representing a single node in a visual tree.
 
-## 화면 효과
+## Visuals
 
-시각적 트리 구조는 세 가지 시각적 개체 형식과, 시각적 개체 콘텐츠에 영향을 주는 여러 하위 클래스가 있는 기본 브러시 클래스로 구성됩니다.
+There are three visual types that make up the visual tree structure plus a base brush class with multiple subclasses that affect the content of a visual:
 
--   [
-            **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
--   [
-            **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
--   [
-            **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
--   [
-            **CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) - 시각적 개체의 콘텐츠에 효과를 적용할 수 있습니다. CompositionBrush의 하위 클래스에는 여러 가지가 있습니다.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – base object, the majority of the properties are here, and inherited by the other Visual objects.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – derives from [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858), and adds the ability to create children.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Derives from [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) and adds the ability to associate a brush so that the Visual can render pixels including images, effects or a solid color.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – Allows the application of an effect on the content of a Visual. There are a number of subclasses of CompositionBrush.
 
-## CompositionVisual 샘플
+## The CompositionVisual Sample
 
-샘플에는 클릭하여 화면으로 끌 수 있는 단색 사각형이 여러 개 포함되어 있습니다. 사각형을 클릭하면 앞으로 가져와서 45도 회전되고 끌면 불투명해집니다.
+In the sample there are a number of solid color squares that can be clicked on and dragged about the screen. When a square is clicked on, it will come to the front, rotate 45 degrees, and become opaque when dragged about.
 
-다음을 포함하여 API 작업에 대한 많은 기본 개념을 보여 줍니다.
+This shows a number of basic concepts for working with the API including:
 
--   작성자 만들기
--   ColorBrush를 사용하여 SpriteVisual 만들기
--   시각적 개체 클리핑
--   시각적 개체 회전
--   불투명도 설정
--   컬렉션에서 시각적 개체의 위치 변경
+-   Creating a compositor
+-   Creating a SpriteVisual with a ColorBrush
+-   Clipping a Visual
+-   Rotating a Visual
+-   Setting Opacity
+-   Changing the Visual’s position in the collection.
 
-샘플에는 세 가지 시각적 개체도 포함되어 있습니다.
+In the sample there are also three different Visuals at work:
 
--   [
-            **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
--   [
-            **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
--   [
-            **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – 시각적 개체에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – base object, the majority of the properties are here, and inherited by the other Visual objects.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – derives from Visual, and adds the ability to create children.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Derives from Visual and adds the ability to associate a brush so that the Visual can render pixels including images, effects or a solid color.
 
-이 샘플에서는 애니메이션 또는 더 복잡한 효과 등의 개념은 제공하지 않으며 이러한 모든 시스템에서 사용하는 구성 요소만 다룹니다.
+While this sample doesn’t cover concepts like Animations or more complex effects, it contains the building blocks that all of those systems use.
 
-## 작성자 만들기
+## Creating a Compositor
 
-변수에서 팩터리로 사용하기 위해 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 만들고 저장하는 작업은 매우 간단합니다. 다음 코드 조각은 새 **Compositor**를 만드는 방법을 보여 줍니다.
+Creating a [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) and storing it for use as a factory in a variable is a simple task. The following snippet shows creating a new **Compositor**:
 
 ```cs
 _compositor = new Compositor();
 ```
 
-## SpriteVisual 및 ColorBrush 만들기
+## Creating a SpriteVisual and ColorBrush
 
-[
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 사용하면 필요할 때마다 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 및 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 등의 개체를 쉽게 만들 수 있습니다.
+Using the [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) it's easy to create objects whenever you need them, such as a [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) and a [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399):
 
 ```cs
 var visual = _compositor.CreateSpriteVisual();
 visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF));
 ```
 
-이 코드는 매우 간단하지만 강력한 개념을 보여 주며 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 개체는 효과 시스템의 핵심입니다. **SpriteVisual**은 뛰어난 유연성을 제공하며 색, 이미지 및 효과 생성의 상호 작용을 허용합니다. **SpriteVisual**은 브러시(이 경우 단색)로 2D 사각형을 채울 수 있는 단일 시각적 개체 형식입니다.
+While this is only a few lines of code it demonstrates a powerful concept, [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) objects are the heart of the effects system. The **SpriteVisual** allows for great flexibility and interplay in color, image and effect creation. The **SpriteVisual** is a single visual type that can fill a 2D rectangle with a brush, in this case a solid color.
 
-## 시각적 개체 클리핑
+## Clipping a Visual
 
-[
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)는 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
+The [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) can also be used to create clips to a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). Below is an example from the sample of using the [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) to trim each side of the visual:
 
 ```cs
 var clip = _compositor.CreateInsetClip();
@@ -80,41 +72,41 @@ clip.BottomInset = 1.0f;
 _currentVisual.Clip = clip;
 ```
 
-참고: API의 다른 개체와 마찬가지로 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)은 속성에 애니메이션을 적용할 수 있습니다.
+Note: Like other objects in the API [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) can have animations applied to its properties.
 
-## <span id="Rotating_a_Clip"> </span> <span id="rotating_a_clip"> </span> <span id="ROTATING_A_CLIP"> </span>클립 회전
+## <span id="Rotating_a_Clip"></span><span id="rotating_a_clip"></span><span id="ROTATING_A_CLIP"></span>Rotating a Clip
 
-회전을 통해 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)를 변환할 수 있습니다. 이때 [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle)은 라디안과 각도를 모두 지원합니다. 기본값은 라디안이지만 다음 코드 조각에서처럼 쉽게 각도를 지정할 수 있습니다.
+A [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) can be transformed with a rotation. Note that [**RotationAngle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.rotationangle) supports both radians and degrees. It defaults to radians, but it’s easy to specify degrees as shown in the following snippet:
 
 ```cs
 child.RotationAngleInDegrees = 45.0f;
 ```
 
-회전은 이러한 작업을 쉽게 수행하기 위해 API에서 제공하는 여러 가지 변환 구성 요소 중 하나입니다. 그 밖에 Offset, Scale, Orientation, RotationAxis 및 4x4 TransformMatrix 등이 있습니다.
+Rotation is just one example of a set of transform components provided by the API to make these tasks easier. Others include Offset, Scale, Orientation, RotationAxis and a 4x4 TransformMatrix.
 
-## 불투명도 설정
+## Setting Opacity
 
-부동 소수점 값을 사용하여 시각적 개체의 불투명도를 간단히 설정할 수 있습니다. 예를 들어 샘플에서 모든 사각형은 .8 불투명도로 시작합니다.
+Setting the opacity of a visual is a simple operation using a float value. For example, in the sample all the squares start at .8 opacity:
 
 ```cs
 visual.Opacity = 0.8f;
 ```
 
-회전과 마찬가지로 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) 속성에 애니메이션을 적용할 수 있습니다.
+Like rotation, the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visual.opacity) property can be animated.
 
-## 컬렉션에서 시각적 개체의 위치 변경
+## Changing the Visual's position in the collection
 
-컴퍼지션 API를 사용하면 [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. 즉, [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove)를 사용하여 다른 시각적 개체 위로 가져오거나, [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow)를 사용하여 뒤로 보내거나, [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop)을 사용하여 맨 위로 이동하거나 [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom)을 사용하여 맨 아래로 이동할 수 있습니다.
+The Composition API allows for a Visual's position in a [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) to be changed in a number of ways, it can be placed above another Visual with [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove), placed below with [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow), move to the top with [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) or the bottom with [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom).
 
-샘플에서 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)를 클릭하면 맨 위로 정렬됩니다.
+In the sample a [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) that has been clicked on is sorted to the top:
 
 ```cs
 parent.Children.InsertAtTop(_currentVisual);
 ```
 
-## 전체 예제
+## Full Example
 
-전체 샘플에서는 위의 모든 개념이 함께 사용되어 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 개체의 간단한 트리를 구성하여 XAML, WWA 또는 DirectX를 사용하지 않고 불투명도를 변경합니다. 이 샘플에서는 자식 **Visual** 개체를 만들고 추가하고 속성을 변경하는 방법을 보여 줍니다.
+In the full sample, all of the concepts above are used together to construct and walk a simple tree of [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) objects to change opacity without using XAML, WWA, or DirectX. This sample shows how child **Visual** objects are created and added and how properties are changed.
 
 ```cs
 using System;
@@ -502,15 +494,10 @@ namespace compositionvisual
 }
 ```
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

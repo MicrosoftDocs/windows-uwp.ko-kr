@@ -1,22 +1,23 @@
 ---
-Description: 이 섹션에서는 앱 설정을 제공하고 이러한 설정을 앱 데이터로 저장하기 위한 사용자 환경 지침을 제공합니다.
-title: 앱 설정 및 데이터
+author: mijacobs
+Description: This section contains user experience guidelines for presenting app settings and storing those settings as app data.
+title: App settings and data
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
-label: 앱 설정 및 데이터
+label: App settings and data
 template: detail.hbs
 ---
 
-# 앱 설정 및 데이터
+# App settings and data
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 섹션에서는 앱 설정을 제공하고 이러한 설정을 앱 데이터로 저장하기 위한 사용자 환경 지침을 제공합니다.
 
-앱 설정은 UWP(유니버설 Windows 플랫폼) 앱의 사용자 지정 가능한 부분입니다. 예를 들어 뉴스 뷰어 앱을 사용하여 사용자는 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있습니다.
+This section contains user experience guidelines for presenting app settings and storing those settings as app data.
 
-앱 데이터는 앱 자체에서 만들고 관리하는 데이터로서, 이 데이터에는 런타임 상태, 앱 설정, 참조 콘텐츠(예: 사전 앱의 사전 정의) 및 기타 설정이 포함됩니다. 앱 데이터는 앱의 존재와 관련이 있으며 해당 앱에서만 의미가 있습니다.
-## 이 섹션의 내용
+App settings are the user-customizable portions of your Universal Windows Platform (UWP) app. For example, a news reader app might let the user specify which news sources to display or how many columns to display on the screen.
+
+App data is data that the app itself creates and manages. It includes runtime state, app settings, reference content (such as the dictionary definitions in a dictionary app), and other settings. App data is tied to the existence of the app and is only meaningful to that app.
+## In this section
 <table>
 <colgroup>
 <col width="50%" />
@@ -24,26 +25,21 @@ template: detail.hbs
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">문서</th>
-<th align="left">설명</th>
+<th align="left">Article</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Guidelines](guidelines-for-app-settings.md)</p></td>
-<td align="left"><p>앱 설정을 만들고 표시하기 위한 모범 사례입니다.</p></td>
+<td align="left"><p>Best practices for creating and displaying app settings.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Store and retrieve app data](store-and-retrieve-app-data.md)</p></td>
-<td align="left"><p>로컬, 로밍 및 임시 앱 데이터를 저장하고 검색하는 방법입니다.</p></td>
+<td align="left"><p>How to store and retrieve local, roaming, and temporary app data.</p></td>
 </tr>
 </tbody>
 </table>
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

@@ -1,46 +1,37 @@
 ---
-Description: 'Panel 클래스에서 사용자 지정 클래스를 파생시켜 XAML 레이아웃에 대한 사용자 지정 패널을 정의할 수 있습니다.'
+author: Jwmsft
+Description: 'You can define custom panels for XAML layout by deriving a custom class from the Panel class.'
 MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-title: XAML 사용자 지정 패널 개요
+title: XAML custom panels overview
 ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
 label: XAML custom panels overview
 template: detail.hbs
 ---
 
-# XAML 사용자 지정 패널 개요
+# XAML custom panels overview
+
+A *panel* is an object that provides a layout behavior for child elements it contains, when the Extensible Application Markup Language (XAML) layout system runs and your app UI is rendered. You can define custom panels for XAML layout by deriving a custom class from the [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) class. You provide behavior for your panel by overriding the [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) and [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711), supplying logic that measures and arranges the child elements.
+
+## The **Panel** base class
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+To define a custom panel class, you can either derive from the [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) class directly, or derive from one of the practical panel classes that aren't sealed, such as [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) or [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). It's easier to derive from **Panel**, because it can be difficult to work around the existing layout logic of a panel that already has layout behavior. Also, a panel with behavior might have existing properties that aren't relevant for your panel's layout features.
+
+From [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), your custom panel inherits these APIs:
+
+-   The [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) property.
+-   The [**Background**](https://msdn.microsoft.com/library/windows/apps/br227512), [**ChildrenTransitions**](https://msdn.microsoft.com/library/windows/apps/br227515) and [**IsItemsHost**](https://msdn.microsoft.com/library/windows/apps/br227517) properties, and the dependency property identifiers. None of these properties are virtual, so you don't typically override or replace them. You don't typically need these properties for custom panel scenarios, not even for reading values.
+-   The layout override methods [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) and [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711). These were originally defined by [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706). The base [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) class doesn't override these, but practical panels like [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) do have override implementations that are implemented as native code and are run by the system. Providing new (or additive) implementations for **ArrangeOverride** and **MeasureOverride** is the bulk of the effort you need to define a custom panel.
+-   All the other APIs of [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) and [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356), such as [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) and so on. You sometimes reference values of these properties in your layout overrides, but they aren't virtual so you don't typically override or replace them.
+
+This focus here is to describe XAML layout concepts, so you can consider all the possibilities for how a custom panel can and should behave in layout. If you'd rather jump right in and see an example custom panel implementation, see [BoxPanel, an example custom panel](boxpanel-example-custom-panel.md).
+
+## The **Children** property
 
 
-*패널*은 XAML(Extensible Application Markup Language) 레이아웃 시스템이 실행되고 앱 UI가 렌더링될 때 패널에 포함된 자식 요소에 대한 레이아웃 동작을 제공하는 개체입니다. [
-            **Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 사용자 지정 클래스를 파생시켜 XAML 레이아웃에 대한 사용자 지정 패널을 정의할 수 있습니다. [
-            **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 및 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)를 재정의하고 자식 요소를 측정 및 정렬하는 논리를 제공하여 패널에 대한 동작을 제공합니다.
-
-## **Panel** 기본 클래스
-
-
-사용자 지정 패널 클래스를 정의하려면 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 직접 파생시키거나 봉인되지 않은 실용적인 패널 클래스(예: [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)) 중 하나에서 파생시킬 수 있습니다. 이미 레이아웃 동작이 있는 패널의 기존 레이아웃 논리를 처리하는 것은 어려울 수 있으므로 **Panel**에서 파생시키기가 더 쉽습니다. 또한 동작을 포함하는 패널에는 패널의 레이아웃 기능과 관련이 없는 기존 속성이 있을 수도 있습니다.
-
-사용자 지정 패널은 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)에서 다음과 같은 API를 상속합니다.
-
--   [
-            **Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성
--   [
-            **Background**](https://msdn.microsoft.com/library/windows/apps/br227512), [**ChildrenTransitions**](https://msdn.microsoft.com/library/windows/apps/br227515) 및 [**IsItemsHost**](https://msdn.microsoft.com/library/windows/apps/br227517) 속성과 종속성 속성 식별자. 이러한 속성은 모두 가상이 아니므로 일반적으로 재정의하거나 바꾸지 않습니다. 일반적으로 사용자 지정 패널 시나리오에서는 값을 읽기 위한 경우에도 이러한 속성이 필요하지 않습니다.
--   레이아웃은 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 및 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 메서드를 재정의합니다. 두 메서드는 원래 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)에서 정의되었습니다. 기본 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스는 이러한 메서드를 재정의하지 않지만, [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 등의 실용적인 패널에는 네이티브 코드로 구현되고 시스템에서 실행되는 재정의 구현이 있습니다. **ArrangeOverride** 및 **MeasureOverride**에 대한 새로운(또는 가산적) 구현을 제공하는 경우 사용자 지정 패널을 정의하는 데 많은 노력이 필요합니다.
--   [
-            **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 및 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)의 기타 모든 API(예: [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) 등). 때로는 레이아웃 재정의에서 이러한 속성 값을 참조하지만 가상이 아니므로 일반적으로 재정의하거나 바꾸지 않습니다.
-
-레이아웃에서 가능하거나 필요한 사용자 지정 패널 동작의 모든 가능성을 고려할 수 있도록 여기서는 XAML 레이아웃 개념에 대해 중점적으로 설명합니다. 예제 사용자 지정 패널 구현을 바로 확인하려면 [BoxPanel, 예제 사용자 지정 패널](boxpanel-example-custom-panel.md)을 참조하세요.
-
-## **Children** 속성
-
-
-[
-            **Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)에서 파생된 모든 클래스는 **Children** 속성을 사용하여 포함된 자식 요소를 컬렉션으로 저장하기 때문에 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성은 사용자 지정 패널과 관련이 있습니다. **Children**은 **Panel** 클래스에 대한 XAML 콘텐츠 속성으로 지정되며, **Panel**에서 파생된 모든 클래스는 XAML 콘텐츠 속성 동작을 상속할 수 있습니다. 속성이 XAML 콘텐츠 속성으로 지정된 경우 태그에 해당 속성을 지정할 때 XAML 태그에서 속성 요소를 생략할 수 있으며, 값이 태그 직계 자식("콘텐츠")으로 설정됩니다. 예를 들어 **Panel**에서 새 동작을 정의하지 않는 **CustomPanel** 클래스를 파생시키는 경우에도 다음 태그를 사용할 수 있습니다.
+The [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) property is relevant to a custom panel because all classes derived from [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) use the **Children** property as the place to store their contained child elements in a collection. **Children** is designated as the XAML content property for the **Panel** class, and all classes derived from **Panel** can inherit the XAML content property behavior. If a property is designated the XAML content property, that means that XAML markup can omit a property element when specifying that property in markup, and the values are set as immediate markup children (the "content"). For example, if you derive a class named **CustomPanel** from **Panel** that defines no new behavior, you can still use this markup:
 
 ```XAML
 <local:CustomPanel>
@@ -49,60 +40,50 @@ template: detail.hbs
 </local:CustomPanel>
 ```
 
-XAML 파서가 이 태그를 읽을 때 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)이 모든 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 파생 형식에 대한 XAML 콘텐츠 속성으로 알려지므로 파서에서 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 요소를 **Children** 속성의 [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633) 값에 추가합니다. XAML 콘텐츠 속성은 UI 정의에 대한 XAML 태그에서 부모-자식 관계를 간소화합니다. XAML 콘텐츠 속성 및 XAML을 구문 분석할 때 컬렉션 속성이 채워지는 방법에 대한 자세한 내용은 [XAML 구문 가이드](https://msdn.microsoft.com/library/windows/apps/mt185596)를 참조하세요.
+When a XAML parser reads this markup, [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) is known to be the XAML content property for all [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) derived types, so the parser will add the two [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) elements to the [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633) value of the **Children** property. The XAML content property facilitates a streamlined parent-child relationship in the XAML markup for a UI definition. For more info about XAML content properties, and how collection properties are populated when XAML is parsed, see the [XAML syntax guide](https://msdn.microsoft.com/library/windows/apps/mt185596).
 
-[
-            **Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성 값을 유지 관리하는 컬렉션 형식은 [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633) 클래스입니다. **UIElementCollection**은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)를 강제 항목 종류로 사용하는 강력한 형식의 컬렉션입니다. **UIElement**는 수백 개의 실용적인 UI 요소 형식에 상속되는 기본 형식이므로 여기서는 의도적으로 느슨한 형식 적용을 사용합니다. 그러나 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)를 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)의 직계 자식으로 사용할 수 없도록 강제하며, 일반적으로 UI에 표시되고 레이아웃에 사용되는 요소만 **Panel**에서 자식 요소로 발견됩니다.
+The collection type that's maintaining the value of the [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) property is the [**UIElementCollection**](https://msdn.microsoft.com/library/windows/apps/br227633) class. **UIElementCollection** is a strongly typed collection that uses [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) as its enforced item type. **UIElement** is a base type that's inherited by hundreds of practical UI element types, so the type enforcement here is deliberately loose. But it does enforce that you couldn't have a [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) as a direct child of a [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511), and it generally means that only elements that are expected to be visible in UI and participate in layout will be found as child elements in a **Panel**.
 
-일반적으로 사용자 지정 패널은 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성의 특성을 현재 상태대로 사용하여 XAML 정의에 의한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 자식 요소를 모두 수락합니다. 고급 시나리오로, 레이아웃 재정의에서 컬렉션을 반복할 때 자식 요소의 추가 형식 검사를 지원할 수 있습니다.
+Typically, a custom panel accepts any [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) child element by a XAML definition, by simply using the characteristics of the [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) property as-is. As an advanced scenario, you could support further type checking of child elements, when you iterate over the collection in your layout overrides.
 
-재정의에서 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 컬렉션을 반복하는 것 외에도 패널 논리는 `Children.Count`의 영향을 받을 수 있습니다. 원하는 크기와 개별 항목의 기타 특성 대신 적어도 부분적으로 항목 수에 따라 공간을 할당하는 논리를 사용할 수도 있습니다.
+Besides looping through the [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) collection in the overrides, your panel logic might also be influenced by `Children.Count`. You might have logic that is allocating space at least partly based on the number of items, rather than desired sizes and the other characteristics of individual items.
 
-## 레이아웃 재정의 메서드
+## Overriding the layout methods
 
 
-레이아웃 재정의 메서드([**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 및 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711))의 기본 모델은 모든 자식을 반복하고 각 자식 요소의 특정 레이아웃 메서드를 호출해야 한다는 것입니다. 첫 번째 레이아웃 주기는 XAML 레이아웃 시스템에서 루트 창에 대한 화면 효과를 설정할 때 시작됩니다. 각 부모가 자식에 대해 레이아웃을 호출하기 때문에 레이아웃 메서드 호출이 레이아웃에 포함된 가능한 모든 UI 요소에 전파됩니다. XAML 레이아웃에는 측정과 정렬의 두 단계가 있습니다.
+The basic model for the layout override methods ([**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) and [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)) is that they should iterate through all the children and call each child element's specific layout method. The first layout cycle starts when the XAML layout system sets the visual for the root window. Because each parent invokes layout on its children, this propagates a call to layout methods to every possible UI element that is supposed to be part of a layout. In XAML layout, there are two stages: measure, then arrange.
 
-기본 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 및 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)에 대한 기본 제공 레이아웃 메서드 동작을 가져오지 않습니다. [
-            **Children**](https://msdn.microsoft.com/library/windows/apps/br227514)의 항목은 XAML 시각적 트리의 일부로 자동으로 렌더링되지 않습니다. **MeasureOverride** 및 **ArrangeOverride** 구현 내에서 레이아웃 단계를 통해 **Children**에서 찾은 각 항목에 대해 레이아웃 메서드를 호출하여 사용자가 레이아웃 프로세스에 항목이 알려지도록 해야 합니다.
+You don't get any built-in layout method behavior for [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) and [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) from the base [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) class. Items in [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) won't automatically render as part of the XAML visual tree. It is up to you to make the items known to the layout process, by invoking layout methods on each of the items you find in **Children** through a layout pass within your **MeasureOverride** and **ArrangeOverride** implementations.
 
-고유한 상속이 없는 경우 레이아웃 재정의에서 기본 구현을 호출할 이유는 없습니다. 호출 여부에 관계없이 레이아웃 동작(있는 경우)에 대한 네이티브 메서드가 실행되며, 재정의에서 기본 구현을 호출하지 않아도 기본 동작이 수행됩니다.
+There's no reason to call base implementations in layout overrides unless you have your own inheritance. The native methods for layout behavior (if they exist) run regardless, and not calling base implementation from overrides won't prevent the native behavior from happening.
 
-측정 단계에서 레이아웃 논리는 해당 자식 요소에 대해 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드를 호출하여 각 자식 요소에 원하는 크기를 쿼리합니다. **Measure** 메서드를 호출하면 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 속성 값이 설정됩니다. [
-            **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 반환 값은 패널 자체에 원하는 크기입니다.
+During the measure pass, your layout logic queries each child element for its desired size, by calling the [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) method on that child element. Calling the **Measure** method establishes the value for the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) property. The [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) return value is the desired size for the panel itself.
 
-정렬 단계에서 자식 요소의 위치와 크기가 x-y 공간으로 결정되며 렌더링을 위해 레이아웃 컴퍼지션이 준비됩니다. 레이아웃 시스템에서 요소가 레이아웃에 속하는 것을 감지하도록 코드에서 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)의 각 자식 요소에 대해 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)를 호출해야 합니다. **Arrange** 호출은 컴퍼지션 및 렌더링 전에 수행되며, 컴퍼지션이 렌더링을 위해 제출될 때 레이아웃 시스템에 해당 요소의 목적지를 알립니다.
+During the arrange pass, the positions and sizes of child elements are determined in x-y space and the layout composition is prepared for rendering. Your code must call [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) on each child element in [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) so that the layout system detects that the element belongs in the layout. The **Arrange** call is a precursor to composition and rendering; it informs the layout system where that element goes, when the composition is submitted for rendering.
 
-많은 속성과 값이 레이아웃 논리의 런타임 작동 방식에 영향을 줍니다. 레이아웃 프로세스를 고려하는 한 가지 방법은 자식이 없는 요소(일반적으로 UI의 가장 안쪽에 중첩된 요소)가 먼저 측정을 완료할 수 있도록 하는 것입니다. 해당 요소에는 원하는 크기에 영향을 주는 자식 요소에 대한 종속성이 없습니다. 원하는 크기를 임의로 가질 수 있으며, 레이아웃이 실제로 수행될 때까지 크기 제안으로 사용됩니다. 그런 다음 루트 요소에 측정이 있고 모든 측정을 완료할 수 있을 때까지 측정 단계가 계속 시각적 트리 위로 진행됩니다.
+Many properties and values contribute to how the layout logic will work at runtime. A way to think about the layout process is that the elements with no children (generally the most deeply nested element in the UI) are the ones that can finalize measurements first. They don't have any dependencies on child elements that influence their desired size. They might have their own desired sizes, and these are size suggestions until the layout actually takes place. Then, the measure pass continues walking up the visual tree until the root element has its measurements and all the measurements can be finalized.
 
-후보 레이아웃이 현재 앱 창에 맞아야 하며, 그렇지 않으면 UI의 일부가 잘립니다. 패널에서 클리핑 논리가 결정되는 경우가 많습니다. 패널 논리에 따라 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현 내에서 사용 가능한 크기를 결정할 수 있으며, 모든 요소가 잘 맞도록 크기 제한을 자식에 적용하고 자식 간에 공간을 나누어야 할 수도 있습니다. 이상적인 레이아웃 결과는 모든 레이아웃 요소의 다양한 속성을 사용하는 동시에 앱 창에 잘 맞는 레이아웃입니다. 이렇게 하려면 패널의 레이아웃 논리에 대한 적절한 구현과 해당 패널을 사용하여 UI를 빌드하는 앱 코드 부분에서 신중한 UI 디자인이 필요합니다. 전체 UI 디자인에 포함된 자식 요소 수가 앱에 들어갈 수 있는 개수보다 많으면 패널 디자인이 멋지게 표시되지 않습니다.
+The candidate layout must fit within the current app window or else parts of the UI will be clipped. Panels often are the place where the clipping logic is determined. Panel logic can determine what size is available from within the [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) implementation, and may have to push the size restrictions onto the children and divide space amongst children so that everything fits as best it can. The result of layout is ideally something that uses various properties of all parts of the layout but still fits within the app window. That requires both a good implementation for layout logic of the panels, and also a judicious UI design on the part of any app code that builds a UI using that panel. No panel design is going to look good if the overall UI design includes more child elements than can possibly fit in the app.
 
-레이아웃 시스템 작동의 핵심 부분은 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)를 기반으로 하는 요소가 컨테이너에서 자식으로 작동할 경우 이미 내재된 동작이 있다는 것입니다. 예를 들어 레이아웃 동작을 알리거나 레이아웃 작동에 필요한 **FrameworkElement**의 여러 API가 있습니다. 다음이 포함됩니다.
+A large part of what makes the layout system work is that any element that's based on [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) already has some of its own inherent behavior when acting as a child in a container. For example, there are several APIs of **FrameworkElement** that either inform layout behavior or are needed to make layout work at all. These include:
 
--   [
-            **DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)(실제로 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 속성)
--   [
-            **ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 및 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
--   [
-            **Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
--   [**여백**](https://msdn.microsoft.com/library/windows/apps/br208724)
--   [
-            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) 이벤트
--   [
-            **HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
--   [
-            **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드
--   [
-            **Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 및 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드: [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 수준에서 요소 수준 레이아웃 작업을 처리하는 기본 구현이 정의되어 있습니다.
+-   [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) (actually a [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) property)
+-   [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) and [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
+-   [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) and [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)
+-   [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724)
+-   [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) event
+-   [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749)
+-   [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) and [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) methods
+-   [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) and [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) methods: these have native implementations defined at the [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) level, which handle the element-level layout action
 
 ## **MeasureOverride**
 
 
-레이아웃에서 부모가 패널에 대해 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드를 호출할 때 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드의 반환 값은 레이아웃 시스템에서 패널 자체의 시작 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)로 사용됩니다. 메서드 내의 논리 선택은 반환 값만큼 중요하며, 논리가 반환 값에 영향을 주는 경우가 많습니다.
+The [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) method has a return value that's used by the layout system as the starting [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) for the panel itself, when the [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) method is called on the panel by its parent in layout. The logic choices within the method are just as important as what it returns, and the logic often influences what value is returned.
 
-모든 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현에서 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)을 반복하고 각 자식 요소에 대해 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드를 호출해야 합니다. **Measure** 메서드를 호출하면 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 속성 값이 설정됩니다. 이 값은 패널 자체에 필요한 공간 크기뿐 아니라 요소 간에 공간을 나누는 방법이나 특정 자식 요소에 대해 공간 크기를 지정하는 방법을 알려줄 수 있습니다.
+All [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) implementations should loop through [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514), and call the [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) method on each child element. Calling the **Measure** method establishes the value for the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) property. This might inform how much space the panel itself needs, as well as how that space is divided among elements or sized for a particular child element.
 
-다음은 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드의 기본 골격입니다.
+Here's a very basic skeleton of a [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) method:
 
 ```CSharp
 protected override Size MeasureOverride(Size availableSize)
@@ -112,51 +93,45 @@ protected override Size MeasureOverride(Size availableSize)
     //loop through each Child, call Measure on each
     foreach (UIElement child in Children)
     {
-        child.Measure(new Size()); // TODO determine how much space the panel allots for this child, that&#39;s what you pass to Measure
-        Size childDesiredSize = child.DesiredSize; //TODO determine how the returned Size is influenced by each child&#39;s DesiredSize
+        child.Measure(new Size()); // TODO determine how much space the panel allots for this child, that's what you pass to Measure
+        Size childDesiredSize = child.DesiredSize; //TODO determine how the returned Size is influenced by each child's DesiredSize
         //TODO, logic if passed-in Size and net DesiredSize are different, does that matter?
     }
     return returnSize;
 }
 ```
 
-레이아웃에 사용할 준비가 될 때쯤에는 대체로 요소에 기본 크기가 있습니다. 측정 단계 후 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 대해 전달한 *availableSize*가 더 작은 경우 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)가 기본 크기를 나타낼 수도 있습니다. 기본 크기가 **Measure**에 대해 전달한 *availableSize*보다 크면 **DesiredSize**가 *availableSize*로 제약됩니다. **Measure**의 내부 구현은 이런 방식으로 동작하며, 레이아웃 재정의에서 이 동작을 고려해야 합니다.
+Elements often have a natural size by the time they're ready for layout. After the measure pass, the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) might indicate that natural size, if the *availableSize* you passed for [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) was smaller. If the natural size is larger than *availableSize* you passed for **Measure**, the **DesiredSize** is constrained to *availableSize*. That's how **Measure**'s internal implementation behaves, and your layout overrides should take that behavior into account.
 
-일부 요소는 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 값이 **Auto**이므로 기본 크기가 없습니다. 이러한 요소는 **Auto** 값이 나타내는 대로 전체 *availableSize*를 사용합니다. *availableSize*로 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)를 호출하여 요소 크기를 레이아웃 직계 부모가 전달하는 사용 가능한 최대 크기로 조정합니다. 실제로 최상위 창인 경우에도 항상 UI 크기가 조정되는 몇 가지 측정이 있습니다. 궁극적으로 측정 단계에서는 모든 **Auto** 값을 부모 제약 조건으로 확인하며, 모든 **Auto** 값 요소에 실제 측정이 있습니다. 레이아웃이 완료된 후 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)를 검사하여 측정을 가져올 수 있습니다.
+Some elements don't have a natural size because they have **Auto** values for [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) and [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751). These elements use the full *availableSize*, because that's what an **Auto** value represents: size the element to the maximum available size, which the immediate layout parent communicates by calling [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) with *availableSize*. In practice, there's always some measurement that a UI is sized to (even if that's the top level window.) Eventually, the measure pass resolves all the **Auto** values to parent constraints and all **Auto** value elements get real measurements (which you can get by checking [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) and [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707), after layout completes).
 
-무한 차원이 하나 이상 있는 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 크기를 전달하여 패널이 포함된 콘텐츠의 측정값에 맞게 크기를 조정할 수 있음을 나타내는 것이 좋습니다. 측정되고 있는 각 자식 요소는 기본 크기를 사용하여 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 값을 설정합니다. 그런 다음 일반적으로 정렬 단계에서 패널은 해당 크기를 사용하여 정렬됩니다.
+It's legal to pass a size to [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) that has at least one infinite dimension, to indicate that the panel can attempt to size itself to fit measurements of its content. Each child element being measured sets its [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) value using its natural size. Then, during the arrange pass, the panel typically arranges using that size.
 
-[
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 등의 텍스트 요소에는 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 또는 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 값이 설정되지 않은 경우에도 텍스트 문자열과 텍스트 속성에 따라 계산된 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)가 있으며, 패널 논리에 이러한 차원이 반영되어야 합니다. 텍스트 클리핑은 특히 잘못된 UI 환경입니다.
+Text elements such as [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) have a calculated [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) and [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) based on their text string and text properties even if no [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) or [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) value is set, and these dimensions should be respected by your panel logic. Clipping text is a particularly bad UI experience.
 
-구현에서 원하는 크기 측정을 사용하지 않는 경우에도 각 자식 요소에 대해 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 메서드를 호출하는 것이 가장 좋습니다. 호출되는 **Measure**에서 트리거하는 내부 및 기본 동작이 있기 때문입니다. 요소가 레이아웃에 사용되려면 측정 단계에서 각 자식 요소에 대해 **Measure**가 호출되고 정렬 단계에서 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 메서드가 호출되어야 합니다. 이러한 메서드를 호출하면 개체에 내부 플래그가 설정되며 시스템 레이아웃 논리에서 시각적 트리를 빌드하고 UI를 렌더링할 때 필요한 값(예: [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 속성)이 채워집니다.
+Even if your implementation doesn't use the desired size measurements, it's best to call the [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) method on each child element, because there are internal and native behaviors that are triggered by **Measure** being called. For an element to participate in layout, each child element must have **Measure** called on it during the measure pass and the [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) method called on it during the arrange pass. Calling these methods sets internal flags on the object and populates values (such as the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) property) that the system's layout logic needs when it builds the visual tree and renders the UI.
 
-[
-            **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 반환 값은 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)가 호출될 때 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)의 각 자식 요소에 대한 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 또는 기타 크기 고려 사항을 해석하는 패널 논리를 기반으로 합니다. 자식의 **DesiredSize** 값을 처리하는 방법 및 **MeasureOverride** 반환 값에서 해당 값을 사용하는 방법은 고유한 논리의 해석에 따라 달라집니다. **MeasureOverride**의 입력은 패널의 부모가 제안한 고정된 사용 가능 크기인 경우가 많기 때문에 일반적으로 수정 없이 값을 더하지 않습니다. 해당 크기를 초과하면 패널 자체가 잘릴 수 있습니다. 일반적으로 자식의 총 크기를 패널의 사용 가능한 크기와 비교하고 필요에 따라 조정합니다.
+The [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) return value is based on the panel's logic interpreting the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) or other size considerations for each of the child elements in [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) when [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) is called on them. What to do with **DesiredSize** values from children and how the **MeasureOverride** return value should use them is up to your own logic's interpretation. You don't typically add up the values without modification, because the input of **MeasureOverride** is often a fixed available size that's being suggested by the panel's parent. If you exceed that size, the panel itself might get clipped. You'd typically compare the total size of children to the panel's available size and make adjustments if necessary.
 
-### 팁과 지침
+### Tips and guidance
 
--   이상적인 사용자 지정 패널은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 또는 XAML 페이지 루트인 다른 요소의 바로 아래 수준에서 UI 컴퍼지션의 첫 번째 실제 화면 효과가 되기에 적합해야 합니다. [
-            **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현에서 값을 검사하지 않고 입력 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 자주 반환하지 마세요. 반환 **Size**에 **Infinity** 값이 있는 경우 이로 인해 런타임 레이아웃 논리에서 예외가 발생할 수 있습니다. **Infinity** 값은 스크롤 가능한 메인 앱 창에서 가져올 수 있으므로 최대 높이가 없습니다. 스크롤 가능한 다른 콘텐츠에도 같은 동작이 있을 수 있습니다.
--   [
-            **MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현의 다른 일반적인 실수는 새 기본 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 반환하는 것입니다(높이 및 너비 값이 0임). 해당 값으로 시작할 수 있으며, 패널에서 자식이 렌더링되지 않도록 결정하는 경우 올바른 값일 수도 있습니다. 그러나 기본 **Size**를 사용하면 호스트에서 패널 크기를 올바르게 조정하지 않습니다. UI 공간을 요청하지 않으므로 공간을 얻지 못하며 렌더링하지 않습니다. 또는 모든 패널 코드가 제대로 작동하지만 높이 0과 너비 0으로 작성되는 경우 패널이나 패널의 콘텐츠가 표시되지 않습니다.
--   재정의 내에서 자식 요소를 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)로 캐스팅하고 레이아웃 결과로 계산된 속성, 특히 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)를 사용하려고 시도하지 마세요. 대부분의 일반적인 시나리오에서는 자식의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 값을 기준으로 논리를 작성할 수 있으며 자식 요소의 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 또는 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 관련 속성이 필요하지 않습니다. 요소 형식을 알고 있고 이미지 파일 기본 크기 등의 추가 정보가 있는 특수한 경우에서는 레이아웃 시스템에서 자주 변경되는 값이 아니므로 요소의 특수한 정보를 사용해도 됩니다. 레이아웃에서 계산된 속성을 레이아웃 논리의 일부로 포함하면 의도하지 않은 레이아웃 루프가 정의될 위험이 훨씬 증가합니다. 이러한 루프는 유효한 레이아웃을 만들 수 없는 상태를 발생시키며, 루프를 복구할 수 없는 경우 시스템에서 [**LayoutCycleException**](https://msdn.microsoft.com/library/windows/apps/hh673799)이 발생할 수 있습니다.
--   일반적으로 패널은 정확히 공간을 나누는 방법은 다르지만 사용 가능한 공간을 여러 자식 요소 간에 나눕니다. 예를 들어 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606) 및 [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) 값을 사용하여 공간을 **Grid** 셀로 나누고 배율 크기 조정과 픽셀 값을 모두 지원하는 레이아웃 논리를 구현합니다. 픽셀 값인 경우 각 하위에 사용 가능한 크기가 이미 알려져 있으므로 해당 값이 그리드 스타일 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 대한 입력 값으로 전달됩니다.
--   패널 자체에서 항목 사이의 안쪽 여백으로 예약된 공간을 적용할 수 있습니다. 이 경우 [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) 또는 **Padding** 속성과 다른 속성으로 측정을 노출해야 합니다.
--   이전 레이아웃 단계를 기준으로 요소의 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 및 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 속성 값이 지정될 수 있습니다. 값이 변경되면 앱 UI 코드에서 실행할 특수 논리가 있는 경우 요소에 [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)의 처리기를 배치할 수 있지만, 일반적으로 패널 논리에서 이벤트 처리를 사용하여 변경 사항을 확인할 필요는 없습니다. 레이아웃 관련 속성 값이 변경되었으며 해당 상황에서 패널의 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 또는 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)가 자동으로 호출되기 때문에 레이아웃 시스템에서 레이아웃을 다시 실행할 시기를 이미 결정합니다.
+-   Ideally, a custom panel should be suitable for being the first true visual in a UI composition, perhaps at a level immediately under [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) or another element that is the XAML page root. In [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) implementations, don't routinely return the input [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) without examining the values. If the return **Size** has an **Infinity** value in it, this can throw exceptions in runtime layout logic. An **Infinity** value can come from the main app window, which is scrollable and therefore doesn't have a maximum height. Other scrollable content might have the same behavior.
+-   Another common mistake in [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) implementations is to return a new default [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) (values for height and width are 0). You might start with that value, and it might even be the correct value if your panel determines that none of the children should be rendered. But, a default **Size** results in your panel not being sized correctly by its host. It requests no space in the UI, and therefore gets no space and doesn't render. All your panel code otherwise might be functioning fine, but you still won't see your panel or contents thereof if it's being composed with zero height, zero width.
+-   Within the overrides, avoid the temptation to cast child elements to [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) and use properties that are calculated as a result of layout, particularly [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) and [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707). For most common scenarios, you can base the logic on the child's [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) value and you won't need any of the [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) or [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) related properties of a child element. For specialized cases, where you know the type of element and have additional information, for example the natural size of an image file, you can use your element's specialized information because it's not a value that is actively being altered by layout systems. Including layout-calculated properties as part of layout logic substantially increases the risk of defining an unintentional layout loop. These loops cause a condition where a valid layout can't be created and the system can throw a [**LayoutCycleException**](https://msdn.microsoft.com/library/windows/apps/hh673799) if the loop is not recoverable.
+-   Panels typically divide their available space between multiple child elements, although exactly how space is divided varies. For example, [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) implements layout logic that uses its [**RowDefinition**](https://msdn.microsoft.com/library/windows/apps/br227606) and [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/br209324) values to divide the space into the **Grid** cells, supporting both star-sizing and pixel values. If they're pixel values, the size available for each child is already known, so that's what is passed as input size for a grid-style [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952).
+-   Panels themselves can introduce reserved space for padding between items. If you do this, make sure to expose the measurements as a property that's distinct from [**Margin**](https://msdn.microsoft.com/library/windows/apps/br208724) or any **Padding** property.
+-   Elements might have values for their [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) and [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) properties based on a previous layout pass. If values change, app UI code can put handlers for [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) on elements if there's special logic to run, but panel logic typically doesn't need to check for changes with event handling. The layout system is already making the determinations of when to re-run layout because a layout-relevant property changed value, and a panel's [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) or [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) are called automatically in the appropriate circumstances.
 
 ## **ArrangeOverride**
 
 
-레이아웃에서 부모가 패널에 대해 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 메서드를 호출할 때 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 메서드의 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) 반환 값은 레이아웃 시스템에서 패널 자체의 렌더링 시 사용됩니다. 일반적으로 입력 *finalSize*와 **Size**에서 반환된 **ArrangeOverride**는 같습니다. 다른 경우 패널에서 레이아웃의 다른 요소가 사용 가능하다고 주장하는 크기와 다른 크기를 설정하려고 하는 것입니다. 최종 크기는 패널 코드를 통해 이전에 실행한 레이아웃 측정 단계를 기반으로 하며, 이런 이유 때문에 다른 크기를 반환하는 것은 일반적이지 않습니다. 의도적으로 측정 논리를 무시하고 있는 것입니다.
+The [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) method has a [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) return value that's used by the layout system when rendering the panel itself, when the [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) method is called on the panel by its parent in layout. It's typical that the input *finalSize* and the **ArrangeOverride** returned **Size** are the same. If they aren't, that means the panel is attempting to make itself a different size than what the other participants in layout claim is available. The final size was based on having previously run the measure pass of layout through your panel code, so that's why returning a different size isn't typical: it means you are deliberately ignoring measure logic.
 
-[
-            **Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 **Infinity** 구성 요소와 함께 반환하지 않습니다. **Size**를 사용하면 내부 레이아웃에서 예외가 발생합니다.
+Don't return a [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) with an **Infinity** component. Trying to use such a **Size** throws an exception from internal layout.
 
-모든 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 구현에서 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)을 반복하고 각 자식 요소에 대해 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 메서드를 호출해야 합니다. [
-            **Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)와 마찬가지로 **Arrange**에는 반환 값이 없습니다. 그러나 **Measure**와 달리 계산된 속성이 결과로 설정되지 않습니다. 하지만 해당 요소에서 [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) 이벤트가 발생합니다.
+All [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) implementations should loop through [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514), and call the [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) method on each child element. Like [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952), **Arrange** doesn't have a return value. Unlike **Measure**, no calculated property gets set as a result (however, the element in question typically fires a [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) event).
 
-다음은 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 메서드의 기본 골격입니다.
+Here's a very basic skeleton of an [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) method:
 
 ```CSharp
 protected override Size ArrangeOverride(Size finalSize)
@@ -168,64 +143,47 @@ protected override Size ArrangeOverride(Size finalSize)
        // for this child, and based on finalSize or other internal state of your panel
         child.Arrange(new Rect(anchorPoint, child.DesiredSize)); //OR, set a different Size 
     }
-    return finalSize; //OR, return a different Size, but that&#39;s rare
+    return finalSize; //OR, return a different Size, but that's rare
 }
 ```
 
-측정 단계가 먼저 수행되지 않고 레이아웃 정렬 단계가 발생할 수도 있습니다. 그러나 이는 레이아웃 시스템에서 이전 측정에 영향을 준 속성이 변경되지 않았음을 확인한 경우에만 발생합니다. 예를 들어 맞춤이 변경되는 경우 맞춤 선택 변경 시 해당 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)가 변경되지 않으므로 특정 요소를 다시 측정할 필요가 없습니다. 반면, 레이아웃의 요소에서 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)가 변경되는 경우 새 측정 단계가 필요합니다. 레이아웃 시스템에서 진정한 측정 변경 사항을 자동으로 검색하고 측정 단계를 다시 호출한 다음 다른 정렬 단계를 실행합니다.
+The arrange pass of layout might happen without being preceded by a measure pass. However, this only happens when the layout system has determined no properties have changed that would have affected the previous measurements. For example, if an alignment changes, there's no need to re-measure that particular element because its [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) would not change when its alignment choice changes. On the other hand, if [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) changes on any element in a layout, a new measure pass is needed. The layout system automatically detects true measure changes and invokes the measure pass again, and then runs another arrange pass.
 
-[
-            **Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)에 대한 입력은 [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) 값을 사용합니다. 이 **Rect**를 생성하는 가장 일반적인 방법은 [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) 입력과 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) 입력이 포함된 생성자를 사용하는 것입니다. **Point**는 요소에 대한 경계 상자의 왼쪽 위 모서리를 배치할 지점입니다. **Size**는 특정 요소를 렌더링하는 데 사용되는 차원입니다. 레이아웃에 포함된 모든 요소에 대해 **DesiredSize**를 설정하는 것이 레이아웃 측정 단계의 목적이기 때문에 대체로 해당 요소의 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)를 이 **Size** 값으로 사용합니다. 레이아웃 시스템이 정렬 단계에 도달한 후 요소의 배치 방법을 최적화할 수 있도록 측정 단계는 반복적인 방식으로 요소의 전체 크기 조정을 결정합니다.
+The input for [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) takes a [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) value. The most common way to construct this **Rect** is to use the constructor that has a [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) input and a [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995) input. The **Point** is the point where the top left corner of the bounding box for the element should be placed. The **Size** is the dimensions used to render that particular element. You often use the [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) for that element as this **Size** value, because establishing the **DesiredSize** for all elements involved in layout was the purpose of the measure pass of layout. (The measure pass determines all-up sizing of the elements in an iterative way so that the layout system can optimize how elements are placed once it gets to the arrange pass.)
 
-일반적으로 [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 구현 간의 차이점은 패널에서 각 자식을 정렬하는 방법의 [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)를 결정하는 논리입니다. [
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 등의 절대 위치 패널은 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772) 값을 통해 각 요소에서 가져오는 명시적 배치 정보를 사용합니다. [
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 등의 공간 분할 패널에는 사용 가능한 공간을 셀로 나눈 수학적 연산이 있으며, 각 셀에 콘텐츠가 배치 및 정렬되어야 하는 x-y 값이 있습니다. [
-            **StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) 등의 적응 패널은 방향 차원에서 콘텐츠에 맞게 확장될 수도 있습니다.
+What typically varies between [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) implementations is the logic by which the panel determines the [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) component of how it arranges each child. An absolute positioning panel such as [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) uses the explicit placement info that it gets from each element through [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) and [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772) values. A space-dividing panel such as [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) would have mathematical operations that divided the available space into cells and each cell would have an x-y value for where its content should be placed and arranged. An adaptive panel such as [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) might be expanding itself to fit content in its orientation dimension.
 
-직접 제어하고 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914)에 전달하는 값 외에 레이아웃의 요소 위치에 대한 추가적인 영향도 있습니다. 이러한 영향은 모든 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 파생 형식에 공통적으로 적용되고 텍스트 요소 등의 다른 형식에 의해 확장되는 **Arrange**의 내부 기본 구현에서 비롯됩니다. 예를 들어 요소에 여백과 맞춤이 있을 수 있으며, 안쪽 여백이 지정된 요소도 있습니다. 대체로 이러한 속성은 상호 작용합니다. 자세한 내용은 [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)을 참조하세요.
+There are still additional positioning influences on elements in layout, beyond what you directly control and pass to [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914). These come from the internal native implementation of **Arrange** that's common to all [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) derived types and augmented by some other types such as text elements. For example, elements can have margin and alignment, and some can have padding. These properties often interact. For more info, see [Alignment, margin, and padding](alignment-margin-padding.md).
 
-## 패널 및 컨트롤
+## Panels and controls
 
 
-사용자 지정 컨트롤로 빌드해야 하는 기능을 사용자 지정 패널에 배치하지 마세요. 패널의 역할은 패널 내에 있는 모든 자식 요소 콘텐츠를 자동으로 발생하는 레이아웃의 기능으로 표시하는 것입니다. [
-            **Border**](https://msdn.microsoft.com/library/windows/apps/br209250)에서 표시하는 요소 주위에 테두리를 추가하는 방법과 마찬가지로 패널에서 콘텐츠에 데코레이션을 추가하거나 안쪽 여백 등의 다른 레이아웃 관련 조정을 수행할 수도 있습니다. 그러나 자식의 정보 보고 및 사용 이외에 시각적 트리 출력을 확장할 때는 이것이 한계입니다.
+Avoid putting functionality into a custom panel that should instead be built as a custom control. The role of a panel is to present any child element content that exists within it, as a function of layout that happens automatically. The panel might add decorations to content (similar to how a [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) adds the border around the element it presents), or perform other layout-related adjustments like padding. But that's about as far as you should go when extending the visual tree output beyond reporting and using information from the children.
 
-사용자가 액세스할 수 있는 상호 작용이 있는 경우 패널이 아니라 사용자 지정 컨트롤을 작성해야 합니다. 예를 들어 스크롤 막대, 미리 보기 등은 대화형 컨트롤 요소이므로 클리핑을 방지하기 위한 경우에도 패널에서 표시하는 콘텐츠에 스크롤 뷰포트를 추가하면 안 됩니다. (콘텐츠에 결국 스크롤 막대가 포함될 수도 있지만 자식의 논리에 따라 결정되게 해야 합니다. 스크롤을 레이아웃 작업으로 추가하여 강제로 적용하지 마세요.) 컨트롤을 만들고, 해당 컨트롤에 콘텐츠를 표시하는 경우 컨트롤의 시각적 트리에서 중요한 역할을 하는 사용자 지정 패널을 작성할 수도 있습니다. 그러나 컨트롤과 패널은 별개의 코드 개체여야 합니다.
+If there's any interaction that's accessible to the user, you should write a custom control, not a panel. For example, a panel shouldn't add scrolling viewports to content it presents, even if the goal is to prevent clipping, because the scrollbars, thumbs and so on are interactive control parts. (Content might have scrollbars after all, but you should leave that up to the child's logic. Don't force it by adding scrolling as a layout operation.) You might create a control and also write a custom panel that plays an important role in that control's visual tree, when it comes to presenting content in that control. But the control and the panel should be distinct code objects.
 
-컨트롤과 패널의 구분이 중요한 이유는 Microsoft UI 자동화 및 접근성 때문입니다. 패널은 논리적 동작이 아니라 시각적 레이아웃 동작을 제공합니다. UI 요소를 어떻게 시각적으로 표시하는지는 일반적으로 접근성 시나리오에 중요한 UI의 측면이 아닙니다. 접근성은 논리적으로 UI 인식에 중요한 앱 구성 요소를 노출하는 것입니다. 상호 작용이 필요한 경우 컨트롤이 UI 자동화 인프라에 상호 작용 기능을 노출해야 합니다. 자세한 내용은 [사용자 지정 자동화 피어](https://msdn.microsoft.com/library/windows/apps/mt297667)를 참조하세요.
+One reason the distinction between control and panel is important is because of Microsoft UI Automation and accessibility. Panels provide a visual layout behavior, not a logical behavior. How a UI element appears visually is not an aspect of UI that is typically important to accessibility scenarios. Accessibility is about exposing the parts of an app that are logically important to understanding a UI. When interaction is required, controls should expose the interaction possibilities to the UI Automation infrastructure. For more info, see [Custom automation peers](https://msdn.microsoft.com/library/windows/apps/mt297667).
 
-## 기타 레이아웃 API
-
-
-레이아웃 시스템에 포함되지만 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)에서 선언되지 않는 다른 몇 가지 API도 있습니다. 이러한 API는 패널 구현이나 패널을 사용하는 사용자 지정 컨트롤에서 사용될 수 있습니다.
-
--   [
-            **UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930) 및 [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929)는 레이아웃 단계를 시작하는 메서드입니다. **InvalidateArrange**는 측정 단계를 트리거하지 않을 수도 있지만 다른 두 메서드는 트리거합니다. 거의 항상 레이아웃 루프가 발생하므로 레이아웃 메서드 재정의 내에서 이러한 메서드를 호출하지 마세요. 일반적으로 제어 코드에서 해당 메서드를 호출할 필요도 없습니다. 대부분의 레이아웃 측면은 프레임워크에서 정의된 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 등의 레이아웃 속성에 대한 변경 사항을 검색하여 자동으로 트리거됩니다.
--   [
-            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)는 요소 레이아웃의 일부 측면이 변경된 경우에 발생하는 이벤트입니다. 패널과 관련이 없으며 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)에서 이벤트를 정의합니다.
--   [
-            **SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742)는 레이아웃 단계가 완료된 후에만 발생하는 이벤트이며, 그 결과로 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 또는 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)가 변경되었음을 나타냅니다. 이것은 다른 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 이벤트입니다. [
-            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722)가 발생하지만 **SizeChanged**가 발생하지 않는 경우가 있습니다. 예를 들어 내부 콘텐츠는 다시 정렬되지만 요소 크기는 변경되지 않습니다.
-
-**참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
- 
-
-## 관련 항목
+## Other layout API
 
 
-**참조**
+There are some other APIs that are part of the layout system, but aren't declared by [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511). You might use these in a panel implementation or in a custom control that uses panels.
+
+-   [**UpdateLayout**](https://msdn.microsoft.com/library/windows/apps/br208989), [**InvalidateMeasure**](https://msdn.microsoft.com/library/windows/apps/br208930), and [**InvalidateArrange**](https://msdn.microsoft.com/library/windows/apps/br208929) are methods that initiate a layout pass. **InvalidateArrange** might not trigger a measure pass, but the other two do. Never call these methods from within a layout method override, because they're almost sure to cause a layout loop. Control code doesn't typically need to call them either. Most aspects of layout are triggered automatically by detecting changes to the framework-defined layout properties such as [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) and so on.
+-   [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) is an event that fires when some aspect of layout of the element has changed. This isn't specific to panels; the event is defined by [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706).
+-   [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br208742) is an event that fires only after layout passes are finalized, and indicates that [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) or [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) have changed as a result. This is another [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) event. There are cases where [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/br208722) fires, but **SizeChanged** does not. For example the internal contents might be rearranged, but the element's size didn't change.
+
+
+## Related topics
+
+**Reference**
+
 [**FrameworkElement.ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
 
 [**FrameworkElement.MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 
-[**패널**](https://msdn.microsoft.com/library/windows/apps/br227511)
+[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)
 
-**개념**
-[맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)
+**Concepts**
 
-
-<!--HONumber=Mar16_HO4-->
-
-
+[Alignment, margin, and padding](alignment-margin-padding.md)

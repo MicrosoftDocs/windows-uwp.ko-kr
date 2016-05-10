@@ -1,98 +1,87 @@
 ---
+author: drewbatgit
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: 이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 GeotagHelper 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
-title: 이미지 메타데이터
+description: This article shows how to read and write image metadata properties and how to geotag files using the GeotagHelper utility class.
+title: Image Metadata
 ---
 
-# 이미지 메타데이터
+# Image Metadata
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
+This article shows how to read and write image metadata properties and how to geotag files using the [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) utility class.
 
-## 이미지 속성
+## Image properties
 
-[
-            **StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) 속성은 파일에 대한 콘텐츠 관련 정보에 액세스할 수 있도록 하는 [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) 개체를 반환합니다. [
-            **GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646)를 호출하여 이미지 관련 속성을 가져옵니다. 반환된 [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) 개체는 이미지의 제목 및 캡처 날짜와 같은 기본적인 이미지 메타데이터 필드를 포함하는 멤버를 노출합니다.
+The [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) property returns a [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) object that provides access to content-related information about the file. Get the image-specific properties by calling [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646). The returned [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) object exposes members that contain basic image metadata fields, like the title of the image and the capture date.
 
 [!code-cs[GetImageProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetImageProperties)]
 
-더 큰 파일 메타데이터 집합에 액세스하려면 고유한 문자열 식별자로 검색할 수 있는 파일 메타데이터 속성 집합인 Windows 속성 시스템을 사용합니다. 문자열 목록을 만들고 검색하려는 각 속성의 식별자를 추가합니다. [
-            **ImageProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br207732) 메서드는 문자열 목록을 사용하고 키가 속성 식별자에 해당하고 값이 속성 값인 키/값 쌍의 사전을 반환합니다.
+To access a larger set of file metadata, use the Windows Property System, a set of file metadata properties that can be retrieved with a unique string identifier. Create a list of strings and add the identifier for each property you want to retrieve. The [**ImageProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br207732) method takes this list of strings and returns a dictionary of key/value pairs where the key is the property identifier and the value is the property value.
 
 [!code-cs[GetWindowsProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetWindowsProperties)]
 
--   각 속성의 식별자 및 형식을 비롯한 Windows 속성의 전체 목록을 보려면 [Windows 속성](https://msdn.microsoft.com/library/windows/desktop/dd561977)을 참조하세요.
+-   For a complete list of Windows Properties, including the identifiers and type for each property, see [Windows Properties](https://msdn.microsoft.com/library/windows/desktop/dd561977).
 
--   일부 속성은 특정 파일 컨테이너 및 이미지 코덱에 대해서만 지원됩니다. 각 이미지 형식에 대해 지원되는 이미지 메타데이터 목록을 보려면 [사진 메타데이터 정책](https://msdn.microsoft.com/library/windows/desktop/ee872003)을 참조하세요.
+-   Some properties are only supported for certain file containers and image codecs. For a listing of the image metadata supported for each image type, see [Photo Metadata Policies](https://msdn.microsoft.com/library/windows/desktop/ee872003).
 
--   지원되지 않는 속성은 검색 시 null 값을 반환할 수 있으므로 반환된 메타데이터 값을 사용하기 전에 null이 있는지 확인합니다.
+-   Because properties that are unsupported may return a null value when retrieved, always check for null before using a returned metadata value.
 
-## 지오태그 도우미
+## Geotag helper
 
-GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 생성할 필요 없이 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) API를 직접 사용하여 지리적 데이터가 있는 이미지에 쉽게 태그를 지정하는 유틸리티 클래스입니다.
+GeotagHelper is a utility class that makes it easy to tag images with geographic data using the [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) APIs directly, without having to manually parse or construct the metadata format.
 
-이미지에 태그를 지정하려는 위치를 나타내는 [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) 개체가 이미 있는 경우 이전에 사용했던 지리적 위치 API나 기타 소스에서 [**GeotagHelper.SetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903685)를 호출하고 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 및 **Geopoint**를 제공하여 지오태그 데이터를 설정할 수 있습니다.
+If you already have a [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675) object representing the location you want to tag in the image, either from a previous use of the geolocation APIs or some other source, you can set the geotag data by calling [**GeotagHelper.SetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903685) and passing in a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) and the **Geopoint**.
 
 [!code-cs[SetGeoDataFromPoint](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromPoint)]
 
-디바이스의 현재 위치를 사용하여 지오태그 데이터를 설정하려면 새 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 만들고 [**GeotagHelper.SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686)를 호출한 다음 **Geolocator** 및 태그를 지정할 파일을 전달합니다.
+To set the geotag data using the device's current location, create a new [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) object and call [**GeotagHelper.SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) passing in the **Geolocator** and the file to be tagged.
 
 [!code-cs[SetGeoDataFromGeolocator](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromGeolocator)]
 
--   [
-            **SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) API를 사용하려면 앱 매니페스트에 **location** 디바이스 기능을 포함해야 합니다.
+-   You must include the **location** device capability in your app manifest in order to use the [**SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) API.
 
--   [
-            **SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686)를 호출하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)를 호출하여 사용자가 자신의 위치를 사용할 수 있는 권한을 앱에 부여했는지 확인해야 합니다.
+-   You must call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) before calling [**SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) to ensure the user has granted your app permission to use their location.
 
--   지리적 위치 API에 대한 자세한 내용은 [지도 및 위치](https://msdn.microsoft.com/library/windows/apps/mt219699)를 참조하세요.
+-   For more information on the geolocation APIs, see [Maps and location](https://msdn.microsoft.com/library/windows/apps/mt219699).
 
-이미지 파일의 지오태그가 지정된 위치를 나타내는 GeoPoint를 가져오려면 [**GetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903684)를 호출합니다.
+To get a GeoPoint representing the geotagged location of an image file, call [**GetGeotagAsync**](https://msdn.microsoft.com/library/windows/apps/dn903684).
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
-## 이미지 메타데이터 디코드 및 인코드
+## Decode and encode image metadata
 
-이미지 데이터로 작업하는 좀 더 수준 높은 방법은 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 또는 [BitmapEncoder](bitmapencoder-options-reference.md)를 사용하여 스트림 수준에서 속성을 읽고 쓰는 것입니다. 이러한 작업의 경우 Windows 속성을 사용하여 읽거나 쓰는 데이터를 지정할 수 있지만 요청된 속성에 대한 경로를 지정하기 위해 WIC(Windows 이미징 구성 요소)에서 제공하는 메타데이터 쿼리 언어를 사용할 수도 있습니다.
+The most advanced way of working with image data is to read and write the properties on the stream level using a [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) or a [BitmapEncoder](bitmapencoder-options-reference.md). For these operations you can use Windows Properties to specify the data you are reading or writing, but you can also use the metadata query language provided by the Windows Imaging Component (WIC) to specify the path to a requested property.
 
-이 기술을 사용하여 이미지 메타데이터를 읽으려면 원본 이미지 파일 스트림으로 만든 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176)가 있어야 합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
+Reading image metadata using this technique requires you to have a [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) that was created with the source image file stream. For information on how to do this, see [Imaging](imaging.md).
 
-일단 디코더가 있으면 Windows 속성 식별자 문자열 또는 WIC 메타데이터 쿼리를 사용하여 문자열의 목록을 만들고 검색하려는 각 메타데이터 속성에 대한 새 항목을 추가합니다. 디코더의 [**BitmapProperties**](https://msdn.microsoft.com/library/windows/apps/br226248) 멤버에 대해 [**BitmapPropertiesView.GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) 메서드를 호출하여 지정된 속성을 요청합니다. 속성은 속성 이름 또는 경로와 속성 값을 포함하는 키/값 쌍의 사전으로 반환됩니다.
+Once you have the decoder, create a list of strings and add a new entry for each metadata property you want to retrieve, using either the Windows Property identifier string or a WIC metadata query. Call the [**BitmapPropertiesView.GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) method on the decoder's [**BitmapProperties**](https://msdn.microsoft.com/library/windows/apps/br226248) member to request the specified properties. The properties are returned in a dictionary of key/value pairs containing the property name or path and the property value.
 
 [!code-cs[ReadImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetReadImageMetadata)]
 
--   WIC 메타데이터 쿼리 언어 및 지원되는 속성에 대한 자세한 내용은 [WIC 이미지 형식 네이티브 메타데이터 쿼리](https://msdn.microsoft.com/library/windows/desktop/ee719904)를 참조하세요.
+-   For information on the WIC metadata query language and the properties supported, see [WIC image format native metadata queries](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   많은 메타데이터 속성이 이미지 형식의 하위 집합에서만 지원됩니다. [
-            **GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250)는 요청된 속성 중 하나가 디코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패하고 이미지가 메타데이터를 전혀 지원하지 않을 경우 0x88982F81 오류 코드로 실패합니다. 이러한 오류 코드와 관련된 상수는 WINCODEC\_ERR\_PROPERTYNOTSUPPORTED 및 WINCODEC\_ERR\_UNSUPPORTEDOPERATION이며 winerror.h 헤더 파일에 정의되어 있습니다.
--   이미지가 특정 속성 값을 포함할 수도 있고 그렇지 않을 수도 있으므로 액세스를 시도하기 전에 **IDictionary.ContainsKey**를 사용하여 결과에 속성이 있는지 확인합니다.
+-   Many metadata properties are only supported by a subset of image types. [**GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) will fail with the error code 0x88982F41 if one of the requested properties is not supported by the image associated with the decoder and 0x88982F81 if the image does not support metadata at all. The constants associated with these error codes are WINCODEC\_ERR\_PROPERTYNOTSUPPORTED and WINCODEC\_ERR\_UNSUPPORTEDOPERATION and are defined in the winerror.h header file.
+-   Because an image may or may not contain a value for a particular property, use the **IDictionary.ContainsKey** to verify that a property is present in the results before attempting to access it.
 
-이미지 메타데이터를 스트림에 쓰려면 이미지 출력 파일과 연결된 **BitmapEncoder**가 필요합니다.
+Writing image metadata to the stream requires a **BitmapEncoder** associated with the image output file.
 
-설정할 속성 값을 포함할 [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/hh974338) 개체를 만듭니다. 속성 값을 나타낼 [**BitmapTypedValue**](https://msdn.microsoft.com/library/windows/apps/hh700687) 개체를 만듭니다. 이 개체는 **object**를 값으로 사용하고 해당 값의 형식을 정의하는 [**PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871) 열거형의 멤버를 사용합니다. **BitmapPropertySet**에 **BitmapTypedValue**를 추가하고 [**BitmapProperties.SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)를 호출하여 인코더가 스트림에 속성을 쓰도록 합니다.
+Create a [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/hh974338) object to contain the property values you want set. Create a [**BitmapTypedValue**](https://msdn.microsoft.com/library/windows/apps/hh700687) object to represent the property value. This object uses an **object** as the value and member of the [**PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871) enumeration that defines the type of the value. Add the **BitmapTypedValue** to the **BitmapPropertySet** and then call [**BitmapProperties.SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) to cause the encoder to write the properties to the stream.
 
 [!code-cs[WriteImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteImageMetadata)]
 
--   어떤 이미지 파일 형식에 대해 어떤 속성이 지원되는지를 자세히 알아보려면 [Windows 속성](https://msdn.microsoft.com/library/windows/desktop/dd561977), [사진 메타데이터 정책](https://msdn.microsoft.com/library/windows/desktop/ee872003) 및 [WIC 이미지 형식 네이티브 메타데이터 쿼리](https://msdn.microsoft.com/library/windows/desktop/ee719904)를 참조하세요.
+-   For details on which properties are supported for which image file types, see [Windows Properties](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Photo Metadata Policies](https://msdn.microsoft.com/library/windows/desktop/ee872003), and [WIC image format native metadata queries](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [
-            **SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)는 요청된 속성 중 하나가 인코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패합니다.
+-   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) will fail with the error code 0x88982F41 if one of the requested properties is not supported by the image associated with the encoder.
 
-## 관련 항목
+## Related topics
 
-* [이미징](imaging.md)
- 
+* [Imaging](imaging.md)
+ 
 
- 
-
+ 
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

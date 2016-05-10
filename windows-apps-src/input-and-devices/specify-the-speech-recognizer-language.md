@@ -1,50 +1,50 @@
 ---
-Description: 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
-title: 음성 인식기 언어 지정
+author: Karl-Bridge-Microsoft
+Description: Learn how to select an installed language to use for speech recognition.
+title: Specify the speech recognizer language
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
-label: 음성 인식기 언어 지정
+label: Specify the speech recognizer language
 template: detail.hbs
 ---
 
-# 음성 인식기 언어 지정
+# Specify the speech recognizer language
 
 
-음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+Learn how to select an installed language to use for speech recognition.
 
 
-**중요 API**
+
+
+**Important APIs**
 
 -   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)
 -   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)
--   [**언어**](https://msdn.microsoft.com/library/windows/apps/br206804)
+-   [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)
 
 
-여기에서는 시스템에 설치된 언어를 열거하고 기본 언어를 확인하고 인식에 다른 언어를 선택합니다.
+Here, we enumerate the languages installed on a system, identify which is the default language, and select a different language for recognition.
 
-**필수 조건: **
+**Prerequisites:  **
 
-이 항목은 [음성 인식](speech-recognition.md)을 기반으로 합니다.
+This topic builds on [Speech recognition](speech-recognition.md).
 
-음성 인식 및 인식 제약 조건에 대한 기본적인 지식이 있어야 합니다.
+You should have a basic understanding of speech recognition and recognition constraints.
 
-UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항목을 검토하여 여기서 설명하는 기술에 대해 알아보세요.
+If you're new to developing Universal Windows Platform (UWP) apps, have a look through these topics to get familiar with the technologies discussed here.
 
--   [첫 번째 앱 만들기](https://msdn.microsoft.com/library/windows/apps/bg124288)
--   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
+-   [Create your first app](https://msdn.microsoft.com/library/windows/apps/bg124288)
+-   Learn about events with [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584)
 
-**사용자 환경 지침: **
+**User experience guidelines:  **
 
-유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
+For helpful tips about designing a useful and engaging speech-enabled app, see [Speech design guidelines](https://msdn.microsoft.com/library/windows/apps/dn596121) .
 
-## <span id="Identify_the_default_language"> </span> <span id="identify_the_default_language"> </span> <span id="IDENTIFY_THE_DEFAULT_LANGUAGE"> </span>기본 언어 확인
+## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>Identify the default language
 
 
-음성 인식기는 해당 기본 인식 언어로 시스템 음성 언어를 사용합니다. 이 언어는 사용자가 디바이스 Settings &gt; System &gt; Speech &gt; Speech Language 화면에서 설정합니다.
+A speech recognizer uses the system speech language as its default recognition language. This language is set by the user on the device Settings &gt; System &gt; Speech &gt; Speech Language screen.
 
-[
-            **SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
+We identify the default language by checking the [**SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) static property.
 
 ```CSharp
 var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
@@ -53,30 +53,27 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## <span id="Confirm_an_installed_language"> </span> <span id="confirm_an_installed_language"> </span> <span id="CONFIRM_AN_INSTALLED_LANGUAGE"> </span>설치된 언어 확인
+## <span id="Confirm_an_installed_language"></span><span id="confirm_an_installed_language"></span><span id="CONFIRM_AN_INSTALLED_LANGUAGE"></span>Confirm an installed language
 
 
-설치된 언어는 디바이스마다 다를 수 있습니다. 특정 제약 조건 때문에 특정 언어에 의존하는 경우 해당 언어가 있는지 확인해야 합니다.
+Installed languages can vary between devices. You should verify the existence of a language if you depend on it for a particular constraint.
 
-**참고** 새 언어 팩을 설치한 후에는 다시 부팅해야 합니다. 지정된 언어가 지원되지 않거나 설치가 완료되지 않은 경우 오류 코드 SPERR\_NOT\_FOUND(0x8004503a)의 예외가 발생합니다.
+**Note**  A reboot is required after a new language pack is installed. An exception with error code SPERR\_NOT\_FOUND (0x8004503a) is raised if the specified language is not supported or has not finished installing.
 
- 
+ 
 
-[
-            **SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 디바이스에서 지원되는 언어를 확인합니다.
+Determine the supported languages on a device by checking one of two static properties of the [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) class:
 
--   [
-            **SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251) - 미리 정의된 받아쓰기 및 웹 검색 문법에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251)—The collection of [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) objects used with predefined dictation and web search grammars.
 
--   [
-            **SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - 목록 제약 조건 또는 SRGS(Speech Recognition Grammar Specification) 파일에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250)—The collection of [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) objects used with a list constraint or a Speech Recognition Grammar Specification (SRGS) file.
 
-## <span id="Specify_a_language"> </span> <span id="specify_a_language"> </span> <span id="SPECIFY_A_LANGUAGE"> </span>언어 지정
+## <span id="Specify_a_language"></span><span id="specify_a_language"></span><span id="SPECIFY_A_LANGUAGE"></span>Specify a language
 
 
-언어를 지정하려면 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 생성자의 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체를 전달합니다.
+To specify a language, pass a [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) object in the [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) constructor.
 
-여기에서는 인식 언어로 "en-US"를 지정합니다.
+Here, we specify "en-US" as the recognition language.
 
 <span codelanguage="CSharp"></span>
 ```CSharp
@@ -94,33 +91,28 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## <span id="Remarks"> </span> <span id="remarks"> </span> <span id="REMARKS"> </span>설명
+## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Remarks
 
 
-항목 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성할 수 있습니다. 인식기가 지원되는 항목 언어와 함께 초기화되지 않은 경우 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)가 반환됩니다.
+A topic constraint can be configured by adding a [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) to the [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) collection of the [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) and then calling [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). A [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) of **TopicLanguageNotSupported** is returned if the recognizer is not initialized with a supported topic language.
 
-목록 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성합니다. 사용자 지정 목록의 언어를 직접 지정할 수 없습니다. 대신 목록은 인식기의 언어를 사용하여 처리됩니다.
+A list constraint is configured by adding a [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) to the [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) collection of the [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) and then calling [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240). You cannot specify the language of a custom list directly. Instead, the list will be processed using the language of the recognizer.
 
-SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. 인식기가 SRGS 태그와 동일한 언어로 초기화되지 않은 경우 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)는 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)로 실패합니다.
+An SRGS grammar is an open-standard XML format represented by the [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) class. Unlike custom lists, you can specify the language of the grammar in the SRGS markup. [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) fails with a [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433) of **TopicLanguageNotSupported** if the recognizer is not initialized to the same language as the SRGS markup.
 
-## <span id="related_topics"> </span>관련 문서
-
-
-**개발자**
-* [음성 조작](speech-interactions.md)
-**디자이너**
-* [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
-**샘플**
-* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
-
- 
+## <span id="related_topics"></span>Related articles
 
 
+**Developers**
+* [Speech interactions](speech-interactions.md)
+**Designers**
+* [Speech design guidelines](https://msdn.microsoft.com/library/windows/apps/dn596121)
+**Samples**
+* [Speech recognition and speech synthesis sample](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+ 
+
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

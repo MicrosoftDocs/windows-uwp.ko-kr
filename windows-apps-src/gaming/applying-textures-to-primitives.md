@@ -1,33 +1,34 @@
 ---
-title: 기본 요소에 텍스처 적용
-description: 여기에서는 원형에 깊이 및 효과 사용에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다.
+author: mtoepke
+title: Apply textures to primitives
+description: Here, we load raw texture data and apply that data to a 3D primitive by using the cube that we created in Using depth and effects on primitives.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ---
 
-# 기본 요소에 텍스처 적용
+# Apply textures to primitives
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-여기에서는 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다. 또한 광원과의 거리 및 각도에 따라 큐브 표면이 더 밝거나 더 어두워지는 간단한 닷(dot) 제품 조명 모델을 소개합니다.
+Here, we load raw texture data and apply that data to a 3D primitive by using the cube that we created in [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). We also introduce a simple dot-product lighting model, where the cube surfaces are lighter or darker based on their distance and angle relative to a light source.
 
-**목표:** 원형에 텍스처를 적용합니다.
+**Objective:** To apply textures to primitives.
 
-## 필수 조건
+## Prerequisites
 
 
-사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
+We assume that you are familiar with C++. You also need basic experience with graphics programming concepts.
 
-또한 사용자가 [빠른 시작: DirectX 리소스 설정 및 이미지 표시](setting-up-directx-resources.md), [셰이더 및 그리기 원형 만들기](creating-shaders-and-drawing-primitives.md) 및 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)을 완료했다고 가정합니다.
+We also assume that you went through [Quickstart: setting up DirectX resources and displaying an image](setting-up-directx-resources.md), [Creating shaders and drawing primitives](creating-shaders-and-drawing-primitives.md), and [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
-**완료 시간:** 20분입니다.
+**Time to complete:** 20 minutes.
 
-지침
+Instructions
 ------------
 
-### 1. 텍스처 처리된 큐브용 변수 정의
+### 1. Defining variables for a textured cube
 
-먼저 텍스처 처리된 큐브에 대해 **BasicVertex** 및 **ConstantBuffer** 구조를 정의해야 합니다. 이러한 구조는 큐브에 대한 꼭짓점 위치, 방향 및 텍스처를 지정하고 큐브를 보는 방법도 지정합니다. 그렇지 않으면 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서와 유사한 변수를 선언합니다.
+First, we need to define the **BasicVertex** and **ConstantBuffer** structures for the textured cube. These structures specify the vertex positions, orientations, and textures for the cube and how the cube will be viewed. Otherwise, we declare variables similarly to the previous tutorial, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
 ```cpp
 struct BasicVertex
@@ -58,21 +59,20 @@ private:
     ConstantBuffer m_constantBufferData;
 ```
 
-### 2. 표면 및 텍스처 요소와 함께 꼭짓점 및 픽셀 셰이더 만들기
+### 2. Creating vertex and pixel shaders with surface and texture elements
 
-여기에서는 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서보다 좀 더 복잡한 꼭짓점 및 픽셀 셰이더를 만듭니다. 이 앱의 꼭짓점 셰이더는 각 꼭짓점 위치를 투영 공간으로 변환하고 꼭짓점 텍스처 좌표를 픽셀 셰이더에 전달합니다.
+Here, we create more complex vertex and pixel shaders than in the previous tutorial, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md). This app's vertex shader transforms each vertex position into projection space and passes the vertex texture coordinate through to the pixel shader.
 
-꼭짓점 셰이더 코드의 레이아웃을 설명하는 [**D3D11_INPUT_ELEMENT_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조의 앱 배열에는 세 개의 레이아웃 요소가 있습니다. 첫 번째 요소는 꼭짓점 위치를 정의하고, 두 번째 요소는 표면 일반 꼭짓점(표면이 일반적으로 향하는 방향)을 정의하고, 세 번째 요소는 텍스처 좌표를 정의합니다.
+The app's array of [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) structures that describe the layout of the vertex shader code has three layout elements: one element defines the vertex position, another element defines the surface normal vector (the direction that the surface normally faces), and the third element defines the texture coordinates.
 
-선회하는 텍스처 처리된 큐브를 정의하는 꼭짓점, 인덱스 및 상수 버퍼를 만듭니다.
+We create vertex, index, and constant buffers that define an orbiting textured cube.
 
-**선회하는 텍스처 처리된 큐브를 정의하려면**
+**To define an orbiting textured cube**
 
-1.  먼저 큐브를 정의합니다. 각 꼭짓점에 위치, 표면 일반 벡터 및 텍스처 좌표를 할당합니다. 각 면에 대해 서로 다른 일반 벡터 및 텍스처 좌표가 정의될 수 있도록 각 모서리에 여러 꼭짓점을 사용합니다.
-2.  그런 다음 큐브 정의를 사용해 꼭짓점 및 인덱스 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220))를 설명합니다. 각 버퍼에 대해 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 한 번 호출합니다.
-3.  이제 꼭짓점 셰이더에 모델, 보기 및 투영 행렬을 전달하기 위해 상수 버퍼([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092))를 만듭니다. 나중에 상수 버퍼를 사용하여 큐브를 회전하고 큐브에 원근 투영을 적용할 수 있습니다. [
-            **ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 상수 버퍼를 만듭니다.
-4.  마지막으로 X = 0, Y = 1, Z = 2의 카메라 위치에 해당하는 보기 변환을 지정합니다.
+1.  First, we define the cube. Each vertex is assigned a position, a surface normal vector, and texture coordinates. We use multiple vertices for each corner to allow different normal vectors and texture coordinates to be defined for each face.
+2.  Next, we describe the vertex and index buffers ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) and [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)) using the cube definition. We call [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) once for each buffer.
+3.  Next, we create a constant buffer ([**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)) for passing model, view, and projection matrices to the vertex shader. We can later use the constant buffer to rotate the cube and apply a perspective projection to it. We call [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) to create the constant buffer.
+4.  Finally, we specify the view transform that corresponds to a camera position of X = 0, Y = 1, Z = 2.
 
 ```cpp
         
@@ -263,20 +263,20 @@ private:
        });
 ```
 
-### 3. 텍스처 및 샘플러 만들기
+### 3. Creating textures and samplers
 
-여기에서는 이전 자습서인 [원형에 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)에서와 마찬가지로 색을 적용하기보다는 큐브에 텍스처 데이터를 적용합니다.
+Here, we apply texture data to a cube rather than applying colors as in the previous tutorial, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).
 
-원시 텍스처 데이터를 사용해 텍스처를 만듭니다.
+We use raw texture data to create textures.
 
-**텍스처 및 샘플러를 만들려면**
+**To create textures and samplers**
 
-1.  먼저 디스크의 texturedata.bin 파일에서 원시 텍스처 데이터를 읽습니다.
-2.  해당 원시 텍스처 데이터를 참조하는 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조를 구성합니다.
-3.  텍스처를 설명하기 위해 [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) 구조를 채웁니다. 호출의 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 및 **D3D11\_TEXTURE2D\_DESC** 구조를 [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521)에 전달하여 텍스처를 만듭니다.
-4.  셰이더가 텍스처를 사용할 수 있도록 텍스처의 셰이더-리소스 보기를 만듭니다. 셰이더-리소스 보기를 만들기 위해 [**D3D11\_SHADER\_RESOURCE\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476211)를 채워 셰이더-리소스 보기를 설명하고, 셰이더-리소스 보기 설명 및 텍스처를 [**ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519)에 전달합니다. 일반적으로 보기 설명을 텍스처 설명과 같게 합니다.
-5.  텍스처의 샘플러 상태를 만듭니다. 이 샘플러 상태는 관련 텍스처 데이터를 사용해 특정 텍스처 좌표에 대해 색을 결정하는 방법을 정의합니다. 샘플러 상태를 설명하기 위해 [**D3D11\_SAMPLER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476207) 구조를 채웁니다. 호출의 **D3D11\_SAMPLER\_DESC** 구조를 [**ID3D11Device::CreateSamplerState**](https://msdn.microsoft.com/library/windows/desktop/ff476518)에 전달하여 샘플러 상태를 만듭니다.
-6.  마지막으로 모든 프레임을 회전하여 큐브 애니메이션을 만드는 데 사용할 *degree* 변수를 선언합니다.
+1.  First, we read raw texture data from the texturedata.bin file on disk.
+2.  Next, we construct a [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) structure that references that raw texture data.
+3.  Then, we populate a [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) structure to describe the texture. We then pass the [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) and **D3D11\_TEXTURE2D\_DESC** structures in a call to [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) to create the texture.
+4.  Next, we create a shader-resource view of the texture so shaders can use the texture. To create the shader-resource view, we populate a [**D3D11\_SHADER\_RESOURCE\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476211) to describe the shader-resource view and pass the shader-resource view description and the texture to [**ID3D11Device::CreateShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476519). In general, you match the view description with the texture description.
+5.  Next, we create sampler state for the texture. This sampler state uses the relevant texture data to define how the color for a particular texture coordinate is determined. We populate a [**D3D11\_SAMPLER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476207) structure to describe the sampler state. We then pass the **D3D11\_SAMPLER\_DESC** structure in a call to [**ID3D11Device::CreateSamplerState**](https://msdn.microsoft.com/library/windows/desktop/ff476518) to create the sampler state.
+6.  Finally, we declare a *degree* variable that we will use to animate the cube by rotating it every frame.
 
 ```cpp
         
@@ -387,33 +387,24 @@ private:
         float degree = 0.0f;
 ```
 
-### 4. 텍스처 처리된 큐브를 회전하고 그리기 및 렌더링된 이미지 표시
+### 4. Rotating and drawing the textured cube and presenting the rendered image
 
-이전 자습서에서와 마찬가지로 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. 회전 양과 함께 **rotationY** 인라인 함수(BasicMath.h)를 호출하여 Y축을 중심으로 큐브의 모델 행렬을 회전할 값을 설정합니다. [
-            **ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486)를 호출하여 상수 버퍼를 업데이트하고 큐브 모델을 회전합니다. [
-            **ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상 및 깊이-스텐실 보기를 지정합니다. [
-            **ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지우고 [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387)를 호출하여 깊이 버퍼를 지웁니다.
+As in the previous tutorials, we enter an endless loop to continually render and display the scene. We call the **rotationY** inline function (BasicMath.h) with a rotation amount to set values that will rotate the cube’s model matrix around the Y axis. We then call [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486) to update the constant buffer and rotate the cube model. Next, we call [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) to specify the render target and the depth-stencil view. We call [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388) to clear the render target to a solid blue color and call [**ID3D11DeviceContext::ClearDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476387) to clear the depth buffer.
 
-무한 루프에서, 파란색 표면에 텍스처 처리된 큐브도 그립니다.
+In the endless loop, we also draw the textured cube on the blue surface.
 
-**텍스처 처리된 큐브를 그리려면**
+**To draw the textured cube**
 
-1.  먼저 [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)을 호출하여 꼭짓점 버퍼 데이터를 입력-어셈블러 단계로 스트리밍하는 방법을 설명합니다.
-2.  [
-            **ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) 및 [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)를 호출하여 꼭짓점 및 인덱스 버퍼를 입력-어셈블러 단계로 바인딩합니다.
-3.  [
-            **ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)를 [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) 값과 함께 호출하여, 꼭짓점 데이터를 삼각형 스트립으로 해석할 입력-어셈블러 단계를 지정합니다.
-4.  [
-            **ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)를 호출하여 꼭짓점 셰이더 단계를 꼭짓점 셰이더 코드로 초기화하고, [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)를 호출하여 픽셀 셰이더 단계를 픽셀 셰이더 코드로 초기화합니다.
-5.  [
-            **ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491)를 호출하여 꼭짓점 셰이더 파이프라인 단계에서 사용되는 상수 버퍼를 설정합니다.
-6.  [
-            **PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473)를 호출하여 텍스처의 셰이더-리소스 보기를 픽셀 셰이더 파이프라인 단계로 바인딩합니다.
-7.  [
-            **PSSetSamplers**](https://msdn.microsoft.com/library/windows/desktop/ff476471)를 호출하여 샘플러 상태를 픽셀 셰이더 파이프라인 단계로 바인딩합니다.
-8.  마지막으로 [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)를 호출하여 큐브를 그린 후 렌더링 파이프라인에 제출합니다.
+1.  First, we call [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) to describe how vertex buffer data is streamed into the input-assembler stage.
+2.  Next, we call [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) and [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) to bind the vertex and index buffers to the input-assembler stage.
+3.  Next, we call [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) with the [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP) value to specify for the input-assembler stage to interpret the vertex data as a triangle strip.
+4.  Next, we call [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) to initialize the vertex shader stage with the vertex shader code and [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) to initialize the pixel shader stage with the pixel shader code.
+5.  Next, we call [**ID3D11DeviceContext::VSSetConstantBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476491) to set the constant buffer that is used by the vertex shader pipeline stage.
+6.  Next, we call [**PSSetShaderResources**](https://msdn.microsoft.com/library/windows/desktop/ff476473) to bind the shader-resource view of the texture to the pixel shader pipeline stage.
+7.  Next, we call [**PSSetSamplers**](https://msdn.microsoft.com/library/windows/desktop/ff476471) to set the sampler state to the pixel shader pipeline stage.
+8.  Finally, we call [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) to draw the cube and submit it to the rendering pipeline.
 
-이전 자습서에서와 마찬가지로 [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)를 호출하여, 렌더링된 이미지를 창에 표시합니다.
+As in the previous tutorials, we call [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) to present the rendered image to the window.
 
 ```cpp
             // Update the constant buffer to rotate the cube model.
@@ -517,20 +508,15 @@ private:
                 );
 ```
 
-## 요약
+## Summary
 
 
-원시 텍스처 데이터를 로드하여 3D 원형에 적용했습니다.
+We loaded raw texture data and applied that data to a 3D primitive.
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

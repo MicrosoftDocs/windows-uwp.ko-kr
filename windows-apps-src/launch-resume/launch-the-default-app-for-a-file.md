@@ -1,49 +1,49 @@
 ---
-title: 파일에 대한 기본 앱 시작
-description: 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다.
+author: mcleblanc
+title: Launch the default app for a file
+description: Learn how to launch the default app for a file.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ---
 
-# 파일에 대한 기본 앱 시작
+# Launch the default app for a file
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**중요 API**
+**Important APIs**
 
 -   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
-파일에 대한 기본 앱 시작 방법을 학습합니다. 앱에서 처리할 수 없는 파일로 작업해야 하는 경우가 많습니다. 예를 들어 메일 앱은 다양한 파일 형식을 받게 되므로 기본 처리기에서 이러한 파일을 시작하는 방법이 필요합니다. 다음 단계에서는 [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) API를 사용하여 앱에서 처리할 수 없는 파일의 기본 처리기를 시작하는 방법을 보여 줍니다.
+Learn how to launch the default app for a file. Many apps need to work with files that they can't handle themselves. For example, e-mail apps receive a variety of file types and need a way to launch these files in their default handlers. These steps show how to use the [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) API to launch the default handler for a file that your app can't handle itself.
 
-## 파일 개체 가져오기
-
-
-먼저 파일에 대한 [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 가져옵니다.
-
-파일이 앱 패키지에 포함되어 있는 경우 [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) 속성을 사용하여 [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 가져오고 [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) 메서드를 사용하여 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 가져옵니다.
-
-알려진 폴더에 파일이 있으면 [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) 클래스의 속성을 사용하여 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 가져오고 [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) 메서드를 사용하여 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 가져옵니다.
-
-## 파일 시작
+## Get the file object
 
 
-Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 옵션을 제공합니다. 이러한 옵션은 이 장과 다음 섹션에서 설명합니다.
+First, get a [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object for the file.
 
-| 옵션 | 메서드 | 설명 |
+If the file is included in the package for your app, you can use the [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) property to get a [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) object and the [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to get the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.
+
+If the file is in a known folder, you can use the properties of the [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) class to get a [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) and the [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to get the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.
+
+## Launch the file
+
+
+Windows provides several different options for launching the default handler for a file. These options are described in this chart and in the sections that follow.
+
+| Option | Method | Description |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 기본 시작 | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. |
-| 연결 프로그램 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
-| 권장 앱 폴백으로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
-| 원하는 유지 보기로 시작 | [
-            **LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)(Windows만 해당) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. |
+| Default launch | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Launch the specified file with the default handler. |
+| Open With launch | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Launch the specified file letting the user pick the handler through the Open With dialog. |
+| Launch with a recommended app fallback | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Launch the specified file with the default handler. If no handler is installed on the system, recommend an app in the store to the user. |
+| Launch with a desired remaining view | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows-only) | Launch the specified file with the default handler. Specify a preference to stay on screen after the launch and request a specific window size. |
 |  |  |  |
-|  |  | **모바일 디바이스 패밀리: **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
+|  |  | **Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) isn't supported on the mobile device family. |
 
- 
-### 기본 시작
+ 
+### Default launch
 
-기본 앱을 시작하려면 [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) 메서드를 호출합니다. 이 예제에서는 [**Windows.Storage.StorageFolder.getFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) 메서드를 사용하여 앱 패키지에 포함된 이미지 파일 test.png를 시작합니다.
+Call the [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) method to launch the default app. This example uses the [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to launch an image file, test.png, that is included in the app package.
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -127,14 +127,13 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > }
 > ```
 
-### 연결 프로그램 시작
+### Open With launch
 
-[
-            **LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438)가 **true**로 설정된 [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) 메서드를 호출하여 **연결 프로그램** 대화 상자에서 사용자가 선택하는 앱을 시작합니다.
+Call the [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) method with [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) set to **true** to launch the app that the user selects from the **Open With** dialog box.
 
-사용자가 특정 파일에 대한 기본 앱이 아닌 다른 앱을 선택하려 할 경우 **연결 프로그램** 대화 상자를 사용하는 것이 좋습니다. 예를 들어 앱에서 사용자가 이미지 파일을 시작하도록 하려는 경우 기본 처리기는 뷰어 앱이 될 수 있습니다. 경우에 따라 사용자는 이미지를 보는 대신 편집하려 할 수 있습니다. 이러한 유형의 시나리오에서 사용자가 **연결 프로그램** 대화 상자를 표시하고 편집기 앱을 선택할 수 있도록 **앱 바** 또는 상황에 맞는 메뉴의 대체 명령과 함께 **연결 프로그램** 옵션을 사용합니다.
+We recommend that you use the **Open With** dialog box when the user may want to select an app other than the default for a particular file. For example, if your app allows the user to launch an image file, the default handler will likely be a viewer app. In some cases, the user may want to edit the image instead of viewing it. Use the **Open With** option along with an alternative command in the **AppBar** or in a context menu to let the user bring up the **Open With** dialog and select the editor app in these types of scenarios.
 
-![.png 파일 실행을 위한 연결 대화 상자. 대화 상자에는 사용자 선택 항목을 모든 .png 파일에 사용할지 또는 이 .png 파일 하나에만 사용할지를 지정하는 확인란이 있습니다. 또한 대화 상자에는 파일을 실행하는 네 가지 앱 옵션과 '기타 옵션' 링크가 있습니다.](images/checkboxopenwithdialog.png)
+![the open with dialog for a .png file launch. the dialog contains a checkbox which specifies if the user’s choice should be used for all .png files or just this one .png file. the dialog contains four app options for launching the file and a ‘more options’ link.](images/checkboxopenwithdialog.png)
 
 > [!div class="tabbedCodeSnippets"]
 > ```vb
@@ -230,13 +229,13 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > }
 > ```
 
-**권장 앱 폴백으로 시작**
+**Launch with a recommended app fallback**
 
-경우에 따라 사용자는 시작할 파일을 처리하는 앱을 설치하지 않으려 할 수 있습니다. 기본적으로 Windows는 이러한 경우 사용자에게 스토어에서 적절한 앱을 검색할 수 있는 링크를 제공합니다. 이러한 경우 사용자에게 필요한 앱에 대한 특정 권장 지침을 제공하려면 시작할 파일과 함께 이 권장 지침을 전달할 수 있습니다. 이렇게 하려면 [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)을 스토어에서 권장하려는 앱의 패키지 패밀리 이름으로 설정하여 [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) 메서드를 호출합니다. 그런 다음 [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481)을 해당 앱의 이름으로 설정합니다. Windows에서는 이 정보를 사용하여 스토어에서 앱을 검색하는 일반적인 옵션을 스토어에서 권장 앱을 다운로드하는 특정 옵션으로 바꿉니다.
+In some cases the user may not have an app installed to handle the file that you are launching. By default, Windows will handle these cases by providing the user with a link to search for an appropriate app on the store. If you would like to give the user a specific recommendation for which app to acquire in this scenario, you may do so by passing that recommendation along with the file that you are launching. To do this, call the [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) method with [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) set to the package family name of the app in the Store that you want to recommend. Then, set the [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) to the name of that app. Windows will use this information to replace the general option to search for an app in the store with a specific option to acquire the recommended app from the Store.
 
-> **참고** 앱을 권장하려면 이러한 옵션을 둘 다 설정해야 합니다. 하나만 설정하면 오류가 발생합니다.
+> **Note**  You must set both of these options to recommend an app. Setting one without the other will result in a failure.
 
-![.contoso 파일 실행을 위한 연결 대화 상자. .contoso는 컴퓨터에 설치된 처리기가 없으므로 대화 상자에 스토어 아이콘과 사용자에게 스토어의 올바른 처리기를 안내하는 텍스트가 포함된 옵션이 있습니다. 또한 대화 상자에는 '기타 옵션' 링크가 있습니다.](images/howdoyouwanttoopen.png)
+![the open with dialog for a .contoso file launch. since .contoso does not have a handler installed on the machine the dialog contains an option with the store icon and text which points the user to the correct handler on the store. the dialog also contains a ‘more options’ link'.](images/howdoyouwanttoopen.png)
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -342,15 +341,13 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > }
 > ```
 
-### 원하는 유지 보기로 시작(Windows만 해당)
+### Launch with a Desired Remaining View (Windows-only)
 
-[
-            **LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)를 호출하는 원본 앱은 파일이 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 파일을 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 파일이 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
+Source apps that call [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) can request that they remain on screen after a file launch. By default, Windows attempts to share all available space equally between the source app and the target app that handles the file. Source apps can use the [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) property to indicate to the operating system that they prefer their app window to take up more or less of the available space. **DesiredRemainingView** can also be used to indicate that the source app does not need to remain on screen after the file launch and can be completely replaced by the target app. This property only specifies the preferred window size of the calling app. It doesn't specify the behavior of other apps that may happen to also be on screen at the same time.
 
-> **참고** Windows는 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. [
-            **DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+> **Note**  Windows takes into account multiple different factors when it determines the source app's final window size, for example, the preference of the source app, the number of apps on screen, the screen orientation, and so on. By setting [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), you aren't guaranteed a specific windowing behavior for the source app.
 
-**모바일 디바이스 패밀리: **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다.
+**Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) isn't supported on the mobile device family.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -420,44 +417,39 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > }
 > ```
 
-## 설명
+## Remarks
 
-실행된 앱은 앱에서 선택할 수 없으므로 사용자가 어떤 앱이 실행되고 있는지 확인합니다. 사용자는 UWP(유니버설 Windows 플랫폼) 앱 또는 CWP(클래식 Windows 플랫폼) 앱을 선택할 수 있습니다.
+Your app can't select the app that is launched. The user determines which app is launched. The user can select either a Universal Windows Platform (UWP) app or a Classic Windows Platform (CWP) app.
 
-파일을 시작하면 앱은 포그라운드 앱이 되어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 파일 실행을 앱의 UI에 직접 연결해야 합니다. 대부분의 경우, 사용자는 항상 파일 실행을 시작하기 위해 일부 작업을 수행해야 합니다.
+When launching a file, your app must be the foreground app, that is, it must be visible to the user. This requirement helps ensure that the user remains in control. To meet this requirement, make sure that you tie all file launches directly to the UI of your app. Most likely, the user must always take some action to initiate a file launch.
 
-운영 체제에 의해 자동으로 실행되는 경우 코드 또는 스크립트가 포함된 파일 형식은 시작할 수 없습니다(예: .exe, .msi 및 .js 파일). 이 제한 사항은 운영 체제를 수정할 수 있는 잠재적 악성 파일로부터 사용자를 보호합니다. 이 방법을 사용하면 스크립트를 격리하는 앱에서 실행되는 경우 스크립트가 포함될 수 있는 파일 형식을 시작할 수 있습니다(예: .docx 파일). Microsoft Word와 같은 앱은 .docx 파일의 스크립트가 운영 체제를 수정하는 것을 방지합니다.
+You can't launch file types that contain code or script if they are executed automatically by the operating system, such as, .exe, .msi, and .js files. This restriction protects users from potentially malicious files that could modify the operating system. You can use this method to launch file types that can contain script if they are executed by an app that isolates the script, such as, .docx files. Apps like Microsoft Word keep the script in .docx files from modifying the operating system.
 
-제한된 파일 형식을 실행하려고 하면 실행이 실패하고 오류 콜백이 호출됩니다. 앱이 서로 다른 유형의 파일을 처리하는 경우 이러한 오류 발생이 예상되면 사용자에게 대체 환경을 제공하는 것이 좋습니다. 예를 들어, 사용자에게 파일을 바탕 화면에 저장하는 옵션을 줄 수 있고 사용자는 바탕 화면에서 파일을 열 수 있습니다.
+If you try to launch a restricted file type, the launch will fail and your error callback will be invoked. If your app handles many different types of files and you expect that you will hit this error, we recommend that you provide a fallback experience to your user. For example, you could give the user an option to save the file to the desktop, and they could open it there.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
-## 관련 항목
+ 
+## Related topics
 
 
-**작업**
+**Tasks**
 
-* [URI에 대한 기본 앱 실행](launch-default-app.md)
-* [파일 활성화 처리](handle-file-activation.md)
+* [Launch the default app for a URI](launch-default-app.md)
+* [Handle file activation](handle-file-activation.md)
 
-**지침**
+**Guidelines**
 
-* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Guidelines for file types and URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**참조**
+**Reference**
 
 * [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
 * [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
- 
+ 
 
- 
+ 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

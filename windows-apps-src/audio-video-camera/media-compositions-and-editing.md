@@ -1,166 +1,150 @@
 ---
+author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다.
-title: 미디어 컴퍼지션 및 편집
+description: The APIs in the Windows.Media.Editing namespace allow you to quickly develop apps that enable the users to create media compositions from audio and video source files.
+title: Media compositions and editing
 ---
 
-# 미디어 컴퍼지션 및 편집
+# Media compositions and editing
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[
-            **Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다. 이 프레임워크의 기능에는 여러 비디오 클립을 프로그래밍 방식으로 함께 추가하는 기능과 비디오 및 이미지 오버레이 추가, 백그라운드 오디오 추가, 오디오 효과와 비디오 효과 적용 등의 기능이 포함됩니다. 생성된 미디어 컴퍼지션은 재생 또는 공유를 위한 플랫 미디어 파일로 렌더링할 수 있습니다. 그러나 컴퍼지션을 디스크로 직렬화하거나 디스크에서 역직렬화함으로써 사용자가 이전에 만든 컴퍼지션을 로드하고 수정할 수 있게 할 수도 있습니다. 이 모든 기능은 낮은 수준의 [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197) API와 비교해 볼 때 이러한 작업을 수행하는 데 필요한 코드의 양과 복잡성이 상당히 줄어드는 편리한 Windows 런타임 인터페이스에서 제공됩니다.
+This article shows you how to use the APIs in the [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) namespace to quickly develop apps that enable the users to create media compositions from audio and video source files. Features of the framework include the ability to programmatically append multiple video clips together, add video and image overlays, add background audio, and apply both audio and video effects. Once created, media compositions can be rendered into a flat media file for playback or sharing, but compositions can also be serialized to and deserialized from disk, allowing the user to load and modify compositions that they have previously created. All of this functionality is provided in an easy-to-use Windows Runtime interface that dramatically reduces the amount and complexity of code required to perform these tasks when compared to the low-level [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API.
 
-## 새 미디어 컴퍼지션 만들기
+## Create a new media composition
 
-[
-            **MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) 클래스는 컴퍼지션을 구성하는 모든 미디어 클립이 들어 있는 컨테이너로서, 최종 컴퍼지션을 렌더링하여 컴퍼지션을 디스크에 로드 및 저장하고 사용자가 UI에서 볼 수 있도록 컴퍼지션의 미리 보기 스트림을 제공합니다. 앱에 **MediaComposition**을 사용하려면 [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 네임스페이스뿐만 아니라 필요한 관련 API를 제공하는 [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) 네임스페이스도 포함합니다.
+The [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) class is the container for all of the media clips that make up the composition and is responsible for rendering the final composition, loading and saving compositions to disc, and providing a preview stream of the composition so that the user can view it in the UI. To use **MediaComposition** in your app, include the [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) namespace as well as the [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) namespace that provides related APIs that you will need.
 
 [!code-cs[Namespace1](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace1)]
 
-**MediaComposition** 개체는 코드의 다양한 지점에서 액세스하므로, 일반적으로 이 개체를 저장할 멤버 변수를 선언합니다.
+The **MediaComposition** object will be accessed from multiple points in your code, so typically you will declare a member variable in which to store it.
 
 [!code-cs[DeclareMediaComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
 
-**MediaComposition**에 대한 생성자에는 인수가 사용되지 않습니다.
+The constructor for **MediaComposition** takes no arguments.
 
 [!code-cs[MediaCompositionConstructor](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetMediaCompositionConstructor)]
 
-## 컴퍼지션에 미디어 클립 추가
+## Add media clips to a composition
 
-미디어 컴퍼지션에는 일반적으로 하나 이상의 비디오 클립이 포함됩니다. [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369)를 사용하면 사용자가 비디오 파일을 선택할 수 있게 만들 수 있습니다. 파일을 선택했으면 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출하여 비디오 클립을 포함할 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체를 만듭니다. 그런 다음, **MediaComposition** 개체의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 목록에 클립을 추가합니다.
+Media compositions typically contain one or more video clips. You can use a [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/hh738369) to allow the user to select a video file. Once the file has been selected, create a new [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) object to contain the video clip by calling [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607). Then you add the clip to the **MediaComposition** object's [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) list.
 
 [!code-cs[PickFileAndAddClip](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetPickFileAndAddClip)]
 
--   미디어 클립이 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 목록에 나타나는 것과 동일한 순서로 **MediaComposition**에 나타납니다.
+-   Media clips appear in the **MediaComposition** in the same order as they appear in [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) list.
 
--   **MediaClip**은 컴퍼지션에 한 번만 포함할 수 있습니다. 이미 컴퍼지션에서 사용 중인 **MediaClip**을 추가하려고 하면 오류가 발생합니다. 비디오 클립을 컴퍼지션에서 여러 번 다시 사용하려면 [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599)을 호출하여 컴퍼지션에 추가할 수 있는 새 **MediaClip** 개체를 만듭니다.
+-   A **MediaClip** can only be included in a composition once. Attempting to add a **MediaClip** that is already being used by the composition will result in an error. To reuse a video clip multiple times in a composition, call [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599) to create new **MediaClip** objects which can then be added to the composition.
 
--   유니버설 Windows 앱에는 전체 파일 시스템에 액세스할 수 있는 권한이 없습니다. [
-            **StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성은 앱이 사용자가 선택한 파일의 레코드를 저장할 수 있게 하여 이 파일에 대한 액세스 권한을 보유할 수 있습니다. **FutureAccessList**에 허용되는 항목 수는 최대 1000개이므로, 앱은 가득 차지 않도록 이 목록을 관리해야 합니다. 이 작업은 이전에 만든 컴퍼지션에 대한 로드 및 수정을 지원하려는 경우에 특히 중요합니다.
+-   Universal Windows apps do not have permission to access the entire file system. The [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) property of the [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) class allows your app to store a record of a file that has been selected by the user so that you can retain permissions to access the file. The **FutureAccessList** has a maxium of 1000 entries, so your app needs to manage the list to make sure it does not become full. This is especially important if you plan to support loading and modifying previously created compositions.
 
--   **MediaComposition**은 MP4 형식의 비디오 클립을 지원합니다.
+-   A **MediaComposition** supports video clips in MP4 format.
 
--   비디오 파일에 포함된 오디오 트랙이 여러 개 있는 경우 [**SelectedEmbeddedAudioTrackIndex**](https://msdn.microsoft.com/library/windows/apps/dn652627) 속성을 설정하여 컴퍼지션에 사용될 오디오 트랙을 선택할 수 있습니다.
+-   If a video file contains multiple embedded audio tracks, you can select which audio track is used in the composition by setting the [**SelectedEmbeddedAudioTrackIndex**](https://msdn.microsoft.com/library/windows/apps/dn652627) property.
 
--   [
-            **CreateFromColor**](https://msdn.microsoft.com/library/windows/apps/dn652605)를 호출하고 클립에 대해 색과 기간을 지정하여 단일 색으로 전체 프레임을 채운 **MediaClip**을 만듭니다.
+-   Create a **MediaClip** with a single color filling the entire frame by calling [**CreateFromColor**](https://msdn.microsoft.com/library/windows/apps/dn652605) and specifying a color and a duration for the clip.
 
--   [
-            **CreateFromImageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652610)를 호출하고 클립에 대해 이미지 파일과 기간을 지정하여 이미지 파일에서 **MediaClip**을 만듭니다.
+-   Create a **MediaClip** from an image file by calling [**CreateFromImageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652610) and specifying an image file and a duration for the clip.
 
--   [
-            **CreateFromSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505)를 호출하고 클립에서 화면과 기간을 지정하여 [**IDirect3DSurface**](https://msdn.microsoft.com/library/dn764774)에서 **MediaClip**을 만듭니다.
+-   Create a **MediaClip** from a [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) by calling [**CreateFromSurface**](https://msdn.microsoft.com/library/dn764774) and specifying a surface and a duration from the clip.
 
-## MediaElement에서 컴퍼지션 미리 보기
+## Preview the composition in a MediaElement
 
-사용자가 미디어 컴퍼지션을 볼 수 있게 하려면 UI를 정의하는 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 XAML 파일에 추가합니다.
+To enable the user to view the media composition, add a [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) to the XAML file that defines your UI.
 
 [!code-xml[MediaElement](./code/MediaEditing/cs/MainPage.xaml#SnippetMediaElement)]
 
-[
-            **MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) 형식의 멤버 변수를 선언합니다.
+Declare a member variable of type [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716).
 
 
 [!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
 
-**MediaComposition** 개체의 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) 메서드를 호출하여 컴퍼지션에 대한 **MediaStreamSource**를 만든 다음 **MediaElement**의 [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) 메서드를 호출합니다. 이제 이 컴퍼지션을 UI에서 볼 수 있습니다.
+Call the **MediaComposition** object's [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) method to create a **MediaStreamSource** for the composition and then call the [**SetMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn299029) method of the **MediaElement**. Now the composition can be viewed in the UI.
 
 
 [!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
 
--   [
-            **GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)를 호출하기 전에 **MediaComposition**에 하나 이상의 미디어 클립이 있어야 하며, 그렇지 않은 경우 반환되는 개체는 null입니다.
+-   The **MediaComposition** must contain at least one media clip before calling [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674), or the returned object will be null.
 
--   **MediaElement** 타임라인은 컴퍼지션의 변경 사항을 반영하도록 자동으로 업데이트되지 않습니다. 컴퍼지션에 일련의 변경을 수행하여 UI를 업데이트하려는 경우에는 그때마다 **GeneratePreviewMediaStreamSource**와 **SetMediaStreamSource**를 모두 호출하는 것이 좋습니다.
+-   The **MediaElement** timeline is not automatically updated to reflect changes in the composition. It is recommended that you call both **GeneratePreviewMediaStreamSource** and **SetMediaStreamSource** every time you make a set of changes to the composition and want to update the UI.
 
-사용자가 관련 리소스를 해제하기 위해 페이지에서 벗어나 이동할 때는 **MediaStreamSource** 개체 및 **MediaElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) 속성을 null로 설정하는 것이 좋습니다.
+It is recommended that you set the **MediaStreamSource** object and the [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) property of the **MediaElement** to null when the user navigates away from the page in order to release associated resources.
 
 [!code-cs[OnNavigatedFrom](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
 
-## 컴퍼지션을 비디오 파일로 렌더링
+## Render the composition to a video file
 
-미디어 컴퍼지션을 다른 디바이스에서 공유 및 볼 수 있도록 플랫 비디오 파일로 렌더링하려면 [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) 네임스페이스의 API를 사용해야 합니다. 비동기 작업의 진행률에 따라 UI를 업데이트하려면 [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383) 네임스페이스의 API도 필요합니다.
+To render a media composition to a flat video file so that it can be shared and viewed on other devices, you will need to use APIs from the [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) namespace. To update the UI on the progress of the async operation, you will also need APIs from the [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383) namespace.
 
 [!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
 
-사용자가 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)로 출력 파일을 선택할 수 있도록 허용하려면 **MediaComposition** 개체의 [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690)를 호출하여 컴퍼지션을 선택된 파일로 렌더링합니다. 다음 예제에 나온 코드의 나머지 부분은 단순히 [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807) 처리 패턴을 따릅니다.
+After allowing the user to select an output file with a [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871), render the composition to the selected file by calling the **MediaComposition** object's [**RenderToFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652690). The rest of the code in the following example simply follows the pattern of handling an [**AsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/desktop/br205807).
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
--   [
-            **MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561)를 사용하면 코드 변환 작업의 속도와 인접 미디어 클립 자르기의 정밀도 중 우선 순위를 지정할 수 있습니다. **Fast**를 사용하면 자르기 정밀도가 낮아지는 동시에 코드 변환 속도가 높아지며, **Precise**를 사용하면 자르기 정밀도가 높아지지만 코드 변환 속도는 떨어집니다.
+-   The [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) allows you to prioritize speed of the transcoding operation versus the precision of trimming of adjacent media clips. **Fast** causes transcoding to be faster with lower-precision trimming, **Precise** causes transcoding to be slower but with more precise trimming.
 
-## 비디오 클립 자르기
+## Trim a video clip
 
-[
-            **MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체 [**TrimTimeFromStart**](https://msdn.microsoft.com/library/windows/apps/dn652637) 속성이나 [**TrimTimeFromEnd**](https://msdn.microsoft.com/library/windows/apps/dn652634) 속성 또는 둘 다를 설정하여 컴퍼지션에서 비디오 클립의 지속 시간을 자릅니다.
+Trim the duration of a video clip in a composition by setting the [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) objects [**TrimTimeFromStart**](https://msdn.microsoft.com/library/windows/apps/dn652637) property, the [**TrimTimeFromEnd**](https://msdn.microsoft.com/library/windows/apps/dn652634) property, or both.
 
 [!code-cs[TrimClipBeforeCurrentPosition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetTrimClipBeforeCurrentPosition)]
 
--   원하는 임의의 UI를 사용하여 사용자가 트리밍 시작 값과 트리밍 종료 값을 지정할 수 있게 할 수 있습니다. 위의 예제에서는 **MediaElement**의 [**Position**](https://msdn.microsoft.com/library/windows/apps/br227407) 속성을 사용하여 먼저 컴퍼지션의 현재 위치에서 재생 중인 MediaClip을 확인합니다. 이때 [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) 및 [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618)을 확인하면 됩니다. 그런 다음, **Position** 및 **StartTimeInComposition** 속성을 다시 사용하여 클립의 시작 부분 이후 자를 시간의 양을 계산합니다. **FirstOrDefault** 메서드는 목록에서 항목을 선택하기 위한 코드를 간소화하는 **System.Linq** 네임스페이스의 확장 메서드입니다.
--   **MediaClip** 개체의 [**OriginalDuration**](https://msdn.microsoft.com/library/windows/apps/dn652625) 속성은 클리핑을 적용하지 않고도 미디어 클립의 지속 시간을 알 수 있게 합니다.
--   [
-            **TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631) 속성을 통해 자르기를 적용한 후의 미디어 클립 지속 시간을 알 수 있습니다.
--   클립의 원래 지속 시간보다 큰 자르기 값을 지정해도 오류가 발생하지 않습니다. 그러나 컴퍼지션에 단일 클립만이 있고 큰 자르기 값을 지정하여 이 클립이 길이 0으로 잘린 경우에는 후속 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) 호출에서 마치 컴퍼지션에 클립이 없는 것처럼 null이 반환됩니다.
+-   Your can use any UI that you want to let the user specify the start and end trim values. The example above uses the [**Position**](https://msdn.microsoft.com/library/windows/apps/br227407) property of the **MediaElement** to first determine which MediaClip is playing back at the current position in the composition by checking the [**StartTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652629) and [**EndTimeInComposition**](https://msdn.microsoft.com/library/windows/apps/dn652618). Then the **Position** and **StartTimeInComposition** properties are used again to calculate the amount of time to trim from the beginning of the clip. The **FirstOrDefault** method is an extension method from the **System.Linq** namespace that simplifies the code for selecting items from a list.
+-   The [**OriginalDuration**](https://msdn.microsoft.com/library/windows/apps/dn652625) property of the **MediaClip** object lets you know the duration of the media clip without any clipping applied.
+-   The [**TrimmedDuration**](https://msdn.microsoft.com/library/windows/apps/dn652631) property lets you know the duration of the media clip after trimming is applied.
+-   Specifying a trimming value that is larger than the original duration of the clip does not throw an error. However, if a composition contains only a single clip and that is trimmed to zero length by specifying a large trimming value, a subsequent call to [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674) will return null, as if the composition has no clips.
 
-## 컴퍼지션에 백그라운드 오디오 트랙 추가
+## Add a background audio track to a composition
 
-컴퍼지션에 백그라운드 트랙을 추가하려면 오디오 파일을 로드한 다음 팩터리 메서드 [**BackgroundAudioTrack.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652561)를 호출하여 [**BackgroundAudioTrack**](https://msdn.microsoft.com/library/windows/apps/dn652544) 개체를 만듭니다. 그런 다음, 컴퍼지션의 [**BackgroundAudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn652647) 속성에 **BackgroundAudioTrack**을 추가합니다.
+To add a background track to a composition, load an audio file and then create a [**BackgroundAudioTrack**](https://msdn.microsoft.com/library/windows/apps/dn652544) object by calling the factory method [**BackgroundAudioTrack.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652561). Then, add the **BackgroundAudioTrack** to the composition's [**BackgroundAudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn652647) property.
 
 [!code-cs[AddBackgroundAudioTrack](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddBackgroundAudioTrack)]
 
--   **MediaComposition**은 MP3, WAV, FLAC 형식의 백그라운드 오디오 트랙을 지원합니다.
+-   A **MediaComposition** supports background audio tracks in the following formats: MP3, WAV, FLAC
 
--   백그라운드 오디오 트랙
+-   A background audio track
 
--   비디오 파일의 경우와 마찬가지로, 컴퍼지션의 파일에 대한 액세스를 유지하는 [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스를 사용해야 합니다.
+-   As with video files, you should use the [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) class to preserve access to files in the composition.
 
--   **MediaClip**의 경우와 마찬가지로, **BackgroundAudioTrack**은 컴퍼지션에 한 번만 포함할 수 있습니다. 이미 컴퍼지션에서 사용 중인 **BackgroundAudioTrack**을 추가하려고 하면 오류가 발생합니다. 오디오 트랙을 컴퍼지션에서 여러 번 다시 사용하려면 [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599)을 호출하여 컴퍼지션에 추가할 수 있는 새 **MediaClip** 개체를 만듭니다.
+-   As with **MediaClip**, a **BackgroundAudioTrack** can only be included in a composition once. Attempting to add a **BackgroundAudioTrack** that is already being used by the composition will result in an error. To reuse an audio track multiple times in a composition, call [**Clone**](https://msdn.microsoft.com/library/windows/apps/dn652599) to create new **MediaClip** objects which can then be added to the composition.
 
--   기본적으로 백그라운드 오디오 트랙은 컴퍼지션 시작 부분에서 재생되기 시작합니다. 여러 백그라운드 트랙이 있는 경우에는 컴퍼지션의 시작 부분에서 모든 트랙이 재생되기 시작합니다. 다른 시간에 백그라운드 오디오 트랙이 재생되기 시작하도록 만들려면 [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn652563) 속성을 원하는 시간 오프셋으로 설정합니다.
+-   By default, background audio tracks begin playing at the start of the composition. If multiple background tracks are present, all of the tracks will begin playing at the start of the composition. To cause a background audio track to be begin playback at another time, set the [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn652563) property to the desired time offset.
 
-## 컴퍼지션에 오버레이 추가
+## Add an overlay to a composition
 
-오버레이를 사용하면 컴퍼지션에서 여러 비디오 계층을 서로 쌓아 올릴 수 있습니다. 컴퍼지션은 여러 개의 오버레이 계층을 포함할 수 있으며, 각 계층은 여러 오버레이를 포함할 수 있습니다. 해당 생성자에 **MediaClip**을 전달하여 [**MediaOverlay**](https://msdn.microsoft.com/library/windows/apps/dn764793) 개체를 만듭니다. 오버레이의 위치와 불투명도를 설정한 다음, 새 [**MediaOverlayLayer**](https://msdn.microsoft.com/library/windows/apps/dn764795)를 만들고 해당 [**Overlays**](https://msdn.microsoft.com/library/windows/desktop/dn280411) 목록에 **MediaOverlay**를 추가합니다. 마지막으로, 컴퍼지션의 [**OverlayLayers**](https://msdn.microsoft.com/library/windows/apps/dn764791) 목록에 **MediaOverlayLayer**를 추가합니다.
+Overlays allow you to stack multiple layers of video on top of each other in a composition. A composition can contain multiple overlay layers, each of which can include multiple overlays. Create a [**MediaOverlay**](https://msdn.microsoft.com/library/windows/apps/dn764793) object by passing a **MediaClip** into its constructor. Set the position and opacity of the overlay, then create a new [**MediaOverlayLayer**](https://msdn.microsoft.com/library/windows/apps/dn764795) and add the **MediaOverlay** to its [**Overlays**](https://msdn.microsoft.com/library/windows/desktop/dn280411) list. Finally, add the **MediaOverlayLayer** to the composition's [**OverlayLayers**](https://msdn.microsoft.com/library/windows/apps/dn764791) list.
 
 [!code-cs[AddOverlay](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddOverlay)]
 
--   계층 내의 오버레이는 포함 계층의 **Overlays** 목록에 나오는 순서에 따라 z-순서로 배열됩니다. 목록 내에서 더 높은 인덱스가 더 낮은 인덱스 위에 렌더링됩니다. 컴퍼지션 내의 오버레이 계층의 경우도 마찬가지입니다. 컴퍼지션의 **OverlayLayers** 목록에서 인덱스가 더 높은 계층이 더 낮은 인덱스 위에 렌더링됩니다.
+-   Overlays within a layer are z-ordered based on their order in their containing layer's **Overlays** list. Higher indices within the list are rendered on top of lower indices. The same is true of overlay layers within a composition. A layer with higher index in the composition's **OverlayLayers** list will be rendered on top of lower indices.
 
--   오버레이는 순차적으로 재생되지 않고 서로 위에 쌓이기 때문에, 모든 오버레이는 기본적으로 컴퍼지션의 시작 부분에서 재생되기 시작합니다. 다른 시간에 오버레이가 재생되기 시작하도록 만들려면 [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn764810) 속성을 원하는 시간 오프셋으로 설정합니다.
+-   Because overlays are stacked on top of each other instead of being played sequentially, all overlays start playback at the beginning of the composition by default. To cause an overlay to be begin playback at another time, set the [**Delay**](https://msdn.microsoft.com/library/windows/apps/dn764810) property to the desired time offset.
 
-## 미디어 클립에 효과 추가
+## Add effects to a media clip
 
-컴퍼지션의 각 **MediaClip**에는 여러 효과를 추가할 수 있는 오디오 및 비디오 효과 목록이 있습니다. 이러한 효과는 각각 [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044)과 [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047)을 구현해야 합니다. 다음 예제에서는 현재 미디어 요소 위치를 사용하여 현재 표시되는 **MediaClip**을 선택한 다음 새 [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) 인스턴스를 만들어 이 인스턴스를 미디어 클립의 [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) 목록에 추가합니다.
+Each **MediaClip** in a composition has a list of audio and video effects to which multiple effects can be added. The effects must implement [**IAudioEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608044) and [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608047) respectively. The following example uses the current media element position to choose the currently viewed **MediaClip** and then creates a new instance of the [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) and appends it to the media clip's [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) list.
 
 [!code-cs[AddVideoEffect](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddVideoEffect)]
 
-## 파일에 컴퍼지션 저장
+## Save a composition to a file
 
-미디어 컴퍼지션은 나중에 수정할 수 있도록 파일로 직렬화할 수 있습니다. 출력 파일을 선택한 다음, [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) 메서드 [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/dn640554)를 호출하여 컴퍼지션을 저장합니다.
+Media compositions can be serialized to a file to be modified at a later time. Pick an output file and then call the [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) method [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/dn640554) to save the composition.
 
 [!code-cs[SaveComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetSaveComposition)]
 
-## 파일에서 컴퍼지션 로드
+## Load a composition from a file
 
-사용자가 컴퍼지션을 보고 수정할 수 있도록 파일에서 미디어 컴퍼지션을 역직렬화할 수 있습니다. 구성 파일을 선택한 다음 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) 메서드 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/dn652684)를 호출하여 컴퍼지션을 로드합니다.
+Media compositions can be deserialized from a file to allow the user to view and modify the composition. Pick a composition file and then call the [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) method [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/dn652684) to load the composition.
 
 [!code-cs[OpenComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOpenComposition)]
 
--   컴퍼지션의 미디어 파일이 앱에서 액세스할 수 있는 위치에 없으며 앱에 대한 [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) 클래스의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성에 없는 경우 컴퍼지션을 로드할 때 오류가 발생합니다.
+-   If a media file in the composition is not in a location that can be accessed by your app and is not in the [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) property of the [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456) class for your app, an error will be thrown when loading the composition.
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

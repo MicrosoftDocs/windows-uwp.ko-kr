@@ -1,31 +1,32 @@
 ---
-title: 소리 추가
-description: 이 단계에서는 슈팅 게임 샘플에서 XAudio2 API를 사용하여 사운드 재생을 위한 개체를 만드는 방법을 검토합니다.
+author: mtoepke
+title: Add sound
+description: In this step, we examine how the shooting game sample creates an object for sound playback using the XAudio2 APIs.
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 ---
 
-# 소리 추가
+# Add sound
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-이 단계에서는 슈팅 게임 샘플에서 [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) API를 사용하여 사운드 재생을 위한 개체를 만드는 방법을 검토합니다.
+In this step, we examine how the shooting game sample creates an object for sound playback using the [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) APIs.
 
-## 목표
-
-
--   [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)를 사용하여 사운드 출력을 추가합니다.
-
-게임 샘플에서 오디오 개체와 동작은 다음 세 개의 파일에 정의됩니다.
-
--   **Audio.h/.cpp**. 이 코드 파일은 사운드 재생을 위한 XAudio2 리소스를 포함하는 **Audio** 개체를 정의합니다. 또한 게임이 일시 중지되거나 비활성화된 경우 오디오 재생을 일시 중단하고 다시 시작하는 메서드를 정의합니다.
--   **MediaReader.h/.cpp**. 이 코드는 로컬 저장소에서 오디오 .wav 파일을 읽는 메서드를 정의합니다.
--   **SoundEffect.h/.cpp**. 이 코드는 게임 내 사운드 재생을 위한 개체를 정의합니다.
-
-## 오디오 엔진 정의
+## Objective
 
 
-게임 샘플이 시작되면 게임에 대한 오디오 리소스를 할당하는 **Audio** 개체를 만듭니다. 이 개체를 선언하는 코드는 다음과 같이 표시됩니다.
+-   To add sound output using [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813).
+
+In the game sample, the audio objects and behaviors are defined in three files:
+
+-   **Audio.h/.cpp**. This code file defines the **Audio** object, which contains the XAudio2 resources for sound playback. It also defines the method for suspending and resuming audio playback if the game is paused or deactivated.
+-   **MediaReader.h/.cpp**. This code defines the methods for reading audio .wav files from local storage.
+-   **SoundEffect.h/.cpp**. This code defines an object for in-game sound playback.
+
+## Defining the audio engine
+
+
+When the game sample starts, it creates an **Audio** object that allocates the audio resources for the game. The code that declares this object looks like this:
 
 ```cpp
 public:
@@ -47,12 +48,12 @@ protected:
 };
 ```
 
-**Audio::MusicEngine** 및 **Audio::SoundEffectEngine** 메서드는 각 오디오 유형에 대해 마스터링 음성을 정의하는 [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 개체에 대한 참조를 반환합니다. 마스터링 음성은 재생에 사용되는 오디오 디바이스입니다. 사운드 데이터 버퍼는 마스터링 음성으로 직접 전송할 수 없지만 다른 유형의 음성으로 전송된 데이터를 마스터링 음성으로 전송하여 들을 수는 있습니다.
+The **Audio::MusicEngine** and **Audio::SoundEffectEngine** methods return references to [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) objects that define the mastering voice for each audio type. A mastering voice is the audio device used for playback. Sound data buffers cannot be submitted directly to mastering voices, but data submitted to other types of voices must be directed to a mastering voice to be heard.
 
-## 오디오 리소스 초기화
+## Initializing the audio resources
 
 
-샘플에서는 [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212)를 호출하여 음악 및 사운드 효과 엔진에 대한 [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) 개체를 초기화합니다. 엔진이 인스턴스화되면 다음과 같이 [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048)를 호출하여 각각에 대한 마스터링 음성을 만듭니다.
+The sample initializes the [**IXAudio2**](https://msdn.microsoft.com/library/windows/desktop/ee415908) objects for the music and sound effect engines with calls to [**XAudio2Create**](https://msdn.microsoft.com/library/windows/desktop/ee419212). After the engines have been instantiated, it creates a mastering voice for each with calls to [**IXAudio2::CreateMasteringVoice**](https://msdn.microsoft.com/library/windows/desktop/hh405048), as here:
 
 ```cpp
 
@@ -84,12 +85,12 @@ void Audio::CreateDeviceIndependentResources()
 }
 ```
 
-음악 또는 사운드 효과 오디오 파일이 로드되면 이 메서드는 마스터링 음성에서 [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607)를 호출하고 재생을 위해 원본 음성의 인스턴스를 만듭니다. 게임 샘플의 오디오 파일 로드 방법에 대한 검토를 완료하는 즉시 이 작업에 대한 코드를 살펴보겠습니다.
+As a music or sound effect audio file is loaded, this method calls [**IXAudio2::CreateSourceVoice**](https://msdn.microsoft.com/library/windows/desktop/ee418607) on the mastering voice, which creates an instance of a source voice for playback. We look at the code for this as soon as we finish reviewing how the game sample loads audio files.
 
-## 오디오 파일 읽기
+## Reading an audio file
 
 
-게임 샘플에서 오디오 형식 파일을 읽는 코드는 **MediaReader.cpp**에 정의되어 있습니다. 인코드된 .wav 오디오 파일로 읽는 특정 메서드인 **MediaReader::LoadMedia**는 다음과 같이 표시됩니다.
+In the game sample, the code for reading audio format files is defined in **MediaReader.cpp**. The specific method that reads in an encoded .wav audio file, **MediaReader::LoadMedia**, looks like this:
 
 ```cpp
 Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
@@ -200,25 +201,19 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 }
 ```
 
-이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
+This method uses the [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) APIs to read in the .wav audio file as a Pulse Code Modulation (PCM) buffer.
 
-1.  [
-            **MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110)을 호출하여 미디어 원본 뷰어([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) 개체를 만듭니다.
-2.  [
-            **MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861)을 호출하여 오디오 파일의 디코딩을 위한 미디어 유형([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850))을 만듭니다. 이 메서드는 디코드된 출력이 XAudio2에서 사용할 수 있는 오디오 유형인 PCM 오디오가 되도록 지정합니다.
-3.  [
-            **IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432)을 호출하여 뷰어의 디코드된 출력 미디어 유형을 설정합니다.
-4.  [
-            **WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 만들고 호출 결과를 [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850) 개체의 [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)에 복사합니다. 이렇게 하여 로드된 후 오디오 파일을 보유하는 버퍼의 형식을 지정합니다.
-5.  [
-            **IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662)를 호출하여 오디오 스트림의 기간(초)을 가져온 다음 해당 기간을 바이트로 변환합니다.
-6.  [
-            **IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665)을 호출하여 오디오 파일을 스트림으로 읽습니다.
-7.  메서드에서 반환한 배열에 오디오 샘플 버퍼의 내용을 복사합니다.
+1.  Creates a media source reader ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) object by calling [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110).
+2.  Creates a media type ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) for the decoding of the audio file by calling [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861). This method specifies that the decoded output is PCM audio, which is an audio type that XAudio2 can use.
+3.  Sets the decoded output media type for the reader by calling [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432).
+4.  Creates a [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) buffer and copies the results of a call to [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177) on the [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850) object. This formats the buffer that holds the audio file after it is loaded.
+5.  Gets the duration, in seconds, of the audio stream by calling [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) and then converts the duration to bytes.
+6.  Reads the audio file in as a stream by calling [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665).
+7.  Copies the contents of the audio sample buffer into an array returned by the method.
 
-**SoundEffect::Initialize**에서 가장 중요한 점은 마스터링 음성에서 원본 음성 개체인 **m\_sourceVoice**를 만드는 것입니다. **MediaReader::LoadMedia**에서 가져온 사운드 데이터 버퍼의 실제 재생을 위해 원본 음성을 사용합니다.
+The most important thing in **SoundEffect::Initialize** is the creation of the source voice object, **m\_sourceVoice**, from the mastering voice. We use the source voice for the actual play back of the sound data buffer obtained from **MediaReader::LoadMedia**.
 
-샘플 게임에서는 다음과 같이 **SoundEffect** 개체를 초기화할 때 이 메서드를 호출합니다.
+The sample game calls this method when it initializes the **SoundEffect** object, like this:
 
 ```cpp
 void SoundEffect::Initialize(
@@ -246,7 +241,7 @@ void SoundEffect::Initialize(
 }
 ```
 
-이 메서드는 다음과 같이 호출 결과를 **Audio::SoundEffectEngine**(또는 **Audio::MusicEngine**), **MediaReader::GetOutputWaveFormatEx** 및 **MediaReader::LoadMedia** 호출로 반환된 버퍼에 전달합니다.
+This method is passed the results of calls to **Audio::SoundEffectEngine** (or **Audio::MusicEngine**), **MediaReader::GetOutputWaveFormatEx**, and the buffer returned by a call to **MediaReader::LoadMedia**, as seen here.
 
 ```cpp
 MediaReader^ mediaReader = ref new MediaReader;
@@ -261,11 +256,11 @@ myTarget->HitSound()->Initialize(
                 targetHitSound);
 ```
 
-**SoundEffect::Initialize**는 주 게임 개체를 초기화하는 **Simple3DGame:Initialize** 메서드에서 호출됩니다.
+**SoundEffect::Initialize** is called from the **Simple3DGame:Initialize** method that initializes the main game object.
 
-샘플 게임에서 오디오 파일을 메모리에 저장하고 있으므로 게임 재생 중 오디오 파일을 재생하는 방법을 살펴보겠습니다.
+Now that the sample game has an audio file in memory, let's see how it plays it back during game play!
 
-## 오디오 파일 재생
+## Playing back an audio file
 
 
 ```cpp
@@ -303,18 +298,18 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
-사운드를 재생하기 위해 이 메서드는 원본 음성 개체 **m\_sourceVoice**를 사용하여 사운드 데이터 버퍼 **m\_soundData**의 재생을 시작합니다. 이 메서드는 사운드 데이터 버퍼에 대한 참조를 제공하는 [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228)를 만든 다음 [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473)를 호출하여 전송합니다. 사운드 데이터가 대기하고 있으면 **SoundEffect::PlaySound**에서 [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471)를 호출하여 재생을 시작합니다.
+To play the sound, this method uses the source voice object **m\_sourceVoice** to start the playback of the sound data buffer **m\_soundData**. It creates an [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), to which it provides a reference to the sound data buffer, and then submits it with a call to [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). With the sound data queued up, **SoundEffect::PlaySound** starts play back by calling [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
 
-이제 탄약과 타겟이 충돌할 때마다 **SoundEffect::PlaySound**를 호출하여 노이즈를 재생합니다.
+Now, whenever a collision between the ammo and a target occurs, a call to **SoundEffect::PlaySound** causes a noise to play.
 
-## 다음 단계
+## Next steps
 
 
-UWP(유니버설 Windows 플랫폼) DirectX 게임 개발에 대해 간략하게 둘러보았습니다. 이제 직접 만든 Windows 8용 게임에 최고의 환경을 제공하기 위해 수행해야 할 작업에 대해 알게 되었습니다. 게임은 다양한 Windows 8 장치 및 플랫폼에서 재생할 수 있으므로 그래픽, 컨트롤, 사용자 인터페이스 및 오디오와 같은 구성 요소를 최대한 광범위한 구성 집합으로 설계해야 합니다.
+That was a whirlwind tour of Universal Windows Platform (UWP) DirectX game development! At this point, you have an idea of what you need to do to make your own game for Windows 8 a great experience. Remember, your game can be played on a wide variety of Windows 8 devices and platforms, so design your components: your graphics, your controls, your user interface, and your audio for as wide a set of configurations as you can!
 
-이러한 문서에 제공된 게임 샘플을 수정하는 방법에 대한 자세한 내용은 [게임 샘플 확장](tutorial-resources.md)을 참조하세요.
+For more info about ways to modify the game sample provided in these documents, see [Extending the game sample](tutorial-resources.md).
 
-## 이 섹션에 대한 전체 샘플 코드
+## Complete sample code for this section
 
 
 Audio.h
@@ -555,15 +550,10 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

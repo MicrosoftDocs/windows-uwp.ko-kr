@@ -1,39 +1,39 @@
 ---
+author: TylerMSFT
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
-title: 파일 만들기, 쓰기 및 읽기
-description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
+title: Create, write, and read a file
+description: Read and write a file using a StorageFile object.
 ---
 
-# 파일 만들기, 쓰기 및 읽기
+# Create, write, and read a file
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**중요 API**
+**Important APIs**
 
--   [**StorageFolder 클래스**](https://msdn.microsoft.com/library/windows/apps/br227230)
--   [**StorageFile 클래스**](https://msdn.microsoft.com/library/windows/apps/br227171)
--   [**FileIO 클래스**](https://msdn.microsoft.com/library/windows/apps/hh701440)
+-   [**StorageFolder class**](https://msdn.microsoft.com/library/windows/apps/br227230)
+-   [**StorageFile class**](https://msdn.microsoft.com/library/windows/apps/br227171)
+-   [**FileIO class**](https://msdn.microsoft.com/library/windows/apps/hh701440)
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 파일을 읽고 씁니다.
+Read and write a file using a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.
 
-> **참고** [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
+> **Note**  Also see the [File access sample](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
-## 필수 조건
+## Prerequisites
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **Understand async programming for Universal Windows Platform (UWP) apps**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
+    You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). To learn how to write asynchronous apps in C++, see [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **읽거나, 쓰거나, 일고 쓸 파일을 가져오는 방법에 대해 알아봅니다.**
+-   **Know how to get the file that you want to read from, write to, or both**
 
-    파일 선택기를 사용하여 파일을 가져오는 방법은 [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)를 참조하세요.
+    You can learn how to get a file by using a file picker in [Open files and folders with a picker](quickstart-using-file-and-folder-pickers.md).
 
-## 파일 만들기
+## Creating a file
 
-앱의 로컬 폴더에 파일을 만드는 방법은 다음과 같습니다. 이미 있는 경우 바꿉니다.
+Here's how to create a file in the app's local folder. If it already exists, we replace it.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 // Create sample file; replace if exists.
@@ -49,11 +49,10 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## 파일에 쓰기
+## Writing to a file
 
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
+Here's how to write to a writable file on disk using the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) class. The common first step for each of the ways of writing to a file (unless you're writing to the file immediately after creating it) is to get the file with [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
 > [!div class="tabbedCodeSnippets"]
 ```cs
 Windows.Storage.StorageFolder storageFolder =
@@ -66,10 +65,9 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 ```
 
-**파일에 텍스트 쓰기**
+**Writing text to a file**
 
-[
-            **FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 메서드를 호출하여 파일에 텍스트를 씁니다.
+Write text to your file by calling the [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) method of the [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) class.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -78,9 +76,9 @@ await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
 Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 ```
 
-**버퍼를 사용하여 파일에 바이트 쓰기(2단계)**
+**Writing bytes to a file by using a buffer (2 steps)**
 
-1.  먼저 [**ConvertStringToBinary**](https://msdn.microsoft.com/library/windows/apps/br241385)를 호출하여 파일에 쓰려는 바이트(임의 문자열 기반)의 버퍼를 가져옵니다.
+1.  First, call [**ConvertStringToBinary**](https://msdn.microsoft.com/library/windows/apps/br241385) to get a buffer of the bytes (based on an arbitrary string) that you want to write to your file.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -92,7 +90,7 @@ Dim buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBi
                     Windows.Security.Cryptography.BinaryStringEncoding.Utf8)
 ```
 
-2.  그런 다음 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701490) 메서드를 호출하여 파일에 버퍼의 바이트를 씁니다.
+2.  Then write the bytes from your buffer to your file by calling the [**WriteBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701490) method of the [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) class.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
@@ -101,9 +99,9 @@ await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
 Await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer)
 ```
 
-**스트림을 사용하여 파일에 텍스트 쓰기(4단계)**
+**Writing text to a file by using a stream (4 steps)**
 
-1.  먼저 [**StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하여 파일을 엽니다. 이 메서드는 열기 작업이 완료되면 파일 내용의 스트림을 반환합니다.
+1.  First, open the file by calling the [**StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) method. It returns a stream of the file's content when the open operation completes.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -112,7 +110,7 @@ var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  다음으로, `stream`에서 [**GetOutputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241738) 메서드를 호출하여 출력 스트림을 가져옵니다. **using** 문에 이 스트림을 넣어 출력 스트림의 수명을 관리합니다.
+2.  Next, get an output stream by calling the [**GetOutputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241738) method from the `stream`. Put this in a **using** statement to manage the output stream's lifetime.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -127,7 +125,7 @@ Using outputStream = stream.GetOutputStreamAt(0)
 End Using
 ```
 
-3.  이제 기존 **using** 문 내에 다음 코드를 추가해 새 [**DataWriter**](https://msdn.microsoft.com/library/windows/apps/br208154) 개체를 만들고 [**DataWriter.WriteString**](https://msdn.microsoft.com/library/windows/apps/br241642) 메서드를 호출하여 출력 스트림에 씁니다.
+3.  Now add this code within the existing **using** statement to write to the output stream by creating a new [**DataWriter**](https://msdn.microsoft.com/library/windows/apps/br208154) object and calling the [**DataWriter.WriteString**](https://msdn.microsoft.com/library/windows/apps/br241642) method.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
@@ -141,7 +139,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
-4.  마지막으로, 내부 **using** 문 내에 다음 코드를 추가하여 [**StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171)로 텍스트를 파일에 저장하고 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br241729)로 스트림을 닫습니다.
+4.  Lastly, add this code (within the inner **using** statement) to save the text to your file with [**StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171) and close the stream with [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br241729).
 > [!div class="tabbedCodeSnippets"]
 ```cs
     await dataWriter.StoreAsync();
@@ -152,11 +150,10 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
         Await outputStream.FlushAsync()
 ```
 
-## 파일에서 읽기
+## Reading from a file
 
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
+Here's how to read from a file on disk using the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) class. The common first step for each of the ways of reading from a file is to get the file with [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272).
 > [!div class="tabbedCodeSnippets"]
 ```cs
 Windows.Storage.StorageFolder storageFolder =
@@ -169,10 +166,9 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 ```
 
-**파일에서 텍스트 읽기**
+**Reading text from a file**
 
-[
-            **FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) 메서드를 호출하여 파일에서 텍스트를 읽습니다.
+Read text from your file by calling the [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) method of the [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) class.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
@@ -181,9 +177,9 @@ string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
 Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 ```
 
-**버퍼를 사용하여 파일에서 바이트 읽기(2단계)**
+**Reading bytes from a file by using a buffer (2 steps)**
 
-1.  먼저 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468) 메서드를 호출하여 파일의 버퍼에서 바이트를 읽습니다.
+1.  First, read bytes from your buffer to your file by calling the [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468) method of the [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) class.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -192,7 +188,7 @@ var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
 Dim buffer = Await Windows.Storage.FileIO.ReadBufferAsync(sampleFile)
 ```
 
-2.  그런 다음 [**DataReader**](https://msdn.microsoft.com/library/windows/apps/br208119) 개체를 사용하여 버퍼의 길이와 버퍼의 내용을 차례로 읽습니다.
+2.  Then use a [**DataReader**](https://msdn.microsoft.com/library/windows/apps/br208119) object to read first the length of the buffer and then its contents.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer))
@@ -205,10 +201,9 @@ Dim dataReader As DataReader = Windows.Storage.Streams.DataReader.FromBuffer(buf
     Dim text As String = dataReader.ReadString(buffer.Length)
 ```
 
-**스트림을 사용하여 파일에서 텍스트 읽기(4단계)**
+**Reading text from a file by using a stream (4 steps)**
 
-1.  [
-            **StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하여 파일의 스트림을 엽니다. 이 메서드는 작업이 완료되면 파일 내용의 스트림을 반환합니다.
+1.  Open a stream for your file by calling the [**StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) method. It returns a stream of the file's content when the operation completes.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -217,7 +212,7 @@ var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  나중에 사용할 스트림의 크기를 가져옵니다.
+2.  Get the size of the stream to use later.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 ulong size = stream.Size;
@@ -226,8 +221,7 @@ ulong size = stream.Size;
 Dim size = stream.Size
 ```
 
-3.  [
-            **GetInputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241737) 메서드를 호출하여 입력 스트림을 가져옵니다. 이를 **using** 문에 배치하여 스트림의 수명을 관리합니다. **GetInputStreamAt**을 호출할 때 0을 지정하여 위치를 스트림의 시작 부분으로 설정합니다.
+3.  Get an input stream by calling the [**GetInputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241737) method. Put this in a **using** statement to manage the stream's lifetime. Specify 0 when you call **GetInputStreamAt** to set the position to the beginning of the stream.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var inputStream = stream.GetInputStreamAt(0))
@@ -241,7 +235,7 @@ Using inputStream = stream.GetInputStreamAt(0)
 End Using
 ```
 
-4.  마지막으로, 기존 **using** 문 내에 다음 코드를 추가하여 스트림에서 [**DataReader**](https://msdn.microsoft.com/library/windows/apps/br208119) 개체를 가져온 다음 [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/br208135) 및 [**DataReader.ReadString**](https://msdn.microsoft.com/library/windows/apps/br208147)를 호출하여 텍스트를 읽습니다.
+4.  Lastly, add this code within the existing **using** statement to get a [**DataReader**](https://msdn.microsoft.com/library/windows/apps/br208119) object on the stream then read the text by calling [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/br208135) and [**DataReader.ReadString**](https://msdn.microsoft.com/library/windows/apps/br208147).
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var dataReader = new Windows.Storage.Streams.DataReader(inputStream))
@@ -256,15 +250,10 @@ Dim dataReader As New DataReader(inputStream)
     Dim text As String = dataReader.ReadString(numBytesLoaded)
 ```
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

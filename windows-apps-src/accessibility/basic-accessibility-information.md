@@ -1,197 +1,141 @@
 ---
-Description: 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.
-title: 기본적인 접근성 정보 표시
+author: Xansky
+Description: Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need.
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
+title: Expose basic accessibility information
 label: Expose basic accessibility information
 template: detail.hbs
 ---
 
-기본적인 접근성 정보 표시
-==========================================================================================================
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+# Expose basic accessibility information  
 
 
-경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.
 
-<span id="accessible_name"> </span> <span id="ACCESSIBLE_NAME"> </span>접근성 있는 이름
------------------------------------------------------------------------------------
+Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need.
 
-접근성 있는 이름은 화면 읽기 프로그램이 UI 요소를 읽기 위해 사용하는 짧은 설명 텍스트 문자열입니다. 콘텐츠를 이해하거나 UI를 조작하는 데 있어 중요한 의미가 있는 UI 요소에 접근성 있는 이름을 설정합니다. 그러한 요소에는 일반적으로 이미지, 입력 필드, 단추, 컨트롤, 영역 등이 포함됩니다.
+<span id="accessible_name"/>
+<span id="ACCESSIBLE_NAME"/>
+## Accessible name  
+An accessible name is a short, descriptive text string that a screen reader uses to announce a UI element. Set the accessible name for UI elements so that have a meaning that is important for understanding the content or interacting with the UI. Such elements typically include images, input fields, buttons, controls, and regions.
 
-다음 표에서는 XAML UI의 다양한 요소 형식에 대해 접근성 있는 이름을 정의하거나 가져오는 방법에 대해 설명합니다.
+This table describes how to define or obtain an accessible name for various types of elements in a XAML UI.
 
-| 요소 형식      | 설명                                                                                                                                                                                                                                                                                                                                                            |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 정적 텍스트       | [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) 요소의 경우 접근성 있는 이름이 표시되는(내부) 텍스트에 따라 자동으로 결정됩니다. 해당 요소의 모든 텍스트는 이름으로 사용됩니다. [내부 텍스트의 이름](#name_from_inner_text)을 참조하세요.                                                                    |
-| 이미지            | XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소에는 **img** 및 유사한 요소의 HTML **alt** 특성과 완전히 유사한 특징이 없습니다. [
-            **AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 이름을 제공하거나 캡션 기술을 사용합니다. [이미지의 접근성 있는 이름](#images)을 참조하세요.                                   |
-| 양식 요 소     | 양식 요소의 접근성 있는 이름은 해당 요소에 대해 표시되는 레이블과 동일해야 합니다. [레이블 및 LabeledBy](#labels)를 참조하세요.                                                                                                                                                                                                                        |
-| 단추 및 링크 | 기본적으로 단추 또는 링크의 접근성 있는 이름은 표시되는 텍스트를 기반으로 하며, [내부 텍스트의 이름](#name_from_inner_text)에 설명된 것과 동일한 규칙을 사용합니다. 단추에 이미지만 포함된 경우 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 단추의 의도된 동작 중 텍스트 전용 동작만 제공합니다. |
+| Element type      | Description |
+|-------------------|-------------|
+| Static text       | For [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) elements, an accessible name is automatically determined from the visible (inner) text. All of the text in that element is used as the name. See [Name from inner text](#name_from_inner_text). |
+| Images            | The XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) element does not have a direct analog to the HTML **alt** attribute of **img** and similar elements. Either use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) to provide a name, or use the captioning technique. See [Accessible names for images](#images). |
+| Form elements     | The accessible name for a form element should be the same as the label that is displayed for that element. See [Labels and LabeledBy](#labels). |
+| Buttons and links | By default, the accessible name of a button or link is based on the visible text, using the same rules as described in [Name from inner text](#name_from_inner_text). In cases where a button contains only an image, use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) to provide a text-only equivalent of the button's intended action. |
 
- 
+Most container elements such as panels do not promote their content as accessible name. This is because it is the item content that should report a name and corresponding role, not its container. The container element might report that it is an element that has children in a Microsoft UI Automation representation, such that the assistive technology logic can traverse it. But users of assistive technologies don't generally need to know about the containers and thus most containers aren't named.
 
-패널과 같은 대부분의 컨테이너 요소는 해당 콘텐츠를 접근성 있는 이름으로 승격시키지 않습니다. 이 콘텐츠는 컨테이너가 아닌 이름 및 해당 역할을 보고해야 하는 항목 콘텐츠이기 때문입니다. 컨테이너 요소는 보조 기술 논리에서 해당 요소를 트래버스할 수 있도록 Microsoft UI 자동화 표현에 자식이 있는 요소로 보고할 수 있습니다. 그러나 보조 기술 사용자는 일반적으로 컨테이너에 대해 알 필요가 없으므로 대부분의 컨테이너에 이름이 지정하지 않습니다.
+<span id="role_value"/>
+<span id="ROLE_VALUE"/>
+## Role and value  
+The controls and other UI elements that are part of the XAML vocabulary implement UI Automation support for reporting role and value as part of their definitions. You can use UI Automation tools to examine the role and value information for the controls, or you can read the documentation for the [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) implementations of each control. The available roles in a UI Automation framework are defined in the [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182) enumeration. UI Automation clients such as assistive technologies can obtain role information by calling methods that the UI Automation framework exposes by using the control's **AutomationPeer**.
 
-<span id="role_value"> </span> <span id="ROLE_VALUE"> </span>역할 및 값
-------------------------------------------------------------------------
+Not all controls have a value. Controls that do have a value report this information to UI Automation through the peers and patterns that are supported by that control. For example, a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) form element does have a value. An assistive technology can be a UI Automation client and can discover both that a value exists and what the value is. In this specific case the **TextBox** supports the [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) pattern through the [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550) definitions.
 
-XAML 용어의 일부인 컨트롤 및 기타 UI 요소는 해당 정의의 일부로 역할 및 값을 보고하기 위해 UI 자동화 지원을 구현합니다. UI 자동화 도구를 사용하여 컨트롤에 대한 역할 및 값 정보를 검사하거나 각 컨트롤의 [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) 구현에 대한 설명서를 읽어볼 수 있습니다. UI 자동화 프레임워크에서 사용 가능한 역할은 [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182) 열거에 정의되어 있습니다. 보조 기술과 같은 UI 자동화 클라이언트는 UI 자동화 프레임워크가 컨트롤의 **AutomationPeer**를 사용하여 노출하는 메서드를 호출하여 역할 정보를 구할 수 있습니다.
+> [!NOTE]
+> For cases where you use [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) or other techniques to supply the accessible name explicitly, do not include the same text as is used by the control role or type information in the accessible name. For example do not include strings such as "button" or "list" in the name. The role and type information comes from a different UI Automation property (**LocalizedControlType**) that is supplied by the default control support for UI Automation. Many assistive technologies append the **LocalizedControlType** to the accessible name, so duplicating the role in the accessible name can result in unnecessarily repeated words. For example, if you give a [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) control an accessible name of "button" or include "button" as the last part of the name, this might be read by screen readers as "button button". You should test this aspect of your accessibility info using Narrator.
 
-일부 컨트롤에는 값이 없습니다. 값이 없는 컨트롤은 해당 컨트롤에서 지원하는 피어 및 패턴을 통해 UI 자동화에 이 정보를 보고합니다. 예를 들어 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 양식 요소에는 값이 있습니다. 보조 기술이 UI 자동화 클라이언트가 될 수 있으므로 값이 존재하는지와 해당 값이 무엇인지를 검색할 수 있습니다. 이 특정한 경우에 **TextBox**는 [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550) 정의를 통해 [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) 패턴을 지원합니다.
+<span id="Influencing_the_UI_Automation_tree_views"/>
+<span id="influencing_the_ui_automation_tree_views"/>
+<span id="INFLUENCING_THE_UI_AUTOMATION_TREE_VIEWS"/>
+## Influencing the UI Automation tree views  
+The UI Automation framework has a concept of tree views, where UI Automation clients can retrieve the relationships between elements in a UI using three possible views: raw, control, and content. The control view is the view that's often used by UI Automation clients because it provides a good representation and organization of the elements in a UI that are interactive. Testing tools usually enable you to choose which tree view to use when the tool presents the organization of elements.
 
-**참고** [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)이나 기타 기술을 사용하여 접근성 있는 이름을 명시적으로 제공하는 경우 컨트롤 역할이나 형식 정보에서 사용하는 것과 동일한 텍스트를 접근성 있는 이름에 포함하지 마세요. 예를 들어 "단추"나 "목록" 같은 문자열을 이름에 포함하지 마세요. 역할 및 형식 정보는 UI 자동화를 위한 기본 컨트롤 지원에서 제공하는 다양한 UI 자동화 속성(**LocalizedControlType**)에서 제공됩니다. 많은 보조 기술에서 **LocalizedControlType**을 접근성 있는 이름에 추가하므로 접근성 있는 이름에서 역할을 중복하면 단어가 불필요하게 반복될 수 있습니다. 예를 들어 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 컨트롤에 액세스 가능한 "단추" 이름을 지정하거나 "단추"라는 단어를 이름의 마지막 부분으로 포함하는 경우 화면 읽기 프로그램에서는 이를 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용하여 접근성 정보의 다음 측면을 테스트해야 합니다.
+By default, any [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) derived class and a few other elements will appear in the control view when the UI Automation framework represents the UI for a Universal Windows Platform (UWP) app. But sometimes you don't want an element to appear in the control view because of UI composition, where that element is duplicating information or presenting information that's unimportant for accessibility scenarios. Use the attached property [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788) to change how elements are exposed to the tree views. If you put an element in the **Raw** tree, most assistive technologies won't report that element as part of their views. To see some examples of how this works in existing controls, open the generic.xaml design reference XAML file in a text editor, and search for **AutomationProperties.AccessibilityView** in the templates.
 
- 
+<span id="name_from_inner_text"/>
+<span id="NAME_FROM_INNER_TEXT"/>
+## Name from inner text  
+To make it easier to use strings that already exist in the visible UI for accessible name values, many of the controls and other UI elements provide support for automatically determining a default accessible name based on inner text within the element, or from string values of content properties.
 
-<span id="Influencing_the_UI_Automation_tree_views"> </span> <span id="influencing_the_ui_automation_tree_views"> </span> <span id="INFLUENCING_THE_UI_AUTOMATION_TREE_VIEWS"> </span>UI 자동화 트리 보기에 미치는 영향
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) and **RichTextBlock** each promote the value of the **Text** property as the default accessible name.
+* Any [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) subclass uses an iterative "ToString" technique to find strings in its [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content) value, and promotes these strings as the default accessible name.
 
-UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨트롤, 콘텐츠 등 세 가지 보기를 사용하여 UI에 있는 요소 사이의 관계를 검색할 수 있는 트리 보기 개념이 있습니다. 컨트롤 보기는 표현 기능이 좋고 UI 요소가 대화형으로 구성되어 있기 때문에 UI 자동화 클라이언트에서 자주 사용되는 보기입니다. 일반적으로 테스트 도구를 사용하면 도구에서 요소 구성을 표시할 때 사용할 트리 보기를 선택할 수 있습니다.
+> [!NOTE]
+> As enforced by UI Automation, the accessible name length cannot be greater than 2048 characters. If a string used for automatic accessible name determination exceeds that limit, the accessible name is truncated at that point.
 
-기본적으로 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 파생 클래스 및 다수의 다른 요소는 UI 자동화 프레임워크가 UWP(유니버설 Windows 플랫폼) 앱의 UI를 표시할 때 컨트롤 보기에 나타납니다. 하지만 특정 요소가 정보를 복제하거나 접근성 시나리오에 중요하지 않은 정보를 표시하는 UI 컴퍼지션으로 인해 해당 요소를 컨트롤 보기에 표시하지 않으려는 경우가 가끔 있습니다. 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/Dn251788)를 사용하면 요소가 트리 보기에 표시되는 방식을 변경할 수 있습니다. 요소를 **Raw** 트리에 넣으면 대부분의 보조 기술이 해당 요소를 보기의 일부로 보고하지 않습니다. 기존 컨트롤에서 작동하는 방식의 몇 가지 예를 보려면 generic.xaml 디자인 참조 XAML 파일을 텍스트 편집기에서 열고 템플릿에서 **AutomationProperties.AccessibilityView**를 검색합니다.
+<span id="images"/>
+<span id="IMAGES"/>
+## Accessible names for images
+To support screen readers and to provide the basic identifying information for each element in the UI, you sometimes must provide text alternatives to non-textual information such as images and charts (excluding any purely decorative or structural elements). These elements don't have inner text so the accessible name won't have a calculated value. You can set the accessible name directly by setting the [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) attached property as shown in this example.
 
-<span id="name_from_inner_text"> </span> <span id="NAME_FROM_INNER_TEXT"> </span>내부 텍스트의 이름
---------------------------------------------------------------------------------------------------
+XAML
+```xml
+<Image Source="product.png"
+  AutomationProperties.Name="An image of a customer using the product."/>
+```
 
-표시되는 UI에 이미 있는 문자열을 접근성 있는 이름 값에 사용하기가 더 쉬워지도록 하기 위해 대부분의 컨트롤 및 기타 UI 요소에서는 요소 내에 있는 내부 텍스트를 기반으로 또는 콘텐츠 속성의 문자열 값에서 기본 접근성 있는 이름을 자동으로 결정하는 기능을 지원합니다.
+Alternatively, consider including a text caption that appears in the visible UI and that also serves as the label-associated accessibility information for the image content. Here's an example:
 
--   [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 및 **RichTextBlock**은 각각 **Text** 속성의 값을 기본 접근성 있는 이름으로 승격시킵니다.
--   모든 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
+XAML
+```xml
+<Image HorizontalAlignment="Left" Width="480" x:Name="img_MyPix"
+  Source="snoqualmie-NF.jpg"
+  AutomationProperties.LabeledBy="{Binding ElementName=caption_MyPix}"/>
+<TextBlock x:Name="caption_MyPix">Mount Snoqualmie Skiing</TextBlock>
+```
 
-**참고** UI 자동화에 의해 적용되는 접근성 있는 이름 길이는 2048자보다 클 수 없습니다. 접근성 있는 이름 자동 결정에 사용된 문자열이 해당 제한을 초과하는 경우 접근성 있는 이름은 해당 지점에서 잘립니다.
+<span id="labels"/>
+<span id="LABELS"/>
+## Labels and LabeledBy  
+The preferred way to associate a label with a form element is to use a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) with an **x:Name** for label text, and then to set the [**AutomationProperties.LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) attached property on the form element to reference the labeling **TextBlock** by its XAML name. If you use this pattern, when the user clicks the label, the focus moves to the associated control and assistive technologies can use the label text as the accessible name for the form field. Here's an example that shows this technique.
 
- 
+XAML
+```xml
+<StackPanel x:Name="LayoutRoot" Background="White">
+   <StackPanel Orientation="Horizontal">
+     <TextBlock Name="lbl_FirstName">First name</TextBlock>
+     <TextBox
+      AutomationProperties.LabeledBy="{Binding ElementName=lbl_FirstName}"
+      Name="tbFirstName" Width="100"/>
+   </StackPanel>
+   <StackPanel Orientation="Horizontal">
+     <TextBlock Name="lbl_LastName">Last name</TextBlock>
+     <TextBox
+      AutomationProperties.LabeledBy="{Binding ElementName=lbl_LastName}"
+      Name="tbLastName" Width="100"/>
+   </StackPanel>
+ </StackPanel>
+```
 
-<span id="images"> </span> <span id="IMAGES"> </span>이미지의 접근성 있는 이름
------------------------------------------------------------------------------
+<span id="accessible_description"/>
+<span id="ACCESSIBLE_DESCRIPTION"/>
+## Accessible description (optional)  
+An accessible description provides additional accessibility information about a particular UI element. You typically provide an accessible description when an accessible name alone does not adequately convey an element's purpose.
 
-화면 읽기 프로그램을 지원하고 UI의 각 요소에 대한 기본 식별 정보를 제공하려면 경우에 따라 이미지 및 차트(완전한 장식 또는 구조 요소 제외)와 같이 텍스트가 아닌 정보 대신 텍스트를 제공해야 합니다. 이 요소에는 내부 텍스트가 없으므로, 액세스 가능한 이름에는 계산된 값이 없습니다. [
-            **AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 연결된 속성을 다음 예제와 같이 설정하면 액세스 가능한 이름을 직접 설정할 수 있습니다.
+The Narrator screen reader reads an element's accessible description only when the user requests more information about the element by pressing CapsLock+F.
 
-<span codelanguage="XAML"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;Image Source=&quot;product.png&quot;
-  AutomationProperties.Name=&quot;An image of a customer using the product.&quot;/&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+The accessible name is meant to identify the control rather than to fully document its behavior. If a brief description is not enough to explain the control, you can set the [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765) attached property in addition to [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770).
 
-또는 표시되는 UI에 나타나고 이미지 콘텐츠에 대한 레이블 관련 접근성 정보로도 제공되는 텍스트 자막을 포함해 보세요. 예를 들면 다음과 같습니다.
+<span id="Testing_accessibility_early_and_often"/>
+<span id="testing_accessibility_early_and_often"/>
+<span id="TESTING_ACCESSIBILITY_EARLY_AND_OFTEN"/>
+## Testing accessibility early and often  
+Ultimately, the best approach for supporting screen readers is to test your app using a screen reader yourself. That will show you how the screen reader behaves and what basic accessibility information might be missing from the app. Then you can adjust the UI or UI Automation property values accordingly. For more info, see [Accessibility testing](accessibility-testing.md).
 
-<span codelanguage="XAML"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;Image HorizontalAlignment=&quot;Left&quot; Width=&quot;480&quot; x:Name=&quot;img_MyPix&quot;
-  Source=&quot;snoqualmie-NF.jpg&quot;
-  AutomationProperties.LabeledBy=&quot;{Binding ElementName=caption_MyPix}&quot;/&gt;
-&lt;TextBlock x:Name=&quot;caption_MyPix&quot;&gt;
-Mount Snoqualmie Skiing
-&lt;/TextBlock&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+One of the tools you can use for testing accessibility is called **AccScope**. The **AccScope** tool is particularly useful because you can see visual representations of your UI that represent how assistive technologies might view your app as an automation tree. In particular, there's a Narrator mode that gives a view of how Narrator gets text from your app and how it organizes the elements in the UI. AccScope is designed so that it can be used and be useful throughout a development cycle for an app, even during the preliminary design phase. For more info see [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
 
-<span id="labels"> </span> <span id="LABELS"> </span>레이블 및 LabeledBy
-----------------------------------------------------------------------
+<span id="Accessible_names_from_dynamic_data"/>
+<span id="accessible_names_from_dynamic_data"/>
+<span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
+## Accessible names from dynamic data  
+Windows supports many controls that can be used to display values that come from an associated data source, through a feature known as *data binding*. When you populate lists with data items, you may need to use a technique that sets accessible names for data-bound list items after the initial list is populated. For more info, see "Scenario 4" in the [XAML accessibility sample](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
-레이블을 양식 요소와 연결하는 기본 방법은 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 **x:Name**과 함께 레이블 텍스트에 사용한 다음 양식 요소에서 [**AutomationProperties.LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) 연결된 속성을 설정하여 XAML 이름으로 레이블 지정 **TextBlock**을 참조하는 것입니다. 이 패턴을 사용하는 경우 사용자가 레이블을 클릭하면 포커스가 연결된 컨트롤로 이동하고 보조 기술에서 레이블 텍스트를 양식 필드의 접근성 있는 이름으로 사용할 수 있습니다. 다음은 이 기술을 보여 주는 예입니다.
+<span id="Accessible_names_and_localization"/>
+<span id="accessible_names_and_localization"/>
+<span id="ACCESSIBLE_NAMES_AND_LOCALIZATION"/>
+## Accessible names and localization  
+To make sure that the accessible name is also an element that is localized, you should use correct techniques for storing localizable strings as resources and then referencing the resource connections with [x:Uid directive](https://msdn.microsoft.com/library/windows/apps/Mt204791) values. If the accessible name is coming from an explicitly set [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) usage, make sure that the string there is also localizable.
 
-<span codelanguage="XAML"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code> &lt;StackPanel x:Name=&quot;LayoutRoot&quot; Background=&quot;White&quot;&gt;
-   &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
-     &lt;TextBlock Name=&quot;lbl_FirstName&quot;&gt;First name&lt;/TextBlock&gt;
-     &lt;TextBox
-      AutomationProperties.LabeledBy=&quot;{Binding ElementName=lbl_FirstName}&quot;
-      Name=&quot;tbFirstName&quot; Width=&quot;100&quot;/&gt;
-   &lt;/StackPanel&gt;
-   &lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;
-     &lt;TextBlock Name=&quot;lbl_LastName&quot;&gt;Last name&lt;/TextBlock&gt;
-     &lt;TextBox
-      AutomationProperties.LabeledBy=&quot;{Binding ElementName=lbl_LastName}&quot;
-      Name=&quot;tbLastName&quot; Width=&quot;100&quot;/&gt;
-   &lt;/StackPanel&gt;
- &lt;/StackPanel&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+Note that attached properties such as the [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) properties use a special qualifying syntax for the resource name, so that the resource references the attached property as applied to a specific element. For example, the resource name for [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) as applied to a UI element named `MediumButton` is: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
 
-<span id="accessible_description"> </span> <span id="ACCESSIBLE_DESCRIPTION"> </span>접근성 있는 설명(선택)
--------------------------------------------------------------------------------------------------------------------
-
-접근성 있는 설명은 특정 UI 요소에 대해 추가적인 접근성 정보를 제공합니다. 일반적으로 접근성 있는 이름만으로 요소의 용도를 정확하게 전달할 수 없을 때 접근성 있는 설명을 사용합니다.
-
-내레이터 화면 읽기 프로그램은 사용자가 Caps Lock + F를 눌러 요소에 대한 추가 정보를 요청하는 경우에만 요소의 접근성 있는 설명을 읽습니다.
-
-접근성 있는 이름은 컨트롤의 동작을 완전히 문서화하기 위한 것이 아니라 컨트롤을 식별하기 위한 것입니다. 간략한 설명이 컨트롤을 설명하기에 충분하지 않으면 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 외에 [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765) 연결된 속성을 추가로 설정할 수 있습니다.
-
-<span id="Testing_accessibility_early_and_often"> </span> <span id="testing_accessibility_early_and_often"> </span> <span id="TESTING_ACCESSIBILITY_EARLY_AND_OFTEN"> </span>초기에 자주 접근성 테스트
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-궁극적으로 화면 읽기 프로그램을 지원하는 최고의 접근 방법은 직접 화면 읽기 프로그램을 사용하여 앱을 테스트하는 것입니다. 이 테스트에서는 화면 읽기 프로그램의 작동 방식과 앱에서 누락될 수 있는 기본 접근성 정보를 보여 줍니다. 그에 맞게 UI 또는 UI 자동화 속성을 조정할 수 있습니다. 자세한 내용은 [접근성 테스트](accessibility-testing.md)를 참조하세요.
-
-접근성 테스트에 사용할 수 있는 도구 중 하나는 **AccScope**입니다. 보조 기술에서 앱을 자동화 트리로 보는 방법을 나타내는 UI의 시각적 표현이 표시되기 때문에 **AccScope** 도구는 특히 유용합니다. 특히 내레이터가 앱에서 텍스트를 가져오는 방식 및 UI에서 요소를 구성하는 방식을 확인할 수 있는 내레이터 모드가 있습니다. AccScope는 앱 개발 주기 전체에서, 심지어 예비 디자인 단계 동안에도 유용하게 사용할 수 있도록 설계되었습니다. 자세한 내용은 [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239)를 참조하세요.
-
-<span id="Accessible_names_from_dynamic_data"> </span> <span id="accessible_names_from_dynamic_data"> </span> <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"> </span>동적 데이터의 접근성 있는 이름
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)의 "시나리오 4"를 참조하세요.
-
-<span id="Accessible_names_and_localization"> </span> <span id="accessible_names_and_localization"> </span> <span id="ACCESSIBLE_NAMES_AND_LOCALIZATION"> </span>접근성 있는 이름 및 지역화
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-접근성 있는 이름이 지역화되는 요소도 되도록 하려면 지역화 가능한 문자열을 리소스로 저장한 다음 [x:Uid directive](https://msdn.microsoft.com/library/windows/apps/Mt204791) 값으로 리소스 연결을 참조하는 올바른 기술을 사용해야 합니다. 접근성 있는 이름이 명시적으로 설정된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 사용에서 제공되는 경우 해당 문자열도 지역화할 수 있는지 확인합니다.
-
-[
-            **AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
-
-<span id="related_topics"> </span>관련 항목
------------------------------------------------
-
-* [접근성](accessibility.md)
+<span id="related_topics"/>
+## Related topics  
+* [Accessibility](accessibility.md)
 * [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
-* [접근성 테스트](accessibility-testing.md)
- 
-
- 
-
-
-
-
-
-<!--HONumber=Mar16_HO3-->
-
-
+* [XAML accessibility sample](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [Accessibility testing](accessibility-testing.md)

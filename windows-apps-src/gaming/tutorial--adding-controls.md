@@ -1,47 +1,43 @@
 ---
-title: 컨트롤 추가
-description: 이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다.
+author: mtoepke
+title: Add controls
+description: Now, we take a look at how the game sample implements move-look controls in a 3-D game, and how to develop basic touch, mouse, and game controller controls.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ---
 
-# 컨트롤 추가
+# Add controls
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다.
+Now, we take a look at how the game sample implements move-look controls in a 3-D game, and how to develop basic touch, mouse, and game controller controls.
 
-## 목표
-
-
--   DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임에서 마우스/키보드, 터치 및 Xbox 컨트롤러 컨트롤을 구현합니다.
-
-## UWP 게임 앱 및 컨트롤
+## Objective
 
 
-좋은 UWP 게임은 광범위한 인터페이스를 지원합니다. 플레이어는 실제 단추가 없는 태블릿, Xbox 컨트롤러가 연결된 미디어 PC 또는 고성능 마우스 및 게임용 키보드가 있는 최신 데스크톱 게임 리그에서 Windows 10을 사용할 수 있습니다. 게임 디자인에서 허용하는 경우 실행 중인 게임에서 이러한 장치를 모두 지원해야 합니다.
+-   To implement mouse/keyboard, touch, and Xbox controller controls in a Universal Windows Platform (UWP) game with DirectX.
 
-이 샘플은 세 가지를 모두 지원합니다. 이 게임은 간단한 1인칭 슈팅 게임이며 이 장르를 대표하는 이동-보기 컨트롤은 3가지 입력 형식 모두에서 쉽게 구현할 수 있습니다.
-
-컨트롤 및 특히 이동-보기 컨트롤에 대한 자세한 내용은 [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 및 [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)을 참조하세요.
-
-## 공용 컨트롤 동작
+## UWP game apps and controls
 
 
-터치 컨트롤 및 마우스/키보드 컨트롤의 핵심 구현은 매우 유사합니다. UWP 앱에서 포인터는 화면에 표시되는 점일 뿐입니다. 마우스를 밀거나 터치 스크린에서 손가락을 밀어 이동할 수 있습니다. 따라서 단일 이벤트 집합을 등록할 수 있으며 플레이어가 포인터를 이동하고 누르는 데 마우스를 사용하는지 터치 스크린을 사용하는지에 대해 걱정하지 않아도 됩니다.
+A good UWP game supports a broad variety of interfaces. A potential player might have Windows 10 on a tablet with no physical buttons, or a media PC with an Xbox controller attached, or the latest desktop gaming rig with a high-performance mouse and gaming keyboard. Your game should support all of these devices if the game design allows it.
 
-게임 샘플에서 **MoveLookController** 클래스를 초기화하면 4개의 포인터 관련 이벤트와 1개의 마우스 관련 이벤트를 등록합니다.
+This sample supports all three. It's a simple first-person shooting game, and the move-look controls that are standard for this genre are easily implemented for all three types of input.
 
--   [
-            **CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). 마우스 왼쪽 또는 오른쪽 단추를 누르고 있거나 터치 표면을 터치했습니다.
--   [
-            **CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). 마우스를 이동하거나 터치 표면에서 끌기 작업을 수행했습니다.
--   [
-            **CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). 마우스 왼쪽 단추를 놓았거나 터치 표면에 닿는 개체를 들어 올렸습니다.
--   [
-            **CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). 포인터를 주 창 밖으로 이동했습니다.
--   [
-            **Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). 마우스를 특정 거리만큼 이동했습니다. 마우스 이동 델타 값에만 관심이 있고 현재 x-y 위치는 표시하지 않습니다.
+For more info about controls, and move-look controls specifically, see [Move-look controls for games](tutorial--adding-move-look-controls-to-your-directx-game.md) and [Touch controls for games](tutorial--adding-touch-controls-to-your-directx-game.md).
+
+## Common control behaviors
+
+
+Touch controls and mouse/keyboard controls have a very similar core implementation. In a UWP app, a pointer is simply a point on the screen. You can move it by sliding the mouse or sliding your finger on the touch screen. As a result, you can register for a single set of events, and not worry about whether the player is using a mouse or a touch screen to move and press the pointer.
+
+When the **MoveLookController** class in the game sample is initialized, it registers for four pointer-specific events and one mouse-specific event:
+
+-   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). The left or right mouse button was pressed (and held), or the touch surface was touched.
+-   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). The mouse moved, or a drag action was made on the touch surface.
+-   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). The left mouse button was released, or the object contacting the touch surface was lifted.
+-   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). The pointer moved out of the main window.
+-   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). The mouse moved a certain distance. Be aware that we are only interested in mouse movement delta values, and not the current x-y position.
 
 ```cpp
 void MoveLookController::Initialize(
@@ -78,26 +74,25 @@ void MoveLookController::Initialize(
 }
 ```
 
-Xbox 컨트롤러는 [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) API를 사용하여 별도로 처리됩니다. 게임 컨트롤러 컨트롤의 구현에 대해 잠깐 살펴보겠습니다.
+The Xbox controller is handled separately, using the [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) APIs. We talk about the implementation of game controller controls in a bit.
 
-게임 샘플의 **MoveLookController** 클래스에는 컨트롤 유형에 관계없이 3개의 컨트롤러 관련 상태가 있습니다.
+In the game sample, the **MoveLookController** class has three controller-specific states, regardless of the control type:
 
--   **None**. 컨트롤러의 초기화된 상태입니다. 게임에서 컨트롤러 입력을 예상하지 않습니다.
--   **WaitForInput**. 게임이 일시 중지되어 플레이어가 계속할 때까지 기다리고 있습니다.
--   **Active**. 게임이 실행 중이며 플레이어 입력을 처리하고 있습니다.
+-   **None**. This is the initialized state for the controller. The game is not anticipating any controller input.
+-   **WaitForInput**. The game is paused and is waiting for the player to continue.
+-   **Active**. The game is running, processing player input.
 
-**Active** 상태는 플레이어가 적극적으로 게임을 플레이하는 상태입니다. 이 상태에서는 **MoveLookController** 인스턴스가 사용하도록 설정한 모든 입력 디바이스의 입력 이벤트를 처리하고 집계된 이벤트 데이터에 따라 플레이어의 의도를 해석합니다. 따라서 플레이어 보기에서 속도 및 보기 방향(평면 법선 보기)을 업데이트하고 게임 루프에서 업데이트가 호출된 후 업데이트된 데이터를 게임과 공유합니다.
+The **Active** state is the state when the player is actively playing the game. During this state, the **MoveLookController** instance is processing input events from all enabled input devices and interpreting the player's intentions based on the aggregated event data. As a result, it updates the velocity and look direction (the view plane normal) of the player's view and shares the updated data with the game after Update is called from the game loop.
 
-플레이어는 동시에 둘 이상의 작업을 수행할 수 있습니다. 예를 들어 카메라를 이동하면서 구를 실행할 수 있습니다. 이러한 입력은 모두 **Active** 상태에서 추적되며 포인터 작업에 따라 다른 포인터 ID를 사용합니다. 플레이어 관점에서 보면 실행 사각형의 포인터 이벤트가 이동 사각형이나 나머지 화면에 있는 포인터 이벤트와 다르기 때문에 이 작업이 필요합니다.
+Be aware that the player can take more than one action at the same time. For example, he or she could be firing spheres while moving the camera. All of these inputs are tracked in the **Active** state, with different pointer IDs corresponding to different pointer actions. This is necessary because from a player's perspective, a pointer event in the firing rectangle is different from one in the move rectangle or in the rest of the screen.
 
-[
-            **PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) 이벤트를 받으면 **MoveLookController**는 창에서 만든 포인터 ID 값을 가져옵니다. 포인터 ID는 특정 유형의 입력을 나타냅니다. 예를 들어 멀티 터치 장치에는 여러 가지 다른 활성 입력이 동시에 있을 수 있습니다. 이 ID는 플레이어가 사용하는 입력을 추적하는 데 사용됩니다. 한 이벤트가 터치 스크린의 이동 사각형에 있으면 포인터 ID가 할당되어 이동 사각형의 포인터 이벤트를 추적합니다. 실행 사각형의 다른 포인터 이벤트는 별도의 포인터 ID를 사용하여 별도로 추적됩니다. 이 부분에 대해서는 터치 컨트롤에 대한 섹션에서 좀더 자세히 살펴보겠습니다.
+When a [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) event is received, the **MoveLookController** obtains the pointer ID value created by the window. The pointer ID represents a specific type of input. For example, on a multi-touch device, there may be several different active inputs at the same time. The IDs are used to keep track of which input the player is using. If one event is in the move rectangle of the touch screen, a pointer ID is assigned to track any pointer events in move rectangle. Other pointer events in the fire rectangle are tracked separately, with a separate pointer ID. (We talk about this some more in the section on touch controls.)
 
-마우스 입력에는 또 다른 ID가 할당되며 별도로 처리됩니다.
+Input from the mouse has yet another ID and is also handled separately.
 
-포인터 이벤트를 특정 게임 작업에 매핑했으면 이제 **MoveLookController** 개체가 주 게임 루프와 공유하는 데이터를 업데이트합니다.
+After the pointer events have been mapped to a specific game action, it's time to update the data the **MoveLookController** object shares with the main game loop.
 
-게임 샘플에서 **Update** 메서드를 호출하면 입력을 처리하고 속도 및 보기 방향 변수(**m\_velocity** 및 **m\_lookdirection**)를 업데이트합니다. 그런 다음 게임 루프에서 public **Velocity** 및 **LookDirection** 메서드를 **MoveLookController** 인스턴스에서 호출하여 검색합니다.
+When called, the **Update** method in the game sample processes the input and updates the velocity and look direction variables (**m\_velocity** and **m\_lookdirection**), which the game loop then retrieves by calling the public **Velocity** and **LookDirection** methods on the **MoveLookController** instance.
 
 ```cpp
 void MoveLookController::Update()
@@ -172,7 +167,7 @@ void MoveLookController::Update()
 }
 ```
 
-게임 루프에서 **IsFiring** 메서드를 **MoveLookController** 인스턴스에서 호출하면 플레이어가 실행 중인지 테스트하여 확인할 수 있습니다. **MoveLookController**는 플레이어가 세 개의 입력 유형 중 하나에서 실행 단추를 눌렀는지 확인합니다.
+The game loop can test to see if the player is firing by calling the **IsFiring** method on the **MoveLookController** instance. The **MoveLookController** checks to see if the player has pressed the fire button on one of the three input types.
 
 ```cpp
 bool MoveLookController::IsFiring()
@@ -196,18 +191,18 @@ bool MoveLookController::IsFiring()
 }
 ```
 
-플레이어가 게임의 주 창 외부로 포인터를 이동하거나 일시 중지 단추(P 키 또는 Xbox 컨트롤러 시작 단추)를 누르면 게임이 일시 중지되어야 합니다. **MoveLookController**에 누르기가 등록되었으면 **IsPauseRequested** 메서드가 호출될 때 게임 루프에 알립니다. 이때 **IsPauseRequested**에서 **true**를 반환하면 게임 루프에서 **MoveLookController**의 **WaitForPress**를 호출하여 컨트롤러를 **WaitForInput** 상태로 전환합니다. 그러면 **MoveLookController**는 플레이어가 로드할 메뉴 항목 중 하나를 선택할 때까지 기다리거나 게임을 종료하고 **Active** 상태로 돌아갈 때까지 게임 플레이 입력 이벤트 처리를 중지합니다.
+If the player moves the pointer outside the main window of the game, or presses the pause button (the P key or the Xbox controller start button), the game must be paused. The **MoveLookController** registered the press, and informs the game loop when it calls the **IsPauseRequested** method. At that point, if **IsPauseRequested** returns **true**, the game loop then calls **WaitForPress** on the **MoveLookController** to move the controller into the **WaitForInput** state. Then, the **MoveLookController** waits for the player to select one of the menu items to load, continue, or exit the game, and stop processing gameplay input events until it returns to the **Active** state.
 
-[이 섹션의 전체 코드 샘플](#code_sample)을 참조하세요.
+See the [complete code sample for this section](#code_sample).
 
-이제 세 가지 컨트롤 유형의 구현에 대해 좀더 자세히 살펴보겠습니다.
+Now, let's look at the implementation of each of the three control types in a little more detail.
 
-## 상대 마우스 컨트롤 구현
+## Implementing relative mouse controls
 
 
-마우스 이동이 감지되면 해당 이동을 사용하여 카메라의 새 피치와 요를 결정하려고 합니다. 이를 위해 상대 마우스 컨트롤을 구현합니다. 여기서는 이동의 절대 x-y 픽셀 좌표 기록과 반대로 마우스가 이동한 상태 거리(이동의 시작과 정지 사이의 델타)를 처리합니다.
+If mouse movement is detected, we want use that movement to determine the new pitch and yaw of the camera. We do that by implementing relative mouse controls, where we handle the relative distance the mouse has moved—the delta between the start of the movement and the stop—as opposed to recording the absolute x-y pixel coordinates of the motion.
 
-이를 구현하기 위해 [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) 이벤트에서 반환된 [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) 인수 개체의 [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) 및 **MouseDelta::Y** 필드를 검토하여 X(가로 이동) 및 Y(세로 이동) 좌표의 변경을 확인합니다.
+To do that, we obtain the changes in the X (the horizontal motion) and the Y (the vertical motion) coordinates by examining the [**MouseDelta::X**](https://msdn.microsoft.com/library/windows/apps/hh758353) and **MouseDelta::Y** fields on the [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://msdn.microsoft.com/library/windows/apps/hh758358) argument object returned by the [**MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356) event.
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -251,12 +246,12 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## 터치 컨트롤 구현
+## Implementing touch controls
 
 
-터치 컨트롤은 가장 복잡하고 적용하려면 가장 많은 미세 조정 작업을 수행해야 하므로 개발이 가장 까다롭습니다. 게임 샘플에서 화면의 오른쪽 아래 사분면에 있는 사각형은 방향 패드로 사용됩니다. 이 공간의 왼쪽과 오른쪽으로 엄지 손가락을 밀면 카메라가 왼쪽과 오른쪽으로 밀리고 위쪽과 아래쪽으로 밀면 카메라가 앞뒤로 이동합니다. 화면의 오른쪽 아래 사분면에 있는 사각형을 누르면 구를 실행할 수 있습니다. 목표(피치 및 요)는 이동 및 실행에 예약되지 않은 화면 부분에서 손가락을 밀어 제어합니다. 손가락을 이동하면 고정된 십자 모양이 있는 카메라도 이동합니다.
+Touch controls are the trickiest to develop, because they are the most complex and require the most fine-tuning to be effective. In the game sample, a rectangle in the lower left quadrant of the screen is used as a directional pad, where sliding your thumb left and right in this space slides the camera left and right, and sliding your thumb up and down moves the camera forward and backward. A rectangle in the lower right quadrant of the screen can be pressed to fire the spheres. Aiming (pitch and yaw) are controlled by sliding your finger on the parts of the screen not reserved for moving and firing; as your finger moves, the camera (with fixed cross hairs) moves similarly.
 
-이동 및 실행 사각형은 샘플 코드의 두 메서드를 사용하여 만듭니다.
+The move and fire rectangles are created by two methods in the sample code:
 
 ```cpp
 void SetMoveRect(
@@ -269,9 +264,9 @@ void SetMoveRect(
         );
 ```
 
-화면의 다른 영역에 대한 터치 장치 포인터 이벤트는 보기 명령처럼 처리합니다. 화면의 크기를 조정하는 경우 이러한 사각형도 다시 계산하고 다시 그려야 합니다.
+We treat touch device pointer events for the other regions of the screen as look commands. If the screen is resized, these rectangles must be computed again (and redrawn).
 
-이러한 영역 중 하나에서 터치 디바이스 포인터 이벤트가 발생하고 게임 상태가 **Active**로 설정되어 있으면 앞에서 설명한 대로 포인터 ID가 할당됩니다.
+If a touch device pointer event is raised in one of these regions and the game state is set to **Active**, it's assigned a pointer ID, as we discussed earlier.
 
 ```cpp
 void MoveLookController::OnPointerPressed(
@@ -351,9 +346,9 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-세 가지 제어 영역인 이동 사각형, 발생 사각형 또는 나머지 화면(보기 컨트롤) 중 하나에서 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) 이벤트가 발생하면 **MoveLookController**는 이벤트가 발생한 화면 영역에 해당하는 특정 변수로 이벤트를 발생시킨 포인터에 대해 포인터 ID를 할당합니다. 예를 들어 이동 사각형에서 이벤트가 발생한 경우 **m\_movePointerID** 변수는 이벤트를 발생시킨 포인터 ID로 설정됩니다. 부울 "in use" 변수(이 예제의 **m\_lookInUse**)도 제어가 아직 해제되지 않았음을 나타내도록 설정됩니다.
+If a [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) event has occurred in one of the three control regions, the move rectangle, the fire rectangle, or the rest of the screen (the look control), the **MoveLookController** assigns the pointer ID for the pointer that fired the event to a specific variable that corresponds to the region of the screen the event was fired in. For example, if the event occurred in the move rectangle, the **m\_movePointerID** variable is set to the pointer ID that fired the event. A Boolean "in use" variable (**m\_lookInUse**, in the example) is also set to indicate that the control has not been released yet.
 
-이제 게임 샘플에서 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
+Now, let's look at how the game sample handles the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) touch screen event.
 
 ```cpp
 void MoveLookController::OnPointerMoved(
@@ -411,14 +406,12 @@ void MoveLookController::OnPointerMoved(
 }
 ```
 
-**MoveLookController**는 포인터 ID를 검사하여 이벤트가 발생한 위치를 확인하고 다음 작업 중 하나를 수행합니다.
+The **MoveLookController** checks the pointer ID to determine where the event occurred, and takes one of the following actions:
 
--   [
-            **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가이동 또는 발생 사각형에서 발생한 경우 컨트롤러의 포인터 위치를 업데이트합니다.
--   [
-            **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가 화면의 나머지 영역에서 발생한 경우(보기 컨트롤로 정의됨) 보기 방향 벡터의 피치와 요 변화를 계산합니다.
+-   If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred in the move or fire rectangle, update the pointer position for the controller.
+-   If the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event occurred somewhere in the rest of the screen (defined as the look controls), calculate the change in pitch and yaw of the look direction vector.
 
-마지막으로 게임 샘플에서 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
+Lastly, let's look at how the game sample handles the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) touch screen event.
 
 ```cpp
 void MoveLookController::OnPointerReleased(
@@ -468,24 +461,23 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-[
-            **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트를 발생시킨 포인터의 ID가 이전에 기록된 이동 포인터의 ID이면 플레이어가 이동 사각형 터치를 중지했기 때문에 **MoveLookController**에서 속도를 0으로 설정합니다. 속도를 0으로 설정하지 않으면 플레이어가 계속 이동하게 됩니다. 몇 가지 관성 형식을 구현하려면 향후 게임 루프에서 **Update**를 호출할 때 속도를 0으로 반환하는 메서드를 여기에서 추가합니다.
+If the ID of the pointer that fired the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) event is the ID of the previously recorded move pointer, the **MoveLookController** sets the velocity to 0 because the player has stopped touching the move rectangle. If it didn't set the velocity to 0, the player would keep moving! If you want to implement some form of inertia, this is where you add the method that begins returning the velocity to 0 over future calls to **Update** from the game loop.
 
-그렇지 않으면 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트가 실행 사각형이나 보기 영역에서 발생한 경우 **MoveLookController**에서 특정 포인터 ID를 재설정합니다.
+Otherwise, if the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) event fired in the fire rectangle or the look region, the **MoveLookController** resets the specific pointer IDs.
 
-이는 게임 샘플에서 터치 스크린 컨트롤이 구현되는 방식의 기본입니다. 이제 마우스 및 키보드 컨트롤을 살펴보겠습니다.
+That's the basics of how touch screen controls are implemented in the game sample. Let's move on to mouse and keyboard controls.
 
-## 마우스 및 키보드 컨트롤 구현
+## Implementing mouse and keyboard controls
 
 
-게임 샘플에서는 다음과 같은 마우스 및 키보드 컨트롤을 구현합니다.
+The game sample implements these mouse and keyboard controls:
 
--   W, S, A 및 D 키는 각각 플레이어 보기를 앞, 뒤, 왼쪽 및 오른쪽으로 이동합니다. X와 스페이스 바를 누르면 각각 보기가 위와 아래로 이동합니다.
--   P 키를 눌러 게임을 일시 중지합니다.
--   마우스를 이동하면 플레이어가 카메라의 회전(피치 및 요)을 제어할 수 있습니다.
--   마우스 왼쪽을 클릭하여 구를 실행합니다.
+-   The W, S, A, and D keys move the player view forward, backward, left, and right, respectively. Pressing X and the space bar move the view up and down, respectively.
+-   Pressing the P key pauses the game.
+-   Moving the mouse puts the player in control of the rotation (the pitch and yaw) of the camera view.
+-   Clicking the left button fires a sphere.
 
-키보드를 사용하려면 게임 샘플에서 두 개의 추가 이벤트인 [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) 및 [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270) 이벤트를 등록합니다. 이러한 이벤트는 각각 키 누르기와 놓기를 처리합니다.
+To use the keyboard, the game sample registers for two extra events: [**CoreWindow::KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271) and [**CoreWindow::KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270), which handle the press and the release of a key, respectively.
 
 ```cpp
 window->KeyDown +=
@@ -495,7 +487,7 @@ window->KeyUp +=
         ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &MoveLookController::OnKeyUp);
 ```
 
-마우스는 포인터를 사용하지만 터치 컨트롤과 약간 다르게 처리됩니다. 분명히 이동 및 실행 사각형을 사용하지 않지만 플레이어가 사용하기에 번거롭기 때문입니다. 어떻게 하면 이동 및 실행 컨트롤을 동시에 누를 수 있을까요? 앞에서 설명한 대로 **MoveLookController** 컨트롤러는 마우스가 이동할 때마다 보기 컨트롤을 사용하고 마우스 왼쪽 단추를 누를 때 실행 컨트롤을 사용합니다.
+The mouse is treated a little differently from the touch controls, even though it uses a pointer. Obviously, it doesn't use the move and fire rectangles, as that would be very cumbersome for the player: how could they press the move and fire controls at the same time? As noted earlier, the **MoveLookController** controller engages the look controls whenever the mouse is moved, and engages the fire controls when the left mouse button is pressed, as shown here.
 
 ```cpp
 void MoveLookController::OnPointerPressed(
@@ -606,7 +598,7 @@ void MoveLookController::OnPointerPressed(
 }
 ```
 
-이제 게임 샘플에서 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 마우스 이벤트를 처리하는 방법을 살펴보겠습니다.
+Now, let's look at how the game sample handles the [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) mouse event.
 
 ```cpp
 void MoveLookController::OnPointerReleased(
@@ -664,16 +656,16 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-플레이어가 마우스 단추 누르기를 중지하면 입력이 완료되고 구가 실행을 중지합니다. 그러나 보기는 항상 사용되므로 게임에서 동일한 마우스 포인터를 계속 사용하여 진행 중인 보기 이벤트를 추적합니다.
+When the player stops pressing one of the mouse buttons, the input is complete: the spheres stop firing. But, because look is always enabled, the game continues to use the same mouse pointer to track the ongoing look events.
 
-이제 마지막 컨트롤 유형인 Xbox 컨트롤러를 살펴보겠습니다. 이 컨트롤은 포인터 개체를 사용하지 않으므로 터치 및 마우스 컨트롤과 별개로 처리됩니다.
+Now, let's look at the last of control types: the Xbox controller. It's handled separately from the touch and mouse controls, because it doesn't use the pointer object.
 
-## Xbox 컨트롤러 컨트롤 구현
+## Implementing Xbox controller controls
 
 
-게임 샘플에서 Xbox 컨트롤러 지원은 게임 컨트롤러에 대한 프로그래밍을 간소화하기 위해 설계된 API 집합인 [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) API 호출을 통해 추가됩니다. 게임 샘플에서는 플레이어 이동에 Xbox 컨트롤러의 왼쪽 아날로그 스틱을 사용하고, 보기 컨트롤에는 오른쪽 아날로그 스틱을, 실행에는 오른쪽 트리거를 사용합니다. 시작 단추를 사용하여 게임을 일시 중지하고 다시 시작합니다.
+In the game sample, Xbox controller support is added by calls to the [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) APIs, which are set of APIs designed to simplify programming for game controllers. In the game sample, we use the Xbox controller's left analog stick for player movement, the right analog stick for the look controls, and the right trigger to fire. We use the start button to pause and resume the game.
 
-**MoveLookController** 인스턴스의 **Update**메서드에서 게임 컨트롤러가 연결되어 있는지 바로 확인한 다음 컨트롤러 상태를 확인합니다.
+The **Update** method on the **MoveLookController** instance immediately checks to see if a game controller is connected, and then checks the controller state.
 
 ```cpp
 void MoveLookController::UpdateGameController()
@@ -801,20 +793,20 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-게임 컨트롤러가 **Active** 상태이면 이 메서드는 사용자가 왼쪽 아날로그 스틱을 특정 방향으로 이동했는지 확인합니다. 그러나 스틱의 특정 방향 이동은 데드존의 반경보다 더 크게 등록되어야 하며 그렇지 않으면 아무 동작도 수행되지 않습니다. 이 데드존 반경은 플레이어의 엄지 손가락이 스틱 위에 있을 때 컨트롤러가 이 손가락으로부터 순간 이동을 선택하는 경우를 나타내는 "드리프트"를 제공하는 데 필요합니다. 이 데드존이 없으면 컨트롤이 매우 까다롭게 느껴질 수 있으므로 플레이어는 금방 곤란을 느낄 수 있습니다.
+If the game controller is in the **Active** state, this method checks to see if a user moved the left analog stick in a specific direction. But the movement on the stick in a specific direction must register as larger than the radius of the dead zone; otherwise, nothing will happen. This dead zone radius is necessary to present "drifting," which is when the controller picks up minute movements from the player's thumb as it rests on the stick. If we don't have this dead zone, the player can get annoyed very quickly, as the controls feel very fidgety.
 
-그런 다음 **Update** 메서드는 오른쪽 스틱에서 동일한 확인을 수행하여 스틱의 이동이 다른 데드존 반경보다 긴 경우 카메라가 보는 방향을 플레이어가 변경했는지 확인합니다.
+The **Update** method then performs the same check on the right stick, to see if the player has changed the direction the camera is looking, as long as the movement on the stick is longer than another dead zone radius.
 
-**Update**에서 새 피치 및 요를 계산하고 사용자가 오른쪽 아날로그 트리거인 실행 단추를 눌렀는지 확인합니다.
+**Update** computes the new pitch and yaw, and then checks to see if the user pressed the right analog trigger, our fire button.
 
-이 샘플에서 전체 컨트롤 옵션 집합을 구현하는 방법입니다. 또한 좋은 UWP 앱은 광범위한 컨트롤 옵션을 지원하므로 다른 폼 팩터 및 장치를 사용하는 플레이어가 원하는 방식으로 플레이할 수 있습니다.
+And that's how this sample implements a full set of control options. Again, remember that a good UWP app supports a range of control options, so players with different form factors and devices can play in the way they prefer!
 
-## 다음 단계
+## Next steps
 
 
-지금까지 오디오를 제외하고 UWP DirectX 게임의 주요 구성 요소를 모두 검토했습니다. 음악과 사운드 효과는 게임에서 중요하므로 [사운드 추가](tutorial--adding-sound.md)에 대해 살펴보겠습니다.
+We've reviewed every major component of a UWP DirectX game except one: audio! Music and sound effects are important to any game, so let's discuss [adding sound](tutorial--adding-sound.md)!
 
-## 이 섹션에 대한 전체 샘플 코드
+## Complete sample code for this section
 
 
 MoveLookController.h
@@ -1904,25 +1896,20 @@ void MoveLookController::UpdateGameController()
 }
 ```
 
-> **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **Note**  
+This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
-## 관련 항목
-
-
-[DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
-
- 
-
- 
+## Related topics
 
 
+[Create a simple UWP game with DirectX](tutorial--create-your-first-metro-style-directx-game.md)
+
+ 
+
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

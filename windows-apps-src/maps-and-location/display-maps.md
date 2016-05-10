@@ -1,31 +1,30 @@
 ---
-title: '2D, 3D 및 Streetside 뷰가 있는 지도 표시'
-description: MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다.
+author: PatrickFarley
+title: 'Display maps with 2D, 3D, and Streetside views'
+description: Display customizable maps in your app by using the MapControl class. This topic also introduces aerial 3D and Streetside views.
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
 ---
 
-# 2D, 3D 및 Streetside 뷰가 있는 지도 표시
+# Display maps with 2D, 3D, and Streetside views
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다.
+Display customizable maps in your app by using the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) class. This topic also introduces aerial 3D and Streetside views.
 
-**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
+**Tip** To learn more about using maps in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## 지도 컨트롤을 앱에 추가합니다.
+## Add the map control to your app
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 추가하여 XAML 페이지에 지도를 표시합니다. **MapControl**을 사용하려면 XAML 페이지 또는 코드에서 [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) 네임스페이스를 선언해야 합니다. 도구 상자에서 이 컨트롤을 끌면 이 네임스페이스 선언이 자동으로 추가됩니다. **MapControl**을 XAML 페이지에 수동으로 추가할 경우 페이지 맨 위에 네임스페이스 선언을 수동으로 추가해야 합니다.
+Display a map on a XAML page by adding a [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). To use the **MapControl**, you must declare the [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) namespace in the XAML page or in your code. If you drag the control from the Toolbox, this namespace declaration is added automatically. If you add the **MapControl** to the XAML page manually, you must add the namespace declaration manually at the top of the page.
 
-다음 예제에서는 기본 지도 컨트롤을 표시하며, 터치식 입력을 허용하는 것 외에 확대/축소 및 이동(상하) 컨트롤을 표시하도록 지도를 구성합니다. 지도의 모양을 사용자 지정하는 방법에 대한 자세한 내용은 [지도 구성](#mapconfig)을 참조하세요.
+The following example displays a basic map control and configures the map to display the zoom and tilt controls in addition to accepting touch inputs. For more info about customizing the appearance of the map, see [Configure the map](#mapconfig).
 
-```xaml
+```xml
 <Page
     x:Class="MapsAndLocation1.DisplayMaps"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -48,7 +47,7 @@ ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
 </Page>
 ```
 
-코드에 지도 컨트롤을 추가할 경우 코드 파일의 맨 위에 네임스페이스를 수동으로 선언해야 합니다.
+If you add the map control in your code, you must declare the namespace manually at the top of the code file.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -62,20 +61,19 @@ MapControl2.MapServiceToken = "EnterYourAuthenticationKeyHere";
 pageGrid.Children.Add(MapControl2);
 ```
 
-## 지도 인증 키 얻기 및 설정
+## Get and set a maps authentication key
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 지도 인증 키를 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성 값으로 지정해야 합니다. 위 예제에서 `EnterYourAuthenticationKeyHere`을 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 가져온 키로 바꿉니다. 지도 인증 키를 지정할 때까지 텍스트 **경고: MapServiceToken이 지정되지 않음**이 컨트롤 아래에 계속 표시됩니다. 지도 인증 키를 얻고 설정하는 방법에 대한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+Before you can use [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) and map services, you must specify the maps authentication key as the value of the [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) property. In the previous examples, replace `EnterYourAuthenticationKeyHere` with the key you get from the [Bing Maps Developer Center](https://www.bingmapsportal.com/). The text **Warning: MapServiceToken not specified** continues to appear below the control until you specify the maps authentication key. For more info about getting and setting a maps authentication key, see [Request a maps authentication key](authentication-key.md).
 
-## 지도의 시작 위치 설정
+## Set a starting location for the map
 
 
-코드에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) 속성을 지정하거나 XAML 태그에서 속성을 바인딩하여 지도에 표시할 위치를 지정합니다. 다음 예에서는 시애틀시를 중심으로 하여 지도를 표시합니다.
+Set the location to display on the map by specifying the [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) property of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) in your code or by binding the property in your XAML markup. The following example displays a map with the city of Seattle as its center.
 
-**팁** 문자열을 [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675)로 변환할 수 없으므로 데이터 바인딩을 사용하지 않을 경우 XAML 태그에서 [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) 속성 값을 지정할 수 없습니다. 이 제한 사항은 [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264) 연결된 속성에도 적용됩니다.
+**Tip**  Since a string can't be converted to a [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), you can't specify a value for the [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) property in XAML markup unless you use data binding. (This limitation also applies to the [**MapControl.Location**](https://msdn.microsoft.com/library/windows/apps/dn653264) attached property.)
 
- 
+ 
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -91,15 +89,14 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-![지도 컨트롤의 예](images/displaymapsexample1.png)
+![an example of the map control.](images/displaymapsexample1.png)
 
-## 지도의 현재 위치 설정
+## Set the current location of the map
 
 
-앱이 사용자 위치에 액세스할 수 있으려면 먼저 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 호출해야 합니다. 이때 앱이 포그라운드에 있어야 하고 **RequestAccessAsync**이(가) UI 스레드에서 호출되어야 합니다. 사용자가 자신의 위치에 대한 권한을 앱에 부여하기 전에는 앱이 위치 데이터에 액세스할 수 없습니다.
+Before your app can access the user’s location, your app must call the [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) method. At that time, your app must be in the foreground and **RequestAccessAsync** must be called from the UI thread. Until the user grants your app permission to their location, your app can't access location data.
 
-[
-            **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 클래스의 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 메서드를 사용하여 장치의 현재 위치를 가져옵니다(위치를 사용할 수 없는 경우). 해당 [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675)를 가져오려면 지리적 위치의 지리적 좌표에 대한 [**Point**](https://msdn.microsoft.com/library/windows/apps/dn263665) 속성을 사용합니다. 자세한 내용은 [현재 위치 가져오기](get-location.md)를 참조하세요.
+Get the current location of the device (if location is available) by using the [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) method of the [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) class. To obtain the corresponding [**Geopoint**](https://msdn.microsoft.com/library/windows/apps/dn263675), use the [**Point**](https://msdn.microsoft.com/library/windows/apps/dn263665) property of the geoposition's geocoordinate. For more info, see [Get current location](get-location.md).
 
 ```csharp
 // Set your current location.
@@ -129,82 +126,65 @@ switch (accessStatus)
 }
 ```
 
-지도에 장치 위치를 표시할 때는 그래픽을 표시하고 위치 데이터의 정확도에 따라 확대/축소 수준을 설정하는 것이 좋습니다. 자세한 내용은 [위치 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)을 참조하세요.
+When you display your device's location on a map, consider displaying graphics and setting the zoom level based on the accuracy of the location data. For more info, see [Guidelines for location-aware apps](https://msdn.microsoft.com/library/windows/apps/hh465148).
 
-## 지도의 위치 변경
-
-
-2D 지도에 표시된 위치를 변경하려면 [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060) 메서드의 오버로드 중 하나를 호출합니다. 이 메서드를 사용하여 [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) 및 [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044)에 대한 새 값을 지정할 수 있습니다. 또한 [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) 열거형에서 상수를 제공하여 보기가 변경될 때 사용할 애니메이션(옵션)을 지정할 수도 있습니다.
-
-3D 지도의 위치를 변경하려면 대신 [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) 메서드를 사용합니다. 자세한 내용은 [3D 뷰 표시](#display3d)를 참조하세요.
-
-[
-            **TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) 메서드를 호출하여 지도에 [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949)의 콘텐츠를 표시합니다. 예를 들어 이 메서드를 사용하여 지도에 경로 또는 경로의 일부를 표시합니다. 자세한 내용은 [지도에 경로 및 길 찾기 표시](routes-and-directions.md)를 참조하세요.
-
-## 디스크 구성
+## Change the location of the map
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 속성 값을 설정하여 지도와 모양을 구성합니다.
+To change the location that appears in a 2D map, call one of the overloads of the [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060) method. Use that method to specify new values for [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019), and [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044). You can also specify an optional animation to use when the view changes by providing a constant from the [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) enumeration.
 
-**지도 설정**
+To change the location of a 3D map, use the [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) method instead. For more info, see [Display 3D views](#display3d).
 
--   [
-            **Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) 속성을 설정하여 지도의 **center**를 지리적 지점으로 설정합니다.
--   [
-            **ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) 속성을 1과 20 사이의 값으로 설정하여 지도의 **zoom level**을 설정합니다.
--   [
-            **Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) 속성을 설정하여 지도의 **rotation**을 설정합니다. 여기서 0 또는 360도 = North, 90 = East, 180 = South 및 270 = West입니다.
--   [
-            **DesiredPitch**](https://msdn.microsoft.com/library/windows/apps/dn637012) 속성을 0도에서 65도 사이의 값으로 설정하여 지도의 **tilt**를 설정합니다.
+Call the [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) method to display the contents of a [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949) on the map. Use this method, for example, to display a route or a portion of a route on the map. For more info, see [Display routes and directions on a map](routes-and-directions.md).
 
-**지도 모양**
-
--   [
-            **MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127) 상수 중 하나로 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) 속성을 설정하여 지도의 **type**(예를 들면 도로 지도나 항공 지도)을 지정합니다.
--   [
-            **ColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637010) 속성을 [**MapColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637003) 상수 중 하나로 설정하여 지도의 **color scheme**을 밝게 또는 어둡게 설정합니다.
-
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 속성에 대한 값을 설정하여 지도에 정보를 표시합니다.
-
--   [
-            **LandmarksVisible**](https://msdn.microsoft.com/library/windows/apps/dn637023) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **buildings and landmarks**를 표시합니다.
--   [
-            **PedestrianFeaturesVisible**](https://msdn.microsoft.com/library/windows/apps/dn637042) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **pedestrian features**을 표시합니다.
--   [
-            **TrafficFlowVisible**](https://msdn.microsoft.com/library/windows/apps/dn637055) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **traffic**을 표시합니다.
--   [
-            **WatermarkMode**](https://msdn.microsoft.com/library/windows/apps/dn637066) 속성을 [**MapWatermarkMode**](https://msdn.microsoft.com/library/windows/apps/dn610749) 상수 중 하나로 설정하여 **watermark**를 지도에 표시할지 여부를 지정합니다.
--   [
-            **MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122)를 지도 컨트롤의 [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) 컬렉션에 추가하여 지도에 **driving or walking route**를 표시합니다. 자세한 내용과 예제는 [지도에 경로 및 길 찾기 표시](routes-and-directions.md)를 참조하세요.
-
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)에서 고정핀, 셰이프 및 XAML 컨트롤을 표시하는 방법에 대한 자세한 내용은 [지도에 POI(안내 표시) 표시](display-poi.md)를 참조하세요.
-
-## Streetside 뷰 표시
+## Configure the map
 
 
-Streetside 뷰는 지도 컨트롤의 맨 위에 표시되는 위치의 거리 수준 관점입니다.
+Configure the map and its appearance by setting the values of the following properties of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-![지도 컨트롤의 Streetside 뷰 예](images/onlystreetside-730width.png)
+**Map settings**
 
-Streetside 뷰의 "내부" 환경이 원래 지도 컨트롤에 표시된 지도와 구분되는 것으로 간주하세요. 예를 들어 Streetside 뷰의 위치를 변경한 경우 Streetside 뷰 "아래"에 있는 지도의 위치나 모양은 변경되지 않습니다. 컨트롤의 오른쪽 위에 있는 **X**를 클릭하여 Streetside 뷰를 닫은 후에도 원래 지도는 변경되지 않은 상태로 유지됩니다.
+-   Set the **center** of the map to a geographic point by setting the [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005) property.
+-   Set the **zoom level** of the map by setting the [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) property to a value between 1 and 20.
+-   Set the **rotation** of the map by setting the [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) property, where 0 or 360 degrees = North, 90 = East, 180 = South, and 270 = West.
+-   Set the **tilt** of the map by setting the [**DesiredPitch**](https://msdn.microsoft.com/library/windows/apps/dn637012) property to a value between 0 and 65 degrees.
 
-Streetside 뷰를 표시하려면
+**Map appearance**
 
-1.  [
-            **IsStreetsideSupported**](https://msdn.microsoft.com/library/windows/apps/dn974271)를 클릭하여 Streetside 뷰가 장치에서 지원되는지 확인합니다.
-2.  Streetside 뷰가 지원되는 경우 [**FindNearbyAsync**](https://msdn.microsoft.com/library/windows/apps/dn974361)를 호출하여 지정된 위치 근처에 [**StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360)를 만듭니다.
-3.  [
-            **StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360)가 null이 아닌지 확인하여 주변 파노라마가 있는지 확인합니다.
-4.  주변 파노라마가 있는 경우 지도 컨트롤의 [**CustomExperience**](https://msdn.microsoft.com/library/windows/apps/dn974263) 속성에 대한 [**StreetsideExperience**](https://msdn.microsoft.com/library/windows/apps/dn974356)를 만듭니다.
+-   Specify the **type** of map - for example, a road map or an aerial map - by setting the [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) property with one of the [**MapStyle**](https://msdn.microsoft.com/library/windows/apps/dn637127) constants.
+-   Set the **color scheme** of the map to light or dark by setting the [**ColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637010) property with one of the [**MapColorScheme**](https://msdn.microsoft.com/library/windows/apps/dn637003) constants.
 
-이 예제에서는 이전 이미지와 유사한 Streetside 뷰를 표시하는 방법을 보여 줍니다.
+Show information on the map by setting the values of the following properties of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
-**참고** 지도 컨트롤이 지나치게 작으면 개요 지도가 표시되지 않습니다.
+-   Display **buildings and landmarks** on the map by enabling or disabling the [**LandmarksVisible**](https://msdn.microsoft.com/library/windows/apps/dn637023) property.
+-   Display **pedestrian features** such as public stairs on the map by enabling or disabling the [**PedestrianFeaturesVisible**](https://msdn.microsoft.com/library/windows/apps/dn637042) property.
+-   Display **traffic** on the map by enabling or disabling the [**TrafficFlowVisible**](https://msdn.microsoft.com/library/windows/apps/dn637055) property.
+-   Specify whether the **watermark** is displayed on the map by setting the [**WatermarkMode**](https://msdn.microsoft.com/library/windows/apps/dn637066) property to one of the [**MapWatermarkMode**](https://msdn.microsoft.com/library/windows/apps/dn610749) constants.
+-   Display a **driving or walking route** on the map by adding a [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) to the [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) collection of the Map control. For more info and an example, see [Display routes and directions on a map](routes-and-directions.md).
 
- 
+For info about how to display pushpins, shapes, and XAML controls in the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004), see [Display points of interest (POI) on a map](display-poi.md).
+
+## Display Streetside views
+
+
+A Streetside view is a street-level perspective of a location that appears on top of the map control.
+
+![an example of a streetside view of the map control.](images/onlystreetside-730width.png)
+
+Consider the experience "inside" the Streetside view separate from the map originally displayed in the map control. For example, changing the location in the Streetside view does not change the location or appearance of the map "under" the Streetside view. After you close the Streetside view (by clicking the **X** in the upper right corner of the control), the original map remains unchanged.
+
+To display a Streetside view
+
+1.  Determine if Streetside views are supported on the device by checking [**IsStreetsideSupported**](https://msdn.microsoft.com/library/windows/apps/dn974271).
+2.  If Streetside view is supported, create a [**StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360) near the specified location by calling [**FindNearbyAsync**](https://msdn.microsoft.com/library/windows/apps/dn974361).
+3.  Determine if a nearby panorama was found by checking if the [**StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360) is not null
+4.  If a nearby panorama was found, create a [**StreetsideExperience**](https://msdn.microsoft.com/library/windows/apps/dn974356) for the map control's [**CustomExperience**](https://msdn.microsoft.com/library/windows/apps/dn974263) property.
+
+This example shows how to display a Streetside view similar to the previous image.
+
+**Note**  The overview map will not appear if the map control is sized too small.
+
+ 
 
 ```csharp
 private async void showStreetsideView()
@@ -240,30 +220,25 @@ private async void showStreetsideView()
 }
 ```
 
-## 3D 위성뷰 표시
+## Display aerial 3D views
 
 
-[
-            **MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329) 클래스를 사용하여 지도의 3D 원근감을 지정합니다. 지도 장면은 지도에 표시되는 3D 뷰를 나타냅니다. [
-            **MapCamera**](https://msdn.microsoft.com/library/windows/apps/dn974244) 클래스는 이러한 뷰를 표시하는 카메라의 위치를 나타냅니다.
+Specify a 3D perspective of the map by using the [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329) class. The map scene represents the 3D view that appears in the map. The [**MapCamera**](https://msdn.microsoft.com/library/windows/apps/dn974244) class represents the position of the camera that would display such a view.
 
 ![](images/mapcontrol-techdiagram.png)
 
-지도 표면의 건물 및 기타 기능을 3D로 표시하려면 지도 컨트롤의 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) 속성을 [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127)로 설정합니다. 다음은 **Aerial3DWithRoads** 스타일의 3D 뷰에 대한 예입니다.
+To make buildings and other features on the map surface appear in 3D, set the map control's [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) property to [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127). This is an example of a 3D view with the **Aerial3DWithRoads** style.
 
-![3D 지도 뷰의 예](images/only3d-730width.png)
+![an example of a 3d map view.](images/only3d-730width.png)
 
-3D 뷰를 표시하려면
+To display a 3D view
 
-1.  [
-            **Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265)를 확인하여 3D 뷰가 장치에서 지원되는지 확인합니다.
-2.  3D 뷰가 지원되는 경우 지도 컨트롤의 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) 속성을 [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127)로 설정합니다.
-3.  [
-            **CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) 및 [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334)와 같은 다양한 **CreateFrom** 메서드 중 하나를 사용하여 [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329) 개체를 만듭니다.
-4.  [
-            **TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296)를 호출하여 3D 뷰를 표시합니다. 또한 [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) 열거형에서 상수를 제공하여 보기가 변경될 때 사용할 애니메이션(옵션)을 지정할 수도 있습니다.
+1.  Determine if 3D views are supported on the device by checking [**Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265).
+2.  If 3D views is supported, set the map control's [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) property to [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127).
+3.  Create a [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329) object using one of the many **CreateFrom** methods, such as [**CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) and [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334).
+4.  Call [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) to display the 3D view. You can also specify an optional animation to use when the view changes by providing a constant from the [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) enumeration.
 
-다음 예제에서는 3D 뷰를 표시하는 방법을 보여 줍니다.
+This example shows how to display a 3D view.
 
 ```csharp
 private async void display3DLocation()
@@ -299,55 +274,43 @@ private async void display3DLocation()
 }
 ```
 
-## 위치 및 요소에 대한 정보 가져오기
+## Get info about locations and elements
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 메서드를 호출하여 지도의 위치에 대한 정보를 가져옵니다.
+Get info about locations on the map by calling the following methods of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004).
 
--   [
-            **GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지점에 해당하는 지리적 위치를 가져옵니다.
--   [
-            **GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지리적 위치에 해당하는 지점을 가져옵니다.
--   [
-            **IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022) 메서드 - 지정된 지리적 위치가 현재 지도 컨트롤의 뷰포트에 표시되는지 여부를 확인합니다.
--   [
-            **FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014) 메서드 - 지도 컨트롤의 뷰포트에서 지정된 지점에 있는 지도 요소를 가져옵니다.
+-   [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) method - Get the geographic location that corresponds to the specified point in the viewport of the Map control.
+-   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018) method - Get the point in the viewport of the Map control that corresponds to the specified geographic location.
+-   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022) method - Determine whether the specified geographic location is currently visible in the viewport of the Map control.
+-   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014) method - Get the elements on the map located at the specified point in the viewport of the Map control.
 
-## 사용자 조작 및 변경 내용 처리
+## Handle user interaction and changes
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 이벤트를 처리하여 지도에서 사용자 입력 제스처를 처리합니다. [
-            **MapInputEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637090)의 [**Location**](https://msdn.microsoft.com/library/windows/apps/dn637091) 및 [**Position**](https://msdn.microsoft.com/library/windows/apps/dn637093) 속성 값을 확인하려면 지도의 지리적 위치와 제스처가 발생한 뷰포트의 실제 위치에 대한 정보를 가져옵니다.
+Handle user input gestures on the map by handling the following events of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). Get info about the geographic location on the map and the physical position in the viewport where the gesture occurred by checking the values of the [**Location**](https://msdn.microsoft.com/library/windows/apps/dn637091) and [**Position**](https://msdn.microsoft.com/library/windows/apps/dn637093) properties of the [**MapInputEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn637090).
 
 -   [**MapTapped**](https://msdn.microsoft.com/library/windows/apps/dn637038)
 -   [**MapDoubleTapped**](https://msdn.microsoft.com/library/windows/apps/dn637032)
 -   [**MapHolding**](https://msdn.microsoft.com/library/windows/apps/dn637035)
 
-컨트롤의 [**LoadingStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn637028) 이벤트를 처리하여 지도가 로드 중이거나 완전히 로드되었는지 여부를 확인합니다.
+Determine whether the map is loading or completely loaded by handling the control's [**LoadingStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn637028) event.
 
-사용자나 앱에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 이벤트를 처리하여 지도의 설정을 변경할 때 발생하는 변경 사항을 처리합니다. [지도에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+Handle changes that happen when the user or the app changes the settings of the map by handling the following events of the [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004). [Guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
 
 -   [**CenterChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
 -   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
 -   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
 -   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
-## 관련 항목
+## Related topics
 
-* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [현재 위치 가져오기](get-location.md)
-* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Get current location](get-location.md)
+* [Design guidelines for location-aware apps](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Design guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Build 2015 video: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP traffic app sample](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

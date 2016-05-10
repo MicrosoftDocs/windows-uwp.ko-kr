@@ -1,36 +1,36 @@
 ---
-title: Microsoft Passport 로그인 서비스 만들기
-description: 전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다.
+title: Create a Microsoft Passport login service
+description: This is Part 2 of a complete walkthrough on how to use Microsoft Passport as an alternative to traditional username and password authentication systems in Windows 10 UWP (Universal Windows platform) apps.
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
 ---
 
-# Microsoft Passport 로그인 서비스 만들기
+# Create a Microsoft Passport login service
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
-전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다. 이 문서는 1부 [Microsoft Passport 로그인 앱](microsoft-passport-login.md)에서 중단된 위치를 선택하고 기능을 확장하여 Microsoft Passport를 기존 응용 프로그램에 통합할 수 있는 방법을 보여 줍니다.
+This is Part 2 of a complete walkthrough on how to use Microsoft Passport as an alternative to traditional username and password authentication systems in Windows 10 UWP (Universal Windows platform) apps. This article picks up where Part 1, [Microsoft Passport login app](microsoft-passport-login.md), left off and extends the functionality to demonstrate how you can integrate Microsoft Passport into your existing application.
 
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
+In order to build this project, you'll need some experience with C#, and XAML. You'll also need to be using Visual Studio 2015 (Community Edition or greater) on a Windows 10 machine.
 
-## 연습 1: 서버 쪽 논리
+## Exercise 1: Server Side Logic
 
 
-이 연습에서는 첫 번째 랩에 빌드된 Passport 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육은 Microsoft Passport가 기존 시스템에 통합될 수 있는 방법을 설명하도록 설계되었습니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
+In this exercise you will be starting with the Passport application built in the first lab and creating a local mock server and database. This hands on lab is designed to teach how Microsoft Passport could be integrated into an existing system. By using a mock server and mock database a lot of unrelated setup is eliminated. In your own applications you will need to replace the mock objects with the real services and databases.
 
--   시작하려면 첫 번째 Passport 실습 교육에서 PassportLogin 솔루션을 엽니다.
--   모의 서버와 모의 데이터베이스를 구현하는 작업부터 시작합니다. "AuthService"라는 새 폴더를 만듭니다. 솔루션 탐색기에서 "PassportLogin(유니버설 Windows)" 솔루션을 마우스 오른쪽 단추로 클릭하고 추가 > 새 폴더를 선택합니다.
--   모의 데이터베이스에 저장할 데이터에 대한 모델로 사용할 UserAccount 및 PassportDevices 클래스를 만듭니다. UserAccount는 기존 인증 서버에 구현된 사용자 모델과 유사합니다. AuthService 폴더를 마우스 오른쪽 단추로 클릭하고 "UserAccount.cs"라는 새 클래스를 추가합니다.
+-   To begin, open up the PassportLogin solution from the first Passport Hands On Lab.
+-   You will start by implementing the mock server and mock database. Create a new folder called "AuthService". In solution explorer right click on the solution "PassportLogin (Universal Windows)" and select Add > New Folder.
+-   Create UserAccount and PassportDevices classes that will act as models for data to be saved in the mock database. The UserAccount will be similar to the user model implemented on a traditional authentication server. Right click on the AuthService folder and add a new class called "UserAccount.cs."
 
     ![](images/passport-auth-1.png)
 
     ![](images/passport-auth-2.png)
 
--   클래스 정의를 public이 되도록 변경한 후 다음 public 속성을 추가합니다. 다음과 같은 참조가 필요합니다.
+-   Change the class definition to be public and then add the following public properties. You will need the following reference.
 
     ```cs
     using System.ComponentModel.DataAnnotations;
@@ -49,9 +49,9 @@ author: awkoren
     }
     ```
 
-    주석으로 처리된 PassportDevices 목록을 확인했을 수 있습니다. 이는 현재 구현에서 기존 사용자 모델에 적용해야 하는 수정 작업입니다. PassportDevices 목록에는 deviceID, Microsoft Passport에서 만들어진 공개 키 및 [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034)가 포함됩니다. 이 실습 교육의 경우 TPM(신뢰할 수 있는 플랫폼 모듈) 칩이 있는 디바이스에서 Microsoft Passport에 의해서만 제공되므로 keyAttestationResult를 구현해야 합니다. **KeyCredentialAttestationResult**는 여러 속성의 조합이며 데이터베이스에 저장 및 로드하기 위해 분할해야 합니다.
+    You may have noticed the commented out list of PassportDevices. This is a modification you will need to make to an existing user model in your current implementation. The list of PassportDevices will contain a deviceID, the public key made from Microsoft Passport, and a [**KeyCredentialAttestationResult**](https://msdn.microsoft.com/library/windows/apps/dn973034). For this hands on lab you will need to implement the keyAttestationResult as they are only provided by Microsoft Passport on devices that have a TPM (Trusted Platform Modules) chip. The **KeyCredentialAttestationResult** is a combination of multiple properties and would need to be split in order to save and load them with a database.
 
--   "PassportDevice.cs"라는 AuthService 폴더에 새 클래스를 만듭니다. 위에서 설명한 것처럼 Passport 디바이스를 위한 모델입니다. 클래스 정의를 public이 되도록 변경하고 다음 속성을 추가합니다.
+-   Create a new class in the AuthService folder called "PassportDevice.cs". This is the model for the passport devices as discussed above. Change the class definition to be public and add the following properties.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -70,7 +70,7 @@ author: awkoren
     }
     ```
 
--   UserAccount.cs에서 돌아가서 Passport 디바이스 목록의 주석 처리를 제거합니다.
+-   Return to in UserAccount.cs and uncomment the list of Passport devices.
 
     ```cs
     using System.Collections.Generic;
@@ -89,8 +89,8 @@ author: awkoren
     }
     ```
 
--   만든 UserAccount 및 PassportDevice에 대한 모델과 함께 모의 데이터베이스로 사용할 다른 새 클래스를 AuthService에 만들어야 합니다. 사용자 계정 목록을 로컬로 저장하고 로드하는 모의 데이터베이스이기 때문입니다. 실제 환경에서는 데이터베이스 구현이 됩니다. "MockStore.cs"라는 AuthService에 새 클래스를 만듭니다. 클래스 정의를 public으로 변경합니다.
--   모의 저장소에서 사용자 계정 목록을 로컬로 저장하고 로드하므로 XmlSerializer를 사용하여 해당 목록을 저장하고 로드하는 논리를 구현할 수 있습니다. 또한 파일 이름과 저장 위치를 기억해야 합니다. MockStore.cs에서 다음을 구현합니다.
+-   With the model for the UserAccount and the PassportDevice created, you need to create another new class in the AuthService that will act as the mock database. As this is a mock database from where you will be saving and loading a list of user accounts locally. In the real world this would be your database implementation. Create a new class in AuthService called "MockStore.cs". Change the class definition to public.
+-   As the mock store will save and load a list of user accounts locally you can implement the logic to save and load that list using an XmlSerializer. You will also need to remember the filename and save location. In MockStore.cs implement the following:
 -   
 
     ```cs
@@ -181,7 +181,7 @@ author: awkoren
     }
     ```
 
--   Load 메서드에서 InitializeSampleUserAccounts 메서드가 주석으로 처리된 것을 알 수 있습니다. 이 메서드를 MockStore.cs에서 만들어야 합니다. 이 메서드는 로그인이 수행될 수 있도록 사용자 계정 목록을 채웁니다. 실제 환경에서 사용자 데이터베이스는 이미 채워집니다. 이 단계에서 사용자 목록 및 호출 부하를 초기화할 생성자도 만듭니다.
+-   In the load method you may have noticed that an InitializeSampleUserAccounts method was commented out. You will need to create this method in the MockStore.cs. This method will populate the user accounts list so that a login can take place. In the real world the user database would already be populated. In this step you will also be creating a constructor that will initialise the user list and call load.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -196,7 +196,7 @@ author: awkoren
      
             public MockStore()
             {
-                _mockDatabaseUserAccountsList = new List&amp; lt; UserAccount &amp; gt; ();
+                _mockDatabaseUserAccountsList = new List& lt; UserAccount & gt; ();
                 LoadAccountListAsync();
             }
 
@@ -220,7 +220,7 @@ author: awkoren
     }
     ```
 
--   이제 InitalizeSampleUserAccounts 메서드가 있으므로 LoadAccountListAsync 메서드에서 메서드 호출의 주석 처리를 제거합니다.
+-   Now that the InitalizeSampleUserAccounts method exists uncomment the method call in the LoadAccountListAsync method.
 
     ```cs
     private async void LoadAccountListAsync()
@@ -244,7 +244,7 @@ author: awkoren
     }
     ```
 
--   이제 모의 저장소의 사용자 계정 목록을 저장하고 로드할 수 있습니다. 응용 프로그램의 다른 부분에 이 목록에 대한 액세스 권한이 있으므로 이 데이터를 검색하려면 몇 가지 메서드가 있어야 합니다. InitializeSampleUserAccounts 메서드 아래에 다음 get 메서드를 추가합니다. 그러면 사용자 ID, 단일 사용자, 특정 Passport 디바이스에 대한 사용자 목록을 가져올 수 있으며 특정 디바이스에서 사용자의 공개 키도 가져올 수도 있습니다.
+-   The user accounts list in mock store can now be saved and loaded. Other parts of the application will need to have access to this list so there will need to be some methods to retrieve this data. Underneath the InitializeSampleUserAccounts method, add the following get methods. They will allow you to get a userid, a single user, a list of users for a specific Passport device, and also get the public key for the user on a specific device.
 
     ```cs
     public Guid GetUserId(string username)
@@ -294,7 +294,7 @@ author: awkoren
     }
     ```
 
--   구현할 다음 메서드에서는 계정을 추가하고 계정을 제거하며 디바이스도 제거하는 간단한 작업을 처리합니다. Microsoft Passport는 디바이스별로 지정되므로 디바이스를 제거해야 합니다. 로그인하는 각 디바이스에 대해 새로운 공개 키 및 개인 키 쌍이 Microsoft Passport에서 만들어집니다. 이는 로그인하는 각 디바이스에 대해 다른 암호를 가지는 것과 같습니다. 다만 서버에서 기억하는 모든 암호를 기억할 필요는 없습니다. MockStore.cs에 다음 메서드 추가
+-   The next methods to implement will handle simple operations to add account, remove account, and also remove device. Remove device is needed as Microsoft Passport is device specific. For each device to which you log in, a new public and private key pair will be created by Microsoft Passport. It is like having a different password for each device you sign in on, the only thing is you don’t need to remember all those passwords the server does. Add the following methods into the MockStore.cs
 
     ```cs
     public UserAccount AddAccount(string username)
@@ -357,7 +357,7 @@ author: awkoren
     }
     ```
 
--   MockStore 클래스에서 Passport 관련 정보를 기존 UserAccount에 추가할 메서드를 추가합니다. 이 메서드는 PassportUpdateDetails라고 하며 사용자를 확인하는 매개 변수 및 Passport 세부 정보를 사용합니다. KeyAttestationResult는 PassportDevice를 만들 때 주석으로 처리되었으며 실제 환경의 응용 프로그램에서 필요합니다.
+-   In the MockStore class add a method that will add Passport related information to an existing UserAccount. This method will be called PassportUpdateDetails and will take parameters to identify the user, and the Passport details. The KeyAttestationResult has been commented out when creating a PassportDevice, in a real world application you would require this.
 
    ```cs
    using Windows.Security.Credentials;
@@ -484,7 +484,7 @@ author: awkoren
     ```cs
     public bool ValidateCredentials(string username, string password)
     {
-        if (!string.IsNullOrEmpty(username) &amp;&amp; !string.IsNullOrEmpty(password))
+        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
             // This would be used for existing accounts migrating to use Passport
             Guid userId = GetUserId(username);
@@ -528,7 +528,7 @@ author: awkoren
            // be configured for each company.
         // Simply just return true.
 
-        // You could get the User&#39;s Public Key with something similar to the following:
+        // You could get the User's Public Key with something similar to the following:
         byte[] userPublicKey = _mockStore.GetPublicKey(userId, deviceId);
         return true;
     }
@@ -550,7 +550,7 @@ In this exercise you will be changing the client side views and helper classes f
 
 -   Update the Login page interface to require a passport be entered. This hands on lab demonstrates how an existing system could be migrated to use Microsoft Passport and existing accounts will have a username and a password. Also update the explanation at the bottom of the XAML to include the default password. Update the following XAML in Login.xaml
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock Text="Login" FontSize="36" Margin="4" TextAlignment="Center"/>
@@ -578,7 +578,7 @@ In this exercise you will be changing the client side views and helper classes f
         <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
             Click="PassportSignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
 
-        <TextBlock Text="Don&#39;t have an account?"
+        <TextBlock Text="Don't have an account?"
                     TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
         <TextBlock x:Name="RegisterButtonTextBlock" Text="Register now"
                    PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
@@ -593,7 +593,7 @@ In this exercise you will be changing the client side views and helper classes f
 
         <TextBlock x:Name="LoginExplaination" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" 
             Text="Please Note: To demonstrate a login, validation will only occur using the default username 
-            &#39;sampleUsername&#39; and default password &#39;samplePassword&#39;"/>
+            'sampleUsername' and default password 'samplePassword'"/>
 
       </StackPanel>
     </Grid>
@@ -682,7 +682,7 @@ In this exercise you will be changing the client side views and helper classes f
             }
         }
 
-        // Can&#39;t use Passport right now, try again later
+        // Can't use Passport right now, try again later
         return false;
     }
     ```
@@ -733,7 +733,7 @@ In this exercise you will be changing the client side views and helper classes f
 
 -   As Microsoft Passport will create a different public and private key pair for each account on each device the Welcome page will need to display a list of registered devices for the logged in account, and allow each one to be forgotten. In Welcome.xaml add in the following XAML underneath the ForgetButton. This will implement a forget device button, an error text area and a list to display all devices.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Welcome" FontSize="40" TextAlignment="Center"/>
@@ -1111,11 +1111,11 @@ In this exercise you will be changing the client side views and helper classes f
         }
         else if (signResult.Status == KeyCredentialStatus.SecurityDeviceLocked)
         {
-            // Can&#39;t use Passport right now, remember that hardware failed and suggest restart
+            // Can't use Passport right now, remember that hardware failed and suggest restart
         }
         else if (signResult.Status == KeyCredentialStatus.UnknownError)
         {
-            // Can&#39;t use Passport right now, try again later
+            // Can't use Passport right now, try again later
         }
 
         return false;
@@ -1159,7 +1159,7 @@ In this exercise you will be changing the client side views and helper classes f
             }
         }
 
-        // Can&#39;t use Passport right now, try again later
+        // Can't use Passport right now, try again later
         return false;
     }
     ```
@@ -1175,7 +1175,3 @@ We have left as an exercise for you the details of how you will implement the au
 
 * [Microsoft Passport and Windows Hello](microsoft-passport.md)
 * [Microsoft Passport login app](microsoft-passport-login.md)
-
-<!--HONumber=Mar16_HO5-->
-
-

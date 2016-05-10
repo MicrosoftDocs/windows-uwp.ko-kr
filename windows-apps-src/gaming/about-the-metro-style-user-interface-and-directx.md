@@ -1,20 +1,21 @@
 ---
-title: 앱 개체 및 DirectX
-description: DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다.
+author: mtoepke
+title: The app object and DirectX
+description: Universal Windows Platform (UWP) with DirectX games don't use many of the Windows UI user interface elements and objects.
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 ---
 
-# 앱 개체 및 DirectX
+# The app object and DirectX
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI 사용자 인터페이스 요소 및 개체를 거의 사용하지 않습니다. 더 정확히 말하면 그러한 요소 및 개체는 Windows 런타임 스택의 하위 수준에서 실행되므로 앱 개체에 직접 액세스하여 상호 작용하는 보다 본질적인 방식으로 사용자 인터페이스 프레임워크와 상호 작용해야 합니다. 이러한 상호 작용이 발생하는 경우와, DirectX 개발자로서 UWP 앱 개발에 이 모델을 효율적으로 사용하는 방법에 대해 학습합니다.
+Universal Windows Platform (UWP) with DirectX games don't use many of the Windows UI user interface elements and objects. Rather, because they run at a lower level in the Windows Runtime stack, they must interoperate with the user interface framework in a more fundamental way: by accessing and interoperating with the app object directly. Learn when and how this interoperation occurs, and how you, as a DirectX developer, can effectively use this model in the development of your UWP app.
 
-## 중요한 핵심 사용자 인터페이스 네임스페이스
+## The important core user interface namespaces
 
 
-먼저 (**using**을 사용하여) UWP 앱에 포함해야 할 Windows 런타임 네임스페이스에 대해 조금 자세히 살펴보겠습니다.
+First, let's note the Windows Runtime namespaces that you must include (with **using**) in your UWP app. We get into the details in a bit.
 
 -   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)
 -   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
@@ -22,105 +23,94 @@ DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI �
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **참고** UWP 앱을 개발하는 경우가 아니면 JavaScript 또는 XAML 특정 네임스페이스에 제공된 유형 대신 이러한 라이브러리 및 네임스페이스에 제공된 사용자 인터페이스 구성 요소를 사용하세요.
+> **Note**   If you are not developing a UWP app, use the user interface components provided in the JavaScript- or XAML-specific libraries and namespaces instead of the types provided in these namespaces.
 
- 
+ 
 
-## Windows 런타임 앱 개체
-
-
-UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 창 및 보기 공급자가 필요합니다(디스플레이 버퍼). 또한 이 보기를 실행 중인 앱에 대한 창별 이벤트에 연결할 수도 있습니다. [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 정의된 앱 개체의 부모 창을 가져오려면 앞 코드 조각에서 했던 대로 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현합니다.
-
-다음은 핵심 사용자 인터페이스 프레임워크를 사용하여 창을 가져오는 기본 단계입니다.
-
-1.  [
-            **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현하는 유형을 만듭니다. 이는 개발자의 보기입니다.
-
-    이 유형에서는 다음을 정의합니다.
-
-    -   [
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)의 인스턴스를 매개 변수로 사용하는 [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) 메서드 이 유형의 인스턴스는 [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)를 호출하여 가져올 수 있습니다. 앱 개체는 앱이 시작되면 이 메서드를 호출합니다.
-    -   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)의 인스턴스를 매개 변수로 사용하는 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드 새 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 인스턴스의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하여 이 유형의 인스턴스를 가져올 수 있습니다.
-    -   진입점에 대한 문자열을 단독 매개 변수로 사용하는 [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) 메서드 이 메서드를 호출하면 앱 개체는 진입점 문자열을 제공합니다. 여기가 리소스 설정 위치입니다. 여기서 장치 리소스를 만듭니다 앱 개체는 앱이 시작되면 이 메서드를 호출합니다.
-    -   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 활성화하고 창 이벤트 디스패처를 시작하는 [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드 앱 개체는 앱의 처리가 시작되면 이 메서드를 호출합니다.
-    -   [
-            **Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) 호출에 설정된 리소스를 정리하는 [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) 메서드 앱 개체는 앱이 종료되면 이 메서드를 호출합니다.
-
-2.  [
-            **IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현하는 유형을 만듭니다. 이는 개발자의 뷰 공급자입니다.
-
-    이 유형에서는 다음을 정의합니다.
-
-    -   1단계에서 만든 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 구현의 인스턴스를 반환하는 [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491)라는 메서드.
-
-3.  뷰 공급자의 인스턴스를 **main**에서 [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469)으로 전달합니다.
-
-이러한 기본 개념을 기반으로 하여 접근 방법을 확장해야 하는 추가 옵션에 대해 알아보겠습니다.
-
-## 핵심 사용자 인터페이스 유형
+## The Windows Runtime app object
 
 
-다음은 유용하게 사용할 수 있는 Windows 런타임의 다른 핵심 사용자 인터페이스 유형입니다.
+In your UWP app, you want to get a window and a view provider from which you can get a view and to which you can connect your swap chain (your display buffers). You can also hook this view into the window-specific events for your running app. To get the parent window for the app object, defined by the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) type, create a type that implements [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482), as we did in the previous code snippet.
+
+Here's the basic set of steps to get a window using the core user interface framework:
+
+1.  Create a type that implements [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478). This is your view.
+
+    In this type, define:
+
+    -   An [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) method that takes an instance of [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) as a parameter. You can get an instance of this type by calling [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278). The app object calls it when the app is launched.
+    -   A [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) method that takes an instance of [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) as a parameter. You can get an instance of this type by accessing the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) property on your new [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) instance.
+    -   A [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) method that takes a string for an entry point as the sole parameter. The app object provides the entry point string when you call this method. This is where you set up resources. You create your device resources here. The app object calls it when the app is launched.
+    -   A [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) method that activates the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) object and starts the window event dispatcher. The app object calls it when the app's process starts.
+    -   An [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) method that cleans up the resources set up in the call to [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501). The app object calls this method when the app is closed.
+
+2.  Create a type that implements [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482). This is your view provider.
+
+    In this type, define:
+
+    -   A method named [**CreateView**](https://msdn.microsoft.com/library/windows/apps/hh700491) that returns an instance of your [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) implementation, as created in Step 1.
+
+3.  Pass an instance of the view provider to [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) from **main**.
+
+With those basics in mind, let's look at more options you have to extend this approach.
+
+## Core user interface types
+
+
+Here are other core user interface types in the Windows Runtime that you might find helpful:
 
 -   [**Windows.ApplicationModel.Core.CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 -   [**Windows.UI.Core.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)
 -   [**Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)
 
-이러한 유형을 사용하여 앱의 보기, 특히 앱 부모 창의 콘텐츠를 작성하는 조각에 액세스하고 해당 창에 대해 발생한 이벤트를 처리할 수 있습니다. 앱 창의 프로세스는 격리되어 있고 모든 콜백을 처리하는 ASTA(*응용 프로그램 단일 스레드 아파트*)입니다.
+You can use these types to access your app's view, specifically, the bits that draw the contents of the app's parent window, and handle the events fired for that window. The app window's process is an *application single-threaded apartment* (ASTA) that is isolated and that handles all callbacks.
 
-앱의 보기는 앱 창의 뷰 공급자가 생성하고 대부분의 경우 특정 프레임워크 패키지나 시스템 자체에서 구현하므로 직접 구현할 필요가 없습니다. DirectX의 경우 앞에서 설명한 대로 씬 뷰 공급자를 구현해야 합니다. 다음 구성 요소와 동작 간에는 고유한 일대일 관계가 있습니다.
+Your app's view is generated by the view provider for your app window, and in most cases will be implemented by a specific framework package or the system itself, so you don't need to implement it yourself. For DirectX, you need to implement a thin view provider, as discussed previously. There is a specific 1-to-1 relationship between the following components and behaviors:
 
--   [
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 유형으로 표시되고 창을 업데이트하는 메서드를 정의하는 앱의 보기
--   앱의 스레딩 동작을 정의하는 속성인 ASTA. ASTA에서는 COM STA 특성이 지정된 유형의 인스턴스를 만들 수 없습니다.
--   앱이 시스템에서 가져오거나 사용자가 구현하는 뷰 공급자
--   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 표시되는 부모 창
--   모든 활성화 이벤트의 원본. 보기와 창 모두에 별도의 활성화 이벤트가 있습니다.
+-   An app's view, which is represented by the [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) type, and which defines the method(s) for updating the window.
+-   An ASTA, the attribution of which defines the threading behavior of the app. You cannot create instances of COM STA-attributed types on an ASTA.
+-   A view provider, which your app obtains from the system or which you implement.
+-   A parent window, which is represented by the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) type.
+-   Sourcing for all activation events. Both views and windows have separate activation events.
 
-요약하면, 앱 개체는 뷰 공급자 팩터리를 제공합니다. 앱 개체는 뷰 공급자를 만들고 앱에 대한 부모 창을 인스턴스화합니다. 뷰 공급자는 앱의 부모 창에 대한 앱 보기를 정의합니다. 이제 보기 및 부모 창의
+In summary, the app object provides a view provider factory. It creates a view provider and instantiates a parent window for the app. The view provider defines the app's view for the parent window of the app. Now, let's discuss the specifics of the view and the parent window.
 
-## CoreApplicationView 동작 및 속성
+## CoreApplicationView behaviors and properties
 
 
-[
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)는 현재 앱 보기를 나타냅니다. 앱 singleton은 초기화 중에 앱 보기를 만들지만 보기는 활성화되기 전까지 유휴 상태로 유지됩니다. 그 [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하면 보기를 표시하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 가질 수 있으며, [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트에 대리자를 등록하면 보기에 대한 활성화 및 비활성화를 처리할 수 있습니다.
+[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) represents the current app view. The app singleton creates the app view during initialization, but the view remains dormant until it is activated. You can get the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) that displays the view by accessing the [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) property on it, and you can handle activation and deactivation events for the view by registering delegates with the [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event.
 
-## CoreWindow 동작 및 속성
-
-
-앱 개체가 초기화되면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스인 부모 창이 만들어지고 뷰 공급자로 전달됩니다. 앱에 표시할 창이 없으면 창을 표시합니다. 그렇지 않으면 보기를 초기화하기만 합니다.
-
-[
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)는 입력 및 기본 창 동작에 대한 다수의 이벤트를 제공합니다. 자신의 대리자를 이벤트에 등록하여 이러한 이벤트를 처리할 수 있습니다.
-
-또한 [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) 속성에 액세스하여 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)의 인스턴스를 제공하는 창에 대한 창 이벤트 디스패처를 얻을 수 있습니다.
-
-## CoreDispatcher 동작 및 속성
+## CoreWindow behaviors and properties
 
 
-창에 대해 디스패치하는 이벤트의 스레딩 동작은 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 유형으로 확인할 수 있습니다. 이 유형에서 특히 중요한 메서드 하나는 창 이벤트 처리를 시작하는 [**CoreDispatcher.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) 메서드입니다. 앱에 대해 이 메서드를 잘못된 옵션으로 호출하면 모든 종류의 예기치 않은 이벤트 처리 동작이 발생할 수 있습니다.
+The parent window, which is a [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) instance, is created and passed to the view provider when the app object initializes. If the app has a window to display, it displays it; otherwise, it simply initializes the view.
 
-| CoreProcessEventsOption 옵션                                                           | 설명                                                                                                                                                                                                                                  |
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) provides a number of events specific to input and basic window behaviors. You can handle these events by registering your own delegates with them.
+
+You can also obtain the window event dispatcher for the window by accessing the [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) property, which provides an instance of [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211).
+
+## CoreDispatcher behaviors and properties
+
+
+You can determine the threading behavior of event dispatching for a window with the [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) type. On this type, there's one particularly important method: the [**CoreDispatcher.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) method, which starts window event processing. Calling this method with the wrong option for your app can lead to all sorts of unexpected event processing behaviors.
+
+| CoreProcessEventsOption option                                                           | Description                                                                                                                                                                                                                                  |
 |------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CoreProcessEventsOption.ProcessOneAndAllPending**](https://msdn.microsoft.com/library/windows/apps/br208217) | 큐에서 현재 사용 가능한 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 다음의 새 이벤트를 대기합니다.                                                                                                                                 |
-| [**CoreProcessEventsOption.ProcessOneIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | 큐에 보류 중인 이벤트 하나를 디스패치합니다. 보류 중인 이벤트가 없는 경우 새 이벤트가 발생할 때까지 대기하지 않고 대신 즉시 반환합니다.                                                                                          |
-| [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | 새 이벤트를 대기하고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 응용 프로그램이 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스의 [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260) 메서드를 호출할 때까지 이 동작을 계속합니다. |
-| [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | 큐에서 현재 사용 가능한 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 즉시 반환합니다.                                                                                                                                          |
+| [**CoreProcessEventsOption.ProcessOneAndAllPending**](https://msdn.microsoft.com/library/windows/apps/br208217) | Dispatch all currently available events in the queue. If no events are pending, wait for the next new event.                                                                                                                                 |
+| [**CoreProcessEventsOption.ProcessOneIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | Dispatch one event if it is pending in the queue. If no events are pending, don't wait for a new event to be raised but instead return immediately.                                                                                          |
+| [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | Wait for new events and dispatch all available events. Continue this behavior until the window is closed or the application calls the [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260) method on the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) instance. |
+| [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | Dispatch all currently available events in the queue. If no events are pending, return immediately.                                                                                                                                          |
 
- 
+ 
 
-그래픽 업데이트를 중단시킬 수 있는 차단 동작을 방지하려면 DirectX를 사용하는 UWP가 [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) 옵션을 사용해야 합니다.
+UWP using DirectX should use the [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217) option to prevent blocking behaviors that might interrupt graphics updates.
 
-## DirectX 부분에 대한 ASTA 고려 사항
+## ASTA considerations for DirectX devs
 
 
-UWP 및 DirectX 앱의 런타임 표현을 정의하는 앱 개체는 ASTA(응용 프로그램 단일 스레드 아파트)라는 스레딩 모델을 사용하여 앱의 UI 보기를 호스트합니다. UWP 및 DirectX 앱을 개발하고 있는 경우 ASTA 속성에 익숙할 것입니다. UWP 및 DirectX 앱에서 디스패치하는 모든 스레드는 [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642) API 또는 [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)를 사용해야 하기 때문입니다. 앱에서 [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 ASTA에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 가져올 수 있습니다.
+The app object that defines the run-time representation of yourUWP and DirectX app uses a threading model called Application Single-Threaded Apartment (ASTA) to host your app’s UI views. If you are developing a UWP and DirectX app, you're familiar with the properties of an ASTA, because any thread you dispatch from your UWP and DirectX app must use the [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642) APIs, or use [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211). (You can get the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) object for the ASTA by calling [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) from your app.)
 
-UWP DirectX 앱 개발자로서 가장 중요하게 알고 있어야 할 사항은 **main()**에서 **Platform::MTAThread**를 설정하여 앱 스레드에서 MTA 스레드를 디스패치하도록 해야 한다는 점입니다.
+The most important thing for you to be aware of, as a developer of a UWP DirectX app, is that you must enable your app thread to dispatch MTA threads by setting **Platform::MTAThread** on **main()**.
 
 ```cpp
 [Platform::MTAThread]
@@ -132,36 +122,30 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-UWP DirectX 앱에 대한 앱 개체가 활성화되면 UI 보기에 사용될 ASTA를 만듭니다. 새로운 ASTA 스레드는 뷰 공급자 팩터리로 호출되어 앱 개체에 대한 뷰 공급자를 만들므로 뷰 공급자 코드가 해당 ASTA 스레드에서 실행됩니다.
+When the app object for your UWP DirectX app activates, it creates the ASTA that will be used for the UI view. The new ASTA thread calls into your view provider factory, to create the view provider for your app object, and as a result, your view provider code will run on that ASTA thread.
 
-또한 ASTA에서 분리되는 모든 스레드는 MTA에 있어야 합니다. 분리되는 MTA 스레드는 다시 표시 문제를 생성하여 교착 상태를 발생시킬 수도 있습니다.
+Also, any thread that you spin off from the ASTA must be in an MTA. Be aware that any MTA threads that you spin off can still create reentrancy issues and result in a deadlock.
 
-기존 코드를 ASTA 스레드에서 실행되도록 이식하려는 경우 다음 고려 사항에 주의해야 합니다.
+If you're porting existing code to run on the ASTA thread, keep these considerations in mind:
 
--   [
-            **CoWaitForMultipleObjects**](https://msdn.microsoft.com/library/windows/desktop/hh404144) 같은 대기 기능은 ASTA에서 STA에서와 다르게 작동합니다.
--   COM 호출 모달 루프는 ASTA에서 다르게 작동합니다. 발신 호출이 진행되는 동안 관련 없는 호출을 더 이상 받을 수 없습니다. 예를 들어 다음과 같은 동작은 ASTA에서 교착 상태를 만들므로 앱이 바로 작동 중지됩니다.
-    1.  ASTA가 MTA 개체를 호출하고 인터페이스 포인터 P1을 전달합니다.
-    2.  나중에 ASTA에서 동일한 MTA 개체를 호출합니다. MTA 개체는 ASTA로 반환되기 전에 P1을 호출합니다.
-    3.  P1은 관련 없는 호출을 할 수 없으므로 ASTA에 표시되지 않습니다. 그러나 MTA 스레드는 P1을 호출하려고 하므로 차단됩니다.
+-   Wait primitives, such as [**CoWaitForMultipleObjects**](https://msdn.microsoft.com/library/windows/desktop/hh404144), behave differently in an ASTA than in an STA.
+-   The COM call modal loop operates differently in an ASTA. You can no longer receive unrelated calls while an outgoing call is in progress. For example, the following behavior will create a deadlock from an ASTA (and immediately crash the app):
+    1.  The ASTA calls an MTA object and passes an interface pointer P1.
+    2.  Later, the ASTA calls the same MTA object. The MTA object calls P1 before it returns to the ASTA.
+    3.  P1 cannot enter the ASTA as it's blocked making an unrelated call. However, the MTA thread is blocked as it tries to make the call to P1.
 
-    다음 방법으로 이 문제를 해결할 수 있습니다.
-    -   병렬 패턴 라이브러리(PPLTasks.h)에 정의된 **async** 패턴 사용
-    -   앱의 ASTA(앱의 메인 스레드)에서 최대한 빨리 [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)를 호출하여 임의 호출 허용
+    You can resolve this by :
+    -   Using the **async** pattern defined in the Parallel Patterns Library (PPLTasks.h)
+    -   Calling [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) from your app's ASTA (the main thread of your app) as soon as possible to allow arbitrary calls.
 
-    즉, 관련 없는 호출을 앱의 ASTA에 바로 전달할 수 없습니다. 비동기 호출에 대한 자세한 내용은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
+    That said, you cannot rely on immediate delivery of unrelated calls to your app's ASTA. For more info about async calls, read [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
-전체적으로 UWP 앱을 디자인하는 경우 직접 MTA 스레드를 만들어 관리하는 대신 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 및 [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215)에 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)를 사용하여 모든 UI 스레드를 처리하세요. **CoreDispatcher**로 처리할 수 없는 별도의 스레드가 필요한 경우 비동기 패턴을 사용하고 앞에서 설명한 지침에 따라 다시 표시 문제를 방지하세요.
+Overall, when designing your UWP app, use the [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) for your app's [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) and [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) to handle all UI threads rather than trying to create and manage your MTA threads yourself. When you need a separate thread that you cannot handle with the **CoreDispatcher**, use async patterns and follow the guidance mentioned earlier to avoid reentrancy issues.
 
- 
+ 
 
- 
-
+ 
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

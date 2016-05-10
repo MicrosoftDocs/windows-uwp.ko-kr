@@ -1,37 +1,38 @@
 ---
-Description: 세계화는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다.
+author: DelfCo
+Description: Globalization is the process of designing and developing your app to act appropriately for different global markets without any changes or customization.
 Search.SourceType: Video
-title: 세계화 및 지역화
+title: Globalization and localization
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
-label: 소개
+label: Intro
 template: detail.hbs
 ---
 
-# 세계화 및 지역화
+# Globalization and localization
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 사용합니다. 사용자는 어느 언어든 말할 수 있고 여러 언어를 사용할 수도 있습니다. 지역도 세계 어디든 있을 수 있어서 위치와 언어가 다양할 수 있습니다. *세계화* 및 *지역화*를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
 
-**세계화**는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다.
+Windows is used worldwide, by audiences that vary in culture, region, and language. A user may speak any language, or even multiple languages. A user may be located anywhere in the world, and may speak any language in any location. You can increase the potential market for your app by designing it to be readily adaptable using *globalization* and *localization*.
 
-예를 들어 다음과 같이 할 수 있습니다.
+**Globalization** is the process of designing and developing your app to act appropriately for different global markets without any changes or customization.
 
--   레이블 및 텍스트 문자열에서 다른 언어의 다른 텍스트 길이 및 글꼴 크기를 수용하도록 앱의 레이아웃 디자인
--   텍스트 및 문화권에 종속된 이미지를 앱의 코드나 태그에 하드 코딩하는 대신에 다른 지역 시장에 맞게 조정할 수 있는 리소스에서 검색
--   숫자 값, 날짜, 시간 및 통화 같이 지역에 따라 형식이 다른 데이터를 세계화 API를 사용하여 표시
+For example, you can:
 
-**지역화**는 특정 지역 시장의 언어, 문화 및 정치적 요구 사항에 맞게 앱을 조정하는 프로세스입니다.
+-   Design the layout of your app to accommodate the different text lengths and font sizes of other languages in labels and text strings.
+-   Retrieve text and culture-dependent images from resources that can be adapted to different local markets, instead of hard-coding them into your app's code or markup.
+-   Use globalization APIs to display data that are formatted differently in different regions, such as numeric values, dates, times, and currencies.
 
-예를 들면 다음과 같습니다.
+**Localization** is the process of adapting your app to meet the language, cultural, and political requirements of a specific local market.
 
--   앱의 텍스트 및 레이블을 새 시장에 맞게 번역하고 해당 언어용 리소스를 별도로 만들기
--   필요에 따라 문화권에 종속된 모든 이미지를 수정하고 별도의 리소스에 배치
+For example:
 
-세계에 판매하기 위해 앱을 준비하는 방법을 간략히 소개하는 [세계화 및 지역화 소개](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization) 동영상을 시청하세요.
+-   Translate the text and labels of the app for the new market, and create separate resources for its language.
+-   Modify any culture-dependent images as necessary, and place in separate resources.
 
-## 기사
+Watch this video for a brief introduction on how to prepare your app for the world: [Introduction to globalization and localization](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
+
+## Articles
 <table>
 <colgroup>
 <col width="50%" />
@@ -39,60 +40,55 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">문서</th>
-<th align="left">설명</th>
+<th align="left">Article</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Do's and don'ts](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
-<td align="left"><p>앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.</p></td>
+<td align="left"><p>Follow these best practices when globalizing your apps for a wider audience and when localizing your apps for a specific market.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Use global-ready formats](use-global-ready-formats.md)</p></td>
-<td align="left"><p>날짜, 시간, 숫자 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다.</p></td>
+<td align="left"><p>Develop a global-ready app by appropriately formatting dates, times, numbers, and currencies.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Manage language and region](manage-language-and-region.md)</p></td>
-<td align="left"><p>Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.</p></td>
+<td align="left"><p>Control how Windows selects UI resources and formats the UI elements of the app, by using the various language and region settings provided by Windows.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Use patterns to format dates and times](use-patterns-to-format-dates-and-times.md)</p></td>
-<td align="left"><p>날짜 및 시간을 원하는 형식으로 정확히 표시하려면 [<strong>Windows.Globalization.DateTimeFormatting</strong>](https://msdn.microsoft.com/library/windows/apps/br206859) API와 사용자 지정 패턴을 사용하세요.</p></td>
+<td align="left"><p>Use the [<strong>Windows.Globalization.DateTimeFormatting</strong>](https://msdn.microsoft.com/library/windows/apps/br206859) API with custom patterns to display dates and times in exactly the format you wish.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Adjust layout and fonts, and support RTL](adjust-layout-and-fonts--and-support-rtl.md)</p></td>
-<td align="left"><p>RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다.</p></td>
+<td align="left"><p>Develop your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Prepare your app for localization](prepare-your-app-for-localization.md)</p></td>
-<td align="left"><p>다른 시장, 언어 또는 지역으로의 앱 지역화를 준비합니다.</p></td>
+<td align="left"><p>Prepare your app for localization to other markets, languages, or regions.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Put UI strings into resources](put-ui-strings-into-resources.md)</p></td>
-<td align="left"><p>UI용 문자열 리소스를 리소스 파일에 넣습니다. 그러면 코드 또는 태그로부터 해당 문자열을 참조할 수 있습니다.</p></td>
+<td align="left"><p>Put string resources for your UI into resource files. You can then reference those strings from your code or markup.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10에도 적용되며 원래 Windows 8.x용으로 작성된 설명서를 참조하세요.
+See also the documentation originally created for Windows 8.x, which still applies to Universal Windows Platform (UWP) apps and Windows 10.
 
--   [앱 세계화](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
--   [언어 일치](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
--   [NumeralSystem 값](https://msdn.microsoft.com/library/windows/apps/xaml/jj236471.aspx)
--   [국가별 글꼴](https://msdn.microsoft.com/library/windows/apps/xaml/dn263115.aspx)
--   [앱 리소스 및 지역화](https://msdn.microsoft.com/library/windows/apps/xaml/hh710212.aspx)
+-   [Globalizing your app](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
+-   [Language matching](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
+-   [NumeralSystem values](https://msdn.microsoft.com/library/windows/apps/xaml/jj236471.aspx)
+-   [International fonts](https://msdn.microsoft.com/library/windows/apps/xaml/dn263115.aspx)
+-   [App resources and localization](https://msdn.microsoft.com/library/windows/apps/xaml/hh710212.aspx)
 
- 
+ 
 
- 
+ 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

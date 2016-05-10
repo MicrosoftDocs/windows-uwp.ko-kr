@@ -1,78 +1,63 @@
 ---
-Description: UWP(유니버설 Windows 플랫폼) 앱에 접근성이 있는지 확인하는 검사 목록을 제공합니다.
-title: 접근성 검사 목록
+author: Xansky
+Description: Provides a checklist to help you ensure that your Universal Windows Platform (UWP) app is accessible.
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
-label: Checklist
+title: Accessibility checklist
+label: Accessibility checklist
 template: detail.hbs
 ---
 
-접근성 검사 목록
-===================================================================================
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-UWP(유니버설 Windows 플랫폼) 앱에 접근성이 있는지 확인하는 검사 목록을 제공합니다.
-
-여기서는 앱에 접근성이 있는지 확인하는 데 사용할 수 있는 검사 목록을 제공합니다.
-
-1.  앱에 있는 콘텐츠 및 대화형 UI 요소의 접근성 있는 이름(필수) 및 설명(선택)을 설정합니다.
-
-    접근성 있는 이름은 화면 읽기 프로그램이 UI 요소를 읽기 위해 사용하는 짧은 설명 텍스트 문자열입니다. [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 같은 일부 UI 요소는 해당 텍스트 콘텐츠를 기본 접근성 있는 이름으로 승격시킵니다. [기본 접근성 정보](basic-accessibility-information.md#name_from_inner_text)를 참조하세요.
-
-    내부 텍스트 콘텐츠를 명시적인 접근성 있는 이름으로 승격시키지 않는 이미지 또는 기타 컨트롤에 대해서는 명시적으로 접근성 있는 이름을 설정해야 합니다. 레이블과 입력을 상호 연결하는 Microsoft UI 자동화 모델에서 레이블 텍스트를 [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) 대상으로 사용할 수 있도록 양식 요소에는 레이블을 사용해야 합니다. 일반적으로 접근성 있는 이름에 포함된 것보다 더 많은 UI 지침을 사용자에게 제공하려는 경우 접근성 있는 설명 및 도구 설명을 사용하면 사용자가 UI를 이해하는 데 도움이 됩니다.
-
-    자세한 내용은 [접근성 있는 이름](basic-accessibility-information.md#accessible_name) 및 [접근성 있는 설명](basic-accessibility-information.md)을 참조하세요.
-
-2.  키보드 접근성 구현
+# Accessibility checklist
 
 
-    -   Test the default tab index order for a UI. Adjust the tab index order if necessary, which may require enabling or disabling certain controls, or changing the default values of [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) on some of the UI elements.
-    -   Use controls that support arrow-key navigation for composite elements. For default controls, the arrow-key navigation is typically already implemented.
-    -   Use controls that support keyboard activation. For default controls, particularly those that support the UI Automation [**Invoke**](https://msdn.microsoft.com/library/windows/apps/BR242582) pattern, keyboard activation is typically available; check the documentation for that control.
-    -   Set access keys or implement accelerator keys for specific parts of the UI that support interaction.
-    -   For any custom controls that you use in your UI, verify that you have implemented these controls with correct [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) support for activation, and defined overrides for key handling as needed to support activation, traversal and access or accelerator keys.
+
+Provides a checklist to help you ensure that your Universal Windows Platform (UWP) app is accessible.
+
+Here we provide a checklist you can use to ensure that your app is accessible.
+
+1.  Set the accessible name (required) and description (optional) for content and interactive UI elements in your app.
+
+    An accessible name is a short, descriptive text string that a screen reader uses to announce a UI element. Some UI elements such as [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) promote their text content as the default accessible name; see [Basic accessibility information](basic-accessibility-information.md#name_from_inner_text).
+
+    You should set the accessible name explicitly for images or other controls that do not promote inner text content as an implicit accessible name. You should use labels for form elements so that the label text can be used as a [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) target in the Microsoft UI Automation model for correlating labels and inputs. If you want to provide more UI guidance for users than is typically included in the accessible name, accessible descriptions and tooltips help users understand the UI.
+
+    For more info, see [Accessible name](basic-accessibility-information.md#accessible_name) and [Accessible description](basic-accessibility-information.md).
+
+2.  Implement keyboard accessibility:
+
+    * Test the default tab index order for a UI. Adjust the tab index order if necessary, which may require enabling or disabling certain controls, or changing the default values of [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) on some of the UI elements.
+    * Use controls that support arrow-key navigation for composite elements. For default controls, the arrow-key navigation is typically already implemented.
+    * Use controls that support keyboard activation. For default controls, particularly those that support the UI Automation [**Invoke**](https://msdn.microsoft.com/library/windows/apps/BR242582) pattern, keyboard activation is typically available; check the documentation for that control.
+    * Set access keys or implement accelerator keys for specific parts of the UI that support interaction.
+    * For any custom controls that you use in your UI, verify that you have implemented these controls with correct [**AutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR209185) support for activation, and defined overrides for key handling as needed to support activation, traversal and access or accelerator keys.
 
     For more info, see [Keyboard interactions](https://msdn.microsoft.com/library/windows/apps/Mt185607).
 
-3.  UI를 시각적으로 검증하여 텍스트 대비가 적절한지, 요소가 고대비 테마에서 올바르게 렌더링되는지, 색이 제대로 사용되는지 확인합니다.
+3.  Visually verify your UI to ensure that the text contrast is adequate, elements render correctly in the high-contrast themes, and colors are used correctly.
 
-    -   디스플레이의 dpi(인치당 도트 수) 값을 조정하는 시스템 디스플레이 옵션을 사용하고 dpi 값이 변경되면 앱 UI 크기가 올바르게 조정되도록 합니다. 일부 사용자는 접근성 옵션으로 dpi 값을 변경하며 이 옵션은 **접근성**에서 사용할 수 있습니다.
-    -   색 분석기 도구를 사용하여 시각적 텍스트 대비가 4.5:1 이상인지 확인
-    -   고대비 테마로 전환하고 앱의 UI를 읽고 사용할 수 있는지 검증
-    -   UI가 정보를 전달하는 유일한 수단으로 색을 사용하고 있지 않은지 확인
+    * Use the system display options that adjust the display's dots per inch (dpi) value, and ensure that your app UI scales correctly when the dpi value changes. (Some users change dpi values as an accessibility option, it's available from **Ease of Access**.)
+    * Use a color analyzer tool to verify that the visual text contrast ratio is at least 4.5:1.
+    * Switch to a high contrast theme and verify that the UI for your app is readable and usable.
+    * Ensure that your UI doesn’t use color as the only way to convey information.
 
-    자세한 내용은 [고대비 테마](high-contrast-themes.md) 및 [접근성 있는 텍스트에 대한 요구 사항](accessible-text-requirements.md)을 참조하세요.
+    For more info, see [High-contrast themes](high-contrast-themes.md) and [Accessible text requirements](accessible-text-requirements.md).
 
-4.  접근성 도구를 실행하고, 보고된 문제를 해결하고, 화면 읽기 환경을 확인합니다.
+4.  Run accessibility tools, address reported issues, and verify the screen reading experience.
 
-    [
-            **Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 같은 도구를 사용하여 프로그래밍 액세스를 확인하고 [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) 같은 진단 도구를 실행하여 일반 오류를 검색하며, 내레이터로 화면 읽기 환경을 확인합니다.
+    Use tools such as [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) to verify programmatic access, run diagnostic tools such as [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) to discover common errors, and verify the screen reading experience with Narrator.
 
-    자세한 내용은 [접근성 테스트](accessibility-testing.md)를 참조하세요.
+    For more info, see [Accessibility testing](accessibility-testing.md).
 
-5.  앱 매니페스트 설정이 접근성 지침을 따르는지 확인합니다.
+5.  Make sure your app manifest settings follow accessibility guidelines.
 
-6.  Windows 스토어에 접근성 있는 앱으로 등록
+6.  Declare your app as accessible in the Windows Store.
 
-    기준 접근성 지원을 구현한 경우 Windows 스토어에 접근성 있는 앱으로 등록하면 더욱 많은 고객에게 도달하고 좋은 평가를 받을 수 있습니다.
+    If you implemented the baseline accessibility support, declaring your app as accessible in the Windows Store can help reach more customers and get some additional good ratings.
 
-    자세한 내용은 [스토어의 접근성](accessibility-in-the-store.md)을 참조하세요.
+    For more info, see [Accessibility in the Store](accessibility-in-the-store.md).
 
-<span id="related_topics"> </span>관련 항목
------------------------------------------------
-
-* [접근성](accessibility.md)
-* [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [피해야 할 사례](practices-to-avoid.md)
- 
-
- 
-
-
-
-
-
-<!--HONumber=Mar16_HO3-->
-
-
+<span id="related_topics"/>
+## Related topics  
+* [Accessibility](accessibility.md)
+* [Design for accessibility](https://msdn.microsoft.com/library/windows/apps/Hh700407)
+* [Practices to avoid](practices-to-avoid.md)
