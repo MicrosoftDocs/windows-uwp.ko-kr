@@ -1,27 +1,27 @@
 ---
 author: Xansky
-Description: If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.
+Description: 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
-title: Keyboard accessibility
+title: 키보드 접근성
 label: Keyboard accessibility
 template: detail.hbs
 ---
 
-# Keyboard accessibility  
+# 키보드 접근성  
 
 
 
-If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all.
+따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
 
 <span id="keyboard_navigation_among_UI_elements"/>
 <span id="keyboard_navigation_among_ui_elements"/>
 <span id="KEYBOARD_NAVIGATION_AMONG_UI_ELEMENTS"/>
-## Keyboard navigation among UI elements  
-To use the keyboard with a control, the control must have focus, and to receive focus (without using a pointer) the control must be accessible in a UI design via tab navigation. By default, the tab order of controls is the same as the order in which they are added to a design surface, listed in XAML, or programmatically added to a container.
+## UI 요소 간 키보드 탐색  
+컨트롤로 키보드를 사용하려면 컨트롤에 포커스가 있어야 하고, (포인터를 사용하지 않고) 포커스를 받으려면 탭 탐색을 통해 UI 디자인에서 컨트롤에 액세스할 수 있어야 합니다. 기본적으로 컨트롤의 탭 순서는 디자인 화면에 추가되는 순서, XAML에 표시되는 순서 또는 컨테이너에 프로그래밍 방식으로 추가된 순서와 같습니다.
 
-In most cases, the default order based on how you defined controls in XAML is the best order, especially because that is the order in which the controls are read by screen readers. However, the default order does not necessarily correspond to the visual order. The actual display position might depend on the parent layout container and certain properties that you can set on the child elements to influence the layout. To be sure your app has a good tab order, test this behavior yourself. Especially if you have a grid metaphor or table metaphor for your layout, the order in which users might read versus the tab order could end up different. That's not always a problem in and of itself. But just make sure to test your app's functionality both as a touchable UI and as a keyboard-accessible UI and verify that your UI makes sense either way.
+대부분의 경우, XAML에서 컨트롤을 정의한 방법에 따른 기본 순서가 특히 화면 읽기 프로그램에서 컨트롤을 읽는 순서이므로 최적의 순서입니다. 그러나 기본 순서가 시각적 순서와 반드시 일치하는 것은 아닙니다. 실제 디스플레이 위치는 레이아웃에 적용하기 위해 자식 요소에 설정할 수 있는 부모 레이아웃 컨테이너 및 특정 속성에 따라 달라질 수 있습니다. 앱이 적합한 탭 순서를 갖도록 하려면 이 동작을 직접 테스트하세요. 특히 레이아웃에 대한 그리드 메타포 또는 테이블 메타포가 있는 경우 사용자가 읽는 순서와 탭 순서가 달라질 수 있습니다. 이것은 자체로는 항상 문제는 아닙니다. 하지만 터치 가능한 UI와 키보드로 액세스 가능한 UI로서의 앱의 기능을 테스트하여 두 방식 모두 UI가 제대로 작동하는지 확인해야 합니다.
 
-You can make the tab order match the visual order by adjusting the XAML. Or you can override the default tab order by setting the [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) property, as shown in the following example of a [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) layout that uses column-first tab navigation.
+XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
 
 XAML
 ```xml
@@ -43,32 +43,38 @@ XAML
 </Grid>
 ```
 
-You may want to exclude a control from the tab order. You typically do this only by making the control noninteractive, for example by setting its [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) property to **false**. A disabled control is automatically excluded from the tab order. But occasionally you might want to exclude a control from the tab order even if it is not disabled. In this case, you can set the [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) property to **false**.
+탭 순서에서 컨트롤을 제외할 수도 있습니다. 일반적으로 컨트롤을 비대화형으로 설정하여 이 작업을 수행합니다. 예를 들어 해당 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209419) 속성을 **false**로 설정합니다. 사용할 수 없는 컨트롤은 탭 순서에서 자동으로 제외됩니다. 그러나 경우에 따라 사용할 수 있는 경우에도 탭 순서에서 컨트롤을 제외할 수 있습니다. 이 경우 [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) 속성을 **false**로 설정할 수 있습니다.
 
-Any elements that can have focus are usually in the tab order by default. The exception to this is that certain text-display types such as [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) can have focus so that they can be accessed by the clipboard for text selection; however, they're not in the tab order because it is not expected for static text elements to be in the tab order. They're not conventionally interactive (they can't be invoked, and don't require text input, but do support the [Text control pattern](https://msdn.microsoft.com/library/windows/desktop/Ee671194) that supports finding and adjusting selection points in text). Text should not have the connotation that setting focus to it will enable some action that's possible. Text elements will still be detected by assistive technologies, and read aloud in screen readers, but that relies on techniques other than finding those elements in the practical tab order.
+일반적으로 포커스가 있는 모든 요소는 기본적으로 탭 순서에 있습니다. 텍스트 선택을 위해 클립보드에서 액세스할 수 있도록 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) 같은 특정 텍스트 표시 형식에 포커스가 있는 경우는 예외입니다. 그러나 정적 텍스트 요소가 탭 순서에 있어서는 안 되므로 탭 순서에 없습니다. 정적 요소는 기본적으로 대화형이 아니므로 호출할 수 없으며 텍스트 입력을 요구하지 않지만 텍스트의 선택 포인트 찾기 및 조정을 지원하는 [텍스트 컨트롤 패턴](https://msdn.microsoft.com/library/windows/desktop/Ee671194)은 지원합니다. 텍스트는 포커스를 설정하면 가능한 일부 동작을 사용하도록 설정하는 의미가 없어야 합니다. 텍스트 요소는 보조 기술에 의해 검색되고 화면 프로그램에서 소리 내어 읽지만 특정 탭 순서에서 해당 요소를 찾는 것과는 다른 기술을 사용합니다.
 
-Whether you adjust [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) values or use the default order, these rules apply:
+[
+            **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) 값을 조정할지 기본 순서를 사용할지에 따라 다음 규칙이 적용됩니다.
 
-* UI elements with [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) equal to 0 are added to the tab order based on declaration order in XAML or child collections.
-* UI elements with [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) greater than 0 are added to the tab order based on the **TabIndex** value.
-* UI elements with [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461) less than 0 are added to the tab order and appear before any zero value. This potentially differs from HTML's handling of its **tabindex** attribute (and negative **tabindex** was not supported in older HTML specifications).
+* [
+            **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0인 UI 요소는 XAML 또는 자식 컬렉션의 선언 순서를 기준으로 탭 순서에 추가됩니다.
+* [
+            **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 큰 UI 요소는 **TabIndex** 값을 기준으로 탭 순서에 추가됩니다.
+* [
+            **TabIndex**](https://msdn.microsoft.com/library/windows/apps/BR209461)가 0보다 작은 UI 요소는 탭 순서에 추가되며 0 값 앞에 나타납니다. 이것은 잠재적으로 HTML에서 **tabindex** 특성을 처리하는 것과는 다르며, 이전 HTML 사양에서는 음의 **tabindex**가 지원되지 않았습니다.
 
 <span id="keyboard_navigation_within_a_UI_element"/>
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
-## Keyboard navigation within a UI element  
-For composite elements, it is important to ensure proper inner navigation among the contained elements. A composite element can manage its current active child to reduce the overhead of having all child elements able to have focus. Such a composite element is included in the tab order, and it handles keyboard navigation events itself. Many of the composite controls already have some inner navigation logic built into the into control's event handling. For example, arrow-key traversal of items is enabled by default on the [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) and [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) controls.
+## UI 요소 내 키보드 탐색  
+복합 요소의 경우 포함된 요소 간에 적절한 내부 탐색이 보장되어야 합니다. 복합 요소는 현재 활성 자식 요소를 관리하여 모든 자식 요소를 포커스 가능 상태가 되게 하는 오버헤드를 줄일 수 있습니다. 그러한 복합 요소는 탭 순서대로 포함되며 키보드 탐색 이벤트 자체를 처리합니다. 많은 복합 컨트롤에는 몇 가지 내부 탐색 논리가 컨트롤의 이벤트 처리에 이미 내장되어 있습니다. 예를 들어 항목의 화살표 키 통과는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) 컨트롤에서 기본적으로 사용됩니다.
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
-## Keyboard alternatives to pointer actions and events for specific control elements  
-Ensure that UI elements that can be clicked can also be invoked by using the keyboard. To use the keyboard with a UI element, the element must have focus. Only classes that derive from [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) support focus and tab navigation.
+## 특정 컨트롤 이벤트의 포인터 동작 및 이벤트를 대신하는 키보드  
+클릭할 수 있는 UI 요소는 키보드를 사용해서도 호출할 수 있어야 합니다. UI 요소와 함께 키보드를 사용하려면 요소에 포커스가 있어야 합니다. [
+            **Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)에서 파생되는 클래스만 포커스 및 탭 탐색을 지원합니다.
 
-For UI elements that can be invoked, implement keyboard event handlers for the Spacebar and Enter keys. This makes the basic keyboard accessibility support complete and enables users to accomplish basic app scenarios by using only the keyboard; that is, users can reach all interactive UI elements and activate the default functionality.
+호출할 수 있는 UI 요소의 경우 스페이스바 및 Enter 키에 대한 키보드 이벤트 처리기를 구현합니다. 이렇게 하면 기본 키보드 접근성 지원이 완벽해지고 사용자가 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 UI 요소에 액세스하고 기본 기능을 활성화할 수 있습니다.
 
-In cases where an element that you want to use in the UI cannot have focus, you could create your own custom control. You must set the [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) property to **true** to enable focus and you must provide a visual indication of the focused state by creating a visual state that decorates the UI with a focus indicator. However, it is often easier to use control composition so that the support for tab stops, focus, and Microsoft UI Automation peers and patterns are handled by the control within which you choose to compose your content.
+UI에서 사용하려는 요소에 포커스가 없는 경우 사용자 지정 컨트롤을 직접 만들 수 있습니다. [
+            **IsTabStop**](https://msdn.microsoft.com/library/windows/apps/BR209422) 속성을 **true**로 설정하여 포커스를 사용하도록 설정하고 포커스 표시기로 UI를 데코레이트하는 시각적 상태를 만들어 포커스된 상태의 시각적 표시를 제공해야 합니다. 그러나 포함된 콘텐츠를 구성하기 위해 선택한 컨트롤로 탭 중지, 포커스, Microsoft UI 자동화 피어 및 패턴에 대한 지원을 처리하도록 컨트롤 컴퍼지션을 이용하는 것이 더욱 간편합니다.
 
-For example, instead of handling a pointer-pressed event on an [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752), you could wrap that element in a [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) to get pointer, keyboard, and focus support.
+예를 들어 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)에서 포인터 누름 이벤트를 처리하는 대신 포인터, 키보드 및 포커스 지원을 가져오도록 해당 요소를 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 래핑할 수 있습니다.
 
 XAML
 ```xml
@@ -81,19 +87,20 @@ XAML
 
 <span id="keyboard_shortcuts"/>
 <span id="KEYBOARD_SHORTCUTS"/>
-## Keyboard shortcuts  
-In addition to implementing keyboard navigation and activation for your app, it is a good practice to implement shortcuts for your app's functionality. Tab navigation provides a good, basic level of keyboard support, but with complex forms you may want to add support for shortcut keys as well. This can make your application more efficient to use, even for people who use both a keyboard and pointing devices.
+## 바로 가기 키  
+앱의 키보드 탐색 및 활성화 구현뿐 아니라 앱 기능에 대한 바로 가기를 구현하는 것이 좋습니다. 탭 탐색은 기본 수준의 키보드 지원을 제공하지만 복잡한 양식을 사용할 경우 바로 가기 키에 대한 지원을 추가해야 합니다. 이를 통해 키보드와 포인팅 디바이스를 모두 사용하는 사람에게도 훨씬 사용하기 편리한 응용 프로그램이 될 수 있습니다.
 
-A *shortcut* is a keyboard combination that enhances productivity by providing an efficient way for the user to access app functionality. There are two kinds of shortcut:
+*바로 가기*는 사용자가 앱 기능에 효율적으로 액세스할 수 있도록 하여 생산성을 향상하는 키보드 조합입니다. 다음과 같은 두 종류의 바로 가기가 있습니다.
 
-* An *access key* is a shortcut to a piece of UI in your app. Access keys consist of the Alt key plus a letter key.
-* An *accelerator key* is a shortcut to an app command. Your app may or may not have UI that corresponds exactly to the command. Accelerator keys consist of the Ctrl key plus a letter key.
+* *선택키*는 앱의 UI에 대한 바로 가기입니다. 선택키는 Alt 키와 문자 키로 구성됩니다.
+* *바로 가기 키*는 앱 명령에 대한 바로 가기입니다. 명령과 정확히 일치하는 UI가 앱에 없을 수도 있습니다. 바로 가기 키는 Ctrl 키와 문자 키로 구성됩니다.
 
-It is imperative that you provide an easy way for users who rely on screen readers and other assistive technology to discover your app's shortcut keys. Communicate shortcut keys by using tooltips, accessible names, accessible descriptions, or some other form of on-screen communication. At a minimum, shortcut keys should be well documented in your app's Help content.
+따라서 화면 읽기 프로그램 및 다른 보조 기술을 사용하는 사용자에게 앱의 바로 가기 키를 찾을 수 있는 손쉬운 방법을 제공할 필요가 있습니다. 도구 설명, 접근성 있는 이름, 접근성 있는 설명 또는 몇 가지 다른 형식의 화면 통신을 사용하여 바로 가기 키를 제공합니다. 최소한 바로 가기 키에 대한 설명이 앱의 도움말 콘텐츠에 잘 나타나 있어야 합니다.
 
-You can document access keys through screen readers by setting the [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) attached property to a string that describes the shortcut key. There is also an [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) attached property for documenting non-mnemonic shortcut keys, although screen readers generally treat both properties the same way. Try to document shortcut keys in multiple ways, using tooltips, automation properties, and written Help documentation.
+[
+            **AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 연결된 속성을 바로 가기 키를 설명하는 문자열로 설정하여 화면 읽기 프로그램을 통해 액세스 키를 문서화할 수 있습니다. 또한 니모닉이 아닌 바로 가기 키를 문서화하는 데 사용하는 [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 연결된 속성도 있습니다. 단, 화면 읽기 프로그램은 대개 두 속성을 같은 방식으로 처리합니다. 도구 설명, 자동화 속성 및 작성된 도움말 문서를 사용하여 여러 가지 방법으로 바로 가기 키를 문서화합니다.
 
-The following example demonstrates how to document shortcut keys for media play, pause, and stop buttons.
+다음 예제에서는 미디어 재생, 일시 중지 및 중지 단추에 대한 바로 가기 키를 문서화하는 방법을 보여 줍니다.
 
 XAML
 ```xml
@@ -132,37 +139,38 @@ XAML
 ```
 
 > [!IMPORTANT]
-> Setting [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) or [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) doesn't enable keyboard functionality. It only reports to the UI Automation framework what keys should be used, so that such information can be passed on to users via assistive technologies. The implementation for key handling still needs to be done in code, not XAML. You will still need to attach handlers for [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) or [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) events on the relevant control in order to actually implement the keyboard shortcut behavior in your app. Also, the underline text decoration for an access key is not provided automatically. You must explicitly underline the text for the specific key in your mnemonic as inline [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) formatting if you wish to show underlined text in the UI.
+> [
+            **AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/Hh759762) 또는 [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/Hh759763) 설정을 통해 키보드 기능을 사용하도록 설정할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/BR208941) 또는 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/BR208942) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://msdn.microsoft.com/library/windows/apps/BR209982) 서식으로 표시해야 합니다.
 
-For simplicity, the preceding example omits the use of resources for strings such as "Ctrl+A". However, you must also consider shortcut keys during localization. Localizing shortcut keys is relevant because the choice of key to use as the shortcut key typically depends on the visible text label for the element.
+간단하게 하기 위해 위 예제에서는 "Ctrl+A" 같은 문자열에 대한 리소스 사용을 생략합니다. 그러나 지역화할 때도 바로 가기 키를 고려해야 합니다. 바로 가기 키로 사용할 키의 선택은 일반적으로 해당 요소에 대해 표시되는 텍스트 레이블에 따라 달라지므로 바로 가기 키 지역화가 관련이 있습니다.
 
-For more guidance about implementing shortcut keys, see [Shortcut keys](http://go.microsoft.com/fwlink/p/?linkid=221825) in the Windows User Experience Interaction Guidelines.
+바로 가기 키 구현에 대한 자세한 내용은 Windows 사용자 환경 조작 지침에서 [바로 가기 키](http://go.microsoft.com/fwlink/p/?linkid=221825)(영문)를 참조하세요.
 
 <span id="Implementing_a_key_event_handler"/>
 <span id="implementing_a_key_event_handler"/>
 <span id="IMPLEMENTING_A_KEY_EVENT_HANDLER"/>
-### Implementing a key event handler  
-Input events such as the key events use an event concept called *routed events*. A routed event can bubble up through the child elements of a composited control, such that a common control parent can handle events for multiple child elements. This event model is convenient for defining shortcut key actions for a control that contains several composite parts that by design cannot have focus or be part of the tab order.
+### 키보드 이벤트 처리기 구현  
+키 이벤트와 같은 입력 이벤트에서는 *라우트된 이벤트*라는 이벤트 개념을 사용합니다. 라우트된 이벤트는 복합 컨트롤의 자식 요소로 넘쳐날 수 있으므로 공용 컨트롤 부모에서 여러 자식 요소에 대한 이벤트를 처리할 수 있습니다. 이 이벤트 모델은 기본적으로 포커스가 없거나 탭 순서의 일부가 아닐 수 있는 여러 복합 부분을 포함하는 컨트롤의 바로 가기 키 동작을 정의하는 데 편리합니다.
 
-For example code that shows how to write a key event handler that includes checking for modifiers such as the Ctrl key, see [Keyboard interactions](https://msdn.microsoft.com/library/windows/apps/Mt185607).
+Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 방법을 보여 주는 예제 코드는 [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)을 참조하세요.
 
 <span id="Keyboard_navigation_for_custom_controls"/>
 <span id="keyboard_navigation_for_custom_controls"/>
 <span id="KEYBOARD_NAVIGATION_FOR_CUSTOM_CONTROLS"/>
-## Keyboard navigation for custom controls  
-We recommend the use of arrow keys as keyboard shortcuts for navigating among child elements, in cases where the child elements have a spacial relationship to each other. If tree-view nodes have separate sub-elements for handling expand-collapse and node activation, use the left and right arrow keys to provide keyboard expand-collapse functionality. If you have an oriented control that supports directional traversal within the control content, use the appropriate arrow keys.
+## 사용자 지정 컨트롤의 키보드 탐색  
+자식 요소를 탐색하는 키보드 바로 가기로 화살표 키를 사용하는 것이 좋습니다. 이 경우 자식 요소는 서로 특별한 관계가 있습니다. 트리 뷰 노드에 확장/축소 처리와 노드 활성화에 대한 별도의 하위 요소가 있는 경우 왼쪽 및 오른쪽 화살표 키를 사용하여 키보드 확장/축소 기능을 제공합니다. 컨트롤 콘텐츠 내에 방향 통과를 지원하는 방향이 지정된 컨트롤이 있는 경우 적절한 화살표 키를 사용합니다.
 
-Generally you implement custom key handling for custom controls by including an override of [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) and [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) methods as part of the class logic.
+일반적으로 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) 및 [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) 메서드의 재정의를 클래스 논리의 일부로 포함하여 사용자 지정 컨트롤에 대한 사용자 지정 키 처리를 구현합니다.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
-## An example of a visual state for a focus indicator  
-We mentioned earlier that any custom control that enables the user to focus it should have a visual focus indicator. Usually that focus indicator is as simple as drawing a rectangle shape immediately around the control's normal bounding rectangle. The [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) for visual focus is a peer element to the rest of the control's composition in a control template, but is initially set with a [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) value of **Collapsed** because the control isn't focused yet. Then, when the control does get focus, a visual state is invoked that specifically sets the **Visibility** of the focus visual to **Visible**. Once focus is moved elsewhere, another visual state is called, and the **Visibility** becomes **Collapsed**.
+## 포커스 표시기의 시각적 상태 예제  
+앞에서 사용자가 포커스를 설정할 수 있는 모든 사용자 지정 컨트롤에 시각적 포커스 표시기가 있어야 한다고 설명했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 주위에 사각형 모양을 그리는 것처럼 단순합니다. 시각적 포커스의 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 컨트롤 템플릿에 있는 컨트롤 컴퍼지션의 나머지 부분에 대한 피어 요소이지만 컨트롤이 아직 포커스되지 않았으므로 초기에 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 값 **Collapsed**를 사용하여 설정됩니다. 그런 다음 컨트롤에 포커스가 있으면 구체적으로 시각적 포커스의 **Visibility**를 **Visible**로 설정하는 시각적 상태가 호출됩니다. 포커스가 다른 곳으로 이동되면 다른 시각적 상태가 호출되고 **Visibility**는 **Collapsed**가 됩니다.
 
-All of the default XAML controls will display an appropriate visual focus indicator when focused (if they can be focused). There are also potentially different looks depending on the user's selected theme (particularly if the user is using a high contrast mode.) If you're using the XAML controls in your UI and not replacing the control templates, you don't need to do anything extra to get visual focus indicators on controls that behave and display correctly. But if you're intending to retemplate a control, or if you're curious about how XAML controls provide their visual focus indicators, the remainder of this section explains how this is done in XAML and in the control logic.
+모든 기본 XAML 컨트롤은 포커스되었을 때 해당하는 시각적 포커스 표시기를 표시합니다(포커스될 수 있는 경우). 또한 사용자가 선택한 테마에 따라 모양이 다를 수 있습니다(특히 사용자가 고대비 모드를 사용 중인 경우). UI에서 XAML 컨트롤을 사용 중이며 컨트롤 템플릿을 바꾸지 않는 경우 제대로 작동하고 표시하는 컨트롤에 대한 시각적 포커스 표시기를 얻기 위해 추가로 어떤 작업도 수행할 필요가 없습니다. 하지만 컨트롤을 다시 템플릿으로 지정하려는 경우나 XAML 컨트롤이 시각적 포커스 지시기를 제공하는 방법을 알고 싶은 경우를 위해 이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서 이를 수행하는 방법을 설명합니다.
 
-Here's some example XAML that comes from the default XAML template for a [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265).
+다음은 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 대한 기본 XAML 템플릿에서 가져온 일부 XAML입니다.
 
 XAML
 ```xml
@@ -188,7 +196,7 @@ XAML
 </ControlTemplate>
 ```
 
-So far this is just the composition. To control the focus indicator's visibility, you define visual states that toggle the [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) property. This is done using the [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/Hh738505) attached property, as applied to the root element that defines the composition.
+지금까지는 단순히 컴퍼지션이었습니다. 포커스 표시기의 표시 형식을 제어하려면 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 전환하는 시각적 상태를 정의합니다. 이 작업은 컴퍼지션을 정의하는 루트 요소에 적용되는 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/Hh738505) 연결된 속성을 사용하여 수행합니다.
 
 XAML
 ```xml
@@ -217,21 +225,26 @@ XAML
 </ControlTemplate>
 ```
 
-Note how only one of the named states adjusts [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) directly whereas the others are seemingly empty. The way that visual states work is that as soon as the control uses another state from the same [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/BR209014), any animations applied by the previous state are immediately canceled. Because the default **Visibility** from composition is **Collapsed**, this means the rectangle will not appear. The control logic controls this by listening for focus events like [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/BR208927) and changing the states with [**GoToState**](https://msdn.microsoft.com/library/windows/apps/BR209025). Often this is already handled for you if you are using a default control or customizing based on a control that already has that behavior.
+명명된 상태 중 하나만 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992)를 직접 조정하고 다른 상태는 비어 있는 것처럼 표시됩니다. 시각적 상태는 컨트롤이 동일한 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/BR209014)의 다른 상태를 사용하는 즉시 이전 상태에 의해 적용된 모든 애니메이션이 즉시 취소되는 방식으로 작동합니다. 컴퍼지션의 기본 **Visibility**는 **Collapsed**이므로 사각형이 표시되지 않습니다. 컨트롤 논리는 [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/BR208927) 같은 포커스 이벤트를 수신 대기하고 [**GoToState**](https://msdn.microsoft.com/library/windows/apps/BR209025)를 통해 상태를 변경하여 이를 제어합니다. 기본 컨트롤을 사용하거나 이미 해당 동작이 포함된 컨트롤을 기반으로 사용자 지정하는 경우 이 작업이 이미 처리되어 있습니다.
 
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
-## Keyboard accessibility and Windows Phone
-A Windows Phone device typically doesn't have a dedicated, hardware keyboard. However, a Soft Input Panel (SIP) can support several keyboard accessibility scenarios. Screen readers can read text input from the **Text** SIP, including announcing deletions. Users can discover where their fingers are because the screen reader can detect that the user is scanning keys, and it reads the scanned key name aloud. Also, some of the keyboard-oriented accessibility concepts can be mapped to related assistive technology behaviors that don't use a keyboard at all. For example, even though a SIP won't include a Tab key, Narrator supports a touch gesture that's the equivalent of pressing the Tab key, so having a useful tab order through the controls in a UI is still an important accessibility principle. Arrow keys as used for navigating the parts within complex controls are also supported through Narrator touch gestures. Once focus has reached a control that's not for text input, Narrator supports a gesture that invokes that control's action.
+## 키보드 접근성 및 Windows Phone
+Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없습니다. 그러나 SIP(Soft Input Panel)가 여러 가지 키보드 접근성 시나리오를 지원할 수 있습니다. 화면 읽기 프로그램은 **텍스트** SIP에서 삭제 알림을 포함한 텍스트 입력을 읽을 수 있습니다. 화면 읽기 프로그램은 사용자가 키를 검색하고 있음을 감지하고 검색한 키 이름을 소리 내어 읽을 수 있으므로 사용자가 손가락의 위치를 검색할 수 있습니다. 또한 키보드 지향 접근성 개념 일부를 키보드를 전혀 사용하지 않는 관련 보조 기술 동작에 매핑할 수 있습니다. 예를 들어 SIP에 Tab 키가 포함되지 않은 경우에도 내레이터는 Tab 키를 누르는 것과 동일한 터치 제스처를 지원하므로 UI의 컨트롤을 통과하는 유용한 탭 순서가 있는 것도 중요한 접근성 원칙입니다. 복잡한 컨트롤 내 일부를 탐색하는 데 사용되는 화살표 키도 내레이터 터치 제스처를 통해 지원됩니다. 포커스가 텍스트 입력용이 아닌 컨트롤에 도달하면 내레이터는 해당 컨트롤의 동작을 호출하는 제스처를 지원합니다.
 
-Keyboard shortcuts aren't typically relevant for Windows Phone apps, because a SIP won't include Control or Alt keys.
+바로 가기 키는 일반적으로 Windows Phone 앱에 적합하지 않습니다. SIP에 Control 키나 Alt 키가 없기 때문입니다.
 
 <span id="related_topics"/>
-## Related topics  
-* [Accessibility](accessibility.md)
-* [Keyboard interactions](https://msdn.microsoft.com/library/windows/apps/Mt185607)
-* [Input: Touch keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Responding to the appearance of the on-screen keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [XAML accessibility sample](http://go.microsoft.com/fwlink/p/?linkid=238570)
- 
+## 관련 항목  
+* [접근성](accessibility.md)
+* [키보드 조작](https://msdn.microsoft.com/library/windows/apps/Mt185607)
+* [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
+* [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
+* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+ 
+
+
+<!--HONumber=May16_HO2-->
+
+

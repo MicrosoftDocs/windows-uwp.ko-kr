@@ -1,361 +1,363 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Respond to keystroke actions from hardware or software keyboards in your apps using both keyboard and class event handlers.
-title: Keyboard interactions
+Description: 키보드 및 클래스 이벤트 처리기를 사용하여 앱에서 하드웨어 또는 소프트웨어 키보드의 키 입력 동작에 응답합니다.
+title: 키보드 조작
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 ---
 
-# Keyboard interactions
+# 키보드 조작
 
 
-Keyboard input is an important part of the overall user interaction experience for apps. The keyboard is indispensable to people with certain disabilities or users who just consider it a more efficient way to interact with an app. For example, users should be able to navigate your app by using Tab and arrow keys, activate UI elements by using Spacebar and Enter, and access commands by using keyboard shortcuts.
-![keyboard hero image](images/input-patterns/input-keyboard-small.jpg)
+키보드 입력은 앱용 전체 사용자 조작 환경에서 중요한 부분을 차지합니다. 키보드가 앱을 조작하는 보다 효율적인 방법이라고 생각하는 사용자나 특정 장애를 가진 사람들에게는 키보드가 필수 도구입니다. 예를 들어 사용자가 Tab 및 화살표 키를 사용하여 앱을 탐색하고, 스페이스바 및 Enter 키를 사용하여 UI 요소를 활성화하고, 바로 가기 키를 사용하여 명령에 액세스할 수 있어야 합니다.
+![키보드 영웅 이미지](images/input-patterns/input-keyboard-small.jpg)
 
 
 
-**Important APIs**
+**중요 API**
 
 -   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
 -   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
 -   [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)
 
 
-A well-designed keyboard UI is an important aspect of software accessibility. It enables users with vision impairments or who have certain motor disabilities to navigate an app and interact with its features. Such users might not be able to operate a mouse and instead rely on various assistive technologies such as keyboard enhancement tools, on-screen keyboards, screen enlargers, screen readers, and voice input utilities.
+잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다.
 
-Users can interact with universal apps through a hardware keyboard and two software keyboards: the On-Screen Keyboard (OSK) and the touch keyboard.
+사용자는 하드웨어 키보드 및 두 가지 가상 키보드(OSK(화상 키보드) 및 터치 키보드)를 통해 유니버설 앱을 조작할 수 있습니다.
 
-<span></span>On-Screen Keyboard  
-The On-Screen Keyboard is a visual, software keyboard that you can use instead of the physical keyboard to type and enter data using touch, mouse, pen/stylus or other pointing device (a touch screen is not required). The On-Screen Keyboard is provided for systems that don't have a physical keyboard, or for users whose mobility impairments prevent them from using traditional physical input devices. The On-Screen Keyboard emulates most, if not all, the functionality of a hardware keyboard.
+<span></span>화상 키보드  
+화상 키보드는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있는 시각적 가상 키보드입니다(터치 스크린이 필요하지 않음). 실제 키보드가 없는 시스템이나 움직일 수 없어서 일반적인 입력 디바이스를 사용할 수 없는 사용자는 화상 키보드를 사용할 수 있습니다. 화상 키보드는 하드웨어 키보드의 기능을 전부는 아니라도 대부분 에뮬레이트합니다.
 
-The On-Screen Keyboard can be turned on from the Keyboard page in Settings &gt; Ease of access.
+화상 키보드는 설정 &gt; 접근성의 키보드 페이지에서 켤 수 있습니다.
 
-**Note**  The On-Screen Keyboard has priority over the touch keyboard, which won't be shown if the On-Screen Keyboard is present.
+**참고** 화상 키보드는 터치 키보드보다 우선하며, 현재 화상 키보드가 사용 중이면 터치 키보드는 나타나지 않습니다.
 
- 
+ 
 
-![the on-screen keyboard](images/input-patterns/osk.png)
+![화상 키보드](images/input-patterns/osk.png)
 
-<sup>On-Screen Keyboard</sup>
+<sup>화상 키보드</sup>
 
-<span id="Touch_keyboard"></span><span id="touch_keyboard"></span><span id="TOUCH_KEYBOARD"></span>Touch keyboard  
-The touch keyboard is a visual, software keyboard used for text entry with touch input. It is not a replacement for the On-Screen Keyboard as it's used for text input only (it doesn't emulate the hardware keyboard).
+<span id="Touch_keyboard"></span><span id="touch_keyboard"></span><span id="TOUCH_KEYBOARD"></span>터치 키보드  
+터치 키보드는 터치식 입력과 함께 텍스트 입력에 사용되는 시각적 가상 키보드입니다. 터치 키보드는 텍스트 입력용으로만 사용되므로 화상 키보드를 대체하지 않습니다(하드웨어 키보드를 에뮬레이트하지 않음).
 
-Depending on the device, the touch keyboard appears when a text field or other editable text control gets focus, or when the user manually enables it through the **Notification Center**:
+디바이스에 따라, 터치 키보드는 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤이 포커스를 받을 때 또는 사용자가 **알림 센터**를 통해 수동으로 설정할 때 나타납니다.
 
-![touch keyboard icon in the notification center](images/input-patterns/touch-keyboard-notificationcenter.png)
+![알림 센터의 터치 키보드 아이콘](images/input-patterns/touch-keyboard-notificationcenter.png)
 
-**Note**  The user might have to go to the **Tablet mode** screen in Settings &gt; System and turn on "Make Windows more touch-friendly when using your device as a tablet" to enable the automatic appearance of the touch keyboard.
+**참고** 터치 키보드를 자동으로 표시하려면 설정 &gt; 시스템의 **태블릿 모드** 화면으로 이동하여 "태블릿과 같은 디바이스를 사용할 때 Windows에서 더 쉽게 터치할 수 있습니다."를 켜야 할 수 있습니다.
 
- 
+ 
 
-If your app sets focus programmatically to a text input control, the touch keyboard is not invoked. This eliminates unexpected behaviors not instigated directly by the user. However, the keyboard does automatically hide when focus is moved programmatically to a non-text input control.
+앱에서 포커스를 프로그래밍 방식으로 텍스트 입력 컨트롤로 설정하는 경우에는 터치 키보드가 호출되지 않습니다. 이는 사용자가 직접 실시하지 않은 예기치 않은 동작을 제거합니다. 그러나 포커스가 프로그래밍 방식으로 텍스트 입력 컨트롤이 아닌 컨트롤로 이동하는 경우에는 키보드가 자동으로 숨겨집니다.
 
-The touch keyboard typically remains visible while the user navigates between controls in a form. This behavior can vary based on the other control types within the form.
+터치 키보드는 사용자가 양식에서 컨트롤 사이를 이동하는 동안 일반적으로 표시된 상태로 유지됩니다. 이 동작은 양식 내에 있는 다른 컨트롤 형식에 따라 다를 수 있습니다.
 
-The following is a list of non-edit controls that can receive focus during a text entry session using the touch keyboard without dismissing the keyboard. Rather than needlessly churn the UI and potentially disorient the user, the touch keyboard remains in view because the user is likely to go back and forth between these controls and text entry with the touch keyboard.
+다음은 터치 키보드를 사용하는 텍스트 입력 세션 중에 키보드를 해제하지 않고 포커스를 받을 수 있는 비편집 컨트롤 목록입니다. 사용자는 터치 키보드에서 컨트롤과 텍스트 입력 사이를 왔다 갔다 하는 경향이 있으므로 터치 키보드를 뷰에 고정하여 불필요하게 UI를 이리 저리 찾아다니거나 혼란에 빠지지 않게 합니다.
 
--   Check box
--   Combo box
--   Radio button
--   Scroll bar
--   Tree
--   Tree item
--   Menu
--   Menu bar
--   Menu item
--   Toolbar
--   List
--   List item
+-   확인란
+-   콤보 상자
+-   라디오 단추
+-   스크롤 막대
+-   트리
+-   트리 항목
+-   메뉴
+-   메뉴 모음
+-   메뉴 항목
+-   도구 모음
+-   목록
+-   목록 항목
 
-Here are examples of different modes for the touch keyboard. The first image is the default layout, the second is the thumb layout (which might not be available in all languages).
+다음은 터치 키보드의 다양한 모드의 예입니다. 첫 번째 이미지는 기본 레이아웃이고, 두 번째 이미지는 미리 보기 레이아웃으로 일부 언어에서는 사용할 수 없습니다.
 
-Here are examples of different modes for the touch keyboard. The first image is the default layout, the second is the thumb layout (which might not be available in all languages).
+다음은 터치 키보드의 다양한 모드의 예입니다. 첫 번째 이미지는 기본 레이아웃이고, 두 번째 이미지는 미리 보기 레이아웃으로 일부 언어에서는 사용할 수 없습니다.
 <table>
 <tr>
-	<td>**The touch keyboard in default layout mode:  **</td>
-	<td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>**기본 레이아웃 모드의 터치 키보드:  **</td>
+    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in expanded layout mode:  **</td>
-	<td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>**확장 레이아웃 모드의 터치 키보드:  **</td>
+    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in default thumb layout mode:  **</td>
-	<td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>**기본 미리 보기 레이아웃 모드의 터치 키보드:  **</td>
+    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
-	<td>**The touch keyboard in numeric thumb layout mode:  **</td>
-	<td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>**숫자 미리 보기 레이아웃 모드의 터치 키보드:  **</td>
+    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
 
-Successful keyboard interactions enable users to accomplish basic app scenarios using only the keyboard; that is, users can reach all interactive elements and activate default functionality. A number of factors can affect the degree of success, including keyboard navigation, access keys for accessibility, and accelerator (or shortcut) keys for advanced users.
+성공적인 키보드 조작을 통해 사용자는 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 요소에 액세스하고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 접근성에 대한 선택키, 고급 사용자를 위한 바로 가기 등 다양한 요소가 얼마나 키보드를 효과적으로 조작하느냐에 영향을 줍니다.
 
-**Note**  The touch keyboard does not support toggle and most system commands (see [Patterns](#keyboard_command_patterns)).
+**참고** 터치 키보드는 토글 및 대부분의 시스템 명령을 지원하지 않습니다([패턴](#keyboard_command_patterns) 참조).
 
-## <span id="Navigation"></span><span id="navigation"></span><span id="NAVIGATION"></span>Navigation
-
-
-To use a control (including navigation elements) with the keyboard, the control must have focus. One way for a control to receive keyboard focus is to make it accessible via tab navigation. A well designed keyboard navigation model provides a logical and predictable tab order that enables a user to explore and use your app quickly and efficiently.
-
-All interactive controls should have tab stops (unless they are in a group), whereas non-interactive controls, such as labels, should not.
-
-A set of related controls can be made into a control group and assigned a single tab stop. Control groups are used for sets of controls that behave like a single control, such as radio buttons. They can also be used when there too many controls to navigate efficiently with the Tab key alone. The arrow keys, Home, End, Page Up, and Page Down move input focus among the controls within a group (it is not possible to navigate out of a control group using these keys).
-
-You should set initial keyboard focus on the element that users will intuitively (or most likely) interact with first when your app starts. Often, this is the main content view of the app so that a user can immediately start using the arrow keys to scroll the app content.
-
-Don’t set initial keyboard focus on an element with potentially negative, or even disastrous, results. This can prevent loss of data or system access.
-
-Try to rank and present the most important commands, controls, and content first in both the tab order and the display order (or visual hierarchy). However, the actual display position can depend on the parent layout container and certain properties of the child elements that influence the layout. In particular, layouts that use a grid metaphor or a table metaphor can have a reading order quite different from the tab order. This is not always a problem, but you should test your app's functionality, both as a touchable UI and as a keyboard-accessible UI.
-
-Tab order should follow reading order, whenever possible. This can reduce confusion and is dependent on locale and language.
-
-Associate keyboard buttons with appropriate UI (back and forward buttons) in your app.
-
-Try to make navigating back to the start screen of your app and between key content as easy and straightforward as possible.
-
-Use the arrow keys as keyboard shortcuts for proper inner navigation among child elements of composite elements. If tree view nodes have separate child elements for handling expand–collapse and node activation, use the left and right arrow keys to provide keyboard expand–collapse functionality. This is consistent with the platform controls.
-
-Because the touch keyboard occludes a large portion of the screen, the Universal Windows Platform (UWP) ensures that the input field with focus scrolls into view as a user navigates through the controls on the form, including controls that are not currently in view. Custom controls should emulate this behavior.
-
-![a form with and without the touch keyboard showing](images/input-patterns/touch-keyboard-pan1.png)
-
-In some cases, there are UI elements that should stay on the screen the entire time. Design the UI so that the form controls are contained in a panning region and the important UI elements are static. For example:
-
-![a form that contains areas that should always stay in view](images/input-patterns/touch-keyboard-pan2.png)
-## <span id="Activation"></span><span id="activation"></span><span id="ACTIVATION"></span>Activation
+## <span id="Navigation"></span><span id="navigation"></span><span id="NAVIGATION"></span>탐색
 
 
-A control can be activated in a number of different ways, whether it currently has focus or not.
+키보드에서 컨트롤(탐색 요소 포함)을 사용하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 받는 한 가지 방법은 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다. 잘 디자인된 키보드 탐색 모델은 사용자가 앱을 빠르고 효율적으로 탐색 및 사용할 수 있도록 해주는 논리적이고 예측 가능한 탭 순서를 제공합니다.
 
-<span id="Spacebar__Enter__and_Esc"></span><span id="spacebar__enter__and_esc"></span><span id="SPACEBAR__ENTER__AND_ESC"></span>Spacebar, Enter, and Esc  
-The spacebar should activate the control with input focus. The Enter key should activate a default control or the control with input focus. A default control is the control with initial focus or one that responds exclusively to the Enter key (typically it changes with input focus). In addition, the Esc key should close or exit transitory UI, such as menus and dialogs.
+모든 대화형 컨트롤에는 탭 정지(그룹으로 묶인 경우 제외)가 있어야 하는 반면, 레이블과 같은 비대화형 컨트롤에는 탭 정지가 없어야 합니다.
 
-The Calculator app shown here uses the spacebar to activate the button with focus, locks the Enter key to the “=” button, and locks the Esc key to the “C” button.
+관련 컨트롤 집합을 컨트롤 그룹으로 만들고 단일 탭 정지를 할당할 수 있습니다. 컨트롤 그룹은 라디오 단추와 같은 단일 컨트롤처럼 작동하는 컨트롤 집합에 사용됩니다. 또한 컨트롤이 너무 많아 Tab 키만으로는 효율적으로 탐색할 수 없는 경우에도 사용될 수 있습니다. 화살표 키, Home, End, Page Up 및 Page Down은 그룹 내의 컨트롤 간에 입력 포커스를 이동합니다(이러한 키를 사용하여 컨트롤 그룹 밖으로 이동할 수는 없음).
 
-![the calculator app](images/input-patterns/calculator.png)
+앱이 시작되면 사용자가 처음에 직관적으로 상호 작용하거나 가장 먼저 상호 작용하게 되는 요소에 초기 키보드 포커스를 설정해야 합니다. 이는 사용자가 화살표 키를 사용하여 앱 콘텐츠 스크롤을 즉시 시작할 수 있는 앱의 기본 콘텐츠 보기입니다.
 
-<span id="Keyboard_modifiers"></span><span id="keyboard_modifiers"></span><span id="KEYBOARD_MODIFIERS"></span>Keyboard modifiers  
-Keyboard modifiers fall into the following categories: 
+잠재적으로 부정적이거나 치명적인 결과를 초래하는 요소에 초기 키보드 포커스를 설정하지 마세요. 그러면 데이터 또는 시스템 액세스 손실을 방지할 수 있습니다.
+
+명령, 컨트롤 및 콘텐츠의 순위를 정하고 탭 순서와 표시 순서(또는 시각적 계층 구조) 모두에서 가장 중요한 항목을 처음에 제공해 보세요. 그러나 실제 표시 위치는 부모 레이아웃 컨테이너 및 레이아웃에 영향을 주는 자식 요소의 특정 속성에 따라 달라질 수 있습니다. 특히, 그리드 메타포 또는 테이블 메타포를 사용하는 레이아웃은 읽기 순서가 탭 순서와 상당히 다를 수 있습니다. 이것이 항상 문제가 되는 것은 아니지만 터치 가능한 UI와 키보드로 액세스 가능한 UI 모두로 앱의 기능을 테스트해야 합니다.
+
+탭 순서는 가능한 경우 읽기 순서를 따라야 합니다. 이는 혼동을 줄일 수 있으며, 로캘 및 언어에 따라 달라집니다.
+
+키보드 단추를 앱의 적절한 UI(뒤로 및 앞으로 단추)에 연결합니다.
+
+최대한 쉽고 간편하게 앱의 시작 화면으로 돌아가고 주요 콘텐츠 간에 이동할 수 있도록 해보세요.
+
+복합 요소의 하위 요소 간의 적절한 내부 탐색을 위해 화살표 키를 바로 가기 키로 사용합니다. 트리 뷰 노드에 확장/축소 처리와 노드 활성화에 대한 별도의 하위 요소가 있는 경우 왼쪽 및 오른쪽 화살표 키를 사용하여 키보드 확장/축소 기능을 제공합니다. 이는 플랫폼 컨트롤과 일치합니다.
+
+터치 키보드는 화면의 많은 부분을 가리기 때문에 UWP(유니버설 Windows 플랫폼)에서는 사용자가 현재 보기에 없는 컨트롤을 포함하여 양식의 컨트롤을 탐색할 때 포커스가 있는 입력 필드가 보기로 스크롤되도록 합니다. 사용자 지정 컨트롤은 이 동작을 에뮬레이트해야 합니다.
+
+![터치 키보드가 표시된 양식 및 표시되지 않은 양식](images/input-patterns/touch-keyboard-pan1.png)
+
+경우에 따라 전체 시간 동안 화면에 유지해야 하는 UI 요소가 있습니다. 양식 컨트롤은 이동 영역에 포함되고 중요한 UI 요소는 고정되도록 UI를 디자인해 보세요. 예를 들면 다음과 같습니다.
+
+![뷰에 항상 유지되어야 하는 영역이 있는 양식](images/input-patterns/touch-keyboard-pan2.png)
+## <span id="Activation"></span><span id="activation"></span><span id="ACTIVATION"></span>활성화
+
+
+현재 포커스가 있는지 여부에 상관없이 다양한 방식으로 컨트롤을 활성화할 수 있습니다.
+
+<span id="Spacebar__Enter__and_Esc"></span><span id="spacebar__enter__and_esc"></span><span id="SPACEBAR__ENTER__AND_ESC"></span>스페이스바, Enter 키 및 Esc 키  
+스페이스바는 입력 포커스가 있는 컨트롤을 활성화해야 합니다. Enter 키는 기본 컨트롤 또는 입력 포커스가 있는 컨트롤을 활성화해야 합니다. 기본 컨트롤은 초기 포커스가 있는 컨트롤 또는 Enter 키에만 응답하는 컨트롤입니다(일반적으로 입력 포커스와 함께 변경됨). 또한 Esc 키는 메뉴 및 대화 상자와 같은 일시적인 UI를 닫거나 종료해야 합니다.
+
+여기에 표시된 계산기 앱은 스페이스바를 사용하여 포커스가 있는 단추를 활성화하며, Enter 키를 "=" 단추에 잠그고 Esc 키를 "C" 단추에 잠급니다.
+
+![계산기 앱](images/input-patterns/calculator.png)
+
+<span id="Keyboard_modifiers"></span><span id="keyboard_modifiers"></span><span id="KEYBOARD_MODIFIERS"></span>키보드 한정자  
+키보드 한정자는 다음 범주로 나뉩니다. 
 
  
-| Category | Description | 
+| 범주 | 설명 | 
 |----------|-------------| 
-| Shortcut key | Perform a common action without UI such as "Ctrl-S" for **Save**. Implement keyboard shortcuts for key app functionality. Not every command has, or requires, a shortcut. |   
-| Access key/Hot key | Assigned to every visible, top-level control such as "Alt-F" for the **File** menu. An access key does not invoke or activate a command. |
-| Accelerator key | Perform default system or app-defined commands such as "Alt-PrtScrn" for screen capture, "Alt-Tab" to switch apps, or "F1" for help. A command associated with an accelerator key does not have to be a menu item. |
-| Application key/Menu key | Show context menu. |
-| Window key/Command key | Activate system commands such as **System Menu**, **Lock Screen**, or **Show Desktop**. |
+| 바로 가기 키 | UI 없이 일반적인 작업을 수행합니다(예: **저장**의 경우 "Ctrl-S"). 주요 앱 기능에 대한 바로 가기 키를 구현합니다. 일부 명령에는 바로 가기가 없거나 필요하지 않습니다. |   
+| 선택키/바로 가기 키 | 표시되는 모든 최상위 컨트롤에 할당됩니다(예: **파일** 메뉴의 경우 "Alt-F"). 선택키는 명령을 호출하거나 활성화하지 않습니다. |
+| 바로 가기 키 | 기본 시스템 또는 앱 정의 명령을 수행합니다(예: 화면 캡처의 경우 "Alt-PrtScrn", 앱 전환의 경우 "Alt-Tab", 도움말의 경우 "F1"). 바로 가기 키와 관련된 명령은 메뉴 항목이 아니어도 됩니다. |
+| 응용 프로그램 키/메뉴 키 | 상황에 맞는 메뉴를 표시합니다. |
+| 창 키/명령 키 | **시스템 메뉴**, **잠금 화면** 또는 **바탕 화면 보기**와 같은 시스템 명령을 활성화합니다. |
 
-Access keys and accelerator keys support interaction with controls directly instead of navigating to them using the Tab key.
-> While some controls have intrinsic labels, such as command buttons, check boxes, and radio buttons, other controls have external labels, such as list views. For controls with external labels, the access key is assigned to the label, which, when invoked, sets focus to an element or value within the associated control.
-
-
-The example here, shows the access keys for the **Page Layout** tab in **Word**.
-
-![the access keys for the page layout tab in word](images/input-patterns/accesskeys-show.png)
-
-Here, the Indent Left text field value is highlighted after entering the access key identified in the associated label.
-
-![the indent left text field value is highlighted after entering the access key identified in the associated label](images/input-patterns/accesskeys-entered.png)
-
-## <span id="Usability_and_accessibility"></span><span id="usability_and_accessibility"></span><span id="USABILITY_AND_ACCESSIBILITY"></span>Usability and accessibility
+선택키와 바로 가기 키는 Tab 키를 사용하여 컨트롤로 이동하는 대신 직접 컨트롤을 조작하는 기능을 지원합니다.
+> 명령 단추, 확인란, 라디오 단추 등의 일부 컨트롤에는 내부 레이블이 있는 반면, 목록 보기와 같은 다른 컨트롤에는 외부 레이블이 있습니다. 외부 레이블이 있는 컨트롤에는 호출된 경우 연결된 컨트롤 내의 요소 또는 값으로 포커스를 설정하는 선택키가 레이블에 할당됩니다.
 
 
-A well-designed keyboard interaction experience is an important aspect of software accessibility. It enables users with vision impairments or who have certain motor disabilities to navigate an app and interact with its features. Such users might be unable to operate a mouse and must, instead, rely on various assistive technologies that include keyboard enhancement tools and on-screen keyboards (along with screen enlargers, screen readers, and voice input utilities). For these users, comprehensiveness is more important than consistency.
+다음 예제에서는 **Word**의 **페이지 레이아웃** 탭에 대한 선택키를 보여 줍니다.
 
-Experienced users often have a strong preference for using the keyboard, because keyboard-based commands can be entered more quickly and don't require removing their hands from the keyboard. For these users, efficiency and consistency are crucial; comprehensiveness is important only for the most frequently used commands.
+![Word의 페이지 레이아웃 탭에 대한 선택키](images/input-patterns/accesskeys-show.png)
 
-There are subtle distinctions when designing for usability and accessibility, which is why two different keyboard access mechanisms are supported.
+이 예제에서는 연결된 레이블에서 식별된 선택키를 입력한 후 왼쪽에서 들여쓰기 텍스트 필드 값이 강조 표시되어 있습니다.
 
-Access keys have the following characteristics:
+![연결된 레이블에서 식별된 선택키를 입력한 후 왼쪽에서 들여쓰기 텍스트 필드 값이 강조 표시됨](images/input-patterns/accesskeys-entered.png)
 
--   An access key is a shortcut to a UI element in your app.
--   They use the Alt key plus an alphanumeric key.
--   They are primarily for accessibility.
--   They are assigned to all menus and most dialog box controls.
--   They aren't intended to be memorized, so they are documented directly in the UI by underlining the corresponding control label character.
--   They have effect only in the current window, and navigate to the corresponding menu item or control.
--   They aren't assigned consistently because they can't always be. However, access keys should be assigned consistently for commonly used commands, especially commit buttons.
--   They are localized.
-
-Because access keys aren't intended to be memorized, they are assigned to a character that is early in the label to make them easy to find, even if there is a keyword that appears later in the label.
-
-In contrast, accelerator keys have the following characteristics:
-
--   An accelerator key is a shortcut to an app command.
--   They primarily use Ctrl and Function key sequences (Windows system shortcut keys also use Alt+non-alphanumeric keys and the Windows logo key).
--   They are primarily for efficiency for advanced users.
--   They are assigned only to the most commonly used commands.
--   They are intended to be memorized, and are documented only in menus, tooltips, and Help.
--   They have effect throughout the entire program, but have no effect if they don't apply.
--   They must be assigned consistently because they are memorized and not directly documented.
--   They aren't localized.
-
-Because accelerator keys are intended to be memorized, the most frequently used accelerator keys ideally use letters from the first or most memorable characters within the command's keywords, such as Ctrl+C for Copy and Ctrl+Q for Request.
-
-Users should be able to accomplish all tasks supported by your app using only the hardware keyboard or the On-Screen Keyboard.
-
-You should provide an easy way for users who rely on screen readers and other assistive technology to discover your app's accelerator keys. Communicate accelerator keys by using tooltips, accessible names, accessible descriptions, or some other form of on-screen communication. At a minimum, access and accelerator keys should be well documented in your app's Help content.
-
-Don’t assign well-known or standard accelerator keys to other functionality. For example, Ctrl+F is typically used for find or search.
-
-Don’t bother trying to assign access keys to all interactive controls in a dense UI. Just ensure the most important and the most used have access keys, or use control groups and assign an access key to the control group label.
-
-Don't change commands using keyboard modifiers. Doing so is undiscoverable and can cause confusion.
-
-Don't disable a control while it has input focus. This can interfere with keyboard input.
-
-To ensure successful keyboard interaction experiences, it is critical to test your app thoroughly and exclusively with the keyboard.
-
-## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>Text input
+## <span id="Usability_and_accessibility"></span><span id="usability_and_accessibility"></span><span id="USABILITY_AND_ACCESSIBILITY"></span>유용성 및 접근성
 
 
-Always query the device capabilities when relying on keyboard input. On some devices (such as phone), the touch keyboard can only be used for text input as it does not provide many of the accelerators or command keys found on a hardware keyboard (such as alt, the function keys, or the Windows Logo key).
+잘 디자인된 키보드 조작 환경은 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며, 대신 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 판독기 및 음성 입력 유틸리티)을 사용해야 합니다. 이러한 사용자에게는 포괄성이 일관성보다 더 중요합니다.
 
-Don't make users navigate the app using the touch keyboard. Depending on the control getting focus, the touch keyboard might get dismissed.
+숙련된 사용자는 키보드 기반 명령이 더 빠르게 입력할 수 있고 키보드에서 손을 떼지 않아도 되기 때문에 키보드를 사용하는 것을 더 선호하는 경향이 많습니다. 이러한 사용자에게는 효율성과 일관성이 매우 중요합니다. 포괄성은 가장 자주 사용하는 명령에만 중요합니다.
 
-Try to display the keyboard throughout the entire interaction with your form. This eliminates UI churn that can disorient the user in the middle of a form or text entry flow.
+유용성과 접근성을 디자인할 때는 미묘한 차이가 있으며, 이 때문에 두 가지 키보드 액세스 메커니즘이 지원됩니다.
 
-Ensure that users can always see the input field that they're typing into. The touch keyboard occludes half of the screen, so the input field with focus should scroll into view as the user traverses the form.
+선택키의 특성은 다음과 같습니다.
 
-A standard hardware keyboard or OSK consists of seven types of keys, each supporting unique functionality:
+-   선택키는 앱의 UI 요소에 대한 바로 가기입니다.
+-   선택키는 Alt 키와 영숫자 키를 사용합니다.
+-   선택키는 주로 접근성을 위한 기능입니다.
+-   선택키는 모든 메뉴와 대부분의 대화 상자 컨트롤에 할당됩니다.
+-   선택키는 기억할 필요가 없으므로 해당 컨트롤 레이블 문자에 밑줄을 그어 UI에 직접 기록됩니다.
+-   선택키는 현재 창에만 영향을 주며 해당 메뉴 항목이나 컨트롤로 이동합니다.
+-   선택키는 항상 존재할 수 없으므로 일관적으로 할당되지 않습니다. 그러나 자주 사용하는 명령, 특히 커밋 단추에는 일관적으로 할당해야 합니다.
+-   선택키는 지역화됩니다.
 
--   Character key: sends a literal character to the window with input focus.
--   Modifier key: alters the function of a primary key when pressed simultaneously, such as Ctrl, Alt, Shift, and the Windows logo key.
--   Navigation key: moves input focus or text input location, such as the Tab, Home, End, Page Up, Page Down, and directional arrow keys.
--   Editing key: manipulates text, such as the Shift, Tab, Enter, Insert, Backspace, and Delete keys.
--   Function key: performs a special function, such as F1 through F12 keys.
--   Toggle key: puts the system into a mode, such as Caps Lock, ScrLk, and Num Lock keys.
--   Command key: performs a system task or command activation, such as Spacebar, Enter, Esc, Pause/Break, and Print Screen keys.
+선택키는 기억할 필요가 없으므로 레이블의 뒷부분에 나타나는 키워드가 있는 경우에도 쉽게 찾을 수 있도록 레이블의 앞부분에 있는 문자에 할당됩니다.
 
-In addition to these categories, a secondary class of keys and key combinations exist that can be used as shortcuts to app functionality:
+반면, 바로 가기 키의 특성은 다음과 같습니다.
 
--   Access key: exposes controls or menu items by pressing the Alt key with a character key, indicated by underlining of the access key character assignment in a menu, or displaying of the access key character(s) in an overlay.
--   Accelerator key: exposes app commands by pressing a function key or the Ctrl key with a character key. Your app might or might not have UI that corresponds to the command.
+-   바로 가기 키는 앱 명령에 대한 바로 가기입니다.
+-   바로 가기 키는 주로 Ctrl 키와 기능 키의 시퀀스를 사용합니다(Windows 시스템 바로 가기 키도 Alt+영숫자가 아닌 키 및 Windows 로고 키를 사용함).
+-   바로 가기 키는 주로 고급 사용자의 효율성을 위해 제공됩니다.
+-   바로 가기 키는 가장 자주 사용하는 명령에만 할당됩니다.
+-   바로 가기 키는 기억해야 하며, 메뉴, 도구 설명 및 도움말에만 기록됩니다.
+-   바로 가기 키는 전체 프로그램에서 효과가 있지만 적용되지 않는 경우에는 효과가 없습니다.
+-   바로 가기 키는 기억해야 하고 직접 기록되지 않으므로 일관적으로 할당해야 합니다.
+-   바로 가기 키는 지역화되지 않습니다.
 
-Another class of key combinations, known as secure attention sequence (SAS), cannot be intercepted by an app. This is a security feature intended to protect the user's system during login, and include Ctrl-Alt-Del and Win-L.
+바로 가기 키는 기억해야 하므로 가장 자주 사용되는 바로 가기 키는 복사의 경우 Ctrl+C, 요청의 경우 Ctrl+Q와 같이 명령 키워드 내 첫 번째 또는 가장 기억하기 쉬운 문자를 사용하는 것이 가장 좋습니다.
 
-The Notepad app is shown here with the expanded File menu that includes both access keys and accelerator keys.
+사용자가 하드웨어 키보드 또는 화상 키보드만 사용하여 앱이 지원하는 모든 작업을 수행할 수 있어야 합니다.
 
-![the notepad app with expanded file menu that includes both access keys and accelerator keys.](images/input-patterns/notepad.png)
+따라서 화면 판독기 및 다른 보조 기술을 사용하는 사용자에게 앱의 바로 가기 키를 찾을 수 있는 손쉬운 방법을 제공해야 합니다. 도구 설명, 접근성 있는 이름, 접근성 있는 설명 또는 몇 가지 다른 형식의 화면 통신을 사용하여 바로 가기 키를 제공합니다. 최소한 선택키와 바로 가기 키에 대한 설명이 앱의 도움말 콘텐츠에 잘 나타나 있어야 합니다.
 
-## <span id="Keyboard_commands"></span><span id="keyboard_commands"></span><span id="KEYBOARD_COMMANDS"></span>Keyboard commands
+잘 알려진 바로 가기 키 또는 표준 바로 가기 키를 다른 기능에 할당하지 마세요. 예를 들어 Ctrl+F는 일반적으로 찾기 또는 검색에 사용됩니다.
+
+조밀한 UI의 모든 대화형 컨트롤에 선택키를 할당하려고 하지 마세요. 가장 중요하고 자주 사용되는 기능에만 선택키를 두세요. 그렇지 않으면 컨트롤 그룹을 사용하고 컨트롤 그룹 레이블에 선택키를 할당하세요.
+
+키보드 한정자를 사용하여 명령을 변경하지 마세요. 이렇게 하면 검색할 수 없게 되며 혼동을 일으킬 수 있습니다.
+
+입력 포커스가 있는 동안 컨트롤을 비활성화하지 마세요. 이는 키보드 입력을 방해할 수 있습니다.
+
+성공적인 키보드 조작 환경을 위해서는 키보드로만 앱을 철저히 테스트해야 합니다.
+
+## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>텍스트 입력
 
 
-The following is a comprehensive list of the keyboard interactions provided across the various devices that support keyboard input. Some devices and platforms require native keystrokes and interactions, these are noted.
+키보드 입력을 사용할 경우 할상 장치 기능을 쿼리합니다. 휴대폰과 같은 일부 디바이스의 경우 터치 키보드는 Alt 키, 기능 키 또는 Windows 로고 키처럼 하드웨어 키보드에 포함된 다양한 바로 가기 또는 명령 키를 제공하지 않으므로 텍스트 입력에만 사용될 수 있습니다.
 
-When designing custom controls and interactions, use this keyboard language consistently to make your app feel familiar, dependable, and easy to learn.
+사용자가 터치 키보드를 사용하여 앱을 탐색하지 않도록 합니다. 포커스를 가져오는 컨트롤에 따라 터치 키보드가 해제될 수도 있습니다.
 
-Don't redefine the default keyboard shortcuts.
+전체 양식 조작에서 키보드를 표시해 보세요. 그러면 양식이나 텍스트를 입력하는 도중에 사용자를 혼동시킬 수 있는 UI 변동이 제거됩니다.
 
-The following tables list frequently used keyboard commands. For a complete list of keyboard commands, see [Windows Keyboard Shortcut Keys](http://go.microsoft.com/fwlink/p/?linkid=325424).
+사용자가 입력 중인 입력 필드를 항상 볼 수 있도록 합니다. 터치 키보드는 화면의 절반을 가리므로 포커스가 있는 입력 필드는 사용자가 양식을 트래버스할 때 보기로 스크롤되어야 합니다.
 
-**Navigation commands**
+표준 하드웨어 키보드 또는 OSK는 각각 고유한 기능을 지원하는 7가지 유형의 키로 구성됩니다.
 
-| Action                               | Key command                                      |
+-   문자 키: 입력 포커스가 있는 창으로 리터럴 문자를 보냅니다.
+-   보조 키: 동시에 누를 경우 기본 키의 기능을 변경합니다(예: Ctrl, Alt, Shift 및 Windows 로고 키).
+-   탐색 키: 입력 포커스 또는 텍스트 입력 위치를 이동합니다(예: Tab, Home, End, Page Up, Page Down 및 방향 화살표 키).
+-   편집 키: 텍스트를 조작합니다(예: Shift, Tab, Enter, Insert, 백스페이스 및 Delete 키).
+-   기능 키: 특수 기능을 수행합니다(예: F1~F12 키).
+-   토글 키: 시스템을 특정 모드로 전환합니다(예: Caps Lock, ScrLk 및 Num Lock 키).
+-   명령 키: 시스템 작업이나 명령 활성화를 수행합니다(예: 스페이스바, Enter, Esc, Pause/Break 및 Print Screen 키).
+
+이러한 범주 외에 앱 기능에 대한 바로 가기로 사용될 수 있는 보조 클래스의 키 및 키 조합이 있습니다.
+
+-   선택키: 메뉴의 선택키 문자 할당에 밑줄이 그어지거나 오버레이로 선택키 문자를 표시하는 방식으로 지정된 문자 키를 Alt 키와 함께 누르면 컨트롤 또는 메뉴 항목을 표시합니다.
+-   바로 가기 키: 기능 키 또는 Ctrl 키를 문자 키와 함께 누르면 앱 명령을 표시합니다. 앱에는 명령과 일치하는 UI가 있을 수도 있고 없을 수도 있습니다.
+
+앱에서 SAS(보안 키 입력)라는 키 조합의 다른 클래스를 가로챌 수 없습니다. 이 보안 기능은 로그인 시 사용자의 시스템을 보호하도록 설계되었으며 Ctrl-Alt-Del 및 Win-L을 포함합니다.
+
+메모장 앱은 선택키와 바로 가기 키를 모두 포함하는 확장된 파일 메뉴와 함께 여기에 표시됩니다.
+
+![선택키와 바로 가기 키를 모두 포함하는 확장된 파일 메뉴가 포함된 메모장 앱](images/input-patterns/notepad.png)
+
+## <span id="Keyboard_commands"></span><span id="keyboard_commands"></span><span id="KEYBOARD_COMMANDS"></span>키보드 명령
+
+
+다음은 키보드 입력을 지원하는 다양한 장치에서 제공되는 키보드 조작의 포괄적인 목록입니다. 일부 디바이스 및 플랫폼에는 기본 키 입력과 조작이 필요하며, 이러한 사항이 나와 있습니다.
+
+사용자 지정 컨트롤 및 조작을 디자인할 때 이 키보드 언어를 일관성 있게 사용하면 앱이 친숙하고 신뢰할 수 있으며 쉽게 배울 수 있게 됩니다.
+
+기본 바로 가기 키를 다시 정의하지 마세요.
+
+다음 표에서는 자주 사용하는 키보드 명령을 보여 줍니다. 전체 키보드 명령 목록은 [Windows 바로 가기 키](http://go.microsoft.com/fwlink/p/?linkid=325424)를 참조하세요.
+
+**탐색 명령**
+
+| 작업                               | 키 명령                                      |
 |--------------------------------------|--------------------------------------------------|
-| Back                                 | Alt+Left or the back button on special keyboards |
-| Forward                              | Alt+Right                                        |
-| Up                                   | Alt+Up                                           |
-| Cancel or Escape from current mode   | Esc                                              |
-| Move through items in a list         | Arrow key (Left, Right, Up, Down)                |
-| Jump to next list of items           | Ctrl+Left                                        |
-| Semantic zoom                        | Ctrl++ or Ctrl+-                                 |
-| Jump to a named item in a collection | Start typing item name                           |
-| Next page                            | Page Up, Page Down or Spacebar                   |
-| Next tab                             | Ctrl+Tab                                         |
-| Previous tab                         | Ctrl+Shift+Tab                                   |
-| Open app bar                         | Windows+Z                                        |
-| Activate or Navigate into an item    | Enter                                            |
-| Select                               | Spacebar                                         |
-| Continuously select                  | Shift+Arrow key                                  |
-| Select all                           | Ctrl+A                                           |
+| 뒤로                                 | Alt+왼쪽 또는 특수 키보드의 뒤로 단추 |
+| 전달                              | Alt+오른쪽                                        |
+| 위로                                   | Alt+위쪽                                           |
+| 취소 또는 현재 모드 끝내기   | Esc                                              |
+| 목록의 항목을 차례로 선택         | 화살표 키(왼쪽, 오른쪽, 위쪽, 아래쪽)                |
+| 다음 항목 목록으로 이동           | Ctrl+왼쪽                                        |
+| 시맨틱 줌                        | Ctrl++ 또는 Ctrl+-                                 |
+| 컬렉션에서 명명된 항목으로 이동 | 항목 이름 입력 시작                           |
+| 다음 페이지                            | Page Up, Page Down 또는 스페이스바                   |
+| 다음 탭                             | Ctrl+Tab                                         |
+| 이전 탭                         | Ctrl+Shift+Tab                                   |
+| 앱 바 열기                         | Windows+Z                                        |
+| 활성화 또는 항목으로 이동    | Enter                                            |
+| 선택                               | 스페이스바                                         |
+| 계속해서 선택                  | Shift+화살표 키                                  |
+| 모두 선택                           | Ctrl+A                                           |
 
- 
+ 
 
-**Common commands**
+**일반 명령**
 
-| Action                                                 | Key command     |
+| 작업                                                 | 키 명령     |
 |--------------------------------------------------------|-----------------|
-| Pin an item                                            | Ctrl+Shift+1    |
-| Save                                                   | Ctrl+S          |
-| Find                                                   | Ctrl+F          |
-| Print                                                  | Ctrl+P          |
-| Copy                                                   | Ctrl+C          |
-| Cut                                                    | Ctrl+X          |
-| New item                                               | Ctrl+N          |
-| Paste                                                  | Ctrl+V          |
-| Open                                                   | Ctrl+O          |
-| Open address (for example, a URL in Internet Explorer) | Ctrl+L or Alt+D |
+| 항목 고정                                            | Ctrl+Shift+1    |
+| 저장                                                   | Ctrl+S          |
+| 찾기                                                   | Ctrl+F          |
+| 인쇄                                                  | Ctrl+P          |
+| 복사                                                   | Ctrl+C          |
+| 잘라내기                                                    | Ctrl+X          |
+| 새 항목                                               | Ctrl+N          |
+| 붙여넣기                                                  | Ctrl+V          |
+| 열기                                                   | Ctrl+O          |
+| 주소 열기(예: Internet Explorer의 URL) | Ctrl+L 또는 Alt+D |
 
- 
+ 
 
-**Media navigation commands**
+**미디어 탐색 명령**
 
-| Action       | Key command |
+| 작업       | 키 명령 |
 |--------------|-------------|
-| Play/Pause   | Ctrl+P      |
-| Next item    | Ctrl+F      |
-| Preview item | Ctrl+B      |
+| 재생/일시 중지   | Ctrl+P      |
+| 다음 항목    | Ctrl+F      |
+| 항목 미리 보기 | Ctrl+B      |
 
- 
+ 
 
-Note: The media navigation key commands for Play/Pause and Next item are the same as the key commands for Print and Find, respectively. Common commands should take priority over media navigation commands. For example, if an app supports both plays media and prints, the key command Ctrl+P should print.
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Visual feedback
-
-
-Use focus rectangles only with keyboard interactions. If the user initiates a touch interaction, make the keyboard UI gradually fade away. This keeps the UI clean and uncluttered.
-
-Don't display visual feedback if an element doesn't support interaction (such as static text). Again, this keeps the UI clean and uncluttered.
-
-Try to display visual feedback concurrently for all elements that represent the same input target.
-
-Try to provide on-screen buttons (such as + and -) as hints for emulating touch-based manipulations such as panning, rotating, zooming, and so on.
-
-For more general guidance on visual feedback, see [Guidelines for visual feedback](guidelines-for-visualfeedback.md).
+참고: 재생/일시 중지와 다음 항목에 대한 미디어 탐색 키 명령은 각각 인쇄 및 찾기의 키 명령과 같습니다. 일반적인 명령이 미디어 탐색 명령보다 우선 순위가 높아야 합니다. 예를 들어 앱이 미디어 재생과 인쇄를 둘 다 지원하는 경우 키 명령 Ctrl+P는 인쇄를 수행해야 합니다.
+## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>시각적 피드백
 
 
-## <span id="keyboard_events"></span><span id="KEYBOARD_EVENTS"></span>Keyboard events and focus
+키보드 조작 시에만 포커스 사각형을 사용합니다. 사용자가 터치 조작을 시작하는 경우 키보드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
+
+요소가 조작을 지원하지 않는 경우(예제: 정적 테스트) 시각적 피드백을 표시하지 마세요. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
+
+동일한 입력 대상을 나타내는 모든 요소에 대해 동시에 시각적 피드백을 표시해 보세요.
+
+이동, 회전, 확대/축소 등의 터치 기반 조작을 에뮬레이트하기 위한 힌트로 화상 단추(예: + 및 -)를 제공해 보세요.
+
+시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
 
-The following keyboard events can occur for both hardware and touch keyboards.
+## <span id="keyboard_events"></span><span id="KEYBOARD_EVENTS"></span>키보드 이벤트 및 포커스
 
-| Event                                      | Description                    |
+
+다음 키보드 이벤트는 하드웨어 및 터치 키보드 둘 다에서 발생할 수 있습니다.
+
+| 이벤트                                      | 설명                    |
 |--------------------------------------------|--------------------------------|
-| [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) | Occurs when a key is pressed.  |
-| [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)     | Occurs when a key is released. |
+| [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) | 키를 누를 때 발생합니다.  |
+| [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)     | 키를 놓을 때 발생합니다. |
 
 
-**Important**  
-Some Windows Runtime controls handle input events internally. In these cases, it might appear that an input event doesn't occur because your event listener doesn't invoke the associated handler. Typically, this subset of keys is processed by the class handler to provide built in support of basic keyboard accessibility. For example, the [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) class overrides the [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) events for both the Space key and the Enter key (as well as [**OnPointerPressed**](https://msdn.microsoft.com/library/windows/apps/hh967989)) and routes them to the [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event of the control. When a key press is handled by the control class, the [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events are not raised.
+**중요**  
+일부 Windows 런타임 컨트롤은 입력 이벤트를 내부적으로 처리합니다. 이 경우 이벤트 수신기가 연결된 처리기를 호출하지 않으므로 입력 이벤트가 발생하지 않는 것처럼 보일 수도 있습니다. 일반적으로 이러한 키 하위 집합은 기본 키보드 접근성을 기본적으로 지원하기 위해 클래스 처리기에서 처리됩니다. 예를 들어 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스는 Space 키와 Enter 키 둘 다에 대해 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) 이벤트(및 [**OnPointerPressed**](https://msdn.microsoft.com/library/windows/apps/hh967989))를 재정의하고 컨트롤의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트로 라우팅합니다. 컨트롤 클래스에서 키 누름을 처리하는 경우 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트가 발생하지 않습니다.
 
-This provides a built-in keyboard equivalent for invoking the button, similar to tapping it with a finger or clicking it with a mouse. Keys other than Space or Enter still fire [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events. For more info about how class-based handling of events works (specifically, the "Input event handlers in controls" section), see [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
-
-
-Controls in your UI generate keyboard events only when they have input focus. An individual control gains focus when the user clicks or taps directly on that control in the layout, or uses the Tab key to step into a tab sequence within the content area.
-
-You can also call a control's [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161) method to force focus. This is necessary when you implement shortcut keys, because keyboard focus is not set by default when your UI loads. For more info, see the [Shortcut keys example](#shortcut_keys_example) later in this topic.
-
-For a control to receive input focus, it must be enabled, visible, and have [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) and [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) property values of **true**. This is the default state for most controls. When a control has input focus, it can raise and respond to keyboard input events as described later in this topic. You can also respond to a control that is receiving or losing focus by handling the [**GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) and [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) events.
-
-By default, the tab sequence of controls is the order in which they appear in the Extensible Application Markup Language (XAML). However, you can modify this order by using the [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) property. For more info, see [Implementing keyboard accessibility](https://msdn.microsoft.com/library/windows/apps/hh868161).
-
-## <span id="keyboard_event_handlers"></span><span id="KEYBOARD_EVENT_HANDLERS"></span>Keyboard event handlers
+손가락으로 탭하기 또는 마우스로 클릭과 유사하게 단추를 호출하기 위한 기본 제공 키보드 기능이 제공됩니다. Space 키 또는 Enter 키 이외의 키를 누르면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트가 발생합니다. 클래스 기반 이벤트 처리의 작동 방식(특히 "컨트롤의 입력 이벤트 처리기" 섹션)에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
 
-An input event handler implements a delegate that provides the following information:
+UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트를 생성합니다. 개별 컨트롤은 사용자가 레이아웃에서 해당 컨트롤을 직접 클릭 또는 탭하거나 Tab 키를 사용하여 콘텐츠 영역 내에서 탭 시퀀스를 단계별로 이동할 때 포커스를 얻습니다.
 
--   The sender of the event. The sender reports the object where the event handler is attached.
--   Event data. For keyboard events, that data will be an instance of [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). The delegate for handlers is [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904). The most relevant properties of **KeyRoutedEventArgs** for most handler scenarios are [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) and possibly [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Because the keyboard events are routed events, the event data provides **OriginalSource**. If you deliberately allow events to bubble up through an object tree, **OriginalSource** is sometimes the object of concern rather than sender. However, that depends on your design. For more information about how you might use **OriginalSource** rather than sender, see the "Keyboard Routed Events" section of this topic, or [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
+컨트롤의 [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161) 메서드를 호출하여 포커스를 강제 적용할 수도 있습니다. 이 작업은 사용자의 UI가 로드될 때 기본적으로 키보드 포커스가 설정되지 않으므로 바로 가기 키를 구현하는 경우에 필요합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [바로 가기 키 예제](#shortcut_keys_example)를 참조하세요.
 
-### <span id="attaching_a_keyboard_event_handler"></span><span id="ATTACHING_A_KEYBOARD_EVENT_HANDLER"></span>Attaching a keyboard event handler
+컨트롤에 입력 포커스를 적용하려면 컨트롤이 활성화되고 표시되어야 하며 [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) 및 [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) 속성 값이 **true**여야 합니다. 대부분의 컨트롤은 이것이 기본 상태입니다. 컨트롤에 입력 포커스가 있으면 이 항목의 뒷부분에 설명된 대로 키보드 입력 이벤트를 발생시키고 응답할 수 있습니다. [
+            **GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) 및 [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) 이벤트를 처리하여 포커스를 받거나 잃는 컨트롤에 응답할 수도 있습니다.
 
-You can attach keyboard event-handler functions for any object that includes the event as a member. This includes any [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) derived class. The following XAML example shows how to attach handlers for the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event for a [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704).
+기본적으로 컨트롤의 탭 시퀀스는 XAML(Extensible Application Markup Language)에 표시되는 순서입니다. 그러나 이 순서는 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) 속성을 사용하여 수정할 수 있습니다. 자세한 내용은 [키보드 접근성 구현](https://msdn.microsoft.com/library/windows/apps/hh868161)을 참조하세요.
+
+## <span id="keyboard_event_handlers"></span><span id="KEYBOARD_EVENT_HANDLERS"></span>키보드 이벤트 처리기
+
+
+입력 이벤트 처리기는 다음 정보를 제공하는 대리자를 구현합니다.
+
+-   이벤트를 보낸 사람. 보낸 사람은 이벤트 처리기가 연결된 개체를 보고합니다.
+-   이벤트 데이터. 키보드 이벤트의 경우 이 데이터는 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)의 인스턴스입니다. 처리기의 대리자는 [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs**의 가장 관련된 속성은 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)와 [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)입니다.
+-   [
+            **OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
+
+### <span id="attaching_a_keyboard_event_handler"></span><span id="ATTACHING_A_KEYBOARD_EVENT_HANDLER"></span>키보드 이벤트 처리기 연결
+
+이벤트를 멤버로 포함하는 모든 개체에 대해 키보드 이벤트 처리기 함수를 연결할 수 있습니다. 임의의 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 파생 클래스도 여기에 포함됩니다. 다음 XAML 예제는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트에 대해 처리기를 연결하는 방법을 보여 줍니다.
 
 ```XAML
 <Grid KeyUp="Grid_KeyUp">
@@ -363,11 +365,11 @@ You can attach keyboard event-handler functions for any object that includes the
 </Grid>
 ```
 
-You can also attach an event handler in code. For more info, see [Events and routed events overview](https://msdn.microsoft.com/library/windows/apps/mt185584).
+코드에서 이벤트 처리기를 연결할 수도 있습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-### <span id="defining_a_keyboard_event_handler"></span><span id="DEFINING_A_KEYBOARD_EVENT_HANDLER"></span>Defining a keyboard event handler
+### <span id="defining_a_keyboard_event_handler"></span><span id="DEFINING_A_KEYBOARD_EVENT_HANDLER"></span>키보드 이벤트 처리기 정의
 
-The following example shows the incomplete event handler definition for the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handler that was attached in the preceding example.
+다음 예제에서는 이전 예제에서 연결된 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기의 불완전한 이벤트 처리기 정의를 보여 줍니다.
 
 ```CSharp
 void Grid_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -389,35 +391,37 @@ void MyProject::MainPage::Grid_KeyUp(
 {//handling code here}
 ```
 
-### <span id="using_keyroutedeventargs"></span><span id="USING_KEYROUTEDEVENTARGS"></span>Using KeyRoutedEventArgs
+### <span id="using_keyroutedeventargs"></span><span id="USING_KEYROUTEDEVENTARGS"></span>KeyRoutedEventArgs 사용
 
-All keyboard events use [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072) for event data, and **KeyRoutedEventArgs** contains the following properties:
+모든 키보드 이벤트는 이벤트 데이터에 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)를 사용하며 **KeyRoutedEventArgs**에 다음 속성이 포함되어 있습니다.
 
--   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
+-   [**키**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (inherited from [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
+-   [
+            **OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
 
-### <span id="key"></span><span id="KEY"></span>Key
+### <span id="key"></span><span id="KEY"></span>키
 
-The [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) event is raised if a key is pressed. Likewise, [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) is raised if a key is released. Usually, you listen to the events to process a specific key value. To determine which key is pressed or released, check the [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) value in the event data. **Key** returns a [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812) value. The **VirtualKey** enumeration includes all the supported keys.
+키를 누르면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 이벤트가 발생합니다. 마찬가지로, 키를 놓으면 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)이 발생합니다. 일반적으로 특정 키 값을 처리하기 위해 이벤트를 수신 대기합니다. 어떤 키를 누르거나 놓았는지 알아보려면 이벤트 데이터에서 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) 값을 확인하세요. **Key**는 [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812) 값을 반환합니다. **VirtualKey** 열거형에는 지원되는 모든 키가 포함됩니다.
 
-### <span id="modifier_keys"></span><span id="MODIFIER_KEYS"></span>Modifier keys
+### <span id="modifier_keys"></span><span id="MODIFIER_KEYS"></span>보조 키
 
-Modifier keys are keys such as Ctrl or Shift that users typically press in combination with other keys. Your app can use these combinations as keyboard shortcuts to invoke app commands.
+보조 키는 Ctrl 또는 Shift 키와 같이 사용자가 일반적으로 다른 키와 함께 누르는 키입니다. 앱에서 이러한 조합을 바로 가기 키로 사용하여 앱 명령을 호출할 수 있습니다.
 
-You detect shortcut key combinations by using code in your [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handlers. You can then track the pressed state of the modifier keys you are interested in. When a keyboard event occurs for a non-modifier key, you can check whether a modifier key is in the pressed state at the same time.
+[
+            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기에 코드를 사용하여 바로 가기 키 조합을 검색합니다. 그런 후 관심 있는 보조 키의 누른 상태를 추적할 수 있습니다. 비보조 키에 대해 키보드 이벤트가 발생하는 경우 보조 키가 누른 상태인지 여부도 동시에 확인할 수 있습니다.
 
-**Note**  The Alt key is represented by the **VirtualKey.Menu** value.
+**참고** Alt 키는 **VirtualKey.Menu** 값으로 표시됩니다.
 
- 
+ 
 
-## <span id="shortcut_keys_example"></span><span id="SHORTCUT_KEYS_EXAMPLE"></span>Shortcut keys example
+## <span id="shortcut_keys_example"></span><span id="SHORTCUT_KEYS_EXAMPLE"></span>바로 가기 키 예제
 
 
-The following example demonstrates how to implement shortcut keys. In this example, users can control media playback using Play, Pause, and Stop buttons or Ctrl+P, Ctrl+A, and Ctrl+S keyboard shortcuts. The button XAML shows the shortcuts by using tooltips and [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) properties in the button labels. This self-documentation is important to increase the usability and accessibility of your app. For more info, see [Keyboard accessibility](https://msdn.microsoft.com/library/windows/apps/mt244347).
+다음 예제에서는 바로 가기 키를 구현하는 방법을 보여 줍니다. 이 예제에서 사용자는 [재생], [일시 중지] 및 [증지] 단추나 .Ctrl+P, Ctrl+A 및 Ctrl+S 바로 가기 키를 사용하여 미디어 재생을 제어할 수 있습니다. 단추 XAML은 단추 레이블의 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) 속성 및 도구 설명을 사용하여 바로 가기를 표시합니다. 이 자체 설명서는 앱의 유용성과 접근성을 향상시키는 데 중요합니다. 자세한 내용은 [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)을 참조하세요.
 
-Note also that the page sets input focus to itself when it is loaded. Without this step, no control has initial input focus, and the app does not raise input events until the user sets the input focus manually (for example, by tabbing to or clicking a control).
+페이지를 로드하면 입력 포커스가 페이지 자체에 설정됩니다. 이 단계가 없으면 컨트롤에 초기 입력 포커스가 없으며, 사용자가 컨트롤을 탭하거나 클릭하여 입력 포커스를 수동으로 설정할 때까지 앱에서 입력 이벤트를 발생시키지 않습니다.
 
 ```XAML
 <Grid KeyDown="Grid_KeyDown">
@@ -571,16 +575,18 @@ Private Sub MediaButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-**Note**  Setting [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) or [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) in XAML provides string information, which documents the shortcut key for invoking that particular action. The information is captured by Microsoft UI Automation clients such as Narrator, and is typically provided directly to the user. Setting **AutomationProperties.AcceleratorKey** or **AutomationProperties.AccessKey** does not have any action on its own. You will still need to attach handlers for [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) or [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events in order to actually implement the keyboard shortcut behavior in your app. Also, the underline text decoration for an access key is not provided automatically. You must explicitly underline the text for the specific key in your mnemonic as inline [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) formatting if you wish to show underlined text in the UI.
+**참고** XAML에서 [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) 또는 [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763)를 설정하면 문자열 정보(해당 특정 작업을 호출하는 바로 가기 키를 문서화함)를 제공합니다. 이 정보는 Narrator와 같은 Microsoft UI 자동화 클라이언트에 의해 캡처되며 보통 사용자에게 직접 제공됩니다. **AutomationProperties.AcceleratorKey** 또는 **AutomationProperties.AccessKey**를 설정해도 그 자체로는 작업이 수행되지 않습니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 또는 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트에 대한 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982) 서식으로 표시해야 합니다.
 
- 
+ 
 
-## <span id="keyboard_routed_events"></span><span id="KEYBOARD_ROUTED_EVENTS"></span>Keyboard routed events
+## <span id="keyboard_routed_events"></span><span id="KEYBOARD_ROUTED_EVENTS"></span>키보드 라우트된 이벤트
 
 
-Certain events are routed events, including [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Routed events use the bubbling routing strategy. The bubbling routing strategy means that an event originates from a child object and is then routed up to successive parent objects in the object tree. This presents another opportunity to handle the same event and interact with the same event data.
+[
+            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 등의 특정 이벤트는 라우트된 이벤트입니다. 라우트된 이벤트는 버블링 라우팅 전략을 사용합니다. 버블링 라우팅 전략은 이벤트가 자식 개체에서 발생한 다음 개체 트리에서 다음 부모 개체로 라우트됨을 의미합니다. 이 경우 동일한 이벤트를 처리하고 동일한 이벤트 데이터로 상호 작용할 수 있는 기회가 제공됩니다.
 
-Consider the following XAML example, which handles [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events for a [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) and two [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) objects. In this case, if you release a key while focus is held by either **Button** object, it raises the **KeyUp** event. The event is then bubbled up to the parent **Canvas**.
+[
+            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트를 처리하는 다음 XAML 예제를 살펴보세요. 이 경우 포커스가 **Button** 개체 중 하나에 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생합니다. 이 이벤트는 부모 **Canvas**로 버블 업됩니다.
 
 ```XAML
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -590,7 +596,7 @@ Consider the following XAML example, which handles [**KeyUp**](https://msdn.micr
 </StackPanel>
 ```
 
-The following example shows how to implement the [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) event handler for the corresponding XAML content in the preceding example.
+다음 예제에서는 이전 예제의 해당 XAML 콘텐츠에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기를 구현하는 방법을 보여 줍니다.
 
 ```CSharp
 void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -601,55 +607,58 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 }
 ```
 
-Notice the use of the [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) property in the preceding handler. Here, **OriginalSource** reports the object that raised the event. The object could not be the [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) because the **StackPanel** is not a control and cannot have focus. Only one of the two buttons within the **StackPanel** could possibly have raised the event, but which one? You use **OriginalSource** to distinguish the actual event source object, if you are handling the event on a parent object.
+이전 처리기의 [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) 속성 사용을 살펴보세요. 여기서 **OriginalSource**는 이벤트를 발생시킨 개체를 보고합니다. [
+            **StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 컨트롤이 아니며 포커스를 가질 수 없으므로 개체가 **StackPanel**일 수는 없습니다. **StackPanel** 내의 두 단추 중 하나만 이벤트를 발생시킬 수 있는데 어떤 단추일까요? 부모 개체에서 이벤트를 처리하는 경우 **OriginalSource**를 사용하여 실제 이벤트 원본 개체를 구별합니다.
 
-### <span id="handled_property"></span><span id="HANDLED_PROPERTY"></span>The Handled property in event data
+### <span id="handled_property"></span><span id="HANDLED_PROPERTY"></span>이벤트 데이터의 Handled 속성
 
-Depending on your event handling strategy, you might want only one event handler to react to a bubbling event. For instance, if you have a specific [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) handler attached to one of the [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) controls, it would have the first opportunity to handle that event. In this case, you might not want the parent panel to also handle the event. For this scenario, you can use the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) property in the event data.
+이벤트 처리 전략에 따라 하나의 이벤트 처리기만 버블링 이벤트에 반응하도록 할 수 있습니다. 예를 들어 특정 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 처리기가 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 컨트롤 중 하나에 연결되어 있는 경우 해당 이벤트를 처리할 수 있는 첫 번째 기회가 제공됩니다. 이 경우 부모 패널에서는 이벤트를 처리하지 않는 것이 좋습니다. 이 시나리오에서는 이벤트 데이터에 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성을 사용할 수 있습니다.
 
-The purpose of the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) property in a routed event data class is to report that another handler you registered earlier on the event route has already acted. This influences the behavior of the routed event system. When you set **Handled** to **true** in an event handler, that event stops routing and is not sent to successive parent elements.
+라우트된 이벤트 데이터 클래스의 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성은 이전에 이벤트 경로에 등록한 다른 처리기가 이미 적용되었음을 보고하는 데 사용됩니다. 이 속성은 라우트된 이벤트 시스템의 동작에 영향을 줍니다. 이벤트 처리기에서 **Handled**를 **true**로 설정하면 이 이벤트는 라우팅을 중지하고 다음 부모 요소로 전송되지 않습니다.
 
-### <span id="addhandler_and_already_handled_keyboard_events"></span><span id="ADDHANDLER_AND_ALREADY_HANDLED_KEYBOARD_EVENTS"></span>AddHandler and already-handled keyboard events
+### <span id="addhandler_and_already_handled_keyboard_events"></span><span id="ADDHANDLER_AND_ALREADY_HANDLED_KEYBOARD_EVENTS"></span>AddHandler 및 이미 처리된 키보드 이벤트
 
-You can use a special technique for attaching handlers that can act on events that you already marked as handled. This technique uses the [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) method to register a handler, rather than using XAML attributes or language-specific syntax for adding handlers, such as += in C\#. A limitation of this technique in general is that the **AddHandler** API takes a parameter of type [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) that identifies the routed event in question. Not all routed events provide a **RoutedEvent** identifier, and this consideration thus affects which routed events can still be handled in the [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) case. The [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events have routed event identifiers ([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) and [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418)) on [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911). However, other events such as [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) do not have routed event identifiers and thus cannot be used with the **AddHandler** technique.
+이미 처리된 것으로 표시된 이벤트에서 작동할 수 있는 처리기를 연결하는 특별한 기술을 사용할 수 있습니다. 이 기술은 XAML 특성 또는 C\#에서 += 등의 처리기를 추가하는 언어별 구문을 사용하는 대신 [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) 메서드를 사용하여 처리기를 등록합니다. 이 기술의 제한 사항은 일반적으로 **AddHandler** API가 해당 라우트된 이벤트를 식별하는 [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) 유형의 매개 변수를 사용한다는 데 있습니다. 일부 라우트된 이벤트는 **RoutedEvent** 식별자를 제공하지 않으므로 이 경우 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)에서 처리할 수 있는 라우트된 이벤트에 영향을 미칠 수 있습니다. [
+            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트는 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) 및 [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418))가 있습니다. 그러나 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
 
-## <span id="commanding"></span><span id="COMMANDING"></span>Commanding
-
-
-A small number of UI elements provide built-in support for commanding. Commanding uses input-related routed events in its underlying implementation. It enables processing of related UI input, such as a certain pointer action or a specific accelerator key, by invoking a single command handler.
-
-If commanding is available for a UI element, consider using its commanding APIs instead of any discrete input events. For more info, see [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740).
-
-You can also implement [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885) to encapsulate command functionality that you invoke from ordinary event handlers. This enables you to use commanding even when there is no **Command** property available.
-
-## <span id="text_input_and_controls"></span><span id="TEXT_INPUT_AND_CONTROLS"></span>Text input and controls
+## <span id="commanding"></span><span id="COMMANDING"></span>명령
 
 
-Certain controls react to keyboard events with their own handling. For instance, [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) is a control that is designed to capture and then visually represent text that was entered by using the keyboard. It uses [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) and [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) in its own logic to capture keystrokes, then also raises its own [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) event if the text actually changed.
+일부 UI 요소는 명령 지원을 기본 제공합니다. 기본 구현에서 명령은 입력 관련 라우트된 이벤트를 사용합니다. 단일 명령 처리기를 호출하여 특정 포인터 작업이나 특정 액셀러레이터 키와 같은 관련 UI 입력을 처리할 수 있습니다.
 
-You can still generally add handlers for [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) and [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) to a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), or any related control that is intended to process text input. However, as part of its intended design, a control might not respond to all key values that are directed to it through key events. Behavior is specific to each control.
+UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 대신 명령 API를 사용하는 것이 좋습니다. 자세한 내용은 [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740)를 참조하세요.
 
-As an example, [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (the base class for [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) processes [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) so that it can check for the Spacebar or Enter key. **ButtonBase** considers **KeyUp** equivalent to a mouse left button down for purposes of raising a [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event. This processing of the event is accomplished when **ButtonBase** overrides the virtual method [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). In its implementation, it sets [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) to **true**. The result is that any parent of a button that is listening for a key event, in the case of a Spacebar, would not receive the already-handled event for its own handlers.
+[
+            **ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885)를 구현하여 일반 이벤트 처리기에서 호출하는 명령 기능을 캡슐화할 수도 있습니다. 이렇게 하면 사용 가능한 **Command** 속성이 없는 경우에도 명령을 사용할 수 있습니다.
 
-Another example is [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683). Some keys, such as the ARROW keys, are not considered text by **TextBox** and are instead considered specific to the control UI behavior. The **TextBox** marks these event cases as handled.
-
-Custom controls can implement their own similar override behavior for key events by overriding [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983). If your custom control processes specific accelerator keys, or has control or focus behavior that is similar to the scenario described for [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683), you should place this logic in your own **OnKeyDown** / **OnKeyUp** overrides.
-
-## <span id="the_touch_keyboard"></span><span id="THE_TOUCH_KEYBOARD"></span>The touch keyboard
+## <span id="text_input_and_controls"></span><span id="TEXT_INPUT_AND_CONTROLS"></span>텍스트 입력 및 컨트롤
 
 
-Text input controls provide automatic support for the touch keyboard. When the user sets the input focus to a text control by using touch input, the touch keyboard appears automatically. When the input focus is not on a text control, the touch keyboard is hidden.
+일부 컨트롤은 직접 처리를 통해 키보드 이벤트에 반응합니다. 예를 들어 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)는 키보드로 입력된 텍스트를 캡처한 다음 시각적으로 표현하는 컨트롤입니다. 해당 논리에 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 및 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)을 사용하여 키 입력을 캡처한 다음 텍스트가 실제로 변경된 경우 고유한 [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 이벤트도 발생시킵니다.
 
-When the touch keyboard appears, it automatically repositions your UI to ensure that the focused element remains visible. This can cause other important areas of your UI to move off screen. However, you can disable the default behavior and make your own UI adjustments when the touch keyboard appears. For more info, see [Responding to the appearance of the on-screen keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=231633).
+일반적으로 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 및 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)에 대한 처리기를 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) 또는 텍스트 입력을 처리하도록 고안된 관련 컨트롤에 추가할 수 있습니다. 그러나 디자인에서 의도된 대로 컨트롤이 키 이벤트를 통해 전달되는 모든 키 값에 응답하지 않을 수 있습니다. 동작은 각 컨트롤마다 다릅니다.
 
-If you create a custom control that requires text input, but does not derive from a standard text input control, you can add touch keyboard support by implementing the correct UI Automation control patterns. For more info, see [Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md) and the [Touch keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=246019).
+한 가지 예로 [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)([**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)의 기본 클래스)는 스페이스바 또는 Enter 키를 확인할 수 있게 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)을 처리합니다. **ButtonBase**는 **KeyUp**을 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트를 발생시키기 위해 마우스 왼쪽 단추를 누르는 것과 동일한 것으로 간주합니다. 이러한 이벤트 처리는 **ButtonBase**가 가상 메서드 [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983)을 재정의할 때 수행됩니다. 구현 시 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)를 **true**로 설정합니다. 이 결과, 스페이스바의 경우 키 이벤트를 수신 대기하는 단추의 부모가 이미 처리된 이벤트를 해당 처리기에 받지 않습니다.
 
-Key presses on the touch keyboard raise [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) and [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) events just like key presses on hardware keyboards. However, the touch keyboard will not raise input events for Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C, and Ctrl+V, which are reserved for text manipulation in the input control.
+또 다른 예로 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)를 들 수 있습니다. 화살표 키와 같은 일부 키는 **TextBox**에서 텍스트로 간주되지 않고 컨트롤 UI 동작과 관련된 것으로 간주됩니다. **TextBox**는 이러한 이벤트를 처리된 것으로 표시합니다.
 
-You can make it much faster and easier for users to enter data in your app by setting the input scope of the text control to match the kind of data you expect the user to enter. The input scope provides a hint at the type of text input expected by the control so the system can provide a specialized touch keyboard layout for the input type. For example, if a text box is used only to enter a 4-digit PIN, set the [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) property to [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028). This tells the system to show the numeric keypad layout, which makes it easier for the user to enter the PIN. For more detail, see [Use input scope to change the touch keyboard](https://msdn.microsoft.com/library/windows/apps/mt280229).
+사용자 지정 컨트롤은 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983)을 재정의하여 키 이벤트에 대해 유사한 재정의 동작을 구현할 수 있습니다. 사용자 지정 컨트롤이 특정 액셀러레이터 키를 처리하거나 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)에 대해 설명된 시나리오와 비슷한 컨트롤 또는 포커스 동작을 갖는 경우 이 논리를 해당 **OnKeyDown** / **OnKeyUp** 재정의에 적용해야 합니다.
+
+## <span id="the_touch_keyboard"></span><span id="THE_TOUCH_KEYBOARD"></span>터치 키보드
 
 
-## Additional articles in this section
+텍스트 입력 컨트롤은 터치 키보드를 자동으로 지원합니다. 사용자가 터치식 입력을 사용하여 텍스트 컨트롤에 입력 포커스를 설정하면 터치 키보드가 자동으로 나타납니다. 텍스트 컨트롤에 입력 포커스가 없으면 터치 키보드가 숨겨집니다.
+
+터치 키보드가 나타나면 포커스가 있는 요소가 표시되도록 UI 위치가 자동으로 조정됩니다. 이로 인해 UI의 다른 중요한 영역이 화면 바깥쪽으로 이동할 수 있습니다. 그러나 기본 동작을 사용하지 않도록 설정하고 터치 키보드가 나타날 때 직접 UI를 조정할 수 있습니다. 자세한 내용은 [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)을 참조하세요.
+
+텍스트 입력이 필요하지만 표준 텍스트 입력 컨트롤에서 파생되지 않는 사용자 지정 컨트롤을 만드는 경우 올바른 UI 자동화 제어 패턴을 구현하여 터치 키보드 지원을 추가할 수 있습니다. 자세한 내용은 [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md) 및 [터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)을 참조하세요.
+
+터치 키보드의 키를 누르면 하드웨어 키보드의 키를 누른 것처럼 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트가 발생합니다. 그러나 터치 키보드는 입력 컨트롤에서 텍스트 조작에 예약된 Ctrl+A, Ctrl+Z, Ctrl+X, Ctrl+C 및 Ctrl+V에 대해 입력 이벤트를 발생시키지 않습니다.
+
+사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 제공합니다. 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) 속성을 [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028)로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다. 자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
+
+
+## 이 섹션의 추가 문서
 <table>
 <colgroup>
 <col width="50%" />
@@ -657,46 +666,51 @@ You can make it much faster and easier for users to enter data in your app by se
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Topic</th>
-<th align="left">Description</th>
+<th align="left">항목</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
-<td align="left"><p>Learn how to tailor the UI of your app when showing or hiding the touch keyboard.</p></td>
+<td align="left"><p>[터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)</p></td>
+<td align="left"><p>터치 키보드를 표시하거나 숨길 때 앱의 UI를 세부 조정하는 방법을 알아봅니다.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 
-## <span id="related_topics"></span>Related articles
+## <span id="related_topics"></span>관련 문서
 
 
-**Developers**
-* [Identify input devices](identify-input-devices.md)
-* [Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md)
+**개발자**
+* [입력 디바이스 식별](identify-input-devices.md)
+* [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 
-**Designers**
-* [Keyboard design guidelines](https://msdn.microsoft.com/library/windows/apps/hh972345)
+**디자이너**
+* [키보드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)
 
-**Samples**
-* [Basic input sample](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Low latency input sample](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Focus visuals sample](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**샘플**
+* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
-**Archive Samples**
-* [Input sample](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Input: Device capabilities sample](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Input: Touch keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=246019)
-* [Responding to the appearance of the on-screen keyboard sample](http://go.microsoft.com/fwlink/p/?linkid=231633)
-* [XAML text editing sample](http://go.microsoft.com/fwlink/p/?LinkID=251417)
- 
+**보관 샘플**
+* [입력 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
+* [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
+* [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

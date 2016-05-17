@@ -1,27 +1,27 @@
 ---
 author: PatrickFarley
-title: Set up a geofence
-description: Set up a Geofence in your app, and learn how to handle notifications in the foreground and background.
+title: 지오펜스 설정
+description: 앱에서 지오펜스를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ---
 
-# Set up a geofence
+# 지오펜스 설정
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-Set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) in your app, and learn how to handle notifications in the foreground and background.
+앱에서 [**지오펜스**](https://msdn.microsoft.com/library/windows/apps/dn263587)를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다.
 
-**Tip** To learn more about accessing location in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
+**팁** 앱에서 위치에 액세스하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-## Enable the location capability
+## 위치 접근 권한 값 사용
 
 
-1.  In **Solution Explorer**, double-click on **package.appxmanifest** and select the **Capabilities** tab.
-2.  In the **Capabilities** list, check **Location**. This adds the `Location` device capability to the package manifest file.
+1.  **솔루션 탐색기**에서 **package.appxmanifest**를 두 번 클릭하고 **기능** 탭을 선택합니다.
+2.  **기능** 목록에서 **위치**를 선택합니다. 그러면 `Location` 디바이스 접근 권한 값이 패키지 매니페스트 파일에 추가됩니다.
 
 ```xml
   <Capabilities>
@@ -30,12 +30,12 @@ Set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587
   </Capabilities>
 ```
 
-## Set up a geofence
+## 지오펜스 설정
 
 
-### Step 1: Request access to the user's location
+### 1단계: 사용자의 위치에 대한 액세스 요청
 
-**Important** You must request access to the user's location by using the [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) method before attempting to access the user's location. You must call the **RequestAccessAsync** method from the UI thread and your app must be in the foreground. Your app will not be able to access the user's location information until after the user grants permission to your app.
+**중요** 사용자의 위치에 액세스하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용하여 사용자의 위치에 대한 액세스를 요청해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -43,13 +43,14 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-The [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) method prompts the user for permission to access their location. The user is only prompted once (per app). After the first time they grant or deny permission, this method no longer prompts the user for permission. To help the user change location permissions after they've been prompted, we recommend that you provide a link to the location settings as demonstrated later in this topic.
+[
+            **RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
-### Step 2: Register for changes in geofence state and location permissions
+### 2단계: 지오펜스 상태 및 위치 사용 권한 변경에 대해 등록
 
-In this example, a **switch** statement is used with **accessStatus** (from the previous example) to act only when access to the user's location is allowed. If access to the user's location is allowed, the code accesses the current geofences, registers for geofence state changes, and registers for changes in location permissions.
+이 예제에서는 사용자 위치에 대한 액세스가 허용될 때만 **switch** 문이 이전 예제의 **accessStatus**와 함께 사용됩니다. 사용자의 위치에 대한 액세스가 허용되면 코드에서 현재 지오펜스에 액세스하고 지오펜스 상태 변경을 등록하고 위치 사용 권한의 변경을 등록합니다.
 
-**Tip** When using a geofence, monitor changes in location permissions using the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) event from the GeofenceMonitor class instead of the StatusChanged event from the Geolocator class. A [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) of **Disabled** is equivalent to a disabled [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599) - both indicate that the app does not have permission to access the user's location.
+**팁** 지오펜스를 사용할 경우 Geolocator 클래스의 StatusChanged 이벤트 대신 GeofenceMonitor 클래스의 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) 이벤트를 사용하여 위치 사용 권한의 변경을 모니터링합니다. **Disabled**의 [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)는 사용하지 않도록 설정된 [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599)와 같습니다. 둘 다 앱이 사용자의 위치에 액세스할 수 있는 권한이 없음을 나타냅니다.
 
 ```csharp
 switch (accessStatus)
@@ -75,7 +76,7 @@ switch (accessStatus)
 }
 ```
 
-Then, when navigating away from your foreground app, unregister the event listeners.
+그러면 포그라운드 앱을 벗어날 때 이벤트 수신기의 등록이 취소됩니다.
 
 ```csharp
 protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -87,9 +88,9 @@ protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 }
 ```
 
-### Step 3: Create the geofence
+### 3단계: 지오펜스 만들기
 
-Now, you are ready to define and set up a [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) object. There are several different constructor overloads to choose from, depending on your needs. In the most basic geofence constructor, specify only the [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) and the [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718) as shown here.
+이제 [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) 개체를 정의하고 설정할 준비가 되었습니다. 필요에 따라 선택할 수 있는 여러 생성자 오버로드가 있습니다. 다음과 같이 가장 기본적인 지오펜스 생성자에서 [**Id**](https://msdn.microsoft.com/library/windows/apps/dn263724) 및 [**Geoshape**](https://msdn.microsoft.com/library/windows/apps/dn263718)만 지정합니다.
 
 ```csharp
 // Set the fence ID.
@@ -109,13 +110,18 @@ Geocircle geocircle = new Geocircle(position, radius);
 Geofence geofence = new Geofence(fenceId, geocircle);
 ```
 
-You can fine-tune your geofence further by using one of the other constructors. In the next example, the geofence constructor specifies these additional parameters:
+다른 생성자 중 하나를 사용하여 추가로 지오펜스를 미세 조정할 수 있습니다. 다음 예제에서 지오펜스 생성자는 다음과 같은 추가 매개 변수를 지정합니다.
 
--   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - Indicates what geofence events you want to receive notifications for entering the defined region, leaving the defined region, or removal of the geofence.
--   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) - Removes the geofence once all the states the geofence is being monitored for have been met.
--   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - Indicates how long the user must be in or out of the defined area before the enter/exit events are triggered.
--   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - Indicates when to start monitoring the geofence.
--   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - Indicates the period for which to monitor the geofence.
+-   [
+            **MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - 정의된 지역으로 들어가거나, 정의된 지역을 떠나거나, 지오펜스를 제거는 경우 알림을 받을 지오펜스 이벤트를 나타냅니다.
+-   [
+            **SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) 플래그 - 지오펜스를 모니터링하는 모든 상태가 충족되었을 때 지오펜스를 제거합니다.
+-   [
+            **DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - enter/exit 이벤트가 트리거되기까지 사용자가 정의된 영역에 있거나 이 영역에서 벗어나 있어야 하는 시간을 나타냅니다.
+-   [
+            **StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - 지오펜스 모니터링을 시작해야 할 시기를 나타냅니다.
+-   [
+            **Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - 지오펜스를 모니터링할 기간을 나타냅니다.
 
 ```csharp
 // Set the fence ID.
@@ -153,9 +159,10 @@ DateTimeOffset startTime = DateTime.Now;
 Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse, dwellTime, startTime, duration);
 ```
 
-### Step 4: Handle changes in location permissions
+### 4단계: 위치 사용 권한의 변경 내용 처리
 
-The [**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) object triggers the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) event to indicate that the user's location settings changed. That event passes the corresponding status via the argument's **sender.Status** property (of type [**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599)). Note that this method is not called from the UI thread and the [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) object invokes the UI changes.
+[
+            **GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **sender.Status** 속성([**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) 유형)을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;
@@ -205,20 +212,20 @@ public async void OnGeofenceStatusChanged(GeofenceMonitor sender, object e)
 }
 ```
 
-## Set up foreground notifications
+## 포그라운드 알림 설정
 
 
-After your geofences are created, you must add the logic to handle what happens when a geofence event occurs. Depending on the [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) that you have set up, you may receive an event when:
+지오펜스를 만든 후에는 지오펜스 이벤트가 발생할 때 일어날 일을 처리하기 위한 논리를 추가해야 합니다. 설정한 [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728)에 따라, 다음의 경우 이벤트를 수신할 수 있습니다.
 
--   The user enters a region of interest.
--   The user leaves a region of interest.
--   The geofence has expired or been removed. Note that a background app is not activated for a removal event.
+-   사용자가 관심 영역에 들어올 때
+-   사용자가 관심 영역을 떠날 때
+-   지오펜스가 만료되거나 제거되었을 때 제거 이벤트에 대해서는 백그라운드 앱이 활성화되지 않습니다.
 
-You can listen for events directly from your app when it is running or register for a background task so that you receive a background notification when an event occurs.
+실행 중인 앱에서 직접 이벤트를 수신 대기할 수도 있고, 이벤트 발생 시 백그라운드 알림을 수신하도록 백그라운드 작업을 등록할 수도 있습니다.
 
-### Step 1: Register for geofence state change events
+### 1단계: 지오펜스 상태 변경 이벤트 등록
 
-For your app to receive a foreground notification of a geofence state change, you must register an event handler. This is typically set up when you create the geofence.
+앱이 지오펜스 상태 변경의 포그라운드 알림을 수신하려면 이벤트 처리기를 등록해야 합니다. 이는 대개 지오펜스를 만들 때 설정됩니다.
 
 ```csharp
 private void Initialize()
@@ -230,9 +237,9 @@ private void Initialize()
 
 ```
 
-### Step 2: Implement the geofence event handler
+### 2단계: 지오펜스 이벤트 처리기 구현
 
-The next step is to implement the event handlers. The action taken here depends on what your app is using the geofence for.
+다음 단계에서는 이벤트 처리기를 구현합니다. 여기에서 취하는 조치는 앱에서 지오펜스를 사용하는 목적에 따라 달라집니다.
 
 ```csharp
 public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
@@ -276,32 +283,32 @@ public async void OnGeofenceStateChanged(GeofenceMonitor sender, object e)
 
 ```
 
-## Set up background notifications
+## 백그라운드 알림 설정
 
 
-After your geofences are created, you must add the logic to handle what happens when a geofence event occurs. Depending on the [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) that you have set up, you may receive an event when:
+지오펜스를 만든 후에는 지오펜스 이벤트가 발생할 때 일어날 일을 처리하기 위한 논리를 추가해야 합니다. 설정한 [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728)에 따라, 다음의 경우 이벤트를 수신할 수 있습니다.
 
--   The user enters a region of interest.
--   The user leaves a region of interest.
--   The geofence has expired or been removed. Note that a background app is not activated for a removal event.
+-   사용자가 관심 영역에 들어올 때
+-   사용자가 관심 영역을 떠날 때
+-   지오펜스가 만료되거나 제거되었을 때 제거 이벤트에 대해서는 백그라운드 앱이 활성화되지 않습니다.
 
-To listen for a geofence event in the background
+백그라운드에서 지오펜스 이벤트를 수신 대기하려면
 
--   Declare the background task in your app’s manifest.
--   Register the background task in your app. If your app needs internet access, say for accessing a cloud service, you can set a flag for that when the event is triggered. You can also set a flag to make sure that the user is present when the event is triggered so that you are sure that the user gets notified.
--   While your app is running in the foreground, prompt the user to grant your app location permissions.
+-   앱의 매니페스트에서 백그라운드 작업을 선언합니다.
+-   앱에서 백그라운드 작업을 등록합니다. 이벤트가 트리거될 때 앱이 인터넷에 액세스해야 하는 경우(예: 클라우드 서비스에 액세스) 이에 대한 플래그를 설정할 수 있습니다. 이벤트가 트리거될 때 사용자에게 표시되어 사용자가 알 수 있도록 플래그를 설정할 수도 있습니다.
+-   앱이 포그라운드에서 실행 중일 때 앱 위치 사용 권한을 허용하도록 사용자에게 메시지를 표시합니다.
 
-### Step 1: Register for geofence state change events
+### 1단계: 지오펜스 상태 변경 이벤트 등록
 
-In your app's manifest, under the **Declarations** tab, add a declaration for a location background task. To do this:
+앱 매니페스트의 **선언** 탭에서 위치 백그라운드 작업에 선언을 추가합니다. 이렇게 하려면 다음을 수행합니다.
 
--   Add a declaration of type **Background Tasks**.
--   Set a property task type of **Location**.
--   Set an entry point into your app to call when the event is triggered.
+-   **백그라운드 작업** 유형의 선언을 추가합니다.
+-   **위치**의 속성 작업 유형을 설정합니다.
+-   이벤트가 트리거될 때 호출하도록 앱에 진입점을 설정합니다.
 
-### Step 2: Register the background task
+### 2단계: 백그라운드 작업 등록
 
-The code in this step registers the geofencing background task. Remember that when the geofence was created, we checked for location permissions. For more info, see [Set up a geofence](#setup).
+이 단계의 코드는 지오펜싱 백그라운드 작업을 등록합니다. 지오펜스가 생성되면 위치 사용 권한을 확인한다는 점을 기억하세요. 자세한 내용은 [지오펜스 설정](#setup)을 참조하세요.
 
 ```csharp
 async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
@@ -351,9 +358,9 @@ async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
 
 ```
 
-### Step 3: Handling the background notification
+### 3단계: 배경 알림 처리
 
-The action that you take to notify the user depends on what your app does, but you can display a toast notification, play an audio sound, or update a live tile. The code in this step handles the notification.
+사용자에게 알리기 위해 취하는 조치는 앱의 작업 내용에 달려 있지만, 알림 메시지를 표시하거나 오디오 사운드를 재생하거나 라이브 타일을 업데이트할 수 있습니다. 이 단계의 코드는 알림을 처리합니다.
 
 ```csharp
 async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTaskCompletedEventArgs e)
@@ -394,10 +401,10 @@ async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTas
 
 ```
 
-## Change the privacy settings
+## 개인 정보 설정 변경
 
 
-If the location privacy settings don't allow your app to access the user's location, we recommend that you provide a convenient link to the **location privacy settings** in the **Settings** app. In this example, a Hyperlink control is used navigate to the `ms-settings:privacy-location` URI.
+위치 개인 정보 설정에 따라 앱이 사용자의 위치에 액세스할 수 없는 경우 **설정** 앱에서 **위치 개인 정보 설정**에 대한 편리한 링크를 제공하는 것이 좋습니다. 이 예제에서는 하이퍼링크 컨트롤이 `ms-settings:privacy-location` URI로 이동하는 데 사용됩니다.
 
 ```xml
 <!--Set Visibility to Visible when access to the user's location is denied. -->  
@@ -411,7 +418,7 @@ If the location privacy settings don't allow your app to access the user's locat
 </TextBlock>
 ```
 
-Alternatively, your app can call the [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) method to launch the **Settings** app from code. For more info, see [Launch the Windows Settings app](https://msdn.microsoft.com/library/windows/apps/mt228342).
+또는 앱이 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출하여 코드에서 **설정** 앱을 실행할 수 있습니다. 자세한 내용은 [Windows 설정 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228342)을 참조하세요.
 
 ```csharp
 using Windows.System;
@@ -419,50 +426,55 @@ using Windows.System;
 bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-location"));
 ```
 
-## Test and debug your app
+## 앱 테스트 및 디버그
 
 
-Testing and debugging geofencing apps can be a challenge because they depend on a device's location. Here, we outline several methods for testing both foreground and background geofences.
+지오펜싱 앱 테스트 및 디버깅은 장치 위치에 따라 달라지기 때문에 어려울 수 있습니다. 여기서는 포그라운드 및 백그라운드 지오펜스를 둘 다 테스트하는 여러 메서드에 대해 간략하게 설명합니다.
 
-**To debug a geofencing app**
+**지오펜싱 앱을 디버그하려면**
 
-1.  Physically move the device to new locations.
-2.  Test entering a geofence by creating a geofence region that includes your current physical location, so you're already inside the geofence and the "geofence entered" event is triggered immediately.
-3.  Use the Microsoft Visual Studio emulator to simulate locations for the device.
+1.  실제로 장치를 새 위치로 이동합니다.
+2.  현재 실제 위치를 포함하여 이미 지오펜스 내부에 있고 "지오펜스 입력" 이벤트가 즉시 트리거되도록 지오펜스 영역을 만들어 지오펜스 입력을 테스트합니다.
+3.  Microsoft Visual Studio 에뮬레이터를 사용하여 장치 위치를 시뮬레이트합니다.
 
-### Test and debug a geofencing app that is running in the foreground
+### 포그라운드에서 실행되는 지오펜싱 앱 테스트 및 디버깅
 
-**To test your geofencing app that is running the foreground**
+**포그라운드에서 실행되는 지오펜싱 앱을 테스트하려면**
 
-1.  Build your app in Visual Studio.
-2.  Launch your app in the Visual Studio emulator.
-3.  Use these tools to simulate various locations inside and outside of your geofence region. Be sure to wait long enough past the time specified by the [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) property to trigger the event. Note that you must accept the prompt to enable location permissions for the app. For more info about simulating locations, see [Set the simulated geolocation of the device](http://go.microsoft.com/fwlink/p/?LinkID=325245).
-4.  You can also use the emulator to estimate the size of fences and dwell times approximately needed to be detected at different speeds.
+1.  Visual Studio에서 앱을 빌드합니다.
+2.  Visual Studio 에뮬레이터에서 앱을 시작합니다.
+3.  이러한 도구를 사용하여 지오펜스 영역 내부와 외부의 다양한 위치를 시뮬레이트합니다. 이벤트를 트리거하기 전에 [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) 속성에 지정된 시간 동안 기다려야 합니다. 앱에서 위치를 사용할 수 있도록 할 것인지 묻는 메시지가 표시될 때 수락해야 합니다. 위치 시뮬레이트에 대한 자세한 내용은 [시뮬레이트된 디바이스의 지리적 위치 설정](http://go.microsoft.com/fwlink/p/?LinkID=325245)을 참조하세요.
+4.  에뮬레이터를 사용하여 펜스 크기와 다양한 속도에서 감지되어야 하는 대략적인 유지 시간을 예측할 수도 있습니다.
 
-### Test and debug a geofencing app that is running in the background
+### 백그라운드에서 실행되는 지오펜싱 앱 테스트 및 디버깅
 
-**To test your geofencing app that is running the background**
+**백그라운드에서 실행되는 지오펜싱 앱을 테스트하려면**
 
-1.  Build your app in Visual Studio. Note that your app should set the **Location** background task type.
-2.  Deploy the app locally first.
-3.  Close your app that is running locally.
-4.  Launch your app in the Visual Studio emulator. Note that background geofencing simulation is supported on only one app at a time within the emulator. Do not launch multiple geofencing apps within the emulator.
-5.  From the emulator, simulate various locations inside and outside of your geofence region. Be sure to wait long enough past the [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) to trigger the event. Note that you must accept the prompt to enable location permissions for the app.
-6.  Use Visual Studio to trigger the location background task. For more info about triggering background tasks in Visual Studio, see [How to trigger background tasks](http://go.microsoft.com/fwlink/p/?LinkID=325378).
+1.  Visual Studio에서 앱을 빌드합니다. 앱에서는 **위치** 백그라운드 작업 형식을 설정해야 합니다.
+2.  먼저 로컬 앱을 배포합니다.
+3.  로컬에서 실행 중인 앱을 닫습니다.
+4.  Visual Studio 에뮬레이터에서 앱을 시작합니다. 백그라운드 지오펜싱 시뮬레이션은 에뮬레이터 내에서 한 번에 하나의 앱에서만 지원됩니다. 에뮬레이터 내에서 지오펜싱 앱을 여러 개 시작하지 마세요.
+5.  에뮬레이터에서 지오펜스 영역 내부와 외부의 다양한 위치를 시뮬레이트합니다. 이벤트를 트리거하기 전에 [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) 동안 기다려야 합니다. 앱에서 위치를 사용할 수 있도록 할 것인지 묻는 메시지가 표시될 때 수락해야 합니다.
+6.  Visual Studio를 사용하여 위치 백그라운드 작업을 트리거합니다. Visual Studio에서 백그라운드 작업을 트리거하는 방법에 대한 자세한 내용은 [백그라운드 작업을 트리거하는 방법](http://go.microsoft.com/fwlink/p/?LinkID=325378)을 참조하세요.
 
-## Troubleshoot your app
+## 앱 문제 해결
 
 
-Before your app can access location, **Location** must be enabled on the device. In the **Settings** app, check that the following **location privacy settings** are turned on:
+앱이 위치에 액세스하려면 먼저 디바이스에서 **위치**를 사용하도록 설정해야 합니다. **설정** 앱에서 다음 **위치 개인정보 설정**이 켜져 있는지 확인합니다.
 
--   **Location for this device...** is turned **on** (not applicable in Windows 10 Mobile)
--   The location services setting, **Location**, is turned **on**
--   Under **Choose apps that can use your location**, your app is set to **on**
+-   **이 장치의 위치...**가 **켜짐** 상태임(Windows 10 Mobile에는 해당되지 않음)
+-   위치 서비스 설정 **위치**가 **켜짐** 상태임
+-   **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 **on** 상태임
 
-## Related topics
+## 관련 항목
 
-* [UWP geolocation sample](http://go.microsoft.com/fwlink/p/?linkid=533278)
-* [Design guidelines for geofencing](https://msdn.microsoft.com/library/windows/apps/dn631756)
-* [Design guidelines for location-aware apps](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [UWP 지리적 위치 샘플](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [지오펜스에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn631756)
+* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

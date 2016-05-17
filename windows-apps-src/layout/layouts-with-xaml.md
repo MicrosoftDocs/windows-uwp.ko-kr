@@ -1,81 +1,81 @@
 ---
 author: Jwmsft
-Description: XAML gives you a flexible layout system to create a responsive UI.
-title: Define layouts with XAML
+Description: XAML은 반응형 UI를 만드는 유연한 레이아웃 시스템을 제공합니다.
+title: XAML을 사용하여 레이아웃 정의
 ms.assetid: 8D4E4162-1C9C-48F4-8A94-34976FB17079
 label: Page layouts with XAML
 template: detail.hbs
 ---
-# Define page layouts with XAML
+# XAML을 사용하여 페이지 레이아웃 정의
 
-XAML gives you a flexible layout system that lets you use automatic sizing, layout panels, visual states, and even separate UI definitions to create a responsive UI. With a flexible design, you can make your app look great on screens with different app window sizes, resolutions, pixel densities, and orientations.
+XAML은 자동 크기 조정, 레이아웃 패널, 시각적 상태 및 별도의 UI 정의를 사용하여 반응형 UI를 만들 수 있는 유연한 레이아웃 시스템을 제공합니다. 유연한 디자인을 사용하면 다양한 앱 창 크기, 해상도, 픽셀 밀도 및 방향의 화면에서 앱의 모양을 멋지게 표현할 수 있습니다.
 
-Here, we discuss how to use XAML properties and layout panels to make your app responsive and adaptive. We build on important info about responsive UI design and techniques found in [Introduction to UWP app design](../layout/design-and-ui-intro.md). You should understand what effective pixels are and understand each of the responsive design techniques: Reposition, Resize, Reflow, Reveal, Replace, and Re-architect.
+여기서는 XAML 속성 및 레이아웃 패널을 사용하여 반응성이 뛰어난 적응형 앱을 만드는 방법을 살펴봅니다. 이 내용은 [UWP 앱 디자인 소개](../layout/design-and-ui-intro.md)에 있는 반응형 UI 디자인 및 기술과 관련한 중요한 정보를 기반으로 합니다. 유효 픽셀이 무엇인지 이해하고 위치 변경, 크기 조정, 재배치, 표시, 바꾸기, 다시 설계와 같은 각각의 반응형 디자인 기술을 이해하게 됩니다.
 
-> **Note**&nbsp;&nbsp;Your app layout begins with the navigation model you choose, like whether to use a [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) with the [‘tabs and pivot’](../controls-and-patterns/tabs-pivot.md) model or [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) with the [‘nav pane’](../controls-and-patterns/nav-pane.md) model. For more info about that, see [Navigation design basics for UWP apps](../layout/navigation-basics.md). Here, we talk about techniques to make the layout of a single page or group of elements responsive. This info is applicable regardless of which navigation model you choose for your app.
+> **참고** &nbsp;&nbsp;앱 레이아웃은 개발자가 선택하는 탐색 모델(예: ['탭 및 피벗'](../controls-and-patterns/tabs-pivot.md) 모델을 사용하는 [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 또는 ['탐색 창'](../controls-and-patterns/nav-pane.md) 모델을 사용하는 [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 사용)로 시작합니다. 이에 대한 자세한 내용은 [UWP 앱용 탐색 디자인 기본 사항](../layout/navigation-basics.md)을 참조하세요. 여기에서는 여러 요소로 구성된 단일 페이지 또는 그룹의 레이아웃을 반응형으로 만드는 기술에 대해 살펴보겠습니다. 이 정보는 앱에 어떤 탐색 모델을 선택하는지와 관계없이 적용할 수 있습니다.
 
-The XAML framework provides several levels of optimization you can use to create a responsive UI.
-- **Fluid layout**
-    Use layout properties and panels to make your default UI fluid.
+XAML 프레임워크는 반응형 UI를 만드는 데 사용할 수 있는 여러 수준의 최적화를 제공합니다.
+- 유동 레이아웃
 
-    The foundation of a responsive layout is the appropriate use of layout properties and panels to reposition, resize, and reflow content. You can set a fixed size on an element, or use automatic sizing to let the parent layout panel size it. The various [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) classes, such as [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) and [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), provide different ways to size and position their children.
+    레이아웃 속성 및 패널을 사용하여 기본 UI를 유동으로 만듭니다. 반응형 레이아웃의 기초는 콘텐츠의 위치 변경, 크기 조정 및 재배치를 위해 레이아웃 속성 및 패널을 적절하게 사용하는 것입니다. 요소에 고정된 크기를 설정하거나 자동 크기 조정을 사용하여 부모 레이아웃 패널에서 크기를 지정할 수 있습니다.
 
-- **Adaptive layout**
-    Use visual states to make significant alterations to your UI based on window size or other changes.
+- [
+              **Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)과 같은 다양한 [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) 클래스에서 자식 클래스의 크기와 위치를 다양한 방법으로 지정할 수 있습니다.
 
-    When your app window grows or shrinks beyond a certain amount, you might want to alter layout properties to reposition, resize, reflow, reveal, or replace sections of your UI. You can define different visual states for your UI, and apply them when the window width or window height crosses a specified threshold. An [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) provides an easy way to set the threshold (also called 'breakpoint') where a state is applied.
+    적응형 레이아웃 시각적 상태를 사용하여 창 크기 또는 기타 변경 사항에 따라 UI를 상당히 바꿀 수 있습니다. 앱 창이 일정 수준 이상으로 늘어나거나 줄어드는 경우 레이아웃 속성을 변경하여 UI 섹션에 대해 위치 변경, 크기 조정, 재배치, 표시 또는 바꾸기 작업을 수행할 수 있습니다.
 
-- **Tailored layout**
-    A tailored layout is optimized for a specific device family or range of screen sizes. Within the device family, the layout should still respond and adapt to changes within the range of supported window sizes.
-    > **Note**&nbsp;&nbsp; With [Continuum for Phones](http://go.microsoft.com/fwlink/p/?LinkID=699431), users can connect their phones to a monitor, mouse, and keyboard. This capability blurs the lines between phone and desktop device families.
+- UI에 다양한 시각적 상태를 정의한 후 창 너비 또는 창 높이가 지정한 임계값을 넘어가면 적용할 수 있습니다. [
+              **AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) 클래스를 통해 상태가 적용되는 임계값('중단점'이라고도 함)을 쉽게 설정할 수 있습니다.
+    > 맞춤형 레이아웃 맞춤형 레이아웃은 특정 디바이스 패밀리 또는 화면 크기 범위에 맞게 최적화됩니다.
 
-    Approaches to tailoring include
-    - Create custom trigger
+    디바이스 패밀리 내에서 맞춤형 레이아웃은 지원되는 창 크기 범위에서 여전히 변경 사항에 응답하고 알맞게 조정됩니다.
+    - **참고** &nbsp;&nbsp; [휴대폰용 Continuum](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결할 수 있습니다.
 
-    You can create a device family trigger and modify its setters, as for adaptive triggers.
+    이 기능은 휴대폰과 데스크톱 디바이스 패밀리의 구분을 희미하게 합니다.
 
-    - Use separate XAML files to define distinct views for each device family.
+    - 맞춤식 포함 방법
 
-    You can use separate XAML files with the same code file to define per-device family views of the UI.
+    사용자 지정 트리거 만들기
 
-    - Use separate XAML and code to provide different implementations for each device family.
+    - 디바이스 패밀리 트리거를 만들고 적응형 트리거처럼 해당 setter를 수정할 수 있습니다.
 
-    You can provide different implementations of a page (XAML and code), then navigate to a particular implementation based on the device family, screen size, or other factors.
+    별도의 XAML 파일을 사용하여 각 디바이스 패밀리의 고유한 보기를 정의합니다.
 
-## Layout properties and panels
+## 동일한 코드 파일이 들어 있는 별도의 XAML 파일을 사용하여 UI의 디바이스 패밀리별 보기를 정의할 수 있습니다.
 
-Layout is the process of sizing and positioning objects in your UI. To position visual objects, you must put them in a panel or other container object. The XAML framework provides various panel classes, such as [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) and [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), which serve as containers and enable you to position and arrange the UI elements within them.
+별도의 XAML 및 코드를 사용하여 각 디바이스 패밀리에 대해 다른 구현을 제공합니다. 페이지의 다른 구현을 제공한 다음(XAML 및 코드) 디바이스 패밀리, 화면 크기 또는 기타 요인에 따라 특정 구현으로 이동할 수 있습니다. 레이아웃 속성 및 패널
 
-The XAML layout system supports both static and fluid layouts. In a static layout, you give controls explicit pixel sizes and positions. When the user changes the resolution or orientation of their device, the UI doesn't change. Static layouts can become clipped across different form factors and display sizes.
+레이아웃은 UI에서 개체 크기를 조정하고 위치를 지정하는 프로세스입니다. 시각적 개체의 위치를 지정하려면 패널 또는 다른 컨테이너 개체에 배치해야 합니다. XAML 프레임워크는 컨테이너로 사용되는 다양한 패널 클래스(예: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx))를 제공합니다. 이러한 클래스를 사용하면 클래스 내에 UI 요소의 위치를 지정하고 정렬할 수 있습니다. XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모두 지원합니다.
 
-Fluid layouts shrink, grow, and reflow to respond to the visual space available on a device. To create a fluid layout, use automatic or proportional sizing for elements, alignment, margins, and padding, and let layout panels position their children as needed. You arrange child elements by specifying how they should be arranged in relationship to each other, and how they should be sized relative to their content and/or their parent.
+고정 레이아웃에서는 컨트롤에 정확한 픽셀 크기와 위치를 제공합니다. 사용자가 디바이스의 해상도나 방향을 변경해도 UI가 바뀌지 않습니다. 고정 레이아웃은 다양한 폼 요소 및 디스플레이 크기에서 잘릴 수 있습니다.
 
-In practice, you use a combination of static and fluid elements to create your UI. You still use static elements and values in some places, but make sure that the overall UI is responsive and adapts to different resolutions, layouts, and views.
+유동 레이아웃은 디바이스에서 사용할 수 있는 가시 공간에 맞게 축소, 확대 또는 재배치됩니다. 유동 레이아웃을 만들려면 요소, 맞춤, 여백 및 안쪽 여백에 대해 자동 또는 가변 크기 조정을 사용하고 레이아웃 패널에서 필요에 따라 자식의 위치를 지정하도록 허용합니다.
 
-### Layout properties
+### 서로를 기준으로 정렬되어야 하는 방법과 콘텐츠 및/또는 부모를 기준으로 크기가 지정되는 방법을 지정하여 자식 요소를 조정합니다.
 
-To control the size and position of an element, you set its layout properties. Here are some common layout properties and their effect.
+실제로는 고정 및 가변 요소의 조합을 사용하여 UI를 만듭니다. 일부 위치에서 여전히 고정 요소와 값을 사용할 수 있지만, 전반적인 UI를 반응형으로 설정하여 서로 다른 해상도, 레이아웃 및 보기에 맞게 조정되도록 해야 합니다.
 
-**Height and Width**
+**레이아웃 속성**
 
-Set the [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) and [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) properties to specify the size of an element. You can use fixed values measured in effective pixels, or you can use auto or proportional sizing. To get the size of an element at runtime, use the [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx) and [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) properties instead of Height and Width.
+요소의 크기 및 위치를 제어하려면 해당 레이아웃 속성을 설정합니다. 다음은 몇 가지 레이아웃 속성 및 해당 효과입니다. 높이 및 너비
 
-You use auto sizing to let UI elements resize to fit their content or parent container. You can also use auto sizing with the rows and columns of a grid. To use auto sizing, set the Height and/or Width of UI elements to **Auto**.
+[
+            **Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) 속성을 설정하여 요소의 크기를 지정합니다. 유효 픽셀로 측정된 고정 값을 사용하거나 자동 또는 가변 크기 조정을 사용할 수 있습니다. 런타임 시 요소의 크기를 가져오려면 Height와 Width 대신 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx)와 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) 속성을 사용합니다.
 
-> **Note**&nbsp;&nbsp;Whether an element resizes to its content or its container depends on the value of its [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) properties, and how the parent container handles sizing of its children. For more info, see [Alignment]() and [Layout panels]() later in this article.
+> UI 요소가 해당 콘텐츠 또는 부모 컨테이너에 맞게 크기를 조정하려면 자동 크기 조정을 사용합니다. 그리드의 행과 열에서 자동 크기 조정을 사용할 수도 있습니다.
 
-You use proportional sizing, also called *star sizing*, to distribute available space among the rows and columns of a grid by weighted proportions. In XAML, star values are expressed as \* (or *n*\* for weighted star sizing). For example, to specify that one column is 5 times wider than the second column in a 2-column layout, use "5\*" and "\*" for the [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) properties in the [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx) elements.
+자동 크기 조정을 사용하려면 UI 요소의 Height 및/또는 Width를 **Auto**로 설정합니다. **참고** &nbsp;&nbsp;요소가 해당 콘텐츠에 맞게 크기를 조정할지 아니면 해당 컨테이너에 맞게 크기를 조정할지 여부는 해당 [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성의 값, 부모 컨테이너가 자식의 크기를 처리하는 방법에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [맞춤]() 및 [레이아웃 패널]()을 참조하세요.
 
-This example combines fixed, auto, and proportional sizing in a [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) with 4 columns.
+가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다.
 
-Column|Width|Remarks
+XAML에서는 배율 값이 \*(또는 가중 배율 크기 조정의 경우 *n*\*)로 표현됩니다.|예를 들어 2열 레이아웃에서 첫 번째 열을 두 번째 열보다 5배 너비로 지정하려면 [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx) 요소에서 [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) 속성에 대해 "5\*" 및 "\*"를 사용합니다.|이 예제에서는 4개의 열을 가진 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 ------|------|------
-Column_1 | **Auto** | The column will size to fit its content.
-Column_2 | * | After the Auto columns are calculated, the column gets part of the remaining width. Column_2 will be one-half as wide as Column_4.
-Column_3 | **44** | The column will be 44 pixels wide.
-Column_4 | **2**\* | After the Auto columns are calculated, the column gets part of the remaining width. Column_4 will be twice as wide as Column_2.
+열 | **너비** | 설명
+Column_1 | * | 자동 열의 크기가 내용에 맞게 조정됩니다.
+Column_2 | **자동 열이 계산된 후에는 해당 열에 나머지 너비의 일부가 지정됩니다.** | Column_2는 Column_4 너비의 절반이 됩니다.
+Column_3 | **44**\* | 열의 너비는 44픽셀입니다. Column_4
 
-The default column width is "*", so you don't need to explicitly set this value for the second column.
+2
 
 ```xaml
 <Grid>
@@ -89,48 +89,52 @@ The default column width is "*", so you don't need to explicitly set this value 
 </Grid>
 ```
 
-In the Visual Studio XAML designer, the result looks like this.
+자동 열이 계산된 후에는 해당 열에 나머지 너비의 일부가 지정됩니다.
 
-![A 4 column grid in the Visual Studio designer](images/xaml-layout-grid-in-designer.png)
+![Column_4는 Column_2 너비의 두 배가 됩니다.](images/xaml-layout-grid-in-designer.png)
 
-**Size constraints**
+**기본 열 너비가 "*"이므로 두 번째 열에 대해서는 이 값을 명시적으로 설정할 필요가 없습니다.**
 
-When you use auto sizing in your UI, you might still need to place constraints on the size of an element. You can set the [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) and [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) properties to specify values that constrain the size of an element while allowing fluid resizing.
+Visual Studio XAML 디자이너에서 결과는 다음과 같습니다. Visual Studio 디자이너에서 4개의 열 그리드
 
-In a Grid, MinWidth/MaxWidth can also be used with column definitions, and MinHeight/MaxHeight can be used with row definitions.
+크기 제약 조건
 
-**Alignment**
+**UI에서 자동 크기 조정을 사용하는 경우 여전히 요소 크기에 제약 조건을 적용해야 할 수 있습니다.**
 
-Use the [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) properties to specify how an element should be positioned within its parent container.
-- The values for **HorizontalAlignment** are **Left**, **Center**, **Right**, and **Stretch**.
-- The values for **VerticalAlignment** are **Top**, **Center**, **Bottom**, and **Stretch**.
+[
+            **MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) 및 [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) 속성을 설정하면 유동 크기 조정을 허용하면서 요소의 크기를 제한하는 값을 지정할 수 있습니다.
+- Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeight/MaxHeight는 행 정의에 사용할 수도 있습니다.
+- 맞춤
 
-With the **Stretch** alignment, elements fill all the space they're provided in the parent container. Stretch is the default for both alignment properties. However, some controls, like [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx), override this value in their default style.
-Any element that can have child elements can treat the Stretch value for HorizontalAlignment and VerticalAlignment properties uniquely. For example, an element using the default Stretch values placed in a Grid stretches to fill the cell that contains it. The same element placed in a Canvas sizes to its content. For more info about how each panel handles the Stretch value, see the [Layout panels](layout-panels.md) article.
+[
+            **HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성을 사용하여 해당 부모 컨테이너 내에서 요소의 위치가 지정되는 방법을 지정합니다. **HorizontalAlignment**에 대한 값은 **Left**, **Center**, **Right** 및 **Stretch**입니다. **VerticalAlignment**에 대한 값은 **Top**, **Center**, **Bottom** 및 **Stretch**입니다.
+**Stretch** 맞춤을 사용하면 요소가 부모 컨테이너에 제공된 모든 공간을 채웁니다. 두 맞춤 속성의 기본값은 모두 Stretch입니다. 그러나 [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx)과 같은 일부 컨트롤은 이 값을 해당하는 기본 스타일로 재정의합니다. 자식 요소를 가질 수 있는 요소는 HorizontalAlignment 및 VerticalAlignment 속성에 대한 Stretch 값을 고유하게 처리할 수 있습니다.
 
-For more info, see the [Alignment, margin, and padding](alignment-margin-padding.md) article, and the [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) and [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) reference pages.
+예를 들어 Grid에 배치된 기본 Stretch 값을 사용하는 요소는 이 요소를 포함하는 셀을 채울 수 있도록 늘어납니다.
 
-Controls also have [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.horizontalcontentalignment.aspx) and [**VerticalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.verticalcontentalignment.aspx) properties that you use to specify how they position their content. Not all controls make use of these properties. They only affect layout behavior for a control when its template uses the properties as the source of a HorizontalAlignment/VerticalAlignment value for presenters or content areas within it.
+Canvas에 배치된 동일한 요소는 해당 콘텐츠에 맞게 크기가 조정됩니다. 각 패널이 Stretch 값을 처리하는 방법에 대한 자세한 내용은 [레이아웃 패널](layout-panels.md) 문서를 참조하세요. 자세한 내용은 [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md) 문서, [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 참조 페이지를 참조하세요.
 
-For [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), and [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), use the **TextAlignment** property to control the alignment of text in the control.
+또한 컨트롤에는 해당 콘텐츠의 위치를 지정하는 방법을 지정하는 데 사용하는 [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.horizontalcontentalignment.aspx) 및 [**VerticalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.verticalcontentalignment.aspx) 속성이 있습니다.
 
-**Margins and padding**
+**일부 컨트롤은 이러한 속성을 사용하지 않습니다.**
 
-Set the [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) property to control the amount of empty space around an element. Margin does not add pixels to the ActualHeight and ActualWidth, and is also not considered part of the element for purposes of hit testing and sourcing input events.
+해당 템플릿이 그 안의 프리젠터 또는 콘텐츠 영역에 대해 HorizontalAlignment/VerticalAlignment 값의 원본으로 이러한 속성을 사용하는 경우에만 컨트롤의 레이아웃 동작에 영향을 줍니다. [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 및 [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)의 경우 **TextAlignment** 속성을 사용하여 컨트롤에서 텍스트 맞춤을 제어합니다.
 
-Set the [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) property to control the amount of space between the inner border of an element and its content. A positive Padding value decreases the content area of the element.
+여백 및 안쪽 여백 [
+            **Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) 속성을 설정하여 요소 주위의 빈 공간 크기를 제어합니다.
 
-This diagram shows how Margin and Padding are applied to an element.
+Margin은 ActualHeight 및 ActualWidth에 픽셀을 추가하지 않으며, 적중 횟수 테스트 및 소싱 입력 이벤트와 관련해서 요소의 일부로 간주되지도 않습니다.
 
-![Margin and padding](images/xaml-layout-margins-padding.png)
+![[
+            **Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) 속성을 설정하여 요소의 내부 테두리와 해당 콘텐츠 사이의 간격을 제어합니다.](images/xaml-layout-margins-padding.png)
 
-The left, right, top, and bottom values for Margin and Padding do not need to be symmetrical, and they can be set to negative values. For more info, see [Alignment, margin, and padding](alignment-margin-padding.md), and the [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) or [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) reference pages.
+양수 Padding 값은 해당 요소의 콘텐츠 영역을 줄입니다. 이 다이어그램은 요소에 여백과 안쪽 여백이 적용되는 방식을 보여 줍니다.
 
-Let's look at the effects of Margin and Padding on real controls. Here’s a TextBox inside of a Grid with the default Margin and Padding values of 0.
+여백 및 안쪽 여백 Margin 및 Padding의 왼쪽, 오른쪽, 위쪽 및 아래쪽 값은 대칭이 아니어도 되며 음수 값을 설정할 수도 있습니다.
 
-![TextBox with margin and padding of 0](images/xaml-layout-textbox-no-margins-padding.png)
+![자세한 내용은 [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md), [**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) 또는 [**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) 참조 페이지를 참조하세요.](images/xaml-layout-textbox-no-margins-padding.png)
 
-Here’s the same TextBox and Grid with Margin and Padding values on the TextBox as shown in this XAML.
+실제 컨트롤에서 Margin 및 Padding의 효과를 살펴보겠습니다.
 
 ```xaml
 <Grid BorderBrush="Blue" BorderThickness="4" Width="200">
@@ -138,47 +142,48 @@ Here’s the same TextBox and Grid with Margin and Padding values on the TextBox
 </Grid>
 ```
 
-![TextBox with positive margin and padding values](images/xaml-layout-textbox-with-margins-padding.png)
+![다음은 기본 Margin과 Padding 값이 0인 Grid 내에 있는 TextBox입니다.](images/xaml-layout-textbox-with-margins-padding.png)
 
-**Visibility**
+**여백 및 안쪽 여백이 0인 TextBox**
 
-You can reveal or hide an element by setting its [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.visibility.aspx) property to one of the [**Visibility** enumeration](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visibility.aspx) values: **Visible** or **Collapsed**. When an element is Collapsed, it doesn't take up any space in the UI layout.
+다음은 이 XAML에 나와 있는 것처럼 TextBox에서 Margin과 Padding 값을 가진 동일한 TextBox와 Grid입니다. 양수 여백 값과 안쪽 여백 값을 가진 TextBox
 
-You can change an element's Visibility property in code or in a visual state. When the Visibility of an element is changed, all of its child elements are also changed. You can replace sections of your UI by revealing one panel while collapsing another.
+표시 여부 해당 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.visibility.aspx) 속성을 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visibility.aspx) 열거형 값인 **Visible** 또는 **Collapsed**로 설정하여 요소를 표시하거나 숨길 수 있습니다. 요소가 Collapsed인 경우 UI 레이아웃에서 공간을 차지하지 않습니다.
 
-> **Tip**&nbsp;&nbsp;When you have elements in your UI that are **Collapsed** by default, the objects are still created at startup, even though they aren't visible. You can defer loading these elements until they are shown by setting the **x:DeferLoadStrategy attribute** to "Lazy". This can improve startup performance. For more info, see [x:DeferLoadStrategy attribute](../xaml-platform/x-deferloadstrategy-attribute.md).
+> 코드 또는 시각적 상태에서 요소의 Visibility 속성을 변경할 수 있습니다. 요소의 Visibility가 변경되는 경우 해당하는 모든 자식 요소도 변경됩니다. 한 패널을 표시하고 다른 패널은 축소하여 UI의 섹션을 바꿀 수 있습니다. **팁** &nbsp;&nbsp;기본적으로 **Collapsed**인 요소가 UI에 있는 경우 비록 보이지 않아도 시작할 때 해당 개체는 여전히 만들어집니다.
 
-### Style resources
+### **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다.
 
-You don't have to set each property value individually on a control. It's typically more efficient to group property values into a [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) resource and apply the Style to a control. This is especially true when you need to apply the same property values to many controls. For more info about using styles, see [Styling controls](../controls-and-patterns/styling-controls.md).
+그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요. 스타일 리소스 하나의 컨트롤에서 각 속성 값을 개별적으로 설정할 필요가 없습니다.
 
-### Layout panels
+### 일반적으로 속성 값을 [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx) 리소스로 그룹화하고 Style을 컨트롤에 적용하는 것이 더 효율적입니다.
 
-Most app content can be organized into some form of groupings or hierarchies. You use layout panels to group and arrange UI elements in your app. The main thing to consider when choosing a layout panel is how the panel positions and sizes its child elements. You might also need to consider how overlapping child elements are layered on top of each other.
+이는 동일한 속성 값을 많은 컨트롤에 적용해야 하는 경우 특히 그렇습니다. 스타일을 사용하는 방법에 대한 자세한 내용은 [컨트롤의 스타일 지정](../controls-and-patterns/styling-controls.md)을 참조하세요. 레이아웃 패널 대부분의 앱 콘텐츠는 특정 형식의 그룹 또는 계층 구조로 구성할 수 있습니다.
 
-Here's a comparison of the main features of the panel controls provided in the XAML framework.
+레이아웃 패널을 사용하여 앱에서 UI 요소를 그룹화하고 배치합니다.
 
-Panel Control | Description
+레이아웃 패널을 선택할 때 우선적으로 고려해야 할 사항은 패널에서 자식 요소의 위치를 지정하고 크기를 조정하는 방식입니다. | 또한 겹치는 자식 요소가 서로 다른 항목 위에 계층화되는 방식을 고려해야 할 수도 있습니다.
 --------------|------------
-[**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | **Canvas** doesn’t support fluid UI; you control all aspects of positioning and sizing child elements. You typically use it for special cases like creating graphics or to define small static areas of a larger adaptive UI. You can use code or visual states to reposition elements at runtime.<ul><li>Elements are positioned absolutely using Canvas.Top and Canvas.Left attached properties.</li><li>Layering can be explicitly specified using the Canvas.ZIndex attached property.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored. If an element's size is not set explicitly, it sizes to its content.</li><li>Child content is not visually clipped if larger than the panel. </li><li>Child content is not constrained by the bounds of the panel.</li></ul>
-[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | **Grid** supports fluid resizing of child elements. You can use code or visual states to reposition and reflow elements.<ul><li>Elements are arranged in rows and columns using Grid.Row and Grid.Column attached properties.</li><li>Elements can span multiple rows and columns using Grid.RowSpan and Grid.ColumnSpan attached properties.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are respected. If an element's size is not set explicitly, it stretches to fill the available space in the grid cell.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li></ul>
-[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <ul><li>Elements are arranged in relation to the edge or center of the panel, and in relation to each other.</li><li>Elements are positioned using a variety of attached properties that control panel alignment, sibling alignment, and sibling position. </li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored unless RelativePanel attached properties for alignment cause stretching (for example, an element is aligned to both the right and left edges of the panel). If an element's size is not set explicitly and it's not stretched, it sizes to its content.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li></ul>
-[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<ul><li>Elements are stacked in a single line either vertically or horizontally.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are respected in the direction opposite the Orientation property. If an element's size is not set explicitly, it stretches to fill the available width (or height if the Orientation is Horizontal). In the direction specified by the Orientation property, an element sizes to its content.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is not constrained by the bounds of the panel in the direction specified by the Orientation property, so scrollable content stretches beyond the panel bounds and doesn't show scrollbars. You must explicitly constrain the height (or width) of the child content to make its scrollbars show.</li></ul>
-[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<ul><li>Elements are arranged in rows or columns that automatically wrap to a new row or column when the MaximumRowsOrColumns value is reached.</li><li>Whether elements are arranged in rows or columns is specified by the Orientation property.</li><li>Elements can span multiple rows and columns using VariableSizedWrapGrid.RowSpan and VariableSizedWrapGrid.ColumnSpan attached properties.</li><li>Stretch values for HorizontalAlignment/VerticalAlignment are ignored. Elements are sized as specified by the ItemHeight and ItemWidth properties. If these properties are not set, the item in the first cell sizes to its content, and all other cells inherit this size.</li><li>Child content is visually clipped if larger than the panel.</li><li>Content size is constrained by the bounds of the panel, so scrollable content shows scroll bars if needed.</li></ul>
+[**다음은 XAML 프레임워크에 제공되는 패널 컨트롤의 주요 기능을 비교한 것입니다.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) | 패널 컨트롤 설명 캔버스<ul><li>**Canvas**는 유동 UI를 지원하지 않으며 개발자가 자식 요소의 위치 지정 및 크기 조정과 관련한 모든 측면을 제어합니다.</li><li>일반적으로 이 컨트롤은 그래픽 만들기와 같은 특수한 경우에 사용하거나 더 큰 적응형 UI의 작은 고정 영역을 정의하는 데 사용합니다.</li><li>코드나 시각적 상태를 사용하여 런타임 시 요소의 위치를 변경할 수 있습니다. 요소가 Canvas.Top 및 Canvas.Left 연결된 속성을 사용하여 절대 위치의 위치가 지정됩니다.</li><li>계층화는 Canvas.ZIndex 연결된 속성을 사용하여 명시적으로 지정할 수 있습니다. </li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다.</li></ul>
+[**요소의 크기가 명시적으로 설정되지 않은 경우 콘텐츠에 맞게 조정됩니다.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) | 자식 콘텐츠가 패널보다 더 크면 시각적으로 잘리지 않습니다. 자식 콘텐츠가 패널 범위에 의해 제한되지 않습니다.<ul><li>그리드</li><li>**Grid**는 자식 요소의 유동 크기 조정을 지원합니다.</li><li>코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다. 요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다.</li></ul>
+[**요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) | <ul><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다. </li><li>RelativePanel 요소가 패널 가장자리 또는 중심과 서로를 기준으로 정렬됩니다.</li><li>패널 맞춤, 형제 맞춤 및 형제 위치를 제어하는 다양한 연결된 속성을 사용하여 요소의 위치가 지정됩니다.</li><li>맞춤에 대한 RelativePanel 연결된 속성으로 늘이기가 발생하지 않는 경우(예를 들어 요소가 패널의 오른쪽과 왼쪽 가장자리에 배열되는 경우) HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다.</li></ul>
+[**요소의 크기가 명시적으로 설정되지 않아 늘어나지 않는 경우에는 콘텐츠에 맞게 조정됩니다.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) |<ul><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다. StackPanel 요소가 세로 또는 가로로 한 줄에 스택 형태로 쌓입니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 Orientation 속성의 반대 방향으로 유지됩니다.</li><li>요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 Horizontal인 경우에는 높이)를 채웁니다. Orientation 속성에서 지정된 방향으로 요소가 해당 콘텐츠에 맞게 크기가 조정됩니다.</li></ul>
+[**패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) |<ul><li>콘텐츠 크기가 Orientation 속성에서 지정된 방향의 패널 범위에 의해 제한되지 않으므로 스크롤 가능한 콘텐츠가 패널 범위 이상으로 늘어나고 스크롤 막대는 표시하지 않습니다.</li><li>스크롤 막대를 표시하려면 자식 콘텐츠의 높이나 너비를 명시적으로 제한해야 합니다.</li><li>VariableSizedWrapGrid</li><li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다. 요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다. 연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다.</li><li>요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다.</li></ul>
 
-For detailed information and examples of these panels, see [Layout panels](layout-panels.md). Also, see the [Responsive techniques sample](http://go.microsoft.com/fwlink/p/?LinkId=620024).
+이러한 속성이 설정되지 않은 경우 첫 번째 셀의 항목이 해당 콘텐츠에 맞게 크기가 조정된 다음 다른 모든 셀은 이 크기를 상속합니다. 패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.
 
-Layout panels let you organize your UI into logical groups of controls. When you use them with appropriate property settings, you get some support for automatic resizing, repositioning, and reflowing of UI elements. However, most UI layouts need further modification when there are significant changes to the window size. For this, you can use visual states.
+콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다. 이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620024)을 참조하세요. 레이아웃 패널을 통해 UI를 논리적 컨트롤 그룹으로 구성할 수 있습니다.
 
-## Visual states and state triggers
+## 적절한 속성 설정과 함께 레이아웃 패널을 사용하면 UI 요소의 자동 크기 조정, 위치 변경 및 재배치에 대한 일부 지원을 받을 수 있습니다.
 
-Use visual states to reposition, resize, reflow, reveal, or replace sections of your UI based on screen size or other factors. A [**VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx) defines property values that are applied to an element when it’s in a particular state. You group visual states in a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) that applies the appropriate VisualState when the specified conditions are met.
+그러나 창 크기가 크게 변경되는 경우 대부분의 UI 레이아웃을 추가로 수정해야 합니다. 이 경우 시각적 상태를 사용하면 됩니다. 시각적 상태 및 상태 트리거
 
-### Set visual states in code
+### 시각적 상태를 사용하면 화면 크기 또는 기타 요인에 따라 UI 섹션을 위치 변경, 크기 조정, 재배치, 표시 또는 바꿀 수 있습니다.
 
-To apply a visual state from code, you call the [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx) method. For example, to apply a state when the app window is a particular size, handle the [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) event and call **GoToState** to apply the appropriate state.
+[
+            **VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx)는 특정 상태에 있을 때 요소에 적용되는 속성 값을 정의합니다. 지정된 조건이 충족되는 경우 적절한 VisualState를 적용하는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx)에서 시각적 상태를 그룹화합니다.
 
-Here, a [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) contains 2 VisualState definitions. The first, `DefaultState`, is empty. When it's applied, the values defined in the XAML page are applied. The second, `WideState`, changes the [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) property of the [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) to **Inline** and opens the pane. This state is applied in the SizeChanged event handler if the window width is 720 effective pixels or greater.
+코드에서 시각적 상태 설정 코드에서 시각적 상태를 적용하려면 [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx) 메서드를 호출합니다. 예를 들어 앱 창이 특정한 크기인 상태를 적용하려면 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx) 이벤트를 처리하고 **GoToState**를 호출하여 적절한 상태를 적용합니다. 여기서는 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx)에 2개의 VisualState 정의가 포함되어 있습니다. 첫 번째 정의인 `DefaultState`는 비어 있습니다.
 
 ```xaml
 <Page ...>
@@ -233,13 +238,13 @@ private void CurrentWindow_SizeChanged(object sender, Windows.UI.Core.WindowSize
 }
 ```
 
-### Set visual states in XAML markup
+### 적용되면 XAML 페이지에서 정의된 값이 적용됩니다.
 
-Prior to Windows 10, VisualState definitions required [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx) objects for property changes, and you had to call **GoToState** in code to apply the state. This is shown in the previous example. You will still see many examples that use this syntax, or you might have existing code that uses it.
+두 번째 정의인 `WideState`는 [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx)의 [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx) 속성을 **Inline**으로 변경하고 창을 엽니다. 이 상태는 창 너비가 720 유효 픽셀 이상인 경우 SizeChanged 이벤트 처리기에서 적용됩니다. XAML 태그에서 시각적 상태 설정
 
-Starting in Windows 10, you can use the simplified [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) syntax shown here, and you can use a [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) in your XAML markup to apply the state. You use state triggers to create simple rules that automatically trigger visual state changes in response to an app event.
+Windows 10 이전에는 속성 변경을 위해 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx) 정의에 Storyboard 개체가 필요했기 때문에 상태를 적용하려면 코드에서 **GoToState**를 호출해야 했습니다. 이 구문은 이전 예제에 나와 있습니다.
 
-This example does the same thing as the previous example, but uses the simplified **Setter** syntax instead of a Storyboard to define property changes. And instead of calling GoToState, it uses the built in [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) state trigger to apply the state. When you use state triggers, you don't need to define an empty `DefaultState`. The default settings are reapplied automatically when the conditions of the state trigger are no longer met.
+아직도 이 구문을 사용하는 많은 예제를 볼 수 있으며 기존 코드에서 이 구문을 사용했을 수도 있습니다. Windows 10부터는 여기 나와 있는 것처럼 간소화된 [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx) 구문을 사용할 수 있기 때문에 상태를 적용하려면 XAML 태그에서 [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)를 사용하면 됩니다. 상태 트리거를 사용하여 앱 이벤트에 응답해서 자동으로 시각적 상태 변경을 트리거하는 간단한 규칙을 만들 수 있습니다. 이 예제에서는 이전 예제와 동일한 작업을 수행하지만 Storyboard 대신 간소화된 **Setter** 구문을 사용하여 속성 변경을 정의합니다.
 
 ```xaml
 <Page ...>
@@ -273,13 +278,13 @@ This example does the same thing as the previous example, but uses the simplifie
 </Page>
 ```
 
-> **Important**&nbsp;&nbsp;In the previous example, the VisualStateManager.VisualStateGroups attached property is set on the **Grid** element. When you use StateTriggers, always ensure that VisualStateGroups is attached to the first child of the root in order for the triggers to take effect automatically. (Here, **Grid** is the first child of the root **Page** element.)
+> GoToState를 호출하는 대신 기본 제공 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) 상태 트리거를 사용하여 상태를 적용합니다. 상태 트리거를 사용하게 되면 빈 `DefaultState`를 정의할 필요가 없습니다. 상태 트리거 조건이 더 이상 충족되지 않는 경우 기본 설정이 자동으로 다시 적용됩니다.
 
-### Attached property syntax
+### **중요** &nbsp;&nbsp;이전 예제에서는 VisualStateManager.VisualStateGroups 연결된 속성이 **Grid** 요소에 설정되었습니다.
 
-In a VisualState, you typically set a value for a control property, or for one of the attached properties of the panel that contains the control. When you set an attached property, use parentheses around the attached property name.
+StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
 
-This example shows how to set the [**RelativePanel.AlignHorizontalCenterWithPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanel.aspx) attached property on a TextBox named `myTextBox`. The first XAML uses [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.objectanimationusingkeyframes.aspx) syntax and the second uses **Setter** syntax.
+연결된 속성 구문 VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함하는 패널의 연결된 속성 중 하나에 대한 값을 설정합니다.
 
 ```xaml
 <!-- Set an attached property using ObjectAnimationUsingKeyFrames. -->
@@ -293,15 +298,16 @@ This example shows how to set the [**RelativePanel.AlignHorizontalCenterWithPane
 <Setter Target="myTextBox.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"/>
 ```
 
-### Custom state triggers
+### 연결된 속성을 설정할 때 연결된 속성 이름 주위에 괄호를 사용합니다.
 
-You can extend the [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) class to create custom triggers for a wide range of scenarios. For example, you can create a StateTrigger to trigger different states based on input type, then increase the margins around a control when the input type is touch. Or create a StateTrigger to apply different states based on the device family the app is run on. For examples of how to build custom triggers and use them to create optimized UI experiences from within a single XAML view, see the [State triggers sample](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+이 예제는 `myTextBox`라는 TextBox에서 [**RelativePanel.AlignHorizontalCenterWithPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanel.aspx) 연결된 속성을 설정하는 방법을 보여 줍니다. 첫 번째 XAML은 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.objectanimationusingkeyframes.aspx) 구문을 사용하고 두 번째 XAML은 **Setter** 구문을 사용합니다. 상태 트리거 사용자 지정 [
+            **StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다.
 
-### Visual states and styles
+### 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다.
 
-You can use Style resources in visual states to apply a set of property changes to multiple controls. For more info about using styles, see [Styling controls](../controls-and-patterns/styling-controls.md).
+또는 StateTrigger를 만들어 앱이 실행되는 디바이스 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
 
-In this simplified XAML from the State triggers sample, a Style resource is applied to a Button to adjust the size and margins for mouse or touch input. For the complete code and the definition of the custom state trigger, see the [State triggers sample](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+시각적 상태 및 스타일 시각적 상태에서 Style 리소스를 사용하면 속성 변경 집합을 여러 컨트롤에 적용할 수 있습니다.
 
 ```xaml
 <Page ... >
@@ -367,57 +373,57 @@ In this simplified XAML from the State triggers sample, a Style resource is appl
 </Page>
 ```
 
-## Tailored layouts
+## 스타일을 사용하는 방법에 대한 자세한 내용은 [컨트롤의 스타일 지정](../controls-and-patterns/styling-controls.md)을 참조하세요.
 
-When you make significant changes to your UI layout on different devices, you might find it more convenient to define a separate UI file with a layout tailored to the device, rather than adapting a single UI. If the functionality is the same across devices, you can define separate XAML views that share the same code file. If both the view and the functionality differ significantly across devices, you can define separate Pages, and choose which Page to navigate to when the app is loaded.
+상태 트리거 샘플의 이 간소화된 XAML에서 마우스 또는 터치식 입력에 대한 크기 및 여백을 조정하기 위해 Style 리소스가 Button에 적용되었습니다. 사용자 지정 상태 트리거에 대한 전체 코드 및 정의는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요. 맞춤형 레이아웃
 
-### Separate XAML views per device family
+### 서로 다른 디바이스에서 UI 레이아웃을 크게 변경하는 경우 단일 UI를 조정하는 것보다는 디바이스에 맞게 레이아웃을 사용하는 별도의 UI 파일을 정의하는 것이 훨씬 편리할 수 있습니다.
 
-Use XAML views to create different UI definitions that share the same code-behind. You can provide a unique UI definition for each device family. Follow these steps to add a XAML view to your app.
+기능이 디바이스에서 동일하면 동일한 코드 파일을 공유하는 별도의 XAML 보기를 정의할 수 있습니다. 디바이스에서 보기와 기능이 모두 현저하게 다른 경우 별도의 Page를 정의하고 앱이 로드될 때 이동할 Page를 선택할 수 있습니다. 디바이스 패밀리별로 XAML 보기 구분
 
-**To add a XAML view to an app**
-1. Select Project > Add New Item. The Add New Item dialog box opens.
-    > **Tip**&nbsp;&nbsp;Make sure a folder or the project, and not the solution, is selected in Solution Explorer.
-2. Under Visual C# or Visual Basic in the left pane, pick the XAML template type.
-3. In the center pane, pick XAML View.
-4. Enter the name for the view. The view must be named correctly. For more info on naming, see the remainder of this section.
-5. Click Add. The file is added to the project.
+**XAML 보기를 사용하여 동일한 코드 숨김을 공유하는 다른 UI 정의를 만듭니다.**
+1. 각 디바이스 패밀리에 고유한 UI 정의를 제공할 수 있습니다. 이러한 단계를 수행하여 앱에 XAML 보기를 추가합니다.
+    > 앱에 XAML 보기를 추가하려면
+2. 프로젝트 > 새 항목 추가를 선택합니다.
+3. 새 항목 추가 대화 상자가 열립니다.
+4. **팁** &nbsp;&nbsp;솔루션이 아닌 폴더나 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다. 가운데 창에서 XAML 보기를 선택합니다.
+5. 보기의 이름을 입력합니다. 보기의 이름은 올바르게 지정되어야 합니다.
 
-The previous steps create only a XAML file, but not an associated code-behind file. Instead, the XAML view is associated with an existing code-behind file using a "DeviceName" qualifier that's part of the file or folder name. This qualifier name can be mapped to a string value that represents the device family of the device that your app is currently running on, such as, "Desktop", "Mobile", and the names of the other device families (see [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
+이름 지정에 대한 자세한 내용은 이 섹션의 나머지 부분을 참조하세요. 추가를 클릭합니다. 파일이 프로젝트에 추가됩니다.
 
-You can add the qualifier to the file name, or add the file to a folder that has the qualifier name.
+이전 단계는 관련된 코드 숨김 파일은 만들지 않고 XAML 파일만 만듭니다.
 
-**Use file name**
+**대신 XAML 보기가 파일 또는 폴더 이름의 일부인 "DeviceName" 한정자를 사용하여 기존 코드 숨김 파일에 연결되어 있습니다.**
 
-To use the qualifier name with the file, use this format: *[pageName]*.DeviceFamily-*[qualifierString]*.xaml.
+이 한정자 이름은 "데스크톱", "모바일" 및 기타 디바이스 패밀리의 이름과 같이 앱에서 현재 실행 중인 디바이스의 디바이스 패밀리를 나타내는 문자열 값에 매핑될 수 있습니다([**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx) 참조).
 
-Let's look at an example for a file named MainPage.xaml. To create a view for mobile devices, name the XAML view MainPage.DeviceFamily-Mobile.xaml. To create a view for PC devices, name the view MainPage.DeviceFamily-Desktop.xaml. Here's what the solution looks like in Microsoft Visual Studio.
+파일 이름에 한정자를 추가하거나 한정자 이름을 가진 폴더에 파일을 추가할 수 있습니다. 파일 이름 사용 파일에 한정자 이름을 사용하려면 *[pageName]*.DeviceFamily-*[qualifierString]*.xaml 형식을 사용합니다. MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다.
 
-![XAML views with qualified file names](images/xaml-layout-view-ex-1.png)
+![모바일 디바이스에 대한 보기를 만들려면 XAML 보기의 이름을 MainPage.DeviceFamily-Mobile.xaml로 지정합니다.](images/xaml-layout-view-ex-1.png)
 
-**Use folder name**
+**PC 디바이스에 대한 보기를 만들려면 보기의 이름을 MainPage.DeviceFamily-Desktop.xaml로 지정합니다.**
 
-To organize the views in your Visual Studio project using folders, you can use the qualifier name with the folder. To do so, name your folder like this: DeviceFamily-*[qualifierString]*. In this case, each XAML view file has the same name. Don't include the qualifier in the file name.
+Microsoft Visual Studio에서 해당 솔루션이 다음과 같이 보입니다. 정규화된 파일 이름을 가진 XAML 보기 폴더 이름 사용 폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다.
 
-Here's an example, again for a file named MainPage.xaml. To create a view for mobile devices, create a folder named "DeviceFamily-Mobile", and place a XAML view named MainPage.xaml into it. To create a view for PC devices, create a folder named "DeviceFamily-Desktop", and place another XAML view named MainPage.xaml into it. Here's what the solution looks like in Visual Studio.
+그러려면 폴더 이름을 DeviceFamily-*[qualifierString]*과 같이 지정합니다. 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요. 다음 예제에서도 MainPage.xaml이라는 파일을 사용합니다.
 
-![XAML views in folders](images/xaml-layout-view-ex-2.png)
+![모바일 디바이스에 대한 보기를 만들려면 "DeviceFamily-Mobile"이라는 폴더를 만들고 MainPage.xaml이라는 XAML 보기를 배치합니다.](images/xaml-layout-view-ex-2.png)
 
-In both cases, a unique view is used for mobile and PC devices. The default MainPage.xaml file is used if the device it's running on doesn't match any of the device family specific views.
+PC 디바이스에 대한 보기를 만들려면 "DeviceFamily-Desktop"이라는 폴더를 만들고 MainPage.xaml이라는 다른 XAML 보기를 배치합니다. Visual Studio에서 해당 솔루션이 다음과 같이 보입니다.
 
-### Separate XAML pages per device family
+### 폴더의 XAML 보기
 
-To provide unique views and functionality, you can create separate Page files (XAML and code), and then navigate to the appropriate page when the page is needed.
+두 경우 모두 모바일 디바이스와 PC에 고유한 보기가 사용됩니다.
 
-**To add a XAML page to an app**
-1. Select Project > Add New Item. The Add New Item dialog box opens.
-    > **Tip**&nbsp;&nbsp;Make sure the project, and not the solution, is selected in Solution Explorer.
-2. Under Visual C# or Visual Basic in the left pane, pick the XAML template type.
-3. In the center pane, pick Blank page.
-4. Enter the name for the page. For example, "MainPage_Mobile". Both a MainPage_Mobile.xaml and MainPage_Mobile.xaml.cs/vb/cpp code file are created.
-5. Click Add. The file is added to the project.
+**실행되는 디바이스가 디바이스 패밀리별 보기와 일치하지 않는 경우 기본 MainPage.xaml 파일이 사용됩니다.**
+1. 디바이스 패밀리별로 XAML 페이지 구분 고유한 보기 및 기능을 제공하려면 별도의 Page 파일을 만든 다음(XAML 및 코드) 해당 페이지가 필요할 때 적절한 페이지로 이동합니다.
+    > 앱에 XAML 페이지를 추가하려면
+2. 프로젝트 > 새 항목 추가를 선택합니다.
+3. 새 항목 추가 대화 상자가 열립니다.
+4. **팁** &nbsp;&nbsp;솔루션이 아닌 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다. 가운데 창에서 빈 페이지를 선택합니다.
+5. 페이지 이름을 입력합니다. 예를 들어 "MainPage_Mobile"입니다.
 
-At runtime, check the device family that the app is running on, and navigate to the correct page like this.
+MainPage_Mobile.xaml 및 MainPage_Mobile.xaml.cs/vb/cpp 코드 파일이 둘 다 생성됩니다.
 
 ```csharp
 if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -430,4 +436,9 @@ else
 }
 ```
 
-You can also use different criteria to determine which page to navigate to. For more examples, see the [Tailored multiple views sample](http://go.microsoft.com/fwlink/p/?LinkId=620636), which uses the [**GetIntegratedDisplaySize**](https://msdn.microsoft.com/library/windows/apps/xaml/dn904185.aspx) function to check the physical size of an integrated display.
+추가를 클릭합니다. 파일이 프로젝트에 추가됩니다.
+
+
+<!--HONumber=May16_HO2-->
+
+

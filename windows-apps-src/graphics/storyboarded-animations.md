@@ -1,40 +1,40 @@
 ---
 author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
-title: Storyboarded animations
-description: Storyboarded animations are not just animations in the visual sense.
+title: 스토리보드 애니메이션
+description: 스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다.
 ---
-# Storyboarded animations
+# 스토리보드 애니메이션
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-Storyboarded animations are not just animations in the visual sense. A storyboarded animation is a way to change the value of a dependency property as a function of time. One of the main reasons you might need a storyboarded animation that's not from the animation library is to define the visual state for a control, as part of a control template or page definition.
+스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다. 스토리보드 애니메이션은 종속성 속성의 값을 시간의 함수로 변경하는 방법입니다. 애니메이션 라이브러리에 없는 스토리보드 애니메이션이 필요할 수 있는 주요 이유 중 하나는 컨트롤 템플릿이나 페이지 정의의 일부로 컨트롤의 시각적 상태를 정의한다는 점입니다.
 
-## Differences with Silverlight and WPF
+## Silverlight와 WPF의 차이점
 
-If you are familiar with Microsoft Silverlight or Windows Presentation Foundation (WPF), read this section; otherwise, you can skip it.
+Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 아는 경우 이 섹션을 읽어 보세요. 그렇지 않으면 건너뛸 수 있습니다.
 
-In general, creating storyboarded animations in a Windows Runtime app is like Silverlight or WPF. But there are a number of important differences:
+일반적으로 Windows 런타임 앱에서 스토리보드 애니메이션을 만드는 과정은 Silverlight 또는 WPF와 비슷합니다. 그러나 중요한 차이점도 많습니다.
 
--   Storyboarded animations are not the only way to visually animate a UI, nor are they necessarily the easiest way for app developers to do so. Rather than using storyboarded animations it's often a better design practice to use theme animations and transition animations. These can quickly create recommended UI animations without getting into the intricacies of animation property targeting. For more info see [Animations overview](animations-overview.md).
--   In the Windows Runtime, many XAML controls include theme animations and transition animations as part of their built-in behavior. For the most part, WPF and Silverlight controls didn't have a default animation behavior.
--   Not all custom animations you create can run by default in a Windows Runtime app, if the animation system determines that the animation might cause bad performance in your UI. Animations where the system determines there could be a performance impact are called *dependent animations*. It's dependent because the clocking of your animation is directly working against the UI thread, which is also where active user input and other updates are trying to apply the runtime changes to UI. A dependent animation that's consuming extensive system resources on the UI thread can make the app appear unresponsive in certain situations. If your animation causes a layout change or otherwise has the potential to impact performance on the UI thread, you often need to explicitly enable the animation to see it run. That's what the **EnableDependentAnimation** property on specific animation classes is for. See [Dependent and independent animations](./storyboarded-animations.md#dependent-and-independent-animations) for more info.
--   Custom easing functions are not currently supported in the Windows Runtime.
+-   스토리보드 애니메이션은 UI에 시각적으로 애니메이션 효과를 주는 유일한 방법이 아니며 앱 개발자가 선택할 수 있는 가장 간단한 방법도 아닙니다. 스토리보드 애니메이션을 사용하는 대신 테마 애니메이션 및 전환 애니메이션을 사용하는 것이 더 좋은 디자인 사례인 경우가 종종 있습니다. 이러한 애니메이션에서는 복잡한 애니메이션 속성 대상 지정을 자세히 검토하지 않고도 권장 UI 애니메이션을 신속하게 만들 수 있습니다. 자세한 내용은 [애니메이션 개요](animations-overview.md)를 참조하세요.
+-   Windows 런타임에서 많은 XAML 컨트롤에는 테마 애니메이션과 전환 애니메이션이 기본 제공 동작의 일부로 포함되어 있습니다. 대부분의 경우 WPF 및 Silverlight 컨트롤에는 기본 애니메이션 동작이 없었습니다.
+-   사용자가 만드는 일부 사용자 지정 애니메이션의 경우 해당 애니메이션으로 인해 UI 성능이 저하된다고 애니메이션 시스템에서 확인될 경우 기본적으로 Windows 런타임 앱에서 실행할 수 없습니다. 성능에 영향을 미칠 수 있다고 시스템에서 확인하는 애니메이션을 *종속 애니메이션*이라고 합니다. 활성 사용자 입력 및 기타 업데이트가 런타임 변경을 UI에 적용하는 위치인 UI 스레드에 애니메이션의 클로킹이 직접 작동하기 때문에 이 애니메이션은 종속적입니다. UI 스레드에서 시스템 리소스를 많이 소비하는 종속 애니메이션을 사용하면 특정 상황에서 앱이 응답하지 않는 것으로 나타날 수 있습니다. 애니메이션에서 레이아웃 변경을 일으키거나 그 밖에 성능이 UI 스레드에 영향을 미칠 가능성이 있는 경우 명시적으로 애니메이션을 사용하도록 설정하여 실행되는지 확인해야 합니다. 특정 애니메이션 클래스에서 **EnableDependentAnimation** 속성이 이 용도로 사용됩니다. 자세한 내용은 [종속 애니메이션과 독립 애니메이션](./storyboarded-animations.md#dependent-and-independent-animations)을 참조하세요.
+-   사용자 지정 감속/가속 함수는 Windows 런타임에서 현재 지원되지 않습니다.
 
-## Defining storyboarded animations
+## 스토리보드 애니메이션 정의
 
-A storyboarded animation is a way to change the value of a dependency property as a function of time. The property you are animating is not always a property that directly affects the UI of your app. But since XAML is about defining UI for an app, usually it is a UI-related property you are animating. For example, you can animate the angle of a [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932), or the color value of a button's background.
+스토리보드 애니메이션은 종속성 속성의 값을 시간의 함수로 변경하는 방법입니다. 애니메이션 효과를 주려는 속성이 항상 앱의 UI에 직접 영향을 주는 속성은 아닙니다. 그러나 XAML은 앱의 UI 정의에 대한 것이므로 일반적으로 UI 관련 속성에 애니메이션 효과를 줍니다. 예를 들어 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932)의 각도 또는 단추 배경의 색상 값에 애니메이션 효과를 줄 수 있습니다.
 
-One of the main reasons you might be defining a storyboarded animation is if you are a control author or are re-templating a control, and you are defining visual states. For more info, see [Storyboarded animations for visual states](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+스토리보드 애니메이션을 정의하는 주요 이유 중 하나는 컨트롤 작성자이거나 컨트롤의 템플릿을 다시 만들려는 경우와 시각적 상태를 정의하는 경우입니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
 
-Whether you are defining visual states or a custom animation for an app, the concepts and APIs for storyboarded animations that are described in this topic mostly apply to either.
+시각적 상태를 정의하는지 앱에 대한 사용자 지정 애니메이션을 정의하는지에 관계없이 이 항목에서 설명하는 스토리보드 애니메이션에 대한 개념 및 API는 두 경우에 대부분 적용됩니다.
 
-In order to be animated, the property you are targeting with a storyboarded animation must be a *dependency property*. A dependency property is a key feature of the Windows Runtime XAML implementation. The writeable properties of most common UI elements are typically implemented as dependency properties, so that you can animate them, apply data-bound values, or apply a [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849) and target the property with a [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817). For more info about how dependency properties work, see [Dependency properties overview](https://msdn.microsoft.com/library/windows/apps/Mt185583).
+애니메이션 효과를 주려면 스토리보드 애니메이션에서 대상으로 지정하려는 속성이 *종속성 속성*이어야 합니다. 종속성 속성은 Windows 런타임 XAML 구현의 주요 기능입니다. 가장 일반적인 UI 요소의 쓰기 가능한 속성이 일반적으로 종속성 속성으로 구현되므로 애니메이션 효과를 주거나, 데이터 바인딩된 값을 적용하거나 [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849)을 적용하고 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)로 속성 대상을 지정할 수 있습니다. 종속성 속성 작동 방식에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 
-Most of the time, you define a storyboarded animation by writing XAML. If you use a tool such as Microsoft Visual Studio, it will produce the XAML for you. It's possible to define a storyboarded animation using code too, but that's less common.
+대부분의 경우 스토리보드 애니메이션은 XAML을 작성하여 정의합니다. Microsoft Visual Studio와 같은 도구를 사용하는 경우 XAML이 자동으로 생성됩니다. 코드를 사용하여 스토리보드 애니메이션을 정의할 수도 있지만 덜 일반적입니다.
 
-Let's look at a simple example. In this XAML example, the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) property is animated on a particular [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) object.
+간간한 예제를 살펴보겠습니다. 이 XAML 예제에서는 특정 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) 개체에 대한 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 애니메이션 효과를 줍니다.
 
 ```xml
 <!-- Animates the rectangle's opacity. -->
@@ -49,19 +49,20 @@ Let's look at a simple example. In this XAML example, the [**Opacity**](https://
       Width="300" Height="200" Fill="Blue"/>
 ```
       
-### Identifying the object to animate
+### 애니메이션 효과를 줄 개체 식별
 
-In the previous example, the storyboard was animating the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) property of a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371). You don't declare the animations on the object itself. Instead you do this within the animation definition of a storyboard. Storyboards are usually defined in XAML that's not in the immediately vicinity of the XAML UI definition of the object to animate. Instead, they're usually set up as a XAML resource.
+이전의 예제에서는 스토리보드가 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 애니메이션 효과를 줍니다. 개체 자체에 대한 애니메이션을 선언하지 않습니다. 대신 스토리보드의 애니메이션 정의 내에서 이 작업을 수행합니다. 일반적으로 스토리보드는 애니메이션 효과를 줄 개체의 XAML UI 정의에 바로 근접해 있지 않는 XAML에 정의되어 있습니다. 대신 XAML 리소스로 설정됩니다.
 
-To connect an animation to a target, you reference the target by its identifying programming name. You should always apply the [x:Name attribute](https://msdn.microsoft.com/library/windows/apps/Mt204788) in the XAML UI definition to name the object that you want to animate. You then target the object to animate by setting [**Storyboard.TargetName**](https://msdn.microsoft.com/library/windows/apps/Hh759823) within the animation definition. For the value of **Storyboard.TargetName**, you use the name string of the target object, which is what you set earlier and elsewhere with x:Name attribute.
+애니메이션을 대상에 연결하려면 식별하는 프로그래밍 이름으로 대상을 참조합니다. 항상 XAML UI 정의의 [x:Name 특성](https://msdn.microsoft.com/library/windows/apps/Mt204788)을 적용하여 애니메이션 효과를 줄 개체의 이름을 지정해야 합니다. 그런 다음 애니메이션 정의 내에서 [**Storyboard.TargetName**](https://msdn.microsoft.com/library/windows/apps/Hh759823)을 설정하여 애니메이션 효과를 줄 개체를 대상으로 지정합니다. **Storyboard.TargetName** 값에 대해 대상 개체의 이름 문자열을 사용하며, 이전에 및 다른 위치에서 x:Name 특성을 사용하여 설정한 문자열입니다.
 
-### Targeting the dependency property to animate
+### 애니메이션 효과를 줄 종속성 속성을 대상으로 지정
 
-You set a value for [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824) in the animation. This determines which specific property of the targeted object is animated.
+애니메이션에서 [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)에 대한 값을 설정합니다. 이 값은 대상 개체에서 애니메이션 효과를 줄 특정 속성을 결정합니다.
 
-Sometimes you need to target a property that's not an immediate property of the target object, but that is nested more deeply in an object-property relationship. You often need to do this in order to drill down into a set of contributing object and property values until you can reference a property type that can be animated ([**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)). This concept is called *indirect targeting*, and the syntax for targeting a property in this way is known as a *property path*.
+경우에 따라 대상 개체의 직접 속성이 아닌 속성을 대상으로 지정해야 하지만 그러면 개체-속성 관계에서 더 깊게 중첩됩니다. 애니메이션 효과를 줄 수 있는 속성 형식([**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723))을 참조할 때까지 영향을 주는 일련의 개체 및 속성 값으로 드릴다운하려면 이렇게 해야 하는 경우가 종종 있습니다. 이 개념을 *간접 대상*이라고 하고 이 방식으로 속성을 대상 지정하는 구문을 *속성 경로*라고 합니다.
 
-Here's an example. One common scenario for a storyboarded animation is to change the color of a part of an app UI or control in order to represent that the control is in a particular state. Say you want to animate the [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) of a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), so that it turns from red to green. You'd expect that a [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066) is involved, and that's correct. However, none of the properties on UI elements that affect the object's color are actually of type [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). Instead, they're of type [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). So what you actually need to target for animation is the [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) property of the [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) class, which is a **Brush**-derived type that's typically used for these color-related UI properties. And here's what that looks like in terms of forming a property path for your animation's property targeting:
+예를 들면 다음과 같습니다. 스토리보드 애니메이션에 대한 일반적인 시나리오 한 가지는 앱 UI 또는 컨트롤 일부의 색상을 변경하여 컨트롤을 특정 상태로 나타내는 것입니다. 예를 들어 빨간색에서 녹색으로 바뀌도록 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)의 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665)에 애니메이션 효과를 주려고 합니다. [
+            **ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)이 관련된다고 예상할 것이며 그 예상이 맞습니다. 그러나 개체의 색상에 영향을 주는 UI 요소의 속성이 모두 실제로는 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 형식이 아닙니다. 대신 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 형식입니다. 따라서 실제로 애니메이션의 대상으로 지정해야 하는 항목은 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) 클래스의 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) 속성으로, 이러한 색상 관련 UI 속성에 일반적으로 사용되는 **Brush** 파생 형식입니다. 또한 다음은 애니메이션의 속성 대상 지정을 위한 속성 경로 구성 측면에서 어떻게 표시되는지를 보여 줍니다.
 
 ```xml
 <Storyboard x:Name="myStoryboard">
@@ -71,49 +72,55 @@ Here's an example. One common scenario for a storyboarded animation is to change
     </Storyboard>
 ```
 
-Here's how to think of this syntax in terms of its parts:
+다음은 이 구문을 해당 요소 측면에서 고려하는 방법입니다.
 
--   Each set of () parentheses encloses a property name.
--   Within the property name, there's a dot, and that dot separates a type name and a property name, so that the property you're identifying is unambiguous.
--   The dot in the middle, the one that's not inside parentheses, is a step. This is interpreted by the syntax to mean, take the value of the first property (which is an object), step into its object model, and target a specific sub-property of the first property's value.
+-   각 () 괄호 집합은 속성 이름을 묶습니다.
+-   속성 이름 내에는 점이 있고 해당 점은 형식 이름과 속성 이름으로 구분하여 식별하려는 속성이 모호하지 않도록 합니다.
+-   괄호 외부에 있는 가운데의 점은 단계입니다. 이 점은 구문으로 해석되며 첫 번째 속성(개체)의 값을 가져오고 개체 모델을 단계별로 이동하고 첫 번째 속성 값의 특정 하위 속성을 대상으로 지정한다는 의미입니다.
 
-Here's a list of animation targeting scenarios where you'll probably be using indirect property targeting, and some property path strings that approximate the syntax you'll use:
+다음은 간접 속성 대상 지정 및 사용할 구문과 유사한 몇 가지 속성 경로 문자열을 사용할 수 있는 애니메이션 대상 지정 시나리오 목록입니다.
 
--   Animating the [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) value of a [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), as applied to a [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980): `(UIElement.RenderTransform).(TranslateTransform.X)`
--   Animating a [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) within a [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) of a [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108), as applied to a [**Fill**](https://msdn.microsoft.com/library/windows/apps/BR243378): `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
--   Animating the [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) value of a [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), which is 1 of 4 transforms in a [**TransformGroup**](https://msdn.microsoft.com/library/windows/apps/BR243022), as applied to a [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980):`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`
+-   [
+            **RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용: `(UIElement.RenderTransform).(TranslateTransform.X)`
+-   [
+            **Fill**](https://msdn.microsoft.com/library/windows/apps/BR243378)에 적용된 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)의 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 내에 있는 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)에 애니메이션 효과 적용: `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
+-   [
+            **RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TransformGroup**](https://msdn.microsoft.com/library/windows/apps/BR243022)에 있는 4가지 변형 중 하나인 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용:`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`
 
-You'll notice some of these examples use square brackets around numbers. This is an indexer. It indicates that the property name preceding it has a collection as value, and that you want an item (as identified by a zero-based index) from within that collection.
+이러한 예제 중 일부에서 숫자 주위에 대괄호를 사용하는 것을 확인할 수 있습니다. 이는 인덱서이며, 앞에 오는 속성 이름에는 컬렉션이 값으로 포함되며 해당 컬렉션에서 0부터 시작하는 색인으로 식별되는 항목이 필요함을 나타냅니다.
 
-You can also animate XAML attached properties. Always enclose the full attached property name in parentheses, for example `(Canvas.Left)`. For more info, see [Animating XAML attached properties](./storyboarded-animations.md#animating-xaml-attached-properties).
+XAML 연결 속성에도 애니메이션 효과를 줄 수 있습니다. 항상 전체 연결 속성 이름을 괄호로 묶습니다(예: `(Canvas.Left)`). 자세한 내용은 [XAML 연결 속성에 애니메이션 효과 주기](./storyboarded-animations.md#animating-xaml-attached-properties)를 참조하세요.
 
-For more info on how to use a property path for indirect targeting of the property to animate, see [Property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586) or [**Storyboard.TargetProperty attached property**](https://msdn.microsoft.com/library/windows/apps/Hh759824).
+애니메이션 효과를 줄 속성의 간접 대상에 속성 경로를 사용하는 방법에 대한 자세한 내용은 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586) 또는 [**Storyboard.TargetProperty 연결된 속성**](https://msdn.microsoft.com/library/windows/apps/Hh759824)을 참조하세요.
 
-### Animation types
+### 애니메이션 형식
 
-The Windows Runtime animation system has three specific types that storyboarded animations can apply to:
+Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이션에서 적용할 수 있는 세 가지 특정 형식이 있습니다.
 
--   [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), can be animated with any [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)
--   [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), can be animated with any [**PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346)
--   [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), can be animated with any [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)
+-   [
+            **Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) - [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)으로 애니메이션 효과를 줄 수 있습니다.
+-   [
+            **Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) - [**PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346)으로 애니메이션 효과를 줄 수 있습니다.
+-   [
+            **Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) - [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066)으로 애니메이션 효과를 줄 수 있습니다.
 
-There's also a generalized [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) animation type for object reference values, which we'll discuss later.
+개체 참조 값에 대해 일반화된 [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) 애니메이션 형식도 있으며, 뒷부분에서 설명합니다.
 
-### Specifying the animated values
+### 애니메이션 효과를 준 값 지정
 
-So far we've shown you how to target the object and the property to animate, but haven't yet described what the animation does to the property value when it runs.
+지금까지는 애니메이션 효과를 줄 개체 및 속성을 대상으로 지정하는 방법을 살펴보았으며, 애니메이션이 실행될 때 속성 값에 대해 수행하는 작업에 대해서는 아직 설명하지 않았습니다.
 
-The animation types we've described are sometimes referred to as **From**/**To**/**By** animations. This means that the animation is changing the value of a property, over time, using one or more of these inputs that come from the animation definition:
+지금까지 설명한 애니메이션 형식은 경우에 따라 **From**/**To**/**By** 애니메이션이라고도 합니다. 즉, 애니메이션이 애니메이션 정의에서 제공되는 이러한 입력 중 하나 이상을 사용하여 시간에 따라 속성의 값을 변경한다는 의미입니다.
 
--   The value starts at the **From** value. If you don't specify a **From** value, the starting value is whatever value the animated property has at the time before the animation runs. This might be a default value, a value from a style or template, or a value specifically applied by a XAML UI definition or app code.
--   At the end of the animation, the value is the **To** value.
--   Or, to specify an ending value relative to the starting value, set the **By** property. You'd set this instead of the **To** property.
--   If you don't specify a **To** value or a **By** value, the ending value is whatever value the animated property has at the time before the animation runs. In this case you'd better have a **From** value because otherwise the animation won't change the value at all; its starting and ending values are both the same.
--   An animation typically has at least one of **From**, **By** or **To** but never all three.
+-   값은 **From** 값에서 시작합니다. **From** 값을 지정하지 않으면 시작 값은 애니메이션이 실행되기 전에 애니메이션 효과를 준 속성에 있던 모든 값이 됩니다. 이 값은 기본값, 스타일 또는 템플릿의 값 또는 XAML UI 정의나 앱 코드에서 특별히 적용한 값이 될 수 있습니다.
+-   애니메이션이 끝날 때의 값은 **To** 값입니다.
+-   또는 시작 값을 기준으로 종료 값을 지정하려면 **By** 속성을 설정합니다. **To** 속성 대신 이 속성을 설정하는 것입니다.
+-   **To** 값 또는 **By** 값을 지정하지 않으면 종료 값은 애니메이션이 실행되기 전에 애니메이션 효과를 준 속성에 있던 모든 값이 됩니다. 이 경우 **From** 값을 사용하는 것이 좋습니다. 그렇지 않으면 애니메이션에서 값을 전혀 변경하지 않아 시작 값과 종료 값이 같아지기 때문입니다.
+-   일반적으로 애니메이션에는 **From**, **By** 또는 **To** 중 하나 이상이 있지만 세 개 모두 없을 수 있습니다.
 
-Let's revisit the earlier XAML example and look again at the **From** and **To** values, and the **Duration**. The example is animating the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) property, and the property type of **Opacity** is [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). So the animation to use here is [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136).
+이전 XAML 예제로 다시 돌아가 **From** 및 **To** 값과 **Duration**을 다시 살펴보겠습니다. 이 예제에서는 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 애니메이션 효과를 주며 **Opacity**의 속성 형식은 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)입니다. 따라서 여기서 사용하는 애니메이션은 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)입니다.
 
-`From="1.0" To="0.0"` specifies that when the animation runs, the [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) property starts at a value of 1 and animates to 0. In other words, in terms of what these [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) values mean to the **Opacity** property, this animation will cause the object to start opaque and then fade to transparent.
+`From="1.0" To="0.0"` (은)는 애니메이션이 실행될 때 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성이 값 1에서 시작하여 0으로 애니메이션 효과를 주도록 지정합니다. 즉, **Opacity** 속성에 대한 이러한 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값의 의미와 관련하여 이 애니메이션은 개체가 불투명하게 시작된 다음 투명하게 페이드되도록 합니다.
 
 ```xml
 ...
@@ -126,67 +133,76 @@ Let's revisit the earlier XAML example and look again at the **From** and **To**
 ...
 ```
 
-`Duration="0:0:1"` specifies how long the animation lasts, that is, how fast the rectangle fades. A [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) property is specified in the form of *hours*:*minutes*:*seconds*. The time duration in this example is one second.
+`Duration="0:0:1"` (은)는 애니메이션의 지속 시간, 즉 직사각형이 희미해지는 속도를 지정합니다. [
+            **Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 속성은 *시*:*분*:*초* 형식으로 지정합니다. 이 예제의 기간은 1초입니다.
 
-For more info about [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) values and the XAML syntax, see [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377).
+[
+            **Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값 및 XAML 구문에 대한 자세한 내용은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)을 참조하세요.
 
-**Note**  For the example we showed, if you were sure that the starting state of the object being animated has [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) always equal to 1, either through the default or an explicit set, you could omit the **From** value, the animation would use the implicit starting value, and the result would be the same.
+**참고** 앞에서 살펴본 예제에서 애니메이션 효과를 줄 개체의 시작 상태에 항상 1인 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)가 있다는 확신이 있는 경우 기본값이나 명시적 설정을 통해 **From** 값을 생략할 수 있으며 애니메이션에서 암시적 시작 값을 사용해도 결과는 동일해집니다.
 
- 
+ 
 
-### From/To/By are nullable
+### nullable인 From/To/By
 
-We mentioned previously that you can omit **From**, **To** or **By** and thus use current non-animated values as substitutes for a missing value. **From**, **To** or **By** properties of an animation aren't of the type you might guess. For example the type of the [**DoubleAnimation.To**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) property isn't [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Instead it's a [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) for **Double**. And its default value is **null**, not 0. That **null** value is how the animation system distinguishes that you haven't specifically set a value for a **From**, **To** or **By** property. Visual C++ component extensions (C++/CX) doesn't have a **Nullable** type, so it uses [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864) instead.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. Visual C++ 구성 요소 확장(C++/CX)에는 **Nullable** 형식이 없으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864)를 대신 사용합니다.
 
-### Other properties of an animation
+### 애니메이션의 다른 속성
 
-The next properties described in this section are all optional in that they have defaults that are appropriate for most animations.
+이 섹션에서 설명하는 다음 속성은 대부분의 애니메이션에 적합한 기본값이 있다는 점에서 모두 선택 사항입니다.
 
 ### **AutoReverse**
 
-If you don't specify either [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) or [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) on an animation, that animation will run once, and run for the time as specified as the [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207).
+애니메이션에서 [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) 또는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211)를 지정하지 않으면 해당 애니메이션은 한 번 실행되며 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)으로 지정한 시간 동안 실행됩니다.
 
-The [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) property specifies whether a timeline plays in reverse after it reaches the end of its [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207). If you set it to **true**, the animation reverses after it reaches the end of its declared [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207), changing the value from its ending value (**To**) back to its starting value (**From**). This means that the animation effectively runs for double the time of its [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207).
+[
+            **AutoReverse**](https://msdn.microsoft.com/library/windows/apps/BR243202) 속성은 타임라인이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 재생되는지 여부를 지정합니다. **true**로 설정하면 애니메이션이 선언된 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)의 끝에 도달한 후 반대로 실행되어 해당 값을 종료 값(**To**)에서 시작 값(**From**)으로 다시 변경합니다. 즉, 애니메이션이 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 시간의 두 배인 기간 동안 효율적으로 실행된다는 의미입니다.
 
 ### **RepeatBehavior**
 
-The [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) property specifies either how many times a timeline plays, or a larger duration that the timeline should repeat within. By default, a timeline has an iteration count of "1x", which means it plays one time for its [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) and does not repeat.
+[
+            **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 속성은 타임라인이 재생되는 횟수 또는 타임라인이 반복되어야 하는 더 큰 기간을 지정합니다. 기본적으로 타임라인에는 "1x"의 반복 횟수가 있으며 해당 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 동안 한 번 재생되고 반복되지 않는다는 의미입니다.
 
-You can cause the animation to run multiple iterations, for example a value of "3x" causes the animation to run three times. Or, you can specify a different [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) for [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211). That **Duration** should be longer than the **Duration** of the animation itself to be effective. For example, if you specify a **RepeatBehavior** of "0:0:10", for an animation that has a [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) of "0:0:2", that animation repeats five times. If these don't divide evenly, the animation gets truncated at the time that the **RepeatBehavior** time is reached, which might be partway through. Finally you can specify the special value "Forever", which causes the animation to run infinitely until it's deliberately stopped.
+애니메이션이 여러 번 실행되도록 할 수 있습니다. 예를 들어 값이 "3x"이면 애니메이션이 세 번 실행됩니다. 또는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211)에 대해 다른 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)을 지정할 수 있습니다. 효율성을 높이려면 해당 **Duration**이 애니메이션 자체의 **Duration**보다 길어야 합니다. 예를 들어 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 "0:0:2"인 애니메이션에 대해 **RepeatBehavior**를 "0:0:10"으로 지정하면 해당 애니메이션은 5번 반복됩니다. 이러한 값이 똑같이 나누어지지 않으면 **RepeatBehavior** 시간에 도달할 때 애니메이션이 잘려 중간까지만 실행될 수 있습니다. 마지막으로 특수한 값 "Forever"를 지정하여 애니메이션이 의도적으로 중지될 때까지 무한 실행되도록 할 수 있습니다.
 
-For more info about [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) values and the XAML syntax, see [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411).
+[
+            **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411) 값 및 XAML 구문에 대한 자세한 내용은 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR210411)를 참조하세요.
 
 ### **FillBehavior="Stop"**
 
-By default, when an animation ends, the animation leaves the property value as the final **To** or **By**-modified value even after its duration is surpassed. However, if you set the value of the [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) property to [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306), the value of the animated value reverts to whatever the value was before the animation was applied, or more precisely to the current effective value as determined by the dependency property system (for more info on this distinction, see [Dependency properties overview](https://msdn.microsoft.com/library/windows/apps/Mt185583)).
+기본적으로 애니메이션이 종료되면 애니메이션은 기간이 초과된 후에도 속성 값을 최종 **To** 또는 수정된 **By** 값으로 유지합니다. 그러나 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) 속성의 값을 [**FillBehavior.Stop**](https://msdn.microsoft.com/library/windows/apps/BR210306)으로 설정하면 애니메이션 효과를 준 값이 애니메이션이 적용되기 이전에 있던 모든 값이나 보다 정확히 말해 종속성 속성 시스템에 의해 결정된 현재 유효한 값으로 되돌아갑니다. 이 차이점에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 
 ### **BeginTime**
 
-By default, the [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204) of an animation is "0:0:0", so it begins as soon as its containing [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) runs. You might change this if the **Storyboard** contains more than one animation and you want to stagger the start times of the others versus an initial animation, or to create a deliberate short delay.
+기본적으로 애니메이션의 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204)은 "0:0:0"이므로 포함하고 있는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 실행되는 즉시 시작됩니다. **Storyboard**에 둘 이상의 애니메이션이 포함된 경우 다른 애니메이션 및 초기 애니메이션의 시작 시간에 시차를 두거나 의도적으로 지연을 짧게 만들려는 경우 이 값을 변경할 수 있습니다.
 
 ### **SpeedRatio**
 
-If you have more than one animation in a [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) you can change the time rate of one or more of the animations relative to the **Storyboard**. It's the parent **Storyboard** that ultimately controls how the [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) time elapses while the animations run. This property isn't used very often. For more info see [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/BR243213).
+[
+            **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에 둘 이상의 애니메이션이 있는 경우 **Storyboard**를 기준으로 여러 애니메이션의 시간 속도를 변경할 수 있습니다. 애니메이션이 실행되는 동안 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 시간이 경과되는 방식을 궁극적으로 제어하는 것은 부모 **Storyboard**입니다. 이 속성이 자주 사용되지는 않습니다. 자세한 내용은 [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/BR243213)를 참조하세요.
 
-## Defining more than one animation in a **Storyboard**
+## **Storyboard**에서 둘 이상의 애니메이션 정의
 
-The contents of a [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) can be more than one animation definition. You might have more than one animation if you are applying related animations to two properties of the same target object. For example, you might change both the [**TranslateX**](https://msdn.microsoft.com/library/windows/apps/BR228122) and [**TranslateY**](https://msdn.microsoft.com/library/windows/apps/BR228124) properties of a [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) used as the [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) of a UI element; this will cause the element to translate diagonally. You need two different animations to accomplish that, but you might want the animations to be part of the same **Storyboard** because you always want those two animations to be run together.
+[
+            **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 콘텐츠는 둘 이상의 애니메이션 정의가 될 수 있습니다. 관련 애니메이션을 동일한 대상 개체의 두 속성에 적용하려는 경우 둘 이상의 애니메이션을 사용할 수 있습니다. 예를 들어 UI 요소의 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)로 사용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**TranslateX**](https://msdn.microsoft.com/library/windows/apps/BR228122) 및 [**TranslateY**](https://msdn.microsoft.com/library/windows/apps/BR228124) 속성을 모두 변경할 수 있습니다. 그러면 요소가 대각선으로 변환됩니다. 이 작업을 수행하려면 두 개의 다른 애니메이션이 필요하지만 이러한 두 애니메이션을 항상 함께 실행하려고 하므로 애니메이션이 동일한 **Storyboard**의 일부가 되도록 할 수 있습니다.
 
-The animations don't have to be the same type, or target the same object. They can have different durations, and don't have to share any property values.
+애니메이션이 동일한 형식이거나 동일한 개체를 대상으로 지정할 필요는 없습니다. 다른 기간을 사용할 수 있으며 속성 값을 공유하지 않아도 됩니다.
 
-When the parent [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) runs, each of the animations within will run too.
+부모 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 실행되면 포함된 각 애니메이션도 실행됩니다.
 
-The [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) class actually has a lot of the same animation properties as the animation types do, because both share the [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) base class. Thus, a **Storyboard** can have a [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211), or a [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204). You don't usually set these on a **Storyboard** though unless you want all the contained animations to have that behavior. As a general rule, any **Timeline** property as set on a **Storyboard** applies to all its child animations. If let unset, the **Storyboard** has an implicit duration that's calculated from the longest [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) value of the contained animations. An explicitly set [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) on a **Storyboard** that's shorter than one of its child animations will cause that animation to get cut off, which isn't usually desirable.
+[
+            **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 클래스에는 실제로 애니메이션 형식과 동일한 애니메이션 속성이 많이 있는데, 둘 다 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 기본 클래스를 공유하기 때문입니다. 따라서 **Storyboard**에는 [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243211) 또는 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204)이 있을 수 있습니다. 포함된 모든 애니메이션이 해당 동작을 갖도록 하려는 경우가 아니라면 일반적으로 **Storyboard**에서 이러한 값을 설정하지 않습니다. 일반적인 규칙으로 **Storyboard**에서 설정된 모든 **Timeline** 속성은 모든 자식 애니메이션에 적용됩니다. 설정 해제되면 **Storyboard**에는 포함된 애니메이션의 가장 긴 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) 값에서 계산되는 암시적 기간이 포함됩니다. 자식 애니메이션보다 짧은 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 **Storyboard**에서 명시적으로 설정되면 해당 애니메이션이 잘리게 되며 일반적으로 바람직하지 않습니다.
 
-A storyboard can't contain two animations that attempt to target and animate the same property on the same object. If you try this, you'll get a runtime error when the storyboard tries to run. This restriction applies even if the animations don't overlap in time because of deliberately different [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204) values and durations. If you really want to apply a more complex animation timeline to the same property in a single storyboard, the way to do this is to use a key-frame animation. See [Key-frame and easing function animations](key-frame-and-easing-function-animations.md).
+스토리보드에는 동일한 개체에서 동일한 속성을 대상으로 지정하고 애니메이션 효과를 주려는 두 개의 애니메이션이 포함될 수 없습니다. 그럴 경우 스토리보드가 실행될 때 런타임 오류가 발생합니다. 이 제한 사항은 의도적으로 다르게 설정한 [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/BR243204) 값 및 기간으로 인해 애니메이션 시간이 겹치지 않는 경우에도 적용됩니다. 실제로 보다 복잡한 애니메이션 타임라인을 단일 스토리보드에서 동일한 속성에 적용하려면 키 프레임 애니메이션을 사용합니다. [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)을 참조하세요.
 
-The animation system can apply more than one animation to the value of a property, if those inputs come from multiple storyboards. Using this behavior deliberately for simultaneously running storyboards isn't common. However it's possible that an app-defined animation that you apply to a control property will be modifying the **HoldEnd** value of an animation that was previously run as part of the control's visual state model.
+애니메이션 시스템은 해당 입력이 여러 스토리보드에서 제공되는 경우 둘 이상의 애니메이션을 하나의 속성 값에 적용할 수 있습니다. 동시에 실행되는 스토리보드에 의도적으로 이 동작을 사용하는 것은 일반적이지 않습니다. 그러나 컨트롤 속성에 적용하는 앱 정의 애니메이션에서는 이전에 컨트롤의 시각적 상태 모델 일부로 실행된 애니메이션의 **HoldEnd** 값을 수정할 수 있습니다.
 
-## Defining a storyboard as a resource
+## 스토리보드를 리소스로 정의
 
-A [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) is the container that you put animation objects in. You typically define the **Storyboard** as a resource that is available to the object that you want to animate, either in page-level [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) or [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/BR242338).
+[
+            **Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)는 애니메이션 개체를 담는 컨테이너입니다. 일반적으로 **Storyboard**는 페이지 수준 [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) 또는 [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/BR242338)에서 애니메이션 효과를 주려는 개체에서 사용할 수 있는 리소스로 정의합니다.
 
-This next example shows how the previous example [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) would be contained in a page-level [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) definition, where the **Storyboard** is a keyed resource of the root [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503). Note the [x:Name attribute](https://msdn.microsoft.com/library/windows/apps/Mt204788). This attribute is how you define a variable name for the **Storyboard**, so that other elements in XAML as well as code can refer to the **Storyboard** later.
+다음 예제에서는 이전 예제 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)가 페이지 수준 [**Resources**](https://msdn.microsoft.com/library/windows/apps/BR208740) 정의에 포함되는 방식을 보여 줍니다. 이때 **Storyboard**는 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503)의 키 입력 리소스입니다. [x:Name 특성](https://msdn.microsoft.com/library/windows/apps/Mt204788)을 확인하세요. 이 특성은 **Storyboard**에 대해 변수 이름을 정의하는 방법이므로 코드 및 XAML의 다른 요소에서 나중에 **Storyboard**를 참조할 수 있습니다.
 
 ```xml
 <Page ...>
@@ -207,32 +223,32 @@ This next example shows how the previous example [**Storyboard**](https://msdn.m
 </Page>
 ```
 
-Defining resources at the XAML root of a XAML file such as page.xaml or app.xaml is a common practice for how to organize keyed resources in your XAML. You also can factor resources into separate files and merge them into apps or pages. For more info, see [ResourceDictionary and XAML resource references](https://msdn.microsoft.com/library/windows/apps/Mt187273).
+page.xaml이나 app.xaml 같은 XAML 파일의 XAML 루트에서 리소스를 정의하는 것은 XAML에서 키 입력 리소스를 구성하는 방법에 일반적인 사례입니다. 리소스를 별도의 파일로 인수화하여 앱이나 페이지에 병합할 수도 있습니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/Mt187273)를 확인하세요.
 
-**Note**  Windows Runtime XAML supports identifying resources either using the [x:Key attribute](https://msdn.microsoft.com/library/windows/apps/Mt204787) or the [x:Name attribute](https://msdn.microsoft.com/library/windows/apps/Mt204788). Using x:Name attribute is more common for a [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), because you'll want to reference it by variable name eventually, so that you can call its [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) method and run the animations. If you do use [x:Key attribute](https://msdn.microsoft.com/library/windows/apps/Mt204787), you'll need to use [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) methods such as the [**Item**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.item) indexer to retrieve it as a keyed resource and then cast the retrieved object to **Storyboard** to use the **Storyboard** methods.
+**참고** Windows 런타임 XAML은 [x:Key 특성](https://msdn.microsoft.com/library/windows/apps/Mt204787) 또는 [x:Name 특성](https://msdn.microsoft.com/library/windows/apps/Mt204788)을 사용한 리소스 식별을 지원합니다. 결국에는 변수 이름으로 참조하여 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 호출하고 애니메이션을 실행할 수 있기 때문에 x:Name 특성 사용이 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에 더 일반적입니다. [x:Key 특성](https://msdn.microsoft.com/library/windows/apps/Mt204787)을 사용하면 [**Item**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.item) 인덱서와 같은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 메서드를 사용하여 키 입력 리소스로 검색한 다음 검색된 개체를 **Storyboard**에 캐스트하여 **Storyboard** 메서드를 사용해야 합니다.
 
- 
+ 
 
-You also put your animations within a [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) unit when you are declaring the visual state animations for a control's visual appearance. In that case the **Storyboard** elements you define go into a [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) container that's nested more deeply in a [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849) (it's the **Style** that is the keyed resource). You don't need a key or name for your **Storyboard** in this case because it's the **VisualState** that has a target name that the [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) can invoke. The styles for controls are often factored into separate XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) files rather than placed in a page or app **Resources** collection. For more info, see [Storyboarded animations for visual states](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+또한 컨트롤의 시각적 모양에 대한 시각적 상태 애니메이션을 선언할 때 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 단위 내에 애니메이션을 배치합니다. 이 경우 정의한**Storyboard** 요소는 [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849)에 더욱 깊게 중첩된 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) 컨테이너로 이동합니다. **Style**은 키 입력 리소스입니다. **VisualState**에는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager)가 호출할 수 있는 대상 이름이 있으므로 이 경우 **Storyboard**에 대한 키 또는 이름이 필요하지 않습니다. 컨트롤의 스타일은 페이지 또는 앱 **Resources** 컬렉션에 배치되지 않고 별도의 XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 파일로 인수화되기도 합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
 
-## Dependent and independent animations
+## 종속 애니메이션과 독립 애니메이션
 
-At this point we need to introduce some important points about how the animation system works. In particular, animation interacts fundamentally with how a Windows Runtime app renders to the screen, and how that rendering uses processing threads. A Windows Runtime app always has a main UI thread, and this thread is responsible for updating the screen with current information. In addition, a Windows Runtime app has a composition thread, which is used for precalculating layouts immediately before they are shown. When you animate the UI, there's potential to cause a lot of work for the UI thread. The system must redraw large areas of the screen using fairly short time intervals between each refresh. This is necessary for capturing the latest property value of the animated property. If you're not careful, there's risk that an animation can make the UI less responsive, or will impact performance of other app features that are also on the same UI thread.
+이제 애니메이션 시스템의 작동 방식에 대해 몇 가지 중요한 사항을 소개해야 합니다. 특히 애니메이션은 Windows 런타임 앱이 화면으로 렌더링되는 방식 및 해당 렌더링에서 처리 스레드를 사용하는 방식을 기본적으로 조작합니다. Windows 런타임 앱에는 항상 기본 UI 스레드가 있으며 이 스레드는 현재 정보를 화면을 업데이트하는 기능을 담당합니다. 또한 Windows 런타임 앱에는 컴퍼지션 스레드가 있으며, 레이아웃이 표시되기 직전에 해당 레이아웃을 사전 계산하는 데 사용됩니다. UI에 애니메이션 효과를 주면 UI 스레드에 대해 많은 작업이 수행될 가능성이 있습니다. 시스템은 각 새로 고침 사이의 매우 짧은 시간 간격을 사용하여 화면의 큰 영역을 다시 그려야 합니다. 이 작업은 애니메이션 효과를 준 속성의 최신 속성 값을 캡처하는 데 필요합니다. 이 작업을 수행할 때 신중하지 않으면 애니메이션에서 UI의 응답 속도를 저하시킬 위험이 있습니다. 그렇지 않으면 동일한 UI 스레드에도 있는 다른 앱 기능의 성능에 영향을 줍니다.
 
-The variety of animation that is determined to have some risk of slowing down the UI thread is called a *dependent animation*. An animation not subject to this risk is an *independent animation*. The distinction between dependent and independent animations isn't just determined by animation types ([**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) and so on) as we described earlier. Instead, it's determined by which specific properties you are animating, and other factors like inheritance and composition of controls. There are circumstances where even if an animation does change UI, the animation can have minimal impact to the UI thread, and can instead be handled by the composition thread as an independent animation.
+UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확인된 다양한 애니메이션을 *종속 애니메이션*이라고 합니다. 이 위험에 종속되지 않는 애니메이션은 *독립 애니메이션*입니다. 종속 애니메이션과 독립 애니메이션의 차이점이 앞에서 설명한 대로 애니메이션 형식([**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) 등)에 의해서만 결정되지는 않습니다. 대신 애니메이션 효과를 줄 특정 속성 및 컨트롤의 상속과 컴퍼지션과 같은 다른 요소에 의해 결정됩니다. 애니메이션에서 UI를 변경하는 경우에도 애니메이션이 UI 스레드에 최소한의 영향을 주고 대신 컴퍼지션 스레드에 의해 독립 애니메이션으로 처리되는 경우가 있습니다.
 
-An animation is independent if it has any of these characteristics:
+다음과 같은 특성이 있는 경우 애니메이션은 독립적입니다.
 
--   The [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) of the animation is 0 seconds (see Caution)
--   The animation targets [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)
--   The animation targets a sub-property value of these [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) properties: [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip)
--   The animation targets [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) or [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)
--   The animation targets a [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) value and uses a [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), animating its [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)
--   The animation is an [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)
+-   애니메이션의 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 0초입니다(주의 참조).
+-   애니메이션이 [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)를 대상으로 합니다.
+-   애니메이션이 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip) 같은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성의 하위 속성 값을 대상으로 합니다.
+-   애니메이션이 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 또는 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)을 대상으로 합니다.
+-   애니메이션이 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 값을 대상으로 하고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하여 해당 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)에 애니메이션 효과를 줍니다.
+-   애니메이션이 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)입니다.
 
-**Caution**  In order for your animation to be treated as independent, you must explicitly set `Duration="0"`. For example, if you remove `Duration="0"` from this XAML, the animation is treated as dependent, even though the [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169) of the frame is "0:0:0".
+**주의** 애니메이션을 독립적으로 처리하려면 `Duration="0"`을 명시적으로 설정해야 합니다. 예를 들어 XAML에서 `Duration="0"`을 제거하면 프레임의 [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169)이 "0:0:0"이더라도 애니메이션을 종속으로 처리합니다.
 
- 
+ 
 
 ```xml
 <Storyboard>
@@ -245,29 +261,30 @@ An animation is independent if it has any of these characteristics:
 </Storyboard>
 ```
 
-If your animation doesn't meet these criteria, it's probably a dependent animation. By default, the animation system won't run a dependent animation. So during the process of developing and testing, you might not even be seeing your animation running. You can still use this animation, but you must specifically enable each such dependent animation. To enable your animation, set the **EnableDependentAnimation** property of the animation object to **true**. (Each [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) subclass that represents an animation has a different implementation of the property but they're all named `EnableDependentAnimation`.)
+애니메이션이 이러한 조건을 충족하지 않는 경우 종속 애니메이션일 가능성이 있습니다. 기본적으로 애니메이션 시스템에서는 종속 애니메이션이 실행되지 않습니다. 따라서 개발하고 테스트하는 프로세스 중에는 실행되는 애니메이션이 확인되지 않을 수도 있습니다. 이 애니메이션을 계속 사용할 수 있지만 이러한 각 종속 애니메이션을 특별히 사용하도록 설정해야 합니다. 애니메이션을 사용하도록 설정하려면 애니메이션 개체의 **EnableDependentAnimation** 속성을 **true**로 설정합니다. 애니메이션을 나타내는 각 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 하위 클래스에서는 속성이 다르게 구현되지만 모두 다음과 같은 이름을 가집니다.
 
-The requirement of enabling dependent animations falling onto the app developer is a conscious design aspect of the animation system and the development experience. We want developers to be aware that animations do have a performance cost for the responsiveness of your UI. Poorly performing animations are difficult to isolate and debug in a full-scale app. So it's better to turn on only the dependent animations you really need for your app's UI experience. We didn't want to make too easy to compromise your app's performance because of decorative animations that use a lot of cycles. For more info on performance tips for animation, see [Optimize animations and media](https://msdn.microsoft.com/library/windows/apps/Mt204774).
+앱 개발자가 종속 애니메이션을 사용하도록 하는 요구 사항은 애니메이션 시스템 및 개발 환경의 의식적인 디자인 측면입니다. 개발자가 UI의 응답성과 관련해서 애니메이션이 성능에 미치는 영향을 인식하도록 하려고 합니다. 애니메이션을 잘못 수행하면 전체 규모 앱에서 분리하고 디버그하기가 어렵습니다. 따라서 앱의 UI 환경에 실제로 필요한 종속 애니메이션만 켜는 것이 좋습니다. 많은 주기를 사용하는 장식 애니메이션으로 인해 앱의 성능이 너무 쉽게 손상되지 않도록 하려고 합니다. 애니메이션의 성능 팁에 대한 자세한 내용은 [애니메이션 및 미디어 최적화](https://msdn.microsoft.com/library/windows/apps/Mt204774)를 참조하세요.
 
-As an app developer, you can also choose to apply an app-wide setting that always disables dependent animations, even those where **EnableDependentAnimation** is **true**. See [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
+또한 앱 개발자는 종속 애니메이션을 항상 사용하지 않도록 설정하는 앱 수준의 설정을 적용하도록 선택할 수 있으며, **EnableDependentAnimation**이 **true**인 애니메이션에서도 마찬가지입니다. [
+            **Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations)을 참조하세요.
 
-**Tip**  If you are composing visual states for a control using Visual Studio, the designer will produce warnings whenever you attempt to apply a dependent animation to a visual state property.
+**팁** Visual Studio를 사용하여 컨트롤에 대한 시각적 상태를 구성하면 시각적 상태 속성에 종속 애니메이션을 적용하려고 할 때마다 디자이너에서 경고가 생성됩니다.
 
- 
+ 
 
-## Starting and controlling an animation
+## 애니메이션 시작 및 제어
 
-Everything we've shown you so far doesn't actually cause an animation to run or be applied! Until the animation is started and is running, the value changes that an animation is declaring in XAML are latent and won't happen yet. You must explicitly start an animation in some way that's related to the app lifetime or the user experience. At the simplest level, you start an animation by calling the [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) method on the [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) that's the parent for that animation. You can't call methods from XAML directly, so whatever you do to enable your animations, you'll be doing it from code. That will either be the code-behind for the pages or components of your app, or perhaps the logic of your control if you're defining a custom control class.
+지금까지 살펴본 모든 내용은 실제로 애니메이션이 실행되거나 적용되도록 하지 않습니다. 애니메이션이 시작되고 실행될 때까지 애니메이션이 XAML에서 선언하는 값 변경 내용은 숨어 있으며 아직 수행되지 않습니다. 앱 수명이나 사용자 환경과 관련이 있는 애니메이션을 어떤 방식으로든 명시적으로 시작해야 합니다. 가장 간단한 수준으로 애니메이션의 부모인 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에서 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 호출하여 해당 애니메이션을 시작합니다. 메서드를 XAML에서 직접 호출할 수는 없으므로 애니메이션을 사용하도록 설정하기 위해 수행하는 작업은 무엇이든 코드에서 수행해야 합니다. 해당 작업은 앱의 페이지 또는 구성 요소에 대해 코드 숨김이거나 사용자 지정 컨트롤 클래스를 정의하는 경우에는 컨트롤의 논리일 수 있습니다.
 
-Typically, you'll call [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) and just let the animation run to its duration completion. However, you can also use [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) and [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop) methods to control the [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) at run-time, as well as other APIs that are used for more advanced animation control scenarios.
+일반적으로 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하고 기간이 완료될 때까지 애니메이션이 실행되도록 하면 됩니다. 그러나 고급 애니메이션 제어 시나리오에 사용되는 다른 API뿐만 아니라 [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) 및 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop) 메서드를 사용하여 런타임에 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 제어할 수도 있습니다.
 
-When you call [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) on a storyboard that contain animations that repeat infinitely (`RepeatBehavior="Forever"`) that animation runs until the page containing it is unloaded, or you specifically call [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) or [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop).
+무한 반복(`RepeatBehavior="Forever"`)되는 애니메이션을 포함하는 스토리보드에서 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하면 해당 애니메이션을 포함하는 페이지가 언로드되거나 특별히 [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 또는 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop)을 호출할 때까지 해당 애니메이션이 실행됩니다.
 
-### Starting an animation from app code
+### 앱 코드에서 애니메이션 시작
 
-You can either start animations automatically, or in response to user actions. For the automatic case, you typically use an object lifetime event such as [**Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) to act as the animation trigger. The **Loaded** event is a good event to use for this because at that point the UI is ready for interaction, and the animation won't be cut off at the beginning because another part of UI was still loading.
+애니메이션은 자동으로 시작하거나 사용자 작업에 대한 응답으로 시작할 수 있습니다. 자동 시작의 경우 일반적으로 [**Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)와 같은 개체 수명 이벤트를 사용하여 애니메이션 트리거 역할을 합니다. **Loaded** 이벤트는 해당 시점에 UI를 조작할 수 있게 되므로 이 경우에 적합한 이벤트이며 UI의 다른 부분이 계속 로드되고 있기 때문에 애니메이션이 시작 부분에서 잘리지 않습니다.
 
-In this example, the [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed) event is attached to the rectangle so that when the user clicks the rectangle, the animation begins.
+이 예제에서는 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed) 이벤트가 직사각형에 연결되어 사용자가 직사각형을 클릭하면 애니메이션이 시작합니다.
 
 ```xml
 <Rectangle PointerPressed="Rectangle_Tapped"
@@ -275,7 +292,7 @@ In this example, the [**PointerPressed**](https://msdn.microsoft.com/library/win
   Width="300" Height="200" Fill="Blue"/>
   ```
 
-The event handler start the [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) (the animation) by using the [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) method of the **Storyboard**.
+이벤트 처리기는 **Storyboard**의 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 사용하여 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)(애니메이션)를 시작합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ``` csharp
@@ -288,41 +305,46 @@ myStoryboard->Begin();
 myStoryBoard.Begin()
 ```
 
-You can handle the [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) event if you want other logic to run after the animation has finished applying values. Also, for troubleshooting property system/animation interactions, the [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) method can be useful.
+애니메이션이 값 적용을 마친 후 다른 논리를 실행하려는 경우 [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) 이벤트를 처리할 수 있습니다. 또한 속성 시스템/애니메이션 조작 문제 해결을 위해 [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) 메서드가 유용할 수 있습니다.
 
-**Tip**  Whenever you are coding for an app scenario where you are starting an animation from app code, you might want to review again whether an animation or transition already exists in the animation library for your UI scenario. The library animations enable a more consistent UI experience across all Windows Runtime apps, and are easier to use.
+**팁** 앱 코드에서 애니메이션을 시작하는 앱 시나리오를 코딩할 때마다 애니메이션이나 전환이 UI 시나리오에 대한 애니메이션 라이브러리에 이미 있는지 여부를 다시 검토해야 할 수 있습니다. 라이브러리 애니메이션은 모든 Windows 런타임 앱에서 보다 일관된 UI 환경을 제공하며 사용하기도 더 쉽습니다.
 
- 
+ 
 
-### Animations for visual states
+### 시각적 상태에 대한 애니메이션
 
-The run behavior for a [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) that's used to define a control's visual state is different from how an app might run a storyboard directly. As applied to a visual state definition in XAML, the **Storyboard** is an element of a containing [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), and the state as a whole is controlled by using the [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) API. Any animations within will run according to their animation values and [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) properties when the containing **VisualState** is used by a control. For more info, see [Storyboards for visual states](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). For visual states, the apparent [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209) is different. If a visual state is changed to another state, all the property changes applied by the previous visual state and its animations are canceled, even if the new visual state doesn't specifically apply a new animation to a property.
+컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)의 요소이며 전체 상태는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
 
-### **Storyboard** and **EventTrigger**
+### **Storyboard** 및 **EventTrigger**
 
-There is one way to start an animation that can be declared entirely in XAML. However, this technique isn't widely used anymore. It's a legacy syntax from WPF and early versions of Silverlight prior to [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) support. This [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) syntax still works in Windows Runtime XAML for import/compatibility reasons, but only works for a trigger behavior based on the [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) event; attempting to trigger off other events will throw exceptions or fail to compile. For more info, see [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) or [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
+XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법은 한 가지입니다. 그러나 이 기술은 더 이상 광범위하게 사용되지 않습니다. 이 기술은 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) 지원 이전의 WPF 및 이전 버전 Silverlight의 레거시 구문입니다. 이 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 구문은 가져오기/호환성을 이유로 Windows 런타임 XAML에서도 작동하지만 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트를 기반으로 하는 트리거 동작에 대해서만 작동합니다. 다른 이벤트를 트리거하려고 하면 예외가 발생하거나 컴파일되지 않습니다. 자세한 내용은 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 또는 [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053)를 참조하세요.
 
-## Animating XAML attached properties
+## XAML 연결 속성에 애니메이션 효과 주기
 
-It's not a common scenario, but you can apply an animated value to a XAML attached property. For more info on what attached properties are and how they work, see [Attached properties overview](https://msdn.microsoft.com/library/windows/apps/Mt185579). Targeting an attached property requires a [property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586) that encloses the property name in parentheses. You can animate the built-in attached properties such as [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) by using an [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) that applies discrete integer values. However, an existing limitation of the Windows Runtime XAML implementation is that you cannot animate a custom attached property.
+일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185579)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
 
-## More animation types, and next steps for learning about animating your UI
+## 추가 애니메이션 형식 및 UI에 애니메이션 효과를 주는 방법을 알아보는 다음 단계
 
-Up to now, we've shown the custom animations that are animating between two values, and then linearly interpolating the values as necessary while the animation runs. These are called **From**/**To**/**By** animations. But there's another animation type that enables you to declare intermediate values that fall between the start and end. These are called *key-frame animations*. There's also a way to alter the interpolation logic on either a **From**/**To**/**By** animation or a key-frame animation. This involves applying an easing function. For more info on these concepts, see [Key-frame and easing function animations](key-frame-and-easing-function-animations.md).
+지금까지는 두 값 사이에서 애니메이션 효과를 준 다음 애니메이션이 실행되는 동안 필요에 따라 값을 선형으로 보간하는 사용자 지정 애니메이션에 대해 살펴보았습니다. 이러한 애니메이션을 **From**/**To**/**By** 애니메이션이라고 합니다. 그러나 사용자가 시작과 끝 사이에 오는 중간 값을 선언할 수 있도록 하는 다른 애니메이션 형식이 있습니다. 이러한 애니메이션을 *키 프레임 애니메이션*이라고 합니다. **From**/**To**/**By** 애니메이션이나 키 프레임 애니메이션에서 보간 논리를 변경하는 방법도 있습니다. 이 방법에는 감속/가속 함수 적용이 포함됩니다. 이러한 개념에 대한 자세한 내용은 [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)을 참조하세요.
 
-## Related topics
+## 관련 항목
 
-* [Property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [Dependency properties overview](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [Key-frame and easing function animations](key-frame-and-easing-function-animations.md)
-* [Storyboarded animations for visual states](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
-* [Control templates](https://msdn.microsoft.com/library/windows/apps/Mt210948)
-* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)
+* [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+* [컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/Mt210948)
+* [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

@@ -1,18 +1,18 @@
 ---
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
-title: Optimize your XAML markup
-description: Parsing XAML markup to construct objects in memory is time-consuming for a complex UI. Here are some things you can do to improve XAML markup parse and load time and memory efficiency for your app.
+title: XAML 태그 최적화
+description: 메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다.
 ---
-# Optimize your XAML markup
+# XAML 태그 최적화
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Parsing XAML markup to construct objects in memory is time-consuming for a complex UI. Here are some things you can do to improve XAML markup parse and load time and memory efficiency for your app.
+메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다.
 
-At app startup, limit the XAML markup that is loaded to only what you need for your initial UI. Examine the markup in your initial page and confirm it contains nothing that it doesn't need. If a page references a user control or a resource defined in a different file, then the framework parses that file, too.
+앱 시작 시 로드되는 XAML 태그를 초기 UI에 필요한 태그로만 제한합니다. 초기 페이지에서 태그를 검사하고 필요 없는 태그가 포함되어 있지 않은지 확인합니다. 페이지가 다른 파일에 정의된 사용자 컨트롤이나 리소스를 참조하는 경우 프레임워크는 해당 파일도 구문 분석합니다.
 
-In this example, because InitialPage.xaml uses one resource from ExampleResourceDictionary.xaml, the whole of ExampleResourceDictionary.xaml must be parsed at startup.
+이 예제에서는 InitialPage.xaml에서 ExampleResourceDictionary.xaml의 리소스 하나를 사용하므로 시작 시 전체 ExampleResourceDictionary.xaml을 구문 분석해야 합니다.
 
 **InitialPage.xaml.**
 
@@ -43,7 +43,7 @@ In this example, because InitialPage.xaml uses one resource from ExampleResource
 </ResourceDictionary>
 ```
 
-If you use a resource on many pages throughout your app, then storing it in App.xaml is a good practice, and avoids duplication. But App.xaml is parsed at app startup so any resource that is used in only one page (unless that page is the initial page) should be put into the page's local resources. This counter-example shows App.xaml containing resources that are used by only one page (that's not the initial page). This needlessly increases app startup time.
+앱 전반에 걸쳐 여러 페이지의 리소스를 사용하는 경우 App.xaml에 저장하는 것이 가장 좋으며, 중복을 방지합니다. 그러나 App.xaml은 앱 시작 시 구문 분석되므로 하나의 페이지(초기 페이지가 아닌 경우)에서만 사용되는 리소스는 해당 페이지의 로컬 리소스에 두어야 합니다. 이와 반대되는 예제에서는 하나의 페이지(초기 페이지가 아닌)에서 사용되는 리소스가 포함된 App.xaml을 보여 줍니다. 이 경우 앱 시작 시간이 불필요하게 증가합니다.
 
 **InitialPage.xaml.**
 
@@ -78,15 +78,15 @@ If you use a resource on many pages throughout your app, then storing it in App.
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-The way to make the above counter-example more efficient is to move `SecondPageTextBrush` into SecondPage.xaml and to move `ThirdPageTextBrush` into ThirdPage.xaml. `InitialPageTextBrush` can remain in App.xaml because application resources must be parsed at app startup in any case.
+위의 반대 예제를 보다 효율적으로 만들려면 `SecondPageTextBrush`를 SecondPage.xaml로 이동하고 `ThirdPageTextBrush`를 ThirdPage.xaml로 이동하면 됩니다. `InitialPageTextBrush` (은)는 항상 앱 시작 시 응용 프로그램 리소스를 구문 분석해야 하므로 App.xaml에서 유지할 수 있습니다.
 
-## Minimize element count
+## 요소 수 최소화
 
-Although the XAML platform is capable of displaying large numbers of elements, you can make your app lay out and render faster by using the fewest number of elements to achieve the visuals you want.
+XAML 플랫폼은 많은 요소를 표시할 수 있지만 원하는 시각 효과를 달성하려면 최소한의 요소를 사용하여 앱 배치 및 렌더링을 보다 빠르게 만들어야 합니다.
 
--   Layout panels have a [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512) property so there's no need to put a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) in front of a Panel just to color it.
+-   레이아웃 패널에는 [**Background**](https://msdn.microsoft.com/library/windows/apps/BR227512) 속성이 있으므로 색을 지정하기 위해 패널 앞에 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 둘 필요가 없습니다.
 
-**Inefficient.**
+**비효율적인 경우**
 
 ```xml
 <Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -94,19 +94,19 @@ Although the XAML platform is capable of displaying large numbers of elements, y
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
 <Grid Background="Black"/>
 ```
 
--   If you reuse the same vector-based element enough times, it becomes more efficient to use an [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) element instead. Vector-based elements can be more expensive because the CPU must create each individual element separately. The image file needs to be decoded only once.
+-   동일한 벡터 기반 요소를 다시 사용할 시간이 충분한 경우 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소를 대신 사용하는 것이 보다 효율적입니다. 벡터 기반 요소는 CPU에서 각 개별 요소를 별도로 만들어야 하므로 비용이 더 많이 소요될 수 있습니다. 이미지 파일을 한 번만 디코딩해야 합니다.
 
-## Consolidate multiple brushes that look the same into one resource
+## 같은 모양의 여러 브러시를 하나의 리소스에 통합
 
-The XAML platform tries to cache commonly-used objects so that they can be reused as often as possible. But XAML cannot easily tell if a brush declared in one piece of markup is the same as a brush declared in another. The example here uses [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) to demonstrate, but the case is more likely and more important with [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068).
+XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하지만 [**GradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210068)를 사용하는 것이 더 중요하고 더 일반적입니다.
 
-**Inefficient.**
+**비효율적인 경우**
 
 ```xml
 <Page ... > <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -125,9 +125,9 @@ The XAML platform tries to cache commonly-used objects so that they can be reuse
 </Page> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-Also check for brushes that use predefined colors: `"Orange"` and `"#FFFFA500"` are the same color. To fix the duplication, define the brush as a resource. If controls in other pages use the same brush, move it to App.xaml.
+미리 정의된 색을 사용하는 브러시를 확인합니다. `"Orange"`와 `"#FFFFA500"`은 같은 색입니다. 중복을 해결하려면 브러시를 리소스로 정의합니다. 다른 페이지의 컨트롤에서 동일한 브러시를 사용하는 경우 브러시를 App.xaml로 이동합니다.
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
 <Page ... >
@@ -142,14 +142,14 @@ Also check for brushes that use predefined colors: `"Orange"` and `"#FFFFA500"` 
 </Page>
 ```
 
-## Minimize overdrawing
+## 과도한 그리기 최소화
 
-Overdrawing is where more than one object is drawn in the same screen pixels. Note that there is sometimes a trade-off between this guidance and the desire to minimize element count.
+과도한 그리기는 둘 이상의 개체가 동일한 화면 픽셀에 그려지는 경우입니다. 이 지침과 요소 수 최소화 간에는 간혹 상충 관계가 있습니다.
 
--   If an element isn't visible because it's transparent or hidden behind other elements, and it's not contributing to layout, then delete it. If the element is not visible in the initial visual state but it is visible in other visual states then set [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) to **Collapsed** on the element itself and change the value to **Visible** in the appropriate states. There will be exceptions to this heuristic: in general, the value a property has in the major of visual states is best set locally on the element.
--   Use a composite element instead of layering multiple elements to create an effect. In this example, the result is a two-toned shape where the top half is black (from the background of the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)) and the bottom half is gray (from the semi-transparent white [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) alpha-blended over the black background of the **Grid**). Here, 150% of the pixels necessary to achieve the result are being filled.
+-   요소가 투명하거나 다른 요소 뒤에 숨겨져 있어 보이지 않고 레이아웃에 참여하지 않는 경우 해당 요소를 삭제합니다. 요소가 초기 시각적 상태에서는 보이지 않지만 다른 시각적 상태에서는 보이는 경우 요소 자체에 대한 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992)를 **Collapsed**로 설정하고 적절한 상태에서 값을 **Visible**로 변경합니다. 이 추론에 대한 예외가 있습니다. 일반적으로 대부분의 시각적 상태에서는 속성 값을 요소에서 로컬로 설정하는 것이 가장 좋습니다.
+-   여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)의 배경에서)이고 아래쪽 절반은 회색(**Grid**의 검은색 배경 위에 알파 혼합된 반투명 흰색의 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
 
-**Inefficient.**
+**비효율적인 경우**
     
 ```xml
     <Grid Background="Black"> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -161,7 +161,7 @@ Overdrawing is where more than one object is drawn in the same screen pixels. No
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
     <Grid>
@@ -174,9 +174,9 @@ Overdrawing is where more than one object is drawn in the same screen pixels. No
     </Grid>
 ```
 
--   A layout panel can have two purposes: to color an area, and to lay out child elements. If an element further back in z-order is already coloring an area then a layout panel in front does not need to paint that area: instead it can just focus on laying out its children. Here's an example.
+-   레이아웃 패널은 영역의 색을 지정하고 자식 요소를 배치하는 두 가지 용도로 사용됩니다. 다시 z 순서로 지정된 요소가 영역의 색을 이미 지정하는 경우 앞쪽의 레이아웃 패널에서는 해당 영역을 다시 그릴 필요가 없으며 대신 해당 자식을 배치하는 데 중점을 둘 수 있습니다. 예를 들면 다음과 같습니다.
 
-**Inefficient.**
+**비효율적인 경우**
 
 ```xml
     <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -189,7 +189,7 @@ Overdrawing is where more than one object is drawn in the same screen pixels. No
     </GridView> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
     <GridView Background="Blue">  
@@ -201,11 +201,13 @@ Overdrawing is where more than one object is drawn in the same screen pixels. No
     </GridView> 
 ```
 
-If the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) has to be hit-testable then set a background value of transparent on it.
+[
+            **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
 
--   Use a [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) element to draw a border around an object. In this example, a [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) is used as a makeshift border around a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683). But all the pixels in the center cell are overdrawn.
+-   [
+            **Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
 
-**Inefficient.**
+**비효율적인 경우**
 
 ```xml
     <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
@@ -224,7 +226,7 @@ If the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) has 
     </Grid> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
     <Border BorderBrush="Blue" BorderThickness="5" Width="300" Height="45">
@@ -232,15 +234,16 @@ If the [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) has 
     </Border>
 ```
 
--   Be aware of margins. Two neighboring elements will overlap (possibly accidentally) if negative margins extend into another’s render bounds and cause overdrawing.
+-   여백에 주의합니다. 음수 여백이 다른 요소의 렌더링 범위로 확장되어 과도한 그리기가 발생하는 경우 인접한 두 요소가 실수로 겹쳐질 수 있습니다.
 
-Use [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823) as a visual diagnostic. You may find objects being drawn that you weren't aware were in the scene.
+[
+            **DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823)를 시각적 진단으로 사용합니다. 장면에서 인식하지 못한 개체가 그려지는 경우가 있을 수 있습니다.
 
-## Cache static content
+## 정적 콘텐츠 캐시
 
-Another source of overdrawing is a shape made from many overlapping elements. If you set [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084) to **BitmapCache** on the [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) that contains the composite shape then the platform renders the element to a bitmap once and then uses that bitmap each frame instead of overdrawing.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에서 [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
-**Inefficient.**
+**비효율적인 경우**
 
 ```xml
 <Canvas Background="White">
@@ -250,13 +253,13 @@ Another source of overdrawing is a shape made from many overlapping elements. If
 </Canvas>
 ```
 
-![Venn diagram with three solid circles](images/solidvenn.png)
+![단색 원 세 개가 있는 벤 다이어그램](images/solidvenn.png)
 
-The image above is the result, but here's a map of the overdrawn regions. Darker red indicates higher amounts of overdraw.
+위 이미지가 결과이지만 과도하게 그려진 영역의 맵은 다음과 같습니다. 빨간색이 진할수록 과도하게 그려진 정도가 높습니다.
 
-![Venn diagram that shows overlapping areas](images/translucentvenn.png)
+![겹친 영역을 보여 주는 벤 다이어그램](images/translucentvenn.png)
 
-**Efficient.**
+**효율적인 경우**
 
 ```xml
 <Canvas Background="White" CacheMode="BitmapCache">
@@ -266,21 +269,27 @@ The image above is the result, but here's a map of the overdrawn regions. Darker
 </Canvas>
 ```
 
-Note the use of [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084). Don't use this technique if any of the sub-shapes animate because the bitmap cache will likely need to be regenerated every frame, defeating the purpose.
+[
+            **CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
 
 ## ResourceDictionaries
 
-ResourceDictionaries are generally used to store your resources at a somewhat global level. Resources that your app wants to reference in multiple places. For example, styles, brushes, templates, and so on. In general, we have optimized ResourceDictionaries to not instantiate resources unless they're asked for. But there are few places where you need to be a little careful.
+ResourceDictionaries는 일반적으로 전역 수준에서 리소스를 저장하는 데 사용됩니다. 앱에서 여러 위치에서 참조하려는 리소스로서 예를 들어 스타일, 브러시, 템플릿 등이 포함됩니다. 일반적으로 요청되지 않은 경우 리소스를 인스턴스화하지 않도록 ResourceDictionaries를 최적화했습니다. 그러나 약간 주의가 필요한 몇몇 위치가 있습니다.
 
-**Resource with x:Name**. Any resource with x:Name will not benefit from the platform optimization, but instead it will be instantiated as soon as the ResourceDictionary is created. This happens because x:Name tells the platform that your app needs field access to this resource, so the platform needs to create something to create a reference to.
+**x:Name이 포함된 리소스**. x:Name이 포함된 리소스는 플랫폼 최적화의 이점이 적용되지 않는 대신 ResourceDictionary가 만들어지면 곧바로 인스턴스화됩니다. 이렇게 되는 이유는 x:Name에서 앱에 이 리소스에 대한 필드 액세스가 필요함을 플랫폼에 알리므로 플랫폼이 참조를 생성할 관련 항목을 만들어야 하기 때문입니다.
 
-**ResourceDictionaries in a UserControl**. ResourceDictionaries defined inside of a UserControl carry a penalty. The platform will create a copy of such a ResourceDictionary for every instance of the UserControl. If you have a UserControl that is used a lot, then move the ResourceDictionary out of the UserControl and put it the page level.
+**UserControl의 ResourceDictionaries**. UserControl 내부에서 정의된 ResourceDictionaries에는 페널티가 있습니다. 플랫폼에서는 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. 많이 사용되는 UserControl이 있는 경우에는 ResourceDictionary를 UserControl 외부로 이동하여 페이지 수준에 배치합니다.
 
-## Use XBF2
+## XBF2 사용
 
-XBF2 is a binary representation of XAML markup that avoids all text-parsing costs at runtime. It also optimizes your binary for load and tree creation, and allows "fast-path" for XAML types to improve heap and object creation costs, for example VSM, ResourceDictionary, Styles, and so on. It is completely memory-mapped so there is no heap footprint for loading and reading a XAML Page. In addition, it reduces the disk footprint of stored XAML pages in an appx. XBF2 is a more compact representation and it can reduce disk footprint of comparative XAML/XBF1 files by up to 50%. For example, the built-in Photos app saw around a 60% reduction after conversion to XBF2 dropping from around ~1mb of XBF1 assets to ~400kb of XBF2 assets. We have also seen apps benefit anywhere from 15 to 20% in CPU and 10 to 15% in Win32 heap.
+XBF2는 런타임 시 모든 텍스트 구문 분석을 방지하는 XAML 태그의 이진 표현입니다. 또한 부하 및 트리 생성을 위한 이진 파일을 최적화하고 XAML 유형에 대해 "빠른 경로"를 허용하여 VSM, ResourceDictionary, 스타일 등과 같은 힙 및 개체 생성 비용을 개선합니다. 메모리가 완전히 매핑되었으므로 XAML 페이지 로드 및 읽기를 위한 힙 공간이 없습니다. 뿐만 아니라 appx에서 저장된 XAML 페이지의 디스크 공간이 줄어듭니다. XBF2는 보다 압축된 표현이며 비교되는 XAML/XBF1 파일의 디스크 공간을 최대 50%까지 줄일 수 있습니다. 예를 들어 ~1mb 정도의 XBF1 자산에서 ~400kb의 XBF2 자산으로 XBF2 삭제 변환 이후 기본 제공 사진 앱에서 디스크 공간이 60% 줄었습니다. 앱의 CPU 공간이 15~20%, Win32 힙이 10~15% 정도 개선되었습니다.
 
-XAML built-in controls and dictionaries that the framework provides are already fully XBF2-enabled. For your own app, ensure that your project file declares TargetPlatformVersion 8.2 or later.
+XAML 기본 제공 컨트롤 및 프레임워크에서 제공되는 사전은 이미 XBF2가 전적으로 지원됩니다. 고유한 앱의 경우 프로젝트 파일에서 TargetPlatformVersion 8.2 이상을 선언해야 합니다.
 
-To check whether you have XBF2, open your app in a binary editor; the 12th and 13th bytes are 00 02 if you have XBF2.
+XBF2가 있는지를 확인하려면 바이너리 편집기에서 앱을 엽니다. XBF2가 있는 경우 12번째와 13번째 바이트가 00 02입니다.
+
+
+
+<!--HONumber=May16_HO2-->
+
 

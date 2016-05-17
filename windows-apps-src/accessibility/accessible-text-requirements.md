@@ -1,70 +1,74 @@
 ---
 author: Xansky
-Description: This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio.
+Description: 이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다.
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
-title: Accessible text requirements
+title: 접근성 있는 텍스트 요구 사항
 label: Accessible text requirements
 template: detail.hbs
 ---
 
-# Accessible text requirements  
+# 접근성 있는 텍스트 요구 사항  
 
 
 
 
-This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio. This topic also discusses the Microsoft UI Automation roles that text elements in a Universal Windows Platform (UWP) app can have, and best practices for text in graphics.
+이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다. 또한 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱의 텍스트 요소에 부여될 수 있는 Microsoft UI 자동화 역할 및 그래픽의 텍스트에 대한 모범 사례를 설명합니다.
 
 <span id="contrast_rations"/>
 <span id="CONTRAST_RATIONS"/>
-## Contrast ratios  
-Although users always have the option to switch to a high-contrast mode, your app design for text should regard that option as a last resort. A much better practice is to make sure that your app text meets certain established guidelines for the level of contrast between text and its background. Evaluation of the level of contrast is based on deterministic techniques that do not consider color hue. For example, if you have red text on a green background, that text might not be readable to someone with a color blindness impairment. Checking and correcting the contrast ratio can prevent these types of accessibility issues.
+## 명암비  
+사용자는 항상 고대비 모드로 전환할 수 있지만 텍스트의 앱 디자인에서는 해당 옵션을 마지막 방법으로 간주해야 합니다. 그러나 앱 텍스트에서 텍스트와 배경 간 대비 수준에 대해 설정된 특정 지침을 충족하도록 하는 것이 훨씬 더 바람직합니다. 대비 수준의 평가는 색상을 고려하지 않는 결정적 기술을 기반으로 합니다. 예를 들어 녹색 배경에 빨간색 텍스트가 있는 경우 색맹 장애가 있는 사용자는 해당 텍스트를 읽을 수 없습니다. 명암비를 확인하고 수정하면 이러한 형식의 접근성 문제를 방지할 수 있습니다.
 
-The recommendations for text contrast documented here are based on a web accessibility standard, [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](http://go.microsoft.com/fwlink/p/?linkid=221823). This guidance exists in the *W3C Techniques for WCAG 2.0* specification.
+여기에서 설명하는 텍스트 대비에 대한 권장 사항은 웹 접근성 표준인 [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](http://go.microsoft.com/fwlink/p/?linkid=221823)(영문)를 기반으로 합니다. 이 지침은 *WCAG 2.0에 대한 W3C 기술* 사양에 있습니다.
 
-To be considered accessible, visible text must have a minimum luminosity contrast ratio of 4.5:1 against the background. Exceptions include logos and incidental text, such as text that is part of an inactive UI component.
+접근성 있는 텍스트로 간주되려면 표시되는 텍스트의 광도 대비율이 배경과 비교하여 4.5:1 이상이어야 합니다. 예외로는 로고 및 부수적 텍스트(예제: 비활성 UI 구성 요소의 일부인 텍스트)가 있습니다.
 
-Text that is decorative and conveys no information is excluded. For example, if random words are used to create a background, and the words can be rearranged or substituted without changing meaning, the words are considered to be decorative and do not need to meet this criterion.
+장식 텍스트 및 정보를 전달하지 않는 텍스트는 제외됩니다. 예를 들어, 임의의 단어를 사용하여 배경을 만드는 경우 이들 단어는 의미 변경 없이 다시 정렬 또는 대체가 가능하며, 장식 텍스트로 간주되어 이 조건을 충족하지 않아도 됩니다.
 
-Use color contrast tools to verify that the visible text contrast ratio is acceptable. See [Techniques for WCAG 2.0 G18 (Resources section)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources) for tools that can test contrast ratios.
+색상 대비 도구를 사용하여 표시되는 텍스트 명암비가 허용되는지 검증합니다. 명암비를 테스트할 수 있는 도구는 [Techniques for WCAG 2.0 G18(리소스 섹션)](http://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources)을 참조하세요.
 
 > [!NOTE]
-> Some of the tools listed by Techniques for WCAG 2.0 G18 can't be used interactively with a UWP app. You may need to enter foreground and background color values manually in the tool, or make screen captures of app UI and then run the contrast ratio tool over the screen capture image.
+> Techniques for WCAG 2.0 G18에 나열된 도구 중 일부는 UWP 앱에서 대화형으로 사용할 수 없습니다. 도구에 전경색 및 배경색 값을 수동으로 입력하거나 앱 UI의 화면 캡처를 만든 다음 화면 캡처 이미지에서 명암비 도구를 실행해야 할 수 있습니다.
 
 <span id="Text_element_roles"/>
 <span id="text_element_roles"/>
 <span id="TEXT_ELEMENT_ROLES"/>
-## Text element roles  
-A UWP app can use these default elements (commonly called *text elements* or *textedit controls*):
+## 텍스트 요소 역할  
+UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또는 *textedit 컨트롤*이라고 함)를 사용할 수 있습니다.
 
-* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): role is [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): role is [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) (and overflow class [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): role is [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
-* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): role is [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+* [
+            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [
+            **TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [
+            **RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)(및 오버플로 클래스 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [
+            **RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
 
-When a control reports that is has a role of [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182), assistive technologies assume that there are ways for users to change the values. So if you put static text in a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), you are misreporting the role and thus misreporting the structure of your app to the accessibility user.
+컨트롤에 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
 
-In the text models for XAML, there are two elements that are primarily used for static text, [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) and [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565). Neither of these are a [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) subclass, and as such neither of them are keyboard-focusable or can appear in the tab order. But that does not mean that assistive technologies can't or won't read them. Screen readers are typically designed to support multiple modes of reading the content in an app, including a dedicated reading mode or navigation patterns that go beyond focus and the tab order, like a "virtual cursor". So don't put your static text into focusable containers just so that tab order gets the user there. Assistive technology users expect that anything in the tab order is interactive, and if they encounter static text there, that is more confusing than helpful. You should test this out yourself with Narrator to get a sense of the user experience with your app when using a screen reader to examine your app's static text.
+XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요소, 즉 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)이 있습니다. 이 요소는 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 하위 클래스가 아니므로 키보드 포커스가 불가능하고 탭 순서로 표시할 수 없습니다. 하지만 보조 기술에서 이를 읽을 수 없거나 읽지 않는다는 의미는 아닙니다. 화면 읽기 프로그램은 일반적으로 "가상 커서"처럼 포커스 및 탭 순서를 벗어난 탐색 패턴이나 읽기 전용 모드를 포함하여 앱의 콘텐츠를 읽는 다양한 모드를 지원하도록 설계되었습니다. 따라서 탭 순서에 따라 사용자가 도달하도록 정적 텍스트를 포커스 가능 컨테이너에 배치하지 마세요. 보조 기술 사용자는 탭 순서 내의 항목이 대화형이기를 기대하므로 정적 텍스트를 발견할 경우 도움이 되기보다는 오히려 혼동을 줍니다. 내레이터로 직접 테스트하여 화면 읽기 프로그램을 사용해 앱의 정적 텍스트를 검사할 때 앱의 사용자 환경이 어떤지 확인해야 합니다.
 
 <span id="Text_in_graphics"/>
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
-## Text in graphics  
-Whenever possible, avoid including text in a graphic. For example, any text that you include in the image source file that is displayed in the app as an [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) element is not automatically accessible or readable by assistive technologies. If you must use text in graphics, make sure that the [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) value that you provide as the equivalent of "alt text" includes that text or a summary of the text's meaning. Similar considerations apply if you are creating text characters from vectors as part of a [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355), or by using [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921).
+## 그래픽의 텍스트  
+가능하면 그래픽에 텍스트를 포함하지 마세요. 예를 들어 앱에서 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소로 표시되는 이미지 원본 파일에 포함하는 텍스트는 보조 기술에서 자동으로 접근하거나 읽을 수 없습니다. 그래픽에 텍스트를 사용해야 하는 경우 "alt 텍스트"의 값으로 제공하는 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 값에 해당 텍스트나 해당 텍스트의 의미에 대한 요약이 포함되도록 합니다. 텍스트 문자를 벡터에서 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)의 일부로 만들거나 [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921)를 사용하여 만드는 경우에도 유사한 고려 사항이 적용됩니다.
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
-## Text font size  
-Many readers have difficulty reading text in an app when that text is using a text font size that's simply too small for them to read. You can prevent this issue by making the text in your app's UI reasonably large in the first place. There are also assistive technologies that are part of Windows, and these enable users to change the view sizes of apps, or the display in general.
+## 텍스트 글꼴 크기  
+다수의 읽기 프로그램은 너무 작아 읽을 수 없는 텍스트 글꼴 크기가 사용된 경우 앱에서 텍스트를 읽는 데 어려움이 있습니다. 앱 UI의 텍스트를 첫 번째 위치에서 적절히 크게 표시하면 이 문제를 방지할 수 있습니다. Windows에 포함된 보조 기술도 있으며, 이 기술을 통해 사용자는 앱의 보기 크기나 전체적인 디스플레이를 변경할 수 있습니다.
 
-* Some users change dots per inch (dpi) values of their primary display as an accessibility option. That option is available from **Make things on the screen larger** in **Ease of Access**, which redirects to a **Control Panel** UI for **Appearance and Personalization** / **Display**. Exactly which sizing options are available can vary because this depends on the capabilities of the display device.
-* The Magnifier tool can enlarge a selected area of the UI. However, it's difficult to use the Magnifier tool for reading text.
+* 일부 사용자는 기본 디스플레이의 dpi(인치당 도트 수) 값을 접근성 옵션으로 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정** / **디스플레이**를 위한 **제어판** UI로 리디렉션됩니다. 사용 가능한 크기 조정 옵션이 정확히 어느 것인지는 디스플레이 디바이스의 접근 권한 값에 달려 있기 때문에 달라질 수 있습니다.
+* 돋보기 도구는 UI의 선택된 영역을 확대할 수 있습니다. 그러나 돋보기 도구를 사용하여 텍스트를 읽기는 어렵습니다.
 
 <span id="Text_scale_factor"/>
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
-## Text scale factor  
-Various text elements and controls have an [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled) property. This property has the value **true** by default. When its value is **true**, the setting called **Text scaling** on the phone (**Settings &gt; Ease of access**), causes the text size of text in that element to be scaled up. The scaling will affect text that has a small **FontSize** to a greater degree than it will affect text that has a large **FontSize**. But you can disable that automatic enlargement by setting an element's **IsTextScaleFactorEnabled** property to **false**. Try this markup, adjust the **Text size** setting on the phone, and see what happens to the **TextBlock**s:
+## 텍스트 배율 인수  
+다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. 해당 값이 **true**인 경우, 휴대폰에서 **텍스트 크기 조정**(**설정 &gt; 접근성**)를 설정하면 해당 요소의 텍스트 크기가 확대됩니다. 크기 조정은 **FontSize**이(가) 큰 텍스트보다 **FontSize**이(가) 작은 텍스트에 더 많은 영향을 줍니다. 하지만 요소의 **IsTextScaleFactorEnabled**속성을 **false**(으)로 설정하여 해당 자동 확대 기능을 사용하지 않도록 설정할 수 있습니다. 이 태그를 사용해 보고, 휴대폰에서 **텍스트 크기** 설정을 조정하여 **TextBlock**에 어떠한 변화가 있는지 확인합니다.
 
 XAML
 ```xml
@@ -75,9 +79,10 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-Please don't disable automatic enlargement routinely, though, because scaling UI text universally across all apps is an important accessibility experience for users and they will expect it to work in your app too.
+평상시에는 자동 확대 기능을 사용하지 않도록 설정하지 마세요. 왜냐하면 모든 앱에서 보편적으로 UI 텍스트의 크기를 조정하는 일은 사용자에게 중요한 접근성 경험이며, 사용자는 이 경험이 앱에서도 작동하기를 기대합니다.
 
-You can also use the [**TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) event and the [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) property to find out about changes to the **Text size** setting on the phone. Here’s how:
+[
+            **TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) 이벤트와 [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
 
 C#
 ```csharp
@@ -95,20 +100,27 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-The value of **TextScaleFactor** is a double in the range \[1,2\]. The smallest text is scaled up by this amount. You might be able to use the value to, say, scale graphics to match the text. But remember that not all text is scaled by the same factor. Generally speaking, the larger text is to begin with, the less it’s affected by scaling.
+**TextScaleFactor**의 값은 범위 \[1,2\]의 double입니다. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
 
-These types have an **IsTextScaleFactorEnabled** property:  
+다음 형식에는 **IsTextScaleFactorEnabled** 속성이 있습니다.  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) and derived classes
+* [
+            **Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 및 파생 클래스
 * [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
 * [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
 * [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [**TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) and derived classes
+* [
+            **TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) 및 파생 클래스
 
 <span id="related_topics"/>
-## Related topics  
-* [Accessibility](accessibility.md)
-* [Basic accessibility information](basic-accessibility-information.md)
-* [XAML text display sample](http://go.microsoft.com/fwlink/p/?linkid=238579)
-* [XAML text editing sample](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [XAML accessibility sample](http://go.microsoft.com/fwlink/p/?linkid=238570)
+## 관련 항목  
+* [접근성](accessibility.md)
+* [기본적인 접근성 정보](basic-accessibility-information.md)
+* [XAML 텍스트 표시 샘플](http://go.microsoft.com/fwlink/p/?linkid=238579)
+* [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?linkid=251417)
+* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+
+
+<!--HONumber=May16_HO2-->
+
+

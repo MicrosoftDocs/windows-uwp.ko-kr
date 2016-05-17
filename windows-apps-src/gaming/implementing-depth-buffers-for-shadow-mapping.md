@@ -1,16 +1,16 @@
 ---
 author: mtoepke
-title: Walkthrough-- Implement shadow volumes using depth buffers in Direct3D 11
-description: This walkthrough demonstrates how to render shadow volumes using depth maps, using Direct3D 11 on devices of all Direct3D feature levels.
+title: 연습 - Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
+description: 이 연습에서는 모든 Direct3D 기능 수준의 디바이스에서 Direct3D 11을 사용하여 깊이 맵을 사용하는 섀도 볼륨을 렌더링하는 방법을 보여 줍니다.
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ---
 
-# Walkthrough: Implement shadow volumes using depth buffers in Direct3D 11
+# 연습&#58; Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-This walkthrough demonstrates how to render shadow volumes using depth maps, using Direct3D 11 on devices of all Direct3D feature levels.
+이 연습에서는 모든 Direct3D 기능 수준의 디바이스에서 Direct3D 11을 사용하여 깊이 맵을 사용하는 섀도 볼륨을 렌더링하는 방법을 보여 줍니다.
 ## 
 <table>
 <colgroup>
@@ -19,67 +19,72 @@ This walkthrough demonstrates how to render shadow volumes using depth maps, usi
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Topic</th>
-<th align="left">Description</th>
+<th align="left">항목</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Create depth buffer device resources](create-depth-buffer-resource--view--and-sampler-state.md)</p></td>
-<td align="left"><p>Learn how to create the Direct3D device resources necessary to support depth testing for shadow volumes.</p></td>
+<td align="left"><p>[깊이 버퍼 디바이스 리소스 만들기](create-depth-buffer-resource--view--and-sampler-state.md)</p></td>
+<td align="left"><p>섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Render the shadow map to the depth buffer](render-the-shadow-map-to-the-depth-buffer.md)</p></td>
-<td align="left"><p>Render from the point of view of the light to create a two-dimensional depth map representing the shadow volume.</p></td>
+<td align="left"><p>[그림자 맵을 깊이 버퍼로 렌더링](render-the-shadow-map-to-the-depth-buffer.md)</p></td>
+<td align="left"><p>광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Render the scene with depth testing](render-the-scene-with-depth-testing.md)</p></td>
-<td align="left"><p>Create a shadow effect by adding depth testing to your vertex (or geometry) shader and your pixel shader.</p></td>
+<td align="left"><p>[깊이 테스트로 장면 렌더링](render-the-scene-with-depth-testing.md)</p></td>
+<td align="left"><p>꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Support shadow maps on a range of hardware](target-a-range-of-hardware.md)</p></td>
-<td align="left"><p>Render higher-fidelity shadows on faster devices and faster shadows on less powerful devices.</p></td>
+<td align="left"><p>[다양한 하드웨어에서 그림자 맵 지원](target-a-range-of-hardware.md)</p></td>
+<td align="left"><p>더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-## Shadow mapping application to Direct3D 9 desktop porting
-
-
-Windows 8 adde d depth comparison functionality to feature level 9\_1 and 9\_3. Now you can migrate rendering code with shadow volumes to DirectX 11, and the Direct3D 11 renderer will be downlevel compatible with feature level 9 devices. This walkthrough shows how any Direct3D 11 app or game can implement traditional shadow volumes using depth testing. The code covers the following process:
-
-1.  Creating Direct3D device resources for shadow mapping.
-2.  Adding a rendering pass to create the depth map.
-3.  Adding depth testing to the main rendering pass.
-4.  Implementing the necessary shader code.
-5.  Options for fast rendering on downlevel hardware.
-
-Upon completing this walkthrough, you should be familiar with how to implement a basic compatible shadow volume technique in Direct3D 11 that's compatible with feature level 9\_1 and above.
-
-## Prerequisites
+## Direct3D 9 데스크톱 포팅에 그림자 매핑 적용
 
 
-You should [Prepare your dev environment for Universal Windows Platform (UWP) DirectX game development](prepare-your-dev-environment-for-windows-store-directx-game-development.md). You don't need a template yet, but you'll need Microsoft Visual Studio 2015 to build the code sample for this walkthrough.
+Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가되었습니다. 이제 섀도 볼륨이 포함된 렌더링 코드를 DirectX 11로 마이그레이션할 수 있으므로 Direct3D 11 렌더러가 하위 수준인 기능 수준 9 디바이스와 호환됩니다. 이 연습에서는 깊이 테스트를 사용하여 Direct3D 11 앱이나 게임에서 기존의 섀도 볼륨을 구현할 수 있는 방법을 보여 줍니다. 코드에는 다음 프로세스가 포함됩니다.
 
-## Related topics
+1.  섀도 매핑을 위한 Direct3D 장치 리소스 만들기
+2.  깊이 맵을 만드는 렌더링 단계 추가
+3.  기본 렌더링 단계에 깊이 테스트 추가
+4.  필요한 셰이더 코드 구현
+5.  하위 수준 하드웨어의 빠른 렌더링 옵션
+
+이 연습을 완료하면 기능 수준 9\_1 이상과 호환되는 Direct3D 11에서 호환되는 기본 섀도 볼륨 기술을 구현하는 방법에 익숙해지게 됩니다.
+
+## 필수 조건
+
+
+[UWP(유니버설 Windows 플랫폼) DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿은 필요하지 않지만 이 연습을 위한 코드 샘플을 작성하려면 Microsoft Visual Studio 2015가 필요합니다.
+
+## 관련 항목
 
 
 **Direct3D**
 
-* [Writing HLSL Shaders in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Create a new DirectX 11 project for UWP](user-interface.md)
+* [Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
 
-**Shadow mapping technical articles**
+**그림자 매핑 기술 문서**
 
-* [Common Techniques to Improve Shadow Depth Maps](https://msdn.microsoft.com/library/windows/desktop/ee416324)
-* [Cascaded Shadow Maps](https://msdn.microsoft.com/library/windows/desktop/ee416307)
+* [그림자 깊이 맵을 향상시키기 위한 일반적인 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)
+* [중첩된 그림자 맵](https://msdn.microsoft.com/library/windows/desktop/ee416307)
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

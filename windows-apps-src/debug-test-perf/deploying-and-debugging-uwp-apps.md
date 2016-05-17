@@ -1,85 +1,90 @@
 ---
 author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
-description: This article guides you through the steps to target various deployment and debugging targets.
-title: Deploying and debugging Universal Windows Platform (UWP) apps
+description: 이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
+title: UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
 ---
 
-# Deploying and debugging Universal Windows Platform (UWP) apps
+# UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-This article guides you through the steps to target various deployment and debugging targets.
+이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
 
-Microsoft Visual Studio allows you to deploy and debug your Universal Windows Platform (UWP) apps on a variety of Windows 10 devices. Visual Studio will handle the process of building and registering the application on the target device.
+Microsoft Visual Studio를 사용하면 다양한 Windows 10 디바이스에서 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 디버깅할 수 있습니다. Visual Studio는 대상 장치에 응용 프로그램을 빌드하고 등록하는 프로세스를 처리합니다.
 
-## Picking a deployment target
+## 배포 대상 선택
 
-To pick a target, navigate to the debug target dropdown next to the **Start Debugging** button and select which target you want to deploy your application to. After the target is selected, choose **Start Debugging (F5)** to deploy and debug on that target, or press **Ctrl+F5** to just deploy to that target.
+대상을 선택하려면 **디버깅 시작** 단추 옆의 디버그 대상 드롭다운으로 이동하여 응용 프로그램을 배포할 대상을 선택합니다. 대상을 선택한 후 **디버깅 시작(F5)**을 선택하여 대상에서 배포하고 디버깅하거나 **Ctrl+F5**를 눌러 대상에서 배포만 수행합니다.
 
 ![](images/debug-device-target-list.png)
 
--   **Local Machine** will deploy the application to your current development machine. This option is only available if your application's **Target Platform Min. Version** is less than or equal to the operating system on your development machine.
--   **Simulator** will deploy the application to a simulated environment on your current development machine. This option is only available if your application's **Target Platform Min. Version** is less than or equal to the operating system on your development machine.
--   **Device** will deploy the application to a USB connected device. The device must be developer unlocked and have the screen unlocked.
--   An **Emulator** target will boot up and deploy the application to an emulator with the configuration specified in the name. Emulators are only available on Hyper-V enabled machines running Windows 8.1 or beyond.
--   **Remote Machine** will let you specify a remote target to deploy the application. More information about deploying to a remote machine can be found in [Specifying a remote device](#specifying-a-remote-device).
+-   **로컬 컴퓨터**가 현재 개발 컴퓨터에 응용 프로그램을 배포합니다. 이 옵션은 응용 프로그램의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
+-   **시뮬레이터**가 현재 개발 컴퓨터의 시뮬레이트된 환경에 응용 프로그램을 배포합니다. 이 옵션은 응용 프로그램의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
+-   **장치**가 USB 연결 장치에 응용 프로그램을 배포합니다. 장치는 개발자가 잠금 해제해야 하며 화면이 잠금 해제되어 있어야 합니다.
+-   **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 응용 프로그램을 배포합니다. 에뮬레이터는 Windows 8.1 이상을 실행하고 Hyper-V가 활성화된 컴퓨터에서만 사용할 수 있습니다.
+-   **원격 컴퓨터**에서 원격 대상을 지정하여 응용 프로그램을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 장치 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
 
-## Specifying a remote device
+## 원격 디바이스 지정
 
-### C# and Microsoft Visual Basic
+### C# 및 Microsoft Visual Basic
 
-To specify a remote machine for C# or Microsoft Visual Basic apps, select **Remote Machine** in the debug target dropdown. The **Remote Connections** dialog will appear which will let you specify an IP Address or select a discovered device. By default, the **Universal** authentication mode is selected. To determine which authentication mode to use, see [Authentication modes](#authentication-modes).
+C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려면 디버그 대상 드롭다운에서 **원격 컴퓨터**를 선택합니다. IP 주소를 지정하거나 검색된 장치를 선택할 수 있는 **원격 연결** 대화 상자가 나타납니다. 기본적으로 **유니버설** 인증 모드가 선택됩니다. 사용할 인증 모드를 결정하려면 [인증 모드](#authentication-modes)를 참조하세요.
 
 ![](images/debug-remote-connections.png)
 
-To return to this dialog, you can open project properties and navigate to the **Debug** tab. From there, select **Find…** next to **Remote machine:**
+이 대화 상자로 돌아가려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다. 여기서 **찾기…**를 선택합니다. **원격 컴퓨터:** 옆에 있습니다.
 
 ![](images/debug-remote-machine-config.png)
 
-To deploy an application to a remote PC, you will also need to download and install the Visual Studio Remote Tools on the target PC. See [Remote PC instructions](#remote-pc-instructions) for full instructions.
+원격 PC에 응용 프로그램을 배포하려면 Visual Studio 원격 도구를 대상 PC에 다운로드하고 설치해야 합니다. 전체 지침을 보려면 [원격 PC 지침](#remote-pc-instructions)을 참조하세요.
 
-### C++ and JavaScript
+### C++ 및 JavaScript
 
-To specify a remote machine target for a C++ or JavaScript UWP app, go to project properties by right clicking on the project in the **Solution Explorer**, and clicking **Properties**. Navigate to **Debugging** settings and change **Debugger to launch** to **Remote Machine**. Then fill in the **Machine Name** (or click **Locate…** to find one) and set the **Authentication Type** property.
+C++ 또는 JavaScript UWP 앱에 원격 컴퓨터 대상을 지정하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 프로젝트 속성으로 이동합니다. **디버깅** 설정으로 이동하고 **실행할 디버거**를 **원격 컴퓨터**로 변경합니다. 그런 다음 **컴퓨터 이름**을 작성(또는 **찾기…** 를 클릭하여 찾기)하고 **인증 유형** 속성을 설정합니다.
 
 ![](images/debug-property-pages.png)
-After the machine is specified, you can select **Remote Machine** in the debug target dropdown to return to that specified machine. Only one remote machine can be selected at a time.
+컴퓨터를 지정한 후에는 디버그 대상 드롭다운에서 **원격 컴퓨터**를 선택하여 지정된 컴퓨터로 돌아갈 수 있습니다. 원격 컴퓨터는 한 번에 하나만 선택할 수 있습니다.
 
-### Remote PC instructions
+### 원격 PC 지침
 
-To deploy to a remote PC, the target PC must have the Visual Studio Remote Tools installed. The remote PC must also be running a version of Windows that is greater than or equal to your apps **Target Platform Min. Version** property. Once you have installed the remote tools, you must launch the remote debugger on the target PC. To do this, search for **Remote Debugger** in the **Start** menu launch it, and if prompted allow the debugger to configure your firewall settings. By default, the debugger launches with Windows authentication. This will require user credentials if the logged in user is not the same on both PCs. To change it to **No authentication**, go to **Tools** -&gt; **Options** in the **Remote Debugger** and set it to **No Authentication**. Once the remote debugger is setup, you can deploy from your development machine.
+원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다. 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 실행하고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다. **인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt; **옵션**으로 이동하여 **인증 없음**으로 설정합니다. 원격 디버거가 설정되면 개발 컴퓨터에서 배포할 수 있습니다.
 
-For more information see the [Remote Tools for Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039) download page.
+자세한 내용은 [Remote Tools for Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039) 다운로드 페이지를 참조하세요.
 
-## Authentication modes
+## 인증 모드
 
-There are three authentication modes for remote machine deployment:
+원격 컴퓨터 배포에 세 가지 인증 모드를 사용할 수 있습니다.
 
-- **Universal (Unencrypted Protocol)**: Use this authentication mode whenever you are deploying to a remote device that is not a Windows PC (desktop or laptop). Currently, this is only IoT devices. Universal (Unencrypted Protocol) should only be used on trusted networks. The debugging connection is vulnerable to malicious users who could intercept and change data being passed between the development and remote machine.
-- **Windows**: This authentication mode is only intended to be used for remote PC deployment (desktop or laptop). Use this authentication mode when you have access to the credentials of the logged in user of the target machine. This is the most secure channel for remote deployment.
-- **None**: This authentication mode is only intended to be used for remote PC deployment (desktop or laptop). Use this authentication mode when you have a test machine setup in an environment that has a test account logged in and you cannot enter the credentials. Make sure the remote debugger settings are set to accept no authentication.
+- **유니버설(암호화되지 않은 프로토콜)**: Windows PC(데스크톱 또는 노트북)가 아닌 원격 장치에 배포할 때마다 이 인증 모드를 사용합니다. 현재는 IoT 장치에만 사용할 수 있습니다. 유니버설(암호화되지 않은 프로토콜)은 신뢰할 수 있는 네트워크에서만 사용해야 합니다. 디버깅 연결은 개발 컴퓨터와 원격 컴퓨터 간에 전달되는 데이터를 가로채고 변경할 수 있는 악의적인 사용자에게 취약합니다.
+- **Windows**: 이 인증 모드는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 대상 컴퓨터의 로그인된 사용자의 자격 증명에 액세스할 수 있는 경우 이 인증 모드를 사용합니다. 원격 배포에 가장 안전한 채널입니다.
+- **없음**: 이 인증 모드는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증을 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
 
-## Debugging options
+## 디버깅 옵션
 
-On Windows 10, the startup performance of UWP apps is improved by proactively launching and then suspending apps in a technique called [prelaunch](https://msdn.microsoft.com/library/windows/apps/Mt593297). Many applications will not need to do anything special to work in this mode, but some applications may need to adjust their behavior. To help debug any issues in these code paths you can start debugging the app from Visual Studio in prelaunch mode. Debugging is supported both from a Visual Studio project (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Universal Windows App Prelaunch**), and for apps already installed on the machine (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Installed App Package**, and check the box for **Activate app with Prelaunch**). For more information read about how to [Debug UWP Prelaunch]( http://go.microsoft.com/fwlink/?LinkId=717245).
+Windows 10에서는 [사전 실행](https://msdn.microsoft.com/library/windows/apps/Mt593297)이라고 하는 기술을 통해 앱을 사전에 실행하고 일시 중단함으로써 UWP의 시작 성능이 개선되었습니다. 대부분의 응용 프로그램은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 응용 프로그램에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다. 디버깅은 Visual Studio 프로젝트(**디버그** -&gt; **기타 디버그 대상** -&gt; **Debug Universal Windows App Prelaunch(유니버설 Windows 앱 사전 실행 디버그)**)와 컴퓨터에 이미 설치된 앱(**디버그** -&gt; **기타 디버그 대상** -&gt; **Debug Installed App Package(설치된 앱 패키지 디버그)**로 이동하여 **Activate app with Prelaunch(사전 실행으로 앱 활성화)** 확인란 선택) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그]( http://go.microsoft.com/fwlink/?LinkId=717245) 방법을 참조하세요.
 
-You can set the following deployment options on the **Debug** property page of the startup project.
+시작 프로젝트의 **디버그** 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.
 
-**Allow Network Loopback**
+**네트워크 루프백 허용**
 
-For security reasons, a UWP app that is installed in the standard manner is not allowed to make network calls to the device it is installed on. By default, Visual Studio deployment creates an exemption from this rule for the deployed app. This exemption allows you to test communication procedures on a single machine. Before submitting your app to the Windows Store, you should test your app without the exemption.
+보안 상의 이유로, 표준 방식으로 설치되는 UWP 앱은 이 앱이 설치되는 장치에 네트워크 호출이 허용되지 않습니다. 기본적으로 Visual Studio 배포에서는 배포된 앱에 대해 이 규칙이 면제됩니다. 이러한 예외를 통해 단일 컴퓨터에서 통신 절차를 테스트할 수 있습니다. Windows 스토어에 앱을 제출하기 전에 규칙의 예외 없이 앱을 테스트해야 합니다.
 
-To remove the network loopback exemption from the app:
+앱에서 네트워크 루프백 예외를 제거하려면 다음을 수행하세요.
 
--   On the C# and Visual Basic **Debug** property page, clear the **Allow Network Loopback** check box.
--   On the JavaScript and C++ **Debugging** property page, set the **Allow Network Loopback** value to **No**.
+-   C# 및 Visual Basic **디버그** 속성 페이지에서 **네트워크 루프백 허용** 확인란을 지웁니다.
+-   JavaScript 및 C++ **디버깅** 속성 페이지에서 **Allow Network Loopback(네트워크 루프백 허용)** 값을 **아니요**로 설정합니다.
 
-**Do not launch, but debug my code when it starts (C# and Visual Basic) / Launch App (JavaScript and C++)**
+**실행하지 않지만 시작되면 내 코드 디버그(C# 및 Visual Basic) / 앱 실행(JavaScript 및 C++)**
 
-To configure the deployment to automatically start a debugging session when the app is launched:
+앱이 실행될 때 디버깅 세션이 자동으로 시작되도록 배포를 구성하려면 다음을 수행하세요.
 
--   On the C# and Visual Basic **Debug** property page, check the **Do not launch, but debug my code when it starts** check box.
--   On the JavaScript and C++ **Debugging** property page, set the **Launch Application** value to **Yes**.
+-   C# 및 Visual Basic **디버그** 속성 페이지에서 **실행하지 않지만 시작되면 내 코드 디버그** 확인란을 선택합니다.
+-   JavaScript 및 C++ **디버깅** 속성 페이지에서, **응용 프로그램 실행** 값을 **예**로 설정합니다.
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

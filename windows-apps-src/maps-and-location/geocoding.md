@@ -1,41 +1,47 @@
 ---
 author: PatrickFarley
-title: Perform geocoding and reverse geocoding
-description: Convert addresses to geographic locations (geocoding) and convert geographic locations to addresses (reverse geocoding) by calling the methods of the MapLocationFinder class in the Windows.Services.Maps namespace.
+title: 지오코딩 및 리버스 지오코딩 수행
+description: Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 ---
 
-# Perform geocoding and reverse geocoding
+# 지오코딩 및 리버스 지오코딩 수행
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-Convert addresses to geographic locations (geocoding) and convert geographic locations to addresses (reverse geocoding) by calling the methods of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class in the [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) namespace.
+[
+            **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에 있는 [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
 
-**Tip** To learn more about using maps in your app, download the following sample from the [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979) on GitHub.
+**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
--   [Universal Windows Platform (UWP) map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-Here's how the classes for geocoding and reverse geocoding are related:
+지오코딩 및 리버스 지오코딩 클래스의 관계는 다음과 같습니다.
 
--   The [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class has methods that do geocoding ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) and reverse geocoding ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
--   These methods return a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
--   The [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) contains a collection of [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects. Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the **MapLocationFinderResult**.
--   Each [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) object contains a [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) object. Access this object through the [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) property of each **MapLocation**.
+-   [
+            **MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스에는 지오코딩([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925))과 리버스 지오코딩([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928))을 수행하는 메서드가 있습니다.
+-   이러한 메서드는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)를 반환합니다.
+-   [
+            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)에는 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 컬렉션이 포함됩니다. **MapLocationFinderResult**의 [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 통해 이 컬렉션에 액세스합니다.
+-   각 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체에는 [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) 개체가 포함되어 있습니다. 각 **MapLocation**의 [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) 속성을 통해 이 개체에 액세스합니다.
 
-**Important**  You must specify a maps authentication key before you can use map services. For more info, see [Request a maps authentication key](authentication-key.md).
+**중요** 지도 서비스를 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
- 
+ 
 
-## Get a location (Geocode)
+## 위치 가져오기(지오코드)
 
 
-Convert an address or a place name to a geographic location (geocoding) by performing the following steps.
+다음 단계를 수행하여 주소나 장소 이름을 지리적 위치(지오코딩)로 변환합니다.
 
-1.  Call one of the overloads of the [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) method of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class.
-2.  The [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) method returns a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) object that contains a collection of matching [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects.
-3.  Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
+1.  [
+            **MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드 오버로드 중 하나를 호출합니다.
+2.  [
+            **FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) 메서드는 일치하는 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 컬렉션을 포함하는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.
+3.  [
+            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)의 [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 통해 이 컬렉션에 액세스합니다.
 
 ```csharp
 using Windows.Services.Maps;
@@ -71,21 +77,24 @@ private async void geocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-This code displays the following results to the `tbOutputText` textbox.
+이 코드는 `tbOutputText` 텍스트 상자에 다음 결과를 표시합니다.
 
 ``` syntax
 result = (47.6406099647284,-122.129339994863)
 ```
 
-## Get an address (reverse geocode)
+## 주소 가져오기(리버스 지오코드)
 
 
-Convert a geographic location to an address (reverse geocoding) by performing the following steps.
+다음 단계를 수행하여 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
 
-1.  Call the [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) method of the [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) class.
-2.  The [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) method returns a [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) object that contains a collection of matching [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) objects.
-3.  Access this collection through the [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) property of the [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551).
-4.  Access the [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) object through the [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) property of each [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549).
+1.  [
+            **MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) 클래스의 [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) 메서드를 호출합니다.
+2.  [
+            **FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928) 메서드는 일치하는 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549) 개체 컬렉션을 포함하는 [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) 개체를 반환합니다.
+3.  [
+            **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)의 [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552) 속성을 통해 이 컬렉션에 액세스합니다.
+4.  각 [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)의 [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929) 속성을 통해 [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) 개체에 액세스합니다.
 
 ```csharp
 using Windows.Services.Maps;
@@ -113,21 +122,26 @@ private async void reverseGeocodeButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-This code displays the following results to the `tbOutputText` textbox.
+이 코드는 `tbOutputText` 텍스트 상자에 다음 결과를 표시합니다.
 
 ``` syntax
 town = Redmond
 ```
 
-## Related topics
+## 관련 항목
 
-* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
-* [UWP map sample](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Design guidelines for maps](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Build 2015 video: Leveraging Maps and Location Across Phone, Tablet, and PC in Your Windows Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP traffic app sample](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)
 * [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 
