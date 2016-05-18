@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/37fcfd4c367e3b06053929c0dc0cd3c8f4896fc6/windows-apps-src/xbox-apps/known-issues.md) | HandedOffSuccess | [Details](#7b19864f4781521952adc1c6f94655579fdbc22a3865)
+ [windows-apps-src\monetize\enable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/bb28828463b14130deede9f7cf796c6e32fcb48b/windows-apps-src/monetize/enable-in-app-product-purchases.md) | HandedOffSuccess | [Details](#2e9a011a248e4c7e1d3f06064a7f82e308f071313264)
 
 ## Item Details
-##### <a name='7b19864f4781521952adc1c6f94655579fdbc22a3865'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/37fcfd4c367e3b06053929c0dc0cd3c8f4896fc6/windows-apps-src/xbox-apps/known-issues.md)
+##### <a name='2e9a011a248e4c7e1d3f06064a7f82e308f071313264'></a> Source: [windows-apps-src\monetize\enable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/bb28828463b14130deede9f7cf796c6e32fcb48b/windows-apps-src/monetize/enable-in-app-product-purchases.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/6af66be906f09f8b92856c06eac098e5562bc437/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
-* Handoff Datetime: 2016-05-18 19:36:21
+* Handoff File: [enable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/67d6e6219b6756bdefe01894e1a00be3f7247da6/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-in-app-product-purchases.7bad7209343cc71c5d54d406fd12edf5d103ee01.ko-kr.xlf)
+* Handoff Datetime: 2016-05-18 21:37:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
