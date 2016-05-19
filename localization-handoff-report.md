@@ -1,19 +1,32 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/9ad7589344d2af986e52ae43acc3e48de6374ae6/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md) | HandedOffSuccess | [Details](#d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b43497)
+ [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/390c6e01bf61fcdf018fe9638fcc8d64b6ecf429/windows-apps-src/debug-test-perf/device-portal.md) | HandedOffSuccess | [Details](#07d4cbfbe343a505b10751ba7ea9e8c1162b2bb71917)
+ [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/b08e05ec07a82c6857201e418ffbd9a1ddef2d0c/windows-apps-src/debug-test-perf/device-portal-api-core.md) | HandedOffSuccess | [Details](#9961a77b434908ee1915f018b92a53f2e5f250611911)
 
 ## Item Details
-##### <a name='d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b43497'></a> Source: [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/9ad7589344d2af986e52ae43acc3e48de6374ae6/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md)
+##### <a name='07d4cbfbe343a505b10751ba7ea9e8c1162b2bb71917'></a> Source: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/390c6e01bf61fcdf018fe9638fcc8d64b6ecf429/windows-apps-src/debug-test-perf/device-portal.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/27420bb6e105abe02216ee7c712de0eac4d497f4/ol-handoff/Microsoft/windows-apps.ko-kr/master/distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.ko-kr.xlf)
-* Handoff Datetime: 2016-05-19 23:07:40
+* Handoff File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/bbf5b4680c74371c72a38575063c3f6a74dbaba9/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-19 23:36:49
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='9961a77b434908ee1915f018b92a53f2e5f250611911'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/b08e05ec07a82c6857201e418ffbd9a1ddef2d0c/windows-apps-src/debug-test-perf/device-portal-api-core.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/bbf5b4680c74371c72a38575063c3f6a74dbaba9/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-19 23:36:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
