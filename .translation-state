@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "4ea19e85d1e151dd1e03d5acf085c186613be35f",
+  "LastProcessedCommit": "3f0664e0387e206c432ce92aa221bb5c604bb675",
   "LastTranslatedCommit": "4e086162bb6c3c081d7f2aaad24ef615762c5dac",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -66973,6 +66973,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\the-app-certification-process.4048325d389849d9ef4fac70cf8ced1a5f98b319.ko-kr.xlf",
       "HandoffFileCommit": "8f82465c2e7cfd6a330e548069492c35543d72cf",
       "HandoffDateTime": "2016-05-23T18:22:08.9567548Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "c61866aa6fb71d41d4c6150cfe6af449da21a1da": {
+      "FileHash": "c61866aa6fb71d41d4c6150cfe6af449da21a1da",
+      "SourceFileCommit": "3f0664e0387e206c432ce92aa221bb5c604bb675",
+      "SourceFilePath": "windows-apps-src\\publish\\common-questions.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\publish\\common-questions.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf",
+      "HandoffFileCommit": "14edf2f60c5af5405814a72c5c83e37bbe07332f",
+      "HandoffDateTime": "2016-05-24T17:22:52.8973447Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
