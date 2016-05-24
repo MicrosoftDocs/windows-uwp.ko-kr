@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\common-questions.md](https://github.com/Microsoft/windows-apps/blob/3f0664e0387e206c432ce92aa221bb5c604bb675/windows-apps-src/publish/common-questions.md) | HandedOffSuccess | [Details](#c61866aa6fb71d41d4c6150cfe6af449da21a1da3487)
+ [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/3b487387bf2e04db76042bbe7da1845cd4ea04b8/windows-apps-src/porting/desktop-to-uwp-root.md) | HandedOffSuccess | [Details](#85a9fba8c0e016d39d3ab25cd5681988f6c5db683368)
 
 ## Item Details
-##### <a name='c61866aa6fb71d41d4c6150cfe6af449da21a1da3487'></a> Source: [windows-apps-src\publish\common-questions.md](https://github.com/Microsoft/windows-apps/blob/3f0664e0387e206c432ce92aa221bb5c604bb675/windows-apps-src/publish/common-questions.md)
+##### <a name='85a9fba8c0e016d39d3ab25cd5681988f6c5db683368'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/3b487387bf2e04db76042bbe7da1845cd4ea04b8/windows-apps-src/porting/desktop-to-uwp-root.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/14edf2f60c5af5405814a72c5c83e37bbe07332f/ol-handoff/Microsoft/windows-apps.ko-kr/master/common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf)
-* Handoff Datetime: 2016-05-24 17:22:52
+* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/68807b400b499e1f4c94a6c0595ed7225a857ffd/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-24 18:20:17
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
