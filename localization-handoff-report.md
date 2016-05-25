@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/9e62a7aa18950f7e1cc26b42762e3bb937c389ac/windows-apps-src/publish/package-flights.md) | HandedOffSuccess | [Details](#c538da2a58f38925938b9e28ec7ca65cdb9858a33524)
+ [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/4198d73eb651db71289d6503ac67a42614eb786f/windows-apps-src/xbox-apps/frequently-asked-questions.md) | HandedOffSuccess | [Details](#0ed5465bf5e7c1dbc3aec17769c428a5a8d7d9fc3819)
 
 ## Item Details
-##### <a name='c538da2a58f38925938b9e28ec7ca65cdb9858a33524'></a> Source: [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/9e62a7aa18950f7e1cc26b42762e3bb937c389ac/windows-apps-src/publish/package-flights.md)
+##### <a name='0ed5465bf5e7c1dbc3aec17769c428a5a8d7d9fc3819'></a> Source: [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/4198d73eb651db71289d6503ac67a42614eb786f/windows-apps-src/xbox-apps/frequently-asked-questions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7239049962729d161891375d9744208df5dd48a5/ol-handoff/Microsoft/windows-apps.ko-kr/master/package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.ko-kr.xlf)
-* Handoff Datetime: 2016-05-25 20:54:17
+* Handoff File: [frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/e07578998600f9606147cadcda97da8769a5a298/ol-handoff/Microsoft/windows-apps.ko-kr/master/frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-25 21:23:32
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
