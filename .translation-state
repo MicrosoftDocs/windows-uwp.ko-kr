@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "7d13c9619cd0d5f71bbe706dc4dd717183d9a60c",
+  "LastProcessedCommit": "84090d73ea9373736723a9bd69d11166ab8645bc",
   "LastTranslatedCommit": "4e086162bb6c3c081d7f2aaad24ef615762c5dac",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -67993,6 +67993,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf",
       "HandoffFileCommit": "fcc8a51d4c4342be6be83ae04b1a61e7d8789de3",
       "HandoffDateTime": "2016-05-25T22:55:37.3643124Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "1d0ea4c67b996b2e8bc7280a25dfdca7189c7e50": {
+      "FileHash": "1d0ea4c67b996b2e8bc7280a25dfdca7189c7e50",
+      "SourceFileCommit": "84090d73ea9373736723a9bd69d11166ab8645bc",
+      "SourceFilePath": "windows-apps-src\\xbox-apps\\index.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\xbox-apps\\index.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.ko-kr.xlf",
+      "HandoffFileCommit": "3f11aad7064cf0bc32f115e61287d8d5725bbc69",
+      "HandoffDateTime": "2016-05-26T14:55:15.63431Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
