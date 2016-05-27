@@ -1,4 +1,5 @@
 ---
+author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: UWP 앱 패키징
 description: UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다.
@@ -52,7 +53,7 @@ Visual Studio는 패키지를 스토어와 연결할 수 있습니다. 이렇게
 **앱 패키지를 만들려면**
 
 1.  **Solution Explorer**에서 UWP 앱 프로젝트용 솔루션을 엽니다.
-2.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **Store**->**Create App Packages**를 선택합니다. 이 옵션이 사용되지 않거나 전혀 표시되지 않는 경우에는 프로젝트가 UWP 프로젝트인지 확인합니다.<br/>
+2.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **스토어**->** 패키지 만들기**를 선택합니다. 이 옵션이 사용되지 않거나 전혀 표시되지 않는 경우에는 프로젝트가 UWP 프로젝트인지 확인합니다.<br/>
     ![](images/packaging-screen2.jpg)
 
     **Create App Packages** 마법사가 나타납니다.
@@ -60,7 +61,7 @@ Visual Studio는 패키지를 스토어와 연결할 수 있습니다. 이렇게
 3.  첫 번째 대화 상자에서 Windows 스토어에 업로드할 패키지를 빌드할지 묻는 메시지가 나타나면 예를 선택하고 다음을 클릭합니다.<br/>
     ![](images/packaging-screen3.jpg)
 
-    여기서 아니요를 선택하면 Visual Studio에서 스토어 제출용으로 필요한 .appxupload 패키지가 생성되지 않습니다. 내부 장치에서만 앱을 테스트용으로 로드하여 실행하려는 경우에는 이 옵션을 선택하면 됩니다. 테스트용 로드에 대한 자세한 내용은 [개발을 위해 장치 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236)을 참조하세요.
+    여기서 아니요를 선택하면 Visual Studio에서 스토어 제출용으로 필요한 .appxupload 패키지가 생성되지 않습니다. 내부 장치에서만 앱을 테스트용으로 로드하여 실행하려는 경우에는 이 옵션을 선택하면 됩니다. 테스트용 로드에 대한 자세한 내용은 [개발을 위해 디바이스 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236)을 참조하세요.
 
 4.  Windows 개발자 센터에 개발자 계정으로 로그인합니다. (아직 개발자 계정이 없으면 마법사를 사용하여 만들 수 있습니다.)
 5.  패키지의 앱 이름을 선택하거나 아직 Windows 개발자 센터 포털에서 보존하지 않았다면 새 이름을 보존합니다.<br/>
@@ -101,7 +102,7 @@ UWP 앱 패키지를 사용할 때는 장치에 데스크톱 앱과 같은 앱�
 
 다음 목록은 테스트용으로 앱을 로드하는 데 요구되는 사항입니다.
 
--   [개발을 위해 장치를 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236)하도록 설정해야 합니다.
+-   [개발을 위해 디바이스를 사용](https://msdn.microsoft.com/library/windows/apps/Dn706236)하도록 설정해야 합니다.
 -   Windows 10 Mobile 장치에 테스트용으로 앱을 로드하려면 [WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) 도구를 사용해야 합니다.
 
 **데스크톱, 노트북 또는 태블릿에 테스트용으로 앱 로드**
@@ -135,6 +136,6 @@ UWP 앱 패키지를 사용할 때는 장치에 데스크톱 앱과 같은 앱�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

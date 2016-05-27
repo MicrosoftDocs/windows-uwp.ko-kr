@@ -1,4 +1,5 @@
 ---
+author: msatranjr
 ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: 앱 패키징
 description: 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱 패키지에 대한 문서의 링크가 포함되어 있습니다.
@@ -20,6 +21,6 @@ description: 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱 패키지�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
