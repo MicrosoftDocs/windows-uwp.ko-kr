@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: C# 또는 Visual Basic에서 비동기식 API 호출
 description: UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다.
@@ -23,9 +24,8 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 다음 예제에서는 비동기 메서드인 [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)를 호출하고 결과를 기다려 블로그에서 블로그 게시물 목록을 가져옵니다.
 
-> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
-[!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"] [!code-csharp[기본](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+          [!code-vb[기본](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 이 예제에는 눈여겨볼 두 가지 중요한 사항이 있습니다. 먼저 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` 줄에서는 비동기 메서드 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)를 호출할 때 **await** 연산자를 사용합니다. **await** 연산자는 컴파일러에게 비동기 메서드를 호출한다는 것을 알려 컴파일러가 개발자 대신 일부 추가 작업을 수행하도록 합니다. 다음으로 이벤트 처리기 선언에 키워드 **async**가 포함됩니다. **await** 연산자를 사용하는 메서드의 메서드 선언에 이 키워드를 포함해야 합니다.
 
@@ -111,6 +111,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

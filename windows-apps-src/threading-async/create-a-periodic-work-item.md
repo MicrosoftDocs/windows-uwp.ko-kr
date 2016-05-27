@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: 정기 작업 항목 만들기
 description: 주기적으로 반복되는 작업 항목을 만드는 방법을 알아봅니다.
@@ -159,14 +160,14 @@ description: 주기적으로 반복되는 작업 항목을 만드는 방법을 �
 > 
 >         }),
 >         period,
->         ref new TimerDestroyedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Handle periodic timer cancellation.
 >             // 
 > 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // UI components can be accessed within this scope.
@@ -203,6 +204,6 @@ description: 주기적으로 반복되는 작업 항목을 만드는 방법을 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

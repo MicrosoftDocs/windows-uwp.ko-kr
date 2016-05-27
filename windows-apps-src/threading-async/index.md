@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: 스레딩 및 비동기 프로그래밍
 description: 스레드 및 비동기 프로그래밍을 사용하면 앱이 병렬 스레드에서 비동기식으로 작업할 수 있습니다.
@@ -36,6 +37,6 @@ description: 스레드 및 비동기 프로그래밍을 사용하면 앱이 병�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

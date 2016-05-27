@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
 description: 이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
 title: C++의 비동기 프로그래밍
@@ -8,13 +9,13 @@ title: C++의 비동기 프로그래밍
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 문서에서는 ppltasks.h의 `concurrency` 네임스페이스에 정의된 `task` 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
+이 문서에서는 ppltasks.h의 `concurrency` 네임스페이스에 정의된 `task` 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
 
 ## UWP(유니버설 Windows 플랫폼) 비동기 형식
 
 UWP(유니버설 Windows 플랫폼)는 비동기 메서드를 호출하기 위한 잘 정의된 모델의 역할을 하며 그러한 메서드를 사용하는 데 필요한 유형을 제공합니다. UWP 비동기 모델에 익숙하지 않은 경우 이 문서에 앞서 [비동기 프로그래밍][AsyncProgramming]을 읽어 보세요.
 
-C++에서 직접 비동기 UWP API를 실행할 수도 있지만 [**concurrency**][concurrencyNamespace] 네임스페이스에 포함되어 있고 `<ppltasks.h>`에 정의된 [**task class**][task-class] 및 관련 형식과 함수를 사용하는 것이 좋습니다. **concurrency::task** 클래스의 유형은 일반용이지만 **/ZW** 컴파일러 스위치(UWP(유니버설 Windows 플랫폼) 앱 및 구성 요소에 필요)가 사용될 경우에는 task 클래스가 UWP 비동기 유형을 캡슐화하여 다음 작업을 수행하기가 쉬워집니다.
+C++에서 직접 비동기 UWP API를 실행할 수도 있지만 [concurrency****][concurrencyNamespace] 네임스페이스에 포함되어 있고 `<ppltasks.h>`에 정의된 [**task class**][task-class] 및 관련 형식과 함수를 사용하는 것이 좋습니다. **concurrency::task** 클래스의 유형은 일반용이지만 **/ZW** 컴파일러 스위치(UWP(유니버설 Windows 플랫폼) 앱 및 구성 요소에 필요)가 사용될 경우에는 task 클래스가 UWP 비동기 유형을 캡슐화하여 다음 작업을 수행하기가 쉬워집니다.
 
 -   여러 비동기 작업과 동기 작업을 함께 연결
 
@@ -24,7 +25,7 @@ C++에서 직접 비동기 UWP API를 실행할 수도 있지만 [**concurrency*
 
 -   해당 스레드 컨텍스트 또는 아파트에서 개별 작업 실행
 
-이 문서는 UWP 비동기 API와 함께 **task** 클래스를 사용하는 방법에 대한 기본 지침을 제공합니다. **task** 및 관련 메서드( [**create\_task**][createTask] 포함)에 대한 전체 설명서는 [작업 병렬 처리(동시성 런타임)][taskParallelism]을 참조하세요. JavaScript 또는 기타 UWP 호환 언어에서 사용할 비동기 공용 메서드를 만드는 방법에 대한 자세한 내용은 [C++에서 Windows 런타임 앱에 대한 비동기 작업 만들기][createAsyncCpp]를 참조하세요.
+이 문서는 UWP 비동기 API와 함께 **task** 클래스를 사용하는 방법에 대한 기본 지침을 제공합니다. **task** 및 관련 메서드([**create\_task**][createTask] 포함)에 대한 전체 설명서는 [작업 병렬 처리(동시성 런타임)][taskParallelism]을 참조하세요. JavaScript 또는 기타 UWP 호환 언어에서 사용할 비동기 공용 메서드를 만드는 방법에 대한 자세한 내용은 [C++에서 Windows 런타임 앱에 대한 비동기 작업 만들기][createAsyncCpp]를 참조하세요.
 
 ## 작업을 통해 비동기 작업 사용
 
@@ -53,7 +54,7 @@ void App::TestAsync()
     // Recommended:
     auto deviceEnumTask = create_task(deviceOp);
 
-    // Call the task’s .then member function, and provide
+    // Call the task's .then member function, and provide
     // the lambda to be invoked when the async operation completes.
     deviceEnumTask.then( [this] (DeviceInformationCollection^ devices ) 
     {       
@@ -67,15 +68,18 @@ void App::TestAsync()
 }
 ```
 
-[**task::then**][taskThen] 함수에 의해 만들어지고 반환되는 작업을 *연속 작업*이라고 합니다. (이 경우) 사용자가 제공한 람다에 대한 입력 인수는 작업 연산이 완료될 때 생성하는 결과입니다. 이는 **IAsyncOperation** 인터페이스를 직접 사용하고 있다면 [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600)를 호출했을 때 검색되는 값과 동일합니다.
+[
+            **task::then**][taskThen] 함수에 의해 만들어지고 반환되는 작업을 *연속 작업*이라고 합니다. (이 경우) 사용자가 제공한 람다에 대한 입력 인수는 작업 연산이 완료될 때 생성하는 결과입니다. 이는 **IAsyncOperation** 인터페이스를 직접 사용하고 있다면 [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600)를 호출했을 때 검색되는 값과 동일합니다.
 
-[**task::then**][taskThen] 메서드는 즉시 반환하며, 비동기 작업이 완료될 때까지 대리자는 실행되지 않습니다. 이 예제에서 비동기 작업이 예외를 발생시키거나, 취소 요청의 결과로서 취소된 상태로 종료될 경우에는 연속 작업이 실행되지 않습니다. 나중에 이전 작업이 취소 또는 실패한 경우에도 실행되는 연속 작업을 작성하는 방법에 대해 살펴보겠습니다.
+[
+            **task::then**][taskThen] 메서드는 즉시 반환하며, 비동기 작업이 완료될 때까지 대리자는 실행되지 않습니다. 이 예제에서 비동기 작업이 예외를 발생시키거나, 취소 요청의 결과로서 취소된 상태로 종료될 경우에는 연속 작업이 실행되지 않습니다. 나중에 이전 작업이 취소 또는 실패한 경우에도 실행되는 연속 작업을 작성하는 방법에 대해 살펴보겠습니다.
 
 로컬 스택에 task 변수를 선언하더라도 이 변수는 자신의 수명을 관리하므로 모든 작업이 완료되고 그에 대한 모든 참조가 범위를 벗어날 때까지 삭제되지 않습니다. 이는 작업이 완료되기 전에 메서드가 반환하는 경우에도 마찬가지입니다.
 
 ## 작업 체인 만들기
 
-비동기 프로그래밍에서는 *작업 체인*이라고도 하는 작업 시퀀스를 정의하는 것이 일반적입니다. 각 연속 작업은 이전 작업이 완료된 경우에만 실행됩니다. 경우에 따라 이전(또는 *선행*) 작업은 연속 작업이 입력으로 받아들이는 값을 생성하기도 합니다. [**task::then**][taskThen] 메서드를 사용하면 직관적이고 간편한 방법으로 작업 체인을 만들 수 있습니다. 이 메서드는 **task<T>**를 반환하며 여기서 **T**는 람다 함수의 반환 유형입니다. 하나의 작업 체인에 여러 연속 작업을 작성할 수 있습니다(예: `myTask.then(…).then(…).then(…);`).
+비동기 프로그래밍에서는 *작업 체인*이라고도 하는 작업 시퀀스를 정의하는 것이 일반적입니다. 각 연속 작업은 이전 작업이 완료된 경우에만 실행됩니다. 경우에 따라 이전(또는 *선행*) 작업은 연속 작업이 입력으로 받아들이는 값을 생성하기도 합니다. [
+            **task::then**][taskThen] 메서드를 사용하면 직관적이고 간편한 방법으로 작업 체인을 만들 수 있습니다. 이 메서드는 **task<T>**를 반환하며 여기서 **T**는 람다 함수의 반환 형식입니다. 하나의 작업 체인에 여러 연속 작업을 작성할 수 있습니다(예: ). `myTask.then(…).then(…).then(…);`
 
 작업 체인은 연속이 새로운 비동기 작업(operation)을 만들 때 특히 유용합니다. 그러한 작업을 비동기 작업(task)이라고 합니다. 다음 예제에서는 두 개의 연속 작업이 있는 작업 체인을 보여 줍니다. 초기 작업은 기존 파일에 대한 핸들을 얻고, 해당 작업이 완료되면 첫 번째 연속 작업이 새 비동기 작업을 시작하여 파일을 삭제합니다. 이 작업이 완료되면 두 번째 연속 작업이 실행되고 확인 메시지가 표시됩니다.
 
@@ -107,20 +111,20 @@ void App::DeleteWithTasks(String^ fileName)
 
 -   두 번째 연속 작업은 값 기반이므로 [**DeleteAsync**][deleteAsync] 호출에 의해 시작된 작업이 예외를 발생시킬 경우 아예 실행되지 않습니다.
 
-**참고** 작업 체인을 만드는 것은 **task** 클래스를 사용하여 비동기 작업을 구성하는 한 가지 방법일 뿐입니다. join 또는 choice 연산자 **&&** 및 **||**를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)][taskParallelism]을 참조하세요.
+**참고** 작업 체인을 만드는 것은 **task** 클래스를 사용하여 비동기 작업을 구성하는 한 가지 방법일 뿐입니다. join 또는 choice 연산자 **&&** 및 **||**를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)]][taskParallelism]을 참조하세요.
 
-## 람다 함수 반환 유형 및 작업 반환 유형
+## 람다 함수 반환 형식 및 작업 반환 형식
 
-작업 연속 작업에서 람다 함수의 반환 유형은 **task** 개체로 묶여 있습니다. 람다가 **double**을 반환하면 연속 작업의 작업 유형은 **task<double>**가 됩니다. 그러나 작업 개체는 불필요하게 중첩된 반환 유형을 생성하지 않도록 설계되어 있습니다. 람다가 **IAsyncOperation<SyndicationFeed^>^**를 반환하는 경우 연속 작업은 **task<task<SyndicationFeed^>>** 또는 **task<IAsyncOperation<SyndicationFeed^>^>^**가 아닌 **task<SyndicationFeed^>**를 반환합니다. 이 프로세스는 *비동기 래핑 해제*라고 하며 다음 연속 작업이 호출되기 전에 연속 작업 내부의 비동기 작업이 완료되었는지도 확인합니다.
+작업 연속 작업에서 람다 함수의 반환 형식은 **task** 개체로 묶여 있습니다. 람다가 **double**을 반환하면 연속 작업의 작업 유형은 **task<double>**가 됩니다. 그러나 작업 개체는 불필요하게 중첩된 반환 형식을 생성하지 않도록 설계되어 있습니다. 람다가 **IAsyncOperation&lt;SyndicationFeed^&gt;^**를 반환하는 경우 연속 작업은 **task&lt;task&lt;SyndicationFeed^&gt;&gt;** 또는 **task&lt;IAsyncOperation&lt;SyndicationFeed^&gt;^&gt;^**가 아닌 **task&lt;SyndicationFeed^&gt;**를 반환합니다. 이 프로세스는 *비동기 래핑 해제*라고 하며 다음 연속 작업이 호출되기 전에 연속 작업 내부의 비동기 작업이 완료되었는지도 확인합니다.
 
 앞 예제에서 람다가 [**IAsyncInfo**][IAsyncInfo] 개체를 반환했음에도 불구하고 작업이 **task<void>**를 반환하는 것에 주목하세요. 다음 표에는 람다 함수와 바깥쪽 작업 간에 발생하는 유형 변환에 대한 요약이 나와 있습니다.
 
 | | |
 |--------------------------------------------------------|---------------------|
-| 람다 반환 유형                                     | `.then` 반환 유형 |
+| 람다 반환 형식                                     | `.then` 반환 형식 |
 | TResult                                                | 작업<TResult> |
 | IAsyncOperation<TResult>^                        | 작업<TResult> |
-| IAsyncOperationWithProgress<TResult, TProgress>^ | 작업<TResult> |
+| IAsyncOperationWithProgress&lt;TResult, TProgress&gt;^ | 작업<TResult> |
 |IAsyncAction^                                           | 작업<void>    |
 | IAsyncActionWithProgress<TProgress>^             |작업<void>     |
 | 작업<TResult>                                    |작업<TResult>  |
@@ -128,7 +132,7 @@ void App::DeleteWithTasks(String^ fileName)
 
 ## 작업 취소
 
-사용자에게 비동기 작업을 취소할 수 있는 옵션을 제공하는 것이 좋습니다. 경우에 따라서는 작업 체인의 외부에서 프로그래밍 방식으로 작업을 취소해야 할 수 있습니다. 각 \***Async** 반환 유형에 [**IAsyncInfo**][IAsyncInfo]에서 상속하는 [**Cancel**][IAsyncInfoCancel] 메서드가 있더라도 이를 메서드 외부에 표시하는 것은 권장되지 않습니다. 작업 체인에서 취소를 지원하는 좋은 방법은 [**cancellation\_token\_source**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749985.aspx)를 사용하여 [**cancellation\_token**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749975.aspx)을 만든 다음 이 토큰을 초기 작업의 생성자로 전달하는 것입니다. 비동기 작업이 취소 토큰을 사용하여 만들어졌고 [**cancellation_token_source::cancel**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750076.aspx)이 호출되는 경우 작업은 자동으로 **IAsync\*** 작업에서 **Cancel**을 호출하고 취소 요청을 연속 작업 체인에 전달합니다. 다음 의사 코드에서는 기본 접근 방법을 보여 줍니다.
+사용자에게 비동기 작업을 취소할 수 있는 옵션을 제공하는 것이 좋습니다. 경우에 따라서는 작업 체인의 외부에서 프로그래밍 방식으로 작업을 취소해야 할 수 있습니다. 각 \***Async** 반환 형식에 [**IAsyncInfo**][IAsyncInfo]에서 상속하는 [**Cancel**][IAsyncInfoCancel] 메서드가 있더라도 이를 메서드 외부에 표시하는 것은 권장되지 않습니다. 작업 체인에서 취소를 지원하는 좋은 방법은 [**cancellation\_token\_source**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749985.aspx)를 사용하여 [**cancellation\_token**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749975.aspx)을 만든 다음 이 토큰을 초기 작업의 생성자로 전달하는 것입니다. 비동기 작업이 취소 토큰을 사용하여 만들어졌고 [**cancellation_token_source::cancel**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750076.aspx)이 호출되는 경우 작업은 자동으로 **IAsync\*** 작업에서 **Cancel**을 호출하고 취소 요청을 연속 작업 체인에 전달합니다. 다음 의사 코드에서는 기본 접근 방법을 보여 줍니다.
 
 ``` cpp
 //Class member:
@@ -155,7 +159,7 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 
 선행 항목이 취소되었거나 예외가 발생한 경우에도 연속 작업을 실행하려면 선행 작업의 람다가 [**IAsyncAction^**][IAsyncAction]을 반환하는 경우의 람다 함수에 대한 입력을 **task<TResult>** 또는 **task<void>**로 지정하여 작업 기반 연속 작업으로 만듭니다.
 
-작업 체인에서 오류 및 취소를 처리하기 위해 모든 연속 작업을 작업 기반으로 만들거나, `try…catch` 블록 내에서 발생할 수 있는 각 작업을 묶을 필요는 없습니다. 대신 체인의 끝에 작업 기반 연속 작업을 추가하여 거기서 모든 오류를 처리할 수 있습니다. 예외([**task\_canceled**][taskCanceled] 예외 포함)는 작업 체인으로 하향 전파되고 값 기반 연속 작업을 무시하므로 오류 처리 작업 기반 연속 작업에서 이를 처리할 수 있습니다. 오류 처리 작업 기반 연속 작업을 사용하도록 앞의 예제를 다시 작성할 수 있습니다.
+작업 체인에서 오류 및 취소를 처리하기 위해 모든 연속 작업을 작업 기반으로 지정하거나, `try…catch` 블록 내에서 발생할 수 있는 각 작업을 묶을 필요는 없습니다. 대신 체인의 끝에 작업 기반 연속 작업을 추가하여 거기서 모든 오류를 처리할 수 있습니다. 예외([**task\_canceled**][taskCanceled] 예외 포함)는 작업 체인으로 하향 전파되고 값 기반 연속 작업을 무시하므로 오류 처리 작업 기반 연속 작업에서 이를 처리할 수 있습니다. 오류 처리 작업 기반 연속 작업을 사용하도록 앞의 예제를 다시 작성할 수 있습니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -218,7 +222,8 @@ void App::SetFeedText()
 }
 ```
 
-[**IAsyncAction**][IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
+[
+            **IAsyncAction**][IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
 
 [
             **task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)를 가져오는 [**task::then**][taskThen]의 오버로드를 사용하면 두 유형의 작업 모두에 대해 기본 스레드 컨텍스트를 무시할 수 있습니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이 경우 [**task\_continuation\_context::use\_arbitrary**][useArbitrary]를 전달하여 다중 스레드 아파트에서 사용 가능한 다음 스레드에서 작업을 예약할 수 있습니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
@@ -237,7 +242,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
     {
         // Create the async operation. feedOp is an 
         // IAsyncOperationWithProgress<SyndicationFeed^, RetrievalProgress>^
-        // but we don’t handle progress in this example.
+        // but we don't handle progress in this example.
 
         auto feedUri = ref new Uri(ref new String(url.c_str()));
         auto feedOp = client->RetrieveFeedAsync(feedUri);
@@ -296,8 +301,8 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 
 * [C++에서 Windows 스토어 앱에 대한 비동기 작업 만들기][createAsyncCpp]
 * [Visual C++ 언어 참조](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* [비동기 프로그래밍] [AsyncProgramming]
-* [작업 병렬 처리(동시성 런타임)] [taskParallelism]
+* [비동기 프로그래밍][AsyncProgramming]
+* [작업 병렬 처리(동시성 런타임)][taskParallelism]
 * [task 클래스][task-class]
  
 <!-- LINKS -->
@@ -311,13 +316,13 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 [IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
 [IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
 [taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "Task 클래스"
+[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "작업 클래스"
 [taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "Task Parallelism"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "작업 병렬 처리"
 [taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
 [useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 
