@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: 이 문서에서는 디자인 관점에서 UWP(유니버설 Windows 플랫폼)의 기능, 장점 및 요구 사항에 대해 설명합니다. 무료로 제공되는 플랫폼 및 원하는 대로 사용할 수 있는 도구에 대해 알아보세요.
 title: UWP(유니버설 Windows 플랫폼) 앱 디자인 소개
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-label: UWP 앱 디자인 소개
+label: Intro to UWP app design
 template: detail.hbs
 ---
 
 #  UWP 앱 디자인 소개 
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 UWP(유니버설 Windows Platform) 앱은 휴대폰에서 태블릿 또는 PC에 이르기까지 모든 Windows 기반 디바이스에서 실행할 수 있습니다.
 
@@ -102,12 +99,15 @@ UWP 앱의 구성 요소를 설명했으므로 구성 요소를 배치하여 UI�
 <tr class="odd">
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
-<td align="left"><strong>탐색 요소</strong><p>탐색 요소는 사용자가 표시하려는 콘텐츠를 선택하는 데 도움을 줍니다. 탐색 요소의 예로는 [tabs and pivots](../controls-and-patterns/tabs-pivot.md), [hyperlinks](../controls-and-patterns/hyperlinks.md) 및 [nav panes](../controls-and-patterns/nav-pane.md)이 있습니다.</p>
-<p>탐색 요소에 대해서는 [Navigation design basics](navigation-basics.md) 문서에 자세히 설명되어 있습니다.</p>
-<strong>명령 요소</strong><p>명령 요소는 조작, 저장 또는 콘텐츠 공유 등의 작업을 시작합니다. 명령 요소의 예로는 [button](../controls-and-patterns/buttons.md) 및 [command bar](../controls-and-patterns/app-bars.md)이 있습니다. 명령 요소에는 실제로 화면에 표시되지 않는 바로 가기 키도 포함될 수 있습니다.</p>
-<p>명령 요소에 대해서는 [Command design basics](commanding-basics.md) 문서에 자세히 설명되어 있습니다.</p>
-<strong>콘텐츠 요소</strong><p>콘텐츠 요소는 앱의 콘텐츠를 표시합니다. 그리기 앱의 경우 콘텐츠는 그리기일 수 있습니다. 뉴스 앱의 경우 콘텐츠는 뉴스 기사일 수 있습니다.</p>
-<p>콘텐츠 요소에 대해서는 [Content design basics](content-basics.md) 문서에 자세히 설명되어 있습니다.</p></td>
+<td align="left"><strong>탐색 요소</strong>
+<p>탐색 요소는 사용자가 표시하려는 콘텐츠를 선택하는 데 도움을 줍니다. 탐색 요소의 예로는 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md), [하이퍼링크](../controls-and-patterns/hyperlinks.md) 및 [탐색 창](../controls-and-patterns/nav-pane.md)이 있습니다.</p>
+<p>탐색 요소에 대해서는 [탐색 디자인 기본 사항](navigation-basics.md) 문서에 자세히 설명되어 있습니다.</p>
+<strong>명령 요소</strong>
+<p>명령 요소는 조작, 저장 또는 콘텐츠 공유 등의 작업을 시작합니다. 명령 요소의 예로는 [단추](../controls-and-patterns/buttons.md) 및 [명령 모음](../controls-and-patterns/app-bars.md)이 있습니다. 명령 요소에는 실제로 화면에 표시되지 않는 바로 가기 키도 포함될 수 있습니다.</p>
+<p>명령 요소에 대해서는 [명령 디자인 기본 사항](commanding-basics.md) 문서에 자세히 설명되어 있습니다.</p>
+<strong>콘텐츠 요소</strong>
+<p>콘텐츠 요소는 앱의 콘텐츠를 표시합니다. 그리기 앱의 경우 콘텐츠는 그리기일 수 있습니다. 뉴스 앱의 경우 콘텐츠는 뉴스 기사일 수 있습니다.</p>
+<p>콘텐츠 요소에 대해서는 [콘텐츠 디자인 기본 사항](content-basics.md) 문서에 자세히 설명되어 있습니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -118,13 +118,13 @@ UWP 앱의 구성 요소를 설명했으므로 구성 요소를 배치하여 UI�
 
 앱에 알맞은 UI 요소를 결정할 때에는 앱에서 실행되는 디바이스 및 화면 크기를 고려해야 할 수 있습니다.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"> </span> <span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"> </span> <span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"> </span>특정 디바이스 및 화면 크기에 맞게 앱 조정
+## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>특정 디바이스 및 화면 크기에 맞게 앱 조정
 
 
 UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에서 디자인 요소를 읽고 사용할 수 있습니다. 그렇다면 특정 디바이스 패밀리에 대한 앱의 UI를 사용자 지정하려는 이유는 무엇일까요?
 
 **참고**  
-미리 짚고 넘어갈 점은 Windows에서는 앱이 실행되는 특정 장치를 앱 내에서 검색하는 방법을 제공하지 않는다는 것입니다. 물론 앱이 실행 중인 디바이스 패밀리(모바일, 데스크톱, 등), 유효 해상도 및 앱에서 사용할 수 있는 화면 공간 크기(앱의 창 크기)는 알 수 있습니다.
+미리 짚고 넘어갈 점은 Windows에서는 앱이 실행되는 특정 디바이스를 앱 내에서 검색하는 방법을 제공하지 않는다는 것입니다. 물론 앱이 실행 중인 디바이스 패밀리(모바일, 데스크톱, 등), 유효 해상도 및 앱에서 사용할 수 있는 화면 공간 크기(앱의 창 크기)는 알 수 있습니다.
 
  
 
@@ -142,12 +142,12 @@ UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에�
 
     범용 컨트롤 라이브러리는 모든 입력 유형(터치, 펜, 키보드, 마우스)에서 작동하지만 UI 요소를 다시 정렬하여 특정 입력 유형에 맞게 최적화할 수 있습니다. 예를 들어 화면 아래쪽에 탐색 요소를 배치할 경우 휴대폰 사용자는 더 쉽게 액세스할 수 있지만 대부분의 PC 사용자는 화면의 위쪽에 탐색 요소가 있을 것으로 기대합니다.
 
-## <span id="Responsive_design_techniques"> </span> <span id="responsive_design_techniques"> </span> <span id="RESPONSIVE_DESIGN_TECHNIQUES"> </span>반응형 디자인 기술
+## <span id="Responsive_design_techniques"></span><span id="responsive_design_techniques"></span><span id="RESPONSIVE_DESIGN_TECHNIQUES"></span>반응형 디자인 기술
 
 
 특정 화면 너비에 맞게 앱의 UI를 최적화하는 경우 반응형 디자인을 만든다고 할 수 있습니다. 다음은 앱의 UI를 사용자 지정하는 데 사용할 수 있는 6가지 반응형 디자인 기술입니다.
 
-### <span id="Reposition"> </span> <span id="reposition"> </span> <span id="REPOSITION"> </span>위치 변경
+### <span id="Reposition"></span><span id="reposition"></span><span id="REPOSITION"></span>위치 변경
 
 앱 UI 요소의 위치와 배치를 변경하여 각 장치 공간을 최대한 활용할 수 있습니다. 이 예제에서는 한 번에 하나의 전체 프레임만 표시되므로 휴대폰 또는 패블릿의 세로 보기에는 스크롤 UI가 필요합니다. 앱이 세로 방향이든, 가로 방향이든, 두 개의 전체 화면 프레임을 허용하는 장치로 변환되면 프레임 B가 전용 공간을 차지할 수 있습니다. 위치 지정을 위해 그리드를 사용하는 경우 동일한 그리드에 UI 요소를 재배치할 수 있습니다.
 
@@ -157,13 +157,13 @@ UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에�
 
 ![더 큰 화면에서 콘텐츠의 위치를 변경하는 앱에 대한 디자인](images/rsp-design/rspd-reposition-type1.png)
 
-### <span id="Resize"> </span> <span id="resize"> </span> <span id="RESIZE"> </span>크기 조정
+### <span id="Resize"></span><span id="resize"></span><span id="RESIZE"></span>크기 조정
 
 UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 수 있습니다. 여기에 나온 예제와 같이 이러한 기능을 사용하여 단순히 콘텐츠 프레임을 늘려 더 넓은 화면에서 읽을 수 있습니다.
 
 ![디자인 요소 크기 조정](images/rsp-design/rspd-resize.png)
 
-### <span id="Reflow"> </span> <span id="reflow"> </span> <span id="REFLOW"> </span>재배치
+### <span id="Reflow"></span><span id="reflow"></span><span id="REFLOW"></span>재배치
 
 장치 및 방향에 따라 UI 요소의 흐름을 변경하여 콘텐츠를 최적 상태로 표시할 수 있습니다. 예를 들어 더 큰 화면으로 전환할 때는 그에 맞게 더 큰 컨테이너로 전환하고, 열을 추가하고, 다른 방식으로 목록 항목을 생성할 수 있습니다.
 
@@ -171,7 +171,7 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 ![디자인 요소 재배치](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"> </span> <span id="_____________reveal___________"> </span> <span id="_____________REVEAL___________"> </span> 표시
+### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> 표시
 
 화면 공간에 따라서나 장치가 추가 기능, 특정 상황 또는 기본 설정 화면 방향을 지원하는 경우 UI를 표시할 수 있습니다.
 
@@ -187,13 +187,13 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 -   앱에서는 열을 나누어 좀 더 자세한 내용을 표시할 수 있습니다.
 -   앱에서는 세로로 접히고 가로로 펼쳐지는 항목을 사용할 수 있습니다. 휴대폰 또는 패블릿에서 더 큰 장치로 전환할 경우 누적된 목록 항목이 바뀌면서 목록 항목의 행과 메타데이터 열이 표시될 수 있습니다.
 
-### <span id="Replace"> </span> <span id="replace"> </span> <span id="REPLACE"> </span>바꾸기
+### <span id="Replace"></span><span id="replace"></span><span id="REPLACE"></span>바꾸기
 
 이 기술은 특정 장치 크기 등급 또는 방향에 맞게 사용자 인터페이스를 전환할 수 있도록 합니다. 이 예제에서 탐색 창과 소형의 임시 UI는 좀 더 작은 장치에서 잘 작동하지만 좀 더 큰 장치에서는 탭을 사용하는 것이 좋습니다.
 
 ![디자인 요소 바꾸기](images/rsp-design/rspd-replace.png)
 
-### <span id="_____________Re-architect___________"> </span> <span id="_____________re-architect___________"> </span> <span id="_____________RE-ARCHITECT___________"> </span> 다시 설계
+### <span id="_____________Re-architect___________"></span><span id="_____________re-architect___________"></span><span id="_____________RE-ARCHITECT___________"></span> 다시 설계
 
 특정 장치에 보다 적합하도록 앱 아키텍처를 축소하거나 분기할 수 있습니다. 이 예제에서는 왼쪽 장치에서 오른쪽 장치로 이동하면서 페이지가 어떻게 연결되는지 보여 줍니다.
 
@@ -215,6 +215,6 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 title: '반응형 디자인에 대한 화면 크기 및 중단점'
 description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
@@ -7,11 +8,6 @@ template: detail.hbs
 ---
 
 #  반응형 디자인에 대한 화면 크기 및 중단점
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
 
 Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366 epx 등의 몇 가지 주요 너비("중단점"이라고도 함)에 대해 디자인하는 것이 좋습니다.
 
@@ -40,8 +36,8 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 <tbody>
 <tr class="odd">
 <td align="left">일반적인 화면 크기(대각선)</td>
-<td align="left">4&quot; - 6&quot;</td>
-<td align="left">7&quot; - 12&quot; 또는 TV</td>
+<td align="left">4&quot;~6&quot;</td>
+<td align="left">7&quot;~12&quot; 또는 TV</td>
 <td align="left">13&quot; 이상</td>
 </tr>
 <tr class="even">
@@ -67,32 +63,28 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 <td align="left" valign="top"><ul>
 <li>탭 요소를 가운데 정렬합니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 12픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
-<li>접근성 향상을 위해 창의 맨 아래에 [app bars](../controls-and-patterns/app-bars.md)을 도킹합니다.</li>
+<li>접근성 향상을 위해 창의 맨 아래에 [앱 바](../controls-and-patterns/app-bars.md)를 도킹합니다.</li>
 <li>한 번에 하나의 열/영역을 사용합니다.</li>
 <li>아이콘을 사용하여 검색을 나타냅니다(검색 상자를 표시하지 않음).</li>
-<li>[
-            navigation pane](../controls-and-patterns/nav-pane.md)을 오버레이 모드로 전환하여 화면 공간을 절약합니다.</li>
-<li>[
-            master details pattern](../controls-and-patterns/master-details.md)를 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약합니다.</li>
+<li>[탐색 창](../controls-and-patterns/nav-pane.md)을 오버레이 모드로 전환하여 화면 공간 절약</li>
+<li>[마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.</li>
 </ul></td>
 <td align="left" valign="top"><ul>
 <li>탭 요소를 왼쪽에 맞춥니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
-<li>[
-            app bars](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
+<li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
 <li>최대 2개의 열/영역</li>
 <li>검색 상자를 표시합니다.</li>
-<li>좁은 아이콘 스트립이 항상 표시되도록 [navigation pane](../controls-and-patterns/nav-pane.md)을 작은 모드로 전환합니다.</li>
-
+<li>좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/nav-pane.md)을 작은 모드로 전환합니다.</li>
+<li>[TV 환경](http://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.</li>
 </ul></td>
 <td align="left" valign="top"><ul>
 <li>탭 요소를 왼쪽에 맞춥니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
-<li>[
-            app bars](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
+<li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
 <li>최대 3개의 열/영역</li>
 <li>검색 상자를 표시합니다.</li>
-<li>항상 표시되도록 [navigation pane](../controls-and-patterns/nav-pane.md)을 고정 모드로 전환합니다.</li>
+<li>항상 표시되도록 [탐색 창](../controls-and-patterns/nav-pane.md)을 도킹 모드로 전환합니다.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -102,6 +94,6 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
  
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

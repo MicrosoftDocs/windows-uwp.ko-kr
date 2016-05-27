@@ -1,17 +1,14 @@
 ---
+author: mijacobs
 Description: UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
-label: 기록 및 뒤로 탐색
+label: History and backwards navigation
 template: detail.hbs
 ---
 
 #  탐색 기록 및 뒤로 탐색
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 웹에서 개별 웹 사이트는 목차, 단추, 메뉴, 간단한 링크 목록 등과 같은 자체 탐색 시스템을 제공합니다. 탐색 환경은 웹 사이트마다 크게 다를 수 있습니다. 그러나 일관된 한 가지 탐색 환경은 바로 뒤로 기능입니다. 대부분의 브라우저는 웹 사이트와 관계없이 동일한 방식으로 동작하는 뒤로 단추를 제공합니다.
 
@@ -97,7 +94,7 @@ template: detail.hbs
 앱이 휴대폰이나 태블릿 또는 시스템 뒤로 기능이 설정된 PC 또는 노트북에서 실행될 경우 시스템은 사용자가 뒤로 단추를 누를 때 앱에 알립니다. 사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
 
 
-## <span id="Enable_system_back_navigation_support"> </span> <span id="enable_system_back_navigation_support"> </span> <span id="ENABLE_SYSTEM_BACK_NAVIGATION_SUPPORT"> </span>시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
+## <span id="Enable_system_back_navigation_support"></span><span id="enable_system_back_navigation_support"></span><span id="ENABLE_SYSTEM_BACK_NAVIGATION_SUPPORT"></span>시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
 
 
 앱은 모든 하드웨어 및 소프트웨어 시스템 뒤로 단추에 대해 뒤로 탐색 기능을 사용하도록 설정해야 합니다. [
@@ -157,10 +154,10 @@ private void App_BackRequested(object sender,
     }
 }
 ```
-## <span id="Enable_the_title_bar_back_button"> </span> <span id="enable_the_title_bar_back_button"> </span> <span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"> </span>제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
+## <span id="Enable_the_title_bar_back_button"></span><span id="enable_the_title_bar_back_button"></span><span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"></span>제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
 
 
-데스크톱 모드를 지원하고(일반적으로 PC 및 노트북이지만 일부 태블릿도 해당) 설정이 사용하도록 설정된(**설정 > 시스템 > 태블릿 모드**) 디바이스는 시스템 뒤로 단추가 포함된 전역 탐색 모음을 제공하지 않습니다.
+데스크톱 모드를 지원하고(일반적으로 PC 및 노트북이지만 일부 태블릿도 해당) 설정이 사용하도록 설정된(**설정 &gt; 시스템 &gt; 태블릿 모드**) 디바이스는 시스템 뒤로 단추가 포함된 전역 탐색 모음을 제공하지 않습니다.
 
 데스크톱 모드에서는 모든 앱이 제목 표시줄이 있는 창에서 실행됩니다. 이 제목 표시줄에 표시되는 앱에 대체 뒤로 단추를 제공할 수 있습니다.
 
@@ -257,7 +254,8 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>페이지 간, 다른 피어 그룹</strong></p></td>
-<td align="left"><strong>예</strong><p>이 그림에서 사용자는 피어 그룹을 교차해서 앱의 수준 1에서 수준 2로 이동하므로 탐색이 탐색 기록에 추가됩니다.</p>
+<td align="left"><strong>예</strong>
+<p>이 그림에서 사용자는 피어 그룹을 교차해서 앱의 수준 1에서 수준 2로 이동하므로 탐색이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>다음 그림에서 사용자는 동일한 수준의 두 피어 그룹 간을 이동하고 피어 그룹을 교차하므로 탐색이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
@@ -265,35 +263,41 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 <tr class="even">
 <td align="left"><p><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong></p>
 <p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지로 직접 이동할 수 있도록 하는 항상 존재하는 탐색 요소(예: 탭/피벗 또는 도킹된 탐색 창)가 없습니다.</p></td>
-<td align="left"><strong>예</strong><p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 탭 또는 도킹된 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
+<td align="left"><strong>예</strong>
+<p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 탭 또는 도킹된 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong></p>
 <p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소에 표시됩니다. 예를 들어 두 페이지 모두 동일한 탭/피벗 요소를 사용하거나 두 페이지 모두 도킹된 탐색 창에 표시됩니다.</p></td>
-<td align="left"><strong>아니요</strong><p>사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다.</p>
+<td align="left"><strong>아니요</strong>
+<p>사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>임시 UI 표시</strong><p>앱은 대화 상자, 시작 화면 또는 화상 키보드와 같은 팝업 또는 자식 창을 표시하거나 다중 선택 모드와 같은 특수 모드를 시작합니다.</p></td>
-<td align="left"><strong>아니요</strong><p>사용자가 뒤로 단추를 누르면 임시 UI를 해제하고(화상 키보드 숨기기, 대화 상자 취소 등) 임시 UI를 생성한 페이지로 돌아갑니다.</p>
+<td align="left"><strong>임시 UI 표시</strong>
+<p>앱은 대화 상자, 시작 화면 또는 화상 키보드와 같은 팝업 또는 자식 창을 표시하거나 다중 선택 모드와 같은 특수 모드를 시작합니다.</p></td>
+<td align="left"><strong>아니요</strong>
+<p>사용자가 뒤로 단추를 누르면 임시 UI를 해제하고(화상 키보드 숨기기, 대화 상자 취소 등) 임시 UI를 생성한 페이지로 돌아갑니다.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>항목 열거</strong><p>앱은 마스터/세부 정보 목록에서 선택한 항목에 대한 세부 정보와 같이 화면상의 항목에 대한 콘텐츠를 표시합니다.</p></td>
-<td align="left"><strong>아니요</strong><p>항목을 열거하는 것은 피어 그룹 내를 탐색하는 것과 비슷합니다. 사용자가 뒤로를 누르면 항목이 열거된 현재 페이지의 이전 페이지로 이동됩니다.</p>
+<td align="left"><strong>항목 열거</strong>
+<p>앱은 마스터/세부 정보 목록에서 선택한 항목에 대한 세부 정보와 같이 화면상의 항목에 대한 콘텐츠를 표시합니다.</p></td>
+<td align="left"><strong>아니요</strong>
+<p>항목을 열거하는 것은 피어 그룹 내를 탐색하는 것과 비슷합니다. 사용자가 뒤로를 누르면 항목이 열거된 현재 페이지의 이전 페이지로 이동됩니다.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
 </tbody>
 </table>
 
 
-### <span id="Resuming"> </span> <span id="resuming"> </span> <span id="RESUMING"> </span>다시 시작
+### <span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>다시 시작
 
 사용자가 다른 앱으로 전환했다가 해당 앱으로 돌아올 경우 탐색 기록의 마지막 페이지로 돌아오는 것이 좋습니다.
 
 
-\[이 문서에는 UWP 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 
 
@@ -304,6 +308,6 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

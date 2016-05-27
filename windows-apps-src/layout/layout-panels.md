@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
-label: 레이아웃 패널
+label: Layout panels
 template: detail.hbs
 ---
 # 레이아웃 패널
@@ -30,7 +31,7 @@ template: detail.hbs
 
 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
-> **참고**&nbsp;&nbsp;연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
+> **참고** &nbsp;&nbsp;연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
 
 **패널 테두리**
 
@@ -233,6 +234,6 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
             **ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

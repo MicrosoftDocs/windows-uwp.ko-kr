@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
-label: 탐색 디자인 기본 사항
+label: Navigation design basics
 template: detail.hbs
 ---
 
 #  UWP 앱의 탐색 디자인 기본 사항
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다. 이러한 것이 모여 앱, 페이지, 콘텐츠 간에 이동할 때 다양한 직관적인 사용자 환경을 제공합니다.
 
@@ -30,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
     직관적이라고 생각되는 일관된 환경을 제공하기 위해서는 사용자가 예측 가능한 방식으로 시스템 수준 탐색 기능에 응답합니다.
 
-## <span id="Build_the_right_navigation_structure"> </span> <span id="build_the_right_navigation_structure"> </span> <span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"> </span>적합한 탐색 구조 구축
+## <span id="Build_the_right_navigation_structure"></span><span id="build_the_right_navigation_structure"></span><span id="BUILD_THE_RIGHT_NAVIGATION_STRUCTURE"></span>적합한 탐색 구조 구축
 
 
 앱을 각 페이지에 고유한 콘텐츠 또는 기능 집합이 포함된 페이지 그룹 컬렉션으로 살펴보겠습니다. 예를 들어 사진 앱에는 사진을 촬영하기 위한 페이지, 이미지 편집을 위한 페이지 및 이미지 라이브러리를 관리하기 위한 페이지가 있을 수 있습니다. 이러한 페이지를 그룹으로 정렬하는 방법은 앱의 탐색 구조를 정의합니다. 페이지 그룹을 정렬하는 방법에는 다음 두 가지가 있습니다.
@@ -93,12 +90,12 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
  
 
-## <span id="Use_the_right_navigation_elements"> </span> <span id="use_the_right_navigation_elements"> </span> <span id="USE_THE_RIGHT_NAVIGATION_ELEMENTS"> </span>적절한 탐색 요소 사용
+## <span id="Use_the_right_navigation_elements"></span><span id="use_the_right_navigation_elements"></span><span id="USE_THE_RIGHT_NAVIGATION_ELEMENTS"></span>적절한 탐색 요소 사용
 
 
 탐색 요소는 두 가지 서비스를 제공할 수 있습니다. 사용자가 원하는 콘텐츠로 이동하도록 도와줍니다. 일부 요소는 사용자가 앱 내에서의 현재 위치를 알 수 있도록 합니다. 그러나 이러한 요소가 앱이 콘텐츠 또는 명령 요소에 사용할 수 있는 공간을 차지하므로 앱 구조에 적합한 탐색 요소만 사용하는 것이 중요합니다.
 
-### <span id="Peer-to-peer_navigation_elements"> </span> <span id="peer-to-peer_navigation_elements"> </span> <span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"> </span>피어 투 피어 탐색 요소
+### <span id="Peer-to-peer_navigation_elements"></span><span id="peer-to-peer_navigation_elements"></span><span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"></span>피어 투 피어 탐색 요소
 
 피어 투 피어 탐색 요소는 동일한 하위 트리의 동일한 수준에서 페이지 간을 탐색할 수 있도록 합니다.
 
@@ -119,7 +116,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tabs and pivot](../controls-and-patterns/tabs-pivot.md)</p>
+<td align="left"><p>[탭 및 피벗](../controls-and-patterns/tabs-pivot.md)</p>
 <p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
 <td align="left">동일한 수준의 페이지에 대한 링크의 영구 목록을 표시합니다.
 <p>탭/피벗을 사용하는 경우</p>
@@ -132,7 +129,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Nav pane](../controls-and-patterns/nav-pane.md)</p>
+<td align="left"><p>[탐색 창](../controls-and-patterns/nav-pane.md)</p>
 <p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
 <td align="left">최상위 수준 페이지에 대한 링크 목록을 표시합니다.
 <p>탐색 창을 사용하는 경우:</p>
@@ -158,7 +155,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 ![두 개의 하위 트리가 있는 앱](images/nav/nav-subtrees2.png)
 
-### <span id="Hierarchical_navigation_elements"> </span> <span id="hierarchical_navigation_elements"> </span> <span id="HIERARCHICAL_NAVIGATION_ELEMENTS"> </span>계층적 탐색 요소
+### <span id="Hierarchical_navigation_elements"></span><span id="hierarchical_navigation_elements"></span><span id="HIERARCHICAL_NAVIGATION_ELEMENTS"></span>계층적 탐색 요소
 
 계층적 탐색 요소는 부모 페이지와 해당 자식 페이지 간을 탐색할 수 있도록 합니다.
 
@@ -177,7 +174,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Hub](../controls-and-patterns/hub.md)</p>
+<td align="left"><p>[허브](../controls-and-patterns/hub.md)</p>
 <p><img src="images/higsecone-hub-thumb.png" alt="Hub" /></p></td>
 <td align="left">허브는 해당 자식 페이지의 미리 보기/요약을 제공하는 특수한 형식의 탐색 컨트롤입니다. 탐색 창 또는 탭과 달리 페이지 자체에 포함된 링크 및 섹션 머리글을 통해 이러한 자식 페이지로 탐색할 수 있습니다.
 <p>허브를 사용하는 경우:</p>
@@ -188,7 +185,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 <p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Master/details](../controls-and-patterns/master-details.md)</p>
+<td align="left"><p>[마스터/세부](../controls-and-patterns/master-details.md)</p>
 <p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
 <td align="left">항목 요약 목록(마스터 보기)을 표시합니다. 항목을 선택하면 세부 정보 섹션에 해당 항목 페이지가 표시됩니다.
 <p>마스터/세부 요소를 사용하는 경우:</p>
@@ -205,7 +202,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
  
 
-### <span id="Historical_navigation_elements"> </span> <span id="historical_navigation_elements"> </span> <span id="HISTORICAL_NAVIGATION_ELEMENTS"> </span>기록 탐색 요소
+### <span id="Historical_navigation_elements"></span><span id="historical_navigation_elements"></span><span id="HISTORICAL_NAVIGATION_ELEMENTS"></span>기록 탐색 요소
 
 <table>
 <colgroup>
@@ -221,14 +218,14 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 <tbody>
 <tr class="odd">
 <td align="left">뒤로</td>
-<td align="left"><p>사용자가 앱 내에서 그리고 디바이스에 따라 앱 간에 탐색 기록을 트래버스할 수 있도록 하겠습니다. 자세한 내용은 이 문서의 뒷부분에 있는 [Make your app work well with system-level navigation features](#backnavigation) 섹션을 참조하세요.</p></td>
+<td align="left"><p>사용자가 앱 내에서 그리고 장치에 따라 앱 간에 탐색 기록을 트래버스할 수 있도록 하겠습니다. 자세한 내용은 이 문서의 뒷부분에 있는 [앱이 시스템 수준 탐색 기능에서 잘 작동하도록 합니다.](#backnavigation) 섹션을 참조하세요.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-### <span id="Content-embedded_navigation_elements"> </span> <span id="content-embedded_navigation_elements"> </span> <span id="CONTENT-EMBEDDED_NAVIGATION_ELEMENTS"> </span>콘텐츠 포함 탐색 요소
+### <span id="Content-embedded_navigation_elements"></span><span id="content-embedded_navigation_elements"></span><span id="CONTENT-EMBEDDED_NAVIGATION_ELEMENTS"></span>콘텐츠 포함 탐색 요소
 
 <table>
 <colgroup>
@@ -251,12 +248,12 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
  
 
-### <span id="Combining_navigation_elements"> </span> <span id="combining_navigation_elements"> </span> <span id="COMBINING_NAVIGATION_ELEMENTS"> </span>탐색 요소 결합
+### <span id="Combining_navigation_elements"></span><span id="combining_navigation_elements"></span><span id="COMBINING_NAVIGATION_ELEMENTS"></span>탐색 요소 결합
 
 탐색 요소를 결합하여 앱에 적합한 탐색 환경을 만들 수 있습니다. 예를 들어 앱에서 새 탐색 창을 사용하여 두 번째 수준의 페이지에 액세스할 수 있는 최상위 페이지 및 탭에 대한 액세스를 제공할 수 있습니다.
 
 
-\[이 문서에는 UWP 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 
 
@@ -267,6 +264,6 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
