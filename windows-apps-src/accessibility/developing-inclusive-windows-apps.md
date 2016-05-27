@@ -1,13 +1,16 @@
 ---
-Description: 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하기 위한 로드맵
-title: 포괄 Windows 앱 개발
+author: Xansky
+Description: 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
-label: Developing inclusive Windows apps
+title: 포괄 Windows 10 앱 개발
+label: Developing inclusive Windows 10 apps
 template: detail.hbs
 ---
 
-포괄 Windows 앱 개발
-=================================
+# 포괄 Windows 앱 개발  
+
+키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
+
 이 문서에서는 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다.  
 
 아직 이해하지 못했으면 [포괄 소프트웨어 디자인](designing-inclusive-software.md)을 먼저 읽고 시작하세요.
@@ -42,7 +45,8 @@ UI 요소 간 키보드 탐색에 대한 자세한 내용은 [키보드 접근�
 ## 색상 및 대비  
 Windows에서 기본 제공되는 접근성 기능 중 하나는 컴퓨터 화면에서 텍스트와 이미지의 색상 대비를 강조하는 고대비 모드입니다. 일부 사용자의 경우 색상 대비를 높이면 눈의 피로를 줄이고 더 읽기 쉽게 만들어 줍니다. 고대비로 UI를 확인할 때 컨트롤이 일관되고 시스템 색(하드 코드된 색이 아님)으로 코딩되었는지 확인하여 고대비를 사용하지 않는 사용자가 보는 화면에서 모든 컨트롤을 볼 수 있도록 합니다.  
 
-```XAML
+XAML
+```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
 시스템 색 및 리소스 사용에 대한 자세한 내용은 [XAML 테마 리소스](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/xaml-theme-resources)를 참조하세요.
@@ -57,7 +61,7 @@ Windows에서 기본 제공되는 접근성 기능 중 하나는 컴퓨터 화�
 
 **색 조합** – 약 7%의 남성(및 1% 미만의 여성)에게 일종의 색각 장애가 있습니다. 색맹 사용자는 특정 색을 구분하는 데 어려움이 있으므로 응용 프로그램에서의 상태 또는 의미를 전달할 때 한 가지 색만을 사용하지 않는 것이 중요합니다. 장식 이미지(예: 아이콘 또는 배경)에 대해서는 색맹 사용자가 이미지를 최대한 인식할 수 있도록 색 조합을 선택해야 합니다.  
 
-## 접근성 검사 목록 ##
+## 접근성 검사 목록  
 다음은 접근성 검사 목록의 간략화된 버전입니다.  
 1. 앱에 있는 콘텐츠 및 대화형 UI 요소의 접근성 있는 이름(필수) 및 설명(선택)을 설정합니다.
 2. 키보드 접근성을 구현합니다.
@@ -68,13 +72,14 @@ Windows에서 기본 제공되는 접근성 기능 중 하나는 컴퓨터 화�
 
 자세한 내용은 [접근성 검사 목록](accessibility-checklist.md) 항목 전체를 참조하세요.
 
-## 참고 항목 ##
+## 관련 항목  
 * [포괄 소프트웨어 디자인](designing-inclusive-software.md)  
 * [포괄 디자인](http://design.microsoft.com/inclusive)
+* [피해야 할 접근성 사례](practices-to-avoid.md)
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 
