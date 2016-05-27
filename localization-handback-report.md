@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 533
+ Total Files | 559
 
 ## File List
  Source File | Status | Details 
@@ -539,6 +539,32 @@
  [windows-apps-src\whats-new\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/whats-new/index.md) | InSyncHandedBackSuccess | [Details](#c7090cdf2b9ab889b5eeace74b78161d40ff89723771)
  [windows-apps-src\whats-new\windows-10-rtm-july-2015.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/whats-new/windows-10-rtm-july-2015.md) | InSyncHandedBackSuccess | [Details](#c5abd89230fb30a316b438eb5dec6464a9ef6da83772)
  [windows-apps-src\whats-new\windows-10-version-1511-november-2015.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/whats-new/windows-10-version-1511-november-2015.md) | InSyncHandedBackSuccess | [Details](#bf610a2653635a6d6fc4d651a369f4ffed56b34e3773)
+ [windows-apps-src\xaml-platform\attached-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/attached-properties-overview.md) | InSyncHandedBackSuccess | [Details](#b676110274bacc8aeacb2527099534cf0e26fa6b3788)
+ [windows-apps-src\xaml-platform\binding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/binding-markup-extension.md) | InSyncHandedBackSuccess | [Details](#740110809845220d919c6ba3c90b1393dbc8ae943789)
+ [windows-apps-src\xaml-platform\custom-attached-properties.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/xaml-platform/custom-attached-properties.md) | InSyncHandedBackSuccess | [Details](#cf6ca169623311e515f02a174224d57652afc7533790)
+ [windows-apps-src\xaml-platform\customresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/customresource-markup-extension.md) | InSyncHandedBackSuccess | [Details](#4758f67c7bcbc58fda47faf1e872998302086c103792)
+ [windows-apps-src\xaml-platform\dependency-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/dependency-properties-overview.md) | InSyncHandedBackSuccess | [Details](#6c431b5dd0d95159c108eb3c542509b5946f29443793)
+ [windows-apps-src\xaml-platform\events-and-routed-events-overview.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/xaml-platform/events-and-routed-events-overview.md) | InSyncHandedBackSuccess | [Details](#4e4e21789dd76ad691f3828d23c73adcfc31efdf3794)
+ [windows-apps-src\xaml-platform\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/index.md) | InSyncHandedBackSuccess | [Details](#4deae037857312f891c8c4beae2b6a89adc152cd3795)
+ [windows-apps-src\xaml-platform\move-draw-commands-syntax.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/move-draw-commands-syntax.md) | InSyncHandedBackSuccess | [Details](#ec0209da2df9fdcb18d3470c8597f66a80543e123796)
+ [windows-apps-src\xaml-platform\property-path-syntax.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/property-path-syntax.md) | InSyncHandedBackSuccess | [Details](#0b1851bc9d19de5b678f8c6c3a255c0ba3057a853797)
+ [windows-apps-src\xaml-platform\staticresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/staticresource-markup-extension.md) | InSyncHandedBackSuccess | [Details](#3f486a8ac56e37a7401b9a87a4d560cac6b68f6f3799)
+ [windows-apps-src\xaml-platform\templatebinding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/templatebinding-markup-extension.md) | InSyncHandedBackSuccess | [Details](#1a8006e58391c41568731810d9b1901474e8d18f3801)
+ [windows-apps-src\xaml-platform\template-settings-classes.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/template-settings-classes.md) | InSyncHandedBackSuccess | [Details](#1ae6ca45808eae8943f471cceaf78fc5e8d814103800)
+ [windows-apps-src\xaml-platform\themeresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/9c657f906e6dedb259b8a98373f56ac5a63bd845/windows-apps-src/xaml-platform/themeresource-markup-extension.md) | InSyncHandedBackSuccess | [Details](#246c991bbdbc95e73ea8d4884cd4d617592bfc513802)
+ [windows-apps-src\xaml-platform\xaml-and-whitespace.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/xaml-and-whitespace.md) | InSyncHandedBackSuccess | [Details](#408c9c7f79f5db81bdf7810a6c71cf25c1c8ec513812)
+ [windows-apps-src\xaml-platform\xaml-intrinsic-data-types.md](https://github.com/Microsoft/windows-apps/blob/1dc9be736a5b12a708c6e18a978a8d6de0b7913c/windows-apps-src/xaml-platform/xaml-intrinsic-data-types.md) | InSyncHandedBackSuccess | [Details](#93dd9df9cbb74b805b9f1cdbda4eda2a6cd313b73813)
+ [windows-apps-src\xaml-platform\xaml-namespaces-and-namespace-mapping.md](https://github.com/Microsoft/windows-apps/blob/3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5/windows-apps-src/xaml-platform/xaml-namespaces-and-namespace-mapping.md) | InSyncHandedBackSuccess | [Details](#fe24a66836d85e8d102ebc6b23b42c32a687c5933815)
+ [windows-apps-src\xaml-platform\xaml-syntax-guide.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/xaml-platform/xaml-syntax-guide.md) | InSyncHandedBackSuccess | [Details](#8e7819b02d7a22a16cf16091d08bef0aabc8d36e3817)
+ [windows-apps-src\xaml-platform\x-bind-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-bind-markup-extension.md) | InSyncHandedBackSuccess | [Details](#ceb5562ae08d7cc966f80fdb7e23f12afe0404303803)
+ [windows-apps-src\xaml-platform\x-class-attribute.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-class-attribute.md) | InSyncHandedBackSuccess | [Details](#83267df025baeb802bfdd0ec03ecd3bf7b01db763804)
+ [windows-apps-src\xaml-platform\x-deferloadstrategy-attribute.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-deferloadstrategy-attribute.md) | InSyncHandedBackSuccess | [Details](#b989a31439444f06dacb86adb186f853d1637f6c3805)
+ [windows-apps-src\xaml-platform\x-fieldmodifier-attribute.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-fieldmodifier-attribute.md) | InSyncHandedBackSuccess | [Details](#3f6c759d582d92aa33df5874186aeaa3a7c37b013806)
+ [windows-apps-src\xaml-platform\x-key-attribute.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/xaml-platform/x-key-attribute.md) | InSyncHandedBackSuccess | [Details](#00d801dc3ebb8894f8e21ba0c1b9f3aecc981f303807)
+ [windows-apps-src\xaml-platform\x-name-attribute.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/xaml-platform/x-name-attribute.md) | InSyncHandedBackSuccess | [Details](#442c2fa103e1e968ef47ea990bfe8e166daec88b3808)
+ [windows-apps-src\xaml-platform\x-null-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-null-markup-extension.md) | InSyncHandedBackSuccess | [Details](#96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a093809)
+ [windows-apps-src\xaml-platform\x-phase-attribute.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-phase-attribute.md) | InSyncHandedBackSuccess | [Details](#dfa12909d19a44ed38939c612712c8fe90f3f5843810)
+ [windows-apps-src\xaml-platform\x-uid-directive.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-uid-directive.md) | InSyncHandedBackSuccess | [Details](#4f8aa553c99b6071cedc4f9d93cf8258b75eca493811)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -6935,6 +6961,318 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/362359f07b73930c34d6395633b88b4d163ca0f6/ol-handback/Microsoft/windows-apps.ko-kr/master/whats-new/windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:36:41
+* [Back to Top](#report-top)
+
+##### <a name='b676110274bacc8aeacb2527099534cf0e26fa6b3788'></a> Source: [windows-apps-src\xaml-platform\attached-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/attached-properties-overview.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\attached-properties-overview.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/attached-properties-overview.md)
+* Handoff File: [attached-properties-overview.00e3dadaa435d466139dbc4949bb88139c5712ad.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/attached-properties-overview.00e3dadaa435d466139dbc4949bb88139c5712ad.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [attached-properties-overview.00e3dadaa435d466139dbc4949bb88139c5712ad.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/attached-properties-overview.00e3dadaa435d466139dbc4949bb88139c5712ad.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='740110809845220d919c6ba3c90b1393dbc8ae943789'></a> Source: [windows-apps-src\xaml-platform\binding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/binding-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\binding-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/binding-markup-extension.md)
+* Handoff File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='cf6ca169623311e515f02a174224d57652afc7533790'></a> Source: [windows-apps-src\xaml-platform\custom-attached-properties.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/xaml-platform/custom-attached-properties.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\custom-attached-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/custom-attached-properties.md)
+* Handoff File: [custom-attached-properties.759ee7480bbd45925923920651b0568c4bc71b08.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/custom-attached-properties.759ee7480bbd45925923920651b0568c4bc71b08.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [custom-attached-properties.759ee7480bbd45925923920651b0568c4bc71b08.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/custom-attached-properties.759ee7480bbd45925923920651b0568c4bc71b08.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='4758f67c7bcbc58fda47faf1e872998302086c103792'></a> Source: [windows-apps-src\xaml-platform\customresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/customresource-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\customresource-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/customresource-markup-extension.md)
+* Handoff File: [customresource-markup-extension.7312429039e5d3574e5e24a2a99a120d8ae08a7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/customresource-markup-extension.7312429039e5d3574e5e24a2a99a120d8ae08a7b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [customresource-markup-extension.7312429039e5d3574e5e24a2a99a120d8ae08a7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/customresource-markup-extension.7312429039e5d3574e5e24a2a99a120d8ae08a7b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='6c431b5dd0d95159c108eb3c542509b5946f29443793'></a> Source: [windows-apps-src\xaml-platform\dependency-properties-overview.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/dependency-properties-overview.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\dependency-properties-overview.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/dependency-properties-overview.md)
+* Handoff File: [dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/dependency-properties-overview.4e153595dc332630d6475407ba029128b8c8447d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='4e4e21789dd76ad691f3828d23c73adcfc31efdf3794'></a> Source: [windows-apps-src\xaml-platform\events-and-routed-events-overview.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/xaml-platform/events-and-routed-events-overview.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\events-and-routed-events-overview.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/events-and-routed-events-overview.md)
+* Handoff File: [events-and-routed-events-overview.e3d8cecd3f587201313eff0fa65a4685c8adad86.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/events-and-routed-events-overview.e3d8cecd3f587201313eff0fa65a4685c8adad86.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [events-and-routed-events-overview.e3d8cecd3f587201313eff0fa65a4685c8adad86.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/events-and-routed-events-overview.e3d8cecd3f587201313eff0fa65a4685c8adad86.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='4deae037857312f891c8c4beae2b6a89adc152cd3795'></a> Source: [windows-apps-src\xaml-platform\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/index.md)
+* Handoff File: [index.04d4d27fd67c4406f7b136597d8e1139c28c42d0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.04d4d27fd67c4406f7b136597d8e1139c28c42d0.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.04d4d27fd67c4406f7b136597d8e1139c28c42d0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/index.04d4d27fd67c4406f7b136597d8e1139c28c42d0.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='ec0209da2df9fdcb18d3470c8597f66a80543e123796'></a> Source: [windows-apps-src\xaml-platform\move-draw-commands-syntax.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/move-draw-commands-syntax.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\move-draw-commands-syntax.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/move-draw-commands-syntax.md)
+* Handoff File: [move-draw-commands-syntax.d073ef49866bc8693351baace0550221cbdd8795.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/move-draw-commands-syntax.d073ef49866bc8693351baace0550221cbdd8795.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [move-draw-commands-syntax.d073ef49866bc8693351baace0550221cbdd8795.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/move-draw-commands-syntax.d073ef49866bc8693351baace0550221cbdd8795.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='0b1851bc9d19de5b678f8c6c3a255c0ba3057a853797'></a> Source: [windows-apps-src\xaml-platform\property-path-syntax.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/property-path-syntax.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\property-path-syntax.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/property-path-syntax.md)
+* Handoff File: [property-path-syntax.86cb6f42ce5dbf771c1e3f0b026d0e8b0e7a8ffe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/property-path-syntax.86cb6f42ce5dbf771c1e3f0b026d0e8b0e7a8ffe.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [property-path-syntax.86cb6f42ce5dbf771c1e3f0b026d0e8b0e7a8ffe.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/property-path-syntax.86cb6f42ce5dbf771c1e3f0b026d0e8b0e7a8ffe.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='3f486a8ac56e37a7401b9a87a4d560cac6b68f6f3799'></a> Source: [windows-apps-src\xaml-platform\staticresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/staticresource-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\staticresource-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/staticresource-markup-extension.md)
+* Handoff File: [staticresource-markup-extension.c4661d2f9eb296a7d7da1c02959e4e021f04f1e5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/staticresource-markup-extension.c4661d2f9eb296a7d7da1c02959e4e021f04f1e5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [staticresource-markup-extension.c4661d2f9eb296a7d7da1c02959e4e021f04f1e5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/staticresource-markup-extension.c4661d2f9eb296a7d7da1c02959e4e021f04f1e5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='1a8006e58391c41568731810d9b1901474e8d18f3801'></a> Source: [windows-apps-src\xaml-platform\templatebinding-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/templatebinding-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\templatebinding-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/templatebinding-markup-extension.md)
+* Handoff File: [templatebinding-markup-extension.9ae35749cba19c66124610958fdf2fb25769b258.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/templatebinding-markup-extension.9ae35749cba19c66124610958fdf2fb25769b258.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [templatebinding-markup-extension.9ae35749cba19c66124610958fdf2fb25769b258.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/templatebinding-markup-extension.9ae35749cba19c66124610958fdf2fb25769b258.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='1ae6ca45808eae8943f471cceaf78fc5e8d814103800'></a> Source: [windows-apps-src\xaml-platform\template-settings-classes.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/template-settings-classes.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\template-settings-classes.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/template-settings-classes.md)
+* Handoff File: [template-settings-classes.6ae5926b528c6bb8c70cee8f1176977d431fcab5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/template-settings-classes.6ae5926b528c6bb8c70cee8f1176977d431fcab5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [template-settings-classes.6ae5926b528c6bb8c70cee8f1176977d431fcab5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/template-settings-classes.6ae5926b528c6bb8c70cee8f1176977d431fcab5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='246c991bbdbc95e73ea8d4884cd4d617592bfc513802'></a> Source: [windows-apps-src\xaml-platform\themeresource-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/9c657f906e6dedb259b8a98373f56ac5a63bd845/windows-apps-src/xaml-platform/themeresource-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\themeresource-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/themeresource-markup-extension.md)
+* Handoff File: [themeresource-markup-extension.1a19518a0f3da2f625793df3668c17ad6d82afc4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/themeresource-markup-extension.1a19518a0f3da2f625793df3668c17ad6d82afc4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [themeresource-markup-extension.1a19518a0f3da2f625793df3668c17ad6d82afc4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/themeresource-markup-extension.1a19518a0f3da2f625793df3668c17ad6d82afc4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='408c9c7f79f5db81bdf7810a6c71cf25c1c8ec513812'></a> Source: [windows-apps-src\xaml-platform\xaml-and-whitespace.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/xaml-and-whitespace.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\xaml-and-whitespace.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/xaml-and-whitespace.md)
+* Handoff File: [xaml-and-whitespace.0aa7a92581b5fcb6dad05740b2f2056b434b1760.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-and-whitespace.0aa7a92581b5fcb6dad05740b2f2056b434b1760.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-and-whitespace.0aa7a92581b5fcb6dad05740b2f2056b434b1760.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/xaml-and-whitespace.0aa7a92581b5fcb6dad05740b2f2056b434b1760.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='93dd9df9cbb74b805b9f1cdbda4eda2a6cd313b73813'></a> Source: [windows-apps-src\xaml-platform\xaml-intrinsic-data-types.md](https://github.com/Microsoft/windows-apps/blob/1dc9be736a5b12a708c6e18a978a8d6de0b7913c/windows-apps-src/xaml-platform/xaml-intrinsic-data-types.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\xaml-intrinsic-data-types.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/xaml-intrinsic-data-types.md)
+* Handoff File: [xaml-intrinsic-data-types.fb0de19cdad63c788add66ad9b4077bd0bf29c8f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-intrinsic-data-types.fb0de19cdad63c788add66ad9b4077bd0bf29c8f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-intrinsic-data-types.fb0de19cdad63c788add66ad9b4077bd0bf29c8f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/xaml-intrinsic-data-types.fb0de19cdad63c788add66ad9b4077bd0bf29c8f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='fe24a66836d85e8d102ebc6b23b42c32a687c5933815'></a> Source: [windows-apps-src\xaml-platform\xaml-namespaces-and-namespace-mapping.md](https://github.com/Microsoft/windows-apps/blob/3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5/windows-apps-src/xaml-platform/xaml-namespaces-and-namespace-mapping.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\xaml-namespaces-and-namespace-mapping.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/xaml-namespaces-and-namespace-mapping.md)
+* Handoff File: [xaml-namespaces-and-namespace-mapping.2b41bb7b010fee3938088edbb2b56cc7f5ae1d20.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-namespaces-and-namespace-mapping.2b41bb7b010fee3938088edbb2b56cc7f5ae1d20.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-namespaces-and-namespace-mapping.2b41bb7b010fee3938088edbb2b56cc7f5ae1d20.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/xaml-namespaces-and-namespace-mapping.2b41bb7b010fee3938088edbb2b56cc7f5ae1d20.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='8e7819b02d7a22a16cf16091d08bef0aabc8d36e3817'></a> Source: [windows-apps-src\xaml-platform\xaml-syntax-guide.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/xaml-platform/xaml-syntax-guide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\xaml-syntax-guide.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/xaml-syntax-guide.md)
+* Handoff File: [xaml-syntax-guide.c9a8b5d06ca0b6b2d786a2525ebfbc18e7fb6360.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-syntax-guide.c9a8b5d06ca0b6b2d786a2525ebfbc18e7fb6360.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-syntax-guide.c9a8b5d06ca0b6b2d786a2525ebfbc18e7fb6360.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/xaml-syntax-guide.c9a8b5d06ca0b6b2d786a2525ebfbc18e7fb6360.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='ceb5562ae08d7cc966f80fdb7e23f12afe0404303803'></a> Source: [windows-apps-src\xaml-platform\x-bind-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-bind-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-bind-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-bind-markup-extension.md)
+* Handoff File: [x-bind-markup-extension.e15da429bdcc720c5886b429cf5b14aafd611830.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-bind-markup-extension.e15da429bdcc720c5886b429cf5b14aafd611830.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-bind-markup-extension.e15da429bdcc720c5886b429cf5b14aafd611830.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-bind-markup-extension.e15da429bdcc720c5886b429cf5b14aafd611830.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='83267df025baeb802bfdd0ec03ecd3bf7b01db763804'></a> Source: [windows-apps-src\xaml-platform\x-class-attribute.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-class-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-class-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-class-attribute.md)
+* Handoff File: [x-class-attribute.53e5d3745617ce6cf90eb922527fb79f723d66f6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-class-attribute.53e5d3745617ce6cf90eb922527fb79f723d66f6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-class-attribute.53e5d3745617ce6cf90eb922527fb79f723d66f6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-class-attribute.53e5d3745617ce6cf90eb922527fb79f723d66f6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='b989a31439444f06dacb86adb186f853d1637f6c3805'></a> Source: [windows-apps-src\xaml-platform\x-deferloadstrategy-attribute.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-deferloadstrategy-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-deferloadstrategy-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-deferloadstrategy-attribute.md)
+* Handoff File: [x-deferloadstrategy-attribute.c43f026c410265fc6c49a920ed9b970f1f9807bc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-deferloadstrategy-attribute.c43f026c410265fc6c49a920ed9b970f1f9807bc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-deferloadstrategy-attribute.c43f026c410265fc6c49a920ed9b970f1f9807bc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-deferloadstrategy-attribute.c43f026c410265fc6c49a920ed9b970f1f9807bc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='3f6c759d582d92aa33df5874186aeaa3a7c37b013806'></a> Source: [windows-apps-src\xaml-platform\x-fieldmodifier-attribute.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-fieldmodifier-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-fieldmodifier-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-fieldmodifier-attribute.md)
+* Handoff File: [x-fieldmodifier-attribute.7716de02fef8d993a4400f6fb64c2550d4d8da87.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-fieldmodifier-attribute.7716de02fef8d993a4400f6fb64c2550d4d8da87.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-fieldmodifier-attribute.7716de02fef8d993a4400f6fb64c2550d4d8da87.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-fieldmodifier-attribute.7716de02fef8d993a4400f6fb64c2550d4d8da87.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='00d801dc3ebb8894f8e21ba0c1b9f3aecc981f303807'></a> Source: [windows-apps-src\xaml-platform\x-key-attribute.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/xaml-platform/x-key-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-key-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-key-attribute.md)
+* Handoff File: [x-key-attribute.085c1ff19a58e956f1060e970c080b871dccf2ac.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-key-attribute.085c1ff19a58e956f1060e970c080b871dccf2ac.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-key-attribute.085c1ff19a58e956f1060e970c080b871dccf2ac.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-key-attribute.085c1ff19a58e956f1060e970c080b871dccf2ac.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='442c2fa103e1e968ef47ea990bfe8e166daec88b3808'></a> Source: [windows-apps-src\xaml-platform\x-name-attribute.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/xaml-platform/x-name-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-name-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-name-attribute.md)
+* Handoff File: [x-name-attribute.bcb28d5a5579023c15a3001ef5e8743355e1b831.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-name-attribute.bcb28d5a5579023c15a3001ef5e8743355e1b831.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-name-attribute.bcb28d5a5579023c15a3001ef5e8743355e1b831.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-name-attribute.bcb28d5a5579023c15a3001ef5e8743355e1b831.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a093809'></a> Source: [windows-apps-src\xaml-platform\x-null-markup-extension.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-null-markup-extension.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-null-markup-extension.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-null-markup-extension.md)
+* Handoff File: [x-null-markup-extension.481dbae6c6257c6022c49eb4441ca0da034f7af6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-null-markup-extension.481dbae6c6257c6022c49eb4441ca0da034f7af6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-null-markup-extension.481dbae6c6257c6022c49eb4441ca0da034f7af6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-null-markup-extension.481dbae6c6257c6022c49eb4441ca0da034f7af6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='dfa12909d19a44ed38939c612712c8fe90f3f5843810'></a> Source: [windows-apps-src\xaml-platform\x-phase-attribute.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/xaml-platform/x-phase-attribute.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-phase-attribute.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-phase-attribute.md)
+* Handoff File: [x-phase-attribute.01a768bfd86405da2aabb530bd2ce9535b45f4e8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-phase-attribute.01a768bfd86405da2aabb530bd2ce9535b45f4e8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-phase-attribute.01a768bfd86405da2aabb530bd2ce9535b45f4e8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-phase-attribute.01a768bfd86405da2aabb530bd2ce9535b45f4e8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
+* [Back to Top](#report-top)
+
+##### <a name='4f8aa553c99b6071cedc4f9d93cf8258b75eca493811'></a> Source: [windows-apps-src\xaml-platform\x-uid-directive.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/xaml-platform/x-uid-directive.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\xaml-platform\x-uid-directive.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b482510d78fe88cebd16ee5cc24a9c2d7fe4b13b/windows-apps-src/xaml-platform/x-uid-directive.md)
+* Handoff File: [x-uid-directive.98148749f4ac1e90764998cc5371534cadfea313.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/x-uid-directive.98148749f4ac1e90764998cc5371534cadfea313.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [x-uid-directive.98148749f4ac1e90764998cc5371534cadfea313.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4e8b59cebd190a21a301bb7d8b676973aabe18f7/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-platform/x-uid-directive.98148749f4ac1e90764998cc5371534cadfea313.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:37:03
 * [Back to Top](#report-top)
 
 
