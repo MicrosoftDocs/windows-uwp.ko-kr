@@ -5372,9 +5372,6 @@
   "b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10": [
     "windows-apps-src\\publish\\account-types-locations-and-fees.md"
   ],
-  "01b890142ddc82237ccf2f94e1a4d30bb99a5812": [
-    "windows-apps-src\\publish\\account-types-locations-and-fees.md"
-  ],
   "bfdf4f9f2d94a31a1c159e947615c10abf556aad": [
     "windows-apps-src\\publish\\acquisitions-report.md"
   ],
@@ -5385,9 +5382,6 @@
     "windows-apps-src\\publish\\advertising-performance-report.md"
   ],
   "8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e": [
-    "windows-apps-src\\publish\\affiliates-performance-report.md"
-  ],
-  "e9a10565461b9f585a70f03bfdb30883bcb25af9": [
     "windows-apps-src\\publish\\affiliates-performance-report.md"
   ],
   "559842fb6740236780756018d01036b835660309": [
@@ -5483,9 +5477,6 @@
   "281c544f4c432ea36cad0f31d2d3567e4bee9da6": [
     "windows-apps-src\\publish\\distribute-lob-apps-to-enterprises.md"
   ],
-  "68a1b6c3b2af734fe67f262f8585630d05ca11d7": [
-    "windows-apps-src\\publish\\distribute-lob-apps-to-enterprises.md"
-  ],
   "959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e": [
     "windows-apps-src\\publish\\download-analytic-reports.md"
   ],
@@ -5549,9 +5540,6 @@
   "18e25d0064652089d450eec811a7a5d24b8dc3e8": [
     "windows-apps-src\\publish\\manage-account-users.md"
   ],
-  "2c39a42bdc4f197baef4364340a191e74c823b2f": [
-    "windows-apps-src\\publish\\manage-account-users.md"
-  ],
   "e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5": [
     "windows-apps-src\\publish\\manage-app-names.md"
   ],
@@ -5588,22 +5576,10 @@
   "92948dddf1ada8fdceb305d28befa015ee797818": [
     "windows-apps-src\\publish\\package-flights.md"
   ],
-  "dbc445db596b30dc216deeab11d996da84b6cdc1": [
-    "windows-apps-src\\publish\\package-flights.md"
-  ],
-  "25961d021cf052f9a81ad997b33b1f0d28c2b208": [
-    "windows-apps-src\\publish\\package-flights.md"
-  ],
   "9910ca5b5a3fd5d24643a1dfc6da3644d561c617": [
     "windows-apps-src\\publish\\package-version-numbering.md"
   ],
   "78a52fb9ed86538161544b0c5b3bcd19e741c8fa": [
-    "windows-apps-src\\publish\\payout-summary.md"
-  ],
-  "1e989f9255f753140885f111fe2851f3aad91258": [
-    "windows-apps-src\\publish\\payout-summary.md"
-  ],
-  "f9f5f43dbca8b1f675459ac524263fbc168c4f92": [
     "windows-apps-src\\publish\\payout-summary.md"
   ],
   "d6bf60e1dae7ec62e3cdbba8098a24c093d5deb1": [
@@ -5682,9 +5658,6 @@
     "windows-apps-src\\publish\\vat-info.md"
   ],
   "f00d817616d473ef220ebc1817c2bf9207a7aea0": [
-    "windows-apps-src\\publish\\view-app-identity-details.md"
-  ],
-  "f097be23fecd720e08db294f41e70b8ff0b0c467": [
     "windows-apps-src\\publish\\view-app-identity-details.md"
   ],
   "56b8492fea59c9a744c948d27e728e2305388cf8": [

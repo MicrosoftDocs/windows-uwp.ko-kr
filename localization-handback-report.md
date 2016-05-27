@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 420
+ Total Files | 487
 
 ## File List
  Source File | Status | Details 
@@ -426,6 +426,73 @@
  [windows-apps-src\porting\wpsl-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-porting-to-a-uwp-project.md) | InSyncHandedBackSuccess | [Details](#74cbd9789636383e6d04798435780dcda6b897d03465)
  [windows-apps-src\porting\wpsl-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-root.md) | InSyncHandedBackSuccess | [Details](#19dde1c9b0df3b2a5e464feb15e43af9dd2836613467)
  [windows-apps-src\porting\wpsl-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/wpsl-to-uwp-troubleshooting.md) | InSyncHandedBackSuccess | [Details](#0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc13468)
+ [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-affiliate-ads.md) | InSyncHandedBackSuccess | [Details](#0ac051d5774dadde48e2692683a6bcfae8264d1c3469)
+ [windows-apps-src\publish\about-community-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-community-ads.md) | InSyncHandedBackSuccess | [Details](#d9d5c47e7be8f33eb678f8ef1864d2328d50a7b33470)
+ [windows-apps-src\publish\about-house-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-house-ads.md) | InSyncHandedBackSuccess | [Details](#c9b73bb1963839640243fce4caaa7f3701b1eb453471)
+ [windows-apps-src\publish\account-types-locations-and-fees.md](https://github.com/Microsoft/windows-apps/blob/93b6d952e42949917a0fff5b39f3f194f49531d5/windows-apps-src/publish/account-types-locations-and-fees.md) | InSyncHandedBackSuccess | [Details](#b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b103472)
+ [windows-apps-src\publish\acquisitions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/acquisitions-report.md) | InSyncHandedBackSuccess | [Details](#bfdf4f9f2d94a31a1c159e947615c10abf556aad3473)
+ [windows-apps-src\publish\ad-mediation-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/ad-mediation-report.md) | InSyncHandedBackSuccess | [Details](#1597e21414dbb5d1b540a2dd67478fbcc83d574e3474)
+ [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps/blob/93e12837aec151b0cd1fa711c9e04081d74a3962/windows-apps-src/publish/advertising-performance-report.md) | InSyncHandedBackSuccess | [Details](#1617005cff264a89eb66e326e2bedf9f6641a3da3475)
+ [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/577b238875b2d0edd47d9ad0e5e73ca79a6acf75/windows-apps-src/publish/affiliates-performance-report.md) | InSyncHandedBackSuccess | [Details](#8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e3476)
+ [windows-apps-src\publish\age-ratings.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/age-ratings.md) | InSyncHandedBackSuccess | [Details](#559842fb6740236780756018d01036b8356603093477)
+ [windows-apps-src\publish\analytics.md](https://github.com/Microsoft/windows-apps/blob/dfaf348956b19746aa5332aeb7ad5cbc4b224e8c/windows-apps-src/publish/analytics.md) | InSyncHandedBackSuccess | [Details](#8922a53da8b1bc97bef7faf49d0e412a261271883478)
+ [windows-apps-src\publish\app-declarations.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-declarations.md) | InSyncHandedBackSuccess | [Details](#ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae3479)
+ [windows-apps-src\publish\app-install-ads-reports.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-install-ads-reports.md) | InSyncHandedBackSuccess | [Details](#acd91c578d7222e5fb115a4784f3360333f2a0633480)
+ [windows-apps-src\publish\app-management-and-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-management-and-services.md) | InSyncHandedBackSuccess | [Details](#71077ac3f64e10734021e5fb655168f7273e3cb63481)
+ [windows-apps-src\publish\app-marketing-guidelines.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-marketing-guidelines.md) | InSyncHandedBackSuccess | [Details](#64c6dd45053070096ff7d7e932bac1c5601945183482)
+ [windows-apps-src\publish\app-package-requirements.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-package-requirements.md) | InSyncHandedBackSuccess | [Details](#951c00f9fd2c945ac44d47bfae701049e937b98f3483)
+ [windows-apps-src\publish\app-promotion-and-customer-engagement.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-promotion-and-customer-engagement.md) | InSyncHandedBackSuccess | [Details](#3511533f76294767ca409b09a718555a6194e4513484)
+ [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-screenshots-and-images.md) | InSyncHandedBackSuccess | [Details](#a4065a32fa7861b39295ca79325943028a8bcf343485)
+ [windows-apps-src\publish\app-submissions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-submissions.md) | InSyncHandedBackSuccess | [Details](#59f41b74ca264606b4668addf44a07c82e1735793486)
+ [windows-apps-src\publish\avoid-common-certification-failures.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/avoid-common-certification-failures.md) | InSyncHandedBackSuccess | [Details](#6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb743487)
+ [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/beta-testing-and-targeted-distribution.md) | InSyncHandedBackSuccess | [Details](#a544565bf7bb82f2be1ded3e60836d5d191c6e933488)
+ [windows-apps-src\publish\category-and-subcategory-table.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/category-and-subcategory-table.md) | InSyncHandedBackSuccess | [Details](#9f9f5da100109af5dc38f7ffbc3cadca842b12143489)
+ [windows-apps-src\publish\channels-and-conversions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/channels-and-conversions-report.md) | InSyncHandedBackSuccess | [Details](#e82299f156a7e4f82e9219dc9b0ef6171e72c74e3490)
+ [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/publish/create-a-custom-app-promotion-campaign.md) | InSyncHandedBackSuccess | [Details](#b6fa63727ac636d37c52e2f3247c52efb1f8b7633492)
+ [windows-apps-src\publish\create-platform-specific-descriptions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/create-platform-specific-descriptions.md) | InSyncHandedBackSuccess | [Details](#00be0238af7969a84abe79f9aee3bec485fbb3e33496)
+ [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps/blob/3b65bbaf2498dde7484c055ff86ed09e89bf3405/windows-apps-src/publish/create-your-app-by-reserving-a-name.md) | InSyncHandedBackSuccess | [Details](#5e4933be456bc76eb5923f5c081e8376c43c118b3497)
+ [windows-apps-src\publish\customer-groups.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/customer-groups.md) | InSyncHandedBackSuccess | [Details](#858b777c62ffaf6e0ea8c6811e5051cc20474ba03498)
+ [windows-apps-src\publish\define-pricing-and-market-selection.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/define-pricing-and-market-selection.md) | InSyncHandedBackSuccess | [Details](#9a1d8b8fb57989091fe7b82ad34066240f62cb8b3499)
+ [windows-apps-src\publish\download-analytic-reports.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/download-analytic-reports.md) | InSyncHandedBackSuccess | [Details](#959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e3502)
+ [windows-apps-src\publish\enter-app-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/enter-app-properties.md) | InSyncHandedBackSuccess | [Details](#8861c13478adbe2010a164126c56f555375e04723503)
+ [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/4e857ec7ee98459afdd0d8ec85b5ec3a761049f3/windows-apps-src/publish/feedback-report.md) | InSyncHandedBackSuccess | [Details](#9ad3025f7890de3677801b309b6714b1b46a06073505)
+ [windows-apps-src\publish\generate-preinstall-packages-for-oems.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/generate-preinstall-packages-for-oems.md) | InSyncHandedBackSuccess | [Details](#dba1c1f754b4200bd00395e0b71d18bee30e3a2d3506)
+ [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/generate-promotional-codes.md) | InSyncHandedBackSuccess | [Details](#4001f374a80cd7c62df6230a9429dd5b5a19d2b23507)
+ [windows-apps-src\publish\getting-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/getting-paid-apps.md) | InSyncHandedBackSuccess | [Details](#b7c9bcf36aaee0344c6916fcc81aca189ef0f4813508)
+ [windows-apps-src\publish\guidance-for-app-package-management.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/guidance-for-app-package-management.md) | InSyncHandedBackSuccess | [Details](#ac8d150f426c7d32e8a3b61b7f08cc0b84feedb83509)
+ [windows-apps-src\publish\health-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/health-report.md) | InSyncHandedBackSuccess | [Details](#78bedc3e0551feef8efe61b3b664145e292817143510)
+ [windows-apps-src\publish\how-your-app-appears-in-the-store-for-windows-10-customers.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/how-your-app-appears-in-the-store-for-windows-10-customers.md) | InSyncHandedBackSuccess | [Details](#5e8d25264a17307c61f4e8b1295ded3f920ee2cf3511)
+ [windows-apps-src\publish\iap-acquisitions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/iap-acquisitions-report.md) | InSyncHandedBackSuccess | [Details](#3191df12ca5b59f545cf250c3e669b30192af6bc3512)
+ [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md) | InSyncHandedBackSuccess | [Details](#891b99b52f7e3b347c0e2f9d298f144313cc7b2d3517)
+ [windows-apps-src\publish\make-your-app-easier-to-promote.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/make-your-app-easier-to-promote.md) | InSyncHandedBackSuccess | [Details](#e0f993d703ccd3a4509de4350f07d505648937633518)
+ [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1/windows-apps-src/publish/manage-account-users.md) | InSyncHandedBackSuccess | [Details](#18e25d0064652089d450eec811a7a5d24b8dc3e83519)
+ [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps/blob/48952b5d4f2565d06ec79475f88fbabf93fd0f70/windows-apps-src/publish/manage-app-names.md) | InSyncHandedBackSuccess | [Details](#e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e53520)
+ [windows-apps-src\publish\managing-your-ad-campaign.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/managing-your-ad-campaign.md) | InSyncHandedBackSuccess | [Details](#8e6305f3e6904833245013ef7eb63809c97ec4233521)
+ [windows-apps-src\publish\managing-your-profile.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/managing-your-profile.md) | InSyncHandedBackSuccess | [Details](#3d82caac353eb7cb63692469c5951be1f392ff523522)
+ [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/9836775732280f58b3e914f5173438d32a6874e9/windows-apps-src/publish/mobile-operator-billing.md) | InSyncHandedBackSuccess | [Details](#8c990588efb117a2f67a6e752edb94017a0ee5843523)
+ [windows-apps-src\publish\monetize-with-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/monetize-with-ads.md) | InSyncHandedBackSuccess | [Details](#97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c43524)
+ [windows-apps-src\publish\notes-for-certification.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/notes-for-certification.md) | InSyncHandedBackSuccess | [Details](#02a0f17fef730da305f5dfb24c834b53045e3eb83525)
+ [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/package-version-numbering.md) | InSyncHandedBackSuccess | [Details](#9910ca5b5a3fd5d24643a1dfc6da3644d561c6173529)
+ [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/ea5611de066d5f8f4f6be19ca5d8b1b1ab9328be/windows-apps-src/publish/payout-summary.md) | InSyncHandedBackSuccess | [Details](#78a52fb9ed86538161544b0c5b3bcd19e741c8fa3530)
+ [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/pubcenter-dev-center-integration.md) | InSyncHandedBackSuccess | [Details](#d6bf60e1dae7ec62e3cdbba8098a24c093d5deb13531)
+ [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md) | InSyncHandedBackSuccess | [Details](#8973b1def46c7ada8b73337cb20d01ae1e5b97d83532)
+ [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/put-apps-and-iaps-on-sale.md) | InSyncHandedBackSuccess | [Details](#b53d8d4ddcf3f75ffe039203377d12fd02e52f073533)
+ [windows-apps-src\publish\ratings-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/ratings-report.md) | InSyncHandedBackSuccess | [Details](#e0258bc9402772d0a036b32563348d11acd0fdb73534)
+ [windows-apps-src\publish\resolve-package-upload-errors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/resolve-package-upload-errors.md) | InSyncHandedBackSuccess | [Details](#afd2a08ed637502827e3207702d7659ed70148a03535)
+ [windows-apps-src\publish\resolve-submission-errors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/resolve-submission-errors.md) | InSyncHandedBackSuccess | [Details](#9da5a0e2b7ba61a51fccfa933ba63b202d4f5f133536)
+ [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/respond-to-customer-reviews.md) | InSyncHandedBackSuccess | [Details](#06228d7816f371f669ad4e6db7310e903f5f06833537)
+ [windows-apps-src\publish\reviews-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/reviews-report.md) | InSyncHandedBackSuccess | [Details](#7d1a768ce558718b43a4d124f7c88868e999fb933538)
+ [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/set-app-pricing-and-availability.md) | InSyncHandedBackSuccess | [Details](#509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d3539)
+ [windows-apps-src\publish\supported-languages.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/supported-languages.md) | InSyncHandedBackSuccess | [Details](#17a5a106e24305afd3041f434d2e0890d21fd7ec3543)
+ [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/tax-details-for-paid-apps.md) | InSyncHandedBackSuccess | [Details](#9cdca780a74e057c714113bac98a5e962ae83bd73544)
+ [windows-apps-src\publish\trademark-and-copyright-protection.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/trademark-and-copyright-protection.md) | InSyncHandedBackSuccess | [Details](#2c3f35ee5fb3f04e9f2fc389162793caa9ce5f1a3546)
+ [windows-apps-src\publish\upload-app-packages.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/upload-app-packages.md) | InSyncHandedBackSuccess | [Details](#bb89968c261cc0c14f82375d0d708bbce5da98693547)
+ [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/usage-report.md) | InSyncHandedBackSuccess | [Details](#f1c009c3d3cbd5c9a0e8064da11fc9fccbe420d43548)
+ [windows-apps-src\publish\use-map-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/use-map-services.md) | InSyncHandedBackSuccess | [Details](#0d775c67492fd6afe9f65f3e5dede865f90373423549)
+ [windows-apps-src\publish\using-the-windows-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/using-the-windows-dev-center-dashboard.md) | InSyncHandedBackSuccess | [Details](#7478a832cea6114c7a6e7f6be5cc3e908981a64c3550)
+ [windows-apps-src\publish\vat-info.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/vat-info.md) | InSyncHandedBackSuccess | [Details](#4dd91c901ade83e482061bed781e3fdcd9dde1413551)
+ [windows-apps-src\publish\view-app-identity-details.md](https://github.com/Microsoft/windows-apps/blob/a25d87556bb85718f818af5b586f54e6985aaaa4/windows-apps-src/publish/view-app-identity-details.md) | InSyncHandedBackSuccess | [Details](#f00d817616d473ef220ebc1817c2bf9207a7aea03552)
+ [windows-apps-src\publish\write-a-great-app-description.md](https://github.com/Microsoft/windows-apps/blob/17e7724eaa8a33f17360eb6e24fcc22068c5d477/windows-apps-src/publish/write-a-great-app-description.md) | InSyncHandedBackSuccess | [Details](#56b8492fea59c9a744c948d27e728e2305388cf83553)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -5466,6 +5533,810 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='0ac051d5774dadde48e2692683a6bcfae8264d1c3469'></a> Source: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-affiliate-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/about-affiliate-ads.md)
+* Handoff File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='d9d5c47e7be8f33eb678f8ef1864d2328d50a7b33470'></a> Source: [windows-apps-src\publish\about-community-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-community-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\about-community-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/about-community-ads.md)
+* Handoff File: [about-community-ads.28f5e31ce0a23a94aceb77cf4bd0f610787ef5a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/about-community-ads.28f5e31ce0a23a94aceb77cf4bd0f610787ef5a1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [about-community-ads.28f5e31ce0a23a94aceb77cf4bd0f610787ef5a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/about-community-ads.28f5e31ce0a23a94aceb77cf4bd0f610787ef5a1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='c9b73bb1963839640243fce4caaa7f3701b1eb453471'></a> Source: [windows-apps-src\publish\about-house-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/about-house-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\about-house-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/about-house-ads.md)
+* Handoff File: [about-house-ads.143592ce7eb1919892d2b9cc9cbd53dfc79ebf82.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/about-house-ads.143592ce7eb1919892d2b9cc9cbd53dfc79ebf82.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [about-house-ads.143592ce7eb1919892d2b9cc9cbd53dfc79ebf82.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/about-house-ads.143592ce7eb1919892d2b9cc9cbd53dfc79ebf82.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b103472'></a> Source: [windows-apps-src\publish\account-types-locations-and-fees.md](https://github.com/Microsoft/windows-apps/blob/93b6d952e42949917a0fff5b39f3f194f49531d5/windows-apps-src/publish/account-types-locations-and-fees.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\account-types-locations-and-fees.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/account-types-locations-and-fees.md)
+* Handoff File: [account-types-locations-and-fees.1277ace499431ce58b5194ea113c822f7292b462.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/account-types-locations-and-fees.1277ace499431ce58b5194ea113c822f7292b462.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [account-types-locations-and-fees.1277ace499431ce58b5194ea113c822f7292b462.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/account-types-locations-and-fees.1277ace499431ce58b5194ea113c822f7292b462.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='bfdf4f9f2d94a31a1c159e947615c10abf556aad3473'></a> Source: [windows-apps-src\publish\acquisitions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/acquisitions-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\acquisitions-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/acquisitions-report.md)
+* Handoff File: [acquisitions-report.776393c824a6784057e29e1653166146bc4fd900.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/acquisitions-report.776393c824a6784057e29e1653166146bc4fd900.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [acquisitions-report.776393c824a6784057e29e1653166146bc4fd900.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/acquisitions-report.776393c824a6784057e29e1653166146bc4fd900.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='1597e21414dbb5d1b540a2dd67478fbcc83d574e3474'></a> Source: [windows-apps-src\publish\ad-mediation-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/ad-mediation-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\ad-mediation-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/ad-mediation-report.md)
+* Handoff File: [ad-mediation-report.cbb4c6174cd6894353f2a715977560b73f82caac.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/ad-mediation-report.cbb4c6174cd6894353f2a715977560b73f82caac.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [ad-mediation-report.cbb4c6174cd6894353f2a715977560b73f82caac.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/ad-mediation-report.cbb4c6174cd6894353f2a715977560b73f82caac.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='1617005cff264a89eb66e326e2bedf9f6641a3da3475'></a> Source: [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps/blob/93e12837aec151b0cd1fa711c9e04081d74a3962/windows-apps-src/publish/advertising-performance-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\advertising-performance-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/advertising-performance-report.md)
+* Handoff File: [advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/advertising-performance-report.75409146593b9429ae80d6cc434a432f2eba948b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e3476'></a> Source: [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/577b238875b2d0edd47d9ad0e5e73ca79a6acf75/windows-apps-src/publish/affiliates-performance-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/affiliates-performance-report.md)
+* Handoff File: [affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='559842fb6740236780756018d01036b8356603093477'></a> Source: [windows-apps-src\publish\age-ratings.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/age-ratings.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\age-ratings.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/age-ratings.md)
+* Handoff File: [age-ratings.ecb2b1dbe0651c83264f75138c1647942580c362.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/age-ratings.ecb2b1dbe0651c83264f75138c1647942580c362.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [age-ratings.ecb2b1dbe0651c83264f75138c1647942580c362.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/age-ratings.ecb2b1dbe0651c83264f75138c1647942580c362.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8922a53da8b1bc97bef7faf49d0e412a261271883478'></a> Source: [windows-apps-src\publish\analytics.md](https://github.com/Microsoft/windows-apps/blob/dfaf348956b19746aa5332aeb7ad5cbc4b224e8c/windows-apps-src/publish/analytics.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\analytics.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/analytics.md)
+* Handoff File: [analytics.af2b800449cbe8bf6986c66ce2822732c6490965.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/analytics.af2b800449cbe8bf6986c66ce2822732c6490965.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [analytics.af2b800449cbe8bf6986c66ce2822732c6490965.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/analytics.af2b800449cbe8bf6986c66ce2822732c6490965.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae3479'></a> Source: [windows-apps-src\publish\app-declarations.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-declarations.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-declarations.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-declarations.md)
+* Handoff File: [app-declarations.67763b1e0b11d99f13cf11bf8cf81542dfde0d17.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-declarations.67763b1e0b11d99f13cf11bf8cf81542dfde0d17.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-declarations.67763b1e0b11d99f13cf11bf8cf81542dfde0d17.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-declarations.67763b1e0b11d99f13cf11bf8cf81542dfde0d17.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='acd91c578d7222e5fb115a4784f3360333f2a0633480'></a> Source: [windows-apps-src\publish\app-install-ads-reports.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-install-ads-reports.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-install-ads-reports.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-install-ads-reports.md)
+* Handoff File: [app-install-ads-reports.a98c4194da25ef6df5de9534821122190964e9a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-install-ads-reports.a98c4194da25ef6df5de9534821122190964e9a7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-install-ads-reports.a98c4194da25ef6df5de9534821122190964e9a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-install-ads-reports.a98c4194da25ef6df5de9534821122190964e9a7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='71077ac3f64e10734021e5fb655168f7273e3cb63481'></a> Source: [windows-apps-src\publish\app-management-and-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-management-and-services.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-management-and-services.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-management-and-services.md)
+* Handoff File: [app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-management-and-services.b0c3ca5f50e4a0a78cd617e3ebf34e7abb400b02.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='64c6dd45053070096ff7d7e932bac1c5601945183482'></a> Source: [windows-apps-src\publish\app-marketing-guidelines.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-marketing-guidelines.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-marketing-guidelines.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-marketing-guidelines.md)
+* Handoff File: [app-marketing-guidelines.74e631686ac75287a4dcb6fdbfb87d1b32862703.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-marketing-guidelines.74e631686ac75287a4dcb6fdbfb87d1b32862703.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-marketing-guidelines.74e631686ac75287a4dcb6fdbfb87d1b32862703.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-marketing-guidelines.74e631686ac75287a4dcb6fdbfb87d1b32862703.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='951c00f9fd2c945ac44d47bfae701049e937b98f3483'></a> Source: [windows-apps-src\publish\app-package-requirements.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-package-requirements.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-package-requirements.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-package-requirements.md)
+* Handoff File: [app-package-requirements.2c72b211b146b4e2996ae297ddcc49c171b63fec.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-package-requirements.2c72b211b146b4e2996ae297ddcc49c171b63fec.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-package-requirements.2c72b211b146b4e2996ae297ddcc49c171b63fec.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-package-requirements.2c72b211b146b4e2996ae297ddcc49c171b63fec.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='3511533f76294767ca409b09a718555a6194e4513484'></a> Source: [windows-apps-src\publish\app-promotion-and-customer-engagement.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-promotion-and-customer-engagement.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-promotion-and-customer-engagement.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-promotion-and-customer-engagement.md)
+* Handoff File: [app-promotion-and-customer-engagement.bb2e8fe7bfc0e8818668ac417dbad32b802ebb11.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-promotion-and-customer-engagement.bb2e8fe7bfc0e8818668ac417dbad32b802ebb11.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-promotion-and-customer-engagement.bb2e8fe7bfc0e8818668ac417dbad32b802ebb11.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-promotion-and-customer-engagement.bb2e8fe7bfc0e8818668ac417dbad32b802ebb11.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='a4065a32fa7861b39295ca79325943028a8bcf343485'></a> Source: [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-screenshots-and-images.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-screenshots-and-images.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-screenshots-and-images.md)
+* Handoff File: [app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-screenshots-and-images.c7fc56a8ad97c50e5d147b844b499b01e8366e0e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='59f41b74ca264606b4668addf44a07c82e1735793486'></a> Source: [windows-apps-src\publish\app-submissions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-submissions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\app-submissions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/app-submissions.md)
+* Handoff File: [app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb743487'></a> Source: [windows-apps-src\publish\avoid-common-certification-failures.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/avoid-common-certification-failures.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\avoid-common-certification-failures.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/avoid-common-certification-failures.md)
+* Handoff File: [avoid-common-certification-failures.0207d6f7031b4e20ebb453732ff893e3220fa304.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/avoid-common-certification-failures.0207d6f7031b4e20ebb453732ff893e3220fa304.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [avoid-common-certification-failures.0207d6f7031b4e20ebb453732ff893e3220fa304.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/avoid-common-certification-failures.0207d6f7031b4e20ebb453732ff893e3220fa304.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='a544565bf7bb82f2be1ded3e60836d5d191c6e933488'></a> Source: [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/beta-testing-and-targeted-distribution.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/beta-testing-and-targeted-distribution.md)
+* Handoff File: [beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9f9f5da100109af5dc38f7ffbc3cadca842b12143489'></a> Source: [windows-apps-src\publish\category-and-subcategory-table.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/category-and-subcategory-table.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\category-and-subcategory-table.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/category-and-subcategory-table.md)
+* Handoff File: [category-and-subcategory-table.0c9dec759c39644f8cd3fc7639e01c356d358493.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/category-and-subcategory-table.0c9dec759c39644f8cd3fc7639e01c356d358493.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [category-and-subcategory-table.0c9dec759c39644f8cd3fc7639e01c356d358493.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/category-and-subcategory-table.0c9dec759c39644f8cd3fc7639e01c356d358493.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='e82299f156a7e4f82e9219dc9b0ef6171e72c74e3490'></a> Source: [windows-apps-src\publish\channels-and-conversions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/channels-and-conversions-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\channels-and-conversions-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/channels-and-conversions-report.md)
+* Handoff File: [channels-and-conversions-report.ca5160bc5a452c1550efe898bd329417bb7c51c6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/channels-and-conversions-report.ca5160bc5a452c1550efe898bd329417bb7c51c6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [channels-and-conversions-report.ca5160bc5a452c1550efe898bd329417bb7c51c6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/channels-and-conversions-report.ca5160bc5a452c1550efe898bd329417bb7c51c6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='b6fa63727ac636d37c52e2f3247c52efb1f8b7633492'></a> Source: [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/publish/create-a-custom-app-promotion-campaign.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/create-a-custom-app-promotion-campaign.md)
+* Handoff File: [create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='00be0238af7969a84abe79f9aee3bec485fbb3e33496'></a> Source: [windows-apps-src\publish\create-platform-specific-descriptions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/create-platform-specific-descriptions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\create-platform-specific-descriptions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/create-platform-specific-descriptions.md)
+* Handoff File: [create-platform-specific-descriptions.d294c5a8fe1dc94d6103e730e51f0cddbb089590.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-platform-specific-descriptions.d294c5a8fe1dc94d6103e730e51f0cddbb089590.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-platform-specific-descriptions.d294c5a8fe1dc94d6103e730e51f0cddbb089590.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/create-platform-specific-descriptions.d294c5a8fe1dc94d6103e730e51f0cddbb089590.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='5e4933be456bc76eb5923f5c081e8376c43c118b3497'></a> Source: [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps/blob/3b65bbaf2498dde7484c055ff86ed09e89bf3405/windows-apps-src/publish/create-your-app-by-reserving-a-name.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\create-your-app-by-reserving-a-name.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/create-your-app-by-reserving-a-name.md)
+* Handoff File: [create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/create-your-app-by-reserving-a-name.7e01dc9d2c9ba68a62c4962ef74bc447ce075b6e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='858b777c62ffaf6e0ea8c6811e5051cc20474ba03498'></a> Source: [windows-apps-src\publish\customer-groups.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/customer-groups.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\customer-groups.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/customer-groups.md)
+* Handoff File: [customer-groups.ecd31c89b142ed6f2ac4be6b4002cf453eeda14d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/customer-groups.ecd31c89b142ed6f2ac4be6b4002cf453eeda14d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [customer-groups.ecd31c89b142ed6f2ac4be6b4002cf453eeda14d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/customer-groups.ecd31c89b142ed6f2ac4be6b4002cf453eeda14d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9a1d8b8fb57989091fe7b82ad34066240f62cb8b3499'></a> Source: [windows-apps-src\publish\define-pricing-and-market-selection.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/define-pricing-and-market-selection.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\define-pricing-and-market-selection.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/define-pricing-and-market-selection.md)
+* Handoff File: [define-pricing-and-market-selection.5284baaa44b9bdb8f41fa244fd63cb75573a31dc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/define-pricing-and-market-selection.5284baaa44b9bdb8f41fa244fd63cb75573a31dc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [define-pricing-and-market-selection.5284baaa44b9bdb8f41fa244fd63cb75573a31dc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/define-pricing-and-market-selection.5284baaa44b9bdb8f41fa244fd63cb75573a31dc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e3502'></a> Source: [windows-apps-src\publish\download-analytic-reports.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/download-analytic-reports.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\download-analytic-reports.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/download-analytic-reports.md)
+* Handoff File: [download-analytic-reports.3afd09d6ecb0a6507f58fd24bcefaad996b08537.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/download-analytic-reports.3afd09d6ecb0a6507f58fd24bcefaad996b08537.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [download-analytic-reports.3afd09d6ecb0a6507f58fd24bcefaad996b08537.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/download-analytic-reports.3afd09d6ecb0a6507f58fd24bcefaad996b08537.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8861c13478adbe2010a164126c56f555375e04723503'></a> Source: [windows-apps-src\publish\enter-app-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/enter-app-properties.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\enter-app-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/enter-app-properties.md)
+* Handoff File: [enter-app-properties.f0634ec6277d670c541a3d2bdfcbdb84d3809c0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enter-app-properties.f0634ec6277d670c541a3d2bdfcbdb84d3809c0e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enter-app-properties.f0634ec6277d670c541a3d2bdfcbdb84d3809c0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/enter-app-properties.f0634ec6277d670c541a3d2bdfcbdb84d3809c0e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9ad3025f7890de3677801b309b6714b1b46a06073505'></a> Source: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/4e857ec7ee98459afdd0d8ec85b5ec3a761049f3/windows-apps-src/publish/feedback-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/feedback-report.md)
+* Handoff File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='dba1c1f754b4200bd00395e0b71d18bee30e3a2d3506'></a> Source: [windows-apps-src\publish\generate-preinstall-packages-for-oems.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/generate-preinstall-packages-for-oems.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\generate-preinstall-packages-for-oems.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/generate-preinstall-packages-for-oems.md)
+* Handoff File: [generate-preinstall-packages-for-oems.863207aa8a716c0a2927435d6e5e0a97381866ed.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/generate-preinstall-packages-for-oems.863207aa8a716c0a2927435d6e5e0a97381866ed.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [generate-preinstall-packages-for-oems.863207aa8a716c0a2927435d6e5e0a97381866ed.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/generate-preinstall-packages-for-oems.863207aa8a716c0a2927435d6e5e0a97381866ed.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='4001f374a80cd7c62df6230a9429dd5b5a19d2b23507'></a> Source: [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/generate-promotional-codes.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/generate-promotional-codes.md)
+* Handoff File: [generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='b7c9bcf36aaee0344c6916fcc81aca189ef0f4813508'></a> Source: [windows-apps-src\publish\getting-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/getting-paid-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\getting-paid-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/getting-paid-apps.md)
+* Handoff File: [getting-paid-apps.d1adbc5dc579a8356322cdcb02282a5b09f3dbb1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-paid-apps.d1adbc5dc579a8356322cdcb02282a5b09f3dbb1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-paid-apps.d1adbc5dc579a8356322cdcb02282a5b09f3dbb1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/getting-paid-apps.d1adbc5dc579a8356322cdcb02282a5b09f3dbb1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='ac8d150f426c7d32e8a3b61b7f08cc0b84feedb83509'></a> Source: [windows-apps-src\publish\guidance-for-app-package-management.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/guidance-for-app-package-management.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\guidance-for-app-package-management.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/guidance-for-app-package-management.md)
+* Handoff File: [guidance-for-app-package-management.14d986d05c846f0fa95d91e9efb885638cef5d5e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidance-for-app-package-management.14d986d05c846f0fa95d91e9efb885638cef5d5e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidance-for-app-package-management.14d986d05c846f0fa95d91e9efb885638cef5d5e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/guidance-for-app-package-management.14d986d05c846f0fa95d91e9efb885638cef5d5e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='78bedc3e0551feef8efe61b3b664145e292817143510'></a> Source: [windows-apps-src\publish\health-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/health-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\health-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/health-report.md)
+* Handoff File: [health-report.6a4da39c2a55739dd1ddd200f8558b0f5c3bb3c3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/health-report.6a4da39c2a55739dd1ddd200f8558b0f5c3bb3c3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [health-report.6a4da39c2a55739dd1ddd200f8558b0f5c3bb3c3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/health-report.6a4da39c2a55739dd1ddd200f8558b0f5c3bb3c3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='5e8d25264a17307c61f4e8b1295ded3f920ee2cf3511'></a> Source: [windows-apps-src\publish\how-your-app-appears-in-the-store-for-windows-10-customers.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/how-your-app-appears-in-the-store-for-windows-10-customers.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\how-your-app-appears-in-the-store-for-windows-10-customers.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/how-your-app-appears-in-the-store-for-windows-10-customers.md)
+* Handoff File: [how-your-app-appears-in-the-store-for-windows-10-customers.b56bbb91cad0ef9f89171127e2105add78b23d38.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-your-app-appears-in-the-store-for-windows-10-customers.b56bbb91cad0ef9f89171127e2105add78b23d38.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-your-app-appears-in-the-store-for-windows-10-customers.b56bbb91cad0ef9f89171127e2105add78b23d38.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/how-your-app-appears-in-the-store-for-windows-10-customers.b56bbb91cad0ef9f89171127e2105add78b23d38.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='3191df12ca5b59f545cf250c3e669b30192af6bc3512'></a> Source: [windows-apps-src\publish\iap-acquisitions-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/iap-acquisitions-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\iap-acquisitions-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/iap-acquisitions-report.md)
+* Handoff File: [iap-acquisitions-report.99d7978a79327bcfc5e381863f9170253c28b07c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/iap-acquisitions-report.99d7978a79327bcfc5e381863f9170253c28b07c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [iap-acquisitions-report.99d7978a79327bcfc5e381863f9170253c28b07c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/iap-acquisitions-report.99d7978a79327bcfc5e381863f9170253c28b07c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='891b99b52f7e3b347c0e2f9d298f144313cc7b2d3517'></a> Source: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/link-to-your-app.md)
+* Handoff File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='e0f993d703ccd3a4509de4350f07d505648937633518'></a> Source: [windows-apps-src\publish\make-your-app-easier-to-promote.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/make-your-app-easier-to-promote.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\make-your-app-easier-to-promote.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/make-your-app-easier-to-promote.md)
+* Handoff File: [make-your-app-easier-to-promote.c61227bb993240ae662adc06d240cdd01207e9e4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/make-your-app-easier-to-promote.c61227bb993240ae662adc06d240cdd01207e9e4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [make-your-app-easier-to-promote.c61227bb993240ae662adc06d240cdd01207e9e4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/make-your-app-easier-to-promote.c61227bb993240ae662adc06d240cdd01207e9e4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='18e25d0064652089d450eec811a7a5d24b8dc3e83519'></a> Source: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1/windows-apps-src/publish/manage-account-users.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/manage-account-users.md)
+* Handoff File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e53520'></a> Source: [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps/blob/48952b5d4f2565d06ec79475f88fbabf93fd0f70/windows-apps-src/publish/manage-app-names.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\manage-app-names.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/manage-app-names.md)
+* Handoff File: [manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/manage-app-names.0f3b592f24bb2975cdbb3aad17495d9d6e942b93.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8e6305f3e6904833245013ef7eb63809c97ec4233521'></a> Source: [windows-apps-src\publish\managing-your-ad-campaign.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/managing-your-ad-campaign.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\managing-your-ad-campaign.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/managing-your-ad-campaign.md)
+* Handoff File: [managing-your-ad-campaign.6be784ba5844d5d00a4fb5b0b477afdf9afd442f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/managing-your-ad-campaign.6be784ba5844d5d00a4fb5b0b477afdf9afd442f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [managing-your-ad-campaign.6be784ba5844d5d00a4fb5b0b477afdf9afd442f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/managing-your-ad-campaign.6be784ba5844d5d00a4fb5b0b477afdf9afd442f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='3d82caac353eb7cb63692469c5951be1f392ff523522'></a> Source: [windows-apps-src\publish\managing-your-profile.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/managing-your-profile.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\managing-your-profile.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/managing-your-profile.md)
+* Handoff File: [managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8c990588efb117a2f67a6e752edb94017a0ee5843523'></a> Source: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/9836775732280f58b3e914f5173438d32a6874e9/windows-apps-src/publish/mobile-operator-billing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/mobile-operator-billing.md)
+* Handoff File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c43524'></a> Source: [windows-apps-src\publish\monetize-with-ads.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/monetize-with-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\monetize-with-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/monetize-with-ads.md)
+* Handoff File: [monetize-with-ads.f772e82217dbd21448da2a05253270cef4089e6b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/monetize-with-ads.f772e82217dbd21448da2a05253270cef4089e6b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [monetize-with-ads.f772e82217dbd21448da2a05253270cef4089e6b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/monetize-with-ads.f772e82217dbd21448da2a05253270cef4089e6b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='02a0f17fef730da305f5dfb24c834b53045e3eb83525'></a> Source: [windows-apps-src\publish\notes-for-certification.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/notes-for-certification.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\notes-for-certification.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/notes-for-certification.md)
+* Handoff File: [notes-for-certification.671d52f49e0510f904670d4ceb9b020ef6591b8e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/notes-for-certification.671d52f49e0510f904670d4ceb9b020ef6591b8e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [notes-for-certification.671d52f49e0510f904670d4ceb9b020ef6591b8e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/notes-for-certification.671d52f49e0510f904670d4ceb9b020ef6591b8e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9910ca5b5a3fd5d24643a1dfc6da3644d561c6173529'></a> Source: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/package-version-numbering.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/package-version-numbering.md)
+* Handoff File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='78a52fb9ed86538161544b0c5b3bcd19e741c8fa3530'></a> Source: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/ea5611de066d5f8f4f6be19ca5d8b1b1ab9328be/windows-apps-src/publish/payout-summary.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/payout-summary.md)
+* Handoff File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='d6bf60e1dae7ec62e3cdbba8098a24c093d5deb13531'></a> Source: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/pubcenter-dev-center-integration.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/pubcenter-dev-center-integration.md)
+* Handoff File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='8973b1def46c7ada8b73337cb20d01ae1e5b97d83532'></a> Source: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
+* Handoff File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='b53d8d4ddcf3f75ffe039203377d12fd02e52f073533'></a> Source: [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/put-apps-and-iaps-on-sale.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\put-apps-and-iaps-on-sale.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/put-apps-and-iaps-on-sale.md)
+* Handoff File: [put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/put-apps-and-iaps-on-sale.b0787d48e63e124da4f7babe09b539067e0a8d75.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='e0258bc9402772d0a036b32563348d11acd0fdb73534'></a> Source: [windows-apps-src\publish\ratings-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/ratings-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\ratings-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/ratings-report.md)
+* Handoff File: [ratings-report.05a41a616a7fc2cebe2bae47e1e3bc3cb77184a8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/ratings-report.05a41a616a7fc2cebe2bae47e1e3bc3cb77184a8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [ratings-report.05a41a616a7fc2cebe2bae47e1e3bc3cb77184a8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/ratings-report.05a41a616a7fc2cebe2bae47e1e3bc3cb77184a8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='afd2a08ed637502827e3207702d7659ed70148a03535'></a> Source: [windows-apps-src\publish\resolve-package-upload-errors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/resolve-package-upload-errors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\resolve-package-upload-errors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/resolve-package-upload-errors.md)
+* Handoff File: [resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9da5a0e2b7ba61a51fccfa933ba63b202d4f5f133536'></a> Source: [windows-apps-src\publish\resolve-submission-errors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/resolve-submission-errors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\resolve-submission-errors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/resolve-submission-errors.md)
+* Handoff File: [resolve-submission-errors.a98c2336cff3143df2c500702605deeac5c6c6e0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/resolve-submission-errors.a98c2336cff3143df2c500702605deeac5c6c6e0.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [resolve-submission-errors.a98c2336cff3143df2c500702605deeac5c6c6e0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/resolve-submission-errors.a98c2336cff3143df2c500702605deeac5c6c6e0.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='06228d7816f371f669ad4e6db7310e903f5f06833537'></a> Source: [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/respond-to-customer-reviews.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\respond-to-customer-reviews.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/respond-to-customer-reviews.md)
+* Handoff File: [respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/respond-to-customer-reviews.8b15e11c210d9bb5ead696d30c383e78922f29c8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='7d1a768ce558718b43a4d124f7c88868e999fb933538'></a> Source: [windows-apps-src\publish\reviews-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/reviews-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\reviews-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/reviews-report.md)
+* Handoff File: [reviews-report.7493e17e8075c13b891d25e50c46f207729835fc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/reviews-report.7493e17e8075c13b891d25e50c46f207729835fc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [reviews-report.7493e17e8075c13b891d25e50c46f207729835fc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/reviews-report.7493e17e8075c13b891d25e50c46f207729835fc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d3539'></a> Source: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/set-app-pricing-and-availability.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/set-app-pricing-and-availability.md)
+* Handoff File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='17a5a106e24305afd3041f434d2e0890d21fd7ec3543'></a> Source: [windows-apps-src\publish\supported-languages.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/supported-languages.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\supported-languages.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/supported-languages.md)
+* Handoff File: [supported-languages.ff584526c7f4610c7729350e63d11d091637d7dd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/supported-languages.ff584526c7f4610c7729350e63d11d091637d7dd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [supported-languages.ff584526c7f4610c7729350e63d11d091637d7dd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/supported-languages.ff584526c7f4610c7729350e63d11d091637d7dd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='9cdca780a74e057c714113bac98a5e962ae83bd73544'></a> Source: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/tax-details-for-paid-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/tax-details-for-paid-apps.md)
+* Handoff File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='2c3f35ee5fb3f04e9f2fc389162793caa9ce5f1a3546'></a> Source: [windows-apps-src\publish\trademark-and-copyright-protection.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/trademark-and-copyright-protection.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\trademark-and-copyright-protection.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/trademark-and-copyright-protection.md)
+* Handoff File: [trademark-and-copyright-protection.39407375e7999d35aa42a23530e093f4cfc3baed.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/trademark-and-copyright-protection.39407375e7999d35aa42a23530e093f4cfc3baed.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [trademark-and-copyright-protection.39407375e7999d35aa42a23530e093f4cfc3baed.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/trademark-and-copyright-protection.39407375e7999d35aa42a23530e093f4cfc3baed.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='bb89968c261cc0c14f82375d0d708bbce5da98693547'></a> Source: [windows-apps-src\publish\upload-app-packages.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/upload-app-packages.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\upload-app-packages.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/upload-app-packages.md)
+* Handoff File: [upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='f1c009c3d3cbd5c9a0e8064da11fc9fccbe420d43548'></a> Source: [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/usage-report.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/usage-report.md)
+* Handoff File: [usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='0d775c67492fd6afe9f65f3e5dede865f90373423549'></a> Source: [windows-apps-src\publish\use-map-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/use-map-services.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\use-map-services.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/use-map-services.md)
+* Handoff File: [use-map-services.1d8e44740d1a5b23d9e274d85b0fc88d60b1341a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-map-services.1d8e44740d1a5b23d9e274d85b0fc88d60b1341a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-map-services.1d8e44740d1a5b23d9e274d85b0fc88d60b1341a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/use-map-services.1d8e44740d1a5b23d9e274d85b0fc88d60b1341a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='7478a832cea6114c7a6e7f6be5cc3e908981a64c3550'></a> Source: [windows-apps-src\publish\using-the-windows-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/using-the-windows-dev-center-dashboard.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\using-the-windows-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/using-the-windows-dev-center-dashboard.md)
+* Handoff File: [using-the-windows-dev-center-dashboard.04d4297db2be035c6d1b037e7e4b03cd3545f3a3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/using-the-windows-dev-center-dashboard.04d4297db2be035c6d1b037e7e4b03cd3545f3a3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [using-the-windows-dev-center-dashboard.04d4297db2be035c6d1b037e7e4b03cd3545f3a3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/using-the-windows-dev-center-dashboard.04d4297db2be035c6d1b037e7e4b03cd3545f3a3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='4dd91c901ade83e482061bed781e3fdcd9dde1413551'></a> Source: [windows-apps-src\publish\vat-info.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/vat-info.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\vat-info.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/vat-info.md)
+* Handoff File: [vat-info.be53966b78ddbe1a5146c0634d5cf5151467082f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/vat-info.be53966b78ddbe1a5146c0634d5cf5151467082f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [vat-info.be53966b78ddbe1a5146c0634d5cf5151467082f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/vat-info.be53966b78ddbe1a5146c0634d5cf5151467082f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='f00d817616d473ef220ebc1817c2bf9207a7aea03552'></a> Source: [windows-apps-src\publish\view-app-identity-details.md](https://github.com/Microsoft/windows-apps/blob/a25d87556bb85718f818af5b586f54e6985aaaa4/windows-apps-src/publish/view-app-identity-details.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\view-app-identity-details.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/view-app-identity-details.md)
+* Handoff File: [view-app-identity-details.28e38a0d58b50b2c3f2749a9cb230e57494911dc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/view-app-identity-details.28e38a0d58b50b2c3f2749a9cb230e57494911dc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [view-app-identity-details.28e38a0d58b50b2c3f2749a9cb230e57494911dc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/view-app-identity-details.28e38a0d58b50b2c3f2749a9cb230e57494911dc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='56b8492fea59c9a744c948d27e728e2305388cf83553'></a> Source: [windows-apps-src\publish\write-a-great-app-description.md](https://github.com/Microsoft/windows-apps/blob/17e7724eaa8a33f17360eb6e24fcc22068c5d477/windows-apps-src/publish/write-a-great-app-description.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\publish\write-a-great-app-description.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/16c176634ae0ff303ae8bfa3e134cf523df0bf23/windows-apps-src/publish/write-a-great-app-description.md)
+* Handoff File: [write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:08
 * [Back to Top](#report-top)
 
 
