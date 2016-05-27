@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 172
+ Total Files | 238
 
 ## File List
  Source File | Status | Details 
@@ -178,6 +178,72 @@
  [windows-apps-src\files\quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | InSyncHandedBackSuccess | [Details](#332f89f53a55d5783f7497ca5c6cd601dcee52172090)
  [windows-apps-src\files\quickstart-save-a-file-with-a-picker.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-save-a-file-with-a-picker.md) | InSyncHandedBackSuccess | [Details](#68c7fcedbea40541632aa0a7ae65aa77db2062802092)
  [windows-apps-src\files\use-edp-to-protect-streams-and-buffers.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/files/use-edp-to-protect-streams-and-buffers.md) | InSyncHandedBackSuccess | [Details](#fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a2094)
+ [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/c663692e31a62fdf40df9d706070d0d2ce0e1cdd/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md) | InSyncHandedBackSuccess | [Details](#0b2a0cb240431a49ef2bdb82a188f3dcb0294fc52096)
+ [windows-apps-src\gaming\adding-input-and-interactivity-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md) | InSyncHandedBackSuccess | [Details](#563ee292ec7189b0c365ae5ee0d1c41fd6fd1a092097)
+ [windows-apps-src\gaming\adding-visual-content-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/adding-visual-content-to-the-marble-maze-sample.md) | InSyncHandedBackSuccess | [Details](#16eb493595bbac4f15ed0e755258104693dfba052098)
+ [windows-apps-src\gaming\additional-directx-game-programming-resources.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/additional-directx-game-programming-resources.md) | InSyncHandedBackSuccess | [Details](#598d5d1afffd394b66aa7af23f22e7a13af482082099)
+ [windows-apps-src\gaming\an-introduction-to-3d-graphics-with-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/an-introduction-to-3d-graphics-with-directx.md) | InSyncHandedBackSuccess | [Details](#8f27c5060ffdc566c596168e54d51730c349d4012100)
+ [windows-apps-src\gaming\asynchronous-programming-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/asynchronous-programming-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#67a75e9d1324e7ac50e0575bfd7bda870a87efb22102)
+ [windows-apps-src\gaming\change-your-shader-loading-code.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/change-your-shader-loading-code.md) | InSyncHandedBackSuccess | [Details](#bc13df5e7f2648897be31b5cda634d23ffae8b6b2103)
+ [windows-apps-src\gaming\compare-opengl-es-2-0-api-design-to-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/compare-opengl-es-2-0-api-design-to-directx.md) | InSyncHandedBackSuccess | [Details](#804faad3db94bda9d1d67ad899a6ba048a4bfd262104)
+ [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicloader.md) | InSyncHandedBackSuccess | [Details](#355e5a65a16e5e2df9bb039383f68dda16ff23a22105)
+ [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md) | InSyncHandedBackSuccess | [Details](#46762d7b7234be9ff7b4c288a09162d4f942a7072106)
+ [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-ddstextureloader.md) | InSyncHandedBackSuccess | [Details](#9a842c773ce16e1093a158426b89caf239858f052107)
+ [windows-apps-src\gaming\create-a-basic-mesh.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/create-a-basic-mesh.md) | InSyncHandedBackSuccess | [Details](#c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada22108)
+ [windows-apps-src\gaming\create-depth-buffer-resource--view--and-sampler-state.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/create-depth-buffer-resource--view--and-sampler-state.md) | InSyncHandedBackSuccess | [Details](#f0aedb99832ecd10da547cf73a074070008a43442109)
+ [windows-apps-src\gaming\creating-shaders-and-drawing-primitives.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/creating-shaders-and-drawing-primitives.md) | InSyncHandedBackSuccess | [Details](#15b5f83b45b928baaa484c10dc6e7bfe9c27a9242110)
+ [windows-apps-src\gaming\developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md) | InSyncHandedBackSuccess | [Details](#c74a455f84618cb57147c8f0c9baf343b41b02be2111)
+ [windows-apps-src\gaming\directx-porting-faq.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/directx-porting-faq.md) | InSyncHandedBackSuccess | [Details](#dc98f15d80fb70fb6e106555659d699c41fbfa0b2113)
+ [windows-apps-src\gaming\feature-mapping.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/feature-mapping.md) | InSyncHandedBackSuccess | [Details](#3a9e9c32ed2d892674592f32d0f067fed668d9d12116)
+ [windows-apps-src\gaming\game-development-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/game-development-platform-guide.md) | InSyncHandedBackSuccess | [Details](#3c7807d0b46a32bfe90c79b7eee3111039ca94ab2117)
+ [windows-apps-src\gaming\glsl-to-hlsl-reference.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/gaming/glsl-to-hlsl-reference.md) | InSyncHandedBackSuccess | [Details](#02a3ba1768b6fa7b09b6c9f637a72d88c0cef6042118)
+ [windows-apps-src\gaming\how-to-activate-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-activate-an-app-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#14859d03c7af45a17772c76f8c79b3c1bc56272c2120)
+ [windows-apps-src\gaming\how-to-resume-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-resume-an-app-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#d5383da7332c80d4337f0e0b3eef0a6851fcd5272121)
+ [windows-apps-src\gaming\how-to-suspend-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-suspend-an-app-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#38e03a4a6312c5a0521c7263944897260624aa382122)
+ [windows-apps-src\gaming\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/index.md) | InSyncHandedBackSuccess | [Details](#b690fa9a97898da49646e39c982465a4a41adb7a2150)
+ [windows-apps-src\gaming\launching-and-resuming-apps-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/launching-and-resuming-apps-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#cc9468e278d651729740147cb21c70d53b43800f2151)
+ [windows-apps-src\gaming\load-a-game-asset.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/load-a-game-asset.md) | InSyncHandedBackSuccess | [Details](#fd4d2162e9a0007df34b465f570820843b326d722152)
+ [windows-apps-src\gaming\map-concepts-and-infrastructure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/map-concepts-and-infrastructure.md) | InSyncHandedBackSuccess | [Details](#a058c5f669704695cc3a2ae5385feccbf6cb4bc32153)
+ [windows-apps-src\gaming\marble-maze-application-structure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/marble-maze-application-structure.md) | InSyncHandedBackSuccess | [Details](#e9cc290fa77471f315daf7f29f605412d2ec45cc2154)
+ [windows-apps-src\gaming\marble-maze-sample-fundamentals.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/marble-maze-sample-fundamentals.md) | InSyncHandedBackSuccess | [Details](#5a9df995078763df73542a4101e73e147517b1eb2155)
+ [windows-apps-src\gaming\moving-from-egl-to-dxgi.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/moving-from-egl-to-dxgi.md) | InSyncHandedBackSuccess | [Details](#461983b646148c21aba7da2adb703510d95b03432156)
+ [windows-apps-src\gaming\multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | InSyncHandedBackSuccess | [Details](#7b240de9ab3c7b53877d38eb9097dde25b2a40be2157)
+ [windows-apps-src\gaming\multisampling--scaling--and-overlay-swap-chains.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/gaming/multisampling--scaling--and-overlay-swap-chains.md) | InSyncHandedBackSuccess | [Details](#3380c5156072a9853261ec6b706a612b42e7ba102158)
+ [windows-apps-src\gaming\opengl-es-2-0-to-directx-11-1-reference.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/opengl-es-2-0-to-directx-11-1-reference.md) | InSyncHandedBackSuccess | [Details](#ad6da83773bf5b791f4b2921b8ea55345aae999b2159)
+ [windows-apps-src\gaming\optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | InSyncHandedBackSuccess | [Details](#19bcf043f3fc8c729f5f9fbbeee237bd1749443d2160)
+ [windows-apps-src\gaming\package-your-windows-store-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/package-your-windows-store-directx-game.md) | InSyncHandedBackSuccess | [Details](#14043fffc22849ca8d31f85e1035c38c07f1cdd42161)
+ [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/plan-your-directx-port.md) | InSyncHandedBackSuccess | [Details](#929ad82ce057754ee04f1f27537e03520e95157a2162)
+ [windows-apps-src\gaming\port-from-opengl-es-2-0-to-directx-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-from-opengl-es-2-0-to-directx-11-1.md) | InSyncHandedBackSuccess | [Details](#bac545f3490b3af876d3e8b5fd459bd6265059162164)
+ [windows-apps-src\gaming\porting-uniforms-and-attributes.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/porting-uniforms-and-attributes.md) | InSyncHandedBackSuccess | [Details](#a588ba010ddf21a07d493774cff7f6ab5dbfdf472170)
+ [windows-apps-src\gaming\porting-your-directx-9-game-to-windows-store.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/porting-your-directx-9-game-to-windows-store.md) | InSyncHandedBackSuccess | [Details](#1cb77db78fe368c567990c9521122b42ef10ec652171)
+ [windows-apps-src\gaming\port-the-glsl.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-glsl.md) | InSyncHandedBackSuccess | [Details](#d1d203fa74bd80fe26401e64d4e15bb11e5c10502165)
+ [windows-apps-src\gaming\port-the-shader-config.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-shader-config.md) | InSyncHandedBackSuccess | [Details](#17d66e217e40eca0653078820746746eb23185e12166)
+ [windows-apps-src\gaming\port-the-vertex-buffers-and-data-config.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-vertex-buffers-and-data-config.md) | InSyncHandedBackSuccess | [Details](#9692b33303099f9d1193b93ab458a19a5d95abe32167)
+ [windows-apps-src\gaming\reduce-latency-with-dxgi-1-3-swap-chains.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/reduce-latency-with-dxgi-1-3-swap-chains.md) | InSyncHandedBackSuccess | [Details](#174e2918d54a2b03124752d009f43f0cb0c800ca2173)
+ [windows-apps-src\gaming\render-the-scene-with-depth-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/render-the-scene-with-depth-testing.md) | InSyncHandedBackSuccess | [Details](#2bac8e8337a10a8411b02eeed53d772dbb5abad62174)
+ [windows-apps-src\gaming\render-the-shadow-map-to-the-depth-buffer.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/render-the-shadow-map-to-the-depth-buffer.md) | InSyncHandedBackSuccess | [Details](#644e2084baa750965a5283208fde1cea24ecfdea2175)
+ [windows-apps-src\gaming\set-up-visual-studio-for-game-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/set-up-visual-studio-for-game-development.md) | InSyncHandedBackSuccess | [Details](#2202474f24e93aab32ec9f4e85e765616cbae0562176)
+ [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md) | InSyncHandedBackSuccess | [Details](#f0e25e43633d895673d640f139af338f6f0713f22178)
+ [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-2--rendering.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md) | InSyncHandedBackSuccess | [Details](#5cfdce2a62f6b5761ebf820418762a307dd051bb2179)
+ [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md) | InSyncHandedBackSuccess | [Details](#3c2369a2fdc48aed14f7ad363df8792e0ed5d7952180)
+ [windows-apps-src\gaming\supporting-screen-rotation-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/supporting-screen-rotation-directx-and-cpp.md) | InSyncHandedBackSuccess | [Details](#8da32494e0bb0bd48d485c946df1c9a5baec7fbe2181)
+ [windows-apps-src\gaming\target-a-range-of-hardware.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/gaming/target-a-range-of-hardware.md) | InSyncHandedBackSuccess | [Details](#0cdc31f07560e7f1747806d1436bccbc1e50f8b92182)
+ [windows-apps-src\gaming\tutorial--adding-a-user-interface.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-a-user-interface.md) | InSyncHandedBackSuccess | [Details](#d7af6683ab2def1af62e73be008e9189190cde952183)
+ [windows-apps-src\gaming\tutorial--adding-move-look-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-move-look-controls-to-your-directx-game.md) | InSyncHandedBackSuccess | [Details](#7adbfdb77af6992be9448969f635bdebac58344b2185)
+ [windows-apps-src\gaming\tutorial--adding-touch-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-touch-controls-to-your-directx-game.md) | InSyncHandedBackSuccess | [Details](#a2460ba2ffcf191fe87132180b2cca7519e871412187)
+ [windows-apps-src\gaming\tutorial--assembling-the-rendering-pipeline.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--assembling-the-rendering-pipeline.md) | InSyncHandedBackSuccess | [Details](#5eb6ea7ad1a30f020c155007396383b88d10c0a82188)
+ [windows-apps-src\gaming\tutorial--building-the-games-metro-style-app-framework.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--building-the-games-metro-style-app-framework.md) | InSyncHandedBackSuccess | [Details](#2ebc7bca06454f78ab375058e49f012cacb00cc82189)
+ [windows-apps-src\gaming\tutorial--create-your-first-metro-style-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--create-your-first-metro-style-directx-game.md) | InSyncHandedBackSuccess | [Details](#9f62e2a42dc0a1b70e37194cd5755e51699ddc382190)
+ [windows-apps-src\gaming\tutorial--defining-the-main-game-loop.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--defining-the-main-game-loop.md) | InSyncHandedBackSuccess | [Details](#66e40c150b5eb4f57c9cddfaf472c56601b3fa0b2191)
+ [windows-apps-src\gaming\tutorial-resources.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/gaming/tutorial-resources.md) | InSyncHandedBackSuccess | [Details](#02b8681c45c84e1cdd5b97dfc717a68015df12522193)
+ [windows-apps-src\gaming\tutorial--setting-up-the-games-infrastructure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--setting-up-the-games-infrastructure.md) | InSyncHandedBackSuccess | [Details](#d4d7864f9689df0919b53ee70b8e18f8d812b2b02192)
+ [windows-apps-src\gaming\understand-direct3d-11-1-concepts.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/understand-direct3d-11-1-concepts.md) | InSyncHandedBackSuccess | [Details](#8d63aebaf656b62481675eebf7c0bf9ea51784a82194)
+ [windows-apps-src\gaming\user-interface.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/user-interface.md) | InSyncHandedBackSuccess | [Details](#b7d01fda0bc8dbafebb7485ec01acb5c7431a8152196)
+ [windows-apps-src\gaming\use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md) | InSyncHandedBackSuccess | [Details](#f266cb50893fd37162f21be169d6daf6e37c6bb92195)
+ [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md) | InSyncHandedBackSuccess | [Details](#27c6f82e97e9eb24dedcc5d83a18e6aba69611942198)
+ [windows-apps-src\gaming\working-with-2d-graphics-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/working-with-2d-graphics-in-your-directx-game.md) | InSyncHandedBackSuccess | [Details](#50782c5923f9c811f5d8e91aa9aee897876e6c242201)
+ [windows-apps-src\gaming\working-with-audio-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/working-with-audio-in-your-directx-game.md) | InSyncHandedBackSuccess | [Details](#98896d4966ee2adb3bf494dcba22656fc8bb64142202)
+ [windows-apps-src\gaming\work-with-networking-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/work-with-networking-in-your-directx-game.md) | InSyncHandedBackSuccess | [Details](#63a40f5853740d1053449e1b1839f5b0232ce28e2200)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -2242,6 +2308,798 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='0b2a0cb240431a49ef2bdb82a188f3dcb0294fc52096'></a> Source: [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/c663692e31a62fdf40df9d706070d0d2ce0e1cdd/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\adding-audio-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/adding-audio-to-the-marble-maze-sample.md)
+* Handoff File: [adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/adding-audio-to-the-marble-maze-sample.2b5bbbffd9ec7ed93b59eb6d3daa9598b7d4b5d4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='563ee292ec7189b0c365ae5ee0d1c41fd6fd1a092097'></a> Source: [windows-apps-src\gaming\adding-input-and-interactivity-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\adding-input-and-interactivity-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md)
+* Handoff File: [adding-input-and-interactivity-to-the-marble-maze-sample.118f60dd0d55f9f3209139a53f722473e669347e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adding-input-and-interactivity-to-the-marble-maze-sample.118f60dd0d55f9f3209139a53f722473e669347e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adding-input-and-interactivity-to-the-marble-maze-sample.118f60dd0d55f9f3209139a53f722473e669347e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/adding-input-and-interactivity-to-the-marble-maze-sample.118f60dd0d55f9f3209139a53f722473e669347e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='16eb493595bbac4f15ed0e755258104693dfba052098'></a> Source: [windows-apps-src\gaming\adding-visual-content-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/adding-visual-content-to-the-marble-maze-sample.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\adding-visual-content-to-the-marble-maze-sample.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/adding-visual-content-to-the-marble-maze-sample.md)
+* Handoff File: [adding-visual-content-to-the-marble-maze-sample.c7349a6b4b7e965bce879fdc65b386e44458d5b7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adding-visual-content-to-the-marble-maze-sample.c7349a6b4b7e965bce879fdc65b386e44458d5b7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adding-visual-content-to-the-marble-maze-sample.c7349a6b4b7e965bce879fdc65b386e44458d5b7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/adding-visual-content-to-the-marble-maze-sample.c7349a6b4b7e965bce879fdc65b386e44458d5b7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='598d5d1afffd394b66aa7af23f22e7a13af482082099'></a> Source: [windows-apps-src\gaming\additional-directx-game-programming-resources.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/additional-directx-game-programming-resources.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\additional-directx-game-programming-resources.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/additional-directx-game-programming-resources.md)
+* Handoff File: [additional-directx-game-programming-resources.b8ab104bb13433218873113025e095029cdf5646.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/additional-directx-game-programming-resources.b8ab104bb13433218873113025e095029cdf5646.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [additional-directx-game-programming-resources.b8ab104bb13433218873113025e095029cdf5646.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/additional-directx-game-programming-resources.b8ab104bb13433218873113025e095029cdf5646.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='8f27c5060ffdc566c596168e54d51730c349d4012100'></a> Source: [windows-apps-src\gaming\an-introduction-to-3d-graphics-with-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/an-introduction-to-3d-graphics-with-directx.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\an-introduction-to-3d-graphics-with-directx.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/an-introduction-to-3d-graphics-with-directx.md)
+* Handoff File: [an-introduction-to-3d-graphics-with-directx.1e13c560df4eba2c01f4dc75deec68e4d7a5c2ca.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/an-introduction-to-3d-graphics-with-directx.1e13c560df4eba2c01f4dc75deec68e4d7a5c2ca.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [an-introduction-to-3d-graphics-with-directx.1e13c560df4eba2c01f4dc75deec68e4d7a5c2ca.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/an-introduction-to-3d-graphics-with-directx.1e13c560df4eba2c01f4dc75deec68e4d7a5c2ca.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='67a75e9d1324e7ac50e0575bfd7bda870a87efb22102'></a> Source: [windows-apps-src\gaming\asynchronous-programming-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/asynchronous-programming-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\asynchronous-programming-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/asynchronous-programming-directx-and-cpp.md)
+* Handoff File: [asynchronous-programming-directx-and-cpp.ea2716c8974123cbe98d7c0953d4ff60ebf5dc43.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/asynchronous-programming-directx-and-cpp.ea2716c8974123cbe98d7c0953d4ff60ebf5dc43.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [asynchronous-programming-directx-and-cpp.ea2716c8974123cbe98d7c0953d4ff60ebf5dc43.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/asynchronous-programming-directx-and-cpp.ea2716c8974123cbe98d7c0953d4ff60ebf5dc43.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='bc13df5e7f2648897be31b5cda634d23ffae8b6b2103'></a> Source: [windows-apps-src\gaming\change-your-shader-loading-code.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/change-your-shader-loading-code.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\change-your-shader-loading-code.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/change-your-shader-loading-code.md)
+* Handoff File: [change-your-shader-loading-code.426d25da8dd3de887f20c8e7f6e7a88cffa7c579.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/change-your-shader-loading-code.426d25da8dd3de887f20c8e7f6e7a88cffa7c579.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [change-your-shader-loading-code.426d25da8dd3de887f20c8e7f6e7a88cffa7c579.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/change-your-shader-loading-code.426d25da8dd3de887f20c8e7f6e7a88cffa7c579.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='804faad3db94bda9d1d67ad899a6ba048a4bfd262104'></a> Source: [windows-apps-src\gaming\compare-opengl-es-2-0-api-design-to-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/compare-opengl-es-2-0-api-design-to-directx.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\compare-opengl-es-2-0-api-design-to-directx.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/compare-opengl-es-2-0-api-design-to-directx.md)
+* Handoff File: [compare-opengl-es-2-0-api-design-to-directx.dacc90867cd9fbff685cf4d4da3babab7aa63944.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/compare-opengl-es-2-0-api-design-to-directx.dacc90867cd9fbff685cf4d4da3babab7aa63944.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [compare-opengl-es-2-0-api-design-to-directx.dacc90867cd9fbff685cf4d4da3babab7aa63944.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/compare-opengl-es-2-0-api-design-to-directx.dacc90867cd9fbff685cf4d4da3babab7aa63944.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='355e5a65a16e5e2df9bb039383f68dda16ff23a22105'></a> Source: [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicloader.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/complete-code-for-basicloader.md)
+* Handoff File: [complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='46762d7b7234be9ff7b4c288a09162d4f942a7072106'></a> Source: [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md)
+* Handoff File: [complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='9a842c773ce16e1093a158426b89caf239858f052107'></a> Source: [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-ddstextureloader.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/complete-code-for-ddstextureloader.md)
+* Handoff File: [complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada22108'></a> Source: [windows-apps-src\gaming\create-a-basic-mesh.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/create-a-basic-mesh.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\create-a-basic-mesh.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/create-a-basic-mesh.md)
+* Handoff File: [create-a-basic-mesh.1c01548c800464c76491cecea7d4617214b428f5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-basic-mesh.1c01548c800464c76491cecea7d4617214b428f5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-a-basic-mesh.1c01548c800464c76491cecea7d4617214b428f5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/create-a-basic-mesh.1c01548c800464c76491cecea7d4617214b428f5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='f0aedb99832ecd10da547cf73a074070008a43442109'></a> Source: [windows-apps-src\gaming\create-depth-buffer-resource--view--and-sampler-state.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/create-depth-buffer-resource--view--and-sampler-state.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\create-depth-buffer-resource--view--and-sampler-state.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/create-depth-buffer-resource--view--and-sampler-state.md)
+* Handoff File: [create-depth-buffer-resource--view--and-sampler-state.37bf792d6c135fd452f73068438efdfb9c1f56e7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-depth-buffer-resource--view--and-sampler-state.37bf792d6c135fd452f73068438efdfb9c1f56e7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-depth-buffer-resource--view--and-sampler-state.37bf792d6c135fd452f73068438efdfb9c1f56e7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/create-depth-buffer-resource--view--and-sampler-state.37bf792d6c135fd452f73068438efdfb9c1f56e7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='15b5f83b45b928baaa484c10dc6e7bfe9c27a9242110'></a> Source: [windows-apps-src\gaming\creating-shaders-and-drawing-primitives.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/creating-shaders-and-drawing-primitives.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\creating-shaders-and-drawing-primitives.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/creating-shaders-and-drawing-primitives.md)
+* Handoff File: [creating-shaders-and-drawing-primitives.4be23b03d00aeea5ebfa8751c0cb85ccfaf6be60.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/creating-shaders-and-drawing-primitives.4be23b03d00aeea5ebfa8751c0cb85ccfaf6be60.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [creating-shaders-and-drawing-primitives.4be23b03d00aeea5ebfa8751c0cb85ccfaf6be60.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/creating-shaders-and-drawing-primitives.4be23b03d00aeea5ebfa8751c0cb85ccfaf6be60.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='c74a455f84618cb57147c8f0c9baf343b41b02be2111'></a> Source: [windows-apps-src\gaming\developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* Handoff File: [developing-marble-maze-a-windows-store-game-in-cpp-and-directx.ddbc79ee4a3094a99b03a5b1b90e8c81c2fb8e8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.ddbc79ee4a3094a99b03a5b1b90e8c81c2fb8e8b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [developing-marble-maze-a-windows-store-game-in-cpp-and-directx.ddbc79ee4a3094a99b03a5b1b90e8c81c2fb8e8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.ddbc79ee4a3094a99b03a5b1b90e8c81c2fb8e8b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='dc98f15d80fb70fb6e106555659d699c41fbfa0b2113'></a> Source: [windows-apps-src\gaming\directx-porting-faq.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/directx-porting-faq.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\directx-porting-faq.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/directx-porting-faq.md)
+* Handoff File: [directx-porting-faq.d18e5d8f3b5ac212694229f8ea3d1f89ae7c292e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/directx-porting-faq.d18e5d8f3b5ac212694229f8ea3d1f89ae7c292e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [directx-porting-faq.d18e5d8f3b5ac212694229f8ea3d1f89ae7c292e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/directx-porting-faq.d18e5d8f3b5ac212694229f8ea3d1f89ae7c292e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='3a9e9c32ed2d892674592f32d0f067fed668d9d12116'></a> Source: [windows-apps-src\gaming\feature-mapping.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/feature-mapping.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\feature-mapping.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/feature-mapping.md)
+* Handoff File: [feature-mapping.92e103d1fd32587b400b67b5f0664eb09edaa638.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/feature-mapping.92e103d1fd32587b400b67b5f0664eb09edaa638.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [feature-mapping.92e103d1fd32587b400b67b5f0664eb09edaa638.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/feature-mapping.92e103d1fd32587b400b67b5f0664eb09edaa638.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='3c7807d0b46a32bfe90c79b7eee3111039ca94ab2117'></a> Source: [windows-apps-src\gaming\game-development-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/game-development-platform-guide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\game-development-platform-guide.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/game-development-platform-guide.md)
+* Handoff File: [game-development-platform-guide.6cb10f2ab62012e5c3d288612ea0d81b6f521622.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/game-development-platform-guide.6cb10f2ab62012e5c3d288612ea0d81b6f521622.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [game-development-platform-guide.6cb10f2ab62012e5c3d288612ea0d81b6f521622.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/game-development-platform-guide.6cb10f2ab62012e5c3d288612ea0d81b6f521622.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='02a3ba1768b6fa7b09b6c9f637a72d88c0cef6042118'></a> Source: [windows-apps-src\gaming\glsl-to-hlsl-reference.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/gaming/glsl-to-hlsl-reference.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\glsl-to-hlsl-reference.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/glsl-to-hlsl-reference.md)
+* Handoff File: [glsl-to-hlsl-reference.373f393e9f588b4fa6bda3e1de77a13273eea9a4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/glsl-to-hlsl-reference.373f393e9f588b4fa6bda3e1de77a13273eea9a4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [glsl-to-hlsl-reference.373f393e9f588b4fa6bda3e1de77a13273eea9a4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/glsl-to-hlsl-reference.373f393e9f588b4fa6bda3e1de77a13273eea9a4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='14859d03c7af45a17772c76f8c79b3c1bc56272c2120'></a> Source: [windows-apps-src\gaming\how-to-activate-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-activate-an-app-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\how-to-activate-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/how-to-activate-an-app-directx-and-cpp.md)
+* Handoff File: [how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='d5383da7332c80d4337f0e0b3eef0a6851fcd5272121'></a> Source: [windows-apps-src\gaming\how-to-resume-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-resume-an-app-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\how-to-resume-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/how-to-resume-an-app-directx-and-cpp.md)
+* Handoff File: [how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='38e03a4a6312c5a0521c7263944897260624aa382122'></a> Source: [windows-apps-src\gaming\how-to-suspend-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/how-to-suspend-an-app-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\how-to-suspend-an-app-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/how-to-suspend-an-app-directx-and-cpp.md)
+* Handoff File: [how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='b690fa9a97898da49646e39c982465a4a41adb7a2150'></a> Source: [windows-apps-src\gaming\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/index.md)
+* Handoff File: [index.2206b707c2a82ebad9f7cf1f06a7ad9bf16bee51.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.2206b707c2a82ebad9f7cf1f06a7ad9bf16bee51.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.2206b707c2a82ebad9f7cf1f06a7ad9bf16bee51.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/index.2206b707c2a82ebad9f7cf1f06a7ad9bf16bee51.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='cc9468e278d651729740147cb21c70d53b43800f2151'></a> Source: [windows-apps-src\gaming\launching-and-resuming-apps-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/launching-and-resuming-apps-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\launching-and-resuming-apps-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/launching-and-resuming-apps-directx-and-cpp.md)
+* Handoff File: [launching-and-resuming-apps-directx-and-cpp.984290b08b57a05f42b9991c2d45caaf54fc556d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launching-and-resuming-apps-directx-and-cpp.984290b08b57a05f42b9991c2d45caaf54fc556d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launching-and-resuming-apps-directx-and-cpp.984290b08b57a05f42b9991c2d45caaf54fc556d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/launching-and-resuming-apps-directx-and-cpp.984290b08b57a05f42b9991c2d45caaf54fc556d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='fd4d2162e9a0007df34b465f570820843b326d722152'></a> Source: [windows-apps-src\gaming\load-a-game-asset.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/load-a-game-asset.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\load-a-game-asset.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/load-a-game-asset.md)
+* Handoff File: [load-a-game-asset.ccf3bbd77e1c42a67e7d542ffc4861b98768818a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/load-a-game-asset.ccf3bbd77e1c42a67e7d542ffc4861b98768818a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [load-a-game-asset.ccf3bbd77e1c42a67e7d542ffc4861b98768818a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/load-a-game-asset.ccf3bbd77e1c42a67e7d542ffc4861b98768818a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='a058c5f669704695cc3a2ae5385feccbf6cb4bc32153'></a> Source: [windows-apps-src\gaming\map-concepts-and-infrastructure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/map-concepts-and-infrastructure.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\map-concepts-and-infrastructure.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/map-concepts-and-infrastructure.md)
+* Handoff File: [map-concepts-and-infrastructure.f056a157e43f2ea14b7899a160a8411cb681f693.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/map-concepts-and-infrastructure.f056a157e43f2ea14b7899a160a8411cb681f693.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [map-concepts-and-infrastructure.f056a157e43f2ea14b7899a160a8411cb681f693.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/map-concepts-and-infrastructure.f056a157e43f2ea14b7899a160a8411cb681f693.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='e9cc290fa77471f315daf7f29f605412d2ec45cc2154'></a> Source: [windows-apps-src\gaming\marble-maze-application-structure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/marble-maze-application-structure.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\marble-maze-application-structure.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/marble-maze-application-structure.md)
+* Handoff File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/marble-maze-application-structure.0502d6b2d7ac920f7528db90468417425870e098.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='5a9df995078763df73542a4101e73e147517b1eb2155'></a> Source: [windows-apps-src\gaming\marble-maze-sample-fundamentals.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/marble-maze-sample-fundamentals.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\marble-maze-sample-fundamentals.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/marble-maze-sample-fundamentals.md)
+* Handoff File: [marble-maze-sample-fundamentals.daaef2f8754d2f4de30c1f369b3c2d67983a7589.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/marble-maze-sample-fundamentals.daaef2f8754d2f4de30c1f369b3c2d67983a7589.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [marble-maze-sample-fundamentals.daaef2f8754d2f4de30c1f369b3c2d67983a7589.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/marble-maze-sample-fundamentals.daaef2f8754d2f4de30c1f369b3c2d67983a7589.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='461983b646148c21aba7da2adb703510d95b03432156'></a> Source: [windows-apps-src\gaming\moving-from-egl-to-dxgi.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/moving-from-egl-to-dxgi.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\moving-from-egl-to-dxgi.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/moving-from-egl-to-dxgi.md)
+* Handoff File: [moving-from-egl-to-dxgi.adfddd17f4ea926cdcc9b9e4ae5506e97501e1cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/moving-from-egl-to-dxgi.adfddd17f4ea926cdcc9b9e4ae5506e97501e1cd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [moving-from-egl-to-dxgi.adfddd17f4ea926cdcc9b9e4ae5506e97501e1cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/moving-from-egl-to-dxgi.adfddd17f4ea926cdcc9b9e4ae5506e97501e1cd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='7b240de9ab3c7b53877d38eb9097dde25b2a40be2157'></a> Source: [windows-apps-src\gaming\multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md)
+* Handoff File: [multisampling--multi-sample-anti-aliasing--in-windows-store-apps.68e5db00a4d30b9b6d469c08d0d24e5588af210e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.68e5db00a4d30b9b6d469c08d0d24e5588af210e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [multisampling--multi-sample-anti-aliasing--in-windows-store-apps.68e5db00a4d30b9b6d469c08d0d24e5588af210e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.68e5db00a4d30b9b6d469c08d0d24e5588af210e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='3380c5156072a9853261ec6b706a612b42e7ba102158'></a> Source: [windows-apps-src\gaming\multisampling--scaling--and-overlay-swap-chains.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/gaming/multisampling--scaling--and-overlay-swap-chains.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\multisampling--scaling--and-overlay-swap-chains.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/multisampling--scaling--and-overlay-swap-chains.md)
+* Handoff File: [multisampling--scaling--and-overlay-swap-chains.fa804b0b4acda02a61ba0d6e332bb6f684ce2ac8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/multisampling--scaling--and-overlay-swap-chains.fa804b0b4acda02a61ba0d6e332bb6f684ce2ac8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [multisampling--scaling--and-overlay-swap-chains.fa804b0b4acda02a61ba0d6e332bb6f684ce2ac8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/multisampling--scaling--and-overlay-swap-chains.fa804b0b4acda02a61ba0d6e332bb6f684ce2ac8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='ad6da83773bf5b791f4b2921b8ea55345aae999b2159'></a> Source: [windows-apps-src\gaming\opengl-es-2-0-to-directx-11-1-reference.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/opengl-es-2-0-to-directx-11-1-reference.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\opengl-es-2-0-to-directx-11-1-reference.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/opengl-es-2-0-to-directx-11-1-reference.md)
+* Handoff File: [opengl-es-2-0-to-directx-11-1-reference.2180bdd88eb01667a210044e632ca707d87f59c4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/opengl-es-2-0-to-directx-11-1-reference.2180bdd88eb01667a210044e632ca707d87f59c4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [opengl-es-2-0-to-directx-11-1-reference.2180bdd88eb01667a210044e632ca707d87f59c4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/opengl-es-2-0-to-directx-11-1-reference.2180bdd88eb01667a210044e632ca707d87f59c4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='19bcf043f3fc8c729f5f9fbbeee237bd1749443d2160'></a> Source: [windows-apps-src\gaming\optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)
+* Handoff File: [optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.58d0d05e53aeeb0f40a97e2f00adfed3356f99ef.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.58d0d05e53aeeb0f40a97e2f00adfed3356f99ef.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.58d0d05e53aeeb0f40a97e2f00adfed3356f99ef.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.58d0d05e53aeeb0f40a97e2f00adfed3356f99ef.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='14043fffc22849ca8d31f85e1035c38c07f1cdd42161'></a> Source: [windows-apps-src\gaming\package-your-windows-store-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/package-your-windows-store-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\package-your-windows-store-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/package-your-windows-store-directx-game.md)
+* Handoff File: [package-your-windows-store-directx-game.32a4d0ec100533a9b610c2ae9a6d192686e4c1d8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/package-your-windows-store-directx-game.32a4d0ec100533a9b610c2ae9a6d192686e4c1d8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [package-your-windows-store-directx-game.32a4d0ec100533a9b610c2ae9a6d192686e4c1d8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/package-your-windows-store-directx-game.32a4d0ec100533a9b610c2ae9a6d192686e4c1d8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='929ad82ce057754ee04f1f27537e03520e95157a2162'></a> Source: [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/plan-your-directx-port.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\plan-your-directx-port.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/plan-your-directx-port.md)
+* Handoff File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='bac545f3490b3af876d3e8b5fd459bd6265059162164'></a> Source: [windows-apps-src\gaming\port-from-opengl-es-2-0-to-directx-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-from-opengl-es-2-0-to-directx-11-1.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\port-from-opengl-es-2-0-to-directx-11-1.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/port-from-opengl-es-2-0-to-directx-11-1.md)
+* Handoff File: [port-from-opengl-es-2-0-to-directx-11-1.239e6d482d374f8ca54b641497db1a0fb7659ca1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/port-from-opengl-es-2-0-to-directx-11-1.239e6d482d374f8ca54b641497db1a0fb7659ca1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [port-from-opengl-es-2-0-to-directx-11-1.239e6d482d374f8ca54b641497db1a0fb7659ca1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/port-from-opengl-es-2-0-to-directx-11-1.239e6d482d374f8ca54b641497db1a0fb7659ca1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='a588ba010ddf21a07d493774cff7f6ab5dbfdf472170'></a> Source: [windows-apps-src\gaming\porting-uniforms-and-attributes.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/porting-uniforms-and-attributes.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\porting-uniforms-and-attributes.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/porting-uniforms-and-attributes.md)
+* Handoff File: [porting-uniforms-and-attributes.f230565dff22ac62f9c58e8e02d2ac71126b4015.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/porting-uniforms-and-attributes.f230565dff22ac62f9c58e8e02d2ac71126b4015.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [porting-uniforms-and-attributes.f230565dff22ac62f9c58e8e02d2ac71126b4015.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/porting-uniforms-and-attributes.f230565dff22ac62f9c58e8e02d2ac71126b4015.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='1cb77db78fe368c567990c9521122b42ef10ec652171'></a> Source: [windows-apps-src\gaming\porting-your-directx-9-game-to-windows-store.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/porting-your-directx-9-game-to-windows-store.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\porting-your-directx-9-game-to-windows-store.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/porting-your-directx-9-game-to-windows-store.md)
+* Handoff File: [porting-your-directx-9-game-to-windows-store.379cd58f4e2797dfbc169de303e1e2a92eb0a167.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/porting-your-directx-9-game-to-windows-store.379cd58f4e2797dfbc169de303e1e2a92eb0a167.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [porting-your-directx-9-game-to-windows-store.379cd58f4e2797dfbc169de303e1e2a92eb0a167.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/porting-your-directx-9-game-to-windows-store.379cd58f4e2797dfbc169de303e1e2a92eb0a167.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='d1d203fa74bd80fe26401e64d4e15bb11e5c10502165'></a> Source: [windows-apps-src\gaming\port-the-glsl.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-glsl.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\port-the-glsl.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/port-the-glsl.md)
+* Handoff File: [port-the-glsl.4e1b24f1cda917f89bbd5720c263757724a98d2d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/port-the-glsl.4e1b24f1cda917f89bbd5720c263757724a98d2d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [port-the-glsl.4e1b24f1cda917f89bbd5720c263757724a98d2d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/port-the-glsl.4e1b24f1cda917f89bbd5720c263757724a98d2d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='17d66e217e40eca0653078820746746eb23185e12166'></a> Source: [windows-apps-src\gaming\port-the-shader-config.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-shader-config.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\port-the-shader-config.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/port-the-shader-config.md)
+* Handoff File: [port-the-shader-config.29046fbfc39941f5989e074a72aafb0b84472003.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/port-the-shader-config.29046fbfc39941f5989e074a72aafb0b84472003.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [port-the-shader-config.29046fbfc39941f5989e074a72aafb0b84472003.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/port-the-shader-config.29046fbfc39941f5989e074a72aafb0b84472003.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='9692b33303099f9d1193b93ab458a19a5d95abe32167'></a> Source: [windows-apps-src\gaming\port-the-vertex-buffers-and-data-config.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/port-the-vertex-buffers-and-data-config.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\port-the-vertex-buffers-and-data-config.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/port-the-vertex-buffers-and-data-config.md)
+* Handoff File: [port-the-vertex-buffers-and-data-config.9d47c755c80eb746d428dc52d8d476316cae5752.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/port-the-vertex-buffers-and-data-config.9d47c755c80eb746d428dc52d8d476316cae5752.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [port-the-vertex-buffers-and-data-config.9d47c755c80eb746d428dc52d8d476316cae5752.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/port-the-vertex-buffers-and-data-config.9d47c755c80eb746d428dc52d8d476316cae5752.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='174e2918d54a2b03124752d009f43f0cb0c800ca2173'></a> Source: [windows-apps-src\gaming\reduce-latency-with-dxgi-1-3-swap-chains.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/reduce-latency-with-dxgi-1-3-swap-chains.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\reduce-latency-with-dxgi-1-3-swap-chains.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/reduce-latency-with-dxgi-1-3-swap-chains.md)
+* Handoff File: [reduce-latency-with-dxgi-1-3-swap-chains.18585808e34f27c3be0bdb00d4901a48c500a615.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/reduce-latency-with-dxgi-1-3-swap-chains.18585808e34f27c3be0bdb00d4901a48c500a615.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [reduce-latency-with-dxgi-1-3-swap-chains.18585808e34f27c3be0bdb00d4901a48c500a615.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/reduce-latency-with-dxgi-1-3-swap-chains.18585808e34f27c3be0bdb00d4901a48c500a615.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='2bac8e8337a10a8411b02eeed53d772dbb5abad62174'></a> Source: [windows-apps-src\gaming\render-the-scene-with-depth-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/render-the-scene-with-depth-testing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\render-the-scene-with-depth-testing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/render-the-scene-with-depth-testing.md)
+* Handoff File: [render-the-scene-with-depth-testing.d44fdf38297e8d78dfbd6679569c6b665634cea7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/render-the-scene-with-depth-testing.d44fdf38297e8d78dfbd6679569c6b665634cea7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [render-the-scene-with-depth-testing.d44fdf38297e8d78dfbd6679569c6b665634cea7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/render-the-scene-with-depth-testing.d44fdf38297e8d78dfbd6679569c6b665634cea7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='644e2084baa750965a5283208fde1cea24ecfdea2175'></a> Source: [windows-apps-src\gaming\render-the-shadow-map-to-the-depth-buffer.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/render-the-shadow-map-to-the-depth-buffer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\render-the-shadow-map-to-the-depth-buffer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/render-the-shadow-map-to-the-depth-buffer.md)
+* Handoff File: [render-the-shadow-map-to-the-depth-buffer.8158899bdae53d035155670128930bdd25478e18.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/render-the-shadow-map-to-the-depth-buffer.8158899bdae53d035155670128930bdd25478e18.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [render-the-shadow-map-to-the-depth-buffer.8158899bdae53d035155670128930bdd25478e18.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/render-the-shadow-map-to-the-depth-buffer.8158899bdae53d035155670128930bdd25478e18.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='2202474f24e93aab32ec9f4e85e765616cbae0562176'></a> Source: [windows-apps-src\gaming\set-up-visual-studio-for-game-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/set-up-visual-studio-for-game-development.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\set-up-visual-studio-for-game-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/set-up-visual-studio-for-game-development.md)
+* Handoff File: [set-up-visual-studio-for-game-development.adbf4101159b01fe52868b1d91ce27385233fa3f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-up-visual-studio-for-game-development.adbf4101159b01fe52868b1d91ce27385233fa3f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [set-up-visual-studio-for-game-development.adbf4101159b01fe52868b1d91ce27385233fa3f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/set-up-visual-studio-for-game-development.adbf4101159b01fe52868b1d91ce27385233fa3f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='f0e25e43633d895673d640f139af338f6f0713f22178'></a> Source: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)
+* Handoff File: [simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.c318817575f91422f39184ba8cd76bf90e3f84a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.c318817575f91422f39184ba8cd76bf90e3f84a9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.c318817575f91422f39184ba8cd76bf90e3f84a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.c318817575f91422f39184ba8cd76bf90e3f84a9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='5cfdce2a62f6b5761ebf820418762a307dd051bb2179'></a> Source: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-2--rendering.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-2--rendering.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+* Handoff File: [simple-port-from-direct3d-9-to-11-1-part-2--rendering.d3ce209c7c729fe9f7e1569d37ffebb0ce265cb3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/simple-port-from-direct3d-9-to-11-1-part-2--rendering.d3ce209c7c729fe9f7e1569d37ffebb0ce265cb3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [simple-port-from-direct3d-9-to-11-1-part-2--rendering.d3ce209c7c729fe9f7e1569d37ffebb0ce265cb3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.d3ce209c7c729fe9f7e1569d37ffebb0ce265cb3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='3c2369a2fdc48aed14f7ad363df8792e0ed5d7952180'></a> Source: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+* Handoff File: [simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.297c896f29b3ce14fc184d288d08f88de342a446.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.297c896f29b3ce14fc184d288d08f88de342a446.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.297c896f29b3ce14fc184d288d08f88de342a446.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.297c896f29b3ce14fc184d288d08f88de342a446.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='8da32494e0bb0bd48d485c946df1c9a5baec7fbe2181'></a> Source: [windows-apps-src\gaming\supporting-screen-rotation-directx-and-cpp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/supporting-screen-rotation-directx-and-cpp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\supporting-screen-rotation-directx-and-cpp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/supporting-screen-rotation-directx-and-cpp.md)
+* Handoff File: [supporting-screen-rotation-directx-and-cpp.3816d9dd00afb23179d34cdac45c17cb6547be84.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/supporting-screen-rotation-directx-and-cpp.3816d9dd00afb23179d34cdac45c17cb6547be84.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [supporting-screen-rotation-directx-and-cpp.3816d9dd00afb23179d34cdac45c17cb6547be84.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/supporting-screen-rotation-directx-and-cpp.3816d9dd00afb23179d34cdac45c17cb6547be84.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='0cdc31f07560e7f1747806d1436bccbc1e50f8b92182'></a> Source: [windows-apps-src\gaming\target-a-range-of-hardware.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/gaming/target-a-range-of-hardware.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\target-a-range-of-hardware.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/target-a-range-of-hardware.md)
+* Handoff File: [target-a-range-of-hardware.c0f9c52351a9e044a4b333df4cada1262339d2f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/target-a-range-of-hardware.c0f9c52351a9e044a4b333df4cada1262339d2f3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [target-a-range-of-hardware.c0f9c52351a9e044a4b333df4cada1262339d2f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/target-a-range-of-hardware.c0f9c52351a9e044a4b333df4cada1262339d2f3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='d7af6683ab2def1af62e73be008e9189190cde952183'></a> Source: [windows-apps-src\gaming\tutorial--adding-a-user-interface.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-a-user-interface.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--adding-a-user-interface.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--adding-a-user-interface.md)
+* Handoff File: [tutorial--adding-a-user-interface.6f5f3418ecb90986c2c5f51e47f482e96470eb6c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--adding-a-user-interface.6f5f3418ecb90986c2c5f51e47f482e96470eb6c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--adding-a-user-interface.6f5f3418ecb90986c2c5f51e47f482e96470eb6c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--adding-a-user-interface.6f5f3418ecb90986c2c5f51e47f482e96470eb6c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='7adbfdb77af6992be9448969f635bdebac58344b2185'></a> Source: [windows-apps-src\gaming\tutorial--adding-move-look-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-move-look-controls-to-your-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--adding-move-look-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--adding-move-look-controls-to-your-directx-game.md)
+* Handoff File: [tutorial--adding-move-look-controls-to-your-directx-game.0c1971be6d010ce0ab7092bea7ad921153148862.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--adding-move-look-controls-to-your-directx-game.0c1971be6d010ce0ab7092bea7ad921153148862.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--adding-move-look-controls-to-your-directx-game.0c1971be6d010ce0ab7092bea7ad921153148862.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--adding-move-look-controls-to-your-directx-game.0c1971be6d010ce0ab7092bea7ad921153148862.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='a2460ba2ffcf191fe87132180b2cca7519e871412187'></a> Source: [windows-apps-src\gaming\tutorial--adding-touch-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--adding-touch-controls-to-your-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--adding-touch-controls-to-your-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--adding-touch-controls-to-your-directx-game.md)
+* Handoff File: [tutorial--adding-touch-controls-to-your-directx-game.b905bd307f6aa014c90ab7c72f5b9584384e3909.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--adding-touch-controls-to-your-directx-game.b905bd307f6aa014c90ab7c72f5b9584384e3909.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--adding-touch-controls-to-your-directx-game.b905bd307f6aa014c90ab7c72f5b9584384e3909.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--adding-touch-controls-to-your-directx-game.b905bd307f6aa014c90ab7c72f5b9584384e3909.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='5eb6ea7ad1a30f020c155007396383b88d10c0a82188'></a> Source: [windows-apps-src\gaming\tutorial--assembling-the-rendering-pipeline.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--assembling-the-rendering-pipeline.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--assembling-the-rendering-pipeline.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--assembling-the-rendering-pipeline.md)
+* Handoff File: [tutorial--assembling-the-rendering-pipeline.7ab4dfb132ca858c8bbc686ec82cbc851b55b4fa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--assembling-the-rendering-pipeline.7ab4dfb132ca858c8bbc686ec82cbc851b55b4fa.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--assembling-the-rendering-pipeline.7ab4dfb132ca858c8bbc686ec82cbc851b55b4fa.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--assembling-the-rendering-pipeline.7ab4dfb132ca858c8bbc686ec82cbc851b55b4fa.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='2ebc7bca06454f78ab375058e49f012cacb00cc82189'></a> Source: [windows-apps-src\gaming\tutorial--building-the-games-metro-style-app-framework.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--building-the-games-metro-style-app-framework.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--building-the-games-metro-style-app-framework.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--building-the-games-metro-style-app-framework.md)
+* Handoff File: [tutorial--building-the-games-metro-style-app-framework.b81ff65d00b1c6356386084d70d5c17cd4688754.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--building-the-games-metro-style-app-framework.b81ff65d00b1c6356386084d70d5c17cd4688754.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--building-the-games-metro-style-app-framework.b81ff65d00b1c6356386084d70d5c17cd4688754.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--building-the-games-metro-style-app-framework.b81ff65d00b1c6356386084d70d5c17cd4688754.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='9f62e2a42dc0a1b70e37194cd5755e51699ddc382190'></a> Source: [windows-apps-src\gaming\tutorial--create-your-first-metro-style-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--create-your-first-metro-style-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--create-your-first-metro-style-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--create-your-first-metro-style-directx-game.md)
+* Handoff File: [tutorial--create-your-first-metro-style-directx-game.212eefa220f0924cef5c82954c28b7234ea8f617.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--create-your-first-metro-style-directx-game.212eefa220f0924cef5c82954c28b7234ea8f617.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--create-your-first-metro-style-directx-game.212eefa220f0924cef5c82954c28b7234ea8f617.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--create-your-first-metro-style-directx-game.212eefa220f0924cef5c82954c28b7234ea8f617.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='66e40c150b5eb4f57c9cddfaf472c56601b3fa0b2191'></a> Source: [windows-apps-src\gaming\tutorial--defining-the-main-game-loop.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--defining-the-main-game-loop.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--defining-the-main-game-loop.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--defining-the-main-game-loop.md)
+* Handoff File: [tutorial--defining-the-main-game-loop.7e4b2843440863172bd32ca37808819df19c2b1d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--defining-the-main-game-loop.7e4b2843440863172bd32ca37808819df19c2b1d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--defining-the-main-game-loop.7e4b2843440863172bd32ca37808819df19c2b1d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--defining-the-main-game-loop.7e4b2843440863172bd32ca37808819df19c2b1d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='02b8681c45c84e1cdd5b97dfc717a68015df12522193'></a> Source: [windows-apps-src\gaming\tutorial-resources.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/gaming/tutorial-resources.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial-resources.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial-resources.md)
+* Handoff File: [tutorial-resources.d087cd5684309a45ff77f42c99341a24184197f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial-resources.d087cd5684309a45ff77f42c99341a24184197f3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial-resources.d087cd5684309a45ff77f42c99341a24184197f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial-resources.d087cd5684309a45ff77f42c99341a24184197f3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='d4d7864f9689df0919b53ee70b8e18f8d812b2b02192'></a> Source: [windows-apps-src\gaming\tutorial--setting-up-the-games-infrastructure.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/tutorial--setting-up-the-games-infrastructure.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\tutorial--setting-up-the-games-infrastructure.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/tutorial--setting-up-the-games-infrastructure.md)
+* Handoff File: [tutorial--setting-up-the-games-infrastructure.170ff2ef53d3a976d2f94094a846e73180cbe4b8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tutorial--setting-up-the-games-infrastructure.170ff2ef53d3a976d2f94094a846e73180cbe4b8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tutorial--setting-up-the-games-infrastructure.170ff2ef53d3a976d2f94094a846e73180cbe4b8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/tutorial--setting-up-the-games-infrastructure.170ff2ef53d3a976d2f94094a846e73180cbe4b8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='8d63aebaf656b62481675eebf7c0bf9ea51784a82194'></a> Source: [windows-apps-src\gaming\understand-direct3d-11-1-concepts.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/understand-direct3d-11-1-concepts.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\understand-direct3d-11-1-concepts.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/understand-direct3d-11-1-concepts.md)
+* Handoff File: [understand-direct3d-11-1-concepts.9bd75fda0115d54adc1a764df27a3dc32c3354b6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/understand-direct3d-11-1-concepts.9bd75fda0115d54adc1a764df27a3dc32c3354b6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [understand-direct3d-11-1-concepts.9bd75fda0115d54adc1a764df27a3dc32c3354b6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/understand-direct3d-11-1-concepts.9bd75fda0115d54adc1a764df27a3dc32c3354b6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='b7d01fda0bc8dbafebb7485ec01acb5c7431a8152196'></a> Source: [windows-apps-src\gaming\user-interface.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/user-interface.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\user-interface.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/user-interface.md)
+* Handoff File: [user-interface.52f4b3fa86085e9883b6b650a81ff67f50dbd093.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/user-interface.52f4b3fa86085e9883b6b650a81ff67f50dbd093.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [user-interface.52f4b3fa86085e9883b6b650a81ff67f50dbd093.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/user-interface.52f4b3fa86085e9883b6b650a81ff67f50dbd093.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='f266cb50893fd37162f21be169d6daf6e37c6bb92195'></a> Source: [windows-apps-src\gaming\use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md)
+* Handoff File: [use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.32991bbdf51ecc4e0a37f7d65fafe1f5448ca610.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.32991bbdf51ecc4e0a37f7d65fafe1f5448ca610.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.32991bbdf51ecc4e0a37f7d65fafe1f5448ca610.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.32991bbdf51ecc4e0a37f7d65fafe1f5448ca610.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='27c6f82e97e9eb24dedcc5d83a18e6aba69611942198'></a> Source: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
+* Handoff File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='50782c5923f9c811f5d8e91aa9aee897876e6c242201'></a> Source: [windows-apps-src\gaming\working-with-2d-graphics-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/working-with-2d-graphics-in-your-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\working-with-2d-graphics-in-your-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/working-with-2d-graphics-in-your-directx-game.md)
+* Handoff File: [working-with-2d-graphics-in-your-directx-game.385d1b76d039e561eeae2c0dec1c9bd7878c4b49.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/working-with-2d-graphics-in-your-directx-game.385d1b76d039e561eeae2c0dec1c9bd7878c4b49.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [working-with-2d-graphics-in-your-directx-game.385d1b76d039e561eeae2c0dec1c9bd7878c4b49.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/working-with-2d-graphics-in-your-directx-game.385d1b76d039e561eeae2c0dec1c9bd7878c4b49.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='98896d4966ee2adb3bf494dcba22656fc8bb64142202'></a> Source: [windows-apps-src\gaming\working-with-audio-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/working-with-audio-in-your-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\working-with-audio-in-your-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/working-with-audio-in-your-directx-game.md)
+* Handoff File: [working-with-audio-in-your-directx-game.e556b77a6a20cc9e15f0072bc2ec35abd2781c57.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/working-with-audio-in-your-directx-game.e556b77a6a20cc9e15f0072bc2ec35abd2781c57.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [working-with-audio-in-your-directx-game.e556b77a6a20cc9e15f0072bc2ec35abd2781c57.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/working-with-audio-in-your-directx-game.e556b77a6a20cc9e15f0072bc2ec35abd2781c57.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='63a40f5853740d1053449e1b1839f5b0232ce28e2200'></a> Source: [windows-apps-src\gaming\work-with-networking-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/work-with-networking-in-your-directx-game.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\work-with-networking-in-your-directx-game.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ef434b790f896a3ec9bbc0591ec3662b567929f3/windows-apps-src/gaming/work-with-networking-in-your-directx-game.md)
+* Handoff File: [work-with-networking-in-your-directx-game.6503f26f5fe6ff23aa8836c749b168ca76941ad9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/work-with-networking-in-your-directx-game.6503f26f5fe6ff23aa8836c749b168ca76941ad9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [work-with-networking-in-your-directx-game.6503f26f5fe6ff23aa8836c749b168ca76941ad9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7a46e2cab2966e78145581828841146eee24c0e6/ol-handback/Microsoft/windows-apps.ko-kr/master/gaming/work-with-networking-in-your-directx-game.6503f26f5fe6ff23aa8836c749b168ca76941ad9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:53
 * [Back to Top](#report-top)
 
 
