@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: 지도 인증 키 요청
 description: Windows.Services.Maps 네임스페이스에서 MapControl 및 지도 서비스를 사용하려면 먼저 유니버설 Windows 앱을 인증해야 합니다.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
@@ -40,7 +41,7 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
     -   **응용 프로그램 이름:** 응용 프로그램의 이름입니다.
     -   **응용 프로그램 URL(옵션):** 응용 프로그램의 URL입니다.
-    -   **키 유형:** **기본 **또는 **엔터프라이즈**를 선택합니다.
+    -   **키 유형:** **기본**또는 **엔터프라이즈**를 선택합니다.
     -   **응용 프로그램 종류:** 유니버설 Windows 앱에서 사용할 **유니버설 Windows 앱**을 선택합니다.
 
     다음은 양식이 표시되는 모양의 예입니다.
@@ -67,7 +68,7 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
 -   이 예제는 **MapServiceToken**을 XAML 태그의 인증 키 값으로 설정합니다.
 
-    ```xaml
+    ```xml
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
@@ -93,6 +94,6 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

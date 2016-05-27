@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 Description: 지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다.
 title: 지도에 대한 지침
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
@@ -69,6 +70,6 @@ ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

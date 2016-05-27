@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: 사용자 위치 가져오기
 description: 사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
@@ -229,7 +230,7 @@ async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs
 
 위치 개인 정보 설정에 따라 앱이 사용자의 위치에 액세스할 수 없는 경우 **설정** 앱에서 **위치 개인 정보 설정**에 대한 편리한 링크를 제공하는 것이 좋습니다. 이 예제에서는 하이퍼링크 컨트롤이 `ms-settings:privacy-location` URI로 이동하는 데 사용됩니다.
 
-```xaml
+```xml
 <!--Set Visibility to Visible when access to location is denied -->  
 <TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
@@ -267,6 +268,6 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

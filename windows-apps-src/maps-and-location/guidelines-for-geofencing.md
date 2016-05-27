@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 Description: 앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다.
 title: 지오펜스 앱에 대한 지침
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
@@ -123,7 +124,7 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 * [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP location sample (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP 위치 샘플(지리적 위치)](http://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  
@@ -133,6 +134,6 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
