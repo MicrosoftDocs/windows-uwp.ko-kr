@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 390
+ Total Files | 420
 
 ## File List
  Source File | Status | Details 
@@ -396,6 +396,36 @@
  [windows-apps-src\packaging\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/packaging/index.md) | InSyncHandedBackSuccess | [Details](#6f50874ceb5e133f2b1b764bfc6fcff6422172db3366)
  [windows-apps-src\packaging\install-universal-windows-apps-with-the-winappdeploycmd-tool.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | InSyncHandedBackSuccess | [Details](#d3135724e092495e8f937e6d53bdfbaa9e7cf4503367)
  [windows-apps-src\packaging\packaging-uwp-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/packaging/packaging-uwp-apps.md) | InSyncHandedBackSuccess | [Details](#a77e441cbd1b6826e06064dbd4be449813754b253368)
+ [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/a869ae056d29f45fb60597cf8ce49cc150e1af01/windows-apps-src/porting/android-ios-uwp-map.md) | InSyncHandedBackSuccess | [Details](#8e10b13f87a6b4b04b0bc8a8bbf221b08ad009113369)
+ [windows-apps-src\porting\desktop-to-uwp-manual-conversion.md](https://github.com/Microsoft/windows-apps/blob/609068980b98db007021bf8c543e52510aceefb8/windows-apps-src/porting/desktop-to-uwp-manual-conversion.md) | InSyncHandedBackSuccess | [Details](#bc05ce3ca612a360f40b2a249c694ee40f3e28dd3371)
+ [windows-apps-src\porting\getting-started-animation.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/getting-started-animation.md) | InSyncHandedBackSuccess | [Details](#6e0b92af1d3c5f61aa2341d43ca40330fcc359f43374)
+ [windows-apps-src\porting\getting-started-choosing-a-programming-language.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-choosing-a-programming-language.md) | InSyncHandedBackSuccess | [Details](#10fa4a349621c8e7b248c7daf4d7cdf967e252553375)
+ [windows-apps-src\porting\getting-started-common-controls.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-common-controls.md) | InSyncHandedBackSuccess | [Details](#9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a3376)
+ [windows-apps-src\porting\getting-started-creating-a-project.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-creating-a-project.md) | InSyncHandedBackSuccess | [Details](#23d9ed066e2909a15b3106fd19bf6ce5ab09e7a93377)
+ [windows-apps-src\porting\getting-started-getting-around-in-visual-studio.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-getting-around-in-visual-studio.md) | InSyncHandedBackSuccess | [Details](#d31e6e940f0b03667f1e19abec17804f6f3e16a63378)
+ [windows-apps-src\porting\getting-started-navigation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-navigation.md) | InSyncHandedBackSuccess | [Details](#c542faa6365c8558988162bee12f266d674744613379)
+ [windows-apps-src\porting\getting-started-what-next.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-what-next.md) | InSyncHandedBackSuccess | [Details](#2b11133fda76fb42f3a850848c426cbb33fb83663380)
+ [windows-apps-src\porting\getting-started-with-uwp-for-ios-developers.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-with-uwp-for-ios-developers.md) | InSyncHandedBackSuccess | [Details](#3fef53e5d6c9259bf5157b1221643d07e1d8be5e3381)
+ [windows-apps-src\porting\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/index.md) | InSyncHandedBackSuccess | [Details](#88ebc2984ce856dd3fb10b8a61de4a32dc7115003446)
+ [windows-apps-src\porting\ios-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/ios-to-uwp-root.md) | InSyncHandedBackSuccess | [Details](#7f6160d651a4264d81ac1a1c9a011e32f53778b03447)
+ [windows-apps-src\porting\selecting-an-approach-to-ios-and-uwp-app-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/selecting-an-approach-to-ios-and-uwp-app-development.md) | InSyncHandedBackSuccess | [Details](#2703a0c919b08331cc7ab55fe78b868555312ac03448)
+ [windows-apps-src\porting\setting-up-your-mac-with-windows-10.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/setting-up-your-mac-with-windows-10.md) | InSyncHandedBackSuccess | [Details](#10ebdb0a534d8f2931d15481c1bee4705268b0bb3449)
+ [windows-apps-src\porting\update-your-visual-studio-2015-rc-project-to-rtm.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/update-your-visual-studio-2015-rc-project-to-rtm.md) | InSyncHandedBackSuccess | [Details](#9c2b9f164b6578a9e1d269295b3fa0d7a863a6a03450)
+ [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore1.md) | InSyncHandedBackSuccess | [Details](#43536aacb37a79b3e8507896474be67423a0b9fe3451)
+ [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore2.md) | InSyncHandedBackSuccess | [Details](#97682b2b914707874dcac998f7db5f2029ad433e3452)
+ [windows-apps-src\porting\w8x-to-uwp-case-study-quizgame.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-case-study-quizgame.md) | InSyncHandedBackSuccess | [Details](#cd05c3edbc254cceb00c55caba698d21998f55943453)
+ [windows-apps-src\porting\w8x-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-input-and-sensors.md) | InSyncHandedBackSuccess | [Details](#e5e560ca4f40496edf9d11c3eef546fdc4c3b0793454)
+ [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/porting/w8x-to-uwp-porting-to-a-uwp-project.md) | InSyncHandedBackSuccess | [Details](#60f59c58aedc56da58350a050acd184a376b80673455)
+ [windows-apps-src\porting\w8x-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-root.md) | InSyncHandedBackSuccess | [Details](#3aa24e61482054dadd9b798063d46abf36623e9b3457)
+ [windows-apps-src\porting\w8x-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-troubleshooting.md) | InSyncHandedBackSuccess | [Details](#e5758472d303f4baaf80d45d6b23b54f2a21e0023458)
+ [windows-apps-src\porting\wpsl-to-uwp-business-and-data.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-business-and-data.md) | InSyncHandedBackSuccess | [Details](#24e94e91adc0e5ef0b7a076d54299eab8c4ba5273459)
+ [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore1.md) | InSyncHandedBackSuccess | [Details](#dbffb4245efece2d39b4eba8979e323fd71626d03460)
+ [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore2.md) | InSyncHandedBackSuccess | [Details](#019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b3461)
+ [windows-apps-src\porting\wpsl-to-uwp-form-factors-and-ux.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-form-factors-and-ux.md) | InSyncHandedBackSuccess | [Details](#7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f3462)
+ [windows-apps-src\porting\wpsl-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-input-and-sensors.md) | InSyncHandedBackSuccess | [Details](#6b29e741c9cad68083502b25445b965fc266ef6e3463)
+ [windows-apps-src\porting\wpsl-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-porting-to-a-uwp-project.md) | InSyncHandedBackSuccess | [Details](#74cbd9789636383e6d04798435780dcda6b897d03465)
+ [windows-apps-src\porting\wpsl-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-root.md) | InSyncHandedBackSuccess | [Details](#19dde1c9b0df3b2a5e464feb15e43af9dd2836613467)
+ [windows-apps-src\porting\wpsl-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/wpsl-to-uwp-troubleshooting.md) | InSyncHandedBackSuccess | [Details](#0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc13468)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -5076,6 +5106,366 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [packaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/aa76e953bffc20084682ab7de13909ebd91d76db/ol-handback/Microsoft/windows-apps.ko-kr/master/packaging/packaging-uwp-apps.9882a5c7945644f3b49e175219fa2d2976ceaa51.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:35:32
+* [Back to Top](#report-top)
+
+##### <a name='8e10b13f87a6b4b04b0bc8a8bbf221b08ad009113369'></a> Source: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/a869ae056d29f45fb60597cf8ce49cc150e1af01/windows-apps-src/porting/android-ios-uwp-map.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/android-ios-uwp-map.md)
+* Handoff File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='bc05ce3ca612a360f40b2a249c694ee40f3e28dd3371'></a> Source: [windows-apps-src\porting\desktop-to-uwp-manual-conversion.md](https://github.com/Microsoft/windows-apps/blob/609068980b98db007021bf8c543e52510aceefb8/windows-apps-src/porting/desktop-to-uwp-manual-conversion.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\desktop-to-uwp-manual-conversion.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/desktop-to-uwp-manual-conversion.md)
+* Handoff File: [desktop-to-uwp-manual-conversion.d3c7e2c80eddb954160086916bb876bd94a732bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0958e9809a368eb4286bdb80aad22bb8fc3b7a16/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-manual-conversion.d3c7e2c80eddb954160086916bb876bd94a732bd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 16:50:43
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [desktop-to-uwp-manual-conversion.d3c7e2c80eddb954160086916bb876bd94a732bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/desktop-to-uwp-manual-conversion.d3c7e2c80eddb954160086916bb876bd94a732bd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='6e0b92af1d3c5f61aa2341d43ca40330fcc359f43374'></a> Source: [windows-apps-src\porting\getting-started-animation.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/getting-started-animation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-animation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-animation.md)
+* Handoff File: [getting-started-animation.ae37358fddf5696334e3895e8b42d87d65cd0de3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-animation.ae37358fddf5696334e3895e8b42d87d65cd0de3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-animation.ae37358fddf5696334e3895e8b42d87d65cd0de3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-animation.ae37358fddf5696334e3895e8b42d87d65cd0de3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='10fa4a349621c8e7b248c7daf4d7cdf967e252553375'></a> Source: [windows-apps-src\porting\getting-started-choosing-a-programming-language.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-choosing-a-programming-language.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-choosing-a-programming-language.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-choosing-a-programming-language.md)
+* Handoff File: [getting-started-choosing-a-programming-language.1e9625b2af9e598aca2d55dc7c4153047fdfcc0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-choosing-a-programming-language.1e9625b2af9e598aca2d55dc7c4153047fdfcc0e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-choosing-a-programming-language.1e9625b2af9e598aca2d55dc7c4153047fdfcc0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-choosing-a-programming-language.1e9625b2af9e598aca2d55dc7c4153047fdfcc0e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a3376'></a> Source: [windows-apps-src\porting\getting-started-common-controls.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-common-controls.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-common-controls.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-common-controls.md)
+* Handoff File: [getting-started-common-controls.750c05b6fdb7f4c55c460918fadd9aaee0358d4e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-common-controls.750c05b6fdb7f4c55c460918fadd9aaee0358d4e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-common-controls.750c05b6fdb7f4c55c460918fadd9aaee0358d4e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-common-controls.750c05b6fdb7f4c55c460918fadd9aaee0358d4e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='23d9ed066e2909a15b3106fd19bf6ce5ab09e7a93377'></a> Source: [windows-apps-src\porting\getting-started-creating-a-project.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-creating-a-project.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-creating-a-project.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-creating-a-project.md)
+* Handoff File: [getting-started-creating-a-project.e30ff7f8da2e17d37bb700e98bb864d5db3d4001.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-creating-a-project.e30ff7f8da2e17d37bb700e98bb864d5db3d4001.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-creating-a-project.e30ff7f8da2e17d37bb700e98bb864d5db3d4001.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-creating-a-project.e30ff7f8da2e17d37bb700e98bb864d5db3d4001.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='d31e6e940f0b03667f1e19abec17804f6f3e16a63378'></a> Source: [windows-apps-src\porting\getting-started-getting-around-in-visual-studio.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-getting-around-in-visual-studio.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-getting-around-in-visual-studio.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-getting-around-in-visual-studio.md)
+* Handoff File: [getting-started-getting-around-in-visual-studio.8f56a24bbab0fdbb335113638cecdf4ccd3afc56.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-getting-around-in-visual-studio.8f56a24bbab0fdbb335113638cecdf4ccd3afc56.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-getting-around-in-visual-studio.8f56a24bbab0fdbb335113638cecdf4ccd3afc56.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-getting-around-in-visual-studio.8f56a24bbab0fdbb335113638cecdf4ccd3afc56.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='c542faa6365c8558988162bee12f266d674744613379'></a> Source: [windows-apps-src\porting\getting-started-navigation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-navigation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-navigation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-navigation.md)
+* Handoff File: [getting-started-navigation.335a2183e0538872e32c79b3290ea03af14a74ad.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-navigation.335a2183e0538872e32c79b3290ea03af14a74ad.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-navigation.335a2183e0538872e32c79b3290ea03af14a74ad.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-navigation.335a2183e0538872e32c79b3290ea03af14a74ad.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='2b11133fda76fb42f3a850848c426cbb33fb83663380'></a> Source: [windows-apps-src\porting\getting-started-what-next.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-what-next.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-what-next.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-what-next.md)
+* Handoff File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='3fef53e5d6c9259bf5157b1221643d07e1d8be5e3381'></a> Source: [windows-apps-src\porting\getting-started-with-uwp-for-ios-developers.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/getting-started-with-uwp-for-ios-developers.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\getting-started-with-uwp-for-ios-developers.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/getting-started-with-uwp-for-ios-developers.md)
+* Handoff File: [getting-started-with-uwp-for-ios-developers.232ccd678509802266c1b48e1aec04371c9f4ae4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/getting-started-with-uwp-for-ios-developers.232ccd678509802266c1b48e1aec04371c9f4ae4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [getting-started-with-uwp-for-ios-developers.232ccd678509802266c1b48e1aec04371c9f4ae4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/getting-started-with-uwp-for-ios-developers.232ccd678509802266c1b48e1aec04371c9f4ae4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='88ebc2984ce856dd3fb10b8a61de4a32dc7115003446'></a> Source: [windows-apps-src\porting\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/index.md)
+* Handoff File: [index.d5da9aa90b0fcd64d9464aecc6cc0883b00ae0c2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.d5da9aa90b0fcd64d9464aecc6cc0883b00ae0c2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.d5da9aa90b0fcd64d9464aecc6cc0883b00ae0c2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/index.d5da9aa90b0fcd64d9464aecc6cc0883b00ae0c2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='7f6160d651a4264d81ac1a1c9a011e32f53778b03447'></a> Source: [windows-apps-src\porting\ios-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/ios-to-uwp-root.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\ios-to-uwp-root.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/ios-to-uwp-root.md)
+* Handoff File: [ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='2703a0c919b08331cc7ab55fe78b868555312ac03448'></a> Source: [windows-apps-src\porting\selecting-an-approach-to-ios-and-uwp-app-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/selecting-an-approach-to-ios-and-uwp-app-development.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\selecting-an-approach-to-ios-and-uwp-app-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/selecting-an-approach-to-ios-and-uwp-app-development.md)
+* Handoff File: [selecting-an-approach-to-ios-and-uwp-app-development.ad7ad0febe79d0c801a7c965ca54c6c940d89c10.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/selecting-an-approach-to-ios-and-uwp-app-development.ad7ad0febe79d0c801a7c965ca54c6c940d89c10.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [selecting-an-approach-to-ios-and-uwp-app-development.ad7ad0febe79d0c801a7c965ca54c6c940d89c10.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/selecting-an-approach-to-ios-and-uwp-app-development.ad7ad0febe79d0c801a7c965ca54c6c940d89c10.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='10ebdb0a534d8f2931d15481c1bee4705268b0bb3449'></a> Source: [windows-apps-src\porting\setting-up-your-mac-with-windows-10.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/setting-up-your-mac-with-windows-10.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\setting-up-your-mac-with-windows-10.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/setting-up-your-mac-with-windows-10.md)
+* Handoff File: [setting-up-your-mac-with-windows-10.621c2836b85f9a50e353ad8c79476b7b3f88053e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/setting-up-your-mac-with-windows-10.621c2836b85f9a50e353ad8c79476b7b3f88053e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [setting-up-your-mac-with-windows-10.621c2836b85f9a50e353ad8c79476b7b3f88053e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/setting-up-your-mac-with-windows-10.621c2836b85f9a50e353ad8c79476b7b3f88053e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='9c2b9f164b6578a9e1d269295b3fa0d7a863a6a03450'></a> Source: [windows-apps-src\porting\update-your-visual-studio-2015-rc-project-to-rtm.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/update-your-visual-studio-2015-rc-project-to-rtm.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\update-your-visual-studio-2015-rc-project-to-rtm.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/update-your-visual-studio-2015-rc-project-to-rtm.md)
+* Handoff File: [update-your-visual-studio-2015-rc-project-to-rtm.de1fbaf6fdfabe7b74d2f570b335e7d21b884a06.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/update-your-visual-studio-2015-rc-project-to-rtm.de1fbaf6fdfabe7b74d2f570b335e7d21b884a06.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [update-your-visual-studio-2015-rc-project-to-rtm.de1fbaf6fdfabe7b74d2f570b335e7d21b884a06.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/update-your-visual-studio-2015-rc-project-to-rtm.de1fbaf6fdfabe7b74d2f570b335e7d21b884a06.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='43536aacb37a79b3e8507896474be67423a0b9fe3451'></a> Source: [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore1.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore1.md)
+* Handoff File: [w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='97682b2b914707874dcac998f7db5f2029ad433e3452'></a> Source: [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore2.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-case-study-bookstore2.md)
+* Handoff File: [w8x-to-uwp-case-study-bookstore2.ad050c1b7b22a96b4466221147699cf2260c98cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-case-study-bookstore2.ad050c1b7b22a96b4466221147699cf2260c98cc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-case-study-bookstore2.ad050c1b7b22a96b4466221147699cf2260c98cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-case-study-bookstore2.ad050c1b7b22a96b4466221147699cf2260c98cc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='cd05c3edbc254cceb00c55caba698d21998f55943453'></a> Source: [windows-apps-src\porting\w8x-to-uwp-case-study-quizgame.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-case-study-quizgame.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-case-study-quizgame.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-case-study-quizgame.md)
+* Handoff File: [w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='e5e560ca4f40496edf9d11c3eef546fdc4c3b0793454'></a> Source: [windows-apps-src\porting\w8x-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-input-and-sensors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-input-and-sensors.md)
+* Handoff File: [w8x-to-uwp-input-and-sensors.9fc63a98dfa6ad6eeddf379d4cb14271f8964d9e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-input-and-sensors.9fc63a98dfa6ad6eeddf379d4cb14271f8964d9e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-input-and-sensors.9fc63a98dfa6ad6eeddf379d4cb14271f8964d9e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-input-and-sensors.9fc63a98dfa6ad6eeddf379d4cb14271f8964d9e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='60f59c58aedc56da58350a050acd184a376b80673455'></a> Source: [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/porting/w8x-to-uwp-porting-to-a-uwp-project.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-porting-to-a-uwp-project.md)
+* Handoff File: [w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-porting-to-a-uwp-project.351cdf4bfdce8333548b50244a13ce6c9a7cff2a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='3aa24e61482054dadd9b798063d46abf36623e9b3457'></a> Source: [windows-apps-src\porting\w8x-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/w8x-to-uwp-root.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-root.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-root.md)
+* Handoff File: [w8x-to-uwp-root.6a8ed32754c47e4f2c828c0ccfff0dfcc2db48fb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-root.6a8ed32754c47e4f2c828c0ccfff0dfcc2db48fb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-root.6a8ed32754c47e4f2c828c0ccfff0dfcc2db48fb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-root.6a8ed32754c47e4f2c828c0ccfff0dfcc2db48fb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='e5758472d303f4baaf80d45d6b23b54f2a21e0023458'></a> Source: [windows-apps-src\porting\w8x-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/w8x-to-uwp-troubleshooting.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\w8x-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/w8x-to-uwp-troubleshooting.md)
+* Handoff File: [w8x-to-uwp-troubleshooting.1b840b76bab291ca3edcc36c7df806dd2313f34b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/w8x-to-uwp-troubleshooting.1b840b76bab291ca3edcc36c7df806dd2313f34b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [w8x-to-uwp-troubleshooting.1b840b76bab291ca3edcc36c7df806dd2313f34b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/w8x-to-uwp-troubleshooting.1b840b76bab291ca3edcc36c7df806dd2313f34b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='24e94e91adc0e5ef0b7a076d54299eab8c4ba5273459'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-business-and-data.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-business-and-data.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-business-and-data.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-business-and-data.md)
+* Handoff File: [wpsl-to-uwp-business-and-data.536d942263eb398f3fdf739eba68e231bd5f4b06.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-business-and-data.536d942263eb398f3fdf739eba68e231bd5f4b06.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-business-and-data.536d942263eb398f3fdf739eba68e231bd5f4b06.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-business-and-data.536d942263eb398f3fdf739eba68e231bd5f4b06.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='dbffb4245efece2d39b4eba8979e323fd71626d03460'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore1.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore1.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore1.md)
+* Handoff File: [wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b3461'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore2.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-case-study-bookstore2.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-case-study-bookstore2.md)
+* Handoff File: [wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f3462'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-form-factors-and-ux.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-form-factors-and-ux.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-form-factors-and-ux.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-form-factors-and-ux.md)
+* Handoff File: [wpsl-to-uwp-form-factors-and-ux.25161d32ebc1d5ab08bcbd893c6a9fc6b8a1e433.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-form-factors-and-ux.25161d32ebc1d5ab08bcbd893c6a9fc6b8a1e433.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-form-factors-and-ux.25161d32ebc1d5ab08bcbd893c6a9fc6b8a1e433.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-form-factors-and-ux.25161d32ebc1d5ab08bcbd893c6a9fc6b8a1e433.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='6b29e741c9cad68083502b25445b965fc266ef6e3463'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-input-and-sensors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-input-and-sensors.md)
+* Handoff File: [wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='74cbd9789636383e6d04798435780dcda6b897d03465'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-porting-to-a-uwp-project.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-porting-to-a-uwp-project.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-porting-to-a-uwp-project.md)
+* Handoff File: [wpsl-to-uwp-porting-to-a-uwp-project.bc515e4029e9ca79486388a63cfe376c952e5605.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-porting-to-a-uwp-project.bc515e4029e9ca79486388a63cfe376c952e5605.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-porting-to-a-uwp-project.bc515e4029e9ca79486388a63cfe376c952e5605.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-porting-to-a-uwp-project.bc515e4029e9ca79486388a63cfe376c952e5605.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='19dde1c9b0df3b2a5e464feb15e43af9dd2836613467'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-root.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-root.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-root.md)
+* Handoff File: [wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-root.0ebfc5b22ad738fd39a19638fdcf6cdefce13819.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
+* [Back to Top](#report-top)
+
+##### <a name='0e7c4ba00ab513c1ea9da94f1a3f69b5921c2dc13468'></a> Source: [windows-apps-src\porting\wpsl-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/porting/wpsl-to-uwp-troubleshooting.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\porting\wpsl-to-uwp-troubleshooting.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f75fb701b3895daa13341b2f321d9416b4e31e8f/windows-apps-src/porting/wpsl-to-uwp-troubleshooting.md)
+* Handoff File: [wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/29938955d5b0d6f2177e8e32ce8bee6f602faae3/ol-handback/Microsoft/windows-apps.ko-kr/master/porting/wpsl-to-uwp-troubleshooting.139e3a380f89fc3786ab3b8c91a0be7b3781feb2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:46
 * [Back to Top](#report-top)
 
 

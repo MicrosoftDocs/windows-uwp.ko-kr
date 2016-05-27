@@ -5081,16 +5081,10 @@
   "8e10b13f87a6b4b04b0bc8a8bbf221b08ad00911": [
     "windows-apps-src\\porting\\android-ios-uwp-map.md"
   ],
-  "c6d0d0f4aee60a9371dacb4d8a0701b827944780": [
-    "windows-apps-src\\porting\\android-ios-uwp-map.md"
-  ],
   "d0699fcc2f55dc071fe7d36fce1595b73f0f5b7d": [
     "windows-apps-src\\porting\\desktop-to-uwp-deploy-and-debug.md"
   ],
   "7214aaae43a2fd597bccfebab2a361c561b06e30": [
-    "windows-apps-src\\porting\\desktop-to-uwp-deploy-and-debug.md"
-  ],
-  "5294f0e3286c9eaa0060dfaa933f1a2c57f75e26": [
     "windows-apps-src\\porting\\desktop-to-uwp-deploy-and-debug.md"
   ],
   "969ff91b020b7a1c8149dcb0d8efc69e98c0bb31": [
@@ -5102,9 +5096,6 @@
   "140932b3253aaab2045327fd8cb2defe0ec6a9c0": [
     "windows-apps-src\\porting\\desktop-to-uwp-root.md"
   ],
-  "24e0fc3e3734fceed3af20acd7f84862ffcdc314": [
-    "windows-apps-src\\porting\\desktop-to-uwp-root.md"
-  ],
   "da4fe234efd615615a670be914e24e423f481308": [
     "windows-apps-src\\porting\\desktop-to-uwp-run-desktop-app-converter.md"
   ],
@@ -5112,9 +5103,6 @@
     "windows-apps-src\\porting\\desktop-to-uwp-run-desktop-app-converter.md"
   ],
   "fb86faf941d707be8d38e89cf2edc5190bcd946c": [
-    "windows-apps-src\\porting\\desktop-to-uwp-run-desktop-app-converter.md"
-  ],
-  "40e8dc2432f7d1fe738141b8935df718d2166c78": [
     "windows-apps-src\\porting\\desktop-to-uwp-run-desktop-app-converter.md"
   ],
   "6e0b92af1d3c5f61aa2341d43ca40330fcc359f4": [
