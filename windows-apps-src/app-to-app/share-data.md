@@ -15,12 +15,12 @@ author: awkoren
 
 사용자가 공유를 호출할 때마다 호출될 [**DataRequested**][DataRequested] 이벤트 처리기를 추가합니다. 이는 사용자가 앱에서 컨트롤(예: 단추 또는 앱 바 명령)을 탭할 때 발생하거나 특정 시나리오(예: 사용자가 한 레벨을 마치고 높은 점수를 얻는 경우)에서 자동으로 발생할 수 있습니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
 [
             **DataRequested**][DataRequested] 이벤트가 발생하면 앱이 [**DataRequest**][DataRequest] 개체를 받습니다. 여기에는 사용자가 공유하려는 콘텐츠를 제공하는 데 사용할 수 있는 [**DataPackage**][DataPackage]가 포함되어 있습니다. 공유할 제목과 데이터를 제공해야 합니다. 설명은 선택 사항이지만 사용하는 것이 좋습니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
 ## 데이터 선택
 
@@ -38,7 +38,7 @@ author: awkoren
 [
             **DataPackage**][DataPackage] 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
 ## 속성 설정
 
@@ -46,13 +46,13 @@ author: awkoren
 
 제목을 제외한 모든 속성은 선택 사항입니다. title 속성은 필수 사항이므로 설정해야 합니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
 ## 공유 UI 시작
 
 공유를 위한 UI가 시스템에서 제공됩니다. 시작하려면 [**ShowShareUI**][ShowShareUi] 메서드를 호출합니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## 오류 처리
 
@@ -104,6 +104,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

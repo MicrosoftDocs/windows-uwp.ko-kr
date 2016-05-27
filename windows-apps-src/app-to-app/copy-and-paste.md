@@ -50,7 +50,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## 붙여넣기
 
-클립보드 내용을 가져오려면 정적 [**Clipboard.GetContent**[GetContent] 메서드를 호출합니다. 이 메서드는 콘텐츠를 포함하는 [**DataPackageView**][DataPackageView]를 반환합니다. 이 개체는 콘텐츠가 읽기 전용이라는 점만 제외하고 [**DataPackage**][DataPackage] 개체와 거의 동일합니다. 이 개체에서 [**AvailableFormats**][AvailableFormats] 또는 [**Contains**][Contains] 메서드를 사용하여 사용 가능한 형식을 식별할 수 있습니다. 그런 다음 해당 **DataPackageView** 메서드를 호출하여 데이터를 가져올 수 있습니다.
+클립보드 내용을 가져오려면 정적 **Clipboard.GetContent**[GetContent] 메서드를 호출합니다. 이 메서드는 콘텐츠를 포함하는 [**DataPackageView**][DataPackageView]를 반환합니다. 이 개체는 콘텐츠가 읽기 전용이라는 점만 제외하고 [**DataPackage**][DataPackage] 개체와 거의 동일합니다. 이 개체에서 [**AvailableFormats**][AvailableFormats] 또는 [**Contains**][Contains] 메서드를 사용하여 사용 가능한 형식을 식별할 수 있습니다. 그런 다음 해당 **DataPackageView** 메서드를 호출하여 데이터를 가져올 수 있습니다.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -93,11 +93,11 @@ Clipboard.ContentChanged += (s, e) =>
 [SetContent]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.setcontent.aspx 
 [GetContent]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.getcontent.aspx
 [AvailableFormats]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.availableformats.aspx 
-[Contains]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx
+[포함]: https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx
 [ContentChanged]: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.contentchanged.aspx 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

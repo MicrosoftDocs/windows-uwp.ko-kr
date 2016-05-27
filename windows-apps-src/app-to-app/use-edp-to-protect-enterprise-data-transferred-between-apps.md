@@ -1,4 +1,5 @@
 ---
+author: awkoren
 Description: '이 항목에서는 가장 일반적인 데이터 전송 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
 MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -51,7 +52,7 @@ private void OnFileLoaded(FileProtectionInfo fileProtectionInfo, string contents
         }
         else
         {
-            // Enterprise policy is not in effect, because the file&#39;s identity
+            // Enterprise policy is not in effect, because the file's identity
             // is not managed. In this case, we have a file protected to an
             // unmanaged identity, which is not a valid situation.
             // We still have to call ClearProcessUIPolicy if we want to clear the policy.
@@ -123,7 +124,7 @@ private async void OnPasteWithApplyPolicy()
         {
             ProtectionPolicyEvaluationResult policyResult =
                 await dataPackageView.RequestAccessAsync(dataPackageView.Properties.EnterpriseId);
-            if (this.isNewEmptyDocument &amp;&amp;
+            if (this.isNewEmptyDocument &&
                 policyResult == ProtectionPolicyEvaluationResult.Allowed)
             {
                 // If this is a new and empty document, and we're allowed to access
@@ -264,7 +265,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
             if (this.isNewEmptyDocument && protectionPolicyEvaluationResult ==
                 ProtectionPolicyEvaluationResult.Allowed)
             {
-                // If this is a new and empty document, and we&#39;re allowed to access
+                // If this is a new and empty document, and we're allowed to access
                 // the data, then we can avoid popping the consent dialog.
                 bool isIdentityManaged = ProtectionPolicyManager.TryApplyProcessUIPolicy
                     (shareOperation.Data.Properties.EnterpriseId);
@@ -394,6 +395,6 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

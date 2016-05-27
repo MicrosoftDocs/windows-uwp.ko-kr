@@ -42,8 +42,6 @@ author: awkoren
 
 사용자가 공유 UI의 사용 가능한 대상 앱 목록 등에서 앱을 선택하면 [**Application.OnShareTargetActivated**][OnShareTargetActivated] 이벤트가 발생합니다. 앱은 이 이벤트를 처리하여 사용자가 공유하려는 데이터를 처리해야 합니다.
 
-공유 대상으로 활성화될 때 앱이 실행 중인 경우 앱의 기존 인스턴스가 종료되고 계약을 처리하기 위해 앱의 새 인스턴스가 시작됩니다.
-
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
 protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
@@ -61,8 +59,8 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
     string text = await shareOperation.Data.GetTextAsync();
 
     // To output the text from this example, you need a TextBlock control
-    // with a name of &quot;sharedContent&quot;.
-    sharedContent.Text = &quot;Text: &quot; + text;
+    // with a name of "sharedContent".
+    sharedContent.Text = "Text: " + text;
 } 
 ```
 
@@ -85,7 +83,7 @@ shareOperation.ReportSubmittedBackgroundTask();
 오류가 발생한 경우 [**ReportError**][ReportError]를 호출하여 시스템에 오류 메시지를 보내세요. 사용자가 공유 상태를 확인할 때 메시지가 표시됩니다. 이때 앱이 종료되고 공유가 끝나므로 사용자가 다시 시작하여 콘텐츠를 앱에 공유해야 합니다. 시나리오에 따라 특정 오류는 공유 작업을 종료할 만큼 심각하지 않다고 결정할 수 있습니다. 이 경우 **ReportError**를 호출하지 않고 공유를 계속할 수 있습니다.
 
 ```cs
-shareOperation.ReportError(&quot;Could not reach the server! Try again later.&quot;); 
+shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
 앱에서 공유 콘텐츠를 성공적으로 처리하면 [**ReportCompleted**][ReportCompleted]를 호출하여 시스템에 알려야 합니다.
@@ -114,13 +112,13 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
         // For quicklinks, the supported FileTypes and DataFormats are set 
         // independently from the manifest
-        SupportedFileTypes = { &quot;*&quot; },
+        SupportedFileTypes = { "*" },
         SupportedDataFormats = { StandardDataFormats.Text, StandardDataFormats.Uri, 
                 StandardDataFormats.Bitmap, StandardDataFormats.StorageItems }
     };
 
     StorageFile iconFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFileAsync(
-            &quot;assets\\user.png&quot;, CreationCollisionOption.OpenIfExists);
+            "assets\\user.png", CreationCollisionOption.OpenIfExists);
     quickLinkInfo.Thumbnail = RandomAccessStreamReference.CreateFromFile(iconFile);
     shareOperation.ReportCompleted(quickLinkInfo);
 }
@@ -142,6 +140,6 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
