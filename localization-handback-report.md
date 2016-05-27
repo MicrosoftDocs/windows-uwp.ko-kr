@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 246
+ Total Files | 252
 
 ## File List
  Source File | Status | Details 
@@ -252,6 +252,12 @@
  [windows-apps-src\get-started\sign-up.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/sign-up.md) | InSyncHandedBackSuccess | [Details](#53d23b3f8502e1f182c728b9f787fbbc4b694d422564)
  [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/whats-a-uwp.md) | InSyncHandedBackSuccess | [Details](#f02851d848a82af7104a6038c5d8850d5362c8322566)
  [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/your-first-app.md) | InSyncHandedBackSuccess | [Details](#e2ed4b9587927a2a6a765b47ff69b9cedfd9b92d2567)
+ [windows-apps-src\globalizing\adjust-layout-and-fonts--and-support-rtl.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/adjust-layout-and-fonts--and-support-rtl.md) | InSyncHandedBackSuccess | [Details](#989d810724c925a5bcbebf5f7fb301636905fff92568)
+ [windows-apps-src\globalizing\guidelines-and-checklist-for-globalizing-your-app.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/guidelines-and-checklist-for-globalizing-your-app.md) | InSyncHandedBackSuccess | [Details](#bdbe6b3e319aa90a78660c664f1603bac93399ca2570)
+ [windows-apps-src\globalizing\manage-language-and-region.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/manage-language-and-region.md) | InSyncHandedBackSuccess | [Details](#294f087fffeefda67ddacd09636915144bf18ff42574)
+ [windows-apps-src\globalizing\prepare-your-app-for-localization.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/prepare-your-app-for-localization.md) | InSyncHandedBackSuccess | [Details](#e52a5322767677859e32ccbecf4951745c49f36f2575)
+ [windows-apps-src\globalizing\put-ui-strings-into-resources.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/put-ui-strings-into-resources.md) | InSyncHandedBackSuccess | [Details](#b44d9235e34b8d4c75f663029d1dde3f87bd0eb72576)
+ [windows-apps-src\globalizing\use-global-ready-formats.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/use-global-ready-formats.md) | InSyncHandedBackSuccess | [Details](#77b5e7bd412936dd5d8c4bc252771631d6b884cf2577)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -3204,6 +3210,78 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/35f955b7a3b028d26eeb8ece36a1d04802357978/ol-handback/Microsoft/windows-apps.ko-kr/master/get-started/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:34:01
+* [Back to Top](#report-top)
+
+##### <a name='989d810724c925a5bcbebf5f7fb301636905fff92568'></a> Source: [windows-apps-src\globalizing\adjust-layout-and-fonts--and-support-rtl.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\adjust-layout-and-fonts--and-support-rtl.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/adjust-layout-and-fonts--and-support-rtl.md)
+* Handoff File: [adjust-layout-and-fonts--and-support-rtl.609ba81a9a208b2f6fbe4d568a234611c655674e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adjust-layout-and-fonts--and-support-rtl.609ba81a9a208b2f6fbe4d568a234611c655674e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adjust-layout-and-fonts--and-support-rtl.609ba81a9a208b2f6fbe4d568a234611c655674e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/adjust-layout-and-fonts--and-support-rtl.609ba81a9a208b2f6fbe4d568a234611c655674e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
+* [Back to Top](#report-top)
+
+##### <a name='bdbe6b3e319aa90a78660c664f1603bac93399ca2570'></a> Source: [windows-apps-src\globalizing\guidelines-and-checklist-for-globalizing-your-app.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/guidelines-and-checklist-for-globalizing-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\guidelines-and-checklist-for-globalizing-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/guidelines-and-checklist-for-globalizing-your-app.md)
+* Handoff File: [guidelines-and-checklist-for-globalizing-your-app.4996c64b61a2aa2f5441521d37efb1713fcd5ca1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-and-checklist-for-globalizing-your-app.4996c64b61a2aa2f5441521d37efb1713fcd5ca1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-and-checklist-for-globalizing-your-app.4996c64b61a2aa2f5441521d37efb1713fcd5ca1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/guidelines-and-checklist-for-globalizing-your-app.4996c64b61a2aa2f5441521d37efb1713fcd5ca1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
+* [Back to Top](#report-top)
+
+##### <a name='294f087fffeefda67ddacd09636915144bf18ff42574'></a> Source: [windows-apps-src\globalizing\manage-language-and-region.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/manage-language-and-region.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\manage-language-and-region.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/manage-language-and-region.md)
+* Handoff File: [manage-language-and-region.80962d85510a5d98c6e516a03aa94d9e143eddce.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-language-and-region.80962d85510a5d98c6e516a03aa94d9e143eddce.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-language-and-region.80962d85510a5d98c6e516a03aa94d9e143eddce.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/manage-language-and-region.80962d85510a5d98c6e516a03aa94d9e143eddce.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
+* [Back to Top](#report-top)
+
+##### <a name='e52a5322767677859e32ccbecf4951745c49f36f2575'></a> Source: [windows-apps-src\globalizing\prepare-your-app-for-localization.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/prepare-your-app-for-localization.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\prepare-your-app-for-localization.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/prepare-your-app-for-localization.md)
+* Handoff File: [prepare-your-app-for-localization.e740fdad1d79cfb1f480208491e780d3edc75427.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/prepare-your-app-for-localization.e740fdad1d79cfb1f480208491e780d3edc75427.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [prepare-your-app-for-localization.e740fdad1d79cfb1f480208491e780d3edc75427.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/prepare-your-app-for-localization.e740fdad1d79cfb1f480208491e780d3edc75427.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
+* [Back to Top](#report-top)
+
+##### <a name='b44d9235e34b8d4c75f663029d1dde3f87bd0eb72576'></a> Source: [windows-apps-src\globalizing\put-ui-strings-into-resources.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/put-ui-strings-into-resources.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\put-ui-strings-into-resources.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/put-ui-strings-into-resources.md)
+* Handoff File: [put-ui-strings-into-resources.89bd8b7b1f026196161eb9af87410dcedb962a0d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/put-ui-strings-into-resources.89bd8b7b1f026196161eb9af87410dcedb962a0d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [put-ui-strings-into-resources.89bd8b7b1f026196161eb9af87410dcedb962a0d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/put-ui-strings-into-resources.89bd8b7b1f026196161eb9af87410dcedb962a0d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
+* [Back to Top](#report-top)
+
+##### <a name='77b5e7bd412936dd5d8c4bc252771631d6b884cf2577'></a> Source: [windows-apps-src\globalizing\use-global-ready-formats.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/use-global-ready-formats.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\globalizing\use-global-ready-formats.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4517728b60d92fcd1da7b66c78fd57643252a58c/windows-apps-src/globalizing/use-global-ready-formats.md)
+* Handoff File: [use-global-ready-formats.6531e2d9b18b1925558c73b7c79c23f77cbb862a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-global-ready-formats.6531e2d9b18b1925558c73b7c79c23f77cbb862a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-global-ready-formats.6531e2d9b18b1925558c73b7c79c23f77cbb862a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8ce6388e9de1f1d9c8c3fa60fecf19e7a8cd8a23/ol-handback/Microsoft/windows-apps.ko-kr/master/globalizing/use-global-ready-formats.6531e2d9b18b1925558c73b7c79c23f77cbb862a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:08
 * [Back to Top](#report-top)
 
 
