@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 광고 조정 보고서를 통해 유효 노출률 및 사용 중인 광고 네트워크에 대한 각 노출률을 확인할 수 있습니다.
 title: 광고 조정 보고서
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
@@ -62,6 +63,6 @@ ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

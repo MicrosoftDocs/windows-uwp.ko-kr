@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 스토어에 앱을 제출한 후 오류가 발생하는 경우 오류를 해결해야만 인증 프로세스를 계속할 수 있습니다.
 title: 제출 오류 해결
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
@@ -40,6 +41,6 @@ UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

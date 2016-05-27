@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱을 눈에 띄게 만들기! 최상의 앱을 만드는 것 외에도 Windows 스토어 및 다른 사이트에서 앱을 소개하기 쉽게 만들고 더 많은 주목을 받도록 할 수 있는 여러 방법이 있습니다.
 title: 앱을 홍보하기 쉽게 만들기
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
@@ -43,6 +44,6 @@ Windows 스토어는 범주나 테마별로 그룹화하여 다양한 앱을 소
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

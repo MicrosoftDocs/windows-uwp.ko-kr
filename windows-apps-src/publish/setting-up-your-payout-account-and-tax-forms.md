@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정하고 필요한 세금 양식을 입력해야 합니다.
 title: 지급 계좌 및 세금 양식 설정
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
@@ -61,11 +62,11 @@ Windows 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌�
 
 PayPal을 결제 방법으로 사용하는 것에 대한 일반적인 질문:
 
--   **지급을 받기 위해 내가 해야 할 PayPal 설정은 무엇입니까?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](http://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
+-   **지급을 받기 위해 내가 해야 할 PayPal 설정은 무엇인가요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](http://go.microsoft.com/fwlink/p/?linkid=513139)를 참조하세요.
 -   **내 국가/지역이 지원되나요?** 결제 방법으로 PayPal이 지원되는 곳을 알려면 [계정 유형, 위치 및 수수료](account-types-locations-and-fees.md)를 참조하세요.
--   **PayPal을 사용하여 받을 수 있는 지급 크기에 제한이 있습니까?** 예. PayPal은 단일 거래에서 사용자가 받을 수 있는 금액을 제한하고 있습니다. 제한은 통화에 따라 다릅니다. 각 통화의 제한을 알려면 [PayPal의 거래 제한 페이지](http://go.microsoft.com/fwlink/p/?linkid=513108)를 참조하세요. PayPal의 거래 제한보다 큰 지급을 받을 것으로 예상되는 경우에는 결제 방법을 은행 계좌로 변경하세요.
--   **내 PayPal 계정을 동일한 국가/지역에서 내 개발자 센터 계정으로 등록해야 합니까?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
--   **PayPal 결제를 수동으로 수락해야 합니까?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
+-   **PayPal을 사용하여 받을 수 있는 지급 크기에 제한이 있나요?** 예. PayPal은 단일 거래에서 사용자가 받을 수 있는 금액을 제한하고 있습니다. 제한은 통화에 따라 다릅니다. 각 통화의 제한을 알려면 [PayPal의 거래 제한 페이지](http://go.microsoft.com/fwlink/p/?linkid=513108)를 참조하세요. PayPal의 거래 제한보다 큰 지급을 받을 것으로 예상되는 경우에는 결제 방법을 은행 계좌로 변경하세요.
+-   **내 PayPal 계정을 동일한 국가/지역에서 내 개발자 센터 계정으로 등록해야 하나요?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
+-   **PayPal 결제를 수동으로 수락해야 하나요?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
 
 ### 특정 국가/지역에 대한 구체적인 요구 사항
 
@@ -154,6 +155,6 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

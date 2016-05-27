@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱이 Windows 스토어에 게시된 후에는 최대한 많은 고객이 볼 수 있게 해야 합니다.
 title: 앱 홍보 및 고객 참여 유도
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
@@ -27,6 +28,6 @@ ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

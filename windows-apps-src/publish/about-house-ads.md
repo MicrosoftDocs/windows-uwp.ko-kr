@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 특정 앱을 홍보하는 광고를 다른 앱에 무료로 만들 수 있습니다. 이런 광고를 하우스 광고라고 합니다.
 title: 하우스 광고 정보
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
@@ -31,6 +32,6 @@ ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

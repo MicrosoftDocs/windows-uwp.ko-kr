@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱 제출을 만들기를 마치고 스토어에 제출을 클릭하면 인증 단계가 시작됩니다.
 title: 앱 인증 프로세스
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
@@ -50,6 +51,6 @@ ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

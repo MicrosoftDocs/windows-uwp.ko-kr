@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱을 제출할 때 인증에 대한 참고 사항 페이지를 사용하여 인증 테스터에게 추가 정보를 제공할 수 있습니다. 이 정보는 앱이 제대로 테스트되도록 도와줍니다.
 title: 인증에 대한 참고 사항
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
@@ -42,6 +43,6 @@ ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

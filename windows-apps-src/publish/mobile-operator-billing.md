@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결제 방법으로 통신사 청구 기능을 제공합니다.
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
@@ -43,7 +44,7 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 오스트레일리아            | Telstra                                                            |
 | 오스트리아              | A1 Telekom, T-Mobile                                               |
 | 바레인              | Zain, VIVA                                                         |
-| 벨기에              | BASE, Mobistar                                                     |
+| 벨기에              | BASE, Mobistar, Proximus                                                     |
 | 브라질               | Claro                                                              |
 | 불가리아             | Telenor                                                            |
 | 캐나다               | Fido, Rogers, Telus                                                |
@@ -64,7 +65,7 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 헝가리              | Telenor, T-Mobile                                                  |
 | 인도                | Idea                                                               |
 | 인도네시아            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| 아일랜드              | O2, Vodafone                                                       |
+| 아일랜드              | O2, Vodafone, 3                                                      |
 | 이탈리아                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | 요르단               | Zain, Umniah                                                       |
 | 케냐                | Safaricom                                                          |
@@ -82,7 +83,7 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 폴란드               | T-Mobile, Orange, Polkomtel(Plus)                                 |
 | 푸에르토리코          | Claro                                                              |
 | 루마니아              | Orange, Vodafone                                                   |
-| 러시아               | Beeline                                                            |
+| 러시아               | Beeline, MTS                                                          |
 | 사우디아라비아         | Zain                                                               |
 | 싱가포르            | M1, SingTel, StarHub                                               |
 | 슬로바키아             | T-Mobile                                                           |
@@ -94,7 +95,7 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 태국             | DTAC                                                               |
 | 아랍에미리트 | Etisalat, Du                                                       |
 | 영국       | Everything Everywhere(T-Mobile), Telefonica(O2), Three, Vodafone |
-| 미국        | AT&T, Sprint, T-Mobile, Verizon                                    |
+| 미국        | AT&amp;T, Sprint, T-Mobile, Verizon                                    |
 | 베트남              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
@@ -110,6 +111,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

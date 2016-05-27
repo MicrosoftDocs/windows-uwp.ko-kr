@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 개발자 센터 대시보드의 사용 보고서에서는 고객이 앱을 사용하는 방식을 확인할 수 있습니다.
 title: 사용 보고서
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
@@ -65,6 +66,6 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 고객이
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

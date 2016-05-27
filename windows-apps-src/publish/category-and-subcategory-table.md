@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
@@ -58,6 +59,6 @@ Windows 스토어는 앱을 다음 범주와 하위 범주로 구성합니다.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

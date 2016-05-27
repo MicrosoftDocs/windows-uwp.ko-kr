@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 100개 이상 언어로 Windows 스토어에 앱을 제출할 수 있습니다.
 title: 지원되는 언어
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
@@ -133,6 +134,6 @@ ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

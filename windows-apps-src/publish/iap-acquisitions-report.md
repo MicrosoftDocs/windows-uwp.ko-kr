@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 개발자 센터 대시보드의 IAP 구입 보고서를 통해 구입한 IAP 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다.
 title: IAP 구입 보고서
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
@@ -64,6 +65,6 @@ IAP에 대한 총 구입 수를 볼 수도 있습니다. 여기에는 앱이 처
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

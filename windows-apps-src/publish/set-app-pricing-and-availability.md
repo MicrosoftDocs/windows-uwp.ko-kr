@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱 제출 프로세스의 가격 책정 및 가용성 페이지에서는 앱이 청구할 금액, 무료 평가판을 제공할지 여부, 고객에게 제공할 방법, 시간, 위치를 결정합니다.
 title: 앱 가격 책정 및 가용성 설정
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
@@ -97,6 +98,6 @@ ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

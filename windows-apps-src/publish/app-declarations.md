@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 제출 프로세스 중에 앱 속성 페이지의 앱 선언 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다.
 title: 앱 선언
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
@@ -61,6 +62,6 @@ ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

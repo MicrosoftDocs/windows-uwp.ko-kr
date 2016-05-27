@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 이전에 Microsoft Advertising 수익을 위해 pubCenter 지급 계좌를 설정한 경우 2016년 4월 1일부터 더 이상 해당 계좌로 지급되지 않습니다. 이제 지급액은 개발자 센터 지급 계좌를 통해 지급됩니다.
 title: pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
@@ -7,22 +8,17 @@ ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
 # pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합
 
 
-이전에 Microsoft Advertising 수익을 위해 pubCenter 지급 계좌를 설정한 경우 2016년 4월 1일부터 더 이상 해당 계좌로 지급되지 않습니다. 이제 지급액은 개발자 센터 지급 계좌를 통해 지급됩니다.
+이전에 Microsoft Advertising 수익을 위해 pubCenter 지급 계좌를 설정한 경우 2016년 4월 1일부터 더 이상 해당 계좌로 지급되지 않습니다. 이제 지급액이 개발자 센터 지급 계좌 통해 지급됩니다.
 
-모든 지급 대상액이 제시간에 지급되도록 하려면 2016년 3월 31일 전에 개발자 센터 대시보드에 로그인하여 해당 [지급 계좌 및 세금 프로필](setting-up-your-payout-account-and-tax-forms.md)이 올바르게 설정되고 최신 정보인지 확인하세요.
+모든 지급 대상액이 제시간에 지급되도록 하려면 개발자 센터 대시보드에 로그인하여 해당 [지급 계좌 및 세금 프로필](setting-up-your-payout-account-and-tax-forms.md)이 올바르게 설정되고 최신 정보인지 확인하세요.
 
-> **중요** 개발자 센터에서 지급 계좌 또는 세금 프로필을 설정한 적이 없는 경우 2016년 3월 31일 이전에 설정해야 합니다. 자세한 내용은 [지급 계좌 및 세금 양식 설정](setting-up-your-payout-account-and-tax-forms.md)을 참조하세요.
+> **중요** 개발자 센터에서 지급 계좌 또는 세금 프로필을 설정한 적이 없는 경우 지금 설정해야 합니다. 자세한 내용은 [지급 계좌 및 세금 양식 설정](setting-up-your-payout-account-and-tax-forms.md)을 참조하세요.
 
 개발자 센터에서의 지급에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요. 다른 국가 및 지역의 지급에 사용되는 통화에 대한 정보는 [개발자 계정 및 앱 제출 국가/지역](account-types-locations-and-fees.md#account_markets)을 참조하세요.
 
 특정 시나리오에 대한 자세한 내용은 아래 FAQ를 검토하세요.
 
 ## 질문과 대답
-
-
-### 2016년 3월 지급 시 사용되는 계좌는 무엇입니까?
-
-2016년 3월에는 pubCenter에 설정된 지급 계좌 및 세금 프로필이 사용됩니다. 그 후로는 이 정보가 사용되지 않습니다. 2016년 4월 1일부터 개발자 센터에 설정된 PayPal 또는 은행 계좌로 Microsoft Advertising 수익이 지급됩니다.
 
 ### pubCenter 및 개발자 센터 계정을 동일한 지역/국가의 동일한 Microsoft 계정에 등록했습니다. 수익은 어떻게 지급됩니까?
 
@@ -84,6 +80,6 @@ Microsoft Advertising 수익은 변환되어 개발자 센터에 설정된 지�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 개발자 센터 대시보드에서 앱 작업을 할 때 Windows 스토어에서 앱에 할당된 고유 ID와 관련된 세부 정보를 보고 앱의 스토어 목록 링크를 가져올 수 있습니다.
 title: 앱 ID 세부 정보 보기
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
@@ -35,12 +36,13 @@ Windows 개발자 센터 대시보드에서 앱 작업을 할 때 Windows 스토
 
 ## 앱 목록 링크
 
+고객이 스토어에서 앱을 찾는 데 도움이 되도록 앱 페이지 링크를 공유할 수 있습니다. 이 링크는 **`https://www.microsoft.com/store/apps/<your app's Store ID>`** 형식입니다.
 
-고객이 스토어에서 앱을 찾는 데 도움이 되도록 앱 페이지 링크를 공유할 수 있습니다. 이 링크는 **`https://www.microsoft.com/store/apps/<your app's Product ID>`** 형식입니다.
+> **참고** 이 URL은 앱을 사용할 수 있는 OS 버전에 적용됩니다. Windows 8.1 이하 및/또는 Windows Phone 8.1 이하에 대한 추가 링크도 있지만 이러한 링크는 지정된 OS 버전에서만 작동합니다.
 
-> **참고** 대상으로 하는 OS 버전에 따라 둘 이상의 링크가 있을 수도 있습니다. 모든 앱에는 모든 OS에 작동하는 위에 설명된 형식의 Windows 10용 URL이 표시됩니다. Windows 8.1 이하 및/또는 Windows Phone 8.1 이하에 대한 추가 링크도 있지만 이러한 링크는 지정된 OS 버전에서만 작동합니다.
+고객이 이 링크를 클릭하면 앱에 대한 웹 기반 목록 페이지가 열립니다. 고객의 Windows 디바이스에 앱을 사용할 수 있는 경우 스토어 앱에서 앱의 목록을 시작하고 표시합니다.
 
-고객이 이 링크를 클릭하면 앱에 대한 웹 기반 목록 페이지가 열립니다. 고객의 Windows 장치에 앱을 사용할 수 있는 경우 스토어 앱에서 앱의 목록을 시작하고 표시합니다.
+앱의 **스토어 ID**도 이 섹션에 표시됩니다. 이 스토어 ID는 [스토어 배지를 생성](http://go.microsoft.com/fwlink/p/?LinkId=534236)하거나 그렇지 않으면 앱을 식별하는 데 사용할 수 있습니다.
 
  
 
@@ -51,6 +53,6 @@ Windows 개발자 센터 대시보드에서 앱 작업을 할 때 Windows 스토
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

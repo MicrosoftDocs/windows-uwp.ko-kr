@@ -1,12 +1,6 @@
 ---
-Description: 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다.
-title: 앱 제출
-ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
-키워드: 앱 제출
-키워드: 필수 정보
-키워드: 필수 필드
-키워드: 필수 데이터
-키워드: 검사 목록
+Description&#58; 작성자&#58; jnHs 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다.
+title&#58; 앱 제출 ms.assetid&#58; 363BB9E4-4437-4238-A80F-ABDFC70D96E4 키워드&#58; 앱 제출 키워드&#58; 필수 정보 키워드&#58; 필수 필드 키워드&#58; 필수 데이터 키워드&#58; 검사 목록
 ---
 
 # 앱 제출
@@ -33,7 +27,7 @@ ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 | **지역/국가 및 사용자 지정 가격** | 기본값: 모든 가능한 지역/국가, 사용자 지정 가격 없음 | [가격 책정 및 지역/국가 선택 정의](define-pricing-and-market-selection.md)              |
 | **할인 판매 가격 책정**              | 옵션                                    | [할인 앱 및 IAP 판매](put-apps-and-iaps-on-sale.md)                                       |
 | **배포 및 표시** | 기본값: 이 앱을 스토어에서 다운로드할 수 있도록 설정 | [배포 및 표시](set-app-pricing-and-availability.md#distribution-and-visibility) | 
-| **Windows 10 디바이스 패밀리**  | 기본값: 앱을 실행할 수 있는 모든 Windows 10 장치에서 앱을 다운로드할 수 있음 | [Windows 10 디바이스 패밀리](set-app-pricing-and-availability.md#windows-10-device-families) | 
+| **Windows 10 디바이스 패밀리**  | 기본값: 앱을 실행할 수 있는 모든 Windows 10 디바이스에서 앱을 다운로드할 수 있음 | [Windows 10 디바이스 패밀리](set-app-pricing-and-availability.md#windows-10-device-families) | 
 | **조직 라이선스**    | 기본값: 조직에서 대량 구입할 수 있음 | [조직 라이선스 옵션](organizational-licensing.md)                        | 
 | **게시 날짜**                | 기본값: 최대한 빨리 게시      | [게시 날짜](set-app-pricing-and-availability.md#publish-date)          |
 
@@ -98,6 +92,6 @@ ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 **참고** LOB(기간 업무) 앱을 엔터프라이즈에 직접 게시하는 방법에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

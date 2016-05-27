@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: IAP를 제출할 때 s 단계에서 입력한 정보는 앱 고객에게 표시됩니다.
 title: IAP 설명 작성
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
@@ -44,6 +45,6 @@ IAP 제출의 **설명** 섹션에서 **언어 추가**를 클릭합니다. 목�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

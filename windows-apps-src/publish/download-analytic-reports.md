@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 오프라인에서 통계와 정보를 검토할 수 있도록 분석 데이터가 포함된 파일을 다운로드할 수 있습니다.
 title: 분석 보고서 다운로드
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
@@ -22,6 +23,6 @@ ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 4.  **보고서 다운로드** 단추를 클릭하고 .tsv 파일을 저장하거나 엽니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

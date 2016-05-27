@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 앱에서 광고 조정을 사용하거나 Microsoft Advertising의 배너 광고 또는 동영상 중간 광고를 표시하는 경우 수익 창출 &gt; 광고를 통한 수익 창출 페이지를 사용하여 광고 사용을 관리할 수 있습니다.
 title: 광고를 통한 수익 창출
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
@@ -7,7 +8,7 @@ ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 # 광고를 통한 수익 창출
 
 
-앱에서 **AdMediatorControl**, **AdControl** 또는 **InterstitialAd** 컨트롤을 사용하여 배너 또는 동영상 중간 광고를 표시하는 경우 **수익 창출** &gt; **광고로 수익 창출** 페이지를 사용하여 광고 사용을 관리합니다.
+앱에서 **AdMediatorControl**, **AdControl** 또는 **InterstitialAd** 컨트롤을 사용하여 배너 또는 동영상 중간 광고를 표시하는 경우 **수익 창출**&gt;**광고로 수익 창출** 페이지를 사용하여 광고 사용을 관리합니다.
 
 ## Windows 광고 조정
 
@@ -64,6 +65,6 @@ COPPA에 따른 의무 조항에 대한 자세한 내용은 [이 페이지](http
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 앱에서 실행되는 앱용 광고 캠페인을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다.
 title: 사용자 지정 앱 홍보 캠페인 만들기
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
@@ -82,7 +83,7 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 string campaignId = await CurrentApp.GetAppPurchaseCampaignIdAsync();
 ```
 
-``` ManagedCPlusPlus
+``` cpp
 HString campaignId;
 HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf());
 ```
@@ -131,6 +132,6 @@ HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

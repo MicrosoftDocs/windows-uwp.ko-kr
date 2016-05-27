@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 다음은 앱과 IAP(앱에서 바로 구매 제품) 및 Microsoft Advertising 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다.
 title: 지급 받기
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
@@ -55,6 +56,6 @@ Windows 개발자 센터 대시보드의 **지급 요약**에서 결제 정보�
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

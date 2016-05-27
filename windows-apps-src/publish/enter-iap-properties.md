@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: IAP를 제출할 때 속성 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 IAP의 동작을 결정할 수 있습니다.
 title: IAP 속성 입력
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
@@ -60,6 +61,6 @@ IAP의 제품 유형과 관계없이 제공할 콘텐츠 형식도 표시해야 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 고객에게 앱 패키지를 제공하는 방법 및 특정 패키지 시나리오를 관리하는 방법을 알아봅니다.
 title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
@@ -133,6 +134,6 @@ ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

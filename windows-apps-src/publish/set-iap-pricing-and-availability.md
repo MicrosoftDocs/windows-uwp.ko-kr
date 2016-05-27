@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: IAP를 제출할 때 가격 책정 및 가용성 페이지의 옵션을 사용하여 IAP에 대해 청구할 금액 및 고객에게 제공할 방법을 결정합니다.
 title: IAP 가격 책정 및 가용성 설정
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
@@ -50,6 +51,6 @@ IAP의 기본 가격을 선택해야 합니다. 이들 기준 가격은 0.99 USD
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 개발자 계정에 적절한 권한이 부여되었으면 OEM이 이미지에 앱을 포함하는 데 사용할 수 있는 사전 설치 패키지를 생성하고 다운로드할 수 있습니다.
 title: OEM용 사전 설치 패키지 생성
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
@@ -34,7 +35,7 @@ ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ## 지원
 
 
-사전 설치 패키지 생성에 관한 다른 질문이 있으면 <partnerops@microsoft.com>에 메일로 문의하세요.
+사전 설치 패키지 생성에 관한 다른 질문이 있으면 <partnerops@microsoft.com>에 전자 메일로 문의하십시오.
 
  
 
@@ -45,6 +46,6 @@ ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

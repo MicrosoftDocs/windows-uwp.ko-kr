@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다.
 title: 앱이 Windows 10 고객용 스토어에 표시되는 방법
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
@@ -7,7 +8,7 @@ ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 # 앱이 Windows 10 고객용 스토어에 표시되는 방법
 
 
-이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 장치의 고객이 해당 앱을 사용할 수 있습니다. 스토어에서 Windows 10을 실행하는 고객에게 앱을 제공하고 분류하는 방식이 약간 변경되었기 때문에 이 항목은 변경된 내용을 이해하는 데 도움이 됩니다.
+이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다. 스토어에서 Windows 10을 실행하는 고객에게 앱을 제공하고 분류하는 방식이 약간 변경되었기 때문에 이 항목은 변경된 내용을 이해하는 데 도움이 됩니다.
 
 **참고** 이러한 세부 정부를 변경하고, [새 제출을 만들고](app-submissions.md), 변경 내용을 적용하려면 스토어에 업데이트를 제출하세요.
 
@@ -55,7 +56,7 @@ ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 ### 설명
 언어에 따라 Windows 10 고객에게 가장 적절한 설명을 표시합니다. 동일한 언어에서 둘 이상의 소스로부터 설명을 사용할 수 있는 경우 Windows 스토어 앱의 설명이 Windows 10 고객에게 표시됩니다. 드물게, 지원되는 언어가 각 스토어마다 다른 경우 Windows Phone 앱의 설명이 해당 언어로 제공된 유일한 설명이면 일부 고객에게는 이 설명이 표시될 수 있습니다.
 
-여러 장치에서 작동하는 환경에 대해 알릴 수 있도록 Windows 10 고객에게 표시되는 설명을 업데이트하려는 경우 [앱 설명](create-app-descriptions.md)을 업데이트하여 이 작업을 수행할 수 있습니다. Windows 10 고객에게는 앱의 기본 설명이 표시되지만 여러 OS 버전의 고객에게 서로 다른 설명을 표시하려는 경우 [플랫폼 관련 설명을 작성](create-platform-specific-descriptions.md)할 수도 있습니다.
+여러 디바이스에서 작동하는 환경에 대해 알릴 수 있도록 Windows 10 고객에게 표시되는 설명을 업데이트하려는 경우 [앱 설명](create-app-descriptions.md)을 업데이트하여 이 작업을 수행할 수 있습니다. Windows 10 고객에게는 앱의 기본 설명이 표시되지만 여러 OS 버전의 고객에게 서로 다른 설명을 표시하려는 경우 [플랫폼 관련 설명을 작성](create-platform-specific-descriptions.md)할 수도 있습니다.
 
 ## 범주 변경
 
@@ -116,6 +117,6 @@ ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 | 게임 &gt; 레이싱           | 게임 &gt; 레이싱 + 비행           |
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

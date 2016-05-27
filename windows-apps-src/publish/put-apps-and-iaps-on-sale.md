@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 IAP(앱에서 바로 구매 제품)를 홍보할 수 있습니다.
 title: 할인 앱 및 IAP 판매
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
@@ -64,6 +65,6 @@ Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

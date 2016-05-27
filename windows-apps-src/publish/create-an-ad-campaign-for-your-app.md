@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: 개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다.
 title: 앱 광고 캠페인 만들기
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
@@ -13,7 +14,7 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 
 앱을 홍보하는 광고 캠페인을 만드는 방법은 다음과 같습니다.
 
-1.  개발자 센터 대시보드의 앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출** &gt; **앱 홍보**를 클릭합니다.
+1.  개발자 센터 대시보드의 앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출**&gt;**앱 홍보**를 클릭합니다.
 2.  다음 중 하나를 수행합니다.
 
     -   이 앱에 대한 광고 캠페인을 아직 만들지 않은 경우 **앱 홍보** 페이지에 광고 캠페인의 이점에 대한 정보가 표시됩니다. **시작** 또는 **광고 캠페인 만들기**를 클릭합니다.
@@ -25,7 +26,6 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
         -   **유료 광고**: 이러한 광고는 앱의 디바이스 및 범주와 일치하는 모든 앱에서 실행됩니다.
         -   **무료 하우스 광고**: 이러한 광고는 광고 앱의 디바이스와 일치하는 앱에서만 실행됩니다. 하우스 광고는 무료입니다. 자세한 내용은 [하우스 광고 정보](about-house-ads.md)를 참조하세요.
         -   **무료 커뮤니티 광고**: 이러한 광고는 커뮤니티 광고 캠페인을 만드는 다른 개발자가 게시한 앱에서 실행됩니다. 이 옵션을 선택하려면 먼저 대시보드의 **광고로 수익 창출** 페이지에서 **내 앱에 커뮤니티 광고 표시** 확인란을 선택해야 합니다. 자세한 내용은 [커뮤니티 광고 정보](about-community-ads.md)를 참조하세요.
-    - **캠페인 시작 날짜** 및 **캠페인 종료 날짜**에서 새 캠페인의 시작 및 종료 날짜를 선택합니다.
 
     > **참고** 앱이 아직 게시되지 않았으면 **새 캠페인** 페이지에 오류 메시지가 표시됩니다. 앱에 대한 광고 캠페인을 만들기 전에 앱이 게시될 때까지 기다려야 합니다.
 
@@ -34,7 +34,7 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
     **수동 대상 지정으로 전환**을 선택하는 경우 다음 대상 지정 정보를 편집할 수 있습니다.
 
     -   이러한 광고를 표시하려는 국가 또는 지역을 선택합니다. 최대 5개까지 선택할 수 있습니다. 지원되는 국가 또는 지역 목록은 [일반적인 질문](common-questions.md)을 참조하세요.
-    -   이러한 광고를 표시할 장치 유형을 선택합니다. 앱에서 지원하는 장치 유형만 표시됩니다.
+    -   이러한 광고를 표시할 디바이스 유형을 선택합니다. 앱에서 지원하는 디바이스 유형만 표시됩니다.
     -   운영 체제를 선택합니다. 앱에서 지원하는 운영 체제만 표시됩니다.
     -   원하는 대상의 성별 및 연령 범위를 선택합니다.
 
@@ -57,15 +57,15 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 6.  이제 **예산 및 지불** 섹션에서 광고 캠페인의 금융 설정을 선택합니다.
    > **참고** 하우스 캠페인 또는 커뮤니티 캠페인을 만드는 경우 이러한 캠페인은 무료이므로 **예산 및 지불** 섹션이 나타나지 않습니다.
 
-    -   Under **Budget**, use the slider to set the amount of money you want to spend each month to run this ad.
+    -   **예산**에서 슬라이더를 사용하여 매월 이 광고를 실행하기 위해 지출할 금액을 설정합니다.
 
-        The monthly budget is prorated for the month in which the ad campaign is created. In other words, if you create an ad campaign halfway through a calendar month, you will be charged for half of your monthly budget for that month.
+        광고 캠페인을 만든 달의 월별 예산은 비례 배분 방식으로 지출됩니다. 즉, 보름을 지나 광고 캠페인을 만드는 경우 해당 월의 월별 예산 중 절반이 청구됩니다.
 
-    -   Set a payment instrument for your ad campaign by clicking **Add new payment instrument** and fill in your account details.
-        > **Important**  The country/region of your payment instrument's billing address must match the country/region associated with your Dev Center account.
-    -   If you have received a coupon from a Microsoft representative to pay for an ad campaign, click **Use a coupon**, enter the coupon code, and click **Apply** to apply the coupon to the campaign.
+    -   **Add new payment instrument(새 결제 방법 추가)**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다.
+        > **중요** 결제 방법의 청구 주소 국가/지역은 개발자 센터 계정에 연결된 국가/지역과 일치해야 합니다.
+    - Microsoft 담당자로부터 쿠폰을 받고 광고 캠페인을 받고 결제하려면 **Use a coupon**(쿠폰 사용)을 클릭하고, 쿠폰 코드를 입력한 다음 **적용**을 클릭하여 캠페인에 쿠폰을 적용합니다.
 
-7.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 Windows 또는 Windows Phone 장치에 나타나기 시작됩니다!
+7.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 Windows 또는 Windows Phone 디바이스에 나타나기 시작됩니다!
 
 ## 관련 항목
 
@@ -78,6 +78,6 @@ ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

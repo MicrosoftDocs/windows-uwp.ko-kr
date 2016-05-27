@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다.
 title: pubCenter-개발자 센터 통합
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
@@ -9,7 +10,7 @@ ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 
 **중요**
 
--   2016년 4월 1일부터 개발자 센터에서 설정한 지급 계좌로 Microsoft Advertising 수익이 지급됩니다. 이제 개발자 센터에서만 지급 계좌에 대한 업데이트나 변경 및 세금 프로필을 관리할 수 있습니다. 필요한 경우 2016년 3월 31일 이전에 변경해야 합니다. 자세한 내용은 [pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)을 참조하세요.
+-   2016년 4월 1일부터 개발자 센터에서 설정한 지급 계좌로 Microsoft Advertising 수익이 지급됩니다. 이제 개발자 센터에서만 지급 계좌에 대한 업데이트나 변경 및 세금 프로필을 관리할 수 있습니다. 자세한 내용은 [pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)을 참조하세요.
 -   2015년 12월 1일을 기준으로 지급액을 받으려면 [pubCenter 계정을 개발자 센터 계정과 연결해야 합니다](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts).
 -   지급 내역이 pubCenter에서 더 이상 업데이트되지 않습니다. 앞으로 지급 기록을 검토하려면 [개발자 센터 계정](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts)에 pubCenter 계정을 연결한 후 개발자 센터 대시보드에서 [지급 요약](payout-summary.md) 페이지를 방문합니다.
 
@@ -113,7 +114,7 @@ pubCenter에서는 더 이상 새 광고 단위를 만드는 작업이 지원되
 
 ### 개발자 센터에서 광고 단위를 만들려면 어떻게 하나요?
 
-개발자 센터의 앱 페이지에서 **수익 창출** &gt; **광고를 통한 수익 창출**을 클릭합니다. 개발자 센터에서 광고 단위를 만드는 방법에 대한 내용은 [광고를 통한 수익 창출](monetize-with-ads.md)을 참조하세요.
+개발자 센터의 앱 페이지에서 **수익 창출**&gt;**광고를 통한 수익 창출**을 클릭합니다. 개발자 센터에서 광고 단위를 만드는 방법에 대한 내용은 [광고를 통한 수익 창출](monetize-with-ads.md)을 참조하세요.
 
 ### 최신 버전의 광고 조정자 확장을 설치했으며 앱에 광고 조정자 컨트롤을 추가했습니다. pubCenter로 가서 새 광고 단위를 만들어야 하나요?
 
@@ -121,7 +122,7 @@ pubCenter에서는 더 이상 새 광고 단위를 만드는 작업이 지원되
 
 ### 내 앱에서 이전 버전의 광고 조정자 컨트롤을 사용하고 있으며 새로운 광고 단위 ID를 가져와야 합니다. 광고 단위를 만들려면 어떻게 하나요?
 
-개발자 센터 대시보드에서 앱용 새 광고 단위를 만들 수 있습니다. 개발자 센터의 앱 페이지에서 **수익 창출** &gt; **광고를 통한 수익 창출**을 클릭합니다. 개발자 센터에서 광고 단위를 만드는 방법에 대한 내용은 [광고를 통한 수익 창출](monetize-with-ads.md)을 참조하세요.
+개발자 센터 대시보드에서 앱용 새 광고 단위를 만들 수 있습니다. 개발자 센터의 앱 페이지에서 **수익 창출**&gt;**광고를 통한 수익 창출**을 클릭합니다. 개발자 센터에서 광고 단위를 만드는 방법에 대한 내용은 [광고를 통한 수익 창출](monetize-with-ads.md)을 참조하세요.
 
 ### 광고 조정자 컨트롤을 사용했기 때문에 내 광고 단위가 자동으로 만들어졌으며 광고가 제공되고 있다는 것을 확인했습니다. 또한 개발자 센터에서 여러 다른 광고 단위를 수동으로 만들었습니다. 이러한 광고 단위에서 수익금을 받기 위해 수행해야 할 추가 작업이 있나요?
 
@@ -133,11 +134,11 @@ pubCenter에서는 더 이상 새 광고 단위를 만드는 작업이 지원되
 
 ### 개발자 센터에서 앱 프로모션 캠페인을 만들려면 어떻게 하나요?
 
-개발자 센터의 앱 페이지에서 **수익 창출** &gt; **앱 홍보**를 클릭합니다. 개발자 센터에서 앱에 대한 광고 캠페인을 만드는 방법에 대한 내용은 [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)를 참조하세요.
+개발자 센터의 앱 페이지에서 **수익 창출**&gt;**앱 홍보**를 클릭합니다. 개발자 센터에서 앱에 대한 광고 캠페인을 만드는 방법에 대한 내용은 [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)를 참조하세요.
 
 ### 개발자 센터에서 성능 데이터는 어디에서 확인할 수 있나요?
 
-개발자 센터의 앱 페이지에서 **분석** &gt; **Microsoft Advertising 성과**를 클릭합니다. 자세한 내용은 [광고 성과 보고서](advertising-performance-report.md)를 참조하세요.
+개발자 센터의 앱 페이지에서 **분석**&gt;**Microsoft Advertising 성과**를 클릭합니다. 자세한 내용은 [광고 성과 보고서](advertising-performance-report.md)를 참조하세요.
 
 ### 개발자 센터에서 내 결제 방법 및 세금 세부 정보를 관리하려면 어떻게 해야 하나요?
 
@@ -180,6 +181,6 @@ pubCenter-개발자 센터 통합의 일부로, 개발자 센터 계정에 연�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

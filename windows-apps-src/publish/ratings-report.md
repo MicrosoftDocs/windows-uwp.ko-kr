@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Windows 개발자 센터 대시보드의 평점 보고서를 통해 Windows 스토어에서 고객의 앱 평가 분포를 확인할 수 있습니다.
 title: 평점 보고서
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
@@ -67,6 +68,6 @@ Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
