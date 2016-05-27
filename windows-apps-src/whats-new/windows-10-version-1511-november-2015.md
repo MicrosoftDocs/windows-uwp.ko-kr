@@ -1,9 +1,9 @@
 ---
-Description: Windows 10 버전 1511 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다.
-title: Windows 10 버전 1511: 2015년 11월의 개발자용 새로운 기능
+Description&#58; 작성자&#58; QuinnRadich Windows 10 버전 1511 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다.
+title&#58; Windows 10 버전 1511&#58; 2015년 11월의 개발자용 새로운 기능
 ---
 
-# Windows 10 버전 1511: 2015년 11월의 개발자용 새로운 기능
+# Windows 10 버전 1511&#58; 2015년 11월의 개발자용 새로운 기능
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -83,6 +83,6 @@ Adobe Photoshop용 새 UWP 앱 디자인 템플릿을 확인하세요. Microsoft
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

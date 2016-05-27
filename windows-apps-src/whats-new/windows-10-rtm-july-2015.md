@@ -1,9 +1,10 @@
 ---
+author: QuinnRadich
 Description: Windows 10 및 새 개발자 도구는 새 UWP(유니버설 Windows 플랫폼)에서 지원하는 도구, 기능 및 환경을 제공합니다.
 title: Windows 10, RTM - 2015년 7월의 개발자용 새로운 기능
 ---
 
-# Windows 10, RTM: 2015년 7월의 개발자용 새로운 기능
+# Windows 10, RTM&#58; 2015년 7월의 개발자용 새로운 기능
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -65,7 +66,7 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="even">
 <td align="left">SplitView</td>
-<td align="left">새 [<strong>SplitView</strong>](https://msdn.microsoft.com/library/windows/apps/dn864360) 컨트롤은 임시 콘텐츠를 쉽게 표시하고 숨기는 방법을 제공합니다. 일반적으로 탐색 콘텐츠가 숨겨지고 사용자 작업의 결과로 필요할 때 미끄러지듯 들어오는 &quot;햄버거 메뉴&quot; 등의 최상위 수준 탐색 시나리오에 사용됩니다.</td>
+<td align="left">새 [<strong>SplitView</strong>](https://msdn.microsoft.com/library/windows/apps/dn864360) 컨트롤은 임시 콘텐츠를 쉽게 표시하고 숨기는 방법을 제공합니다. 이 컨트롤은 일반적으로 탐색 콘텐츠가 숨겨져 있다 사용자 동작으로 필요 시 표시되는 &quot;햄버거 메뉴&quot;와 같은 최상위 탐색 시나리오에 사용됩니다.</td>
 </tr>
 <tr class="odd">
 <td align="left">RelativePanel</td>
@@ -73,7 +74,7 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="even">
 <td align="left">CalendarView</td>
-<td align="left">[<strong>CalendarView</strong>](https://msdn.microsoft.com/library/windows/apps/dn890052) 컨트롤을 사용하면 사용자 지정 가능한 월 기반 보기를 통해 날짜 및 날짜 범위를 쉽게 보고 선택할 수 있습니다. <strong>CalendarView</strong>는 선택할 수 있는 날짜를 제한하는 최소, 최대, 블랙아웃 날짜 등의 기능을 지원합니다. 특정 요일의 일반적인 일정 &quot;예약률&quot;을 표시하는 데 사용할 수 있는 사용자 지정 밀도 막대를 설정할 수도 있습니다.</td>
+<td align="left">[<strong>CalendarView</strong>](https://msdn.microsoft.com/library/windows/apps/dn890052) 컨트롤을 사용하면 사용자 지정 가능한 월 기반 보기를 통해 날짜 및 날짜 범위를 쉽게 보고 선택할 수 있습니다. <strong>CalendarView</strong>는 선택할 수 있는 날짜를 제한하는 최소, 최대, 블랙아웃 날짜 등의 기능을 지원합니다. 또한 특정 날짜에 일정의 일반적 &quot;예약률&quot;을 표시하는 데 사용할 수 있는 사용자 지정 밀도 막대를 설정할 수 있습니다.</td>
 </tr>
 <tr class="odd">
 <td align="left">CalendarDatePicker</td>
@@ -95,7 +96,7 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <li>[<strong>Windows.UI.Xaml.Controls.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn610751) 네임스페이스 - 지도를 표시합니다.</li>
 <li>[<strong>Windows.Services.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스 - 위치 및 경로를 찾습니다.</li>
 </ul>
-<p>지금 유니버설 Windows 앱에서 이러한 API 사용을 시작하려면 [Bing Maps Developer Center](https://www.bingmapsportal.com/)에서 키를 요청하세요. 자세한 내용은 [How to authenticate a Maps app](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528)을 참조하세요. 또한 Windows 10의 새로운 기능으로, PC 및 휴대폰 사용자는 설정 앱에서 오프라인 지도를 다운로드할 수 있습니다. 사용 가능한 경우 오프라인 지도는 [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004)이 인터넷에 액세스할 수 없을 때 지도를 표시하는 데 사용됩니다.</p></td>
+<p>지금 유니버설 Windows 앱에서 이러한 API 사용을 시작하려면 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 키를 요청하세요. 자세한 내용은 [지도 앱을 인증하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528)을 참조하세요. 또한 Windows 10의 새로운 기능으로, PC 및 휴대폰 사용자는 설정 앱에서 오프라인 지도를 다운로드할 수 있습니다. 사용 가능한 경우 오프라인 지도는 [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004)이 인터넷에 액세스할 수 없을 때 지도를 표시하는 데 사용됩니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">입력 단추 매핑</td>
@@ -285,8 +286,7 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <td align="left">Cortana</td>
 <td align="left"><p>외부 응용 프로그램을 시작하고 해당 응용 프로그램 내에서 단일 작업을 실행하는 음성 명령으로 <strong>Cortana</strong>의 기본 기능을 확장하세요.</p>
 <p>앱의 기본 기능을 통합하고 사용자가 앱을 직접 열지 않고도 대부분의 작업을 수행할 수 있는 중앙 진입점을 제공하면 <strong>Cortana</strong>가 앱과 사용자 간의 연락을 담당하는 역할을 할 수 있습니다. 많은 경우 이렇게 하면 사용자의 시간과 노력을 상당히 줄일 수 있습니다.</p>
-<p>[
-            integrate your app into the Cortana canvas](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230) 방법을 알아봅니다. 아이디어가 필요한 경우 [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics)에서 <strong>Cortana</strong>와 관련된 디자인 권장 사항 및 UX 지침을 참조할 수 있습니다.</p></td>
+<p>[앱을 Cortana 캔버스에 통합](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230)하는 방법을 알아보세요. 아이디어가 필요한 경우 [유니버설 Windows 앱에 대한 디자인 기본 사항](https://dev.windows.com/design/design-basics)에서 <strong>Cortana</strong>와 관련된 디자인 권장 사항 및 UX 지침을 참조할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left">파일 탐색기</td>
@@ -300,11 +300,11 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <td align="left">설정</td>
 <td align="left"><p>[<strong>LaunchUriAsync</strong>](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드와 함께 ms-settings 프로토콜을 사용하여 기본 제공 설정 페이지를 표시합니다. 예를 들어 다음 코드는 Wi-Fi 설정 페이지를 표시합니다.</p>
 <p><code>bool result = await Launcher.LaunchUriAsync(new Uri(&quot;ms-settings://network/wifi&quot;));</code></p>
-<p>표시할 수 있는 설정 페이지 목록은 [How to display built-in settings pages by using the ms-settings protocol](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx) 항목을 참조하세요.</p></td>
+<p>표시할 수 있는 설정 페이지 목록에 대해서는 [ms-settings 프로토콜을 사용하여 기본 제공 설정 페이지를 표시하는 방법](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx)을 참조하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">앱 간 통신</td>
-<td align="left"><p>Windows 10의 새 [app-to-app communication](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) API를 통해 Windows 웹 응용 프로그램은 물론 Windows 응용 프로그램 간에 서로 시작하고 데이터 및 파일을 교환할 수 있습니다.</p>
+<td align="left"><p>Windows 10의 새로운 [앱 간 통신](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) API를 통해 Windows 웹 응용 프로그램은 물론 Windows 응용 프로그램 간에 서로 시작하고 데이터 및 파일을 교환할 수 있습니다.</p>
 <p>이러한 새 API를 사용하면 이전에는 여러 응용 프로그램을 사용해야 했던 복잡한 작업도 원활하게 처리할 수 있습니다. 예를 들어 앱에서 소셜 네트워킹 앱을 실행하여 연락처를 선택하거나 체크 아웃 응용 프로그램을 실행하여 지급 프로세스를 완료할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
@@ -313,15 +313,15 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="odd">
 <td align="left">앱 패키지 매니페스트</td>
-<td align="left"><p>Windows 10용 [package manifest schema](https://msdn.microsoft.com/library/windows/apps/br211474) 참조에 대한 업데이트에는 추가, 제거 및 변경된 요소가 포함되어 있습니다.</p>
-<p>스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [Element Hierarchy](https://msdn.microsoft.com/library/windows/apps/dn934819) 항목을 참조하세요.</p></td>
+<td align="left"><p>Windows 10의 [패키지 매니페스트 스키마](https://msdn.microsoft.com/library/windows/apps/br211474) 참조에 대한 업데이트에는 추가, 제거 및 변경된 요소가 포함됩니다.</p>
+<p>스키마의 모든 요소, 특성 및 유형에 대한 참조 정보는 [요소 계층 구조](https://msdn.microsoft.com/library/windows/apps/dn934819)를 참조하세요.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## 디바이스
+## 장치
 
 
 <table>
@@ -334,14 +334,13 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <td align="left">Microsoft Surface Hub</td>
 <td align="left"><p>Microsoft Surface Hub는 Surface Hub 또는 연결된 디바이스에서 기본적으로 실행되는 유니버설 Windows 앱을 위한 강력한 팀 공동 작업 디바이스 및 큰 화면 플랫폼입니다.</p>
 <p>큰 화면, 터치 및 수동 입력, 카메라 및 센서 같은 확장 온보드 하드웨어를 활용하는, 비즈니스를 위해 특별히 설계된 고유한 앱을 빌드하세요.</p>
-<p>[
-            Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics)에서 Surface Hub와 관련된 디자인 권장 사항 및 UX 지침을 살펴보세요. 이러한 문서에서는 유니버설 Windows 앱에 대한 반응형 디자인 기술을 설명합니다.</p>
+<p>[유니버설 Windows 앱에 대한 디자인 기본 사항](https://dev.windows.com/design/design-basics)에서 Surface Hub와 관련된 디자인 권장 사항 및 UX 지침을 살펴보세요. 이러한 문서에서는 유니버설 Windows 앱에 대한 반응형 디자인 기술을 설명합니다.</p>
 <p>공동 공유 앱 지원에 대한 자세한 내용은 [<strong>SharedModeSettings</strong>](https://msdn.microsoft.com/library/windows/apps/dn949019)를 참조하세요.</p>
 <p>수동 입력 및 새 [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤의 다중 지점 수동 입력 지원에 대한 자세한 내용은 [<strong>Windows.UI.Input.Inking</strong>](https://msdn.microsoft.com/library/windows/apps/br208524) 및 [<strong>Windows.UI.Input.Inking.Core</strong>](https://msdn.microsoft.com/library/windows/apps/dn958452)를 참조하세요.</p>
-<p>센서 입력 처리에 대해서는 [Integrating devices, printers, and sensors](https://msdn.microsoft.com/library/windows/apps/br229563) 항목을 참조하세요.</p></td>
+<p>센서 입력 처리에 대해서는 [디바이스, 프린터 및 센서 통합](https://msdn.microsoft.com/library/windows/apps/br229563)을 참조하세요.</p></td>
 </tr>
 <tr class="even">
-<td align="left">위치</td>
+<td align="left">Location</td>
 <td align="left"><p>Windows 10에서는 사용자 위치에 대한 액세스 권한을 요청하는 새 메서드인 [<strong>RequestAccessAsync</strong>](https://msdn.microsoft.com/library/windows/apps/dn859152)를 제공합니다.</p>
 <p>사용자는 <strong>설정</strong> 앱의 <strong>위치 개인 정보 설정</strong>에서 자신의 위치 데이터 개인 정보를 설정합니다. 앱은 다음의 경우에만 사용자 위치에 액세스할 수 있습니다.</p>
 <ul>
@@ -353,11 +352,10 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="odd">
 <td align="left">AllJoyn</td>
-<td align="left"><p>[<strong>Windows.Devices.AllJoyn</strong>](https://msdn.microsoft.com/library/windows/apps/dn894971) Windows 런타임 네임스페이스는 Microsoft에서 구현한 AllJoyn 오픈 소스 소프트웨어 프레임워크 및 서비스를 제공합니다. 이러한 API를 사용하면 유니버설 Windows 디바이스 앱이 AllJoyn 기반 IoT(사물 인터넷) 시나리오에서 다른 디바이스에 참여할 수 있습니다. AllJoyn C API에 대한 자세한 내용을 보려면 [The AllSeen Alliance](https://allseenalliance.org/)에서 설명서를 다운로드하세요.</p>
-<p>이 릴리스에 포함된 [AllJoynCodeGen tool](https://msdn.microsoft.com/library/windows/apps/dn913809)를 사용하여 디바이스 앱에서 AllJoyn 시나리오를 가능하게 하기 위해 사용할 수 있는 Windows 구성 요소를 생성할 수 있습니다.</p>
+<td align="left"><p>[<strong>Windows.Devices.AllJoyn</strong>](https://msdn.microsoft.com/library/windows/apps/dn894971) Windows 런타임 네임스페이스는 Microsoft에서 구현한 AllJoyn 오픈 소스 소프트웨어 프레임워크 및 서비스를 제공합니다. 이러한 API를 사용하면 유니버설 Windows 디바이스 앱이 AllJoyn 기반 IoT(사물 인터넷) 시나리오에서 다른 디바이스에 참여할 수 있습니다. AllJoyn C API에 대한 자세한 내용을 보려면 [AllSeen Alliance](https://allseenalliance.org/)에서 설명서를 다운로드하세요.</p>
+<p>이 릴리스에 포함된 [AllJoynCodeGen](https://msdn.microsoft.com/library/windows/apps/dn913809) 도구를 사용하여 디바이스 앱에서 AllJoyn 시나리오를 가능하게 하기 위해 사용할 수 있는 Windows 구성 요소를 생성할 수 있습니다.</p>
 <div class="alert">
-<strong>참고</strong> 이제 새 클래스의 소형 디바이스에 Windows 10 IoT Core를 사용할 수 있으므로 Windows 및 Visual Studio를 사용하여 IoT("사물 인터넷") 디바이스를 만들 수 있습니다. [
-            WindowsOnDevices.com](http://www.windowsondevices.com/)에서 Windows IoT에 대해 자세히 알아봅니다.
+<strong>참고</strong> 이제 새 클래스의 소형 디바이스에 Windows 10 IoT Core를 사용할 수 있으므로 Windows 및 Visual Studio를 사용하여 IoT("사물 인터넷") 디바이스를 만들 수 있습니다. [WindowsOnDevices.com](http://www.windowsondevices.com/)에서 Windows IoT에 대해 자세히 알아보기
 </div>
 <div>
  
@@ -539,10 +537,9 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="even">
 <td align="left">버전</td>
-<td align="left"><p>[
-            Version Helper functions](https://msdn.microsoft.com/library/windows/desktop/dn424972)를 사용하여 운영 체제의 버전을 확인할 수 있습니다. Windows 10의 경우 이러한 도우미 함수에는 새로운 함수 [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474)가 포함됩니다. 시스템 버전을 확인하려는 경우 더 이상 사용되지 않는 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 및 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수가 아닌 도우미 함수를 사용해야 합니다. 시스템 버전을 가져오는 방법에 대한 자세한 내용은 [Getting the System Version](https://msdn.microsoft.com/library/windows/desktop/ms724429)를 참조하세요.</p>
-<p>더 이상 사용되지 않는 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 또는 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수를 사용하여 [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) 또는 [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834) 구조체의 버전 정보를 가져오는 경우 이러한 구조체에 포함된 버전 번호가 Windows 8.1 및 Windows Server 2012 R2를 나타내는 6.3에서 Windows 10을 나타내는 10.0으로 증가합니다. 운영 체제 버전 번호에 대한 자세한 내용은 [Operating System Version](https://msdn.microsoft.com/library/windows/desktop/ms724832)을 참조하세요.</p>
-<p>또한 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 또는 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수를 사용하여 이러한 버전에 대한 올바른 버전 정보를 가져오려면 응용 프로그램에서 Windows 8.1 또는 Windows 10을 구체적으로 대상으로 지정해야 합니다. 이러한 Windows 버전을 응용 프로그램 대상으로 지정하는 방법에 대한 자세한 내용은 [Targeting your application for Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241)을 참조하세요.</p></td>
+<td align="left"><p>[버전 도우미 함수](https://msdn.microsoft.com/library/windows/desktop/dn424972)를 사용하여 운영 체제의 버전을 확인할 수 있습니다. Windows 10의 경우 이러한 도우미 함수에는 새로운 함수 [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474)가 포함됩니다. 시스템 버전을 확인하려는 경우 더 이상 사용되지 않는 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 및 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수가 아닌 도우미 함수를 사용해야 합니다. 시스템 버전을 가져오는 방법에 대한 자세한 내용은 [시스템 버전 가져오기](https://msdn.microsoft.com/library/windows/desktop/ms724429)를 참조하세요.</p>
+<p>더 이상 사용되지 않는 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 또는 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수를 사용하여 [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833) 또는 [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834) 구조체의 버전 정보를 가져오는 경우 이러한 구조체에 포함된 버전 번호가 Windows 8.1 및 Windows Server 2012 R2를 나타내는 6.3에서 Windows 10을 나타내는 10.0으로 증가합니다. 운영 체제 버전 번호에 대한 자세한 내용은 [운영 체제 버전](https://msdn.microsoft.com/library/windows/desktop/ms724832)을 참조하세요.</p>
+<p>또한 [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451) 또는 [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439) 함수를 사용하여 이러한 버전에 대한 올바른 버전 정보를 가져오려면 응용 프로그램에서 Windows 8.1 또는 Windows 10을 구체적으로 대상으로 지정해야 합니다. 이러한 Windows 버전용 응용 프로그램을 대상으로 지정하는 방법에 대한 자세한 내용은 [Windows용 응용 프로그램을 대상으로 지정](https://msdn.microsoft.com/library/windows/desktop/dn481241)을 참조하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">사용자 정보</td>
@@ -590,9 +587,8 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <td align="left">Visual Studio에 새로운 실시간 시각적 트리 기능이 추가되었습니다. 디버그 중에 이 기능을 사용하여 앱의 시각적 트리 상태를 빠르게 파악하고 요소 속성이 어떻게 설정되었는지 검색할 수 있습니다. 또한 앱이 실행되는 동안 속성 값을 변경할 수 있어 다시 실행하지 않고도 수정과 실험이 가능합니다.</td>
 </tr>
 <tr class="even">
-<td align="left">로그 추적</td>
-<td align="left"><p>[
-            TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636)은 사용자 모드 앱 및 커널 모드 드라이버에 대한 새 이벤트 추적 API로, ETW([Event Tracing for Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803))를 기반으로 하여 빌드됩니다. 이 API는 별도의 계측 매니페스트 XML 파일 없이도 코드를 계측화하고 이벤트와 함께 구조화된 데이터를 포함하는 간편한 방법을 제공합니다.</p>
+<td align="left">추적 로그</td>
+<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636)은 사용자 모드 앱 및 커널 모드 드라이버에 대한 새 이벤트 추적 API로, [ETW(Windows용 이벤트 추적)](https://msdn.microsoft.com/library/windows/desktop/bb968803)를 기반으로 빌드됩니다. 이 API는 별도의 계측 매니페스트 XML 파일 없이도 코드를 계측화하고 이벤트에 구조화된 데이터를 포함하는 간편한 방법을 제공합니다.</p>
 <p>WinRT,.NET 및 C/C++ TraceLogging API는 각기 다른 개발자 대상 그룹에 사용될 수 있습니다.</p></td>
 </tr>
 </tbody>
@@ -627,7 +623,7 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 </tr>
 <tr class="odd">
 <td align="left">사용자 지정 창 제목 표시줄</td>
-<td align="left">데스크톱 디바이스 패밀리용 UWP 앱의 경우 이제 [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115) 클래스와 [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131) 속성 및 [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560) 메서드를 사용하여 기본 Windows 제목 표시줄 콘텐츠를 사용자 지정 XAML 콘텐츠로 바꿀 수 있습니다. XAML은 &quot;시스템 크롬&quot;으로 처리되므로 Windows에서 앱을 대신하여 입력 이벤트를 처리합니다. 즉, 사용자가 사용자 지정 제목 표시줄 콘텐츠를 클릭하는 경우에도 창을 끌어 놓고 크기를 조정할 수 있습니다.</td>
+<td align="left">데스크톱 디바이스 패밀리용 UWP 앱의 경우 이제 [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115) 클래스와 [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131) 속성 및 [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560) 메서드를 사용하여 기본 Windows 제목 표시줄 콘텐츠를 사용자 지정 XAML 콘텐츠로 바꿀 수 있습니다. XAML이 &quot;시스템 크롬&quot;으로 취급되므로 Windows는 앱이 아닌 입력 이벤트를 처리합니다. 즉, 사용자가 사용자 지정 제목 표시줄 콘텐츠를 클릭하는 경우에도 창을 끌어 놓고 크기를 조정할 수 있습니다.</td>
 </tr>
 </tbody>
 </table>
@@ -645,12 +641,10 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 <tbody>
 <tr class="odd">
 <td align="left">Internet Explorer</td>
-<td align="left"><p>Internet Explorer에서는 다른 최신 브라우저 및 최신 웹 콘텐츠와의 상호 운용성을 최대화하도록 설계된 새로운 &quot;활성&quot; 문서 모드인 에지 모드를 도입했습니다. 이 실험 모드는 임의로 선택된 Windows 10 사용자 집합에 점진적으로 공개하는 중입니다. 새 IE <strong>about:flags</strong> 메커니즘을 통해 에지 모드를 사용하거나 사용하지 않도록 수동으로 설정할 수 있습니다. 자세한 내용은 다음을 참조하세요.</p>
+<td align="left"><p>Internet Explorer의 새로운 에지 모드: 다른 최신 브라우저 및 최신 웹 콘텐츠와의 상호 운용성을 최대화하기 위해 디자인된 새로운 &quot;활성&quot; 문서 모드입니다. 이 실험 모드는 임의로 선택된 Windows 10 사용자 집합에 점진적으로 공개하는 중입니다. 새 IE <strong>about:flags</strong> 메커니즘을 통해 에지 모드를 사용하거나 사용하지 않도록 수동으로 설정할 수 있습니다. 자세한 내용은 다음의 정보를 참조하세요.</p>
 <ul>
-<li>[
-            Living on the Edge – our next step in helping the web just work](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx).</li>
-<li>[
-            The Internet Explorer for Windows 10 Developer Guide](https://dev.windows.com/microsoft-edge/).</li>
+<li>[에지 작업 – 웹 작동을 도와주는 다음 단계](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx)</li>
+<li>[Windows 10용 Internet Explorer 개발자 가이드](https://dev.windows.com/microsoft-edge/)</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -695,6 +689,6 @@ Windows 10, RTM의 새로운 기능을 기능별로 살펴보면 다음과 같�
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
