@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: BasicReaderWriter의 전체 코드
 description: 일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
@@ -25,19 +26,14 @@ ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 
 ## 기술
 
-|                       |                 |
-|-----------------------|-----------------|
-| 프로그래밍 언어 | C++             |
-| 프로그래밍 모델    | Windows 런타임 |
+**프로그래밍 언어** - C++  
+**프로그래밍 모델** - Windows 런타임
 
 
 ## 요구 사항
 
-| 지원되는 최소 클라이언트 | Windows 10                            |
-|--------------------------|---------------------------------------|
-| 지원되는 최소 서버 | Windows Server 2016 Technical Preview |
-| 필요한 최소 SDK     |                                       |
-
+ **지원되는 최소 클라이언트** - Windows 10       
+ **지원되는 최소 서버** - Windows Server 2016 Technical Preview 
 
 ## 코드 보기(C++)
 
@@ -265,6 +261,6 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

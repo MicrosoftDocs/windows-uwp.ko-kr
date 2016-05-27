@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 앱 활성화 방법(DirectX 및 C++)
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼) DirectX 앱에 대한 활성화 환경을 정의하는 방법을 보여 줍니다.
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
@@ -90,6 +91,6 @@ void App::Run()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

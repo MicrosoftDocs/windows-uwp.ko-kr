@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: DirectX 9에서 UWP(유니버설 Windows 플랫폼)로 포팅
 description: 이 섹션에는 UWP(유니버설 Windows 플랫폼)으로 DirectX 9 게임 포팅에 대한 문서, 개요 및 연습이 포함되어 있습니다.
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
@@ -34,6 +35,6 @@ ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

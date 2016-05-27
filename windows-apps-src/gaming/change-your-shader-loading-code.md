@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교
 description: 개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다.
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
@@ -32,8 +33,7 @@ Direct3D 11 그래픽 파이프라인은 [**ID3D11DeviceContext1**](https://msdn
 -   [픽셀 셰이더 단계](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage) - 픽셀 셰이더 단계는 기본 요소에 대한 보간된 데이터를 받아 픽셀별 데이터(예: 색)를 생성합니다. 이 단계를 지원하는 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 메서드에는 접두사 "PS"가 붙습니다.
 -   [출력 병합기 단계](https://msdn.microsoft.com/library/windows/desktop/bb205120) - 출력 병합기 단계는 다양한 유형의 출력 데이터(픽셀 셰이더 값, 깊이 및 스텐실 정보)를 렌더링 대상 및 깊이/스텐실 버퍼의 내용과 결합하여 최종 파이프라인 결과를 생성합니다. 이 단계를 지원하는 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 메서드에는 접두사 "OM"이 붙습니다.
 
-(기하 도형 셰이더, 헐 셰이더, 테설레이터 및 도메인 셰이더에 대한 단계도 있지만 이러한 단계는 OpenGL ES 2.0에 아날로그가 없으므로 여기서 다루지 않습니다.)
-이러한 단계에 대한 전체 메서드 목록은 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 참조 페이지를 참조하세요. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.
+(기하 도형 셰이더, 헐 셰이더, 테설레이터 및 도메인 셰이더에 대한 단계도 있지만 이러한 단계는 OpenGL ES 2.0에 아날로그가 없으므로 여기서 다루지 않습니다.) 이러한 단계에 대한 전체 메서드 목록은 [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) 및 [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 참조 페이지를 참조하세요. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.
 
 ## 셰이더 만들기
 
@@ -250,6 +250,6 @@ Direct3D에서 의미 체계를 사용하는 방법에 대한 자세한 내용�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

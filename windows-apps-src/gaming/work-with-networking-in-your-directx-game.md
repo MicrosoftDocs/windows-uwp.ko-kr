@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 게임의 네트워킹
 description: 네트워킹 기능을 개발하고 DirectX 게임에 통합하는 방법을 알아봅니다.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
@@ -396,6 +397,6 @@ using namespace Windows::Web::Http;
 * [StreamSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=243037)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

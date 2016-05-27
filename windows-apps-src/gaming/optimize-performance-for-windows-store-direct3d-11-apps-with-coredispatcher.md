@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: UWP(유니버설 Windows 플랫폼) DirectX 게임에 대한 입력 대기 시간 최적화
 description: 입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있으며, 최적화하면 게임에 더 세련된 느낌을 줄 수 있습니다.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
@@ -245,7 +246,7 @@ Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRA
 
 ![그림 2 directx 대기 가능의 입력 대기 시간](images/input-latency2.png)
 
-이러한 다이어그램을 통해 게임이 디스플레이의 새로 고침 빈도로 정의된 16.7ms 할당 내에서 각 프레임을 렌더링 및 표시할 수 있는 경우 입력 대기 시간을 전체 프레임 2개만큼 줄일 수 있음을 알 수 있습니다. 퍼즐 샘플은 대기 가능 스왑 체인을 사용하며 ` m_deviceResources->SetMaximumFrameLatency(1);`를 호출하여 Present 큐 제한을 제어합니다.
+이러한 다이어그램을 통해 게임이 디스플레이의 새로 고침 빈도로 정의된 16.7ms 할당 내에서 각 프레임을 렌더링 및 표시할 수 있는 경우 입력 대기 시간을 전체 프레임 2개만큼 줄일 수 있음을 알 수 있습니다. 퍼즐 샘플은 대기 가능 스왑 체인을 사용하며 다음을 호출하여 Present 큐 제한을 제어합니다.` m_deviceResources->SetMaximumFrameLatency(1);`
 
  
 
@@ -256,6 +257,6 @@ Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRA
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

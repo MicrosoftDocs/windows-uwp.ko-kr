@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 다양한 하드웨어에서 그림자 맵 지원
 description: 더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
@@ -114,7 +115,7 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 
 선형 필터링된 버전의 셰이더에 대한 프로젝트 파일 항목은 LINEAR를 정의합니다.
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -143,7 +144,7 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 
 선형 필터링된 버전의 셰이더에 대한 프로젝트 파일 항목은 전처리기 정의를 포함하지 않습니다.
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -173,6 +174,6 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

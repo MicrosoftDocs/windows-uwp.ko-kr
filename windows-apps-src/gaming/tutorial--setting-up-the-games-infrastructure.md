@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 게임 프로젝트 설정
 description: 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
@@ -26,7 +27,7 @@ ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 
 Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio 2015에는 게임 및 그래픽 앱 개발을 상당히 쉽게 수행할 수 있는 많은 템플릿이 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
 
-이 자습서에 적합한 템플릿은 DirectX 11(유니버설 Windows)이라는 템플릿입니다. Visual Studio 2015에서 **파일...** &gt; **새 프로젝트**를 클릭하고 나서,
+이 자습서에 적합한 템플릿은 DirectX 11(유니버설 Windows)이라는 템플릿입니다. Visual Studio 2015에서 **파일...**&gt;**새 프로젝트**를 클릭하고 나서,
 
 1.  **템플릿**에서 **Visual C++**, **Windows**, **유니버설**을 선택합니다.
 2.  가운데 창에서 **DirectX 11 앱(유니버설 Windows)**을 선택합니다.
@@ -163,6 +164,6 @@ void App::Run()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 기본 메시 만들기 및 표시
 description: 3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다각형을 사용하여 게임의 개체와 표면을 나타냅니다.
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
@@ -11,7 +12,7 @@ ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 
 3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다각형을 사용하여 게임의 개체와 표면을 나타냅니다. 이러한 다각형 개체와 표면의 구조로 이루어진 꼭짓점의 목록을 메시라고 합니다. 여기서는 큐브 개체에 대한 기본 메시를 만들고 이를 렌더링 및 표시할 수 있도록 셰이더 파이프라인에 제공해 보겠습니다.
 
-> **중요** 여기에 포함된 예제 코드에서는 DirectXMath.h에 선언된 형식(예: DirectX::XMFLOAT3 and DirectX::XMFLOAT4X4) 및 인라인 메서드를 사용합니다. 이 코드를 잘라서 붙여넣을 경우 프로젝트에 \#include &lt;DirectXMath.h&gt;를 포함합니다.
+> **중요** 여기에 포함된 예제 코드에서는 DirectXMath.h에 선언된 형식(예: DirectX::XMFLOAT3 and DirectX::XMFLOAT4X4) 및 인라인 메서드를 사용합니다. 이 코드를 잘라서 붙여넣을 경우 프로젝트에 &lt;DirectXMath.h&gt;를 포함하세요.
 
  
 
@@ -446,6 +447,6 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

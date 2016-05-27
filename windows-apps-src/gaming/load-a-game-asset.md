@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: DirectX 게임에 리소스 로드
 description: 대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
@@ -47,16 +48,15 @@ ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Complete code for BasicLoader](complete-code-for-basicloader.md)</p></td>
+<td align="left"><p>[BasicLoader의 전체 코드](complete-code-for-basicloader.md)</p></td>
 <td align="left"><p>그래픽 메시 개체를 변환하여 메모리에 로드하는 클래스 및 메서드의 전체 코드입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Complete code for BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
-<td align="left"><p>일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다. [
-            BasicLoader](complete-code-for-basicloader.md) 클래스에서 사용됩니다.</p></td>
+<td align="left"><p>[BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md)</p></td>
+<td align="left"><p>일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다. [BasicLoader](complete-code-for-basicloader.md) 클래스에서 사용됩니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Complete code for DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
+<td align="left"><p>[DDSTextureLoader의 전체 코드](complete-code-for-ddstextureloader.md)</p></td>
 <td align="left"><p>메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다.</p></td>
 </tr>
 </tbody>
@@ -184,7 +184,7 @@ void ResourceLoading::CreateDeviceResources()
 }
 ```
 
-이 작업은 모든 작업이 완료되었을 때만 로딩 완료 플래그를 설정하는 람다가 트리거되도록 && 연산자를 사용하여 집계되었습니다. 플래그가 여러 개인 경우 경합 상태의 가능성이 있다는 점에 유의하세요. 예를 들어, 람다가 동일한 값에 두 개의 플래그를 순차적으로 설정할 경우 두 번째 플래그가 설정되기 전에 플래그를 검사하는 다른 스레드는 첫 번째 플래그만 보게 될 수 있습니다.
+이 작업은 모든 작업이 완료되었을 때만 로딩 완료 플래그를 설정하는 람다가 트리거되도록 &amp;&amp; 연산자를 사용하여 집계되었습니다. 플래그가 여러 개인 경우 경합 상태의 가능성이 있다는 점에 유의하세요. 예를 들어, 람다가 동일한 값에 두 개의 플래그를 순차적으로 설정할 경우 두 번째 플래그가 설정되기 전에 플래그를 검사하는 다른 스레드는 첫 번째 플래그만 보게 될 수 있습니다.
 
 지금까지 리소스 파일을 비동기식으로 로드하는 방법에 대해 알아보았습니다. 동기 파일 로드는 훨씬 더 간단하며, [BasicReaderWriter의 전체 코드](complete-code-for-basicreaderwriter.md) 및 [BasicLoader의 전체 코드](complete-code-for-basicloader.md)에 해당 예제가 나와 있습니다.
 
@@ -293,7 +293,7 @@ void BasicLoader::CreateMesh(
 }
 ```
 
-일반적으로 게임에 사용하는 모든 메시에 대해 꼭짓점/인덱스 버퍼를 만듭니다. 메시를 로드할 위치나 시점은 개발자가 결정합니다. 메시 수가 많을 때는 특정 로딩 상태, 미리 정의된 로드 상태 등, 게임의 특정 시점에 디스크에서 일부를 로드해야 할 수 있습니다. 지형 데이터 같은 대규모 메시의 경우 캐시에서 꼭짓점을 스트리밍할 수 있지만 이는 더 복잡한 프로시저이며 이 항목의 범위를 벗어납니다.
+일반적으로 게임에 사용하는 모든 메시에 대해 꼭짓점/인덱스 버퍼를 만듭니다. 메시를 로드할 위치나 시점은 개발자가 결정합니다. 메시 수가 많을 때는 특정 로딩 상태, 미리 정의된 로드 상태 등, 게임의 특정 시점에 디스크에서 일부를 로드해야 할 수 있습니다. 지형 데이터 같은 대규모 메시의 경우 캐시에서 꼭짓점을 스트리밍 할 수 있지만 이는 더 복잡한 프로시저이며 이 항목의 범위를 벗어납니다.
 
 다시 한 번 강조하지만 꼭짓점 데이터 형식을 알아야 합니다. 모델을 만드는 데 사용되는 도구에서 꼭짓점 데이터를 나타내는 방식은 아주 많습니다. 또한 꼭짓점 데이터의 입력 레이아웃을 삼각형 목록 및 스트립 등, Direct3D로 나타내는 방식도 여러 가지입니다. 꼭짓점 데이터에 대한 자세한 내용은 [Direct3D 11의 버퍼 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898) 및 [Primitive](https://msdn.microsoft.com/library/windows/desktop/bb147291)를 참조하세요.
 
@@ -706,6 +706,6 @@ task<void> BasicLoader::LoadShaderAsync(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

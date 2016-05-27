@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 그림자 맵을 깊이 버퍼로 렌더링
 description: 광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
@@ -151,6 +152,6 @@ PixelShaderInput main(VertexShaderInput input)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

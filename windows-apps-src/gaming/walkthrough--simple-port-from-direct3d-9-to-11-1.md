@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: 연습 - 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 description: 이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다.
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ---
 
-# 연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
+# 연습&#58; 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -24,15 +25,15 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Initialize Direct3D 11](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
+<td align="left"><p>[Direct3D 11 초기화](simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md)</p></td>
 <td align="left"><p>Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방법 및 DXGI를 사용하여 스왑 체인을 설정하는 방법을 포함하여 Direct3D 11로 Direct3D 9 초기화 코드를 변환하는 방법을 보여 줍니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Convert the rendering framework](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
+<td align="left"><p>[렌더링 프레임워크 변환](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)</p></td>
 <td align="left"><p>기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Port the game loop](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
+<td align="left"><p>[게임 루프 포팅](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)</p></td>
 <td align="left"><p>[<strong>IFrameworkView</strong>](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다.</p></td>
 </tr>
 </tbody>
@@ -68,14 +69,13 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ## 관련 항목
 
 
-**Direct3D**
-[Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+**Direct3D** 
+           [Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
 [UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
 
-**Windows 스토어**
-[
-            **Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+**Windows 스토어** 
+           [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
 [**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
 
@@ -88,6 +88,6 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

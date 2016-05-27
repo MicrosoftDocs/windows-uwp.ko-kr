@@ -1,5 +1,6 @@
 ---
-title: 깊이 버퍼 디바이스 리소스 만들기
+author: mtoepke
+title: 깊이 버퍼 장치 리소스 만들기
 description: 섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필요한 Direct3D 디바이스 리소스를 만드는 방법을 알아봅니다.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ---
@@ -259,6 +260,6 @@ m_shadowViewport.MaxDepth = 1.f;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

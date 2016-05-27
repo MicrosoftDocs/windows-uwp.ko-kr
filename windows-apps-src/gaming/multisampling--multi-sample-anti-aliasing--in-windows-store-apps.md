@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 description: Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ---
 
-# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"> </span> UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
+# <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,7 +23,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 1.  다중 샘플링에 어떤 DXGI 형식을 사용할 수 있는지 알아보려면 [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497)를 호출합니다. 게임에 사용할 수 있는 렌더링 대상 형식을 제공합니다. 렌더링 대상과 해제 대상은 모두 같은 형식을 사용해야 하므로 [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134)과 **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**를 모두 확인합니다.
 
-    **기능 수준 9: ** 기능 수준 9 디바이스는 [다중 샘플링된 렌더링 대상 형식에 대한 지원을 보장하지만](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), 다중 샘플 해제 대상에 대한 지원은 보장되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
+    **기능 수준 9:** 기능 수준 9 디바이스는 [다중 샘플링된 렌더링 대상 형식에 대한 지원을 보장](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget)하지만, 다중 샘플 해제 대상에 대한 지원은 보장되지 않습니다. 따라서 이 항목에서 설명한 다중 샘플링 기법을 사용하기 전에 이러한 사항을 확인해야 합니다.
 
     다음 코드는 DXGI\_FORMAT 값에 대해 다중 샘플링 지원 여부를 확인합니다.
 
@@ -204,6 +205,6 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

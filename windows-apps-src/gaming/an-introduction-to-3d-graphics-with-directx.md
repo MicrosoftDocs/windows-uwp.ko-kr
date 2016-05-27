@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: DirectX 게임의 기본 3D 그래픽
 description: DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다.
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
@@ -62,6 +63,6 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

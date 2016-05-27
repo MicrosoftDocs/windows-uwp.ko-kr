@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: BasicLoader의 전체 코드
 description: 메시, 텍스처 및 여러 셰이더 개체 등, 일반적인 그래픽 리소스를 변환하고 로드하는 클래스 및 메서드의 전체 코드입니다.
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
@@ -25,17 +26,14 @@ ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
 
 ## 기술
 
-|                       |                 |
-|-----------------------|-----------------|
-| 프로그래밍 언어 | C++             |
-| 프로그래밍 모델    | Windows 런타임 |
+**프로그래밍 언어** - C++  
+**프로그래밍 모델** - Windows 런타임
 
 ## 요구 사항
 
-| 지원되는 최소 클라이언트 | Windows 10                            |
-|--------------------------|---------------------------------------|
-| 지원되는 최소 서버 | Windows Server 2016 Technical Preview |
-| 필요한 최소 SDK     |                                       |
+**지원되는 최소 클라이언트** - Windows 10                              
+**지원되는 최소 서버** - Windows Server 2016 Technical Preview 
+
 
 ## 코드 보기(C++)
 
@@ -1108,6 +1106,6 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

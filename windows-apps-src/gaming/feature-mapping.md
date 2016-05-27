@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: DirectX 11 API에 DirectX 9 기능 매핑
 description: Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
@@ -129,7 +130,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>[<strong>IDirect3DDevice9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174336)</p></td>
 <td align="left"><p>[<strong>ID3D11Device2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280493)</p>
 <p>[<strong>ID3D11DeviceContext2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn280498)</p>
-<p>그래픽 파이프라인 단계는 [Graphics Pipeline](https://msdn.microsoft.com/library/windows/desktop/ff476882)에 설명되어 있습니다.</p></td>
+<p>그래픽 파이프라인 단계는 [그래픽 파이프라인](https://msdn.microsoft.com/library/windows/desktop/ff476882)에 설명되어 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[<strong>IDirect3D9</strong>](https://msdn.microsoft.com/library/windows/desktop/bb174300)</p></td>
@@ -668,6 +669,6 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

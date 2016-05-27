@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
 description: 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
@@ -102,7 +103,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">Direct2D</td>
     <td align="left"><p>Direct2D는 2D 기하 도형, 비트맵 및 텍스트에 대한 고성능 및 고품질 렌더링을 제공하는 하드웨어 가속화된 직접 실행 모드 2D 그래픽 API입니다. Direct2D API는 Direct3D에 기본 제공되며, GDI, GDI+ 및 Direct3D와 원활하게 상호 운용되도록 설계되었습니다.</p>
-    <p><strong>사용해야 하는 경우</strong></p>
+    <p><strong>사용 시기</strong></p>
     <p>Direct2D 횡스크롤 또는 보드 게임과 같은 순수 2D 게임용 그래픽을 제공하려는 경우 Direct3D 대신 사용할 수 있으며, 3D 게임에서 사용자 인터페이스 또는 HUD(헤드업 디스플레이)와 같은 2D 그래픽 만들기를 간소화하려는 경우 Direct3D와 함께 사용할 수 있습니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>[Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) 설명서를 참조하세요.</p></td>
@@ -119,7 +120,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <td align="left">DirectComposition</td>
     <td align="left"><p>DirectComposition은 변형, 효과 및 애니메이션을 사용하여 고성능 비트맵 컴퍼지션을 지원하는 Windows 구성 요소입니다. 응용 프로그램 개발자는 DirectComposition API를 사용하여 시각 요소 간에 풍부하고 유연한 애니메이션 전환을 지원하는 시각적으로 매력적인 사용자 인터페이스를 만들 수 있습니다.</p>
     <p><strong>사용해야 하는 경우</strong></p>
-    <p>DirectComposition은 시각 효과 컴퍼지션 및 애니메이션 전환 생성 프로세스를 간소화하도록 설계되었습니다. 게임에 복잡한 사용자 인터페이스가 필요한 경우 DirectComposition을 사용하여 간편하게 UI를 만들고 관리할 수 있습니다.</p>
+    <p>DirectComposition은 시각 효과 컴퍼지션 및 애니메이션 전환 생성 프로세스를 간소화하도록 설계되었습니다. 게임에 복잡한 사용자 인터페이스가 필요한 경우 DirectComposition를 사용하여 UI 만들기 및 관리를 간소화할 수 있습니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>[DirectComposition](https://msdn.microsoft.com/library/windows/desktop/hh437371) 설명서를 참조하세요.</p></td>
     </tr>
@@ -205,7 +206,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
     <td align="left"><p>Windows.UI.Core.CoreWindow 클래스는 포인터 누르기 및 이동을 추적하는 이벤트와 키 위 및 아래로 이동 이벤트를 제공합니다.</p>
-    <p><strong>사용해야 하는 경우</strong></p>
+    <p><strong>사용 시기</strong></p>
     <p>게임에서 마우스 또는 키 누르기를 추적해야 하는 경우 Windows.UI.Core.CoreWindows 이벤트를 사용합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>게임에서 마우스 또는 키보드를 사용하는 방법에 대한 자세한 내용은 [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md)을 참조하세요.</p></td>
@@ -232,7 +233,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">DirectXMath</td>
     <td align="left"><p>DirectXMath API는 일반적인 선형 대수 및 게임에 일반적인 그래픽 수학 연산을 위한 SIMD 친화적인 C++ 형식과 함수를 제공합니다.</p>
-    <p><strong>사용해야 하는 경우</strong></p>
+    <p><strong>사용 시기</strong></p>
     <p>DirectXMath의 사용은 옵션이며, 일반적인 수학 연산을 간소화합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>[DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) 설명서를 참조하세요.</p></td>
@@ -267,7 +268,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="even">
     <td align="left">Windows.Web.HTTP</td>
     <td align="left"><p>Windows.Web.HTTP 네임스페이스는 웹 사이트에 액세스하는 데 사용할 수 있는 HTTP 서버에 대한 안정적인 연결을 제공합니다.</p>
-    <p><strong>사용해야 하는 경우</strong></p>
+    <p><strong>사용 시기</strong></p>
     <p>게임에서 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스해야 하는 경우 Windows.Web.HTTP를 사용합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>[게임의 네트워킹 작업](work-with-networking-in-your-directx-game.md)을 참조하세요.</p></td>
@@ -294,7 +295,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <tr class="odd">
     <td align="left">DirectX 도구 키트</td>
     <td align="left"><p>DirectXTK(DirectX 도구 키트)는 C++로 DirectX 11.x 코드를 작성하기 위한 도우미 클래스 컬렉션입니다.</p>
-    <p><strong>사용해야 하는 경우</strong></p>
+    <p><strong>사용 시기</strong></p>
     <p>레거시 D3DX 유틸리티 코드를 최신 코드로 대체하려는 C++ 개발자이거나 네이티브 C++로 전환하려는 XNA Game Studio 개발자인 경우 DirectX 도구 키트를 사용합니다.</p>
     <p><strong>자세한 정보</strong></p>
     <p>DirectX 도구 키트 프로젝트 페이지([https://github.com/Microsoft/DirectXTK](https://github.com/Microsoft/DirectXTK))를 참조하세요.</p></td>
@@ -351,6 +352,6 @@ Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 W
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

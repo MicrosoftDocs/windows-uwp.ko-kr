@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Direct3D 11에 OpenGL ES 2.0 매핑
 description: 처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
@@ -24,19 +25,19 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Plan your port from OpenGL ES 2.0 to Direct3D](compare-opengl-es-2-0-api-design-to-directx.md)</p></td>
+<td align="left"><p>[OpenGL ES 2.0에서 Direct3D로의 포팅 계획](compare-opengl-es-2-0-api-design-to-directx.md)</p></td>
 <td align="left"><p>iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다. 그래픽 파이프라인 코드베이스를 Direct3D 11 및 Windows 런타임으로 이동할 준비를 할 때에는 시작하기 전에 몇 가지 사항을 고려해야 합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Compare EGL code to DXGI and Direct3D](moving-from-egl-to-dxgi.md)</p></td>
+<td align="left"><p>[EGL 코드와 DXGI 및 Direct3D 비교](moving-from-egl-to-dxgi.md)</p></td>
 <td align="left"><p>DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역할을 합니다. 이 항목은 EGL의 관점에서 DXGI 및 Direct3D 11을 이해하는 데 도움을 줍니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Compare OpenGL ES 2.0 buffers, uniforms, and vertex attributes to Direct3D](porting-uniforms-and-attributes.md)</p></td>
+<td align="left"><p>[OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교](porting-uniforms-and-attributes.md)</p></td>
 <td align="left"><p>OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Compare the OpenGL ES 2.0 shader pipeline to Direct3D](change-your-shader-loading-code.md)</p></td>
+<td align="left"><p>[OpenGL ES 2.0 셰이더 파이프라인과 Direct3D 비교](change-your-shader-loading-code.md)</p></td>
 <td align="left"><p>개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES 2.0의 셰이더 파이프라인과 매우 유사합니다. 그러나 API 디자인의 관점에서 셰이더 단계를 만들고 관리하기 위한 주요 구성 요소는 두 가지 주 인터페이스 [<strong>ID3D11Device1</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404575) 및 [<strong>ID3D11DeviceContext1</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404598)의 일부입니다. 이 항목에서는 일반적인 OpenGL ES 2.0 셰이더 파이프라인 API 패턴을 이러한 인터페이스의 Direct3D 11 셰이더 파이프라인 API 패턴에 매핑하려고 합니다.</p></td>
 </tr>
 </tbody>
@@ -58,6 +59,6 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

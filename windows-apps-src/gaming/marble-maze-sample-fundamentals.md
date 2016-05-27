@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Marble Maze 샘플 기본 사항
 description: 이 문서에서는 프로젝트가 Windows 런타임 환경에서 Visual C++를 사용하는 방법, 프로젝트를 만들고 구성하는 방법, 프로젝트 빌드 방법 등 Marble Maze 프로젝트의 기본 특성에 대해 설명합니다.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
@@ -141,6 +142,6 @@ Marble Maze 응용 프로그램 코드가 구성된 방식 및 DirectX UWP 앱�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

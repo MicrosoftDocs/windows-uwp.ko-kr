@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: OpenGL ES 2.0에서 Direct3D 11로 포팅
 description: OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅에 대한 문서, 개요 및 설명이 포함되어 있습니다.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
@@ -28,15 +29,15 @@ OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Map OpenGL ES 2.0 to Direct3D 11.1](map-concepts-and-infrastructure.md)</p></td>
+<td align="left"><p>[Direct3D 11.1에 OpenGL ES 2.0 매핑](map-concepts-and-infrastructure.md)</p></td>
 <td align="left"><p>처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요. 이 섹션의 항목은 그래픽 처리를 Direct3D로 이동할 때 수행해야 하는 API 변경과 포팅 전략을 계획하는 데 도움이 됩니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Walkthrough sample ports from OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
+<td align="left"><p>[OpenGL ES 2.0에서의 연습 샘플 포팅](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
 <td align="left"><p>이 항목에서는 각각 복잡한 정도가 다른 다양한 OpenGL ES 2.0 그래픽 파이프라인 포팅 시나리오를 살펴봅니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[OpenGL ES 2.0 to Direct3D 11.1 reference](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
+<td align="left"><p>[OpenGL ES 2.0-Direct3D 11.1 참조](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
 <td align="left"><p>OpenGL ES 2.0에서 Direct3D 11로 포팅할 때 API 매핑 및 간단한 코드 샘플을 보려면 다음 참조 항목을 사용합니다.</p></td>
 </tr>
 </tbody>
@@ -58,6 +59,6 @@ OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

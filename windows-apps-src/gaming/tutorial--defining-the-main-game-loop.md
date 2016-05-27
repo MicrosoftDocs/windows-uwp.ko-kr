@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 주 게임 개체 정의
 description: 이제 게임 샘플의 주 개체 및 해당 개체가 구현하는 규칙이 게임 월드와 조작하도록 변환되는 방식을 자세히 살펴봅니다.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
@@ -3619,6 +3620,6 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: GLSL-HLSL 참조
 description: OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다.
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
@@ -55,7 +56,7 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 </tr>
 <tr class="even">
 <td align="left">셰이더 컴파일이 그래픽 API에 통합되어 있음</td>
-<td align="left">HLSL 컴파일러는 Direct3D가 셰이더를 드라이버에 전달하기 전에 중간 이진 표현으로 [compiles the shader](https://msdn.microsoft.com/library/windows/desktop/bb509633)합니다.
+<td align="left">HLSL 컴파일러는 Direct3D가 셰이더를 드라이버에 전달하기 전에 중간 이진 표현으로 [셰이더를 컴파일](https://msdn.microsoft.com/library/windows/desktop/bb509633)합니다.
 <div class="alert">
 <strong>참고</strong> 이 이진 표현은 하드웨어 독립적입니다. 일반적으로 앱 런타임이 아니라 앱 빌드 시간에 컴파일됩니다.
 </div>
@@ -64,12 +65,11 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">[
-            Variable](#variables) 저장소 한정자</td>
+<td align="left">[변수](#variables) 저장소 한정자</td>
 <td align="left">입력 레이아웃 선언을 통한 데이터 전송 및 상수 버퍼</td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Types](#types)</p>
+<td align="left"><p>[형식](#types)</p>
 <p>일반적인 벡터 형식: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>일반적인 벡터 형식: float2/3/4</p>
@@ -77,19 +77,17 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 </tr>
 <tr class="odd">
 <td align="left">texture2D [Function]</td>
-<td align="left">[
-            texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
+<td align="left">[texture.Sample](https://msdn.microsoft.com/library/windows/desktop/bb509695) [datatype.Function]</td>
 </tr>
 <tr class="even">
 <td align="left">sampler2D [datatype]</td>
-<td align="left">[
-            Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
+<td align="left">[Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525) [datatype]</td>
 </tr>
 <tr class="odd">
 <td align="left">행 중심 행렬(기본값)</td>
 <td align="left">열 중심 행렬(기본값)
 <div class="alert">
-<strong>참고</strong> 한 변수의 레이아웃을 변경하려면 <strong>row_major</strong> 형식 한정자를 사용합니다. 자세한 내용은 [Variable Syntax](https://msdn.microsoft.com/library/windows/desktop/bb509706)을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
+<strong>참고</strong> 한 변수의 레이아웃을 변경하려면 <strong>row_major</strong> 형식 한정자를 사용합니다. 자세한 내용은 [변수 구문](https://msdn.microsoft.com/library/windows/desktop/bb509706)을 참조하세요. 또한 전역 기본값을 변경하기 위한 pragma나 컴파일러 플래그를 지정할 수 있습니다.
 </div>
 <div>
  
@@ -132,8 +130,7 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 <p>uniform 변수를 앱 코드에서 꼭짓점 셰이더나 조각 셰이더로 전달하거나 두 셰이더 모두에게 전달합니다. 해당 셰이더로 삼각형을 그리기 전에 모든 uniform의 값을 설정해야 하는데, 이렇게 해야만 해당 값이 삼각형 메시를 그리는 내내 동일하게 유지됩니다. 이러한 값은 uniform입니다. 일부 uniform은 전체 프레임에 대해 설정되며, 나머지 다른 uniform은 하나의 특정 꼭짓점-픽셀 셰이더 쌍에 대해 고유하게 설정됩니다.</p>
 <p>uniform 변수는 다각형별 변수입니다.</p></td>
 <td align="left"><p>상수 버퍼를 사용합니다.</p>
-<p>[
-            How to: Create a Constant Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476896) 및 [Shader Constants](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.</p></td>
+<p>[방법: 상수 버퍼 만들기](https://msdn.microsoft.com/library/windows/desktop/ff476896) 및 [셰이더 상수](https://msdn.microsoft.com/library/windows/desktop/bb509581)를 참조하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>varying</strong></p>
@@ -143,10 +140,8 @@ GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이
 <tr class="odd">
 <td align="left"><p><strong>특성</strong></p>
 <p>attribute는 앱 코드에서 꼭짓점 셰이더로만 전달하는 꼭짓점에 대한 설명의 일부입니다. uniform과 달리, 각 꼭짓점에 대해 attribute의 값을 설정합니다. 그러면 각 꼭짓점이 서로 다른 값을 가질 수 있습니다. attribute 변수는 꼭짓점별 변수입니다.</p></td>
-<td align="left"><p>Direct3D 앱 코드에서 꼭짓점 버퍼를 정의하여 꼭짓점 셰이더에 정의되어 있는 꼭짓점 입력에 일치시킵니다. 선택적으로 인덱스 버퍼를 정의합니다. [
-            How to: Create a Vertex Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476899) 및 [How to: Create an Index Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476897)를 참조하세요.</p>
-<p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 꼭짓점 입력에서 의미 체계 값을 해당 레이아웃에 일치시킵니다. [
-            Create the input layout](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout)을 참조하세요.</p></td>
+<td align="left"><p>Direct3D 앱 코드에서 꼭짓점 버퍼를 정의하여 꼭짓점 셰이더에 정의되어 있는 꼭짓점 입력에 일치시킵니다. 선택적으로 인덱스 버퍼를 정의합니다. [방법: 꼭짓점 버퍼 만들기](https://msdn.microsoft.com/library/windows/desktop/ff476899) 및 [방법: 인덱스 버퍼 만들기](https://msdn.microsoft.com/library/windows/desktop/ff476897)를 참조하세요.</p>
+<p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 꼭짓점 입력에서 의미 체계 값을 해당 레이아웃에 일치시킵니다. [입력 레이아웃 만들기](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout)를 참조하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
@@ -183,7 +178,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <td align="left">스칼라 형식: float, int, bool</td>
 <td align="left"><p>스칼라 형식: float, int, bool</p>
 <p>또한 uint, double</p>
-<p>자세한 내용은 [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646)을 참조하세요.</p></td>
+<p>자세한 내용은 [스칼라 형식](https://msdn.microsoft.com/library/windows/desktop/bb509646)을 참조하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>벡터 형식</p>
@@ -205,8 +200,8 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>자세한 내용은 [Vector Type](https://msdn.microsoft.com/library/windows/desktop/bb509707) 및 [Keywords](https://msdn.microsoft.com/library/windows/desktop/bb509568)를 참조하세요.</p>
-<p>벡터는 float4로 정의되는 형식이기도 합니다(typedef vector &lt;float, 4&gt; vector;). 자세한 내용은 [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702)을 참조하세요.</p></td>
+<p>자세한 내용은 [벡터 형식](https://msdn.microsoft.com/library/windows/desktop/bb509707) 및 [키워드](https://msdn.microsoft.com/library/windows/desktop/bb509568)를 참조하세요.</p>
+<p>벡터는 float4로 정의되는 형식이기도 합니다(typedef vector &lt;float, 4&gt; vector;). 자세한 내용은 [사용자 정의 형식](https://msdn.microsoft.com/library/windows/desktop/bb509702)을 참조하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>행렬 형식</p>
@@ -229,9 +224,9 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>또한 [matrix type](https://msdn.microsoft.com/library/windows/desktop/bb509623)을 사용하여 행렬을 정의할 수 있습니다.</p>
+<p>또한 [행렬 형식](https://msdn.microsoft.com/library/windows/desktop/bb509623)을 사용하여 행렬을 정의할 수 있습니다.</p>
 <p>예: matrix &lt;float, 2, 2&gt; fMatrix = {0.0f, 0.1, 2.1f, 2.2f};</p>
-<p>행렬은 float4x4로 정의되는 형식이기도 합니다(typedef matrix &lt;float, 4, 4&gt; matrix;). 자세한 내용은 [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702)을 참조하세요.</p></td>
+<p>행렬은 float4x4로 정의되는 형식이기도 합니다(typedef matrix &lt;float, 4, 4&gt; matrix;). 자세한 내용은 [사용자 정의 형식](https://msdn.microsoft.com/library/windows/desktop/bb509702)을 참조하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>float, int, 샘플러에 대한 정밀도 한정자</p>
@@ -252,10 +247,10 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 <p>최소 고정 소수점 부호 있는 2.8비트 값(정수의 2비트 및 소수부의 8비트)입니다. 8비트 소수부는 1을 제외하는 대신 1을 포함하여 전체 포함 범위 -2~2를 제공할 수 있습니다.</p></li>
 <li>min16int: 최소 16비트 부호 있는 정수</li>
 <li><p>min12int: 최소 12비트 부호 있는 정수</p>
-<p>이 형식은 10Level9([9_x feature levels](https://msdn.microsoft.com/library/windows/desktop/ff476876))용이며, 여기서 정수는 부동 소수점 숫자로 표현됩니다. 이 정밀도는 정수를 16비트 부동 소수점 숫자로 에뮬레이트할 때 얻을 수 있는 정밀도입니다.</p></li>
+<p>이 형식은 10Level9([9_x 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876))용이며, 여기서 정수는 부동 소수점 숫자로 표현됩니다. 이 정밀도는 정수를 16비트 부동 소수점 숫자로 에뮬레이트할 때 얻을 수 있는 정밀도입니다.</p></li>
 <li>min16uint: 최소 16비트 부호 없는 정수</li>
 </ul>
-<p>자세한 내용은 [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646) 및 [Using HLSL minimum precision](https://msdn.microsoft.com/library/windows/desktop/hh968108)를 참조하세요.</p></td>
+<p>자세한 내용은 [스칼라 형식](https://msdn.microsoft.com/library/windows/desktop/bb509646) 및 [HLSL 최소 정밀도 사용](https://msdn.microsoft.com/library/windows/desktop/hh968108)을 참조하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
@@ -550,7 +545,7 @@ m_d3dDeviceContext->PSSetShader(pixelShader.Get(),nullptr,0);
 m_d3dDeviceContext->IASetInputLayout(inputLayout.Get());
 m_d3dDeviceContext->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
 
-// Set the primitive’s topology.
+// Set the primitive's topology.
 m_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 // Draw a triangle with 3 vertices. triangleVertices is an array of 3 vertices.
@@ -571,6 +566,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

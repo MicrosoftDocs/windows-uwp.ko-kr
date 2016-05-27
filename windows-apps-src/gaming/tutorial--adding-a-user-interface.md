@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 사용자 인터페이스 추가
 description: 샘플 게임에서 주 게임 개체 및 기본 렌더링 프레임워크를 구현하는 방법을 살펴보았습니다.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
@@ -1487,6 +1488,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

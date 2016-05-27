@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: 게임용 이동-보기 컨트롤
 description: 기존 마우스 및 키보드 이동-보기 컨트롤(마우스 보기 컨트롤이라고도 함)을 DirectX 게임에 추가하는 방법을 알아봅니다.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ---
 
-# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"> </span>게임용 이동-보기 컨트롤
+# <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>게임용 이동-보기 컨트롤
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -584,6 +585,6 @@ myFirstPersonCamera->SetViewParameters(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

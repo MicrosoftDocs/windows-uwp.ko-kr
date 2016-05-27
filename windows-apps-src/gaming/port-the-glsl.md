@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: GLSL 포팅
 description: 버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
@@ -148,12 +149,10 @@ float4 main(PixelShaderInput input) : SV_TARGET
 ## 이전 단계
 
 
-[꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md)
-다음 단계
+[꼭짓점 버퍼 및 데이터 포팅](port-the-vertex-buffers-and-data-config.md) 다음 단계
 ---------
 
-[화면에 그리기](draw-to-the-screen.md)
-설명
+[화면에 그리기](draw-to-the-screen.md) 설명
 -------
 
 HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 문제를 해결하고 최적화 기회를 이용할 수 있습니다. 기회가 되면 [변수 구문(HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Direct3D 11의 버퍼 소개](https://msdn.microsoft.com/library/windows/desktop/ff476898) 및 [방법: 상수 버퍼 만들기](https://msdn.microsoft.com/library/windows/desktop/ff476896)를 확인해 보세요. 그렇지 않은 경우 의미 체계 및 상수 버퍼에 대해 고려할 몇 가지 시작 팁이 있습니다.
@@ -185,6 +184,6 @@ HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

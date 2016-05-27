@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 비동기 프로그래밍(DirectX 및 C++)
 description: 이 항목에서는 비동기 프로그래밍과 스레딩을 DirectX와 함께 사용할 때 고려할 여러 사항에 대해 설명합니다.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
@@ -62,6 +63,6 @@ DirectX를 처음 배우는 사용자인 경우 또는 숙련된 사용자라도
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

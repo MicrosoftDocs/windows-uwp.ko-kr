@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: DXGI 1.3 스왑 체인으로 대기 시간 단축
 description: DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시작할 적절한 시간을 신호로 보낼 때까지 기다려 효과적인 프레임 지연을 줄입니다.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
@@ -162,6 +163,6 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

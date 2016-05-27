@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: 렌더링 프레임워크 변환
 description: 기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
@@ -229,7 +230,7 @@ m_d3dDevice->CreateVertexShader(
 
 셰이더 바이트 코드를 컴파일된 앱 패키지에 포함하려면 HLSL 파일을 Visual Studio 프로젝트에 추가하기만 하면 됩니다. Visual Studio는 [효과 컴파일러 도구](https://msdn.microsoft.com/library/windows/desktop/bb232919)(FXC)를 사용하여 HLSL 파일을 컴파일된 셰이더 개체(.CSO 파일)로 컴파일하여 앱 패키지에 포함합니다.
 
-> **참고** HLSL 컴파일러에 대한 올바른 대상 기능 수준을 설정해야 합니다. Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭하고, 속성을 선택하고, **HLSL 컴파일러 -&gt; 일반**에서 **셰이더 모델** 설정을 변경합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
+> **참조** HLSL 컴파일러에 대한 올바른 대상 기능 수준을 설정해야 합니다. Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭하고, 속성을 선택하고, **HLSL 컴파일러 -&gt; 일반**에서 **셰이더 모델** 설정을 변경합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
 
  
 
@@ -489,6 +490,6 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
