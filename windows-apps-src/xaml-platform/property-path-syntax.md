@@ -1,6 +1,7 @@
 ---
+author: jwmsft
 description: PropertyPath 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 PropertyPath 값을 인스턴스화할 수 있습니다.
-title: 속성 경로 구문'
+title: 속성 경로 구문&#39;
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ---
 
@@ -117,6 +118,6 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

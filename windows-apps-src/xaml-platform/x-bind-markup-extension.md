@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
 title: xBind 태그 확장
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ---
 
-# {x:Bind} 태그 확장
+# {x&#58;Bind} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -36,7 +37,7 @@ XAML 로드 시 **{x:Bind}**는 바인딩 개체로 생각할 수 있는 것으�
 |------|-------------|
 | _propertyPath_ | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | _bindingProperties_ |
-| _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| _propName_ = _value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" | 
 | _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-you-can-set)을 참조하세요. | 
 
@@ -112,7 +113,7 @@ C++/CX의 경우 **{x:Bind}**는 페이지 또는 데이터 모델의 전용 필
 
 ## 예제
 
-```XAML
+```XML
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -120,7 +121,7 @@ C++/CX의 경우 **{x:Bind}**는 페이지 또는 데이터 모델의 전용 필
 
 이 예제 XAML에서는 **ListView.ItemTemplate** 속성에서 **{x:Bind}**를 사용합니다. **x:DataType** 값의 선언에 유의하세요.
 
-```XAML
+```XML
   <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -131,6 +132,6 @@ C++/CX의 경우 **{x:Bind}**는 페이지 또는 데이터 모델의 전용 필
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

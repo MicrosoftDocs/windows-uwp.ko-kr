@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: 코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다.
 title: xName 특성
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 ---
 
-# x:Name 특성
+# x&#58;Name 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -30,7 +31,7 @@ ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 XamlName ::= NameStartChar (NameChar)*
 NameStartChar ::= LetterCharacter | '_'
 NameChar ::= NameStartChar | DecimalDigit
-LetterCharacter ::= ('a'-'z') | ('A'–'Z')
+LetterCharacter ::= ('a'-'z') | ('A'-'Z')
 DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
@@ -65,6 +66,6 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

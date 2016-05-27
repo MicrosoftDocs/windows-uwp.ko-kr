@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 title: xPhase 특성
 description: xBind 태그 확장과 함께 xPhase를 사용하여 ListView 및 GridView 항목을 증분적으로 렌더링하고 이동 환경을 개선할 수 있습니다.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ---
 
-# x:Phase 특성
+# x&#58;Phase 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -32,7 +33,7 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 
 ## 예제
 
-```xaml
+```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
     <Grid Width="200" Height="80">
         <Grid.ColumnDefinitions>
@@ -76,6 +77,6 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

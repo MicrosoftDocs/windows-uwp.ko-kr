@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 이 항목에서는 대부분의 XAML 파일 루트 요소에 있는 XML/XAML 네임스페이스(xmlns) 매핑에 대해 설명합니다. 사용자 지정 유형 및 어셈블리를 위해 유사한 매핑을 생성하는 방법도 설명합니다.
 title: XAML 네임스페이스 및 네임스페이스 매핑
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
@@ -45,7 +46,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 기본 네임스페이스 및 XAML 언어 XAML 네임스페이스 "x:" 외에도 다른 매핑된 XAML 네임스페이스를 Microsoft Visual Studio에서 생성된 앱용 초기 기본 XAML에서 볼 수 있습니다.
 
-### **d:(http://schemas.microsoft.com/expression/blend/2008)**
+### **d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
 "d:" XAML 네임스페이스는 디자이너 지원 특히 Microsoft Visual Studio의 XAML 디자인 화면에서 디자이너를 지원하기 위한 것입니다. "d:" XAML 네임스페이스를 통해 XAML 요소에서 디자이너 또는 디자인-시간 특성을 사용할 수 있습니다. 이러한 디자이너 특성은 XAML 작동 방식의 디자인 측면에만 영향을 줍니다. 앱 실행 시 Windows 런타임 XAML 파서에 동일한 XAML이 로드되면 디자이너 특성은 무시됩니다. 일반적으로 디자이너 특성은 모든 XAML 요소에서 유효하지만 실제로 디자이너 특성 적용이 적절한 시나리오는 한정되어 있습니다. 특히 많은 디자이너 특성이 데이터 바인딩을 사용하는 코드와 XAML을 개발하는 동안 데이터 컨텍스트와 데이터 원본 조작 환경을 향상시키기 위한 것입니다.
 
@@ -57,7 +58,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 -   **d:DesignSource 특성:** [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)에 대해 디자인 타임 데이터 원본을 지정하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835)를 재정의합니다.
 -   **d:DesignInstance 및 d:DesignData 태그 확장:** 두 태그 확장은 **d:DataContext** 또는 **d:DesignSource**에 대한 디자인 타임 데이터 리소스를 제공하는 데 사용됩니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](http://go.microsoft.com/fwlink/p/?LinkId=272504)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://msdn.microsoft.com/library/windows/apps/mt517866)를 참조하세요.
 
-### **mc:(http://schemas.openxmlformats.org/markup-compatibility/2006) **
+### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 "mc:"는 XAML 읽기에 필요한 태그 호환 모드를 나타내고 지원합니다. 일반적으로 "d:" 접두사는 **mc:Ignorable** 특성과 관련됩니다. 이 기술을 통해 런타임 XAML 파서에서 "d:"의 디자인 특성을 무시할 수 있습니다.
 
@@ -108,6 +109,6 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

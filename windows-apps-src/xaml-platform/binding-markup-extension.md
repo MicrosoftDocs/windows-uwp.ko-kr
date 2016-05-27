@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
 title: 바인딩 태그 확장
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
@@ -37,7 +38,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 | 용어 | 설명 |
 |------|-------------|
 | *propertyPath* | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
-| *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| *bindingProperties* | *propName* = *value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
 | *propName* | [
             **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 개체에 설정할 속성의 문자열 이름. 예: "Converter" | 
 | *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-binding) 섹션의 속성에 따라 달라집니다. |
@@ -75,7 +76,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 | [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. | 
 | [**모드**](https://msdn.microsoft.com/library/windows/apps/br209829) | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 이러한 문자열은 [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822) 열거형의 상수 이름에 해당합니다. 기본값은 바인딩 대상에 따라 다르지만 대부분의 경우"OneWay"입니다. 이 값은 **{x:Bind}**에 대한 기본값("OneTime")과 다릅니다. | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | 바인딩 대상의 위치에 상대적인 바인딩 소스의 위치를 설명하여 데이터 원본을 지정합니다. 예를 들면, 개체의 상위를 지정하여 런타임 개체 그래프로 표시됩니다. [{RelativeSource} 태그 확장](relativesource-markup-extension.md) 설정 |
-| [**소스**](https://msdn.microsoft.com/library/windows/apps/br209832) | 개체 데이터 원본을 지정합니다. **Binding** 태그 확장 내 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946). |
+| [**소스**](https://msdn.microsoft.com/library/windows/apps/br209832) | 개체 데이터 원본을 지정합니다. **Binding** 태그 확장 내에서 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) 속성에는 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조와 같은 개체 참조가 필요합니다. 이 속성이 지정되지 않으면 작동하는 데이터 컨텍스트가 원본을 지정합니다. 개별 바인딩에서 Source 값을 지정하지 않고 여러 바인딩에 대해 공유된 **DataContext**를 사용하는 것이 더 일반적인 방법입니다. 자세한 내용은 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) 또는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요. |
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | 바인딩 소스 업데이트의 타이밍을 지정합니다. 지정하지 않을 경우 기본값은 **Default**입니다. |
 
@@ -91,7 +92,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 
 ## 예제
 
-```XAML
+```XML
 <!-- binding a UI element to a view model -->    
 <Page ... >
     <Page.DataContext>
@@ -102,7 +103,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 </Page>
 ```
 
-```XAML
+```XML
 <!-- binding a UI element to another UI element -->
 <Page ... >
     <Page.Resources>
@@ -129,6 +130,6 @@ Microsoft Visual Studio의 Microsoft IntelliSense는 XAML 태그 편집기에서
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

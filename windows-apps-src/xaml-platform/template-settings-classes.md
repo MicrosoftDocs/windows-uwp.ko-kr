@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Template settings 클래스
 title: Template settings 클래스
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
@@ -41,7 +42,7 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 
 시작하는 기본 XAML 컨트롤 템플릿의 예는 다음과 같습니다. 이 예는 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)의 기본 템플릿을 기반으로 합니다.
 
-```xaml
+```xml
 <Ellipse
     x:Name="E1"
     Style="{StaticResource ProgressRingEllipseStyle}"
@@ -57,7 +58,7 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 [
             **ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 템플릿의 전체 XAML은 수백 줄에 달하므로 여기서는 일부를 발췌했습니다. 이 XAML은 확정되지 않은 진행률에 대한 회전 애니메이션을 나타내는 6개의 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343) 컨트롤 중 하나인 컨트롤 파트를 정의합니다. 개발자는 원을 싫어할 수도 있으므로 다른 그래픽을 과 같은 다른 그래픽 기본 요소 또는 다른 기본 모양을 사용하여 애니케이션의 진행률을 나타낼 수 있습니다. 예를 들어 사각형으로 정렬된 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) 요소 집합을 사용하는 **ProgressRing**을 구성할 수 있습니다. 그럴 경우 새 템플릿의 각 **Rectangle** 구성 요소는 다음과 같이 표시될 수 있습니다.
 
-```xaml
+```xml
 <Rectangle
     x:Name="R1"
     Width="{Binding RelativeSource={RelativeSource TemplatedParent}, 
@@ -73,7 +74,7 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 
 다음은 애니메이션의 **From** 및 **To**에 해당하는 속성 집합 중 하나를 보여주는 기본 XAML 컨트롤 템플릿의 다른 사용 예입니다. 이 예제는 다음 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) 기본 템플릿을 기반으로 합니다.
 
-```xaml
+```xml
 <VisualStateGroup x:Name="DropDownStates">
     <VisualState x:Name="Opened">
         <Storyboard>
@@ -106,6 +107,6 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

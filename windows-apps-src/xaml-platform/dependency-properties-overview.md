@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다.
 title: 종속성 속성 개요
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
@@ -136,7 +137,7 @@ public bool IsSpinning
 
 다음 예에서는 XAML에서 바인딩을 사용하여 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소의 [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 값을 설정합니다. 바인딩은 상속된 데이터 컨텍스트와 개체 데이터 원본을 사용합니다. 간략한 예에는 컨텍스트와 원본에 대한 내용이 나와 있지 않습니다. 컨텍스트와 원본을 보여 주는 보다 완전한 샘플을 보려면 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
-```XAML
+```XML
 <Canvas>
   <TextBlock Text="{Binding Team.TeamName}"/>
 </Canvas>
@@ -201,13 +202,13 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 * [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
-**종속성 속성 관련 API**
+* [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581) 
+          **종속성 속성 관련 API**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

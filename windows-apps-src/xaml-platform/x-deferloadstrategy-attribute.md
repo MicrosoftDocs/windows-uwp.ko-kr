@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 title: xDeferLoadStrategy 특성
 description: xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다.
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 ---
 
-# x:DeferLoadStrategy 특성
+# x&#58;DeferLoadStrategy 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -59,7 +60,7 @@ ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 
 ## 예제
 
-```xaml
+```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -87,6 +88,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

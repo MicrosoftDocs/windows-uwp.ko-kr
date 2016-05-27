@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: 태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다.
 title: xUid 지시어
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 ---
 
-# x:Uid 지시어
+# x&#58;Uid 지시어
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -44,6 +45,6 @@ Windows 런타임 XAML에서 허용되지 않는 **x:Uid**를 속성 요소에 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

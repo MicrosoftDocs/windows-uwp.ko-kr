@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: XAML 태그에는 속성의 null 값을 지정합니다.
 title: xNull 태그 확장
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ---
 
-# {x:Null} 태그 확장
+# {x&#58;Null} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -32,6 +33,6 @@ XAML 태그에는 속성의 **null** 값을 지정합니다.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

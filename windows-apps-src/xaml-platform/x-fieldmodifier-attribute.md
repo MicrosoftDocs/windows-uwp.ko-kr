@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: 개체 참조의 필드가 private 기본 동작 대신 public 액세스로 정의되도록 XAML 컴파일 동작을 수정합니다.
 title: xFieldModifier 특성
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ---
 
-# x:FieldModifier 특성
+# x&#58;FieldModifier 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -32,6 +33,6 @@ ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

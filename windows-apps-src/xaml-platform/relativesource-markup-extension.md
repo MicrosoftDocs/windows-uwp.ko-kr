@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 런타임 개체 그래프에 있는 상대적 관계의 측면에서 바인딩의 원본을 지정하는 수단을 제공합니다.
 title: RelativeSource 태그 확장
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
@@ -28,9 +29,7 @@ ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 
 ## XAML 값
 
-| 용어 | 설명 |
-| {RelativeSource Self} | [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) 값이 <strong>Self</strong>인 RelativeSource를 생성합니다. 대상 요소가 이 바인딩의 원본으로 사용되어야 합니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용합니다. |
-| {RelativeSource TemplatedParent} | [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391)이 적용되고 이 바인딩의 원본인 RelativeSource TemplatedParent를 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
+| 용어 | 설명 | | {RelativeSource Self} | [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) 값이 <strong>Self</strong>인 RelativeSource를 생성합니다. 대상 요소가 이 바인딩의 원본으로 사용되어야 합니다. 요소의 한 속성을 동일한 요소의 다른 속성에 바인딩하는 데 유용합니다. | | {RelativeSource TemplatedParent} | [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391)이 적용되고 이 바인딩의 원본인 RelativeSource TemplatedParent를 생성합니다. 템플릿 수준에서 런타임 정보를 바인딩에 적용하는 데 유용합니다. | 
 
 ## 설명
 
@@ -43,7 +42,7 @@ ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 
 예를 들면 다음과 같습니다. 이 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)은 해당 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)가 항상 같고 자체가 정사각형으로 렌더링되도록 [{Binding} 태그 확장](binding-markup-extension.md)을 사용합니다. 높이만 고정 값으로 설정됩니다. 이 **Rectangle**의 경우 기본 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)는 **null**이며 **this**가 아닙니다. 따라서 데이터 컨텍스트 원본이 개체 자체가 되도록 설정하고 다른 속성에 대한 바인딩을 지원할 수 있도록 {Binding} 태그 확장 사용법에서 `RelativeSource={RelativeSource Self}` 인수를 사용합니다.
 
-```XAML
+```XML
 <Rectangle
   Fill="Orange" Width="200"
   Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}"
@@ -64,6 +63,6 @@ ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

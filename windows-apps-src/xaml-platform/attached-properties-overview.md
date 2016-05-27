@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: XAML의 연결된 속성에 대한 개념을 설명하고 몇 가지 예를 제공합니다.
 title: 연결된 속성 개요
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
@@ -18,7 +19,7 @@ ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 
 연결된 속성은 대체로 XAML 구문을 사용하도록 설정했기 때문에 발생합니다. XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)를 설정할 수 있는 방법을 보여 주는 예입니다.
 
-```XAML
+```XML
 <Canvas>
   <Button Canvas.Left="50">Hello</Button>
 </Canvas>
@@ -118,6 +119,6 @@ XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

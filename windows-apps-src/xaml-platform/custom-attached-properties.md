@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: XAML 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다.
 title: 사용자 지정 연결된 속성
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
@@ -39,17 +40,17 @@ ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
 
 Microsoft Visual Basic의 경우 다음과 같습니다.
 
-` Public Shared Function Get` _PropertyName_ `(ByVal target As DependencyObject) As ` _valueType_ `)`
+` Public Shared Function Get`_PropertyName_ `(ByVal target As DependencyObject) As ` _valueType_`)`
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *valueType* 반환 값의 형식도 구현에서 더 구체적일 수 있습니다. 기본 **Object** 형식을 사용할 수 있으나 연결된 속성의 형식 안전성을 강화하려는 경우가 많습니다. 형식 안전성을 강화하는 방법으로 getter 및 setter 시그니처 입력을 사용하는 것이 좋습니다.
 
-**Set***PropertyName* 접근자의 시그니처는 다음이어야 합니다.
+**Set***PropertyName* 접근자의 서명은 다음과 같아야 합니다.
 
-`  public static void Set` _PropertyName_ ` (DependencyObject target , ` _valueType_ ` value)`
+`  public static void Set`_PropertyName_ ` (DependencyObject target , ` _valueType_` value)`
 
 Visual Basic의 경우 다음과 같습니다.
 
-`Public Shared Sub Set` _PropertyName_ ` (ByVal target As DependencyObject, ByVal value As ` _valueType_ `)`
+`Public Shared Sub Set`_PropertyName_ ` (ByVal target As DependencyObject, ByVal value As ` _valueType_`)`
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
@@ -176,7 +177,7 @@ GameService::RegisterDependencyProperties() {
 
 XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지의 루트 요소에 지정됩니다. 예를 들어 앞의 코드 조각에 표시된 연결된 속성 정의가 있는 네임스페이스 `UserAndCustomControls`의 `GameService` 클래스의 경우 매핑은 다음과 유사합니다.
 
-```XAML
+```XML
 <UserControl
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:uc="using:UserAndCustomControls"
@@ -186,30 +187,14 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 이 매핑을 사용하여 Windows 런타임이 정의하는 기존 형식을 비롯한 대상 정의와 일치하는 모든 요소에 대해 `GameService.IsMovable` 연결된 속성을 설정할 수 있습니다.
 
-```XAML
-<Image uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<Image uc:GameService.IsMovable="true" .../>
 ```
 
 매핑된 동일한 XML 네임스페이스 내에도 있는 요소에 대해 속성을 설정하는 경우에도 연결된 속성 이름에 접두사를 포함해야 합니다. 접두사가 소유자 형식을 규정하기 때문입니다. 일반 XML 규칙에 따라 특성이 요소에서 네임스페이스를 상속할 수 있는 경우에도 연결된 속성의 특성이 동일한 XML 네임스페이스 내에 특성이 포함되어 있는 요소로 있다고 가정할 수 없습니다. 예를 들어 `ImageWithLabelControl`(정의가 표시되지 않음)의 사용자 지정 형식에 `GameService.IsMovable`를 설정하는 경우 둘 다 동일한 접두어로 매핑되는 동일한 코드 네임스페이스에 정의되어 있어도 XAML은 다음과 같습니다.
 
-```XAML
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../>
 ```
 
 **참고** C++로 XAML UI를 작성하는 경우 연결된 속성을 정의하는 사용자 지정 형식을 XAML 페이지에서 사용할 때면 언제든 해당 형식에 대한 헤더를 포함해야 합니다. 각 XAML 페이지에는 관련된 .xaml.h 코드 숨김 헤더가 있습니다. 여기에 연결된 속성의 소유자 형식 정의에 대한 헤더를 포함해야 합니다(**\#include** 사용).
@@ -259,6 +244,6 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

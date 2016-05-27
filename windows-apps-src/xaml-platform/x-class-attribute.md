@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 연결합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
 title: xClass 특성
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ---
 
-# x:Class 특성
+# x&#58;Class 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -40,6 +41,6 @@ XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

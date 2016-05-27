@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: 리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다.
 title: xKey 특성
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ---
 
-# x:Key 특성
+# x&#58;Key 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -41,7 +42,7 @@ ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 XamlName ::= NameStartChar (NameChar)*
 NameStartChar ::= LetterCharacter | '_'
 NameChar ::= NameStartChar | DecimalDigit
-LetterCharacter ::= ('a'-'z') | ('A'–'Z')
+LetterCharacter ::= ('a'-'z') | ('A'-'Z')
 DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
@@ -64,6 +65,6 @@ CombiningCharacter::= none
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

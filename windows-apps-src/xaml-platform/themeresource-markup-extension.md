@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 현재 활성 테마에 따라 서로 다른 리소스를 검색하는 추가 시스템 논리를 통해 리소스에 대한 참조를 평가하여 XAML 특성의 값을 제공합니다.
 title: ThemeResource 태그 확장
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
@@ -73,7 +74,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 다음은 **ThemeResource** 사용 방법을 설명하기 위해 기본 generic.xaml 및 themeresources.xaml 파일에서 가져온 몇 가지 예제 XAML입니다. 템플릿 한 개만(기본 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) 살펴보고 테마 변경에 대해 두 개의 속성([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 및 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414))이 반응하도록 선언하는 방법에 대해 알아봅니다.
 
-```xaml
+```xml
     <!-- Default style for Windows.UI.Xaml.Controls.Button -->
     <Style TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
@@ -85,7 +86,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 이 속성은 또한 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)에 대한 일부 시각적 상태에 의해 조정됩니다. 특히, 단추를 클릭할 때 배경색이 변경됩니다. 여기서도 시각적 상태 스토리보드의 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 및 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) 애니메이션은 [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132) 개체와 **ThemeResource** 포함 브러시에 대한 참조를 키 프레임 값으로 사용합니다.
 
-```xaml
+```xml
 <VisualState x:Name="Pressed">
   <Storyboard>
     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
@@ -102,7 +103,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 이러한 각 브러시는 이전에 generic.xaml에서 정의되어 있습니다. 즉, XAML 전방 참조를 방지하기 위해 브러시를 사용하는 템플릿 이전에 정의해야 했습니다. 다음은 "기본값" 테마 사전에 대한 정의입니다.
 
-```xaml
+```xml
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
 ... 
@@ -116,7 +117,7 @@ Windows 런타임은 특히 **ThemeResource**에서 참조하는 용도의 리�
 
 또한, 다른 테마 사전 각각에도 이 브러시가 정의되어 있습니다. 예를 들어 다음과 같습니다.
 
-```xaml
+```xml
         <ResourceDictionary x:Key="HighContrast">
             <!-- High Contrast theme resources -->
 ...
@@ -150,6 +151,6 @@ XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용하는 경우 Mi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

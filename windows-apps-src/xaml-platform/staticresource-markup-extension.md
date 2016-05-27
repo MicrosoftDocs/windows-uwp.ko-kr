@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 이미 정의된 리소스에 대한 참조를 평가하여 모든 XAML 특성에 대한 값을 제공합니다. 리소스는 ResourceDictionary에 정의되며 StaticResource 사용은 ResourceDictionary의 리소스 키를 참조합니다.
 title: StaticResource 태그 확장
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
@@ -30,7 +31,7 @@ ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 
 **StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
-**Important**  
+**중요**  
 **StaticResource**는 XAML 파일 내에서 구문적으로 더 정의된 리소스에 대한 전방 참조를 만들려고 해서는 안 됩니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
 
 확인할 수 없는 키에 **StaticResource**를 지정하려고 하면 런타임에 XAML 구문 분석 예외가 발생합니다. 디자인 도구에서 경고나 오류를 제공할 수도 있습니다.
@@ -45,7 +46,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 이 예제 XAML은 [XAML 데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)에서 가져온 것입니다.
 
-```xaml
+```xml
 <StackPanel Margin="5">
     <!-- Add converter as a resource to reference it from a Binding. --> 
     <StackPanel.Resources>
@@ -81,6 +82,6 @@ XAML 페이지에서 **{StaticResource}** 태그 확장을 사용하는 경우 M
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

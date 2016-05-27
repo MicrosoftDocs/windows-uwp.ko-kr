@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 사용자 지정 리소스 조회 구현에서 제공하는 리소스에 대한 참조를 평가하여 XAML 특성에 대한 값을 제공합니다. 리소스 조회는 CustomXamlResourceLoader 클래스 구현으로 수행됩니다.
 title: CustomResource 태그 확장
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
@@ -48,6 +49,6 @@ ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

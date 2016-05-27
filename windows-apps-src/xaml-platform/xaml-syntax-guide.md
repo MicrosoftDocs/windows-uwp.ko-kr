@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다.
 title: XAML 구문 가이드
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
@@ -37,19 +38,19 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 
 개체 요소 구문을 사용하여 개체를 선언하려면 `<objectName>  </objectName>`처럼 태그를 작성합니다. 여기서 *objectName*은 인스턴스화할 개체의 형식 이름입니다. 다음은 개체 요소를 사용하여 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 개체를 선언하는 방법입니다.
 
-```xaml
+```xml
 <Canvas>
 </Canvas>
 ```
 
-개체에 다른 개체가 포함되지 않은 경우 여는 태그/닫는 태그 쌍 대신 하나의 자체 닫는 태그(`<Canvas />`)를 사용하여 개체 요소를 선언할 수 있습니다.
+개체에 다른 개체가 포함되지 않은 경우 여는 태그/닫는 태그 쌍 대신 하나의 자체 닫는 태그를 사용하여 개체 요소를 선언할 수 있습니다. `<Canvas />`
 
 ### 컨테이너
 
 [
             **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 같이 UI 요소로 사용되는 많은 개체에는 다른 개체가 포함될 수 있습니다. 이러한 개체를 컨테이너라고 합니다. 다음 예제에서는 한 요소([**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371))가 포함된 **Canvas** 컨테이너를 보여 줍니다.
 
-```xaml
+```xml
 <Canvas>
   <Rectangle />
 </Canvas>
@@ -69,7 +70,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 이 간략한 예에서는 초기화 텍스트를 사용하여 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)의 값을 지정합니다. 이 경우에는 **Left** 및 **Right**를 20으로 설정하고 **Top** 및 **Bottom**을 10으로 설정하는 값을 지정합니다. 이 예에서는 입력된 리소스로 만들어진 **Thickness**를 보여 준 다음 이 리소스에 대한 참조를 보여 줍니다. [
             **Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864) 초기화 텍스트에 대한 자세한 내용은 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)를 참조하세요.
 
-```xaml
+```xml
 <UserControl ...>
   <UserControl.Resources>
     <Thickness x:Key="TwentyTenThickness">20,10</Thickness>
@@ -108,11 +109,8 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 이 예에서는 네 가지 특성의 특성 구문을 사용하여 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) 개체의 [**Name**](https://msdn.microsoft.com/library/windows/apps/br208735), [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751), [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) 속성을 설정합니다.
 
-```xaml
-<Rectangle Name="rectangle1" Width="100" Height="100" Fill="Blue" /></code></pre></td>
-</tr>
-</tbody>
-</table>
+```xml
+<Rectangle Name="rectangle1" Width="100" Height="100" Fill="Blue" />
 ```
 
 ### 속성 요소 구문을 사용하여 속성 설정
@@ -123,29 +121,19 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 다음 문법에서 *property*는 설정할 속성의 이름이고 *propertyValueAsObjectElement*는 속성의 값 형식 요구 사항을 충족해야 하는 단일 개체 요소입니다.
 
-`<` *object* `>`
+`<`*object*`>`
 
-`<` *object* `.` *property* `>`
+`<`*object* `.` *property*`>`
 
 *propertyValueAsObjectElement*
 
-`</` *object* `.` *property* `>`
+`</`*object* `.` *property*`>`
 
-`</` *object* `>`
+`</`*object*`>`
 
 다음 예제에서는 속성 요소 구문을 사용하여 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378)을 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962) 개체 요소를 통해 설정합니다. **SolidColorBrush** 내에서 [**Color**](https://msdn.microsoft.com/library/windows/apps/br242963)는 특성으로 설정됩니다. 이 XAML의 구문 분석된 결과는 특성 구문을 사용하여 **Fill**을 설정한 이전 XAML 예제와 동일합니다.
 
-```xaml
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+```xml
 <Rectangle
   Name="rectangle1"
   Width="100" 
@@ -170,7 +158,7 @@ Windows 런타임 참조의 XAML 지침을 사용하는 경우 구문이나 예�
 
 XAML 콘텐츠 구문을 사용할 수 있는 경우 해당 구문이 Windows 런타임 참조 설명서에서 속성에 대한 **구문**의 "XAML" 섹션에 표시됩니다. 예를 들어 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)에 대한 [**Child**](https://msdn.microsoft.com/library/windows/apps/br209258) 속성 페이지에서는 **Border**의 단일 개체 **Border.Child** 값을 설정하는 속성 요소 구문 대신 다음과 같이 XAML 콘텐츠 구문을 보여 줍니다.
 
-```xaml
+```xml
 <Border>
   <Button .../>
 </Border>
@@ -178,11 +166,8 @@ XAML 콘텐츠 구문을 사용할 수 있는 경우 해당 구문이 Windows �
 
 XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **String** 형식인 경우 XAML 콘텐츠 구문은 기본적으로 XML 문서 모델에서 내부 텍스트인 부분(여는 개체 태그와 닫는 개체 태그 사이의 문자열)을 지원합니다. 예를 들어 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에 대한 [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성 페이지는 **Text**를 설정하는 내부 텍스트 값이 있는 XAML 콘텐츠 구문을 보여 주지만 "Text" 문자열은 태그에 표시되지 않습니다. 사용 예제는 다음과 같습니다.
 
-```xaml
-<TextBlock>Hello!</TextBlock></code></pre></td>
-</tr>
-</tbody>
-</table>
+```xml
+<TextBlock>Hello!</TextBlock>
 ```
 
 클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [
@@ -206,17 +191,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 
 많은 컬렉션 속성은 클래스에 대한 XAML 콘텐츠 속성으로도 식별됩니다. 암시적 컬렉션 처리 및 XAML 콘텐츠 구문의 조합은 패널, 뷰, 항목 컨트롤 등 컨트롤 합치기에 사용되는 형식에서 자주 나타납니다. 예를 들어 다음 예제에서는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) 내에서 두 개의 피어 UI 요소를 합치기 위한 가장 간단한 XAML을 보여 줍니다.
 
-```xaml
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+```xml
 <StackPanel>
   <TextBlock>Hello</TextBlock>
   <TextBlock>World</TextBlock>
@@ -243,7 +218,7 @@ XAML 파서에서 읽어야 하는 방법과 유사하게 XAML을 선형 순서�
 
 특성 값 설정은 XML 또는 HTML과 같은 생성 언어에서 속성 값을 설정하는 일반적인 방법입니다. 다음 구문에서 *objectName*은 인스턴스화할 개체이고, *propertyName*은 해당 개체에 대해 설정할 속성의 이름이며, *propertyValue*는 설정할 값입니다.
 
-```xaml
+```xml
 <objectName propertyName="propertyValue" .../>
 
 -or-
@@ -269,7 +244,7 @@ XAML은 *연결된 속성*으로 알려진 구문 요소를 추가하여 XML을 
 
 XAML에서 *AttachedPropertyProvider*.*PropertyName* 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 연결된 속성 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)를 설정할 수 있는 방법에 대한 예입니다.
 
-```xaml
+```xml
 <Canvas>
   <Button Canvas.Left="50">Hello</Button>
 </Canvas>
@@ -325,9 +300,9 @@ XAML을 사용할 수 있는 Windows 런타임 API에 대한 참조 항목의 **
 XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니다. 이러한 자리 표시자는 나타내는 것을 추측하거나 결국 알 수 있기 때문에 **XAML 값**에서 매번 다시 정의되지 않습니다. 독자가 **XAML 값**에서 이러한 자리 표시자를 반복해서 보는 것을 지루해할 것으로 여기고 정의를 표시하지 않았습니다. 참조를 위해 다음은 일부 이러한 자리 표시자와 일반적으로 의미하는 바를 나타내는 목록입니다.
 
 -   *object*: 이론적으로는 개체 값이지만, 사실상 문자열 또는 개체 선택 등의 특정 개체 형식으로 제한됩니다. 자세한 내용은 참조 페이지의 "설명"에서 확인할 수 있습니다.
--   *object**property*: *object**property* 조합은 표시되는 구문이 여러 속성의 특성 값으로 사용할 수 있는 형식의 구문인 경우에 사용됩니다. 예를 들어 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)에 대해 표시된 **XAML 특성 사용**에는 <*object**property*="*predefinedColorName*"/>이 포함됩니다.
+-   *object**property*: *object**property* 조합은 표시되는 구문이 여러 속성의 특성 값으로 사용할 수 있는 형식의 구문인 경우에 사용됩니다. 예를 들어 [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076)에 대해 표시된 **XAML 특성 사용**에는 &lt;*object**property*="*predefinedColorName*"/&gt;이 포함됩니다.
 -   *eventhandler*: 이벤트 특성에 대해 표시된 모든 XAML 구문의 특성 값으로 표시됩니다. 여기에서 제공하는 것은 이벤트 처리기 함수의 함수 이름입니다. 이 함수는 XAML 페이지의 코드 숨김에서 정의되어야 합니다. 프로그래밍 수준에서 이 함수는 처리 중인 이벤트의 대리자 서명과 일치해야 합니다. 그렇지 않으면 앱 코드가 컴파일되지 않습니다. 그러나 이는 프로그래밍과 관련된 고려 사항이며, XAML과 관련된 고려 사항이 아니므로 XAML 구문에서 대리자 형식에 대한 암시를 주기 위해 노력하지 않습니다. 이벤트에 대해 구현해야 할 대리자에 대해 알고 싶으면 해당 이벤트에 대한 참조 항목의 **이벤트 정보** 섹션에서 **대리자**라는 레이블의 표 행을 확인할 수 있습니다.
--   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 <*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/>입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
+-   *enumMemberName*: 모든 열거형에 대한 특성 구문에 표시됩니다. 열거형 값을 사용하는 속성에 대한 유사한 자리 표시자기 있지만 일반적으로 열거형의 이름을 암시하는 자리 표시자의 앞에 표시됩니다. 예를 들어 [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)에 대해 표시된 구문은 &lt;*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/&gt;입니다. 이러한 속성 참조 페이지 중 하나를 보고 있는 경우 **속성 값** 섹션에서 **형식:** 텍스트 옆에 나타나는 열거형 형식의 링크를 클릭하세요. 해당 열거형을 사용하는 속성의 특성 값을 보려면 **멤버** 목록의 **멤버** 열에 나열된 문자열을 사용할 수 있습니다.
 -   *double*, *int*, *string*, *bool*: XAML 언어에 알려진 기본 형식입니다. C# 또는 Visual Basic을 사용하여 프로그래밍하는 경우 이러한 형식은 Microsoft .NET의 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) 및 [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx) 등의 형식에 투영됩니다. .NET 코드 숨김에서 XAML로 정의된 값으로 작업할 경우 이러한 .NET 형식의 멤버를 사용할 수 있습니다. C++/CX를 사용하여 프로그래밍할 경우 C++ 기본 형식을 사용하지만 [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx) 네임스페이스에 의해 정의된 동일한 형식을 고려할 수 있습니다(예: [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx)). 경우에 따라 특정 속성에 대해 추가 값 제한 사항이 있을 수 있습니다. 그러나 이러한 제한 사항은 코드 사용 및 XAML 사용에 모두 적용되므로 XAML 섹션이 아닌 **속성 값** 섹션 또는 '설명' 섹션에 이러한 내용이 표시됩니다.
 
 ## 스타일에 대한 유용한 정보와 팁, 참고 사항
@@ -344,6 +319,6 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: 프로그래밍 언어로 C#, Visual Basic 또는 Visual C++ 구성 요소 확장(C++/CX)을 사용하고 UI 정의에 XAML을 사용하는 경우 Windows 런타임 앱의 이벤트 프로그래밍 개념에 대해 설명합니다.
 title: 이벤트 및 라우트된 이벤트 개요
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
@@ -30,7 +31,7 @@ XAML을 생성하여 Windows 런타임 앱의 UI를 정의합니다. 이 XAML은
 
 XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 숨김에서 정의할 처리기 메서드의 문자열 형태 이름을 지정합니다. 예를 들어 이 XAML은 특성으로 할당된 다른 속성([x:Name 특성](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366))을 사용하여 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체를 정의하고 `showUpdatesButton_Click`라는 메서드를 참조하여 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에 대한 처리기를 연결합니다.
 
-```XAML
+```XML
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
   Click="showUpdatesButton_Click"/>
@@ -38,7 +39,7 @@ XAML에서 이벤트를 연결하려면 이미 정의했거나 나중에 코드 
 
 **팁** *이벤트 연결*은 프로그래밍 용어입니다. 이벤트가 발생하면 명명된 처리기 메서드가 호출되어야 함을 나타내는 데 사용하는 프로세스 또는 코드를 나타냅니다. 대부분의 절차적 코드 모델에서 이벤트 연결은 이벤트와 메서드 둘 다를 명명하고 일반적으로 대상 개체 인스턴스와 관련된 암시적이거나 명시적인 "AddHandler" 코드입니다. XAML에서 "AddHandler"는 암시적이며, 이벤트 연결은 이벤트를 개체 요소의 속성 이름으로 명명하고 처리기를 해당 속성의 값으로 명명하는 작업으로만 구성됩니다.
 
-실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="showUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `showUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `showUpdatesButton_Click`은 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 모든 처리기에 대해 대리자를 기반으로 호환되는 메서드 서명을 구현하는 메서드여야 합니다. 예를 들어 이 코드에서는 `showUpdatesButton_Click` 처리기를 정의합니다.
+실제 처리기는 모든 앱 코드 및 코드 숨김에 사용하는 프로그래밍 언어로 작성합니다. `Click="showUpdatesButton_Click"` 특성을 사용하여 XAML의 태그가 컴파일되고 구문 분석될 때 IDE의 빌드 작업에 포함된 XAML 태그 컴파일 단계와 앱이 로드될 때 이벤트 XAML 런타임 구문 분석 작업에서 `showUpdatesButton_Click`이라는 메서드를 앱 코드의 일부로 발견할 수 있다는 계약을 만들었습니다. `showUpdatesButton_Click` 은 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 모든 처리기에 대해 대리자를 기반으로 호환되는 메서드 서명을 구현하는 메서드여야 합니다. 예를 들어 이 코드에서는 `showUpdatesButton_Click` 처리기를 정의합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -92,7 +93,7 @@ C#에서 이 구문은 `+=` 연산자를 사용하는 것입니다. 연산자 �
 
 코드를 사용하여 런타임 UI에 나타나는 개체에 이벤트 처리기를 추가하는 경우 일반적인 방법은 관련 개체에 대한 이벤트 처리기가 런타임에 사용자가 시작한 이벤트에 대한 준비를 갖추도록 [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) 또는 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737)과 같은 개체 수명 이벤트 또는 콜백에 대한 응답으로 이러한 처리기를 추가하는 것입니다. 이 예제에서는 페이지 구조의 XAML 개요를 보여 주고 개체에 이벤트 처리기를 추가하기 위한 C# 언어 구문을 제공합니다.
 
-```xaml
+```xml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -139,7 +140,7 @@ C++에서는 **+=** 구문도 사용하지만 기본적인 C# 형태와 다음�
 
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&amp;BlankPage::textBlock1_PointerExited);
+ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 ```
 
 ### 코드에서 이벤트 처리기 제거
@@ -290,6 +291,6 @@ Windows 런타임에 대한 사용자 지정 라우트된 이벤트를 선언할
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
