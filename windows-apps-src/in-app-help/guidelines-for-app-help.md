@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: 이러한 지침은 앱에 대한 효과적인 도움말 콘텐츠를 디자인하는 방법을 설명합니다.
 title: 앱 도움말에 대한 지침
 label: Guidelines for app help
@@ -13,13 +14,13 @@ template: detail.hbs
 
 도움말을 제공하려는 경우 만들 때 다음 지침을 따르세요. 유용하지 않은 도움말은 도움말이 없는 것보다 더 나쁠 수 있습니다.
 
-## <span id="intuitive_design"> </span> <span id="INTUITIVE_DESIGN"> </span>직관적인 디자인
+## <span id="intuitive_design"></span><span id="INTUITIVE_DESIGN"></span>직관적인 디자인
 
 도움말 콘텐츠는 유용할 수 있지만 앱에서 사용자에게 좋은 환경을 제공하기 위해 도움말에 의존할 수는 없습니다. 앱의 중요한 기능을 즉시 찾아서 사용할 수 없다면 사용자는 앱을 사용하지 않습니다. 도움말이 아무리 많거나 고품질이라도 이러한 첫 인상은 바뀌지 않습니다.
 
 직관적이고 사용자에게 친숙한 디자인은 유용한 도움말을 작성하는 첫 번째 단계입니다. 사용자가 보다 고급 기능을 사용할 만큼 오랜 시간의 참여를 유지할 뿐만 아니라 계속 앱을 사용하고 알아볼 때 토대로 사용할 수 있는 앱의 핵심 기능에 대한 지식을 제공합니다.
 
-## <span id="general_instructions"> </span> <span id="GENERAL_INSTRUCTIONS"> </span>일반 지침
+## <span id="general_instructions"></span><span id="GENERAL_INSTRUCTIONS"></span>일반 지침
 
 사용자는 문제가 없을 경우 도움말 콘텐츠를 찾지 않으므로 도움말은 해당 문제에 대한 빠르고 효과적인 응답을 제공해야 합니다. 도움말이 즉시 유용하지 않거나 너무 복잡한 경우 사용자가 무시할 가능성이 커집니다.
 
@@ -35,23 +36,23 @@ template: detail.hbs
 
 -   **일관성:** 유형에 관계없이 도움말은 여전히 앱의 일부이며 UI의 다른 부분으로 처리되어야 합니다. 앱의 나머지 부분 전체에서 사용되는 유용성, 접근성 및 스타일의 동일한 디자인 원칙이 제공하는 도움말에도 있어야 합니다.
 
-## <span id="types_of_help"> </span> <span id="TYPES_OF_HELP"> </span>도움말 유형
+## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>도움말 유형
 
 각각 다른 장점이 있고 다른 용도에 적합한 세 가지 기본 범주의 도움말 콘텐츠가 있습니다. 요구에 따라 앱에서 이러한 범주를 임의로 조합해서 사용합니다.
 
-#### <span id="instructional_ui"> </span> <span id="INSTRUCTIONAL_UI"> </span>사용 안내 UI
+#### <span id="instructional_ui"></span><span id="INSTRUCTIONAL_UI"></span>UI 사용 안내
 
 일반적으로 사용자가 명령 없이 앱의 모든 핵심 기능을 사용할 수 있어야 합니다. 그러나 때로는 앱이 특정 제스처 사용에 의존하거나 즉시 명확하지 않은 앱의 보조 기능이 있을 수 있습니다. 이 경우 사용 안내 UI를 사용하여 특정 작업을 수행하는 방법에 대한 지침을 사용자에게 제공해야 합니다.
 
 [사용 안내 UI에 대한 지침 참조](instructional-ui.md)
 
-#### <span id="in_app_help"> </span> <span id="IN_APP_HELP"> </span>앱 내 도움말
+#### <span id="in_app_help"></span><span id="IN_APP_HELP"></span>앱 내 도움말
 
 도움말을 표시하는 표준 방법은 사용자 요청 시 응용 프로그램 내에서 표시하는 것입니다. 도움말 페이지, 유용한 설명 등 여러 가지 방법으로 구현할 수 있습니다. 이 방법은 복잡하지 않게 사용자 질문에 직접 답변하는 범용 도움말에 적합합니다.
 
 [앱 내 도움말에 대한 지침 참조](in-app-help.md)
 
-#### <span id="external_help"> </span> <span id="EXTERNAL_HELP"> </span>외부 도움말
+#### <span id="external_help"></span><span id="EXTERNAL_HELP"></span>외부 도움말
 
 너무 커서 응용 프로그램에 맞지 않는 자세한 자습서, 고급 함수 또는 도움말 항목 라이브러리의 경우 외부 웹 페이지에 대한 링크가 적합합니다. 이러한 링크는 응용 프로그램 환경에서 사용자를 벗어나게 하므로 가능한 한 사용하지 않도록 해야 합니다.
 
@@ -60,6 +61,6 @@ template: detail.hbs
 \[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

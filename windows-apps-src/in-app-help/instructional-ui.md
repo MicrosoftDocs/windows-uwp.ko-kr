@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Windows 스토어 앱 작동 방법을 안내하는 사용 안내 UI(사용자 인터페이스)를 디자인합니다.
 title: 사용 안내 UI 디자인에 대한 지침
 label: Instructional UI
@@ -11,7 +12,7 @@ template: detail.hbs
 
 상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 사용할 수 있도록 UI(사용자 인터페이스)를 통해 사용자에게 지침을 제공해야 합니다.
 
-## <span id="when_to_use_instructional_ui"> </span> <span id="WHEN_TO_USE_INSTRUCTIONAL_UI"> </span>사용 안내 UI를 사용하는 경우
+## <span id="when_to_use_instructional_ui"></span><span id="WHEN_TO_USE_INSTRUCTIONAL_UI"></span>사용 안내 UI를 사용하는 경우
 
 사용 안내 UI를 사용할 때는 주의해야 합니다. 과도하게 사용할 경우 쉽게 무시되거나 사용자를 방해하여 비효과적일 수 있습니다.
 
@@ -19,7 +20,7 @@ template: detail.hbs
 
 앱이 터치 제스처에 의존하지 않는 한 사용 안내 UI를 사용하여 앱의 기본 기능을 설명해서는 안 됩니다.
 
-## <span id="writing_instructional_ui"> </span> <span id="WRITING_INSTRUCTIONAL_UI"> </span>사용 안내 UI 작성 원칙
+## <span id="writing_instructional_ui"></span><span id="WRITING_INSTRUCTIONAL_UI"></span>사용 안내 UI 작성 원칙
 
 좋은 사용 안내 UI는 사용자에게 관련된 교육 정보를 제공하며 사용자 환경을 개선합니다. 다음 원칙을 따라야 합니다.
 
@@ -39,7 +40,7 @@ template: detail.hbs
 -   **사용자 참여 강제:** 사용자가 사용 안내 UI를 무시하고 앱을 진행할 수 있어야 합니다.
 -   **반복 정보 표시:** 처음에 무시한 경우에도 사용 안내 UI를 계속 표시하여 사용자를 귀찮게 하지 마세요. 사용 안내 UI를 표시하는 설정을 다시 추가하는 것이 좋습니다.
 
-## <span id="examples_of_instructional_ui"> </span> <span id="EXAMPLES_OF_INSTRUCTIONAL_UI"> </span>사용 안내 UI의 예
+## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>사용 안내 UI의 예
 
 다음은 사용 안내 UI를 통해 사용자에게 정보를 제공할 수 있는 몇 가지 경우입니다.
 
@@ -61,11 +62,11 @@ template: detail.hbs
     |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
     | ![Windows 메일 앱의 스크린샷](images/instructional-ui-mail.png) | ![설정 플라이아웃이 확장된 Windows 메일 앱의 스크린샷](images/instructional-ui-mail-flyout.png) |
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
