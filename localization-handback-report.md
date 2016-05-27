@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 321
+ Total Files | 380
 
 ## File List
  Source File | Status | Details 
@@ -327,6 +327,65 @@
  [windows-apps-src\layout\show-multiple-views.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/show-multiple-views.md) | InSyncHandedBackSuccess | [Details](#23e999f86fb0552b96cddbd3b9d11803106bf6c23211)
  [windows-apps-src\maps-and-location\get-location.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/maps-and-location/get-location.md) | InSyncHandedBackSuccess | [Details](#d35bf3ef13e2b36dfed6613a00f65d19b90134643217)
  [windows-apps-src\maps-and-location\guidelines-for-geofencing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/maps-and-location/guidelines-for-geofencing.md) | InSyncHandedBackSuccess | [Details](#d631885eced58d360d3e0442cbb49ede7b9b86c33219)
+ [windows-apps-src\monetize\adcontrol-error-handling.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-error-handling.md) | InSyncHandedBackSuccess | [Details](#a335b4b6548e910076b5a984cc6078aa6c18dc323248)
+ [windows-apps-src\monetize\adcontrol-events-in-c.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-events-in-c.md) | InSyncHandedBackSuccess | [Details](#cc5dfbfacefb4be32153f3266878be41a3b923f83249)
+ [windows-apps-src\monetize\adcontrol-events-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-events-in-javascript.md) | InSyncHandedBackSuccess | [Details](#5a47915b0dd2792ed50cc5d556b1181ee2c259e13250)
+ [windows-apps-src\monetize\adcontrol-in-html-5-and-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-html-5-and-javascript.md) | InSyncHandedBackSuccess | [Details](#6e96b085132126a2c3e7b0b0b86124aba4cd651e3251)
+ [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md) | InSyncHandedBackSuccess | [Details](#5a12badfb11cfd43c0833522d996da7df73b3d553252)
+ [windows-apps-src\monetize\adcontrol-in-xaml-and--net.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-xaml-and--net.md) | InSyncHandedBackSuccess | [Details](#d17d8a39f31bfcbf3172b4592e918f0be4a6bf923253)
+ [windows-apps-src\monetize\add-ads-to-apps-with-microsoft-advertising.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/add-ads-to-apps-with-microsoft-advertising.md) | InSyncHandedBackSuccess | [Details](#4b8f71249f9358fcc6127b83a7ade10895f5c64e3254)
+ [windows-apps-src\monetize\add-and-use-the-ad-mediator-control.md](https://github.com/Microsoft/windows-apps/blob/8c3f1997427a7c3d4f4b4b7acc876a2a091e4553/windows-apps-src/monetize/add-and-use-the-ad-mediator-control.md) | InSyncHandedBackSuccess | [Details](#a0d73b50207d251c079714265845a816f4ac23da3255)
+ [windows-apps-src\monetize\additional-help.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/additional-help.md) | InSyncHandedBackSuccess | [Details](#5229cf7ebb4133052c3e960fe1c81d6edeef8e573256)
+ [windows-apps-src\monetize\code-samples.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/code-samples.md) | InSyncHandedBackSuccess | [Details](#1a7bf9ed90ed2dadf6de7a141fa03972b06ef1443257)
+ [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/monetize/code-your-experiment-in-your-app.md) | InSyncHandedBackSuccess | [Details](#4e6706624e71c6d448a3d457c27d11c9f6ecc1563258)
+ [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md) | InSyncHandedBackSuccess | [Details](#481f9d785181ca197debdb807bb0b0c7b41686323259)
+ [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md) | InSyncHandedBackSuccess | [Details](#0f889c22b8999408341f4c12387602b344f494393260)
+ [windows-apps-src\monetize\define-your-experiment-in-the-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/define-your-experiment-in-the-dev-center-dashboard.md) | InSyncHandedBackSuccess | [Details](#7462c23de58b44f897a1737d0d54913144b14f753261)
+ [windows-apps-src\monetize\developer-information.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/developer-information.md) | InSyncHandedBackSuccess | [Details](#ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece48283262)
+ [windows-apps-src\monetize\developer-walkthroughs.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/developer-walkthroughs.md) | InSyncHandedBackSuccess | [Details](#b36b5d5ba747fbb71c988033ddd0cdb4cee0ed8b3263)
+ [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-in-your-app.md) | InSyncHandedBackSuccess | [Details](#c79ba96908cc7b52afefbe44c3f56ce009c87f163264)
+ [windows-apps-src\monetize\display-ads-using-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/display-ads-using-the-microsoft-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#ab96dac3af382d334c767ad42a563c0dbc67a8f53266)
+ [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md) | InSyncHandedBackSuccess | [Details](#25f09e043d61f1705f9f0a4fa34114fd06166fa43267)
+ [windows-apps-src\monetize\error-handling-in-javascript-walkthrough.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-in-javascript-walkthrough.md) | InSyncHandedBackSuccess | [Details](#d26a8efeb253c6c793d8edd21d7452bbf15da2613269)
+ [windows-apps-src\monetize\error-handling-in-xamlc-walkthrough.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-in-xamlc-walkthrough.md) | InSyncHandedBackSuccess | [Details](#7cb827b4269afb55f0326eec0a0ee25b93119eb03270)
+ [windows-apps-src\monetize\error-handling-with-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-with-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#5e0c7e6328247e5f686b14b10c80d8aafc13e0e43271)
+ [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md) | InSyncHandedBackSuccess | [Details](#9c38784325f4dc51052f70a819012508f2a0bdbb3272)
+ [windows-apps-src\monetize\get-app-failures.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/get-app-failures.md) | InSyncHandedBackSuccess | [Details](#3d885322181fa8b932dd248c8c71e7d6d747bb063274)
+ [windows-apps-src\monetize\get-started-with-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/get-started-with-microsoft-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#08168dc15b33d99a044eedd7864848ed7a8589913279)
+ [windows-apps-src\monetize\html-and-javascript-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/html-and-javascript-troubleshooting-guide.md) | InSyncHandedBackSuccess | [Details](#af4ea6f3360ea85d1c70ec9b757db65ec23c88af3281)
+ [windows-apps-src\monetize\html-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/html-properties-example.md) | InSyncHandedBackSuccess | [Details](#53b9afdcdc697e3ed508ef6e5ed5d684bdf5aa693282)
+ [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/important-notice-eula.md) | InSyncHandedBackSuccess | [Details](#89af54f5b8cf52366100b4751ed37ddd7a7bacb73308)
+ [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/index.md) | InSyncHandedBackSuccess | [Details](#6d5f483b44ae4516f4969431e31f70388a66c5d93309)
+ [windows-apps-src\monetize\install-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/install-the-microsoft-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#0951818ceaf3d96543f9f97ec6993d08fdaab2b83310)
+ [windows-apps-src\monetize\install-the-microsoft-universal-ad-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/install-the-microsoft-universal-ad-client-sdk.md) | InSyncHandedBackSuccess | [Details](#87eb36d7a77bfb6a283a3e668781ee9c99d6947f3311)
+ [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ads.md) | InSyncHandedBackSuccess | [Details](#0f159409bb584aacaf66550efe8d147cd8fddd503314)
+ [windows-apps-src\monetize\interstitial-ad-sample-code-in-c.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ad-sample-code-in-c.md) | InSyncHandedBackSuccess | [Details](#e83730c60eada273aee4f3bca4ff28cf6feccbf83312)
+ [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ad-sample-code-in-javascript.md) | InSyncHandedBackSuccess | [Details](#d6a561aaff834cd782118abb72b4770985176bf03313)
+ [windows-apps-src\monetize\known-issues-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1/windows-apps-src/monetize/known-issues-for-the-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#cfaa108cc93b6bae903e86ad141656bf613f185d3315)
+ [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md) | InSyncHandedBackSuccess | [Details](#ccda01d9bfa4ffdff2bbce5d6c60c78e026270e53316)
+ [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/manage-a-large-catalog-of-in-app-products.md) | InSyncHandedBackSuccess | [Details](#0927df3cd696e5a6fbd3a235d2b87074f1d639293317)
+ [windows-apps-src\monetize\manage-your-experiment.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/manage-your-experiment.md) | InSyncHandedBackSuccess | [Details](#24ca106cc83c4495657972f463c556585cdfcb453318)
+ [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) | InSyncHandedBackSuccess | [Details](#481cf2aab806a1f9ce368256a9df8930cbc756c13319)
+ [windows-apps-src\monetize\release-notes-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/release-notes-for-the-advertising-libraries.md) | InSyncHandedBackSuccess | [Details](#8e2114e969b27d579f62195f026cfcfd9672a94a3321)
+ [windows-apps-src\monetize\run-app-experiments-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/run-app-experiments-with-a-b-testing.md) | InSyncHandedBackSuccess | [Details](#88fd0516e3c10b657884b93377480b62c17589923324)
+ [windows-apps-src\monetize\select-and-manage-your-ad-networks.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/select-and-manage-your-ad-networks.md) | InSyncHandedBackSuccess | [Details](#49c9b8e60da9239c948265fb22563013019da2593325)
+ [windows-apps-src\monetize\set-up-ad-units-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/set-up-ad-units-in-your-app.md) | InSyncHandedBackSuccess | [Details](#96c09de9321f67dc26cc3538f2655bd598f134f93326)
+ [windows-apps-src\monetize\submit-an-app-with-ads-to-the-windows-store.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/submit-an-app-with-ads-to-the-windows-store.md) | InSyncHandedBackSuccess | [Details](#d2e6f9873b2539f9c0558abdc9ee936b938a03b13327)
+ [windows-apps-src\monetize\submit-your-app-and-configure-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/submit-your-app-and-configure-ad-mediation.md) | InSyncHandedBackSuccess | [Details](#13dd6a9c38d85ead29a43f470b7c0f63d025d6123328)
+ [windows-apps-src\monetize\supported-ad-sizes-for-banner-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/supported-ad-sizes-for-banner-ads.md) | InSyncHandedBackSuccess | [Details](#f83febcb6c96ad85329633e652978f5c7724e7433329)
+ [windows-apps-src\monetize\supported-markets-for-microsoft-advertising.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/supported-markets-for-microsoft-advertising.md) | InSyncHandedBackSuccess | [Details](#2d17a3936a4932b0aa30c80a38bb492f3f21fb373330)
+ [windows-apps-src\monetize\test-mode-values.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/test-mode-values.md) | InSyncHandedBackSuccess | [Details](#93b20954ba82b613bde96db30a000902dec3b8443331)
+ [windows-apps-src\monetize\test-your-ad-mediation-implementation.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/test-your-ad-mediation-implementation.md) | InSyncHandedBackSuccess | [Details](#0805ed5462a4b100b837ed9c11ec2d9e7caabc343332)
+ [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe/windows-apps-src/monetize/troubleshoot-ad-mediation.md) | InSyncHandedBackSuccess | [Details](#f32dc28c9b199c11a1932639f49ab4c29d3e1e8f3333)
+ [windows-apps-src\monetize\troubleshooting-guides.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/troubleshooting-guides.md) | InSyncHandedBackSuccess | [Details](#4a006cbd1a1f38e2410098d074a35df4a24689633334)
+ [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/ui-and-user-experience-guidelines.md) | InSyncHandedBackSuccess | [Details](#87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a3335)
+ [windows-apps-src\monetize\use-ad-mediation-to-maximize-revenue.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/use-ad-mediation-to-maximize-revenue.md) | InSyncHandedBackSuccess | [Details](#c0669e35b285ee7dfeda0c039d8455a4237960f53336)
+ [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/use-receipts-to-verify-product-purchases.md) | InSyncHandedBackSuccess | [Details](#b1322b74bf1038f05cd1cba275e432e279ed362d3337)
+ [windows-apps-src\monetize\using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/using-windows-store-services.md) | InSyncHandedBackSuccess | [Details](#43e3155315a9132daa36f592b54af3e943ea3e213338)
+ [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md) | InSyncHandedBackSuccess | [Details](#291e1c4d707e8987d29ae5840248918543d7d12a3340)
+ [windows-apps-src\monetize\workflows-for-creating-apps-with-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/workflows-for-creating-apps-with-ads.md) | InSyncHandedBackSuccess | [Details](#69dd1a17290b7ffbc14dbc58404868119403f7c03341)
+ [windows-apps-src\monetize\xaml-and-c-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-and-c-troubleshooting-guide.md) | InSyncHandedBackSuccess | [Details](#ef9ad8f8056b17793d7ad8230e410e014edf2c953342)
+ [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-properties-example.md) | InSyncHandedBackSuccess | [Details](#43d579d2d0a92a8f03f17efa2ec42707357e99f93343)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -4179,6 +4238,714 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [guidelines-for-geofencing.34e1970cfcb024f200e86ae0b1f0f9c518f79830.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/69290eb244dcb65c2883490bf360b8b562cae276/ol-handback/Microsoft/windows-apps.ko-kr/master/maps-and-location/guidelines-for-geofencing.34e1970cfcb024f200e86ae0b1f0f9c518f79830.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:35:00
+* [Back to Top](#report-top)
+
+##### <a name='a335b4b6548e910076b5a984cc6078aa6c18dc323248'></a> Source: [windows-apps-src\monetize\adcontrol-error-handling.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-error-handling.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-error-handling.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-error-handling.md)
+* Handoff File: [adcontrol-error-handling.f89c48cf624ad1d29625fd2987fe1f3865a50da2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-error-handling.f89c48cf624ad1d29625fd2987fe1f3865a50da2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-error-handling.f89c48cf624ad1d29625fd2987fe1f3865a50da2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-error-handling.f89c48cf624ad1d29625fd2987fe1f3865a50da2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='cc5dfbfacefb4be32153f3266878be41a3b923f83249'></a> Source: [windows-apps-src\monetize\adcontrol-events-in-c.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-events-in-c.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-events-in-c.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-events-in-c.md)
+* Handoff File: [adcontrol-events-in-c.59a441e75bb0a9982159971a9a7ca2632846a268.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-events-in-c.59a441e75bb0a9982159971a9a7ca2632846a268.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-events-in-c.59a441e75bb0a9982159971a9a7ca2632846a268.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-events-in-c.59a441e75bb0a9982159971a9a7ca2632846a268.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='5a47915b0dd2792ed50cc5d556b1181ee2c259e13250'></a> Source: [windows-apps-src\monetize\adcontrol-events-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-events-in-javascript.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-events-in-javascript.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-events-in-javascript.md)
+* Handoff File: [adcontrol-events-in-javascript.21290430b15aa9f23b1974bb4adb3bc5b6eca150.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-events-in-javascript.21290430b15aa9f23b1974bb4adb3bc5b6eca150.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-events-in-javascript.21290430b15aa9f23b1974bb4adb3bc5b6eca150.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-events-in-javascript.21290430b15aa9f23b1974bb4adb3bc5b6eca150.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='6e96b085132126a2c3e7b0b0b86124aba4cd651e3251'></a> Source: [windows-apps-src\monetize\adcontrol-in-html-5-and-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-html-5-and-javascript.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-in-html-5-and-javascript.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-in-html-5-and-javascript.md)
+* Handoff File: [adcontrol-in-html-5-and-javascript.de3b76a82ab817c8c48818e679f9e646303c0409.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-in-html-5-and-javascript.de3b76a82ab817c8c48818e679f9e646303c0409.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-in-html-5-and-javascript.de3b76a82ab817c8c48818e679f9e646303c0409.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-in-html-5-and-javascript.de3b76a82ab817c8c48818e679f9e646303c0409.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='5a12badfb11cfd43c0833522d996da7df73b3d553252'></a> Source: [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md)
+* Handoff File: [adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='d17d8a39f31bfcbf3172b4592e918f0be4a6bf923253'></a> Source: [windows-apps-src\monetize\adcontrol-in-xaml-and--net.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/adcontrol-in-xaml-and--net.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\adcontrol-in-xaml-and--net.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/adcontrol-in-xaml-and--net.md)
+* Handoff File: [adcontrol-in-xaml-and--net.67ecc7fcc4ffdfcd2fd957c21d0268dca73f4f40.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-in-xaml-and--net.67ecc7fcc4ffdfcd2fd957c21d0268dca73f4f40.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [adcontrol-in-xaml-and--net.67ecc7fcc4ffdfcd2fd957c21d0268dca73f4f40.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/adcontrol-in-xaml-and--net.67ecc7fcc4ffdfcd2fd957c21d0268dca73f4f40.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='4b8f71249f9358fcc6127b83a7ade10895f5c64e3254'></a> Source: [windows-apps-src\monetize\add-ads-to-apps-with-microsoft-advertising.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/add-ads-to-apps-with-microsoft-advertising.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\add-ads-to-apps-with-microsoft-advertising.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/add-ads-to-apps-with-microsoft-advertising.md)
+* Handoff File: [add-ads-to-apps-with-microsoft-advertising.dab39601f0a58db14fd24274192ccc918456f467.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/add-ads-to-apps-with-microsoft-advertising.dab39601f0a58db14fd24274192ccc918456f467.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [add-ads-to-apps-with-microsoft-advertising.dab39601f0a58db14fd24274192ccc918456f467.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/add-ads-to-apps-with-microsoft-advertising.dab39601f0a58db14fd24274192ccc918456f467.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='a0d73b50207d251c079714265845a816f4ac23da3255'></a> Source: [windows-apps-src\monetize\add-and-use-the-ad-mediator-control.md](https://github.com/Microsoft/windows-apps/blob/8c3f1997427a7c3d4f4b4b7acc876a2a091e4553/windows-apps-src/monetize/add-and-use-the-ad-mediator-control.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\add-and-use-the-ad-mediator-control.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/add-and-use-the-ad-mediator-control.md)
+* Handoff File: [add-and-use-the-ad-mediator-control.3a0b013d8b7742f4712c5997a37b72442f2c28d2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/add-and-use-the-ad-mediator-control.3a0b013d8b7742f4712c5997a37b72442f2c28d2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [add-and-use-the-ad-mediator-control.3a0b013d8b7742f4712c5997a37b72442f2c28d2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/add-and-use-the-ad-mediator-control.3a0b013d8b7742f4712c5997a37b72442f2c28d2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='5229cf7ebb4133052c3e960fe1c81d6edeef8e573256'></a> Source: [windows-apps-src\monetize\additional-help.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/additional-help.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\additional-help.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/additional-help.md)
+* Handoff File: [additional-help.cb699b281b92ea4939fbfdd84cf3ccecd3e70055.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/additional-help.cb699b281b92ea4939fbfdd84cf3ccecd3e70055.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [additional-help.cb699b281b92ea4939fbfdd84cf3ccecd3e70055.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/additional-help.cb699b281b92ea4939fbfdd84cf3ccecd3e70055.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='1a7bf9ed90ed2dadf6de7a141fa03972b06ef1443257'></a> Source: [windows-apps-src\monetize\code-samples.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/code-samples.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\code-samples.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/code-samples.md)
+* Handoff File: [code-samples.2cb34f8855abaaca1035b6c4a0fb377a967492cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/code-samples.2cb34f8855abaaca1035b6c4a0fb377a967492cd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [code-samples.2cb34f8855abaaca1035b6c4a0fb377a967492cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/code-samples.2cb34f8855abaaca1035b6c4a0fb377a967492cd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='4e6706624e71c6d448a3d457c27d11c9f6ecc1563258'></a> Source: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/monetize/code-your-experiment-in-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/code-your-experiment-in-your-app.md)
+* Handoff File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='481f9d785181ca197debdb807bb0b0c7b41686323259'></a> Source: [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md)
+* Handoff File: [create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='0f889c22b8999408341f4c12387602b344f494393260'></a> Source: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md)
+* Handoff File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='7462c23de58b44f897a1737d0d54913144b14f753261'></a> Source: [windows-apps-src\monetize\define-your-experiment-in-the-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/define-your-experiment-in-the-dev-center-dashboard.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\define-your-experiment-in-the-dev-center-dashboard.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/define-your-experiment-in-the-dev-center-dashboard.md)
+* Handoff File: [define-your-experiment-in-the-dev-center-dashboard.f8531319c141ba0616b6774b54e9c4c657e45c68.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/define-your-experiment-in-the-dev-center-dashboard.f8531319c141ba0616b6774b54e9c4c657e45c68.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [define-your-experiment-in-the-dev-center-dashboard.f8531319c141ba0616b6774b54e9c4c657e45c68.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/define-your-experiment-in-the-dev-center-dashboard.f8531319c141ba0616b6774b54e9c4c657e45c68.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece48283262'></a> Source: [windows-apps-src\monetize\developer-information.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/developer-information.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\developer-information.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/developer-information.md)
+* Handoff File: [developer-information.fc4dc9b236904411a8095de9ff5d79bcaab5fc56.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/developer-information.fc4dc9b236904411a8095de9ff5d79bcaab5fc56.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [developer-information.fc4dc9b236904411a8095de9ff5d79bcaab5fc56.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/developer-information.fc4dc9b236904411a8095de9ff5d79bcaab5fc56.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='b36b5d5ba747fbb71c988033ddd0cdb4cee0ed8b3263'></a> Source: [windows-apps-src\monetize\developer-walkthroughs.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/developer-walkthroughs.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\developer-walkthroughs.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/developer-walkthroughs.md)
+* Handoff File: [developer-walkthroughs.650a0d717c9738613072eae0a19deae5bf1efc2c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/developer-walkthroughs.650a0d717c9738613072eae0a19deae5bf1efc2c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [developer-walkthroughs.650a0d717c9738613072eae0a19deae5bf1efc2c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/developer-walkthroughs.650a0d717c9738613072eae0a19deae5bf1efc2c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='c79ba96908cc7b52afefbe44c3f56ce009c87f163264'></a> Source: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-in-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/display-ads-in-your-app.md)
+* Handoff File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='ab96dac3af382d334c767ad42a563c0dbc67a8f53266'></a> Source: [windows-apps-src\monetize\display-ads-using-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/display-ads-using-the-microsoft-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\display-ads-using-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/display-ads-using-the-microsoft-advertising-libraries.md)
+* Handoff File: [display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='25f09e043d61f1705f9f0a4fa34114fd06166fa43267'></a> Source: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md)
+* Handoff File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='d26a8efeb253c6c793d8edd21d7452bbf15da2613269'></a> Source: [windows-apps-src\monetize\error-handling-in-javascript-walkthrough.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-in-javascript-walkthrough.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\error-handling-in-javascript-walkthrough.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/error-handling-in-javascript-walkthrough.md)
+* Handoff File: [error-handling-in-javascript-walkthrough.6f0b12b12a1e9078011a0587dd2c04b88ab2e344.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/error-handling-in-javascript-walkthrough.6f0b12b12a1e9078011a0587dd2c04b88ab2e344.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [error-handling-in-javascript-walkthrough.6f0b12b12a1e9078011a0587dd2c04b88ab2e344.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/error-handling-in-javascript-walkthrough.6f0b12b12a1e9078011a0587dd2c04b88ab2e344.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='7cb827b4269afb55f0326eec0a0ee25b93119eb03270'></a> Source: [windows-apps-src\monetize\error-handling-in-xamlc-walkthrough.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-in-xamlc-walkthrough.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\error-handling-in-xamlc-walkthrough.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/error-handling-in-xamlc-walkthrough.md)
+* Handoff File: [error-handling-in-xamlc-walkthrough.bfba959a6439d4930d75b495a0bff908dcb26af2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/error-handling-in-xamlc-walkthrough.bfba959a6439d4930d75b495a0bff908dcb26af2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [error-handling-in-xamlc-walkthrough.bfba959a6439d4930d75b495a0bff908dcb26af2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/error-handling-in-xamlc-walkthrough.bfba959a6439d4930d75b495a0bff908dcb26af2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='5e0c7e6328247e5f686b14b10c80d8aafc13e0e43271'></a> Source: [windows-apps-src\monetize\error-handling-with-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/error-handling-with-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\error-handling-with-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/error-handling-with-advertising-libraries.md)
+* Handoff File: [error-handling-with-advertising-libraries.14265145fdb8832fcd59ac344ca87f8dc58a6ccc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/error-handling-with-advertising-libraries.14265145fdb8832fcd59ac344ca87f8dc58a6ccc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [error-handling-with-advertising-libraries.14265145fdb8832fcd59ac344ca87f8dc58a6ccc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/error-handling-with-advertising-libraries.14265145fdb8832fcd59ac344ca87f8dc58a6ccc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='9c38784325f4dc51052f70a819012508f2a0bdbb3272'></a> Source: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md)
+* Handoff File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='3d885322181fa8b932dd248c8c71e7d6d747bb063274'></a> Source: [windows-apps-src\monetize\get-app-failures.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/get-app-failures.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\get-app-failures.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/get-app-failures.md)
+* Handoff File: [get-app-failures.1914b191a789d2a0e67a0205c9c1bb84ccc4bab8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-app-failures.1914b191a789d2a0e67a0205c9c1bb84ccc4bab8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [get-app-failures.1914b191a789d2a0e67a0205c9c1bb84ccc4bab8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/get-app-failures.1914b191a789d2a0e67a0205c9c1bb84ccc4bab8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='08168dc15b33d99a044eedd7864848ed7a8589913279'></a> Source: [windows-apps-src\monetize\get-started-with-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/get-started-with-microsoft-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\get-started-with-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/get-started-with-microsoft-advertising-libraries.md)
+* Handoff File: [get-started-with-microsoft-advertising-libraries.8704167140e41e1eeb4a0cb013803196f630550c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-started-with-microsoft-advertising-libraries.8704167140e41e1eeb4a0cb013803196f630550c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [get-started-with-microsoft-advertising-libraries.8704167140e41e1eeb4a0cb013803196f630550c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/get-started-with-microsoft-advertising-libraries.8704167140e41e1eeb4a0cb013803196f630550c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='af4ea6f3360ea85d1c70ec9b757db65ec23c88af3281'></a> Source: [windows-apps-src\monetize\html-and-javascript-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/html-and-javascript-troubleshooting-guide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\html-and-javascript-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/html-and-javascript-troubleshooting-guide.md)
+* Handoff File: [html-and-javascript-troubleshooting-guide.8391d965c9155978d9d36f379996d51334ed035b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/html-and-javascript-troubleshooting-guide.8391d965c9155978d9d36f379996d51334ed035b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [html-and-javascript-troubleshooting-guide.8391d965c9155978d9d36f379996d51334ed035b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/html-and-javascript-troubleshooting-guide.8391d965c9155978d9d36f379996d51334ed035b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='53b9afdcdc697e3ed508ef6e5ed5d684bdf5aa693282'></a> Source: [windows-apps-src\monetize\html-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/html-properties-example.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\html-properties-example.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/html-properties-example.md)
+* Handoff File: [html-properties-example.29fde226ca1b5ffd5ccb300a5b91b814df06139c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/html-properties-example.29fde226ca1b5ffd5ccb300a5b91b814df06139c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [html-properties-example.29fde226ca1b5ffd5ccb300a5b91b814df06139c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/html-properties-example.29fde226ca1b5ffd5ccb300a5b91b814df06139c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='89af54f5b8cf52366100b4751ed37ddd7a7bacb73308'></a> Source: [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/important-notice-eula.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\important-notice-eula.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/important-notice-eula.md)
+* Handoff File: [important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/important-notice-eula.04fdb9464e2f1d1d572b7ffb7502309634267009.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='6d5f483b44ae4516f4969431e31f70388a66c5d93309'></a> Source: [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/index.md)
+* Handoff File: [index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='0951818ceaf3d96543f9f97ec6993d08fdaab2b83310'></a> Source: [windows-apps-src\monetize\install-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/install-the-microsoft-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\install-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/install-the-microsoft-advertising-libraries.md)
+* Handoff File: [install-the-microsoft-advertising-libraries.e2b3966eb5bd304c6ce6efe9d2cd79b084c72616.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/install-the-microsoft-advertising-libraries.e2b3966eb5bd304c6ce6efe9d2cd79b084c72616.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [install-the-microsoft-advertising-libraries.e2b3966eb5bd304c6ce6efe9d2cd79b084c72616.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/install-the-microsoft-advertising-libraries.e2b3966eb5bd304c6ce6efe9d2cd79b084c72616.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='87eb36d7a77bfb6a283a3e668781ee9c99d6947f3311'></a> Source: [windows-apps-src\monetize\install-the-microsoft-universal-ad-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/install-the-microsoft-universal-ad-client-sdk.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\install-the-microsoft-universal-ad-client-sdk.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/install-the-microsoft-universal-ad-client-sdk.md)
+* Handoff File: [install-the-microsoft-universal-ad-client-sdk.d7e08512bff7aa0fa1dbb0425b4014b3f80ace3c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/install-the-microsoft-universal-ad-client-sdk.d7e08512bff7aa0fa1dbb0425b4014b3f80ace3c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [install-the-microsoft-universal-ad-client-sdk.d7e08512bff7aa0fa1dbb0425b4014b3f80ace3c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/install-the-microsoft-universal-ad-client-sdk.d7e08512bff7aa0fa1dbb0425b4014b3f80ace3c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='0f159409bb584aacaf66550efe8d147cd8fddd503314'></a> Source: [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/interstitial-ads.md)
+* Handoff File: [interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='e83730c60eada273aee4f3bca4ff28cf6feccbf83312'></a> Source: [windows-apps-src\monetize\interstitial-ad-sample-code-in-c.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ad-sample-code-in-c.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\interstitial-ad-sample-code-in-c.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/interstitial-ad-sample-code-in-c.md)
+* Handoff File: [interstitial-ad-sample-code-in-c.70f7766d94daa8ac655721fd354a27f214602f41.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/interstitial-ad-sample-code-in-c.70f7766d94daa8ac655721fd354a27f214602f41.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [interstitial-ad-sample-code-in-c.70f7766d94daa8ac655721fd354a27f214602f41.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/interstitial-ad-sample-code-in-c.70f7766d94daa8ac655721fd354a27f214602f41.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='d6a561aaff834cd782118abb72b4770985176bf03313'></a> Source: [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/interstitial-ad-sample-code-in-javascript.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\interstitial-ad-sample-code-in-javascript.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/interstitial-ad-sample-code-in-javascript.md)
+* Handoff File: [interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/interstitial-ad-sample-code-in-javascript.67d4d65d545dde89c37899b180fe4d57421c8f22.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='cfaa108cc93b6bae903e86ad141656bf613f185d3315'></a> Source: [windows-apps-src\monetize\known-issues-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1/windows-apps-src/monetize/known-issues-for-the-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\known-issues-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/known-issues-for-the-advertising-libraries.md)
+* Handoff File: [known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='ccda01d9bfa4ffdff2bbce5d6c60c78e026270e53316'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='0927df3cd696e5a6fbd3a235d2b87074f1d639293317'></a> Source: [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/manage-a-large-catalog-of-in-app-products.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\manage-a-large-catalog-of-in-app-products.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/manage-a-large-catalog-of-in-app-products.md)
+* Handoff File: [manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/manage-a-large-catalog-of-in-app-products.5dd541af4c58b62685bdfd4d1f1d545132e33e4d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='24ca106cc83c4495657972f463c556585cdfcb453318'></a> Source: [windows-apps-src\monetize\manage-your-experiment.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/manage-your-experiment.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\manage-your-experiment.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/manage-your-experiment.md)
+* Handoff File: [manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/manage-your-experiment.bf04c15762ccb0b30f4711939844018736814d88.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='481cf2aab806a1f9ce368256a9df8930cbc756c13319'></a> Source: [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps/blob/de85956c7c1d2a0ba509d61ee8928b412f057f8a/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
+* Handoff File: [monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='8e2114e969b27d579f62195f026cfcfd9672a94a3321'></a> Source: [windows-apps-src\monetize\release-notes-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/release-notes-for-the-advertising-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\release-notes-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/release-notes-for-the-advertising-libraries.md)
+* Handoff File: [release-notes-for-the-advertising-libraries.f454a23a8df2cfa06804f68ac5f84900eae575c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/release-notes-for-the-advertising-libraries.f454a23a8df2cfa06804f68ac5f84900eae575c8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [release-notes-for-the-advertising-libraries.f454a23a8df2cfa06804f68ac5f84900eae575c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/release-notes-for-the-advertising-libraries.f454a23a8df2cfa06804f68ac5f84900eae575c8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='88fd0516e3c10b657884b93377480b62c17589923324'></a> Source: [windows-apps-src\monetize\run-app-experiments-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/run-app-experiments-with-a-b-testing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\run-app-experiments-with-a-b-testing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/run-app-experiments-with-a-b-testing.md)
+* Handoff File: [run-app-experiments-with-a-b-testing.4cb001447ccf39d2caa97811d3905ae10cf01c7d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/run-app-experiments-with-a-b-testing.4cb001447ccf39d2caa97811d3905ae10cf01c7d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [run-app-experiments-with-a-b-testing.4cb001447ccf39d2caa97811d3905ae10cf01c7d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/run-app-experiments-with-a-b-testing.4cb001447ccf39d2caa97811d3905ae10cf01c7d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='49c9b8e60da9239c948265fb22563013019da2593325'></a> Source: [windows-apps-src\monetize\select-and-manage-your-ad-networks.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/select-and-manage-your-ad-networks.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\select-and-manage-your-ad-networks.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/select-and-manage-your-ad-networks.md)
+* Handoff File: [select-and-manage-your-ad-networks.982177b3e83790340b3b8fd5a9e270779f76b670.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/select-and-manage-your-ad-networks.982177b3e83790340b3b8fd5a9e270779f76b670.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [select-and-manage-your-ad-networks.982177b3e83790340b3b8fd5a9e270779f76b670.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/select-and-manage-your-ad-networks.982177b3e83790340b3b8fd5a9e270779f76b670.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='96c09de9321f67dc26cc3538f2655bd598f134f93326'></a> Source: [windows-apps-src\monetize\set-up-ad-units-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/set-up-ad-units-in-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\set-up-ad-units-in-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/set-up-ad-units-in-your-app.md)
+* Handoff File: [set-up-ad-units-in-your-app.677ef430f1c7b02ed93ecfec616f3f47de54b944.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-up-ad-units-in-your-app.677ef430f1c7b02ed93ecfec616f3f47de54b944.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [set-up-ad-units-in-your-app.677ef430f1c7b02ed93ecfec616f3f47de54b944.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/set-up-ad-units-in-your-app.677ef430f1c7b02ed93ecfec616f3f47de54b944.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='d2e6f9873b2539f9c0558abdc9ee936b938a03b13327'></a> Source: [windows-apps-src\monetize\submit-an-app-with-ads-to-the-windows-store.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/submit-an-app-with-ads-to-the-windows-store.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\submit-an-app-with-ads-to-the-windows-store.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/submit-an-app-with-ads-to-the-windows-store.md)
+* Handoff File: [submit-an-app-with-ads-to-the-windows-store.0d69fbfe35dae22f8ffe8d7d0290a5c42030b4e9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/submit-an-app-with-ads-to-the-windows-store.0d69fbfe35dae22f8ffe8d7d0290a5c42030b4e9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [submit-an-app-with-ads-to-the-windows-store.0d69fbfe35dae22f8ffe8d7d0290a5c42030b4e9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/submit-an-app-with-ads-to-the-windows-store.0d69fbfe35dae22f8ffe8d7d0290a5c42030b4e9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='13dd6a9c38d85ead29a43f470b7c0f63d025d6123328'></a> Source: [windows-apps-src\monetize\submit-your-app-and-configure-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/submit-your-app-and-configure-ad-mediation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\submit-your-app-and-configure-ad-mediation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/submit-your-app-and-configure-ad-mediation.md)
+* Handoff File: [submit-your-app-and-configure-ad-mediation.990983e488fec0db24f094bf655441d5d0454731.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/submit-your-app-and-configure-ad-mediation.990983e488fec0db24f094bf655441d5d0454731.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [submit-your-app-and-configure-ad-mediation.990983e488fec0db24f094bf655441d5d0454731.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/submit-your-app-and-configure-ad-mediation.990983e488fec0db24f094bf655441d5d0454731.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='f83febcb6c96ad85329633e652978f5c7724e7433329'></a> Source: [windows-apps-src\monetize\supported-ad-sizes-for-banner-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/supported-ad-sizes-for-banner-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\supported-ad-sizes-for-banner-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/supported-ad-sizes-for-banner-ads.md)
+* Handoff File: [supported-ad-sizes-for-banner-ads.d6965242c28a6d19b2d69303e0fcb8c07020e2cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/supported-ad-sizes-for-banner-ads.d6965242c28a6d19b2d69303e0fcb8c07020e2cc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [supported-ad-sizes-for-banner-ads.d6965242c28a6d19b2d69303e0fcb8c07020e2cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/supported-ad-sizes-for-banner-ads.d6965242c28a6d19b2d69303e0fcb8c07020e2cc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='2d17a3936a4932b0aa30c80a38bb492f3f21fb373330'></a> Source: [windows-apps-src\monetize\supported-markets-for-microsoft-advertising.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/supported-markets-for-microsoft-advertising.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\supported-markets-for-microsoft-advertising.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/supported-markets-for-microsoft-advertising.md)
+* Handoff File: [supported-markets-for-microsoft-advertising.20ece372177f643edec2fe32b787caadbc50caf1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/supported-markets-for-microsoft-advertising.20ece372177f643edec2fe32b787caadbc50caf1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [supported-markets-for-microsoft-advertising.20ece372177f643edec2fe32b787caadbc50caf1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/supported-markets-for-microsoft-advertising.20ece372177f643edec2fe32b787caadbc50caf1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='93b20954ba82b613bde96db30a000902dec3b8443331'></a> Source: [windows-apps-src\monetize\test-mode-values.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/test-mode-values.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\test-mode-values.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/test-mode-values.md)
+* Handoff File: [test-mode-values.558c5bd0412388e4a3221ef436d374cc47f10338.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-mode-values.558c5bd0412388e4a3221ef436d374cc47f10338.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [test-mode-values.558c5bd0412388e4a3221ef436d374cc47f10338.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/test-mode-values.558c5bd0412388e4a3221ef436d374cc47f10338.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='0805ed5462a4b100b837ed9c11ec2d9e7caabc343332'></a> Source: [windows-apps-src\monetize\test-your-ad-mediation-implementation.md](https://github.com/Microsoft/windows-apps/blob/ec7ce299545de8e5c167e1934fb9a0b4f4370948/windows-apps-src/monetize/test-your-ad-mediation-implementation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\test-your-ad-mediation-implementation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/test-your-ad-mediation-implementation.md)
+* Handoff File: [test-your-ad-mediation-implementation.fcc73189f8b6ce18519250d555033549959f5f2d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-your-ad-mediation-implementation.fcc73189f8b6ce18519250d555033549959f5f2d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [test-your-ad-mediation-implementation.fcc73189f8b6ce18519250d555033549959f5f2d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/test-your-ad-mediation-implementation.fcc73189f8b6ce18519250d555033549959f5f2d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='f32dc28c9b199c11a1932639f49ab4c29d3e1e8f3333'></a> Source: [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps/blob/10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe/windows-apps-src/monetize/troubleshoot-ad-mediation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\troubleshoot-ad-mediation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/troubleshoot-ad-mediation.md)
+* Handoff File: [troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/troubleshoot-ad-mediation.597b8b3549bcf2234c187a1e36f7a3ba47e6bb45.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='4a006cbd1a1f38e2410098d074a35df4a24689633334'></a> Source: [windows-apps-src\monetize\troubleshooting-guides.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/troubleshooting-guides.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\troubleshooting-guides.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/troubleshooting-guides.md)
+* Handoff File: [troubleshooting-guides.5f97f667adeacf709035ce88d3334930b436db1c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/troubleshooting-guides.5f97f667adeacf709035ce88d3334930b436db1c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [troubleshooting-guides.5f97f667adeacf709035ce88d3334930b436db1c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/troubleshooting-guides.5f97f667adeacf709035ce88d3334930b436db1c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a3335'></a> Source: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/ui-and-user-experience-guidelines.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/ui-and-user-experience-guidelines.md)
+* Handoff File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='c0669e35b285ee7dfeda0c039d8455a4237960f53336'></a> Source: [windows-apps-src\monetize\use-ad-mediation-to-maximize-revenue.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/use-ad-mediation-to-maximize-revenue.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\use-ad-mediation-to-maximize-revenue.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/use-ad-mediation-to-maximize-revenue.md)
+* Handoff File: [use-ad-mediation-to-maximize-revenue.95569188b3cf0856748a880597100794398add9e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-ad-mediation-to-maximize-revenue.95569188b3cf0856748a880597100794398add9e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-ad-mediation-to-maximize-revenue.95569188b3cf0856748a880597100794398add9e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/use-ad-mediation-to-maximize-revenue.95569188b3cf0856748a880597100794398add9e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='b1322b74bf1038f05cd1cba275e432e279ed362d3337'></a> Source: [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/use-receipts-to-verify-product-purchases.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\use-receipts-to-verify-product-purchases.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/use-receipts-to-verify-product-purchases.md)
+* Handoff File: [use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/use-receipts-to-verify-product-purchases.cc6b7dd3bbb51b74e7c4d1f715e91e6bbc2c21d4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='43e3155315a9132daa36f592b54af3e943ea3e213338'></a> Source: [windows-apps-src\monetize\using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/using-windows-store-services.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\using-windows-store-services.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/using-windows-store-services.md)
+* Handoff File: [using-windows-store-services.9679faf28fd53235374b8a389379d16ecb3445f9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/using-windows-store-services.9679faf28fd53235374b8a389379d16ecb3445f9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [using-windows-store-services.9679faf28fd53235374b8a389379d16ecb3445f9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/using-windows-store-services.9679faf28fd53235374b8a389379d16ecb3445f9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='291e1c4d707e8987d29ae5840248918543d7d12a3340'></a> Source: [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md)
+* Handoff File: [what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='69dd1a17290b7ffbc14dbc58404868119403f7c03341'></a> Source: [windows-apps-src\monetize\workflows-for-creating-apps-with-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/workflows-for-creating-apps-with-ads.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\workflows-for-creating-apps-with-ads.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/workflows-for-creating-apps-with-ads.md)
+* Handoff File: [workflows-for-creating-apps-with-ads.babf02769eae22094dae6f3cb584bdb1834245eb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/workflows-for-creating-apps-with-ads.babf02769eae22094dae6f3cb584bdb1834245eb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [workflows-for-creating-apps-with-ads.babf02769eae22094dae6f3cb584bdb1834245eb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/workflows-for-creating-apps-with-ads.babf02769eae22094dae6f3cb584bdb1834245eb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='ef9ad8f8056b17793d7ad8230e410e014edf2c953342'></a> Source: [windows-apps-src\monetize\xaml-and-c-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-and-c-troubleshooting-guide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\xaml-and-c-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/xaml-and-c-troubleshooting-guide.md)
+* Handoff File: [xaml-and-c-troubleshooting-guide.2e422f45e1164d120daa3b2de25dc3d1d9b4fa17.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-and-c-troubleshooting-guide.2e422f45e1164d120daa3b2de25dc3d1d9b4fa17.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-and-c-troubleshooting-guide.2e422f45e1164d120daa3b2de25dc3d1d9b4fa17.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/xaml-and-c-troubleshooting-guide.2e422f45e1164d120daa3b2de25dc3d1d9b4fa17.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='43d579d2d0a92a8f03f17efa2ec42707357e99f93343'></a> Source: [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-properties-example.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d2585d836357285702e2a9bee8a9265d583ddc2d/windows-apps-src/monetize/xaml-properties-example.md)
+* Handoff File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:18
 * [Back to Top](#report-top)
 
 
