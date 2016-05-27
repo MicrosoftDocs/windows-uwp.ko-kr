@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: 첫 번째 앱 만들기
 description: 생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
@@ -68,6 +69,6 @@ iOS 또는 Android용 개발 경험이 있으세요? [Windows 10으로 앱 포�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

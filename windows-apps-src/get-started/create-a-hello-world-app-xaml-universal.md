@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Hello, world 앱 만들기(XAML)
 description: 이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 "Hello, world" 앱을 만드는 방법을 설명합니다.
@@ -37,7 +38,7 @@ description: 이 자습서에서는 C#과 함께 XAML(Extensible Application Mar
 
    **새 프로젝트** 대화 상자가 나타납니다. 대화 상자의 왼쪽 창에서 표시할 템플릿 유형을 선택할 수 있습니다.
 
-3.  왼쪽 창에서 **설치됨 > 템플릿 > Visual C# > Windows**를 차례로 확장한 후 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
+3.  왼쪽 창에서 **설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows**를 차례로 확장한 후 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
 
    ![새 프로젝트 창 ](images/newproject-cs.png)
 
@@ -138,7 +139,7 @@ namespace HelloWorld
         <TextBlock Text="What' s your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;"/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
@@ -254,7 +255,7 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
     XAML 편집기에서 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 대한 XAML은 다음과 같이 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트 처리기를 선언하도록 업데이트됩니다.
 
 ```xml   
-   <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;" Click="Button_Click"/>
+   <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
 5.  코드 숨김 페이지에서 만든 이벤트 처리기에 코드를 추가합니다. 이 이벤트 처리기에서 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`
@@ -320,6 +321,6 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
 축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
