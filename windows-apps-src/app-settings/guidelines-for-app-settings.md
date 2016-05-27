@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 이 문서에서는 앱 설정을 만들고 표시하기 위한 모범 사례에 대해 설명합니다.
 title: 앱 설정에 대한 지침
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
@@ -10,14 +11,14 @@ template: detail.hbs
 # 앱 설정에 대한 지침
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 앱 설정은 앱의 사용자 지정 가능한 부분이고 앱 설정 페이지 내에 있습니다. 예를 들어 사용자는 뉴스 뷰어 앱의 앱 설정을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있지만, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 모범 사례에 대해 설명합니다.
 
 ![설정 창의 예](images/app-settings.png)
 
-## <span id="Should_I_include_a_settings_page_in_my_app_"> </span> <span id="should_i_include_a_settings_page_in_my_app_"> </span> <span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"> </span>앱에 설정 페이지를 포함해야 하나요?
+## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>앱에 설정 페이지를 포함해야 하나요?
 
 다음은 앱 설정 페이지에 속한 앱 옵션의 예입니다. 
 
@@ -27,7 +28,7 @@ template: detail.hbs
 
 일반적인 앱 워크플로에 속하는 명령(예: 미술 앱에서 브러시 크기 변경)은 설정 창에 있으면 안 됩니다. 명령 배치에 대한 자세한 내용은 [명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)을 참조하세요.
 
-## <span id="general_principles"> </span> <span id="GENERAL_PRINCIPLES"> </span>일반 권장 사항
+## <span id="general_principles"></span><span id="GENERAL_PRINCIPLES"></span>일반 권장 사항
 
 
 -   설정 페이지를 간단하게 유지하고 이진(켜기/끄기) 컨트롤을 사용합니다. [토글 스위치](../controls-and-patterns/toggles.md)는 일반적으로 이진 설정에 가장 적합한 컨트롤입니다.
@@ -37,10 +38,10 @@ template: detail.hbs
 -   사용자가 설정을 변경할 경우 변경 내용이 앱에 즉시 반영되어야 합니다.
 -   일반적인 앱 워크플로에 포함된 명령은 포함하지 마세요.
 
-## <span id="Entry_point"> </span> <span id="entry_point"> </span> <span id="ENTRY_POINT"> </span>진입점
+## <span id="Entry_point"></span><span id="entry_point"></span><span id="ENTRY_POINT"></span>진입점
 
 
-사용자가 앱 설정 페이지에 액세스하는 방법은 앱 레이아웃을 기반으로 해야 합니다.
+사용자가 앱 설정 페이지에 액세스하는 방법은 앱 레이아웃에 기반을 두어야 합니다.
 
 **탐색 창**
 
@@ -66,7 +67,7 @@ template: detail.hbs
 
 앱 설정 진입점을 마스터-세부 창 내에 깊이 포함하는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
 
-## <span id="Layout"> </span> <span id="layout"> </span> <span id="LAYOUT"> </span>레이아웃
+## <span id="Layout"></span><span id="layout"></span><span id="LAYOUT"></span>레이아웃
 
 
 데스크톱 및 모바일에서 모두 앱 설정 창은 전체 화면으로 열리고 전체 창을 채워야 합니다. 앱 설정 메뉴가 최대 4개의 최상위 그룹 사이에 있으면 이들 그룹은 한 열씩 아래로 계단식 배열되어야 합니다.
@@ -79,7 +80,7 @@ template: detail.hbs
 
 ![휴대폰의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-mobile.png)
 
-## <span id="_About__section_and__Give_feedback__button"> </span> <span id="_about__section_and__give_feedback__button"> </span> <span id="_ABOUT__SECTION_AND__GIVE_FEEDBACK__BUTTON"> </span>"정보" 섹션 및 "피드백 보내기" 단추
+## <span id="_About__section_and__Give_feedback__button"></span><span id="_about__section_and__give_feedback__button"></span><span id="_ABOUT__SECTION_AND__GIVE_FEEDBACK__BUTTON"></span>"정보" 섹션 및 "피드백 보내기" 단추
 
 
 앱에 "이 앱에 대한 정보" 섹션이 필요하면 해당 섹션에 대한 전용 앱 설정 페이지를 만듭니다. "피드백 보내기" 단추가 필요하면 "이 앱에 대한 정보" 페이지의 맨 아래에 단추를 배치합니다.
@@ -88,10 +89,10 @@ template: detail.hbs
 
 !["피드백 제공" 단추가 있는 "이 앱에 대한 정보" 섹션](images/appsettings-about.png)
 
-## <span id="dos_and_donts"> </span> <span id="DOS_AND_DONTS"> </span>권장 사항
+## <span id="dos_and_donts"></span><span id="DOS_AND_DONTS"></span>권장 사항
 
 
-## <span id="add_entry_points"> </span> <span id="ADD_ENTRY_POINTS"> </span>앱 설정 페이지 콘텐츠
+## <span id="add_entry_points"></span><span id="ADD_ENTRY_POINTS"></span>앱 설정 페이지 콘텐츠
 
 
 앱 설정 페이지에 포함할 항목 목록이 있으면 다음 지침을 고려해 보세요.
@@ -104,7 +105,7 @@ template: detail.hbs
 -   더 일반적인 설정이 각각 자체 진입점을 가질 수 있도록 덜 사용하는 설정을 단일 진입점으로 결합합니다. "정보" 설정에는 정보만 포함된 콘텐츠나 링크를 배치합니다.
 -   "사용 권한" 창에서 기능을 중복하지 마세요. 이 창은 Windows에서 기본적으로 제공되며 수정할 수 없습니다.
 
-## <span id="add_settings_to_flyouts"> </span> <span id="ADD_SETTINGS_TO_FLYOUTS"> </span>설정 플라이아웃에 설정 콘텐츠 추가
+## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> 설정 플라이아웃에 설정 콘텐츠 추가
 
 
 -   필요한 경우 스크롤 가능한 단일 열에 위쪽에서 아래쪽으로 콘텐츠를 제공합니다. 스크롤을 화면 높이의 최대 두 배로 제한합니다.
@@ -124,18 +125,18 @@ template: detail.hbs
 
 \[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows�10과 관련된 정보가 있습니다. Windows�8.1 참고 자료는 [Windows�8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 * [명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
-* [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
-**개발자용(XAML)**
+* [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469) 
+           **개발자용(XAML)**
 * [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-�
+* [
+            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) �
 
 �
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 
