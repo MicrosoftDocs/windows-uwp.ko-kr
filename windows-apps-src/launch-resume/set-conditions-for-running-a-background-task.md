@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업 실행 조건 설정
 description: 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다.
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
@@ -90,102 +91,99 @@ ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
-> // 
+> //
 > // Set up the background task.
-> // 
-> 
+> //
+>
 > TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
-> 
+>
 > var recurringTaskBuilder = new BackgroundTaskBuilder();
-> 
+>
 > recurringTaskBuilder.Name           = "Hourly background task";
 > recurringTaskBuilder.TaskEntryPoint = "Tasks.ExampleBackgroundTaskClass";
 > recurringTaskBuilder.SetTrigger(hourlyTrigger);
-> 
-> // 
+>
+> //
 > // Begin adding conditions.
-> // 
-> 
+> //
+>
 > SystemCondition userCondition     = new SystemCondition(SystemConditionType.UserPresent);
 > SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
-> 
+>
 > recurringTaskBuilder.AddCondition(userCondition);
 > recurringTaskBuilder.AddCondition(internetCondition);
-> 
-> // 
+>
+> //
 > // Done adding conditions, now register the background task.
-> // 
-> 
+> //
+>
 > BackgroundTaskRegistration task = recurringTaskBuilder.Register();
-> ```
-> ```cpp
-> // 
+```
+```cpp
+> //
 > // Set up the background task.
-> // 
-> 
+> //
+>
 > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
-> 
+>
 > auto recurringTaskBuilder = ref new BackgroundTaskBuilder();
-> 
+>
 > recurringTaskBuilder->Name           = "Hourly background task";
 > recurringTaskBuilder->TaskEntryPoint = "Tasks.ExampleBackgroundTaskClass";
 > recurringTaskBuilder->SetTrigger(hourlyTrigger);
-> 
-> // 
+>
+> //
 > // Begin adding conditions.
-> // 
-> 
+> //
+>
 > SystemCondition ^ userCondition     = ref new SystemCondition(SystemConditionType::UserPresent);
 > SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
-> 
+>
 > recurringTaskBuilder->AddCondition(userCondition);
 > recurringTaskBuilder->AddCondition(internetCondition);
-> 
-> // 
+>
+> //
 > // Done adding conditions, now register the background task.
-> // 
-> 
+> //
+>
 > BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
-> ```
+```
 
-## Remarks
+## 설명
 
 
-> **Note**  Chose the right conditions for your background task so that it only runs when it's needed, and doesn't run when it won't work. See [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) for descriptions of the different background task conditions.
+> **참고** 백그라운드 작업이 필요한 경우에만 실행되고 작업이 실패하는 경우에는 실행되지 않도록 백그라운드 작업에 적합한 조건을 선택합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
-> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
-## Related topics
+## 관련 항목
 
 
 ****
 
-* [Create and register a background task](create-and-register-a-background-task.md)
-* [Declare background tasks in the application manifest](declare-background-tasks-in-the-application-manifest.md)
-* [Handle a cancelled background task](handle-a-cancelled-background-task.md)
-* [Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)
-* [Register a background task](register-a-background-task.md)
-* [Respond to system events with background tasks](respond-to-system-events-with-background-tasks.md)
-* [Update a live tile from a background task](update-a-live-tile-from-a-background-task.md)
-* [Use a maintenance trigger](use-a-maintenance-trigger.md)
-* [Run a background task on a timer](run-a-background-task-on-a-timer-.md)
-* [Guidelines for background tasks](guidelines-for-background-tasks.md)
+* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업 등록](register-a-background-task.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
+* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 
 ****
 
-* [Debug a background task](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in Windows Store apps (when debugging)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
+* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
  
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 앱 활성화 처리
 description: OnLaunched 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
@@ -26,7 +27,7 @@ ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 
 응용 프로그램용 클래스를 정의합니다.
 
-```xaml
+```xml
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              x:Class="AppName.App" >
@@ -186,6 +187,6 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

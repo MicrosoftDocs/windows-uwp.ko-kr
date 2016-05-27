@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업으로 시스템 이벤트에 응답
 description: SystemTrigger 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
@@ -109,6 +110,6 @@ ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

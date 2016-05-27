@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업에서 센서 및 디바이스에 액세스
 description: DeviceUseTrigger를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 디바이스에 액세스할 수 있습니다.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
@@ -42,7 +43,7 @@ ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 | 유선 네트워크    | ![이 프로토콜은 지원됩니다.](images/ap-tools.png)                                                                                                                                            |
 | Wi-Fi 네트워크    | ![이 프로토콜은 지원됩니다.](images/ap-tools.png)                                                                                                                                            |
 | IDeviceIOControl | ![deviceservicingtrigger는 ideviceiocontrol을 지원함](images/ap-tools.png)                                                                                                                       |
-| 센서 API      | ![deviceservicingtrigger는 유니버설 센서 API를 지원함](images/ap-tools.png)([유니버설 디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 센서로 제한됨) |
+| 센서 API      | ![deviceservicingtrigger는 유니버설 센서 API를 지원함](images/ap-tools.png)([유니버설 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 센서로 제한됨) |
 
  
 
@@ -201,6 +202,6 @@ Windows는 앱이 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/wind
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

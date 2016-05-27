@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업에서 라이브 타일 업데이트
 description: 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
 Search.SourceType: Video
@@ -267,6 +268,6 @@ namespace ContosoApp
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

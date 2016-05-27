@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 결과에 대한 앱 실행
 description: 다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 결과에 의한 앱 시작이라고 합니다.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
@@ -34,7 +35,7 @@ Windows 10의 새로운 앱 간 통신 API를 통해 Windows 앱과 Windows 웹�
 
 이 프로토콜 확장 예에서 앱은 결과를 위해서만 시작할 수 있습니다. 여기서는 아래 논의된 **OnActivated** 메서드의 내부 논리를 간소화합니다. 앱을 활성화할 수 있는 다른 방법이 아닌 결과를 위해 시작된 경우만 처리하면 되기 때문입니다.
 
-```xaml
+```xml
 <Applications>
    <Application ...>
 
@@ -156,8 +157,8 @@ async Task<string> LaunchAppForResults()
 
     string theResult = "";
     LaunchUriResult result = await Windows.System.Launcher.LaunchUriForResultsAsync(testAppUri, options, inputData);
-    if (result.Status == LaunchUriStatus.Success &amp;&amp;
-        result.Result != null &amp;&amp;
+    if (result.Status == LaunchUriStatus.Success &&
+        result.Result != null &&
         result.Result.ContainsKey("ReturnedData"))
     {
         ValueSet theValues = result.Result;
@@ -204,6 +205,6 @@ inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

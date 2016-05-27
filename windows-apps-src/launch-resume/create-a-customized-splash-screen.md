@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 시작 화면을 더 오래 표시
 description: 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다.
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
@@ -60,7 +61,7 @@ ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 및 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 요소와 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 컨트롤을 정의합니다.
 
-```xaml
+```xml
     <Grid Background="#464646">
         <Canvas>
             <Image x:Name="extendedSplashImage" Source="Assets/SplashScreen.png"/>
@@ -125,7 +126,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
         if (splash != null)
         {
             // Register an event handler to be executed when the splash screen has been dismissed.
-            splash.Dismissed += new TypedEventHandler&lt;SplashScreen, Object&gt;(DismissedEventHandler);
+            splash.Dismissed += new TypedEventHandler<SplashScreen, Object>(DismissedEventHandler);
 
             // Retrieve the window coordinates of the splash screen image.
             splashImageRect = splash.ImageLocation;
@@ -173,7 +174,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
     ExtendedSplash.xaml.cs에서 `dismissed` 클래스 변수를 true로 설정하여 [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764) 이벤트가 발생할 때 응답합니다. 앱에 설치 작업이 있는 경우 이 이벤트 처리기에 추가합니다.
 
     ```cs
-    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
     void DismissedEventHandler(SplashScreen sender, object e)
     {
         dismissed = true;
@@ -227,7 +228,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
     {
         if (loadState)
         {
-             // code to load your app&#39;s state here 
+             // code to load your app's state here 
         }
     }
     ```
@@ -266,7 +267,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 
 ExtendedSplash.xaml: 이 예제에는 로드할 앱 리소스가 없으므로 `DismissSplash` 단추가 포함되어 있습니다. 앱이 리소스 로드 또는 초기 UI 준비를 완료하면 앱에서 연장된 시작 화면을 자동으로 닫습니다.
 
-```xaml
+```xml
 <Page
     x:Class="SplashScreenExample.ExtendedSplash"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -390,7 +391,7 @@ namespace SplashScreenExample
             }
         }
 
-        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
         void DismissedEventHandler(SplashScreen sender, object e)
         {
             dismissed = true;
@@ -497,7 +498,7 @@ namespace SplashScreenExample
 
             if (rootFrame.Content == null)
             {
-                // When the navigation stack isn&#39;t restored navigate to the first page,
+                // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
@@ -553,6 +554,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: 자동 실행을 사용한 자동 시작
-description: 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다.
+description: 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ---
 
-# <span id="dev_launch_resume.auto-launching_with_autoplay"> </span>자동 실행을 사용한 자동 시작
+# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -61,9 +62,9 @@ ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 
 ### 2단계: XAML UI 추가
 
-MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; section 섹션에 추가합니다.
+MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
-```xaml
+```xml
 <TextBlock FontSize="18">File List</TextBlock>
 <TextBlock x:Name="FilesBlock" HorizontalAlignment="Left" TextWrapping="Wrap" 
            VerticalAlignment="Top" Margin="0,20,0,0" Height="280" Width="240" />
@@ -254,9 +255,9 @@ Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [*
 
 ### 3단계: XAML UI 추가
 
-MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; section 섹션에 추가합니다.
+MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical" Margin="10,0,-10,0">
     <TextBlock FontSize="24">Device Information</TextBlock>
     <StackPanel Orientation="Horizontal">
@@ -450,9 +451,9 @@ CustomEvent=AutoPlayCustomEventQuickstart
 
 ### 3단계: XAML UI 추가
 
-MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; section 섹션에 추가합니다.
+MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical">
     <TextBlock FontSize="28" Margin="10,0,800,0">Files</TextBlock>
     <TextBlock x:Name="FilesBlock" FontSize="22" Height="600" Margin="10,0,800,0" />
@@ -578,6 +579,6 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

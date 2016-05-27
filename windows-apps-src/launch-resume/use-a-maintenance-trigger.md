@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 유지 관리 트리거 사용
 description: 디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
@@ -120,6 +121,6 @@ ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

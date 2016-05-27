@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업 만들기 및 등록
 description: 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
@@ -232,8 +233,7 @@ ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 
     다음 코드는 백그라운드 작업을 등록하고 결과를 저장합니다.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     BackgroundTaskRegistration task = builder.Register();
 >     ```
 >     ```cpp
@@ -253,8 +253,7 @@ ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 
     다음 샘플 코드에서는 백그라운드 작업 완료를 인식하고 메시지 문자열을 가져오는 예제 UI 업데이트 메서드를 호출합니다.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
 >     {
 >         var settings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -281,12 +280,11 @@ ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 
     다음 샘플 코드에서는 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)를 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)에 추가합니다.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
 >     ```
 >     ```cpp
->     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &amp;ExampleBackgroundTask::OnCompleted);
+>     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &ExampleBackgroundTask::OnCompleted);
 >     ```
 
 ## 앱 매니페스트에서 앱이 백그라운드 작업을 사용한다고 선언
@@ -303,7 +301,7 @@ ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 
     백그라운드 작업을 등록하기 위해 다음 Extensions 요소가 Package.appxmanifest 파일에 추가됩니다.
 
-    ```xaml
+    ```xml
     <Extensions>
       <Extension Category="windows.backgroundTasks" EntryPoint="RuntimeComponent1.ExampleBackgroundTask">
         <BackgroundTasks>
@@ -359,6 +357,6 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

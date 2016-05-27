@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: URI 활성화 처리
 description: 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다.
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
@@ -177,6 +178,6 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 응용 프로그램 매니페스트에서 백그라운드 작업 선언
 description: 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
@@ -91,16 +92,16 @@ ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
                     <Task Type="pushNotification" />
                   </BackgroundTasks>
                 </Extension>
-                ```
+    ```
 
-    > **Note**  Normally, an app will run in a special process called "BackgroundTaskHost.exe". It is possible to add an Executable element to the Extension element, allowing the background task to run in the context of the app. Only use the Executable element with background tasks that require it, such as the [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
+    > **참고** 일반적으로 앱은 “BackgroundTaskHost.exe”라는 특수 프로세스에서 실행됩니다. Extension 요소에 Executable 요소를 추가하여 백그라운드 작업이 앱의 컨텍스트에서 실행되도록 할 수 있습니다. 백그라운드 작업에는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 같이 필요한 Executable 요소만 사용하세요.    
 
-## Add Additional Background Task Extensions
+## 백그라운드 작업 실행 추가
 
 
-Repeat step 2 for each additional background task class registered by your app.
+앱에서 등록한 각 추가 백그라운드 작업 클래스에 대해 2단계를 반복합니다.
 
-The following example is the complete Application element from the [background task sample]( http://go.microsoft.com/fwlink/p/?linkid=227509). This shows the use of 2 background task classes with a total of 3 trigger types. Copy the Extensions section of this example, and modify it as needed, to declare background tasks in your application manifest.
+다음 예제는 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509)의 전체 Application 요소입니다. 총 3개의 트리거 유형이 있는 백그라운드 작업 클래스 2개를 사용하는 방법을 보여 줍니다. 응용 프로그램 매니페스트에서 백그라운드 작업을 선언하려면 이 예제의 Extensions 섹션을 복사하고 필요에 따라 수정합니다.
 
 ```xml
 <Applications>
@@ -112,7 +113,7 @@ The following example is the complete Application element from the [background t
           Square150x150Logo="Assets\StoreLogo-sdk.png"
           Square44x44Logo="Assets\SmallTile-sdk.png"
           Description="BackgroundTask"
-          
+
           BackgroundColor="#00b2f0">
           <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\smalltile-Windows-sdk.png" />
             <uap:SplashScreen Image="Assets\Splash-sdk.png" />
@@ -147,14 +148,7 @@ The following example is the complete Application element from the [background t
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 
- 
 
- 
-
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

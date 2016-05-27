@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 앱 일시 중단 처리
 description: 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 알아봅니다.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
@@ -58,7 +59,7 @@ MainPage::MainPage()
 {
    InitializeComponent();
    Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &amp;MainPage::App_Suspending);
+       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
 }
 ```
 
@@ -129,6 +130,6 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

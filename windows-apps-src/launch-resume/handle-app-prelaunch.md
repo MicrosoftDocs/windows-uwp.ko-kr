@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 앱 사전 실행 처리
 description: OnLaunched 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
@@ -59,7 +60,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
             // TODO: This is not a prelaunch activation. Perform operations which
             // assume that the user explicitly launched the app such as updating
             // the online presence of the user on a social network, updating a 
-            // what&#39;s new feed, etc.
+            // what's new feed, etc.
         }
 
         // Place the frame in the current Window
@@ -68,7 +69,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
     if (rootFrame.Content == null)
     {
-        // When the navigation stack isn&#39;t restored navigate to the first page,
+        // When the navigation stack isn't restored navigate to the first page,
         // configuring the new page by passing required information as a navigation parameter
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
     }
@@ -99,7 +100,7 @@ public sealed partial class MainPage : Page
     void WindowVisibilityChangedEventHandler(System.Object sender, Windows.UI.Core.VisibilityChangedEventArgs e)
     {
         // Perform operations that should take place when the application becomes visible rather than 
-        // when it is prelaunched, such as building a what&#39;s new feed 
+        // when it is prelaunched, such as building a what's new feed 
     }
 }
 ```
@@ -115,7 +116,7 @@ public sealed partial class MainPage : Page
     -   성능 영향의 예는 앱이 사전 실행될 때 현재 날씨 정보를 로드하는 대신 사용자가 앱으로 전환하여 이 정보를 검색한 다음 앱이 표시되면 다시 로드하여 해당 정보가 최신 정보인지 확인해야 하는 경우입니다.
 -   앱이 시작되었을 때 라이브 타일을 지우면 VisibilityChanged 이벤트가 발생할 때까지 이를 연기합니다.
 -   앱에 대한 원격 분석으로 일반적인 타일 활성화와 사전 실행된 활성화를 구별하여 문제가 발생한 시나리오를 식별할 수 있습니다.
--   Microsoft Visual Studio 2015 Update 1 및 Windows 10, 버전 1511을 사용하는 경우 **디버그** &gt; **기타 디버그 대상** &gt; **Debug Windows Universal App PreLaunch(Windows 유니버설 앱 사전 실행 디버그)**를 선택하여 Visual Studio 2015에서 앱에 대한 사전 실행을 시뮬레이트할 수 있습니다.
+-   Microsoft Visual Studio 2015 Update 1 및 Windows 10, 버전 1511을 사용하는 경우 **디버그**&gt;**기타 디버그 대상**&gt;**Debug Windows Universal App PreLaunch(Windows 유니버설 앱 사전 실행 디버그)**를 선택하여 Visual Studio 2015에서 앱에 대한 사전 실행을 시뮬레이트할 수 있습니다.
 
 ## 관련 항목
 
@@ -129,6 +130,6 @@ public sealed partial class MainPage : Page
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

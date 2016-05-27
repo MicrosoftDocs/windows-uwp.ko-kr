@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 파일 활성화 처리
 description: 앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다.
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
@@ -38,7 +39,7 @@ ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 | **로고** | 데스크톱 및 **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 파일 형식을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 응용 프로그램의 작은 로고가 사용됩니다. |
 | **정보 팁** | 파일 형식 그룹에 대한 [정보 팁](https://msdn.microsoft.com/library/windows/desktop/cc144152)을 지정합니다. 이 도구 설명 텍스트는 사용자가 이 파일 형식의 아이콘을 가리키면 표시됩니다. |
 | **이름** | 동일한 표시 이름, 로고, 정보 팁 및 편집 플래그를 공유하는 파일 형식 그룹의 이름을 선택합니다. 앱 업데이트 간에 동일하게 유지될 수 있는 그룹 이름을 선택합니다. **참고** 이름은 모두 소문자여야 합니다. |
-| **콘텐츠 형식** | 특정 파일 형식에 대해 **image/jpeg** 같은 MIME 콘텐츠 형식을 지정합니다. **허용된 콘텐츠 형식에 대한 중요 정보: **다음은 예약되거나 금지되어 있기 때문에 패키지 매니페스트에 입력할 수 없는 MIME 콘텐츠 형식의 사전순 목록입니다. **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **콘텐츠 형식** | 특정 파일 형식에 대해 **image/jpeg** 같은 MIME 콘텐츠 형식을 지정합니다. **허용된 콘텐츠 형식에 대한 중요 정보:** 다음은 예약되거나 금지되어 있기 때문에 패키지 매니페스트에 입력할 수 없는 MIME 콘텐츠 형식의 사전순 목록입니다. **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
 | **파일 형식** | 앞에 마침표를 추가하여 등록할 파일 형식을 지정합니다(예제: ".jpeg"). **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 기본 제공 앱의 파일 형식에 대한 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
 
 2.  **이름**으로 `alsdk`를 입력합니다.
@@ -72,7 +73,7 @@ ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 -   시작 화면의 검색 결과
 
 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 예제 아이콘은 [연결 시작 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620490)를 참조하세요.
-![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다](images/seviewofimages.png).
+![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
 
 ## 3단계: 활성화된 이벤트 처리
 
@@ -152,6 +153,6 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 앱 서비스 만들기 및 사용
 description: 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법을 알아봅니다.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
@@ -47,7 +48,7 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 ## 앱 서비스 만들기
 
 
-1.  앱 서비스는 백그라운드 작업으로 구현됩니다. 따라서 포그라운드 응용 프로그램이 백그라운드 작업 방식으로 작업을 수행하도록 다른 응용 프로그램에서 앱 서비스를 호출할 수 있습니다. MyAppService라는 솔루션에 새 Windows 런타임 구성 요소 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). ( **새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Windows 런타임 구성 요소(Windows Universal 선택)**
+1.  앱 서비스는 백그라운드 작업으로 구현됩니다. 따라서 포그라운드 응용 프로그램이 백그라운드 작업 방식으로 작업을 수행하도록 다른 응용 프로그램에서 앱 서비스를 호출할 수 있습니다. MyAppService라는 솔루션에 새 Windows 런타임 구성 요소 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Windows 런타임 구성 요소(Windows Universal)** 선택)
 2.  AppServiceProvider 프로젝트에서 MyAppService 프로젝트에 참조를 추가합니다.
 3.  MyappService 프로젝트에서 다음 **using** 문을 Class1.cs의 맨 위에 추가합니다.
     ```cs
@@ -68,7 +69,7 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-            this.backgroundTaskDeferral = taskInstance.GetDeferral(); // Get a deferral so that the service isn&#39;t terminated.
+            this.backgroundTaskDeferral = taskInstance.GetDeferral(); // Get a deferral so that the service isn't terminated.
             taskInstance.Canceled += OnTaskCanceled; // Associate a cancellation handler with the background task.
 
             // Retrieve the app service connection and set up a listener for incoming app service requests.
@@ -107,7 +108,7 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
 {
     // Get a deferral because we use an awaitable API below to respond to the message
-    // and we don&#39;t want this call to get cancelled while we are waiting.
+    // and we don't want this call to get cancelled while we are waiting.
     var messageDeferral = args.GetDeferral();
 
     ValueSet message = args.Request.Message;
@@ -116,8 +117,8 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
     string command = message["Command"] as string;
     int? inventoryIndex = message["ID"] as int?;
 
-    if ( inventoryIndex.HasValue &amp;&amp;
-         inventoryIndex.Value >= 0 &amp;&amp;
+    if ( inventoryIndex.HasValue &&
+         inventoryIndex.Value >= 0 &&
          inventoryIndex.Value < inventoryItems.GetLength(0))
     {
         switch (command)
@@ -149,7 +150,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
     }
 
     await args.Request.SendResponseAsync(returnData); // Return the data to the caller.
-    messageDeferral.Complete(); // Complete the deferral so that the platform knows that we&#39;re done responding to the app service call.
+    messageDeferral.Complete(); // Complete the deferral so that the platform knows that we're done responding to the app service call.
 }
 ```
 
@@ -177,7 +178,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 ## 앱 서비스를 호출하는 클라이언트 작성
 
 
-1.  ClientApp이라는 솔루션에 새로운 빈 Windows 유니버설 앱 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). ( **새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)**선택).
+1.  ClientApp이라는 솔루션에 Windows 유니버설 앱 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)** 선택).
 2.  ClientApp 프로젝트에서 다음 **using** 문을 MainPage.xaml.cs의 맨 위에 추가합니다.
     ```cs
     >using Windows.ApplicationModel.AppService;
@@ -196,7 +197,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
         {
             this.inventoryService = new AppServiceConnection();
 
-            // Here, we use the app service name defined in the app service provider&#39;s Package.appxmanifest file in the &lt;Extension&gt; section. 
+            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section. 
             this.inventoryService.AppServiceName = "com.microsoft.inventory";
 
             // Use Windows.ApplicationModel.Package.Current.Id.FamilyName within the app service provider to get this value.
@@ -245,49 +246,50 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
     }
     ```
 
-    Replace the package family name in the line `this.inventoryService.PackageFamilyName = "replace with the package family name";` with the package family name of the **AppServiceProvider** project that you obtained in \[Step 5: Deploy the service app and get the package family name\].
+    `this.inventoryService.PackageFamilyName = "replace with the package family name";` 줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기]에서 가져온 **AppServiceProvider** 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
 
-    The code first establishes a connection with the app service. The connection will remain open until you dispose **this.inventoryService**. The app service name must match the **AppService Name** attribute that you added to the AppServiceProvider project's Package.appxmanifest file. In this example, it is `<uap:AppService Name="com.microsoft.inventory"/>`.
+    코드는 먼저 앱 서비스와 연결합니다. 연결은 **this.inventoryService**를 삭제할 때까지 열린 상태로 유지됩니다. 앱 서비스 이름은 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에 추가한 **AppService 이름** 특성과 일치해야 합니다. 이 예제에서는 `<uap:AppService Name="com.microsoft.inventory"/>`입니다.
 
-    A [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) named **message** is created to specify the command that we want to send to the app service. The example app service expects a command to indicate which of two actions to take. We get the index from the textbox in the ClientApp, and then call the service with the "Item" command to get the description of the item. Then, we make the call with the "Price" command to get the item's price. The button text is set to the result.
+    앱 서비스에 보낼 명령을 지정할 수 있도록 **message**라는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)이 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. ClientApp의 텍스트 상자에서 인덱스를 가져온 다음 항목 설명을 가져오도록 “Item” 명령을 사용하여 서비스를 호출합니다. 그런 다음 항목 가격을 가져오도록 “Price” 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
 
-    Because [**AppServiceResponseStatus**](https://msdn.microsoft.com/library/windows/apps/dn921724) only indicates whether the operating system was able to connect the call to the app service, we check the "Status" key in the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) we receive from the app service to ensure that it was able to fulfill the request.
+    [
+            **AppServiceResponseStatus**](https://msdn.microsoft.com/library/windows/apps/dn921724)는 운영 체제에서 앱 서비스에 호출을 연결할 수 있었는지 여부만 나타내므로 앱 서비스에서 수신한 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)의 "Status" 키를 확인하여 요청을 수행할 수 있었는지 확인합니다.
 
-6.  In Visual Studio, set the ClientApp project to be the startup project in the Solution Explorer window and run the solution. Enter the number 1 into the text box and click the button. You should get "Chair : Price = 88.99" back from the service.
+6.  Visual Studio의 솔루션 탐색기 창에서 ClientApp 프로젝트를 시작 프로젝트로 설정한 다음 솔루션을 실행합니다. 입력란에 숫자 1을 입력하고 단추를 클릭합니다. 서비스에서 “의자 : 가격 = 88.99”가 반환되어야 합니다.
 
-    ![sample app displaying chair price=88.99](images/appserviceclientapp.png)
+    ![의자 가격=88.99를 표시하는 샘플 앱](images/appserviceclientapp.png)
 
-If the app service call fails, check the following in the ClientApp:
+앱 서비스 호출에 실패하면 ClientApp에서 다음을 확인합니다.
 
-1.  Verify that the package family name assigned to the inventory service connection matches the package family name of the AppServiceProvider app. See: **button\_Click()**`this.inventoryService.PackageFamilyName = "...";`).
-2.  In **button\_Click()**, verify that the app service name that is assigned to the inventory service connection matches the app service name in the AppServiceProvider's Package.appxmanifest file. See: `this.inventoryService.AppServiceName = "com.microsoft.inventory";`.
-3.  Ensure that the AppServiceProvider app has been deployed (In the Solution Explorer, right-click the solution and choose **Deploy**).
+1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. **button\_Click()**`this.inventoryService.PackageFamilyName = "...";`을 참조하세요.
+2.  **button\_Click()**에서 인벤토리 서비스 연결에 할당된 앱 서비스 이름이 AppServiceProvider의 Package.appxmanifest 파일에 있는 앱 서비스 이름과 일치하는지 확인합니다. `this.inventoryService.AppServiceName = "com.microsoft.inventory";`를 참조하세요.
+3.  AppServiceProvider 앱이 배포되었는지 확인합니다(솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **배포** 선택).
 
-## Debug the app service
-
-
-1.  Ensure that the entire solution is deployed before debugging because the app service provider app must be deployed before the service can be called. (In Visual Studio, **Build &gt; Deploy Solution**).
-2.  In the Solution Explorer, right-click the AppServiceProvider project and choose **Properties**. From the **Debug** tab, change the **Start action** to **Do not launch, but debug my code when it starts**.
-3.  In the MyAppService project, in the Class1.cs file, set a breakpoint in OnRequestReceived().
-4.  Set the AppServiceProvider project to be the startup project and press F5.
-5.  Start ClientApp from the Start menu (not from Visual Studio).
-6.  Enter the number 1 into the text box and press the button. The debugger will stop in the app service call on the breakpoint in your app service.
-
-## Debug the client
+## 앱 서비스 디버그
 
 
-1.  Follow the instructions in the preceding step to debug the app service.
-2.  Launch ClientApp from the Start menu.
-3.  Attach the debugger to the ClientApp.exe process (not the ApplicationFrameHost.exe process). (In Visual Studio, choose **Debug &gt; Attach to Process...**.)
-4.  In the ClientApp project, set a breakpoint in **button\_Click()**.
-5.  The breakpoints in both the client and the app service will now be hit when you enter the number 1 into the text box of the ClientApp and click the button.
+1.  앱 서비스 공급자 앱을 배포해야 서비스를 호출할 수 있으므로 디버깅 전에 전체 솔루션이 배포되도록 합니다. (Visual Studio에서 **빌드 &gt; 솔루션 배포**).
+2.  솔루션 탐색기에서 AppServiceProvider 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **디버그** 탭에서 **시작 작업**을 **실행하지 않지만 시작되면 내 코드 디버그**로 변경합니다.
+3.  MyAppService 프로젝트의 Class1.cs 파일에서 OnRequestReceived()에 중단점을 설정합니다.
+4.  AppServiceProvider 프로젝트를 시작 프로젝트가 되도록 설정하고 F5를 누릅니다.
+5.  시작 메뉴에서(Visual Studio에서가 아님) ClientApp을 시작합니다.
+6.  입력란에 숫자 1을 입력하고 단추를 누릅니다. 디버거가 앱 서비스의 중단점에서 앱 서비스 호출을 중단합니다.
 
-## Remarks
+## 클라이언트 디버그
 
 
-This example provides a simple introduction to creating an app service and calling it from another app. The key things to note are the creation of a background task to host the app service, the addition of the windows.appservice extension to the app service provider app's Package.appxmanifest file, obtaining the package family name of the app service provider app so that we can connect to it from the client app, and using [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704) to call the service.
+1.  이전 단계의 지침에 따라 앱 서비스를 디버그합니다.
+2.  시작 메뉴에서 ClientApp을 실행합니다.
+3.  ClientApp.exe 프로세스(ApplicationFrameHost.exe 프로세스가 아님)에 디버거를 연결합니다. (Visual Studio에서 **디버그 &gt; 프로세스에 추가...** 선택)
+4.  ClientApp 프로젝트에서 **button_\Click()**에 중단점을 설정합니다.
+5.  ClientApp의 텍스트 상자에 숫자 1을 입력하고 단추를 클릭하면 클라이언트와 앱 서비스 둘 다의 중단점이 적중됩니다.
 
-## Full code for MyAppService
+## 설명
+
+
+이 예제에서는 앱 서비스를 만들고 다른 앱에서 이 앱을 호출하는 데 관해 간단한 소개합니다. 참고해야 할 사항은 앱 서비스를 호스트하도록 백그라운드 작업을 만들고 windows.appservice 확장 기능을 앱 서비스 공급자 앱의 Package.appxmanifest 파일에 추가하여, 클라이언트 앱에서 연결할 수 있도록 앱 서비스 공급자 앱의 패키지 패밀리 이름을 확보하고 [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704)을 사용하여 서비스를 호출하는 것입니다.
+
+## MyAppService의 전체 코드
 
 
 ```cs
@@ -307,7 +309,7 @@ namespace MyAppService
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-            this.backgroundTaskDeferral = taskInstance.GetDeferral(); // Get a deferral so that the service isn&#39;t terminated.
+            this.backgroundTaskDeferral = taskInstance.GetDeferral(); // Get a deferral so that the service isn't terminated.
             taskInstance.Canceled += OnTaskCanceled; // Associate a cancellation handler with the background task.
 
             // Retrieve the app service connection and set up a listener for incoming app service requests.
@@ -319,7 +321,7 @@ namespace MyAppService
         private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
         {
             // Get a deferral because we use an awaitable API below to respond to the message
-            // and we don&#39;t want this call to get cancelled while we are waiting.
+            // and we don't want this call to get cancelled while we are waiting.
             var messageDeferral = args.GetDeferral();
 
             ValueSet message = args.Request.Message;
@@ -328,8 +330,8 @@ namespace MyAppService
             string command = message["Command"] as string;
             int? inventoryIndex = message["ID"] as int?;
 
-            if (inventoryIndex.HasValue &amp;&amp;
-                 inventoryIndex.Value >= 0 &amp;&amp;
+            if (inventoryIndex.HasValue &&
+                 inventoryIndex.Value >= 0 &&
                  inventoryIndex.Value < inventoryItems.GetLength(0))
             {
                 switch (command)
@@ -361,7 +363,7 @@ namespace MyAppService
             }
 
             await args.Request.SendResponseAsync(returnData); // Return the data to the caller.
-            messageDeferral.Complete(); // Complete the deferral so that the platform knows that we&#39;re done responding to the app service call.
+            messageDeferral.Complete(); // Complete the deferral so that the platform knows that we're done responding to the app service call.
         }
 
 
@@ -390,6 +392,6 @@ namespace MyAppService
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

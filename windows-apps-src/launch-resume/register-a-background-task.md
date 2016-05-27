@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 백그라운드 작업 등록
 description: 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
@@ -42,7 +43,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >                                                 IBackgroundCondition condition)
 > {
 >     
->     // We’ll add code to this function in subsequent steps.
+>     // We'll add code to this function in subsequent steps.
 > 
 > }
 > ```
@@ -54,7 +55,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >                                              IBackgroundCondition ^ condition)
 > {
 >     
->     // We’ll add code to this function in subsequent steps.
+>     // We'll add code to this function in subsequent steps.
 > 
 > }
 > ```
@@ -95,7 +96,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >         }
 >     }
 >     
->     // We’ll register the task in the next step.
+>     // We'll register the task in the next step.
 > }
 > ```
 > ```cpp
@@ -128,7 +129,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >         hascur = iter->MoveNext();
 >     }
 >     
->     // We’ll register the task in the next step.
+>     // We'll register the task in the next step.
 > }
 > ```
 
@@ -394,6 +395,6 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

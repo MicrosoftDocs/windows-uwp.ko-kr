@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: 타이머에 따라 백그라운드 작업 실행
 description: 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
@@ -36,7 +37,7 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 
      
 
-    For example, this trigger will cause a background task to run once an hour:
+    예를 들어 다음 트리거는 백그라운드 작업을 한 시간에 한 번 실행합니다.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -84,14 +85,14 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
-    > string entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > string taskName   = “Example hourly background task”;
+    > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > string taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
-    > String ^ entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > String ^ taskName   = “Example hourly background task”;
+    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > String ^ taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
@@ -131,6 +132,6 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
