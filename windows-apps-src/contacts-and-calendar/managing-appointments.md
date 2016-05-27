@@ -1,4 +1,5 @@
 ---
+author: Xansky
 description: Windows.ApplicationModel.Appointments 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다.
 title: 약속 관리
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
@@ -33,28 +34,28 @@ private void Create-Click(object sender, RoutedEventArgs e)
     // Subject
     appointment.Subject = SubjectTextBox.Text;
 
-    if (appointment.Subject.Length &gt; 255)
+    if (appointment.Subject.Length > 255)
     {
         isAppointmentValid = false;
-        ResultTextBlock.Text = &quot;The subject cannot be greater than 255 characters.&quot;;
+        ResultTextBlock.Text = "The subject cannot be greater than 255 characters.";
     }
 
     // Location
     appointment.Location = LocationTextBox.Text;
 
-    if (appointment.Location.Length &gt; 32768)
+    if (appointment.Location.Length > 32768)
     {
         isAppointmentValid = false;
-        ResultTextBlock.Text = &quot;The location cannot be greater than 32,768 characters.&quot;;
+        ResultTextBlock.Text = "The location cannot be greater than 32,768 characters.";
     }
 
     // Details
     appointment.Details = DetailsTextBox.Text;
 
-    if (appointment.Details.Length &gt; 1073741823)
+    if (appointment.Details.Length > 1073741823)
     {
         isAppointmentValid = false;
-        ResultTextBlock.Text = &quot;The details cannot be greater than 1,073,741,823 characters.&quot;;
+        ResultTextBlock.Text = "The details cannot be greater than 1,073,741,823 characters.";
     }
 
     // Duration
@@ -121,7 +122,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
     }
 
     // Uri
-    if (UriTextBox.Text.Length &gt; 0)
+    if (UriTextBox.Text.Length > 0)
     {
         try
         {
@@ -130,7 +131,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
         catch (Exception)
         {
             isAppointmentValid = false;
-            ResultTextBlock.Text = &quot;The Uri provided is invalid.&quot;;
+            ResultTextBlock.Text = "The Uri provided is invalid.";
         }
     }
 
@@ -143,25 +144,25 @@ private void Create-Click(object sender, RoutedEventArgs e)
         // Organizer Display Name
         organizer.DisplayName = OrganizerDisplayNameTextBox.Text;
 
-        if (organizer.DisplayName.Length &gt; 256)
+        if (organizer.DisplayName.Length > 256)
         {
             isAppointmentValid = false;
-            ResultTextBlock.Text = &quot;The organizer display name cannot be greater than 256 characters.&quot;;
+            ResultTextBlock.Text = "The organizer display name cannot be greater than 256 characters.";
         }
         else
         {
             // Organizer Address (e.g. Email Address)
             organizer.Address = OrganizerAddressTextBox.Text;
 
-            if (organizer.Address.Length &gt; 321)
+            if (organizer.Address.Length > 321)
             {
                 isAppointmentValid = false;
-                ResultTextBlock.Text = &quot;The organizer address cannot be greater than 321 characters.&quot;;
+                ResultTextBlock.Text = "The organizer address cannot be greater than 321 characters.";
             }
             else if (organizer.Address.Length == 0)
             {
                 isAppointmentValid = false;
-                ResultTextBlock.Text = &quot;The organizer address must be greater than 0 characters.&quot;;
+                ResultTextBlock.Text = "The organizer address must be greater than 0 characters.";
             }
             else
             {
@@ -179,25 +180,25 @@ private void Create-Click(object sender, RoutedEventArgs e)
         // Invitee Display Name
         invitee.DisplayName = InviteeDisplayNameTextBox.Text;
 
-        if (invitee.DisplayName.Length &gt; 256)
+        if (invitee.DisplayName.Length > 256)
         {
             isAppointmentValid = false;
-            ResultTextBlock.Text = &quot;The invitee display name cannot be greater than 256 characters.&quot;;
+            ResultTextBlock.Text = "The invitee display name cannot be greater than 256 characters.";
         }
         else
         {
             // Invitee Address (e.g. Email Address)
             invitee.Address = InviteeAddressTextBox.Text;
 
-            if (invitee.Address.Length &gt; 321)
+            if (invitee.Address.Length > 321)
             {
                 isAppointmentValid = false;
-                ResultTextBlock.Text = &quot;The invitee address cannot be greater than 321 characters.&quot;;
+                ResultTextBlock.Text = "The invitee address cannot be greater than 321 characters.";
             }
             else if (invitee.Address.Length == 0)
             {
                 isAppointmentValid = false;
-                ResultTextBlock.Text = &quot;The invitee address must be greater than 0 characters.&quot;;
+                ResultTextBlock.Text = "The invitee address must be greater than 0 characters.";
             }
             else
             {
@@ -242,7 +243,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
     if (isAppointmentValid)
     {
-        ResultTextBlock.Text = &quot;The appointment was created successfully and is valid.&quot;;
+        ResultTextBlock.Text = "The appointment was created successfully and is valid.";
     }
 }
 ```
@@ -292,7 +293,7 @@ private async void Replace-Click(object sender, RoutedEventArgs e)
 
     if (String.IsNullOrEmpty(appointmentIdOfAppointmentToReplace))
     {
-        ResultTextBlock.Text = &quot;The appointment id cannot be empty&quot;;
+        ResultTextBlock.Text = "The appointment id cannot be empty";
     }
     else
     {
@@ -324,11 +325,11 @@ private async void Replace-Click(object sender, RoutedEventArgs e)
 
         if (updatedAppointmentId != String.Empty)
         {
-            ResultTextBlock.Text = &quot;Updated Appointment Id: &quot; + updatedAppointmentId;
+            ResultTextBlock.Text = "Updated Appointment Id: " + updatedAppointmentId;
         }
         else
         {
-            ResultTextBlock.Text = &quot;Appointment not replaced.&quot;;
+            ResultTextBlock.Text = "Appointment not replaced.";
         }
     }
 }
@@ -347,7 +348,7 @@ private async void Remove-Click(object sender, RoutedEventArgs e)
     // The appointment id cannot be null or empty.
     if (String.IsNullOrEmpty(appointmentId))
     {
-        ResultTextBlock.Text = &quot;The appointment id cannot be empty&quot;;
+        ResultTextBlock.Text = "The appointment id cannot be empty";
     }
     else
     {
@@ -374,11 +375,11 @@ private async void Remove-Click(object sender, RoutedEventArgs e)
 
         if (removed)
         {
-            ResultTextBlock.Text = &quot;Appointment removed&quot;;
+            ResultTextBlock.Text = "Appointment removed";
         }
         else
         {
-            ResultTextBlock.Text = &quot;Appointment not removed&quot;;
+            ResultTextBlock.Text = "Appointment not removed";
         }
     }
 }
@@ -395,7 +396,7 @@ private async void Show-Click(object sender, RoutedEventArgs e)
     var dateToShow = new DateTimeOffset(2015, 6, 12, 18, 32, 0, 0, TimeSpan.FromHours(-8));
     var duration = TimeSpan.FromHours(1);
     await Windows.ApplicationModel.Appointments.AppointmentManager.ShowTimeFrameAsync(dateToShow, duration);
-    ResultTextBlock.Text = &quot;The default appointments provider should have appeared on screen.&quot;;
+    ResultTextBlock.Text = "The default appointments provider should have appeared on screen.";
 }
 ```
 
@@ -482,12 +483,12 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
     if (((recurrence.Unit == Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit.Weekly) ||
          (recurrence.Unit == Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit.MonthlyOnDay) ||
-         (recurrence.Unit == Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit.YearlyOnDay)) &amp;&amp;
+         (recurrence.Unit == Windows.ApplicationModel.Appointments.AppointmentRecurrenceUnit.YearlyOnDay)) &&
         (recurrence.DaysOfWeek == Windows.ApplicationModel.Appointments.AppointmentDaysOfWeek.None))
     {
         isRecurrenceValid = false;
-        ResultTextBlock.Text = &quot;The recurrence specified is invalid. For Weekly, MonthlyOnDay or YearlyOnDay recurrence unit values, 
-                                at least one day must be specified.&quot;;
+        ResultTextBlock.Text = "The recurrence specified is invalid. For Weekly, MonthlyOnDay or YearlyOnDay recurrence unit values, " +
+                               "at least one day must be specified.";
     }
 
     // Month of the year
@@ -498,7 +499,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
     if (isRecurrenceValid)
     {
-        ResultTextBlock.Text = &quot;The recurrence specified was created successfully and is valid.&quot;;
+        ResultTextBlock.Text = "The recurrence specified was created successfully and is valid.";
     }
 }
 ```
@@ -516,9 +517,9 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
     appointment.StartTime = DateTime.Now + TimeSpan.FromDays(1);
     appointment.Duration = TimeSpan.FromHours(1);
-    appointment.Location = &quot;Meeting location&quot;;
-    appointment.Subject = &quot;Meeting subject&quot;;
-    appointment.Details = &quot;Meeting description&quot;;
+    appointment.Location = "Meeting location";
+    appointment.Subject = "Meeting subject";
+    appointment.Details = "Meeting description";
     appointment.Reminder = TimeSpan.FromMinutes(15); // Remind me 15 minutes prior
 
 
@@ -530,11 +531,11 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
     
     if (appointmentId != String.Empty)
     {
-        ResultTextBlock.Text = &quot;Appointment Id: &quot; + appointmentId;
+        ResultTextBlock.Text = "Appointment Id: " + appointmentId;
     }
     else
     {
-        ResultTextBlock.Text = &quot;Appointment not added.&quot;;
+        ResultTextBlock.Text = "Appointment not added.";
     }
 }
 ```
@@ -579,6 +580,6 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
