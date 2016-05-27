@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: 데이터 액세스
 description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱에서 개체 관계형 매핑을 사용하는 방법과 디바이스의 개인 데이터베이스에 데이터를 저장하는 방법에 대해 설명합니다.
@@ -18,6 +19,6 @@ SQLite는 UWP SDK에 포함되어 있습니다. Entity Framework 7은 UWP 앱에
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

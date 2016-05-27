@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
 description: EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터로 작업할 수 있는 개체 관계형 매퍼입니다.
 title: C# 앱용 SQLite를 사용하는 Entity Framework 7
@@ -23,6 +24,6 @@ EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
