@@ -1,7 +1,8 @@
 ---
+author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
-title: 디바이스 기능 사용
-description: 이 자습서에서는 Microsoft Visual Studio에서 디바이스 기능을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다.
+title: 장치 기능 사용
+description: 이 자습서에서는 Microsoft Visual Studio에서 디바이스 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다.
 ---
 # 디바이스 기능 사용
 
@@ -16,7 +17,7 @@ description: 이 자습서에서는 Microsoft Visual Studio에서 디바이스 �
 Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 매니페스트에 지정해야 합니다. Visual Studio에서 [매니페스트 디자이너](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx)를 사용하여 대부분의 접근 권한 값을 선언할 수 있으며, [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법(수동)](https://msdn.microsoft.com/library/windows/apps/Dn263092)에 설명된 대로 수동으로 해당 접근 권한 값을 추가할 수 있습니다. 이 자습서에서는 매니페스트 디자이너를 사용한다고 가정합니다.
 
 **참고**  
-프린터, 스캐너 및 센터와 같은 일부 장치 유형은 앱 패키지 매니페스트에 선언할 필요가 없습니다.
+프린터, 스캐너 및 센터와 같은 일부 디바이스 유형은 앱 패키지 매니페스트에 선언할 필요가 없습니다.
 
 -   Visual Studio 솔루션 탐색기에서 패키지 매니페스트 파일 **Package.appxmanifest**을 두 번 클릭합니다.
 -   **접근 권한 값** 탭을 엽니다.
@@ -24,7 +25,7 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 
 | 장치 접근 권한 값 | 매니페스트 디자이너 | 설명 |
 |-------------------|-------------------|-------------|    
-| 모든 Joyn | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 네트워크의 AllJoyn 사용 앱 및 장치가 서로를 검색하고 상호 작용할 수 있도록 허용합니다. [
+| AllJoyn | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 네트워크의 AllJoyn 사용 앱 및 장치가 서로를 검색하고 상호 작용할 수 있도록 허용합니다. [
             **Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) 네임스페이스의 API에 액세스하는 모든 앱은 이 접근 권한 값을 사용해야 합니다. |
 | 차단된 채팅 메시지 | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 앱에서 스팸 필터 앱에 의해 차단된 SMS 및 MMS 메시지를 읽을 수 있도록 허용합니다. |
 | 채팅 메시지 액세스 | ![매니페스트 디자이너에서 사용 가능](images/ap-tools.png) | 앱에서 문자 메시지를 읽고 삭제할 수 있도록 허용합니다. 또한 앱에서 시스템 데이터 저장소의 채팅 메시지를 저장할 수 있도록 허용합니다. |
@@ -59,7 +60,7 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 
 | 장치 접근 권한 값        | API             | 
 |--------------------------|-----------------|
-| 모든 Joyn                 | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
+| AllJoyn                  | [**Windows.Devices.AllJoyn**](https://msdn.microsoft.com/library/windows/apps/Dn894971) | 
 | 차단된 채팅 메시지    | [**Windows.ApplicationModel.CommunicationBlocking**](https://msdn.microsoft.com/library/windows/apps/Dn974207) | 
 | 위치                 | 자세한 내용은 [지도 및 위치 개요](https://msdn.microsoft.com/library/windows/apps/Mt219699)를 참조하세요. | 
 | 전화 통화               | [**Windows.ApplicationModel.Calls**](https://msdn.microsoft.com/library/windows/apps/Dn297266) | 
@@ -73,6 +74,6 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

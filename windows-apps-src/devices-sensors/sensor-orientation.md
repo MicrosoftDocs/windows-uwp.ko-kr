@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: 센서 방향
 description: Accelerometer, Gyrometer, Compass, Inclinometer 및 OrientationSensor 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 디바이스의 가로 방향에서 정의되고 사용자가 돌릴 때 디바이스와 함께 회전합니다.
@@ -155,11 +156,9 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 [
             **OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 데이터는 다른 방법으로 변경해야 합니다. 다른 방향을 Z축에 대한 시계 반대 방향 회전으로 간주하므로 사용자 방향을 다시 가져오기 위해 회전을 반대로 해야 합니다. 사원수 데이터의 경우 오일러의 공식을 사용하여 참조 사원수로 회전을 정의할 수 있으며, 참조 회전 행렬을 사용할 수도 있습니다.
 
-![오일러의 공식](images/eulers-formula.png)
-원하는 상대 방향을 가져오려면 절대 개체에 참조 개체를 곱합니다. 이 수학은 가환성이 아닙니다.
+![오일러의 공식 ](images/eulers-formula.png)원하는 상대 방향을 가져오려면 절대 개체에 참조 개체를 곱합니다. 이 수학은 가환성이 아닙니다.
 
-![절대 개체에 참조 개체 곱하기](images/orientation-formula.png)
-앞의 식에서 절대 개체는 센서 데이터에서 반환됩니다.
+![절대 개체에 참조 개체 곱하기](images/orientation-formula.png) 앞의 식에서 절대 개체는 센서 데이터에서 반환됩니다.
 
 | 디스플레이 방향  | Z축을 중심으로 시계 반대 방향 회전 | 참조 사원수(역회전) | 참조 회전 행렬(역회전) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
@@ -170,6 +169,6 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

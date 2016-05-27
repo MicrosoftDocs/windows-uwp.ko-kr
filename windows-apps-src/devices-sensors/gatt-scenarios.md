@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
 title: Bluetooth GATT
 description: 이 문서에서는 세 가지 일반적인 GATT 시나리오에 대한 샘플 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth GATT(일반 특성 프로필) 개요를 제공합니다.
@@ -7,7 +8,7 @@ description: 이 문서에서는 세 가지 일반적인 GATT 시나리오에 �
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** 중요 API
+** 중요 API **
 
 -   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
 -   [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
@@ -43,7 +44,7 @@ Bluetooth GATT API는 일반적인 속성을 처리하고 장치 관리 및 구�
 
 이 예제에서는 앱이 Bluetooth LE 건강 온도계 서비스를 구현하는 Bluetooth 장치의 온도 측정치를 사용합니다. 앱은 새 온도 측정을 사용할 수 있을 때 알리도록 지정합니다. "온도계 특성 값 변경" 이벤트에 대한 이벤트 처리기를 등록하면 앱은 포그라운드에서 실행하는 동안 특성 값 변경 이벤트 알림을 받습니다.
 
-이 앱은 일시 중단될 때 모든 장치 리소스를 해제해야 하며 다시 시작될 때 디바이스 열거형과 초기화를 다시 수행해야 합니다.
+이 앱은 일시 중단될 때 모든 디바이스 리소스를 해제해야 하며 다시 시작될 때 디바이스 열거형과 초기화를 다시 수행해야 합니다. 백그라운드에서 디바이스 조작이 필요한 경우 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx) 또는 [GattCharacteristicNotificationTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.gattcharacteristicnotificationtrigger.aspx)를 살펴보세요. 일반적으로 DeviceUseTrigger는 더 자주 발생하는 이벤트에 적절하고, GattCharacteristicNotificationTrigger는 드물게 발생하는 이벤트 처리에 적절합니다.  
 
 ```csharp
 double convertTemperatureData(byte[] temperatureData)
@@ -132,7 +133,7 @@ void MainPage::Initialize()
                 ref new TypedEventHandler<
                     GattCharacteristic^, 
                     GattValueChangedEventArgs^>(
-                        this, &amp;MainPage::TemperatureMeasurementChanged);
+                        this, &MainPage::TemperatureMeasurementChanged);
 
             create_task(thermometerCharacteristic->
                 WriteClientCharacteristicConfigurationDescriptorAsync(
@@ -354,7 +355,7 @@ void MainPage::Initialize()
                 ref new TypedEventHandler<
                     GattCharacteristic^, 
                     GattValueChangedEventArgs^>
-                    (this, &amp;MainPage::BatteryLevelChanged);
+                    (this, &MainPage::BatteryLevelChanged);
 
             create_task(batteryLevelCharacteristic
                 ->WriteClientCharacteristicConfigurationDescriptorAsync(
@@ -395,6 +396,6 @@ void MainPage::BatteryLevelChanged(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: 앱에서 인쇄하기
 description: 유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다.
@@ -174,7 +175,7 @@ protected virtual void CreatePrintPreviewPages(object sender, PaginateEventArgs 
 
    // We know there are more pages to be added as long as the last RichTextBoxOverflow added to a print preview
    // page has extra content
-   while (lastRTBOOnPage.HasOverflowContent &amp;&amp; lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
+   while (lastRTBOOnPage.HasOverflowContent && lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
    {
          lastRTBOOnPage = AddOnePrintPreviewPage(lastRTBOOnPage, pageDescription);
    }
@@ -383,6 +384,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

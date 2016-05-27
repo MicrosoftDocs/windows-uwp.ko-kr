@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: 디바이스, 센서 및 전원
 description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디바이스나 센서를 앱에 통합해야 하는 경우가 있습니다.
@@ -16,6 +17,7 @@ description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디�
 | 항목 | 설명 |
 |-------|-------------|
 | [디바이스 기능 사용](enable-device-capabilities.md) | 이 자습서에서는 Microsoft Visual Studio에서 디바이스 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다. | 
+| [Windows IoT용 사용자 모드 액세스를 사용하도록 설정](enable-usermode-access.md) | 이 자습서에서는 Windows 10 IoT Core에서 GPIO, I2C, SPI 및 UART에 대한 사용자 모드 액세스를 사용하도록 설정하는 방법에 대해 설명합니다. |
 | [디바이스 열거](enumerate-devices.md) | 열거형 네임스페이스를 사용하면 시스템에 내부에서 연결되거나, 외부에서 연결되거나, 무선 또는 네트워킹 프로토콜을 통해 검색 가능한 디바이스를 찾을 수 있습니다. |
 | [디바이스 페어링](pair-devices.md) | 일부 디바이스는 페어링해야 사용할 수 있습니다. [
             <strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다. |
@@ -30,6 +32,6 @@ description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디�
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

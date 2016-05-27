@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: 앱에서 스캔
 description: 여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다.
@@ -54,9 +55,9 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
        await
        MainPage.Current.Dispatcher.RunAsync(
              Windows.UI.Core.CoreDispatcherPriority.Normal,
-             () =&gt;
+             () =>
              {
-                MainPage.Current.NotifyUser(String.Format(&quot;Scanner with device id {0} has been added&quot;, deviceInfo.Id), NotifyType.StatusMessage);
+                MainPage.Current.NotifyUser(String.Format("Scanner with device id {0} has been added", deviceInfo.Id), NotifyType.StatusMessage);
 
                 // search the device list for a device with a matching device id
                 ScannerDataItem match = FindInList(deviceInfo.Id);
@@ -122,7 +123,7 @@ Windows에서는 스캐너를 자동으로 검색하지 않습니다. 앱이 스
 ```csharp
 if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
 {
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
                 // Scan API call to get preview from the flatbed.
                 var result = await myScanner.ScanPreviewToStreamAsync(
                     ImageScannerScanSource.Flatbed, stream);
@@ -159,8 +160,8 @@ cancellationToken = new CancellationTokenSource();
 2.  진행률 이벤트 처리기를 설정하고 스캔 진행률을 가져옵니다.
 
 ```csharp
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
-    var progress = new Progress&lt;UInt32&gt;(ScanProgress);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
+    var progress = new Progress<UInt32>(ScanProgress);
 ```
 
 ## 사진 라이브러리로 스캔
@@ -169,6 +170,6 @@ cancellationToken = new CancellationTokenSource();
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

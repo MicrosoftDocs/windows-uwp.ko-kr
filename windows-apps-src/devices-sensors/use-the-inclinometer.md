@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: 경사계 사용
 description: 경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다.
@@ -125,7 +126,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 앱을 빌드, 배포 및 실행합니다.
 
-앱이 실행 중이면 장치를 이동하거나 에뮬레이터 도구를 사용하여 경사계 값을 변경할 수 있습니다.
+앱이 실행 중이면 디바이스를 이동하거나 에뮬레이터 도구를 사용하여 경사계 값을 변경할 수 있습니다.
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
@@ -149,7 +150,7 @@ _inclinometer.ReportInterval = reportInterval;
 
 새 경사계 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
-```
+```csharp
 _inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
@@ -171,6 +172,6 @@ InclinometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

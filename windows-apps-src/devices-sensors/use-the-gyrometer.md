@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: 회전계 사용
 description: 회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다.
@@ -127,7 +128,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 앱을 빌드, 배포 및 실행합니다.
 
-앱이 실행 중이면 장치를 이동하거나 에뮬레이터 도구를 사용하여 회전계 값을 변경할 수 있습니다.
+앱이 실행 중이면 디바이스를 이동하거나 에뮬레이터 도구를 사용하여 회전계 값을 변경할 수 있습니다.
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
@@ -164,7 +165,7 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="8,52,0,0" TextWrapping="Wrap" Text="Y Axis:" VerticalAlignment="Top" Width="46" Foreground="White"/>
         <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="24" Margin="54,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Foreground="#FFFBFBFB"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="8,93,0,0" TextWrapping="Wrap" Text="Z Axis:" VerticalAlignment="Top" Width="46" Foreground="#FFFEFBFB"/>
-        <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="21" Margin="54,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Foreground="#FFF8F3F3"/></code></pre></td>
+        <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="21" Margin="54,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Foreground="#FFF8F3F3"/>
 ```
 
  ## 관련 항목
@@ -173,6 +174,6 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

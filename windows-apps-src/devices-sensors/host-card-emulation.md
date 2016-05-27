@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: NFC 스마트 카드 앱 만들기
 description: Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다.
@@ -161,7 +162,7 @@ void BgTask::HandleHceActivation()
         if (Windows::Phone::System::SystemProtection::ScreenLocked)
         {
             auto denyIfLocked = Windows::Storage::ApplicationData::Current->RoamingSettings->Values->Lookup("DenyIfPhoneLocked");
-            if (denyIfLocked != nullptr &amp;&amp; (bool)denyIfLocked == true)
+            if (denyIfLocked != nullptr && (bool)denyIfLocked == true)
             {
                 // The phone is locked, and our current user setting is to deny transactions while locked so let the user know
                 // Denied
@@ -177,7 +178,7 @@ void BgTask::HandleHceActivation()
         }
 
         m_emulator->ApduReceived += ref new TypedEventHandler<SmartCardEmulator^, SmartCardEmulatorApduReceivedEventArgs^>(
-            this, &amp;BgTask::ApduReceived);
+            this, &BgTask::ApduReceived);
 
         m_emulator->ConnectionDeactivated += ref new TypedEventHandler<SmartCardEmulator^, SmartCardEmulatorConnectionDeactivatedEventArgs^>(
                 [this](
@@ -229,7 +230,7 @@ public static byte[] AID_OTHER =
         {
             (byte)'1', (byte)'2', (byte)'3', (byte)'4',
             (byte)'5', (byte)'6', (byte)'7', (byte)'8',
-            (byte)'O', (byte)'T', (byte)'H', (byte)'E', (byte)'R’
+            (byte)'O', (byte)'T', (byte)'H', (byte)'E', (byte)'R'
         };
 
 var appletIdGroup = new SmartCardAppletIdGroup(
@@ -383,6 +384,6 @@ Windows Phone 8.1에서 레거시 이진 SMS 가로채기 지원이 제거되었
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

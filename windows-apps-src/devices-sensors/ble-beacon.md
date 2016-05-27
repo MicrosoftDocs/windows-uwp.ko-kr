@@ -1,27 +1,29 @@
 ---
-title: Bluetooth Advertisements
-description: This section contains articles on how to integrate Bluetooth Low Energy (LE) Advertisements into Universal Windows Platform (UWP) apps through the user of AdvertisementWatcher and AdvertisementPublisher APIs.
+author: DBirtolo
+title: Bluetooth 광고
+description: 이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher API 사용자를 통해 Bluetooth LE(저에너지) 광고를 UWP(유니버설 Windows 플랫폼) 앱에 통합하는 방법에 대한 문서가 포함되어 있습니다.
 ---
 
-# Bluetooth Advertisements
+# Bluetooth 광고
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** Important APIs ** 
+** 중요 API ** 
 
 -   [**Windows.Devices.Bluetooth.Advertisement**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.aspx)
 
-This article provides an overview of Bluetooth Advertisements (Beacons) for Universal Windows Platform (UWP) apps.  
+이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱용 Bluetooth 광고(신호)의 개요를 제공합니다.  
 
-## Overview
+## 개요
 
-There are two main functions that a developer can perform using the Advertisement APIs:
+개발자가 광고 API를 사용하여 수행할 수 있는 두 가지 주요 기능이 있습니다.
 
--   [Advertisement Watcher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): listen for nearby beacons and filter them out based on payload or proximity.  
--   [Advertisement Publisher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): define a payload for Windows to advertise on a developers behalf.  
+-   [광고 감시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): 근처의 신호를 수신하고 페이로드 또는 근접성을 기준으로 필터링합니다.  
+-   [광고 게시자](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): Windows에서 개발자 대신 광고를 수행하기 위한 페이로드를 정의합니다.  
 
-Full sample code is found in the [Bluetooth Advertisement Sample](http://go.microsoft.com/fwlink/p/?LinkId=619990) on Github
+전체 샘플 코드는 [Bluetooth 광고 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619990)에서 찾을 수 있습니다.
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

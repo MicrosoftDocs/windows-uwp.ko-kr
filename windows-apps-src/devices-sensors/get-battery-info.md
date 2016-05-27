@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: 배터리 정보 가져오기
 description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
@@ -254,7 +255,7 @@ namespace App1
             TextBlock txt5 = new TextBlock { Text = "Fully-charged energy capacity (mWh): " + report.FullChargeCapacityInMilliwattHours.ToString() };
             TextBlock txt6 = new TextBlock { Text = "Remaining energy capacity (mWh): " + report.RemainingCapacityInMilliwattHours.ToString() };
 
-            // Create energy capacity progress bar &amp; labels
+            // Create energy capacity progress bar & labels
             TextBlock pbLabel = new TextBlock { Text = "Percent remaining energy capacity" };
             pbLabel.Margin = new Thickness(0,10, 0, 5);
             pbLabel.FontFamily = new FontFamily("Segoe UI");
@@ -337,6 +338,6 @@ namespace App1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
