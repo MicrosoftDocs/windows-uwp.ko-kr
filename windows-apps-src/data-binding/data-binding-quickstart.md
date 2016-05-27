@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: 데이터 바인딩 개요
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다.
@@ -194,7 +195,7 @@ namespace Quickstart
 항목 컬렉션에 바인딩
 ------------------------------------------------------------------------------------------------------------------
 
-비즈니스 개체 컬렉션에 바인딩하는 것이 일반적인 시나리오입니다. C# 및 Visual Basic에서 일반 [**ObservableCollection&lt;T&gt;**](T:System.Collections.ObjectModel.ObservableCollection%601) 클래스는 [**INotifyPropertyChanged**](T:System.ComponentModel.INotifyPropertyChanged) 및 [**INotifyCollectionChanged**](T:System.Collections.Specialized.INotifyCollectionChanged) 인터페이스를 구현하므로 데이터 바인딩에 유용한 컬렉션 옵션이 됩니다. 이러한 인터페이스는 항목이 추가 또는 변경되거나 목록 자체의 속성이 변경될 경우 바인딩에 대한 변경 알림을 제공합니다. 또한 바인딩된 컨트롤을 컬렉션에 있는 개체의 속성 변경 사항으로 업데이트하려면 비즈니스 개체에서 **INotifyPropertyChanged**를 구현해야 합니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
+비즈니스 개체 컬렉션에 바인딩하는 것이 일반적인 시나리오입니다. C# 및 Visual Basic에서 일반 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ms668604.aspx) 클래스는 [**INotifyPropertyChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 인터페이스를 구현하므로 데이터 바인딩에 유용한 컬렉션 옵션이 됩니다. 이러한 인터페이스는 항목이 추가 또는 변경되거나 목록 자체의 속성이 변경될 경우 바인딩에 대한 변경 알림을 제공합니다. 또한 바인딩된 컨트롤을 컬렉션에 있는 개체의 속성 변경 사항으로 업데이트하려면 비즈니스 개체에서 **INotifyPropertyChanged**를 구현해야 합니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
 다음 예제에서는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 `Recording` 개체의 컬렉션에 바인딩합니다. 먼저 컬렉션을 뷰 모델에 추가합니다. 다음과 같은 새 멤버를 **RecordingViewModel** 클래스에 추가하면 됩니다.
 
@@ -279,11 +280,11 @@ And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/B
 </Page>
 ```
 
-**Recording** 클래스에 대한 데이터 템플릿을 아직 제공하지 않았으므로 UI 프레임워크에서 수행할 수 있는 최상의 작업은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 각 항목에 대해 [**ToString**](M:System.Object.ToString)을 호출하는 것입니다. **ToString**의 기본 구현은 형식 이름을 반환하는 것입니다.
+**Recording** 클래스에 대한 데이터 템플릿을 아직 제공하지 않았으므로 UI 프레임워크에서 수행할 수 있는 최상의 작업은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 각 항목에 대해 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx)을 호출하는 것입니다. **ToString**의 기본 구현은 형식 이름을 반환하는 것입니다.
 
 ![목록 보기 바인딩](images/xaml-databinding1.png)
 
-이를 해결하기 위해 **OneLineSummary** 값을 반환하도록 [**ToString**](M:System.Object.ToString)을 재정의하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적이며 보다 유연합니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
+이를 해결하기 위해 **OneLineSummary** 값을 반환하도록 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx)을 재정의하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적이며 보다 유연합니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
 
 ``` xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -397,7 +398,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 표시할 데이터 값 필터링 또는 변환
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-위 렌더링에는 사소한 문제가 하나 있습니다. **ReleaseDateTime** 속성이 날짜가 아니라 [**DateTime**](T:System.DateTime)이므로 필요한 것보다 더 정밀하게 표시됩니다. 한 가지 해결 방법은 `this.ReleaseDateTime.ToString("d")`을 반환하는 **Recording** 클래스에 문자열 속성을 추가하는 것입니다. 이 속성의 이름을 **ReleaseDate**로 지정하면 날짜 및 시간이 아니라 날짜가 반환되고, **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
+위 렌더링에는 사소한 문제가 하나 있습니다. **ReleaseDateTime** 속성이 날짜가 아니라 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)이므로 필요한 것보다 더 정밀하게 표시됩니다. 한 가지 해결 방법은 `this.ReleaseDateTime.ToString("d")`을 반환하는 **Recording** 클래스에 문자열 속성을 추가하는 것입니다. 이 속성의 이름을 **ReleaseDate**로 지정하면 날짜 및 시간이 아니라 날짜가 반환되고, **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
 
 보다 유연한 해결 방법은 값 변환기라는 것을 사용하는 것입니다. 다음은 사용자 고유의 값 변환기를 작성하는 방법에 대한 예제입니다. 이 코드를 Recording.cs 소스 코드 파일에 추가합니다.
 
@@ -452,6 +453,6 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

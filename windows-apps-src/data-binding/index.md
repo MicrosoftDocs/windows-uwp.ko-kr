@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
 title: 데이터 바인딩
 description: 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다.
@@ -19,6 +20,6 @@ description: 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
