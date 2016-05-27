@@ -1,6 +1,7 @@
 ---
+author: Jwmsft
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
-label: 텍스트 블록
+label: Text block
 template: detail.hbs
 ---
 # 텍스트 블록
@@ -75,7 +76,7 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 
 디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다. 
 
->**팁**&nbsp;&nbsp;이 기능에 대해서는 빌드 2015 - [XAML 성능: XAML을 사용하여 빌드한 유니버설 Windows 앱 환경을 극대화하는 기법](https://channel9.msdn.com/Events/Build/2015/3-698)의 이 세션에서 자세히 설명합니다.
+>**팁** &nbsp;&nbsp; 이 기능에 대해서는 빌드 2015 - [XAML 성능: XAML을 사용하여 빌드한 유니버설 Windows 앱 환경을 극대화하는 기법](https://channel9.msdn.com/Events/Build/2015/3-698)(영문)의 이 세션에서 자세히 설명합니다.
 
  
 
@@ -107,13 +108,13 @@ IsTextPerformanceVisualizationEnabled를 true로 설정하여 이 XAML을 디버
 
 ![디버그 모드에서 렌더링된 텍스트](images/text-block-rendering-performance.png)
 
->**주의**&nbsp;&nbsp;빠른 경로에 있지 않은 텍스트의 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
+>**주의**&nbsp;&nbsp; 빠른 경로에 있지 않은 텍스트의 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
 
 ## 텍스트 서식 지정
 
 Text 속성이 일반 텍스트를 저장하지만, TextBlock 컨트롤에 다양한 서식 옵션을 적용하여 앱에서 텍스트가 렌더링되는 방법을 사용자 지정할 수 있습니다. FontFamily, FontSize, FontStyle, Foreground 및 CharacterSpacing과 같은 표준 컨트롤 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 또한 인라인 텍스트 요소 및 Typography 연결 속성을 사용하여 텍스트의 서식을 지정할 수 있습니다. 이러한 옵션은 TextBlock이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
->**참고**&nbsp;&nbsp;이전 섹션에서 설명했듯이 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
+>**참고**&nbsp;&nbsp; 이전 섹션에서 설명했듯이 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
  
 
 ### 인라인 요소
@@ -164,11 +165,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 <TextBlock>12 x <Run Typography.Fraction="Slashed">1/3</Run> = 4.</TextBlock>
 ```
 
-## 권장 사항
-
-
-
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
 ## 관련 문서
 
@@ -188,6 +184,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

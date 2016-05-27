@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 두 가지 주요 XAML 클래스인 Image 및 ImageBrush의 API를 사용하는 방법을 비롯하여 앱에 이미지를 통합하는 방법을 알아봅니다.
 title: 이미지 및 이미지 브러시
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
-label: 이미지 및 이미지 브러시
+label: Images and image brushes
 template: detail.hbs
 ---
 # 이미지 및 이미지 브러시
@@ -141,20 +142,10 @@ Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하�
 
 코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 또는 [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)(URI 아님)가 필요합니다. 원본이 스트림이면 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](http://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
 
-> **참고**&nbsp;&nbsp;코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.
-
-## 권장 사항
+> **참고** &nbsp;&nbsp;코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.
 
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
-## 관련 문서
-
-**디자이너용**
-
-**개발자용(XAML)**
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

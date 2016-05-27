@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 원시 알림은 짧고 일반적인 목적의 알림으로,
 title: 원시 알림 개요
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
@@ -9,7 +10,7 @@ template: detail.hbs
 # 원시 알림 개요
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 원시 알림은 짧고 일반적인 목적의 알림으로, 오로지 사용 안내만 하며 UI 구성 요소는 포함하지 않습니다. 다른 푸시 알림과 마찬가지로, WNS(Windows 푸시 알림 서비스) 기능은 클라우드 서비스에서 앱으로 원시 알림을 전달합니다.
@@ -20,11 +21,11 @@ template: detail.hbs
 
  
 
-알림 메시지, 타일 및 배지 푸시 알림과 마찬가지로, 원시 알림은 할당된 채널 URI(Uniform Resource Identifier)를 통해 앱의 클라우드 서비스에서 WNS로 푸시됩니다. 그러면 WNS이 채널과 관련된 장치 및 사용자 계정에 다시 알림을 전달합니다. 다른 푸시 알림과는 달리, 원시 알림에는 지정된 형식이 없습니다. 페이로드의 콘텐츠는 전적으로 앱에서 정의됩니다.
+알림 메시지, 타일 및 배지 푸시 알림과 마찬가지로, 원시 알림은 할당된 채널 URI(Uniform Resource Identifier)를 통해 앱의 클라우드 서비스에서 WNS로 푸시됩니다. 그러면 WNS이 채널과 관련된 디바이스 및 사용자 계정에 다시 알림을 전달합니다. 다른 푸시 알림과는 달리, 원시 알림에는 지정된 형식이 없습니다. 페이로드의 콘텐츠는 전적으로 앱에서 정의됩니다.
 
 원시 알림을 사용하여 이점을 누릴 수 있는 앱의 실제 사례로, 이론상의 문서 공동 작업 앱을 살펴보겠습니다. 두 명의 사용자가 동시에 같은 문서를 편집 중이라고 가정해 보세요. 공유 문서를 호스트하는 클라우드 서비스는 원시 알림을 사용하여 한 사용자가 문서를 변경하면 이를 각 사용자에게 알릴 수 있습니다. 문서에 대한 변경 사항을 반드시 원시 알림에 포함할 필요는 없으며, 대신 중앙 위치에 연결하여 적용 가능한 변경 사항을 동기화하도록 각 사용자의 앱 사본을 알립니다. 원시 알림을 사용하여 앱과 앱의 클라우드 서비스는 문서가 열려 있는 전체 시간 동안 연결을 유지하는 데 따르는 오버헤드를 줄일 수 있습니다.
 
-## <span id="How_raw_notifications_work"> </span> <span id="how_raw_notifications_work"> </span> <span id="HOW_RAW_NOTIFICATIONS_WORK"> </span>원시 알림 작동 방법
+## <span id="How_raw_notifications_work"></span><span id="how_raw_notifications_work"></span><span id="HOW_RAW_NOTIFICATIONS_WORK"></span>원시 알림 작동 방법
 
 
 모든 원시 알림은 푸시 알림입니다. 따라서 원시 알림을 보내고 받는 데 필요한 설정은 원시 알림에도 적용됩니다.
@@ -34,11 +35,11 @@ template: detail.hbs
 
 알림의 본문은 앱에서 정의하는 형식입니다. 클라이언트는 앱에서 인식하기만 하면 되는 null로 끝나는 문자열(**HSTRING**)로 데이터를 받습니다.
 
-클라이언트가 오프라인인 경우 원시 알림은 [X-WNS-Cache-Policy](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache) 헤더가 알림에 포함되어 있을 때만 WNS에 의해 캐시됩니다. 그러나 장치가 온라인 상태로 돌아오면 하나의 원시 알림만 캐시되고 전달됩니다.
+클라이언트가 오프라인인 경우 원시 알림은 [X-WNS-Cache-Policy](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache) 헤더가 알림에 포함되어 있을 때만 WNS에 의해 캐시됩니다. 그러나 디바이스가 온라인 상태로 돌아오면 하나의 원시 알림만 캐시되고 전달됩니다.
 
 클라이언트에서 원시 알림이 취할 수 있는 가능한 경로는 세 개뿐입니다. 이러한 경로는 알림 전달 이벤트를 통해 실행 중인 앱에 전달되고, 백그라운드 작업에 보내지거나, 삭제됩니다. 따라서 클라이언트가 오프라인인 상태에서 WNS가 원시 알림을 보내려고 시도하면 알림은 삭제됩니다.
 
-## <span id="Creating_a_raw_notification"> </span> <span id="creating_a_raw_notification"> </span> <span id="CREATING_A_RAW_NOTIFICATION"> </span>원시 알림 만들기
+## <span id="Creating_a_raw_notification"></span><span id="creating_a_raw_notification"></span><span id="CREATING_A_RAW_NOTIFICATION"></span>원시 알림 만들기
 
 
 원시 알림 보내기는 타일, 알림 메시지 또는 배지 푸시 알림을 보내는 것과 유사하지만 다음과 같은 차이점이 있습니다.
@@ -51,7 +52,7 @@ template: detail.hbs
 
 푸시 알림 보내기에 대한 자세한 내용은 [빠른 시작: 푸시 알림 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)를 참조하세요.
 
-## <span id="Receiving_a_raw_notification"> </span> <span id="receiving_a_raw_notification"> </span> <span id="RECEIVING_A_RAW_NOTIFICATION"> </span>원시 알림 받기
+## <span id="Receiving_a_raw_notification"></span><span id="receiving_a_raw_notification"></span><span id="RECEIVING_A_RAW_NOTIFICATION"></span>원시 알림 받기
 
 
 앱이 원시 알림을 받을 수 있는 경로는 두 가지입니다.
@@ -64,7 +65,7 @@ template: detail.hbs
 -   앱이 실행 중일 때는 알림 전달 이벤트가 백그라운드 작업보다 우선하며 앱은 알림을 처리할 첫 번째 기회를 갖습니다.
 -   알림 전달 이벤트 처리기는 이벤트의 [**PushNotificationReceivedEventArgs.Cancel**](https://msdn.microsoft.com/library/windows/apps/br241297) 속성을 **true**로 설정하여 처리기가 있으면 원시 알림이 백그라운드 작업으로 전달되지 않도록 지정할 수 있습니다. **Cancel** 속성이 **false**로 설정되거나 또는 설정되지 않을 경우(기본값이 **false**) 알림 전달 이벤트 처리기가 작업을 완료한 후 원시 알림이 백그라운드 작업을 트리거합니다.
 
-### <span id="notification_delivery_events"> </span> <span id="NOTIFICATION_DELIVERY_EVENTS"> </span>알림 전달 이벤트
+### <span id="notification_delivery_events"></span><span id="NOTIFICATION_DELIVERY_EVENTS"></span>알림 전달 이벤트
 
 앱이 사용 중인 동안 앱에서는 알림 전달 이벤트([**PushNotificationReceived**](https://msdn.microsoft.com/library/windows/apps/br241292))를 사용하여 원시 알림을 받을 수 있습니다. 클라우드 서비스에서 원시 알림을 보내면 실행 중인 앱이 채널 URI에서 알림 전달 이벤트를 처리하여 원시 알림을 받을 수 있습니다.
 
@@ -82,7 +83,7 @@ template: detail.hbs
 
     자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
 
-### <span id="bg_tasks"> </span> <span id="BG_TASKS"> </span>원시 알림에 의해 트리거된 백그라운드 작업
+### <span id="bg_tasks"></span><span id="BG_TASKS"></span>원시 알림에 의해 트리거된 백그라운드 작업
 
 **중요** 원시 알림 백그라운드 작업을 사용하기 전에 [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 통한 백그라운드 액세스가 앱에 허용되어야 합니다.
 
@@ -92,7 +93,7 @@ template: detail.hbs
 
 원시 알림에 의해 트리거된 백그라운드 작업은 앱의 클라우드 서비스가 앱에 연결될 수 있도록 합니다. 이는 앱이 실행되지 않는 경우에도 마찬가지입니다(앱이 실행되도록 트리거될 수는 있음). 이러한 상황은 앱이 지속적 연결을 유지할 필요 없이 이루어집니다. 원시 알림은 백그라운드 작업을 트리거할 수 있는 유일한 알림 형식입니다. 알림 메시지, 타일 및 배지 푸시 알림이 백그라운드 작업을 트리거할 수는 없지만 원시 알림에 의해 트리거된 백그라운드 작업이 로컬 API 호출을 통해 타일을 업데이트하고 알림 메시지를 호출할 수 있습니다.
 
-원시 알림에 의해 트리거된 백그라운드 작업의 작동 방식 사례로, 전자책을 읽는 데 사용되는 앱을 살펴보겠습니다. 먼저 사용자가 다른 장치에서 온라인으로 책을 구입합니다. 이에 대해 앱의 클라우드 서비스는 사용자의 각 장치에 책을 구입했고 앱이 이를 다운로드해야 한다는 내용이 명시된 페이로드와 함께 원시 알림을 보낼 수 있습니다. 앱은 나중에 사용자가 앱을 실행하면 바로 읽을 수 있는 상태로 책이 준비되도록 앱의 클라우드 서비스에 직접 연결하여 새 책의 백그라운드 다운로드를 시작합니다.
+원시 알림에 의해 트리거된 백그라운드 작업의 작동 방식 사례로, 전자책을 읽는 데 사용되는 앱을 살펴보겠습니다. 먼저 사용자가 다른 디바이스에서 온라인으로 책을 구입합니다. 이에 대해 앱의 클라우드 서비스는 사용자의 각 디바이스에 책을 구입했고 앱이 이를 다운로드해야 한다는 내용이 명시된 페이로드와 함께 원시 알림을 보낼 수 있습니다. 앱은 나중에 사용자가 앱을 실행하면 바로 읽을 수 있는 상태로 책이 준비되도록 앱의 클라우드 서비스에 직접 연결하여 새 책의 백그라운드 다운로드를 시작합니다.
 
 원시 알림을 사용하여 백그라운드 작업을 트리거하려면 앱이 다음 요구 사항을 충족해야 합니다.
 
@@ -104,12 +105,12 @@ template: detail.hbs
 
 각 앱에 대해 한 번에 하나의 백그라운드 작업만 실행할 수 있습니다. 백그라운드 작업이 이미 실행 중인 앱에 대해 백그라운드 작업이 트리거되면 새 백그라운드 작업이 실행되기 전에 첫 번째 백그라운드 작업을 완료해야 합니다.
 
-## <span id="Other_resources"> </span> <span id="other_resources"> </span> <span id="OTHER_RESOURCES"> </span>다른 리소스
+## <span id="Other_resources"></span><span id="other_resources"></span><span id="OTHER_RESOURCES"></span>기타 리소스
 
 
 Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=241553) 및 Windows 8.1용 [푸시 알림 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?LinkId=231476)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 * [원시 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761463)
@@ -126,6 +127,6 @@ Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=2
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,31 +1,30 @@
 ---
-Description: 이 문서에서는 Segoe MDL2 자산 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
+author: Jwmsft
+Description: 이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
 Search.Refinement.TopicID: 184
 title: Segoe MDL2 아이콘 지침
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-label: Segoe MDL2 아이콘
+label: Segoe MDL2 icons
 template: detail.hbs
 ---
 
 # Segoe MDL2 아이콘에 대한 지침
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다. 글꼴을 얻으려면 Windows 10을 설치해야 합니다.
 
 **중요 API**
 
 -   [**Symbol 열거(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 -   [**AppBarIcon 열거(HTML)**](https://msdn.microsoft.com/library/windows/apps/hh770557)
 
-이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다. 글꼴을 얻으려면 Windows 10을 설치해야 합니다.
 
-## <span id="Recommendations"> </span> <span id="recommendations"> </span> <span id="RECOMMENDATIONS"> </span>권장 사항
+
+## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>권장 사항
 
 
 -   **Segoe MDL2 자산** 글꼴을 명시적으로 지정할 수 있을 때만 이러한 문자 모양을 사용하세요.
 
-## <span id="Additional_usage_guidance"> </span> <span id="additional_usage_guidance"> </span> <span id="ADDITIONAL_USAGE_GUIDANCE"> </span>추가 사용법 지침
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 Windows 8/8.1 **Segoe UI Symbol** 아이콘 글꼴은 Windows 10의 릴리스로 유효한 **Segoe MDL2 Assets** 글꼴로 대체되었습니다. 이전 글꼴과 거의 같은 방식에서 사용할 수 있지만 아이콘이 인쇄 기준선 대신 글꼴의 em 정사각형 내에 정렬되도록 글꼴 메트릭이 설정된 Windows 10 아이콘 스타일에서는 많은 문자 모양이 다시 그려졌습니다.
@@ -54,7 +53,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
 **Segoe MDL2 Assets** 글꼴에는 여기에 나와 있는 것보다 훨씬 많은 아이콘이 포함되어 있다는 점을 기억해야 합니다. 이러한 아이콘은 대부분 특별한 용도에 사용되며 다른 곳에서 일반적으로 사용되지 않습니다.
 
-## <span id="Hearts"> </span> <span id="hearts"> </span> <span id="HEARTS"> </span>하트
+## <span id="Hearts"></span><span id="hearts"></span><span id="HEARTS"></span>하트
 
 
 <table>
@@ -108,7 +107,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Rating_stars"> </span> <span id="rating_stars"> </span> <span id="RATING_STARS"> </span>등급 별
+## <span id="Rating_stars"></span><span id="rating_stars"></span><span id="RATING_STARS"></span>등급 별
 
 
 <table>
@@ -174,7 +173,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Checkbox_components"> </span> <span id="checkbox_components"> </span> <span id="CHECKBOX_COMPONENTS"> </span>확인란 구성 요소
+## <span id="Checkbox_components"></span><span id="checkbox_components"></span><span id="CHECKBOX_COMPONENTS"></span>확인란 구성 요소
 
 
 |        |                                                                                |                                 |                         |
@@ -197,7 +196,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Miscellaneous"> </span> <span id="miscellaneous"> </span> <span id="MISCELLANEOUS"> </span>기타
+## <span id="Miscellaneous"></span><span id="miscellaneous"></span><span id="MISCELLANEOUS"></span>기타
 
 
 <table>
@@ -341,7 +340,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Scroll_bar_arrows"> </span> <span id="scroll_bar_arrows"> </span> <span id="SCROLL_BAR_ARROWS"> </span>스크롤 막대 화살표
+## <span id="Scroll_bar_arrows"></span><span id="scroll_bar_arrows"></span><span id="SCROLL_BAR_ARROWS"></span>스크롤 막대 화살표
 
 
 | 코드   | 기호                                                                   | 열거형                         |
@@ -357,7 +356,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Back_buttons"> </span> <span id="back_buttons"> </span> <span id="BACK_BUTTONS"> </span>뒤로 단추
+## <span id="Back_buttons"></span><span id="back_buttons"></span><span id="BACK_BUTTONS"></span>뒤로 단추
 
 
 뒤로 단추에 대한 레거시 문자 모양은 바깥쪽 원의 두께가 20pt 및 42pt와 모두 일치되도록 두 가지 다른 크기로 제공됩니다. 두 개의 새 비례 크롬 뒤로 단추도 사용할 수 있습니다. 이러한 문자 모양을 계층화를 지원하도록 설계되었습니다.
@@ -373,7 +372,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Back_arrows_for_HTML"> </span> <span id="back_arrows_for_html"> </span> <span id="BACK_ARROWS_FOR_HTML"> </span>HTML의 뒤로 화살표
+## <span id="Back_arrows_for_HTML"></span><span id="back_arrows_for_html"></span><span id="BACK_ARROWS_FOR_HTML"></span>HTML의 뒤로 화살표
 
 
 이러한 문자 모양 주위에 원을 만들려면 코드를 더 추가합니다.
@@ -385,7 +384,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="AppBar_glyphs"> </span> <span id="appbar_glyphs"> </span> <span id="APPBAR_GLYPHS"> </span>AppBar 문자 모양
+## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>AppBar 문자 모양
 
 
 다음 목록의 문자 모양은 [**AppBar**](https://msdn.microsoft.com/library/windows/apps/br229670)에 사용합니다. 규칙에 따라 열거형 이름으로 참조되며, 원 없는 20x20px 아이콘으로 디자인되었습니다.
@@ -1551,7 +1550,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="Battery_icons"> </span> <span id="battery_icons"> </span> <span id="BATTERY_ICONS"> </span>배터리 아이콘
+## <span id="Battery_icons"></span><span id="battery_icons"></span><span id="BATTERY_ICONS"></span>배터리 아이콘
 
 
 | 코드 | 기호                                             | 열거형              | 코드 | 기호                                                  | 열거형                |
@@ -1593,13 +1592,13 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
  
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 **디자이너용**
 * [글꼴에 대한 지침](fonts.md)
-* [RTL(오른쪽에서 왼쪽)로 작성되는 언어에 대한 W3C](http://www.i18nguy.com/temp/rtl.mdl)
-**개발자용(XAML)**
+* [RTL(오른쪽에서 왼쪽)로 작성되는 언어에 대한 W3C](http://www.i18nguy.com/temp/rtl.mdl) 
+           **개발자용(XAML)**
 * [**Symbol 열거형**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 
 
@@ -1610,6 +1609,6 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

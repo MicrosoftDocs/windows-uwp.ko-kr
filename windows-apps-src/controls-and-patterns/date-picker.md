@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 날짜 선택은 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 title: 날짜 선택기
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
@@ -44,7 +45,7 @@ birthDatePicker.Header = "Date of birth";
 
 ![날짜 선택의 예](images/date-picker-closed.png)
 
-> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고** &nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
 
 
@@ -56,6 +57,6 @@ birthDatePicker.Header = "Date of birth";
 - [시간 선택기](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

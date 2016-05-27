@@ -1,24 +1,23 @@
 ---
+author: Jwmsft
 Description: 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 title: 검색 및 페이지에서 찾기
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
-label: 검색
+label: Search
 template: detail.hbs
 ---
 
 # 검색 및 페이지에서 찾기
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
 **중요 API**
 
 -   [**AutoSuggestBox 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
-검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
-## <span id="Elements_of_the_search_experience"> </span> <span id="elements_of_the_search_experience"> </span> <span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"> </span>검색 환경의 요소
+
+## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>검색 환경의 요소
 
 
 **입력.**  텍스트는 검색 입력의 가장 일반적인 모드이며 이 지침에서 중점적으로 설명하는 부분입니다. 다른 일반적인 입력 모드로는 음성과 카메라가 있지만 이들의 경우 일반적으로 디바이스 하드웨어와 연결하는 기능이 필요하며 추가 컨트롤 또는 앱 내 사용자 지정 UI가 필요할 수 있습니다.
@@ -41,14 +40,14 @@ template: detail.hbs
 
 결과 집합은 콘텐츠를 가장 잘 전달하는 형태로 표시될 수 있습니다. [목록 보기](lists.md)는 상당한 유연성을 제공하고 대부분의 검색에 적합합니다. 그리드 보기는 이미지 또는 기타 미디어에 적합하며, 지도를 사용하여 공간 분포를 전달할 수 있습니다.
 
-## <span id="Search_scopes"> </span> <span id="search_scopes"> </span> <span id="SEARCH_SCOPES"> </span>검색 범위
+## <span id="Search_scopes"></span><span id="search_scopes"></span><span id="SEARCH_SCOPES"></span>검색 범위
 
 
 검색은 일반적인 기능이며 사용자는 셸과 여러 앱에서 검색 UI를 보게 됩니다. 검색 진입점은 유사하게 시각화되는 경향이 있지만 넓은 범위(웹 또는 디바이스 검색)에서 좁은 범위(사용자의 연락처 목록)를 아우르는 결과에 액세스할 수 있게 합니다. 검색 진입점은 검색 중인 콘텐츠에 대해 병치되어야 합니다.
 
 몇 가지 일반적인 검색 범위는 다음과 같습니다.
 
-**전역** 및 **문맥/구체화.** 여러 클라우드 및 로컬 콘텐츠 소스에서 검색합니다. URL, 문서, 미디어, 작업, 앱 등의 다양한 결과가 표시됩니다.
+**전역** 및 **문맥/구체화.**  여러 클라우드 및 로컬 콘텐츠 소스에서 검색합니다. URL, 문서, 미디어, 작업, 앱 등의 다양한 결과가 표시됩니다.
 
 **웹.**  웹 색인을 검색합니다. 페이지, 엔터티, 대답 등의 결과가 표시됩니다.
 
@@ -72,7 +71,7 @@ template: detail.hbs
 
 검색 입력 지점의 범위를 효과적으로 전달하여 수행 중인 검색 기능으로 사용자의 기대치를 충족하고 불만의 가능성을 줄일 수 있습니다.
 
-## <span id="Implementation"> </span> <span id="implementation"> </span> <span id="IMPLEMENTATION"> </span>구현
+## <span id="Implementation"></span><span id="implementation"></span><span id="IMPLEMENTATION"></span>구현
 
 
 대부분 앱의 경우 눈에 잘 띄는 시각적 공간을 제공하는 텍스트 입력 필드를 검색 진입점으로 두는 것이 가장 좋습니다. 또한 힌트 텍스트는 검색 기능 및 검색 범위 전달에 도움이 됩니다. 검색이 보조 작업이거나 공간이 제한된 경우 검색 아이콘은 입력 필드 없이 진입점 역할을 할 수 있습니다. 아이콘으로 시각화할 경우 아래 예에 표시된 것처럼 모달 검색 상자를 위한 공간이 있어야 합니다.
@@ -99,7 +98,7 @@ template: detail.hbs
 
 0 입력 및 쿼리 형식화 기능은 문맥 검색/검색 구체화에 대한 옵션으로, 사용할 경우 목록이 사용자 입력에 따라 실시간으로 필터링됩니다. 쿼리 형식 지정 제안을 사용할 수 있는 경우는 예외입니다. 받은 편지함 필터링 옵션(받는 사람: &lt;입력 문자열&gt;, 보낸 사람: &lt;입력 문자열&gt;, 제목: &lt;입력 문자열&gt; 등)을 예로 들 수 있습니다.
 
-## <span id="examples"> </span> <span id="EXAMPLES"> </span>예제
+## <span id="examples"></span><span id="EXAMPLES"></span>예제
 
 
 이 섹션의 예는 문맥에 배치된 검색을 보여 줍니다.
@@ -132,7 +131,7 @@ Windows 도구 모음에서 작업으로 검색:
 
 페이지에서 찾기를 사용하면 사용자가 현재 본문에서 텍스트 일치 항목을 찾을 수 있습니다. 문서 뷰어, 판독기 및 브라우저는 페이지에서 찾기 기능을 제공하는 가장 일반적인 앱입니다.
 
-## <span id="Recommendations"> </span> <span id="recommendations"> </span> <span id="RECOMMENDATIONS"> </span>권장 사항
+## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>권장 사항
 
 
 -   사용자가 페이지에 있는 텍스트를 검색할 수 있도록 해주는 페이지에서 찾기 기능이 있는 앱에 명령 모음을 배치합니다. 배치 세부 정보는 예제 섹션을 참조하세요.
@@ -158,7 +157,7 @@ Windows 도구 모음에서 작업으로 검색:
 -   페이지에 있는 텍스트 일치 항목 수를 사용자에게 표시하는 일치 항목 카운터를 포함하세요.
 -   바로 가기 키(CTRL+F)를 사용하도록 설정하세요.
 
-## <span id="Examples"> </span> <span id="examples"> </span> <span id="EXAMPLES"> </span>예제
+## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>예제
 
 
 페이지에서 찾기 기능에 액세스하는 간편한 방법을 제공합니다. 모바일 UI의 이 예제에서는 확장 가능한 메뉴에서 두 개의 "...에 추가" 명령 후 "페이지에서 찾기"가 표시됩니다.
@@ -203,7 +202,7 @@ Windows 도구 모음에서 작업으로 검색:
 
 
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 * [**자동 제안 상자**](auto-suggest-box.md)
 
@@ -217,6 +216,6 @@ Windows 도구 모음에서 작업으로 검색:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 미디어 플레이어에 오디오와 비디오 콘텐츠의 컨트롤을 관리하기 위해 사용자 지정 가능한 XAML 전송 컨트롤이 있습니다.
 title: 사용자 지정 미디어 전송 컨트롤을 만드는 방법
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
-label: 사용자 지정 미디어 전송 컨트롤을 만드는 방법
+label: Create custom media transport controls
 template: detail.hbs
 ---
 # 사용자 지정 전송 컨트롤 만들기
@@ -11,7 +12,7 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 
 시작하기 전에 MediaElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaElement 컨트롤 가이드를 참조하세요. 
 
-> **팁**&nbsp;&nbsp;이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)을 기반으로 합니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
+> **팁** &nbsp;&nbsp;이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)을 기반으로 합니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
 
 <span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
 
@@ -21,7 +22,7 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 
 ## 템플릿을 사용자 지정해야 하는 경우
 
-**MediaElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 장치로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
+**MediaElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 디바이스로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
 
 그러나 추가로 컨트롤의 모양을 사용자 지정하거나 컨트롤 동작을 변경해야 하는 시나리오가 있을 수 있습니다. 예를 들면 다음과 같습니다.
 - 아이콘, 슬라이더 동작 및 색을 변경합니다.
@@ -31,7 +32,7 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 
 기본 서식 파일을 수정하여 컨트롤의 모양을 사용자 지정할 수 있습니다. 컨트롤의 동작을 수정하거나 새 명령을 추가하려면 MediaTransportControls에서 파생된 사용자 지정 컨트롤을 만들면 됩니다.
 
->**팁**&nbsp;&nbsp;사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
+>**팁** &nbsp;&nbsp;사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
 
 ## 템플릿 구조
 
@@ -41,7 +42,7 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 - 두 번째 섹션에서는 MediaTransportControls에서 사용하는 다양한 시각적 상태를 정의합니다.
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
 
-> **참고** 템플릿을 수정하는 방법에 대한 자세한 내용은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
+> **참고** &nbsp;&nbsp;템플릿을 수정하는 방법에 대한 자세한 내용은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다. 
 - [
@@ -82,7 +83,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 
 **MediaTransportControls에서 파생된 새 클래스를 만들려면**
 1. 새 클래스 파일을 프로젝트에 추가합니다.
-    - Visual Studio에서 프로젝트 > 클래스 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
+    - Visual Studio에서 프로젝트 &gt; 클래스 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
     - 새 항목 추가 대화 상자에서 클래스 파일의 이름을 입력한 다음 추가를 클릭합니다. 미디어 전송 컨트롤 샘플에서 클래스 이름은 `CustomMediaTransportControls`입니다.
 2. MediaTransportControls 클래스에서 파생되도록 클래스 코드를 수정합니다.
 ```csharp
@@ -172,7 +173,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 </CommandBar.SecondaryCommands>
 ```
 
-> **중요**&nbsp;&nbsp;여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
+> **중요** &nbsp;&nbsp;여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
 
 ### 사용자 지정 단추 추가
 
@@ -262,13 +263,13 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
 - [미디어 재생](media-playback.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

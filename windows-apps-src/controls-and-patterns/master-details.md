@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 메일 및 연락처 목록/주소록에 자주 사용됩니다.
 title: 마스터/세부
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
-label: 마스터/세부
+label: Master/details
 template: detail.hbs
 ---
 # 마스터/세부 정보 패턴
@@ -71,7 +72,7 @@ template: detail.hbs
 
 ![데스크톱에서 마스터 세부 정보 패턴을 사용하는 앱의 예](images/uap-finance-desktop700.png)
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
@@ -81,6 +82,6 @@ template: detail.hbs
 - [**ListView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

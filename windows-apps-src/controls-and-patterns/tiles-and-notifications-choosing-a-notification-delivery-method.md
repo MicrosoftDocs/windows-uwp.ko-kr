@@ -1,20 +1,21 @@
 ---
+author: mijacobs
 Description: 이 문서에서는 타일 및 배지 업데이트와 알림 메시지 콘텐츠를 제공하는 네 가지 알림 옵션(로컬, 예약, 정기 및 푸시)에 대해 설명합니다.
 title: 알림 전달 방법 선택
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
-label: 알림 전달 방법 선택
+label: Choose a notification delivery method
 template: detail.hbs
 ---
 
 # 알림 전달 방법 선택
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 이 문서에서는 타일 및 배지 업데이트와 알림 메시지 콘텐츠를 제공하는 네 가지 알림 옵션(로컬, 예약, 정기 및 푸시)에 대해 설명합니다. 타일 또는 알림 메시지를 사용하면 앱에 직접 연결하지 않은 사용자에게도 정보를 제공할 수 있습니다. 전달하려는 정보와 앱의 특징 및 콘텐츠에 따라 시나리오에 가장 적합한 알림 방법을 결정할 수 있습니다.
 
-## <span id="Notification_delivery_methods__overview"> </span> <span id="notification_delivery_methods__overview"> </span> <span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"> </span>알림 전달 방법 개요
+## <span id="Notification_delivery_methods__overview"></span><span id="notification_delivery_methods__overview"></span><span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"></span>알림 전달 방법 개요
 
 
 앱에서 알림을 전달하는 데 사용할 수 있는 네 가지 메커니즘이 있습니다.
@@ -45,7 +46,7 @@ template: detail.hbs
 <tr class="odd">
 <td align="left">로컬</td>
 <td align="left">타일, 배지, 알림</td>
-<td align="left">앱이 실행 중이거나, 타일 또는 배지를 업데이트하거나, 알림을 보내는 동안에 알림을 보내는 API 호출 집합입니다.</td>
+<td align="left">앱이 실행 중이거나, 타일 또는 배지를 업데이트하거나, 알림 메시지를 보내는 동안에 알림을 보내는 API 호출 집합입니다.</td>
 <td align="left"><ul>
 <li>음악 앱에서는 타일을 업데이트하여 &quot;지금 재생&quot;되는 항목을 표시합니다.</li>
 <li>게임 앱에서는 사용자가 게임을 종료할 때 사용자의 최고 점수로 타일을 업데이트합니다.</li>
@@ -86,7 +87,7 @@ template: detail.hbs
 
  
 
-## <span id="Local_notifications"> </span> <span id="local_notifications"> </span> <span id="LOCAL_NOTIFICATIONS"> </span>로컬 알림
+## <span id="Local_notifications"></span><span id="local_notifications"></span><span id="LOCAL_NOTIFICATIONS"></span>로컬 알림
 
 
 앱 실행 중에 앱 타일 또는 배지를 업데이트하거나 알림 메시지를 발생시키는 방법으로 가장 쉽게 알림을 전달할 수 있습니다. 로컬 API만 호출하면 됩니다. 모든 앱에는 사용자가 앱을 실행하고 상호 작용한 후에만 해당 콘텐츠가 변경되는 경우에도 타일에 표시할 유용하거나 흥미로운 정보가 있을 수 있습니다. 로컬 알림은 다른 알림 메커니즘 중 하나를 사용하는 경우에도 앱 타일을 최신의 상태로 유지하는 적합한 방법입니다. 예를 들어 사진 앱 타일에는 최근에 추가된 앨범에 있는 사진을 표시할 수 있습니다.
@@ -105,7 +106,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 -   [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)
 -   [UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Scheduled_notifications"> </span> <span id="scheduled_notifications"> </span> <span id="SCHEDULED_NOTIFICATIONS"> </span>예약된 알림
+## <span id="Scheduled_notifications"></span><span id="scheduled_notifications"></span><span id="SCHEDULED_NOTIFICATIONS"></span>예약된 알림
 
 
 예약된 알림은 타일을 업데이트하거나 알림 메시지를 표시할 시간을 정확하게 지정할 수 있는 로컬 알림의 하위 집합입니다. 예약된 알림은 업데이트할 콘텐츠를 미리 알고 있는 경우(예: 모임 초대)에 적합합니다. 알림 콘텐츠를 미리 알 수 없는 경우 푸시 또는 정기 알림을 사용해야 합니다.
@@ -117,7 +118,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 -   [예약된 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761464)
 -   [UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Periodic_notifications"> </span> <span id="periodic_notifications"> </span> <span id="PERIODIC_NOTIFICATIONS"> </span>정기 알림
+## <span id="Periodic_notifications"></span><span id="periodic_notifications"></span><span id="PERIODIC_NOTIFICATIONS"></span>정기 알림
 
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 라이브 타일 업데이트를 제공받을 수 있습니다. 또한 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 방법입니다. 클라이언트 코드를 통해 Windows에서 타일 또는 배지 업데이트에 대해 폴링할 클라우드 위치의 URL과 이 위치를 폴링하는 빈도를 지정합니다. 각 폴링 간격에 Windows에서는 URL에 연결하여 지정된 XML 콘텐츠를 다운로드한 후 타일에 표시합니다.
@@ -131,7 +132,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 -   [정기 알림 개요](tiles-and-notifications-periodic-notification-overview.md)
 -   [UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Push_notifications"> </span> <span id="push_notifications"> </span> <span id="PUSH_NOTIFICATIONS"> </span>푸시 알림
+## <span id="Push_notifications"></span><span id="push_notifications"></span><span id="PUSH_NOTIFICATIONS"></span>푸시 알림
 
 
 푸시 알림은 실시간 데이터나 사용자에 맞게 개인 설정된 데이터를 전달하는 데 적합합니다. 푸시 알림은 콘텐츠가 생성되는 시간을 예측할 수 없는 경우(예: 뉴스 속보, 소셜 네트워크 업데이트 또는 인스턴트 메시지)에 사용됩니다. 푸시 알림은 데이터의 시간이 중요하여 정기 알림에는 적합하지 않은 경우(예: 게임 중 스포츠 점수)에도 유용합니다.
@@ -146,12 +147,8 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 -   [푸시 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761462)
 -   [UWP(유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-**참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
-
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 * [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)
@@ -170,6 +167,6 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

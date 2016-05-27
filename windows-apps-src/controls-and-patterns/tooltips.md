@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다.
 title: 도구 설명
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
@@ -9,7 +10,7 @@ template: detail.hbs
 
 # 도구 설명
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 도구 설명은 다른 컨트롤이나 개체에 연결된 간단한 설명입니다. 도구 설명은 UI에서 직접 설명되지 않은 낯선 개체를 이해하는 데 도움을 줍니다. 도구 설명은 사용자가 포커스를 컨트롤로 이동하거나, 컨트롤을 길게 누르거나, 컨트롤을 마우스 포인터로 가리키면 자동으로 표시됩니다. 도구 설명은 몇 초 후에 또는 사용자가 손가락, 포인터 또는 키보드/게임 패드 포커스를 이동할 때 사라집니다.
 
@@ -63,12 +64,12 @@ Bing 지도 앱의 도구 설명입니다.
 -   대화형 컨트롤을 도구 설명 안에 넣지 마세요.
 -   대화형으로 보이는 이미지를 도구 설명에 넣지 마세요.
 
-<span id="related_topics"> </span>관련 항목
+<span id="related_topics"></span>관련 항목
 -----------------------------------------------
 
 * [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

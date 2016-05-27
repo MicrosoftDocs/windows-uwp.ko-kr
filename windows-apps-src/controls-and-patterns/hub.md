@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 허브 컨트롤은 계층적 탐색 패턴을 사용하여 관계형 정보 아키텍처가 있는 앱을 지원합니다.
 title: 허브 컨트롤
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
-label: 허브
+label: Hub
 template: detail.hbs
 ---
 # 허브 컨트롤/패턴
@@ -78,7 +79,7 @@ template: detail.hbs
 
 ![다양한 창 크기에 맞게 잘린 영웅 이미지](images/hub_hero_cropped2.png)
 
-모바일 장치에서는 한 번에 하나의 허브 섹션이 표시됩니다.
+모바일 디바이스에서는 한 번에 하나의 허브 섹션이 표시됩니다.
 
 ![작은 화면에서의 허브 패턴 예](images/phone_hub_example.png)
 
@@ -99,21 +100,16 @@ template: detail.hbs
     -   머리글과 콘텐츠의 텍스트 스타일 및 크기
     -   배경, 섹션, 섹션 머리글 및 섹션 콘텐츠의 색
 
-\[이 문서에는 UWP 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
------------------------------------------------
 
-**디자이너용**
 - [탐색 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)
-
-**개발자용(XAML)**
-- [계층적 탐색 전체 프로세스](https://msdn.microsoft.com/library/windows/apps/xaml/dn440585)
 - [**Windows.UI.Xaml.Controls Hub 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 - [허브 사용](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

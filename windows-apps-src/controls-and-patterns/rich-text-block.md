@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
-label: 서식 있는 텍스트 블록
+label: Rich text block
 template: detail.hbs
 ---
 # 서식 있는 텍스트 블록
@@ -129,7 +130,7 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 글꼴에 대한 지침 및 입력 체계를 참조하세요.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
@@ -149,6 +150,6 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

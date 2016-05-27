@@ -1,17 +1,18 @@
 ---
+author: Jwmsft
 Description: 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
 MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
 title: 컨트롤 스타일 지정
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
-label: 컨트롤 스타일 지정
+label: Styling controls
 template: detail.hbs
 ---
 
 # 컨트롤 스타일 지정
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용자 지정할 수 있습니다. 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
 
@@ -148,10 +149,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 스타일 setter는 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)의 [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) 속성에 사용할 수 있으며 사실 대부분의 일반적인 XAML 스타일과 앱의 XAML 리소스를 구성합니다. 이 스타일 setter는 [컨트롤 템플릿](control-templates.md)에서 더 자세히 알아봅니다.
 
-**참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다.
 title: 달력 보기
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
@@ -59,7 +60,7 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 [
             **SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 이벤트를 처리할 수 있습니다.
 
-> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고** &nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
 ### 달력 보기의 표시 형식 사용자 지정
 
@@ -196,6 +197,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [시간 선택기](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

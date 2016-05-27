@@ -1,12 +1,13 @@
 ---
+author: Jwmsft
 Description: 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
 title: 암호 상자에 대한 지침
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
-label: 암호 상자
+label: Password box
 template: detail.hbs
 ---
-# 비밀번호 상자
+# 암호 상자
 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다. 암호 상자는 입력란처럼 보이지만 입력된 텍스트 대신 자리 표시자 문자를 렌더링합니다. 자리 표시자 문자는 구성할 수 있습니다.
 
 기본적으로 암호 상자는 사용자가 표시 단추를 누른 채로 자신의 암호를 볼 수 있는 방법을 제공합니다. 표시 단추를 사용하지 않도록 설정하거나 확인란과 같은 암호를 표시하는 대체 메커니즘을 제공할 수 있습니다.
@@ -111,7 +112,7 @@ PasswordBox에는 사용자가 암호 텍스트를 표시하기 위해 터치하
 
 [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) 속성의 값이 암호 표시 단추가 사용자에게 표시되는지 여부를 결정하는 유일한 요소는 아닙니다. 기타 요소로는 컨트롤이 최소 너비보다 큰지 여부, PasswordBox에 포커스가 있는지 여부, 텍스트 입력 필드에서 하나 이상의 문자가 포함되어 있는지 여부 등이 있습니다. 암호 표시 단추는 PasswordBox에 처음 포커스가 배치되고 문자를 입력하는 경우에만 표시됩니다. PasswordBox가 포커스를 잃었다가 다시 얻으면 암호를 지우고 문자 입력을 다시 시작해야만 표시 단추가 다시 표시됩니다.
 
-> **주의**&nbsp;&nbsp;Windows 10 이전에는 기본적으로 암호 표시 단추가 표시되지 않았습니다. 앱 보안 정책에 따라 암호를 항상 가려야 하는 경우 PasswordRevealMode를 Hidden으로 설정하세요.
+> **주의** &nbsp;&nbsp;Windows 10 이전에는 기본적으로 암호 표시 단추가 표시되지 않았습니다. 앱 보안 정책에 따라 암호를 항상 가려야 하는 경우 PasswordRevealMode를 Hidden으로 설정하세요.
 
 ### 숨김 및 표시 모드
 
@@ -166,7 +167,7 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 -   로그온하고 있을 경우 단일 암호만 표시합니다.
 -   암호 상자를 사용하여 PIN을 입력하는 경우 확인 단추를 누를 필요 없이 마지막 문자가 입력되자마자 반응을 보이는 것이 좋습니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
@@ -186,6 +187,6 @@ private void CheckBox_Changed(object sender, RoutedEventArgs e)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

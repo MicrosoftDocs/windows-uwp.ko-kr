@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 앱에서 사용할 수 있는 몇 가지 컨트롤의 기능별 목록입니다.
 title: 기능별 컨트롤
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
-label: 기능별 컨트롤
+label: Controls by function
 template: detail.hbs
 ---
 # 기능별 컨트롤
@@ -844,6 +845,6 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 디자인 및 방법: [토글 컨트롤 가이드](toggles.md) 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

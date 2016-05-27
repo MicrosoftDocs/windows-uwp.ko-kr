@@ -1,11 +1,11 @@
 ---
+author: Jwmsft
 Description: 미디어 플레이어는 동영상, 오디오 및 이미지를 감상하는 데 사용합니다.
 title: 미디어 플레이어
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-author: mijacobs
 ---
 # 미디어 플레이어
 
@@ -353,8 +353,7 @@ private void FullWindow_Click(object sender, object e)
 -   [
             **Fill**](https://msdn.microsoft.com/library/windows/apps/br242968)은 전체 공간을 채우지만 가로 세로 비율을 유지하지 않습니다. 이미지가 잘리지는 않지만 늘어짐이 발생할 수 있습니다. 이 상태는 확대 모드와 비슷합니다.
 
-![Stretch 열거형 값](images/Image_Stretch.jpg)
-여기서 [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968) 옵션을 순환하는 데 사용됩니다. **switch** 문은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) 속성의 현재 상태를 확인하고 **Stretch** 열거형의 다음 값으로 설정합니다. 그러면 사용자가 여러 확대 상태를 순환할 수 있습니다.
+![Stretch 열거형 값](images/Image_Stretch.jpg) 여기서 [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968) 옵션을 순환하는 데 사용됩니다. **switch** 문은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) 속성의 현재 상태를 확인하고 **Stretch** 열거형의 다음 값으로 설정합니다. 그러면 사용자가 여러 확대 상태를 순환할 수 있습니다.
 
 ```xaml
 <AppBarButton Icon="Switch" 
@@ -416,14 +415,12 @@ mediaPlayer.RealTimePlayback = true;
 -   너무 많은 옵션을 사용하여 컨트롤 막대가 오버로드되지 않도록 합니다.
 -   효율성을 매우 제한하므로 미디어 타임라인을 기본 최소 크기 이하로 축소하지 않도록 합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
-
 ## 관련 문서
 
 - [UWP 앱의 명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [UWP 앱의 콘텐츠 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

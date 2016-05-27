@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다. 여기서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다.
 title: 컨트롤 추가 및 이벤트 처리
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: 컨트롤 및 이벤트 소개
+label: Intro to controls and events
 template: detail.hbs
 ---
 # 컨트롤 및 이벤트 소개
@@ -93,7 +94,7 @@ Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 
 ![Visual Studio 이벤트 목록](images/add-controls-add-event-designer.png)
 
-기본 이름으로 이벤트 처리기를 만들려면 속성 창에서 이벤트 이름 옆에 있는 입력란을 두 번 클릭합니다. 사용자 지정 이름으로 이벤트 처리기를 만들려면 입력란에 원하는 이름을 입력하고 <Enter> 키를 누릅니다. 이벤트 처리기가 만들어지고 코드 숨김 파일이 코드 편집기에서 열립니다. 이벤트 처리기 메서드에는 두 개의 매개 변수가 있습니다. 첫 번째 매개 변수는 처리기가 연결된 개체에 대한 참조인 `sender`입니다. `sender` 매개 변수는 **Object** 유형입니다. `sender` 개체 자체에 대한 상태를 확인하거나 변경하려는 경우 일반적으로 `sender`를 보다 정확한 유형으로 캐스팅합니다. 고유한 앱 디자인에 따라 처리기가 연결된 위치를 기준으로 `sender`를 캐스팅해도 괜찮은 형식을 기대할 수 있습니다. 두 번째 값은 일반적으로 `e` 또는 `args` 매개 변수로 서명에 나타나는 이벤트 데이터입니다.
+기본 이름으로 이벤트 처리기를 만들려면 속성 창에서 이벤트 이름 옆에 있는 입력란을 두 번 클릭합니다. 사용자 지정 이름으로 이벤트 처리기를 만들려면 입력란에 원하는 이름을 입력하고 &lt;Enter&gt; 키를 누릅니다. 이벤트 처리기가 만들어지고 코드 숨김 파일이 코드 편집기에서 열립니다. 이벤트 처리기 메서드에는 두 개의 매개 변수가 있습니다. 첫 번째 매개 변수는 처리기가 연결된 개체에 대한 참조인 `sender`입니다. `sender` 매개 변수는 **Object** 유형입니다. `sender` 개체 자체에 대한 상태를 확인하거나 변경하려는 경우 일반적으로 `sender`를 보다 정확한 유형으로 캐스팅합니다. 고유한 앱 디자인에 따라 처리기가 연결된 위치를 기준으로 `sender`를 캐스팅해도 괜찮은 형식을 기대할 수 있습니다. 두 번째 값은 일반적으로 `e` 또는 `args` 매개 변수로 서명에 나타나는 이벤트 데이터입니다.
 
 `Button1`이라는 Button의 Click 이벤트를 처리하는 코드는 다음과 같습니다. 단추를 클릭하면 클릭한 Button의 Foreground 속성이 파란색으로 설정됩니다. 
 
@@ -123,7 +124,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 항목
 
@@ -132,6 +133,6 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -   [플라이아웃](dialogs-popups-menus.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

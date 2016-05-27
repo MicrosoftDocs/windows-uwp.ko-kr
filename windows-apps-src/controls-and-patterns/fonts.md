@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 글꼴을 선택하고 글꼴 크기와 색을 지정하는 경우 다음 지침을 따릅니다.
 title: 글꼴
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
@@ -8,10 +9,6 @@ template: detail.hbs
 
 # 글꼴에 대한 지침
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
 **중요 API**
 
 -   [**FontFamily 속성**](https://msdn.microsoft.com/library/windows/apps/br209655)
@@ -20,7 +17,7 @@ template: detail.hbs
 
 Segoe UI Symbol 아이콘 목록을 찾는 경우 [**Guidelines for Segoe UI Symbol icons**](segoe-ui-symbol-font.md)을 참조하세요.
 
-## <span id="The_Windows_10_type_ramp"> </span> <span id="the_windows_10_type_ramp"> </span> <span id="THE_WINDOWS_10_TYPE_RAMP"> </span>Windows 10 형식 램프
+## <span id="The_Windows_10_type_ramp"></span><span id="the_windows_10_type_ramp"></span><span id="THE_WINDOWS_10_TYPE_RAMP"></span>Windows 10 형식 램프
 
 
 유형 램프는 헤드라인과 본문 텍스트 간에 중요한 디자인 관계를 설정하고 각 수준 간의 명확하고 쉽게 이해할 수 있는 계층 구조를 보장합니다. 사용자는 정보를 찾을 위치와 페이지를 구문 분석하는 방법을 즉시 이해할 수 있습니다.
@@ -39,14 +36,14 @@ UWP 앱에 대해 권장하는 형식 램프는 다음과 같습니다.
 
  
 
-## <span id="Recommended_fonts"> </span> <span id="recommended_fonts"> </span> <span id="RECOMMENDED_FONTS"> </span>권장되는 글꼴
+## <span id="Recommended_fonts"></span><span id="recommended_fonts"></span><span id="RECOMMENDED_FONTS"></span>권장되는 글꼴
 
 
 모든 항목에 Segoe UI 글꼴을 사용할 필요는 없습니다. 독서 또는 영어가 아닌 언어로 텍스트를 표시하는 경우 등 특정 시나리오에는 다른 글꼴을 사용할 수 있습니다.
 
 UWP 앱을 지원하는 모든 Windows 10 버전에서 사용이 보장되는 글꼴 목록은 다음과 같습니다.
 
-**참고** 이 목록에 없는 글꼴을 사용하는 경우 앱이 Microsoft 서비스에서 글꼴 데이터를 자동으로 다운로드하도록 트리거할 수 있습니다. 이렇게 할 경우 특히 모바일 장치에서 문제가 될 수 있는 성능 및 기타 영향이 있을 수 있습니다. 특히, 사용자의 모바일 데이터 요금제가 사용되거나 모바일 데이터 사용 요금이 부과될 수 있습니다. 모바일 장치에서 사용할 수 있는 UWP 앱은 이 목록에 있는 글꼴 이외의 글꼴을 UI 콘텐츠에 사용해서는 안 됩니다.
+**참고** 이 목록에 없는 글꼴을 사용하는 경우 앱이 Microsoft 서비스에서 글꼴 데이터를 자동으로 다운로드하도록 트리거할 수 있습니다. 이렇게 할 경우 특히 모바일 디바이스에서 문제가 될 수 있는 성능 및 기타 영향이 있을 수 있습니다. 특히, 사용자의 모바일 데이터 요금제가 사용되거나 모바일 데이터 사용 요금이 부과될 수 있습니다. 모바일 디바이스에서 사용할 수 있는 UWP 앱은 이 목록에 있는 글꼴 이외의 글꼴을 UI 콘텐츠에 사용해서는 안 됩니다.
 
  
 
@@ -269,13 +266,12 @@ UWP 앱을 지원하는 모든 Windows 10 버전에서 사용이 보장되는 �
 
  
 
-## <span id="related_topics"> </span>관련 항목
-
+## <span id="related_topics"></span>관련 항목
 
 **디자이너용**
 * [레이블(또는 텍스트 블록)](labels.md)
-* [Segoe UI Symbol 아이콘](segoe-ui-symbol-font.md)
-**개발자용(XAML)**
+* [Segoe UI Symbol 아이콘](segoe-ui-symbol-font.md) 
+           **개발자용(XAML)**
 * [XAML 테마 리소스](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [앱 페이지 레이아웃](https://msdn.microsoft.com/library/windows/apps/hh872191)
 * [Segoe UI Symbol 아이콘](segoe-ui-symbol-font.md)
@@ -294,6 +290,6 @@ UWP 앱을 지원하는 모든 Windows 10 버전에서 사용이 보장되는 �
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

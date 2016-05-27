@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
 title: 하이퍼링크
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
-label: 하이퍼링크
+label: Hyperlinks
 template: detail.hbs
 ---
 # 하이퍼링크
@@ -49,7 +50,7 @@ template: detail.hbs
 
 ![텍스트 요소로 표시되는 하이퍼링크의 예](images/controls_hyperlink-element.png) 
 
-> **팁**&nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
+> **팁** &nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
 
 ## HyperlinkButton 만들기
 
@@ -80,7 +81,7 @@ template: detail.hbs
 
 URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성을 설정합니다. 사용자가 하이퍼링크를 클릭하거나 탭하면 지정된 URI가 기본 브라우저에서 열립니다. 기본 브라우저는 앱과는 별도의 프로세스에서 실행됩니다.
 
-> **참고**&nbsp;&nbsp;http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적당한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
+> **참고** &nbsp;&nbsp;http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적당한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
 
 > 사용자가 하이퍼링크를 클릭하면 NavigateUri 속성 값이 URI 형식 및 체계에 대한 시스템 처리기에 전달됩니다. 그런 다음 시스템은 NavigateUri에 제공된 URI의 체계를 등록한 앱을 시작합니다.
 
@@ -118,7 +119,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 
 **입력 이벤트**
 
-Hyperlink는 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)가 아니기 때문에 Tapped, PointerPressed 등의 UI 요소 입력 이벤트 집합은 없습니다. 대신 Hyperlink에는 고유 Click 이벤트와 NavigateUri로 지정된 모든 URI를 로드하는 시스템의 암시적 동작이 있습니다. 시스템은 Hyperlink 동작을 호출하여 그 응답으로 Click 이벤트를 발생시키는 모든 입력 작업을 처리합니다.
+Hyperlink는 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)가 아니기 때문에 Tapped, PointerPressed 등의 UI 요소 입력 이벤트 집합은 없습니다. 대신 Hyperlink에는 고유 Click 이벤트와 NavigateUri로 지정된 모든 URI를 로드하는 시스템의 암시적 동작이 있습니다. 시스템은 Hyperlink 작업을 호출하여 그 응답으로 Click 이벤트를 발생시키는 모든 입력 작업을 처리합니다.
 
 **콘텐츠**
 
@@ -138,13 +139,11 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 -   사용자 구별할 수 있고 각각을 쉽게 선택할 수 있게 하이퍼링크 사이에 충분한 공간을 둡니다.
 -   사용자가 이동될 위치를 나타내는 도구 설명을 하이퍼링크에 추가합니다. 사용자가 외부 사이트로 이동되면 도구 설명 내에 최상위 도메인 이름을 포함하고 텍스트에 보조 글꼴 색을 지정합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
-[텍스트 컨트롤](text-controls.md)
-
-**디자이너용**
+- [텍스트 컨트롤](text-controls.md)
 - [도구 설명에 대한 지침](tooltips.md)
 
 **개발자용(XAML)**
@@ -152,6 +151,6 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 - [**Windows.UI.Xaml.Controls.HyperlinkButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

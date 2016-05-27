@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 날짜 및 시간 컨트롤을 통해 날짜 및 시간을 보고 설정할 수 있습니다. 이 문서는 디자인 지침을 제공하며, 올바른 컨트롤을 선택하는 데 도움이 됩니다.
 title: 날짜 및 시간 컨트롤에 대한 지침
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
@@ -98,7 +99,7 @@ XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 �
 
 .NET은 또한 암시적으로 [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)으로 변환될 수 있는 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)이라는 형식을 지원합니다. 따라서 실제로 DateTimeOffset인 값을 설정하는 데 사용되는 .NET 코드에서 "DateTime" 형식이 사용되는 것을 볼 수 있습니다. DateTime과 DateTimeOffset 간의 차이점에 대한 자세한 내용은 [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) 클래스의 설명을 참조하세요.
 
-> **참고**&nbsp;&nbsp;Windows 런타임 XAML 파서에는 문자열을 DateTime/DateTimeOffse 개체인 날짜로 변환하는 변환 논리가 없기 때문에 날짜 개체를 사용하는 속성은 XAML 특성 문자열로 설정할 수 없습니다. 일반적으로 코드에서 이러한 값을 설정합니다. 가능한 다른 기술은 사용할 수 있는 날짜를 날짜 개체로 또는 데이터 컨텍스트에서 정의한 다음 속성을 XAML 특성(날짜를 데이터로 액세스할 수 있는 [\{Binding\} 태그 확장](../xaml-platform/binding-markup-extension.md) 식 참조)으로 설정하는 것입니다.
+> **참고** &nbsp;&nbsp;Windows 런타임 XAML 파서에는 문자열을 DateTime/DateTimeOffse 개체인 날짜로 변환하는 변환 논리가 없기 때문에 날짜 개체를 사용하는 속성은 XAML 특성 문자열로 설정할 수 없습니다. 일반적으로 코드에서 이러한 값을 설정합니다. 가능한 다른 기술은 사용할 수 있는 날짜를 날짜 개체로 또는 데이터 컨텍스트에서 정의한 다음 속성을 XAML 특성(날짜를 데이터로 액세스할 수 있는 [\{Binding\} 태그 확장](../xaml-platform/binding-markup-extension.md) 식 참조)으로 설정하는 것입니다.
 
 
 ## 관련 항목
@@ -110,6 +111,6 @@ XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 �
 - [**TimePicker 클래스**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

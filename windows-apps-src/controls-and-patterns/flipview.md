@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다.
 title: 대칭 이동 보기 컨트롤에 대한 지침
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
@@ -7,7 +8,7 @@ template: detail.hbs
 ---
 # 대칭 이동 뷰
 
-대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 장치의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
+대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 디바이스의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
 
 
 <span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
@@ -22,7 +23,7 @@ template: detail.hbs
 
 ## 예제
 
-가장 왼쪽 항목에서 시작하고 오른쪽에서 대칭 이동하는 가로 검색은 보통 대칭 이동 보기에 대한 일반적인 레이아웃입니다. 이 레이아웃은 모든 장치에서 세로 또는 가로 방향으로 원활하게 작동합니다.
+가장 왼쪽 항목에서 시작하고 오른쪽에서 대칭 이동하는 가로 검색은 보통 대칭 이동 보기에 대한 일반적인 레이아웃입니다. 이 레이아웃은 모든 디바이스에서 세로 또는 가로 방향으로 원활하게 작동합니다.
 
 ![가로 대칭 이동 보기 레이아웃 예제](images/controls_flipview_horizonal.jpg)
 
@@ -101,7 +102,7 @@ stackPanel1.Children.Add(flipView1);
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**참고**&nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 대칭 이동 보기를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
+>**참고** &nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
 
 ### 항목의 모양 지정
 
@@ -201,11 +202,11 @@ stackPanel1.Children.Add(flipView1);
 
 ## 관련 문서
 
-[목록에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)
+- [목록에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)
 - [**FlipView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
 - [**CarouselPanel 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

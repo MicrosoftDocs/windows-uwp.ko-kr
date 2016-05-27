@@ -1,20 +1,17 @@
 ---
+author: mijacobs
 Description: 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다.
 title: 적응형 타일 스키마 및 템플릿
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
-label: 적응형 타일 스키마 및 템플릿
+label: Adaptive tile schema and templates
 template: detail.hbs
 ---
 
-# 적응형 타일 템플릿: 스키마 및 지침
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+# 적응형 타일 템플릿&#58; 스키마 및 지침
 
 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. 지침과 예제는 [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)를 참조하세요.
 
-## <span id="tile_element"> </span> <span id="TILE_ELEMENT"> </span>타일 요소
+## <span id="tile_element"></span><span id="TILE_ELEMENT"></span>타일 요소
 
 
 ``` syntax
@@ -26,7 +23,7 @@ template: detail.hbs
 </tile>
 ```
 
-## <span id="visual_element"> </span> <span id="VISUAL_ELEMENT"> </span>시각적 요소
+## <span id="visual_element"></span><span id="VISUAL_ELEMENT"></span>시각적 요소
 
 
 ``` syntax
@@ -45,7 +42,7 @@ template: detail.hbs
 </visual>
 ```
 
-## <span id="binding_element"> </span> <span id="BINDING_ELEMENT"> </span>바인딩 요소
+## <span id="binding_element"></span><span id="BINDING_ELEMENT"></span>바인딩 요소
 
 
 ``` syntax
@@ -70,7 +67,7 @@ template: detail.hbs
 </binding>
 ```
 
-## <span id="image_element"> </span> <span id="IMAGE_ELEMENT"> </span>이미지 요소
+## <span id="image_element"></span><span id="IMAGE_ELEMENT"></span>이미지 요소
 
 
 ``` syntax
@@ -84,7 +81,7 @@ template: detail.hbs
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## <span id="text_element"> </span> <span id="TEXT_ELEMENT"> </span>텍스트 요소
+## <span id="text_element"></span><span id="TEXT_ELEMENT"></span>텍스트 요소
 
 
 ``` syntax
@@ -103,7 +100,7 @@ template: detail.hbs
 
 textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
 
-## <span id="group_element"> </span> <span id="GROUP_ELEMENT"> </span>그룹 요소
+## <span id="group_element"></span><span id="GROUP_ELEMENT"></span>그룹 요소
 
 
 ``` syntax
@@ -115,7 +112,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </group>
 ```
 
-## <span id="subgroup_element"> </span> <span id="SUBGROUP_ELEMENT"> </span>하위 그룹 요소
+## <span id="subgroup_element"></span><span id="SUBGROUP_ELEMENT"></span>하위 그룹 요소
 
 
 ``` syntax
@@ -131,12 +128,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </subgroup>
 ```
 
-**참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
- 
-
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
@@ -149,6 +141,6 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

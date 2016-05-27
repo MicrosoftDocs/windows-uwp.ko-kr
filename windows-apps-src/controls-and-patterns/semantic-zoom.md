@@ -1,14 +1,15 @@
 ---
+author: Jwmsft
 Description: 시맨틱 줌 컨트롤을 사용하여 동일한 데이터 집합의 서로 다른 두 가지 시맨틱 보기를 확대/축소할 수 있습니다.
 title: 시맨틱 줌
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
-label: 시맨틱 줌
+label: Semantic zoom
 template: detail.hbs
 ---
 
 # 시맨틱 줌
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 시맨틱 줌 컨트롤을 사용하면 큰 데이터 집합을 빠르게 탐색할 수 있도록 동일한 콘텐츠의 두 가지 보기 간에 확대/축소할 수 있습니다. 확대 보기는 기본 콘텐츠 보기입니다. 이 보기에는 전체 데이터 집합이 표시됩니다. 축소 보기는 동일한 콘텐츠의 상위 수준 보기입니다. 일반적으로 이 보기에서는 그룹화된 데이터 집합에 대해 그룹 헤더가 표시됩니다. 예를 들면 주소록을 볼 때 사용자는 글자 하나를 확대하여 해당 글자와 연결된 이름을 볼 수 있습니다. 
 
@@ -41,7 +42,7 @@ template: detail.hbs
 -   그룹화된 모음에 포함된 항목에는 그룹 이름을 사용합니다.
 -   그룹화되지 않았지만 정렬된 컬렉션에는 정렬 순서(예: 날짜의 경우 시간순 또는 명단의 경우 사전순)를 사용합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
@@ -64,6 +65,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

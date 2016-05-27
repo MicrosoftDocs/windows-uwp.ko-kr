@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 사진 뷰어/편집기, 문서 뷰어, 지도, 그리기 또는 자유 스크롤 보기를 사용하는 기타 앱과 같은 단일 보기 앱 또는 모달 환경에 대한 콘텐츠 영역 및 명령 영역이 있는 패턴입니다.
 title: 활성 캔버스 패턴에 대한 지침
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
@@ -28,13 +29,13 @@ template: detail.hbs
 
 **명령 영역입니다.**  많은 명령을 배치하는 경우 화면 크기에 따라 반응하는 명령 모음이 최상의 옵션이 될 수 있습니다. 그렇게 많은 명령을 배치하지 않고 반응형 UI에 관심이 없는 경우 공간을 절약하는 단추가 잘 작동합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 문서
 
 -   [**앱 바 및 명령 모음**](app-bars.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

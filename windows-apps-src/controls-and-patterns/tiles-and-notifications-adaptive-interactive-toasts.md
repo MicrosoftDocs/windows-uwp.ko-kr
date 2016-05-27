@@ -1,15 +1,16 @@
 ---
+author: mijacobs
 Description: 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다.
 title: 적응형 및 대화형 알림 메시지
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
-label: 적응형 및 대화형 알림 메시지
+label: Adaptive and interactive toast notifications
 template: detail.hbs
 ---
 
 # 적응형 및 대화형 알림 메시지
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다.
@@ -24,12 +25,12 @@ template: detail.hbs
 
  
 
-## <span id="toast_structure"> </span> <span id="TOAST_STRUCTURE"> </span>알림 메시지 구조
+## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>알림 메시지 구조
 
 
 알림 메시지는 XML을 사용하여 구성되며 이 XML에는 일반적으로 다음 키 요소가 포함됩니다.
 
--   &lt;visual&gt;은 텍스트와 이미지를 포함하여 사용자가 시각적으로 볼 수 있는 콘텐츠를 포함합니다.
+-   &lt;visua&gt;l은 텍스트와 이미지를 포함하여 사용자가 시각적으로 볼 수 있는 콘텐츠를 포함합니다.
 -   &lt;actions&gt;는 개발자가 알림 내부에 추가하려는 단추/입력을 포함합니다.
 -   &lt;audio&gt;는 알림이 나타날 때 재생되는 소리를 지정합니다.
 
@@ -56,7 +57,7 @@ template: detail.hbs
 
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
 
-### <span id="Visual"> </span> <span id="visual"> </span> <span id="VISUAL"> </span>시각 효과
+### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>시각 효과
 
 시각적 요소 내부에는 알림의 시각적 콘텐츠가 포함된 정확히 하나의 바인딩 요소가 있어야 합니다.
 
@@ -67,14 +68,14 @@ UWP(유니버설 Windows 플랫폼) 앱의 타일 알림은 다양한 타일 크
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
 
-### <span id="Actions"> </span> <span id="actions"> </span> <span id="ACTIONS"> </span>동작
+### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>동작
 
 UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는 데 사용되는 단추와 다른 입력을 알림 메시지에 추가할 수 있습니다. 이들 작업은 &lt;actions&gt; 요소 아래에 다음 두 가지 형식으로 지정할 수 있습니다.
 
 -   &lt;action&gt; 이 형식은 데스크톱 및 모바일 디바이스에 단추로 나타납니다. 알림 메시지 내부에 사용자 지정 또는 시스템 작업을 5개까지 지정할 수 있습니다.
 -   &lt;input&gt; 이 형식을 사용하면 사용자가 메시지에 빠르게 회신하거나 드롭다운 메뉴에서 옵션을 선택하는 것 같이 입력을 제공할 수 있습니다.
 
-&lt;action&gt; 및 &lt;input&gt;은 Windows 디바이스 패밀리 내에서 조정됩니다. 예를 들어 모바일 또는 데스크톱 디바이스에서 사용자에 대한 &lt;action&gt;은 탭/클릭할 단추입니다. 텍스트 &lt;input&gt;은 사용자가 물리적 키보드나 화면 키보드를 사용하여 텍스트를 입력할 수 있는 상자입니다. 이러한 요소는 음성으로 알린 작업이나 받아쓰기로 수행된 텍스트 입력 같이 이후 조작 시나리오에 맞게 조정됩니다.
+&lt;action&gt; 및 &lt;input&gt;은 Windows 디바이스 패밀리 내에서 조정됩니다. 예를 들어 모바일 또는 데스크톱 디바이스에서 사용자에 대한 &lt;action&gt;은 탭/클릭할 단추입니다. 텍스트 &lt;input&gt;은 사용자가 물리적 키보드나 화상 키보드를 사용하여 텍스트를 입력할 수 있는 상자입니다. 이러한 요소는 음성으로 알린 작업이나 받아쓰기로 수행된 텍스트 입력 같이 이후 조작 시나리오에 맞게 조정됩니다.
 
 사용자가 작업을 수행하면 &lt;action&gt; 요소 내부에서 [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) 특성을 지정하여 다음의 하나를 수행할 수 있습니다.
 
@@ -85,7 +86,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
 
-### <span id="Audio"> </span> <span id="audio"> </span> <span id="AUDIO"> </span>오디오
+### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>오디오
 
 사용자 지정 소리는 현재 데스크톱 플랫폼을 대상으로 지정한 UWP 앱에서 지원되지 않습니다. 대신, 데스크톱의 목록에서 앱에 대한 ms-winsoundevents를 선택할 수 있습니다. 모바일 플랫폼의 UWP 앱은 다음 형식의 사용자 지정 소리와 함께 두 가지 ms-winsoundevents를 모두 지원합니다.
 
@@ -94,17 +95,16 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오에 대한 자세한 내용은 [오디오 스키마 페이지](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## <span id="Alarms__reminders__and_incoming_calls"> </span> <span id="alarms__reminders__and_incoming_calls"> </span> <span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"> </span>알람, 미리 알림 및 수신 전화
+## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>알람, 미리 알림 및 수신 전화
 
 
 알람, 미리 알림 및 수신 전화에 알림 메시지를 사용할 수 있습니다. 이러한 특수 알림의 표준 토스트와 일치하지만 특수 알림은 시나리오 기반 사용자 지정 UI 및 패턴을 나타냅니다.
 
 -   미리 알림은 사용자가 알림을 해제하거나 작업을 수행할 때까지 화면에 표시됩니다. Windows Mobile에서 미리 알림은 미리 확장된 상태로 표시됩니다.
 -   위의 동작을 미리 알림과 공유할 뿐 아니라 알람 알림도 루핑 오디오를 자동으로 재생합니다.
--   Windows 모바일 디바이스에서 수신 전화 알림은 전체 화면으로 표시됩니다. 이 작업을 수행하려면 알림 메시지의 루트 요소 내부에 시나리오 특성 &lt;toast&gt;를 지정합니다.
-    &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
+-   Windows 모바일 디바이스에서 수신 전화 알림은 전체 화면으로 표시됩니다. 이 작업을 수행하려면 알림 메시지의 루트 요소 내부에 시나리오 특성을 지정합니다. &lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
 
-## <span id="xml_examples"> </span> <span id="XML_EXAMPLES"> </span>XML 예제
+## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>XML 예
 
 
 **참고** 아래 예제의 알림 메시지 스크린샷은 데스크톱의 앱에서 생성되었습니다. 모바일 디바이스에서 알림 메시지는 나타날 때 축소될 수 있고 이 경우 알림 아래쪽의 그래버를 통해 확장합니다.
@@ -286,7 +286,7 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 
  
 
-## <span id="Activation_samples"> </span> <span id="activation_samples"> </span> <span id="ACTIVATION_SAMPLES"> </span>활성화 샘플
+## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>활성화 샘플
 
 
 위에서 설명한 대로 알림의 본문과 작업은 다양한 방법으로 앱을 활성화할 수 있습니다. 아래 샘플은 알림 본문 및/또는 알림 작업에서 다양한 활성화 형식을 처리하는 방법을 보여 줍니다.
@@ -348,7 +348,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"> </span> <span id="schemas___visual__and__audio_"> </span> <span id="SCHEMAS___VISUAL__AND__AUDIO_"> </span>스키마: &lt;visual&gt; 및 &lt;audio&gt;
+## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>스키마: &lt;visual&gt; 및 &lt;audio&gt;
 
 
 다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
@@ -368,7 +368,7 @@ namespace ToastNotificationTask
 </toast>
 ```
 
-**&lt;toast&gt;의 특성**
+**&lt;toast의 특성&gt;**
 
 launch?
 
@@ -400,7 +400,7 @@ scenario?
 -   시나리오에서 알람, 미리 알림 또는 수신 전화를 표시하지 않을 경우 이 특성이 필요하지 않습니다.
 -   화면에 알림을 계속 표시하기 위한 목적만으로 이 특성을 사용하지 마세요.
 
-**&lt;visual&gt;의 특성**
+**&lt;visual의 특성&gt;**
 
 version?
 
@@ -419,7 +419,7 @@ addImageQuery?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;binding&gt;의 특성**
+**&lt;binding의 특성&gt;**
 
 template?
 
@@ -439,13 +439,13 @@ addImageQuery?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;text&gt;의 특성**
+**&lt;text의 특성&gt;**
 
 lang?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230847)를 참조하세요.
 
-**&lt;image&gt;의 특성**
+**&lt;image의 특성&gt;**
 
 src
 
@@ -474,7 +474,7 @@ hint-crop?
 -   "none"은 자르기가 없음을 의미하는 기본값입니다.
 -   "circle"은 이미지를 원 모양으로 자릅니다. 연락처의 프로필 이미지, 개인 이미지 등에 이 모양을 사용합니다.
 
-**&lt;audio&gt;의 특성**
+**&lt;audio의 특성&gt;**
 
 src?
 
@@ -488,7 +488,7 @@ silent?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## <span id="Schemas___action_"> </span> <span id="schemas___action_"> </span> <span id="SCHEMAS___ACTION_"> </span>스키마: &lt;action&gt;
+## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>스키마: &lt;action&gt;
 
 
 다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
@@ -507,7 +507,7 @@ silent?
 </toast>
 ```
 
-**&lt;input&gt;의 특성**
+**&lt;input의 특성&gt;**
 
 id
 
@@ -540,7 +540,7 @@ defaultInput?
 -   입력 형식이 "text"이면 이는 문자열 입력으로 처리됩니다.
 -   입력 형식이 "selection"이면 이는 이 입력 요소 내부에서 사용 가능한 선택 항목 중 하나의 ID여야 합니다.
 
-**&lt;selection&gt;의 특성**
+**&lt;selection의 특성&gt;**
 
 id
 
@@ -550,7 +550,7 @@ id
 
 -   이 특성은 필수입니다. 이 선택 요소에 대해 표시할 문자열을 제공합니다.
 
-**&lt;action&gt;의 특성**
+**&lt;action의 특성&gt;**
 
 콘텐츠
 
@@ -578,9 +578,9 @@ hint-inputId
 -   hint-inputId = string
 -   hint-inpudId 특성은 필수입니다. 특히 빠른 회신 시나리오에 사용됩니다.
 -   값은 연결할 입력 요소의 ID여야 합니다.
--   모바일 및 데스크톱에서 이 특성은 입력란의 오른쪽 옆에 단추를 배치합니다.
+-   모바일 및 데스크톱에서 이 특성은 입력 상자의 오른쪽 옆에 단추를 배치합니다.
 
-## <span id="Attributes_for_system-handled_actions"> </span> <span id="attributes_for_system-handled_actions"> </span> <span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"> </span>시스템 처리 작업의 특성
+## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>시스템 처리 작업의 특성
 
 
 앱이 알림의 다시 알림/재예약을 백그라운드 작업으로 처리하지 않게 하려면 알림을 다시 알리고 해제하기 위한 작업을 시스템에서 처리할 수 있습니다. 시스템 처리 작업을 결합하거나 개별적으로 지정할 수 있지만 다시 알림 작업을 구현하려면 해제 작업을 포함하는 것이 좋습니다.
@@ -625,7 +625,7 @@ hint-inputId
     -   "snooze" 및 "dismiss"의 지역화된 문자열을 작업에 표시하려면 콘텐츠를 빈 문자열로 지정합니다. &lt;action content = ""/&gt;
     -   사용자 지정 문자열이 필요하면 해당 값을 제공합니다. &lt;action content="Remind me later" /&gt;
 -   입력 지정:
-    -   사용자가 다시 알림 간격을 선택하게 하지 않고 OS 전체에서 일관성 있는 시스템 정의 시간 간격에 한 번만 알림을 다시 알리게 하려면 &lt;input&gt;을 구성하지 마세요.
+    -   사용자가 다시 알림 간격을 선택하게 하지 않고 OS 전체에서 일관성 있는 시스템 정의 시간 간격에 한 번만 알림을 다시 발생하게 하려면 &lt;input&gt;을 구성하지 마세요.
     -   다시 알림 간격 선택 항목을 제공하려면:
         -   다시 알림 작업에서 hint-inputId를 지정합니다.
         -   입력 ID가 다시 알림 작업의 hint-inputId와 일치하도록 설정합니다. &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
@@ -642,6 +642,6 @@ hint-inputId
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

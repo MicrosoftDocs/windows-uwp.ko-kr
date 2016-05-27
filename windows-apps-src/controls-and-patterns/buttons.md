@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 label: Buttons
 template: detail.hbs
 ---
@@ -151,22 +152,19 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 ## 뒤로 단추
 뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 어포던스입니다.
 
-탐색 기록(앱 내 또는 전역)의 범위는 장치 및 장치 모드에 따라 다릅니다.
+탐색 기록(앱 내 또는 전역)의 범위는 디바이스 및 디바이스 모드에 따라 다릅니다.
 
-## <span id="examples"> </span> <span id="EXAMPLES"> </span>예제
+## <span id="examples"></span><span id="EXAMPLES"></span>예제
 
 
-시스템 뒤로 단추의 UI는 각 장치 및 입력 유형에 최적화되어 있지만 탐색 환경은 장치 및 UWP(유니버설 Windows 플랫폼) 앱 전체에서 포괄적이고 일관됩니다. 이러한 다양한 환경은 다음과 같습니다.
+시스템 뒤로 단추의 UI는 각 디바이스 및 입력 유형에 최적화되어 있지만 탐색 환경은 디바이스 및 UWP(유니버설 Windows 플랫폼) 앱 전체에서 전역적이고 일관됩니다. 이러한 다양한 환경은 다음과 같습니다.
 
-장치
-휴대폰
-![휴대폰의 시스템 뒤로 기능](images/nav-back-phone.png)
+디바이스 전화 ![휴대폰의 시스템 뒤로 기능](images/nav-back-phone.png)
 -   항상 제공됩니다.
--   장치 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.
+-   디바이스 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.
 -   앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.
 
-<span id="Tablet"> </span> <span id="tablet"> </span> <span id="TABLET"> </span>태블릿
-![태블릿의 시스템 뒤로 기능(태블릿 모드)](images/nav-back-tablet.png)
+<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>태블릿![ 태블릿의 시스템 뒤로 기능(태블릿 모드)](images/nav-back-tablet.png)
 -   태블릿 모드에서 항상 제공됩니다.
 
     데스크톱 모드에서는 사용할 수 없습니다. 대신 제목 표시줄 뒤로 단추를 사용할 수 있습니다. [PC, 노트북, 태블릿](#PC)을 참조하세요.
@@ -176,8 +174,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   디바이스 아래쪽의 탐색 모음에 있는 소프트웨어 단추입니다.
 -   앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.
 
-<span id="PC"> </span> <span id="pc"> </span>PC, 노트북, 태블릿
-![PC 또는 노트북의 시스템 뒤로 기능](images/nav-back-pc.png)
+<span id="PC"></span><span id="pc"></span>PC, 노트북, 태블릿 ![PC 또는 노트북의 시스템 뒤로 기능](images/nav-back-pc.png)
 -   데스크톱 모드에서는 옵션입니다.
 
     태블릿 모드에서는 사용할 수 없습니다. [태블릿](#Tablet)을 참조하세요.
@@ -189,10 +186,9 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   앱의 제목 표시줄에 있는 소프트웨어 단추입니다.
 -   앱 내에서만 뒤로 탐색 기능을 제공합니다. 앱 간 탐색 기능을 지원하지 않습니다.
 
-Surface Hub
-![Surface Hub의 시스템 뒤로 기능](images/nav-back-surfacehub.png)
+Surface Hub ![Surface Hub의 시스템 뒤로 기능](images/nav-back-surfacehub.png)
 -   항상 제공됩니다.
--   장치 아래쪽에 있는 소프트웨어 단추입니다.
+-   디바이스 아래쪽에 있는 소프트웨어 단추입니다.
 -   앱 내 및 앱 간의 뒤로 탐색 기능입니다.
 
  
@@ -232,6 +228,6 @@ Surface Hub
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

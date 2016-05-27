@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 시간 선택기는 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 시간 값을 선택할 수 있는 표준화된 방법을 제공합니다.
 title: 시간 선택기
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
-label: 시간 선택기
+label: Time picker
 template: detail.hbs
 ---
 
@@ -43,9 +44,9 @@ arrivalTimePicker.Header = "Arrival time";
 
 ![시간 선택기의 예](images/time-picker-closed.png)
 
-> **참고**&nbsp;&nbsp; 날짜 및 시간 값에 대한 중요한 정보는 *날짜 및 시간 컨트롤* 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고**&nbsp;&nbsp; 날짜 및 시간 값에 대한 중요한 정보는 *날짜 및 시간 컨트롤* 문서의 [DateTime 및 Calendar](date-and-time.md#datetime-and-calendar-values) 값을 참조하세요.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
 ## 관련 항목
 
@@ -55,6 +56,6 @@ arrivalTimePicker.Header = "Arrival time";
 - [날짜 선택기](date-picker.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

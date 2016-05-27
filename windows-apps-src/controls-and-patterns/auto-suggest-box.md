@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 사용자가 입력할 때 제안을 제공하는 텍스트 입력 상자입니다.
 title: 자동 제안 상자에 대한 지침
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
@@ -151,6 +152,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

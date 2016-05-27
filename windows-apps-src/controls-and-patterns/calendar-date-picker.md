@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: 달력 날짜 선택은 요일이나 일정의 예약률과 같이 컨텍스트 정보가 중요한 달력 보기에서 단일 날짜를 선택하는 데 최적화된 드롭다운 컨트롤입니다.
 title: 달력 날짜 선택
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
@@ -65,7 +66,7 @@ myCalendarDatePicker.Date = new DateTime(1977, 1, 5);
 
 Date 값이 변경될 때 알림을 받도록 [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx) 이벤트를 처리할 수 있습니다.
 
-> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고** &nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
 ### 헤더 및 개체 틀 텍스트 설정
 
@@ -87,6 +88,6 @@ Date 값이 변경될 때 알림을 받도록 [**DateChanged**](https://msdn.mic
 - [시간 선택기](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

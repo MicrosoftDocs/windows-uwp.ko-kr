@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: 토글 스위치는 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다.
 title: 토글 스위치 컨트롤에 대한 지침
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
-label: 토글 스위치
+label: Toggle switches
 template: detail.hbs
 ---
 # 토글 스위치
@@ -159,6 +160,6 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 - [**ToggleSwitch 클래스**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

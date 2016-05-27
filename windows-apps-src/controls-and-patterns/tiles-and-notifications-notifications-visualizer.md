@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 알림 시각화 도우미는 스토어의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움을 줍니다.
 title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
@@ -9,12 +10,12 @@ template: detail.hbs
 # 알림 시각화 도우미
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 알림 시각화 도우미는 [스토어](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움을 줍니다.
 
-## <span id="Overview"> </span> <span id="overview"> </span> <span id="OVERVIEW"> </span>개요
+## <span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>개요
 
 
 알림 시각화 도우미 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 유사하게 편집 시 타일을 시각적 미리 보기를 통해 즉각적으로 확인할 수 있도록 합니다. 이 앱은 또한 오류를 검사하여 유효한 타일 페이로드를 만들 수 있도록 돕습니다.
@@ -31,10 +32,10 @@ template: detail.hbs
 
  
 
-## <span id="Features"> </span> <span id="features"> </span> <span id="FEATURES"> </span>기능
+## <span id="Features"></span><span id="features"></span><span id="FEATURES"></span>기능
 
 
-알림 시각화 도우미에는 적응형 라이브 타일을 사용하여 수행할 수 있는 작업을 보여 주고 시작하는 데 도움을 주는 다양한 샘플 페이로드가 함께 제공됩니다. 다른 모든 텍스트 옵션, 그룹/하위 그룹, 배경 이미지 등을 실험해 볼 수 있으며 다양한 장치와 화면에서 타일이 조정되는 방식도 확인할 수 있습니다. 변경 후에는 업데이트된 페이로드를 나중에 사용하도록 파일에 저장할 수 있습니다.
+알림 시각화 도우미에는 적응형 라이브 타일을 사용하여 수행할 수 있는 작업을 보여 주고 시작하는 데 도움을 주는 다양한 샘플 페이로드가 함께 제공됩니다. 다른 모든 텍스트 옵션, 그룹/하위 그룹, 배경 이미지 등을 실험해 볼 수 있으며 다양한 디바이스와 화면에서 타일이 조정되는 방식도 확인할 수 있습니다. 변경 후에는 업데이트된 페이로드를 나중에 사용하도록 파일에 저장할 수 있습니다.
 
 편집기에서는 실시간 오류 및 경고가 나타납니다. 예를 들어 앱 페이로드가 5KB(플랫폼 제한) 미만으로 제한된 경우 알림 시각화 도우미는 페이로드가 이 제한을 넘으면 경고를 표시합니다. 잘못된 특성 이름 또는 값에 대해서도 경고를 제공하여 시각적 문제 디버깅에 도움을 줍니다.
 
@@ -46,7 +47,7 @@ template: detail.hbs
 
  
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 * [스토어에서 알림 시각화 도우미 가져오기](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
@@ -63,6 +64,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
