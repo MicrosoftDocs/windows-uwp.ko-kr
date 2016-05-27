@@ -1,4 +1,5 @@
 ---
+author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: 이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다.
 title: PlayReady를 사용한 적응 스트리밍
@@ -8,11 +9,17 @@ title: PlayReady를 사용한 적응 스트리밍
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 
 
-이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 이 기능은 현재 HLS(Http 라이브 스트리밍) 및 DASH(Dynamic Streaming over HTTP) 콘텐츠를 지원합니다.
+이 기능은 현재 DASH(Dynamic Streaming over HTTP) 콘텐츠 재생을 지원합니다.
+
+HLS(Apple의 HTTP 라이브 스트리밍)는 PlayReady에서 지원되지 않습니다.
+
+부드러운 스트리밍도 현재 기본적으로 지원되지 않습니다. 그러나 PlayReady는 확장 가능하고, 추가 코드 또는 라이브러리를 사용하여 PlayReady에서 보호하는 부드러운 스트리밍을 지원할 수 있으므로 소프트웨어나 하드웨어 DRM(디지털 권한 관리)까지 활용됩니다.
 
 이 문서에서는 PlayReady 관련 적응 스트리밍 측면만 다룹니다. 적응 스트리밍의 일반적인 구현에 대한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조하세요.
+
+이 문서에서는 GitHub의 Microsoft **Windows-universal-samples** 리포지토리에서 [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) 코드를 사용합니다. 시나리오 4에서는 PlayReady를 이용한 적응 스트리밍 사용을 다룹니다. 저장소의 루트 수준으로 이동하고 **ZIP 다운로드** 단추를 클릭하여 ZIP 파일의 리포지토리를 다운로드할 수 있습니다.
 
 다음 using 문이 필요합니다.
 
@@ -44,7 +51,7 @@ private string playReadyChallengeCustomData = "";
 다음 상수 선언이 필요할 수도 있습니다.
 
 ```csharp
-private const int MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = -2147174251;
+private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
 ## MediaProtectionManager 설정
@@ -155,7 +162,7 @@ async Task<bool> ReactiveIndivRequest(
         else
         {
             COMException comException = exception as COMException;
-            if (comException != null &amp;&amp; comException.HResult == MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED)
+            if (comException != null && comException.HResult == MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED)
             {
                 IndivRequest.NextServiceRequest();
             }
@@ -291,6 +298,6 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

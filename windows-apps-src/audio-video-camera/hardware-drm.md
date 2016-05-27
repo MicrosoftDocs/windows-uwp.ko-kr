@@ -1,4 +1,5 @@
 ---
+author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: 이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다.
 title: 하드웨어 DRM
@@ -13,7 +14,7 @@ title: 하드웨어 DRM
 
 **참고** 하드웨어 기반 DRM은 특정 하드웨어와 해당 하드웨어 펌웨어의 Windows 10 버전에서만 지원됩니다. 제공되는 자세한 보장 내용은 [PlayReady 규정 준수 및 견고성 규칙](http://www.microsoft.com/playready/licensing/compliance/)을 참조하세요.
 
-점점 더 많은 콘텐츠 공급자가 앱에서 높은 가치의 콘텐츠를 모두 재생할 권한을 부여하기 위해 하드웨어 기반 보호로 전환하고 있습니다. 이러한 요구 사항을 충족시키기 위해 암호화 코어를 하드웨어에서 구현하는 강력한 기능이 PlayReady에 추가되었습니다. 이 지원을 통해 여러 장치 플랫폼에서 고해상도(1080p) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
+점점 더 많은 콘텐츠 공급자가 앱에서 높은 가치의 콘텐츠를 모두 재생할 권한을 부여하기 위해 하드웨어 기반 보호로 전환하고 있습니다. 이러한 요구 사항을 충족시키기 위해 암호화 코어를 하드웨어에서 구현하는 강력한 기능이 PlayReady에 추가되었습니다. 이 지원을 통해 여러 디바이스 플랫폼에서 고해상도(1080p) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
 
 ## Windows TEE 구현
 
@@ -53,18 +54,18 @@ Windows TEE 구현의 세부 정보는 이 문서의 범위를 벗어납니다. 
 
 다음 예제에서는 하드웨어 DRM의 선택을 취소하는 방법을 보여줍니다. 전환하기 전에 이 작업을 수행해야 합니다. 또한 메모리에 PlayReady 개체가 없어야 합니다. 그러지 않으면 동작이 정의되지 않습니다.
 
-``` syntax
+```js
 var applicationData = Windows.Storage.ApplicationData.current;
-var localSettings = applicationData.localSettings.createContainer(“PlayReady”, Windows.Storage.ApplicationDataCreateDisposition.always);
-localSettings.values[“SoftwareOverride”] = 1;
+var localSettings = applicationData.localSettings.createContainer("PlayReady", Windows.Storage.ApplicationDataCreateDisposition.always);
+localSettings.values["SoftwareOverride"] = 1;
 ```
 
 하드웨어 DRM으로 전환하려면 **SoftwareOverride** 값을 **0**으로 설정합니다.
 
 모든 미디어 재생을 위해 **MediaProtectionManager**를 다음으로 설정해야 합니다.
 
-``` syntax
-mediaProtectionManager.properties[“Windows.Media.Protection.UseSoftwareProtectionLayer”] = true;
+```js
+mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
 하드웨어 DRM이 적용되는지, 소프트웨어 DRM이 적용되는지를 확인하는 가장 좋은 방법은 C:\\Users\\&lt;username&gt;\\AppData\\Local\\Packages\\&lt;application name&gt;\\LocalState\\PlayReady\\\*를 확인하는 것입니다.
@@ -80,7 +81,7 @@ mediaProtectionManager.properties[“Windows.Media.Protection.UseSoftwareProtect
 [
             **PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM(디지털 권한 관리) 기능을 지원하는지 확인할 수 있습니다. 예:
 
-``` syntax
+```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
@@ -91,6 +92,6 @@ boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures en
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

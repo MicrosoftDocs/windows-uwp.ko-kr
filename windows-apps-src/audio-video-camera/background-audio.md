@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
 description: 이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다.
 title: 백그라운드 오디오
@@ -17,7 +18,7 @@ title: 백그라운드 오디오
 
 -   **작업 전환기 사용:** 사용자가 간단하게 포그라운드 앱을 표시하여 오디오 재생을 시작한 다음 작업 전환을 사용하여 열려 있는 다른 앱으로 전환할 수 있습니다. 사용자는 예상대로 백그라운드에서 오디오를 계속 재생할 수 있습니다.
 
-이 문서에 설명된 백그라운드 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 장치에서 앱을 실행할 수 있습니다.
+이 문서에 설명된 백그라운드 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
 
 **참고**  
 [백그라운드 오디오 UWP 샘플](http://go.microsoft.com/fwlink/?LinkId=619485)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
@@ -52,7 +53,7 @@ title: 백그라운드 오디오
 
 ## 시스템 미디어 전송 컨트롤
 
-사용자는 앱의 UI를 직접 사용하지 않고 Bluetooth 장치, SmartGlass, 시스템 미디어 전송 컨트롤과 같은 수단을 통해 오디오 재생을 제어할 수 있습니다. 백그라운드 작업은 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스를 사용하여 이러한 사용자가 시작한 이벤트를 구독합니다.
+사용자는 앱의 UI를 직접 사용하지 않고 Bluetooth 디바이스, SmartGlass, 시스템 미디어 전송 컨트롤과 같은 수단을 통해 오디오 재생을 제어할 수 있습니다. 백그라운드 작업은 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스를 사용하여 이러한 사용자가 시작한 이벤트를 구독합니다.
 
 백그라운드 프로세스 내에서 **SystemMediaTransportControls** 인스턴스를 가져오려면 [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) 속성을 사용합니다. 포그라운드 앱은 [**SystemMediaTransportControls.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)를 호출하여 이 클래스의 인스턴스를 가져오지만 반환되는 인스턴스는 백그라운드 작업과 관련이 없는 포그라운드 전용 인스턴스입니다.
 
@@ -120,7 +121,7 @@ title: 백그라운드 오디오
 
 그러나 포그라운드가 백그라운드에 종속되는 것은 아닙니다. 백그라운드 작업이 종료되어도 포그라운드 작업을 강제로 종료되지는 않습니다.
 
-다음 표에는 어떤 정책이 어떤 장치 유형에 적용되는지 나와 있습니다.
+다음 표에는 어떤 정책이 어떤 디바이스 유형에 적용되는지 나와 있습니다.
 
 | 하위 정책             | 바탕 화면  | 모바일   | 기타    |
 |------------------------|----------|----------|----------|
@@ -139,6 +140,6 @@ title: 백그라운드 오디오
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

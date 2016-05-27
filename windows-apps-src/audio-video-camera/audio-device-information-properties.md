@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: 이 문서에는 오디오 디바이스와 관련된 DeviceInformation 속성이 나열되어 있습니다.
 title: 오디오 디바이스 정보 속성
@@ -26,6 +27,6 @@ Windows에서 디바이스를 열거하는 방법에 대한 일반적인 내용�
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

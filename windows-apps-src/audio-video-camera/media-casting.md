@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: 이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다.
 title: 미디어 캐스팅
@@ -75,7 +76,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 ## 사용자 지정 디바이스 선택기를 사용하여 미디어 캐스팅
 
-다음 섹션에서는 캐스팅 장치를 열거하고 코드에서 연결을 시작하여 고유한 캐스팅 장치 선택기 UI를 만드는 방법을 설명합니다.
+다음 섹션에서는 캐스팅 디바이스를 열거하고 코드에서 연결을 시작하여 고유한 캐스팅 디바이스 선택기 UI를 만드는 방법을 설명합니다.
 
 사용 가능한 캐스팅 디바이스를 열거하려면 프로젝트에 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) 네임스페이스를 포함합니다.
 
@@ -83,9 +84,9 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 이 예제를 위한 기본적인 UI를 구현하기 위해 XAML 페이지에 다음 컨트롤을 추가합니다.
 
--   사용 가능한 캐스팅 장치를 찾는 장치 감시자를 시작하는 단추
+-   사용 가능한 캐스팅 디바이스를 찾는 디바이스 감시자를 시작하는 단추
 -   캐스팅 열거가 진행 중이라는 피드백을 사용자에게 제공하는 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 컨트롤
--   검색된 캐스팅 디바이스를 나열하는 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868). 캐스팅 장치 개체를 컨트롤에 직접 할당하고 [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) 속성을 계속 표시할 수 있도록 컨트롤에 대한 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830)을 정의합니다.
+-   검색된 캐스팅 디바이스를 나열하는 [**ListBox**](https://msdn.microsoft.com/library/windows/apps/br242868). 캐스팅 디바이스 개체를 컨트롤에 직접 할당하고 [**FriendlyName**](https://msdn.microsoft.com/library/windows/apps/dn972549) 속성을 계속 표시할 수 있도록 컨트롤에 대한 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830)을 정의합니다.
 -   사용자가 캐스팅 디바이스 연결을 끊을 수 있게 하는 단추.
 
 [!code-xml[CustomPickerXAML](./code/MediaCastingWin10/cs/MainPage.xaml#SnippetCustomPickerXAML)]
@@ -96,7 +97,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 *startWatcherButton*에 대한 **Click** 처리기에서 먼저, 단추를 사용하지 않도록 설정하고 디바이스 열거가 진행 중일 때 진행률 표시원이 활성화되도록 만들어 UI를 업데이트합니다. 캐스팅 디바이스 목록 상자를 지웁니다.
 
-그런 다음, [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427)를 호출하여 장치 감시자를 만듭니다. 이 방법은 다양한 유형의 디바이스를 확인하는 데 사용 사용할 수 있습니다. 비디오 캐스팅을 지원하는 장치를 확인하려는 경우 [**CastingDevice.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn972551)에서 반환되는 장치 선택기 문자열을 사용하여 이를 지정합니다.
+그런 다음, [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427)를 호출하여 디바이스 감시자를 만듭니다. 이 방법은 다양한 유형의 디바이스를 확인하는 데 사용 사용할 수 있습니다. 비디오 캐스팅을 지원하는 디바이스를 확인하려는 경우 [**CastingDevice.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn972551)에서 반환되는 디바이스 선택기 문자열을 사용하여 이를 지정합니다.
 
 마지막으로, [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450), [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453), [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) 및 [**Stopped**](https://msdn.microsoft.com/library/windows/apps/br225457) 이벤트에 대한 이벤트 처리기를 등록합니다.
 
@@ -156,6 +157,6 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

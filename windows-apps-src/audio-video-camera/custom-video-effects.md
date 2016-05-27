@@ -1,238 +1,250 @@
 ---
-Description: 'This article describes how to create a Windows Runtime Compontent that implements the IBasicVideoEffect interface to allows you to create custom effects for video streams.'
+author: drewbatgit
+Description: '이 문서에서는 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 IBasicVideoEffect 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다.'
 MS-HAID: 'dev\_audio\_vid\_camera.custom\_video\_effects'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-title: Custom video effects
+title: 사용자 지정 동영상 효과
 ---
 
-# Custom video effects
+# 사용자 지정 동영상 효과
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
+\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
-This article describes how to create a Windows Runtime Compontent that implements the [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) interface to allows you to create custom effects for video streams. Custom effects can be used with several different Windows Runtime APIs including [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), which provides access to a device's camera, and [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), which allows you to create complex compositions out of media clips.
+이 문서에서는 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 장치의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124)와 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)을 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
 
-## Add a custom effect to your app
+## 앱에 사용자 지정 효과 추가
 
 
-A custom video effect is defined in a class that implements the [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) interface. This class can't be included directly in your app's project. Instead, you must use a Windows Runtime Component to host your video effect class.
+사용자 지정 동영상 효과는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현하는 클래스에 정의됩니다. 이 클래스를 앱의 프로젝트에 직접 포함할 수는 없습니다. 대신 Windows 런타임 구성 요소를 사용하여 비디오 효과 클래스를 호스트해야 합니다.
 
-**Add a Windows Runtime Component for your video effect**
+**비디오 효과에 대한 Windows 런타임 구성 요소 추가**
 
-1.  In Microsoft Visual Studio, with your solution open, go to the **File** menu and select **Add-&gt;New Project....**
-2.  Select the **Windows Runtime Component (Universal Windows)** project type.
-3.  For this example, name the project "VideoEffectComponent". This name will be referenced in code later.
-4.  Click **OK**.
-5.  The project template creates a class called Class1.cs. In **Solution Explorer**, right-click the icon for Class1.cs and select **Rename**.
-6.  Rename the file to "ExampleVideoEffect.cs". Visual Studio will show a prompt asking if you want to update all references to the new name. Click **Yes**.
-7.  Open "ExampleVideoEffect.cs" and update the class definition to implement the [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) interface.
+1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트...**를 선택합니다.
+2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
+3.  이 예제에서는 프로젝트 이름을 "VideoEffectComponent"로 지정합니다. 이 이름은 나중에 코드에서 참조됩니다.
+4.  **확인**을 클릭합니다.
+5.  프로젝트 템플릿은 Class1.cs라는 클래스를 만듭니다. **솔루션 탐색기**에서 Class1.cs 아이콘을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.
+6.  파일 이름을 "ExampleVideoEffect.cs"로 바꿉니다. Visual Studio에서 새 이름에 대한 모든 참조를 업데이트할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.
+7.  "ExampleVideoEffect.cs"를 열고 클래스 정의를 업데이트하여 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현합니다.
 
 [!code-cs[ImplementIBasicVideoEffect](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetImplementIBasicVideoEffect)]
 
 
-You need to include the following namespaces in your effect class file in order to access all of the types used in the examples in this article.
+이 문서의 예제에서 사용되는 모든 형식에 액세스하기 위해 효과 클래스 파일에 다음 네임스페이스를 포함해야 합니다.
 
 [!code-cs[EffectUsing](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetEffectUsing)]
 
 
-## Implement the IBasicVideoEffect interface using software processing
+## 소프트웨어 처리를 사용하여 IBasicVideoEffect 인터페이스를 구현합니다.
 
 
-Your video effect must implement all of the methods and properties of the [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) interface. This section walks you through a simple implementation of this interface that uses software processing.
+비디오 효과는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스의 모든 메서드 및 속성을 구현해야 합니다. 이 섹션에서는 소프트웨어 처리를 사용하는 이 인터페이스의 간단한 구현 과정을 안내합니다.
 
-### Close method
+### Close 메서드
 
-The system will call the [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) method on your class when the effect should shut down. You should use this method to dispose of any resources you have created. The argument to the method is a MediaEffectClosedReason that lets you know whether the effect was closed normally, if an error occurred, or if the effect does not support the required encoding format.
+시스템은 효과를 종료해야 하는 경우 클래스에 대해 [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) 메서드를 호출합니다. 이 메서드를 사용하여 만든 모든 리소스를 삭제합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 MediaEffectClosedReason입니다.
 
 [!code-cs[Close](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetClose)]
 
 
-### DiscardQueuedFrames method
+### DiscardQueuedFrames 메서드
 
-The [**DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn764790) method is called when your effect should reset. A typical scenario for this is if your effect stores previously processed frames to use in processing the current frame. When this method is called, you should dispose of the set of previous frames you have saved. Although this method can be used to reset any state related to previous frames, not only accumulated video frames.
+[
+            **DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn764790) 메서드는 효과를 다시 설정해야 할 때 호출됩니다. 이에 대한 일반적인 시나리오는 효과가 현재 프레임 처리에 사용하기 위해 이전에 처리한 프레임을 저장하는 경우입니다. 이 메서드가 호출되면 저장했던 이전 프레임 집합을 삭제해야 합니다. 이 메서드는 누적된 비디오 프레임이 아니라 이전 프레임과 관련된 상태를 다시 설정하는 데 사용할 수 있습니다.
 
 
 [!code-cs[DiscardQueuedFrames](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetDiscardQueuedFrames)]
 
 
 
-### IsReadOnly property
+### IsReadOnly 속성
 
-The [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) property lets the system know if your effect will write to the output of the effect. If your app does not modify the video frames - for example, an effect that only performs analysis of the video frames - then you should set this property to true, which will cause the system to efficiently copy the frame input to the frame output for you.
+[
+            **IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) 속성을 사용하면 효과가 효과의 출력에 쓰는지를 시스템에서 알 수 있게 됩니다. 앱에서 비디오 프레임을 수정하지 않는 경우(예를 들어 비디오 프레임 분석만 수행하는 효과) 이 속성을 true로 설정해야 합니다. 그러면 시스템은 프레임 입력을 프레임 출력에 효율적으로 복사합니다.
 
-**Tip**  When the [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) property is set to true, the system copies the input frame to the output frame before [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) is called. Setting the **IsReadOnly** property to true does not restrict you from writing to the effect's output frames in **ProcessFrame**.
+**팁** [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) 속성이 true로 설정되면 시스템은 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)이 호출되기 전에 입력 프레임을  출력 프레임으로 복사합니다. **IsReadOnly** 속성을 true로 설정해도 **ProcessFrame**에서 효과의 출력 프레임에 쓸 수 없게 제한되지는 않습니다.
 
 [!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)] 
 
 
-### SetEncodingProperties method
+### SetEncodingProperties 메서드
 
-The system calls [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) on your effect to let you know the encoding properties for the video stream upon which the effect is operating. This method also provides a reference to the Direct3D device used for hardware rendering. The usage of this device is shown in the hardware processing example later in this article.
+시스템은 효과에 대해 [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884)를 호출하여 효과가 작동하는 비디오 스트림에 대한 인코딩 속성을 알 수 있도록 합니다. 또한 이 메서드는 하드웨어 렌더링에 사용되는 Direct3D 장치에 대한 참조를 제공합니다. 이 장치의 사용법은 이 문서 뒷부분에 나오는 하드웨어 처리 예제에 표시됩니다.
 
 [!code-cs[SetEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSetEncodingProperties)]
 
 
-### SupportedEncodingProperties property
+### SupportedEncodingProperties 속성
 
-The system checks the [**SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn764799) property to determine which encoding properties are supported by your effect. Note that if the consumer of your effect can't encode video using the properties you specify, it will call [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) on your effect and will remove your effect from the video pipeline.
+시스템은 [**SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn764799) 속성을 검사하여 효과에서 지원되는 인코딩 속성을 확인합니다. 효과의 소비자가 사용자가 지정한 속성을 사용하여 비디오를 인코딩할 수 없는 경우 효과에 대해 [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789)를 호출하고 비디오 파이프라인에서 효과를 제거합니다.
 
 
 [!code-cs[SupportedEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedEncodingProperties)]
 
 
-**Note**  If you return an empty list of [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) objects from **SupportedEncodingProperties**, the system will default to ARGB32 encoding.
+**참고** **SupportedEncodingProperties**에서 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
 
  
 
-### SupportedMemoryTypes property
+### SupportedMemoryTypes 속성
 
-The system checks the [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) property to determine whether your effect will access video frames in software memory or in hardware (GPU) memory. If you return [**MediaMemoryTypes.Cpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), your effect will be passed input and output frames that contain image data in [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) objects. If you return **MediaMemoryTypes.Gpu**, your effect will be passed input and output frames that contain image data in [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) objects.
+시스템은 [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) 속성을 검사하여 효과가 소프트웨어 메모리에 있는 비디오 프레임에 액세스하는지 또는 하드웨어(GPU) 메모리에 있는 비디오 프레임에 액세스하는지를 확인합니다. [
+            **MediaMemoryTypes.Cpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 반환하면 효과에는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체에 이미지 데이터를 포함하는 입력 및 출력 프레임이 전달됩니다. **MediaMemoryTypes.Gpu**를 반환하면 효과에는 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) 개체에 이미지 데이터를 포함하는 입력 및 출력 프레임이 전달됩니다.
 
 [!code-cs[SupportedMemoryTypes](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedMemoryTypes)]
 
 
-**Note**  If you specify [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822), the system will use either GPU or system memory, whichever is more efficient for the pipeline. When using this value, you must check in the [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) method to see whether the [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) or [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) passed into the method contains data and then process the frame accordingly.
+**참고** [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 지정하는 경우 시스템은 GPU 또는 시스템 메모리 중에서 파이프라인에 더 효율적인 메모리를 사용합니다. 이 값을 사용할 때는 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드를 검사하여 메서드에 전달된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 또는 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) 중에서 어디에 데이터가 들어 있는지 확인한 후 그에 따라 프레임을 처리합니다.
 
  
 
-### TimeIndependent property
+### TimeIndependent 속성
 
-The [**TimeIndependent**](https://msdn.microsoft.com/library/windows/apps/dn764803) property lets the system know whether your effect requires uniform timing. When set to true, the system can use optimizations that enhance effect performance.
+[
+            **TimeIndependent**](https://msdn.microsoft.com/library/windows/apps/dn764803) 속성을 사용하면 시스템은 효과에 균일한 타이밍이 필요한지 여부를 알 수 있습니다. 이 속성을 true로 설정하면 시스템에서는 효과 성능을 개선하는 최적화가 사용될 수 있습니다.
 
 [!code-cs[TimeIndependent](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetTimeIndependent)]
 
-### SetProperties method
+### SetProperties 메서드
 
-The [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) method allows the app that is using your effect to adjust effect parameters. Properties are passed as an [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054) map of property names and values.
+[
+            **SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 메서드를 사용하면 효과를 사용하는 앱에 따라 효과 매개 변수가 조정될 수 있습니다. 속성은 속성 이름 및 값의 [**IPropertySet**](https://msdn.microsoft.com/library/windows/apps/br226054) 맵으로 전달됩니다.
 
 
 [!code-cs[SetProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSetProperties)]
 
 
-This simple example will dim the pixels in each video frame according to a specified value. A property is declared and TryGetValue is used to get the value set by the calling app. If no value was set, a default value of .5 is used.
+이 간단한 예제에서는 지정된 값에 따라 각 비디오 프레임의 픽셀이 흐리게 표시됩니다. 속성이 선언되고 TryGetValue를 사용하여 호출 앱에 의해 설정된 값을 가져옵니다. 값이 설정되지 않은 경우 기본값은 .5가 사용됩니다.
 
 [!code-cs[FadeValue](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetFadeValue)]
 
 
-### ProcessFrame method
+### ProcessFrame 메서드
 
-The [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) method is where your effect modifies the image data of the video. The method is called once per frame and is passed a [**ProcessVideoFrameContext**](https://msdn.microsoft.com/library/windows/apps/dn764826) object. This object contains an input [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) object that contains the incoming frame to be processed and an output **VideoFrame** object to which you write image data that will be passed on to rest of the video pipeline. Each of these **VideoFrame** objects has a [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) property and a [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) property, but which of these can be used is determined by the value you returned from the [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) property.
+[
+            **ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드는 효과가 비디오의 이미지 데이터를 수정하는 위치입니다. 이 메서드는 프레임당 한번씩 호출되고 [**ProcessVideoFrameContext**](https://msdn.microsoft.com/library/windows/apps/dn764826) 개체가 전달됩니다. 이 개체에는 처리될 수신 프레임이 포함된 입력 [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체와 나머지 비디오 파이프라인에 전달되는 이미지 데이터를 쓰는 출력 **VideoFrame** 개체가 포함됩니다. 이러한 각 **VideoFrame** 개체에는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성 및 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) 속성이 있지만 이러한 속성 주엥서 사용할 수 있는 속성은 [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) 속성에서 반환한 값에 따라 결정됩니다.
 
-This example shows a simple implementation of the **ProcessFrame** method using software processing. For more information on working with [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) objects, see [Imaging](imaging.md). An example **ProcessFrame** implementation using hardware processing is shown later in this article.
+다음 예제에서는 소프트웨어 처리를 사용하는 **ProcessFrame** 메서드의 간단한 구현을 보여 줍니다. [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체 사용에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요. 하드웨어 처리를 사용하는 **ProcessFrame** 구현 예제는 이 문서 뒷부분에 나와 있습니다.
 
-Accessing the data buffer of a **SoftwareBitmap** requires COM interop, so you should include the **System.Runtime.InteropServices** namespace in your effect class file.
+**SoftwareBitmap**의 데이터 버퍼에 액세스하려면 COM interop이 필요하므로 **System.Runtime.InteropServices** 네임스페이스를 효과 클래스 파일에 포함해야 합니다.
 
 [!code-cs[COMUsing](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetCOMUsing)]
 
 
-Add the following code inside the namespace for your effect to import the interface for accessing the image buffer.
+효과에서 이미지 버퍼에 액세스하기 위한 인터페이스를 가져오려면 네임스페이스 내에 다음 코드를 추가합니다.
 
 [!code-cs[COMImport](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetCOMImport)]
 
 
-**Note**  Because this technique accesses a native, unmanaged image buffer, you will need to configure your project to allow unsafe code.
-1.  In Solution Explorer, right-click the VideoEffectComponent project and select Properties....
-2.  Select the Build tab.
-3.  Check the checkbox for "Allow unsafe code"
+**참고** 이 기술은 관리되지 않는 네이티브 이미지 버퍼에 액세스하므로 안전하지 않은 코드를 허용하도록 프로젝트를 구성해야 합니다.
+1.  솔루션 탐색기에서 VideoEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭하고 속성...을 선택합니다.
+2.  빌드 탭을 선택합니다.
+3.  "안전하지 않은 코드 허용" 확인란을 선택합니다.
 
  
 
-Now you can add the **ProcessFrame** method implementation. First, this method obtains a [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) object from both the input and output software bitmaps. Note that the output frame is opened for writing and the input for reading. Next, an [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671) is obtained for each buffer by calling [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046). Then, the actual data buffer is obtained by casting the **IMemoryBufferReference** objects as the COM interop interface defined above, **IMemoryByteAccess**, and then calling **GetBuffer**.
+이제 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) 개체를 획득합니다. 출력 프레임이 쓰기 위해 열려 있고 입력 프레임이 읽기 위해 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 
-Now that the data buffers have been obtained, you can read from the input buffer and write to the output buffer. The layout of the buffer is obtained by calling [**GetPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887330), which provides information on the width, stride, and initial offset of the buffer. The bits per pixel is determined by the encoding properties set previously with the [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) method. The buffer format information is used to find the index into the buffer for each pixel. The pixel value from the source buffer is copied into the target buffer, with the color values being multiplied by the FadeValue property defined for this effect to dim them by the specified amount.
+이제 데이터 버퍼를 획득했으므로 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 버퍼의 너비, 진행 속도 및 초기 오프셋에 대한 정보를 제공하는 [**GetPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887330)을 호출하여 버퍼의 레이아웃을 획득합니다. 픽셀당 비트 수는 이전에 [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) 메서드를 사용하여 설정한 인코딩 속성에 의해 결정됩니다. 버퍼 형식 정보는 각 픽셀에 대한 버퍼로의 인덱스를 찾는 데 사용됩니다. 원본 버퍼의 픽셀 값이 대상 버퍼로 복사되고, 색 값을 이 효과에 대해 정의된FadeValue 속성과 곱하여 지정된 크기만큼 흐리게 나타납니다.
 
 [!code-cs[ProcessFrameSoftwareBitmap](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetProcessFrameSoftwareBitmap)]
 
 
-## Implement the IBasicVideoEffect interface using hardware processing
+## 하드웨어 처리를 사용하여 IBasicVideoEffect 인터페이스를 구현합니다.
 
 
-Creating a custom video effect using hardware (GPU) processing is almost identical to using software processing as described above. This section will show the few differences in an effect that uses hardware processing. This example uses the Win2D Windows Runtime API. For more information on using Win2D, see the [Win2D documentation](http://go.microsoft.com/fwlink/?LinkId=519078).
+하드웨어(GPU)를 사용하여 사용자 지정 동영상 효과를 만드는 작업은 위에 설명된 소프트웨어 처리를 사용하는 방법과 거의 동일합니다. 이 섹션에서는 하드웨어 처리를 사용하는 효과의 몇 가지 차이점을 보여 줍니다. 이 예제에서는 Win2D Windows 런타임 API를 사용합니다. Win2D에 대한 자세한 내용은 [Win2D 설명서](http://go.microsoft.com/fwlink/?LinkId=519078)를 참조하세요.
 
-Use the following steps to add the Win2D NuGet package to the project you created as described in the [Add a custom effect to your app](#addacustomeffect) section at the beginning of this article.
+이 문서 맨 처음에 나오는 [앱에 사용자 지정 효과 추가](#addacustomeffect) 섹션에 설명된 것처럼 다음 단계를 사용하는 만든 프로젝트에 Win2D NuGet 패키지를 추가합니다.
 
-**Add the Win2D NuGet package to your effect project**
+**효과 프로젝트에 Win2D NuGet 패키지 추가**
 
-1.  In **Solution Explorer**, right-click the **VideoEffectComponent** project and select **Manage NuGet Packages...**
-2.  At the top of the window, select the **Browse** tab.
-3.  In the search box, type "Win2D".
-4.  Click on **Win2D.uwp** and the click Install in the right pane.
-5.  The **Review Changes** dialog shows you the package to be installed. Click **OK**.
-6.  Accept the package license.
+1.  **솔루션 탐색기**에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...**를 선택합니다.
+2.  창 위쪽에서 **찾아보기** 탭을 선택합니다.
+3.  검색 상자에 "Win2D"를 입력합니다.
+4.  **Win2D.uwp**를 클릭하고 오른쪽 창에서 설치를 클릭합니다.
+5.  **검토 변경** 대화 상자에 설치할 패키지가 표시됩니다. **확인**을 클릭합니다.
+6.  패키지 라이선스에 동의합니다.
 
-In addition to the namespaces included in the basic project setup, you will need to include the following namespaces provided by Win2D.
+기본 프로젝트 설정에 포함된 네임스페이스 외에 Win2D에서 제공하는 다음 네임스페이스를 포함해야 합니다.
 
 [!code-cs[UsingWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetUsingWin2D)]
 
 
-Because this effect will use GPU memory for operating on the image data, you should return [**MediaMemoryTypes.Gpu**](https://msdn.microsoft.com/library/windows/apps/dn764822) from the [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) property.
+이 효과는 이미지 데이터에 작동하기 위해 GPU 메모리를 사용하므로 [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) 속성에서 [**MediaMemoryTypes.Gpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 반환해야 합니다.
 
 [!code-cs[SupportedMemoryTypesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedMemoryTypesWin2D)]
 
 
-Set the encoding properties your effect will support with the [**SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn764799) property. When working with Win2D, you must use ARGB32 encoding.
+[
+            **SupportedEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn764799) 속성을 사용하여 효과가 지원할 인코딩 속성을 설정합니다. Win2D를 사용할 때는 ARGB32 인코딩을 사용해야 합니다.
 
 [!code-cs[SupportedEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedEncodingPropertiesWin2D)]
 
 
-Use the [**SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) method to create a new Win2D **CanvasDevice** object from the [**IDirect3DDevice**](https://msdn.microsoft.com/library/windows/apps/dn895092) passed into the method.
+[
+            **SetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/dn919884) 메서드를 사용하여 해당 메서드에 전달된 [**IDirect3DDevice**](https://msdn.microsoft.com/library/windows/apps/dn895092)에서 새 Win2D **CanvasDevice** 개체를 만듭니다.
 
 [!code-cs[SetEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetEncodingPropertiesWin2D)]
 
 
-The [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) implementation is identical to the software processing example above. This example uses a **BlurAmount** property to configure a Win2D blur effect.
+[
+            **SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 구현은 위의 소프트웨어 처리 예제와 동일합니다. 이 예제에서는 **BlurAmount** 속성을 사용하여 Win2D 흐림 효과를 구성합니다.
 
 [!code-cs[SetPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetPropertiesWin2D)]
 
 [!code-cs[BlurAmountWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetBlurAmountWin2D)]
 
 
-The last step is to implement the [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) method that actually processes the image data.
+마지막 단계는 이미지 데이터를 실제로 처리하는 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드를 를 구현하는 것입니다.
 
-Using Win2D APIs, a **CanvasBitmap** is created from the input frame's [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) property. A **CanvasRenderTarget** is created from the output frame's **Direct3DSurface** and a **CanvasDrawingSession** is created from this render target. A new Win2D **GaussianBlurEffect** is initialized, using the **BlurAmount** property our effect exposes via [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986). Finally, the **CanvasDrawingSession.DrawImage** method is called to draw the input bitmap to the render target using the blur effect.
+Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) 속성에서 **CanvasBitmap**이 만들어집니다. **CanvasRenderTarget**은 출력 프레임의 **Direct3DSurface**에서 만들어지고 **CanvasDrawingSession**은 이 렌더링 대상에서 만들어집니다. [
+            **SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986)를 통해 효과가 노출하는 **BlurAmount** 속성을 사용하여 새 Win2D **GaussianBlurEffect**가 초기화됩니다. 마지막으로 **CanvasDrawingSession.DrawImage** 메서드가 호출되면서 흐림 효과를 사용하여 입력 비트맵을 렌더링 대상에 그립니다.
 
 [!code-cs[ProcessFrameWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetProcessFrameWin2D)]
 
 
-## Adding your custom effect to your app
+## 앱에 사용자 지정 효과 추가
 
 
-In order to use your video effect from your app, you must add a reference to the effect project to your app.
+앱에서 비디오 효과를 사용하려면 앱에 효과 프로젝트에 대한 참조를 추가해야 합니다.
 
-1.  In Solution Explorer, under your app project, right-click References and select Add reference...
-2.  Expand the Projects tab, click Solution, and select the checkbox for your effect project name. For this example, the name is VideoEffectComponent.
-3.  Click OK.
+1.  솔루션 탐색기에서 앱 프로젝트 아래에 있는 참조를 마우스 오른쪽 단추로 클릭하고 참조 추가...를 선택합니다.
+2.  프로젝트 탭을 확장하고 솔루션을 클릭한 후 효과 프로젝트 이름에 대한 확인란을 선택합니다. 이 예제에서 프로젝트 이름은 VideoEffectComponent입니다.
+3.  확인을 클릭합니다.
 
-### Add your custom effect to a camera video stream
+### 카메라의 비디오 스트림에 사용자 지정 효과 추가
 
-You can set up a simple preview stream from the camera by following the steps in the article [Simple camera preview access](simple-camera-preview-access.md). Following those steps will provide you with an initialized [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) object that is used to access the camera's video stream.
+[간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md) 문서의 단계에 따라 카메라에서 간단한 미리 보기 스트림을 설정할 수 있습니다. 이러한 단계에 따르면 카메라의 비디오 스트림에 액세스하는 데 사용되는 초기화된 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체가 제공됩니다.
 
-To add your custom video effect to a camera stream, first create a new [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) object, passing in the namespace and class name for your effect. Next call the **MediaCapture** object's [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035) method to add your effect to the specified stream. This example uses the [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) value to specify that the effect should be added to the preview stream. If your app supports video capture, you could also use **MediaStreamType.VideoRecord** to add the effect to the capture stream. **AddVideoEffect** returns an [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985) object representing your custom effect. You can use the SetProperties method to set the configuration for your effect.
+카메라 스트림에 사용자 지정 비디오 효과를 추가하려면 먼저 새 [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) 개체를 만들고 효과에 대한 네임스페이스 및 클래스 이름에 전달합니다. 다음으로 **MediaCapture** 개체의 [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035) 메서드를 호출하여 지정된 스트림에 효과를 추가합니다. 이 예제에서는 [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) 값을 사용하여 해당 효과가 미리 보기 스트림에 추가되어야 함을 지정합니다. 앱에서 비디오 캡처를 지원하는 경우 **MediaStreamType.VideoRecord**를 사용하여 캡처 스트림에 효과를 추가할 수도 있습니다. **AddVideoEffect**는 사용자 지정 효과 나타내는 [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985) 개체를 반환합니다. SetProperties 메서드를 사용하여 효과에 대한 구성을 설정할 수 있습니다.
 
-Once the effect has been added, [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) is called to start the preview stream.
+효과가 추가되면 미리 보기 스트림을 시작하기 위해 [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)가 호출됩니다.
 
 [!code-cs[AddVideoEffectAsync](./code/VideoEffect_Win10/cs/VideoEffect_Win10/MainPage.xaml.cs#SnippetAddVideoEffectAsync)]
 
 
 
-### Add your custom effect to a clip in a MediaComposition
+### MediaComposition의 클립에 사용자 지정 효과 추가
 
-For general guidance oncreating media compositions from video clips, see [Media compositions and editing](media-compositions-and-editing.md). The following code snippet shows the creation of a simple media composition with using a custom video effect. A [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) object is created by calling [**CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607), passing in a video file that was selected by the user with a [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) and the clip is added to a new [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646). Next a new [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) object is created, passing in the namespace and class name for your effect to the constructor. Finally, the effect definition is added to the [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) collection of the **MediaClip** object.
+비디오 클립에서 미디어 컴퍼지션을 만드는 방법에 대한 일반적인 지침은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요. 다음 코드 조각은 사용자 지정 비디오 효과를 사용하여 간단한 미디어 컴퍼지션을 만드는 방법을 보여 줍니다. [
+            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)로 사용자가 선택한 비디오 파일을 전달하여 [**CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607) 개체를 호출함으로써 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체가 만들어지고 새 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)에 클립이 추가됩니다. 다음으로 새 [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) 개체가 만들어지고 효과에 대한 네임스페이스와 클래스 이름을 생성자에 전달됩니다. 마지막으로 효과 정의가 **MediaClip** 개체의 [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) 컬렉션에 추가됩니다.
 
 
 [!code-cs[AddEffectToComposition](./code/VideoEffect_Win10/cs/VideoEffect_Win10/MainPage.xaml.cs#SnippetAddEffectToComposition)]
 
 
-## Related topics
+## 관련 항목
 
 
-[Simple camera preview access](simple-camera-preview-access.md)
-[Media compositions and editing](media-compositions-and-editing.md)
-[Win2D documentation](http://go.microsoft.com/fwlink/?LinkId=519078)
+[간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md) 
+           [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md) 
+           [Win2D 설명서](http://go.microsoft.com/fwlink/?LinkId=519078)
  
 
  
@@ -241,6 +253,6 @@ For general guidance oncreating media compositions from video clips, see [Media 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

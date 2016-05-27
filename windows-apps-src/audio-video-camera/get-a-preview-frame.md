@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: 이 항목에서는 미디어 캡처 미리 보기 스트림에서 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 title: 미리 보기 프레임 가져오기
@@ -60,6 +61,6 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

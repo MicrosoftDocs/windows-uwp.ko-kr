@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: 이 항목에서는 비디오 캡처 시나리오에 사용하도록 디자인된 효과에 대해 설명합니다. 여기에는 동영상 손떨림 보정 효과가 포함됩니다.
 title: 비디오 캡처 효과
@@ -15,9 +16,9 @@ title: 비디오 캡처 효과
 
 ## 동영상 손떨림 보정 효과
 
-동영상 손떨림 보정 효과는 비디오 스트림 프레임을 조작하여 손으로 캡처 장치를 잡고 있을 때 발생하는 흔들림을 최소화합니다. 이 기술을 사용하면 픽셀이 오른쪽, 왼쪽, 위쪽 및 아래쪽으로 이동되고, 해당 효과가 비디오 프레임 바로 밖에 있는 콘텐츠가 무엇인지 파악할 수 없으므로 원본 비디오에서 손떨림이 보정된 비디오는 약간 잘리는 결과를 가져옵니다. 효과를 통해 수행되는 자르기를 최적으로 관리하도록 비디오 인코딩 설정을 조정할 수 있는 유틸리티 함수가 제공됩니다.
+동영상 손떨림 보정 효과는 비디오 스트림 프레임을 조작하여 손으로 캡처 디바이스를 잡고 있을 때 발생하는 흔들림을 최소화합니다. 이 기술을 사용하면 픽셀이 오른쪽, 왼쪽, 위쪽 및 아래쪽으로 이동되고, 해당 효과가 비디오 프레임 바로 밖에 있는 콘텐츠가 무엇인지 파악할 수 없으므로 원본 비디오에서 손떨림이 보정된 비디오는 약간 잘리는 결과를 가져옵니다. 효과를 통해 수행되는 자르기를 최적으로 관리하도록 비디오 인코딩 설정을 조정할 수 있는 유틸리티 함수가 제공됩니다.
 
-지원하는 장치에서 OIS(광학 이미지 손떨림 보정)는 캡처 장치를 기계적으로 조작하여 동영상 손떨림을 보정하므로 비디오 프레임의 가장자리를 자를 필요가 없습니다. 자세한 내용은 [비디오 캡처를 위한 캡처 장치 컨트롤](capture-device-controls-for-video-capture.md)을 참조하세요.
+지원하는 디바이스에서 OIS(광학 이미지 손떨림 보정)는 캡처 디바이스를 기계적으로 조작하여 동영상 손떨림을 보정하므로 비디오 프레임의 가장자리를 자를 필요가 없습니다. 자세한 내용은 [비디오 캡처를 위한 캡처 디바이스 컨트롤](capture-device-controls-for-video-capture.md)을 참조하세요.
 
 ### 동영상 손떨림 보정을 사용하도록 앱 설정
 
@@ -30,7 +31,7 @@ title: 비디오 캡처 효과
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
-[MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md) 문서에 설명된 기본 비디오 캡처 구현에서 미디어 인코딩 프로필 개체는 코드에서는 사용되지 않으므로 로컬 변수에 할당됩니다. 이 시나리오에서 나중에 액세스할 수 있도록 개체를 멤버 변수에 할당해야 합니다.
+[MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md) 문서에 설명된 기본 비디오 캡처 구현에서 미디어 인코딩 프로필 개체는 코드에서는 사용되지 않으므로 지역 변수에 할당됩니다. 이 시나리오에서 나중에 액세스할 수 있도록 개체를 멤버 변수에 할당해야 합니다.
 
 [!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
 
@@ -51,7 +52,7 @@ title: 비디오 캡처 효과
 
 동영상 손떨림 보정 효과 인스턴스에 대해 [**GetRecommendedStreamConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948983)을 호출하고, 효과에 현재 입력 인코딩 속성에 대한 정보를 제공하는 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) 개체와 효과에 현재 출력 인코딩 속성에 대한 정보를 저장하는 아 를 전달합니다. 이 개체는 인코딩 속성에 대한 정보를 제공하는 **MediaEncodingProfile** 개체를 전달합니다. 이 메서드는 새로운 권장 입력 및 출력 스트림 인코딩 속성을 포함하는 [**VideoStreamConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn926727) 개체를 반환합니다.
 
-장치에서 지원할 경우 권장되는 입력 인코딩 속성은 사용자가 제공한 초기 설정보다 더 높은 해상도이므로, 효과로 인한 자르기가 적용된 후에 해상도가 최소로 손실됩니다.
+디바이스에서 지원할 경우 권장되는 입력 인코딩 속성은 사용자가 제공한 초기 설정보다 더 높은 해상도이므로, 효과로 인한 자르기가 적용된 후에 해상도가 최소로 손실됩니다.
 
 [
             **VideoDeviceController.SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895)를 호출하여 새 인코딩 속성을 설정합니다. 효과를 사용하지 않도록 설정할 경우 설정을 다시 원래대로 변경할 수 있도록 새 속성을 설정하기 전에 멤버 변수를 사용하여 초기 인코딩 속성을 저장합니다.
@@ -89,6 +90,6 @@ title: 비디오 캡처 효과
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

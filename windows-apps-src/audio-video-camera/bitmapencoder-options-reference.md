@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: 이 문서에서는 BitmapEncoder에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다.
 title: BitmapEncoder 옵션 참조
@@ -41,6 +42,6 @@ title: BitmapEncoder 옵션 참조
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: 이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다.
 title: 지원되는 코덱
@@ -2691,6 +2692,6 @@ title: 지원되는 코덱
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

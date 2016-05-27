@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: MediaSource 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다.
 title: MediaSource를 사용하여 미디어 재생
@@ -35,7 +36,7 @@ title: MediaSource를 사용하여 미디어 재생
 
 이 시나리오를 완료하기 위해서는 [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) 및 [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스를 포함해야 합니다.
 
-[!code-cs[Using](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[사용](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
 
 형식 **MediaSource**의 변수를 선언합니다. 이 문서의 예제에서는 미디어 원본이 클래스 멤버로 선언되므로 여러 위치에서 액세스할 수 있습니다.
 
@@ -92,7 +93,7 @@ title: MediaSource를 사용하여 미디어 재생
 
 [!code-xml[MetaStackPanel](./code/MediaSource_Win10/cs/MainPage.xaml#SnippetMetaStackPanel)]
 
-[!code-cs[TimedMetadataTrackschanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedMetadataTrackschanged)]
+[!code-cs[TimedMetadataTracksChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedMetadataTrackschanged)]
 
 둘 이상의 메타데이터 트랙이 한 번에 활성화될 수 있으므로 메타데이터 트랙 목록에 대한 활성 인덱스를 간단히 설정하지 않습니다. 대신 **MediaPlaybackItem** 개체의 [**SetPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn986977) 메서드를 호출하여 전환하려는 트랙의 인덱스를 전달한 다음 [**TimedMetadataTrackPresentationMode**](https://msdn.microsoft.com/library/windows/apps/dn987016) 열거에서 값을 제공합니다. 선택하는 프레젠테이션 모드는 앱의 구현에 따라 다릅니다. 이 예제에서는 메타데이터 트랙이 활성화될 때 **PlatformPresented**로 설정됩니다. 텍스트 기반 트랙의 경우 이는 시스템이 트랙에서 자동으로 텍스트 신호를 표시하는 것을 의미합니다. 토글 단추가 꺼지면 프레젠테이션 모드가 **Disabled**로 설정되며 이는 표시될 텍스트 및 발행할 신호 이벤트가 없다는 의미입니다. 이 문서의 뒷부분에서 신호 이벤트를 설명합니다.
 
@@ -132,7 +133,7 @@ title: MediaSource를 사용하여 미디어 재생
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented.**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다. 트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
+**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다. 트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -188,6 +189,6 @@ title: MediaSource를 사용하여 미디어 재생
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

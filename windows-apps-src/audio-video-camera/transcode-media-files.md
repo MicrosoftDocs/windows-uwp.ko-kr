@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
 description: 동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다.
 title: 미디어 파일 코드 변환
@@ -11,13 +12,13 @@ title: 미디어 파일 코드 변환
 
 동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 [**Windows.Media.Transcoding**](https://msdn.microsoft.com/library/windows/apps/br207105) API를 사용할 수 있습니다.
 
-*코드 변환*은 동영상 또는 오디오 파일과 같은 디지털 미디어 파일을 한 형식에서 다른 형식으로 변환하는 작업입니다. 이 작업은 일반적으로 파일을 디코드한 후 다시 인코드하여 수행됩니다. 예를 들어 MP4 형식을 지원하는 휴대용 장치에서 재생할 수 있도록 Windows Media 파일을 MP4로 변환할 수 있습니다. 또는 HD 동영상 파일을 저해상도로 변환할 수 있습니다. 이 경우 다시 인코딩된 파일은 원본 파일과 동일한 코덱을 사용할 수 있지만 다른 인코딩 프로필을 갖게 됩니다.
+*코드 변환*은 동영상 또는 오디오 파일과 같은 디지털 미디어 파일을 한 형식에서 다른 형식으로 변환하는 작업입니다. 이 작업은 일반적으로 파일을 디코드한 후 다시 인코드하여 수행됩니다. 예를 들어 MP4 형식을 지원하는 휴대용 디바이스에서 재생할 수 있도록 Windows Media 파일을 MP4로 변환할 수 있습니다. 또는 HD 동영상 파일을 저해상도로 변환할 수 있습니다. 이 경우 다시 인코딩된 파일은 원본 파일과 동일한 코덱을 사용할 수 있지만 다른 인코딩 프로필을 갖게 됩니다.
 
 ## 코드 변환에 대한 프로젝트 설정
 
 기본 프로젝트 템플릿이 참조하는 네임스페이스 외에도, 이 문서에서 제공되는 코드를 사용하여 미디어 파일의 코드를 변환하려면 이러한 네임스페이스를 참조해야 합니다.
 
-[!code-cs[Using](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
+[!code-cs[사용](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
 ## 원본 파일 및 대상 파일 선택
 
@@ -71,6 +72,6 @@ title: 미디어 파일 코드 변환
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

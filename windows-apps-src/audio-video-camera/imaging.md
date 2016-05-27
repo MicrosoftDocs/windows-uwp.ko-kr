@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: 이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다.
 title: 이미징
@@ -24,7 +25,7 @@ title: 이미징
 
 이 문서의 샘플 코드는 다음 네임스페이스의 API를 사용합니다.
 
-[!code-cs[Namespaces](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
+[!code-cs[네임스페이스](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
 
 ## BitmapDecoder를 사용하여 이미지 파일에서 SoftwareBitmap 만들기
 
@@ -115,7 +116,7 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 **SoftwareBitmap** 클래스는 정적 메서드 [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362)를 제공하며, 이 메서드를 사용하면 지정된 픽셀 형식과 알파 모드를 사용하는 새로운 **SoftwareBitmap**을 기존 **SoftwareBitmap**에서 쉽게 만들 수 있습니다. 새로 만들어진 비트맵에는 별도의 이미지 데이터 복사본이 있습니다. 새 비트맵을 수정해도 소스 비트맵에는 영향이 없습니다.
 
-[!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
+[!code-cs[변환](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
 
 ## 이미지 파일 코드 변환
 
@@ -136,6 +137,6 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
