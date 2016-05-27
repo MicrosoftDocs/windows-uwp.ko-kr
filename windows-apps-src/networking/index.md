@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: 네트워크 및 웹 서비스에 액세스하는 기술입니다.
 title: 네트워킹 및 웹 서비스
@@ -22,6 +23,7 @@ title: 네트워킹 및 웹 서비스
 | [백그라운드 전송](background-transfers.md)                                         | 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다.           |
 | [EDP ID를 사용하여 네트워크 연결 태그 지정](tagging_network_connections_with_edp_identity.md) | 이 항목에서는 EDP(엔터프라이즈 데이터 보호) 시나리오에서 네트워크 연결을 만들기 전에 보호된 스레드 컨텍스트를 만드는 방법을 보여 줍니다. |
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 
