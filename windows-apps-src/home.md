@@ -43,6 +43,6 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 | [XAML 플랫폼](xaml-platform/index.md) | XAML 프로그래밍 언어의 기본 개념을 시작합니다. 또는 이미 XAML에 익숙한 경우 기본 개념을 건너뛰고 Visual Studio를 사용하여 뛰어난 유니버설 Windows 앱을 만들 수 있는 XAML에서 Windows 런타임 기능을 구현하는 방법을 알아봅니다. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

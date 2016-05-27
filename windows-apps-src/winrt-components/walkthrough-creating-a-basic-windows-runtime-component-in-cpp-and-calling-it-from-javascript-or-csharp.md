@@ -1,10 +1,11 @@
 ---
-title: 연습: C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#
+author: martinekuan
+title: C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#
 description: 이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다.
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ---
 
-# 연습: C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#
+# 연습 - C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -115,6 +116,6 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
