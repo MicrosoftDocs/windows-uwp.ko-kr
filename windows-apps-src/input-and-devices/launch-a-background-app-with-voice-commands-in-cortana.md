@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Cortana 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱 내에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 앱의 기능으로 Cortana를 확장할 수도 있습니다.
 title: Cortana에서 음성 명령으로 백그라운드 앱 시작
 ms.assetid: DF5B530C-57DD-4CA5-B3BE-1A0B3695C9C6
@@ -8,16 +9,14 @@ template: detail.hbs
 
 # Cortana를 통해 음성 명령으로 백그라운드 앱 활성화
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+**Cortana** 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 작업의 기능으로 **Cortana**를 확장할 수도 있습니다. 앱이 백그라운드에서 음성 명령을 처리하는 경우 포커스를 받지 않습니다. 대신, **Cortana** 캔버스와 **Cortana** 음성을 통해 모든 피드백과 결과를 반환합니다.
 
 **중요 API**
 
 -   [**Windows.ApplicationModel.VoiceCommands**](https://msdn.microsoft.com/library/windows/apps/dn706594)
 -   [**VCD 요소 및 특성 v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
-**Cortana** 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 작업의 기능으로 **Cortana**를 확장할 수도 있습니다. 앱이 백그라운드에서 음성 명령을 처리하는 경우 포커스를 받지 않습니다. 대신, **Cortana** 캔버스와 **Cortana** 음성을 통해 모든 피드백과 결과를 반환합니다.
+
 
 조작의 복잡성에 따라 앱을 포그라운드로 활성화(앱에 포커스가 있음)하거나 백그라운드에서 활성화(**Cortana**에 포커스가 유지됨)할 수 있습니다. 예를 들어 추가 컨텍스트 또는 사용자 입력(예: 특정 연락처에 메시지 보내기)이 필요한 음성 명령은 포그라운드 앱에서 가장 잘 처리할 수 있지만, 기본 명령(예: 예정된 여행 목록 표시)은 백그라운드 앱을 통해 **Cortana**에서 처리할 수 있습니다.
 
@@ -51,18 +50,18 @@ template: detail.hbs
 4.  앱 서비스의 백그라운드 활성화 및 음성 명령 실행을 처리합니다.
 5.  **Cortana** 내에서 음성 명령에 대한 적절한 피드백을 표시하고 말합니다.
 
-**필수 조건: **
+**필수 조건:  **
 
 UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항목을 검토하여 여기서 설명하는 기술에 대해 알아보세요.
 
 -   [첫 번째 앱 만들기](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-**사용자 환경 지침: **
+**사용자 환경 지침:  **
 
 **Cortana**와 앱을 통합하는 방법에 대한 자세한 내용은 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)을 참조하고, 유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
 
-## <span id="Create_a_new_solution_with_a_primary_project_in_Visual_Studio"> </span> <span id="create_a_new_solution_with_a_primary_project_in_visual_studio"> </span> <span id="CREATE_A_NEW_SOLUTION_WITH_A_PRIMARY_PROJECT_IN_VISUAL_STUDIO"> </span>Visual Studio의 기본 프로젝트로 새 솔루션 만들기
+## <span id="Create_a_new_solution_with_a_primary_project_in_Visual_Studio"></span><span id="create_a_new_solution_with_a_primary_project_in_visual_studio"></span><span id="CREATE_A_NEW_SOLUTION_WITH_A_PRIMARY_PROJECT_IN_VISUAL_STUDIO"></span>Visual Studio의 기본 프로젝트로 새 솔루션 만들기
 
 
 1.  Microsoft Visual Studio 2015를 시작합니다.
@@ -73,7 +72,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
     **새 프로젝트** 대화 상자가 나타납니다. 대화 상자의 왼쪽 창에서 표시할 템플릿 유형을 선택할 수 있습니다.
 
-3.  왼쪽 창에서 **설치됨 > 템플릿 > Visual C\# > Windows**를 확장하고 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
+3.  왼쪽 창에서 **설치됨 &gt; 템플릿 &gt; Visual C\# &gt; Windows**를 확장하고 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
 4.  가운데 창에서 **비어 있는 앱(유니버설 Windows)** 템플릿을 선택합니다.
 
     **비어 있는 앱** 템플릿은 컴파일과 실행은 가능하지만 사용자 인터페이스 컨트롤이나 데이터는 포함되지 않은 최소한의 UWP 앱을 만듭니다. 이 자습서를 진행하면서 이 앱에 컨트롤을 추가하게 됩니다.
@@ -84,15 +83,15 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     Microsoft Visual Studio에서 프로젝트를 만들고 **솔루션 탐색기**에 표시합니다.
 
 
-## <span id="Add_image_assets_to_primary_project_and_specify_them_in_the_app_manifest"> </span> <span id="add_image_assets_to_primary_project_and_specify_them_in_the_app_manifest"> </span> <span id="ADD_IMAGE_ASSETS_TO_PRIMARY_PROJECT_AND_SPECIFY_THEM_IN_THE_APP_MANIFEST"> </span>기본 프로젝트에 이미지 자산 추가 및 앱 매니페스트에서 지정
+## <span id="Add_image_assets_to_primary_project_and_specify_them_in_the_app_manifest"></span><span id="add_image_assets_to_primary_project_and_specify_them_in_the_app_manifest"></span><span id="ADD_IMAGE_ASSETS_TO_PRIMARY_PROJECT_AND_SPECIFY_THEM_IN_THE_APP_MANIFEST"></span>기본 프로젝트에 이미지 자산 추가 및 앱 매니페스트에서 지정
       
-UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, 로캘 등)에 따라 가장 적절한 이미지를 자동으로 선택할 수 있습니다. 단지 이미지를 제공하고 앱 프로젝트 내에서 다른 리소스 버전에 대한 적절한 명명 규칙 및 폴더 조직을 사용하면 됩니다. 권장 리소스 버전을 제공하지 않으면 사용자의 기본 설정, 능력, 디바이스 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 떨어질 수 있습니다.
+UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, 로캘 등)에 따라 가장 적절한 이미지를 자동으로 선택할 수 있습니다. 단지 이미지를 제공하고 앱 프로젝트 내에서 다른 리소스 버전에 대한 적절한 명명 규칙 및 폴더 조직을 사용하면 됩니다. 권장 리소스 버전을 제공하지 않으면 사용자의 기본 설정, 능력, 장치 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 떨어질 수 있습니다.
 
-고대비 및 배율 인수용 이미지 리소스에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
+고대비 및 배율 인수용 이미지 리소스에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
 
 한정자를 사용하여 리소스 이름을 지정합니다. 리소스 한정자는 특정 리소스 버전을 사용할 컨텍스트를 식별하는 폴더 및 파일 이름 한정자입니다.
 
-표준 명명 규칙은 `foldername/qualifiername-value[_qualifiername-value]/filename.qualifiername-value[_qualifiername-value].ext`입니다. 예를 들어 `images/en-US/logo.scale-100_contrast-white.png`는 `images/logo.png`라는 루트 폴더 및 파일 이름만 사용하여 코드에서 참조될 수 있습니다. [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh965324.aspx)을 참조하세요.
+표준 명명 규칙은 `foldername/qualifiername-value[_qualifiername-value]/filename.qualifiername-value[_qualifiername-value].ext`입니다. 예를 들어 `images/en-US/logo.scale-100_contrast-white.png`는 `images/logo.png`라는 루트 폴더 및 파일 이름만 사용하여 코드에서 참조될 수 있습니다. [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324.aspx)을 참조하세요.
 
 문자열 리소스 파일(예: "`en-US\resources.resw`")의 기본 언어 및 이미지(예: "`logo.scale-100.png`")의 기본 배율 요소를 표시하는 것이 좋습니다. 이는 지역화된 해상도 리소스 또는 여러 해상도 리소스를 제공하지 않으려는 경우에도 마찬가지입니다. 그러나 최소한 100, 200 및 400 배율 인수에 대한 자산을 제공하는 것이 좋습니다.
 
@@ -121,26 +120,26 @@ destinationTile.Image =
     new Uri("ms-appx:///AdventureWorks.VoiceCommands/Images/GreyTile.png"));
 ```
 
-## <span id="Create_an_app_service_project"> </span> <span id="create_an_app_service_project"> </span> <span id="CREATE_AN_APP_SERVICE_PROJECT"> </span>앱 서비스 프로젝트 만들기
+## <span id="Create_an_app_service_project"></span><span id="create_an_app_service_project"></span><span id="CREATE_AN_APP_SERVICE_PROJECT"></span>앱 서비스 프로젝트 만들기
 
 <ol>
     <li>
-    Right-click your Solution name, select **New > Project**.
+    솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **새로 만들기 &gt; 프로젝트**를 선택합니다.
     </li>
     <li>
-    Under **Installed > Templates > Visual C# > Windows > Universal**, select **Windows Runtime Component**. This is the component that implements the app service (**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**).
+    **설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows &gt; 유니버설**에서 **Windows 런타임 구성 요소**를 선택합니다. 이는 앱 서비스(**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**)를 구현하는 구성 요소입니다.
     </li>
     <li>
-    Type a name for the project (for example, "VoiceCommandService") and click **OK**.
+    프로젝트의 이름(예: "VoiceCommandService")을 입력하고 **확인**을 클릭합니다.
     </li>
     <li>
-    In **Solution Explorer**, select the "VoiceCommandService" project and rename the "Class1.cs" file generated by Visual Studio. For the **Adventure Works** example we use "AdventureWorksVoiceCommandService.cs".
+    **솔루션 탐색기**에서 "VoiceCommandService" 프로젝트를 선택하고 Visual Studio에서 생성한 "Class1.cs" 파일의 이름을 바꿉니다. **Adventure Works** 예제에서는 "AdventureWorksVoiceCommandService.cs"를 사용합니다.
     </li>
     <li>
-    Click **Yes** when asked if you want to rename all occurrences of "Class1.cs". 
+    발생된 모든 "Class1.cs"의 이름을 바꿀지 물으면 **예**를 클릭합니다. 
     </li>
     <li>
-    In the "AdventureWorksVoiceCommandService.cs" file:
+    "AdventureWorksVoiceCommandService.cs" 파일에서
         <ol type="i">
  <li>
  다음 using 지시문을 추가합니다.  
@@ -164,7 +163,7 @@ destinationTile.Image =
 </ol>
 
 다음은 **Adventure Works** 앱의 기본 백그라운드 작업 클래스입니다. 나중에 세부 정보를 더 채우겠습니다.
-> **참고**   
+> **참고**    
 > 백그라운드 작업 클래스 자체와 백그라운드 작업 프로젝트의 다른 모든 클래스가 봉인된 public 클래스여야 합니다.
  
 ``` csharp
@@ -187,7 +186,7 @@ namespace AdventureWorks.VoiceCommands
         /// Background tasks must respond to activation by Cortana within 0.5 seconds, and must 
         /// report progress to Cortana every 5 seconds (unless Cortana is waiting for user
         /// input). There is no execution time limit on the background task managed by Cortana,
-        /// but developers should use plmdebug (https://msdn.microsoft.com/en-us/library/windows/hardware/jj680085%28v=vs.85%29.aspx)
+        /// but developers should use plmdebug (https://msdn.microsoft.com/library/windows/hardware/jj680085%28v=vs.85%29.aspx)
         /// on the Cortana app package in order to prevent Cortana timing out the task during
         /// debugging.
         /// 
@@ -214,36 +213,40 @@ namespace AdventureWorks.VoiceCommands
 
 <ol start="7">
     <li>
-    Declare your background task as an **AppService** in the app manifest.
+    백그라운드 작업을 앱 매니페스트에서 **AppService**로 선언합니다.
     <ol type="i">
         <li>
-        In **Solution Explorer**, right click the "Package.appxmanifest" file and select **View Code**. 
+        **솔루션 탐색기**에서 "Package.appxmanifest" 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. 
         </li>
         <li>
-        Find the [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) element.
+        [
+            **Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) 요소를 찾습니다.
         </li>
         <li>
-        Add an [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) element to the [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) element.
+        [
+            **Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) 요소를 [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) 요소에 추가합니다.
         </li>
         <li>
-        Add a [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) element to the [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) element.
+        [
+            **uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소를 [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) 요소에 추가합니다.
         </li>
         <li>**Category** 특성을 **uap:Extension** 요소에 추가하고 **Category** 특성 값을 "windows.appService"로 설정합니다.
         </li>
         <li>
-        Add an **EntryPoint** attribute to the **uap:Extension** element and set the value of the **EntryPoint** attribute to the name of the class that implements [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794), in this case "AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService".
+        **EntryPoint** 특성을 **uap:Extension** 요소에 추가하고 **EntryPoint** 특성 값을, [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 클래스의 이름(이 경우 "AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService")으로 설정합니다.
         </li>
         <li>
-        Add a [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) element to the **uap:Extension** element.
+        [
+            **uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) 요소를 **uap:Extension** 요소에 추가합니다.
         </li>
         <li>
-        Add a **Name** attribute to the [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) element and set the value of the **Name** attribute to a name for the app service, in this case "AdventureWorksVoiceCommandService".
+        **Name** 특성을 [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) 요소에 추가하고 **Name** 특성 값을 앱 서비스의 이름(이 경우 "AdventureWorksVoiceCommandService")으로 설정합니다.
         </li>
         <li>
-        Add a second [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) element to [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720).
+        두 번째 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소를 [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)에 추가합니다.
         </li>
         <li>
-        Add a **Category** attribute to this [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) element and set the value of the **Category** attribute to "windows.personalAssistantLaunch".
+        **Category** 특성을 이 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소에 추가하고 **Category** 특성 값을 "windows.personalAssistantLaunch"로 설정합니다.
         </li>
     </li> 
     </ol>
@@ -271,43 +274,43 @@ namespace AdventureWorks.VoiceCommands
 
 <ol start="8">
     <li>
-    Add this app service project as a reference in the primary project. 
+    이 앱 서비스 프로젝트를 기본 프로젝트의 참조로 추가합니다. 
     <ol type="i">
         <li>
-        Right click **References**. 
+        **참조**를 마우스 오른쪽 단추로 클릭합니다. 
         </li>
         <li>
-        Select **Add Reference...** 
+        **참조 추가...**를 선택합니다. 
         </li>
         <li>
-        In the **Reference Manager** dialog, expand **Projects** and select the app service project. 
+        **참조 관리자** 대화 상자에서 **프로젝트**를 확장하고 앱 서비스 프로젝트를 선택합니다. 
         </li>
         <li>
-        Click OK. 
+        확인을 클릭합니다. 
         </li>
     </ol>
     </li>
 </ol>
 
-## <span id="Create_a_VCD_file"> </span> <span id="create_a_vcd_file"> </span> <span id="CREATE_A_VCD_FILE"> </span>VCD 파일 만들기
+## <span id="Create_a_VCD_file"></span><span id="create_a_vcd_file"></span><span id="CREATE_A_VCD_FILE"></span>VCD 파일 만들기
 
 
-1. Visual Studio에서 기본 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다. **XML 파일**을 추가합니다.
+1. Visual Studio에서 기본 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 &gt; 새 항목**을 선택합니다. **XML 파일**을 추가합니다.
 2. [
             **VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) 파일의 이름(이 예제에서는 "AdventureWorksCommands.xml")을 입력하고 추가를 클릭합니다. 
 3. **솔루션 탐색기**에서 [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) 파일을 선택합니다.
 4.  **속성** 창에서 **빌드 작업**을 **콘텐츠**로 설정한 후 **출력 디렉터리로 복사**를 **변경된 내용만 복사**로 설정합니다.
 
-## <span id="Edit_the_VCD_file"> </span> <span id="edit_the_vcd_file"> </span> <span id="EDIT_THE_VCD_FILE"> </span>VCD 파일 편집
+## <span id="Edit_the_VCD_file"></span><span id="edit_the_vcd_file"></span><span id="EDIT_THE_VCD_FILE"></span>VCD 파일 편집
 
-1. **xmlns** 특성으로 "http://schemas.microsoft.com/voicecommands/1.2"를 가리켜 **VoiceCommands** 요소를 추가합니다.
+1. **xmlns** 특성으로 `http://schemas.microsoft.com/voicecommands/1.2`를 가리켜 **VoiceCommands** 요소를 추가합니다.
 
 2. 앱에서 지원하는 각 언어에 대해 앱이 지원하는 음성 명령을 포함하는 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) 요소를 만듭니다.
 
   각각 다른 [**xml:lang**](https://msdn.microsoft.com/library/windows/apps/dn722331) 특성이 포함된 여러 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) 요소를 만들면 다양한 마켓에서 앱을 사용할 수 있습니다. 예를 들어 미국용 앱에는 영어에 대한 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)와 스페인어에 대한 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)가 포함될 수 있습니다.
 
   >  **주의**  
-  음성 명령을 사용하여 앱을 활성화하고 동작을 시작하기 위해 앱은 사용자가 디바이스에 대해 선택한 음성 언어와 일치하는 언어의 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)이 포함된 VCD 파일을 등록해야 합니다. 음성 언어는 **설정 > 시스템 > 음성 > 음성 언어**에 있습니다.
+  음성 명령을 사용하여 앱을 활성화하고 동작을 시작하기 위해 앱은 사용자가 디바이스에 대해 선택한 음성 언어와 일치하는 언어의 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)이 포함된 VCD 파일을 등록해야 합니다. 음성 언어는 **설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어**에 있습니다.
 
 3. 지원하려는 각 명령에 대해 **Command** 요소를 추가합니다.
 
@@ -370,7 +373,7 @@ namespace AdventureWorks.VoiceCommands
   </CommandSet>
 ```
 
-## <span id="Install_the_VCD_commands"> </span> <span id="install_the_vcd_commands"> </span> <span id="INSTALL_THE_VCD_COMMANDS"> </span>VCD 명령 설치
+## <span id="Install_the_VCD_commands"></span><span id="install_the_vcd_commands"></span><span id="INSTALL_THE_VCD_COMMANDS"></span>VCD 명령 설치
 
 VCD를 설치하려면 앱을 한 번 실행해야 합니다. 
 
@@ -416,33 +419,37 @@ try
 catch (Exception ex)
 {
   System.Diagnostics.Debug.WriteLine("Installing Voice Commands Failed: " + ex.ToString());
-}```
+}
+```
 
-## <span id="Handle_activation_and_execute_voice_commands"></span><span id="handle_activation_and_execute_voice_commands"></span><span id="HANDLE_ACTIVATION_AND_EXECUTE_VOICE_COMMANDS"></span>Handle activation
+## <span id="Handle_activation_and_execute_voice_commands"></span><span id="handle_activation_and_execute_voice_commands"></span><span id="HANDLE_ACTIVATION_AND_EXECUTE_VOICE_COMMANDS"></span>활성화 처리
 
-Specify how your app responds to subsequent voice command activations (after it has been launched at least once and the voice command sets have been installed).
+앱이 적어도 한 번 시작되고 음성 명령 집합이 설치된 후 앱에서 후속 음성 명령 활성화에 응답하는 방법을 지정합니다.
 
-1.  Confirm that your app was activated by a voice command.
+1.  앱이 음성 명령에 의해 활성화되었는지 확인합니다.
 
-    Override the [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) event and check whether [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) is [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693).
+    [
+            **Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트를 재정의하고 [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)가 [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693)인지 확인합니다.
 
-2.  Determine the name of the command and what was spoken.
+2.  명령의 이름과 말한 내용을 확인합니다.
 
-    Get a reference to a [**VoiceCommandActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn609755) object from the [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727) and query the [**Result**](https://msdn.microsoft.com/library/windows/apps/dn609758) property for a [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) object.
+    [
+            **IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727)에서 [**VoiceCommandActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn609755) 개체에 대한 참조를 가져오고 [**Result**](https://msdn.microsoft.com/library/windows/apps/dn609758) 속성에서 [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) 개체를 쿼리합니다.
 
-    To determine what the user said, check the value of [**Text**](https://msdn.microsoft.com/library/windows/apps/dn631441) or the semantic properties of the recognized phrase in the [**SpeechRecognitionSemanticInterpretation**](https://msdn.microsoft.com/library/windows/apps/dn631443) dictionary.
+    사용자가 말한 내용을 확인하려면 [**Text**](https://msdn.microsoft.com/library/windows/apps/dn631441) 값 또는 [**SpeechRecognitionSemanticInterpretation**](https://msdn.microsoft.com/library/windows/apps/dn631443) 사전에서 인식되는 구의 의미 체계 속성을 확인합니다.
 
-3.  Take the appropriate action in your app, such as navigating to the desired page.
+3.  원하는 페이지로 이동하는 등 앱에서 적절한 조치를 취합니다.
 
-For this example, we refer back to the VCD in Step 3: Edit the VCD file.
+이 예제에서는 3단계: VCD 파일 편집의 VCD를 다시 참조합니다.
 
-Once we get the speech-recognition result for the voice command, we get the command name from the first value in the [**RulePath**](https://msdn.microsoft.com/library/windows/apps/dn631438) array. As the VCD file defined more than one possible voice command, we need to compare the value against the command names in the VCD and take the appropriate action.
+음성 명령에 대한 음성 인식 결과를 얻은 후 [**RulePath**](https://msdn.microsoft.com/library/windows/apps/dn631438) 배열의 첫 번째 값에서 명령 이름을 가져옵니다. VCD 파일에서 둘 이상의 가능한 음성 명령을 정의했으므로 VCD의 명령 이름과 값을 비교하고 적절한 작업을 수행해야 합니다.
 
-The most common action an application can take is to navigate to a page with content relevant to the context of the voice command. For this example, we navigate to a **TripPage** page and pass in the value of the voice command, how the command was input, and the recognized "destination" phrase (if applicable). Alternatively, the app could send a navigation parameter to the [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) when navigating to the page.
+응용 프로그램에서 수행할 수 있는 가장 일반적인 작업은 음성 명령의 컨텍스트와 관련된 콘텐츠가 있는 페이지로 이동하는 것입니다. 이 예제에서는 **TripPage** 페이지로 이동하여 음성 명령의 값, 명령이 입력된 방식 및 인식된 "대상" 구(해당하는 경우)를 전달합니다. 또는 페이지로 이동할 때 앱에서 탐색 매개 변수를 [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432)로 보낼 수 있습니다.
 
-You can find out whether the voice command that launched your app was actually spoken, or whether it was typed in as text, from the [**SpeechRecognitionSemanticInterpretation.Properties**](https://msdn.microsoft.com/library/windows/apps/dn631445) dictionary using the **commandMode** key. The value of that key will be either "voice" or "text". If the value of the key is "voice", consider using speech synthesis ([**Windows.Media.SpeechSynthesis**](https://msdn.microsoft.com/library/windows/apps/dn278951)) in your app to provide the user with spoken feedback.
+앱을 시작한 음성 명령이 실제 소리로 명령한 것인지 또는 **commandMode** 키를 사용하여 [**SpeechRecognitionSemanticInterpretation.Properties**](https://msdn.microsoft.com/library/windows/apps/dn631445) 사전에서 텍스트로 입력되었는지 확인할 수 있습니다. 해당 키의 값이 "voice" 또는 "text"가 됩니다. 키의 값이 "voice"인 경우 앱에서 음성 합성([**Windows.Media.SpeechSynthesis**](https://msdn.microsoft.com/library/windows/apps/dn278951))을 사용하여 사용자에게 음성 피드백을 제공하는 것도 고려할 수 있습니다.
 
-Use the [**SpeechRecognitionSemanticInterpretation.Properties**](https://msdn.microsoft.com/library/windows/apps/dn631445) to find out the content spoken in the **PhraseList** or **PhraseTopic** constraints of a **ListenFor** element. The dictionary key is the value of the **Label** attribute of the **PhraseList** or **PhraseTopic** element. Here, we show how to access the value of **{destination}** phrase.
+[
+            **SpeechRecognitionSemanticInterpretation.Properties**](https://msdn.microsoft.com/library/windows/apps/dn631445)를 사용하여 **PhraseList**에서 말한 내용 또는 **ListenFor** 요소의 **PhraseTopic** 제약 조건을 확인합니다. 사전 키는 **PhraseList** 또는 **PhraseTopic** 요소의 **Label** 특성 값입니다. 여기에서는 **{destination}** 구의 값에 액세스하는 방법을 보여줍니다.
 
 ``` csharp
 /// <summary>
@@ -570,7 +577,7 @@ private string SemanticInterpretation(string interpretationKey, SpeechRecognitio
 }
 ```
 
-## <span id="Handle_the_voice_command_in_the_app_service"> </span> <span id="handle_the_voice_command_in_the_app_service"> </span> <span id="HANDLE_THE_VOICE_COMMAND_IN_THE_APP_SERVICE"> </span>앱 서비스의 음성 명령 처리
+## <span id="Handle_the_voice_command_in_the_app_service"></span><span id="handle_the_voice_command_in_the_app_service"></span><span id="HANDLE_THE_VOICE_COMMAND_IN_THE_APP_SERVICE"></span>앱 서비스의 음성 명령 처리
 
 
 앱 서비스에서 음성 명령을 처리합니다.
@@ -750,7 +757,7 @@ public sealed class VoiceCommandService : IBackgroundTask
 
 ![백그라운드에서 Adventure Works 앱을 사용하는 진행률 및 결과 화면이 포함된 기본 쿼리](images/cortana-backgroundapp-progress-result.png)
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **개발자**
@@ -778,6 +785,6 @@ public sealed class VoiceCommandService : IBackgroundTask
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,24 +1,20 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 이 항목에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
 title: 광학 줌 및 크기 조정에 대한 지침
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
-label: 광학 줌 및 크기 조정
+label: Optical zoom and resizing
 template: detail.hbs
 ---
 
 # 광학 줌 및 크기 조정
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
 
 **중요 API**
 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Input(XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
-
 
 
 광학 줌을 사용하면 콘텐츠 영역 내에서 콘텐츠 보기를 확대할 수 있지만(콘텐츠 영역 자체에 대해 수행) 크기 조정을 사용하면 콘텐츠 영역 보기는 바뀌지 않으면서 콘텐츠 영역 내에서 하나 이상 개체의 상대 크기를 변경할 수 있습니다(콘텐츠 영역 내 개체에 대해 수행).
@@ -40,7 +36,7 @@ template: detail.hbs
 
  
 
-## <span id="Dos_and_don_ts"> </span> <span id="dos_and_don_ts"> </span> <span id="DOS_AND_DON_TS"> </span>권장 사항 및 금지 사항
+## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 크기 조정 및 광학 줌을 지원하는 앱에 대해 다음 지침을 사용하세요.
@@ -69,7 +65,7 @@ template: detail.hbs
 
      
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
@@ -77,9 +73,10 @@ template: detail.hbs
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -95,6 +92,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

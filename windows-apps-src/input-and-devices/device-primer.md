@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
 title: UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
@@ -9,17 +10,17 @@ template: detail.hbs
 #  UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 ![Windows 기반 디바이스](images/device-primer/1894834-hig-device-primer-01-500.png)
 
 UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다. 특정 디바이스를 디자인할 때의 주요 고려 사항은 해당 디바이스에 앱이 표시되는 방법, 해당 디바이스에서 앱이 사용되는 위치, 시간 및 방법, 사용자가 해당 디바이스를 조작하는 방법 등입니다.
 
-## <span id="Phones_and_phablets"> </span> <span id="phones_and_phablets"> </span> <span id="PHONES_AND_PHABLETS"> </span>휴대폰 및 패블릿
+## <span id="Phones_and_phablets"></span><span id="phones_and_phablets"></span><span id="PHONES_AND_PHABLETS"></span>휴대폰 및 패블릿
 
 
-모든 컴퓨팅 디바이스에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
+모든 컴퓨팅 장치에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
 
 Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](http://go.microsoft.com/fwlink/p/?LinkID=699431)를 참조하세요.)
 
@@ -56,7 +57,7 @@ UI 고려 사항
 
  
 
-## <span id="Tablets"> </span> <span id="tablets"> </span> <span id="TABLETS"> </span>태블릿
+## <span id="Tablets"></span><span id="tablets"></span><span id="TABLETS"></span>태블릿
 
 
 휴대성이 뛰어난 태블릿 컴퓨터에는 터치 스크린, 카메라, 마이크 및 가속도계가 제공됩니다. 태블릿 화면 크기는 일반적으로 7인치에서 13.3인치 사이입니다.
@@ -91,10 +92,10 @@ UI 고려 사항
 
  
 
-## <span id="PCs_and_laptops"> </span> <span id="pcs_and_laptops"> </span> <span id="PCS_AND_LAPTOPS"> </span>PC와 노트북
+## <span id="PCs_and_laptops"></span><span id="pcs_and_laptops"></span><span id="PCS_AND_LAPTOPS"></span>PC와 노트북
 
 
-Windows PC 및 노트북에는 다양한 디바이스 및 화면 크기가 포함됩니다. 일반적으로 PC와 노트북은 휴대폰이나 태블릿보다 많은 정보를 표시할 수 있습니다.
+Windows PC 및 노트북에는 다양한 장치 및 화면 크기가 포함됩니다. 일반적으로 PC와 노트북은 휴대폰이나 태블릿보다 많은 정보를 표시할 수 있습니다.
 
 화면 크기
 -   13인치 이상
@@ -123,7 +124,7 @@ UI 고려 사항
 
  
 
-## <span id="Surface_Hub_devices"> </span> <span id="surface_hub_devices"> </span> <span id="SURFACE_HUB_DEVICES"> </span>Surface Hub 디바이스
+## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Surface Hub 디바이스
 
 
 Microsoft Surface Hub는 큰 화면을 갖춘 팀 공동 작업 디바이스로서 여러 사용자가 동시에 사용할 수 있도록 디자인되었습니다.
@@ -156,10 +157,10 @@ UI 고려 사항
 
  
 
-## <span id="Windows_IoT_devices"> </span> <span id="windows_iot_devices"> </span> <span id="WINDOWS_IOT_DEVICES"> </span>Windows IoT 디바이스
+## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Windows IoT 장치
 
 
-Windows IoT 디바이스는 물리적 개체 내에 소형 가전제품, 센서 및 연결을 포함하는 것에 중점을 둔 새로운 종류의 디바이스입니다. 이러한 디바이스는 감지한 실제 데이터에 대해 보고하고 일부 경우 그에 대한 조치를 취하기 위해 대개 네트워크 또는 인터넷을 통해 연결되어 있습니다. 디바이스는 화면이 없거나("헤드리스" 디바이스라고도 함), 화면 크기가 대개 3.5인치 이하인 작은 화면에 연결되어 있습니다("헤디드" 디바이스라고도 함).
+Windows IoT 장치는 물리적 개체 내에 소형 가전제품, 센서 및 연결을 포함하는 것에 중점을 둔 새로운 종류의 장치입니다. 이러한 디바이스는 감지한 실제 데이터에 대해 보고하고 일부 경우 그에 대한 조치를 취하기 위해 대개 네트워크 또는 인터넷을 통해 연결되어 있습니다. 디바이스는 화면이 없거나("헤드리스" 디바이스라고도 함), 화면 크기가 대개 3.5인치 이하인 작은 화면에 연결되어 있습니다("헤디드" 디바이스라고도 함).
 
 화면 크기
 -   3.5인치 이하
@@ -186,13 +187,13 @@ UI 고려 사항
 
  
 
-\[이 문서에는 UWP 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+
 
  
 
  
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

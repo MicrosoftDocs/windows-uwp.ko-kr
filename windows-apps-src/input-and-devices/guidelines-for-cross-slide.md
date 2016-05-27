@@ -1,8 +1,9 @@
 ---
+author: mijacobs
 Description: 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 title: 교차 방향으로 밀기에 대한 지침
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
-label: 교차 방향으로 밀기
+label: Cross-slide
 template: detail.hbs
 ---
 
@@ -20,14 +21,14 @@ template: detail.hbs
 
 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 
-## <span id="Dos_and_don_ts"> </span> <span id="dos_and_don_ts"> </span> <span id="DOS_AND_DON_TS"> </span>권장 사항 및 금지 사항
+## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 -   단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다.
 -   탭 조작이 다른 용도로 사용되는 경우 항목 선택에 교차 방향으로 밀기를 사용합니다.
 -   큐에 항목을 추가할 때는 교차 방향으로 밀기를 사용하지 마세요.
 
-## <span id="Additional_usage_guidance"> </span> <span id="additional_usage_guidance"> </span> <span id="ADDITIONAL_USAGE_GUIDANCE"> </span>추가 사용법 지침
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 선택 및 끌기는 한 방향(세로 또는 가로)으로 이동 가능한 콘텐츠 영역 내에서만 사용할 수 있습니다. 다른 조작이 작동하려면 하나의 이동 방향을 잠그고 이동 방향에 수직으로 제스처를 수행해야 합니다.
@@ -123,17 +124,17 @@ template: detail.hbs
 
 여러 개체를 이동해야 하는 경우 사용자가 여러 항목을 선택한 다음 모든 항목을 한 번에 끌 수 있게 합니다.
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**보관 샘플**
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895) 
+           **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -149,6 +150,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

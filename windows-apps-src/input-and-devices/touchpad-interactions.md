@@ -1,15 +1,14 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 터치 패드에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
 title: 터치 패드 조작
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
-label: 터치 패드 조작
+label: Touchpad interactions
 template: detail.hbs
 ---
 
 # 터치 패드 디자인 지침
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자가 터치 패드를 통해 조작할 수 있는 앱을 디자인하세요. 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드는 터치 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합합니다.
 
@@ -39,12 +38,12 @@ template: detail.hbs
 
 이 항목에서 설명하는 제스처 및 지침은 앱이 터치 패드 입력을 최소한의 코드로 매끄럽게 지원할 수 있게 합니다.
 
-## <span id="The_touchpad_language"> </span> <span id="the_touchpad_language"> </span> <span id="THE_TOUCHPAD_LANGUAGE"> </span>터치 패드 언어
+## <span id="The_touchpad_language"></span><span id="the_touchpad_language"></span><span id="THE_TOUCHPAD_LANGUAGE"></span>터치 패드 언어
 
 
 터치 패드 조작의 축약된 집합이 전체 시스템에서 일관되게 사용됩니다. 앱을 터치 및 마우스 입력에 최적화하면 이 언어를 통해 사용자가 앱에 즉시 친숙해져서 사용자의 신뢰가 증가하며 앱을 쉽게 배우고 사용할 수 있습니다.
 
-사용자는 표준 터치 패드의 경우보다 훨씬 더 정밀한 터치 패드 제스처 및 조작 동작을 설정할 수 있습니다. 다음 두 이미지는 표준 터치 패드 및 정밀 터치 패드 각각에 대해 Settings &gt; Devices &gt; Mouse & touchpad의 다른 터치 패드 설정 페이지를 보여 줍니다.
+사용자는 표준 터치 패드의 경우보다 훨씬 더 정밀한 터치 패드 제스처 및 조작 동작을 설정할 수 있습니다. 다음 두 이미지는 표준 터치 패드 및 정밀 터치 패드 각각에 대해 Settings &gt; Devices &gt; Mouse &amp; touchpad의 다른 터치 패드 설정 페이지를 보여 줍니다.
 
 ![표준 터치 패드 설정](images/mouse-touchpad-settings-standard.png)
 
@@ -102,21 +101,21 @@ template: detail.hbs
 </tr>
 <tr class="odd">
 <td align="left"><p><span id="Left_and_right_click_zone"></span><span id="left_and_right_click_zone"></span><span id="LEFT_AND_RIGHT_CLICK_ZONE"></span>왼쪽 및 오른쪽 클릭 영역</p></td>
-<td align="left"><p>마우스 디바이스의 왼쪽 및 오른쪽 단추 기능을 에뮬레이트합니다.</p></td>
+<td align="left"><p>마우스 장치의 왼쪽 및 오른쪽 단추 기능을 에뮬레이트합니다.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <span id="Hardware"> </span> <span id="hardware"> </span> <span id="HARDWARE"> </span>하드웨어
+## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>하드웨어
 
 
-마우스 디바이스 기능([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI 측면을 식별합니다. 터치와 마우스 입력 둘 다에 대한 UI를 제공하는 것이 좋습니다.
+마우스 장치 기능([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI 측면을 식별합니다. 터치와 마우스 입력 둘 다에 대한 UI를 제공하는 것이 좋습니다.
 
 디바이스 기능 쿼리에 대한 자세한 내용은 [입력 디바이스 식별](identify-input-devices.md)을 참조하세요.
 
-## <span id="Visual_feedback"> </span> <span id="visual_feedback"> </span> <span id="VISUAL_FEEDBACK"> </span>시각적 피드백
+## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>시각적 피드백
 
 
 -   이동 또는 가리키기 이벤트를 통해 터치 패드 커서가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 터치 패드 커서가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 터치 패드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -127,7 +126,7 @@ template: detail.hbs
 
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465342)을 참조하세요.
 
-## <span id="Cursors"> </span> <span id="cursors"> </span> <span id="CURSORS"> </span>커서
+## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>커서
 
 
 터치 패드 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
@@ -142,17 +141,17 @@ template: detail.hbs
 -   개체 크기를 조정할 수 있는 경우 가로, 세로 및 대각선 크기 조정 커서(![세로 크기 조정 커서](images/cursor-vertical.png), ![가로 크기 조정 커서](images/cursor-horizontal.png), ![대각선 크기 조정 커서(왼쪽 아래, 오른쪽 위)](images/cursor-diagonal2.png), ![대각선 크기 조정 커서(왼쪽 위, 오른쪽 아래)](images/cursor-diagonal1.png))를 사용합니다.
 -   고정 캔버스 내에서 콘텐츠를 이동하는 경우(예제: 지도) 잡는 손 모양 커서(![잡는 손 모양(열림)](images/cursor-pan1.png), ![잡는 손 모양(닫힘)](images/cursor-pan2.png))를 사용합니다.
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력 디바이스 식별](identify-input-devices.md)
-**샘플**
+* [입력된 디바이스 식별](identify-input-devices.md) 
+           **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**보관 샘플**
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895) 
+           **보관 샘플**
 * [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -163,6 +162,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

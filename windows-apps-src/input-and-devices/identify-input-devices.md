@@ -1,16 +1,15 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
 title: 입력 디바이스 식별
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
-label: 입력 디바이스 식별
+label: Identify input devices
 template: detail.hbs
 ---
 
-# 입력 디바이스 식별
+# 입력 장치 식별
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
 
 **중요 API**
 
@@ -18,10 +17,8 @@ template: detail.hbs
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
-UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
 
-
-## <span id="Retrieve_mouse_properties"> </span> <span id="retrieve_mouse_properties"> </span> <span id="RETRIEVE_MOUSE_PROPERTIES"> </span>마우스 속성 검색
+## <span id="Retrieve_mouse_properties"></span><span id="retrieve_mouse_properties"></span><span id="RETRIEVE_MOUSE_PROPERTIES"></span>마우스 속성 검색
 
 
 [
@@ -45,7 +42,7 @@ private void GetMouseProperties()
 }
 ```
 
-## <span id="Retrieve_keyboard_properties"> </span> <span id="retrieve_keyboard_properties"> </span> <span id="RETRIEVE_KEYBOARD_PROPERTIES"> </span>키보드 속성 검색
+## <span id="Retrieve_keyboard_properties"></span><span id="retrieve_keyboard_properties"></span><span id="RETRIEVE_KEYBOARD_PROPERTIES"></span>키보드 속성 검색
 
 
 [
@@ -61,7 +58,7 @@ private void GetKeyboardProperties()
 }
 ```
 
-## <span id="Retrieve_touch_properties"> </span> <span id="retrieve_touch_properties"> </span> <span id="RETRIEVE_TOUCH_PROPERTIES"> </span>터치 속성 검색
+## <span id="Retrieve_touch_properties"></span><span id="retrieve_touch_properties"></span><span id="RETRIEVE_TOUCH_PROPERTIES"></span>터치 속성 검색
 
 
 [
@@ -82,7 +79,7 @@ private void GetTouchProperties()
 }
 ```
 
-## <span id="Retrieve_pointer_properties"> </span> <span id="retrieve_pointer_properties"> </span> <span id="RETRIEVE_POINTER_PROPERTIES"> </span>포인터 속성 검색
+## <span id="Retrieve_pointer_properties"></span><span id="retrieve_pointer_properties"></span><span id="RETRIEVE_POINTER_PROPERTIES"></span>포인터 속성 검색
 
 
 [
@@ -179,13 +176,14 @@ private void GetPointerDevices()
     }
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+
 **보관 샘플**
 * [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
  
@@ -197,6 +195,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

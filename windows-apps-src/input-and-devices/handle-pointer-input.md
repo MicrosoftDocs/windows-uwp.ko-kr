@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 디바이스에서 입력 데이터를 수신하고, 처리하고, 관리합니다.
 title: 포인터 입력 처리
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
@@ -7,10 +8,6 @@ template: detail.hbs
 ---
 
 # 포인터 입력 처리
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 디바이스에서 입력 데이터를 수신하고, 처리하고, 관리합니다.
 
@@ -25,10 +22,10 @@ UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일�
 고유한 조작 지원을 구현하는 경우 사용자들은 앱의 UI 요소를 직접 조작하는 직관적인 환경을 기대한다는 것에 유의하세요. [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406)에서 항목들을 일관되고 검색 가능하게 유지할 수 있도록 사용자 지정 조작을 모델링할 것을 권장합니다. 플랫폼 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 UWP(유니버설 Windows 플랫폼) 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
 
 
-## <span id="Pointers"> </span> <span id="pointers"> </span> <span id="POINTERS"> </span>포인터
+## <span id="Pointers"></span><span id="pointers"></span><span id="POINTERS"></span>포인터
 
 
-많은 조작 환경에는 터치, 마우스, 펜/스타일러스, 터치 패드 등의 입력 디바이스로 가리켜서 조작하려는 개체를 식별하는 사용자를 포함합니다. 이러한 입력 디바이스에서 제공하는 원시 HID(휴먼 인터페이스 디바이스) 데이터에는 많은 일반적인 속성이 포함되어 있으므로 정보가 통합 입력 스택으로 올라가며 디바이스 독립적인 통합 포인터 데이터로 표시됩니다. 그런 다음 UWP 앱은 사용 중인 입력 디바이스와 상관없이 이 데이터를 사용할 수 있습니다.
+많은 조작 환경에는 터치, 마우스, 펜/스타일러스, 터치 패드 등의 입력 장치로 가리켜서 조작하려는 개체를 식별하는 사용자를 포함합니다. 이러한 입력 디바이스에서 제공하는 원시 HID(휴먼 인터페이스 디바이스) 데이터에는 많은 일반적인 속성이 포함되어 있으므로 정보가 통합 입력 스택으로 올라가며 디바이스 독립적인 통합 포인터 데이터로 표시됩니다. 그런 다음 UWP 앱은 사용 중인 입력 디바이스와 상관없이 이 데이터를 사용할 수 있습니다.
 
 **참고** 앱에 디바이스 관련 정보가 필요한 경우 해당 정보가 원시 HID 데이터에서도 올라갑니다.
 
@@ -36,10 +33,10 @@ UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일�
 
 입력 스택의 각 입력 지점(또는 연락처)은 다양한 포인터 이벤트에서 제공하는 [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) 매개 변수를 통해 표시되는 [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968) 개체로 표시됩니다. 멀티 펜 또는 멀티 터치 입력의 경우 각 접점이 하나의 고유한 포인터로 간주됩니다.
 
-## <span id="Pointer_events"> </span> <span id="pointer_events"> </span> <span id="POINTER_EVENTS"> </span>포인터 이벤트
+## <span id="Pointer_events"></span><span id="pointer_events"></span><span id="POINTER_EVENTS"></span>포인터 이벤트
 
 
-포인터 이벤트는 범위 또는 접촉의 감지 상태, 디바이스 유형 등의 기본 정보와 위치, 압력, 접촉 기하 등의 확장 정보를 표시합니다. 또한 사용자가 누른 마우스 단추, 펜 지우개 팁을 사용 중인지 여부 등의 특정 디바이스 속성도 사용할 수 있습니다. 앱에서 입력 디바이스와 해당 접근 권한 값을 구분해야 할 경우에는 [입력 디바이스 식별](identify-input-devices.md)을 참조하세요.
+포인터 이벤트는 범위 또는 접촉의 감지 상태, 장치 유형 등의 기본 정보와 위치, 압력, 접촉 기하 등의 확장 정보를 표시합니다. 또한 사용자가 누른 마우스 단추, 펜 지우개 팁을 사용 중인지 여부 등의 특정 디바이스 속성도 사용할 수 있습니다. 앱에서 입력 디바이스와 해당 접근 권한 값을 구분해야 할 경우에는 [입력 디바이스 식별](identify-input-devices.md)을 참조하세요.
 
 UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습니다.
 
@@ -126,12 +123,12 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 
  
 
-## <span id="Example"> </span> <span id="example"> </span> <span id="EXAMPLE"> </span>예제
+## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
 
 
 다음은 기본 포인터 추적 앱의 코드 예제로, 포인터 이벤트를 수신 대기하고 처리하며 활성 포인터의 다양한 속성을 가져오는 방법을 보여 줍니다.
 
-### <span id="Create_the_UI"> </span> <span id="create_the_ui"> </span> <span id="CREATE_THE_UI"> </span>UI 만들기
+### <span id="Create_the_UI"></span><span id="create_the_ui"></span><span id="CREATE_THE_UI"></span>UI 만들기
 
 다음 예에서는 직사각형(`targetContainer`)을 포인터 입력을 위한 대상 개체로 사용합니다. 대상의 색상은 포인터 상태가 변경될 때 변경됩니다.
 
@@ -194,7 +191,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 </Page>
 ```
 
-### <span id="Listen_for_pointer_events"> </span> <span id="listen_for_pointer_events"> </span> <span id="LISTEN_FOR_POINTER_EVENTS"> </span>포인터 이벤트 수신
+### <span id="Listen_for_pointer_events"></span><span id="listen_for_pointer_events"></span><span id="LISTEN_FOR_POINTER_EVENTS"></span>포인터 이벤트 수신
 
 대부분의 경우에는 이벤트 처리기의 [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076)를 통해 포인터 정보를 가져오는 것이 좋습니다.
 
@@ -243,7 +240,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 
 ```
 
-### <span id="Handle_pointer_events"> </span> <span id="handle_pointer_events"> </span> <span id="HANDLE_POINTER_EVENTS"> </span>포인터 이벤트 처리
+### <span id="Handle_pointer_events"></span><span id="handle_pointer_events"></span><span id="HANDLE_POINTER_EVENTS"></span>포인터 이벤트 처리
 
 다음으로 UI 피드백을 사용하여 기본 포인터 이벤트 처리기에 대해 살펴봅니다.
 
@@ -556,7 +553,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### <span id="Get_pointer_properties"> </span> <span id="get_pointer_properties"> </span> <span id="GET_POINTER_PROPERTIES"> </span>포인터 속성 가져오기
+### <span id="Get_pointer_properties"></span><span id="get_pointer_properties"></span><span id="GET_POINTER_PROPERTIES"></span>포인터 속성 가져오기
 
 앞에서 설명한 대로 [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076)의 [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) 및 [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078)의 메서드를 통해 [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) 개체에서 가장 확장된 포인터를 가져와야 합니다.
 
@@ -652,7 +649,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
              }
 ```
 
-### <span id="Complete_example"> </span> <span id="complete_example"> </span> <span id="COMPLETE_EXAMPLE"> </span>전체 예제
+### <span id="Complete_example"></span><span id="complete_example"></span><span id="COMPLETE_EXAMPLE"></span>전체 예제
 
 다음은 C\# 코드 예제입니다. 좀 더 복잡한 샘플 링크는 이 페이지 하단에 있는 관련 문서를 참조하세요.
 
@@ -1080,7 +1077,7 @@ namespace PointerInput
 }
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
@@ -1088,6 +1085,7 @@ namespace PointerInput
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -1104,6 +1102,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

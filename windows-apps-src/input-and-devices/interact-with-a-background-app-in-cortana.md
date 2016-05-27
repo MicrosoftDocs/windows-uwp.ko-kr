@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 사용자가 음성 명령을 실행하는 동안 Cortana 음성 및 캔버스를 통해 백그라운드 앱을 조작할 수 있는 방법을 알아봅니다.
 title: 백그라운드 앱 조작
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
@@ -8,8 +9,8 @@ template: detail.hbs
 
 # Cortana에서 백그라운드 앱 조작
 
+사용자가 음성 명령을 실행하는 동안 **Cortana** 캔버스의 음성 및 텍스트 입력을 통해 백그라운드 앱을 조작할 수 있게 합니다.
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -17,7 +18,6 @@ template: detail.hbs
 -   [**Windows.ApplicationModel.VoiceCommands**](https://msdn.microsoft.com/library/windows/apps/dn706594)
 -   [**VCD(음성 명령 정의) 요소 및 특성 v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
-사용자가 음성 명령을 실행하는 동안 **Cortana** 캔버스의 음성 및 텍스트 입력을 통해 백그라운드 앱을 조작할 수 있게 합니다.
 
 Cortana는 앱을 사용한 전체 턴바이턴 워크플로를 지원합니다. 이 워크플로는 앱에서 정의되며 다음과 같은 기능을 지원할 수 있습니다. 
 
@@ -37,17 +37,17 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 -   [첫 번째 앱 만들기](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-**사용자 환경 지침: **
+**사용자 환경 지침:  **
 
 **Cortana**와 앱을 통합하는 방법에 대한 자세한 내용은 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)을 참조하고, 유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
 
-## <span id="Feedback_strings"> </span> <span id="feedback_strings"> </span> <span id="FEEDBACK_STRINGS"> </span>피드백 문자열
+## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>피드백 문자열
 
 **Cortana**를 통해 표시하고 말할 피드백 문자열을 작성합니다.
 
 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)에서는 **Cortana**용 문자열 작성에 대한 권장 사항을 제공합니다.
 
-## <span id="Feedback_strings"> </span> <span id="feedback_strings"> </span> <span id="FEEDBACK_STRINGS"> </span>피드백 문자열
+## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>피드백 문자열
 
 콘텐츠 카드는 사용자에 대한 추가 컨텍스트를 제공하고 피드백 문자열을 간결하게 유지할 수 있습니다.
 
@@ -66,7 +66,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 또한 사용자가 카드 또는 앱의 텍스트 링크를 클릭하여 포그라운드에서 앱을 실행하도록 설정할 수 있습니다.
 
-## <span id="Completion_screen"> </span> <span id="completion_screen"> </span> <span id="COMPLETION_SCREEN"> </span>완료 화면
+## <span id="Completion_screen"></span><span id="completion_screen"></span><span id="COMPLETION_SCREEN"></span>완료 화면
 
 완료 화면에서는 완료된 음성 명령 작업에 대한 정보를 사용자에게 제공합니다.
 
@@ -174,7 +174,7 @@ private async Task SendCompletionMessageForDestination(string destination)
 }
 ```
 
-## <span id="Hand-off_screen"> </span> <span id="hand-off_screen"> </span> <span id="HAND-OFF_SCREEN"> </span>넘기기 화면
+## <span id="Hand-off_screen"></span><span id="hand-off_screen"></span><span id="HAND-OFF_SCREEN"></span>넘기기 화면
 
 음성 명령이 인식되면 **Cortana**에서 ReportSuccessAsync를 호출하고 약 500ms 이내에 피드백을 제공해야 합니다. 앱 서비스에서 500밀리초 이내에 음성 명령으로 지정된 작업을 완료할 수 없는 경우 **Cortana**에서 최대 5초 동안 표시되는 넘기기 화면을 제공합니다.
 
@@ -185,7 +185,7 @@ private async Task SendCompletionMessageForDestination(string destination)
 ![Cortana 백그라운드 앱 넘기기 화면](images/cortana-backgroundapp-progress-result.png)
 
 
-## <span id="Progress_screen"> </span> <span id="progress_screen"> </span> <span id="PROGRESS_SCREEN"> </span>진행률 화면
+## <span id="Progress_screen"></span><span id="progress_screen"></span><span id="PROGRESS_SCREEN"></span>진행률 화면
 
 
 앱 서비스가 ReportSuccessAsync를 호출하는 데 500ms 이상 걸리는 경우 **Cortana**에서 사용자에게 진행률 화면을 제공합니다. 앱 아이콘이 표시됩니다. 작업이 원활하게 처리되고 있음을 나타내기 위해 GUI 및 TTS 진행률 문자열을 둘 다 제공해야 합니다.
@@ -216,7 +216,7 @@ private async Task ShowProgressScreen(string message)
 }
 ```
 
-## <span id="Confirmation_screen"> </span> <span id="confirmation_screen"> </span> <span id="CONFIRMATION_SCREEN"> </span>확인 화면
+## <span id="Confirmation_screen"></span><span id="confirmation_screen"></span><span id="CONFIRMATION_SCREEN"></span>확인 화면
 
 
 음성 명령으로 지정된 동작이 되돌릴 수 없는 동작이고 상당한 영향을 미치거나 인식 신뢰도가 높지 않은 경우 앱 서비스에서 확인을 요청할 수 있습니다.
@@ -343,7 +343,7 @@ private async Task SendCompletionMessageForCancellation(string destination)
 }
 ```
 
-## <span id="Disambiguation_screen"> </span> <span id="disambiguation_screen"> </span> <span id="DISAMBIGUATION_SCREEN"> </span>명확성 화면
+## <span id="Disambiguation_screen"></span><span id="disambiguation_screen"></span><span id="DISAMBIGUATION_SCREEN"></span>명확성 화면
 
 
 음성 명령으로 지정된 동작의 작업 결과가 둘 이상이 될 수 있는 경우 앱 서비스에서 사용자에게 더 자세한 정보를 요청할 수 있습니다.
@@ -428,7 +428,7 @@ private async Task<Model.Trip> DisambiguateTrips(IEnumerable<Model.Trip> trips, 
 }
 ```
 
-## <span id="Error_screen"> </span> <span id="error_screen"> </span> <span id="ERROR_SCREEN"> </span>오류 화면
+## <span id="Error_screen"></span><span id="error_screen"></span><span id="ERROR_SCREEN"></span>오류 화면
 
 
 음성 명령으로 지정된 작업을 완료할 수 없으면 앱 서비스에서 오류 화면을 제공할 수 있습니다.
@@ -451,7 +451,7 @@ var userMessage = new VoiceCommandUserMessage();
     await voiceServiceConnection.ReportFailureAsync(response);
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **개발자**
@@ -473,6 +473,6 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,17 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 음성 명령을 사용하여 앱에서 제공하는 기능으로 Cortana를 확장합니다.
 title: Cortana 디자인 지침
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
-label: 지침
+label: Guidelines
 template: detail.hbs
 ---
 
 # Cortana 디자인 지침
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
 
 
 이러한 지침 및 권장 사항에서는 앱에서 **Cortana**를 가장 잘 활용하여 사용자와 상호 작용하고 사용자가 작업을 수행하는 데 도움을 주며 어떻게 모든 작업이 수행되는지를 명확하게 전달할 수 있는 방법에 대해 설명합니다.
@@ -24,7 +20,7 @@ template: detail.hbs
 
 ![Cortana 캔버스 개요](images/speech/cortana-overview.png)
 
-## <span id="Conversational_writing_"> </span> <span id="conversational_writing_"> </span> <span id="CONVERSATIONAL_WRITING_"> </span>대화형 쓰기
+## <span id="Conversational_writing_"></span><span id="conversational_writing_"></span><span id="CONVERSATIONAL_WRITING_"></span>대화형 쓰기
 
 
 성공적으로 **Cortana**을(를) 조작하려면 TTS(텍스트 음성 변환) 및 GUI 문자열을 만들 때 몇 가지 기본 원칙을 따라야 합니다.
@@ -106,7 +102,7 @@ template: detail.hbs
 
 대체 응답 컬렉션에서 교대로 또는 임의로 선택하여 응답에 약간씩 다른 표현을 사용하세요. 예를 들어 "어떤 영화를 보시겠어요?"와 "어떤 영화를 시청하시겠어요?"와 같이 합니다. 이렇게 하면 앱이 보다 자연스럽고 독특하게 들립니다.
 
-## <span id="Localization_"> </span> <span id="localization_"> </span> <span id="LOCALIZATION_"> </span>지역화
+## <span id="Localization_"></span><span id="localization_"></span><span id="LOCALIZATION_"></span>지역화
 
 
 음성 명령을 사용하여 작업을 시작하려면 앱에서 사용자가 해당 디바이스(설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어)에서 선택한 언어로 음성 명령을 등록해야 합니다.
@@ -117,7 +113,7 @@ template: detail.hbs
 
 자세한 내용은 [세계화 및 지역화 섹션](../globalizing/globalizing-portal.md)을 참조하세요.
 
-## <span id="Image_resources_and_scaling"> </span> <span id="image_resources_and_scaling"> </span> <span id="IMAGE_RESOURCES_AND_SCALING"> </span>이미지 리소스 및 크기 조정
+## <span id="Image_resources_and_scaling"></span><span id="image_resources_and_scaling"></span><span id="IMAGE_RESOURCES_AND_SCALING"></span>이미지 리소스 및 크기 조정
 
 
 UWP(유니버설 Windows 플랫폼) 앱에서 특정 설정 및 장치 기능(고대비, 유효 픽셀, 로캘 등)에 따라 가장 적절한 앱 로고 이미지를 자동으로 선택할 수 있습니다. 단지 이미지를 제공하고 앱 프로젝트 내에서 다른 리소스 버전에 대한 적절한 명명 규칙 및 폴더 조직을 사용하면 됩니다. 권장 리소스 버전을 제공하지 않으면 사용자의 기본 설정, 능력, 장치 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 떨어질 수 있습니다.
@@ -133,17 +129,35 @@ UWP(유니버설 Windows 플랫폼) 앱에서 특정 설정 및 장치 기능(�
 **중요**  
 Cortana 캔버스의 제목 영역에서 사용되는 앱 아이콘은 "Package.appxmanifest" 파일에 지정된 Square44x44Logo 아이콘입니다. 
 
-또한 Cortana 캔버스의 콘텐츠 영역에 표시되는 쿼리의 각 결과에 대해 아이콘을 지정할 수 있습니다. 결과 아이콘에 대한 유효한 이미지 크기는 다음과 같습니다.
+또한 사용자 쿼리에 대한 각 결과 타일에 대해 아이콘을 지정할 수도 있습니다. 결과 아이콘에 대한 유효한 이미지 크기는 다음과 같습니다.
 
 -   68w x 68h
 -   68w x 92h
 -   280w x 140h
 
+## <span id="Result_tile_templates"></span><span id="result_tile_templates"></span><span id="RESULT_TILE_TEMPLATES"></span>결과 타일 템플릿
 
-## <span id="Example"> </span> <span id="example"> </span> <span id="EXAMPLE"> </span>예제
+Cortana 캔버스에 표시하는 결과 타일에 대해 템플릿 집합이 제공됩니다. 이 템플릿을 사용하여 타일 제목과, 타일에 텍스트와 결과 아이콘 이미지를 포함할지 여부를 지정합니다. 각 타일에는 지정된 템플릿에 따라 최대 3줄의 텍스트와 한 개의 이미지를 포함할 수 있습니다.
+
+다음은 지원되는 템플릿(예제 포함)입니다.
+
+| 이름 | 예제 |
+| --- | --- |
+| 제목만  | ![제목만](images/cortana/voicecommandcontenttiletype_titleonly_small.png) |
+| 텍스트가 있는 제목   | ![텍스트가 있는 제목](images/cortana/voicecommandcontenttiletype_titlewithtext_small.png) |
+| 68x68 아이콘이 있는 제목   | 이미지 없음 |
+| 68x68 아이콘 및 텍스트가 있는 제목   | ![68x68 아이콘 및 텍스트가 있는 제목](images/cortana/voicecommandcontenttiletype_titlewith68x68iconandtext_small.png) |
+| 68x92 아이콘이 있는 제목   | 이미지 없음 |
+| 68x92 아이콘 및 텍스트가 있는 제목    | ![68x92 아이콘 및 텍스트가 있는 제목](images/cortana/voicecommandcontenttiletype_titlewith68x92iconandtext_small.png) |
+| 280x140 아이콘이 있는 제목   | 이미지 없음 |
+| 280x140 아이콘 및 텍스트가 있는 제목    | ![280x140 아이콘 및 텍스트가 있는 제목](images/cortana/voicecommandcontenttiletype_titlewith280x140iconandtext_small.png) |
+
+Cortana 템플릿에 대한 자세한 내용은 [VoiceCommandContentTileType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttiletype.aspx)을 참조하세요.
+
+## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>예제
 
 
-이 예는 **Cortana**에서 백그라운드 앱의 종단 간 작업 흐름을 보여 줍니다. **Adventure Works** 앱을 사용하여 라스베이거스 여행을 취소합니다.
+이 예는 **Cortana**에서 백그라운드 앱의 종단 간 작업 흐름을 보여 줍니다. **Adventure Works** 앱을 사용하여 라스베이거스 여행을 취소합니다. 이 예제에서는 "68x68 아이콘 및 텍스트가 있는 제목" 템플릿을 사용합니다.
 
 ![종단 간 Cortana 백그라운드 앱 흐름](images/speech/e2e-canceltrip.png)
 
@@ -160,22 +174,21 @@ Cortana 캔버스의 제목 영역에서 사용되는 앱 아이콘은 "Package.
 
 여기서 이러한 단계를 더 자세히 살펴보겠습니다.
 
-### <span id="Handoff"> </span> <span id="handoff"> </span> <span id="HANDOFF"> </span>전달
+### <span id="Handoff"></span><span id="handoff"></span><span id="HANDOFF"></span>전달
 
-|                                                                                                          |
-|----------------------------------------------------------------------------------------------------------|
-| ![종단 간: 전달 화면 없는 여행 찾기 ](images/speech/cortana-backgroundapp-result.png)              |
-| 전달 화면 없는 여행 찾기                                                                              |
+| ![종단 간: 전달 화면 없는 여행 찾기 ](images/speech/cortana-backgroundapp-result.png) |
+|--- |
+| 전달 화면 없는 여행 찾기 |
+
 | ![종단 간: 전달 화면 있는 여행 취소 ](images/speech/cortana-backgroundapp-progress-result.png) |
-| 전달 화면 있는 여행 취소                                                                          |
-
- 
+|--- |
+| 전달 화면 있는 여행 취소 | 
 
 앱이 응답하는 데 500밀리초 미만의 시간이 걸리고 사용자로부터의 추가 정보가 불필요한 작업은 완료 화면을 표시하는 것 이외에는 **Cortana**의 추가 참여 없이 완료될 수 있습니다.
 
 응용 프로그램이 응답하는 데 500밀리초 이상의 시간이 필요한 경우 **Cortana**는 전달 화면을 제공합니다. 앱 아이콘 및 이름이 표시되고, 음성 명령을 올바르게 이해했음을 나타내기 위해 GUI 및 TTS 전달 문자열을 둘 다 제공해야 합니다. 전달 화면은 최대 5초간 표시됩니다. 앱이 이 시간 내에 응답하지 않으면 **Cortana**가 일반 오류 화면을 제공합니다.
 
-### <span id="GUI_and_TTS_guidelines_for_handoff_screens"> </span> <span id="gui_and_tts_guidelines_for_handoff_screens"> </span> <span id="GUI_AND_TTS_GUIDELINES_FOR_HANDOFF_SCREENS"> </span>전달 화면에 대한 GUI 및 TTS 지침
+### <span id="GUI_and_TTS_guidelines_for_handoff_screens"></span><span id="gui_and_tts_guidelines_for_handoff_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_HANDOFF_SCREENS"></span>전달 화면에 대한 GUI 및 TTS 지침
 
 작업이 진행 중임을 명확하게 나타냅니다.
 
@@ -196,14 +209,11 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
  
 
-### <span id="Progress"> </span> <span id="progress"> </span> <span id="PROGRESS"> </span>진행률
+### <span id="Progress"></span><span id="progress"></span><span id="PROGRESS"></span>진행률
 
-|                                                                                             |
-|---------------------------------------------------------------------------------------------|
 | ![종단 간: 진행률 화면이 있는 여행 취소 ](images/speech/e2e-canceltrip-progress.png) |
-| 진행률 화면이 있는 여행 취소                                                            |
-
- 
+| --- |
+| 진행률 화면이 있는 여행 취소 |  
 
 작업 단계 간에 시간이 다소 걸리는 경우 앱이 개입하여 진행률 화면에서 일어나고 있는 상황에 대해 사용자에게 업데이트해서 알려야 합니다. 앱 아이콘이 표시되고, 작업이 진행 중임을 나타내기 위해 GUI 및 TTS 진행률 문자열을 둘 다 제공해야 합니다.
 
@@ -218,7 +228,7 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 -   명확성
 -   완료
 
-### <span id="GUI_and_TTS_guidelines_for_progress_screens"> </span> <span id="gui_and_tts_guidelines_for_progress_screens"> </span> <span id="GUI_AND_TTS_GUIDELINES_FOR_PROGRESS_SCREENS"> </span>진행률 화면에 대한 GUI 및 TTS 지침
+### <span id="GUI_and_TTS_guidelines_for_progress_screens"></span><span id="gui_and_tts_guidelines_for_progress_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_PROGRESS_SCREENS"></span>진행률 화면에 대한 GUI 및 TTS 지침
 
 현재 시제를 사용합니다.
 
@@ -236,14 +246,11 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
  
 
-### <span id="Confirmation"> </span> <span id="confirmation"> </span> <span id="CONFIRMATION"> </span>확인
+### <span id="Confirmation"></span><span id="confirmation"></span><span id="CONFIRMATION"></span>확인
 
-|                                                                                                     |
-|-----------------------------------------------------------------------------------------------------|
 | ![종단 간: 확인 화면이 있는 여행 취소 ](images/speech/e2e-canceltrip-confirmation.png) |
-| 확인 화면이 있는 여행 취소                                                                |
-
- 
+| --- |
+| 확인 화면이 있는 여행 취소 | 
 
 일부 작업은 사용자 명령의 특성에 의해 암시적으로 확인될 수 있습니다. 다른 작업은 잠재적으로 더 민감하여 명시적 확인이 필요합니다. 암시적 확인을 사용할 경우와 명시적 확인을 사용할 경우에 대한 몇 가지 지침은 다음과 같습니다.
 
@@ -265,7 +272,7 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 -   작업을 빨리 수행해야 하는 경우(예: 잊어버리기 전에 빨리 아이디어 캡처)
 -   정확도가 높은 경우(예: 간단한 메뉴)
 
-### <span id="GUI_and_TTS_guidelines_for_confirmation_screens"> </span> <span id="gui_and_tts_guidelines_for_confirmation_screens"> </span> <span id="GUI_AND_TTS_GUIDELINES_FOR_CONFIRMATION_SCREENS"> </span>확인 화면에 대한 GUI 및 TTS 지침
+### <span id="GUI_and_TTS_guidelines_for_confirmation_screens"></span><span id="gui_and_tts_guidelines_for_confirmation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_CONFIRMATION_SCREENS"></span>확인 화면에 대한 GUI 및 TTS 지침
 
 현재 시제를 사용합니다.
 
@@ -287,14 +294,11 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
  
 
-### <span id="Disambiguation"> </span> <span id="disambiguation"> </span> <span id="DISAMBIGUATION"> </span>명확성
+### <span id="Disambiguation"></span><span id="disambiguation"></span><span id="DISAMBIGUATION"></span>명확성
 
-|                                                                                                        |
-|--------------------------------------------------------------------------------------------------------|
 | ![종단 간: 명확성 화면이 있는 여행 취소](images/speech/cortana-disambiguation-screen.png) |
-| 명확성 화면이 있는 여행 취소                                                                 |
-
- 
+| --- |
+| 명확성 화면이 있는 여행 취소 | 
 
 일부 작업의 경우 작업을 완료하기 위해 사용자에게 엔터티 목록에서 선택하도록 요구할 수 있습니다.
 
@@ -302,7 +306,7 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
 고객이 명확성 질문에 대해 응답한 후 응용 프로그램이 500밀리초 이내에 다음 화면을 제공해야 진행률 화면으로 이동되지 않습니다.
 
-### <span id="GUI_and_TTS_guidelines_for_disambiguation_screens"> </span> <span id="gui_and_tts_guidelines_for_disambiguation_screens"> </span> <span id="GUI_AND_TTS_GUIDELINES_FOR_DISAMBIGUATION_SCREENS"> </span>명확성 화면에 대한 GUI 및 TTS 지침
+### <span id="GUI_and_TTS_guidelines_for_disambiguation_screens"></span><span id="gui_and_tts_guidelines_for_disambiguation_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_DISAMBIGUATION_SCREENS"></span>명확성 화면에 대한 GUI 및 TTS 지침
 
 현재 시제를 사용합니다.
 
@@ -322,16 +326,15 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 |----------------------------|--------------------------------------------------------------------------------|----------------------------------|
 | 프롬프트 - 3개 이하의 항목  | 어느 라스베이거스 여행을 취소하시겠어요? 라스베이거스 기술 회의인가요? 라스베이거스 파티인가요? | 어느 것을 취소하시겠습니까? |
 | 프롬프트 - 4개 이상의 항목 | 어느 라스베이거스 여행을 취소하시겠어요?                                          | 어느 것을 취소하시겠습니까? |
-| 재확인                   | 어느 라스베이거스 여행을 취소하려고 하셨나요?                                         | 어느 것을 취소하시겠어요? |
+| 재확인                   | 어느 라스베이거스 여행을 취소하려고 하셨나요?                                         | 어느 것을 취소하시겠습니까? |
 
  
 
-### <span id="Completion"> </span> <span id="completion"> </span> <span id="COMPLETION"> </span>완료
+### <span id="Completion"></span><span id="completion"></span><span id="COMPLETION"></span>완료
 
-|                                                                                                 |
-|-------------------------------------------------------------------------------------------------|
 | ![종단 간: 완료 화면이 있는 여행 취소 ](images/speech/e2e-canceltrip-completion.png) |
-| 완료 화면이 있는 여행 취소                                                              |
+| --- |
+| 완료 화면이 있는 여행 취소 |
 
  
 
@@ -341,7 +344,7 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
 앱에 적절한 상태로 앱을 시작하기 위한 시작 매개 변수가 포함된 링크를 제공해야 합니다. 이렇게 하면 사용자가 작업을 보거나 완료할 수 있습니다. **Cortana**가 링크 텍스트(예: "Adventure Works로 이동")를 제공합니다.
 
-### <span id="GUI_and_TTS_guidelines_for_completion_screens"> </span> <span id="gui_and_tts_guidelines_for_completion_screens"> </span> <span id="GUI_AND_TTS_GUIDELINES_FOR_COMPLETION_SCREENS"> </span>완료 화면에 대한 GUI 및 TTS 지침
+### <span id="GUI_and_TTS_guidelines_for_completion_screens"></span><span id="gui_and_tts_guidelines_for_completion_screens"></span><span id="GUI_AND_TTS_GUIDELINES_FOR_COMPLETION_SCREENS"></span>완료 화면에 대한 GUI 및 TTS 지침
 
 과거 시제를 사용합니다.
 
@@ -356,12 +359,11 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
  
 
-### <span id="Error"> </span> <span id="error"> </span> <span id="ERROR"> </span>오류
+### <span id="Error"></span><span id="error"></span><span id="ERROR"></span>오류
 
-|                                                                                      |
-|--------------------------------------------------------------------------------------|
 | ![종단 간: 오류 화면이 있는 여행 취소](images/speech/e2e-canceltrip-error.png) |
-| 오류 화면이 있는 여행 취소                                                        |
+| --- |
+| 오류 화면이 있는 여행 취소 |
 
  
 
@@ -371,10 +373,11 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 -   **Cortana**가 앱 서비스와 통신하지 못합니다.
 -   **Cortana**가 5초간 전달 화면 또는 진행률 화면을 표시한 후 앱이 화면을 제공하지 못합니다.
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
-* [음성 조작](speech-interactions.md)
+* [음성 조작](speech-interactions.md)  
+
 **개발자**
 * [Cortana 조작](https://msdn.microsoft.com/library/windows/apps/mt185598)
 * [음성 조작](https://msdn.microsoft.com/library/windows/apps/mt185614)
@@ -387,6 +390,6 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

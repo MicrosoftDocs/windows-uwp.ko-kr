@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: TODO
 title: 게임 패드 및 리모콘 조작
 ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
@@ -17,16 +18,16 @@ UWP 앱은 PC의 키보드 및 마우스 입력과 휴대폰 또는 태블릿의
 
 게임 패드 또는 원격 제어를 사용할 때 UWP 앱의 사용자 환경을 성공적이고 재미있게 하려면 다음을 고려해야 합니다.
 
-* [하드웨어 단추](designing-for-tv.md#hardware-buttons) -
+* [하드웨어 버튼](designing-for-tv.md#hardware-buttons)  -
 게임 패드 및 원격은 매우 다른 단추 및 구성을 제공합니다.
 
-* [XY 포커스 탐색 및 조작](designing-for-tv.md#xy-focus-navigation-and-interaction) -
+* [XY 포커스 탐색 및 조작](designing-for-tv.md#xy-focus-navigation-and-interaction)  -
 XY 포커스 탐색은 앱의 UI를 탐색할 수 있도록 합니다.
 
-* [마우스 모드](designing-for-tv.md#mouse-mode) -
+* [마우스 모드](designing-for-tv.md#mouse-mode)  -
 마우스 모드를 통해 XY 포커스 탐색이 충분하지 않은 경우 앱이 마우스 환경을 에뮬레이트할 수 있습니다.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,16 +1,15 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 title: 오디오 입력 관련 문제 관리
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
-label: 오디오 입력 문제 관리
+label: Manage audio input issues
 template: detail.hbs
 ---
 
 # 오디오 입력 관련 문제 관리
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 
 **중요 API**
 
@@ -18,10 +17,10 @@ template: detail.hbs
 -   [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)
 -   [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
 
-오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 
 
-## <span id="Assess_audio-input_quality"> </span> <span id="assess_audio-input_quality"> </span> <span id="ASSESS_AUDIO-INPUT_QUALITY"> </span>오디오 입력 품질 평가
+
+## <span id="Assess_audio-input_quality"></span><span id="assess_audio-input_quality"></span><span id="ASSESS_AUDIO-INPUT_QUALITY"></span>오디오 입력 품질 평가
 
 
 음성 인식이 활성 상태일 때는 음성 인식기의 [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) 이벤트를 사용해서 하나 이상의 오디오 문제로 인해 음성 입력이 방해되는지 여부를 확인합니다. 이벤트 인수([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430))는 오디오 입력으로 검색된 문제를 기술하는 [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성을 제공합니다.
@@ -60,7 +59,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Manage_the_speech-recognition_experience"> </span> <span id="manage_the_speech-recognition_experience"> </span> <span id="MANAGE_THE_SPEECH-RECOGNITION_EXPERIENCE"> </span>음성 인식 환경 관리
+## <span id="Manage_the_speech-recognition_experience"></span><span id="manage_the_speech-recognition_experience"></span><span id="MANAGE_THE_SPEECH-RECOGNITION_EXPERIENCE"></span>음성 인식 환경 관리
 
 
 [
@@ -101,7 +100,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 * [음성 조작](speech-interactions.md)
@@ -117,6 +116,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

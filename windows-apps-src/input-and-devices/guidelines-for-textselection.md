@@ -1,8 +1,9 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 이 항목에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새 선택 및 조작 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 title: 텍스트 및 이미지 선택
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
-label: 텍스트 및 이미지 선택
+label: Selecting text and images
 template: detail.hbs
 ---
 
@@ -10,7 +11,7 @@ template: detail.hbs
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하는 방법을 설명하고 앱에서 이러한 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 **중요 API**
@@ -19,7 +20,7 @@ template: detail.hbs
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 
-## <span id="Dos_and_don_ts"> </span> <span id="dos_and_don_ts"> </span> <span id="DOS_AND_DON_TS"> </span>권장 사항 및 금지 사항
+## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 -   고유한 위치 조정 막대 UI를 구현하는 경우 글꼴 문자 모양을 사용합니다. 위치 조정 막대는 시스템 전체에서 사용할 수 있는 두 가지 Segoe UI 글꼴의 조합입니다. 글꼴 리소스를 사용하면 여러 dpi에서 렌더링 문제가 간소화되며 다양한 UI 크기 조정에서도 제대로 작동합니다. 고유한 위치 조정 막대를 구현하는 경우 다음 UI 특성을 공유해야 합니다.
@@ -35,7 +36,7 @@ template: detail.hbs
 
 -   컨트롤, 레이블, 이미지, 소유 콘텐츠 등의 UI 요소를 선택할 수 없게 합니다. 일반적으로 Windows 응용 프로그램은 특정 컨트롤 내에서만 선택을 허용합니다. 단추, 레이블, 로고 등의 컨트롤은 선택할 수 없습니다. 앱에서 선택 작업이 중요한지 평가하고 중요한 경우 선택이 금지되어야 하는 UI 영역을 식별합니다. 
 
-## <span id="Additional_usage_guidance"> </span> <span id="additional_usage_guidance"> </span> <span id="ADDITIONAL_USAGE_GUIDANCE"> </span>추가 사용법 지침
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 텍스트 선택 및 조작은 터치 조작으로 인해 발생하는 사용자 환경 문제에 특히 영향을 미칠 수 있습니다. 마우스, 펜/스타일러스 및 키보드 입력은 고도로 세분화되어 있습니다. 마우스 클릭이나 펜/스타일러스 접촉은 일반적으로 단일 픽셀에 매핑되고 키는 누른 상태 또는 누르지 않은 상태가 됩니다. 그렇지만 터치식 입력은 세분화되어 있지 않습니다. 한 손가락의 전체 표면을 화면의 특정 x-y 위치에 매핑시켜 텍스트 캐럿을 정확히 배치하는 것은 어려운 일입니다.
@@ -99,20 +100,22 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 *자르기 위치 조정 막대가 있는 이미지 편집기입니다.*
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 
 **개발자용**
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/mt185599)
+
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -128,6 +131,6 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

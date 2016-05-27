@@ -1,15 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 이 항목에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 title: 회전
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
-label: 회전
+label: Rotation
 template: detail.hbs
 ---
 
 # 회전
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
@@ -19,12 +17,12 @@ template: detail.hbs
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 
-## <span id="Dos_and_don_ts"> </span> <span id="dos_and_don_ts"> </span> <span id="DOS_AND_DON_TS"> </span>권장 사항 및 금지 사항
+## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 -   사용자들이 UI 요소를 직접 회전하는 데 도움을 주려는 경우 회전을 사용합니다.
 
-## <span id="Additional_usage_guidance"> </span> <span id="additional_usage_guidance"> </span> <span id="ADDITIONAL_USAGE_GUIDANCE"> </span>추가 사용법 지침
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 **회전의 개요**
@@ -85,7 +83,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 </tr>
 <tr class="odd">
 <td align="left">조합형 회전</td>
-<td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전([Guidelines for panning](guidelines-for-panning.md)의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
+<td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전([이동에 대한 지침](guidelines-for-panning.md)의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
 <div class="alert">
 <strong>참고</strong> 사용자 인터페이스 이동 경로는 대상 주변 영역이 선택에 영향을 미칠 수 있는 특정 값이나 위치로의 이동을 제한하는 기능입니다.
 </div>
@@ -98,7 +96,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
  
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 **샘플**
@@ -106,9 +104,10 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -124,6 +123,6 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

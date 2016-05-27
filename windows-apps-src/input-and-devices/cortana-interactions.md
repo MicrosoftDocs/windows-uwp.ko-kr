@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 외부 응용 프로그램을 시작하고 해당 응용 프로그램 내에서 단일 작업을 실행하는 음성 명령으로 Cortana의 기본 기능을 확장하세요.
 title: Cortana 조작
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
@@ -9,7 +10,7 @@ template: detail.hbs
 # UWP 앱에서 Cortana 조작
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 외부 응용 프로그램을 시작하고 해당 응용 프로그램 내에서 단일 작업을 실행하는 음성 명령으로 **Cortana**의 기본 기능을 확장하세요. 
 
@@ -46,31 +47,31 @@ template: detail.hbs
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Design guidelines](cortana-design-guidelines.md)</p></td>
+<td align="left"><p>[디자인 지침](cortana-design-guidelines.md)</p></td>
 <td align="left"><p>이러한 지침 및 권장 사항에서는 앱에서 **Cortana**를 가장 잘 활용하여 사용자와 상호 작용하고 사용자가 작업을 수행하는 데 도움을 주며 어떻게 모든 작업이 수행되는지를 명확하게 전달할 수 있는 방법에 대해 설명합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Launch a foreground app with voice commands](launch-a-foreground-app-with-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>[음성 명령으로 포그라운드 앱 시작](launch-a-foreground-app-with-voice-commands-in-cortana.md)</p></td>
 <td align="left"><p><strong>Cortana</strong> 내에서 음성 명령을 사용하여 시스템 기능에 액세스할 수 있을 뿐만 아니라, <strong>Cortana</strong>를 통해 음성 명령을 사용하여 포그라운드 앱을 시작하고 앱에서 실행할 작업 또는 명령을 지정할 수도 있습니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Dynamically modify VCD phrase lists](dynamically-modify-voice-command-definition--vcd--phrase-lists.md)</p></td>
+<td align="left"><p>[VCD 구 목록을 동적으로 수정](dynamically-modify-voice-command-definition--vcd--phrase-lists.md)</p></td>
 <td align="left"><p>런타임 시 음성 인식 결과를 사용하여 VCD 파일의 지원되는 구 목록(<strong>PhraseList</strong> 요소)에 액세스하여 이를 업데이트 하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Launch a background app with voice commands](launch-a-background-app-with-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>[음성 명령으로 백그라운드 앱 시작](launch-a-background-app-with-voice-commands-in-cortana.md)</p></td>
 <td align="left"><p><strong>Cortana</strong> 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱 내에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 앱의 기능으로 <strong>Cortana</strong>를 확장할 수도 있습니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Interact with a background app](interact-with-a-background-app-in-cortana.md)</p></td>
+<td align="left"><p>[백그라운드 앱 조작](interact-with-a-background-app-in-cortana.md)</p></td>
 <td align="left"><p>사용자가 음성 명령을 실행하는 동안 <strong>Cortana</strong> 음성 및 캔버스를 통해 백그라운드 앱을 조작할 수 있는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Deep link to a background app](deep-link-into-your-app-from-cortana.md)</p></td>
+<td align="left"><p>[백그라운드 앱으로의 딥 링크](deep-link-into-your-app-from-cortana.md)</p></td>
 <td align="left"><p>백그라운드 앱 서비스의 딥 링크를 <strong>Cortana</strong>에 제공하여 특정 상태 또는 컨텍스트에서 앱을 포그라운드로 시작합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Support natural language voice commands](support-natural-language-voice-commands-in-cortana.md)</p></td>
+<td align="left"><p>[자연어 음성 명령 지원](support-natural-language-voice-commands-in-cortana.md)</p></td>
 <td align="left"><p>사용자가 명령의 어느 위치에서든 앱 이름을 말할 수 있도록 더 유연하고 자연스러운 음성 명령으로 <strong>Cortana</strong>를 확장하는 방법을 알아봅니다.</p></td>
 </tr>
 </tbody>
@@ -78,7 +79,7 @@ template: detail.hbs
 
  
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 * [**VCD 요소 및 특성 v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
@@ -98,6 +99,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

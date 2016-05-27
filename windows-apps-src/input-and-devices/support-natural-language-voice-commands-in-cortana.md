@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 사용자가 명령의 어느 위치에서든 앱 이름을 말할 수 있도록 더 유연하고 자연스러운 음성 명령으로 Cortana를 확장하는 방법을 알아봅니다.
 title: Cortana에서 자연어 음성 명령 지원
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Cortana에서 자연어 음성 명령 지원
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자가 명령의 어느 위치에서든 앱 이름을 말할 수 있는 더 유연하고 자연스러운 음성 명령으로 **Cortana**를 확장합니다.
 
@@ -29,7 +27,7 @@ template: detail.hbs
 -   중위 - 명령 구 안에
 -   접미사 - 명령 구 뒤에
 
-**필수 조건: **
+**필수 조건:  **
 
 이 항목은 [Cortana에서 음성 명령으로 백그라운드 앱 시작](launch-a-background-app-with-voice-commands-in-cortana.md)을 기반으로 합니다. 여기서는 **Adventure Works**라는 여행 계획 및 관리 앱으로 계속 기능을 소개합니다.
 
@@ -38,20 +36,19 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 -   [첫 번째 앱 만들기](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-**사용자 환경 지침: **
+**사용자 환경 지침:  **
 
 **Cortana**와 앱을 통합하는 방법에 대한 자세한 내용은 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)을 참조하고, 유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
 
-## <span id="Specify_an_AppName_element_in_the_VCD"> </span> <span id="specify_an_appname_element_in_the_vcd"> </span> <span id="SPECIFY_AN_APPNAME_ELEMENT_IN_THE_VCD"> </span>**AppName** VCD 요소 지정
+## <span id="Specify_an_AppName_element_in_the_VCD"></span><span id="specify_an_appname_element_in_the_vcd"></span><span id="SPECIFY_AN_APPNAME_ELEMENT_IN_THE_VCD"></span>**AppName** VCD 요소 지정
 
 
 **AppName** 요소는 음성 명령에서 앱의 이름을 사용자 친화적으로 지정하는 데 사용됩니다.
-
 ```XML
 <AppName>Adventure Works</AppName>
 ```
 
-## <span id="Specify_where_the_app_name_can_be_spoken_in_the_voice_command"> </span> <span id="specify_where_the_app_name_can_be_spoken_in_the_voice_command"> </span> <span id="SPECIFY_WHERE_THE_APP_NAME_CAN_BE_SPOKEN_IN_THE_VOICE_COMMAND"> </span>음성 명령에서 앱 이름을 말할 수 있는 위치 지정
+## <span id="Specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="SPECIFY_WHERE_THE_APP_NAME_CAN_BE_SPOKEN_IN_THE_VOICE_COMMAND"></span>음성 명령에서 앱 이름을 말할 수 있는 위치 지정
 
 
 **ListenFor** 요소에는 **RequireAppName** 음성 명령에 앱 이름이 나타나는 위치를 지정하는 특성이 있습니다. 이 특성은 4개의 값을 지원합니다.
@@ -63,7 +60,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     사용자가 명령 구 앞에 앱 이름을 말하도록 지정합니다.
 
     여기서 Cortana가 "Adventure Works 라스베이거스로 가는 내 여행 시기"를 수신 대기합니다.
-
 ```xml
 <ListenFor RequireAppName="BeforePhrase"> show [my] trip to {destination} </ListenFor>
 ```
@@ -75,7 +71,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     전치사적인 접속사의 지역화된 구 목록은 시스템에서 제공합니다. 여기에는 "사용", "으로" 및 "에"와 같은 구가 포함됩니다.
 
     여기서 Cortana는 "Adventure Works에서 내 다음 라스베이거스 여행 표시" 및 "Adventure Works를 사용하여 내 다음 라스베이거스 여행 표시"와 같은 명령을 수신 대기합니다.
-
 ```xml
 <ListenFor RequireAppName="AfterPhrase">show [my] next trip to {destination} </ListenFor>
 ```
@@ -87,7 +82,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     접미사 버전의 경우 전치사적인 접속사의 지역화된 구 목록은 시스템에서 제공합니다. 여기에는 "사용", "으로" 및 "에"와 같은 구가 포함됩니다.
 
     여기서 Cortana는 "dventure Works, 내 다음 라스베이거스 여행 표시" 또는 "Adventure works에 내 다음 여행 표시"와 같은 명령을 수신 대기합니다.
-
 ``` xml
 <ListenFor RequireAppName="BeforeOrAfterPhrase">show [my] next trip to {destination}</ListenFor>
 ```
@@ -99,12 +93,11 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     **{builtin:AppName}** 태그를 사용하여 앱 이름을 명시적으로 나타내야 합니다.
 
     여기서 Cortana는 "Adventure Works, 내 다음 라스베이거스 여행 표시" 또는 "내 다음 라스베이거스 Adventure Works 여행 표시"와 같은 명령을 수신 대기합니다.
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">show [my] next {builtin:AppName} trip to {destination} </ListenFor>
 ```
 
-## <span id="Special_cases"> </span> <span id="special_cases"> </span> <span id="SPECIAL_CASES"> </span>특수한 경우
+## <span id="Special_cases"></span><span id="special_cases"></span><span id="SPECIAL_CASES"></span>특수한 경우
 
 **RequireAppName**이 "AfterPhrase" 또는 "ExplicitlySpecified"인 **ListenFor** 요소를 선언할 경우 다음과 같은 특정 요구 사항이 충족되는지 확인해야 합니다.
 
@@ -117,7 +110,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     이렇게 하면 명령에 앱 이름 또는 그 일부가 있는 경우(발음상 어디에 있든) **Cortana**가 앱을 실행할 가능성을 최소화하는 데 도움이 됩니다.
 
     사용자가 "Kinect Adventure works에 대한 리뷰 표시"와 같은 말을 할 경우 **Cortana**에서 **Adventure Works** 앱을 시작할 수 있는 잘못된 선언은 다음과 같습니다.
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">{searchPhrase} {builtin:AppName}</ListenFor>
 ```
@@ -129,13 +121,12 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
     그렇게 하면 사용자가 "Kinect Adventure works 찾기"와 같은 말을 했을 때 응용 프로그램이 잘못 시작되지 않도록 응용 프로그램의 적절한 작동을 설정하는 데 도움이 됩니다.
 
     사용자가 "안녕 Adventure works" 또는 "Kinect adventure works 찾기"와 같은 말을 할 경우 **Cortana**에서 **Adventure Works** 앱을 실행할 수 있는 잘못된 선언은 다음과 같습니다.
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">Hey {builtin:AppName}</ListenFor>
 <ListenFor RequireAppName="ExplicitlySpecified">Find {searchPhrase} {builtin:AppName}</ListenFor>
 ```
 
-## <span id="Remarks"> </span> <span id="remarks"> </span> <span id="REMARKS"> </span>설명
+## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>설명
 
 사용자가 **Cortana**에서 음성 명령을 말할 수 있는 방식 면에서 더 많은 변형을 지원하면 앱의 일반적인 유용성이 늘어납니다.
 
@@ -145,14 +136,12 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 음성 명령이 기존 **Cortana** 기능(전화, 메시지 등)과 충돌하는 경우에는 앱 이름을 접두사로 사용하는 것이 좋습니다. 예를 들어 "Adventure Works, 라스베이거스 여행에 대한 \[여행사\] 메시지"를 사용할 수 있습니다.
 
-## <span id="Complete_example"> </span> <span id="complete_example"> </span> <span id="COMPLETE_EXAMPLE"> </span>전체 예제
+## <span id="Complete_example"></span><span id="complete_example"></span><span id="COMPLETE_EXAMPLE"></span>전체 예제
 
 
 더 많은 자연어 음성 명령을 제공할 수 있는 다양한 방법을 보여주는 VCD 파일은 다음과 같습니다.
 
-**참고** 각기 다른 **RequireAppName** 특성 값을 사용하는 **ListenFor** 요소를 여러 개 사용해야 합니다.
-
- 
+**참고** 각기 다른 **RequireAppName** 특성 값을 사용하는 **ListenFor** 요소를 여러 개 사용해야 합니다. 
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -197,7 +186,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 </VoiceCommands>
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **개발자**
@@ -220,6 +209,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

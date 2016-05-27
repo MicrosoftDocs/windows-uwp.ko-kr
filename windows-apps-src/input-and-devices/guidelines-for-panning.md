@@ -1,25 +1,24 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
 title: 이동
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
-label: 이동
+label: Panning
 template: detail.hbs
 ---
 
 # 이동에 대한 지침
 
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
+사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
 
 **중요 API**
 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
-사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
 
-## <span id="Dos_and_don_ts"> </span> <span id="dos_and_don_ts"> </span> <span id="DOS_AND_DON_TS"> </span>권장 사항 및 금지 사항
+
+## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
 
 
 **이동 표시기 및 스크롤 막대**
@@ -70,7 +69,7 @@ template: detail.hbs
 
     ![컨테이너와 같은 방향으로 스크롤되는 포함된 이동 가능 영역을 보여 주는 이미지](images/scrolling-embedded3.png)
 
-## <span id="Additional_usage_guidance"> </span> <span id="additional_usage_guidance"> </span> <span id="ADDITIONAL_USAGE_GUIDANCE"> </span>추가 사용법 지침
+## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
 
 
 터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. API에서 구분되거나 일부 디바이스별 Windows UI에 필요한 경우가 아니면 두 조작을 모두 이동으로 간주합니다.
@@ -98,12 +97,11 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 **이동 UI**
 
-이동 조작 환경은 유사한 기능을 제공하지만 입력 장치에 고유합니다.
+이동 조작 환경은 유사한 기능을 제공하지만 입력 디바이스에 고유합니다.
 
-**이동 가능 영역**
-이동 가능 영역 동작은 CSS 스타일시트를 통해 디자인 타임에 JavaScript로 작성한 Windows 스토어 앱 개발자에게 노출됩니다.
+**이동 가능 영역** 이동 가능 영역 동작은 CSS 스타일시트를 통해 디자인 타임에 JavaScript로 작성한 Windows 스토어 앱 개발자에게 노출됩니다.
 
-검색된 입력 장치에 따라 다음 두 가지 이동 표시 모드가 있습니다.
+검색된 입력 디바이스에 따라 다음 두 가지 이동 표시 모드가 있습니다.
 
 -   터치의 이동 표시기
 -   마우스, 터치 패드, 키보드, 스타일러스를 비롯한 다른 입력 장치에 대한 스크롤 막대입니다.
@@ -112,16 +110,14 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
  
 
-**이동 표시기**
-이동 표시기는 스크롤 막대의 스크롤 상자와 비슷합니다. 이 표시기는 전체 이동 가능 영역에 대한 표시된 콘텐츠의 비율과 이동 가능 영역에서 표시된 콘텐츠의 상대적 위치를 나타납니다.
+**이동 표시기** 이동 표시기는 스크롤 막대의 스크롤 상자와 비슷합니다. 이 표시기는 전체 이동 가능 영역에 대한 표시된 콘텐츠의 비율과 이동 가능 영역에서 표시된 콘텐츠의 상대적 위치를 나타납니다.
 
 다음 다이어그램은 길이가 다른 두 개의 이동 가능 영역과 이동 표시기를 보여 줍니다.
 
 ![길이가 다른 두 개의 이동 가능 영역과 이동 표시기를 보여 주는 이미지](images/scrolling-indicators.png)
 
-**이동 동작**
-**끌기 지점**
-살짝 밀기 제스처를 사용하여 이동할 경우 터치 접촉을 들 때 관성 동작이 조작에 도입됩니다. 관성을 사용하면 사용자의 직접 입력 없이 일정한 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동합니다. 끌기 지점을 사용하여 이 관성 동작을 수정할 수 있습니다.
+**이동 동작** 
+           **끌기 지점** 살짝 밀기 제스처를 사용하여 이동할 경우 터치 접촉을 들 때 관성 동작이 조작에 도입됩니다. 관성을 사용하면 사용자의 직접 입력 없이 일정한 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동합니다. 끌기 지점을 사용하여 이 관성 동작을 수정할 수 있습니다.
 
 끌기 지점은 앱 콘텐츠에 논리적 멈춤을 지정합니다. 인식적으로, 끌기 지점은 사용자를 위한 페이징 메커니즘 역할을 하며 큰 이동 가능 영역에서 과도한 밀기나 살짝 밀기로 인한 피로를 최소화합니다. 끌기 지점을 통해 사용자 입력을 처리하고 콘텐츠나 키 정보의 특정 하위 집합이 뷰포트에 표시되도록 할 수 있습니다.
 
@@ -141,8 +137,7 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
  
 
-**이동 경로**
-콘텐츠가 디스플레이 장치의 치수와 해상도보다 더 넓고 클 수 있습니다. 따라서 2차원 이동(가로 및 세로)이 필요한 경우가 많습니다. 이러한 경우 레일은 동작 축을 따라 이동(세로 또는 가로)을 강조하여 사용자 환경을 향상시킵니다.
+**레일** 디바이스의 치수와 해상도보다 더 넓고 클 수 있습니다. 따라서 2차원 이동(가로 및 세로)이 필요한 경우가 많습니다. 이러한 경우 레일은 동작 축을 따라 이동(세로 또는 가로)을 강조하여 사용자 환경을 향상시킵니다.
 
 다음 다이어그램에서는 이동 경로의 개념을 보여 줍니다.
 
@@ -164,20 +159,22 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 이 지침은 앨범(이전 또는 다음 이미지로 이동) 또는 세부 정보 영역 내에서 단일 축 이동을 지원하는 동시에 개별 이미지나 지도 내에서 제약 없는 이동을 지원하는 사진 앨범이나 지도 앱 같은 앱에도 유용합니다. 자유형 이동 이미지나 지도에 해당하는 세부 정보 또는 옵션 영역을 제공하는 앱에서는 이미지나 지도의 제약 없는 이동 영역이 세부 정보 영역으로의 이동을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작하는 것이 좋습니다.
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/mt185599)
 * [ListView 및 GridView 최적화](https://msdn.microsoft.com/library/windows/apps/mt204776)
 * [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)
+
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -193,6 +190,6 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

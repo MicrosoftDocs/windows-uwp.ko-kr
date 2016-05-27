@@ -1,15 +1,13 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 title: 대상 지정
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
-label: 대상 지정
+label: Targeting
 template: detail.hbs
 ---
 
 # 대상 지정에 대한 지침
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
 
@@ -23,7 +21,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 
-## <span id="Measurements_and_scaling"> </span> <span id="measurements_and_scaling"> </span> <span id="MEASUREMENTS_AND_SCALING"> </span>측정값 및 배율
+## <span id="Measurements_and_scaling"></span><span id="measurements_and_scaling"></span><span id="MEASUREMENTS_AND_SCALING"></span>측정값 및 배율
 
 
 다양한 화면 크기 및 픽셀 밀도에서 일관성을 유지하기 위해서는 모든 대상 크기를 실제 단위(밀리미터)로 나타내야 합니다. 실제 단위는 다음 수식을 사용해서 픽셀로 변환할 수 있습니다.
@@ -40,16 +38,16 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 픽셀 수 = 48픽셀
 
-시스템 내에 정의된 배율 수준에 따라 결과를 조정해야 합니다.
+시스템 내에 정의된 배율 플라토에 따라 결과를 조정해야 합니다.
 
-## <span id="Thresholds"> </span> <span id="thresholds"> </span> <span id="THRESHOLDS"> </span>임계값
+## <span id="Thresholds"></span><span id="thresholds"></span><span id="THRESHOLDS"></span>임계값
 
 
 거리 및 시간 임계값은 조작의 결과를 결정하는 데 사용될 수 있습니다.
 
 예를 들어 터치다운이 감지될 경우 개체를 터치다운 지점에서 2.7mm 이내로 끈 다음 터치다운의 0.1초 이내에서 터치를 떼면 탭 동작으로 등록됩니다. 이러한 2.7mm 임계값을 벗어나 손가락을 움직이면 개체가 끌기되고 선택 또는 이동됩니다(자세한 내용은 [가로질러 밀기에 대한 지침](guidelines-for-cross-slide.md) 참조). 앱에 따라 0.1초보다 길게 손가락을 대고 있으면 시스템이 자체 노출 상호 작용을 수행하게 됩니다(자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md#selfreveal) 참조).
 
-## <span id="Target_sizes"> </span> <span id="target_sizes"> </span> <span id="TARGET_SIZES"> </span>대상 크기
+## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>대상 크기
 
 
 일반적으로 터치 대상 크기를 9mm 정사각형 이상(135 PPI 디스플레이에서 48x48픽셀, 1.0x 배율 수준)으로 설정합니다. 7mm 정사각형보다 작은 터치 대상을 사용하지 마세요.
@@ -81,7 +79,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 </tr>
 <tr class="even">
 <td align="left">시각적 대상 크기</td>
-<td align="left">실제 크기의 60% 미만</td>
+<td align="left">&lt; 실제 크기의 60%</td>
 <td align="left">실제 크기의 90-100%
 <p>시각적 대상이 4.2mm 정사각형(권장 최소 대상 크기 7mm의 60%)보다 작을 경우 대부분 사용자는 시각적 대상을 터치할 수 있다는 것을 인식하지 못합니다.</p></td>
 </tr>
@@ -111,7 +109,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 -   터치 시각화
 -   하드웨어 및 터치 디지타이저
 
-## <span id="Targeting_assistance"> </span> <span id="targeting_assistance"> </span> <span id="TARGETING_ASSISTANCE"> </span>대상 지정 지원
+## <span id="Targeting_assistance"></span><span id="targeting_assistance"></span><span id="TARGETING_ASSISTANCE"></span>대상 지정 지원
 
 
 Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침이 적용될 수 없는 시나리오를 위한 대상 지정 지원을 제공합니다. 예를 들면 웹 페이지의 하이퍼링크, 일정 컨트롤, 드롭다운 목록과 콤보 상자, 텍스트 선택 등이 있습니다.
@@ -120,7 +118,7 @@ Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침�
 
 터치 가능 요소가 최소 권장 대상 크기보다 작아야 하는 경우 다음 기술을 사용하여 대상 지정 문제를 최소화할 수 있습니다.
 
-## <span id="Tethering"> </span> <span id="tethering"> </span> <span id="TETHERING"> </span>테더링
+## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>테더링
 
 
 테더링은 입력 접촉 지점이 개체와 직접적으로 연결되어 있지 않더라도 개체에 연결하고 개체를 조작함을 사용자에게 알리는 데 사용되는 시각 신호(접촉 지점과 개체의 경계 직사각형을 연결하는 연결선)입니다. 다음과 같은 경우에 이러한 현상이 나타날 수 있습니다.
@@ -130,7 +128,7 @@ Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침�
 
 JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능이 노출되지 않습니다.
 
-## <span id="scrubbing"> </span> <span id="SCRUBBING"> </span>스크러빙
+## <span id="scrubbing"></span><span id="SCRUBBING"></span>스크러빙
 
 
 스크러빙은 대상 필드 내의 아무 위치나 터치한 다음 원하는 대상에 도달할 때까지 손가락을 떼지 않고 미는 동작을 의미합니다. 이 동작을 "이륙 활성화"라고 합니다. 여기서 활성화된 개체는 화면에서 손가락을 뗄 때 마지막으로 터치한 개체입니다.
@@ -145,7 +143,7 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 -   대상이 수행하는 작업이 피해를 주지 않는 작업(예: 날짜 간의 전환)이면 스크러빙 대상에 테더링이 지정됩니다.
 -   테더링은 가로, 세로 또는 한 방향으로 지정됩니다.
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
@@ -153,9 +151,10 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
 **보관 샘플**
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
@@ -171,6 +170,6 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

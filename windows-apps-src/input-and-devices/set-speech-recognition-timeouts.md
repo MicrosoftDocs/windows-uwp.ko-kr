@@ -1,16 +1,14 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다.
 title: 음성 인식 시간 제한 설정
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
-label: 음성 인식 시간 제한 설정
+label: Speech recognition timeouts
 template: detail.hbs
 ---
 
 # 음성 인식 시간 제한 설정
 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다.
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -18,7 +16,7 @@ template: detail.hbs
 -   [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
 
 
-## <span id="Set_a_timeout"> </span> <span id="set_a_timeout"> </span> <span id="SET_A_TIMEOUT"> </span>시간 제한 설정
+## <span id="Set_a_timeout"></span><span id="set_a_timeout"></span><span id="SET_A_TIMEOUT"></span>시간 제한 설정
 
 
 여기에서는 다양한 [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253) 값을 지정합니다.
@@ -38,11 +36,11 @@ recognizer.Timeouts.BabbleTimeout = TimeSpan.FromSeconds(4.0);
 recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 ```
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
-* [음성 조작](speech-interactions.md)
-**샘플**
+* [음성 조작](speech-interactions.md) 
+           **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -53,6 +51,6 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
