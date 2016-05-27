@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 522
+ Total Files | 530
 
 ## File List
  Source File | Status | Details 
@@ -528,6 +528,14 @@
  [windows-apps-src\style\motion-popup-animations.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-popup-animations.md) | InSyncHandedBackSuccess | [Details](#2b135fb62d871c559892e6b1e968767b7be716bd3737)
  [windows-apps-src\style\motion-reposition.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-reposition.md) | InSyncHandedBackSuccess | [Details](#ba8679a5f06895cef52cbc229f4487997a17bf353738)
  [windows-apps-src\style\sound.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/sound.md) | InSyncHandedBackSuccess | [Details](#06eb73607f80a7eacef23cd75a3982ab352c53793740)
+ [windows-apps-src\threading-async\asynchronous-programming-in-cpp-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md) | InSyncHandedBackSuccess | [Details](#560b51d5bb67f5f2611311cb78f59d189d4ea4403742)
+ [windows-apps-src\threading-async\asynchronous-programming-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/asynchronous-programming-universal-windows-platform-apps.md) | InSyncHandedBackSuccess | [Details](#8d9a17beb9c637e0a780020ef1cbb7b0b0bddf383743)
+ [windows-apps-src\threading-async\best-practices-for-using-the-thread-pool.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/best-practices-for-using-the-thread-pool.md) | InSyncHandedBackSuccess | [Details](#53f7460be63fa9bd440ed6999ac9cca7cdca01743764)
+ [windows-apps-src\threading-async\call-asynchronous-apis-in-csharp-or-visual-basic.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md) | InSyncHandedBackSuccess | [Details](#b8ff3965503aa96d4ff595d140562c65e0a638c33765)
+ [windows-apps-src\threading-async\create-a-periodic-work-item.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/create-a-periodic-work-item.md) | InSyncHandedBackSuccess | [Details](#f5b16c62b591481c52cfa4bb7e1ddb162bf18f423766)
+ [windows-apps-src\threading-async\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/index.md) | InSyncHandedBackSuccess | [Details](#d69259d449ffb7d4dfc1824c77c16eb9e1cdb0263767)
+ [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/submit-a-work-item-to-the-thread-pool.md) | InSyncHandedBackSuccess | [Details](#afb6d8b1b1ee5eeb99ba68e8b842436bd58619d03768)
+ [windows-apps-src\threading-async\use-a-timer-to-submit-a-work-item.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/use-a-timer-to-submit-a-work-item.md) | InSyncHandedBackSuccess | [Details](#033669a781aa85cc2c90fa11816e385ffefa997d3769)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -6792,6 +6800,102 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='560b51d5bb67f5f2611311cb78f59d189d4ea4403742'></a> Source: [windows-apps-src\threading-async\asynchronous-programming-in-cpp-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\asynchronous-programming-in-cpp-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)
+* Handoff File: [asynchronous-programming-in-cpp-universal-windows-platform-apps.3a5e3fdfc7dbcd7b4e2876e5b5dc6c130d2ac1af.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/asynchronous-programming-in-cpp-universal-windows-platform-apps.3a5e3fdfc7dbcd7b4e2876e5b5dc6c130d2ac1af.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [asynchronous-programming-in-cpp-universal-windows-platform-apps.3a5e3fdfc7dbcd7b4e2876e5b5dc6c130d2ac1af.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.3a5e3fdfc7dbcd7b4e2876e5b5dc6c130d2ac1af.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='8d9a17beb9c637e0a780020ef1cbb7b0b0bddf383743'></a> Source: [windows-apps-src\threading-async\asynchronous-programming-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/asynchronous-programming-universal-windows-platform-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\asynchronous-programming-universal-windows-platform-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/asynchronous-programming-universal-windows-platform-apps.md)
+* Handoff File: [asynchronous-programming-universal-windows-platform-apps.582ea1d0d0d2e4fd53cc7d7d94d406aa222095f5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/asynchronous-programming-universal-windows-platform-apps.582ea1d0d0d2e4fd53cc7d7d94d406aa222095f5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [asynchronous-programming-universal-windows-platform-apps.582ea1d0d0d2e4fd53cc7d7d94d406aa222095f5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/asynchronous-programming-universal-windows-platform-apps.582ea1d0d0d2e4fd53cc7d7d94d406aa222095f5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='53f7460be63fa9bd440ed6999ac9cca7cdca01743764'></a> Source: [windows-apps-src\threading-async\best-practices-for-using-the-thread-pool.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/best-practices-for-using-the-thread-pool.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\best-practices-for-using-the-thread-pool.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/best-practices-for-using-the-thread-pool.md)
+* Handoff File: [best-practices-for-using-the-thread-pool.fb5fe93783daae95e5a5a90f4604ccfb80571182.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/best-practices-for-using-the-thread-pool.fb5fe93783daae95e5a5a90f4604ccfb80571182.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [best-practices-for-using-the-thread-pool.fb5fe93783daae95e5a5a90f4604ccfb80571182.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/best-practices-for-using-the-thread-pool.fb5fe93783daae95e5a5a90f4604ccfb80571182.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='b8ff3965503aa96d4ff595d140562c65e0a638c33765'></a> Source: [windows-apps-src\threading-async\call-asynchronous-apis-in-csharp-or-visual-basic.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\call-asynchronous-apis-in-csharp-or-visual-basic.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)
+* Handoff File: [call-asynchronous-apis-in-csharp-or-visual-basic.2f3733a67080caa265cbc2c0d648727c320dce49.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/call-asynchronous-apis-in-csharp-or-visual-basic.2f3733a67080caa265cbc2c0d648727c320dce49.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [call-asynchronous-apis-in-csharp-or-visual-basic.2f3733a67080caa265cbc2c0d648727c320dce49.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.2f3733a67080caa265cbc2c0d648727c320dce49.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='f5b16c62b591481c52cfa4bb7e1ddb162bf18f423766'></a> Source: [windows-apps-src\threading-async\create-a-periodic-work-item.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/create-a-periodic-work-item.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\create-a-periodic-work-item.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/create-a-periodic-work-item.md)
+* Handoff File: [create-a-periodic-work-item.88bf2e4724fd375630a2c9cb780eeed45f757bf6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-periodic-work-item.88bf2e4724fd375630a2c9cb780eeed45f757bf6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-a-periodic-work-item.88bf2e4724fd375630a2c9cb780eeed45f757bf6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/create-a-periodic-work-item.88bf2e4724fd375630a2c9cb780eeed45f757bf6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='d69259d449ffb7d4dfc1824c77c16eb9e1cdb0263767'></a> Source: [windows-apps-src\threading-async\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/threading-async/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/index.md)
+* Handoff File: [index.4c6a614664eadbf4c7f44cab0482059b8ee8c8dd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.4c6a614664eadbf4c7f44cab0482059b8ee8c8dd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.4c6a614664eadbf4c7f44cab0482059b8ee8c8dd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/index.4c6a614664eadbf4c7f44cab0482059b8ee8c8dd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='afb6d8b1b1ee5eeb99ba68e8b842436bd58619d03768'></a> Source: [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/submit-a-work-item-to-the-thread-pool.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/submit-a-work-item-to-the-thread-pool.md)
+* Handoff File: [submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
+* [Back to Top](#report-top)
+
+##### <a name='033669a781aa85cc2c90fa11816e385ffefa997d3769'></a> Source: [windows-apps-src\threading-async\use-a-timer-to-submit-a-work-item.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/threading-async/use-a-timer-to-submit-a-work-item.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\threading-async\use-a-timer-to-submit-a-work-item.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/80759f208e2bc4d628b1f04d2e3b002c42f43586/windows-apps-src/threading-async/use-a-timer-to-submit-a-work-item.md)
+* Handoff File: [use-a-timer-to-submit-a-work-item.dd90df05d9a7403e12ffc029a8e0f1a9d452de18.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-a-timer-to-submit-a-work-item.dd90df05d9a7403e12ffc029a8e0f1a9d452de18.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-a-timer-to-submit-a-work-item.dd90df05d9a7403e12ffc029a8e0f1a9d452de18.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7b203d98646b8408fe195a52aee7cdd3f3691beb/ol-handback/Microsoft/windows-apps.ko-kr/master/threading-async/use-a-timer-to-submit-a-work-item.dd90df05d9a7403e12ffc029a8e0f1a9d452de18.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:33
 * [Back to Top](#report-top)
 
 
