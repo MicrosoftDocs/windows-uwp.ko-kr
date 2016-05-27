@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: 엔터프라이즈 공유 저장소
 description: 엔터프라이즈 공유 저장소는 LOB(기간 업무) 앱의 로컬 데이터 위치를 정의하여 데이터를 공유합니다.
@@ -57,7 +58,7 @@ StorageFolder folder =
     await StorageFolder.GetFolderFromPathAsync(enterprisePersistentFolderRoot);
 
 // Get the files in the folder.
-IReadOnlyList&lt;StorageFile&gt; sortedItems =
+IReadOnlyList<StorageFile> sortedItems =
     await folder.GetFilesAsync();
 
 // Iterate over the results and print the list of files
@@ -68,6 +69,6 @@ foreach (StorageFile file in sortedItems)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

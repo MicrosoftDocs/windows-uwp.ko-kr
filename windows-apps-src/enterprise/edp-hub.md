@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 Description: 'EDP(엔터프라이즈 데이터 보호) 기능이 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태에서의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다.'
 MS-HAID: 'dev\_enterprise.edp\_hub'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -208,7 +209,7 @@ private DisplayedMail currentlyDisplayedMail = new DisplayedMail()
 // Gets the app's protected mail database file, then opens and stores a stream on it.
 private async void OpenMailDatabase()
 {
-    // Only attempt to open the database file stream if we know it&#39;s closed.
+    // Only attempt to open the database file stream if we know it's closed.
     if (this.mailDatabaseStream == null)
     {
         StorageFolder appDataStorageFolder = ApplicationData.Current.LocalFolder;
@@ -234,7 +235,7 @@ private void AppSetup()
 // Background work called when the app receives an email.
 private async void AppMailReceived(string fauxEmail)
 {
-    // Only attempt to write to the database file stream if we know it&#39;s open.
+    // Only attempt to write to the database file stream if we know it's open.
     if (this.mailDatabaseStream != null)
     {
         IBuffer emailAsBuffer = CryptographicBuffer.ConvertStringToBinary
@@ -340,7 +341,7 @@ private string mailIdentity = "contoso.com";
 void MailAppSetup()
 {
     ProtectionPolicyManager.ProtectedContentRevoked += ProtectionPolicyManager_ProtectedContentRevoked;
-    // Code goes here to set up mailbox for &#39;mailIdentity&#39;.
+    // Code goes here to set up mailbox for 'mailIdentity'.
 }
 
 private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, ProtectedContentRevokedEventArgs e)
@@ -352,7 +353,7 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
         return;
     }
 
-    // Code goes here to delete any metadata associated with &#39;mailIdentity&#39;.
+    // Code goes here to delete any metadata associated with 'mailIdentity'.
 }
 ```
 
@@ -373,6 +374,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
