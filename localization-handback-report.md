@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 8
+ Total Files | 9
 
 ## File List
  Source File | Status | Details 
@@ -14,6 +14,7 @@
  [windows-apps-src\app-help-guidelines\guidelines-for-app-help.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-help-guidelines/guidelines-for-app-help.md) | InSyncHandedBackSuccess | [Details](#1e1e5e118eb44f6b491669dbd274fae05d92685b22)
  [windows-apps-src\app-help-guidelines\in-app-help.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/app-help-guidelines/in-app-help.md) | InSyncHandedBackSuccess | [Details](#7edad75b1639768023eb8add1e23fe0aafb0b67428)
  [windows-apps-src\app-help-guidelines\instructional-ui.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-help-guidelines/instructional-ui.md) | InSyncHandedBackSuccess | [Details](#1c8ab97a5625243a50fa3b40ae93f5928dc7d85129)
+ [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-settings/guidelines-for-app-settings.md) | InSyncHandedBackSuccess | [Details](#aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e431)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -110,6 +111,18 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [instructional-ui.2bd15555dde091498048f73d2e4996897c215b06.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/6c76b5ecd33959f347743c42c8e51d01cd1b034a/ol-handback/Microsoft/windows-apps.ko-kr/master/app-help-guidelines/instructional-ui.2bd15555dde091498048f73d2e4996897c215b06.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:31:47
+* [Back to Top](#report-top)
+
+##### <a name='aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e431'></a> Source: [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-settings/guidelines-for-app-settings.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b39da71752961cd3163e575cec5bb33255fc2d6b/windows-apps-src/app-settings/guidelines-for-app-settings.md)
+* Handoff File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/c02c9859594c5926a6b095e95b5a05ad8fff7f80/ol-handback/Microsoft/windows-apps.ko-kr/master/app-settings/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:31:53
 * [Back to Top](#report-top)
 
 
