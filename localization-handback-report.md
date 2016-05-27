@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 510
+ Total Files | 522
 
 ## File List
  Source File | Status | Details 
@@ -516,6 +516,18 @@
  [windows-apps-src\security\share-certificates.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/share-certificates.md) | InSyncHandedBackSuccess | [Details](#2bb1b601e1ab35115c88692f6c36dccc708365413633)
  [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/c9f6a0183edc3c01566311360417c256329ef904/windows-apps-src/security/web-account-manager.md) | InSyncHandedBackSuccess | [Details](#6ab12d6da9c4858cf6ab16d4143cf073bb0cb2753635)
  [windows-apps-src\security\web-authentication-broker.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/web-authentication-broker.md) | InSyncHandedBackSuccess | [Details](#96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd3636)
+ [windows-apps-src\style\color.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/color.md) | InSyncHandedBackSuccess | [Details](#878470a7cbf44862c47a1428a1d25d332db32fdc3668)
+ [windows-apps-src\style\content-transition-animations.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/content-transition-animations.md) | InSyncHandedBackSuccess | [Details](#dc233ef821259701eb93c09d1bdefcfa3d9bb69f3669)
+ [windows-apps-src\style\icons.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/icons.md) | InSyncHandedBackSuccess | [Details](#e5e601bf3ff9d0b1518c86130a5b0fefbb86a7733670)
+ [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/motion.md) | InSyncHandedBackSuccess | [Details](#aa1283ed9dbb895854b8d7b2bb16eb485b377fce3739)
+ [windows-apps-src\style\motion-dragdrop.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-dragdrop.md) | InSyncHandedBackSuccess | [Details](#c975ba3d03c06009710f4f57edf8a4cc517ad90c3732)
+ [windows-apps-src\style\motion-edgebased.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-edgebased.md) | InSyncHandedBackSuccess | [Details](#1be51a8ff4a63f32834c7eb04b70d17dc41de13b3733)
+ [windows-apps-src\style\motion-fade.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-fade.md) | InSyncHandedBackSuccess | [Details](#028e3462a0bf34af0486864508b1ac049fdf60ed3734)
+ [windows-apps-src\style\motion-list.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-list.md) | InSyncHandedBackSuccess | [Details](#a795cf52c3d062d2131832ac3bc765f45097e8493735)
+ [windows-apps-src\style\motion-pointer.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-pointer.md) | InSyncHandedBackSuccess | [Details](#24175bb7c822ceb53af5e1ec70bf83f701fd1cce3736)
+ [windows-apps-src\style\motion-popup-animations.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-popup-animations.md) | InSyncHandedBackSuccess | [Details](#2b135fb62d871c559892e6b1e968767b7be716bd3737)
+ [windows-apps-src\style\motion-reposition.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-reposition.md) | InSyncHandedBackSuccess | [Details](#ba8679a5f06895cef52cbc229f4487997a17bf353738)
+ [windows-apps-src\style\sound.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/sound.md) | InSyncHandedBackSuccess | [Details](#06eb73607f80a7eacef23cd75a3982ab352c53793740)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -6636,6 +6648,150 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='878470a7cbf44862c47a1428a1d25d332db32fdc3668'></a> Source: [windows-apps-src\style\color.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/color.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\color.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/color.md)
+* Handoff File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/color.0395eb0e5ede1939b9b46492efe596c9853dcace.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/color.0395eb0e5ede1939b9b46492efe596c9853dcace.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='dc233ef821259701eb93c09d1bdefcfa3d9bb69f3669'></a> Source: [windows-apps-src\style\content-transition-animations.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/content-transition-animations.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\content-transition-animations.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/content-transition-animations.md)
+* Handoff File: [content-transition-animations.a119c8ab24c8d4e54ba030b43c7d7fcc52acbb2c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/content-transition-animations.a119c8ab24c8d4e54ba030b43c7d7fcc52acbb2c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [content-transition-animations.a119c8ab24c8d4e54ba030b43c7d7fcc52acbb2c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/content-transition-animations.a119c8ab24c8d4e54ba030b43c7d7fcc52acbb2c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='e5e601bf3ff9d0b1518c86130a5b0fefbb86a7733670'></a> Source: [windows-apps-src\style\icons.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/icons.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\icons.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/icons.md)
+* Handoff File: [icons.f711f436ec3c18998a4aa24fef8aa8c3c38449df.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/icons.f711f436ec3c18998a4aa24fef8aa8c3c38449df.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [icons.f711f436ec3c18998a4aa24fef8aa8c3c38449df.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/icons.f711f436ec3c18998a4aa24fef8aa8c3c38449df.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='aa1283ed9dbb895854b8d7b2bb16eb485b377fce3739'></a> Source: [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/motion.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion.md)
+* Handoff File: [motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='c975ba3d03c06009710f4f57edf8a4cc517ad90c3732'></a> Source: [windows-apps-src\style\motion-dragdrop.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-dragdrop.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-dragdrop.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-dragdrop.md)
+* Handoff File: [motion-dragdrop.9ed5ee1c94116c5b7cc1743bf3a4d302150e8ad1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-dragdrop.9ed5ee1c94116c5b7cc1743bf3a4d302150e8ad1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-dragdrop.9ed5ee1c94116c5b7cc1743bf3a4d302150e8ad1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-dragdrop.9ed5ee1c94116c5b7cc1743bf3a4d302150e8ad1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='1be51a8ff4a63f32834c7eb04b70d17dc41de13b3733'></a> Source: [windows-apps-src\style\motion-edgebased.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-edgebased.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-edgebased.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-edgebased.md)
+* Handoff File: [motion-edgebased.58575b2fcb2e9ca2062b2bfc8d8b3bc8fb37df3d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-edgebased.58575b2fcb2e9ca2062b2bfc8d8b3bc8fb37df3d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-edgebased.58575b2fcb2e9ca2062b2bfc8d8b3bc8fb37df3d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-edgebased.58575b2fcb2e9ca2062b2bfc8d8b3bc8fb37df3d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='028e3462a0bf34af0486864508b1ac049fdf60ed3734'></a> Source: [windows-apps-src\style\motion-fade.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-fade.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-fade.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-fade.md)
+* Handoff File: [motion-fade.041165d2d4f83f3f29ba95726fbc4a61c1f47bb9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-fade.041165d2d4f83f3f29ba95726fbc4a61c1f47bb9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-fade.041165d2d4f83f3f29ba95726fbc4a61c1f47bb9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-fade.041165d2d4f83f3f29ba95726fbc4a61c1f47bb9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='a795cf52c3d062d2131832ac3bc765f45097e8493735'></a> Source: [windows-apps-src\style\motion-list.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-list.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-list.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-list.md)
+* Handoff File: [motion-list.86de443c88799942d0d440f4b3426e42ca88a5bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-list.86de443c88799942d0d440f4b3426e42ca88a5bd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-list.86de443c88799942d0d440f4b3426e42ca88a5bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-list.86de443c88799942d0d440f4b3426e42ca88a5bd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='24175bb7c822ceb53af5e1ec70bf83f701fd1cce3736'></a> Source: [windows-apps-src\style\motion-pointer.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-pointer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-pointer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-pointer.md)
+* Handoff File: [motion-pointer.ac03415da186b0d80184ae6016ead555525217a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-pointer.ac03415da186b0d80184ae6016ead555525217a7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-pointer.ac03415da186b0d80184ae6016ead555525217a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-pointer.ac03415da186b0d80184ae6016ead555525217a7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='2b135fb62d871c559892e6b1e968767b7be716bd3737'></a> Source: [windows-apps-src\style\motion-popup-animations.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-popup-animations.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-popup-animations.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-popup-animations.md)
+* Handoff File: [motion-popup-animations.45d0afd66aa62751b261f8f1cfbd6461d048a69f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-popup-animations.45d0afd66aa62751b261f8f1cfbd6461d048a69f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-popup-animations.45d0afd66aa62751b261f8f1cfbd6461d048a69f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-popup-animations.45d0afd66aa62751b261f8f1cfbd6461d048a69f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='ba8679a5f06895cef52cbc229f4487997a17bf353738'></a> Source: [windows-apps-src\style\motion-reposition.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/style/motion-reposition.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\motion-reposition.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/motion-reposition.md)
+* Handoff File: [motion-reposition.087d44ede122ef925347a00c3184ce8ecb83da05.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion-reposition.087d44ede122ef925347a00c3184ce8ecb83da05.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [motion-reposition.087d44ede122ef925347a00c3184ce8ecb83da05.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/motion-reposition.087d44ede122ef925347a00c3184ce8ecb83da05.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
+* [Back to Top](#report-top)
+
+##### <a name='06eb73607f80a7eacef23cd75a3982ab352c53793740'></a> Source: [windows-apps-src\style\sound.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/style/sound.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\style\sound.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8e0cf6c0f7622476658c1e0ac0ecbdbdd9cd87a6/windows-apps-src/style/sound.md)
+* Handoff File: [sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/85863a681ea3a3a888c0a13af067a588cb6f7823/ol-handback/Microsoft/windows-apps.ko-kr/master/style/sound.640badc71d5e71614fef1214ebef20367f363e08.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:26
 * [Back to Top](#report-top)
 
 
