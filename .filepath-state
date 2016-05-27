@@ -2370,9 +2370,6 @@
   "6530b8788fc59d4d08b5f7bc65c73a8f05d75004": [
     "windows-apps-src\\debug-test-perf\\best-practices-for-your-app-s-startup-performance.md"
   ],
-  "55228bca09d4458483f4ec76495c9ea6c74ff064": [
-    "windows-apps-src\\debug-test-perf\\best-practices-for-your-app-s-startup-performance.md"
-  ],
   "7404a90fc9efc05d4e2bb83321bb2ba80b8378ce": [
     "windows-apps-src\\debug-test-perf\\beta-testing.md"
   ],
@@ -2383,9 +2380,6 @@
     "windows-apps-src\\debug-test-perf\\device-portal.md"
   ],
   "ec3c972fb4c2f7e8f9317ac0031039786515a940": [
-    "windows-apps-src\\debug-test-perf\\device-portal.md"
-  ],
-  "e2e0f159e739b5501932e7913c35e1e49726cc47": [
     "windows-apps-src\\debug-test-perf\\device-portal.md"
   ],
   "364e19c723c6cf48a25104b5719735a533ae54a7": [
@@ -2400,37 +2394,16 @@
   "f79501f7852ba276d472efcaa25803a1b8af93ec": [
     "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
   ],
-  "3dd5b1341fce8b62bcdce2cb0cd6ee5a6a3d2fa1": [
-    "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
-  ],
-  "ac7fec36584292fdc3a549057e97d03d01748c6d": [
-    "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
-  ],
-  "d79419eb43dd98638c3133666f810c321edd87bd": [
-    "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
-  ],
   "5ed8ffe0a409569777fbf4e56a90ab3b80cd395c": [
     "windows-apps-src\\debug-test-perf\\device-portal-api-hololens.md"
   ],
   "59aa576e8e1a0562e71db4204af8c9a81ce0e8c8": [
     "windows-apps-src\\debug-test-perf\\device-portal-desktop.md"
   ],
-  "6aed8aa1f396d3a031feda0fa7650cb1b01ec25b": [
-    "windows-apps-src\\debug-test-perf\\device-portal-desktop.md"
-  ],
-  "08f7e5060f85f2130ef80d3f500182bd1407581c": [
-    "windows-apps-src\\debug-test-perf\\device-portal-desktop.md"
-  ],
-  "9021ca85f188d8f41fd297a873915709c9b2708c": [
-    "windows-apps-src\\debug-test-perf\\device-portal-desktop.md"
-  ],
   "bd1ae8ccdd81f319fc36ca04b8b839cb313b2854": [
     "windows-apps-src\\debug-test-perf\\device-portal-hololens.md"
   ],
   "eeeb8f98d97468544cc30e3d9884cce15cb913a9": [
-    "windows-apps-src\\debug-test-perf\\device-portal-mobile.md"
-  ],
-  "6e64d0f24e038d6b842897f11e74b0f8624be144": [
     "windows-apps-src\\debug-test-perf\\device-portal-mobile.md"
   ],
   "e1bfdf8e4ee4ed1f88c514acb9ef555c07fd0746": [
@@ -2566,16 +2539,10 @@
   "3fb6a0469a0e7488c40fc03bce8c90780b524656": [
     "windows-apps-src\\debug-test-perf\\improve-garbage-collection-performance.md"
   ],
-  "4e849fa9e5c00cec592cadefb995e0d2aa7f9fba": [
-    "windows-apps-src\\debug-test-perf\\improve-garbage-collection-performance.md"
-  ],
   "1d6187470e8e1578af833221089a76261ebad1e4": [
     "windows-apps-src\\debug-test-perf\\index.md"
   ],
   "6144b5b60a0092efd1056dd5de166a64733356ec": [
-    "windows-apps-src\\debug-test-perf\\keep-the-ui-thread-responsive.md"
-  ],
-  "d17791928c377e219a7f5e29d3382c86ac44a11c": [
     "windows-apps-src\\debug-test-perf\\keep-the-ui-thread-responsive.md"
   ],
   "26faa92e98547844af2be1720c458d793ac2f3ac": [
@@ -2591,9 +2558,6 @@
     "windows-apps-src\\debug-test-perf\\optimize-animations-and-media.md"
   ],
   "354a11fefd7164fd6ba5b21ec871ecbe7916ad25": [
-    "windows-apps-src\\debug-test-perf\\optimize-file-access.md"
-  ],
-  "63c273a78e8210ea33bb50e478ff7f0b166f29b2": [
     "windows-apps-src\\debug-test-perf\\optimize-file-access.md"
   ],
   "362fbb6b733e855a2126196f12c650bdf2a7665d": [

@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 103
+ Total Files | 126
 
 ## File List
  Source File | Status | Details 
@@ -109,6 +109,29 @@
  [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/d76ef6a87d6afad577f5f7bf5e8f18a8b0776094/windows-apps-src/data-binding/data-binding-quickstart.md) | InSyncHandedBackSuccess | [Details](#c30e048f450c062c6e0148e5040a58bfa47193bb1892)
  [windows-apps-src\data-binding\how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/data-binding/how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | InSyncHandedBackSuccess | [Details](#2ff66a1d6a80bb085f54dec8e35371ba0c9e6b271894)
  [windows-apps-src\data-binding\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/data-binding/index.md) | InSyncHandedBackSuccess | [Details](#d1fbc7376b3505d39e757a1b65ae0f08909480781907)
+ [windows-apps-src\debug-test-perf\best-practices-for-your-app-s-startup-performance.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/best-practices-for-your-app-s-startup-performance.md) | InSyncHandedBackSuccess | [Details](#6530b8788fc59d4d08b5f7bc65c73a8f05d750041908)
+ [windows-apps-src\debug-test-perf\beta-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/beta-testing.md) | InSyncHandedBackSuccess | [Details](#7404a90fc9efc05d4e2bb83321bb2ba80b8378ce1909)
+ [windows-apps-src\debug-test-perf\device-portal-api-hololens.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-api-hololens.md) | InSyncHandedBackSuccess | [Details](#5ed8ffe0a409569777fbf4e56a90ab3b80cd395c1912)
+ [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/0509555c7d38555769e93d5999e314e7139e7991/windows-apps-src/debug-test-perf/device-portal-desktop.md) | InSyncHandedBackSuccess | [Details](#59aa576e8e1a0562e71db4204af8c9a81ce0e8c81913)
+ [windows-apps-src\debug-test-perf\device-portal-hololens.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-hololens.md) | InSyncHandedBackSuccess | [Details](#bd1ae8ccdd81f319fc36ca04b8b839cb313b28541914)
+ [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md) | InSyncHandedBackSuccess | [Details](#eeeb8f98d97468544cc30e3d9884cce15cb913a91915)
+ [windows-apps-src\debug-test-perf\device-portal-xbox.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-xbox.md) | InSyncHandedBackSuccess | [Details](#e1bfdf8e4ee4ed1f88c514acb9ef555c07fd07461916)
+ [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps/blob/5f9626c644315884ea8605a4e69e7e580a44010b/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md) | InSyncHandedBackSuccess | [Details](#3fb6a0469a0e7488c40fc03bce8c90780b5246561966)
+ [windows-apps-src\debug-test-perf\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/index.md) | InSyncHandedBackSuccess | [Details](#1d6187470e8e1578af833221089a76261ebad1e41967)
+ [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md) | InSyncHandedBackSuccess | [Details](#6144b5b60a0092efd1056dd5de166a64733356ec1968)
+ [windows-apps-src\debug-test-perf\mvvm-performance-tips.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/mvvm-performance-tips.md) | InSyncHandedBackSuccess | [Details](#77a162076e14b4726e1fb29673b14be65be37a161970)
+ [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/optimize-file-access.md) | InSyncHandedBackSuccess | [Details](#354a11fefd7164fd6ba5b21ec871ecbe7916ad251972)
+ [windows-apps-src\debug-test-perf\optimize-gridview-and-listview.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/optimize-gridview-and-listview.md) | InSyncHandedBackSuccess | [Details](#362fbb6b733e855a2126196f12c650bdf2a7665d1973)
+ [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps/blob/e0f04c4242891b25db460d4852ab8cc070d82260/windows-apps-src/debug-test-perf/optimize-suspend-resume.md) | InSyncHandedBackSuccess | [Details](#9fee4ab9c55c1243c04c2ed5f0074127515280371974)
+ [windows-apps-src\debug-test-perf\optimize-your-xaml-layout.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/optimize-your-xaml-layout.md) | InSyncHandedBackSuccess | [Details](#dbec176310896164ebc99c20aefca4c5b2b29ee91976)
+ [windows-apps-src\debug-test-perf\performance-and-xaml-ui.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/performance-and-xaml-ui.md) | InSyncHandedBackSuccess | [Details](#68f9080cedcc2840fb1e92b81e2fb6bc0b53bee81977)
+ [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md) | InSyncHandedBackSuccess | [Details](#39d57811a07b4c404da4b7e369e3bf5441fa99c01978)
+ [windows-apps-src\debug-test-perf\test-surface-hub-apps-using-visual-studio.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/debug-test-perf/test-surface-hub-apps-using-visual-studio.md) | InSyncHandedBackSuccess | [Details](#655dffb5f1948724c894de291e119be1322f6e771979)
+ [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/9a33710315486c23a204a528d3d87421c6990b85/windows-apps-src/debug-test-perf/test-with-the-emulator.md) | InSyncHandedBackSuccess | [Details](#c53bda2329cd984e3a03d4a166e7353097e62cef1980)
+ [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps/blob/5bbd14fb53cae67bbb827f94e695b2703e07fc34/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md) | InSyncHandedBackSuccess | [Details](#f7f9821be7d1423b2f89367bd20c09981eca24eb1981)
+ [windows-apps-src\debug-test-perf\windows-app-certification-kit.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/windows-app-certification-kit.md) | InSyncHandedBackSuccess | [Details](#16e116c2a92a6ad751b0e4fe58fc7b41de0455cb1983)
+ [windows-apps-src\debug-test-perf\windows-app-certification-kit-tests.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/debug-test-perf/windows-app-certification-kit-tests.md) | InSyncHandedBackSuccess | [Details](#816b147c91a340505348aa579c8b1540962a1df51982)
+ [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps/blob/5c7a49558ed11f82b7afea1ea96271c45c2f9139/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md) | InSyncHandedBackSuccess | [Details](#b9300b3feb1e5229951f3e1ebe454b61ba8065ae1984)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -1345,6 +1368,282 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [index.5c7f2ec5be2c5d4a783d419e10da21690db0a581.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d13aee7206e10d91f61db5bdbfb6c6ab9e2cc0fb/ol-handback/Microsoft/windows-apps.ko-kr/master/data-binding/index.5c7f2ec5be2c5d4a783d419e10da21690db0a581.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:32:49
+* [Back to Top](#report-top)
+
+##### <a name='6530b8788fc59d4d08b5f7bc65c73a8f05d750041908'></a> Source: [windows-apps-src\debug-test-perf\best-practices-for-your-app-s-startup-performance.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/best-practices-for-your-app-s-startup-performance.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\best-practices-for-your-app-s-startup-performance.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/best-practices-for-your-app-s-startup-performance.md)
+* Handoff File: [best-practices-for-your-app-s-startup-performance.5ec42a47e6e8399673e57be6ed1c44c418164b4b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/best-practices-for-your-app-s-startup-performance.5ec42a47e6e8399673e57be6ed1c44c418164b4b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [best-practices-for-your-app-s-startup-performance.5ec42a47e6e8399673e57be6ed1c44c418164b4b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/best-practices-for-your-app-s-startup-performance.5ec42a47e6e8399673e57be6ed1c44c418164b4b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='7404a90fc9efc05d4e2bb83321bb2ba80b8378ce1909'></a> Source: [windows-apps-src\debug-test-perf\beta-testing.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/beta-testing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\beta-testing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/beta-testing.md)
+* Handoff File: [beta-testing.b26c5b6d5050f6e3c7e6fed2ee6a2b0c4ba6c77c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/beta-testing.b26c5b6d5050f6e3c7e6fed2ee6a2b0c4ba6c77c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [beta-testing.b26c5b6d5050f6e3c7e6fed2ee6a2b0c4ba6c77c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/beta-testing.b26c5b6d5050f6e3c7e6fed2ee6a2b0c4ba6c77c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='5ed8ffe0a409569777fbf4e56a90ab3b80cd395c1912'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-hololens.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-api-hololens.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\device-portal-api-hololens.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/device-portal-api-hololens.md)
+* Handoff File: [device-portal-api-hololens.d4e30af85eeb4fa25856ba41cc17399bc9c80438.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-api-hololens.d4e30af85eeb4fa25856ba41cc17399bc9c80438.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-portal-api-hololens.d4e30af85eeb4fa25856ba41cc17399bc9c80438.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/device-portal-api-hololens.d4e30af85eeb4fa25856ba41cc17399bc9c80438.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='59aa576e8e1a0562e71db4204af8c9a81ce0e8c81913'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/0509555c7d38555769e93d5999e314e7139e7991/windows-apps-src/debug-test-perf/device-portal-desktop.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/device-portal-desktop.md)
+* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='bd1ae8ccdd81f319fc36ca04b8b839cb313b28541914'></a> Source: [windows-apps-src\debug-test-perf\device-portal-hololens.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-hololens.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\device-portal-hololens.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/device-portal-hololens.md)
+* Handoff File: [device-portal-hololens.4694175cebeab92444b4971284b0f59ddc9e6fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-hololens.4694175cebeab92444b4971284b0f59ddc9e6fa4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-portal-hololens.4694175cebeab92444b4971284b0f59ddc9e6fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/device-portal-hololens.4694175cebeab92444b4971284b0f59ddc9e6fa4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='eeeb8f98d97468544cc30e3d9884cce15cb913a91915'></a> Source: [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps/blob/df6d42d6a91b8721e905fe9bc3a339dc33408459/windows-apps-src/debug-test-perf/device-portal-mobile.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\device-portal-mobile.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/device-portal-mobile.md)
+* Handoff File: [device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/device-portal-mobile.76f623a0ea272ed3257cb79b0212a5e2e1bcefa1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='e1bfdf8e4ee4ed1f88c514acb9ef555c07fd07461916'></a> Source: [windows-apps-src\debug-test-perf\device-portal-xbox.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/device-portal-xbox.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\device-portal-xbox.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/device-portal-xbox.md)
+* Handoff File: [device-portal-xbox.99bf4955fdefdf6b9c5dfab22556e4df4c7dd8b6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-xbox.99bf4955fdefdf6b9c5dfab22556e4df4c7dd8b6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-portal-xbox.99bf4955fdefdf6b9c5dfab22556e4df4c7dd8b6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/device-portal-xbox.99bf4955fdefdf6b9c5dfab22556e4df4c7dd8b6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='3fb6a0469a0e7488c40fc03bce8c90780b5246561966'></a> Source: [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps/blob/5f9626c644315884ea8605a4e69e7e580a44010b/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md)
+* Handoff File: [improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='1d6187470e8e1578af833221089a76261ebad1e41967'></a> Source: [windows-apps-src\debug-test-perf\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/index.md)
+* Handoff File: [index.9959b426b98597bcdfe23b9ef0bb3adad3c7b3ae.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.9959b426b98597bcdfe23b9ef0bb3adad3c7b3ae.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.9959b426b98597bcdfe23b9ef0bb3adad3c7b3ae.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/index.9959b426b98597bcdfe23b9ef0bb3adad3c7b3ae.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='6144b5b60a0092efd1056dd5de166a64733356ec1968'></a> Source: [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md)
+* Handoff File: [keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='77a162076e14b4726e1fb29673b14be65be37a161970'></a> Source: [windows-apps-src\debug-test-perf\mvvm-performance-tips.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/mvvm-performance-tips.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\mvvm-performance-tips.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/mvvm-performance-tips.md)
+* Handoff File: [mvvm-performance-tips.e023dadd6b9abbf8ead9a58c048cf563fdf0457f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/mvvm-performance-tips.e023dadd6b9abbf8ead9a58c048cf563fdf0457f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [mvvm-performance-tips.e023dadd6b9abbf8ead9a58c048cf563fdf0457f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/mvvm-performance-tips.e023dadd6b9abbf8ead9a58c048cf563fdf0457f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='354a11fefd7164fd6ba5b21ec871ecbe7916ad251972'></a> Source: [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps/blob/165105c141405cd752f876c822f76a5002d38678/windows-apps-src/debug-test-perf/optimize-file-access.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/optimize-file-access.md)
+* Handoff File: [optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='362fbb6b733e855a2126196f12c650bdf2a7665d1973'></a> Source: [windows-apps-src\debug-test-perf\optimize-gridview-and-listview.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/optimize-gridview-and-listview.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\optimize-gridview-and-listview.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/optimize-gridview-and-listview.md)
+* Handoff File: [optimize-gridview-and-listview.19e7310a7160264d74416602b0f81975d63f8ed1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/optimize-gridview-and-listview.19e7310a7160264d74416602b0f81975d63f8ed1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [optimize-gridview-and-listview.19e7310a7160264d74416602b0f81975d63f8ed1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/optimize-gridview-and-listview.19e7310a7160264d74416602b0f81975d63f8ed1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='9fee4ab9c55c1243c04c2ed5f0074127515280371974'></a> Source: [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps/blob/e0f04c4242891b25db460d4852ab8cc070d82260/windows-apps-src/debug-test-perf/optimize-suspend-resume.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/optimize-suspend-resume.md)
+* Handoff File: [optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='dbec176310896164ebc99c20aefca4c5b2b29ee91976'></a> Source: [windows-apps-src\debug-test-perf\optimize-your-xaml-layout.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/optimize-your-xaml-layout.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\optimize-your-xaml-layout.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/optimize-your-xaml-layout.md)
+* Handoff File: [optimize-your-xaml-layout.c97c689b06bd8077d8f469b33f993bb7e82a1ea8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/optimize-your-xaml-layout.c97c689b06bd8077d8f469b33f993bb7e82a1ea8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [optimize-your-xaml-layout.c97c689b06bd8077d8f469b33f993bb7e82a1ea8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/optimize-your-xaml-layout.c97c689b06bd8077d8f469b33f993bb7e82a1ea8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='68f9080cedcc2840fb1e92b81e2fb6bc0b53bee81977'></a> Source: [windows-apps-src\debug-test-perf\performance-and-xaml-ui.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/performance-and-xaml-ui.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\performance-and-xaml-ui.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/performance-and-xaml-ui.md)
+* Handoff File: [performance-and-xaml-ui.e5246d77f6e2ed57dd4c7e003dd8ff0511075591.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/performance-and-xaml-ui.e5246d77f6e2ed57dd4c7e003dd8ff0511075591.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [performance-and-xaml-ui.e5246d77f6e2ed57dd4c7e003dd8ff0511075591.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/performance-and-xaml-ui.e5246d77f6e2ed57dd4c7e003dd8ff0511075591.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='39d57811a07b4c404da4b7e369e3bf5441fa99c01978'></a> Source: [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps/blob/afb508fcbc2d4ab75188a2d4f705ea0bee385ed6/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md)
+* Handoff File: [planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='655dffb5f1948724c894de291e119be1322f6e771979'></a> Source: [windows-apps-src\debug-test-perf\test-surface-hub-apps-using-visual-studio.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/debug-test-perf/test-surface-hub-apps-using-visual-studio.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\test-surface-hub-apps-using-visual-studio.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/test-surface-hub-apps-using-visual-studio.md)
+* Handoff File: [test-surface-hub-apps-using-visual-studio.22886920267d53051101082df99a549307b5f8fa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-surface-hub-apps-using-visual-studio.22886920267d53051101082df99a549307b5f8fa.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [test-surface-hub-apps-using-visual-studio.22886920267d53051101082df99a549307b5f8fa.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/test-surface-hub-apps-using-visual-studio.22886920267d53051101082df99a549307b5f8fa.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='c53bda2329cd984e3a03d4a166e7353097e62cef1980'></a> Source: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/9a33710315486c23a204a528d3d87421c6990b85/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
+* Handoff File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='f7f9821be7d1423b2f89367bd20c09981eca24eb1981'></a> Source: [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps/blob/5bbd14fb53cae67bbb827f94e695b2703e07fc34/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md)
+* Handoff File: [tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='16e116c2a92a6ad751b0e4fe58fc7b41de0455cb1983'></a> Source: [windows-apps-src\debug-test-perf\windows-app-certification-kit.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/windows-app-certification-kit.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\windows-app-certification-kit.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/windows-app-certification-kit.md)
+* Handoff File: [windows-app-certification-kit.4ce6b63e7179d1fc1af8d23ed6761f9cf1fcdbcb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-app-certification-kit.4ce6b63e7179d1fc1af8d23ed6761f9cf1fcdbcb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [windows-app-certification-kit.4ce6b63e7179d1fc1af8d23ed6761f9cf1fcdbcb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/windows-app-certification-kit.4ce6b63e7179d1fc1af8d23ed6761f9cf1fcdbcb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='816b147c91a340505348aa579c8b1540962a1df51982'></a> Source: [windows-apps-src\debug-test-perf\windows-app-certification-kit-tests.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/debug-test-perf/windows-app-certification-kit-tests.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\windows-app-certification-kit-tests.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/windows-app-certification-kit-tests.md)
+* Handoff File: [windows-app-certification-kit-tests.7e5543d84500f12274c89cafd5f8ef49e29cb2a8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-app-certification-kit-tests.7e5543d84500f12274c89cafd5f8ef49e29cb2a8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [windows-app-certification-kit-tests.7e5543d84500f12274c89cafd5f8ef49e29cb2a8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/windows-app-certification-kit-tests.7e5543d84500f12274c89cafd5f8ef49e29cb2a8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='b9300b3feb1e5229951f3e1ebe454b61ba8065ae1984'></a> Source: [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps/blob/5c7a49558ed11f82b7afea1ea96271c45c2f9139/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/92f946a292d15cc5c8a8f9ec23d919695b6f5ced/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md)
+* Handoff File: [windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:07
 * [Back to Top](#report-top)
 
 
