@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
 description: Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
@@ -38,7 +39,7 @@ UWP 구성 요소의 속성에 액세스하거나 메서드를 호출할 때마�
 
 ### UWP 앱용 .NET 사용 고려
 
-UWP 또는 UWP 앱용 .NET을 사용하여 작업을 수행할 수 있는 경우가 있습니다. .NET 형식과 UWP 형식을 혼용하지 않는 것이 좋습니다. 둘 중 하나만 선택하여 계속 사용하세요. 예를 들어, [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173) 형식(UWP 형식) 또는 [**System.Xml.XmlReader**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.xml.xmlreader.aspx) 형식(.NET 형식) 중 하나를 사용하여 xml 스트림을 구문 분석할 수 있습니다. 스트림과 동일한 기술의 API를 사용하세요. 예를 들어, [**MemoryStream**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.io.memorystream.aspx)의 xml을 읽는 경우 **System.Xml.XmlReader** 형식을 사용합니다.둘 다 .NET 형식이기 때문입니다. 파일에서 읽는 경우 **Windows.Data.Xml.Dom.XmlDocument** 형식을 사용합니다. 파일 API와 **XmlDocument**는 UWP 구성 요소이기 때문입니다.
+UWP 또는 UWP 앱용 .NET을 사용하여 작업을 수행할 수 있는 경우가 있습니다. .NET 형식과 UWP 형식을 혼용하지 않는 것이 좋습니다. 둘 중 하나만 선택하여 계속 사용하세요. 예를 들어, [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173) 형식(UWP 형식) 또는 [**System.Xml.XmlReader**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.xmlreader.aspx) 형식(.NET 형식) 중 하나를 사용하여 xml 스트림을 구문 분석할 수 있습니다. 스트림과 동일한 기술의 API를 사용하세요. 예를 들어, [**MemoryStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.memorystream.aspx)의 xml을 읽는 경우 **System.Xml.XmlReader** 형식을 사용합니다.둘 다 .NET 형식이기 때문입니다. 파일에서 읽는 경우 **Windows.Data.Xml.Dom.XmlDocument** 형식을 사용합니다. 파일 API와 **XmlDocument**는 UWP 구성 요소이기 때문입니다.
 
 ### Windows 런타임 개체를 .NET 형식에 복사
 
@@ -69,11 +70,11 @@ UWP를 통해 개발자는 각 언어로 사용 가능한 UWP API의 프로젝�
 ![Interop 전환이 프로그램 실행 시간을 독점해서는 안 됩니다.](images/interop-transitions.png)
 
 [
-            **.NET for Windows apps**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx)에 나열된 유형은 C# 또는 Visual Basic에서 사용될 경우 이 interop 비용을 유발하지 않습니다. 대략 “Windows.”로 시작되는 네임스페이스의 유형은 UWP의 일부이고 “System.”로 시작되는 네임스페이스의 유형은 .NET 유형이라고 간주할 수 있습니다. 할당 또는 속성 액세스와 같은 UWP 유형의 단순한 사용에서도 interop 비용이 발생합니다.
+            **.NET for Windows apps**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx)에 나열된 유형은 C# 또는 Visual Basic에서 사용될 경우 이 interop 비용을 유발하지 않습니다. 대략 “Windows.”로 시작되는 네임스페이스의 유형은 UWP의 일부이고 “System.”로 시작되는 네임스페이스의 유형은 .NET 유형이라고 간주할 수 있습니다. 할당 또는 속성 액세스와 같은 UWP 유형의 단순한 사용에서도 interop 비용이 발생합니다.
 
 앱을 측정하고 interop가 앱 실행 시간의 많은 부분을 차지하고 있는지 확인한 다음 interop 비용을 최적화해야 합니다. Visual Studio에서 앱의 성능을 분석할 때 **함수** 보기를 사용하여 UWP를 호출하는 메서드에 소요된 포괄 시간을 확인하여 interop 비용의 상한값을 쉽게 알 수 있습니다.
 
-interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 UWP API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.aspx) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676) API를 사용하는 것입니다.
+interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 UWP API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.aspx) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676) API를 사용하는 것입니다.
 
 ### UWP 구성 요소 빌드
 
@@ -85,6 +86,6 @@ C++ 또는 JavaScript로 개발되는 앱에서 사용하기 위한 UWP 구성 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

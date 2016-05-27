@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Xbox용 디바이스 포털
 description: Xbox One용 디바이스 포털을 사용하는 방법에 대해 알아봅니다.
@@ -14,8 +15,7 @@ description: Xbox One용 디바이스 포털을 사용하는 방법에 대해 �
 
 1. 홈 화면에서 개발자 홈 타일을 선택합니다(이미지 참조).  
 ![디바이스 포털 개발자 홈](images/device-portal/xbox-dev-home-tile.png)
-2. 개발자 홈 내에서 **원격 관리** 도구로 이동합니다. 
-![디바이스 포털 원격 관리 도구](images/device-portal/xbox-remote-management-tool.png)
+2. 개발자 홈 내에서 **원격 관리** 도구 ![디바이스 포털 RemoteManagement 도구로 이동합니다.](images/device-portal/xbox-remote-management-tool.png)
 3. **Windows Device Portal 관리**를 선택하고 **A**를 누릅니다.
 4. **Windows Device Portal 사용** 설정을 확인합니다.
 5. 브라우저에서 devkit에 대한 액세스를 인증하는 데 사용할 사용자 이름 및 암호를 입력하고 저장합니다.
@@ -26,16 +26,13 @@ description: Xbox One용 디바이스 포털을 사용하는 방법에 대해 �
 
 ## 디바이스 포털 페이지
 
-XBox에서 디바이스 포털은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
+Xbox에서 디바이스 포털은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
 
 - 앱
-- 프로세스
 - 성능
-- ETW(Windows용 이벤트 추적)
-- 성능 추적
-- 디바이스
 - 네트워킹
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

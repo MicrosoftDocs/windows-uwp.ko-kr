@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Windows 앱 인증 키트 테스트
 description: Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다.
@@ -83,7 +84,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 ### 테스트 정보
 
-Windows Phone 8.1 앱의 경우 테스트는 번들에 포함된 총 appx 패키지 수가 512개 미만이고, 번들에 기본 패키지가 하나만 있으며, 번들에 포함된 기본 패키지의 아키텍처가 ARM 또는 중립으로 표시되는지 확인합니다.
+Windows Phone 8.1 앱의 경우 테스트는 번들에 포함된 총 appx 패키지 수가 512개 미만(&lt; 512)이고, 번들에 기본 패키지가 하나만 있으며, 번들에 포함된 기본 패키지의 아키텍처가 ARM 또는 중립으로 표시되는지 확인합니다.
 
 Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 설정되었는지 확인합니다.
 
@@ -153,7 +154,7 @@ BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 
 -   [ExecutableImportsCheck](#binscope-7)
 -   [WXCheck](#binscope-8)
 
-### <span id="binscope-1"> </span>AllowPartiallyTrustedCallersAttribute
+### <span id="binscope-1"></span>AllowPartiallyTrustedCallersAttribute
 
 **Windows 앱 인증 키트 오류 메시지:** APTCACheck 테스트 실패
 
@@ -167,7 +168,7 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 이 테스트는 관리 코드(C#, .NET 등)에서만 수행됩니다.
 
-### <span id="binscope-2"> </span>/SafeSEH 예외 처리 보호
+### <span id="binscope-2"></span>/SafeSEH 예외 처리 보호
 
 **Windows 앱 인증 키트 오류 메시지:** SafeSEHCheck 테스트 실패
 
@@ -181,7 +182,7 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 이 테스트는 예외 처리기 주소를 스택에 저장하지 않는 64비트 이진이나 ARM 칩세트 이진에서 수행되지 않습니다.
 
-### <span id="binscope-3"> </span>데이터 실행 방지
+### <span id="binscope-3"></span>데이터 실행 방지
 
 **Windows 앱 인증 키트 오류 메시지:** NXCheck 테스트 실패
 
@@ -195,7 +196,7 @@ APTCA(AllowPartiallyTrustedCallersAttribute) 특성을 사용하면 서명된 �
 
 DEP 가능 CPU에서 앱을 테스트하고 DEP에서 발생하는 모든 오류를 수정하는 것이 좋습니다.
 
-### <span id="binscope-4"> </span>ASLR(Address Space Layout Randomization)
+### <span id="binscope-4"></span>ASLR(Address Space Layout Randomization)
 
 **Windows 앱 인증 키트 오류 메시지:** DBCheck 테스트 실패
 
@@ -211,7 +212,7 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 이 테스트는 C# 또는 .NET Framework 등의 관리 코드로 작성된 앱에서만 수행합니다.
 
-### <span id="binscope-5"> </span>읽기/쓰기 공유 PE 섹션
+### <span id="binscope-5"></span>읽기/쓰기 공유 PE 섹션
 
 **Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패.
 
@@ -242,7 +243,7 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 이 테스트는 모든 .exe 파일 및 모든 관리되지 않는 DLL에서 수행됩니다.
 
-### <span id="binscope-7"> </span>ExecutableImportsCheck
+### <span id="binscope-7"></span>ExecutableImportsCheck
 
 **Windows 앱 인증 키트 오류 메시지:** ExecutableImportsCheck 테스트 실패.
 
@@ -256,7 +257,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 이 테스트는 관리되는 어셈블리를 제외한 모든 이진 코드에서 수행합니다.
 
-### <span id="binscope-8"> </span>WXCheck
+### <span id="binscope-8"></span>WXCheck
 
 **Windows 앱 인증 키트 오류 메시지:** WXCheck 테스트 실패.
 
@@ -307,9 +308,9 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고** 앱이 [Windows 스토어 앱용 API](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다.
+> **참고** 앱이 [Windows 스토어 앱용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다.
 
-오류 메시지를 검토하여 앱이 사용하는 API가 [Windows 스토어 앱용 API](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx)가 아닌지 확인하세요.
+오류 메시지를 검토하여 앱이 사용하는 API가 [Windows 스토어 앱용 API](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)가 아닌지 확인하세요.
 
 > **참고** 디버그 구성에서 빌드된 C++ 앱은 구성에서 Windows 스토어 앱용 Windows SDK의 API만 사용하는 경우에도 이 테스트에 실패합니다. 자세한 내용은 [Windows 스토어 앱의 Windows API 대안](http://go.microsoft.com/fwlink/p/?LinkID=244022)을 참조하세요.
 
@@ -404,7 +405,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn958435.aspx">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>패키지에 "resources.pri" 파일이 없습니다.</p>
@@ -426,7 +427,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
 </td><td>
-<p><a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
 <p>실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다.</p>
 </td></tr>
 <tr><td>
@@ -439,12 +440,12 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">앱 패키지 요구 사항</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>"resources.pri" 파일에 지정된 기본 리소스가 없습니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 <p>기본 빌드 구성에서 Visual Studio는 번들을 생성할 때 앱 패키지에 scale-200 이미지 리소스만 포함하고 다른 리소스는 리소스 패키지에 배치합니다. scale-200 이미지 리소스를 포함하거나 갖고 있는 리소스를 포함하도록 프로젝트를 구성해야 합니다.</p>
 </td></tr>
 <tr><td>
@@ -521,13 +522,13 @@ Windows 스토어용으로 인증받으려면 앱이 디버그용으로 컴파�
 
 ### Direct3D 기능 수준 지원
 
-Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있는 장치에서 작동이 중단되지 않는지 확인합니다.
+Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있는 디바이스에서 작동이 중단되지 않는지 확인합니다.
 
 ### 배경
 
 Windows 스토어를 사용하려면 Direct3D를 사용하는 모든 응용 프로그램이 기능 수준 9\-1 그래픽 카드에서 제대로 렌더링되거나 정상적으로 실패해야 합니다.
 
-사용자는 앱 설치 후 디바이스의 그래픽 하드웨어를 변경할 수 있으므로 9\-1 이상의 최소 기능 수준을 선택하는 경우 실행 시 현재 하드웨어가 최소 요구 사항을 충족하는지 여부를 앱에서 확인해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 장치에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
+사용자는 앱 설치 후 디바이스의 그래픽 하드웨어를 변경할 수 있으므로 9\-1 이상의 최소 기능 수준을 선택하는 경우 실행 시 현재 하드웨어가 최소 요구 사항을 충족하는지 여부를 앱에서 확인해야 합니다. 최소 요구 사항을 충족하지 않는 경우 앱은 Direct3D 요구 사항이 자세히 설명된 메시지를 사용자에게 표시해야 합니다. 또한 호환되지 않는 디바이스에서 앱을 다운로드하는 경우 앱은 시작 시 이 사항을 감지하고 요구 사항을 자세히 설명하는 메시지를 고객에게 표시해야 합니다.
 
 ### 테스트 정보
 
@@ -543,7 +544,7 @@ Windows 스토어를 사용하려면 Direct3D를 사용하는 모든 응용 프�
 
 ### 배경
 
-앱이 Direct3D 장치에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
+앱이 Direct3D 디바이스에서 [**Trim**](https://msdn.microsoft.com/library/windows/desktop/Dn280346)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
 ### 테스트 정보
 
@@ -576,48 +577,88 @@ Windows 스토어를 사용하려면 Direct3D를 사용하는 모든 응용 프�
 앱에 필요하지 않은 경우 특수 사용 접근 권한 값을 제거하는 것이 좋습니다. 또한 이 접근 권한 값의 사용에는 추가 온보딩 정책 검토가 적용됩니다.
 <!--TODO: after migrating dev-packaging, link to [if your app doesn't require it](dev-packaging.app-capability-declarations#special-and-restricted-capabilities)-->
 
-## Windows 런타임 메타데이터 유효성 검사 ### 앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
+## Windows 런타임 메타데이터 유효성 검사
 
-### 테스트 정보 패키지의 **.winmd** 파일이 UWP 규칙을 준수하는지 확인합니다.
+### 배경
 
-### 수정 작업 -   **ExclusiveTo 특성 테스트:** UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
+앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
+
+### 테스트 정보
+
+패키지의 **.winmd** 파일이 UWP 규칙을 준수하는지 확인합니다.
+
+### 수정 작업
+
+-   **ExclusiveTo 특성 테스트:** UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
 -   **형식 위치 테스트:** 모든 UWP 형식에 대한 메타데이터가 앱 패키지에서 네임스페이스와 일치하는 가장 긴 이름을 가진 winmd 파일에 있는지 확인합니다.
 -   **형식 이름 대/소문자 구분 테스트:** 앱 패키지 내에서 모든 UWP 형식의 이름이 대/소문자를 구분하지 않는 고유한 이름인지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
 -   **형식 이름 수정 테스트:** 글로벌 네임스페이스 또는 Windows 최상위 네임스페이스에 UWP 형식이 없는지 확인합니다.
 -   **일반 메타데이터 수정 테스트:** 사용 중인 형식을 생성하는 컴파일러가 최신 UWP 사양으로 업데이트되었는지 확인합니다.
 -   **속성 테스트:** UWP 클래스의 모든 속성에 get 메서드가 있는지 확인합니다(set 메서드는 옵션임). UWP 형식의 모든 속성에 대해 get 메서드 반환 값 유형이 set 메서드 입력 매개 변수 유형과 일치하는지 확인합니다.
 
-## 패키지 온전성 테스트 ### 혼합된 이진 파일을 설치하는 앱은 사용자 프로세서 아키텍처에 따라 크래시가 발생하거나 올바르게 실행되지 않을 수 있습니다.
+## 패키지 온전성 테스트
 
-### 배경 이 테스트는 앱 패키지의 이진 파일에서 아키텍처 충돌을 확인합니다. 앱 패키지는 매니페스트에 지정된 프로세서 아키텍처에 사용할 수 없는 바이너리를 포함하면 안 됩니다. 지원되지 않는 바이너리를 포함하면 앱 크래시가 발생하거나 불필요하게 앱 패키지 크기가 늘어날 수 있습니다.
+### 플랫폼에 적절한 파일 테스트
 
-### 테스트 정보 앱 패키지 매니페스트 프로세서 아키텍처 선언과 상호 참조될 때 PE 헤더에서 각 파일의 "비트 수"가 적절한지 확인합니다. ### 수정 작업 앱 패키지가 앱 매니페스트에 지정된 아키텍처에서 지원되는 파일만 포함하고 있는지 확인하려면 다음 지침을 따르세요. - 앱의 대상 프로세서 아키텍처가 중립 프로세서 종류인 경우 앱 패키지는 x86, x64 또는 ARM 바이너리나 이미지 형식 파일을 포함할 수 없습니다.
+혼합된 이진 파일을 설치하는 앱은 사용자 프로세서 아키텍처에 따라 크래시가 발생하거나 올바르게 실행되지 않을 수 있습니다.
 
-- 앱의 대상 프로세서 아키텍처가 x86 프로세서 종류인 경우 앱 패키지는 x86 이진 파일이나 이미지 형식 파일만 포함해야 합니다. x64 또는 ARM 바이너리나 이미지 형식이 포함된 패키지는 테스트에 실패합니다.
+### 배경
 
-- 앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 이진 파일이나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지가 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다.
+이 테스트는 앱 패키지의 바이너리에서 아키텍처 충돌을 확인합니다. 앱 패키지는 매니페스트에 지정된 프로세서 아키텍처에 사용할 수 없는 바이너리를 포함하면 안 됩니다. 지원되지 않는 바이너리를 포함하면 앱 크래시가 발생하거나 불필요하게 앱 패키지 크기가 늘어날 수 있습니다.
+
+### 테스트 정보
+
+앱 패키지 매니페스트 프로세서 아키텍처 선언과 상호 참조될 때 PE 헤더에서 각 파일의 "비트 수"가 적절한지 확인합니다.
+
+### 수정 작업
+
+앱 패키지가 앱 매니페스트에 지정된 아키텍처에서 지원되는 파일만 포함하고 있는지 확인하려면 다음 지침을 따르세요.
+
+-   앱의 대상 프로세서 아키텍처가 중립 프로세서 종류인 경우 앱 패키지는 x86, x64 또는 ARM 바이너리나 이미지 형식 파일을 포함할 수 없습니다.
+
+-   앱의 대상 프로세서 아키텍처가 x86 프로세서 종류인 경우 앱 패키지는 x86 바이너리나 이미지 형식 파일만 포함해야 합니다. x64 또는 ARM 바이너리나 이미지 형식이 포함된 패키지는 테스트에 실패합니다.
+
+-   앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 바이너리나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지가 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다.
 
     하지만 패키지에 ARM 바이너리나 이미지 형식 파일이 포함되었거나 x86 바이너리나 이미지 형식 파일만 포함된 경우 테스트에 실패합니다.
 
-- 앱의 대상 프로세서 아키텍처가 ARM 프로세서 종류인 경우 앱 패키지는 ARM 이진 파일이나 이미지 형식 파일만 포함해야 합니다. x64 또는 x86 바이너리나 이미지 형식 파일이 포함된 패키지는 테스트에 실패합니다.
+-   앱의 대상 프로세서 아키텍처가 ARM 프로세서 종류인 경우 앱 패키지는 ARM 바이너리나 이미지 형식 파일만 포함해야 합니다. x64 또는 x86 바이너리나 이미지 형식 파일이 포함된 패키지는 테스트에 실패합니다.
 
-### 지원되는 디렉터리 구조 테스트 응용 프로그램이 MAX\_PATH보다 긴 하위 디렉터리를 설치 과정에서 만들지 않는지 확인합니다.
+### 지원되는 디렉터리 구조 테스트
 
-### 배경 OS 구성 요소(Trident, WWAHost 등 포함)는 내부적으로 파일 시스템 경로가 MAX\-PATH로 제한되며 이보다 긴 경로에서는 제대로 작동하지 않습니다.
+응용 프로그램이 MAX\-PATH보다 긴 하위 디렉터리를 설치 과정에서 만들지 않는지 확인합니다.
 
-### 테스트 정보 앱 설치 디렉터리 내의 경로가 MAX\-PATH를 초과하지 않는지 확인합니다.
+### 배경
 
-### 수정 작업 더 짧은 디렉터리 구조 및/또는 파일 이름을 사용합니다.
+OS 구성 요소(Trident, WWAHost 등 포함)는 내부적으로 파일 시스템 경로가 MAX\-PATH로 제한되며 이보다 긴 경로에서는 제대로 작동하지 않습니다.
 
-## 리소스 사용 테스트 ### WinJS 백그라운드 작업 테스트 WinJS 백그라운드 작업 테스트는 앱이 배터리를 소모하지 않도록 JavaScript 앱에 적절한 close 문이 있는지 확인합니다.
+### 테스트 정보
 
-### 배경 JavaScript 백그라운드 작업이 포함된 앱은 백그라운드 작업의 마지막 문으로 Close()를 호출해야 합니다. 앱이 호출하지 않을 경우 시스템이 연결된 대기 상태로 돌아갈 수 없어 배터리가 고갈될 수 있습니다.
+앱 설치 디렉터리 내의 경로가 MAX\-PATH를 초과하지 않는지 확인합니다.
 
-### 테스트 정보 매니페스트에 지정된 백그라운드 작업 파일이 앱에 없을 경우 테스트를 통과합니다. 그렇지 않으면 테스트에서 앱 패키지에 지정된 JavaScript 백그라운드 작업 파일을 구문 분석하고 Close() 문을 찾습니다. Close() 문이 있으면 테스트를 통과하고, 그렇지 않으면 테스트에 실패합니다.
+### 수정 작업
 
-### 수정 작업 Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업데이트합니다.
+더 짧은 디렉터리 구조 및/또는 파일 이름을 사용합니다.
 
-> **참고** 이 문서는 UWP 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+## 리소스 사용 테스트
+
+### WinJS 백그라운드 작업 테스트
+
+WinJS 백그라운드 작업 테스트는 앱이 배터리를 소모하지 않도록 JavaScript 앱에 적절한 close 문이 있는지 확인합니다.
+
+### 배경
+
+JavaScript 백그라운드 작업이 포함된 앱은 백그라운드 작업의 마지막 문으로 Close()를 호출해야 합니다. 앱이 호출하지 않을 경우 시스템이 연결된 대기 상태로 돌아갈 수 없어 배터리가 고갈될 수 있습니다.
+
+### 테스트 정보
+
+매니페스트에 지정된 백그라운드 작업 파일이 앱에 없을 경우 테스트를 통과합니다. 그렇지 않으면 테스트에서 앱 패키지에 지정된 JavaScript 백그라운드 작업 파일을 구문 분석하고 Close() 문을 찾습니다. Close() 문이 있으면 테스트를 통과하고, 그렇지 않으면 테스트에 실패합니다.
+
+### 수정 작업
+
+Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업데이트합니다.
+
+> **참고** 이 문서는 UWP 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
@@ -626,10 +667,6 @@ Windows 스토어를 사용하려면 Direct3D를 사용하는 모든 응용 프�
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

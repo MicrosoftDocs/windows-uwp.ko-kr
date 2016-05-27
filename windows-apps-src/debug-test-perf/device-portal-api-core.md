@@ -1,4 +1,5 @@
 ---
+author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: 디바이스 포털 핵심 API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
@@ -19,8 +20,8 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 메서드      | 요청 URI
 :------     | :-----
-POST | /api/appx/packagemanager/package
-
+게시 | /api/app/packagemanager/package
+<br />
 **URI 매개 변수**
 
 요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
@@ -28,7 +29,7 @@ POST | /api/appx/packagemanager/package
 URI 매개 변수 | 설명
 :---          | :---
 package   | (**필수**) 설치할 패키지의 파일 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -39,12 +40,16 @@ package   | (**필수**) 설치할 패키지의 파일 이름입니다.
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 수락되어 처리 중인 요청 배포
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -61,8 +66,8 @@ package   | (**필수**) 설치할 패키지의 파일 이름입니다.
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/appx/packagemanager/state
-
+GET | /api/app/packagemanager/state
+<br />
 **URI 매개 변수**
 
 - 없음
@@ -77,12 +82,16 @@ GET | /api/appx/packagemanager/state
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 마지막 배포의 결과
+204 | 설치가 진행 중임
+404 | 설치 작업을 찾을 수 없음
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -99,8 +108,8 @@ GET | /api/appx/packagemanager/state
  
 메서드      | 요청 URI
 :------     | :-----
-DELETE | /api/appx/packagemanager/package
-
+DELETE | /api/app/packagemanager/package
+<br />
 
 **URI 매개 변수**
 
@@ -116,12 +125,16 @@ DELETE | /api/appx/packagemanager/package
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -139,8 +152,8 @@ DELETE | /api/appx/packagemanager/package
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/appx/packagemanager/packages
-
+GET | /api/app/packagemanager/packages
+<br />
 
 **URI 매개 변수**
 
@@ -156,12 +169,41 @@ GET | /api/appx/packagemanager/packages
 
 **응답**
 
-응답에는 관련 세부 정보가 있는 설치된 패키지 목록이 포함됩니다.
-
+응답에는 관련 세부 정보가 있는 설치된 패키지 목록이 포함됩니다. 이 응답에 대한 템플릿은 다음과 같습니다.
+```
+{"InstalledPackages": [
+    {
+        "Name": string,
+        "PackageFamilyName": string,
+        "PackageFullName": string,
+        "PackageOrigin": int, (https://msdn.microsoft.com/en-us/library/windows/desktop/dn313167(v=vs.85).aspx)
+        "PackageRelativeId": string,
+        "Publisher": string,
+        "Version": {
+            "Build": int,
+            "Major": int,
+            "Minor": int,
+            "Revision": int
+     },
+     "RegisteredUsers": [
+     {
+        "UserDisplayName": string,
+        "UserSID": string
+     },...
+     ]
+    },...
+]}
+```
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -182,7 +224,7 @@ GET | /api/appx/packagemanager/packages
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/devicemanager/devices
-
+<br />
 
 **URI 매개 변수**
 
@@ -198,12 +240,31 @@ GET | /api/devicemanager/devices
 
 **응답**
 
-- 응답에는 계층적 디바이스 트리를 포함하는 JSON 구조가 포함됩니다.
+응답에는 디바이스에 연결된 디바이스 JSON 배열이 포함됩니다.
+``` 
+{"DeviceList": [
+    {
+        "Class": string,
+        "Description": string,
+        "ID": string,
+        "Manufacturer": string,
+        "ParentID": string,
+        "ProblemCode": int,
+        "StatusCode": int
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -222,7 +283,7 @@ GET | /api/devicemanager/devices
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/usermode/dumps
-
+<br />
 
 **URI 매개 변수**
 
@@ -238,12 +299,18 @@ GET | /api/debug/dump/usermode/dumps
 
 **응답**
 
-- 응답에는 테스트용으로 로드된 각 응용 프로그램의 크래시 덤프 목록이 포함됩니다.
+응답에는 테스트용으로 로드된 각 응용 프로그램의 크래시 덤프 목록이 포함됩니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -260,7 +327,7 @@ GET | /api/debug/dump/usermode/dumps
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **URI 매개 변수**
 
@@ -269,7 +336,7 @@ GET | /api/debug/dump/usermode/crashcontrol
 URI 매개 변수 | 설명
 :---          | :---
 packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -280,12 +347,21 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 
 **응답**
 
-- 없음
+응답 형식은 다음과 같습니다.
+```
+{"CrashDumpEnabled": bool}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -302,7 +378,7 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 메서드      | 요청 URI
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **URI 매개 변수**
 
@@ -312,7 +388,7 @@ URI 매개 변수 | 설명
 :---          | :---
 packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
 fileName   | (**필수**) 삭제해야 하는 덤프 파일의 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -323,12 +399,16 @@ fileName   | (**필수**) 삭제해야 하는 덤프 파일의 이름입니다.
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -346,7 +426,7 @@ fileName   | (**필수**) 삭제해야 하는 덤프 파일의 이름입니다.
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashcontrol
 
-
+<br />
 **URI 매개 변수**
 
 요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
@@ -354,7 +434,7 @@ DELETE | /api/debug/dump/usermode/crashcontrol
 URI 매개 변수 | 설명
 :---          | :---
 packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -365,12 +445,16 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -387,7 +471,7 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **URI 매개 변수**
 
@@ -397,7 +481,7 @@ URI 매개 변수 | 설명
 :---          | :---
 packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
 fileName   | (**필수**) 다운로드하려는 덤프 파일의 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -408,12 +492,18 @@ fileName   | (**필수**) 다운로드하려는 덤프 파일의 이름입니다
 
 **응답**
 
-- 응답에는 덤프 파일이 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 덤프 파일을 검사할 수 있습니다.
+응답에는 덤프 파일이 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 덤프 파일을 검사할 수 있습니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -430,7 +520,7 @@ fileName   | (**필수**) 다운로드하려는 덤프 파일의 이름입니다
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **URI 매개 변수**
 
@@ -439,7 +529,7 @@ POST | /api/debug/dump/usermode/crashcontrol
 URI 매개 변수 | 설명
 :---          | :---
 packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -450,12 +540,14 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -472,7 +564,7 @@ packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 �
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dumplist
-
+<br />
 
 **URI 매개 변수**
 
@@ -488,12 +580,24 @@ GET | /api/debug/dump/kernel/dumplist
 
 **응답**
 
-- 응답에는 덤프 파일의 이름 및 크기 목록이 포함됩니다.
+응답에는 덤프 파일의 이름 및 크기 목록이 포함됩니다. 이 목록 형식은 다음과 같습니다. 두 번째 *FileName* 매개 변수는 파일의 크기입니다. 이것은 알려진 버그입니다.
+```
+{"DumpFiles": [
+    {
+        "FileName": string,
+        "FileName": string
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -509,7 +613,7 @@ GET | /api/debug/dump/kernel/dumplist
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dump
-
+<br />
 
 **URI 매개 변수**
 
@@ -518,7 +622,7 @@ GET | /api/debug/dump/kernel/dump
 URI 매개 변수 | 설명
 :---          | :---
 filename   | (**필수**) 덤프 파일의 파일 이름입니다. 덤프 목록을 가져오기 위해 API를 사용하여 이 파일을 찾을 수 있습니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -529,12 +633,18 @@ filename   | (**필수**) 덤프 파일의 파일 이름입니다. 덤프 목록
 
 **응답**
 
-- 응답에는 덤프 파일이 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
+응답에는 덤프 파일이 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -551,7 +661,7 @@ filename   | (**필수**) 덤프 파일의 파일 이름입니다. 덤프 목록
 :------     | :-----
 GET | /api/debug/dump/kernel/crashcontrol
 
-
+<br />
 **URI 매개 변수**
 
 - 없음
@@ -566,12 +676,26 @@ GET | /api/debug/dump/kernel/crashcontrol
 
 **응답**
 
-- 응답에는 크래시 제어 설정이 포함됩니다. CrashControl에 대한 자세한 내용은 [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) 문서를 참조하세요.
+응답에는 크래시 제어 설정이 포함됩니다. CrashControl에 대한 자세한 내용은 [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) 문서를 참조하세요. 응답에 대한 템플릿은 다음과 같습니다.
+```
+{
+    "autoreboot": int,
+    "dumptype": int,
+    "maxdumpcount": int,
+    "overwrite": int
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -587,7 +711,7 @@ GET | /api/debug/dump/kernel/crashcontrol
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/livekernel
-
+<br />
 
 **URI 매개 변수**
 
@@ -603,12 +727,18 @@ GET | /api/debug/dump/livekernel
 
 **응답**
 
-- 응답에는 전체 커널 모드 덤프가 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
+응답에는 전체 커널 모드 덤프가 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -624,7 +754,7 @@ GET | /api/debug/dump/livekernel
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/debug/dump/usermode/live
-
+<br />
 
 **URI 매개 변수**
 
@@ -633,7 +763,7 @@ GET | /api/debug/dump/usermode/live
 URI 매개 변수 | 설명
 :---          | :---
 pid   | (**필수**) 관심 있는 프로세스에 대한 고유 프로세스 id입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -644,12 +774,18 @@ pid   | (**필수**) 관심 있는 프로세스에 대한 고유 프로세스 id
 
 **응답**
 
-- 응답에는 프로세스 덤프가 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 이 파일을 검사할 수 있습니다.
+응답에는 프로세스 덤프가 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 이 파일을 검사할 수 있습니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -665,7 +801,7 @@ pid   | (**필수**) 관심 있는 프로세스에 대한 고유 프로세스 id
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/debug/dump/kernel/crashcontrol
-
+<br />
 
 **URI 매개 변수**
 
@@ -677,7 +813,7 @@ autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후
 dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx)를 참조하세요.
 maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다.
 overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -688,12 +824,16 @@ overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -706,12 +846,12 @@ overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 
 
 **요청**
 
-다음 요청 형식을 사용하여 실시간 ETW 세션을 만들 수 있습니다. 이 세션은 Websocket을 통해 관리됩니다.
+다음 요청 형식을 사용하여 실시간 ETW 세션을 만들 수 있습니다. 이 세션은 Websocket을 통해 관리됩니다.  ETW 이벤트는 서버에서 일괄 처리되며 1초에 한 번씩 클라이언트로 전송됩니다. 
  
 메서드      | 요청 URI
 :------     | :-----
 GET/WebSocket | /api/etw/session/realtime
-
+<br />
 
 **URI 매개 변수**
 
@@ -727,18 +867,73 @@ GET/WebSocket | /api/etw/session/realtime
 
 **응답**
 
-- 응답에는 활성화된 공급자의 ETW 이벤트가 포함됩니다.
+응답에는 활성화된 공급자의 ETW 이벤트가 포함됩니다.  아래의 ETW WebSocket 명령을 참조하세요. 
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
 * HoloLens
 * IoT
+
+### ETW WebSocket 명령
+이러한 명령은 클라이언트에서 서버로 전송됩니다.
+
+명령 | 설명
+:----- | :-----
+provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}*(괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}*은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다.
+provider *{guid}* disable | *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
+
+이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
+```
+{
+    "Events":[
+        {
+            "Timestamp": int,
+            "Provider": string,
+            "ID": int, 
+            "TaskName": string,
+            "Keyword": int,
+            "Level": int,
+            payload objects...
+        },...
+    ],
+    "Frequency": int
+}
+```
+
+페이로드 개체는 원래 ETW 이벤트에서 제공되는 추가 키-값 쌍(문자열:문자열)입니다.
+
+예:
+```
+{
+    "ID" : 42, 
+    "Keyword" : 9223372036854775824, 
+    "Level" : 4, 
+    "Message" : "UDPv4: 412 bytes transmitted from 10.81.128.148:510 to 132.215.243.34:510. ",
+    "PID" : "1218", 
+    "ProviderName" : "Microsoft-Windows-Kernel-Network", 
+    "TaskName" : "KERNEL_NETWORK_TASK_UDPIP", 
+    "Timestamp" : 131039401761757686, 
+    "connid" : "0", 
+    "daddr" : "132.245.243.34", 
+    "dport" : "500", 
+    "saddr" : "10.82.128.118", 
+    "seqnum" : "0", 
+    "size" : "412", 
+    "sport" : "500"
+}
+```
 
 ---
 ### 등록된 ETW 공급자 열거
@@ -750,7 +945,7 @@ GET/WebSocket | /api/etw/session/realtime
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/etw/providers
-
+<br />
 
 **URI 매개 변수**
 
@@ -766,12 +961,24 @@ GET | /api/etw/providers
 
 **응답**
 
-- 응답에는 ETW 공급자 목록이 포함됩니다. 목록에는 각 공급자의 식별 이름 및 GUID가 포함됩니다.
+응답에는 ETW 공급자 목록이 포함됩니다. 목록에 포함된 각 공급자 이름과 GUID 형식은 다음과 같습니다.
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -780,18 +987,16 @@ GET | /api/etw/providers
 * IoT
 
 ---
-## 네트워킹
----
-### 현재 IP 구성 가져오기
+### 플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
 
 **요청**
 
-다음 요청 형식을 사용하여 현재 IP 구성을 가져올 수 있습니다.
+다음 요청 형식을 사용하여 등록된 공급자를 열거할 수 있습니다.
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/networking/ipconfig
-
+GET | /api/etw/customproviders
+<br />
 
 **URI 매개 변수**
 
@@ -807,22 +1012,25 @@ GET | /api/networking/ipconfig
 
 **응답**
 
-- 응답에는 IP 구성이 포함됩니다.
+200 정상입니다. 응답에는 ETW 공급자 목록이 포함됩니다. 목록에는 각 공급자의 식별 이름 및 GUID가 포함됩니다.
+
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **상태 코드**
 
-다음 표에서는 이 작업의 결과로 반환될 수 있는 가능한 추가 상태 코드를 보여 줍니다.
-
-HTTP 상태 코드      | 설명
-:------     | :-----
-200 | 작업이 완료되었습니다.
-500 | 내부 서버 오류가 발생했습니다.
-
+- 표준 상태 코드입니다.
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
-* Xbox
 * HoloLens
 * IoT
 
@@ -838,7 +1046,7 @@ HTTP 상태 코드      | 설명
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/os/machinename
-
+<br />
 
 **URI 매개 변수**
 
@@ -854,12 +1062,22 @@ GET | /api/os/machinename
 
 **응답**
 
-- 없음
+응답에는 다음 형식의 컴퓨터 이름이 포함됩니다. 
+
+```
+{"ComputerName": string}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -878,7 +1096,7 @@ GET | /api/os/machinename
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/os/info
-
+<br />
 
 **URI 매개 변수**
 
@@ -894,12 +1112,28 @@ GET | /api/os/info
 
 **응답**
 
-- 없음
+응답에는 다음 형식의 OS 정보가 포함됩니다.
+
+```
+{
+    "ComputerName": string,
+    "OsEdition": string,
+    "OsEditionId": int,
+    "OsVersion": string,
+    "Platform": string
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -918,7 +1152,7 @@ GET | /api/os/info
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/os/machinename
-
+<br />
 
 **URI 매개 변수**
 
@@ -927,7 +1161,7 @@ POST | /api/os/machinename
 URI 매개 변수 | 설명
 :---          | :---
 name | (**필수**) 컴퓨터의 새 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -938,12 +1172,14 @@ name | (**필수**) 컴퓨터의 새 이름입니다.
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -959,12 +1195,13 @@ name | (**필수**) 컴퓨터의 새 이름입니다.
 
 **요청**
 
-다음 요청 형식을 사용하여 현재 실행 중인 프로세스 목록을 가져올 수 있습니다.
+다음 요청 형식을 사용하여 현재 실행 중인 프로세스 목록을 가져올 수 있습니다.  또한 1초에 한 번씩 클라이언트로 푸시 중인 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수 있습니다. 
  
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/resourcemanager/processes
-
+GET/WebSocket | /api/resourcemanager/processes
+<br />
 
 **URI 매개 변수**
 
@@ -980,12 +1217,33 @@ GET | /api/resourcemanager/processes
 
 **응답**
 
-- 응답에는 각 프로세스에 대한 세부 정보가 있는 프로세스 목록이 포함됩니다. 이 정보는 JSON 형식입니다.
+응답에는 각 프로세스에 대한 세부 정보가 있는 프로세스 목록이 포함됩니다. 정보는 JSON 형식이며 템플릿은 다음과 같습니다.
+```
+{"Processes": [
+    {
+        "CPUUsage": int,
+        "ImageName": string,
+        "PageFileUsage": int,
+        "PrivateWorkingSet": int,
+        "ProcessId": int,
+        "SessionId": int,
+        "UserName": string,
+        "VirtualSize": int,
+        "WorkingSetSize": int
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1003,7 +1261,9 @@ GET | /api/resourcemanager/processes
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/resourcemanager/systemperf
-
+GET/WebSocket | /api/resourcemanager/systemperf
+<br />
+이 WebSocket 연결로 업그레이드할 수도 있습니다.  1초에 한 번씩 아래 동일한 JSON 데이터를 제공합니다. 
 
 **URI 매개 변수**
 
@@ -1019,12 +1279,49 @@ GET | /api/resourcemanager/systemperf
 
 **응답**
 
-- 응답에는 CPU 및 GPU 사용, 메모리 액세스 및 네트워크 액세스와 같은 시스템에 대한 성능 통계가 포함됩니다. 이 정보는 JSON 형식입니다.
+응답에는 CPU 및 GPU 사용, 메모리 액세스 및 네트워크 액세스와 같은 시스템에 대한 성능 통계가 포함됩니다. 이 정보는 JSON 형식이며 템플릿은 다음과 같습니다.
+```
+{
+    "AvailablePages": int,
+    "CommitLimit": int,
+    "CommittedPages": int,
+    "CpuLoad": int,
+    "IOOtherSpeed": int,
+    "IOReadSpeed": int,
+    "IOWriteSpeed": int,
+    "NonPagedPoolPages": int,
+    "PageSize": int,
+    "PagedPoolPages": int,
+    "TotalInstalledInKb": int,
+    "TotalPages": int,
+    "GPUData": 
+    {
+        "AvailableAdapters": [{ (One per detected adapter)
+            "DedicatedMemory": int,
+            "DedicatedMemoryUsed": int,
+            "Description": string,
+            "SystemMemory": int,
+            "SystemMemoryUsed": int,
+            "EnginesUtilization": [ float,... (One per detected engine)]
+        },...
+    ]},
+    "NetworkingData": {
+        "NetworkInBytes": int,
+        "NetworkOutBytes": int
+    }
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1045,7 +1342,7 @@ GET | /api/resourcemanager/systemperf
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/power/battery
-
+<br />
 
 **URI 매개 변수**
 
@@ -1061,17 +1358,36 @@ GET | /api/power/battery
 
 **응답**
 
-- 없음
+다음 형식을 사용하여 현재 배터리 상태 정보를 반환합니다.
+```
+{
+    "AcOnline": int (0 | 1),
+    "BatteryPresent": int (0 | 1),
+    "Charging": int (0 | 1),
+    "DefaultAlert1": int,
+    "DefaultAlert2": int,
+    "EstimatedTime": int,
+    "MaximumCapacity": int,
+    "RemainingCapacity": int
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
+* 모바일
 
 ---
 ### 현재 전원 구성표 가져오기
@@ -1083,7 +1399,7 @@ GET | /api/power/battery
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/power/activecfg
-
+<br />
 
 **URI 매개 변수**
 
@@ -1099,12 +1415,21 @@ GET | /api/power/activecfg
 
 **응답**
 
-- 없음
+활성 전원 구성표 형식은 다음과 같습니다.
+```
+{"ActivePowerScheme": string (guid of scheme)}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1120,7 +1445,9 @@ GET | /api/power/activecfg
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/power/cfg/*<power scheme path>*
-
+<br />
+옵션:
+- SCHEME_CURRENT
 
 **URI 매개 변수**
 
@@ -1132,16 +1459,20 @@ GET | /api/power/cfg/*<power scheme path>*
 
 **요청 본문**
 
-- 없음
+사용할 수 있는 전원 상태의 전체 목록은 응용 프로그램을 기반으로 작성되며 낮거나 위험한 배터리 수준과 같은 다양한 전원 상태의 플래그를 지정하기 위한 설정입니다. 
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1157,7 +1488,7 @@ GET | /api/power/cfg/*<power scheme path>*
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/power/state
-
+<br />
 
 **URI 매개 변수**
 
@@ -1173,57 +1504,25 @@ GET | /api/power/state
 
 **응답**
 
-- 없음
+전원 상태 정보 템플릿은 다음과 같습니다.
+```
+{"LowPowerStateAvailable": bool}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
-* IoT
-
----
-### 절전 연구 보고서 가져오기
-
-**요청**
-
-다음 요청 형식을 사용하여 절전 연구 보고서를 가져올 수 있습니다.
- 
-메서드      | 요청 URI
-:------     | :-----
-GET | /api/power/sleepstudy/reports
-
-
-**URI 매개 변수**
-
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
-
-URI 매개 변수 | 설명
-:---          | :---
-FileName | (**필수**) 다운로드하려는 절전 연구 보고서의 파일 이름입니다.
-
-**요청 헤더**
-
-- 없음
-
-**요청 본문**
-
-- 없음
-
-**응답**
-
-- 없음
-
-**상태 코드**
-
-- 표준 상태 코드입니다.
-
-**사용 가능한 디바이스 패밀리**
-
-* Windows 데스크톱
 * IoT
 
 ---
@@ -1236,7 +1535,7 @@ FileName | (**필수**) 다운로드하려는 절전 연구 보고서의 파일 
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/power/activecfg
-
+<br />
 
 **URI 매개 변수**
 
@@ -1245,7 +1544,7 @@ POST | /api/power/activecfg
 URI 매개 변수 | 설명
 :---          | :---
 scheme | (**필수**) 시스템의 현재 전원 구성표로 설정하려는 구성표의 GUID입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1256,12 +1555,16 @@ scheme | (**필수**) 시스템의 현재 전원 구성표로 설정하려는 �
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1277,7 +1580,7 @@ scheme | (**필수**) 시스템의 현재 전원 구성표로 설정하려는 �
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/power/cfg/*<power scheme path>*
-
+<br />
 
 **URI 매개 변수**
 
@@ -1287,7 +1590,7 @@ URI 매개 변수 | 설명
 :---          | :---
 valueAC | (**필수**) A/C 전원에 사용할 값입니다.
 valueDC | (**필수**) 배터리 전원에 사용할 값입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1298,12 +1601,57 @@ valueDC | (**필수**) 배터리 전원에 사용할 값입니다.
 
 **응답**
 
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows 데스크톱
+* IoT
+
+---
+### 절전 연구 보고서 가져오기
+
+**요청**
+
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/power/sleepstudy/report
+<br />
+다음 요청 형식을 사용하여 절전 연구 보고서를 가져올 수 있습니다.
+
+**URI 매개 변수**
+URI 매개 변수 | 설명
+:---          | :---
+FileName | (**필수**) 다운로드하려는 파일의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
+<br />
+**요청 헤더**
+
 - 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+응답은 절전 연구를 포함하는 파일입니다. 
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1319,7 +1667,7 @@ valueDC | (**필수**) 배터리 전원에 사용할 값입니다.
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/power/sleepstudy/reports
-
+<br />
 
 **URI 매개 변수**
 
@@ -1335,12 +1683,26 @@ GET | /api/power/sleepstudy/reports
 
 **응답**
 
-- 없음
+사용 가능한 보고서 목록 템플릿은 다음과 같습니다.
+
+```
+{"Reports": [
+    {
+        "FileName": string
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1355,8 +1717,8 @@ GET | /api/power/sleepstudy/reports
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/power/sleepstudy/reports
-
+GET | /api/power/sleepstudy/transform
+<br />
 
 **URI 매개 변수**
 
@@ -1372,12 +1734,18 @@ GET | /api/power/sleepstudy/reports
 
 **응답**
 
-- 없음
+응답에는 절전 연구 변환이 포함되어 있습니다.
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1395,7 +1763,7 @@ GET | /api/power/sleepstudy/reports
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/control/restart
-
+<br />
 
 **URI 매개 변수**
 
@@ -1411,12 +1779,14 @@ POST | /api/control/restart
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1435,7 +1805,7 @@ POST | /api/control/restart
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/control/shutdown
-
+<br />
 
 **URI 매개 변수**
 
@@ -1451,12 +1821,16 @@ POST | /api/control/shutdown
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1477,7 +1851,7 @@ POST | /api/control/shutdown
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/taskmanager/app
-
+<br />
 
 **URI 매개 변수**
 
@@ -1487,7 +1861,7 @@ URI 매개 변수 | 설명
 :---          | :---
 appid   | (**필수**) 시작하려는 앱의 PRAID입니다. 이 값은 hex64로 인코드되어야 합니다.
 package   | (**필수**) 시작하려는 앱 패키지의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1498,12 +1872,16 @@ package   | (**필수**) 시작하려는 앱 패키지의 전체 이름입니다
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1522,7 +1900,7 @@ package   | (**필수**) 시작하려는 앱 패키지의 전체 이름입니다
 메서드      | 요청 URI
 :------     | :-----
 DELETE | /api/taskmanager/app
-
+<br />
 
 **URI 매개 변수**
 
@@ -1532,7 +1910,7 @@ URI 매개 변수 | 설명
 :---          | :---
 package   | (**필수**) 중지하려는 앱 패키지의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
 forcestop   | (**선택**) 값 **yes**는 시스템이 모든 프로세스를 강제로 중지함을 나타냅니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1543,12 +1921,16 @@ forcestop   | (**선택**) 값 **yes**는 시스템이 모든 프로세스를 �
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1558,18 +1940,18 @@ forcestop   | (**선택**) 값 **yes**는 시스템이 모든 프로세스를 �
 * IoT
 
 ---
-## WiFi
+## 네트워킹
 ---
-### 무선 네트워크 인터페이스 열거
+### 현재 IP 구성 가져오기
 
 **요청**
 
-다음 요청 형식을 사용하여 사용 가능한 무선 네트워크 인터페이스를 열거할 수 있습니다.
+다음 요청 형식을 사용하여 현재 IP 구성을 가져올 수 있습니다.
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/wifi/interfaces
-
+GET | /api/networking/ipconfig
+<br />
 
 **URI 매개 변수**
 
@@ -1585,12 +1967,120 @@ GET | /api/wifi/interfaces
 
 **응답**
 
-- 세부 정보가 있는 사용 가능한 무선 인터페이스 목록입니다. 세부 정보에는 GUID, 설명, 식별 이름 등과 같은 항목이 포함됩니다.
+응답에는 다음 템플릿의 IP 구성이 포함됩니다.
+
+```
+{"Adapters": [
+    {
+        "Description": string,
+        "HardwareAddress": string,
+        "Index": int,
+        "Name": string,
+        "Type": string,
+        "DHCP": {
+            "LeaseExpires": int, (timestamp)
+            "LeaseObtained": int, (timestamp)
+            "Address": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "WINS": {(WINS is optional)
+            "Primary": {
+                "IpAddress": string,
+                "Mask": string
+            },
+            "Secondary": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "Gateways": [{ (always 1+)
+            "IpAddress": "10.82.128.1",
+            "Mask": "255.255.255.255"
+            },...
+        ],
+        "IpAddresses": [{ (always 1+)
+            "IpAddress": "10.82.128.148",
+            "Mask": "255.255.255.0"
+            },...
+        ]
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* Xbox
+* HoloLens
+* IoT
+
+--
+### 무선 네트워크 인터페이스 열거
+
+**요청**
+
+다음 요청 형식을 사용하여 사용 가능한 무선 네트워크 인터페이스를 열거할 수 있습니다.
+ 
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/wifi/interfaces
+<br />
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+세부 정보가 있는 사용 가능한 무선 인터페이스 목록 형식은 다음과 같습니다.
+
+``` 
+{"Interfaces": [{
+    "Description": string,
+    "GUID": string (guid with curly brackets),
+    "Index": int,
+    "ProfilesList": [
+        {
+            "GroupPolicyProfile": bool,
+            "Name": string, (Network currently connected to)
+            "PerUserProfile": bool
+        },...
+    ]
+    }
+]}
+```
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1609,7 +2099,7 @@ GET | /api/wifi/interfaces
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/wifi/networks
-
+<br />
 
 **URI 매개 변수**
 
@@ -1617,8 +2107,8 @@ GET | /api/wifi/networks
 
 URI 매개 변수 | 설명
 :---          | :---
-interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다.
-
+interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). 
+<br />
 **요청 헤더**
 
 - 없음
@@ -1629,12 +2119,38 @@ interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 
 
 **응답**
 
-- 제공된 *interface*에서 찾은 무선 네트워크 목록입니다. 이 목록은 네트워크에 대한 세부 정보를 포함합니다.
+제공된 *interface*에서 찾은 무선 네트워크 목록입니다. 여기에 포함된 네트워크 세부 정보 형식은 다음과 같습니다.
+
+```
+{"AvailableNetworks": [
+    {
+        "AlreadyConnected": bool,
+        "AuthenticationAlgorithm": string, (WPA2, etc)
+        "Channel": int,
+        "CipherAlgorithm": string, (e.g. AES)
+        "Connectable": int, (0 | 1)
+        "InfrastructureType": string,
+        "ProfileAvailable": bool,
+        "ProfileName": string,
+        "SSID": string,
+        "SecurityEnabled": int, (0 | 1)
+        "SignalQuality": int,
+        "BSSID": [int,...],
+        "PhysicalTypes": [string,...]
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1653,7 +2169,7 @@ interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/wifi/network
-
+<br />
 
 **URI 매개 변수**
 
@@ -1664,7 +2180,8 @@ URI 매개 변수 | 설명
 interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다.
 op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.
 ssid   | (***op* == connect인 경우 필수**) 연결할 SSID입니다.
-key   | (***op* == connect인 경우 필수**) 공유 키입니다.
+키   | (***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다.
+createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. 
 
 **요청 헤더**
 
@@ -1676,12 +2193,14 @@ key   | (***op* == connect인 경우 필수**) 공유 키입니다.
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1700,7 +2219,7 @@ key   | (***op* == connect인 경우 필수**) 공유 키입니다.
 메서드      | 요청 URI
 :------     | :-----
 DELETE | /api/wifi/network
-
+<br />
 
 **URI 매개 변수**
 
@@ -1710,7 +2229,7 @@ URI 매개 변수 | 설명
 :---          | :---
 interface   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다.
 profile   | (**필수**) 삭제할 프로필의 이름입니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1721,12 +2240,14 @@ profile   | (**필수**) 삭제할 프로필의 이름입니다.
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1742,12 +2263,12 @@ profile   | (**필수**) 삭제할 프로필의 이름입니다.
 
 **요청**
 
-다음 요청 형식을 사용하여 WER 파일을 다운로드할 수 있습니다.
+다음 요청 형식을 사용하여 WER 관련 파일을 다운로드할 수 있습니다.
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/wer/reports/file
-
+GET | /api/wer/report/file
+<br />
 
 **URI 매개 변수**
 
@@ -1757,9 +2278,9 @@ URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자 이름입니다.
 type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
-name   | (**필수**) 보고서의 이름입니다.
-file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다.
-
+name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
+file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. 
+<br />
 **요청 헤더**
 
 - 없음
@@ -1770,12 +2291,18 @@ file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다.
 
 **응답**
 
-- 없음
+- 응답에는 요청한 파일이 포함됩니다. 
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1791,8 +2318,8 @@ file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다.
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/wer/reports/files
-
+GET | /api/wer/report/files
+<br />
 
 **URI 매개 변수**
 
@@ -1802,24 +2329,35 @@ URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자입니다.
 type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
-name   | (**필수**) 보고서의 이름입니다.
-
+name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
+<br />
 **요청 헤더**
 
 - 없음
 
 **요청 본문**
 
-- 없음
+```
+{"Files": [
+    {
+        "Name": string, (Filename, not base64 encoded)
+        "Size": int (bytes)
+    },...
+]}
+```
 
 **응답**
 
-- 없음
-
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1836,7 +2374,7 @@ name   | (**필수**) 보고서의 이름입니다.
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/wer/reports
-
+<br />
 
 **URI 매개 변수**
 
@@ -1852,12 +2390,32 @@ GET | /api/wer/reports
 
 **응답**
 
-- 없음
+WER 보고서 형식은 다음과 같습니다.
+
+```
+{"WerReports": [
+    {
+        "User": string,
+        "Reports": [
+            {
+                "CreationTime": int,
+                "Name": string, (not base64 encoded)
+                "Type": string ("Queue" or "Archive")
+            },
+    },...
+]}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
@@ -1871,12 +2429,12 @@ GET | /api/wer/reports
 
 **요청**
 
-다음 요청 형식을 사용하여 WPR 프로필을 업로드하고 해당 프로필을 사용하여 추적을 시작할 수 있습니다.
+다음 요청 형식을 사용하여 WPR 프로필을 업로드하고 해당 프로필을 사용하여 추적을 시작할 수 있습니다.  추적은 한 번에 하나만 실행할 수 있습니다. 프로필은 디바이스에서 유지되지 않습니다. 
  
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/wpr/customtrace
-
+<br />
 
 **URI 매개 변수**
 
@@ -1892,12 +2450,25 @@ POST | /api/wpr/customtrace
 
 **응답**
 
-- WPR 세션 상태를 반환합니다.
+WPR 세션 상태 형식은 다음과 같습니다.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1915,7 +2486,7 @@ POST | /api/wpr/customtrace
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/wpr/boottrace
-
+<br />
 
 **URI 매개 변수**
 
@@ -1924,7 +2495,7 @@ POST | /api/wpr/boottrace
 URI 매개 변수 | 설명
 :---          | :---
 profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -1935,12 +2506,25 @@ profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능
 
 **응답**
 
-- 시작 시 이 API는 WPR 세션 상태를 반환합니다.
+시작할 때 이 API는 다음 형식의 WPR 세션 상태를 반환합니다.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (boot)
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1958,7 +2542,7 @@ profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/wpr/boottrace
-
+<br />
 
 **URI 매개 변수**
 
@@ -1978,8 +2562,14 @@ GET | /api/wpr/boottrace
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -1992,12 +2582,12 @@ GET | /api/wpr/boottrace
 
 **요청**
 
-다음 요청 형식을 사용하여 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.
+다음 요청 형식을 사용하여 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.  추적은 한 번에 하나만 실행할 수 있습니다. 
  
 메서드      | 요청 URI
 :------     | :-----
 POST | /api/wpr/trace
-
+<br />
 
 **URI 매개 변수**
 
@@ -2006,7 +2596,7 @@ POST | /api/wpr/trace
 URI 매개 변수 | 설명
 :---          | :---
 profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다.
-
+<br />
 **요청 헤더**
 
 - 없음
@@ -2017,12 +2607,25 @@ profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필�
 
 **응답**
 
-- 시작 시 이 API는 WPR 세션 상태를 반환합니다.
+시작할 때 이 API는 다음 형식의 WPR 세션 상태를 반환합니다.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal)
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -2040,7 +2643,7 @@ profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필�
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/wpr/trace
-
+<br />
 
 **URI 매개 변수**
 
@@ -2060,8 +2663,14 @@ GET | /api/wpr/trace
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -2079,7 +2688,7 @@ GET | /api/wpr/trace
 메서드      | 요청 URI
 :------     | :-----
 GET | /api/wpr/status
-
+<br />
 
 **URI 매개 변수**
 
@@ -2095,12 +2704,25 @@ GET | /api/wpr/status
 
 **응답**
 
-- WPR 추적 세션의 상태입니다.
+WPR 추적 세션 상태의 형식은 다음과 같습니다.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **상태 코드**
 
-- 표준 상태 코드입니다.
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
 
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -2109,6 +2731,6 @@ GET | /api/wpr/status
 * IoT
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

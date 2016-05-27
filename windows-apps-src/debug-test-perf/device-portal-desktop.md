@@ -1,94 +1,106 @@
 ---
+author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: Device Portal for Desktop
-description: Learn how the Windows Device Portal opens up diagnostics and automation on your Windows desktop.
+title: 데스크톱용 Device Portal
+description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
 ---
-# Device Portal for Desktop
+# 데스크톱용 Device Portal
 
-Starting in Windows 10, Version 1604, additional developer features are available for desktop. These features are available only when Developer mode is enabled.
+Windows 10, 버전 1604부터 추가적인 데스크톱용 개발자 기능을 사용할 수 있습니다. 이러한 기능은 개발자 모드를 사용하는 경우에만 사용됩니다.
 
-For info about how to enable Developer mode, see [Enable your device for development](../get-started/enable-your-device-for-development.md).
+개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
 
-Device Portal lets you view diagnostic info and interact with your desktop over HTTP from your browser. You can use Device Portal to do the following:
-- See and manipulate a list of running processes
-- Install, delete, launch, and terminate apps
-- Change Wi-Fi profiles, view signal strength, and see ipconfig
-- View live graphs of CPU, memory, I/O, network, and GPU usage
-- Collect process dumps
-- Collect ETW traces 
-- Manipulate the isolated storage of sideloaded apps
+Device Portal을 사용하면 진단 정보를 보거나 브라우저에서 HTTP를 통해 데스크톱을 조작할 수 있습니다. Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
+- 실행 중인 프로세스 목록 확인 및 조작
+- 앱 설치, 삭제, 시작 및 종료
+- Wi-Fi 프로필 변경, 신호 강도 보기 및 ipconfig 확인
+- CPU의 라이브 그래프, 메모리, I/O 네트워크 및 GPU 사용 보기
+- 프로세스 덤프 수집
+- ETW 추적 수집 
+- 테스트용으로 로드된 앱의 격리된 저장소 조작
 
-## Set up device portal on Window Desktop
+## Window 데스크톱에서 Device Portal 설정
 
-### Turn on device portal
-In the Developer Settings menu, with Developer Mode enabled, you can enable Device Portal.  
+### Device Portal 켜기
 
-When you enable Device Portal, you must also create a username and password for Device Portal.  Do not use your MSA or other Windows credentials.  
+**개발자 설정** 메뉴에서 개발자 모드가 사용되도록 설정된 상태에서 Device Portal을 사용하도록 설정할 수 있습니다.  
 
-After Device Portal is enabled, you will see links to it at the bottom of the Settings section.  Take note of the port number applied to the end of the URL: this port number is randomly generated when Device Portal is enabled, but should remain consistent between reboots of the desktop. If you'd like to set the port numbers manually so they remain permanent, see [Setting port numbers](device-portal-desktop.md#setting-port-numbers)
+Device Portal을 사용하도록 설정하는 경우 Device Portal에 대한 사용자 이름 및 암호도 만들어야 합니다. Microsoft 계정 또는 기타 Windows 자격 증명은 사용하지 마세요.  
 
-You can choose from 2 ways to connect to Device Portal: local host and over the local network (including VPN).
+Device Portal이 사용되도록 설정되면 **설정** 섹션 아래쪽에 Device Portal에 대한 링크가 표시됩니다. URL 끝에 적용되어 있는 포트 번호를 적어두세요. 이 포트 번호는 Device Portal이 사용되도록 설정될 때 무작위로 생성되지만 데스크톱을 다시 부팅해도 동일하게 유지됩니다. 영구적으로 유지되도록 포트 번호를 수동으로 설정하려면 [포트 번호 설정](device-portal-desktop.md#setting-port-numbers)을 참조하세요.
 
-**To connect to Device Portal**
+로컬 호스트 및 로컬 네트워크(VPN 포함)를 통하는 2가지 방법 중 선택하여 Device Portal에 연결할 수 있습니다.
 
-1. In your browser, enter the address shown here for the connection type you're using.
+**Device Portal에 연결하려면**
 
-    - Localhost: `http://127.0.0.1:PORT` or `http://localhost:PORT`
+1. 브라우저에 사용할 연결 형식으로 여기에 표시된 주소를 입력합니다.
 
-    Use this address to view Device Portal locally.
+    - Localhost: `http://127.0.0.1:PORT` 또는 `http://localhost:PORT`
+
+    Device Portal을 로컬로 보려면 이 주소를 사용합니다.
     
-    - Local Network: `https://<The IP address of the desktop>:PORT`
+    - 로컬 네트워크: `https://<The IP address of the desktop>:PORT`
 
-    Use this address to connect over a local network.
+    로컬 네트워크를 통해 연결하려면 이 주소를 사용합니다.
 
-HTTPS is required for authentication and secure communication.
+인증 및 보안 통신을 위해 HTTPS가 필요합니다.
 
-If you are using Device Portal in a protected environment, like a test lab, where you trust everyone on your local network, have no personal information on the device, and have unique requirements, you can disable authentication. This enables unencrypted communication, and allows anyone with the IP address of your computer to control it.
+로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 Device Portal을 사용하는 경우 인증을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 컴퓨터의 IP 주소를 가진 모든 사용자가 제어할 수 있습니다.
 
-## Device Portal pages
+## Device Portal 페이지
 
-Device Portal on desktop provides the standard set of pages. For detailed descriptions, see [Windows Device Portal overview](device-portal.md).
+데스크톱의 Device Portal은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
 
-- Apps
-- Processes
-- Performance
-- Debugging
-- Event Tracing for Windows (ETW)
-- Performance tracing
-- Devices
-- Networking
-- App File Explorer 
+- 앱
+- 프로세스
+- 성능
+- 디버깅
+- ETW(Windows용 이벤트 추적)
+- 성능 추적
+- 디바이스
+- 네트워킹
+- 앱 파일 탐색기 
 
-## Setting port numbers
+## 포트 번호 설정
 
-If you would like to select port numbers for Device Portal (such as 80 and 443), you can set the following regkeys:
-    Under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
-    HttpPort: A required DWORD.  Contains the port number that Device Portal will listen for HTTP connections on. 
-    HttpsPort: A required DWORD.  Contains the port number that Device Portal will listen for HTTPS connections on. 
+Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음 레지스트리 키를 설정할 수 있습니다.
 
-## Failure to install Developer Mode package
-Sometimes, due to network or compatibility issues, Developer Mode won't install correctly.  The Developer Mode package is required for remote deployment - Device Portal and SSH - but not for local development.  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service
+    - UseDynamicPorts: 필수 DWORD. 선택한 포트 번호를 유지하려면 이 항목을 0으로 설정합니다.
+    - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.  
+    - HttpsPort: 필수 DWORD. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
 
-### Failed to locate the package
-"Developer mode package couldn’t be located in Windows Update. Error Code 0x001234 Learn more"   
-This error may occur due to a network connectivity problem, Enterprise settings, or the package may be missing. 
-To fix this issue:
-1. Ensure your computer is connected to the internet. 
-2. If you are on a domain-joined computer, speak to your network administrator. 
-3. Check for Windows updates in the Settings > Updates and Security > [Windows Updates](ms-settings:windowsupdate).
-4. Verify that the Windows Developer Mode package is present in Settings > System > Apps & Features > [Manage optional features](ms-settings:optionalfeatures) > Add a feature. If it is missing, Windows cannot find the correct package for your computer. 
+## 개발자 모드 패키지 설치 실패
+경우에 따라 네트워크 또는 호환성 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 개발자 모드 패키지는 원격 배포(Device Portal 및 SSH)에 필요하며 로컬 개발에는 필요하지 않습니다.  
 
-After doing any of the above steps disable then re-enable Developer Mode to verify the fix. 
+### 패키지 찾기 실패
 
+"개발자 모드 패키지가 Windows 업데이트에서 없을 수 있습니다. 오류 코드 0x001234 자세한 정보"   
 
-### Failed to install the package
-"Developer mode package failed to install. Error code 0x001234  Learn more"
-This error may occur due to incompatibilities between your build of Windows and the Developer Mode package. 
-To fix this issue:
-1. Check for Windows updates in the Settings > Updates and Security > [Windows Updates](ms-settings:windowsupdate).
-2. Reboot your computer to ensure all updates are applied. 
+이 오류는 네트워크 연결 문제, 엔터프라이즈 설정 또는 패키지 누락으로 인해 발생할 수 있습니다. 
+
+이 문제를 해결하려면
+
+1. 컴퓨터가 인터넷에 연결되어 있는지 확인합니다. 
+2. 도메인에 가입된 컴퓨터를 사용하는 경우 네트워크 관리자에게 문의하세요. 
+3. 설정 &gt; 업데이트 및 보안 &gt; [Windows 업데이트](ms-settings:windowsupdate)에서 Windows 업데이트가 있는지 확인합니다.
+4. 설정 &gt; 시스템 &gt; 앱 및 기능 &gt; [선택적 기능 관리](ms-settings:optionalfeatures) &gt; 기능 추가에서 Windows 개발자 모드 패키지가 있는지 확인합니다. 없는 경우 Windows는 컴퓨터에 적합한 패키지를 찾을 수 없습니다. 
+
+위의 단계를 수행한 후 개발자 모드를 사용하도록 설정했다가 다시 사용하지 않도록 설정하여 문제를 해결하세요. 
 
 
-<!--HONumber=Apr16_HO2-->
+### 패키지 설치 실패
+
+"개발자 모드 패키지를 설치하지 못했습니다. 오류 코드 0x001234 자세한 정보"
+
+이 오류는 사용 중인 Windows 빌드와 개발자 모드 패키지 간의 비호환성으로 인해 발생할 수 있습니다. 
+
+이 문제를 해결하려면
+
+1. 설정 &gt; 업데이트 및 보안 &gt; [Windows 업데이트](ms-settings:windowsupdate)에서 Windows 업데이트가 있는지 확인합니다.
+2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록  합니다.
+
+
+<!--HONumber=May16_HO2-->
 
 

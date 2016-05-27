@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Windows 앱 인증 키트
 description: 앱이 Windows 스토어에 게시될 가능성 또는 Windows 인증을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다.
@@ -71,7 +72,7 @@ description: 앱이 Windows 스토어에 게시될 가능성 또는 Windows 인�
 
 **참고** Windows 앱 인증 키트는 서비스에서 실행될 수 있지만, 서비스는 활성 사용자 세션에서 키트 프로세스를 시작해야 하며 Session0에서 실행될 수 없습니다.
 
-**참고** Windows 앱 인증 키트 명령줄에 대한 자세한 내용을 보려면 `appcert.exe /?` 명령을 입력하세요.
+**참고** Windows 앱 인증 키트 명령줄에 대한 자세한 내용을 보려면 다음 명령을 입력하세요. `appcert.exe /?`
 
 ## 절전 컴퓨터를 사용하여 테스트
 
@@ -94,6 +95,6 @@ Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

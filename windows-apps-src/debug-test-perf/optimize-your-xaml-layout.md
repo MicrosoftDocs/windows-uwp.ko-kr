@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: XAML 레이아웃 최적화
 description: 레이아웃은 CPU 사용과 메모리 오버헤드 모두에서 비용이 많이 드는 XAML 앱 요소입니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다.
@@ -67,7 +68,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 [
             **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)는 약간 복잡하지만, 단일 패널 요소만 사용합니다.
 
-```
+```xml
   <Grid>
   <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
@@ -84,7 +85,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
   </Grid.ColumnDefinitions>
   <TextBlock Text="Options:" Grid.ColumnSpan="2" />
   <CheckBox Content="Power User" Grid.Row="1" Grid.ColumnSpan="2" />
-  <CheckBox Content="Admin" Margin="150,0,0,0” Grid.Row="1" Grid.ColumnSpan="2" />
+  <CheckBox Content="Admin" Margin="150,0,0,0" Grid.Row="1" Grid.ColumnSpan="2" />
   <TextBlock Text="Basic information:" Grid.Row="2" Grid.ColumnSpan="2" />
   <TextBlock Text="Name:" Width="75" Grid.Row="3" />
   <TextBox Width="200" Grid.Row="3" Grid.Column="1" />
@@ -128,7 +129,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 레이아웃에서 요소가 서로 겹칠 수 있어야 하는 것이 일반적인 UI 요구 사항입니다. 요소를 겹쳐서 배치하는 데 일반적으로 안쪽 여백, 여백, 맞춤 및 변형이 사용됩니다. XAML [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 컨트롤은 겹치는 요소에 대한 레이아웃 성능을 향상하는 데 최적화되어 있습니다.
 
 **중요** 기능 향상 효과를 보려면 단일 셀 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용하세요. [
-            **RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/BR242704-rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/BR242704-columndefinitions)를 정의하지 마세요.
+            **RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
 
 ### 예제
 
@@ -171,13 +172,13 @@ UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 
 ## **SizeChanged** 이벤트를 사용하여 레이아웃 변경에 응답
 
 [
-            **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) 클래스는 레이아웃 변경에 응답하는 두 가지의 유사한 이벤트 즉, [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/BR208706-layoutupdated) 및 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/BR208706-sizechanged)를 공개합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
+            **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) 클래스는 레이아웃 변경에 응답하는 두 가지의 유사한 이벤트 즉, [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) 및 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 공개합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
 
-최상의 성능을 위해서는 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/BR208706-sizechanged)를 선택하는 것이 거의 항상 좋습니다. **SizeChanged**는 직관적인 시맨틱입니다. [
+최상의 성능을 위해서는 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 선택하는 것이 거의 항상 좋습니다. **SizeChanged**는 직관적인 시맨틱입니다. [
             **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)의 크기가 업데이트된 경우 레이아웃 중 발생합니다.
 
 [
-            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/BR208706-layoutupdated)도 레이아웃 중에 발생하지만, 전역 시맨틱입니다. 즉, 요소가 업데이트될 때마다 모든 요소에서 발생합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
+            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated)도 레이아웃 중에 발생하지만, 전역 시맨틱입니다. 즉, 요소가 업데이트될 때마다 모든 요소에서 발생합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
 
 ## 패널 중 선택
 
@@ -187,6 +188,6 @@ UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
