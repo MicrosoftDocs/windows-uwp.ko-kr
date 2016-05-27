@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: 고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다.
 title: 앱에서 피드백 허브 시작
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
@@ -6,7 +7,9 @@ ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 
 # 앱에서 피드백 허브 시작
 
-피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대해 제출된 모든 고객 피드백은 수집되어 Windows 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 제공되므로 고객이 제출한 문제, 제안 및 좋아요를 하나의 보고서에서 볼 수 있습니다.
+피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예&#58; 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대해 제출된 모든 고객 피드백은 수집되어 Windows 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 제공되므로 고객이 제출한 문제, 제안 및 좋아요를 하나의 보고서에서 볼 수 있습니다.
+
+>**참고** **피드백** 보고서는 현재 [개발자 센터 참가자 프로그램](../publish/dev-center-insider-program.md)에 가입한 개발자 계정만 사용할 수 있습니다. 
 
 앱에서 피드백 허브를 시작하려면 [Microsoft 스토어 참여 및 수익 창출 SDK](http://aka.ms/store-em-sdk)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 
@@ -29,18 +32,18 @@ ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
     > **참고** 피드백 허브는 Windows 10 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다. 기본적으로 피드백 컨트롤을 숨기고 사용자 디바이스에서 피드백 허브를 사용할 수 있는 경우에만 초기화 코드에 표시하는 것이 좋습니다. 다음 단계에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
   다음 코드는 위에서 설명한 대로 구성된 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 XAML 정의를 보여 줍니다.
-  ```
+  ```xml
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
 7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) 클래스의 [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.issupported.aspx) 속성을 사용하여 사용자 디바이스에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
-```
+```CSharp
 if (Microsoft.Services.Store.Engagement.Feedback.IsSupported)
 {
         this.feedbackButton.Visibility = Visibility.Visible;
 }
 ```
-8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) 클래스의 static [LaunchFeedbackAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.launchfeedbackasync.aspx) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 [Click](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트 처리기에서 피드백 허브를 시작하는 방법을 보여 줍니다.
-```
+8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) 클래스의 static [LaunchFeedbackAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.launchfeedbackasync.aspx) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트 처리기에서 피드백 허브를 시작하는 방법을 보여 줍니다.
+```CSharp
 private async void feedbackButton_Click(object sender, RoutedEventArgs e)
 {
         await Microsoft.Services.Store.Engagement.Feedback.LaunchFeedbackAsync();
@@ -51,7 +54,7 @@ private async void feedbackButton_Click(object sender, RoutedEventArgs e)
 
 피드백 허브를 시작하려면 Segoe MDL2 자산 글꼴 및 문자 코드 E939에서 다음과 같은 표준 피드백 아이콘을 표시하는 UI 요소(예: 단추)를 앱에 추가하는 것이 좋습니다.
 
-![]Feedback icon](images/feedback_icon.png)
+![]Feedback icon](images/feedback_icon.PNG)
 
 앱에서 피드백 허브 연결에 대해 다음 배치 옵션 중 하나 이상을 사용하는 것이 좋습니다.
 * **앱 바에 직접 배치**. 구현에 따라 아이콘만 사용하거나 아래와 같이 텍스트를 추가할 수 있습니다.
@@ -70,6 +73,6 @@ private async void feedbackButton_Click(object sender, RoutedEventArgs e)
 * [피드백 보고서](../publish/feedback-report.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

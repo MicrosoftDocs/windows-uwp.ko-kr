@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
 description: 앱과 IAP(앱에서 바로 구매 제품) 카탈로그가 있는 경우 Windows 스토어 컬렉션 API 및 Windows 스토어 구매 API를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다.
 title: 서비스에서 제품 보기 및 권한 부여
@@ -55,7 +56,7 @@ Windows 스토어 컬렉션 API 및 구매 API는 고객 소유권 정보에 액
 Windows 스토어 컬렉션 API는 Azure AD 클라이언트 ID에 연결한 앱 및 IAP에 대한 사용자 소유권 정보에만 액세스 권한을 제공합니다.
 
 1.  [Windows 개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱을 선택합니다.
-2.  **서비스** &gt; **제품 컬렉션 및 구매** 페이지로 이동하고 Azure AD 클라이언트 ID를 사용 가능한 필드 중 하나에 입력합니다.
+2.  **서비스**&gt;**제품 컬렉션 및 구매** 페이지로 이동하고 Azure AD 클라이언트 ID를 사용 가능한 필드 중 하나에 입력합니다.
 
 ### 3단계: Azure AD에서 액세스 토큰 검색
 
@@ -136,7 +137,7 @@ Windows 스토어 ID 키는 액세스하려는 제품 소유권 정보의 소유
 
 디코드된 Windows 스토어 ID 키 헤더의 예는 다음과 같습니다.
 
-```
+```json
 { 
     "typ":"JWT", 
     "alg":"RS256", 
@@ -146,7 +147,7 @@ Windows 스토어 ID 키는 액세스하려는 제품 소유권 정보의 소유
 
 디코드된 Windows 스토어 ID 키 클레임 집합의 예는 다음과 같습니다.
 
-```
+```json
 { 
     "http://schemas.microsoft.com/marketplace/2015/08/claims/key/clientId": "1d5773695a3b44928227393bfef1e13d", 
     "http://schemas.microsoft.com/marketplace/2015/08/claims/key/payload": "ZdcOq0/N2rjytCRzCHSqnfczv3f0343wfSydx7hghfu0snWzMqyoAGy5DSJ5rMSsKoQFAccs1iNlwlGrX+/eIwh/VlUhLrncyP8c18mNAzAGK+lTAd2oiMQWRRAZxPwGrJrwiq2fTq5NOVDnQS9Za6/GdRjeiQrv6c0x+WNKxSQ7LV/uH1x+IEhYVtDu53GiXIwekltwaV6EkQGphYy7tbNsW2GqxgcoLLMUVOsQjI+FYBA3MdQpalV/aFN4UrJDkMWJBnmz3vrxBNGEApLWTS4Bd3cMswXsV9m+VhOEfnv+6PrL2jq8OZFoF3FUUpY8Fet2DfFr6xjZs3CBS1095J2yyNFWKBZxAXXNjn+zkvqqiVRjjkjNajhuaNKJk4MGHfk2rZiMy/aosyaEpCyncdisHVSx/S4JwIuxTnfnlY24vS0OXy7mFiZjjB8qL03cLsBXM4utCyXSIggb90GAx0+EFlVoJD7+ZKlm1M90xO/QSMDlrzFyuqcXXDBOnt7rPynPTrOZLVF+ODI5HhWEqArkVnc5MYnrZD06YEwClmTDkHQcxCvU+XUEvTbEk69qR2sfnuXV4cJRRWseUTfYoGyuxkQ2eWAAI1BXGxYECIaAnWF0W6ThweL5ZZDdadW9Ug5U3fZd4WxiDlB/EZ3aTy8kYXTW4Uo0adTkCmdLibw=", 
@@ -177,6 +178,6 @@ Windows 스토어 ID 키는 액세스하려는 제품 소유권 정보의 소유
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

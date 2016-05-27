@@ -1,10 +1,11 @@
 ---
+author: mcleanbyron
 Description: Microsoft 스토어 참여 및 수익 창출 SDK는 더 많은 수익을 창출하고 고객을 확보할 수 있게 해주는 기능을 앱에 추가하는 데 사용할 수 있는 라이브러리 및 도구를 제공합니다.
-title: Microsoft 스토어 참여 및 수익 창출 SDK를 사용하여 앱으로 수익 창출 및 고객 참여 유도
+title: Microsoft 스토어 참여 및 수익 창출 SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ---
 
-# Microsoft 스토어 참여 및 수익 창출 SDK를 사용하여 앱으로 수익 창출 및 고객 참여 유도
+# Microsoft 스토어 참여 및 수익 창출 SDK
 
 Microsoft 스토어 참여 및 수익 창출 SDK는 앱에서 광고 표시, A/B 테스트로 실험 실행 등 더 많은 수익을 창출하고 고객을 확보하는 데 도움이 되는 라이브러리 및 도구를 제공합니다. 이 SDK는 Microsoft 유니버설 광고 클라이언트 SDK를 대신하여 사용되며, 시간이 지남에 따라 새 참여 및 수익 창출 기능을 포함하도록 진화합니다.
 
@@ -15,7 +16,7 @@ Microsoft 스토어 참여 및 수익 창출 SDK는 다음 기능을 지원하�
 
 ### UWP 앱에 대해 A/B 테스트로 실험 실행
 
-UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 개발자 센터 대시보드에서 실험을 정의한 후 [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.aspx) 클래스를 사용하여 실험에 대한 변형을 가져오고, 이 데이터를 사용하여 테스트할 기능의 동작을 수정한 다음 [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) 메서드를 사용하여 보기 이벤트 및 전환 이벤트를 개발자 센터로 보냅니다. 마지막으로, 대시보드를 사용하여 결과를 보고 실험을 관리합니다.
+UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 개발자 센터 대시보드에서 실험을 정의한 후 [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx) 클래스를 사용하여 실험에 대한 변형을 가져오고, 이 데이터를 사용하여 테스트할 기능의 동작을 수정한 다음 [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) 메서드를 사용하여 보기 이벤트 및 전환 이벤트를 개발자 센터로 보냅니다. 마지막으로, 대시보드를 사용하여 결과를 보고 실험을 관리합니다.
 
 자세한 내용은 [A/B 테스트로 실험 실행](run-app-experiments-with-a-b-testing.md)을 참조하세요.
 
@@ -24,6 +25,8 @@ UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모
 UWP 앱의 [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음, 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다.
 
 자세한 내용은 [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)을 참조하세요.
+
+>**참고** **피드백** 보고서는 현재 [개발자 센터 참가자 프로그램](../publish/dev-center-insider-program.md)에 가입한 개발자 계정만 사용할 수 있습니다.
 
 ### 앱에서 광고 표시
 
@@ -72,6 +75,6 @@ Microsoft 스토어 수익 창출 및 참여 SDK의 다음 라이브러리는 *�
 * [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

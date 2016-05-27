@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 가져옵니다.
 title: 앱 평점 가져오기
@@ -37,7 +38,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
  
 
@@ -62,7 +63,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">문자열</td>
-<td align="left">등급 데이터를 검색할 앱의 제품 ID입니다. 제품 ID는 개발자 센터 대시보드의 [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561)에서 사용할 수 있는 앱 목록 링크에 포함되어 있습니다. 제품 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
+<td align="left">등급 데이터를 검색할 앱의 제품 ID입니다. 제품 ID는 개발자 센터 대시보드의 [앱 ID 페이지](https://msdn.microsoft.com/library/windows/apps/mt148561)에서 사용할 수 있는 앱 목록 링크에 포함되어 있습니다. 제품 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
 <td align="left">예</td>
 </tr>
 <tr class="even">
@@ -92,7 +93,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="even">
 <td align="left">filter</td>
 <td align="left">문자열</td>
-<td align="left">응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [filter fields](#filter-fields) 섹션을 참조하세요.</td>
+<td align="left">응답에서 행을 필터링하는 하나 이상의 문입니다. 자세한 내용은 아래의 [필터 필드](#filter-fields) 섹션을 참조하세요.</td>
 <td align="left">아니요</td>
 </tr>
 <tr class="odd">
@@ -185,7 +186,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 다음 예제에서는 등급 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 제품 ID로 바꿉니다.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -265,6 +266,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

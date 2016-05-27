@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다.
 title: Windows 스토어 서비스를 사용하여 분석 데이터에 액세스
@@ -49,13 +50,13 @@ Azure AD 응용 프로그램을 개발자 센터 계정과 연결하고 응용 �
 
 액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://msdn.microsoft.com/library/azure/dn645543.aspx)의 지시에 따라 HTTP POST를 다음 Azure AD 끝점에 보냅니다.
 
-```
+```syntax
 https://login.microsoftonline.com/<tenant id>/oauth2/token
 ```
 
 -   테넌트 ID를 가져오려면 [Azure 관리 포털](http://manage.windowsazure.com/)에 로그인하고 **Active Directory**로 이동한 다음 개발자 센터 계정에 연결된 디렉터리를 클릭합니다. 이 디렉터리에 대한 테넌트 ID는 아래 예제의 *your\_tenant\_ID* 문자열에서처럼 이 페이지의 URL에 포함되어 있습니다.
 
-  ```
+  ```syntax
   https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
   ```
 
@@ -236,6 +237,6 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
  
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

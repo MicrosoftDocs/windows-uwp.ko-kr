@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다.
 title: 제품에 대한 쿼리
@@ -36,7 +37,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
 | 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -54,7 +55,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 | parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 IAP만 반환합니다.                                                                                                                                                                                    | 아니요       |
 | productSkuIds     | ProductSkuId | 지정한 경우 서비스는 제공된 Product/SKU 쌍에 해당하는 제품만 반환합니다.                                                                                                                                                                        | 아니요       |
 | productTypes      | 문자열       | 지정한 경우 서비스는 지정된 제품 형식과 일치하는 제품만 반환합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.                                                                                       | 아니요       |
-| validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 지금 이전인 제품, 종료 날짜가 지금 이후인 제품이 있습니다). | 아니요       |
+| validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
 
  
 
@@ -72,14 +73,14 @@ ProductSkuId 개체에는 다음 매개 변수가 포함됩니다.
 
 | 매개 변수 | 유형   | 설명                                                                                                                                                                                                                                                                                                            | 필수 |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | 문자열 | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID를 가져오려면 Windows 개발자 센터 대시보드의 앱을 탐색하여 **앱 관리** &gt; **앱 ID** 페이지로 이동하고, **Windows 10용 URL** 필드에 표시된 문자열의 접미사를 검색합니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다. | 예      |
+| productId | 문자열 | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID를 가져오려면 Windows 개발자 센터 대시보드의 앱을 탐색하여 **앱 관리**&gt;**앱 ID** 페이지로 이동하고, **Windows 10용 URL** 필드에 표시된 문자열의 접미사를 검색합니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다. | 예      |
 | skuID     | 문자열 | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                                                                                                                                                                                                | 예      |
 
  
 
 ### 요청 예제
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/query HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1Q…….
 Host: collections.mp.microsoft.com
@@ -162,7 +163,7 @@ IdentityContractV6 개체에는 다음 매개 변수가 포함됩니다.
 
 ### 응답 예제
 
-```
+```syntax
 HTTP/1.1 200 OK
 Content-Length: 7241
 Content-Type: application/json
@@ -210,6 +211,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Windows 스토어 ID 키 갱신](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

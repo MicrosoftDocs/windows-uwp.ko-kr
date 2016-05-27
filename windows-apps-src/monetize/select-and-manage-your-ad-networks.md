@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: 광고 조정을 사용하기 전에 앱에서 사용할 각 광고 네트워크에서 계정을 설정해야 합니다.
 title: 광고 네트워크 선택 및 관리
@@ -17,9 +18,9 @@ title: 광고 네트워크 선택 및 관리
 
 |  광고 네트워크    | XAML과 함께 C# 또는 Visual Basic을 사용하는 UWP(유니버설 Windows 플랫폼) 앱 | XAML과 함께 C# 또는 Visual Basic을 사용하는 Windows 8.1 앱 | XAML과 함께 C# 또는 Visual Basic을 사용하는 Windows Phone 8.1 앱 | Windows Phone 8.x Silverlight 앱 |               
 |-------------------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------------|-----------------------------------|---------------|
-| [Microsoft](#microsoft)                         | **지원함**                                      | **지원함**                                            | **지원함**                     | **지원함** |
-| [AdDuplex](#adduplex)                                                   | **지원함**                                      | **지원함**                                            | **지원함**                     | **지원함** |
-| [Smaato](#smaato)                                                       | 지원되지 않음                                      | **지원함**                                            | **지원함**                     | **지원함** |
+| [Microsoft](#microsoft)                         | **지원함**                                      | **지원**                                            | **지원**                     | **지원함** |
+| [AdDuplex](#adduplex)                                                   | **지원함**                                      | **지원**                                            | **지원**                     | **지원함** |
+| [Smaato](#smaato)                                                       | 지원되지 않음                                      | **지원함**                                            | **지원**                     | **지원함** |
 | [AdMob(Google)](#admob)                                                | 지원되지 않음                                      | 지원되지 않음                                            | 지원되지 않음                     | **지원함** |
 | [Inneractive](#inneractive)                                             | 지원되지 않음                                      | 지원되지 않음                                            | 지원되지 않음                     | **지원함** |
 | [Vserv VMAX](#vserv)                                                    | 지원되지 않음                                      | 지원되지 않음                                            | **지원함**                     | 지원되지 않음 | 
@@ -101,7 +102,7 @@ title: 광고 네트워크 선택 및 관리
 
 각 광고 네트워크에는 필수 매개 변수 외에도 앱에서 코드를 통해 설정할 수 있는 선택적 매개 변수가 더 있습니다. 선택적 매개 변수의 전체 목록은 각 광고 네트워크에서 제공한 설명서를 참조하세요. 코드에서 이러한 선택적 매개 변수를 설정하려면 **AdMediatorControl** 개체의 **AdSdkOptionalParameters** 속성을 사용하세요.
 
-다음 예제에서는 Microsoft Advertising의 **CountryOrRegion** 매개 변수를 설정하는 방법을 설명합니다.
+다음 예제에서는 Microsoft Advertising의 [CountryOrRegion](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.countryorregion.aspx) 속성을 사용자의 2자리 국가 또는 지역 코드로 설정하는 방법을 설명합니다.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["CountryOrRegion"] = "IN";
@@ -125,6 +126,6 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 250;
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

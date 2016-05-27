@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: 다음은 광고 조정과 관련된 일반적인 여러 개발 문제를 해결하는 방법입니다.
 title: 광고 조정 문제 해결
 ms.assetid: 8728DE4F-E050-4217-93D3-588DD3280A3A
@@ -17,8 +18,7 @@ C# 또는 Visual Basic과 XAML을 사용하여 UWP(유니버설 Windows 플랫�
 그래도 여전히 디자이너에 컨트롤을 추가할 수 없으면 프로젝트가 **모든 CPU**보다는 앱에 적용 가능한 프로세서 아키텍처(예: **x86**)를 대상으로 하도록 합니다. 프로젝트가 빌드 플랫폼에 대해 **모든 CPU**를 대상으로 하는 경우 컨트롤을 디자이너에 추가할 수 없습니다.
 
 *
-            *Microsoft**의 광고를 제공할 때 AdMediatorControl이 런타임에 "&lt;*width*&gt; x &lt;*height*&gt; 지원되지 않음" 오류를 표시합니다.  
-Microsoft Advertising에서는 [IAB(Interactive Advertising Bureau)에서 권장하는 특정 광고 크기](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising)만 지원합니다. 디자이너 또는 XAML에서 광고 조정자 컨트롤의 높이 및 너비를 이렇게 지원되는 광고 크기 중 하나로 설정한 경우에도 상황에 따라 크기 조정 및 반올림 문제 때문에 광고 조정 프레임워크에서 광고를 제공하지 못할 수 있습니다. 이 문제를 방지하려면 코드에서 Microsoft Advertising의 선택적 **너비** 및 **높이** 매개 변수를 지원되는 광고 크기 중 하나로 할당합니다.
+            *Microsoft의 광고를 제공할 때 AdMediatorControl이 런타임에 "&lt;*width* &gt; x &lt;*height*&gt; 지원되지 않음" 오류를 표시합니다. **Microsoft Advertising에서는 [IAB(Interactive Advertising Bureau)에서 권장하는 특정 광고 크기](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising)만 지원합니다. 디자이너 또는 XAML에서 광고 조정자 컨트롤의 높이 및 너비를 이렇게 지원되는 광고 크기 중 하나로 설정한 경우에도 상황에 따라 크기 조정 및 반올림 문제 때문에 광고 조정 프레임워크에서 광고를 제공하지 못할 수 있습니다. 이 문제를 방지하려면 코드에서 Microsoft Advertising의 선택적 **너비** 및** 높이 매개 변수를 지원되는 광고 크기 중 하나로 할당합니다.
 
 다음 코드 예제는 Microsoft Advertising의 선택적 **너비** 및 **높이** 매개 변수를 728 x 90으로 할당하는 방법을 보여 줍니다.
 
@@ -33,17 +33,17 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["He
 **Smaato 광고 컨트롤이 올바르게 정렬되지 않음**  
 선택적 매개 변수를 사용하여 SDK 컨트롤에 값을 설정합니다.
 
-```
-myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato][“Margin”] = new Thickness(0, -20, 0, 0);
-myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato][“Width”] = 50d;
-myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato][“Height”] = 320d;
+```CSharp
+myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Margin"] = new Thickness(0, -20, 0, 0);
+myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Width"] = 50d;
+myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 320d;
 ```
 
 **AdDuplex 광고 컨트롤이 올바른 크기로 표시되지 않습니다(250×250으로 표시됨).**  
-광고 조정에 크기의 값이 설정되지 않았으므로 선택적 매개 변수 크기를 사용하여 변경해야 합니다. 예제:
+광고 조정에 크기의 값이 설정되지 않았으므로 선택적 **Size** 매개 변수를 사용하여 변경해야 합니다. 예를 들면 다음과 같습니다.
 
-```
-myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.AdDuplex][“Size”] = “160×600″;
+```CSharp
+myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.AdDuplex]["Size"] = "160x600";
 ```
 
 **“광고 컨트롤이 가려져 있음”이라는 오류 발생**  
@@ -51,6 +51,12 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.AdDuplex][“Size”] = �
 
 **"두 파일이 서로 충돌함" 오류 발생**  
 앱의 다른 위치에서 Microsoft Advertising 어셈블리를 참조했습니다. 광고 조정은 앱에서 독점적으로 작동하도록 설계되었으며 Microsoft Advertising에 대한 다른 참조가 사용되는 경우 작동하지 않습니다. Microsoft Advertising 참조를 수동으로 제거하고 Microsoft 스토어 참여 및 수익 창출 SDK를 다시 설치하여 오류를 해결하세요.
+
+**AdMediator.config 파일에서 RefreshRate 값을 변경한 후 예기치 않은 동작이 발생**
+
+Visual Studio 프로젝트의 **연결된 서비스 추가** 대화 상자에서 **광고 중재자** 구성 요소를 실행하여 광고 네트워크를 구성하고 난 후 기본 구성 정보는 프로젝트의 AdMediator.config 파일에 저장됩니다. 이 파일은 직접 수정할 수 없습니다. 대신 Windows 개발자 센터 대시보드에 앱 패키지를 업로드한 후 [앱에 대한 광고 조정 설정을 구성할 때](submit-your-app-and-configure-ad-mediation.md) 이 정보를 수정할 수 있습니다(새 광고에 대한 새로 고침 빈도 포함).
+
+AdMediator.config 파일에서 **RefreshRate** 값을 수정하는 경우 이 값은 새로 고침 빈도를 초 단위로 나타내는 30과 120 사이의 정수를 포함해야 합니다. 이 값을 30보다 낮거나 120보다 큰 정수로 설정하면 광고 조정 프레임워크에서는 자동으로 새로 고침 빈도를 60초로 사용합니다.
 
 ## 관련 항목
 
@@ -63,6 +69,6 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.AdDuplex][“Size”] = �
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

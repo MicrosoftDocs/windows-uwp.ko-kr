@@ -1,17 +1,9 @@
 ---
-Description: 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다.
-title: 앱에서 바로 소모성 제품 구매 사용
-ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-키워드: 앱에서 바로 판매
-키워드: 소모성
-키워드: 앱에서 바로 구매
-키워드: 앱에서 바로 구매 제품
-키워드: 앱에서 바로 지원 방법
-키워드: 앱에서 바로 구매 코드 샘플
-키워드: 앱에서 바로 판매 코드 샘플
+Description&#58; 작성자&#58; mcleanbyron 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&amp;\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&amp;\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다.
+title&#58; 앱에서 바로 소모성 제품 구매 사용 ms.assetid&#58; F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 키워드&#58; 앱에서 바로 판매 키워드&#58; 소모성 제품 키워드&#58; 앱에서 바로 구매 키워드&#58; 앱에서 바로 구매 제품 키워드&#58; 앱에서 바로 구매 지원 방법 키워드&#58; 앱에서 바로 구매 코드 샘플 키워드&#58; 앱에서 바로 판매 코드 샘플
 ---
 
-# 앱에서 바로 소모성 제품 구매 사용
+# 앱에서 바로 구매 소모성 제품 사용
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -79,7 +71,7 @@ private void GrantFeatureLocally(string productId, Guid transactionId)
 ```CSharp
 private Boolean IsLocallyFulfilled(string productId, Guid transactionId)
 {
-    return grantedConsumableTransactionIds.ContainsKey(productId) &amp;&amp; grantedConsumableTransactionIds[productId].Contains(transactionId);
+    return grantedConsumableTransactionIds.ContainsKey(productId) && grantedConsumableTransactionIds[productId].Contains(transactionId);
 }
 ```
 
@@ -127,6 +119,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

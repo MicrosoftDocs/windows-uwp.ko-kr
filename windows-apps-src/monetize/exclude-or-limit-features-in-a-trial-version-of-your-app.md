@@ -1,11 +1,6 @@
 ---
-Description: 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다.
-title: 평가판의 기능 제외 또는 제한
-ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-키워드: 무료 체험
-키워드: 무료 체험 기간
-키워드: 무료 체험 코드 예제
-키워드: 무료 체험 코드 샘플
+Description&#58; 작성자&#58; mcleanbyron 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다.
+title&#58; 평가판의 기능 제외 또는 제한 ms.assetid&#58; 1B62318F-9EF5-432A-8593-F3E095CA7056 키워드&#58; 무료 평가판 키워드&#58; 무료 체험 기간 키워드&#58; 무료 체험 코드 예제 키워드&#58; 무료 체험 코드 샘플
 ---
 
 # 평가판의 기능 제외 또는 제한
@@ -60,7 +55,8 @@ ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 앱을 초기화하는 경우 이 예에 표시된 대로 앱의 [**LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/br225157) 개체를 가져옵니다. **licenseInformation**은 **LicenseInformation** 유형의 전역 변수 또는 필드로 가정됩니다.
 
 [
-            **CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 또는 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)를 초기화하여 앱의 라이선스 정보에 액세스합니다.
+              **CurrentApp**
+            ](https://msdn.microsoft.com/library/windows/apps/hh779765) 또는 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)를 초기화하여 앱의 라이선스 정보에 액세스합니다.
 
 ```CSharp
 void initializeLicense()
@@ -168,7 +164,8 @@ void DisplayTrialVersionExpirationTime()
 이제 라이선스 API 호출을 시뮬레이션하여 앱을 테스트하세요. JavaScript, C#, Visual Basic 또는 Visual C++에서 앱의 초기화 코드에 있는 [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 참조를 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)로 바꾸세요.
 
 [
-            **CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)는 %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData에 있는 "WindowsStoreProxy.xml"이라는 XML 파일에서 테스트 관련 라이선스 정보를 가져옵니다. 이 경로와 파일이 없는 경우 설치 중에 또는 런타임에 만들어야 합니다. 이 특정 위치에 WindowsStoreProxy.xml이 없는 상태에서 [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) 속성에 액세스하면 오류가 발생합니다.
+              **CurrentAppSimulator**
+            ](https://msdn.microsoft.com/library/windows/apps/hh779766)는 %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData에 있는 "WindowsStoreProxy.xml"이라는 XML 파일에서 테스트 관련 라이선스 정보를 가져옵니다. 이 경로와 파일이 없는 경우 설치 중에 또는 런타임에 만들어야 합니다. 이 특정 위치에 WindowsStoreProxy.xml이 없는 상태에서 [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768) 속성에 액세스하면 오류가 발생합니다.
 
 이 예에서는 앱에 코드를 추가하여 다른 라이선스 상태에서 테스트할 수 있는 방법을 보여 줍니다.
 
@@ -235,6 +232,6 @@ void appInit()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

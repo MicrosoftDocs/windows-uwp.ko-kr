@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용자에게 무료 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 권한을 부여합니다.
 title: 무료 제품에 대한 권한 부여
@@ -36,7 +37,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
 | 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -53,7 +54,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 | 언어       | 문자열 | 사용자의 언어.                                                                                                                                                                                                                                                                                              | 예      |
 | 출시         | 문자열 | 사용자의 지역/국가입니다.                                                                                                                                                                                                                                                                                                | 예      |
 | orderId        | GUID   | 주문에 대해 생성된 GUID입니다. 이 값은 사용자에 대해 고유하지만 모든 주문에서 고유할 필요는 없습니다.                                                                                                                                                                                              | 예      |
-| productId      | 문자열 | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID를 가져오려면 Windows 개발자 센터 대시보드의 앱을 탐색하여 **앱 관리** &gt; **앱 ID** 페이지로 이동하고, **Windows 10용 URL** 필드에 표시된 문자열의 접미사를 검색합니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다. | 예      |
+| productId      | 문자열 | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID를 가져오려면 Windows 개발자 센터 대시보드의 앱을 탐색하여 **앱 관리**&gt;**앱 ID** 페이지로 이동하고, **Windows 10용 URL** 필드에 표시된 문자열의 접미사를 검색합니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다. | 예      |
 | quantity       | int    | 구매할 수량입니다. 현재, 1 값만 지원됩니다. 지정되지 않은 경우 기본값은 1입니다.                                                                                                                                                                                                                | 아니요       |
 | skuId          | 문자열 | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                                                                                                                                                                                                | 예      |
 
@@ -61,7 +62,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 
 ### 요청 예제
 
-```
+```syntax
 POST https://purchase.mp.microsoft.com/v6.0/purchases/grant HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJK……
 Content-Length: 1863
@@ -156,7 +157,7 @@ IdentityV6 개체에는 다음 매개 변수가 포함됩니다.
 
 ### 응답 예제
 
-```
+```syntax
 Content-Length: 1203
 Content-Type: application/json
 MS-CorrelationId: fb2e69bc-f26a-4aab-a823-7586c19f5762
@@ -242,6 +243,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
