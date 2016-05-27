@@ -1,24 +1,30 @@
 ---
+author: Mtoepke
 title: Xbox One Developer Preview의 UWP에 대해 알려진 문제
 description: 
 area: Xbox
 ---
 
-# Xbox One Developer Preview의 UWP에 대해 알려진 문제
+# Xbox Developer Preview에서 UWP에 대해 알려진 문제
+
+이 항목에서는 Xbox Developer Preview에서 UWP에 대해 알려진 문제를 설명합니다. 
+이 개발자 미리 보기에 대한 자세한 내용은 [Xbox에서 UWP](index.md)를 참조하세요. 
+
+\[API 참조 항목 링크를 통해 이 페이지를 방문하고 유니버설 디바이스 패밀리 API 정보를 찾는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)(영문)을 참조하세요.\]
 
 Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 
 즉, 일부 인기 있는 게임 및 앱이 예상대로 작동하지 않고 가끔 크래시 및 데이터 손실을 경험할 수 있습니다. 
-Developer Preview를 나가면 콘솔은 초기화되며 모든 게임, 앱 및 콘텐츠를 다시 설치해야 합니다.
+Developer Preview를 종료하면 콘솔이 초기화되며 모든 게임, 앱 및 콘텐츠를 다시 설치해야 합니다.
 
 개발자의 경우 이는 일부 개발자 도구와 API가 예상대로 작동하지 않음을 의미합니다. 
-또한 최종 릴리스용 기능 중 일부가 포함되지 않았거나 릴리스 품질이 아님을 의미합니다. 
-**특히, 이 Preview의 시스템 성능은 최종 릴리스의 시스템 성능을 반영하지 않음을 의미합니다.**
+최종 릴리스용 기능 중 일부가 포함되지 않았거나 릴리스 품질이 아닙니다. 
+**특히, 이 Preview의 시스템 성능은 최종 릴리스의 시스템 성능을 반영하지 않습니다.**
 
-다음 목록에는 이 릴리스에서 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있지만 전체 목록은 아닙니다. 
+다음 목록에는 이 릴리스에서 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
 **피드백을 받고 싶으니**, [유니버설 Windows 앱 개발](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) 포럼에서 발견된 문제를 모두 신고해 주세요. 
 
-난관에 봉착한 경우 포럼 및 [질문과 대답](frequently-asked-questions.md)을 확인하고 포럼을 통해 도움을 요청하세요.
+문제가 있으면 이 항목의 내용을 살펴보고, [질문과 대답](frequently-asked-questions.md)을 확인하고, 포럼을 통해 도움을 요청하세요.
 
 
 ## 게임 개발
@@ -36,8 +42,12 @@ x86을 사용하려는 경우 발견된 문제를 포럼에서 신고하세요.
 ### 게임 엔진
 
 일부 인기 있는 게임 엔진을 테스트했지만 모두 테스트한 것은 아니며, 이 Preview에 대한 테스트 검사는 포괄적이지 않았습니다. 
-사용자 진행 정도는 각기 다를 수 있습니다. 
-발견한 사항에 대한 피드백을 받고 싶습니다. 
+개발자마다 개발 진행률이 다를 수 있습니다. 
+
+다음 게임 엔진 작동이 확인되었습니다.
+* [Construct 2](https://www.scirra.com/)
+
+이외에도 작동 중인 엔진이 있습니다. 발견한 사항에 대한 피드백을 받고 싶습니다. 
 포럼을 통해 발견된 문제를 모두 신고해 주세요.
 
 ### DirectX 12 지원
@@ -45,8 +55,27 @@ x86을 사용하려는 경우 발견된 문제를 포럼에서 신고하세요.
 Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 
 지금은 DirectX 12가 지원되지 않습니다. 
 기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. 
-Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임에서 작업하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
+Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
 
+### Xbox One Developer Preview에서는 Windows 10으로 게임을 스트리밍 할 수 없습니다.
+
+콘솔에서 Xbox One Developer Preview를 활성화하면 콘솔이 정품 모드로 설정되어 있어도 Xbox One에서 Windows 10의 Xbox 앱으로 게임을 스트리밍하지 못하게 됩니다. 게임 스트리밍 기능을 복원하려면 Developer Preview를 종료해야 합니다.
+
+### TV에 적합한 영역의 알려진 문제
+
+기본적으로 Xbox에서 UWP 앱의 디스플레이 영역은 TV에 적합한 영역으로 음각 처리되어야 합니다. 그러나 Xbox One Developer Preview에는 알려진 버그가 있어 TV에 적합한 영역이 [_오프셋_, _오프셋_]이 아니라 [0, 0]에서 시작됩니다.
+
+TV에 적합한 영역에 대한 자세한 내용은 [https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv)를 참조하세요. 
+
+이 문제를 해결하는 가장 쉬운 방법은 다음 JavaScript 예제와 같이 TV에 적합한 영역을 사용하지 않도록 설정하는 것입니다.
+
+    var applicationView = Windows.UI.ViewManagement.ApplicationView.getForCurrentView();
+
+    applicationView.setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
+
+### 마우스 모드가 아직 지원되지 않음
+
+Xbox One Developer Preview에서는 [https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv] (https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&amp;MSPPError=-2147217396#mouse-mode)에서 설명한 _마우스 모드_ 기능이 아직 지원되지 않습니다.
 
 ## Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
@@ -63,8 +92,8 @@ Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 �
 
 ## UWP API 검사
 
-일부 UWP API는 이 Preview의 Xbox에서 의도 대로 작동하지 않습니다. 
-작동하지 않는 것으로 알려진 API 목록은 [Xbox의 UWP 디바이스 패밀리 기능 영역 제한](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 
+일부 UWP API는 이 Preview의 Xbox에서 의도대로 작동하지 않습니다. 
+작동하지 않는다고 나타나는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 
 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
 ## XAML 컨트롤이 Xbox One 셸의 컨트롤처럼 표시 또는 동작하지 않음
@@ -86,7 +115,7 @@ Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 �
 
 이 문제가 발생할 경우 일반적으로 Xbox One의 컬렉션 앱에서 해당 앱을 제거하면 문제가 해결됩니다.
 
-> **참고**&nbsp;&nbsp;WDP(Windows Device Portal)에서 앱을 제거해도 문제가 해결되지 않습니다.
+> **참고** &nbsp;&nbsp;WDP(Windows Device Portal)에서 앱을 제거해도 문제가 해결되지 않습니다.
 
 문제가 지속되면 컬렉션 앱의 앱 또는 게임을 제거하고 개발자 모드를 종료하고 정품 모드로 다시 시작한 다음 개발자 모드로 다시 전환합니다.
 
@@ -116,11 +145,11 @@ Xbox One을 다시 시작하여 WDP를 시작할 수 있습니다.
 개발자 홈에서 WDP를 사용하지 않도록 설정할 경우 WDP가 꺼집니다. 
 그러나 Xbox One을 다시 시작하면 WDP가 다시 시작됩니다. 
 **내 게임 및 앱 다시 설정 및 유지**를 사용하여 Xbox One의 저장된 상태를 모두 삭제하면 이 문제를 해결할 수 있습니다. 
-설정 > 시스템 > 콘솔 정보 및 업데이트 > 콘솔 다시 설정으로 이동한 다음 **내 게임 및 앱 다시 설정 및 유지** 단추를 선택합니다.
+설정 &gt; 시스템 &gt; 콘솔 정보 및 업데이트 &gt; 콘솔 다시 설정으로 이동한 다음 **내 게임 및 앱 다시 설정 및 유지** 단추를 선택합니다.
 
-> **주의**&nbsp;&nbsp;이렇게 하면 클라우드 저장소에 저장되지 않은 무선 설정, 사용자 계정 및 모든 게임 진행 상황을 포함하여 Xbox One에서 저장된 모든 설정이 삭제됩니다.
+> **주의** &nbsp;&nbsp;이렇게 하면 클라우드 저장소에 저장되지 않은 게임 진행 상황을 비롯하여 무선 설정, 사용자 계정 등 Xbox One에서 저장된 모든 설정이 삭제됩니다.
 
-> **주의**&nbsp;&nbsp;**다시 설정 및 모두 제거** 단추를 선택하지 마세요.
+> **주의** &nbsp;&nbsp;**다시 설정 및 모두 제거 단추**를 선택하지 마세요.
 선택하면 모든 게임, 앱, 설정 및 콘텐츠가 삭제되고 개발자 모드가 비활성화되며 Developer Preview 그룹에서 콘솔이 제거됩니다.
 
 ### "실행 중인 앱" 테이블의 열이 예상대로 업데이트되지 않음 
@@ -134,13 +163,13 @@ WDP에 대해 Internet Explorer 11의 호환성 보기를 끄면 이 문제를 �
 
 ### WDP로 이동하면 인증서 경고가 표시됨
 
-Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 
-제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. 
+Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. 
 "이 웹 사이트를 계속 탐색합니다"를 클릭하여 Windows Device Portal에 액세스합니다.
 
 ![웹 사이트 보안 인증서 경고](images/security_cert_warning.jpg)
 
 ## 개발자 홈
+
 경우에 따라 개발자 홈에서 "Windows Device Portal 관리" 옵션을 선택하면 개발자 홈이 자동으로 홈 화면으로 종료됩니다. 
 이 문제는 콘솔의 WDP 인프라 오류로 인해 발생하며 콘솔을 다시 시작하면 해결할 수 있습니다.
 
@@ -149,6 +178,6 @@ Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

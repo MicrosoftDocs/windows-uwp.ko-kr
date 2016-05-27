@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Xbox 개발 환경에서의 UWP 설정
 description: Xbox 개발 환경에서의 UWP 설정 및 테스트 단계
 area: Xbox
@@ -24,7 +25,7 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
 Windows 10 SDK Preview 빌드 14295를 설치합니다. 설치 정보는 [개발자용 Insider Preview 업데이트 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=780552)를 참조하세요.
 
-  > **중요**&nbsp;&nbsp;최신 SDK를 설치해야 하지만 운영 체제는 최신 Windows Insider Preview 버전을 설치하지 _않아도_ 됩니다.
+  > **중요** &nbsp;&nbsp;최신 SDK를 설치해야 하지만 운영 체제는 최신 Windows Insider Preview 버전을 설치하지 _않아도_ 됩니다.
 
 ## 첫 번째 응용 프로그램 만들기
 
@@ -49,7 +50,7 @@ Windows 10 SDK Preview 빌드 14295를 설치합니다. 설치 정보는 [개발
   1. **원격 컴퓨터**에 시스템 IP 주소 또는 Xbox One 콘솔의 호스트 이름을 입력합니다. IP 주소 또는 호스트 이름을 얻는 방법에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
   1. **인증 모드** 드롭다운 목록에서 **유니버설(암호화되지 않은 프로토콜)**을 선택합니다.
 
-    ![C# BlankApp Property Pages](images/vs_remote.jpg)
+    ![C# BlankApp 속성 페이지](images/vs_remote.jpg)
 
 ### C++ 프로젝트 시작
 
@@ -77,11 +78,11 @@ Windows 10 SDK Preview 빌드 14295를 설치합니다. 설치 정보는 [개발
   1. PIN을 얻으려면 Xbox One 콘솔의 홈 화면에서 **개발자 홈**을 엽니다.
   1. **Visual Studio와 페어링**을 선택합니다.
 
-    ![Pair with Visual Studio dialog](images/devhome_visualstudio.png)
+    ![Visual Studio와 페어링 대화 상자](images/devhome_visualstudio.png)
 
   1. **Visual Studio와 페어링** 대화 상자에 PIN을 입력합니다. 다음 PIN은 예시일 뿐이며, 사용자에 따라 다릅니다.
 
-    ![Pair with Visual Studio PIN dialog](images/devhome_pin.png)
+    ![Visual Studio PIN과 페어링 대화 상자](images/devhome_pin.png)
 
   1. 배포 오류가 있는 경우 **출력** 창에 나타납니다.
 
@@ -99,6 +100,6 @@ Windows 10 SDK Preview 빌드 14295를 설치합니다. 설치 정보는 [개발
 ----
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Xbox One의 UWP
 description: Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱을 빌드하는 방법
 area: Xbox
@@ -21,17 +22,18 @@ Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱의 빌드를 시작합
 |[Xbox One 도구 소개](introduction-to-xbox-tools.md)| Xbox One 특정 도구인 _개발자 홈_, Windows Device Portal 사용 방법 및 개발을 위한 Visual Studio 설정 방법을 설명하고 새 개발자에게 첫 번째 Xbox UWP 응용 프로그램을 안내합니다. |
 |[Xbox 개발 환경에서의 UWP 설정](development-environment-setup.md)| Xbox One 개발 환경을 설정하고 테스트하는 단계를 설명합니다. |
 |[Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스](system-resource-allocation.md)| Xbox One에서 실행할 때 응용 프로그램에서 사용할 수 있는 리소스를 설명합니다. | 
-|[10피트 디자인 지침](..\input-and-devices\designing-for-tv.md)| TV에서 표시되고 컨트롤러를 입력에 사용하는 앱을 디자인하는 모범 사례를 설명합니다. |  
+|[Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkID=760736)| TV에 표시되고 컨트롤러를 입력에 사용하는 앱을 디자인하는 모범 사례를 설명합니다. |  
 |[다중 사용자 응용 프로그램 소개](multi-user-applications.md)| Xbox One의 MUA(다중 사용자 응용 프로그램)에 대해 설명합니다. |
 |[샘플](samples.md)| Xbox용 개발을 시작하는 데 유용한 XAML 및 JavaScript 샘플이 있는 github 위치(TVHelpers)에 대한 포인터입니다. 샘플에는 전체 XAML 미디어 앱 템플릿, 자동 컨트롤러 탐색, 리치 미디어 재생 및 웹 기반 기술 검색이 포함됩니다. |
 |[Xbox One에서 개발자 모드 사용 안 함](devkit-deactivation.md)| Xbox One에서 개발자 모드를 사용하지 않도록 설정하는 방법을 설명합니다. |
 |[Xbox One에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkId=760755)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|  
 
 ## 참고 항목
-- [Xbox One의 UWP 앱 개요](http://go.microsoft.com/fwlink/?LinkId=780786)  
+- [Xbox One의 UWP 앱 개요](http://go.microsoft.com/fwlink/?LinkId=780786) 
+- [Windows 10 UWP 앱 시작 자동화](automate-launching-uwp-apps.md)
   
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

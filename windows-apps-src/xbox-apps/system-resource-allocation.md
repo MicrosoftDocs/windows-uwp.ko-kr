@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 description: Xbox의 UWP 시스템 리소스
 area: Xbox
@@ -21,12 +22,10 @@ Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 �
 
 **응용 프로그램 개발**의 경우 사용 가능한 리소스가 표준 PC에 비해 제한될 수 있다는 것에 유의해야 합니다.
 
-**게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 
-전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어라는 것에 유의해야 합니다. 
-Xbox One 하드웨어의 최대 잠재력에 액세스해야 하는 게임에서 작업하는 경우 
-[ID@Xbox](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록하여 DirectX 12 지원을 포함하는 Xbox One 개발 키트에 액세스할 수 있습니다.
+**게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어라는 것에 유의해야 합니다. 
+Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 Xbox One 개발 키트에 액세스하기 위해 [ID@Xbox](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

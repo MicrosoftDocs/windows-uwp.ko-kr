@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Xbox One에서 UWP 앱 개발 시작
 description: UWP 개발에 대해 PC 및 Xbox One을 설정하는 방법
 area: Xbox
@@ -21,16 +22,16 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 
 2.  Windows 10 SDK Preview 빌드 14295를 설치합니다. 이 빌드는 [Windows 참가자 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=780552)에서 다운로드할 수 있습니다.
   
-  > **중요**&nbsp;&nbsp;이 Preview SDK를 PC에 설치하면 이 PC에서 빌드된 앱을 스토어에 제출할 수 없으므로 프로덕션 개발 PC에는 설치하지 마세요. 
+  > **중요** &nbsp;&nbsp;이 Preview SDK를 PC에 설치하면 이 PC에서 빌드된 앱을 스토어에 제출할 수 없으므로 프로덕션 개발 PC에는 설치하지 마세요. 
 
 ## Xbox One 콘솔 설정
 1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드하고, 활성화 코드를 가져온 다음 개발자 센터 계정의 xboxactivate 페이지에 입력합니다. 자세한 내용은 [Xbox One에서 개발자 모드 사용](devkit-activation.md)을 참조하세요. 
 
 2.  Developer Preview를 실행하도록 Xbox One이 시스템 업데이트를 다운로드할 때까지 기다립니다. 이 작업은 최대 4시간이 걸릴 수 있습니다. 기다리지 않으려면 전원 단추를 10초 동안 길게 눌렀다가 다시 켜서 콘솔을 "하드" 재부팅합니다. 업데이트가 트리거됩니다.  
 
-3.  개발자 모드 활성화 앱으로 이동한 다음 **전환 후 다시 시작**을 선택합니다. 축하합니다. 이제 개발자 모드의 Xbox One입니다.
+3.  개발자 모드 활성화 앱으로 이동한 다음 **전환 후 다시 시작**을 선택합니다. 축하합니다. 이제 개발자 모드의 Xbox One을 사용할 수 있습니다.
   
-  > **참고**&nbsp;&nbsp;정품 게임과 앱은 개발자 모드에서 실행되지 않지만 직접 만든 앱이나 게임은 실행됩니다. 좋아하는 게임과 앱을 실행하려면 다시 정품 모드로 전환합니다.
+  > **참고** &nbsp;&nbsp;정품 게임과 앱은 개발자 모드에서 실행되지 않지만 직접 만든 앱이나 게임은 실행됩니다. 좋아하는 게임과 앱을 실행하려면 다시 정품 모드로 전환합니다.
 
 ## Visual Studio 2015에서 첫 번째 프로젝트 만들기
 
@@ -58,6 +59,6 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

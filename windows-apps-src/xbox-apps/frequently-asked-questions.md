@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: 질문과 대답
 description: Xbox의 UWP에 대한 FAQ입니다.
 area: Xbox
@@ -43,25 +44,25 @@ area: Xbox
 예, 개발자 모드에서 게임을 플레이할 수 있는 정품 모드로 전환할 수 있습니다. 
 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md) 페이지를 참조하세요. 
 
-> **주의**&nbsp;&nbsp;Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 
+> **주의** &nbsp;&nbsp;Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 
 즉, 일부 인기 많은 게임과 앱이 예상대로 작동하지 않고 경우에 따라 크래시 및 데이터 손실이 발생할 수 있습니다.
 
 ### 게임과 앱 또는 저장된 변경 내용이 손실되나요?
 
-개발자 미리 보기 프로그램을 종료하려는 경우 초기화를 수행해야 할 수 있으며 이렇게 하면 콘솔의 모든 콘텐츠가 지워집니다. 
+Developer Preview 프로그램을 종료하려는 경우 초기화를 수행해야 할 수 있으며 이렇게 하면 콘솔의 모든 콘텐츠가 지워집니다. 
 이 경우 모든 게임과 앱을 다시 설치해야 합니다. 
 온라인 상태에서 플레이한 경우에는 저장된 게임이 Live 계정 클라우드 프로필에 모두 저장되므로 손실되지 않습니다.
 
-### 개발자 미리 보기는 어떻게 종료하나요?
+### Developer Preview는 어떻게 종료하나요?
 
-개발자 미리 보기를 종료하는 방법에 대한 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md) 항목을 참조하세요.
+Developer Preview를 종료하는 방법에 대한 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md) 항목을 참조하세요.
 
 ### Xbox One을 팔고 개발자 모드에서 종료했습니다. 개발자 모드를 비활성화하는 방법은 무엇인가요?
 
 Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터에서 비활성화할 수 있습니다. 
 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-through-windows-dev-center) 항목의 **Windows 개발자 센터를 사용하여 콘솔 비활성화** 섹션을 참조하세요.
 
-### Windows 개발자 센터를 사용하여 개발자 미리 보기를 종료했지만 개발자 모드에 계속 있습니다. 어떻게 해야 하나요?
+### Windows 개발자 센터를 사용하여 Developer Preview를 종료했지만 개발자 모드에 계속 있습니다. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 
 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
@@ -75,9 +76,8 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. 
 UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/en-us/Developers/id)에 등록해야 합니다. 
-[ID@XBOX](http://www.xbox.com/en-us/Developers/id)는 개발자에게 게이머 점수와 도전 과제 등 해당 게임용 Xbox Live API에 대한 모든 권한과 
-디바이스 간 멀티플레이어, 클라우드 저장 및 Xbox One에서 Xbox Live의 모든 기능을 활용할 수 있는 기능을 제공합니다. 
-[ID@XBOX](http://www.xbox.com/en-us/Developers/id)는 최대로 잠재적인 Xbox One 하드웨어에 액세스해야 하는 게임을 위한 Xbox One 개발자 키트에 대한 액세스도 제공할 수 있습니다.
+[ID@XBOX](http://www.xbox.com/en-us/Developers/id)는 개발자에게 게이머 점수와 도전 과제 등 게임용 Xbox Live API에 대한 모든 권한을 제공하며 디바이스 간 멀티플레이어, 클라우드 저장, Xbox One에서 Xbox Live의 모든 기능을 활용하도록 해 줍니다. 
+[ID@XBOX](http://www.xbox.com/en-us/Developers/id)를 통해 Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 위한 Xbox One 개발자 키트에 액세스할 수도 있습니다.
 
 ### 표준 게임 엔진이 작동하나요?
 
@@ -119,17 +119,17 @@ Visual Studio는 연결할 수 있지만 배포가 실패하는 경우(예: 오�
 
 1. Xbox One 셸의 컬렉션 앱에서 앱을 제거하여 설치되지 않았는지 확인합니다. 
 
-> **참고**&nbsp;&nbsp;WDP(Windows Device Portal)에서 앱을 제거해도 문제가 해결되지 않습니다.
+> **참고** &nbsp;&nbsp;WDP(Windows Device Portal)에서 앱을 제거해도 문제가 해결되지 않습니다.
 
 2. 문제가 지속되면 컬렉션 앱의 앱 또는 게임을 제거하고 개발자 모드를 종료하고 정품 모드로 다시 시작한 다음 개발자 모드로 다시 전환합니다. 
 이렇게 하면 개발자 저장소가 지워집니다.
 
-3. 문제가 지속되면 위의 단계를 수행한 다음 **Reset and keep my games & apps(내 게임 및 앱 다시 설정 및 유지)**를 사용하여 Xbox One의 모든 저장된 상태를 삭제합니다. 
-설정 > 시스템 > 콘솔 정보 및 업데이트(Console info & updates) > 콘솔 다시 설정 이동하여 **Reset and keep my games & apps(내 게임 및 앱 다시 설정 및 유지)** 단추를 선택합니다.
+3. 문제가 지속되면 위의 단계를 수행한 다음 **Reset and keep my games &amp; apps(내 게임 및 앱 다시 설정 및 유지)**를 사용하여 Xbox One의 모든 저장된 상태를 삭제합니다. 
+설정 &gt; 시스템 &gt; 콘솔 정보 및 업데이트(Console info &amp; updates) &gt; 콘솔 다시 설정 이동하여 **Reset and keep my games &amp; apps(내 게임 및 앱 다시 설정 및 유지)** 단추를 선택합니다.
 
-> **주의**&nbsp;&nbsp;이렇게 하면 클라우드 저장소에 저장되지 않은 무선 설정, 사용자 계정 및 모든 게임 진행 상황을 포함하여 Xbox One에서 저장된 모든 설정이 삭제됩니다.
+> **주의** &nbsp;&nbsp;이렇게 하면 클라우드 저장소에 저장되지 않은 게임 진행 상황을 비롯하여 무선 설정, 사용자 계정 등 Xbox One에서 저장된 모든 설정이 삭제됩니다.
 
-> **주의**&nbsp;&nbsp;**다시 설정 및 모두 제거** 단추를 선택하지 마세요.
+> **주의** &nbsp;&nbsp;**다시 설정 및 모두 제거 단추**를 선택하지 마세요.
 선택하면 모든 게임, 앱, 설정 및 콘텐츠가 삭제되고 개발자 모드가 비활성화되며 Developer Preview 그룹에서 콘솔이 제거됩니다.
 
 ### HTML/JavaScript를 사용하여 앱을 빌드하는 경우 게임 패드 탐색을 사용하도록 설정하는 방법은 무엇인가요?
@@ -145,6 +145,6 @@ Windows 런타임 API에 대한 모든 권한으로 패키지에 포함된 웹 U
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

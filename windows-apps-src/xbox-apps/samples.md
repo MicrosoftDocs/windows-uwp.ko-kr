@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Xbox One의 UWP 샘플
 description: 좋은 Xbox One 및 TV 환경을 빌드하는 데 도움이 되는 샘플 및 라이브러리입니다.
 area: Xbox
@@ -15,6 +16,6 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
