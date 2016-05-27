@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 380
+ Total Files | 386
 
 ## File List
  Source File | Status | Details 
@@ -386,6 +386,12 @@
  [windows-apps-src\monetize\workflows-for-creating-apps-with-ads.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/workflows-for-creating-apps-with-ads.md) | InSyncHandedBackSuccess | [Details](#69dd1a17290b7ffbc14dbc58404868119403f7c03341)
  [windows-apps-src\monetize\xaml-and-c-troubleshooting-guide.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-and-c-troubleshooting-guide.md) | InSyncHandedBackSuccess | [Details](#ef9ad8f8056b17793d7ad8230e410e014edf2c953342)
  [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-properties-example.md) | InSyncHandedBackSuccess | [Details](#43d579d2d0a92a8f03f17efa2ec42707357e99f93343)
+ [windows-apps-src\networking\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/index.md) | InSyncHandedBackSuccess | [Details](#df62edbf63777a8fcec4ab08c1fb56ab76ea66243350)
+ [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps/blob/4557fa59d377edc2ae5bf5a9be63516d152949bb/windows-apps-src/networking/sockets.md) | InSyncHandedBackSuccess | [Details](#432d9849335c537836fd23a4cd95c79c51bc881d3353)
+ [windows-apps-src\networking\tagging_network_connections_with_edp_identity.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/tagging_network_connections_with_edp_identity.md) | InSyncHandedBackSuccess | [Details](#2b960bbb5cf58991778e5c20bb915a202ecf6e043354)
+ [windows-apps-src\networking\web-feeds.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/networking/web-feeds.md) | InSyncHandedBackSuccess | [Details](#625a18203bd2d60acc97a6243d4f3e1e0cf2b2973355)
+ [windows-apps-src\networking\websockets.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/websockets.md) | InSyncHandedBackSuccess | [Details](#7e9ee140914718ce71357ba8ecaf10116949b87b3356)
+ [windows-apps-src\networking\which-networking-technology.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/which-networking-technology.md) | InSyncHandedBackSuccess | [Details](#d2f7a4a2bd0f94c4923b33fbd62a8b2ff6eddd653357)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -4946,6 +4952,78 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7d655db83b65eb88bf8f23cb47e93bc45f7ee0e4/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:35:18
+* [Back to Top](#report-top)
+
+##### <a name='df62edbf63777a8fcec4ab08c1fb56ab76ea66243350'></a> Source: [windows-apps-src\networking\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/index.md)
+* Handoff File: [index.6d08851d304e7ceee3e49eb65f0a60d7c6ef4302.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.6d08851d304e7ceee3e49eb65f0a60d7c6ef4302.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.6d08851d304e7ceee3e49eb65f0a60d7c6ef4302.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/index.6d08851d304e7ceee3e49eb65f0a60d7c6ef4302.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
+* [Back to Top](#report-top)
+
+##### <a name='432d9849335c537836fd23a4cd95c79c51bc881d3353'></a> Source: [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps/blob/4557fa59d377edc2ae5bf5a9be63516d152949bb/windows-apps-src/networking/sockets.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\sockets.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/sockets.md)
+* Handoff File: [sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/sockets.1d46eeae959ead85cf0827c0322c9176e8740a93.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
+* [Back to Top](#report-top)
+
+##### <a name='2b960bbb5cf58991778e5c20bb915a202ecf6e043354'></a> Source: [windows-apps-src\networking\tagging_network_connections_with_edp_identity.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/tagging_network_connections_with_edp_identity.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\tagging_network_connections_with_edp_identity.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/tagging_network_connections_with_edp_identity.md)
+* Handoff File: [tagging_network_connections_with_edp_identity.02012dd69c1ca59401c6ecf14a60151f9a41a979.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/tagging_network_connections_with_edp_identity.02012dd69c1ca59401c6ecf14a60151f9a41a979.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [tagging_network_connections_with_edp_identity.02012dd69c1ca59401c6ecf14a60151f9a41a979.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/tagging_network_connections_with_edp_identity.02012dd69c1ca59401c6ecf14a60151f9a41a979.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
+* [Back to Top](#report-top)
+
+##### <a name='625a18203bd2d60acc97a6243d4f3e1e0cf2b2973355'></a> Source: [windows-apps-src\networking\web-feeds.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/networking/web-feeds.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\web-feeds.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/web-feeds.md)
+* Handoff File: [web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/web-feeds.e2cccce4e3e0e7a28161cea77d8850ae5888f82c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
+* [Back to Top](#report-top)
+
+##### <a name='7e9ee140914718ce71357ba8ecaf10116949b87b3356'></a> Source: [windows-apps-src\networking\websockets.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/websockets.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\websockets.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/websockets.md)
+* Handoff File: [websockets.db78d3487abb889cd595e917ef5a96f0484317ac.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/websockets.db78d3487abb889cd595e917ef5a96f0484317ac.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [websockets.db78d3487abb889cd595e917ef5a96f0484317ac.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/websockets.db78d3487abb889cd595e917ef5a96f0484317ac.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
+* [Back to Top](#report-top)
+
+##### <a name='d2f7a4a2bd0f94c4923b33fbd62a8b2ff6eddd653357'></a> Source: [windows-apps-src\networking\which-networking-technology.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/networking/which-networking-technology.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\networking\which-networking-technology.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b19f4fa904ce83a8ab1f32a9d52158d8a35aa749/windows-apps-src/networking/which-networking-technology.md)
+* Handoff File: [which-networking-technology.bee564cf29cf0c4ee0b51e6199c54cb19addb93d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/which-networking-technology.bee564cf29cf0c4ee0b51e6199c54cb19addb93d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [which-networking-technology.bee564cf29cf0c4ee0b51e6199c54cb19addb93d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3dcbbbef06317e47aba7b36593d6bc6b1fa7f2ae/ol-handback/Microsoft/windows-apps.ko-kr/master/networking/which-networking-technology.bee564cf29cf0c4ee0b51e6199c54cb19addb93d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:35:25
 * [Back to Top](#report-top)
 
 
