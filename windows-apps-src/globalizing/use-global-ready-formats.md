@@ -1,15 +1,16 @@
 ---
+author: DelfCo
 Description: 날짜, 시간, 숫자 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다.
 title: 세계화를 대비한 형식 사용
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
-label: 세계화를 대비한 형식 사용
+label: Use global-ready formats
 template: detail.hbs
 ---
 
-# <span id="dev_globalizing.use_global-ready_formats"> </span>세계화를 대비한 형식 사용
+# <span id="dev_globalizing.use_global-ready_formats"></span>세계화를 대비한 형식 사용
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 **중요 API**
@@ -20,18 +21,18 @@ template: detail.hbs
 
 날짜, 시간, 숫자 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다. 그러면 나중에 다른 문화, 지역 및 언어에 대해서도 조정할 수 있습니다.
 
-## <span id="Introduction"> </span> <span id="introduction"> </span> <span id="INTRODUCTION"> </span>소개
+## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>소개
 
 
 많은 앱 개발자들은 기본적으로 자신의 언어 및 문화만을 고려하여 앱을 만듭니다. 그러나 앱이 다른 시장으로 확대되면 새 언어 및 지역에 맞게 앱을 조정하는 것이 예상치 않게 어려울 수 있습니다. 예를 들어 날짜, 시간, 숫자, 달력, 통화, 전화 번호, 측정 단위 및 용지 크기는 문화 또는 언어마다 다르게 표시될 수 있는 항목입니다.
 
 앱을 개발할 때 몇 가지 사항만 고려하면 간단한 절차를 통해 새로운 지역/국가에 맞게 조정할 수 있습니다.
 
-## <span id="Prerequisites"> </span> <span id="prerequisites"> </span> <span id="PREREQUISITES"> </span>필수 조건
+## <span id="Prerequisites"></span><span id="prerequisites"></span><span id="PREREQUISITES"></span>사전 요구 사항
 
 
 [세계 시장에 대한 계획](https://msdn.microsoft.com/library/windows/apps/hh465405)
-## <span id="Tasks"> </span> <span id="tasks"> </span> <span id="TASKS"> </span>작업
+## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>작업
 
 
 1.  **날짜 및 시간의 형식을 적절하게 지정합니다.**
@@ -118,7 +119,7 @@ template: detail.hbs
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -150,7 +151,7 @@ template: detail.hbs
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -165,7 +166,7 @@ template: detail.hbs
 
     사용자의 언어, 지역 또는 문화 기본 설정에 따라 다른 기능을 제공하는 시나리오의 경우 Windows는 [**Windows.System.UserProfile.GlobalizationPreferences**](https://msdn.microsoft.com/library/windows/apps/br241825)를 통해 이러한 기본 설정에 액세스할 수 있는 방법을 제공합니다. 필요한 경우 **GlobalizationPreferences** 클래스를 사용하여 사용자의 현재 지역, 기본 설정 언어, 기본 설정 통화 등의 값을 가져옵니다.
 
-## <span id="related_topics"> </span>관련 항목
+## <span id="related_topics"></span>관련 항목
 
 
 * [세계 시장에 대한 계획](https://msdn.microsoft.com/library/windows/apps/hh465405)
@@ -190,6 +191,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: 앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.
 Search.Refinement.TopicID: 180
 title: 세계화 및 지역화에 대한 지침
@@ -10,7 +11,7 @@ template: detail.hbs
 # 세계화 및 지역화 권장 사항 및 금지 사항
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 **중요 API**
@@ -25,9 +26,9 @@ template: detail.hbs
 
 
 
-## <span id="guidelines_for_internationalization"> </span> <span id="GUIDELINES_FOR_INTERNATIONALIZATION"> </span>세계화
+## <span id="guidelines_for_internationalization"></span><span id="GUIDELINES_FOR_INTERNATIONALIZATION"></span>세계화
 
-UI에 적합한 포괄적 조건과 이미지를 선택하고, [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) API를 사용하여 앱 데이터의 서식을 지정하고, 위치 또는 언어를 기반으로 가정하는 것을 피하여 앱을 시장에 따라 쉽게 조정할 수 있도록 준비하세요.
+UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) API를 사용하여 앱 데이터의 서식을 지정하고, 위치 또는 언어를 기반으로 가정하는 것을 피하여 앱을 시장에 따라 쉽게 조정할 수 있도록 준비하세요.
 
 <table>
 <colgroup>
@@ -85,7 +86,7 @@ UI에 적합한 포괄적 조건과 이미지를 선택하고, [**Globalization*
 </tr>
 <tr class="odd">
 <td align="left"><p>맵에서나 종교를 말할 때 정치적으로 불쾌할 수 있는 단어를 피하세요.</p></td>
-<td align="left"><p>맵은 분쟁 지역이나 국경을 포함할 수 있으므로 정치적으로 불쾌함을 주기가 쉽습니다. 따라서 나라를 선택하는 데 사용되는 모든 UI에서 나라를 &quot국가/지역&quot;으로 나타내야 합니다. 주소 양식 등에서 분쟁 지역을 &quot;국가&quot; 목록에 넣을 경우 문제가 발생할 수 있습니다.</p></td>
+<td align="left"><p>맵은 분쟁 지역이나 국경을 포함할 수 있으므로 정치적으로 불쾌함을 주기가 쉽습니다. 따라서 나라를 선택하는 데 사용되는 모든 UI에서 나라를 &quot;국가/지역&quot;으로 나타내야 합니다. 주소 양식 등에서 분쟁 지역을 &quot;국가&quot; 목록에 넣을 경우 문제가 발생할 수 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>직접적인 문자열 비교를 사용하여 언어 태그를 비교하지 마세요.</p></td>
@@ -101,7 +102,7 @@ UI에 적합한 포괄적 조건과 이미지를 선택하고, [**Globalization*
 
  
 
-## <span id="guidelines_for_localization"> </span> <span id="GUIDELINES_FOR_LOCALIZATION"> </span>지역화
+## <span id="guidelines_for_localization"></span><span id="GUIDELINES_FOR_LOCALIZATION"></span>지역화
 
 <table>
 <colgroup>
@@ -173,7 +174,7 @@ UI에 적합한 포괄적 조건과 이미지를 선택하고, [**Globalization*
 
  
 
-## <span id="related_topics"> </span>관련 문서
+## <span id="related_topics"></span>관련 문서
 
 
 **샘플**
@@ -187,6 +188,6 @@ UI에 적합한 포괄적 조건과 이미지를 선택하고, [**Globalization*
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 
