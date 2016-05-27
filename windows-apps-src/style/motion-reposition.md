@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 위치 변경 애니메이션은 요소를 새 위치로 이동하는 데 사용합니다.
 title: UWP 앱의 위치 변경 애니메이션
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
@@ -9,7 +10,7 @@ template: detail.hbs
 # 위치 변경 애니메이션
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 위치 변경 애니메이션은 요소를 새 위치로 이동하는 데 사용합니다.
 
@@ -43,6 +44,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

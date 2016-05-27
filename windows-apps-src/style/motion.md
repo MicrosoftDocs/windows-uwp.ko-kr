@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 title: UWP 앱의 동작 및 애니메이션
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
@@ -10,7 +11,7 @@ template: detail.hbs
 
 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 
-## <span id="Benefits_of_animation"> </span> <span id="benefits_of_animation"> </span> <span id="BENEFITS_OF_ANIMATION"> </span>애니메이션의 이점
+## <span id="Benefits_of_animation"></span><span id="benefits_of_animation"></span><span id="BENEFITS_OF_ANIMATION"></span>애니메이션의 이점
 
 
 애니메이션은 사물이 이동하도록 만드는 것에 그치지 않습니다. 애니메이션은 사용자가 내부에 존재하면서 터치를 통해 조작할 수 있는 물리적인 에코시스템을 만들기 위한 도구입니다. 경험의 질은 사용자에 대한 앱 응답성 정도, UI가 통신하는 특성의 종류 등에 따라 달라집니다.
@@ -43,7 +44,7 @@ template: detail.hbs
 
     애니메이션을 사용하여 사용자에게 휴대폰이 동결 상태가 아니라 처리 중이라는 것을 알릴 수 있으며 휴대폰이 사용자가 관심을 가질 만한 새 정보를 수동적으로 노출할 수 있습니다.
 
-<h2>이 섹션의 내용</h2>
+## 이 섹션의 내용
 <table>
 <thead>
 <tr class="header">
@@ -53,43 +54,43 @@ template: detail.hbs
 </thead>
 <tbody>
     <tr>
-        <td>[Add and delete](motion-list.md)
+        <td>[추가 및 삭제](motion-list.md)
         </td>
         <td>목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
         </td>
     </tr> 
     <tr>
-        <td>[Drag and drop](motion-dragdrop.md)
+        <td>[끌어서 놓기](motion-dragdrop.md)
         </td>
         <td>끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
         </td>
     </tr>
     <tr>
-        <td>[Edge](motion-edgebased.md)
+        <td>[에지](motion-edgebased.md)
         </td>
         <td>가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱에 오버레이하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 화면의 일부일 경우 나머지 앱 화면은 UI를 포함하도록 크기를 조정해야 합니다.
         </td>
     </tr>   
     <tr>
-        <td>[Fade](motion-fade.md)
+        <td>[투명](motion-fade.md)
         </td>
         <td>항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
         </td>
     </tr>   
     <tr>
-        <td>[Pointer](motion-pointer.md)
+        <td>[포인터](motion-pointer.md)
         </td>
         <td>포인터 애니메이션은 사용자가 항목을 탭할 때 사용자에게 시각적 피드백을 제공합니다. 포인터 아래로 애니메이션은 눌린 항목을 약간 축소하고 기울이며 항목을 처음 탭할 때 재생됩니다. 포인터 위로 애니메이션은 항목을 원래 위치로 복원하며 사용자가 포인터를 놓을 때 재생됩니다.
         </td>
     </tr>   
     <tr>
-        <td>[Pop-up animations](motion-popup-animations.md)
+        <td>[팝업 애니메이션](motion-popup-animations.md)
         </td>
         <td>플라이아웃의 팝업 UI 또는 사용자 지정 팝업 UI 요소를 표시하고 숨기려면 팝업 애니메이션을 사용합니다. 팝업 요소는 앱 콘텐츠 위에 나타났다가 사용자가 팝업 요소 외부를 탭하거나 클릭할 때 해제되는 컨테이너입니다.
         </td>
     </tr>     
     <tr>
-        <td>[Reposition](motion-reposition.md)
+        <td>[위치 변경](motion-reposition.md)
         </td>
         <td>요소를 새 위치로 이동합니다.
         </td>
@@ -109,6 +110,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

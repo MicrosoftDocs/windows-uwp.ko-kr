@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 title: 콘텐츠 전환 애니메이션에 대한 지침
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
@@ -7,7 +8,7 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 # 콘텐츠 전환 애니메이션
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 
 **중요 API**
@@ -17,7 +18,7 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 
 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 
-## <span id="Recommendations"> </span> <span id="recommendations"> </span> <span id="RECOMMENDATIONS"> </span>권장 사항 및 금지 사항
+## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>권장 사항 및 금지 사항
 
 
 -   빈 컨테이너에 넣을 새 항목 집합이 있을 때 시작 애니메이션을 사용하세요. 예를 들어, 앱을 최초로 로드한 다음 앱의 콘텐츠 중 일부를 즉시 표시할 수 없는 경우도 있습니다. 콘텐츠가 표시할 수 있게 되면 콘텐츠 전환 애니메이션을 사용하여 그 최신 콘텐츠를 보기로 가져옵니다.
@@ -28,9 +29,9 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 -   전체 페이지가 변경되는 경우에는 콘텐츠 전환 애니메이션을 사용하지 마세요. 이 경우에는 페이지 전환 애니메이션을 대신 사용합니다.
 -   콘텐츠를 새로 고치기만 하는 경우에는 콘텐츠 전환 애니메이션을 사용하지 마세요. 콘텐츠 전환 애니메이션은 이동을 나타내는 데 사용됩니다. 새로 고침의 경우 페이드 애니메이션을 사용합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
-## <span id="related_topics"> </span>관련 문서
+
+## <span id="related_topics"></span>관련 문서
 
 **개발자용(XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -47,6 +48,6 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
 title: 아이콘
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
@@ -82,7 +83,7 @@ template: detail.hbs
     </tr>  
 </table>
 
-### 예제
+<p>예를 들면 다음과 같습니다.</p>
 
 <table>
     <tr>
@@ -152,9 +153,7 @@ template: detail.hbs
 
 <table>
 <tr><td>녹색 - #128B44</td><td>파랑 - #2C71B9</td><td>노랑 - #FDC214</td></tr>
-<tr><td>긍정: 마침, 
-완료 </td><td>중립: 도움말, 
-알림 </td><td>주의: 알림, 경고 </td></tr>
+<tr><td>양: 완료, 완료됨 </td><td>중립: 도움말, 알림 </td><td>주의: 알림, 경고 </td></tr>
 <tr><td>![Green status](images/icons-color-inbadging-1.png)</td><td>![Blue status](images/icons-color-inbadging-2.png)</td>
 <td>![Yellow status](images/icons-color-inbadging-3.png)</td></tr>
 </table>
@@ -172,6 +171,7 @@ template: detail.hbs
 
 * [타일 및 아이콘 자산에 대한 지침](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 소리는 응용 프로그램의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
 label: Sound
 title: 소리
@@ -23,9 +24,11 @@ ElementSoundPlayer.State = ElementSoundPlayerState.On;
 **ElementSoundPlayer**에는 **켜짐**, **꺼짐** 및 **자동**의 세 가지 상태가 있습니다.
 
 **꺼짐**으로 설정된 경우 앱을 실행하는 위치에 관계없이 소리가 재생되지 않습니다. **켜짐**으로 설정된 경우 앱의 소리가 모든 플랫폼에서 재생됩니다.
+
 ### TV 및 Xbox의 소리
+
 소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
-TV 및 Xbox에서 소리가 작동하는 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736) 문서를 참조하세요.
+Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)을 참조하세요.
 
 ## 소리 볼륨 재정의
 **볼륨** 컨트롤을 사용하여 앱 내의 모든 소리를 낮출 수 있습니다. 그러나 앱 내의 소리는 *시스템 볼륨보다 더 클* 수 없습니다.
@@ -59,7 +62,7 @@ ButtonName.ElementSoundState = ElementSoundMode.Off;
 
 일반적으로 이 소리는 사용자가 [입력 디바이스](/input-and-devices/guidelines-for-interactions/)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
 
-<SelectButtonClick.mp3 sound clip here>
+&lt;여기에 SelectButtonClick.mp3 사운드 클립 포함&gt;
 
 컨트롤 이벤트에서 이 소리를 재생하려면 **ElementSoundPlayer**에서 Play 메서드를 호출하고 **ElementSound.Invoke**를 전달합니다.
 ```C#
@@ -71,14 +74,14 @@ XAML에는 많은 플라이아웃, 대화 상자 및 해제 가능한 UI가 있�
 
 오버레이 콘텐츠 창이 표시되는 경우 **Show** 소리를 호출해야 합니다.
 
-<OverlayIn.mp3 sound clip here>
+&lt;여기에 OverlayIn.mp3 사운드 클립 포함&gt;
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```
 반대로, 오버레이 콘텐츠 창이 닫히거나 빠른 해제되는 경우 **숨기기** 소리를 호출해야 합니다.
 
-<OverlayOut.mp3 sound clip here>
+&lt;여기에 OverlayOut.mp3 사운드 클립 포함&gt;
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
@@ -90,14 +93,14 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 
 목록의 *다음 항목*으로 간주되는 보기/패널로 이동하는 경우 다음을 호출합니다.
 
-<PageTransitionRight.mp3 sound clip here>
+&lt;여기에 PageTransitionRight.mp3 사운드 클립 포함&gt;1
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```
 또한 목록에서 *이전 항목*으로 간주되는 이전 보기/패널로 이동하는 경우 다음을 호출합니다.
 
-<PageTransitionLeft.mp3 sound clip here>
+&lt;여기에 PageTransitionLeft.mp3 사운드 클립 포함&gt;1
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
@@ -105,7 +108,7 @@ ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ### 뒤로 탐색
 현재 페이지에서 앱 내의 이전 페이지로 이동하는 경우 **GoBack** 소리를 호출해야 합니다.
 
-<BackButtonClick.mp3 sound clip here>
+&lt;여기에 BackButtonClick.mp3 사운드 클립 포함&gt;
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
@@ -117,7 +120,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 컨트롤이 포커스를 받을 때 **Focus** 소리를 재생하도록 컨트롤을 설정하려면 다음을 호출합니다.
 
-<ElementFocus1.mp3 sound clip here>
+&lt;여기에 ElementFocus1.mp3 사운드 클립 포함&gt;
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
@@ -130,5 +133,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ## 관련 문서
 * [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
+
 

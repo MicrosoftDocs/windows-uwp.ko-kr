@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 title: UWP 앱의 페이드 애니메이션
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # 페이드 애니메이션
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
@@ -45,6 +43,6 @@ template: detail.hbs
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 
