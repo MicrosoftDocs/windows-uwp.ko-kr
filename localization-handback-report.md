@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 9
+ Total Files | 11
 
 ## File List
  Source File | Status | Details 
@@ -15,6 +15,8 @@
  [windows-apps-src\app-help-guidelines\in-app-help.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/app-help-guidelines/in-app-help.md) | InSyncHandedBackSuccess | [Details](#7edad75b1639768023eb8add1e23fe0aafb0b67428)
  [windows-apps-src\app-help-guidelines\instructional-ui.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-help-guidelines/instructional-ui.md) | InSyncHandedBackSuccess | [Details](#1c8ab97a5625243a50fa3b40ae93f5928dc7d85129)
  [windows-apps-src\app-settings\guidelines-for-app-settings.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/app-settings/guidelines-for-app-settings.md) | InSyncHandedBackSuccess | [Details](#aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e431)
+ [windows-apps-src\app-to-app\index.md](https://github.com/Microsoft/windows-apps/blob/dcd542257761083f3ec04eb0da2b13d5d68a19e2/windows-apps-src/app-to-app/index.md) | InSyncHandedBackSuccess | [Details](#63550064b6f31b85cd3b6fa2a09bac4b7cfcf895130)
+ [windows-apps-src\app-to-app\use-edp-to-protect-enterprise-data-transferred-between-apps.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/app-to-app/use-edp-to-protect-enterprise-data-transferred-between-apps.md) | InSyncHandedBackSuccess | [Details](#77533d4aca3cc84e0a021a0faac57f5afbbefdd7133)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -123,6 +125,30 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/c02c9859594c5926a6b095e95b5a05ad8fff7f80/ol-handback/Microsoft/windows-apps.ko-kr/master/app-settings/guidelines-for-app-settings.1eb3014d8ebbc319fbe1eed647ec2258ff1eaf7b.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:31:53
+* [Back to Top](#report-top)
+
+##### <a name='63550064b6f31b85cd3b6fa2a09bac4b7cfcf895130'></a> Source: [windows-apps-src\app-to-app\index.md](https://github.com/Microsoft/windows-apps/blob/dcd542257761083f3ec04eb0da2b13d5d68a19e2/windows-apps-src/app-to-app/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\app-to-app\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/758be970168707f82f42b746a467963e0586fd41/windows-apps-src/app-to-app/index.md)
+* Handoff File: [index.41a30c2304522206dc610cca50cfa8c5d9af32f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.41a30c2304522206dc610cca50cfa8c5d9af32f3.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.41a30c2304522206dc610cca50cfa8c5d9af32f3.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7940bed8cb3388383675cf4896ab8d9809c16567/ol-handback/Microsoft/windows-apps.ko-kr/master/app-to-app/index.41a30c2304522206dc610cca50cfa8c5d9af32f3.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:31:59
+* [Back to Top](#report-top)
+
+##### <a name='77533d4aca3cc84e0a021a0faac57f5afbbefdd7133'></a> Source: [windows-apps-src\app-to-app\use-edp-to-protect-enterprise-data-transferred-between-apps.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/app-to-app/use-edp-to-protect-enterprise-data-transferred-between-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\app-to-app\use-edp-to-protect-enterprise-data-transferred-between-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/758be970168707f82f42b746a467963e0586fd41/windows-apps-src/app-to-app/use-edp-to-protect-enterprise-data-transferred-between-apps.md)
+* Handoff File: [use-edp-to-protect-enterprise-data-transferred-between-apps.c30e365776d4ad19cc90b4cc29c6bdfa79fd00eb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-edp-to-protect-enterprise-data-transferred-between-apps.c30e365776d4ad19cc90b4cc29c6bdfa79fd00eb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-edp-to-protect-enterprise-data-transferred-between-apps.c30e365776d4ad19cc90b4cc29c6bdfa79fd00eb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7940bed8cb3388383675cf4896ab8d9809c16567/ol-handback/Microsoft/windows-apps.ko-kr/master/app-to-app/use-edp-to-protect-enterprise-data-transferred-between-apps.c30e365776d4ad19cc90b4cc29c6bdfa79fd00eb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:31:59
 * [Back to Top](#report-top)
 
 
