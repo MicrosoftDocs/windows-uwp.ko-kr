@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 258
+ Total Files | 287
 
 ## File List
  Source File | Status | Details 
@@ -264,6 +264,35 @@
  [windows-apps-src\graphics\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/graphics/index.md) | InSyncHandedBackSuccess | [Details](#d46498e6e584d85cfce0be237878aff68dee9c502611)
  [windows-apps-src\graphics\using-brushes.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/graphics/using-brushes.md) | InSyncHandedBackSuccess | [Details](#a4063ee2372d69289fca74c81a4c7645909c7f372615)
  [windows-apps-src\in-app-help\guidelines-for-app-help.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/in-app-help/guidelines-for-app-help.md) | InSyncHandedBackSuccess | [Details](#35011081981ce9bb5c8408329c9be627f60ee8412619)
+ [windows-apps-src\input-and-devices\convert-ink-to-text.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/convert-ink-to-text.md) | InSyncHandedBackSuccess | [Details](#bdc431d15742261d96b88b97d256b14156f2088c2629)
+ [windows-apps-src\input-and-devices\cortana-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/cortana-design-guidelines.md) | InSyncHandedBackSuccess | [Details](#31442ed17b9b463cbf10cecb564278b86086bbf22630)
+ [windows-apps-src\input-and-devices\cortana-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/cortana-interactions.md) | InSyncHandedBackSuccess | [Details](#d55ece0112e5360c1de4e194c6dd326c15404f9e2631)
+ [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/21be5cd53ed124e3b35f5887fb16e7b0405f000b/windows-apps-src/input-and-devices/designing-for-tv.md) | InSyncHandedBackSuccess | [Details](#daa1df78409bd10ee1d5c24e8874e011d4005a822635)
+ [windows-apps-src\input-and-devices\device-primer.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/device-primer.md) | InSyncHandedBackSuccess | [Details](#bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b2636)
+ [windows-apps-src\input-and-devices\dynamically-modify-voice-command-definition--vcd--phrase-lists.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/dynamically-modify-voice-command-definition--vcd--phrase-lists.md) | InSyncHandedBackSuccess | [Details](#623243b94cf8ef6b276f8f2971af7bbdbdece81c2637)
+ [windows-apps-src\input-and-devices\gamepad-and-remote-interactions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/input-and-devices/gamepad-and-remote-interactions.md) | InSyncHandedBackSuccess | [Details](#463da46dc1f4e2ed5125a26b058075e7fe1faafd2639)
+ [windows-apps-src\input-and-devices\guidelines-for-cross-slide.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/input-and-devices/guidelines-for-cross-slide.md) | InSyncHandedBackSuccess | [Details](#47a16acc4025541b1cc19582c2c7d59755fd25942640)
+ [windows-apps-src\input-and-devices\guidelines-for-optical-zoom.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-optical-zoom.md) | InSyncHandedBackSuccess | [Details](#07f9f2979a7a2c712b39bd4dc962e5991e1824ac2641)
+ [windows-apps-src\input-and-devices\guidelines-for-panning.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-panning.md) | InSyncHandedBackSuccess | [Details](#7aafb0bbef2a33f926f76e41c26dd0f6920de2742642)
+ [windows-apps-src\input-and-devices\guidelines-for-rotation.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-rotation.md) | InSyncHandedBackSuccess | [Details](#d91a3cf5dc5ae2e1a68e32fc64848b869f2293912643)
+ [windows-apps-src\input-and-devices\guidelines-for-targeting.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-targeting.md) | InSyncHandedBackSuccess | [Details](#c8244e1a103a1c57df92e54ceeaa02e9c363faa92644)
+ [windows-apps-src\input-and-devices\guidelines-for-textselection.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-textselection.md) | InSyncHandedBackSuccess | [Details](#a47b48f9315c51505b2c487c140011e0531055562645)
+ [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md) | InSyncHandedBackSuccess | [Details](#67b851ce854c803934c2b97dbe7519e2916383a32646)
+ [windows-apps-src\input-and-devices\guidelines-for-visualfeedback.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-visualfeedback.md) | InSyncHandedBackSuccess | [Details](#287ec24dbc60be39c0f944c6d4a86205961fb7702647)
+ [windows-apps-src\input-and-devices\handle-pointer-input.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/handle-pointer-input.md) | InSyncHandedBackSuccess | [Details](#8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd2648)
+ [windows-apps-src\input-and-devices\identify-input-devices.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/identify-input-devices.md) | InSyncHandedBackSuccess | [Details](#ee5935a79b10b6c4c084457049cbb518e264be0d2649)
+ [windows-apps-src\input-and-devices\manage-issues-with-audio-input.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/manage-issues-with-audio-input.md) | InSyncHandedBackSuccess | [Details](#6dcab14a290367250e152fb8a1944a924d5aaf462893)
+ [windows-apps-src\input-and-devices\mouse-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/mouse-interactions.md) | InSyncHandedBackSuccess | [Details](#b381cdba2a20480bb8b4d7802d2ff490744e5f032894)
+ [windows-apps-src\input-and-devices\multiple-input-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/multiple-input-design-guidelines.md) | InSyncHandedBackSuccess | [Details](#20af1cbfd4d390a1128b96b24c687fd481db1f5c2895)
+ [windows-apps-src\input-and-devices\respond-to-the-presence-of-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/respond-to-the-presence-of-the-touch-keyboard.md) | InSyncHandedBackSuccess | [Details](#5f4f9553a54dc902c7c6a50d6a1b4cf6251fd72c2897)
+ [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/save-and-load-ink.md) | InSyncHandedBackSuccess | [Details](#0f2e95146281fb992af1201c408ed62705c777412898)
+ [windows-apps-src\input-and-devices\set-speech-recognition-timeouts.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/set-speech-recognition-timeouts.md) | InSyncHandedBackSuccess | [Details](#e0dbc43cba4556674a4d96013b65837d950446222899)
+ [windows-apps-src\input-and-devices\speech-interactions.md](https://github.com/Microsoft/windows-apps/blob/bcc401c515cdba899fb2202ddddf5bd98b64aecd/windows-apps-src/input-and-devices/speech-interactions.md) | InSyncHandedBackSuccess | [Details](#bdcced680b69ce6ff9caf3ac860cb139fdfdaeff2901)
+ [windows-apps-src\input-and-devices\speech-recognition.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/speech-recognition.md) | InSyncHandedBackSuccess | [Details](#6d1449ede6912add8b8f7e60760d4547c035ed602902)
+ [windows-apps-src\input-and-devices\support-natural-language-voice-commands-in-cortana.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/support-natural-language-voice-commands-in-cortana.md) | InSyncHandedBackSuccess | [Details](#c9cd6894c61f3d6cfe770d197317a97a804b41192903)
+ [windows-apps-src\input-and-devices\surface-hub.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/surface-hub.md) | InSyncHandedBackSuccess | [Details](#171d313a668ad4242d2e77b7ba055019d143a1762904)
+ [windows-apps-src\input-and-devices\touchpad-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/touchpad-interactions.md) | InSyncHandedBackSuccess | [Details](#aa09852ff6f387b97e0f1a1bbb2d198927d5da0d2906)
+ [windows-apps-src\input-and-devices\use-input-scope-to-change-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/use-input-scope-to-change-the-touch-keyboard.md) | InSyncHandedBackSuccess | [Details](#02f06ee498b136f811b4b3b8080a9cb0436935042907)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -3360,6 +3389,354 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [guidelines-for-app-help.aaa49aa381d556c0b965721ea6a7c1b8bc21ceaf.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/e7334da3d4451c6f29f79e8191ae620e6d29f808/ol-handback/Microsoft/windows-apps.ko-kr/master/in-app-help/guidelines-for-app-help.aaa49aa381d556c0b965721ea6a7c1b8bc21ceaf.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:34:22
+* [Back to Top](#report-top)
+
+##### <a name='bdc431d15742261d96b88b97d256b14156f2088c2629'></a> Source: [windows-apps-src\input-and-devices\convert-ink-to-text.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/convert-ink-to-text.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\convert-ink-to-text.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/convert-ink-to-text.md)
+* Handoff File: [convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/convert-ink-to-text.1c6063f71cdcaa87dfc2b12f974fc5be71cfe8cc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='31442ed17b9b463cbf10cecb564278b86086bbf22630'></a> Source: [windows-apps-src\input-and-devices\cortana-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/cortana-design-guidelines.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\cortana-design-guidelines.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/cortana-design-guidelines.md)
+* Handoff File: [cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='d55ece0112e5360c1de4e194c6dd326c15404f9e2631'></a> Source: [windows-apps-src\input-and-devices\cortana-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/cortana-interactions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\cortana-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/cortana-interactions.md)
+* Handoff File: [cortana-interactions.32338ff35dbbe3bc4dc60c2c6bd6a1caee21e4df.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/cortana-interactions.32338ff35dbbe3bc4dc60c2c6bd6a1caee21e4df.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [cortana-interactions.32338ff35dbbe3bc4dc60c2c6bd6a1caee21e4df.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/cortana-interactions.32338ff35dbbe3bc4dc60c2c6bd6a1caee21e4df.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='daa1df78409bd10ee1d5c24e8874e011d4005a822635'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/21be5cd53ed124e3b35f5887fb16e7b0405f000b/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b2636'></a> Source: [windows-apps-src\input-and-devices\device-primer.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/device-primer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\device-primer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/device-primer.md)
+* Handoff File: [device-primer.e0210854b543f7c3c8aa3ee6e2ac53f36ad21769.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-primer.e0210854b543f7c3c8aa3ee6e2ac53f36ad21769.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-primer.e0210854b543f7c3c8aa3ee6e2ac53f36ad21769.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/device-primer.e0210854b543f7c3c8aa3ee6e2ac53f36ad21769.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='623243b94cf8ef6b276f8f2971af7bbdbdece81c2637'></a> Source: [windows-apps-src\input-and-devices\dynamically-modify-voice-command-definition--vcd--phrase-lists.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/dynamically-modify-voice-command-definition--vcd--phrase-lists.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\dynamically-modify-voice-command-definition--vcd--phrase-lists.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/dynamically-modify-voice-command-definition--vcd--phrase-lists.md)
+* Handoff File: [dynamically-modify-voice-command-definition--vcd--phrase-lists.7eebed0de412b3a808a77674c5799839692f6313.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/dynamically-modify-voice-command-definition--vcd--phrase-lists.7eebed0de412b3a808a77674c5799839692f6313.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [dynamically-modify-voice-command-definition--vcd--phrase-lists.7eebed0de412b3a808a77674c5799839692f6313.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/dynamically-modify-voice-command-definition--vcd--phrase-lists.7eebed0de412b3a808a77674c5799839692f6313.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='463da46dc1f4e2ed5125a26b058075e7fe1faafd2639'></a> Source: [windows-apps-src\input-and-devices\gamepad-and-remote-interactions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/input-and-devices/gamepad-and-remote-interactions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\gamepad-and-remote-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/gamepad-and-remote-interactions.md)
+* Handoff File: [gamepad-and-remote-interactions.a0bafcc8d65c35c7abb6ed4d40ae814e0eb6e949.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/gamepad-and-remote-interactions.a0bafcc8d65c35c7abb6ed4d40ae814e0eb6e949.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [gamepad-and-remote-interactions.a0bafcc8d65c35c7abb6ed4d40ae814e0eb6e949.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/gamepad-and-remote-interactions.a0bafcc8d65c35c7abb6ed4d40ae814e0eb6e949.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='47a16acc4025541b1cc19582c2c7d59755fd25942640'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-cross-slide.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/input-and-devices/guidelines-for-cross-slide.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-cross-slide.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-cross-slide.md)
+* Handoff File: [guidelines-for-cross-slide.937faf14a3737966c3cbd6e0b55f743193a58a16.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-cross-slide.937faf14a3737966c3cbd6e0b55f743193a58a16.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-cross-slide.937faf14a3737966c3cbd6e0b55f743193a58a16.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-cross-slide.937faf14a3737966c3cbd6e0b55f743193a58a16.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='07f9f2979a7a2c712b39bd4dc962e5991e1824ac2641'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-optical-zoom.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-optical-zoom.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-optical-zoom.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-optical-zoom.md)
+* Handoff File: [guidelines-for-optical-zoom.402715e05e2eebe26a19d12437ed34dced1322a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-optical-zoom.402715e05e2eebe26a19d12437ed34dced1322a7.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-optical-zoom.402715e05e2eebe26a19d12437ed34dced1322a7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-optical-zoom.402715e05e2eebe26a19d12437ed34dced1322a7.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='7aafb0bbef2a33f926f76e41c26dd0f6920de2742642'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-panning.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-panning.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-panning.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-panning.md)
+* Handoff File: [guidelines-for-panning.acefbada50020508f772d14c8f7ca1c3d070560a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-panning.acefbada50020508f772d14c8f7ca1c3d070560a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-panning.acefbada50020508f772d14c8f7ca1c3d070560a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-panning.acefbada50020508f772d14c8f7ca1c3d070560a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='d91a3cf5dc5ae2e1a68e32fc64848b869f2293912643'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-rotation.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-rotation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-rotation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-rotation.md)
+* Handoff File: [guidelines-for-rotation.833ff834e60030a7f2db4b19cf03d9fcc16b0fb9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-rotation.833ff834e60030a7f2db4b19cf03d9fcc16b0fb9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-rotation.833ff834e60030a7f2db4b19cf03d9fcc16b0fb9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-rotation.833ff834e60030a7f2db4b19cf03d9fcc16b0fb9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='c8244e1a103a1c57df92e54ceeaa02e9c363faa92644'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-targeting.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-targeting.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-targeting.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-targeting.md)
+* Handoff File: [guidelines-for-targeting.fb6667c85c2d0ab2103e905ca49371194876242d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-targeting.fb6667c85c2d0ab2103e905ca49371194876242d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-targeting.fb6667c85c2d0ab2103e905ca49371194876242d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-targeting.fb6667c85c2d0ab2103e905ca49371194876242d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='a47b48f9315c51505b2c487c140011e0531055562645'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-textselection.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-textselection.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-textselection.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-textselection.md)
+* Handoff File: [guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-textselection.a95d2919c98784d258f5ad3ec550d1ff55e329e1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='67b851ce854c803934c2b97dbe7519e2916383a32646'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md)
+* Handoff File: [guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='287ec24dbc60be39c0f944c6d4a86205961fb7702647'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-visualfeedback.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/guidelines-for-visualfeedback.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\guidelines-for-visualfeedback.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/guidelines-for-visualfeedback.md)
+* Handoff File: [guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/guidelines-for-visualfeedback.0afd6b483b6303fb4a59740a86b3d90dff4ef243.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd2648'></a> Source: [windows-apps-src\input-and-devices\handle-pointer-input.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/handle-pointer-input.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\handle-pointer-input.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/handle-pointer-input.md)
+* Handoff File: [handle-pointer-input.6253e9939b047e57ab20edecf74a22b75318763c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/handle-pointer-input.6253e9939b047e57ab20edecf74a22b75318763c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [handle-pointer-input.6253e9939b047e57ab20edecf74a22b75318763c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/handle-pointer-input.6253e9939b047e57ab20edecf74a22b75318763c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='ee5935a79b10b6c4c084457049cbb518e264be0d2649'></a> Source: [windows-apps-src\input-and-devices\identify-input-devices.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/identify-input-devices.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\identify-input-devices.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/identify-input-devices.md)
+* Handoff File: [identify-input-devices.f2e18d854fa9e69ab68a5fd2378a74ba161ab5ea.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/identify-input-devices.f2e18d854fa9e69ab68a5fd2378a74ba161ab5ea.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [identify-input-devices.f2e18d854fa9e69ab68a5fd2378a74ba161ab5ea.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/identify-input-devices.f2e18d854fa9e69ab68a5fd2378a74ba161ab5ea.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='6dcab14a290367250e152fb8a1944a924d5aaf462893'></a> Source: [windows-apps-src\input-and-devices\manage-issues-with-audio-input.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/manage-issues-with-audio-input.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\manage-issues-with-audio-input.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/manage-issues-with-audio-input.md)
+* Handoff File: [manage-issues-with-audio-input.a14eee13569e4637a6f1542d577823e382db4afd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-issues-with-audio-input.a14eee13569e4637a6f1542d577823e382db4afd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [manage-issues-with-audio-input.a14eee13569e4637a6f1542d577823e382db4afd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/manage-issues-with-audio-input.a14eee13569e4637a6f1542d577823e382db4afd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='b381cdba2a20480bb8b4d7802d2ff490744e5f032894'></a> Source: [windows-apps-src\input-and-devices\mouse-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/mouse-interactions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\mouse-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/mouse-interactions.md)
+* Handoff File: [mouse-interactions.cb7d1499b1e338b098eb50d54f5285fc4b2f569f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/mouse-interactions.cb7d1499b1e338b098eb50d54f5285fc4b2f569f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [mouse-interactions.cb7d1499b1e338b098eb50d54f5285fc4b2f569f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/mouse-interactions.cb7d1499b1e338b098eb50d54f5285fc4b2f569f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='20af1cbfd4d390a1128b96b24c687fd481db1f5c2895'></a> Source: [windows-apps-src\input-and-devices\multiple-input-design-guidelines.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/multiple-input-design-guidelines.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\multiple-input-design-guidelines.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/multiple-input-design-guidelines.md)
+* Handoff File: [multiple-input-design-guidelines.26ed21b7a00854d2268caa8a6b92920432ba3fcd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/multiple-input-design-guidelines.26ed21b7a00854d2268caa8a6b92920432ba3fcd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [multiple-input-design-guidelines.26ed21b7a00854d2268caa8a6b92920432ba3fcd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/multiple-input-design-guidelines.26ed21b7a00854d2268caa8a6b92920432ba3fcd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='5f4f9553a54dc902c7c6a50d6a1b4cf6251fd72c2897'></a> Source: [windows-apps-src\input-and-devices\respond-to-the-presence-of-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/respond-to-the-presence-of-the-touch-keyboard.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\respond-to-the-presence-of-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/respond-to-the-presence-of-the-touch-keyboard.md)
+* Handoff File: [respond-to-the-presence-of-the-touch-keyboard.9945bab9cce3093ec7d294e251029675d9c22c7f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/respond-to-the-presence-of-the-touch-keyboard.9945bab9cce3093ec7d294e251029675d9c22c7f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [respond-to-the-presence-of-the-touch-keyboard.9945bab9cce3093ec7d294e251029675d9c22c7f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/respond-to-the-presence-of-the-touch-keyboard.9945bab9cce3093ec7d294e251029675d9c22c7f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='0f2e95146281fb992af1201c408ed62705c777412898'></a> Source: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/save-and-load-ink.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/save-and-load-ink.md)
+* Handoff File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='e0dbc43cba4556674a4d96013b65837d950446222899'></a> Source: [windows-apps-src\input-and-devices\set-speech-recognition-timeouts.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/set-speech-recognition-timeouts.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\set-speech-recognition-timeouts.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/set-speech-recognition-timeouts.md)
+* Handoff File: [set-speech-recognition-timeouts.94134e071e3040e7d63696722e89845d07875768.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-speech-recognition-timeouts.94134e071e3040e7d63696722e89845d07875768.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [set-speech-recognition-timeouts.94134e071e3040e7d63696722e89845d07875768.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/set-speech-recognition-timeouts.94134e071e3040e7d63696722e89845d07875768.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='bdcced680b69ce6ff9caf3ac860cb139fdfdaeff2901'></a> Source: [windows-apps-src\input-and-devices\speech-interactions.md](https://github.com/Microsoft/windows-apps/blob/bcc401c515cdba899fb2202ddddf5bd98b64aecd/windows-apps-src/input-and-devices/speech-interactions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\speech-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/speech-interactions.md)
+* Handoff File: [speech-interactions.27ea128da12db9b8a389eee21133e8faccb94753.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/speech-interactions.27ea128da12db9b8a389eee21133e8faccb94753.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [speech-interactions.27ea128da12db9b8a389eee21133e8faccb94753.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/speech-interactions.27ea128da12db9b8a389eee21133e8faccb94753.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='6d1449ede6912add8b8f7e60760d4547c035ed602902'></a> Source: [windows-apps-src\input-and-devices\speech-recognition.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/speech-recognition.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\speech-recognition.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/speech-recognition.md)
+* Handoff File: [speech-recognition.c48c23a10074e14d9b7d1ab428f0dabc28108330.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/speech-recognition.c48c23a10074e14d9b7d1ab428f0dabc28108330.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [speech-recognition.c48c23a10074e14d9b7d1ab428f0dabc28108330.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/speech-recognition.c48c23a10074e14d9b7d1ab428f0dabc28108330.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='c9cd6894c61f3d6cfe770d197317a97a804b41192903'></a> Source: [windows-apps-src\input-and-devices\support-natural-language-voice-commands-in-cortana.md](https://github.com/Microsoft/windows-apps/blob/077fcc6ff462a771ed56f875d960e46e6f4420fc/windows-apps-src/input-and-devices/support-natural-language-voice-commands-in-cortana.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\support-natural-language-voice-commands-in-cortana.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/support-natural-language-voice-commands-in-cortana.md)
+* Handoff File: [support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/support-natural-language-voice-commands-in-cortana.8d82d2897601bfebc5a5659fa72c6958e377e9e2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='171d313a668ad4242d2e77b7ba055019d143a1762904'></a> Source: [windows-apps-src\input-and-devices\surface-hub.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/surface-hub.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\surface-hub.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/surface-hub.md)
+* Handoff File: [surface-hub.f34743c6fdd658f544b929dc1f546a1ef67e3246.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/surface-hub.f34743c6fdd658f544b929dc1f546a1ef67e3246.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [surface-hub.f34743c6fdd658f544b929dc1f546a1ef67e3246.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/surface-hub.f34743c6fdd658f544b929dc1f546a1ef67e3246.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='aa09852ff6f387b97e0f1a1bbb2d198927d5da0d2906'></a> Source: [windows-apps-src\input-and-devices\touchpad-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/touchpad-interactions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\touchpad-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/touchpad-interactions.md)
+* Handoff File: [touchpad-interactions.f1000e655ec6fb5c48a5b442deb4d0d4f7d7e974.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/touchpad-interactions.f1000e655ec6fb5c48a5b442deb4d0d4f7d7e974.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [touchpad-interactions.f1000e655ec6fb5c48a5b442deb4d0d4f7d7e974.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/touchpad-interactions.f1000e655ec6fb5c48a5b442deb4d0d4f7d7e974.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='02f06ee498b136f811b4b3b8080a9cb0436935042907'></a> Source: [windows-apps-src\input-and-devices\use-input-scope-to-change-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/use-input-scope-to-change-the-touch-keyboard.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\input-and-devices\use-input-scope-to-change-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/1a5f9054eae1154ce3cc7dd9b9ed8e1c50885a49/windows-apps-src/input-and-devices/use-input-scope-to-change-the-touch-keyboard.md)
+* Handoff File: [use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:35
 * [Back to Top](#report-top)
 
 

@@ -3536,13 +3536,7 @@
   "bdc431d15742261d96b88b97d256b14156f2088c": [
     "windows-apps-src\\input-and-devices\\convert-ink-to-text.md"
   ],
-  "3cb03e68a067102c186bf93d20ce875c0ea558fa": [
-    "windows-apps-src\\input-and-devices\\convert-ink-to-text.md"
-  ],
   "31442ed17b9b463cbf10cecb564278b86086bbf2": [
-    "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
-  ],
-  "71eb9fe099813534429f3ed434107fb0e34387f2": [
     "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
   ],
   "d55ece0112e5360c1de4e194c6dd326c15404f9e": [
@@ -3593,16 +3587,10 @@
   "a47b48f9315c51505b2c487c140011e053105556": [
     "windows-apps-src\\input-and-devices\\guidelines-for-textselection.md"
   ],
-  "adab0d6ed04c5707fe6d7c8ed3de4e971da2e647": [
-    "windows-apps-src\\input-and-devices\\guidelines-for-textselection.md"
-  ],
   "67b851ce854c803934c2b97dbe7519e2916383a3": [
     "windows-apps-src\\input-and-devices\\guidelines-for-user-interaction.md"
   ],
   "287ec24dbc60be39c0f944c6d4a86205961fb770": [
-    "windows-apps-src\\input-and-devices\\guidelines-for-visualfeedback.md"
-  ],
-  "cacb5b49334c9a9ebe385be0beb2cdf64ae2ca34": [
     "windows-apps-src\\input-and-devices\\guidelines-for-visualfeedback.md"
   ],
   "8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd": [
@@ -4168,9 +4156,6 @@
   "0f2e95146281fb992af1201c408ed62705c77741": [
     "windows-apps-src\\input-and-devices\\save-and-load-ink.md"
   ],
-  "144fea9597d75614cc1faedc61432195a34d9466": [
-    "windows-apps-src\\input-and-devices\\save-and-load-ink.md"
-  ],
   "e0dbc43cba4556674a4d96013b65837d95044622": [
     "windows-apps-src\\input-and-devices\\set-speech-recognition-timeouts.md"
   ],
@@ -4184,9 +4169,6 @@
     "windows-apps-src\\input-and-devices\\speech-recognition.md"
   ],
   "c9cd6894c61f3d6cfe770d197317a97a804b4119": [
-    "windows-apps-src\\input-and-devices\\support-natural-language-voice-commands-in-cortana.md"
-  ],
-  "0119d91b54c49d318e6741ac80047a2393ddbb1a": [
     "windows-apps-src\\input-and-devices\\support-natural-language-voice-commands-in-cortana.md"
   ],
   "171d313a668ad4242d2e77b7ba055019d143a176": [
