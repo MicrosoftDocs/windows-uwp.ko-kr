@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: ad7a739c-fd70-4068-9007-da28028abea3
 title: 그래픽 및 애니메이션
 description: 이 섹션의 항목은 스토어 앱에서 그래픽 및 애니메이션 사용을 시작하도록 도와줍니다.
@@ -33,6 +34,6 @@ description: 이 섹션의 항목은 스토어 앱에서 그래픽 및 애니메
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: 셰이프 그리기
 description: 타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다.
@@ -53,7 +54,7 @@ UI 레이아웃에 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps
 
 6개의 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343) 요소 집합은 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538) 컨트롤에 대한 컨트롤 템플릿의 요소이며, 2개의 동심원 **Ellipse** 요소는 [**RadioButton**](https://msdn.microsoft.com/library/windows/apps/BR227544)의 일부입니다.
 
-## <span id="Rectangle"> </span> <span id="rectangle"> </span> <span id="RECTANGLE"> </span>사각형
+## <span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>사각형
 
 [
             **Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 대변이 동일한 4개의 변을 가진 셰이프입니다. 기본 **Rectangle**을 만들려면 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751), [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) 및 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정합니다.
@@ -114,7 +115,7 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 [
             **Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 사용하여 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 셰이프를 지정하지는 않으며 [**X1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) 및 [**Y2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx)에 대해 불연속 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)을 사용하여 전체 **Line**을 이동할 수 있습니다.
 
-## <span id="_Polyline"> </span> <span id="_polyline"> </span> <span id="_POLYLINE"> </span> 폴리라인
+## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
 
 [
             **Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)과 유사합니다.
@@ -213,6 +214,6 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

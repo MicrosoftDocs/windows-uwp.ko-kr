@@ -1,4 +1,5 @@
 ---
+author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: 컴퍼지션 효과
 description: 효과 API를 통해 개발자가 UI를 렌더링하는 방식을 사용자 지정할 수 있습니다.
@@ -30,8 +31,8 @@ description: 효과 API를 통해 개발자가 UI를 렌더링하는 방식을 �
 
 | 효과               | 설명                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
-| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
+| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](http://go.microsoft.com/fwlink/?LinkId=785341)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
+| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](http://go.microsoft.com/fwlink/?LinkId=785341)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
 | 혼합 효과         | 두 개의 이미지를 결합하는 혼합 효과를 만듭니다. 컴퍼지션은 Win2D에서 지원되는 26개의 [혼합 모드](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.md) 중에서 21개를 제공합니다.        |
 | 색 소싱         | 단색을 포함하는 이미지를 생성합니다.                                                                                                                                                                               |
 | 합성            | 두 개의 이미지를 결합합니다. 컴퍼지션은 Win2D에서 지원되는 13개의 [합성 모드](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.md)를 모두 제공합니다.                                              |
@@ -117,11 +118,11 @@ ScalarKeyFrameAnimation effectAnimation = _compositor.CreateScalarKeyFrameAnimat
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/Desaturation%20-%20Animation)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/AlphaMask)을 참조하세요.
+키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkId=785342)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](http://go.microsoft.com/fwlink/?LinkId=785343)을 참조하세요.
 
 ### 독립 속성이 있는 여러 효과 인스턴스
 
-효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/ColorSource%20and%20Blend)을 참조하세요.
+효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](http://go.microsoft.com/fwlink/?LinkId=785344)을 참조하세요.
 
 ## 컴퍼지션 효과 시작하기
 
@@ -140,7 +141,7 @@ catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimati
 
 ### 새 프로젝트 만들기
 
--   파일->새로 만들기->프로젝트...로 이동합니다.
+-   파일-&gt;새로 만들기-&gt;프로젝트...로 이동합니다.
 -   'Visual C#'을 선택합니다.
 -   '빈 앱(Windows 유니버설)' (Visual Studio 2015)를 만듭니다.
 -   선택한 프로젝트 이름을 입력합니다.
@@ -162,7 +163,7 @@ Win2D는 Nuget.org 패키지로 출시되며 Win2D가 설치되어야 효과를 
 ![원본 이미지](images/composition-cat-source.png)
 ### 컴퍼지션 기본 사항 설정
 
-루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/CompositionVisual)을 참조하세요.
+루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](http://go.microsoft.com/fwlink/?LinkId=785345)을 참조하세요.
 
 ```cs
 _compositor = new Compositor();
@@ -243,6 +244,6 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

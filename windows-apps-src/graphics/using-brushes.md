@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: 브러시 사용
 description: Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다.
@@ -53,7 +54,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 </StackPanel>
 ```
 
-### <span id="Property_element_syntax__"> </span> <span id="property_element_syntax__"> </span> <span id="PROPERTY_ELEMENT_SYNTAX__"> </span>속성 요소 구문
+### <span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>속성 요소 구문
 
 속성 요소 구문을 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 정의할 수 있습니다. 이 구문은 이전 방법보다 더 자세하지만 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx) 같은 요소의 추가 속성 값을 지정할 수 있습니다. 속성 요소 구문을 포함한 XAML 구문에 대한 자세한 내용은 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595) 및 [XAML 구문 가이드](https://msdn.microsoft.com/library/windows/apps/Mt185596)를 참조하세요.
 
@@ -67,7 +68,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 </Rectangle>
 ```
 
-## <span id="Linear_gradient_brushes_"> </span> <span id="linear_gradient_brushes_"> </span> <span id="LINEAR_GRADIENT_BRUSHES_"> </span>선형 그라데이션 브러시
+## <span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>선형 그라데이션 브러시
 
 [
             **LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)는 선을 따라 정의된 그라데이션으로 영역을 칠합니다. 이 선을 *그라데이션 축*이라고 합니다. [
@@ -99,11 +100,9 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 그라데이션 중지점 사이에 있는 각 점의 색은 두 개의 경계 그라데이션 중지점에 지정된 색의 조합으로 선형으로 채워 넣어집니다. 다음은 이전 예제의 그라데이션 중지점을 강조 표시한 그림입니다. 원은 그라데이션 중지점의 위치를 나타내고 점선은 그라데이션 축을 나타냅니다.
 
-![그라데이션 중지점](images/linear-gradients-stops.png)
-[
-            **StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) 및 [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx) 속성을 시작 기본값인 `(0,0)` 및 `(1,1)`과는 다른 값으로 설정하여 그라데이션 중지점이 배치되는 선을 변경할 수 있습니다. **StartPoint** 및 **EndPoint** 좌표 값을 변경하여 가로 또는 세로 그라데이션을 만들거나, 그라데이션 방향을 반대로 하거나, 칠해진 전체 영역보다 적은 범위에 적용하기 위해 그라데이션 범위를 좁힐 수 있습니다. 그라데이션 범위를 좁히려면 **StartPoint** 및/또는 **EndPoint**의 값을 0에서 1 사이의 값으로 설정합니다. 예를 들어 브러시 왼쪽 절반에서 모두 페이드하고 오른쪽은 마지막 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 색으로 고정되는 가로 그라데이션을 만들려는 경우 **StartPoint**를 `(0,0)`으로, **EndPoint**를 `(0.5,0)`으로 각각 지정합니다.
+![그라데이션 중지점](images/linear-gradients-stops.png) [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) 및 [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx) 속성을 시작 기본값인 `(0,0)` 및 `(1,1)`과는 다른 값으로 설정하여 그라데이션 중지점이 배치되는 선을 변경할 수 있습니다. **StartPoint** 및 **EndPoint** 좌표 값을 변경하여 가로 또는 세로 그라데이션을 만들거나, 그라데이션 방향을 반대로 하거나, 칠해진 전체 영역보다 적은 범위에 적용하기 위해 그라데이션 범위를 좁힐 수 있습니다. 그라데이션 범위를 좁히려면 **StartPoint** 및/또는 **EndPoint**의 값을 0에서 1 사이의 값으로 설정합니다. 예를 들어 브러시 왼쪽 절반에서 모두 페이드하고 오른쪽은 마지막 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 색으로 고정되는 가로 그라데이션을 만들려는 경우 **StartPoint**를 `(0,0)`으로, **EndPoint**를 `(0.5,0)`으로 각각 지정합니다.
 
-### <span id="Use_tools_to_make_gradients"> </span> <span id="use_tools_to_make_gradients"> </span> <span id="USE_TOOLS_TO_MAKE_GRADIENTS"> </span>도구를 사용하여 그라데이션 만들기
+### <span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>도구를 사용하여 그라데이션 만들기
 
 이제 선형 그라데이션의 작동 방식을 알았으므로 Visual Studio 또는 Blend를 사용하여 이러한 그라데이션을 보다 쉽게 만들 수 있습니다. 그라데이션을 만들려면 디자인 화면 또는 XAML 뷰에서 그라데이션을 적용할 개체를 선택합니다. **브러시**를 확장하고 **선형 그라데이션** 탭을 선택합니다(다음 스크린샷 참조).
 
@@ -113,7 +112,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ![그라데이션 중지점을 제어하는 속성 창의 아래쪽에 있는 막대](images/tool-gradient-brush-2.png)
 
-## <span id="Image_brushes"> </span> <span id="image_brushes"> </span> <span id="IMAGE_BRUSHES"> </span>이미지 브러시
+## <span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>이미지 브러시
 
 [
             **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 이미지를 사용하여 영역을 그립니다. 그릴 이미지는 이미지 파일 원본에서 제공됩니다. 로드할 이미지의 경로를 사용하여 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107) 속성을 설정합니다. 일반적으로 이미지 원본은 앱 리소스에 포함된 **Content** 항목에서 제공됩니다.
@@ -188,6 +187,6 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

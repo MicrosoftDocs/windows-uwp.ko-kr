@@ -1,4 +1,5 @@
 ---
+author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: 컴퍼지션 애니메이션
 description: 키 프레임 및 식 애니메이션을 사용하여 많은 컴퍼지션 개체와 효과 속성에 애니메이션 효과를 줄 수 있으므로 UI 요소의 속성을 시간에 따라 또는 계산을 기준으로 변경할 수 있습니다.
@@ -122,7 +123,7 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 일반 구문 및 예제는 다음과 같습니다.
 
 ```cs
-targetVisual.StartAnimation(“Offset”, animation);
+targetVisual.StartAnimation("Offset", animation);
 ```
 
 애니메이션을 시작한 후 중지하고 연결을 끊는 기능도 있습니다. 이 기능은 [**StopAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt590841) 메서드를 사용해서 애니메이션을 중지하려는 속성을 지정하여 수행됩니다.
@@ -130,7 +131,7 @@ targetVisual.StartAnimation(“Offset”, animation);
 예를 들면 다음과 같습니다.
 
 ```cs
-targetVisual.StopAnimation(“Offset”);
+targetVisual.StopAnimation("Offset");
 ```
 
 ### 애니메이션 완료 이벤트
@@ -168,7 +169,7 @@ myScopedBatch.End();
 
 ```cs
 myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-Visual.StartAnimation(“Opacity”, myAnimation);
+Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
@@ -193,7 +194,7 @@ myCommitBatch = _compositor.GetCommitBatch(CompositionBatchTypes.Animation);
 식을 만들려면 다음과 같이 작성자 개체에서 [**CreateExpressionAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt187002)을 호출하여 사용하려는 식을 지정합니다.
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“INSERT_EXPRESSION_STRING”)
+var expression = _compositor.CreateExpressionAnimation("INSERT_EXPRESSION_STRING")
 ```
 
 ### 연산자, 우선 순위 및 연결
@@ -230,8 +231,8 @@ ChildVisual.Offset.X / ParentVisual.Offset.Y
 위의 식 문자열에서 두 시각적 개체를 정의하려면 두 매개 변수를 만들어야 합니다.
 
 ```cs
-Expression.SetReferenceParameter(“ChildVisual”, childVisual);
-Expression.SetReferenceParameter(“ParentVisual”, parentVisual);
+Expression.SetReferenceParameter("ChildVisual", childVisual);
+Expression.SetReferenceParameter("ParentVisual", parentVisual);
 ```
 
 ### 식 도우미 함수
@@ -246,7 +247,7 @@ Expression.SetReferenceParameter(“ParentVisual”, parentVisual);
 다음은 Clamp 도우미 함수를 사용하는 더 복잡한 식 문자열 예제입니다.다.
 
 ```cs
-Clamp((scroller.Offset.y * -1.0) – container.Offset.y, 0, container.Size.y – header.Size.y)
+Clamp((scroller.Offset.y * -1.0) - container.Offset.y, 0, container.Size.y - header.Size.y)
 ```
 
 ### 식 애니메이션 시작 및 중지
@@ -266,14 +267,14 @@ _sharedProperties = _compositor.CreatePropertySet();
 속성 집합을 만들었으면 [**CompositionPropertySet**](https://msdn.microsoft.com/library/windows/apps/Dn706772)의 **Insert\*** 메서드 중 하나를 사용하여 속성 및 값을 속성 집합에 추가할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cs
-_sharedProperties.InsertVector3(“NewOffset”, offset);
+_sharedProperties.InsertVector3("NewOffset", offset);
 ```
 
 식 애니메이션을 만들었으면 참조 매개 변수를 사용하여 식 문자열에서 속성 집합의 속성을 참조할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“sharedProperties.NewOffset”);
-expression.SetReferenceParameter(“sharedProperties”, _sharedProperties);
+var expression = _compositor.CreateExpressionAnimation("sharedProperties.NewOffset");
+expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 ```
 
 ### 식 키 프레임
@@ -293,7 +294,7 @@ expression.SetReferenceParameter(“sharedProperties”, _sharedProperties);
 
 ```cs
 var animation = _compositor.CreateScalarKeyFrameAnimation();
-animation.InsertExpressionKeyFrame(0.25, “VisualBOffset.X / VisualAOffset.Y”);
+animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
@@ -307,7 +308,7 @@ animation.InsertKeyFrame(1.00f, 0.8f);
 식 키 프레임에서 이러한 값을 사용하는 예제:
 
 ```cs
-animation.InsertExpressionKeyFrame(0.0f, “this.CurrentValue + delta”);
+animation.InsertExpressionKeyFrame(0.0f, "this.CurrentValue + delta");
 ```
 
 ### 조건식
@@ -336,7 +337,7 @@ animation.InsertExpressionKeyFrame(0.0f, “this.CurrentValue + delta”);
 다음 코드 조각은 식에서 조건문을 사용하는 예제를 보여 줍니다.
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f”);
+var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
  
@@ -348,6 +349,6 @@ var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ?
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
