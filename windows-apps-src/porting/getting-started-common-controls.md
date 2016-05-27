@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: 공용 컨트롤 시작
 title: 공용 컨트롤 시작
 ---
 
-# 시작: 공용 컨트롤
+# 시작&#58; 공용 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -16,12 +17,11 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 
 | iOS 컨트롤(클래스/프로토콜) | 해당 Windows 스토어 앱 컨트롤 |
 |------------------------------|--------------------------------------|
-| 활동 표시기(**UIActivityIndicatorView**) | [
-            **ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> [빠른 시작: 진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) 참조 |
+| 활동 표시기(**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> [빠른 시작: 진행률 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) 참조 |
 | 광고 배너 보기(**ADBannerView**) 및 광고 배너 보기 대리자(**ADBannerViewDelegate**) | [Microsoft 광고 SDK](http://go.microsoft.com/fwlink/p/?LinkId=263494)(영문) 참조 |
 | 단추(UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> [빠른 시작: 단추 컨트롤 추가](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) 참조 |
 | 날짜 선택기(UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
-| 이미지 보기(UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) 참조 |
+| 이미지 보기(UIImageView) | [이미지](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) 참조 |
 | 레이블(UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> [빠른 시작: 텍스트 표시](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) 참조 |
 | 지도 보기(MKMapView) 및 지도 보기 대리자(MKMapViewDelegate) | [Windows 스토어 앱용 Bing 지도](http://go.microsoft.com/fwlink/p/?LinkId=263496)(영문) 참조 |
 | 탐색 컨트롤러(UINavigationController) 및 탐색 컨트롤러 대리자(UINavigationControllerDelegate) | [프레임](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> [탐색](https://msdn.microsoft.com/library/windows/apps/mt187344) 참조 |
@@ -57,6 +57,6 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 * [2014 빌드: Visual Studio를 사용하여 XAML 수렴형 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

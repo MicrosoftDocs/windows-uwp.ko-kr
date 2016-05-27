@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
 description: Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다.
 title: Visual Studio에서 프로젝트 만들기
 ---
 
-# 시작: 프로젝트 만들기
+# 시작&#58; 프로젝트 만들기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -16,7 +17,9 @@ Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다.
 
 <iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/5b7bd91f-6a2f-40b6-9b19-eb2994931d0a/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">One Dev Minute - Xcode와 Visual Studio 비교</iframe>
 
-스토리보드를 사용하여 iOS 앱을 만드는 것보다 Windows 10용 앱(공식적으로 UWP(유니버설 Windows 플랫폼) 앱이라고 함)을 만드는 것이 좋습니다. Windows 10 앱은 종종 여러 페이지로 생성되며, 각 페이지에는 웹 사이트와 같이 사용자 인터페이스의 다양한 부분이 포함됩니다. 각 페이지에는 두 개의 연결된 소스 파일이 있습니다. 하나는 프로그래밍 방식 또는 시각적으로 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/mt185595) 형식으로 정의된 사용자 인터페이스를 저장하고, 다른 하나는 소스 코드를 포함합니다. 사용자가 앱을 조작하면 이러한 페이지 간을 탐색합니다. 이 연습에서는 페이지가 두 개인 앱을 만듭니다.
+또한 이 [Windows용 앱 빌드 블로그 게시물](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)은 매우 유용합니다.
+
+스토리보드를 사용하여 iOS 앱을 만드는 것보다 Windows 10용 앱(공식적으로 UWP(유니버설 Windows 플랫폼) 앱이라고 함)을 만드는 것이 좋습니다. Windows 10 앱은 종종 여러 페이지로 생성되며, 각 페이지에는 웹 사이트와 같이 사용자 인터페이스의 다양한 부분이 포함됩니다. 각 페이지에는 주로 두 개의 연결된 소스 파일이 있습니다. 하나는 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/mt185595) 형식의 사용자 인터페이스를 저장하고, 다른 하나는 소스 코드(대개 C#)를 포함합니다. 사용자가 앱을 조작하면 이러한 페이지 간을 탐색합니다. 이 연습에서는 페이지가 두 개인 앱을 만듭니다.
 
 **참고** Windows 10 앱의 중요한 기능은 플랫폼에 관계없이 동일한 소스 코드와 동일한 API를 사용할 수 있다는 점입니다. iPhone 및 iPad용 유니버설 iOS 앱을 작성할 때는 런타임에 앱이 실행되는 플랫폼을 확인하여 적절히 조치할 수 있습니다. 비슷한 방식으로 Windows 10 앱은 런타임에 실행 중인 장치를 알려 줄 수 있습니다. UWP 앱을 사용하면 휴대폰 빌드와 데스크톱 빌드를 만들기 위해 소스 코드에 \#ifdef를 사용할 필요가 없습니다. 또한 Windows 10 앱은 장치에 따라 지능적으로 사용자 인터페이스 컨트롤을 사용합니다. 예를 들어 앱에서 날짜 선택 컨트롤을 참조할 수 있으며 컨트롤은 데스크톱 화면에서 실행 중인지 또는 휴대폰 화면에서 실행 중인지에 따라 자동으로 모양을 바꾸고 다르게 작동합니다. 그러나 소스 코드는 동일합니다.
 
@@ -41,14 +44,13 @@ Visual Studio도 매우 유사합니다. 다음 그림과 같은 **시작 페이
 
 Visual Studio에는 다음 그림과 같은 몇 가지 프로젝트 템플릿이 있습니다.
 
-![Visual Studio 새 프로젝트 대화 상자](images/ios-to-uwp/ios-to-uwp-vs-choose-template.png)
-이 연습에서는 **Visual C#**을 탭한 후 **Windows**, **Windows 유니버설** 및 **비어 있는 앱(Windows 유니버설)**을 차례로 탭합니다. **이름** 상자에 "MyApp"을 입력하고 **확인**을 탭합니다. Visual Studio에서 개발자의 첫 번째 프로젝트를 만든 다음 표시합니다. 이제 앱을 디자인하여 코드를 추가할 수 있습니다.
+![visual studio 새 프로젝트 대화 상자 ](images/ios-to-uwp/ios-to-uwp-vs-choose-template.png)이 연습에서는 **Visual C#**을 탭한 후 **Windows**, **Windows 유니버설** 및 **비어 있는 앱(Windows 유니버설)**을 차례로 탭합니다. **이름** 상자에 "MyApp"을 입력하고 **확인**을 탭합니다. Visual Studio에서 개발자의 첫 번째 프로젝트를 만든 다음 표시합니다. 이제 앱을 디자인하여 코드를 추가할 수 있습니다.
 
 ## 다음 단계
 
 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

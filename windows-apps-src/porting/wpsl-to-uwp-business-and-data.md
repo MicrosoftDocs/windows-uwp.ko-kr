@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다.
 title: Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
@@ -136,6 +137,6 @@ UWP 앱에서 사진, 음악 및 동영상 파일에 액세스하는 방법에 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

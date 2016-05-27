@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: 이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다.
 title: Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -109,7 +110,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 -   Bookstore2\_81.WindowsPhone 프로젝트에서 BookstoreStyles.xaml을 엽니다. 이 파일에서, 위에서 설명한 것과 동일한 세 리소스, 두 점프 목록 항목 변환기 및 네임스페이스 접두사 선언 Windows\_UI\_Xaml\_Controls\_Primitives를 복사하여 새 프로젝트의 BookstoreStyles.xaml에 모두 붙여넣습니다.
 -   마지막으로 새 프로젝트의 SeZoUC.xaml에서 적절한 Visual State Manager 태그를 방금 추가한 **Grid**에 추가합니다.
 
-```xaml
+```xml
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -171,6 +172,6 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 다음 사례 연구는 [QuizGame](w8x-to-uwp-case-study-quizgame.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: 이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 포팅하는 사례 연구를 제공합니다.
 title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 피어 투 피어 샘플 앱
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; QuizGame 피어 투 피어 샘플 앱
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -82,11 +83,11 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGame10 솔루션**
 
--   새 솔루션을 만들고(**새 프로젝트** &gt; **기타 프로젝트 형식** &gt; **Visual Studio 솔루션**) 이름을 QuizGame10으로 지정합니다.
+-   새 솔루션을 만들고(**새 프로젝트**&gt;**기타 프로젝트 형식**&gt;**Visual Studio 솔루션**) 이름을 QuizGame10으로 지정합니다.
 
 **P2PHelper**
 
--   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만들고(**새 프로젝트** &gt; **Windows 유니버설** &gt; **클래스 라이브러리(Windows 유니버설)**) 이름을 P2PHelper로 지정합니다.
+-   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만들고(**새 프로젝트**&gt;**Windows 유니버설**&gt;**클래스 라이브러리(Windows 유니버설)**) 이름을 P2PHelper로 지정합니다.
 -   새 프로젝트에서 Class1.cs를 삭제합니다.
 -   P2PSession.cs, P2PSessionClient.cs 및 P2PSessionHost.cs를 새 프로젝트 폴더에 복사하고 복사된 파일을 새 프로젝트에 포함합니다.
 -   추가로 변경할 필요 없이 프로젝트가 빌드됩니다.
@@ -98,9 +99,9 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGameHost**
 
--   새 Windows 10 앱 프로젝트를 만들고(**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
--   P2PHelper에 대한 참조를 추가합니다(**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
--   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** &gt; **기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
+-   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
+-   P2PHelper에 대한 참조를 추가합니다(**참조 추가**&gt;**프로젝트**&gt;**솔루션**&gt;**P2PHelper**).
+-   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   \\QuizGame.Windows\\의 MainPage.xaml을 \\QuizGameHost\\에 복사하고 네임스페이스를 QuizGameHost로 변경합니다.
 -   \\QuizGame.Shared\\의 App.xaml을 \\QuizGameHost\\에 복사하고 네임스페이스를 QuizGameHost로 변경합니다.
 -   app.xaml.cs를 덮어쓰는 대신 새 프로젝트에 해당 버전을 유지하고 로컬 테스트 모드를 지원하기 위한 단 하나의 대상이 지정된 변경 내용을 수행합니다. app.xaml.cs에서 이 코드 줄을
@@ -119,15 +120,15 @@ rootFrame.Navigate(typeof(MainPage), e.Arguments);
 #endif
 ```
 
--   **속성** &gt; **빌드** &gt; **조건부 컴파일 기호**에서 LOCALTESTMODEON을 추가합니다.
+-   **속성**&gt;**빌드**&gt;**조건부 컴파일 기호**에서 LOCALTESTMODEON을 추가합니다.
 -   이제 app.xaml.cs에 추가한 코드로 돌아가서 TestView 형식을 확인할 수 있습니다.
 -   package.appxmanifest에서 internetClient의 접근 권한 값 이름을 internetClientServer로 변경합니다.
 
 **QuizGameClient**
 
--   새 Windows 10 앱 프로젝트를 만들고(**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameClient로 지정합니다.
--   P2PHelper에 대한 참조를 추가합니다(**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
--   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** &gt; **기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
+-   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameClient로 지정합니다.
+-   P2PHelper에 대한 참조를 추가합니다(**참조 추가**&gt;**프로젝트**&gt;**솔루션**&gt;**P2PHelper**).
+-   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   \\QuizGame.WindowsPhone\\의 MainPage.xaml을 \\QuizGameClient\\에 복사하고 네임스페이스를 QuizGameClient로 변경합니다.
 -   \\QuizGame.Shared\\의 App.xaml을 \\QuizGameClient\\에 복사하고 네임스페이스를 QuizGameClient로 변경합니다.
 -   package.appxmanifest에서 internetClient의 접근 권한 값 이름을 internetClientServer로 변경합니다.
@@ -149,7 +150,7 @@ QuizGameHost Windows 10 앱은 넓은 창에서 실행될 때는 제대로 표�
 -   `OptionContentControlStyle`에서 **FontSize** setter의 값을 "20"으로 변경합니다. 이 단계 및 이전 단계는 모든 디바이스에서 잘 작동하는 좋은 유형 램프를 제공합니다. 이는 Windows 8.1 앱에 사용했던 "30"보다 훨씬 더 유연한 크기입니다.
 -   마지막으로, 적절한 Visual State Manager 태그를 루트 **Grid**에 추가합니다.
 
-```xaml
+```xml
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup>
         <VisualState x:Name="WideState">
@@ -171,7 +172,7 @@ QuizGameHost Windows 10 앱은 넓은 창에서 실행될 때는 제대로 표�
 
 Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩이 없음을 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
 
-```xaml
+```xml
 <Style TargetType="Button">
     <Setter Property="Margin" Value="12"/>
 </Style>
@@ -179,7 +180,7 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 
 둘째, 이 setter를 \\View\\ClientView.xaml의 `OptionButtonStyle`에 추가합니다.
 
-```xaml
+```xml
 <Setter Property="Margin" Value="6"/>
 ```
 
@@ -190,6 +191,6 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. 이렇게 포팅이 손쉬웠던 직접적인 이유 중에는 Windows 10 개발자 플랫폼과 Windows 8.1 및 Windows Phone 8.1 플랫폼이 유사하기 때문인 것도 있습니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

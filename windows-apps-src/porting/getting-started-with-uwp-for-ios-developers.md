@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: iOS 개발자용 UWP 시작
 title: iOS 개발자용 UWP 시작
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
@@ -27,6 +28,7 @@ Windows 10에서는 데스크톱, 랩톱, 태블릿 및 휴대폰 장치 등에�
 | [시작: 탐색](getting-started-navigation.md) | Windows 10 앱에서 이 탐색을 관리하는 방법 중 하나는 [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스를 사용하는 것입니다. 다음 연습에서는 이 작업을 수행하는 방법을 보여 줍니다. |
 | [시작: 애니메이션](getting-started-animation.md) | Windows 앱에서는 애니메이션을 프로그래밍 방식으로 만들 수 있지만 XAML(Extensible Application Markup Language)을 사용하여 선언적으로 정의할 수도 있습니다. |
 | [시작: 다음에 할 일](getting-started-what-next.md) | 이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다. 다음 단계를 위해 아래 항목을 읽고 Visual Studio를 실행하여 코드 작성을 시작하세요. |
+| [Windows 앱 개념 매핑](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Windows(및 Android) 기능 측면에서 iOS 개념을 고려하는 방법 |
 
  
 
@@ -35,10 +37,6 @@ Windows 10에서는 데스크톱, 랩톱, 태블릿 및 휴대폰 장치 등에�
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

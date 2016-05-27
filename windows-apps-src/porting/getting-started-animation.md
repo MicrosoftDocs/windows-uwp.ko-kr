@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: 애니메이션 시작
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: 이 프로젝트에서는 사각형을 이동하여 사라지게 한 다음 다시 보기로 가져옵니다.
 ---
 
-# 시작: 애니메이션
+# 시작&#58; 애니메이션
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -62,7 +63,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 때 Blend에서 추가된 XAML 코드가 표시됩니다. 특히, `<Storyboard>` 및 `<Rectangle>` 요소의 코드를 살펴보세요. 다음 코드에서는 예를 보여 줍니다. 타원은 간결하게 나타내기 위해 생략한 관련 없는 코드를 나타내며, 코드를 읽기 쉽도록 줄 바꿈을 추가했습니다.
 
-```xaml
+```xml
 ...
 <Storyboard 
         x:Name="Storyboard1" 
@@ -125,6 +126,6 @@ MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 �
 [시작: 다음에 할 일](getting-started-what-next.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

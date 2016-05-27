@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Bookstore에 제공된 정보를 기반으로 하는 이 사례 연구는 LongListSelector에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다.
 title: UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore2
 ---
 
-# UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore2
+# UWP에 대한 Windows Phone Silverlight 사례 연구&#58; Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -61,7 +62,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 
 **LongListSelector**를 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤로 바꾸는 과정은 여러 단계가 필요합니다. 이제 시작하겠습니다. **LongListSelector**는 그룹화된 데이터 원본에 직접 바인딩하지만 **SemanticZoom**은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 컨트롤을 포함합니다. 후자의 경우 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 어댑터를 통해 데이터로 간접적으로 바인딩합니다. **CollectionViewSource**는 태그의 리소스로 존재해야 하기 때문에 먼저 `<Page.Resources>` 내 MainPage.xaml의 태그에 추가하겠습니다.
 
-```xaml
+```xml
     <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
         Source="{Binding Authors}"
@@ -72,7 +73,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 
 다음으로 `phone:LongListSelector`를 이 태그로 바꿉니다. 이 태그는 다음과 같이 작업할 임시 **SemanticZoom**을 제공합니다.
 
-```xaml
+```xml
     <SemanticZoom>
         <SemanticZoom.ZoomedInView>
             <ListView
@@ -97,7 +98,7 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
 
 더 이상 `AuthorNameJumpListStyle`이(가) 필요 없습니다(적어도 전체가 필요하지는 않음). 축소 보기에서 그룹(이 앱의 저자 그룹)에 대한 데이터 템플릿만 필요합니다. 따라서 `AuthorNameJumpListStyle` 스타일을 삭제하고 다음과 같은 데이터 템플릿으로 바꿉니다.
 
-```xaml
+```xml
    <DataTemplate x:Key="ZoomedOutAuthorTemplate">
         <Border Margin="9.6,0.8" Background="{Binding Converter={StaticResource JumpListItemBackgroundConverter}}">
             <TextBlock Margin="9.6,0,9.6,4.8" Text="{Binding Group.Name}" Style="{StaticResource SubtitleTextBlockStyle}"
@@ -140,7 +141,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 -   `AuthorGroupHeaderTemplateWide`의 내용을 `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`으로 바꿉니다.
 -   `ZoomedOutAuthorTemplateWide`의 내용을 다음으로 바꿉니다.
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250" >
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
@@ -153,7 +154,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   `BookTemplateWide`의 내용을 다음으로 바꿉니다.
 
-```xaml
+```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250">
         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"/>
         <Image Source="{Binding CoverImage}" Stretch="UniformToFill"/>
@@ -171,7 +172,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   넓은 상태의 경우 확대 보기의 그룹은 주변에 더 많은 세로 공간을 필요로 합니다. 항목 패널 템플릿을 생성 및 참조하면 원하는 결과를 얻을 수 있습니다. 태그 모양은 다음과 같습니다.
 
-```xaml
+```xml
    <ItemsPanelTemplate x:Key="ZoomedInItemsPanelTemplate">
         <ItemsWrapGrid Orientation="Horizontal" GroupPadding="0,0,0,20"/>
     </ItemsPanelTemplate>
@@ -187,7 +188,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   마지막으로, 적절한 Visual State Manager 태그를 `LayoutRoot`의 첫 번째 자식으로 추가합니다.
 
-```xaml
+```xml
     <Grid x:Name="LayoutRoot" ... >
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -215,7 +216,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 -   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [
             **HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
 
-```xaml
+```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
     </Style>
@@ -246,8 +247,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 ![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기
- 
+데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기  
 ![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
 데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기
@@ -266,8 +266,8 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 
 **CollectionViewSource.Source**을(를) '저자들'에 바인딩할 때 중요한 것은 바로 '저자들' 속의 각 '저자'는 *무엇*의 그룹이라는 점입니다. 이 경우에 '저자'가 BookSku의 그룹이라는 점을 **CollectionViewSource**에서 결정하도록 맡깁니다. 이 경우 실행되지만 유연하지 않습니다. '저자'가 BookSku 그룹 *그리고* 저자가 살았던 주소 그룹 *둘 다*이길 바라는 경우에는 어떻게 할까요? '저자'는 양 그룹이 동시에 *될 수 없습니다*. 그러나 '저자'가 가질 수 있는 그룹 수에는 *제한이 없습니다*. 다음과 같이 하면 해결할 수 있습니다. 현재 사용하고 있는 *~는 그룹이다* 패턴 대신 또는 그에 추가로 *~그룹이 있다* 패턴을 사용하는 것입니다. 방법은 다음과 같습니다.
 
--   더 이상 **List&lt;T&gt;**에서 파생되지 않도록 Author를 변경합니다.
--   `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();` 이 필드를 '저자'에 추가합니다.
+-   저자를 변경하여 그것이 더 이상 **List&lt;T&gt;**에서 파생되지 않도록 합니다.
+-   `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();` 이 필드를 ‘저자’에 추가합니다.
 -   `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }` 이 속성을 '저자'에 추가합니다.
 -   물론 위의 두 단계를 반복하여 필요한 만큼의 '저자들'을 추가할 수 있습니다.
 -   AddBookSku 메서드의 구현을 `this.BookSkus.Add(bookSku);`(으)로 변경합니다.
@@ -298,6 +298,6 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. Windows Phone Silverlight  **LongListSelector**의 모든 기능, 개념 등이 **SemanticZoom**, **ListView**, **GridView** 및 **CollectionViewSource**의 형태로 UWP 앱에서 사용될 수 있습니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

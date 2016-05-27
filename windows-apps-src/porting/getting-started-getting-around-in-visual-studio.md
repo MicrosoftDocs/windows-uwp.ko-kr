@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 description: Visual Studio 둘러보기
 title: Visual Studio 둘러보기
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
 ---
 
-# 시작: Visual Studio 둘러보기
+# 시작&#58; Visual Studio 둘러보기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -40,7 +41,7 @@ Visual Studio에서도 비슷한 작업을 수행할 수 있습니다. **도구 
 
 단추의 세부 정보를 변경해 보겠습니다. Xcode에서 단추의 이름을 변경하려면 해당 속성 패널에서 **제목** 필드 값을 변경합니다.
 
-Visual Studio에서도 매우 유사하게 작업을 수행합니다. **디자인** 창에서 단추를 탭하여 포커스를 설정합니다. 그런 다음 **속성** 창에서 **콘텐츠** 값을 "Button"에서 "Press Me"로 변경합니다. 이제 **이름** 값을 그림과 같이 "&lt;No Name&gt;"에서 "myButton"으로 변경하여 단추 컨트롤의 이름을 업데이트합니다.
+Visual Studio에서도 매우 유사하게 작업을 수행합니다. **디자인** 창에서 단추를 탭하여 포커스를 설정합니다. 그런 다음 **속성** 창에서 **콘텐츠** 값을 "Button"에서 "Press Me"로 변경합니다. 이제 **이름** 값을 그림과 같이 “&lt;No Name&gt;”에서 “myButton”으로 변경하여 단추 컨트롤의 이름을 업데이트합니다.
 
 ![Visual Studio의 단추 속성 창](images/ios-to-uwp/vs-button-properties.png)
 
@@ -86,7 +87,7 @@ Visual Studio에서는 컨트롤을 연결할 필요가 없습니다. 항상 자
 1.  MainPage.xaml 파일 탭을 탭합니다.
 2.  **디자인** 창에서 **TextBlock** 컨트롤을 탭합니다.
 3.  **속성** 창에서 렌치 단추를 탭하여 해당 속성을 표시합니다.
-4.  **이름** 상자에서 "&lt;No Name&gt;"을 "myLabel"로 변경합니다.
+4.  **이름** 상자에서 “&lt;No Name&gt;”을 “myLabel”로 변경합니다.
 
 ![Visual Studio의 레이블 속성 창](images/ios-to-uwp/vs-label-properties.png)
 
@@ -120,6 +121,6 @@ private void myButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

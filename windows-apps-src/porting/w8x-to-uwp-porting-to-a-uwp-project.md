@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: 포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다.
 title: Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
@@ -39,7 +40,7 @@ ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
 
 찾을 수 없는 네임스페이스, 형식 또는 멤버에 대한 컴파일 오류가 발생하는 경우 이 문제가 원인일 가능성이 큽니다. API 참조 설명서에서 API의 항목을 열고 요구 사항 섹션으로 이동합니다. 그러면 구현하는 디바이스 패밀리에 대해 알 수 있습니다. 대상 디바이스 패밀리가 아닌 경우 해당 디바이스 패밀리의 확장 SDK에 대한 참조가 필요한 프로젝트에서 API를 사용할 수 있도록 합니다.
 
-**프로젝트** &gt; **참조 추가** &gt; **Windows 유니버설** &gt; **확장**을 클릭하고 적절한 확장 SDK를 선택합니다. 예를 들어 호출할 API를 모바일 디바이스 패밀리에서만 사용할 수 있으며 버전 10.0.x.y에서 도입한 경우 **UWP용 Windows 모바일 확장**을 확인합니다.
+**프로젝트**&gt;**참조 추가**&gt;**Windows 유니버설**&gt;**확장**을 클릭하고 적절한 확장 SDK를 선택합니다. 예를 들어 호출할 API를 모바일 디바이스 패밀리에서만 사용할 수 있으며 버전 10.0.x.y에서 도입한 경우 **UWP용 Windows 모바일 확장**을 확인합니다.
 
 프로젝트 파일에 다음 참조를 추가합니다.
 
@@ -78,7 +79,7 @@ ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
 Windows 10은 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) API에 수렴하므로 코드가 다음과 같이 간소화됩니다.
 
 ```csharp
-    // Use Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync</code></pre></td>
+    // Use Windows.Storage.Pickers.FileOpenPicker.PickSingleFileAsync
 ```
 
 이 예제에서는 하드웨어 뒤로 단추를 처리합니다. 단, Windows Phone에만 해당됩니다.
@@ -171,6 +172,6 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

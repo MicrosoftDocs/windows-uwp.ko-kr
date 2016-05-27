@@ -1,57 +1,73 @@
 ---
-Description: Run the Desktop Converter App to convert a Windows desktop application (like Win32, WPF, and Windows Forms) to a Universal Windows Platform (UWP) app.
+author: awkoren
+Description: 데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다.
 Search.Product: eADQiWindows 10XVcnh
-title: Desktop App Converter Preview (Project Centennial)
+title: 데스크톱 앱 변환기 미리 보기(Project Centennial)
 ---
 
-# Desktop App Converter Preview (Project Centennial)
+# 데스크톱 앱 변환기 미리 보기(Project Centennial)
 
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
+\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
-[Get the Desktop App Converter.](http://go.microsoft.com/fwlink/?LinkId=785437)
+[데스크톱 앱 변환기를 다운로드합니다.](http://go.microsoft.com/fwlink/?LinkId=785437)
 
-Desktop App Converter is a pre-release tool that enables you to bring your existing desktop apps written for .NET 4.6.1 or Win32 to the Universal Windows Platform (UWP). You can run your desktop installers through the converter in an unattended (silent) mode and obtain an AppX package that you can install by using the Add-AppxPackage PowerShell cmdlet on your development machine.
+데스크톱 앱 변환기는 .NET 4.6.1 또는 Win32용으로 작성된 기존 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)으로 가져올 수 있는 시험판 도구입니다. 무인(자동) 모드에서 변환기를 통해 데스크톱 설치 관리자를 실행하고 개발 컴퓨터에서 Add-AppxPackage PowerShell cmdlet을 사용하여 설치할 수 있는 AppX 패키지를 가져올 수 있습니다.
 
-The converter runs the desktop installer in an isolated Windows environment using a clean base image provided as part of the converter download. It captures any registry and file system I/O made by the desktop installer and packages it as part of the output. The converter outputs an AppX with package identity and the ability to call a vast range of WinRT APIs.
+변환기는 변환기 다운로드의 일부로 제공된 새로운 기본 이미지를 사용하여 격리된 Windows 환경에서 데스크톱 설치 관리자를 실행합니다. 또한 데스크톱 설치 관리자가 수행한 모든 레지스트리 및 파일 시스템 I/O를 캡처하고 출력의 일부로 패키징합니다. 변환기는 패키지 ID와 방대한 WinRT API를 호출하는 기능을 포함하여 AppX를 출력합니다.
 
-## System requirements
+## 새로운 기능
 
-### Supported operating system
-+ Windows 10 Anniversary Update Enterprise edition preview (Build 10.0.14316.0 and later)
+이 섹션에서는 데스크톱 앱 변환기의 버전 간 변경 내용을 대략적으로 설명합니다. 
 
-### Required hardware configuration
+### 2016년 5월 4일
 
-Your computer must have the following minimum capabilities:
-+ 64 bit (x64) processor
-+ Hardware-assisted virtualization
-+ Second Level Address Translation (SLAT)
+- Windows Pro 버전에 대한 지원이 복원되었습니다. 
+- 변환기 ```-Setup``` 플래그는 이제 Windows 컨테이너 기능을 사용하도록 설정하고 기본 이미지 확장을 처리합니다. 관리자 권한의 PowerShell 프롬프트에서 다음을 실행하여 일회용 설치를 수행합니다. ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
+- 런타임에 불필요한 파일 시스템 리디렉션을 줄이기 위해 앱 설치 경로의 자동 검색과 VFS 외부로의 응용 프로그램 루트 이동 기능이 추가되었습니다.
+- 변환 프로세스의 일부로 확장된 기본 이미지에 대한 자동 검색 기능이 추가되었습니다.
+- 파일 형식 연결 및 프로토콜에 대한 자동 검색 기능이 추가되었습니다.
+- 시작 메뉴 바로 가기를 감지하는 논리가 개선되었습니다.
+- 앱 설치 MUI 파일을 유지하는 파일 시스템 필터링 기능이 개선되었습니다.
+- 매니페스트에서 Project Centennial에 대한 최소 지원 데스크톱 버전(10.0.14316.0)이 업데이트되었습니다.
 
-### Recommended resources
-+ [Windows Software Development Kit (SDK) for Windows 10](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
+## 시스템 요구 사항
 
-## Set up the Desktop App Converter   
-Desktop App Converter relies on Windows 10 features that are flighted as part of the Windows Insider Preview builds. Make sure that you're on the latest build to utilize the converter.
+### 지원되는 운영 체제
++ Windows 10주년 업데이트 Enterprise Edition 미리 보기(빌드 10.0.14316.0 이상)
 
-1. Ensure that you have the latest Windows 10 Insider Preview OS - Enterprise edition (Build 10.0.14316.0 and up).
-2. Download the DesktopAppConverter.zip and the BaseImage-14316.wim.
-3. Extract the DesktopAppConverter.zip to a local folder.
-4. From an admin PowerShell window:  
+### 필수 하드웨어 구성
+
+컴퓨터에는 다음 최소 기능이 있어야 합니다.
++ 64비트(x64) 프로세서
++ 하드웨어 지원 가상화
++ SLAT(Second Level Address Translation)
+
+### 권장 리소스
++ [Windows 10용 Windows SDK(소프트웨어 개발 키트)](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
+
+## 데스크톱 앱 변환기 설정   
+데스크톱 앱 변환기는 Windows Insider Preview 빌드의 일부로 플라이트된 Windows 10 기능에 의존합니다. 이 변환기를 사용하려면 최신 빌드를 사용하고 있는지 확인합니다.
+
+1. 최신 Windows 10 Insider Preview OS - Enterprise Edition(빌드 10.0.14316.0 이상)이 있는지 확인합니다.
+2. DesktopAppConverter.zip 및 BaseImage 14316.wim을 다운로드합니다.
+3. 로컬 폴더에 DesktopAppConverter.zip의 압축을 풉니다.
+4. 관리자 PowerShell 창에서 다음을 수행합니다.  
 ```CMD
 PS C:\> Set-ExecutionPolicy bypass
 ```
-5. Run the following command from an admin PowerShell window to setup the converter:
+5. 관리자 PowerShell 창에서 다음 명령을 실행하여 변환기를 설정합니다.
 ```CMD
 PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-14316.wim
 ```
-6. If running the previous command prompts you to reboot, restart your machine and run the command again.
+6. 이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하고 명령을 다시 실행합니다.
 
-## Run the Desktop App Converter
-Desktop App Converter has two entry points: PowerShell and Command Shell. You can use either of these entry points to start the conversion process.
+## 데스크톱 앱 변환기 실행
+데스크톱 앱 변환기는 PowerShell 및 명령 셸의 두 진입점을 사용하여 시작할 수 있습니다. 이러한 진입점 중 하나를 사용하여 변환 프로세스를 시작할 수 있습니다.
 
-### Usage
+### 사용법
 ```CMD
 DesktopAppConverter.ps1
--ExpandedBaseImage <String>
+-ExpandedBaseImage <String> (optional)
 -Installer <String> [-InstallerArguments <String>] [-InstallerValidExitCodes <Int32>]
 -Destination <String>
 -PackageName <String>
@@ -70,109 +86,112 @@ DesktopAppConverter.ps1
 [<CommonParameters>]  
 ```
 
-### Example
-The following example shows how to convert a desktop app named *MyApp* by *&lt;publisher_name&gt;* to a UWP package (AppX).
+### 예제
+다음 예제에서는 *&lt;publisher_name&gt;*에 의해 데스크톱 앱 *MyApp*을 UWP 패키지(AppX)로 변환하는 방법을 보여 줍니다.
 
-+ From an admin PowerShell window, run the following command:
++ 관리자 PowerShell 창에서 다음 명령을 실행합니다.
 ```CMD
-PS C:\>.\DesktopAppConverter.ps1 -ExpandedBaseImage C:\ProgramData\Microsoft\Windows\Images\BaseImage-14316
-–Installer C:\Installer\MyApp.exe -InstallerArguments "/S" -Destination C:\Output\MyApp
--PackageName "MyApp" -Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
+PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe 
+-InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" 
+-Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
 ```
 
-## Deploy your converted AppX
-Use the [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx) cmdlet in PowerShell to deploy a signed app package (.appx) to a user account. To sign your .appx package, refer to the following section, "Signing your .Appx Package". Also, you can include the *Register* parameter of the cmdlet to install from a folder of unpackaged files during the development process. For more info, see [Deploy and debug your converted UWP app](desktop-to-uwp-deploy-and-debug.md).
+## 변환된 AppX 배포
+PowerShell에서 [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx) cmdlet을 사용하여 서명된 앱 패키지(.appx)를 사용자 계정에 배포합니다. .appx 패키지에 서명하려면 “.Appx 패키지 서명" 섹션을 참조하세요. 또한 개발 프로세스 동안 cmdlet의 *Register* 매개 변수를 포함하여 패키지되지 않은 파일의 폴더에서 설치할 수 있습니다. 자세한 내용은 [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md)를 참조하세요.
 
-## Sign your .Appx Package
+## .AppX 패키지 서명
 
-The Add-AppxPackage cmdlet requires that the application package (.appx) being deployed must be signed. Use SignTool.exe, which ships in the Microsoft Windows 10 SDK, to sign the .appx package.
+Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows 10 SDK에서 제공된 SignTool.exe를 사용합니다.
 
-### Example
+### 예제
 ```CMD
 C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-**Note:** When you run MakeCert.exe and you're asked to enter a password, select **None**.
+**참고:** MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면 **없음**을 선택합니다.
 
-For more info on certificates and signing, see:
+인증서와 서명에 대한 자세한 내용은 다음을 참조하세요.
 
-+ [How to: Create Temporary Certificates for Use During Development](https://msdn.microsoft.com/library/ms733813.aspx)
++ [개발 중 사용할 임시 인증서를 만드는 방법](https://msdn.microsoft.com/library/ms733813.aspx)
 + [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-+ [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
++ [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 
-### Caveats
-1. The Windows 10 build on the host machine must match the base image that you obtained as part of the Desktop App Converter download.  
-2. Ensure that the desktop installer is in an independent directory, because the converter copies all of the directory's content to the isolated Windows environment.  
-3. Currently, the Desktop App Converter supports running the conversion process on a 64-bit operating system only. You can deploy the converted .appx packages to a 64-bit (x64) OS only.  
-4. Desktop App Converter requires the desktop installer to run under unattended mode. Ensure that you pass the silent flag for your installer to the converter by using the *-InstallerArguments* parameter.  
+### 주의 사항
+1. 호스트 컴퓨터의 Windows 10 빌드는 데스크톱 앱 변환기 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
+2. 변환기는 모든 디렉터리 콘텐츠를 격리된 Windows 환경으로 복사하기 때문에 데스크톱 설치 관리자는 독립된 디렉터리에 있습니다.  
+3. 현재 데스크톱 앱 변환기는 64비트 운영 체제에서만 변환 프로세스의 실행을 지원합니다. 변환된 .appx 패키지를 64비트(x64) OS에만 배포할 수 있습니다.  
+4. 데스크톱 앱 변환기를 무인 모드에서 실행하려면 데스크톱 설치 관리자가 필요합니다. *-InstallerArguments* 매개 변수를 사용하여 설치 관리자에 대한 자동 플래그를 변환기에 제공해야 합니다.
+5. 공용 SxS Fusion 어셈블리 게시는 작동하지 않습니다. 설치하는 동안 응용 프로그램이 다른 프로세스에서 액세스할 수 있는 공개 side-by-side Fusion 어셈블리를 게시할 수 있습니다. 프로세스 활성화 컨텍스트 생성 동안 이러한 어셈블리는 CSRSS.exe라는 시스템 프로세스에 의해 검색됩니다. Centennial 프로세스에 대해 이 작업이 수행되면 이러한 어셈블리의 활성화 컨텍스트 생성 및 모듈 로드가 실패합니다. ComCtl과 같은 받은 편지함 어셈블리는 OS와 함께 제공되므로 Centennial 프로세스에서 해당 종속성을 유지하는 것이 안전합니다. SxS Fusion 어셈블리는 다음 위치에 등록됩니다.
+  + 레지스트리: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
+  + 파일 시스템: %windir%\\SideBySide
 
-## Telemetry from Desktop App Converter  
-Desktop App Converter may collect information about you and your use of the software and send this info to Microsoft. You can learn more about Microsoft's data collection and use in the product documentation and in the [Microsoft Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=521839). You agree to comply with all applicable provisions of the Microsoft Privacy Statement.
+## 데스크톱 앱 변환기의 원격 분석  
+데스크톱 앱 변환기가 사용자 및 사용자의 소프트웨어 사용에 대한 정보를 수집한 후 Microsoft로 보낼 수 있습니다. 제품 설명서 및 [Microsoft 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=521839)에서Microsoft의 데이터 수집 및 사용에 대해 알아볼 수 있습니다. Microsoft 개인 정보 취급 방침의 모든 규정을 준수한다는 데 동의합니다.
 
-By default, telemetry will be enabled for the Desktop App Converter. Add the following registry key to configure telemetry to a desired setting:  
+기본적으로 데스크톱 앱 변환기에 대한 원격 분석은 사용되도록 설정됩니다. 원격 분석을 원하는 설정으로 구성하려면 다음 레지스트리 키를 추가합니다.  
 ```CMD
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DesktopAppConverter
 ```
-+ Add or edit the *DisableTelemetry* value by using a DWORD set to 1.
-+ To enable telemetry, remove the key or set the value to 0.
++ 1로 설정된 DWORD를 사용하여 *DisableTelemetry* 값을 추가 또는 편집합니다.
++ 원격 분석을 사용하려면 이 키를 제거하거나 값을 0으로 설정합니다.
 
-## Desktop App Converter usage
-Here's a list of parameters to the Desktop App Converter. You can also view this list in the Windows Powershell window by running the following command:  
+## 데스크톱 앱 변환기 사용법
+데스크톱 앱 변환기에 대한 매개 변수 목록은 다음과 같습니다. 다음 명령을 실행하여 Windows Powershell 창에서 이 목록을 볼 수도 있습니다.  
 ```CMD
 get-help .\DesktopAppConverter.ps1 -detailed
 ```
 
-### Setup Parameters  
-|Parameter|Description|
+### 설정 매개 변수  
+|매개 변수|설명|
 |---------|-----------|
-|```-Setup [<SwitchParameter>]``` | Use this flag to run DesktopAppConverter in setup mode. Setup mode supports expanding a provided base image.|
-|```-BaseImage <String>``` | Full path to an unexpanded base image. This parameter is required if -Setup is specified.|
-|```-LogFile <String>``` [optional] | Specifies a log file. If omitted, a log file temporary location will be created.|
+|```-Setup [<SwitchParameter>]``` | 이 플래그를 사용하여 설치 모드에서 DesktopAppConverter를 실행합니다. 설치 모드는 제공된 기본 이미지 확장을 지원합니다.|
+|```-BaseImage <String>``` | 확장되지 않은 기본 이미지에 대한 전체 경로. 이 매개 변수는 -Setup을 지정한 경우에 필요합니다.|
+|```-LogFile <String>``` [옵션] | 로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다.|
 
-### Conversion Parameters  
-|Parameter|Description|
+### 변환 매개 변수  
+|매개 변수|설명|
 |---------|-----------|
-|```-ExpandedBaseImage <String>``` | Full path to an already expanded base image.|
-|```-Installer <String>``` | The path to the installer for your application - must be able to run unattended/silently|
-|```-InstallerArguments <String>``` [optional] | A comma-separated list or string of arguments to force your installer to run unattended/silently. This parameter is optional if your installer is an msi. To get a log from your installer, supply the logging argument for the installer here and use the path ```<log_folder>```, which is a token that the converter replaces with the appropriate path. <br><br>**NOTE: The unattended/silent flags and log arguments will vary between installer technologies.** <br><br>An example usage for this parameter: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` Another example that doesn't produce a log file may look like: ```-InstallerArguments "/quiet", "/norestart"``` Again, you must literally direct any logs to the token path ```<log_folder>``` if you want the converter to capture it and put it in the final log folder.|
-|```-InstallerValidExitCodes <Int32>``` [optional] | A comma-separated list of exit codes that indicate your installer ran successfully (for example: 0, 1234, 5678).  By default this is 0 for non-msi, and 0, 1641, 3010 for msi.|
-|```-Destination <String>``` | The desired destination for the converter's appx output - DesktopAppConverter can create this location if it doesn't already exist.|
+|```-ExpandedBaseImage <String>``` | 이미 확장된 기본 이미지에 대한 전체 경로.|
+|```-Installer <String>``` | 응용 프로그램의 설치 관리자 경로로, 무인/자동으로 실행할 수 있어야 합니다.|
+|```-InstallerArguments <String>``` [옵션] | 강제로 설치 관리자를 무인/자동으로 실행할 수 있도록 하기 위한 쉼표로 구분된 인수 목록 또는 인수 문자열입니다. 설치 관리자가 msi인 경우 이 매개 변수는 선택적입니다. 설치 관리자에서 로그를 가져오려면 여기에 설치 관리자에 대한 로깅 인수를 제공하고, 변환기가 적절한 경로로 대체하는 토큰에 해당하는 경로 ```<log_folder>```를 사용합니다. <br><br>**참고: 무인/자동 플래그와 로그 인수는 설치 관리자 기술마다 다릅니다.** <br><br>이 매개 변수에 대한 사용 예제: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` 로그 파일을 생성하지 않는 또 다른 예제는 다음과 같습니다. ```-InstallerArguments "/quiet", "/norestart"``` 변환기가 로그를 캡처한 후 최종 로그 폴더에 추가하게 하려면 토큰 경로 ```<log_folder>```로 모든 로그를 보내야 합니다.|
+|```-InstallerValidExitCodes <Int32>``` [옵션] | 설치 관리자가 성공적으로 실행되었음을 나타내는 쉼표로 구분된 종료 코드 목록(예: 0, 1234, 5678).  기본적으로 msi가 아닌 경우는 0이고 msi인 경우는 0, 1641, 3010입니다.|
+|```-Destination <String>``` | 원하는 변환기 appx 출력 대상으로, DesktopAppConverter는 이 위치가 없으면 만들 수 있습니다.|
 
-### Appx Identity Parameters  
-|Parameter|Description|
+### Appx ID 매개 변수  
+|매개 변수|설명|
 |---------|-----------|
-|```-PackageName <String>``` | The name of your Universal Windows App package
-|```-Publisher <String>``` | The publisher of your Universal Windows App package
-|```-Version <Version>``` | The version number for your Universal Windows App package
+|```-PackageName <String>``` | 유니버설 Windows 앱 패키지의 이름
+|```-Publisher <String>``` | 유니버설 Windows 앱 패키지의 게시자
+|```-Version <Version>``` | 유니버설 Windows 앱 패키지의 버전 번호
 
-### Optional Appx Manifest Parameters  
-|Parameter|Description|
+### 선택적 Appx 매니페스트 매개 변수  
+|매개 변수|설명|
 |---------|-----------|
-|```-AppExecutable <String>``` [optional] | The full path to your application's main executable if it were to be installed (it doesn't have to be), for example, "C:\Program Files (x86)\MyApp\MyApp.exe".|
-|```-AppFileTypes <String>``` [optional] | A comma-separated list of file types which the application will be associated with (eg. ".txt, .doc", without the quotes).|
-|```-AppId <String>``` [optional] | Specifies a value to set Application Id to in the appx manifest. If it is not specified, it will be set to the value passed in for *PackageName*.|
-|```-AppDisplayName <String>``` [optional] | Specifies a value to set Application Display Name to in the appx manifest. If it is not specified, it will be set to the value passed in for *PackageName*. |
-|```-AppDescription <String>``` [optional] | Specifies a value to set Application Description to in the appx manifest. If it is not specified, it will be set to the value passed in for *PackageName*.|
-|```-PackageDisplayName <String>``` [optional] | Specifies a value to set Package Display Name to in the appx manifest. If it is not specified, it will be set to the value passed in for *PackageName*. |
-|```-PackagePublisherDisplayName <String>``` [optional] | Specifies a value to set Package Publisher Display Name to in the appx manifest. If it is not specified, it will be set to the value passed in for *Publisher*. |
+|```-AppExecutable <String>``` [옵션] | 설치할 수 있는(반드시 설치할 필요는 없음) 응용 프로그램 주 실행 파일의 전체 경로. 예: "C:\Program Files (x86)\MyApp\MyApp.exe"|
+|```-AppFileTypes <String>``` [옵션] | 응용 프로그램과 연결될 쉼표로 구분된 파일 형식 목록(예: 큰따옴표를 제외한 ".txt, .doc")|
+|```-AppId <String>``` [옵션] | 응용 프로그램 ID를 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다.|
+|```-AppDisplayName <String>``` [옵션] | 응용 프로그램 표시 이름을 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. |
+|```-AppDescription <String>``` [옵션] | 응용 프로그램 설명을 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다.|
+|```-PackageDisplayName <String>``` [옵션] | 패키지 표시 이름을 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. |
+|```-PackagePublisherDisplayName <String>``` [옵션] | 패키지 게시자 표시 이름을 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *Publisher*에 대해 제공한 값으로 설정됩니다. |
 
-### Other Conversion Parameters  
-|Parameter|Description|
+### 기타 변환 매개 변수  
+|매개 변수|설명|
 |---------|-----------|
-|```-MakeAppx [<SwitchParameter>]``` [optional] | A switch that, when present, tells this script to call MakeAppx on the output. |
-|```-NatSubnetPrefix <String>``` [optional] | Prefix value to be used for the Nat instance. Typically, you would want to change this only if your host machine is attached to the same subnet range as the converter's NetNat. You can query the current converter NetNat config by using the **Get-NetNat** cmdlet. |
-|```-LogFile <String>``` [optional] | Specifies a log file. If omitted, a log file temporary location will be created. |
-|```<Common parameters>``` | This cmdlet supports the common parameters: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, and *OutVariable*. For more info, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
+|```-MakeAppx [<SwitchParameter>]``` [옵션] | 스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
+|```-NatSubnetPrefix <String>``` [옵션] | Nat 인스턴스에 사용할 접두사 값입니다. 일반적으로 사용자는 호스트 컴퓨터가 변환기의 NetNat과 동일한 서브넷 범위에 연결되는 경우에만 이 값을 변경하려고 합니다. **Get NetNat** cmdlet을 사용하여 현재 변환기 NetNat 구성을 쿼리할 수 있습니다. |
+|```-LogFile <String>``` [옵션] | 로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다. |
+|```<Common parameters>``` | 이 cmdlet은 *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, *OutVariable* 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요. |
 
-## See also
-+ [Get the Desktop App Converter](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [Bring your desktop app to the Universal Windows Platform](https://developer.microsoft.com/en-us/windows/bridges/desktop)
-+ [Bringing Desktop Apps to the UWP Using Desktop App Converter](https://channel9.msdn.com/events/Build/2016/P504)
-+ [Project Centennial: Bringing Existing Desktop Applications to the Universal Windows Platform](https://channel9.msdn.com/events/Build/2016/B829)  
-+ [UserVoice for Desktop Bridge (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
+## 참고 항목
++ [데스크톱 앱 변환기 다운로드](http://go.microsoft.com/fwlink/?LinkId=785437)
++ [데스크톱 앱을 유니버설 Windows 플랫폼으로 가져오기](https://developer.microsoft.com/en-us/windows/bridges/desktop)
++ [데스크톱 앱 변환기를 사용하여 데스크톱 앱을 UWP로 가져오기](https://channel9.msdn.com/events/Build/2016/P504)
++ [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
++ [데스크톱 브리지용 UserVoice(Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

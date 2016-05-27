@@ -1,51 +1,54 @@
 ---
-Description: Prepare your Windows desktop application (like Win32, WPF, and Windows Forms) for conversion to a Universal Windows Platform (UWP) app by using the Desktop Conversion extensions.
+author: awkoren
+Description: 데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)에서 UWP(유니버설 Windows 플랫폼) 앱으로 변환할 수 있게 준비합니다.
 Search.Product: eADQiWindows 10XVcnh
-title: Convert your desktop application to a Universal Windows Platform (UWP) app
+title: UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환
 ---
 
-# Convert your desktop application to a Universal Windows Platform (UWP) app
+# UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환
 
-\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
+\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
-Prepare your Windows desktop application (like Win32, WPF, and Windows Forms) for conversion to a Universal Windows Platform (UWP) app by using the Desktop Conversion extensions.
+데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)에서 UWP(유니버설 Windows 플랫폼) 앱으로 변환할 수 있게 준비합니다.
 
-## Benefits of converting your application to UWP
+## 응용 프로그램을 UWP로 변환할 때의 이점
 
-UWP using Desktop Conversion extensions is a bridge that enables you to convert your classic desktop application (like Win32, Windows Forms, and WPF) or game to a Universal Windows Platform (UWP) app or game. For more info, see [Guide to UWP apps](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx). After conversion, your classic desktop app is packaged, serviced, and deployed in the form of a UWP app package (an .appx or an .appxbundle) targeting Windows 10 Desktop.
+데스크톱 변환 확장을 사용하는 UWP는 클래식 데스크톱 응용 프로그램(예: Win32, Windows Forms, WPF) 또는 게임을 UWP(유니버설 Windows 플랫폼) 앱 또는 게임으로 변환할 수 있는 브리지입니다. 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx)을 참조하세요. 변환 후에는 클래식 데스크톱 앱이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
-There are two parts to the technology that enables desktop apps to be converted to UWP packages. The first is the Desktop App Converter, which takes your existing binaries and repackages them as a UWP package. Your code is still the same, it's just packaged differently. The second piece comprises runtime technologies in the Windows Anniversary update that enable a UWP package to have executables that run as full trust instead of in an app container. This technology also gives a converted app a package identity, which is required to use some UWP APIs.
+데스크톱 앱을 UWP 패키지로 변환할 수 있도록 하는 기술은 두 부분으로 나뉩니다. 첫 번째는 기존 이진 파일을 가져온 후 UWP 패키지로 다시 패키징하는 데스크톱 앱 변환기입니다. 코드는 여전히 동일하며 다르게 패키징될 뿐입니다. 두 번째 부분은 Windows 연례 업데이트에 포함된 런타임 기술로, UWP 패키지에 앱 컨테이너가 아닌 완전 신뢰로 실행되는 실행 파일이 포함될 수 있도록 합니다. 또한 이 기술은 변환된 앱에 일부 UWP API를 사용하는 데 필요한 패키지 ID를 제공합니다.
 
-Here are some of the benefits of converting your classic desktop app.
-* Your app's installation experience is much smoother for your customers. You can deploy it to computers using sideloading (see [Sideload LOB apps in Windows 10](https://technet.microsoft.com/library/mt269549.aspx)), and it leaves no trace behind after being uninstalled. Longer term, you'll also be able to publish your app to the Windows Store.
-* Because your converted app has package identity, you can call more UWP APIs, even from the full-trust partition, than you could before.
-* At your own pace, you can add UWP features to your app's package, like a XAML user-interface, live tile updates, UWP background tasks, app services, and many more. All of the functionality available to any other UWP app is available to your app.
-* If you choose to move all of your app's functionality out of the full-trust partition of the app and into the app container partition, then your app will be able to run on any Windows 10 device.
-* As a UWP app, your app is able to do the things it could do as a classic desktop app. It interacts with a virtualized view of the registry and file system that's indistinguishable from the actual registry and file system.
-* Your app can participate in the Windows Store's built-in licensing and automatic update facilities. Automatic update is a highly reliable and efficient mechanism, because only the changed parts of files are downloaded.
+다음은 클래식 데스크톱 앱을 변환할 때의 몇 가지 이점입니다.
+* 앱의 설치 환경은 고객을 위해 훨씬 더 유연해졌습니다. 테스트용 로드를 사용하여 컴퓨터에 배포하고([Windows 10에서 LOB 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx) 참조) 제거된 후에는 흔적이 남아 있지 않도록 합니다. 장기적으로 보면 Windows 스토어에 앱을 게시할 수 있습니다.
+* 변환된 앱에는 패키지 ID가 있으므로 완전 신뢰 파티션에서 이전보다 더 많은 UWP API를 호출할 수 있습니다.
+* 원하는 속도로 XAML 사용자 인터페이스, 라이브 타일 업데이트, UWP 백그라운드 작업, 앱 서비스 등의 UWP 기능을 앱 패키지에 추가할 수 있습니다. 다른 UWP 앱에 사용할 수 있는 모든 기능을 사용자의 앱에서도 사용할 수 있습니다.
+* 앱의 완전 신뢰 파티션에서 앱 컨테이너 파티션으로 앱의 모든 기능을 이동하도록 선택하면 앱은 모든 Windows 10 디바이스에서 실행할 수 있습니다.
+* UWP 앱의 경우 클래식 데스크톱 앱으로서 수행할 수 작업을 수행할 수 있습니다. 실제 레지스트리 및 파일 시스템과 구분할 수 있는 레지스트리 및 파일 시스템의 가상화된 보기를 조작합니다.
+* 앱은 Windows 스토어의 기본 제공 라이선스 및 자동 업데이트 기능에 참여할 수 있습니다. 자동 업데이트를 사용할 경우 파일의 변경된 부분만 다운로드되므로 매우 안정적이고 효율적인 메커니즘입니다.
 
-## Preparing your desktop app for conversion to UWP
-You may not need to do much to get your app ready for the conversion process. Remember that the Windows Store handles licensing and automatic updating for you, so you can remove those features from your codebase. If any of these situations applies to your application, you need to address this issue before conversion.
+## UWP로 변환할 수 있게 데스크톱 앱 준비
+앱의 변환 프로세스를 준비하기 위해 많은 작업이 필요하지 않을 수 있습니다. Windows 스토어는 라이선스 및 자동 업데이트를 처리하므로 코드 ㅔ이스에서 해당 기능을 제거해도 됩니다. 사용 중인 응용 프로그램에 이러한 상황이 해당될 경우 변환 전에 이 문제를 해결해야 합니다.
 
-+ __Your app always runs with elevated security privileges__. Your app needs to work while running as the interactive user. Users who install your app from the Windows Store may not be system administrators, so requiring your app to run elevated means that it won't run correctly for standard users.
-+ __Your app requires a kernel-mode driver or a Windows service__. The bridge is suitable for an app, but it does not support a kernel-mode driver or a Windows service that needs to run under a system account. Instead of a Windows service, use a [background task](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task).
-+ __Your app's modules are loaded in-process to processes that are not in your AppX package__. This isn't permitted, which means that in-process extensions, like [shell extensions](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx), aren't supported. But if you have two apps in the same package, you can do inter-process communication between them.
-+ __Your app uses a custom Application User Model ID (AUMID)__. If your process calls [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx) to set its own AUMID, then it may only use the AUMID generated for it by the app model environment/AppX package. You can't define custom AUMIDs.
-+ __Your app modifies the HKEY_LOCAL_MACHINE (HKLM) registry hive__. Any attempt by your app to create an HKLM key, or to open one for modification, will result in an access-denied failure. Remember that your app has its own private virtualized view of the registry, so the notion of a user- and machine-wide registry hive (which is what HKLM is) does not apply. You will need to find another way of achieving what you were using HKLM for, like writing to HKEY_CURRENT_USER (HKCU) instead.
-+ __Your app uses a ddeexec registry subkey as a means of launching another app__. Instead, use one of the DelegateExecute verb handlers as configured by the various Activatable* extensions in your [app package manifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx).
-+ __Your app writes to the AppData folder with the intention of sharing data with another app__. After conversion, AppData is redirected to the local app data store, which is a private store for each UWP app. Use a different means of inter-process data sharing. For more info, see [Store and retrieve settings and other app data](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data).
-+ __Your app writes to the install directory for your app__. For example, your app writes to a log file that you put in the same directory as your exe. This isn't supported, so you'll need to find another location, like the local app data store.
-+ __Your app installation requires user interaction__. Your app installer must be able to run silently, and it must install all of its prerequisites that aren't on by default on a clean OS image.
-+ __Your app uses the Current Working Directory__. At runtime, your converted app won't get the same Working Directory that you previously specified in your desktop .LNK shortcut. You need to change your CWD at runtime if having the correct directory is important for your app to function correctly.
++ __앱이 항상 상승된 보안 권한으로 실행됩니다__. 대화형 사용자로 실행하는 동안 앱은 계속 작동해야 합니다. Windows 스토어에서 앱을 설치하는 사용자가 시스템 관리자가 아닐 수 있으므로 앱을 상승된 권한으로 실행하도록 요구해도 표준 사용자의 경우는 제대로 진행되지 않습니다.
++ __앱에는 커널 모드 드라이버 또는 Windows 서비스가 필요합니다__. 브리지는 앱에 적합하지만 시스템 계정으로 실행해야 하는 커널 모드 드라이버 또는 Windows 서비스를 지원하지 않습니다. Windows 서비스 대신, [백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)을 사용합니다.
++ __앱 모듈은 AppX 패키지에 없는 프로세스에 in-process로 로드됩니다__. 이것은 허용되지 않습니다. 즉 [셸 확장](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx)과 같은 in-process 확장은 지원되지 않습니다. 그렇지만 두 앱이 같은 패키지에 있는 경우 둘 간에 프로세스 간 통신을 수행할 수 있습니다.
++ __앱이 사용자 지정 AUMID(응용 프로그램 사용자 모델 ID)를 사용합니다__. 프로세스가 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx)를 호출하여 자체 AUMID를 설정하는 경우 앱 모델 환경/AppX 패키지에 의해 생성된 AUMID만 사용할 수 있습니다. 사용자 지정 AUMID를 정의할 수 없습니다.
++ __앱은 HKEY_LOCAL_MACHINE (HKLM) 레지스트리 하이브를 수정합니다__. 앱에서 HKLM 키를 만들거나 수정을 위해 이 키를 열려고 하면 액세스 거부 오류가 발생합니다. 앱에는 레지스트리의 자체 가상화 보기가 있으므로 사용자 및 컴퓨터 전체 레지스트리 하이브(HKLM의 유형) 개념이 적용되지 않습니다. 대신 HKEY_CURRENT_USER(HKCU)에 쓰는 것과 같은 HKLM 사용 목적을 달성할 수 있는 다른 방법을 찾아야 합니다.
++ __앱은 다른 앱을 시작하는 수단으로 ddeexec 레지스트리 하위 키를 사용합니다__. 대신 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)의 다양 한 Activatable* 확장에 의해 구성된 DelegateExecute 동사 처리기 중 하나를 사용합니다.
++ __앱은 다른 앱과 데이터를 공유하는 데 사용하려는 AppData 폴더에 씁니다__. 변환 후 AppData는 각 UWP 앱에 대한 개인 저장소인 로컬 앱 데이터 저장소로 리디렉션됩니다. 프로세스 간에 데이터를 공유하는 다른 방법을 사용합니다. 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)을 참조하세요.
++ __앱에서 앱용 설치 디렉터리에 씁니다__. 예를 들어 앱은 exe와 동일한 디렉터리에 추가된 로그 파일에 씁니다. 이것이 지원되지 않으면 로컬 앱 데이터 저장소 등의 다른 위치를 찾아야 합니다.
++ __앱 설치에 사용자 조작이 필요합니다__. 앱 설치 관리자는 자동으로 실행될 수 있어야 하며 기본적으로 클린 OS 이미지에 없는 모든 필수 구성 요소를 설치해야 합니다.
++ __앱에서 현재 작업 디렉터리를 사용합니다__. 런타임에 변환된 앱은 이전에 데스크톱 .LNK 바로 가기에서 지정한 동일한 작업 디렉터리를 얻지 못합니다. 앱의 올바른 작동을 위해 올바른 디렉터리를 확보해야 하는 경우 런타임에 CWD를 변경해야 합니다.
++ __앱에는 UIAccess가 필요합니다__. 응용 프로그램에서 UAC 매니페스트의 `requestedExecutionLevel` 요소에 `UIAccess=true`를 지정하는 경우 현재는 UWP로 변환할 수 없습니다. 자세한 내용은 [UI 자동화 보안 개요](https://msdn.microsoft.com/library/ms742884.aspx)를 참조하세요.
 
-## In this section
+## 이 섹션의 내용
 
-| Topic | Description |
+| 항목 | 설명 |
 |-------|-------------|
-| [Desktop App Converter Preview (Project Centennial)](desktop-to-uwp-run-desktop-app-converter.md) | Shows how to run Desktop App Converter. You probably won't need to do much, if anything, to get your app ready for the conversion process. |
-| [Deploy and debug your converted UWP app](desktop-to-uwp-deploy-and-debug.md) | Contains info to help you be successful deploying and debugging your app after converting it. Also, if you're curious about some of the internals of the Desktop Conversion extensions, this topic is for you. |
+| [데스크톱 앱 변환기 미리 보기(Project Centennial)](desktop-to-uwp-run-desktop-app-converter.md) | 데스크톱 앱 변환기를 실행하는 방법을 보여 줍니다. 앱의 변환 프로세스를 준비하기 위해 많은 작업이 필요하지 않을 수 있습니다. |
+| [UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 수동으로 만드는 방법을 알아봅니다. |
+| [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md) | 앱을 변환한 후 성공적으로 배포하고 디버깅하는 데 도움이 되는 정보가 포함되어 있습니다. 또한 데스크톱 변환 확장의 내부에 대해 알고 싶은 경우 이 항목이 유용할 것입니다. |
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

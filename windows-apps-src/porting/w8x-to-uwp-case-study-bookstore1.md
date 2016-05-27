@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: 이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore1
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -77,7 +78,7 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 -   항목 사이의 간격을 촘촘히 하려면 MainPage.xaml에서 `BookTemplate` 데이터 템플릿을 찾고 **Grid** 루트에서 `Margin="0,0,0,8"`을 삭제합니다.
 -   또한 `BookTemplate`에는 `BookTemplateTitleTextBlockStyle` 및 `BookTemplateAuthorTextBlockStyle`에 대한 참조가 있습니다. Bookstore1\_81은 단일 키가 두 앱에서 다르게 구현되도록 해당 키를 간접 참조로 사용했습니다. 해당 간접 참조는 더 이상 필요하지 않습니다. 시스템 스타일은 직접 참조할 수만 있습니다. 따라서 해당 참조를 `TitleTextBlockStyle` 및 `SubtitleTextBlockStyle`로 각각 바꿉니다.
 -   이제 테마에 관계없이 앱이 모든 디바이스에서 실행될 때 적절해 보이도록 `LayoutRoot`의 Background를 올바른 기본값으로 설정해야 합니다. `"Transparent"`에서 `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`로 변경합니다.
--   `TitlePanel`에서 `TitleTextBlockStyle`(현재 너무 큼)에 대한 참조를 `CaptionTextBlockStyle`에 대한 참조로 변경합니다. `PageTitleTextBlockStyle`은 더 이상 필요 하지 않은 다른 Bookstore1\_81 간접 참조입니다. 대신 참조 `HeaderTextBlockStyle`로 변경합니다.
+-   `TitlePanel`에서 `TitleTextBlockStyle`(현재 너무 큼)에 대한 참조를 `CaptionTextBlockStyle`에 대한 참조로 변경합니다. `PageTitleTextBlockStyle` 은 더 이상 필요 하지 않은 다른 Bookstore1\_81 간접 참조입니다. 대신 참조 `HeaderTextBlockStyle`로 변경합니다.
 -   **ListBox**에 대해 더 이상 특수한 Background, Style, ItemContainerStyle을 설정할 필요가 없으므로 태그에서 이러한 세 특성과 해당 값을 삭제합니다. 그렇지만 **ListBox**의 테두리를 숨기려고 하므로 `BorderBrush="{x:Null}"`을 추가합니다.
 -   더 이상 BookstoreStyles.xaml **ResourceDictionary** 파일에서 어떤 리소스도 참조하지 않을 것입니다. 모든 리소스를 삭제할 수 있습니다. 하지만 BookstoreStyles.xaml 파일 자체를 삭제하지는 않도록 합니다. 다음 섹션에서 확인할 수 있지만 한 가지 목적으로 더 사용해야 합니다.
 
@@ -123,6 +124,6 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 다음 사례 연구는 [Bookstore2](w8x-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

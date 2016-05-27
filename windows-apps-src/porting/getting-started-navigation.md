@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 title: 탐색 시작
 description: 탐색 시작
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 ---
 
-# 시작: 탐색
+# 시작&#58; 탐색
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -81,6 +82,6 @@ public BlankPage()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

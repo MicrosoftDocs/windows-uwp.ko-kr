@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: 현재 Mac 컴퓨터를 사용하여 Windows용 앱을 개발합니다.
 title: Windows 10에서 Mac 설정
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
@@ -38,6 +39,6 @@ VirtualBox는 컴퓨터에서 가상 컴퓨터를 실행하기 위한 무료 응
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

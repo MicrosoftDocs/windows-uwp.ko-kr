@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: 이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
 title: UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1
 ---
 
-# UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore1
+# UWP에 대한 Windows Phone Silverlight 사례 연구&#58; Bookstore1
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -80,7 +81,7 @@ MainPage.xaml에서 다음과 같은 변경 내용이 필요합니다.
 | PhoneTextNormalStyle                | CaptionTextBlockStyle  |
 | PhoneTextTitle1Style                | HeaderTextBlockStyle   |
  
-이러한 스타일을 설정하려면 태그 편집기에 스타일을 입력하거나 Visual Studio XAML 도구를 사용하여 별도로 입력하지 않고 스타일을 설정할 수 있습니다. 이렇게 하려면 **TextBlock**을 마우스 오른쪽 단추로 클릭하고 **스타일 편집** &gt; **리소스 적용**을 클릭합니다. 항목 템플릿의 **TextBlock**을 사용하려면 **ListBox**를 마우스 오른쪽 단추로 클릭하고 **추가 템플릿 편집** &gt; **생성된 항목 편집(ItemTemplate)**을 클릭합니다.
+이러한 스타일을 설정하려면 태그 편집기에 스타일을 입력하거나 Visual Studio XAML 도구를 사용하여 별도로 입력하지 않고 스타일을 설정할 수 있습니다. 이렇게 하려면 **TextBlock**을 마우스 오른쪽 단추로 클릭하고 **스타일 편집**&gt;**리소스 적용**을 클릭합니다. 항목 템플릿의 **TextBlock**을 사용하려면 **ListBox**를 마우스 오른쪽 단추로 클릭하고 **추가 템플릿 편집**&gt;**생성된 항목 편집(ItemTemplate)**을 클릭합니다.
 
 **ListBox** 컨트롤의 기본 스타일에서는 배경을 `ListBoxBackgroundThemeBrush` 시스템 리소스로 설정하기 때문에 항목의 뒤에는 80% 불투명 흰색 배경이 있습니다. **ListBox**에서 `Background="Transparent"`를 설정하여 해당 배경의 선택을 취소합니다. 항목 템플릿의 **TextBlock**을 왼쪽 맞춤으로 설정하려면 위에 설명한 것과 동일한 방법으로 편집하고 두 **TextBlock** 모두에 대해 **Margin**을 `"9.6,0"`으로 설정합니다.
 
@@ -131,6 +132,6 @@ Bookstore1Universal에서 ms-appx [URI 스키마](https://msdn.microsoft.com/lib
 다음 사례 연구는 [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
