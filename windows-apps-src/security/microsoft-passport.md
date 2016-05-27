@@ -119,7 +119,7 @@ Microsoft Passport를 사용하려면 사용자가 OOBE(첫 실행 경험)에서
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
 if (!keyCredentialAvailable)
 {
-   // User didn&#39;t set up PIN yet
+   // User didn't set up PIN yet
    return;
 }
 ```
@@ -167,7 +167,7 @@ static async void RegisterUser(string AccountId)
     var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
     if (!keyCredentialAvailable)
     {
-        // The user didn&#39;t set up a PIN yet
+        // The user didn't set up a PIN yet
         return;
     }
 
@@ -453,6 +453,6 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 * [Microsoft Passport 로그인 앱](microsoft-passport-login.md)
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

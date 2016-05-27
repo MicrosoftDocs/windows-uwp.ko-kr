@@ -194,6 +194,6 @@ public void SampleReusableHash()
             **AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [
             **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

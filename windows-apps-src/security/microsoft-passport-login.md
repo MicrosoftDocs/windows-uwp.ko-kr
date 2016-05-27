@@ -53,7 +53,7 @@ author: awkoren
     -   Microsoft Passport의 상태를 포함하는 TextBlock
     -   백 엔드 또는 구성된 사용자가 없을 때 로그인 페이지를 설명하는 TextBlock
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock Text="Login" FontSize="36" Margin="4" TextAlignment="Center"/>
@@ -64,7 +64,7 @@ author: awkoren
         <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
         <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
             Click="PassportSignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
-        <TextBlock Text="Don&#39;t have an account?"
+        <TextBlock Text="Don't have an account?"
                     TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
         <TextBlock x:Name="RegisterButtonTextBlock" Text="Register now"
                    PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
@@ -76,7 +76,7 @@ author: awkoren
                  Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </Border>
         <TextBlock x:Name="LoginExplaination" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" 
-            Text="Please Note: To demonstrate a login, validation will only occur using the default username &#39;sampleUsername&#39;"/>
+            Text="Please Note: To demonstrate a login, validation will only occur using the default username 'sampleUsername'"/>
       </StackPanel>
     </Grid>
     ```
@@ -490,9 +490,9 @@ author: awkoren
 
 이 연습은 이전 연습에서 계속됩니다. 성공적으로 로그인하면 계정을 삭제 또는 로그아웃할 수 있는 환영 페이지가 표시되어야 합니다. Passport는 모든 컴퓨터에 대한 키를 만들므로 해당 컴퓨터에 로그인한 모든 사용자를 표시하는 사용자 선택 화면을 만들 수 있습니다. 그런 다음 사용자는 이러한 계정 중 하나를 선택하고 컴퓨터에 액세스하도록 이미 인증되었기 때문에 암호를 다시 입력하지 않고도 환영 화면으로 바로 이동할 수 있습니다.
 
--   1. Views 폴더에 "Welcome.xaml"이라는 새 빈 페이지를 추가합니다. 사용자 인터페이스를 완료하려면 다음 XAML을 추가합니다. 제목, 로그인된 사용자 이름 및 두 개의 단추가 표시됩니다. 단추 중 하나는 사용자 목록(나중에 만듦)으로 이동하는 단추이며 다른 단추는 이 사용자를 무시하기 위한 단추입니다.
+-   Views 폴더에 "Welcome.xaml"이라는 새 빈 페이지를 추가합니다. 사용자 인터페이스를 완료하려면 다음 XAML을 추가합니다. 제목, 로그인된 사용자 이름 및 두 개의 단추가 표시됩니다. 단추 중 하나는 사용자 목록(나중에 만듦)으로 이동하는 단추이며 다른 단추는 이 사용자를 무시하기 위한 단추입니다.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Welcome" FontSize="40" TextAlignment="Center"/>
@@ -625,7 +625,7 @@ author: awkoren
 
 -   Views 폴더에 "UserSelection.xaml"이라는 빈 페이지를 새로 만들고 사용자 인터페이스를 정의하기 위해 다음 XAML을 추가합니다. 이 페이지는 로컬 계정 목록의 모든 사용자를 표시하는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)와 사용자가 다른 계정을 추가할 수 있는 로그인 페이지로 이동하는 단추를 포함합니다.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Select a User" FontSize="36" Margin="4" TextAlignment="Center" HorizontalAlignment="Center"/>
@@ -831,7 +831,7 @@ author: awkoren
             }
         }
 
-        // Can&#39;t use Passport right now, try again later
+        // Can't use Passport right now, try again later
         return false;
     }
     ```
@@ -878,7 +878,7 @@ author: awkoren
 
 -   Views 폴더에 "PassportRegister.xaml"이라는 빈 페이지를 새로 만듭니다. XAML에서 사용자 인터페이스를 설정하기 위해 다음을 추가합니다. 여기 인터페이스는 로그인 페이지와 비슷합니다.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Register New Passport User" FontSize="24" Margin="4" TextAlignment="Center"/>
@@ -969,6 +969,6 @@ Microsoft Passport에 대한 지원을 구현한 후에는 Windows Hello를 지�
 * [Microsoft Passport 및 Windows Hello](microsoft-passport.md)
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

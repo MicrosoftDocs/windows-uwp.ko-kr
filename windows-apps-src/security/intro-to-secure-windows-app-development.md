@@ -37,9 +37,9 @@ author: awkoren
 
 특정 서비스 및/또는 앱에서 인증받기 위해 사용자는 자신이 아는 정보, 보유하고 있는 디바이스 및/또는 신원을 나타내는 정보로 구성된 자격 증명을 활용합니다. 이러한 각 요인을 인증 요소라고 합니다.
 
--   **Something the user knows**은 일반적으로 암호이지만 PIN(개인 식별 번호) 또는 “비밀 질문 및 응답 쌍”일 수도 있습니다.
--   **Something the user has**은 사용자에게 고유한 인증 데이터를 포함하고 있는 스마트 카드나 USB 스틱과 같은 하드웨어 메모리 디바이스입니다.
--   **Something the user is**에는 지문이 종종 포함되지만, 사용자의 음성, 얼굴, ocular(눈) 특성 또는 행동 패턴같이 점점 자주 사용되는 요소들도 있습니다. 이러한 측정치를 데이터로 저장하는 경우 생체 인식이라고 합니다.
+-   **사용자 비밀 정보**는 일반적으로 암호이지만 PIN(개인 식별 번호) 또는 “비밀 질문 및 응답 쌍”일 수도 있습니다.
+-   **사용자 보유 디바이스**는 사용자에게 고유한 인증 데이터를 포함하고 있는 스마트 카드나 USB 스틱과 같은 하드웨어 메모리 디바이스입니다.
+-   **사용자 신원 정보**에는 지문이 종종 포함되지만, 사용자의 음성, 얼굴, ocular(눈) 특성 또는 행동 패턴같이 점점 자주 사용되는 요소들도 있습니다. 이러한 측정치를 데이터로 저장하는 경우 생체 인식이라고 합니다.
 
 사용자가 만든 암호는 본질적으로 인증 요소이기는 하지만 충분하지 않을 때가 많습니다. 암호를 아는 사람이라면 누구든지 해당 암호를 소유한 사용자를 가장할 수 있기 때문입니다. 스마트 카드가 더 높은 수준의 보안을 제공할 수 있지만 도난 또는 분실되거나 잘못된 위치에 둘 수 있습니다. 지문이나 눈 스캔으로 사용자를 인증할 수 있는 컴퓨터 시스템은 가장 편리하면서도 가장 높은 수준의 보안을 제공할 수 있지만 모든 사용자가 사용할 수 없는 비싸고 특수한 하드웨어(예: 얼굴 인식용 Intel RealSense 카메라)가 필요합니다.
 
@@ -221,7 +221,7 @@ private async Task ValidateSSLRoot()
         await httpClient.GetAsync(bingUri);
 
     // Get the list of certificates that were used to
-    // validate the server&#39;s identity
+    // validate the server's identity
     IReadOnlyList<Certificate> serverCertificates = response.RequestMessage.TransportInformation.ServerIntermediateCertificates;
   
     // Perform validation
@@ -344,7 +344,7 @@ private PasswordCredential GetCredentialFromLocker()
     else if (credentialList.Count > 0)
     {
         // When there are multiple usernames,
-        // retrieve the default username. If one doesn’t
+        // retrieve the default username. If one doesn't
         // exist, then display UI to have the user select
         // a default username.
         defaultUserName = GetDefaultUserNameUI();
@@ -500,6 +500,6 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -28,7 +28,7 @@ author: awkoren
 ## 보안 웹 서비스 만들기 및 게시
 
 
-1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. **Visual C#** -&gt; **웹** -&gt; **Visual Studio** -&gt; **ASP.NET 웹 서비스 응용 프로그램**을 선택합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
+1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. **Visual C#** -&gt;**웹** -&gt;**Visual Studio** -&gt;**ASP.NET 웹 서비스 응용 프로그램**을 선택합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
 2.  **Service1.asmx.cs** 파일에서 기본 **HelloWorld** 웹 메서드를 다음 "Login" 메서드로 바꿉니다.
     ```cs
             [WebMethod]
@@ -53,10 +53,10 @@ author: awkoren
 1.  **IIS(인터넷 정보 서비스) 관리자**를 실행합니다.
 2.  IIS 서버의 사이트를 확장합니다. **기본 웹 사이트** 아래에서 새 "FirstContosoBank" 웹 서비스를 선택합니다. **작업** 섹션에서 **고급 설정...**을 선택합니다.
 3.  **응용 프로그램 풀**을 **.NET v2.0**으로 설정하고 **확인**을 클릭합니다.
-4.  **IIS(인터넷 정보 서비스) 관리자**에서 IIS 서버를 선택하고 **서버 인증서**를 두 번 클릭합니다. **작업** 섹션에서 **자체 서명된 인증서 만들기...**를 선택합니다. 인증서 식별 이름으로 "ContosoBank"를 입력하고 **확인**을 클릭합니다. IIS 서버에서 사용할 새 인증서가 "&lt;server-name&gt;.&lt;domain-name&gt;" 형식으로 만들어집니다.
-5.  **IIS(인터넷 정보 서비스) 관리자**에서 기본 웹 사이트를 선택합니다. **작업** 섹션에서 **바인딩**을 선택하고 **추가...**를 클릭합니다. 유형으로 "https"를 선택하고 포트를 "443"으로 설정한 다음 IIS 서버의 전체 호스트 이름("&lt;server-name&gt;.&lt;domain-name&gt;")을 입력합니다. SSL 인증서를 "ContosoBank"로 설정합니다. **확인**을 클릭합니다. **사이트 바인딩** 창에서 **닫기**를 클릭합니다.
+4.  **IIS(인터넷 정보 서비스) 관리자**에서 IIS 서버를 선택하고 **서버 인증서**를 두 번 클릭합니다. **작업** 섹션에서 **자체 서명된 인증서 만들기...**를 선택합니다. 인증서 식별 이름으로 "ContosoBank"를 입력하고 **확인**을 클릭합니다. IIS 서버에서 사용할 새 인증서가 &lt;server-name&gt;.&lt;domain-name&gt; 형식으로 만들어집니다.
+5.  **IIS(인터넷 정보 서비스) 관리자**에서 기본 웹 사이트를 선택합니다. **작업** 섹션에서 **바인딩**을 선택하고 **추가...**를 클릭합니다. 유형으로 “https”를 선택하고 포트를 “443”으로 설정한 다음 IIS 서버의 전체 호스트 이름(“&lt;server-name”&gt;.&lt;”domain-name&gt;”)을 입력합니다. SSL 인증서를 "ContosoBank"로 설정합니다. **확인**을 클릭합니다. **사이트 바인딩** 창에서 **닫기**를 클릭합니다.
 6.  **IIS(인터넷 정보 서비스) 관리자**에서 "FirstContosoBank" 웹 서비스를 선택합니다. **SSL 설정**을 두 번 클릭합니다. **SSL 필요**를 선택합니다. **클라이언트 인증서**에서 **필요**를 선택합니다. **작업** 섹션에서 **적용**을 클릭합니다.
-7.  웹 브라우저를 열고 다음 웹 주소를 입력하여 웹 서비스가 올바르게 구성되었는지 확인할 수 있습니다. "https://&lt;server-name&gt;.&lt;domain-name&gt;/FirstContosoBank/Service1.asmx". 예를 들어 "https://myserver.example.com/FirstContosoBank/Service1.asmx"를 입력합니다. 웹 서비스가 올바르게 구성된 경우 웹 서비스에 액세스하려면 클라이언트 인증서를 선택하라는 메시지가 표시됩니다.
+7.  웹 브라우저를 열고 다음 웹 주소를 입력하여 웹 서비스가 올바르게 구성되었는지 확인할 수 있습니다. "https://&lt;server-name&gt;.&lt;domain-name&gt;/FirstContosoBank/Service1.asmx" 예를 들어 "https://myserver.example.com/FirstContosoBank/Service1.asmx"를 입력합니다. 웹 서비스가 올바르게 구성된 경우 웹 서비스에 액세스하려면 클라이언트 인증서를 선택하라는 메시지가 표시됩니다.
 
 이전 단계를 반복하여 동일한 클라이언트 인증서로 액세스할 수 있는 웹 서비스를 여러 개 만들 수 있습니다.
 
@@ -74,7 +74,7 @@ author: awkoren
 
 1.  Visual Studio를 열고 시작 페이지에서 새 프로젝트를 만듭니다. 새 프로젝트의 이름을 "FirstContosoBankApp"으로 지정합니다. **확인**을 클릭하여 새 프로젝트를 만듭니다.
 2.  MainPage.xaml 파일의 기본 **Grid** 요소에 다음 XAML을 추가합니다. 이 XAML에는 가져올 PFX 파일 찾아보기 단추, 암호로 보호된 PFX 파일의 암호를 입력할 입력란, 선택한 PFX 파일 가져오기 단추, 보안 웹 서비스에 로그인 단추 및 현재 작업의 상태를 표시할 텍스트 블록이 포함되어 있습니다.
-    ```xaml
+    ```xml
     <Button x:Name="Import" Content="Import Certificate (PFX file)" HorizontalAlignment="Left" Margin="352,305,0,0" VerticalAlignment="Top" Height="77" Width="260" Click="Import_Click" FontSize="16"/>
     <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="611,305,0,0" VerticalAlignment="Top" Height="75" Width="240" Click="Login_Click" FontSize="16"/>
     <TextBlock x:Name="Result" HorizontalAlignment="Left" Margin="355,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="153" Width="560"/>
@@ -95,9 +95,9 @@ author: awkoren
     using Windows.Storage.Streams;
     ```
 
-5.  MainPage.xaml.cs 파일의 **MainPage** 클래스에 다음 변수를 추가합니다. 이러한 변수는 "FirstContosoBank" 웹 서비스의 보안 "Login" 메서드에 대한 주소와 인증서 저장소로 가져올 PFX 인증서를 포함하는 전역 변수를 지정합니다. &lt;server-name&gt;을 Microsoft Internet Information Server(IIS) 서버의 정규화된 서버 이름으로 업데이트합니다.
+5.  MainPage.xaml.cs 파일의 **MainPage** 클래스에 다음 변수를 추가합니다. 이러한 변수는 "FirstContosoBank" 웹 서비스의 보안 "Login" 메서드에 대한 주소와 인증서 저장소로 가져올 PFX 인증서를 포함하는 전역 변수를 지정합니다. &lt;server-name&gt; 을 Microsoft Internet Information Server(IIS) 서버의 정규화된 서버 이름으로 업데이트합니다.
     ```cs
-    private Uri requestUri = new Uri("https://&lt;server-name&gt;/FirstContosoBank/Service1.asmx?op=Login");
+    private Uri requestUri = new Uri("https://<server-name>/FirstContosoBank/Service1.asmx?op=Login");
     private string pfxCert = null;
     ```
 
@@ -201,6 +201,6 @@ author: awkoren
 
 이러한 단계를 따르면 동일한 사용자 인증서를 사용하여 같거나 서로 다른 보안 웹 서비스에 액세스하는 앱을 여러 개 만들 수 있습니다.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

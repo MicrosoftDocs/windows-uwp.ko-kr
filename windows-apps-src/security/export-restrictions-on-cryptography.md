@@ -55,6 +55,6 @@ author: awkoren
 ECCN이 없는 경우 [ECCN Questions and Answers](http://go.microsoft.com/fwlink/p/?LinkID=245646)를 참조하세요.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

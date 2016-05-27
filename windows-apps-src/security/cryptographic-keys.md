@@ -77,6 +77,6 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
