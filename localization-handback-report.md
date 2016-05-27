@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 487
+ Total Files | 510
 
 ## File List
  Source File | Status | Details 
@@ -493,6 +493,29 @@
  [windows-apps-src\publish\vat-info.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/vat-info.md) | InSyncHandedBackSuccess | [Details](#4dd91c901ade83e482061bed781e3fdcd9dde1413551)
  [windows-apps-src\publish\view-app-identity-details.md](https://github.com/Microsoft/windows-apps/blob/a25d87556bb85718f818af5b586f54e6985aaaa4/windows-apps-src/publish/view-app-identity-details.md) | InSyncHandedBackSuccess | [Details](#f00d817616d473ef220ebc1817c2bf9207a7aea03552)
  [windows-apps-src\publish\write-a-great-app-description.md](https://github.com/Microsoft/windows-apps/blob/17e7724eaa8a33f17360eb6e24fcc22068c5d477/windows-apps-src/publish/write-a-great-app-description.md) | InSyncHandedBackSuccess | [Details](#56b8492fea59c9a744c948d27e728e2305388cf83553)
+ [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps/blob/3c890ac8d8363982d9f014c36b6cba59bee39f20/windows-apps-src/security/authentication-and-user-identity.md) | InSyncHandedBackSuccess | [Details](#e748b319cdeda82aadaf8516e41883a3e32dc10c3554)
+ [windows-apps-src\security\certificates.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/certificates.md) | InSyncHandedBackSuccess | [Details](#84596f70a5deee6cebb5f4bac442a6aaca8210cd3555)
+ [windows-apps-src\security\common-cryptography-tasks.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/common-cryptography-tasks.md) | InSyncHandedBackSuccess | [Details](#38d0af2cdbf4137cbd0e005fcb750ed2f0b2c87c3575)
+ [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/a6265ca66a1a9d729465845da1014d1aff0e7d4d/windows-apps-src/security/companion-device-unlock.md) | InSyncHandedBackSuccess | [Details](#18102d6277ff1c66ebd147b5c1fd2f2d6c91edd13576)
+ [windows-apps-src\security\compare-buffers.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/compare-buffers.md) | InSyncHandedBackSuccess | [Details](#fcbc3c8a3f70613635201732f3ca5053d58325c73577)
+ [windows-apps-src\security\convert-between-strings-and-binary-data.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/convert-between-strings-and-binary-data.md) | InSyncHandedBackSuccess | [Details](#667338ed3808f79b75230bc0c3ea00cc7e274d5a3578)
+ [windows-apps-src\security\copy-to-and-from-byte-arrays.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/copy-to-and-from-byte-arrays.md) | InSyncHandedBackSuccess | [Details](#db1691421cf4e540c9593efb4bbf2a608426c0ed3579)
+ [windows-apps-src\security\create-random-numbers.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/create-random-numbers.md) | InSyncHandedBackSuccess | [Details](#1faa3477acd0cf1a5a2acc7c6c0a62910299254b3580)
+ [windows-apps-src\security\credential-locker.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/security/credential-locker.md) | InSyncHandedBackSuccess | [Details](#ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c3581)
+ [windows-apps-src\security\cryptographic-keys.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/cryptographic-keys.md) | InSyncHandedBackSuccess | [Details](#56cd7ed371bc119b7eebf64b85aea32c9317a7bf3582)
+ [windows-apps-src\security\cryptography.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/cryptography.md) | InSyncHandedBackSuccess | [Details](#b8cccf54e414de084c5b3fd080007b225b9a9b123583)
+ [windows-apps-src\security\data-protection.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/data-protection.md) | InSyncHandedBackSuccess | [Details](#958d5dd1c5f61078a0b288d53debe93875d65f063584)
+ [windows-apps-src\security\encode-and-decode-data.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/encode-and-decode-data.md) | InSyncHandedBackSuccess | [Details](#cd70a84e498c390684a59b33ec8a34375e1eb8633585)
+ [windows-apps-src\security\export-restrictions-on-cryptography.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/export-restrictions-on-cryptography.md) | InSyncHandedBackSuccess | [Details](#37d6131891e93d73021c860df45d1b5fdd7cfa533586)
+ [windows-apps-src\security\fingerprint-biometrics.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/fingerprint-biometrics.md) | InSyncHandedBackSuccess | [Details](#093924b51c48c3bed71e0a47b10fc80f966b34ac3587)
+ [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/7ce24486e0c730d1b6d9a9239b605603895a6a68/windows-apps-src/security/index.md) | InSyncHandedBackSuccess | [Details](#074c4f23e5912ece050d0b44621ab78015f2ce7b3627)
+ [windows-apps-src\security\intro-to-secure-windows-app-development.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/security/intro-to-secure-windows-app-development.md) | InSyncHandedBackSuccess | [Details](#c09170042841dcff6625d1d236cf708c717301c53628)
+ [windows-apps-src\security\macs-hashes-and-signatures.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/macs-hashes-and-signatures.md) | InSyncHandedBackSuccess | [Details](#d7c66d9ead6e3dbf750f1d058e311ef3c84a204f3629)
+ [windows-apps-src\security\microsoft-passport.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/microsoft-passport.md) | InSyncHandedBackSuccess | [Details](#781866bbbef755815422d1aa5bf71010bb08630d3632)
+ [windows-apps-src\security\microsoft-passport-login.md](https://github.com/Microsoft/windows-apps/blob/af8ae79f67d77195d5ed4801d040b2f1aafe8a97/windows-apps-src/security/microsoft-passport-login.md) | InSyncHandedBackSuccess | [Details](#d28f0b9ea08d35a220cdb58367f03af95966e2823631)
+ [windows-apps-src\security\share-certificates.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/share-certificates.md) | InSyncHandedBackSuccess | [Details](#2bb1b601e1ab35115c88692f6c36dccc708365413633)
+ [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/c9f6a0183edc3c01566311360417c256329ef904/windows-apps-src/security/web-account-manager.md) | InSyncHandedBackSuccess | [Details](#6ab12d6da9c4858cf6ab16d4143cf073bb0cb2753635)
+ [windows-apps-src\security\web-authentication-broker.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/web-authentication-broker.md) | InSyncHandedBackSuccess | [Details](#96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd3636)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -6337,6 +6360,282 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/88536500e37c1622405bd4b81ac73b52b63f238c/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/write-a-great-app-description.27f1f776da5e53910fa05336c61bc310ac688da6.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:36:08
+* [Back to Top](#report-top)
+
+##### <a name='e748b319cdeda82aadaf8516e41883a3e32dc10c3554'></a> Source: [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps/blob/3c890ac8d8363982d9f014c36b6cba59bee39f20/windows-apps-src/security/authentication-and-user-identity.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/authentication-and-user-identity.md)
+* Handoff File: [authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='84596f70a5deee6cebb5f4bac442a6aaca8210cd3555'></a> Source: [windows-apps-src\security\certificates.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/certificates.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\certificates.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/certificates.md)
+* Handoff File: [certificates.8acca31652cd53e9fe7e0b2082070c252aa2be12.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/certificates.8acca31652cd53e9fe7e0b2082070c252aa2be12.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [certificates.8acca31652cd53e9fe7e0b2082070c252aa2be12.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/certificates.8acca31652cd53e9fe7e0b2082070c252aa2be12.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='38d0af2cdbf4137cbd0e005fcb750ed2f0b2c87c3575'></a> Source: [windows-apps-src\security\common-cryptography-tasks.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/common-cryptography-tasks.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\common-cryptography-tasks.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/common-cryptography-tasks.md)
+* Handoff File: [common-cryptography-tasks.a55603f4f693ba37bd49fc5962ff003532ac2fc0.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/common-cryptography-tasks.a55603f4f693ba37bd49fc5962ff003532ac2fc0.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [common-cryptography-tasks.a55603f4f693ba37bd49fc5962ff003532ac2fc0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/common-cryptography-tasks.a55603f4f693ba37bd49fc5962ff003532ac2fc0.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='18102d6277ff1c66ebd147b5c1fd2f2d6c91edd13576'></a> Source: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/a6265ca66a1a9d729465845da1014d1aff0e7d4d/windows-apps-src/security/companion-device-unlock.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/companion-device-unlock.md)
+* Handoff File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='fcbc3c8a3f70613635201732f3ca5053d58325c73577'></a> Source: [windows-apps-src\security\compare-buffers.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/compare-buffers.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\compare-buffers.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/compare-buffers.md)
+* Handoff File: [compare-buffers.fa4edab31adaf2c84fd4aa3515aa755445231460.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/compare-buffers.fa4edab31adaf2c84fd4aa3515aa755445231460.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [compare-buffers.fa4edab31adaf2c84fd4aa3515aa755445231460.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/compare-buffers.fa4edab31adaf2c84fd4aa3515aa755445231460.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='667338ed3808f79b75230bc0c3ea00cc7e274d5a3578'></a> Source: [windows-apps-src\security\convert-between-strings-and-binary-data.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/convert-between-strings-and-binary-data.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\convert-between-strings-and-binary-data.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/convert-between-strings-and-binary-data.md)
+* Handoff File: [convert-between-strings-and-binary-data.76b3b1cd4f6a3518a63c4d2adde81742a4ce26f1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/convert-between-strings-and-binary-data.76b3b1cd4f6a3518a63c4d2adde81742a4ce26f1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [convert-between-strings-and-binary-data.76b3b1cd4f6a3518a63c4d2adde81742a4ce26f1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/convert-between-strings-and-binary-data.76b3b1cd4f6a3518a63c4d2adde81742a4ce26f1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='db1691421cf4e540c9593efb4bbf2a608426c0ed3579'></a> Source: [windows-apps-src\security\copy-to-and-from-byte-arrays.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/copy-to-and-from-byte-arrays.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\copy-to-and-from-byte-arrays.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/copy-to-and-from-byte-arrays.md)
+* Handoff File: [copy-to-and-from-byte-arrays.519d698ab28c720e9c3742e05e73981dc6b345ba.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/copy-to-and-from-byte-arrays.519d698ab28c720e9c3742e05e73981dc6b345ba.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [copy-to-and-from-byte-arrays.519d698ab28c720e9c3742e05e73981dc6b345ba.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/copy-to-and-from-byte-arrays.519d698ab28c720e9c3742e05e73981dc6b345ba.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='1faa3477acd0cf1a5a2acc7c6c0a62910299254b3580'></a> Source: [windows-apps-src\security\create-random-numbers.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/create-random-numbers.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\create-random-numbers.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/create-random-numbers.md)
+* Handoff File: [create-random-numbers.b66f4bced72fc43ab4845d70be35b6965c430c1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-random-numbers.b66f4bced72fc43ab4845d70be35b6965c430c1e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-random-numbers.b66f4bced72fc43ab4845d70be35b6965c430c1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/create-random-numbers.b66f4bced72fc43ab4845d70be35b6965c430c1e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c3581'></a> Source: [windows-apps-src\security\credential-locker.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/security/credential-locker.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\credential-locker.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/credential-locker.md)
+* Handoff File: [credential-locker.e4a4e8dd3e8268a52d2d325871deb3f9caacf338.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/credential-locker.e4a4e8dd3e8268a52d2d325871deb3f9caacf338.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [credential-locker.e4a4e8dd3e8268a52d2d325871deb3f9caacf338.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/credential-locker.e4a4e8dd3e8268a52d2d325871deb3f9caacf338.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='56cd7ed371bc119b7eebf64b85aea32c9317a7bf3582'></a> Source: [windows-apps-src\security\cryptographic-keys.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/cryptographic-keys.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\cryptographic-keys.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/cryptographic-keys.md)
+* Handoff File: [cryptographic-keys.3ee8361fc3a620e6542c32a4f3d3dc076be88730.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/cryptographic-keys.3ee8361fc3a620e6542c32a4f3d3dc076be88730.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [cryptographic-keys.3ee8361fc3a620e6542c32a4f3d3dc076be88730.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/cryptographic-keys.3ee8361fc3a620e6542c32a4f3d3dc076be88730.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='b8cccf54e414de084c5b3fd080007b225b9a9b123583'></a> Source: [windows-apps-src\security\cryptography.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/cryptography.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\cryptography.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/cryptography.md)
+* Handoff File: [cryptography.6c1dadfad60402677e4f6786a60d41a68c000316.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/cryptography.6c1dadfad60402677e4f6786a60d41a68c000316.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [cryptography.6c1dadfad60402677e4f6786a60d41a68c000316.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/cryptography.6c1dadfad60402677e4f6786a60d41a68c000316.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='958d5dd1c5f61078a0b288d53debe93875d65f063584'></a> Source: [windows-apps-src\security\data-protection.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/data-protection.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\data-protection.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/data-protection.md)
+* Handoff File: [data-protection.2259141d40b000403a38c259757eacf08a9f049d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/data-protection.2259141d40b000403a38c259757eacf08a9f049d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [data-protection.2259141d40b000403a38c259757eacf08a9f049d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/data-protection.2259141d40b000403a38c259757eacf08a9f049d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='cd70a84e498c390684a59b33ec8a34375e1eb8633585'></a> Source: [windows-apps-src\security\encode-and-decode-data.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/encode-and-decode-data.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\encode-and-decode-data.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/encode-and-decode-data.md)
+* Handoff File: [encode-and-decode-data.23f6beb6ef2b3359cd8b79dd7c967d2e22e2d4a5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/encode-and-decode-data.23f6beb6ef2b3359cd8b79dd7c967d2e22e2d4a5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [encode-and-decode-data.23f6beb6ef2b3359cd8b79dd7c967d2e22e2d4a5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/encode-and-decode-data.23f6beb6ef2b3359cd8b79dd7c967d2e22e2d4a5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='37d6131891e93d73021c860df45d1b5fdd7cfa533586'></a> Source: [windows-apps-src\security\export-restrictions-on-cryptography.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/export-restrictions-on-cryptography.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\export-restrictions-on-cryptography.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/export-restrictions-on-cryptography.md)
+* Handoff File: [export-restrictions-on-cryptography.5712d38bb9e79ccc2a369f2ad16d67aaf37b9e45.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/export-restrictions-on-cryptography.5712d38bb9e79ccc2a369f2ad16d67aaf37b9e45.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [export-restrictions-on-cryptography.5712d38bb9e79ccc2a369f2ad16d67aaf37b9e45.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/export-restrictions-on-cryptography.5712d38bb9e79ccc2a369f2ad16d67aaf37b9e45.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='093924b51c48c3bed71e0a47b10fc80f966b34ac3587'></a> Source: [windows-apps-src\security\fingerprint-biometrics.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/fingerprint-biometrics.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\fingerprint-biometrics.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/fingerprint-biometrics.md)
+* Handoff File: [fingerprint-biometrics.c7435c030c485657a242980ea73567320d70e645.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/fingerprint-biometrics.c7435c030c485657a242980ea73567320d70e645.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [fingerprint-biometrics.c7435c030c485657a242980ea73567320d70e645.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/fingerprint-biometrics.c7435c030c485657a242980ea73567320d70e645.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='074c4f23e5912ece050d0b44621ab78015f2ce7b3627'></a> Source: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/7ce24486e0c730d1b6d9a9239b605603895a6a68/windows-apps-src/security/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/index.md)
+* Handoff File: [index.36c19658e673067b86aba619b12635d8359c4091.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.36c19658e673067b86aba619b12635d8359c4091.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.36c19658e673067b86aba619b12635d8359c4091.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/index.36c19658e673067b86aba619b12635d8359c4091.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='c09170042841dcff6625d1d236cf708c717301c53628'></a> Source: [windows-apps-src\security\intro-to-secure-windows-app-development.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/security/intro-to-secure-windows-app-development.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\intro-to-secure-windows-app-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/intro-to-secure-windows-app-development.md)
+* Handoff File: [intro-to-secure-windows-app-development.2fe2c6dd4ed60ea75b1c7cbdf2040625baa52ddc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/intro-to-secure-windows-app-development.2fe2c6dd4ed60ea75b1c7cbdf2040625baa52ddc.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [intro-to-secure-windows-app-development.2fe2c6dd4ed60ea75b1c7cbdf2040625baa52ddc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/intro-to-secure-windows-app-development.2fe2c6dd4ed60ea75b1c7cbdf2040625baa52ddc.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='d7c66d9ead6e3dbf750f1d058e311ef3c84a204f3629'></a> Source: [windows-apps-src\security\macs-hashes-and-signatures.md](https://github.com/Microsoft/windows-apps/blob/b41fc8994412490e37053d454929d2f7cc73b6ac/windows-apps-src/security/macs-hashes-and-signatures.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\macs-hashes-and-signatures.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/macs-hashes-and-signatures.md)
+* Handoff File: [macs-hashes-and-signatures.2fcc3bb013eeb2889e7ae639f4894e913b4624a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/macs-hashes-and-signatures.2fcc3bb013eeb2889e7ae639f4894e913b4624a9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [macs-hashes-and-signatures.2fcc3bb013eeb2889e7ae639f4894e913b4624a9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/macs-hashes-and-signatures.2fcc3bb013eeb2889e7ae639f4894e913b4624a9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='781866bbbef755815422d1aa5bf71010bb08630d3632'></a> Source: [windows-apps-src\security\microsoft-passport.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/microsoft-passport.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\microsoft-passport.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/microsoft-passport.md)
+* Handoff File: [microsoft-passport.257be93302c43b692f56f979a660a412d6add2b9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/microsoft-passport.257be93302c43b692f56f979a660a412d6add2b9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [microsoft-passport.257be93302c43b692f56f979a660a412d6add2b9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/microsoft-passport.257be93302c43b692f56f979a660a412d6add2b9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='d28f0b9ea08d35a220cdb58367f03af95966e2823631'></a> Source: [windows-apps-src\security\microsoft-passport-login.md](https://github.com/Microsoft/windows-apps/blob/af8ae79f67d77195d5ed4801d040b2f1aafe8a97/windows-apps-src/security/microsoft-passport-login.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\microsoft-passport-login.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/microsoft-passport-login.md)
+* Handoff File: [microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/microsoft-passport-login.733abcc9ee42ef0128d2a993800f9c127a181017.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='2bb1b601e1ab35115c88692f6c36dccc708365413633'></a> Source: [windows-apps-src\security\share-certificates.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/share-certificates.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\share-certificates.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/share-certificates.md)
+* Handoff File: [share-certificates.9edf03748110c1e42ff4dc3e511170c2322f9a7a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/share-certificates.9edf03748110c1e42ff4dc3e511170c2322f9a7a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [share-certificates.9edf03748110c1e42ff4dc3e511170c2322f9a7a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/share-certificates.9edf03748110c1e42ff4dc3e511170c2322f9a7a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='6ab12d6da9c4858cf6ab16d4143cf073bb0cb2753635'></a> Source: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/c9f6a0183edc3c01566311360417c256329ef904/windows-apps-src/security/web-account-manager.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/web-account-manager.md)
+* Handoff File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
+* [Back to Top](#report-top)
+
+##### <a name='96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd3636'></a> Source: [windows-apps-src\security\web-authentication-broker.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/security/web-authentication-broker.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\web-authentication-broker.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4cebd8d8ce48d5eb3cb85a11c38081a37ee44cb3/windows-apps-src/security/web-authentication-broker.md)
+* Handoff File: [web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1e19f13e9584b9d8c944686c3352e91732eac3c6/ol-handback/Microsoft/windows-apps.ko-kr/master/security/web-authentication-broker.6abed143f0cd9aef072a3d4443bef4c92464e271.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:36:18
 * [Back to Top](#report-top)
 
 

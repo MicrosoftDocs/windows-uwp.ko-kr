@@ -5675,9 +5675,6 @@
   "18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1": [
     "windows-apps-src\\security\\companion-device-unlock.md"
   ],
-  "8b14f1f92837d560924ebd1540a56c67ad9d33b5": [
-    "windows-apps-src\\security\\companion-device-unlock.md"
-  ],
   "fcbc3c8a3f70613635201732f3ca5053d58325c7": [
     "windows-apps-src\\security\\compare-buffers.md"
   ],
@@ -5829,9 +5826,6 @@
     "windows-apps-src\\security\\images\\x509certificateversions.png"
   ],
   "074c4f23e5912ece050d0b44621ab78015f2ce7b": [
-    "windows-apps-src\\security\\index.md"
-  ],
-  "2f0657129e8ae104867887c8dde3c5197fdcd6d7": [
     "windows-apps-src\\security\\index.md"
   ],
   "c09170042841dcff6625d1d236cf708c717301c5": [
