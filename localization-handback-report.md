@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 287
+ Total Files | 309
 
 ## File List
  Source File | Status | Details 
@@ -293,6 +293,28 @@
  [windows-apps-src\input-and-devices\surface-hub.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/surface-hub.md) | InSyncHandedBackSuccess | [Details](#171d313a668ad4242d2e77b7ba055019d143a1762904)
  [windows-apps-src\input-and-devices\touchpad-interactions.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/touchpad-interactions.md) | InSyncHandedBackSuccess | [Details](#aa09852ff6f387b97e0f1a1bbb2d198927d5da0d2906)
  [windows-apps-src\input-and-devices\use-input-scope-to-change-the-touch-keyboard.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/input-and-devices/use-input-scope-to-change-the-touch-keyboard.md) | InSyncHandedBackSuccess | [Details](#02f06ee498b136f811b4b3b8080a9cb0436935042907)
+ [windows-apps-src\launch-resume\access-sensors-and-devices-from-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/access-sensors-and-devices-from-a-background-task.md) | InSyncHandedBackSuccess | [Details](#016969dfc0a98b978e43ea0751cc6896c2919ff82908)
+ [windows-apps-src\launch-resume\add-a-splash-screen.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/add-a-splash-screen.md) | InSyncHandedBackSuccess | [Details](#56dc94d30046b0b6d1ff57155d5738bf667369812910)
+ [windows-apps-src\launch-resume\auto-launching-with-autoplay.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/auto-launching-with-autoplay.md) | InSyncHandedBackSuccess | [Details](#bba809b71dae045893e9a404f0e268d410dad4a12912)
+ [windows-apps-src\launch-resume\create-a-customized-splash-screen.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/create-a-customized-splash-screen.md) | InSyncHandedBackSuccess | [Details](#eeb33aa0e92774a5dbc330b53189b7492f4f70632913)
+ [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/create-and-register-a-background-task.md) | InSyncHandedBackSuccess | [Details](#0094bbe109cc4ae132766aee51d477d5af9e36832914)
+ [windows-apps-src\launch-resume\debug-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/debug-a-background-task.md) | InSyncHandedBackSuccess | [Details](#1af8301989f10260f219c612697a7e6c814a54602915)
+ [windows-apps-src\launch-resume\declare-background-tasks-in-the-application-manifest.md](https://github.com/Microsoft/windows-apps/blob/fb7456f44095a0ef7b9a98f08f1be996d5c52aad/windows-apps-src/launch-resume/declare-background-tasks-in-the-application-manifest.md) | InSyncHandedBackSuccess | [Details](#4300c6eba40e8f3c38f464818d00a605a4805e0f2916)
+ [windows-apps-src\launch-resume\handle-a-cancelled-background-task.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/handle-a-cancelled-background-task.md) | InSyncHandedBackSuccess | [Details](#bf35793768419f7d5fd6cf0984ea071068d250e92918)
+ [windows-apps-src\launch-resume\handle-file-activation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/handle-file-activation.md) | InSyncHandedBackSuccess | [Details](#870866bbe5d190e67bd9dccb99d9777b502e1e8f2920)
+ [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/how-to-create-and-consume-an-app-service.md) | InSyncHandedBackSuccess | [Details](#370e74b822ba3f8e025df21b804ca77b652701232922)
+ [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/launch-default-app.md) | InSyncHandedBackSuccess | [Details](#975d45797ef1069b5c34bd239992be05ed96d56b2940)
+ [windows-apps-src\launch-resume\launch-people-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/launch-people-apps.md) | InSyncHandedBackSuccess | [Details](#41db663ea4cc65999d310e8f6f4fb6874ba607262942)
+ [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/launch-settings-app.md) | InSyncHandedBackSuccess | [Details](#db70d247e286447bd4812a1ddf00d4e203514dac2943)
+ [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps/blob/d84ace56ee8631d43b771e25b6081163f238b975/windows-apps-src/launch-resume/launch-store-app.md) | InSyncHandedBackSuccess | [Details](#df4f518e9c2dec62ac39fe7e468b9c380e3120432944)
+ [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md) | InSyncHandedBackSuccess | [Details](#d2665d4af4765fb9458a6f31002ebe645696c97f2946)
+ [windows-apps-src\launch-resume\register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/launch-resume/register-a-background-task.md) | InSyncHandedBackSuccess | [Details](#92845509d501fc505e592aa872bae266465e75f12947)
+ [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/reserved-uri-scheme-names.md) | InSyncHandedBackSuccess | [Details](#e82c038bd39a76cf8a81cbd62e47b840dfda637d2948)
+ [windows-apps-src\launch-resume\respond-to-system-events-with-background-tasks.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/respond-to-system-events-with-background-tasks.md) | InSyncHandedBackSuccess | [Details](#7dd0a6e299a383ab651dd021f4484e0295d41c3c2949)
+ [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md) | InSyncHandedBackSuccess | [Details](#3751868e629f688330e23c2f21ad550543695f992951)
+ [windows-apps-src\launch-resume\set-conditions-for-running-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/fb7456f44095a0ef7b9a98f08f1be996d5c52aad/windows-apps-src/launch-resume/set-conditions-for-running-a-background-task.md) | InSyncHandedBackSuccess | [Details](#583c7e57d8680bff2ae2227ca1db36d911bcc17a2952)
+ [windows-apps-src\launch-resume\update-a-live-tile-from-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/update-a-live-tile-from-a-background-task.md) | InSyncHandedBackSuccess | [Details](#b5f9cc361096463b8b51ef949aba7a6b1583f1862955)
+ [windows-apps-src\launch-resume\use-a-maintenance-trigger.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/use-a-maintenance-trigger.md) | InSyncHandedBackSuccess | [Details](#9665b96cbadff1624c40a26f57d7f06cdd5dde622956)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -3737,6 +3759,270 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/0f206681bcbb67a90b6e7b1f34de17be3df6aca3/ol-handback/Microsoft/windows-apps.ko-kr/master/input-and-devices/use-input-scope-to-change-the-touch-keyboard.2c1979e3224aa6536164678fc62f388552fd645b.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:34:35
+* [Back to Top](#report-top)
+
+##### <a name='016969dfc0a98b978e43ea0751cc6896c2919ff82908'></a> Source: [windows-apps-src\launch-resume\access-sensors-and-devices-from-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/access-sensors-and-devices-from-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\access-sensors-and-devices-from-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/access-sensors-and-devices-from-a-background-task.md)
+* Handoff File: [access-sensors-and-devices-from-a-background-task.bbd5b2b26261c4a7653ba3249d26e8d608b6adae.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/access-sensors-and-devices-from-a-background-task.bbd5b2b26261c4a7653ba3249d26e8d608b6adae.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [access-sensors-and-devices-from-a-background-task.bbd5b2b26261c4a7653ba3249d26e8d608b6adae.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/access-sensors-and-devices-from-a-background-task.bbd5b2b26261c4a7653ba3249d26e8d608b6adae.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='56dc94d30046b0b6d1ff57155d5738bf667369812910'></a> Source: [windows-apps-src\launch-resume\add-a-splash-screen.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/add-a-splash-screen.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\add-a-splash-screen.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/add-a-splash-screen.md)
+* Handoff File: [add-a-splash-screen.ca99ece0742fb99afa4b290d802b45ce11361959.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/add-a-splash-screen.ca99ece0742fb99afa4b290d802b45ce11361959.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [add-a-splash-screen.ca99ece0742fb99afa4b290d802b45ce11361959.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/add-a-splash-screen.ca99ece0742fb99afa4b290d802b45ce11361959.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='bba809b71dae045893e9a404f0e268d410dad4a12912'></a> Source: [windows-apps-src\launch-resume\auto-launching-with-autoplay.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/auto-launching-with-autoplay.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\auto-launching-with-autoplay.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/auto-launching-with-autoplay.md)
+* Handoff File: [auto-launching-with-autoplay.3ff6ead0358dd44583883bd25efc534f338f840a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/auto-launching-with-autoplay.3ff6ead0358dd44583883bd25efc534f338f840a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [auto-launching-with-autoplay.3ff6ead0358dd44583883bd25efc534f338f840a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/auto-launching-with-autoplay.3ff6ead0358dd44583883bd25efc534f338f840a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='eeb33aa0e92774a5dbc330b53189b7492f4f70632913'></a> Source: [windows-apps-src\launch-resume\create-a-customized-splash-screen.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/create-a-customized-splash-screen.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\create-a-customized-splash-screen.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/create-a-customized-splash-screen.md)
+* Handoff File: [create-a-customized-splash-screen.119f59c94ac66562199559074dc157433724ff32.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-customized-splash-screen.119f59c94ac66562199559074dc157433724ff32.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-a-customized-splash-screen.119f59c94ac66562199559074dc157433724ff32.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/create-a-customized-splash-screen.119f59c94ac66562199559074dc157433724ff32.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='0094bbe109cc4ae132766aee51d477d5af9e36832914'></a> Source: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
+* Handoff File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='1af8301989f10260f219c612697a7e6c814a54602915'></a> Source: [windows-apps-src\launch-resume\debug-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/debug-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\debug-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/debug-a-background-task.md)
+* Handoff File: [debug-a-background-task.7c691ed68061ce836e12a8c8269c5fe2659b0d0b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/debug-a-background-task.7c691ed68061ce836e12a8c8269c5fe2659b0d0b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [debug-a-background-task.7c691ed68061ce836e12a8c8269c5fe2659b0d0b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/debug-a-background-task.7c691ed68061ce836e12a8c8269c5fe2659b0d0b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='4300c6eba40e8f3c38f464818d00a605a4805e0f2916'></a> Source: [windows-apps-src\launch-resume\declare-background-tasks-in-the-application-manifest.md](https://github.com/Microsoft/windows-apps/blob/fb7456f44095a0ef7b9a98f08f1be996d5c52aad/windows-apps-src/launch-resume/declare-background-tasks-in-the-application-manifest.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\declare-background-tasks-in-the-application-manifest.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/declare-background-tasks-in-the-application-manifest.md)
+* Handoff File: [declare-background-tasks-in-the-application-manifest.c8f31104969f1758f396c23ce4b28812e5f3e805.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/declare-background-tasks-in-the-application-manifest.c8f31104969f1758f396c23ce4b28812e5f3e805.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [declare-background-tasks-in-the-application-manifest.c8f31104969f1758f396c23ce4b28812e5f3e805.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/declare-background-tasks-in-the-application-manifest.c8f31104969f1758f396c23ce4b28812e5f3e805.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='bf35793768419f7d5fd6cf0984ea071068d250e92918'></a> Source: [windows-apps-src\launch-resume\handle-a-cancelled-background-task.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/handle-a-cancelled-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\handle-a-cancelled-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/handle-a-cancelled-background-task.md)
+* Handoff File: [handle-a-cancelled-background-task.9adbbe3c633b6ef20ef77535693bb3b84852393d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/handle-a-cancelled-background-task.9adbbe3c633b6ef20ef77535693bb3b84852393d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [handle-a-cancelled-background-task.9adbbe3c633b6ef20ef77535693bb3b84852393d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/handle-a-cancelled-background-task.9adbbe3c633b6ef20ef77535693bb3b84852393d.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='870866bbe5d190e67bd9dccb99d9777b502e1e8f2920'></a> Source: [windows-apps-src\launch-resume\handle-file-activation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/handle-file-activation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\handle-file-activation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/handle-file-activation.md)
+* Handoff File: [handle-file-activation.1f53feb298441270fff51c10b616aeb3a103ab1b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/handle-file-activation.1f53feb298441270fff51c10b616aeb3a103ab1b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [handle-file-activation.1f53feb298441270fff51c10b616aeb3a103ab1b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/handle-file-activation.1f53feb298441270fff51c10b616aeb3a103ab1b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='370e74b822ba3f8e025df21b804ca77b652701232922'></a> Source: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/launch-resume/how-to-create-and-consume-an-app-service.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/how-to-create-and-consume-an-app-service.md)
+* Handoff File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='975d45797ef1069b5c34bd239992be05ed96d56b2940'></a> Source: [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/launch-default-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/launch-default-app.md)
+* Handoff File: [launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='41db663ea4cc65999d310e8f6f4fb6874ba607262942'></a> Source: [windows-apps-src\launch-resume\launch-people-apps.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/launch-people-apps.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\launch-people-apps.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/launch-people-apps.md)
+* Handoff File: [launch-people-apps.7c8259d9bb9c6c5aa07a8b309902e7bc04cf52fb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-people-apps.7c8259d9bb9c6c5aa07a8b309902e7bc04cf52fb.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launch-people-apps.7c8259d9bb9c6c5aa07a8b309902e7bc04cf52fb.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/launch-people-apps.7c8259d9bb9c6c5aa07a8b309902e7bc04cf52fb.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='db70d247e286447bd4812a1ddf00d4e203514dac2943'></a> Source: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/98b9bca2528c041d2fdfc6a0adead321737932b4/windows-apps-src/launch-resume/launch-settings-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/launch-settings-app.md)
+* Handoff File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='df4f518e9c2dec62ac39fe7e468b9c380e3120432944'></a> Source: [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps/blob/d84ace56ee8631d43b771e25b6081163f238b975/windows-apps-src/launch-resume/launch-store-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/launch-store-app.md)
+* Handoff File: [launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='d2665d4af4765fb9458a6f31002ebe645696c97f2946'></a> Source: [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md)
+* Handoff File: [monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='92845509d501fc505e592aa872bae266465e75f12947'></a> Source: [windows-apps-src\launch-resume\register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/launch-resume/register-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\register-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/register-a-background-task.md)
+* Handoff File: [register-a-background-task.de6ecd8dcd89a719c4112c7a9b18a165526ef916.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/register-a-background-task.de6ecd8dcd89a719c4112c7a9b18a165526ef916.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [register-a-background-task.de6ecd8dcd89a719c4112c7a9b18a165526ef916.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/register-a-background-task.de6ecd8dcd89a719c4112c7a9b18a165526ef916.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='e82c038bd39a76cf8a81cbd62e47b840dfda637d2948'></a> Source: [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/reserved-uri-scheme-names.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\reserved-uri-scheme-names.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/reserved-uri-scheme-names.md)
+* Handoff File: [reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/reserved-uri-scheme-names.6fce7ecb3f48ec0466c056cef411b95fdfbe5fe5.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='7dd0a6e299a383ab651dd021f4484e0295d41c3c2949'></a> Source: [windows-apps-src\launch-resume\respond-to-system-events-with-background-tasks.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/respond-to-system-events-with-background-tasks.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\respond-to-system-events-with-background-tasks.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/respond-to-system-events-with-background-tasks.md)
+* Handoff File: [respond-to-system-events-with-background-tasks.6016d07632818373038fb8fb060fbe3422e51a20.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/respond-to-system-events-with-background-tasks.6016d07632818373038fb8fb060fbe3422e51a20.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [respond-to-system-events-with-background-tasks.6016d07632818373038fb8fb060fbe3422e51a20.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/respond-to-system-events-with-background-tasks.6016d07632818373038fb8fb060fbe3422e51a20.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='3751868e629f688330e23c2f21ad550543695f992951'></a> Source: [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md)
+* Handoff File: [run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='583c7e57d8680bff2ae2227ca1db36d911bcc17a2952'></a> Source: [windows-apps-src\launch-resume\set-conditions-for-running-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/fb7456f44095a0ef7b9a98f08f1be996d5c52aad/windows-apps-src/launch-resume/set-conditions-for-running-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\set-conditions-for-running-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/set-conditions-for-running-a-background-task.md)
+* Handoff File: [set-conditions-for-running-a-background-task.c53f4c2f58fd6f26b4cb12d402addc6351fe354e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-conditions-for-running-a-background-task.c53f4c2f58fd6f26b4cb12d402addc6351fe354e.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [set-conditions-for-running-a-background-task.c53f4c2f58fd6f26b4cb12d402addc6351fe354e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/set-conditions-for-running-a-background-task.c53f4c2f58fd6f26b4cb12d402addc6351fe354e.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='b5f9cc361096463b8b51ef949aba7a6b1583f1862955'></a> Source: [windows-apps-src\launch-resume\update-a-live-tile-from-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/update-a-live-tile-from-a-background-task.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\update-a-live-tile-from-a-background-task.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/update-a-live-tile-from-a-background-task.md)
+* Handoff File: [update-a-live-tile-from-a-background-task.7e9746597f79a1b1ca4e877d7da32a04415ce388.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/update-a-live-tile-from-a-background-task.7e9746597f79a1b1ca4e877d7da32a04415ce388.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [update-a-live-tile-from-a-background-task.7e9746597f79a1b1ca4e877d7da32a04415ce388.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/update-a-live-tile-from-a-background-task.7e9746597f79a1b1ca4e877d7da32a04415ce388.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='9665b96cbadff1624c40a26f57d7f06cdd5dde622956'></a> Source: [windows-apps-src\launch-resume\use-a-maintenance-trigger.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/use-a-maintenance-trigger.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\launch-resume\use-a-maintenance-trigger.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/b22da2296af9d126cf0ace3c4105212ac6ba1e5c/windows-apps-src/launch-resume/use-a-maintenance-trigger.md)
+* Handoff File: [use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:46
 * [Back to Top](#report-top)
 
 
