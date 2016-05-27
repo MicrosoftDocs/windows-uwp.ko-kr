@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: C++로 Windows 런타임 구성 요소 만들기
 description: 이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visual Basic, C++)를 사용해 작성된 유니버설 Windows 앱에서 호출할 수 있는 DLL인 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
@@ -21,7 +22,7 @@ ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 
 -   이미 작성되고 테스트된 코드를 다시 사용할 수 있습니다.
 
-JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 장치에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
+JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발자 키트 만들기](https://msdn.microsoft.com/library/hh768146.aspx)를 참조하세요.
 
 일반적으로 C++ 구성 요소를 코딩할 때, 다른 .winmd 패키지의 코드에(서) 데이터를 전달하는 ABI(추상 이진 인터페이스) 경계를 제외하고는 일반 C++ 라이브러리 및 기본 제공 형식을 사용합니다. 여기서 Windows 런타임 형식 및 해당 형식을 만들고 조작하기 위해 Visual C++가 지원하는 특수 구문을 사용합니다. 또한 Visual C++ 코드에서 대리자 및 이벤트와 같은 형식을 사용하여 구성 요소에서 발생하고 JavaScript, Visual Basic 또는 C#에서 처리할 수 있는 이벤트를 구현합니다. 새로운 Visual C++ 구문에 대한 자세한 내용은 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx)를 참조하세요.
 
@@ -596,6 +597,6 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

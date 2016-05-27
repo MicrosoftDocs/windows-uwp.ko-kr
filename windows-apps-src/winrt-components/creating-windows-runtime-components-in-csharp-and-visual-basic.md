@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
 description: .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다.
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
@@ -25,7 +26,7 @@ Visual Basic 또는 C#을 사용하여 UWP 앱에서만 사용되는 구성 요�
 
 -   구성 요소에 있는 모든 공용 형식 및 멤버의 필드, 매개 변수 및 반환 값은 Windows 런타임 형식이어야 합니다.
 
-    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;(Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식이어야 합니다.) 여기에 대해서는 이 문서 뒷부분의 관리 코드에 Windows 런타임 형식 전달 및 Windows 런타임에 관리 형식 전달 섹션에서 설명합니다.
+    이 제한에는 Windows 런타임 자체에서 제공하는 형식뿐 아니라 직접 만든 Windows 런타임 형식도 포함됩니다. 또한 다양한 .NET Framework 형식도 포함됩니다. 이러한 형식의 포함은 관리 코드에서 Windows 런타임을 자연스럽게 사용할 수 있도록 하기 위해 .NET Framework에서 제공하는 지원의 일부입니다. 기본 Windows 런타임 형식 대신 친숙한 .NET Framework 형식을 사용하여 코드가 나타납니다. 예를 들어 Int32 및 Double 등의 .NET Framework 기본 형식, DateTimeOffset 및 Uri와 같은 특정한 기본 형식, IEnumerable&lt;T&gt;Visual Basic의 IEnumerable(Of T))과 IDictionary&lt;TKey,TValue&gt; 등 일반적으로 사용되는 일부 제네릭 인터페이스 형식을 사용할 수 있습니다. (이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식이어야 합니다.) 여기에 대해서는 이 문서 뒷부분의 관리 코드에 Windows 런타임 형식 전달 및 Windows 런타임에 관리 형식 전달 섹션에서 설명합니다.
 
 -   공용 클래스와 인터페이스에는 메서드, 속성 및 이벤트가 포함될 수 있습니다. 이벤트에 대한 대리자를 선언하거나 EventHandler&lt;T&gt; 대리자를 사용할 수 있습니다. 공용 클래스 또는 인터페이스는 다음과 같은 특징이 있습니다.
 
@@ -96,7 +97,7 @@ C# 또는 Visual Basic에서 이러한 형식에 대한 언어 키워드를 제�
 
  
 
-하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 Dictionary&lt;int, string&gt;(Visual Basic의 Dictionary(Of Integer, String))을 IDictionary&lt;int, string&gt;, IReadOnlyDictionary&lt;int, string&gt; 또는 IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;로 전달하거나 반환할 수 있습니다.
+하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 Dictionary&lt;int, string&gt;(Visual Basic의 Dictionary(Of Integer, String))을 IDictionary&lt;int, string&gt; IReadOnlyDictionary&lt;int, string&gt; 또는 IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;&gt;로 전달하거나 반환할 수 있습니다.
 
 **중요** JavaScript는 관리 형식이 구현한 인터페이스 목록에서 처음 나타나는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
@@ -224,7 +225,7 @@ function asyncExample(id) {
 
 취소 또는 진행 상황 보고를 지원하는 비동기 작업의 경우 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 시작된 작업을 생성하고 작업의 취소 및 진행 상황 보고 기능을 적절한 Windows 런타임 인터페이스의 취소 및 진행 상황 보고 기능과 연결합니다. 취소 및 진행 상황 보고를 모두 지원하는 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들어 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요.
 
-비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
+비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -293,6 +294,6 @@ Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

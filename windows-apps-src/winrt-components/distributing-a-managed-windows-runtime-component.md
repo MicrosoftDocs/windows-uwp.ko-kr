@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: 관리되는 Windows 런타임 구성 요소 배포
 description: Windows 런타임 구성 요소를 파일 복사로 배포할 수 있습니다.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
@@ -74,6 +75,6 @@ For example: Microsoft.Cpp.Build.dll
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

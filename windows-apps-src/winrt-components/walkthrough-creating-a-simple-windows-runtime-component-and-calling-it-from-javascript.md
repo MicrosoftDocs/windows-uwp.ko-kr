@@ -1,10 +1,11 @@
 ---
+author: martinekuan
 title: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
 description: 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ---
 
-# 연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
+# 연습&#58; 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -36,16 +37,16 @@ Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런
 4.  클래스에 두 개의 간단한 멤버인 **static** 메서드(Visual Basic의 경우 **Shared** 메서드) 및 인스턴스 속성을 추가합니다.
 
     > [!div class="tabbedCodeSnippets"]
-    > ```cpp 
+    > ```cpp
     > namespace SampleComponent
     > {
     >     public sealed class Example
     >     {
-    >         public static string GetAnswer() 
-    >         { 
-    >             return "The answer is 42."; 
+    >         public static string GetAnswer()
+    >         {
+    >             return "The answer is 42.";
     >         }
-    > 
+    >
     >         public int SampleProperty { get; set; }
     >     }
     > }
@@ -55,7 +56,7 @@ Visual Studio에서는 쉽게 C# 또는 Visual Basic으로 작성된 Windows 런
     >     Public Shared Function GetAnswer() As String
     >         Return "The answer is 42."
     >     End Function
-    > 
+    >
     >     Public Property SampleProperty As Integer
     > End Class
     > ```
@@ -77,7 +78,7 @@ function basics1() {
 
     ex = new SampleComponent.Example();
 
-   document.getElementById('output').innerHTML += "<br/>" + 
+   document.getElementById('output').innerHTML += "<br/>" +
        ex.sampleProperty;
 
 }
@@ -195,7 +196,7 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > using Windows.Foundation.Collections;
-> 
+>
 > namespace SampleComponent
 > {
 >     public sealed class PropertySetStats
@@ -206,16 +207,16 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 >             _ps = new PropertySet();
 >             _ps.MapChanged += this.MapChangedHandler;
 >         }
-> 
+>
 >         public PropertySet PropertySet { get { return _ps; } }
-> 
+>
 >         int[] counts = { 0, 0, 0, 0 };
 >         private void MapChangedHandler(IObservableMap<string, object> sender,
 >             IMapChangedEventArgs<string> args)
 >         {
 >             counts[(int)args.CollectionChange] += 1;
 >         }
-> 
+>
 >         public string DisplayStats()
 >         {
 >             StringBuilder report = new StringBuilder("<br/>Number of changes:<ul>");
@@ -230,34 +231,34 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 > ```
 > ```vb
 > Imports System.Text
-> 
+>
 > Public NotInheritable Class PropertySetStats
 >     Private _ps As PropertySet
 >     Public Sub New()
 >         _ps = New PropertySet()
 >         AddHandler _ps.MapChanged, AddressOf Me.MapChangedHandler
 >     End Sub
-> 
+>
 >     Public ReadOnly Property PropertySet As PropertySet
 >         Get
 >             Return _ps
 >         End Get
 >     End Property
-> 
+>
 >     Dim counts() As Integer = {0, 0, 0, 0}
 >     Private Sub MapChangedHandler(ByVal sender As IObservableMap(Of String, Object),
 >         ByVal args As IMapChangedEventArgs(Of String))
-> 
+>
 >         counts(CInt(args.CollectionChange)) += 1
 >     End Sub
-> 
+>
 >     Public Function DisplayStats() As String
 >         Dim report As New StringBuilder("<br/>Number of changes:<ul>")
 >         For i As Integer = 0 To counts.Length - 1
->             report.Append("<li>" &amp; CType(i, CollectionChange).ToString() &amp;
->                           ": " &amp; counts(i) &amp; "</li>")
+>             report.Append("<li>" & CType(i, CollectionChange).ToString() &
+>                           ": " & counts(i) & "</li>")
 >         Next
->         Return report.ToString() &amp; "</ul>"
+>         Return report.ToString() & "</ul>"
 >     End Function
 > End Class
 > ```
@@ -295,7 +296,7 @@ function onMapChanged(change) {
             result = "All properties cleared";
             break;
         case Windows.Foundation.Collections.CollectionChange.itemInserted:
-            result = "Inserted " + change.key + ": '" + 
+            result = "Inserted " + change.key + ": '" +
                 change.target.lookup(change.key) + "'";
             break;
         case Windows.Foundation.Collections.CollectionChange.itemRemoved:
@@ -403,7 +404,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 > End Function
 > ```
 
-사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
+사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
 
 **중요** 관리되는 형식이 여러 인터페이스를 구현하는 경우 JavaScript는 목록에 첫 번째로 표시되는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
@@ -488,7 +489,7 @@ List&lt;T&gt;는 JavaScript에서 Windows 런타임 형식 IVector&lt;T&gt;로 �
 ## 이벤트 선언
 
 
-표준 .NET Framework 이벤트 패턴 또는 Windows 런타임에서 사용되는 기타 패턴을 사용하여 이벤트를 선언할 수 있습니다. .NET Framework는 System.EventHandler&lt;TEventArgs&gt; 대리자와 Windows Runtime EventHandler&lt;T&gt; 대리자 간의 동등성을 지원하므로 EventHandler&lt;TEventArgs&gt;를 사용하는 것이 표준 .NET Framework 패턴을 구현하는 좋은 방법입니다. 이 작동 방식을 확인하려면 SampleComponent 프로젝트에 다음 클래스 쌍을 추가합니다.
+표준 .NET Framework 이벤트 패턴 또는 Windows 런타임에서 사용되는 기타 패턴을 사용하여 이벤트를 선언할 수 있습니다. .NET Framework는 System.EventHandler&lt;TEventArgs&gt; 대리자와 Windows 런타임 EventHandler&lt;T&gt; 대리자 간의 동등성을 지원하므로 EventHandler&lt;TEventArgs&gt;를 사용하는 것이 표준 .NET Framework 패턴을 구현하는 좋은 방법입니다. 이 작동 방식을 확인하려면 SampleComponent 프로젝트에 다음 클래스 쌍을 추가합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -510,7 +511,7 @@ List&lt;T&gt;는 JavaScript에서 Windows 런타임 형식 IVector&lt;T&gt;로 �
 >             }
 >         }
 >     }
-> 
+>
 >     public sealed class TestEventArgs
 >     {
 >         public string Value1 { get; set; }
@@ -528,7 +529,7 @@ List&lt;T&gt;는 JavaScript에서 Windows 런타임 형식 IVector&lt;T&gt;로 �
 >                             })
 >     End Sub
 > End Class
-> 
+>
 > Public NotInheritable Class TestEventArgs
 >     Public Property Value1 As String
 >     Public Property Value2 As Long
@@ -566,34 +567,27 @@ events1Button.addEventListener("click", events1, false);
 
 .NET Framework에는 작업 및 제네릭 [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx) 클래스에 따라 비동기 처리 및 병렬 처리를 위한 풍부한 도구 집합이 있습니다. Windows 런타임 구성 요소에 작업 기반 비동기 처리를 노출하려면 Windows 런타임 인터페이스 [IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/br205802.aspx) 및 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/br205807.aspx)를 사용합니다. Windows 런타임에서 작업(operation)은 결과를 반환하지만 작업(action)은 반환하지 않습니다.
 
-이 섹션에서는 진행률을 보고하고 결과를 반환하는 취소할 수 있는 비동기 작업을 보여 줍니다. GetPrimesInRangeAsync 메서드는 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 작업을 생성하고 해당 취소 및 진행률 보고 기능을 WinJS.Promise 개체에 연결합니다. 먼저 Example 클래스에 다음 **using** 문(Visual Basic의 경우 **Imports**)을 추가합니다.
+이 섹션에서는 진행률을 보고하고 결과를 반환하는 취소할 수 있는 비동기 작업을 보여 줍니다. GetPrimesInRangeAsync 메서드는 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 작업을 생성하고 해당 취소 및 진행률 보고 기능을 WinJS.Promise 개체에 연결합니다. 먼저 Example 클래스에 GetPrimesInRangeAsync 메서드를 추가합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
 > using System.Runtime.InteropServices.WindowsRuntime;
 > using Windows.Foundation;
-> ```
-> ```vb
-> Imports System.Runtime.InteropServices.WindowsRuntime
-> ```
-> 
-> 이제 Example 클래스에 GetPrimesInRangeAsync 메서드를 추가합니다.
-> 
-> > [!div class="tabbedCodeSnippets"]
-> ```csharp
-> public static IAsyncOperationWithProgress<IList<long>, double> GetPrimesInRangeAsync(long start, long count)
+>
+> public static IAsyncOperationWithProgress<IList<long>, double>
+> GetPrimesInRangeAsync(long start, long count)
 > {
 >     if (start < 2 || count < 1) throw new ArgumentException();
-> 
+>
 >     return AsyncInfo.Run<IList<long>, double>((token, progress) =>
-> 
+>
 >         Task.Run<IList<long>>(() =>
 >         {
 >             List<long> primes = new List<long>();
 >             double onePercent = count / 100;
 >             long ctProgress = 0;
 >             double nextProgress = onePercent;
-> 
+>
 >             for (long candidate = start; candidate < start + count; candidate++)
 >             {
 >                 ctProgress += 1;
@@ -612,7 +606,7 @@ events1Button.addEventListener("click", events1, false);
 >                     }
 >                 }
 >                 if (isPrime) primes.Add(candidate);
-> 
+>
 >                 token.ThrowIfCancellationRequested();
 >             }
 >             progress.Report(100.0);
@@ -622,10 +616,13 @@ events1Button.addEventListener("click", events1, false);
 > }
 > ```
 > ```vb
-> Public Shared Function GetPrimesInRangeAsync(ByVal start As Long, ByVal count As Long) As IAsyncOperationWithProgress(Of IList(Of Long), Double)
-> 
+> Imports System.Runtime.InteropServices.WindowsRuntime
+>
+> Public Shared Function GetPrimesInRangeAsync(ByVal start As Long, ByVal count As Long)
+> As IAsyncOperationWithProgress(Of IList(Of Long), Double)
+>
 >     If (start < 2 Or count < 1) Then Throw New ArgumentException()
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of Long), Double)( _
 >         Function(token, prog)
 >             Return Task.Run(Of IList(Of Long))( _
@@ -634,15 +631,15 @@ events1Button.addEventListener("click", events1, false);
 >                     Dim onePercent As Long = count / 100
 >                     Dim ctProgress As Long = 0
 >                     Dim nextProgress As Long = onePercent
-> 
+>
 >                     For candidate As Long = start To start + count - 1
 >                         ctProgress += 1
-> 
+>
 >                         If ctProgress >= nextProgress Then
 >                             prog.Report(ctProgress / onePercent)
 >                             nextProgress += onePercent
 >                         End If
-> 
+>
 >                         Dim isPrime As Boolean = True
 >                         For i As Long = 2 To CLng(Math.Sqrt(candidate))
 >                             If (candidate Mod i) = 0 Then
@@ -650,9 +647,9 @@ events1Button.addEventListener("click", events1, false);
 >                                 Exit For
 >                             End If
 >                         Next
-> 
+>
 >                         If isPrime Then primes.Add(candidate)
-> 
+>
 >                         token.ThrowIfCancellationRequested()
 >                     Next
 >                     prog.Report(100.0)
@@ -665,14 +662,14 @@ events1Button.addEventListener("click", events1, false);
 GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 것입니다. 여기서는 비동기 작업 구현에 중점을 두므로 단순성이 중요하며 취소를 보여 주는 경우 느린 구현이 도움이 됩니다. GetPrimesInRangeAsync는 소수만 사용하는 대신 해당 제곱근보다 작거나 같은 모든 정수로 후보를 나누어 무차별 대입(brute force)으로 소수를 찾습니다. 이 코드를 단계별로 실행
 
 -   비동기 작업을 시작하기 전에 매개 변수 유효성 검사 및 잘못된 입력에 대한 예외 발생과 같은 정리 작업을 수행합니다.
--   이 구현의 관건은 [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) 메서드와 메서드의 유일한 매개 변수인 대리자입니다. 대리자는 취소 토큰과 진행률 보고를 위한 인터페이스를 수락하고 해당 매개 변수를 사용하는 시작된 작업을 반환해야 합니다. JavaScript가 GetPrimesInRangeAsync 메서드를 호출하는 경우 다음 단계가 수행됩니다(여기에 제공된 순서와 다를 수 있음).
+-   이 구현의 관건은 [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) 메서드와 메서드의 유일한 매개 변수인 대리자입니다. 대리자는 취소 토큰과 진행률 보고를 위한 인터페이스를 수락하고 해당 매개 변수를 사용하는 시작된 작업을 반환해야 합니다. JavaScript가 GetPrimesInRangeAsync 메서드를 호출하는 경우 다음 단계가 수행됩니다(여기에 제공된 순서와 다를 수 있음).
 
     -   [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) 개체는 반환된 결과를 처리하고, 취소에 대응하고, 진행률 보고서를 처리할 함수를 제공합니다.
     -   AsyncInfo.Run 메서드는 취소 원본과 IProgress&lt;T&gt; 인터페이스를 구현하는 개체를 만듭니다. 대리자에게 취소 원본의 [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스 둘 다를 전달합니다.
 
         > **참고** Promise 개체가 취소에 대응하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 취소할 수 있는 토큰을 전달하며 취소가 발생할 수 있습니다. Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
 
-    -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
+    -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
     -   AsyncInfo.Run 메서드는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) 인터페이스를 구현하는 개체를 만들고, Windows 런타임 취소 메커니즘을 토큰 원본에 연결하고, Promise 개체의 진행률 보고 함수를 &lt;T&gt; 인터페이스에 연결합니다.
     -   IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 인터페이스가 JavaScript에 반환됩니다.
 
@@ -738,7 +735,6 @@ asyncCancel 함수는 WinJS.Promise 개체의 cancel 메서드만 호출합니�
 * [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

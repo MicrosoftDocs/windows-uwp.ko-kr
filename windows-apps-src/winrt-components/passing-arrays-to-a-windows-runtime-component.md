@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Windows 런타임 구성 요소에 배열 전달
 description: UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
@@ -62,6 +63,6 @@ ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

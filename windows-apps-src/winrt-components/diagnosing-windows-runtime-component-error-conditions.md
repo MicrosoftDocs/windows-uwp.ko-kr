@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Windows 런타임 구성 요소 오류 조건 진단
 description: 이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
@@ -33,7 +34,7 @@ ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ## mscorlib.dll 또는 System.Runtime.dll에 대해 누락된 참조
 
 
-이 문제는 명령줄에서 Winmdexp.exe를 사용하는 경우에만 발생합니다. /reference 옵션을 사용하여 "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\...")에 있는 .NET Framework 핵심 참조 어셈블리에서 mscorlib.dll과 System.Runtime.dll에 대한 참조를 모두 포함시키는 것이 좋습니다.
+이 문제는 명령줄에서 Winmdexp.exe를 사용하는 경우에만 발생합니다. /reference 옵션을 사용하여 "%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5"(32비트 컴퓨터에서는 "%ProgramFiles%\\...")에 있는 .NET Framework 핵심 참조 어셈블리에서 mscorlib.dll과 System.Runtime.dll에 대한 참조를 모두 포함시키는 것이 좋습니다.
 
 | 오류 번호 | 메시지 내용                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -247,6 +248,6 @@ JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변�
 * [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

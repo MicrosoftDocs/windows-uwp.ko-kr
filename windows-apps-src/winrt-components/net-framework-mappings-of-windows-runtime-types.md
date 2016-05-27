@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Windows 런타임 형식의 .NET Framework 매핑
 description: 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다.
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
@@ -27,19 +28,19 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 | AttributeUsageAttribute (Windows.Foundation.Metadata)         | AttributeUsageAttribute (System)                                       | System.Runtime.dll                                |
 | AttributeTargets (Windows.Foundation.Metadata)                | AttributeTargets (System)                                              | System.Runtime.dll                                |
 | DateTime (Windows.Foundation)                                 | DateTimeOffset (System)                                                | System.Runtime.dll                                |
-| EventHandler&lt;T&gt; (Windows.Foundation)                    | EventHandler&lt;T&gt; (System)                                         | System.Runtime.dll                                |
+| EventHandler&lt;T&gt;(Windows.Foundation)                    | EventHandler&lt;T&gt;(시스템)                                         | System.Runtime.dll                                |
 | EventRegistrationToken (Windows.Foundation)                   | EventRegistrationToken (System.Runtime.InteropServices.WindowsRuntime) | System.Runtime.InteropServices.WindowsRuntime.dll |
 | HResult (Windows.Foundation)                                  | Exception (System)                                                     | System.Runtime.dll                                |
-| IReference&lt;T&gt; (Windows.Foundation)                      | Nullable&lt;T&gt; (System)                                             | System.Runtime.dll                                |
+| IReference&lt;T&gt;(Windows.Foundation)                      | Nullable&lt;T&gt;(시스템)                                             | System.Runtime.dll                                |
 | TimeSpan (Windows.Foundation)                                 | TimeSpan (System)                                                      | System.Runtime.dll                                |
 | Uri (Windows.Foundation)                                      | Uri (System)                                                           | System.Runtime.dll                                |
 | IClosable (Windows.Foundation)                                | IDisposable (System)                                                   | System.Runtime.dll                                |
-| IIterable&lt;T&gt; (Windows.Foundation.Collections)           | IEnumerable&lt;T&gt; (System.Collections.Generic)                      | System.Runtime.dll                                |
-| IVector&lt;T&gt; (Windows.Foundation.Collections)             | IList&lt;T&gt; (System.Collections.Generic)                            | System.Runtime.dll                                |
-| IVectorView&lt;T&gt; (Windows.Foundation.Collections)         | IReadOnlyList&lt;T&gt; (System.Collections.Generic)                    | System.Runtime.dll                                |
-| IMap&lt;K,V&gt; (Windows.Foundation.Collections)              | IDictionary&lt;TKey,TValue&gt; (System.Collections.Generic)            | System.Runtime.dll                                |
-| IMapView&lt;K,V&gt; (Windows.Foundation.Collections)          | IReadOnlyDictionary&lt;TKey,TValue&gt; (System.Collections.Generic)    | System.Runtime.dll                                |
-| IKeyValuePair&lt;K,V&gt; (Windows.Foundation.Collections)     | KeyValuePair&lt;TKey,TValue&gt; (System.Collections.Generic)           | System.Runtime.dll                                |
+| IIterable&lt;T&gt;(Windows.Foundation.Collections)           | IEnumerable&lt;T&gt;(System.Collections.Generic)                      | System.Runtime.dll                                |
+| IVector&lt;T&gt;(Windows.Foundation.Collections)             | IList&lt;T&gt;(System.Collections.Generic)                            | System.Runtime.dll                                |
+| IVectorView&lt;T&gt;(Windows.Foundation.Collections)         | IReadOnlyList&lt;T&gt;(System.Collections.Generic)                    | System.Runtime.dll                                |
+| IMap&lt;K,V&gt;(Windows.Foundation.Collections)              | IDictionary&lt;TKey,TValue&gt;(System.Collections.Generic)            | System.Runtime.dll                                |
+| IMapView&lt;K,V&gt;(Windows.Foundation.Collections)          | IReadOnlyDictionary&lt;TKey,TValue&gt;(System.Collections.Generic)    | System.Runtime.dll                                |
+| IKeyValuePair&lt;K,V&gt;(Windows.Foundation.Collections)     | KeyValuePair&lt;TKey,TValue&gt;(System.Collections.Generic)           | System.Runtime.dll                                |
 | IBindableIterable (Windows.UI.Xaml.Interop)                   | IEnumerable (System.Collections)                                       | System.Runtime.dll                                |
 | IBindableVector (Windows.UI.Xaml.Interop)                     | IList (System.Collections)                                             | System.Runtime.dll                                |
 | INotifyCollectionChanged (Windows.UI.Xaml.Interop)            | INotifyCollectionChanged (System.Collections.Specialized)              | System.ObjectModel.dll                            |
@@ -83,6 +84,6 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

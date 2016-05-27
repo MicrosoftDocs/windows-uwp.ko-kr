@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Windows 런타임 구성 요소에서 이벤트 발생
 ms.assetid: 3F7744E8-8A3C-4203-A1CE-B18584E89000
 description: 
@@ -132,7 +133,7 @@ toastCompletedEventHandler: function (event) {
 ## Windows 런타임 구성 요소를 만들려면
 
 1.  Visual Studio의 메뉴 모음에서 **파일 &gt; 새 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **JavaScript &gt; 유니버설 Windows**를 확장하고 **빈 앱**을 선택합니다. 프로젝트 이름을 ToasterApplication으로 지정하고 **확인** 단추를 선택합니다.
-2.  C# Windows 런타임 구성 요소를 솔루션에 추가합니다. 솔루션 탐색기에서 솔루션의 바로 가기 메뉴를 열고 **추가 &gt; 새 프로젝트**를 선택합니다. **Visual C# &gt; Windows 스토어** 를 확장하고 **Windows 런타임 구성 요소**를 선택합니다. 프로젝트 이름을 ToasterComponent로 지정하고 **확인** 단추를 선택합니다. ToasterComponent는 이후 단계에서 만들 구성 요소의 루트 네임스페이스가 됩니다.
+2.  C# Windows 런타임 구성 요소를 솔루션에 추가합니다. 솔루션 탐색기에서 솔루션의 바로 가기 메뉴를 열고 **추가 &gt; 새 프로젝트**를 선택합니다. **Visual C# &gt; Windows 스토어**를 확장하고 **Windows 런타임 구성 요소**를 선택합니다. 프로젝트 이름을 ToasterComponent로 지정하고 **확인** 단추를 선택합니다. ToasterComponent는 이후 단계에서 만들 구성 요소의 루트 네임스페이스가 됩니다.
 
     솔루션 탐색기에서 솔루션의 바로 가기 메뉴를 열고 **속성**을 선택합니다. **속성 페이지** 대화 상자의 왼쪽 창에서 **구성 속성**을 선택하고 대화 상자 맨 위에서 **구성**을 **디버그**로, **플랫폼**을 x86, x64 또는 ARM으로 설정합니다. **확인** 단추를 선택합니다.
 
@@ -148,7 +149,7 @@ toastCompletedEventHandler: function (event) {
     public interface IToaster
         {
             void MakeToast(String message);
-            event TypedEventHandler&lt;Toaster, Toast> ToastCompletedEvent;
+            event TypedEventHandler<Toaster, Toast> ToastCompletedEvent;
 
         }
         public interface IToast
@@ -181,7 +182,7 @@ toastCompletedEventHandler: function (event) {
         }
         public sealed class Toaster : IToaster
         {
-            public event TypedEventHandler&lt;Toaster, Toast> ToastCompletedEvent;
+            public event TypedEventHandler<Toaster, Toast> ToastCompletedEvent;
 
             private void OnToastCompleted(Toast args)
             {
@@ -294,7 +295,7 @@ toastCompletedEventHandler: function (event) {
 2.  Paste the GUID just before the IToaster interface definition. After you paste, the GUID should resemble the following example. (Don't use the GUID in the example. Every unique interface should have its own GUID.)
 
     ```cpp 
-      <Extensions> <!—Use your own GUIDs!!!-->
+      <Extensions> <!--Use your own GUIDs!!!-->
         <Extension Category="windows.activatableClass.proxyStub">
           <ProxyStub ClassId="1ecafeff-1ee1-504a-9af5-a68c6fb2b47d">
             <Path>Proxies.dll</Path>
@@ -326,6 +327,6 @@ toastCompletedEventHandler: function (event) {
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

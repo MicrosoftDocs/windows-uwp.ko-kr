@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 title: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 description: Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
@@ -94,7 +95,7 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 
 정적(Visual Basic의 Shared) GetOrCreateEventRegistrationTokenTable 메서드는 나중에 EventRegistrationTokenTable&lt;T&gt; 개체의 이벤트 인스턴스를 만듭니다. 토큰 테이블 인스턴스를 포함할 클래스 수준 필드를 이 메서드에 전달합니다. 필드가 비어 있으면 메서드가 테이블을 만들고 테이블에 대한 참조를 필드에 저장하고 테이블에 대한 참조를 반환합니다. 필드에 이미 토큰 테이블 참조가 있는 경우 메서드가 해당 참조를 반환하기만 합니다.
 
-> **중요** 스레드 보안을 유지하기 위해 EventRegistrationTokenTable<T> 이벤트 인스턴스를 포함하는 필드는 클래스 수준 필드여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다. 지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
+> **중요** 스레드 보안을 유지하기 위해 EventRegistrationTokenTable&lt;T&gt; 이벤트 인스턴스를 포함하는 필드는 클래스 수준 필드여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다. 지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
 
 제거 접근자 및 [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) 메서드(C#의 OnRaiseEvent 메서드)에서 GetOrCreateEventRegistrationTokenTable 메서드를 호출하면 이벤트 처리기 대리자가 추가되기 전에 이러한 메서드가 호출되는 경우 예외가 발생하지 않습니다.
 
@@ -125,6 +126,6 @@ Visual Basic 사용자: .NET Framework에서 이벤트는 등록된 모든 이�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
