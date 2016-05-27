@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 309
+ Total Files | 319
 
 ## File List
  Source File | Status | Details 
@@ -315,6 +315,16 @@
  [windows-apps-src\launch-resume\set-conditions-for-running-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/fb7456f44095a0ef7b9a98f08f1be996d5c52aad/windows-apps-src/launch-resume/set-conditions-for-running-a-background-task.md) | InSyncHandedBackSuccess | [Details](#583c7e57d8680bff2ae2227ca1db36d911bcc17a2952)
  [windows-apps-src\launch-resume\update-a-live-tile-from-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/update-a-live-tile-from-a-background-task.md) | InSyncHandedBackSuccess | [Details](#b5f9cc361096463b8b51ef949aba7a6b1583f1862955)
  [windows-apps-src\launch-resume\use-a-maintenance-trigger.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/launch-resume/use-a-maintenance-trigger.md) | InSyncHandedBackSuccess | [Details](#9665b96cbadff1624c40a26f57d7f06cdd5dde622956)
+ [windows-apps-src\layout\boxpanel-example-custom-panel.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/boxpanel-example-custom-panel.md) | InSyncHandedBackSuccess | [Details](#e03a4c9d2116d779545cb1fb8e87fa86a632bca82962)
+ [windows-apps-src\layout\commanding-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/commanding-basics.md) | InSyncHandedBackSuccess | [Details](#be7ff187df9800a8c2c47c4315f3f9b021e265f82963)
+ [windows-apps-src\layout\content-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/content-basics.md) | InSyncHandedBackSuccess | [Details](#c8328150601bf132c28e569c4db21095cb77f88c2964)
+ [windows-apps-src\layout\design-and-ui-intro.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/design-and-ui-intro.md) | InSyncHandedBackSuccess | [Details](#ec154ec64ba18badb5f81b59e76fc04e539de1a82966)
+ [windows-apps-src\layout\layout-panels.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/layout/layout-panels.md) | InSyncHandedBackSuccess | [Details](#70bb6e1f01fa89c7a504e0299e89153efc30de1e3205)
+ [windows-apps-src\layout\navigation-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/navigation-basics.md) | InSyncHandedBackSuccess | [Details](#6926d70c7140b1545a8b5492981d6d0b61af37843207)
+ [windows-apps-src\layout\navigation-history-and-backwards-navigation.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/navigation-history-and-backwards-navigation.md) | InSyncHandedBackSuccess | [Details](#a35b76f04d450aeafcc50c307dc058c52f6aebe43208)
+ [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md) | InSyncHandedBackSuccess | [Details](#ec1c0339017fb60ed37f45dfa6f809a5eba6fbb13209)
+ [windows-apps-src\layout\screen-sizes-and-breakpoints-for-responsive-design.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/screen-sizes-and-breakpoints-for-responsive-design.md) | InSyncHandedBackSuccess | [Details](#153652c9fcc9745bdee087033d65eec2bc860e533210)
+ [windows-apps-src\layout\show-multiple-views.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/show-multiple-views.md) | InSyncHandedBackSuccess | [Details](#23e999f86fb0552b96cddbd3b9d11803106bf6c23211)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -4023,6 +4033,126 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/d1a366080d759d0b69f92dde3d9d1cf0198c1e08/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-resume/use-a-maintenance-trigger.0c7c2dd9fa286c36a09fce29e501f6650b75e02b.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:34:46
+* [Back to Top](#report-top)
+
+##### <a name='e03a4c9d2116d779545cb1fb8e87fa86a632bca82962'></a> Source: [windows-apps-src\layout\boxpanel-example-custom-panel.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/boxpanel-example-custom-panel.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\boxpanel-example-custom-panel.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/boxpanel-example-custom-panel.md)
+* Handoff File: [boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/boxpanel-example-custom-panel.c6816343707c2ace8d4ca2f7dee85ede4dd6628b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='be7ff187df9800a8c2c47c4315f3f9b021e265f82963'></a> Source: [windows-apps-src\layout\commanding-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/commanding-basics.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\commanding-basics.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/commanding-basics.md)
+* Handoff File: [commanding-basics.02d933c2b318ea86400f40fabd0802a2e8a2e423.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/commanding-basics.02d933c2b318ea86400f40fabd0802a2e8a2e423.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [commanding-basics.02d933c2b318ea86400f40fabd0802a2e8a2e423.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/commanding-basics.02d933c2b318ea86400f40fabd0802a2e8a2e423.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='c8328150601bf132c28e569c4db21095cb77f88c2964'></a> Source: [windows-apps-src\layout\content-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/content-basics.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\content-basics.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/content-basics.md)
+* Handoff File: [content-basics.b66078fdb5ff0589c73728766695e1b9c69a8901.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/content-basics.b66078fdb5ff0589c73728766695e1b9c69a8901.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [content-basics.b66078fdb5ff0589c73728766695e1b9c69a8901.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/content-basics.b66078fdb5ff0589c73728766695e1b9c69a8901.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='ec154ec64ba18badb5f81b59e76fc04e539de1a82966'></a> Source: [windows-apps-src\layout\design-and-ui-intro.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/design-and-ui-intro.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\design-and-ui-intro.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/design-and-ui-intro.md)
+* Handoff File: [design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/design-and-ui-intro.69590183aeb47276461357ed3cb5d56a7dd874a1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='70bb6e1f01fa89c7a504e0299e89153efc30de1e3205'></a> Source: [windows-apps-src\layout\layout-panels.md](https://github.com/Microsoft/windows-apps/blob/c183f7390c5b4f99cf0f31426c1431066e1bc96d/windows-apps-src/layout/layout-panels.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\layout-panels.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/layout-panels.md)
+* Handoff File: [layout-panels.a4c0dfbf3a81830fae0cd7e9485515246942dd92.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/layout-panels.a4c0dfbf3a81830fae0cd7e9485515246942dd92.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [layout-panels.a4c0dfbf3a81830fae0cd7e9485515246942dd92.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/layout-panels.a4c0dfbf3a81830fae0cd7e9485515246942dd92.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='6926d70c7140b1545a8b5492981d6d0b61af37843207'></a> Source: [windows-apps-src\layout\navigation-basics.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/navigation-basics.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\navigation-basics.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/navigation-basics.md)
+* Handoff File: [navigation-basics.7c4a46b210ca48bfb5649445cc7eeddd5c9ef38c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/navigation-basics.7c4a46b210ca48bfb5649445cc7eeddd5c9ef38c.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [navigation-basics.7c4a46b210ca48bfb5649445cc7eeddd5c9ef38c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/navigation-basics.7c4a46b210ca48bfb5649445cc7eeddd5c9ef38c.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='a35b76f04d450aeafcc50c307dc058c52f6aebe43208'></a> Source: [windows-apps-src\layout\navigation-history-and-backwards-navigation.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/navigation-history-and-backwards-navigation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\navigation-history-and-backwards-navigation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/navigation-history-and-backwards-navigation.md)
+* Handoff File: [navigation-history-and-backwards-navigation.18c6a8c6525734e4fe756b34cb34297e51093e89.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/navigation-history-and-backwards-navigation.18c6a8c6525734e4fe756b34cb34297e51093e89.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [navigation-history-and-backwards-navigation.18c6a8c6525734e4fe756b34cb34297e51093e89.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/navigation-history-and-backwards-navigation.18c6a8c6525734e4fe756b34cb34297e51093e89.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='ec1c0339017fb60ed37f45dfa6f809a5eba6fbb13209'></a> Source: [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md)
+* Handoff File: [peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='153652c9fcc9745bdee087033d65eec2bc860e533210'></a> Source: [windows-apps-src\layout\screen-sizes-and-breakpoints-for-responsive-design.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\screen-sizes-and-breakpoints-for-responsive-design.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/screen-sizes-and-breakpoints-for-responsive-design.md)
+* Handoff File: [screen-sizes-and-breakpoints-for-responsive-design.7735c54c4866f17e2c67dfcc642b19cf85485c8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/screen-sizes-and-breakpoints-for-responsive-design.7735c54c4866f17e2c67dfcc642b19cf85485c8a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [screen-sizes-and-breakpoints-for-responsive-design.7735c54c4866f17e2c67dfcc642b19cf85485c8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/screen-sizes-and-breakpoints-for-responsive-design.7735c54c4866f17e2c67dfcc642b19cf85485c8a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
+* [Back to Top](#report-top)
+
+##### <a name='23e999f86fb0552b96cddbd3b9d11803106bf6c23211'></a> Source: [windows-apps-src\layout\show-multiple-views.md](https://github.com/Microsoft/windows-apps/blob/a4e9a90edd2aae9d2fd5d7bead948422d43dad59/windows-apps-src/layout/show-multiple-views.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\layout\show-multiple-views.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/55fee97ab05dbeaafe6ed81292e9e4062fb37d28/windows-apps-src/layout/show-multiple-views.md)
+* Handoff File: [show-multiple-views.2d939f4f8c3043c2ce07e4630f0ed1e36ca6d908.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/show-multiple-views.2d939f4f8c3043c2ce07e4630f0ed1e36ca6d908.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [show-multiple-views.2d939f4f8c3043c2ce07e4630f0ed1e36ca6d908.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/96e091d8a1f685d0acc5dec3d73d7d6b660d96be/ol-handback/Microsoft/windows-apps.ko-kr/master/layout/show-multiple-views.2d939f4f8c3043c2ce07e4630f0ed1e36ca6d908.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:34:54
 * [Back to Top](#report-top)
 
 
