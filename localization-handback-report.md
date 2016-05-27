@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 160
+ Total Files | 172
 
 ## File List
  Source File | Status | Details 
@@ -166,6 +166,18 @@
  [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/enterprise/edp-hub.md) | InSyncHandedBackSuccess | [Details](#97bdbce8360fabad63f9fe7e85e5172ccd83f4032070)
  [windows-apps-src\enterprise\enterprise-shared-storage.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/enterprise/enterprise-shared-storage.md) | InSyncHandedBackSuccess | [Details](#6f0e479081c361d69ab0c9e8cf4c531627304d322071)
  [windows-apps-src\enterprise\index.md](https://github.com/Microsoft/windows-apps/blob/468c87694f519a5081f3242346039e6e7310d1db/windows-apps-src/enterprise/index.md) | InSyncHandedBackSuccess | [Details](#c2cfcc270d6b1380f065e7ada275c1c60ae05b042076)
+ [windows-apps-src\files\access-the-sd-card.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/access-the-sd-card.md) | InSyncHandedBackSuccess | [Details](#c515d36c76a8363861a72cb58229ff857e1bb2b82077)
+ [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/file-access-permissions.md) | InSyncHandedBackSuccess | [Details](#91f97f1ba245b0cf6cac1cff7971cace5ca3b5a02078)
+ [windows-apps-src\files\how-to-track-recently-used-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/how-to-track-recently-used-files-and-folders.md) | InSyncHandedBackSuccess | [Details](#83100d1246dd18324104a63c9cd950e2ff1fce0b2079)
+ [windows-apps-src\files\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/index.md) | InSyncHandedBackSuccess | [Details](#2056a5adee0ce6e65962eeba21fccbfe976c811a2084)
+ [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/files/protect-your-enterprise-data-with-edp.md) | InSyncHandedBackSuccess | [Details](#2d9b1ec4e39e5c8a100030184ee9287a0d97ea242085)
+ [windows-apps-src\files\quickstart-accessing-homegroup-content.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-accessing-homegroup-content.md) | InSyncHandedBackSuccess | [Details](#c4853e2ed73f11637b45729bc04b1c089cd1f86e2086)
+ [windows-apps-src\files\quickstart-determining-availability-of-microsoft-onedrive-files.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-determining-availability-of-microsoft-onedrive-files.md) | InSyncHandedBackSuccess | [Details](#17893ac17a741f2a6220b1826547c700af0f0f332087)
+ [windows-apps-src\files\quickstart-getting-file-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-getting-file-properties.md) | InSyncHandedBackSuccess | [Details](#56b83d2f05189b4cbb5bbc015987a4ffce8d86fd2088)
+ [windows-apps-src\files\quickstart-listing-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-listing-files-and-folders.md) | InSyncHandedBackSuccess | [Details](#6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee22089)
+ [windows-apps-src\files\quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | InSyncHandedBackSuccess | [Details](#332f89f53a55d5783f7497ca5c6cd601dcee52172090)
+ [windows-apps-src\files\quickstart-save-a-file-with-a-picker.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-save-a-file-with-a-picker.md) | InSyncHandedBackSuccess | [Details](#68c7fcedbea40541632aa0a7ae65aa77db2062802092)
+ [windows-apps-src\files\use-edp-to-protect-streams-and-buffers.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/files/use-edp-to-protect-streams-and-buffers.md) | InSyncHandedBackSuccess | [Details](#fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a2094)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -2086,6 +2098,150 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [index.de142d6354f8b01275f69cff0f6e3a678b0be895.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/edad70600120ee32a3cc25809e1e54d7aefc9f88/ol-handback/Microsoft/windows-apps.ko-kr/master/enterprise/index.de142d6354f8b01275f69cff0f6e3a678b0be895.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:33:25
+* [Back to Top](#report-top)
+
+##### <a name='c515d36c76a8363861a72cb58229ff857e1bb2b82077'></a> Source: [windows-apps-src\files\access-the-sd-card.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/access-the-sd-card.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\access-the-sd-card.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/access-the-sd-card.md)
+* Handoff File: [access-the-sd-card.3d5a671aca7d69a5e5391049e99993f38156acc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/access-the-sd-card.3d5a671aca7d69a5e5391049e99993f38156acc2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [access-the-sd-card.3d5a671aca7d69a5e5391049e99993f38156acc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/access-the-sd-card.3d5a671aca7d69a5e5391049e99993f38156acc2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='91f97f1ba245b0cf6cac1cff7971cace5ca3b5a02078'></a> Source: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/file-access-permissions.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/file-access-permissions.md)
+* Handoff File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='83100d1246dd18324104a63c9cd950e2ff1fce0b2079'></a> Source: [windows-apps-src\files\how-to-track-recently-used-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/how-to-track-recently-used-files-and-folders.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\how-to-track-recently-used-files-and-folders.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/how-to-track-recently-used-files-and-folders.md)
+* Handoff File: [how-to-track-recently-used-files-and-folders.bb5a475f69e9ee53c00884c94e1a5d60030c096f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/how-to-track-recently-used-files-and-folders.bb5a475f69e9ee53c00884c94e1a5d60030c096f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [how-to-track-recently-used-files-and-folders.bb5a475f69e9ee53c00884c94e1a5d60030c096f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/how-to-track-recently-used-files-and-folders.bb5a475f69e9ee53c00884c94e1a5d60030c096f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='2056a5adee0ce6e65962eeba21fccbfe976c811a2084'></a> Source: [windows-apps-src\files\index.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/index.md)
+* Handoff File: [index.431969561eb32d95199c680fa87b3b5695d04f8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.431969561eb32d95199c680fa87b3b5695d04f8b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.431969561eb32d95199c680fa87b3b5695d04f8b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/index.431969561eb32d95199c680fa87b3b5695d04f8b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='2d9b1ec4e39e5c8a100030184ee9287a0d97ea242085'></a> Source: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
+* Handoff File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='c4853e2ed73f11637b45729bc04b1c089cd1f86e2086'></a> Source: [windows-apps-src\files\quickstart-accessing-homegroup-content.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-accessing-homegroup-content.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-accessing-homegroup-content.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-accessing-homegroup-content.md)
+* Handoff File: [quickstart-accessing-homegroup-content.258ee9ebff52b5b12fefef47162bcdd82e938c68.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-accessing-homegroup-content.258ee9ebff52b5b12fefef47162bcdd82e938c68.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-accessing-homegroup-content.258ee9ebff52b5b12fefef47162bcdd82e938c68.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-accessing-homegroup-content.258ee9ebff52b5b12fefef47162bcdd82e938c68.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='17893ac17a741f2a6220b1826547c700af0f0f332087'></a> Source: [windows-apps-src\files\quickstart-determining-availability-of-microsoft-onedrive-files.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-determining-availability-of-microsoft-onedrive-files.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-determining-availability-of-microsoft-onedrive-files.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-determining-availability-of-microsoft-onedrive-files.md)
+* Handoff File: [quickstart-determining-availability-of-microsoft-onedrive-files.dd09fbe745c4340f2b68e0c06ff9ab9aaaf740d8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-determining-availability-of-microsoft-onedrive-files.dd09fbe745c4340f2b68e0c06ff9ab9aaaf740d8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-determining-availability-of-microsoft-onedrive-files.dd09fbe745c4340f2b68e0c06ff9ab9aaaf740d8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-determining-availability-of-microsoft-onedrive-files.dd09fbe745c4340f2b68e0c06ff9ab9aaaf740d8.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='56b83d2f05189b4cbb5bbc015987a4ffce8d86fd2088'></a> Source: [windows-apps-src\files\quickstart-getting-file-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-getting-file-properties.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-getting-file-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-getting-file-properties.md)
+* Handoff File: [quickstart-getting-file-properties.d50d44a9598e36149d8b58d01fd3074ead786d08.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-getting-file-properties.d50d44a9598e36149d8b58d01fd3074ead786d08.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-getting-file-properties.d50d44a9598e36149d8b58d01fd3074ead786d08.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-getting-file-properties.d50d44a9598e36149d8b58d01fd3074ead786d08.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee22089'></a> Source: [windows-apps-src\files\quickstart-listing-files-and-folders.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-listing-files-and-folders.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-listing-files-and-folders.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-listing-files-and-folders.md)
+* Handoff File: [quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-listing-files-and-folders.8e017a17f24a62b887486336251317a846ccb099.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='332f89f53a55d5783f7497ca5c6cd601dcee52172090'></a> Source: [windows-apps-src\files\quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)
+* Handoff File: [quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.456abf07716609290d85d95f1289d7ef25751fe4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.456abf07716609290d85d95f1289d7ef25751fe4.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.456abf07716609290d85d95f1289d7ef25751fe4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.456abf07716609290d85d95f1289d7ef25751fe4.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='68c7fcedbea40541632aa0a7ae65aa77db2062802092'></a> Source: [windows-apps-src\files\quickstart-save-a-file-with-a-picker.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/files/quickstart-save-a-file-with-a-picker.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\quickstart-save-a-file-with-a-picker.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/quickstart-save-a-file-with-a-picker.md)
+* Handoff File: [quickstart-save-a-file-with-a-picker.176d59ce86e272a2cc319bb793af56a4e1249459.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/quickstart-save-a-file-with-a-picker.176d59ce86e272a2cc319bb793af56a4e1249459.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [quickstart-save-a-file-with-a-picker.176d59ce86e272a2cc319bb793af56a4e1249459.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/quickstart-save-a-file-with-a-picker.176d59ce86e272a2cc319bb793af56a4e1249459.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
+* [Back to Top](#report-top)
+
+##### <a name='fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a2094'></a> Source: [windows-apps-src\files\use-edp-to-protect-streams-and-buffers.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/files/use-edp-to-protect-streams-and-buffers.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\files\use-edp-to-protect-streams-and-buffers.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/85bb7fa8af3501c1c2f6e4bb0ad9322ea8898df1/windows-apps-src/files/use-edp-to-protect-streams-and-buffers.md)
+* Handoff File: [use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4855a492f4cfbb82f5a84d3dd208d61877191dd5/ol-handback/Microsoft/windows-apps.ko-kr/master/files/use-edp-to-protect-streams-and-buffers.1daf0b43318d71b099562a386c0f88519af71c77.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:33
 * [Back to Top](#report-top)
 
 
