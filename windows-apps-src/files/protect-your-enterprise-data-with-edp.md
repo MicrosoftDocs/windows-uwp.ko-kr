@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: '이 항목에서는 가장 일반적인 파일 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
 MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -41,7 +42,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 경로를 만든 후 파일 탐색기를 사용하여 앱에서 만들어진 파일을 쉽게 찾을 수 있습니다. 이러한 방식으로 파일이 보호되도록 할 수 있으며 파일은 올바른 ID로 보호됩니다.
 
-파일 탐색기의 **폴더 및 검색 옵션 변경** 및 **보기** 탭에서 **암호화된 파일을 컬러로 표시**를 선택합니다. 또한 파일 탐색기의 **보기** &gt; **열 추가** 명령을 사용하여 **Encrypted to(암호화)** 열을 추가합니다. 이렇게 하면 파일을 보호할 엔터프라이즈 ID를 확인할 수 있습니다.
+파일 탐색기의 **폴더 및 검색 옵션 변경** 및 **보기** 탭에서 **암호화된 파일을 컬러로 표시**를 선택합니다. 또한 파일 탐색기의 **보기**&gt;**열 추가** 명령을 사용하여 **Encrypted to(암호화)** 열을 추가합니다. 이렇게 하면 파일을 보호할 엔터프라이즈 ID를 확인할 수 있습니다.
 
 ## 엔터프라이즈 데이터를 새 파일에서 보호(대화형 앱)
 
@@ -110,7 +111,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
         await FileProtectionManager.CreateProtectedAndOpenAsync(storageFolder,
             "sample.txt", identity, CreationCollisionOption.ReplaceExisting);
 
-    // It&#39;s important to successfully protect a file *before* writing enterprise data to it.
+    // It's important to successfully protect a file *before* writing enterprise data to it.
     if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
         protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
     {
@@ -265,6 +266,6 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: '이 항목에서는 가장 일반적인 스트림 및 버퍼 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
 MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -279,7 +280,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
     {
         // In this case, the app has lost access to the buffer
         // (ProtectedToOtherIdentity, Revoked). This must be handled.
-        // &#39;Unprotected&#39; is never returned for GetProtectionInfoAsync().
+        // 'Unprotected' is never returned for GetProtectionInfoAsync().
         return;
     }
 
@@ -307,6 +308,6 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

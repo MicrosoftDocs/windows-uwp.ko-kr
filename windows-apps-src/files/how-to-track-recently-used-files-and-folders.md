@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: 최근에 사용한 파일 및 폴더 추적
 description: 사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다.
@@ -108,6 +109,6 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

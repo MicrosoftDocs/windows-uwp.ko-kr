@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: 파일 속성 가져오기
 description: StorageFile 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
@@ -137,6 +138,6 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

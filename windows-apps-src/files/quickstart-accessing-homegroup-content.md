@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: 홈 그룹 콘텐츠 액세스
 description: 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
@@ -211,6 +212,6 @@ description: 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

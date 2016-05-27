@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: 파일, 폴더 및 라이브러리
 description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.
@@ -40,6 +41,6 @@ description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/�
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 
