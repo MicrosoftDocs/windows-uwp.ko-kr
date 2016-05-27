@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 126
+ Total Files | 157
 
 ## File List
  Source File | Status | Details 
@@ -132,6 +132,37 @@
  [windows-apps-src\debug-test-perf\windows-app-certification-kit.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/debug-test-perf/windows-app-certification-kit.md) | InSyncHandedBackSuccess | [Details](#16e116c2a92a6ad751b0e4fe58fc7b41de0455cb1983)
  [windows-apps-src\debug-test-perf\windows-app-certification-kit-tests.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/debug-test-perf/windows-app-certification-kit-tests.md) | InSyncHandedBackSuccess | [Details](#816b147c91a340505348aa579c8b1540962a1df51982)
  [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps/blob/5c7a49558ed11f82b7afea1ea96271c45c2f9139/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md) | InSyncHandedBackSuccess | [Details](#b9300b3feb1e5229951f3e1ebe454b61ba8065ae1984)
+ [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/61d9f5c1fca1ad2e26f052b901361813975ae357/windows-apps-src/devices-sensors/3d-print-from-app.md) | InSyncHandedBackSuccess | [Details](#e68a9c681974152bc0d4dfa58e824f80e77dc51f1985)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/4b8125e064c4e2e6f4eeced50885ad352d4d6988/windows-apps-src/devices-sensors/3d-printing.md) | InSyncHandedBackSuccess | [Details](#a56adc5c7bc3f2d5ec4976e4e5394ff26ea983dc1986)
+ [windows-apps-src\devices-sensors\aep-service-class-ids.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/aep-service-class-ids.md) | InSyncHandedBackSuccess | [Details](#f201293d1288c8a065723ee2c05a7da45e5e95ab1987)
+ [windows-apps-src\devices-sensors\ble-beacon.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/ble-beacon.md) | InSyncHandedBackSuccess | [Details](#411731f22035c0e481edd62f17e524e9896cab7b1988)
+ [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/bluetooth.md) | InSyncHandedBackSuccess | [Details](#d95deaf557ddc929ce96f28878a518da30e2f5b01989)
+ [windows-apps-src\devices-sensors\build-a-device-selector.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/build-a-device-selector.md) | InSyncHandedBackSuccess | [Details](#67bf2795a7d555dc5cd236eeafb07009511fe5d31990)
+ [windows-apps-src\devices-sensors\calibrate-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/calibrate-sensors.md) | InSyncHandedBackSuccess | [Details](#4652d20b8dd0d04932dcbda330efa8e9367f53d11991)
+ [windows-apps-src\devices-sensors\customize-the-print-preview-ui.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/customize-the-print-preview-ui.md) | InSyncHandedBackSuccess | [Details](#36c1499b51aa5b8b5ab4b0b354197c67dc89801f2016)
+ [windows-apps-src\devices-sensors\device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/device-information-properties.md) | InSyncHandedBackSuccess | [Details](#c3464cac3ecd63e27538cda526a6957343867d9c2017)
+ [windows-apps-src\devices-sensors\enable-device-capabilities.md](https://github.com/Microsoft/windows-apps/blob/512b89027f6b707de346fffe104f165074fabcea/windows-apps-src/devices-sensors/enable-device-capabilities.md) | InSyncHandedBackSuccess | [Details](#01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f2018)
+ [windows-apps-src\devices-sensors\enable-usermode-access.md](https://github.com/Microsoft/windows-apps/blob/d6757aba4be1a9e326e9e0dade16663286d24f72/windows-apps-src/devices-sensors/enable-usermode-access.md) | InSyncHandedBackSuccess | [Details](#6fd95a8afe8dc9e130a6724d8b6d6c21bf7f701b2019)
+ [windows-apps-src\devices-sensors\epson-esc-pos-with-formatting.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/epson-esc-pos-with-formatting.md) | InSyncHandedBackSuccess | [Details](#33231abb1e573d837193daeee21713f09c7d84482022)
+ [windows-apps-src\devices-sensors\gatt-scenarios.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/gatt-scenarios.md) | InSyncHandedBackSuccess | [Details](#90669478166fc3fc244e0099a292b4f14741d3b52023)
+ [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/devices-sensors/generate-3mf.md) | InSyncHandedBackSuccess | [Details](#fd85530d27a157bd65a6feec8a20cca8cadfb88f2024)
+ [windows-apps-src\devices-sensors\get-battery-info.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/get-battery-info.md) | InSyncHandedBackSuccess | [Details](#716123f7401350748c7eb81a2ca4208a74b6e4ac2025)
+ [windows-apps-src\devices-sensors\host-card-emulation.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/host-card-emulation.md) | InSyncHandedBackSuccess | [Details](#9fa2204447ae40d668fe3554766c6599cd4e900e2026)
+ [windows-apps-src\devices-sensors\index.md](https://github.com/Microsoft/windows-apps/blob/d6757aba4be1a9e326e9e0dade16663286d24f72/windows-apps-src/devices-sensors/index.md) | InSyncHandedBackSuccess | [Details](#ae6ab11963ed06083e581ce42f39ce483d53e0d62054)
+ [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/devices-sensors/out-of-band-pairing.md) | InSyncHandedBackSuccess | [Details](#d8d37b779a0f9a4bec36d73fcd2d35272c587b112055)
+ [windows-apps-src\devices-sensors\pair-devices.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/pair-devices.md) | InSyncHandedBackSuccess | [Details](#bd068680ada24cfdfb7e5db1733c06412fb6522f2056)
+ [windows-apps-src\devices-sensors\print-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/print-from-your-app.md) | InSyncHandedBackSuccess | [Details](#3a200b774bc5f4a57f6bca51936007560ddac5c12057)
+ [windows-apps-src\devices-sensors\printing-and-scanning.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/printing-and-scanning.md) | InSyncHandedBackSuccess | [Details](#81a96c4c519a112551cab83425caf782b13ea9be2058)
+ [windows-apps-src\devices-sensors\scan-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/scan-from-your-app.md) | InSyncHandedBackSuccess | [Details](#fe01ccf5b0b91ffcca7937842cf0152622d59f9e2059)
+ [windows-apps-src\devices-sensors\send-or-receive-files-with-rfcomm.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/send-or-receive-files-with-rfcomm.md) | InSyncHandedBackSuccess | [Details](#2060f3a370c7d9ceab187ec45de96c4974009dce2060)
+ [windows-apps-src\devices-sensors\sensor-orientation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/sensor-orientation.md) | InSyncHandedBackSuccess | [Details](#3da7957bf9b162f1ac1533ccff90c8764f34890a2061)
+ [windows-apps-src\devices-sensors\sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/sensors.md) | InSyncHandedBackSuccess | [Details](#716f4d36d6b11621b28694821f0c607eb3a6afb22062)
+ [windows-apps-src\devices-sensors\use-the-accelerometer.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-accelerometer.md) | InSyncHandedBackSuccess | [Details](#f1ec749d7bec245632f1998ac5cc94b9bfcad5332063)
+ [windows-apps-src\devices-sensors\use-the-compass.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-compass.md) | InSyncHandedBackSuccess | [Details](#2c2135867586909328b8d1080c413b35243222462064)
+ [windows-apps-src\devices-sensors\use-the-gyrometer.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/devices-sensors/use-the-gyrometer.md) | InSyncHandedBackSuccess | [Details](#ad76837574b8887bceb135db156e2744542259b02065)
+ [windows-apps-src\devices-sensors\use-the-inclinometer.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/devices-sensors/use-the-inclinometer.md) | InSyncHandedBackSuccess | [Details](#f8b56e0ef13e471d99519256b5a6d124b569102d2066)
+ [windows-apps-src\devices-sensors\use-the-light-sensor.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-light-sensor.md) | InSyncHandedBackSuccess | [Details](#289d50ff4f45147c46bd66c526cf109d8fdf6d322067)
+ [windows-apps-src\devices-sensors\use-the-orientation-sensor.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-orientation-sensor.md) | InSyncHandedBackSuccess | [Details](#67c23795be54207c54c1e871dad045e6c0cd7c772068)
 
 ## Item Details
 ##### <a name='71071c989ca4aaa727d18d3ec25d8642517c4b2613'></a> Source: [windows-apps-src\accessibility\control-patterns-and-interfaces.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/accessibility/control-patterns-and-interfaces.md)
@@ -1644,6 +1675,378 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/9457e9d6eb97313212340418146b43e70d9e4877/ol-handback/Microsoft/windows-apps.ko-kr/master/debug-test-perf/windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.ko-kr.xlf)
 * Handback Datetime: 2016-05-27 20:33:07
+* [Back to Top](#report-top)
+
+##### <a name='e68a9c681974152bc0d4dfa58e824f80e77dc51f1985'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/61d9f5c1fca1ad2e26f052b901361813975ae357/windows-apps-src/devices-sensors/3d-print-from-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/3d-print-from-app.md)
+* Handoff File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='a56adc5c7bc3f2d5ec4976e4e5394ff26ea983dc1986'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/4b8125e064c4e2e6f4eeced50885ad352d4d6988/windows-apps-src/devices-sensors/3d-printing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/3d-printing.md)
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='f201293d1288c8a065723ee2c05a7da45e5e95ab1987'></a> Source: [windows-apps-src\devices-sensors\aep-service-class-ids.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/aep-service-class-ids.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\aep-service-class-ids.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/aep-service-class-ids.md)
+* Handoff File: [aep-service-class-ids.3ad6227a35f7df860ad74edc56dde08fe39e1694.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/aep-service-class-ids.3ad6227a35f7df860ad74edc56dde08fe39e1694.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [aep-service-class-ids.3ad6227a35f7df860ad74edc56dde08fe39e1694.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/aep-service-class-ids.3ad6227a35f7df860ad74edc56dde08fe39e1694.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='411731f22035c0e481edd62f17e524e9896cab7b1988'></a> Source: [windows-apps-src\devices-sensors\ble-beacon.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/ble-beacon.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\ble-beacon.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/ble-beacon.md)
+* Handoff File: [ble-beacon.9de1fe094760626af1672cccc60fa5b8949105fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/ble-beacon.9de1fe094760626af1672cccc60fa5b8949105fd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [ble-beacon.9de1fe094760626af1672cccc60fa5b8949105fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/ble-beacon.9de1fe094760626af1672cccc60fa5b8949105fd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='d95deaf557ddc929ce96f28878a518da30e2f5b01989'></a> Source: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/bluetooth.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/bluetooth.md)
+* Handoff File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='67bf2795a7d555dc5cd236eeafb07009511fe5d31990'></a> Source: [windows-apps-src\devices-sensors\build-a-device-selector.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/build-a-device-selector.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\build-a-device-selector.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/build-a-device-selector.md)
+* Handoff File: [build-a-device-selector.2cc31c0569b4300a5d95ed33390193d7798612d9.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/build-a-device-selector.2cc31c0569b4300a5d95ed33390193d7798612d9.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [build-a-device-selector.2cc31c0569b4300a5d95ed33390193d7798612d9.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/build-a-device-selector.2cc31c0569b4300a5d95ed33390193d7798612d9.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='4652d20b8dd0d04932dcbda330efa8e9367f53d11991'></a> Source: [windows-apps-src\devices-sensors\calibrate-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/calibrate-sensors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\calibrate-sensors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/calibrate-sensors.md)
+* Handoff File: [calibrate-sensors.d0ada72b441970501e874f44e347367f561bd51b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/calibrate-sensors.d0ada72b441970501e874f44e347367f561bd51b.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [calibrate-sensors.d0ada72b441970501e874f44e347367f561bd51b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/calibrate-sensors.d0ada72b441970501e874f44e347367f561bd51b.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='36c1499b51aa5b8b5ab4b0b354197c67dc89801f2016'></a> Source: [windows-apps-src\devices-sensors\customize-the-print-preview-ui.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/customize-the-print-preview-ui.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\customize-the-print-preview-ui.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/customize-the-print-preview-ui.md)
+* Handoff File: [customize-the-print-preview-ui.c6187ca209f0d3b163a3090c88faa47674d0a0a2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/customize-the-print-preview-ui.c6187ca209f0d3b163a3090c88faa47674d0a0a2.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [customize-the-print-preview-ui.c6187ca209f0d3b163a3090c88faa47674d0a0a2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/customize-the-print-preview-ui.c6187ca209f0d3b163a3090c88faa47674d0a0a2.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='c3464cac3ecd63e27538cda526a6957343867d9c2017'></a> Source: [windows-apps-src\devices-sensors\device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/device-information-properties.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\device-information-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/device-information-properties.md)
+* Handoff File: [device-information-properties.e3cde548e83a9b31b0ea72e5c2b652f6f4235eec.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-information-properties.e3cde548e83a9b31b0ea72e5c2b652f6f4235eec.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [device-information-properties.e3cde548e83a9b31b0ea72e5c2b652f6f4235eec.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/device-information-properties.e3cde548e83a9b31b0ea72e5c2b652f6f4235eec.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f2018'></a> Source: [windows-apps-src\devices-sensors\enable-device-capabilities.md](https://github.com/Microsoft/windows-apps/blob/512b89027f6b707de346fffe104f165074fabcea/windows-apps-src/devices-sensors/enable-device-capabilities.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\enable-device-capabilities.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/enable-device-capabilities.md)
+* Handoff File: [enable-device-capabilities.4753e0ba2a43d235bcb50e81b2e0c6cbeba53484.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-device-capabilities.4753e0ba2a43d235bcb50e81b2e0c6cbeba53484.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enable-device-capabilities.4753e0ba2a43d235bcb50e81b2e0c6cbeba53484.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/enable-device-capabilities.4753e0ba2a43d235bcb50e81b2e0c6cbeba53484.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='6fd95a8afe8dc9e130a6724d8b6d6c21bf7f701b2019'></a> Source: [windows-apps-src\devices-sensors\enable-usermode-access.md](https://github.com/Microsoft/windows-apps/blob/d6757aba4be1a9e326e9e0dade16663286d24f72/windows-apps-src/devices-sensors/enable-usermode-access.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\enable-usermode-access.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/enable-usermode-access.md)
+* Handoff File: [enable-usermode-access.03d2b42ceea545cfbb5a86cb77d17968d4a4b712.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-usermode-access.03d2b42ceea545cfbb5a86cb77d17968d4a4b712.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enable-usermode-access.03d2b42ceea545cfbb5a86cb77d17968d4a4b712.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/enable-usermode-access.03d2b42ceea545cfbb5a86cb77d17968d4a4b712.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='33231abb1e573d837193daeee21713f09c7d84482022'></a> Source: [windows-apps-src\devices-sensors\epson-esc-pos-with-formatting.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/epson-esc-pos-with-formatting.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\epson-esc-pos-with-formatting.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/epson-esc-pos-with-formatting.md)
+* Handoff File: [epson-esc-pos-with-formatting.f67b1846ac8af304adf2717f49f4350848180436.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/epson-esc-pos-with-formatting.f67b1846ac8af304adf2717f49f4350848180436.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [epson-esc-pos-with-formatting.f67b1846ac8af304adf2717f49f4350848180436.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/epson-esc-pos-with-formatting.f67b1846ac8af304adf2717f49f4350848180436.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='90669478166fc3fc244e0099a292b4f14741d3b52023'></a> Source: [windows-apps-src\devices-sensors\gatt-scenarios.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/gatt-scenarios.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\gatt-scenarios.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/gatt-scenarios.md)
+* Handoff File: [gatt-scenarios.43ee032e59b4efecfbe97b233ed28385b59938cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/gatt-scenarios.43ee032e59b4efecfbe97b233ed28385b59938cd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [gatt-scenarios.43ee032e59b4efecfbe97b233ed28385b59938cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/gatt-scenarios.43ee032e59b4efecfbe97b233ed28385b59938cd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='fd85530d27a157bd65a6feec8a20cca8cadfb88f2024'></a> Source: [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/devices-sensors/generate-3mf.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/generate-3mf.md)
+* Handoff File: [generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='716123f7401350748c7eb81a2ca4208a74b6e4ac2025'></a> Source: [windows-apps-src\devices-sensors\get-battery-info.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/get-battery-info.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\get-battery-info.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/get-battery-info.md)
+* Handoff File: [get-battery-info.f1525a3f129f65113a604adf5710e65d67c36e34.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-battery-info.f1525a3f129f65113a604adf5710e65d67c36e34.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [get-battery-info.f1525a3f129f65113a604adf5710e65d67c36e34.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/get-battery-info.f1525a3f129f65113a604adf5710e65d67c36e34.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='9fa2204447ae40d668fe3554766c6599cd4e900e2026'></a> Source: [windows-apps-src\devices-sensors\host-card-emulation.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/host-card-emulation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\host-card-emulation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/host-card-emulation.md)
+* Handoff File: [host-card-emulation.422b2491370a296d0cfee48dbff136c662e49b1f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/host-card-emulation.422b2491370a296d0cfee48dbff136c662e49b1f.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [host-card-emulation.422b2491370a296d0cfee48dbff136c662e49b1f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/host-card-emulation.422b2491370a296d0cfee48dbff136c662e49b1f.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='ae6ab11963ed06083e581ce42f39ce483d53e0d62054'></a> Source: [windows-apps-src\devices-sensors\index.md](https://github.com/Microsoft/windows-apps/blob/d6757aba4be1a9e326e9e0dade16663286d24f72/windows-apps-src/devices-sensors/index.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/index.md)
+* Handoff File: [index.fc3d81ed1a3f85413621f4e68363314faff3fb09.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.fc3d81ed1a3f85413621f4e68363314faff3fb09.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [index.fc3d81ed1a3f85413621f4e68363314faff3fb09.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/index.fc3d81ed1a3f85413621f4e68363314faff3fb09.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='d8d37b779a0f9a4bec36d73fcd2d35272c587b112055'></a> Source: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps/blob/0bf96b70a915d659c754816f4c115f3b3f0a5660/windows-apps-src/devices-sensors/out-of-band-pairing.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\out-of-band-pairing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/out-of-band-pairing.md)
+* Handoff File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/out-of-band-pairing.cfc62289b905dcdab61b435e55cffcd598972abd.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='bd068680ada24cfdfb7e5db1733c06412fb6522f2056'></a> Source: [windows-apps-src\devices-sensors\pair-devices.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/pair-devices.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\pair-devices.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/pair-devices.md)
+* Handoff File: [pair-devices.e3fd6607e7f26599dda6f53e7f01fdccd02a8332.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/pair-devices.e3fd6607e7f26599dda6f53e7f01fdccd02a8332.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [pair-devices.e3fd6607e7f26599dda6f53e7f01fdccd02a8332.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/pair-devices.e3fd6607e7f26599dda6f53e7f01fdccd02a8332.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='3a200b774bc5f4a57f6bca51936007560ddac5c12057'></a> Source: [windows-apps-src\devices-sensors\print-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/print-from-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\print-from-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/print-from-your-app.md)
+* Handoff File: [print-from-your-app.0fc27cfd90b9c9f4294e468cdc048a1d768c3473.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/print-from-your-app.0fc27cfd90b9c9f4294e468cdc048a1d768c3473.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [print-from-your-app.0fc27cfd90b9c9f4294e468cdc048a1d768c3473.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/print-from-your-app.0fc27cfd90b9c9f4294e468cdc048a1d768c3473.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='81a96c4c519a112551cab83425caf782b13ea9be2058'></a> Source: [windows-apps-src\devices-sensors\printing-and-scanning.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/printing-and-scanning.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\printing-and-scanning.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/printing-and-scanning.md)
+* Handoff File: [printing-and-scanning.df48b9faca93acf8b99d4cb38e143895475be8fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/printing-and-scanning.df48b9faca93acf8b99d4cb38e143895475be8fe.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [printing-and-scanning.df48b9faca93acf8b99d4cb38e143895475be8fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/printing-and-scanning.df48b9faca93acf8b99d4cb38e143895475be8fe.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='fe01ccf5b0b91ffcca7937842cf0152622d59f9e2059'></a> Source: [windows-apps-src\devices-sensors\scan-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/devices-sensors/scan-from-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\scan-from-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/scan-from-your-app.md)
+* Handoff File: [scan-from-your-app.ed8ec14d431814c90d34fef62f22a95c645acbe1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/scan-from-your-app.ed8ec14d431814c90d34fef62f22a95c645acbe1.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [scan-from-your-app.ed8ec14d431814c90d34fef62f22a95c645acbe1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/scan-from-your-app.ed8ec14d431814c90d34fef62f22a95c645acbe1.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='2060f3a370c7d9ceab187ec45de96c4974009dce2060'></a> Source: [windows-apps-src\devices-sensors\send-or-receive-files-with-rfcomm.md](https://github.com/Microsoft/windows-apps/blob/ba620bc89265cbe8756947e1531759103c3cafef/windows-apps-src/devices-sensors/send-or-receive-files-with-rfcomm.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\send-or-receive-files-with-rfcomm.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/send-or-receive-files-with-rfcomm.md)
+* Handoff File: [send-or-receive-files-with-rfcomm.bed8c0c84e4b9a5fe0c689ae8bef94f98c9d5dc6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/send-or-receive-files-with-rfcomm.bed8c0c84e4b9a5fe0c689ae8bef94f98c9d5dc6.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [send-or-receive-files-with-rfcomm.bed8c0c84e4b9a5fe0c689ae8bef94f98c9d5dc6.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/send-or-receive-files-with-rfcomm.bed8c0c84e4b9a5fe0c689ae8bef94f98c9d5dc6.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='3da7957bf9b162f1ac1533ccff90c8764f34890a2061'></a> Source: [windows-apps-src\devices-sensors\sensor-orientation.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/sensor-orientation.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\sensor-orientation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/sensor-orientation.md)
+* Handoff File: [sensor-orientation.da58788b9c9ff1436bbe01d838afed1b1c497254.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/sensor-orientation.da58788b9c9ff1436bbe01d838afed1b1c497254.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [sensor-orientation.da58788b9c9ff1436bbe01d838afed1b1c497254.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/sensor-orientation.da58788b9c9ff1436bbe01d838afed1b1c497254.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='716f4d36d6b11621b28694821f0c607eb3a6afb22062'></a> Source: [windows-apps-src\devices-sensors\sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/sensors.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\sensors.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/sensors.md)
+* Handoff File: [sensors.3a843dd22a9a73eccbfb59b0717bec5035c94c4a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/sensors.3a843dd22a9a73eccbfb59b0717bec5035c94c4a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [sensors.3a843dd22a9a73eccbfb59b0717bec5035c94c4a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/sensors.3a843dd22a9a73eccbfb59b0717bec5035c94c4a.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='f1ec749d7bec245632f1998ac5cc94b9bfcad5332063'></a> Source: [windows-apps-src\devices-sensors\use-the-accelerometer.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-accelerometer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-accelerometer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-accelerometer.md)
+* Handoff File: [use-the-accelerometer.00515ecbc9df44833fa064f53b35fe018ea10eec.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-accelerometer.00515ecbc9df44833fa064f53b35fe018ea10eec.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-accelerometer.00515ecbc9df44833fa064f53b35fe018ea10eec.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-accelerometer.00515ecbc9df44833fa064f53b35fe018ea10eec.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='2c2135867586909328b8d1080c413b35243222462064'></a> Source: [windows-apps-src\devices-sensors\use-the-compass.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-compass.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-compass.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-compass.md)
+* Handoff File: [use-the-compass.1882b41bc1e65c47c2ac287783ac04c933911812.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-compass.1882b41bc1e65c47c2ac287783ac04c933911812.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-compass.1882b41bc1e65c47c2ac287783ac04c933911812.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-compass.1882b41bc1e65c47c2ac287783ac04c933911812.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='ad76837574b8887bceb135db156e2744542259b02065'></a> Source: [windows-apps-src\devices-sensors\use-the-gyrometer.md](https://github.com/Microsoft/windows-apps/blob/07058b48a527414b76d55b153359712905aa9786/windows-apps-src/devices-sensors/use-the-gyrometer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-gyrometer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-gyrometer.md)
+* Handoff File: [use-the-gyrometer.9454c977813db33a3c738ba0862021f8cad82167.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-gyrometer.9454c977813db33a3c738ba0862021f8cad82167.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-gyrometer.9454c977813db33a3c738ba0862021f8cad82167.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-gyrometer.9454c977813db33a3c738ba0862021f8cad82167.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='f8b56e0ef13e471d99519256b5a6d124b569102d2066'></a> Source: [windows-apps-src\devices-sensors\use-the-inclinometer.md](https://github.com/Microsoft/windows-apps/blob/d403e78b775af0f842ba2172295a09e35015dcc8/windows-apps-src/devices-sensors/use-the-inclinometer.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-inclinometer.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-inclinometer.md)
+* Handoff File: [use-the-inclinometer.2cc0262b3b8ec0a3b5fc00e956792be8fd7d6929.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-inclinometer.2cc0262b3b8ec0a3b5fc00e956792be8fd7d6929.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-inclinometer.2cc0262b3b8ec0a3b5fc00e956792be8fd7d6929.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-inclinometer.2cc0262b3b8ec0a3b5fc00e956792be8fd7d6929.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='289d50ff4f45147c46bd66c526cf109d8fdf6d322067'></a> Source: [windows-apps-src\devices-sensors\use-the-light-sensor.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-light-sensor.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-light-sensor.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-light-sensor.md)
+* Handoff File: [use-the-light-sensor.5d53f6ec6d650962978d64ffc5b60470475b8810.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-light-sensor.5d53f6ec6d650962978d64ffc5b60470475b8810.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-light-sensor.5d53f6ec6d650962978d64ffc5b60470475b8810.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-light-sensor.5d53f6ec6d650962978d64ffc5b60470475b8810.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
+* [Back to Top](#report-top)
+
+##### <a name='67c23795be54207c54c1e871dad045e6c0cd7c772068'></a> Source: [windows-apps-src\devices-sensors\use-the-orientation-sensor.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/devices-sensors/use-the-orientation-sensor.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\devices-sensors\use-the-orientation-sensor.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/4e28f910e571be92e118b6bcf1b95052a0def7af/windows-apps-src/devices-sensors/use-the-orientation-sensor.md)
+* Handoff File: [use-the-orientation-sensor.8933b360952e357137a95b5a72dbbb525b664797.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/use-the-orientation-sensor.8933b360952e357137a95b5a72dbbb525b664797.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [use-the-orientation-sensor.8933b360952e357137a95b5a72dbbb525b664797.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4dec3dd668bbcd5ea11089207de94bcd5607754f/ol-handback/Microsoft/windows-apps.ko-kr/master/devices-sensors/use-the-orientation-sensor.8933b360952e357137a95b5a72dbbb525b664797.ko-kr.xlf)
+* Handback Datetime: 2016-05-27 20:33:18
 * [Back to Top](#report-top)
 
 
