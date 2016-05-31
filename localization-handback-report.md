@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 4
+ Total Files | 6
 
 ## File List
  Source File | Status | Details 
@@ -10,6 +10,8 @@
  [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/f3cb50e5b0b0baa73431392a1f6854a62f3655de/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | InSyncHandedBackSuccess | [Details](#5f534169117da94cb2249c897603f567c007299b2204)
  [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/enable-your-device-for-development.md) | InSyncHandedBackSuccess | [Details](#4c890d6202a3151e8fc0cf03b3ff33b98cd6a8632206)
  [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/learn-more.md) | InSyncHandedBackSuccess | [Details](#cb77a32f99bc6e27cfe87af16d6cd4e08855d7b62562)
+ [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md) | InSyncHandedBackSuccess | [Details](#25f09e043d61f1705f9f0a4fa34114fd06166fa43267)
+ [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md) | InSyncHandedBackSuccess | [Details](#9c38784325f4dc51052f70a819012508f2a0bdbb3272)
 
 ## Item Details
 ##### <a name='12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496'></a> Source: [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md)
@@ -59,6 +61,30 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/78db27c3c9cae2a54158f0e7c8982a2fdc95b397/ol-handback/Microsoft/windows-apps.ko-kr/master/get-started/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
 * Handback Datetime: 2016-05-31 22:17:21
+* [Back to Top](#report-top)
+
+##### <a name='25f09e043d61f1705f9f0a4fa34114fd06166fa43267'></a> Source: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/82f51e7b3482a7a4017c8e5159a720c94ceae703/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md)
+* Handoff File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/39913f0e16eea280ec71aeb9a2ad67d77c0907c3/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/enable-consumable-in-app-product-purchases.edb01dfe981f7ee2caf08efabd114e3d834bcb8a.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:17:45
+* [Back to Top](#report-top)
+
+##### <a name='9c38784325f4dc51052f70a819012508f2a0bdbb3272'></a> Source: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/82f51e7b3482a7a4017c8e5159a720c94ceae703/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md)
+* Handoff File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/39913f0e16eea280ec71aeb9a2ad67d77c0907c3/ol-handback/Microsoft/windows-apps.ko-kr/master/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.b46a34293bb95068c4598af040920875bf2d25c8.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:17:45
 * [Back to Top](#report-top)
 
 
