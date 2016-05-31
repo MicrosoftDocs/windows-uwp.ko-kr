@@ -1,6 +1,6 @@
 ---
-description&#58; 작성자&#58; martinekuan ms.assetid&#58; 54973C62-9669-4988-934E-9273FB0425FD 제목&#58; 개발을 위해 디바이스 사용. Windows 10 디바이스 개발에 대한 다양한 접근 방식이 있습니다.
-키워드&#58; 키워드 시작&#58; 개발자 라이선스 키워드&#58; Visual Studio, 개발자 라이선스 키워드&#58; 디바이스 사용
+description: author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: 개발을 위해 디바이스 사용. Windows 10 디바이스 개발에 대한 다양한 접근 방식이 있습니다.
+keywords: 키워드 시작: 개발자 라이선스 keywords: Visual Studio, 개발자 라이선스 keywords: 디바이스 사용
 ---
 # 디바이스를 개발에 사용하도록 설정
 
