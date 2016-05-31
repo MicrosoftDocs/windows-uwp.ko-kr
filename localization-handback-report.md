@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 7
+ Total Files | 8
 
 ## File List
  Source File | Status | Details 
@@ -13,6 +13,7 @@
  [windows-apps-src\monetize\enable-consumable-in-app-product-purchases.md](https://github.com/Microsoft/windows-apps/blob/36bc5dcbefa6b288bf39aea3df42f1031f0b43df/windows-apps-src/monetize/enable-consumable-in-app-product-purchases.md) | InSyncHandedBackSuccess | [Details](#25f09e043d61f1705f9f0a4fa34114fd06166fa43267)
  [windows-apps-src\monetize\exclude-or-limit-features-in-a-trial-version-of-your-app.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app.md) | InSyncHandedBackSuccess | [Details](#9c38784325f4dc51052f70a819012508f2a0bdbb3272)
  [windows-apps-src\publish\app-submissions.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/publish/app-submissions.md) | InSyncHandedBackSuccess | [Details](#59f41b74ca264606b4668addf44a07c82e1735793486)
+ [windows-apps-src\whats-new\windows-10-version-1511-november-2015.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/whats-new/windows-10-version-1511-november-2015.md) | InSyncHandedBackSuccess | [Details](#bf610a2653635a6d6fc4d651a369f4ffed56b34e3773)
 
 ## Item Details
 ##### <a name='12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496'></a> Source: [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md)
@@ -98,6 +99,18 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/51651566f44486d7b38444844b2e87873ba9fb8d/ol-handback/Microsoft/windows-apps.ko-kr/master/publish/app-submissions.01ef0c6838d8f6d7b4585792d66896ef38e79d7b.ko-kr.xlf)
 * Handback Datetime: 2016-05-31 22:17:58
+* [Back to Top](#report-top)
+
+##### <a name='bf610a2653635a6d6fc4d651a369f4ffed56b34e3773'></a> Source: [windows-apps-src\whats-new\windows-10-version-1511-november-2015.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/whats-new/windows-10-version-1511-november-2015.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\whats-new\windows-10-version-1511-november-2015.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/7e5da6d3a8f8f9b7bb5356200413d25814a37a3b/windows-apps-src/whats-new/windows-10-version-1511-november-2015.md)
+* Handoff File: [windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/a1ca1e9510e615ce2ba44bc9c0fead94eea17427/ol-handback/Microsoft/windows-apps.ko-kr/master/whats-new/windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:18:14
 * [Back to Top](#report-top)
 
 

@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "bd2df770211332e2f6dba0bed0b1184836b81446",
-  "LastTranslatedCommit": "c37a0e4b6ddddb06f6fa7d2baee16c51d88f2ce5",
+  "LastTranslatedCommit": "7e5da6d3a8f8f9b7bb5356200413d25814a37a3b",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -60362,14 +60362,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "8945d0667bb769c5c94dd07218abb9e587d40f64",
+      "TargetFileCommit": "7e5da6d3a8f8f9b7bb5356200413d25814a37a3b",
       "TargetFilePath": "windows-apps-src\\whats-new\\windows-10-version-1511-november-2015.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.ko-kr\\master\\whats-new\\windows-10-version-1511-november-2015.999fc15aa938c751cca71d5ab571a1259715fd6d.ko-kr.xlf",
-      "HandbackFileCommit": "362359f07b73930c34d6395633b88b4d163ca0f6",
-      "HandbackDateTime": "2016-05-27T20:36:41.6373149Z",
+      "HandbackFileCommit": "a1ca1e9510e615ce2ba44bc9c0fead94eea17427",
+      "HandbackDateTime": "2016-05-31T22:18:14.4342318Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-27T20:36:41.6373149Z",
+      "UpdatedDateTime": "2016-05-31T22:18:14.4342318Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
