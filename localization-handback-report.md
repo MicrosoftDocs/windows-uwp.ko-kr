@@ -1,12 +1,15 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md) | InSyncHandedBackSuccess | [Details](#12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496)
+ [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/f3cb50e5b0b0baa73431392a1f6854a62f3655de/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | InSyncHandedBackSuccess | [Details](#5f534169117da94cb2249c897603f567c007299b2204)
+ [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/enable-your-device-for-development.md) | InSyncHandedBackSuccess | [Details](#4c890d6202a3151e8fc0cf03b3ff33b98cd6a8632206)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/learn-more.md) | InSyncHandedBackSuccess | [Details](#cb77a32f99bc6e27cfe87af16d6cd4e08855d7b62562)
 
 ## Item Details
 ##### <a name='12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496'></a> Source: [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md)
@@ -21,7 +24,50 @@
 * Handback Datetime: 2016-05-31 22:16:58
 * [Back to Top](#report-top)
 
+##### <a name='5f534169117da94cb2249c897603f567c007299b2204'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/f3cb50e5b0b0baa73431392a1f6854a62f3655de/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/d3c625b8ad3904ae1128af272a9e383c6f8d9c69/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+* Handoff File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3389d8274bc73808cd960e539c39b012496897ef/ol-handback/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:17:21
+* Handback Error: [handback_validate_file_name_invalide](#5f534169117da94cb2249c897603f567c007299b2204handback_validate_file_name_invalide)
+* [Back to Top](#report-top)
+
+##### <a name='4c890d6202a3151e8fc0cf03b3ff33b98cd6a8632206'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/enable-your-device-for-development.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/32c8af26767bbf279ace5c90df65bfcb3b7464ad/windows-apps-src/get-started/enable-your-device-for-development.md)
+* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/78db27c3c9cae2a54158f0e7c8982a2fdc95b397/ol-handback/Microsoft/windows-apps.ko-kr/master/get-started/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:17:21
+* [Back to Top](#report-top)
+
+##### <a name='cb77a32f99bc6e27cfe87af16d6cd4e08855d7b62562'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/get-started/learn-more.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/32c8af26767bbf279ace5c90df65bfcb3b7464ad/windows-apps-src/get-started/learn-more.md)
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/78db27c3c9cae2a54158f0e7c8982a2fdc95b397/ol-handback/Microsoft/windows-apps.ko-kr/master/get-started/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:17:21
+* [Back to Top](#report-top)
+
 
 ## Error Details
+##### <a name='5f534169117da94cb2249c897603f567c007299b2204handback_validate_file_name_invalide'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](#5f534169117da94cb2249c897603f567c007299b2204)
+* Error Code: handback_validate_file_name_invalide
+* Error Message: Handback file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-KR is different with handoff file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_validate_file_name_invalide","internal_error_message":"Handback file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-KR is different with handoff file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.","internal_error_retriable":false,"exception_message":"Handback file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-KR is different with handoff file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
 
 Generated by OpenLocalization.
