@@ -1,6 +1,6 @@
 ---
-Description&#58; 작성자&#58; jnHs 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다.
-title&#58; 앱 제출 ms.assetid&#58; 363BB9E4-4437-4238-A80F-ABDFC70D96E4 키워드&#58; 앱 제출 키워드&#58; 필수 정보 키워드&#58; 필수 필드 키워드&#58; 필수 데이터 키워드&#58; 검사 목록
+Description: author: jnHs 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다.
+title: 앱 제출 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: 앱 제출 keywords: 필수 정보 keywords: 필수 필드 keywords: 필수 데이터 keywords: 검사 목록
 ---
 
 # 앱 제출
