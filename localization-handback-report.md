@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md) | InSyncHandedBackSuccess | [Details](#12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496)
 
 ## Item Details
+##### <a name='12bf9361bb5fc2fb2dc7f28860a79cb67d661a5c496'></a> Source: [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps/blob/0d62e3026af9f71940bd05d4e072d46cda51bbc0/windows-apps-src/contacts-and-calendar/selecting-contacts.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\contacts-and-calendar\selecting-contacts.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/ecf69f10f11481bd2ce66ab3f07ace7c315b8184/windows-apps-src/contacts-and-calendar/selecting-contacts.md)
+* Handoff File: [selecting-contacts.fb343ef783918a9d7b2af7fc00617fbe85321b7a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/96bbefab0ace66e9daa33f102d6fa5885936d1aa/ol-handoff/Microsoft/windows-apps.ko-kr/master/selecting-contacts.fb343ef783918a9d7b2af7fc00617fbe85321b7a.ko-kr.xlf)
+* Handoff Datetime: 2016-05-12 15:11:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [selecting-contacts.fb343ef783918a9d7b2af7fc00617fbe85321b7a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/3df35f8f3f1e8cea92516d48b552863c2eeec5c1/ol-handback/Microsoft/windows-apps.ko-kr/master/contacts-and-calendar/selecting-contacts.fb343ef783918a9d7b2af7fc00617fbe85321b7a.ko-kr.xlf)
+* Handback Datetime: 2016-05-31 22:16:58
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
