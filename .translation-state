@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "4fba6a4e5fe05e78b9f181c57f890e2f4deb2eb9",
-  "LastTranslatedCommit": "514ee69006e8eea5680f1065c04ed673773ac5ba",
+  "LastTranslatedCommit": "007088faba630f9416fe8d666fd36e6a5979955c",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -63290,7 +63290,7 @@
       "TargetFilePath": "windows-apps-src\\get-started\\create-a-hello-world-app-js-universal.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.ko-kr\\master\\create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf",
       "HandbackFileCommit": "3389d8274bc73808cd960e539c39b012496897ef",
-      "HandbackDateTime": "2016-05-31T23:45:40.0323485Z",
+      "HandbackDateTime": "2016-06-01T00:15:45.8748579Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_name_invalide",
         "internal_error_message": "Handback file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-KR is different with handoff file name: create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.",
@@ -63300,7 +63300,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-05-17T11:38:31.1756307Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
