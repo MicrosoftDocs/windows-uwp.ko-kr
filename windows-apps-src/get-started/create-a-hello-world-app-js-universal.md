@@ -1,12 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: "Hello, world" 앱 만들기(JS)
-description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 &\#0034;Hello, world&\#0034; 앱을 만드는 방법을 설명합니다.
+title: Hello, world 앱 만들기(JS)
+description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다.
 ---
-# "Hello, world" 앱 만들기(JS)
+# Hello, world 앱 만들기(JS)
 
-이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 "Hello, world" 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 장치에서 실행되는 앱을 빌드할 수 있습니다. 여기에서는 데스크톱과 모바일 장치 모두에서 원활하게 실행되는 앱을 만드는 데 집중합니다.
+이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 장치에서 실행되는 앱을 빌드할 수 있습니다. 여기에서는 데스크톱과 모바일 장치 모두에서 원활하게 실행되는 앱을 만드는 데 집중합니다.
 
 **중요** 이 자습서는 Microsoft Visual Studio 2015 및 Windows 10에서 사용하도록 고안되었습니다. 이전 버전에서는 제대로 적용되지 않습니다.
 
@@ -132,7 +132,7 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 -   등(기타 구성의 다양한 에뮬레이터)
 
 화면이 작고 메모리가 제한된 장치에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB** 옵션을 사용합니다.
-**모바일 디바이스 에뮬레이터에서 디버깅을 시작하려면**
+**모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
 
 1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB**를 선택합니다.
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
@@ -251,7 +251,7 @@ default.js에 있는 나머지 코드를 살펴보시기 바랍니다. 이러한
 ```
 
 [
-            **button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
+            **button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
 
 ### 터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
 
@@ -264,14 +264,14 @@ UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차
 
 **이벤트 처리기를 만들려면**
 
-1.  default.js에서 [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) 이벤트 처리기 뒤, [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705)에 대한 호출 앞에 다음과 같은 이름의 단일 매개 변수를 사용하는 `buttonClickHandler`라는 이름의 [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) 이벤트 처리기 함수를 만듭니다.
+1.  default.js에서 [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) 이벤트 처리기 뒤, [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705)에 대한 호출 앞에 `eventInfo`라는 이름의 단일 매개 변수를 사용하는 `buttonClickHandler`라는 이름의 [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312) 이벤트 처리기 함수를 만듭니다.
 ```javascript
     function buttonClickHandler(eventInfo) {
      
         }
 ```
 
-2.  이 이벤트 처리기 내에서 `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
+2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -305,7 +305,7 @@ default.js에 이벤트 처리기를 추가했습니다. 이제 이벤트 처리
 ```
 
 [
-            **onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 처리기 내에서 코드는 어떤 유형의 활성화가 발생했는지 확인합니다. 활성화 유형에는 여러 가지가 있습니다. 예를 들면, 사용자가 앱과 연결된 파일을 열려고 할 때 그리고 사용자가 앱을 실행할 때 앱이 활성화됩니다. (자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/Mt243287)를 참조하세요.
+            **onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 처리기 내에서 코드는 어떤 유형의 활성화가 발생했는지 확인합니다. 활성화 유형에는 여러 가지가 있습니다. 예를 들면, 사용자가 앱과 연결된 파일을 열려고 할 때 그리고 사용자가 앱을 실행할 때 앱이 활성화됩니다. 자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/Mt243287)를 참조하세요.
 
 여기서는 [**launch**](https://msdn.microsoft.com/library/windows/apps/BR224693) 활성화를 살펴보아야 합니다. 앱은 실행되고 있지 않다가 사용자가 활성화할 때마다 *시작*됩니다.
 
@@ -420,7 +420,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
 [
             **Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 앱에 추가합니다.
 
-1.  default.html 파일에서 [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 뒤에 추가합니다.
+1.  default.html 파일에서 [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 뒤에 추가합니다.
 
     ```html
     <body class="win-type-body">

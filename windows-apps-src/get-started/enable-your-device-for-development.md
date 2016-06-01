@@ -6,7 +6,7 @@ keywords: 키워드 시작: 개발자 라이선스 keywords: Visual Studio, 개�
 
 Windows 10 장치 개발에 대한 다양한 접근 방식이 있습니다. 앱을 개발, 설치 또는 테스트하는 데 사용하려는 각 장치에 대해 개발자 라이선스가 더 이상 필요하지 않습니다. 장치의 설정에서 이러한 작업에 대해 한 번만 장치를 사용하도록 설정합니다. 정말 간단하죠? 개발자 라이선스를 더 이상 30일 또는 90일 마다 갱신하지 않아도 됩니다.
 
-Microsoft Visual Studio 2013 또는 Microsoft Visual Studio 2015에서 앱을 개발 또는 테스트하는 데 Windows 8.1 장치를 계속 사용할 경우에는 여전히 [개발자 라이선스를 얻거나](https://msdn.microsoft.com/library/windows/apps/Hh974578)[Windows Phone을 등록](https://msdn.microsoft.com/library/windows/apps/Dn614128)해야 합니다.
+Microsoft Visual Studio 2013 또는 Microsoft Visual Studio 2015에서 앱을 개발 또는 테스트하는 데 Windows 8.1 장치를 계속 사용할 경우에는 여전히 [개발자 라이선스를 얻거나 ](https://msdn.microsoft.com/library/windows/apps/Hh974578)[Windows Phone을 등록](https://msdn.microsoft.com/library/windows/apps/Dn614128)해야 합니다.
 
 ## 개발자 기능 사용
 
