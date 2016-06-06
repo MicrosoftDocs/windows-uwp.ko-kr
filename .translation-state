@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "814f056eaff5419b9c28ba63cf32012bd82cc554",
+  "LastProcessedCommit": "90e63d53c68e25816fd1f7b532792d9ad6dc2cc6",
   "LastTranslatedCommit": "5457db406ad9aacb0b6d1f02215e3e57712b5d30",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -69257,6 +69257,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf",
       "HandoffFileCommit": "180fa0cf8baea98a0fbfafb256922d4830a4f67b",
       "HandoffDateTime": "2016-06-03T02:50:03.8516961Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea": {
+      "FileHash": "582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea",
+      "SourceFileCommit": "90e63d53c68e25816fd1f7b532792d9ad6dc2cc6",
+      "SourceFilePath": "windows-apps-src\\publish\\about-community-ads.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\publish\\about-community-ads.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.ko-kr\\master\\about-community-ads.28f5e31ce0a23a94aceb77cf4bd0f610787ef5a1.ko-kr.xlf",
+      "HandoffFileCommit": "3e1bdb487206f90f3f74e19ef1932e5c31e753d9",
+      "HandoffDateTime": "2016-06-06T16:46:33.588503Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
