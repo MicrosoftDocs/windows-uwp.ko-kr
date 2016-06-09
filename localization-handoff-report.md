@@ -1,48 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/86244e0662f748551d8bf2cd577be775581f2b18/windows-apps-src/debug-test-perf/version-adaptive-code.md) | HandedOffSuccess | [Details](#a46825ebbaed095989bda5516963027203126d951984)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0588c3da13d4eeab3ce0a829b7b3d52451793507/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#a26da6359778065ab4236f43f2a2a63d25f797bf3775)
- [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/0588c3da13d4eeab3ce0a829b7b3d52451793507/windows-apps-src/xbox-apps/tailoring-for-xbox.md) | HandedOffSuccess | [Details](#a0bdb3da21e091d7052628d4f9e2166dcc9e18643884)
+ [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/cdf54de1f1b6b9d6b5e8be130586aa671004a2cf/windows-apps-src/debug-test-perf/version-adaptive-code.md) | HandedOffSuccess | [Details](#1696266e0bb7c3792dbd92f0a3e7790c866b2f251984)
 
 ## Item Details
-##### <a name='a46825ebbaed095989bda5516963027203126d951984'></a> Source: [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/86244e0662f748551d8bf2cd577be775581f2b18/windows-apps-src/debug-test-perf/version-adaptive-code.md)
+##### <a name='1696266e0bb7c3792dbd92f0a3e7790c866b2f251984'></a> Source: [windows-apps-src\debug-test-perf\version-adaptive-code.md](https://github.com/Microsoft/windows-apps/blob/cdf54de1f1b6b9d6b5e8be130586aa671004a2cf/windows-apps-src/debug-test-perf/version-adaptive-code.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/225256df39ed88b019158a07c119b350d578f5e6/ol-handoff/Microsoft/windows-apps.ko-kr/master/version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.ko-kr.xlf)
-* Handoff Datetime: 2016-06-09 21:03:30
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a26da6359778065ab4236f43f2a2a63d25f797bf3775'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0588c3da13d4eeab3ce0a829b7b3d52451793507/windows-apps-src/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/225256df39ed88b019158a07c119b350d578f5e6/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-06-09 21:03:30
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5457db406ad9aacb0b6d1f02215e3e57712b5d30/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/492a29821ad5c76f0421a8fb05bd896b45456717/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Current Handback Datetime: 2016-06-01 11:32:45
-* [Back to Top](#report-top)
-
-##### <a name='a0bdb3da21e091d7052628d4f9e2166dcc9e18643884'></a> Source: [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/0588c3da13d4eeab3ce0a829b7b3d52451793507/windows-apps-src/xbox-apps/tailoring-for-xbox.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/225256df39ed88b019158a07c119b350d578f5e6/ol-handoff/Microsoft/windows-apps.ko-kr/master/tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.ko-kr.xlf)
-* Handoff Datetime: 2016-06-09 21:03:30
+* Handoff File: [version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b29db261b51a6e90f29781970ca56f9c99a61a5a/ol-handoff/Microsoft/windows-apps.ko-kr/master/version-adaptive-code.7aa9b4fd571dd33449d6b84315fa7a6b22580d76.ko-kr.xlf)
+* Handoff Datetime: 2016-06-09 22:03:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
