@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps/blob/372f12182f75725fd339baec511a576e9e4bffa8/windows-apps-src/style/motion.md) | OutofSyncHandedBackSuccess | [Details](#3022b0987196ce3d420810b6742c8f6f976dea7e3825)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/b6c86bc1458f177e44058ac36d97d650bae36008/windows-apps-src/publish/dev-center-insider-program.md) | OutofSyncHandedBackSuccess | [Details](#715d2027114726cf7c9bf0a38d1841f9e83d58e63585)
 
 ## Item Details
-##### <a name='3022b0987196ce3d420810b6742c8f6f976dea7e3825'></a> Source: [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps/blob/372f12182f75725fd339baec511a576e9e4bffa8/windows-apps-src/style/motion.md)
+##### <a name='715d2027114726cf7c9bf0a38d1841f9e83d58e63585'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/b6c86bc1458f177e44058ac36d97d650bae36008/windows-apps-src/publish/dev-center-insider-program.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5f1cacf39515167ec92234bc3d287608058669a8/ol-handoff/Microsoft/windows-apps.ko-kr/master/motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf)
-* Handoff Datetime: 2016-06-22 21:47:22
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/dfff1ce990f2a5b56fc5412fd9fbc345e5954f85/ol-handoff/Microsoft/windows-apps.ko-kr/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf)
+* Handoff Datetime: 2016-06-22 23:16:22
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\style\motion.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5457db406ad9aacb0b6d1f02215e3e57712b5d30/windows-apps-src/style/motion.md)
-* Current Handback File: [motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/492a29821ad5c76f0421a8fb05bd896b45456717/ol-handback/Microsoft/windows-apps.ko-kr/master/motion.212117af558af085cfa0768ba51dd5afcc6073cd.ko-kr.xlf)
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5457db406ad9aacb0b6d1f02215e3e57712b5d30/windows-apps-src/publish/dev-center-insider-program.md)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/492a29821ad5c76f0421a8fb05bd896b45456717/ol-handback/Microsoft/windows-apps.ko-kr/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf)
 * Current Handback Datetime: 2016-06-01 11:32:45
 * [Back to Top](#report-top)
 
