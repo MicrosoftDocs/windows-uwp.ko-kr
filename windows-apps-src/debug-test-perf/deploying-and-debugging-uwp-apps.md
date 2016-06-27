@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
-description: 이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
+description: "이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅"
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: eb639e78bf144572dfbfd2d65514bb4eff7c7be1
+
 ---
 
 # UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
@@ -25,7 +28,7 @@ Microsoft Visual Studio를 사용하면 다양한 Windows 10 디바이스에서 
 -   **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 응용 프로그램을 배포합니다. 에뮬레이터는 Windows 8.1 이상을 실행하고 Hyper-V가 활성화된 컴퓨터에서만 사용할 수 있습니다.
 -   **원격 컴퓨터**에서 원격 대상을 지정하여 응용 프로그램을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 장치 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
 
-## 원격 디바이스 지정
+## 원격 장치 지정
 
 ### C# 및 Microsoft Visual Basic
 
@@ -48,7 +51,7 @@ C++ 또는 JavaScript UWP 앱에 원격 컴퓨터 대상을 지정하려면 **�
 
 ### 원격 PC 지침
 
-원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다. 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 실행하고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다. **인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt; **옵션**으로 이동하여 **인증 없음**으로 설정합니다. 원격 디버거가 설정되면 개발 컴퓨터에서 배포할 수 있습니다.
+원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다. 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 실행하고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다. **인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt;**옵션**으로 이동하여 **인증 없음**으로 설정합니다. 원격 디버거가 설정되면 개발 컴퓨터에서 배포할 수 있습니다.
 
 자세한 내용은 [Remote Tools for Visual Studio]( http://go.microsoft.com/fwlink/?LinkId=717039) 다운로드 페이지를 참조하세요.
 
@@ -62,7 +65,7 @@ C++ 또는 JavaScript UWP 앱에 원격 컴퓨터 대상을 지정하려면 **�
 
 ## 디버깅 옵션
 
-Windows 10에서는 [사전 실행](https://msdn.microsoft.com/library/windows/apps/Mt593297)이라고 하는 기술을 통해 앱을 사전에 실행하고 일시 중단함으로써 UWP의 시작 성능이 개선되었습니다. 대부분의 응용 프로그램은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 응용 프로그램에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다. 디버깅은 Visual Studio 프로젝트(**디버그** -&gt; **기타 디버그 대상** -&gt; **Debug Universal Windows App Prelaunch(유니버설 Windows 앱 사전 실행 디버그)**)와 컴퓨터에 이미 설치된 앱(**디버그** -&gt; **기타 디버그 대상** -&gt; **Debug Installed App Package(설치된 앱 패키지 디버그)**로 이동하여 **Activate app with Prelaunch(사전 실행으로 앱 활성화)** 확인란 선택) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그]( http://go.microsoft.com/fwlink/?LinkId=717245) 방법을 참조하세요.
+Windows 10에서는 [사전 실행](https://msdn.microsoft.com/library/windows/apps/Mt593297)이라고 하는 기술을 통해 앱을 사전에 실행하고 일시 중단함으로써 UWP의 시작 성능이 개선되었습니다. 대부분의 응용 프로그램은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 응용 프로그램에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다. 디버깅은 Visual Studio 프로젝트(**디버그** -&gt;**기타 디버그 대상** -&gt;**Debug Universal Windows App Prelaunch(유니버설 Windows 앱 사전 실행 디버그)**)와 컴퓨터에 이미 설치된 앱(**디버그** -&gt;**기타 디버그 대상** -&gt;**Debug Installed App Package(설치된 앱 패키지 디버그)**로 이동하여 **Activate app with Prelaunch(사전 실행으로 앱 활성화)** 확인란 선택) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그]( http://go.microsoft.com/fwlink/?LinkId=717245) 방법을 참조하세요.
 
 시작 프로젝트의 **디버그** 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.
 
@@ -85,6 +88,7 @@ Windows 10에서는 [사전 실행](https://msdn.microsoft.com/library/windows/a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

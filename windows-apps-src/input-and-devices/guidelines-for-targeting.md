@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다.
-title: 대상 지정
+Description: "이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다."
+title: "대상 지정"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c8244e1a103a1c57df92e54ceeaa02e9c363faa9
+
 ---
 
 # 대상 지정에 대한 지침
@@ -170,6 +173,7 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

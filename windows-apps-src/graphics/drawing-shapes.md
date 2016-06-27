@@ -1,8 +1,11 @@
 ---
 author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
-title: 셰이프 그리기
-description: 타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다.
+title: "셰이프 그리기"
+description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
+ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
+ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+
 ---
 # 셰이프 그리기
 
@@ -202,8 +205,8 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
           </Path>
 ```
 
-다양한 부분과 함께 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168)를 사용할 수 있는 한 가지 이유는 각 부분에 UI 애니메이션의 대상을 지정할 수 있는 **Double** 및 **Point** 속성이 있기 때문입니다. [
-            **Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data)의 직렬화 형식으로는 해당 작업을 수행할 수 없습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
+[
+            **PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168)를 사용하면 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) 문자열을 채우는 것보다 읽기 쉬울 수 있습니다. 반면에 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data)는 SVG(스케일러블 벡터 그래픽) 이미지 경로 정의와 호환되는 구문을 사용하므로 SVG에서 그래픽을 이식하거나 Blend와 같은 도구에서 출력으로 사용하는 데 유용할 수 있습니다.
 
  
 
@@ -214,6 +217,7 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

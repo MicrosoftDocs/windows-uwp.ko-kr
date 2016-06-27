@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 터치 및 펜 입력에 사용하는 것과 동일한 기본 포인터 이벤트를 처리하여 앱에서 마우스 입력에 응답합니다.
-title: 마우스 조작
+Description: "터치 및 펜 입력에 사용하는 것과 동일한 기본 포인터 이벤트를 처리하여 앱에서 마우스 입력에 응답합니다."
+title: "마우스 조작"
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: b381cdba2a20480bb8b4d7802d2ff490744e5f03
+
 ---
 
 # 마우스 조작
@@ -153,6 +156,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

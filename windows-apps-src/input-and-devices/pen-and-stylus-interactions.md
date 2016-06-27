@@ -1,11 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 자연스러운 필기 및 그리기 환경에 위한 디지털 잉크를 포함하여 펜 및 스타일러스 디바이스의 사용자 지정 조작을 지원되는 UWP(유니버설 Windows 플랫폼) 앱을 빌드하세요.
-title: UWP 앱에서 펜 및 스타일러스 조작
+Description: "자연스러운 필기 및 그리기 환경에 위한 디지털 잉크를 포함하여 펜 및 스타일러스 디바이스의 사용자 지정 조작을 지원되는 UWP(유니버설 Windows 플랫폼) 앱을 빌드하세요."
+title: "UWP 앱에서 펜 및 스타일러스 조작"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+
 ---
 
 # UWP 앱에서 펜 및 스타일러스 조작
@@ -77,7 +80,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 | 배경 이미지를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 비웁니다. | 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)입니다. | 하나의 스트로크가 지워진 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)입니다(지우기 기능이 일부가 아닌 전체 스트로크에 작동하는 방식을 확인합니다). |
 
 [
-            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 지원되는 수동 입력 기능은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)라는 코드 숨김 개체에서 제공합니다.
+            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 지원되는 잉크 기능은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)라는 코드 숨김 개체에서 제공합니다.
 
 기본 수동 입력을 위해 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 사용할 필요는 없습니다. 그러나 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 대해 수동 입력 동작을 사용자 지정하고 구성하려면 해당하는 **InkPresenter** 개체에 액세스해야 합니다.
 
@@ -234,7 +237,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
     </Grid>
 ```
 
-2.  MainPage.xaml.cs에서는 선택 UI의 다양한 측면에 대한 참조를 유지하기 위해 몇 개의 전역 변수를 선언합니다. 특히, 선택한 스트로크를 강조 표시하는 경계 사각형과 선택 올가미 스트로크가 여기에 해당됩니다.
+2.  MainPage.xaml.cs에서는 선택 UI의 다양한 측면에 대한 참조를 유지하기 위해 몇 개의 전역 변수를 선언합니다. 특히, 선택한 스트로크를 강조 표시하는 경계 직사각형과 선택 올가미 스트로크가 여기에 해당됩니다.
 ```    CSharp
 // Stroke selection tool.
     private Polyline lasso;
@@ -464,7 +467,7 @@ public MainPage()
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력 장치 식별](identify-input-devices.md)
+* [입력 디바이스 식별](identify-input-devices.md)
 
 **샘플**
 * [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
@@ -476,7 +479,7 @@ public MainPage()
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
@@ -489,6 +492,7 @@ public MainPage()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

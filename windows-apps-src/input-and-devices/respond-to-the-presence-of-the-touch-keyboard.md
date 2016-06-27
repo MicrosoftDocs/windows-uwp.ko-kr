@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 터치 키보드를 표시하거나 숨길 때 앱의 UI를 세부 조정하는 방법을 알아봅니다.
-title: 터치 키보드의 현재 상태에 응답
+Description: "터치 키보드를 표시하거나 숨길 때 앱의 UI를 세부 조정하는 방법을 알아봅니다."
+title: "터치 키보드의 현재 상태에 응답"
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5f4f9553a54dc902c7c6a50d6a1b4cf6251fd72c
+
 ---
 
 # 터치 키보드의 현재 상태에 응답
@@ -141,6 +144,7 @@ public class MyApplication
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: mijacobs
-Description: 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
-title: UWP 앱의 동작 및 애니메이션
+Description: "체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다."
+title: "UWP 앱의 동작 및 애니메이션"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
+
 ---
 
 # UWP 앱의 동작
@@ -110,6 +113,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

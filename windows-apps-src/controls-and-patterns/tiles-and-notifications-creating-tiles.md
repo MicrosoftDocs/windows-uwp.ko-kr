@@ -1,10 +1,13 @@
 ---
 author: mijacobs
-Description: 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에 타일이 있습니다. Microsoft Visual Studio에서 새 UWP(유니버설 Windows 플랫폼) 앱 프로젝트를 만들면 앱 이름 및 로고를 표시하는 기본 타일이 포함됩니다.
-title: 타일
+Description: "타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에 타일이 있습니다. Microsoft Visual Studio에서 새 UWP(유니버설 Windows 플랫폼) 앱 프로젝트를 만들면 앱 이름 및 로고를 표시하는 기본 타일이 포함됩니다."
+title: "타일"
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a440a9abaf150dac6ed95d881261b80521a734c0
+
 ---
 
 # UWP 앱의 타일
@@ -110,6 +113,7 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: URI에 대한 기본 앱 실행
-description: URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다.
+author: TylerMSFT
+title: "URI에 대한 기본 앱 실행"
+description: "URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: b593a43bc5b95dd0880af972ca1514e657bbd9e3
+
 ---
 
 # URI에 대한 기본 앱 실행
@@ -97,7 +100,7 @@ var options = new Windows.System.LauncherOptions();
 options.PreferredApplicationPackageFamilyName = "Contoso.URIApp_8wknc82po1e";
 options.PreferredApplicationDisplayName = "Contoso URI Ap";
 
-// Launch the URI and pass in the recommended app 
+// Launch the URI and pass in the recommended app
 // in case the user has no apps installed to handle the URI
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
@@ -117,7 +120,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 var options = new Windows.System.LauncherOptions();
 options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
 
-// Launch the URI 
+// Launch the URI
 var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 ```
 
@@ -173,7 +176,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 | ms-chat:                                 | 메시징 앱을 시작합니다.                                                                                                                                                            |
 | ms-chat:?ContactID={contacted}           | 메시징 응용 프로그램이 특정 연락처의 정보를 사용하여 실행되도록 허용합니다.                                                                                               |
 | ms-chat:?Body={body}                     | 메시징 응용 프로그램이 문자열을 메시지 내용으로 사용하여 실행되도록 허용합니다.                                                                                    |
-| ms-chat:?Addresses={address}&Body={body} | 메시징 응용 프로그램이 문자열을 메시지 내용으로 사용하고 특정 주소의 정보를 사용하여 실행되도록 허용합니다. 참고: 주소를 연결할 수 있습니다. |
+| ms-chat:?Addresses={address}&amp;Body={body} | 메시징 응용 프로그램이 문자열을 메시지 내용으로 사용하고 특정 주소의 정보를 사용하여 실행되도록 허용합니다. 참고: 주소를 연결할 수 있습니다. |
 | ms-chat:?TransportId={transportId}       | 메시징 응용 프로그램이 특정 전송 ID를 사용하여 실행되도록 허용합니다.                                                                                                        |
 
  
@@ -208,7 +211,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 스키마                                            | 결과                                                                               |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------|
-| ms-yellowpage:?input=\[keyword\]&method=\[String|T9\] | 이 새 URI를 지원하는 설치된 POI(안내 표시) 검색 앱을 실행합니다. |
+| ms-yellowpage:?input=\[keyword\]&amp;method=\[String|T9\] | 이 새 URI를 지원하는 설치된 POI(안내 표시) 검색 앱을 실행합니다. |
 
  
 
@@ -225,8 +228,6 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

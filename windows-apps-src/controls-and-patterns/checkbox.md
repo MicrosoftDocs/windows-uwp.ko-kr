@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 작업 항목을 선택하거나 선택 취소하는 데 사용합니다. 단일 목록 항목이나 여러 목록 항목에 대해 사용할 수 있습니다.
-title: 확인란
+Description: "작업 항목을 선택하거나 선택 취소하는 데 사용합니다. 단일 목록 항목이나 여러 목록 항목에 대해 사용할 수 있습니다."
+title: "확인란"
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
+
 ---
 # 확인란
 
@@ -289,6 +292,7 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

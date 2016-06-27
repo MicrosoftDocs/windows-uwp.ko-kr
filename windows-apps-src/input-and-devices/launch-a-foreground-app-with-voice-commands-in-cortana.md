@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Cortana 내에서 음성 명령을 사용하여 시스템 기능에 액세스할 수 있을 뿐만 아니라, Cortana를 통해 음성 명령을 사용하여 포그라운드 앱을 시작하고 앱에서 실행할 작업 또는 명령을 지정할 수도 있습니다.
-title: Cortana에서 음성 명령으로 포그라운드 앱 시작
+Description: "Cortana 내에서 음성 명령을 사용하여 시스템 기능에 액세스할 수 있을 뿐만 아니라, Cortana를 통해 음성 명령을 사용하여 포그라운드 앱을 시작하고 앱에서 실행할 작업 또는 명령을 지정할 수도 있습니다."
+title: "Cortana에서 음성 명령으로 포그라운드 앱 시작"
 ms.assetid: 8D3D1F66-7D17-4DD1-B426-DCCBD534EF00
 label: Cortana-Launch a foreground app
 template: detail.hbs
+ms.sourcegitcommit: 7cbea3c4e784fe024aef953e3ea757dad6c5e3b8
+ms.openlocfilehash: aa4d71525d4a41382b8bbe123ca1fa830a4fc720
+
 ---
 
 # Cortana를 통해 음성 명령으로 포그라운드 앱 활성화
@@ -67,7 +70,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
     **새 프로젝트** 대화 상자가 나타납니다. 대화 상자의 왼쪽 창에서 표시할 템플릿 유형을 선택할 수 있습니다.
 
-3.  왼쪽 창에서 **설치됨 > 템플릿 > Visual C\# > Windows**를 확장하고 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
+3.  왼쪽 창에서 **설치됨 &gt; 템플릿 &gt; Visual C\# &gt; Windows**를 확장하고 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
 4.  가운데 창에서 **비어 있는 앱(유니버설 Windows)** 템플릿을 선택합니다.
 
     **비어 있는 앱** 템플릿은 컴파일과 실행은 가능하지만 사용자 인터페이스 컨트롤이나 데이터는 포함되지 않은 최소한의 UWP 앱을 만듭니다. 이 자습서를 진행하면서 이 앱에 컨트롤을 추가하게 됩니다.
@@ -79,7 +82,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 ## <span id="Add_image_assets_to_project_and_specify_them_in_the_app_manifest"></span><span id="add_image_assets_to_project_and_specify_them_in_the_app_manifest"></span><span id="ADD_IMAGE_ASSETS_TO_PROJECT_AND_SPECIFY_THEM_IN_THE_APP_MANIFEST"></span>프로젝트에 이미지 자산 추가 및 앱 매니페스트에서 지정
       
-UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, 로캘 등)에 따라 가장 적절한 이미지를 자동으로 선택할 수 있습니다. 단지 이미지를 제공하고 앱 프로젝트 내에서 다른 리소스 버전에 대한 적절한 명명 규칙 및 폴더 조직을 사용하면 됩니다. 권장 리소스 버전을 제공하지 않으면 사용자의 기본 설정, 능력, 디바이스 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 떨어질 수 있습니다.
+UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, 로캘 등)에 따라 가장 적절한 이미지를 자동으로 선택할 수 있습니다. 단지 이미지를 제공하고 앱 프로젝트 내에서 다른 리소스 버전에 대한 적절한 명명 규칙 및 폴더 조직을 사용하면 됩니다. 권장 리소스 버전을 제공하지 않으면 사용자의 기본 설정, 능력, 장치 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 떨어질 수 있습니다.
 
 고대비 및 배율 인수용 이미지 리소스에 대한 자세한 내용은 [타일 및 아이콘 자산에 대한 지침](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets)을 참조하세요.
 
@@ -95,7 +98,7 @@ UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, �
     
 ## <span id="Create_a_VCD_file"></span><span id="create_a_vcd_file"></span><span id="CREATE_A_VCD_FILE"></span>VCD 파일 만들기
 
-1. Visual Studio에서 기본 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다. **XML 파일**을 추가합니다.
+1. Visual Studio에서 기본 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 &gt; 새 항목**을 선택합니다. **XML 파일**을 추가합니다.
 2. [
             **VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) 파일의 이름(이 예제에서는 "AdventureWorksCommands.xml")을 입력하고 추가를 클릭합니다. 
 3. **솔루션 탐색기**에서 [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593) 파일을 선택합니다.
@@ -104,14 +107,14 @@ UWP 앱에서 특정 설정 및 디바이스 기능(고대비, 유효 픽셀, �
 ## <span id="Edit_the_VCD_file"></span><span id="edit_the_vcd_file"></span><span id="EDIT_THE_VCD_FILE"></span>VCD 파일 편집
 
 
-**xmlns** 특성으로 다음을 가리켜 **VoiceCommands** 요소를 추가합니다.
+**xmlns** 특성으로 `http://schemas.microsoft.com/voicecommands/1.2`를 가리켜 **VoiceCommands** 요소를 추가합니다.
 
 2. 앱에서 지원하는 각 언어에 대해 앱이 지원하는 음성 명령을 포함하는 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) 요소를 만듭니다.
 
   각각 다른 [**xml:lang**](https://msdn.microsoft.com/library/windows/apps/dn722331) 특성이 포함된 여러 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331) 요소를 만들면 다양한 마켓에서 앱을 사용할 수 있습니다. 예를 들어 미국용 앱에는 영어에 대한 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)와 스페인어에 대한 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)가 포함될 수 있습니다.
 
   >  **주의**  
-  음성 명령을 사용하여 앱을 활성화하고 동작을 시작하기 위해 앱은 사용자가 디바이스에 대해 선택한 음성 언어와 일치하는 언어의 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)이 포함된 VCD 파일을 등록해야 합니다. 음성 언어는 **설정 > 시스템 > 음성 > 음성 언어**에 있습니다.
+  음성 명령을 사용하여 앱을 활성화하고 동작을 시작하기 위해 앱은 사용자가 디바이스에 대해 선택한 음성 언어와 일치하는 언어의 [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)이 포함된 VCD 파일을 등록해야 합니다. 음성 언어는 **설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어**에 있습니다.
 
 3. 지원하려는 각 명령에 대해 **Command** 요소를 추가합니다.
 
@@ -402,6 +405,7 @@ private string SemanticInterpretation(string interpretationKey, SpeechRecognitio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

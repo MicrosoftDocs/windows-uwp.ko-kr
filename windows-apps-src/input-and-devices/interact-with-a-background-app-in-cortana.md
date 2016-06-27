@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 사용자가 음성 명령을 실행하는 동안 Cortana 음성 및 캔버스를 통해 백그라운드 앱을 조작할 수 있는 방법을 알아봅니다.
-title: 백그라운드 앱 조작
+Description: "사용자가 음성 명령을 실행하는 동안 Cortana 음성 및 캔버스를 통해 백그라운드 앱을 조작할 수 있는 방법을 알아봅니다."
+title: "백그라운드 앱 조작"
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
 label: Interact with a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: 675553f5c3954597982360900e965b2a756d7f63
+
 ---
 
 # Cortana에서 백그라운드 앱 조작
@@ -180,7 +183,9 @@ private async Task SendCompletionMessageForDestination(string destination)
 
 앱 서비스가 ReportSuccessAsync 또는 다른 VoiceCommandServiceConnection 메서드를 호출하지 않는 경우 사용자에게 오류 메시지가 표시되고 앱 서비스 호출이 취소됩니다.
 
-다음은 **Adventure Works** 앱에 대한 넘기기 화면의 예입니다. 이 예제에서 사용자는 예정된 여행을 **Cortana**에 쿼리했습니다. 넘기기 화면에는 앱 서비스 이름, 아이콘 및 VCD 파일에 선언된 **Feedback** 문자열로 사용자 지정된 메시지가 포함되어 있습니다.
+다음은 **Adventure Works** 앱에 대한 넘기기 화면의 예입니다. 이 예제에서 사용자는 예정된 여행을 **Cortana**에 쿼리했습니다. 넘기기 화면에는 앱 서비스 이름, 아이콘 및 **Feedback** 문자열로 사용자 지정된 메시지가 포함되어 있습니다. 
+
+[!NOTE] **Feedback** 문자열은 VCD 파일에서 선언할 수 있습니다. 이 문자열은 Cortana 캔버스에 표시되는 UI 텍스트에 영향을 주지 않으며 **Cortana**가 말하는 텍스트에만 영향을 줍니다.
 
 ![Cortana 백그라운드 앱 넘기기 화면](images/cortana-backgroundapp-progress-result.png)
 
@@ -473,6 +478,7 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

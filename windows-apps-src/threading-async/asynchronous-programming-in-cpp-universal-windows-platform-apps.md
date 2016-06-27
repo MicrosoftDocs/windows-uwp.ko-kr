@@ -1,8 +1,11 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: 이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다.
-title: C++의 비동기 프로그래밍
+description: "이 문서에서는 ppltasks.h의 concurrency 네임스페이스에 정의된 task 클래스를 사용하여 Visual C++ 구성 요소 확장(C++/CX)의 비동기 메서드를 이용하는 권장 방법에 대해 설명합니다."
+title: "C++의 비동기 프로그래밍"
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+
 ---
 
 # C++의 비동기 프로그래밍
@@ -69,17 +72,23 @@ void App::TestAsync()
 ```
 
 [
-            **task::then**][taskThen] 함수에 의해 만들어지고 반환되는 작업을 *연속 작업*이라고 합니다. (이 경우) 사용자가 제공한 람다에 대한 입력 인수는 작업 연산이 완료될 때 생성하는 결과입니다. 이는 **IAsyncOperation** 인터페이스를 직접 사용하고 있다면 [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600)를 호출했을 때 검색되는 값과 동일합니다.
+              **task::then**
+            ]
+            [taskThen] 함수에 의해 만들어지고 반환되는 작업을 *연속 작업*이라고 합니다. (이 경우) 사용자가 제공한 람다에 대한 입력 인수는 작업 연산이 완료될 때 생성하는 결과입니다. 이는 **IAsyncOperation** 인터페이스를 직접 사용하고 있다면 [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600)를 호출했을 때 검색되는 값과 동일합니다.
 
 [
-            **task::then**][taskThen] 메서드는 즉시 반환하며, 비동기 작업이 완료될 때까지 대리자는 실행되지 않습니다. 이 예제에서 비동기 작업이 예외를 발생시키거나, 취소 요청의 결과로서 취소된 상태로 종료될 경우에는 연속 작업이 실행되지 않습니다. 나중에 이전 작업이 취소 또는 실패한 경우에도 실행되는 연속 작업을 작성하는 방법에 대해 살펴보겠습니다.
+              **task::then**
+            ]
+            [taskThen] 메서드는 즉시 반환하며, 비동기 작업이 완료될 때까지 대리자는 실행되지 않습니다. 이 예제에서 비동기 작업이 예외를 발생시키거나, 취소 요청의 결과로서 취소된 상태로 종료될 경우에는 연속 작업이 실행되지 않습니다. 나중에 이전 작업이 취소 또는 실패한 경우에도 실행되는 연속 작업을 작성하는 방법에 대해 살펴보겠습니다.
 
 로컬 스택에 task 변수를 선언하더라도 이 변수는 자신의 수명을 관리하므로 모든 작업이 완료되고 그에 대한 모든 참조가 범위를 벗어날 때까지 삭제되지 않습니다. 이는 작업이 완료되기 전에 메서드가 반환하는 경우에도 마찬가지입니다.
 
 ## 작업 체인 만들기
 
 비동기 프로그래밍에서는 *작업 체인*이라고도 하는 작업 시퀀스를 정의하는 것이 일반적입니다. 각 연속 작업은 이전 작업이 완료된 경우에만 실행됩니다. 경우에 따라 이전(또는 *선행*) 작업은 연속 작업이 입력으로 받아들이는 값을 생성하기도 합니다. [
-            **task::then**][taskThen] 메서드를 사용하면 직관적이고 간편한 방법으로 작업 체인을 만들 수 있습니다. 이 메서드는 **task<T>**를 반환하며 여기서 **T**는 람다 함수의 반환 형식입니다. 하나의 작업 체인에 여러 연속 작업을 작성할 수 있습니다(예: ). `myTask.then(…).then(…).then(…);`
+              **task::then**
+            ]
+            [taskThen] 메서드를 사용하면 직관적이고 간편한 방법으로 작업 체인을 만들 수 있습니다. 이 메서드는 **task<T>**를 반환하며 여기서 **T**는 람다 함수의 반환 형식입니다. 하나의 작업 체인에 여러 연속 작업을 작성할 수 있습니다(예: ). `myTask.then(…).then(…).then(…);`
 
 작업 체인은 연속이 새로운 비동기 작업(operation)을 만들 때 특히 유용합니다. 그러한 작업을 비동기 작업(task)이라고 합니다. 다음 예제에서는 두 개의 연속 작업이 있는 작업 체인을 보여 줍니다. 초기 작업은 기존 파일에 대한 핸들을 얻고, 해당 작업이 완료되면 첫 번째 연속 작업이 새 비동기 작업을 시작하여 파일을 삭제합니다. 이 작업이 완료되면 두 번째 연속 작업이 실행되고 확인 메시지가 표시됩니다.
 
@@ -111,7 +120,7 @@ void App::DeleteWithTasks(String^ fileName)
 
 -   두 번째 연속 작업은 값 기반이므로 [**DeleteAsync**][deleteAsync] 호출에 의해 시작된 작업이 예외를 발생시킬 경우 아예 실행되지 않습니다.
 
-**참고** 작업 체인을 만드는 것은 **task** 클래스를 사용하여 비동기 작업을 구성하는 한 가지 방법일 뿐입니다. join 또는 choice 연산자 **&&** 및 **||**를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)]][taskParallelism]을 참조하세요.
+**참고** 작업 체인을 만드는 것은 **task** 클래스를 사용하여 비동기 작업을 구성하는 한 가지 방법일 뿐입니다. join 또는 choice 연산자  및 를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 작업 병렬 처리(동시성 런타임)\]taskParallelism을 참조하세요.
 
 ## 람다 함수 반환 형식 및 작업 반환 형식
 
@@ -148,10 +157,12 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 ```
 
 작업이 취소되면 [**task\_canceled**][taskCanceled] 예외가 작업 체인으로 하향 전파됩니다. 단지 값 기반 연속 작업이 실행되지 않을 뿐이지만 [**task::get**][taskGet]이 호출될 경우 작업 기반 연속 작업에서 예외가 발생합니다. 오류 처리 연속 작업이 있으면 **task\_canceled** 예외를 명시적으로 catch하는지 확인하세요(이 예외는 [
-            **Platform::Exception**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh755825.aspx)에서 파생되지 않음).
+              **Platform::Exception**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh755825.aspx)에서 파생되지 않음).
 
 취소는 공동 작업입니다. 연속 작업에 단지 UWP 메서드를 호출하는 것 이상으로 장기 실행되는 일부 작업이 있을 경우 사용자 스스로 취소 토큰을 정기적으로 확인하고 취소된 토큰이 있으면 실행을 중지해야 합니다. 연속 작업에 할당된 모든 리소스를 정리한 후 [**cancel\_current\_task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749945.aspx)를 호출하여 해당 작업을 취소하고 값 기반의 후속 연속 작업에 취소를 하향 전파합니다. [
-            **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/BR207871) 작업의 결과를 나타내는 작업 체인을 만들 수 있는 다른 예를 살펴봅시다. 사용자가 **취소** 단추를 선택하면 [**IAsyncInfo::Cancel**][IAsyncInfoCancel] 메서드가 호출되지 않습니다. 작업은 계속되는 대신 **nullptr**을 반환합니다. 연속 작업은 입력 매개 변수를 테스트하고 입력이 **nullptr**이면 **cancel\_current\_task**를 호출합니다.
+              **FileSavePicker**
+            ](https://msdn.microsoft.com/library/windows/apps/BR207871) 작업의 결과를 나타내는 작업 체인을 만들 수 있는 다른 예를 살펴봅시다. 사용자가 **취소** 단추를 선택하면 [**IAsyncInfo::Cancel**][IAsyncInfoCancel] 메서드가 호출되지 않습니다. 작업은 계속되는 대신 **nullptr**을 반환합니다. 연속 작업은 입력 매개 변수를 테스트하고 입력이 **nullptr**이면 **cancel\_current\_task**를 호출합니다.
 
 자세한 내용은 [PPL에서의 취소](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd984117.aspx)를 참조하세요.
 
@@ -223,13 +234,17 @@ void App::SetFeedText()
 ```
 
 [
-            **IAsyncAction**][IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
+              **IAsyncAction**
+            ]
+            [IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
 
 [
-            **task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)를 가져오는 [**task::then**][taskThen]의 오버로드를 사용하면 두 유형의 작업 모두에 대해 기본 스레드 컨텍스트를 무시할 수 있습니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이 경우 [**task\_continuation\_context::use\_arbitrary**][useArbitrary]를 전달하여 다중 스레드 아파트에서 사용 가능한 다음 스레드에서 작업을 예약할 수 있습니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
+              **task\_continuation\_context**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)를 가져오는 [**task::then**][taskThen]의 오버로드를 사용하면 두 유형의 작업 모두에 대해 기본 스레드 컨텍스트를 무시할 수 있습니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이 경우 [**task\_continuation\_context::use\_arbitrary**][useArbitrary]를 전달하여 다중 스레드 아파트에서 사용 가능한 다음 스레드에서 작업을 예약할 수 있습니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
 
 다음 예제는 [**task\_continuation\_context::use\_arbitrary**][useArbitrary] 옵션을 지정하는 것이 언제 유용한지, 그리고 기본 연속 작업 컨텍스트가 스레드로부터 안전하지 않은 컬렉션에서 동시 작업을 동기화하는 데 있어 어떻게 유용한지를 보여 줍니다. 이 코드에서는 RSS 피드 및 각 URL에 대해 URL 목록 전체를 반복하고, 피드 데이터를 검색하기 위해 비동기 작업을 시작합니다. 피드가 검색되는 순서는 제어할 수 없지만 이는 그다지 중요하지 않습니다. 각 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) 작업이 완료되면 첫 번째 연속 작업이 [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) 개체를 받은 다음 이를 사용하여 앱에서 정의된 `FeedData^` 개체를 초기화합니다. 이러한 각각의 작업은 상호 독립적이므로 **task\_continuation\_context::use\_arbitrary** 연속 작업 컨텍스트를 지정하여 잠재적으로 속도를 높일 수 있습니다. 그러나 각 `FeedData` 개체가 초기화된 후에는 스레드로부터 안전한 컬렉션이 아닌 [**Vector**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh441570.aspx)에 추가해야 합니다. 따라서 연속 작업을 만들고 [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx)를 지정하여 동일한 ASTA(응용 프로그램 단일 스레드 아파트) 컨텍스트에서 모든 [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) 호출이 발생하게 합니다. [
-            **task\_continuation\_context::use\_default**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx)는 기본 컨텍스트이므로 명시적으로 지정할 필요가 없지만 여기서는 명확히 하기 위해 지정합니다.
+              **task\_continuation\_context::use\_default**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750085.aspx)는 기본 컨텍스트이므로 명시적으로 지정할 필요가 없지만 여기서는 명확히 하기 위해 지정합니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -295,34 +310,55 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 ## 진행 상황 업데이트 처리
 
 [
-            **IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206594) 또는 [**IAsyncActionWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)를 지원하는 메서드는 작업이 완료될 때까지 진행 상황을 정기적으로 업데이트합니다. 진행 상황 보고는 작업 및 연속 작업의 개념과는 별개입니다. 개체의 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594) 속성에 대한 대리자를 제공하면 되며, 대리자 사용의 전형적인 예는 UI에서 진행률 표시줄을 업데이트하는 것입니다.
+              **IAsyncOperationWithProgress**
+            ](https://msdn.microsoft.com/library/windows/apps/BR206594) 또는 [**IAsyncActionWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)를 지원하는 메서드는 작업이 완료될 때까지 진행 상황을 정기적으로 업데이트합니다. 진행 상황 보고는 작업 및 연속 작업의 개념과는 별개입니다. 개체의 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594) 속성에 대한 대리자를 제공하면 되며, 대리자 사용의 전형적인 예는 UI에서 진행률 표시줄을 업데이트하는 것입니다.
 
 ## 관련 항목
 
-* [C++에서 Windows 스토어 앱에 대한 비동기 작업 만들기][createAsyncCpp]
+* [C++에서 Windows 스토어 앱에 대한 비동기 작업 만들기]
+            [createAsyncCpp]
 * [Visual C++ 언어 참조](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* [비동기 프로그래밍][AsyncProgramming]
-* [작업 병렬 처리(동시성 런타임)][taskParallelism]
-* [task 클래스][task-class]
+* [비동기 프로그래밍]
+            [AsyncProgramming]
+* [작업 병렬 처리(동시성 런타임)]
+            [taskParallelism]
+* [task 클래스]
+            [task-class]
  
 <!-- LINKS -->
-[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
-[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> "동시성 네임스페이스"
-[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
-[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
-[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> "IAsyncAction"
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
-[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
-[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "작업 클래스"
-[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "작업 병렬 처리"
-[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
-[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
+[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx>
+             "AsyncProgramming"
+[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx>
+             "동시성 네임스페이스"
+[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx>
+             "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx>
+             "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
+             "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+             "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
+             "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587>
+             "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel>
+             "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx>
+             "TaskCancelled"
+[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx>
+             "Task 클래스"
+[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx>
+             "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx>
+             "작업 병렬 처리"
+[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx>
+             "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx>
+             "UseArbitrary"
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 이 항목에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
-title: 회전
+Description: "이 항목에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다."
+title: "회전"
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
+
 ---
 
 # 회전
@@ -123,6 +126,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

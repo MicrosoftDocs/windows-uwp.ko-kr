@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: 경로 도형을 XAML 특성 값으로 지정하는 데 사용할 수 있는 이동 및 그리기 명령(미니 언어)에 대해 알아봅니다.
-title: 이동 및 그리기 명령 구문
+description: "경로 도형을 XAML 특성 값으로 지정하는 데 사용할 수 있는 이동 및 그리기 명령(미니 언어)에 대해 알아봅니다."
+title: "이동 및 그리기 명령 구문"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
+ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+
 ---
 
 # 이동 및 그리기 명령 구문
@@ -228,11 +231,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 ## 이동 및 그리기 명령을 생성하는 디자인 도구
 
-Blend for Microsoft Visual Studio 2013에서 **펜** 도구 및 다른 그리기 도구를 사용하면 일반적으로 이동 및 그리기 명령과 함께 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) 개체가 생성됩니다.
+Blend for Microsoft Visual Studio 2015에서 **펜** 도구 및 다른 그리기 도구를 사용하면 일반적으로 이동 및 그리기 명령과 함께 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) 개체가 생성됩니다.
 
 컨트롤에 대한 Windows 런타임 XAML 기본 템플릿에 정의된 일부 컨트롤 파트에 기존 이동 및 그리기 명령 데이터가 있을 수 있습니다. 예를 들어 일부 컨트롤은 이동 및 그리기 명령으로 정의된 데이터가 포함된 [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)을 사용합니다.
 
-XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. 이 내보내기 또는 플러그 인은 원래 WPF(Windows Presentation Foundation) XAML용으로 작성되었지만, XAML 구문의 해당 측면은 Windows 런타임 XAML과 동일합니다. 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
+XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는 다른 벡터 그래픽 디자인 도구에 사용할 수 있는 내보내기 또는 플러그 인이 있습니다. 이 내보내기 또는 플러그 인은 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)에 대한 이동 및 그리기 명령과 함께 레이아웃 컨테이너에서 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355) 개체를 만듭니다. 다양한 브러시를 적용할 수 있도록 XAML에서 여러 **Path** 요소가 있을 수 있습니다. 이 내보내기 또는 플러그 인 중 상당수는 원래 WPF(Windows Presentation Foundation) XAML 또는 Silverlight용으로 작성되었지만, XAML 경로 구문은 Windows 런타임 XAML과 동일합니다. 일반적으로 내보내기에서 가져온 XAML의 청크를 사용하여 Windows 런타임 XAML 페이지에 직접 붙여 넣을 수 있습니다. 하지만 변환된 XAML의 일부인 경우 **RadialGradientBrush**를 사용할 수 없습니다. Windows 런타임 XAML에서 해당 브러시가 지원되지 않기 때문입니다.
 
 ## 관련 항목
 
@@ -243,6 +246,7 @@ XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

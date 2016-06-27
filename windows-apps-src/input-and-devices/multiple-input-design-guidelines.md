@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 사람이 서로 커뮤니케이션할 때 음성과 제스처를 결합해서 사용하는 것처럼, 앱을 조작할 때도 여러 유형 및 모드의 입력이 유용할 수 있습니다.
-title: 여러 입력 디자인 지침
+Description: "사람이 서로 커뮤니케이션할 때 음성과 제스처를 결합해서 사용하는 것처럼, 앱을 조작할 때도 여러 유형 및 모드의 입력이 유용할 수 있습니다."
+title: "여러 입력 디자인 지침"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+
 ---
 
 # 여러 입력
@@ -40,6 +43,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

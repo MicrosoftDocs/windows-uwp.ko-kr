@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다.
-title: 음성 인식기 언어 지정
+Description: "음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다."
+title: "음성 인식기 언어 지정"
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+
 ---
 
 # 음성 인식기 언어 지정
@@ -108,9 +111,11 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 **개발자**
-* 음성 조작
-* 디자이너
-* [음성 디자인 지침](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 조작](speech-interactions.md) 
+           **디자이너**
+* [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121) 
+           **샘플**
+* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -120,6 +125,7 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

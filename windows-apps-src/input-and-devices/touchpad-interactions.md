@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 터치 패드에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
-title: 터치 패드 조작
+Description: "터치 패드에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다."
+title: "터치 패드 조작"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+
 ---
 
 # 터치 패드 디자인 지침
@@ -162,6 +165,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

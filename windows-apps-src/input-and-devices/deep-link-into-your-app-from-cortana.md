@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 백그라운드 앱 서비스의 딥 링크를 Cortana에 제공하여 특정 상태 또는 컨텍스트에서 앱을 포그라운드로 시작합니다.
-title: Cortana에서 백그라운드 앱으로의 딥 링크
+Description: "백그라운드 앱 서비스의 딥 링크를 Cortana에 제공하여 특정 상태 또는 컨텍스트에서 앱을 포그라운드로 시작합니다."
+title: "Cortana에서 백그라운드 앱으로의 딥 링크"
 ms.assetid: BE811A87-8821-476A-90E4-2E20D37E4043
 label: Deep link to a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: b89aa43dffa69d092615e1b408feac77d0caa87c
+
 ---
 
 # Cortana에서 백그라운드 앱으로의 딥 링크
@@ -65,12 +68,12 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 이 링크에 시작 인수를 제공하여 앱 서비스와 유사한 컨텍스트로 앱을 열 수 있습니다. 시작 인수를 제공하지 않으면 앱이 주 화면으로 시작됩니다.
 
-**AdventureWorks** 샘플의 AdventureWorksVoiceCommandService.cs에 대한 이 예제에서는 모든 일치하는 경로를 검색하고 앱에 딥 링크를 제공하는 SendCompletionMessageForDestination 메서드에 지정된 대상을 전달합니다.
+**AdventureWorks** 샘플의 AdventureWorksVoiceCommandService.cs에 대한 이 예제에서는 모든 일치하는 경로를 검색하고 앱에 딥 링크를 제공하는 SendCompletionMessageForDestination 메서드에 지정된 대상(`destination`) 문자열을 전달합니다.
 
 먼저 **Cortana**를 통해 말하고 **Cortana** 캔버스에 표시되는 [**VoiceCommandUserMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx)(```userMessage```)를 만듭니다. [
             **VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx) 목록 개체가 만들어져 캔버스에 결과 카드의 컬렉션을 표시합니다. 
 
-이러한 두 개체는 [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182) 개체(```response```)의 [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) 메서드로 전달됩니다. 그런 다음 [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183) 속성 값을 음성 명령의 대상 값으로 설정합니다.
+이러한 두 개체는 [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182) 개체(`response`)의 [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx) 메서드로 전달됩니다. 그런 다음 응답 개체의 [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183) 속성 값을 이 함수에 전달된 `destination`의 값으로 설정합니다. 사용자가 Cortana 캔버스에서 콘텐츠 타일을 탭하면 매개 변수 값이 응답 개체를 통해 앱에 전달됩니다.
 
 마지막으로 [**VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204)의 [**ReportSuccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn706580) 메서드를 호출합니다.
 
@@ -290,6 +293,7 @@ if (args.Kind == ActivationKind.Protocol)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

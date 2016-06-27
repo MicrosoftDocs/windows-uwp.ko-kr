@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
-title: 오디오 입력 관련 문제 관리
+Description: "오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다."
+title: "오디오 입력 관련 문제 관리"
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6dcab14a290367250e152fb8a1944a924d5aaf46
+
 ---
 
 # 오디오 입력 관련 문제 관리
@@ -116,6 +119,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다.
-title: 달력 보기
+Description: "달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다."
+title: "달력 보기"
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
+
 ---
 
 # 달력 보기
@@ -197,6 +200,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [시간 선택기](time-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

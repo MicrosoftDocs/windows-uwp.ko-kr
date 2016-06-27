@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-description: Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다.
-title: 음성 조작
+description: "Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다."
+title: "음성 조작"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+ms.sourcegitcommit: bcc401c515cdba899fb2202ddddf5bd98b64aecd
+ms.openlocfilehash: bdcced680b69ce6ff9caf3ac860cb139fdfdaeff
+
 ---
 
 # 음성 조작
@@ -234,6 +237,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

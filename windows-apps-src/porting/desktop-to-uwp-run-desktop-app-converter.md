@@ -1,8 +1,11 @@
 ---
 author: awkoren
-Description: 데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다.
+Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: 데스크톱 앱 변환기 미리 보기(Project Centennial)
+title: "데스크톱 앱 변환기 미리 보기(Project Centennial)"
+ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
+ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+
 ---
 
 # 데스크톱 앱 변환기 미리 보기(Project Centennial)
@@ -19,7 +22,17 @@ title: 데스크톱 앱 변환기 미리 보기(Project Centennial)
 
 이 섹션에서는 데스크톱 앱 변환기의 버전 간 변경 내용을 대략적으로 설명합니다. 
 
-### 2016년 5월 4일
+### 6/8/2016
+
+* 변환기를 실행하는 AMD64 호스트 컴퓨터에 x86 appx 패키지를 생성하기 위한 지원이 추가되었습니다.
+* 이전에 확장된 기본 이미지를 제거하여 디스크 공간 사용이 감소했습니다.
+* 임시 파일과 불필요한 기본 이미지를 정리하기 위한 지원이 추가되었습니다.
+* 파일 형식 및 프로토콜 연결을 검색하기 위한 지원이 개선되었습니다.
+* 큰 앱 집합에 대한 AppExecutable 속성을 검색하는 논리가 개선되었습니다.
+* MSI 기반 설치 관리자에 추가 –InstallerArguments를 제공하기 위한 지원이 추가되었습니다.
+* 변환 프로세스 중에 PathTooLongException 오류에 대한 버그가 수정되었습니다.
+
+### 5/12/2016
 
 - Windows Pro 버전에 대한 지원이 복원되었습니다. 
 - 변환기 ```-Setup``` 플래그는 이제 Windows 컨테이너 기능을 사용하도록 설정하고 기본 이미지 확장을 처리합니다. 관리자 권한의 PowerShell 프롬프트에서 다음을 실행하여 일회용 설치를 수행합니다. ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
@@ -28,12 +41,12 @@ title: 데스크톱 앱 변환기 미리 보기(Project Centennial)
 - 파일 형식 연결 및 프로토콜에 대한 자동 검색 기능이 추가되었습니다.
 - 시작 메뉴 바로 가기를 감지하는 논리가 개선되었습니다.
 - 앱 설치 MUI 파일을 유지하는 파일 시스템 필터링 기능이 개선되었습니다.
-- 매니페스트에서 Project Centennial에 대한 최소 지원 데스크톱 버전(10.0.14316.0)이 업데이트되었습니다.
+- 매니페스트에서 Project Centennial에 대한 최소 지원 데스크톱 버전(10.0.14342.0)이 업데이트되었습니다.
 
 ## 시스템 요구 사항
 
 ### 지원되는 운영 체제
-+ Windows 10주년 업데이트 Enterprise Edition 미리 보기(빌드 10.0.14316.0 이상)
++ Windows 10 1주년 업데이트 Enterprise Edition 미리 보기(빌드 10.0.14342.0 이상)
 
 ### 필수 하드웨어 구성
 
@@ -48,8 +61,8 @@ title: 데스크톱 앱 변환기 미리 보기(Project Centennial)
 ## 데스크톱 앱 변환기 설정   
 데스크톱 앱 변환기는 Windows Insider Preview 빌드의 일부로 플라이트된 Windows 10 기능에 의존합니다. 이 변환기를 사용하려면 최신 빌드를 사용하고 있는지 확인합니다.
 
-1. 최신 Windows 10 Insider Preview OS - Enterprise Edition(빌드 10.0.14316.0 이상)이 있는지 확인합니다.
-2. DesktopAppConverter.zip 및 BaseImage 14316.wim을 다운로드합니다.
+1. 최신 Windows 10 Insider Preview OS - Enterprise 또는 Pro Edition(http://insider.windows.com)이 있는지 확인합니다. 
+2. DesktopAppConverter.zip 및 Insider Preview 빌드(http://aka.ms/converter)와 일치하는 기본 이미지 .wim 파일을 다운로드합니다. 
 3. 로컬 폴더에 DesktopAppConverter.zip의 압축을 풉니다.
 4. 관리자 PowerShell 창에서 다음을 수행합니다.  
 ```CMD
@@ -57,7 +70,7 @@ PS C:\> Set-ExecutionPolicy bypass
 ```
 5. 관리자 PowerShell 창에서 다음 명령을 실행하여 변환기를 설정합니다.
 ```CMD
-PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-14316.wim
+PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose
 ```
 6. 이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하고 명령을 다시 실행합니다.
 
@@ -67,12 +80,12 @@ PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-14316.wim
 ### 사용법
 ```CMD
 DesktopAppConverter.ps1
--ExpandedBaseImage <String> (optional)
 -Installer <String> [-InstallerArguments <String>] [-InstallerValidExitCodes <Int32>]
 -Destination <String>
 -PackageName <String>
 -Publisher <String>
 -Version <Version>
+[-ExpandedBaseImage <String>]
 [-AppExecutable <String>]
 [-AppFileTypes <String>]
 [-AppId <String>]
@@ -81,7 +94,6 @@ DesktopAppConverter.ps1
 [-PackageDisplayName <String>]
 [-PackagePublisherDisplayName <String>]
 [-MakeAppx]
-[-NatSubnetPrefix <String>]
 [-LogFile <String>]
 [<CommonParameters>]  
 ```
@@ -126,6 +138,11 @@ C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
   + 레지스트리: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
   + 파일 시스템: %windir%\\SideBySide
 
+## 알려진 문제
+
++ 이전에 데스크톱 앱 변환기 Preview를 설치한 개발자 컴퓨터에서 Windows Insider 플라이트를 수신하는 경우 새로운 기본 이미지를 설정할 때 `New-ContainerNetwork: The object already exists` 오류가 발생할 수 있습니다. 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음 컴퓨터를 다시 부팅합니다. 
++ 주 실행 파일 또는 종속성이 "Program Files" 또는 "Windows\System32" 아래에 배치된 경우 "AnyCPU" 빌드 옵션을 사용하여 컴파일된 .NET 앱이 설치되지 않습니다. 이 문제를 해결하려면 아키텍처 관련 데스크톱 설치 관리자(32비트 또는 64비트)를 사용하여 AppX 패키지를 성공적으로 생성하세요.
+
 ## 데스크톱 앱 변환기의 원격 분석  
 데스크톱 앱 변환기가 사용자 및 사용자의 소프트웨어 사용에 대한 정보를 수집한 후 Microsoft로 보낼 수 있습니다. 제품 설명서 및 [Microsoft 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=521839)에서Microsoft의 데이터 수집 및 사용에 대해 알아볼 수 있습니다. Microsoft 개인 정보 취급 방침의 모든 규정을 준수한다는 데 동의합니다.
 
@@ -145,14 +162,15 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### 설정 매개 변수  
 |매개 변수|설명|
 |---------|-----------|
-|```-Setup [<SwitchParameter>]``` | 이 플래그를 사용하여 설치 모드에서 DesktopAppConverter를 실행합니다. 설치 모드는 제공된 기본 이미지 확장을 지원합니다.|
+|```-Setup [<SwitchParameter>]``` | 설치 모드에서 DesktopAppConverter를 실행합니다. 설치 모드는 제공된 기본 이미지 확장을 지원합니다.|
 |```-BaseImage <String>``` | 확장되지 않은 기본 이미지에 대한 전체 경로. 이 매개 변수는 -Setup을 지정한 경우에 필요합니다.|
 |```-LogFile <String>``` [옵션] | 로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다.|
+|```-NatSubnetPrefix <String>``` [옵션] | Nat 인스턴스에 사용할 접두사 값입니다. 일반적으로 사용자는 호스트 컴퓨터가 변환기의 NetNat과 동일한 서브넷 범위에 연결되는 경우에만 이 값을 변경하려고 합니다. **Get NetNat** cmdlet을 사용하여 현재 변환기 NetNat 구성을 쿼리할 수 있습니다. |
+|```-NoRestart [<SwitchParameter>]``` | 설치 프로그램을 실행할 때 다시 부팅하라는 메시지를 표시하지 않습니다(컨테이너 기능을 사용하도록 설정하려면 다시 부팅해야 함). |
 
 ### 변환 매개 변수  
 |매개 변수|설명|
 |---------|-----------|
-|```-ExpandedBaseImage <String>``` | 이미 확장된 기본 이미지에 대한 전체 경로.|
 |```-Installer <String>``` | 응용 프로그램의 설치 관리자 경로로, 무인/자동으로 실행할 수 있어야 합니다.|
 |```-InstallerArguments <String>``` [옵션] | 강제로 설치 관리자를 무인/자동으로 실행할 수 있도록 하기 위한 쉼표로 구분된 인수 목록 또는 인수 문자열입니다. 설치 관리자가 msi인 경우 이 매개 변수는 선택적입니다. 설치 관리자에서 로그를 가져오려면 여기에 설치 관리자에 대한 로깅 인수를 제공하고, 변환기가 적절한 경로로 대체하는 토큰에 해당하는 경로 ```<log_folder>```를 사용합니다. <br><br>**참고: 무인/자동 플래그와 로그 인수는 설치 관리자 기술마다 다릅니다.** <br><br>이 매개 변수에 대한 사용 예제: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` 로그 파일을 생성하지 않는 또 다른 예제는 다음과 같습니다. ```-InstallerArguments "/quiet", "/norestart"``` 변환기가 로그를 캡처한 후 최종 로그 폴더에 추가하게 하려면 토큰 경로 ```<log_folder>```로 모든 로그를 보내야 합니다.|
 |```-InstallerValidExitCodes <Int32>``` [옵션] | 설치 관리자가 성공적으로 실행되었음을 나타내는 쉼표로 구분된 종료 코드 목록(예: 0, 1234, 5678).  기본적으로 msi가 아닌 경우는 0이고 msi인 경우는 0, 1641, 3010입니다.|
@@ -179,10 +197,25 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### 기타 변환 매개 변수  
 |매개 변수|설명|
 |---------|-----------|
+|```-ExpandedBaseImage <String>``` [옵션] | 이미 확장된 기본 이미지에 대한 전체 경로.|
 |```-MakeAppx [<SwitchParameter>]``` [옵션] | 스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
-|```-NatSubnetPrefix <String>``` [옵션] | Nat 인스턴스에 사용할 접두사 값입니다. 일반적으로 사용자는 호스트 컴퓨터가 변환기의 NetNat과 동일한 서브넷 범위에 연결되는 경우에만 이 값을 변경하려고 합니다. **Get NetNat** cmdlet을 사용하여 현재 변환기 NetNat 구성을 쿼리할 수 있습니다. |
 |```-LogFile <String>``` [옵션] | 로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다. |
 |```<Common parameters>``` | 이 cmdlet은 *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, *OutVariable* 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요. |
+
+### 정리 매개 변수
+|매개 변수|설명|
+|---------|-----------|
+|```Cleanup [<Option>]``` | DesktopAppConverter 아티팩트에 대한 정리를 실행합니다. 정리 모드에는 3가지 유효한 옵션이 있습니다. |
+|```Cleanup All``` | 확장된 기본 이미지를 모두 삭제하고, 임시 변환기 파일을 제거하고, 컨테이너 네트워크를 제거하고, 선택적 Windows 기능인 컨테이너를 사용하지 않도록 설정합니다. |
+|```Cleanup WorkDirectory``` | 모든 임시 변환기 파일을 제거합니다. |
+|```Cleanup ExpandedImages``` | 호스트 컴퓨터에 설치된 확장된 기본 이미지를 모두 삭제합니다. |
+
+### x86 패키지 매개 변수
+데스크톱 앱 변환기 Preview는 이제 x86 및 amd64 컴퓨터에서 설치하고 실행할 수 있는 x86 앱 패키지를 만드는 기능을 지원합니다. 하지만 성공적인 변환을 수행하려면 데스크톱 앱 변환기가 AMD64 컴퓨터에서 실행되어야 합니다.
+
+|매개 변수|설명|
+|---------|-----------|
+|```-CreateX86Package[<SwitchParameter>]``` | 32비트 및 64비트 호스트 OS에서 설치하고 실행할 수 있는 32비트 패키지를 생성합니다. 기본적으로 변환기는 앱의 주 실행 파일에서 패키지 아키텍처를 검색하려고 시도합니다. 실행 파일이 없는 경우 기본값은 64비트입니다. |
 
 ## 참고 항목
 + [데스크톱 앱 변환기 다운로드](http://go.microsoft.com/fwlink/?LinkId=785437)
@@ -190,8 +223,10 @@ get-help .\DesktopAppConverter.ps1 -detailed
 + [데스크톱 앱 변환기를 사용하여 데스크톱 앱을 UWP로 가져오기](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
 + [데스크톱 브리지용 UserVoice(Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
++ [GitHub의 UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

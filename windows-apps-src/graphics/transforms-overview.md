@@ -1,8 +1,11 @@
 ---
 author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
-title: 변환 개요
-description: UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임&\#160;API에서 변형을 사용하는 방법을 알아봅니다.
+title: "변환 개요"
+description: "UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임&amp;\\#160;API에서 변형을 사용하는 방법을 알아봅니다."
+ms.sourcegitcommit: a429fa659caf6c8032ad615f1b850092545d4439
+ms.openlocfilehash: fa5e8964ab35cb33a1ff59a8a52aa384b9d115b4
+
 ---
 
 # 변환 개요
@@ -35,7 +38,7 @@ UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임 API에서 
 
 XAML 레이아웃에서 변형은 레이아웃 단계가 완료된 후에 적용되므로 사용 가능한 공간 계산 및 다른 레이아웃 결정은 변형이 적용되기 전에 수행되었습니다. 레이아웃이 앞에 오기 때문에 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 셀 또는 레이아웃 중 공간을 할당하는 유사한 레이아웃 컨테이너에 있는 요소를 변형하는 경우 예기치 않은 결과가 발생할 수 있습니다. 부모 컨테이너 내의 공간을 나눌 때 변형 후 치수를 계산하지 않은 영역에 그리려고 하기 때문에 변형된 요소가 잘리거나 감춰진 것처럼 나타날 수 있습니다. 변형 결과를 실험하고 일부 설정을 조정해야 할 수도 있습니다. 예를 들어 적응형 레이아웃과 배율 크기 조정을 사용하는 대신 부모가 충분한 공간을 할당하도록 레이아웃 공간에 대해 고정 픽셀 측정을 선언하거나 **Center** 속성을 변경해야 할 수 있습니다.
 
-**마이그레이션 참고 사항:**WPF(Windows Presentation Foundation)에는 레이아웃 단계 전에 변형을 적용하는 **LayoutTransform** 속성이 있었습니다. 그러나 Windows 런타임 XAML은 **LayoutTransform** 속성을 지원하지 않습니다. Microsoft Silverlight에도 이 속성이 없었습니다.
+**마이그레이션 참고 사항:** WPF(Windows Presentation Foundation)에는 레이아웃 단계 전에 변형을 적용하는 **LayoutTransform** 속성이 있었습니다. 그러나 Windows 런타임 XAML은 **LayoutTransform** 속성을 지원하지 않습니다. Microsoft Silverlight에도 이 속성이 없었습니다.
 
 ## <span id="Applying_a_transform_to_a_UI_element"></span><span id="applying_a_transform_to_a_ui_element"></span><span id="APPLYING_A_TRANSFORM_TO_A_UI_ELEMENT"></span>UI 요소에 변형 적용
 
@@ -70,7 +73,7 @@ XAML 레이아웃에서 변형은 레이아웃 단계가 완료된 후에 적용
 
 컨트롤의 기본 스타일은 때때로 시각적 상태 동작의 일부로 변형 애니메이션을 정의합니다. 예를 들어 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538)의 시각적 상태는 애니메이션 효과를 준 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) 값을 사용하여 링의 점을 "회전"합니다.
 
-변형에 애니메이션 효과를 주는 방법의 간단한 예제는 다음과 같습니다. 이 경우 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932)의 [**Angle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rotatetransform.angle.aspx)에 애니메이션 효과를 주어 시각적 중심을 기준으로 제자리에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 회전합니다. 이 예제에서는 **RotateTransform**에 이름을 지정하기 때문에 간접 애니메이션 대상 지정이 필요하지 않지만, 변형 이름을 지정하지 않고 변형이 적용되는 대상의 이름을 지정하여 다음과 같은 간접 대상 지정을 사용할 수도 있습니다.
+변형에 애니메이션 효과를 주는 방법의 간단한 예제는 다음과 같습니다. 이 경우 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932)의 [**Angle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rotatetransform.angle.aspx)에 애니메이션 효과를 주어 시각적 중심을 기준으로 제자리에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 회전합니다. 이 예제에서는 **RotateTransform**에 이름을 지정하기 때문에 간접 애니메이션 대상 지정이 필요하지 않지만, 변형 이름을 지정하지 않고 변형이 적용되는 대상의 이름을 지정하여 `(UIElement.RenderTransform).(RotateTransform.Angle)` 등의 간접 대상 지정을 사용할 수도 있습니다.
 
 ```xml
 <StackPanel Margin="15">
@@ -109,43 +112,45 @@ void StartAnimation (object sender, RoutedEventArgs e) {
 
 변형은 변형 행렬 측면에서 설명할 수 있습니다. 3x3 행렬은 2D x-y 평면의 변형을 설명하는 데 사용됩니다. 행렬 유사 변환을 곱하면 회전, 기울이기 등 원하는 개수의 선형 변형 후 변환을 구성할 수 있습니다. 행렬 유사 변환의 최종 열이 (0, 0, 1)과 같으므로 수학적 설명에서 처음 두 열의 멤버만 지정해야 합니다.
 
-변형의 수학적 설명은 수학적 배경 지식이 있거나 행렬을 사용하여 좌표 공간 변형을 설명하는 그래픽 프로그래밍 기술에 익숙한 경우 유용할 수 있습니다. 3x3 행렬 측면에서 변형을 직접 표현할 수 있는 [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) 파생 클래스인 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)이 있습니다. . **MatrixTransform**에는 [**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847), [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853), [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851), [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849), [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) 및 [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816)와 같은 6가지 속성이 포함된 구조를 갖는 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.matrixtransform.matrix.aspx) 속성이 있습니다. 각 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 속성은 **Double** 값을 사용하며 행렬 유사 변환의 6개 관련 값(1열, 2열)에 해당합니다. M11
+변형의 수학적 설명은 수학적 배경 지식이 있거나 행렬을 사용하여 좌표 공간 변형을 설명하는 그래픽 프로그래밍 기술에 익숙한 경우 유용할 수 있습니다. 3x3 행렬 측면에서 변형을 직접 표현할 수 있는 [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) 파생 클래스인 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)이 있습니다. **MatrixTransform**에는[**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847), [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853), [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851), [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849), [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) 및 [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816)의 6개 속성이 있는 구조체를 포함하는 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.matrixtransform.matrix.aspx) 속성이 있습니다. 각 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 속성은 **Double** 값을 사용하며 행렬 유사 변환의 6개 관련 값(1열, 2열)에 해당합니다.
 
 |                                             |                                             |     |
 |---------------------------------------------|---------------------------------------------|-----|
-| [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673847)         | [**0**](https://msdn.microsoft.com/library/windows/apps/Hh673851)         | M12   |
-| [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673853)         | [**0**](https://msdn.microsoft.com/library/windows/apps/Hh673849)         | OffsetX   |
-| [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673810) | [**1**](https://msdn.microsoft.com/library/windows/apps/Hh673816) | [
-            **TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940), [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) 또는 [**SkewTransform**](https://msdn.microsoft.com/library/windows/apps/BR242950) 개체를 사용하여 설명할 수 있는 변형은 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 값을 가진 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)으로 똑같이 설명할 수 있습니다.   |
+| [**M11**](https://msdn.microsoft.com/library/windows/apps/Hh673847)         | [**M21**](https://msdn.microsoft.com/library/windows/apps/Hh673851)         | 0   |
+| [**M12**](https://msdn.microsoft.com/library/windows/apps/Hh673853)         | [**M22**](https://msdn.microsoft.com/library/windows/apps/Hh673849)         | 0   |
+| [**OffsetX**](https://msdn.microsoft.com/library/windows/apps/Hh673810) | [**OffsetY**](https://msdn.microsoft.com/library/windows/apps/Hh673816) | 1   |
 
  
 
-그러나 일반적으로 **TranslateTransform** 및 기타 변형만 사용하는데, **Matrix**에서 벡터 구성 요소를 설정하는 것보다 이러한 변형 클래스의 속성을 개념화하는 것이 더 쉽기 때문입니다. 또한 변형의 개별 속성에 애니메이션 효과를 주는 것이 더 쉬운 반면, **Matrix**는 실제로 구조체이고 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356)가 아니므로 애니메이션 효과를 준 개별 값을 지원할 수 없습니다. 변형 작업을 적용할 수 있는 일부 XAML 디자인 도구는 결과를 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)으로 직렬화합니다.
+[
+            **TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027), [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940), [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932) 또는 [**SkewTransform**](https://msdn.microsoft.com/library/windows/apps/BR242950) 개체를 사용하여 설명할 수 있는 변형은 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 값을 가진 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)으로 똑같이 설명할 수 있습니다. 그러나 일반적으로 **TranslateTransform** 및 기타 변형만 사용하는데, **Matrix**에서 벡터 구성 요소를 설정하는 것보다 이러한 변형 클래스의 속성을 개념화하는 것이 더 쉽기 때문입니다. 또한 변형의 개별 속성에 애니메이션 효과를 주는 것이 더 쉬운 반면, **Matrix**는 실제로 구조체이고 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356)가 아니므로 애니메이션 효과를 준 개별 값을 지원할 수 없습니다.
 
-이 경우 XAML에서 직접 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 값을 조작하는 대신 동일한 디자인 도구를 다시 사용하여 변형 효과를 변경하고 XAML을 다시 직렬화하는 것이 좋습니다. 3D 변형
+변형 작업을 적용할 수 있는 일부 XAML 디자인 도구는 결과를 [**MatrixTransform**](https://msdn.microsoft.com/library/windows/apps/BR210137)으로 직렬화합니다. 이 경우 XAML에서 직접 [**Matrix**](https://msdn.microsoft.com/library/windows/apps/BR210127) 값을 조작하는 대신 동일한 디자인 도구를 다시 사용하여 변형 효과를 변경하고 XAML을 다시 직렬화하는 것이 좋습니다.
 
-## <span id="3-D_transforms"></span><span id="3-d_transforms"></span><span id="3-D_TRANSFORMS"></span>*원근감 변형*을 사용하여 모든 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에 3D 효과를 적용할 수 있습니다.
+## <span id="3-D_transforms"></span><span id="3-d_transforms"></span><span id="3-D_TRANSFORMS"></span>3D 변형
 
-예를 들어 원근감 평면에서 개체가 회전하면서 다가오거나 멀어지는 환상 효과를 만들 수 있습니다. 이렇게 하려면 **UIElement** 개체의 [**Projection**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.projection.aspx) 속성을 [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192) 값으로 설정합니다. **PlaneProjection** 클래스는 시뮬레이션된 3D 공간에서 변형이 렌더링되는 방식을 정의합니다. 이 변형 유형은 [XAML UI에 대한 3D 원근감 효과](3-d-perspective-effects.md)에서 자세히 설명합니다. **참고** 기술적으로 [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006) 클래스를 함께 사용하여 유사한 결과를 얻을 수는 있지만, 일반적으로 이미지가 브러시로 표시되는 [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192) 기술이 더 나은 모양으로 표시되며 올바른 속성 값을 더 쉽게 가져올 수 있습니다.
+Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있는 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx) 속성이 새로 도입되었습니다. 이렇게 하려면 [**PerspectiveTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx)를 사용하여 공유 3D 원근 또는 "카메라"를 장면에 추가한 다음 [**CompositeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228105)을 사용하듯이 [**CompositeTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx)를 사용하여 3D 공간에서 요소를 변환합니다. 3D 변형을 구현하는 방법에 대한 자세한 내용은 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx)를 참조하세요.
 
-관련 항목
+ 단일 개체에만 적용되는 더 간단한 3D 효과의 경우 [**UIElement.Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection) 속성을 사용할 수 있습니다. [
+            **PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/br210192)을 이 속성의 값으로 사용하는 것은 고정된 원근 변경과 하나 이상의 3D 변형을 요소에 적용하는 것과 동일합니다. 이 변형 유형은 [XAML UI에 대한 3D 원근감 효과](3-d-perspective-effects.md)에서 자세히 설명합니다.
+
+## <span id="related_topics"></span>관련 항목
+
+* [셰이프 그리기](drawing-shapes.md)
+* [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx)
+* [XAML UI에 대한 3D 원근감 효과](3-d-perspective-effects.md)
+* [**변형**](https://msdn.microsoft.com/library/windows/apps/BR243006)
+ 
 
  
 
-## <span id="related_topics"></span>셰이프 그리기
-
-* [XAML UI에 대한 3D 원근감 효과](drawing-shapes.md)
-* [변형](3-d-perspective-effects.md)
-* [**Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006)
- 
-
- 
 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

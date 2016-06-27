@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 사용자가 명령의 어느 위치에서든 앱 이름을 말할 수 있도록 더 유연하고 자연스러운 음성 명령으로 Cortana를 확장하는 방법을 알아봅니다.
-title: Cortana에서 자연어 음성 명령 지원
+Description: "사용자가 명령의 어느 위치에서든 앱 이름을 말할 수 있도록 더 유연하고 자연스러운 음성 명령으로 Cortana를 확장하는 방법을 알아봅니다."
+title: "Cortana에서 자연어 음성 명령 지원"
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
 label: Support natural language voice commands
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: c9cd6894c61f3d6cfe770d197317a97a804b4119
+
 ---
 
 # Cortana에서 자연어 음성 명령 지원
@@ -209,6 +212,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

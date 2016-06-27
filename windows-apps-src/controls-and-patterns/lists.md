@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다.
-title: 목록
+Description: "목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다."
+title: "목록"
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+
 ---
 # 목록
 
@@ -189,6 +192,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

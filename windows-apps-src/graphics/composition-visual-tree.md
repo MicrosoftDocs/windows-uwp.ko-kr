@@ -1,8 +1,11 @@
 ---
 author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
-title: 컴퍼지션 시각적 트리
-description: 컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다.
+title: "컴퍼지션 시각적 트리"
+description: "컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다."
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
+
 ---
 # 컴퍼지션 시각적 트리
 
@@ -512,6 +515,7 @@ namespace compositionvisual
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

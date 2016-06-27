@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱의 사용자 지정 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다.
-title: 사용자 지정 종속성 속성
+description: "C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱의 사용자 지정 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다."
+title: "사용자 지정 종속성 속성"
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 63301870ab53f4061cac9b9ad87a5fb75e8c48da
+
 ---
 
 # 사용자 지정 종속성 속성
@@ -21,9 +24,7 @@ ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 
 종속성 속성은 [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 메서드를 호출하여 Windows 런타임 속성 시스템에 등록한 속성으로 정의 클래스의 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자 멤버에 따라 식별됩니다. 다른 경우에는 CLR(공용 언어 런타임) 또는 C++ 속성인 이 속성을 종속성 속성으로 구현하여 스타일 지정, 데이터 바인딩, 애니메이션 및 기본값을 지원하도록 할 수 있습니다. 종속성 속성은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 형식에서만 사용할 수 있습니다. 그러나 **DependencyObject**는 클래스 계층에서 매우 상위이므로 UI 및 표시 지원을 위한 클래스는 대부분 종속성 속성을 지원할 수 있습니다. 종속성 속성과 이 설명서의 설명 내용에 사용된 일부 용어 및 규칙에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
-Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 및 [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/br209702) 등 여러 가지가 있습니다. 클래스별로 노출된 각 종속성 속성에는 동일한 클래스에 대해 노출되고 해당 종속성 속성의 식별자인 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 해당 **public**
-          **static**
-          **readonly** 속성이 있습니다. 식별자 이름 지정 규칙은 종속성 속성 이름이 오고 이름 뒤에 "Property" 문자열을 추가하는 것입니다. 예를 들어 **Control.Background** 속성의 해당 **DependencyProperty** 식별자는 [**Control.BackgroundProperty**](https://msdn.microsoft.com/library/windows/apps/br209396)입니다. 식별자는 종속성 속성에 대한 정보를 등록된 대로 저장합니다. 그러면 나중에 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 호출 같은 종속성 속성 관련 다른 작업에서 식별자를 사용할 수 있습니다.
+Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**FrameworkElement.Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 및 [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/br209702) 등 여러 가지가 있습니다. 클래스별로 노출된 각 종속성 속성에는 동일한 클래스에 대해 노출되고 해당 종속성 속성의 식별자인 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 해당 **public****static****readonly** 속성이 있습니다. 식별자 이름 지정 규칙은 종속성 속성 이름이 오고 이름 뒤에 "Property" 문자열을 추가하는 것입니다. 예를 들어 **Control.Background** 속성의 해당 **DependencyProperty** 식별자는 [**Control.BackgroundProperty**](https://msdn.microsoft.com/library/windows/apps/br209396)입니다. 식별자는 종속성 속성에 대한 정보를 등록된 대로 저장합니다. 그러면 나중에 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 호출 같은 종속성 속성 관련 다른 작업에서 식별자를 사용할 수 있습니다.
 
 ##  속성 래퍼
 
@@ -55,9 +56,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 -   (옵션) 종속성 속성의 속성 메타데이터를 만듭니다. 속성 변경 동작 또는 [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 필요로 하는 경우에만 속성 메타데이터가 필요합니다.
 -   속성 시스템에 속성 이름을 등록하여([**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출) 소유자 형식 및 속성 값 형식을 지정합니다. 속성 메타데이터를 예상하는 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에는 필수 매개 변수가 있습니다. 이 매개 변수에 대해 **null**을 지정하거나 실제 속성 메타데이터를 선언한 경우 해당 메타데이터를 지정합니다.
 -   [
-            **DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자를 소유자 형식의 **public**
-          **static**
-          **readonly** 속성 멤버로 정의합니다.
+            **DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자를 소유자 형식의 **public****static****readonly** 속성 멤버로 정의합니다.
 -   구현하는 언어에 사용되는 속성 접근자 모델 다음에 래퍼 속성을 정의합니다. 래퍼 속성 이름은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)에서 사용한 *name* 문자열과 일치해야 합니다. [
             **GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) 및 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하고 고유 속성의 식별자를 매개 변수로 전달하여 **get** 및 **set** 접근자를 구현하고 래핑하는 종속성 속성과 래퍼를 연결합니다.
 -   (옵션) [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) 같은 특성을 래퍼에 지정합니다.
@@ -70,9 +69,7 @@ Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://ms
 
 Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서(클래스 내부이나 멤버 정의 외부임) [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)를 호출합니다. [
             **Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 메서드 호출은 식별자도 반환 값으로 제공합니다. [
-            **Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출은 일반적으로 다른 멤버 정의 외부에서 수행됩니다. 반환 값을 사용하여 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public**
-          **static**
-          **readonly** 속성을 클래스의 일부로 할당하여 만들기 때문입니다. 이 속성이 종속성 속성의 식별자가 됩니다. 다음은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출의 예입니다.
+            **Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출은 일반적으로 다른 멤버 정의 외부에서 수행됩니다. 반환 값을 사용하여 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public****static****readonly** 속성을 클래스의 일부로 할당하여 만들기 때문입니다. 이 속성이 종속성 속성의 식별자가 됩니다. 다음은 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출의 예입니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -93,8 +90,7 @@ Public Shared ReadOnly LabelProperty As DependencyProperty =
 
 **참고** 클래스 본문에서 종속성 속성을 등록하는 것이 일반적인 구현이나 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
 
-C++의 경우 헤더 및 코드 파일 사이에서 구현을 분할하는 방법을 선택할 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **public**
-          **static** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+C++의 경우 헤더 및 코드 파일 사이에서 구현을 분할하는 방법을 선택할 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **public****static** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 인스턴스인 개인 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
 
 ```cpp
 //.h file
@@ -376,7 +372,7 @@ Windows 런타임은 사용자 지정 종속성 속성을 읽기 전용으로 �
 
 ### C++/CX 앱의 종속성 속성 등록
 
-C++/CX로 속성 등록을 위해 구현하는 일은 C#C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. Visual C++ 구성 요소 확장(C++/CX)은 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치하는 반면, C# 컴파일러는 클래스에 정적 이니셜라이저를 할당하여 **DllMain** 로드 잠금 문제를 방지합니다. 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
+C++/CX로 속성 등록을 위해 구현하는 일은 C#C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. Visual C++ 구성 요소 확장(C++/CX)은 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치하는 반면, C# 컴파일러는 클래스에 정적 이니셜라이저를 할당하여 **DllMain** 로드 잠금 문제를 방지합니다. 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. `InitializeComponent` 이전에 [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325)(`App::App()`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)에서 이 구현 패턴을 참조할 수 있습니다.
 
 ## 관련 항목
 
@@ -388,6 +384,7 @@ C++/CX로 속성 등록을 위해 구현하는 일은 C#C#의 경우보다 어�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

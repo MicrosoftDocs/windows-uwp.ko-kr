@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등을 수많은 읽을 거리와 마주합니다.
-title: 텍스트 컨트롤
+Description: "우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등을 수많은 읽을 거리와 마주합니다."
+title: "텍스트 컨트롤"
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
+
 ---
 # 텍스트 컨트롤
 텍스트 컨트롤은 텍스트 입력란, 암호 상자, 자동 제안 상자 및 텍스트 블록으로 구성됩니다. XAML 프레임워크는 텍스트를 렌더링, 입력 및 편집하는 여러 개의 컨트롤과 텍스트 서식을 지정하는 속성 집합을 제공합니다.
@@ -160,6 +163,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

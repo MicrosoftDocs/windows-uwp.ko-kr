@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Xbox One 도구 소개
-description: Windows Device Portal을 사용하는 Xbox One 특정 도구 개발자 홈입니다.
+title: "Xbox One 도구 소개"
+description: "Windows Device Portal을 사용하는 Xbox One 특정 도구 개발자 홈입니다."
 area: Xbox
+ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
+ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+
 ---
 
 # Xbox One 도구 소개
@@ -86,10 +89,6 @@ _개발자 홈_은 개발자의 생산성을 지원하도록 설계된 Xbox One 
 ## Windows Device Portal
 WDP(Windows Device Portal)는 브라우저 기반 디바이스 관리 환경을 허용하는 OneCore 디바이스 관리 도구입니다.
 
-> **참고** &nbsp;&nbsp;이 Developer Preview의 개발자 홈에서 WDP을 시작하는 경우 사용자 이름 및 암호를 입력하고 **저장**을 클릭하면 개발자 홈의 작동이 중단됩니다.
-자격 증명은 저장되지만 WDP가 시작되지 않습니다.
-Xbox One을 다시 시작하여 WDP를 시작할 수 있습니다.
-
 Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
 
 1. 홈 화면에서 개발자 홈 타일을 선택합니다.
@@ -118,6 +117,7 @@ Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
 ----
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

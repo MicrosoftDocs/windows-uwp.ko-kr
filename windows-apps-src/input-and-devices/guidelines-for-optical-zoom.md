@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 이 항목에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
-title: 광학 줌 및 크기 조정에 대한 지침
+Description: "이 항목에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다."
+title: "광학 줌 및 크기 조정에 대한 지침"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 07f9f2979a7a2c712b39bd4dc962e5991e1824ac
+
 ---
 
 # 광학 줌 및 크기 조정
@@ -92,6 +95,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

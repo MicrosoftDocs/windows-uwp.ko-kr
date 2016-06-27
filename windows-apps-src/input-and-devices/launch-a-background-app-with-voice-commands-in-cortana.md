@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Cortana 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱 내에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 앱의 기능으로 Cortana를 확장할 수도 있습니다.
-title: Cortana에서 음성 명령으로 백그라운드 앱 시작
+Description: "Cortana 내에서 음성 명령을 사용하여 시스템 기능에 액세스하는 것 외에, 앱 내에서 실행할 작업 또는 명령을 지정하는 음성 명령을 사용하여 백그라운드 앱의 기능으로 Cortana를 확장할 수도 있습니다."
+title: "Cortana에서 음성 명령으로 백그라운드 앱 시작"
 ms.assetid: DF5B530C-57DD-4CA5-B3BE-1A0B3695C9C6
 label: Launch a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: c65abdda905a390567d3c2b199a891c0c3067df1
+
 ---
 
 # Cortana를 통해 음성 명령으로 백그라운드 앱 활성화
@@ -37,7 +40,7 @@ template: detail.hbs
 
 **Cortana** 없이 **Adventure Works** 여행을 보기 위해 사용자는 앱을 시작하고 **향후 여행** 페이지로 이동합니다.
 
-**Cortana**를 통해 음성 명령을 사용하여 백그라운드에서 앱을 시작하려면 사용자는 대신 "Adventure Works, 라스베이거스 여행이 언제야?"라고 말하면 됩니다. 앱에서 명령을 처리하고 **Cortana**에 앱 아이콘 및 기타 앱 정보(제공된 경우)와 함께 결과가 표시됩니다. 다음은 기본 여행 쿼리의 예와 "다음 라스베이거스 여행은 8월 1일입니다."라고 보여 주고 말하는 **Cortana** 결과 화면입니다.
+**Cortana**를 통해 음성 명령을 사용하여 백그라운드에서 앱을 시작하려면 사용자는 대신 "Adventure Works, 라스베이거스 여행이 언제야?"라고 말하면 됩니다. 앱에서 명령을 처리하고 **Cortana**에 앱 아이콘 및 기타 앱 정보(제공된 경우)와 함께 결과가 표시됩니다. 다음은 기본 여행 쿼리의 예와 "다음 라스베이거스 여행은 2015년 7월 31일 금요일입니다."라고 보여 주고 말하는 **Cortana** 결과 화면입니다.
 
 ![백그라운드에서 Adventure Works 앱을 사용하는 기본 쿼리 및 결과 화면](images/cortana-backgroundapp-result.png)
 
@@ -124,38 +127,37 @@ destinationTile.Image =
 
 <ol>
     <li>
-    솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **새로 만들기 &gt; 프로젝트**를 선택합니다.
+솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **새로 만들기 &gt; 프로젝트**를 선택합니다.
     </li>
     <li>
-    **설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows &gt; 유니버설**에서 **Windows 런타임 구성 요소**를 선택합니다. 이는 앱 서비스(**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**)를 구현하는 구성 요소입니다.
+**설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows &gt; 유니버설**에서 **Windows 런타임 구성 요소**를 선택합니다. 이는 앱 서비스(**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**)를 구현하는 구성 요소입니다.
     </li>
     <li>
-    프로젝트의 이름(예: "VoiceCommandService")을 입력하고 **확인**을 클릭합니다.
+프로젝트의 이름(예: "VoiceCommandService")을 입력하고 **확인**을 클릭합니다.
     </li>
     <li>
-    **솔루션 탐색기**에서 "VoiceCommandService" 프로젝트를 선택하고 Visual Studio에서 생성한 "Class1.cs" 파일의 이름을 바꿉니다. **Adventure Works** 예제에서는 "AdventureWorksVoiceCommandService.cs"를 사용합니다.
+**솔루션 탐색기**에서 "VoiceCommandService" 프로젝트를 선택하고 Visual Studio에서 생성한 "Class1.cs" 파일의 이름을 바꿉니다. **Adventure Works** 예제에서는 "AdventureWorksVoiceCommandService.cs"를 사용합니다.
     </li>
     <li>
-    발생된 모든 "Class1.cs"의 이름을 바꿀지 물으면 **예**를 클릭합니다. 
+발생된 모든 "Class1.cs"의 이름을 바꿀지 물으면 **예**를 클릭합니다. 
     </li>
     <li>
-    "AdventureWorksVoiceCommandService.cs" 파일에서
-        <ol type="i">
+"AdventureWorksVoiceCommandService.cs" 파일에서 <ol type="i">
  <li>
- 다음 using 지시문을 추가합니다.  
+다음 using 지시문을 추가합니다.  
  ```using Windows.ApplicationModel.Background;```
  </li>
  <li>
- 새 프로젝트를 만들 때 프로젝트 이름은 모든 파일에서 기본 루트 네임스페이스로 사용됩니다. 네임스페이스 이름을 바꾸어 앱 서비스 코드를 기본 프로젝트 아래에 중첩합니다. 예를 들면 `namespace AdventureWorks.VoiceCommands`입니다. 
+새 프로젝트를 만들 때 프로젝트 이름은 모든 파일에서 기본 루트 네임스페이스로 사용됩니다. 네임스페이스 이름을 바꾸어 앱 서비스 코드를 기본 프로젝트 아래에 중첩합니다. 예를 들면 `namespace AdventureWorks.VoiceCommands`입니다. 
  </li>
  <li>
- 솔루션 탐색기에서 앱 서비스 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
+솔루션 탐색기에서 앱 서비스 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
  </li>
  <li>
- **라이브러리** 탭에서 **기본 네임스페이스** 필드를 이 동일한 값(이 예제에서는 "AdventureWorks.VoiceCommands")으로 업데이트합니다. 
+**라이브러리** 탭에서 **기본 네임스페이스** 필드를 이 동일한 값(이 예제에서는 "AdventureWorks.VoiceCommands")으로 업데이트합니다. 
  </li>
  <li>
- [
+[
             **IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 새 클래스를 만듭니다. 이 클래스에는 Cortana에서 음성 명령을 인식할 때의 진입점인 [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드가 필요합니다. 
  </li>
         </ol>
@@ -213,40 +215,40 @@ namespace AdventureWorks.VoiceCommands
 
 <ol start="7">
     <li>
-    백그라운드 작업을 앱 매니페스트에서 **AppService**로 선언합니다.
+백그라운드 작업을 앱 매니페스트에서 **AppService**로 선언합니다.
     <ol type="i">
         <li>
-        **솔루션 탐색기**에서 "Package.appxmanifest" 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. 
+**솔루션 탐색기**에서 "Package.appxmanifest" 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다. 
         </li>
         <li>
-        [
+[
             **Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) 요소를 찾습니다.
         </li>
         <li>
-        [
+[
             **Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) 요소를 [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) 요소에 추가합니다.
         </li>
         <li>
-        [
+[
             **uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소를 [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) 요소에 추가합니다.
         </li>
         <li>**Category** 특성을 **uap:Extension** 요소에 추가하고 **Category** 특성 값을 "windows.appService"로 설정합니다.
         </li>
         <li>
-        **EntryPoint** 특성을 **uap:Extension** 요소에 추가하고 **EntryPoint** 특성 값을, [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 클래스의 이름(이 경우 "AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService")으로 설정합니다.
+**EntryPoint** 특성을 **uap:Extension** 요소에 추가하고 **EntryPoint** 특성 값을, [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 클래스의 이름(이 경우 "AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService")으로 설정합니다.
         </li>
         <li>
-        [
+[
             **uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) 요소를 **uap:Extension** 요소에 추가합니다.
         </li>
         <li>
-        **Name** 특성을 [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) 요소에 추가하고 **Name** 특성 값을 앱 서비스의 이름(이 경우 "AdventureWorksVoiceCommandService")으로 설정합니다.
+**Name** 특성을 [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) 요소에 추가하고 **Name** 특성 값을 앱 서비스의 이름(이 경우 "AdventureWorksVoiceCommandService")으로 설정합니다.
         </li>
         <li>
-        두 번째 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소를 [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)에 추가합니다.
+두 번째 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소를 [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)에 추가합니다.
         </li>
         <li>
-        **Category** 특성을 이 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소에 추가하고 **Category** 특성 값을 "windows.personalAssistantLaunch"로 설정합니다.
+**Category** 특성을 이 [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788) 요소에 추가하고 **Category** 특성 값을 "windows.personalAssistantLaunch"로 설정합니다.
         </li>
     </li> 
     </ol>
@@ -274,19 +276,19 @@ namespace AdventureWorks.VoiceCommands
 
 <ol start="8">
     <li>
-    이 앱 서비스 프로젝트를 기본 프로젝트의 참조로 추가합니다. 
+이 앱 서비스 프로젝트를 기본 프로젝트의 참조로 추가합니다. 
     <ol type="i">
         <li>
-        **참조**를 마우스 오른쪽 단추로 클릭합니다. 
+**참조**를 마우스 오른쪽 단추로 클릭합니다. 
         </li>
         <li>
-        **참조 추가...**를 선택합니다. 
+**참조 추가...**를 선택합니다. 
         </li>
         <li>
-        **참조 관리자** 대화 상자에서 **프로젝트**를 확장하고 앱 서비스 프로젝트를 선택합니다. 
+**참조 관리자** 대화 상자에서 **프로젝트**를 확장하고 앱 서비스 프로젝트를 선택합니다. 
         </li>
         <li>
-        확인을 클릭합니다. 
+확인을 클릭합니다. 
         </li>
     </ol>
     </li>
@@ -785,6 +787,7 @@ public sealed class VoiceCommandService : IBackgroundTask
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

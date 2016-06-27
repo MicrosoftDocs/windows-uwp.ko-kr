@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다.
-title: 대칭 이동 보기 컨트롤에 대한 지침
+Description: "앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다."
+title: "대칭 이동 보기 컨트롤에 대한 지침"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+
 ---
 # 대칭 이동 뷰
 
@@ -207,6 +210,7 @@ stackPanel1.Children.Add(flipView1);
 - [**CarouselPanel 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

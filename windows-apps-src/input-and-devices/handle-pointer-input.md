@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 디바이스에서 입력 데이터를 수신하고, 처리하고, 관리합니다.
-title: 포인터 입력 처리
+Description: "UWP(유니버설 Windows 플랫폼) 앱에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 디바이스에서 입력 데이터를 수신하고, 처리하고, 관리합니다."
+title: "포인터 입력 처리"
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd
+
 ---
 
 # 포인터 입력 처리
@@ -1102,6 +1105,7 @@ namespace PointerInput
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

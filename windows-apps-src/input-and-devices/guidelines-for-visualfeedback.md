@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 시각적 피드백을 사용하여 Windows 스토어 앱의 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다.
-title: 시각적 피드백
+Description: "시각적 피드백을 사용하여 Windows 스토어 앱의 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다."
+title: "시각적 피드백"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+
 ---
 
 # 시각적 피드백에 대한 지침
@@ -183,6 +186,7 @@ Windows 스토어 앱 언어 프레임워크(JavaScript로 작성한 Windows 스
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

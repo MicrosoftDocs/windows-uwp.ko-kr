@@ -1,8 +1,11 @@
 ---
 author: mtoepke
-title: 게임 및 DirectX
-description: UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. 새 게임을 시작하거나 기존 게임을 포팅하는 방법에 대해 알아봅니다.
+title: "게임 및 DirectX"
+description: "UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. 새 게임을 시작하거나 기존 게임을 포팅하는 방법에 대해 알아봅니다."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b690fa9a97898da49646e39c982465a4a41adb7a
+
 ---
 
 # 게임 및 DirectX
@@ -63,6 +66,7 @@ UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

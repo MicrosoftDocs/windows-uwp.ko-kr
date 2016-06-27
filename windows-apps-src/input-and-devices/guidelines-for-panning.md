@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
-title: 이동
+Description: "사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다."
+title: "이동"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+
 ---
 
 # 이동에 대한 지침
@@ -190,6 +193,7 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

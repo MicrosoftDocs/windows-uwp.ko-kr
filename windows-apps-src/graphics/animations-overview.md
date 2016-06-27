@@ -1,8 +1,11 @@
 ---
 author: Jwmsft
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
-title: 애니메이션 개요
-description: Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다.
+title: "애니메이션 개요"
+description: "Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다."
+ms.sourcegitcommit: c8ba7f6303a05b8de03aa29199aaa444abf75827
+ms.openlocfilehash: 2a70d73a5e714aaf1096fed5d08ec4844edd66a6
+
 ---
 # 애니메이션 개요
 
@@ -23,6 +26,8 @@ Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용�
 
 애니메이션 라이브러리는 모든 가능 시나리오에 대해 애니메이션 효과를 제공하지는 않습니다. XAML에서 사용자 지정 애니메이션을 만들고자 하는 경우가 있을 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
 
+또한 ScrollViewer의 스크롤 위치에 따라 항목에 애니메이션 효과를 주는 등의 특정 고급 시나리오의 경우 개발자가 시각적 계층 상호 운용을 사용하여 사용자 지정 애니메이션을 구현하려고 할 수 있습니다. 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/en-us/windows/uwp/graphics/visual-layer)을 참조하세요.
+
 ## 애니메이션 유형
 
 Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리는 컨트롤 및 UI의 다른 부분에 애니메이션 동작을 적용하는 더 큰 목적으로 사용할 수 있습니다. 애니메이션 유형에는 여러 가지가 있습니다.
@@ -30,12 +35,13 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 -   *테마 전환*은 미리 정의된 Windows 런타임 XAML UI 유형의 컨트롤 또는 요소를 포함하여 UI에서 일부 조건이 변경될 경우 자동으로 적용됩니다. 이러한 애니메이션은 Windows 모양과 느낌을 지원하고 모든 앱이 조작 모드 변경 시 특정 UI 시나리오에 대해 수행하는 작업을 정의하므로 *테마 전환*이라고 합니다. 테마 전환은 애니메이션 라이브러리의 일부입니다.
 -   *테마 애니메이션*은 미리 정의된 Windows 런타임 XAML UI 유형의 하나 이상의 속성에 대한 애니메이션입니다. 테마 애니메이션은 하나의 특정 요소를 대상으로 하고 컨트롤 내에서 특정 시각적 상태로 존재하는 반면, 테마 전환은 시각적 상태 외부에 있는 컨트롤의 속성에 할당되고 해당 상태 간 전환에 영향을 주므로 테마 애니메이션은 테마 전환과 다릅니다. 많은 Windows 런타임 XAML 컨트롤은 애니메이션이 시각적 상태에 따라 트리거되는, 컨트롤 템플릿의 일부인 스토리보드 내에 테마 애니메이션을 포함합니다. 템플릿을 수정하지 않는 한 해당 기본 제공 테마 애니메이션을 UI의 컨트롤에 사용할 수 있습니다. 그러나 템플릿을 대체하는 경우 기본 제공 컨트롤 테마 애니메이션도 제거됩니다. 해당 애니메이션을 복구하려면 컨트롤의 시각적 상태 집합 내에서 테마 애니메이션을 포함하는 스토리보드를 정의해야 합니다. 또한 시각적 상태 내에 없는 스토리보드에서 테마 애니메이션을 실행하고 [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491) 메서드를 사용하여 시작할 수도 있지만 일반적이지 않습니다. 테마 애니메이션은 애니메이션 라이브러리의 일부입니다.
 -   *시각적 전환*은 컨트롤이 정의된 시각적 상태 중 하나에서 다른 상태로 전환될 때 적용됩니다. 이러한 애니메이션은 직접 작성하는 사용자 지정 애니메이션으로, 일반적으로 컨트롤에 대해 작성한 사용자 지정 템플릿 및 해당 템플릿 내의 시각적 상태 정의와 연결되어 있습니다. 이 애니메이션은 상태 사이의 시간 동안에만 실행되며 이 시간은 일반적으로 최대 몇 초에 지나지 않을 정도로 짧습니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션의 "VisualTransition" 섹션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808#VisualTransition)을 참조하세요.
--   *스토리보드 애니메이션*은 특히 앱 코드 또는 포함한 컨트롤 등의 구성 요소와 함께 제공된 코드로 시작될 때 적용됩니다. 스토리보드 애니메이션은 시간에 따라 Windows 런타임 종속성 속성의 값을 변경할 수 있습니다. 스토리보드 애니메이션은 UI 시나리오로 제한되지 않으며, 실제로 해당 용어에 익숙한 경우 이 애니메이션을 상태 시스템 기술로 간주하는 것이 유용할 수 있습니다. 스토리보드 애니메이션은 시각적 상태 사이의 전환 시간으로 제한되지 않으며 컨트롤 상태 변경에 관계없이 언제든지 실행될 수 있고 연속적으로 실행할 수도 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요. 종속성 속성 및 이 속성이 있는 위치에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
+-   *스토리보드 애니메이션*은 시간에 따라 Windows 런타임 종속성 속성의 값에 애니메이션 효과를 줍니다. 스토리보드는 시각적 전환의 일부로 정의하거나 런타임에 응용 프로그램에 의해 트리거될 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요. 종속성 속성 및 이 속성이 있는 위치에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 
 ## 라이브러리에서 사용 가능한 애니메이션
 
 애니메이션 라이브러리에는 다음 애니메이션이 제공됩니다. 애니메이션의 주 사용 시나리오, 정의 방법에 대해 자세히 알아보고 애니메이션 예제를 보려면 애니메이션의 이름을 클릭하세요.
 
+-   [페이지 전환](./animations-overview.md#page-transition): [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682)에서 페이지 전환에 애니메이션 효과를 줍니다.
 -   [콘텐츠 및 시작 전환](./animations-overview.md#content-transition-and-entrance-transition): 보기의 안이나 밖으로 하나의 콘텐츠 또는 콘텐츠 집합에 애니메이션 효과를 줍니다.
 -   [페이드 인/페이드 아웃 및 크로스페이드](./animations-overview.md#fade-in-out-and-crossfade): 임시 요소 또는 컨트롤을 표시하거나 콘텐츠 영역을 새로 고칩니다.
 -   [포인터 위로/아래로](./animations-overview.md#pointer-up-down): 타일 탭 또는 클릭에 대한 시각적 피드백을 제공합니다.
@@ -44,13 +50,22 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 -   [가장자리 UI 표시/숨기기](./animations-overview.md#show-hide-edge-ui): 패널과 같은 큰 UI를 포함하여 가장자리 기반 UI를 보기의 안이나 밖으로 밉니다.
 -   [목록 항목 변경](./animations-overview.md#list-item-changes): 목록에서 항목을 추가 또는 삭제하거나 항목의 순서를 변경합니다.
 -   [끌기/놓기](./animations-overview.md#drag-drop): 끌어서 놓기 작업 중 시각적 피드백을 제공합니다.
--   [살짝 밀기 제스처](./animations-overview.md#swipe-gestures): 타일이 살짝 밀기 조작을 지원한다는 힌트를 주거나 살짝 밀기가 선택된 상태를 나타냅니다.
+
+### 페이지 전환
+
+페이지 전환을 사용하여 앱 내 탐색에 애니메이션 효과를 줄 수 있습니다. 거의 모든 앱에서 탐색을 사용하므로 페이지 전환 애니메이션은 앱에서 사용되는 테마 애니메이션의 가장 일반적인 유형입니다. 페이지 전환 API에 대한 자세한 내용은 [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation. Therenavigationthemetransition)을 참조하세요.
+
+
 
 ### 콘텐츠 전환 및 시작 전환
 
 콘텐츠 전환 애니메이션([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103))은 하나의 콘텐츠 또는 콘텐츠 집합을 현재 보기의 안이나 밖으로 이동하는 데 사용합니다. 예를 들어 콘텐츠 전환 애니메이션은 처음 페이지가 로드되었을 때나 페이지에서 한 섹션의 콘텐츠가 변경될 때 표시할 준비가 되지 않은 콘텐츠를 표시합니다.
 
-XAML 애니메이션 라이브러리에는 페이지가 로드될 때 전체 페이지에 적용되는 애니메이션 개념은 없지만, 콘텐츠를 포함하는 페이지가 처음 로드되고 콘텐츠의 해당 부분이 렌더링될 때 콘텐츠에 적용할 수 있는 별도의 전환([**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288))은 있습니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다.
+[
+            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 UI의 큰 섹션이나 페이지가 처음 로드될 때 콘텐츠에 적용될 수 있는 동작을 나타냅니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다. [
+            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 기본 매개 변수를 사용하는 [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition)과 동일하지만 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682) 외부에서 사용될 수 있습니다.
+ 
+ 
 
 ### 페이드 인/페이드 아웃 및 크로스페이드
 
@@ -65,7 +80,7 @@ XAML 애니메이션 라이브러리에는 페이지가 로드될 때 전체 페
 
 ### 위치 변경
 
-위치 변경 애니메이션([**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) 또는 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429))은 요소를 새 위치로 이동하는 데 사용합니다. 예를 들어 헤더 항목 컨트롤에서 헤더를 이동할 때 위치 변경 애니메이션이 사용됩니다.
+위치 변경 애니메이션([**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) 또는 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429))은 요소를 새 위치로 이동하는 데 사용합니다. 예를 들어 항목 컨트롤에서 헤더를 이동할 때 위치 변경 애니메이션이 사용됩니다.
 
 ### 팝업 표시/숨기기
 
@@ -88,19 +103,13 @@ XAML 애니메이션 라이브러리에는 페이지가 로드될 때 전체 페
 
 목록에서 항목의 위치가 변경되는 경우 별도의 [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409)을 적용할 수도 있습니다. 이 전환은 관련된 삭제/추가 애니메이션을 사용하여 항목을 삭제하고 새 위치에 추가하는 경우와 다르게 애니메이션됩니다.
 
+이러한 애니메이션은 기본 [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 템플릿에 포함되므로 이러한 컨트롤을 이미 사용하고 있지 않은 경우 이러한 애니메이션을 수동으로 추가할 필요가 없습니다.
+
 ### 끌기/놓기
 
 끌기 애니메이션([**DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243173), [**DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243177))과 놓기 애니메이션([**DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243185))은 사용자가 항목을 끌거나 놓을 때 시각적 피드백을 제공하는 데 사용합니다.
 
 활성화된 애니메이션은 사용자에게 놓은 항목 주위로 목록을 다시 정렬할 수 있음을 보여줍니다. 이는 항목을 현재 위치에 놓을 경우 목록의 어느 곳에 배치될지 사용자가 아는 데 도움이 됩니다. 이 애니메이션은 끌고 있는 항목을 목록의 다른 두 항목 사이에 놓을 수 있고 해당 두 항목이 사라지게 됨을 시각적 피드백으로 제공합니다.
-
-### 살짝 밀기 제스처
-
-[
-            **SwipeHintThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh702489) 애니메이션은 타일이 살짝 밀기 조작을 지원함을 표시하는 데 사용합니다. 사용자는 아래쪽으로 살짝 밀어 타일을 선택할 수 있습니다. 사용자가 타일을 살짝 밀 수 있다는 것을 모르는 상태로 타일에 대해 길게 누르기 제스처를 취할 경우 살짝 밀기 힌트 애니메이션이 재생되어 사용자가 살짝 밀기를 통해 타일을 조작해야 한다는 것을 알려 줍니다.
-
-[
-            **SwipeBackThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh702477) 애니메이션은 타일이 선택되었음으로 표시하고 타일을 나머지 위치로 되돌려 놓는 데 사용합니다.
 
 ## 사용자 지정 컨트롤에 애니메이션 사용
 
@@ -286,6 +295,8 @@ UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매
 
 | API | 설명 |
 |-----|-------------|
+| [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) | [
+            **프레임**](https://msdn.microsoft.com/library/windows/apps/br242682)에서 페이지 탐색에 Windows 퍼스낼리티 애니메이션을 제공합니다. |
 | [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) | 컨트롤에서 하위 개체나 콘텐츠를 추가하거나 삭제할 때 애니메이션 전환 동작을 제공합니다. 일반적으로 컨트롤은 항목 컨테이너입니다. |
 | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103) | 컨트롤의 콘텐츠가 바뀔 때 애니메이션 전환 동작을 제공합니다. [
             **AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047)에 추가하여 이 API를 적용할 수 있습니다. |
@@ -361,10 +372,12 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) | 컨트롤이 나타날 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
 | [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391) | 컨트롤이 닫히거나 제거될 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
 | [**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) | 다시 배치되는 개체를 위한 미리 구성된 애니메이션 |
-| [**SplitCloseThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210454) | 분할 애니메이션을 사용하여 대상 UI를 숨기는 미리 구성된 애니메이션 |
-| [**SplitOpenThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210472) | 분할 애니메이션을 사용하여 대상 UI를 표시하는 미리 구성된 애니메이션 |
-| [**SwipeBackThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh702477) | 살짝 밀기 조작 이후에 어떤 요소가 레이아웃 슬롯에 다시 들어올 때 컨트롤에 적용하는 미리 구성된 애니메이션 |
-| [**SwipeHintThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh702489) | 현재 살짝 밀기 제스처가 가능함을 나타내는 미리 구성된 애니메이션 |
+| [**SplitCloseThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210454) | [
+            **ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 숨기는 미리 구성된 애니메이션입니다. |
+| [**SplitOpenThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210472) | [
+            **ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 표시하는 미리 구성된 애니메이션입니다. |
+| [**DrillInThemeAnimation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | 사용자가 논리적 계층 구조에서 앞으로 이동할 때(예: 마스터 페이지에서 세부 정보 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
+| [**DrillOutThemeAnimation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | 사용자가 논리적 계층 구조에서 뒤로 이동할 때(예: 세부 정보 페이지에서 마스터 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
 
  
 
@@ -374,7 +387,7 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 애니메이션 효과를 주려는 속성은 *종속성 속성*이어야 합니다. 종속성 속성에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요. 사용자 지정 스토리보드 애니메이션을 대상으로 하고 조정하는 방법을 비롯한 사용자 지정 스토리보드 애니메이션 만들기에 대한 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
 
-사용자 지정 스토리보드 애니메이션을 정의할 XAML에서 가장 큰 앱 UI 정의 영역은 XAML에서 컨트롤에 대한 시각적 상태를 정의하는 경우입니다. 이 작업은 새 컨트롤 클래스를 만들고 있거나 컨트롤 템플릿에 시각적 상태가 있는 기존 컨트롤의 템플릿을 다시 만들고 있기 때문에 수행합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요. 이러한 애니메이션은 대개 시간에 따라 전혀 전환되지 않고, 즉각적으로 발생하고, 상태에 대한 속성 변경 집합을 정의하기 위한 기술적인 면이 훨씬 큽니다. 컨트롤에 대한 시각적 상태가 표시되기 때문에 종종 라이브러리 애니메이션 자체를 포함하지만 UI에 시각적 애니메이션 동작을 적용할 필요는 없습니다. 이런 경우 일반적으로 짧은 기간이지만 테마 애니메이션은 시간에 따라 변경 내용을 적용합니다.
+사용자 지정 스토리보드 애니메이션을 정의할 XAML에서 가장 큰 앱 UI 정의 영역은 XAML에서 컨트롤에 대한 시각적 상태를 정의하는 경우입니다. 이 작업은 새 컨트롤 클래스를 만들고 있거나 컨트롤 템플릿에 시각적 상태가 있는 기존 컨트롤의 템플릿을 다시 만들고 있기 때문에 수행합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
 
  
 
@@ -385,6 +398,7 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

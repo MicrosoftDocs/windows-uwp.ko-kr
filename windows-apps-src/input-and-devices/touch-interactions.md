@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 터치에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
-title: 터치 조작
+Description: "터치에 최적화된 동시에 입력 디바이스 간에 기능적으로 일관된, 직관적이고 차별화된 사용자 조작 환경을 갖춘 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다."
+title: "터치 조작"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+
 ---
 
 # 터치 조작
@@ -627,15 +630,17 @@ End Sub
 ## <span id="related_topics"></span>관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* 입력 장치 식별
-* [샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* 사용자 조작 모드 샘플
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [보관 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [입력된 디바이스 식별](identify-input-devices.md) 
+           **샘플**
+* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895) 
+           **보관 샘플**
+* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
  
 
  
@@ -645,6 +650,7 @@ End Sub
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

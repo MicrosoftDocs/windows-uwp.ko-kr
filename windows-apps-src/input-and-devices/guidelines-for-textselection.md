@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 이 항목에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새 선택 및 조작 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
-title: 텍스트 및 이미지 선택
+Description: "이 항목에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하기 위한 새로운 Windows UI에 대해 설명하고 Windows 스토어 앱에서 이러한 새 선택 및 조작 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다."
+title: "텍스트 및 이미지 선택"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: a47b48f9315c51505b2c487c140011e053105556
+
 ---
 
 # 텍스트 및 이미지 선택
@@ -131,6 +134,7 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

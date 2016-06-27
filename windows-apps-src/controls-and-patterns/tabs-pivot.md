@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: 탭 및 피벗을 사용하면 사용자가 자주 액세스하는 콘텐츠 간에 쉽게 이동할 수 있습니다.
-title: 탭 및 피벗
+Description: "탭 및 피벗을 사용하면 사용자가 자주 액세스하는 콘텐츠 간에 쉽게 이동할 수 있습니다."
+title: "탭 및 피벗"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6585a75f08a64b7bb8f27fd32a227fa49bb0f3f4
+
 ---
 # 피벗 및 탭
 
@@ -109,6 +112,7 @@ Cortana 미리 알림에서 기본 피벗 컨트롤입니다.
 [탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

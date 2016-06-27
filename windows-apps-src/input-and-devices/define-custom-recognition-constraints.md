@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
-title: 사용자 지정 인식 제약 조건 정의
+Description: "음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다."
+title: "사용자 지정 인식 제약 조건 정의"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7d91cef0955dbf8544f658369ee488c47aaef787
+
 ---
 
 # 사용자 지정 인식 제약 조건 정의
@@ -240,6 +243,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 음성 명령을 사용하여 앱에서 제공하는 기능으로 Cortana를 확장합니다.
-title: Cortana 디자인 지침
+Description: "음성 명령을 사용하여 앱에서 제공하는 기능으로 Cortana를 확장합니다."
+title: "Cortana 디자인 지침"
 ms.assetid: A92C084B-9913-4718-9A04-569D51ACE55D
 label: Guidelines
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 31442ed17b9b463cbf10cecb564278b86086bbf2
+
 ---
 
 # Cortana 디자인 지침
@@ -390,6 +393,7 @@ GUI 문자열과 TTS 문자열은 같을 수 있지만 반드시 그럴 필요�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

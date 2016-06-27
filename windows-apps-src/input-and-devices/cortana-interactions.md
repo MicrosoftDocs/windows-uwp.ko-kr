@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 외부 응용 프로그램을 시작하고 해당 응용 프로그램 내에서 단일 작업을 실행하는 음성 명령으로 Cortana의 기본 기능을 확장하세요.
-title: Cortana 조작
+Description: "외부 응용 프로그램을 시작하고 해당 응용 프로그램 내에서 단일 작업을 실행하는 음성 명령으로 Cortana의 기본 기능을 확장하세요."
+title: "Cortana 조작"
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d55ece0112e5360c1de4e194c6dd326c15404f9e
+
 ---
 
 # UWP 앱에서 Cortana 조작
@@ -99,6 +102,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

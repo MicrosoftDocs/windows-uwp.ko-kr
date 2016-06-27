@@ -1,8 +1,11 @@
 ---
 author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
-title: 브러시 사용
-description: Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다.
+title: "브러시 사용"
+description: "Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다."
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
+
 ---
 # 브러시 사용
 
@@ -187,6 +190,7 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 
