@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5d669290ba8ef2f152bad988482580bafcc126a6/windows-apps-src/xbox-apps/known-issues.md) | HandedBackFailed | [Details](#36fd27af4a29e10547a60ec42c7cc7de97447cbf3992)
+ [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/370465cf2bc185999f319152c9986ba83e56e65b/windows-apps-src/gaming/e2e.md) | HandedBackFailed | [Details](#99ffd3cce204be674b5011c2e315bec39eee2cbd2191)
 
 ## Item Details
-##### <a name='36fd27af4a29e10547a60ec42c7cc7de97447cbf3992'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5d669290ba8ef2f152bad988482580bafcc126a6/windows-apps-src/xbox-apps/known-issues.md)
+##### <a name='99ffd3cce204be674b5011c2e315bec39eee2cbd2191'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/370465cf2bc185999f319152c9986ba83e56e65b/windows-apps-src/gaming/e2e.md)
 * Status: HandedBackFailed
 * Target File: 
-* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d8effd68dbf1b9b44576aee6a0c3edf59061ea02/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
-* Handoff Datetime: 2016-06-30 17:21:18
+* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/de1d87ccf792773a0627130c00da0ab54a8d5b1b/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 18:28:07
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
