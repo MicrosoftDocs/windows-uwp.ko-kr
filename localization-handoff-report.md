@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\managing-your-profile.md](https://github.com/Microsoft/windows-apps/blob/a9aae8fdc3cb4eaf151934a773a7cc3e6ced177f/windows-apps-src/publish/managing-your-profile.md) | HandedBackFailed | [Details](#20a995f1a67bfdf0d52340c0964eb05c10935af13622)
- [windows-apps-src\publish\upload-app-packages.md](https://github.com/Microsoft/windows-apps/blob/7f1a40f33a3137e4e0ded674b5bfdf35f11135dc/windows-apps-src/publish/upload-app-packages.md) | HandedBackFailed | [Details](#f628820747f51f7200e2748c2c3f41b58455b2fa3648)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5d669290ba8ef2f152bad988482580bafcc126a6/windows-apps-src/xbox-apps/known-issues.md) | HandedBackFailed | [Details](#36fd27af4a29e10547a60ec42c7cc7de97447cbf3992)
 
 ## Item Details
-##### <a name='20a995f1a67bfdf0d52340c0964eb05c10935af13622'></a> Source: [windows-apps-src\publish\managing-your-profile.md](https://github.com/Microsoft/windows-apps/blob/a9aae8fdc3cb4eaf151934a773a7cc3e6ced177f/windows-apps-src/publish/managing-your-profile.md)
+##### <a name='36fd27af4a29e10547a60ec42c7cc7de97447cbf3992'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/5d669290ba8ef2f152bad988482580bafcc126a6/windows-apps-src/xbox-apps/known-issues.md)
 * Status: HandedBackFailed
 * Target File: 
-* Handoff File: [managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/16f8955bfad3438540d613ca3c04fb92b9ffa116/ol-handoff/Microsoft/windows-apps.ko-kr/master/managing-your-profile.f3a7df74ed9253782e6c19996129d2978404e992.ko-kr.xlf)
-* Handoff Datetime: 2016-06-30 02:53:10
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='f628820747f51f7200e2748c2c3f41b58455b2fa3648'></a> Source: [windows-apps-src\publish\upload-app-packages.md](https://github.com/Microsoft/windows-apps/blob/7f1a40f33a3137e4e0ded674b5bfdf35f11135dc/windows-apps-src/publish/upload-app-packages.md)
-* Status: HandedBackFailed
-* Target File: 
-* Handoff File: [upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/16f8955bfad3438540d613ca3c04fb92b9ffa116/ol-handoff/Microsoft/windows-apps.ko-kr/master/upload-app-packages.1fcac0810d4be7ba7a71b9a407f69f6f47c18472.ko-kr.xlf)
-* Handoff Datetime: 2016-06-30 02:53:10
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d8effd68dbf1b9b44576aee6a0c3edf59061ea02/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 17:21:18
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
