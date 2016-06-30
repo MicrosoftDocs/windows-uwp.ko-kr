@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\controls-and-patterns\images-imagebrushes.md](https://github.com/Microsoft/windows-apps/blob/485f3069ff92995082550366839f14be50f674a5/windows-apps-src/controls-and-patterns/images-imagebrushes.md) | OutofSyncHandedBackSuccess | [Details](#f37f609d87b48a39b958a8e32470488689a3e68c520)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/7da709182c223810ac8cab203cea17f59615f2aa/windows-apps-src/publish/dev-center-insider-program.md) | OutofSyncHandedBackSuccess | [Details](#6aec19a0ec9cb401bccbafaf7df45e989a4292d43598)
 
 ## Item Details
-##### <a name='f37f609d87b48a39b958a8e32470488689a3e68c520'></a> Source: [windows-apps-src\controls-and-patterns\images-imagebrushes.md](https://github.com/Microsoft/windows-apps/blob/485f3069ff92995082550366839f14be50f674a5/windows-apps-src/controls-and-patterns/images-imagebrushes.md)
+##### <a name='6aec19a0ec9cb401bccbafaf7df45e989a4292d43598'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/7da709182c223810ac8cab203cea17f59615f2aa/windows-apps-src/publish/dev-center-insider-program.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [images-imagebrushes.be026313239477287e7b41feead3448fe405f215.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/e3c67621d76e3cef8660c1c3237ef3ba8ac07900/ol-handoff/Microsoft/windows-apps.ko-kr/master/images-imagebrushes.be026313239477287e7b41feead3448fe405f215.ko-kr.xlf)
-* Handoff Datetime: 2016-06-29 22:44:05
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c53223174c8f33c874e8bec871890ca4afb2679d/ol-handoff/Microsoft/windows-apps.ko-kr/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 01:01:32
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\controls-and-patterns\images-imagebrushes.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/c6048da23214e867dae91cc29bd28c85cf7bfdd9/windows-apps-src/controls-and-patterns/images-imagebrushes.md)
-* Current Handback File: [images-imagebrushes.be026313239477287e7b41feead3448fe405f215.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/fcb3f9fb2659fd9be4840acaa173a18dbf31779d/ol-handback/Microsoft/windows-apps.ko-kr/master/images-imagebrushes.be026313239477287e7b41feead3448fe405f215.ko-kr.xlf)
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/c6048da23214e867dae91cc29bd28c85cf7bfdd9/windows-apps-src/publish/dev-center-insider-program.md)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/fcb3f9fb2659fd9be4840acaa173a18dbf31779d/ol-handback/Microsoft/windows-apps.ko-kr/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf)
 * Current Handback Datetime: 2016-06-27 14:48:06
 * [Back to Top](#report-top)
 
