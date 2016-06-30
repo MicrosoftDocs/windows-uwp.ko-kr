@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: 이 문서에서는 Windows.Media.Audio 네임스페이스의 API를 사용하여 오디오 라우팅, 믹싱 및 처리 시나리오에 대한 오디오 그래프를 만드는 방법을 보여 줍니다.
-title: 오디오 그래프
+description: "이 문서에서는 Windows.Media.Audio 네임스페이스의 API를 사용하여 오디오 라우팅, 믹싱 및 처리 시나리오에 대한 오디오 그래프를 만드는 방법을 보여 줍니다."
+title: "오디오 그래프"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e8df66a1fc4c95cb8b0b4be9eded8ef58b6803a
+
 ---
 
 # 오디오 그래프
@@ -51,7 +55,7 @@ Windows 런타임 오디오 그래프 API는 COM 기반 [XAudio2 API](https://ms
             **DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205) 속성을 설정하여 사용자 지정 퀀텀 크기를 지정하는 경우 [**QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208) 속성도 **ClosestToDesired**로 설정해야 합니다. 그러지 않으면 제공된 값이 무시됩니다. 이 값을 사용하는 경우 시스템은 사용자가 지정한 값에 최대한 가까운 퀀텀 크기를 선택합니다. 실제 퀀텀 크기를 확인하려면 만들어진 후 **AudioGraph**의 [**SamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914243)을 확인합니다.
 -   오디오 그래프를 파일로만 사용하고 오디오 장치로 출력하지 않으려는 경우 [**DesiredSamplesPerQuantum**](https://msdn.microsoft.com/library/windows/apps/dn914205) 속성을 설정하지 말고 기본 퀀텀 크기를 사용하는 것이 좋습니다.
 -   [
-            **DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) 속성은 장치가 오디오 그래프의 출력에 대해 수행하는 기본 렌더 처리량을 결정합니다. **Default** 설정을 사용하면 시스템은 통해 지정된 오디오 렌더 범주에 대해 기본 오디오 처리를 사용할 수 있습니다. 이러한 처리 방식을 사용하면 특히 작은 스피커가 달린 모바일 장치와 같은 일부 장치에서 오디오 사운드가 크게 향상될 수 있습니다. **Raw** 설정은 수행되는 신호 처리량을 최소화하여 성능을 향상시킬 수 있지만 일부 디바이스에서 사운드 품질이 저하될 수 있습니다.
+            **DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522) 속성은 장치가 오디오 그래프의 출력에 대해 수행하는 기본 렌더 처리량을 결정합니다. **Default** 설정을 사용하면 시스템은 통해 지정된 오디오 렌더 범주에 대해 기본 오디오 처리를 사용할 수 있습니다. 이러한 처리 방식을 사용하면 특히 작은 스피커가 달린 모바일 장치와 같은 일부 장치에서 오디오 사운드가 크게 향상될 수 있습니다. **Raw** 설정은 수행되는 신호 처리량을 최소화하여 성능을 향상시킬 수 있지만 일부 장치에서 사운드 품질이 저하될 수 있습니다.
 -   [
             **QuantumSizeSelectionMode**](https://msdn.microsoft.com/library/windows/apps/dn914208)가 **LowestLatency**로 설정되면 오디오 그래프는 [**DesiredRenderDeviceAudioProcessing**](https://msdn.microsoft.com/library/windows/apps/dn958522)에 대해 자동으로 **Raw**를 사용합니다.
 -   [
@@ -238,6 +242,7 @@ Windows 런타임 오디오 그래프 API는 COM 기반 [XAudio2 API](https://ms
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

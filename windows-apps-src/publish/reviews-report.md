@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드의 리뷰 보고서를 통해 스토어에서 앱을 평가할 때 고객이 입력한 의견을 확인할 수 있습니다.
-title: 리뷰 보고서
+Description: "Windows 개발자 센터 대시보드의 리뷰 보고서를 통해 스토어에서 앱을 평가할 때 고객이 입력한 의견을 확인할 수 있습니다."
+title: "리뷰 보고서"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
+
 ---
 
 # 리뷰 보고서
@@ -79,6 +83,7 @@ Windows 스토어 개발자 센터 대시보드를 사용하여 많은 고객 �
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

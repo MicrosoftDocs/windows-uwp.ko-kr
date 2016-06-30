@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 플라이아웃의 팝업 UI 또는 사용자 지정 팝업 UI 요소를 표시하고 숨기려면 팝업 애니메이션을 사용합니다. 팝업 요소는 앱 콘텐츠 위에 나타났다가 사용자가 팝업 요소 외부를 탭하거나 클릭할 때 해제되는 컨테이너입니다.
-title: UWP 앱의 팝업 UI 애니메이션
+Description: "플라이아웃의 팝업 UI 또는 사용자 지정 팝업 UI 요소를 표시하고 숨기려면 팝업 애니메이션을 사용합니다. 팝업 요소는 앱 콘텐츠 위에 나타났다가 사용자가 팝업 요소 외부를 탭하거나 클릭할 때 해제되는 컨테이너입니다."
+title: "UWP 앱의 팝업 UI 애니메이션"
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 2b135fb62d871c559892e6b1e968767b7be716bd
+
 ---
 
 # 팝업 UI 애니메이션
@@ -47,6 +51,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

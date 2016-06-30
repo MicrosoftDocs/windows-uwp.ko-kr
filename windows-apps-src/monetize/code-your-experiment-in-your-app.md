@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: 개발자 센터 대시보드에서 실험을 정의하면 앱에 실험을 코딩할 준비가 된 것입니다.
-title: 실험용 앱 코딩
+Description: "개발자 센터 대시보드에서 실험을 정의하면 앱에 실험을 코딩할 준비가 된 것입니다."
+title: "실험용 앱 코딩"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 4e6706624e71c6d448a3d457c27d11c9f6ecc156
+
 ---
 
 # 실험용 앱 코딩
@@ -97,6 +101,7 @@ StoreServicesCustomEvents.Log("userClickedButton", variation);
   * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

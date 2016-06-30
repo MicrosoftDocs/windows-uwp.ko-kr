@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
-description: JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 알아봅니다.
-title: JavaScript의 중간 광고 샘플 코드
+description: "JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
+title: "JavaScript의 중간 광고 샘플 코드"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
+
 
 ---
 
@@ -233,6 +237,7 @@ ad.</b>");
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 텍스트를 입력 및 편집하는 동안 맞춤법 검사는 빨간색 물결선으로 강조 표시하여 단어의 맞춤법이 틀렸음을 사용자에게 알리고 맞춤법을 수정하는 방법을 제공합니다.
-title: 맞춤법 검사 및 텍스트 자동 완성
+Description: "텍스트를 입력 및 편집하는 동안 맞춤법 검사는 빨간색 물결선으로 강조 표시하여 단어의 맞춤법이 틀렸음을 사용자에게 알리고 맞춤법을 수정하는 방법을 제공합니다."
+title: "맞춤법 검사 및 텍스트 자동 완성"
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
 label: Spell checking and text prediction
 template: detail.hbs
+redirect_url: text-controls
+ms.sourcegitcommit: 08f982f5c54d596a7624fe63528f91375e7761ca
+ms.openlocfilehash: 8954b14a84241686a7c784c3d250f197bed7c8b6
+
 ---
 
 # 맞춤법 검사에 대한 지침
@@ -64,6 +68,7 @@ XAML TextBox 컨트롤의 경우 맞춤법 검사가 기본적으로 꺼져 있�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

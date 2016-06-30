@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개합니다.
+Description: "UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개합니다."
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
-title: 접근성
+title: "접근성"
 label: Accessibility
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+
 ---
 
 # 접근성  
@@ -15,6 +19,7 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 
 접근성이란 다양한 환경에서 기술을 사용하는 사람들이 응용 프로그램을 사용할 수 있도록 하는 환경을 구축하는 것으로, 다양한 요구 사항 및 환경을 염두에 두고 사용자 인터페이스를 다룹니다. 일부 상황의 경우 접근성 요구 사항이 법으로 지정됩니다. 그러나 앱이 최대한 많은 사용자층을 확보할 수 있도록 하려면 법적 요구 사항에 관계없이 접근성 문제를 해결하는 것이 좋습니다. 앱의 접근성과 관련된 Windows 스토어 등록도 있습니다.
 
+> [!NOTE]
 > 앱을 접근성 있는 앱으로 등록하는 것은 Windows 스토어에만 적합합니다.
 
 | 문서 | 설명 |
@@ -38,6 +43,7 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

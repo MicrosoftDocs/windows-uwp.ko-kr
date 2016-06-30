@@ -1,9 +1,12 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업에서 라이브 타일 업데이트
-description: 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
+author: TylerMSFT
+title: "백그라운드 작업에서 라이브 타일 업데이트"
+description: "백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다."
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 5b11c3d4757d7da0c4c99d8f74a8988babfc26fd
+
 ---
 
 
@@ -63,7 +66,7 @@ namespace BackgroundTasks
     {
         public async void Run( IBackgroundTaskInstance taskInstance )
         {
-            // Get a deferral, to prevent the task from closing prematurely 
+            // Get a deferral, to prevent the task from closing prematurely
             // while asynchronous code is still running.
             BackgroundTaskDeferral deferral = taskInstance.GetDeferral();
 
@@ -88,7 +91,7 @@ namespace BackgroundTasks
                 client.BypassCacheOnRetrieve = true;
                 client.SetRequestHeader( customHeaderName, customHeaderValue );
 
-                // Download the feed. 
+                // Download the feed.
                 feed = await client.RetrieveFeedAsync( new Uri( feedUrl ) );
             }
             catch( Exception ex )
@@ -106,7 +109,7 @@ namespace BackgroundTasks
             updater.EnableNotificationQueue( true );
             updater.Clear();
 
-            // Keep track of the number feed items that get tile notifications. 
+            // Keep track of the number feed items that get tile notifications.
             int itemCount = 0;
 
             // Create a tile notification for each feed item.
@@ -118,7 +121,7 @@ namespace BackgroundTasks
                 string titleText = title.Text == null ? String.Empty : title.Text;
                 tileXml.GetElementsByTagName( textElementName )[0].InnerText = titleText;
 
-                // Create a new tile notification. 
+                // Create a new tile notification.
                 updater.Update( new TileNotification( tileXml ) );
 
                 // Don't create more than 5 notifications.
@@ -126,8 +129,8 @@ namespace BackgroundTasks
             }
         }
 
-        // Although most HTTP servers do not require User-Agent header, others will reject the request or return 
-        // a different response if this header is missing. Use SetRequestHeader() to add custom headers. 
+        // Although most HTTP servers do not require User-Agent header, others will reject the request or return
+        // a different response if this header is missing. Use SetRequestHeader() to add custom headers.
         static string customHeaderName = "User-Agent";
         static string customHeaderValue = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)";
 
@@ -266,8 +269,6 @@ namespace ContosoApp
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

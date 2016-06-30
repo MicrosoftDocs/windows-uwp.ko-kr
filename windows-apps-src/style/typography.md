@@ -1,17 +1,21 @@
 ---
 author: mijacobs
-Description: 언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 스타일이 해당 목표에 방해가 되면 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
-title: 입력 체계
+Description: "언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다."
+title: "입력 체계"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 label: Typography
 template: detail.hbs
 extraBodyClass: style-typography
-brief: As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design.
+brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+
 ---
 
 # UWP 앱의 입력 체계
 
-언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 스타일이 해당 목표에 방해가 되면 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
+언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
 
 ## 서체
 
@@ -79,7 +83,7 @@ Segoe는 부드럽고 친숙한 모양을 가진 인간 중심의 서체로, 필
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
+XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
     </div>
 </aside>
 
@@ -125,7 +129,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
+XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
     </div>
 </aside>
 
@@ -150,7 +154,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다. (예: 
+대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다. 
     </div>
 </aside>
 
@@ -180,6 +184,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
 * [텍스트 컨트롤](../controls-and-patterns/text-controls.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

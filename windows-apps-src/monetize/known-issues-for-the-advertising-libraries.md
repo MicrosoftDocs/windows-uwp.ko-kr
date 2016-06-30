@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: Microsoft 스토어 참여 및 수익 창출 SDK에 있는 Microsoft Advertising 라이브러리 최신 릴리스의 알려진 문제에 대해 알아봅니다.
-title: Microsoft Advertising 라이브러리의 알려진 문제
+description: "Microsoft 스토어 참여 및 수익 창출 SDK에 있는 Microsoft Advertising 라이브러리 최신 릴리스의 알려진 문제에 대해 알아봅니다."
+title: "Microsoft Advertising 라이브러리의 알려진 문제"
+translationtype: Human Translation
+ms.sourcegitcommit: 5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1
+ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
+
 ---
 
 # Microsoft Advertising 라이브러리의 알려진 문제
@@ -112,6 +116,7 @@ Microsoft Advertising 라이브러리 관련 문제를 해결하기 위해 제�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

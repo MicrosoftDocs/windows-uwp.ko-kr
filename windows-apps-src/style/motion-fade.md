@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
-title: UWP 앱의 페이드 애니메이션
+Description: "항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다."
+title: "UWP 앱의 페이드 애니메이션"
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 028e3462a0bf34af0486864508b1ac049fdf60ed
+
 ---
 
 # 페이드 애니메이션
@@ -43,6 +47,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

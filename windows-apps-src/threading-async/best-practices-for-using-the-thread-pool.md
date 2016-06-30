@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
-title: 스레드 풀을 사용하기 위한 모범 사례
-description: 이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다.
+title: "스레드 풀을 사용하기 위한 모범 사례"
+description: "이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 53f7460be63fa9bd440ed6999ac9cca7cdca0174
+
 ---
 # 스레드 풀을 사용하기 위한 모범 사례
 
@@ -53,6 +57,7 @@ description: 이 항목에서는 스레드 풀 작업을 위한 모범 사례에
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

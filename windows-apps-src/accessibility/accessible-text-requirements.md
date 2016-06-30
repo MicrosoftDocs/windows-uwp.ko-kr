@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: 이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다.
+Description: "이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다."
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
-title: 접근성 있는 텍스트 요구 사항
+title: "접근성 있는 텍스트 요구 사항"
 label: Accessible text requirements
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
+
 ---
 
 # 접근성 있는 텍스트 요구 사항  
@@ -41,7 +44,7 @@ UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또
 * [
             **TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
 * [
-            **RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)(및 오버플로 클래스 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+            **RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)(및 오버플로 클래스 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
 * [
             **RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
 
@@ -68,7 +71,7 @@ XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요�
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
 ## 텍스트 배율 인수  
-다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. 해당 값이 **true**인 경우, 휴대폰에서 **텍스트 크기 조정**(**설정 &gt; 접근성**)를 설정하면 해당 요소의 텍스트 크기가 확대됩니다. 크기 조정은 **FontSize**이(가) 큰 텍스트보다 **FontSize**이(가) 작은 텍스트에 더 많은 영향을 줍니다. 하지만 요소의 **IsTextScaleFactorEnabled**속성을 **false**(으)로 설정하여 해당 자동 확대 기능을 사용하지 않도록 설정할 수 있습니다. 이 태그를 사용해 보고, 휴대폰에서 **텍스트 크기** 설정을 조정하여 **TextBlock**에 어떠한 변화가 있는지 확인합니다.
+다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. 해당 값이 **true**인 경우, 휴대폰에서 **텍스트 크기 조정**(**설정 &gt; 접근성**)를 설정하면 해당 요소의 텍스트 크기가 확대됩니다. 크기 조정은 **FontSize**이(가) 큰 텍스트보다 **FontSize**이(가) 작은 텍스트에 더 많은 영향을 줍니다. 하지만 요소의 **IsTextScaleFactorEnabled**속성을 **false**(으)로 설정하여 해당 자동 확대 기능을 사용하지 않도록 설정할 수 있습니다. 이 태그를 사용해 보고, 휴대폰에서 **텍스트 크기** 설정을 조정하여 **TextBlock**에 어떠한 변화가 있는지 확인합니다.
 
 XAML
 ```xml
@@ -121,6 +124,7 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

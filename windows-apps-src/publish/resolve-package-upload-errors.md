@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱 제출 프로세스에서 앱 패키지를 업로드하는 동안 오류가 발생하면 앱을 스토어에 제출하기 전에 먼저 오류를 해결해야 합니다.
-title: 패키지 업로드 오류 해결
+Description: "앱 제출 프로세스에서 앱 패키지를 업로드하는 동안 오류가 발생하면 앱을 스토어에 제출하기 전에 먼저 오류를 해결해야 합니다."
+title: "패키지 업로드 오류 해결"
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: afd2a08ed637502827e3207702d7659ed70148a0
+
 ---
 
 # 패키지 업로드 오류 해결
@@ -37,6 +41,7 @@ ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

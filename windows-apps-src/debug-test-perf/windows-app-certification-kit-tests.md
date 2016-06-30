@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-title: Windows 앱 인증 키트 테스트
-description: Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다.
+title: "Windows 앱 인증 키트 테스트"
+description: "Windows 앱 인증 키트에는 앱을 Windows 스토어에 게시할 준비가 되었는지 확인하는 데 도움이 되는 다양한 테스트가 들어 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+
 ---
 ## Windows 앱 인증 키트 테스트
 
@@ -667,6 +671,7 @@ Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

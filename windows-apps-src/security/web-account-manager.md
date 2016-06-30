@@ -1,7 +1,11 @@
 ---
-title: 웹 계정 관리자를 사용하여 ID 공급자에 연결
-description: 이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예&#58; Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 
+title: "웹 계정 관리자를 사용하여 ID 공급자에 연결"
+description: "이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예&#58; Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
+ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+
 ---
 # 웹 계정 관리자를 사용하여 ID 공급자에 연결
 
@@ -383,6 +387,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 [WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

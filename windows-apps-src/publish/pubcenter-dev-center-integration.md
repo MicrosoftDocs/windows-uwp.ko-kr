@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다.
-title: pubCenter-개발자 센터 통합
+Description: "pubCenter의 Microsoft Advertising이 Windows 개발자 센터로 통합되어 있습니다."
+title: "pubCenter-개발자 센터 통합"
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d6bf60e1dae7ec62e3cdbba8098a24c093d5deb1
+
 ---
 
 # pubCenter-개발자 센터 통합
@@ -181,6 +185,7 @@ pubCenter-개발자 센터 통합의 일부로, 개발자 센터 계정에 연�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

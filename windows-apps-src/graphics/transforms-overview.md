@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: "변환 개요"
 description: "UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임&amp;\\#160;API에서 변형을 사용하는 방법을 알아봅니다."
-ms.sourcegitcommit: a429fa659caf6c8032ad615f1b850092545d4439
-ms.openlocfilehash: fa5e8964ab35cb33a1ff59a8a52aa384b9d115b4
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: f6212143a83e7423550b6529ea62e25c00728f79
 
 ---
 
@@ -61,7 +61,7 @@ XAML 레이아웃에서 변형은 레이아웃 단계가 완료된 후에 적용
 ## <span id="Animating_a_transform"></span><span id="animating_a_transform"></span><span id="ANIMATING_A_TRANSFORM"></span>변형에 애니메이션 효과 적용
 
 [
-            **Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006)개체에 애니메이션 효과를 줄 수 있습니다. **Transform**에 애니메이션 효과를 주려면 애니메이션 효과를 줄 속성에 호환되는 형식의 애니메이션을 적용합니다. 모든 변형 속성은 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 형식이므로, 일반적으로 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) 또는 [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR243136usingkeyframes) 개체를 사용하여 애니메이션을 정의합니다. [
+            **Transform**](https://msdn.microsoft.com/library/windows/apps/BR243006)개체에 애니메이션 효과를 줄 수 있습니다. **Transform**에 애니메이션 효과를 주려면 애니메이션 효과를 줄 속성에 호환되는 형식의 애니메이션을 적용합니다. 모든 변형 속성은 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 형식이므로, 일반적으로 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) 또는 [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimationusingkeyframes) 개체를 사용하여 애니메이션을 정의합니다. [
             **UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980) 값에 사용되는 변형에 영향을 주는 애니메이션은 기간이 0이 아닌 경우에도 종속 애니메이션으로 간주되지 않습니다. 종속 애니메이션에 대한 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
 
 [
@@ -151,6 +151,6 @@ Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

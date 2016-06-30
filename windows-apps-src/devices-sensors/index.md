@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: 디바이스, 센서 및 전원
-description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디바이스나 센서를 앱에 통합해야 하는 경우가 있습니다.
+title: "디바이스, 센서 및 전원"
+description: "사용자에게 풍부한 환경을 제공하기 위해 외부 디바이스나 센서를 앱에 통합해야 하는 경우가 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: d6757aba4be1a9e326e9e0dade16663286d24f72
+ms.openlocfilehash: ae6ab11963ed06083e581ce42f39ce483d53e0d6
+
 ---
 # 디바이스, 센서 및 전원
 
@@ -32,6 +36,7 @@ description: 사용자에게 풍부한 환경을 제공하기 위해 외부 디�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
-description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 설명합니다.
-title: 간단한 카메라 미리 보기 액세스
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 설명합니다."
+title: "간단한 카메라 미리 보기 액세스"
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: 05e752925c07b0e3720fbdd42d785381aa08b99c
+
 ---
 
 # 간단한 카메라 미리 보기 액세스
@@ -22,7 +26,7 @@ title: 간단한 카메라 미리 보기 액세스
 1.  Microsoft Visual Studio의 **솔루션 탐색기**에서 **package.appxmanifest** 항목을 두 번 클릭하여 응용 프로그램 매니페스트 디자이너를 엽니다.
 2.  **접근 권한 값** 탭을 선택합니다.
 3.  **웹캠** 확인란과 **마이크** 상자를 선택합니다.
-4.  사진과 비디오 라이브러리에 액세스하려면 **사진 라이브러리**의 확인란과 **비디오 라이브러리**의 확인란을 선택합니다.
+4.  사진과 동영상 라이브러리에 액세스하려면 **사진 라이브러리**의 확인란과 **동영상 라이브러리**의 확인란을 선택합니다.
 
 ## CaptureElement를 페이지에 추가
 
@@ -88,6 +92,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 * [미리 보기 프레임 가져오기](get-a-preview-frame.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

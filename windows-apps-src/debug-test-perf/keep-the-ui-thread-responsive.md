@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
-title: UI 스레드 응답 유지
-description: 사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다.
+title: "UI 스레드 응답 유지"
+description: "사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
+
 ---
 # UI 스레드 응답 유지
 
@@ -102,6 +106,7 @@ public class AsyncExample
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

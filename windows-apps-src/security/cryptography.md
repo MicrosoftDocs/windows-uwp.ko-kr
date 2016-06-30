@@ -1,8 +1,12 @@
 ---
-title: 암호화
-description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 사용할 수 있는 암호화 기능에 대한 개요를 제공합니다. 특정 작업에 대한 자세한 내용은 이 문서의 끝에 있는 표를 참조하세요.
+title: "암호화"
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에 사용할 수 있는 암호화 기능에 대한 개요를 제공합니다. 특정 작업에 대한 자세한 내용은 이 문서의 끝에 있는 표를 참조하세요."
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: b8cccf54e414de084c5b3fd080007b225b9a9b12
+
 ---
 
 # 암호화
@@ -143,6 +147,7 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
 
  
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

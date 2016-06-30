@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: '2D, 3D 및 Streetside 뷰가 있는 지도 표시'
-description: MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다.
+author: msatranjr
+title: "2D, 3D 및 Streetside 뷰가 있는 지도 표시"
+description: "MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 249503f6a43ef8c38e76ed29aed4a1bfdb26e9fb
+
 ---
 
 # 2D, 3D 및 Streetside 뷰가 있는 지도 표시
@@ -130,7 +133,7 @@ switch (accessStatus)
 }
 ```
 
-지도에 디바이스 위치를 표시할 때는 그래픽을 표시하고 위치 데이터의 정확도에 따라 확대/축소 수준을 설정하는 것이 좋습니다. 자세한 내용은 [위치 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)을 참조하세요.
+지도에 장치 위치를 표시할 때는 그래픽을 표시하고 위치 데이터의 정확도에 따라 확대/축소 수준을 설정하는 것이 좋습니다. 자세한 내용은 [위치 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)을 참조하세요.
 
 ## 지도의 위치 변경
 
@@ -195,7 +198,7 @@ Streetside 뷰의 "내부" 환경이 원래 지도 컨트롤에 표시된 지도
 Streetside 뷰를 표시하려면
 
 1.  [
-            **IsStreetsideSupported**](https://msdn.microsoft.com/library/windows/apps/dn974271)를 클릭하여 Streetside 뷰가 디바이스에서 지원되는지 확인합니다.
+            **IsStreetsideSupported**](https://msdn.microsoft.com/library/windows/apps/dn974271)를 클릭하여 Streetside 뷰가 장치에서 지원되는지 확인합니다.
 2.  Streetside 뷰가 지원되는 경우 [**FindNearbyAsync**](https://msdn.microsoft.com/library/windows/apps/dn974361)를 호출하여 지정된 위치 근처에 [**StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360)를 만듭니다.
 3.  [
             **StreetsidePanorama**](https://msdn.microsoft.com/library/windows/apps/dn974360)가 null이 아닌지 확인하여 주변 파노라마가 있는지 확인합니다.
@@ -257,7 +260,7 @@ private async void showStreetsideView()
 3D 뷰를 표시하려면
 
 1.  [
-            **Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265)를 확인하여 3D 뷰가 디바이스에서 지원되는지 확인합니다.
+            **Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265)를 확인하여 3D 뷰가 장치에서 지원되는지 확인합니다.
 2.  3D 뷰가 지원되는 경우 지도 컨트롤의 [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051) 속성을 [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127)로 설정합니다.
 3.  [
             **CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) 및 [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334)와 같은 다양한 **CreateFrom** 메서드 중 하나를 사용하여 [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329) 개체를 만듭니다.
@@ -328,27 +331,28 @@ private async void display3DLocation()
 
 컨트롤의 [**LoadingStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn637028) 이벤트를 처리하여 지도가 로드 중이거나 완전히 로드되었는지 여부를 확인합니다.
 
-사용자나 앱에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 이벤트를 처리하여 지도의 설정을 변경할 때 발생하는 변경 사항을 처리합니다.. [지도 지침](https://msdn.microsoft.com/library/windows/apps/dn596102) [CenterChanged](https://msdn.microsoft.com/library/windows/apps/dn596102)
+사용자나 앱에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 다음 이벤트를 처리하여 지도의 설정을 변경할 때 발생하는 변경 사항을 처리합니다. [지도에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 
--   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
--   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
--   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
--   [**관련 항목**](https://msdn.microsoft.com/library/windows/apps/dn637069)
+-   [**CenterChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
+-   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
+-   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
+-   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
-## Bing 지도 개발자 센터
+## 관련 항목
 
-* [UWP 지도 샘플](https://www.bingmapsportal.com/)
-* [현재 위치 가져오기](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [위치 인식 앱에 대한 디자인 지침](get-location.md)
-* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [UWP 교통 앱 샘플](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [MapControl](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
+* [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [현재 위치 가져오기](get-location.md)
+* [위치 인식 앱에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

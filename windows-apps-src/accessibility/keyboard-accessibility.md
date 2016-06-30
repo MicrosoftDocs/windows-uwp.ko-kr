@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
+Description: "따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다."
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
-title: 키보드 접근성
+title: "키보드 접근성"
 label: Keyboard accessibility
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+
 ---
 
 # 키보드 접근성  
@@ -61,7 +64,7 @@ XAML
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
 ## UI 요소 내 키보드 탐색  
-복합 요소의 경우 포함된 요소 간에 적절한 내부 탐색이 보장되어야 합니다. 복합 요소는 현재 활성 자식 요소를 관리하여 모든 자식 요소를 포커스 가능 상태가 되게 하는 오버헤드를 줄일 수 있습니다. 그러한 복합 요소는 탭 순서대로 포함되며 키보드 탐색 이벤트 자체를 처리합니다. 많은 복합 컨트롤에는 몇 가지 내부 탐색 논리가 컨트롤의 이벤트 처리에 이미 내장되어 있습니다. 예를 들어 항목의 화살표 키 통과는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) 컨트롤에서 기본적으로 사용됩니다.
+복합 요소의 경우 포함된 요소 간에 적절한 내부 탐색이 보장되어야 합니다. 복합 요소는 현재 활성 자식 요소를 관리하여 모든 자식 요소를 포커스 가능 상태가 되게 하는 오버헤드를 줄일 수 있습니다. 그러한 복합 요소는 탭 순서대로 포함되며 키보드 탐색 이벤트 자체를 처리합니다. 많은 복합 컨트롤에는 몇 가지 내부 탐색 논리가 컨트롤의 이벤트 처리에 이미 내장되어 있습니다. 예를 들어 항목의 화살표 키 통과는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview), [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) 및 [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678) 컨트롤에서 기본적으로 사용됩니다.
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
@@ -160,7 +163,7 @@ Ctrl 키 등의 보조키 확인을 포함하는 키 이벤트 처리기 작성 
 ## 사용자 지정 컨트롤의 키보드 탐색  
 자식 요소를 탐색하는 키보드 바로 가기로 화살표 키를 사용하는 것이 좋습니다. 이 경우 자식 요소는 서로 특별한 관계가 있습니다. 트리 뷰 노드에 확장/축소 처리와 노드 활성화에 대한 별도의 하위 요소가 있는 경우 왼쪽 및 오른쪽 화살표 키를 사용하여 키보드 확장/축소 기능을 제공합니다. 컨트롤 콘텐츠 내에 방향 통과를 지원하는 방향이 지정된 컨트롤이 있는 경우 적절한 화살표 키를 사용합니다.
 
-일반적으로 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) 및 [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) 메서드의 재정의를 클래스 논리의 일부로 포함하여 사용자 지정 컨트롤에 대한 사용자 지정 키 처리를 구현합니다.
+일반적으로 [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) 및 [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) 메서드의 재정의를 클래스 논리의 일부로 포함하여 사용자 지정 컨트롤에 대한 사용자 지정 키 처리를 구현합니다.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
@@ -245,6 +248,7 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다.
-title: 가격 책정 및 지역/국가 선택 정의
+Description: "Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다."
+title: "가격 책정 및 지역/국가 선택 정의"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+
 ---
 
 # 가격 책정 및 지역/국가 선택 정의
@@ -71,7 +75,7 @@ Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고�
 -   바레인
 -   방글라데시
 -   바베이도스
--   벨로루시
+-   벨라루스
 -   벨기에
 -   벨리즈
 -   베냉
@@ -550,6 +554,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
 > **참고** 개발자 계정을 등록할 수 있는 국가 및 지역 목록은 [계정 유형, 위치 및 수수료](https://msdn.microsoft.com/library/windows/apps/jj863494)를 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다.
-title: Windows 스토어 서비스를 사용하여 분석 데이터에 액세스
+description: "Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다."
+title: "Windows 스토어 서비스를 사용하여 분석 데이터에 액세스"
+ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
+ms.openlocfilehash: 30388a975e9623c5511abe608aa1b21956e2c974
+
 ---
 
 # Windows 스토어 서비스를 사용하여 분석 데이터에 액세스
@@ -35,18 +38,18 @@ Windows 스토어 분석 API를 사용하려면 먼저 Azure AD 응용 프로그
 
 1.  개발자 센터에서 **계정 설정**으로 이동하여 **사용자 관리**를 클릭하고 조직의 개발자 센터 계정을 조직의 Azure AD 디렉터리와 연결합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/library/windows/apps/mt489008)를 참조하세요. 개발자 센터 계정에 액세스할 수 있도록 조직의 Azure AD 디렉터리에서 다른 사용자를 선택적으로 추가할 수 있습니다.
 
-    **참고** Azure Active Directory에는 단 하나의 개발자 센터 계정만 연결할 수 있습니다. 마찬가지로 개발자 센터 계정은 단 하나의 Azure Active Directory만 연결할 수 있습니다. 이 연결을 설정한 후에는 제거할 때 고객 지원에 반드시 문의해야 합니다.
+    > **참고** Azure Active Directory에는 단 하나의 개발자 센터 계정만 연결할 수 있습니다. 마찬가지로 개발자 센터 계정은 단 하나의 Azure Active Directory만 연결할 수 있습니다. 이 연결을 설정한 후에는 제거할 때 고객 지원에 반드시 문의해야 합니다.
 
      
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 분석 데이터에 액세스하는 데 사용할 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가**에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/library/windows/apps/mt489008)에서 Azure AD 응용 프로그램을 관리하는 방법에 대한 섹션을 참조하세요.
+2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 분석 데이터에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/library/windows/apps/mt489008)에서 Azure AD 응용 프로그램을 관리하는 방법에 대한 섹션을 참조하세요.
 
 3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **새 키 추가**를 클릭합니다. 다음 화면에서 **클라이언트 ID** 및 **키** 값을 복사합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/library/windows/apps/mt489008)에서 Azure AD 응용 프로그램을 관리하는 방법에 대한 섹션을 참조하세요. Windows 스토어 분석 API를 호출할 때 사용할 Azure AD 액세스 토큰을 가져오려면 이러한 클라이언트 ID 및 키가 필요합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다.
 
 
 ### Azure AD 액세스 토큰 가져오기
 
-Azure AD 응용 프로그램을 개발자 센터 계정과 연결하고 응용 프로그램에 대한 클라이언트 ID 및 키를 검색한 후 이 정보를 사용하여 Azure AD 액세스 토큰을 가져올 수 있습니다. Windows 스토어 분석 API에서 메서드를 호출하려면 액세스 토큰이 필요합니다.
+Azure AD 응용 프로그램을 개발자 센터 계정과 연결하고 응용 프로그램에 대한 클라이언트 ID 및 키를 검색한 후 이 정보를 사용하여 Azure AD 액세스 토큰을 가져올 수 있습니다. Windows 스토어 분석 API에서 메서드를 호출하려면 액세스 토큰이 필요합니다. 액세스 토큰을 만든 후 만료되기 전에 60분 동안 사용할 수 있습니다.
 
 액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://msdn.microsoft.com/library/azure/dn645543.aspx)의 지시에 따라 HTTP POST를 다음 Azure AD 끝점에 보냅니다.
 
@@ -108,9 +111,9 @@ namespace TestAnalyticsAPI
                     clientSecret,
                     scope).Result;
 
-            // This is your app's product ID. This ID is embedded in the app's listing link
-            // on the App identity page of the Dev Center dashboard.
-            string appID = "<your app's product ID>";
+            // This is your app's Store ID. This ID is available on
+            // the App identity page of the Dev Center dashboard.
+            string appID = "<your app's Store ID>";
 
             DateTime startDate = DateTime.Parse("08-01-2015");
             DateTime endDate = DateTime.Parse("11-01-2015");
@@ -237,6 +240,7 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

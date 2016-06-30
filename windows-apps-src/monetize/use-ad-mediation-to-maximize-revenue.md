@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 772DEBF2-1578-4330-9C14-70BCC6F55005
-description: Microsoft는 여러 광고 네트워크의 배너 광고 요청을 조정하여 앱 내 광고 수익을 최적화할 수 있는 광고 조정을 지원합니다.
-title: 광고 조정을 사용하여 수익 최대화
+description: "Microsoft는 여러 광고 네트워크의 배너 광고 요청을 조정하여 앱 내 광고 수익을 최적화할 수 있는 광고 조정을 지원합니다."
+title: "광고 조정을 사용하여 수익 최대화"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c0669e35b285ee7dfeda0c039d8455a4237960f5
+
 ---
 
 #  광고 조정을 사용하여 수익 최대화
@@ -50,6 +54,7 @@ Microsoft는 여러 광고 네트워크의 배너 광고 요청을 조정하여 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

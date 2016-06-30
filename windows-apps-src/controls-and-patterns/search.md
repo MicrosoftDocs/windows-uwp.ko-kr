@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
-title: 검색 및 페이지에서 찾기
+Description: "검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다."
+title: "검색 및 페이지에서 찾기"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+
 ---
 
 # 검색 및 페이지에서 찾기
@@ -216,6 +220,7 @@ Windows 도구 모음에서 작업으로 검색:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

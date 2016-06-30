@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: 키보드 및 클래스 이벤트 처리기를 사용하여 앱에서 하드웨어 또는 소프트웨어 키보드의 키 입력 동작에 응답합니다.
-title: 키보드 조작
+Description: "키보드 및 클래스 이벤트 처리기를 사용하여 앱에서 하드웨어 또는 소프트웨어 키보드의 키 입력 동작에 응답합니다."
+title: "키보드 조작"
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
+ms.sourcegitcommit: d65e1315e83fef5e53771adad0943c9cb59d9139
+ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
+
 ---
 
 # 키보드 조작
@@ -26,7 +29,7 @@ template: detail.hbs
 
 사용자는 하드웨어 키보드 및 두 가지 가상 키보드(OSK(화상 키보드) 및 터치 키보드)를 통해 유니버설 앱을 조작할 수 있습니다.
 
-<span></span>화상 키보드  
+화상 키보드  
 화상 키보드는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있는 시각적 가상 키보드입니다(터치 스크린이 필요하지 않음). 실제 키보드가 없는 시스템이나 움직일 수 없어서 일반적인 입력 디바이스를 사용할 수 없는 사용자는 화상 키보드를 사용할 수 있습니다. 화상 키보드는 하드웨어 키보드의 기능을 전부는 아니라도 대부분 에뮬레이트합니다.
 
 화상 키보드는 설정 &gt; 접근성의 키보드 페이지에서 켤 수 있습니다.
@@ -39,7 +42,7 @@ template: detail.hbs
 
 <sup>화상 키보드</sup>
 
-<span id="Touch_keyboard"></span><span id="touch_keyboard"></span><span id="TOUCH_KEYBOARD"></span>터치 키보드  
+터치 키보드  
 터치 키보드는 터치식 입력과 함께 텍스트 입력에 사용되는 시각적 가상 키보드입니다. 터치 키보드는 텍스트 입력용으로만 사용되므로 화상 키보드를 대체하지 않습니다(하드웨어 키보드를 에뮬레이트하지 않음).
 
 디바이스에 따라, 터치 키보드는 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤이 포커스를 받을 때 또는 사용자가 **알림 센터**를 통해 수동으로 설정할 때 나타납니다.
@@ -92,11 +95,11 @@ template: detail.hbs
 </table>
 
 
-성공적인 키보드 조작을 통해 사용자는 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 요소에 액세스하고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 접근성에 대한 선택키, 고급 사용자를 위한 바로 가기 등 다양한 요소가 얼마나 키보드를 효과적으로 조작하느냐에 영향을 줍니다.
+성공적인 키보드 조작을 통해 사용자는 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 요소에 액세스하고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 내게 필요한 옵션에 대한 선택키, 고급 사용자를 위한 바로 가기 등 다양한 요소가 성공의 수준에 영향을 미칠 수 있습니다.
 
 **참고** 터치 키보드는 토글 및 대부분의 시스템 명령을 지원하지 않습니다([패턴](#keyboard_command_patterns) 참조).
 
-## <span id="Navigation"></span><span id="navigation"></span><span id="NAVIGATION"></span>탐색
+## 탐색
 
 
 키보드에서 컨트롤(탐색 요소 포함)을 사용하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 받는 한 가지 방법은 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다. 잘 디자인된 키보드 탐색 모델은 사용자가 앱을 빠르고 효율적으로 탐색 및 사용할 수 있도록 해주는 논리적이고 예측 가능한 탭 순서를 제공합니다.
@@ -126,24 +129,24 @@ template: detail.hbs
 경우에 따라 전체 시간 동안 화면에 유지해야 하는 UI 요소가 있습니다. 양식 컨트롤은 이동 영역에 포함되고 중요한 UI 요소는 고정되도록 UI를 디자인해 보세요. 예를 들면 다음과 같습니다.
 
 ![뷰에 항상 유지되어야 하는 영역이 있는 양식](images/input-patterns/touch-keyboard-pan2.png)
-## <span id="Activation"></span><span id="activation"></span><span id="ACTIVATION"></span>활성화
+## 활성화
 
 
 현재 포커스가 있는지 여부에 상관없이 다양한 방식으로 컨트롤을 활성화할 수 있습니다.
 
-<span id="Spacebar__Enter__and_Esc"></span><span id="spacebar__enter__and_esc"></span><span id="SPACEBAR__ENTER__AND_ESC"></span>스페이스바, Enter 키 및 Esc 키  
+스페이스바, Enter 키 및 Esc 키  
 스페이스바는 입력 포커스가 있는 컨트롤을 활성화해야 합니다. Enter 키는 기본 컨트롤 또는 입력 포커스가 있는 컨트롤을 활성화해야 합니다. 기본 컨트롤은 초기 포커스가 있는 컨트롤 또는 Enter 키에만 응답하는 컨트롤입니다(일반적으로 입력 포커스와 함께 변경됨). 또한 Esc 키는 메뉴 및 대화 상자와 같은 일시적인 UI를 닫거나 종료해야 합니다.
 
 여기에 표시된 계산기 앱은 스페이스바를 사용하여 포커스가 있는 단추를 활성화하며, Enter 키를 "=" 단추에 잠그고 Esc 키를 "C" 단추에 잠급니다.
 
 ![계산기 앱](images/input-patterns/calculator.png)
 
-<span id="Keyboard_modifiers"></span><span id="keyboard_modifiers"></span><span id="KEYBOARD_MODIFIERS"></span>키보드 한정자  
-키보드 한정자는 다음 범주로 나뉩니다. 
+키보드 한정자  
+키보드 한정자는 다음 범주로 나뉩니다.
 
- 
-| 범주 | 설명 | 
-|----------|-------------| 
+
+| 범주 | 설명 |
+|----------|-------------|
 | 바로 가기 키 | UI 없이 일반적인 작업을 수행합니다(예: **저장**의 경우 "Ctrl-S"). 주요 앱 기능에 대한 바로 가기 키를 구현합니다. 일부 명령에는 바로 가기가 없거나 필요하지 않습니다. |   
 | 선택키/바로 가기 키 | 표시되는 모든 최상위 컨트롤에 할당됩니다(예: **파일** 메뉴의 경우 "Alt-F"). 선택키는 명령을 호출하거나 활성화하지 않습니다. |
 | 바로 가기 키 | 기본 시스템 또는 앱 정의 명령을 수행합니다(예: 화면 캡처의 경우 "Alt-PrtScrn", 앱 전환의 경우 "Alt-Tab", 도움말의 경우 "F1"). 바로 가기 키와 관련된 명령은 메뉴 항목이 아니어도 됩니다. |
@@ -162,7 +165,7 @@ template: detail.hbs
 
 ![연결된 레이블에서 식별된 선택키를 입력한 후 왼쪽에서 들여쓰기 텍스트 필드 값이 강조 표시됨](images/input-patterns/accesskeys-entered.png)
 
-## <span id="Usability_and_accessibility"></span><span id="usability_and_accessibility"></span><span id="USABILITY_AND_ACCESSIBILITY"></span>유용성 및 접근성
+## 유용성 및 접근성
 
 
 잘 디자인된 키보드 조작 환경은 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며, 대신 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 판독기 및 음성 입력 유틸리티)을 사용해야 합니다. 이러한 사용자에게는 포괄성이 일관성보다 더 중요합니다.
@@ -211,7 +214,7 @@ template: detail.hbs
 
 성공적인 키보드 조작 환경을 위해서는 키보드로만 앱을 철저히 테스트해야 합니다.
 
-## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>텍스트 입력
+## 텍스트 입력
 
 
 키보드 입력을 사용할 경우 할상 장치 기능을 쿼리합니다. 휴대폰과 같은 일부 디바이스의 경우 터치 키보드는 Alt 키, 기능 키 또는 Windows 로고 키처럼 하드웨어 키보드에 포함된 다양한 바로 가기 또는 명령 키를 제공하지 않으므로 텍스트 입력에만 사용될 수 있습니다.
@@ -243,7 +246,7 @@ template: detail.hbs
 
 ![선택키와 바로 가기 키를 모두 포함하는 확장된 파일 메뉴가 포함된 메모장 앱](images/input-patterns/notepad.png)
 
-## <span id="Keyboard_commands"></span><span id="keyboard_commands"></span><span id="KEYBOARD_COMMANDS"></span>키보드 명령
+## 키보드 명령
 
 
 다음은 키보드 입력을 지원하는 다양한 장치에서 제공되는 키보드 조작의 포괄적인 목록입니다. 일부 디바이스 및 플랫폼에는 기본 키 입력과 조작이 필요하며, 이러한 사항이 나와 있습니다.
@@ -305,7 +308,7 @@ template: detail.hbs
  
 
 참고: 재생/일시 중지와 다음 항목에 대한 미디어 탐색 키 명령은 각각 인쇄 및 찾기의 키 명령과 같습니다. 일반적인 명령이 미디어 탐색 명령보다 우선 순위가 높아야 합니다. 예를 들어 앱이 미디어 재생과 인쇄를 둘 다 지원하는 경우 키 명령 Ctrl+P는 인쇄를 수행해야 합니다.
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>시각적 피드백
+## 시각적 피드백
 
 
 키보드 조작 시에만 포커스 사각형을 사용합니다. 사용자가 터치 조작을 시작하는 경우 키보드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -319,7 +322,7 @@ template: detail.hbs
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
 
-## <span id="keyboard_events"></span><span id="KEYBOARD_EVENTS"></span>키보드 이벤트 및 포커스
+## 키보드 이벤트 및 포커스
 
 
 다음 키보드 이벤트는 하드웨어 및 터치 키보드 둘 다에서 발생할 수 있습니다.
@@ -341,11 +344,12 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 컨트롤의 [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161) 메서드를 호출하여 포커스를 강제 적용할 수도 있습니다. 이 작업은 사용자의 UI가 로드될 때 기본적으로 키보드 포커스가 설정되지 않으므로 바로 가기 키를 구현하는 경우에 필요합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [바로 가기 키 예제](#shortcut_keys_example)를 참조하세요.
 
 컨트롤에 입력 포커스를 적용하려면 컨트롤이 활성화되고 표시되어야 하며 [**IsTabStop**](https://msdn.microsoft.com/library/windows/apps/br209422) 및 [**HitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) 속성 값이 **true**여야 합니다. 대부분의 컨트롤은 이것이 기본 상태입니다. 컨트롤에 입력 포커스가 있으면 이 항목의 뒷부분에 설명된 대로 키보드 입력 이벤트를 발생시키고 응답할 수 있습니다. [
-            **GotFocus**](https://msdn.microsoft.com/library/windows/apps/br208927) 및 [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) 이벤트를 처리하여 포커스를 받거나 잃는 컨트롤에 응답할 수도 있습니다.
+              **GotFocus**
+            ](https://msdn.microsoft.com/library/windows/apps/br208927) 및 [**LostFocus**](https://msdn.microsoft.com/library/windows/apps/br208943) 이벤트를 처리하여 포커스를 받거나 잃는 컨트롤에 응답할 수도 있습니다.
 
 기본적으로 컨트롤의 탭 시퀀스는 XAML(Extensible Application Markup Language)에 표시되는 순서입니다. 그러나 이 순서는 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) 속성을 사용하여 수정할 수 있습니다. 자세한 내용은 [키보드 접근성 구현](https://msdn.microsoft.com/library/windows/apps/hh868161)을 참조하세요.
 
-## <span id="keyboard_event_handlers"></span><span id="KEYBOARD_EVENT_HANDLERS"></span>키보드 이벤트 처리기
+## 키보드 이벤트 처리기
 
 
 입력 이벤트 처리기는 다음 정보를 제공하는 대리자를 구현합니다.
@@ -353,9 +357,10 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 -   이벤트를 보낸 사람. 보낸 사람은 이벤트 처리기가 연결된 개체를 보고합니다.
 -   이벤트 데이터. 키보드 이벤트의 경우 이 데이터는 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)의 인스턴스입니다. 처리기의 대리자는 [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs**의 가장 관련된 속성은 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)와 [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)입니다.
 -   [
-            **OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
+              **OriginalSource**
+            ](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-### <span id="attaching_a_keyboard_event_handler"></span><span id="ATTACHING_A_KEYBOARD_EVENT_HANDLER"></span>키보드 이벤트 처리기 연결
+### 키보드 이벤트 처리기 연결
 
 이벤트를 멤버로 포함하는 모든 개체에 대해 키보드 이벤트 처리기 함수를 연결할 수 있습니다. 임의의 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 파생 클래스도 여기에 포함됩니다. 다음 XAML 예제는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트에 대해 처리기를 연결하는 방법을 보여 줍니다.
 
@@ -367,7 +372,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 코드에서 이벤트 처리기를 연결할 수도 있습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-### <span id="defining_a_keyboard_event_handler"></span><span id="DEFINING_A_KEYBOARD_EVENT_HANDLER"></span>키보드 이벤트 처리기 정의
+### 키보드 이벤트 처리기 정의
 
 다음 예제에서는 이전 예제에서 연결된 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기의 불완전한 이벤트 처리기 정의를 보여 줍니다.
 
@@ -391,7 +396,7 @@ void MyProject::MainPage::Grid_KeyUp(
 {//handling code here}
 ```
 
-### <span id="using_keyroutedeventargs"></span><span id="USING_KEYROUTEDEVENTARGS"></span>KeyRoutedEventArgs 사용
+### KeyRoutedEventArgs 사용
 
 모든 키보드 이벤트는 이벤트 데이터에 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)를 사용하며 **KeyRoutedEventArgs**에 다음 속성이 포함되어 있습니다.
 
@@ -399,27 +404,29 @@ void MyProject::MainPage::Grid_KeyUp(
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
 -   [
-            **OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
+              **OriginalSource**
+            ](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
 
-### <span id="key"></span><span id="KEY"></span>키
+### 키
 
 키를 누르면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 이벤트가 발생합니다. 마찬가지로, 키를 놓으면 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)이 발생합니다. 일반적으로 특정 키 값을 처리하기 위해 이벤트를 수신 대기합니다. 어떤 키를 누르거나 놓았는지 알아보려면 이벤트 데이터에서 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) 값을 확인하세요. **Key**는 [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812) 값을 반환합니다. **VirtualKey** 열거형에는 지원되는 모든 키가 포함됩니다.
 
-### <span id="modifier_keys"></span><span id="MODIFIER_KEYS"></span>보조 키
+### 보조 키
 
 보조 키는 Ctrl 또는 Shift 키와 같이 사용자가 일반적으로 다른 키와 함께 누르는 키입니다. 앱에서 이러한 조합을 바로 가기 키로 사용하여 앱 명령을 호출할 수 있습니다.
 
 [
-            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기에 코드를 사용하여 바로 가기 키 조합을 검색합니다. 그런 후 관심 있는 보조 키의 누른 상태를 추적할 수 있습니다. 비보조 키에 대해 키보드 이벤트가 발생하는 경우 보조 키가 누른 상태인지 여부도 동시에 확인할 수 있습니다.
+              **KeyDown**
+            ](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기에 코드를 사용하여 바로 가기 키 조합을 검색합니다. 그런 후 관심 있는 보조 키의 누른 상태를 추적할 수 있습니다. 비보조 키에 대해 키보드 이벤트가 발생하는 경우 보조 키가 누른 상태인지 여부도 동시에 확인할 수 있습니다.
 
 **참고** Alt 키는 **VirtualKey.Menu** 값으로 표시됩니다.
 
  
 
-## <span id="shortcut_keys_example"></span><span id="SHORTCUT_KEYS_EXAMPLE"></span>바로 가기 키 예제
+## 바로 가기 키 예제
 
 
-다음 예제에서는 바로 가기 키를 구현하는 방법을 보여 줍니다. 이 예제에서 사용자는 [재생], [일시 중지] 및 [증지] 단추나 .Ctrl+P, Ctrl+A 및 Ctrl+S 바로 가기 키를 사용하여 미디어 재생을 제어할 수 있습니다. 단추 XAML은 단추 레이블의 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) 속성 및 도구 설명을 사용하여 바로 가기를 표시합니다. 이 자체 설명서는 앱의 유용성과 접근성을 향상시키는 데 중요합니다. 자세한 내용은 [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)을 참조하세요.
+다음 예제에서는 바로 가기 키를 구현하는 방법을 보여 줍니다. 이 예제에서 사용자는 \[재생\], \[일시 중지\] 및 \[증지\] 단추나 .Ctrl+P, Ctrl+A 및 Ctrl+S 바로 가기 키를 사용하여 미디어 재생을 제어할 수 있습니다. 단추 XAML은 단추 레이블의 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) 속성 및 도구 설명을 사용하여 바로 가기를 표시합니다. 이 자체 설명서는 앱의 유용성과 접근성을 향상시키는 데 중요합니다. 자세한 내용은 [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)을 참조하세요.
 
 페이지를 로드하면 입력 포커스가 페이지 자체에 설정됩니다. 이 단계가 없으면 컨트롤에 초기 입력 포커스가 없으며, 사용자가 컨트롤을 탭하거나 클릭하여 입력 포커스를 수동으로 설정할 때까지 앱에서 입력 이벤트를 발생시키지 않습니다.
 
@@ -431,7 +438,7 @@ void MyProject::MainPage::Grid_KeyUp(
     <RowDefinition Height="Auto" />
   </Grid.RowDefinitions>
 
-  <MediaElement x:Name="DemoMovie" Source="xbox.wmv" 
+  <MediaElement x:Name="DemoMovie" Source="xbox.wmv"
     Width="500" Height="500" Margin="20" HorizontalAlignment="Center" />
 
   <StackPanel Grid.Row="1" Margin="10"
@@ -444,13 +451,13 @@ void MyProject::MainPage::Grid_KeyUp(
     </Button>
 
     <Button x:Name="PauseButton" Click="MediaButton_Click"
-      ToolTipService.ToolTip="Shortcut key: Ctrl+A" 
+      ToolTipService.ToolTip="Shortcut key: Ctrl+A"
       AutomationProperties.AcceleratorKey="Control A">
       <TextBlock>Pause</TextBlock>
     </Button>
 
     <Button x:Name="StopButton" Click="MediaButton_Click"
-      ToolTipService.ToolTip="Shortcut key: Ctrl+S" 
+      ToolTipService.ToolTip="Shortcut key: Ctrl+S"
       AutomationProperties.AcceleratorKey="Control S">
       <TextBlock>Stop</TextBlock>
     </Button>
@@ -579,14 +586,16 @@ End Sub
 
  
 
-## <span id="keyboard_routed_events"></span><span id="KEYBOARD_ROUTED_EVENTS"></span>키보드 라우트된 이벤트
+## 키보드 라우트된 이벤트
 
 
 [
-            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 등의 특정 이벤트는 라우트된 이벤트입니다. 라우트된 이벤트는 버블링 라우팅 전략을 사용합니다. 버블링 라우팅 전략은 이벤트가 자식 개체에서 발생한 다음 개체 트리에서 다음 부모 개체로 라우트됨을 의미합니다. 이 경우 동일한 이벤트를 처리하고 동일한 이벤트 데이터로 상호 작용할 수 있는 기회가 제공됩니다.
+              **KeyDown**
+            ](https://msdn.microsoft.com/library/windows/apps/br208941), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 등의 특정 이벤트는 라우트된 이벤트입니다. 라우트된 이벤트는 버블링 라우팅 전략을 사용합니다. 버블링 라우팅 전략은 이벤트가 자식 개체에서 발생한 다음 개체 트리에서 다음 부모 개체로 라우트됨을 의미합니다. 이 경우 동일한 이벤트를 처리하고 동일한 이벤트 데이터로 상호 작용할 수 있는 기회가 제공됩니다.
 
 [
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트를 처리하는 다음 XAML 예제를 살펴보세요. 이 경우 포커스가 **Button** 개체 중 하나에 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생합니다. 이 이벤트는 부모 **Canvas**로 버블 업됩니다.
+              **Canvas**
+            ](https://msdn.microsoft.com/library/windows/apps/br209267)와 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트를 처리하는 다음 XAML 예제를 살펴보세요. 이 경우 포커스가 **Button** 개체 중 하나에 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생합니다. 이 이벤트는 부모 **Canvas**로 버블 업됩니다.
 
 ```XAML
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -608,20 +617,22 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 ```
 
 이전 처리기의 [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) 속성 사용을 살펴보세요. 여기서 **OriginalSource**는 이벤트를 발생시킨 개체를 보고합니다. [
-            **StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 컨트롤이 아니며 포커스를 가질 수 없으므로 개체가 **StackPanel**일 수는 없습니다. **StackPanel** 내의 두 단추 중 하나만 이벤트를 발생시킬 수 있는데 어떤 단추일까요? 부모 개체에서 이벤트를 처리하는 경우 **OriginalSource**를 사용하여 실제 이벤트 원본 개체를 구별합니다.
+              **StackPanel**
+            ](https://msdn.microsoft.com/library/windows/apps/br209635)은 컨트롤이 아니며 포커스를 가질 수 없으므로 개체가 **StackPanel**일 수는 없습니다. **StackPanel** 내의 두 단추 중 하나만 이벤트를 발생시킬 수 있는데 어떤 단추일까요? 부모 개체에서 이벤트를 처리하는 경우 **OriginalSource**를 사용하여 실제 이벤트 원본 개체를 구별합니다.
 
-### <span id="handled_property"></span><span id="HANDLED_PROPERTY"></span>이벤트 데이터의 Handled 속성
+### 이벤트 데이터의 Handled 속성
 
 이벤트 처리 전략에 따라 하나의 이벤트 처리기만 버블링 이벤트에 반응하도록 할 수 있습니다. 예를 들어 특정 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 처리기가 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 컨트롤 중 하나에 연결되어 있는 경우 해당 이벤트를 처리할 수 있는 첫 번째 기회가 제공됩니다. 이 경우 부모 패널에서는 이벤트를 처리하지 않는 것이 좋습니다. 이 시나리오에서는 이벤트 데이터에 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성을 사용할 수 있습니다.
 
 라우트된 이벤트 데이터 클래스의 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성은 이전에 이벤트 경로에 등록한 다른 처리기가 이미 적용되었음을 보고하는 데 사용됩니다. 이 속성은 라우트된 이벤트 시스템의 동작에 영향을 줍니다. 이벤트 처리기에서 **Handled**를 **true**로 설정하면 이 이벤트는 라우팅을 중지하고 다음 부모 요소로 전송되지 않습니다.
 
-### <span id="addhandler_and_already_handled_keyboard_events"></span><span id="ADDHANDLER_AND_ALREADY_HANDLED_KEYBOARD_EVENTS"></span>AddHandler 및 이미 처리된 키보드 이벤트
+### AddHandler 및 이미 처리된 키보드 이벤트
 
 이미 처리된 것으로 표시된 이벤트에서 작동할 수 있는 처리기를 연결하는 특별한 기술을 사용할 수 있습니다. 이 기술은 XAML 특성 또는 C\#에서 += 등의 처리기를 추가하는 언어별 구문을 사용하는 대신 [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) 메서드를 사용하여 처리기를 등록합니다. 이 기술의 제한 사항은 일반적으로 **AddHandler** API가 해당 라우트된 이벤트를 식별하는 [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) 유형의 매개 변수를 사용한다는 데 있습니다. 일부 라우트된 이벤트는 **RoutedEvent** 식별자를 제공하지 않으므로 이 경우 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)에서 처리할 수 있는 라우트된 이벤트에 영향을 미칠 수 있습니다. [
-            **KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트는 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) 및 [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418))가 있습니다. 그러나 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
+              **KeyDown**
+            ](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트는 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) 및 [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418))가 있습니다. 그러나 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
 
-## <span id="commanding"></span><span id="COMMANDING"></span>명령
+## 명령
 
 
 일부 UI 요소는 명령 지원을 기본 제공합니다. 기본 구현에서 명령은 입력 관련 라우트된 이벤트를 사용합니다. 단일 명령 처리기를 호출하여 특정 포인터 작업이나 특정 액셀러레이터 키와 같은 관련 UI 입력을 처리할 수 있습니다.
@@ -629,9 +640,10 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 대신 명령 API를 사용하는 것이 좋습니다. 자세한 내용은 [**ButtonBase.Command**](https://msdn.microsoft.com/library/windows/apps/br227740)를 참조하세요.
 
 [
-            **ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885)를 구현하여 일반 이벤트 처리기에서 호출하는 명령 기능을 캡슐화할 수도 있습니다. 이렇게 하면 사용 가능한 **Command** 속성이 없는 경우에도 명령을 사용할 수 있습니다.
+              **ICommand**
+            ](https://msdn.microsoft.com/library/windows/apps/br227885)를 구현하여 일반 이벤트 처리기에서 호출하는 명령 기능을 캡슐화할 수도 있습니다. 이렇게 하면 사용 가능한 **Command** 속성이 없는 경우에도 명령을 사용할 수 있습니다.
 
-## <span id="text_input_and_controls"></span><span id="TEXT_INPUT_AND_CONTROLS"></span>텍스트 입력 및 컨트롤
+## 텍스트 입력 및 컨트롤
 
 
 일부 컨트롤은 직접 처리를 통해 키보드 이벤트에 반응합니다. 예를 들어 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)는 키보드로 입력된 텍스트를 캡처한 다음 시각적으로 표현하는 컨트롤입니다. 해당 논리에 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 및 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)을 사용하여 키 입력을 캡처한 다음 텍스트가 실제로 변경된 경우 고유한 [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 이벤트도 발생시킵니다.
@@ -644,7 +656,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 사용자 지정 컨트롤은 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983)을 재정의하여 키 이벤트에 대해 유사한 재정의 동작을 구현할 수 있습니다. 사용자 지정 컨트롤이 특정 액셀러레이터 키를 처리하거나 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)에 대해 설명된 시나리오와 비슷한 컨트롤 또는 포커스 동작을 갖는 경우 이 논리를 해당 **OnKeyDown** / **OnKeyUp** 재정의에 적용해야 합니다.
 
-## <span id="the_touch_keyboard"></span><span id="THE_TOUCH_KEYBOARD"></span>터치 키보드
+## 터치 키보드
 
 
 텍스트 입력 컨트롤은 터치 키보드를 자동으로 지원합니다. 사용자가 터치식 입력을 사용하여 텍스트 컨트롤에 입력 포커스를 설정하면 터치 키보드가 자동으로 나타납니다. 텍스트 컨트롤에 입력 포커스가 없으면 터치 키보드가 숨겨집니다.
@@ -681,7 +693,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
  
 
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 **개발자**
@@ -708,9 +720,6 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 
 
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

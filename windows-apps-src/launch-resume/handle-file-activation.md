@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 파일 활성화 처리
-description: 앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다.
+author: TylerMSFT
+title: "파일 활성화 처리"
+description: "앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+
 ---
 
 # 파일 활성화 처리
@@ -151,8 +154,6 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다. 여기서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다.
-title: 컨트롤 추가 및 이벤트 처리
+Description: "단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다. 여기서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다."
+title: "컨트롤 추가 및 이벤트 처리"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and events
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+
 ---
 # 컨트롤 및 이벤트 소개
 
@@ -133,6 +137,7 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 -   [플라이아웃](dialogs-popups-menus.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 위치 변경 애니메이션은 요소를 새 위치로 이동하는 데 사용합니다.
-title: UWP 앱의 위치 변경 애니메이션
+Description: "위치 변경 애니메이션은 요소를 새 위치로 이동하는 데 사용합니다."
+title: "UWP 앱의 위치 변경 애니메이션"
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
 label: Motion--Reposition
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ba8679a5f06895cef52cbc229f4487997a17bf35
+
 ---
 
 # 위치 변경 애니메이션
@@ -44,6 +48,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

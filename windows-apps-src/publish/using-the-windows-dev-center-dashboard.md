@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드에서는 모든 Windows 디바이스용 앱을 한곳에서 관리하고 제출할 수 있습니다.
-title: Windows 개발자 센터 대시보드 사용
+Description: "Windows 개발자 센터 대시보드에서는 모든 Windows 디바이스용 앱을 한곳에서 관리하고 제출할 수 있습니다."
+title: "Windows 개발자 센터 대시보드 사용"
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+
 ---
 
 # Windows 개발자 센터 대시보드 사용
@@ -33,6 +37,7 @@ IAP(앱에서 바로 구매 제품)가 앱 제출과 개별적으로 관리됩�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

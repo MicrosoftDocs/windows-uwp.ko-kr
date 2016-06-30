@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다.
-title: HDR(High Dynamic Range) 사진 캡처
+description: "AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다."
+title: "HDR(High Dynamic Range) 사진 캡처"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3015aa4338ddb0c0a006eb631026261a4453f376
+
 ---
 
 # HDR(High Dynamic Range) 사진 캡처
@@ -72,8 +76,7 @@ HDR 사진 캡처를 사용하려면 앱에 기본적인 미디어 캡처에 필
 
 HDR 프로세스는 여러 프레임을 캡처한 후, 모든 프레임 캡처가 완료된 다음 단일 이미지로 합성합니다. 캡처 후, 전체 HDR 프로세스를 완료하기 전에 [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) 이벤트를 처리하여 프레임에 대한 액세스 권한을 얻을 수 있습니다. 최종 HDR 사진 결과에만 관심이 있는 경우 이 작업을 수행할 필요가 없습니다.
 
-**중요** 
-           [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392)는 HDR 하드웨어를 지원하는, 즉 참조 프레임을 생성하지 않는 디바이스에서는 발생하지 않습니다. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
+**중요** [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392)는 HDR 하드웨어를 지원하는, 즉 참조 프레임을 생성하지 않는 디바이스에서는 발생하지 않습니다. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
 
 참조 프레임은 **CaptureAsync** 호출에 대한 컨텍스트 정보 없이 도착하므로 **OptionalReferencePhotoCaptured** 처리기에 컨텍스트 정보를 제공하기 위한 메커니즘이 제공됩니다. 먼저 컨텍스트 정보가 포함될 개체가 있어야 합니다. 이 개체의 이름과 내용은 사용자가 결정합니다. 이 예제에서는 캡처의 파일 이름 및 카메라 방향을 추적하기 위한 멤버가 있는 개체를 정의합니다.
 
@@ -105,6 +108,7 @@ HDR 사진 캡처는 두 단계로 진행됩니다. 먼저, 여러 프레임이 
 * [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

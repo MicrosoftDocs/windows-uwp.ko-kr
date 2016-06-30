@@ -1,8 +1,12 @@
 ---
-title: 데이터 인코드 및 디코드
-description: 이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다.
+title: "데이터 인코드 및 디코드"
+description: "이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 base64 및 16진수 데이터를 인코딩 및 디코딩하는 방법을 보여 줍니다."
 ms.assetid: 2CC23863-E840-48F4-B087-0479045743AC
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: cd70a84e498c390684a59b33ec8a34375e1eb863
+
 ---
 
 # 데이터 인코드 및 디코드
@@ -39,6 +43,7 @@ public void EncodeDecodeHex()
 ```
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
-title: 센서
-description: 센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 디바이스의 방향과 움직임을 앱에 알려줄 수 있습니다.
+title: "센서"
+description: "센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 디바이스의 방향과 움직임을 앱에 알려줄 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+
 ---
 # 센서
 
@@ -78,7 +82,7 @@ description: 센서를 사용하면 앱에서 디바이스와 디바이스를 �
 ## 나침반
 
 [
-            **Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) 센서는 지구의 수평면을 기준으로 자북과 관련된 2D 침로를 반환합니다. 특정 디바이스 방향을 확인하거나 3D 공간의 항목을 나타내는 데 나침반 센서를 사용하면 안 됩니다. 지리적 특성으로 인해 침로에 자연 편차가 발생할 수 있으므로 일부 시스템은 [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingmagneticnorth) 및 [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingtruenorth)를 둘 다 지원합니다. 앱에 적합한 값을 고려하지만, 모든 시스템에서 실제 북쪽 값을 보고하는 것은 아닙니다. 회전계 및 자력계(자기 강도 세기를 측정하는 장치) 센서는 해당 데이터를 결합하여 나침반 침로를 생성하므로 데이터 안정화 효과가 있습니다(자기장 세기는 전기 시스템 구성 요소로 인해 불안정함).
+            **Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) 센서는 지구의 수평면을 기준으로 자북과 관련된 2D 침로를 반환합니다. 특정 디바이스 방향을 확인하거나 3D 공간의 항목을 나타내는 데 나침반 센서를 사용하면 안 됩니다. 지리적 특성으로 인해 침로에 자연 편차가 발생할 수 있으므로 일부 시스템은 [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) 및 [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx)를 둘 다 지원합니다. 앱에 적합한 값을 고려하지만, 모든 시스템에서 실제 북쪽 값을 보고하는 것은 아닙니다. 회전계 및 자력계(자기 강도 세기를 측정하는 장치) 센서는 해당 데이터를 결합하여 나침반 침로를 생성하므로 데이터 안정화 효과가 있습니다(자기장 세기는 전기 시스템 구성 요소로 인해 불안정함).
 
 ![자북극과 관련된 나침반 값](images/compass.png)
 
@@ -129,7 +133,7 @@ description: 센서를 사용하면 앱에서 디바이스와 디바이스를 �
 ## 단순 방향
 
 [
-            **SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206399sensor)는 지정된 디바이스의 현재 사분면 방향이나 앞면 위로 또는 앞면 아래로 상태인지 감지합니다. 6개의 가능한 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) 상태(**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**)가 있습니다.
+            **SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx)는 지정된 디바이스의 현재 사분면 방향이나 앞면 위로 또는 앞면 아래로 상태인지 감지합니다. 6개의 가능한 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) 상태(**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**)가 있습니다.
 
 지면에 수평 또는 수직으로 디바이스를 잡고 있는지에 따라 표시를 변경하는 뷰어 앱은 SimpleOrientationSensor의 값을 사용하여 디바이스를 잡고 있는 방식을 확인합니다.
 
@@ -139,6 +143,7 @@ description: 센서를 사용하면 앱에서 디바이스와 디바이스를 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

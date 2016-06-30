@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 화면 공간을 절약하는 동시에 최상위 수준 탐색을 제공합니다.
-title: 탐색 창에 대한 지침
+Description: "화면 공간을 절약하는 동시에 최상위 수준 탐색을 제공합니다."
+title: "탐색 창에 대한 지침"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: eb5600a78d7e8cfcad98509afc4de2d117066f7e
+
 ---
 
 탐색 창
@@ -111,6 +115,7 @@ template: detail.hbs
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
-description: 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다.
-title: CameraCaptureUI를 사용하여 사진 및 비디오 캡처
+description: "이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다."
+title: "CameraCaptureUI를 사용하여 사진 및 비디오 캡처"
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
+
 ---
 
 # CameraCaptureUI를 사용하여 사진 및 비디오 캡처
@@ -112,6 +116,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

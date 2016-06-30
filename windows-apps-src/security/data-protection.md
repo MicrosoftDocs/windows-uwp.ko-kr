@@ -1,8 +1,12 @@
 ---
-title: 데이터 보호
-description: 이 문서에서는 Windows.Security.Cryptography.DataProtection 네임스페이스의 DataProtectionProvider 클래스를 사용하여 UWP 앱에서 디지털 데이터를 암호화 및 해독하는 방법을 설명합니다.
+title: "데이터 보호"
+description: "이 문서에서는 Windows.Security.Cryptography.DataProtection 네임스페이스의 DataProtectionProvider 클래스를 사용하여 UWP 앱에서 디지털 데이터를 암호화 및 해독하는 방법을 설명합니다."
 ms.assetid: 9EE3CC45-5C44-4196-BD8B-1D64EFC5C509
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 958d5dd1c5f61078a0b288d53debe93875d65f06
+
 ---
 
 # 데이터 보호
@@ -259,6 +263,7 @@ namespace SampleProtectStreamAsync
 }
 ```
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

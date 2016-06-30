@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항
+Description: "UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+
 ---
 
 #  UWP 앱의 탐색 디자인 기본 사항
@@ -264,6 +268,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

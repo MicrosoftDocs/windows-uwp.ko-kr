@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 9165f709-71d7-42cf-9b30-3190fe029fb4
-description: Microsoft Advertising 라이브러리의 AdControl 클래스와 광고 조정 라이브러리의 AdMediatorControl 클래스 간 차이점을 알아봅니다.
-title: AdMediatorControl과 AdControl의 차이
+description: "Microsoft Advertising 라이브러리의 AdControl 클래스와 광고 조정 라이브러리의 AdMediatorControl 클래스 간 차이점을 알아봅니다."
+title: "AdMediatorControl과 AdControl의 차이"
+translationtype: Human Translation
+ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
+ms.openlocfilehash: 291e1c4d707e8987d29ae5840248918543d7d12a
+
 ---
 
 # AdMediatorControl과 AdControl의 차이
@@ -42,6 +46,7 @@ Microsoft(다른 광고 네트워크 없음)의 배너 광고만 표시하려면
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

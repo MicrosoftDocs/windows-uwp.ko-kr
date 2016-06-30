@@ -1,8 +1,12 @@
 ---
 author: martinekuan
-title: UWP(유니버설 Windows 플랫폼) 앱 계획
-description: Microsoft 디자인 팀의 앱을 생성하는 프로세스는 개념, 구조, 역동성, 화면 효과 및 프로토타입의 5가지 단계로 구성됩니다. 유사한 프로세스를 채택하여 전 세계에 즐거움을 줄 새로운 환경을 만들어 보세요.
+title: "UWP(유니버설 Windows 플랫폼) 앱 계획"
+description: "Microsoft 디자인 팀의 앱을 생성하는 프로세스는 개념, 구조, 역동성, 화면 효과 및 프로토타입의 5가지 단계로 구성됩니다. 유사한 프로세스를 채택하여 전 세계에 즐거움을 줄 새로운 환경을 만들어 보세요."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a3058aabdc6f710149a14d8f125b66efd076007
+
 ---
 
 #  UWP(유니버설 Windows 플랫폼) 앱 계획
@@ -195,7 +199,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 이 프로세스 동안 만들어야 하는 UI와 결정해야 하는 추가 세부 사항(예제: 아직 해당 앱을 사용하고 있지 않은 친구를 위한 표준 메일 상용구 초안 작성)을 확인합니다. 불필요한 단계를 제거할 수도 있습니다. 예를 들어 공유하기 전에는 사용자가 여행 세부 사항을 볼 필요가 없을 수 있습니다. 흐름이 명확할수록 사용하기 편리해집니다.
 
-여러 화면의 사용 방법에 대한 자세한 내용은 다음을 참조하세요. <!--[Command design basics](../layout/commanding-basics.md)-->.
+여러 화면의 사용 방법에 대한 자세한 내용은 <!--[Command design basics](../layout/commanding-basics.md)-->을 참조하세요.
 
 **흐름의 느낌** 사용자가 수행할 단계를 정의하고 나면 해당 흐름을 성능 목표로 전환할 수 있습니다. 자세한 내용은 [성능 계획](../debug-test-perf/planning-and-measuring-performance.md)을 참조하세요.
 
@@ -212,7 +216,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 ![앱을 위한 PC 및 모바일 디자인](images/ux-budgettracker1-md-notablet.png)
 
-다양한 화면 크기 디자인에 대한 자세한 내용은 다음을 참조하세요. <!--[Responsive design 101](designing-in-effective-pixels.md)-->.
+다양한 화면 크기 디자인에 대한 자세한 내용은 <!--[Responsive design 101](designing-in-effective-pixels.md)-->을 참조하세요.
 
 ## 좋은 첫인상 주기
 
@@ -233,6 +237,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 [UWP 앱에 대한 자세한 UX 지침](https://msdn.microsoft.com/library/windows/apps/hh465424)을 사용하여 중요한 기능에 집중할 수 있습니다. [Visual Studio 성능 도구](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx)를 사용하여 각 앱의 시나리오 성능을 분석할 수 있습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

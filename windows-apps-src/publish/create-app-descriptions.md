@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: 앱 제출 프로세스의 설명 섹션에서는 앱 스토어 목록에서 고객에게 표시되는 텍스트 및 이미지를 제공합니다.
-title: 앱 설명 작성
+Description: "앱 제출 프로세스의 설명 섹션에서는 앱 스토어 목록에서 고객에게 표시되는 텍스트 및 이미지를 제공합니다."
+title: "앱 설명 작성"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
+ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+
 ---
 
 # 앱 설명 작성
@@ -28,7 +31,7 @@ ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 
 > **참고** 패키지에서 지원되지 않는 언어로 설명을 만드는 경우에는 이름을 가져올 언어에 연결된 패키지가 없으므로 예약된 앱 이름 중 어느 것을 해당 설명에 표시할지 나타내야 합니다. 여기서 선택한 이름만 해당 언어에 대한 스토어 목록에 적용되며 고객이 앱을 설치할 경우 표시되는 이름에는 영향을 주지 않습니다.
 
-설명을 편집하려면 제출 개요에서 해당 이름을 클릭합니다. **설명** 페이지의 섹션은 아래에서 설명합니다.
+설명을 편집하려면 제출 개요에서 언어 이름을 클릭합니다. **설명** 페이지의 섹션은 아래에서 설명합니다.
 
 ## 기본 설명 필드
 
@@ -117,6 +120,7 @@ ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 **중요** Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 앱에 개인 정보 취급 방침이 필요한지를 확인하려면 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)과 [Windows 스토어 정책](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1)을 검토하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

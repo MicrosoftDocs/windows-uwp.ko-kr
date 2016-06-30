@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: 개발자 센터 대시보드에서 실험을 정의하고 앱에 실험을 코딩하면 실험을 활성화할 준비가 된 것이며 개발자 센터 대시보드를 사용하여 실험 결과를 검토합니다.
-title: 개발자 센터 대시보드에서 실험 관리
+Description: "개발자 센터 대시보드에서 실험을 정의하고 앱에 실험을 코딩하면 실험을 활성화할 준비가 된 것이며 개발자 센터 대시보드를 사용하여 실험 결과를 검토합니다."
+title: "개발자 센터 대시보드에서 실험 관리"
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 24ca106cc83c4495657972f463c556585cdfcb45
+
 ---
 
 # 개발자 센터 대시보드에서 실험 관리
@@ -53,6 +57,7 @@ ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
   * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
-description: Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 JavaScript/HTML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다.
-title: HTML 5 및 Javascript의 AdControl
+description: "Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 JavaScript/HTML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
+title: "HTML 5 및 Javascript의 AdControl"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
+
 ---
 
 # HTML 5 및 Javascript의 AdControl
@@ -129,6 +133,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

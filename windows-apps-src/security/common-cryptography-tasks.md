@@ -1,8 +1,12 @@
 ---
-title: 일반적인 암호화 작업
-description: 이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코드 및 디코드 등의 일반적인 UWP(유니버설 Windows 플랫폼) 암호화 작업에 대한 예제 코드를 제공합니다.
+title: "일반적인 암호화 작업"
+description: "이러한 문서에서는 난수 만들기, 버퍼 비교, 문자열과 이진 데이터 간 변환, 바이트 배열에서 복사 및 데이터 인코드 및 디코드 등의 일반적인 UWP(유니버설 Windows 플랫폼) 암호화 작업에 대한 예제 코드를 제공합니다."
 ms.assetid: 2DE094F4-28E2-4C5D-BF8C-617BD90AB119
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 38d0af2cdbf4137cbd0e005fcb750ed2f0b2c87c
+
 ---
 
 # 일반적인 암호화 작업
@@ -23,6 +27,7 @@ author: awkoren
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

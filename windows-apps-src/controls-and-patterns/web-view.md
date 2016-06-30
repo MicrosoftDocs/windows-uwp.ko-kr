@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
-title: 웹 보기
+Description: "웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다."
+title: "웹 보기"
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+
 ---
 
 # 웹 보기
@@ -256,7 +260,7 @@ string returnValue = await webView1.InvokeScriptAsync("setDate", args);
 
 JavaScript **eval** 함수와 함께 **InvokeScriptAsync**를 사용하여 웹 페이지에 콘텐츠를 삽입할 수 있습니다.
 
-여기서 XAML 입력란의 텍스트(`nameTextBox.Text`)는 다음에 호스트된 HTML 페이지의 div에 기록됩니다. 
+여기서 XAML 입력란의 텍스트(`nameTextBox.Text`)는 `webView1`에 호스트된 HTML 페이지의 div에 기록됩니다. 
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -346,6 +350,7 @@ UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

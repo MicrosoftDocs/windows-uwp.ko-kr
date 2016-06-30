@@ -1,8 +1,12 @@
 ---
 author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
-title: UWP 앱 패키징
-description: UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다.
+title: "UWP 앱 패키징"
+description: "UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
+
 ---
 # UWP 앱 패키징
 
@@ -53,7 +57,7 @@ Visual Studio는 패키지를 스토어와 연결할 수 있습니다. 이렇게
 **앱 패키지를 만들려면**
 
 1.  **Solution Explorer**에서 UWP 앱 프로젝트용 솔루션을 엽니다.
-2.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **스토어**->** 패키지 만들기**를 선택합니다. 이 옵션이 사용되지 않거나 전혀 표시되지 않는 경우에는 프로젝트가 UWP 프로젝트인지 확인합니다.<br/>
+2.  프로젝트를 마우스 오른쪽 단추로 클릭하고 **스토어**->**패키지 만들기**를 선택합니다. 이 옵션이 사용되지 않거나 전혀 표시되지 않는 경우에는 프로젝트가 UWP 프로젝트인지 확인합니다.<br/>
     ![](images/packaging-screen2.jpg)
 
     **Create App Packages** 마법사가 나타납니다.
@@ -136,6 +140,7 @@ UWP 앱 패키지를 사용할 때는 장치에 데스크톱 앱과 같은 앱�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

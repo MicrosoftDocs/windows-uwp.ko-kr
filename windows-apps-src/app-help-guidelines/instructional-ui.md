@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Windows 스토어 앱 작동 방법을 안내하는 사용 안내 UI(사용자 인터페이스)를 디자인합니다.
-title: 사용 안내 UI 디자인에 대한 지침
+Description: "Windows 스토어 앱 작동 방법을 안내하는 사용 안내 UI(사용자 인터페이스)를 디자인합니다."
+title: "사용 안내 UI 디자인에 대한 지침"
 label: Instructional UI
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1c8ab97a5625243a50fa3b40ae93f5928dc7d851
+
 ---
 
 # 사용 안내 UI 지침
@@ -67,6 +71,7 @@ template: detail.hbs
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

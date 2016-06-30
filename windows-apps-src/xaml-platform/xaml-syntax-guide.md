@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다.
-title: XAML 구문 가이드
+description: "XAML 구문 규칙에 대해 설명하고 XAML 구문에 사용 가능한 선택 사항 및 제한 사항을 나타내는 용어에 대해서 설명합니다."
+title: "XAML 구문 가이드"
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+
 ---
 
 # XAML 구문 가이드
@@ -319,6 +323,7 @@ XAML 사용 섹션은 또한 다양한 범용 자리 표시자를 사용합니�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

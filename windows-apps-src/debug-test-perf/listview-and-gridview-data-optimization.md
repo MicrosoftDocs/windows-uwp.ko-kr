@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
-title: ListView 및 GridView 데이터 가상화
-description: 데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다.
+title: "ListView 및 GridView 데이터 가상화"
+description: "데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다."
+translationtype: Human Translation
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+
 ---
 # ListView 및 GridView 데이터 가상화
 
@@ -83,6 +87,7 @@ description: 데이터 가상화를 통해 ListView 및 GridView 성능과 시�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
-description: Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다.
-title: 앱 획득 가져오기
+description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다."
+title: "앱 획득 가져오기"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 7f87f931c92eca1f64fbd23b4fcba3359293f94a
+
 ---
 
 # 앱 획득 가져오기
@@ -63,7 +66,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">문자열</td>
-<td align="left">구입 데이터를 검색할 앱의 제품 ID입니다. 제품 ID는 개발자 센터 대시보드의 [앱 ID 페이지](https://msdn.microsoft.com/library/windows/apps/mt148561)에서 사용할 수 있는 앱 목록 링크에 포함되어 있습니다. 제품 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
+<td align="left">구입 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
 <td align="left">예</td>
 </tr>
 <tr class="even">
@@ -234,7 +237,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 ### 요청 예제
 
-다음 예제에서는 앱 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 제품 ID로 바꿉니다.
+다음 예제에서는 앱 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0  HTTP/1.1
@@ -263,7 +266,7 @@ Authorization: Bearer <your access token>
 | 값               | 유형   | 설명                                                                                                                                                                                                                              |
 |---------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | 문자열 | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
-| applicationId       | 문자열 | 구입 데이터를 검색할 앱의 제품 ID입니다.                                                                                                                                                                 |
+| applicationId       | 문자열 | 구입 데이터를 검색할 앱의 스토어 ID입니다.                                                                                                                                                                 |
 | applicationName     | 문자열 | 앱의 표시 이름                                                                                                                                                                                                             |
 | deviceType          | 문자열 | 구입을 완료한 디바이스의 유형입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                                  |
 | orderName           | 문자열 | 주문의 이름입니다.                                                                                                                                                                                                                   |
@@ -314,7 +317,6 @@ Authorization: Bearer <your access token>
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
-description: JavaScript를 사용하여 프로그래밍 방식으로 **AdControl**을 만드는 방법을 알아봅니다.
-title: Javascript에서 AdControl 만들기
+description: "JavaScript를 사용하여 프로그래밍 방식으로 **AdControl**을 만드는 방법을 알아봅니다."
+title: "Javascript에서 AdControl 만들기"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
+
 
 ---
 
@@ -57,6 +61,7 @@ myAdControl.onEngagedChanged = myAdEngagedChanged;
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

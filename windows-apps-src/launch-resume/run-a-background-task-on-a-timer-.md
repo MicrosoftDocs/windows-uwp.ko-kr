@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 타이머에 따라 백그라운드 작업 실행
-description: 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "타이머에 따라 백그라운드 작업 실행"
+description: "일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
+
 ---
 
 # 타이머에 따라 백그라운드 작업 실행
@@ -27,7 +30,7 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 
 -   새 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 만듭니다. 두 번째 매개 변수인 *OneShot*은 백그라운드 작업이 한 번 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
 
-    UWP(유니버설 Windows 플랫폼)앱에 대한 기본 제공 타이머는 15 분 간격으로 백그라운드 작업을 실행합니다.
+    데스크톱 또는 모바일 디바이스 패밀리를 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 기본 제공 타이머는 15분 간격으로 백그라운드 작업을 실행합니다.
 
     -   *FreshnessTime*이 15분으로 설정되고 *OneShot*이 true이면 작업이 등록된 시간부터 0분에서 15분 사이에 한 번 실행됩니다.
 
@@ -87,19 +90,19 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
-    
+
     > **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-   
+
 ## 설명
 
 > **참고** Windows 10부터 사용자가 백그라운드 작업을 활용하기 위해 더 이상 잠금 화면에 앱을 추가할 필요가 없습니다. 백그라운드 작업 트리거 유형에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
@@ -130,8 +133,6 @@ ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

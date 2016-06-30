@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: 이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
+Description: "이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다."
 Search.Refinement.TopicID: 184
-title: Segoe MDL2 아이콘 지침
+title: "Segoe MDL2 아이콘 지침"
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 9071c7dfddba15738d7bad482fd14f7cbffaa1f7
+
 ---
 
 # Segoe MDL2 아이콘에 대한 지침
@@ -1609,6 +1613,7 @@ C#/VB/C++ 및 XAML로 앱을 개발하는 경우 유니코드 ID 대신 [**Symbo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

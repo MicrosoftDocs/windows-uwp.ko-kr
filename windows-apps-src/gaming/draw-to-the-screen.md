@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 화면에 그리기
-description: 마지막으로, 화면에 회전하는 큐브를 그리는 코드를 포팅합니다.
+title: "화면에 그리기"
+description: "마지막으로, 화면에 회전하는 큐브를 그리는 코드를 포팅합니다."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+
 ---
 
 # 화면에 그리기
@@ -62,7 +66,7 @@ m_d3dDevice->CreateRenderTargetView(
 
 스왑 체인이 디스플레이에 사용할 수 있는 "백 버퍼"로 텍스처를 나타내는 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)에 대한 [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)을 Direct3D 런타임에서 암시적으로 만듭니다.
 
-Direct3D 디바이스 및 디바이스 컨텍스트와 렌더링 대상의 초기화 및 구성은 Direct3D 템플릿의 사용자 지정 **CreateDeviceResources** 및 **CreateWindowSizeDependentResources** 메서드에 있습니다.
+Direct3D 장치 및 디바이스 컨텍스트와 렌더링 대상의 초기화 및 구성은 Direct3D 템플릿의 사용자 지정 **CreateDeviceResources** 및 **CreateWindowSizeDependentResources** 메서드에 있습니다.
 
 EGL 및 EGLContext 형식에 관련된 Direct3D 디바이스 컨텍스트에 대한 자세한 내용은 [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 읽어 보세요.
 
@@ -230,6 +234,7 @@ void RenderObject::Render()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

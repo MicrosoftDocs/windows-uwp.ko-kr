@@ -1,17 +1,17 @@
 ---
-author: martinekuan
-title: C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
-description: .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다.
+author: msatranjr
+title: "C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기"
+description: ".NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+
 ---
 
 # C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 .NET Framework 4.5부터 관리 코드를 사용하여 Windows 런타임 구성 요소에 패키지된 Windows 런타임 형식을 직접 만들 수 있습니다. UWP(유니버설 Windows 플랫폼) 앱의 구성 요소를 C++, JavaScript, Visual Basic 또는 C#과 함께 사용할 수 있습니다. 이 문서에서는 구성 요소를 만들기 위한 규칙을 간략히 설명하고 Windows 런타임에 대한 .NET Framework 지원의 일부 측면을 설명합니다. 일반적으로 이 지원은 .NET Framework 프로그래머에게 투명하게 디자인되었습니다. 그러나 JavaScript 또는 C++를 사용하는 구성 요소를 만들 때는 이러한 언어와 Windows 런타임을 지원하는 방식의 차이점을 알아야 합니다.
 
@@ -121,11 +121,11 @@ Windows 런타임에서 메서드가 오버로드될 수 있습니다. 그러나
 > {
 >     return s;
 > }
-> [Windows.Foundation.Metadata.DefaultOverload()] 
+> [Windows.Foundation.Metadata.DefaultOverload()]
 > public int OverloadExample(int x)
 > {
 >     return x;
-> } 
+> }
 > ```
 > ```vb
 > Public Function OverloadExample(ByVal s As String) As String
@@ -137,7 +137,7 @@ Windows 런타임에서 메서드가 오버로드될 수 있습니다. 그러나
 > End Function
 > ```
 
-> **주의** JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다. 이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다.
+ **주의** JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다. 이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다.
 
 생성자에는 DefaultOverloadAttribute 특성을 적용할 수 없습니다. 클래스의 모든 생성자는 매개 변수 수가 달라야 합니다.
 
@@ -202,7 +202,7 @@ await를 사용하는 메서드(Visual Basic의 Await)에는 **async** 키워드
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >      As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return Task.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -225,7 +225,7 @@ function asyncExample(id) {
 
 취소 또는 진행 상황 보고를 지원하는 비동기 작업의 경우 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 시작된 작업을 생성하고 작업의 취소 및 진행 상황 보고 기능을 적절한 Windows 런타임 인터페이스의 취소 및 진행 상황 보고 기능과 연결합니다. 취소 및 진행 상황 보고를 모두 지원하는 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들어 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요.
 
-비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
+비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -241,7 +241,7 @@ function asyncExample(id) {
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >     As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -293,7 +293,6 @@ Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원�
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

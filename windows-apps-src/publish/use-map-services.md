@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도 서비스 응용 프로그램 ID와 토큰을 앱 코드에 포함해야 합니다. 서비스 섹션의 지도 페이지에 있는 개발자 센터 대시보드에서 이 토큰을 가져올 수 있습니다.
-title: 지도 서비스 사용
+Description: "Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도 서비스 응용 프로그램 ID와 토큰을 앱 코드에 포함해야 합니다. 서비스 섹션의 지도 페이지에 있는 개발자 센터 대시보드에서 이 토큰을 가져올 수 있습니다."
+title: "지도 서비스 사용"
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0d775c67492fd6afe9f65f3e5dede865f9037342
+
 ---
 
 # 지도 서비스 사용
@@ -27,6 +31,7 @@ Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

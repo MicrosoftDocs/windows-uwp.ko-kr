@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
-title: 선택기를 사용하여 파일 저장
-description: 사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다.
+title: "선택기를 사용하여 파일 저장"
+description: "사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
+
 ---
 
 # 선택기를 사용하여 파일 저장
@@ -115,6 +119,7 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

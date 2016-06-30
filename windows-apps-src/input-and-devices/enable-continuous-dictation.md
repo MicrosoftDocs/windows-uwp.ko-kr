@@ -5,8 +5,8 @@ title: "연속 받아쓰기 사용"
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: a142592f878fa539d6c40ea2abfcbf834b2de34d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 1bcf6ce700b50ff633a29863fee41c2bfa3d9f98
 
 ---
 
@@ -29,7 +29,7 @@ ms.openlocfilehash: a142592f878fa539d6c40ea2abfcbf834b2de34d
 
 
 
-## <span id="Set_up"></span><span id="set_up"></span><span id="SET_UP"></span>설정
+## 설정
 
 
 연속 받아쓰기 세션을 관리하려면 몇 가지 개체가 앱에 필요합니다.
@@ -64,7 +64,7 @@ private CoreDispatcher dispatcher;
 private StringBuilder dictatedTextBuilder;
 ```
 
-## <span id="Initialization"></span><span id="initialization"></span><span id="INITIALIZATION"></span>초기화
+## 초기화
 
 
 연속 음성 인식을 초기화하는 동안 다음 작업을 수행해야 합니다.
@@ -95,13 +95,13 @@ this.speechRecognizer = new SpeechRecognizer();
 
     여기서는 문법을 추가하지 않고 즉시 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출합니다.
 
-    <span codelanguage="CSharp"></span>
+    
 ```    CSharp
 SpeechRecognitionCompilationResult result =
       await speechRecognizer.CompileConstraintsAsync();
 ```
 
-## <span id="Handle_recognition_events"></span><span id="handle_recognition_events"></span><span id="HANDLE_RECOGNITION_EVENTS"></span>인식 이벤트 처리
+## 인식 이벤트 처리
 
 
 [
@@ -215,7 +215,7 @@ private async void ContinuousRecognitionSession_Completed(
       }
 ```
 
-## <span id="Provide_ongoing_recognition_feedback"></span><span id="provide_ongoing_recognition_feedback"></span><span id="PROVIDE_ONGOING_RECOGNITION_FEEDBACK"></span>진행 중인 인식 피드백 제공
+## 진행 중인 인식 피드백 제공
 
 
 사람들이 말할 때 말하는 내용을 완전히 이해하기 위해 보통 컨텍스트를 사용합니다. 마찬가지로, 음성 인식기의 경우에도 높은 신뢰도의 인식 결과를 제공하기 위해 컨텍스트가 필요합니다. 예를 들어 "무게" 및 "대기" 단어는 주변 단어에서 더 많은 컨텍스트를 얻을 때까지 그 자체로 구별할 수 없습니다. 인식기에서 단어가 올바르게 인식되었다는 신뢰도가 어느 수준에 도달할 때까지 [**ResultGenerated**](https://msdn.microsoft.com/library/windows/apps/dn913900) 이벤트를 발생시키지 않습니다.
@@ -244,7 +244,7 @@ private async void SpeechRecognizer_HypothesisGenerated(
   }
 ```
 
-## <span id="Start_and_stop_recognition"></span><span id="start_and_stop_recognition"></span><span id="START_AND_STOP_RECOGNITION"></span>인식 시작 및 중지
+## 인식 시작 및 중지
 
 
 인식 세션을 시작하기 전에 음성 인식기 [**State**](https://msdn.microsoft.com/library/windows/apps/dn913915) 속성의 값을 확인합니다. 음성 인식기는 [**Idle**](https://msdn.microsoft.com/library/windows/apps/dn653227) 상태여야 합니다.
@@ -282,7 +282,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 
  
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [음성 조작](speech-interactions.md)
@@ -299,6 +299,6 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

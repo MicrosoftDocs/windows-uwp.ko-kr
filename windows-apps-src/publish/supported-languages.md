@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 100개 이상 언어로 Windows 스토어에 앱을 제출할 수 있습니다.
-title: 지원되는 언어
+Description: "100개 이상 언어로 Windows 스토어에 앱을 제출할 수 있습니다."
+title: "지원되는 언어"
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
+
 ---
 
 # 지원되는 언어
@@ -134,6 +138,7 @@ ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

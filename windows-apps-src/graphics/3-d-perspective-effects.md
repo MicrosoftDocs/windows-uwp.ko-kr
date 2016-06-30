@@ -1,8 +1,12 @@
 ---
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
-title: XAML UI에 대한 3D 원근감 효과
-description: 원근 변형을 사용하여 Windows 런타임 앱의 콘텐츠에 3D 효과를 적용할 수 있습니다. 예를 들어 아래와 같이 개체가 회전하면서 다가오거나 멀어지는 환상 효과를 만들 수 있습니다.
+title: "XAML UI에 대한 3D 원근감 효과"
+description: "원근 변형을 사용하여 Windows 런타임 앱의 콘텐츠에 3D 효과를 적용할 수 있습니다. 예를 들어 아래와 같이 개체가 회전하면서 다가오거나 멀어지는 환상 효과를 만들 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
+ms.openlocfilehash: 4141d23c5102df4970ef7c4fb3659bf3ba561ccf
+
 ---
 # XAML UI에 대한 3D 원근감 효과
 
@@ -197,9 +201,10 @@ description: 원근 변형을 사용하여 Windows 런타임 앱의 콘텐츠에
 ## 개체 위치 지정
 
 [
-            **Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) 및 [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) 유형을 사용하면 [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192)을 사용할 때보다 더 복잡한 반3D 시나리오를 구현할 수 있습니다.. **Matrix3DProjection**은 임의의 모델 변형 매트릭스 및 원근 매트릭스를 요소에 적용할 수 있는 전체 3D 변환 매트릭스를 제공합니다. 이것은 모든 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에 적용할 수 있습니다. 이러한 API는 최소한의 코드로 구성된 것이므로 이러한 API를 사용하려면 3D 변형 매트릭스를 제대로 만드는 코드를 작성해야 합니다. 따라서 간단한 3D 시나리오에는 **PlaneProjection**을 사용하는 것이 더 쉽습니다. Because of this, it is easier to use <bpt id="p1">**</bpt>PlaneProjection<ept id="p1">**</ept> for simple 3D scenarios.
+            **Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) 및 [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266) 유형을 사용하면 [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192)을 사용할 때보다 더 복잡한 반3D 시나리오를 구현할 수 있습니다. **Matrix3DProjection**은 임의의 모델 변환 매트릭스 및 원근 매트릭스를 요소에 적용할 수 있도록 모든 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)에 적용할 수 있는 전체 3D 변환 매트릭스를 제공합니다. 이러한 API는 최소한의 코드로 구성된 것이므로 이러한 API를 사용하려면 3D 변형 매트릭스를 제대로 만드는 코드를 작성해야 합니다. 따라서 간단한 3D 시나리오에는 **PlaneProjection**을 사용하는 것이 더 쉽습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,6 +1,12 @@
 ---
-description: author: Xansky Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다.
-title: 연락처 선택 ms.assetid &#58; 35FEDEE6-2B0E-4391-84BA-5E9191D4E442 keywords: 연락처, 키워드 선택&#58; 단일 연락처 키워드 선택&#58; 여러 연락처 키워드 선택&#58; 연락처, 여러 키워드 선택&#58; 특정 연락처 데이터 키워드 선택&#58; 연락처, 특정 데이터 키워드 선택&#58; 연락처, 특정 필드 선택
+author: Xansky
+description: "Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다."
+title: "연락처 선택"
+ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
+keywords: contact, selecting specific fields
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 6f2c6a546ed3daa0ef0311bc54ca47f31d01f3d8
+
 ---
 
 # 연락처 선택
@@ -9,14 +15,12 @@ title: 연락처 선택 ms.assetid &#58; 35FEDEE6-2B0E-4391-84BA-5E9191D4E442 ke
 
 
 [
-              **Windows.ApplicationModel.Contacts**
-            ](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
+            **Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
 
 ## 연락처 선택 기능 설정
 
 [
-              **Windows.ApplicationModel.Contacts.ContactPicker**
-            ](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
+            **Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
@@ -25,16 +29,15 @@ var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 ## 선택 모드 설정(옵션)
 
 기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [
-              **SelectionMode**
-            ](https://msdn.microsoft.com/library/windows/apps/BR224913-selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
+            **SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
 
-먼저 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/BR224913-selectionmode) 속성을 **Fields**로 설정합니다.
+먼저 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 **Fields**로 설정합니다.
 
 ```cs
 contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelectionMode.Fields;
 ```
 
-그런 다음 [**desiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/BR224913-desiredfieldswithcontactfieldtype) 속성을 사용하여 연락처 선택 기능에서 검색할 필드를 지정합니다. 이 예제에서는 연락처 선택 기능에서 메일 주소를 검색하도록 구성합니다:
+그런 다음 [**desiredFieldsWithContactFieldType**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) 속성을 사용하여 연락처 선택 기능에서 검색할 필드를 지정합니다. 이 예제에서는 연락처 선택 기능에서 메일 주소를 검색하도록 구성합니다:
 
 ``` cs
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
@@ -46,7 +49,7 @@ contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Con
 Contact contact = await contactPicker.PickContactAsync();
 ```
 
-사용자가 하나 이상의 연락처를 선택하도록 하려면 [**pickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/BR224913-pickcontactsasync)를 사용합니다.
+사용자가 하나 이상의 연락처를 선택하도록 하려면 [**pickContactsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.pickcontactsasync)를 사용합니다.
 
 ```cs
 public IList<Contact> contacts;
@@ -231,6 +234,6 @@ public class ContactItemAdapter
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

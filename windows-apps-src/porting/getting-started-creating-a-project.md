@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다.
-title: Visual Studio에서 프로젝트 만들기
+description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac OS용입니다. 이 연습에서는 Visual Studio를 익숙하게 사용할 수 있습니다."
+title: "Visual Studio에서 프로젝트 만들기"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+
 ---
 
 # 시작&#58; 프로젝트 만들기
@@ -51,6 +55,7 @@ Visual Studio에는 다음 그림과 같은 몇 가지 프로젝트 템플릿이
 [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

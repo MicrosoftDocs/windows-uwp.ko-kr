@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: 탐색 시작
-description: 탐색 시작
+title: "탐색 시작"
+description: "탐색 시작"
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
+
 ---
 
 # 시작&#58; 탐색
@@ -82,6 +86,7 @@ public BlankPage()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

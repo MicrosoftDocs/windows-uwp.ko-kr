@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: 설정 방법
-description: 생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
+title: "설정 방법"
+description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8c5dfb692d647a25eea13036cd320366f3c5a09c
+
 ---
 # 설정 방법
 
@@ -51,6 +55,7 @@ Visual Studio 2015가 없는 경우 다음 링크를 클릭하여 Microsoft Visu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

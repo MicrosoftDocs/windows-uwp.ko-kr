@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
-description: Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 가져옵니다.
-title: 앱 평점 가져오기
+description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 등급 데이터를 가져옵니다."
+title: "앱 평점 가져오기"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: cf585c8a54f479eb91d7b9a5261dae4a83f0b675
+
 ---
 
 # 앱 평점 가져오기
@@ -63,7 +66,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">문자열</td>
-<td align="left">등급 데이터를 검색할 앱의 제품 ID입니다. 제품 ID는 개발자 센터 대시보드의 [앱 ID 페이지](https://msdn.microsoft.com/library/windows/apps/mt148561)에서 사용할 수 있는 앱 목록 링크에 포함되어 있습니다. 제품 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
+<td align="left">등급 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
 <td align="left">예</td>
 </tr>
 <tr class="even">
@@ -184,7 +187,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 ### 요청 예제
 
-다음 예제에서는 등급 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 제품 ID로 바꿉니다.
+다음 예제에서는 등급 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -213,7 +216,7 @@ Authorization: Bearer <your access token>
 | 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | 문자열  | 등급 데이터에 대한 날짜 범위의 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
-| applicationId   | 문자열  | 등급 데이터를 검색할 앱의 제품 ID입니다.                                                                                                                                                                 |
+| applicationId   | 문자열  | 등급 데이터를 검색할 앱의 스토어 ID입니다.                                                                                                                                                                 |
 | applicationName | 문자열  | 앱의 표시 이름                                                                                                                                                                                                         |
 | 출시          | 문자열  | 등급을 제출한 시장의 ISO 3166 국가 코드입니다.                                                                                                                                                              |
 | OSVersion       | 문자열  | 등급을 제출한 OS 버전입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                               |
@@ -251,7 +254,7 @@ Authorization: Bearer <your access token>
   ],
   "@nextLink": "ratings?applicationId=9NBLGGGZ5QDR&aggregationLevel=day&startDate=2015/01/01&endDate=2016/02/01&top=1&skip=1",
   "TotalCount": 15242
-} 
+}
 
 ```
 
@@ -265,7 +268,6 @@ Authorization: Bearer <your access token>
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

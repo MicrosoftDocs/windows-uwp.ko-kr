@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
-title: Microsoft OneDrive 파일의 가용성 확인
-description: StorageFile.isAvailable 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다.
+title: "Microsoft OneDrive 파일의 가용성 확인"
+description: "StorageFile.isAvailable 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17893ac17a741f2a6220b1826547c700af0f0f33
+
 ---
 # Microsoft OneDrive 파일의 가용성 확인
 
@@ -94,6 +98,7 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

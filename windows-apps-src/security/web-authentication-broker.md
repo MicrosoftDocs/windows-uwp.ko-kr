@@ -1,8 +1,12 @@
 ---
-title: 웹 인증 브로커
-description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예&#58; Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다.
+title: "웹 인증 브로커"
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예&#58; Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
+
 ---
 
 # 웹 인증 브로커
@@ -176,6 +180,7 @@ catch (Exception ex)
 
 3.  Fiddler로 들어오는 트래픽에 대한 방화벽 규칙을 추가합니다.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

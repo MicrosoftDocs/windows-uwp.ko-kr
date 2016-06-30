@@ -3,6 +3,10 @@ author: Jwmsft
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
+
 ---
 # 입력란
 TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다. 일반적으로 한 줄의 텍스트를 캡처하는 데 사용되지만 여러 줄의 텍스트를 캡처하도록 구성할 수 있습니다. 텍스트는 단순하고 균일한 일반 텍스트 형식으로 화면에 표시됩니다.
@@ -80,8 +84,7 @@ rootGrid.Children.Add(textBox);
 
 IsReadOnly 속성을 true로 설정하여 TextBox를 읽기 전용으로 만들 수 있습니다. 예를 들어 사용자가 설명을 입력하는 TextBox를 특정 조건에서만 사용할 수 있게 할 수 있습니다. 조건이 충족될 때까지 TextBox를 읽기 전용으로 만들 수 있습니다. 텍스트를 표시만 해야 하는 경우 TextBlock 또는 RichTextBlock을 대신 사용하는 것이 좋습니다.
 
-읽기 전용 입력란은 읽기/쓰기 입력란과 동일하게 표시되므로 사용자에게 혼동을 줄 수 있습니다. 
-사용자는 텍스트를 선택하여 복사할 수 있습니다.
+읽기 전용 입력란은 읽기/쓰기 입력란과 동일하게 표시되므로 사용자에게 혼동을 줄 수 있습니다. 사용자는 텍스트를 선택하여 복사할 수 있습니다.
 IsEnabled
 
 
@@ -278,6 +281,7 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

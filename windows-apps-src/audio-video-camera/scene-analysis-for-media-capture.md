@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: 이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
-title: 미디어 캡처의 장면 분석
+description: "이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다."
+title: "미디어 캡처의 장면 분석"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 891c0d274c2d3fb82f855011158ecd3ccdcd87b3
+
 ---
 
 # 미디어 캡처의 장면 분석
@@ -130,6 +134,7 @@ title: 미디어 캡처의 장면 분석
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

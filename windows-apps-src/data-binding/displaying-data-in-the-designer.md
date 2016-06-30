@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
-description: 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다.
+title: "디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터"
+description: "앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
+ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
+
 ---
 디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
@@ -141,6 +145,7 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 ![프로토타입 생성용 샘플 데이터](images/displaying-data-in-the-designer-04.png)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

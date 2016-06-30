@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
-title: 방향 센서 사용
-description: 방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다.
+title: "방향 센서 사용"
+description: "방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
+
 ---
 # 방향 센서 사용
 
@@ -351,6 +355,7 @@ SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

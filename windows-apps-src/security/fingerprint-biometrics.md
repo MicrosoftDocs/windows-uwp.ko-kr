@@ -1,8 +1,12 @@
 ---
-title: 지문 생체 인식
-description: 이 문서에서는 UWP(Universal Windows Platform) 앱에 지문 생체 인식을 추가하는 방법을 설명합니다.
+title: "지문 생체 인식"
+description: "이 문서에서는 UWP(Universal Windows Platform) 앱에 지문 생체 인식을 추가하는 방법을 설명합니다."
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 093924b51c48c3bed71e0a47b10fc80f966b34ac
+
 ---
 
 # 지문 생체 인식
@@ -121,6 +125,7 @@ private async System.Threading.Tasks.Task<string> RequestConsent(string userMess
 }
 ```
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

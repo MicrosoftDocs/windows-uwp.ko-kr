@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임용 프로젝트 템플릿 및 도구
-description: UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래밍을 시작하는 데 필요한 사항을 보여 줍니다.
+title: "게임용 프로젝트 템플릿 및 도구"
+description: "UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래밍을 시작하는 데 필요한 사항을 보여 줍니다."
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
+
 ---
 
 # 게임용 프로젝트 템플릿 및 도구
@@ -18,7 +22,7 @@ ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
 ## Visual Studio 다운로드
 
 
-Microsoft Visual Studio 2015 다운로드 및 설치
+[Microsoft Visual Studio 2015를 다운로드하여 설치합니다](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -76,6 +80,7 @@ DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

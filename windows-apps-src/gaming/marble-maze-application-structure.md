@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Marble Maze 응용 프로그램 구조
-description: DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다.
+title: "Marble Maze 응용 프로그램 구조"
+description: "DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
+
 ---
 
 # Marble Maze 응용 프로그램 구조
@@ -373,6 +377,7 @@ void MarbleMaze::LoadState()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

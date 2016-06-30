@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
-description: Windows SDK, Microsoft 스토어 참여 및 수익 창출 SDK 및 Windows 스토어는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다.
-title: 앱으로 수익 창출
+description: "Windows SDK, Microsoft 스토어 참여 및 수익 창출 SDK 및 Windows 스토어는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다."
+title: "앱으로 수익 창출"
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: 6d5f483b44ae4516f4969431e31f70388a66c5d9
+
 ---
 
 # 앱으로 수익 창출 및 고객 참여 유도
@@ -28,6 +32,7 @@ Windows 스토어에서 청구되는 수수료 및 앱으로 번 돈을 지급 �
 | [Windows 스토어 서비스 사용](using-windows-store-services.md)                                    | Windows 스토어는 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 특정 유형의 데이터를 프로그래밍 방식으로 액세스하기 위해 REST API를 통해 호출할 수 있는 여러 서비스를 표시합니다.    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

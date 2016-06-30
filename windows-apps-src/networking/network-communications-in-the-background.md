@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: 앱은 포그라운드에 없을 때 통신을 유지하기 위해 백그라운드 작업과 두 가지 기본 메커니즘을 사용합니다.
-title: 백그라운드에서의 네트워크 통신
+description: "앱은 포그라운드에 없을 때 통신을 유지하기 위해 백그라운드 작업과 두 가지 기본 메커니즘을 사용합니다."
+title: "백그라운드에서의 네트워크 통신"
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
+
 ---
 
 # 백그라운드에서의 네트워크 통신
@@ -444,8 +448,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 
 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다.
 
-**참고** 
-           SSL을 사용하는 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용하여 현재 지원되지 않습니다.
+**참고** SSL을 사용하는 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)는 네트워크 트리거 기능 및 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용하여 현재 지원되지 않습니다.
 
  
 [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
@@ -609,6 +612,7 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

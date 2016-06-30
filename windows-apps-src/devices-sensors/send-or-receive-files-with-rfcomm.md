@@ -1,8 +1,11 @@
 ---
-author: DBirtolo
+author: msatranjr
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
-description: 이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다.
+description: "이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다."
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: 61e5844f18d09aa170498d261ca1a6fd60ef170c
+
 ---
 # Bluetooth RFCOMM
 
@@ -365,6 +368,7 @@ void OnConnectionReceived(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

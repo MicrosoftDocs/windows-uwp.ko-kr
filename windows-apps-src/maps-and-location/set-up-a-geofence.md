@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: 지오펜스 설정
-description: 앱에서 지오펜스를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다.
+title: "지오펜스 설정"
+description: "앱에서 지오펜스를 설정하고 포그라운드 및 백그라운드에서 알림을 처리하는 방법을 알아봅니다."
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+
 ---
 
 # 지오펜스 설정
@@ -475,6 +479,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
-title: 보안 Windows 앱 개발 소개
-description: 이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다.
+title: "보안 Windows 앱 개발 소개"
+description: "이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다."
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: c09170042841dcff6625d1d236cf708c717301c5
+
 ---
 
 # 보안 Windows 앱 개발 소개
@@ -500,6 +504,7 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

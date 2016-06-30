@@ -1,8 +1,11 @@
 ---
 author: mtoepke
-title: OpenGL ES 2.0에서 Direct3D 11로 포팅
-description: OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅에 대한 문서, 개요 및 설명이 포함되어 있습니다.
+title: "OpenGL ES 2.0에서 Direct3D 11로 포팅"
+description: "OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으로 포팅에 대한 문서, 개요 및 설명이 포함되어 있습니다."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
+ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
+
 ---
 
 # OpenGL ES 2.0에서 Direct3D 11로 포팅
@@ -33,8 +36,8 @@ OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으�
 <td align="left"><p>처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요. 이 섹션의 항목은 그래픽 처리를 Direct3D로 이동할 때 수행해야 하는 API 변경과 포팅 전략을 계획하는 데 도움이 됩니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[OpenGL ES 2.0에서의 연습 샘플 포팅](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
-<td align="left"><p>이 항목에서는 각각 복잡한 정도가 다른 다양한 OpenGL ES 2.0 그래픽 파이프라인 포팅 시나리오를 살펴봅니다.</p></td>
+<td align="left"><p>[방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11.1로 포팅](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)</p></td>
+<td align="left"><p>이 포팅 연습에 대한 기본 사항인 Visual Studio 2015에서 DirectX 11 앱(유니버설 Windows) 템플릿을 일치시키는 것과 같이, 회전하는 꼭짓점 음영 큐브에 대한 간단한 렌더러를 OpenGL ES 2.0에서 Direct3D로 가져오기에 대해 먼저 살펴보겠습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[OpenGL ES 2.0-Direct3D 11.1 참조](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
@@ -59,6 +62,7 @@ OpenGL ES 2.0 그래픽 파이프라인을 Direct3D 11 및 Windows 런타임으�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

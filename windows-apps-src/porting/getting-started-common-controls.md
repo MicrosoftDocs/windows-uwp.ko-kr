@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
-description: 공용 컨트롤 시작
-title: 공용 컨트롤 시작
+description: "공용 컨트롤 시작"
+title: "공용 컨트롤 시작"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+
 ---
 
 # 시작&#58; 공용 컨트롤
@@ -57,6 +61,7 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 * [2014 빌드: Visual Studio를 사용하여 XAML 수렴형 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

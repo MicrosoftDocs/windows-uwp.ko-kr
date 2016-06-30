@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 스토어에서 앱 및 콘텐츠를 홍보하는 방법을 알아봅니다. 이러한 지침에서는 사용 가능한 자산을 사용하는 방법과 인쇄물, TV, 소셜 미디어 및 디지털 광고에서 앱을 홍보하는 것에 대한 권장 사항을 설명합니다.
-title: Windows 스토어 앱 마케팅 지침
+Description: "Windows 스토어에서 앱 및 콘텐츠를 홍보하는 방법을 알아봅니다. 이러한 지침에서는 사용 가능한 자산을 사용하는 방법과 인쇄물, TV, 소셜 미디어 및 디지털 광고에서 앱을 홍보하는 것에 대한 권장 사항을 설명합니다."
+title: "Windows 스토어 앱 마케팅 지침"
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+
 ---
 
 # Windows 스토어 앱 마케팅 지침
@@ -53,6 +57,7 @@ Microsoft는 Microsoft 마크 및 관련 영업권의 독점 소유자이며 Mic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

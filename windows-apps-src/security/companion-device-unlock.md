@@ -1,7 +1,11 @@
 ---
-title: 도우미 (IoT) 디바이스에서 Windows 잠금 해제
-description: 도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. 도우미 디바이스 프레임워크를 사용하면 Windows Hello를 사용할 수 없는 경우(예&#58; Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다.
+title: "도우미 (IoT) 디바이스에서 Windows 잠금 해제"
+description: "도우미 디바이스는 사용자 인증 환경을 향상하기 위해 Windows 10 데스크톱과 함께 실행할 수 있습니다. 도우미 디바이스 프레임워크를 사용하면 Windows Hello를 사용할 수 없는 경우(예&#58; Windows 10 데스크톱에 안면 인증용 카메라 또는 지문 판독기를 사용할 수 없는 경우)에도 Microsoft Passport에 풍부한 환경을 제공할 수 있습니다."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
+ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
+
 ---
 # 도우미 (IoT) 디바이스에서 Windows 잠금 해제
 
@@ -676,6 +680,7 @@ namespace SecondaryAuthFactorSample
 - 사용자 현재 상태 신호를 사용할 수 있는지 확인합니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

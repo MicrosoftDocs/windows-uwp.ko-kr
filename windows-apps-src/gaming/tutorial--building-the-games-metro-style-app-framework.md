@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
-description: DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다.
+title: "게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의"
+description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+
 ---
 
 #  게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
@@ -1422,6 +1426,7 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

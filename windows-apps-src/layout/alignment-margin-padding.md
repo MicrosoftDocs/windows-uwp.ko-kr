@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 페이지의 요소 레이아웃에 영향을 주는 맞춤, 여백 및 안쪽 여백을 사용합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱의 맞춤, 여백 및 안쪽 여백
+Description: "페이지의 요소 레이아웃에 영향을 주는 맞춤, 여백 및 안쪽 여백을 사용합니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱의 맞춤, 여백 및 안쪽 여백"
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 86635255fbdae83fb2749e2aea7011a8b989e83f
+
 ---
 # 맞춤, 여백 및 안쪽 여백
 
@@ -91,6 +95,7 @@ template: detail.hbs
 [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

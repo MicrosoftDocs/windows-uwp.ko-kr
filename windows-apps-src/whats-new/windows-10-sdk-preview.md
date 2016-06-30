@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-title: Windows 10의 새로운 기능
-description: Windows 10 Anniversary SDK Preview 빌드 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다.
+title: "Windows 10의 새로운 기능"
+description: "Windows 10 Anniversary SDK Preview 빌드 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 46b5ad404811894899810f83efb9970e338e7051
+ms.openlocfilehash: 5cce4a0fbfe85126f15cb013a9b46f058006a5e1
+
 ---
 
 # Windows의 새로운 기능
@@ -24,6 +28,7 @@ Windows IoT | Windows 10 IoT Core는 친숙한 Windows 기능을 사용하여 Io
 지도 API | 개발자가 거리가 멀거나 수평선 가까이의 시야가 심하게 경사진 지역을 제외하고 카메라 가까이에 있는 보이는 지역을 파악할 수 있도록 [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank)이 개선되었습니다. [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank) 클래스가 확장되어 개발자들은 원하는 정확도를 지정함으로써 역 지오코딩을 수행할 때 네트워크 트래픽을 최적화할 수 있습니다. 이제 개발자들은 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) 메서드를 사용하고 경도와 위도를 지정하여 오프라인 지도를 다운로드할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank)을 참조하세요.
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

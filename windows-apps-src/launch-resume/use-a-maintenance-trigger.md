@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 유지 관리 트리거 사용
-description: 디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "유지 관리 트리거 사용"
+description: "디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
+
 ---
 
 # 유지 관리 트리거 사용
@@ -35,12 +38,12 @@ ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > uint waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger taskTrigger = new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 > ```cpp
 > unsigned int waitIntervalMinutes = 60;
-> 
+>
 > MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 > ```
 
@@ -71,16 +74,16 @@ ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Maintenance background task example";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, taskTrigger, exampleCondition);
     > ```
-    
+
     > **참고** 데스크톱을 제외한 모든 디바이스 패밀리의 경우 디바이스의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
 
     > **참고** 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
@@ -119,8 +122,6 @@ ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

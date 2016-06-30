@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 기본 메시 만들기 및 표시
-description: 3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다각형을 사용하여 게임의 개체와 표면을 나타냅니다.
+title: "기본 메시 만들기 및 표시"
+description: "3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다각형을 사용하여 게임의 개체와 표면을 나타냅니다."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+
 ---
 
 # 기본 메시 만들기 및 표시
@@ -447,6 +451,7 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

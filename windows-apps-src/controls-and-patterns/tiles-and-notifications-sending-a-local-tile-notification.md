@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다.
-title: 로컬 타일 알림 보내기
+Description: "이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다."
+title: "로컬 타일 알림 보내기"
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+
 ---
 
 # 로컬 타일 알림 보내기
@@ -316,6 +320,7 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

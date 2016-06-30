@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: 개체 참조의 필드가 private 기본 동작 대신 public 액세스로 정의되도록 XAML 컴파일 동작을 수정합니다.
-title: xFieldModifier 특성
+description: "개체 참조의 필드가 private 기본 동작 대신 public 액세스로 정의되도록 XAML 컴파일 동작을 수정합니다."
+title: "xFieldModifier 특성"
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
+
 ---
 
 # x&#58;FieldModifier 특성
@@ -33,6 +37,7 @@ ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

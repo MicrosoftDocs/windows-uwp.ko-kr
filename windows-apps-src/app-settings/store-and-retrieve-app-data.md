@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 로컬, 로밍 및 임시 앱 데이터를 저장하고 검색하는 방법에 대해 알아봅니다.
-title: 설정 및 기타 앱 데이터 저장 및 검색
+Description: "로컬, 로밍 및 임시 앱 데이터를 저장하고 검색하는 방법에 대해 알아봅니다."
+title: "설정 및 기타 앱 데이터 저장 및 검색"
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
+
 ---
 
 # 설정 및 기타 앱 데이터 저장 및 검색
@@ -66,7 +70,7 @@ Windows.Storage.StorageFolder localFolder =
 
 ### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>간단한 로컬 설정 만들기 및 검색
 
-설정을 만들거나 작성하려면 앞 단계에서 가져온 `localSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 이 예제에서는 다음과 같은 이름의 설정을 만듭니다.
+설정을 만들거나 작성하려면 앞 단계에서 가져온 `localSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 이 예제에서는 `exampleSetting`이라는 설정을 만듭니다.
 
 ```CSharp
 // Simple setting
@@ -240,7 +244,7 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
 
 ### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>로밍 설정 만들기 및 검색
 
-앞 섹션에서 가져온 `roamingSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 다음 예제에서는 `exampleSetting`이라는 간단한 설정 및 다음과 같은 이름의 복합 값을 만듭니다.
+앞 섹션에서 가져온 `roamingSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 다음 예제에서는 `exampleSetting`이라는 간단한 설정 및 `composite`라는 복합 값을 만듭니다.
 
 ```CSharp
 // Simple setting
@@ -462,6 +466,7 @@ localSettings.DeleteContainer("exampleContainer");
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

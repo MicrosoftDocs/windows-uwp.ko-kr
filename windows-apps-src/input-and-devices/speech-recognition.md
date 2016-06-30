@@ -5,8 +5,8 @@ title: "음성 인식"
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6d1449ede6912add8b8f7e60760d4547c035ed60
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 66bab97e7108a1728e9659a04ea2f1ecf15f68b7
 
 ---
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: 6d1449ede6912add8b8f7e60760d4547c035ed60
 음성 인식은 음성 런타임, 런타임을 프로그래밍하기 위한 인식 API, 바로 사용할 수 있는 받아쓰기 및 웹 검색 문법, 사용자가 음성 인식 기능을 검색하고 사용하는 데 도움이 되는 기본 시스템 UI로 구성됩니다.
 
 
-## <span id="Set_up_the_audio_feed"></span><span id="set_up_the_audio_feed"></span><span id="SET_UP_THE_AUDIO_FEED"></span>오디오 피드 설정
+## 오디오 피드 설정
 
 
 디바이스에 마이크 또는 이와 동등한 요소가 있는지 확인합니다.
@@ -33,7 +33,7 @@ ms.openlocfilehash: 6d1449ede6912add8b8f7e60760d4547c035ed60
 
 [앱 기능 선언](https://msdn.microsoft.com/library/windows/apps/mt270968)을 참조하세요.
 
-## <span id="Recognize_speech_input"></span><span id="recognize_speech_input"></span><span id="RECOGNIZE_SPEECH_INPUT"></span>음성 입력 인식
+## 음성 입력 인식
 
 
 *제약 조건*은 앱이 음성 입력에서 인식하는 단어와 구(어휘)를 정의합니다. 제약 조건은 음성 인식의 핵심이며 앱의 음성 인식 정확도를 높입니다.
@@ -70,7 +70,7 @@ private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></
 
     We then catch any standard exceptions during recogntion and test if the [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) value is equal to the value of the HResultPrivacyStatementDeclined variable. If so, we display a warning and call `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` to open the Settings page.
 
-    <span codelanguage="CSharp"></span>
+    
 ```    CSharp
     <colgroup>
     <col width="100%" />
@@ -147,7 +147,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Customize_the_recognition_UI"></span><span id="customize_the_recognition_ui"></span><span id="CUSTOMIZE_THE_RECOGNITION_UI"></span>인식 UI 사용자 지정
+## 인식 UI 사용자 지정
 
 
 앱에서 [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245)를 호출하여 음성 인식을 시도하는 경우 여러 화면이 다음과 같은 순서로 표시됩니다.
@@ -204,7 +204,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 **개발자**
@@ -223,6 +223,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

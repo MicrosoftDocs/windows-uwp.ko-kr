@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다.
-title: XAML 개요
+description: "Windows 런타임 앱 개발자에게 XAML 언어와 XAML 개념을 소개하고 XAML에서 Windows 런타임 앱을 만드는 데 사용되는 개체를 선언하고 특성을 설정하는 다양한 방법을 설명합니다."
+title: "XAML 개요"
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
+translationtype: Human Translation
+ms.sourcegitcommit: 57b406f8210a9de729deec1fd2003973ac91f9cd
+ms.openlocfilehash: 9ddb584efe7c6406f78b5a0cf0bdc73a974afd18
+
 ---
 
 # XAML 개요
@@ -59,10 +63,9 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 |------|-------------|
 | [x:Key](x-key-attribute.md) | XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 각 리소스에 대해 고유한 사용자 정의 키를 설정합니다. 키의 토큰 문자열은 **StaticResource** 태그 확장에 대한 인수이며, 나중에 이 키를 사용하여 앱 XAML의 다른 위치에서 달리 사용된 XAML의 XAML 리소스를 검색합니다. |
 | [x:Class](x-class-attribute.md) | XAML 페이지에 대한 코드 숨김을 제공하는 클래스의 코드 네임스페이스 및 코드 클래스 이름을 지정합니다. 이 이름은 앱을 빌드할 때 빌드 작업에 의해 만들어지거나 조인되는 클래스를 지정합니다. 이 빌드 작업은 XAML 태그 컴파일러를 지원하고 앱이 컴파일될 때 태그와 코드 숨김을 결합합니다. XAML 페이지에 대해 코드 숨김을 지원하려면 이런 클래스가 있어야 합니다. 기본 Windows 런타임 활성화 모델의 [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051)입니다. |
-| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** 
-           [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 프레임워크 내의 비슷한 속성이지만, 모든 요소가 이를 지원하지는 않습니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
+| [x:Name](x-name-attribute.md) | XAML에 정의된 개체 요소를 처리한 후 런타임 코드에 존재하는 인스턴스에 대한 런타임 개체 이름을 지정합니다. XAML에서 **x:Name**을 설정하는 것을 코드에서 명명된 변수를 선언하는 것과 같다고 생각하면 됩니다. 나중에 알게 되겠지만, XAML이 Windows 런타임 앱의 구성 요소로 로드될 때 이와 똑같은 상황이 발생합니다. <br/><div class="alert">**참고** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 프레임워크 내의 비슷한 속성이지만, 모든 요소가 이를 지원하지는 않습니다. 해당 요소 형식에서 **FrameworkElement.Name**이 지원되지 않는 경우 요소 식별을 위해 **x:Name**을 사용합니다. |
 | [x:Uid](x-uid-directive.md) | 해당 속성 값 중 일부에 대해 지역화된 리소스를 사용해야 하는 요소를 식별합니다. **x:Uid**를 사용하는 방법에 대한 자세한 내용은 [빠른 시작: UI 리소스 변환](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329)을 참조하세요. |
-| [XAML 인트린직 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML 해당 값의 경우 **x:Boolean** 내부 형식을 다음과 같이 개체 요소로 사용합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
+| [XAML 기본 데이터 형식](xaml-intrinsic-data-types.md) | 이 형식은 특성 또는 리소스에 필요할 경우 단순 값 형식에 대한 값을 지정할 수 있습니다. 이러한 내부 형식은 일반적으로 각 프로그래밍 언어의 내부 정의의 일부로 정의되는 단순 값 형식에 해당합니다. 예를 들어 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) 스토리보드 시각적 상태에서 사용할 **true** 부울 값을 나타내는 개체가 필요할 수 있습니다. XAML 해당 값의 경우 **x:Boolean** 내부 형식을 다음과 같이 개체 요소로 사용합니다. <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
 XAML 언어 XAML 네임스페이스의 다른 프로그래밍 구조도 있지만 잘 사용되지 않습니다.
 
@@ -140,7 +143,7 @@ XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 �
 <Button Click="showUpdatesButton-Click">Show updates</Button>
 ```
 
-컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한 이 메서드는 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 위임 계약을 충족해야 합니다. 예를 들면 다음과 같습니다.
+컴파일하면 이제 컴파일러가 이름이 `showUpdatesButton-Click`인 메서드가 코드 숨김 파일에 정의되어 있고 네임스페이스에서 XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언되어 있다고 예상합니다. 또한 이 메서드는 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트의 위임 계약을 충족해야 합니다. 예:
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -188,59 +191,60 @@ namespace App1
 
 ## XAML 및 XML
 
-XAML 언어는 기본적으로 XML 언어를 기반으로 합니다. 하지만 XAML은 XML을 현저하게 확장합니다. 특히 백업 형식 개념과의 관계로 인해 스키마 개념을 완전히 다르게 처리하고 연결된 멤버, 태그 확장 등과 같은 언어 요소를 추가합니다. **xml:lang**는 XAML에서도 유효하지만, 구문 분석 동작이 아닌 런타임에 영향을 주며 일반적으로 프레임워크 수준 속성으로 별칭이 지정됩니다. 자세한 내용은 [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066)를 참조하세요.. **xml:base**는 태그에 유효하지만 파서에서는 무시됩니다. **xml:space**는 유효하지만 [XAML 및 공백](xaml-and-whitespace.md) 항목에 설명된 시나리오에만 적합합니다. **encoding** 특성은 XAML에서 유효합니다. UTF-8 및 UTF-16 인코딩만 지원됩니다. UTF-32 인코딩은 지원되지 않습니다. XAML의 대/소문자 구분
+XAML 언어는 기본적으로 XML 언어를 기반으로 합니다. 하지만 XAML은 XML을 현저하게 확장합니다. 특히 백업 형식 개념과의 관계로 인해 스키마 개념을 완전히 다르게 처리하고 연결된 멤버, 태그 확장 등과 같은 언어 요소를 추가합니다. **xml:lang**는 XAML에서도 유효하지만, 구문 분석 동작이 아닌 런타임에 영향을 주며 일반적으로 프레임워크 수준 속성으로 별칭이 지정됩니다. 자세한 내용은 [**FrameworkElement.Language**](https://msdn.microsoft.com/library/windows/apps/hh702066)를 참조하세요. **xml:base**는 태그에 유효하지만 파서에서는 무시됩니다. **xml:space**는 유효하지만 [XAML 및 공백](xaml-and-whitespace.md) 항목에 설명된 시나리오에만 적합합니다. **encoding** 특성은 XAML에서 유효합니다. UTF-8 및 UTF-16 인코딩만 지원됩니다. UTF-32 인코딩은 지원되지 않습니다.
 
-###  XAML은 대/소문자를 구분합니다.
+###  XAML의 대/소문자 구분
 
-이는 대/소문자를 구분하는 XML을 기반으로 하는 XAML의 다른 결과입니다. XAML 요소 및 특성의 이름은 대/소문자를 구분합니다. 특성 값은 대/소문자를 구분할 수 있지만, 특정 속성에 대한 특성 값이 처리되는 방법에 따라 달라집니다. 예를 들어 특성 값이 열거형의 멤버 이름을 선언하는 경우 멤버 이름 문자열의 형식을 변환하여 열거형 멤버 값을 반환하는 기본 제공 동작은 대/소문자를 구분하지 않습니다. 반대로 **Name** 속성 값과 **Name** 속성이 선언하는 이름을 기반으로 개체 작업을 하는 유틸리티 메서드는 이름 문자열의 대/소문자를 구분합니다. XAML 이름 범위
+XAML은 대/소문자를 구분합니다. 이는 대/소문자를 구분하는 XML을 기반으로 하는 XAML의 다른 결과입니다. XAML 요소 및 특성의 이름은 대/소문자를 구분합니다. 특성 값은 대/소문자를 구분할 수 있지만, 특정 속성에 대한 특성 값이 처리되는 방법에 따라 달라집니다. 예를 들어 특성 값이 열거형의 멤버 이름을 선언하는 경우 멤버 이름 문자열의 형식을 변환하여 열거형 멤버 값을 반환하는 기본 제공 동작은 대/소문자를 구분하지 않습니다. 반대로 **Name** 속성 값과 **Name** 속성이 선언하는 이름을 기반으로 개체 작업을 하는 유틸리티 메서드는 이름 문자열의 대/소문자를 구분합니다.
 
-## XAML 언어는 XAML namescope 개념을 정의합니다.
+## XAML 이름 범위
 
-XAML namescope 개념은 XAML 프로세서에서 XAML 요소에 적용된 **x:Name** 또는 **Name** 값을 처리하는 방법 특히, 이름을 고유한 식별자로 사용해야 하는 범위에 영향을 줍니다. XAML namescopes에 대한 자세한 내용은 [XAML namescopes](xaml-namescopes.md)를 참조하세요. 개발 프로세스에서 XAML의 역할
+XAML 언어는 XAML namescope 개념을 정의합니다. XAML namescope 개념은 XAML 프로세서에서 XAML 요소에 적용된 **x:Name** 또는 **Name** 값을 처리하는 방법 특히, 이름을 고유한 식별자로 사용해야 하는 범위에 영향을 줍니다. XAML namescopes에 대한 자세한 내용은 [XAML namescopes](xaml-namescopes.md)를 참조하세요.
 
-## XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
+## 개발 프로세스에서 XAML의 역할
 
-C#, Visual Basic 또는 C++/CX.를 사용하여 프로그래밍하는 경우 XAML은 앱 UI와 해당 UI의 요소를 선언하는 데 사용되는 기본 형식입니다.
+XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 
--   처음에 표시된 UI의 경우 일반적으로 프로젝트에서 하나 이상의 XAML 파일이 앱의 페이지를 은유적으로 표시합니다. 추가 XAML 파일이 탐색 UI의 추가 페이지를 선언할 수 있습니다. 다른 XAML 파일은 템플릿이나 스타일 같은 리소스를 선언할 수 있습니다. XAML 형식은 앱의 컨트롤 및 UI에 적용되는 스타일 및 템플릿을 선언하는 데 사용됩니다.
--   기존 컨트롤에 템플릿을 지정하거나 기본 템플릿을 컨트롤 패키지의 일부로 제공하는 컨트롤을 정의한 경우 스타일 및 템플릿을 사용할 수 있습니다.
--   스타일 및 템플릿을 정의하는 데 사용하는 경우 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 루트를 사용하여 관련 XAML을 별개의 XAML 파일로 선언하는 경우가 많습니다. XAML은 앱 UI를 만들고 서로 다른 디자이너 앱 사이에서 UI 디자인을 교환하는 데 도움을 주는 디자이너 지원의 일반적인 형식입니다.
--   특히 앱의 XAML은 다른 XAML 디자인 도구(또는 도구 내의 디자인 화면) 간에 교환될 수 있습니다. 여러 다른 기술도 XAML에서 기본 UI를 정의합니다.
--   WPF(Windows Presentation Foundation) XAML 및 Microsoft Silverlight XAML과 관련하여 Windows 런타임 앱에 대한 XAML은 공유되는 기본 XAML 네임스페이스에 대한 동일한 URI를 사용합니다. Windows 런타임 앱의 XAML 용어 모음은 Silverlight에서도 사용되고 WPF의 경우 약간 적은 범위에서 사용되는 UI용 XAML 용어 모음과 많은 부분에서 겹칩니다. 따라서 XAML은 마찬가지로 XAML을 사용하는 이전 기술에 대해 원래 정의된 UI에 효율적인 마이그레이션 경로를 제공합니다. XAML은 UI의 시각적 모양을 정의하고 관련된 코드 숨김 파일은 논리를 정의합니다.
--   코드 숨김의 논리를 변경하지 않고도 UI 디자인을 조정할 수 있습니다. XAML은 디자이너와 개발자 간 워크플로를 단순화합니다. XAML 언어에 대한 비주얼 디자이너 및 디자인 화면 지원이 풍부하여 XAML은 초기 개발 단계에서 빠른 UI 프로토타입 지정을 지원합니다.
--   개발 프로세스에서 수행하는 고유 역할에 따라 XAML을 별로 많이 조작하지 않을 수 있습니다.
+-   C#, Visual Basic 또는 C++/CX.를 사용하여 프로그래밍하는 경우 XAML은 앱 UI와 해당 UI의 요소를 선언하는 데 사용되는 기본 형식입니다. 처음에 표시된 UI의 경우 일반적으로 프로젝트에서 하나 이상의 XAML 파일이 앱의 페이지를 은유적으로 표시합니다. 추가 XAML 파일이 탐색 UI의 추가 페이지를 선언할 수 있습니다. 다른 XAML 파일은 템플릿이나 스타일 같은 리소스를 선언할 수 있습니다.
+-   XAML 형식은 앱의 컨트롤 및 UI에 적용되는 스타일 및 템플릿을 선언하는 데 사용됩니다.
+-   기존 컨트롤에 템플릿을 지정하거나 기본 템플릿을 컨트롤 패키지의 일부로 제공하는 컨트롤을 정의한 경우 스타일 및 템플릿을 사용할 수 있습니다. 스타일 및 템플릿을 정의하는 데 사용하는 경우 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 루트를 사용하여 관련 XAML을 별개의 XAML 파일로 선언하는 경우가 많습니다.
+-   XAML은 앱 UI를 만들고 서로 다른 디자이너 앱 사이에서 UI 디자인을 교환하는 데 도움을 주는 디자이너 지원의 일반적인 형식입니다. 특히 앱의 XAML은 다른 XAML 디자인 도구(또는 도구 내의 디자인 화면) 간에 교환될 수 있습니다.
+-   여러 다른 기술도 XAML에서 기본 UI를 정의합니다. WPF(Windows Presentation Foundation) XAML 및 Microsoft Silverlight XAML과 관련하여 Windows 런타임 앱에 대한 XAML은 공유되는 기본 XAML 네임스페이스에 대한 동일한 URI를 사용합니다. Windows 런타임 앱의 XAML 용어 모음은 Silverlight에서도 사용되고 WPF의 경우 약간 적은 범위에서 사용되는 UI용 XAML 용어 모음과 많은 부분에서 겹칩니다. 따라서 XAML은 마찬가지로 XAML을 사용하는 이전 기술에 대해 원래 정의된 UI에 효율적인 마이그레이션 경로를 제공합니다.
+-   XAML은 UI의 시각적 모양을 정의하고 관련된 코드 숨김 파일은 논리를 정의합니다. 코드 숨김의 논리를 변경하지 않고도 UI 디자인을 조정할 수 있습니다. XAML은 디자이너와 개발자 간 워크플로를 단순화합니다.
+-   XAML 언어에 대한 비주얼 디자이너 및 디자인 화면 지원이 풍부하여 XAML은 초기 개발 단계에서 빠른 UI 프로토타입 지정을 지원합니다.
 
-XAML 파일을 조작하는 정도는 사용하는 개발 환경, 도구 상자 및 속성 편집기 같은 대화형 디자인 환경 기능을 사용하는지 여부 그리고 Windows 런타임 앱의 범위 및 목적에 따라 다릅니다. 하지만 앱 개발 중에는 텍스트 또는 XML 편집기를 사용하여 요소 수준에서 XAML 파일을 편집할 가능성이 큽니다. 이러한 정보를 사용하여 개발자는 확신을 가지고 텍스트 또는 XML 표현의 XAML을 편집할 수 있으며 도구, 태그 컴파일 작업 또는 Windows 런타임 앱의 런타임 단계에서 사용되는 경우 해당 XAML 파일의 선언 및 목적 유효성을 관리할 수 있습니다. 로드 성능을 위해 XAML을 최적화합니다.
+개발 프로세스에서 수행하는 고유 역할에 따라 XAML을 별로 많이 조작하지 않을 수 있습니다. XAML 파일을 조작하는 정도는 사용하는 개발 환경, 도구 상자 및 속성 편집기 같은 대화형 디자인 환경 기능을 사용하는지 여부 그리고 Windows 런타임 앱의 범위 및 목적에 따라 다릅니다. 하지만 앱 개발 중에는 텍스트 또는 XML 편집기를 사용하여 요소 수준에서 XAML 파일을 편집할 가능성이 큽니다. 이러한 정보를 사용하여 개발자는 확신을 가지고 텍스트 또는 XML 표현의 XAML을 편집할 수 있으며 도구, 태그 컴파일 작업 또는 Windows 런타임 앱의 런타임 단계에서 사용되는 경우 해당 XAML 파일의 선언 및 목적 유효성을 관리할 수 있습니다.
 
-## 다음은 성능을 위한 모범 사례를 활용하여 XAML에서 UI 요소를 정의하기 위한 몇 가지 팁입니다.
+## 로드 성능을 위해 XAML을 최적화합니다.
 
-이 팁의 상당수는 XAML 리소스 사용과 관련이 있지만 편의상 XAML에 대한 전반적인 개요에서 설명합니다. XAML 리소스에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요. XAML에서 사용하지 말아야 하는 성능 저하 예를 의도적으로 보여 주는 XAML을 포함하여 성능에 대한 추가 정보를 보려면 [XAML 태그 최적화](https://msdn.microsoft.com/library/windows/apps/mt204779)를 참조하세요. XAML에서 같은 색 브러시를 자주 사용하는 경우에는 매번 명명된 색을 특성 값으로 사용하지 말고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)를 리소스로 정의합니다.
+다음은 성능을 위한 모범 사례를 활용하여 XAML에서 UI 요소를 정의하기 위한 몇 가지 팁입니다. 이 팁의 상당수는 XAML 리소스 사용과 관련이 있지만 편의상 XAML에 대한 전반적인 개요에서 설명합니다. XAML 리소스에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요. XAML에서 사용하지 말아야 하는 성능 저하 예를 의도적으로 보여 주는 XAML을 포함하여 성능에 대한 추가 정보를 보려면 [XAML 태그 최적화](https://msdn.microsoft.com/library/windows/apps/mt204779)를 참조하세요.
 
--   여러 UI 페이지에서 같은 리소스를 사용하는 경우에는 각 페이지가 아니라 [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)에서 리소스를 정의하는 것이 좋습니다.
--   이와 반대로 특정 리소스를 한 페이지에서만 사용하는 경우에는 **Application.Resources**에서 리소스를 정의하지 말고 대신, 필요한 페이지에 대해서만 리소스를 정의합니다. 앱 디자인 도중의 XAML 팩터링 및 XAML 구문 분석 과정의 성능을 위해 좋은 방법입니다. 앱에 패키징되는 리소스의 경우 사용되지 않는 리소스(키가 있지만 키를 사용하는 앱에 [StaticResource](staticresource-markup-extension.md) 참조가 없는 리소스)가 있는지 확인합니다.
--   앱을 릴리스하기 전에 XAML에서 이 리소스를 제거합니다. 디자인 리소스([**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801))를 제공하는 별도의 XAML 파일을 사용하고 있다면 사용되지 않는 리소스를 주석으로 처리하거나 이 파일에서 제거하는 것이 좋습니다.
--   두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다. 컴퍼지션에 필요 없는 UI 요소를 정의하지 말고, 가능한 한 항상 기본 컨트롤 템플릿을 사용하세요. 이 템플릿은 테스트를 거쳤으며 로드 성능이 검증되었습니다.
--   UI 요소를 의도적으로 과도하게 그리지 말고 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)와 같은 컨테이너를 사용합니다.
--   기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도한 그리기 및 이를 테스트하는 방법에 대한 자세한 내용은 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823)를 참조하세요. [
+-   XAML에서 같은 색 브러시를 자주 사용하는 경우에는 매번 명명된 색을 특성 값으로 사용하지 말고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)를 리소스로 정의합니다.
+-   여러 UI 페이지에서 같은 리소스를 사용하는 경우에는 각 페이지가 아니라 [**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)에서 리소스를 정의하는 것이 좋습니다. 이와 반대로 특정 리소스를 한 페이지에서만 사용하는 경우에는 **Application.Resources**에서 리소스를 정의하지 말고 대신, 필요한 페이지에 대해서만 리소스를 정의합니다. 앱 디자인 도중의 XAML 팩터링 및 XAML 구문 분석 과정의 성능을 위해 좋은 방법입니다.
+-   앱에 패키징되는 리소스의 경우 사용되지 않는 리소스(키가 있지만 키를 사용하는 앱에 [StaticResource](staticresource-markup-extension.md) 참조가 없는 리소스)가 있는지 확인합니다. 앱을 릴리스하기 전에 XAML에서 이 리소스를 제거합니다.
+-   디자인 리소스([**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801))를 제공하는 별도의 XAML 파일을 사용하고 있다면 사용되지 않는 리소스를 주석으로 처리하거나 이 파일에서 제거하는 것이 좋습니다. 두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다.
+-   컴퍼지션에 필요 없는 UI 요소를 정의하지 말고, 가능한 한 항상 기본 컨트롤 템플릿을 사용하세요. 이 템플릿은 테스트를 거쳤으며 로드 성능이 검증되었습니다.
+-   UI 요소를 의도적으로 과도하게 그리지 말고 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)와 같은 컨테이너를 사용합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도한 그리기 및 이를 테스트하는 방법에 대한 자세한 내용은 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823)를 참조하세요.
+-   [
             **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
--   XAML 디버깅
 
-## XAML은 생성 언어이기 때문에 Microsoft Visual Studio 내에서의 디버깅에 대한 일반적인 몇 가지 전략을 사용할 수 없습니다.
+## XAML 디버깅
 
-예를 들어, XAML 파일 내에 중단점을 설정할 수 있는 방법은 없습니다. 그러나 아직 앱을 개발하는 동안 UI 정의나 다른 XAML 태그에서 발생하는 문제를 디버그하는 데 도움이 되는 다른 기술이 있습니다. XAML 파일에 문제가 있는 경우 가장 일반적인 결과는 시스템 또는 앱에 XAML 구문 분석 예외가 발생하는 것입니다.
+XAML은 생성 언어이기 때문에 Microsoft Visual Studio 내에서의 디버깅에 대한 일반적인 몇 가지 전략을 사용할 수 없습니다. 예를 들어, XAML 파일 내에 중단점을 설정할 수 있는 방법은 없습니다. 그러나 아직 앱을 개발하는 동안 UI 정의나 다른 XAML 태그에서 발생하는 문제를 디버그하는 데 도움이 되는 다른 기술이 있습니다.
 
-XAML 구문 분석 예외가 있을 때마다, XAML 파서가 로드한 XAML은 유효한 개체 트리를 만들지 못합니다. 일부 경우(예: XAML이 루트 시각 효과로 로드된 응용 프로그램의 첫 번째 "페이지"를 나타내는 경우) XAML 구문 분석 예외를 복구할 수 없습니다. XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 하나 내에서 편집됩니다.
+XAML 파일에 문제가 있는 경우 가장 일반적인 결과는 시스템 또는 앱에 XAML 구문 분석 예외가 발생하는 것입니다. XAML 구문 분석 예외가 있을 때마다, XAML 파서가 로드한 XAML은 유효한 개체 트리를 만들지 못합니다. 일부 경우(예: XAML이 루트 시각 효과로 로드된 응용 프로그램의 첫 번째 "페이지"를 나타내는 경우) XAML 구문 분석 예외를 복구할 수 없습니다.
 
-흔히 Visual Studio에서는 XAML 편집 시 디자인 타임 유효성 검사 및 XAML 원본의 오류 검사를 제공할 수 있습니다. 예를 들어, 잘못된 특성 값을 입력하는 즉시 XAML 텍스트 편집기에 "물결선"이 표시되므로 UI 정의에 문제가 있는지 확인하기 위해 XAML 컴파일 단계까지 기다릴 필요도 없습니다. 앱이 실제로 실행되고 나면, 디자인 타임에 XAML 구문 분석 오류가 검색되지 않은 채로 지나간 경우 이러한 오류는 CLR(공용 언어 런타임)에 의해 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)으로 보고됩니다.
+XAML은 흔히 Visual Studio와 같은 IDE 및 해당 XAML 디자인 화면 중 하나 내에서 편집됩니다. 흔히 Visual Studio에서는 XAML 편집 시 디자인 타임 유효성 검사 및 XAML 원본의 오류 검사를 제공할 수 있습니다. 예를 들어, 잘못된 특성 값을 입력하는 즉시 XAML 텍스트 편집기에 "물결선"이 표시되므로 UI 정의에 문제가 있는지 확인하기 위해 XAML 컴파일 단계까지 기다릴 필요도 없습니다.
 
-런타임 **XamlParseException**에 대해 수행할 수 있는 작업에 대한 자세한 내용은 [C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요. **참고** 코드에 C++/CX를 사용하는 앱의 경우 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)이 발생하지 않습니다.
+앱이 실제로 실행되고 나면, 디자인 타임에 XAML 구문 분석 오류가 검색되지 않은 채로 지나간 경우 이러한 오류는 CLR(공용 언어 런타임)에 의해 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)으로 보고됩니다. 런타임 **XamlParseException**에 대해 수행할 수 있는 작업에 대한 자세한 내용은 [C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 예외 처리](https://msdn.microsoft.com/library/windows/apps/dn532194)를 참조하세요.
 
-하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다. Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.
+**참고** 코드에 C++/CX를 사용하는 앱의 경우 특정 [**XamlParseException**](https://msdn.microsoft.com/library/windows/apps/hh673774)이 발생하지 않습니다. 하지만 **XamlParseException**과 마찬가지로, 예외의 메시지는 오류의 근원이 XAML과 관련이 있음을 명확히 하며 XAML 파일의 줄 수와 같은 컨텍스트 정보를 포함합니다.
 
-Fore more info on debugging a Windows Runtime app, see <bpt id="p1">[</bpt>Start a debug session<ept id="p1">](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)</ept>.
-
+Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 시작](https://msdn.microsoft.com/library/windows/apps/xaml/hh781607.aspx)을 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: 이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다.
-title: 미디어 캐스팅
+description: "이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다."
+title: "미디어 캐스팅"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c8d549c9b770af351894f2a19dd035a43d70264
+
 ---
 
 # 미디어 캐스팅
@@ -157,6 +161,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

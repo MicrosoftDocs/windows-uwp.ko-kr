@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: "데이터 바인딩 심층 분석"
 description: "데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
+ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
+ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
 ---
 # 데이터 바인딩 심층 분석
@@ -12,15 +12,14 @@ ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 -   [**Binding 클래스**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-**참고** 이 항목에서는 데이터 바인딩 기능에 대해 자세히 설명합니다. 간단하고 실용적인 소개는 [데이터 바인딩 개요](data-binding-quickstart.md)를 참조하세요.
+> **참고** &nbsp;&nbsp;이 항목에서는 데이터 바인딩 기능에 대해 자세히 설명합니다. 간단하고 실용적인 소개는 [데이터 바인딩 개요](data-binding-quickstart.md)를 참조하세요.
 
- 
 
 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다. 데이터 바인딩은 데이터 문제를 UI 문제와 분리하여 개념 모델을 간소화하고 앱의 가독성, 테스트 용이성 및 유지 관리성을 향상시킬 수 있도록 해줍니다.
 
@@ -77,7 +76,7 @@ public class HostViewModel
 
 **참고** C++/CX의 경우 [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)를 구현하며, 바인딩 소스 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)가 있거나 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)를 구현해야 합니다.
 
-``` csharp
+```csharp
 public class HostViewModel : INotifyPropertyChanged
 {
     private string nextButtonText;
@@ -111,7 +110,7 @@ public class HostViewModel : INotifyPropertyChanged
 
 위에 표시된 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **BindableBase** 기본 클래스에서 파생할 수 있습니다. 관련 예제는 다음과 같습니다.
 
-``` csharp
+```csharp
 public class HostViewModel : BindableBase
 {
     private string nextButtonText;
@@ -158,11 +157,11 @@ public class HostViewModel : BindableBase
 아래 두 예제에서 **Button.Content** 속성은 바인딩 대상이고 해당 값은 바인딩 개체를 선언하는 태그 확장으로 설정됩니다. 먼저 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)가 표시된 다음 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 표시됩니다. 태그에서 바인딩을 선언하는 것이 일반적입니다(편리하고 읽기 쉬우며 도구 사용이 간편함). 그러나 태그를 피하고 필요한 경우 명령을 통해(프로그래밍 방식으로) [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 클래스의 인스턴스를 대신 만들 수 있습니다.
 
 <!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-``` xml
+```xml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-``` xml
+```xml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -170,7 +169,7 @@ public class HostViewModel : BindableBase
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그를 작성하기 전에 수행해야 하는 한 가지 단계가 있습니다. 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출해야 합니다. **HostView** 페이지 클래스에 속성(이 예제의 경우 **HostViewModel** 형식)을 추가하면 됩니다.
 
-``` csharp
+```csharp
 namespace QuizGame.View
 {
     public sealed partial class HostView : Page
@@ -188,7 +187,7 @@ namespace QuizGame.View
 
 이제 바인딩 개체를 선언하는 태그에 대해 좀 더 자세히 알아보겠습니다. 아래 예제에서는 위의 "바인딩 대상" 섹션에서 사용한 것과 동일한 **Button.Content** 바인딩 대상을 사용하여 이 대상이 **HostViewModel.NextButtonText** 속성에 바인딩됨을 보여 줍니다.
 
-``` xml
+```xml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -206,7 +205,7 @@ namespace QuizGame.View
 [
             **DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)(항목 템플릿, 콘텐츠 템플릿 또는 헤더 템플릿 중 무엇으로 사용되든지 관계없음) 내에서 **Path** 값은 페이지의 컨텍스트가 아니라 템플릿을 기반으로 만들 데이터 개체의 컨텍스트에서 해석됩니다. 컴파일 타임에 해당 바인딩의 유효성을 검사(그리고 해당 바인딩에 대해 효율적인 코드를 생성)할 수 있도록 **DataTemplate**에서 **x:DataType**을 사용하여 데이터 개체 형식을 선언해야 합니다. 아래 제공된 예제는 **SampleDataGroup** 개체의 컬렉션에 바인딩된 항목 컨트롤의 **ItemTemplate**으로 사용할 수 있습니다.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -231,7 +230,7 @@ Title이라는 문자열 속성을 구현하는 SampleDataGroup이라는 형식�
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)은 기본적으로 태그 페이지의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)에 바인딩하는 것으로 가정합니다. 따라서 페이지의 **DataContext**를 바인딩 소스 클래스(이 예제의 경우 **HostViewModel** 형식)의 인스턴스로 설정합니다. 아래 예제에서는 바인딩 개체를 선언하는 태그를 보여 줍니다. 위의 "바인딩 대상" 섹션에서 사용한 것과 동일한 **Button.Content** 바인딩 대상을 사용하고 **HostViewModel.NextButtonText** 속성에 바인딩합니다.
 
-``` xml
+```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -250,7 +249,7 @@ UI 요소에 대한 [**DataContext**](https://msdn.microsoft.com/library/windows
 [
             **DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) 내에서 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)는 템플릿을 기반으로 만들 데이터 개체로 설정됩니다. 아래 제공된 예제는 **Title** 및 **Description**이라는 문자열 속성이 있는 모든 형식의 컬렉션에 바인딩된 항목 컨트롤의 **ItemTemplate**으로 사용할 수 있습니다.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -272,7 +271,7 @@ UI 요소에 대한 [**DataContext**](https://msdn.microsoft.com/library/windows
 
 다음은 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) 값을 월이 포함된 문자열 값으로 변환하는 일회성 또는 단방향 바인딩에 적합한 값 변환기입니다. 이 클래스는 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903)를 구현합니다.
 
-``` csharp
+```csharp
 public class DateToStringConverter : IValueConverter
 {
     // Define the Convert method to convert a DateTime value to 
@@ -309,7 +308,7 @@ public class DateToStringConverter : IValueConverter
 }
 ```
 
-``` vbnet
+```vbnet
 Public Class DateToStringConverter
     Implements IValueConverter
 
@@ -351,7 +350,7 @@ End Class
 
 그리고 바인딩 개체 태그에서 해당 값 변환기를 사용할 방법을 다음과 같습니다.
 
-``` xml
+```xml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -381,7 +380,7 @@ End Class
 
 TemplatesResourceDictionary.xaml
 
-``` xml
+```xml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -397,7 +396,7 @@ TemplatesResourceDictionary.xaml
 
 TemplatesResourceDictionary.xaml.cs
 
-``` csharp
+```csharp
 using Windows.UI.Xaml.Data;
  
 namespace ExampleNamespace
@@ -414,7 +413,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-``` xml
+```xml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -434,7 +433,7 @@ MainPage.xaml
 
 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)는 이벤트 바인딩이라는 기능을 지원합니다. 이 기능을 사용하면 바인딩을 사용하여 이벤트에 대한 처리기를 지정할 수 있습니다. 이는 코드 숨김 파일의 메서드를 사용하여 이벤트를 처리하는 것 외의 추가 옵션입니다. **MainPage** 클래스에 **RootFrame** 속성이 있다고 가정해 보겠습니다.
 
-``` csharp
+```csharp
     public sealed partial class MainPage : Page
     {
         ....    
@@ -444,7 +443,7 @@ MainPage.xaml
 
 이와 같은 **RootFrame** 속성에서 반환되는 **Frame** 개체의 메서드에 단추의 **Click** 이벤트를 바인딩할 수 있습니다. 또한 단추의 **IsEnabled** 속성을 동일한 **Frame**의 다른 멤버에 바인딩할 수 있습니다.
 
-``` xml
+```xml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -453,14 +452,15 @@ MainPage.xaml
 오버로드된 메서드는 이 기술을 사용하여 이벤트를 처리하는 데 사용할 수 없습니다. 또한 이벤트를 처리하는 메서드에 매개 변수가 있는 경우 각각 모든 이벤트 매개 변수의 형식에서 할당 가능해야 합니다. 이 경우 [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693)는 오버로드되지 않고 매개 변수가 없습니다(그러나 두 개의 **object** 매개 변수를 사용한 경우에도 유효함). [
             **Frame.GoBack**](https://msdn.microsoft.com/library/windows/apps/Dn996568)은 오버로드되므로 이 기술에서는 이 메서드를 사용할 수 없습니다.
 
-이벤트 바인딩 기술은 명령(명령은 [**ICommand**](T:System.Windows.Input.ICommand) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)와 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
+이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)와 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
+
 
 ## 폴더 또는 파일 컬렉션에 바인딩
 
 [
             **Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스의 API를 사용하여 폴더 및 파일 데이터를 검색할 수 있습니다. 그러나 다양한 **GetFilesAsync**, **GetFoldersAsync** 및 **GetItemsAsync** 메서드는 목록 컨트롤에 바인딩하기에 적합한 값을 반환하지 않습니다. 대신 [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501) 클래스의 [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) 및 [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) 메서드의 반환 값에 바인딩해야 합니다. [StorageDataSource 및 GetVirtualizedFilesVector 샘플](http://go.microsoft.com/fwlink/p/?linkid=228621)의 다음 코드 예제는 일반적인 사용 패턴을 보여 줍니다. 앱 패키지 매니페스트에서 **picturesLibrary** 기능을 선언하고 그림 라이브러리 폴더에 그림이 있는지 확인해야 합니다.
 
-``` csharp
+```csharp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var library = Windows.Storage.KnownFolders.PicturesLibrary;
@@ -503,7 +503,7 @@ MainPage.xaml
 아래 예제에서는 "has-a-group" 패턴을 보여 줍니다. 페이지 클래스에서 뷰 모델의 인스턴스를 반환하는 [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713)이라는 속성이 있습니다. [
             **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)는 뷰 모델의 **Authors** 속성(**Authors**는 그룹 개체의 컬렉션)에 바인딩되며, 그룹화된 항목을 포함하는 **Author.BookSkus** 속성임을 지정합니다. 마지막으로 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)는 **CollectionViewSource**에 바인딩되며, 그룹의 항목을 렌더링할 수 있도록 그룹 스타일이 정의되어 있습니다.
 
-``` csharp
+```csharp
     <Page.Resources>
         <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
@@ -529,7 +529,7 @@ MainPage.xaml
 
 아래 예제에서는 [LINQ](http://msdn.microsoft.com/library/bb397926.aspx)를 사용하는 "is-a-group" 패턴을 보여 줍니다. 여기에서는 장르별로 책을 그룹화합니다. 따라서 그룹 머리글에 장르 이름으로 책이 표시됩니다. 이는 그룹 [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) 값에 대한 "Key" 속성 경로로 표시됩니다.
 
-``` csharp
+```csharp
     using System.Linq;
 
     ...
@@ -553,7 +553,7 @@ MainPage.xaml
 
 데이터 템플릿에서 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용할 때는 **x:DataType** 값을 설정하여 바인딩할 형식을 나타내야 합니다. 형식이 제네릭인 경우 태그로 표현할 수 없으므로 대신 그룹 스타일 헤더 템플릿에서 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용해야 합니다.
 
-``` xml
+```xml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
         Source="{Binding Genres}"
@@ -600,7 +600,7 @@ XAML 대신 절차 코드를 사용하여 UI 요소를 데이터에 연결할 �
 
 다음 예제는 코드에서 바인딩을 구현하는 방법을 보여 줍니다.
 
-``` xml
+```xml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -620,7 +620,7 @@ Binding binding = new Binding() { Path = new PropertyPath("Brush1") };
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding);
 ```
 
-``` vbnet
+```vbnet
 ' Create an instance of the MyColors class 
 ' that implements INotifyPropertyChanged. 
 Dim textcolor As New MyColors()
@@ -660,6 +660,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

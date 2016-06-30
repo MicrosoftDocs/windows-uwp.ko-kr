@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-title: xDeferLoadStrategy 특성
-description: xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다.
+title: "xDeferLoadStrategy 특성"
+description: "xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+
 ---
 
 # x&#58;DeferLoadStrategy 특성
@@ -88,6 +92,7 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

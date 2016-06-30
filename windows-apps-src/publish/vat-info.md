@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다.
-title: VAT 정보
+Description: "다음은 개발자 센터 등록 프로세스 중에 VAT ID 번호를 제공해야 하는 경우 도움이 되는 몇 가지 유용한 정보입니다."
+title: "VAT 정보"
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4dd91c901ade83e482061bed781e3fdcd9dde141
+
 ---
 
 # VAT 정보
@@ -246,6 +250,7 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

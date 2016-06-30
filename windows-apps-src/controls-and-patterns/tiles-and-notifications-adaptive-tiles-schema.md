@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다.
-title: 적응형 타일 스키마 및 템플릿
+Description: "다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다."
+title: "적응형 타일 스키마 및 템플릿"
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
+
 ---
 
 # 적응형 타일 템플릿&#58; 스키마 및 지침
@@ -141,6 +145,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

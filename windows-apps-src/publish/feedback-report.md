@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드의 피드백 보고서에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다.
-title: 피드백 보고서
+Description: "Windows 개발자 센터 대시보드의 피드백 보고서에서 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안, 찬성을 볼 수 있습니다."
+title: "피드백 보고서"
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
+translationtype: Human Translation
+ms.sourcegitcommit: 4e857ec7ee98459afdd0d8ec85b5ec3a761049f3
+ms.openlocfilehash: 9ad3025f7890de3677801b309b6714b1b46a0607
+
 ---
 
 # 피드백 보고서
@@ -52,6 +56,7 @@ Windows 개발자 센터 대시보드에 있는 **피드백** 보고서에서 Wi
 위에서 설명한 대로 고객에게 피드백을 제공하도록 권유하기 위해 앱에서 직접 피드백 허브에 대한 링크를 통합하는 것이 좋습니다. 자세한 내용은 [앱에서 피드백 허브 시작](../monetize/launch-feedback-hub-from-your-app.md)을 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

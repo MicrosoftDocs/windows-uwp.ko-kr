@@ -1,8 +1,12 @@
 ---
 author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
-description: 네트워크 및 웹 서비스에 액세스하는 기술입니다.
-title: 네트워킹 및 웹 서비스
+description: "네트워크 및 웹 서비스에 액세스하는 기술입니다."
+title: "네트워킹 및 웹 서비스"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: df62edbf63777a8fcec4ab08c1fb56ab76ea6624
+
 ---
 
 # 네트워킹 및 웹 서비스
@@ -24,6 +28,7 @@ title: 네트워킹 및 웹 서비스
 | [EDP ID를 사용하여 네트워크 연결 태그 지정](tagging_network_connections_with_edp_identity.md) | 이 항목에서는 EDP(엔터프라이즈 데이터 보호) 시나리오에서 네트워크 연결을 만들기 전에 보호된 스레드 컨텍스트를 만드는 방법을 보여 줍니다. |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

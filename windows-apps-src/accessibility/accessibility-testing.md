@@ -1,15 +1,16 @@
 ---
 author: Xansky
-Description: UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따라야 할 테스트 절차입니다.
+Description: "UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따라야 할 테스트 절차입니다."
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
-title: 접근성 테스트
+title: "접근성 테스트"
 label: Accessibility testing
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: ec436f939c672d6e6d852d3dd6713fd6ca20a53b
+
 ---
 
 # 접근성 테스트  
-
-
 
 UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하기 위해 따라야 할 테스트 절차입니다.
 
@@ -33,7 +34,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 ### **검사**  
 
 [
-            **Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521)를 사용하면 원하는 UI 요소를 선택하고 그 접근성 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
+            **Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521)를 사용하면 원하는 UI 요소를 선택하고 그 접근성 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
 
 다음 이미지는 메모장에서 **편집** 메뉴 요소의 UI 자동화 속성을 쿼리하는 [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 도구를 보여 줍니다.
 
@@ -136,7 +137,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 [
             **AccScope**](https://msdn.microsoft.com/library/windows/desktop/Dn433239) 도구는 UI 자동화 요소를 시각적 표현이나 목록으로 표시할 수 있어 특히 흥미로운 앱 보기를 제공합니다. 시각화를 사용하면 앱 UI의 시각적 모양과 서로 연결할 수 있는 방법을 통해 부분으로 드릴다운할 수 있습니다. UI에 논리를 할당하기 전에 초기 UI 프로토타입의 접근성을 테스트할 수도 있어, 이를 통해 시각적 상호 작용과 앱의 접근성 시나리오 탐색이 모두 균형을 유지하는지 확인할 수 있습니다.
 
-테스트할 수 있는 한 가지 측면은 UI 자동화 요소 보기에 표시하지 않으려는 요소가 나타나는지 여부입니다. 보기에 표시하지 않으려는 요소가 발견되는 경우나 이와 반대로 누락된 요소가 있는 경우 XAML 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/BR209081_accessibilityview)를 사용하여 접근성 보기에 XAML 컨트롤이 나타나는 방식을 조정할 수 있습니다. 기본 접근성 보기를 살펴본 후에는 화살표 키를 통해 활성화되는 탭 시퀀스나 공간 탐색을 다시 점검하여 사용자가 컨트롤 보기에 표시되는 각 대화형 부분에 도달할 수 있는지 확인하는 것도 좋습니다.
+테스트할 수 있는 한 가지 측면은 UI 자동화 요소 보기에 표시하지 않으려는 요소가 나타나는지 여부입니다. 보기에 표시하지 않으려는 요소가 발견되는 경우나 이와 반대로 누락된 요소가 있는 경우 XAML 연결된 속성 [**AutomationProperties.AccessibilityView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.accessibilityview)를 사용하여 접근성 보기에 XAML 컨트롤이 나타나는 방식을 조정할 수 있습니다. 기본 접근성 보기를 살펴본 후에는 화살표 키를 통해 활성화되는 탭 시퀀스나 공간 탐색을 다시 점검하여 사용자가 컨트롤 보기에 표시되는 각 대화형 부분에 도달할 수 있는지 확인하는 것도 좋습니다.
 
 <span id="related_topics"/>
 ## 관련 항목  
@@ -146,6 +147,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 * [Windows의 접근성](http://go.microsoft.com/fwlink/p/?LinkId=320802)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

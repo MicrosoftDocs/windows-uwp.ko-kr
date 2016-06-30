@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 3C03FDD8-FA61-4E7B-BDCA-3C29DFEA20E4
-description: Microsoft 스토어 참여 및 수익 창출 SDK를 설치한 후 이 항목의 지침을 따라 앱에서 Ad Mediator 컨트롤을 사용하세요.
-title: Ad Mediator 컨트롤 추가 및 사용
+description: "Microsoft 스토어 참여 및 수익 창출 SDK를 설치한 후 이 항목의 지침을 따라 앱에서 Ad Mediator 컨트롤을 사용하세요."
+title: "Ad Mediator 컨트롤 추가 및 사용"
+translationtype: Human Translation
+ms.sourcegitcommit: 8c3f1997427a7c3d4f4b4b7acc876a2a091e4553
+ms.openlocfilehash: a0d73b50207d251c079714265845a816f4ac23da
+
 ---
 
 # Ad Mediator 컨트롤 추가 및 사용
@@ -288,6 +292,7 @@ if (Debugger.IsAttached)
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 포트 계획
-description: DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다.
+title: "DirectX 포트 계획"
+description: "DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 929ad82ce057754ee04f1f27537e03520e95157a
+
 ---
 
 # DirectX 포트 계획
@@ -63,6 +67,7 @@ Microsoft 템플릿 및 코드 샘플은 아직 익숙하지 않을 수 있는 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

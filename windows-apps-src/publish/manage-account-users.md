@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 개발자 센터 계정에 사용자를 추가하고 특정 사용 권한이 있는 역할을 할당합니다.
-title: 계정 사용자 관리
+Description: "개발자 센터 계정에 사용자를 추가하고 특정 사용 권한이 있는 역할을 할당합니다."
+title: "계정 사용자 관리"
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
+translationtype: Human Translation
+ms.sourcegitcommit: 3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1
+ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
+
 ---
 
 # 계정 사용자 관리
@@ -225,6 +229,7 @@ Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

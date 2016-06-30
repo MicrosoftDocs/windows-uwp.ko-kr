@@ -5,8 +5,8 @@ title: "타일"
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a440a9abaf150dac6ed95d881261b80521a734c0
+ms.sourcegitcommit: d3fe62d4de00c42079d62d105acdbb21e296ba5f
+ms.openlocfilehash: a9f5d25dfd359364fa8e16666b03c7c105a867dd
 
 ---
 
@@ -48,14 +48,11 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
     이러한 이미지를 고유한 이미지로 바꿔야 합니다. 다양한 표시 배율로 이미지를 제공할 수도 있지만 이미지를 모두 제공할 필요는 없습니다. 앱이 다양한 디바이스에서 올바르게 표시되도록 하려면 각 이미지의 100%, 200% 및 400% 배율 버전을 제공하는 것이 좋습니다.
 
-    크기 조정된 이미지는 다음 명명 규칙을 따릅니다.
+    크기 조정된 이미지는 다음 명명 규칙을 따릅니다. 
     
     *
-            &lt;이미지 이름&gt;*.scale-100_contrast-black-*&lt;배율 인수&gt;*.*&lt;이미지 파일 확장명&gt;* 
-
-
-     
-
+            &lt;이미지 이름&gt;*.scale-100_contrast-black-*&lt;배율 인수&gt;*.*&lt;이미지 파일 확장명&gt;*  
+    
     예: SmallLogo.scale-100.png
 
     이미지를 참조할 때 *&lt;image name&gt;*.*&lt;image file extension&gt;*(이 예제의 경우 SmallLogo.png)으로 참조합니다. 제공한 이미지 중에서 디바이스에 적절한 크기의 이미지가 자동으로 선택됩니다.
@@ -114,6 +111,6 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

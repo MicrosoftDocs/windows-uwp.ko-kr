@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 앱 서비스 만들기 및 사용
-description: 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "앱 서비스 만들기 및 사용"
+description: "다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법을 알아봅니다."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
+
 ---
 
 # 앱 서비스 만들기 및 사용
@@ -26,7 +29,7 @@ ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Application&gt;** 요소에 다음과 같은 AppService 확장 기능을 추가합니다. 이 예제에서는 `com.Microsoft.Inventory` 서비스를 광고하고 이 앱이 앱 서비스 공급자로 식별됩니다. 실제 서비스가 백그라운드 작업으로 구현됩니다. 앱 서비스 앱에서 다른 앱에 서비스를 공개합니다. 서비스 이름에 역방향 도메인 이름 스타일을 사용하는 것이 좋습니다.
 
 ``` syntax
-... 
+...
 <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
@@ -157,15 +160,18 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 이 예제에서는 [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대해 awaitable 메서드를 호출하므로 **OnRequestedReceived()**가 **async**입니다.
 
 서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. [
-            **SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
+              **SendResponseAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
 
 앱 서비스에서는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 사용하여 정보를 교환합니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 "Command"라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 "ID" 키에 저장됩니다. 반환 값은 "Result" 키에 저장됩니다.
 
 앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [**AppServiceClosedStatus**](https://msdn.microsoft.com/library/windows/apps/dn921703) enum이 호출자에게 반환됩니다. OS에서 서비스 끝점을 중단하거나 리소스가 초과되거나 하는 등이 앱 서비스에 대한 호출이 실패하는 예입니다. [
-            **ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 "Status"라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
+              **ValueSet**
+            ](https://msdn.microsoft.com/library/windows/apps/dn636131)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 "Status"라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
 
 [
-            **SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대한 호출을 통해 호출자에게 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 반환합니다.
+              **SendResponseAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대한 호출을 통해 호출자에게 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 반환합니다.
 
 ## 서비스 앱 배포 및 패키지 패밀리 이름 가져오기
 
@@ -197,7 +203,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
         {
             this.inventoryService = new AppServiceConnection();
 
-            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section. 
+            // Here, we use the app service name defined in the app service provider's Package.appxmanifest file in the <Extension> section.
             this.inventoryService.AppServiceName = "com.microsoft.inventory";
 
             // Use Windows.ApplicationModel.Package.Current.Id.FamilyName within the app service provider to get this value.
@@ -246,14 +252,15 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
     }
     ```
 
-    `this.inventoryService.PackageFamilyName = "replace with the package family name";` 줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기]에서 가져온 **AppServiceProvider** 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
+    줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기\]에서 가져온 AppServiceProvider 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
 
     코드는 먼저 앱 서비스와 연결합니다. 연결은 **this.inventoryService**를 삭제할 때까지 열린 상태로 유지됩니다. 앱 서비스 이름은 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에 추가한 **AppService 이름** 특성과 일치해야 합니다. 이 예제에서는 `<uap:AppService Name="com.microsoft.inventory"/>`입니다.
 
     앱 서비스에 보낼 명령을 지정할 수 있도록 **message**라는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)이 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. ClientApp의 텍스트 상자에서 인덱스를 가져온 다음 항목 설명을 가져오도록 “Item” 명령을 사용하여 서비스를 호출합니다. 그런 다음 항목 가격을 가져오도록 “Price” 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
 
     [
-            **AppServiceResponseStatus**](https://msdn.microsoft.com/library/windows/apps/dn921724)는 운영 체제에서 앱 서비스에 호출을 연결할 수 있었는지 여부만 나타내므로 앱 서비스에서 수신한 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)의 "Status" 키를 확인하여 요청을 수행할 수 있었는지 확인합니다.
+              **AppServiceResponseStatus**
+            ](https://msdn.microsoft.com/library/windows/apps/dn921724)는 운영 체제에서 앱 서비스에 호출을 연결할 수 있었는지 여부만 나타내므로 앱 서비스에서 수신한 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)의 "Status" 키를 확인하여 요청을 수행할 수 있었는지 확인합니다.
 
 6.  Visual Studio의 솔루션 탐색기 창에서 ClientApp 프로젝트를 시작 프로젝트로 설정한 다음 솔루션을 실행합니다. 입력란에 숫자 1을 입력하고 단추를 클릭합니다. 서비스에서 “의자 : 가격 = 88.99”가 반환되어야 합니다.
 
@@ -261,7 +268,8 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 앱 서비스 호출에 실패하면 ClientApp에서 다음을 확인합니다.
 
-1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. **button\_Click()**`this.inventoryService.PackageFamilyName = "...";`을 참조하세요.
+1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. **button\_Click()**
+            `this.inventoryService.PackageFamilyName = "...";`을 참조하세요.
 2.  **button\_Click()**에서 인벤토리 서비스 연결에 할당된 앱 서비스 이름이 AppServiceProvider의 Package.appxmanifest 파일에 있는 앱 서비스 이름과 일치하는지 확인합니다. `this.inventoryService.AppServiceName = "com.microsoft.inventory";`를 참조하세요.
 3.  AppServiceProvider 앱이 배포되었는지 확인합니다(솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **배포** 선택).
 
@@ -390,8 +398,6 @@ namespace MyAppService
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

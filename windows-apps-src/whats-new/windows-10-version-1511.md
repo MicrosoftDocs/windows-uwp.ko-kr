@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-title: Windows 10 버전 1511 - 2015년 11월의 새로운 기능
-description: Windows 10 버전 1511 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다.
+title: "Windows 10 버전 1511 - 2015년 11월의 새로운 기능"
+description: "Windows 10 버전 1511 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 07d40584e998d358c6c80bd5aec43be885a79495
+
 ---
 
 # Windows의 새로운 기능
@@ -26,6 +30,7 @@ Windows 앱 인증 키트 | Windows 앱 인증 키트가 향상된 테스트로 
 디자인 다운로드 | Adobe Photoshop용 새 UWP 앱 디자인 템플릿을 확인하세요. Microsoft PowerPoint 및 Adobe Illustrator 템플릿도 업데이트되었으며 PDF 버전의 지침이 제공됩니다. [디자인 다운로드 페이지를 방문하세요](https://developer.microsoft.com/en-us/windows/design/assets).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

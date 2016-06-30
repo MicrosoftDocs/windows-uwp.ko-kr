@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
-description: 이 문서에서는 BitmapEncoder에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다.
-title: BitmapEncoder 옵션 참조
+description: "이 문서에서는 BitmapEncoder에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다."
+title: "BitmapEncoder 옵션 참조"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
+
 ---
 
 # BitmapEncoder 옵션 참조
@@ -42,6 +46,7 @@ title: BitmapEncoder 옵션 참조
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

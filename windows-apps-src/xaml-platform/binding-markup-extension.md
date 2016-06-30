@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
-title: 바인딩 태그 확장
+description: "Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다."
+title: "바인딩 태그 확장"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
+
 ---
 
 # {Binding} 태그 확장
@@ -130,6 +134,7 @@ Microsoft Visual Studio의 Microsoft IntelliSense는 XAML 태그 편집기에서
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

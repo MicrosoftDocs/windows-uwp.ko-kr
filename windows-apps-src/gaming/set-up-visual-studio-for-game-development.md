@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임 프로그래밍용 Visual Studio 도구
-description: Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개요.
+title: "게임 프로그래밍용 Visual Studio 도구"
+description: "Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개요."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
+
 ---
 
 # 게임 프로그래밍용 Visual Studio 도구
@@ -147,6 +151,7 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

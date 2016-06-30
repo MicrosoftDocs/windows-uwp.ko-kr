@@ -1,8 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: 이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다.
-title: 백그라운드 오디오
+description: "이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다."
+title: "백그라운드 오디오"
+ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
+ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
+
 ---
 
 # 백그라운드 오디오
@@ -67,6 +70,9 @@ title: 백그라운드 오디오
 
 그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [
             **ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
+
+**참고**  
+포그라운드 앱이 실행되는 동안 앱은 [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533)만 호출해야 합니다. 포그라운드 앱이 실행되지 않는 동안 이 메서드를 호출하면 예외가 발생합니다. 앱은 포그라운드 앱 상태를 백그라운드 프로세스에 전달하는 작업을 담당합니다. 이 작업은 앱 수명 주기 이벤트, 로컬 저장소에 보관된 상태 값 및 프로세스 간의 메시지를 사용하여 수행될 수 있습니다. 
 
 ## 백그라운드 작업 수명 주기
 
@@ -140,6 +146,7 @@ title: 백그라운드 오디오
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

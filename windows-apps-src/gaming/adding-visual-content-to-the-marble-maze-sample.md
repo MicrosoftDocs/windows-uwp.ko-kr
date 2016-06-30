@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Marble Maze 샘플에 시각적 콘텐츠 추가
-description: 이 문서에서는 패턴을 학습하고 고유한 게임 콘텐츠로 작업할 때 적절하게 조정할 수 있도록 Marble Maze 게임이 UWP(유니버설 Windows 플랫폼) 앱 환경에서 Direct3D 및 Direct2D를 사용하는 방법을 설명합니다.
+title: "Marble Maze 샘플에 시각적 콘텐츠 추가"
+description: "이 문서에서는 패턴을 학습하고 고유한 게임 콘텐츠로 작업할 때 적절하게 조정할 수 있도록 Marble Maze 게임이 UWP(유니버설 Windows 플랫폼) 앱 환경에서 Direct3D 및 Direct2D를 사용하는 방법을 설명합니다."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
+
 ---
 
 # Marble Maze 샘플에 시각적 콘텐츠 추가
@@ -905,6 +909,7 @@ else
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

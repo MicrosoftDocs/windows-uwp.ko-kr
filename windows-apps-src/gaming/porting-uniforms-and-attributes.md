@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
-description: OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다.
+title: "OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교"
+description: "OpenGL ES 2.0에서 Direct3D 11로 포팅하는 프로세스 중에 앱과 셰이더 프로그램 사이에 데이터를 전달하기 위한 구문 및 API 동작을 변경해야 합니다."
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a588ba010ddf21a07d493774cff7f6ab5dbfdf47
+
 ---
 
 # OpenGL ES 2.0 버퍼, 유니폼 및 꼭짓점 특성과 Direct3D 비교
@@ -299,6 +303,7 @@ struct VertexShaderInput
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

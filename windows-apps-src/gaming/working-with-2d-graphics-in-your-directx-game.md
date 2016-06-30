@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 게임의 2D 그래픽
-description: 2D 비트맵 그래픽 및 효과의 용도와 게임에서 사용하는 방법에 대해 검토합니다.다.
+title: "DirectX 게임의 2D 그래픽"
+description: "2D 비트맵 그래픽 및 효과의 용도와 게임에서 사용하는 방법에 대해 검토합니다.다."
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 50782c5923f9c811f5d8e91aa9aee897876e6c24
+
 ---
 
 # DirectX 게임의 2D 그래픽
@@ -68,6 +72,7 @@ DirectX에서 2D 그래픽은 3D 파이프라인의 일부입니다. 훨씬 더 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

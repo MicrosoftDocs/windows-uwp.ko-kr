@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다.
-title: 미디어 컴퍼지션 및 편집
+description: "Windows.Media.Editing 네임스페이스의 API를 사용하면 사용자가 오디오 및 비디오 소스 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발할 수 있습니다."
+title: "미디어 컴퍼지션 및 편집"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+
 ---
 
 # 미디어 컴퍼지션 및 편집
@@ -161,6 +165,7 @@ title: 미디어 컴퍼지션 및 편집
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

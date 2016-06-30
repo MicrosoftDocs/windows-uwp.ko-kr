@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 컨트롤 추가
-description: 이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다.
+title: "컨트롤 추가"
+description: "이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+
 ---
 
 # 컨트롤 추가
@@ -1924,6 +1928,7 @@ void MoveLookController::UpdateGameController()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

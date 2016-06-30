@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
-description: 대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다.
+title: "UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지"
+description: "대규모 UWP(유니버설 Windows 플랫폼) 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 14043fffc22849ca8d31f85e1035c38c07f1cdd4
+
 ---
 
 #  UWP(유니버설 Windows 플랫폼) DirectX 게임 패키지
@@ -46,7 +50,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
 -   자산 파일은 동일한 파일 이름을 사용하며, 리소스 팩 특정 버전이 명명된 특정 디렉터리에 배치됩니다. 디렉터리 이름은 시스템에 의해 예약되어 있습니다. 예를 들면 \\en-us, \\scale-140, \\dxfl-dx11입니다.
 -   자산 파일은 임의 이름의 폴더에 저장되지만 시스템에서 언어나 다른 한정자를 나타내기 위해 예약한 문자열이 끝에 추가된 일반 레이블로 파일 이름이 지정됩니다. 구체적으로, 한정자 문자열이 범용 파일 이름과 밑줄("\_") 뒤에 추가됩니다. 예를 들어 \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds입니다. 이러한 문자열을 결합할 수도 있습니다. 예를 들어 \\assets\\menu\_option1\_scale-140\_lang-en-us.png입니다.
-    > **참고** 디렉터리 이름에 단독으로 사용되기보다 파일 이름에 사용되는 경우,<tag>언어 한정자는 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)에서 설명한 것처럼 "lang-"(예: "lang-en-us")의 형식을 취해야 합니다.
+    > **참고** 디렉터리 이름에 단독으로 사용되기보다 파일 이름에 사용되는 경우, 언어 한정자는 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)에서 설명한 것처럼 "lang-<tag>"(예: "lang-en-us")의 형식을 취해야 합니다.
 
      
 
@@ -80,7 +84,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
 -   [
             **Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
--   Microsoft Visual Studio 2015에서 **프로젝트->스토어->앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
+-   Microsoft Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
 
 ## 배율 인수 리소스 팩 정의
 
@@ -98,7 +102,7 @@ Windows 10에서는 1.0x, 1.4x 및 1.8x의 세 가지 사용자 인터페이스 
 
 -   [
             **Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
--   Visual Studio 2015에서 **프로젝트->스토어->앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
+-   Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
 
 ## DirectX 기능 수준 리소스 팩 정의
 
@@ -208,7 +212,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
     Platform::String^ resourceName = possibleResource->ValueAsString;
     ```
 
--   Visual Studio 2015에서 **프로젝트->스토어->앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
+-   Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
 -   package.appxmanifest 매니페스트 설정에서 앱 번들을 사용하도록 설정해야 합니다.
 
 ## 관련 항목
@@ -227,6 +231,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

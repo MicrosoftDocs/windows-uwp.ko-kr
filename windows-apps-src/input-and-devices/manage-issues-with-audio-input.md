@@ -5,8 +5,8 @@ title: "오디오 입력 관련 문제 관리"
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6dcab14a290367250e152fb8a1944a924d5aaf46
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 4f926969b5f9f20de904aeaf749e69c0ded3c052
 
 ---
 
@@ -23,7 +23,7 @@ ms.openlocfilehash: 6dcab14a290367250e152fb8a1944a924d5aaf46
 
 
 
-## <span id="Assess_audio-input_quality"></span><span id="assess_audio-input_quality"></span><span id="ASSESS_AUDIO-INPUT_QUALITY"></span>오디오 입력 품질 평가
+## 오디오 입력 품질 평가
 
 
 음성 인식이 활성 상태일 때는 음성 인식기의 [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) 이벤트를 사용해서 하나 이상의 오디오 문제로 인해 음성 입력이 방해되는지 여부를 확인합니다. 이벤트 인수([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430))는 오디오 입력으로 검색된 문제를 기술하는 [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성을 제공합니다.
@@ -62,7 +62,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Manage_the_speech-recognition_experience"></span><span id="manage_the_speech-recognition_experience"></span><span id="MANAGE_THE_SPEECH-RECOGNITION_EXPERIENCE"></span>음성 인식 환경 관리
+## 음성 인식 환경 관리
 
 
 [
@@ -103,7 +103,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [음성 조작](speech-interactions.md)
@@ -120,6 +120,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -6,8 +6,8 @@ ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
 
 ---
 
@@ -44,7 +44,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 -   [
             **IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 잉크 환경을 완전히 사용자 지정할 수 있습니다.
 
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>InkCanvas를 사용하는 기본 잉크 입력
+## InkCanvas를 사용하는 기본 잉크 입력
 
 
 기본 잉크 기능을 사용하려면 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 페이지의 아무 위치에나 놓으면 됩니다.
@@ -84,7 +84,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 
 기본 수동 입력을 위해 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 사용할 필요는 없습니다. 그러나 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 대해 수동 입력 동작을 사용자 지정하고 구성하려면 해당하는 **InkPresenter** 개체에 액세스해야 합니다.
 
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>InkPresenter를 사용한 기본 사용자 지정
+## InkPresenter를 사용한 기본 사용자 지정
 
 
 [
@@ -195,7 +195,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 잉크 입력 및 지우기 이상의 기능(예: 스트로크 선택)을 제공하려면 앱은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에서 앱에서 처리하기 위해 처리되지 않은 상태로 통과시킬 특정 입력을 식별해야 합니다.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>고급 처리를 위한 통과 입력
+## 고급 처리를 위한 통과 입력
 
 
 기본적으로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 처리합니다. 여기에는 펜 단추, 마우스 오른쪽 단추 등과 같은 보조 하드웨어 기능에 의해 수정되는 입력이 포함됩니다.
@@ -421,7 +421,7 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>사용자 지정 잉크 렌더링
+## 사용자 지정 잉크 렌더링
 
 
 기본적으로 잉크 입력은 짧은 대기 시간의 백그라운드 스레드에서 처리되고 그릴 때 "젖은" 상태로 렌더링됩니다. 스트로크가 완료되면(펜 또는 손가락을 들거나 마우스 단추를 뗄 때) 스트로크는 UI 스레드에서 처리되고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 계층(응용 프로그램 콘텐츠 위 계층으로, 젖은 잉크를 대체함)에 대해 "건조" 상태로 렌더링됩니다.
@@ -463,7 +463,7 @@ public MainPage()
  
 
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
@@ -493,6 +493,6 @@ public MainPage()
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

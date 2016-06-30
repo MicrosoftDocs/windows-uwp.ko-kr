@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 여러 운영 체제를 대상으로 하는 패키지를 제공한 경우 여러 대상 운영 체제에 대한 설명 일부를 사용자 지정할 수 있습니다.
-title: 플랫폼 관련 설명 작성
+Description: "여러 운영 체제를 대상으로 하는 패키지를 제공한 경우 여러 대상 운영 체제에 대한 설명 일부를 사용자 지정할 수 있습니다."
+title: "플랫폼 관련 설명 작성"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 00be0238af7969a84abe79f9aee3bec485fbb3e3
+
 ---
 
 # 플랫폼 관련 설명 작성
@@ -45,6 +49,7 @@ ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

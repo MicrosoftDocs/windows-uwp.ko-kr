@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다.
-title: 레이아웃 및 글꼴 조정, RTL 지원
+Description: "RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다."
+title: "레이아웃 및 글꼴 조정, RTL 지원"
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
+
 ---
 
 # 레이아웃 및 글꼴 조정, RTL 지원
@@ -115,6 +119,7 @@ ui-light.css 또는 ui-dark.css 스타일시트를 사용하는 JavaScript를 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

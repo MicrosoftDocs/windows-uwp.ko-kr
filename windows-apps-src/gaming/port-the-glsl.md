@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: GLSL 포팅
-description: 버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다.
+title: "GLSL 포팅"
+description: "버퍼 및 셰이더 개체를 만들고 구성하는 코드를 이동한 후에는 해당 셰이더 내에서 코드를 OpenGL ES 2.0 GLSL(GL Shader Language)에서 Direct3D 11 HLSL(High Level Shader Language)로 포팅할 차례입니다."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d1d203fa74bd80fe26401e64d4e15bb11e5c1050
+
 ---
 
 # GLSL 포팅
@@ -184,6 +188,7 @@ HLSL 의미 체계 및 상수 버퍼 압축을 이해하면 약간의 디버깅 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

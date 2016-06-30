@@ -1,8 +1,12 @@
 ---
-title: 자격 증명 보관
-description: 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 자격 증명 보관을 사용하여 사용자 자격 증명을 안전하게 저장 및 검색하고 사용자의 Microsoft 계정을 사용하여 장치 간에 로밍하는 방법을 설명합니다.
+title: "자격 증명 보관"
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 자격 증명 보관을 사용하여 사용자 자격 증명을 안전하게 저장 및 검색하고 사용자의 Microsoft 계정을 사용하여 장치 간에 로밍하는 방법을 설명합니다."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
+
 ---
 
 # 자격 증명 보관
@@ -131,6 +135,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
 
 앱 데이터 또는 로밍 설정을 사용하여 자격 증명을 일반 텍스트로 저장하지 마세요.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

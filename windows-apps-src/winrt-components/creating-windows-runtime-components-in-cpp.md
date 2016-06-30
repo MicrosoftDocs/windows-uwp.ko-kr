@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: C++로 Windows 런타임 구성 요소 만들기
-description: 이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visual Basic, C++)를 사용해 작성된 유니버설 Windows 앱에서 호출할 수 있는 DLL인 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.
+author: msatranjr
+title: "C++로 Windows 런타임 구성 요소 만들기"
+description: "이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visual Basic, C++)를 사용해 작성된 유니버설 Windows 앱에서 호출할 수 있는 DLL인 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1497175723738cc23ec21b280c9639b216a33ddd
+
 ---
 
 
@@ -10,9 +13,6 @@ ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visual Basic, C++)를 사용해 작성된 유니버설 Windows 앱에서 호출할 수 있는 DLL인 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.
 
@@ -57,7 +57,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 
 };
@@ -97,7 +97,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 ```
 
@@ -126,7 +126,7 @@ namespace CppComponent
     private:
         PlayerData m_player;
     public:
-        property PlayerData PlayerStats 
+        property PlayerData PlayerStats
         {
             PlayerData get(){ return m_player; }
             void set(PlayerData data) {m_player = data;}
@@ -185,7 +185,7 @@ private void GetAndSetPlayerData()
 C++ 공용 참조 클래스에는 오버로드된 메서드가 포함될 수 있지만, JavaScript는 오버로드된 메서드를 구분할 수 있는 기능이 제한적입니다. 예를 들어 다음 서명 간의 차이는 구분할 수 있습니다.
 
 ```cpp
-public ref class NumberClass sealed 
+public ref class NumberClass sealed
 {
 public:
     int GetNumber(int i);
@@ -333,7 +333,7 @@ private void SortListItems()
 //#include <collection.h>
 Windows::Foundation::Collections::IMap<int, Platform::String^> ^GetMap(void)
 {    
-    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret = 
+    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret =
         ref new Platform::Collections::Map<int, Platform::String^>;
     ret->Insert(1, "One ");
     ret->Insert(2, "Two ");
@@ -383,7 +383,7 @@ public:
     property int PropertyA
     {
         int get() { return m_propertyAValue; }
-        void set(int propertyAValue) 
+        void set(int propertyAValue)
         {
             if (propertyAValue != m_propertyAValue)
             {
@@ -597,6 +597,6 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

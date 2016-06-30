@@ -1,8 +1,12 @@
 ---
-title: Microsoft Passport 로그인 앱 만들기
-description: 이 문서는 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대해 설명하는 전체 연습의 1부입니다.
+title: "Microsoft Passport 로그인 앱 만들기"
+description: "이 문서는 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대해 설명하는 전체 연습의 1부입니다."
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
+ms.openlocfilehash: d28f0b9ea08d35a220cdb58367f03af95966e282
+
 ---
 
 # Microsoft Passport 로그인 앱 만들기
@@ -24,8 +28,8 @@ author: awkoren
 
 이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
--   Visual Studio 2015를 열고 파일 > 새로 만들기 > 프로젝트를 선택합니다.
--   "새 프로젝트" 창이 열립니다. 템플릿 > Visual C#으로 이동합니다.
+-   Visual Studio 2015를 열고 파일 &gt; 새로 만들기 &gt; 프로젝트를 선택합니다.
+-   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
 -   비어 있는 앱(유니버설 Windows)을 선택하고 응용 프로그램의 이름을 "PassportLogin"으로 지정합니다.
 -   새 응용 프로그램을 빌드 및 실행(F5)하면 화면에 빈 창이 표시됩니다. 응용 프로그램을 닫습니다.
 
@@ -36,11 +40,11 @@ author: awkoren
 
 이 연습에서는 컴퓨터에 Microsoft Passport가 설정되어 있는지 확인하는 방법과 Microsoft Passport를 사용하여 계정에 로그인하는 방법을 알아봅니다.
 
--   새 프로젝트에서 솔루션에 "Views"라는 새 폴더를 만듭니다. 이 폴더에는 이 샘플에서 이동할 페이지가 포함됩니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가 > 새 폴더를 선택한 다음 폴더 이름을 Views로 바꿉니다.
+-   새 프로젝트에서 솔루션에 "Views"라는 새 폴더를 만듭니다. 이 폴더에는 이 샘플에서 이동할 페이지가 포함됩니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가&gt; 새 폴더를 선택한 다음 폴더 이름을 Views로 바꿉니다.
 
     ![](images/passport-login-2.png)
 
--   새 Views 폴더를 마우스 오른쪽 단추로 클릭하고 추가 > 새 항목을 선택한 후 빈 페이지를 선택합니다. 이 페이지의 이름을 "Login.xaml"로 지정합니다.
+-   새 Views 폴더를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 항목을 선택한 후 빈 페이지를 선택합니다. 이 페이지의 이름을 "Login.xaml"로 지정합니다.
 
     ![](images/passport-login-3.png)
 
@@ -156,11 +160,11 @@ author: awkoren
     }
     ```
 
--   MicrosoftPassportHelper 클래스를 만들려면 솔루션 PassportLogin(유니버설 Windows)을 마우스 오른쪽 단추로 클릭하고 추가 > 새 폴더를 클릭합니다. 이 폴더의 이름을 Utils로 지정합니다.
+-   MicrosoftPassportHelper 클래스를 만들려면 솔루션 PassportLogin(유니버설 Windows)을 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 클릭합니다. 이 폴더의 이름을 Utils로 지정합니다.
 
     ![](images/passport-login-5.png)
 
--   Utils 폴더를 마우스 오른쪽 단추로 클릭하고 추가 > 클래스를 클릭합니다. 이 클래스 이름을 "MicrosoftPassportHelper.cs"로 지정합니다.
+-   Utils 폴더를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 클래스를 클릭합니다. 이 클래스 이름을 "MicrosoftPassportHelper.cs"로 지정합니다.
 -   MicrosoftPassportHelper의 클래스 정의를 public static으로 변경한 후 Microsoft Passport를 사용할 수 있는지 여부를 사용자에게 알려주는 다음 메서드를 추가합니다. 필요한 네임스페이스를 추가해야 합니다.
 
     ```cs
@@ -969,6 +973,7 @@ Microsoft Passport에 대한 지원을 구현한 후에는 Windows Hello를 지�
 * [Microsoft Passport 및 Windows Hello](microsoft-passport.md)
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

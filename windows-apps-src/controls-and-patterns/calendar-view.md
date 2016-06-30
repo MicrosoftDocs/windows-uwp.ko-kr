@@ -5,8 +5,8 @@ title: "달력 보기"
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 466d8fe25cb2dfe8ce3b4efef995d9e3cb682dc1
 
 ---
 
@@ -14,10 +14,8 @@ ms.openlocfilehash: 7b9d4773cba5c6ebb770e27dd20ba5c6fb40ff75
 
 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다. 사용자는 단일 날짜 또는 날짜 범위를 선택할 수 있습니다. 선택 화면이 없고 달력이 항상 표시됩니다. 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
-
 - [**CalendarView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)
-- [**Date 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx)
+- [**SelectedDatesChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)
 
 ## 올바른 컨트롤인가요?
 달력 보기를 사용하여 항상 표시되는 달력에서 단일 날짜 또는 날짜 범위를 선택할 수 있도록 합니다.
@@ -201,6 +199,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

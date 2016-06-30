@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: C++ 및 DirectX로 UWP 게임 Marble Maze 개발
-description: 이 설명서 섹션에서는 DirectX 및 Visual C++를 사용하여 3D UWP(유니버설 Windows 플랫폼) 게임을 만드는 방법을 설명합니다.
+title: "C++ 및 DirectX로 UWP 게임 Marble Maze 개발"
+description: "이 설명서 섹션에서는 DirectX 및 Visual C++를 사용하여 3D UWP(유니버설 Windows 플랫폼) 게임을 만드는 방법을 설명합니다."
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
+
 ---
 
 # C++ 및 DirectX로 UWP 게임 Marble Maze 개발
@@ -101,6 +105,7 @@ Marble Maze 소스 코드가 따르는 코딩 및 스타일 지침과 Marble Maz
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

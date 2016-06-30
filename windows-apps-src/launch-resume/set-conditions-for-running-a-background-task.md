@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업 실행 조건 설정
-description: 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "백그라운드 작업 실행 조건 설정"
+description: "백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
+
 ---
 
 # 백그라운드 작업 실행 조건 설정
@@ -184,6 +187,7 @@ ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

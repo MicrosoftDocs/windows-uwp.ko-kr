@@ -5,8 +5,8 @@ title: "음성 인식기 언어 지정"
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 8af4fe64e586037d68ab5cd422d7195bd3a64b94
 
 ---
 
@@ -42,7 +42,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 유용하고 매력적인 음성 사용 앱 디자인에 도움이 되는 팁은 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)을 참조하세요.
 
-## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>기본 언어 확인
+## 기본 언어 확인
 
 
 음성 인식기는 해당 기본 인식 언어로 시스템 음성 언어를 사용합니다. 이 언어는 사용자가 디바이스의 설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어 화면에서 설정합니다.
@@ -57,7 +57,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 </table>
 ```
 
-## <span id="Confirm_an_installed_language"></span><span id="confirm_an_installed_language"></span><span id="CONFIRM_AN_INSTALLED_LANGUAGE"></span>설치된 언어를 확인합니다.
+## 설치된 언어를 확인합니다.
 
 
 설치된 언어는 장치마다 다를 수 있습니다. 특정 제약 조건 때문에 특정 언어에 의존하는 경우 해당 언어가 있는지 확인해야 합니다.
@@ -75,14 +75,14 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 -   [
             **SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - 목록 제약 조건 또는 SRGS(Speech Recognition Grammar Specification) 파일에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
 
-## <span id="Specify_a_language"></span><span id="specify_a_language"></span><span id="SPECIFY_A_LANGUAGE"></span>언어 지정
+## 언어 지정
 
 
 언어를 지정하려면 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 생성자의 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체를 전달합니다.
 
 여기에서는 인식 언어로 "en-US"를 지정합니다.
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -98,7 +98,7 @@ var language = new Windows.Globalization.Language(“en-US”);
 var recognizer = new SpeechRecognizer(language); 
 ```
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>설명
+## 설명
 
 
 항목 제약 조건은 [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)의 [**Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 컬렉션에 [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)를 추가한 후 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)를 호출하여 구성할 수 있습니다. 인식기가 지원되는 항목 언어와 함께 초기화되지 않은 경우 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)가 반환됩니다.
@@ -107,7 +107,7 @@ var recognizer = new SpeechRecognizer(language);
 
 SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) 클래스에서 나타내는 개방형 표준 XML 형식입니다. 사용자 지정 목록과 달리 SRGS 태그에서 문법의 언어를 지정할 수 있습니다. 인식기가 SRGS 태그와 동일한 언어로 초기화되지 않은 경우 [**CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)는 **TopicLanguageNotSupported**의 [**SpeechRecognitionResultStatus**](https://msdn.microsoft.com/library/windows/apps/dn631433)로 실패합니다.
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 **개발자**
@@ -126,6 +126,6 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

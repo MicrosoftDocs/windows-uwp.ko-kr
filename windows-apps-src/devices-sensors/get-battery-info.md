@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
-title: 배터리 정보 가져오기
-description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
+title: "배터리 정보 가져오기"
+description: "Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 716123f7401350748c7eb81a2ca4208a74b6e4ac
+
 ---
 # 배터리 정보 가져오기
 
@@ -338,6 +342,7 @@ namespace App1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

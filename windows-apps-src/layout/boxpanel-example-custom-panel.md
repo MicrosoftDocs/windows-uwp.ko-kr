@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'ArrangeOverride 및 MeasureOverride methods 메서드를 구현하고 Children 속성을 사용하는 사용자 지정 Panel 클래스에 대한 코드를 작성하는 방법을 알아봅니다.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "ArrangeOverride 및 MeasureOverride methods 메서드를 구현하고 Children 속성을 사용하는 사용자 지정 Panel 클래스에 대한 코드를 작성하는 방법을 알아봅니다."
+MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'BoxPanel, 예제 사용자 지정 패널'
+title: "BoxPanel, 예제 사용자 지정 패널"
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
+
 ---
 
 # BoxPanel, 예제 사용자 지정 패널
@@ -232,6 +236,7 @@ if (UseOppositeRCRatio) { aspectratio = 1 / aspectratio;}
 [맞춤, 여백 및 안쪽 여백](alignment-margin-padding.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

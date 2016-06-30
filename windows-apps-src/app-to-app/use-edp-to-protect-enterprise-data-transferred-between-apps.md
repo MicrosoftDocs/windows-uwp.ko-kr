@@ -1,10 +1,14 @@
 ---
 author: awkoren
-Description: '이 항목에서는 가장 일반적인 데이터 전송 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
-MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "이 항목에서는 가장 일반적인 데이터 전송 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다."
+MS-HAID: dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: EDP를 사용하여 앱 간에 전송되는 엔터프라이즈 데이터 보호
+title: "EDP를 사용하여 앱 간에 전송되는 엔터프라이즈 데이터 보호"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
+
 ---
 
 # EDP를 사용하여 앱 간에 전송되는 엔터프라이즈 데이터 보호
@@ -395,6 +399,7 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

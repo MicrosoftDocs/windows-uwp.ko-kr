@@ -1,11 +1,15 @@
 ---
 author: DelfCo
-Description: 앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.
+Description: "앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요."
 Search.Refinement.TopicID: 180
-title: 세계화 및 지역화에 대한 지침
+title: "세계화 및 지역화에 대한 지침"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
+
 ---
 
 # 세계화 및 지역화 권장 사항 및 금지 사항
@@ -69,7 +73,7 @@ UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization*
 </tr>
 <tr class="odd">
 <td align="left"><p>언어로 사용자의 위치를 가정하거나 위치로 사용자의 언어를 가정하지 마세요.</p></td>
-<td align="left"><p>Windows에서 사용자의 언어와 위치는 별개의 개념입니다. 사용자가 특정 지역의 변형된 언어(예: 영어[영국] en-gb)로 말하지만, 완전히 다른 국가 또는 지역에 있을 수 있습니다. 앱에 사용자의 언어(예: UI 텍스트용) 또는 위치(예: 라이선스 발급용) 정보가 필요한지 여부를 고려하세요.</p>
+<td align="left"><p>Windows에서 사용자의 언어와 위치는 별개의 개념입니다. 사용자가 특정 지역의 변형된 언어(예: 영어\[영국\] en-gb)로 말하지만, 완전히 다른 국가 또는 지역에 있을 수 있습니다. 앱에 사용자의 언어(예: UI 텍스트용) 또는 위치(예: 라이선스 발급용) 정보가 필요한지 여부를 고려하세요.</p>
 <p>자세한 내용은 [<strong>언어 및 지역 관리</strong>](manage-language-and-region.md)를 참조하세요.</p></td>
 </tr>
 <tr class="even">
@@ -188,6 +192,7 @@ UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization*
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

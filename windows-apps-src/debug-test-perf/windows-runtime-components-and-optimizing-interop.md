@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
-description: Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
+title: "유니버설 Windows 플랫폼 구성 요소 및 interop 최적화"
+description: "Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 5c7a49558ed11f82b7afea1ea96271c45c2f9139
+ms.openlocfilehash: b9300b3feb1e5229951f3e1ebe454b61ba8065ae
+
 ---
 # 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
 
@@ -86,6 +90,7 @@ C++ 또는 JavaScript로 개발되는 앱에서 사용하기 위한 UWP 구성 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

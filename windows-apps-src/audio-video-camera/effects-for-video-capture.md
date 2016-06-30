@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: 이 항목에서는 비디오 캡처 시나리오에 사용하도록 디자인된 효과에 대해 설명합니다. 여기에는 동영상 손떨림 보정 효과가 포함됩니다.
-title: 비디오 캡처 효과
+description: "이 항목에서는 비디오 캡처 시나리오에 사용하도록 디자인된 효과에 대해 설명합니다. 여기에는 동영상 손떨림 보정 효과가 포함됩니다."
+title: "비디오 캡처 효과"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
+
 ---
 
 # 비디오 캡처 효과
@@ -90,6 +94,7 @@ title: 비디오 캡처 효과
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

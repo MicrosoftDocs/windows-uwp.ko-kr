@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각적 구조와 동작을 사용자 지정할 수 있습니다.
-MS-HAID: 'dev\_ctrl\_layout\_txt.control\_templates'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각적 구조와 동작을 사용자 지정할 수 있습니다."
+MS-HAID: dev\_ctrl\_layout\_txt.control\_templates
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 컨트롤 템플릿
+title: "컨트롤 템플릿"
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
+
 ---
 
 # 컨트롤 템플릿
@@ -227,6 +231,7 @@ XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../xaml-platf
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

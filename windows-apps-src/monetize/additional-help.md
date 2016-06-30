@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 15d8cc6c-80f9-49b7-8036-0abf80ffebba
-description: 광고를 포함하는 앱 개발을 위한 기타 리소스에 대해 알아봅니다.
-title: 추가 도움말
+description: "광고를 포함하는 앱 개발을 위한 기타 리소스에 대해 알아봅니다."
+title: "추가 도움말"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 5229cf7ebb4133052c3e960fe1c81d6edeef8e57
+
 ---
 
 # 추가 도움말
@@ -29,6 +33,7 @@ title: 추가 도움말
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업 디버그
-description: Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "백그라운드 작업 디버그"
+description: "Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 1b49c3f06456eef2f3e56227ecb5af5fc991fb13
+
 ---
 
 # 백그라운드 작업 디버그
@@ -112,8 +115,6 @@ Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

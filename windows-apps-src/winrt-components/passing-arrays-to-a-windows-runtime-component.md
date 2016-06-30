@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: Windows 런타임 구성 요소에 배열 전달
-description: UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다.
+author: msatranjr
+title: "Windows 런타임 구성 요소에 배열 전달"
+description: "UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다."
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 21e4b504b4adc6e2cb9b16d377781aaaab6a4aac
+
 ---
 
 # Windows 런타임 구성 요소에 배열 전달
@@ -10,8 +13,6 @@ ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력용이며 입력과 출력 모두의 매개 변수는 아닙니다. 다시 말해서, 메서드에 전달되는 배열의 콘텐츠 및 배열 자체는 입력 또는 출력용입니다. 배열의 콘텐츠가 입력용인 경우 메서드는 배열에서 읽지만 배열에 쓰지는 않습니다. 배열의 콘텐츠가 출력용인 경우 메서드는 배열에 쓰지만 배열에서 읽지는 않습니다. 이에 따라 배열 매개 변수의 문제가 발생합니다. 왜냐하면 .NET Framework의 배열은 참조 형식이고 배열의 콘텐츠는 배열 참조가 값으로 전달(Visual Basic의 **ByVal**)되더라도 변경 가능하기 때문입니다. [Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx)를 사용하려면 컨텍스트에서 명확하지 않은 경우 의도한 배열의 용도를 지정해야 합니다. ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성을 매개 변수에 적용하면 됩니다. 배열 사용은 다음과 같이 결정됩니다.
 
@@ -40,7 +41,7 @@ UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력�
 >     ' Manipulate the copy.
 >     '   ...
 >     Return output
-> End Function 
+> End Function
 > ```
 
 즉시 입력 배열의 복사본을 만들어 복사본을 조작하는 것이 좋습니다. 이렇게 하면 구성 요소가 .NET Framework 코드에 의해 호출되는지 여부에 관계없이 메서드가 동일하게 동작합니다.
@@ -63,6 +64,6 @@ ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

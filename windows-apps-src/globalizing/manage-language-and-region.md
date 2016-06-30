@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
-title: 언어 및 지역 관리
+Description: "Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다."
+title: "언어 및 지역 관리"
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+
 ---
 
 # 언어 및 지역 관리
@@ -220,6 +224,7 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

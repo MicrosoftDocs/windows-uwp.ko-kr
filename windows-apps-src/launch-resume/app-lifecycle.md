@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 앱 수명 주기
-description: 이 항목에서는 활성화된 시점부터 닫힐 때까지의 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다.
+author: TylerMSFT
+title: "앱 수명 주기"
+description: "이 항목에서는 활성화된 시점부터 닫힐 때까지의 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+
 ---
 
 # 앱 수명 주기
@@ -50,7 +53,7 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 ## 앱 활성화
 
 
-사용자가 공유 계약과 같은 다양한 계약 및 확장을 통해 앱을 활성화할 수 있습니다. 앱을 활성화할 수 있는 방법에 대한 목록은 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)를 참조하세요.
+사용자가 공유 계약과 같은 다양한 계약 및 확장을 통해 앱을 활성화할 수 있습니다. 앱을 활성화할 수 있는 방법에 대한 목록은 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)을 참조하세요.
 
 [
             **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 여러 활성화 유형에 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336) 등 재정의할 수 있는 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의합니다.
@@ -71,8 +74,7 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 
  
 
-**참고** 
-           *현재 사용자 세션*은 Windows 로그온 기준입니다. 현재 사용자가 확실히 로그오프, 종료하거나 다른 이유로 Windows가 다시 시작되지 않는 한 잠금 화면 인증, 사용자 전환 등의 이벤트가 있어도 현재 사용자 세션이 유지됩니다.
+**참고** *현재 사용자 세션*은 Windows 로그온 기준입니다. 현재 사용자가 확실히 로그오프, 종료하거나 다른 이유로 Windows가 다시 시작되지 않는 한 잠금 화면 인증, 사용자 전환 등의 이벤트가 있어도 현재 사용자 세션이 유지됩니다.
 
  
 
@@ -111,7 +113,7 @@ ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
 
 지침은 [앱 일시 중단 및 다시 시작에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)을 참조하세요.
 
-**Visual Studio를 사용하는 디버깅에 대한 참고 사항:**Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
+**Visual Studio를 사용하는 디버깅에 대한 참고 사항:** Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
 
 ## 앱 가시성
 
@@ -181,8 +183,7 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 -   [
             **Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 네임스페이스
--   [
-            **Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766) 네임스페이스
+-   [ **Windows.ApplicationModel.Activation** ](https://msdn.microsoft.com/library/windows/apps/br224766) 네임스페이스
 -   [
             **Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) 네임스페이스
 -   [
@@ -210,8 +211,6 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

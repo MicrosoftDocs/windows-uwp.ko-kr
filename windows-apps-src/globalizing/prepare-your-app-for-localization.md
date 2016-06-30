@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: 다른 시장, 언어 또는 지역으로의 앱 지역화를 준비합니다.
-title: 앱 지역화 준비
+Description: "다른 시장, 언어 또는 지역으로의 앱 지역화를 준비합니다."
+title: "앱 지역화 준비"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+
 ---
 
 # 앱 지역화 준비
@@ -187,6 +191,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

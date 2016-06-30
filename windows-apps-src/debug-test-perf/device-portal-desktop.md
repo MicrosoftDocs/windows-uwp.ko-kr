@@ -1,12 +1,15 @@
 ---
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: 데스크톱용 Device Portal
-description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
+title: "데스크톱용 Device Portal"
+description: "Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다."
+ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
+ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+
 ---
 # 데스크톱용 Device Portal
 
-Windows 10, 버전 1604부터 추가적인 데스크톱용 개발자 기능을 사용할 수 있습니다. 이러한 기능은 개발자 모드를 사용하는 경우에만 사용됩니다.
+Windows 10, 버전 1607부터 추가적인 데스크톱용 개발자 기능을 사용할 수 있습니다. 이러한 기능은 개발자 모드를 사용하는 경우에만 사용됩니다.
 
 개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
 
@@ -101,6 +104,7 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록  합니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'ResourceDictionary 요소와 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "ResourceDictionary 요소와 키 입력 리소스를 정의하는 방법 그리고 앱 또는 앱 패키지의 일부로 정의하는 다른 리소스와 XAML 리소스가 어떻게 관련되는지에 대해 설명합니다."
+MS-HAID: dev\_ctrl\_layout\_txt.resourcedictionary\_and\_xaml\_resource\_references
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: ResourceDictionary 및 XAML 리소스 참조
+title: "ResourceDictionary 및 XAML 리소스 참조"
 ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
 label: ResourceDictionary and XAML resource references
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fddd345507aace54aca66fe1caa2d9f89a74a299
+
 ---
 
 # ResourceDictionary 및 XAML 리소스 참조
@@ -460,7 +464,7 @@ XAML 파서가 클래스를 인스턴스화하려면 생성자가 필요하므�
 
 ## 코드에서 ResourceDictionary 사용
 
-대부분의 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 시나리오는 XAML에서 배타적으로 처리됩니다. **ResourceDictionary** 컨테이너 및 리소스를 XAML 파일 또는 UI 정의 파일의 XAML 노드 집합으로 선언합니다. 그런 다음, XAML 리소스 참조를 사용하여 XAML의 다른 부분에서 해당 리소스를 요청합니다. 하지만 앱이 실행 중인 동안 실행되는 코드를 사용하여 **ResourceDictionary**의 콘텐츠를 조정하거나 **ResourceDictionary** 콘텐츠를 쿼리하여 리소스가 이미 정의되어 있는지 확인해야 하는 특정 시나리오가 있습니다. 이러한 코드 호출은 **ResourceDictionary** 인스턴스에서 수행되므로 먼저 하나의 항목, 즉 [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) 가져오기로 개체 트리에 있는 즉시 실행 **ResourceDictionary**를 검색하거나 다음을 검색해야 합니다.
+대부분의 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 시나리오는 XAML에서 배타적으로 처리됩니다. **ResourceDictionary** 컨테이너 및 리소스를 XAML 파일 또는 UI 정의 파일의 XAML 노드 집합으로 선언합니다. 그런 다음, XAML 리소스 참조를 사용하여 XAML의 다른 부분에서 해당 리소스를 요청합니다. 하지만 앱이 실행 중인 동안 실행되는 코드를 사용하여 **ResourceDictionary**의 콘텐츠를 조정하거나 **ResourceDictionary** 콘텐츠를 쿼리하여 리소스가 이미 정의되어 있는지 확인해야 하는 특정 시나리오가 있습니다. 이러한 코드 호출은 **ResourceDictionary** 인스턴스에서 수행되므로 먼저 하나의 항목, 즉 [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740) 가져오기로 개체 트리에 있는 즉시 실행 **ResourceDictionary**를 검색하거나 `Application.Current.Resources`를 검색해야 합니다.
 
 C\# 또는 Microsoft Visual Basic 코드에서 인덱서([**Item**](https://msdn.microsoft.com/library/windows/apps/jj603134))를 사용하여 특정 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 리소스를 참조할 수 있습니다. **ResourceDictionary**는 문자열 키가 입력된 사전이므로 인덱서는 정수 인덱스가 아닌 문자열 키를 사용합니다. Visual C++ 구성 요소 확장(C++/CX) 코드에서 [**Lookup**](https://msdn.microsoft.com/library/windows/apps/br208800)을 사용합니다.
 
@@ -508,6 +512,7 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([**Item**](https://msdn
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

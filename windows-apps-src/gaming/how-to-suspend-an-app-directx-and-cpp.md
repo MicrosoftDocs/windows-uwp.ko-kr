@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 앱 일시 중단 방법(DirectX 및 C++)
-description: 이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다.
+title: "앱 일시 중단 방법(DirectX 및 C++)"
+description: "이 항목에서는 시스템이 UWP(유니버설 Windows 플랫폼) DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 38e03a4a6312c5a0521c7263944897260624aa38
+
 ---
 
 # 앱 일시 중단 방법(DirectX 및 C++)
@@ -150,6 +154,7 @@ void DX::DeviceResources::Trim()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

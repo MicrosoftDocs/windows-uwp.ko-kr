@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
-description: 앱을 제출하기 전에 광고 조정 구현을 테스트하는 것이 좋습니다.
-title: 광고 조정 구현 테스트
+description: "앱을 제출하기 전에 광고 조정 구현을 테스트하는 것이 좋습니다."
+title: "광고 조정 구현 테스트"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
+
 ---
 
 # 광고 조정 구현 테스트
@@ -49,6 +53,7 @@ Windows 개발자 센터 대시보드에 앱 패키지를 제출하면 Visual St
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

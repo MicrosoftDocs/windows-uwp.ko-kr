@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: Hello, world 앱 만들기(JS)
-description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다.
+title: "Hello, world 앱 만들기(JS)"
+description: "이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
+ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+
 ---
 # Hello, world 앱 만들기(JS)
 
@@ -41,7 +45,7 @@ description: 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 
 
     **새 프로젝트** 대화 상자가 나타납니다. 대화 상자의 왼쪽 창에서 표시할 템플릿 유형을 선택할 수 있습니다.
 
-3.  왼쪽 창에서 **설치됨 > 템플릿 > JavaScript > Windows**를 차례로 확장한 후 **Windows 유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
+3.  왼쪽 창에서 **설치됨 &gt; 템플릿 &gt; JavaScript &gt; Windows**를 차례로 확장한 후 **Windows 유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
 
     ![새 프로젝트 창 ](images/js-tut-newproject.png)
 
@@ -271,7 +275,9 @@ UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차
         }
 ```
 
-2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
+2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`
+            [
+            **div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -559,6 +565,7 @@ Here's the updated [**onactivated**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

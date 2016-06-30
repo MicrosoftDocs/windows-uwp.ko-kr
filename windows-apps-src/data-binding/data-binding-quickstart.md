@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "데이터 바인딩 개요"
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c30e048f450c062c6e0148e5040a58bfa47193bb
+ms.sourcegitcommit: c5325f0d0a067847bea81a115db4770a39ddd12a
+ms.openlocfilehash: 4753c2fc52fa0227b3867685b793a3d6cfc05630
 
 ---
 데이터 바인딩 개요
@@ -32,7 +32,7 @@ ms.openlocfilehash: c30e048f450c062c6e0148e5040a58bfa47193bb
 
 프로젝트에 새 클래스를 추가하고 이름을 Recording.cs(C#을 사용하는 경우)로 지정한 후 다음 코드를 추가합니다.
 
-``` csharp
+```csharp
 namespace Quickstart
 {
     public class Recording
@@ -66,7 +66,7 @@ namespace Quickstart
 }
 ```
 
-``` cpp
+```cpp
 #include <sstream>
 
 namespace Quickstart
@@ -140,7 +140,7 @@ namespace Quickstart
 
 그런 다음 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출합니다. **RecordingViewModel** 형식의 속성을 **MainPage**에 바인딩하면 됩니다.
 
-``` csharp
+```csharp
 namespace Quickstart
 {
     public sealed partial class MainPage : Page
@@ -156,7 +156,7 @@ namespace Quickstart
 }
 ```
 
-``` cpp
+```cpp
 namespace Quickstart
 {
     public ref class MainPage sealed
@@ -181,7 +181,7 @@ namespace Quickstart
 
 마지막 부분은 **TextBlock**를 **ViewModel.DefaultRecording.OneLiner** 속성에 바인딩하는 것입니다.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
@@ -202,7 +202,7 @@ namespace Quickstart
 
 다음 예제에서는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 `Recording` 개체의 컬렉션에 바인딩합니다. 먼저 컬렉션을 뷰 모델에 추가합니다. 다음과 같은 새 멤버를 **RecordingViewModel** 클래스에 추가하면 됩니다.
 
-``` csharp
+```csharp
     public class RecordingViewModel
     {
         ...
@@ -222,7 +222,7 @@ namespace Quickstart
     }
 ```
 
-``` cpp
+```cpp
     public ref class RecordingViewModel sealed
     {
     private:
@@ -270,11 +270,11 @@ namespace Quickstart
             };
         }
     };
-    ```
+```
 
-And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) to the **ViewModel.Recordings** property.
+그런 다음 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 **ViewModel.Recordings** 속성에 바인딩합니다.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -289,7 +289,7 @@ And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/B
 
 이를 해결하기 위해 **OneLineSummary** 값을 반환하도록 [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx)을 재정의하거나 데이터 템플릿을 제공할 수 있습니다. 데이터 템플릿 옵션이 더 일반적이며 보다 유연합니다. 콘텐츠 컨트롤의 [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369) 속성 또는 항목 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830) 속성을 사용하여 데이터 템플릿을 지정합니다. 결과에 대한 그림과 함께 **Recording**에 대한 데이터 템플릿을 디자인할 수 있는 두 가지 방법은 다음과 같습니다.
 
-``` xml
+```xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
         HorizontalAlignment="Center" VerticalAlignment="Center">
         <ListView.ItemTemplate>
@@ -298,11 +298,11 @@ And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/B
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    ```
+```
 
-![Binding a list view](images/xaml-databinding2.png)
+![목록 보기 바인딩](images/xaml-databinding2.png)
 
-``` xml
+```xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
     HorizontalAlignment="Center" VerticalAlignment="Center">
         <ListView.ItemTemplate>
@@ -335,7 +335,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 먼저, 다음은 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 기술입니다. Visual C++ 구성 요소 확장(C++/CX)을 사용하는 경우 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용할 것이므로 **Recording** 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가해야 합니다.
 
-``` cpp
+```cpp
     [Windows::UI::Xaml::Data::Bindable]
     public ref class Recording sealed
     {
@@ -345,7 +345,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 달리 더 변경할 사항은 태그뿐입니다.
 
-``` xml
+```xml
 <Page x:Class="Quickstart.MainPage" ... >
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -375,7 +375,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 [
             **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 기술의 경우 먼저 **CollectionViewSource**를 페이지 리소스로 추가합니다.
 
-``` xml
+```xml
     <Page.Resources>
         <CollectionViewSource x:Name="RecordingsCollection" Source="{x:Bind ViewModel.Recordings}"/>
     </Page.Resources>
@@ -383,7 +383,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 그런 다음 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용하도록 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)(더 이상 이름을 지정할 필요 없음)와 세부 정보 보기에 대한 바인딩을 조정합니다. 세부 정보 보기를 **CollectionViewSource**에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음).
 
-``` xml
+```xml
     ...
 
     <ListView ItemsSource="{Binding Source={StaticResource RecordingsCollection}}">
@@ -405,7 +405,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 보다 유연한 해결 방법은 값 변환기라는 것을 사용하는 것입니다. 다음은 사용자 고유의 값 변환기를 작성하는 방법에 대한 예제입니다. 이 코드를 Recording.cs 소스 코드 파일에 추가합니다.
 
-``` csharp
+```csharp
 public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 {
     // This converts the value object to the string to display.
@@ -436,7 +436,7 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 이제 **StringFormatter**의 인스턴스를 페이지 리소스로 추가하고 바인딩에서 사용할 수 있습니다. 형식 지정 유연성을 극대화하기 위해 태그에서 변환기로 형식 문자열을 전달합니다.
 
-``` xml
+```xml
     <Page.Resources>
         <local:StringFormatter x:Key="StringFormatterValueConverter"/>
     </Page.Resources>
@@ -457,6 +457,6 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

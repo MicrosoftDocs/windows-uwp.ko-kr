@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
-title: HoloLens용 디바이스 포털 API 참조
-description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 HoloLens REST API의 Windows Device Portal에 대해 알아봅니다.
+title: "HoloLens용 디바이스 포털 API 참조"
+description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 HoloLens REST API의 Windows Device Portal에 대해 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5ed8ffe0a409569777fbf4e56a90ab3b80cd395c
+
 ---
 # HoloLens용 디바이스 포털 API 참조
 
@@ -1410,6 +1414,7 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 - 표준 상태 코드입니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

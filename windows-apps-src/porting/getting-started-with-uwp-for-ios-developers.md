@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: iOS 개발자용 UWP 시작
-title: iOS 개발자용 UWP 시작
+description: "iOS 개발자용 UWP 시작"
+title: "iOS 개발자용 UWP 시작"
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3fef53e5d6c9259bf5157b1221643d07e1d8be5e
+
 ---
 
 # iOS 개발자용 UWP 시작
@@ -37,6 +41,7 @@ Windows 10에서는 데스크톱, 랩톱, 태블릿 및 휴대폰 장치 등에�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임 프로젝트 설정
-description: 게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다.
+title: "게임 프로젝트 설정"
+description: "게임을 어셈블하는 첫 번째 단계는 Microsoft Visual Studio에서 수행해야 하는 코드 인프라 작업의 양을 최소화하는 방식으로 프로젝트를 설정하는 것입니다."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+
 ---
 
 # 게임 프로젝트 설정
@@ -164,6 +168,7 @@ void App::Run()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

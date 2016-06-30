@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업 지침
-description: 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.
+author: TylerMSFT
+title: "백그라운드 작업 지침"
+description: "앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다."
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 3fb6884a968afb87e8de303bbd17feba4993c597
+
 ---
 
 # 백그라운드 작업 지침
@@ -42,6 +45,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 다음 검사 목록은 모든 백그라운드 작업에 적용됩니다.
 
+-   Windows 런타임 구성 요소에서 백그라운드 작업을 만듭니다.
 -   백그라운드 작업을 올바른 트리거에 연결합니다.
 -   백그라운드 작업이 성공적으로 실행되도록 조건을 추가합니다.
 -   백그라운드 작업 진행률, 완료 및 취소를 처리합니다.
@@ -94,8 +98,6 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

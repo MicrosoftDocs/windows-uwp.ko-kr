@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
-description: XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다.
-title: XAML과 C# 문제 해결 가이드
+description: "XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다."
+title: "XAML과 C# 문제 해결 가이드"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ef9ad8f8056b17793d7ad8230e410e014edf2c95
+
 ---
 
 # XAML과 C# 문제 해결 가이드
@@ -335,6 +339,7 @@ title: XAML과 C# 문제 해결 가이드
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

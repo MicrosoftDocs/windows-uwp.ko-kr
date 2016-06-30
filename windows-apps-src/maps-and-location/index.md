@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 지도 및 위치 개요
-description: 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
+author: msatranjr
+title: "지도 및 위치 개요"
+description: "이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 집합으로 Windows 지도 앱을 시작하는 방법을 보여 줍니다."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
+ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+
 ---
 
 # 지도 및 위치 개요
@@ -29,7 +32,7 @@ ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 |-------|-------------|
 | [지도 인증 키 요청](authentication-key.md) | [
             **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 앱을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 문서에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다. |
-| [지도에 대한 디자인 지침](controls-map.md) | 지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다. |
+| [지도 컨트롤](controls-map.md) | 지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다. |
 | [2D, 3D 및 Streetside 뷰가 있는 지도 표시](display-maps.md) | [
             **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다. |
 | [지도에 POI(관심 지점) 표시](display-poi.md) | 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(관심 지점)를 추가하는 방법을 알아봅니다. |
@@ -89,6 +92,7 @@ ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

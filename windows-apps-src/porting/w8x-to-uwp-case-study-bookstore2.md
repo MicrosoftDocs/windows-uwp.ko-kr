@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: 이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다.
-title: Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2
+description: "이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다."
+title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
+
 ---
 
 # Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore2
@@ -172,6 +176,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 다음 사례 연구는 [QuizGame](w8x-to-uwp-case-study-quizgame.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

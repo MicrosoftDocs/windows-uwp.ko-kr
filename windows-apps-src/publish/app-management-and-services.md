@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리하고 보고 푸시 알림 및 지도와 같은 서비스를 구성할 수 있습니다.
-title: 앱 관리 및 서비스
+Description: "Windows 개발자 센터 대시보드에서 각 앱과 관련된 세부 정보를 관리하고 보고 푸시 알림 및 지도와 같은 서비스를 구성할 수 있습니다."
+title: "앱 관리 및 서비스"
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+
 ---
 
 # 앱 관리 및 서비스
@@ -78,6 +82,7 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

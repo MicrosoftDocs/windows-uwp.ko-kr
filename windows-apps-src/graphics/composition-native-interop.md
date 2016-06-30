@@ -1,8 +1,12 @@
 ---
 author: scottmill
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용
-description: Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 네이티브 상호 운용 인터페이스를 제공합니다.
+title: "BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용"
+description: "Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 네이티브 상호 운용 인터페이스를 제공합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: b5308c8023990996a93277dd1bcfb8298c0bbf4f
+
 ---
 # BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용
 
@@ -266,6 +270,7 @@ private:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

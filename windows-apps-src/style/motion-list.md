@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
-title: UWP 앱에서 애니메이션 추가 및 삭제
+Description: "목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다."
+title: "UWP 앱에서 애니메이션 추가 및 삭제"
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a795cf52c3d062d2131832ac3bc765f45097e849
+
 ---
 
 # 추가 및 삭제 애니메이션
@@ -49,6 +53,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

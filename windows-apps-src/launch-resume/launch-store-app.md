@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Windows 스토어 앱 시작
-description: 이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 스토어 앱을 실행하여 스토어의 특정 페이지를 표시할 수 있습니다.
+author: TylerMSFT
+title: "Windows 스토어 앱 시작"
+description: "이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 스토어 앱을 실행하여 스토어의 특정 페이지를 표시할 수 있습니다."
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9b48aeddb5ddc912fccd07149980655a06535470
+
 ---
 
 # Windows 스토어 앱 실행
@@ -81,7 +84,7 @@ ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 <td>ms-windows-store://assoc/?Protocol=ms-word </td>
 </tr>
 <tr>
-<td>하나 이상의 태그와 연결된 제품에 대한 검색을 실행합니다. 태그는 쉼표로 구분해야 합니다. 
+<td>하나 이상의 태그와 연결된 제품에 대한 검색을 실행합니다. 태그는 쉼표로 구분해야 합니다.
 </td>
 <td />
 <td>
@@ -91,7 +94,7 @@ ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 </tr>
 <tr>
 <td>
-지정된 쿼리에 대한 검색을 실행합니다. 쿼리에 공백을 사용할 수 있습니다. 
+지정된 쿼리에 대한 검색을 실행합니다. 쿼리에 공백을 사용할 수 있습니다.
 </td>
 <td />
 <td>ms-windows-store://search/?query=OneNote </td>
@@ -105,7 +108,7 @@ ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 </td>
 </tr>
 <tr>
-<td>지정된 게시자에서 제품에 대한 검색을 실행합니다. 이름에 공백을 사용할 수 있습니다. 
+<td>지정된 게시자에서 제품에 대한 검색을 실행합니다. 이름에 공백을 사용할 수 있습니다.
 </td>
 <td />
 <td>ms-windows-store://publisher/?name=Microsoft Corporation
@@ -128,8 +131,6 @@ ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

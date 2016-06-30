@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: XAML 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다.
-title: 사용자 지정 연결된 속성
+description: "XAML 연결된 속성을 종속성 속성으로 구현하는 방법 및 연결된 속성을 XAML에서 사용 가능하게 하는 데 필요한 접근자 규칙을 정의하는 방법에 대해 설명합니다."
+title: "사용자 지정 연결된 속성"
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
+
 ---
 
 # 사용자 지정 연결된 속성
@@ -244,6 +248,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

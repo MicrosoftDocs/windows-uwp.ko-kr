@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: 지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다.
-title: 소모성 제품을 처리됨으로 보고
+description: "지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다."
+title: "소모성 제품을 처리됨으로 보고"
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: b099bdc26565ef218eaf1f73c5bb3ec9c24065c3
+
 ---
 
 # 소모성 제품을 처리됨으로 보고
@@ -22,7 +25,7 @@ title: 소모성 제품을 처리됨으로 보고
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   **https://onestore.microsoft.com** 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+-   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
 -   앱의 클라이언트 쪽 코드에서 [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 메서드를 호출하여 생성된 Windows 스토어 ID 키
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
@@ -34,9 +37,9 @@ title: 소모성 제품을 처리됨으로 보고
 
 | 메서드 | 요청 URI                                                   |
 |--------|---------------------------------------------------------------|
-| 게시   | https://collections.mp.microsoft.com/v6.0/collections/consume |
+| POST   | `https://collections.mp.microsoft.com/v6.0/collections/consume` |
 
- 
+<br/> 
 
 ### 요청 헤더
 
@@ -47,7 +50,7 @@ title: 소모성 제품을 처리됨으로 보고
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
- 
+<br/> 
 
 ### 요청 본문
 
@@ -57,12 +60,13 @@ title: 소모성 제품을 처리됨으로 보고
 | itemId        | 문자열       | [제품에 대한 쿼리](query-for-products.md)에서 반환된 itemId 값입니다. 이 매개 변수를 trackingId에 사용하지 마세요.                                                                                                                                                                                                  | 아니요       |
 | trackingId    | GUID         | 개발자가 제공하는 고유한 추적 ID입니다. 이 매개 변수를 itemId에 사용하지 마세요.                                                                                                                                                                                                                                     | 아니요       |
 | productId     | 문자열       | [제품에 대한 쿼리](query-for-products.md)에서 반환된 productId 값입니다. 이 매개 변수를 transactionId에 사용하지 마세요.                                                                                                                                                                                            | 아니요       |
-| transactionId | GUID         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다.                                                                                                                                                                                                                                      | 아니요       | 
-|               |              | * [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 클래스의 [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) 속성.   |        | 
+| transactionId | GUID         | 다음 소스 중 하나에서 가져온 트랜잭션 ID 값입니다.                                                                                                                                                                                                                                      | 아니요       |
+|               |              | * [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392) 클래스의 [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396) 속성.   |        |
 |               |              | * [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) 또는 [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811)에서 반환되는 앱 또는 제품 영수증입니다.   |        |
 |               |              | * [제품에 대한 쿼리](query-for-products.md)에서 반환된 transactionId 매개 변수입니다.   |        |        
 |               |              | 이 매개 변수를 productId에 사용하지 마세요.   |        |
  
+<br/>
 
 UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -72,7 +76,7 @@ UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 | identityValue        | 문자열 | Windows 스토어 ID 키의 문자열 값입니다.                                                                                                   | 예      |
 | localTicketReference | 문자열 | 반환된 응답에 대해 요청된 식별자입니다. Windows 스토어 ID 키의 *userId* 클레임과 동일한 값을 사용하는 것이 좋습니다. | 예      |
 
- 
+<br/> 
 
 ### 요청 예제
 
@@ -142,7 +146,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | 권한 없음 | PartnerAadTicketRequired   | Azure AD 액세스 토큰이 권한 부여 헤더의 서비스에 전달되지 않았습니다.                                                                                                   |
 | 401  | 권한 없음 | InconsistentClientId       | 요청 본문에서 Windows 스토어 ID 키의 *clientId* 클레임과 권한 부여 헤더에서 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.                     |
 
- 
+<br/> 
 
 ## 관련 항목
 
@@ -156,8 +160,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

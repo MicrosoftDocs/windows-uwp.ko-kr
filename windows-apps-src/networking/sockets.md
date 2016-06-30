@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다.
-title: 소켓
+description: "UWP(유니버설 Windows 플랫폼) 개발자는 Windows.Networking.Sockets 및 Winsock을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다."
+title: "소켓"
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
+translationtype: Human Translation
+ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
+ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
+
 ---
 
 # 소켓
@@ -302,6 +306,7 @@ UWP 앱에서도 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

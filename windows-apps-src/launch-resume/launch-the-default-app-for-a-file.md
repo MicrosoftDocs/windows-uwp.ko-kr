@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 파일에 대한 기본 앱 시작
-description: 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "파일에 대한 기본 앱 시작"
+description: "파일에 대한 기본 앱을 시작하는 방법을 알아봅니다."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: b9b2d8ba6aeedea7d9db12565de191b1b6307fa6
+
 ---
 
 # 파일에 대한 기본 앱 시작
@@ -57,7 +60,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >    If file IsNot Nothing Then
 >       ' Launch the retrieved file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -72,7 +75,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -111,7 +114,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >    {
 >       // Launch the retrieved file
 >       var success = await Windows.System.Launcher.LaunchFileAsync(file);
-> 
+>
 >       if (success)
 >       {
 >          // File launched
@@ -140,20 +143,20 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > [!div class="tabbedCodeSnippets"]
 > ```vb
 > async Sub DefaultLaunch()
-> 
+>
 >    ' Path to the file in the app package to launch
 >    Dim imageFile = "images\test.png"
-> 
+>
 >    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
-> 
+>
 >    If file IsNot Nothing Then
 >       ' Set the option to show the picker
 >       Dim options = Windows.System.LauncherOptions()
 >       options.DisplayApplicationPicker = True
-> 
+>
 >       ' Launch the retrieved file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -168,7 +171,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -177,7 +180,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >          // Set the option to show the picker
 >          auto launchOptions = ref new Windows::System::LauncherOptions();
 >          launchOptions->DisplayApplicationPicker = true;
-> 
+>
 >          // Launch the retrieved file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -206,13 +209,13 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >       string imageFile = @"images\test.png";
 >       
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the option to show the picker
 >       var options = new Windows.System.LauncherOptions();
 >       options.DisplayApplicationPicker = true;
-> 
+>
 >       // Launch the retrieved file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -243,23 +246,23 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > [!div class="tabbedCodeSnippets"]
 > ```vb
 > async Sub DefaultLaunch()
-> 
+>
 >    ' Path to the file in the app package to launch
 >    Dim imageFile = "images\test.contoso"
-> 
+>
 >    ' Get the image file from the package's image directory
 >    Dim file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile)
-> 
+>
 >    If file IsNot Nothing Then
 >       ' Set the recommended app
 >       Dim options = Windows.System.LauncherOptions()
 >       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >       options.PreferredApplicationDisplayName = "Contoso File App";
-> 
->       ' Launch the retrieved file pass in the recommended app 
+>
+>       ' Launch the retrieved file pass in the recommended app
 >       ' in case the user has no apps installed to handle the file
 >       Dim success = await Windows.System.Launcher.LaunchFileAsync(file)
-> 
+>
 >       If success Then
 >          ' File launched
 >       Else
@@ -274,7 +277,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.contoso"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -285,7 +288,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >          launchOptions-> preferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >          launchOptions-> preferredApplicationDisplayName = "Contoso File App";
 >          
->          // Launch the retrieved file pass in the recommended app 
+>          // Launch the retrieved file pass in the recommended app
 >          // in case the user has no apps installed to handle the file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -312,19 +315,19 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > {
 >    // Path to the file in the app package to launch
 >    string imageFile = @"images\test.contoso";
-> 
+>
 >    // Get the image file from the package's image directory
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the recommended app
 >       var options = new Windows.System.LauncherOptions();
 >       options.PreferredApplicationPackageFamilyName = "Contoso.FileApp_8wknc82po1e";
 >       options.PreferredApplicationDisplayName = "Contoso File App";
-> 
-> 
->       // Launch the retrieved file pass in the recommended app 
+>
+>
+>       // Launch the retrieved file pass in the recommended app
 >       // in case the user has no apps installed to handle the file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -358,7 +361,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 > void MainPage::DefaultLaunch()
 > {
 >    auto installFolder = Windows::ApplicationModel::Package::Current->InstalledLocation;
-> 
+>
 >    concurrency::task<Windows::Storage::StorageFile^> getFileOperation(installFolder->GetFileAsync("images\\test.png"));
 >    getFileOperation.then([](Windows::Storage::StorageFile^ file)
 >    {
@@ -367,7 +370,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >          // Set the desired remaining view
 >          auto launchOptions = ref new Windows::System::LauncherOptions();
 >          launchOptions->DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
-> 
+>
 >          // Launch the retrieved file
 >          concurrency::task<bool> launchFileOperation(Windows::System::Launcher::LaunchFileAsync(file, launchOptions));
 >          launchFileOperation.then([](bool success)
@@ -396,13 +399,13 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 >    string imageFile = @"images\test.png";
 >    
 >    var file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(imageFile);
-> 
+>
 >    if (file != null)
 >    {
 >       // Set the desired remaining view
 >       var options = new Windows.System.LauncherOptions();
 >       options.DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseLess;
-> 
+>
 >       // Launch the retrieved file
 >       bool success = await Windows.System.Launcher.LaunchFileAsync(file, options);
 >       if (success)
@@ -457,8 +460,6 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

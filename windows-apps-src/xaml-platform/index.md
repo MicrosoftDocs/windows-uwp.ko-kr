@@ -1,8 +1,12 @@
 ---
 author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
-description: 이 섹션에는 작성하는 앱에 일반적으로 적용할 수 있는 프로그래밍 개념을 설명하는 항목이 포함되어 있습니다.
-title: XAML 플랫폼
+description: "이 섹션에는 작성하는 앱에 일반적으로 적용할 수 있는 프로그래밍 개념을 설명하는 항목이 포함되어 있습니다."
+title: "XAML 플랫폼"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4deae037857312f891c8c4beae2b6a89adc152cd
+
 ---
 
 # XAML 플랫폼
@@ -23,6 +27,7 @@ title: XAML 플랫폼
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

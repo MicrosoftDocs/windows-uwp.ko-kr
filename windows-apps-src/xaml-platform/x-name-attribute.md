@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: 코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다.
-title: xName 특성
+description: "코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다."
+title: "xName 특성"
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 442c2fa103e1e968ef47ea990bfe8e166daec88b
+
 ---
 
 # x&#58;Name 특성
@@ -66,6 +70,7 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

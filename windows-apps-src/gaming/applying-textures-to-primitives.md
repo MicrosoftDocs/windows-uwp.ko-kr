@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 기본 요소에 텍스처 적용
-description: 여기에서는 원형에 깊이 및 효과 사용에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다.
+title: "기본 요소에 텍스처 적용"
+description: "여기에서는 원형에 깊이 및 효과 사용에서 만든 큐브를 사용해 원시 텍스처 데이터를 로드하고 3D 원형에 적용합니다."
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
+
 ---
 
 # 기본 요소에 텍스처 적용
@@ -532,6 +536,7 @@ private:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

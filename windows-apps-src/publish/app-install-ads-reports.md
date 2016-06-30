@@ -1,8 +1,12 @@
 ---
 author: jnHs
-title: 앱 설치 광고 보고서
+title: "앱 설치 광고 보고서"
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
+
 ---
 
 # 앱 설치 광고 보고서
@@ -10,7 +14,7 @@ description:
 개발자 센터의 **앱 설치 광고 보고서** 페이지에 다음과 같은 두 가지 방법으로 액세스할 수 있습니다.
 
 -   앱 페이지에 있는 왼쪽 탐색 메뉴에서 **분석**&gt;**앱 설치 광고**를 클릭합니다.
--   앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출 **&gt;**앱 홍보**, 캠페인의 **보고서** 링크를 차례로 클릭합니다.
+-   앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출**&gt;**앱 홍보**, 캠페인의 **보고서** 링크를 차례로 클릭합니다.
 
 그러면 **광고 수행** 및 **계정 청구 기록**의 두 섹션이 표시됩니다.
 
@@ -65,6 +69,7 @@ description:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

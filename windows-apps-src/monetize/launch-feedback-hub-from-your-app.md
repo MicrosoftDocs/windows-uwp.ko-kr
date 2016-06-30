@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: 고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다.
-title: 앱에서 피드백 허브 시작
+Description: "고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다."
+title: "앱에서 피드백 허브 시작"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: ccda01d9bfa4ffdff2bbce5d6c60c78e026270e5
+
 ---
 
 # 앱에서 피드백 허브 시작
@@ -73,6 +77,7 @@ private async void feedbackButton_Click(object sender, RoutedEventArgs e)
 * [피드백 보고서](../publish/feedback-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

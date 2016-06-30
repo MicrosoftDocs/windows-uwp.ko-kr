@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다.
-title: XAML 및 .NET의 AdControl
+description: "Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
+title: "XAML 및 .NET의 AdControl"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d17d8a39f31bfcbf3172b4592e918f0be4a6bf92
+
 ---
 
 # XAML 및 .NET의 AdControl
@@ -155,6 +159,7 @@ C++: Microsoft Advertising 라이브러리의 현재 릴리스에서는 C++를 �
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

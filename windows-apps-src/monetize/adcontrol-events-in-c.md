@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
-description: AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다.
-title: C의 AdControl 이벤트#
+description: "AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다."
+title: "C의 AdControl 이벤트#"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: cc5dfbfacefb4be32153f3266878be41a3b923f8
+
 ---
 
 # C\의 AdControl 이벤트# #  
@@ -47,6 +51,7 @@ private void OnAdEngagedChanged(object sender, RoutedEventArgs e) {
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

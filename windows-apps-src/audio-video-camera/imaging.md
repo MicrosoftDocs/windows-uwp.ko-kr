@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
-description: 이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다.
-title: 이미징
+description: "이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다."
+title: "이미징"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+
 ---
 
 # 이미징
@@ -137,6 +141,7 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

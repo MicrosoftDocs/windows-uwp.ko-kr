@@ -1,8 +1,12 @@
 ---
 author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
-title: 컴퍼지션 효과
-description: 효과 API를 통해 개발자가 UI를 렌더링하는 방식을 사용자 지정할 수 있습니다.
+title: "컴퍼지션 효과"
+description: "효과 API를 통해 개발자가 UI를 렌더링하는 방식을 사용자 지정할 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 10c3b6d0f56d0e8670cc202ac8d8a3f7538eb5a7
+
 ---
 # 컴퍼지션 효과
 
@@ -80,7 +84,7 @@ new Microsoft.Graphics.Canvas.Effects.ArithmeticCompositeEffect
 
 ### 효과 속성 - 상수 및 애니메이션
 
-효과를 컴파일하는 동안 효과 속성을 동적으로 지정하거나, 상수로 "지정된" 속성으로 지정할 수 있습니다. 동적 속성은 형식의 문자열을 통해 지정됩니다 "<effect name>.<property name>”. 동적 속성을 특정 값으로 설정하거나, 컴퍼지션 애니메이션 시스템을 통해 애니메이션 효과를 줄 수 있습니다.
+효과를 컴파일하는 동안 효과 속성을 동적으로 지정하거나, 상수로 "지정된" 속성으로 지정할 수 있습니다. 동적 속성은 “<effect name>.<property name>” 형식의 문자열을 통해 지정됩니다. 동적 속성을 특정 값으로 설정하거나, 컴퍼지션 애니메이션 시스템을 통해 애니메이션 효과를 줄 수 있습니다.
 
 위의 효과 설명을 컴파일할 때 채도를 0.5로 지정할 수도 있고, 동적으로 만들어 동적으로 설정하거나 애니메이션 효과를 줄 수 있습니다.
 
@@ -244,6 +248,7 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

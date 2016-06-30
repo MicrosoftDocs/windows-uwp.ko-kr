@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: "셰이프 그리기"
 description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
-ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
-ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 20bac4421c2f307932bd5a8a4c462b1ef13fe09b
 
 ---
 # 셰이프 그리기
@@ -156,7 +156,7 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 
 -   XAML에서 [**Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data)의 문자열 값을 설정할 수 있습니다. 이 형식에서 **Path.Data** 값은 그래픽에 직렬화 형식을 사용하고 있습니다. 일반적으로 처음 설정된 후에는 이 값을 문자열 형식으로 텍스트 편집하지 않습니다. 대신, 화면에서 디자인 또는 그리기 방식으로 작업할 수 있게 하는 디자인 도구를 사용합니다. 출력을 저장하거나 내보내면 **Path.Data** 정보가 포함된 XAML 파일 또는 XAML 문자열이 작성됩니다.
 -   [
-            **Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) 속성은 단일 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) 개체로 설정할 수 있습니다. 이 작업은 코드나 XAML에서 수행할 수 있습니다. 이 단일 **Geometry**는 일반적으로 개체 모델을 위해 여러 기하 도형 정의를 단일 개체로 합성할 수 있는 컨테이너 역할을 하는 [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/BR210041group)입니다. 이 작업의 가장 일반적인 이유는 [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143)의 [**Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164) 값으로 정의할 수 있는 곡선 및 복합 셰이프(예: [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/BR228068))를 하나 이상 사용하기 위해서입니다.
+            **Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) 속성은 단일 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) 개체로 설정할 수 있습니다. 이 작업은 코드나 XAML에서 수행할 수 있습니다. 이 단일 **Geometry**는 일반적으로 개체 모델을 위해 여러 기하 도형 정의를 단일 개체로 합성할 수 있는 컨테이너 역할을 하는 [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup)입니다. 이 작업의 가장 일반적인 이유는 [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143)의 [**Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164) 값으로 정의할 수 있는 곡선 및 복합 셰이프(예: [**BezierSegment**](https://msdn.microsoft.com/library/windows/apps/BR228068))를 하나 이상 사용하기 위해서입니다.
 
 다음 예제에서는 Blend for Visual Studio를 사용하여 몇 개의 벡터 셰이프만 작성한 다음 결과를 XAML로 저장할 경우 생성될 수 있는 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)를 보여 줍니다. 전체 **Path**는 베지어 곡선 세그먼트와 직선 세그먼트로 구성됩니다. 다음 예제에서는 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) 직렬화 형식에 있는 요소의 몇 가지 예를 제공하고 숫자가 나타내는 의미를 설명합니다.
 
@@ -176,7 +176,7 @@ Here's the rendered [**Path**](https://msdn.microsoft.com/library/windows/apps/B
 
 ![A rendered Path.](images/shapes-path.jpg)
 
-The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/BR210041group) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
+The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
 
 ```xml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">
@@ -218,6 +218,6 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

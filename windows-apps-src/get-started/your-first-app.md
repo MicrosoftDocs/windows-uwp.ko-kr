@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
-title: 첫 번째 앱 만들기
-description: 생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다.
+title: "첫 번째 앱 만들기"
+description: "생각보다 쉽게 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e2ed4b9587927a2a6a765b47ff69b9cedfd9b92d
+
 ---
 # 첫 번째 앱 만들기
 
@@ -52,7 +56,7 @@ XAML과 C++에 이미 익숙한 것으로 가정합니다. 기본 사항을 확�
 HTML5, CSS3 및 JavaScript에 이미 익숙한 것으로 가정합니다. 기본 사항을 확인하거나 기억을 되살리려면 [Microsoft Virtual Academy](http://go.microsoft.com/fwlink/p/?LinkID=389916)에서 다음 과정을 살펴보세요.
 
 -   [완전 초보자용 JavaScript 기본 사항](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
--   [완전 초보자용 HTML5 & CSS3 기본 사항](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+-   [완전 초보자용 HTML5 &amp; CSS3 기본 사항](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
 
 ## 기타 리소스
 
@@ -63,12 +67,13 @@ iOS 또는 Android용 개발 경험이 있으세요? [Windows 10으로 앱 포�
 # 관련 항목
 
 * [유니버설 Windows 앱이란?](whats-a-uwp.md)
-* [설정 방법](get-set-up.md)
+* [설정](get-set-up.md)
 * [등록](sign-up.md)
  
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

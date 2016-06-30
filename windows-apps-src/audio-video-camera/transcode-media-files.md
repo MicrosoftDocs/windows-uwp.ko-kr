@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
-description: 동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다.
-title: 미디어 파일 코드 변환
+description: "동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다."
+title: "미디어 파일 코드 변환"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
+
 ---
 
 # 미디어 파일 코드 변환
@@ -72,6 +76,7 @@ title: 미디어 파일 코드 변환
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

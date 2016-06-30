@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다.
+Description: "UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하려는 경우 피해야 할 사례에 대해 설명합니다."
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
-title: 피해야 할 접근성 사례
+title: "피해야 할 접근성 사례"
 label: Accessibility practices to avoid
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: b5f5f220d5ff70d70dd797c0bf26a355bd447563
+
 ---
 # 피해야 할 접근성 사례
 
@@ -32,6 +36,7 @@ UWP(유니버설 Windows 플랫폼) 앱에 접근성을 구현하려는 경우 �
 * [접근성 검사 목록](accessibility-checklist.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

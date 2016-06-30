@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
+Description: "레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+
 ---
 # 레이아웃 패널
 
@@ -234,6 +238,7 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
             **ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

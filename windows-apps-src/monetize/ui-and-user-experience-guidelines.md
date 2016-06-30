@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: 앱에 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다.
-title: 앱에 광고에 대한 UI 및 사용자 환경 지침
+description: "앱에 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다."
+title: "앱에 광고에 대한 UI 및 사용자 환경 지침"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
+
 
 ---
 
@@ -138,6 +142,7 @@ title: 앱에 광고에 대한 UI 및 사용자 환경 지침
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

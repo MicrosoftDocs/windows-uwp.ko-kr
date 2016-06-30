@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱 리뷰에 직접 응답하면 개발자가 고객 의견에 귀를 기울이고 있음을 고객이 알게 할 수 있습니다.
-title: 고객 리뷰에 응답
+Description: "앱 리뷰에 직접 응답하면 개발자가 고객 의견에 귀를 기울이고 있음을 고객이 알게 할 수 있습니다."
+title: "고객 리뷰에 응답"
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 06228d7816f371f669ad4e6db7310e903f5f0683
+
 ---
 
 # 고객 리뷰에 응답
@@ -47,6 +51,7 @@ ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 고객의 의견에 귀를 기울이고 응답하는 것은 시작에 불과합니다. 의견을 반영하여 조치를 취하는 것이 중요합니다. 파격적으로 개선된 경우에는 앱을 업데이트하는 [새 제출을 만들어](app-submissions.md) 스토어에서 자신 있게 선보이세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

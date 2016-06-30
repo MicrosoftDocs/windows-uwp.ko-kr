@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱에 대해 예약한 이름을 확인하고, 추가 이름을 예약하고(다른 언어 대상이거나 앱 이름 변경 목적), 더 이상 필요가 없는 예약된 이름을 삭제합니다.
-title: 앱 이름 관리
+Description: "앱에 대해 예약한 이름을 확인하고, 추가 이름을 예약하고(다른 언어 대상이거나 앱 이름 변경 목적), 더 이상 필요가 없는 예약된 이름을 삭제합니다."
+title: "앱 이름 관리"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+translationtype: Human Translation
+ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
+ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+
 ---
 
 # 앱 이름 관리
@@ -43,6 +47,7 @@ ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,13 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약하는 것입니다. 앱 이름을 예약하는 방법을 살펴보고 적합한 앱 이름을 선택하기 위한 제안을 확인하세요.
-title: 이름을 예약하여 앱 만들기
-keywords:
+Description: "Windows 개발자 센터 대시보드에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약하는 것입니다. 앱 이름을 예약하는 방법을 살펴보고 적합한 앱 이름을 선택하기 위한 제안을 확인하세요."
+title: "이름을 예약하여 앱 만들기"
+keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+translationtype: Human Translation
+ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
+ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+
 ---
 
 # 이름을 예약하여 앱 만들기
@@ -60,6 +64,7 @@ Windows 개발자 센터 대시보드에 있는 각 앱에 대한 **앱 관리**
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

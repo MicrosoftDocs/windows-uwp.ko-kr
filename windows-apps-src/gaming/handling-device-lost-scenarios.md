@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Direct3D 11에서 장치 제거 시나리오 처리
-description: 이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법에 대해 설명합니다.
+title: "Direct3D 11에서 장치 제거 시나리오 처리"
+description: "이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법에 대해 설명합니다."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8d522a309386b06f97bc63b9eead1ca4cecf165c
+
 ---
 
 # <span id="dev_gaming.handling_device-lost_scenarios"></span>Direct3D 11에서 디바이스 제거 시나리오 처리
@@ -173,6 +177,7 @@ Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

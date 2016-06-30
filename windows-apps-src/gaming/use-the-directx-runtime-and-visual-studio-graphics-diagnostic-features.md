@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 그래픽 진단 도구
-description: Visual Studio의 그래픽 디버깅, 그래픽 프레임 분석 및 GPU 사용을 비롯하여 그래픽 진단 기능을 가져오고 사용하는 방법에 대해 알아봅니다.
+title: "그래픽 진단 도구"
+description: "Visual Studio의 그래픽 디버깅, 그래픽 프레임 분석 및 GPU 사용을 비롯하여 그래픽 진단 기능을 가져오고 사용하는 방법에 대해 알아봅니다."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+
 ---
 
 # 그래픽 진단 도구
@@ -35,6 +39,7 @@ Windows 10에서는 이제 그래픽 진단 도구를 Windows 내에서 옵션 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

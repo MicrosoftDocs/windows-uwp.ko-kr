@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
-description: 스토어에 게시되기 위해 Microsoft Advertising 라이브러리를 사용하는 앱에서 충족해야 하는 요구 사항에 대해 알아봅니다.
-title: Windows 스토어에 광고가 포함된 앱 제출
+description: "스토어에 게시되기 위해 Microsoft Advertising 라이브러리를 사용하는 앱에서 충족해야 하는 요구 사항에 대해 알아봅니다."
+title: "Windows 스토어에 광고가 포함된 앱 제출"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d2e6f9873b2539f9c0558abdc9ee936b938a03b1
+
 
 ---
 
@@ -25,6 +29,7 @@ Windows 스토어에 제출하는 모든 앱은 [Windows 스토어 정책](https
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

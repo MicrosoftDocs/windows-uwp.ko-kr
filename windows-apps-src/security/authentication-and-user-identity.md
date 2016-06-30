@@ -1,8 +1,12 @@
 ---
-title: 인증 및 사용자 ID
-description: UWP(유니버설 Windows 플랫폼) 앱에는 웹 인증 브로커를 사용하는 간단한 SSO(single sign-on)부터 높은 보안 수준의 2단계 인증에 이르기까지 사용자 인증을 위한 여러 옵션이 있습니다.
+title: "인증 및 사용자 ID"
+description: "UWP(유니버설 Windows 플랫폼) 앱에는 웹 인증 브로커를 사용하는 간단한 SSO(single sign-on)부터 높은 보안 수준의 2단계 인증에 이르기까지 사용자 인증을 위한 여러 옵션이 있습니다."
 ms.assetid: 53E36DDC-200A-4850-AAF0-07ECA3662BB9
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 3c890ac8d8363982d9f014c36b6cba59bee39f20
+ms.openlocfilehash: e748b319cdeda82aadaf8516e41883a3e32dc10c
+
 ---
 
 # 인증 및 사용자 ID
@@ -33,6 +37,7 @@ Windows 10을 사용하는 기업에서는 수준 높은 2단계 인증을 제�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

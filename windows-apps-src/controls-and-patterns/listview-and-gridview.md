@@ -1,9 +1,13 @@
 ---
 author: Jwmsft
-Description: 목록 보기 또는 그리드 보기 컨트롤을 사용하여 이미지 갤러리 또는 메일 메시지 집합 등과 같은 데이터 집합을 표시하고 조작합니다.
-title: 목록 보기 및 그리드 보기
+Description: "목록 보기 또는 그리드 보기 컨트롤을 사용하여 이미지 갤러리 또는 메일 메시지 집합 등과 같은 데이터 집합을 표시하고 조작합니다."
+title: "목록 보기 및 그리드 보기"
 label: List view and grid view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e878b11bbecd4a1007f8b5f56bde5741da18c1e1
+
 ---
 # ListView 및 GridView
 
@@ -388,8 +392,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 
 ### 클릭 모드
 
-사용자가 항목을 선택하는 대신 단추와 같은 항목을 클릭하도록 목록 보기를 변경할 수 있습니다. 예를 들어, 이 기능은 사용자가 목록 또는 그리드의 항목을 클릭하면 앱이 새로운 페이지로 이동하는 경우에 유용합니다. 
-이 동작을 사용하려면
+사용자가 항목을 선택하는 대신 단추와 같은 항목을 클릭하도록 목록 보기를 변경할 수 있습니다. 예를 들어, 이 기능은 사용자가 목록 또는 그리드의 항목을 클릭하면 앱이 새로운 페이지로 이동하는 경우에 유용합니다. 이 동작을 사용하려면
 - **SelectionMode**를 **None**으로 설정합니다.
 - **IsItemClickEnabled**를 **true**로 설정합니다.
 - 항목을 클릭할 때 작업을 수행하도록 **ItemClick** 이벤트를 처리합니다.
@@ -499,6 +502,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

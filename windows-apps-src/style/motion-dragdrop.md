@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
-title: UWP 앱의 끌기 애니메이션
+Description: "끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다."
+title: "UWP 앱의 끌기 애니메이션"
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c975ba3d03c06009710f4f57edf8a4cc517ad90c
+
 ---
 
 # 끌기 애니메이션
@@ -66,6 +70,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

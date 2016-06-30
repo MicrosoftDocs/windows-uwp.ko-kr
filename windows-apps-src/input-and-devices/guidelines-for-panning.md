@@ -5,8 +5,8 @@ title: "이동"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
 
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## 권장 사항 및 금지 사항
 
 
 **이동 표시기 및 스크롤 막대**
@@ -72,7 +72,7 @@ ms.openlocfilehash: 7aafb0bbef2a33f926f76e41c26dd0f6920de274
 
     ![컨테이너와 같은 방향으로 스크롤되는 포함된 이동 가능 영역을 보여 주는 이미지](images/scrolling-embedded3.png)
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
+## 추가 사용법 지침
 
 
 터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. API에서 구분되거나 일부 디바이스별 Windows UI에 필요한 경우가 아니면 두 조작을 모두 이동으로 간주합니다.
@@ -162,7 +162,7 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 이 지침은 앨범(이전 또는 다음 이미지로 이동) 또는 세부 정보 영역 내에서 단일 축 이동을 지원하는 동시에 개별 이미지나 지도 내에서 제약 없는 이동을 지원하는 사진 앨범이나 지도 앱 같은 앱에도 유용합니다. 자유형 이동 이미지나 지도에 해당하는 세부 정보 또는 옵션 영역을 제공하는 앱에서는 이미지나 지도의 제약 없는 이동 영역이 세부 정보 영역으로의 이동을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작하는 것이 좋습니다.
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -194,6 +194,6 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

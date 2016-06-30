@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
-title: 범주 및 하위 범주 테이블
+Description: "올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다."
+title: "범주 및 하위 범주 테이블"
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
+
 ---
 
 # 범주 및 하위 범주 테이블
@@ -59,6 +63,7 @@ Windows 스토어는 앱을 다음 범주와 하위 범주로 구성합니다.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

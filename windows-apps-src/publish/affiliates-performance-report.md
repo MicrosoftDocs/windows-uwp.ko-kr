@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱의 계열사 광고에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 계열사 성과 보고서를 사용합니다.
-title: 계열사 성과 보고서
+Description: "앱의 계열사 광고에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 계열사 성과 보고서를 사용합니다."
+title: "계열사 성과 보고서"
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
+translationtype: Human Translation
+ms.sourcegitcommit: 577b238875b2d0edd47d9ad0e5e73ca79a6acf75
+ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
+
 ---
 
 # 계열사 성과 보고서
@@ -45,6 +49,7 @@ ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

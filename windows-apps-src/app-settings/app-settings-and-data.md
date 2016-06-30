@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 이 섹션에서는 앱 설정을 제공하고 이러한 설정을 앱 데이터로 저장하기 위한 사용자 환경 지침을 제공합니다.
-title: 앱 설정 및 데이터
+Description: "이 섹션에서는 앱 설정을 제공하고 이러한 설정을 앱 데이터로 저장하기 위한 사용자 환경 지침을 제공합니다."
+title: "앱 설정 및 데이터"
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 4d6f57dcc9dbfe9c2e031a5fe73f24668f0dc462
+
 ---
 
 # 앱 설정 및 데이터
@@ -45,6 +49,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

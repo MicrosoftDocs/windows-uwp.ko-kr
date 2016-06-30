@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: BasicReaderWriter의 전체 코드
-description: 일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다.
+title: "BasicReaderWriter의 전체 코드"
+description: "일반적으로 이진 데이터 파일을 읽고 쓰기 위한 클래스 및 메서드의 전체 코드입니다."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
+translationtype: Human Translation
+ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
+ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
+
 ---
 
 # BasicReaderWriter의 전체 코드
@@ -261,6 +265,7 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

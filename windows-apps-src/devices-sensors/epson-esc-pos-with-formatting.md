@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
-title: 서식 지정을 사용하는 Epson ESC/POS
-description: ESC/POS 명령 언어를 사용하여 서비스 지점 프린터에 대한 텍스트 서식(예&#58; 굵게, 2배 크기)을 지정하는 방법을 알아봅니다.
+title: "서식 지정을 사용하는 Epson ESC/POS"
+description: "ESC/POS 명령 언어를 사용하여 서비스 지점 프린터에 대한 텍스트 서식(예&#58; 굵게, 2배 크기)을 지정하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 33231abb1e573d837193daeee21713f09c7d8448
+
 ---
 # 서식 지정을 사용하는 Epson ESC/POS
 
@@ -58,6 +62,7 @@ printJob.ExecuteAsync();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

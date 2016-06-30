@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
-description: 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
-title: Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
+description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다."
+title: "Windows Phone Silverlight XAML 및 UI를 UWP로 포팅"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: a34133b42872ce949644dc951255e6214164adad
+
 ---
 
 #  Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
@@ -152,11 +155,11 @@ Windows Phone Silverlight 앱 바 및 앱 바 단추는 UWP 앱에서처럼 바�
 
 UWP 앱의 바인딩 관련 기능에는 현재 다음과 같은 제한이 있습니다.
 
--   데이터 입력 유효성 검사와 [**IDataErrorInfo**](T:System.ComponentModel.IDataErrorInfo) 및 [**INotifyDataErrorInfo**](T:System.ComponentModel.INotifyDataErrorInfo) 인터페이스를 기본적으로 지원하지 않습니다.
+-   데이터 입력 유효성 검사와 [**IDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx) 및 [**INotifyDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx) 인터페이스를 기본적으로 지원하지 않습니다.
 -   [
             **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스에 Windows Phone Silverlight에서 사용 가능한 확장된 서식 속성이 포함되어 있지 않습니다. 그러나 사용자 지정 서식을 제공하기 위해 여전히 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 를 구현할 수 있습니다.
 -   [
-            **IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](T:System.Globalization.CultureInfo) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
+            **IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
 -   [
             **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 클래스는 정렬과 필터링, 그리고 작업을 달리 그룹화하는 기능을 기본적으로 지원하지 않습니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946) 및 [데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)을 참조하세요.
 
@@ -310,17 +313,17 @@ XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이�
 
 텍스트(또는 입력 체계)는 UWP 앱의 중요한 측면이며, 포팅하는 동안 보기가 새 디자인 언어와 조화를 이루도록 보기의 시각적 디자인을 다시 검토할 수 있습니다. 다음 그림을 사용하여 사용 가능한 UWP  **TextBlock** 시스템 스타일을 찾을 수 있습니다. 사용한 Windows Phone Silverlight 스타일에 해당하는 스타일을 찾을 수 있습니다. 범용 스타일을 직접 만든 다음 Windows Phone Silverlight 시스템 스타일의 속성을 해당 스타일로 복사할 수도 있습니다.
 
-![Windows 10 앱의 시스템 textblock 스타일
+![Windows 10 앱의 시스템 textblock 스타일](images/label-uwp10stylegallery.png) Windows 10 앱의 시스템 TextBlock 스타일
 
-Windows 10 앱의 시스템 TextBlock 스타일 Windows Phone Silverlight 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. Windows Phone Silverlight 텍스트의 모양을 재현하려는 경우 [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) 및 [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362)와 같은 속성을 사용하여 고유한 메트릭을 설정할 수 있습니다.
+Windows Phone Silverlight 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕입니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. Windows Phone Silverlight 텍스트의 모양을 재현하려는 경우 [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) 및 [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362)와 같은 속성을 사용하여 고유한 메트릭을 설정할 수 있습니다. 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](http://dev.windows.com/design)을 참조하세요.
 
-## 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](http://dev.windows.com/design)을 참조하세요.
+## 테마 변경
 
-테마 변경 Windows Phone Silverlight 앱의 경우 기본 테마는 기본적으로 어둡습니다. Windows 10 디바이스의 경우 기본 테마가 변경되었지만, App.xaml에서 요청된 테마를 선언하여 사용되는 테마를 제어할 수 있습니다.
+Windows Phone Silverlight 앱의 경우 기본 테마는 기본적으로 어둡습니다. Windows 10 디바이스의 경우 기본 테마가 변경되었지만, App.xaml에서 요청된 테마를 선언하여 사용되는 테마를 제어할 수 있습니다. 예를 들어 모든 디바이스에서 어두운 테마를 사용하려면 루트 응용 프로그램 요소에 `RequestedTheme="Dark"`를 추가합니다.
 
-## 예를 들어 모든 디바이스에서 어두운 테마를 사용하려면 루트 응용 프로그램 요소에 `RequestedTheme="Dark"`를 추가합니다.
+## 타일
 
-타일 UWP 앱용 타일의 동작은, 몇 가지 차이는 있지만 Windows Phone Silverlight 앱용 라이브 타일과 유사합니다. 예를 들어 **Microsoft.Phone.Shell.ShellTile.Create** 메서드를 호출하여 보조 타일을 만드는 코드를 포팅해야 [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606)를 호출할 수 있습니다.
+UWP 앱용 타일의 동작은, 몇 가지 차이는 있지만 Windows Phone Silverlight 앱용 라이브 타일과 유사합니다. 예를 들어 **Microsoft.Phone.Shell.ShellTile.Create** 메서드를 호출하여 보조 타일을 만드는 코드를 포팅해야 [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606)를 호출할 수 있습니다. 다음은 이전 및 이후 예제입니다. Windows Phone Silverlight 버전:
 
 
 ```csharp
@@ -336,7 +339,7 @@ Windows 10 앱의 시스템 TextBlock 스타일 Windows Phone Silverlight 앱에
     ShellTile.Create(this.selectedBookSku.NavigationUri, tileData, true);
 ```
 
-다음은 이전 및 이후 예제입니다. Windows Phone Silverlight 버전:
+UWP 해당 버전:
 
 ```csharp
     var tile = new SecondaryTile(
@@ -349,55 +352,56 @@ Windows 10 앱의 시스템 TextBlock 스타일 Windows Phone Silverlight 앱에
     await tile.RequestCreateAsync();
 ```
 
-UWP 해당 버전:
+**Microsoft.Phone.Shell.ShellTile.Update** 메서드 또는 **Microsoft.Phone.Shell.ShellTileSchedule** 클래스로 타일을 업데이트하는 코드를 포팅해야 [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 및/또는 [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) 클래스를 사용할 수 있습니다.
 
-**Microsoft.Phone.Shell.ShellTile.Update** 메서드 또는 **Microsoft.Phone.Shell.ShellTileSchedule** 클래스로 타일을 업데이트하는 코드를 포팅해야 [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 및/또는 [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) 클래스를 사용할 수 있습니다. 타일, 알림, 배지 및 배너에 대한 자세한 내용은 [타일 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) 및 [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
+타일, 알림, 배지 및 배너에 대한 자세한 내용은 [타일 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) 및 [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요. UWP 타일에 사용되는 시각적 자산의 크기에 대한 자세한 내용은 [타일 및 알림 시각적 자산](https://msdn.microsoft.com/library/windows/apps/hh781198)을 참조하세요.
 
-## UWP 타일에 사용되는 시각적 자산의 크기에 대한 자세한 내용은 [타일 및 알림 시각적 자산](https://msdn.microsoft.com/library/windows/apps/hh781198)을 참조하세요.
+## 알림
 
-알림 **Microsoft.Phone.Shell.ShellToast** 클래스로 알림을 표시하는 코드를 포팅해야 [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) 및/또는 [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607) 클래스를 사용할 수 있습니다.
+**Microsoft.Phone.Shell.ShellToast** 클래스로 알림을 표시하는 코드를 포팅해야 [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) 및/또는 [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607) 클래스를 사용할 수 있습니다. 모바일 디바이스에서 "알림"에 대한 소비자 지향 용어는 "배너"입니다.
 
-모바일 디바이스에서 "알림"에 대한 소비자 지향 용어는 "배너"입니다.
+[타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
 
-## [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
+## 보기/유효 픽셀, 가시거리 및 배율 인수
 
-보기/유효 픽셀, 가시거리 및 배율 인수 Windows Phone Silverlight 앱 및 Windows 10 앱은 장치의 실제 물리적 크기와 해상도에서 UI 요소의 크기 및 레이아웃을 추상화하는 방법과 다릅니다. Windows Phone Silverlight 앱은 보기 픽셀을 사용하여 이 작업을 수행합니다. Windows 10에서 보기 픽셀의 개념은 유효 픽셀의 개념으로 구체화되었습니다.
+Windows Phone Silverlight 앱 및 Windows 10 앱은 장치의 실제 물리적 크기와 해상도에서 UI 요소의 크기 및 레이아웃을 추상화하는 방법과 다릅니다. Windows Phone Silverlight 앱은 보기 픽셀을 사용하여 이 작업을 수행합니다. Windows 10에서 보기 픽셀의 개념은 유효 픽셀의 개념으로 구체화되었습니다. 다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다.
 
-다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다. “해상도”라는 용어는 일반적으로 생각하는 픽셀 수가 아닌 픽셀 밀도 기준을 의미합니다. “유효 해상도”는 장치의 가시거리와 물리적 픽셀 크기의 차이를 고려하여 이미지 또는 문자 모양을 구성하는 물리적 픽셀 수를 눈으로 확인할 수 있는 방법입니다(픽셀 밀도는 물리적 픽셀 크기의 역). 유효 해상도는 사용자 중심이므로 환경을 구축하는 데 유용한 메트릭입니다.
+“해상도”라는 용어는 일반적으로 생각하는 픽셀 수가 아닌 픽셀 밀도 기준을 의미합니다. “유효 해상도”는 장치의 가시거리와 물리적 픽셀 크기의 차이를 고려하여 이미지 또는 문자 모양을 구성하는 물리적 픽셀 수를 눈으로 확인할 수 있는 방법입니다(픽셀 밀도는 물리적 픽셀 크기의 역). 유효 해상도는 사용자 중심이므로 환경을 구축하는 데 유용한 메트릭입니다. 모든 요소를 이해하고 UI 요소의 크기를 제어하여 유용한 사용자 환경을 구축할 수 있습니다.
 
-모든 요소를 이해하고 UI 요소의 크기를 제어하여 유용한 사용자 환경을 구축할 수 있습니다. Windows Phone Silverlight 앱에서 화면의 물리적 픽셀 수와 픽셀 밀도 또는 물리적 크기에 상관없이 휴대폰 화면의 너비는 예외 없이 모두 480보기 픽셀입니다.
+Windows Phone Silverlight 앱에서 화면의 물리적 픽셀 수와 픽셀 밀도 또는 물리적 크기에 상관없이 휴대폰 화면의 너비는 예외 없이 모두 480보기 픽셀입니다. 즉, `Width="48"`인 **Image** 요소는 Windows Phone Silverlight 앱을 실행할 수 있는 휴대폰 화면 너비의 정확히 1/10입니다.
 
-즉, `Width="48"`인 **Image** 요소는 Windows Phone Silverlight 앱을 실행할 수 있는 휴대폰 화면 너비의 정확히 1/10입니다. Windows 10 앱에서 모든 디바이스의 일부 유효 픽셀 너비가 고정된 경우는 *예외*입니다. UWP 앱을 실행할 수 있는 다양한 장치를 고려할 때 이는 당연합니다. 장치마다 유효 픽셀 수가 다릅니다. 가장 작은 장치의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 장치와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다.
+Windows 10 앱에서 모든 디바이스의 일부 유효 픽셀 너비가 고정된 경우는 *예외*입니다. UWP 앱을 실행할 수 있는 다양한 장치를 고려할 때 이는 당연합니다. 장치마다 유효 픽셀 수가 다릅니다. 가장 작은 장치의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 장치와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다. 또한 동적 레이아웃과 함께 사용되면서 장치에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
 
-또한 동적 레이아웃과 함께 사용되면서 장치에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
+480이 이전에 휴대폰 크기 화면의 보기 픽셀에서 고정 너비였는데 이제는 해당 값이 유효 픽셀에서 일반적으로 더 작기 때문에 Windows Phone Silverlight 앱의 치수에 0.8의 인수를 곱해야 합니다.
 
-480이 이전에 휴대폰 크기 화면의 보기 픽셀에서 고정 너비였는데 이제는 해당 값이 유효 픽셀에서 일반적으로 더 작기 때문에 Windows Phone Silverlight 앱의 치수에 0.8의 인수를 곱해야 합니다. 앱이 모든 디스플레이에서 최상의 환경을 제공하므로, 각기 특정 배율 인수에 적합한 여러 가지 크기로 각 비트맵 자산을 만드는 것이 좋습니다.
+앱이 모든 디스플레이에서 최상의 환경을 제공하므로, 각기 특정 배율 인수에 적합한 여러 가지 크기로 각 비트맵 자산을 만드는 것이 좋습니다. 100%, 200% 및 400% 배율의 자산을 제공(해당하는 우선 순위로)하면 대부분의 경우에 중간 배율에서 좋은 결과가 나옵니다.
 
-100%, 200% 및 400% 배율의 자산을 제공(해당하는 우선 순위로)하면 대부분의 경우에 중간 배율에서 좋은 결과가 나옵니다. **참고** 어떤 이유로든 둘 이상의 크기로 자산을 만들 수 없는 경우 100% 배율 자산을 만듭니다. Microsoft Visual Studio에서 UWP 앱의 기본 프로젝트 템플릿은 브랜딩 자산(타일 이미지 및 로고)을 하나의 크기로만 제공하지만 100% 배율은 아닙니다.
+**참고** 어떤 이유로든 둘 이상의 크기로 자산을 만들 수 없는 경우 100% 배율 자산을 만듭니다. Microsoft Visual Studio에서 UWP 앱의 기본 프로젝트 템플릿은 브랜딩 자산(타일 이미지 및 로고)을 하나의 크기로만 제공하지만 100% 배율은 아닙니다. 고유한 앱의 자산을 작성할 때 이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공하고 자산 팩을 사용하세요.
 
-고유한 앱의 자산을 작성할 때 이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공하고 자산 팩을 사용하세요. 복잡한 아트워크가 있으면 훨씬 더 큰 크기로 자산을 제공할 수 있습니다.
+복잡한 아트워크가 있으면 훨씬 더 큰 크기로 자산을 제공할 수 있습니다. 벡터 아트를 시작하면 모든 배율에서 고품질의 자산을 생성하기가 비교적 쉽습니다.
 
-벡터 아트를 시작하면 모든 배율에서 고품질의 자산을 생성하기가 비교적 쉽습니다. 모든 배율 인수를 지원하도록 권장하는 것은 아니지만 Windows 10 앱에 대한 전체 배율 인수 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%입니다. 여러 배율의 자산을 제공하면 스토어에서 각 장치에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다.
+모든 배율 인수를 지원하도록 권장하는 것은 아니지만 Windows 10 앱에 대한 전체 배율 인수 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%입니다. 여러 배율의 자산을 제공하면 스토어에서 각 장치에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다. 스토어에서 장치의 DPI에 따라 다운로드할 자산을 선택합니다.
 
-스토어에서 디바이스의 DPI에 따라 다운로드할 자산을 선택합니다.
+자세한 내용은 [UWP 앱용 반응형 디자인 101](https://msdn.microsoft.com/library/windows/apps/dn958435)을 참조하세요.
 
-## 자세한 내용은 [UWP 앱용 반응형 디자인 101](https://msdn.microsoft.com/library/windows/apps/dn958435)을 참조하세요.
+## 창 크기
 
-창 크기 UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수 있습니다. 기본 최소 크기는 500x320epx이며, 이 크기는 허용되는 가장 작은 최소 크기이기도 합니다.
+UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수 있습니다. 기본 최소 크기는 500x320epx이며, 이 크기는 허용되는 가장 작은 최소 크기이기도 합니다. 허용되는 가장 큰 최소 크기는 500x500epx입니다.
 
 ```csharp
    Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize
         (new Size { Width = 500, Height = 500 });
 ```
 
-허용되는 가장 큰 최소 크기는 500x500epx입니다.
+다음 항목은 [I/O, 디바이스 및 앱 모델에 대한 포팅](wpsl-to-uwp-input-and-sensors.md)입니다.
 
-## 다음 항목은 [I/O, 디바이스 및 앱 모델에 대한 포팅](wpsl-to-uwp-input-and-sensors.md)입니다.
+## 관련 항목
 
-* [관련 항목](wpsl-to-uwp-namespace-and-class-mappings.md)
+* [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

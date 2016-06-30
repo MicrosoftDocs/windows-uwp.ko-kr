@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
+Description: "UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서"
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+
 ---
 
 #  UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서
@@ -194,6 +198,7 @@ UI 고려 사항
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

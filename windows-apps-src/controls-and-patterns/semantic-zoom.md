@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 시맨틱 줌 컨트롤을 사용하여 동일한 데이터 집합의 서로 다른 두 가지 시맨틱 보기를 확대/축소할 수 있습니다.
-title: 시맨틱 줌
+Description: "시맨틱 줌 컨트롤을 사용하여 동일한 데이터 집합의 서로 다른 두 가지 시맨틱 보기를 확대/축소할 수 있습니다."
+title: "시맨틱 줌"
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 47e39290a63408fc66783617ad2f12345eab2fa3
+
 ---
 
 # 시맨틱 줌
@@ -65,6 +69,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

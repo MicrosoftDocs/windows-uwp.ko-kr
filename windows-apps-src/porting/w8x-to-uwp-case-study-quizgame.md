@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: 이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 포팅하는 사례 연구를 제공합니다.
-title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱
+description: "이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 포팅하는 사례 연구를 제공합니다."
+title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
+
 ---
 
 # Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; QuizGame 피어 투 피어 샘플 앱
@@ -99,7 +103,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGameHost**
 
--   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
+-   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
 -   P2PHelper에 대한 참조를 추가합니다(**참조 추가**&gt;**프로젝트**&gt;**솔루션**&gt;**P2PHelper**).
 -   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   \\QuizGame.Windows\\의 MainPage.xaml을 \\QuizGameHost\\에 복사하고 네임스페이스를 QuizGameHost로 변경합니다.
@@ -191,6 +195,7 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. 이렇게 포팅이 손쉬웠던 직접적인 이유 중에는 Windows 10 개발자 플랫폼과 Windows 8.1 및 Windows Phone 8.1 플랫폼이 유사하기 때문인 것도 있습니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

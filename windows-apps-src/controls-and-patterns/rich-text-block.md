@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
+Description: "RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다."
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 28c78b39bad4c66457ec5aba8cf0b4ce0de4f00a
+
 ---
 # 서식 있는 텍스트 블록
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
@@ -150,6 +154,7 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 - [String.Length 속성](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

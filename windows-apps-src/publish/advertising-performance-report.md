@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱의 광고 단위에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 광고 성과 보고서를 사용합니다.
-title: 광고 성과 보고서
+Description: "앱의 광고 단위에 대한 성능 데이터를 보려면 Windows 개발자 센터 대시보드에서 앱 수준 및 계정 수준 광고 성과 보고서를 사용합니다."
+title: "광고 성과 보고서"
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
+translationtype: Human Translation
+ms.sourcegitcommit: 93e12837aec151b0cd1fa711c9e04081d74a3962
+ms.openlocfilehash: 1617005cff264a89eb66e326e2bedf9f6641a3da
+
 ---
 
 # 광고 성과 보고서
@@ -90,6 +94,7 @@ pubCenter 계정을 개발자 센터로 마이그레이션하는 방법에 대�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

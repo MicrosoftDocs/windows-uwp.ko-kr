@@ -1,7 +1,10 @@
 ---
-author: DBirtolo
-title: Bluetooth 광고
-description: 이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher API 사용자를 통해 Bluetooth LE(저에너지) 광고를 UWP(유니버설 Windows 플랫폼) 앱에 통합하는 방법에 대한 문서가 포함되어 있습니다.
+author: msatranjr
+title: "Bluetooth 광고"
+description: "이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher API 사용자를 통해 Bluetooth LE(저에너지) 광고를 UWP(유니버설 Windows 플랫폼) 앱에 통합하는 방법에 대한 문서가 포함되어 있습니다."
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: a419ad04fe4f21867f2f1bd1664fbce39a7da792
+
 ---
 
 # Bluetooth 광고
@@ -24,6 +27,7 @@ description: 이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher AP
 전체 샘플 코드는 [Bluetooth 광고 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619990)에서 찾을 수 있습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

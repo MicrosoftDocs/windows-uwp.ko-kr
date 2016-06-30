@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다.
-title: 적응형 및 대화형 알림 메시지
+Description: "적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다."
+title: "적응형 및 대화형 알림 메시지"
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+
 ---
 
 # 적응형 및 대화형 알림 메시지
@@ -77,7 +81,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 &lt;action&gt; 및 &lt;input&gt;은 Windows 디바이스 패밀리 내에서 조정됩니다. 예를 들어 모바일 또는 데스크톱 디바이스에서 사용자에 대한 &lt;action&gt;은 탭/클릭할 단추입니다. 텍스트 &lt;input&gt;은 사용자가 물리적 키보드나 화상 키보드를 사용하여 텍스트를 입력할 수 있는 상자입니다. 이러한 요소는 음성으로 알린 작업이나 받아쓰기로 수행된 텍스트 입력 같이 이후 조작 시나리오에 맞게 조정됩니다.
 
-사용자가 작업을 수행하면 &lt;action&gt; 요소 내부에서 [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) 특성을 지정하여 다음의 하나를 수행할 수 있습니다.
+사용자가 작업을 수행하면 &lt;action&gt; 요소 내부에서 [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) 특성을 지정하여 다음 중 하나를 수행할 수 있습니다.
 
 -   특정 페이지/컨텍스트로 이동하는 데 사용될 수 있는 작업별 인수를 사용하여 앱을 포그라운드에서 활성화합니다.
 -   사용자에게 영향을 주지 않고 앱의 백그라운드 작업을 활성화합니다.
@@ -642,6 +646,7 @@ hint-inputId
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

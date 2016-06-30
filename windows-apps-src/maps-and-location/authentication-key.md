@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 지도 인증 키 요청
-description: Windows.Services.Maps 네임스페이스에서 MapControl 및 지도 서비스를 사용하려면 먼저 유니버설 Windows 앱을 인증해야 합니다.
+author: msatranjr
+title: "지도 인증 키 요청"
+description: "Windows.Services.Maps 네임스페이스에서 MapControl 및 지도 서비스를 사용하려면 먼저 유니버설 Windows 앱을 인증해야 합니다."
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
+
 ---
 
 # 지도 인증 키 요청
@@ -94,6 +97,7 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

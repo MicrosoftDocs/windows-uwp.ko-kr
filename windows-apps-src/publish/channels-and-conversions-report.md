@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드의 채널 및 변환 보고서를 통해 Windows 10에서 고객이 어떻게 앱 목록에 방문하게 되었는지를 확인할 수 있습니다.
-title: 채널 및 변환 보고서
+Description: "Windows 개발자 센터 대시보드의 채널 및 변환 보고서를 통해 Windows 10에서 고객이 어떻게 앱 목록에 방문하게 되었는지를 확인할 수 있습니다."
+title: "채널 및 변환 보고서"
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e82299f156a7e4f82e9219dc9b0ef6171e72c74e
+
 ---
 
 # 채널 및 변환 보고서
@@ -93,6 +97,7 @@ Windows 개발자 센터 대시보드의 **채널 및 변환** 보고서를 통�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

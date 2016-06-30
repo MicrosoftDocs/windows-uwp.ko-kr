@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-Description: 앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다.
-title: 지오펜스 앱에 대한 지침
+Description: "앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다."
+title: "지오펜스 앱에 대한 지침"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
+
 ---
 
 # 지오펜스 앱에 대한 지침
@@ -134,6 +138,7 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

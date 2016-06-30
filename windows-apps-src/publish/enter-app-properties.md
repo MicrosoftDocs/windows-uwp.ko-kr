@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱 제출 프로세스의 앱 속성 페이지에서는 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다.
-title: 앱 속성 입력
+Description: "앱 제출 프로세스의 앱 속성 페이지에서는 앱 범주를 정의하고 하드웨어 기본 설정이나 기타 선언을 지정할 수 있습니다."
+title: "앱 속성 입력"
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
+
 ---
 
 # 앱 속성 입력
@@ -40,6 +44,7 @@ ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 자세한 내용은 [앱 선언](app-declarations.md)을 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

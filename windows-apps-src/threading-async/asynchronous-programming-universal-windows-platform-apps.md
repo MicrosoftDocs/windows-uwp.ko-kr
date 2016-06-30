@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
-title: 비동기 프로그래밍
-description: 이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\+\+ 구성 요소 확장(C\+\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다.
+title: "비동기 프로그래밍"
+description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\\+\\+ 구성 요소 확장(C\\+\\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8d9a17beb9c637e0a780020ef1cbb7b0b0bddf38
+
 ---
 # 비동기 프로그래밍
 
@@ -77,6 +81,7 @@ Promise 개체는 차후에 수행될 값을 나타냅니다. UWP에서는 facto
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 다양한 하드웨어에서 그림자 맵 지원
-description: 더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다.
+title: "다양한 하드웨어에서 그림자 맵 지원"
+description: "더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다."
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 0cdc31f07560e7f1747806d1436bccbc1e50f8b9
+
 ---
 
 # 다양한 하드웨어에서 그림자 맵 지원
@@ -174,6 +178,7 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

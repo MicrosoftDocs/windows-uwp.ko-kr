@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
-description: 이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다.
+title: "UWP(유니버설 Windows 플랫폼) 앱용 게임 기술"
+description: "이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 사용할 수 있는 기술에 대해 알아봅니다."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
+
 ---
 
 # UWP(유니버설 Windows 플랫폼) 앱용 게임 기술
@@ -352,6 +356,7 @@ Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 W
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

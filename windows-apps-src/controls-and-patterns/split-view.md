@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-title: 분할 보기
+title: "분할 보기"
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
-description: 분할 보기 컨트롤에는 확장/축소 가능한 창 및 콘텐츠 영역이 있습니다.
+description: "분할 보기 컨트롤에는 확장/축소 가능한 창 및 콘텐츠 영역이 있습니다."
 label: Split view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 391bfdbbf09474ad707dbbf306d4997825fa8386
+
 ---
 
 # SplitView 컨트롤에 대한 지침
@@ -58,6 +62,7 @@ template: detail.hbs
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

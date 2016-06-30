@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 앱 일시 중단 처리
-description: 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "앱 일시 중단 처리"
+description: "시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 알아봅니다."
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
+ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
+ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
+
 ---
 
 # 앱 일시 중단 처리
@@ -23,45 +26,45 @@ ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 시스템이 앱을 일시 중단하기 전에 앱에서 응용 프로그램 데이터를 저장해야 함을 나타내는 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하도록 등록합니다.
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-using System;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
-
-partial class MainPage
-{
-   public MainPage()
-   {
-      InitializeComponent();
-      Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
-   }
-}
-```
-```vb
-Public NotInheritable Class MainPage
-
-   Public Sub New()
-      InitializeComponent() 
-      AddHandler Application.Current.Suspending, AddressOf App_Suspending
-   End Sub
-   
-End Class
-```
-```cpp
-using namespace Windows::ApplicationModel;
-using namespace Windows::ApplicationModel::Activation;
-using namespace Windows::Foundation;
-using namespace Windows::UI::Xaml;
-using namespace AppName;
-
-MainPage::MainPage()
-{
-   InitializeComponent();
-   Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
-}
-```
+> ```cs
+> using System;
+> using Windows.ApplicationModel;
+> using Windows.ApplicationModel.Activation;
+> using Windows.UI.Xaml;
+>
+> partial class MainPage
+> {
+>    public MainPage()
+>    {
+>       InitializeComponent();
+>       Application.Current.Suspending += new SuspendingEventHandler(App_Suspending);
+>    }
+> }
+> ```
+> ```vb
+> Public NotInheritable Class MainPage
+>
+>    Public Sub New()
+>       InitializeComponent()
+>       AddHandler Application.Current.Suspending, AddressOf App_Suspending
+>    End Sub
+>    
+> End Class
+> ```
+> ```cpp
+> using namespace Windows::ApplicationModel;
+> using namespace Windows::ApplicationModel::Activation;
+> using namespace Windows::Foundation;
+> using namespace Windows::UI::Xaml;
+> using namespace AppName;
+>
+> MainPage::MainPage()
+> {
+>    InitializeComponent();
+>    Application::Current->Suspending +=
+>        ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
+> }
+> ```
 
 ## 일시 중단 전에 응용 프로그램 데이터 저장
 
@@ -69,35 +72,35 @@ MainPage::MainPage()
 앱에서 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하면, 처리기 함수에서 중요한 응용 프로그램 데이터를 저장할 기회가 생깁니다. 간단한 응용 프로그램 데이터를 동기적으로 저장하기 위해 앱에서 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 저장소 API를 사용해야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-partial class MainPage
-{
-    async void App_Suspending(
-        Object sender, 
-        Windows.ApplicationModel.SuspendingEventArgs e)
-    {
-        // TODO: This is the time to save app data in case the process is terminated
-    }
-}
-```
-```vb
-Public NonInheritable Class MainPage
-
-    Private Sub App_Suspending(
-        sender As Object, 
-        e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
-
-        ' TODO: This is the time to save app data in case the process is terminated
-    End Sub
-
-End Class
-```
-```cpp
-void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
-{
-    // TODO: This is the time to save app data in case the process is terminated
-}
-```
+> ```cs
+> partial class MainPage
+> {
+>     async void App_Suspending(
+>         Object sender,
+>         Windows.ApplicationModel.SuspendingEventArgs e)
+>     {
+>         // TODO: This is the time to save app data in case the process is terminated
+>     }
+> }
+> ```
+> ```vb
+> Public NonInheritable Class MainPage
+>
+>     Private Sub App_Suspending(
+>         sender As Object,
+>         e As Windows.ApplicationModel.SuspendingEventArgs) Handles OnSuspendEvent.Suspending
+>
+>         ' TODO: This is the time to save app data in case the process is terminated
+>     End Sub
+>
+> End Class
+> ```
+> ```cpp
+> void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
+> {
+>     // TODO: This is the time to save app data in case the process is terminated
+> }
+> ```
 
 ## 설명
 
@@ -128,8 +131,6 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

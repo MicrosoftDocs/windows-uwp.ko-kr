@@ -1,17 +1,17 @@
 ---
-author: martinekuan
-title: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
-description: Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다.
+author: msatranjr
+title: "Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자"
+description: "Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다."
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1308989c8d1c6959560458dd4d87119b4bfa74b0
+
 ---
 
 # Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 Windows 런타임 구성 요소에 대한 .NET Framework 지원을 사용하면 UWP(유니버설 Windows 플랫폼) 이벤트 패턴과 .NET Framework 이벤트 패턴 간의 차이점을 숨겨 이벤트 구성 요소를 쉽게 선언할 수 있습니다. 그러나 Windows 런타임 구성 요소에서 사용자 지정 이벤트 접근자를 선언할 때는 UWP에서 사용되는 패턴을 따라야 합니다.
 
@@ -32,9 +32,9 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
  
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
-> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>> 
+> private EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >     m_NumberChangedTokenTable = null;
-> 
+>
 > public event EventHandler<NumberChangedEventArgs> NumberChanged
 > {
 >     add
@@ -50,10 +50,10 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 >             .RemoveEventHandler(value);
 >     }
 > }
-> 
+>
 > internal void OnNumberChanged(int newValue)
 > {
->     EventHandler<NumberChangedEventArgs> temp = 
+>     EventHandler<NumberChangedEventArgs> temp =
 >         EventRegistrationTokenTable<EventHandler<NumberChangedEventArgs>>
 >         .GetOrCreateEventRegistrationTokenTable(ref m_NumberChangedTokenTable)
 >         .InvocationList;
@@ -66,21 +66,21 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 > ```vb
 > Private m_NumberChangedTokenTable As  _
 >     EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs))
-> 
+>
 > Public Custom Event NumberChanged As EventHandler(Of NumberChangedEventArgs)
-> 
+>
 >     AddHandler(ByVal handler As EventHandler(Of NumberChangedEventArgs))
 >         Return EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             AddEventHandler(handler)
 >     End AddHandler
-> 
+>
 >     RemoveHandler(ByVal token As EventRegistrationToken)
 >         EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
 >             GetOrCreateEventRegistrationTokenTable(m_NumberChangedTokenTable).
 >             RemoveEventHandler(token)
 >     End RemoveHandler
-> 
+>
 >     RaiseEvent(ByVal sender As Class1, ByVal args As NumberChangedEventArgs)
 >         Dim temp As EventHandler(Of NumberChangedEventArgs) = _
 >             EventRegistrationTokenTable(Of EventHandler(Of NumberChangedEventArgs)).
@@ -126,6 +126,6 @@ Visual Basic 사용자: .NET Framework에서 이벤트는 등록된 모든 이�
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

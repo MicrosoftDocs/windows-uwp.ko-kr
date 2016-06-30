@@ -5,8 +5,8 @@ title: "확인란"
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
 
 ---
 # 확인란
@@ -15,7 +15,7 @@ ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
 
 ![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+
 -   [**CheckBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209316)
 -   [**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
 -   [**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
@@ -26,7 +26,7 @@ ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
 
 ![개별 선택에 사용되는 단일 확인란](images/checkbox1.png)
 
-이진 선택의 경우 **확인란**과 **토글 스위치**의 주요 차이점은 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
+이진 선택의 경우 **확인란**과 [**토글 스위치**](toggles.md)의 주요 차이점은 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
 
 사용자가 함께 사용할 수 있는 선택 항목 그룹에서 항목을 하나 이상 선택하는 다중 선택 시나리오에 **여러 확인란**을 사용합니다.
 
@@ -288,11 +288,13 @@ private void SetCheckedState()
 ## 관련 문서
 
 -   [**CheckBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [라디오 단추](radio-button.md)
+-   [토글 스위치](toggles.md)
 
 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

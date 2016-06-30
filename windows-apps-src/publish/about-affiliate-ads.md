@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱에서 AdMediatorControl 또는 AdControl을 사용하여 배너 광고를 표시하는 경우 앱에서 Microsoft 계열사 광고를 표시하여 광고 유효 노출률 및 수익을 늘릴 수 있습니다.
-title: 계열사 광고 정보
+Description: "앱에서 AdMediatorControl 또는 AdControl을 사용하여 배너 광고를 표시하는 경우 앱에서 Microsoft 계열사 광고를 표시하여 광고 유효 노출률 및 수익을 늘릴 수 있습니다."
+title: "계열사 광고 정보"
 ms.assetid: 7B5478FB-7E68-4956-82EF-B43C2873E3EF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0ac051d5774dadde48e2692683a6bcfae8264d1c
+
 ---
 
 # 계열사 광고 정보
@@ -44,6 +48,7 @@ Microsoft 계열사 광고 프로그램에 옵트인(opt in)하려면
 * [계열사 성과 보고서](affiliates-performance-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1에 중간 광고를 포함하는 방법에 알아봅니다.
-title: 중간 광고
+description: "Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1에 중간 광고를 포함하는 방법에 알아봅니다."
+title: "중간 광고"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+
 ---
 
 # 중간 광고
@@ -382,6 +386,7 @@ Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

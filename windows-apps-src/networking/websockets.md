@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: WebSocket은 HTTP(S)를 사용하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다.
+description: "WebSocket은 HTTP(S)를 사용하여 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 제공합니다."
 title: WebSocket
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
+
 ---
 
 # WebSocket
@@ -358,6 +362,7 @@ StreamWebSocket과 MessageWebSocket 둘 다에 대해 유사한 시간 제한을
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

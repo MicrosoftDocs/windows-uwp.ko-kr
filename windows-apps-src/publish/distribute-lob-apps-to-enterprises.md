@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: LOB(기간 업무) 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Windows 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다.
-title: 엔터프라이즈에 LOB 앱 배포
+Description: "LOB(기간 업무) 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Windows 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다."
+title: "엔터프라이즈에 LOB 앱 배포"
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.sourcegitcommit: 9ad7589344d2af986e52ae43acc3e48de6374ae6
+ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
+
 ---
 
 # 엔터프라이즈에 LOB 앱 배포
@@ -50,6 +53,8 @@ LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계�
 
 **스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Windows 스토어 포털의 개인 저장소에 추가해야 합니다. 그런 다음 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
 
+> **참고** LOB 앱을 가져오려면 조직이 [지원되는 시장](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해야 하며 앱을 제출할 때 해당 시장을 제외하지 않았어야 합니다. 
+
 자세한 내용은 [기간 업무 앱 작업](http://go.microsoft.com/fwlink/p/?LinkId=698846) 및 [개인 저장소를 사용하여 앱 배포](http://go.microsoft.com/fwlink/p/?LinkId=698847)를 참조하세요.
 
 ### LOB 앱 업데이트
@@ -75,6 +80,7 @@ LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

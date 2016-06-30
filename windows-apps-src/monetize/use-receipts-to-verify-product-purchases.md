@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: 제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다.
-title: 확인 메일을 사용하여 제품 구매 검증
+description: "제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다."
+title: "확인 메일을 사용하여 제품 구매 검증"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
+
 ---
 
 # 확인 메일을 사용하여 제품 구매 검증
@@ -239,6 +243,7 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1
+title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1"
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: 이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
+description: "이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+
 ---
 
 # Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore1
@@ -124,6 +128,7 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 다음 사례 연구는 [Bookstore2](w8x-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

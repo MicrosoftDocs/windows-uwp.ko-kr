@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
-description: 이 문서에서는 MediaProcessingTrigger 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
-title: 백그라운드에서 미디어 파일 처리
+description: "이 문서에서는 MediaProcessingTrigger 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다."
+title: "백그라운드에서 미디어 파일 처리"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+
 ---
 
 # 백그라운드에서 미디어 파일 처리
@@ -142,6 +146,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "터치 키보드의 현재 상태에 응답"
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 5f4f9553a54dc902c7c6a50d6a1b4cf6251fd72c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 417668a24c4a2ba28671b6fb0a4da74c0cfab341
 
 ---
 
@@ -47,7 +47,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 키보드 입력에 최적화된 유용하고 매력적인 앱을 디자인하는 데 도움이 되는 팁은 [키보드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)을 참조하세요.
 
-## <span id="Touch_keyboard_and_a_custom_UI"></span><span id="touch_keyboard_and_a_custom_ui"></span><span id="TOUCH_KEYBOARD_AND_A_CUSTOM_UI"></span>터치 키보드 및 사용자 지정 UI
+## 터치 키보드 및 사용자 지정 UI
 
 
 사용자 지정 텍스트 입력 컨트롤에 대한 몇 가지 기본 권장 사항은 다음과 같습니다.
@@ -70,7 +70,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
     ![뷰에 항상 유지되어야 하는 영역이 있는 양식](images/touch-keyboard-pan2.png)
 
-## <span id="handling_events"></span><span id="HANDLING_EVENTS"></span>Showing 이벤트 및 Hiding 이벤트 처리
+## Showing 이벤트 및 Hiding 이벤트 처리
 
 
 다음은 터치 키보드의 [**showing**](https://msdn.microsoft.com/library/windows/apps/br242262) 및 [**hiding**](https://msdn.microsoft.com/library/windows/apps/br242260) 이벤트에 대해 이벤트 처리기를 연결하는 예제입니다.
@@ -123,7 +123,7 @@ public class MyApplication
 }
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 * [키보드 조작](keyboard-interactions.md)
 * [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)
@@ -145,6 +145,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

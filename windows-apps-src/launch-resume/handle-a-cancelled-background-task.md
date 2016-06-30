@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 취소된 백그라운드 작업 처리
-description: 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.
+author: TylerMSFT
+title: "취소된 백그라운드 작업 처리"
+description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
+
 ---
 
 # 취소된 백그라운드 작업 처리
@@ -65,9 +68,9 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >         //
 >         // Indicate that the background task is canceled.
 >         //
-> 
+>
 >         _cancelRequested = true;
-> 
+>
 >         Debug.WriteLine("Background " + sender.Task.Name + " Cancel Requested...");
 >     }
 > ```
@@ -77,7 +80,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >         //
 >         // Indicate that the background task is canceled.
 >         //
-> 
+>
 >         CancelRequested = true;
 >     }
 > ```
@@ -111,7 +114,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         // TODO: Record whether the task completed or was cancelled.
 >     }
 > ```
@@ -124,7 +127,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     else
 >     {
 >         PeriodicTimer->Cancel();
-> 
+>
 >         // TODO: Record whether the task completed or was cancelled.
 >     }
 > ```
@@ -146,14 +149,14 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         var settings = ApplicationData.Current.LocalSettings;
 >         var key = _taskInstance.Task.TaskId.ToString();
-> 
+>
 >         //
 >         // Write to LocalSettings to indicate that this background task ran.
 >         //
-> 
+>
 >         if (_cancelRequested)
 >         {
 >             settings.Values[key] = "Canceled";
@@ -168,7 +171,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >         //
 >         // Indicate that the background task has completed.
 >         //
-> 
+>
 >         _deferral.Complete();
 >     }
 > ```
@@ -216,7 +219,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 > public void Run(IBackgroundTaskInstance taskInstance)
 > {
 >     Debug.WriteLine("Background " + taskInstance.Task.Name + " Starting...");
-> 
+>
 >     //
 >     // Query BackgroundWorkCost
 >     // Guidance: If BackgroundWorkCost is high, then perform only the minimum amount
@@ -225,21 +228,21 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     var cost = BackgroundWorkCost.CurrentBackgroundWorkCost;
 >     var settings = ApplicationData.Current.LocalSettings;
 >     settings.Values["BackgroundWorkCost"] = cost.ToString();
-> 
+>
 >     //
 >     // Associate a cancellation handler with the background task.
 >     //
 >     taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
-> 
+>
 >     //
 >     // Get the deferral object from the task instance, and take a reference to the taskInstance;
 >     //
 >     _deferral = taskInstance.GetDeferral();
 >     _taskInstance = taskInstance;
-> 
+>
 >     _periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(PeriodicTimerCallback), TimeSpan.FromSeconds(1));
 > }
-> 
+>
 > //
 > // Simulate the background task activity.
 > //
@@ -253,16 +256,16 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         var settings = ApplicationData.Current.LocalSettings;
 >         var key = _taskInstance.Task.Name;
-> 
+>
 >         //
 >         // Write to LocalSettings to indicate that this background task ran.
 >         //
 >         settings.Values[key] = (_progress < 100) ? "Canceled with reason: " + _cancelReason.ToString() : "Completed";
 >         Debug.WriteLine("Background " + _taskInstance.Task.Name + settings.Values[key]);
-> 
+>
 >         //
 >         // Indicate that the background task has completed.
 >         //
@@ -281,18 +284,18 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     auto cost = BackgroundWorkCost::CurrentBackgroundWorkCost;
 >     auto settings = ApplicationData::Current->LocalSettings;
 >     settings->Values->Insert("BackgroundWorkCost", cost.ToString());
-> 
+>
 >     //
 >     // Associate a cancellation handler with the background task.
 >     //
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
-> 
+>
 >     //
 >     // Get the deferral object from the task instance, and take a reference to the taskInstance.
 >     //
 >     TaskDeferral = taskInstance->GetDeferral();
 >     TaskInstance = taskInstance;
-> 
+>
 >     auto timerDelegate = [this](ThreadPoolTimer^ timer)
 >     {
 >         if ((CancelRequested == false) &&
@@ -304,21 +307,21 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >         else
 >         {
 >             PeriodicTimer->Cancel();
-> 
+>
 >             //
 >             // Write to LocalSettings to indicate that this background task ran.
 >             //
 >             auto settings = ApplicationData::Current->LocalSettings;
 >             auto key = TaskInstance->Task->Name;
 >             settings->Values->Insert(key, (Progress < 100) ? "Canceled with reason: " + CancelReason.ToString() : "Completed");
-> 
+>
 >             //
 >             // Indicate that the background task has completed.
 >             //
 >             TaskDeferral->Complete();
 >         }
 >     };
-> 
+>
 >     TimeSpan period;
 >     period.Duration = 1000 * 10000; // 1 second
 >     PeriodicTimer = ThreadPoolTimer::CreatePeriodicTimer(ref new TimerElapsedHandler(timerDelegate), period);
@@ -345,8 +348,6 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
-title: 가비지 수집 성능 향상
-description: C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다.
+title: "가비지 수집 성능 향상"
+description: "C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
+ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+
 ---
 # 가비지 수집 성능 향상
 
@@ -80,6 +84,7 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

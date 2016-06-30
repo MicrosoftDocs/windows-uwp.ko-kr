@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 깊이 테스트로 장면 렌더링
-description: 꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다.
+title: "깊이 테스트로 장면 렌더링"
+description: "꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2bac8e8337a10a8411b02eeed53d772dbb5abad6
+
 ---
 
 # 깊이 테스트로 장면 렌더링
@@ -160,6 +164,7 @@ return float4(input.color * ambient, 1.f);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

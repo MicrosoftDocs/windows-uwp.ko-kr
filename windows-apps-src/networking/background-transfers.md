@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다.
-title: 백그라운드 전송
+description: "백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다."
+title: "백그라운드 전송"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+
 ---
 
 # 백그라운드 전송
@@ -37,7 +41,7 @@ ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 
 백그라운드 전송 기능은 네트워크 상태 변경 발생 시 각 전송 작업에 대해 일관된 환경을 유지 관리하여, [연결](https://msdn.microsoft.com/library/windows/apps/hh452990) 기능이 제공하는 연결 및 통신사 요금제 상태 정보를 지능적으로 활용합니다. 네트워크 시나리오별 동작을 정의하기 위해 앱은 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 정의된 값을 사용하여 각 작업에 대한 비용 정책을 설정합니다.
 
-예를 들어 작업에 대해 정의되는 비용 정책에서는 디바이스가 데이터 통신 연결 네트워크를 사용 중인 경우 작업을 자동으로 일시 중지하도록 나타낼 수 있습니다. 그런 다음 "무제한" 네트워크에 연결되면 전송이 자동으로 다시 시작됩니다. 비용을 기준으로 네트워크를 정의하는 방법에 대한 자세한 내용은 [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292)을 참조하세요.
+예를 들어 작업에 대해 정의되는 비용 정책에서는 장치가 데이터 통신 연결 네트워크를 사용 중인 경우 작업을 자동으로 일시 중지하도록 나타낼 수 있습니다. 그런 다음 "무제한" 네트워크에 연결되면 전송이 자동으로 다시 시작됩니다. 비용을 기준으로 네트워크를 정의하는 방법에 대한 자세한 내용은 [**NetworkCostType**](https://msdn.microsoft.com/library/windows/apps/br207292)을 참조하세요.
 
 백그라운드 전송 기능은 네트워크 상태 변경을 처리하는 자체 메커니즘을 가지고 있지만, 네트워크에 연결된 앱에 대한 다른 일반적인 연결 고려 사항도 있습니다. 자세한 내용은 [사용 가능한 네트워크 연결 정보 활용](https://msdn.microsoft.com/library/windows/apps/hh452983)을 읽어보세요.
 
@@ -78,9 +82,9 @@ ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 
 이전 단계에서는 *uriString* 및 *file* 값을 다음 예 UploadOp의 인스턴스에 전달하여 새로운 업로드 작업을 구성하고 시작하는 데 사용합니다. 먼저 *uriString*을 구문 분석하여 필요한 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체를 만듭니다.
 
-그런 다음 제공된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (*file*)의 속성을 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 사용하여 요청 헤더를 채우고 *SourceFile* 속성을 **StorageFile** 개체로 설정합니다. 그런 다음 문자열로 제공된 파일 이름 정보 및 [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220) 속성을 삽입하도록 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) 메서드가 호출됩니다.
+그런 다음 제공된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)(*file*)의 속성을 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 사용하여 요청 헤더를 채우고 *SourceFile* 속성을 **StorageFile** 개체로 설정합니다. 그런 다음 문자열로 제공된 파일 이름 정보 및 [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220) 속성을 삽입하도록 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146) 메서드가 호출됩니다.
 
-마지막으로 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*을 만듭니다.
+마지막으로 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)(*upload*)을 만듭니다.
 
 [!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "업로드 작업 만들기 및 초기화")]
 
@@ -323,6 +327,7 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

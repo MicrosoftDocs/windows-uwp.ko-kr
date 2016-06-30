@@ -5,8 +5,8 @@ title: "터치 조작"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23eac55de26563c68b401d8912264aebb86d0380
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
 
 ---
 
@@ -159,7 +159,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 -   적절한 설명 및 시각 신호는 앞으로의 조작에 큰 영향을 미칩니다.
 
 
-## <span id="App_views"></span><span id="app_views"></span><span id="APP_VIEWS"></span>앱 보기
+## 앱 보기
 
 
 앱 뷰의 이동/스크롤 및 확대/축소 설정을 통해 사용자 조작 환경을 조정할 수 있습니다. 앱 뷰는 사용자가 앱과 해당 콘텐츠를 액세스하고 조작하는 방법을 제어합니다. 뷰는 관성, 콘텐츠 경계 바운스 및 끌기 지점과 같은 동작도 제공합니다.
@@ -173,7 +173,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 앱 보기에 대한 자세한 내용은 [컨트롤, 레이아웃 및 텍스트](https://msdn.microsoft.com/library/windows/apps/mt228348)를 참조하세요.
 
-## <span id="intro_to_touch_input"></span><span id="INTRO_TO_TOUCH_INPUT"></span>사용자 지정 터치 조작
+## 사용자 지정 터치 조작
 
 
 조작 지원을 직접 구현할 경우 사용자들은 앱의 UI 요소와의 직접적 조작이 이루어지는 직관적인 환경을 기대한다는 점에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
@@ -213,12 +213,12 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## <span id="gestures"></span><span id="GESTURES"></span>제스처 이벤트
+## 제스처 이벤트
 
 
 개별 컨트롤에 대한 자세한 내용은 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406)을 참조하세요.
 
-## <span id="using_pointer_events"></span><span id="USING_POINTER_EVENTS"></span>포인터 이벤트
+## 포인터 이벤트
 
 
 포인터 이벤트는 터치, 터치 패드, 펜 및 마우스를 비롯한 다양한 활성 입력 소스에 의해 발생합니다(기존 마우스 이벤트를 대체함).
@@ -427,7 +427,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## <span id="using_manipulation_events"></span><span id="USING_MANIPULATION_EVENTS"></span>조작 이벤트
+## 조작 이벤트
 
 
 앱에서 여러 손가락 조작 또는 속도 데이터가 필요한 조작을 지원해야 할 경우 조작 이벤트를 사용합니다.
@@ -609,13 +609,13 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## <span id="Routed_events"></span><span id="routed_events"></span><span id="ROUTED_EVENTS"></span>라우트된 이벤트
+## 라우트된 이벤트
 
 
 여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [
             **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## 권장 사항 및 금지 사항
 
 
 -   터치 조작이 있는 응용 프로그램을 기본 입력 방법으로 디자인합니다.
@@ -627,7 +627,7 @@ End Sub
 -   가능하면 조작을 구분하기 위해 손가락 수를 사용하지 마세요.
 
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력된 디바이스 식별](identify-input-devices.md) 
@@ -651,6 +651,6 @@ End Sub
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

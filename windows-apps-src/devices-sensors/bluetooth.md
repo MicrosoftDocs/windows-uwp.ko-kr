@@ -1,8 +1,11 @@
 ---
-author: DBirtolo
+author: msatranjr
 ms.assetid: 404783BA-8859-4BFB-86E3-3DD2042E66F5
 title: Bluetooth
-description: 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어 있습니다.
+description: "이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어 있습니다."
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: f2266207eeb1ec4214ae62dbad2bf4a6437fd69b
+
 ---
 # Bluetooth
 
@@ -10,7 +13,7 @@ description: 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용
 
 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용하는 방법을 비롯해 UWP(유니버설 Windows 플랫폼) 앱에 Bluetooth를 통합하는 방법에 대한 문서가 포함되어있습니다.
 
-|        |                  |
+|항목|설명|
 |--------|------------------|
 | [RFCOMM](send-or-receive-files-with-rfcomm.md)   | 이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) 네임스페이스의 Bluetooth RFCOMM API에 대한 개요를 제공합니다. |
 | [GATT](gatt-scenarios.md) | 이 문서에서는 세 가지 일반적인 GATT 시나리오, 즉 Bluetooth 데이터 검색, Bluetooth LE 온도계 디바이스 제어 및 Bluetooth LE 디바이스 데이터 프레젠테이션 제어에 대한 샘플 코드와 함께 [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) 네임 스페이스의 Bluetooth 일반 특성 프로필(GATT) API에 대한 개요를 제공합니다. |
@@ -20,6 +23,7 @@ description: 이 섹션에는 RFCOMM, GATT 및 LE(저에너지) 광고를 사용
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

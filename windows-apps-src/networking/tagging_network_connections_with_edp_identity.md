@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: '이 항목에서는 EDP(엔터프라이즈 데이터 보호) 시나리오에서 네트워크 연결을 만들기 전에 보호된 스레드 컨텍스트를 만드는 방법을 보여 줍니다.'
-MS-HAID: 'dev\_networking.tagging\_network\_connections\_with\_edp\_identity'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "이 항목에서는 EDP(엔터프라이즈 데이터 보호) 시나리오에서 네트워크 연결을 만들기 전에 보호된 스레드 컨텍스트를 만드는 방법을 보여 줍니다."
+MS-HAID: dev\_networking.tagging\_network\_connections\_with\_edp\_identity
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: EDP ID를 사용하여 네트워크 연결 태그 지정
+title: "EDP ID를 사용하여 네트워크 연결 태그 지정"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2b960bbb5cf58991778e5c20bb915a202ecf6e04
+
 ---
 
 # EDP ID를 사용하여 네트워크 연결 태그 지정
@@ -126,6 +130,7 @@ public static async void SyncMailbox(string identity)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

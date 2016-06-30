@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 꼭짓점 버퍼 및 데이터 포팅
-description: 이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다.
+title: "꼭짓점 버퍼 및 데이터 포팅"
+description: "이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 셰이더가 꼭짓점을 지정된 순서로 트래버스할 수 있게 하는 인덱스 버퍼를 정의합니다."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+
 ---
 
 # 꼭짓점 버퍼 및 데이터 포팅
@@ -314,6 +318,7 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

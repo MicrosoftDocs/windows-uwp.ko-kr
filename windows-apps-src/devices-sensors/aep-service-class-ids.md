@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
-title: AEP 서비스 클래스 ID
-description: AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다.
+title: "AEP 서비스 클래스 ID"
+description: "AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f201293d1288c8a065723ee2c05a7da45e5e95ab
+
 ---
 # AEP 서비스 클래스 ID
 
@@ -127,6 +131,7 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

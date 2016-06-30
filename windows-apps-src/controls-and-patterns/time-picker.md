@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 시간 선택기는 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 시간 값을 선택할 수 있는 표준화된 방법을 제공합니다.
-title: 시간 선택기
+Description: "시간 선택기는 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 시간 값을 선택할 수 있는 표준화된 방법을 제공합니다."
+title: "시간 선택기"
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5056a9f304ca21c977b9cc65b8ead007eccd4288
+
 ---
 
 # 시간 선택기
@@ -56,6 +60,7 @@ arrivalTimePicker.Header = "Arrival time";
 - [날짜 선택기](date-picker.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
-Description: 다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이스에서만 실행할 수 있는 유니버설 Windows 앱을 만드는 데 필요한 정보입니다.
-title: Windows 10 앱 사용 방법 가이드 - Windows 앱 개발
+Description: "다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이스에서만 실행할 수 있는 유니버설 Windows 앱을 만드는 데 필요한 정보입니다."
+title: "Windows 10 앱 사용 방법 가이드 - Windows 앱 개발"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 redirect_url: https://developer.microsoft.com/en-us/windows/develop
+translationtype: Human Translation
+ms.sourcegitcommit: 9be74892a98765a8a45482ce3f5cc5151ab772b1
+ms.openlocfilehash: 5d0cca643c26458165c388215d34eec76dfe8cf6
+
 ---
 
 
@@ -43,6 +47,7 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 | [XAML 플랫폼](xaml-platform/index.md) | XAML 프로그래밍 언어의 기본 개념을 시작합니다. 또는 이미 XAML에 익숙한 경우 기본 개념을 건너뛰고 Visual Studio를 사용하여 뛰어난 유니버설 Windows 앱을 만들 수 있는 XAML에서 Windows 런타임 기능을 구현하는 방법을 알아봅니다. |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

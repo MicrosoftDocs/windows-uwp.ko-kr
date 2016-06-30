@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 다른 앱이 여러분의 지적 재산권을 침해한다고 여겨지는 경우 취할 수 있는 조치에 대해 알아봅니다.
-title: 상표 및 저작권 보호
+Description: "다른 앱이 여러분의 지적 재산권을 침해한다고 여겨지는 경우 취할 수 있는 조치에 대해 알아봅니다."
+title: "상표 및 저작권 보호"
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2c3f35ee5fb3f04e9f2fc389162793caa9ce5f1a
+
 ---
 
 # 상표 및 저작권 보호
@@ -64,6 +68,7 @@ Microsoft에서 보내는 알림을 잘 읽고 지침을 따르세요. Microsoft
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

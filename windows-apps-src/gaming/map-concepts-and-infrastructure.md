@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Direct3D 11에 OpenGL ES 2.0 매핑
-description: 처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요.
+title: "Direct3D 11에 OpenGL ES 2.0 매핑"
+description: "처음으로 OpenGL ES 2.0에서 Direct3D로 그래픽 아키텍처를 포팅하는 프로세스를 시작하는 경우에는 API 간의 주요 차이점에 익숙해지도록 하세요."
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a058c5f669704695cc3a2ae5385feccbf6cb4bc3
+
 ---
 
 # Direct3D 11에 OpenGL ES 2.0 매핑
@@ -59,6 +63,7 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

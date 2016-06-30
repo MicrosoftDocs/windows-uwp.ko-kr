@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
-description: Microsoft Advertising 라이브러리를 사용하여 앱에 배너 광고 및 동영상 중간 광고를 추가하는 방법을 알아보려면 이 섹션의 연습을 사용합니다.
-title: Microsoft Advertising 라이브러리에 대한 개발자 연습
+description: "Microsoft Advertising 라이브러리를 사용하여 앱에 배너 광고 및 동영상 중간 광고를 추가하는 방법을 알아보려면 이 섹션의 연습을 사용합니다."
+title: "Microsoft Advertising 라이브러리에 대한 개발자 연습"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: b36b5d5ba747fbb71c988033ddd0cdb4cee0ed8b
+
 ---
 
 # Microsoft Advertising 라이브러리에 대한 개발자 연습
@@ -30,6 +34,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "대상 지정"
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c8244e1a103a1c57df92e54ceeaa02e9c363faa9
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
 
 ---
 
@@ -24,7 +24,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 
-## <span id="Measurements_and_scaling"></span><span id="measurements_and_scaling"></span><span id="MEASUREMENTS_AND_SCALING"></span>측정값 및 배율
+## 측정값 및 배율
 
 
 다양한 화면 크기 및 픽셀 밀도에서 일관성을 유지하기 위해서는 모든 대상 크기를 실제 단위(밀리미터)로 나타내야 합니다. 실제 단위는 다음 수식을 사용해서 픽셀로 변환할 수 있습니다.
@@ -43,14 +43,14 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 시스템 내에 정의된 배율 플라토에 따라 결과를 조정해야 합니다.
 
-## <span id="Thresholds"></span><span id="thresholds"></span><span id="THRESHOLDS"></span>임계값
+## 임계값
 
 
 거리 및 시간 임계값은 조작의 결과를 결정하는 데 사용될 수 있습니다.
 
 예를 들어 터치다운이 감지될 경우 개체를 터치다운 지점에서 2.7mm 이내로 끈 다음 터치다운의 0.1초 이내에서 터치를 떼면 탭 동작으로 등록됩니다. 이러한 2.7mm 임계값을 벗어나 손가락을 움직이면 개체가 끌기되고 선택 또는 이동됩니다(자세한 내용은 [가로질러 밀기에 대한 지침](guidelines-for-cross-slide.md) 참조). 앱에 따라 0.1초보다 길게 손가락을 대고 있으면 시스템이 자체 노출 상호 작용을 수행하게 됩니다(자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md#selfreveal) 참조).
 
-## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>대상 크기
+## 대상 크기
 
 
 일반적으로 터치 대상 크기를 9mm 정사각형 이상(135 PPI 디스플레이에서 48x48픽셀, 1.0x 배율 수준)으로 설정합니다. 7mm 정사각형보다 작은 터치 대상을 사용하지 마세요.
@@ -112,7 +112,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 -   터치 시각화
 -   하드웨어 및 터치 디지타이저
 
-## <span id="Targeting_assistance"></span><span id="targeting_assistance"></span><span id="TARGETING_ASSISTANCE"></span>대상 지정 지원
+## 대상 지정 지원
 
 
 Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침이 적용될 수 없는 시나리오를 위한 대상 지정 지원을 제공합니다. 예를 들면 웹 페이지의 하이퍼링크, 일정 컨트롤, 드롭다운 목록과 콤보 상자, 텍스트 선택 등이 있습니다.
@@ -121,7 +121,7 @@ Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침�
 
 터치 가능 요소가 최소 권장 대상 크기보다 작아야 하는 경우 다음 기술을 사용하여 대상 지정 문제를 최소화할 수 있습니다.
 
-## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>테더링
+## 테더링
 
 
 테더링은 입력 접촉 지점이 개체와 직접적으로 연결되어 있지 않더라도 개체에 연결하고 개체를 조작함을 사용자에게 알리는 데 사용되는 시각 신호(접촉 지점과 개체의 경계 직사각형을 연결하는 연결선)입니다. 다음과 같은 경우에 이러한 현상이 나타날 수 있습니다.
@@ -131,7 +131,7 @@ Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침�
 
 JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능이 노출되지 않습니다.
 
-## <span id="scrubbing"></span><span id="SCRUBBING"></span>스크러빙
+## 스크러빙
 
 
 스크러빙은 대상 필드 내의 아무 위치나 터치한 다음 원하는 대상에 도달할 때까지 손가락을 떼지 않고 미는 동작을 의미합니다. 이 동작을 "이륙 활성화"라고 합니다. 여기서 활성화된 개체는 화면에서 손가락을 뗄 때 마지막으로 터치한 개체입니다.
@@ -146,7 +146,7 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 -   대상이 수행하는 작업이 피해를 주지 않는 작업(예: 날짜 간의 전환)이면 스크러빙 대상에 테더링이 지정됩니다.
 -   테더링은 가로, 세로 또는 한 방향으로 지정됩니다.
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 **샘플**
@@ -174,6 +174,6 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

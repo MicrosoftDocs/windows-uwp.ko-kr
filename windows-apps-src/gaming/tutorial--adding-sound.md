@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 소리 추가
-description: 이 단계에서는 슈팅 게임 샘플에서 XAudio2 API를 사용하여 사운드 재생을 위한 개체를 만드는 방법을 검토합니다.
+title: "소리 추가"
+description: "이 단계에서는 슈팅 게임 샘플에서 XAudio2 API를 사용하여 사운드 재생을 위한 개체를 만드는 방법을 검토합니다."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+
 ---
 
 # 소리 추가
@@ -201,7 +205,7 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 }
 ```
 
-이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(펄스 부호 변조) 버퍼로 읽습니다.
+이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
 
 1.  [
             **MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110)을 호출하여 미디어 원본 뷰어([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) 개체를 만듭니다.
@@ -311,7 +315,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 ## 다음 단계
 
 
-UWP(유니버설 Windows 플랫폼) DirectX 게임 개발에 대해 간략하게 둘러보았습니다. 이제 직접 만든 Windows 8용 게임에 최고의 환경을 제공하기 위해 수행해야 할 작업에 대해 알게 되었습니다. 게임은 다양한 Windows 8 디바이스 및 플랫폼에서 재생할 수 있으므로 그래픽, 컨트롤, 사용자 인터페이스 및 오디오와 같은 구성 요소를 최대한 광범위한 구성 집합으로 설계해야 합니다.
+UWP(유니버설 Windows 플랫폼) DirectX 게임 개발에 대해 간략하게 둘러보았습니다. 이제 직접 만든 Windows 8용 게임에 최고의 환경을 제공하기 위해 수행해야 할 작업에 대해 알게 되었습니다. 게임은 다양한 Windows 8 장치 및 플랫폼에서 재생할 수 있으므로 그래픽, 컨트롤, 사용자 인터페이스 및 오디오와 같은 구성 요소를 최대한 광범위한 구성 집합으로 설계해야 합니다.
 
 이러한 문서에 제공된 게임 샘플을 수정하는 방법에 대한 자세한 내용은 [게임 샘플 확장](tutorial-resources.md)을 참조하세요.
 
@@ -565,6 +569,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

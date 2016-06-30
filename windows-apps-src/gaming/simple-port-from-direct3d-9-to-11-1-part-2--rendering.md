@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 렌더링 프레임워크 변환
-description: 기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다.
+title: "렌더링 프레임워크 변환"
+description: "기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
+
 ---
 
 # 렌더링 프레임워크 변환
@@ -490,6 +494,7 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

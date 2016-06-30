@@ -1,9 +1,13 @@
 ---
 author: mcleblanc
-description: iOS에서 UWP로 이동
+description: "iOS에서 UWP로 이동"
 Search.SourceType: Video
-title: iOS에서 UWP로 이동
+title: "iOS에서 UWP로 이동"
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7f6160d651a4264d81ac1a1c9a011e32f53778b0
+
 ---
 
 # iOS에서 UWP로 이동
@@ -35,6 +39,7 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 �
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

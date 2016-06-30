@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
-description: Microsoft 스토어 참여 및 수익 창출 SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
-title: 앱에서 광고 표시
+description: "Microsoft 스토어 참여 및 수익 창출 SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다."
+title: "앱에서 광고 표시"
+translationtype: Human Translation
+ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
+ms.openlocfilehash: c79ba96908cc7b52afefbe44c3f56ce009c87f16
+
 ---
 
 # 앱에서 광고 표시
@@ -39,6 +43,7 @@ Microsoft 스토어 참여 및 수익 창출 SDK에는 Microsoft Advertising 및
 * [광고로 앱 수익 창출]( http://go.microsoft.com/fwlink/p/?LinkId=699559)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

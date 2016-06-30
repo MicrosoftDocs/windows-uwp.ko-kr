@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱이 Windows 스토어에 게시된 후에는 최대한 많은 고객이 볼 수 있게 해야 합니다.
-title: 앱 홍보 및 고객 참여 유도
+Description: "앱이 Windows 스토어에 게시된 후에는 최대한 많은 고객이 볼 수 있게 해야 합니다."
+title: "앱 홍보 및 고객 참여 유도"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3511533f76294767ca409b09a718555a6194e451
+
 ---
 
 # 앱 홍보 및 고객 참여 유도
@@ -28,6 +32,7 @@ ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

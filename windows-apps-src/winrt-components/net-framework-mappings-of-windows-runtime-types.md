@@ -1,16 +1,17 @@
 ---
-author: martinekuan
-title: Windows 런타임 형식의 .NET Framework 매핑
-description: 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다.
+author: msatranjr
+title: "Windows 런타임 형식의 .NET Framework 매핑"
+description: "다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다."
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 286f479c86c06c9d08b4e36cf9776b590a13cc5f
+
 ---
 
 # Windows 런타임 형식의 .NET Framework 매핑
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다. 관리 코드로 작성된 유니버설 Windows 앱에서 IntelliSense는 UWP 형식 대신 .NET Framework 형식을 보여 줍니다. 예를 들어 Windows 런타임 메서드가 IVector&lt;string&gt; 형식의 매개 변수를 사용하는 경우 IntelliSense가 IList&lt;string&gt; 형식의 매개 변수를 표시합니다. 마찬가지로 관리 코드로 작성한 Windows 런타임 구성 요소에서 멤버 서명에 .NET Framework 형식을 사용합니다. [Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx)가 Windows 런타임 구성 요소를 생성할 때 .NET Framework 형식은 해당하는 UWP 형식이 됩니다.
 
@@ -84,6 +85,6 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

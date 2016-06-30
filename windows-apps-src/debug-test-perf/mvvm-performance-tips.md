@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
-title: MVVM 및 언어 성능 팁
-description: 이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다.
+title: "MVVM 및 언어 성능 팁"
+description: "이 항목에서는 선택한 소프트웨어 디자인 패턴 및 프로그래밍 언어와 관련된 몇 가지 성능 고려 사항을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 77a162076e14b4726e1fb29673b14be65be37a16
+
 ---
 # MVVM 및 언어 성능 팁
 
@@ -40,6 +44,7 @@ MVVM 패턴에 대한 여러 개의 구체적인 정의와 이를 구현하는 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
-title: Hello, world 앱 만들기(XAML)
-description: 이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 "Hello, world" 앱을 만드는 방법을 설명합니다.
+title: "Hello, world 앱 만들기(XAML)"
+description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 \"Hello, world\" 앱을 만드는 방법을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+
 ---
 
 # "Hello, world" 앱 만들기(XAML)
@@ -321,6 +325,7 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
 축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

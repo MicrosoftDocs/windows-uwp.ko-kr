@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Direct3D 11 초기화
-description: Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방법 및 DXGI를 사용하여 스왑 체인을 설정하는 방법을 포함하여 Direct3D 11로 Direct3D 9 초기화 코드를 변환하는 방법을 보여 줍니다.
+title: "Direct3D 11 초기화"
+description: "Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방법 및 DXGI를 사용하여 스왑 체인을 설정하는 방법을 포함하여 Direct3D 11로 Direct3D 9 초기화 코드를 변환하는 방법을 보여 줍니다."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
+
 ---
 
 # Direct3D 11 초기화
@@ -227,6 +231,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

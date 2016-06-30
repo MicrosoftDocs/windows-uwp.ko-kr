@@ -2,6 +2,10 @@
 author: Jwmsft
 label: Buttons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 91399060e129df18acd38e18d98cad848667a5ad
+
 ---
 # 단추
 단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다.
@@ -161,7 +165,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 디바이스 전화 ![휴대폰의 시스템 뒤로 기능](images/nav-back-phone.png)
 -   항상 제공됩니다.
--   디바이스 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.
+-   장치 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.
 -   앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.
 
 <span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>태블릿![ 태블릿의 시스템 뒤로 기능(태블릿 모드)](images/nav-back-tablet.png)
@@ -228,6 +232,7 @@ Surface Hub ![Surface Hub의 시스템 뒤로 기능](images/nav-back-surfacehub
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

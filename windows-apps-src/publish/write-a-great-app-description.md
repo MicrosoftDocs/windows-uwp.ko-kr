@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다.
-title: 호소력 있는 앱 설명 쓰기
+Description: "호소력 있는 설명은 Windows 스토어에서 앱을 돋보이게 하므로 고객의 앱 다운로드를 유도하는 데 도움이 됩니다."
+title: "호소력 있는 앱 설명 쓰기"
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
+translationtype: Human Translation
+ms.sourcegitcommit: 17e7724eaa8a33f17360eb6e24fcc22068c5d477
+ms.openlocfilehash: 56b8492fea59c9a744c948d27e728e2305388cf8
+
 ---
 
 # 호소력 있는 앱 설명 쓰기
@@ -35,6 +39,7 @@ ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

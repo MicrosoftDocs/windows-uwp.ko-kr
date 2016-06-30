@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: 지오코딩 및 리버스 지오코딩 수행
-description: Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).
+title: "지오코딩 및 리버스 지오코딩 수행"
+description: "Windows.Services.Maps 네임스페이스에 있는 MapLocationFinder 클래스의 메서드를 호출하여 주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩)."
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
+
 ---
 
 # 지오코딩 및 리버스 지오코딩 수행
@@ -142,6 +146,7 @@ town = Redmond
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

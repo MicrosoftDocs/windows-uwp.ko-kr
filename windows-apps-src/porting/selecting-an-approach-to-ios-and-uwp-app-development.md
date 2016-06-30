@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: 플랫폼 간 앱을 개발할 때 어떤 방법을 선택할 수 있나요?
-title: iOS 및 UWP 앱 개발 방법 선택
+description: "플랫폼 간 앱을 개발할 때 어떤 방법을 선택할 수 있나요?"
+title: "iOS 및 UWP 앱 개발 방법 선택"
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2703a0c919b08331cc7ab55fe78b868555312ac0
+
 ---
 
 # iOS 및 UWP 앱 개발 방법 선택
@@ -91,6 +95,7 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

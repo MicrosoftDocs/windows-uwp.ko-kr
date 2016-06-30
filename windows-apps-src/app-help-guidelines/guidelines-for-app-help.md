@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: 이러한 지침은 앱에 대한 효과적인 도움말 콘텐츠를 디자인하는 방법을 설명합니다.
-title: 앱 도움말에 대한 지침
+Description: "이러한 지침은 앱에 대한 효과적인 도움말 콘텐츠를 디자인하는 방법을 설명합니다."
+title: "앱 도움말에 대한 지침"
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1e1e5e118eb44f6b491669dbd274fae05d92685b
+
 ---
 
 # 앱 도움말에 대한 지침
@@ -61,6 +65,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

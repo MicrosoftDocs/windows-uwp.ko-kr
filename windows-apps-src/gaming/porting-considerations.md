@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 9에서 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 이동
-description: 이 섹션에서는 DirectX 9 데스크톱 게임을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅에 대한 지침을 제공합니다.
+title: "DirectX 9에서 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 이동"
+description: "이 섹션에서는 DirectX 9 데스크톱 게임을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅에 대한 지침을 제공합니다."
 ms.assetid: 7a3f8ddf-d5b2-1c05-b532-70459befda4e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0f27f9e9219fca10798a09e6f934b72ad7b1b5a8
+
 ---
 
 # DirectX 9에서 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 이동
@@ -50,6 +54,7 @@ ms.assetid: 7a3f8ddf-d5b2-1c05-b532-70459befda4e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

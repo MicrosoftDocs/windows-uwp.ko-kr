@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
-title: SQLite 데이터베이스
-description: SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다.
+title: "SQLite 데이터베이스"
+description: "SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+
 ---
 # SQLite 데이터베이스
 
@@ -90,6 +94,7 @@ SQLite 작동 방식을 잘 이해하려면 SQL 문을 평가하는 SQL 데이�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

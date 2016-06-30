@@ -1,23 +1,22 @@
 ---
 author: Mtoepke
-title: Xbox One Developer Preview의 UWP에 대해 알려진 문제
+title: "Xbox One Developer Preview의 UWP에 대해 알려진 문제"
 description: 
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
+
 ---
 
 # Xbox Developer Preview에서 UWP에 대해 알려진 문제
 
-이 항목에서는 Xbox Developer Preview에서 UWP에 대해 알려진 문제를 설명합니다. 
-이 개발자 미리 보기에 대한 자세한 내용은 [Xbox에서 UWP](index.md)를 참조하세요. 
+이 항목에서는 Xbox Developer Preview에서 UWP에 대해 알려진 문제를 설명합니다. 이 개발자 미리 보기에 대한 자세한 내용은 [Xbox에서 UWP](index.md)를 참조하세요. 
 
 \[API 참조 항목 링크를 통해 이 페이지를 방문하고 유니버설 디바이스 패밀리 API 정보를 찾는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)(영문)을 참조하세요.\]
 
-Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 
-즉, 일부 인기 있는 게임 및 앱이 예상대로 작동하지 않고 가끔 크래시 및 데이터 손실을 경험할 수 있습니다. 
-Developer Preview를 종료하면 콘솔이 초기화되며 모든 게임, 앱 및 콘텐츠를 다시 설치해야 합니다.
+Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 즉, 일부 인기 있는 게임 및 앱이 예상대로 작동하지 않고 가끔 크래시 및 데이터 손실을 경험할 수 있습니다. Developer Preview를 종료하면 콘솔이 초기화되며 모든 게임, 앱 및 콘텐츠를 다시 설치해야 합니다.
 
-개발자의 경우 이는 일부 개발자 도구와 API가 예상대로 작동하지 않음을 의미합니다. 
-최종 릴리스용 기능 중 일부가 포함되지 않았거나 릴리스 품질이 아닙니다. 
+개발자의 경우 이는 일부 개발자 도구와 API가 예상대로 작동하지 않음을 의미합니다. 최종 릴리스용 기능 중 일부가 포함되지 않았거나 릴리스 품질이 아닙니다. 
 **특히, 이 Preview의 시스템 성능은 최종 릴리스의 시스템 성능을 반영하지 않습니다.**
 
 다음 목록에는 이 릴리스에서 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
@@ -27,45 +26,101 @@ Developer Preview를 종료하면 콘솔이 초기화되며 모든 게임, 앱 �
 문제가 있으면 이 항목의 내용을 살펴보고, [질문과 대답](frequently-asked-questions.md)을 확인하고, 포럼을 통해 도움을 요청하세요.
 
 
-## 게임 개발
+<!--## Developing games-->
 
-### x86 및 x64
+## 마우스 모드 지원
 
-올해 릴리스할 때쯤에는 x86과 x64가 둘 다 지원되며 이 Preview에서는 x86이 지원됩니다. 
-그러나 지금까지 x64에서 테스트가 훨씬 더 수행되었으므로(Xbox 셸과 현재 콘솔에서 실행되는 모든 앱은 x64임) 프로젝트에 x64를 사용하는 것이 좋습니다. 
-게임의 경우 특히 그렇습니다.
+이 미리 보기부터 _마우스 모드_는 XAML 및 호스트된 웹앱에 기본적으로 사용하도록 설정됩니다. 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 Xbox Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다.
 
-x86을 사용하려는 경우 발견된 문제를 포럼에서 신고하세요.
+**개발자는 마우스 모드를 끄고 컨트롤러(X-Y) 탐색에 최적화하는 것이 좋습니다.**
 
-또한 이 페이지의 뒷부분에 있는 [빌드 특성을 전환하면 배포 오류가 발생할 수 있음](known-issues.md#switching-build-flavors-can-cause-deployment-failures)을 참조하세요.
+XAML에서 마우스 모드를 끄려면 다음 예제를 따릅니다.
 
-### 게임 엔진
+```code
+public App() {
+    this.InitializeComponent();
+    this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+    this.Suspending += OnSuspending;
+}
+```
 
-일부 인기 있는 게임 엔진을 테스트했지만 모두 테스트한 것은 아니며, 이 Preview에 대한 테스트 검사는 포괄적이지 않았습니다. 
-개발자마다 개발 진행률이 다를 수 있습니다. 
+HTML/Javascript 앱에서 마우스 모드를 끄려면 다음 예제를 따릅니다.
 
-다음 게임 엔진 작동이 확인되었습니다.
+```code
+// Turn off mouse mode
+navigator.gamepadInputEmulation = "keyboard";
+```
+
+> **참고** &nbsp;&nbsp;이 개발자 미리 보기에서 마우스 모드가 켜져 있는 경우 컨트롤러의 오른쪽 조이스틱을 사용하여 이동하면 콘솔이 응답하지 않을 수 있습니다. 이 문제가 발생하면 콘솔을 다시 부팅해야 합니다.
+
+마우스 모드 지원에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요. 이 항목에는 마우스 모드를 사용하거나 사용하지 않도록 설정하는 방법에 대한 정보가 포함되어 있으므로 앱에 올바른 동작을 선택할 수 있습니다.
+
+## 앱을 배포하려면 사용자가 로그인되어 있어야 함(오류 0x87e10008)
+
+이제 앱이 시작되려면 먼저 사용자가 로그인되어 있어야 합니다(VS 2015에서 디버깅을 시작(F5)하려면 먼저 사용자가 로그인되어 있어야 함). Visual Studio에서 받은 현재 오류 메시지는 직관적이지 않습니다.
+ 
+![Windows 스토어 앱을 활성화할 수 없습니다.](images/windows-store-app-activation-error.jpg)
+ 
+이 문제를 해결하려면 앱을 배포하기 전에 Xbox 셸 또는 DevHome에서 사용자로 로그인합니다.
+ 
+## 백그라운드 앱에 대한 메모리 제한이 아직 적용되지 않음
+ 
+백그라운드에서 실행되는 앱에 대한 128MB 제한이 이 미리 보기에서 적용되지 않습니다. 즉, 앱이 백그라운드에서 실행될 때 128MB를 초과하는 경우 계속 메모리를 할당할 수 있습니다.
+ 
+현재 이 문제에 대한 해결 방법은 없습니다. 메모리 사용을 적절하게 관리해야 합니다. 이후 미리 보기에서는 앱이 128MB 제한을 초과하는 경우 메모리 할당 오류가 발생합니다.
+ 
+## 자녀 보호를 켠 상태로 VS에서 배포하지 못함
+
+콘솔의 자녀 보호가 설정에서 켜져 있는 경우 VS에서 앱을 시작하지 못합니다.
+
+이 문제를 해결하려면 자녀 보호를 일시적으로 사용하지 않도록 설정하거나 다음을 수행합니다.
+1. 자녀 보호를 끄고 콘솔에 앱을 배포합니다.
+2. 자녀 보호를 켭니다.
+3. 콘솔에서 앱을 시작합니다.
+4. 앱이 시작될 수 있도록 PIN 또는 암호를 입력합니다.
+5. 앱이 시작됩니다.
+6. 앱을 닫습니다.
+7. F5 키를 사용하여 VS에서 시작합니다. 앱이 확인 없이 시작됩니다.
+
+이 시점에서는 앱을 제거하고 다시 설치하는 경우에도 사용자를 로그아웃시킬 때까지 권한은 _고정_되어 있습니다.
+ 
+자녀 계정에만 사용할 수 있는 다른 유형의 예외가 있습니다. 자녀 계정에는 부모가 로그인하여 권한을 부여해야 하지만 권한을 부여할 때 부모는 자녀가 앱을 시작하는 것을 **항상** 허용하도록 선택할 수 있습니다. 이 예외는 클라우드에 저장되고 자녀가 로그아웃하고 다시 로그인하는 경우에도 유지됩니다.   
+
+<!--### x86 vs. x64
+
+By the time we release later this year, we will have great support for both x86 and x64, and we do support x86 in this preview. 
+However, x64 has had much more testing to date (the Xbox shell and all of the apps running on the console today are x64), and so we recommend using x64 for your projects. 
+This is particularly true for games.
+
+If you decide to use x86, please report any issues you see on the forum.
+
+Also see [Switching build flavors can cause deployment failures](known-issues.md#switching-build-flavors-can-cause-deployment-failures) later on this page.-->
+
+<!--### Game engines
+
+We have tested some popular game engines, but not all of them, and our test coverage for this preview has not been comprehensive. 
+Your mileage may vary. 
+
+The following game engines have been confirmed to work:
 * [Construct 2](https://www.scirra.com/)
 
-이외에도 작동 중인 엔진이 있습니다. 발견한 사항에 대한 피드백을 받고 싶습니다. 
-포럼을 통해 발견된 문제를 모두 신고해 주세요.
+There are likely others that are working too. We would love to get your feedback on what you find. 
+Please use the forum to report any issues you see.-->
 
-### DirectX 12 지원
+## DirectX 12 지원
 
-Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 
-지금은 DirectX 12가 지원되지 않습니다. 
-기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. 
-Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
+Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
 
-### Xbox One Developer Preview에서는 Windows 10으로 게임을 스트리밍 할 수 없습니다.
+<!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
-콘솔에서 Xbox One Developer Preview를 활성화하면 콘솔이 정품 모드로 설정되어 있어도 Xbox One에서 Windows 10의 Xbox 앱으로 게임을 스트리밍하지 못하게 됩니다. 게임 스트리밍 기능을 복원하려면 Developer Preview를 종료해야 합니다.
+Activating the Xbox One Developer Preview on your console will prevent you from streaming games from your Xbox One to the Xbox app on Windows 10, even if your console is set to retail mode. 
+To restore the game streaming feature, you must leave the developer preview. -->
 
-### TV에 적합한 영역의 알려진 문제
+## TV에 적합한 영역의 알려진 문제
 
 기본적으로 Xbox에서 UWP 앱의 디스플레이 영역은 TV에 적합한 영역으로 음각 처리되어야 합니다. 그러나 Xbox One Developer Preview에는 알려진 버그가 있어 TV에 적합한 영역이 [_오프셋_, _오프셋_]이 아니라 [0, 0]에서 시작됩니다.
 
-TV에 적합한 영역에 대한 자세한 내용은 [https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv)를 참조하세요. 
+> **참고** &nbsp;&nbsp;이는 Javascript를 사용하는 UWP 앱에만 적용됩니다.
 
 이 문제를 해결하는 가장 쉬운 방법은 다음 JavaScript 예제와 같이 TV에 적합한 영역을 사용하지 않도록 설정하는 것입니다.
 
@@ -73,111 +128,106 @@ TV에 적합한 영역에 대한 자세한 내용은 [https://msdn.microsoft.com
 
     applicationView.setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
 
-### 마우스 모드가 아직 지원되지 않음
+TV 안전 영역에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv)을 참조하세요.
 
-Xbox One Developer Preview에서는 [https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv] (https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&amp;MSPPError=-2147217396#mouse-mode)에서 설명한 _마우스 모드_ 기능이 아직 지원되지 않습니다.
+<!--## System resources for UWP apps and games on Xbox One
 
-## Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
-
-Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 리소스를 공유하므로 시스템이 한 게임이나 앱에서 사용할 수 있는 리소스를 제어합니다. 
-메모리 또는 성능 문제가 발생하는 경우 이 때문일 수 있습니다. 
-자세한 내용은 [Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스](system-resource-allocation.md)를 참조하세요.
+UWP apps and games running on Xbox One share resources with the system and other apps, and so the system governs the resources that are available to any one game or app. 
+If you are running into memory or performance issues, this may be why. 
+For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
 
 
 ## 기존 소켓을 사용하여 네트워킹
 
-이 Developer Preview에서는 기존의 TCP/UDP 소켓(WinSock, Windows.Networking.Sockets)을 사용하는 콘솔에서 인바운드 및 아웃바운드 네트워크 액세스를 사용할 수 없습니다. 
-개발자는 HTTP 및 WebSocket을 계속 사용할 수 있습니다. 
+이 Developer Preview에서는 기존의 TCP/UDP 소켓(WinSock, Windows.Networking.Sockets)을 사용하는 콘솔에서 인바운드 및 아웃바운드 네트워크 액세스를 사용할 수 없습니다. 개발자는 HTTP 및 WebSocket을 계속 사용할 수 있습니다. 
 
 
 ## UWP API 검사
 
-일부 UWP API는 이 Preview의 Xbox에서 의도대로 작동하지 않습니다. 
-작동하지 않는다고 나타나는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 
-다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
+일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 나타나는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
-## XAML 컨트롤이 Xbox One 셸의 컨트롤처럼 표시 또는 동작하지 않음
+<!--## XAML controls do not look like or behave like the controls in the Xbox One shell
 
-이 Developer Preview에서는 XAML 컨트롤이 최종 형태가 아닙니다. 특히,
-* 게임 패드 X-Y 탐색이 모든 컨트롤에 대해 안정적으로 작동하지 않습니다.
-* 컨트롤이 Xbox 셸의 컨트롤처럼 표시되지 않습니다. 여기에는 컨트롤 포커스 영역이 포함됩니다.
-* 컨트롤 간 탐색 시 "탐색 소리"가 자동으로 들리지 않습니다.
+In this developer preview, the XAML controls are not in their final form. In particular:
+* Gamepad X-Y navigation does not work reliably for all controls.
+* Controls do not look like controls in the Xbox shell. This includes the control focus rectangle.
+* Navigating between controls does not automatically make “navigation sounds.”
 
-이러한 문제는 이후 Developer Preview에서 해결될 예정입니다.
+These issues will be addressed in a future developer preview.-->
 
-## Visual Studio 및 배포 문제
+<!--## Visual Studio and deployment issues
 
-### 빌드 특성을 전환하면 배포 오류가 발생할 수 있음
+### Switching build flavors can cause deployment failures
 
-디버그 빌드와 릴리스 빌드 간에 전환하거나, x86과 x64 간에 전환하거나, 관리되는 빌드와 .Net 네이티브 빌드 간에 전환하면 배포 오류가 발생할 수 있습니다. 
+Switching between Debug and Release builds, or between x86 and x64, or between Managed and .Net Native builds, can cause deployment failures. 
 
-이 Preview에서 이러한 문제를 방지하는 가장 간단한 방법은 디버그 및 하나의 아키텍처를 유지하는 것입니다. 
+The simplest way to avoid these issues for this preview is to stick to Debug and one architecture. 
 
-이 문제가 발생할 경우 일반적으로 Xbox One의 컬렉션 앱에서 해당 앱을 제거하면 문제가 해결됩니다.
+If you do hit this issue, uninstalling your app in the Collections app on your Xbox One will typically resolve it.
 
-> **참고** &nbsp;&nbsp;WDP(Windows Device Portal)에서 앱을 제거해도 문제가 해결되지 않습니다.
+> ****&nbsp;&nbsp;Uninstalling your app from Windows Device Portal (WDP) will not resolve the issue.
 
-문제가 지속되면 컬렉션 앱의 앱 또는 게임을 제거하고 개발자 모드를 종료하고 정품 모드로 다시 시작한 다음 개발자 모드로 다시 전환합니다.
+If your issues persist, uninstall your app or game in the Collections app, leave Developer Mode, restart to Retail Mode and then switch back to Developer Mode.
+You may also need to restart Visual Studio and clean your solution.
 
-자세한 내용은 [질문과 대답](frequently-asked-questions.md)에서 "배포 오류 수정" 섹션을 참조하세요.
+For more information, see the “Fixing deployment failures” section in [Frequently asked questions](frequently-asked-questions.md).
 
-### Visual Studio에서 디버그하는 동안 앱을 제거하면 자동으로 실패함
+### Uninstalling an app while you are debugging it in Visual Studio will cause it to fail silently
 
-WDP "설치된 앱" 도구를 통해 디버거에서 실행 중인 앱을 제거하려고 하면 자동으로 실패합니다. 
-해결 방법은 WDP를 통해 제거하기 전에 Visual Studio에서 앱 디버깅을 중지하는 것입니다.
+Attempting to uninstall an app that is running under the debugger via the WDP “Installed Apps” tool will cause it to silently fail. 
+The workaround is to stop debugging the app in Visual Studio before attempting to remove it via WDP.
 
-### Visual Studio/Xbox PIN 연결 오류
+### Visual Studio/Xbox PIN pairing failures
 
-Visual Studio와 Xbox One 간의 PIN 연결이 동기화되지 않는 상태가 될 수 있습니다. 
-PIN 연결에 실패할 경우 개발자 홈에서 "모든 연결 제거" 단추를 사용하고 Xbox One, 개발 PC를 차례로 다시 시작한 후 다시 시도합니다. 
+It is possible to get into a state where the PIN pairing between Visual Studio and your Xbox One gets out of sync. 
+If PIN pairing fails, use the “Remove all pairings” button in Dev Home, restart Xbox One, restart your development PC, and then try again.--> 
 
 
 ## WDP(Windows Device Portal) Preview
 
-### 개발자 홈에서 WDP를 시작하면 개발자 홈의 작동이 중단됨
+<!--### Starting WDP from Dev Home crashes Dev Home
 
-개발자 홈에서 WDP을 시작하는 경우 사용자 이름 및 암호를 입력하고 **저장**을 선택하면 개발자 홈의 작동이 중단됩니다. 
-자격 증명은 저장되지만 WDP가 시작되지 않습니다. 
-Xbox One을 다시 시작하여 WDP를 시작할 수 있습니다. 
+When you start WDP in Dev Home, it will cause Dev Home to crash after you have entered your user name and password and selected **Save**. 
+The credentials are saved but WDP is not started. 
+You can start WDP by restarting Xbox One.--> 
 
-### 개발자 홈에서 WDP를 사용하지 않도록 설정하면 작동하지 않음
+<!--### Disabling WDP in Dev Home does not work
 
-개발자 홈에서 WDP를 사용하지 않도록 설정할 경우 WDP가 꺼집니다. 
-그러나 Xbox One을 다시 시작하면 WDP가 다시 시작됩니다. 
-**내 게임 및 앱 다시 설정 및 유지**를 사용하여 Xbox One의 저장된 상태를 모두 삭제하면 이 문제를 해결할 수 있습니다. 
-설정 &gt; 시스템 &gt; 콘솔 정보 및 업데이트 &gt; 콘솔 다시 설정으로 이동한 다음 **내 게임 및 앱 다시 설정 및 유지** 단추를 선택합니다.
+If you disable WDP in Dev Home, it will be turned off. 
+However, when you restart your Xbox One, WDP will be started again. 
+You can work around this issue by using **Reset and keep my games & apps** to delete any stored state on your Xbox One. 
+Go to Settings > System > Console info & updates > Reset console, and then select the **Reset and keep my games & apps** button.
 
-> **주의** &nbsp;&nbsp;이렇게 하면 클라우드 저장소에 저장되지 않은 게임 진행 상황을 비롯하여 무선 설정, 사용자 계정 등 Xbox One에서 저장된 모든 설정이 삭제됩니다.
+> **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
 
-> **주의** &nbsp;&nbsp;**다시 설정 및 모두 제거 단추**를 선택하지 마세요.
-선택하면 모든 게임, 앱, 설정 및 콘텐츠가 삭제되고 개발자 모드가 비활성화되며 Developer Preview 그룹에서 콘솔이 제거됩니다.
+> **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
+This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
 
-### "실행 중인 앱" 테이블의 열이 예상대로 업데이트되지 않음 
+### The columns in the “Running Apps” table do not update predictably. 
 
-경우에 따라 테이블의 열을 정렬하면 이 문제가 해결됩니다.
+Sometimes this is resolved by sorting a column on the table.-->
 
-### Internet Explorer 11에서 WDP UI가 제대로 표시되지 않음 
+### Internet Explorer 7에서 WDP UI가 제대로 표시되지 않음 
 
-Internet Explorer 11을 사용할 경우 기본적으로 WDP UI가 브라우저에서 제대로 표시되지 않습니다. 
-WDP에 대해 Internet Explorer 11의 호환성 보기를 끄면 이 문제를 해결할 수 있습니다.
+Internet Explorer 7을 사용할 경우 기본적으로 WDP UI가 브라우저에서 제대로 표시되지 않습니다. WDP에 대해 Internet Explorer 7의 호환성 보기를 끄면 이 문제를 해결할 수 있습니다.
 
 ### WDP로 이동하면 인증서 경고가 표시됨
 
-Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. 
-"이 웹 사이트를 계속 탐색합니다"를 클릭하여 Windows Device Portal에 액세스합니다.
+Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. "이 웹 사이트를 계속 탐색합니다"를 클릭하여 Windows Device Portal에 액세스합니다.
 
 ![웹 사이트 보안 인증서 경고](images/security_cert_warning.jpg)
 
-## 개발자 홈
+<!--## Dev Home
 
-경우에 따라 개발자 홈에서 "Windows Device Portal 관리" 옵션을 선택하면 개발자 홈이 자동으로 홈 화면으로 종료됩니다. 
-이 문제는 콘솔의 WDP 인프라 오류로 인해 발생하며 콘솔을 다시 시작하면 해결할 수 있습니다.
+Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
+This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
 ## 참고 항목
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

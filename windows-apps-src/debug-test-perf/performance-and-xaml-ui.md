@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
-title: 성능
-description: 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다.
+title: "성능"
+description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 68f9080cedcc2840fb1e92b81e2fb6bc0b53bee8
+
 ---
 # 성능
 
@@ -31,6 +35,7 @@ description: 사용자는 앱이 응답성을 유지하고 자연스러운 느�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

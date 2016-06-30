@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 이 문서에서는 디자인 관점에서 UWP(유니버설 Windows 플랫폼)의 기능, 장점 및 요구 사항에 대해 설명합니다. 무료로 제공되는 플랫폼 및 원하는 대로 사용할 수 있는 도구에 대해 알아보세요.
-title: UWP(유니버설 Windows 플랫폼) 앱 디자인 소개
+Description: "이 문서에서는 디자인 관점에서 UWP(유니버설 Windows 플랫폼)의 기능, 장점 및 요구 사항에 대해 설명합니다. 무료로 제공되는 플랫폼 및 원하는 대로 사용할 수 있는 도구에 대해 알아보세요."
+title: "UWP(유니버설 Windows 플랫폼) 앱 디자인 소개"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+
 ---
 
 #  UWP 앱 디자인 소개 
@@ -215,6 +219,7 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

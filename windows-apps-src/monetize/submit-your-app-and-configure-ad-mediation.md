@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
-description: 제출 프로세스 중에 표시할 광고 조정 동작을 구성할 수 있습니다. 나중에 코드를 변경하거나 새 패키지를 제출하지 않고 이 동작을 조정할 수 있습니다.
-title: 앱 제출 및 광고 조정 구성
+description: "제출 프로세스 중에 표시할 광고 조정 동작을 구성할 수 있습니다. 나중에 코드를 변경하거나 새 패키지를 제출하지 않고 이 동작을 조정할 수 있습니다."
+title: "앱 제출 및 광고 조정 구성"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
+
 ---
 
 # 앱 제출 및 광고 조정 구성
@@ -164,6 +168,7 @@ Microsoft Advertising과 Inneractive를 균등하게 사용하려고 하므로, 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

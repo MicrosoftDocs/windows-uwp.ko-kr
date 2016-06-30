@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: '이 항목에서는 가장 일반적인 파일 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
-MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "이 항목에서는 가장 일반적인 파일 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다."
+MS-HAID: dev\_files.protect\_your\_enterprise\_data\_with\_edp
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호'
+title: "EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+
 ---
 
 # EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호
@@ -266,6 +270,7 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

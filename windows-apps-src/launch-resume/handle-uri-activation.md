@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: URI 활성화 처리
-description: 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "URI 활성화 처리"
+description: "앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
+ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
+
 ---
 
 # URI 활성화 처리
@@ -32,7 +35,7 @@ ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 1.  **솔루션 탐색기**에서 package.appxmanifest를 두 번 클릭하여 매니페스트 디자이너를 엽니다. **선언** 탭을 선택하고 **사용 가능한 선언** 드롭다운 목록에서 **프로토콜**을 선택한 다음 **추가**를 클릭합니다.
 
     다음은 프로토콜에 대한 매니페스트 디자이너에서 입력할 수 있는 각 필드에 대한 간략한 설명입니다(자세한 내용은 [**AppX Package Manifest**](https://msdn.microsoft.com/library/windows/apps/dn934791) 참조).
-    
+
 | 필드 | 설명 |
 |-------|-------------|
 | **로고** | **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 URI 스키마 이름을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 앱의 작은 로고가 사용됩니다. |
@@ -41,9 +44,6 @@ ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 |  | **참고** 이름은 모두 소문자여야 합니다. |
 |  | **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 체계의 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
 | **실행 파일** | 프로토콜에 대한 기본 시작 실행 파일을 지정합니다. 지정하지 않으면 앱의 실행 파일이 사용됩니다. 지정하는 경우 문자열의 길이는 1-256자여야 하고 ".exe"로 끝나야 하며 &gt;, &lt;, :, ", &#124;, ?, \*를 포함할 수 없습니다. 지정하는 경우 **진입점**도 사용됩니다. **진입점**을 지정하지 않으면 앱에 대해 정의한 진입점을 사용합니다. |
-       
-| 용어 | 설명 |
-|------|-------------|
 | **진입점** | 프로토콜 확장명을 처리하는 작업을 지정합니다. 이는 일반적으로 Windows 런타임 형식의 정규화된 네임스페이스 이름입니다. 지정하지 않으면 앱에 대한 진입점이 사용됩니다. |
 | **시작 페이지** | 확장성 지점을 처리하는 웹 페이지입니다. |
 | **리소스 그룹** | 리소스 관리 목적으로 확장명 활성화를 그룹화하기 위해 사용할 수 있는 태그입니다. |
@@ -82,43 +82,43 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
             **OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 처리기는 모든 활성화 이벤트를 받습니다. **Kind** 속성은 활성화 이벤트의 형식을 나타냅니다. 이 예제는 [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol) 활성화 이벤트를 처리하도록 설정되었습니다.
 
 > [!div class="tabbedCodeSnippets"]
-```cs
-public partial class App
-{
-   protected override void OnActivated(IActivatedEventArgs args)
-   {
-      if (args.Kind == ActivationKind.Protocol)
-      {
-         ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
-         // TODO: Handle URI activation
-         // The received URI is eventArgs.Uri.AbsoluteUri
-      }
-   }
-}
-```
-```vb
-Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
-   If args.Kind = ActivationKind.Protocol Then
-      ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
-      
-      ' TODO: Handle URI activation
-      ' The received URI is eventArgs.Uri.AbsoluteUri
-   End If
-End Sub
-```
-```cpp
-void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
-{
-   if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
-   {
-      Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs = 
-          dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
-      
-      // TODO: Handle URI activation  
-      // The received URI is eventArgs->Uri->RawUri
-   } 
-}
-```
+> ```cs
+> public partial class App
+> {
+>    protected override void OnActivated(IActivatedEventArgs args)
+>   {
+>       if (args.Kind == ActivationKind.Protocol)
+>       {
+>          ProtocolActivatedEventArgs eventArgs = args as ProtocolActivatedEventArgs;
+>          // TODO: Handle URI activation
+>          // The received URI is eventArgs.Uri.AbsoluteUri
+>       }
+>    }
+> }
+> ```
+> ```vb
+> Protected Overrides Sub OnActivated(ByVal args As Windows.ApplicationModel.Activation.IActivatedEventArgs)
+>    If args.Kind = ActivationKind.Protocol Then
+>       ProtocolActivatedEventArgs eventArgs = args As ProtocolActivatedEventArgs
+>       
+>       ' TODO: Handle URI activation
+>       ' The received URI is eventArgs.Uri.AbsoluteUri
+>  End If
+> End Sub
+> ```
+> ```cpp
+> void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs^ args)
+> {
+>    if (args->Kind == Windows::ApplicationModel::Activation::ActivationKind::Protocol)
+>    {
+>       Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^ eventArgs =
+>           dynamic_cast<Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs^>(args);
+>       
+>       // TODO: Handle URI activation  
+>       // The received URI is eventArgs->Uri->RawUri
+>    }
+> }
+> ```
 
 > **참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다.
 
@@ -176,8 +176,6 @@ void App::OnActivated(Windows::ApplicationModel::Activation::IActivatedEventArgs
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 모든 앱의 주요 용도는 콘텐츠에 대한 액세스 권한을 제공하는 것입니다. 사진 편집 앱에서는 사진이 콘텐츠이고 여행 앱에서는 여행 목적지에 대한 지도와 정보가 콘텐츠인 식입니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 콘텐츠 디자인 기본 사항
+Description: "모든 앱의 주요 용도는 콘텐츠에 대한 액세스 권한을 제공하는 것입니다. 사진 편집 앱에서는 사진이 콘텐츠이고 여행 앱에서는 여행 목적지에 대한 지도와 정보가 콘텐츠인 식입니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱용 콘텐츠 디자인 기본 사항"
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
+
 ---
 
 #  UWP 앱의 콘텐츠 디자인 기본 사항
@@ -118,6 +122,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

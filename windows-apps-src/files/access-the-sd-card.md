@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
-title: SD 카드에 액세스
-description: 특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다.
+title: "SD 카드에 액세스"
+description: "특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c515d36c76a8363861a72cb58229ff857e1bb2b8
+
 ---
 # SD 카드에 액세스
 
@@ -151,6 +155,7 @@ using Windows.Storage;
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

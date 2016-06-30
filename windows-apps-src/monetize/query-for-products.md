@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
-description: Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다.
-title: 제품에 대한 쿼리
+description: "Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다."
+title: "제품에 대한 쿼리"
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: b8661d73487dde61b207159d11a0583700fa22bc
+
 ---
 
 # 제품에 대한 쿼리
@@ -19,7 +22,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   **https://onestore.microsoft.com** 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+-   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
 -   앱의 클라이언트 쪽 코드에서 [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 메서드를 호출하여 생성된 Windows 스토어 ID 키
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
@@ -30,8 +33,9 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 
 | 메서드 | 요청 URI                                                 |
 |--------|-------------------------------------------------------------|
-| 게시   | https://collections.mp.microsoft.com/v6.0/collections/query |
+| POST   | `https://collections.mp.microsoft.com/v6.0/collections/query` |
 
+<br/>
  
 ### 요청 헤더
 
@@ -42,7 +46,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
- 
+ <br/>
 
 ### 요청 본문
 
@@ -57,7 +61,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 | productTypes      | 문자열       | 지정한 경우 서비스는 지정된 제품 형식과 일치하는 제품만 반환합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.                                                                                       | 아니요       |
 | validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
 
- 
+<br/> 
 
 UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -67,16 +71,16 @@ UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 | identityValue        | 문자열 | Windows 스토어 ID 키의 문자열 값입니다.                                                                                                                                                                                    | 예      |
 | localTicketReference | 문자열 | 반환된 제품에 대해 요청된 식별자입니다. 응답 본문에 반환된 항목에는 일치하는 *localTicketReference*가 있습니다. Windows 스토어 ID 키의 *userId* 클레임과 동일한 값을 사용하는 것이 좋습니다. | 예      |
 
- 
+<br/> 
 
 ProductSkuId 개체에는 다음 매개 변수가 포함됩니다.
 
 | 매개 변수 | 유형   | 설명                                                                                                                                                                                                                                                                                                            | 필수 |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | 문자열 | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID를 가져오려면 Windows 개발자 센터 대시보드의 앱을 탐색하여 **앱 관리**&gt;**앱 ID** 페이지로 이동하고, **Windows 10용 URL** 필드에 표시된 문자열의 접미사를 검색합니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다. | 예      |
+| productId | 문자열 | Windows 스토어 카탈로그의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. | 예      |
 | skuID     | 문자열 | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                                                                                                                                                                                                | 예      |
 
- 
+<br/> 
 
 ### 요청 예제
 
@@ -120,7 +124,7 @@ Content-Type: application/json
 | continuationToken | 문자열                   | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 이 토큰이 반환됩니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 지정할 수 있습니다. | 아니요       |
 | 항목             | CollectionItemContractV6 | 사용자가 지정된 제품의 배열입니다.                                                                                                                                               | 아니요       |
 
- 
+<br/> 
 
 CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -138,7 +142,7 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | orderId              | 문자열             | 있는 경우 이 항목을 받은 주문 ID입니다.                                                                                          | 아니요       |
 | orderLineItemId      | 문자열             | 있는 경우 이 항목을 받은 특정 주문의 품목입니다.                                                                | 아니요       |
 | ownershipType        | 문자열             | 문자열 "OwnedByBeneficiary"입니다.                                                                                                                   | 예      |
-| productId            | 문자열             | Windows 스토어 카탈로그에 있는 제품 ID입니다. 제품 ID의 예로는 "9WZDNCRFJ3Q8"이 있습니다.                                                            | 예      |
+| productId            | 문자열             | Windows 스토어 카탈로그의 앱에 대한 스토어 ID입니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.                                                            | 예      |
 | productType          | 문자열             | 다음 제품 유형 중 하나: **Application**, **Durable**, 및 **UnmanagedConsumable**.                                                     | 예      |
 | purchasedCountry     | 문자열             | 해당 없음.                                                                                                                                               | 아니요       |
 | purchaser            | IdentityContractV6 | 있는 경우 항목 구매자의 ID입니다. 아래에 나오는 이 개체에 대한 세부 정보를 참조하세요.                                      | 아니요       |
@@ -150,7 +154,7 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | 태그                 | 문자열             | 해당 없음                                                                                                                                                | 예      |
 | transactionId        | GUID               | 이 항목의 구매 결과인 트랜잭션 ID입니다. 항목을 처리됨으로 보고하는 데 사용할 수 있습니다.                                       | 예      |
 
- 
+<br/> 
 
 IdentityContractV6 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -159,7 +163,7 @@ IdentityContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | identityType  | 문자열 | **"pub"** 값을 포함합니다.                                                      | 예      |
 | identityValue | 문자열 | 지정된 Windows 스토어 ID 키에 있는 *publisherUserId*의 문자열 값입니다. | 예      |
 
- 
+<br/> 
 
 ### 응답 예제
 
@@ -211,6 +215,7 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Windows 스토어 ID 키 갱신](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

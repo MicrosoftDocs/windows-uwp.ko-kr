@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: 프로그래밍 언어 선택
+title: "프로그래밍 언어 선택"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
-description: 프로그래밍 언어 선택
+description: "프로그래밍 언어 선택"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+
 ---
 
 # 시작&#58; 프로그래밍 언어 선택
@@ -140,6 +144,7 @@ C#은 간편한 언어이며 .NET을 구성하는 많은 지원 클래스 및 �
 [시작: Visual Studio 둘러보기](getting-started-getting-around-in-visual-studio.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

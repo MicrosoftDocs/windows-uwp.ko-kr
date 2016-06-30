@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: '이 항목에서는 가장 일반적인 스트림 및 버퍼 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다.'
-MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "이 항목에서는 가장 일반적인 스트림 및 버퍼 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다."
+MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'EDP(엔터프라이즈 데이터 보호)를 사용하여 스트림 및 버퍼 보호'
+title: "EDP(엔터프라이즈 데이터 보호)를 사용하여 스트림 및 버퍼 보호"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
+
 ---
 
 # EDP(엔터프라이즈 데이터 보호)를 사용하여 스트림 및 버퍼 보호
@@ -308,6 +312,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

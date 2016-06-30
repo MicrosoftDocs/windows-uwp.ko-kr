@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: 이 문서에서는 IMediaEncodingProperties 인터페이스를 사용하여 카메라 미리 보기 스트림과 캡처한 사진 및 동영상의 해상도 및 프레임 속도를 설정하는 방법을 보여 줍니다.
-title: 미디어 인코딩 속성 설정
+description: "이 문서에서는 IMediaEncodingProperties 인터페이스를 사용하여 카메라 미리 보기 스트림과 캡처한 사진 및 동영상의 해상도 및 프레임 속도를 설정하는 방법을 보여 줍니다."
+title: "미디어 인코딩 속성 설정"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
+
 ---
 
 # 미디어 인코딩 속성 설정
@@ -88,6 +92,7 @@ title: 미디어 인코딩 속성 설정
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

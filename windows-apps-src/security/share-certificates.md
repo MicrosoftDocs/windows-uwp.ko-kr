@@ -1,8 +1,12 @@
 ---
-title: 앱 간에 공유 인증서
-description: 사용자 ID 및 암호 조합 이상의 보안 인증이 필요한 UWP(유니버설 Windows 플랫폼) 앱은 인증을 위해 인증서를 사용할 수 있습니다.
+title: "앱 간에 공유 인증서"
+description: "사용자 ID 및 암호 조합 이상의 보안 인증이 필요한 UWP(유니버설 Windows 플랫폼) 앱은 인증을 위해 인증서를 사용할 수 있습니다."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+
 ---
 
 # 앱 간에 공유 인증서
@@ -201,6 +205,7 @@ author: awkoren
 
 이러한 단계를 따르면 동일한 사용자 인증서를 사용하여 같거나 서로 다른 보안 웹 서비스에 액세스하는 앱을 여러 개 만들 수 있습니다.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

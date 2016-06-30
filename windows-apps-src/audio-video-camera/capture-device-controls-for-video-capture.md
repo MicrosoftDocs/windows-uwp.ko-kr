@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: 이 문서에서는 비디오 디바이스 컨트롤로 HDR 비디오 및 노출 우선 순위를 비롯한 향상된 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다.
-title: 비디오 캡처를 위한 캡처 디바이스 컨트롤
+description: "이 문서에서는 비디오 디바이스 컨트롤로 HDR 비디오 및 노출 우선 순위를 비롯한 향상된 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다."
+title: "비디오 캡처를 위한 캡처 디바이스 컨트롤"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
+
 ---
 
 # 비디오 캡처를 위한 캡처 디바이스 컨트롤
@@ -58,6 +62,7 @@ HDR 비디오 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

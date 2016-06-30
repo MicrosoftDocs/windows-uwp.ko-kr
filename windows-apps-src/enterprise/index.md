@@ -1,8 +1,12 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: 이 로드맵은 Windows 10&\#160;UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능을 간략하게 설명합니다.
-title: 엔터프라이즈
+description: "이 로드맵은 Windows 10&amp;\\#160;UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능을 간략하게 설명합니다."
+title: "엔터프라이즈"
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 468c87694f519a5081f3242346039e6e7310d1db
+ms.openlocfilehash: c2cfcc270d6b1380f065e7ada275c1c60ae05b04
+
 ---
 
 # 엔터프라이즈
@@ -111,6 +115,7 @@ Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

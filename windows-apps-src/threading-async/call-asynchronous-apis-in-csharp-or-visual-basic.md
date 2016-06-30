@@ -3,8 +3,8 @@ author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: "C# 또는 Visual Basic에서 비동기식 API 호출"
 description: "UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b8ff3965503aa96d4ff595d140562c65e0a638c3
+ms.sourcegitcommit: c440d0dc2719a982a6b566c788d76111c40e263e
+ms.openlocfilehash: ba633e4d6f6f97f3ea1c78258f36b11b67b32964
 
 ---
 # C# 또는 Visual Basic에서 비동기식 API 호출
@@ -49,8 +49,8 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 
 -   [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)
 -   [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)
--   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
--   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)
+-   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)
+-   [**IAsyncActionWithProgress&lt;TProgress&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)
 
 비동기 메서드의 결과 형식은 `      TResult` 형식 매개 변수와 같습니다. `TResult`가 없는 형식에는 결과가 없습니다. 이 경우 결과를 **void**로 간주할 수 있습니다. Visual Basic에서 [Sub](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/831f9wka.aspx) 프로시저는 반환 형식이 **void**인 메서드와 같습니다.
 
@@ -60,15 +60,15 @@ UWP에서 제공하는 대부분의 비동기 API는 그에 상응하는 동기 
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460)     | [**IAsyncOperationWithProgress&lt;SyndicationFeed, RetrievalProgress&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206594)                                 | [**SyndicationFeed**](https://msdn.microsoft.com/library/windows/apps/BR243485) |
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
-| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)                                                                                                           | **void**                                          |
-| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)                                                                   | **void**                                          |
+| [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)                                                                                                           | **void**                                          |
+| [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx)                                                                   | **void**                                          |
 | [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [
-            **DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120)(**IAsyncOperation&lt;UInt32&gt;**를 구현하는 사용자 지정 결과 클래스) | [**UInt32**](T:System.UInt32)                     |
+            **DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120)(**IAsyncOperation&lt;UInt32&gt;**를 구현하는 사용자 지정 결과 클래스) | [**UInt32**](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)                     |
 
  
 
 [
-            **UWP 앱용 .NET**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx)에 정의된 비동기 메서드의 반환 형식은 [**Task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.aspx) 또는 [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd321424.aspx)입니다. **Task**를 반환하는 메서드는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)을 반환하는 UWP의 비동기 메서드와 비슷합니다. 각각의 경우 비동기 메서드의 결과는 **void**입니다. 반환 형식 **Task&lt;TResult&gt;**는 작업을 실행할 때 비동기 메서드의 결과가 `TResult` 형식 매개 변수와 동일한 형식이라는 점에서 [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)와 비슷합니다. **UWP 앱용 .NET** 및 작업 사용 방법에 대한 자세한 내용은 [Windows 런타임 앱용 .NET 개요](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230302.aspx)를 참조하세요.
+            **UWP 앱용 .NET**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx)에 정의된 비동기 메서드의 반환 형식은 [**Task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.threading.tasks.task.aspx) 또는 [**Task&lt;TResult&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd321424.aspx)입니다. **Task**를 반환하는 메서드는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)을 반환하는 UWP의 비동기 메서드와 비슷합니다. 각각의 경우 비동기 메서드의 결과는 **void**입니다. 반환 형식 **Task&lt;TResult&gt;**는 작업을 실행할 때 비동기 메서드의 결과가 `TResult` 형식 매개 변수와 동일한 형식이라는 점에서 [**IAsyncOperation&lt;TResult&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)와 비슷합니다. **UWP 앱용 .NET** 및 작업 사용 방법에 대한 자세한 내용은 [Windows 런타임 앱용 .NET 개요](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230302.aspx)를 참조하세요.
 
 ## 오류 처리
 
@@ -114,7 +114,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
-title: 네트워킹 기본 사항
+description: "네트워크 지원 앱에 대해 수행해야 하는 사항입니다."
+title: "네트워킹 기본 사항"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+
 ---
 
 # 네트워킹 기본 사항
@@ -432,6 +436,7 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

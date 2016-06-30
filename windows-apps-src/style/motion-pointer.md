@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 사용자가 항목을 탭할 때 사용자에게 시각적 피드백을 제공하려면 포인터 애니메이션을 사용합니다.
-title: UWP 앱의 포인터 클릭 애니메이션
+Description: "사용자가 항목을 탭할 때 사용자에게 시각적 피드백을 제공하려면 포인터 애니메이션을 사용합니다."
+title: "UWP 앱의 포인터 클릭 애니메이션"
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 label: Motion--Pointer animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24175bb7c822ceb53af5e1ec70bf83f701fd1cce
+
 ---
 
 # 포인터 클릭 애니메이션
@@ -44,6 +48,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

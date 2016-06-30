@@ -5,8 +5,8 @@ title: "회전"
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: a43bdd27ff7b79f561789a14d1a8e6caed08dc89
 
 ---
 
@@ -20,12 +20,12 @@ ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
 -   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>권장 사항 및 금지 사항
+## 권장 사항 및 금지 사항
 
 
 -   사용자들이 UI 요소를 직접 회전하는 데 도움을 주려는 경우 회전을 사용합니다.
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용법 지침
+## 추가 사용법 지침
 
 
 **회전의 개요**
@@ -99,7 +99,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
  
 
-## <span id="related_topics"></span>관련 항목
+## 관련 항목
 
 
 **샘플**
@@ -127,6 +127,6 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

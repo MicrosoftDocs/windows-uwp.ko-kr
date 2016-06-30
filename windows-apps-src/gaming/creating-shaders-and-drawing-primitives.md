@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 셰이더 및 그리기 기본 요소 만들기
-description: 여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴파일하고 만드는 방법을 설명합니다. 이 셰이더를 사용하면 디스플레이에 원형을 그릴 수 있습니다.
+title: "셰이더 및 그리기 기본 요소 만들기"
+description: "여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴파일하고 만드는 방법을 설명합니다. 이 셰이더를 사용하면 디스플레이에 원형을 그릴 수 있습니다."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+
 ---
 
 # 셰이더 및 그리기 기본 요소 만들기
@@ -297,6 +301,7 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

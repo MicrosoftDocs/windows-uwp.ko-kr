@@ -3,8 +3,8 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: "컴퍼지션 시각적 트리"
 description: "컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다."
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
 
 ---
 # 컴퍼지션 시각적 트리
@@ -43,8 +43,7 @@ ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
 
 -   [
             **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
--   [
-            **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
+-   [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
 -   [
             **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – 시각적 개체에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
 
@@ -108,7 +107,7 @@ visual.Opacity = 0.8f;
 
 ## 컬렉션에서 시각적 개체의 위치 변경
 
-컴퍼지션 API를 사용하면 [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. 즉, [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove)를 사용하여 다른 시각적 개체 위로 가져오거나, [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow)를 사용하여 뒤로 보내거나, [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop)을 사용하여 맨 위로 이동하거나 [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom)을 사용하여 맨 아래로 이동할 수 있습니다.
+컴퍼지션 API를 사용하면 [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection)의 시각적 개체 위치를 여러 가지 방법으로 변경할 수 있습니다. 즉, [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertabove)를 사용하여 다른 시각적 개체 위로 가져오거나, [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertbelow)를 사용하여 뒤로 보내거나, [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertattop)을 사용하여 맨 위로 이동하거나 [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.visualcollection.insertatbottom)을 사용하여 맨 아래로 이동할 수 있습니다.
 
 샘플에서 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)를 클릭하면 맨 위로 정렬됩니다.
 
@@ -516,6 +515,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

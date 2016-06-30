@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 및 XAML interop
-description: UWP(유니버설 Windows 플랫폼) 게임에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다.
+title: "DirectX 및 XAML interop"
+description: "UWP(유니버설 Windows 플랫폼) 게임에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다."
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97e694ae2fb8af30a35aa9ebdb714db50a506e6c
+
 ---
 
 # DirectX 및 XAML interop
@@ -402,6 +406,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

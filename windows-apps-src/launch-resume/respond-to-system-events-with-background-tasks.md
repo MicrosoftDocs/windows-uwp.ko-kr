@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업으로 시스템 이벤트에 응답
-description: SystemTrigger 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
+author: TylerMSFT
+title: "백그라운드 작업으로 시스템 이벤트에 응답"
+description: "SystemTrigger 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: f6845dce428f5e22ec68744293b1668da52002bf
+
 ---
 
 # 백그라운드 작업으로 시스템 이벤트에 응답
@@ -50,13 +53,13 @@ ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Internet-based background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Internet-based background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
 
@@ -108,8 +111,6 @@ ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

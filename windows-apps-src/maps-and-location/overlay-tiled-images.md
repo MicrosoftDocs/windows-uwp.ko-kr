@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 지도에서 바둑판식 이미지 오버레이
-description: 타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제&#58; 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다.
+author: msatranjr
+title: "지도에서 바둑판식 이미지 오버레이"
+description: "타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제&#58; 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다."
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 71d044eb19e71786da39ca71d4f4fbd2d87645be
+
 ---
 
 # 지도에서 바둑판식 이미지 오버레이
@@ -387,6 +390,7 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
-title: 문자열과 이진 데이터 간 변환
-description: 이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 문자열과 이진 데이터 간에 변환하는 방법을 보여 줍니다.
+title: "문자열과 이진 데이터 간 변환"
+description: "이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 문자열과 이진 데이터 간에 변환하는 방법을 보여 줍니다."
 ms.assetid: AED4C74F-E63B-4980-BB4D-28ACCC1AB58B
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 667338ed3808f79b75230bc0c3ea00cc7e274d5a
+
 ---
 
 # 문자열과 이진 데이터 간 변환
@@ -29,6 +33,7 @@ public void ConvertData()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

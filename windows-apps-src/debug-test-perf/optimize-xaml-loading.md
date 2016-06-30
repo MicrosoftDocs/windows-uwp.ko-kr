@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
-title: XAML 태그 최적화
-description: 메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다.
+title: "XAML 태그 최적화"
+description: "메모리에서 개체를 생성하기 위해 XAML 태그를 구문 분석하는 작업은 복잡한 UI의 경우 시간이 많이 걸립니다. 다음은 XAML 태그 구문 분석 및 로드 시간과 앱의 메모리 효율성을 개선하기 위해 수행할 수 있는 몇 가지 작업입니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+
 ---
 # XAML 태그 최적화
 
@@ -290,6 +294,7 @@ XBF2가 있는지를 확인하려면 바이너리 편집기에서 앱을 엽니�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

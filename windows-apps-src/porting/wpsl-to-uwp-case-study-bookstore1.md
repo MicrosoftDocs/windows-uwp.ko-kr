@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: 이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다.
-title: UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1
+description: "이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
+title: "UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dbffb4245efece2d39b4eba8979e323fd71626d0
+
 ---
 
 # UWP에 대한 Windows Phone Silverlight 사례 연구&#58; Bookstore1
@@ -132,6 +136,7 @@ Bookstore1Universal에서 ms-appx [URI 스키마](https://msdn.microsoft.com/lib
 다음 사례 연구는 [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 지도에 경로 및 길 찾기 표시
-description: 경로 및 길 찾기를 요청하고 앱에 표시합니다.
+author: msatranjr
+title: "지도에 경로 및 길 찾기 표시"
+description: "경로 및 길 찾기를 요청하고 앱에 표시합니다."
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 2132b0c76a78dac5250ea85f08abd0b1edbd6ed7
+
 ---
 
 # 지도에 경로 및 길 찾기 표시
@@ -196,6 +199,7 @@ private async void ShowRouteOnMap()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

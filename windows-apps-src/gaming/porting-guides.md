@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임 포팅 가이드
-description: 기존 게임을 Direct3D 11, UWP(유니버설 Windows 플랫폼) 및 Windows 10으로 포팅하는 방법에 대한 가이드를 제공합니다.
+title: "게임 포팅 가이드"
+description: "기존 게임을 Direct3D 11, UWP(유니버설 Windows 플랫폼) 및 Windows 10으로 포팅하는 방법에 대한 가이드를 제공합니다."
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0cf7f4e6679d362691cea8ccbd45786176715cad
+
 ---
 
 # 게임 포팅 가이드
@@ -50,6 +54,7 @@ ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

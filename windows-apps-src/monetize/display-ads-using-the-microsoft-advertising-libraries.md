@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
-description: Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 XAML 또는 JavaScript/HTML 앱에 배너 및 동영상 중간 광고를 표시합니다.
-title: Microsoft Advertising 라이브러리를 사용하여 광고 표시
+description: "Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 XAML 또는 JavaScript/HTML 앱에 배너 및 동영상 중간 광고를 표시합니다."
+title: "Microsoft Advertising 라이브러리를 사용하여 광고 표시"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
+
 ---
 
 # Microsoft Advertising 라이브러리를 사용하여 광고 표시
@@ -47,6 +51,7 @@ title: Microsoft Advertising 라이브러리를 사용하여 광고 표시
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

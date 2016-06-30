@@ -5,8 +5,8 @@ title: "음성 인식 시간 제한 설정"
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: e0dbc43cba4556674a4d96013b65837d95044622
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 99ead02e8886ae79b8e8423ac0f78609b4fa1f6f
 
 ---
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: e0dbc43cba4556674a4d96013b65837d95044622
 -   [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)
 
 
-## <span id="Set_a_timeout"></span><span id="set_a_timeout"></span><span id="SET_A_TIMEOUT"></span>시간 제한 설정
+## 시간 제한 설정
 
 
 여기에서는 다양한 [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253) 값을 지정합니다.
@@ -39,7 +39,7 @@ recognizer.Timeouts.BabbleTimeout = TimeSpan.FromSeconds(4.0);
 recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [음성 조작](speech-interactions.md) 
@@ -55,6 +55,6 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

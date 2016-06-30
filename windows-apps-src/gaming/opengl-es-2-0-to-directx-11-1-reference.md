@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: OpenGL ES 2.0 Direct3D 11 참조
-description: OpenGL ES 2.0에서 Direct3D 11로 포팅할 때 API 매핑 및 간단한 코드 샘플을 보려면 다음 참조 항목을 사용합니다.
+title: "OpenGL ES 2.0 Direct3D 11 참조"
+description: "OpenGL ES 2.0에서 Direct3D 11로 포팅할 때 API 매핑 및 간단한 코드 샘플을 보려면 다음 참조 항목을 사용합니다."
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ad6da83773bf5b791f4b2921b8ea55345aae999b
+
 ---
 
 # OpenGL ES 2.0 Direct3D 11 참조
@@ -42,6 +46,7 @@ OpenGL ES 2.0에서 Direct3D 11로 포팅할 때 API 매핑 및 간단한 코드
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

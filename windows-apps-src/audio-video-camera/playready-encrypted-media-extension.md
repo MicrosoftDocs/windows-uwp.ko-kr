@@ -1,8 +1,11 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: 이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다.
-title: PlayReady 암호화된 미디어 확장
+description: "이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다."
+title: "PlayReady 암호화된 미디어 확장"
+ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
+ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+
 ---
 
 # PlayReady 암호화된 미디어 확장
@@ -29,7 +32,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
     Windows 8.1에서와 같이 여러 키 ID(KeyID)와 함께 PlayReady 개체를 사용하거나 여러 KeyID와 함께 [CDMData(콘텐츠 암호 해독 모델 데이터)](https://go.microsoft.com/fwlink/p/?LinkID=626819)를 사용할 수 있습니다.
 
-    **참고** Windows 10에서 여러 키 ID는 CDMData의 &lt;KeyID&gt; 아래에서 지원됩니다.
+    **참고** Windows 10에서 여러 키 ID는 CDMData의 &lt;KeyID&gt; 아래에서 지원됩니다.
 
      
 
@@ -130,6 +133,7 @@ function main()
         // to set the stop state.
         //
         videoElement.removeAttribute("src");
+        videoElement.load();
 
         onEndOfStream();
     };
@@ -300,6 +304,7 @@ function foo() {
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

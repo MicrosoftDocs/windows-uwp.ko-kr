@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임 루프 포팅
-description: IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다.
+title: "게임 루프 포팅"
+description: "IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
+
 ---
 
 # 게임 루프 포팅
@@ -140,6 +144,7 @@ DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

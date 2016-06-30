@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-Description: 이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다.
-title: 위치 인식 앱에 대한 지침
+author: msatranjr
+Description: "이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다."
+title: "위치 인식 앱에 대한 지침"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+
 ---
 
 # 위치 인식 앱에 대한 지침
@@ -175,6 +178,7 @@ ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

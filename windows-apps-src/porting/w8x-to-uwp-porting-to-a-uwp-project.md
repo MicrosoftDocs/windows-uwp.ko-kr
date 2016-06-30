@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: 포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다.
-title: Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
+description: "포팅 프로세스를 시작할 경우 두 가지 옵션이 있습니다."
+title: "Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅"
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 60f59c58aedc56da58350a050acd184a376b8067
+
 ---
 
 # Windows 런타임 8.x 프로젝트를 UWP 프로젝트로 포팅
@@ -172,6 +176,7 @@ private void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

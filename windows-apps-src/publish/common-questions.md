@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: 광고 캠페인에 대한 일반적인 질문
-title: 광고 캠페인에 대한 일반적인 질문
+Description: "광고 캠페인에 대한 일반적인 질문"
+title: "광고 캠페인에 대한 일반적인 질문"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.sourcegitcommit: 3f0664e0387e206c432ce92aa221bb5c604bb675
+ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
+
 ---
 
 # 광고 캠페인에 대한 일반적인 질문
@@ -39,7 +42,9 @@ ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 
 ## 대금은 언제 청구됩니까?
 
-다음 달 초에 지정된 월에 대한 요금이 청구됩니다.
+계정의 모든 유료 캠페인에 대해 $50(또는 해당 시장 또는 지역의 현지 통화로 동일한 금액)의 요금이 계정에 축적될 때마다 청구됩니다.
+
+마지막 청구 날짜 후 30일 기간 안에 $50보다 적은 요금이 계정에 축적되는 경우에는 다음 달 초에 해당 요금이 청구됩니다. 이는 한 달 이상 광고 캠페인 요금의 누적 잔액을 계정에서 유지하지 않도록 하는 데 도움이 됩니다.
 
 ## 어떻게 신용 카드를 삭제하거나 신용 카드의 세부 정보를 편집합니까?
 
@@ -54,6 +59,7 @@ ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 * [앱 설치 광고 보고서](app-install-ads-reports.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

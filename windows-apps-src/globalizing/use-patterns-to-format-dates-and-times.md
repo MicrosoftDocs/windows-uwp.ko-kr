@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: 정확히 개발자가 원하는 날짜 및 시간을 표시하려면 Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 사용하세요.
-title: 날짜 및 시간 형식 지정 패턴 사용
+Description: "정확히 개발자가 원하는 날짜 및 시간을 표시하려면 Windows.Globalization.DateTimeFormatting API와 사용자 지정 패턴을 사용하세요."
+title: "날짜 및 시간 형식 지정 패턴 사용"
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+
 ---
 
 # 날짜 및 시간 형식 지정 패턴 사용
@@ -188,6 +192,7 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

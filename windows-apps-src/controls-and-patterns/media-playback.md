@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: 미디어 플레이어는 동영상, 오디오 및 이미지를 감상하는 데 사용합니다.
-title: 미디어 플레이어
+Description: "미디어 플레이어는 동영상, 오디오 및 이미지를 감상하는 데 사용합니다."
+title: "미디어 플레이어"
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 2dbc4e7fa227de3f37b8a337eded0004496dbe36
+
 ---
 # 미디어 플레이어
 
@@ -421,6 +425,7 @@ mediaPlayer.RealTimePlayback = true;
 - [UWP 앱의 콘텐츠 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

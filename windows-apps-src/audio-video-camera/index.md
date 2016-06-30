@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: 이 섹션에서는 사진, 동영상 또는 오디오를 캡처하거나 재생하거나 편집하는 유니버설 Windows 앱을 만드는 방법에 대한 정보를 제공합니다.
-title: 오디오, 동영상 및 카메라
+description: "이 섹션에서는 사진, 동영상 또는 오디오를 캡처하거나 재생하거나 편집하는 유니버설 Windows 앱을 만드는 방법에 대한 정보를 제공합니다."
+title: "오디오, 동영상 및 카메라"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8480eb181b6af26eae5950a1f1bf040d0cb5db99
+
 ---
 
 # 오디오 비디오 및 카메라
@@ -45,6 +49,7 @@ title: 오디오, 동영상 및 카메라
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

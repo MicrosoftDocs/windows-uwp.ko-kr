@@ -1,8 +1,12 @@
 ---
-title: Microsoft Passport 로그인 서비스 만들기
-description: 전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다.
+title: "Microsoft Passport 로그인 서비스 만들기"
+description: "전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다."
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
+
 ---
 
 # Microsoft Passport 로그인 서비스 만들기
@@ -23,7 +27,7 @@ author: awkoren
 이 연습에서는 첫 번째 랩에 빌드된 Passport 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육은 Microsoft Passport가 기존 시스템에 통합될 수 있는 방법을 설명하도록 설계되었습니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
 
 -   시작하려면 첫 번째 Passport 실습 교육에서 PassportLogin 솔루션을 엽니다.
--   모의 서버와 모의 데이터베이스를 구현하는 작업부터 시작합니다. "AuthService"라는 새 폴더를 만듭니다. 솔루션 탐색기에서 "PassportLogin(유니버설 Windows)" 솔루션을 마우스 오른쪽 단추로 클릭하고 추가 > 새 폴더를 선택합니다.
+-   모의 서버와 모의 데이터베이스를 구현하는 작업부터 시작합니다. "AuthService"라는 새 폴더를 만듭니다. 솔루션 탐색기에서 "PassportLogin(유니버설 Windows)" 솔루션을 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 선택합니다.
 -   모의 데이터베이스에 저장할 데이터에 대한 모델로 사용할 UserAccount 및 PassportDevices 클래스를 만듭니다. UserAccount는 기존 인증 서버에 구현된 사용자 모델과 유사합니다. AuthService 폴더를 마우스 오른쪽 단추로 클릭하고 "UserAccount.cs"라는 새 클래스를 추가합니다.
 
     ![](images/passport-auth-1.png)
@@ -1176,6 +1180,7 @@ author: awkoren
 * [Microsoft Passport 및 Windows Hello](microsoft-passport.md)
 * [Microsoft Passport 로그인 앱](microsoft-passport-login.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

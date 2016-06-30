@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업 진행 및 완료 모니터링
-description: 앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "백그라운드 작업 진행 및 완료 모니터링"
+description: "앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법을 알아봅니다."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 07d69b63b272153bc784ed19166e649f80a98297
+
 ---
 
 # 백그라운드 작업 진행 및 완료 모니터링
@@ -41,7 +44,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 >      // TODO: Add code that deals with background task completion.
 >  };
 >  ```
-    
+
 2.  백그라운드 작업 완료를 처리하는 이벤트 처리기에 코드를 추가합니다.
 
     예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)은 UI를 업데이트합니다.
@@ -84,7 +87,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)(영문)에서는 *args* 매개 변수를 통해 전달된 진행 상태로 UI를 업데이트합니다.
 
     > [!div class="tabbedCodeSnippets"] ```cs private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args) { var progress = "Progress: " + args.Progress + "%"; BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -93,7 +96,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     >     {
     >         auto progress = "Progress: " + args->Progress + "%";
     >         BackgroundTaskSample::SampleBackgroundTaskProgress = progress;
-    > 
+    >
     >         UpdateUI();
     >     };
     >     ```
@@ -114,15 +117,15 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     >     ```
     >  ```cpp void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task) { auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
     >            { auto progress = "Progress: " + args-&gt;Progress + "%"; BackgroundTaskSample::SampleBackgroundTaskProgress = progress; UpdateUI(); };
-    > 
+    >
     >         task->Progress += ref new BackgroundTaskProgressEventHandler(progress);
     >         
-    > 
+    >
     >         auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskCompletedEventArgs^ args)
     >         {
     >             UpdateUI();
     >         };
-    > 
+    >
     >         task->Completed += ref new BackgroundTaskCompletedEventHandler(completed);
     >     }
     >     ```
@@ -132,7 +135,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     예를 들어 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
 
     > [!div class="tabbedCodeSnippets"] ```cs protected override void OnNavigatedTo(NavigationEventArgs e) { foreach (var task in BackgroundTaskRegistration.AllTasks) { if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName) { AttachProgressAndCompletedHandlers(task.Value); BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true); } }
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -142,7 +145,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     >         // A pointer back to the main page.  This is needed if you want to call methods in MainPage such
     >         // as NotifyUser()
     >         rootPage = MainPage::Current;
-    > 
+    >
     >         //
     >         // Attach progress and completed handlers to any existing tasks.
     >         //
@@ -151,16 +154,16 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
     >         while (hascur)
     >         {
     >             auto cur = iter->Current->Value;
-    > 
+    >
     >             if (cur->Name == SampleBackgroundTaskName)
     >             {
     >                 AttachProgressAndCompletedHandlers(cur);
     >                 break;
     >             }
-    > 
+    >
     >             hascur = iter->MoveNext();
     >         }
-    > 
+    >
     >         UpdateUI();
     >     }
     >     ```
@@ -192,8 +195,6 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

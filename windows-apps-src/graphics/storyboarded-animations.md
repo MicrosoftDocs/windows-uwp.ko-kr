@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: "스토리보드 애니메이션"
 description: "스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83e361fd736ce46893517c7a5cccc9c5efc9a889
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 6c900ae6e1cfde8ec7261acfc57ea19b49f2ede1
 
 ---
 # 스토리보드 애니메이션
@@ -232,7 +232,7 @@ page.xaml이나 app.xaml 같은 XAML 파일의 XAML 루트에서 리소스를 �
 
  
 
-또한 컨트롤의 시각적 모양에 대한 시각적 상태 애니메이션을 선언할 때 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 단위 내에 애니메이션을 배치합니다. 이 경우 정의한**Storyboard** 요소는 [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849)에 더욱 깊게 중첩된 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) 컨테이너로 이동합니다. **Style**은 키 입력 리소스입니다. **VisualState**에는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager)가 호출할 수 있는 대상 이름이 있으므로 이 경우 **Storyboard**에 대한 키 또는 이름이 필요하지 않습니다. 컨트롤의 스타일은 페이지 또는 앱 **Resources** 컬렉션에 배치되지 않고 별도의 XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 파일로 인수화되기도 합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
+또한 컨트롤의 시각적 모양에 대한 시각적 상태 애니메이션을 선언할 때 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 단위 내에 애니메이션을 배치합니다. 이 경우 정의한**Storyboard** 요소는 [**Style**](https://msdn.microsoft.com/library/windows/apps/BR208849)에 더욱 깊게 중첩된 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) 컨테이너로 이동합니다. **Style**은 키 입력 리소스입니다. **VisualState**에는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager)가 호출할 수 있는 대상 이름이 있으므로 이 경우 **Storyboard**에 대한 키 또는 이름이 필요하지 않습니다. 컨트롤의 스타일은 페이지 또는 앱 **Resources** 컬렉션에 배치되지 않고 별도의 XAML [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 파일로 인수화되기도 합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)을 참조하세요.
 
 ## 종속 애니메이션과 독립 애니메이션
 
@@ -316,11 +316,11 @@ myStoryBoard.Begin()
 
 ### 시각적 상태에 대한 애니메이션
 
-컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)의 요소이며 전체 상태는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
+컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)의 요소이며 전체 상태는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
 
 ### **Storyboard** 및 **EventTrigger**
 
-XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법은 한 가지입니다. 그러나 이 기술은 더 이상 광범위하게 사용되지 않습니다. 이 기술은 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209007manager) 지원 이전의 WPF 및 이전 버전 Silverlight의 레거시 구문입니다. 이 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 구문은 가져오기/호환성을 이유로 Windows 런타임 XAML에서도 작동하지만 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트를 기반으로 하는 트리거 동작에 대해서만 작동합니다. 다른 이벤트를 트리거하려고 하면 예외가 발생하거나 컴파일되지 않습니다. 자세한 내용은 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 또는 [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053)를 참조하세요.
+XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법은 한 가지입니다. 그러나 이 기술은 더 이상 광범위하게 사용되지 않습니다. 이 기술은 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) 지원 이전의 WPF 및 이전 버전 Silverlight의 레거시 구문입니다. 이 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 구문은 가져오기/호환성을 이유로 Windows 런타임 XAML에서도 작동하지만 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트를 기반으로 하는 트리거 동작에 대해서만 작동합니다. 다른 이벤트를 트리거하려고 하면 예외가 발생하거나 컴파일되지 않습니다. 자세한 내용은 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 또는 [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053)를 참조하세요.
 
 ## XAML 연결 속성에 애니메이션 효과 주기
 
@@ -349,6 +349,6 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

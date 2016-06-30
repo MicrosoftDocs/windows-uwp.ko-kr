@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
-title: 일반적인 인증 실패 방지
+Description: "이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요."
+title: "일반적인 인증 실패 방지"
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
+
 ---
 
 # 일반적인 인증 실패 방지
@@ -40,6 +44,7 @@ ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

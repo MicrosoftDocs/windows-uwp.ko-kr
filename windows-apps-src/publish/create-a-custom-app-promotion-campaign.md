@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 앱에서 실행되는 앱용 광고 캠페인을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다.
-title: 사용자 지정 앱 홍보 캠페인 만들기
+Description: "Windows 앱에서 실행되는 앱용 광고 캠페인을 만든 후 다른 채널을 사용하여 앱을 홍보할 수도 있습니다."
+title: "사용자 지정 앱 홍보 캠페인 만들기"
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b6fa63727ac636d37c52e2f3247c52efb1f8b763
+
 ---
 
 # 사용자 지정 앱 홍보 캠페인 만들기
@@ -63,7 +67,7 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 2.  앱의 Windows 스토어 페이지 URL을 HTML 또는 프로토콜 형식으로 가져옵니다. HTML 형식의 URL은 개발자 센터 대시보드의 [**앱 ID** 페이지에서 사용할 수 있습니다](link-to-your-app.md).
     -   고객이 브라우저에서 앱의 Windows 스토어 페이지를 탐색할 수 있도록 하려면 HTTP 형식을 사용합니다. 이 URL은 Windows 스토어 앱이 설치된 경우 앱 목록에서 Windows 스토어 앱을 시작합니다. 이 URL 형식은 **`https://www.microsoft.com/store/apps/*your app name*/*your app ID*`**입니다. 예를 들어 Skype의 HTTP URL은 `https://www.microsoft.com/store/apps/skype/9wzdncrfj364`입니다.
         > **참고** HTTP 형식의 URL은 Windows 7 이상을 실행하는 컴퓨터와 태블릿 및 Windows Phone 8 이상을 실행하는 휴대폰의 브라우저에서 Windows 스토어를 탐색하는 데 사용될 수 있습니다.
-    - Windows 스토어 앱이 설치된 디바이스나 컴퓨터에서 실행되는 다른 Windows 앱에서 앱을 홍보하고 고객이 Windows 스토어 앱에서 앱 페이지를 열기를 원하는 경우 프로토콜 형식을 사용합니다. 이 URL 형식은 **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**입니다. 예를 들어 Skype의 프로토콜 URL은 `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`입니다.
+- Windows 스토어 앱이 설치된 디바이스나 컴퓨터에서 실행되는 다른 Windows 앱에서 앱을 홍보하고 고객이 Windows 스토어 앱에서 앱 페이지를 열기를 원하는 경우 프로토콜 형식을 사용합니다. 이 URL 형식은 **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**입니다. 예를 들어 Skype의 프로토콜 URL은 `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`입니다.
 3.  앱의 URL 끝에 다음 문자열을 추가합니다.
     -   HTTP 형식 URL의 경우 **`?cid=*my custom campaign ID*`**를 추가합니다. 예를 들어 Skype에서 값이 **custom\_campaign**인 캠페인 ID를 소개하는 경우 해당 캠페인 ID를 포함하는 새 HTTP URL은 `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`입니다.
     -   프로토콜 형식 URL의 경우 **`&cid=*my custom campaign ID*`**를 추가합니다. 예를 들어 Skype에서 값이 **custom\_campaign**인 캠페인 ID를 소개하는 경우 해당 캠페인 ID를 포함하는 새 프로토콜 URL은 `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`입니다.
@@ -132,6 +136,7 @@ HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

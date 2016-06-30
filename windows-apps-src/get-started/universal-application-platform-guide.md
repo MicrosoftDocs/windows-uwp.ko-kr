@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: UWP(유니버설 Windows 플랫폼) 앱 지침
-description: 이 가이드에서는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
+author: TylerMSFT
+title: "UWP(유니버설 Windows 플랫폼) 앱 지침"
+description: "이 가이드에서는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 191a7aef1a027747379c991e17afc1580a9ec549
+
 ---
 
 # UWP(유니버설 Windows 플랫폼) 앱 지침
@@ -256,7 +259,7 @@ UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API �
 ## 사용자 환경
 
 
-유니버설 Windows 앱은 해당 앱이 실행되는 디바이스의 고유한 기능을 활용할 수 있도록 해줍니다. 앱은 데스크톱 디바이스의 모든 기능, 태블릿에서의 자연스러운 직접 조작(터치 및 펜 입력 포함), 모바일 디바이스의 이동성 및 편리성, [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365)의 공동 작업 기능을 활용할 수 있습니다.
+유니버설 Windows 앱은 해당 앱이 실행되는 장치의 고유한 기능을 활용할 수 있도록 해줍니다. 앱은 데스크톱 장치의 모든 기능, 태블릿에서의 자연스러운 직접 조작(터치 및 펜 입력 포함), 모바일 장치의 이동성 및 편리성, [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365)의 공동 작업 기능을 활용할 수 있습니다.
 
 좋은 [디자인](http://go.microsoft.com/fwlink/?LinkId=258848)은 사용자가 앱을 조작하는 방법 및 앱의 모양과 작동 방식을 결정하는 프로세스입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기초](https://dev.windows.com/en-us/design)에서 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://msdn.microsoft.com/library/windows/apps/dn958439)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../input-and-devices/device-primer.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
 
@@ -288,6 +291,7 @@ Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 W
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

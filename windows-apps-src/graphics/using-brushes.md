@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: "브러시 사용"
 description: "Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
 
 ---
 # 브러시 사용
@@ -43,7 +43,7 @@ ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
 
 ![렌더링된 SolidColorBrush](images/brushes-solidcolorbrush.jpg)
 
-XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 정의하는 경우 이름이 지정된 각 색을 [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s) 클래스의 정적 속성 값으로 사용할 수 있습니다. 예를 들어 **SolidColorBrush**의 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) 값을 선언하여 이름이 지정된 색 "Orchid"를 나타내려면 **Color** 값을 정적 값 [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx)로 설정합니다.
+XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 정의하는 경우 이름이 지정된 각 색을 [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors) 클래스의 정적 속성 값으로 사용할 수 있습니다. 예를 들어 **SolidColorBrush**의 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) 값을 선언하여 이름이 지정된 색 "Orchid"를 나타내려면 **Color** 값을 정적 값 [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx)로 설정합니다.
 
 ### 16진수 색 값
 
@@ -159,7 +159,7 @@ XAML 리소스 사전에서 임의 브러시를 키 입력 XAML 리소스로 선
 
 코드를 사용하여 브러시를 정의하는 것보다 XAML을 사용하여 브러시를 지정하는 것이 훨씬 더 일반적입니다. 왜냐하면 브러시는 보통 XAML 리소스로 정의되고 브러시 값은 디자인 도구에서 출력되거나 XAML UI 정의의 일부로 출력되는 경우가 자주 있기 때문입니다. 코드를 사용하여 브러시를 정의하는 특별한 경우에도 모든 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 유형을 코드 인스턴스화에 사용할 수 있습니다.
 
-코드에서 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 만들려면 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 매개 변수를 사용하는 생성자를 사용합니다. 다음과 같이 [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s) 클래스의 정적 속성인 값을 전달합니다.
+코드에서 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 만들려면 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 매개 변수를 사용하는 생성자를 사용합니다. 다음과 같이 [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors) 클래스의 정적 속성인 값을 전달합니다.
 
 ```cs
 SolidColorBrush blueBrush = new SolidColorBrush(Windows.UI.Colors.Blue);
@@ -191,6 +191,6 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

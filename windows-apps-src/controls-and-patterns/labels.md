@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다.
-title: 레이블
+Description: "레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다."
+title: "레이블"
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fbb186b6f8b7bfba47fb05155a227224a1bd595e
+
 ---
 
 # Labels(레이블)
@@ -55,6 +59,7 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

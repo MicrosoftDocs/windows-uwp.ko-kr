@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 UWP(유니버설 Windows 플랫폼) 앱에 대한 호출 카드입니다.
-title: 타일 및 아이콘 자산
+Description: "Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 UWP(유니버설 Windows 플랫폼) 앱에 대한 호출 카드입니다."
+title: "타일 및 아이콘 자산"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
+
 ---
 
 # 타일 및 아이콘 자산에 대한 지침
@@ -384,6 +388,7 @@ Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

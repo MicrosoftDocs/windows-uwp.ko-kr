@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: 이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 GeotagHelper 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
-title: 이미지 메타데이터
+description: "이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 GeotagHelper 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다."
+title: "이미지 메타데이터"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
+
 ---
 
 # 이미지 메타데이터
@@ -94,6 +98,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

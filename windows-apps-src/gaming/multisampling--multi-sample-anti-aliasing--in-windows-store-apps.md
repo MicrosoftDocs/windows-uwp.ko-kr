@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
-description: Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다.
+title: "UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링"
+description: "Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱에서 다중 샘플링을 사용하는 방법을 알아봅니다."
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
+
 ---
 
 # <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> UWP(유니버설 Windows 플랫폼) 앱의 다중 샘플링
@@ -205,6 +209,7 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

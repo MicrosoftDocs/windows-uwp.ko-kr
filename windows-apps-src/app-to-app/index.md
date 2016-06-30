@@ -1,8 +1,12 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: 이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.
-title: 앱 간 통신
+description: "이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다."
+title: "앱 간 통신"
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
+ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
+
 ---
 
 # 앱 간 통신
@@ -28,6 +32,7 @@ author: awkoren
 | [EDP를 사용하여 앱 간에 전송되는 엔터프라이즈 데이터 보호](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | 이 항목에서는 가장 일반적인 데이터 전송 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다. |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

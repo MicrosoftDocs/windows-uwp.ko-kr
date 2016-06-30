@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Windows 개발자 센터 대시보드를 사용하여 A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에 대한 실험을 실행할 수 있습니다.
-title: A/B 테스트로 앱 실험 실행
+Description: "Windows 개발자 센터 대시보드를 사용하여 A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에 대한 실험을 실행할 수 있습니다."
+title: "A/B 테스트로 앱 실험 실행"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 88fd0516e3c10b657884b93377480b62c1758992
+
 ---
 
 # A/B 테스트로 앱 실험 실행
@@ -50,6 +54,7 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

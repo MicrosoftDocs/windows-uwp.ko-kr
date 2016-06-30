@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시하는 데 사용되는 경량 팝업입니다.
-title: 상황에 맞는 메뉴 및 대화 상자
+Description: "플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시하는 데 사용되는 경량 팝업입니다."
+title: "상황에 맞는 메뉴 및 대화 상자"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+
 ---
 # 메뉴, 대화 상자, 플라이아웃 및 팝업
 
@@ -179,6 +183,7 @@ MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutIte
 - [**ContentDialog 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 사진 뷰어/편집기, 문서 뷰어, 지도, 그리기 또는 자유 스크롤 보기를 사용하는 기타 앱과 같은 단일 보기 앱 또는 모달 환경에 대한 콘텐츠 영역 및 명령 영역이 있는 패턴입니다.
-title: 활성 캔버스 패턴에 대한 지침
+Description: "사진 뷰어/편집기, 문서 뷰어, 지도, 그리기 또는 자유 스크롤 보기를 사용하는 기타 앱과 같은 단일 보기 앱 또는 모달 환경에 대한 콘텐츠 영역 및 명령 영역이 있는 패턴입니다."
+title: "활성 캔버스 패턴에 대한 지침"
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 490c45fb8dc565e4ae0b890d26f28d698b58f255
+
 ---
 #활성 캔버스 패턴
 
@@ -36,6 +40,7 @@ template: detail.hbs
 -   [**앱 바 및 명령 모음**](app-bars.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

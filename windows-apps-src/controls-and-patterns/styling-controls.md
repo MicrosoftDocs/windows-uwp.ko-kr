@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
-MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다."
+MS-HAID: dev\_ctrl\_layout\_txt.styling\_controls
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 컨트롤 스타일 지정
+title: "컨트롤 스타일 지정"
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
+
 ---
 
 # 컨트롤 스타일 지정
@@ -151,6 +155,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

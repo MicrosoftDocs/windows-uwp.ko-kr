@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 시작 화면 추가
-description: Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다.
+author: TylerMSFT
+title: "시작 화면 추가"
+description: "Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다."
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+
 ---
 
 # 시작 화면 추가
@@ -73,8 +76,6 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

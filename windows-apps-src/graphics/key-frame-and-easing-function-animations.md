@@ -1,8 +1,12 @@
 ---
 author: Jwmsft
-title: 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
+title: "키 프레임 애니메이션 및 감속/가속 함수 애니메이션"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: 선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다.
+description: "선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
+
 ---
 # 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 
@@ -34,8 +38,7 @@ description: 선형 키 프레임 애니메이션, KeySpline 값을 사용하는
             **BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): 애니메이션 시작을 지연합니다. 프레임의 **KeyTime** 값에 대한 타임라인이 **BeginTime**에 도달한 다음에야 카운팅을 시작하므로 프레임이 잘릴 위험이 없습니다.
 -   [
             **FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): 마지막 키 프레임에 도달할 때 발생하는 상황을 제어합니다. **FillBehavior**는 중간 키 프레임에 영향을 주지 않습니다.
--   [
-            **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
+-   [ **RepeatBehavior** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   **Forever**로 설정하면 키 프레임과 타임라인이 무한 반복됩니다.
     -   반복 횟수로 설정하면 타임라인이 해당 횟수만큼 반복됩니다.
     -   [
@@ -303,6 +306,7 @@ You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.co
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

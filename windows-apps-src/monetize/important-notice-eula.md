@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 5efb4f40-a021-4dd2-82b4-7c95c3849485
-description: EULA(최종 사용자 사용권 계약)를 모두 읽고 중요한 정보를 확인하세요.
-title: 중요 알림 - EULA
+description: "EULA(최종 사용자 사용권 계약)를 모두 읽고 중요한 정보를 확인하세요."
+title: "중요 알림 - EULA"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 89af54f5b8cf52366100b4751ed37ddd7a7bacb7
+
 ---
 
 # 중요 알림 - EULA
@@ -25,6 +29,7 @@ EULA는 확장 SDK가 있는 폴더에서 찾을 수 있습니다. 설치 중에
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

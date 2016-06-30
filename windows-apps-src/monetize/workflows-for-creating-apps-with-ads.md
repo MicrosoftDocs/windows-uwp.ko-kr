@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
-description: 광고가 있는 앱을 개발하고 게시하기 위한 종단 간 프로세스에 알아봅니다.
-title: 광고가 포함된 앱 만들기 워크플로
+description: "광고가 있는 앱을 개발하고 게시하기 위한 종단 간 프로세스에 알아봅니다."
+title: "광고가 포함된 앱 만들기 워크플로"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+
 
 ---
 
@@ -61,6 +65,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

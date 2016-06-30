@@ -1,11 +1,15 @@
 ---
 author: DelfCo
-Description: 세계화는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다.
+Description: "세계화는 앱이 다른 글로벌 시장에서 변경이나 사용자 지정 없이도 제대로 작동하도록 앱을 디자인 및 개발하는 프로세스입니다."
 Search.SourceType: Video
-title: 세계화 및 지역화
+title: "세계화 및 지역화"
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
+
 ---
 
 # 세계화 및 지역화
@@ -94,6 +98,7 @@ UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10에도 적용되며 원래
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

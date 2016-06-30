@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다.
-title: UWP 앱의 가장자리 기반 UI 애니메이션
+Description: "가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다."
+title: "UWP 앱의 가장자리 기반 UI 애니메이션"
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 1be51a8ff4a63f32834c7eb04b70d17dc41de13b
+
 ---
 
 # 가장자리 기반 UI 애니메이션
@@ -55,6 +59,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

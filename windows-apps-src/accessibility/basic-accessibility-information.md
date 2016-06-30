@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.
+Description: "경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
-title: 기본적인 접근성 정보 표시
+title: "기본적인 접근성 정보 표시"
 label: Expose basic accessibility information
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+
 ---
 
 # 기본적인 접근성 정보 표시  
@@ -57,7 +60,7 @@ UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨�
 
 * [
             **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 및 **RichTextBlock**은 각각 **Text** 속성의 값을 기본 접근성 있는 이름으로 승격시킵니다.
-* 모든 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
+* 모든 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
 
 > [!NOTE]
 > UI 자동화에 의해 적용되는 접근성 있는 이름 길이는 2048자보다 클 수 없습니다. 접근성 있는 이름 자동 결정에 사용된 문자열이 해당 제한을 초과하는 경우 접근성 있는 이름은 해당 지점에서 잘립니다.
@@ -137,7 +140,7 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 접근성 있는 이름이 지역화되는 요소도 되도록 하려면 지역화 가능한 문자열을 리소스로 저장한 다음 [x:Uid directive](https://msdn.microsoft.com/library/windows/apps/Mt204791) 값으로 리소스 연결을 참조하는 올바른 기술을 사용해야 합니다. 접근성 있는 이름이 명시적으로 설정된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 사용에서 제공되는 경우 해당 문자열도 지역화할 수 있는지 확인합니다.
 
 [
-            **AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)은 다음과 같습니다.
+            **AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
 
 <span id="related_topics"/>
 ## 관련 항목  
@@ -147,6 +150,7 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 * [접근성 테스트](accessibility-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

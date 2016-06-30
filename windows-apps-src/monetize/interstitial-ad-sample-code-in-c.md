@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
-description: C#을 사용하여 중간 광고를 실행하는 방법을 알아봅니다.
-title: C의 중간 광고 샘플 코드#
+description: "C#을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
+title: "C의 중간 광고 샘플 코드#"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
+
 
 ---
 
@@ -101,6 +105,7 @@ namespace BasicCSharpInterstitialUWP
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

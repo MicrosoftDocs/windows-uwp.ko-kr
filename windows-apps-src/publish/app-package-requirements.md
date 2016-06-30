@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 스토어에 제출할 앱 패키지를 준비하려면 다음 지침을 따르세요.
-title: 앱 패키지 요구 사항
+Description: "Windows 스토어에 제출할 앱 패키지를 준비하려면 다음 지침을 따르세요."
+title: "앱 패키지 요구 사항"
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+
 ---
 
 # 앱 패키지 요구 사항
@@ -80,6 +84,7 @@ StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

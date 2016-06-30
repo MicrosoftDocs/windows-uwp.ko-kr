@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: 이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다.
-title: 카메라 프로필
+description: "이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다."
+title: "카메라 프로필"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+
 ---
 
 # 카메라 프로필
@@ -107,6 +111,7 @@ HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

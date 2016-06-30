@@ -6,8 +6,8 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 0f2e95146281fb992af1201c408ed62705c77741
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
 
 ---
 
@@ -29,7 +29,7 @@ ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GI
 
  
 
-## <span id="Save_ink_strokes_to_a_file"></span><span id="save_ink_strokes_to_a_file"></span><span id="SAVE_INK_STROKES_TO_A_FILE"></span>파일에 잉크 스트로크 저장
+## 파일에 잉크 스트로크 저장
 
 
 여기서는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
@@ -163,7 +163,7 @@ GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그�
 
  
 
-## <span id="Load_ink_strokes_from_a_file"></span><span id="load_ink_strokes_from_a_file"></span><span id="LOAD_INK_STROKES_FROM_A_FILE"></span>파일에서 잉크 스트로크 로드
+## 파일에서 잉크 스트로크 로드
 
 
 다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
@@ -272,7 +272,7 @@ GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그�
 | Gif                       | ISF를 파일에 포함된 메타데이터로 포함하는 GIF 파일을 사용하여 유지되는 잉크를 지정합니다. 이 형식을 사용하면 잉크 불가능 응용 프로그램에서 잉크를 볼 수 있고 잉크 가능 응용 프로그램으로 돌아갈 때 최대 잉크 화질을 유지할 수 있습니다. 이 형식은 HTML 파일 내에서 잉크 콘텐츠를 전송하고 잉크 가능 및 잉크 불가능 응용 프로그램에서 사용할 수 있도록 하는 경우에 적합합니다. |
 | Base64Gif                 | base64 인코딩된 강화된 GIF를 사용하여 유지되는 잉크를 지정합니다. 이 형식은 XML 또는 HTML 파일에서 직접 잉크를 인코딩하고 나중에 이미지로 변환하는 경우에 제공됩니다. 이 형식은 모든 잉크 정보를 포함하기 위해 생성되며 XSLT(Extensible Stylesheet Language Transformations)를 통해 HTML을 생성하는 데 사용되는 XML 형식에 사용할 수 있습니다. 
 
-## <span id="Copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="COPY_AND_PASTE_INK_STROKES_WITH_THE_CLIPBOARD"></span>클립보드를 사용한 잉크 스트로크 복사 및 붙여넣기
+## 클립보드를 사용한 잉크 스트로크 복사 및 붙여넣기
 
 
 다음은 클립보드를 사용하여 앱 간에 잉크 스트로크를 전송하는 방법을 설명합니다.
@@ -431,7 +431,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
@@ -449,6 +449,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

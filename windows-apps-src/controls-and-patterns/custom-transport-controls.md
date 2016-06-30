@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 미디어 플레이어에 오디오와 비디오 콘텐츠의 컨트롤을 관리하기 위해 사용자 지정 가능한 XAML 전송 컨트롤이 있습니다.
-title: 사용자 지정 미디어 전송 컨트롤을 만드는 방법
+Description: "미디어 플레이어에 오디오와 비디오 콘텐츠의 컨트롤을 관리하기 위해 사용자 지정 가능한 XAML 전송 컨트롤이 있습니다."
+title: "사용자 지정 미디어 전송 컨트롤을 만드는 방법"
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5500f41b254b32b8d293181fba3acebbfffa90e7
+
 ---
 # 사용자 지정 전송 컨트롤 만들기
 
@@ -270,6 +274,7 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 - [미디어 재생](media-playback.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

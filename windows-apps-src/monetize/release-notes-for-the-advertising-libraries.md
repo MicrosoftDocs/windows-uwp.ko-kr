@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: Microsoft 스토어 참여 및 수익 창출 SDK에 있는 Microsoft Advertising 라이브러리에 대한 릴리스 정보를 검토합니다.
-title: Microsoft Advertising 라이브러리에 대한 릴리스 정보
+description: "Microsoft 스토어 참여 및 수익 창출 SDK에 있는 Microsoft Advertising 라이브러리에 대한 릴리스 정보를 검토합니다."
+title: "Microsoft Advertising 라이브러리에 대한 릴리스 정보"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 8e2114e969b27d579f62195f026cfcfd9672a94a
+
 ---
 
 # Microsoft Advertising 라이브러리에 대한 릴리스 정보
@@ -52,6 +56,7 @@ EULA(최종 사용자 사용권 계약)를 모두 읽으세요. [중요 알림 -
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,13 @@
 ---
 author: Xansky
-description: 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
-title: SMS 메시지 보내기
+description: "이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다."
+title: "SMS 메시지 보내기"
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contacts, SMS, send
+translationtype: Human Translation
+ms.sourcegitcommit: 1395e342bb6ad6a2d4fa347f1797aeafd7a524a6
+ms.openlocfilehash: 70dfce318d37d6790585b0fa5da50963f95495dc
+
 ---
 
 # SMS 메시지 보내기
@@ -56,6 +60,7 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
 * [연락처 선택](selecting-contacts.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

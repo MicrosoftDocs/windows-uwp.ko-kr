@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
-title: 인쇄 및 스캔
-description: 이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다.
+title: "인쇄 및 스캔"
+description: "이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 81a96c4c519a112551cab83425caf782b13ea9be
+
 ---
 # 인쇄 및 스캔
 
@@ -26,6 +30,7 @@ description: 이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

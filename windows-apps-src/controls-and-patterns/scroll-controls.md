@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
-title: 스크롤 막대에 대한 지침
+Description: "이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다."
+title: "스크롤 막대에 대한 지침"
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
+
 ---
 # 스크롤 막대
 
@@ -91,6 +95,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 * [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

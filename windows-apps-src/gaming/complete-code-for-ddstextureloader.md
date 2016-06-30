@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DDSTextureLoader의 전체 코드
-description: 메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다.
+title: "DDSTextureLoader의 전체 코드"
+description: "메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+translationtype: Human Translation
+ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
+ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
+
 ---
 
 # DDSTextureLoader의 전체 코드
@@ -1221,6 +1225,7 @@ void CreateDDSTextureFromMemory(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

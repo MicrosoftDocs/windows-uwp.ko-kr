@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: MediaSource 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다.
-title: MediaSource를 사용하여 미디어 재생
+description: "MediaSource 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다."
+title: "MediaSource를 사용하여 미디어 재생"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
+
 ---
 
 # MediaSource를 사용하여 미디어 재생
@@ -189,6 +193,7 @@ title: MediaSource를 사용하여 미디어 재생
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

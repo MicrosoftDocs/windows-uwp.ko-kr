@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: 앱 내부에 사후 방식으로 표시할 효과적인 도움말을 디자인합니다.
-title: 앱 내 도움말 디자인에 대한 지침
+Description: "앱 내부에 사후 방식으로 표시할 효과적인 도움말을 디자인합니다."
+title: "앱 내 도움말 디자인에 대한 지침"
 label: In-app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
+
 ---
 
 # 앱 내 도움말 페이지
@@ -52,6 +56,7 @@ template: detail.hbs
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

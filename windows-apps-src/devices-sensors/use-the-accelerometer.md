@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
-title: 가속도계 사용
-description: 가속도계를 사용하여 사용자의 동작에 응답하는 방법을 알아봅니다.
+title: "가속도계 사용"
+description: "가속도계를 사용하여 사용자의 동작에 응답하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f1ec749d7bec245632f1998ac5cc94b9bfcad533
+
 ---
 # 가속도계 사용
 
@@ -170,6 +174,7 @@ AccelerometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

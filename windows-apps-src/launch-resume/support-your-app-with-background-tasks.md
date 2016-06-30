@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업을 사용하여 앱 지원
-description: 이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다.
+author: TylerMSFT
+title: "백그라운드 작업을 사용하여 앱 지원"
+description: "이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
+
 ---
 
 # 백그라운드 작업을 사용하여 앱 지원
@@ -135,9 +138,9 @@ ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 ## 유지 관리 트리거
 
 
-유지 관리 작업은 디바이스가 AC 전원에 연결되는 경우에만 실행됩니다. 자세한 내용은 [유지 관리 트리거 사용](use-a-maintenance-trigger.md)을 참조하세요.
+유지 관리 작업은 장치가 AC 전원에 연결되는 경우에만 실행됩니다. 자세한 내용은 [유지 관리 트리거 사용](use-a-maintenance-trigger.md)을 참조하세요.
 
-## 센서 및 디바이스에 대한 백그라운드 작업
+## 센서 및 장치에 대한 백그라운드 작업
 
 
 앱은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 클래스를 사용하여 백그라운드 작업에서 센서 및 주변 장치에 액세스할 수 있습니다. 데이터 동기화나 모니터링 같이 오래 실행되는 작업에 이 트리거를 사용할 수 있습니다. 시스템 이벤트에 대한 작업과 달리 **DeviceUseTrigger** 작업은 앱이 포그라운드로 실행되고 조건이 설정되지 않은 경우에만 트리거할 수 있습니다.
@@ -189,8 +192,6 @@ ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

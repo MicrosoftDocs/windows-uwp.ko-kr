@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱 제출 프로세스의 연령별 등급 페이지를 사용하면 IARC(국제 연령 등급 연합)에서 적합한 연령 등급을 수신할 수 있도록 앱에 대한 정보를 제공할 수 있습니다.
-title: 연령별 등급
+Description: "앱 제출 프로세스의 연령별 등급 페이지를 사용하면 IARC(국제 연령 등급 연합)에서 적합한 연령 등급을 수신할 수 있도록 앱에 대한 정보를 제공할 수 있습니다."
+title: "연령별 등급"
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 559842fb6740236780756018d01036b835660309
+
 ---
 
 # 연령별 등급
@@ -45,6 +49,7 @@ ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 | 18+(성인에게 적합)            | 이 연령 등급의 게임에는 성인에게만 적합한 잔인하거나 저속하거나 구체적인 폭력, 낭자한 피 등이 포함될 수 있습니다. 모든 콘텐츠는 [콘텐츠 정책](https://msdn.microsoft.com/library/windows/apps/dn764944) 조건을 충족해야 합니다.                                                                                                                                                            |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

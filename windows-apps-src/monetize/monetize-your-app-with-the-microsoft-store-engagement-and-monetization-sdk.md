@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Microsoft 스토어 참여 및 수익 창출 SDK는 더 많은 수익을 창출하고 고객을 확보할 수 있게 해주는 기능을 앱에 추가하는 데 사용할 수 있는 라이브러리 및 도구를 제공합니다.
-title: Microsoft 스토어 참여 및 수익 창출 SDK
+Description: "Microsoft 스토어 참여 및 수익 창출 SDK는 더 많은 수익을 창출하고 고객을 확보할 수 있게 해주는 기능을 앱에 추가하는 데 사용할 수 있는 라이브러리 및 도구를 제공합니다."
+title: "Microsoft 스토어 참여 및 수익 창출 SDK"
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: 481cf2aab806a1f9ce368256a9df8930cbc756c1
+
 ---
 
 # Microsoft 스토어 참여 및 수익 창출 SDK
@@ -75,6 +79,7 @@ Microsoft 스토어 수익 창출 및 참여 SDK의 다음 라이브러리는 *�
 * [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다.
-title: 도구 설명
+Description: "사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다."
+title: "도구 설명"
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 0529f212e9fac290bb58925e992518ab0e803bfa
+
 
 ---
 
@@ -70,6 +74,7 @@ Bing 지도 앱의 도구 설명입니다.
 * [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

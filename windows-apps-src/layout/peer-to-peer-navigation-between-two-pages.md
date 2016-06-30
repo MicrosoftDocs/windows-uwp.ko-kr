@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 기본 두 페이지 피어 투 피어 UWP(유니버설 Windows 플랫폼) 앱에서 탐색하는 방법을 알아봅니다.
-title: 두 페이지 간의 피어 투 피어 탐색
+Description: "기본 두 페이지 피어 투 피어 UWP(유니버설 Windows 플랫폼) 앱에서 탐색하는 방법을 알아봅니다."
+title: "두 페이지 간의 피어 투 피어 탐색"
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-to-peer navigation between two pages
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ec1c0339017fb60ed37f45dfa6f809a5eba6fbb1
+
 ---
 
 # <span id="dev_navigation.peer-to-peer_navigation_between_two_pages"></span>두 페이지 간의 피어 투 피어 탐색
@@ -451,6 +455,7 @@ public Page1()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

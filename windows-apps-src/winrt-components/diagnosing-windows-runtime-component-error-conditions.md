@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: Windows 런타임 구성 요소 오류 조건 진단
-description: 이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다.
+author: msatranjr
+title: "Windows 런타임 구성 요소 오류 조건 진단"
+description: "이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+
 ---
 
 # Windows 런타임 구성 요소 오류 조건 진단
@@ -10,7 +13,6 @@ ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다. [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](https://msdn.microsoft.com/library/hh925576.aspx)의 오류 메시지에서 제공되는 정보에 대해 더 자세히 설명하고 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에서 제공되는 제한 사항에 대한 정보를 보충합니다.
 
@@ -220,17 +222,17 @@ UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이�
     > ```cs
     > using System.Runtime.InteropServices;
     > using System.Runtime.InteropServices.WindowsRuntime;
-    > 
+    >
     > [return: ReturnValueName("average")]
     > public int GetAverage(out int lowValue, out int highValue)
     > ```
     > ```vb
     > Imports System.Runtime.InteropServices
     > Imports System.Runtime.InteropServices.WindowsRuntime
-    > 
+    >
     > Public Function GetAverage(<Out> ByRef lowValue As Integer, _
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
-    > ``` 
+    > ```
 
 > **참고** 반환 값의 이름을 변경했는데 새 이름이 다른 매개 변수 이름과 충돌하면 WME1091 오류가 발생합니다.
 
@@ -248,6 +250,7 @@ JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변�
 * [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-title: 시작&#58; 다음에 할 일
+title: "시작&#58; 다음에 할 일"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
-description: 이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다.
+description: "이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2b11133fda76fb42f3a850848c426cbb33fb8366
+
 ---
 
 # 시작&#58; 다음에 할 일
@@ -33,6 +37,7 @@ Windows 10은 개발자에게 새로운 앱 빌드 기회를 제공합니다. �
 * [Windows용 앱 빌드 블로그](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

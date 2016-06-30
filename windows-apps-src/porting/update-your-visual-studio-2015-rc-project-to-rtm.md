@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트가 있는 경우 Visual Studio 2015 RTM에 적합한 형식으로 프로젝트 파일을 업데이트할 수 있는 두 가지 옵션이 있습니다.
-title: RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트
+description: "Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트가 있는 경우 Visual Studio 2015 RTM에 적합한 형식으로 프로젝트 파일을 업데이트할 수 있는 두 가지 옵션이 있습니다."
+title: "RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트"
 ms.assetid: 104E36CE-36DE-4E9C-A944-711C200B44EF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c2b9f164b6578a9e1d269295b3fa0d7a863a6a0
+
 ---
 
 # RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트
@@ -37,6 +41,7 @@ Visual Studio 2015 RC와 Visual Studio 2015 RTM 간 Windows 10 프로젝트 형�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

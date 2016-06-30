@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Windows 설정 앱 실행
-description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+author: TylerMSFT
+title: "Windows 설정 앱 실행"
+description: "앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
+ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
+ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
+
 ---
 
 # Windows 설정 앱 실행
@@ -32,7 +35,7 @@ ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 
 ```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
-<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
+<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic"
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
           <Run Text="This app is not able to access the microphone. Go to " />
               <Hyperlink NavigateUri="ms-settings:privacy-microphone">
@@ -68,9 +71,9 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |                    | 알림 및 동작                | 모두           | ms-settings:notifications                 |
 |                    | 전화                                  | 모바일만 해당    | ms-settings:phone                         |
 |                    | 메시지                              | 모바일만 해당    | ms-settings:messaging                     |
-|                    | 배터리 절약 모드                          | 모두           | ms-settings:batterysaver                  |
-|                    | 배터리 절약 모드 / 배터리 절약 모드 설정 | 모두           | ms-settings:batterysaver-settings         |
-|                    | 배터리 절약 모드 / 배터리 사용            | 모두           | ms-settings:batterysaver-usagedetails     |
+|                    | 배터리 절약 모드                          | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱    | ms-settings:batterysaver                  |
+|                    | 배터리 절약 모드 / 배터리 절약 모드 설정 | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱 | ms-settings:batterysaver-settings         |
+|                    | 배터리 절약 모드 / 배터리 사용            | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱    | ms-settings:batterysaver-usagedetails     |
 |                    | 전원 및 절전                          | 데스크톱에만 해당   | ms-settings:powersleep                    |
 |                    | 데스크톱: 정보                         | 모두           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |
@@ -124,8 +127,6 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

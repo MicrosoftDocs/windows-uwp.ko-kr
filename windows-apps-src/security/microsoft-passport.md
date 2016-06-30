@@ -1,8 +1,12 @@
 ---
-title: Microsoft Passport 및 Windows Hello
-description: 이 문서에서는 새로운 Windows 10 운영 체제의 일부로 제공되는 새로운 Microsoft Passport 기술에 대해 설명하고 개발자가 이 기술을 구현함으로써 UWP(유니버설 Windows 플랫폼) 앱 및 백 엔드 서비스를 보호할 수 있는 방법을 살펴봅니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다.
+title: "Microsoft Passport 및 Windows Hello"
+description: "이 문서에서는 새로운 Windows 10 운영 체제의 일부로 제공되는 새로운 Microsoft Passport 기술에 대해 설명하고 개발자가 이 기술을 구현함으로써 UWP(유니버설 Windows 플랫폼) 앱 및 백 엔드 서비스를 보호할 수 있는 방법을 살펴봅니다. 여기서는 기존 자격 증명의 사용으로 발생되는 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
+
 ---
 
 # Microsoft Passport 및 Windows Hello
@@ -56,7 +60,7 @@ Microsoft Passport는 기존 자격 증명을 확인하고 생체 인식 또는 
 ## 2.1 Windows Hello란?
 
 
-Windows Hello는 Windows 10에서 기본 제공되는 새 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. 사용자가 디바이스별 Microsoft Passport 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 디바이스를 훔친 공격자에게 PIN이 없으면 로그온할 수 없다는 의미입니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 디바이스 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
+Windows Hello는 Windows 10에서 기본 제공되는 새 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. 사용자가 장치별 Microsoft Passport 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없다는 의미입니다. Windows 보안 자격 증명 저장소는 장치의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
 
 Windows Hello 인증자를 Hello라고 합니다. Hello는 개별 디바이스 및 특정 사용자의 조합에만 있습니다. Hello는 디바이스 간에 로밍되지 않고 서버 또는 호출 앱과 공유되지 않으며 디바이스에서 쉽게 추출할 수 없습니다. 여러 사용자가 디바이스를 공유하는 경우 각 사용자가 자신의 계정을 설정해야 합니다. 모든 계정이 해당 디바이스의 고유 Hello를 갖게 됩니다. Hello는 저장된 자격 증명을 잠금 해제하는 데 사용할 수 있는 토큰이라고 생각할 수 있습니다. Hello 자체는 사용자를 앱이나 서비스에 인증하지 않지만 인증할 수 있는 자격 증명을 해제합니다. 즉, Hello는 사용자 자격 증명이 아니라 Microsoft Passport에 대한 두 번째 요소입니다.
 
@@ -453,6 +457,7 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 * [Microsoft Passport 로그인 앱](microsoft-passport-login.md)
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

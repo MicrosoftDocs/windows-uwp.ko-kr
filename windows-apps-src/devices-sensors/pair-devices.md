@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
-title: 장치 페어링
-description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
+title: "장치 페어링"
+description: "일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: fa736c200185192cfd40a1c09f2da02cae67c05c
+
 ---
 # 디바이스 페어링
 
@@ -45,9 +49,9 @@ description: 일부 디바이스는 페어링해야 사용할 수 있습니다. 
 
 사용자 지정 페어링을 통해 앱에서 페어링 프로세스에 참여할 수 있습니다. 이 경우 앱에서 페어링 프로세스에 대해 지원되는 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 지정할 수 있습니다. 필요에 따라 사용자와 상호 작용하기 위한 고유 사용자 인터페이스를 만들어야 할 수도 있습니다. 앱에서 페어링 프로세스가 진행되는 방식에 좀 더 많은 영향을 주려는 경우 또는 고유한 페어링 사용자 인터페이스를 표시하려는 경우 사용자 지정 페어링을 사용합니다.
 
-사용자 지정 페어링을 구현하려면 기본 페어링과 마찬가지로 관심 있는 디바이스에 대한 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져와야 합니다. 그러나 관심 있는 특정 속성은 [**DeviceInformation.Pairing.Custom**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.pairing.aspx_custom)입니다. 그러면 [**DeviceInformationCustomPairing**](https://msdn.microsoft.com/library/windows/apps/BR225393custompairing) 개체가 제공됩니다. 모든 [**DeviceInformationCustomPairing.PairAsync**](https://msdn.microsoft.com/library/windows/apps/BR225393custompairing_pairasync) 메서드에는 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) 매개 변수가 포함되어야 합니다. 이는 사용자가 디바이스를 페어링하기 위해 수행해야 하는 작업을 나타냅니다. 여러 종류 및 사용자가 수행해야 하는 작업에 대한 자세한 내용은 **DevicePairingKinds** 참조 페이지를 참조하세요. 기본 페어링과 마찬가지로 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
+사용자 지정 페어링을 구현하려면 기본 페어링과 마찬가지로 관심 있는 디바이스에 대한 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체를 가져와야 합니다. 그러나 관심 있는 특정 속성은 [**DeviceInformation.Pairing.Custom**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformationpairing.custom.aspx)입니다. 그러면 [**DeviceInformationCustomPairing**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.aspx) 개체가 제공됩니다. 모든 [**DeviceInformationCustomPairing.PairAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairasync.aspx) 메서드에는 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808) 매개 변수가 포함되어야 합니다. 이는 사용자가 디바이스를 페어링하기 위해 수행해야 하는 작업을 나타냅니다. 여러 종류 및 사용자가 수행해야 하는 작업에 대한 자세한 내용은 **DevicePairingKinds** 참조 페이지를 참조하세요. 기본 페어링과 마찬가지로 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
 
-사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://msdn.microsoft.com/library/windows/apps/BR225393custompairing_pairingrequested) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
+사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested.aspx) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
 
 사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://msdn.microsoft.com/library/windows/apps/Mt608808)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
 
@@ -73,6 +77,7 @@ description: 일부 디바이스는 페어링해야 사용할 수 있습니다. 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

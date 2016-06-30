@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다.
-title: 앱이 Windows 10 고객용 스토어에 표시되는 방법
+Description: "이전에 Windows 또는 Windows Phone용 스토어에 앱을 게시한 경우 Windows 10 디바이스의 고객이 해당 앱을 사용할 수 있습니다."
+title: "앱이 Windows 10 고객용 스토어에 표시되는 방법"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
+
 ---
 
 # 앱이 Windows 10 고객용 스토어에 표시되는 방법
@@ -117,6 +121,7 @@ ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 | 게임 &gt; 레이싱           | 게임 &gt; 레이싱 + 비행           |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

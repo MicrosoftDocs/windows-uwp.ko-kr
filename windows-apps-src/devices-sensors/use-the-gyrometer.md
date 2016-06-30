@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
-title: 회전계 사용
-description: 회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다.
+title: "회전계 사용"
+description: "회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: ad76837574b8887bceb135db156e2744542259b0
+
 ---
 # 회전계 사용
 
@@ -174,6 +178,7 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

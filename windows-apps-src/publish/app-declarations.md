@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 제출 프로세스 중에 앱 속성 페이지의 앱 선언 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다.
-title: 앱 선언
+Description: "제출 프로세스 중에 앱 속성 페이지의 앱 선언 섹션에서 앱에 대한 추가 정보를 제공할 수 있습니다."
+title: "앱 선언"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+
 ---
 
 # 앱 선언
@@ -62,6 +66,7 @@ ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드에서 앱에 대한 자세한 분석을 볼 수 있습니다.
-title: 분석
+Description: "Windows 개발자 센터 대시보드에서 앱에 대한 자세한 분석을 볼 수 있습니다."
+title: "분석"
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
+translationtype: Human Translation
+ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
+ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
+
 ---
 
 # 분석
@@ -71,6 +75,7 @@ Power BI 사용을 시작하여 분석 데이터에 액세스하려면 다음 �
 [개발자 센터](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) 앱을 설치하면 Windows 10 디바이스에서 앱의 상태와 성능에 대한 세부 정보를 빠르게 확인할 수 있습니다. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

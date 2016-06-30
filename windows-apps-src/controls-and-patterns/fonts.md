@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 글꼴을 선택하고 글꼴 크기와 색을 지정하는 경우 다음 지침을 따릅니다.
-title: 글꼴
+Description: "글꼴을 선택하고 글꼴 크기와 색을 지정하는 경우 다음 지침을 따릅니다."
+title: "글꼴"
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 268884c011caa18f3afb6d8b0d9cfda1ec27f51e
+
 ---
 
 # 글꼴에 대한 지침
@@ -290,6 +294,7 @@ UWP 앱을 지원하는 모든 Windows 10 버전에서 사용이 보장되는 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

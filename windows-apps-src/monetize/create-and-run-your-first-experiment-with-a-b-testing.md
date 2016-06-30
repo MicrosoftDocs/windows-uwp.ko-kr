@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: 이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고 실행합니다.
-title: A/B 테스트로 첫 번째 실험 만들기 및 실행
+Description: "이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고 실행합니다."
+title: "A/B 테스트로 첫 번째 실험 만들기 및 실행"
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0f889c22b8999408341f4c12387602b344f49439
+
 ---
 
 # A/B 테스트로 첫 번째 실험 만들기 및 실행
@@ -175,6 +179,7 @@ private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";
   * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

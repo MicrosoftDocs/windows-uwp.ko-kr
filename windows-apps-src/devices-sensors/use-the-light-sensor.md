@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
-title: 광원 센서 사용
-description: 주변 광원 센서를 사용하여 광원 변화를 탐지하는 방법을 알아봅니다.
+title: "광원 센서 사용"
+description: "주변 광원 센서를 사용하여 광원 변화를 탐지하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 289d50ff4f45147c46bd66c526cf109d8fdf6d32
+
 ---
 # 광원 센서 사용
 
@@ -167,6 +171,7 @@ LightSensorReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

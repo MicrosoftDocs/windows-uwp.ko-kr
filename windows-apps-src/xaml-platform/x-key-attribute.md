@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: 리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다.
-title: xKey 특성
+description: "리소스로 만들어지고 참조되며 ResourceDictionary 내에 있는 요소를 고유하게 식별합니다."
+title: "xKey 특성"
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+
 ---
 
 # x&#58;Key 특성
@@ -32,7 +36,7 @@ ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 | 용어 | 설명 |
 |------|-------------|
 | object | 공유 가능한 모든 개체입니다. [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 참조하세요. |
-| stringKeyValue | 키로 사용되는 실제 문자열이며 _XamlName_> 문법을 따라야 합니다. 아래 "XamlName 문법"을 참조하세요. | 
+| stringKeyValue | 키로 사용되는 실제 문자열이며 _XamlName_&gt; 문법을 따라야 합니다. 아래 "XamlName 문법"을 참조하세요. | 
 
 ##  XamlName 문법
 
@@ -65,6 +69,7 @@ CombiningCharacter::= none
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

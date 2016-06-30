@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 게임의 기본 3D 그래픽
-description: DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다.
+title: "DirectX 게임의 기본 3D 그래픽"
+description: "DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하는 방법을 소개합니다."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8f27c5060ffdc566c596168e54d51730c349d401
+
 ---
 
 # DirectX 게임의 기본 3D 그래픽
@@ -63,6 +67,7 @@ DirectX 프로그래밍을 사용해 3D 그래픽의 기본 개념을 구현하�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

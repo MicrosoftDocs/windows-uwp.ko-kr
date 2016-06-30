@@ -6,8 +6,8 @@ ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
-ms.sourcegitcommit: 1722fc00de000d07ed30cfb0ae12080708c30b76
-ms.openlocfilehash: c2c43052a1a4a96d7c0a95578b7b3fa3a2fd8a74
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: ac07ca76df874c670e7e38698e89de6620f73cc4
 
 ---
 
@@ -25,7 +25,7 @@ ms.openlocfilehash: c2c43052a1a4a96d7c0a95578b7b3fa3a2fd8a74
 
 여기의 모든 예제에서 잉크 기능에 필요한 네임스페이스 참조를 추가하세요. 여기에는 "Windows.UI.Input.Inking"이 포함됩니다.
 
-## <span id="Basic_handwriting_recognition"></span><span id="basic_handwriting_recognition"></span><span id="BASIC_HANDWRITING_RECOGNITION"></span>기본 필기 인식
+## 기본 필기 인식
 
 
 여기에서는 설치된 기본 언어 팩과 연결된 필기 인식 엔진을 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에서 일련의 스트로크를 해석하는 방법을 보여 줍니다.
@@ -204,7 +204,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="International_recognition"></span><span id="international_recognition"></span><span id="INTERNATIONAL_RECOGNITION"></span>국가별 인식
+## 국가별 인식
 
 
 Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식에 사용할 수 있습니다.
@@ -452,7 +452,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="Dynamic_handwriting_recognition"></span><span id="dynamic_handwriting_recognition"></span><span id="DYNAMIC_HANDWRITING_RECOGNITION"></span>동적 필기 인식
+## 동적 필기 인식
 
 
 앞의 두 예제에서는 사용자가 버튼을 눌러 인식을 시작해야 합니다. 또한 스트로크 입력과 함께 기본 타이밍 함수를 사용하여 동적 인식을 수행할 수도 있습니다.
@@ -529,13 +529,13 @@ public MainPage()
 
 2.  첫 단계에서 추가한 세 가지 이벤트에 대한 처리기는 다음과 같습니다.
 
-    <span id="StrokesCollected"></span><span id="strokescollected"></span><span id="STROKESCOLLECTED"></span>[**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
+    [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     사용자가 펜 또는 손가락을 떼거나 마우스 단추를 놓아 수동 입력을 중지하면 인식 타이머를 시작합니다. 1초 동안 수동 입력이 없으면 인식이 시작됩니다.
 
-    <span id="StrokeStarted"></span><span id="strokestarted"></span><span id="STROKESTARTED"></span>[**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
+    [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     다음 타이머 틱 이벤트 전에 새 스트로크가 시작되면 새 스트로크는 단일 필기 항목의 연속이 될 가능성이 있으므로 타이머를 중지합니다.
 
-    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
+    [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
     1초 동안 수동 입력이 없으면 인식 함수를 호출합니다.
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
@@ -665,7 +665,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
@@ -679,6 +679,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

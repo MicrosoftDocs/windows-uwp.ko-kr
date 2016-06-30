@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 연습 - Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
-description: 이 연습에서는 모든 Direct3D 기능 수준의 디바이스에서 Direct3D 11을 사용하여 깊이 맵을 사용하는 섀도 볼륨을 렌더링하는 방법을 보여 줍니다.
+title: "연습 - Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현"
+description: "이 연습에서는 모든 Direct3D 기능 수준의 디바이스에서 Direct3D 11을 사용하여 깊이 맵을 사용하는 섀도 볼륨을 렌더링하는 방법을 보여 줍니다."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4bb1f5c71d83b2dc3271b5b2ceaa9a1156b00004
+
 ---
 
 # 연습&#58; Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
@@ -85,6 +89,7 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

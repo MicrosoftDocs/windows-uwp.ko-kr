@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Template settings 클래스
-title: Template settings 클래스
+description: "Template settings 클래스"
+title: "Template settings 클래스"
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
+
 ---
 
 # Template settings 클래스
@@ -107,6 +111,7 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

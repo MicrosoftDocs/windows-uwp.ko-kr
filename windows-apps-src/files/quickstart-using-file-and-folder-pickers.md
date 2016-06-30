@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
-title: 선택기를 사용하여 파일 및 폴더 열기
-description: 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다.
+title: "선택기를 사용하여 파일 및 폴더 열기"
+description: "사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: efb0b106c779820b2dee48eff6f09b54ae9ef2c4
+
 ---
 
 # 선택기를 사용하여 파일 및 폴더 열기
@@ -109,8 +113,7 @@ var picker = new Windows.Storage.Pickers.FileOpenPicker();
 이 예제에서는 세 가지 속성([**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) 및 [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850))을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 표시를 만듭니다.
 
 -   [
-            **ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855)를 **Thumbnail**
-          [**PickerViewMode**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) 열거형 값으로 설정하면 사진 미리 보기를 통해 파일 선택기에 파일을 표시하여 풍부한 시각적 표시가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
+            **ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855)를 **Thumbnail**[**PickerViewMode**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) 열거형 값으로 설정하면 사진 미리 보기를 통해 파일 선택기에 파일을 표시하여 풍부한 시각적 표시가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
 
 -   [
             **PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207890)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
@@ -191,6 +194,7 @@ else
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

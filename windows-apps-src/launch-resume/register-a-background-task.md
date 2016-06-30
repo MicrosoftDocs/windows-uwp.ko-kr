@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 백그라운드 작업 등록
-description: 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.
+author: TylerMSFT
+title: "백그라운드 작업 등록"
+description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
+
 ---
 
 # 백그라운드 작업 등록
@@ -37,14 +40,14 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 > ```cpp
@@ -56,7 +59,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 
@@ -74,7 +77,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -82,16 +85,16 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == name)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -119,9 +122,9 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -148,7 +151,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -156,16 +159,16 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -173,21 +176,21 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = name;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -198,7 +201,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >                                              IBackgroundTrigger ^ trigger,
 >                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -212,9 +215,9 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -225,20 +228,20 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -267,16 +270,16 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -284,21 +287,21 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = taskName;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -317,7 +320,7 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >                                                              IBackgroundTrigger ^ trigger,
 >                                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -331,34 +334,34 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
 >         
 >         hascur = iter->MoveNext();
 >     }
-> 
-> 
+>
+>
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -393,8 +396,6 @@ ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

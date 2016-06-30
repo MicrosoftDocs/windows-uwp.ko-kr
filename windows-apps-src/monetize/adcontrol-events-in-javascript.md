@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 2383296e-c3d7-4b49-bcd2-621391228fdb
-description: AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다.
-title: JavaScript의 AdControl 이벤트
+description: "AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다."
+title: "JavaScript의 AdControl 이벤트"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 5a47915b0dd2792ed50cc5d556b1181ee2c259e1
+
 
 ---
 
@@ -51,6 +55,7 @@ window.myAdEngagedChanged = function (sender) {
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

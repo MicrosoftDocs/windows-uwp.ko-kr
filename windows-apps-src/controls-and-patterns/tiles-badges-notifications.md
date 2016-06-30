@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
-title: 타일, 배지 및 알림
+Description: "타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다."
+title: "타일, 배지 및 알림"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+
 ---
 
 # UWP 앱에 대한 타일, 배지 및 알림
@@ -127,6 +131,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

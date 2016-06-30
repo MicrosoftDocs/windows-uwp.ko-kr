@@ -1,12 +1,15 @@
 ---
 author: mijacobs
-Description: 색은 앱의 다양한 수준의 정보를 통해 탐색하는 직관적인 방식을 제공하며 상호 작용 모델을 강화하는 데 중요한 도구 역할을 합니다.
-title: 색
+Description: "색은 앱의 다양한 수준의 정보를 통해 탐색하는 직관적인 방식을 제공하며 상호 작용 모델을 강화하는 데 중요한 도구 역할을 합니다."
+title: "색"
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+
 ---
 
 # 색
@@ -50,7 +53,7 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 색으로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
+XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 색으로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
     </div>
 </aside>
 
@@ -90,7 +93,7 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            각 색은 `System*Color`명명 규칙(예: `SystemChromeHighColor`)을 준수하는 XAML [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes)로 사용할 수 있습니다. [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) 또는 [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx)을 통해 앱 테마를 제어할 수 있습니다.
+각 색은 `System*Color`명명 규칙(예: `SystemChromeHighColor`)을 준수하는 XAML [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes)로 사용할 수 있습니다. [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) 또는 [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx)을 통해 앱 테마를 제어할 수 있습니다.
     </div>
 </aside>
 
@@ -99,6 +102,7 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
 색상표는 화면 사용에 최적화됩니다. 최적화된 읽기 환경을 위해 배경에 대한 텍스트 대비를 4.5: 1로 유지하는 것이 좋습니다. [명암비](http://leaverou.github.io/contrast-ratio/)와 같이 무료로 색 통과 여부를 테스트할 수 있는 많은 도구가 있습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

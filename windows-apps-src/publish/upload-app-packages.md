@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 패키지 페이지에서는 제출 중인 앱의 모든 패키지 파일(.xap, .appx, .appxupload 및/또는 .appxbundle)을 업로드합니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다.
-title: 앱 패키지 업로드
+Description: "패키지 페이지에서는 제출 중인 앱의 모든 패키지 파일(.xap, .appx, .appxupload 및/또는 .appxbundle)을 업로드합니다. 이 단계에서 앱의 대상으로 지정한 운영 체제의 패키지를 업로드할 수 있습니다."
+title: "앱 패키지 업로드"
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+
 ---
 
 # 앱 패키지 업로드
@@ -55,6 +59,7 @@ ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

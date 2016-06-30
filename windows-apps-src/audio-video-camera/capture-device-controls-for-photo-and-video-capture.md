@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: 이 문서에서는 비디오 디바이스 컨트롤로 광학 이미지 손떨림 보정 및 부드러운 줌을 비롯한 향상된 사진 및 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다.
-title: 사진 및 비디오 캡처를 위한 캡처 디바이스 컨트롤
+description: "이 문서에서는 비디오 디바이스 컨트롤로 광학 이미지 손떨림 보정 및 부드러운 줌을 비롯한 향상된 사진 및 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다."
+title: "사진 및 비디오 캡처를 위한 캡처 디바이스 컨트롤"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
+
 ---
 
 # 사진 및 비디오 캡처를 위한 캡처 디바이스 컨트롤
@@ -350,6 +354,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 * [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

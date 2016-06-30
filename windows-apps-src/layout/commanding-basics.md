@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: UWP(유니버설 Windows 플랫폼) 앱에서 명령 요소는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 명령 디자인 기본 사항
+Description: "UWP(유니버설 Windows 플랫폼) 앱에서 명령 요소는 사용자가 메일 보내기, 항목 삭제 또는 양식 제출과 같은 작업을 수행할 수 있게 해주는 대화형 UI 요소입니다."
+title: "UWP(유니버설 Windows 플랫폼) 앱용 명령 디자인 기본 사항"
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
+
 ---
 
 #  UWP 앱의 명령 디자인 기본 사항
@@ -152,6 +156,7 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: XAML 이름 범위에는 개체의 XAML 정의 이름과 이에 해당하는 인스턴스 항목 사이의 관계가 저장됩니다. 이 개념은 다른 프로그래밍 언어 및 기술에서 사용되는 이름 범위라는 용어의 보다 넓은 의미에 가깝습니다.
-title: XAML 이름 범위
+description: "XAML 이름 범위에는 개체의 XAML 정의 이름과 이에 해당하는 인스턴스 항목 사이의 관계가 저장됩니다. 이 개념은 다른 프로그래밍 언어 및 기술에서 사용되는 이름 범위라는 용어의 보다 넓은 의미에 가깝습니다."
+title: "XAML 이름 범위"
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b8b833f40bc38799acc8813d38ddea63426f05b3
+
 ---
 
 # XAML 이름 범위
@@ -85,6 +89,7 @@ XAML 이름 범위는 서로 독립적이므로 템플릿이 적용되는 페이
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

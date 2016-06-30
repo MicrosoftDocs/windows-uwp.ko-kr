@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
-title: 아이콘
+Description: "좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다."
+title: "아이콘"
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
+
 ---
 
 # UWP 앱의 아이콘
@@ -172,6 +176,7 @@ template: detail.hbs
 * [타일 및 아이콘 자산에 대한 지침](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

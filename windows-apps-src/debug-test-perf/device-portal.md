@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
-title: Windows Device Portal 개요
-description: Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다.
+title: "Windows Device Portal 개요"
+description: "Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다."
+ms.sourcegitcommit: c6f00006e656970e4a5bb11e3368faa92cbb8eca
+ms.openlocfilehash: fe4945bf3048a0c38e844a74fa6fc46706085d6d
+
 ---
 # Windows Device Portal 개요
 
@@ -124,6 +127,8 @@ PC에서의 작업 관리자와 매우 유사한 이 페이지에서는 현재 �
 - **공급자 기록**: 현재 세션 중 활성화된 ETW 공급자를 보여 줍니다. 비활성화된 공급자를 활성화하려면 **사용**을 클릭 또는 탭합니다. 기록을 지우려면 **지우기**를 클릭 또는 탭합니다.
 - **이벤트**: 선택된 공급자의 ETW 이벤트를 표 형식으로 나열합니다. 이 표는 실시간으로 업데이트됩니다. 모든 ETW 이벤트를 표에서 삭제하려면 표 아래에 있는 **지우기** 단추를 클릭합니다. 이렇게 해도 공급자는 비활성화되지 않습니다. **파일로 저장**을 클릭하여 현재 수집된 ETW 이벤트를 CSV 파일에 로컬로 내보낼 수 있습니다.
 
+ETW 추적 사용에 대한 자세한 내용은 ETW 추적을 사용하여 앱에서 실시간 로그를 수집하는 방법에 대한 [블로그 게시물](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/)을 참조하세요. 
+
 ### 성능 추적
 
 디바이스에서 [WPR(Windows Performance Recorder)](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) 추적을 캡처합니다.
@@ -151,7 +156,37 @@ PC에서의 작업 관리자와 매우 유사한 이 페이지에서는 현재 �
 
 ![모바일용 디바이스 포털](images/device-portal/mob-device-portal-network.png)
 
+## 서비스 기능 및 참고 사항
 
-<!--HONumber=May16_HO2-->
+### DNS-SD
+
+디바이스 포털은 DNS-SD를 사용하여 로컬 네트워크에서 존재 여부를 알립니다.  모든 디바이스 포털 인스턴스는 디바이스 유형에 관계없이 "WDP._wdp._tcp.local"에서 알립니다. 서비스 인스턴스에 대한 TXT 레코드는 다음을 제공합니다.
+
+키 | 형식 | 설명 
+----|------|-------------
+S | int | 디바이스 포털의 보안 포트입니다.  0(영)인 경우 디바이스 포털은 HTTPS 연결을 수신 대기하지 않습니다. 
+D | string | 디바이스의 유형입니다.  "Windows.*" 형식으로 제공됩니다(예: Windows.Xbox 또는 Windows.Desktop).
+A | string | 디바이스 아키텍처입니다.  ARM, x86 또는 AMD64입니다.  
+T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자가 적용한 태그입니다. 사용 방법은 태그 REST API를 참조하세요. 목록은 이중 null로 종료됩니다.  
+
+일부 디바이스는 DNS-SD 레코드에 의해 알려진 HTTP 포트에서 수신 대기하지 않으므로 HTTPS 포트에서 연결하는 것이 좋습니다. 
+
+### CSRF 보호 및 스크립팅
+
+[CSRF 공격](https://wikipedia.org/wiki/Cross-site_request_forgery)으로부터 보호하기 위해 모든 비 GET 요청에서 고유한 토큰이 필요합니다. 이 토큰(X-CSRF-Token 요청 헤더)은 세션 쿠키(CSRF-Token)에서 파생됩니다. 디바이스 포털 웹 UI에서 CSRF-Token 쿠키는 각 요청에서 X-CSRF-Token 헤더로 복사됩니다.
+
+**중요** 이 보호는 독립 실행형 클라이언트(예: 명령줄 유틸리티)에서 REST API의 사용을 방지합니다. 이 문제는 다음 세 가지 방법으로 해결할 수 있습니다. 
+
+1. "auto-" 사용자 이름을 사용합니다. 사용자 이름 앞에 "auto-"를 추가하는 클라이언트는 CSRF 보호를 우회하게 됩니다. 이 사용자 이름은 브라우저를 통해 디바이스 포털에 로그인하는 데 사용할 수 없습니다. 서비스가 CSRF 공격에 노출되기 때문입니다. 예: 디바이스 포털의 사용자 이름이 “admin”인 경우 CSRF 보호를 우회하려면 ```curl -u auto-admin:password <args>```를 사용해야 합니다. 
+
+2. 클라이언트에서 쿠키-헤더 체계를 구현합니다. 이를 위해서는 GET 요청으로 세션 쿠키를 설정한 다음 모든 후속 요청에서 헤더와 쿠키를 둘 다 포함해야 합니다. 
+ 
+3. 인증을 사용하지 않도록 설정하고 HTTP를 사용합니다. CSRF 보호는 HTTPS 끝점에만 적용되므로 HTTP 끝점의 연결에서는 위의 작업을 수행할 필요가 없습니다. 
+
+**참고**: "auto-"로 시작되는 사용자 이름은 브라우저를 통해 디바이스 포털에 로그인할 수 없습니다.  
+
+
+
+<!--HONumber=Jun16_HO4-->
 
 

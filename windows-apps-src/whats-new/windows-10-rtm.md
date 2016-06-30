@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-Description: Windows 10 RTM 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다.
-title: Windows 10 RTM의 새로운 기능 - 2015년 7월
+Description: "Windows 10 RTM 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다."
+title: "Windows 10 RTM의 새로운 기능 - 2015년 7월"
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 67e5be130647e5ebeeef6e4c0dcbd822e8b84184
+
 ---
 
 # Windows 10 RTM의 새로운 기능 - 2015년 7월
@@ -195,6 +199,7 @@ WebView.ClearTemporaryWebDataAsync 메서드 | 사용자가 XAML WebView 내의 
 ---
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

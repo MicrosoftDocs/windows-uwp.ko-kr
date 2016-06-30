@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
-title: Xbox One 개발자 모드 활성화
-description: 정품 모드와 개발자 모드 간에 전환할 수 있도록 개발자 모드를 활성화하는 방법
+title: "Xbox One 개발자 모드 활성화"
+description: "정품 모드와 개발자 모드 간에 전환할 수 있도록 개발자 모드를 활성화하는 방법"
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1
+ms.openlocfilehash: 9ad9904150acb00982c96eebeaf010f7023d3320
+
 ---
 
 # Xbox One 개발자 모드 활성화
@@ -78,6 +82,7 @@ Xbox One에는 *정품* 모드(1) 및 *개발자* 모드(2)의 두 가지 모드
 - [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

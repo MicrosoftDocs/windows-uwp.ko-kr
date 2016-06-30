@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는 앱으로 등록하기 위한 요구 사항에 대해 설명합니다.
+Description: "UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는 앱으로 등록하기 위한 요구 사항에 대해 설명합니다."
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
-title: 스토어의 접근성
+title: "스토어의 접근성"
 label: Accessibility in the Store
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 46dfe4fba383861c704b2ba9070bdd8102b10562
+
 ---
 
 # 스토어의 접근성  
@@ -43,6 +47,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는
 * [접근성](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

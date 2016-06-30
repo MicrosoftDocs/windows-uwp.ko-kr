@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
-title: 디바이스 선택기 빌드
-description: 디바이스 선택기를 빌드하면 디바이스를 열거할 때 검색하는 디바이스를 제한할 수 있습니다.
+title: "디바이스 선택기 빌드"
+description: "디바이스 선택기를 빌드하면 디바이스를 열거할 때 검색하는 디바이스를 제한할 수 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
+
 ---
 # 디바이스 선택기 빌드
 
@@ -119,6 +123,7 @@ System.Devices.IpAddress:=[]
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

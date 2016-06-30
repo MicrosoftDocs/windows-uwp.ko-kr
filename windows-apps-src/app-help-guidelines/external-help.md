@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: 앱에 대한 자세한 지침과 권장 사항에 대해 외부 도움말 페이지를 디자인합니다.
-title: 외부 도움말 페이지 디자인에 대한 지침
+Description: "앱에 대한 자세한 지침과 권장 사항에 대해 외부 도움말 페이지를 디자인합니다."
+title: "외부 도움말 페이지 디자인에 대한 지침"
 label: External help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 03ef3fc34d2018c0ec712977065377a9c52cd8b2
+
 ---
 
 # 외부 도움말 페이지
@@ -38,6 +42,7 @@ template: detail.hbs
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

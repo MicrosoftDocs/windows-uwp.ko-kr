@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: 사용자 위치 가져오기
-description: 사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다.
+title: "사용자 위치 가져오기"
+description: "사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다."
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
+
 ---
 
 # 사용자 위치 가져오기
@@ -268,6 +272,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

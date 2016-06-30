@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
-title: 교차 방향으로 밀기에 대한 지침
+Description: "교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다."
+title: "교차 방향으로 밀기에 대한 지침"
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
+
 ---
 
 # 교차 방향으로 밀기에 대한 지침
@@ -150,6 +154,7 @@ template: detail.hbs
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

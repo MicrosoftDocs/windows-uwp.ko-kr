@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
-description: 광고 조정을 사용하기 전에 앱에서 사용할 각 광고 네트워크에서 계정을 설정해야 합니다.
-title: 광고 네트워크 선택 및 관리
+description: "광고 조정을 사용하기 전에 앱에서 사용할 각 광고 네트워크에서 계정을 설정해야 합니다."
+title: "광고 네트워크 선택 및 관리"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 49c9b8e60da9239c948265fb22563013019da259
+
 ---
 
 # 광고 네트워크 선택 및 관리
@@ -126,6 +130,7 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 250;
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

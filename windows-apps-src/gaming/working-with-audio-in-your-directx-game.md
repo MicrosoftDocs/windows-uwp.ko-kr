@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임의 오디오
-description: 음악 및 사운드를 개발하여 DirectX 게임에 통합하는 방법 및 오디오 신호를 처리하여 동적 및 위치 사운드를 만드는 방법을 알아봅니다.
+title: "게임의 오디오"
+description: "음악 및 사운드를 개발하여 DirectX 게임에 통합하는 방법 및 오디오 신호를 처리하여 동적 및 위치 사운드를 만드는 방법을 알아봅니다."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
+
 ---
 
 # 게임의 오디오
@@ -315,6 +319,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

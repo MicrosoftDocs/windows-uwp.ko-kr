@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
-title: 홈 그룹 콘텐츠 액세스
-description: 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
+title: "홈 그룹 콘텐츠 액세스"
+description: "사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
+
 ---
 # 홈 그룹 콘텐츠 액세스
 
@@ -212,6 +216,7 @@ description: 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

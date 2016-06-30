@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 원시 알림은 짧고 일반적인 목적의 알림으로,
-title: 원시 알림 개요
+Description: "원시 알림은 짧고 일반적인 목적의 알림으로,"
+title: "원시 알림 개요"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
+
 ---
 
 # 원시 알림 개요
@@ -127,6 +131,7 @@ Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=2
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

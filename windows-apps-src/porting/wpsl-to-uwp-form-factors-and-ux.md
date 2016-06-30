@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다.
-title: 폼 팩터 및 UX에 대해 Windows Phone Silverlight를 UWP로 포팅
+description: "Windows 앱은 PC, 모바일 디바이스 및 기타 여러 종류의 디바이스에서 일반적인 모양과 느낌을 공유합니다. 사용자 인터페이스, 입력 및 조작 패턴이 매우 비슷하고, 디바이스 간에 이동하면 친숙한 환경이 제공됩니다."
+title: "폼 팩터 및 UX에 대해 Windows Phone Silverlight를 UWP로 포팅"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
+
 ---
 
 #  폼 팩터 및 UX에 대해 Windows Phone Silverlight를 UWP로 포팅
@@ -67,6 +71,7 @@ Windows Phone Silverlight 인터페이스는 터치와 관련이 있습니다. �
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

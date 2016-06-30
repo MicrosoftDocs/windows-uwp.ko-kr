@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실험을 실행하기 전 개발자 센터 대시보드에서 실험을 정의해야 합니다.
-title: 개발자 센터 대시보드에서 실험 정의
+Description: "A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실험을 실행하기 전 개발자 센터 대시보드에서 실험을 정의해야 합니다."
+title: "개발자 센터 대시보드에서 실험 정의"
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+
 ---
 
 # 개발자 센터 대시보드에서 실험 정의
@@ -80,6 +84,7 @@ API 키는 앱을 개발자 센터 계정의 실험과 연결하는 고유 ID입
   * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

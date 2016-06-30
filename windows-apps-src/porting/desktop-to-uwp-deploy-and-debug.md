@@ -1,8 +1,11 @@
 ---
 author: awkoren
-Description: 데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(Win32, WPF 및 Windows Forms)에서 변환된 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 디버깅합니다.
+Description: "데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(Win32, WPF 및 Windows Forms)에서 변환된 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 디버깅합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: Windows 데스크톱 응용 프로그램에서 변환된 UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅
+title: "Windows 데스크톱 응용 프로그램에서 변환된 UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅"
+ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
+ms.openlocfilehash: 14634c12435cd8d6d4471a65c0f8deb36e3b1c80
+
 ---
 
 # 변환된 UWP 앱 배포 및 디버깅(Project Centennial)
@@ -176,6 +179,8 @@ Visual Studio는 이제 응용 프로그램의 설치 관리자에서 변환기�
 
 만든 인증서를 가져오지 않은 컴퓨터에서 Add-AppxPackage cmdlet을 실행하려고 하면 오류가 발생합니다.
 
+앱을 배포하기 전에 인증서로 서명해야 합니다. 인증서를 만드는 방법에 대한 자세한 내용은 [.Appx 패키지 서명](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx)을 참조하세요. 
+
 다음은 이전에 만든 인증서를 가져오는 방법입니다. 직접 설치하거나, 서명한 Appx에서 설치할 수 있으며 고객도 마찬가지입니다.
 1.  파일 탐색기에서 테스트 인증서로 서명한 Appx를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택합니다.
 2.  **디지털 서명** 탭을 클릭하거나 탭합니다.
@@ -188,8 +193,6 @@ Visual Studio는 이제 응용 프로그램의 설치 관리자에서 변환기�
 9.  **찾아보기**를 클릭하거나 탭합니다. 인증서 저장소 선택 창에서 아래로 스크롤한 후 **신뢰할 수 있는 사용자**를 선택하고 **확인**을 클릭하거나 탭합니다.
 10. **다음**을 클릭하거나 탭합니다. 새 화면이 나타납니다. **마침**을 클릭하거나 탭합니다.
 11. 확인 대화 상자가 나타납니다. 그러면 **확인**을 클릭합니다. 인증서에 문제가 있음을 나타내는 다른 대화 상자가 표시될 경우 인증서 문제를 해결해야 할 수도 있습니다.
-
-### 추가 정보
 
 Windows에서 인증서를 신뢰할 수 있으려면 인증서가 **인증서(로컬 컴퓨터) &gt; 신뢰할 수 있는 루트 인증 기관 &gt; 인증서** 노드 또는 **인증서(로컬 컴퓨터) &gt; 신뢰할 수 있는 사용자 &gt; 인증서** 노드에 있어야 합니다. 이러한 두 위치에 있는 인증서만 로컬 컴퓨터의 컨텍스트에서 인증서 신뢰를 확인할 수 있습니다. 그렇지 않으면 다음 문자열과 유사한 오류 메시지가 표시됩니다.
 ```CMD
@@ -207,7 +210,16 @@ in the app package must be trusted."
 
 VFS라는 폴더 내부에는 앱이 종속되는 DLL이 들어 있는 폴더가 있습니다. 이러한 DLL은 앱의 클래식 데스크톱 버전에 대한 시스템 폴더에 설치됩니다. 그러나 UWP 앱의 경우 DLL은 앱에 로컬입니다. 따라서 UWP 앱이 설치 및 제거될 때 버전 문제가 발생하지 않습니다.
 
+## 참고 항목
+[UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-<!--HONumber=May16_HO2-->
+[데스크톱 앱 변환기 미리 보기(Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+
+[UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-manual-conversion)
+
+[GitHub의 UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+
+
+<!--HONumber=Jun16_HO4-->
 
 

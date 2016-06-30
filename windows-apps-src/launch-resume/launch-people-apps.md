@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 피플 앱 시작
-description: 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다.
+author: TylerMSFT
+title: "피플 앱 시작"
+description: "이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: fd3c38dd0b6df2f430d7be4c40e7131d4ae98616
+
 ---
 
 # 피플 앱 실행
@@ -205,8 +208,6 @@ ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

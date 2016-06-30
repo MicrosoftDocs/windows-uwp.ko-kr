@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 시작 화면을 더 오래 표시
-description: 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다.
+author: TylerMSFT
+title: "시작 화면을 더 오래 표시"
+description: "앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다."
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
+
 ---
 
 # 시작 화면을 더 오래 표시
@@ -102,7 +105,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
         private SplashScreen splash; // Variable to hold the splash screen object.
         internal bool dismissed = false; // Variable to track splash screen dismissal status.
         internal Frame rootFrame;
-     
+
        // Define methods and constructor
     }
     ```
@@ -136,7 +139,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
             PositionRing();
         }
 
-        // Create a Frame to act as the navigation context 
+        // Create a Frame to act as the navigation context
         rootFrame = new Frame();            
     }
     ```
@@ -228,11 +231,11 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
     {
         if (loadState)
         {
-             // code to load your app's state here 
+             // code to load your app's state here
         }
     }
     ```
-    
+
     App.xaml.cs에서 시작 활성화 처리기를 수정할 때 앱의 이전 [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)가 **Terminated**인 경우에도 `loadstate`를 true로 설정합니다. 그러면 `RestoreStateAsync` 메서드가 앱을 이전 상태로 복원합니다. 앱 실행, 일시 중단 및 종료에 대한 개요는 [앱 수명 주기](app-lifecycle.md)를 참조하세요.
 
 ## 시작 활성화 처리기 수정
@@ -552,8 +555,6 @@ namespace SplashScreenExample
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

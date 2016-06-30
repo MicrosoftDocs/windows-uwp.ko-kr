@@ -1,8 +1,12 @@
 ---
-title: 암호화에 대한 내보내기 제한
-description: 이 정보를 사용하여 앱이 Windows 스토어에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다.
+title: "암호화에 대한 내보내기 제한"
+description: "이 정보를 사용하여 앱이 Windows 스토어에 나열될 수 없는 방식으로 암호화를 사용하는지 확인할 수 있습니다."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 37d6131891e93d73021c860df45d1b5fdd7cfa53
+
 ---
 
 # 암호화에 대한 내보내기 제한
@@ -55,6 +59,7 @@ author: awkoren
 ECCN이 없는 경우 [ECCN Questions and Answers](http://go.microsoft.com/fwlink/p/?LinkID=245646)를 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

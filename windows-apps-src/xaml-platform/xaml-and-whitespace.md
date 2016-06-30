@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다.
-title: XAML 및 공백
+description: "XAML에서 사용되는 공백 처리 규칙에 대해 알아봅니다."
+title: "XAML 및 공백"
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 408c9c7f79f5db81bdf7810a6c71cf25c1c8ec51
+
 ---
 
 # XAML 및 공백
@@ -49,6 +53,7 @@ XAML 프로세서 공백 정규화의 영향을 받지 않고 최종 표시되�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Windows 지도 앱 실행
-description: 앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다.
+author: TylerMSFT
+title: "Windows 지도 앱 실행"
+description: "앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
+
 ---
 
 # Windows 지도 앱 실행
@@ -16,7 +19,6 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 **팁** 앱에서 Windows 지도 앱을 실행하는 방법을 알아보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
 
 ## URI 소개
-
 
 URI 체계를 사용하면 하이퍼링크를 클릭하거나 앱에서 프로그래밍 방식으로 앱을 열 수 있습니다. **mailto:**를 사용하여 새 메일을 시작하거나 **http:**를 사용하여 웹 브라우저를 열 수 있는 것처럼 **bingmaps:**, **ms-drive-to:** 및 **ms-walk-to:**를 사용하여 Windows 지도 앱을 열 수 있습니다.
 
@@ -68,7 +70,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 | 샘플 URI                                                                 | 결과                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:                                                                  | 지도 앱을 엽니다.                                                                                                                                                                                       |
+| bingmaps:?                                                                 | 지도 앱을 엽니다.                                                                                                                                                                                       |
 | bingmaps:?cp=40.726966~-74.006076                                          | 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&amp;lvl=10                                   | 확대/축소 수준을 10으로 하여 뉴욕시를 중심으로 하는 지도를 표시합니다.                                                                                                                                       |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | 화면의 크기를 경계 상자로 하여 뉴욕시의 지도를 표시합니다.                                                                                                                          |
@@ -286,7 +288,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p>ss = "ss=" BIT</p>
 <p>예제:</p>
 <p>ss=1</p></td>
-<td align="left"><p>다음과 같은 경우 거리 수준 이미지가 표시됩니다. <code>ss=1</code>. **ss** 매개 변수를 생략하면 다음과 동일한 결과가 생성됩니다. <code>ss=0</code>. **cp** 매개 변수와 함께 사용하여 거리 수준 보기의 위치를 지정합니다.</p>
+<td align="left"><p><code>ss=1</code>이면 거리 수준 이미지가 표시됩니다. **ss** 매개 변수를 생략하면 <code>ss=0</code>과 동일한 결과가 생성됩니다. **cp** 매개 변수와 함께 사용하여 거리 수준 보기의 위치를 지정합니다.</p>
 <div class="alert">
 > **참고** 일부 지역에서는 거리 수준 이미지를 사용할 수 없습니다.
 </div>
@@ -300,7 +302,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p>trfc = "trfc=" BIT</p>
 <p>예제:</p>
 <p>trfc=1</p></td>
-<td align="left"><p>지도에 교통 정보가 포함되는지 여부를 지정합니다. trfc 매개 변수를 생략하면 다음과 동일한 결과가 생성됩니다. <code>trfc=0</code>.</p>
+<td align="left"><p>지도에 교통 정보가 포함되는지 여부를 지정합니다. trfc 매개 변수를 생략하면 <code>trfc=0</code>과 동일한 결과가 생성됩니다.</p>
 <div class="alert">
 > **참고** 교통량 데이터는 일부 지역에서는 사용할 수 없습니다.
 </div>
@@ -325,9 +327,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>rtp=adr.Mountain%20View,%20CA~adr.SFO</p>
 <p>rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</p></td>
 <td align="left"><p>경로의 시작 및 종료를 정의하여 지도에 그립니다. 이때 물결표(**~**)로 구분합니다. 각 웨이포인트는 위도, 경도 및 선택적 제목을 사용한 위치 또는 주소 식별자로 정의됩니다.</p>
-<p>전체 경로는 정확히 두 웨이포인트를 포함합니다. 예를 들어 두 개의 웨이포인트가 있는 경로는 다음과 같이 정의됩니다. <code>rtp="A"~"B"</code>.</p>
-<p>불완전한 경로를 지정할 수도 있습니다. 예를 들어 다음을 사용하여 경로 시작만을 정의할 수 있습니다. <code>rtp="A"~</code>. 이 경우, 길 찾기 입력은 포커스가 있는 **시작** 필드와 **끝** 필드에 제공된 웨이포인트로 표시됩니다.</p>
-<p>경로의 끝만 지정한 경우(예: <code>rtp=~"B"</code>) 방향 패널은 **끝** 필드에 제공된 웨이포인트로 표시됩니다. 정확한 현재 위치를 사용할 수 있는 경우 현재 위치는 포커스가 있는 **시작:** 필드에 미리 채워집니다.</p>
+<p>전체 경로는 정확히 두 웨이포인트를 포함합니다. 예를 들어 두 개의 웨이포인트가 있는 경로는 <code>rtp="A"~"B"</code>와 같이 정의됩니다.</p>
+<p>불완전한 경로를 지정할 수도 있습니다. 예를 들어 <code>rtp="A"~</code>를 사용하여 경로 시작만을 정의할 수 있습니다. 이 경우, 길 찾기 입력은 포커스가 있는 **시작** 필드와 **끝** 필드에 제공된 웨이포인트로 표시됩니다.</p>
+<p><code>rtp=~"B"</code>와 마찬가지로 경로의 끝만 지정된 경우 길 찾기 패널은 **끝** 필드로 제공된 웨이포인트로 표시됩니다. 정확한 현재 위치를 사용할 수 있는 경우 현재 위치는 포커스가 있는 **시작:** 필드에 미리 채워집니다.</p>
 <p>불완전한 경로를 지정하면 경로 선이 그려지지 않습니다.</p>
 <p>**mode** 매개 변수와 함께 사용하여 교통 모드(운전, 대중교통 또는 도보)를 지정할 수 있습니다. **mode**를 지정하지 않으면 사용자의 교통 기본 설정 모드를 사용하여 길 찾기가 제공됩니다.</p>
 <div class="alert">
@@ -369,7 +371,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</p></td>
 <td align="left"><p>지도 및 목록에 추가되는 지점의 컬렉션입니다. name 매개 변수를 사용하여 지점 컬렉션의 이름을 지정할 수 있습니다. 지점은 위도, 경도 및 제목(옵션)을 사용하여 지정됩니다.</p>
 <p>이름과 여러 지점을 물결표(**~**)로 구분합니다.</p>
-<p>지정한 항목에 물결표가 있는 경우 물결표가 다음과 같이 인코드되어 있는지 확인합니다. <code>%7E</code>. 중심점 및 확대/축소 수준 매개 변수가 함께 제공되지 않는 경우, 컬렉션에서는 최상의 지도 보기가 제공됩니다.</p>
+<p>지정한 항목에 물결표가 있는 경우 물결표가 <code>%7E</code>로 인코딩되어 있는지 확인합니다. 중심점 및 확대/축소 수준 매개 변수가 함께 제공되지 않는 경우, 컬렉션에서는 최상의 지도 보기가 제공됩니다.</p>
 
 <p>**중요** 지정한 항목에 밑줄이 있는 경우, 밑줄이 %255F로 이중 인코드되어 있는지 확인합니다.</p>
 
@@ -428,6 +430,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

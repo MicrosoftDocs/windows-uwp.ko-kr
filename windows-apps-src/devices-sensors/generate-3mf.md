@@ -1,10 +1,14 @@
 ---
 author: PatrickFarley
-Description: '3D 제조 형식 파일 유형의 구조 및 Windows.Graphics.Printing3D API를 사용하여 이 구조를 만들고 조작하는 방법을 설명합니다.'
-MS-HAID: 'dev\_devices\_sensors.generate\_3mf'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "3D 제조 형식 파일 유형의 구조 및 Windows.Graphics.Printing3D API를 사용하여 이 구조를 만들고 조작하는 방법을 설명합니다."
+MS-HAID: dev\_devices\_sensors.generate\_3mf
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 3MF 패키지 생성
+title: "3MF 패키지 생성"
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: fd85530d27a157bd65a6feec8a20cca8cadfb88f
+
 ---
 
 # 3MF 패키지 생성
@@ -141,6 +145,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

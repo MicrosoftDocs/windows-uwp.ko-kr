@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
-title: 파일, 폴더 및 라이브러리
-description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다.
+title: "파일, 폴더 및 라이브러리"
+description: "앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+
 ---
  # 파일, 폴더 및 라이브러리
 
@@ -41,6 +45,7 @@ description: 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

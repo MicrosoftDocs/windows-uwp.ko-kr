@@ -3,8 +3,8 @@ author: jwmsft
 description: "경로 도형을 XAML 특성 값으로 지정하는 데 사용할 수 있는 이동 및 그리기 명령(미니 언어)에 대해 알아봅니다."
 title: "이동 및 그리기 명령 구문"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
-ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
-ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
 
 ---
 
@@ -111,7 +111,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| x | [**이중**](T:System.Double) <br/> 선 끝점의 x 좌표입니다. |
+| x | [**이중**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 선 끝점의 x 좌표입니다. |
 
 **세로선 명령**
 
@@ -123,7 +123,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| *Y* | [**이중**](T:System.Double) <br/> 선 끝점의 y 좌표입니다. |
+| *Y* | [**이중**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 선 끝점의 y 좌표입니다. |
 
 **입방형 3차원 곡선 명령**
 
@@ -192,7 +192,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 | 용어 | 설명 |
 |------|-------------|
 | *size* | [**크기**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>호의 x 반경 및 y 반경입니다. |
-| *rotationAngle* | [**이중**](T:System.Double) <br/> 타원의 회전(도 단위)입니다. |
+| *rotationAngle* | [**이중**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 타원의 회전(도 단위)입니다. |
 | *isLargeArcFlag* | 호의 각도가 180도 이상이어야 하는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *sweepDirectionFlag* | 호가 양수 각도 방향으로 그려지는 경우 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> 호를 그려 도달하는 점입니다.|
@@ -216,8 +216,8 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 
 | 용어 | 설명 |
 |------|-------------|
-| *x* | [**이중**](T:System.Double) <br/> 점의 x 좌표입니다. |
-| *Y* | [**이중**](T:System.Double) <br/> 점의 y 좌표입니다. |
+| *x* | [**이중**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 점의 x 좌표입니다. |
+| *Y* | [**이중**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> 점의 y 좌표입니다. |
 
 **추가 참고 사항**
 
@@ -247,6 +247,6 @@ XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

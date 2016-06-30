@@ -1,8 +1,12 @@
 ---
 author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: 이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다.
-title: PlayReady를 사용한 적응 스트리밍
+description: "이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다."
+title: "PlayReady를 사용한 적응 스트리밍"
+translationtype: Human Translation
+ms.sourcegitcommit: 176f8989aea5402106e3c14144948cec87a5dc27
+ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
+
 ---
 
 # PlayReady를 사용한 적응 스트리밍
@@ -298,6 +302,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

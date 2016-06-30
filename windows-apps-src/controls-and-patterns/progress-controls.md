@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다.
-title: 진행률 컨트롤에 대한 지침
+Description: "진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다."
+title: "진행률 컨트롤에 대한 지침"
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 8a03ca36f6e306a03e8aec7b46e51bfff0079bf5
+
 ---
 # 진행률 컨트롤
 
@@ -298,6 +302,7 @@ stackPanel1.Children.Add(progressRing1);
 - [Windows Phone에 대한 확정되지 않은 사용자 지정 진행률 표시줄을 만드는 방법](http://go.microsoft.com/fwlink/p/?LinkID=392426)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,13 @@
 ---
-Description: 다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이스에서만 실행할 수 있는 유니버설 Windows 앱을 만드는 데 필요한 정보입니다.
-title: Windows 10 앱 사용 방법 가이드 - Windows 앱 개발
+Description: "다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이스에서만 실행할 수 있는 유니버설 Windows 앱을 만드는 데 필요한 정보입니다."
+title: "Windows 10 앱 사용 방법 가이드 - Windows 앱 개발"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
 author: martinekuan
 redirect_url: https://developer.microsoft.com/en-us/windows/develop
+translationtype: Human Translation
+ms.sourcegitcommit: 753a917c0ecbf445560203dbc1406acae52e5265
+ms.openlocfilehash: 97e016047c864026fe0c72e4b7cb819f0fc80748
+
 ---
 
 
@@ -21,6 +25,7 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

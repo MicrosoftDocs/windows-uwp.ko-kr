@@ -3,8 +3,8 @@ author: jwmsft
 description: "C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱의 사용자 지정 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다."
 title: "사용자 지정 종속성 속성"
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 63301870ab53f4061cac9b9ad87a5fb75e8c48da
+ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
+ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
 ---
 
@@ -257,7 +257,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     String s = e.NewValue as String; //null checks omitted
     if (s == String.Empty)
     {
-        iwlc.HasLabelValue = false;
+        iwlc.HasLabelValue = false;s
     } else {
         iwlc.HasLabelValue = true;
     }
@@ -282,7 +282,7 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
     if (s->IsEmpty()) {
         iwlc->HasLabelValue=false;
     }
-}
+}s
 ```
 
 ### 구조 및 열거에 대해 속성이 변경된 동작
@@ -345,7 +345,7 @@ Windows 런타임 API에서 컬렉션 형식 종속성 속성은 상대적으로
 -   일반적으로 컬렉션은 애니메이션하지 않습니다.
 -   일반적으로 스타일 또는 템플릿을 사용하여 컬렉션의 항목을 미리 채우지 않습니다.
 -   컬렉션에 바인딩하는 것이 주요 시나리오이긴 하지만 컬렉션이 바인딩 소스이기 위해 종속성 속성일 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)의 서브클래스를 사용하여 컬렉션 항목을 지원하거나 보기 모델 패턴을 사용하는 것이 더 일반적입니다. 컬렉션 바인딩에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
--   컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection**](T:System.Collections.ObjectModel.ObservableCollection%601)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
+-   컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
 
 하지만 컬렉션 형식 종속성 속성에 대한 시나리오도 존재합니다. 다음의 3개 섹션에서는 컬렉션 형식 종속성 속성을 구현하는 방법에 대한 몇 가지 지침을 제공합니다.
 
@@ -385,6 +385,6 @@ C++/CX로 속성 등록을 위해 구현하는 일은 C#C#의 경우보다 어�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 게임 프로그래밍 리소스
-description: Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스를 확인하세요.
+title: "게임 프로그래밍 리소스"
+description: "Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스를 확인하세요."
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 598d5d1afffd394b66aa7af23f22e7a13af48208
+
 ---
 
 # 게임 프로그래밍 리소스
@@ -80,6 +84,7 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

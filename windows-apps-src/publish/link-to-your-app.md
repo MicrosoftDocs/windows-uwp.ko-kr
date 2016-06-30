@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: 앱의 스토어 목록에 연결하면 고객이 앱을 검색하는 데 도움을 줄 수 있습니다.
-title: 앱에 대한 링크
+Description: "앱의 스토어 목록에 연결하면 고객이 앱을 검색하는 데 도움을 줄 수 있습니다."
+title: "앱에 대한 링크"
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
+translationtype: Human Translation
+ms.sourcegitcommit: d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3
+ms.openlocfilehash: 891b99b52f7e3b347c0e2f9d298f144313cc7b2d
+
 ---
 
 # 앱에 대한 링크
@@ -56,6 +60,7 @@ Windows 스토어 프로토콜을 사용하는 방법에 대한 자세한 내용
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

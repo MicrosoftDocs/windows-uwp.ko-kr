@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 셰이더 개체 포팅
-description: OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다.
+title: "셰이더 개체 포팅"
+description: "OpenGL ES 2.0에서 간단한 렌더러를 포팅하는 경우 첫 번째 단계는 Direct3D 11에서 해당하는 꼭짓점 및 조각 셰이더 개체를 설정하고 주 프로그램이 셰이더 개체가 컴파일된 후 이 셰이더 개체와 통신할 수 있는지 확인하는 것입니다."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
+
 ---
 
 # 셰이더 개체 포팅
@@ -318,6 +322,7 @@ m_d3dContext->UpdateSubresource(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mijacobs
-Description: 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
-title: 콘텐츠 전환 애니메이션에 대한 지침
+Description: "콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다."
+title: "콘텐츠 전환 애니메이션에 대한 지침"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+
 ---
 
 # 콘텐츠 전환 애니메이션
@@ -48,6 +52,7 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

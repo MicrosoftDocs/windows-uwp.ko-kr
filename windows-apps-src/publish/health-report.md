@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Windows 개발자 센터 대시보드의 상태 보고서를 통해 크래시 및 응답하지 않는 이벤트를 비롯하여 앱의 성능 및 품질 관련 데이터를 얻을 수 있습니다.
-title: 상태 보고서
+Description: "Windows 개발자 센터 대시보드의 상태 보고서를 통해 크래시 및 응답하지 않는 이벤트를 비롯하여 앱의 성능 및 품질 관련 데이터를 얻을 수 있습니다."
+title: "상태 보고서"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+
 ---
 
 # 상태 보고서
@@ -59,6 +63,7 @@ PDB 기호 파일을 포함하면 **오류 로그** 차트에 총 크래시 수 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

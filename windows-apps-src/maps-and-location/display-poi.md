@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: '지도에 POI(관심 지점) 표시'
-description: 고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다.
+author: msatranjr
+title: "지도에 POI(관심 지점) 표시"
+description: "고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6f21f9bf9c909d0f89a663cdda05934ad9b4011b
+
 ---
 
 # 지도에 POI(관심 지점) 표시
@@ -236,6 +239,7 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

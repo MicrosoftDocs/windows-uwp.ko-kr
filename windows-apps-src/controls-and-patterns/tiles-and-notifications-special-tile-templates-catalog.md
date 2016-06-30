@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다.
-title: 특수 타일 템플릿
+Description: "특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다."
+title: "특수 타일 템플릿"
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+
 ---
 
 # 특수 타일 템플릿
@@ -283,6 +287,7 @@ TileContent content = new TileContent()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

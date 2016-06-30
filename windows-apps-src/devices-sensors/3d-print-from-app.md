@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: 앱에서 3D 인쇄
-description: 유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다.
+title: "앱에서 3D 인쇄"
+description: "유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다."
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
+translationtype: Human Translation
+ms.sourcegitcommit: 61d9f5c1fca1ad2e26f052b901361813975ae357
+ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
+
 ---
 
 # 앱에서 3D 인쇄
@@ -130,6 +134,7 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

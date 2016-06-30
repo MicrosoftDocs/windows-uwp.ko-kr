@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: BasicLoader의 전체 코드
-description: 메시, 텍스처 및 여러 셰이더 개체 등, 일반적인 그래픽 리소스를 변환하고 로드하는 클래스 및 메서드의 전체 코드입니다.
+title: "BasicLoader의 전체 코드"
+description: "메시, 텍스처 및 여러 셰이더 개체 등, 일반적인 그래픽 리소스를 변환하고 로드하는 클래스 및 메서드의 전체 코드입니다."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
+translationtype: Human Translation
+ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
+ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
+
 ---
 
 # BasicLoader의 전체 코드
@@ -1106,6 +1110,7 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

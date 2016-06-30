@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
-description: 지원되는 배너 광고 크기에 대해 알아봅니다.
-title: 배너 광고에 지원되는 광고 크기
+description: "지원되는 배너 광고 크기에 대해 알아봅니다."
+title: "배너 광고에 지원되는 광고 크기"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: f83febcb6c96ad85329633e652978f5c7724e743
+
 
 ---
 
@@ -87,6 +91,7 @@ Microsoft Advertising은 다음 광고 크기의 배너 광고를 지원합니�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

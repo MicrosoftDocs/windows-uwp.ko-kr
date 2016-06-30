@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
-description: Microsoft Advertising 라이브러리에 있는 AdControl 및 InterstitialAd 클래스의 속성, 메서드 및 이벤트를 사용하는 방법을 보여 주는 추가 예제를 가져오세요.
-title: 코드 샘플
+description: "Microsoft Advertising 라이브러리에 있는 AdControl 및 InterstitialAd 클래스의 속성, 메서드 및 이벤트를 사용하는 방법을 보여 주는 추가 예제를 가져오세요."
+title: "코드 샘플"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 1a7bf9ed90ed2dadf6de7a141fa03972b06ef144
+
 ---
 
 # 코드 샘플
@@ -36,6 +40,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

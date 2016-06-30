@@ -1,8 +1,12 @@
 ---
-title: 난수 만들기
-description: 이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 암호화에 사용할 난수 또는 버퍼를 만드는 방법을 보여 줍니다.
+title: "난수 만들기"
+description: "이 예제 코드는 UWP(유니버설 Windows 플랫폼) 앱에서 암호화에 사용할 난수 또는 버퍼를 만드는 방법을 보여 줍니다."
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: 1faa3477acd0cf1a5a2acc7c6c0a62910299254b
+
 ---
 
 # 난수 만들기
@@ -35,6 +39,7 @@ public uint GenerateRandomNumber()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
