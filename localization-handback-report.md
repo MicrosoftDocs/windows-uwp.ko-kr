@@ -18,7 +18,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/492a29821ad5c76f0421a8fb05bd896b45456717/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
-* Handback Datetime: 2016-06-30 22:16:50
+* Handback Datetime: 2016-06-30 23:04:01
 * Handback Error: [handback_transform_failed](#43d579d2d0a92a8f03f17efa2ec42707357e99f93440handback_transform_failed)
 * [Back to Top](#report-top)
 
