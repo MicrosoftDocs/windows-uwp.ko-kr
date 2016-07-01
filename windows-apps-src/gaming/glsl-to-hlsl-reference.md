@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: GLSL-HLSL 참조
-description: OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다.
+title: "GLSL-HLSL 참조"
+description: "OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+
 ---
 
 # GLSL-HLSL 참조
@@ -566,6 +570,7 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

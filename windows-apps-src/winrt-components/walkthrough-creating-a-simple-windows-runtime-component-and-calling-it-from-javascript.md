@@ -1,17 +1,18 @@
 ---
-author: martinekuan
-title: 간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출
-description: 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
+author: msatranjr
+title: "간단한 Windows 런타임 구성 요소를 만들고 JavaScript에서 호출"
+description: "이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다."
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: c521061d9fdd3eb2c25e3072182fb1d7823f13ba
+
 ---
 
-# 연습&#58; 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
+# 연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framework를 사용하여 Windows 런타임 구성 요소로 패키지된 고유한 Windows 런타임 형식을 만드는 방법 및 JavaScript를 사용하여 Windows용으로 빌드된 유니버설 Windows 앱에서 구성 요소를 호출하는 방법을 보여 줍니다.
 
@@ -404,7 +405,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 > End Function
 > ```
 
-사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
+사전은 [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
 
 **중요** 관리되는 형식이 여러 인터페이스를 구현하는 경우 JavaScript는 목록에 첫 번째로 표시되는 인터페이스를 사용합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
@@ -662,14 +663,14 @@ events1Button.addEventListener("click", events1, false);
 GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 것입니다. 여기서는 비동기 작업 구현에 중점을 두므로 단순성이 중요하며 취소를 보여 주는 경우 느린 구현이 도움이 됩니다. GetPrimesInRangeAsync는 소수만 사용하는 대신 해당 제곱근보다 작거나 같은 모든 정수로 후보를 나누어 무차별 대입(brute force)으로 소수를 찾습니다. 이 코드를 단계별로 실행
 
 -   비동기 작업을 시작하기 전에 매개 변수 유효성 검사 및 잘못된 입력에 대한 예외 발생과 같은 정리 작업을 수행합니다.
--   이 구현의 관건은 [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) 메서드와 메서드의 유일한 매개 변수인 대리자입니다. 대리자는 취소 토큰과 진행률 보고를 위한 인터페이스를 수락하고 해당 매개 변수를 사용하는 시작된 작업을 반환해야 합니다. JavaScript가 GetPrimesInRangeAsync 메서드를 호출하는 경우 다음 단계가 수행됩니다(여기에 제공된 순서와 다를 수 있음).
+-   이 구현의 관건은 [AsyncInfo.Run&lt;TResult, TProgress&gt;(Func&lt;CancellationToken, IProgress&lt;TProgress&gt;, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx)&gt;) 메서드와 메서드의 유일한 매개 변수인 대리자입니다. 대리자는 취소 토큰과 진행률 보고를 위한 인터페이스를 수락하고 해당 매개 변수를 사용하는 시작된 작업을 반환해야 합니다. JavaScript가 GetPrimesInRangeAsync 메서드를 호출하는 경우 다음 단계가 수행됩니다(여기에 제공된 순서와 다를 수 있음).
 
     -   [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) 개체는 반환된 결과를 처리하고, 취소에 대응하고, 진행률 보고서를 처리할 함수를 제공합니다.
     -   AsyncInfo.Run 메서드는 취소 원본과 IProgress&lt;T&gt; 인터페이스를 구현하는 개체를 만듭니다. 대리자에게 취소 원본의 [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx) 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스 둘 다를 전달합니다.
 
         > **참고** Promise 개체가 취소에 대응하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 취소할 수 있는 토큰을 전달하며 취소가 발생할 수 있습니다. Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
 
-    -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
+    -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
     -   AsyncInfo.Run 메서드는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) 인터페이스를 구현하는 개체를 만들고, Windows 런타임 취소 메커니즘을 토큰 원본에 연결하고, Promise 개체의 진행률 보고 함수를 &lt;T&gt; 인터페이스에 연결합니다.
     -   IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 인터페이스가 JavaScript에 반환됩니다.
 
@@ -735,6 +736,7 @@ asyncCancel 함수는 WinJS.Promise 개체의 cancel 메서드만 호출합니�
 * [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

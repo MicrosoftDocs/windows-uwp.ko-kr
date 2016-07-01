@@ -5,8 +5,8 @@ title: "조작 입문서"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.sourcegitcommit: 1221928ebea4a2a926154ed1148e49bdb1e0834c
-ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 068bb7d0c7af4b55ab10a955c563988f5123e5eb
 
 ---
 
@@ -15,13 +15,13 @@ ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
 
 ![Windows 입력 유형](images/input-interactions/icons-inputdevices03.png)
 
-UWP(유니버설 Windows 플랫폼)에서 사용자 조작은 환경을 확장할 수 있는 다양한 모드 또는 한정자(마우스 휠 및 단추, 펜 지우개 및 펜 단추, 터치 키보드 및 백그라운드 앱 서비스)와 함께 입력 및 출력 소스(마우스, 키보드, 펜, 터치, 터치 패드, 음성, **Cortana**, 컨트롤러, 제스처, 응시 등)를 조합한 것입니다. 
+UWP(유니버설 Windows 플랫폼)에서 사용자 조작은 환경을 확장할 수 있는 다양한 모드 또는 한정자(마우스 휠 및 단추, 펜 지우개 및 펜 단추, 터치 키보드 및 백그라운드 앱 서비스)와 함께 입력 및 출력 소스(마우스, 키보드, 펜, 터치, 터치 패드, 음성, **Cortana**, 컨트롤러, 제스처, 응시 등)를 조합한 것입니다.
 
 UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부분의 경우에 앱에서 수신하는 고유한 입력 유형을 개별적으로 처리할 필요가 없습니다. 터치, 터치 패드, 마우스 및 펜 입력을 일반적인 포인터 형식으로 처리하여 탭이나 길게 누르기와 같은 정적 제스처, 밀어서 이동하기와 같은 조작 제스처 또는 디지털 잉크 렌더링을 지원하는 것도 여기에 포함됩니다.
 
 특정 폼 팩터와 짝을 이룰 경우 각 입력 장치 유형 및 동작, 기능 및 제한 사항을 알아보세요. 이 작업은 플랫폼 컨트롤 및 어포던스가 앱에 충분한지, 아니면 사용자 지정 조작 환경을 제공해야 하는지 결정하는 데 유용할 수 있습니다.
 
-## <span id="Cortana"></span><span id="cortana"></span><span id="CORTANA"></span>Cortana
+## Cortana
 
 
 Windows 10에서 **Cortana** 확장성을 통해 사용자의 음성 명령을 처리하고 응용 프로그램을 시작하여 단일 작업을 수행할 수 있습니다.
@@ -44,7 +44,7 @@ Windows 10에서 **Cortana** 확장성을 통해 사용자의 음성 명령을 �
 추가 정보 [Cortana 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn974233)
  
 
-## <span id="Speech"></span><span id="speech"></span><span id="SPEECH"></span>음성
+## 음성
 
 
 음성은 사람들이 응용 프로그램을 조작하는 효과적이고 자연스러운 방법입니다. 응용 프로그램과 통신하는 쉽고 정확한 방법이며 다양한 상황에서 사람들이 생산성을 유지하고 최신 정보를 얻을 수 있도록 합니다.
@@ -68,19 +68,19 @@ Windows 10에서 **Cortana** 확장성을 통해 사용자의 음성 명령을 �
 
 음성 조작에는 세 가지 모드가 있습니다.
 
-<span id="Natural_language"></span><span id="natural_language"></span><span id="NATURAL_LANGUAGE"></span>자연어  
+자연어  
 자연어는 정기적으로 사람들과 구두로 상호 작용하는 방법입니다. 음성은 사람마다 그리고 상황마다 다르며 일반적으로 이해할 수 있습니다. 그렇지 않은 경우 동일한 아이디어를 나타내는 데 종종 다른 단어와 단어 순서를 사용하기도 합니다.
 
 자연어로 앱을 조작하는 것은 마치 사람에게 하는 것처럼 디바이스를 통해 앱에 말하고 그에 따라 이해하여 반응하기를 원하는 점에서 유사합니다.
 
 자연어는 가장 뛰어난 음성 조작 모드이며 **Cortana**를 통해 구현되고 표시될 수 있습니다.
 
-<span id="Command_and_control"></span><span id="command_and_control"></span><span id="COMMAND_AND_CONTROL"></span>명령 및 제어  
+명령 및 제어  
 명령 및 제어는 음성 명령을 사용하여 단추를 클릭하거나 메뉴 항목을 선택하는 등의 컨트롤 및 기능을 활성화하는 것입니다.
 
 성공적인 사용자 환경에서는 명령 및 제어가 중요하므로 단일 입력 형식은 일반적으로 권장되지 않습니다. 음성은 일반적으로 기본 설정이나 하드웨어 기능을 기반으로 사용자에게 제공되는 여러 가지 입력 옵션 중 하나입니다.
 
-<span id="Dictation"></span><span id="dictation"></span><span id="DICTATION"></span>받아쓰기  
+받아쓰기  
 가장 기본적인 음성 입력 방법입니다. 각 말하기가 텍스트로 변환됩니다.
 
 받아쓰기는 일반적으로 앱이 의미나 의도를 이해할 필요가 없을 때 사용됩니다.
@@ -88,7 +88,7 @@ Windows 10에서 **Cortana** 확장성을 통해 사용자의 음성 명령을 �
 추가 정보 [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
  
 
-## <span id="Pen"></span><span id="pen"></span><span id="PEN"></span>펜
+## 펜
 
 
 펜(또는 스타일러스)은 마우스와 같은 픽셀 단위의 정밀성을 지닌 포인팅 디바이스 역할을 할 수 있으며 디지털 잉크 입력에 최적화된 디바이스입니다.
@@ -119,7 +119,7 @@ Windows 10에서 **Cortana** 확장성을 통해 사용자의 음성 명령을 �
 추가 정보 [펜 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456352)
  
 
-## <span id="Touch"></span><span id="touch"></span><span id="TOUCH"></span>터치
+## 터치
 
 
 터치를 사용할 경우 하나 이상의 손가락을 사용한 물리적 제스처로 UI 요소의 직접 조작(예: 이동, 회전, 크기 조정)을 에뮬레이트하거나, 이러한 제스처를 대체 입력 방법(마우스 또는 펜과 유사함) 또는 보조 입력 방법(펜으로 그린 잉크 스트로크를 문지르는 등 다른 입력 측면을 수정)으로 사용할 수 있습니다. 이와 같은 촉각 환경은 사용자가 화면의 요소를 조작할 때 보다 자연스러운 실제 느낌을 제공할 수 있습니다.
@@ -150,7 +150,7 @@ Surface Hub 디바이스는 100개의 고유한 동시 터치 접촉을 인식�
 추가 정보 [터치 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh465370)
  
 
-## <span id="Touchpad"></span><span id="touchpad"></span><span id="TOUCHPAD"></span>터치 패드
+## 터치 패드
 
 
 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드는 터치 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합합니다.
@@ -170,7 +170,7 @@ Surface Hub 디바이스는 100개의 고유한 동시 터치 접촉을 인식�
 추가 정보 [터치 패드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456353)
  
 
-## <span id="Keyboard"></span><span id="keyboard"></span><span id="KEYBOARD"></span>Keyboard
+## Keyboard
 
 
 키보드는 텍스트를 위한 기본 입력 장치이며, 일반적으로 키보드가 앱을 조작하는 보다 빠르고 효율적인 방법이라고 생각하는 사용자나 일정한 장애가 있는 사람들에게는 필수 도구입니다.
@@ -208,7 +208,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 추가 정보 [키보드 디자인 지침](https://msdn.microsoft.com/library/windows/apps/hh972345)
  
 
-## <span id="Mouse"></span><span id="mouse"></span><span id="MOUSE"></span>마우스
+## 마우스
 
 
 마우스는 사용자 조작에 따라 타기팅 및 명령에 픽셀 수준 정밀도가 필요한 고밀도 UI 및 생산성 앱을 지원해야 하는 경우에 가장 적합합니다.
@@ -231,7 +231,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 추가 정보 [마우스 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn456351)
  
 
-## <span id="Gesture"></span><span id="gesture"></span><span id="GESTURE"></span>제스처
+## 제스처
 
 
 제스처는 응용 프로그램을 제어하거나 조작하기 위한 입력으로 인식되는 모든 형태의 사용자 동작입니다. 제스처는 단순히 손을 사용하여 화면에서 무언가를 타기팅하는 것에서부터 구체적인 학습된 동작 패턴, 장시간 몸 전체를 사용하는 연속 동작에 이르기까지 다양한 형태를 취합니다. 사용자 지정 제스처를 디자인할 때는 해당 의미가 로캘 및 문화권에 따라 다를 수 있으므로 주의해야 합니다.
@@ -252,7 +252,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
  
 
-## <span id="Gamepad_Controller"></span><span id="gamepad_controller"></span><span id="GAMEPAD_CONTROLLER"></span>게임 패드/컨트롤러
+## 게임 패드/컨트롤러
 
 
 게임 패드/컨트롤러는 일반적으로 게임 플레이 전용으로 고안된 고도의 특수 장치입니다. 그러나 기본 키보드 입력을 에뮬레이트하는 데도 사용되며 키보드와 매우 유사한 UI 탐색 환경을 제공합니다.
@@ -272,7 +272,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
  
 
-## <span id="Multiple_inputs"></span><span id="multiple_inputs"></span><span id="MULTIPLE_INPUTS"></span>여러 입력
+## 여러 입력
 
 
 가능한 한 많은 사용자와 장치를 수용하고 가능한 한 많은 입력 유형(제스처, 음성, 터치, 터치 패드, 마우스 및 키보드)과 작동하도록 앱을 디자인하면 유연성, 유용성 및 접근성이 극대화됩니다.
@@ -304,6 +304,6 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
