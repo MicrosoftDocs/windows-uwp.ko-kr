@@ -4114,9 +4114,6 @@
   "068bb7d0c7af4b55ab10a955c563988f5123e5eb": [
     "windows-apps-src\\input-and-devices\\input-primer.md"
   ],
-  "7c2d3bd1ab2d2f4923cf84834a73fd1c58113212": [
-    "windows-apps-src\\input-and-devices\\input-primer.md"
-  ],
   "5f8490c06e1803bed8efadb936d64b41e7f1e328": [
     "windows-apps-src\\input-and-devices\\interact-with-a-background-app-in-cortana.md"
   ],
@@ -5993,9 +5990,6 @@
   "c33c05c6ec7f36b8ba7db840613fbfb7eb394c3f": [
     "windows-apps-src\\threading-async\\asynchronous-programming-in-cpp-universal-windows-platform-apps.md"
   ],
-  "560b51d5bb67f5f2611311cb78f59d189d4ea440": [
-    "windows-apps-src\\threading-async\\asynchronous-programming-in-cpp-universal-windows-platform-apps.md"
-  ],
   "8d9a17beb9c637e0a780020ef1cbb7b0b0bddf38": [
     "windows-apps-src\\threading-async\\asynchronous-programming-universal-windows-platform-apps.md"
   ],
@@ -6114,9 +6108,6 @@
     "windows-apps-src\\winrt-components\\walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md"
   ],
   "c521061d9fdd3eb2c25e3072182fb1d7823f13ba": [
-    "windows-apps-src\\winrt-components\\walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md"
-  ],
-  "c4312a1193827ec7454ae2cb7c752b6a7f133baf": [
     "windows-apps-src\\winrt-components\\walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md"
   ],
   "b676110274bacc8aeacb2527099534cf0e26fa6b": [
