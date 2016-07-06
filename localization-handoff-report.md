@@ -1,19 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/b63c6d6fa44cf69fad238ffec732b4f3471cb50d/windows-apps-src/enterprise/edp-hub.md) | OutofSyncHandedBackSuccess | [Details](#b9a8e8e59174ca58e229a12cac47c90f6a16d4462144)
+ [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0/windows-apps-src/enterprise/edp-hub.md) | OutofSyncHandedBackSuccess | [Details](#2cae64ff234a4fb85fd6a3e50ade3b91480b36c82144)
+ [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd/windows-apps-src/files/protect-your-enterprise-data-with-edp.md) | OutofSyncHandedBackSuccess | [Details](#a31fc65599f43be5b302b568774a51ab770653002159)
 
 ## Item Details
-##### <a name='b9a8e8e59174ca58e229a12cac47c90f6a16d4462144'></a> Source: [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/b63c6d6fa44cf69fad238ffec732b4f3471cb50d/windows-apps-src/enterprise/edp-hub.md)
+##### <a name='2cae64ff234a4fb85fd6a3e50ade3b91480b36c82144'></a> Source: [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps/blob/235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0/windows-apps-src/enterprise/edp-hub.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8acb9d34bdedbdf245bc5cdab89082b06ff544ce/ol-handoff/Microsoft/windows-apps.ko-kr/master/edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf)
-* Handoff Datetime: 2016-07-06 17:04:26
+* Handoff File: [edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2dc05ec53d48931978842de0a6b22eb895dc7a57/ol-handoff/Microsoft/windows-apps.ko-kr/master/edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf)
+* Handoff Datetime: 2016-07-06 17:50:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -21,6 +22,21 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [windows-apps-src\enterprise\edp-hub.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f5f1bd2cf41f527440eb683635b4b80ae307d1e4/windows-apps-src/enterprise/edp-hub.md)
 * Current Handback File: [edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4edf94bff91d0ed1bdf1917b31a59eb12bc3a835/ol-handback/Microsoft/windows-apps.ko-kr/master/edp-hub.809f979752a339134e41bb6e576dbcd42ee0762e.ko-kr.xlf)
+* Current Handback Datetime: 2016-06-30 20:33:53
+* [Back to Top](#report-top)
+
+##### <a name='a31fc65599f43be5b302b568774a51ab770653002159'></a> Source: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps/blob/9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2dc05ec53d48931978842de0a6b22eb895dc7a57/ol-handoff/Microsoft/windows-apps.ko-kr/master/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf)
+* Handoff Datetime: 2016-07-06 17:50:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\files\protect-your-enterprise-data-with-edp.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/f5f1bd2cf41f527440eb683635b4b80ae307d1e4/windows-apps-src/files/protect-your-enterprise-data-with-edp.md)
+* Current Handback File: [protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/4edf94bff91d0ed1bdf1917b31a59eb12bc3a835/ol-handback/Microsoft/windows-apps.ko-kr/master/protect-your-enterprise-data-with-edp.0a16989a781f4ad444ec6db4473975c962861962.ko-kr.xlf)
 * Current Handback Datetime: 2016-06-30 20:33:53
 * [Back to Top](#report-top)
 
