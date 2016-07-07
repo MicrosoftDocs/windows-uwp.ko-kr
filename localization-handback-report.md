@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-properties-example.md) | InSyncHandedBackSuccess | [Details](#43d579d2d0a92a8f03f17efa2ec42707357e99f93444)
 
 ## Item Details
-##### <a name='43d579d2d0a92a8f03f17efa2ec42707357e99f93444'></a> Source: [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/xaml-properties-example.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\monetize\xaml-properties-example.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5164e3e5d35694f95eafb574a2722986e5d6ec9e/windows-apps-src/monetize/xaml-properties-example.md)
-* Handoff File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8dcbf87adbaad50566b195412c3790cee24e2405/ol-handoff/Microsoft/windows-apps.ko-kr/master/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
-* Handoff Datetime: 2016-06-27 18:15:40
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/f292137b2403b410f67b24d4b49b43dbc766a2cc/ol-handback/Microsoft/windows-apps.ko-kr/master/xaml-properties-example.1cdd06a72272daeae0d7fc916bb1265d2e074fa8.ko-kr.xlf)
-* Handback Datetime: 2016-07-07 19:25:11
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
