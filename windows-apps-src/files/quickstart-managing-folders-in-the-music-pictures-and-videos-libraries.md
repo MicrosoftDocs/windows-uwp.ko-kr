@@ -42,8 +42,7 @@ ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
 **참고** 적절한 접근 권한 값을 선언해야 합니다.
  
 
-사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [
-            **KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
+사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
 
 -   [**KnownLibraryId.Music**](https://msdn.microsoft.com/library/windows/apps/br227155)
 -   [**KnownLibraryId.Pictures**](https://msdn.microsoft.com/library/windows/apps/br227156)
@@ -89,11 +88,9 @@ ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
 ## 라이브러리에서 폴더 제거
 
 
-라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [
-            **StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
+라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
 
-[
-            **StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
+[**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
 
 다음 예제에서는 사용자가 **lvPictureFolders**라는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤에서 제거할 폴더를 선택한 것으로 가정합니다.
 

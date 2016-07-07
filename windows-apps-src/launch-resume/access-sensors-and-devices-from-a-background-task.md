@@ -14,8 +14,7 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-[
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
+[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
 
 백그라운드에서 센서나 주변 장치에 액세스하려면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 만듭니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
 
@@ -33,8 +32,7 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 ## DeviceUseTrigger 백그라운드 작업에서 지원되는 프로토콜/API
 
 
-[
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업에서는 앱이 시스템 트리거 백그라운드 작업에서 지원되지 않는 많은 프로토콜/API를 통해 통신할 수 있습니다. 유니버설 Windows 앱에서 지원되는 프로토콜은 다음과 같습니다.
+[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업에서는 앱이 시스템 트리거 백그라운드 작업에서 지원되지 않는 많은 프로토콜/API를 통해 통신할 수 있습니다. 유니버설 Windows 앱에서 지원되는 프로토콜은 다음과 같습니다.
 
 | 프로토콜         | 유니버설 Windows 앱의 DeviceUseTrigger                                                                                                                                                    |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -53,8 +51,7 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 ## 앱 패키지 매니페스트에서 백그라운드 작업 등록
 
 
-앱은 백그라운드 작업의 일부로 실행되는 코드에서 동기화 및 업데이트 작업을 수행합니다. 이 코드는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 Windows 런타임 클래스(또는 JavaScript 앱용 전용 JavaScript 페이지)에 포함되어 있습니다. [
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 백그라운드 작업을 사용하려면 앱이 시스템 트리거 백그라운드 작업의 경우와 마찬가지로 포그라운드 앱의 앱 매니페스트 파일에서 선언해야 합니다.
+앱은 백그라운드 작업의 일부로 실행되는 코드에서 동기화 및 업데이트 작업을 수행합니다. 이 코드는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 Windows 런타임 클래스(또는 JavaScript 앱용 전용 JavaScript 페이지)에 포함되어 있습니다. [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 백그라운드 작업을 사용하려면 앱이 시스템 트리거 백그라운드 작업의 경우와 마찬가지로 포그라운드 앱의 앱 매니페스트 파일에서 선언해야 합니다.
 
 이 앱 패키지 매니페스트 파일의 예제에서 **DeviceLibrary.SyncContent**는 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업의 진입점입니다.
 
@@ -71,8 +68,7 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 ## DeviceUseTrigger 사용 소개
 
 
-[
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하려면 다음 기본 단계를 따릅니다. 백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하려면 다음 기본 단계를 따릅니다. 백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 1.  앱은 백그라운드 작업을 앱 매니페스트에 등록하고 IBackgroundTask를 구현하는 Windows 런타임 클래스 또는 JavaScript 앱용 전용 JavaScript 페이지에 백그라운드 작업 코드를 포함합니다.
 2.  앱을 시작하면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 형식의 트리거 개체를 만들고 구성하며 나중에 사용하도록 트리거 인스턴스를 저장합니다.
@@ -85,11 +81,9 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 9.  백그라운드 작업이 진행 중 또는 완료를 보고하면 앱은 등록된 작업의 진행 중 및 완료 이벤트를 통해 이러한 이벤트를 받게 됩니다.
 
 **중요**  
-[
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용할 때 다음과 같은 중요한 점을 고려해야 합니다.
+[**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용할 때 다음과 같은 중요한 점을 고려해야 합니다.
 
--   [
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 프로그래밍 방식으로 트리거하는 기능은 Windows 8.1 및 Windows Phone 8.1에서 처음 소개되었습니다.
+-   [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 프로그래밍 방식으로 트리거하는 기능은 Windows 8.1 및 Windows Phone 8.1에서 처음 소개되었습니다.
 
 -   PC에서 주변 장치를 업데이트할 때 사용자 동의를 확인하기 위해 Windows에서 특정 정책을 적용합니다.
 
@@ -171,8 +165,7 @@ Windows는 앱이 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/wind
 
 3.  진행 중 및 완료 이벤트 처리기를 트리거에 연결합니다. 앱이 일시 중단에서 반환되면 Windows는 백그라운드 작업의 상태를 확인하는 데 사용할 수 있는 대기 진행 중 또는 완료 이벤트를 앱에 제공합니다.
 
-4.  [
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 백그라운드 작업을 트리거할 때 열려 있는 장치 또는 센서 개체를 모두 닫아 백그라운드 작업이 이러한 장치와 센서를 열고 사용할 수 있게 합니다.
+4.  [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 백그라운드 작업을 트리거할 때 열려 있는 장치 또는 센서 개체를 모두 닫아 백그라운드 작업이 이러한 장치와 센서를 열고 사용할 수 있게 합니다.
 
 5.  트리거를 등록합니다.
 
@@ -194,8 +187,7 @@ Windows는 앱이 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/wind
 
 또한 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) 메서드는 부울 true 또는 false 값을 사용하여 현재 실행 중인 백그라운드 작업 인스턴스가 완료되기 전에 취소해야 하는지 여부를 나타냅니다. 자세한 내용은 **Unregister**의 API 참조를 확인하세요.
 
-[
-            **Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) 외에도 앱은 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 그러면 백그라운드 작업과 관련된 비동기 작업이 완료되었음을 시스템에 알립니다.
+[**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229869) 외에도 앱은 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 그러면 백그라운드 작업과 관련된 비동기 작업이 완료되었음을 시스템에 알립니다.
 
  
 
@@ -206,6 +198,6 @@ Windows는 앱이 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/wind
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -44,8 +44,7 @@ Direct3D 11에서 장치 핸들과 디바이스 컨텍스트 핸들은 모두 [*
 
 Direct3D 11에서 디바이스 어댑터 및 하드웨어 구성은 [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) 및 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543) COM 인터페이스를 사용하여 DXGI(DirectX Graphics Infrastructure) API와 함께 설정됩니다. 버퍼 및 기타 창 리소스(표시 또는 오프스크린)는 특정 DXGI 인터페이스를 통해 만들고 구성합니다. [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 팩터리 패턴 구현에서는 프레임 버퍼 등의 DXGI 리소스를 가져옵니다. DXGI가 스왑 체인을 소유하므로 화면에 프레임을 제공하는 데 DXGI 인터페이스가 사용됩니다([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 참조).
 
-[
-            **IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)를 사용하여 게임과 호환되는 스왑 체인을 만들 수 있습니다. HWND를 위해 스왑 체인을 만드는 대신 주요 창 또는 컴퍼지션(XAML interop)을 위해 스왑 체인을 만들어야 합니다.
+[**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)를 사용하여 게임과 호환되는 스왑 체인을 만들 수 있습니다. HWND를 위해 스왑 체인을 만드는 대신 주요 창 또는 컴퍼지션(XAML interop)을 위해 스왑 체인을 만들어야 합니다.
 
 ## 장치 리소스 및 리소스 뷰
 
@@ -72,8 +71,7 @@ Direct3D 9과 Direct3D 10.x에서는 단일 Direct3D 장치 개체가 리소스 
 -   픽셀 셰이더에 텍스처 뷰 및 샘플러 바인딩
 -   장면 그리기
 
-[
-            **ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) 메서드 중 하나가 호출되면 렌더링 대상 뷰에 장면이 그려집니다. 그리기를 모두 마치면 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하여 완성된 프레임을 표시하는 데 DXGI 어댑터가 사용됩니다.
+[**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) 메서드 중 하나가 호출되면 렌더링 대상 뷰에 장면이 그려집니다. 그리기를 모두 마치면 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하여 완성된 프레임을 표시하는 데 DXGI 어댑터가 사용됩니다.
 
 ## 상태 관리
 

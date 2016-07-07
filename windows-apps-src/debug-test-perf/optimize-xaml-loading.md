@@ -205,11 +205,9 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
     </GridView> 
 ```
 
-[
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
 
--   [
-            **Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
+-   [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209253) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
 
 **비효율적인 경우**
 
@@ -240,8 +238,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 -   여백에 주의합니다. 음수 여백이 다른 요소의 렌더링 범위로 확장되어 과도한 그리기가 발생하는 경우 인접한 두 요소가 실수로 겹쳐질 수 있습니다.
 
-[
-            **DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823)를 시각적 진단으로 사용합니다. 장면에서 인식하지 못한 개체가 그려지는 경우가 있을 수 있습니다.
+[**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/Hh701823)를 시각적 진단으로 사용합니다. 장면에서 인식하지 못한 개체가 그려지는 경우가 있을 수 있습니다.
 
 ## 정적 콘텐츠 캐시
 
@@ -273,8 +270,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </Canvas>
 ```
 
-[
-            **CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
+[**CacheMode**](https://msdn.microsoft.com/library/windows/apps/BR228084)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
 
 ## ResourceDictionaries
 

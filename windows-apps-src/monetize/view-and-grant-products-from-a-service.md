@@ -93,10 +93,8 @@ Windows 스토어 컬렉션 API 또는 구매 API를 호출하려면 Windows 스
 
 2.  앱 코드에서 [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스의 다음 메서드 중 하나를 호출하여 Windows 스토어 ID 키를 검색합니다.
 
-    -   [
-            **GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674): Windows 스토어 컬렉션 API를 사용하려는 경우 이 메서드를 호출합니다.
-    -   [
-            **GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675): Windows 스토어 구매 API를 사용하려는 경우 이 메서드를 호출합니다.
+    -   [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674): Windows 스토어 컬렉션 API를 사용하려는 경우 이 메서드를 호출합니다.
+    -   [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675): Windows 스토어 구매 API를 사용하려는 경우 이 메서드를 호출합니다.
 
     어떤 메서드에서든 Azure AD 액세스 토큰을 해당 메서드의 *serviceTicket* 매개 변수에 전달합니다. 서비스의 컨텍스트에서 현재 사용자를 식별하는 *publisherUserId* 매개 변수에 ID를 선택적으로 전달할 수 있습니다. 서비스에 대한 사용자 ID를 유지하는 경우 이 매개 변수를 사용하여 이러한 사용자 ID를 Windows 스토어 컬렉션 API 또는 구매 API 호출과 연결할 수 있습니다.
 
@@ -177,6 +175,6 @@ Windows 스토어 ID 키는 액세스하려는 제품 소유권 정보의 소유
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

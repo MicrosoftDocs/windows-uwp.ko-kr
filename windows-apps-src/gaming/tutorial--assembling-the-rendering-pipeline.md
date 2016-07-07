@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 렌더링 프레임워크 어셈블
-description: 이제 샘플 게임에서 해당 구조 및 상태를 사용하여 그래픽을 표시하는 방법을 살펴보아야 합니다.
+title: "렌더링 프레임워크 어셈블"
+description: "이제 샘플 게임에서 해당 구조 및 상태를 사용하여 그래픽을 표시하는 방법을 살펴보아야 합니다."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+
 ---
 
 # 렌더링 프레임워크 어셈블
@@ -42,8 +46,7 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 
 DirectX는 Windows 런타임 및 Windows 10 환경의 기본적인 부분입니다. Windows 10의 모든 화면 효과는 DirectX를 기반으로 하며 낮은 수준의 동일한 그래픽 인터페이스인 [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)에 동일하게 직접 연결하여 그래픽 하드웨어 및 해당 드라이버에 추상화 계층을 제공합니다. 모든 Direct3D 11 API를 사용하여 DXGI에 직접 연결할 수 있습니다. 따라서 모든 최신 그래픽 하드웨어 기능에 대한 액세스 기능을 제공하는 고성능의 신속한 그래픽을 게임에서 얻을 수 있습니다.
 
-UWP 앱에 DirectX 지원을 추가하려면 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482) 및 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 인터페이스를 구현하여 DirectX 리소스에 대한 보기 공급자를 만듭니다. 이 인터페이스는 각각 뷰 공급자 유형의 팩터리 패턴과 DirectX 뷰 공급자에 대한 구현을 제공합니다. [
-            **CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) 개체로 표현되는 UWP singleton은 이 구현에서 실행됩니다.
+UWP 앱에 DirectX 지원을 추가하려면 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482) 및 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 인터페이스를 구현하여 DirectX 리소스에 대한 보기 공급자를 만듭니다. 이 인터페이스는 각각 뷰 공급자 유형의 팩터리 패턴과 DirectX 뷰 공급자에 대한 구현을 제공합니다. [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) 개체로 표현되는 UWP singleton은 이 구현에서 실행됩니다.
 
 [게임의 UWP 프레임워크 정의](tutorial--building-the-games-metro-style-app-framework.md)에서 게임 샘플의 앱 프레임워크에 렌더러를 맞추는 방법을 살펴보았습니다. 이제 게임 렌더러가 보기에 연결하여 게임의 모양을 정의하는 그래픽을 구성하는 방법을 살펴보겠습니다.
 
@@ -6322,6 +6325,7 @@ void Material::RenderSetup(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

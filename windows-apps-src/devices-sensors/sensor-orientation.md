@@ -17,8 +17,7 @@ ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**Windows.Devices.Sensors.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn895032)
 
-[
-            **Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) 및 [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 장치의 가로 방향에서 정의되고 사용자가 돌릴 때 장치와 함께 회전합니다. 앱이 자동 회전을 지원하고 사용자가 장치를 회전할 때 장치에 맞게 자동으로 방향이 조정되는 경우사용하기 전에 센서 데이터를 회전에 대해 조정해야 합니다.
+[**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687), [**Gyrometer**](https://msdn.microsoft.com/library/windows/apps/BR225718), [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705), [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766) 및 [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 장치의 가로 방향에서 정의되고 사용자가 돌릴 때 장치와 함께 회전합니다. 앱이 자동 회전을 지원하고 사용자가 장치를 회전할 때 장치에 맞게 자동으로 방향이 조정되는 경우사용하기 전에 센서 데이터를 회전에 대해 조정해야 합니다.
 
 ## 디스플레이 방향 및 장치 방향
 
@@ -34,8 +33,7 @@ ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
 
 ![디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped임](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
 
-[
-            **CurrentOrientation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx) 속성과 함께 [**GetForCurrentView**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) 메서드를 사용하여 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142) 열거형과 비교하여 논리를 만들 수 있습니다. 지원하는 각 방향에 대해 참조 축을 해당 방향으로 변환할 수 있도록 지원해야 합니다.
+[**CurrentOrientation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx) 속성과 함께 [**GetForCurrentView**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) 메서드를 사용하여 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142) 열거형과 비교하여 논리를 만들 수 있습니다. 지원하는 각 방향에 대해 참조 축을 해당 방향으로 변환할 수 있도록 지원해야 합니다.
 
 ## 가로 방향 우선 및 세로 방향 우선 장치
 
@@ -157,8 +155,7 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 ## 디스플레이 방향 및 장치 방향
 
-[
-            **OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 데이터는 다른 방법으로 변경해야 합니다. 다른 방향을 Z축에 대한 시계 반대 방향 회전으로 간주하므로 사용자 방향을 다시 가져오기 위해 회전을 반대로 해야 합니다. 사원수 데이터의 경우 오일러의 공식을 사용하여 참조 사원수로 회전을 정의할 수 있으며, 참조 회전 행렬을 사용할 수도 있습니다.
+[**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 데이터는 다른 방법으로 변경해야 합니다. 다른 방향을 Z축에 대한 시계 반대 방향 회전으로 간주하므로 사용자 방향을 다시 가져오기 위해 회전을 반대로 해야 합니다. 사원수 데이터의 경우 오일러의 공식을 사용하여 참조 사원수로 회전을 정의할 수 있으며, 참조 회전 행렬을 사용할 수도 있습니다.
 
 ![오일러의 공식 ](images/eulers-formula.png)원하는 상대 방향을 가져오려면 절대 개체에 참조 개체를 곱합니다. 이 수학은 가환성이 아닙니다.
 

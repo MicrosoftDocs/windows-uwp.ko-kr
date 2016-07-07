@@ -18,8 +18,7 @@ ms.openlocfilehash: d9d3bdf86d858367008a32d9d6a06ec9fc13787d
 
 -   [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)
 
-[
-            **OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
+[**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 
 ## 소개
 
@@ -131,6 +130,6 @@ public sealed partial class MainPage : Page
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -5,15 +5,15 @@ title: "이미지 및 이미지 브러시"
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
+ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
+ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
 
 ---
 # 이미지 및 이미지 브러시
 
 이미지를 표시하려면 **Image** 개체 또는 **ImageBrush** 개체를 사용할 수 있습니다. Image 개체는 이미지를 렌더링하고 ImageBrush 개체는 이미지에 다른 개체를 그립니다. 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+
 
 -   [**Image 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [**Source 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
@@ -24,9 +24,6 @@ ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
 앱에 독립 실행형 이미지를 표시하려면 **Image** 요소를 사용합니다.
 
 다른 개체에 이미지를 적용하려면 **ImageBrush**를 사용합니다. ImageBrush는 텍스트의 장식 효과, 컨트롤 또는 레이아웃 컨테이너의 바둑판식 배경 등에 사용됩니다. 이미지를 확대하고, 맞추고, 바둑판식으로 배열하는 방법을 제어하여 패턴과 기타 효과를 생성할 수 있습니다. 
-
-## 예제
-
 
 
 ## 이미지 만들기
@@ -47,8 +44,7 @@ ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
 
 ### ImageBrush
 
-[
-            **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx) 개체를 사용하면 [**Brush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.ellipse.aspx)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성 또는 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)의 [**Background**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) 속성 값에 ImageBrush를 사용할 수 있습니다.
+[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx) 개체를 사용하면 [**Brush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) 개체를 가지는 영역을 이미지로 그릴 수 있습니다. 예를 들어 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.ellipse.aspx)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성 또는 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)의 [**Background**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) 속성 값에 ImageBrush를 사용할 수 있습니다.
 
 다음 예제에서는 ImageBrush를 사용하여 Ellipse를 그리는 방법을 보여 줍니다.
 
@@ -77,11 +73,9 @@ ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
 
 ### 이미지 자르기
 
-[
-            **Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) 속성을 사용하여 이미지 출력에서 영역을 자를 수 있습니다. Clip 속성은 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.geometry.aspx)로 설정합니다. 현재 직사각형이 아닌 자르기는 지원되지 않습니다.
+[**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx) 속성을 사용하여 이미지 출력에서 영역을 자를 수 있습니다. Clip 속성은 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.geometry.aspx)로 설정합니다. 현재 직사각형이 아닌 자르기는 지원되지 않습니다.
 
-다음 예제에서는 [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.aspx)를 이미지의 잘라내기 영역으로 사용하는 방법을 보여 줍니다. 이 예제에서는 Height가 200인 **Image** 개체를 정의합니다. **RectangleGeometry**는 표시될 이미지 영역에 대해 사각형을 정의합니다. [
-            **Rect**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.rect.aspx) 속성은 "25,25,100,150"으로 설정됩니다. 즉, 위치 "25,25"에서 시작하며 너비가 100이고 높이가 150인 직사각형을 정의합니다. 직사각형 영역 내에 있는 이미지 부분만 표시됩니다.
+다음 예제에서는 [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.aspx)를 이미지의 잘라내기 영역으로 사용하는 방법을 보여 줍니다. 이 예제에서는 Height가 200인 **Image** 개체를 정의합니다. **RectangleGeometry**는 표시될 이미지 영역에 대해 사각형을 정의합니다. [**Rect**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.rect.aspx) 속성은 "25,25,100,150"으로 설정됩니다. 즉, 위치 "25,25"에서 시작하며 너비가 100이고 높이가 150인 직사각형을 정의합니다. 직사각형 영역 내에 있는 이미지 부분만 표시됩니다.
 
 ```xaml
 <Image Source="licorice.jpg" Height="200">
@@ -119,15 +113,13 @@ ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
 -   JPEG XR
 -   아이콘(ICO)
 
-[
-            **Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) 및 [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx)용 API에는 미디어 형식의 인코드 및 디코드 전용 메서드가 없습니다. 모든 인코드 및 디코드 작업이 기본 제공되며 인코드 또는 디코드의 측면을 로드 이벤트에 대한 이벤트 데이터의 일부로 표시할 뿐입니다. 앱이 이미지 변환이나 조작을 수행하고 있는 경우 사용할 수 있는 이미지 인코드나 디코드로 특수한 작업을 수행하려면 [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.graphics.imaging.aspx) 네임스페이스에서 사용할 수 있는 API를 사용해야 합니다. 이러한 API는 Windows의 WIC(Windows 이미징 구성 요소)에서도 지원됩니다.
+[**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) 및 [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx)용 API에는 미디어 형식의 인코드 및 디코드 전용 메서드가 없습니다. 모든 인코드 및 디코드 작업이 기본 제공되며 인코드 또는 디코드의 측면을 로드 이벤트에 대한 이벤트 데이터의 일부로 표시할 뿐입니다. 앱이 이미지 변환이나 조작을 수행하고 있는 경우 사용할 수 있는 이미지 인코드나 디코드로 특수한 작업을 수행하려면 [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.graphics.imaging.aspx) 네임스페이스에서 사용할 수 있는 API를 사용해야 합니다. 이러한 API는 Windows의 WIC(Windows 이미징 구성 요소)에서도 지원됩니다.
 
 앱 리소스 및 앱에서 이미지 리소스를 패키지하는 방법에 대한 자세한 내용은 [앱 리소스 정의](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)를 참조하세요.
 
 ### WriteableBitmap
 
-[
-            **WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx)은 수정할 수 있고 WIC의 기본 파일 기반 디코딩을 사용하지 않는 [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx)를 제공합니다. 따라서 이미지를 동적으로 변경하고 업데이트된 이미지를 다시 렌더링할 수 있습니다. **WriteableBitmap**의 버퍼 콘텐츠를 정의하려면 [**PixelBuffer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) 속성을 사용하여 버퍼에 액세스하고 스트림이나 언어별 버퍼 형식을 사용하여 채웁니다. 예제 코드는 [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx)을 참조하세요.
+[**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx)은 수정할 수 있고 WIC의 기본 파일 기반 디코딩을 사용하지 않는 [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx)를 제공합니다. 따라서 이미지를 동적으로 변경하고 업데이트된 이미지를 다시 렌더링할 수 있습니다. **WriteableBitmap**의 버퍼 콘텐츠를 정의하려면 [**PixelBuffer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) 속성을 사용하여 버퍼에 액세스하고 스트림이나 언어별 버퍼 형식을 사용하여 채웁니다. 예제 코드는 [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx)을 참조하세요.
 
 ### RenderTargetBitmap
 
@@ -147,9 +139,13 @@ Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하�
 
 > **참고** &nbsp;&nbsp;코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.
 
+## 관련 문서
+
+-   [오디오, 동영상 및 카메라](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
+-   [**Image 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
+-   [**ImageBrush 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

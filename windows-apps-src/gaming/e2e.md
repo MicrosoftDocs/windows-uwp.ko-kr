@@ -1,8 +1,11 @@
 ---
 author: mtoepke
-title: Windows 10 게임 개발 가이드
-description: UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종단 간 가이드입니다.
+title: "Windows 10 게임 개발 가이드"
+description: "UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종단 간 가이드입니다."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
+ms.sourcegitcommit: 35017dd14f873350d7e9d75ff6c5c519067547b5
+ms.openlocfilehash: 33c158e254a367e65607e86ff425e9829b8255f5
+
 ---
 
 # Windows 10 게임 개발 가이드
@@ -185,7 +188,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(GDN)</td>
-        <td>[샘플](https://developer.xboxlive.com/platform/development/education/Pages/Samples.aspx)</td>
+        <td>[샘플](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx)</td>
     </tr>
     <tr>
         <td>Windows 8 게임 샘플(MSDN 코드 갤러리)</td>
@@ -217,20 +220,20 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는
     </tr>
 
     <tr>
-        <td>Desktop applications developer forums</td>
-        <td>[Windows desktop applications forums](https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev)</td>
+        <td>데스크톱 응용 프로그램 개발자 포럼</td>
+        <td>[Windows 데스크톱 응용 프로그램 포럼](https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev)</td>
     </tr>
     <tr>
-        <td>DirectX Windows Store games (archived forum posts)</td>
-        <td>[Building Windows Store games with DirectX (archived)](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wingameswithdirectx)</td>
+        <td>DirectX Windows 스토어 게임(보관된 포럼 게시물)</td>
+        <td>[DirectX를 사용하여 Windows 스토어 게임 빌드(보관됨)](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wingameswithdirectx)</td>
     </tr>
     <tr>
-        <td>Windows 10 managed partner developer forums</td>
-        <td>[XBOX Developer Forums: Windows 10](http://aka.ms/win10devforums)</td>
+        <td>Windows 10 관리 파트너 개발자 포럼</td>
+        <td>[XBOX 개발자 포럼: Windows 10](http://aka.ms/win10devforums)</td>
     </tr>
     <tr>
-        <td>DirectX early access program forums</td>
-        <td>[DirectX 12 forum](http://directx12forum.azurewebsites.net/index.php)</td>
+        <td>DirectX 미리 경험하기 프로그램 포럼</td>
+        <td>[DirectX 12 포럼](http://directx12forum.azurewebsites.net/index.php)</td>
     </tr>
 </table>
 
@@ -332,9 +335,11 @@ UWP 게임 개발을 시작할 때 그래픽, 입력, 오디오, 네트워킹, �
 
 Windows 10 게임에서 사용할 수 있는 프로그래밍 언어 및 그래픽 기술이 몇 가지 있습니다. 선택하는 경로와 방향은 개발하고 있는 게임 유형, 개발 회사의 경험 및 선호도, 게임의 고유한 기능 요구 사항에 따라 다릅니다. C#, C++ 또는 JavaScript를 사용하나요? DirectX, XAML 또는 HTML5를 사용하나요?
 
-### DirectX
+#### DirectX
 
-Microsoft DirectX는 고성능 2D 및 3D 그래픽과 멀티미디어를 위한 최고의 선택입니다. Windows 10의 새 기능인 Direct3D 12는 콘솔과 유사한 수준의 API 성능을 제공하며 이전보다 더욱 빠르고 효율적입니다. 게임은 최신 그래픽 하드웨어를 완벽히 활용하고 더 많은 개체, 더욱 풍부한 장면 및 향상된 효과를 구현할 수 있습니다. Direct3D 12는 Windows 10 PC 및 Xbox One에 최적화된 그래픽을 제공합니다. Direct3D 11의 친숙한 그래픽 파이프라인을 사용하려는 경우에는 여전히 Direct3D 11.3에 추가된 새로운 렌더링 및 최적화 기능의 이점을 누릴 수 있습니다. Win32의 루트로 신뢰할 수 있는 데스크톱 Windows API 개발자인 경우 Windows 10에도 해당 옵션이 있습니다.
+Microsoft DirectX는 고성능 2D 및 3D 그래픽과 멀티미디어를 위한 최고의 선택입니다. 
+
+Windows 10의 새 기능인 Direct3D 12는 콘솔과 유사한 수준의 API 성능을 제공하며 이전보다 더욱 빠르고 효율적입니다. 게임은 최신 그래픽 하드웨어를 완벽히 활용하고 더 많은 개체, 더욱 풍부한 장면 및 향상된 효과를 구현할 수 있습니다. Direct3D 12는 Windows 10 PC 및 Xbox One에 최적화된 그래픽을 제공합니다. Direct3D 11의 친숙한 그래픽 파이프라인을 사용하려는 경우에는 여전히 Direct3D 11.3에 추가된 새로운 렌더링 및 최적화 기능의 이점을 누릴 수 있습니다. Win32의 루트로 신뢰할 수 있는 데스크톱 Windows API 개발자인 경우 Windows 10에도 해당 옵션이 있습니다.
 
 DirectX의 폭넓은 기능과 심층적인 플랫폼 통합은 가장 까다로운 게임에 필요한 기능과 성능을 제공합니다.
 
@@ -355,10 +360,14 @@ DirectX의 폭넓은 기능과 심층적인 플랫폼 통합은 가장 까다로
         <td>Direct3D 12 프로그래밍 가이드 및 참조</td>
         <td>[Direct3D 12 그래픽](https://msdn.microsoft.com/library/windows/desktop/dn903821)</td>
     </tr>
+    <tr>
+        <td>그래픽 및 DirectX 12 개발 동영상(YouTube 채널)</td>
+        <td>[Microsoft DirectX 12 및 그래픽 교육](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA)</td>
+    </tr>
 </table>
  
 
-### XAML
+#### XAML
 
 XAML은 애니메이션, 스토리보드, 데이터 바인딩, 확장 가능한 벡터 기반 그래픽, 동적 크기 재조정 및 장면 그래프와 같은 편리한 기능이 있는 사용하기 쉬운 선언적 UI 언어입니다. XAML은 게임 UI, 메뉴, 스프라이트 및 2D 그래픽에서 훌륭히 작동합니다. UI 레이아웃을 쉽게 조정할 수 있도록 XAML은 Expression Blend, Microsoft Visual Studio 등의 디자인 및 개발 도구와 호환됩니다. XAML은 주로 C#과 함께 사용되지만, C++를 더욱 선호하거나 게임이 고성능 CPU 사양을 요구하는 경우 C++와 함께 사용해도 좋습니다.
 
@@ -378,7 +387,7 @@ XAML은 애니메이션, 스토리보드, 데이터 바인딩, 확장 가능한 
 </table>
  
 
-### HTML 5
+#### HTML 5
 
 HTML(HyperText Markup Language)은 웹 페이지, 앱 및 리치 클라이언트에서 사용하는 공용 UI 생성 언어입니다. Windows 게임은 HTML의 익숙한 기능, 유니버설 Windows 플랫폼에 대한 액세스, AppCache, 웹 작업자, 캔버스, 끌어서 놓기, 비동기 프로그래밍 및 SVG와 같은 최신 웹 기능에 대한 지원 등 모든 기능을 갖춘 표시 계층으로 HTML5를 사용할 수 있습니다. HTML 렌더링은 백그라운드에서 DirectX 하드웨어 가속 기능을 이용하므로 추가 코드를 작성하지 않고도 계속 DirectX의 성능 이점을 활용할 수 있습니다. HTML5는 웹 개발 및 웹 게임 포팅에 능숙하거나 다른 선택보다는 접근하기에 쉬울 수 있는 언어 및 그래픽 계층을 사용하려는 경우에 적합한 선택입니다. HTML5는 JavaScript와 함께 사용할 수 있지만, C# 또는 C++/CX로 만든 구성 요소로 호출할 수도 있습니다.
 
@@ -398,7 +407,7 @@ HTML(HyperText Markup Language)은 웹 페이지, 앱 및 리치 클라이언트
 </table>
  
 
-### 프레젠테이션 기술 결합
+#### 프레젠테이션 기술 결합
 
 Microsoft DXGI(DirectX Graphic Infrastructure)는 여러 그래픽 기술 간에 상호 운용성 및 호환성을 제공합니다. 고성능 그래픽을 위해 메뉴 및 기타 단순한 UI에는 XAML을 사용하고 복잡한 2D 및 3D 장면의 렌더링에는 DirectX를 사용하는 등 XAML과 DirectX를 조합할 수 있습니다. 또한 DXGI는 Direct2D, Direct3D, DirectWrite, DirectCompute, Microsoft 미디어 파운데이션 간에 호환성을 제공합니다.
 
@@ -418,9 +427,9 @@ Microsoft DXGI(DirectX Graphic Infrastructure)는 여러 그래픽 기술 간에
 </table>
  
 
-### C++
+#### C++
 
-C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제공하는 오버헤드가 낮은 고성능 언어입니다. C++/CX를 사용하면 DirectX 및 Xbox Live를 비롯하여 Windows 10의 모든 멋진 게임 기능을 쉽게 활용할 수 있습니다. 또한 기존의 C++ 코드 및 라이브러리도 재사용할 수 있습니다. C++/CX는 가비지 수집의 오버헤드를 발생시키지 않는 빠른 네이티브 코드를 생성하므로 게임이 탁월한 성능을 발휘하고 전력 소모가 줄어들어 배터리 사용 시간이 늘어날 수 있습니다. DirectX 또는 XAML과 함께 C++/CX를 사용하거나 둘의 조합을 사용하는 게임을 만들어 보세요.
+C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제공하는 오버헤드가 낮은 고성능 언어입니다. C++/CX를 사용하면 DirectX 및 Xbox Live를 비롯하여 Windows 10의 모든 멋진 게임 기능을 쉽게 활용할 수 있습니다. 또한 기존의 C++ 코드 및 라이브러리도 재사용할 수 있습니다. C++/CX는 가비지 수집의 오버헤드를 발생시키지 않는 빠른 네이티브 코드를 생성하므로 게임이 탁월한 성능을 발휘하고 전력 소모가 줄어들어 배터리 수명이 길어질 수 있습니다. DirectX 또는 XAML과 함께 C++/CX를 사용하거나 둘의 조합을 사용하는 게임을 만들어 보세요.
 
 <table>
     <colgroup>
@@ -438,7 +447,7 @@ C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제�
 </table>
  
 
-### C#
+#### C#
 
 C#("C 샤프"라고 발음)는 혁신적인 최신 언어로, 단순하고 강력하며 형식이 안전하고 개체 지향적입니다. C#를 사용하면 C 스타일 언어의 익숙함과 표현력은 유지하면서 신속하게 개발할 수 있습니다. C#는 사용하기 쉽지만, 다형성, 대리자, 람다, 종결, 반복기 메서드, 공변성(Covariance) 및 LINQ(Language-Integrated Query) 식과 같은 여러 고급 언어 기능을 제공합니다. XAML을 사용할 계획이거나 게임 개발을 서두르려는 경우 또는 이전에 C# 사용 경험이 있는 경우 C#를 선택하는 것이 좋습니다. C#은 대개 XAML과 함께 사용하므로 DirectX를 사용하려는 경우에는 C++를 선택하거나, DirectX를 조작하는 C++ 구성 요소로 게임의 일부를 작성하세요. 또는 C# 및 C++용 직접 실행 모드 Direct2D 그래픽 라이브러리인 [Win2D](https://github.com/Microsoft/Win2D) 사용을 고려합니다.
 
@@ -454,7 +463,7 @@ C#("C 샤프"라고 발음)는 혁신적인 최신 언어로, 단순하고 강�
 </table>
  
 
-### JavaScript
+#### JavaScript
 
 JavaScript는 최신 웹 및 리치 클라이언트 응용 프로그램에서 널리 사용되는 동적 스크립트 언어입니다.
 
@@ -472,7 +481,7 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
 </table>
 
 
-### Windows 런타임 구성 요소를 사용하여 언어 조합
+#### Windows 런타임 구성 요소를 사용하여 언어 조합
 
 유니버설 Windows 플랫폼에서는 다른 언어로 작성된 구성 요소를 조합하기가 쉽습니다. C++, C# 또는 Visual Basic으로 Windows 런타임 구성 요소를 생성한 후 JavaScript, C#, C++ 또는 Visual Basic에서 해당 요소로 호출합니다. 이것은 선택한 언어로 게임 부분을 프로그래밍하는 훌륭한 방법입니다. 또한 구성 요소를 통해 특정 언어에서만 사용 가능한 외부 라이브러리는 물론 이미 작성해둔 레거시 코드를 사용할 수도 있습니다.
 
@@ -492,11 +501,9 @@ Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 �
 
 게임을 위해 DirectX를 선택하는 경우 Microsoft Direct3D 12 또는 Microsoft Direct3D 11 중 어떤 버전을 사용할지 결정해야 합니다.
 
-Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하는 낮은 수준의 그래픽 API입니다. Direct3D 11은 여전히 유니버설 Windows 앱에 대한 옵션이며, Direct3D 11.3에 추가된 새로운 렌더링 및 최적화 기능에 액세스할 수 있습니다.
+Windows 10의 새 기능인 Direct3D 12는 콘솔과 유사한 수준의 API 성능을 제공하며 이전보다 더욱 빠르고 효율적입니다. 게임은 최신 그래픽 하드웨어를 완벽히 활용하고 더 많은 개체, 더욱 풍부한 장면 및 향상된 효과를 구현할 수 있습니다. Direct3D 12는 Windows 10 PC 및 Xbox One에 최적화된 그래픽을 제공합니다. Direct3D 12는 매우 낮은 수준에서 작동하므로 전문가 그래픽 개발 팀이나 숙련된 DirectX 11 개발 팀에게 그래픽 최적화를 최대화하는 데 필요한 모든 제어를 제공할 수 있습니다.
 
-Direct3D 12는 Windows 10의 새로운 기능이며 새로운 파이프라인 프로그래밍 모델을 제공합니다. Direct3D 12는 하드웨어에 더 가깝고, 추상화를 덜 사용하며 게임에 리소스 사용에 대한 강화된 제어를 제공합니다. Direct3D 12에는 더 나은 CPU, GPU 및 전원 성능이 있습니다.
-
-Direct3D 11에서 작성된 기존 엔진이 있고 Direct3D 12로 전환할 준비가 되지 않은 경우 12에서 Direct3D 11을 사용하여 일부 성능을 향상시키고 Direct3D 12로 전환을 시작할 수 있습니다.
+Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU 렌더링에 관련된 더 많은 복잡성을 자동으로 처리하는 낮은 수준의 그래픽 API입니다. Windows 10 및 Xbox One에서도 지원됩니다. Direct3D 11에서 작성된 기존 엔진이 있고 Direct3D 12로 전환할 준비가 되지 않은 경우 12에서 Direct3D 11을 사용하여 일부 성능을 향상시킬 수 있습니다. 버전 11.3+에는 Direct3D 12에서도 사용되는 새로운 렌더링 및 최적화 기능이 포함되어 있습니다.
 
 <table>
     <colgroup>
@@ -546,7 +553,7 @@ Direct3D 11에서 작성된 기존 엔진이 있고 Direct3D 12로 전환할 준
 </table>
  
 
-### 유니버설 Windows 플랫폼 브리지
+#### 유니버설 Windows 플랫폼 브리지
 
 유니버설 Windows 플랫폼 브리지는 기존 앱이나 게임을 UWP로 가져오는 기술입니다. 브리지는 UWP 게임 개발을 빠르게 시작할 수 있는 좋은 방법입니다.
 
@@ -570,7 +577,7 @@ Direct3D 11에서 작성된 기존 엔진이 있고 Direct3D 12로 전환할 준
 </table>
  
 
-### Unity
+#### Unity
 
 Unity 5는 수상 경력이 있는 차세대 개발 플랫폼으로, 2D 및 3D 게임과 대화형 환경을 만드는 데 적합합니다. Unity 5는 완전히 새로운 예술적 성능, 향상된 그래픽 기능, 개선된 효율성을 보장합니다.
 
@@ -591,7 +598,7 @@ Unity 5는 수상 경력이 있는 차세대 개발 플랫폼으로, 2D 및 3D �
     </tr>
     <tr>
         <td>Unity 5.2의 유니버설 Windows 플랫폼 앱 지원(블로그 게시물)</td>
-        <td>[Unity 5.2의 Windows 10 유니버설 플랫폼 앱](http://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)</td>
+        <td>[Unity 5.2의 Windows 10 유니버설 플랫폼 앱 ](http://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)</td>
     </tr>
     <tr>
         <td>Windows용 Unity 설명서</td>
@@ -612,7 +619,7 @@ Unity 5는 수상 경력이 있는 차세대 개발 플랫폼으로, 2D 및 3D �
 </table>
  
 
-### Havok
+#### Havok
 
 Havok의 모듈식 도구 및 기술 모음은 게임 작성자가 새로운 수준의 조작 및 몰입도에 도달하도록 지원합니다. Havok은 매우 현실적인 물리학, 조작 시뮬레이션 및 멋진 동영상을 사용할 수 있도록 해줍니다.
 
@@ -636,7 +643,7 @@ Havok의 모듈식 도구 및 기술 모음은 게임 작성자가 새로운 수
 </table>
  
 
-### Cocos2d
+#### Cocos2d
 
 Cocos2d-X는 플랫폼 간 오픈 소스 게임 개발 엔진이며 UWP 게임 빌드를 지원하는 도구 제품군입니다. 버전 3부터는 3D 기능도 추가됩니다.
 
@@ -664,7 +671,7 @@ Cocos2d-X는 플랫폼 간 오픈 소스 게임 개발 엔진이며 UWP 게임 �
 </table>
 
 
-### Unreal Engine
+#### Unreal Engine
 
 Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게임 개발 도구 모음입니다. Unreal Engine은 가장 까다로운 콘솔 및 PC 게임에 이르기까지 전 세계의 다양한 게임 개발자가 사용합니다. Unreal Engine 4에 가입한 [DirectX 12 미리 경험하기 프로그램](#dxeap) 회원은 DirectX 12를 지원하는 Unreal Engine 4.4 개발 프로젝트에 액세스할 수 있습니다.
 
@@ -901,7 +908,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
 </table>
  
 
-### 색 지침 및 색상표
+#### 색 지침 및 색상표
 
 게임에서 일관된 색 지침을 따르면 심미적인 측면을 개선하고 탐색을 지원하며 플레이어에게 메뉴 및 HUD 기능을 알려주는 강력한 도구로 작동할 수 있습니다. 경고, 손상, XP 및 도전 과제와 같은 게임 요소의 색을 일관되게 지정하면 UI가 더욱 깔끔해지고 명시적 레이블의 필요성이 줄어듭니다.
 
@@ -917,7 +924,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
 </table>
  
 
-### 입력 체계
+#### 입력 체계
 
 입력 체계를 적절히 사용하면 UI 레이아웃, 탐색, 가독성, 분위기, 브랜드 및 플레이어의 몰입도를 비롯한 게임의 여러 측면을 강화할 수 있습니다.
 
@@ -933,7 +940,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
 </table>
  
 
-### UI 맵
+#### UI 맵
 
 UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니다. UI 맵을 통해 참여하는 모든 관련자가 게임 인터페이스 및 탐색 경로를 쉽게 이해할 수 있으며 개발 주기의 초기에 잠재적인 장애물과 문제점을 알아낼 수 있습니다.
 
@@ -951,6 +958,8 @@ UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니�
 
 ### DirectX 개발
 
+DirectX 게임 개발에 대한 가이드 및 참조입니다.
+
 <table>
     <colgroup>
     <col width="50%" />
@@ -965,6 +974,10 @@ UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니�
         <td>[앱 개체 및 DirectX](about-the-metro-style-user-interface-and-directx.md)</td>
     </tr>
     <tr>
+        <td>그래픽 및 DirectX 12 개발 동영상(YouTube 채널)</td>
+        <td>[Microsoft DirectX 12 및 그래픽 교육](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA)</td>
+    </tr>
+    <tr>
         <td>DirectX 개요 및 참조</td>
         <td>[DirectX 그래픽 및 게임](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
     </tr>
@@ -977,7 +990,43 @@ UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니�
         <td>[더 나은 파워, 더 나은 성능: DirectX 12의 게임](http://channel9.msdn.com/Events/GDC/GDC-2015/Better-Power-Better-Performance-Your-Game-on-DirectX12)</td>
     </tr>
 </table>
+
+#### Direct3D 12 학습
+
+Direct3D 12의 변경 사항 및 Direct3D 12를 사용하여 프로그래밍을 시작하는 방법을 알아봅니다. 
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>프로그래밍 환경 설정</td>
+        <td>[Direct3D 12 프로그래밍 환경 설정](https://msdn.microsoft.com/library/windows/desktop/dn899120.aspx)</td>
+    </tr>
+    <tr>
+        <td>기본 구성 요소를 만드는 방법</td>
+        <td>[기본 Direct3D 12 구성 요소 만들기](https://msdn.microsoft.com/library/windows/desktop/dn859356.aspx)</td>
+    </tr>
+    <tr>
+        <td>Direct3D 12의 변경 사항</td>
+        <td>[Direct3D 11에서 Direct3D 12로 마이그레이션 시의 중요 변경 사항](https://msdn.microsoft.com/library/windows/desktop/dn899194.aspx)</td>
+    </tr>
+    <tr>
+        <td>Direct3D 11에서 Direct3D 12로 포팅하는 방법</td>
+        <td>[Direct3D 11에서 Direct3D 12로 포팅](https://msdn.microsoft.com/library/windows/desktop/mt431709.aspx)</td>
+    </tr>
+    <tr>
+        <td>리소스 바인딩 개념(설명자, 설명자 테이블, 설명자 힙 및 루트 서명 설명) </td>
+        <td>[Direct3D 12의 리소스 바인딩](https://msdn.microsoft.com/library/windows/desktop/dn899206.aspx)</td>
+    </tr>
+    <tr>
+        <td>메모리 관리</td>
+        <td>[Direct3D 12의 메모리 관리](https://msdn.microsoft.com/library/windows/desktop/dn899198.aspx)</td>
+    </tr>
+</table>
  
+#### DirectX 도구 키트 및 라이브러리
 
 DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 기하 도형 처리 라이브러리에서는 텍스처, 메시, 스프라이트 및 기타 유틸리티 기능과 DirectX 개발용 도우미 클래스를 제공합니다. 이러한 라이브러리를 사용하면 이러한 기능을 직접 구현하는 데 비해 많은 시간과 노력을 절약할 수 있습니다. 주로 Direct3D 11용으로 구현되었지만 이러한 라이브러리의 일부는 Direct3D 12에서도 작동합니다.
 
@@ -1001,6 +1050,33 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 
     <tr>
         <td>DirectXTK에서 Direct3D 12 지원(블로그 게시물)</td>
         <td>[DirectX 12에 대한 지원](https://github.com/Microsoft/DirectXTK/issues/2)</td>
+    </tr>
+</table>
+
+#### 파트너의 DirectX 리소스
+
+외부 파트너가 만든 몇 가지 추가 DirectX 설명서입니다.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>Nvidia: DX12 권장 사항 및 금지 사항(블로그 게시물) </td>
+        <td>[Nvidia GPU의 DirectX 12](https://developer.nvidia.com/dx12-dos-and-donts-updated)</td>
+    </tr>
+    <tr>
+        <td>Intel: DirectX 12를 사용한 효율적인 렌더링</td>
+        <td>[Intel Graphics의 DirectX 12 렌더링](https://software.intel.com/sites/default/files/managed/4a/38/Efficient-Rendering-with-DirectX-12-on-Intel-Graphics.pdf)</td>
+    </tr>
+    <tr>
+        <td>Intel: DirectX 12의 다중 어댑터 지원</td>
+        <td>[DirectX 12를 사용하여 명시적 다중 어댑터 응용 프로그램을 구현하는 방법](https://software.intel.com/en-us/articles/multi-adapter-support-in-directx-12)</td>
+    </tr>
+    <tr>
+        <td>Intel: DirectX 12 자습서</td>
+        <td>[Intel, Suzhou Snail 및 Microsoft의 공동 백서](https://software.intel.com/en-us/articles/tutorial-migrating-your-apps-to-directx-12-part-1)</td>
     </tr>
 </table>
 
@@ -1122,6 +1198,10 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
         <td>[DirectX 도구를 사용하여 게임의 그래픽 문제 해결](http://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)</td>
     </tr>
     <tr>
+        <td>DirectX 12 디버깅을 위한 Visual Studio 2015 도구(동영상)</td>
+        <td>[Visual Studio 2015의 Windows 10용 DirectX 도구](https://channel9.msdn.com/Series/ConnectOn-Demand/212)</td>
+    </tr>
+    <tr>
         <td>Direct3D 12 프로그래밍 가이드</td>
         <td>[Direct3D 12 프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/dn903821)</td>
     </tr>
@@ -1130,25 +1210,6 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
         <td>[DirectX 및 XAML interop](directx-and-xaml-interop.md)</td>
     </tr>
 </table>
- 
-
-Microsoft DirectX 제품 팀에서 DirectX 12 개발에 대한 자세한 동영상 시리즈를 만들었습니다. 이러한 동영상에서는 리소스 바인딩, 프레젠테이션 모드, 디버깅, 리소스 장벽 및 기타 많은 DirectX 12 개념의 세부 사항을 설명합니다. 이 시리즈도 가끔 게스트 프리젠터를 특징으로 합니다.
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>그래픽 및 DirectX 12 개발 동영상(YouTube 채널)</td>
-        <td>[Microsoft DirectX 12 및 그래픽 교육](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA)</td>
-    </tr>
-    <tr>
-        <td>Direct3D 12 리소스 및 힙 관리(동영상)</td>
-        <td>[DirectX 12의 힙 및 리소스](https://www.youtube.com/channel/UCiaX2B8XiXR70jaN7NK-FpA)</td>
-    </tr>
-</table>
- 
 
 ### 세계화 및 지역화
 
@@ -1385,6 +1446,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

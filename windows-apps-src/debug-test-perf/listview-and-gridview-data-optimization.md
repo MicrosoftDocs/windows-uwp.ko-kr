@@ -23,8 +23,7 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
 -   데이터 집합의 소스(로컬 디스크, 네트워크 또는 클라우드)
 -   앱의 전체 메모리 소비
 
-**참고** ListView 및 GridView에서 사용자가 빠르게 이동/스크롤하는 동안 일시적으로 자리 표시자 화면 효과를 표시하는 기능이 기본적으로 사용되도록 설정되어 있는지 확인합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [
-            **ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
+**참고** ListView 및 GridView에서 사용자가 빠르게 이동/스크롤하는 동안 일시적으로 자리 표시자 화면 효과를 표시하는 기능이 기본적으로 사용되도록 설정되어 있는지 확인합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
 증분 및 임의 액세스 데이터 가상화 기술에 대한 자세한 내용은 다음과 같습니다.
 
@@ -33,8 +32,7 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
 증분 데이터 가상화에서는 데이터가 순차적으로 로드됩니다. 증분 데이터 가상화를 사용하는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)는 100만 항목의 컬렉션을 보는 데 사용될 수 있지만 초기에는 50개의 항목만 로드됩니다. 사용자가 이동/스크롤하면 다음 50개가 로드됩니다. 항목이 로드됨에 따라 스크롤 막대의 위치 조정 컨트롤의 크기가 줄어듭니다. 이 데이터 가상화 유형의 경우 이러한 인터페이스를 구현하는 데이터 원본 클래스를 작성합니다.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [
-            **INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)(C#/VB) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)(C++/CX)
+-   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)(C#/VB) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)(C++/CX)
 -   [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)
 
 이와 같은 데이터 원본은 지속적으로 확장될 수 있는 메모리 내 목록입니다. 항목 컨트롤은 표준 [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) 인덱서 및 개수 속성을 사용하는 항목을 요청합니다. 개수는 데이터 집합의 실제 크기가 아니라 항목 수를 로컬로 나타내야 합니다.
@@ -46,13 +44,11 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
 임의 액세스 데이터 가상화에서는 데이터 집합의 임의 지점에서 데이터를 로드할 수 있습니다. 100만 개의 항목을 보는 데 사용되는 임의 액세스 데이터 가상화를 사용하는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)는 100,000~100,050개의 항목을 로드할 수 있습니다. 사용자가 목록의 시작 부분으로 이동하면 컨트롤이 1~50개의 항목을 로드합니다. 스크롤 막대의 위치 조정 컨트롤은 항상 **ListView**에 100만 개의 항목이 포함되어 있음을 나타냅니다. 스크롤 막대의 위치 조정 컨트롤 위치는 컬렉션의 전체 데이터 집합에서 표시된 항목이 있는 위치를 기준으로 합니다. 이 유형의 데이터 가상화는 메모리 요구 사항 및 컬렉션 로드 시간을 크게 줄일 수 있습니다. 이를 지원하려면 필요에 따라 데이터를 가져오고 로컬 캐시를 관리하며 이러한 인터페이스를 구현하는 데이터 원본 클래스를 작성해야 합니다.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [
-            **INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)(C#/VB) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)(C++/CX)
+-   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)(C#/VB) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)(C++/CX)
 -   (선택적으로) [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)
 -   (선택적으로) [**ISelectionInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877074)
 
-[
-            **IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)는 컨트롤에서 자주 사용되는 항목에 대한 정보를 제공합니다. 항목 컨트롤은 해당 보기가 변경될 때마다 이 메서드를 호출하며 다음 두 가지 범위 집합을 포함합니다.
+[**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)는 컨트롤에서 자주 사용되는 항목에 대한 정보를 제공합니다. 항목 컨트롤은 해당 보기가 변경될 때마다 이 메서드를 호출하며 다음 두 가지 범위 집합을 포함합니다.
 
 -   뷰포트에 있는 항목 집합
 -   컨트롤에서 사용하지만 뷰포트에 없을 수 있는 가상화되지 않은 항목 집합
@@ -60,8 +56,7 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
     -   포커스가 있는 항목
     -   첫 번째 항목
 
-[
-            **IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)를 구현하면 데이터 원본가 가져오고 캐시해야 하는 항목 및 더 이상 필요 없는 캐시 데이터를 정리할 시점을 인식합니다. **IItemsRangeInfo**에서는 [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081) 개체를 사용하여 컬렉션 내 해당 인덱스를 기반으로 항목 집합을 설명합니다. 이는 올바르거나 안정적이지 않을 수 있는 항목 포인터를 사용하지 않도록 하기 위한 것입니다. **IItemsRangeInfo**는 항목 컨트롤에 대한 상태 정보를 기반으로 하기 때문에 해당 항목 컨트롤의 단일 인스턴스에서만 사용되도록 설계되었습니다. 여러 항목 컨트롤이 동일한 데이터에 액세스해야 하는 경우 각각에 대해 별도의 데이터 원본 인스턴스가 필요합니다. 여러 항목 컨트롤은 공용 캐시를 공유할 수 있지만 캐시에서 정리하는 논리가 보다 복잡합니다.
+[**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)를 구현하면 데이터 원본가 가져오고 캐시해야 하는 항목 및 더 이상 필요 없는 캐시 데이터를 정리할 시점을 인식합니다. **IItemsRangeInfo**에서는 [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081) 개체를 사용하여 컬렉션 내 해당 인덱스를 기반으로 항목 집합을 설명합니다. 이는 올바르거나 안정적이지 않을 수 있는 항목 포인터를 사용하지 않도록 하기 위한 것입니다. **IItemsRangeInfo**는 항목 컨트롤에 대한 상태 정보를 기반으로 하기 때문에 해당 항목 컨트롤의 단일 인스턴스에서만 사용되도록 설계되었습니다. 여러 항목 컨트롤이 동일한 데이터에 액세스해야 하는 경우 각각에 대해 별도의 데이터 원본 인스턴스가 필요합니다. 여러 항목 컨트롤은 공용 캐시를 공유할 수 있지만 캐시에서 정리하는 논리가 보다 복잡합니다.
 
 임의 액세스 데이터 가상화 데이터 원본에 대한 기본 전략은 다음과 같습니다.
 

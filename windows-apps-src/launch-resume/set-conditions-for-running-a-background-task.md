@@ -47,12 +47,12 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 > SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## 백그라운드 작업에 SystemCondition 개체 추가
+## [!div class="tabbedCodeSnippets"]
 
+
+백그라운드 작업에 SystemCondition 개체 추가
 
 조건을 추가하려면 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체에 대해 [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) 메서드를 호출하고 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) 개체를 전달합니다.
-
-다음 코드는 InternetAvailable 백그라운드 작업 조건을 TaskBuilder에 등록합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -62,12 +62,12 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 > taskBuilder->AddCondition(internetCondition);
 > ```
 
-## 백그라운드 작업 등록
+## 다음 코드는 InternetAvailable 백그라운드 작업 조건을 TaskBuilder에 등록합니다.
 
 
-이제 [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 사용하여 백그라운드 작업을 등록할 수 있으며, 지정한 조건을 충족하는 경우에만 작업이 시작됩니다.
+[!div class="tabbedCodeSnippets"]
 
-다음 코드는 작업을 등록하고 결과 BackgroundTaskRegistration 개체를 저장합니다.
+백그라운드 작업 등록
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -77,20 +77,20 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 > BackgroundTaskRegistration ^ task = taskBuilder->Register();
 > ```
 
-> **참고** 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
+> 이제 [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 사용하여 백그라운드 작업을 등록할 수 있으며, 지정한 조건을 충족하는 경우에만 작업이 시작됩니다.
 
-업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+다음 코드는 작업을 등록하고 결과 BackgroundTaskRegistration 개체를 저장합니다. [!div class="tabbedCodeSnippets"]
 
-> **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+> **참고** 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다. 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-## 백그라운드 작업에 여러 조건 배치
+## **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다.
 
-여러 조건을 추가하려면 앱에서 [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) 메서드를 여러 번 호출합니다. 이러한 호출은 작업 등록이 적용되기 전에 수행되어야 합니다.
+등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-> **참고** 백그라운드 작업에 충돌하는 조건을 추가하지 않도록 주의하세요.
+> 백그라운드 작업에 여러 조건 배치
  
 
-다음 코드 조각은 백그라운드 작업을 만들고 등록하는 컨텍스트 내의 여러 조건을 보여 줍니다.
+여러 조건을 추가하려면 앱에서 [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) 메서드를 여러 번 호출합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
@@ -152,35 +152,35 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 > BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ```
 
-## 설명
+## 이러한 호출은 작업 등록이 적용되기 전에 수행되어야 합니다.
 
 
-> **참고** 백그라운드 작업이 필요한 경우에만 실행되고 작업이 실패하는 경우에는 실행되지 않도록 백그라운드 작업에 적합한 조건을 선택합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+> **참고** 백그라운드 작업에 충돌하는 조건을 추가하지 않도록 주의하세요. 다음 코드 조각은 백그라운드 작업을 만들고 등록하는 컨텍스트 내의 여러 조건을 보여 줍니다.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> [!div class="tabbedCodeSnippets"] 설명
 
  
 
-## 관련 항목
+## **참고** 백그라운드 작업이 필요한 경우에만 실행되고 작업이 실패하는 경우에는 실행되지 않도록 백그라운드 작업에 적합한 조건을 선택합니다.
 
 
 ****
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
-* [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
-* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
+* [다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.](create-and-register-a-background-task.md)
+* [**참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.](declare-background-tasks-in-the-application-manifest.md)
+* [Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.](handle-a-cancelled-background-task.md)
+* [관련 항목](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업 만들기 및 등록](register-a-background-task.md)
+* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](respond-to-system-events-with-background-tasks.md)
+* [취소된 백그라운드 작업 처리](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업 진행 및 완료 모니터링](use-a-maintenance-trigger.md)
+* [백그라운드 작업 등록](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](guidelines-for-background-tasks.md)
 
 ****
 
-* [백그라운드 작업 디버그](debug-a-background-task.md)
-* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [백그라운드 작업에서 라이브 타일 업데이트](debug-a-background-task.md)
+* [유지 관리 트리거 사용](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -188,6 +188,6 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

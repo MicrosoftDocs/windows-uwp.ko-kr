@@ -105,6 +105,6 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

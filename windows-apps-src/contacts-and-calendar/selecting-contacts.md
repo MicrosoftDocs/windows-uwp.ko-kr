@@ -14,13 +14,11 @@ ms.openlocfilehash: 6f2c6a546ed3daa0ef0311bc54ca47f31d01f3d8
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-[
-            **Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
+[**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
 
 ## 연락처 선택 기능 설정
 
-[
-            **Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
+[**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
@@ -28,8 +26,7 @@ var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 
 ## 선택 모드 설정(옵션)
 
-기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [
-            **SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
+기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
 
 먼저 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 **Fields**로 설정합니다.
 
@@ -234,6 +231,6 @@ public class ContactItemAdapter
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

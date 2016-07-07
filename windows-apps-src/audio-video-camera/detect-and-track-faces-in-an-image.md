@@ -16,18 +16,15 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 \[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
-이 항목에서는 [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129)를 사용하여 이미지로 얼굴을 감지하는 방법을 보여 줍니다. [
-            **FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150)는 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 최적화되어 있습니다.
+이 항목에서는 [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129)를 사용하여 이미지로 얼굴을 감지하는 방법을 보여 줍니다. [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150)는 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 최적화되어 있습니다.
 
-[
-            **FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)를 사용하여 얼굴을 추적하는 다른 방법은 [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)을 참조하세요.
+[**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)를 사용하여 얼굴을 추적하는 다른 방법은 [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)을 참조하세요.
 
 이 문서의 코드는 [기본 얼굴 감지](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409) 및 [기본 얼굴 추적](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409) 샘플에서 가져왔습니다. 이러한 샘플을 다운로드하여 코드가 사용되는 컨텍스트를 확인하거나 직접 앱을 만들 때 샘플을 기준으로 삼을 수 있습니다.
 
 ## 이미지 하나로 얼굴 감지
 
-[
-            **FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) 클래스를 사용하면 정지 이미지에서 하나 이상의 얼굴을 감지할 수 있습니다.
+[**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) 클래스를 사용하면 정지 이미지에서 하나 이상의 얼굴을 감지할 수 있습니다.
 
 이 예제에서는 다음 네임스페이스에서 API를 사용합니다.
 
@@ -41,8 +38,7 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 [!code-cs[선택기](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetPicker)]
 
-[
-            **BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스를 사용하면 이미지 파일을 **SoftwareBitmap**으로 디코드할 수 있습니다. 이미지가 작으면 얼굴 감지 프로세스가 더 빨라지므로 원본 이미지를 더 작은 크기로 축소할 수 있습니다. 이를 위해 디코딩 동안 [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) 개체를 만들고 [**ScaledWidth**](https://msdn.microsoft.com/library/windows/apps/br226261) 및 [**ScaledHeight**](https://msdn.microsoft.com/library/windows/apps/br226260) 속성을 설정하여 [**GetSoftwareBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn887332) 호출에 전달합니다. 그러면 디코드되고 크기 조정된 **SoftwareBitmap**이 반환됩니다.
+[**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스를 사용하면 이미지 파일을 **SoftwareBitmap**으로 디코드할 수 있습니다. 이미지가 작으면 얼굴 감지 프로세스가 더 빨라지므로 원본 이미지를 더 작은 크기로 축소할 수 있습니다. 이를 위해 디코딩 동안 [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) 개체를 만들고 [**ScaledWidth**](https://msdn.microsoft.com/library/windows/apps/br226261) 및 [**ScaledHeight**](https://msdn.microsoft.com/library/windows/apps/br226260) 속성을 설정하여 [**GetSoftwareBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn887332) 호출에 전달합니다. 그러면 디코드되고 크기 조정된 **SoftwareBitmap**이 반환됩니다.
 
 [!code-cs[Decode](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDecode)]
 
@@ -50,8 +46,7 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 [!code-cs[포맷(F)](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-[
-            **CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132)를 호출하여 **FaceDetector** 개체를 인스턴스화한 다음 적절한 크기로 조정되고 지원되는 픽셀 형식으로 변환된 비트맵을 전달하여 [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134)를 호출합니다. 이 메서드는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 반환합니다. **ShowDetectedFaces**는 아래에 표시된 대로 이미지의 얼굴 주위에 사각형을 그리는 도우미 메서드입니다.
+[**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132)를 호출하여 **FaceDetector** 개체를 인스턴스화한 다음 적절한 크기로 조정되고 지원되는 픽셀 형식으로 변환된 비트맵을 전달하여 [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134)를 호출합니다. 이 메서드는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 반환합니다. **ShowDetectedFaces**는 아래에 표시된 대로 이미지의 얼굴 주위에 사각형을 그리는 도우미 메서드입니다.
 
 [!code-cs[검색](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 
@@ -89,13 +84,11 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 **ProcessCurrentVideoFrame** 도우미는 타이머에 의해 비동기적으로 호출되므로 메서드는 먼저 세마포의 **Wait** 메서드를 호출하여 추적 작업이 진행 중인지 확인하고 그런 경우 메서드는 얼굴을 감지하지 않고 반환됩니다. 이 메서드의 끝 부분에 세마포의 **Release** 메서드가 호출되므로 이후 **ProcessCurrentVideoFrame**을 계속 호출할 수 있습니다.
 
-[
-            **FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) 클래스는 [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체에서 작동합니다. **VideoFrame**을 가져올 수 있는 방법은 실행 중인 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체에서 미리 보기 프레임을 캡처하거나 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)의 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784) 메서드를 구현하는 것을 비롯해 여러 가지가 있습니다. 이 예제에서는 비디오 프레임을 반환하는 정의되지 않은 도우미 메서드 **GetLatestFrame**을 이 작업에 대한 자리 표시자로 사용합니다. 실행 중인 미디어 캡처 디바이스의 미리 보기 스트림에서 비디오 프레임을 가져오는 방법에 대한 정보는 [미리 보기 프레임 가져오기](get-a-preview-frame.md)를 참조하세요.
+[**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) 클래스는 [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체에서 작동합니다. **VideoFrame**을 가져올 수 있는 방법은 실행 중인 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체에서 미리 보기 프레임을 캡처하거나 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)의 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764784) 메서드를 구현하는 것을 비롯해 여러 가지가 있습니다. 이 예제에서는 비디오 프레임을 반환하는 정의되지 않은 도우미 메서드 **GetLatestFrame**을 이 작업에 대한 자리 표시자로 사용합니다. 실행 중인 미디어 캡처 디바이스의 미리 보기 스트림에서 비디오 프레임을 가져오는 방법에 대한 정보는 [미리 보기 프레임 가져오기](get-a-preview-frame.md)를 참조하세요.
 
 **FaceDetector**와 마찬가지로 **FaceTracker**는 제한된 픽셀 형식 집합을 지원합니다. 이 예제에서는 제공된 프레임이 Nv12 형식이 아닌 경우 얼굴 감지를 중단합니다.
 
-[
-            **ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 얼굴 추적 도우미 메서드는 UI 스레드에서 호출되지 않으므로 모든 UI 업데이트는 [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에서 해야 합니다.
+[**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157)을 호출하여 프레임에 있는 얼굴을 나타내는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 검색합니다. 얼굴 목록이 있으면 얼굴 감지를 위해 위에 설명된 동일한 방식으로 얼굴을 표시할 수 있습니다. 얼굴 추적 도우미 메서드는 UI 스레드에서 호출되지 않으므로 모든 UI 업데이트는 [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 호출 내에서 해야 합니다.
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 

@@ -3,8 +3,8 @@ author: awkoren
 Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱 앱 변환기 미리 보기(Project Centennial)"
-ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
-ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
+ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
 
 ---
 
@@ -21,6 +21,11 @@ ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
 ## 새로운 기능
 
 이 섹션에서는 데스크톱 앱 변환기의 버전 간 변경 내용을 대략적으로 설명합니다. 
+
+### 6/16/2016
+
+* 데스크톱 앱 변환기(v0.1.20)는 최신 Windows 10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제를 해결합니다. 
+* ```–CreateX86Package```가 ```–PackageArch```로 대체되어 생성된 패키지에 대한 아키텍처를 지정할 수 있습니다. 
 
 ### 6/8/2016
 
@@ -210,12 +215,12 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup WorkDirectory``` | 모든 임시 변환기 파일을 제거합니다. |
 |```Cleanup ExpandedImages``` | 호스트 컴퓨터에 설치된 확장된 기본 이미지를 모두 삭제합니다. |
 
-### x86 패키지 매개 변수
-데스크톱 앱 변환기 Preview는 이제 x86 및 amd64 컴퓨터에서 설치하고 실행할 수 있는 x86 앱 패키지를 만드는 기능을 지원합니다. 하지만 성공적인 변환을 수행하려면 데스크톱 앱 변환기가 AMD64 컴퓨터에서 실행되어야 합니다.
+### 패키지 아키텍처
+데스크톱 앱 변환기 Preview는 이제 x86 및 amd64 컴퓨터에서 설치하고 실행할 수 있는 x86 및 x64 앱 패키지를 만드는 기능을 지원합니다. 하지만 성공적인 변환을 수행하려면 데스크톱 앱 변환기가 AMD64 컴퓨터에서 실행되어야 합니다.
 
 |매개 변수|설명|
 |---------|-----------|
-|```-CreateX86Package[<SwitchParameter>]``` | 32비트 및 64비트 호스트 OS에서 설치하고 실행할 수 있는 32비트 패키지를 생성합니다. 기본적으로 변환기는 앱의 주 실행 파일에서 패키지 아키텍처를 검색하려고 시도합니다. 실행 파일이 없는 경우 기본값은 64비트입니다. |
+|```-PackageArch <String>``` | 지정된 아키텍처를 사용하여 패키지를 생성합니다. 유효한 옵션은 'x86' 또는 'x64'입니다(예: -PackageArch x86). 이 매개 변수는 선택 사항입니다. 지정하지 않으면 DesktopAppConverter는 패키지 아키텍처를 자동으로 검색하려고 합니다. 자동 검색에 실패하면 기본적으로 x64 패키지로 설정합니다. |
 
 ## 참고 항목
 + [데스크톱 앱 변환기 다운로드](http://go.microsoft.com/fwlink/?LinkId=785437)
@@ -227,6 +232,6 @@ get-help .\DesktopAppConverter.ps1 -detailed
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

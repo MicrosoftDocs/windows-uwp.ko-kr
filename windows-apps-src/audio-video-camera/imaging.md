@@ -18,14 +18,11 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 
 **SoftwareBitmap** 클래스는 이미지 파일, [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259) 개체, Direct3D 화면, 코드를 비롯한 다양한 소스에서 만들 수 있는 다용도 API입니다. **SoftwareBitmap**을 사용하면 서로 다른 픽셀 형식과 알파 모드를 손쉽게 변환할 수 있으며 픽셀 데이터에 낮은 수준으로 액세스할 수 있습니다. 또한 **SoftwareBitmap**은 다음과 같은 여러 Windows 기능에서 사용되는 공용 인터페이스입니다.
 
--   [
-            **CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) - 카메라로 캡처된 프레임을 **SoftwareBitmap**으로 가져올 수 있습니다.
+-   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) - 카메라로 캡처된 프레임을 **SoftwareBitmap**으로 가져올 수 있습니다.
 
--   [
-            **VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) - **VideoFrame**의 **SoftwareBitmap** 표현을 가져올 수 있습니다.
+-   [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) - **VideoFrame**의 **SoftwareBitmap** 표현을 가져올 수 있습니다.
 
--   [
-            **FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) - **SoftwareBitmap**에서 얼굴을 검색할 수 있습니다.
+-   [**FaceDetector**](https://msdn.microsoft.com/library/windows/apps/dn974129) - **SoftwareBitmap**에서 얼굴을 검색할 수 있습니다.
 
 이 문서의 샘플 코드는 다음 네임스페이스의 API를 사용합니다.
 
@@ -37,8 +34,7 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 
 [!code-cs[PickInputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickInputFile)]
 
-**StorageFile** 개체의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) 메서드를 호출하여 이미지 데이터가 포함된 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 지정된 스트림에 대한 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스 인스턴스를 가져옵니다. [
-            **GetSoftwareBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn887332)를 호출하여 이미지가 포함된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체를 가져옵니다.
+**StorageFile** 개체의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) 메서드를 호출하여 이미지 데이터가 포함된 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 지정된 스트림에 대한 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스 인스턴스를 가져옵니다. [**GetSoftwareBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn887332)를 호출하여 이미지가 포함된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체를 가져옵니다.
 
 [!code-cs[CreateSoftwareBitmapFromFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromFile)]
 
@@ -50,9 +46,7 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 
 **StorageFile** 개체의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) 메서드를 호출하여 이미지를 기록할 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)를 호출하여 지정된 스트림에 대한 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) 클래스 인스턴스를 가져옵니다. **CreateAsync**의 첫 번째 매개 변수는 이미지를 인코드하는 데 사용할 코덱을 나타내는 GUID입니다. **BitmapEncoder** 클래스는 인코더에서 지원하는 각 코덱에 대한 ID(예: [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226))가 포함된 속성을 노출합니다.
 
-[
-            **SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337) 메서드를 사용하여 인코드될 이미지를 설정합니다. 이미지가 인코드되는 동안 이미지에 기본적인 변환을 적용할 [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) 속성의 값을 설정할 수 있습니다. [
-            **IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225) 속성은 인코더에서 미리 보기가 생성되는지 여부를 결정합니다. 일부 파일 형식은 미리 보기를 지원하지 않으므로, 이 기능을 사용할 때는 미리 보기가 지원되지 않는 경우 throw되는 지원되지 않는 작업 오류가 발생합니다.
+[**SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337) 메서드를 사용하여 인코드될 이미지를 설정합니다. 이미지가 인코드되는 동안 이미지에 기본적인 변환을 적용할 [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254) 속성의 값을 설정할 수 있습니다. [**IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225) 속성은 인코더에서 미리 보기가 생성되는지 여부를 결정합니다. 일부 파일 형식은 미리 보기를 지원하지 않으므로, 이 기능을 사용할 때는 미리 보기가 지원되지 않는 경우 throw되는 지원되지 않는 작업 오류가 발생합니다.
 
 인코더가 지정 파일에 이미지 데이터를 쓰도록 [**FlushAsync**](https://msdn.microsoft.com/library/windows/apps/br226216)를 호출합니다.
 
@@ -64,13 +58,11 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 
 ## XAML 이미지 컨트롤과 함께 SoftwareBitmap 사용
 
-[
-            **Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 컨트롤을 사용하여 XAML 페이지에 이미지를 표시하려면 먼저 XAML 페이지에 **Image** 컨트롤을 정의합니다.
+[**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 컨트롤을 사용하여 XAML 페이지에 이미지를 표시하려면 먼저 XAML 페이지에 **Image** 컨트롤을 정의합니다.
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
 
-새 [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) 개체를 만듭니다. [
-            **SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856)를 호출하고 **SoftwareBitmap**을 전달하여 원본 개체의 콘텐츠를 설정합니다. 그러면 **Image** 컨트롤의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) 속성을 새로 만든 **SoftwareBitmapSource**로 설정할 수 있습니다.
+새 [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) 개체를 만듭니다. [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856)를 호출하고 **SoftwareBitmap**을 전달하여 원본 개체의 콘텐츠를 설정합니다. 그러면 **Image** 컨트롤의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) 속성을 새로 만든 **SoftwareBitmapSource**로 설정할 수 있습니다.
 
 [!code-cs[SoftwareBitmapToWriteableBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmapToWriteableBitmap)]
 
@@ -78,8 +70,7 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 
 ## WriteableBitmap에서 SoftwareBitmap 만들기
 
-[
-            **SoftwareBitmap.CreateCopyFromBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887370)를 호출하고 **WriteableBitmap**의 **PixelBuffer** 속성을 제공해 픽셀 데이터를 설정하는 방법으로 기존 **WriteableBitmap**에서 **SoftwareBitmap**을 만들 수 있습니다. 두 번째 인수를 사용하면 새로 만든 **WriteableBitmap**에 대해 픽셀 형식을 요청할 수 있습니다. **WriteableBitmap**의 [**PixelWidth**](https://msdn.microsoft.com/library/windows/apps/br243253) 및 [**PixelHeight**](https://msdn.microsoft.com/library/windows/apps/br243251) 속성을 사용하여 새 이미지의 크기를 지정할 수 있습니다.
+[**SoftwareBitmap.CreateCopyFromBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887370)를 호출하고 **WriteableBitmap**의 **PixelBuffer** 속성을 제공해 픽셀 데이터를 설정하는 방법으로 기존 **WriteableBitmap**에서 **SoftwareBitmap**을 만들 수 있습니다. 두 번째 인수를 사용하면 새로 만든 **WriteableBitmap**에 대해 픽셀 형식을 요청할 수 있습니다. **WriteableBitmap**의 [**PixelWidth**](https://msdn.microsoft.com/library/windows/apps/br243253) 및 [**PixelHeight**](https://msdn.microsoft.com/library/windows/apps/br243251) 속성을 사용하여 새 이미지의 크기를 지정할 수 있습니다.
 
 [!code-cs[WriteableBitmapToSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteableBitmapToSoftwareBitmap)]
 
@@ -97,9 +88,7 @@ COM interop을 사용하려면 프로젝트의 **System.Runtime.InteropServices*
 
 [!code-cs[COMImport](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCOMImport)]
 
-원하는 픽셀 형식 및 크기를 사용하여 새 **SoftwareBitmap**을 만듭니다. 또는 기존 **SoftwareBitmap**을 사용하여 픽셀 데이터를 편집할 수도 있습니다. [
-            **SoftwareBitmap.LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887380)를 호출하여 픽셀 데이터 버퍼를 나타내는 [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) 클래스 인스턴스를 가져옵니다. **BitmapBuffer**를 **IMemoryBufferByteAccess** COM 인터페이스로 캐스팅한 다음 [**IMemoryBufferByteAccess.GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/mt297506)를 호출하여 바이트 배열에 데이터를 채웁니다. [
-            **BitmapBuffer.GetPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887330) 메서드를 사용하여 각 픽셀의 버퍼에 대한 오프셋을 계산하는 데 유용한 [**BitmapPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887342) 개체를 가져옵니다.
+원하는 픽셀 형식 및 크기를 사용하여 새 **SoftwareBitmap**을 만듭니다. 또는 기존 **SoftwareBitmap**을 사용하여 픽셀 데이터를 편집할 수도 있습니다. [**SoftwareBitmap.LockBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887380)를 호출하여 픽셀 데이터 버퍼를 나타내는 [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325) 클래스 인스턴스를 가져옵니다. **BitmapBuffer**를 **IMemoryBufferByteAccess** COM 인터페이스로 캐스팅한 다음 [**IMemoryBufferByteAccess.GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/mt297506)를 호출하여 바이트 배열에 데이터를 채웁니다. [**BitmapBuffer.GetPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887330) 메서드를 사용하여 각 픽셀의 버퍼에 대한 오프셋을 계산하는 데 유용한 [**BitmapPlaneDescription**](https://msdn.microsoft.com/library/windows/apps/dn887342) 개체를 가져옵니다.
 
 [!code-cs[CreateNewSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateNewSoftwareBitmap)]
 
@@ -111,8 +100,7 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 [!code-cs[Direct3DNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetDirect3DNamespace)]
 
-[
-            **CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/library/windows/apps/dn887373)를 호출하여 이 화면에서 새 **SoftwareBitmap**을 만듭니다. 이름에서 알 수 있듯이, 새 **SoftwareBitmap**에는 별도의 이미지 데이터 복사본이 있습니다. **SoftwareBitmap**을 수정해도 Direct3D 화면에는 아무런 영향이 없습니다.
+[**CreateCopyFromSurfaceAsync**](https://msdn.microsoft.com/library/windows/apps/dn887373)를 호출하여 이 화면에서 새 **SoftwareBitmap**을 만듭니다. 이름에서 알 수 있듯이, 새 **SoftwareBitmap**에는 별도의 이미지 데이터 복사본이 있습니다. **SoftwareBitmap**을 수정해도 Direct3D 화면에는 아무런 영향이 없습니다.
 
 [!code-cs[CreateSoftwareBitmapFromSurface](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromSurface)]
 

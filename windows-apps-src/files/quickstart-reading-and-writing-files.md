@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
-title: 파일 만들기, 쓰기 및 읽기
-description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
+title: "파일 만들기, 쓰기 및 읽기"
+description: "StorageFile 개체를 사용하여 파일을 읽고 씁니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 067a9fb20c393e6486206a230b882a835264303a
+
 ---
 
 # 파일 만들기, 쓰기 및 읽기
@@ -17,8 +21,7 @@ description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
 -   [**StorageFile 클래스**](https://msdn.microsoft.com/library/windows/apps/br227171)
 -   [**FileIO 클래스**](https://msdn.microsoft.com/library/windows/apps/hh701440)
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 파일을 읽고 씁니다.
+[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 파일을 읽고 씁니다.
 
 > **참고** [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
 
@@ -53,8 +56,7 @@ Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt"
 ## 파일에 쓰기
 
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
+[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 Windows.Storage.StorageFolder storageFolder =
@@ -69,8 +71,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에 텍스트 쓰기**
 
-[
-            **FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 메서드를 호출하여 파일에 텍스트를 씁니다.
+[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 메서드를 호출하여 파일에 텍스트를 씁니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -156,8 +157,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
 ## 파일에서 읽기
 
 
-[
-            **StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
+[**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 Windows.Storage.StorageFolder storageFolder =
@@ -172,8 +172,7 @@ Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 
 **파일에서 텍스트 읽기**
 
-[
-            **FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) 메서드를 호출하여 파일에서 텍스트를 읽습니다.
+[**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) 메서드를 호출하여 파일에서 텍스트를 읽습니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
@@ -208,8 +207,7 @@ Dim dataReader As DataReader = Windows.Storage.Streams.DataReader.FromBuffer(buf
 
 **스트림을 사용하여 파일에서 텍스트 읽기(4단계)**
 
-1.  [
-            **StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하여 파일의 스트림을 엽니다. 이 메서드는 작업이 완료되면 파일 내용의 스트림을 반환합니다.
+1.  [**StorageFile.OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하여 파일의 스트림을 엽니다. 이 메서드는 작업이 완료되면 파일 내용의 스트림을 반환합니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -227,8 +225,7 @@ ulong size = stream.Size;
 Dim size = stream.Size
 ```
 
-3.  [
-            **GetInputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241737) 메서드를 호출하여 입력 스트림을 가져옵니다. 이를 **using** 문에 배치하여 스트림의 수명을 관리합니다. **GetInputStreamAt**을 호출할 때 0을 지정하여 위치를 스트림의 시작 부분으로 설정합니다.
+3.  [**GetInputStreamAt**](https://msdn.microsoft.com/library/windows/apps/br241737) 메서드를 호출하여 입력 스트림을 가져옵니다. 이를 **using** 문에 배치하여 스트림의 수명을 관리합니다. **GetInputStreamAt**을 호출할 때 0을 지정하여 위치를 스트림의 시작 부분으로 설정합니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 using (var inputStream = stream.GetInputStreamAt(0))
@@ -266,6 +263,7 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,8 +3,8 @@ description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 
 title: "복사 및 붙여넣기"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
-ms.sourcegitcommit: bf081c07f8235790b99b3c1037751f24a86bbc1f
-ms.openlocfilehash: ed1dc1ca0f34f0efafd14aa1cfd1e4b75351882c
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 
 ---
 #복사 및 붙여넣기
@@ -32,8 +32,7 @@ AuthenticateAsync
 
 ## 복사 및 잘라내기
 
-복사 및 잘라내기(이동이라고도 함)는 거의 정확히 동일하게 작동합니다. [
-            **RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
+복사 및 잘라내기(이동이라고도 함)는 거의 정확히 동일하게 작동합니다. [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
 
 ```cs
 // copy 
@@ -54,7 +53,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## 붙여넣기
 
-클립보드 내용을 가져오려면 정적 [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent) 메서드를 호출합니다. 이 메서드는 콘텐츠를 포함하는 [**DataPackageView**][DataPackageView]를 반환합니다. 이 개체는 콘텐츠가 읽기 전용이라는 점만 제외하고 [**DataPackage**][DataPackage] 개체와 거의 동일합니다. 이 개체에서 [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) 또는 [**Contains**][Contains] 메서드를 사용하여 사용 가능한 형식을 식별할 수 있습니다. 그런 다음 해당 **DataPackageView** 메서드를 호출하여 데이터를 가져올 수 있습니다.
+클립보드 내용을 가져오려면 정적 [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent) 메서드를 호출합니다. 이 메서드는 콘텐츠를 포함하는 [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView)를 반환합니다. 이 개체는 콘텐츠가 읽기 전용이라는 점만 제외하고 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체와 거의 동일합니다. 이 개체에서 [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) 또는 [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String)) 메서드를 사용하여 사용 가능한 형식을 식별할 수 있습니다. 그런 다음 해당 [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) 메서드를 호출하여 데이터를 가져올 수 있습니다.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -104,6 +103,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

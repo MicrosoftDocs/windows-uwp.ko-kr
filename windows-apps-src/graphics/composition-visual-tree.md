@@ -17,14 +17,10 @@ ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
 
 시각적 트리 구조는 세 가지 시각적 개체 형식과, 시각적 개체 콘텐츠에 영향을 주는 여러 하위 클래스가 있는 기본 브러시 클래스로 구성됩니다.
 
--   [
-            **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
--   [
-            **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
--   [
-            **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
--   [
-            **CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) - 시각적 개체의 콘텐츠에 효과를 적용할 수 있습니다. CompositionBrush의 하위 클래스에는 여러 가지가 있습니다.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) - 시각적 개체의 콘텐츠에 효과를 적용할 수 있습니다. CompositionBrush의 하위 클래스에는 여러 가지가 있습니다.
 
 ## CompositionVisual 샘플
 
@@ -41,11 +37,9 @@ ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
 
 샘플에는 세 가지 시각적 개체도 포함되어 있습니다.
 
--   [
-            **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
 -   [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
--   [
-            **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – 시각적 개체에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – 시각적 개체에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
 
 이 샘플에서는 애니메이션 또는 더 복잡한 효과 등의 개념은 제공하지 않으며 이러한 모든 시스템에서 사용하는 구성 요소만 다룹니다.
 
@@ -59,8 +53,7 @@ _compositor = new Compositor();
 
 ## SpriteVisual 및 ColorBrush 만들기
 
-[
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 사용하면 필요할 때마다 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 및 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 등의 개체를 쉽게 만들 수 있습니다.
+[**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)를 사용하면 필요할 때마다 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) 및 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) 등의 개체를 쉽게 만들 수 있습니다.
 
 ```cs
 var visual = _compositor.CreateSpriteVisual();
@@ -71,8 +64,7 @@ visual.Brush = _compositor.CreateColorBrush(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xF
 
 ## 시각적 개체 클리핑
 
-[
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)는 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
+[**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)는 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에 대한 클립을 만드는 데도 사용할 수 있습니다. 다음은 샘플에서 [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825)을 사용하여 시각적 개체의 각 면을 트리밍하는 예제입니다.
 
 ```cs
 var clip = _compositor.CreateInsetClip();
@@ -515,6 +507,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

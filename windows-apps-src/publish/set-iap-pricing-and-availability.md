@@ -63,6 +63,6 @@ IAP 또는 업데이트를 게시할 날짜를 지정하려면 **게시 날짜**
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

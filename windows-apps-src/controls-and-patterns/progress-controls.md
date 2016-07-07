@@ -78,14 +78,10 @@ Windows Phone 앱: 상태 표시줄 진행률 표시기 및 진행률 표시줄
 확정된 진행률 표시줄에는 앱 진행 상황 정도가 표시됩니다. 작업이 진행되면 표시줄이 채워집니다. 남아있는 작업량을 시간, 바이트, 파일 또는 기타 정량적 측정 단위로 예측할 수 있으면 확정된 진행률 표시줄을 사용하세요.
 
 진행률 표시줄은 진행률을 설정하고 결정하는 여러 속성을 제공합니다.
-- [
-            **IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): 확정되지 않은 진행률 표시줄인지 여부를 지정합니다. 확정된 진행률 표시줄을 만들려면 **false**로 설정합니다.
-- [
-            **최소**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): 값 범위의 시작입니다. 기본값은 0.0입니다.
-- [
-            **최대**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): 값 범위의 끝입니다. 기본값은 1.0입니다. 
-- [
-            **Value**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): 현재 진행 상태를 지정하는 숫자입니다. 파일 다운로드 진행 상태를 보고 있는 경우 이 값은 다운로드한 바이트 수일 수 있습니다. Maximum을 다운로드할 총 바이트 수로 설정할 수 있습니다.
+- [**IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): 확정되지 않은 진행률 표시줄인지 여부를 지정합니다. 확정된 진행률 표시줄을 만들려면 **false**로 설정합니다.
+- [**최소**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): 값 범위의 시작입니다. 기본값은 0.0입니다.
+- [**최대**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): 값 범위의 끝입니다. 기본값은 1.0입니다. 
+- [**Value**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): 현재 진행 상태를 지정하는 숫자입니다. 파일 다운로드 진행 상태를 보고 있는 경우 이 값은 다운로드한 바이트 수일 수 있습니다. Maximum을 다운로드할 총 바이트 수로 설정할 수 있습니다.
  
 다음 예제에서는 값 기반의 확정된 진행률 표시줄을 보여 줍니다. 
 

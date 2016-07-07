@@ -14,8 +14,7 @@ ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-[
-            **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기서는 Windows 10 장치의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다.
+[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리할 때 UWP(유니버설 Windows 플랫폼) 앱은 여러 화면 방향을 지원할 수 있습니다. 여기서는 Windows 10 장치의 그래픽 하드웨어가 효율적이면서 효과적으로 사용되도록 UWP DirectX 앱에서 화면 회전을 처리하는 모범 사례에 대해 설명합니다.
 
 시작하기 전에 그래픽 하드웨어는 장치 방향에 관계없이 항상 같은 방향으로 픽셀 데이터를 출력한다는 점을 기억해 두세요. Windows 10 장치는 현재 디스플레이 방향을 확인하고(특정 유형의 센서 또는 소프트웨어 토글 사용) 사용자가 디스플레이 설정을 변경할 수 있도록 합니다. 이 때문에 Windows 10은 자체적으로 이미지 회전을 처리하여 장치 방향을 기준으로 "직립" 상태가 되도록 합니다. 기본적으로 앱은 방향에서 달라진 점(예: 창 크기)이 있다는 알림을 받게 됩니다. 이 경우 Windows 10은 최종 디스플레이를 위해 이미지를 즉시 회전합니다. 네 개의 특정 화면 방향(나중에 설명) 중 세 가지에서 Windows 10은 추가적인 그래픽 리소스와 계산을 사용하여 최종 이미지를 표시합니다.
 
@@ -35,8 +34,7 @@ Windows 10에서는 다음의 네 가지 특정 디스플레이 방향 모드를
 화면 방향의 변화를 처리하는 일반적인 프로세스는 다음과 같습니다.
 
 1.  창 경계 값과 디스플레이 방향 데이터를 조합해서 사용하여 장치의 기본 디스플레이 방향에 스왑 체인을 맞춥니다.
-2.  [
-            **IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 사용하여 스왑 체인의 방향을 Windows 10에 알립니다.
+2.  [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 사용하여 스왑 체인의 방향을 Windows 10에 알립니다.
 3.  렌더링 코드를 변경하여 장치의 사용자 방향에 맞는 이미지를 생성합니다.
 
 ## 스왑 체인의 크기 조정 및 내용 미리 회전
@@ -44,19 +42,16 @@ Windows 10에서는 다음의 네 가지 특정 디스플레이 방향 모드를
 
 UWP DirectX 앱에서 기본 디스플레이 크기를 조정하고 내용을 미리 회전하려면 다음 단계를 구현하세요.
 
-1.  [
-            **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리합니다.
+1.  [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리합니다.
 2.  스왑 체인의 크기를 창의 새 크기로 조정합니다.
-3.  [
-            **IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하여 스왑 체인 방향을 설정합니다.
+3.  [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하여 스왑 체인 방향을 설정합니다.
 4.  렌더링 대상 및 기타 픽셀 데이터 버퍼와 같은 창 크기 종속 리소스를 다시 만듭니다.
 
 이제 각 단계를 좀더 자세히 살펴보겠습니다.
 
 첫 번째 단계는 [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트에 대한 처리기를 등록하는 것입니다. 이 이벤트는 화면 방향이 변경될 때마다(예: 디스플레이가 회전될 때) 앱에서 발생합니다.
 
-[
-            **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리하려면 뷰 공급자가 구현해야 하는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 인터페이스의 메서드 중 하나인 필수 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드에서 **DisplayInformation::OrientationChanged**에 대한 처리기를 연결합니다.
+[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트를 처리하려면 뷰 공급자가 구현해야 하는 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) 인터페이스의 메서드 중 하나인 필수 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드에서 **DisplayInformation::OrientationChanged**에 대한 처리기를 연결합니다.
 
 이 코드 예제에서 [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)에 대한 이벤트 처리기는 **OnOrientationChanged**라는 메서드입니다. **DisplayInformation::OrientationChanged**가 발생하면 **SetCurrentOrientation**이라는 메서드가 호출되고, 이 메서드가 **CreateWindowSizeDependentResources**를 호출합니다.
 
@@ -359,8 +354,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 또한 렌더 메서드가 새 프로젝션을 계산할 때 가져올 수 있는 선택된 회전 행렬을 저장합니다. 이 행렬은 최종 3차원 프로젝션을 렌더링하거나 최종 2차원 레이아웃을 작성할 때 사용합니다. (자동으로 적용되지는 않습니다.)
 
-그런 다음 회전된 3차원 보기에 대한 새로운 렌더링 대상과 보기에 대한 새 깊이 스텐실 버퍼를 만듭니다. [
-            **ID3D11DeviceContext:RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480)를 호출하여 회전된 화면에 대한 3차원 렌더링 뷰포트를 설정합니다.
+그런 다음 회전된 3차원 보기에 대한 새로운 렌더링 대상과 보기에 대한 새 깊이 스텐실 버퍼를 만듭니다. [**ID3D11DeviceContext:RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480)를 호출하여 회전된 화면에 대한 3차원 렌더링 뷰포트를 설정합니다.
 
 마지막으로 회전하거나 배치할 2차원 이미지가 있는 경우 [**ID2D1DeviceContext::CreateBitmapFromDxgiSurface**](https://msdn.microsoft.com/library/windows/desktop/hh404482)를 사용하여 2차원 렌더링 대상을 크기 조정된 스왑 체인에 대한 쓰기 가능 비트맵으로 만들고 업데이트된 방향에 대한 새 레이아웃을 작성합니다. 앤티앨리어싱 모드와 같이 렌더링 대상에 대해 필요한 속성을 설정합니다(코드 예제 참조).
 
@@ -369,13 +363,11 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 ## CoreWindowResizeManager를 사용하여 회전 지연 단축
 
 
-기본적으로 Windows 10은 앱 모델이나 언어에 관계없이 이미지 회전을 완료하기 위해 앱에 짧지만 충분히 인식 가능한 시간을 제공합니다. 그러나 앱이 여기에 설명된 기법 중 하나를 사용하여 회전 계산을 수행하면 이 기간이 끝나기 전에 작업을 끝낼 수 있을 것입니다. 여러분은 이 시간을 다시 얻고 회전 애니메이션을 완료하려고 할 것입니다. [
-            **CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603)를 통해 이러한 결과를 얻을 수 있습니다.
+기본적으로 Windows 10은 앱 모델이나 언어에 관계없이 이미지 회전을 완료하기 위해 앱에 짧지만 충분히 인식 가능한 시간을 제공합니다. 그러나 앱이 여기에 설명된 기법 중 하나를 사용하여 회전 계산을 수행하면 이 기간이 끝나기 전에 작업을 끝낼 수 있을 것입니다. 여러분은 이 시간을 다시 얻고 회전 애니메이션을 완료하려고 할 것입니다. [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603)를 통해 이러한 결과를 얻을 수 있습니다.
 
 다음은 [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603)의 사용 방법입니다. [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) 이벤트가 발생하면 이벤트에 대한 처리기 내에서 [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170)를 호출하여 **CoreWindowResizeManager**의 인스턴스를 획득하고, 새 방향의 레이아웃이 완료되고 표시되면 [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605)를 호출하여 회전 애니메이션을 완료하고 앱 화면을 표시할 수 있음을 Windows에 알립니다.
 
-[
-            **DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)에 대한 이벤트 처리기의 코드는 다음과 유사할 수 있습니다.
+[**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)에 대한 이벤트 처리기의 코드는 다음과 유사할 수 있습니다.
 
 ```cpp
 CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeManager::GetForCurrentView();

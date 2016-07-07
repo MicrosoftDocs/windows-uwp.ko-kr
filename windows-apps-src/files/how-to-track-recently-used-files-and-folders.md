@@ -53,9 +53,7 @@ ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
     string mruToken = mru.Add(file, "profile pic");
     ```
     
-    [
-            **StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476)가 오버로드됩니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [
-            **Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
+    [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476)가 오버로드됩니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
 
     **팁** MRU에서 항목을 검색하려면 토큰이 필요하므로 다른 곳에 유지해야 합니다. 앱 데이터에 대한 자세한 내용은 [응용 프로그램 데이터 관리](https://msdn.microsoft.com/library/windows/apps/hh465109)를 참조하세요.
 
@@ -87,8 +85,7 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 }
 ```
 
-[
-            **AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349)를 사용하면 MRU에서 항목을 반복할 수 있습니다. 이러한 항목은 항목에 대한 토큰과 메타데이터가 포함된 [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) 구조입니다.
+[**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349)를 사용하면 MRU에서 항목을 반복할 수 있습니다. 이러한 항목은 항목에 대한 토큰과 메타데이터가 포함된 [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) 구조입니다.
 
 ## 가득 찬 경우 MRU에서 항목 제거
 
@@ -100,8 +97,7 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
 
 사용자가 항목을 선택하면 MRU뿐만 아니라 향후 액세스 목록에도 추가하는 것이 좋습니다.
 
--   [
-            **FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에는 최대 1000개의 항목을 저장할 수 있습니다. 파일뿐만 아니라 폴더도 유지할 수 있으므로 많은 폴더가 있을 수 있습니다.
+-   [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에는 최대 1000개의 항목을 저장할 수 있습니다. 파일뿐만 아니라 폴더도 유지할 수 있으므로 많은 폴더가 있을 수 있습니다.
 -   플랫폼은 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에서 항목을 자동으로 제거하지 않습니다. 1000개 항목 제한에 도달한 경우 [**Remove**](https://msdn.microsoft.com/library/windows/apps/br207497) 메서드로 공간을 확보할 때까지 다른 항목을 추가할 수 없습니다.
 
  

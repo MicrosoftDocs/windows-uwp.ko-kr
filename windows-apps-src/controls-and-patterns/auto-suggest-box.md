@@ -6,8 +6,8 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
 
 ---
 # 자동 제안 상자
@@ -15,7 +15,7 @@ AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 �
 
 ![자동 제안 상자](images/controls/auto-suggest-box-open.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+
 
 -   [**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**TextChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)
@@ -76,9 +76,9 @@ QuerySubmitted 이벤트는 사용자가 쿼리 문자열을 커밋할 때 발�
 - 포커스가 입력란에 있는 동안 Enter 키를 누르거나 쿼리 아이콘을 클릭합니다. 이벤트 인수 [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx) 속성은 **null**입니다.
 - 포커스가 제안 목록에 있는 동안 Enter 키를 누르거나 항목을 클릭하거나 탭합니다. 이벤트 인수 ChosenSuggestion 속성은 목록에서 선택된 항목을 포함합니다.
 
-모든 경우에 이벤트 인수 [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) 속성은 입력란의 텍스트를 포함합니다. 
+모든 경우에 이벤트 인수 [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx) 속성은 입력란의 텍스트를 포함합니다.
 
-### 검색에 AutoSuggestBox 사용
+## 검색에 AutoSuggestBox 사용
 
 AutoSuggestBox를 사용하여 사용자가 입력과 동시에 선택할 수 있는 제안 사항 목록을 제공합니다.
 
@@ -108,8 +108,8 @@ AutoSuggestBox의 전체 작업 예제를 보려면 [AutoSuggestBox 마이그레
 ```csharp
 private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
 {
-    // Only get results when it was a user typing, 
-    // otherwise assume the value got filled in by TextMemberPath 
+    // Only get results when it was a user typing,
+    // otherwise assume the value got filled in by TextMemberPath
     // or the handler for SuggestionChosen.
     if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
     {
@@ -144,6 +144,18 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![검색 결과가 없는 자동 제안 상자의 예](images/controls_autosuggest_noresults.png)
 
+{{&gt; aside-internal content = "
+## 세계화 및 지역화 검사 목록
+
+<table>
+<tr>
+<th>세로 간격</th><td>세로 간격에 라틴어가 아닌 문자를 사용하여 숫자를 비롯한 라틴어가 아닌 스크립트가 제대로 표시되게 합니다.</td>
+</tr>
+<tr>
+<th>스크롤</th><td>자동 제안 텍스트가 선택된 경우 사용자가 문자열의 끝까지 스크롤할 수 있어야 합니다.</td>
+</tr>
+</table>
+"}}
 
 ## 관련 문서
 
@@ -156,6 +168,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

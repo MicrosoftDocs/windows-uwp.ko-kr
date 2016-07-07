@@ -33,7 +33,7 @@ ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 
 ## Windows 개발자 센터 계정 설정
 
-앱을 게시하고 광고를 수신하기 위한 Windows 개발자 센터 계정이 있어야 합니다. 광고 조정을 사용하는지 여부는 관계가 없습니다. 광고 관련 앱 관리 또한 Windows 개발자 센터에서 수행됩니다. 이전에 Microsoft pubCenter를 사용하여 앱에서 광고를 관리한 경우 이 기능이 Windows 개발자 센터의 기능으로 대체되었습니다
+앱을 게시하고 광고를 수신하기 위한 Windows 개발자 센터 계정이 있어야 합니다. 광고 조정을 사용하는지 여부는 관계가 없습니다. 광고 관련 앱 관리 또한 Windows 개발자 센터에서 수행됩니다. 이전에 Microsoft pubCenter를 사용하여 앱에서 광고를 관리한 경우 이 기능이 Windows 개발자 센터의 기능으로 대체되었습니다 
 
 Windows 개발자 센터에서 계정을 설정하려면 [홈페이지](https://dev.windows.com/windows-apps)를 방문합니다. 추가 정보는 Windows 개발자 센터에서 [도움말 페이지](https://dev.windows.com/develop)에서 사용할 수 있습니다.
 

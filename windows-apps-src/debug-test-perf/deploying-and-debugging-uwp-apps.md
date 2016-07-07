@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다."
 title: "UWP(유니버설 Windows 플랫폼) 앱 배포 및 디버깅"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: eb639e78bf144572dfbfd2d65514bb4eff7c7be1
+translationtype: Human Translation
+ms.sourcegitcommit: 14f6684541716034735fbff7896348073fa55f85
+ms.openlocfilehash: e2209e90080c7346bb363304b1a28f6446300332
 
 ---
 
@@ -26,9 +27,21 @@ Microsoft Visual Studio를 사용하면 다양한 Windows 10 디바이스에서 
 -   **시뮬레이터**가 현재 개발 컴퓨터의 시뮬레이트된 환경에 응용 프로그램을 배포합니다. 이 옵션은 응용 프로그램의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
 -   **장치**가 USB 연결 장치에 응용 프로그램을 배포합니다. 장치는 개발자가 잠금 해제해야 하며 화면이 잠금 해제되어 있어야 합니다.
 -   **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 응용 프로그램을 배포합니다. 에뮬레이터는 Windows 8.1 이상을 실행하고 Hyper-V가 활성화된 컴퓨터에서만 사용할 수 있습니다.
--   **원격 컴퓨터**에서 원격 대상을 지정하여 응용 프로그램을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 장치 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
+-   **원격 컴퓨터**에서 원격 대상을 지정하여 응용 프로그램을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 디바이스 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
 
-## 원격 장치 지정
+## 배포된 앱 디버깅
+Visual Studio는 **디버그**, **프로세스에 연결**을 차례로 선택하여 실행 중인 모든 UWP 앱 프로세스에 연결할 수도 있습니다. 실행 중인 프로세스에 연결하기 위해 원본 Visual Studio 프로젝트가 필요하지는 않지만 프로세스의 [기호](#symbols)를 로드하면 원본 코드가 없는 프로세스를 디버그할 때 훨씬 도움이 됩니다.  
+  
+또한 **디버그**, **기타**, **설치된 앱 패키지 디버그**를 차례로 선택하여 설치된 앱 패키지를 연결하고 디버그할 수 있습니다.   
+ 
+![설치된 앱 패키지 디버그 대화 상자](images/gs-debug-uwp-apps-002.png)  
+
+**실행하지 않지만 시작되면 내 코드 디버그**를 선택하면 사용자 지정 시간에 시작할 때 Visual Studio 디버거가 UWP 앱에 연결합니다. 사용자 지정 매개 변수를 사용한 프로토콜 활성화 등 [다양한 시작 메서드](../xbox-apps/automate-launching-uwp-apps.md)의 제어 경로를 디버그하는 효과적인 방법입니다.  
+
+UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실행하려면 Windows 10이 필요합니다. Windows 8.1 PC에서 UWP 앱을 개발하는 경우 호스트 및 대상 컴퓨터가 모두 동일한 LAN에 있다면 다른 Windows 10 디바이스에서 실행되는 UWP 앱을 원격으로 디버그할 수 있습니다. 이렇게 하려면 두 컴퓨터에서 모두 [Visual Studio용 원격 도구](http://aka.ms/remotedebugger)를 다운로드하여 설치합니다. 설치된 버전이 설치한 Visual Studio의 기존 버전과 일치해야 하며 선택한 아키텍처(x86, x64)도 대상 응용 프로그램의 아키텍처와 일치해야 합니다.   
+  
+
+## 원격 디바이스 지정
 
 ### C# 및 Microsoft Visual Basic
 
@@ -85,10 +98,50 @@ Windows 10에서는 [사전 실행](https://msdn.microsoft.com/library/windows/a
 -   C# 및 Visual Basic **디버그** 속성 페이지에서 **실행하지 않지만 시작되면 내 코드 디버그** 확인란을 선택합니다.
 -   JavaScript 및 C++ **디버깅** 속성 페이지에서, **응용 프로그램 실행** 값을 **예**로 설정합니다.
 
+## 기호
+
+기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](http://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](http://aka.ms/winsymbols)에서 다운로드할 수 있습니다.
+
+Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**을 선택한 다음 대화 창에서 **디버깅 &gt; 기호**로 이동합니다.
+
+**그림 4. 옵션 대화 상자.** 
+![옵션 대화 상자](images/gs-debug-uwp-apps-004.png)
+
+[WinDbg](#windbg)를 사용한 디버깅 세션에서 기호를 로드하려면 **sympath** 변수를 기호 패키지 위치로 설정합니다. 예를 들어 다음 명령을 실행하면 Microsoft 기호 서버에서 기호가 로드된 다음 C:\Symbols 디렉터리에 캐시됩니다.
+
+```
+.sympath SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
+.reload
+```
+
+',' 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 개인 기호](https://msdn.microsoft.com/library/windows/hardware/ff553493)를 참조하세요.
+
+## WinDbg
+
+WinDbg는 [Windows SDK](http://go.microsoft.com/fwlink/p?LinkID=271979)에 포함된 Windows용 디버깅 도구 제품군의 일부로 제공되는 강력한 디버거입니다. Windows SDK 설치를 사용하면 Windows용 디버깅 도구를 독립 실행형 제품으로 설치할 수 있습니다. 네이티브 코드 디버깅에 매우 유용하지만 관리 코드 또는 HTML5로 작성된 앱에는 WinDbg를 사용하지 않는 것이 좋습니다. 
+
+UWP 앱과 함께 WinDbg를 사용하려면 이전 섹션에서 설명한 대로 먼저 PLMDebug를 사용하여 앱 패키지에 대해 PLM을 사용하지 않도록 설정해야 합니다. 
+
+```
+plmdebug /enableDebug [PackageFullName] "\"C:\Program Files\Debugging Tools for Windows (x64)\WinDbg.exe\" -server npipe:pipe=test"
+```
+
+Visual Studio와 달리 WinDbg의 핵심 기능은 대부분 명령 창에 명령을 제공해야 합니다. 제공된 명령을 사용하여 실행 상태를 보고, 사용자 모드 크래시 덤프를 조사하고, 다양한 모드로 디버그할 수 있습니다. 
+
+WinDbg에서 자주 사용하는 명령 중 하나는 다음을 포함하여 현재 예외에 대한 자세한 정보를 검색하는 데 사용되는 `!analyze -v`입니다.
+
+- FAULTING_IP: 오류 시 명령 포인터
+- EXCEPTION_RECORD: 현재 예외의 주소, 코드 및 플래그
+- STACK_TEXT: 예외 전의 스택 추적
+
+모든 WinDbg 명령의 전체 목록은 [디버거 명령](https://msdn.microsoft.com/library/ff540507)을 참조하세요.
+
+## 관련 항목
+- [PLM(프로세스 수명 관리) 테스트 및 디버깅 도구](testing-debugging-plm.md)
+- [디버깅, 테스트 및 성능](index.md)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

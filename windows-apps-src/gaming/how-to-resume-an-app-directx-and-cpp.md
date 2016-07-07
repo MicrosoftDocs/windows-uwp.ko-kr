@@ -40,8 +40,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## 일시 중단 후 표시 콘텐츠 새로 고침
 
 
-앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [
-            **CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
+앱에서 Resuming 이벤트를 처리하면 표시 콘텐츠를 새로 고칠 기회가 생깁니다. [**CoreApplication::Suspending**](https://msdn.microsoft.com/library/windows/apps/br205860)에 대한 처리기를 사용하여 저장한 앱을 복원하고 처리를 다시 시작합니다. 게임 개발: 오디오 엔진을 일시 중단한 경우 이제 다시 시작합니다.
 
 ```cpp
 void App::OnResuming(Platform::Object^ sender, Platform::Object^ args)

@@ -37,8 +37,7 @@ ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 ![Windows 10 백그라운드 오디오 아키텍처](images/backround-audio-architecture-win10.png)
 ## MediaPlayer
 
-[
-            **Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스는 백그라운드에서 오디오를 재생하는 데 사용되는 API를 포함합니다. 앱마다 재생이 진행되는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)의 단일 인스턴스가 있습니다. 백그라운드 오디오 앱은 **MediaPlayer** 클래스에서 현재 트랙 설정, 재생 시작, 일시 중지, 빨리 감기, 되감기 등을 설정하기 위한 메서드를 호출하고 속성을 설정합니다. 미디어 플레이어 개체 인스턴스는 항상 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) 속성을 통해 액세스합니다.
+[**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스는 백그라운드에서 오디오를 재생하는 데 사용되는 API를 포함합니다. 앱마다 재생이 진행되는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)의 단일 인스턴스가 있습니다. 백그라운드 오디오 앱은 **MediaPlayer** 클래스에서 현재 트랙 설정, 재생 시작, 일시 중지, 빨리 감기, 되감기 등을 설정하기 위한 메서드를 호출하고 속성을 설정합니다. 미디어 플레이어 개체 인스턴스는 항상 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) 속성을 통해 액세스합니다.
 
 ## MediaPlayer 프록시 및 스텁
 
@@ -64,12 +63,9 @@ ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 
 백그라운드 오디오 앱의 두 프로세스 간에 통신이 필요한 경우가 있습니다. 예를 들어 새 트랙 재생이 시작될 때 백그라운드 작업이 포그라운드 작업에 알림을 보낸 다음 새 노래 제목을 포그라운드 작업에 보내 화면에 표시하도록 할 수 있습니다.
 
-간단한 통신 메커니즘을 사용하여 포그라운드 및 백그라운드 프로세스에서 이벤트를 발생시킬 수 있습니다. [
-            **SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) 및 [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) 메서드는 각각 해당 프로세스에서 이벤트를 호출합니다. [
-            **MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 및 [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) 이벤트를 구독하여 메시지를 받을 수 있습니다.
+간단한 통신 메커니즘을 사용하여 포그라운드 및 백그라운드 프로세스에서 이벤트를 발생시킬 수 있습니다. [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) 및 [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) 메서드는 각각 해당 프로세스에서 이벤트를 호출합니다. [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 및 [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) 이벤트를 구독하여 메시지를 받을 수 있습니다.
 
-그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [
-            **ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
+그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
 
 **참고**  
 포그라운드 앱이 실행되는 동안 앱은 [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533)만 호출해야 합니다. 포그라운드 앱이 실행되지 않는 동안 이 메서드를 호출하면 예외가 발생합니다. 앱은 포그라운드 앱 상태를 백그라운드 프로세스에 전달하는 작업을 담당합니다. 이 작업은 앱 수명 주기 이벤트, 로컬 저장소에 보관된 상태 값 및 프로세스 간의 메시지를 사용하여 수행될 수 있습니다. 
@@ -78,8 +74,7 @@ ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 
 백그라운드 작업의 수명은 앱의 현재 재생 상태와 밀접하게 연결됩니다. 예를 들어 사용자가 오디오 재생을 일시 중지하면 시스템에서는 상황에 따라 앱을 종료하거나 취소할 수 있습니다. 오디오를 재생하지 않고 일정 시간이 경과되면 시스템에서 백그라운드 작업이 자동으로 종료됩니다.
 
-[
-            **IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
+[**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
 
 백그라운드 작업을 계속 유지하려면 앱이 **Run** 메서드 내에서 [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499)을 요청하고 작업 인스턴스가 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) 또는 [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 이벤트를 수신할 때 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 리소스가 사용되고 앱의 백그라운드 작업이 시스템에 의해 종료될 수 있으므로 **Run** 메서드에서 루핑하거나 기다리지는 마세요.
 
@@ -147,6 +142,6 @@ ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

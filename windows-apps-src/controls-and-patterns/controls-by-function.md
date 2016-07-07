@@ -14,8 +14,7 @@ ms.openlocfilehash: 5d6548a4b72144e3a9bf5d759809720c79472afb
 
 Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨트롤 라이브러리를 제공합니다. 이러한 컨트롤에는 시각적으로 표시되는 컨트롤도 있고, 이미지와 미디어 같이 다른 컨트롤이나 콘텐츠의 컨테이너 역할을 하는 컨트롤도 있습니다. 
 
-[
-            **XAML UI 기본 사항 샘플**](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다. 
+[**XAML UI 기본 사항 샘플**](http://go.microsoft.com/fwlink/p/?LinkId=619992)을 다운로드해도 작동 중인 다양한 Windows UI 컨트롤을 볼 수 있습니다. 
 
 다음은 앱에서 사용할 수 있는 일반적인 XAML 컨트롤의 기능별 목록입니다. 
 

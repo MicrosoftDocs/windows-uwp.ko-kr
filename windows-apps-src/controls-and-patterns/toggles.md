@@ -77,8 +77,7 @@ stackPanel1.Children.Add(wiFiToggle);
 
 ### IsOn
 
-스위치는 켜짐 또는 꺼짐일 수 있습니다. [
-            **IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
+스위치는 켜짐 또는 꺼짐일 수 있습니다. [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
 
 ```
 <StackPanel Orientation="Horizontal">
@@ -133,8 +132,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### 켜짐/꺼짐 레이블
 
-기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [
-            **OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) 및 [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
+기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) 및 [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
 
 이 예제에서는 켜짐/꺼짐 레이블을 표시/숨기기 레이블로 바꿉니다.  
 
@@ -144,8 +142,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-[
-            **OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) 및 [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
+[**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) 및 [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
 
 ## 권장 사항
 

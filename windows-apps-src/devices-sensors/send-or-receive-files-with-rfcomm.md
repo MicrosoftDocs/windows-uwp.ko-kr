@@ -20,8 +20,7 @@ ms.openlocfilehash: 61e5844f18d09aa170498d261ca1a6fd60ef170c
 
 ## 개요
 
-[
-            **instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654) 네임스페이스의 API는 [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) 및 [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)을 포함하여 Windows.Devices에 대한 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791) 및 [**established data stream patterns**](https://msdn.microsoft.com/library/windows/apps/BR208119)의 개체를 사용하도록 디자인되었습니다. SDP(Service Discovery Protocol) 특성마다 값과 필요한 형식이 있습니다. 그러나 일부 일반적인 디바이스에 값 형식이 잘못된 SDP 특성이 구현되어 있습니다. 또한 여러 RFCOMM 사용에는 추가 SDP 특성이 필요하지 않습니다. 이러한 이유로, 이 API는 개발자가 필요한 정보를 얻을 수 있는 구분 분석되지 않은 SDP 데이터에 대한 액세스를 제공합니다.
+[**instantiation**](https://msdn.microsoft.com/library/windows/apps/BR225654) 네임스페이스의 API는 [**Windows.Devices.Bluetooth.Rfcomm**](https://msdn.microsoft.com/library/windows/apps/Dn263529) 및 [**enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)을 포함하여 Windows.Devices에 대한 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**Windows.Storage.Streams**](https://msdn.microsoft.com/library/windows/apps/BR241791) 및 [**established data stream patterns**](https://msdn.microsoft.com/library/windows/apps/BR208119)의 개체를 사용하도록 디자인되었습니다. SDP(Service Discovery Protocol) 특성마다 값과 필요한 형식이 있습니다. 그러나 일부 일반적인 디바이스에 값 형식이 잘못된 SDP 특성이 구현되어 있습니다. 또한 여러 RFCOMM 사용에는 추가 SDP 특성이 필요하지 않습니다. 이러한 이유로, 이 API는 개발자가 필요한 정보를 얻을 수 있는 구분 분석되지 않은 SDP 데이터에 대한 액세스를 제공합니다.
 
 RFCOMM API에는 서비스 식별자 개념이 사용됩니다. 서비스 식별자는 128비트 GUID지만 일반적으로는 16비트 또는 32비트 정수로도 지정됩니다. RFCOMM API는 128비트 GUID는 물론 32비트 정수로도 지정 및 사용할 수 있도록 하는 서비스 식별자용 래퍼를 제공하지만, 16비트 정수는 제공하지 않습니다. 언어가 32비트 정수까지 자동으로 확대되고 식별자가 여전히 올바르게 생성될 수 있으므로 이는 API에 문제가 되지 않습니다.
 
@@ -236,8 +235,7 @@ bool IsCompatibleVersion(RfcommDeviceService^ service)
 
 또 다른 일반적인 RFCOMM 앱 시나리오는 PC에서 서비스를 호스팅하고 다른 장치를 위해 이 서비스를 표시하는 것입니다.
 
--   [
-            **RfcommServiceProvider**](https://msdn.microsoft.com/library/windows/apps/Dn263511)를 만들어 원하는 서비스를 보급합니다.
+-   [**RfcommServiceProvider**](https://msdn.microsoft.com/library/windows/apps/Dn263511)를 만들어 원하는 서비스를 보급합니다.
 -   필요에 따라 [**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119)를 사용하여 특성 데이터를 생성함으로써 SDP 특성을 설정하고 다른 장치에서 검색하도록 SDP 레코드를 알리기 시작합니다.
 -   클라이언트 장치에 연결하기 위해 소켓 수신기를 만들어서 들어오는 연결 요청에 대한 수신 대기를 시작합니다.
 -   연결이 수신되면 향후 처리를 위해 연결된 소켓을 저장합니다.
@@ -369,6 +367,6 @@ void OnConnectionReceived(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

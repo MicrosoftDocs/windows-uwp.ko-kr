@@ -25,10 +25,8 @@ ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
 
 | 요소 형식      | 설명 |
 |-------------------|-------------|
-| 정적 텍스트       | [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) 요소의 경우 접근성 있는 이름이 표시되는(내부) 텍스트에 따라 자동으로 결정됩니다. 해당 요소의 모든 텍스트는 이름으로 사용됩니다. [내부 텍스트의 이름](#name_from_inner_text)을 참조하세요. |
-| 이미지            | XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소에는 **img** 및 유사한 요소의 HTML **alt** 특성과 완전히 유사한 특징이 없습니다. [
-            **AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 이름을 제공하거나 캡션 기술을 사용합니다. [이미지의 접근성 있는 이름](#images)을 참조하세요. |
+| 정적 텍스트       | [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565) 요소의 경우 접근성 있는 이름이 표시되는(내부) 텍스트에 따라 자동으로 결정됩니다. 해당 요소의 모든 텍스트는 이름으로 사용됩니다. [내부 텍스트의 이름](#name_from_inner_text)을 참조하세요. |
+| 이미지            | XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소에는 **img** 및 유사한 요소의 HTML **alt** 특성과 완전히 유사한 특징이 없습니다. [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 이름을 제공하거나 캡션 기술을 사용합니다. [이미지의 접근성 있는 이름](#images)을 참조하세요. |
 | 양식 요 소     | 양식 요소의 접근성 있는 이름은 해당 요소에 대해 표시되는 레이블과 동일해야 합니다. [레이블 및 LabeledBy](#labels)를 참조하세요. |
 | 단추 및 링크 | 기본적으로 단추 또는 링크의 접근성 있는 이름은 표시되는 텍스트를 기반으로 하며, [내부 텍스트의 이름](#name_from_inner_text)에 설명된 것과 동일한 규칙을 사용합니다. 단추에 이미지만 포함된 경우 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 단추의 의도된 동작 중 텍스트 전용 동작만 제공합니다. |
 
@@ -42,8 +40,7 @@ XAML 용어의 일부인 컨트롤 및 기타 UI 요소는 해당 정의의 일�
 일부 컨트롤에는 값이 없습니다. 값이 없는 컨트롤은 해당 컨트롤에서 지원하는 피어 및 패턴을 통해 UI 자동화에 이 정보를 보고합니다. 예를 들어 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 양식 요소에는 값이 있습니다. 보조 기술이 UI 자동화 클라이언트가 될 수 있으므로 값이 존재하는지와 해당 값이 무엇인지를 검색할 수 있습니다. 이 특정한 경우에 **TextBox**는 [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550) 정의를 통해 [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) 패턴을 지원합니다.
 
 > [!NOTE]
-> [
-            **AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)이나 기타 기술을 사용하여 접근성 있는 이름을 명시적으로 제공하는 경우 컨트롤 역할이나 형식 정보에서 사용하는 것과 동일한 텍스트를 접근성 있는 이름에 포함하지 마세요. 예를 들어 "단추"나 "목록" 같은 문자열을 이름에 포함하지 마세요. 역할 및 형식 정보는 UI 자동화를 위한 기본 컨트롤 지원에서 제공하는 다양한 UI 자동화 속성(**LocalizedControlType**)에서 제공됩니다. 많은 보조 기술에서 **LocalizedControlType**을 접근성 있는 이름에 추가하므로 접근성 있는 이름에서 역할을 중복하면 단어가 불필요하게 반복될 수 있습니다. 예를 들어 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 컨트롤에 액세스 가능한 "단추" 이름을 지정하거나 "단추"라는 단어를 이름의 마지막 부분으로 포함하는 경우 화면 읽기 프로그램에서는 이를 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용하여 접근성 정보의 다음 측면을 테스트해야 합니다.
+> [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)이나 기타 기술을 사용하여 접근성 있는 이름을 명시적으로 제공하는 경우 컨트롤 역할이나 형식 정보에서 사용하는 것과 동일한 텍스트를 접근성 있는 이름에 포함하지 마세요. 예를 들어 "단추"나 "목록" 같은 문자열을 이름에 포함하지 마세요. 역할 및 형식 정보는 UI 자동화를 위한 기본 컨트롤 지원에서 제공하는 다양한 UI 자동화 속성(**LocalizedControlType**)에서 제공됩니다. 많은 보조 기술에서 **LocalizedControlType**을 접근성 있는 이름에 추가하므로 접근성 있는 이름에서 역할을 중복하면 단어가 불필요하게 반복될 수 있습니다. 예를 들어 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 컨트롤에 액세스 가능한 "단추" 이름을 지정하거나 "단추"라는 단어를 이름의 마지막 부분으로 포함하는 경우 화면 읽기 프로그램에서는 이를 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용하여 접근성 정보의 다음 측면을 테스트해야 합니다.
 
 <span id="Influencing_the_UI_Automation_tree_views"/>
 <span id="influencing_the_ui_automation_tree_views"/>
@@ -58,8 +55,7 @@ UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨�
 ## 내부 텍스트의 이름  
 표시되는 UI에 이미 있는 문자열을 접근성 있는 이름 값에 사용하기가 더 쉬워지도록 하기 위해 대부분의 컨트롤 및 기타 UI 요소에서는 요소 내에 있는 내부 텍스트를 기반으로 또는 콘텐츠 속성의 문자열 값에서 기본 접근성 있는 이름을 자동으로 결정하는 기능을 지원합니다.
 
-* [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 및 **RichTextBlock**은 각각 **Text** 속성의 값을 기본 접근성 있는 이름으로 승격시킵니다.
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 및 **RichTextBlock**은 각각 **Text** 속성의 값을 기본 접근성 있는 이름으로 승격시킵니다.
 * 모든 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
 
 > [!NOTE]
@@ -68,8 +64,7 @@ UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨�
 <span id="images"/>
 <span id="IMAGES"/>
 ## 이미지의 접근성 있는 이름
-화면 읽기 프로그램을 지원하고 UI의 각 요소에 대한 기본 식별 정보를 제공하려면 경우에 따라 이미지 및 차트(완전한 장식 또는 구조 요소 제외)와 같이 텍스트가 아닌 정보 대신 텍스트를 제공해야 합니다. 이 요소에는 내부 텍스트가 없으므로, 액세스 가능한 이름에는 계산된 값이 없습니다. [
-            **AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 연결된 속성을 다음 예제와 같이 설정하면 액세스 가능한 이름을 직접 설정할 수 있습니다.
+화면 읽기 프로그램을 지원하고 UI의 각 요소에 대한 기본 식별 정보를 제공하려면 경우에 따라 이미지 및 차트(완전한 장식 또는 구조 요소 제외)와 같이 텍스트가 아닌 정보 대신 텍스트를 제공해야 합니다. 이 요소에는 내부 텍스트가 없으므로, 액세스 가능한 이름에는 계산된 값이 없습니다. [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 연결된 속성을 다음 예제와 같이 설정하면 액세스 가능한 이름을 직접 설정할 수 있습니다.
 
 XAML
 ```xml
@@ -139,8 +134,7 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 ## 접근성 있는 이름 및 지역화  
 접근성 있는 이름이 지역화되는 요소도 되도록 하려면 지역화 가능한 문자열을 리소스로 저장한 다음 [x:Uid directive](https://msdn.microsoft.com/library/windows/apps/Mt204791) 값으로 리소스 연결을 참조하는 올바른 기술을 사용해야 합니다. 접근성 있는 이름이 명시적으로 설정된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770) 사용에서 제공되는 경우 해당 문자열도 지역화할 수 있는지 확인합니다.
 
-[
-            **AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
+[**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
 
 <span id="related_topics"/>
 ## 관련 항목  
@@ -151,6 +145,6 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -30,15 +30,13 @@ ms.openlocfilehash: 05e752925c07b0e3720fbdd42d785381aa08b99c
 
 ## CaptureElement를 페이지에 추가
 
-[
-            **CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)를 사용하여 XAML 페이지 내의 미리 보기 스트림을 표시합니다.
+[**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)를 사용하여 XAML 페이지 내의 미리 보기 스트림을 표시합니다.
 
 [!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
 ## MediaCapture를 사용하여 미리 보기 스트림 시작
 
-[
-            **MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 및 [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx)의 API도 사용합니다.
+[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체는 디바이스의 카메라에 대한 앱 인터페이스입니다. 이 클래스는 Windows.Media.Capture 네임스페이스의 멤버입니다. 이 문서의 예제에서는 기본 프로젝트 템플릿에 포함된 API뿐만 아니라 [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 및 [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx)의 API도 사용합니다.
 
 using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페이스를 포함합니다.
 
@@ -52,8 +50,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 
 **중요** 일부 디바이스 패밀리에서는 앱에 디바이스의 카메라에 대한 액세스가 허용되기 전에 사용자 동의 확인 프롬프트가 사용자에게 표시됩니다. 이러한 이유로 기본 UI 스레드에서만 [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)를 호출해야 합니다. 다른 스레드에서 카메라를 초기화하려고 하면 초기화 오류가 발생할 수 있습니다.
 
-[
-            **Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 설정하여 **MediaCapture**를 **CaptureElement**에 연결합니다. 마지막으로 [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)를 호출하여 미리 보기를 시작합니다.
+[**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 설정하여 **MediaCapture**를 **CaptureElement**에 연결합니다. 마지막으로 [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613)를 호출하여 미리 보기를 시작합니다.
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
@@ -62,8 +59,7 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 
 미리 보기 스트림 사용을 완료했을 때 디바이스의 다른 앱에서 카메라를 사용할 수 있도록 항상 스트림을 종료하고 관련된 리소스를 제대로 해제해야 합니다. 미리 보기 스트림은 다음 단계에 따라 종료해야 합니다.
 
--   [
-            **StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622)를 호출하여 미리 보기 스트림을 중지합니다.
+-   [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622)를 호출하여 미리 보기 스트림을 중지합니다.
 -   **CaptureElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 null로 설정합니다.
 -   **MediaCapture** 개체의 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) 메서드를 호출하여 해당 개체를 해제합니다.
 -   **MediaCapture** 멤버 변수를 null로 설정합니다.

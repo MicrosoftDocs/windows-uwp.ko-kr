@@ -1,6 +1,13 @@
 ---
-description: author: martinekuan ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676 title: 다음 작업. 첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.'
-keywords: 개발자 센터, 둘러보기 keywords: 개발자 센터, 시작
+author: martinekuan
+ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
+title: "다음 작업"
+description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&#39;"
+keywords: Dev Center, Getting started
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: cb77a32f99bc6e27cfe87af16d6cd4e08855d7b6
+
 ---
 # 다음 작업
 
@@ -64,6 +71,7 @@ IoT(사물 인터넷)를 위한 개발에 관심이 있는 경우 이 섹션에�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

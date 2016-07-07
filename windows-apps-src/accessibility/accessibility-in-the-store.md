@@ -36,8 +36,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는
     * 바로 가기 키로 주요 앱 기능에 연결
     * 키보드가 없는 장치에서 탭 및 화살표와 동일하게 내레이터 터치 제스처 사용
 * 앱 UI가 시각적으로 접근성이 있는지 확인했습니다. 즉, 텍스트 명암비가 최소 4.5:1 이상이고 정보를 전달하기 위해 색만 사용하지는 않는지 등을 확인했습니다.
-* [
-            **Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 및 [**UIAVerify**](https://msdn.microsoft.com/library/windows/desktop/Hh920986)과 같은 접근성 테스트 도구를 사용하여 접근성 구현을 검증하고 이러한 도구로 우선 순위 1인 오류를 모두 해결했습니다.
+* [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 및 [**UIAVerify**](https://msdn.microsoft.com/library/windows/desktop/Hh920986)과 같은 접근성 테스트 도구를 사용하여 접근성 구현을 검증하고 이러한 도구로 우선 순위 1인 오류를 모두 해결했습니다.
 * 내레이터, 돋보기, 화상 키보드, 고대비 테마 및 조정된 dpi 설정을 사용하여 종단 간에 앱의 주요 시나리오를 검증했습니다.
 
 이러한 절차와 해당 절차를 완료하는 데 도움이 되는 리소스에 대한 링크를 검토하려면 [접근성 검사 목록](accessibility-checklist.md)을 참조하세요.

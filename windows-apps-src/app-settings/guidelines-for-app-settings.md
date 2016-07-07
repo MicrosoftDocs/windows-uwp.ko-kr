@@ -135,8 +135,7 @@ ms.openlocfilehash: aeccd755c5fe5df8f2ff5549950ce2d6cb74e8e4
 * [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469) 
            **개발자용(XAML)**
 * [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [
-            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) �
+* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) �
 
 �
 

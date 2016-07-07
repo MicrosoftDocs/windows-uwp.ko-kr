@@ -38,8 +38,7 @@ WebSocket 연결을 암호화하려면 사용 wss: URI 스키마(예: `wss://www
 
 ## MessageWebSocket 사용
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)을 사용하면 각 읽기 작업으로 메시지의 섹션을 읽을 수 있습니다. **MessageWebSocket**은 일반적으로 메시지가 너무 크지 않은 시나리오에서 사용됩니다. UTF-8과 이진 파일이 모두 지원됩니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)을 사용하면 각 읽기 작업으로 메시지의 섹션을 읽을 수 있습니다. **MessageWebSocket**은 일반적으로 메시지가 너무 크지 않은 시나리오에서 사용됩니다. UTF-8과 이진 파일이 모두 지원됩니다.
 
 이 섹션의 코드는 새 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)을 만들고, WebSocket 서버에 연결하고, 데이터를 서버로 보냅니다. 연결이 성공적으로 설정되면 앱은 데이터가 수신되었음을 나타내는 [**MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358) 이벤트가 트리거되기를 기다립니다.
 
@@ -117,8 +116,7 @@ WebSocket 연결을 초기화한 후에는 코드에서 데이터를 적절히 �
 
 ### MessageWebSocket.MessageReceived 이벤트에 대한 콜백 구현
 
-WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 데이터가 수신된 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [
-            **MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358) 이벤트가 발생하면 등록된 콜백이 호출되고 [**MessageWebSocketMessageReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br226852)에서 데이터를 받습니다. 다음 예제에서는 전송되는 메시지가 UTF-8 형식인 것으로 가정합니다.
+WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 데이터가 수신된 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [**MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358) 이벤트가 발생하면 등록된 콜백이 호출되고 [**MessageWebSocketMessageReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br226852)에서 데이터를 받습니다. 다음 예제에서는 전송되는 메시지가 UTF-8 형식인 것으로 가정합니다.
 
 다음 샘플 함수는 연결된 WebSocket 서버에서 문자열을 수신하고 디버거 출력 창에 문자열을 출력합니다.
 
@@ -149,8 +147,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 
 ###  MessageWebSocket.Closed 이벤트에 대한 콜백 구현
 
-WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 WebSocket이 WebSocket 서버에 의해 닫힌 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [
-            **MessageWebSocket.Closed**](https://msdn.microsoft.com/library/windows/apps/hh701364) 이벤트가 발생하면 등록된 콜백이 호출되어 WebSocket 서버에 의해 연결이 닫혔음을 나타냅니다.
+WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 먼저 앱에서 WebSocket이 WebSocket 서버에 의해 닫힌 경우 알림을 받기 위한 이벤트 콜백을 등록해야 합니다. [**MessageWebSocket.Closed**](https://msdn.microsoft.com/library/windows/apps/hh701364) 이벤트가 발생하면 등록된 콜백이 호출되어 WebSocket 서버에 의해 연결이 닫혔음을 나타냅니다.
 
 > [!div class="tabbedCodeSnippets"]
 >```cpp
@@ -177,8 +174,7 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 
 ###  WebSocket에 메시지 보내기
 
-연결이 설정되면 WebSocket 클라이언트에서 서버에 데이터를 보낼 수 있습니다. [
-            **DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171) 메서드는 서명되지 않은 int에 매핑되는 매개 변수를 반환합니다. 따라서 연결을 설정하는 작업과 비교하여 메시지를 보내는 작업을 정의하는 방법이 변경됩니다.
+연결이 설정되면 WebSocket 클라이언트에서 서버에 데이터를 보낼 수 있습니다. [**DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171) 메서드는 서명되지 않은 int에 매핑되는 매개 변수를 반환합니다. 따라서 연결을 설정하는 작업과 비교하여 메시지를 보내는 작업을 정의하는 방법이 변경됩니다.
 
 **참고** MessageWebSocket의 OutputStream을 사용하여 새 DataWriter 개체를 만든 경우 DataWriter는 OutputStream의 소유권을 가져오며, DataWriter가 범위를 벗어나면 Outputstream의 할당을 취소합니다. 이로 인해 이후에 OutputStream을 사용하려는 시도가 HRESULT 값 0x80000013과 함께 실패합니다. OutputStream 할당 취소를 방지하기 위해 이 코드는 스트림의 소유권을 WebSocket 개체로 반환하는 DataWriter의 DetachStream 메서드를 사용합니다.
 
@@ -230,48 +226,34 @@ WebSocket을 사용하여 연결을 설정하고 데이터를 전송하려면 �
 
 ## WebSocket에서 고급 컨트롤 사용
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)은 고급 컨트롤 사용에 대한 동일한 모델을 따릅니다. 위 기본 클래스에는 각각 고급 컨트롤에 액세스할 수 있는 관련 클래스가 있습니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)은 고급 컨트롤 사용에 대한 동일한 모델을 따릅니다. 위 기본 클래스에는 각각 고급 컨트롤에 액세스할 수 있는 관련 클래스가 있습니다.
 
-[
-            **MessageWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226843)은 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 개체에 대한 소켓 컨트롤 데이터를 제공합니다.
-[
-            **StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924)은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체에 대한 소켓 컨트롤 데이터를 제공합니다.
+[**MessageWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226843)은 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 개체에 대한 소켓 컨트롤 데이터를 제공합니다.
+[**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924)은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체에 대한 소켓 컨트롤 데이터를 제공합니다.
 고급 컨트롤을 사용하는 기본 모델은 두 가지 유형의 WebSocket에 대해 모두 동일합니다. 아래 설명에서는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 예로 사용하지만 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)에도 동일한 프로세스를 사용할 수 있습니다.
 
-1.  [
-            **StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체를 만듭니다.
-2.  [
-            **StreamWebSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226934) 속성을 사용하여 이 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체와 연결된 [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) 인스턴스를 검색합니다.
-3.  [
-            **StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) 인스턴스에 대한 속성을 가져오거나 설정하여 특정 고급 컨트롤을 가져오거나 설정합니다.
+1.  [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체를 만듭니다.
+2.  [**StreamWebSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226934) 속성을 사용하여 이 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 개체와 연결된 [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) 인스턴스를 검색합니다.
+3.  [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) 인스턴스에 대한 속성을 가져오거나 설정하여 특정 고급 컨트롤을 가져오거나 설정합니다.
 
-[
-            **StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 및 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 둘 다 고급 컨트롤을 설정할 수 있는 경우에 대한 요구 사항이 있습니다.
+[**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 및 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 둘 다 고급 컨트롤을 설정할 수 있는 경우에 대한 요구 사항이 있습니다.
 
--   [
-            **StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)의 모든 고급 컨트롤에 대해 연결 작업을 실행하기 전에 항상 앱에서 속성을 설정해야 합니다. 이 요구 사항 때문에 **StreamWebSocket** 개체를 만든 즉시 모든 컨트롤 속성을 설정하는 것이 가장 좋습니다. [
-            **StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933) 메서드가 호출된 후 컨트롤 속성을 설정하려고 하지 마세요.
+-   [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)의 모든 고급 컨트롤에 대해 연결 작업을 실행하기 전에 항상 앱에서 속성을 설정해야 합니다. 이 요구 사항 때문에 **StreamWebSocket** 개체를 만든 즉시 모든 컨트롤 속성을 설정하는 것이 가장 좋습니다. [**StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933) 메서드가 호출된 후 컨트롤 속성을 설정하려고 하지 마세요.
 -   메시지 형식을 제외하고 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)의 모든 고급 컨트롤에 대해 연결 작업을 실행하기 전에 속성을 설정해야 합니다. **MessageWebSocket** 개체를 만든 즉시 모든 컨트롤 속성을 설정하는 것이 가장 좋습니다. 메시지 형식 외에는 [**MessageWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226859)가 호출된 후 컨트롤 속성을 변경하지 마세요.
 
 ## WebSocket 정보 클래스
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 각각에는 WebSocket 인스턴스에 대한 추가 정보를 제공하는 해당 클래스가 있습니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 및 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 각각에는 WebSocket 인스턴스에 대한 추가 정보를 제공하는 해당 클래스가 있습니다.
 
-[
-            **MessageWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226849)은 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)에 대한 정보를 제공하며, [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861) 속성을 사용하여 정보 클래스의 인스턴스를 검색합니다.
+[**MessageWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226849)은 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)에 대한 정보를 제공하며, [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861) 속성을 사용하여 정보 클래스의 인스턴스를 검색합니다.
 
-[
-            **StreamWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226929)은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)에 대한 정보를 제공하며, [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935) 속성을 사용하여 정보 클래스의 인스턴스를 검색합니다.
+[**StreamWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226929)은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)에 대한 정보를 제공하며, [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935) 속성을 사용하여 정보 클래스의 인스턴스를 검색합니다.
 
 두 Information 클래스의 모든 속성은 읽기 전용이며, 웹 소켓 객체의 수명 동안 언제든지 현재 정보를 검색할 수 있습니다.
 
 ## 네트워크 예외 처리
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [
-            **WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) 메서드는 네트워크 오류를 WebSocket 작업에서 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) 메서드는 네트워크 오류를 WebSocket 작업에서 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 

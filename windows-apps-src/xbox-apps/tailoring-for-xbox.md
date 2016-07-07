@@ -24,6 +24,6 @@ Xbox에 대한 최상의 환경을 만들려고 하거나 둘 이상의 TV 플�
 디자인 방법에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -47,8 +47,7 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 
     앱에서 위치 서비스를 다시 사용하도록 설정할 수 있는 UI를 제공합니다.
 
-    -   사용자가 위치 액세스를 사용하지 않도록 설정한 후 다시 사용하도록 설정할 경우 앱에는 알림이 표시되지 않습니다. [
-            **status**](https://msdn.microsoft.com/library/windows/apps/br225601) 속성이 변경되지 않고 [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트도 발생하지 않습니다. 앱은 새 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 만들고 [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)를 호출하여 업데이트된 위치 데이터를 가져오거나 [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 다시 구독해야 합니다. 그런 다음 상태가 위치를 다시 사용하도록 다시 설정되었다고 표시되는 경우 이전에 위치 서비스를 사용할 수 없다고 사용자에게 알리기 위해 표시한 UI를 지우고 새 상태에 적절하게 응답합니다.
+    -   사용자가 위치 액세스를 사용하지 않도록 설정한 후 다시 사용하도록 설정할 경우 앱에는 알림이 표시되지 않습니다. [**status**](https://msdn.microsoft.com/library/windows/apps/br225601) 속성이 변경되지 않고 [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트도 발생하지 않습니다. 앱은 새 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 만들고 [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)를 호출하여 업데이트된 위치 데이터를 가져오거나 [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 다시 구독해야 합니다. 그런 다음 상태가 위치를 다시 사용하도록 다시 설정되었다고 표시되는 경우 이전에 위치 서비스를 사용할 수 없다고 사용자에게 알리기 위해 표시한 UI를 지우고 새 상태에 적절하게 응답합니다.
     -   앱은 또한 활성화 시, 사용자가 위치 정보가 필요한 기능을 명시적으로 사용하려고 할 경우 또는 다른 시나리오에서 위치 데이터를 다시 가져오려고 시도해야 합니다.
 
 **성능**
@@ -57,18 +56,14 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 
     일회성 위치 요청을 생성하는 경우 다음 값을 설정해야 합니다.
 
-    -   [
-            **DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 또는 [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271)를 설정하여 앱에서 요청하는 정확성을 지정합니다. 이러한 매개 변수 사용에 대한 권장 사항은 다음을 참조하세요.
-    -   [
-            **GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)의 max age 매개 변수를 설정하여 앱에 유용한 위치 정보를 얻을 수 있는 과거 기간을 지정합니다. 앱에서 몇 초 또는 몇 분 전의 위치를 사용할 수 있으면 앱은 거의 즉시 위치를 수신할 수 있으므로 장치 전원이 절약됩니다.
-    -   [
-            **GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)의 timeout 매개 변수를 설정합니다. 위치 또는 오류가 반환될 때까지 앱이 대기할 수 있는 기간입니다. 사용자에 대한 응답성과 앱에 필요한 정확성 사이의 절충점을 찾아야 합니다.
+    -   [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 또는 [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271)를 설정하여 앱에서 요청하는 정확성을 지정합니다. 이러한 매개 변수 사용에 대한 권장 사항은 다음을 참조하세요.
+    -   [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)의 max age 매개 변수를 설정하여 앱에 유용한 위치 정보를 얻을 수 있는 과거 기간을 지정합니다. 앱에서 몇 초 또는 몇 분 전의 위치를 사용할 수 있으면 앱은 거의 즉시 위치를 수신할 수 있으므로 장치 전원이 절약됩니다.
+    -   [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)의 timeout 매개 변수를 설정합니다. 위치 또는 오류가 반환될 때까지 앱이 대기할 수 있는 기간입니다. 사용자에 대한 응답성과 앱에 필요한 정확성 사이의 절충점을 찾아야 합니다.
 -   위치를 자주 업데이트해야 하는 경우에는 연속 위치 세션을 사용합니다. 특정 임계값을 초과하는 이동을 검색하거나 위치 업데이트가 지속적으로 수행되는 경우 [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 및 [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 사용합니다.
 
     위치 업데이트를 요청할 때 [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 또는 [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271)를 설정하여 앱에서 요청하는 정확성을 지정할 수 있습니다. 또한 [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) 또는 [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541)을 사용하여 위치 업데이트가 필요한 빈도를 설정해야 합니다.
 
-    -   이동 임계값을 지정합니다. 일부 앱에서는 사용자가 멀리 이동한 경우에만 위치 업데이트가 필요합니다. 예를 들어 지역 뉴스나 날씨 업데이트를 제공하는 앱은 사용자 위치가 다른 도시로 변경되지 않는 한 위치 업데이트가 필요하지 않을 수 있습니다. 이 경우 [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) 속성을 설정하여 위치 업데이트 이벤트에 대해 최소 필요 이동을 조정합니다. [
-            **PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 필터링하는 효과가 있습니다. 이러한 이벤트는 위치 변경이 이동 임계값을 초과하는 경우에만 발생합니다.
+    -   이동 임계값을 지정합니다. 일부 앱에서는 사용자가 멀리 이동한 경우에만 위치 업데이트가 필요합니다. 예를 들어 지역 뉴스나 날씨 업데이트를 제공하는 앱은 사용자 위치가 다른 도시로 변경되지 않는 한 위치 업데이트가 필요하지 않을 수 있습니다. 이 경우 [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) 속성을 설정하여 위치 업데이트 이벤트에 대해 최소 필요 이동을 조정합니다. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 필터링하는 효과가 있습니다. 이러한 이벤트는 위치 변경이 이동 임계값을 초과하는 경우에만 발생합니다.
 
     -   앱 환경에 맞춰지고 시스템 리소스 사용을 최소화하는 [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541)을 사용합니다. 예를 들어 날씨 앱은 15분 간격으로 데이터 업데이트가 필요할 수 있습니다. 실시간 내비게이션 앱이 아닌 대부분의 앱에는 매우 정확하고 지속적인 위치 업데이트 스트림이 필요하지 않습니다. 가장 정확한 데이터 스트림이 필요하지 않거나 자주 업데이트할 필요가 없는 앱에서는 **ReportInterval** 속성을 설정하여 앱에 필요한 위치 업데이트의 최소 빈도를 표시합니다. 그러면 위치 소스에서 필요할 때만 위치를 계산함으로써 전기를 절약할 수 있습니다.
 
@@ -80,8 +75,7 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 
     -   전기를 절약하려면 앱에 매우 정확한 데이터가 필요한지 여부를 위치 플랫폼에 알리기 위해 [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) 속성을 설정해야 합니다. 매우 정확한 데이터를 요구하는 앱이 없으면 GPS 공급자를 켜지 않음으로써 시스템에서 전기를 절약할 수 있습니다.
 
-        -   [
-            **desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535)를 **HIGH**로 설정하여 GPS가 데이터를 구입할 수 있도록 합니다.
+        -   [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535)를 **HIGH**로 설정하여 GPS가 데이터를 구입할 수 있도록 합니다.
         -   앱에서 광고 목적으로만 위치 정보를 사용하는 경우 [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535)를 **Default**로 설정하고 일회성 통화 패턴을 사용하여 전력 소비를 최소화합니다.
 
         앱에 특히 정확성이 필요한 경우 [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535)가 아니라 [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271) 속성을 사용할 수 있습니다. 이는 대개 셀룰러 오류 신호, Wi-Fi 오류 신호 및 위성을 기반으로 위치를 얻을 수 있는 Windows Phone에서 특히 유용합니다. 더욱 구체적인 정확성 값을 선택하면 시스템이 위치를 제공할 때 가장 낮은 전원 비용으로 사용할 적합한 기술을 식별하는 데 도움이 됩니다.
@@ -115,10 +109,8 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 사용자는 **설정** 앱의 **위치 개인 정보 설정**을 사용하여 위치 기능을 끌 수 있습니다.
 
 -   사용자가 위치 서비스를 사용할 수 없게 설정하거나 다시 사용 가능하게 설정하는 경우를 감지하려면
-    -   [
-            **StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 처리합니다. 사용자가 위치 서비스를 끄면 **StatusChanged** 이벤트에 대한 인수의 [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) 속성 값은 **Disabled**가 됩니다.
-    -   [
-            **GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)에서 반환된 오류 코드를 확인합니다. 사용자가 위치 서비스를 사용하지 않도록 설정한 경우 **ACCESS\_DENIED** 오류로 인해 **GetGeopositionAsync** 호출이 실패하고 [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) 속성은 **Disabled** 값을 가집니다.
+    -   [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 처리합니다. 사용자가 위치 서비스를 끄면 **StatusChanged** 이벤트에 대한 인수의 [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) 속성 값은 **Disabled**가 됩니다.
+    -   [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)에서 반환된 오류 코드를 확인합니다. 사용자가 위치 서비스를 사용하지 않도록 설정한 경우 **ACCESS\_DENIED** 오류로 인해 **GetGeopositionAsync** 호출이 실패하고 [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) 속성은 **Disabled** 값을 가집니다.
 -   위치 데이터가 중요한 앱(예: 매핑 앱)이 있는 경우 다음을 수행해야 합니다.
     -   사용자의 위치가 변경될 경우 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 처리하여 업데이트를 가져옵니다.
     -   앞에서 설명한 대로 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 처리하여 위치 설정의 변경을 감지합니다.
@@ -179,6 +171,6 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

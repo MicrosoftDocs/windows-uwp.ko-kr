@@ -28,11 +28,9 @@ ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
 -   관심 있는 속성. 사용 가능한 속성은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)에 따라 달라집니다. 자세한 내용은 [디바이스 정보 속성](device-information-properties.md)을 참조하세요.
 -   쿼리할 프로토콜. 무선 또는 유선 네트워크를 통해 디바이스를 검색하는 경우에만 필요합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [네트워크를 통해 디바이스 열거](enumerate-devices-over-a-network.md)를 참조하세요.
 
-[
-            **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용할 경우 디바이스 선택기를 관심 있는 디바이스 종류와 결합하는 경우가 많습니다. 사용 가능한 디바이스 종류 목록은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) 열거형으로 정의됩니다. 이렇게 요소를 결합하면 사용 가능한 디바이스를 관심 있는 디바이스로 제한할 수 있습니다. **DeviceInformationKind**를 지정하지 않거나 사용하는 메서드에서 **DeviceInformationKind** 매개 변수를 제공하지 않으면 기본 유형은 **DeviceInterface**입니다.
+[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용할 경우 디바이스 선택기를 관심 있는 디바이스 종류와 결합하는 경우가 많습니다. 사용 가능한 디바이스 종류 목록은 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) 열거형으로 정의됩니다. 이렇게 요소를 결합하면 사용 가능한 디바이스를 관심 있는 디바이스로 제한할 수 있습니다. **DeviceInformationKind**를 지정하지 않거나 사용하는 메서드에서 **DeviceInformationKind** 매개 변수를 제공하지 않으면 기본 유형은 **DeviceInterface**입니다.
 
-[
-            **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API는 정식 AQS 구문을 사용하지만 일부 연산자가 지원되지 않습니다. 필터 문자열을 만들 때 사용할 수 있는 속성 목록은 [디바이스 정보 속성](device-information-properties.md)을 참조하세요.
+[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API는 정식 AQS 구문을 사용하지만 일부 연산자가 지원되지 않습니다. 필터 문자열을 만들 때 사용할 수 있는 속성 목록은 [디바이스 정보 속성](device-information-properties.md)을 참조하세요.
 
 **주의** `{GUID} PID` 형식을 사용하여 정의하는 사용자 지정 속성은 AQS 필터 문자열을 생성할 때 사용할 수 없습니다. 이 속성 유형은 잘 알려진 속성 이름에서 파생되기 때문입니다.
 
@@ -68,41 +66,32 @@ ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
 
 다음 예제에서는 AQS 구문을 사용하여 열거하려는 디바이스를 제한하는 방법을 보여 줍니다. 이러한 필터 문자열은 모두 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이루어 전체 필터를 만듭니다. 종류를 지정하지 않으면 기본 종류는 **DeviceInterface**입니다.
 
-이 필터가 **DeviceInterface**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 오디오 캡처 인터페이스 클래스를 포함하고 현재 사용하도록 설정된 모든 개체가 열거됩니다. **
-            =
-            **는 **COP\_EQUALS**로 변환됩니다.
+이 필터가 **DeviceInterface**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 오디오 캡처 인터페이스 클래스를 포함하고 현재 사용하도록 설정된 모든 개체가 열거됩니다. **=**는 **COP\_EQUALS**로 변환됩니다.
 
 ``` syntax
 System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND 
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
-이 필터가 **Device**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 GenCdRom의 하드웨어 ID를 하나 이상 가진 모든 개체가 열거됩니다. **
-            ~~
-            **는 **COP\_VALUE\_CONTAINS**로 변환됩니다.
+이 필터가 **Device**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 GenCdRom의 하드웨어 ID를 하나 이상 가진 모든 개체가 열거됩니다. **~~**는 **COP\_VALUE\_CONTAINS**로 변환됩니다.
 
 ``` syntax
 System.Devices.HardwareIds:~~"GenCdRom"
 ```
 
-이 필터가 **DeviceContainer**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 모델 이름에 부분 문자열 Microsoft가 포함된 모든 개체가 열거됩니다. **
-            ~~
-            **는 **COP\_VALUE\_CONTAINS**로 변환됩니다.
+이 필터가 **DeviceContainer**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 모델 이름에 부분 문자열 Microsoft가 포함된 모든 개체가 열거됩니다. **~~**는 **COP\_VALUE\_CONTAINS**로 변환됩니다.
 
 ``` syntax
 System.Devices.ModelName:~~"Microsoft"
 ```
 
-이 필터가 **DeviceInterface**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 모델 이름에 부분 문자열 Microsoft가 포함된 모든 개체가 열거됩니다. **
-            ~&lt;
-            **는 **COP\_STARTSWITH**로 변환됩니다.
+이 필터가 **DeviceInterface**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 모델 이름에 부분 문자열 Microsoft가 포함된 모든 개체가 열거됩니다. **~&lt;**는 **COP\_STARTSWITH**로 변환됩니다.
 
 ``` syntax
 System.ItemNameDisplay:~<"Microsoft"
 ```
 
-이 필터가 **Device**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 **System.Devices.IpAddress** 속성 집합이 있는 모든 개체가 열거됩니다. **
-            &lt;&gt;\[\]**는 **NULL** 값과 결합된 **COP\_NOTEQUALS**로 변환됩니다.
+이 필터가 **Device**의 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)와 쌍을 이룬 경우에는 **System.Devices.IpAddress** 속성 집합이 있는 모든 개체가 열거됩니다. **&lt;&gt;\[\]**는 **NULL** 값과 결합된 **COP\_NOTEQUALS**로 변환됩니다.
 
 ``` syntax
 System.Devices.IpAddress:<>[]

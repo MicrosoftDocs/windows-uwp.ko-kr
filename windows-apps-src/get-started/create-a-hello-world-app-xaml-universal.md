@@ -232,8 +232,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 가장 먼저 살펴볼 사항은 모바일 장치의 작은 화면에서 단추를 누르는 작업입니다. 이 자습서 뒷부분에서는 앱이 항상 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용하는 방법을 알아봅니다.
 
-[
-            **TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 입력할 수는 있지만 지금은 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)을 클릭하거나 탭해도 아무것도 수행되지 않습니다. 다음 단계에서는 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대한 이벤트 처리기를 만들어 개인 설정 인사말을 표시합니다. 이벤트 처리기 코드를 MainPage.xaml.cs 파일에 추가하게 됩니다.
+[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 입력할 수는 있지만 지금은 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)을 클릭하거나 탭해도 아무것도 수행되지 않습니다. 다음 단계에서는 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대한 이벤트 처리기를 만들어 개인 설정 인사말을 표시합니다. 이벤트 처리기 코드를 MainPage.xaml.cs 파일에 추가하게 됩니다.
 
 ## 4단계: 이벤트 처리기 만들기
 
@@ -262,9 +261,7 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
    <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  코드 숨김 페이지에서 만든 이벤트 처리기에 코드를 추가합니다. 이 이벤트 처리기에서 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`
-            [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 사용하여 결과를 표시합니다.
+5.  코드 숨김 페이지에서 만든 이벤트 처리기에 코드를 추가합니다. 이 이벤트 처리기에서 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 사용하여 결과를 표시합니다.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)

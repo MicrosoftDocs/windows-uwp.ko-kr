@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: 이 문서는 UWP(유니버설 Windows 플랫폼) 앱의 접근성 시나리오와 관련된 개념 및 기술에 대한 개요입니다.
+Description: "이 문서는 UWP(유니버설 Windows 플랫폼) 앱의 접근성 시나리오와 관련된 개념 및 기술에 대한 개요입니다."
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
-title: 접근성 개요
+title: "접근성 개요"
 label: Accessibility overview
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+
 ---
 
 # 접근성 개요  
@@ -153,6 +157,7 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 ## 검증 및 게시  
 앱의 접근성 등록 및 게시에 대한 자세한 내용은 [스토어의 접근성](accessibility-in-the-store.md)을 참조하세요.
 
+> [!NOTE]
 > 앱을 접근성 있는 앱으로 등록하는 것은 Windows 스토어에만 적합합니다.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
@@ -174,6 +179,7 @@ XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn2
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

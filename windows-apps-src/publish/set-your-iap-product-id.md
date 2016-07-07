@@ -45,6 +45,6 @@ IAP에 대한 고유한 제품 ID를 입력합니다. 이는 [IAP를 호출하�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

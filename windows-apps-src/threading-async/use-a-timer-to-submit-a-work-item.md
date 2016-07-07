@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
-title: 타이머를 사용하여 작업 항목 제출
-description: 타이머가 경과된 후 실행되는 작업 항목을 만드는 방법을 알아봅니다.
+title: "타이머를 사용하여 작업 항목 제출"
+description: "타이머가 경과된 후 실행되는 작업 항목을 만드는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
+
 ---
 # 타이머를 사용하여 작업 항목 제출
 
@@ -17,8 +21,7 @@ description: 타이머가 경과된 후 실행되는 작업 항목을 만드는 
 
 ## 일회성 타이머 만들기
 
-[
-            **CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 메서드를 사용하여 작업 항목에 대한 타이머를 만듭니다. 작업을 수행하는 람다를 제공하고 *delay* 매개 변수를 사용하여 스레드 풀이 사용 가능한 스레드에 작업 항목을 할당하기 전에 대기해야 하는 시간을 지정합니다. 이 지연은 [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) 구조를 사용하여 지정합니다.
+[**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 메서드를 사용하여 작업 항목에 대한 타이머를 만듭니다. 작업을 수행하는 람다를 제공하고 *delay* 매개 변수를 사용하여 스레드 풀이 사용 가능한 스레드에 작업 항목을 할당하기 전에 대기해야 하는 시간을 지정합니다. 이 지연은 [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996) 구조를 사용하여 지정합니다.
 
 > **참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI에 액세스하고 작업 항목의 진행률을 표시할 수 있습니다.
 
@@ -80,8 +83,7 @@ description: 타이머가 경과된 후 실행되는 작업 항목을 만드는 
 
 ## 완료 처리기 제공
 
-필요한 경우 [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)를 사용하여 작업 항목의 취소와 완료를 처리합니다. [
-            **CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 오버로드를 사용하여 추가 람다를 제공합니다. 이 람다는 타이머가 취소되거나 작업 항목이 완료될 때 실행됩니다.
+필요한 경우 [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)를 사용하여 작업 항목의 취소와 완료를 처리합니다. [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921) 오버로드를 사용하여 추가 람다를 제공합니다. 이 람다는 타이머가 취소되거나 작업 항목이 완료될 때 실행됩니다.
 
 다음 예제에서는 작업 항목을 제출하는 타이머를 만들고, 작업 항목이 완료되거나 타이머가 취소되면 메서드를 호출합니다.
 
@@ -230,6 +232,7 @@ description: 타이머가 경과된 후 실행되는 작업 항목을 만드는 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

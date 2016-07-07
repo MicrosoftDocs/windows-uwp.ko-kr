@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: 관리되는 Windows 런타임 구성 요소 배포
-description: Windows 런타임 구성 요소를 파일 복사로 배포할 수 있습니다.
+author: msatranjr
+title: "관리되는 Windows 런타임 구성 요소 배포"
+description: "Windows 런타임 구성 요소를 파일 복사로 배포할 수 있습니다."
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+
 ---
 
 
@@ -10,9 +13,6 @@ ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 Windows 런타임 구성 요소를 파일 복사로 배포할 수 있습니다. 그러나 구성 요소가 여러 개의 파일로 구성된 경우 사용자가 설치하는 데 번거로울 수 있습니다. 또한 파일 배치 또는 참조 설정 시 발생하는 오류로 인해 문제가 발생할 수 있습니다. 설치와 사용이 쉽도록 복잡한 구성 요소를 Visual Studio 확장 SDK로 패키지할 수 있습니다. 사용자는 전체 패키지에 대해 하나의 참조만 설정하면 됩니다. MSDN 라이브러리의 [Visual Studio 확장 찾기 및 사용](https://msdn.microsoft.com/library/vstudio/dd293638.aspx)에서 설명한 대로 **확장 및 업데이트** 대화 상자를 사용하여 구성 요소를 쉽게 찾고 설치할 수 있습니다.
 
@@ -75,6 +75,6 @@ For example: Microsoft.Cpp.Build.dll
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

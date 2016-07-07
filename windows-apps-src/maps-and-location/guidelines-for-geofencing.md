@@ -25,16 +25,14 @@ ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
 ## 권장 사항
 
 
--   [
-            **Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) 이벤트가 발생할 때 앱이 인터넷에 액세스해야 하는 경우 지오펜스를 만들기 전에 인터넷 액세스를 확인합니다.
+-   [**Geofence**](https://msdn.microsoft.com/library/windows/apps/dn263587) 이벤트가 발생할 때 앱이 인터넷에 액세스해야 하는 경우 지오펜스를 만들기 전에 인터넷 액세스를 확인합니다.
     -   앱이 현재 인터넷에 액세스할 수 없으면 지오펜스를 설정하기 전에 인터넷에 연결하라는 메시지를 표시할 수 있습니다.
     -   인터넷에 액세스할 수 없는 경우 지오펜스 위치 확인에 필요한 전원 사용을 방지합니다.
 -   지오펜스 이벤트에 [**Entered**](https://msdn.microsoft.com/library/windows/apps/dn263660) 또는 **Exited** 상태 변경이 표시되면 타임스탬프 및 현재 위치를 확인하여 지오펜스 알림의 관련성을 확인합니다. 자세한 내용은 아래에서 [타임스탬프 및 현재 위치 확인](#timestamp)을 참조하세요.
 -   장치에서 위치 정보에 액세스할 수 없는 경우를 관리하는 예외를 만들고 필요한 경우 사용자에게 알립니다. 사용 권한이 해제되거나, 장치에 GPS 송수신 장치가 없거나, GPS 신호가 차단되거나, Wi-Fi 신호가 약하기 때문에 위치 정보를 사용할 수 없습니다.
 -   일반적으로 포그라운드와 백그라운드에서 동시에 지오펜스 이벤트를 수신 대기할 필요가 없습니다. 그러나 앱에 포그라운드와 백그라운드에서 지오펜스 이벤트를 수신 대기해야 하는 경우 다음을 수행합니다.
 
-    -   [
-            **ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) 메서드를 호출하여 이벤트가 발생했는지 확인합니다.
+    -   [**ReadReports**](https://msdn.microsoft.com/library/windows/apps/dn263633) 메서드를 호출하여 이벤트가 발생했는지 확인합니다.
     -   앱이 사용자에게 표시되지 않으면 포그라운드 이벤트 수신기를 등록 취소하고 다시 표시될 때 다시 등록합니다.
 
     코드 예제 및 자세한 내용은 [백그라운드 및 포그라운드 수신기](#background-and-foreground-listeners)를 참조하세요.

@@ -75,8 +75,7 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
 shareOperation.ReportDataRetreived(); 
 ```
 
-[
-            **ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
+[**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted)를 호출한 후에는 앱과의 사용자 상호 작용이 더 이상 필요하지 않습니다. 따라서 사용자가 앱을 종료해도 되는 경우에만 이 메서드를 호출해야 합니다.
 
 확장 공유에서는 앱이 DataPackage 개체로부터 모든 데이터를 가져오기 전에 사용자가 원본 앱을 해제할 수 있습니다. 따라서 앱에서 필요한 데이터 가져오기를 완료한 경우 이를 시스템에서 알 수 있도록 하는 것이 좋습니다. 그러면 시스템에서 필요에 따라 원본 앱을 일시 중단하거나 종료할 수 있습니다.
 
@@ -141,6 +140,6 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

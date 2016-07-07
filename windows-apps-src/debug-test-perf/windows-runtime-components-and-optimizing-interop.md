@@ -73,8 +73,7 @@ UWP를 통해 개발자는 각 언어로 사용 가능한 UWP API의 프로젝�
 
 ![Interop 전환이 프로그램 실행 시간을 독점해서는 안 됩니다.](images/interop-transitions.png)
 
-[
-            **.NET for Windows apps**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx)에 나열된 유형은 C# 또는 Visual Basic에서 사용될 경우 이 interop 비용을 유발하지 않습니다. 대략 “Windows.”로 시작되는 네임스페이스의 유형은 UWP의 일부이고 “System.”로 시작되는 네임스페이스의 유형은 .NET 유형이라고 간주할 수 있습니다. 할당 또는 속성 액세스와 같은 UWP 유형의 단순한 사용에서도 interop 비용이 발생합니다.
+[**.NET for Windows apps**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx)에 나열된 유형은 C# 또는 Visual Basic에서 사용될 경우 이 interop 비용을 유발하지 않습니다. 대략 “Windows.”로 시작되는 네임스페이스의 유형은 UWP의 일부이고 “System.”로 시작되는 네임스페이스의 유형은 .NET 유형이라고 간주할 수 있습니다. 할당 또는 속성 액세스와 같은 UWP 유형의 단순한 사용에서도 interop 비용이 발생합니다.
 
 앱을 측정하고 interop가 앱 실행 시간의 많은 부분을 차지하고 있는지 확인한 다음 interop 비용을 최적화해야 합니다. Visual Studio에서 앱의 성능을 분석할 때 **함수** 보기를 사용하여 UWP를 호출하는 메서드에 소요된 포괄 시간을 확인하여 interop 비용의 상한값을 쉽게 알 수 있습니다.
 

@@ -22,8 +22,7 @@ ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
 
 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하지만 사용자 지정할 수 있습니다. 실시간 로드 정보를 표시할지 또는 앱에 초기 UI를 준비할 추가 시간을 제공할지에 관계없이 연장된 시작 화면을 사용하여 시작 환경을 정의할 수 있습니다.
 
-> **참고** 이 항목의 "연장된 시작 화면" 구는 연장된 기간 동안 화면에 유지되는 초기 화면을 가리킵니다. [
-            **SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
+> **참고** 이 항목의 "연장된 시작 화면" 구는 연장된 기간 동안 화면에 유지되는 초기 화면을 가리킵니다. [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스에서 파생되는 하위 클래스를 의미하는 것은 아닙니다.
 
  
 
@@ -32,8 +31,7 @@ ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
 -   연장된 시작 화면 페이지가 앱 매니페스트의 시작 화면에 대해 지정된 이미지(앱 시작 화면 이미지)와 일치하는 620 x 300 픽셀 이미지를 사용해야 합니다. Microsoft Visual Studio 2015에서는 시작 화면 설정이 앱 매니페스트(Package.appxmanifest 파일)에 있는 **시각적 자산** 탭의 **시작 화면** 섹션에 저장됩니다.
 -   연장된 시작 화면은 앱 매니페스트에서 시작 화면에 대해 지정된 배경색(앱 시작 화면 배경)과 일치하는 배경색을 사용해야 합니다.
 -   코드에서 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 사용하여 기본 시작 화면과 동일한 화면 좌표에 앱 시작 화면 이미지를 배치해야 합니다.
--   [
-            **SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 통해 연장된 시작 화면의 항목 위치를 변경하여 코드에서 화면이 회전되거나 앱이 화면의 다른 앱으로 이동되는 경우 등의 창 크기 조정 이벤트에 응답해야 합니다.
+-   [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 통해 연장된 시작 화면의 항목 위치를 변경하여 코드에서 화면이 회전되거나 앱이 화면의 다른 앱으로 이동되는 경우 등의 창 크기 조정 이벤트에 응답해야 합니다.
 
 기본 시작 화면을 효과적으로 모방하는 연장된 시작 화면을 만들려면 다음 단계를 수행합니다.
 
@@ -56,10 +54,8 @@ ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
 ExtendedSplash.xaml 파일에서 다음을 수행합니다.
 
 -   앱 매니페스트(Package.appxmanifest 파일의 **시각적 자산** 섹션)에서 앱 시작 화면에 대해 설정한 배경색과 일치하도록 기본 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) 요소의 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209396) 속성을 변경합니다. 기본 시작 화면 색은 연한 회색(16진수 값 \#464646)입니다. 이 **Grid** 요소는 기본적으로 새로운 **빈 페이지**를 만들 때 제공됩니다. **Grid**를 사용하지 않아도 됩니다. 연장된 시작 화면을 빌드하기 위해 편의상 사용된 것입니다.
--   [
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)에 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 요소를 추가합니다. 이 **Canvas**를 사용하여 연장된 시작 화면 이미지를 배치합니다.
--   [
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 요소를 추가합니다. 기본 시작 화면에 대해 선택한 것과 동일한 600x320 픽셀 이미지를 연장된 시작 화면에 사용합니다.
+-   [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)에 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 요소를 추가합니다. 이 **Canvas**를 사용하여 연장된 시작 화면 이미지를 배치합니다.
+-   [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 요소를 추가합니다. 기본 시작 화면에 대해 선택한 것과 동일한 600x320 픽셀 이미지를 연장된 시작 화면에 사용합니다.
 -   (옵션) 진행률 컨트롤을 추가하여 사용자에게 앱이 로드되고 있음을 표시합니다. 이 항목에서는 확정되었거나 확정되지 않은 [**ProgressBar**](https://msdn.microsoft.com/library/windows/apps/br227529) 대신 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)을 추가합니다.
 
 ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 및 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 요소와 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) 컨트롤을 정의합니다.
@@ -86,8 +82,7 @@ ExtendedSplash.xaml에서 다음 코드를 추가하여 [**Canvas**](https://msd
 
 1.  **필수 네임스페이스 추가**
 
-    [
-            **SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스, [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055) 이벤트에 액세스하려면 다음 네임스페이스를 ExtendedSplash.xaml.cs에 추가해야 합니다.
+    [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스, [**Window.SizeChanged**](https://msdn.microsoft.com/library/windows/apps/br209055) 이벤트에 액세스하려면 다음 네임스페이스를 ExtendedSplash.xaml.cs에 추가해야 합니다.
 
     ```cs
     using Windows.ApplicationModel.Activation;
@@ -555,6 +550,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

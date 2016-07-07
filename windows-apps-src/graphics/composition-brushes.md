@@ -14,12 +14,9 @@ ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
 
 브러시는 해당 출력으로 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다. 컴퍼지션 API는 세 가지 브러시 형식을 제공합니다.
 
--   [
-            **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)는 단색으로 시각적 개체를 그립니다.
--   [
-            **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)는 컴퍼지션 표면의 콘텐츠로 시각적 개체를 그립니다.
--   [
-            **CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406)는 컴퍼지션 효과의 콘텐츠로 시각적 개체를 그립니다.
+-   [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)는 단색으로 시각적 개체를 그립니다.
+-   [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)는 컴퍼지션 표면의 콘텐츠로 시각적 개체를 그립니다.
+-   [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406)는 컴퍼지션 효과의 콘텐츠로 시각적 개체를 그립니다.
 
 모든 브러시는 [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398)에서 상속되며 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789)에 의해 직접 또는 간접적으로 만들어지는 장치 독립적 리소스입니다. 브러시는 장치 독립적이지만 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) 및 [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406)는 장치 종속적인 컴퍼지션 표면의 콘텐츠로 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)을 그립니다.
 
@@ -36,13 +33,11 @@ ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
 
 ## 색 기본 사항
 
-[
-            **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 사용하여 그리려면 먼저 색을 선택해야 합니다. 컴퍼지션 API는 Windows 런타임 구조인 색상을 사용하여 색을 나타냅니다. 색상 구조는 sRGB 인코딩을 사용합니다. sRGB 인코딩은 색을 네 개의 채널(알파, 빨간색, 녹색 및 파란색)로 구분합니다. 각 구성 요소는 일반적으로 0.0 ~ 1.0 범위의 부동 소수점 값으로 나타냅니다. 값이 0.0이면 해당 색이 완전히 없는 것이고 값이 1.0이면 해당 색이 전체적으로 나타난다는 의미입니다. 알파 구성 요소의 경우 0.0은 완전히 투명한 색이고 1.0은 완전히 불투명한 색을 나타냅니다.
+[**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 사용하여 그리려면 먼저 색을 선택해야 합니다. 컴퍼지션 API는 Windows 런타임 구조인 색상을 사용하여 색을 나타냅니다. 색상 구조는 sRGB 인코딩을 사용합니다. sRGB 인코딩은 색을 네 개의 채널(알파, 빨간색, 녹색 및 파란색)로 구분합니다. 각 구성 요소는 일반적으로 0.0 ~ 1.0 범위의 부동 소수점 값으로 나타냅니다. 값이 0.0이면 해당 색이 완전히 없는 것이고 값이 1.0이면 해당 색이 전체적으로 나타난다는 의미입니다. 알파 구성 요소의 경우 0.0은 완전히 투명한 색이고 1.0은 완전히 불투명한 색을 나타냅니다.
 
 ### 알파 모드
 
-[
-            **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)의 색상 값은 항상 스트레이트 알파로 해석됩니다.
+[**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)의 색상 값은 항상 스트레이트 알파로 해석됩니다.
 
 ## 색 브러시 사용
 
@@ -75,8 +70,7 @@ Visual2.Offset = new Vector3(3, 3, 0);
 
 ## 표면 브러시 사용
 
-[
-            **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)는 컴퍼지션 표면([**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 개체에 의해 표시됨)으로 시각적 개체를 그립니다. 다음 그림에서는 D2D를 사용하여 **ICompositionSurface**에 렌더링된 licorice 비트맵으로 그려진 정사각형을 보여 줍니다.
+[**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)는 컴퍼지션 표면([**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 개체에 의해 표시됨)으로 시각적 개체를 그립니다. 다음 그림에서는 D2D를 사용하여 **ICompositionSurface**에 렌더링된 licorice 비트맵으로 그려진 정사각형을 보여 줍니다.
 
 ![CompositionSurfaceBrush](images/composition-compositionsurfacebrush.png) 첫 번째 예제에서는 브러시를 사용하기 위해 컴퍼지션 표면을 초기화합니다. 컴퍼지션 표면은 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)에서 사용되고 URL을 문자열로 사용하는 도우미 메서드인 LoadImage를 통해 만들어집니다. 이 메서드는 URL에서 이미지를 로드하여 이 이미지를 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)에 렌더링하고 해당 표면을 **CompositionSurfaceBrush**의 콘텐츠로 설정합니다. 단, **ICompositionSurface**은 네이티브 코드로만 표시되므로 LoadImage 메서드가 네이티브 코드로 구현됩니다.
 
@@ -100,16 +94,13 @@ visual.Brush = _surfaceBrush;
 
 ## 늘이기 및 맞춤 구성
 
-[
-            **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)의 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 콘텐츠로 작업 중인 시각적 개체의 영역을 완전히 채우지 못하는 경우가 있습니다. 이런 경우 컴퍼지션 API에서는 브러시의 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 및 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 모드 설정을 사용하여 나머지 영역을 채우는 방법을 결정합니다.
+[**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)의 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 콘텐츠로 작업 중인 시각적 개체의 영역을 완전히 채우지 못하는 경우가 있습니다. 이런 경우 컴퍼지션 API에서는 브러시의 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 및 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 모드 설정을 사용하여 나머지 영역을 채우는 방법을 결정합니다.
 
--   [
-            **HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio)는 float 형식이며 시각적 개체 경계 내에서 브러시의 위치를 제어하는 데 사용할 수 있습니다.
+-   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio)는 float 형식이며 시각적 개체 경계 내에서 브러시의 위치를 제어하는 데 사용할 수 있습니다.
     -   값이 0.0이면 브러시의 왼쪽/위 모서리를 시각적 개체의 왼쪽/위 모서리에 맞춥니다.
     -   값이 0.5이면 브러시의 중앙을 시각적 개체의 중앙에 맞춥니다.
     -   값이 1.0이면 브러시의 오른쪽/아래 모서리를 시각적 개체의 오른쪽/아래 모서리에 맞춥니다.
--   [
-            **Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 속성에는 [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) 열거형에서 정의하는 다음 값을 사용할 수 있습니다.
+-   [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 속성에는 [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) 열거형에서 정의하는 다음 값을 사용할 수 있습니다.
     -   None: 시각적 개체 경계를 채우기 위해 브러시가 늘어나지 않습니다. 브러시가 시각적 개체의 경계보다 크면 브러시 콘텐츠가 잘리므로 늘이기 설정을 사용할 때는 주의해야 합니다. 시각적 개체 경계를 그리는 데 사용되는 브러시 부분은 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 속성을 사용하여 제어할 수 있습니다.
     -   Uniform: 브러시가 시각적 개체 경계에 맞게 크기가 조정됩니다. 가로 세로 비율은 유지됩니다. 기본값입니다.
     -   UUniformToFillniform: 브러시가 시각적 개체 경계를 완전히 채우도록 크기가 조정됩니다. 가로 세로 비율은 유지됩니다.

@@ -79,11 +79,9 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 ## SemanticZoom 및 GridView 디자인 변경
 
-[
-            **SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 대한 Windows 10의 디자인 변경은 [SemanticZoom 변경](w8x-to-uwp-porting-xaml-and-ui.md#semantic-zoom) 섹션에서 설명합니다. 이러한 변경과 관련하여 이 섹션에서는 수행할 작업이 없습니다.
+[**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 대한 Windows 10의 디자인 변경은 [SemanticZoom 변경](w8x-to-uwp-porting-xaml-and-ui.md#semantic-zoom) 섹션에서 설명합니다. 이러한 변경과 관련하여 이 섹션에서는 수행할 작업이 없습니다.
 
-[
-            **GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 변경은 [GridView/ListView 변경](w8x-to-uwp-porting-xaml-and-ui.md#gridview-listview-changes) 섹션에서 설명합니다. 아래에 설명된 대로 해당 변경 내용에 맞춰 일부 사항을 매우 약간 조정했습니다.
+[**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 변경은 [GridView/ListView 변경](w8x-to-uwp-porting-xaml-and-ui.md#gridview-listview-changes) 섹션에서 설명합니다. 아래에 설명된 대로 해당 변경 내용에 맞춰 일부 사항을 매우 약간 조정했습니다.
 
 -   SeZoUC.xaml의 `ZoomedInItemsPanelTemplate`에서 `Orientation="Horizontal"` 및 `GroupPadding="0,0,0,20"`을 설정합니다.
 -   SeZoUC.xaml에서 `ZoomedOutItemsPanelTemplate`을 삭제하고 축소 보기에서 `ItemsPanel` 특성을 제거합니다.
@@ -101,8 +99,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 따라서 이러한 두 가지 다른 레이아웃을 적용하려면 어떤 속성을 설정 및 변경해야 하나요? 두 가지 대안이 있으며 각 대안마다 다른 접근 방법을 사용합니다.
 
 1.  태그에 두 가지 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤을 사용할 수 있습니다. 하나는 Windows 스토어 앱(이 내부에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 컨트롤 사용)에서 사용하는 태그의 복사본으로, 기본적으로 축소됩니다. 다른 하나는 Windows Phone 스토어 앱(이 내부에서 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤 사용)에서 사용하는 태그의 복사본으로, 기본적으로 표시됩니다. 시각적 상태는 두 **SemanticZoom** 컨트롤의 표시 속성을 전환합니다. 이러한 작업을 수행하는 데는 약간의 노력이 필요할 수 있지만, 일반적으로 고성능 기술이 필요하지는 않습니다. 따라서 이 방법을 사용하는 경우 앱을 프로파일링하고 여전히 성능 목표를 충족하는지 확인해야 합니다.
-2.  [
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤이 포함된 단일 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)을 사용할 수 있습니다. 두 가지 레이아웃을 적용하려면 넓은 시각적 상태에서, 적용된 템플릿을 비롯해 **ListView** 컨트롤의 속성을 변경하여 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에서 수행한 것과 동일한 방식으로 배치되도록 합니다. 그러면 성능은 더 좋지만, **GridView** 및 **ListView**의 다양한 스타일 및 템플릿 간에 그리고 다양한 항목 종류 간에 작은 차이가 너무 많아서 적용하기에는 더욱 어려운 솔루션입니다. 또한 이 솔루션은 현재 기본 스타일 및 템플릿이 디자인되는 방식과 긴밀하게 결합되어 있으며, 향후 기본값의 변화에 취약하고 민감한 솔루션을 제공합니다.
+2.  [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤이 포함된 단일 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)을 사용할 수 있습니다. 두 가지 레이아웃을 적용하려면 넓은 시각적 상태에서, 적용된 템플릿을 비롯해 **ListView** 컨트롤의 속성을 변경하여 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에서 수행한 것과 동일한 방식으로 배치되도록 합니다. 그러면 성능은 더 좋지만, **GridView** 및 **ListView**의 다양한 스타일 및 템플릿 간에 그리고 다양한 항목 종류 간에 작은 차이가 너무 많아서 적용하기에는 더욱 어려운 솔루션입니다. 또한 이 솔루션은 현재 기본 스타일 및 템플릿이 디자인되는 방식과 긴밀하게 결합되어 있으며, 향후 기본값의 변화에 취약하고 민감한 솔루션을 제공합니다.
 
 이 사례 연구에서는 첫 번째 대안을 사용하겠습니다. 그러나 두 번째 대안을 적용하고 싶은 경우 자신에게 그 방법이 더 맞는지 알아보세요. 다음은 첫 번째 대안을 구현하기 위해 수행할 단계입니다.
 

@@ -25,12 +25,10 @@ ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
 
 ## 미디어 인코딩 속성 도우미 클래스
 
-[
-            **IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) 인터페이스의 기능을 래핑하는 간단한 도우미 클래스를 만들면 특정 조건을 충족하는 인코딩 속성 집합을 선택하기가 쉬워집니다. 이 도우미 클래스는 다음과 같은 인코딩 속성의 동작 기능 때문에 특히 유용합니다.
+[**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011) 인터페이스의 기능을 래핑하는 간단한 도우미 클래스를 만들면 특정 조건을 충족하는 인코딩 속성 집합을 선택하기가 쉬워집니다. 이 도우미 클래스는 다음과 같은 인코딩 속성의 동작 기능 때문에 특히 유용합니다.
 
 **경고**  
-[
-            **VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) 메서드는 **VideoRecord** 또는 **Photo**와 같은 [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) 열거형의 멤버를 가져오고, 캡처한 사진 또는 동영상의 해상도와 같은 스트림 인코딩 설정을 전달하는 [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 또는 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 목록을 반환합니다. **GetAvailableMediaStreamProperties** 호출의 결과에는 어떤 **MediaStreamType** 값을 지정했는지와 상관없이 **ImageEncodingProperties** 또는 **VideoEncodingProperties**가 포함될 수 있습니다. 이러한 이유로 항상 반환된 각 값의 형식을 확인하고 적절한 형식으로 캐스팅한 이후에 속성 값에 액세스해야 합니다.
+[**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) 메서드는 **VideoRecord** 또는 **Photo**와 같은 [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) 열거형의 멤버를 가져오고, 캡처한 사진 또는 동영상의 해상도와 같은 스트림 인코딩 설정을 전달하는 [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 또는 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 목록을 반환합니다. **GetAvailableMediaStreamProperties** 호출의 결과에는 어떤 **MediaStreamType** 값을 지정했는지와 상관없이 **ImageEncodingProperties** 또는 **VideoEncodingProperties**가 포함될 수 있습니다. 이러한 이유로 항상 반환된 각 값의 형식을 확인하고 적절한 형식으로 캐스팅한 이후에 속성 값에 액세스해야 합니다.
 
 아래에 정의된 도우미 클래스가 [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 또는 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217)에 대한 형식 확인 및 캐스팅을 처리하므로 앱 코드가 두 형식을 구별하지 않아도 됩니다. 이 외에도 도우미 클래스는 속성의 가로 세로 비율, 프레임 속도(비디오 인코딩 속성에만 해당) 및 앱의 UI에서 인코딩 속성을 더 쉽게 표시하는 데 활용되는 식별 이름에 대한 속성을 표시합니다.
 
@@ -56,8 +54,7 @@ ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
 
 ## 원하는 스트림 속성 설정
 
-[
-            **SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895)를 호출하고 사진, 동영상 또는 미리 보기 속성을 설정해야 하는지 여부를 나타내는 **MediaStreamType** 값을 전달함으로써 원하는 인코딩 속성을 사용하도록 비디오 디바이스 컨트롤러에 알려줍니다. 이 예제에서는 사용자가 **PopulateStreamPropertiesUI** 도우미 메서드로 채워진 **ComboBox** 개체 중 하나에서 항목을 선택할 때 요청된 인코딩 속성을 설정합니다.
+[**SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895)를 호출하고 사진, 동영상 또는 미리 보기 속성을 설정해야 하는지 여부를 나타내는 **MediaStreamType** 값을 전달함으로써 원하는 인코딩 속성을 사용하도록 비디오 디바이스 컨트롤러에 알려줍니다. 이 예제에서는 사용자가 **PopulateStreamPropertiesUI** 도우미 메서드로 채워진 **ComboBox** 개체 중 하나에서 항목을 선택할 때 요청된 인코딩 속성을 설정합니다.
 
 [!code-cs[PreviewSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewSettingsChanged)]
 

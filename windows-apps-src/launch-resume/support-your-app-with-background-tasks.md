@@ -16,8 +16,7 @@ ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
 
 이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다. 백그라운드 작업은 OS에서 백그라운드로 실행하는 경량 클래스입니다. 앱이 일시 중단되거나 실행되지 않을 때 백그라운드 작업을 사용하여 기능을 제공할 수 있습니다. VOIP, 메일 및 IM 같은 실시간 통신 앱에 백그라운드 작업을 사용할 수도 있습니다.
 
-백그라운드 작업은 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 별도의 클래스입니다. [
-            **BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 백그라운드 작업을 등록합니다. 클래스 이름은 백그라운드 작업을 등록할 때 진입점을 지정하는 데 사용됩니다.
+백그라운드 작업은 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 별도의 클래스입니다. [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 백그라운드 작업을 등록합니다. 클래스 이름은 백그라운드 작업을 등록할 때 진입점을 지정하는 데 사용됩니다.
 
 백그라운드 작업을 빠르게 시작하려면 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
@@ -28,8 +27,7 @@ ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
 ## 시스템 이벤트에 대한 백그라운드 작업
 
 
-[
-            **SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 클래스를 사용하여 백그라운드 작업을 등록하면 개발자 앱에서 시스템 생성 이벤트에 응답할 수 있습니다. 앱에서 다음과 같은 시스템 이벤트 트리거([**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)에 정의되어 있음)를 사용할 수 있습니다.
+[**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 클래스를 사용하여 백그라운드 작업을 등록하면 개발자 앱에서 시스템 생성 이벤트에 응답할 수 있습니다. 앱에서 다음과 같은 시스템 이벤트 트리거([**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)에 정의되어 있음)를 사용할 수 있습니다.
 
 | 트리거 이름                     | 설명                                                                                                    |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -117,8 +115,7 @@ ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
 
 ### 메모리 제약 조건
 
-메모리가 부족한 장치에 대한 리소스 제약 조건 때문에 백그라운드 작업에는 백그라운드 작업에서 사용할 수 있는 최대 메모리 양을 결정하는 메모리 제한이 있을 수 있습니다. 백그라운드 작업에서 이 제한을 초과하는 작업을 시도하는 경우 작업이 실패하고 작업이 처리할 수 있는 메모리 부족 예외가 생성될 수 있습니다. 작업에서 메모리 부족 예외를 처리하지 않거나 시도된 작업의 특성상 메모리 부족 예외가 생성되지 않는 경우에는 작업이 즉시 종료됩니다. [
-            **MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) API를 사용하면 한도를 검색하기 위해(있는 경우) 현재 메모리 사용량 및 제한을 쿼리하고 백그라운드 작업의 지속적인 메모리 사용량을 모니터링할 수 있습니다.
+메모리가 부족한 장치에 대한 리소스 제약 조건 때문에 백그라운드 작업에는 백그라운드 작업에서 사용할 수 있는 최대 메모리 양을 결정하는 메모리 제한이 있을 수 있습니다. 백그라운드 작업에서 이 제한을 초과하는 작업을 시도하는 경우 작업이 실패하고 작업이 처리할 수 있는 메모리 부족 예외가 생성될 수 있습니다. 작업에서 메모리 부족 예외를 처리하지 않거나 시도된 작업의 특성상 메모리 부족 예외가 생성되지 않는 경우에는 작업이 즉시 종료됩니다. [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) API를 사용하면 한도를 검색하기 위해(있는 경우) 현재 메모리 사용량 및 제한을 쿼리하고 백그라운드 작업의 지속적인 메모리 사용량을 모니터링할 수 있습니다.
 
 ### 메모리가 부족한 장치에서 백그라운드 작업이 있는 앱의 장치별 제한
 
@@ -192,6 +189,6 @@ ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

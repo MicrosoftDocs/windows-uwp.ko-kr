@@ -25,8 +25,7 @@ ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
 ## 연결된 카드 판독기 및 스마트 카드 액세스
 
 
-[
-            **DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)에 지정된 디바이스 ID를 [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890) 메서드에 전달하여 판독기 및 연결된 스마트 카드를 쿼리할 수 있습니다. 현재 반환된 판독기 디바이스에 연결된 스마트 카드에 액세스하려면 [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887)를 호출합니다.
+[**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)에 지정된 디바이스 ID를 [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890) 메서드에 전달하여 판독기 및 연결된 스마트 카드를 쿼리할 수 있습니다. 현재 반환된 판독기 디바이스에 연결된 스마트 카드에 액세스하려면 [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887)를 호출합니다.
 
 ```cs
 string selector = SmartCardReader.GetDeviceSelector();
@@ -60,8 +59,7 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 ## 가상 스마트 카드 만들기
 
 
-[
-            **SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)을 사용하여 가상 스마트 카드를 만들려면 앱에서 먼저 이름, 관리자 키 및 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)를 제공해야 합니다. 이름은 일반적으로 앱에 제공되지만, 앱이 3개 값을 모두 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에 전달하기 전에 관리자 키를 제공하고 현재 **SmartCardPinPolicy**의 인스턴스를 생성해야 합니다.
+[**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)을 사용하여 가상 스마트 카드를 만들려면 앱에서 먼저 이름, 관리자 키 및 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)를 제공해야 합니다. 이름은 일반적으로 앱에 제공되지만, 앱이 3개 값을 모두 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에 전달하기 전에 관리자 키를 제공하고 현재 **SmartCardPinPolicy**의 인스턴스를 생성해야 합니다.
 
 1.  새 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642) 인스턴스 만들기
 2.  서비스 또는 관리 도구에서 제공한 관리자 키 값에 대해 [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392)을 호출하여 관리자 키 값을 생성합니다.
@@ -80,8 +78,7 @@ SmartCardProvisioning provisioning = await
           pinPolicy);
 ```
 
-[
-            **RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에서 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
+[**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에서 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
 
 ## 인증 질문 처리
 
@@ -144,8 +141,7 @@ using (SmartCardChallengeContext context =
 스마트 카드와 연결된 PIN을 변경하려면
 
 1.  카드에 액세스하고 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 생성합니다.
-2.  [
-            **RequestPinChangeAsync**](https://msdn.microsoft.com/library/windows/apps/dn263823)를 호출하여 이 작업을 완료하는 UI를 사용자에게 표시합니다.
+2.  [**RequestPinChangeAsync**](https://msdn.microsoft.com/library/windows/apps/dn263823)를 호출하여 이 작업을 완료하는 UI를 사용자에게 표시합니다.
 3.  PIN이 변경되었으면 호출에서 **true**를 반환합니다.
 
 ```cs
@@ -157,10 +153,8 @@ bool result = await provisioning.RequestPinChangeAsync();
 
 PIN 초기화를 요청하려면
 
-1.  [
-            **RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825)를 호출하여 작업을 시작합니다. 이 호출에는 스마트 카드와 PIN 초기화 요청을 나타내는 [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) 메서드가 포함되어 있습니다.
-2.  [
-            **SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701)는 [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693) 호출에 래핑된 **ChallengeResponseAlgorithm**에서 요청을 인증하기 위해 카드의 질문 값과 서비스 또는 관리 도구에서 제공한 관리자 키를 비교하는 데 사용되는 정보를 제공합니다.
+1.  [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825)를 호출하여 작업을 시작합니다. 이 호출에는 스마트 카드와 PIN 초기화 요청을 나타내는 [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) 메서드가 포함되어 있습니다.
+2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701)는 [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693) 호출에 래핑된 **ChallengeResponseAlgorithm**에서 요청을 인증하기 위해 카드의 질문 값과 서비스 또는 관리 도구에서 제공한 관리자 키를 비교하는 데 사용되는 정보를 제공합니다.
 
 3.  질문에 성공하면 [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) 호출이 완료되고, PIN이 초기화되었으면 **true**를 반환합니다.
 

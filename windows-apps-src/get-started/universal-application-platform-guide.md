@@ -104,8 +104,7 @@ Windows 10에는 일정 및 분할 보기와 같은 새로운 컨트롤이 포�
 
 ### 적응형 패널로 적응형 UI 디자인
 
-레이아웃 패널은 사용 가능한 공간에 따라 해당 자식의 크기 및 위치를 지정합니다. 예를 들어 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 해당 자식을 순차적으로(가로 또는 세로) 정렬합니다. [
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 자식을 셀에 배치하는 CSS 그리드와 유사합니다.
+레이아웃 패널은 사용 가능한 공간에 따라 해당 자식의 크기 및 위치를 지정합니다. 예를 들어 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 해당 자식을 순차적으로(가로 또는 세로) 정렬합니다. [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)는 해당 자식을 셀에 배치하는 CSS 그리드와 유사합니다.
 
 새 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546)은 자식 요소 간의 관계에 의해 정의된 레이아웃 스타일을 구현합니다. 이는 화면 해상도 변경에 적응할 수 있는 앱 레이아웃을 만드는 데 사용됩니다. **RelativePanel**은 요소 간의 관계를 정의하여 요소 재배열 프로세스를 용이하게 하며, 이를 통해 중첩된 레이아웃을 사용하지 않고도 더욱 동적인 UI를 빌드할 수 있습니다.
 
@@ -185,12 +184,9 @@ Windows 10에는 기존 크기 조정 모델의 진화된 모델이 도입되었
 
 다음 API는 입력에 대한 액세스를 제공합니다.
 
--   [
-            **CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)는 주 스레드 또는 백그라운드 스레드에서 원시 입력을 사용할 수 있도록 해주는 새로운 API입니다.
--   [
-            **PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038)는 원시 터치, 마우스 및 펜 데이터를 **CoreInput**을 사용하여 주 스레드 또는 백그라운드 스레드에서 사용할 수 있는 일관된 단일 인터페이스 및 이벤트 집합에 통합합니다.
--   [
-            **PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)는 디바이스에서 사용 가능한 입력 형식을 결정할 수 있도록 쿼리 디바이스 기능을 지원하는 디바이스 API입니다.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)는 주 스레드 또는 백그라운드 스레드에서 원시 입력을 사용할 수 있도록 해주는 새로운 API입니다.
+-   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038)는 원시 터치, 마우스 및 펜 데이터를 **CoreInput**을 사용하여 주 스레드 또는 백그라운드 스레드에서 사용할 수 있는 일관된 단일 인터페이스 및 이벤트 집합에 통합합니다.
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)는 디바이스에서 사용 가능한 입력 형식을 결정할 수 있도록 쿼리 디바이스 기능을 지원하는 디바이스 API입니다.
 -   새 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) XAML 컨트롤 및 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) Windows 런타임 API를 사용하여 잉크 스트로크 데이터에 액세스할 수 있습니다.
 
 ## 코드 작성
@@ -292,6 +288,6 @@ Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 W
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

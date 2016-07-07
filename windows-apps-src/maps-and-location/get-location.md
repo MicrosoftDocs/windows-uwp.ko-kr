@@ -49,13 +49,11 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-[
-            **RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+[**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
 ### 2단계: 사용자의 위치를 가져오고 위치 사용 권한 변경에 대해 등록
 
-[
-            **GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 메서드는 현재 위치에 대한 일회성 판독을 수행합니다. 사용자 위치에 액세스가 허용될 때만 **switch** 문이 (이전 예제의) **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용되는 경우, 코드는 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 위치 사용 권한 변경에 등록하며 사용자의 위치를 요청합니다.
+[**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 메서드는 현재 위치에 대한 일회성 판독을 수행합니다. 사용자 위치에 액세스가 허용될 때만 **switch** 문이 (이전 예제의) **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용되는 경우, 코드는 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 위치 사용 권한 변경에 등록하며 사용자의 위치를 요청합니다.
 
 ```csharp
 switch (accessStatus)
@@ -91,8 +89,7 @@ switch (accessStatus)
 
 ### 3단계: 위치 사용 권한의 변경 내용 처리
 
-[
-            **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **Status** 속성(유형 [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599))을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
+[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **Status** 속성(유형 [**PositionStatus**](https://msdn.microsoft.com/library/windows/apps/br225599))을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;
@@ -169,8 +166,7 @@ async private void OnStatusChanged(Geolocator sender, StatusChangedEventArgs e)
 
 이 예제에서는 사용자 위치에 대한 액세스가 허용될 때만 **switch** 문이 이전 예제의 **accessStatus**와 함께 사용됩니다. 사용자 위치에 대한 액세스가 허용된 경우 코드가 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 생성하고 추적 유형을 지정하며 위치 업데이트에 등록합니다.
 
-[
-            **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 위치 변경(거리 기반 추적) 또는 시간 변경(정기 기반 추적)을 바탕으로 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 트리거할 수 있습니다.
+[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 위치 변경(거리 기반 추적) 또는 시간 변경(정기 기반 추적)을 바탕으로 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트를 트리거할 수 있습니다.
 
 -   거리 기반 추적의 경우 [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) 속성을 설정하세요.
 -   정기 기반 추적의 경우 [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) 속성을 설정하세요.
@@ -213,8 +209,7 @@ switch (accessStatus)
 
 ### 2단계: 위치 업데이트 처리
 
-[
-            **Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 구성된 방식에 따라 이벤트를 트리거하여 사용자의 위치가 변경되었거나 시간이 지났음을 나타냅니다. 해당 이벤트는 인수의 **Position** 속성(유형 [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543))을 통해 해당 위치로 전달됩니다. 이 예제에서는 메서드가 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
+[**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체는 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 구성된 방식에 따라 이벤트를 트리거하여 사용자의 위치가 변경되었거나 시간이 지났음을 나타냅니다. 해당 이벤트는 인수의 **Position** 속성(유형 [**Geoposition**](https://msdn.microsoft.com/library/windows/apps/br225543))을 통해 해당 위치로 전달됩니다. 이 예제에서는 메서드가 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;

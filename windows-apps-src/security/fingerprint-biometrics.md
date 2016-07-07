@@ -69,8 +69,7 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 
 지문 스캔에서 사용자 동의를 요청하려면 [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) 메서드를 호출합니다. 지문 인증이 작동하려면 사용자가 이전에 지문 "서명"을 지문 데이터베이스에 추가한 상태여야 합니다.
 
-[
-            **UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)를 호출하면 지문 스캔을 요청하는 모달 대화 상자가 사용자에게 표시됩니다. 다음 이미지와 같이 모달 대화 상자의 일부로 사용자에게 표시되는 메시지를 **UserConsentVerifier.RequestVerificationAsync** 메서드에 제공할 수 있습니다.
+[**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)를 호출하면 지문 스캔을 요청하는 모달 대화 상자가 사용자에게 표시됩니다. 다음 이미지와 같이 모달 대화 상자의 일부로 사용자에게 표시되는 메시지를 **UserConsentVerifier.RequestVerificationAsync** 메서드에 제공할 수 있습니다.
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

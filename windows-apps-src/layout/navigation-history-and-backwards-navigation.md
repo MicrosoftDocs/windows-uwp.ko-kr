@@ -101,8 +101,7 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
 ## <span id="Enable_system_back_navigation_support"></span><span id="enable_system_back_navigation_support"></span><span id="ENABLE_SYSTEM_BACK_NAVIGATION_SUPPORT"></span>시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
 
 
-앱은 모든 하드웨어 및 소프트웨어 시스템 뒤로 단추에 대해 뒤로 탐색 기능을 사용하도록 설정해야 합니다. [
-            **BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 수신기를 등록하고 해당 처리기를 정의하여 이 작업을 수행합니다.
+앱은 모든 하드웨어 및 소프트웨어 시스템 뒤로 단추에 대해 뒤로 탐색 기능을 사용하도록 설정해야 합니다. [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 수신기를 등록하고 해당 처리기를 정의하여 이 작업을 수행합니다.
 
 여기서는 App.xaml 코드 숨김 파일에서 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 전역 수신기를 등록합니다. 뒤로 탐색에서 특정 페이지를 제외하려는 경우 각 페이지에 이 이벤트를 등록하거나, 페이지를 표시하기 전에 페이지 수준 코드를 실행할 수 있습니다.
 

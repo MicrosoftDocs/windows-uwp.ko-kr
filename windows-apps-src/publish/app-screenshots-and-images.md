@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: 앱에 다양한 로고, 스크린샷 및 이미지가 포함되어야 합니다.
-title: 앱 스크린샷 및 이미지
+Description: "앱에 다양한 로고, 스크린샷 및 이미지가 포함되어야 합니다."
+title: "앱 스크린샷 및 이미지"
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
+ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+
 ---
 
 # 앱 스크린샷 및 이미지
@@ -12,7 +15,7 @@ ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 
 [앱 제출 프로세스](app-submissions.md) 중에 [설명](create-app-descriptions.md) 단계에서 [스크린샷](#screenshots) 및 [판촉 아트워크](#promotional-artwork)를 제공합니다. 이들 이미지를 사용하여 스토어에 앱을 표시할 수 있습니다.
 
-또한 스토어에서는 앱의 타일 및 그 밖에 앱 패키지에 포함한 기타 이미지를 사용합니다. [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/mt186449)를 실행하여 필수 이미지가 누락되었는지 여부를 확인하세요.
+또한 스토어에서는 앱의 타일 및 그 밖에 앱 패키지에 포함한 기타 이미지를 사용합니다. [Windows 앱 인증 키트](https://msdn.microsoft.com/library/windows/apps/mt186449)를 실행하여 필수 이미지가 누락되었는지 여부를 확인하세요. 이러한 이미지에 대한 지침과 권장 사항은 [타일 및 아이콘 자산](../controls-and-patterns/tiles-and-notifications-app-assets.md)을 참조하세요.
 
 > **참고** 이미지가 스토어, 고객의 시작 화면 및 앱 자체에서 사용되는 방식은 고객 운영 체제와 기타 요소에 따라 달라집니다.
 
@@ -102,6 +105,7 @@ Windows Phone 8.1 이하의 경우 스토어에서, 두 가지 이미지 크기 
 Windows 8.1 이하의 경우 스토어에서, 홍보용 레이아웃에 414 x 180픽셀 크기의 이미지를 사용할 수 있습니다. 따라서 앱이 Windows 8.1 이하에서 실행되는 경우 홍보용 이미지로 이 크기의 이미지를 제공하는 것이 좋습니다.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

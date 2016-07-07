@@ -14,8 +14,7 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-[
-            **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://msdn.microsoft.com/library/windows/apps/dn894631)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
+[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스에서 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://msdn.microsoft.com/library/windows/apps/dn894631)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
 
 **팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
 
@@ -60,8 +59,7 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 
 ### 지도 컨트롤에 키를 추가하려면
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
+[**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 인증하려면 [**MapServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn637036) 속성을 인증 키 값으로 설정합니다. 기본 설정에 따라 코드 또는 XAML 태그에서 이 속성을 설정할 수 있습니다. **MapControl** 사용에 대한 자세한 내용은 [2D, 3D 및 Streetside 뷰로 지도 표시](display-maps.md)를 참조하세요.
 
 -   이 예제는 **MapServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -77,8 +75,7 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 
 ### 지도 서비스에 키를 추가하려면
 
-[
-            **Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
+[**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979) 네임스페이스의 서비스를 사용하려면 [**ServiceToken**](https://msdn.microsoft.com/library/windows/apps/dn636977) 속성을 인증 키 값으로 설정합니다. 지도 서비스 사용에 대한 자세한 내용은 [경로 및 길 찾기 표시](routes-and-directions.md) 및 [지오코딩 및 리버스 지오코딩 수행](geocoding.md)을 참조하세요.
 
 -   이 예제는 **ServiceToken**을 코드의 인증 키 값으로 설정합니다.
 
@@ -98,6 +95,6 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -43,6 +43,6 @@ UWP 게임은 Xbox One 다중 사용자 모델에 옵트인(opt in)하도록 선
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -21,14 +21,11 @@ ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
 | CompressionQuality      | single       | 유효한 값은 0에서 1.0 사이입니다. 값이 높으면 더 효율적이고 더 느린 압축 구조입니다. | TIFF          |
 | Lossless                | boolean      | true로 설정되면 ImageQuality 옵션이 무시됩니다.                                        | JPEG-XR       |
 | InterlaceOption         | boolean      | 이미지를 인터레이스할지 여부입니다.                                                                    | PNG           |
-| FilterOption            | uint8        | [
-            **PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389) 열거형을 사용합니다.                                | PNG           |
-| TiffCompressionMethod   | uint8        | [
-            **TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399) 열거형을 사용합니다.                    | TIFF          |
+| FilterOption            | uint8        | [**PngFilterMode**](https://msdn.microsoft.com/library/windows/apps/br226389) 열거형을 사용합니다.                                | PNG           |
+| TiffCompressionMethod   | uint8        | [**TiffCompressionMode**](https://msdn.microsoft.com/library/windows/apps/br226399) 열거형을 사용합니다.                    | TIFF          |
 | Luminance               | uint32Array  | 광도 양자화 상수를 포함하는 64개 요소의 배열입니다.                               | JPEG          |
 | Chrominance             | uint32Array  | 색상 양자화 상수를 포함하는 64개 요소의 배열입니다.                             | JPEG          |
-| JpegYCrCbSubsampling    | uint8        | [
-            **JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386) 열거형을 사용합니다.                    | JPEG          |
+| JpegYCrCbSubsampling    | uint8        | [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386) 열거형을 사용합니다.                    | JPEG          |
 | SuppressApp0            | boolean      | App0 메타데이터 블록이 생성되지 않게 할지 여부입니다.                                        | JPEG          |
 | EnableV5Header32bppBGRA | boolean      | 알파를 지원하는 버전 5 BMP로 인코딩할지 여부입니다.                                         | BMP           |
 

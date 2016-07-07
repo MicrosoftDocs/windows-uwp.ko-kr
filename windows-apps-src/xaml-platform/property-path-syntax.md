@@ -13,8 +13,7 @@ ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-[
-            **PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 **PropertyPath** 값을 인스턴스화할 수 있습니다. **PropertyPath** 값은 데이터 바인딩에 사용됩니다. 유사한 구문이 대상 스토리보드 애니메이션에 사용됩니다. 그러나 애니메이션 대상은 기본 Property-path 구문 값을 만들지 않고 정보를 문자열로 유지합니다. 두 시나리오에서 속성 경로는 결국 단일 속성으로 확인되는 여러 개체-속성 관계의 통과를 설명합니다.
+[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 **PropertyPath** 값을 인스턴스화할 수 있습니다. **PropertyPath** 값은 데이터 바인딩에 사용됩니다. 유사한 구문이 대상 스토리보드 애니메이션에 사용됩니다. 그러나 애니메이션 대상은 기본 Property-path 구문 값을 만들지 않고 정보를 문자열로 유지합니다. 두 시나리오에서 속성 경로는 결국 단일 속성으로 확인되는 여러 개체-속성 관계의 통과를 설명합니다.
 
 속성 경로 문자열을 XAML의 특성으로 직접 설정할 수 있습니다. 동일한 문자열 구문을 사용하면 코드에서 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)을 설정하는 [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)를 생성하거나 [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503)를 사용하여 코드에서 애니메이션 대상을 설정할 수 있습니다. Windows 런타임에는 속성 경로를 사용하는 두 가지 고유한 기능 영역인 데이터 바인딩과 애니메이션 대상이 있습니다. 애니메이션 대상은 Windows 런타임 구현에서 기본 Property-path 구문 값을 만들지 않고 정보를 문자열로 유지하지만 개체-속성 통과의 개념이 매우 유사합니다. 데이터 바인딩과 애니메이션 대상은 각각 속성 경로를 약간 다르게 평가합니다. 따라서 각각의 경우에 대한 속성 경로 구문을 별도로 설명합니다.
 
@@ -68,8 +67,7 @@ Windows 런타임에서는 종속성 속성의 대상 값에 바인딩할 수 �
 
 ## 애니메이션 대상에 대한 속성 경로
 
-애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [
-            **Storyboard.TargetName**](https://msdn.microsoft.com/library/windows/apps/hh759823)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/hh759824)의 값으로 사용됩니다.
+애니메이션은 애니메이션이 실행될 때 스토리보드 값이 적용되는 종속성 속성을 대상으로 합니다. 애니메이션할 속성이 있는 개체를 식별하기 위해 애니메이션은 이름([x:Name 특성](x-name-attribute.md))에 따라 요소를 대상으로 지정합니다. [**Storyboard.TargetName**](https://msdn.microsoft.com/library/windows/apps/hh759823)으로 식별되는 개체에서 시작하고 애니메이션이 적용되어야 하는 특정 종속성 속성 값으로 끝나는 속성 경로를 정의해야 하는 경우가 많습니다. 해당 속성 경로는 [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/hh759824)의 값으로 사용됩니다.
 
 XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)을 참조하세요.
 
@@ -102,13 +100,11 @@ XAML에서 애니메이션을 정의하는 방법에 대한 자세한 내용은 
 
 ## PropertyPath 클래스
 
-[
-            **PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) 클래스는 바인딩 시나리오에 대한 [**Binding.Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 기본 속성 유형입니다.
+[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) 클래스는 바인딩 시나리오에 대한 [**Binding.Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 기본 속성 유형입니다.
 
 대부분 코드를 전혀 사용하지 않고 XAML에서[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)를 적용할 수 있습니다. 그러나 경우에 따라 코드를 사용하여 **PropertyPath** 개체를 정의하고 런타임에 속성에 할당해야 할 수 있습니다.
 
-[
-            **PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)에는 [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261) 생성자가 있으며 기본 생성자는 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
+[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)에는 [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261) 생성자가 있으며 기본 생성자는 없습니다. 이 생성자에 전달하는 문자열은 앞에서 설명한 대로 속성 경로 구문을 사용하여 정의된 문자열입니다. 또한 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)를 XAML 특성으로 할당하는 데 사용한 문자열과 동일한 문자열입니다. **PropertyPath** 클래스의 유일하게 다른 API는 읽기 전용인 [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260) 속성입니다. 이 속성을 다른 **PropertyPath** 인스턴스의 생성 문자열로 사용할 수 있습니다.
 
 ## 관련 항목
 

@@ -30,8 +30,7 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 [!code-cs[VideoStabilizationEffectUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoStabilizationEffectUsing)]
 
-[
-            **VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760) 개체를 저장하기 위한 멤버 변수를 선언합니다. 효과 구현의 일부로, 캡처된 비디오를 인코딩하는 데 사용하는 인코딩 속성을 수정합니다. 나중에 효과를 사용하지 않도록 설정할 때 복원할 수 있도록 초기 입력 및 출력 인코딩 속성의 백업 복사본을 저장하기 위한 2개의 변수를 선언합니다. 마지막으로 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 형식의 멤버 변수를 선언합니다. 이 개체는 코드 내의 여러 위치에서 액세스되므로 이 작업이 필요합니다.
+[**VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760) 개체를 저장하기 위한 멤버 변수를 선언합니다. 효과 구현의 일부로, 캡처된 비디오를 인코딩하는 데 사용하는 인코딩 속성을 수정합니다. 나중에 효과를 사용하지 않도록 설정할 때 복원할 수 있도록 초기 입력 및 출력 인코딩 속성의 백업 복사본을 저장하기 위한 2개의 변수를 선언합니다. 마지막으로 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 형식의 멤버 변수를 선언합니다. 이 개체는 코드 내의 여러 위치에서 액세스되므로 이 작업이 필요합니다.
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
@@ -41,12 +40,9 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 ### 동영상 손떨림 보정 효과 초기화
 
-**MediaCapture** 개체가 초기화된 후에 [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) 개체의 새 인스턴스를 만듭니다. [
-            **MediaCapture.AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035)를 호출하여 비디오 파이프라인에 효과를 추가하고 [**VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760) 클래스의 인스턴스를 검색합니다. [
-            **MediaStreamType.VideoRecord**](https://msdn.microsoft.com/library/windows/apps/br226640)를 지정하여 해당 효과가 비디오 녹화 스트림에 적용되어야 함을 나타냅니다.
+**MediaCapture** 개체가 초기화된 후에 [**VideoStabilizationEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn926762) 개체의 새 인스턴스를 만듭니다. [**MediaCapture.AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035)를 호출하여 비디오 파이프라인에 효과를 추가하고 [**VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760) 클래스의 인스턴스를 검색합니다. [**MediaStreamType.VideoRecord**](https://msdn.microsoft.com/library/windows/apps/br226640)를 지정하여 해당 효과가 비디오 녹화 스트림에 적용되어야 함을 나타냅니다.
 
-[
-            **EnabledChanged**](https://msdn.microsoft.com/library/windows/apps/dn948982) 이벤트에 대한 이벤트 처리기를 등록하고 도우미 메서드 **SetUpVideoStabilizationRecommendationAsync**를 호출합니다. 이 두 작업은 이 문서 뒷부분 설명되어 있습니다. 마지막으로 효과의 [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn926775) 속성을 true로 설정하여 효과를 사용하도록 설정합니다.
+[**EnabledChanged**](https://msdn.microsoft.com/library/windows/apps/dn948982) 이벤트에 대한 이벤트 처리기를 등록하고 도우미 메서드 **SetUpVideoStabilizationRecommendationAsync**를 호출합니다. 이 두 작업은 이 문서 뒷부분 설명되어 있습니다. 마지막으로 효과의 [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn926775) 속성을 true로 설정하여 효과를 사용하도록 설정합니다.
 
 [!code-cs[CreateVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateVideoStabilizationEffect)]
 
@@ -58,8 +54,7 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 디바이스에서 지원할 경우 권장되는 입력 인코딩 속성은 사용자가 제공한 초기 설정보다 더 높은 해상도이므로, 효과로 인한 자르기가 적용된 후에 해상도가 최소로 손실됩니다.
 
-[
-            **VideoDeviceController.SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895)를 호출하여 새 인코딩 속성을 설정합니다. 효과를 사용하지 않도록 설정할 경우 설정을 다시 원래대로 변경할 수 있도록 새 속성을 설정하기 전에 멤버 변수를 사용하여 초기 인코딩 속성을 저장합니다.
+[**VideoDeviceController.SetMediaStreamPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh700895)를 호출하여 새 인코딩 속성을 설정합니다. 효과를 사용하지 않도록 설정할 경우 설정을 다시 원래대로 변경할 수 있도록 새 속성을 설정하기 전에 멤버 변수를 사용하여 초기 인코딩 속성을 저장합니다.
 
 동영상 손떨림 보정 효과로 인해 출력 비디오가 잘려야 할 경우 권장되는 출력 인코딩 속성은 잘린 비디오의 크기가 됩니다. 즉, 출력 해상도가 잘린 비디오 크기에 적절히 맞게 됩니다. 권장되는 출력 속성을 사용하지 않는 경우 비디오는 초기 출력 크기에 맞게 커지므로 시각적 품질이 저하됩니다.
 
@@ -69,8 +64,7 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 ### 동영상 손떨림 보정 효과를 사용할 수 없게 처리
 
-시스템은 픽셀 처리량이 너무 높아 해당 효과가 처리할 수 없거나, 효과가 느리게 실행되는 것이 감지될 경우 동영상 손떨림 보정 효과를 자동으로 사용하지 않도록 설정할 수 있습니다. 이 경우 EnabledChanged 이벤트가 발생합니다. *sender* 매개 변수의 **VideoStabilizationEffect** 인스턴스는 효과의 새로운 상태가 사용 또는 사용 안 함임을 나타냅니다. [
-            **VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979)는 효과가 사용되거나 사용되지 않도록 설정된 이유를 나타내는 [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981) 값을 갖습니다. 프로그래밍 방식으로 효과를 사용하거나 사용하지 않도록 설정하는 경우에도 **Programmatic** 이유로 인해 이 이벤트가 발생합니다.
+시스템은 픽셀 처리량이 너무 높아 해당 효과가 처리할 수 없거나, 효과가 느리게 실행되는 것이 감지될 경우 동영상 손떨림 보정 효과를 자동으로 사용하지 않도록 설정할 수 있습니다. 이 경우 EnabledChanged 이벤트가 발생합니다. *sender* 매개 변수의 **VideoStabilizationEffect** 인스턴스는 효과의 새로운 상태가 사용 또는 사용 안 함임을 나타냅니다. [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979)는 효과가 사용되거나 사용되지 않도록 설정된 이유를 나타내는 [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981) 값을 갖습니다. 프로그래밍 방식으로 효과를 사용하거나 사용하지 않도록 설정하는 경우에도 **Programmatic** 이유로 인해 이 이벤트가 발생합니다.
 
 일반적으로 이 이벤트를 사용하여 동영상 손 떨림 보정의 현재 상태를 나타내도록 앱의 UI를 조정합니다.
 

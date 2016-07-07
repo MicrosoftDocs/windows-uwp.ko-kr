@@ -18,14 +18,11 @@ ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
 
 ## 이미지 속성
 
-[
-            **StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) 속성은 파일에 대한 콘텐츠 관련 정보에 액세스할 수 있도록 하는 [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) 개체를 반환합니다. [
-            **GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646)를 호출하여 이미지 관련 속성을 가져옵니다. 반환된 [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) 개체는 이미지의 제목 및 캡처 날짜와 같은 기본적인 이미지 메타데이터 필드를 포함하는 멤버를 노출합니다.
+[**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) 속성은 파일에 대한 콘텐츠 관련 정보에 액세스할 수 있도록 하는 [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) 개체를 반환합니다. [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646)를 호출하여 이미지 관련 속성을 가져옵니다. 반환된 [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) 개체는 이미지의 제목 및 캡처 날짜와 같은 기본적인 이미지 메타데이터 필드를 포함하는 멤버를 노출합니다.
 
 [!code-cs[GetImageProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetImageProperties)]
 
-더 큰 파일 메타데이터 집합에 액세스하려면 고유한 문자열 식별자로 검색할 수 있는 파일 메타데이터 속성 집합인 Windows 속성 시스템을 사용합니다. 문자열 목록을 만들고 검색하려는 각 속성의 식별자를 추가합니다. [
-            **ImageProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br207732) 메서드는 문자열 목록을 사용하고 키가 속성 식별자에 해당하고 값이 속성 값인 키/값 쌍의 사전을 반환합니다.
+더 큰 파일 메타데이터 집합에 액세스하려면 고유한 문자열 식별자로 검색할 수 있는 파일 메타데이터 속성 집합인 Windows 속성 시스템을 사용합니다. 문자열 목록을 만들고 검색하려는 각 속성의 식별자를 추가합니다. [**ImageProperties.RetrievePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br207732) 메서드는 문자열 목록을 사용하고 키가 속성 식별자에 해당하고 값이 속성 값인 키/값 쌍의 사전을 반환합니다.
 
 [!code-cs[GetWindowsProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetWindowsProperties)]
 
@@ -47,11 +44,9 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 [!code-cs[SetGeoDataFromGeolocator](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromGeolocator)]
 
--   [
-            **SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) API를 사용하려면 앱 매니페스트에 **location** 디바이스 기능을 포함해야 합니다.
+-   [**SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686) API를 사용하려면 앱 매니페스트에 **location** 디바이스 기능을 포함해야 합니다.
 
--   [
-            **SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686)를 호출하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)를 호출하여 사용자가 자신의 위치를 사용할 수 있는 권한을 앱에 부여했는지 확인해야 합니다.
+-   [**SetGeotagFromGeolocatorAsync**](https://msdn.microsoft.com/library/windows/apps/dn903686)를 호출하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)를 호출하여 사용자가 자신의 위치를 사용할 수 있는 권한을 앱에 부여했는지 확인해야 합니다.
 
 -   지리적 위치 API에 대한 자세한 내용은 [지도 및 위치](https://msdn.microsoft.com/library/windows/apps/mt219699)를 참조하세요.
 
@@ -71,8 +66,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 -   WIC 메타데이터 쿼리 언어 및 지원되는 속성에 대한 자세한 내용은 [WIC 이미지 형식 네이티브 메타데이터 쿼리](https://msdn.microsoft.com/library/windows/desktop/ee719904)를 참조하세요.
 
--   많은 메타데이터 속성이 이미지 형식의 하위 집합에서만 지원됩니다. [
-            **GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250)는 요청된 속성 중 하나가 디코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패하고 이미지가 메타데이터를 전혀 지원하지 않을 경우 0x88982F81 오류 코드로 실패합니다. 이러한 오류 코드와 관련된 상수는 WINCODEC\_ERR\_PROPERTYNOTSUPPORTED 및 WINCODEC\_ERR\_UNSUPPORTEDOPERATION이며 winerror.h 헤더 파일에 정의되어 있습니다.
+-   많은 메타데이터 속성이 이미지 형식의 하위 집합에서만 지원됩니다. [**GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250)는 요청된 속성 중 하나가 디코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패하고 이미지가 메타데이터를 전혀 지원하지 않을 경우 0x88982F81 오류 코드로 실패합니다. 이러한 오류 코드와 관련된 상수는 WINCODEC\_ERR\_PROPERTYNOTSUPPORTED 및 WINCODEC\_ERR\_UNSUPPORTEDOPERATION이며 winerror.h 헤더 파일에 정의되어 있습니다.
 -   이미지가 특정 속성 값을 포함할 수도 있고 그렇지 않을 수도 있으므로 액세스를 시도하기 전에 **IDictionary.ContainsKey**를 사용하여 결과에 속성이 있는지 확인합니다.
 
 이미지 메타데이터를 스트림에 쓰려면 이미지 출력 파일과 연결된 **BitmapEncoder**가 필요합니다.
@@ -83,8 +77,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 -   어떤 이미지 파일 형식에 대해 어떤 속성이 지원되는지를 자세히 알아보려면 [Windows 속성](https://msdn.microsoft.com/library/windows/desktop/dd561977), [사진 메타데이터 정책](https://msdn.microsoft.com/library/windows/desktop/ee872003) 및 [WIC 이미지 형식 네이티브 메타데이터 쿼리](https://msdn.microsoft.com/library/windows/desktop/ee719904)를 참조하세요.
 
--   [
-            **SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)는 요청된 속성 중 하나가 인코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패합니다.
+-   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)는 요청된 속성 중 하나가 인코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패합니다.
 
 ## 관련 항목
 

@@ -51,8 +51,7 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 
 ### 컨테이너
 
-[
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 같이 UI 요소로 사용되는 많은 개체에는 다른 개체가 포함될 수 있습니다. 이러한 개체를 컨테이너라고 합니다. 다음 예제에서는 한 요소([**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371))가 포함된 **Canvas** 컨테이너를 보여 줍니다.
+[**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 같이 UI 요소로 사용되는 많은 개체에는 다른 개체가 포함될 수 있습니다. 이러한 개체를 컨테이너라고 합니다. 다음 예제에서는 한 요소([**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371))가 포함된 **Canvas** 컨테이너를 보여 줍니다.
 
 ```xml
 <Canvas>
@@ -68,11 +67,9 @@ XAML에서 새 값을 만드는 대신 기존 개체를 참조하는 데 사용�
 
 일부 개체의 경우 구성의 초기화 값으로 사용되는 내부 텍스트를 통해 새 값을 선언할 수 있습니다. XAML에서 이 방법과 구문을 *초기화 텍스트*라고 합니다. 개념상, 초기화 텍스트는 매개 변수가 있는 생성자 호출과 유사합니다. 초기화 텍스트는 특정 구조의 초기 값을 설정하는 데 유용합니다.
 
-[
-            **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 포함될 수 있도록 **x:Key**가 있는 구조 값을 원하는 경우 대체로 초기화 텍스트와 함께 개체 요소 구문을 사용합니다. 여러 대상 속성에서 해당 구조 값을 공유하는 경우 이 작업을 수행할 수 있습니다. 일부 구조의 경우 특성 구문을 사용하여 구조 값을 설정할 수 없습니다. 초기화 텍스트를 통해서만 유용하고 공유 가능한 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/br242343), [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864), [**GridLength**](https://msdn.microsoft.com/library/windows/apps/br208754) 또는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 리소스를 생성할 수 있습니다.
+[**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에 포함될 수 있도록 **x:Key**가 있는 구조 값을 원하는 경우 대체로 초기화 텍스트와 함께 개체 요소 구문을 사용합니다. 여러 대상 속성에서 해당 구조 값을 공유하는 경우 이 작업을 수행할 수 있습니다. 일부 구조의 경우 특성 구문을 사용하여 구조 값을 설정할 수 없습니다. 초기화 텍스트를 통해서만 유용하고 공유 가능한 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/br242343), [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864), [**GridLength**](https://msdn.microsoft.com/library/windows/apps/br208754) 또는 [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723) 리소스를 생성할 수 있습니다.
 
-이 간략한 예에서는 초기화 텍스트를 사용하여 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)의 값을 지정합니다. 이 경우에는 **Left** 및 **Right**를 20으로 설정하고 **Top** 및 **Bottom**을 10으로 설정하는 값을 지정합니다. 이 예에서는 입력된 리소스로 만들어진 **Thickness**를 보여 준 다음 이 리소스에 대한 참조를 보여 줍니다. [
-            **Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864) 초기화 텍스트에 대한 자세한 내용은 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)를 참조하세요.
+이 간략한 예에서는 초기화 텍스트를 사용하여 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)의 값을 지정합니다. 이 경우에는 **Left** 및 **Right**를 20으로 설정하고 **Top** 및 **Bottom**을 10으로 설정하는 값을 지정합니다. 이 예에서는 입력된 리소스로 만들어진 **Thickness**를 보여 준 다음 이 리소스에 대한 참조를 보여 줍니다. [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864) 초기화 텍스트에 대한 자세한 내용은 [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864)를 참조하세요.
 
 ```xml
 <UserControl ...>
@@ -151,8 +148,7 @@ XAML의 컬렉션 구문은 읽기 전용 속성을 설정하는 것 같은 느�
 
 ### XAML 용어 모음 및 개체 지향 프로그래밍
 
-Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [
-            **Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성은 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 클래스에서 상속됩니다. 실제로, **Button**에 대한 참조 항목을 살펴보면 [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 등 연속하는 기본 클래스로 구성된 각 체인에서 상속된 멤버가 멤버 목록에 하나 이상 있습니다. **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트)도 상속됩니다.
+Windows 런타임 XAML 형식의 XAML 멤버로 표시되는 속성과 이벤트는 기본 형식에서 상속되는 경우가 많습니다. 다음 예제를 살펴보세요. `<Button Background="Blue" .../>`. [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) 속성은 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스에서 직접 선언된 속성이 아닙니다. **Background**는 기본 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 클래스에서 상속됩니다. 실제로, **Button**에 대한 참조 항목을 살펴보면 [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736), [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390), [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706), [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 등 연속하는 기본 클래스로 구성된 각 체인에서 상속된 멤버가 멤버 목록에 하나 이상 있습니다. **속성** 목록에 있는 모든 읽기-쓰기 속성과 컬렉션 속성은 XAML 용어 모음 측면에서 상속됩니다. 이벤트(예: 다양한 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트)도 상속됩니다.
 
 Windows 런타임 참조의 XAML 지침을 사용하는 경우 구문이나 예제 코드에 표시된 요소 이름은 원래 속성을 정의한 형식과 관련된 경우가 많은데, 이는 참조 항목이 기본 클래스에서 이 형식을 상속할 수 있는 모든 형식에서 공유되기 때문입니다. XML 편집기에서 Visual Studio의 IntelliSense for XAML을 사용하는 경우 XML 편집기, IntelliSense 및 드롭다운은 효율적으로 상속을 통합하고, 클래스 인스턴스에 대한 개체 요소로 시작한 후 설정에 사용할 수 있는 정확한 특성 목록을 제공합니다.
 
@@ -174,8 +170,7 @@ XAML 콘텐츠 속성으로 선언된 속성이 **Object** 형식이거나 **Str
 <TextBlock>Hello!</TextBlock>
 ```
 
-클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [
-            **ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) 참조 페이지에는 다음 항목이 표시됩니다. ContentProperty("Name=Child").
+클래스에 대해 XAML 콘텐츠 속성이 있는 경우 "특성" 섹션에서 클래스에 대한 참조 항목을 참조하세요. [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011)의 값을 찾습니다. 이 특성은 명명된 "Name" 필드를 사용합니다. "Name" 값은 XAML 콘텐츠 속성인 해당 클래스의 속성 이름입니다. 예를 들어 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250) 참조 페이지에는 다음 항목이 표시됩니다. ContentProperty("Name=Child").
 
 한 가지 중요한 XAML 구문 규칙은 요소에 설정한 다른 속성 요소와 XAML 콘텐츠 속성을 함께 사용할 수 없다는 것입니다. XAML 콘텐츠 속성을 전체 속성 요소 앞이나 뒤에 설정해야 합니다. 예를 들어 다음은 잘못된 XAML입니다.
 
@@ -284,8 +279,7 @@ Windows 런타임 API의 많은 속성은 열거형을 값으로 사용합니다
 
 ## XAML의 인터페이스
 
-드문 경우이긴 하지만 속성의 형식이 인터페이스인 XAML 구문을 볼 수 있습니다. XAML 형식 시스템에서 이 인터페이스를 구현하는 형식은 구문 분석될 때 값으로 허용됩니다. 값으로 제공할 수 있는 해당 형식의 인스턴스가 생성되어 있어야 합니다. [
-            **ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)의 [**Command**](https://msdn.microsoft.com/library/windows/apps/br227740) 및 [**CommandParameter**](https://msdn.microsoft.com/library/windows/apps/br227741) 속성에 대한 XAML 구문에서 형식으로 사용된 인터페이스를 볼 수 있습니다. 이러한 속성은 **ICommand** 인터페이스가 보기 및 모델이 상호 작용하는 방식에 대한 계약이 되는 MVVM(Model-View-ViewModel) 디자인 패턴을 지원합니다.
+드문 경우이긴 하지만 속성의 형식이 인터페이스인 XAML 구문을 볼 수 있습니다. XAML 형식 시스템에서 이 인터페이스를 구현하는 형식은 구문 분석될 때 값으로 허용됩니다. 값으로 제공할 수 있는 해당 형식의 인스턴스가 생성되어 있어야 합니다. [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)의 [**Command**](https://msdn.microsoft.com/library/windows/apps/br227740) 및 [**CommandParameter**](https://msdn.microsoft.com/library/windows/apps/br227741) 속성에 대한 XAML 구문에서 형식으로 사용된 인터페이스를 볼 수 있습니다. 이러한 속성은 **ICommand** 인터페이스가 보기 및 모델이 상호 작용하는 방식에 대한 계약이 되는 MVVM(Model-View-ViewModel) 디자인 패턴을 지원합니다.
 
 ## Windows 런타임 참조의 XAML 자리 표시자 규칙
 

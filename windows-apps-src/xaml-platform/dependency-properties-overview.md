@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: 이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다.
-title: 종속성 속성 개요
+description: "이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Visual Basic을 사용하여 Windows 런타임 앱을 작성할 때 사용할 수 있는 종속성 속성 시스템에 대해 설명합니다."
+title: "종속성 속성 개요"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
+translationtype: Human Translation
+ms.sourcegitcommit: 2791b5b80bf1405d3efdce5d81824dbe6d347b4f
+ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
+
 ---
 
 # 종속성 속성 개요
@@ -31,8 +35,7 @@ ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 -   스토리보드 애니메이션
 -   "PropertyChanged" 동작(종속성 속성을 구현하여 다른 종속성 속성에 변경 내용을 전파할 수 있는 콜백을 제공할 수 있음)
 -   속성 메타데이터에서 가져온 기본값 사용
--   [
-            **ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) 및 메타데이터 조회와 같은 일반적인 속성 시스템 유틸리티
+-   [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) 및 메타데이터 조회와 같은 일반적인 속성 시스템 유틸리티
 
 ## 종속성 속성 및 Windows 런타임 속성
 
@@ -44,10 +47,8 @@ ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 
 | 용어 | 설명 |
 |------|-------------|
-| 종속성 속성 | [
-            **DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자에 존재하는 속성(아래 참조)입니다. 일반적으로 이 식별자는 정의하는 **DependencyObject** 파생 클래스의 정적 멤버로 사용할 수 있습니다. |
-| 종속성 속성 식별자 | [
-            **SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), 이 때문에 종속성 속성 식별자가 읽기 전용인 경우에도 일반적으로 공개 식별자입니다. |
+| 종속성 속성 | [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자에 존재하는 속성(아래 참조)입니다. 일반적으로 이 식별자는 정의하는 **DependencyObject** 파생 클래스의 정적 멤버로 사용할 수 있습니다. |
+| 종속성 속성 식별자 | [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), 이 때문에 종속성 속성 식별자가 읽기 전용인 경우에도 일반적으로 공개 식별자입니다. |
 | 속성 래퍼 | Windows 런타임 속성의 호출 가능한 **get** 및 **set** 구현. 또는 원래 정의의 언어별 프로젝션. **get** 속성 래퍼 구현은 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하여 관련 종속성 속성 식별자를 첫 번째 입력으로 전달하고 설정할 값을 두 번째 입력으로 전달합니다. | 
 
 속성 래퍼는 호출자에게 편의를 제공할 뿐만 아니라 속성에 대한 Windows 런타임 정의를 사용하는 모든 프로세스, 도구 또는 프로젝션에 종속성 속성을 노출합니다.
@@ -117,8 +118,7 @@ public bool IsSpinning
 
 ### 기본값
 
-[
-            **PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 값을 사용하여 종속성 속성의 기본값을 설정하는 작업은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 항목에서 자세히 설명합니다.
+[**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) 값을 사용하여 종속성 속성의 기본값을 설정하는 작업은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 항목에서 자세히 설명합니다.
 
 종속성 속성은 속성 메타데이터에서 기본값이 명시적으로 정의되지 않은 경우에도 기본값을 가집니다. 메타데이터에서 변경되지 않은 경우 Windows 런타임 종속성 속성의 기본값은 일반적으로 다음 중 하나입니다.
 
@@ -143,8 +143,7 @@ public bool IsSpinning
 </Canvas>
 ```
 
-XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
-            **SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)을 참조하세요.
+XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)을 참조하세요.
 
 **참고** 이와 같은 바인딩은 종속성 속성 값 우선 순위에 따라 로컬 값으로 처리됩니다. 원래 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 값이 포함된 속성에 대해 다른 로컬 값을 설정하면 바인딩의 런타임 값뿐만 아니라 바인딩을 완전히 덮어씁니다.
 
@@ -170,12 +169,11 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 
 스토리보드 애니메이션을 사용하여 종속성 속성 값에 애니메이션 효과를 줄 수 있습니다. Windows 런타임의 스토리보드 애니메이션은 단순히 시각적 데코레이션이 아닙니다. 애니메이션을 개별 속성이나 모든 속성의 값 및 컨트롤의 시각 표현을 설정하고 시간이 지남에 따라 이 값을 변경할 수 있는 상태 시스템 기법이라고 생각하면 더 편리합니다.
 
-애니메이션 효과를 주려면 애니메이션의 대상 속성이 종속성 속성이어야 하고, 대상 속성의 값 형식이 기존 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) 파생 애니메이션 형식 중 하나에 의해 지원되어야 합니다. [
-            **Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](T:System.Double) 및 [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)의 값은 보간 또는 키 프레임 기술을 사용하여 애니메이션 효과를 줄 수 있습니다. 대부분의 다른 값은 개별 **Object** 키 프레임을 사용하여 애니메이션 효과를 줄 수 있습니다.
+애니메이션 효과를 주려면 애니메이션의 대상 속성이 종속성 속성이어야 하고, 대상 속성의 값 형식이 기존 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) 파생 애니메이션 형식 중 하나에 의해 지원되어야 합니다. [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) 및 [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)의 값은 보간 또는 키 프레임 기술을 사용하여 애니메이션 효과를 줄 수 있습니다. 대부분의 다른 값은 개별 **Object** 키 프레임을 사용하여 애니메이션 효과를 줄 수 있습니다.
 
 애니메이션이 적용되고 실행되면 애니메이션 값이 속성이 가진 다른 값(로컬 값 등)보다 높은 우선 순위로 작동합니다. 애니메이션에는 애니메이션이 시각적으로 중지된 것처럼 보이는 경우에도 애니메이션이 속성 값에 적용되도록 하는 선택적 [**HoldEnd**](https://msdn.microsoft.com/library/windows/apps/br210306) 동작도 있습니다.
 
-상태 시스템 원칙은 컨트롤에 대한 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) 상태 모델의 일부로 스토리보드 애니메이션을 사용하여 구현됩니다. 스토리보드 애니메이션에 대한 자세한 내용은 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)을 참조하세요. **VisualStateManager** 및 컨트롤의 시각적 상태 정의에 대한 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) 또는 [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)을 참조하세요.
+상태 시스템 원칙은 컨트롤에 대한 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021) 상태 모델의 일부로 스토리보드 애니메이션을 사용하여 구현됩니다. 스토리보드 애니메이션에 대한 자세한 내용은 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)을 참조하세요. **VisualStateManager** 및 컨트롤의 시각적 상태 정의에 대한 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) 또는 [컨트롤 템플릿](../controls-and-patterns/control-templates.md)을 참조하세요.
 
 ### 속성 변경 동작
 
@@ -191,8 +189,7 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 
 모든 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) 인스턴스는 Windows 런타임 앱에 표시되는 현재 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)와 연결된 UI 스레드에 만들어야 합니다. 각 **DependencyObject**는 주 UI 스레드에 만들어야 하지만 개체는 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br230616)에 액세스하여 다른 스레드의 디스패처 참조를 사용하여 액세스할 수 있습니다. 그런 다음, [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체에서 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)와 같은 메서드를 호출하고 UI 스레드에 대한 스레드 제한 사항의 규칙 내에서 코드를 실행할 수 있습니다.
 
-[
-            **DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)의 스레딩 측면은 일반적으로 UI 스레드에서 실행되는 코드만 종속성 속성의 값을 변경하거나 읽을 수 있다는 의미이므로 관련이 있습니다. 스레딩 문제는 보통 **async** 패턴 및 백그라운드 작업자 스레드를 올바르게 사용하는 일반적인 UI 코드로 방지할 수 있습니다. 일반적으로 직접 **DependencyObject** 유형을 정의하여 **DependencyObject**가 적합하지 않을 수 있는 데이터 원본이나 다른 시나리오에 사용하려고 하는 경우에만 **DependencyObject** 관련 스레딩 문제가 발생합니다.
+[**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)의 스레딩 측면은 일반적으로 UI 스레드에서 실행되는 코드만 종속성 속성의 값을 변경하거나 읽을 수 있다는 의미이므로 관련이 있습니다. 스레딩 문제는 보통 **async** 패턴 및 백그라운드 작업자 스레드를 올바르게 사용하는 일반적인 UI 코드로 방지할 수 있습니다. 일반적으로 직접 **DependencyObject** 유형을 정의하여 **DependencyObject**가 적합하지 않을 수 있는 데이터 원본이나 다른 시나리오에 사용하려고 하는 경우에만 **DependencyObject** 관련 스레딩 문제가 발생합니다.
 
 ## 관련 항목
 
@@ -209,6 +206,7 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

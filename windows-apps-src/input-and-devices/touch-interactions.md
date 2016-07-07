@@ -164,8 +164,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 앱 뷰의 이동/스크롤 및 확대/축소 설정을 통해 사용자 조작 환경을 조정할 수 있습니다. 앱 뷰는 사용자가 앱과 해당 콘텐츠를 액세스하고 조작하는 방법을 제어합니다. 뷰는 관성, 콘텐츠 경계 바운스 및 끌기 지점과 같은 동작도 제공합니다.
 
-[
-            **ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤의 이동 및 스크롤 설정은 보기의 콘텐츠가 뷰포트 내에 맞지 않을 때 사용자가 단일 보기 내에서 탐색하는 방법을 지정합니다. 예를 들어 단일 보기는 잡지 또는 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범일 수 있습니다.
+[**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤의 이동 및 스크롤 설정은 보기의 콘텐츠가 뷰포트 내에 맞지 않을 때 사용자가 단일 보기 내에서 탐색하는 방법을 지정합니다. 예를 들어 단일 보기는 잡지 또는 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범일 수 있습니다.
 
 확대/축소 설정은 광학 줌([**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527) 컨트롤에서 지원) 및 [**Semantic Zoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 모두 적용됩니다. 시맨틱 줌은 단일 뷰 내에서 대규모의 관련 데이터 또는 콘텐츠 집합을 제공하고 탐색하기 위한 터치 최적화된 기법입니다. 두 가지 분류 모드 또는 확대/축소 수준을 사용하여 작동합니다. 단일 뷰 내에서 이동 및 스크롤하는 것과 비슷합니다. 이동 및 스크롤을 시맨틱 줌과 함께 사용할 수 있습니다.
 
@@ -182,16 +181,13 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 -   정적 제스처 이벤트는 조작이 완료된 후 트리거됩니다. 제스처 이벤트에는 [**Tapped**](https://msdn.microsoft.com/library/windows/apps/br208985), [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/br208922), [**RightTapped**](https://msdn.microsoft.com/library/windows/apps/br208984) 및 [**Holding**](https://msdn.microsoft.com/library/windows/apps/br208928)이 포함됩니다.
 
-    [
-            **IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) 및 [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935)를 **false**로 설정하여 특정 요소에서 제스처 이벤트를 사용하지 않도록 설정할 수 있습니다.
+    [**IsTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208939), [**IsDoubleTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208931), [**IsRightTapEnabled**](https://msdn.microsoft.com/library/windows/apps/br208937) 및 [**IsHoldingEnabled**](https://msdn.microsoft.com/library/windows/apps/br208935)를 **false**로 설정하여 특정 요소에서 제스처 이벤트를 사용하지 않도록 설정할 수 있습니다.
 
--   [
-            **PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)와 같은 포인터 이벤트는 포인터 동작 및 누르기와 놓기 이벤트를 구별하는 기능을 비롯하여 각 터치 접촉에 대한 낮은 수준의 세부 정보를 제공합니다.
+-   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 및 [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)와 같은 포인터 이벤트는 포인터 동작 및 누르기와 놓기 이벤트를 구별하는 기능을 비롯하여 각 터치 접촉에 대한 낮은 수준의 세부 정보를 제공합니다.
 
     포인터는 통합 이벤트 메커니즘이 있는 일반 입력 유형입니다. 포인터는 터치, 터치 패드, 마우스 또는 펜 등의 활성 입력 원본에서 화면 위치와 같은 기본 정보를 표시합니다.
 
--   [
-            **ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 조작 제스처 이벤트는 사용자가 요소를 터치할 때 발생하기 시작하고, 손가락을 들거나 조작이 취소될 때까지 계속됩니다.
+-   [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 조작 제스처 이벤트는 사용자가 요소를 터치할 때 발생하기 시작하고, 손가락을 들거나 조작이 취소될 때까지 계속됩니다.
 
     조작 이벤트에는 확대/축소, 이동 또는 회전과 같은 멀티 터치 조작과 끌기처럼 관성과 속도 데이터를 사용하는 조작이 포함됩니다. 조작 이벤트에서 제공하는 정보는 수행된 조작 형식을 확인하지 않고 오히려 위치, 변환 델타 및 속도와 같은 데이터를 포함합니다. 이 터치 데이터를 사용하여 수행되어야 하는 조작 유형을 파악할 수 있습니다.
 
@@ -442,19 +438,13 @@ End Sub
 | [**ManipulationStarted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208950)                                     | 입력 디바이스가 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작을 시작할 때 발생합니다.                                            |
 | [**ManipulationDelta 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208946)                                         | 입력 디바이스가 조작 중에 위치를 바꿀 때 발생합니다.                                                                      |
 | [**ManipulationInertiaStarting 이벤트**](https://msdn.microsoft.com/library/windows/apps/hh702425)                | 조작하는 동안 입력 디바이스와 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 개체의 연결이 끊어지고 관성이 시작될 때 발생합니다. |
-| [**ManipulationCompleted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | [
-            **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
-| [**ManipulationStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702132)               | [
-            **ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951) 이벤트에 대한 데이터를 제공합니다.                                         |
-| [**ManipulationStartedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702101)                 | [
-            **ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) 이벤트에 대한 데이터를 제공합니다.                                           |
-| [**ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | [
-            **ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 대한 데이터를 제공합니다.                                               |
-| [**ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | [
-            **ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947) 이벤트에 대한 데이터를 제공합니다.                           |
+| [**ManipulationCompleted 이벤트**](https://msdn.microsoft.com/library/windows/apps/br208945)                                 | [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
+| [**ManipulationStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702132)               | [**ManipulationStarting**](https://msdn.microsoft.com/library/windows/apps/br208951) 이벤트에 대한 데이터를 제공합니다.                                         |
+| [**ManipulationStartedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702101)                 | [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) 이벤트에 대한 데이터를 제공합니다.                                           |
+| [**ManipulationDeltaRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702051)                     | [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 대한 데이터를 제공합니다.                                               |
+| [**ManipulationInertiaStartingRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702074) | [**ManipulationInertiaStarting**](https://msdn.microsoft.com/library/windows/apps/br208947) 이벤트에 대한 데이터를 제공합니다.                           |
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | 조작이 발생하는 속도를 설명합니다.                                                                                         |
-| [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | [
-            **ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트에 대한 데이터를 제공합니다.                                       |
+| [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트에 대한 데이터를 제공합니다.                                       |
 
  
 
@@ -612,8 +602,7 @@ End Sub
 ## 라우트된 이벤트
 
 
-여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [
-            **UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
+여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
 
 ## 권장 사항 및 금지 사항
 
@@ -651,6 +640,6 @@ End Sub
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

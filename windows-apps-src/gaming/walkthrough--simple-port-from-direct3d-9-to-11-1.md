@@ -58,8 +58,7 @@ ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
 -   장치, 디바이스 컨텍스트 및 그래픽 인프라 구분
 -   셰이더를 컴파일하고, 런타임에 셰이더 바이트코드를 로드하는 프로세스
 -   IA(입력 어셈블러) 단계에 대해 꼭짓점별 데이터를 구성하는 방법.
--   [
-            **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 사용하여 CoreWindow 뷰를 만드는 방법
+-   [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 사용하여 CoreWindow 뷰를 만드는 방법
 
 이 연습에서는 간소하게 하기 위해 XAML 상호 운용성이 지원되지 않는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 사용합니다.
 

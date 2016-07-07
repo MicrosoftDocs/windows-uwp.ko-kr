@@ -16,10 +16,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 \[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
-[
-            **MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [
-            **MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) 클래스는 **MediaSource**의 기능을 확장하여 미디어 항목에 포함된 여러 오디오, 비디오 및 메타데이터 트랙에서 관리하고 선택할 수 있습니다. [
-            **MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 하나 이상의 미디어 재생 항목에서 재생 목록을 만들 수 있습니다.
+[**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) 클래스는 **MediaSource**의 기능을 확장하여 미디어 항목에 포함된 여러 오디오, 비디오 및 메타데이터 트랙에서 관리하고 선택할 수 있습니다. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 하나 이상의 미디어 재생 항목에서 재생 목록을 만들 수 있습니다.
 
 이 문서의 코드는 [비디오 재생 SDK](http://go.microsoft.com/fwlink/p/?LinkId=620020&clcid=0x409) 샘플에서 조정되었습니다. 이 샘플을 다운로드하여 상황에 따라 사용된 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
@@ -69,8 +66,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 **참고**  
 **MediaSource**는 단일 **MediaPlaybackItem**에만 연결될 수 있습니다. 원본에서 **MediaPlaybackItem**을 만든 후에 동일한 원본에서 다른 재생 항목 만들려고 하면 오류가 발생합니다. 또한 미디어 원본에서 **MediaPlaybackItem**을 만든 후에는 **MediaSource** 개체를 **MediaElement** 또는 **MediaPlayer**에 대한 원본으로 직접 설정할 수 없지만 **MediaPlaybackItem**를 대신 사용해야 합니다.
 
-[
-            **VideoTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930954) 이벤트는 여러 비디오 트랙을 포함하는 **MediaPlaybackItem**이 임의 재생 원본에 할당된 후 발생하며 비디오 트랙 목록이 항목 변경으로 인해 변경되면 다시 발생할 수 있습니다. 이 이벤트에 대한 처리기를 사용하면 사용자가 사용 가능한 트랙 간에 전환할 수 있도록 UI를 업데이트할 수 있습니다. 이 예제에서는 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)를 사용하여 사용 가능한 비디오 트랙을 표시합니다.
+[**VideoTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930954) 이벤트는 여러 비디오 트랙을 포함하는 **MediaPlaybackItem**이 임의 재생 원본에 할당된 후 발생하며 비디오 트랙 목록이 항목 변경으로 인해 변경되면 다시 발생할 수 있습니다. 이 이벤트에 대한 처리기를 사용하면 사용자가 사용 가능한 트랙 간에 전환할 수 있도록 UI를 업데이트할 수 있습니다. 이 예제에서는 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)를 사용하여 사용 가능한 비디오 트랙을 표시합니다.
 
 [!code-xml[VideoComboBox](./code/MediaSource_Win10/cs/MainPage.xaml#SnippetVideoComboBox)]
 
@@ -82,8 +78,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[VideoTracksSelectionChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetVideoTracksSelectionChanged)]
 
-여러 오디오 트랙을 사용한 미디어 항목 관리는 비디오 트랙과 정확히 동일하게 작동합니다. [
-            **AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930948)를 처리하여 재생 항목의 [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn930947) 목록에 있는 오디오 트랙으로 UI를 업데이트합니다. 사용자가 오디오 트랙을 선택하는 경우 **AudioTracks** 목록의 [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/dn930937) 속성을 설정하여 **MediaElement** 또는 **MediaPlayer**가 활성 오디오 트랙을 지정한 인덱스로 전환하도록 합니다.
+여러 오디오 트랙을 사용한 미디어 항목 관리는 비디오 트랙과 정확히 동일하게 작동합니다. [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930948)를 처리하여 재생 항목의 [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/dn930947) 목록에 있는 오디오 트랙으로 UI를 업데이트합니다. 사용자가 오디오 트랙을 선택하는 경우 **AudioTracks** 목록의 [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/dn930937) 속성을 설정하여 **MediaElement** 또는 **MediaPlayer**가 활성 오디오 트랙을 지정한 인덱스로 전환하도록 합니다.
 
 [!code-xml[AudioComboBox](./code/MediaSource_Win10/cs/MainPage.xaml#SnippetAudioComboBox)]
 
@@ -107,22 +102,19 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 ## TimedTextSource를 사용하여 시간이 제한된 외부 텍스트 추가
 
-일부 시나리오의 경우에는 여러 로캘의 자막이 있는 별도 파일과 같이 미디어 항목과 관련된 시간이 지정된 텍스트가 있는 외부 파일이 있을 수 있습니다. [
-            **TimedTextSource**](https://msdn.microsoft.com/library/windows/apps/dn956679) 클래스를 사용하여 스트림이나 URI에서 시간이 지정된 외부 텍스트 파일을 로드합니다.
+일부 시나리오의 경우에는 여러 로캘의 자막이 있는 별도 파일과 같이 미디어 항목과 관련된 시간이 지정된 텍스트가 있는 외부 파일이 있을 수 있습니다. [**TimedTextSource**](https://msdn.microsoft.com/library/windows/apps/dn956679) 클래스를 사용하여 스트림이나 URI에서 시간이 지정된 외부 텍스트 파일을 로드합니다.
 
 이 예제에서는 트랙을 확인한 후 식별하기 위해 원본 URI 및 **TimedTextSource** 개체를 키/값 쌍으로 사용하는 미디어 항목에 대해 시간이 지정된 텍스트 원본 목록을 저장하도록 **Dictionary** 컬렉션을 사용합니다.
 
 [!code-cs[TimedTextSourceMap](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedTextSourceMap)]
 
-[
-            **CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn708190)를 호출하여 시간이 지정된 각 외부 텍스트 파일에 대해 새 **TimedTextSource**를 만듭니다. 시간이 지정된 텍스트 원본에 대한 **Dictionary**에 항목을 추가합니다. 항목을 로드하지 못하거나 해당 항목이 성공적으로 로드된 후에 추가 속성을 설정하는 데 실패한 경우 처리할 [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540) 이벤트에 대한 처리기를 추가합니다.
+[**CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn708190)를 호출하여 시간이 지정된 각 외부 텍스트 파일에 대해 새 **TimedTextSource**를 만듭니다. 시간이 지정된 텍스트 원본에 대한 **Dictionary**에 항목을 추가합니다. 항목을 로드하지 못하거나 해당 항목이 성공적으로 로드된 후에 추가 속성을 설정하는 데 실패한 경우 처리할 [**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540) 이벤트에 대한 처리기를 추가합니다.
 
 모든 **TimedTextSource** 개체를 [**ExternalTimedTextSources**](https://msdn.microsoft.com/library/windows/apps/dn930916) 컬렉션에 추가하여 **MediaSource**에 등록합니다. 시간이 지정된 외부 텍스트 원본을 해당 원본에서 만든 **MediaPlaybackItem**이 아니라 **MediaSource**에 직접 추가합니다. UI를 업데이트하여 외부 텍스트 트랙을 반영하려면 이 문서의 앞부분에서 설명한 대로 **TimedMetadataTracksChanged** 이벤트를 등록하고 처리합니다.
 
 [!code-cs[TimedTextSource](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedTextSource)]
 
-[
-            **TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540) 이벤트에 대한 처리기에서 처리기에 전달된 [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537)의 **Error** 속성을 확인하여 시간이 지정된 텍스트 데이터 로드를 시도하는 동안 오류가 발생했는지 확인합니다. 항목이 성공적으로 확인된 경우 이 처리기를 사용하여 확인된 트랙의 추가 속성을 업데이트할 수 있습니다. 이 예제에서는 이전에 **Dictionary**에 저장된 URI에 따라 각 트랙에 대한 레이블을 추가합니다.
+[**TimedTextSource.Resolved**](https://msdn.microsoft.com/library/windows/apps/dn965540) 이벤트에 대한 처리기에서 처리기에 전달된 [**TimedTextSourceResolveResultEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn965537)의 **Error** 속성을 확인하여 시간이 지정된 텍스트 데이터 로드를 시도하는 동안 오류가 발생했는지 확인합니다. 항목이 성공적으로 확인된 경우 이 처리기를 사용하여 확인된 트랙의 추가 속성을 업데이트할 수 있습니다. 이 예제에서는 이전에 **Dictionary**에 저장된 URI에 따라 각 트랙에 대한 레이블을 추가합니다.
 
 [!code-cs[TimedTextSourceResolved](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetTimedTextSourceResolved)]
 
@@ -130,14 +122,13 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 동적으로 코드에서 사용자 지정 메타데이터 트랙을 만들고 미디어 원본에 연결할 수 있습니다. 만들어진 트랙에는 자막 또는 자막 텍스트가 포함되거나 독점 앱 데이터가 포함될 수 있습니다.
 
-생성자를 호출하고 ID, 언어 식별자 및 [**TimedMetadataKind**](https://msdn.microsoft.com/library/windows/apps/dn956578) 열거의 값을 지정하여 새 [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580)을 만듭니다. [
-            **CueEntered**](https://msdn.microsoft.com/library/windows/apps/dn956583) 및 [**CueExited**](https://msdn.microsoft.com/library/windows/apps/dn956584) 이벤트에 대한 처리기를 등록합니다. 이러한 이벤트는 신호 시작 시간에 도달할 때 및 신호 기간이 만료될 때 각각 발생합니다.
+생성자를 호출하고 ID, 언어 식별자 및 [**TimedMetadataKind**](https://msdn.microsoft.com/library/windows/apps/dn956578) 열거의 값을 지정하여 새 [**TimedMetadataTrack**](https://msdn.microsoft.com/library/windows/apps/dn956580)을 만듭니다. [**CueEntered**](https://msdn.microsoft.com/library/windows/apps/dn956583) 및 [**CueExited**](https://msdn.microsoft.com/library/windows/apps/dn956584) 이벤트에 대한 처리기를 등록합니다. 이러한 이벤트는 신호 시작 시간에 도달할 때 및 신호 기간이 만료될 때 각각 발생합니다.
 
 만들어진 메타데이터 트랙의 형식에 적합한 새 신호 개체를 만들고 해당 트랙에 대한 ID, 시작 시간 및 기간을 설정합니다. 이 예제에서는 데이터 트랙이 만들어지므로 [**DataCue**](https://msdn.microsoft.com/library/windows/apps/dn930892) 개체 집합이 생성되고 앱별 데이터를 포함하는 버퍼가 각 신호에 대해 제공됩니다. 새 트랙을 등록하려면 **MediaSource** 개체의 [**ExternalTimedMetadataTracks**](https://msdn.microsoft.com/library/windows/apps/dn930915) 컬렉션에 추가합니다.
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다. 트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
+**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다.  트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -149,8 +140,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 ## MediaPlaybackList를 사용하여 미디어 항목 목록 재생
 
-[
-            **MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 **MediaPlaybackItem** 개체가 표시하는 미디어 항목의 재생 목록을 만들 수 있습니다.
+[**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 **MediaPlaybackItem** 개체가 표시하는 미디어 항목의 재생 목록을 만들 수 있습니다.
 
 **참고** [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)의 항목이 매끄러운 재생을 사용하여 렌더링됩니다. 시스템은 MP3 또는 AAC로 인코딩된 파일에 제공된 메타데이터를 사용하여 매끄러운 재생에 필요한 지연 또는 패딩 보정을 결정합니다. MP3 또는 AAC로 인코딩된 파일이 이 메타데이터를 제공하지 않는 경우 시스템에서 지연이나 패딩을 스스로 결정합니다. 이러한 인코더는 지연 또는 패딩을 도입하지 않으므로 PCM, FLAC, ALAC 등 무손실 형식에 대해 시스템은 어떠한 조치도 취하지 않습니다.
 
@@ -158,8 +148,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[DeclareMediaPlaybackList](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaPlaybackList)]
 
-이 문서의 앞부분에서 설명한 동일한 절차를 사용하여 목록에 추가하려는 각 미디어 항목에 대한 **MediaPlaybackItem**을 만듭니다. **MediaPlaybackList** 개체를 초기화하고 이 개체에 미디어 재생 항목을 추가합니다. [
-            **CurrentItemChanged**](https://msdn.microsoft.com/library/windows/apps/dn930957) 이벤트에 대한 처리기를 등록합니다. 이 이벤트를 사용하면 UI를 업데이트하여 현재 재생 중인 미디어 항목을 반영할 수 있습니다. 마지막으로 **MediaElement** 또는 **MediaPlayer**의 재생 원본을 **MediaPlaybackList**로 설정합니다.
+이 문서의 앞부분에서 설명한 동일한 절차를 사용하여 목록에 추가하려는 각 미디어 항목에 대한 **MediaPlaybackItem**을 만듭니다. **MediaPlaybackList** 개체를 초기화하고 이 개체에 미디어 재생 항목을 추가합니다. [**CurrentItemChanged**](https://msdn.microsoft.com/library/windows/apps/dn930957) 이벤트에 대한 처리기를 등록합니다. 이 이벤트를 사용하면 UI를 업데이트하여 현재 재생 중인 미디어 항목을 반영할 수 있습니다. 마지막으로 **MediaElement** 또는 **MediaPlayer**의 재생 원본을 **MediaPlaybackList**로 설정합니다.
 
 [!code-cs[PlayMediaPlaybackList](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackList)]
 
@@ -167,20 +156,17 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[MediaPlaybackListItemChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetMediaPlaybackListItemChanged)]
 
-[
-            **MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) 또는 [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454)를 호출하여 미디어 플레이어가 **MediaPlaybackList**에서 이전 또는 이후 항목을 재생하도록 합니다.
+[**MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) 또는 [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454)를 호출하여 미디어 플레이어가 **MediaPlaybackList**에서 이전 또는 이후 항목을 재생하도록 합니다.
 
 [!code-cs[PrevButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPrevButton)]
 
 [!code-cs[NextButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetNextButton)]
 
-[
-            **ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt146457) 속성을 설정하여 미디어 플레이어가 임의 순서로 목록의 항목을 재생해야 하는지 여부를 지정합니다.
+[**ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt146457) 속성을 설정하여 미디어 플레이어가 임의 순서로 목록의 항목을 재생해야 하는지 여부를 지정합니다.
 
 [!code-cs[ShuffleButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetShuffleButton)]
 
-[
-            **AutoRepeatEnabled**](https://msdn.microsoft.com/library/windows/apps/mt146452) 속성을 설정하여 미디어 플레이어가 목록을 반복 재생해야 하는지 여부를 지정합니다.
+[**AutoRepeatEnabled**](https://msdn.microsoft.com/library/windows/apps/mt146452) 속성을 설정하여 미디어 플레이어가 목록을 반복 재생해야 하는지 여부를 지정합니다.
 
 [!code-cs[RepeatButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetRepeatButton)]
 

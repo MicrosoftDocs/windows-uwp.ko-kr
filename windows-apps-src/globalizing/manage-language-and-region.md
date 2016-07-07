@@ -134,8 +134,7 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 ### <span id="Use_geographic_region_when_appropriate."></span><span id="use_geographic_region_when_appropriate."></span><span id="USE_GEOGRAPHIC_REGION_WHEN_APPROPRIATE."></span>필요할 경우 지리적 지역을 사용합니다.
 
-언어 대신 사용자 홈의 지리적 지역 설정을 사용하여 사용자에게 표시할 콘텐츠를 선택해야 합니다. 예를 들어 새 앱은 사용자의 홈 위치에서 콘텐츠를 표시하도록 기본 설정될 수 있습니다. 사용자의 홈 위치는 Windows를 설치할 때 설정되며 이전 작업에서 설명된 대로 Windows UI의 **지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. [
-            **Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829)을 사용하여 현재 사용자 홈의 국가별 설정을 검색할 수 있습니다.
+언어 대신 사용자 홈의 지리적 지역 설정을 사용하여 사용자에게 표시할 콘텐츠를 선택해야 합니다. 예를 들어 새 앱은 사용자의 홈 위치에서 콘텐츠를 표시하도록 기본 설정될 수 있습니다. 사용자의 홈 위치는 Windows를 설치할 때 설정되며 이전 작업에서 설명된 대로 Windows UI의 **지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829)을 사용하여 현재 사용자 홈의 국가별 설정을 검색할 수 있습니다.
 
 또한 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)에는 도우미 개체로 제공되는 [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795) 개체가 있습니다. 이 개체를 통해 앱에서 특정 지역에 대한 세부 정보(예: 표시 이름, 기본 이름, 사용 중인 통화)를 검색할 수 있습니다.
 

@@ -25,11 +25,9 @@ ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
 ## <span id="What_is_a_view_"></span><span id="what_is_a_view_"></span><span id="WHAT_IS_A_VIEW_"></span>보기란?
 
 
-앱 보기는 앱이 콘텐츠를 표시하는 데 사용하는 창과 스레드의 1:1 연결입니다. [
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 개체로 표시됩니다.
+앱 보기는 앱이 콘텐츠를 표시하는 데 사용하는 창과 스레드의 1:1 연결입니다. [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 개체로 표시됩니다.
 
-보기는 [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) 개체에 의해 관리됩니다. [
-            **CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)를 호출하여 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 개체를 만듭니다. **CoreApplicationView**는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 및 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)([**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 및 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264) 속성에 저장됨)를 한 곳에서 표시합니다. **CoreApplicationView**는 Windows 런타임이 핵심 Windows 시스템과 상호 작용하는 데 사용하는 개체로 간주할 수 있습니다.
+보기는 [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016) 개체에 의해 관리됩니다. [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)를 호출하여 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 개체를 만듭니다. **CoreApplicationView**는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 및 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)([**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 및 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264) 속성에 저장됨)를 한 곳에서 표시합니다. **CoreApplicationView**는 Windows 런타임이 핵심 Windows 시스템과 상호 작용하는 데 사용하는 개체로 간주할 수 있습니다.
 
 일반적으로 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)를 직접 사용하지는 않습니다. 대신, Windows 런타임은 [**Windows.UI.ViewManagement**](https://msdn.microsoft.com/library/windows/apps/br242295) 네임스페이스의 [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/hh701658) 클래스를 제공합니다. 이 클래스는 앱이 창 시스템과 상호 작용할 때 사용하는 속성, 메서드 및 이벤트를 제공합니다. **ApplicationView**를 사용하려면 현재 **CoreApplicationView**의 스레드에 연결된 **ApplicationView** 인스턴스를 가져오는 정적 [**ApplicationView.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh701672) 메서드를 호출합니다.
 
@@ -61,8 +59,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 **새 보기를 표시하려면**
 
-1.  [
-            **CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297291)를 호출하여 보기 콘텐츠에 대한 새 창과 스레드를 만듭니다.
+1.  [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297291)를 호출하여 보기 콘텐츠에 대한 새 창과 스레드를 만듭니다.
 
 ```    CSharp
 CoreApplicationView newView = CoreApplication.CreateNewView();</code></pre></td>
@@ -95,8 +92,7 @@ int newViewId = 0;</code></pre></td>
 
 3.  새 스레드에서 창을 채웁니다.
 
-    [
-            **CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](http://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
+    [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](http://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
     XAML에서는 일반적으로 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) 속성에 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)로 이동합니다. 자세한 내용은 [두 페이지 간에 피어 투 피어 탐색](peer-to-peer-navigation-between-two-pages.md)을 참조하세요.
 
@@ -128,8 +124,7 @@ await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
     });
 ```
 
-4.  [
-            **ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://msdn.microsoft.com/library/windows/apps/dn281101)를 호출하여 새 보기를 표시합니다.
+4.  [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://msdn.microsoft.com/library/windows/apps/dn281101)를 호출하여 새 보기를 표시합니다.
 
     새 보기를 만든 후 [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://msdn.microsoft.com/library/windows/apps/dn281101) 메서드를 호출하여 새 창에 표시할 수 있습니다. 이 메서드의 *viewId* 매개 변수는 앱에서 각 보기를 고유하게 식별하는 정수입니다. **ApplicationView.Id** 속성 또는 [**ApplicationView.GetApplicationViewIdForWindow**](https://msdn.microsoft.com/library/windows/apps/dn281109) 메서드를 사용하여 [**Id**](https://msdn.microsoft.com/library/windows/apps/dn281120) 보기를 검색합니다.
 
@@ -179,8 +174,7 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);</code></pre></td>
 </table>
 ```
 
-[
-            **SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097)를 사용하는 경우 [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105) 값을 지정하여 초기 창을 닫고 작업 표시줄에서 제거할지 여부를 선택할 수 있습니다.
+[**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281097)를 사용하는 경우 [**ApplicationViewSwitchingOptions**](https://msdn.microsoft.com/library/windows/apps/dn281105) 값을 지정하여 초기 창을 닫고 작업 표시줄에서 제거할지 여부를 선택할 수 있습니다.
 
  
 

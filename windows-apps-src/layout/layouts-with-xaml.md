@@ -22,14 +22,12 @@ XAML 프레임워크는 반응형 UI를 만드는 데 사용할 수 있는 여�
 - **유동 레이아웃** 
              레이아웃 속성 및 패널을 사용하여 기본 UI를 유동으로 만듭니다.
 
-    반응형 레이아웃의 기초는 콘텐츠의 위치 변경, 크기 조정 및 재배치를 위해 레이아웃 속성 및 패널을 적절하게 사용하는 것입니다. 요소에 고정된 크기를 설정하거나 자동 크기 조정을 사용하여 부모 레이아웃 패널에서 크기를 지정할 수 있습니다. [
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)과 같은 다양한 [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) 클래스에서 자식 클래스의 크기와 위치를 다양한 방법으로 지정할 수 있습니다.
+    반응형 레이아웃의 기초는 콘텐츠의 위치 변경, 크기 조정 및 재배치를 위해 레이아웃 속성 및 패널을 적절하게 사용하는 것입니다. 요소에 고정된 크기를 설정하거나 자동 크기 조정을 사용하여 부모 레이아웃 패널에서 크기를 지정할 수 있습니다. [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)과 같은 다양한 [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) 클래스에서 자식 클래스의 크기와 위치를 다양한 방법으로 지정할 수 있습니다.
 
 - **적응형 레이아웃** 
              시각적 상태를 사용하여 창 크기 또는 기타 변경 사항에 따라 UI를 크게 변경할 수 있습니다.
 
-    앱 창이 일정 수준 이상으로 늘어나거나 줄어드는 경우 레이아웃 속성을 변경하여 UI 섹션에 대해 위치 변경, 크기 조정, 재배치, 표시 또는 바꾸기 작업을 수행할 수 있습니다. UI에 다양한 시각적 상태를 정의한 후 창 너비 또는 창 높이가 지정한 임계값을 넘어가면 적용할 수 있습니다. [
-            **AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) 클래스를 통해 상태가 적용되는 임계값('중단점'이라고도 함)을 쉽게 설정할 수 있습니다.
+    앱 창이 일정 수준 이상으로 늘어나거나 줄어드는 경우 레이아웃 속성을 변경하여 UI 섹션에 대해 위치 변경, 크기 조정, 재배치, 표시 또는 바꾸기 작업을 수행할 수 있습니다. UI에 다양한 시각적 상태를 정의한 후 창 너비 또는 창 높이가 지정한 임계값을 넘어가면 적용할 수 있습니다. [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) 클래스를 통해 상태가 적용되는 임계값('중단점'이라고도 함)을 쉽게 설정할 수 있습니다.
 
 - **맞춤형 레이아웃** 
              맞춤형 레이아웃은 특정 디바이스 패밀리 또는 화면 크기 범위에 맞게 최적화됩니다. 디바이스 패밀리 내에서 맞춤형 레이아웃은 지원되는 창 크기 범위에서 여전히 변경 사항에 응답하고 알맞게 조정됩니다.
@@ -64,8 +62,7 @@ XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모
 
 **높이 및 너비**
 
-[
-            **Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) 속성을 설정하여 요소의 크기를 지정합니다. 유효 픽셀로 측정된 고정 값을 사용하거나 자동 또는 가변 크기 조정을 사용할 수 있습니다. 런타임 시 요소의 크기를 가져오려면 Height와 Width 대신 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx)와 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) 속성을 사용합니다.
+[**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx) 속성을 설정하여 요소의 크기를 지정합니다. 유효 픽셀로 측정된 고정 값을 사용하거나 자동 또는 가변 크기 조정을 사용할 수 있습니다. 런타임 시 요소의 크기를 가져오려면 Height와 Width 대신 [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualheight.aspx)와 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.actualwidth.aspx) 속성을 사용합니다.
 
 UI 요소가 해당 콘텐츠 또는 부모 컨테이너에 맞게 크기를 조정하려면 자동 크기 조정을 사용합니다. 그리드의 행과 열에서 자동 크기 조정을 사용할 수도 있습니다. 자동 크기 조정을 사용하려면 UI 요소의 Height 및/또는 Width를 **Auto**로 설정합니다.
 
@@ -102,15 +99,13 @@ Visual Studio XAML 디자이너에서 결과는 다음과 같습니다.
 
 **크기 제약 조건**
 
-UI에서 자동 크기 조정을 사용하는 경우 여전히 요소 크기에 제약 조건을 적용해야 할 수 있습니다. [
-            **MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) 및 [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) 속성을 설정하면 유동 크기 조정을 허용하면서 요소의 크기를 제한하는 값을 지정할 수 있습니다.
+UI에서 자동 크기 조정을 사용하는 경우 여전히 요소 크기에 제약 조건을 적용해야 할 수 있습니다. [**MinWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minwidth.aspx)/[**MaxWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxwidth.aspx) 및 [**MinHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.minheight.aspx)/[**MaxHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) 속성을 설정하면 유동 크기 조정을 허용하면서 요소의 크기를 제한하는 값을 지정할 수 있습니다.
 
 Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeight/MaxHeight는 행 정의에 사용할 수도 있습니다.
 
 **맞춤**
 
-[
-            **HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성을 사용하여 해당 부모 컨테이너 내에서 요소의 위치가 지정되는 방법을 지정합니다.
+[**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성을 사용하여 해당 부모 컨테이너 내에서 요소의 위치가 지정되는 방법을 지정합니다.
 - **HorizontalAlignment**에 대한 값은 **Left**, **Center**, **Right** 및 **Stretch**입니다.
 - **VerticalAlignment**에 대한 값은 **Top**, **Center**, **Bottom** 및 **Stretch**입니다.
 
@@ -125,11 +120,9 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 **여백 및 안쪽 여백**
 
-[
-            **Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) 속성을 설정하여 요소 주위의 빈 공간 크기를 제어합니다. Margin은 ActualHeight 및 ActualWidth에 픽셀을 추가하지 않으며, 적중 횟수 테스트 및 소싱 입력 이벤트와 관련해서 요소의 일부로 간주되지도 않습니다.
+[**Margin**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.margin.aspx) 속성을 설정하여 요소 주위의 빈 공간 크기를 제어합니다. Margin은 ActualHeight 및 ActualWidth에 픽셀을 추가하지 않으며, 적중 횟수 테스트 및 소싱 입력 이벤트와 관련해서 요소의 일부로 간주되지도 않습니다.
 
-[
-            **Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) 속성을 설정하여 요소의 내부 테두리와 해당 콘텐츠 사이의 간격을 제어합니다. 양수 Padding 값은 해당 요소의 콘텐츠 영역을 줄입니다.
+[**Padding**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.padding.aspx) 속성을 설정하여 요소의 내부 테두리와 해당 콘텐츠 사이의 간격을 제어합니다. 양수 Padding 값은 해당 요소의 콘텐츠 영역을 줄입니다.
 
 이 다이어그램은 요소에 여백과 안쪽 여백이 적용되는 방식을 보여 줍니다.
 
@@ -183,8 +176,7 @@ Margin 및 Padding의 왼쪽, 오른쪽, 위쪽 및 아래쪽 값은 대칭이 �
 
 ## 시각적 상태 및 상태 트리거
 
-시각적 상태를 사용하면 화면 크기 또는 기타 요인에 따라 UI 섹션을 위치 변경, 크기 조정, 재배치, 표시 또는 바꿀 수 있습니다. [
-            **VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx)는 특정 상태에 있을 때 요소에 적용되는 속성 값을 정의합니다. 지정된 조건이 충족되는 경우 적절한 VisualState를 적용하는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx)에서 시각적 상태를 그룹화합니다.
+시각적 상태를 사용하면 화면 크기 또는 기타 요인에 따라 UI 섹션을 위치 변경, 크기 조정, 재배치, 표시 또는 바꿀 수 있습니다. [**VisualState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstate.aspx)는 특정 상태에 있을 때 요소에 적용되는 속성 값을 정의합니다. 지정된 조건이 충족되는 경우 적절한 VisualState를 적용하는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx)에서 시각적 상태를 그룹화합니다.
 
 ### 코드에서 시각적 상태 설정
 
@@ -307,8 +299,7 @@ VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함�
 
 ### 상태 트리거 사용자 지정
 
-[
-            **StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 디바이스 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
+[**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 디바이스 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
 
 ### 시각적 상태 및 스타일
 

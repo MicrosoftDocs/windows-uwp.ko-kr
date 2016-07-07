@@ -184,7 +184,7 @@ for (size_t i = 0; i < count; ++i)
 
 ## 요약
 
-UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다.
+UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대한 상당한 양의 정보와 제어 기능을 제공합니다. Windows 개발을 위한 이전의 다중 스레드 API와 비교할 때 더 복잡해졌으므로 학습 기간이 어느 정도 필요하지만, 유연성 향상으로 결국 다양한 소비자 PC와 기타 하드웨어 대상 전체에서 성능을 높일 수 있습니다. 
 
 ## 추가 리소스
 - [CPU 집합(MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
@@ -193,6 +193,6 @@ UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -20,7 +20,7 @@ ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
 UWP(유니버설 Windows 플랫폼) 개발자는 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 및 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523)을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다. 이 항목에서는 네트워킹 작업을 수행하기 위한 **Windows.Networking.Sockets** 네임스페이스 사용에 대해 자세한 지침을 제공합니다.
 
->**참고** [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 일부로 시스템에서는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 금지합니다. 두 UWP 앱 간의 통신을 위해 소켓을 사용할 수 없다는 것을 의미합니다. UWP는 앱 간 통신을 위해 다른 메커니즘을 제공합니다. 자세한 내용은 [앱 간 통신](https://msdn.microsoft.com/windows/uwp/app-to-app/index)을 참조하세요.
+>**참고** [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 일부로 시스템에서는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 금지합니다.  두 UWP 앱 간의 통신을 위해 소켓을 사용할 수 없다는 것을 의미합니다. UWP는 앱 간 통신을 위해 다른 메커니즘을 제공합니다. 자세한 내용은 [앱 간 통신](https://msdn.microsoft.com/windows/uwp/app-to-app/index)을 참조하세요.
 
 ## 기본 TCP 소켓 작업
 
@@ -270,8 +270,7 @@ Windows 10에는 새로운 [**DatagramSocketControl**](https://msdn.microsoft.co
 
 ## StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
 
-[
-            **Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
+[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
 다음은 이를 구현하는 방법을 보여 주는 코드 조각입니다.
 
@@ -286,16 +285,11 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 전달된 문자열이 유효한 호스트 이름이 아닌 경우(호스트 이름에 허용되지 않는 문자 포함) 소켓과 함께 사용된 [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) 클래스에 대한 생성자에서 예외가 발생할 수 있습니다. 앱이 **HostName**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
-[
-            **Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임 스페이스에는 소켓 및 WebSocket을 사용할 때 오류를 처리하는 편리한 도우미 메서드와 열거형이 있습니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
+[**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임 스페이스에는 소켓 및 WebSocket을 사용할 때 오류를 처리하는 편리한 도우미 메서드와 열거형이 있습니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
 
-[
-            **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [
-            **SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462) 메서드는 네트워크 오류를 소켓 작업에서 [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **SocketErrorStatus** 열거형 값은 기본 Windows 소켓 작업에서 반환한 오류에 해당합니다. 앱은 특정 **SocketErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+[**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462) 메서드는 네트워크 오류를 소켓 작업에서 [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **SocketErrorStatus** 열거형 값은 기본 Windows 소켓 작업에서 반환한 오류에 해당합니다. 앱은 특정 **SocketErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [
-            **WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) 메서드는 네트워크 오류를 WebSocket 작업에서 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529) 메서드는 네트워크 오류를 WebSocket 작업에서 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 

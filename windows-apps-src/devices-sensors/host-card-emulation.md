@@ -103,8 +103,7 @@ bgTask = taskBuilder.Register();
 
 ## APDU 수신 및 응답
 
-앱을 대상으로 하는 APDU가 있는 경우 시스템에서 백그라운드 작업이 시작됩니다. 백그라운드 작업은 [**SmartCardEmulatorApduReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894640) 개체의 [**CommandApdu**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu.aspx) 속성을 통해 전달된 APDU를 수신하고 동일한 개체의 [**TryRespondAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/mt634299.aspx) 메서드를 사용해 APDU에 응답합니다. 성능상의 이유로 간단한 작업에는 백그라운드 작업을 유지하는 것이 좋습니다. 예를 들어 모든 처리가 완료되면 APDU에 즉시 응답하고 백그라운드 작업을 종료합니다. NFC 트랜잭션의 특성으로 인해 사용자는 매우 짧은 시간 동안만 리더에 장치를 대고 있는 경향이 있습니다. 백그라운드 작업은 연결이 비활성화될 때까지 계속 리더에서 트래픽을 수신합니다. 이 경우 [**SmartCardEmulatorConnectionDeactivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894644) 개체를 수신하게 됩니다. [
-            **SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason) 속성에 표시된 대로 다음과 같은 이유로 연결이 비활성화될 수 있습니다.
+앱을 대상으로 하는 APDU가 있는 경우 시스템에서 백그라운드 작업이 시작됩니다. 백그라운드 작업은 [**SmartCardEmulatorApduReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894640) 개체의 [**CommandApdu**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu.aspx) 속성을 통해 전달된 APDU를 수신하고 동일한 개체의 [**TryRespondAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/mt634299.aspx) 메서드를 사용해 APDU에 응답합니다. 성능상의 이유로 간단한 작업에는 백그라운드 작업을 유지하는 것이 좋습니다. 예를 들어 모든 처리가 완료되면 APDU에 즉시 응답하고 백그라운드 작업을 종료합니다. NFC 트랜잭션의 특성으로 인해 사용자는 매우 짧은 시간 동안만 리더에 장치를 대고 있는 경향이 있습니다. 백그라운드 작업은 연결이 비활성화될 때까지 계속 리더에서 트래픽을 수신합니다. 이 경우 [**SmartCardEmulatorConnectionDeactivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894644) 개체를 수신하게 됩니다. [**SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason) 속성에 표시된 대로 다음과 같은 이유로 연결이 비활성화될 수 있습니다.
 
 -   연결이 **ConnectionLost** 값으로 비활성화되는 경우 이는 사용자가 리더에서 장치를 떼었다는 의미입니다. 사용자가 터미널에 더 오래 탭해야 하는 앱인 경우 피드백을 사용하여 메시지를 표시하는 것이 좋습니다. 다시 탭하는 경우 이전 백그라운드 작업이 종료될 때까지 대기하는 동안 지연되지 않도록 신속하게(지연을 완료하여) 백그라운드 작업을 종료해야 합니다.
 -   연결이 **ConnectionRedirected**로 비활성화되는 경우 이는 터미널이 다른 AID로 보내는 새로운 SELECT AID 명령 APDU를 전송했다는 의미입니다. 이 경우 앱은 다른 백그라운드 작업이 실행될 수 있도록 백그라운드 작업을 즉시(지연을 완료하여) 종료해야 합니다.
@@ -245,8 +244,7 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 
 AID 그룹당 최대 9개의 AID(각기 5-16바이트 길이)를 포함할 수 있습니다.
 
-[
-            **RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) 메서드를 사용하여 시스템에 AID 그룹을 등록합니다. 그러면 [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) 개체가 반환됩니다. 기본적으로 등록 개체의 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) 속성은 **Disabled**로 설정됩니다. 즉, AID가 시스템에 등록되어 있는 경우에도 아직 활성화되지 않아서 트래픽을 수신하지 못합니다.
+[**RegisterAppletIdGroupAsync**](https://msdn.microsoft.com/library/windows/apps/Dn894656) 메서드를 사용하여 시스템에 AID 그룹을 등록합니다. 그러면 [**SmartCardAppletIdGroupRegistration**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration) 개체가 반환됩니다. 기본적으로 등록 개체의 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy) 속성은 **Disabled**로 설정됩니다. 즉, AID가 시스템에 등록되어 있는 경우에도 아직 활성화되지 않아서 트래픽을 수신하지 못합니다.
 
 ```csharp
 reg = await SmartCardEmulator.RegisterAppletIdGroupAsync(appletIdGroup);
@@ -284,8 +282,7 @@ bgTask = taskBuilder.Register();
 
 ## 포그라운드 재정의 동작
 
-앱이 포그라운드에 있는 동안 사용자에게 메시지를 표시하지 않고 임의의 AID 그룹 등록에 대한 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy)를 **ForegroundOverride**로 변경할 수 있습니다. 앱이 포그라운드에 있는 동안 사용자가 터미널에 장치를 탭하면 사용자가 기본 결제 카드로 선택한 결제 카드가 없는 경우에도 트래픽이 앱으로 라우트됩니다. 카드의 활성화 정책을 **ForegroundOverride**로 변경하면 해당 변경 사항은 앱이 포그라운드에 있는 동안에만 일시적으로 유지되며 사용자가 설정한 현재 기본 결제 카드를 변경하지 않습니다. 다음과 같이 포그라운드 앱에서 결제 또는 미결제 카드의 **ActivationPolicy**를 변경할 수 있습니다. [
-            **RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) 메서드는 포그라운드 앱에서만 호출할 수 있으며 백그라운드 작업에서는 호출할 수 없습니다.
+앱이 포그라운드에 있는 동안 사용자에게 메시지를 표시하지 않고 임의의 AID 그룹 등록에 대한 [**ActivationPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_activationpolicy)를 **ForegroundOverride**로 변경할 수 있습니다. 앱이 포그라운드에 있는 동안 사용자가 터미널에 장치를 탭하면 사용자가 기본 결제 카드로 선택한 결제 카드가 없는 경우에도 트래픽이 앱으로 라우트됩니다. 카드의 활성화 정책을 **ForegroundOverride**로 변경하면 해당 변경 사항은 앱이 포그라운드에 있는 동안에만 일시적으로 유지되며 사용자가 설정한 현재 기본 결제 카드를 변경하지 않습니다. 다음과 같이 포그라운드 앱에서 결제 또는 미결제 카드의 **ActivationPolicy**를 변경할 수 있습니다. [**RequestActivationPolicyChangeAsync**](https://msdn.microsoft.com/library/windows/apps/Dn910955registration_requestactivationpolicychangeasync) 메서드는 포그라운드 앱에서만 호출할 수 있으며 백그라운드 작업에서는 호출할 수 없습니다.
 
 ```csharp
 reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundOverride);
@@ -388,6 +385,6 @@ Windows Phone 8.1에서 레거시 이진 SMS 가로채기 지원이 제거되었
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

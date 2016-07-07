@@ -180,8 +180,7 @@ default.html 파일에 새로운 콘텐츠를 몇 가지 추가해 보겠습니�
 
 **시작 페이지를 수정하려면**
 
-1.  [
-            **body**](https://msdn.microsoft.com/library/windows/apps/Hh453011) 요소의 기존 콘텐츠를 "Hello, world!"라는 첫 번째 수준 제목과 사용자의 이름을 묻는 텍스트, 사용자의 이름을 수용할 [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 요소, [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017) 및 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 바꿉니다. **input**, **button** 및 **div**에 ID를 할당합니다.
+1.  [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011) 요소의 기존 콘텐츠를 "Hello, world!"라는 첫 번째 수준 제목과 사용자의 이름을 묻는 텍스트, 사용자의 이름을 수용할 [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 요소, [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017) 및 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 바꿉니다. **input**, **button** 및 **div**에 ID를 할당합니다.
 
  ```html
     <body class="win-type-body">
@@ -197,8 +196,7 @@ default.html 파일에 새로운 콘텐츠를 몇 가지 추가해 보겠습니�
 
 ![새 콘텐츠가 포함된 HelloWorld 앱](images/helloworld-2-js.png)
 
-   [
-            **input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 요소에 입력할 수는 있지만 지금은 [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)을 클릭해도 아무것도 수행되지 않습니다. 일부 개체(예: **button**)는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습니다. 이러한 이벤트 메시지는 이벤트에 응답하여 어떤 작업을 수행할 수 있는 기회를 제공합니다. 이벤트 처리기 메서드에서 이벤트에 응답할 코드를 넣습니다.
+   [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 요소에 입력할 수는 있지만 지금은 [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)을 클릭해도 아무것도 수행되지 않습니다. 일부 개체(예: **button**)는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습니다. 이러한 이벤트 메시지는 이벤트에 응답하여 어떤 작업을 수행할 수 있는 기회를 제공합니다. 이벤트 처리기 메서드에서 이벤트에 응답할 코드를 넣습니다.
 
    다음 단계에서 [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만들고 이벤트 처리기 코드를 default.js 파일에 추가하게 됩니다.
 
@@ -254,13 +252,11 @@ default.js에 있는 나머지 코드를 살펴보시기 바랍니다. 이러한
 })();
 ```
 
-[
-            **button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
+[**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
 
 ### 터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
 
-UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차이에 대해 염려할 필요가 없습니다. [
-            **click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)과 같이 이미 알고 있는 이벤트를 사용할 수 있으며 그러한 이벤트는 모든 형태의 입력에 대해 작동합니다.
+UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차이에 대해 염려할 필요가 없습니다. [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)과 같이 이미 알고 있는 이벤트를 사용할 수 있으며 그러한 이벤트는 모든 형태의 입력에 대해 작동합니다.
 
 **팁** 또한 앱은 터치, 마우스 및 펜 입력에 대해 작동하고 이벤트를 트리거한 디바이스에 대한 추가 정보를 제공할 수 있는 *MSPointer\** 및 *MSGesture\** 이벤트도 사용할 수 있습니다. 자세한 내용은 [사용자 조작에 응답](https://msdn.microsoft.com/library/windows/apps/Hh700412)과 [제스처, 조작 및 조작 방식](https://msdn.microsoft.com/library/windows/apps/Hh761498)을 참조하세요.
 
@@ -275,9 +271,7 @@ UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차
         }
 ```
 
-2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`
-            [
-            **div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
+2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -310,8 +304,7 @@ default.js에 이벤트 처리기를 추가했습니다. 이제 이벤트 처리
     };
 ```
 
-[
-            **onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 처리기 내에서 코드는 어떤 유형의 활성화가 발생했는지 확인합니다. 활성화 유형에는 여러 가지가 있습니다. 예를 들면, 사용자가 앱과 연결된 파일을 열려고 할 때 그리고 사용자가 앱을 실행할 때 앱이 활성화됩니다. 자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/Mt243287)를 참조하세요.
+[**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 처리기 내에서 코드는 어떤 유형의 활성화가 발생했는지 확인합니다. 활성화 유형에는 여러 가지가 있습니다. 예를 들면, 사용자가 앱과 연결된 파일을 열려고 할 때 그리고 사용자가 앱을 실행할 때 앱이 활성화됩니다. 자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/Mt243287)를 참조하세요.
 
 여기서는 [**launch**](https://msdn.microsoft.com/library/windows/apps/BR224693) 활성화를 살펴보아야 합니다. 앱은 실행되고 있지 않다가 사용자가 활성화할 때마다 *시작*됩니다.
 
@@ -423,8 +416,7 @@ WinJS가 아닌 컨트롤에 대해 이벤트 처리기를 등록하기 좋은 �
 
 HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으므로, `<rating />` 요소 등을 추가하여 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 만들 수 없습니다. WinJS 컨트롤을 추가하려면 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소를 만들고 [**data-win-control**](https://msdn.microsoft.com/library/windows/apps/Hh440969) 특성을 사용하여 원하는 컨트롤 유형을 지정합니다. **Rating** 컨트롤을 추가하려면 특성을 "WinJS.UI.Rating"으로 설정합니다.
 
-[
-            **Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 앱에 추가합니다.
+[**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 앱에 추가합니다.
 
 1.  default.html 파일에서 [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 뒤에 추가합니다.
 
@@ -447,8 +439,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
 
    ![Hello, world 앱 및 JavaScript용 Windows 라이브러리 컨트롤](images/helloworld-4-js.png)
 
-> [
-            **Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)을 로드하려면 페이지에서 [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)을 호출해야 합니다. 앱에서 Visual Studio 템플릿을 사용하므로, 이전에 설명한 대로 default.js에는 이미 **WinJS.UI.processAll**에 대한 호출이 포함되어 있습니다. 따라서 코드를 추가할 필요가 없습니다.
+> [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)을 로드하려면 페이지에서 [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)을 호출해야 합니다. 앱에서 Visual Studio 템플릿을 사용하므로, 이전에 설명한 대로 default.js에는 이미 **WinJS.UI.processAll**에 대한 호출이 포함되어 있습니다. 따라서 코드를 추가할 필요가 없습니다.
 
 지금 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 클릭하면 등급이 변경되지만, 다른 것은 바뀌지 않습니다. 사용자가 등급을 변경할 때 수행될 일을 위해 이벤트 처리기를 사용하겠습니다.
 
@@ -461,16 +452,13 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
             args.setPromise(WinJS.UI.processAll());           
 ```
 
-[
-            **Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)이 표준 HTML 컨트롤이면 [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)에 대한 이 호출 뒤에 이벤트 처리기를 추가할 수 있습니다. 그러나 **Rating**과 같은 WinJS 컨트롤에서는 좀 더 복잡합니다. **WinJS.UI.processAll**은 자동으로 **Rating**을 만들기 때문에, **WinJS.UI.processAll**에서 처리를 완료할 때까지 **Rating**에 이벤트 처리기를 추가할 수 없습니다.
+[**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)이 표준 HTML 컨트롤이면 [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)에 대한 이 호출 뒤에 이벤트 처리기를 추가할 수 있습니다. 그러나 **Rating**과 같은 WinJS 컨트롤에서는 좀 더 복잡합니다. **WinJS.UI.processAll**은 자동으로 **Rating**을 만들기 때문에, **WinJS.UI.processAll**에서 처리를 완료할 때까지 **Rating**에 이벤트 처리기를 추가할 수 없습니다.
 
-[
-            **WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)이 일반 메서드이면 호출 후에 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 이벤트 처리기를 등록할 수 있습니다. 그러나 **WinJS.UI.processAll** 메서드는 비동기식으로 작동하므로 **WinJS.UI.processAll**이 완료되기 전에 이 메서드 뒤에 오는 코드가 실행될 수 있습니다. 이 경우 어떻게 해야 할까요? **WinJS.UI.processAll**이 완료될 때 알림을 받기 위해 [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체를 사용합니다.
+[**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)이 일반 메서드이면 호출 후에 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 이벤트 처리기를 등록할 수 있습니다. 그러나 **WinJS.UI.processAll** 메서드는 비동기식으로 작동하므로 **WinJS.UI.processAll**이 완료되기 전에 이 메서드 뒤에 오는 코드가 실행될 수 있습니다. 이 경우 어떻게 해야 할까요? **WinJS.UI.processAll**이 완료될 때 알림을 받기 위해 [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체를 사용합니다.
 
 모든 비동기 WinJS 메서드처럼 [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)은 [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체를 반환합니다. **Promise**는 미래에 뭔가가 발생할 것이라는 "약속"입니다. 이것이 발생하면 **Promise**가 완료되었다고 할 수 있습니다.
 
-[
-            **Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체에는 "completed" 함수를 매개 변수로 사용하는 [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) 메서드가 있습니다. **Promise**는 완료 시 이 함수를 호출합니다.
+[**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체에는 "completed" 함수를 매개 변수로 사용하는 [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) 메서드가 있습니다. **Promise**는 완료 시 이 함수를 호출합니다.
 
 코드를 "completed" 함수에 추가하고 [**Promise**](https://msdn.microsoft.com/library/windows/apps/BR211867) 개체의 [**then**](https://msdn.microsoft.com/library/windows/apps/BR229728) 메서드에 전달하면, [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)이 완료된 후 코드가 실행되도록 할 수 있습니다.
 
@@ -491,8 +479,7 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
     </body>
 ```
 
-2.  default.js 파일에서 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤의 [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) 이벤트(이름은 `ratingChanged`)에 대한 이벤트 처리기를 만듭니다. [
-            **eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776) 매개 변수에는 새로운 사용자 등급을 제공하는 **detail.tentativeRating** 속성이 포함되어 있습니다. 이 값을 검색하고 출력 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)에 표시합니다.
+2.  default.js 파일에서 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤의 [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) 이벤트(이름은 `ratingChanged`)에 대한 이벤트 처리기를 만듭니다. [**eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776) 매개 변수에는 새로운 사용자 등급을 제공하는 **detail.tentativeRating** 속성이 포함되어 있습니다. 이 값을 검색하고 출력 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)에 표시합니다.
 
 ```javascript
         function ratingChanged(eventInfo) {

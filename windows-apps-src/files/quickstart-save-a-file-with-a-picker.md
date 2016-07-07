@@ -61,8 +61,7 @@ savePicker.SuggestedFileName = "New Document";
 > **참고** [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 개체는 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891)를 사용하여 파일 선택기를 표시합니다.
 
      
-- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [
-            **SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
  
 - 파일이 저장된 후 앱에서 파일을 열 수 있는지 확인하려고 하므로 [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875)를 사용하여 샘플에서 지원하는 파일 형식(Microsoft Word 문서 및 텍스트 파일)을 지정합니다. 지정하는 모든 파일 형식이 앱에서 지원되는지 확인합니다. 사용자는 자신의 파일을 지정한 파일 형식으로 저장할 수 있습니다. 또한 지정된 다른 파일 형식을 선택하여 파일 형식을 변경할 수 있습니다. 목록에서 첫 번째 파일 형식 항목은 기본적으로 선택됩니다. 이를 제어하려면 [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) 속성을 설정합니다.
 
@@ -72,8 +71,7 @@ savePicker.SuggestedFileName = "New Document";
 
 2.  **FileSavePicker 표시 및 선택한 파일에 저장**
 
-    [
-            **PickSaveFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207876)를 호출하여 파일 선택기를 표시합니다. 사용자가 이름, 파일 형식 및 위치를 지정한 후 파일 저장을 확인하면 **PickSaveFileAsync**는 저장된 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 반환합니다. 이제 읽기 및 쓰기 액세스 권한이 있으므로 이 파일을 캡처하고 처리할 수 있습니다.
+    [**PickSaveFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207876)를 호출하여 파일 선택기를 표시합니다. 사용자가 이름, 파일 형식 및 위치를 지정한 후 파일 저장을 확인하면 **PickSaveFileAsync**는 저장된 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 반환합니다. 이제 읽기 및 쓰기 액세스 권한이 있으므로 이 파일을 캡처하고 처리할 수 있습니다.
 
 ```cs
 Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();

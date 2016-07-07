@@ -50,8 +50,7 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
     크기 조정된 이미지는 다음 명명 규칙을 따릅니다. 
     
-    *
-            &lt;이미지 이름&gt;*.scale-100_contrast-black-*&lt;배율 인수&gt;*.*&lt;이미지 파일 확장명&gt;*  
+    *&lt;이미지 이름&gt;*.scale-100_contrast-black-*&lt;배율 인수&gt;*.*&lt;이미지 파일 확장명&gt;*  
     
     예: SmallLogo.scale-100.png
 
@@ -91,15 +90,11 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
     -   Windows 8.1 타일 템플릿을 사용하여 타일을 정의할 수 있습니다. 자세한 내용은 [타일 및 배지 만들기(Windows 8.1)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260)를 참조하세요.
 
 2.  타일 알림 개체를 만들어 만든 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br206173)로 전달합니다. 여러 유형의 알림 개체가 있습니다.
-    -   [
-            **Windows.UI.NotificationsTileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 개체는 타일을 즉시 업데이트합니다.
-    -   [
-            **Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) 개체는 타일을 나중에 업데이트합니다.
+    -   [**Windows.UI.NotificationsTileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 개체는 타일을 즉시 업데이트합니다.
+    -   [**Windows.UI.Notifications.ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) 개체는 타일을 나중에 업데이트합니다.
 
-3.  [
-            **Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623)을 사용하여 [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628) 개체를 만듭니다.
-4.  [
-            **TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632) 메서드를 호출하여 2단계에서 만든 타일 알림 개체로 전달합니다.
+3.  [**Windows.UI.Notifications.TileUpdateManager.CreateTileUpdaterForApplication**](https://msdn.microsoft.com/library/windows/apps/br208623)을 사용하여 [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628) 개체를 만듭니다.
+4.  [**TileUpdater.Update**](https://msdn.microsoft.com/library/windows/apps/br208632) 메서드를 호출하여 2단계에서 만든 타일 알림 개체로 전달합니다.
 
  
 
@@ -111,6 +106,6 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

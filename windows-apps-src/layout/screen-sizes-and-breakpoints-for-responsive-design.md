@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-title: '반응형 디자인에 대한 화면 크기 및 중단점'
+title: "반응형 디자인에 대한 화면 크기 및 중단점"
 description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
+
 ---
 
 #  반응형 디자인에 대한 화면 크기 및 중단점
@@ -94,6 +98,7 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -50,12 +50,12 @@ ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
     > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
     > ```
 
-## (옵션) 조건 추가
+## [!div class="tabbedCodeSnippets"]
 
 
--   필요한 경우 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만듭니다. 그러면 조건이 충족되는 경우에만 백그라운드 작업이 실행됩니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
+-   (옵션) 조건 추가 필요한 경우 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만듭니다.
 
-    이 예제에서는 트리거되면 사용자가 활성 상태일 때만 작업이 실행되도록 조건을 **UserPresent**로 설정합니다. 가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+    그러면 조건이 충족되는 경우에만 백그라운드 작업이 실행됩니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요. 이 예제에서는 트리거되면 사용자가 활성 상태일 때만 작업이 실행되도록 조건을 **UserPresent**로 설정합니다.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -65,11 +65,10 @@ ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
     > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
     > ```
 
-##  RequestAccessAsync() 호출
+##  가능한 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
 
--   [
-            **TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 백그라운드 작업을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494)를 호출합니다.
+-   [!div class="tabbedCodeSnippets"]
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -79,12 +78,12 @@ ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
     > BackgroundExecutionManager::RequestAccessAsync();
     > ```
 
-## 백그라운드 작업 등록
+## RequestAccessAsync() 호출
 
 
--   백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
+-   [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 백그라운드 작업을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494)를 호출합니다. [!div class="tabbedCodeSnippets"]
 
-    다음 코드는 백그라운드 작업을 등록합니다.
+    백그라운드 작업 등록
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -100,39 +99,39 @@ ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
 
-    > **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+    > 백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요. 다음 코드는 백그라운드 작업을 등록합니다.
 
 
-## 설명
+## [!div class="tabbedCodeSnippets"]
 
-> **참고** Windows 10부터 사용자가 백그라운드 작업을 활용하기 위해 더 이상 잠금 화면에 앱을 추가할 필요가 없습니다. 백그라운드 작업 트리거 유형에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+> **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
-
-## 관련 항목
+> 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다. 설명
 
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
-* [백그라운드 작업 등록](register-a-background-task.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
-* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
-* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
+## **참고** Windows 10부터 사용자가 백그라운드 작업을 활용하기 위해 더 이상 잠금 화면에 앱을 추가할 필요가 없습니다.
 
-* [백그라운드 작업 디버그](debug-a-background-task.md)
-* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
+* [백그라운드 작업 트리거 유형에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.](create-and-register-a-background-task.md)
+* [**참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.](declare-background-tasks-in-the-application-manifest.md)
+* [Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.](handle-a-cancelled-background-task.md)
+* [관련 항목](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업 만들기 및 등록](register-a-background-task.md)
+* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](respond-to-system-events-with-background-tasks.md)
+* [취소된 백그라운드 작업 처리](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업 진행 및 완료 모니터링](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업 등록](use-a-maintenance-trigger.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](guidelines-for-background-tasks.md)
+
+* [백그라운드 작업 실행 조건 설정](debug-a-background-task.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

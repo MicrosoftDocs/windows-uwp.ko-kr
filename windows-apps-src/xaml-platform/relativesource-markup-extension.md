@@ -39,8 +39,7 @@ ms.openlocfilehash: 9f0bb49e701806f8635d93fa495cdab6486a4ea3
 
 ## 설명
 
-[
-            **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)은 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
+[**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)은 [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831)를 **Binding** 개체 요소의 속성이나 [{Binding} markup extension](binding-markup-extension.md) 내의 구성 요소로 설정할 수 있습니다. 이 때문에 두 가지 XAML 구문이 표시됩니다.
 
 **RelativeSource**는 [{Binding} 태그 확장](binding-markup-extension.md)과 유사하며,  인스턴스를 반환하여 생성자에 인수를 전달하는 문자열 기반 생성을 지원할 수 있는 태그 확장입니다. 이 경우에 전달될 인수는 [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209915) 값입니다.
 
@@ -70,6 +69,6 @@ ms.openlocfilehash: 9f0bb49e701806f8635d93fa495cdab6486a4ea3
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

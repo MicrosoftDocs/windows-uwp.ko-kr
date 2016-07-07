@@ -5,18 +5,18 @@ title: "텍스트 컨트롤"
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
 
 ---
 # 텍스트 컨트롤
 텍스트 컨트롤은 텍스트 입력란, 암호 상자, 자동 제안 상자 및 텍스트 블록으로 구성됩니다. XAML 프레임워크는 텍스트를 렌더링, 입력 및 편집하는 여러 개의 컨트롤과 텍스트 서식을 지정하는 속성 집합을 제공합니다.
 
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
-- 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-block.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다. 
+- 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다.
 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+**중요 API**
 
 -   [**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
@@ -33,7 +33,7 @@ ms.openlocfilehash: 1fec4bf13567507087eef08feea0a3ebc255b43f
 
 앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock**을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
 
-TextBlock은 일반적으로 RichTextBlock보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 속성의 값을 가져와 앱에서 TextBlock의 텍스트에 쉽게 액세스하고 사용할 수 있습니다. 
+TextBlock은 일반적으로 RichTextBlock보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 속성의 값을 가져와 앱에서 TextBlock의 텍스트에 쉽게 액세스하고 사용할 수 있습니다.
 
 또한 텍스트가 렌더링되는 방식을 사용자 지정할 수 있도록 동일한 서식 옵션을 여러 개 제공합니다. 텍스트에 줄 바꿈을 넣을 수는 있지만, TextBlock은 단일 단락을 표시하도록 디자인되었으며 텍스트 들여쓰기를 지원하지 않습니다.
 
@@ -67,7 +67,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
     -   **값을 근사값 및/또는 동일한 페이지에 있는 다른 수량을 기준으로 입력하나요?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
     -   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 이익이 되나요?** 그렇다면 함께 표시되는 컨트롤과 함께 [슬라이더](slider.md)를 사용하세요.
     -   **결과를 확인한 후 입력한 값을 조정할 수 있나요(예: 볼륨 또는 화면 밝기)?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
-    
+
 ## 예
 
 입력란
@@ -115,15 +115,15 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 >중요  
 >입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
-자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경]()을 참조하세요.
+자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
 ## 컬러 글꼴
 
 **적용 대상:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
-Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 계층을 포함할 수 있습니다. 예를 들어 Segoe UI Emoji 글꼴은 이모티콘 및 기타 이모티콘 문자의 컬러 버전을 정의합니다. 
+Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 계층을 포함할 수 있습니다. 예를 들어 Segoe UI Emoji 글꼴은 이모티콘 및 기타 이모티콘 문자의 컬러 버전을 정의합니다.
 
-표준 및 서식 있는 텍스트 컨트롤은 컬러 글꼴 표시를 지원합니다. 기본적으로 **IsColorFontEnabled** 속성은 **true**이며 이러한 추가 계층이 있는 글꼴은 컬러로 렌더링됩니다. 시스템의 기본 컬러 글꼴은 Segoe UI Emoji이며 컨트롤은 문자 모양을 컬러로 표시하기 위해 이 글꼴로 대체됩니다. 
+표준 및 서식 있는 텍스트 컨트롤은 컬러 글꼴 표시를 지원합니다. 기본적으로 **IsColorFontEnabled** 속성은 **true**이며 이러한 추가 계층이 있는 글꼴은 컬러로 렌더링됩니다. 시스템의 기본 컬러 글꼴은 Segoe UI Emoji이며 컨트롤은 문자 모양을 컬러로 표시하기 위해 이 글꼴로 대체됩니다.
 
 ```xaml
 <TextBlock FontSize="30">Hello ☺⛄☂♨⛅</TextBlock>
@@ -147,14 +147,37 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 앱에서 텍스트 단락 사이에 단락 구분 기호를 삽입할 수 있습니다. 이 구분 기호를 사용하면 각 운영 체제에서 서로 다른 줄로 서식이 지정될 수 있는 일반 텍스트 파일을 만들 수 있습니다. 대상 시스템은 모든 줄 구분 기호를 무시하고 단락 구분 기호에서만 단락을 나눌 수 있습니다.
 
+## 맞춤법 검사에 대한 지침
 
+**적용 대상:** TextBox, RichEditBox
+
+텍스트를 입력 및 편집하는 동안 맞춤법 검사는 빨간색 물결선으로 강조 표시하여 단어의 맞춤법이 틀렸음을 사용자에게 알리고 맞춤법을 수정하는 방법을 제공합니다.
+
+다음은 기본 제공 맞춤법 검사를 보여 주는 예제입니다.
+
+![기본 제공 맞춤법 검사](images/spellchecking.png)
+
+텍스트 입력 컨트롤을 이용한 맞춤법 검사는 다음 두 가지 목적에 사용합니다.
+
+-   **오타 자동 수정**
+
+    맞춤법 검사 엔진은 수정에 대한 확신이 있을 경우 철자가 틀린 단어를 자동으로 수정합니다. 예를 들어, 'teh'를 'the'로 자동 수정합니다.
+
+-   **대신할 철자 표시**
+
+    맞춤법 검사 엔진이 수정에 대한 확신이 없으면 철자가 틀린 단어 밑에 빨간 줄을 추가하며, 이 단어를 누르거나 마우스 오른쪽 단추로 클릭하면 대신할 철자들이 상황에 맞는 메뉴에 표시됩니다.
+
+-   맞춤법 검사는 사용자가 텍스트 입력 컨트롤에 단어 또는 문장을 입력할 때 도움을 주기 위해 사용됩니다. 맞춤법 검사는 터치식, 마우스 및 키보드 입력으로 작동합니다.
+-   단어가 사전에 없거나 사용자가 맞춤법 검사를 중요시하지 않는 경우에는 맞춤법 검사를 사용하지 마세요. 예를 들어 텍스트 상자가 전화 번호 또는 이름을 캡처하는 데 사용되는 경우 켜지 마세요.
+-   현재 맞춤법 검사 엔진에서 앱 언어를 지원하지 않는다는 이유만으로 맞춤법 검사를 사용하지 않도록 설정하지 마세요. 맞춤법 검사에서 언어를 지원하지 않는 경우 아무 작업도 하지 않으므로 옵션을 켜진 상태로 두어도 상관없습니다. IME(입력기)를 사용하여 다른 언어를 앱에 입력하는 경우도 있는데, 그 언어가 지원될 수도 있습니다. 예를 들어 일본어 앱을 빌드할 때 맞춤법 검사 엔진이 현재 해당 언어를 인식하지 못하는 경우에도 맞춤법 검사를 끄지 마세요. 사용자가 영어 IME로 전환하여 앱에 영어를 입력할 수도 있습니다. 맞춤법 검사가 활성화되면 영어 맞춤법 검사가 실행됩니다.
+
+TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 켜져 있습니다. **IsSpellCheckEnabled** 속성을 **false**로 설정하면 기능을 끌 수 있습니다.
 
 ## 관련 문서
 
 **디자이너용**
 - [**글꼴 지침**](fonts.md)
 - [**Segoe MDL2 아이콘 목록 및 지침**](segoe-ui-symbol-font.md)
-- [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
 - [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
 
 **개발자용(XAML)**
@@ -164,6 +187,6 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -204,8 +204,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p><strong>사용해야 하는 경우</strong></p>
     <p>게임에서 게임 패드 입력을 지원해야 하지만 기존 XInput 코드가 없거나 위에 나열된 이점 중 하나가 필요한 경우 Windows.Gaming.Input을 사용해야 합니다.</p>
     <p><strong>자세한 정보</strong></p>
-    <p>[
-                <strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817) 설명서를 참조하세요.</p></td>
+    <p>[<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817) 설명서를 참조하세요.</p></td>
     </tr>
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
@@ -216,7 +215,7 @@ Windows 10에서는 게임 개발에 유용한 광범위한 API 컬렉션을 제
     <p>게임에서 마우스 또는 키보드를 사용하는 방법에 대한 자세한 내용은 [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md)을 참조하세요.</p></td>
     </tr>
     </tbody>
-</table>
+    </table>
 
      
 

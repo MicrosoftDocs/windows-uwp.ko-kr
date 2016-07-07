@@ -1,6 +1,13 @@
 ---
-Description: author: jnHs 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다.
-title: 앱 제출 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: 앱 제출 keywords: 필수 정보 keywords: 필수 필드 keywords: 필수 데이터 keywords: 검사 목록
+author: jnHs
+Description: "이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계에서는 제출을 만듭니다."
+title: "앱 제출"
+ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
+keywords: checklist
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 59f41b74ca264606b4668addf44a07c82e173579
+
 ---
 
 # 앱 제출
@@ -92,6 +99,7 @@ title: 앱 제출 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: 앱
 **참고** LOB(기간 업무) 앱을 엔터프라이즈에 직접 게시하는 방법에 대한 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

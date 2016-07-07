@@ -21,8 +21,7 @@ ms.openlocfilehash: c515d36c76a8363861a72cb58229ff857e1bb2b8
 
 - 파일 선택기
 
-- [
-            **Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API
+- [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API
 
 ## SD 카드에서 액세스할 수 있는 항목 및 액세스할 수 없는 항목
 
@@ -65,8 +64,7 @@ SD 카드에 있는 파일에 액세스하려면 일반적으로 다음 항목�
 
 ### SD 카드에 대한 참조 가져오기
 
-[
-            **KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) 폴더는 현재 장치에 연결되어 있는 이동식 장치에 대한 논리적 루트 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)입니다. SD 카드가 있는 경우 **KnownFolders.RemovableDevices** 폴더 아래에 있는 첫 번째이자 유일한 **StorageFolder**가 SD 카드를 나타냅니다.
+[**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) 폴더는 현재 장치에 연결되어 있는 이동식 장치에 대한 논리적 루트 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)입니다. SD 카드가 있는 경우 **KnownFolders.RemovableDevices** 폴더 아래에 있는 첫 번째이자 유일한 **StorageFolder**가 SD 카드를 나타냅니다.
 
 SD 카드가 있는지 여부를 확인하고 이 카드에 대한 참조를 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)로 가져오려면 다음과 같이 코드를 사용합니다.
 
@@ -99,11 +97,9 @@ SD 카드는 알려진 폴더로 인식되지 않는 파일과 많은 폴더를 
 
 사용자에게 폴더 선택기를 사용하여 특정 폴더를 선택하도록 요청하는 메시지가 앱에서 표시될 수 있습니다.
 
-[
-            **KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158)에서 파생된 경로를 사용하여 SD 카드에 있는 파일 시스템에 액세스하는 경우, 다음 메서드는 다음과 같은 방법으로 동작합니다.
+[**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158)에서 파생된 경로를 사용하여 SD 카드에 있는 파일 시스템에 액세스하는 경우, 다음 메서드는 다음과 같은 방법으로 동작합니다.
 
--   [
-            **GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) 메서드는 사용자가 처리하기 위해 등록한 파일 확장명과 사용자가 지정한 모든 미디어 라이브러리 접근 권한 값과 관련된 파일 확장명의 합집합을 반환합니다.
+-   [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) 메서드는 사용자가 처리하기 위해 등록한 파일 확장명과 사용자가 지정한 모든 미디어 라이브러리 접근 권한 값과 관련된 파일 확장명의 합집합을 반환합니다.
 
 -   액세스하려는 파일의 파일 확장명을 처리하도록 등록하지 않은 경우 [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) 메서드가 실패합니다.
 

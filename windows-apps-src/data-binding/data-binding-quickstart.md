@@ -326,8 +326,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 자세히 보기 추가
 -----------------------------------------------------------------------------------------------------
 
-[
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 항목에서 **Recording** 개체의 모든 세부 정보를 표시할 수 있습니다. 그러나 이러한 정보는 많은 공간을 차지합니다. 따라서 대신 항목을 식별하는 데 충분한 데이터만 표시한 다음, 사용자가 선택한 경우 세부 정보 보기라는 UI의 별도 부분에 선택한 항목의 모든 세부 정보를 표시할 수 있습니다. 이 정렬을 마스터/세부 정보 보기 또는 목록/세부 정보 보기라고도 합니다.
+[**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 항목에서 **Recording** 개체의 모든 세부 정보를 표시할 수 있습니다. 그러나 이러한 정보는 많은 공간을 차지합니다. 따라서 대신 항목을 식별하는 데 충분한 데이터만 표시한 다음, 사용자가 선택한 경우 세부 정보 보기라는 UI의 별도 부분에 선택한 항목의 모든 세부 정보를 표시할 수 있습니다. 이 정렬을 마스터/세부 정보 보기 또는 목록/세부 정보 보기라고도 합니다.
 
 두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. **ListView**와 세부 정보 보기를 모두 **CollectionViewSource**에 바인딩합니다(현재 선택된 항목을 처리함). 두 기술 모두 아래에 나와 있으며, 둘 다 그림과 동일한 결과를 제공합니다.
 
@@ -372,8 +371,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 </Page>
 ```
 
-[
-            **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 기술의 경우 먼저 **CollectionViewSource**를 페이지 리소스로 추가합니다.
+[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 기술의 경우 먼저 **CollectionViewSource**를 페이지 리소스로 추가합니다.
 
 ```xml
     <Page.Resources>
@@ -457,6 +455,6 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -29,8 +29,7 @@ ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
 
 엄격하게 기타 형식에서만 사용하도록 연결된 속성을 정의하는 경우 속성이 등록된 클래스가 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생할 필요는 없습니다. 그러나 연결된 속성이 종속성 속성이기도 한 일반 모델을 따를 경우 백업 속성 저장소를 사용할 수 있도록 접근자의 대상 매개 변수에 **DependencyObject**가 사용되게 해야 합니다.
 
-[
-            **DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public****static****readonly** 속성을 선언하여 연결된 속성을 종속성 속성으로 정의합니다. 이 속성은 [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드의 반환 값을 사용하여 정의합니다. 속성 이름은 **RegisterAttached***name* 매개 변수로 지정하는 연결된 속성 이름과 일치해야 하며 문자열 "Property"가 끝에 추가됩니다. 표시하는 속성과 관련하여 종속성 속성 식별자를 명명하기 위해 설정된 규칙입니다.
+[**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public****static****readonly** 속성을 선언하여 연결된 속성을 종속성 속성으로 정의합니다. 이 속성은 [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드의 반환 값을 사용하여 정의합니다. 속성 이름은 **RegisterAttached***name* 매개 변수로 지정하는 연결된 속성 이름과 일치해야 하며 문자열 "Property"가 끝에 추가됩니다. 표시하는 속성과 관련하여 종속성 속성 식별자를 명명하기 위해 설정된 규칙입니다.
 
 사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 래퍼 기술을 사용하지 않고 연결된 속성에 대해 정적 **Get***PropertyName* 및 **Set***PropertyName* 메서드도 접근자로 제공해야 합니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
 
@@ -58,8 +57,7 @@ Visual Basic의 경우 다음과 같습니다.
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
-**참고** 속성 요소 구문을 통해 사용하려는 연결된 속성을 정의할 수도 있습니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [
-            **VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
+**참고** 속성 요소 구문을 통해 사용하려는 연결된 속성을 정의할 수도 있습니다. 이 경우 값에 형식 변환은 필요하지 않지만 의도한 값을 XAML에서 생성할 수 있는지 확인해야 합니다. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)는 속성 요소 사용만 지원하는 기존 연결된 속성의 예입니다.
 
 ## 코드 예제
 
@@ -216,8 +214,7 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 연결된 속성 사용의 이전 예제에서는 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 연결된 속성을 설정하는 다양한 방법을 보여 주었습니다. 그러나 연결된 속성에 의해 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 개체의 상호 작용 방법은 어떻게 변경되고 언제 변경될까요? 연결된 속성을 구현하면 일반적인 연결된 속성 소유자 클래스가 다른 개체에서 발견할 경우 연결된 속성 값에 대해 다른 어떤 작업을 수행하는지 확인하는 것도 흥미로울 수 있으므로 이 특정 예제를 좀더 살펴보겠습니다.
 
-[
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)의 주요 기능은 UI의 절대 위치 레이아웃 컨테이너입니다. **Canvas**의 자식은 기본 클래스 정의 속성인 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)에 저장됩니다. 모든 패널 중에서 **Canvas**만 절대 위치를 사용합니다. **UIElement**의 자식 요소인 특정 **UIElement** 경우와 **Canvas**에만 관련이 있을 수 있는 속성을 추가한다면 공용 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 형식의 개체 모델이 너무 커질 것입니다. **Canvas**의 레이아웃 제어 속성을 모든 **UIElement**가 사용할 수 있는 연결된 속성으로 정의하면 개체 모델이 깔끔하게 유지됩니다.
+[**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)의 주요 기능은 UI의 절대 위치 레이아웃 컨테이너입니다. **Canvas**의 자식은 기본 클래스 정의 속성인 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514)에 저장됩니다. 모든 패널 중에서 **Canvas**만 절대 위치를 사용합니다. **UIElement**의 자식 요소인 특정 **UIElement** 경우와 **Canvas**에만 관련이 있을 수 있는 속성을 추가한다면 공용 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 형식의 개체 모델이 너무 커질 것입니다. **Canvas**의 레이아웃 제어 속성을 모든 **UIElement**가 사용할 수 있는 연결된 속성으로 정의하면 개체 모델이 깔끔하게 유지됩니다.
 
 실용적인 패널이 되도록 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에는 프레임워크 수준의 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 및 [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) 메서드를 재정의하는 동작이 있습니다. **Canvas**는 실제로 여기서 자식의 연결된 속성 값을 확인합니다. **Measure** 및 **Arrange** 패턴 둘 다에 모든 콘텐츠를 반복하는 루프가 있으며, 패널에는 패널의 자식으로 간주되어야 하는 항목을 명시적으로 지정하는 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성이 있습니다. 따라서 **Canvas** 레이아웃 동작은 이러한 자식을 반복하고 각 자식에서 정적 [**Canvas.GetLeft**](https://msdn.microsoft.com/library/windows/apps/br209269) 및 [**Canvas.GetTop**](https://msdn.microsoft.com/library/windows/apps/br209270) 호출을 수행하여 연결된 속성에 기본값이 아닌 값이 있는지 확인합니다(기본값은 0임). 그런 다음 이 값은 각 자식이 제공하고 **Arrange**를 통해 커밋한 특정 값에 따라 사용 가능한 **Canvas** 레이아웃 공간에서 각 자식을 절대 위치에 배치하는 데 사용됩니다.
 

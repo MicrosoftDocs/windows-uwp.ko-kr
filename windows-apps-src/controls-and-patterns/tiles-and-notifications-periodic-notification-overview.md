@@ -47,12 +47,9 @@ ms.openlocfilehash: 55932595e0d5592003456a28d00ffd70c5e05eba
 
 다음 메서드 중 하나를 호출하여 폴링을 시작합니다.
 
--   [
-            **StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684)(타일)
--   [
-            **StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701611)(배지)
--   [
-            **StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945)(타일)
+-   [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701684)(타일)
+-   [**StartPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701611)(배지)
+-   [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945)(타일)
 
 이러한 메서드 중 하나를 호출하면 URI가 즉시 폴링되고 타일 또는 배지가 수신된 콘텐츠로 업데이트됩니다. 이 초기 폴링 후 Windows는 요청된 간격에 따라 업데이트를 계속 제공합니다. 폴링은 명시적으로 중지([**TileUpdater.StopPeriodicUpdate**](https://msdn.microsoft.com/library/windows/apps/hh701697) 사용)하거나 앱을 제거할 때까지 계속되며 보조 타일의 경우 타일이 제거될 때가지 계속됩니다. 그렇지 않으면 앱이 다시 시작되지 않는 경우에도 Windows에서 타일 또는 배지에 대한 업데이트를 계속 폴링합니다.
 
@@ -96,8 +93,7 @@ URI는 장치가 온라인 상태인 경우에만 폴링됩니다. 네트워크�
 
 ### <span id="Polling_for_more_than_one_notification_at_a_time"></span><span id="polling_for_more_than_one_notification_at_a_time"></span><span id="POLLING_FOR_MORE_THAN_ONE_NOTIFICATION_AT_A_TIME"></span>한 번에 둘 이상의 알림 폴링
 
-Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제공해야 합니다. [
-            **StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945) 메서드를 사용하여 알림 큐에 사용하도록 한 번에 최대 5개의 URI를 제공할 수 있습니다. 각 URI는 거의 동일한 시간에 단일 알림 페이로드에 대해 폴링됩니다. 폴링된 각 URI는 고유한 만료 및 태그 값을 반환할 수 있습니다.
+Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제공해야 합니다. [**StartPeriodicUpdateBatch**](https://msdn.microsoft.com/library/windows/apps/hh967945) 메서드를 사용하여 알림 큐에 사용하도록 한 번에 최대 5개의 URI를 제공할 수 있습니다. 각 URI는 거의 동일한 시간에 단일 알림 페이로드에 대해 폴링됩니다. 폴링된 각 URI는 고유한 만료 및 태그 값을 반환할 수 있습니다.
 
 ## <span id="related_topics"></span>관련 항목
 

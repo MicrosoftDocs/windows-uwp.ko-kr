@@ -21,7 +21,7 @@ Microsoft의 배너 광고 또는 동영상 중간 광고를 표시하려는 경
 
 Microsoft Advertising 라이브러리 및 광고 조정 라이브러리 둘 다 Microsoft 스토어 참여 및 수익 창출 SDK에 포함되어 있습니다. 이 SDK와 이 SDK에 포함된 여러 다양한 Microsoft Advertising 라이브러리를 설치하는 방법에 대한 자세한 내용은 [Microsoft Advertising 라이브러리 설치](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
->**참고** 중간 광고를 표시하려면 **InterstitialAd** 컨트롤을 사용합니다. **AdControl** 및 **AdMediatorControl**은 중간 광고를 표시할 수 없습니다. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
+>**참고** 중간 광고를 표시하려면 **InterstitialAd** 컨트롤을 사용합니다.  **AdControl** 및 **AdMediatorControl**은 중간 광고를 표시할 수 없습니다. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
 
  
 

@@ -31,9 +31,7 @@ Bob과 Alice의 대화를 엿들은 제3자 Eve는 사실상 메시지를 조작
 
 MAC 코드 만들기는 원래 메시지가 변경되지 않았고, 공유 비밀 키가 사용되었고, 해당 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[
-            **MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530)를 사용하여 사용 가능한 MAC 알고리즘을 열거하고 대칭 키를 생성할 수 있습니다. [
-            **CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스에서 정적 메서드를 사용하여 MAC 값을 만드는 필요한 암호화를 수행할 수 있습니다.
+[**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530)를 사용하여 사용 가능한 MAC 알고리즘을 열거하고 대칭 키를 생성할 수 있습니다. [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스에서 정적 메서드를 사용하여 MAC 값을 만드는 필요한 암호화를 수행할 수 있습니다.
 
 디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
 
@@ -136,15 +134,11 @@ namespace SampleMacAlgorithmProvider
 
 Alice는 암호화되지 않은 메시지를 보냈고, 해시만 암호화되었다는 점에 유의하세요. 이 절차는 원래 메시지가 변경되지 않았고, Alice의 공개 키가 사용되었고, Alice의 개인 키에 액세스할 수 있는 누군가(아마도 Alice)가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[
-            **HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 사용하여 사용 가능한 해시 알고리즘을 열거하고 [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 값을 만들 수 있습니다.
+[**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 사용하여 사용 가능한 해시 알고리즘을 열거하고 [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 값을 만들 수 있습니다.
 
 디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
 
-[
-            **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 개체를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. [
-            **Append**](https://msdn.microsoft.com/library/windows/apps/br241499) 메서드는 해시할 새 데이터를 버퍼에 추가합니다. [
-            **GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드는 데이터를 해시하고 개체를 또 사용하기 위해 초기화합니다. 이 메서드는 다음 예제에 나와 있습니다.
+[**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 개체를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. [**Append**](https://msdn.microsoft.com/library/windows/apps/br241499) 메서드는 해시할 새 데이터를 버퍼에 추가합니다. [**GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드는 데이터를 해시하고 개체를 또 사용하기 위해 초기화합니다. 이 메서드는 다음 예제에 나와 있습니다.
 
 ```cs
 public void SampleReusableHash()
@@ -194,9 +188,7 @@ public void SampleReusableHash()
 
 서명은 원래 메시지가 변경되지 않았고, 발신자의 공개 키가 사용되었고, 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
-[
-            **AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [
-            **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
+[**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
 
 
 <!--HONumber=Jun16_HO4-->

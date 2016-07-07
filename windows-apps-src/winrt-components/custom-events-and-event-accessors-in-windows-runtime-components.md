@@ -93,39 +93,39 @@ NumberChanged 이벤트에 대한 다음 코드는 UWP 이벤트의 기본 패�
 > End Event
 > ```
 
-정적(Visual Basic의 Shared) GetOrCreateEventRegistrationTokenTable 메서드는 나중에 EventRegistrationTokenTable&lt;T&gt; 개체의 이벤트 인스턴스를 만듭니다. 토큰 테이블 인스턴스를 포함할 클래스 수준 필드를 이 메서드에 전달합니다. 필드가 비어 있으면 메서드가 테이블을 만들고 테이블에 대한 참조를 필드에 저장하고 테이블에 대한 참조를 반환합니다. 필드에 이미 토큰 테이블 참조가 있는 경우 메서드가 해당 참조를 반환하기만 합니다.
+[!div class="tabbedCodeSnippets"] 정적(Visual Basic의 Shared) GetOrCreateEventRegistrationTokenTable 메서드는 나중에 EventRegistrationTokenTable&lt;T&gt; 개체의 이벤트 인스턴스를 만듭니다. 토큰 테이블 인스턴스를 포함할 클래스 수준 필드를 이 메서드에 전달합니다. 필드가 비어 있으면 메서드가 테이블을 만들고 테이블에 대한 참조를 필드에 저장하고 테이블에 대한 참조를 반환합니다.
 
-> **중요** 스레드 보안을 유지하기 위해 EventRegistrationTokenTable&lt;T&gt; 이벤트 인스턴스를 포함하는 필드는 클래스 수준 필드여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다. 지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
+> 필드에 이미 토큰 테이블 참조가 있는 경우 메서드가 해당 참조를 반환하기만 합니다. **중요** 스레드 보안을 유지하기 위해 EventRegistrationTokenTable&lt;T&gt; 이벤트 인스턴스를 포함하는 필드는 클래스 수준 필드여야 합니다. 클래스 수준 필드인 경우 GetOrCreateEventRegistrationTokenTable 메서드를 사용하면 여러 스레드에서 토큰 테이블을 만들려고 할 때 모든 스레드에서 동일한 테이블 인스턴스를 가져올 수 있습니다.
+
+지정된 이벤트의 경우 GetOrCreateEventRegistrationTokenTable 메서드로의 모든 호출에서 동일한 클래스 수준 필드를 사용해야 합니다.
 
 제거 접근자 및 [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) 메서드(C#의 OnRaiseEvent 메서드)에서 GetOrCreateEventRegistrationTokenTable 메서드를 호출하면 이벤트 처리기 대리자가 추가되기 전에 이러한 메서드가 호출되는 경우 예외가 발생하지 않습니다.
 
-그 밖에 UWP 이벤트 패턴에 사용되는 EventRegistrationTokenTable&lt;T&gt; 클래스의 멤버는 다음과 같습니다.
-
+-   그 밖에 UWP 이벤트 패턴에 사용되는 EventRegistrationTokenTable&lt;T&gt; 클래스의 멤버는 다음과 같습니다.
 -   [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx) 메서드는 이벤트 처리기 대리자에 대한 토큰을 생성하고, 대리자를 테이블에 저장하고, 호출 목록에 추가하고, 토큰을 반환합니다.
--   [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) 메서드 오버로드는 테이블과 호출 목록에서 대리자를 제거합니다.
 
-    >**참고** AddEventHandler 및 RemoveEventHandler(EventRegistrationToken) 메서드는 스레드 보안을 위해 테이블을 잠급니다.
+    >[RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx) 메서드 오버로드는 테이블과 호출 목록에서 대리자를 제거합니다.
 
--   [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) 속성은 현재 이벤트를 처리하도록 등록된 모든 이벤트 처리기를 포함하는 대리자를 반환합니다. 이 대리자를 사용하여 이벤트를 발생시키거나 Delegate 클래스의 메서드를 사용하여 처리기를 개별적으로 호출합니다.
+-   **참고** AddEventHandler 및 RemoveEventHandler(EventRegistrationToken) 메서드는 스레드 보안을 위해 테이블을 잠급니다. [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx) 속성은 현재 이벤트를 처리하도록 등록된 모든 이벤트 처리기를 포함하는 대리자를 반환합니다.
 
-    >**참고** 이 문서 앞부분의 예제에서 제공된 패턴에 따라 호출하기 전에 대리자를 임시 변수로 복사하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다. 대리자는 변경할 수 없으므로 복사는 유효합니다.
+    >이 대리자를 사용하여 이벤트를 발생시키거나 Delegate 클래스의 메서드를 사용하여 처리기를 개별적으로 호출합니다. **참고** 이 문서 앞부분의 예제에서 제공된 패턴에 따라 호출하기 전에 대리자를 임시 변수로 복사하는 것이 좋습니다. 이렇게 하면 하나의 스레드가 마지막 처리기를 제거하여 다른 스레드가 대리자를 호출하려고 하기 전에 대리자가 null이 되는 경합 상태를 방지할 수 있습니다.
 
-직접 작성한 코드를 접근자에 적절히 배치합니다. 스레드 보안이 중요한 경우 코드에 대한 잠금을 직접 제공해야 합니다.
+대리자는 변경할 수 없으므로 복사는 유효합니다. 직접 작성한 코드를 접근자에 적절히 배치합니다.
 
-C# 사용자: UWP 이벤트 패턴에 사용자 지정 이벤트 접근자를 작성하는 경우 컴파일러에서는 일반적인 구문 바로 가기를 제공하지 않습니다. 코드에서 이벤트 이름을 사용하는 경우 오류가 발생합니다.
+스레드 보안이 중요한 경우 코드에 대한 잠금을 직접 제공해야 합니다. C# 사용자: UWP 이벤트 패턴에 사용자 지정 이벤트 접근자를 작성하는 경우 컴파일러에서는 일반적인 구문 바로 가기를 제공하지 않습니다.
 
-Visual Basic 사용자: .NET Framework에서 이벤트는 등록된 모든 이벤트 처리기를 나타내는 멀티캐스트 대리자입니다. 이벤트를 발생시킨다는 것은 대리자를 호출한다는 것을 의미합니다. 스레드 보안에 대한 참고 사항에서 설명한 것처럼 일반적으로 Visual Basic 구문은 대리자와의 상호 작용을 숨기고 컴파일러는 호출 전 대리자를 복사합니다. Windows 런타임 구성 요소에서 사용자 지정 이벤트를 만들 때 대리자를 직접 처리해야 합니다. 이는 예를 들어 처리기를 개별적으로 호출하려는 경우 [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) 메서드를 사용하여 각 이벤트 처리기에 대한 개별 대리자가 포함된 배열을 가져올 수 있다는 의미이기도 합니다.
+코드에서 이벤트 이름을 사용하는 경우 오류가 발생합니다. Visual Basic 사용자: .NET Framework에서 이벤트는 등록된 모든 이벤트 처리기를 나타내는 멀티캐스트 대리자입니다. 이벤트를 발생시킨다는 것은 대리자를 호출한다는 것을 의미합니다. 스레드 보안에 대한 참고 사항에서 설명한 것처럼 일반적으로 Visual Basic 구문은 대리자와의 상호 작용을 숨기고 컴파일러는 호출 전 대리자를 복사합니다. Windows 런타임 구성 요소에서 사용자 지정 이벤트를 만들 때 대리자를 직접 처리해야 합니다.
 
-## 관련 항목
+## 이는 예를 들어 처리기를 개별적으로 호출하려는 경우 [MulticastDelegate.GetInvocationList](https://msdn.microsoft.com/library/system.multicastdelegate.getinvocationlist.aspx) 메서드를 사용하여 각 이벤트 처리기에 대한 개별 대리자가 포함된 배열을 가져올 수 있다는 의미이기도 합니다.
 
-* [이벤트(Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
-* [이벤트(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [Windows 스토어 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
-
+* [관련 항목](https://msdn.microsoft.com/library/ms172877.aspx)
+* [이벤트(Visual Basic)](https://msdn.microsoft.com/library/awbftdfh.aspx)
+* [이벤트(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [Windows 스토어 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [UWP 앱용 .NET](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

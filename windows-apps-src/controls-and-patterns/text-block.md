@@ -65,18 +65,12 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 가능한 경우 언제나 XAML에서는 레이아웃 텍스트에 대한 더 효율적인 코드 경로를 사용합니다. 이 빠른 경로는 텍스트를 측정하고 정렬하는 드는 전체 메모리 사용량을 줄이고 CPU 시간을 크게 단축합니다. 이 빠른 경로는 TextBlock에만 적용되므로 가능한 경우에는 RichTextBlock 대신 이 경로를 사용해야 합니다.
 
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
-- [
-            **Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
-- [
-            **CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
-- [
-            **Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
-- [
-            **TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
-- [
-            **LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
-- [
-            **IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
+- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
+- [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
+- [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
+- [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 
 디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다. 
 

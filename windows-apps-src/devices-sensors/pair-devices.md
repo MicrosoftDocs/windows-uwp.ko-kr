@@ -17,8 +17,7 @@ ms.openlocfilehash: fa736c200185192cfd40a1c09f2da02cae67c05c
 
 -   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
 
-일부 디바이스는 페어링해야 사용할 수 있습니다. [
-            **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 장치를 페어링하도록 지원합니다.
+일부 디바이스는 페어링해야 사용할 수 있습니다. [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스는 세 가지 방법으로 장치를 페어링하도록 지원합니다.
 
 -   자동 페어링
 -   기본 페어링
@@ -65,8 +64,7 @@ ms.openlocfilehash: fa736c200185192cfd40a1c09f2da02cae67c05c
 ## 샘플
 
 
-[
-            **Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
  
 

@@ -47,8 +47,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
 1.  **파일 선택기 만들기 및 사용자 지정**
 
-    [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하여 파일 선택기를 만든 다음 선택기의 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890)으로 설정합니다. 또는 사용자 및 앱과 관련된 다른 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465182)을 참조하세요.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하여 파일 선택기를 만든 다음 선택기의 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 [**PickerLocationId.HomeGroup**](https://msdn.microsoft.com/library/windows/apps/br207890)으로 설정합니다. 또는 사용자 및 앱과 관련된 다른 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465182)을 참조하세요.
 
     다음 예에서는 홈 그룹에서 열리는 파일 선택기를 만들고 모든 형식의 파일을 포함하며 파일을 미리 보기 이미지로 표시합니다.
     ```csharp
@@ -171,8 +170,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
 1.  **MediaElement를 앱에 포함합니다.**
 
-    [
-            **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 사용하면 앱에서 오디오 및 비디오 콘텐츠를 재생할 수 있습니다. 오디오 및 비디오 재생에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](https://msdn.microsoft.com/library/windows/apps/mt187271) 및 [오디오, 비디오 및 카메라](https://msdn.microsoft.com/library/windows/apps/mt203788)를 참조하세요.
+    [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 사용하면 앱에서 오디오 및 비디오 콘텐츠를 재생할 수 있습니다. 오디오 및 비디오 재생에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](https://msdn.microsoft.com/library/windows/apps/mt187271) 및 [오디오, 비디오 및 카메라](https://msdn.microsoft.com/library/windows/apps/mt203788)를 참조하세요.
     ```HTML
     <Grid x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
         <MediaElement x:Name="VideoBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Width="400" Height="300"/>

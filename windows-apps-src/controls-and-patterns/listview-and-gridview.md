@@ -140,8 +140,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## 데이터 템플릿
 
-항목의 데이터 템플릿은 데이터가 시각화되는 방식을 정의합니다. 기본적으로 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 목록 보기에 표시됩니다. [
-            **DisplayMemberPath**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx)를 해당 속성으로 설정하여 데이터 항목의 특정 속성에 대한 문자열 표현을 표시할 수 있습니다.
+항목의 데이터 템플릿은 데이터가 시각화되는 방식을 정의합니다. 기본적으로 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 목록 보기에 표시됩니다. [**DisplayMemberPath**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.displaymemberpath.aspx)를 해당 속성으로 설정하여 데이터 항목의 특정 속성에 대한 문자열 표현을 표시할 수 있습니다.
 
 그러나 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate를 할당합니다.
 
@@ -262,8 +261,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ## 항목 선택 및 조작
 
-다양한 방법 중에서 목록 보기를 조작하는 방법을 선택할 수 있습니다. 기본적으로 사용자는 단일 항목을 선택할 수 있습니다. [
-            **SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) 속성을 변경하여 다중 선택을 사용 가능하게 하거나 선택을 사용 불가능하게 할 수 있습니다. 항목을 선택하는 대신 항목을 클릭하여 작업(예: 단추)을 호출하도록 [**IsItemClickEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) 속성을 설정할 수 있습니다.
+다양한 방법 중에서 목록 보기를 조작하는 방법을 선택할 수 있습니다. 기본적으로 사용자는 단일 항목을 선택할 수 있습니다. [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) 속성을 변경하여 다중 선택을 사용 가능하게 하거나 선택을 사용 불가능하게 할 수 있습니다. 항목을 선택하는 대신 항목을 클릭하여 작업(예: 단추)을 호출하도록 [**IsItemClickEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) 속성을 설정할 수 있습니다.
 
 > **참고** &nbsp;&nbsp;ListView 및 GridView 둘 다 SelectionMode 속성에 대해 [**ListViewSelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewselectionmode.aspx) 열거형을 사용합니다. IsItemClickEnabled는 기본적으로 **False**이므로 클릭 모드를 사용 가능하게 설정하려는 경우에만 설정하면 됩니다.
 
@@ -309,8 +307,7 @@ SelectionMode 속성을 **ListViewSelectionMode.None**으로 설정하여 항목
 없음 | <li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택할 수 있습니다.</li>
 Ctrl | <li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택 취소할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
 
-SelectionMode가 **Single**이면 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx) 속성에서 선택한 데이터 항목을 가져올 수 있습니다. [
-            **SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx) 속성을 사용하여 선택한 항목 컬렉션의 인덱스를 가져올 수 있습니다. 선택한 항목이 없으면 SelectedItem은 **null**이고 SelectedIndex는 -1입니다. 
+SelectionMode가 **Single**이면 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx) 속성에서 선택한 데이터 항목을 가져올 수 있습니다. [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx) 속성을 사용하여 선택한 항목 컬렉션의 인덱스를 가져올 수 있습니다. 선택한 항목이 없으면 SelectedItem은 **null**이고 SelectedIndex는 -1입니다. 
  
 **Items** 컬렉션에 없는 항목을 **SelectedItem**으로 설정하려고 하면 작업은 무시되고 SelectedItem은 **null**이 됩니다. 그러나 **SelectedIndex**를 목록의 **Items** 범위를 벗어나는 인덱스로 설정하려고 하면 **System.ArgumentException** 예외가 발생합니다. 
 
@@ -341,8 +338,7 @@ SelectionMode가 **Multiple** 또는 **Extended**이면 [**SelectedItems**](http
 
 ### 선택 변경에 응답
 
-목록 보기에서 선택 항목 변경에 응답하려면 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) 이벤트를 처리합니다. 이벤트 처리기 코드에서는 [**SelectionChangedEventArgs.AddedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.addeditems.aspx) 속성에서 선택한 항목 목록을 가져올 수 있습니다. [
-            **SelectionChangedEventArgs.RemovedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.removeditems.aspx) 속성에서 선택 취소된 모든 항목을 가져올 수 있습니다. 사용자가 Shift 키를 눌러 항목의 범위를 선택하지 않으면 AddedItems 및 RemovedItems 컬렉션에는 1개의 항목만 포함됩니다.
+목록 보기에서 선택 항목 변경에 응답하려면 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectionchanged.aspx) 이벤트를 처리합니다. 이벤트 처리기 코드에서는 [**SelectionChangedEventArgs.AddedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.addeditems.aspx) 속성에서 선택한 항목 목록을 가져올 수 있습니다. [**SelectionChangedEventArgs.RemovedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.selectionchangedeventargs.removeditems.aspx) 속성에서 선택 취소된 모든 항목을 가져올 수 있습니다. 사용자가 Shift 키를 눌러 항목의 범위를 선택하지 않으면 AddedItems 및 RemovedItems 컬렉션에는 1개의 항목만 포함됩니다.
 
 이 예제에서는 **SelectionChanged** 이벤트를 처리하고 다양한 항목 컬렉션에 액세스하는 방법을 보여 줍니다.
 
@@ -448,8 +444,7 @@ private void ListView1_ItemClick(object sender, ItemClickEventArgs e)
 
 경우에 따라 목록 보기의 항목 선택을 프로그래밍 방식으로 조작해야 할 수도 있습니다. 예를 들어 사용자가 목록의 모든 항목을 선택할 수 있도록 하는 **모두 선택** 단추가 있을 수 있습니다. 이 경우 SelectedItems 컬렉션에서 항목을 하나씩 추가 및 제거하는 것이 일반적으로 매우 비효율적입니다. 각 항목이 변경될 때마다 SelectionChanged 이벤트가 발생되며, 인덱스 값을 사용하지 않고 항목을 직접 사용하면 항목의 가상화가 취소됩니다.
 
-[
-            **SelectAll**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectall.aspx), [**SelectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectrange.aspx) 및 [**DeselectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.deselectrange.aspx) 메서드는 SelectedItems 속성을 사용하는 것보다 선택을 수정하는 보다 효율적인 방법을 제공합니다. 이러한 메서드를 항목 인덱스의 범위를 사용하여 선택하거나 선택을 취소합니다. 인덱스만 사용되기 때문에 가상화된 항목이 가상화 상태를 유지합니다. 지정된 범위의 모든 항목은 원래의 선택 상태에 관계없이 선택(또는 선택 취소)됩니다. SelectionChanged 이벤트는 이러한 메서드를 호출할 때마다 한 번만 발생합니다.
+[**SelectAll**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectall.aspx), [**SelectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectrange.aspx) 및 [**DeselectRange**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.deselectrange.aspx) 메서드는 SelectedItems 속성을 사용하는 것보다 선택을 수정하는 보다 효율적인 방법을 제공합니다. 이러한 메서드를 항목 인덱스의 범위를 사용하여 선택하거나 선택을 취소합니다. 인덱스만 사용되기 때문에 가상화된 항목이 가상화 상태를 유지합니다. 지정된 범위의 모든 항목은 원래의 선택 상태에 관계없이 선택(또는 선택 취소)됩니다. SelectionChanged 이벤트는 이러한 메서드를 호출할 때마다 한 번만 발생합니다.
 
 > **중요** &nbsp;&nbsp;SelectionMode 속성이 Multiple 또는 Extended로 설정된 경우에만 이러한 메서드를 호출해야 합니다. SelectionMode가 Single 또는 None일 때 SelectRange를 호출하면 예외가 발생합니다.
 

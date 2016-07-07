@@ -29,21 +29,16 @@ ms.openlocfilehash: 2132b0c76a78dac5250ea85f08abd0b1edbd6ed7
 
 다음은 경로 및 길 찾기 클래스의 관계입니다.
 
--   [
-            **MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다.
+-   [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다.
 -   이러한 메서드는 [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)를 반환합니다.
--   [
-            **MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)에는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 이 개체에 액세스합니다.
--   [
-            **MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) 속성을 통해 이 컬렉션에 액세스합니다.
+-   [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939)에는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 이 개체에 액세스합니다.
+-   [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) 속성을 통해 이 컬렉션에 액세스합니다.
 -   각 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)에는 [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) 개체 컬렉션이 포함됩니다. **MapRouteLeg**의 [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) 속성을 통해 이 컬렉션에 액세스합니다.
 
 ## 길 찾기 표시
 
 
-[
-            **MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스의 메서드(예제: [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) 또는 [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953))를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. [
-            **MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) 개체에는 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함됩니다.
+[**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스의 메서드(예제: [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) 또는 [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953))를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) 개체에는 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함됩니다.
 
 경로를 요청할 경우 다음을 지정할 수 있습니다.
 
@@ -133,8 +128,7 @@ You have reached your destination.
 ## 경로 표시
 
 
-[
-            **MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)에 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)를 표시하려면 **MapRoute**를 사용하여 [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122)를 생성합니다. 그런 다음 **MapRouteView**를 **MapControl**의 [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) 컬렉션에 추가합니다.
+[**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)에 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)를 표시하려면 **MapRoute**를 사용하여 [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122)를 생성합니다. 그런 다음 **MapRouteView**를 **MapControl**의 [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) 컬렉션에 추가합니다.
 
 **중요** 지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
@@ -200,6 +194,6 @@ private async void ShowRouteOnMap()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

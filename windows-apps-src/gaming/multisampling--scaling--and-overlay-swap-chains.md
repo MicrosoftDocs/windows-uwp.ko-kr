@@ -149,15 +149,11 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
      
 
-2.  [
-            **IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션은 *pDesc* 매개 변수에 제공된 [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서 설정해야 합니다.
+2.  [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559)로 포그라운드 스왑 체인을 만듭니다. 다음 옵션은 *pDesc* 매개 변수에 제공된 [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서 설정해야 합니다.
 
-    -   [
-            **DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) 스왑 체인 플래그를 지정하여 포그라운드 스왑 체인을 나타냅니다.
-    -   [
-            **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**](https://msdn.microsoft.com/library/windows/desktop/hh404496) 알파 모드 플래그를 사용합니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
-    -   [
-            **DXGI\_SCALING\_NONE**](https://msdn.microsoft.com/library/windows/desktop/hh404526) 플래그를 설정합니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
+    -   [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) 스왑 체인 플래그를 지정하여 포그라운드 스왑 체인을 나타냅니다.
+    -   [**DXGI\_ALPHA\_MODE\_PREMULTIPLIED**](https://msdn.microsoft.com/library/windows/desktop/hh404496) 알파 모드 플래그를 사용합니다. 포그라운드 스왑 체인은 항상 프리멀티플라이됩니다.
+    -   [**DXGI\_SCALING\_NONE**](https://msdn.microsoft.com/library/windows/desktop/hh404526) 플래그를 설정합니다. 포그라운드 스왑 체인은 항상 기본 해상도에서 실행됩니다.
 
     ```cpp
      foregroundSwapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FOREGROUND_LAYER;

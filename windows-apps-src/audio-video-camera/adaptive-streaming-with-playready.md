@@ -60,8 +60,7 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## MediaProtectionManager 설정
 
-PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [
-            **AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
+PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
 
 다음 코드는 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040)를 설정합니다.
 

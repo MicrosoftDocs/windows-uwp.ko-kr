@@ -300,8 +300,7 @@ void MoveLookController::OnPointerMoved(
 
 보기 컨트롤러일 경우 약간 더 복잡할 수 있습니다. 새로운 보기 지점을 계산하고 카메라를 중심에 배치해야 합니다. 따라서 마지막 보기 지점과 현재 화면 위치 간의 델타를 계산한 다음 배율 인수를 곱하면 화면 이동 거리를 기준으로 보기 이동을 더 작거나 더 크게 만들 수 있습니다. 해당 값을 사용하여 피치 및 요를 계산합니다.
 
-마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. [
-            **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)가 실행될 때 호출하는 **OnPointerReleased**를 사용하여 **m\_moveInUse** 또는 **m\_lookInUse**를 FALSE로 설정하고 카메라 팬 이동을 해제한 다음 포인터 ID를 0으로 설정합니다.
+마지막으로 플레이어가 마우스 이동이나 화면 터치를 중지하면 이동 또는 보기 컨트롤러 동작을 비활성화해야 합니다. [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)가 실행될 때 호출하는 **OnPointerReleased**를 사용하여 **m\_moveInUse** 또는 **m\_lookInUse**를 FALSE로 설정하고 카메라 팬 이동을 해제한 다음 포인터 ID를 0으로 설정합니다.
 
 **OnPointerReleased**
 

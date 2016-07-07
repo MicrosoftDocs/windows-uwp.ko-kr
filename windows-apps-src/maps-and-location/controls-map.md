@@ -52,8 +52,7 @@ ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
 
 -   지도를 사용하여 정적 정보 보기만 제공하는 경우에는 더 작은 지도를 사용하는 것이 더 나을 수 있습니다. 더 작은 정적 지도를 사용하려면 사용성에 따라 크기를 결정합니다. 화면 공간을 절약할 수 있을 정도로 작지만 충분히 읽을 수 있는 크기를 지정합니다.
 
--   [
-            **map elements**](https://msdn.microsoft.com/library/windows/apps/dn637034)를 사용하여 지도 장면에 관심 지점을 포함합니다. 지도 장면에 오버레이되는 임시 UI로 모든 추가 정보를 표시할 수 있습니다.
+-   [**map elements**](https://msdn.microsoft.com/library/windows/apps/dn637034)를 사용하여 지도 장면에 관심 지점을 포함합니다. 지도 장면에 오버레이되는 임시 UI로 모든 추가 정보를 표시할 수 있습니다.
 
 ## 관련 항목
 
@@ -74,6 +73,6 @@ ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

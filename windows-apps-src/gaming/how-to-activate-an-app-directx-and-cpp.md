@@ -39,8 +39,7 @@ void App::Initialize(CoreApplicationView^ applicationView)
 ## 앱용 CoreWindow 인스턴스 활성화
 
 
-앱이 시작되면 앱에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 획득해야 합니다. **CoreWindow**에는 앱이 창 이벤트를 처리하는 데 사용하는 창 이벤트 메시지 디스패처가 포함되어 있습니다. [
-            **CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 앱 활성화 이벤트에 대한 콜백에서 이 참조를 획득합니다. 이 참조를 획득한 후 [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254)를 호출하여 메인 앱 창을 활성화합니다.
+앱이 시작되면 앱에 대한 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 참조를 획득해야 합니다. **CoreWindow**에는 앱이 창 이벤트를 처리하는 데 사용하는 창 이벤트 메시지 디스패처가 포함되어 있습니다. [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589)를 호출하여 앱 활성화 이벤트에 대한 콜백에서 이 참조를 획득합니다. 이 참조를 획득한 후 [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254)를 호출하여 메인 앱 창을 활성화합니다.
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)

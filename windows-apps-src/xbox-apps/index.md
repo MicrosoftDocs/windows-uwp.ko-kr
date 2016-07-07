@@ -42,6 +42,6 @@ Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱의 빌드를 시작합
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

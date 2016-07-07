@@ -28,15 +28,13 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 ## Exposure
 
-[
-            **ExposureControl**](https://msdn.microsoft.com/library/windows/apps/dn278910)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 셔터 속도를 설정할 수 있습니다.
+[**ExposureControl**](https://msdn.microsoft.com/library/windows/apps/dn278910)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 셔터 속도를 설정할 수 있습니다.
 
 이 예제에서는 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 컨트롤을 사용하여 현재 노출 값과 자동 노출 조정을 전환하는 확인란을 조정합니다.
 
 [!code-xml[ExposureXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetExposureXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297710) 속성을 확인하여 현재 캡처 디바이스가 **ExposureControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 자동 노출 조정이 현재 활성화되었는지 여부를 나타내기 위해 확인란의 선택 상태를 [**Auto**](https://msdn.microsoft.com/library/windows/apps/dn278911) 속성의 값으로 설정합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297710) 속성을 확인하여 현재 캡처 디바이스가 **ExposureControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 자동 노출 조정이 현재 활성화되었는지 여부를 나타내기 위해 확인란의 선택 상태를 [**Auto**](https://msdn.microsoft.com/library/windows/apps/dn278911) 속성의 값으로 설정합니다.
 
 노출 값은 디바이스에서 지원되는 범위 내에 있어야 하며 지원되는 단계 크기의 증분이어야 합니다. 슬라이더 컨트롤의 해당 속성을 설정하는 데 사용되는 [**Min**](https://msdn.microsoft.com/library/windows/apps/dn278919), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn278914) 및 [**Step**](https://msdn.microsoft.com/library/windows/apps/dn278930) 속성을 확인하여 현재 디바이스에 대해 지원되는 값을 가져옵니다.
 
@@ -56,8 +54,7 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 ## 노출 보정
 
-[
-            **ExposureCompensationControl**](https://msdn.microsoft.com/library/windows/apps/dn278897)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 노출 보정을 설정할 수 있습니다.
+[**ExposureCompensationControl**](https://msdn.microsoft.com/library/windows/apps/dn278897)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 노출 보정을 설정할 수 있습니다.
 
 이 예제에서는 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 컨트롤을 사용하여 현재 노출 보정 값을 조정합니다.
 
@@ -77,16 +74,13 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 ## Flash
 
-[
-            **FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725)을 사용하면 플래시를 사용하거나 사용하지 않도록 설정하거나 자동 플래시를 사용하도록 설정하여 시스템이 동적으로 플래시 사용 여부를 결정할 수 있습니다. 또한 이 컨트롤을 사용하면 자동 적목 현상 감소를 지원하는 디바이스에서 이를 사용하도록 설정할 수 있습니다. 이러한 설정은 모두 사진 캡처에 적용됩니다. [
-            **TorchControl**](https://msdn.microsoft.com/library/windows/apps/dn279077)은 비디오 캡처를 위해 토치를 켜거나 끄기 위한 별도의 컨트롤입니다.
+[**FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725)을 사용하면 플래시를 사용하거나 사용하지 않도록 설정하거나 자동 플래시를 사용하도록 설정하여 시스템이 동적으로 플래시 사용 여부를 결정할 수 있습니다. 또한 이 컨트롤을 사용하면 자동 적목 현상 감소를 지원하는 디바이스에서 이를 사용하도록 설정할 수 있습니다. 이러한 설정은 모두 사진 캡처에 적용됩니다. [**TorchControl**](https://msdn.microsoft.com/library/windows/apps/dn279077)은 비디오 캡처를 위해 토치를 켜거나 끄기 위한 별도의 컨트롤입니다.
 
 이 예제에서는 라디오 단추 집합을 사용하여 사용자가 켜기, 끄기 및 자동 플래시 설정 간에 전환할 수 있습니다. 또한 적목 현상 감소와 비디오 토치를 전환할 수 있도록 확인란이 제공됩니다.
 
 [!code-xml[FlashXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFlashXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297837) 속성을 확인하여 현재 캡처 디바이스가 **FlashControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. **FlashControl**이 지원되는 경우 자동 적목 현상 감소가 지원되거나 지원되지 않을 수도 있으므로 [**RedEyeReductionSupported**](https://msdn.microsoft.com/library/windows/apps/dn297766) 속성을 확인한 다음 UI를 사용하도록 설정합니다. **TorchControl**은 플래시 컨트롤과 분리되어 있으므로 해당 [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn279081) 속성을 확인한 다음 사용해야 합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297837) 속성을 확인하여 현재 캡처 디바이스가 **FlashControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. **FlashControl**이 지원되는 경우 자동 적목 현상 감소가 지원되거나 지원되지 않을 수도 있으므로 [**RedEyeReductionSupported**](https://msdn.microsoft.com/library/windows/apps/dn297766) 속성을 확인한 다음 UI를 사용하도록 설정합니다. **TorchControl**은 플래시 컨트롤과 분리되어 있으므로 해당 [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn279081) 속성을 확인한 다음 사용해야 합니다.
 
 각 플래시 라디오 단추에 대한 [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) 이벤트 처리기에서 적절한 해당 플래시 설정을 사용하거나 사용하지 않도록 설정합니다. 플래시를 항상 사용하도록 설정하려면 [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn297733) 속성을 true로 설정하고 [**Auto**](https://msdn.microsoft.com/library/windows/apps/dn297728) 속성을 false로 설정해야 합니다.
 
@@ -110,19 +104,17 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 ### 연속 자동 초점
 
-연속 자동 초점을 사용하도록 설정하면 사진 또는 비디오 대상의 초점이 맞춰지도록 카메라에게 초점을 동적으로 조정하라는 지시를 내립니다. 이 예제에서는 라디오 단추를 사용하여 연속 자동 초점을 켜고 끄는 것을 전환합니다.
+연속 자동 초점을 사용하도록 설정하면 사진 또는 비디오 대상의 초점이 맞춰지도록 카메라에게 초점을 동적으로 조정하라는 지시를 내립니다.  이 예제에서는 라디오 단추를 사용하여 연속 자동 초점을 켜고 끄는 것을 전환합니다.
 
 [!code-xml[CAFXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetCAFXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 그런 다음 [**FocusMode.Continuous**](https://msdn.microsoft.com/library/windows/apps/dn608084) 값이 들어 있는지 보기 위해 [**SupportedFocusModes**](https://msdn.microsoft.com/library/windows/apps/dn608079) 목록을 확인하여 연속 자동 초점이 지원되는지 보고, 지원되는 경우 연속 자동 초점 라디오 단추를 표시합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 그런 다음 [**FocusMode.Continuous**](https://msdn.microsoft.com/library/windows/apps/dn608084) 값이 들어 있는지 보기 위해 [**SupportedFocusModes**](https://msdn.microsoft.com/library/windows/apps/dn608079) 목록을 확인하여 연속 자동 초점이 지원되는지 보고, 지원되는 경우 연속 자동 초점 라디오 단추를 표시합니다.
 
 [!code-cs[CAF](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCAF)]
 
 연속 자동 초점 라디오 단추의 [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796) 이벤트 처리기에서 [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091) 속성을 사용하여 컨트롤의 인스턴스를 가져옵니다. 앱이 이전에 [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075)를 호출하여 다른 초점 모드 중 하나를 사용하도록 설정한 경우 [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081)를 호출하여 컨트롤의 잠금을 해제합니다.
 
-새 [**FocusSettings**](https://msdn.microsoft.com/library/windows/apps/dn608085) 개체를 만들고 [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn608090) 속성을 **Continuous**로 가져옵니다. [
-            **AutoFocusRange**](https://msdn.microsoft.com/library/windows/apps/dn608086) 속성을 앱 시나리오에 적절한 값으로 설정하거나 UI에서 사용자가 선택한 값으로 설정합니다. **FocusSettings** 개체를 [**Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067) 메서드로 전달한 다음 [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794)를 호출하여 연속 자동 초점을 시작합니다.
+새 [**FocusSettings**](https://msdn.microsoft.com/library/windows/apps/dn608085) 개체를 만들고 [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn608090) 속성을 **Continuous**로 가져옵니다. [**AutoFocusRange**](https://msdn.microsoft.com/library/windows/apps/dn608086) 속성을 앱 시나리오에 적절한 값으로 설정하거나 UI에서 사용자가 선택한 값으로 설정합니다. **FocusSettings** 개체를 [**Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067) 메서드로 전달한 다음 [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794)를 호출하여 연속 자동 초점을 시작합니다.
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
@@ -136,9 +128,7 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 [!code-xml[TapFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetTapFocusXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 이 기술을 사용하려면 **RegionsOfInterestControl**이 지원되어야 하며 이 컨트롤에서 하나 이상의 영역을 지원해야 합니다. [
-            **AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066) 및 [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069) 속성을 확인하여 탭하여 초점 맞추기에 대한 라디오 단추를 표시하거나 숨길지 여부를 결정합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 이 기술을 사용하려면 **RegionsOfInterestControl**이 지원되어야 하며 이 컨트롤에서 하나 이상의 영역을 지원해야 합니다. [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066) 및 [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069) 속성을 확인하여 탭하여 초점 맞추기에 대한 라디오 단추를 표시하거나 숨길지 여부를 결정합니다.
 
 [!code-cs[TapFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocus)]
 
@@ -198,8 +188,7 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 [!code-xml[ManualFocusXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetManualFocusXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297837) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297837) 속성을 확인하여 현재 캡처 디바이스가 **FocusControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
 
 초점 값은 디바이스에서 지원되는 범위 내에 있어야 하고 지원되는 단계 크기의 증분이어야 합니다. 슬라이더 컨트롤의 해당 속성을 설정하는 데 사용되는 [**Min**](https://msdn.microsoft.com/library/windows/apps/dn297808), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn297802) 및 [**Step**](https://msdn.microsoft.com/library/windows/apps/dn297833) 속성을 확인하여 현재 디바이스에 대해 지원되는 값을 가져옵니다.
 
@@ -221,27 +210,23 @@ ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
 
 [!code-xml[FocusLightXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetFocusLightXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FlashControl**을 지원하는지 확인합니다. 또한 [**AssistantLightSupported**](https://msdn.microsoft.com/library/windows/apps/dn608066)를 확인하여 도우미 광원이 지원되는지 확인합니다. 이들이 둘 다 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785) 속성을 확인하여 현재 캡처 디바이스가 **FlashControl**을 지원하는지 확인합니다. 또한 [**AssistantLightSupported**](https://msdn.microsoft.com/library/windows/apps/dn608066)를 확인하여 도우미 광원이 지원되는지 확인합니다. 이들이 둘 다 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
 
 [!code-cs[FocusLight](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLight)]
 
-**CheckedChanged** 이벤트 처리기에서 캡처 디바이스 [**FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725) 개체를 가져옵니다. [
-            **AssistantLightEnabled**](https://msdn.microsoft.com/library/windows/apps/dn608065) 속성을 설정하여 포커스 광원을 사용하거나 사용하지 않도록 설정합니다.
+**CheckedChanged** 이벤트 처리기에서 캡처 디바이스 [**FlashControl**](https://msdn.microsoft.com/library/windows/apps/dn297725) 개체를 가져옵니다. [**AssistantLightEnabled**](https://msdn.microsoft.com/library/windows/apps/dn608065) 속성을 설정하여 포커스 광원을 사용하거나 사용하지 않도록 설정합니다.
 
 [!code-cs[FocusLightCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocusLightCheckBox)]
 
 ## ISO 감도
 
-[
-            **IsoSpeedControl**](https://msdn.microsoft.com/library/windows/apps/dn297850)을 사용하여 사진 또는 비디오 캡처 중에 사용되는 ISO 감도를 설정할 수 있습니다.
+[**IsoSpeedControl**](https://msdn.microsoft.com/library/windows/apps/dn297850)을 사용하여 사진 또는 비디오 캡처 중에 사용되는 ISO 감도를 설정할 수 있습니다.
 
 이 예제에서는 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 컨트롤을 사용하여 현재 노출 보정 값 및 자동 ISO 감도 조정을 전환하는 확인란을 조정합니다.
 
 [!code-xml[IsoXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetIsoXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn297869) 속성을 확인하여 현재 캡처 디바이스가 **IsoSpeedControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 자동 ISO 감도 조정이 현재 활성화되었는지 여부를 나타내기 위해 확인란의 선택 상태를 [**Auto**](https://msdn.microsoft.com/library/windows/apps/dn608093) 속성의 값으로 설정합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297869) 속성을 확인하여 현재 캡처 디바이스가 **IsoSpeedControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 자동 ISO 감도 조정이 현재 활성화되었는지 여부를 나타내기 위해 확인란의 선택 상태를 [**Auto**](https://msdn.microsoft.com/library/windows/apps/dn608093) 속성의 값으로 설정합니다.
 
 ISO 감도 값은 디바이스에서 지원되는 범위 내에 있어야 하고 지원되는 단계 크기의 증분이어야 합니다. 슬라이더 컨트롤의 해당 속성을 설정하는 데 사용되는 [**Min**](https://msdn.microsoft.com/library/windows/apps/dn608095), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn608094) 및 [**Step**](https://msdn.microsoft.com/library/windows/apps/dn608129) 속성을 확인하여 현재 디바이스에 대해 지원되는 값을 가져옵니다.
 
@@ -253,8 +238,7 @@ ISO 감도 값은 디바이스에서 지원되는 범위 내에 있어야 하고
 
 [!code-cs[IsoSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoSlider)]
 
-자동 ISO 감도 확인란의 **CheckedChanged** 이벤트 처리기에서 [**SetAutoAsync**](https://msdn.microsoft.com/library/windows/apps/dn608127)를 호출하여 자동 ISO 감도 조정을 켭니다. [
-            **SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn608128)를 호출하고 슬라이더 컨트롤의 현재 값을 전달하여 자동 ISO 감도 조정을 끕니다.
+자동 ISO 감도 확인란의 **CheckedChanged** 이벤트 처리기에서 [**SetAutoAsync**](https://msdn.microsoft.com/library/windows/apps/dn608127)를 호출하여 자동 ISO 감도 조정을 켭니다. [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn608128)를 호출하고 슬라이더 컨트롤의 현재 값을 전달하여 자동 ISO 감도 조정을 끕니다.
 
 [!code-cs[IsoCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetIsoCheckBox)]
 
@@ -262,27 +246,23 @@ ISO 감도 값은 디바이스에서 지원되는 범위 내에 있어야 하고
 
 OIS(광학 이미지 손떨림 보정)는 하드웨어 캡처 디바이스를 기계적으로 조작하여 캡처된 비디오 스트림을 안정화합니다. 이 방식은 디지털 손떨림 보정보다 뛰어난 결과를 제공할 수 있습니다. OIS를 지원하지 않는 디바이스에서는 VideoStabilizationEffect를 사용하여 캡처된 동영상에 대해 디지털 손떨림 보정을 수행할 수 있습니다. 자세한 내용은 [비디오 캡처 효과](effects-for-video-capture.md)를 참조하세요.
 
-[
-            **OpticalImageStabilizationControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926689) 속성을 확인하여 현재 디바이스에서 OIS가 지원되는지 확인합니다.
+[**OpticalImageStabilizationControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926689) 속성을 확인하여 현재 디바이스에서 OIS가 지원되는지 확인합니다.
 
 OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니다. 즉, 디바이스는 OIS가 미디어 캡처를 향상시키는지를 동적으로 확인하고 향상시킬 경우 OIS를 사용하도록 설정합니다. 디바이스에서 특정 모드가 지원되는지 확인하려면 [**OpticalImageStabilizationControl.SupportedModes**](https://msdn.microsoft.com/library/windows/apps/dn926690) 컬렉션이 원하는 모드를 포함하는지 확인합니다.
 
-[
-            **OpticalImageStabilizationControl.Mode**](https://msdn.microsoft.com/library/windows/apps/dn926691)를 원하는 모드로 설정하여 OIS를 사용하거나 사용하지 않도록 설정합니다.
+[**OpticalImageStabilizationControl.Mode**](https://msdn.microsoft.com/library/windows/apps/dn926691)를 원하는 모드로 설정하여 OIS를 사용하거나 사용하지 않도록 설정합니다.
 
 [!code-cs[SetOpticalImageStabilizationMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetOpticalImageStabilizationMode)]
 
 ## 화이트 밸런스
 
-[
-            **WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 화이트 밸런스를 설정할 수 있습니다.
+[**WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 화이트 밸런스를 설정할 수 있습니다.
 
 이 예제에서는 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) 컨트롤을 사용하여 기본 제공 색 온도 미리 설정에서 선택하고 수동 화이트 밸런스 조정을 위해 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 컨트롤을 사용합니다.
 
 [!code-xml[WhiteBalanceXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetWhiteBalanceXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn279120) 속성을 확인하여 현재 캡처 디바이스가 **WhiteBalanceControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 콤보 상자 항목을 [**ColorTemperaturePreset**](https://msdn.microsoft.com/library/windows/apps/dn278894) 열거의 값으로 설정합니다. 선택한 항목을 [**Preset**](https://msdn.microsoft.com/library/windows/apps/dn279110) 속성의 현재 값으로 설정합니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn279120) 속성을 확인하여 현재 캡처 디바이스가 **WhiteBalanceControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다. 콤보 상자 항목을 [**ColorTemperaturePreset**](https://msdn.microsoft.com/library/windows/apps/dn278894) 열거의 값으로 설정합니다. 선택한 항목을 [**Preset**](https://msdn.microsoft.com/library/windows/apps/dn279110) 속성의 현재 값으로 설정합니다.
 
 수동 컨트롤의 경우 화이트 밸런스 값은 디바이스에서 지원되는 범위 내에 있어야 하고 지원되는 단계 크기의 증분이어야 합니다. 슬라이더 컨트롤의 해당 속성을 설정하는 데 사용되는 [**Min**](https://msdn.microsoft.com/library/windows/apps/dn279109), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn279107) 및 [**Step**](https://msdn.microsoft.com/library/windows/apps/dn279119) 속성을 확인하여 현재 디바이스에 대해 지원되는 값을 가져옵니다. 수동 컨트롤을 사용하도록 설정하기 전에 지원되는 최소값과 최대값 사이의 범위가 단계 크기보다 큰지 확인합니다. 그렇지 않은 경우 수동 컨트롤이 현재 디바이스에서 지원되지 않습니다.
 
@@ -304,15 +284,13 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 
 ## 줌
 
-[
-            **ZoomControl**](https://msdn.microsoft.com/library/windows/apps/dn608149)을 통해 사진 또는 비디오 캡처 중에 사용되는 확대/축소 수준을 설정할 수 있습니다.
+[**ZoomControl**](https://msdn.microsoft.com/library/windows/apps/dn608149)을 통해 사진 또는 비디오 캡처 중에 사용되는 확대/축소 수준을 설정할 수 있습니다.
 
 이 예제에서는 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 컨트롤을 사용하여 현재 확대/축소 수준을 조정합니다. 다음 섹션은 화면에서 축소 제스처에 따라 확대/축소를 조정하는 방법을 보여 줍니다.
 
 [!code-xml[ZoomXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetZoomXAML)]
 
-[
-            **Supported**](https://msdn.microsoft.com/library/windows/apps/dn633819) 속성을 확인하여 현재 캡처 디바이스가 **ZoomControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
+[**Supported**](https://msdn.microsoft.com/library/windows/apps/dn633819) 속성을 확인하여 현재 캡처 디바이스가 **ZoomControl**을 지원하는지 확인합니다. 컨트롤이 지원되는 경우 이 기능에 대한 UI를 표시하고 사용하도록 설정할 수 있습니다.
 
 확대/축소 수준 값은 디바이스에서 지원되는 범위 내에 있어야 하고 지원되는 단계 크기의 증분이어야 합니다. 슬라이더 컨트롤의 해당 속성을 설정하는 데 사용되는 [**Min**](https://msdn.microsoft.com/library/windows/apps/dn633817), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 및 [**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성을 확인하여 현재 디바이스에 대해 지원되는 값을 가져옵니다.
 
@@ -334,18 +312,15 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 
 [!code-cs[IsSmoothZoomSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetIsSmoothZoomSupported)]
 
-멀티 터치 사용 디바이스에서 일반적인 시나리오는 두 손가락 모으기 제스처에 따라 확대/축소 배율을 조정하는 것입니다. [
-            **CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) 컨트롤의 [**ManipulationMode**](https://msdn.microsoft.com/library/windows/apps/br208948) 속성을 [**ManipulationModes.Scale**](https://msdn.microsoft.com/library/windows/apps/br227934)로 설정하여 손가락 모으기 제스처를 사용하도록 설정합니다. 그런 다음 손가락 모으기 제스처 크기가 변경될 때 발생하는 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 등록합니다.
+멀티 터치 사용 디바이스에서 일반적인 시나리오는 두 손가락 모으기 제스처에 따라 확대/축소 배율을 조정하는 것입니다. [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) 컨트롤의 [**ManipulationMode**](https://msdn.microsoft.com/library/windows/apps/br208948) 속성을 [**ManipulationModes.Scale**](https://msdn.microsoft.com/library/windows/apps/br227934)로 설정하여 손가락 모으기 제스처를 사용하도록 설정합니다. 그런 다음 손가락 모으기 제스처 크기가 변경될 때 발생하는 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트에 등록합니다.
 
 [!code-cs[RegisterPinchGestureHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterPinchGestureHandler)]
 
-**ManipulationDelta** 이벤트에 대한 처리기에서 사용자의 손가락 모으기 제스처의 변화에 따라 확대/축소 배율을 업데이트합니다. [
-            **ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) 값은 손가락 모으기 크기가 약간 증가하면 1.0보다 약간 더 큰 숫자가 되고 손가락 모으기 크기가 약간 감소하면 1.0보다 약간 더 작은 숫자가 되도록 손가락 모으기 제스처의 크기 변경을 나타냅니다. 이 예제에서는 확대/축소 컨트롤의 현재 값에 배율 델타를 곱합니다.
+**ManipulationDelta** 이벤트에 대한 처리기에서 사용자의 손가락 모으기 제스처의 변화에 따라 확대/축소 배율을 업데이트합니다. [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016) 값은 손가락 모으기 크기가 약간 증가하면 1.0보다 약간 더 큰 숫자가 되고 손가락 모으기 크기가 약간 감소하면 1.0보다 약간 더 작은 숫자가 되도록 손가락 모으기 제스처의 크기 변경을 나타냅니다. 이 예제에서는 확대/축소 컨트롤의 현재 값에 배율 델타를 곱합니다.
 
 확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) 값보다 작거나 같아야 합니다. 마지막으로 확대/축소 배율은 디바이스에서 지원되는 확대/축소 단계 크기([**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818) 속성으로 지정)의 배수여야 합니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
 
-새 [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722) 개체를 만들어 캡처 디바이스의 확대/축소 수준을 설정합니다. [
-            **Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) 속성을 [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726)로 설정한 다음 [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) 속성을 원하는 확대/축소 배율로 설정합니다. 마지막으로 [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719)를 호출하여 디바이스에 대해 새 확대/축소 값을 설정합니다. 디바이스는 새 확대/축소 값으로 원활하게 전환됩니다.
+새 [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722) 개체를 만들어 캡처 디바이스의 확대/축소 수준을 설정합니다. [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723) 속성을 [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726)로 설정한 다음 [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724) 속성을 원하는 확대/축소 배율로 설정합니다. 마지막으로 [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719)를 호출하여 디바이스에 대해 새 확대/축소 값을 설정합니다. 디바이스는 새 확대/축소 값으로 원활하게 전환됩니다.
 
 [!code-cs[ManipulationDelta](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 

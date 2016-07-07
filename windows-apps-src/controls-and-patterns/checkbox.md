@@ -70,8 +70,7 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### IsChecked에 바인딩
 
-[
-            **IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다. 그러나 IsChecked가 [nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) 부울 값이므로 값 변환기를 사용하여 부울 값으로 바인딩해야 합니다.
+[**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다. 그러나 IsChecked가 [nullable](https://msdn.microsoft.com/library/windows/apps/b3h38hb0.aspx) 부울 값이므로 값 변환기를 사용하여 부울 값으로 바인딩해야 합니다.
 
 이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
 
@@ -295,6 +294,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

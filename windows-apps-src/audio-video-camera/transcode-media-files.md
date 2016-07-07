@@ -34,8 +34,7 @@ ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
 
 인코딩 프로필에는 대상 파일의 인코드 방법을 결정하는 설정이 포함되어 있습니다. 파일을 코드 변환하는 경우 여기서 가장 많은 옵션을 사용할 수 있습니다.
 
-[
-            **MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 클래스는 미리 정의된 인코딩 프로필을 만들기 위한 정적 메서드를 제공합니다.
+[**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 클래스는 미리 정의된 인코딩 프로필을 만들기 위한 정적 메서드를 제공합니다.
 
 -   Wav
 -   AAC 오디오(M4A)

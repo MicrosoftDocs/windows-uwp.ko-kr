@@ -137,31 +137,31 @@ Windows 런타임에서 메서드가 오버로드될 수 있습니다. 그러나
 > End Function
 > ```
 
- **주의** JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다. 이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다.
+ [!div class="tabbedCodeSnippets"] **주의** JavaScript를 사용하면 OverloadExample로 값을 전달할 수 있으며 값을 매개 변수에 필요한 형식으로 강제 변환합니다. "forty-two", "42" 또는 42.3을 사용하여 OverloadExample을 호출할 수 있지만 이러한 모든 값은 기본 오버로드에 전달됩니다.
 
-생성자에는 DefaultOverloadAttribute 특성을 적용할 수 없습니다. 클래스의 모든 생성자는 매개 변수 수가 달라야 합니다.
+이전 예제에서 기본 오버로드는 각각 0, 42 및 42를 반환합니다. 생성자에는 DefaultOverloadAttribute 특성을 적용할 수 없습니다.
 
-## IStringable 구현
+## 클래스의 모든 생성자는 매개 변수 수가 달라야 합니다.
 
 
-Windows 8.1부터 Windows 런타임에는 IStringable 인터페이스가 포함되며 이 인터페이스의 단일 메서드인 IStringable.ToString은 Object.ToString에서 제공하는 것과 비슷한 기본 형식 지원을 제공합니다. Windows 런타임 구성 요소로 내보낸 공용 관리 형식에서 IStringable을 구현하도록 선택한 경우 다음 제한이 적용됩니다.
+IStringable 구현 Windows 8.1부터 Windows 런타임에는 IStringable 인터페이스가 포함되며 이 인터페이스의 단일 메서드인 IStringable.ToString은 Object.ToString에서 제공하는 것과 비슷한 기본 형식 지원을 제공합니다.
 
--   C#의 다음 코드와 같이 "클래스 구현" 관계로만 IStringable 인터페이스를 정의할 수 있습니다.
+-   Windows 런타임 구성 요소로 내보낸 공용 관리 형식에서 IStringable을 구현하도록 선택한 경우 다음 제한이 적용됩니다.
 
     ```cs
     public class NewClass : IStringable
     ```
 
-    또는 다음 Visual Basic 코드에서:
+    C#의 다음 코드와 같이 "클래스 구현" 관계로만 IStringable 인터페이스를 정의할 수 있습니다.
 
     ```vb
     Public Class NewClass : Implements IStringable
     ```
 
+-   또는 다음 Visual Basic 코드에서:
 -   인터페이스에서 IStringable을 구현할 수 없습니다.
 -   매개 변수를 IStringable 형식으로 선언할 수 없습니다.
 -   IStringable은 메서드, 속성 또는 필드의 반환 형식이 될 수 없습니다.
--   다음과 같은 메서드 정의를 사용하여 기본 클래스에서 IStringable 구현을 숨길 수 없습니다.
 
     ```cs
     public class NewClass : IStringable
@@ -173,20 +173,20 @@ Windows 8.1부터 Windows 런타임에는 IStringable 인터페이스가 포함�
     }
     ```
 
-    대신 IStringable.ToString 구현은 항상 기본 클래스 구현을 재정의해야 합니다. 강력한 형식의 클래스 인스턴스에서 호출하는 방법으로만 ToString 구현을 숨길 수 있습니다.
+    다음과 같은 메서드 정의를 사용하여 기본 클래스에서 IStringable 구현을 숨길 수 없습니다. 대신 IStringable.ToString 구현은 항상 기본 클래스 구현을 재정의해야 합니다.
 
-다양한 조건에서 네이티브 코드에서 관리 형식으로 호출하여 IStringable을 구현하거나 해당 ToString 구현을 숨기면 예기치 않은 동작이 발생할 수 있습니다.
+강력한 형식의 클래스 인스턴스에서 호출하는 방법으로만 ToString 구현을 숨길 수 있습니다.
 
-## 비동기 작업
+## 다양한 조건에서 네이티브 코드에서 관리 형식으로 호출하여 IStringable을 구현하거나 해당 ToString 구현을 숨기면 예기치 않은 동작이 발생할 수 있습니다.
 
 
-구성 요소에서 비동기 메서드를 구현하려면 메서드 이름 끝에 "Async"를 추가하고 비동기 작업을 나타내는 Windows 런타임 인터페이스인 IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; 또는 IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 중 하나를 반환합니다.
+비동기 작업
 
-.NET Framework 작업([Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) 클래스 및 제네릭 [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx) 클래스)을 사용하여 비동기 메서드를 구현할 수 있습니다. C# 또는 Visual Basic으로 작성된 비동기 메서드에서 반환된 작업 또는 [Task.Run](https://msdn.microsoft.com/library/system.threading.tasks.task.run.aspx) 메서드에서 반환된 작업 등 진행 중인 작업을 반환해야 합니다. 생성자를 사용하여 작업을 만드는 경우 반환하기 전에 해당 [Task.Start](https://msdn.microsoft.com/library/system.threading.tasks.task.start.aspx) 메서드를 호출해야 합니다.
+구성 요소에서 비동기 메서드를 구현하려면 메서드 이름 끝에 "Async"를 추가하고 비동기 작업을 나타내는 Windows 런타임 인터페이스인 IAsyncAction, IAsyncActionWithProgress&lt;TProgress&gt;, IAsyncOperation&lt;TResult&gt; 또는 IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 중 하나를 반환합니다. .NET Framework 작업([Task](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) 클래스 및 제네릭 [Task&lt;TResult&gt;](https://msdn.microsoft.com/library/dd321424.aspx) 클래스)을 사용하여 비동기 메서드를 구현할 수 있습니다. C# 또는 Visual Basic으로 작성된 비동기 메서드에서 반환된 작업 또는 [Task.Run](https://msdn.microsoft.com/library/system.threading.tasks.task.run.aspx) 메서드에서 반환된 작업 등 진행 중인 작업을 반환해야 합니다.
 
-await를 사용하는 메서드(Visual Basic의 Await)에는 **async** 키워드(Visual Basic의 **Async**)가 필요합니다. Windows 런타임 구성 요소에서 이러한 메서드를 표시하는 경우 Run 메서드에 전달하는 대리자에 **async** 키워드를 적용합니다.
+생성자를 사용하여 작업을 만드는 경우 반환하기 전에 해당 [Task.Start](https://msdn.microsoft.com/library/system.threading.tasks.task.start.aspx) 메서드를 호출해야 합니다. await를 사용하는 메서드(Visual Basic의 Await)에는 **async** 키워드(Visual Basic의 **Async**)가 필요합니다.
 
-취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://msdn.microsoft.com/library/system.windowsruntimesystemextensions.asasyncaction.aspx) 또는 [AsAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779745.aspx) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 Task.Run&lt;TResult&gt; 메서드를 사용하여 작업을 시작하는 비동기 메서드를 구현합니다. AsAsyncOperation&lt;TResult&gt; 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환합니다.
+Windows 런타임 구성 요소에서 이러한 메서드를 표시하는 경우 Run 메서드에 전달하는 대리자에 **async** 키워드를 적용합니다. 취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://msdn.microsoft.com/library/system.windowsruntimesystemextensions.asasyncaction.aspx) 또는 [AsAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779745.aspx) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 Task.Run&lt;TResult&gt; 메서드를 사용하여 작업을 시작하는 비동기 메서드를 구현합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -211,7 +211,7 @@ await를 사용하는 메서드(Visual Basic의 Await)에는 **async** 키워드
 > End Function
 > ```
 
-다음 JavaScript 코드에서는 [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) 개체를 사용하여 메서드를 호출하는 방법을 보여 줍니다. 다음 메서드에 전달된 함수는 비동기 호출이 완료될 때 실행됩니다. StringList 매개 변수에는 DownloadAsStringAsync 메서드에서 반환된 문자열 목록이 포함되고 함수는 처리가 필요한 작업을 수행합니다.
+AsAsyncOperation&lt;TResult&gt; 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환합니다. [!div class="tabbedCodeSnippets"] 다음 JavaScript 코드에서는 [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx) 개체를 사용하여 메서드를 호출하는 방법을 보여 줍니다.
 
 ```javascript
 function asyncExample(id) {
@@ -223,9 +223,9 @@ function asyncExample(id) {
 }
 ```
 
-취소 또는 진행 상황 보고를 지원하는 비동기 작업의 경우 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 시작된 작업을 생성하고 작업의 취소 및 진행 상황 보고 기능을 적절한 Windows 런타임 인터페이스의 취소 및 진행 상황 보고 기능과 연결합니다. 취소 및 진행 상황 보고를 모두 지원하는 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들어 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요.
+다음 메서드에 전달된 함수는 비동기 호출이 완료될 때 실행됩니다. StringList 매개 변수에는 DownloadAsStringAsync 메서드에서 반환된 문자열 목록이 포함되고 함수는 처리가 필요한 작업을 수행합니다.
 
-비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
+취소 또는 진행 상황 보고를 지원하는 비동기 작업의 경우 [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) 클래스를 사용하여 시작된 작업을 생성하고 작업의 취소 및 진행 상황 보고 기능을 적절한 Windows 런타임 인터페이스의 취소 및 진행 상황 보고 기능과 연결합니다. 취소 및 진행 상황 보고를 모두 지원하는 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들어 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)을 참조하세요. 비동기 메서드가 취소 또는 진행 상황 보고를 지원하지 않는 경우에도 AsyncInfo 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 C# 무명 메서드를 사용하는 경우 토큰 및 [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx) 인터페이스에 대한 매개 변수를 제공하지 마세요.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -250,49 +250,49 @@ function asyncExample(id) {
 > End Function
 > ```
 
-취소 또는 진행 상황 보고를 선택적으로 지원하는 비동기 메서드를 만드는 경우 취소 토큰 또는 IProgress&lt;T&gt; 인터페이스에 대한 매개 변수가 없는 오버로드를 추가하는 것이 좋습니다.
+C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다.
 
-## 예외 발생
+## AsAsyncOperation&lt;TResult&gt; 메서드를 사용한 이전 예제에서 대신 [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;&gt;](https://msdn.microsoft.com/library/hh779740.aspx)) 메서드 오버로드를 사용하면 다음과 같이 됩니다.
 
 
-Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습니다. Windows 런타임 구성 요소에서 자체 공용 예외 형식을 선언할 수는 없지만 비공용 형식을 선언하고 발생시킬 수 있습니다.
+[!div class="tabbedCodeSnippets"] 취소 또는 진행 상황 보고를 선택적으로 지원하는 비동기 메서드를 만드는 경우 취소 토큰 또는 IProgress&lt;T&gt; 인터페이스에 대한 매개 변수가 없는 오버로드를 추가하는 것이 좋습니다.
 
-구성 요소에서 예외를 처리하지 않으면 구성 요소를 호출한 코드에서 해당 예외가 발생합니다. 호출자에 예외가 나타나는 방식은 호출 언어가 Windows 런타임을 지원하는 방식에 따라 달라집니다.
+예외 발생 Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습니다.
 
--   JavaScript에서 예외는 예외 메시지가 스택 추적으로 대체된 개체로 나타납니다. Visual Studio에서 앱을 디버그할 때 디버거 예외 대화 상자에서 원래 메시지 텍스트가 "WinRT 정보"로 식별되어 표시되는 것을 볼 수 있습니다. JavaScript 코드에서 원래 메시지 텍스트에 액세스할 수는 없습니다.
+-   Windows 런타임 구성 요소에서 자체 공용 예외 형식을 선언할 수는 없지만 비공용 형식을 선언하고 발생시킬 수 있습니다. 구성 요소에서 예외를 처리하지 않으면 구성 요소를 호출한 코드에서 해당 예외가 발생합니다. 호출자에 예외가 나타나는 방식은 호출 언어가 Windows 런타임을 지원하는 방식에 따라 달라집니다.
 
-    > **팁** 현재 스택 추적에는 관리 예외 형식이 포함되지만 추적을 구문 분석하여 예외 형식을 식별하는 것은 권장되지 않습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
+    > JavaScript에서 예외는 예외 메시지가 스택 추적으로 대체된 개체로 나타납니다. Visual Studio에서 앱을 디버그할 때 디버거 예외 대화 상자에서 원래 메시지 텍스트가 "WinRT 정보"로 식별되어 표시되는 것을 볼 수 있습니다.
 
--   C++에서 예외는 플랫폼 예외로 나타납니다. 관리 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있는 경우 해당 예외가 사용됩니다. 그렇지 않은 경우 [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) 예외가 발생됩니다. C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다. 특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx)를 참조하세요.
--   C# 또는 Visual Basic에서 예외는 일반적인 관리 예외입니다.
+-   JavaScript 코드에서 원래 메시지 텍스트에 액세스할 수는 없습니다. **팁** 현재 스택 추적에는 관리 예외 형식이 포함되지만 추적을 구문 분석하여 예외 형식을 식별하는 것은 권장되지 않습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요. C++에서 예외는 플랫폼 예외로 나타납니다. 관리 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있는 경우 해당 예외가 사용됩니다. 그렇지 않은 경우 [Platform::COMException](https://msdn.microsoft.com/library/windows/apps/xaml/hh710414.aspx) 예외가 발생됩니다.
+-   C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다.
 
-구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다. 예외 개체의 숫자 속성을 통해 HRESULT를 JavaScript 호출자에 사용하고 [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx) 속성을 통해 C++ 호출자에 사용할 수 있습니다.
+특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699896.aspx)를 참조하세요.
 
-> **참고** HRESULT에 음수 값을 사용합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
+> C# 또는 Visual Basic에서 예외는 일반적인 관리 예외입니다. 구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다.
 
-## 이벤트 선언 및 발생
+## 예외 개체의 숫자 속성을 통해 HRESULT를 JavaScript 호출자에 사용하고 [COMException::HResult](https://msdn.microsoft.com/library/windows/apps/xaml/hh710415.aspx) 속성을 통해 C++ 호출자에 사용할 수 있습니다.
+
+**참고** HRESULT에 음수 값을 사용합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다. 이벤트 선언 및 발생
 
 이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. [EventHandler&lt;TEventArgs&gt;](https://msdn.microsoft.com/library/db0etb8x.aspx)를 이벤트 형식으로 사용하고 이벤트 인수 형식을 제네릭 형식 인수로 사용합니다. 일반적인 .NET Framework 응용 프로그램에서와 마찬가지로 이벤트를 발생시킵니다.
 
 Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경우 이벤트는 해당 언어에 필요한 Windows 런타임 이벤트 패턴을 따릅니다. C# 또는 Visual Basic의 구성 요소를 사용하면 이벤트가 일반 .NET Framework 이벤트로 나타납니다. 예제는 [연습: C# 또는 Visual Basic에서 간단한 구성 요소를 만들어 JavaScript에서 호출]()을 참조하세요.
 
-사용자 지정 이벤트 접근자를 구현한 경우(Visual Basic에서는 **Custom** 키워드로 이벤트 선언) 해당 구현의 Windows 런타임 이벤트 패턴을 따라야 합니다. [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](custom-events-and-event-accessors-in-windows-runtime-components.md)를 참조하세요. C# 또는 Visual Basic 코드에서 이벤트를 처리하는 경우 일반 .NET Framework 이벤트처럼 나타납니다.
-
-## 다음 단계
+## 사용자 지정 이벤트 접근자를 구현한 경우(Visual Basic에서는 **Custom** 키워드로 이벤트 선언) 해당 구현의 Windows 런타임 이벤트 패턴을 따라야 합니다.
 
 
-직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다. 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다. [관리되는 Windows 런타임 구성 요소 배포](https://msdn.microsoft.com/library/jj614475.aspx)를 참조하세요.
+[Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](custom-events-and-event-accessors-in-windows-runtime-components.md)를 참조하세요. C# 또는 Visual Basic 코드에서 이벤트를 처리하는 경우 일반 .NET Framework 이벤트처럼 나타납니다. 다음 단계
 
-Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원에 대한 자세한 내용은 [Visual Basic 및 C# 언어 참조](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx)를 참조하세요.
+직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다.
 
-## 관련 항목
+## 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다.
 
-* [Windows 스토어 앱용 .NET 개요](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
-* [UWP 앱용 .NET](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
-* [연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
+* [[관리되는 Windows 런타임 구성 요소 배포](https://msdn.microsoft.com/library/jj614475.aspx)를 참조하세요.](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원에 대한 자세한 내용은 [Visual Basic 및 C# 언어 참조](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx)를 참조하세요.](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
+* [관련 항목](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

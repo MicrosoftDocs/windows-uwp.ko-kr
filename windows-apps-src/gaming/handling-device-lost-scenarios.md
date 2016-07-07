@@ -29,8 +29,7 @@ DirectX 9에서는 D3D 장치가 비작동 상태에 들어서는 경우 응용 
 
 ### <span></span>1단계:
 
-디바이스 제거 오류에 대한 검사를 렌더링 루프에 포함합니다. [
-            **IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)(또는 [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 등)를 호출하여 프레임을 표시합니다. 그런 다음 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**가 반환되었는지를 확인합니다.
+디바이스 제거 오류에 대한 검사를 렌더링 루프에 포함합니다. [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)(또는 [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 등)를 호출하여 프레임을 표시합니다. 그런 다음 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**가 반환되었는지를 확인합니다.
 
 먼저 템플릿은 DXGI 스왑 체인이 반환한 HRESULT를 저장합니다.
 

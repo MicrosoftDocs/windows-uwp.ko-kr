@@ -127,6 +127,6 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

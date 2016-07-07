@@ -207,18 +207,12 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 
 이 메서드는 [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) API를 사용하여 .wav 오디오 파일을 PCM(Pulse Code Modulation) 버퍼로 읽습니다.
 
-1.  [
-            **MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110)을 호출하여 미디어 원본 뷰어([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) 개체를 만듭니다.
-2.  [
-            **MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861)을 호출하여 오디오 파일의 디코딩을 위한 미디어 유형([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850))을 만듭니다. 이 메서드는 디코드된 출력이 XAudio2에서 사용할 수 있는 오디오 유형인 PCM 오디오가 되도록 지정합니다.
-3.  [
-            **IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432)을 호출하여 뷰어의 디코드된 출력 미디어 유형을 설정합니다.
-4.  [
-            **WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 만들고 호출 결과를 [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850) 개체의 [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)에 복사합니다. 이렇게 하여 로드된 후 오디오 파일을 보유하는 버퍼의 형식을 지정합니다.
-5.  [
-            **IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662)를 호출하여 오디오 스트림의 기간(초)을 가져온 다음 해당 기간을 바이트로 변환합니다.
-6.  [
-            **IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665)을 호출하여 오디오 파일을 스트림으로 읽습니다.
+1.  [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110)을 호출하여 미디어 원본 뷰어([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)) 개체를 만듭니다.
+2.  [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861)을 호출하여 오디오 파일의 디코딩을 위한 미디어 유형([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850))을 만듭니다. 이 메서드는 디코드된 출력이 XAudio2에서 사용할 수 있는 오디오 유형인 PCM 오디오가 되도록 지정합니다.
+3.  [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432)을 호출하여 뷰어의 디코드된 출력 미디어 유형을 설정합니다.
+4.  [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799) 버퍼를 만들고 호출 결과를 [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850) 개체의 [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)에 복사합니다. 이렇게 하여 로드된 후 오디오 파일을 보유하는 버퍼의 형식을 지정합니다.
+5.  [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662)를 호출하여 오디오 스트림의 기간(초)을 가져온 다음 해당 기간을 바이트로 변환합니다.
+6.  [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665)을 호출하여 오디오 파일을 스트림으로 읽습니다.
 7.  메서드에서 반환한 배열에 오디오 샘플 버퍼의 내용을 복사합니다.
 
 **SoundEffect::Initialize**에서 가장 중요한 점은 마스터링 음성에서 원본 음성 개체인 **m\_sourceVoice**를 만드는 것입니다. **MediaReader::LoadMedia**에서 가져온 사운드 데이터 버퍼의 실제 재생을 위해 원본 음성을 사용합니다.

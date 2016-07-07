@@ -70,10 +70,8 @@ glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int) * CUBE_INDICES, renderer->vert
 
 Direct3D 11에서 버퍼 데이터 요소는 "하위 리소스"로 간주되며 개별 꼭짓점 데이터 요소에서 MIP-map 텍스처까지 포함할 수 있습니다.
 
--   [
-            **D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조를 버퍼 데이터 요소에 대한 구성으로 채웁니다.
--   [
-            **D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 구조를 버퍼 유형뿐만 아니라 버퍼의 개별 요소 크기로 채웁니다.
+-   [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조를 버퍼 데이터 요소에 대한 구성으로 채웁니다.
+-   [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 구조를 버퍼 유형뿐만 아니라 버퍼의 개별 요소 크기로 채웁니다.
 -   이 두 구조로 [**ID3D11Device1::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/hh404575)를 호출합니다.
 
 Direct3D 11: 꼭짓점 버퍼 및 인덱스 버퍼 만들기 및 채우기.

@@ -44,26 +44,26 @@ UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 또는 출력�
 > End Function
 > ```
 
-즉시 입력 배열의 복사본을 만들어 복사본을 조작하는 것이 좋습니다. 이렇게 하면 구성 요소가 .NET Framework 코드에 의해 호출되는지 여부에 관계없이 메서드가 동일하게 동작합니다.
+[!div class="tabbedCodeSnippets"] 즉시 입력 배열의 복사본을 만들어 복사본을 조작하는 것이 좋습니다.
 
-## 관리 코드 및 비관리 코드의 구성 요소 사용
-
-
-ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매개 변수는 호출자가 네이티브 코드로 작성되었는지 아니면 관리 코드로 작성되었는지에 따라 다르게 동작합니다. 호출자가 네이티브 코드(JavaScript 또는 Visual C++ 구성 요소 확장)이면 배열 콘텐츠가 다음과 같이 처리됩니다.
-
--   ReadOnlyArrayAttribute: 호출이 ABI(응용 프로그램 이진 인터페이스) 경계를 넘을 때 배열이 복사됩니다. 요소는 필요한 경우에 변환됩니다. 따라서 메서드로 인해 입력 전용 배열이 실수로 변경되는 경우 이 변경 사항은 호출자에 표시되지 않습니다.
--   WriteOnlyArrayAttribute: 호출된 메서드가 원래 배열의 콘텐츠에 대해 가정할 수 없습니다. 예를 들어 메서드가 받는 배열이 초기화되어 있지 않을 수도 있고 기본값을 포함할 수도 있습니다. 메서드는 배열에 있는 모든 요소의 값을 설정해야 합니다.
-
-호출자가 관리 코드인 경우에는 .NET Framework 내의 모든 메서드 호출의 경우처럼 호출되는 메서드에 원래 배열을 사용할 수 있습니다. 배열 콘텐츠는 .NET Framework 코드에서 변경 가능하므로, 메서드로 인해 발생한 배열 변경 사항은 호출자에 표시됩니다. Windows 런타임 구성 요소에 대해 작성된 단위 테스트에 영향을 주므로, 이 점을 기억해야 합니다. 테스트가 관리 코드로 작성된 경우에는 테스트 도중에 배열의 콘텐츠가 변경 가능한 것으로 나타납니다.
-
-## 관련 항목
-
-* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
-* [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
-* [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+## 이렇게 하면 구성 요소가 .NET Framework 코드에 의해 호출되는지 여부에 관계없이 메서드가 동일하게 동작합니다.
 
 
+관리 코드 및 비관리 코드의 구성 요소 사용 ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매개 변수는 호출자가 네이티브 코드로 작성되었는지 아니면 관리 코드로 작성되었는지에 따라 다르게 동작합니다.
 
-<!--HONumber=Jun16_HO4-->
+-   호출자가 네이티브 코드(JavaScript 또는 Visual C++ 구성 요소 확장)이면 배열 콘텐츠가 다음과 같이 처리됩니다. ReadOnlyArrayAttribute: 호출이 ABI(응용 프로그램 이진 인터페이스) 경계를 넘을 때 배열이 복사됩니다. 요소는 필요한 경우에 변환됩니다.
+-   따라서 메서드로 인해 입력 전용 배열이 실수로 변경되는 경우 이 변경 사항은 호출자에 표시되지 않습니다. WriteOnlyArrayAttribute: 호출된 메서드가 원래 배열의 콘텐츠에 대해 가정할 수 없습니다. 예를 들어 메서드가 받는 배열이 초기화되어 있지 않을 수도 있고 기본값을 포함할 수도 있습니다.
+
+메서드는 배열에 있는 모든 요소의 값을 설정해야 합니다. 호출자가 관리 코드인 경우에는 .NET Framework 내의 모든 메서드 호출의 경우처럼 호출되는 메서드에 원래 배열을 사용할 수 있습니다. 배열 콘텐츠는 .NET Framework 코드에서 변경 가능하므로, 메서드로 인해 발생한 배열 변경 사항은 호출자에 표시됩니다. Windows 런타임 구성 요소에 대해 작성된 단위 테스트에 영향을 주므로, 이 점을 기억해야 합니다.
+
+## 테스트가 관리 코드로 작성된 경우에는 테스트 도중에 배열의 콘텐츠가 변경 가능한 것으로 나타납니다.
+
+* [관련 항목](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
+* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
+* [WriteOnlyArrayAttribute](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+
+
+
+<!--HONumber=Jun16_HO5-->
 
 

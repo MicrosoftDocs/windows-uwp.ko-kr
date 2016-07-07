@@ -89,8 +89,7 @@ ms.openlocfilehash: e9d8d73c35e2e600e89330fbd54aea57a815aebf
 
 XAML 날짜 컨트롤은 Windows에서 지원하는 각 일정 시스템을 지원합니다. 이러한 일정은 [**Windows.Globalization.CalendarIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendaridentifiers.aspx) 클래스에서 지정됩니다. 각 컨트롤에서 앱의 기본 언어에 대한 올바른 일정 시스템이 사용되거나 **CalendarIdentifier** 속성을 설정하여 특정 일정 시스템을 사용할 수 있습니다.
 
-시간 선택 컨트롤은 [**Windows.Globalization.ClockIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx) 클래스에 지정된 각 시계 시스템을 지원합니다. [
-            **ClockIdentifier**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) 속성을 설정하여 12시간제 시계 또는 24시간제 시계를 사용할 수 있습니다. 속성의 형식이 문자열이지만 ClockIdentifiers 클래스의 정적 문자열 속성에 해당하는 값을 사용해야 합니다. 이러한 값은 TwelveHour(문자열 "12HourClock") 및 TwentyFourHour(문자열 "24HourClock")입니다. "12HourClock"이 기본값입니다.
+시간 선택 컨트롤은 [**Windows.Globalization.ClockIdentifiers**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.clockidentifiers.aspx) 클래스에 지정된 각 시계 시스템을 지원합니다. [**ClockIdentifier**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.clockidentifier.aspx) 속성을 설정하여 12시간제 시계 또는 24시간제 시계를 사용할 수 있습니다. 속성의 형식이 문자열이지만 ClockIdentifiers 클래스의 정적 문자열 속성에 해당하는 값을 사용해야 합니다. 이러한 값은 TwelveHour(문자열 "12HourClock") 및 TwentyFourHour(문자열 "24HourClock")입니다. "12HourClock"이 기본값입니다.
 
 
 ### DateTime 및 Calendar 값

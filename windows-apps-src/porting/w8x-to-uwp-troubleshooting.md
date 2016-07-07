@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: 이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요.
-title: Windows 런타임 8.x를 UWP로 포팅하는 문제 해결&#39;
+description: "이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요."
+title: "Windows 런타임 8.x를 UWP로 포팅하는 문제 해결&#39;"
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+
 ---
 
 # Windows 런타임 8.x를 UWP로 포팅하는 문제 해결
@@ -23,7 +27,7 @@ ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 
 ## TargetPlatformVersion
 
-이 섹션에서는 Visual Studio에서 Windows 10 프로젝트를 열었을 때 "Visual Studio 업데이트 필요. 하나 이상의 프로젝트에 설치되지 않았거나 Visual Studio의 향후 업데이트의 일부로 포함되는 플랫폼 SDK <version> 이(가) 필요합니다."라는 메시지가 표시될 경우 해야 할 일을 설명합니다.
+이 섹션에서는 Visual Studio에서 Windows 10 프로젝트를 열었을 때 "Visual Studio 업데이트 필요. 하나 이상의 프로젝트에 설치되지 않았거나 Visual Studio의 향후 업데이트의 일부로 포함되는 플랫폼 SDK <version>이(가) 필요합니다."라는 메시지가 표시될 경우 해야 할 일을 설명합니다.
 
 -   먼저, 설치한 Windows 10용 SDK의 버전 번호를 확인합니다. **C:\\Program Files (x86)\\Windows Kits\\10\\Include\\<versionfoldername>**로 이동하고 *<versionfoldername>*(4중 표기의 "Major.Minor.Build.Revision"임)을 기록해 둡니다.
 -   편집할 프로젝트 파일을 열고 `TargetPlatformVersion` 및 `TargetPlatformMinVersion` 요소를 찾습니다. 해당 요소를 다음과 같이 편집하고 *<versionfoldername>*을 디스크에 있는 4중 표기 버전 번호로 바꿉니다.
@@ -49,6 +53,7 @@ ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

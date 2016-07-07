@@ -35,22 +35,18 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 
 잉크 플랫폼은 다음 세 가지 구성 요소로 이루어져 있습니다.
 
--   [
-            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) - 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다.
+-   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) - 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다.
 
--   [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) - [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.
+-   [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) - [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.
 
--   [
-            **IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 잉크 환경을 완전히 사용자 지정할 수 있습니다.
+-   [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 잉크 환경을 완전히 사용자 지정할 수 있습니다.
 
 ## InkCanvas를 사용하는 기본 잉크 입력
 
 
 기본 잉크 기능을 사용하려면 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 페이지의 아무 위치에나 놓으면 됩니다.
 
-[
-            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 펜의 잉크 입력만 지원합니다. 입력은 색 및 두께의 기본 설정을 사용하는 잉크 스트로크로 렌더링되거나 스트로크 지우개로 처리됩니다(지우기 끝에서 입력이 나오거나 지우기 단추를 사용하여 펜 팁을 수정한 경우).
+[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 펜의 잉크 입력만 지원합니다. 입력은 색 및 두께의 기본 설정을 사용하는 잉크 스트로크로 렌더링되거나 스트로크 지우개로 처리됩니다(지우기 끝에서 입력이 나오거나 지우기 단추를 사용하여 펜 팁을 수정한 경우).
 
 이 예에서 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 배경 이미지를 오버레이합니다.
 
@@ -79,22 +75,19 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 | --- | --- | ---|
 | 배경 이미지를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 비웁니다. | 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)입니다. | 하나의 스트로크가 지워진 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)입니다(지우기 기능이 일부가 아닌 전체 스트로크에 작동하는 방식을 확인합니다). |
 
-[
-            **InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 지원되는 잉크 기능은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)라는 코드 숨김 개체에서 제공합니다.
+[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 지원되는 잉크 기능은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)라는 코드 숨김 개체에서 제공합니다.
 
 기본 수동 입력을 위해 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 사용할 필요는 없습니다. 그러나 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 대해 수동 입력 동작을 사용자 지정하고 구성하려면 해당하는 **InkPresenter** 개체에 액세스해야 합니다.
 
 ## InkPresenter를 사용한 기본 사용자 지정
 
 
-[
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) 개체는 각 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤을 사용하여 인스턴스화됩니다.
+[**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) 개체는 각 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤을 사용하여 인스턴스화됩니다.
 
 해당 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤의 모든 기본 잉크 입력 동작을 제공할 뿐만 아니라, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 추가 스트로크 사용자 지정을 위한 포괄적인 API 집합을 제공합니다. 여기에는 스트로크 속성, 지원되는 입력 디바이스 유형 및 입력이 개체에 의해 처리되는지 또는 앱으로 전달되는지가 포함됩니다.
 
 **참고**  
-[
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 액세스됩니다.
+[**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 액세스됩니다.
 
  
 
@@ -430,8 +423,7 @@ public MainPage()
 
 건조 상태를 사용자 지정하려면 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신, 잉크 입력을 관리한 후 유니버설 Windows 앱의 Direct2D 장치 컨텍스트로 렌더링하기 위해 [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) 개체가 필요합니다.
 
-[
-            **ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012)([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 로드되기 전에)를 호출하면 앱은 [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) 개체를 만들어 잉크 스트로크가 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 또는 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)에 대해 건조 상태로 렌더링되는 방식을 사용자 지정합니다. 예를 들어 잉크 스트로크는 별도의 **InkCanvas** 계층 대신, 래스터화된 후 응용 프로그램 콘텐츠로 통합될 수 있습니다.
+[**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012)([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 로드되기 전에)를 호출하면 앱은 [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) 개체를 만들어 잉크 스트로크가 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 또는 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)에 대해 건조 상태로 렌더링되는 방식을 사용자 지정합니다. 예를 들어 잉크 스트로크는 별도의 **InkCanvas** 계층 대신, 래스터화된 후 응용 프로그램 콘텐츠로 통합될 수 있습니다.
 
 이 기능의 전체 예제를 보려면 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요.
 
@@ -493,6 +485,6 @@ public MainPage()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

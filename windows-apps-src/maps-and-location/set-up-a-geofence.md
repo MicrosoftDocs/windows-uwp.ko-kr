@@ -47,8 +47,7 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-[
-            **RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+[**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
 ### 2단계: 지오펜스 상태 및 위치 사용 권한 변경에 대해 등록
 
@@ -116,16 +115,11 @@ Geofence geofence = new Geofence(fenceId, geocircle);
 
 다른 생성자 중 하나를 사용하여 추가로 지오펜스를 미세 조정할 수 있습니다. 다음 예제에서 지오펜스 생성자는 다음과 같은 추가 매개 변수를 지정합니다.
 
--   [
-            **MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - 정의된 지역으로 들어가거나, 정의된 지역을 떠나거나, 지오펜스를 제거는 경우 알림을 받을 지오펜스 이벤트를 나타냅니다.
--   [
-            **SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) 플래그 - 지오펜스를 모니터링하는 모든 상태가 충족되었을 때 지오펜스를 제거합니다.
--   [
-            **DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - enter/exit 이벤트가 트리거되기까지 사용자가 정의된 영역에 있거나 이 영역에서 벗어나 있어야 하는 시간을 나타냅니다.
--   [
-            **StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - 지오펜스 모니터링을 시작해야 할 시기를 나타냅니다.
--   [
-            **Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - 지오펜스를 모니터링할 기간을 나타냅니다.
+-   [**MonitoredStates**](https://msdn.microsoft.com/library/windows/apps/dn263728) - 정의된 지역으로 들어가거나, 정의된 지역을 떠나거나, 지오펜스를 제거는 경우 알림을 받을 지오펜스 이벤트를 나타냅니다.
+-   [**SingleUse**](https://msdn.microsoft.com/library/windows/apps/dn263732) 플래그 - 지오펜스를 모니터링하는 모든 상태가 충족되었을 때 지오펜스를 제거합니다.
+-   [**DwellTime**](https://msdn.microsoft.com/library/windows/apps/dn263703) - enter/exit 이벤트가 트리거되기까지 사용자가 정의된 영역에 있거나 이 영역에서 벗어나 있어야 하는 시간을 나타냅니다.
+-   [**StartTime**](https://msdn.microsoft.com/library/windows/apps/dn263735) - 지오펜스 모니터링을 시작해야 할 시기를 나타냅니다.
+-   [**Duration**](https://msdn.microsoft.com/library/windows/apps/dn263697) - 지오펜스를 모니터링할 기간을 나타냅니다.
 
 ```csharp
 // Set the fence ID.
@@ -165,8 +159,7 @@ Geofence geofence = new Geofence(fenceId, geocircle, monitoredStates, singleUse,
 
 ### 4단계: 위치 사용 권한의 변경 내용 처리
 
-[
-            **GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **sender.Status** 속성([**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) 유형)을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
+[**GeofenceMonitor**](https://msdn.microsoft.com/library/windows/apps/dn263595) 개체는 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn263646) 이벤트를 트리거하여 사용자의 위치 설정이 변경되었음을 나타냅니다. 해당 이벤트는 인수의 **sender.Status** 속성([**GeofenceMonitorStatus**](https://msdn.microsoft.com/library/windows/apps/dn263599) 유형)을 통해 해당 상태를 전달합니다. 이 메서드는 UI 스레드로부터 호출되지 않고 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) 개체가 UI 변경 사항을 호출합니다.
 
 ```csharp
 using Windows.UI.Core;

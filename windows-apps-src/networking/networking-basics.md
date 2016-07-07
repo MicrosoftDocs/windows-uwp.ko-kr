@@ -50,8 +50,7 @@ ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
 
 특정한 종류의 트리거가 적합한 몇 가지 시나리오가 있습니다. 앱에서 사용할 트리거 종류를 선택할 때 다음 사항을 고려합니다.
 
--   [
-            **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 또는 [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638)를 사용하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용해야 합니다.
+-   [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 또는 [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638)를 사용하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용해야 합니다.
 -   푸시 사용 **StreamSockets**를 사용하는 경우 컨트롤 채널 트리거를 사용할 수 있지만 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 더 좋습니다. 후자는 연결이 적극적으로 사용되지 않는 경우 시스템에서 메모리를 확보하고 전원 요구 사항을 줄일 수 있습니다.
 -   앱에서 네트워크 요청을 적극적으로 처리하지 않는 경우 앱의 메모리 공간을 최소화하려면 가능한 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다.
 -   시스템은 연결된 대기 상태 모드에 있는 동안 앱에서 데이터를 받을 수 있도록 하려면 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다.
@@ -68,10 +67,8 @@ SSL(Secure Sockets Layer) 및 더 최근의 TLS(전송 계층 보안)는 네트�
 
 SSL/TLS를 통해 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 연결의 보안을 유지하는 방법은 다음 두 가지입니다.
 
--   [
-            **ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) - 네트워크 서비스에 대한 초기 연결을 설정하고 모든 통신에 SSL/TLS를 사용하도록 즉시 협상합니다.
--   [
-            **UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - 처음에 암호화 없이 네트워크 서비스에 연결합니다. 앱은 데이터를 보내거나 받을 수 있습니다. 그런 다음 이후의 모든 통신에 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
+-   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) - 네트워크 서비스에 대한 초기 연결을 설정하고 모든 통신에 SSL/TLS를 사용하도록 즉시 협상합니다.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - 처음에 암호화 없이 네트워크 서비스에 연결합니다. 앱은 데이터를 보내거나 받을 수 있습니다. 그런 다음 이후의 모든 통신에 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
 
 제공된 SocketProtectionLevel 값에 따라 허용할 최소 보호 수준이 설정됩니다. 그러나 설정된 연결의 최종 보호 수준은 연결의 두 끝점 간의 협상 프로세스에서 결정됩니다. 결과적으로, 다른 끝점에서 더 높은 수준이 요구되는 경우에는 지정한 것보다 더 안전한 보호 수준을 얻게 될 수 있습니다. 실제로 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 또는 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)를 사용하여 협상된 SSL 수준은 비동기 작업이 완료된 후에 [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) 속성을 가져와서 결정할 수 있습니다.
 
@@ -79,20 +76,16 @@ SSL/TLS를 통해 [**StreamSocket**](https://msdn.microsoft.com/library/windows/
 
 ### ConnectAsync 사용
 
-[
-            **ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)를 사용하면 네트워크 서비스에 대한 초기 연결을 설정한 다음 모든 통신에 SSL/TLS를 사용하도록 즉시 협상할 수 있습니다. *protectionLevel* 매개 변수 전달을 지원하는 두 가지 **ConnectAsync** 메서드는 다음과 같습니다.
+[**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)를 사용하면 네트워크 서비스에 대한 초기 연결을 설정한 다음 모든 통신에 SSL/TLS를 사용하도록 즉시 협상할 수 있습니다. *protectionLevel* 매개 변수 전달을 지원하는 두 가지 **ConnectAsync** 메서드는 다음과 같습니다.
 
--   [
-            **ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511) - [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체에서 비동기 작업을 시작하여 [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) 개체 및 [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)로 지정된 원격 네트워크 대상에 연결합니다.
--   [
-            **ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916) - [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체에서 비동기 작업을 시작하여 원격 호스트 이름, 원격 서비스 이름 및 [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)로 지정한 원격 대상에 연결합니다.
+-   [**ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511) - [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체에서 비동기 작업을 시작하여 [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) 개체 및 [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)로 지정된 원격 네트워크 대상에 연결합니다.
+-   [**ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916) - [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체에서 비동기 작업을 시작하여 원격 호스트 이름, 원격 서비스 이름 및 [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880)로 지정한 원격 대상에 연결합니다.
 
 위 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 메서드 중 하나를 호출할 때 *protectionLevel* 매개 변수가 **Windows.Networking.Sockets.SocketProtectionLevel.Ssl**로 설정되어 있으면 암호화에 SSL/TLS를 사용하도록 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 설정해야 합니다. 이 값에는 암호화가 필요하고 NULL 암호를 사용할 수 없습니다.
 
 이러한 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 메서드 중 하나에 사용할 일반적인 순서는 동일합니다.
 
--   [
-            **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
+-   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
 -   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
 -   위 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) 메서드 중 하나를 호출하여 원격 대상에 연결하는 작업을 시작하고 SSL/TLS를 사용하도록 즉시 협상합니다.
 -   실제로 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)를 사용하여 협상된 SSL 수준은 비동기 작업이 완료된 후에 [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) 속성을 가져와서 결정할 수 있습니다.
@@ -175,18 +168,14 @@ using Windows::Networking::Sockets;
 
 코드에 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)를 사용하면 이 코드는 암호화하지 않고 먼저 네트워크 서비스에 대한 연결을 설정합니다. 앱은 일부 데이터를 보내거나 받은 다음 이후의 모든 통신에 SSL/TLS를 사용하도록 연결을 업그레이드할 수 있습니다.
 
-[
-            **UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드는 두 개의 매개 변수를 사용합니다. *protectionLevel* 매개 변수는 원하는 보호 수준을 나타냅니다. *validationHostName* 매개 변수는 SSL로 업그레이드할 때 유효성 검사에 사용되는 원격 네트워크 대상의 호스트 이름입니다. 일반적으로 *validationHostName*은 앱이 처음에 연결을 설정하는 데 사용한 것과 같은 호스트 이름입니다. **UpgradeToSslAsync**를 호출할 때 *protectionLevel* 매개 변수가 **Windows.System.Socket.SocketProtectionLevel.Ssl**로 설정되어 있으면 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)은 소켓을 통한 이후 통신에 대한 암호화에 SSL/TLS를 사용해야 합니다. 이 값에는 암호화가 필요하고 NULL 암호를 사용할 수 없습니다.
+[**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드는 두 개의 매개 변수를 사용합니다. *protectionLevel* 매개 변수는 원하는 보호 수준을 나타냅니다. *validationHostName* 매개 변수는 SSL로 업그레이드할 때 유효성 검사에 사용되는 원격 네트워크 대상의 호스트 이름입니다. 일반적으로 *validationHostName*은 앱이 처음에 연결을 설정하는 데 사용한 것과 같은 호스트 이름입니다. **UpgradeToSslAsync**를 호출할 때 *protectionLevel* 매개 변수가 **Windows.System.Socket.SocketProtectionLevel.Ssl**로 설정되어 있으면 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)은 소켓을 통한 이후 통신에 대한 암호화에 SSL/TLS를 사용해야 합니다. 이 값에는 암호화가 필요하고 NULL 암호를 사용할 수 없습니다.
 
-[
-            **UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드에 사용하는 일반적인 순서는 다음과 같습니다.
+[**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드에 사용하는 일반적인 순서는 다음과 같습니다.
 
--   [
-            **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
+-   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만듭니다.
 -   소켓에 대한 고급 옵션이 필요하면 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) 속성을 사용하여 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체와 연결된 [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) 인스턴스를 가져옵니다. **StreamSocketControl**에 대한 속성을 설정합니다.
 -   데이터를 암호화하지 않은 상태로 보내고 받아야 할 경우 지금 보냅니다.
--   [
-            **UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드를 호출하여 작업을 시작하고 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) 메서드를 호출하여 작업을 시작하고 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
 -   실제로 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)를 사용하여 협상된 SSL 수준은 비동기 작업이 완료된 후에 [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) 속성을 가져와서 결정할 수 있습니다.
 
 다음 예제에서는 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)을 만들고 네트워크 서비스에 대한 연결을 시도한 후 일부 초기 데이터를 보내고 SSL/TLS를 사용하도록 협상합니다. 협상에 성공하면 클라이언트와 네트워크 서버 간에 **StreamSocket**을 사용하는 모든 네트워크 통신이 암호화됩니다.
@@ -370,8 +359,7 @@ using Windows::Storage::Streams;
 
 네트워크 서비스에 대한 보안 소켓 연결을 만들거나 해당 연결로 업그레이드하는 방법에 대한 예는 [TLS/SSL을 통해 WebSocket 연결의 보안을 유지하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399)을 참조하세요.
 
-서버에서 초기 핸드셰이크를 완료하려면 TLS/SSL 암호화 외에도 **Sec-WebSocket-Protocol** 헤더 값이 필요할 수 있습니다. [
-            **StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514) 및 [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358) 속성으로 표시되는 이 값은 연결의 프로토콜 버전을 나타내며 서버에서 여는 핸드셰이크 및 나중에 교환할 데이터를 올바르게 해석할 수 있도록 합니다. 이 프로토콜 정보를 사용하면 서버가 들어오는 데이터를 안전한 방식으로 해석할 수 없는 모든 지점에서 연결을 닫을 수 있습니다.
+서버에서 초기 핸드셰이크를 완료하려면 TLS/SSL 암호화 외에도 **Sec-WebSocket-Protocol** 헤더 값이 필요할 수 있습니다. [**StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514) 및 [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358) 속성으로 표시되는 이 값은 연결의 프로토콜 버전을 나타내며 서버에서 여는 핸드셰이크 및 나중에 교환할 데이터를 올바르게 해석할 수 있도록 합니다. 이 프로토콜 정보를 사용하면 서버가 들어오는 데이터를 안전한 방식으로 해석할 수 없는 모든 지점에서 연결을 닫을 수 있습니다.
 
 클라이언트의 초기 요청에 이 값이 포함되어 있지 않거나 서버에서 예상하는 값과 일치하지 않는 값을 제공하면 WebSocket 핸드셰이크 오류 시 예상한 값이 서버에서 클라이언트로 전송됩니다.
 
@@ -381,8 +369,7 @@ using Windows::Storage::Streams;
 
 ### StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
 
-[
-            **Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
+[**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
 다음은 이를 구현하는 방법을 보여 주는 코드 조각입니다.
 

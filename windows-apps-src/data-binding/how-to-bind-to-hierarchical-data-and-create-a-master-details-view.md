@@ -17,8 +17,7 @@ ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
 
 체인으로 함께 바인딩된 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다. 이 항목에서는 가능한 경우 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 사용하며, 필요한 경우 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용합니다.
 
-UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사용자가 마스터 목록에서 항목을 선택할 때 다른 세부 정보 페이지로 이동하는 것입니다. 이 구조는 계층 구조의 모든 수준에서 각 항목의 풍부한 시각적 표시를 제공하려는 경우 유용합니다. 또 다른 옵션은 단일 페이지에 다단계로 된 데이터를 표시하는 것입니다. 이 구조는 사용자가 관심 있는 항목으로 빠르게 드릴다운할 수 있는 몇 개의 간단한 목록을 표시하려는 경우 유용합니다. 이 항목에서는 이 조작을 구현하는 방법을 설명합니다. [
-            **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 인스턴스는 각 계층 수준에서의 현재 선택을 추적합니다.
+UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사용자가 마스터 목록에서 항목을 선택할 때 다른 세부 정보 페이지로 이동하는 것입니다. 이 구조는 계층 구조의 모든 수준에서 각 항목의 풍부한 시각적 표시를 제공하려는 경우 유용합니다. 또 다른 옵션은 단일 페이지에 다단계로 된 데이터를 표시하는 것입니다. 이 구조는 사용자가 관심 있는 항목으로 빠르게 드릴다운할 수 있는 몇 개의 간단한 목록을 표시하려는 경우 유용합니다. 이 항목에서는 이 조작을 구현하는 방법을 설명합니다. [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 인스턴스는 각 계층 수준에서의 현재 선택을 추적합니다.
 
 리그, 지구 및 팀에 대한 목록으로 구성되어 있고 팀 세부 정보 보기가 포함된 스포츠 팀 계층 구조 보기를 만듭니다. 목록에서 항목을 선택하면 이후 보기가 자동으로 업데이트됩니다.
 
@@ -217,8 +216,7 @@ namespace MasterDetailsBinding
 </Page>
 ```
 
-[
-            **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 **CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)의 컨트롤은 `Team` 클래스의 속성에 바인딩됩니다.
+[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 **CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)의 컨트롤은 `Team` 클래스의 속성에 바인딩됩니다.
 
  
 

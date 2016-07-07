@@ -65,8 +65,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 ## 음성 인식 환경 관리
 
 
-[
-            **Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성에서 제공하는 설명을 사용하여 사용자가 인식 조건을 향상시킬 수 있도록 지원합니다.
+[**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성에서 제공하는 설명을 사용하여 사용자가 인식 조건을 향상시킬 수 있도록 지원합니다.
 
 여기에서는 낮은 볼륨 수준을 확인하는 [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) 이벤트에 대한 처리기를 만듭니다. 그런 다음 [**SpeechSynthesizer**](https://msdn.microsoft.com/library/windows/apps/dn298152) 개체를 사용하여 사용자가 더 크게 말해 보도록 제안합니다.
 
@@ -120,6 +119,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

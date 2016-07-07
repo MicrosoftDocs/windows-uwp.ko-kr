@@ -26,8 +26,7 @@ Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방
 ## Direct3D 디바이스 초기화
 
 
-Direct3D 9에서 [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313)를 호출하여 Direct3D 디바이스에 대한 핸들을 만들었습니다. [
-            **IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300)로 포인터를 가져오는 것으로 시작했으며 Direct3D 디바이스 및 스왑 체인의 구성을 제어하기 위한 여러 가지 매개 변수를 지정했습니다. 이렇게 하여 [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877)를 호출하여 디바이스가 수행할 수 없는 작업을 디바이스에 요청하지 않았는지 확인했습니다.
+Direct3D 9에서 [**IDirect3D9::CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174313)를 호출하여 Direct3D 디바이스에 대한 핸들을 만들었습니다. [**IDirect3D9 interface**](https://msdn.microsoft.com/library/windows/desktop/bb174300)로 포인터를 가져오는 것으로 시작했으며 Direct3D 디바이스 및 스왑 체인의 구성을 제어하기 위한 여러 가지 매개 변수를 지정했습니다. 이렇게 하여 [**GetDeviceCaps**](https://msdn.microsoft.com/library/windows/desktop/dd144877)를 호출하여 디바이스가 수행할 수 없는 작업을 디바이스에 요청하지 않았는지 확인했습니다.
 
 Direct3D 9
 

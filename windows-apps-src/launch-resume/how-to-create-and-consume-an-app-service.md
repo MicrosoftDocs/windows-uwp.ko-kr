@@ -21,7 +21,8 @@ ms.openlocfilehash: ade51661fa6628c76b555316f645ec6622dd299a
 
 이 방법에서는 편의상 모두를 한 솔루션으로 만듭니다.
 
--   Microsoft Visual Studio 2015에서 UWP 앱 프로젝트를 만들고 AppServiceProvider로 이름을 지정합니다. **새 프로젝트** 대화 상자에서 **템플릿 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)**을 선택합니다. 이 앱에서 앱 서비스를 제공합니다.
+-   Microsoft Visual Studio 2015에서 UWP 앱 프로젝트를 만들고 AppServiceProvider로 이름을 지정합니다. 
+            **새 프로젝트** 대화 상자에서 **템플릿 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)**을 선택합니다. 이 앱에서 앱 서비스를 제공합니다.
 
 ## package.appxmanifest에 앱 서비스 확장 추가
 
@@ -44,9 +45,11 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 </Applications>
 ```
 
-**Category** 특성을 통해 이 응용 프로그램을 앱 서비스 공급자로 식별합니다.
 
-**EntryPoint** 특성을 통해 서비스를 구현하는 클래스를 식별합니다. 이 예에서 다음으로 이 클래스를 구현할 것입니다.
+            **Category** 특성을 통해 이 응용 프로그램을 앱 서비스 공급자로 식별합니다.
+
+
+            **EntryPoint** 특성을 통해 서비스를 구현하는 클래스를 식별합니다. 이 예에서 다음으로 이 클래스를 구현할 것입니다.
 
 ## 앱 서비스 만들기
 
@@ -60,7 +63,8 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
     using Windows.Foundation.Collections;
     ```
 
-4.  **Class1**의 스텁 코드를 **Inventory**: 라는 새 백그라운드 작업 클래스로 바꿉니다.
+4.  
+            **Class1**의 스텁 코드를 **Inventory**: 라는 새 백그라운드 작업 클래스로 바꿉니다.
 
     ```cs
     public sealed class Inventory : IBackgroundTask
@@ -105,7 +109,8 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 ## 앱 서비스의 코드 작성
 
 
-**OnRequestedReceived()**로 앱 서비스의 코드가 이동됩니다. MyAppService의 Class1.cs에 있는 스텁 **OnRequestedReceived()**를 이 예의 코드로 바꿉니다. 이 코드에서는 인벤토리 항목의 인덱스를 가져온 다음 지정된 인벤토리 항목의 이름과 가격을 검색하기 위해 명령 문자열과 함께 서비스에 전달합니다. 편의를 위해 오류 처리 코드는 제거되었습니다.
+
+            **OnRequestedReceived()**로 앱 서비스의 코드가 이동됩니다. MyAppService의 Class1.cs에 있는 스텁 **OnRequestedReceived()**를 이 예의 코드로 바꿉니다. 이 코드에서는 인벤토리 항목의 인덱스를 가져온 다음 지정된 인벤토리 항목의 이름과 가격을 검색하기 위해 명령 문자열과 함께 서비스에 전달합니다. 편의를 위해 오류 처리 코드는 제거되었습니다.
 
 ```cs
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -159,17 +164,22 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 이 예제에서는 [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대해 awaitable 메서드를 호출하므로 **OnRequestedReceived()**가 **async**입니다.
 
-서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. [
+서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. 
+            [
               **SendResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
+            ](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. 
+            **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
 
-앱 서비스에서는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 사용하여 정보를 교환합니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 "Command"라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 "ID" 키에 저장됩니다. 반환 값은 "Result" 키에 저장됩니다.
+앱 서비스에서는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 사용하여 정보를 교환합니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. 
+            **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 "Command"라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 "ID" 키에 저장됩니다. 반환 값은 "Result" 키에 저장됩니다.
 
-앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [**AppServiceClosedStatus**](https://msdn.microsoft.com/library/windows/apps/dn921703) enum이 호출자에게 반환됩니다. OS에서 서비스 끝점을 중단하거나 리소스가 초과되거나 하는 등이 앱 서비스에 대한 호출이 실패하는 예입니다. [
+앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [**AppServiceClosedStatus**](https://msdn.microsoft.com/library/windows/apps/dn921703) enum이 호출자에게 반환됩니다. OS에서 서비스 끝점을 중단하거나 리소스가 초과되거나 하는 등이 앱 서비스에 대한 호출이 실패하는 예입니다. 
+            [
               **ValueSet**
             ](https://msdn.microsoft.com/library/windows/apps/dn636131)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 "Status"라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
 
-[
+
+            [
               **SendResponseAsync**
             ](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대한 호출을 통해 호출자에게 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 반환합니다.
 
@@ -192,7 +202,8 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 3.  MainPage.xaml에 텍스트 상자와 단추를 추가합니다.
 4.  단추의 단추 클릭 처리기를 추가하고 **async** 키워드를 단추 처리기의 서명에 추가합니다.
-5.  단추 클릭 처리기의 스텁을 다음 코드로 바꿉니다. `inventoryService` 필드 선언을 포함해야 합니다.
+5.  단추 클릭 처리기의 스텁을 다음 코드로 바꿉니다. 
+            `inventoryService` 필드 선언을 포함해야 합니다.
 
    ```cs
    private AppServiceConnection inventoryService;
@@ -252,13 +263,14 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
     }
     ```
 
-    줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기\]에서 가져온 AppServiceProvider 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
+     줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기\]에서 가져온 AppServiceProvider 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
 
     코드는 먼저 앱 서비스와 연결합니다. 연결은 **this.inventoryService**를 삭제할 때까지 열린 상태로 유지됩니다. 앱 서비스 이름은 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에 추가한 **AppService 이름** 특성과 일치해야 합니다. 이 예제에서는 `<uap:AppService Name="com.microsoft.inventory"/>`입니다.
 
     앱 서비스에 보낼 명령을 지정할 수 있도록 **message**라는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)이 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. ClientApp의 텍스트 상자에서 인덱스를 가져온 다음 항목 설명을 가져오도록 “Item” 명령을 사용하여 서비스를 호출합니다. 그런 다음 항목 가격을 가져오도록 “Price” 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
 
-    [
+    
+            [
               **AppServiceResponseStatus**
             ](https://msdn.microsoft.com/library/windows/apps/dn921724)는 운영 체제에서 앱 서비스에 호출을 연결할 수 있었는지 여부만 나타내므로 앱 서비스에서 수신한 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)의 "Status" 키를 확인하여 요청을 수행할 수 있었는지 확인합니다.
 
@@ -268,16 +280,20 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 앱 서비스 호출에 실패하면 ClientApp에서 다음을 확인합니다.
 
-1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. **button\_Click()**
+1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. 
+            **button\_Click()**
             `this.inventoryService.PackageFamilyName = "...";`을 참조하세요.
-2.  **button\_Click()**에서 인벤토리 서비스 연결에 할당된 앱 서비스 이름이 AppServiceProvider의 Package.appxmanifest 파일에 있는 앱 서비스 이름과 일치하는지 확인합니다. `this.inventoryService.AppServiceName = "com.microsoft.inventory";`를 참조하세요.
+2.  
+            **button\_Click()**에서 인벤토리 서비스 연결에 할당된 앱 서비스 이름이 AppServiceProvider의 Package.appxmanifest 파일에 있는 앱 서비스 이름과 일치하는지 확인합니다. 
+            `this.inventoryService.AppServiceName = "com.microsoft.inventory";`를 참조하세요.
 3.  AppServiceProvider 앱이 배포되었는지 확인합니다(솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **배포** 선택).
 
 ## 앱 서비스 디버그
 
 
 1.  앱 서비스 공급자 앱을 배포해야 서비스를 호출할 수 있으므로 디버깅 전에 전체 솔루션이 배포되도록 합니다. (Visual Studio에서 **빌드 &gt; 솔루션 배포**).
-2.  솔루션 탐색기에서 AppServiceProvider 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **디버그** 탭에서 **시작 작업**을 **실행하지 않지만 시작되면 내 코드 디버그**로 변경합니다.
+2.  솔루션 탐색기에서 AppServiceProvider 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
+            **디버그** 탭에서 **시작 작업**을 **실행하지 않지만 시작되면 내 코드 디버그**로 변경합니다.
 3.  MyAppService 프로젝트의 Class1.cs 파일에서 OnRequestReceived()에 중단점을 설정합니다.
 4.  AppServiceProvider 프로젝트를 시작 프로젝트가 되도록 설정하고 F5를 누릅니다.
 5.  시작 메뉴에서(Visual Studio에서가 아님) ClientApp을 시작합니다.
@@ -398,6 +414,6 @@ namespace MyAppService
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

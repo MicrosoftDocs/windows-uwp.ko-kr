@@ -34,6 +34,6 @@ C++/DirectX 앱을 작성할 경우에는 수행할 작업이 없습니다. 마�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

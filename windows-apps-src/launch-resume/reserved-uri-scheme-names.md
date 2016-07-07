@@ -127,6 +127,6 @@ URI 연결을 사용하여 다른 앱이 특정 URI 스키마를 시작할 때 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

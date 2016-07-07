@@ -47,8 +47,7 @@ UWP(유니버설 Windows 플랫폼) 앱을 처음 개발하는 경우 다음 항
 
 음성 인식기는 해당 기본 인식 언어로 시스템 음성 언어를 사용합니다. 이 언어는 사용자가 디바이스의 설정 &gt; 시스템 &gt; 음성 &gt; 음성 언어 화면에서 설정합니다.
 
-[
-            **SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
+[**SystemSpeechLanguage**](https://msdn.microsoft.com/library/windows/apps/dn653252) 정적 속성을 확인하여 기본 언어를 식별합니다.
 
 ```CSharp
 var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
@@ -66,14 +65,11 @@ var language = SpeechRecognizer.SystemSpeechLanguage; </code></pre></td>
 
  
 
-[
-            **SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 디바이스에서 지원되는 언어를 확인합니다.
+[**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 클래스의 다음 두 정적 속성 중 하나를 확인하여 디바이스에서 지원되는 언어를 확인합니다.
 
--   [
-            **SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251) - 미리 정의된 받아쓰기 및 웹 검색 문법에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedTopicLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653251) - 미리 정의된 받아쓰기 및 웹 검색 문법에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
 
--   [
-            **SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - 목록 제약 조건 또는 SRGS(Speech Recognition Grammar Specification) 파일에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
+-   [**SupportedGrammarLanguages**](https://msdn.microsoft.com/library/windows/apps/dn653250) - 목록 제약 조건 또는 SRGS(Speech Recognition Grammar Specification) 파일에서 사용되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체의 컬렉션
 
 ## 언어 지정
 
@@ -126,6 +122,6 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

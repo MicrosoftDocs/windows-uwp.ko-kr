@@ -35,11 +35,9 @@ ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
     -   **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
     -   **부울**
     -   **Char16**, **String**
-    -   [
-            **DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
+    -   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996)
     -   **GUID**, [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)
-    -   [
-            **ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): 원자 단위로 직렬화 및 역직렬화해야 하는 관련 앱 설정 집합입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
+    -   [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588): 원자 단위로 직렬화 및 역직렬화해야 하는 관련 앱 설정 집합입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 -   **파일**
 
     파일을 사용하여 이진 데이터를 저장하거나 고유한 사용자 지정된 직렬화된 형식을 사용하도록 설정합니다.
@@ -58,8 +56,7 @@ ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
 
 ### <span id="Retrieve_the_local_app_data_store"></span><span id="retrieve_the_local_app_data_store"></span><span id="RETRIEVE_THE_LOCAL_APP_DATA_STORE"></span>로컬 앱 데이터 저장소 검색
 
-로컬 앱 데이터를 읽거나 쓰려면 먼저 로컬 앱 데이터 저장소를 검색해야 합니다. 로컬 앱 데이터 저장소를 검색하려면 [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 속성을 사용하여 앱의 로컬 설정을 [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) 개체로 가져옵니다. [
-            **StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체의 파일을 가져오려면 [**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) 속성을 사용합니다. 백업 및 복원에 포함되지 않는 파일을 저장할 수 있는 로컬 앱 데이터 저장소의 폴더를 가져오려면 [**ApplicationData.LocalCacheFolder**](https://msdn.microsoft.com/library/windows/apps/dn633825) 속성을 사용합니다.
+로컬 앱 데이터를 읽거나 쓰려면 먼저 로컬 앱 데이터 저장소를 검색해야 합니다. 로컬 앱 데이터 저장소를 검색하려면 [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 속성을 사용하여 앱의 로컬 설정을 [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) 개체로 가져옵니다. [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체의 파일을 가져오려면 [**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) 속성을 사용합니다. 백업 및 복원에 포함되지 않는 파일을 저장할 수 있는 로컬 앱 데이터 저장소의 폴더를 가져오려면 [**ApplicationData.LocalCacheFolder**](https://msdn.microsoft.com/library/windows/apps/dn633825) 속성을 사용합니다.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 
@@ -120,8 +117,7 @@ else
 
 ### <span id="Create_and_read_a_local_file"></span><span id="create_and_read_a_local_file"></span><span id="CREATE_AND_READ_A_LOCAL_FILE"></span>로컬 파일 만들기 및 읽기
 
-로컬 앱 데이터 저장소에 파일을 만들고 업데이트하려면 파일 API(예: [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505))를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `localFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [
-            **CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
+로컬 앱 데이터 저장소에 파일을 만들고 업데이트하려면 파일 API(예: [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505))를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `localFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
 ```CSharp
 async void WriteTimestamp()
@@ -158,8 +154,7 @@ async void ReadTimestamp()
 
 앱에서 로밍 데이터를 사용하는 경우 사용자는 손쉽게 앱의 앱 데이터를 여러 장치 간에 동기화 상태로 유지할 수 있습니다. 사용자가 여러 디바이스에 앱을 설치하는 경우, OS는 앱 데이터를 동기화 상태로 유지하여 사용자가 두 번째 디바이스에 앱을 설치할 때 수행해야 할 설치 작업이 줄어듭니다. 또한 로밍을 사용하면 목록 작성 같은 작업을 중단했다가 다른 디바이스에서 바로 이어서 진행할 수 있습니다. OS는 로밍 데이터가 업데이트되면 이를 클라우드로 복제하고, 앱이 설치된 다른 디바이스의 데이터와 동기화합니다.
 
-OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합니다. [
-            **ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)을 참조하세요. 앱이 이 제한에 도달하면 앱의 로밍된 총 앱 데이터가 다시 제한보다 낮아질 때까지 앱의 앱 데이터가 클라우드로 복제되지 않습니다. 따라서 사용자 기본 설정, 링크 및 소규모 데이터 파일에만 로밍 데이터를 사용하는 것이 가장 좋습니다.
+OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합니다. [**ApplicationData.RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625)을 참조하세요. 앱이 이 제한에 도달하면 앱의 로밍된 총 앱 데이터가 다시 제한보다 낮아질 때까지 앱의 앱 데이터가 클라우드로 복제되지 않습니다. 따라서 사용자 기본 설정, 링크 및 소규모 데이터 파일에만 로밍 데이터를 사용하는 것이 가장 좋습니다.
 
 앱의 로밍 데이터는 사용자가 일부 디바이스에서 정해진 기간 내에 액세스하는 경우에는 클라우드에서 사용할 수 있습니다. 사용자가 이 기간보다 오래 앱을 실행하지 않으면 로밍 데이터는 클라우드에서 제거됩니다. 사용자가 앱을 제거하면 로밍 데이터는 클라우드에서 자동으로 제거되지 않고 보존됩니다. 사용자가 정해진 기간 내에 앱을 다시 설치하면 로밍 데이터는 클라우드에서 동기화됩니다.
 
@@ -179,8 +174,7 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 
 Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 디바이스에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 접근 권한 값을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 디바이스에 대해 로컬이 됩니다.
 
-[
-            **PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)에 저장된 데이터는 사용자가 디바이스를 "신뢰할 수 있는 디바이스"로 지정한 경우에만 전환됩니다. 장치를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
+[**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)에 저장된 데이터는 사용자가 디바이스를 "신뢰할 수 있는 디바이스"로 지정한 경우에만 전환됩니다. 장치를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
 
 ### <span id="Conflict_resolution"></span><span id="conflict_resolution"></span><span id="CONFLICT_RESOLUTION"></span>충돌 해결
 
@@ -215,8 +209,7 @@ Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 �
 
 1.  로밍 데이터가 변경되면 알림을 받도록 등록
 
-    [
-            **DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) 이벤트는 로밍 데이터가 변경된 경우 알려 줍니다. 이 예제에서는 `DataChangeHandler`를 로밍 데이터 변경에 대한 처리기로 설정합니다.
+    [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) 이벤트는 로밍 데이터가 변경된 경우 알려 줍니다. 이 예제에서는 `DataChangeHandler`를 로밍 데이터 변경에 대한 처리기로 설정합니다.
 
 ```    CSharp
 void InitHandlers()
@@ -288,8 +281,7 @@ else
 
 ### <span id="Create_and_retrieve_roaming_files"></span><span id="create_and_retrieve_roaming_files"></span><span id="CREATE_AND_RETRIEVE_ROAMING_FILES"></span>로밍 파일 만들기 및 검색
 
-로밍 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `roamingFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [
-            **CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
+로밍 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `roamingFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
 ```CSharp
 async void WriteTimestamp()
@@ -340,8 +332,7 @@ Windows.Storage.StorageFolder temporaryFolder = ApplicationData.Current.Temporar
 
 ### <span id="Create_and_read_temporary_files"></span><span id="create_and_read_temporary_files"></span><span id="CREATE_AND_READ_TEMPORARY_FILES"></span>임시 파일 만들기 및 읽기
 
-임시 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `temporaryFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [
-            **CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
+임시 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `temporaryFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
 <span codelanguage="CSharp"></span>
 ```CSharp
@@ -389,8 +380,7 @@ async void ReadTimestamp()
 
 앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너([**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
 
-설정 컨테이너를 만들려면 [**ApplicationDataContainer.CreateContainer**](https://msdn.microsoft.com/library/windows/apps/br241611) 메서드를 호출합니다. 다음 예제에서는 `exampleContainer`라는 로컬 설정 컨테이너를 만들고 `exampleSetting`이라는 설정을 추가합니다. [
-            **ApplicationDataCreateDisposition**](https://msdn.microsoft.com/library/windows/apps/br241616) 열거형의 **Always** 값은 컨테이너가 아직 없는 경우 컨테이너를 만들어야 함을 나타냅니다.
+설정 컨테이너를 만들려면 [**ApplicationDataContainer.CreateContainer**](https://msdn.microsoft.com/library/windows/apps/br241611) 메서드를 호출합니다. 다음 예제에서는 `exampleContainer`라는 로컬 설정 컨테이너를 만들고 `exampleSetting`이라는 설정을 추가합니다. [**ApplicationDataCreateDisposition**](https://msdn.microsoft.com/library/windows/apps/br241616) 열거형의 **Always** 값은 컨테이너가 아직 없는 경우 컨테이너를 만들어야 함을 나타냅니다.
 
 ```CSharp
 Windows.Storage.ApplicationDataContainer localSettings = 

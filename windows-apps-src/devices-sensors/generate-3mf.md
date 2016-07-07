@@ -116,8 +116,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 
 ## 구성 요소 및 빌드
 
-구성 요소 구조를 통해 인쇄 가능한 3D 모델에서 둘 이상의 메시 개체를 배치할 수 있습니다. [
-            **Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) 개체에는 단일 메시 및 다른 구성 요소에 대한 참조 목록이 포함되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx) 개체의 목록입니다. 각 **Printing3DComponentWithMatrix** 개체에는 **Printing3DComponent**가 포함되며 중요하게는 메시 및 언급한 **Printing3DComponent**의 포함된 구성 요소에 적용되는 변형 매트릭스가 포함됩니다.
+구성 요소 구조를 통해 인쇄 가능한 3D 모델에서 둘 이상의 메시 개체를 배치할 수 있습니다. [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx) 개체에는 단일 메시 및 다른 구성 요소에 대한 참조 목록이 포함되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx) 개체의 목록입니다. 각 **Printing3DComponentWithMatrix** 개체에는 **Printing3DComponent**가 포함되며 중요하게는 메시 및 언급한 **Printing3DComponent**의 포함된 구성 요소에 적용되는 변형 매트릭스가 포함됩니다.
 
 예를 들어 자동차의 모델은 해당 자동차의 본체용 메시를 보유하고 있는 "본체" **Printing3DComponent**로 구성될 수 있습니다. "본체" 구성 요소는 4개의 서로 다른 **Printing3DComponentWithMatrix** 개체에 대한 참조를 포함할 수 있으며 모두 "바퀴" 메시와 동일한 **Printing3DComponent**를 참조하고 4개의 다양한 변형 매트릭스를 포함합니다(자동차 본체에서 바퀴를 4개의 서로 다른 위치에 매핑함). 이 시나리오에서 최종 제품은 총 5개의 메시를 특징으로 하지만 "본체" 메시와 "바퀴" 메시는 각각 한 번만 저장하면 됩니다.
 

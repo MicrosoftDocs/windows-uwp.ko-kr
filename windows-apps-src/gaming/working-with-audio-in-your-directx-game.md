@@ -61,7 +61,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 <tbody>
 <tr class="odd">
 <td align="left"><p>[XAudio2 소개](https://msdn.microsoft.com/library/windows/desktop/ee415813)</p></td>
-<td align="left"><p>XAudio2에서 지원되는 오디오 프로그래밍 기능의 목록을 제공합니다.</p></td>
+<td align="left"><p> XAudio2에서 지원되는 오디오 프로그래밍 기능의 목록을 제공합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[XAudio2 시작](https://msdn.microsoft.com/library/windows/desktop/ee415762)</p></td>

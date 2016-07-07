@@ -36,8 +36,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 ```
 
-[
-            **PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314) 클래스는 앱과 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) 간의 많은 상호 작용을 처리하는 데 사용되지만 여러 가지 자체 콜백을 표시합니다. 등록하는 동안 **PrintManager** 및 **PrintDocument**의 인스턴스를 만들고 해당 인쇄 이벤트에 대해 처리기를 등록합니다.
+[**PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314) 클래스는 앱과 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) 간의 많은 상호 작용을 처리하는 데 사용되지만 여러 가지 자체 콜백을 표시합니다. 등록하는 동안 **PrintManager** 및 **PrintDocument**의 인스턴스를 만들고 해당 인쇄 이벤트에 대해 처리기를 등록합니다.
 
 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)에서는 `RegisterForPrinting` 메서드를 통해 등록이 수행됩니다.
 
@@ -91,8 +90,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
 <Button x:Name="InvokePrintingButton" Content="Print" Click="OnPrintButtonClick"/>
 ```
 
-다음으로, 클릭 이벤트를 처리할 이벤트 처리기를 앱 코드에 추가합니다. [
-            **ShowPrintUIAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printmanager.showprintuiasync) 메서드를 사용하여 인쇄에서 인쇄를 시작합니다. **ShowPrintUIAsync**는 적절한 인쇄 창을 표시하는 비동기 메서드입니다. 이때 인쇄를 수행할 수 없는 경우 메서드는 예외를 throw합니다. 다음과 같이 이러한 예외를 catch하고 인쇄를 계속 진행할 수 없을 때 사용자에게 알려 주는 것이 좋습니다.
+다음으로, 클릭 이벤트를 처리할 이벤트 처리기를 앱 코드에 추가합니다. [**ShowPrintUIAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printmanager.showprintuiasync) 메서드를 사용하여 인쇄에서 인쇄를 시작합니다. **ShowPrintUIAsync**는 적절한 인쇄 창을 표시하는 비동기 메서드입니다. 이때 인쇄를 수행할 수 없는 경우 메서드는 예외를 throw합니다. 다음과 같이 이러한 예외를 catch하고 인쇄를 계속 진행할 수 없을 때 사용자에게 알려 주는 것이 좋습니다.
 
 ```csharp
 async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
@@ -152,8 +150,7 @@ protected virtual void PrintTaskRequested(PrintManager sender, PrintTaskRequeste
 
 **중요** 사용자가 인쇄 설정을 변경한 경우에는 콘텐츠를 재배치할 수 있도록 페이지 매김 이벤트 처리기가 다시 호출됩니다. 최상의 사용자 환경을 위해 콘텐츠를 재배치하기 전에 설정을 확인하고 필요 없을 때 페이지가 매겨진 콘텐츠를 다시 초기화하지 않는 것이 좋습니다.
 
-[
-            **Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `CreatePrintPreviewPages` 메서드)에서 인쇄 미리 보기 UI에 표시되고 프린터로 전송되는 페이지를 만듭니다. 인쇄용 앱 콘텐츠를 준비하는 데 사용되는 코드는 앱 및 인쇄할 콘텐츠마다 다릅니다. 인쇄용 콘텐츠의 형식을 지정하는 방법을 보려면 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984) 소스 코드를 참조하세요.
+[**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `CreatePrintPreviewPages` 메서드)에서 인쇄 미리 보기 UI에 표시되고 프린터로 전송되는 페이지를 만듭니다. 인쇄용 앱 콘텐츠를 준비하는 데 사용되는 코드는 앱 및 인쇄할 콘텐츠마다 다릅니다. 인쇄용 콘텐츠의 형식을 지정하는 방법을 보려면 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984) 소스 코드를 참조하세요.
 
 ```csharp
 protected virtual void CreatePrintPreviewPages(object sender, PaginateEventArgs e)
@@ -198,8 +195,7 @@ protected virtual void CreatePrintPreviewPages(object sender, PaginateEventArgs 
 
 특정 페이지를 인쇄 미리 보기 창에 표시해야 하는 경우 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426)는 [**GetPreviewPage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.getpreviewpage) 이벤트를 발생시킵니다. 이는 **IPrintPreviewPageCollection** 인터페이스의 **MakePage** 메서드에 해당합니다. 이때는 등록하는 동안 만든 이벤트 처리기가 호출됩니다.
 
-[
-            **GetPreviewPage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.getpreviewpage) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `GetPrintPreviewPage` 메서드)에서 인쇄 문서에 대한 적절한 페이지를 설정합니다.
+[**GetPreviewPage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.getpreviewpage) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `GetPrintPreviewPage` 메서드)에서 인쇄 문서에 대한 적절한 페이지를 설정합니다.
 
 ```csharp
 protected virtual void GetPrintPreviewPage(object sender, GetPreviewPageEventArgs e)
@@ -211,8 +207,7 @@ protected virtual void GetPrintPreviewPage(object sender, GetPreviewPageEventArg
 
 마지막으로 사용자가 인쇄 단추를 클릭하면 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426)에서 **IDocumentPageSource** 인터페이스의 **MakeDocument** 메서드를 호출하여 프린터로 전송할 페이지의 최종 컬렉션을 요청합니다. XAML에서는 [**AddPages**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.addpages) 이벤트를 발생시킵니다. 이때는 등록하는 동안 만든 이벤트 처리기가 호출됩니다.
 
-[
-            **AddPages**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.addpages) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `AddPrintPages` 메서드)에서 페이지 모음의 페이지를 프린터로 보낼 [**PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314) 개체에 추가합니다. 사용자가 특정 페이지 또는 페이지 범위를 인쇄하도록 지정하면 해당 정보를 사용하여 프린터로 실제로 보낼 페이지만 추가합니다.
+[**AddPages**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.addpages) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `AddPrintPages` 메서드)에서 페이지 모음의 페이지를 프린터로 보낼 [**PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314) 개체에 추가합니다. 사용자가 특정 페이지 또는 페이지 범위를 인쇄하도록 지정하면 해당 정보를 사용하여 프린터로 실제로 보낼 페이지만 추가합니다.
 
 ```csharp
 protected virtual void AddPrintPages(object sender, AddPagesEventArgs e)
@@ -285,8 +280,7 @@ PrintCustomTextOptionDetails pageRangeEdit = printDetailedOptions.CreateTextOpti
 printDetailedOptions.OptionChanged += printDetailedOptions_OptionChanged;
 ```
 
-[
-            **CreateTextOption**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.optiondetails.printtaskoptiondetails.createtextoption) 메서드는 **범위** 입력란을 만듭니다. 이 텍스트 상자에는 사용자가 **인쇄 범위** 옵션을 선택할 때 인쇄할 특정 페이지를 입력합니다.
+[**CreateTextOption**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.optiondetails.printtaskoptiondetails.createtextoption) 메서드는 **범위** 입력란을 만듭니다. 이 텍스트 상자에는 사용자가 **인쇄 범위** 옵션을 선택할 때 인쇄할 특정 페이지를 입력합니다.
 
 ## 인쇄 옵션 변경 처리
 

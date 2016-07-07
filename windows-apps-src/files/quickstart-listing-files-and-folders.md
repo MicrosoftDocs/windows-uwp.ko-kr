@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
-title: 파일 및 폴더 열거 및 쿼리
-description: 폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다.
+title: "파일 및 폴더 열거 및 쿼리"
+description: "폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
+
 ---
 # 파일 및 폴더 열거 및 쿼리
 
@@ -320,6 +324,7 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

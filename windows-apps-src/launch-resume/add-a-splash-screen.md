@@ -76,6 +76,6 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

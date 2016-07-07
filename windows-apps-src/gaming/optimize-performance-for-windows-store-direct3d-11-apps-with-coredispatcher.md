@@ -230,8 +230,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-Microsoft Visual Studio 2015의 **DirectX 11 및 XAML 앱(유니버설 Windows)** 템플릿은 유사한 방식으로 게임 루프를 여러 스레드로 분할합니다. [
-            **Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
+Microsoft Visual Studio 2015의 **DirectX 11 및 XAML 앱(유니버설 Windows)** 템플릿은 유사한 방식으로 게임 루프를 여러 스레드로 분할합니다. [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) 개체를 사용하여 입력 처리 전용 스레드를 시작하고 XAML UI 스레드와 독립적인 렌더링 스레드도 만듭니다. 이러한 템플릿에 대한 자세한 내용은 [템플릿에서 유니버설 Windows 플랫폼 및 DirectX 게임 프로젝트 만들기](user-interface.md)를 참조하세요.
 
 ## 입력 대기 시간을 줄이는 추가 방법
 

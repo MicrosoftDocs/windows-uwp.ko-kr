@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다.
-title: xBind 태그 확장
+description: "xBind 태그 확장은 Binding 대신 사용됩니다. xBind에는 Binding의 일부 기능이 없지만 Binding보다 적은 메모리로 빠르게 실행되며 향상된 디버깅을 지원합니다."
+title: "xBind 태그 확장"
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
+
 ---
 
 # {x&#58;Bind} 태그 확장
@@ -106,8 +110,7 @@ C++/CX의 경우 **{x:Bind}**는 페이지 또는 데이터 모델의 전용 필
 
 **팁** [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)의 경우처럼 값에 단일 중괄호를 지정해야 하는 경우 중괄호 앞에 백슬래시를 넣습니다. `\{`. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
 
-[
-            **Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
+[**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 
 **{x:Bind}**는 태그 확장일 뿐이므로 이러한 바인딩을 프로그래밍 방식으로 만들거나 조작할 방법이 없습니다. 태그 확장에 대한 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
 
@@ -132,6 +135,7 @@ C++/CX의 경우 **{x:Bind}**는 페이지 또는 데이터 모델의 전용 필
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,16 @@
 ---
-Description: author: mcleanbyron 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&amp;\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&amp;\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다.
-title: 앱에서 바로 소모성 제품 구매 사용 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 keywords: 앱에서 바로 판매 keywords: 소모성 제품 keywords: 앱에서 바로 구매 keywords: 앱에서 바로 구매 제품 keywords: 앱에서 바로 구매 지원 방법 keywords: 앱에서 바로 구매 코드 샘플 keywords: 앱에서 바로 판매 코드 샘플
+author: mcleanbyron
+Description: "스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&amp;\\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&amp;\\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다."
+title: "앱에서 바로 소모성 구매 제품 사용"
+ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
+keywords: in-app offer code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+
 ---
 
-# 앱에서 바로 구매 소모성 제품 사용
+# 앱에서 바로 소모성 구매 제품 사용
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -119,6 +126,7 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

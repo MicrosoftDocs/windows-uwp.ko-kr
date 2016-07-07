@@ -152,18 +152,13 @@ private void LoadEmbeddedAppFile()
 
 **FileOpenPicker를 사용하여 로컬 미디어를 열려면**
 
-1.  [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 호출하면 사용자가 미디어 파일을 선택할 수 있습니다.
+1.  [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 호출하면 사용자가 미디어 파일을 선택할 수 있습니다.
 
-    [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하여 미디어 파일을 선택합니다. [
-            **FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850)를 설정하여 **FileOpenPicker**가 표시하는 파일 형식을 지정합니다. 파일 선택기를 실행하여 파일을 가져오려면 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출합니다.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하여 미디어 파일을 선택합니다. [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850)를 설정하여 **FileOpenPicker**가 표시하는 파일 형식을 지정합니다. 파일 선택기를 실행하여 파일을 가져오려면 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출합니다.
 
-2.  [
-            **SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338)를 호출하여 선택한 미디어 파일을 [**MediaElement.Source**](https://msdn.microsoft.com/library/windows/apps/br227419)로 설정합니다.
+2.  [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338)를 호출하여 선택한 미디어 파일을 [**MediaElement.Source**](https://msdn.microsoft.com/library/windows/apps/br227419)로 설정합니다.
 
-    [
-            **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)를 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)에서 반환되는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)로 설정하려면 스트림을 열어야 합니다. **StorageFile**의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하면 [**MediaElement.SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) 메서드에 전달할 수 있는 스트림을 반환합니다. 그런 다음 **MediaElement**에서 [**Play**](https://msdn.microsoft.com/library/windows/apps/br227402)를 호출하여 미디어를 시작합니다.
+    [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)를 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)에서 반환되는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)로 설정하려면 스트림을 열어야 합니다. **StorageFile**의 [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/dn889851) 메서드를 호출하면 [**MediaElement.SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) 메서드에 전달할 수 있는 스트림을 반환합니다. 그런 다음 **MediaElement**에서 [**Play**](https://msdn.microsoft.com/library/windows/apps/br227402)를 호출하여 미디어를 시작합니다.
 
 이 예제는 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하여 파일을 선택하고 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)로 설정하는 방법을 보여 줍니다.
 
@@ -202,8 +197,7 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 ```
 
 ### 포스터 원본 설정
-[
-            **PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409) 속성을 사용하여 미디어가 로드되기 전에 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에 시각적 표현을 제공할 수 있습니다. **PosterSource**는 미디어 대신 표시되는 이미지(예제: 스크린샷, 영화 포스터)입니다. **PosterSource**는 다음과 같은 경우에 표시됩니다.
+[**PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409) 속성을 사용하여 미디어가 로드되기 전에 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에 시각적 표현을 제공할 수 있습니다. **PosterSource**는 미디어 대신 표시되는 이미지(예제: 스크린샷, 영화 포스터)입니다. **PosterSource**는 다음과 같은 경우에 표시됩니다.
 
 -   유효한 원본이 설정되지 않은 경우. 예를 들어 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)가 설정되지 않았거나, **Source**가 **Null**로 설정되어 있거나, 원본이 잘못된 경우(예: [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/br227393) 이벤트가 발생한 경우)가 있습니다.
 -   미디어를 로드하는 중. 예를 들어 유효한 원본이 설정되어 있지만 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394) 이벤트가 아직 발생하지 않은 경우가 있습니다.
@@ -217,8 +211,7 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 ```
 
 ### 디바이스의 화면을 활성 상태로 유지
-일반적으로 디바이스는 사용자가 자리를 비우면 배터리 사용 시간을 절약하기 위해 디스플레이를 흐리게 하고 결국에는 꺼지지만, 동영상 앱의 경우 사용자가 돌아왔을 때 다시 볼 수 있으려면 화면을 그대로 유지해야 합니다. 앱이 전체 화면 동영상을 재생하고 있는 때와 같이 사용자 작업이 더 이상 검색되지 않을 때 디스플레이가 비활성화되지 않도록 하려면 [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818)를 호출하면 됩니다. [
-            **DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) 클래스를 사용하면 Windows가 디스플레이를 켠 상태로 유지하여 사용자가 동영상을 볼 수 있게 할 수 있습니다.
+일반적으로 디바이스는 사용자가 자리를 비우면 배터리 사용 시간을 절약하기 위해 디스플레이를 흐리게 하고 결국에는 꺼지지만, 동영상 앱의 경우 사용자가 돌아왔을 때 다시 볼 수 있으려면 화면을 그대로 유지해야 합니다. 앱이 전체 화면 동영상을 재생하고 있는 때와 같이 사용자 작업이 더 이상 검색되지 않을 때 디스플레이가 비활성화되지 않도록 하려면 [**DisplayRequest.RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818)를 호출하면 됩니다. [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) 클래스를 사용하면 Windows가 디스플레이를 켠 상태로 유지하여 사용자가 동영상을 볼 수 있게 할 수 있습니다.
 
 전원과 배터리 사용 시간을 절약하려면 [**DisplayRequest.RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출하여 더 이상 필요하지 않은 디스플레이 요청을 해제해야 합니다. Windows는 앱이 화면을 벗어나면 앱의 활성 디스플레이를 자동으로 비활성화하고 앱이 포그라운드로 돌아오면 다시 활성화합니다.
 
@@ -236,8 +229,7 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 private DisplayRequest appDisplayRequest = null;
 ```
 
-2.  [
-            **RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818)를 호출하여 Windows에 앱이 디스플레이를 유지해야 함을 알립니다.
+2.  [**RequestActive**](https://msdn.microsoft.com/library/windows/apps/br241818)를 호출하여 Windows에 앱이 디스플레이를 유지해야 함을 알립니다.
 
 3.  동영상 재생이 재생 오류로 인해 중지, 일시 중지 또는 중단될 경우 디스플레이 요청을 해제하려면 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출합니다. 앱에 활성 디스플레이 요청이 더 이상 없으면 Windows는 디바이스가 사용되지 않을 때 디스플레이를 흐리게 하고 결국에는 꺼서 배터리 사용 시간을 절약합니다.
 
@@ -276,14 +268,12 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### 프로그래밍 방식으로 미디어 플레이어 제어
-[
-            **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)는 오디오 및 비디오 재생을 제어할 수 있는 다양한 속성, 메서드 및 이벤트를 제공합니다. 전체 속성, 메서드 및 이벤트 목록을 보려면 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 참조 페이지를 참조하세요.
+[**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)는 오디오 및 비디오 재생을 제어할 수 있는 다양한 속성, 메서드 및 이벤트를 제공합니다. 전체 속성, 메서드 및 이벤트 목록을 보려면 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 참조 페이지를 참조하세요.
     
 
 ### 다른 언어의 오디오 트랙 선택
 
-[
-            **AudioStreamIndex**](https://msdn.microsoft.com/library/windows/apps/br227358) 속성 및 [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384) 메서드를 사용하면 비디오에서 오디오를 다른 언어 트랙으로 변경할 수 있습니다. 비디오에는 또한 동일한 언어로 된 여러 오디오 트랙이 포함될 수 있습니다(예: 영화에 대한 감독의 해설). 이 예제는 특히 다른 언어 간에 전환하는 방법을 보여 주지만 이 코드를 수정하여 모든 오디오 트랙 간에 전환할 수 있습니다.
+[**AudioStreamIndex**](https://msdn.microsoft.com/library/windows/apps/br227358) 속성 및 [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384) 메서드를 사용하면 비디오에서 오디오를 다른 언어 트랙으로 변경할 수 있습니다. 비디오에는 또한 동일한 언어로 된 여러 오디오 트랙이 포함될 수 있습니다(예: 영화에 대한 감독의 해설). 이 예제는 특히 다른 언어 간에 전환하는 방법을 보여 주지만 이 코드를 수정하여 모든 오디오 트랙 간에 전환할 수 있습니다.
 
 **다른 언어의 오디오 트랙을 선택하려면**
 
@@ -345,17 +335,12 @@ private void FullWindow_Click(object sender, object e)
 
 ### 동영상 크기 조정 및 확대
 
-[
-            **Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) 속성을 사용하여 동영상 콘텐츠가 컨테이너를 채우는 방식을 변경할 수 있습니다. 그러면 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968) 값에 따라 동영상 크기를 조정하고 확대합니다. **Stretch**의 상태는 여러 TV 세트의 사진 크기 설정과 비슷합니다. 이 속성을 단추에 연결하고 사용자가 더 선호하는 설정을 선택하도록 할 수 있습니다.
+[**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) 속성을 사용하여 동영상 콘텐츠가 컨테이너를 채우는 방식을 변경할 수 있습니다. 그러면 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968) 값에 따라 동영상 크기를 조정하고 확대합니다. **Stretch**의 상태는 여러 TV 세트의 사진 크기 설정과 비슷합니다. 이 속성을 단추에 연결하고 사용자가 더 선호하는 설정을 선택하도록 할 수 있습니다.
 
--   [
-            **None**](https://msdn.microsoft.com/library/windows/apps/br242968)은 원래 크기로 콘텐츠의 기본 해상도를 표시합니다.
--   [
-            **Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968)은 가로 세로 비율 및 이미지 콘텐츠를 유지하면서 공간을 최대한 채웁니다. 이 경우 동영상 가장자리에 가로 또는 세로의 검은색 막대가 표시될 수 있습니다. 이 상태는 와이드스크린 모드와 비슷합니다.
--   [
-            **UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968)은 가로 세로 비율을 유지하면서 전체 공간을 채웁니다. 이 경우 이미지 일부가 잘릴 수 있습니다. 이 상태는 전체 화면 모드와 비슷합니다.
--   [
-            **Fill**](https://msdn.microsoft.com/library/windows/apps/br242968)은 전체 공간을 채우지만 가로 세로 비율을 유지하지 않습니다. 이미지가 잘리지는 않지만 늘어짐이 발생할 수 있습니다. 이 상태는 확대 모드와 비슷합니다.
+-   [**None**](https://msdn.microsoft.com/library/windows/apps/br242968)은 원래 크기로 콘텐츠의 기본 해상도를 표시합니다.
+-   [**Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968)은 가로 세로 비율 및 이미지 콘텐츠를 유지하면서 공간을 최대한 채웁니다. 이 경우 동영상 가장자리에 가로 또는 세로의 검은색 막대가 표시될 수 있습니다. 이 상태는 와이드스크린 모드와 비슷합니다.
+-   [**UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968)은 가로 세로 비율을 유지하면서 전체 공간을 채웁니다. 이 경우 이미지 일부가 잘릴 수 있습니다. 이 상태는 전체 화면 모드와 비슷합니다.
+-   [**Fill**](https://msdn.microsoft.com/library/windows/apps/br242968)은 전체 공간을 채우지만 가로 세로 비율을 유지하지 않습니다. 이미지가 잘리지는 않지만 늘어짐이 발생할 수 있습니다. 이 상태는 확대 모드와 비슷합니다.
 
 ![Stretch 열거형 값](images/Image_Stretch.jpg) 여기서 [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968) 옵션을 순환하는 데 사용됩니다. **switch** 문은 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422) 속성의 현재 상태를 확인하고 **Stretch** 열거형의 다음 값으로 설정합니다. 그러면 사용자가 여러 확대 상태를 순환할 수 있습니다.
 
@@ -390,8 +375,7 @@ private void PictureSize_Click(object sender, RoutedEventArgs e)
 
 ### 짧은 대기 시간 재생을 사용하도록 설정
 
-[
-            **RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/br227414) 속성을 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에서 **true**로 설정하면 미디어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용될 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
+[**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/br227414) 속성을 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에서 **true**로 설정하면 미디어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용될 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
 
 이 예제에서는 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 만들고 [**RealTimePlayback**](https://msdn.microsoft.com/library/windows/apps/br227414)을 **true**로 설정합니다.
 

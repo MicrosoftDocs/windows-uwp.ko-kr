@@ -37,16 +37,11 @@ ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
 
 게임 샘플에서 **MoveLookController** 클래스를 초기화하면 4개의 포인터 관련 이벤트와 1개의 마우스 관련 이벤트를 등록합니다.
 
--   [
-            **CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). 마우스 왼쪽 또는 오른쪽 단추를 누르고 있거나 터치 표면을 터치했습니다.
--   [
-            **CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). 마우스를 이동하거나 터치 표면에서 끌기 작업을 수행했습니다.
--   [
-            **CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). 마우스 왼쪽 단추를 놓았거나 터치 표면에 닿는 개체를 들어 올렸습니다.
--   [
-            **CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). 포인터를 주 창 밖으로 이동했습니다.
--   [
-            **Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). 마우스를 특정 거리만큼 이동했습니다. 마우스 이동 델타 값에만 관심이 있고 현재 x-y 위치는 표시하지 않습니다.
+-   [**CoreWindow::PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278). 마우스 왼쪽 또는 오른쪽 단추를 누르고 있거나 터치 표면을 터치했습니다.
+-   [**CoreWindow::PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276). 마우스를 이동하거나 터치 표면에서 끌기 작업을 수행했습니다.
+-   [**CoreWindow::PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279). 마우스 왼쪽 단추를 놓았거나 터치 표면에 닿는 개체를 들어 올렸습니다.
+-   [**CoreWindow::PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208275). 포인터를 주 창 밖으로 이동했습니다.
+-   [**Windows::Devices::Input::MouseMoved**](https://msdn.microsoft.com/library/windows/apps/hh758356). 마우스를 특정 거리만큼 이동했습니다. 마우스 이동 델타 값에만 관심이 있고 현재 x-y 위치는 표시하지 않습니다.
 
 ```cpp
 void MoveLookController::Initialize(
@@ -95,8 +90,7 @@ Xbox 컨트롤러는 [XInput](https://msdn.microsoft.com/library/windows/desktop
 
 플레이어는 동시에 둘 이상의 작업을 수행할 수 있습니다. 예를 들어 카메라를 이동하면서 구를 실행할 수 있습니다. 이러한 입력은 모두 **Active** 상태에서 추적되며 포인터 작업에 따라 다른 포인터 ID를 사용합니다. 플레이어 관점에서 보면 실행 사각형의 포인터 이벤트가 이동 사각형이나 나머지 화면에 있는 포인터 이벤트와 다르기 때문에 이 작업이 필요합니다.
 
-[
-            **PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) 이벤트를 받으면 **MoveLookController**는 창에서 만든 포인터 ID 값을 가져옵니다. 포인터 ID는 특정 유형의 입력을 나타냅니다. 예를 들어 멀티 터치 장치에는 여러 가지 다른 활성 입력이 동시에 있을 수 있습니다. 이 ID는 플레이어가 사용하는 입력을 추적하는 데 사용됩니다. 한 이벤트가 터치 스크린의 이동 사각형에 있으면 포인터 ID가 할당되어 이동 사각형의 포인터 이벤트를 추적합니다. 실행 사각형의 다른 포인터 이벤트는 별도의 포인터 ID를 사용하여 별도로 추적됩니다. 이 부분에 대해서는 터치 컨트롤에 대한 섹션에서 좀더 자세히 살펴보겠습니다.
+[**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278) 이벤트를 받으면 **MoveLookController**는 창에서 만든 포인터 ID 값을 가져옵니다. 포인터 ID는 특정 유형의 입력을 나타냅니다. 예를 들어 멀티 터치 장치에는 여러 가지 다른 활성 입력이 동시에 있을 수 있습니다. 이 ID는 플레이어가 사용하는 입력을 추적하는 데 사용됩니다. 한 이벤트가 터치 스크린의 이동 사각형에 있으면 포인터 ID가 할당되어 이동 사각형의 포인터 이벤트를 추적합니다. 실행 사각형의 다른 포인터 이벤트는 별도의 포인터 ID를 사용하여 별도로 추적됩니다. 이 부분에 대해서는 터치 컨트롤에 대한 섹션에서 좀더 자세히 살펴보겠습니다.
 
 마우스 입력에는 또 다른 ID가 할당되며 별도로 처리됩니다.
 
@@ -418,10 +412,8 @@ void MoveLookController::OnPointerMoved(
 
 **MoveLookController**는 포인터 ID를 검사하여 이벤트가 발생한 위치를 확인하고 다음 작업 중 하나를 수행합니다.
 
--   [
-            **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가이동 또는 발생 사각형에서 발생한 경우 컨트롤러의 포인터 위치를 업데이트합니다.
--   [
-            **PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가 화면의 나머지 영역에서 발생한 경우(보기 컨트롤로 정의됨) 보기 방향 벡터의 피치와 요 변화를 계산합니다.
+-   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가이동 또는 발생 사각형에서 발생한 경우 컨트롤러의 포인터 위치를 업데이트합니다.
+-   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) 이벤트가 화면의 나머지 영역에서 발생한 경우(보기 컨트롤로 정의됨) 보기 방향 벡터의 피치와 요 변화를 계산합니다.
 
 마지막으로 게임 샘플에서 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
 
@@ -473,8 +465,7 @@ void MoveLookController::OnPointerReleased(
 }
 ```
 
-[
-            **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트를 발생시킨 포인터의 ID가 이전에 기록된 이동 포인터의 ID이면 플레이어가 이동 사각형 터치를 중지했기 때문에 **MoveLookController**에서 속도를 0으로 설정합니다. 속도를 0으로 설정하지 않으면 플레이어가 계속 이동하게 됩니다. 몇 가지 관성 형식을 구현하려면 향후 게임 루프에서 **Update**를 호출할 때 속도를 0으로 반환하는 메서드를 여기에서 추가합니다.
+[**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트를 발생시킨 포인터의 ID가 이전에 기록된 이동 포인터의 ID이면 플레이어가 이동 사각형 터치를 중지했기 때문에 **MoveLookController**에서 속도를 0으로 설정합니다. 속도를 0으로 설정하지 않으면 플레이어가 계속 이동하게 됩니다. 몇 가지 관성 형식을 구현하려면 향후 게임 루프에서 **Update**를 호출할 때 속도를 0으로 반환하는 메서드를 여기에서 추가합니다.
 
 그렇지 않으면 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) 이벤트가 실행 사각형이나 보기 영역에서 발생한 경우 **MoveLookController**에서 특정 포인터 ID를 재설정합니다.
 

@@ -26,11 +26,9 @@ ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
 사진을 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) 속성을 사용하여 사진의 이미지 형식과 같은 반환된 사진에 대한 속성을 지정할 수 있습니다. 기본적으로 이 카메라 캡처 UI는 [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성을 사용하여 해제할 수 있지만 반환되기 전에 사진을 자르는 데 사용할 수 있습니다. 이 예제에서는 [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044)를 설정하여 반환된 이미지가 200x200 픽셀 단위로 되도록 요청합니다.
 
-**참고** CameraCaptureUI의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [
-            **AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
+**참고** CameraCaptureUI의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
 
-[
-            **CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
@@ -40,8 +38,7 @@ ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
 [!code-cs[UsingSoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingSoftwareBitmap)]
 
-[
-            **OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)를 호출하여 이미지 파일에서 스트림을 가져옵니다. 그런 후 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 스트림에 대한 비트맵 디코더를 가져옵니다. 그런 다음 [**GetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887332)을 호출하여 이미지의 **SoftwareBitmap** 표현을 가져옵니다.
+[**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)를 호출하여 이미지 파일에서 스트림을 가져옵니다. 그런 후 [**BitmapDecoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226182)를 호출하여 스트림에 대한 비트맵 디코더를 가져옵니다. 그런 다음 [**GetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887332)을 호출하여 이미지의 **SoftwareBitmap** 표현을 가져옵니다.
 
 [!code-cs[SoftwareBitmap](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmap)]
 
@@ -61,8 +58,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 비디오를 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**VideoSettings**](https://msdn.microsoft.com/library/windows/apps/br241059) 속성을 사용하여 비디오의 형식과 같은 반환된 비디오에 대한 속성을 지정할 수 있습니다.
 
-[
-            **CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**Video**](https://msdn.microsoft.com/library/windows/apps/br241059)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
+[**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**Video**](https://msdn.microsoft.com/library/windows/apps/br241059)를 지정하여 비디오를 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 비디오를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CaptureVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCaptureVideo)]
 
@@ -87,8 +83,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 카메라 캡처 UI에서 반환된 동영상 파일을 사용하고 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출하여 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596)을 만듭니다. 미디어 클립을 컴퍼지션의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 컬렉션에 추가합니다.
 
-[
-            **GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)를 호출하여 컴퍼지션에서 **MediaStreamSource** 개체를 만듭니다.
+[**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)를 호출하여 컴퍼지션에서 **MediaStreamSource** 개체를 만듭니다.
 
 [!code-cs[AddToComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetAddToComposition)]
 

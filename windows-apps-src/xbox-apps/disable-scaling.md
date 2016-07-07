@@ -36,6 +36,6 @@ DirectX/C++ 응용 프로그램은 크기가 조정되지 않습니다. 자동 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

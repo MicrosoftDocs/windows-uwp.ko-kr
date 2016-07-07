@@ -21,10 +21,9 @@ C# 또는 Visual Basic과 XAML을 사용하여 UWP(유니버설 Windows 플랫�
 
 그래도 여전히 디자이너에 컨트롤을 추가할 수 없으면 프로젝트가 **모든 CPU**보다는 앱에 적용 가능한 프로세서 아키텍처(예: **x86**)를 대상으로 하도록 합니다. 프로젝트가 빌드 플랫폼에 대해 **모든 CPU**를 대상으로 하는 경우 컨트롤을 디자이너에 추가할 수 없습니다.
 
-*
-            *Microsoft의 광고를 제공할 때 AdMediatorControl이 런타임에 "&lt;*width* &gt; x &lt;*height*&gt; 지원되지 않음" 오류를 표시합니다. **Microsoft Advertising에서는 [IAB(Interactive Advertising Bureau)에서 권장하는 특정 광고 크기](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising)만 지원합니다. 디자이너 또는 XAML에서 광고 조정자 컨트롤의 높이 및 너비를 이렇게 지원되는 광고 크기 중 하나로 설정한 경우에도 상황에 따라 크기 조정 및 반올림 문제 때문에 광고 조정 프레임워크에서 광고를 제공하지 못할 수 있습니다. 이 문제를 방지하려면 코드에서 Microsoft Advertising의 선택적**너비**및** 높이 매개 변수를 지원되는 광고 크기 중 하나로 할당합니다.
+**Microsoft의 광고를 제공할 때 AdMediatorControl이 런타임에 "&lt;*width* &gt; x &lt;*height*&gt; 지원되지 않음" 오류를 표시합니다. **Microsoft Advertising에서는 [IAB(Interactive Advertising Bureau)에서 권장하는 특정 광고 크기](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising)만 지원합니다. 디자이너 또는 XAML에서 광고 조정자 컨트롤의 높이 및 너비를 이렇게 지원되는 광고 크기 중 하나로 설정한 경우에도 상황에 따라 크기 조정 및 반올림 문제 때문에 광고 조정 프레임워크에서 광고를 제공하지 못할 수 있습니다. 이 문제를 방지하려면 코드에서 Microsoft Advertising의 선택적 **Width** 및** Height** 매개 변수를 지원되는 광고 크기 중 하나로 할당합니다.
 
-다음 코드 예제는 Microsoft Advertising의 선택적 **너비** 및 **높이** 매개 변수를 728 x 90으로 할당하는 방법을 보여 줍니다.
+다음 코드 예제는 Microsoft Advertising의 선택적 **Width** 및 **Height** 매개 변수를 728 x 90으로 할당하는 방법을 보여 줍니다.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["Width"] = 728;

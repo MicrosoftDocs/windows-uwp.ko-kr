@@ -19,12 +19,10 @@ ms.openlocfilehash: 4e40ac413e021aba26776053871a4c6f1a215b2a
 
 | 항목 | 설명 |
 |-------|-------------|
-| [연락처 선택](selecting-contacts.md) | [
-            <strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다. | 
+| [연락처 선택](selecting-contacts.md) | [<strong>Windows.ApplicationModel.Contacts</strong>](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다. | 
 | [메일 보내기](sending-email.md) | 사용자가 메일 메시지를 보낼 수 있도록 메일 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 메일의 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다. |
 | [SMS 메시지 보내기](sending-an-sms-message.md) | 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다. |
-| [약속 관리](managing-appointments.md) | [
-            <strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다. |
+| [약속 관리](managing-appointments.md) | [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다. |
 
  
 

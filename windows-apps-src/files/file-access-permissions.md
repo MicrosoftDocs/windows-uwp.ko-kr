@@ -48,8 +48,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
         );
         ```
         
-        [
-            **GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 *file.txt* 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+        [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 *file.txt* 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
 
         URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
 
@@ -61,8 +60,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
 
     다음과 같은 두 가지 기본 방법으로 앱의 데이터 위치에 있는 파일과 폴더에 액세스할 수 있습니다.
 
-    1.  [
-            **ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
+    1.  [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587) 속성을 사용하여 앱 데이터 폴더를 검색합니다.
 
         예를 들어 [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587).[**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 아래와 같이 앱의 로컬 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색할 수 있습니다.
         > [!div class="tabbedCodeSnippets"]
@@ -92,8 +90,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
         );
         ```
 
-        [
-            **GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 *file.txt* 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
+        [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱의 로컬 폴더에 있는 *file.txt* 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
 
         URI의 "ms-appdata:///local/" 접두사는 앱의 로컬 폴더를 나타냅니다. 앱의 로밍 또는 임시 폴더에 있는 파일에 액세스하려면 대신 "ms-appdata:///roaming/" 또는 "ms-appdata:///temporary/"를 사용합니다. 앱 URI 사용에 대한 자세한 내용은 [파일 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781229)을 참조하세요.
 
@@ -129,8 +126,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
         );
         ```
  
-        [
-            **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
+        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
 
     -   아래와 같이 사용자 다운로드 폴더에 하위 폴더를 만들 수 있습니다.
         > [!div class="tabbedCodeSnippets"]
@@ -146,8 +142,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
         );
         ```
  
-        [
-            **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
+        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
 
     다운로드 폴더에 파일이나 폴더를 만드는 경우 해당 항목의 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에 추가하여 앱이 나중에 해당 항목에 쉽게 액세스할 수 있도록 하는 것이 좋습니다.
 

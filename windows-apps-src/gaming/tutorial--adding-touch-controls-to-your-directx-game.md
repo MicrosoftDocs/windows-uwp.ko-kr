@@ -187,8 +187,7 @@ void CameraPanController::OnPointerMoved(
 }
 ```
 
-마지막으로 플레이어가 화면 터치를 중지하면 카메라 이동 동작을 비활성화해야 합니다. [
-            **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)가 발생할 때 호출되는 **OnPointerReleased**를 사용하여 **m\_panInUse**를 FALSE로 설정하고 카메라 이동 동작을 해제한 다음 포인터 ID를 0으로 설정합니다.
+마지막으로 플레이어가 화면 터치를 중지하면 카메라 이동 동작을 비활성화해야 합니다. [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)가 발생할 때 호출되는 **OnPointerReleased**를 사용하여 **m\_panInUse**를 FALSE로 설정하고 카메라 이동 동작을 해제한 다음 포인터 ID를 0으로 설정합니다.
 
 **OnPointerReleased**
 

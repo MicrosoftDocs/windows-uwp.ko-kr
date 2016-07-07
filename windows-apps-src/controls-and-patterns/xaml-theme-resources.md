@@ -48,8 +48,7 @@ XAML의 테마 리소스는 활성 상태인 시스템 테마에 따라 다른 �
 
 하지 말아야 할 작업:
 
--   [
-            **ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) 내의 리소스 정의에는 [{ThemeResource} 태그 확장](../xaml-platform/themeresource-markup-extension.md)을 사용하지 마세요. 대신 [{StaticResource} 태그 확장](../xaml-platform/staticresource-markup-extension.md)을 사용하세요.
+-   [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) 내의 리소스 정의에는 [{ThemeResource} 태그 확장](../xaml-platform/themeresource-markup-extension.md)을 사용하지 마세요. 대신 [{StaticResource} 태그 확장](../xaml-platform/staticresource-markup-extension.md)을 사용하세요.
 
     예외: [{ThemeResource} 태그 확장](../xaml-platform/themeresource-markup-extension.md)을 사용하여 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807)의 앱 테마에 독립적인 리소스를 참조하는 것은 괜찮습니다. 이러한 리소스의 예로는 `SystemAccentColor`와 같은 테마 컬러 리소스 또는 일반적으로 "SystemColor"로 접두사가 지정된 시스템 색 리소스(예: `SystemColorButtonFaceColor`)가 있습니다.
 
@@ -321,8 +320,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [**TextBlock*
 
 **TargetType**: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)
 
-작업을 수행하기 위해 클릭할 수 있는 텍스트를 표시해야 할 경우 이 스타일을 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)에 적용합니다. 텍스트는 대화형으로 구분하기 위해 현재 테마 컬러를 사용하여 스타일이 지정되며, 텍스트에 잘 맞는 초점 사각형을 포함합니다. [
-            **HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 암시적 스타일과 달리 **TextBlockButtonStyle**에서는 텍스트에 밑줄을 표시하지 않습니다.
+작업을 수행하기 위해 클릭할 수 있는 텍스트를 표시해야 할 경우 이 스타일을 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)에 적용합니다. 텍스트는 대화형으로 구분하기 위해 현재 테마 컬러를 사용하여 스타일이 지정되며, 텍스트에 잘 맞는 초점 사각형을 포함합니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 암시적 스타일과 달리 **TextBlockButtonStyle**에서는 텍스트에 밑줄을 표시하지 않습니다.
 
 이 템플릿은 또한 표현된 텍스트가 **SystemControlHyperlinkBaseMediumBrush**("PointerOver" 상태의 경우), **SystemControlHighlightBaseMediumLowBrush**("Pressed" 상태의 경우) 및 **SystemControlDisabledBaseLowBrush**("Disabled" 상태의 경우)를 사용하도록 스타일 지정합니다.
 

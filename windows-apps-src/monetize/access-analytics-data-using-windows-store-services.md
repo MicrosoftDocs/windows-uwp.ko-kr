@@ -241,6 +241,6 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

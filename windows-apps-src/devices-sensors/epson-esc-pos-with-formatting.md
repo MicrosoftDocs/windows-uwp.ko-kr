@@ -27,8 +27,7 @@ ESC/POS는 광범위한 POS 프린터 시스템 전체에서 사용되는 Epson�
 
 모든 명령은 ESC 문자(ASCII 27, 16진수 1B) 또는 GS(ASCII 29, 16진수 1D)로 시작한 후 이미지를 지정하는 다른 문자를 사용합니다. 일반 텍스트는 프린터로 전송되며, 줄 바꿈으로 구분됩니다.
 
-[
-            **Windows PointOfService API**](https://msdn.microsoft.com/library/windows/apps/Dn298071)는 **Print()** 또는 **PrintLine()** 메서드를 통해 해당 기능의 상당 부분을 제공합니다. 그러나 특정 서식 지정을 가져오거나 특정 명령을 보내려면 문자열로 구성되며 프린터로 전송되는 ESC/POS 명령을 사용해야 합니다.
+[**Windows PointOfService API**](https://msdn.microsoft.com/library/windows/apps/Dn298071)는 **Print()** 또는 **PrintLine()** 메서드를 통해 해당 기능의 상당 부분을 제공합니다. 그러나 특정 서식 지정을 가져오거나 특정 명령을 보내려면 문자열로 구성되며 프린터로 전송되는 ESC/POS 명령을 사용해야 합니다.
 
 ## 굵게 및 2배 크기 문자를 사용하는 예
 
@@ -56,8 +55,7 @@ printJob.PrintLine(DoubleOn + "Here is some large text." + DoubleOff);
 printJob.ExecuteAsync();
 ```
 
-사용 가능한 명령을 포함하여 ESC/POS에 대한 자세한 내용은 [Epson ESC/POS FAQ](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf)를 확인하세요. [
-            **Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) 및 사용 가능한 모든 기능에 대해서는 MSDN의 [서비스 지점 프린터](https://msdn.microsoft.com/library/windows/apps/Mt426652)를 참조하세요.
+사용 가능한 명령을 포함하여 ESC/POS에 대한 자세한 내용은 [Epson ESC/POS FAQ](http://content.epson.de/fileadmin/content/files/RSD/downloads/escpos.pdf)를 확인하세요. [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/Dn298071) 및 사용 가능한 모든 기능에 대해서는 MSDN의 [서비스 지점 프린터](https://msdn.microsoft.com/library/windows/apps/Mt426652)를 참조하세요.
 
 
 

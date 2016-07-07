@@ -1,7 +1,10 @@
 ---
 author: JordanRh1
-title: Windows 10 IoT Core에서 사용자 모드 액세스 사용
-description: 이 자습서에서는 Windows 10 IoT Core에서 GPIO, I2C, SPI 및 UART에 대한 사용자 모드 액세스를 사용하도록 설정하는 방법에 대해 설명합니다.
+title: "Windows 10 IoT Core에서 사용자 모드 액세스 사용"
+description: "이 자습서에서는 Windows 10 IoT Core에서 GPIO, I2C, SPI 및 UART에 대한 사용자 모드 액세스를 사용하도록 설정하는 방법에 대해 설명합니다."
+ms.sourcegitcommit: f7d7dac79154b1a19eb646e7d29d70b2f6a15e35
+ms.openlocfilehash: eedabee593400ff0260b6d3468ac922285a034f8
+
 ---
 # Windows 10 IoT Core에서 사용자 모드 액세스 사용
 
@@ -340,13 +343,15 @@ Windows의 [GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh43951
 
 * 핀 muxing 서버 – 핀 muxing 제어 블록을 제어하는 드라이버입니다. 핀 muxing 서버는 muxing 리소스에 대한 예약 요청(*IRP_MJ_CREATE* 요청를 통해)과 핀의 기능 전환 요청(*IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 요청을 통해)을 통해 클라이언트에서 핀 muxing 요청을 수신합니다. muxing 블록이 GPIO 블록의 일부인 경우가 가끔 있으므로 핀 muxing 서버는 일반적으로 GPIO 드라이버입니다. muxing 블록은 별도의 주변 장치이지만 GPIO 드라이버는 muxing 기능을 배치할 논리적 위치입니다. 
 * 핀 muxing 클라이언트 - 핀 muxing을 소비하는 드라이버입니다. 핀 muxing 클라이언트는 ACPI 펌웨어에서 핀 muxing 리소스를 받습니다. 핀 muxing 리소스는 일종의 연결 리소스로, 리소스 허브에 의해 관리됩니다. 핀 muxing 클라이언트는 리소스에 대한 핸들을 열어 핀 muxing 리소스를 예약합니다. 하드웨어 변경 내용을 적용하려면 클라이언트는 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 요청을 보내 구성을 커밋해야 합니다. 클라이언트는 핸들을 닫아 핀 muxing 리소스를 해제하며 이때 muxing 구성은 기본 상태로 복구됩니다. 
-* ACPI 펌웨어 - `FunctionConfig()` 리소스를 사용한 muxing 구성을 지정합니다. FunctionConfig 리소스는 muxing 구성에는 클라이언트에 의해 요청되는 핀을 나타내니다. FunctionConfig 리소스에는 기능 번호, 풀 구성 및 핀 번호 목록이 포함되어 있습니다. FunctionConfig 리소스는 GPIO 및 SPB 연결 리소스의 경우와 비슷하게 PrepareHardware 콜백에서 드라이버에 의해 수신되는 하드웨어 리소스로서 핀 muxing 클라이언트에 제공됩니다. 클라이언트는 리소스에 대한 핸들을 여는 데 사용할 수 있는 리소스 허브 ID를 수신합니다. 
+* ACPI 펌웨어 - `MsftFunctionConfig()` 리소스를 사용한 muxing 구성을 지정합니다. MsftFunctionConfig 리소스는 muxing 구성에는 클라이언트에 의해 요청되는 핀을 나타냅니다. MsftFunctionConfig 리소스에는 기능 번호, 풀 구성 및 핀 번호 목록이 포함되어 있습니다. MsftFunctionConfig 리소스는 GPIO 및 SPB 연결 리소스의 경우와 비슷하게 PrepareHardware 콜백에서 드라이버에 의해 수신되는 하드웨어 리소스로서 핀 muxing 클라이언트에 제공됩니다. 클라이언트는 리소스에 대한 핸들을 여는 데 사용할 수 있는 리소스 허브 ID를 수신합니다. 
+
+> `MsftFunctionConfig()` 설명자는 ACPI 작업 위원회에서 검토 중이므로 `/MsftInternal` 명령줄 스위치를 `asl.exe`에 전달하여 이 설명자가 포함된 ASL 파일을 컴파일해야 합니다. 예: `asl.exe /MsftInternal dsdt.asl`
 
 핀 muxing과 관련된 작업 순서는 다음과 같습니다. 
 
 ![핀 muxing 클라이언트 서버 조작](images/usermode-access-diagram-1.png)
 
-1.  클라이언트는 해당 [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx) 콜백 시 ACPI 펌웨어에서 FunctionConfig 리소스를 수신합니다.
+1.  클라이언트는 해당 [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx) 콜백 시 ACPI 펌웨어에서 MsftFunctionConfig 리소스를 수신합니다.
 2.  클라이언트는 리소스 허브 도우미 함수 `RESOURCE_HUB_CREATE_PATH_FROM_ID()`를 사용하여 리소스 ID의 경로를 만든 다음 해당 경로에 대한 핸들([ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) 또는 [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx))을 엽니다.
 3.  서버는 리소스 허브 도우미 함수 `RESOURCE_HUB_ID_FROM_FILE_NAME()`을 사용하여 파일 경로에서 리소스 허브 ID를 추출하고 리소스 허브를 쿼리하여 리소스 설명자를 가져옵니다.
 4.  서버는 설명자의 각 핀에 대해 공유 중재를 수행하고 IRP_MJ_CREATE 요청을 완료합니다.
@@ -362,7 +367,7 @@ Windows의 [GpioClx](https://msdn.microsoft.com/library/windows/hardware/hh43951
 
 ####    리소스 구문 분석
 
-WDF 드라이버는 해당 [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx) 루틴에서 `FunctionConfig()` 리소스를 수신합니다. FunctionConfig 리소스는 다음 필드로 식별할 수 있습니다.
+WDF 드라이버는 해당 [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx) 루틴에서 `MsftFunctionConfig()` 리소스를 수신합니다. MsftFunctionConfig 리소스는 다음 필드로 식별할 수 있습니다.
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -370,7 +375,7 @@ CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Class = CM_RESOURCE_CONNECTION_CLAS
 CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Type = CM_RESOURCE_CONNECTION_TYPE_FUNCTION_CONFIG
 ```
 
-`EvtDevicePrepareHardware()` 루틴은 다음과 같이 FunctionConfig 리소스를 추출할 수 있습니다.
+`EvtDevicePrepareHardware()` 루틴은 다음과 같이 MsftFunctionConfig 리소스를 추출할 수 있습니다.
 
 ```cpp
 EVT_WDF_DEVICE_PREPARE_HARDWARE evtDevicePrepareHardware;
@@ -426,7 +431,7 @@ evtDevicePrepareHardware (
 
 ####    리소스 예약 및 커밋
 
-클라이언트는 핀 muxing을 원할 경우 FunctionConfig 리소스를 예약하고 커밋합니다. 다음 예제에서는 클라이언트가 FunctionConfig 리소스를 예약하고 커밋하는 방법을 보여 줍니다.
+클라이언트는 핀 muxing을 원할 경우 MsftFunctionConfig 리소스를 예약하고 커밋합니다. 다음 예제에서는 클라이언트가 MsftFunctionConfig 리소스를 예약하고 커밋하는 방법을 보여 줍니다.
 
 ```cpp
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -511,7 +516,7 @@ NTSTATUS AcquireFunctionConfigResource (
 
 ####    IRP_MJ_CREATE 요청 처리
 
-클라이언트는 핀 muxing 리소스를 예약하려는 경우 리소스에 대한 핸들을 엽니다. 핀 muxing 서버는 리소스 허브에서 재분석 작업을 통해 *IRP_MJ_CREATE* 요청을 수신합니다. *IRP_MJ_CREATE* 요청 맨 뒤에 오는 경로 구성 요소에는 16진수 형식의 64비트 정수인 리소스 허브 ID가 포함됩니다. 서버는 reshub.h의 `RESOURCE_HUB_ID_FROM_FILE_NAME()`을 사용하여 리소스 허브 ID를 추출하고 리소스 허브로 *IOCTL_RH_QUERY_CONNECTION_PROPERTIES*를 전송하여 `FunctionConfig()` 설명자를 가져옵니다.
+클라이언트는 핀 muxing 리소스를 예약하려는 경우 리소스에 대한 핸들을 엽니다. 핀 muxing 서버는 리소스 허브에서 재분석 작업을 통해 *IRP_MJ_CREATE* 요청을 수신합니다. *IRP_MJ_CREATE* 요청 맨 뒤에 오는 경로 구성 요소에는 16진수 형식의 64비트 정수인 리소스 허브 ID가 포함됩니다. 서버는 reshub.h의 `RESOURCE_HUB_ID_FROM_FILE_NAME()`을 사용하여 리소스 허브 ID를 추출하고 리소스 허브로 *IOCTL_RH_QUERY_CONNECTION_PROPERTIES*를 전송하여 `MsftFunctionConfig()` 설명자를 가져옵니다.
 
 서버는 설명자가 유효한지 검사한 후 설명자에서 공유 모드와 핀 목록을 추출해야 합니다. 그런 다음 핀에 대한 공유 중재를 수행하고 성공하면 요청을 완료하기 전에 핀을 예약된 상태로 표시해야 합니다.
 
@@ -525,18 +530,18 @@ NTSTATUS AcquireFunctionConfigResource (
 
 공유 중재가 실패하면 요청은 *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*로 완료됩니다. 공유 중재가 성공하면 요청은 *STATUS_SUCCESS*로 완료됩니다.
 
-수신 요청의 공유 모드는 [IrpSp-&gt;Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx)가 아닌 FunctionConfig 설명자에서 가져옵니다.
+수신 요청의 공유 모드는 [IrpSp-&gt;Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx)가 아닌 MsftFunctionConfig 설명자에서 가져옵니다.
 
 ####    IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS 요청 처리
 
-클라이언트는 핸들을 열어 성공적으로 예약된 FunctionConfig 리소스를 확보하게 되면 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*를 전송하여 서버가 실제 하드웨어 muxing 작업을 수행하도록 요청할 수 있습니다. 서버가 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*를 수신하면 핀 목록의 각 핀에 대해 다음을 수행합니다. 
+클라이언트는 핸들을 열어 성공적으로 예약된 MsftFunctionConfig 리소스를 확보하게 되면 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*를 전송하여 서버가 실제 하드웨어 muxing 작업을 수행하도록 요청할 수 있습니다. 서버가 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*를 수신하면 핀 목록의 각 핀에 대해 다음을 수행합니다. 
 
 *   하드웨어에 대해 PNP_FUNCTION_CONFIG_DESCRIPTOR 구조의 PinConfiguration 멤버에 지정된 풀 모드를 설정합니다.
 *   PNP_FUNCTION_CONFIG_DESCRIPTOR 구조의 FunctionNumber 멤버에 의해 지정된 함수에 핀을 Mux합니다.
 
 그러면 서버에서는 *STATUS_SUCCESS*를 사용하여 요청을 완료합니다.
 
-FunctionNumber의 의미는 서버에 의해 정의되며 서버가 이 필드를 해석하는 방식을 토대로 FunctionConfig 설명자가 작성된 것으로 이해됩니다.
+FunctionNumber의 의미는 서버에 의해 정의되며 서버가 이 필드를 해석하는 방식을 토대로 MsftFunctionConfig 설명자가 작성된 것으로 이해됩니다.
 
 핸들이 닫히면 서버는 IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS를 수신할 때의 구성으로 핀을 되돌려야 하므로 서버는 핀을 수정하기 전에 핀의 상태를 저장해야 할 수 있습니다.
 
@@ -546,11 +551,11 @@ FunctionNumber의 의미는 서버에 의해 정의되며 서버가 이 필드�
 
 ### ACPI 테이블에 대한 제작 지침
 
-이 섹션에서는 클라이언트 드라이버에 muxing 리소스를 제공하는 방법을 설명합니다. `FunctionConfig()` 리소스가 포함된 테이블을 컴파일하려면 Microsoft ASL 컴파일러 빌드 14327 이상이 필요합니다. `FunctionConfig()` 리소스는 핀 muxing 클라이언트에 하드웨어 리소스로 제공됩니다. `FunctionConfig()` 리소스는 일반적으로 SPB 핀 muxing 변경이 필요한 드라이버(일반적으로 SPB 및 직렬 컨트롤러 드라이버)에 제공되어야 하며 SPB 및 직렬 주변 장치 드라이버의 경우는 muxing 구성을 처리하므로 제공될 필요가 없습니다.
-`FunctionConfig()` ACPI 매크로는 다음과 같이 정의됩니다.
+이 섹션에서는 클라이언트 드라이버에 muxing 리소스를 제공하는 방법을 설명합니다. `MsftFunctionConfig()` 리소스가 포함된 테이블을 컴파일하려면 Microsoft ASL 컴파일러 빌드 14327 이상이 필요합니다. `MsftFunctionConfig()` 리소스는 핀 muxing 클라이언트에 하드웨어 리소스로 제공됩니다. `MsftFunctionConfig()` 리소스는 일반적으로 SPB 핀 muxing 변경이 필요한 드라이버(일반적으로 SPB 및 직렬 컨트롤러 드라이버)에 제공되어야 하며 SPB 및 직렬 주변 장치 드라이버의 경우는 muxing 구성을 처리하므로 제공될 필요가 없습니다.
+`MsftFunctionConfig()` ACPI 매크로는 다음과 같이 정의됩니다.
 
 ```cpp
-  FunctionConfig(Shared/Exclusive
+  MsftFunctionConfig(Shared/Exclusive
                 PinPullConfig,
                 FunctionNumber,
                 ResourceSource,
@@ -573,7 +578,7 @@ FunctionNumber의 의미는 서버에 의해 정의되며 서버가 이 필드�
 * VendorData - 핀 muxing 서버에 의해 의미가 정의되는 선택적 이진 데이터입니다. 일반적으로는 비워 두어야 합니다.
 * 핀 목록 - 구성이 적용되는 핀의 번호의 쉼표로 구분된 목록입니다. 핀 muxing 서버가 GpioClx 드라이버이면 이것은 GPIO 핀 번호이며 GpioIo 설명의 핀 번호와 같은 의미를 갖습니다. 
 
-다음 예제에서는 I2C 컨트롤러 드라이버에 FunctionConfig() 리소스를 제공할 수 있는 방법을 보여 줍니다. 
+다음 예제에서는 I2C 컨트롤러 드라이버에 MsftFunctionConfig() 리소스를 제공할 수 있는 방법을 보여 줍니다. 
 
 ```cpp
 Device(I2C1) 
@@ -591,14 +596,14 @@ Device(I2C1)
         { 
             Memory32Fixed(ReadWrite, 0x3F804000, 0x20) 
             Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) { 0x55 } 
-            FunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
+            MsftFunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
         }) 
         Return(RBUF) 
     } 
 } 
 ```
 
-컨트롤러 드라이버에 일반적으로 필요한 메모리 및 인터럽트 리소스 외에, `FunctionConfig()` 리소스도 지정됩니다. 이 리소스는 풀업 저항기가 활성화된 상태로 I2C 컨트롤러 드라이버에서 디바이스 노드에 의해 관리되는 핀 2 및 3을 기능 4의 \\_SB.GPIO0에 추가할 수 있도록 합니다. 
+컨트롤러 드라이버에 일반적으로 필요한 메모리 및 인터럽트 리소스 외에, `MsftFunctionConfig()` 리소스도 지정됩니다. 이 리소스는 풀업 저항기가 활성화된 상태로 I2C 컨트롤러 드라이버에서 디바이스 노드에 의해 관리되는 핀 2 및 3을 기능 4의 \\_SB.GPIO0에 추가할 수 있도록 합니다. 
 
 ### GpioClx 클라이언트 드라이버의 muxing 지원 
 
@@ -611,7 +616,7 @@ Device(I2C1)
 
 이러한 두 가지 새로운 DDI 외에, 기존 DDI의 핀 muxing 호환성을 감사해야 합니다. 
 
-* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – GPIO 입력 또는 출력을 위한 핀 설정을 구성할 것을 미니 포트 드라이버에 명령하기 위해 CLIENT_ConnectIoPins가 GpioClx에 의해 호출됩니다. GPIO는 및 FunctionConfi와 상호 배타적입니다. 즉, 핀이 GPIO와 FunctionConfig에 절대 동시에 연결되지 않습니다. 핀의 기본 기능이 GPIO일 필요는 없으므로 ConnectIoPins가 호출될 경우 핀이 반드시 GPIO에 muxing되지는 않을 수 있습니다. ConnectIoPins는 muxing 작업을 비롯해서 핀을 GPIO IO에 사용하기 위한 준비를 갖추는 데 필요한 모든 작업에 필요합니다. 인터럽트는 GPIO 입력의 특별한 경우로 간주될 수 있으므로 *CLIENT_ConnectInterrupt*는 비슷하게 동작합니다. 
+* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – GPIO 입력 또는 출력을 위한 핀 설정을 구성할 것을 미니 포트 드라이버에 명령하기 위해 CLIENT_ConnectIoPins가 GpioClx에 의해 호출됩니다. GPIO는 MsftFunctionConfig와 함께 사용할 수 없습니다. 즉, 핀이 GPIO와 MsftFunctionConfig에 절대로 동시에 연결되지 않습니다. 핀의 기본 기능이 GPIO일 필요는 없으므로 ConnectIoPins가 호출될 경우 핀이 반드시 GPIO에 muxing되지는 않을 수 있습니다. ConnectIoPins는 muxing 작업을 비롯해서 핀을 GPIO IO에 사용하기 위한 준비를 갖추는 데 필요한 모든 작업에 필요합니다. 인터럽트는 GPIO 입력의 특별한 경우로 간주될 수 있으므로 *CLIENT_ConnectInterrupt*는 비슷하게 동작합니다. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – PreserveConfiguration 플래그가 지정되지 않을 경우 이러한 루틴은 CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt가 호출되었을 때의 상태로 핀을 복구해야 합니다. 핀 방향을 기본 상태로 복구하는 것 외에, 미니 포트는 각 핀의 muxing 상태도 _Connect 루틴이 호출될 때의 상태로 되돌려야 합니다. 
 
 예를 들어 핀의 기본 muxing 구성이 UART이고 핀을 GPIO로도 사용할 수 있다고 가정할 경우 GPIO를 위해 핀을 연결하기 위해 CLIENT_ConnectIoPins가 호출되면 핀을 GPIO에 muxing해야 하며 CLIENT_DisconnectIoPins에서는 핀을 다시 UART로 muxing해야 합니다. 일반적으로 _Disconnect 루틴은 _Connect 루틴에 의해 완료된 작업을 실행 취소합니다. 
@@ -624,13 +629,13 @@ Windows 10 빌드 14327 현재, `SpbCx` 및 `SerCx` 프레임워크에는 해당
 
 ![핀 muxing 종속성](images/usermode-access-diagram-2.png)
 
-디바이스가 초기화되면 `SpbCx` 및 `SerCx` 프레임워크는 디바이스에 하드웨어 리소스로 제공된 모든 `FunctionConfig()` 리소스를 구문 분석합니다. 그러면 SpbCx/SerCx는 핀 muxing 리소스를 획득한 후 필요할 때 해제합니다.
+디바이스가 초기화되면 `SpbCx` 및 `SerCx` 프레임워크는 디바이스에 하드웨어 리소스로 제공된 모든 `MsftFunctionConfig()` 리소스를 구문 분석합니다. 그러면 SpbCx/SerCx는 핀 muxing 리소스를 획득한 후 필요할 때 해제합니다.
 
 `SpbCx` 는 클라이언트 드라이버의 [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx) 콜백을 호출하기 바로 전에 해당 *IRP_MJ_CREATE* 처리기에 핀 muxing 구성을 적용합니다. muxing 구성을 적용할 수 없으면 컨트롤러 드라이버의 `EvtSpbTargetConnect()` 콜백이 호출되지 않습니다. 따라서 SPB 컨트롤러 드라이버는 `EvtSpbTargetConnect()` 호출 시에 핀이 SPB 기능에 muxing된다고 간주할 수 있습니다.
 
 `SpbCx` 는 컨트롤러 드라이버의 [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx) 콜백을 호출한 직후에 해당 *IRP_MJ_CLOSE*에서 핀 muxing 구성을 되돌립니다. 결과적으로 주변 장치 드라이버가 SPB 컨트롤러 드라이버에 대한 핸들을 열 때마다 핀이 SPB 기능에 muxing되고, 주변 장치 드라이버가 해당 핸들을 닫으면 muxing이 해제됩니다.
 
-`SerCx` 는 비슷하게 동작합니다. `SerCx` 는 *IRP_MJ_CREATE* 컨트롤러 드라이버의 [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) 콜백을 호출하기 전에 모든 `FunctionConfig()` 리소스를 획득하고, 컨트롤러 드라이버의 [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) 콜백을 호출한 직후에 해당 IRP_MJ_CLOSE 처리기의 모든 리소스를 해제합니다.
+`SerCx` 는 비슷하게 동작합니다. `SerCx` 는 *IRP_MJ_CREATE* 컨트롤러 드라이버의 [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx) 콜백을 호출하기 전에 모든 `MsftFunctionConfig()` 리소스를 획득하고, 컨트롤러 드라이버의 [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx) 콜백을 호출한 직후에 해당 IRP_MJ_CLOSE 처리기의 모든 리소스를 해제합니다.
 
 `SerCx` 및 `SpbCx` 컨트롤러 드라이버에 대해 동적 핀 muxing이 진행되면 특정 시간에 SPB/UART 기능에서 muxing 해제되는 핀을 허용할 수 있어야 합니다. 컨트롤러 드라이버는 `EvtSpbTargetConnect()` 또는 `EvtSerCx2FileOpen()`이 호출될 때까지 핀이 muxing되지 않는다고 가정해야 합니다. 핀이 다음 콜백 동안 SPB/UART 기능에 반드시 muxing되어야 하는 것은 아닙니다. 다음은 전체 목록이 아니지만 컨트롤러 드라이버에 의해 구현되는 가장 일반적인 PNP 루틴을 나타냅니다.
 
@@ -717,7 +722,6 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 | GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | MITT I2C 테스트 | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| Signiant | http://windowsreleases/Playbook/Content%20Owners/Requesting%20Access%20to%20Signiant.aspx |
 | GpioTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/GPIOTestTool |
 | I2cTestTool   | https://developer.microsoft.com/en-us/windows/iot/win10/samples/I2cTestTool | 
 | SpiTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/spitesttool |
@@ -1081,26 +1085,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

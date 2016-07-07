@@ -47,8 +47,7 @@ ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
 
 > **참고** 모바일 디바이스에서 실행되는 앱에는 연결 형식, 로밍 상태 및 사용자의 데이터 요금제에 따라 전송되는 데이터 양을 사용자가 모니터링하고 제한할 수 있는 기능이 있습니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
 
-다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [
-            **ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
+다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
 
 | 장치 상태                                                                                                                      | UnrestrictedOnly | 기본값 | 항상 |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------|---------|--------|
@@ -73,8 +72,7 @@ ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
 
 **파일 및 업로드 대상 식별**
 
-[
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 만들기를 시작하려면 먼저 업로드할 위치의 URI 및 업로드할 파일을 식별해야 합니다. 다음 예에서는 UI 입력의 문자열을 사용하여 *uriString* 값을 채우고 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) 작업에서 반환한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 *file* 값을 채웁니다.
+[**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 만들기를 시작하려면 먼저 업로드할 위치의 URI 및 업로드할 파일을 식별해야 합니다. 다음 예에서는 UI 입력의 문자열을 사용하여 *uriString* 값을 채우고 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) 작업에서 반환한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 *file* 값을 채웁니다.
 
 [!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "파일 및 업로드 대상 식별")]
 
@@ -164,15 +162,13 @@ upload.startMultipart = function (uriString, files) {
 
 ### 중단된 업로드 작업 다시 시작
 
-[
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 장치 리소스를 계속해서 차지하게 됩니다.
+[**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 장치 리소스를 계속해서 차지하게 됩니다.
 
 1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 개체를 포함할 배열을 만들어야 합니다.
 
 [!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "중단된 업로드 작업 다시 시작")]
 
-2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. [
-            **UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)에 콜백을 다시 할당하기 위해 호출된 **load** 메서드는 앱이 종료될 때까지 지속되는 경우 이 섹션의 뒷부분에서 정의하는 UploadOp 클래스에 있습니다.
+2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)에 콜백을 다시 할당하기 위해 호출된 **load** 메서드는 앱이 종료될 때까지 지속되는 경우 이 섹션의 뒷부분에서 정의하는 UploadOp 클래스에 있습니다.
 
 [!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "지속형 작업 열거")]
 
@@ -186,8 +182,7 @@ upload.startMultipart = function (uriString, files) {
 
 ### 백그라운드 전송 파일 다운로드 구성 및 시작
 
-다음 예에서는 URI 및 파일 이름을 나타내는 문자열을 사용하여 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체 및 요청한 파일을 포함할 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들 수 있는 방법을 보여 줍니다. 이 예에서 새 파일은 미리 정의된 위치에 자동으로 배치됩니다. 또는 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 장치에서 파일을 저장할 위치를 나타내도록 할 수 있습니다. [
-            **DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 앱 종료 기간 동안 지속될 경우 이 섹션의 뒷 부분에서 정의하는 DownloadOp 클래스에 있습니다.
+다음 예에서는 URI 및 파일 이름을 나타내는 문자열을 사용하여 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체 및 요청한 파일을 포함할 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들 수 있는 방법을 보여 줍니다. 이 예에서 새 파일은 미리 정의된 위치에 자동으로 배치됩니다. 또는 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 장치에서 파일을 저장할 위치를 나타내도록 할 수 있습니다. [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 앱 종료 기간 동안 지속될 경우 이 섹션의 뒷 부분에서 정의하는 DownloadOp 클래스에 있습니다.
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_A)]
 
@@ -207,8 +202,7 @@ promise = download.startAsync().then(complete, error, progress);
 
 ### 시작할 때 지속형 작업 열거
 
-[
-            **DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 이러한 이벤트가 발생하기 이전에 앱이 종료될 경우 다운로드는 일시 중지되고 백그라운드에서 지속됩니다. 다음 예에서는 지속형 다운로드를 새 앱 세션에서 다시 사용하는 방법을 보여 줍니다.
+[**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 이러한 이벤트가 발생하기 이전에 앱이 종료될 경우 다운로드는 일시 중지되고 백그라운드에서 지속됩니다. 다음 예에서는 지속형 다운로드를 새 앱 세션에서 다시 사용하는 방법을 보여 줍니다.
 
 1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 개체를 포함할 배열을 만들어야 합니다.
 
@@ -230,8 +224,7 @@ Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우�
 
 다음과 같이 사후 처리를 사용하여 백그라운드 전송을 시작합니다.
 
-1.  [
-            **BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) 개체를 만듭니다. 그런 다음 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 만듭니다. 작성기 개체의 **Trigger** 속성을 완료 그룹 개체로 설정하고, 작성기의 **TaskEngtyPoint** 속성을 전송 완료 시 실행해야 하는 백그라운드 작업의 진입점으로 설정합니다. 마지막으로 [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 호출하여 백그라운드 작업을 등록합니다. 여러 완료 작업이 하나의 백그라운드 작업 진입점을 공유할 수 있지만 백그라운드 작업 등록당 하나의 완료 그룹만 유지할 수 있습니다.
+1.  [**BackgroundTransferCompletionGroup**](https://msdn.microsoft.com/library/windows/apps/dn804209) 개체를 만듭니다. 그런 다음 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 만듭니다. 작성기 개체의 **Trigger** 속성을 완료 그룹 개체로 설정하고, 작성기의 **TaskEngtyPoint** 속성을 전송 완료 시 실행해야 하는 백그라운드 작업의 진입점으로 설정합니다. 마지막으로 [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드를 호출하여 백그라운드 작업을 등록합니다. 여러 완료 작업이 하나의 백그라운드 작업 진입점을 공유할 수 있지만 백그라운드 작업 등록당 하나의 완료 그룹만 유지할 수 있습니다.
 
    ```csharp
     var completionGroup = new BackgroundTransferCompletionGroup();
@@ -293,8 +286,7 @@ Microsoft Visual Studio에서 디버깅 세션을 중지하는 것은 앱을 닫
 
 디버그 세션의 이전 작업에 관심이 없는 경우 디버그 세션 중 앱을 시작할 때 다운로드/업로드를 열거하는 동안 앱에서 취소하도록 할 수 있습니다. 앱 매니페스트 변경 등의 Visual Studio 프로젝트 업데이트가 있으며 앱을 제거하고 다시 배포하는 경우에는 [**GetCurrentUploadsAsync**](https://msdn.microsoft.com/library/windows/apps/hh701149)에서 이전 앱 배포를 사용하여 만든 작업을 열거할 수 없습니다.
 
-개발 중 백그라운드 전송을 사용하는 경우 활성 및 완료된 전송 작업의 내부 캐시가 동기화되지 않는 상황이 발생할 수 있습니다. 이 경우 새 전송 작업을 시작하거나 기존 작업 및 [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030) 개체를 조작하지 못할 수 있습니다. 기존 작업을 조작할 때 크래시가 트리거되는 경우도 있습니다. [
-            **TransferBehavior**](https://msdn.microsoft.com/library/windows/apps/dn279033) 속성이 **Parallel**로 설정된 경우 이러한 결과가 발생할 수 있습니다. 이 문제는 개발 중 특정 시나리오에서만 발생하며 앱의 최종 사용자에게는 해당하지 않습니다.
+개발 중 백그라운드 전송을 사용하는 경우 활성 및 완료된 전송 작업의 내부 캐시가 동기화되지 않는 상황이 발생할 수 있습니다. 이 경우 새 전송 작업을 시작하거나 기존 작업 및 [**BackgroundTransferGroup**](https://msdn.microsoft.com/library/windows/apps/dn279030) 개체를 조작하지 못할 수 있습니다. 기존 작업을 조작할 때 크래시가 트리거되는 경우도 있습니다. [**TransferBehavior**](https://msdn.microsoft.com/library/windows/apps/dn279033) 속성이 **Parallel**로 설정된 경우 이러한 결과가 발생할 수 있습니다. 이 문제는 개발 중 특정 시나리오에서만 발생하며 앱의 최종 사용자에게는 해당하지 않습니다.
 
 Visual Studio를 사용한 네 가지 시나리오에서 이 문제가 발생할 수 있습니다.
 
@@ -316,12 +308,9 @@ C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://msdn.microsoft
 
 C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
-[
-            **Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스에는 편리한 도우미 메서드가 있으며 오류를 처리하는 데 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 열거형을 사용합니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
+[**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스에는 편리한 도우미 메서드가 있으며 오류를 처리하는 데 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 열거형을 사용합니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
 
-[
-            **Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 비동기 메서드에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [
-            **BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) 메서드는 백그라운드 전송 작업의 네트워크 오류를 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 또는 FTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+[**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 비동기 메서드에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) 메서드는 백그라운드 전송 작업의 네트워크 오류를 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 또는 FTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 

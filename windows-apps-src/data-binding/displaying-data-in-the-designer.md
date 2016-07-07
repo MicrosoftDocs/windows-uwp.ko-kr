@@ -90,8 +90,7 @@ else
 
 **d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](http://go.microsoft.com/fwlink/p/?LinkId=272504) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
 
-[
-            **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
+[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
 
 ``` xaml
     <Page.Resources>

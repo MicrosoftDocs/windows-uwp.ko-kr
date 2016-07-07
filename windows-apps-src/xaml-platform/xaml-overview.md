@@ -107,13 +107,11 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 태그 확장은 일반적으로 앱에 대한 개체 그래프의 일부 다른 부분에서 기존 인스턴스를 반환하거나 값을 런타임까지 지연합니다. 태그 확장을 특성 값으로 사용할 수 있으며 일반적인 사용 예이므로 그렇지 않은 경우 속성 요소 구문이 필요할 수 있는 참조 유형 속성에 대한 값을 제공하는 태그 확장을 종종 볼 수 있습니다.
 
-예를 들어 다음은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 다시 사용할 수 있는 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 참조하기 위한 구문입니다. `<Button Style="{StaticResource SearchButtonStyle}"/>`. [
-            **Style**](https://msdn.microsoft.com/library/windows/apps/br208849)은 단순 값이 아니라 참조 형식이므로 `{StaticResource}`를 사용하지 않을 경우 [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 설정하려면 XAML 내부에 `<Button.Style>` 속성 요소 및 `<Style>` 정의가 필요합니다.
+예를 들어 다음은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)에서 다시 사용할 수 있는 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)을 참조하기 위한 구문입니다. `<Button Style="{StaticResource SearchButtonStyle}"/>`. [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)은 단순 값이 아니라 참조 형식이므로 `{StaticResource}`를 사용하지 않을 경우 [**FrameworkElement.Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성을 설정하려면 XAML 내부에 `<Button.Style>` 속성 요소 및 `<Style>` 정의가 필요합니다.
 
 태그 확장을 사용하면 XAML에서 설정할 수 있는 모든 속성을 잠재적으로 특성 구문에서 설정할 수 있게 됩니다. 직접 개체 인스턴스화에 대한 특성 구문을 지원하지 않더라도 특성 구문을 사용하여 속성에 대한 참조 값을 제공할 수 있습니다. 값 형식 또는 새로 만든 참조 형식을 통해 XAML 속성을 채워야 한다는 일반 요구 사항을 지연하는 특정 동작을 사용할 수 있습니다.
 
-세부적으로, 다음 XAML 예제는 특성 구문을 사용하여 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성 값을 설정합니다. [
-            **Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성은 기본적으로 특성 구문 문자열을 사용하여 만들 수 없는 참조 형식인 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 클래스의 인스턴스를 가져옵니다. 하지만 이 경우 특성은 [StaticResource](staticresource-markup-extension.md) 태그 확장을 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
+세부적으로, 다음 XAML 예제는 특성 구문을 사용하여 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)의 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성 값을 설정합니다. [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) 속성은 기본적으로 특성 구문 문자열을 사용하여 만들 수 없는 참조 형식인 [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) 클래스의 인스턴스를 가져옵니다. 하지만 이 경우 특성은 [StaticResource](staticresource-markup-extension.md) 태그 확장을 참조합니다. 이 태그 확장은 처리되면 앞에서 리소스 사전에서 키가 지정된 리소스로 정의한 **Style** 요소에 대한 참조를 반환합니다.
 
 ```xml
 <Canvas.Resources>
@@ -136,8 +134,7 @@ Windows 런타임은 또한 [{x:Null} 태그 확장](x-null-markup-extension.md)
 
 XAML은 개체와 개체 속성에 대한 선언적 언어이지만, 이벤트 처리기를 태그의 개체에 연결하는 구문도 포함합니다. XAML 이벤트 구문은 Windows 런타임 프로그래밍 모델을 통해 XAML로 선언된 이벤트를 통합할 수 있습니다. 이벤트가 처리되는 개체에 대한 특성 이름으로 이벤트 이름을 지정합니다. 특성 값에 대해서는 코드에 정의된 이벤트 처리기 함수의 이름을 지정합니다. XAML 프로세서는 이 이름을 사용하여 로드된 개체 트리에서 위임 표현을 만들고 지정된 처리기를 내부 처리기 목록에 추가합니다. 거의 모든 Windows 런타임 앱은 태그와 코드 숨김 소스를 모두 사용하여 정의됩니다.
 
-다음은 간단한 예제입니다. [
-            **Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스가 이름이 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)인 이벤트를 지원합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
+다음은 간단한 예제입니다. [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 클래스가 이름이 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)인 이벤트를 지원합니다. 사용자의 **Button** 클릭 후에 호출되는 코드를 실행하는 **Click**에 대한 처리기를 작성할 수 있습니다. XAML에서 **Click**을 **Button**에 대한 특성으로 지정합니다. 특성 값으로 처리기의 메서드 이름인 문자열을 제공합니다.
 
 ```xml
 <Button Click="showUpdatesButton-Click">Show updates</Button>
@@ -186,8 +183,7 @@ namespace App1
 
 ## 리소스 사전
 
-[
-            **ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 만드는 것은 일반적으로 XAML 페이지의 영역 또는 개별 XAML 파일로 리소스 사전을 작성하여 수행하는 일반 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
+[**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 만드는 것은 일반적으로 XAML 페이지의 영역 또는 개별 XAML 파일로 리소스 사전을 작성하여 수행하는 일반 작업입니다. 리소스 사전 및 이 사전을 사용하는 방법은 이 항목의 범위를 벗어나는 더 큰 개념 분야입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)를 확인하세요.
 
 ## XAML 및 XML
 
@@ -225,8 +221,7 @@ XAML은 앱 개발 프로세스에서 여러 중요한 역할을 합니다.
 -   디자인 리소스([**MergedDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208801))를 제공하는 별도의 XAML 파일을 사용하고 있다면 사용되지 않는 리소스를 주석으로 처리하거나 이 파일에서 제거하는 것이 좋습니다. 두 개 이상의 앱에서 사용 중이거나 모든 앱의 공통 리소스를 제공하는 공유 XAML 시작 지점이 있는 경우에도 매번 XAML 리소스를 패키지화하고 잠재적으로 로드해야 하는 것은 여전히 개발자의 앱입니다.
 -   컴퍼지션에 필요 없는 UI 요소를 정의하지 말고, 가능한 한 항상 기본 컨트롤 템플릿을 사용하세요. 이 템플릿은 테스트를 거쳤으며 로드 성능이 검증되었습니다.
 -   UI 요소를 의도적으로 과도하게 그리지 말고 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)와 같은 컨테이너를 사용합니다. 기본적으로, 같은 픽셀을 여러 번 그리지 않습니다. 과도한 그리기 및 이를 테스트하는 방법에 대한 자세한 내용은 [**DebugSettings.IsOverdrawHeatMapEnabled**](https://msdn.microsoft.com/library/windows/apps/hh701823)를 참조하세요.
--   [
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
+-   [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 항목 템플릿을 사용하세요. 여기에는 많은 목록 항목에 대해 시각적 트리를 빌드할 때 성능 문제를 해결하는 특수한 **Presenter** 논리가 있습니다.
 
 ## XAML 디버깅
 

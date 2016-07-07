@@ -35,8 +35,7 @@ XAML은 [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br
 
 ### XamlReader.Load의 XAML 이름 범위 의미
 
-[
-            **XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)에 의해 만들어진 새 개체 트리에서 정의한 예비 XAML 이름 범위는 제공된 XAML의 정의된 이름이 고유한지 평가합니다. 제공된 XAML 내에서 이름이 고유하지 않으면 **XamlReader.Load**에서 예외가 발생합니다. 연결이 끊긴 개체 트리는 기본 응용 프로그램 개체 트리에 연결될 경우 해당 XAML 이름 범위를 기본 응용 프로그램 XAML 이름 범위와 병합하려고 시도하지 않습니다. 그러므로 트리를 연결해도 앱의 개체 트리는 통합되지만 트리의 XAML 이름 범위는 여전히 서로 독립적인 상태입니다. 분할은 개체 간의 연결 지점에서 발생하며 **XamlReader.Load** 호출에서 반환하는 값이 될 일부 속성을 여기에 설정합니다.
+[**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)에 의해 만들어진 새 개체 트리에서 정의한 예비 XAML 이름 범위는 제공된 XAML의 정의된 이름이 고유한지 평가합니다. 제공된 XAML 내에서 이름이 고유하지 않으면 **XamlReader.Load**에서 예외가 발생합니다. 연결이 끊긴 개체 트리는 기본 응용 프로그램 개체 트리에 연결될 경우 해당 XAML 이름 범위를 기본 응용 프로그램 XAML 이름 범위와 병합하려고 시도하지 않습니다. 그러므로 트리를 연결해도 앱의 개체 트리는 통합되지만 트리의 XAML 이름 범위는 여전히 서로 독립적인 상태입니다. 분할은 개체 간의 연결 지점에서 발생하며 **XamlReader.Load** 호출에서 반환하는 값이 될 일부 속성을 여기에 설정합니다.
 
 이와 같이 연결이 끊긴 개별 XAML 이름 범위가 있으면 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) 메서드 호출 및 직접 관리되는 개체 참조가 더 이상 통합된 XAML 이름 범위에 대해 작동하지 않기 때문에 상황이 복잡해집니다. 대신, **FindName**이 호출되는 특정 개체가 범위를 암시적으로 나타내게 되는데, 이 범위는 호출 개체가 포함된 XAML 이름 범위입니다. 직접 관리되는 개체 참조의 경우에는 코드가 존재하는 클래스에 의해 범위가 암시적으로 지정됩니다. 일반적으로 앱 콘텐츠 "page"의 런타임 조작에 대한 코드 숨김은 루트 "page"를 지원하는 partial 클래스에 존재하므로, XAML 이름 범위는 루트 XAML 이름 범위입니다.
 
@@ -46,12 +45,10 @@ XAML은 [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br
 
 다음과 같은 여러 가지 기술을 사용하여 다른 XAML 이름 범위에 정의되어 있는 개체에 대한 참조를 가져올 수 있습니다.
 
--   [
-            **Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) 및/또는 개체 트리 구조에 존재하는 것으로 확인된 컬렉션 속성(예: [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)에서 반환한 컬렉션)을 사용하여 전체 트리를 단계별로 실행합니다.
+-   [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) 및/또는 개체 트리 구조에 존재하는 것으로 확인된 컬렉션 속성(예: [**Panel.Children**](https://msdn.microsoft.com/library/windows/apps/br227514)에서 반환한 컬렉션)을 사용하여 전체 트리를 단계별로 실행합니다.
 -   개별 XAML 이름 범위에서 호출하는 경우 루트 XAML 이름 범위를 가져오려면 항상 현재 표시된 주 창에 대한 참조를 가져오는 것이 간편합니다. `Window.Current.Content` 호출이 포함된 한 줄의 코드로 현재 응용 프로그램 창에서 눈에 보이는 루트(콘텐츠 소스라고도 하는 루트 XAML 요소)를 가져올 수 있습니다. 그런 다음 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)로 캐스팅하고 이 범위에서 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출할 수 있습니다.
 -   루트 XAML 이름 범위에서 호출하는 경우 개별 XAML 이름 범위 내의 개체를 가져오려면 코드에서 해당 작업을 계획하고, [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)에서 반환된 다음 기본 개체 트리에 추가된 개체에 대한 참조를 보존하는 것이 가장 바람직합니다. 이제 이 개체는 개별 XAML 이름 범위 안에서 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출할 수 있는 유효한 개체입니다. 이 개체는 전역 변수로 유지할 수도 있고 메서드 매개 변수를 사용하여 전달할 수도 있습니다.
--   시각적 트리를 확인하면 이름 및 XAML 이름 범위와 관련하여 고려해야 할 사항을 무시할 수 있습니다. [
-            **VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) API를 사용하여 시각적 트리를 위치 및 인덱스만을 기준으로 부모 개체 및 자식 컬렉션 관점에서 탐색할 수 있습니다.
+-   시각적 트리를 확인하면 이름 및 XAML 이름 범위와 관련하여 고려해야 할 사항을 무시할 수 있습니다. [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/br243038) API를 사용하여 시각적 트리를 위치 및 인덱스만을 기준으로 부모 개체 및 자식 컬렉션 관점에서 탐색할 수 있습니다.
 
 ## 템플릿의 XAML 이름 범위
 

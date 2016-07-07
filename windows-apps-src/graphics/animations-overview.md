@@ -61,9 +61,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 콘텐츠 전환 애니메이션([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103))은 하나의 콘텐츠 또는 콘텐츠 집합을 현재 보기의 안이나 밖으로 이동하는 데 사용합니다. 예를 들어 콘텐츠 전환 애니메이션은 처음 페이지가 로드되었을 때나 페이지에서 한 섹션의 콘텐츠가 변경될 때 표시할 준비가 되지 않은 콘텐츠를 표시합니다.
 
-[
-            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 UI의 큰 섹션이나 페이지가 처음 로드될 때 콘텐츠에 적용될 수 있는 동작을 나타냅니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다. [
-            **EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 기본 매개 변수를 사용하는 [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition)과 동일하지만 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682) 외부에서 사용될 수 있습니다.
+[**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 UI의 큰 섹션이나 페이지가 처음 로드될 때 콘텐츠에 적용될 수 있는 동작을 나타냅니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다. [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 기본 매개 변수를 사용하는 [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition)과 동일하지만 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682) 외부에서 사용될 수 있습니다.
  
  
 
@@ -75,8 +73,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 ### 포인터 위로/아래로
 
-[
-            **PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969168) 및 [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969164) 애니메이션은 성공한 타일 탭 또는 클릭에 대한 사용자 피드백을 제공하는 데 사용합니다. 예를 들어 사용자가 타일의 아래쪽을 클릭하거나 탭하면 포인터 아래로 애니메이션이 재생됩니다. 클릭 또는 탭이 해제되면 포인터 위로 애니메이션이 재생됩니다.
+[**PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969168) 및 [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969164) 애니메이션은 성공한 타일 탭 또는 클릭에 대한 사용자 피드백을 제공하는 데 사용합니다. 예를 들어 사용자가 타일의 아래쪽을 클릭하거나 탭하면 포인터 아래로 애니메이션이 재생됩니다. 클릭 또는 탭이 해제되면 포인터 위로 애니메이션이 재생됩니다.
 
 ### 위치 변경
 
@@ -84,22 +81,17 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 ### 팝업 표시/숨기기
 
-[
-            **PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391)은 현재 보기의 맨 위에 [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842)이나 유사한 컨텍스트 UI를 표시하거나 숨기는 데 사용합니다. [
-            **PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172)은 팝업을 빨리 해제하려는 경우에 유용한 피드백인 테마 전환입니다.
+[**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391)은 현재 보기의 맨 위에 [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842)이나 유사한 컨텍스트 UI를 표시하거나 숨기는 데 사용합니다. [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172)은 팝업을 빨리 해제하려는 경우에 유용한 피드백인 테마 전환입니다.
 
 ### 가장자리 UI 표시/숨기기
 
-[
-            **EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) 애니메이션은 가장자리 기반의 작은 UI를 보기의 안이나 밖으로 미는 데 사용합니다. 예를 들어 화면의 맨 위 또는 맨 아래에 사용자 지정 앱 바를 표시하거나 화면의 맨 위에 오류 및 경고에 대한 UI 화면을 표시할 때 이러한 애니메이션을 사용합니다.
+[**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) 애니메이션은 가장자리 기반의 작은 UI를 보기의 안이나 밖으로 미는 데 사용합니다. 예를 들어 화면의 맨 위 또는 맨 아래에 사용자 지정 앱 바를 표시하거나 화면의 맨 위에 오류 및 경고에 대한 UI 화면을 표시할 때 이러한 애니메이션을 사용합니다.
 
-[
-            **PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) 애니메이션은 창이나 패널을 표시하거나 숨기는 데 사용합니다. 이 애니메이션은 사용자 지정 키보드나 작업 창과 같이 가장자리 기반의 큰 UI에 적합합니다.
+[**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) 애니메이션은 창이나 패널을 표시하거나 숨기는 데 사용합니다. 이 애니메이션은 사용자 지정 키보드나 작업 창과 같이 가장자리 기반의 큰 UI에 적합합니다.
 
 ### 목록 항목 변경
 
-[
-            **AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) 애니메이션은 기존 목록에서 항목을 추가하거나 삭제할 때 애니메이션 동작을 추가하는 데 사용합니다. 추가의 경우 전환은 먼저 목록에서 기존 항목의 위치를 변경하여 새 항목을 위한 공간을 확보한 다음 새 항목을 추가합니다. 삭제의 경우 전환은 목록에서 항목을 제거하고, 필요한 경우 삭제한 항목이 제거된 다음 나머지 목록 항목의 위치를 변경합니다.
+[**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) 애니메이션은 기존 목록에서 항목을 추가하거나 삭제할 때 애니메이션 동작을 추가하는 데 사용합니다. 추가의 경우 전환은 먼저 목록에서 기존 항목의 위치를 변경하여 새 항목을 위한 공간을 확보한 다음 새 항목을 추가합니다. 삭제의 경우 전환은 목록에서 항목을 제거하고, 필요한 경우 삭제한 항목이 제거된 다음 나머지 목록 항목의 위치를 변경합니다.
 
 목록에서 항목의 위치가 변경되는 경우 별도의 [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409)을 적용할 수도 있습니다. 이 전환은 관련된 삭제/추가 애니메이션을 사용하여 항목을 삭제하고 새 위치에 추가하는 경우와 다르게 애니메이션됩니다.
 
@@ -117,19 +109,14 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 | UI 유형 | 권장 애니메이션 |
 |---------|-----------------------|
-| 대화 상자 | [
-            **FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
-| 플라이아웃 | [
-            **PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
-| 도구 설명 | [
-            **FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
-| 상황에 맞는 메뉴 | [
-            **PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| 대화 상자 | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| 플라이아웃 | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| 도구 설명 | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| 상황에 맞는 메뉴 | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | 명령 모음 | [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.edgeuithemetransition.edgeuithemetransition) |
 | 작업 창 또는 가장자리 기반 패널 | [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |
 | 모든 UI 컨테이너의 콘텐츠 | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
-| 컨트롤 대상 또는 다른 어떤 애니메이션도 적용되지 않는 경우 | [
-            **FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+| 컨트롤 대상 또는 다른 어떤 애니메이션도 적용되지 않는 경우 | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 
  
 
@@ -205,8 +192,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 </ItemsControl>
 ```
 
-[
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)의 하위 직사각형이 차례로 화면으로 전환되는데, 직사각형 각각에 이 애니메이션을 적용하여 한꺼번에 전환되는 것보다 큰 시각적인 즐거움을 선사합니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)의 하위 직사각형이 차례로 화면으로 전환되는데, 직사각형 각각에 이 애니메이션을 적용하여 한꺼번에 전환되는 것보다 큰 시각적인 즐거움을 선사합니다.
 
 다음은 이 애니메이션을 보여 주는 동영상입니다.
 
@@ -295,11 +281,9 @@ UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매
 
 | API | 설명 |
 |-----|-------------|
-| [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) | [
-            **프레임**](https://msdn.microsoft.com/library/windows/apps/br242682)에서 페이지 탐색에 Windows 퍼스낼리티 애니메이션을 제공합니다. |
+| [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) | [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682)에서 페이지 탐색에 Windows 퍼스낼리티 애니메이션을 제공합니다. |
 | [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) | 컨트롤에서 하위 개체나 콘텐츠를 추가하거나 삭제할 때 애니메이션 전환 동작을 제공합니다. 일반적으로 컨트롤은 항목 컨테이너입니다. |
-| [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103) | 컨트롤의 콘텐츠가 바뀔 때 애니메이션 전환 동작을 제공합니다. [
-            **AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047)에 추가하여 이 API를 적용할 수 있습니다. |
+| [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103) | 컨트롤의 콘텐츠가 바뀔 때 애니메이션 전환 동작을 제공합니다. [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047)에 추가하여 이 API를 적용할 수 있습니다. |
 | [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) | 작은 가장자리 UI 전환에 애니메이션 전환 동작을 제공합니다. |
 | [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288) | 컨트롤이 처음으로 나타날 때 애니메이션 전환 동작을 제공합니다. |
 | [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) | 패널(큰 가장자리 UI) UI 전환에 애니메이션 전환 동작을 제공합니다. |
@@ -353,8 +337,7 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 전환 애니메이션과 달리, 테마 애니메이션에는 자동으로 실행되는 기본 제공 트리거(전환)가 없습니다. XAML에서 정의할 때 테마 애니메이션을 포함하려면 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 사용해야 합니다. 애니메이션의 기본 동작을 변경할 수도 있습니다. 예를 들어 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302)에서 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 시간 값을 늘려 페이드 아웃의 속도를 늦출 수 있습니다.
 
-**참고** 기본 애니메이션 기술을 보여 주기 위해 앱 코드를 사용해 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출하여 애니메이션을 시작합니다. [
-            **Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx)**Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
+**참고** 기본 애니메이션 기술을 보여 주기 위해 앱 코드를 사용해 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 메서드를 호출하여 애니메이션을 시작합니다. [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx)**Storyboard** 메서드를 사용하여 **Storyboard** 애니메이션이 실행되는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
 
  
 
@@ -372,10 +355,8 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 | [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) | 컨트롤이 나타날 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
 | [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391) | 컨트롤이 닫히거나 제거될 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
 | [**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) | 다시 배치되는 개체를 위한 미리 구성된 애니메이션 |
-| [**SplitCloseThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210454) | [
-            **ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 숨기는 미리 구성된 애니메이션입니다. |
-| [**SplitOpenThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210472) | [
-            **ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 표시하는 미리 구성된 애니메이션입니다. |
+| [**SplitCloseThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210454) | [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 숨기는 미리 구성된 애니메이션입니다. |
+| [**SplitOpenThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210472) | [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 표시하는 미리 구성된 애니메이션입니다. |
 | [**DrillInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | 사용자가 논리적 계층 구조에서 앞으로 이동할 때(예: 마스터 페이지에서 세부 정보 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
 | [**DrillOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | 사용자가 논리적 계층 구조에서 뒤로 이동할 때(예: 세부 정보 페이지에서 마스터 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
 

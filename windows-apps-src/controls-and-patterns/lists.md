@@ -5,8 +5,8 @@ title: "목록"
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 ---
 # 목록
@@ -22,9 +22,9 @@ ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
 
 ## 중요 API
 
--   [**ListView 클래스 **](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**GridView 클래스 **](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**ComboBox 클래스 **](https://msdn.microsoft.com/library/windows/apps/br209348)
+-   [**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)
+-   [**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)
+-   [**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 ## 목록 보기
@@ -85,33 +85,37 @@ ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
 
 ## 드롭다운 목록
 
-콤보 상자라고도 하는 드롭다운 목록은 압축 상태로 시작되어 선택 가능한 항목의 목록을 표시하도록 확장됩니다. 드롭다운 목록은 단일 선택 또는 다중 선택을 지원합니다. 선택한 항목은 항상 표시되며, 표시되지 않은 항목은 선택한 항목을 탭하여 보기로 가져올 수 있습니다.
+콤보 상자라고도 하는 드롭다운 목록은 압축 상태로 시작되어 선택 가능한 항목의 목록을 표시하도록 확장됩니다. 선택한 항목은 항상 표시되며, 표시되지 않은 항목은 사용자가 콤보 상자를 탭하여 확장하면 보기로 가져올 수 있습니다.
 
 ### 올바른 컨트롤인가요?
 
 -   드롭다운 목록을 사용하여 사용자가 한 줄의 텍스트로 적절하게 나타낼 수 있는 일련의 항목에서 단일 값을 선택할 수 있도록 합니다.
--   여러 줄의 텍스트나 이미지가 포함된 항목을 표시하려면 드롭다운 대신 목록 또는 그리드 보기를 사용합니다.
+-   여러 줄의 텍스트나 이미지가 포함된 항목을 표시하려면 콤보 상자 대신 목록 또는 그리드 보기를 사용합니다.
 -   항목이 4개 이하이면 [라디오 단추](radio-button.md)(한 항목만 선택할 수 있는 경우) 또는 [확인란](checkbox.md)(여러 항목을 선택할 수 있는 경우)을 사용합니다.
--   선택 항목이 앱 흐름에서 두 번째로 중요한 경우 드롭다운 목록을 사용합니다. 대부분의 상황에서 대부분의 사용자에게 기본 옵션이 권장되는 경우 목록 상자를 사용하여 모든 항목을 표시하면 필요 이상으로 옵션에 주의를 집중시킬 수 있습니다. 드롭다운 목록을 사용하여 공간을 절약하고 주의 분산을 최소화할 수 있습니다.
+-   선택 항목이 앱 흐름에서 두 번째로 중요한 경우 콤보 상자를 사용합니다. 대부분의 상황에서 대부분의 사용자에게 기본 옵션이 권장되는 경우 목록 보기를 사용하여 모든 항목을 표시하면 필요 이상으로 옵션에 주의를 집중시킬 수 있습니다. 콤보 상자를 사용하여 공간을 절약하고 주의 분산을 최소화할 수 있습니다.
 
-### 예제
+### 예
 
-압축 상태의 드롭다운 목록은 헤더를 표시할 수 있습니다.
+압축 상태의 콤보 상자는 헤더를 표시할 수 있습니다.
 
 ![압축 상태의 드롭다운 목록의 예](images/combo_box_collapsed.png)
 
-드롭다운 목록은 더 긴 문자열 길이를 지원하도록 확장되지만 읽기 어려운 너무 긴 문자열은 피해야 합니다.
+콤보 상자는 더 긴 문자열 길이를 지원하도록 확장되지만 읽기 어려운 너무 긴 문자열은 피해야 합니다.
 
 ![텍스트 문자열이 긴 드롭다운 목록의 예](images/combo_box_listitemstate.png)
 
-드롭다운 목록에 있는 모음이 긴 경우 이를 수용할 수 있는 스크롤 막대가 표시됩니다. 목록의 항목을 논리적으로 그룹화합니다.
+콤보 상자에 있는 컬렉션이 긴 경우 이를 수용할 수 있는 스크롤 막대가 표시됩니다. 목록의 항목을 논리적으로 그룹화합니다.
 
 ![드롭다운 목록에 있는 스크롤 막대의 예](images/combo_box_scroll.png)
 
 ### 권장 사항
 
--   드롭다운 목록 항목의 텍스트 내용을 한 줄로 제한합니다.
--   가장 논리적인 순서로 드롭다운 목록의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치하며 항목을 사전순으로 정렬합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
+-   콤보 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다.
+-   가장 논리적인 순서로 콤보 상자의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
+
+### 텍스트 검색
+
+콤보 상자는 자동으로 컬렉션 내의 검색을 지원합니다. 사용자가 열리거나 닫힌 콤보 상자에 포커스가 있는 상태에서 실제 키보드를 통해 문자를 입력하면 사용자 문자열과 일치하는 항목이 표시됩니다. 이 기능은 긴 목록을 탐색할 때 특히 유용합니다. 예를 들어 상태 목록이 포함된 드롭다운을 조작하는 경우 사용자는 빠른 선택을 위해 "w" 키를 눌러 "워싱턴"을 표시할 수 있습니다. 
 
 ## 목록 상자
 
@@ -188,11 +192,9 @@ ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
 - [**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**ListBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br242868)
-- [콤보 상자 및 목록 상자 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

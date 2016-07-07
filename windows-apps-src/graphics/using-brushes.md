@@ -16,8 +16,7 @@ ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
 
 -   [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
-[
-            **Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
+[**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
 
 ## 브러시 소개
 
@@ -25,13 +24,11 @@ ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
 
 ## 단색 브러시
 
-[
-            **SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)는 빨간색 또는 파란색 같은 단일 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)로 영역을 칠합니다. 가장 기본 브러시입니다. XAML에서는 미리 정의된 색 이름, 16진수 색 값, 속성 요소 구문의 세 가지 방법으로 **SolidColorBrush**와 지정 단색을 정의합니다.
+[**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)는 빨간색 또는 파란색 같은 단일 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)로 영역을 칠합니다. 가장 기본 브러시입니다. XAML에서는 미리 정의된 색 이름, 16진수 색 값, 속성 요소 구문의 세 가지 방법으로 **SolidColorBrush**와 지정 단색을 정의합니다.
 
 ### 미리 정의된 색 이름
 
-[
-            **Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx), [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 구조로 변환합니다. 이름이 지정된 256개 색은 CSS3(CSS 스타일시트, Level 3) 사양의 *X11* 색 이름을 기반으로 하므로 이전에 웹 개발 또는 디자인 경험이 있는 경우 이름이 지정된 색 목록을 이미 알고 있을 수도 있습니다.
+[**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx), [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 구조로 변환합니다. 이름이 지정된 256개 색은 CSS3(CSS 스타일시트, Level 3) 사양의 *X11* 색 이름을 기반으로 하므로 이전에 웹 개발 또는 디자인 경험이 있는 경우 이름이 지정된 색 목록을 이미 알고 있을 수도 있습니다.
 
 다음은 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성을 미리 정의된 색 [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx)로 설정하는 예입니다.
 
@@ -73,17 +70,13 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ## <span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>선형 그라데이션 브러시
 
-[
-            **LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)는 선을 따라 정의된 그라데이션으로 영역을 칠합니다. 이 선을 *그라데이션 축*이라고 합니다. [
-            **GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 개체를 사용하여 그라데이션 축을 따라 그라데이션의 색과 위치를 지정합니다. 기본적으로 그라데이션 축은 브러시가 칠하는 영역의 왼쪽 위에서 오른쪽 아래로 실행되어 대각선 음영을 생성합니다.
+[**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)는 선을 따라 정의된 그라데이션으로 영역을 칠합니다. 이 선을 *그라데이션 축*이라고 합니다. [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 개체를 사용하여 그라데이션 축을 따라 그라데이션의 색과 위치를 지정합니다. 기본적으로 그라데이션 축은 브러시가 칠하는 영역의 왼쪽 위에서 오른쪽 아래로 실행되어 대각선 음영을 생성합니다.
 
-[
-            **GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)은 그라데이션 브러시의 기본 구성 요소입니다. 그라데이션 중지점은 칠하는 영역에 브러시를 적용할 때 그라데이션 축의 [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx)에 표시되는 브러시 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx)를 지정합니다.
+[**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)은 그라데이션 브러시의 기본 구성 요소입니다. 그라데이션 중지점은 칠하는 영역에 브러시를 적용할 때 그라데이션 축의 [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx)에 표시되는 브러시 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx)를 지정합니다.
 
 그라데이션 중지점의 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx) 속성은 그라데이션 중지점의 색을 지정합니다. 미리 정의된 색 이름을 사용하거나 16진수 **ARGB** 값을 지정하여 색을 설정할 수 있습니다.
 
-[
-            **GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)의 [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx) 속성은 그라데이션 축에서 각 **GradientStop**의 위치를 지정합니다. **Offset**은 0에서 1까지의 **double**입니다. **Offset**이 0이면 그라데이션 축의 시작 부분, 즉 [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) 근처에 **GradientStop**이 배치됩니다. **Offset**이 1이면 [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx)에 **GradientStop**이 배치됩니다. 유용한 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)에는 최소한 두 개의 **GradientStop** 값이 있어야 합니다. 이 경우 각 **GradientStop**은 다른 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx)를 지정해야 하며 0에서 1 사이의 다른 **Offset**을 가져야 합니다.
+[**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)의 [**Offset**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.offset.aspx) 속성은 그라데이션 축에서 각 **GradientStop**의 위치를 지정합니다. **Offset**은 0에서 1까지의 **double**입니다. **Offset**이 0이면 그라데이션 축의 시작 부분, 즉 [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) 근처에 **GradientStop**이 배치됩니다. **Offset**이 1이면 [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx)에 **GradientStop**이 배치됩니다. 유용한 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)에는 최소한 두 개의 **GradientStop** 값이 있어야 합니다. 이 경우 각 **GradientStop**은 다른 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.gradientstop.color.aspx)를 지정해야 하며 0에서 1 사이의 다른 **Offset**을 가져야 합니다.
 
 다음 예제에서는 4가지 색의 선형 그라데이션을 만들고 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 칠하는 데 사용합니다.
 
@@ -117,11 +110,9 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ## <span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>이미지 브러시
 
-[
-            **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 이미지를 사용하여 영역을 그립니다. 그릴 이미지는 이미지 파일 원본에서 제공됩니다. 로드할 이미지의 경로를 사용하여 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107) 속성을 설정합니다. 일반적으로 이미지 원본은 앱 리소스에 포함된 **Content** 항목에서 제공됩니다.
+[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 이미지를 사용하여 영역을 그립니다. 그릴 이미지는 이미지 파일 원본에서 제공됩니다. 로드할 이미지의 경로를 사용하여 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107) 속성을 설정합니다. 일반적으로 이미지 원본은 앱 리소스에 포함된 **Content** 항목에서 제공됩니다.
 
-기본적으로 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 칠해진 영역을 완전히 채우도록 이미지를 확장하며, 칠해진 영역의 가로 세로 비율이 해당 이미지와 다른 경우 이미지를 변형할 수도 있습니다. [
-            **Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242975) 속성을 기본값 **Fill**에서 변경하고 **None**, **Uniform** 또는 **UniformToFill**로 설정하여 이 동작을 변경할 수 있습니다.
+기본적으로 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 칠해진 영역을 완전히 채우도록 이미지를 확장하며, 칠해진 영역의 가로 세로 비율이 해당 이미지와 다른 경우 이미지를 변형할 수도 있습니다. [**Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242975) 속성을 기본값 **Fill**에서 변경하고 **None**, **Uniform** 또는 **UniformToFill**로 설정하여 이 동작을 변경할 수 있습니다.
 
 다음 예제에서는 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)를 만들고 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107)를 licorice.jpg라는 이미지로 설정합니다. 이 이미지는 앱에 리소스로 포함되어야 합니다. 그런 다음 **ImageBrush**가 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343) 셰이프로 정의된 영역을 칠합니다.
 
@@ -137,8 +128,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ![렌더링된 ImageBrush](images/brushes-imagebrush.jpg)
 
-[
-            **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) 및 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 여러 가능한 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382)를 참조하세요.
+[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) 및 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 여러 가능한 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382)를 참조하세요.
 
 ## 브러시 및 텍스트
 
@@ -148,8 +138,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ## WebViewBrush
 
-[
-            **WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)는 일반적으로 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤에 표시되는 콘텐츠에 액세스할 수 있는 특수 유형의 브러시입니다. 사각형 **WebView** 컨트롤 영역에 콘텐츠를 렌더링하는 대신 **WebViewBrush**는 렌더 화면에 대한 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 유형 속성이 있는 다른 요소에 해당 콘텐츠를 그립니다. **WebViewBrush**는 모든 브러시 시나리오에 적합하지는 않지만 **WebView** 전환에 유용합니다. 자세한 내용은 **WebViewBrush**를 참조하세요.
+[**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)는 일반적으로 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤에 표시되는 콘텐츠에 액세스할 수 있는 특수 유형의 브러시입니다. 사각형 **WebView** 컨트롤 영역에 콘텐츠를 렌더링하는 대신 **WebViewBrush**는 렌더 화면에 대한 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 유형 속성이 있는 다른 요소에 해당 콘텐츠를 그립니다. **WebViewBrush**는 모든 브러시 시나리오에 적합하지는 않지만 **WebView** 전환에 유용합니다. 자세한 내용은 **WebViewBrush**를 참조하세요.
 
 ## XAML 리소스인 브러시
 
@@ -173,12 +162,10 @@ Dim blueBrush as SolidColorBrush = New SolidColorBrush(Windows.UI.Colors.Blue)
 blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 ```
 
-[
-            **WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 및 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)의 경우 기본 생성자를 사용한 다음 다른 API를 호출한 후 해당 브러시를 UI 속성에 사용합니다.
+[**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 및 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)의 경우 기본 생성자를 사용한 다음 다른 API를 호출한 후 해당 브러시를 UI 속성에 사용합니다.
 
 -   코드를 사용하여 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)를 정의하면 [**ImageSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx)에 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)(URI가 아님)가 필요합니다. 소스가 스트림이면 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://msdn.microsoft.com/en-us/library/windows/apps/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다.
--   [
-            **WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)의 경우 최근에 [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx) 속성을 다시 설정하거나 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702)의 콘텐츠가 코드와 함께 변경된 경우 [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx)를 호출해야 할 수 있습니다.
+-   [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)의 경우 최근에 [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx) 속성을 다시 설정하거나 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702)의 콘텐츠가 코드와 함께 변경된 경우 [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx)를 호출해야 할 수 있습니다.
 
 코드 예제는 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 및 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)에 대한 참조 페이지를 참조하세요.
  
@@ -191,6 +178,6 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

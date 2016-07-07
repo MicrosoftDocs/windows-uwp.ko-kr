@@ -392,8 +392,7 @@ float4 main(sPSInput input) : SV_TARGET
     );
 ```
 
-**m\_inputLayout** 멤버 변수는 [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) 개체입니다. 입력 레이아웃 개체는 IA(입력 어셈블러) 단계의 입력 상태를 캡슐화합니다. IA 단계의 작업 중 하나는 시스템에서 생성된 값(*의미 체계*라고도 함)을 사용하여 아직 처리되지 않은 기본 요소 또는 꼭짓점만 처리하도록 하여 셰이더를 더 효율적으로 만드는 것입니다. [
-            **ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) 메서드를 사용하여 입력 요소 설명 배열에서 입력 레이아웃을 만듭니다. 배열에는 하나 이상의 입력 요소가 포함됩니다. 각 입력 요소는 단일 꼭짓점 버퍼의 꼭짓점 데이터 요소 1개에 대해 설명합니다. 전체 입력 요소 설명 집합은 IA 단계에 바인딩할 모든 꼭짓점 버퍼의 꼭짓점 데이터 요소를 모두 설명합니다. 다음 예제에서는 Marble Maze에 사용되는 레이아웃 설명을 보여 줍니다. 레이아웃 설명은 꼭짓점 데이터 요소 4개가 포함된 꼭짓점 버퍼를 설명합니다. 배열에 포함된 각 항목의 중요한 부분은 의미 체계 이름, 데이터 형식 및 바이트 오프셋입니다. 예를 들어 **POSITION** 요소는 개체 공간의 꼭짓점 위치를 지정합니다. 바이트 오프셋 0에서 시작하고 부동 소수점 구성 요소 3개(총 12바이트)를 포함합니다. **NORMAL** 요소는 법선 벡터를 지정합니다. 레이아웃에서 **POSITION** 바로 뒤에 표시되며 12바이트가 필요하기 때문에 바이트 오프셋 12에서 시작됩니다. **NORMAL** 요소는 4개 구성 요소로 이루어진 32비트 부호 없는 정수를 포함합니다.
+**m\_inputLayout** 멤버 변수는 [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) 개체입니다. 입력 레이아웃 개체는 IA(입력 어셈블러) 단계의 입력 상태를 캡슐화합니다. IA 단계의 작업 중 하나는 시스템에서 생성된 값(*의미 체계*라고도 함)을 사용하여 아직 처리되지 않은 기본 요소 또는 꼭짓점만 처리하도록 하여 셰이더를 더 효율적으로 만드는 것입니다. [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) 메서드를 사용하여 입력 요소 설명 배열에서 입력 레이아웃을 만듭니다. 배열에는 하나 이상의 입력 요소가 포함됩니다. 각 입력 요소는 단일 꼭짓점 버퍼의 꼭짓점 데이터 요소 1개에 대해 설명합니다. 전체 입력 요소 설명 집합은 IA 단계에 바인딩할 모든 꼭짓점 버퍼의 꼭짓점 데이터 요소를 모두 설명합니다. 다음 예제에서는 Marble Maze에 사용되는 레이아웃 설명을 보여 줍니다. 레이아웃 설명은 꼭짓점 데이터 요소 4개가 포함된 꼭짓점 버퍼를 설명합니다. 배열에 포함된 각 항목의 중요한 부분은 의미 체계 이름, 데이터 형식 및 바이트 오프셋입니다. 예를 들어 **POSITION** 요소는 개체 공간의 꼭짓점 위치를 지정합니다. 바이트 오프셋 0에서 시작하고 부동 소수점 구성 요소 3개(총 12바이트)를 포함합니다. **NORMAL** 요소는 법선 벡터를 지정합니다. 레이아웃에서 **POSITION** 바로 뒤에 표시되며 12바이트가 필요하기 때문에 바이트 오프셋 12에서 시작됩니다. **NORMAL** 요소는 4개 구성 요소로 이루어진 32비트 부호 없는 정수를 포함합니다.
 
 ```cpp
 D3D11_INPUT_ELEMENT_DESC layoutDesc[] = 
@@ -722,9 +721,7 @@ m_d3dContext->ClearDepthStencilView(
     );
 ```
 
-[
-            **ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) 인터페이스는 Direct3D 10 이상에서 제공되는 텍스처 뷰 메커니즘을 지원합니다. 텍스처 뷰에 대한 자세한 내용은 [텍스처 뷰(Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128)를 참조하세요. [
-            **OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) 메서드는 Direct3D 파이프라인의 출력 병합 단계를 준비합니다. 출력 병합 단계에 대한 자세한 내용은 [출력 병합 단계](https://msdn.microsoft.com/library/windows/desktop/bb205120)를 참조하세요.
+[**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) 및 [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) 인터페이스는 Direct3D 10 이상에서 제공되는 텍스처 뷰 메커니즘을 지원합니다. 텍스처 뷰에 대한 자세한 내용은 [텍스처 뷰(Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128)를 참조하세요. [**OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) 메서드는 Direct3D 파이프라인의 출력 병합 단계를 준비합니다. 출력 병합 단계에 대한 자세한 내용은 [출력 병합 단계](https://msdn.microsoft.com/library/windows/desktop/bb205120)를 참조하세요.
 
 ### 꼭짓점 및 픽셀 셰이더 준비
 
@@ -869,11 +866,9 @@ HRESULT hr = m_swapChain->Present1(1, 0, &parameters);
 
 이 예제에서 **m\_swapChain**은 [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 개체입니다. 이 개체의 초기화는 이 문서의 [Direct3D 및 Direct2D 초기화](#initializing) 섹션에서 설명합니다.
 
-[
-            **IDXGISwapChain1::Present**](https://msdn.microsoft.com/library/windows/desktop/hh446797)의 첫 번째 매개 변수인 *SyncInterval*은 프레임을 표시하기 전에 기다릴 수직 소거 수를 지정합니다. Marble Maze는 다음 수직 소거까지 기다리도록 1을 지정합니다. 수직 소거는 한 프레임이 모니터에 그리기를 완료한 후 다음 프레임이 시작되기까지의 시간입니다.
+[**IDXGISwapChain1::Present**](https://msdn.microsoft.com/library/windows/desktop/hh446797)의 첫 번째 매개 변수인 *SyncInterval*은 프레임을 표시하기 전에 기다릴 수직 소거 수를 지정합니다. Marble Maze는 다음 수직 소거까지 기다리도록 1을 지정합니다. 수직 소거는 한 프레임이 모니터에 그리기를 완료한 후 다음 프레임이 시작되기까지의 시간입니다.
 
-[
-            **IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 메서드는 장치가 제거되었거나 다른 방식으로 실패했음을 나타내는 오류 코드를 반환합니다. 이 경우 Marble Maze는 장치를 다시 초기화합니다.
+[**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 메서드는 장치가 제거되었거나 다른 방식으로 실패했음을 나타내는 오류 코드를 반환합니다. 이 경우 Marble Maze는 장치를 다시 초기화합니다.
 
 ```cpp
 // Reinitialize the renderer if the device was disconnected  

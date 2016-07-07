@@ -24,8 +24,7 @@ ms.openlocfilehash: ff0d2cd86f8ba422db7a26565c52293a3e21a018
 
 ## 메일 작성 대화 상자 시작
 
-메일 작성 대화 상자에서 새 [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) 개체를 만들고 미리 채울 데이터를 설정합니다. [
-            **ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269)를 호출하여 대화 상자를 표시합니다.
+메일 작성 대화 상자에서 새 [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/Dn631270) 개체를 만들고 미리 채울 데이터를 설정합니다. [**ShowComposeNewEmailAsync**](https://msdn.microsoft.com/library/windows/apps/Dn631269)를 호출하여 대화 상자를 표시합니다.
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient, 
@@ -76,6 +75,6 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

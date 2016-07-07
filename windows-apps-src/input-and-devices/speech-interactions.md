@@ -242,6 +242,6 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

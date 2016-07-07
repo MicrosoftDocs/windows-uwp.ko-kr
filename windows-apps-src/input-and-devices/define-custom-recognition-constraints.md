@@ -27,17 +27,13 @@ ms.openlocfilehash: 75e7367ee13357d3463213ca7d8f1ff37c4f0b77
 ## 제약 조건 추가
 
 
-[
-            **SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
+[**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
 
 여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. 음성 명령 제약 조건에 대한 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](launch-a-foreground-app-with-voice-commands-in-cortana.md)을 참조하세요.
 
--   [
-            **SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)—미리 정의된 문법(받아쓰기 또는 웹 검색)을 기반으로 한 제약 조건입니다.
--   [
-            **SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)—단어 또는 구문 목록을 기반으로 한 제약 조건입니다.
--   [
-            **SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)—SRGS(음성 인식 문법 사양) 파일에 정의된 제약 조건입니다.
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)—미리 정의된 문법(받아쓰기 또는 웹 검색)을 기반으로 한 제약 조건입니다.
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)—단어 또는 구문 목록을 기반으로 한 제약 조건입니다.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)—SRGS(음성 인식 문법 사양) 파일에 정의된 제약 조건입니다.
 
 각 음성 인식기에 하나의 제약 조건 컬렉션을 사용할 수 있습니다. 다음과 같은 제약 조건 조합만 유효합니다.
 
@@ -244,6 +240,6 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

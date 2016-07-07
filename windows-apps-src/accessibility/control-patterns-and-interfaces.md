@@ -31,8 +31,7 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | 시각적으로 확장하여 더 많은 내용을 표시하고 축소하여 내용을 숨기는 컨트롤을 지원하는 데 사용됩니다. |
 | **그리드** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | 크기 조정, 지정한 셀로 이동 등의 그리드 기능을 지원하는 컨트롤에 사용됩니다. 그리드 자체는 레이아웃을 제공하지만 컨트롤이 아니기 때문에 이 패턴을 구현하지 않습니다. |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | 그리드 내에 셀이 있는 컨트롤에 사용됩니다. |
-| **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | [
-            **Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 등 호출할 수 있는 컨트롤에 사용됩니다. |
+| **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 등 호출할 수 있는 컨트롤에 사용됩니다. |
 | **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | 가상화된 목록 등 응용 프로그램이 컨테이너에서 요소를 찾을 수 있게 합니다. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | 동일한 정보, 데이터 또는 자식 세트의 여러 표현을 전환할 수 있는 컨트롤에 사용됩니다. |
 | **ObjectModel** | [**IObjectModelProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251815) | 포인터를 문서의 기본 개체 모델에 표시하는 데 사용됩니다. |
@@ -47,13 +46,10 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | UI 자동화 클라이언트 앱이 마우스 또는 키보드 입력을 특정 UI 요소로 리디렉션하도록 합니다. |
 | **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | 그리드 및 헤더 정보가 있는 컨트롤에 사용됩니다. 예를 들어 표 형식 일정 컨트롤입니다. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | 표의 항목에 사용됩니다. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | 텍스트 정보를 표시하는 편집 컨트롤 및 문서에 사용됩니다. [
-            **ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) 및 [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2)을(를) 참조하세요. |
+| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | 텍스트 정보를 표시하는 편집 컨트롤 및 문서에 사용됩니다. [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) 및 [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2)을(를) 참조하세요. |
 | **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | **Text** 컨트롤 패턴을 지원하는 요소의 가장 가까운 상위 항목에 액세스하는 데 사용됩니다. |
 | **TextEdit** | 사용 가능한 관리되는 클래스가 없음 | 예를 들어 자동 고침을 수행하거나 IME(입력기)를 통한 입력 작성을 지원하는 컨트롤과 같이, 텍스트를 수정하는 컨트롤에 대한 액세스를 제공합니다. |
-| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | [
-            **ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider)을(를) 구현하는 텍스트 컨테이너의 연속 텍스트 범위에 대한 액세스를 제공합니다. [
-            **ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2)을(를) 참조하세요. |
+| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider)을(를) 구현하는 텍스트 컨테이너의 연속 텍스트 범위에 대한 액세스를 제공합니다. [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2)을(를) 참조하세요. |
 | **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | 상태를 전환할 수 있는 컨트롤에 사용됩니다. 예를 들어 선택할 수 있는 메뉴 항목 및 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316)입니다. |
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | 크기 조정, 이동 및 회전할 수 있는 컨트롤에 사용됩니다. 대체로 Transform 컨트롤 패턴과 디자이너, 양식, 그래픽 편집기 및 그리기 응용 프로그램에서 사용됩니다. |
 | **값** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | 클라이언트가 값 범위를 지원하지 않는 컨트롤의 값을 가져오거나 설정할 수 있게 합니다. |
@@ -73,6 +69,6 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

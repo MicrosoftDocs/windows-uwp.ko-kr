@@ -78,11 +78,9 @@ ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
 **UI**
 
 -   [XAML 태그를 최적화](optimize-xaml-loading.md)하여 앱 UI의 각 페이지(특히 초기 페이지)에 대한 구문 분석 및 로드 시간과 메모리 효율성을 극대화합니다. nutshell에서는 필요할 때까지 UI 및 코드 로드를 지연합니다.
--   [
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 경우 모든 항목을 같은 크기로 설정하고 최대한 많은 [ListView 및 GridView 최적화 기술](optimize-gridview-and-listview.md)을 사용합니다.
+-   [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 경우 모든 항목을 같은 크기로 설정하고 최대한 많은 [ListView 및 GridView 최적화 기술](optimize-gridview-and-listview.md)을 사용합니다.
 -   프레임워크가 코드로 작성하는 대신 청크로 로드하고 다시 사용할 수 있는 태그 형식으로 UI를 선언합니다.
--   사용자가 필요로 할 때까지 UI 요소를 축소합니다. [
-            **Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 참조하세요.
+-   사용자가 필요로 할 때까지 UI 요소를 축소합니다. [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 참조하세요.
 -   테마 전환 및 애니메이션이 스토리보드 애니메이션보다 좋습니다. 자세한 내용은 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/Mt187350)를 참조하세요. 스토리보드 애니메이션은 화면을 지속적으로 업데이트해야 하고 CPU 및 그래픽 파이프라인을 활성 상태로 유지해야 합니다. 배터리를 절약하기 위해 사용자가 앱을 조작하지 않는 경우 애니메이션을 실행하지 마세요.
 -   로드하는 이미지는 [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) 메서드를 사용하여 이미지를 표시할 뷰에 적합한 크기로 로드되어야 합니다.
 
@@ -97,8 +95,7 @@ ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
 **데이터 액세스**
 
 -   가능한 경우 콘텐츠를 프리페치합니다. 자동 프리페치의 경우 [**ContentPrefetcher**](https://msdn.microsoft.com/library/windows/apps/Dn279042) 클래스를 참조하세요. 수동 프리페치의 경우 [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/BR224847) 네임스페이스 및 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Hh700517) 클래스를 참조하세요.
--   가능한 경우 액세스 비용이 많이 드는 콘텐츠를 캐시합니다. [
-            **LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) 및 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622) 속성을 참조하세요.
+-   가능한 경우 액세스 비용이 많이 드는 콘텐츠를 캐시합니다. [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) 및 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622) 속성을 참조하세요.
 -   캐시 누락 시 앱이 여전이 콘텐츠를 로드하고 있음을 나타내는 자리 표시자 UI를 가급적 빨리 표시합니다. 사용자에게 방해가 되지 않은 방법으로 자리 표시자 콘텐츠에서 라이브 콘텐츠로 전환합니다. 예를 들어 앱이 라이브 콘텐츠를 로드할 때는 사용자 손가락 또는 마우스 포인터 아래의 콘텐츠 위치를 변경하지 않습니다.
 
 **앱 시작 및 다시 시작**
@@ -108,8 +105,7 @@ ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
 
 **적응 UI 및 방향**
 
--   [
-            **VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) 클래스를 사용합니다.
+-   [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) 클래스를 사용합니다.
 -   필수 작업만 즉시 완료하고 부하가 큰 앱 작업을 나중까지 지연합니다. 앱이 200~800밀리초 내에 작업을 완료하지 못하면 앱의 UI가 잘린 상태로 표시됩니다.
 
 성능 관련 디자인을 사용하여 앱 코딩을 시작할 수 있습니다.
@@ -118,8 +114,7 @@ ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
 
 코딩할 때 앱이 실행되는 동안 특정 지점에서 메시지 및 이벤트를 기록하는 코드를 추가합니다. 나중에 앱을 테스트할 때 Windows Performance Recorder 및 Windows Performance Analyzer(둘 다 [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)에 포함되어 있음)와 같은 프로파일링 도구를 사용하여 앱의 성능에 대한 보고서를 만들고 볼 수 있습니다. 이 보고서에서 이러한 메시지 및 이벤트를 검색하면 보고서 결과를 보다 쉽게 분석할 수 있습니다.
 
-UWP(유니버설 Windows 플랫폼)는 풍부한 이벤트 로깅 및 추적 솔루션을 함께 제공하는 로깅 API([ETW(Windows용 이벤트 추적)](https://msdn.microsoft.com/library/windows/desktop/Bb968803)에서 지원)를 제공합니다. [
-            **Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/BR206677) 네임스페이스의 일부인 API에는 [**FileLoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264138), [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/Dn264195), [**LoggingChannel**](https://msdn.microsoft.com/library/windows/apps/Dn264202) 및 [**LoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264217) 클래스가 포함됩니다.
+UWP(유니버설 Windows 플랫폼)는 풍부한 이벤트 로깅 및 추적 솔루션을 함께 제공하는 로깅 API([ETW(Windows용 이벤트 추적)](https://msdn.microsoft.com/library/windows/desktop/Bb968803)에서 지원)를 제공합니다. [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/BR206677) 네임스페이스의 일부인 API에는 [**FileLoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264138), [**LoggingActivity**](https://msdn.microsoft.com/library/windows/apps/Dn264195), [**LoggingChannel**](https://msdn.microsoft.com/library/windows/apps/Dn264202) 및 [**LoggingSession**](https://msdn.microsoft.com/library/windows/apps/Dn264217) 클래스가 포함됩니다.
 
 앱이 실행되는 동안 특정 지점에서 보고서에 메시지를 로깅하려면 다음과 같이 **LoggingChannel** 개체를 만든 다음 개체의 [**LogMessage**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.logmessage.aspx) 메서드를 호출합니다.
 

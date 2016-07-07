@@ -40,8 +40,7 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 
 ## 템플릿 구조
 
-[
-            **ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx)은 기본 스타일의 일부입니다. 전송 컨트롤의 기본 스타일은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스 참조 페이지에 나와 있습니다. 이 기본 스타일을 프로젝트에 복사하여 수정할 수 있습니다. ControlTemplate은 다른 XAML 컨트롤 템플릿과 비슷하게 여러 섹션으로 구분됩니다.
+[**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx)은 기본 스타일의 일부입니다. 전송 컨트롤의 기본 스타일은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스 참조 페이지에 나와 있습니다. 이 기본 스타일을 프로젝트에 복사하여 수정할 수 있습니다. ControlTemplate은 다른 XAML 컨트롤 템플릿과 비슷하게 여러 섹션으로 구분됩니다.
 - 템플릿의 첫 번째 섹션에는 [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx)의 여러 구성 요소에 대한 MediaTransportControls 정의가 포함되어 있습니다.
 - 두 번째 섹션에서는 MediaTransportControls에서 사용하는 다양한 시각적 상태를 정의합니다.
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
@@ -49,10 +48,8 @@ MediaElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오와 �
 > **참고** &nbsp;&nbsp;템플릿을 수정하는 방법에 대한 자세한 내용은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다. 
-- [
-            **Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
-- [
-            **CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): 모든 단추를 포함합니다.
+- [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
+- [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): 모든 단추를 포함합니다.
 자세한 내용은 MediaTransportControls 참조 항목의 구조 섹션을 참조하세요. 
 
 ## 전송 컨트롤 사용자 지정
@@ -95,8 +92,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 {
 }
 ```
-3. [
-            **MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx)의 기본 스타일을 프로젝트의 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.resourcedictionary.aspx)로 복사합니다. 이는 수정하는 스타일 및 템플릿입니다.
+3. [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx)의 기본 스타일을 프로젝트의 [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.resourcedictionary.aspx)로 복사합니다. 이는 수정하는 스타일 및 템플릿입니다.
 (미디어 전송 컨트롤 샘플에서 "Themes"라는 새 폴더가 생성되고 generic.xaml이라는 ResourceDictionary 파일이 추가됩니다.
 4. 스타일의 [**TargetType**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.targettype.aspx)을 새 사용자 지정 컨트롤 유형으로 변경합니다. (샘플에서 TargetType이 `local:CustomMediaTransportControls`로 변경됩니다.)
 ```xaml
@@ -114,8 +110,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
     }
 }
 ```
-6. [
-            **MediaElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.aspx)를 XAML 태그에 추가하고 사용자 지정 전송 컨트롤을 여기에 추가합니다. 한 가지 주의할 점은 기본 단추를 숨기고 표시하고, 사용하지 않도록 설정하고, 사용하도록 설정하는 API는 사용자 지정된 템플릿에서 여전히 작동한다는 것입니다.
+6. [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.aspx)를 XAML 태그에 추가하고 사용자 지정 전송 컨트롤을 여기에 추가합니다. 한 가지 주의할 점은 기본 단추를 숨기고 표시하고, 사용하지 않도록 설정하고, 사용하도록 설정하는 API는 사용자 지정된 템플릿에서 여전히 작동한다는 것입니다.
 ```xaml
 <MediaElement Name="MediaElement1" AreTransportControlsEnabled="True" Source="video.mp4">
     <MediaElement.TransportControls>
@@ -143,8 +138,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 
 **오버플로 메뉴로 명령을 이동하려면**
 1. 컨트롤 템플릿에서 `MediaControlsCommandBar`라는 CommandBar 요소를 찾습니다.
-2. [
-            **SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) 섹션을 CommandBar에 대한 XAML에 추가합니다. 이 섹션을 [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx)의 닫는 태그 뒤에 넣습니다. 
+2. [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) 섹션을 CommandBar에 대한 XAML에 추가합니다. 이 섹션을 [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx)의 닫는 태그 뒤에 넣습니다. 
 ```xaml
 <CommandBar x:Name="MediaControlsCommandBar" ... >  
   <CommandBar.PrimaryCommands>
@@ -196,8 +190,7 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
     
     You can also customize the icon for the button. For more info, see the [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) reference.
 
-2. [
-            **OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 재정의에서, 템플릿의 단추를 가져와서 해당 [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트에 대한 처리기를 등록합니다. 이 코드는 `CustomMediaTransportControls` 클래스에 포함됩니다. 
+2. [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 재정의에서, 템플릿의 단추를 가져와서 해당 [**Click**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트에 대한 처리기를 등록합니다. 이 코드는 `CustomMediaTransportControls` 클래스에 포함됩니다. 
 ```csharp
 public sealed class CustomMediaTransportControls :  MediaTransportControls
 {
@@ -251,8 +244,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 
 MediaTransportControls의 "검색" 컨트롤은 [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) 요소에서 제공됩니다. 이 컨트롤을 사용자 지정할 수 있는 한 가지 방법은 검색 동작의 세분성을 변경하는 것입니다. 
 
-기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [
-            **MediaOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.mediaopened.aspx) 이벤트 처리기의 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaElement는 `MediaElement1`이라고 합니다.
+기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.mediaopened.aspx) 이벤트 처리기의 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaElement는 `MediaElement1`이라고 합니다.
 
 ```csharp
 private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)

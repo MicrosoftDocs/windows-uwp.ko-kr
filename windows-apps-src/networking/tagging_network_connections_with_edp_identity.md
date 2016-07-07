@@ -41,8 +41,7 @@ __참고__ Windows 10 버전 1511(빌드 10586) 이전에서는 EDP(엔터프라
 
 이 시나리오에서는 인식 메일 앱이 엔터프라이즈 사서함과 개인 사서함을 모두 혼합한 사서함 집합을 동기화합니다. 앱은 [**ProtectionPolicyManager.CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025)에 대한 호출에 사용자의 ID를 전달하여 보호된 스레드 컨텍스트를 만듭니다. 그러면 해당 ID를 사용하여 동일한 스레드에서 나중에 만든 모든 네트워크 연결에 태그가 지정되며 엔터프라이즈의 정책에 의해 액세스가 제어되는 엔터프라이즈 네트워크 리소스에 액세스할 수 있습니다.
 
-여기에서 "엔터프라이즈"는 사용자 ID가 속한 엔터프라이즈를 나타냅니다. [
-            **CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025)는 정책 적용과 관계없이 [**ThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706029) 개체를 반환합니다. 일반적으로 앱에서 혼합된 리소스를 처리하려는 경우 모든 ID에 대해 **CreateCurrentThreadNetworkContext**를 호출하도록 선택할 수 있습니다. 네트워크 리소스를 검색한 후 앱은 **ThreadNetworkContext**에서 **Dispose**를 호출하여 현재 스레드에서 모든 ID 태그를 지웁니다. 컨텍스트 개체를 처리하는 데 사용하는 패턴은 프로그래밍 언어에 따라 달라집니다.
+여기에서 "엔터프라이즈"는 사용자 ID가 속한 엔터프라이즈를 나타냅니다. [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025)는 정책 적용과 관계없이 [**ThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706029) 개체를 반환합니다. 일반적으로 앱에서 혼합된 리소스를 처리하려는 경우 모든 ID에 대해 **CreateCurrentThreadNetworkContext**를 호출하도록 선택할 수 있습니다. 네트워크 리소스를 검색한 후 앱은 **ThreadNetworkContext**에서 **Dispose**를 호출하여 현재 스레드에서 모든 ID 태그를 지웁니다. 컨텍스트 개체를 처리하는 데 사용하는 패턴은 프로그래밍 언어에 따라 달라집니다.
 
 ID를 알 수 없는 경우 앱은 [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027) API를 사용하여 리소스의 네트워크 주소에서 엔터프라이즈 정책 관리 ID를 쿼리할 수 있습니다.
 

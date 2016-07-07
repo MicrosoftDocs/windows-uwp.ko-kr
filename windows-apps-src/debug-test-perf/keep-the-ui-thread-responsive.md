@@ -27,8 +27,7 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 -   [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785)를 사용하여 요소를 지연 인스턴스화합니다.
 -   요청 시 프로그래밍 방식으로 트리에 요소를 삽입합니다.
 
-[
-            **CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)는 사용 중이지 않을 때 UI 스레드가 처리되도록 작업을 큐에 대기시킵니다.
+[**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)는 사용 중이지 않을 때 UI 스레드가 처리되도록 작업을 큐에 대기시킵니다.
 
 ## 비동기 API 사용
 

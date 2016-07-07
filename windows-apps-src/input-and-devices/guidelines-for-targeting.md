@@ -174,6 +174,6 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

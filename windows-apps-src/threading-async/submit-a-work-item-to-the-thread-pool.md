@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
-title: 스레드 풀에 작업 항목 제출
-description: 스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다.
+title: "스레드 풀에 작업 항목 제출"
+description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+
 ---
 # 스레드 풀에 작업 항목 제출
 
@@ -17,8 +21,7 @@ description: 스레드 풀에 작업 항목을 제출하여 별도 스레드에�
 
 ## 작업 항목 만들기 및 제출
 
-[
-            **RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 호출하여 작업 항목을 만듭니다. 작업을 수행할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). **RunAsync**는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) 개체를 반환합니다. 다음 단계에서 사용하기 위해 이 개체를 저장합니다.
+[**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 호출하여 작업 항목을 만듭니다. 작업을 수행할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). **RunAsync**는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) 개체를 반환합니다. 다음 단계에서 사용하기 위해 이 개체를 저장합니다.
 
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
@@ -188,8 +191,7 @@ IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
 m_workItem = asyncAction;
 ```
 
-[
-            **RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) 호출 뒤에 이 작업 항목은 스레드 풀에 의해 대기되고 스레드를 사용할 수 있게 되면 실행됩니다. 스레드 풀 작업 항목은 비동기적으로 실행되며 순서에 관계없이 실행될 수 있으므로 작업 항목이 독립적으로 작동하는지 확인합니다.
+[**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) 호출 뒤에 이 작업 항목은 스레드 풀에 의해 대기되고 스레드를 사용할 수 있게 되면 실행됩니다. 스레드 풀 작업 항목은 비동기적으로 실행되며 순서에 관계없이 실행될 수 있으므로 작업 항목이 독립적으로 작동하는지 확인합니다.
 
 작업 항목은 [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) 속성을 검사하고, 작업 항목이 취소된 경우 종료됩니다.
 
@@ -260,6 +262,7 @@ Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

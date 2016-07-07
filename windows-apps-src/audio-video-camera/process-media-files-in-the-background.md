@@ -16,8 +16,7 @@ ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
 
 이 문서에서는 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
 
-이 문서에 설명된 예제 앱을 사용하여 코드 변환할 입력 미디어 파일을 선택하고 코드 변환 결과를 기록할 출력 파일을 지정할 수 있습니다. 그런 다음 코드 변환 작업을 수행하도록 백그라운드 작업을 시작합니다. [
-            **MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005)에서는 코드 변환 이외의 여러 다른 미디어 처리 시나리오(예: 디스크로 미디어 컴포지션 렌더링 및 처리를 완료한 후 처리된 미디어 파일 업로드)를 지원합니다.
+이 문서에 설명된 예제 앱을 사용하여 코드 변환할 입력 미디어 파일을 선택하고 코드 변환 결과를 기록할 출력 파일을 지정할 수 있습니다. 그런 다음 코드 변환 작업을 수행하도록 백그라운드 작업을 시작합니다. [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005)에서는 코드 변환 이외의 여러 다른 미디어 처리 시나리오(예: 디스크로 미디어 컴포지션 렌더링 및 처리를 완료한 후 처리된 미디어 파일 업로드)를 지원합니다.
 
 이 샘플에서 활용하는 여러 다른 유니버설 Windows 앱 기능에 대한 자세한 내용은 다음을 참조하세요.
 
@@ -40,8 +39,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
                                   
 [!code-cs[BackgroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundUsing)]
 
-[
-            **IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)에서 클래스를 상속하도록 클래스 선언을 업데이트합니다.
+[**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)에서 클래스를 상속하도록 클래스 선언을 업데이트합니다.
 
 [!code-cs[BackgroundClass](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundClass)]
 
@@ -66,9 +64,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 **TranscodeFileAsync** 도우미 메서드에서 코드 변환 조작의 입력 및 출력 파일의 파일 이름을 앱의 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622)에서 검색합니다. 이러한 값은 포그라운드 앱에서 설정합니다. 입력 및 출력 파일의 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 만든 다음 코드 변환에 사용할 인코딩 프로필을 만듭니다.
 
-[
-            **PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936)를 호출하여 입력 파일, 출력 파일 및 인코딩 프로필을 전달합니다. 이 호출을 통해 반환된 [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) 개체를 사용하여 코드 교환을 수행할 수 있는지 알립니다. [
-            **CanTranscode**](https://msdn.microsoft.com/library/windows/apps/hh700942) 속성이 true이면 [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946)를 호출하여 코드 교환 조작을 수행합니다.
+[**PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936)를 호출하여 입력 파일, 출력 파일 및 인코딩 프로필을 전달합니다. 이 호출을 통해 반환된 [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) 개체를 사용하여 코드 교환을 수행할 수 있는지 알립니다. [**CanTranscode**](https://msdn.microsoft.com/library/windows/apps/hh700942) 속성이 true이면 [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946)를 호출하여 코드 교환 조작을 수행합니다.
 
 **AsTask** 메서드를 사용하여 비동기 조작의 진행 상태를 추적하거나 조작을 취소할 수 있습니다. 원하는 진행 단위를 지정하고 작업의 현재 진행 상태를 알리기 위해 호출할 메서드를 지정하여 새 **Progress** 개체를 만듭니다. 작업을 취소하는 데 사용할 수 있는 취소 토큰과 함께 **Progress** 개체를 **AsTask** 메서드에 전달합니다.
 
@@ -113,14 +109,11 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[PickFilesToTranscode](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetPickFilesToTranscode)]
 
-백그라운드 작업을 등록하기 위해 새 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다. 나중에 식별할 수 있도록 백그라운드 작업 작성기의 이름을 설정합니다. 매니페스트 파일에서 사용하는 네임스페이스 및 클래스 이름 문자열과 동일하게 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)를 설정합니다. [
-            **Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) 속성을 **MediaProcessingTrigger** 인스턴스로 설정합니다.
+백그라운드 작업을 등록하기 위해 새 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다. 나중에 식별할 수 있도록 백그라운드 작업 작성기의 이름을 설정합니다. 매니페스트 파일에서 사용하는 네임스페이스 및 클래스 이름 문자열과 동일하게 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)를 설정합니다. [**Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) 속성을 **MediaProcessingTrigger** 인스턴스로 설정합니다.
 
 작업을 등록하기 전에 [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 컬렉션에서 루프 실행하고 [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br224771) 속성에 지정한 이름의 작업에서 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229870)를 호출하여 이전에 등록한 작업의 등록을 취소하세요.
 
-[
-            **Register**](https://msdn.microsoft.com/library/windows/apps/br224772)를 호출하여 백그라운드 작업을 등록합니다. [
-            **Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 및 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808) 이벤트에 대한 처리기를 등록합니다.
+[**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)를 호출하여 백그라운드 작업을 등록합니다. [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 및 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808) 이벤트에 대한 처리기를 등록합니다.
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 

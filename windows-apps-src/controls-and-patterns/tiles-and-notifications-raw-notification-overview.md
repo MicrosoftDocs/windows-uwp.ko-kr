@@ -101,8 +101,7 @@ ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
 
 원시 알림을 사용하여 백그라운드 작업을 트리거하려면 앱이 다음 요구 사항을 충족해야 합니다.
 
-1.  [
-            **BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 사용하여 백그라운드에서 작업을 실행할 수 있는 권한(사용자가 언제든지 해지할 수 있는)을 요청합니다.
+1.  [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 사용하여 백그라운드에서 작업을 실행할 수 있는 권한(사용자가 언제든지 해지할 수 있는)을 요청합니다.
 2.  백그라운드 작업을 구현해야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/hh977046)을 참조하세요.
 
 그러면 백그라운드 작업이 앱에 대한 원시 알림이 수신될 때마다 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)에 대한 응답으로 호출됩니다. 백그라운드 작업에서 원시 알림의 앱별 페이로드를 해석하고 그에 따른 조치를 취합니다.

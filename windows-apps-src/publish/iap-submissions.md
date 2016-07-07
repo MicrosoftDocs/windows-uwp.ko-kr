@@ -71,6 +71,6 @@ IAP 제출을 만들 때 제공하는 정보 목록은 다음과 같습니다. �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

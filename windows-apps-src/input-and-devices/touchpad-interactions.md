@@ -5,8 +5,8 @@ title: "터치 패드 조작"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 ---
 
@@ -41,7 +41,7 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 
 이 항목에서 설명하는 제스처 및 지침은 앱이 터치 패드 입력을 최소한의 코드로 매끄럽게 지원할 수 있게 합니다.
 
-## <span id="The_touchpad_language"></span><span id="the_touchpad_language"></span><span id="THE_TOUCHPAD_LANGUAGE"></span>터치 패드 언어
+## 터치 패드 언어
 
 
 터치 패드 조작의 축약된 집합이 전체 시스템에서 일관되게 사용됩니다. 앱을 터치 및 마우스 입력에 최적화하면 이 언어를 통해 사용자가 앱에 즉시 친숙해져서 사용자의 신뢰가 증가하며 앱을 쉽게 배우고 사용할 수 있습니다.
@@ -71,39 +71,39 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Three-finger_tap"></span><span id="three-finger_tap"></span><span id="THREE-FINGER_TAP"></span>세 손가락으로 탭하기</p></td>
+<td align="left"><p>세 손가락으로 탭하기</p></td>
 <td align="left"><p>검색 <strong>Cortana</strong>를 사용하여 검색하거나 <strong>알림 센터</strong>를 표시하기 위한 사용자 기본 설정입니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Three_finger_slide"></span><span id="three_finger_slide"></span><span id="THREE_FINGER_SLIDE"></span>세 손가락으로 밀기</p></td>
+<td align="left"><p>세 손가락으로 밀기</p></td>
 <td align="left"><p>가상 데스크톱 작업 보기를 열거나, 바탕 화면을 표시하거나, 열려 있는 앱 간을 전환하기 위한 사용자 기본 설정입니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_tap_for_primary_action"></span><span id="single_finger_tap_for_primary_action"></span><span id="SINGLE_FINGER_TAP_FOR_PRIMARY_ACTION"></span>한 손가락으로 탭하여 기본 동작 수행</p></td>
+<td align="left"><p>한 손가락으로 탭하여 기본 동작 수행</p></td>
 <td align="left"><p>한 손가락으로 요소를 탭하여 앱 시작이나 명령 실행과 같은 기본 동작을 호출합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Two_finger_tap_to_right-click"></span><span id="two_finger_tap_to_right-click"></span><span id="TWO_FINGER_TAP_TO_RIGHT-CLICK"></span>두 손가락으로 탭하여 마우스 오른쪽 단추 클릭</p></td>
+<td align="left"><p>두 손가락으로 탭하여 마우스 오른쪽 단추 클릭</p></td>
 <td align="left"><p>요소를 동시에 두 손가락으로 탭하여 선택하고 상황에 맞는 명령을 표시합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Two_finger_slide_to_pan"></span><span id="two_finger_slide_to_pan"></span><span id="TWO_FINGER_SLIDE_TO_PAN"></span>두 손가락으로 밀어 이동</p></td>
+<td align="left"><p>두 손가락으로 밀어 이동</p></td>
 <td align="left"><p>밀기는 주로 이동 조작에 사용하지만 이동, 그리기 또는 쓰기에 사용할 수도 있습니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Pinch_and_stretch_to_zoom"></span><span id="pinch_and_stretch_to_zoom"></span><span id="PINCH_AND_STRETCH_TO_ZOOM"></span>손가락을 모으고 늘여 확대/축소</p></td>
+<td align="left"><p>손가락을 모으고 늘여 확대/축소</p></td>
 <td align="left"><p>손가락을 모으고 늘이는 제스처는 크기 조정 및 시맨틱 줌에 주로 사용됩니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_rearrange"></span><span id="single_finger_press_and_slide_to_rearrange"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_REARRANGE"></span>한 손가락으로 누르고 밀어 다시 정렬</p></td>
+<td align="left"><p>한 손가락으로 누르고 밀어 다시 정렬</p></td>
 <td align="left"><p>요소를 끕니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_select_text"></span><span id="single_finger_press_and_slide_to_select_text"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_SELECT_TEXT"></span>한 손가락으로 누르고 밀어 텍스트 선택</p></td>
+<td align="left"><p>한 손가락으로 누르고 밀어 텍스트 선택</p></td>
 <td align="left"><p>선택 가능한 텍스트 안을 누르고 밀어 선택합니다. 두 번 탭하여 단어를 선택합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left_and_right_click_zone"></span><span id="left_and_right_click_zone"></span><span id="LEFT_AND_RIGHT_CLICK_ZONE"></span>왼쪽 및 오른쪽 클릭 영역</p></td>
+<td align="left"><p>왼쪽 및 오른쪽 클릭 영역</p></td>
 <td align="left"><p>마우스 장치의 왼쪽 및 오른쪽 단추 기능을 에뮬레이트합니다.</p></td>
 </tr>
 </tbody>
@@ -111,14 +111,14 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 
  
 
-## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>하드웨어
+## 하드웨어
 
 
 마우스 장치 기능([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI 측면을 식별합니다. 터치와 마우스 입력 둘 다에 대한 UI를 제공하는 것이 좋습니다.
 
 디바이스 기능 쿼리에 대한 자세한 내용은 [입력 디바이스 식별](identify-input-devices.md)을 참조하세요.
 
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>시각적 피드백
+## 시각적 피드백
 
 
 -   이동 또는 가리키기 이벤트를 통해 터치 패드 커서가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 터치 패드 커서가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 터치 패드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -129,7 +129,7 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465342)을 참조하세요.
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>커서
+## 커서
 
 
 터치 패드 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
@@ -144,7 +144,7 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 -   개체 크기를 조정할 수 있는 경우 가로, 세로 및 대각선 크기 조정 커서(![세로 크기 조정 커서](images/cursor-vertical.png), ![가로 크기 조정 커서](images/cursor-horizontal.png), ![대각선 크기 조정 커서(왼쪽 아래, 오른쪽 위)](images/cursor-diagonal2.png), ![대각선 크기 조정 커서(왼쪽 위, 오른쪽 아래)](images/cursor-diagonal1.png))를 사용합니다.
 -   고정 캔버스 내에서 콘텐츠를 이동하는 경우(예제: 지도) 잡는 손 모양 커서(![잡는 손 모양(열림)](images/cursor-pan1.png), ![잡는 손 모양(닫힘)](images/cursor-pan2.png))를 사용합니다.
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
@@ -166,6 +166,6 @@ ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: 실행, 다시 시작 및 백그라운드 작업
-description: 이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다.
+author: TylerMSFT
+title: "실행, 다시 시작 및 백그라운드 작업"
+description: "이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.sourcegitcommit: a8e6145f7a5c75d3b37277b80b07b0b3ad739d5c
+ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
+
 ---
 
 # 실행, 다시 시작 및 백그라운드 작업
@@ -37,7 +40,6 @@ ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 | [파일 활성화 처리](handle-file-activation.md)                                            | 앱을 파일 형식의 기본 처리기로 등록하는 방법을 알아봅니다.                                                                                                  |
 | [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321) | UWP 앱과 앱이 지원하는 파일 형식 및 프로토콜 간의 관계를 이해하면 사용자에게 보다 일관되고 세련된 환경을 제공할 수 있습니다. |
 | [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)                             | 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.                                                                                |
-| 기본 제공 앱 활성화                                                                          | 설명                                                                                                                                                                |
 | [Windows 설정 앱 실행](launch-settings-app.md)                                      | 앱에서 Windows 설정을 실행하는 방법을 알아봅니다.                                                                                                                              |
 | [Windows 스토어 앱 실행](launch-store-app.md)                                            | Windows 스토어 앱을 실행하는 방법을 알아봅니다.                                                                                                                                 |
 | [Windows 지도 앱 실행](launch-maps-app.md)                                              | Windows 지도 앱을 실행하는 방법을 알아봅니다.                                                                                                                                  |
@@ -51,8 +53,7 @@ ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 | 항목                                                                                                            | 설명                                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)                             | 이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다.                                                       |
-| [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [
-            **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
+| [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 디바이스에 액세스할 수 있습니다. |
 | [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                           | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.                                                                                                                          |
 | [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)                                | 다른 UWP 앱에 서비스를 제공할 수 있는 UWP를 작성하는 방법과 이러한 서비스를 사용하는 방법에 대해 알아봅니다.                                                                                  |
 | [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)                               | 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다.                                                                                                 |
@@ -61,8 +62,7 @@ ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 | [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                     | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                     |
 | [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)           | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다.                                                                                                                     |
 | [백그라운드 작업 등록](register-a-background-task.md)                                                     | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.                                                                                                  |
-| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)             | [
-            **SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                                                         |
+| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)             | [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                                                         |
 | [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)                                        | 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.                                                                                                          |
 | [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)                 | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.                                                                                                                  |
 | [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/mt280377)                                           | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다.                                                                                                                              |
@@ -101,8 +101,6 @@ ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

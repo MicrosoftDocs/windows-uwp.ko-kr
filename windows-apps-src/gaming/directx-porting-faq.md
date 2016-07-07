@@ -30,8 +30,7 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 ##  UWP에 대한 게임 타이머를 업데이트해야 할까요?
 
 
-[
-            **QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904)는 [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905)와 함께 여전히 UWP 앱에 대한 게임 타이머를 구현하기 가장 좋은 방법이며,
+[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904)는 [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905)와 함께 여전히 UWP 앱에 대한 게임 타이머를 구현하기 가장 좋은 방법이며,
 
 타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅숏을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
 
@@ -96,8 +95,7 @@ DirectX 10.x 및 11 데스크톱 게임은 쉽게 UWP로 포팅됩니다. [Direc
 ## 앤티앨리어싱을 켜는 방법은 무엇인가요?
 
 
-Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. [
-            **CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499)를 호출하여 다중 샘플링 지원을 열거한 다음, [**CreateSurface**](https://msdn.microsoft.com/library/windows/desktop/bb174530)를 호출할 때 [**DXGI\_SAMPLE\_DESC structure**](https://msdn.microsoft.com/library/windows/desktop/bb173072)에서 다중 샘플링 옵션을 설정합니다.
+Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. [**CheckMultisampleQualityLevels**](https://msdn.microsoft.com/library/windows/desktop/ff476499)를 호출하여 다중 샘플링 지원을 열거한 다음, [**CreateSurface**](https://msdn.microsoft.com/library/windows/desktop/bb174530)를 호출할 때 [**DXGI\_SAMPLE\_DESC structure**](https://msdn.microsoft.com/library/windows/desktop/bb173072)에서 다중 샘플링 옵션을 설정합니다.
 
 ## 다중 스레딩 및/또는 지연 렌더링을 사용하여 게임을 렌더링합니다. Direct3D 11에 대해 알아야 할 사항은 무엇인가요?
 

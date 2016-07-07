@@ -27,26 +27,21 @@ ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
 
 ## HDR 비디오
 
-HDR(High Dynamic Range) 비디오 기능은 캡처 디바이스의 비디오 스트림에 HDR 처리를 적용합니다. [
-            **HdrVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926682) 속성을 확인하여 HDR 비디오가 지원되는지 검토합니다.
+HDR(High Dynamic Range) 비디오 기능은 캡처 디바이스의 비디오 스트림에 HDR 처리를 적용합니다. [**HdrVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926682) 속성을 확인하여 HDR 비디오가 지원되는지 검토합니다.
 
 HDR 비디오 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니다. 즉, 디바이스는 HDR 비디오 처리가 미디어 캡처를 향상시키는지를 동적으로 확인하고 향상시킬 경우 HDR 비디오를 사용하도록 설정합니다. 현재 디바이스에서 특정 모드가 지원되는지 확인하려면 [**HdrVideoControl.SupportedModes**](https://msdn.microsoft.com/library/windows/apps/dn926683) 컬렉션이 원하는 모드를 포함하는지 확인합니다.
 
-[
-            **HdrVideoControl.Mode**](https://msdn.microsoft.com/library/windows/apps/dn926681)를 원하는 모드로 설정하여 HDR 비디오 처리를 사용하거나 사용하지 않도록 설정합니다.
+[**HdrVideoControl.Mode**](https://msdn.microsoft.com/library/windows/apps/dn926681)를 원하는 모드로 설정하여 HDR 비디오 처리를 사용하거나 사용하지 않도록 설정합니다.
 
 [!code-cs[SetHdrVideoMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetHdrVideoMode)]
 
 ## 노출 우선 순위
 
-[
-            **ExposurePriorityVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926644)을 사용할 경우 캡처 디바이스의 비디오 프레임을 평가하여 비디오가 낮은 조명 장면을 캡처하는지를 확인합니다. 따라서 이 컨트롤은 각 프레임의 노출 시간을 늘리고 캡처된 비디오의 시각적 품질을 개선하기 위해 캡처한 비디오의 프레임 속도를 낮춥니다.
+[**ExposurePriorityVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926644)을 사용할 경우 캡처 디바이스의 비디오 프레임을 평가하여 비디오가 낮은 조명 장면을 캡처하는지를 확인합니다. 따라서 이 컨트롤은 각 프레임의 노출 시간을 늘리고 캡처된 비디오의 시각적 품질을 개선하기 위해 캡처한 비디오의 프레임 속도를 낮춥니다.
 
-[
-            **ExposurePriorityVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926647) 속성을 확인하여 현재 디바이스에서 노출 우선 순위 컨트롤이 지원되는지를 확인합니다.
+[**ExposurePriorityVideoControl.Supported**](https://msdn.microsoft.com/library/windows/apps/dn926647) 속성을 확인하여 현재 디바이스에서 노출 우선 순위 컨트롤이 지원되는지를 확인합니다.
 
-[
-            **ExposurePriorityVideoControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn926646)를 원하는 모드로 설정하여 노출 우선순위 컨트롤을 사용하거나 사용하지 않도록 설정합니다.
+[**ExposurePriorityVideoControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn926646)를 원하는 모드로 설정하여 노출 우선순위 컨트롤을 사용하거나 사용하지 않도록 설정합니다.
 
 [!code-cs[EnableExposurePriority](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEnableExposurePriority)]
 

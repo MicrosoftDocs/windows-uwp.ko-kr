@@ -24,8 +24,7 @@ ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
 ## 사용자 자격 증명 저장
 
 
-1.  [
-            **Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관 참조를 가져옵니다.
+1.  [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관 참조를 가져옵니다.
 2.  앱의 식별자, 사용자 이름 및 암호가 포함된 [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) 개체를 만들고 [**PasswordVault.Add**](https://msdn.microsoft.com/library/windows/apps/hh701231) 메서드에 전달하여 자격 증명을 보관에 추가합니다.
 
 ```cs
@@ -37,11 +36,9 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
 ## 사용자 자격 증명 검색
 
 
-[
-            **PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체 참조를 가져온 후 자격 증명 보관에서 사용자 자격 증명을 검색하는 여러 가지 옵션이 있습니다.
+[**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체 참조를 가져온 후 자격 증명 보관에서 사용자 자격 증명을 검색하는 여러 가지 옵션이 있습니다.
 
--   [
-            **PasswordVault.RetrieveAll**](https://msdn.microsoft.com/library/windows/apps/br227088) 메서드를 사용하면 보관에서 앱에 대해 제공된 모든 자격 증명을 검색할 수 있습니다.
+-   [**PasswordVault.RetrieveAll**](https://msdn.microsoft.com/library/windows/apps/br227088) 메서드를 사용하면 보관에서 앱에 대해 제공된 모든 자격 증명을 검색할 수 있습니다.
 
 -   저장된 자격 증명의 사용자 이름을 알고 있는 경우 [**PasswordVault.FindAllByUserName**](https://msdn.microsoft.com/library/windows/apps/br227084) 메서드를 사용하여 해당 사용자 이름에 대한 모든 자격 증명을 검색할 수 있습니다.
 
@@ -112,8 +109,7 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
 
 두 단계로 이루어진 빠른 프로세스를 통해 자격 증명 보관에서 사용자 자격 증명을 삭제할 수도 있습니다.
 
-1.  [
-            **Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관 참조를 가져옵니다.
+1.  [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관 참조를 가져옵니다.
 
 2.  삭제하려는 자격 증명을 [**PasswordVault.Remove**](https://msdn.microsoft.com/library/windows/apps/hh701242) 메서드에 전달합니다.
 

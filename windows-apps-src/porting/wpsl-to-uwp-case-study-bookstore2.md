@@ -217,8 +217,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
 
 -   `AuthorGroupHeaderTemplate`에서, 모바일 디바이스 패밀리에서 실행될 때 올바르게 표시되도록 **TextBlock**에서 `Foreground="White"`를 설정합니다.
 -   `FontWeight="SemiBold"`를 `AuthorGroupHeaderTemplate`과 `ZoomedOutAuthorTemplate` 둘 다의 **TextBlock**에 추가합니다.
--   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [
-            **HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
+-   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
 
 ```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">

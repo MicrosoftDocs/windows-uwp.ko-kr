@@ -43,8 +43,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 
 ### LaunchUriAsync 호출
 
-[
-            **LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용하여 URI를 실행합니다. 이 메서드를 호출할 때 앱은 포그라운드 앱이어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 URI 실행을 앱의 UI에 직접 연결해야 합니다. 사용자는 항상 URI 실행을 시작하기 위해 일부 작업을 수행해야 합니다. URI를 실행하려는 경우 앱이 포그라운드에 없으면 URI가 실행되지 않으며 오류 콜백이 호출됩니다.
+[**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용하여 URI를 실행합니다. 이 메서드를 호출할 때 앱은 포그라운드 앱이어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 URI 실행을 앱의 UI에 직접 연결해야 합니다. 사용자는 항상 URI 실행을 시작하기 위해 일부 작업을 수행해야 합니다. URI를 실행하려는 경우 앱이 포그라운드에 없으면 URI가 실행되지 않으며 오류 콜백이 호출됩니다.
 
 먼저 URI를 나타내는 [**System.Uri**](https://msdn.microsoft.com/en-us/library/windows/apps/system.uri.aspx) 개체를 만든 다음 이 개체를 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드로 전달합니다. 반환되는 결과를 사용하여 다음 예제에 표시된 대로 호출에 성공했는지 확인합니다.
 
@@ -107,11 +106,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### 나머지 보기 기본 설정 지정
 
-[
-            **LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
+[**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
-**참고** Windows는 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. [
-            **DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+**참고** Windows는 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
  
 
@@ -228,6 +225,6 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

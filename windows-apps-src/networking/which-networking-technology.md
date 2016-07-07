@@ -85,53 +85,43 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### 연결 품질
 
-[
-            **Windows.Networking.Connectivity**](https://msdn.microsoft.com/library/windows/apps/br207308) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](https://msdn.microsoft.com/library/windows/apps/hh452983)를 참조하세요.
+[**Windows.Networking.Connectivity**](https://msdn.microsoft.com/library/windows/apps/br207308) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](https://msdn.microsoft.com/library/windows/apps/hh452983)를 참조하세요.
 
 ### DNS 서비스 검색
 
-[
-            **Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183) API는 IETF [RFC 2782](http://go.microsoft.com/fwlink/?LinkId=524158)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
+[**Windows.Networking.ServiceDiscovery.Dnssd**](https://msdn.microsoft.com/library/windows/apps/dn895183) API는 IETF [RFC 2782](http://go.microsoft.com/fwlink/?LinkId=524158)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
 
 ### Bluetooth를 통한 통신
 
-[
-            **Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/dn263413) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](https://msdn.microsoft.com/library/windows/apps/mt270289)를 참조하세요.
+[**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/dn263413) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](https://msdn.microsoft.com/library/windows/apps/mt270289)를 참조하세요.
 
 ### 푸시 알림(WNS)
 
-[
-            **Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/library/windows/apps/mt187203)를 참조하세요.
+[**Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/library/windows/apps/mt187203)를 참조하세요.
 
 ### 근거리 통신
 
-[
-            **Windows.Networking.Proximity**](https://msdn.microsoft.com/library/windows/apps/br241250) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](https://msdn.microsoft.com/library/windows/apps/hh465229)을 참조하세요.
+[**Windows.Networking.Proximity**](https://msdn.microsoft.com/library/windows/apps/br241250) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](https://msdn.microsoft.com/library/windows/apps/hh465229)을 참조하세요.
 
 ### RSS/Atom 피드
 
-[
-            **Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
+[**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
 
 ### Wi-Fi 열거형 및 연결 제어
 
-[
-            **Windows.Devices.WiFi**](https://msdn.microsoft.com/library/windows/apps/dn975224) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
+[**Windows.Devices.WiFi**](https://msdn.microsoft.com/library/windows/apps/dn975224) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
 
 ### 무선 제어
 
-[
-            **Windows.Devices.Radios**](https://msdn.microsoft.com/library/windows/apps/dn996447) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
+[**Windows.Devices.Radios**](https://msdn.microsoft.com/library/windows/apps/dn996447) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
 
 ### Wi-Fi Direct
 
-[
-            **Windows.Devices.WiFiDirect**](https://msdn.microsoft.com/library/windows/apps/dn297687) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
+[**Windows.Devices.WiFiDirect**](https://msdn.microsoft.com/library/windows/apps/dn297687) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
 
 ### Wi-Fi Direct 서비스
 
-[
-            **Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/library/windows/apps/dn996481) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
+[**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/library/windows/apps/dn996481) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
 
 ### 통신사
 
@@ -139,13 +129,11 @@ Windows 10에서는 이전에 장치 제조업체 및 통신사에만 노출된 
 
 ### 네트워크 운영
 
-[
-            **Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library/windows/apps/br241148) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 장치 제조업체 및 통신사로 제한됩니다.
+[**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library/windows/apps/br241148) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 장치 제조업체 및 통신사로 제한됩니다.
 
 ### SMS
 
-[
-            **Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
+[**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
 
 
 

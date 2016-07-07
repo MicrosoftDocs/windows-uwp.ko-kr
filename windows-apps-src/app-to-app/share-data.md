@@ -3,8 +3,8 @@ description: "이 문서에서는 UWP(Universal Windows Platform) 앱에서 공�
 title: "데이터 공유"
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
-ms.sourcegitcommit: 03b9943d9bf76343bfbbe714f681a2b398d1a9ad
-ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: a91f0eb8b62a860809f8ffb63278be1eff31a2f3
 
 ---
 
@@ -20,8 +20,7 @@ ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-[
-            **DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) 이벤트가 발생하면 앱이 [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest) 개체를 받습니다. 여기에는 사용자가 공유하려는 콘텐츠를 제공하는 데 사용할 수 있는 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)가 포함되어 있습니다. 공유할 제목과 데이터를 제공해야 합니다. 설명은 선택 사항이지만 사용하는 것이 좋습니다.
+[**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) 이벤트가 발생하면 앱이 [**DataRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest) 개체를 받습니다. 여기에는 사용자가 공유하려는 콘텐츠를 제공하는 데 사용할 수 있는 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)가 포함되어 있습니다. 공유할 제목과 데이터를 제공해야 합니다. 설명은 선택 사항이지만 사용하는 것이 좋습니다.
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
@@ -38,8 +37,7 @@ ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
 -   파일
 -   사용자 지정 개발자 정의 데이터
 
-[
-            **DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
+[**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
@@ -53,13 +51,13 @@ ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
 
 ## 공유 UI 시작
 
-공유를 위한 UI가 시스템에서 제공됩니다. 시작하려면 [**ShowShareUI**][ShowShareUi] 메서드를 호출합니다.
+공유를 위한 UI가 시스템에서 제공됩니다. 시작하려면 [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI) 메서드를 호출합니다.
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## 오류 처리
 
-대부분의 경우 콘텐츠 공유는 간단한 프로세스입니다. 그러나 항상 예기치 않은 문제가 발생할 수 있습니다. 예를 들어 앱에서 사용자가 공유할 콘텐츠를 선택해야 하지만 아무것도 선택하지 않았을 수 있습니다. 이러한 상황을 처리하려면 문제가 발생하는 경우 사용자에게 메시지를 표시하는 [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)) 메서드를 사용합니다.
+대부분의 경우 콘텐츠 공유는 간단한 프로세스입니다. 그러나 항상 예기치 않은 문제가 발생할 수 있습니다. 예를 들어 앱에서 사용자가 공유할 콘텐츠를 선택해야 하지만 아무것도 선택하지 않았을 수 있습니다. 이러한 상황을 처리하려면 잘못된 부분이 있는 경우 사용자에게 메시지를 표시하는 [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)) 메서드를 사용합니다.
 
 ## 대리자와 공유 지연
 
@@ -106,6 +104,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

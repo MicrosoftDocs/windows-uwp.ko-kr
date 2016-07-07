@@ -27,11 +27,9 @@ UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [
 
 ## UI 가상화
 
-UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)(및 기타 표준 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
+UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)(및 기타 표준 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
-사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)과 같은 가상화 패널을 사용해야 합니다. [
-            **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)을 사용하는 경우에는 가상화할 수 없습니다. 또한 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)을 사용할 경우에만 [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) 및 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging)과 같은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 이벤트가 발생됩니다.
+사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)과 같은 가상화 패널을 사용해야 합니다. [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)을 사용하는 경우에는 가상화할 수 없습니다. 또한 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)을 사용할 경우에만 [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) 및 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging)과 같은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 이벤트가 발생됩니다.
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 뷰포트는 **ListView** 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) 및 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704))에 무제한 공간을 허용합니다. 가상화된 **ItemsControl**이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 이 경우 **ItemsControl**에서 너비와 높이를 설정하여 가상화를 복원합니다.
 
@@ -43,8 +41,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 요소 감소의 예제는 [XAML 태그 최적화](optimize-xaml-loading.md)를 참조하세요.
 
-[
-            **ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) 및 [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx)의 기본 컨트롤 템플릿은 [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500) 요소를 포함합니다. 이 프리젠터는 포커스, 선택 항목 및 다른 시각적 상태에 대한 복잡한 시각 요소를 표시하는 최적화된 단일 요소입니다. 사용자 지정 항목 컨트롤 템플릿([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle))이 이미 있는 경우 또는 나중에 항목 컨트롤 템플릿의 복사본을 편집하려는 경우 **ListViewItemPresenter**를 사용하는 것이 좋습니다. 이 요소는 대부분의 경우 성능과 사용자 지정성 간에 최적화된 균형을 제공합니다. 프리젠터는 해당 속성을 설정하여 사용자 지정합니다. 예를 들어 다음은 항목을 선택할 때 기본적으로 표시되는 확인란을 제거하고 선택한 항목의 배경색을 주황색으로 변경하는 태그입니다.
+[**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) 및 [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx)의 기본 컨트롤 템플릿은 [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500) 요소를 포함합니다. 이 프리젠터는 포커스, 선택 항목 및 다른 시각적 상태에 대한 복잡한 시각 요소를 표시하는 최적화된 단일 요소입니다. 사용자 지정 항목 컨트롤 템플릿([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle))이 이미 있는 경우 또는 나중에 항목 컨트롤 템플릿의 복사본을 편집하려는 경우 **ListViewItemPresenter**를 사용하는 것이 좋습니다. 이 요소는 대부분의 경우 성능과 사용자 지정성 간에 최적화된 균형을 제공합니다. 프리젠터는 해당 속성을 설정하여 사용자 지정합니다. 예를 들어 다음은 항목을 선택할 때 기본적으로 표시되는 확인란을 제거하고 선택한 항목의 배경색을 주황색으로 변경하는 태그입니다.
 
 ```xml
 ...
@@ -65,8 +62,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 <!-- ... -->
 ```
 
-[
-            **SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) 및 [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx)와 유사한 자체 설명 이름을 가진 약 25개의 속성이 있습니다. 프리젠터 형식이 사용 사례에 맞게 사용자 지정할 수 없는 것으로 증명된 경우 대신 `ListViewItemExpanded` 또는 `GridViewItemExpanded` 컨트롤 템플릿의 복사본을 편집할 수 있습니다. 이러한 템플릿은 `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`에서 찾을 수 있습니다. 이러한 템플릿을 사용하면 사용자 지정성이 증가하는 대신 성능이 저하됩니다.
+[**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) 및 [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx)와 유사한 자체 설명 이름을 가진 약 25개의 속성이 있습니다. 프리젠터 형식이 사용 사례에 맞게 사용자 지정할 수 없는 것으로 증명된 경우 대신 `ListViewItemExpanded` 또는 `GridViewItemExpanded` 컨트롤 템플릿의 복사본을 편집할 수 있습니다. 이러한 템플릿은 `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`에서 찾을 수 있습니다. 이러한 템플릿을 사용하면 사용자 지정성이 증가하는 대신 성능이 저하됩니다.
 
 ## 점진적으로 ListView 및 GridView 항목 업데이트
 
@@ -146,8 +142,7 @@ namespace LotsOfItems
 
 **ContainerContentChanging을 사용한 점진적 데이터 템플릿 업데이트**
 
-[
-            **ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트에 대한 일반적인 전략은 **Opacity**을 사용하여 즉시 표시하지 않아도 되는 요소를 숨기는 것입니다. 요소가 재활용될 때는 이전 값을 유지하므로 새 데이터 항목에서 이러한 값을 업데이트할 때까지 이러한 요소를 숨길 수 있습니다. 이벤트 인수에서 **Phase** 속성을 사용하여 업데이트 및 표시할 이벤트를 결정합니다. 추가 단계가 필요한 경우 콜백을 등록합니다.
+[**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트에 대한 일반적인 전략은 **Opacity**을 사용하여 즉시 표시하지 않아도 되는 요소를 숨기는 것입니다. 요소가 재활용될 때는 이전 값을 유지하므로 새 데이터 항목에서 이러한 값을 업데이트할 때까지 이러한 요소를 숨길 수 있습니다. 이벤트 인수에서 **Phase** 속성을 사용하여 업데이트 및 표시할 이벤트를 결정합니다. 추가 단계가 필요한 경우 콜백을 등록합니다.
 
 1.  **x:Phase**에 대해 동일한 바인딩 소스를 사용합니다.
 
@@ -250,9 +245,7 @@ namespace LotsOfItems
 
 **ChoosingItemContainer 이벤트**
 
-[
-            **ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)는 시작 또는 재활용 중 새 항목이 필요할 때마다 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)에 항목(**ListViewItem**/**GridViewItem**)을 제공할 수 있는 이벤트입니다. 컨테이너가 표시하는 데이터 항목 형식에 따라 컨테이너를 만들 수 있습니다(아래 예제에 표시됨). **ChoosingItemContainer**는 다른 항목에 대해 다른 데이터 템플릿을 사용하는 성능이 우수한 방법입니다. 컨테이너 캐싱은 **ChoosingItemContainer**를 사용하여 얻을 수 있는 기능입니다. 예를 들어 5개의 다른 템플릿이 있고 한 템플릿이 다른 템플릿보다 더 자주 발생하는 경우 ChoosingItemContainer를 통해 필요한 비율로 항목을 만들 수 있을 뿐만 아니라 재활용을 위해 적절한 요소 수를 캐시하여 사용할 수 있도록 유지할 수 있습니다. [
-            **ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer)는 그룹 헤더에 대해 동일한 기능을 제공합니다.
+[**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)는 시작 또는 재활용 중 새 항목이 필요할 때마다 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)에 항목(**ListViewItem**/**GridViewItem**)을 제공할 수 있는 이벤트입니다. 컨테이너가 표시하는 데이터 항목 형식에 따라 컨테이너를 만들 수 있습니다(아래 예제에 표시됨). **ChoosingItemContainer**는 다른 항목에 대해 다른 데이터 템플릿을 사용하는 성능이 우수한 방법입니다. 컨테이너 캐싱은 **ChoosingItemContainer**를 사용하여 얻을 수 있는 기능입니다. 예를 들어 5개의 다른 템플릿이 있고 한 템플릿이 다른 템플릿보다 더 자주 발생하는 경우 ChoosingItemContainer를 통해 필요한 비율로 항목을 만들 수 있을 뿐만 아니라 재활용을 위해 적절한 요소 수를 캐시하여 사용할 수 있도록 유지할 수 있습니다. [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer)는 그룹 헤더에 대해 동일한 기능을 제공합니다.
 
 ```csharp
 // Example shows how to use ChoosingItemContainer to return the correct

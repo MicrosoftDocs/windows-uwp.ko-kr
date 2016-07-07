@@ -20,10 +20,10 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
 
 ## 테마 컬러
 
-사용자는 *설정 &gt; 개인 설정 &gt; 색*에서 강조색이라고 하는 단일 색을 선택할 수 있습니다. 사용자는 48색 견본의 큐레이팅된 집합에서 테마를 선택할 수 있습니다(TV에 적합한 24색 색상표가 포함된 Xbox의 경우 제외).
+사용자는 *설정 &gt; 개인 설정 &gt; 색*에서 강조색이라고 하는 단일 색을 선택할 수 있습니다. 사용자는 48색 견본의 큐레이팅된 집합에서 테마를 선택할 수 있습니다(TV에 적합한 21색 색상표가 포함된 Xbox의 경우 제외).
 
 <!-- Alternate version for the dev center. Need to add hex values. -->
-![기본 테마 색](images/accentcolorswatch.png) 기본 테마 컬러
+![기본 테마 컬러](images/accentcolorswatch.png) 기본 테마 컬러
 
 ![Xbox 테마 컬러](images/accentcolorswatch_xbox.png) Xbox 테마 컬러
 
@@ -53,7 +53,7 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 색으로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
+XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 컬러로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
     </div>
 </aside>
 

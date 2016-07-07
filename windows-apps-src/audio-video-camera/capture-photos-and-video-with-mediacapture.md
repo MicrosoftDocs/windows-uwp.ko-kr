@@ -41,8 +41,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 ## MediaCapture 개체 초기화
 
-[
-            **Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) 네임스페이스의 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스는 모든 미디어 캡처 작업에 대한 기본 인터페이스입니다. 앱은 일반적으로 단일 페이지로 범위가 지정된 이 형식의 변수를 선언합니다. 앱은 **MediaCapture**의 현재 상태를 추적해야 하므로 개체의 초기화, 미리 보기 및 녹화 상태에 대한 부울 변수를 선언해야 합니다.
+[**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) 네임스페이스의 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스는 모든 미디어 캡처 작업에 대한 기본 인터페이스입니다. 앱은 일반적으로 단일 페이지로 범위가 지정된 이 형식의 변수를 선언합니다. 앱은 **MediaCapture**의 현재 상태를 추적해야 하므로 개체의 초기화, 미리 보기 및 녹화 상태에 대한 부울 변수를 선언해야 합니다.
 
 [!code-cs[MediaCaptureVariables](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMediaCaptureVariables)]
 
@@ -54,16 +53,13 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 [!code-cs[InitializeCameraAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitializeCameraAsync)]
 
--   [
-            **DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) 메서드는 지정된 형식의 모든 디바이스를 찾는 데 사용할 수 있습니다. 이 예제에서는 **DeviceClass.VideoCapture** 열거형 값이 전달되어 만 비디오 캡처 장치만 반환되도록 지정합니다. 사진 및 비디오 캡처에 비디오 캡처 장치가 사용됩니다.
+-   [**DeviceInformation.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) 메서드는 지정된 형식의 모든 디바이스를 찾는 데 사용할 수 있습니다. 이 예제에서는 **DeviceClass.VideoCapture** 열거형 값이 전달되어 만 비디오 캡처 장치만 반환되도록 지정합니다. 사진 및 비디오 캡처에 비디오 캡처 장치가 사용됩니다.
 
 -   **FindAllAsync**는 요청한 형식을 갖는 확인된 각 디바이스에 대해 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393) 개체를 포함하는 [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) 개체를 반환합니다. **System.Linq** 네임스페이스의 **FirstOrDefault** 확장 메서드는 지정된 조건에 따라 목록에서 항목을 선택하기 위한 편리한 구문을 제공합니다. 첫 번째 호출은 목록에서 [**EnclosureLocation.Panel**](https://msdn.microsoft.com/library/windows/apps/br229906) 값이 **Panel.Back**인 첫 번째 **DeviceInformation**을 선택하려고 합니다. 이 값의 경우 카메라가 디바이스의 인클로저의 후방 패널에 있는 것입니다. 장치의 후방 패널에 카메라가 없으면 사용 가능한 첫 번째 카메라가 사용됩니다.
 
--   [
-            **MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573)를 초기화할 때 장치 ID를 지정하지 않으면 시스템은 장치의 내부 목록에서 첫 번째 장치를 선택합니다.
+-   [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573)를 초기화할 때 장치 ID를 지정하지 않으면 시스템은 장치의 내부 목록에서 첫 번째 장치를 선택합니다.
 
--   [
-            **MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)에 대한 호출이 지정한 캡처 장치를 사용하도록 개체를 초기화합니다. 이 호출은 사용자가 카메라에 대한 호출 앱 액세스를 거부할 경우 **UnauthorizedAccessException**을 throw하므로 **try** 블록 내에서 수행됩니다. 이 호출이 성공하면 캡처 디바이스를 초기화할 수 있는지를 후속 메서드 호출을 통해 확인할 수 있도록 **\_isInitialized** 변수가 true로 설정됩니다.
+-   [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)에 대한 호출이 지정한 캡처 장치를 사용하도록 개체를 초기화합니다. 이 호출은 사용자가 카메라에 대한 호출 앱 액세스를 거부할 경우 **UnauthorizedAccessException**을 throw하므로 **try** 블록 내에서 수행됩니다. 이 호출이 성공하면 캡처 디바이스를 초기화할 수 있는지를 후속 메서드 호출을 통해 확인할 수 있도록 **\_isInitialized** 변수가 true로 설정됩니다.
 
 - **중요** 일부 디바이스 패밀리에서는 앱에 디바이스의 카메라에 대한 액세스가 허용되기 전에 사용자 동의 확인 프롬프트가 사용자에게 표시됩니다. 이러한 이유로 기본 UI 스레드에서만 [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)를 호출해야 합니다. 다른 스레드에서 카메라를 초기화하려고 하면 초기화 오류가 발생할 수 있습니다.
 
@@ -91,19 +87,15 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 -   **CaptureElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) 속성은 미리 보기의 소스를 정의하기 위해 앱의 **MediaCapture** 개체로 설정됩니다.
 
--   [
-            **FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) 속성은 양방향 사용자 인터페이스를 지원하기 위해 XAML 프레임워크에 의해 제공됩니다. **CaptureElement**의 흐름 방향을 [**FlowDirection.RightToLeft**](https://msdn.microsoft.com/library/windows/apps/br242397)로 설정하면 미리 보기 비디오가 가로로 대칭 이동됩니다. 캡처 장치가 장치의 전방 패널에 있을 때 사용자의 관점에서 미리 보기 방향이 올바르도록 하는 데 사용됩니다.
+-   [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) 속성은 양방향 사용자 인터페이스를 지원하기 위해 XAML 프레임워크에 의해 제공됩니다. **CaptureElement**의 흐름 방향을 [**FlowDirection.RightToLeft**](https://msdn.microsoft.com/library/windows/apps/br242397)로 설정하면 미리 보기 비디오가 가로로 대칭 이동됩니다. 캡처 장치가 장치의 전방 패널에 있을 때 사용자의 관점에서 미리 보기 방향이 올바르도록 하는 데 사용됩니다.
 
--   [
-            **StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) 메서드는 **CaptureElement** 내에서 미리 보기 스트림의 표시를 시작합니다. 미리 보기가 성공적으로 시작되면 앱의 다른 부분에서 앱이 현재 미리 보기 중임을 알 수 있도록 **\_isPreviewing** 변수가 설정되며 미리 보기 방향을 설정하기 위한 도우미 메서드가 호출됩니다. 이 메서드는 다음 섹션에서 정의됩니다.
+-   [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613) 메서드는 **CaptureElement** 내에서 미리 보기 스트림의 표시를 시작합니다. 미리 보기가 성공적으로 시작되면 앱의 다른 부분에서 앱이 현재 미리 보기 중임을 알 수 있도록 **\_isPreviewing** 변수가 설정되며 미리 보기 방향을 설정하기 위한 도우미 메서드가 호출됩니다. 이 메서드는 다음 섹션에서 정의됩니다.
 
 ## 화면 및 장치 방향 감지
 
 휴대폰 또는 태블릿 등의 모바일 장치에서 실행되는 경우 장치의 현재 방향에 따라 영향을 받는 여러 미디어 캡처 앱 영역이 있습니다. 이러한 영역에는 카메라의 미리 보기 스트림을 적절히 회전하고 캡처한 이미지 및 비디오를 적절히 인코딩하여 사용자가 볼 때 올바른 방향이 되도록 하는 작업이 포함됩니다.
 
-"디스플레이 방향"이라는 용어는 시스템이 장치에서 XAML 페이지를 회전하여 사용자가 볼 때 똑바로 표시되도록 하는 방식을 나타냅니다. "장치 방향"은 월드 공간에서 장치의 방향, 즉 월드 공간에서 실제 카메라 장치의 방향을 나타냅니다. 두 종류의 방향은 모두 미디어 캡처 앱과 관련이 있습니다. 디스플레이 방향을 처리하려면 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) 클래스에 대한 페이지 범위 변수를 선언하고 초기화합니다. [
-            **DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/br226142) 형식의 또 다른 변수를 선언하여 디스플레이의 현재 방향을 추적합니다. [
-            **SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/br206400) 변수 및 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/br206399) 변수를 선언하여 디바이스 방향을 추적합니다.
+"디스플레이 방향"이라는 용어는 시스템이 장치에서 XAML 페이지를 회전하여 사용자가 볼 때 똑바로 표시되도록 하는 방식을 나타냅니다. "장치 방향"은 월드 공간에서 장치의 방향, 즉 월드 공간에서 실제 카메라 장치의 방향을 나타냅니다. 두 종류의 방향은 모두 미디어 캡처 앱과 관련이 있습니다. 디스플레이 방향을 처리하려면 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258) 클래스에 대한 페이지 범위 변수를 선언하고 초기화합니다. [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/br226142) 형식의 또 다른 변수를 선언하여 디스플레이의 현재 방향을 추적합니다. [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/br206400) 변수 및 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/br206399) 변수를 선언하여 디바이스 방향을 추적합니다.
 
 [!code-cs[DisplayInformationAndOrientation](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDisplayInformationAndOrientation)]
 
@@ -137,9 +129,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 [!code-cs[RotationKey](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRotationKey)]
 
-다음 메서드는 미리 보기 스트림의 회전을 설정합니다. 미디어 캡처 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)의 [**GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) 메서드는 키/값 쌍으로 이루어진 속성 집합을 반환합니다. [
-            **MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640)는 비디오 녹화 스트림 또는 오디오 스트림과 달리 비디오 미리 보기 스트림에 대한 속성이 필요함을 나타내기 위해 지정됩니다. 이 속성 집합은 스트림 속성을 설정하기 위한 일반 용도의 인터페이스이지만 이 작업의 경우, 위에 정의된 비디오 회전 GUID가 속성 키로 추가되고 비디오 스트림의 원하는 방향이 값(도)으로 지정됩니다. [
-            **SetEncodingPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/dn297781)는 인코딩 속성을 새 값으로 업데이트합니다. 다시 한번, 설정되는 속성이 비디오 미리 보기 스트림에 대한 것임을 나타내기 위해 **MediaStreamType.VideoPreview**가 지정됩니다.
+다음 메서드는 미리 보기 스트림의 회전을 설정합니다. 미디어 캡처 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)의 [**GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) 메서드는 키/값 쌍으로 이루어진 속성 집합을 반환합니다. [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640)는 비디오 녹화 스트림 또는 오디오 스트림과 달리 비디오 미리 보기 스트림에 대한 속성이 필요함을 나타내기 위해 지정됩니다. 이 속성 집합은 스트림 속성을 설정하기 위한 일반 용도의 인터페이스이지만 이 작업의 경우, 위에 정의된 비디오 회전 GUID가 속성 키로 추가되고 비디오 스트림의 원하는 방향이 값(도)으로 지정됩니다. [**SetEncodingPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/dn297781)는 인코딩 속성을 새 값으로 업데이트합니다. 다시 한번, 설정되는 속성이 비디오 미리 보기 스트림에 대한 것임을 나타내기 위해 **MediaStreamType.VideoPreview**가 지정됩니다.
 
 [!code-cs[SetPreviewRotation](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetPreviewRotation)]
 
@@ -153,8 +143,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 ## 사진 캡처
 
-다음 메서드는 [**CapturePhotoToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/hh700840) 메서드를 사용하고 요청된 인코딩 속성과 캡처 작업의 출력이 포함될 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720) 개체를 전달하여 사진을 캡처합니다. [
-            **ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 클래스는 [**CreateJpeg**](https://msdn.microsoft.com/library/windows/apps/hh700994) 같은 도우미 메서드를 제공하여 미디어 캡처에서 지원하는 파일 형식에 대한 인코딩 속성을 생성합니다.
+다음 메서드는 [**CapturePhotoToStreamAsync**](https://msdn.microsoft.com/library/windows/apps/hh700840) 메서드를 사용하고 요청된 인코딩 속성과 캡처 작업의 출력이 포함될 [**InMemoryRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241720) 개체를 전달하여 사진을 캡처합니다. [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 클래스는 [**CreateJpeg**](https://msdn.microsoft.com/library/windows/apps/hh700994) 같은 도우미 메서드를 제공하여 미디어 캡처에서 지원하는 파일 형식에 대한 인코딩 속성을 생성합니다.
 
 [!code-cs[TakePhotoAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetTakePhotoAsync)]
 
@@ -168,9 +157,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 [!code-cs[ConvertOrientationToPhotoOrientation](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetConvertOrientationToPhotoOrientation)]
 
-마지막으로, 캡처한 사진을 인코딩 및 저장할 수 있습니다. 캡처한 사진 데이터를 포함하는 입력 스트림에서 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 개체를 만듭니다. 새 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들고 읽고 쓰기 위해 엽니다. [
-            **BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) 개체를 만들고 출력 파일과 이미지 데이터가 포함된 디코더를 전달합니다. 새 [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/hh974338)을 만들고 새 속성을 추가합니다. "System.Photo.Orientation" 속성에 대한 키는 해당 속성이 사진 방향을 나타냄을 지정합니다. 이 값은 이전에 계산된 [**PhotoOrientation**](https://msdn.microsoft.com/library/windows/apps/hh965476) 값입니다. [
-            **SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)를 호출하여 인코더에 대한 속성을 업데이트하고 [**FlushAsync**](https://msdn.microsoft.com/library/dn237883)를 호출하여 저장소 파일에 사진을 씁니다.
+마지막으로, 캡처한 사진을 인코딩 및 저장할 수 있습니다. 캡처한 사진 데이터를 포함하는 입력 스트림에서 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 개체를 만듭니다. 새 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들고 읽고 쓰기 위해 엽니다. [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) 개체를 만들고 출력 파일과 이미지 데이터가 포함된 디코더를 전달합니다. 새 [**BitmapPropertySet**](https://msdn.microsoft.com/library/windows/apps/hh974338)을 만들고 새 속성을 추가합니다. "System.Photo.Orientation" 속성에 대한 키는 해당 속성이 사진 방향을 나타냄을 지정합니다. 이 값은 이전에 계산된 [**PhotoOrientation**](https://msdn.microsoft.com/library/windows/apps/hh965476) 값입니다. [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)를 호출하여 인코더에 대한 속성을 업데이트하고 [**FlushAsync**](https://msdn.microsoft.com/library/dn237883)를 호출하여 저장소 파일에 사진을 씁니다.
 
 [!code-cs[ReencodeAndSavePhotoAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetReencodeAndSavePhotoAsync)]
 
@@ -188,15 +175,13 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 [!code-cs[StopRecordingAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetStopRecordingAsync)]
 
-[
-            **MediaCapture.RecordLimitationExceeded**](https://msdn.microsoft.com/library/windows/apps/hh973312) 이벤트에 대한 처리기는 **MediaCapture**가 초기화될 때 등록되었습니다. 처리기에서 **StopRecordingAsync** 메서드를 호출하여 비디오 녹화를 중지합니다.
+[**MediaCapture.RecordLimitationExceeded**](https://msdn.microsoft.com/library/windows/apps/hh973312) 이벤트에 대한 처리기는 **MediaCapture**가 초기화될 때 등록되었습니다. 처리기에서 **StopRecordingAsync** 메서드를 호출하여 비디오 녹화를 중지합니다.
 
 [!code-cs[RecordLimitationExceeded](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRecordLimitationExceeded)]
 
 ## 비디오 캡처 일시 중지 및 다시 시작
 
-일부 시나리오에서는 캡처를 중지한 후 새 캡처를 시작하는 것보다 진행 중인 캡처를 일시 중지했다가 다시 시작하려고 할 수 있습니다. 녹화를 일시 중지하려면 [**PauseRecordAsync**](https://msdn.microsoft.com/library/windows/apps/dn858102)를 호출합니다. [
-            **MediaCapturePauseBehavior.RetainHardwareResources**](https://msdn.microsoft.com/library/windows/apps/dn926686)를 지정하는 경우 동시 비디오 및 사진 캡처를 지원하지 않는 장치에서는 비디오가 일시 중지된 동안 앱이 사진을 캡처할 수 없습니다. 장치가 동시 사진 및 비디오 캡처를 지원하는지 확인하는 방법에 대한 자세한 내용은 [카메라 프로필](camera-profiles.md)을 참조하세요.
+일부 시나리오에서는 캡처를 중지한 후 새 캡처를 시작하는 것보다 진행 중인 캡처를 일시 중지했다가 다시 시작하려고 할 수 있습니다. 녹화를 일시 중지하려면 [**PauseRecordAsync**](https://msdn.microsoft.com/library/windows/apps/dn858102)를 호출합니다. [**MediaCapturePauseBehavior.RetainHardwareResources**](https://msdn.microsoft.com/library/windows/apps/dn926686)를 지정하는 경우 동시 비디오 및 사진 캡처를 지원하지 않는 장치에서는 비디오가 일시 중지된 동안 앱이 사진을 캡처할 수 없습니다. 장치가 동시 사진 및 비디오 캡처를 지원하는지 확인하는 방법에 대한 자세한 내용은 [카메라 프로필](camera-profiles.md)을 참조하세요.
 
 [!code-cs[PauseRecordingAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPauseRecordingAsync)]
 
@@ -210,8 +195,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 ### 캡처 미리 보기 종료
 
-캡처 미리 보기를 종료하려면 먼저 [**MediaCapture.StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622)를 호출합니다. [
-            **MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) 속성을 null로 설정합니다. 그런 다음 [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) 변수에 대해 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출하여 필요할 때 시스템 디스플레이가 꺼질 수 있도록 합니다.
+캡처 미리 보기를 종료하려면 먼저 [**MediaCapture.StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622)를 호출합니다. [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) 속성을 null로 설정합니다. 그런 다음 [**DisplayRequest**](https://msdn.microsoft.com/library/windows/apps/br241816) 변수에 대해 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/br241819)를 호출하여 필요할 때 시스템 디스플레이가 꺼질 수 있도록 합니다.
 
 [!code-cs[StopPreviewAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetStopPreviewAsync)]
 
@@ -245,8 +229,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 [!code-cs[다시 시작](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetResuming)]
 
-[
-            **OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 이벤트는 초기에 디스플레이 및 디바이스 방향 이벤트에 대한 처리기를 등록할 기회를 주며 **MediaCapture** 개체를 초기화합니다.
+[**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 이벤트는 초기에 디스플레이 및 디바이스 방향 이벤트에 대한 처리기를 등록할 기회를 주며 **MediaCapture** 개체를 초기화합니다.
 
 [!code-cs[OnNavigatedTo](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnNavigatedTo)]
 
@@ -282,8 +265,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 ### 사진 및 비디오 동시 캡처
 
-[
-            **Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) API를 사용하여 해당 기능을 지원하는 장치에서 사진 및 비디오를 동시에 캡처할 수 있습니다. 편의를 위해 이 예에서는 [**ConcurrentRecordAndPhotoSupported**](https://msdn.microsoft.com/library/windows/apps/dn278843) 속성을 사용하여 동시 비디오 및 사진 캡처가 지원되는지 확인하지만, 카메라 프로필을 사용하는 방법이 더욱 강력하고 좋습니다. 자세한 내용은 [카메라 프로필](camera-profiles.md)을 참조하세요.
+[**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) API를 사용하여 해당 기능을 지원하는 장치에서 사진 및 비디오를 동시에 캡처할 수 있습니다. 편의를 위해 이 예에서는 [**ConcurrentRecordAndPhotoSupported**](https://msdn.microsoft.com/library/windows/apps/dn278843) 속성을 사용하여 동시 비디오 및 사진 캡처가 지원되는지 확인하지만, 카메라 프로필을 사용하는 방법이 더욱 강력하고 좋습니다. 자세한 내용은 [카메라 프로필](camera-profiles.md)을 참조하세요.
 
 다음 도우미 메서드는 앱의 현재 캡처 상태에 맞게 앱의 컨트롤을 업데이트합니다. 비디오 캡처가 시작되거나 중지될 때처럼 앱의 캡처 상태가 변경될 때마다 이 메서드를 호출합니다.
 
@@ -301,8 +283,7 @@ ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
 
 3.  옆에 있는 확인란을 클릭**유니버설 앱 플랫폼용 Microsoft 모바일 확장 SDK** 옆의 확인란을 클릭합니다.
 
-모바일 장치에는 사용자에게 장치에 대한 상태 정보를 제공하는 [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) 컨트롤이 있습니다. 이 컨트롤은 화면에서 공간을 차지하여 미디어 캡처 UI를 방해할 수 있습니다. [
-            **HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339)를 호출하여 상태 표시줄을 숨길 수 있지만 [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) 메서드를 사용하여 API를 사용할 수 있는지 확인하는 조건부 블록 내에서 이 호출을 수행해야 합니다. 이 메서드는 상태 표시줄을 지원하는 모바일 장치에서만 true를 반환합니다. 앱이 시작되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
+모바일 장치에는 사용자에게 장치에 대한 상태 정보를 제공하는 [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) 컨트롤이 있습니다. 이 컨트롤은 화면에서 공간을 차지하여 미디어 캡처 UI를 방해할 수 있습니다. [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339)를 호출하여 상태 표시줄을 숨길 수 있지만 [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) 메서드를 사용하여 API를 사용할 수 있는지 확인하는 조건부 블록 내에서 이 호출을 수행해야 합니다. 이 메서드는 상태 표시줄을 지원하는 모바일 장치에서만 true를 반환합니다. 앱이 시작되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
 
 [!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
 

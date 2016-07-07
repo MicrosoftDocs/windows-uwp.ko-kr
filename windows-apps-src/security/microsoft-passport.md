@@ -134,16 +134,14 @@ if (!keyCredentialAvailable)
 
 사용자가 자신의 PIN을 설정한 경우 앱은 사용자의 [**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만듭니다. 앱은 또한 키가 TPM에서 생성되었음을 입증하는 암호화된 증거를 제공하는 키 증명 정보를 가져올 수도 있습니다. 사용 중인 디바이스를 등록하도록, 생성된 공개 키와 (선택적으로) 증명 정보가 백 엔드 서버로 전송됩니다. 모든 디바이스에서 생성된 모든 키 쌍은 고유합니다.
 
-[
-            **KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만드는 코드는 다음과 같습니다.
+[**KeyCredential**](https://msdn.microsoft.com/library/windows/apps/dn973029)을 만드는 코드는 다음과 같습니다.
 
 ```cs
 var keyCreationResult = await KeyCredentialManager
     .RequestCreateAsync(AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[
-            **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
+[**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048)는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 개인 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 개인 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 디바이스에서 키 쌍과 증명 정보가 만들어지면 공개 키, (선택적으로) 증명 정보, 고유 식별자(예: 메일 주소) 등을 백 엔드 등록 서비스로 전송하여 백 엔드에 저장해야 합니다.
 
@@ -228,10 +226,8 @@ static async void RegisterUser(string AccountId)
 -   AIK 인증서의 시간이 유효합니다.
 -   체인 내 모든 발급 CA 인증서의 시간이 유효하며 인증서가 해지되지 않았습니다.
 -   증명서의 형식이 올바릅니다.
--   [
-            **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
--   [
-            **KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
+-   [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 대한 서명에 AIK 공개 키를 사용합니다.
+-   [**KeyAttestation**](https://msdn.microsoft.com/library/windows/apps/dn298288) BLOB에 포함된 공개 키가 클라이언트에서 증명서와 함께 전송한 공개 RSA 키와 일치합니다.
 
 이러한 조건에 따라 앱은 사용자에게 다른 권한 부여 수준을 할당할 수도 있습니다. 예를 들어, 이러한 검사 중 하나에 실패 하는 경우 사용자를 등록하지 않거나 사용자가 수행할 수 있는 것을 제한할 수도 있습니다.
 

@@ -19,13 +19,11 @@ ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
 -   [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)
 -   [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631)
 
-[
-            **HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)와 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
+[**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)와 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 
 ## HttpClient 및 Windows.Web.Http 네임스페이스 개요
 
-[
-            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 및 [**Windows.Web.Http.Filters**](https://msdn.microsoft.com/library/windows/apps/dn298623) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
+[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 및 [**Windows.Web.Http.Filters**](https://msdn.microsoft.com/library/windows/apps/dn298623) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
 
 -   일반적인 동사에 대한 메서드(**DELETE**, **GET**, **PUT** 및 **POST**) 이러한 각 요청은 비동기 작업으로 전송됩니다.
 
@@ -39,32 +37,21 @@ ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
 
 -   비동기 메서드에서 사용할 수 있는 HTTP 요청 진행 정보
 
-[
-            **Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 클래스는 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)에서 전송된 HTTP 요청 메시지를 나타냅니다. [
-            **Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642)에서 정의됩니다.
+[**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 클래스는 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)에서 전송된 HTTP 요청 메시지를 나타냅니다. [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](http://go.microsoft.com/fwlink/p/?linkid=241642)에서 정의됩니다.
 
-[
-            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
+[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 
--   [
-            **HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). 콘텐츠를 버퍼로
--   [
-            **HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [
-            **HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). **multipart/\*** MIME 형식의 콘텐츠
--   [
-            **HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
--   [
-            **HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
--   [
-            **HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). 콘텐츠를 문자열로
--   [
-            **IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684) - 개발자가 해당 콘텐츠 개체를 만들 수 있는 기본 인터페이스
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). 콘텐츠를 버퍼로
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). **multipart/\*** MIME 형식의 콘텐츠
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). 콘텐츠를 문자열로
+-   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684) - 개발자가 해당 콘텐츠 개체를 만들 수 있는 기본 인터페이스
 
 "HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.
 
-[
-            **Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 네임스페이스에서는 HTTP 머리글 및 쿠키 만들기를 지원하며 이러한 항목이 이후 속성으로 [**HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 및 [**HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 개체와 연결됩니다.
+[**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 네임스페이스에서는 HTTP 머리글 및 쿠키 만들기를 지원하며 이러한 항목이 이후 속성으로 [**HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 및 [**HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 개체와 연결됩니다.
 
 ## HTTP를 통해 간단한 GET 요청 보내기
 
@@ -120,8 +107,7 @@ C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://msdn.microsoft
 
 C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
-[
-            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
+[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
 C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 

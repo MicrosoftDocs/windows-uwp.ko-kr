@@ -65,8 +65,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
     -   C# 및 C++에서는 진입점 특성이 백그라운드 작업 이름과 클래스 이름과 차례로 일치해야 합니다. 예를 들면 RuntimeComponent1.MyBackgroundTask와 같습니다.
     -   작업에 사용된 모든 트리거 유형도 지정해야 합니다.
-    -   [
-            **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)를 사용하지 않는 경우에는 실행 파일을 지정하면 안 됩니다.
+    -   [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543)를 사용하지 않는 경우에는 실행 파일을 지정하면 안 됩니다.
 
 3.  Windows에만 해당합니다. Windows에서 백그라운드 작업을 활성화하는 데 사용한 진입점을 확인하려면 디버그 추적을 사용하도록 설정하고 Windows 이벤트 로그를 사용합니다.
 
@@ -115,6 +114,6 @@ Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

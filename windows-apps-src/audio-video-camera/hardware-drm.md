@@ -84,15 +84,13 @@ mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectio
 
 이 섹션에서는 시스템에서 지원되는 하드웨어 DRM의 유형을 감지하는 방법을 설명합니다.
 
-[
-            **PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM(디지털 권한 관리) 기능을 지원하는지 확인할 수 있습니다. 예:
+[**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM(디지털 권한 관리) 기능을 지원하는지 확인할 수 있습니다. 예:
 
 ```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
-[
-            **PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거에는 쿼리할 수 있는 하드웨어 DRM 기능 값의 올바른 목록이 포함되어 있습니다. 하드웨어 DRM이 지원되는지 확인하려면 쿼리에서 **HardwareDRM** 멤버를 사용합니다. 하드웨어에서 HEVC(고효율성 비디오 코딩)/H.265 코덱을 지원하는지 확인하려면 쿼리에서 **HEVC** 멤버를 사용합니다.
+[**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거에는 쿼리할 수 있는 하드웨어 DRM 기능 값의 올바른 목록이 포함되어 있습니다. 하드웨어 DRM이 지원되는지 확인하려면 쿼리에서 **HardwareDRM** 멤버를 사용합니다. 하드웨어에서 HEVC(고효율성 비디오 코딩)/H.265 코덱을 지원하는지 확인하려면 쿼리에서 **HEVC** 멤버를 사용합니다.
 
 하드웨어 DRM이 지원되는지 확인하기 위해 클라이언트 인증서의 보안 수준을 얻으려면 [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) 속성도 사용할 수 있습니다. 반환된 인증서 보안 수준이 3000 이상인 경우 클라이언트가 개별화 또는 프로비전되지 않았거나(두 경우 모두 이 속성은 0을 반환) 하드웨어 DRM이 사용 중이 아닙니다(이 경우 이 속성은 3000 미만인 값을 반환).
 

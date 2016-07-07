@@ -81,8 +81,7 @@ ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
 ## 3단계: 활성화된 이벤트 처리
 
 
-[
-            **OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) 이벤트 처리기는 모든 파일 활성화 이벤트를 받습니다.
+[**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) 이벤트 처리기는 모든 파일 활성화 이벤트를 받습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```vb
@@ -111,49 +110,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML 프레임을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML 프레임을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 프레임의 탐색 저널에서 페이지를 지워야 합니다.
+[!div class="tabbedCodeSnippets"] 앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML 프레임을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
 
-파일 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
+시작 및 파일 계약에 단일 XAML 프레임을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 프레임의 탐색 저널에서 페이지를 지워야 합니다.
 
-## 설명
+## 파일 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
 
-받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
+설명 받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
-
- 
-
-## 관련 항목
-
-**전체 예제**
-
-* [연결 시작 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**개념**
-
-* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [파일 형식 및 프로토콜 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**작업**
-
-* [파일에 대한 기본 앱 시작](launch-the-default-app-for-a-file.md)
-* [URI 활성화 처리](handle-uri-activation.md)
-
-**지침**
-
-* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**참조**
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요. **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.
 
  
 
+## Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+
+**관련 항목**
+
+* [전체 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**연결 시작 예제**
+
+* [개념](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**파일 형식 및 프로토콜 연결 모델**
+
+* [작업](launch-the-default-app-for-a-file.md)
+* [파일에 대한 기본 앱 시작](handle-uri-activation.md)
+
+**URI 활성화 처리**
+
+* [지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**파일 형식 및 URI에 대한 지침**
+* [**참조**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -106,8 +106,7 @@ Direct3D 장치에서 [**ID3D11Device::CreateInputLayout**](https://msdn.microso
 
 꼭짓점 버퍼는 메시에 있는 각 삼각형의 꼭짓점 목록을 포함합니다. 이 목록에서 모든 꼭짓점은 고유해야 합니다. 이 예제에서는 큐브에 대한 8개의 꼭짓점이 있습니다. 꼭짓점 셰이더는 그래픽 장치에서 실행되어 꼭짓점 버퍼에서 읽고, 이전 단계에서 지정한 입력 레이아웃을 기반으로 데이터를 해석합니다.
 
-다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 사용하므로 이 과정이 필요합니다. [
-            **D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조는 Direct3D가 버퍼의 각 꼭짓점 요소의 크기와 꼭짓점 목록의 최대 크기를 비롯하여 버퍼의 실제 메모리 레이아웃을 이해하도록 하기 위해 제공됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
+다음 예제에서는 꼭짓점 데이터의 실제 매핑 및 그래픽 장치의 메모리에서 이를 처리하는 방식에 관해 많은 정보를 Direct3D에 알려 주는 버퍼에 대한 설명과 하위 리소스를 제공합니다. 포함 항목이 없을 수도 있는 일반 [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351)를 사용하므로 이 과정이 필요합니다. [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092) 및 [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조는 Direct3D가 버퍼의 각 꼭짓점 요소의 크기와 꼭짓점 목록의 최대 크기를 비롯하여 버퍼의 실제 메모리 레이아웃을 이해하도록 하기 위해 제공됩니다. 여기서 버퍼 메모리에 대한 액세스 및 버퍼 메모리가 이동하는 방법도 제어할 수 있지만 이 내용은 이 자습서의 범위를 벗어납니다.
 
 버퍼를 구성한 후 [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)를 호출하여 실제로 버퍼를 만듭니다. 개체가 둘 이상이면 각 고유 모델별로 버퍼를 만듭니다.
 
@@ -401,8 +400,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 ### 8단계: 메시 래스터 및 표시
 
-파이프라인을 실행하겠습니다. [
-            **ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565)를 호출하기만 하면 되므로 쉽습니다.
+파이프라인을 실행하겠습니다. [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565)를 호출하기만 하면 되므로 쉽습니다.
 
 큐브를 그리세요.
 

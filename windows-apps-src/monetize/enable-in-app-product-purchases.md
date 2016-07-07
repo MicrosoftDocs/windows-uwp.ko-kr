@@ -1,15 +1,21 @@
 ---
-Description: author: mcleanbyron 앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예&#58; 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.
-title: 앱에서 바로 제품 구매 사용 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B keywords: 앱에서 바로 판매 keywords: 앱에서 바로 구매 keywords: 앱에서 바로 구매 제품 keywords: 앱에서 바로 구매 지원 방법 keywords: 앱에서 바로 구매 코드 샘플 keywords: 앱에서 바로 판매 코드 샘플
+author: mcleanbyron
+Description: "앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예&#58; 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다."
+title: "앱에서 바로 구매 제품 사용"
+ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
+keywords: in-app offer code sample
+ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
+ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
+
 ---
 
-# 앱에서 바로 구매 제품 구매 사용
+# 앱에서 바로 구매 제품 사용
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.
 
-**참고** 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매할 경우 앱에서 바로 구매 제품만 구입할 수 있습니다.
+> **참고** 앱의 평가판에서는 앱에서 바로 구매 제품을 제공할 수 없습니다. 앱 평가판을 사용하는 고객은 처음 사용자용 앱 버전을 구매할 경우 앱에서 바로 구매 제품만 구입할 수 있습니다.
 
 ## 필수 조건
 
@@ -41,15 +47,17 @@ void AppInit()
 
 앱에서 바로 구매 제품을 통해 제공하려는 각 기능에 대해 판매를 만들고 앱에 추가하세요.
 
-**중요** 스토어에 앱을 제출하기 전에 고객에게 제공하려는 앱에서 바로 구매 제품을 앱에 모두 추가해야 합니다. 나중에 새 앱에서 바로 구매 제품을 추가하려면 앱을 업데이트하고 새 버전을 다시 제출해야 합니다.
+> **중요** 스토어에 앱을 제출하기 전에 고객에게 제공하려는 앱에서 바로 구매 제품을 앱에 모두 추가해야 합니다. 나중에 새 앱에서 바로 구매 제품을 추가하려면 앱을 업데이트하고 새 버전을 다시 제출해야 합니다.
 
 1.  **앱에서 바로 판매 토큰 만들기**
 
     앱에서는 각 앱에서 바로 구매 제품을 토큰으로 식별합니다. 이 토큰은 사용자가 정의하고 앱과 스토어에서 특정 앱에서 바로 구매 제품을 식별하는 데 사용하는 문자열입니다. 코딩하는 동안 토큰이 나타내는 올바른 기능을 빨리 식별할 수 있도록 앱에서 고유하고 의미 있는 이름을 지정하세요. 다음은 이름의 몇 가지 예입니다.
 
     -   "SpaceMissionLevel4"
+    
     -   "ContosoCloudSave"
-    -   "RainbowThemePack".
+    
+    -   "RainbowThemePack"
 
 2.  **조건부 블록에 기능 코딩**
 
@@ -59,13 +67,13 @@ void AppInit()
 
     ```    CSharp
     if (licenseInformation.ProductLicenses["featureName"].IsActive) 
-        {
-            // the customer can access this feature
-        } 
-        else
-        {
-            // the customer can' t access this feature
-        }
+    {
+        // the customer can access this feature
+    } 
+    else
+    {
+        // the customer can' t access this feature
+    }
     ```
 
 3.  **이 기능의 구매 UI 추가**
@@ -75,28 +83,29 @@ void AppInit()
     고객이 이미 앱에서 바로 구매 제품을 소유하고 있는지 테스트하고, 없는 경우 구매할 수 있도록 구매 대화 상자를 표시하는 방법은 다음과 같습니다. "show the purchase dialog" 주석을 구매 대화 상자(예: 친숙한 "앱 구매!" 단추가 있는 페이지)의 사용자 지정 코드로 바꾸세요.
 
     ```    CSharp
-    void BuyFeature1() {
-            if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+    void BuyFeature1() 
+    {
+        if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+        {
+            try
             {
-                try
-                    {
-                    // The customer doesn't own this feature, so 
-                    // show the purchase dialog.
-                                    
-                    await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
-                    //Check the license state to determine if the in-app purchase was successful.
-                }
-                catch (Exception)
-                {
-                    // The in-app purchase was not completed because 
-                    // an error occurred.
-                }
-            } 
-            else
-            {
-                // The customer already owns this feature.
+                // The customer doesn't own this feature, so 
+                // show the purchase dialog.
+                await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
+        
+                //Check the license state to determine if the in-app purchase was successful.
             }
+            catch (Exception)
+            {
+                // The in-app purchase was not completed because 
+                // an error occurred.
+            }
+        } 
+        else
+        {
+            // The customer already owns this feature.
         }
+    }
     ```
 
 ## 3단계: 테스트 코드를 최종 호출로 변경
@@ -120,15 +129,13 @@ void AppInit()
 * [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)
 * [확인 메일을 사용하여 제품 구매 검증](use-receipts-to-verify-product-purchases.md)
 * [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
- 
-
- 
 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "하이퍼링크"
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
 ---
 # 하이퍼링크
@@ -15,9 +15,9 @@ ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
 
--   [**Hyperlink 텍스트 요소**](https://msdn.microsoft.com/library/windows/apps/dn279356)
+
+-   [**하이퍼링크 텍스트 요소**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 -   [**HyperlinkButton 컨트롤**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 ## 올바른 컨트롤인가요?
@@ -137,8 +137,7 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 ## 권장 사항
 
 -   하이퍼링크는 탐색하는 데만 사용하고 다른 작업에는 사용하지 않도록 합니다.
--   텍스트 기반 하이퍼링크의 유형 램프에서 본문 스타일을 사용합니다. [
-            **fonts and the Windows 10 type ramp**](text-controls.md)를 참조하세요.
+-   텍스트 기반 하이퍼링크의 유형 램프에서 본문 스타일을 사용합니다. [**fonts and the Windows 10 type ramp**](fonts.md)를 참조하세요.
 -   사용자 구별할 수 있고 각각을 쉽게 선택할 수 있게 하이퍼링크 사이에 충분한 공간을 둡니다.
 -   사용자가 이동될 위치를 나타내는 도구 설명을 하이퍼링크에 추가합니다. 사용자가 외부 사이트로 이동되면 도구 설명 내에 최상위 도메인 이름을 포함하고 텍스트에 보조 글꼴 색을 지정합니다.
 
@@ -155,6 +154,6 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

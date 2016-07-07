@@ -63,8 +63,7 @@ MainPage.xaml에서 다음과 같은 변경 내용이 필요합니다.
 2.  **MainPage.xaml**의 루트 **Page** 요소에서 `Orientation="Portrait"`를 삭제합니다.
 3.  **MainPage.xaml**의 루트 **Page** 요소에서 `shell:SystemTray.IsVisible="True"`를 삭제합니다.
 4.  `BookTemplate` 데이터 템플릿에서 `PhoneTextExtraLargeStyle` 및 `PhoneTextSubtleStyle` **TextBlock** 스타일에 대한 참조를 삭제합니다.
-5.  `TitlePanel`
-             **StackPanel**에서 `PhoneTextNormalStyle` 및 `PhoneTextTitle1Style` **TextBlock** 스타일에 대한 참조를 삭제합니다.
+5.  `TitlePanel` **StackPanel**에서 `PhoneTextNormalStyle` 및 `PhoneTextTitle1Style` **TextBlock** 스타일에 대한 참조를 삭제합니다.
 
 먼저 모바일 디바이스 패밀리의 UI에 대해 작업하겠습니다. 그 후에야 다른 폼 팩터를 고려할 수 있습니다. 이제 앱을 빌드 및 실행할 수 있습니다. 모바일 에뮬레이터에서 모양은 다음과 같습니다.
 

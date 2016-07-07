@@ -22,12 +22,9 @@ ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
 -   [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711)
 -   [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730)
 
-[
-            **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드를 구현하고 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성을 사용하는 사용자 지정 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에 대한 코드를 작성하는 방법을 알아봅니다. 예제 코드에서는 사용자 지정 패널 구현을 보여 주지만, 각 레이아웃 시나리오에 맞게 패널을 사용자 지정하는 방법에 영향을 주는 레이아웃 개념을 설명하는 데 많은 시간을 할애하지 않습니다. 이러한 레이아웃 개념과 특정 레이아웃 시나리오에 개념을 적용하는 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](custom-panels-overview.md)를 참조하세요.
+[**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드를 구현하고 [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514) 속성을 사용하는 사용자 지정 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에 대한 코드를 작성하는 방법을 알아봅니다. 예제 코드에서는 사용자 지정 패널 구현을 보여 주지만, 각 레이아웃 시나리오에 맞게 패널을 사용자 지정하는 방법에 영향을 주는 레이아웃 개념을 설명하는 데 많은 시간을 할애하지 않습니다. 이러한 레이아웃 개념과 특정 레이아웃 시나리오에 개념을 적용하는 방법에 대한 자세한 내용은 [XAML 사용자 지정 패널 개요](custom-panels-overview.md)를 참조하세요.
 
-*패널*은 XAML 레이아웃 시스템이 실행되고 앱 UI가 렌더링될 때 패널에 포함된 자식 요소에 대한 레이아웃 동작을 제공하는 개체입니다. [
-            **Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 사용자 지정 클래스를 파생시켜 XAML 레이아웃에 대한 사용자 지정 패널을 정의할 수 있습니다. [
-            **ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드를 재정의하고 자식 요소를 측정 및 정렬하는 논리를 제공하여 패널에 대한 동작을 제공합니다. 이 예제는 **Panel**에서 파생됩니다. **Panel**, **ArrangeOverride** 및 **MeasureOverride** 메서드에서 시작하는 경우 시작 동작이 없습니다. 코드에서 자식 요소가 XAML 레이아웃 시스템에 알려지고 UI에 렌더링되는 게이트웨이를 제공합니다. 따라서 코드에서 모든 자식 요소를 고려하고 레이아웃 시스템에 필요한 패턴을 따르는 것이 중요합니다.
+*패널*은 XAML 레이아웃 시스템이 실행되고 앱 UI가 렌더링될 때 패널에 포함된 자식 요소에 대한 레이아웃 동작을 제공하는 개체입니다. [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스에서 사용자 지정 클래스를 파생시켜 XAML 레이아웃에 대한 사용자 지정 패널을 정의할 수 있습니다. [**ArrangeOverride**](https://msdn.microsoft.com/library/windows/apps/br208711) 및 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 메서드를 재정의하고 자식 요소를 측정 및 정렬하는 논리를 제공하여 패널에 대한 동작을 제공합니다. 이 예제는 **Panel**에서 파생됩니다. **Panel**, **ArrangeOverride** 및 **MeasureOverride** 메서드에서 시작하는 경우 시작 동작이 없습니다. 코드에서 자식 요소가 XAML 레이아웃 시스템에 알려지고 UI에 렌더링되는 게이트웨이를 제공합니다. 따라서 코드에서 모든 자식 요소를 고려하고 레이아웃 시스템에 필요한 패턴을 따르는 것이 중요합니다.
 
 ## 레이아웃 시나리오
 
@@ -43,8 +40,7 @@ ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
 
 ## **Panel**에서 파생시켜 시작
 
-[
-            **Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)에서 사용자 지정 클래스를 파생시켜 시작합니다. 가장 쉬운 방법은 Microsoft Visual Studio의 **솔루션 탐색기**에서 프로젝트에 대한 **추가** | **새 항목** | **클래스** 상황에 맞는 메뉴 옵션을 사용하여 이 클래스에 대한 별도 코드 파일을 정의하는 것입니다. 클래스(및 파일) 이름을 `BoxPanel`로 지정합니다.
+[**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)에서 사용자 지정 클래스를 파생시켜 시작합니다. 가장 쉬운 방법은 Microsoft Visual Studio의 **솔루션 탐색기**에서 프로젝트에 대한 **추가** | **새 항목** | **클래스** 상황에 맞는 메뉴 옵션을 사용하여 이 클래스에 대한 별도 코드 파일을 정의하는 것입니다. 클래스(및 파일) 이름을 `BoxPanel`로 지정합니다.
 
 클래스 템플릿 파일은 구체적으로 UWP(유니버설 Windows 플랫폼) 앱용으로 지정되지 않기 때문에 많은 **using** 문으로 시작하지 않습니다. 따라서 **using** 문을 먼저 추가합니다. 필요하지 않은 몇 가지 **using** 문과 함께 템플릿 파일이 시작될 수도 있으며 이 파일은 삭제할 수 있습니다. 다음은 일반적인 사용자 지정 패널 코드에 필요한 형식을 확인할 수 있는 **using** 문의 제안 목록입니다.
 
@@ -128,11 +124,9 @@ protected override Size MeasureOverride(Size availableSize)
 
 `BoxPanel`에서 크기를 나누는 방법은 비교적 간단합니다. 공간을 항목 수로 제어되는 상자 수로 나눕니다. 행 및 열 개수와 사용 가능한 크기에 따라 상자 크기가 지정됩니다. 때때로 정사각형의 행 또는 열 하나는 필요하지 않으므로 삭제되며, 행 : 열 비율 측면에서 패널이 정사각형이 아니라 직사각형이 됩니다. 이 논리에 도달한 방식에 대한 자세한 내용을 보려면 ["BoxPanel에 대한 시나리오"](#scenario)로 건너뛰세요.
 
-그러면 측정 단계에서는 어떤 작업을 수행할까요? [
-            **Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)가 호출된 각 요소에서 읽기 전용 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 속성의 값을 설정합니다. **DesiredSize**는 정렬 시 및 최종 렌더링에서 가능한 크기나 필수 크기를 전달하기 때문에 정렬 단계에 도달한 후에는 **DesiredSize** 값을 사용하는 것이 중요할 수 있습니다. 고유한 논리에 **DesiredSize**를 사용하지 않는 경우에도 시스템에 필요합니다.
+그러면 측정 단계에서는 어떤 작업을 수행할까요? [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)가 호출된 각 요소에서 읽기 전용 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 속성의 값을 설정합니다. **DesiredSize**는 정렬 시 및 최종 렌더링에서 가능한 크기나 필수 크기를 전달하기 때문에 정렬 단계에 도달한 후에는 **DesiredSize** 값을 사용하는 것이 중요할 수 있습니다. 고유한 논리에 **DesiredSize**를 사용하지 않는 경우에도 시스템에 필요합니다.
 
-*availableSize*의 높이 구성 요소가 무한대인 경우 이 패널을 사용할 수 있습니다. 이 경우 나눌 알려진 패널 높이가 없습니다. 따라서 측정 단계의 논리에서 각 자식에게 유한 높이가 없다고 알립니다. [
-            **Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910)가 무한 크기인 자식에 대한 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 호출에 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 전달하면 됩니다. 이는 타당한 동작입니다. **Measure**가 호출된 경우의 논리는 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)가 **Measure**에 전달된 값 또는 명시적으로 설정된 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 등의 인수를 통한 해당 요소의 실제 크기 중 최소값으로 설정되는 것입니다.
+*availableSize*의 높이 구성 요소가 무한대인 경우 이 패널을 사용할 수 있습니다. 이 경우 나눌 알려진 패널 높이가 없습니다. 따라서 측정 단계의 논리에서 각 자식에게 유한 높이가 없다고 알립니다. [**Size.Height**](https://msdn.microsoft.com/library/windows/apps/hh763910)가 무한 크기인 자식에 대한 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) 호출에 [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)를 전달하면 됩니다. 이는 타당한 동작입니다. **Measure**가 호출된 경우의 논리는 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)가 **Measure**에 전달된 값 또는 명시적으로 설정된 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 등의 인수를 통한 해당 요소의 실제 크기 중 최소값으로 설정되는 것입니다.
 
 **참고** &nbsp;&nbsp;[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)의 내부 논리에도 이 동작이 있습니다. **StackPanel**은 자식의 [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952)에 무한대 차원 값을 전달하여 방향 차원에 자식에 대한 제약 조건이 없음을 나타냅니다. 일반적으로 **StackPanel**은 해당 차원에서 증가하는 스택에 모든 자식을 수용하기 위해 동적으로 크기가 조정됩니다.
 

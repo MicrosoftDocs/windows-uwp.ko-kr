@@ -52,6 +52,6 @@ SignTool.exe는 AppX 패키지에 서명하려고 할 때 손상되거나 잘못
 - [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz(v=vs.110).aspx)
 - [SignTool을 사용하여 앱 패키지에 서명하는 방법](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835835(v=vs.85).aspx)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

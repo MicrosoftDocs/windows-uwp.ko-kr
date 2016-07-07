@@ -19,8 +19,7 @@ ms.openlocfilehash: 70dfce318d37d6790585b0fa5da50963f95495dc
 
 ## SMS 작성 대화 상자 시작
 
-메일 작성 대화 상자에서 새 [**ChatMessage**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.chatmessage) 개체를 만들고 미리 채울 데이터를 설정합니다. [
-            **ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync)를 호출하여 대화 상자를 표시합니다.
+메일 작성 대화 상자에서 새 [**ChatMessage**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.chatmessage) 개체를 만들고 미리 채울 데이터를 설정합니다. [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync)를 호출하여 대화 상자를 표시합니다.
 
 ```cs
 private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipient,

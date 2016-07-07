@@ -1,8 +1,11 @@
 ---
 author: GrantMeStrength
-Description: iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다.
+Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: Android 및 iOS 개발자용 Windows 앱 개념 매핑
+title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
+
 ---
 
 #Android 및 iOS 개발자용 Windows 앱 개념 매핑
@@ -137,7 +140,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>시작 화면.</strong> <br><br>앱 실행 시 이미지를 표시하며 브랜딩에 주로 사용됩니다.</td>
 <td align="left">시작 화면은 기본적으로 제공되지 않으며 첫 번째 활동 <strong>테마 배경</strong>을 편집하여 구현됩니다.</td>
 <td align="left">앱에는 <strong>정적 시작 이미지</strong> 또는 <strong>XIB/스토리보드 시작 파일</strong>이 있어야 합니다.</td>
-<td align="left"><strong>이미지</strong> 및 색상이 있는 배경을 사용하여 시작 화면을 만듭니다. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">시작 화면 시간을 확장할 수 있습니다</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">시작 화면 추가</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465338.aspx">시작 화면에 대한 지침</a></td>
+<td align="left"><strong>이미지</strong> 및 색상이 있는 배경을 사용하여 시작 화면을 만듭니다. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">시작 화면 시간을 확장할 수 있습니다</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">시작 화면 추가</a></td>
 </tr>
 </tbody>
 </table>
@@ -660,6 +663,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </table>
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

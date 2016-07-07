@@ -93,8 +93,7 @@ Package.appxmanifest 파일의 프로토콜 확장이 **ReturnResults**를 **alw
 private Windows.System.ProtocolForResultsOperation _operation = null;
 ```
 
-[
-            **ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) 필드를 사용하여 시작된 앱이 호출 앱으로 결과를 반환할 준비가 되었을 때 신호를 보냅니다. 이 예제에서는 페이지에서 결과를 위한 시작 작업을 완료하고 그에 대한 액세스 권한이 필요하므로 필드가 **LaunchedForResultsPage** 클래스에 추가됩니다.
+[**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) 필드를 사용하여 시작된 앱이 호출 앱으로 결과를 반환할 준비가 되었을 때 신호를 보냅니다. 이 예제에서는 페이지에서 결과를 위한 시작 작업을 완료하고 그에 대한 액세스 권한이 필요하므로 필드가 **LaunchedForResultsPage** 클래스에 추가됩니다.
 
 ## 4단계: 결과를 위해 실행하는 앱에서 OnNavigatedTo() 재정의
 
@@ -105,8 +104,7 @@ private Windows.System.ProtocolForResultsOperation _operation = null;
 using Windows.ApplicationModel.Activation
 ```
 
-[
-            **OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 메서드의 [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) 개체에는 호출 앱에서 전달된 데이터가 포함됩니다. 데이터는 100KB를 초과할 수 없으며 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 개체에 저장됩니다.
+[**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) 메서드의 [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) 개체에는 호출 앱에서 전달된 데이터가 포함됩니다. 데이터는 100KB를 초과할 수 없으며 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 개체에 저장됩니다.
 
 이 예제 코드에서 시작된 앱은 호출 앱에서 전송된 데이터가 **TestData**라는 키의 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)에 있어야 합니다. 이 위치가 예제 호출 앱이 데이터를 보내도록 코드화된 곳이기 때문입니다.
 
@@ -175,8 +173,7 @@ async Task<string> LaunchAppForResults()
 
 호출 앱을 실행하기 전에 결과를 위해 시작할 앱을 빌드하고 배포해야 합니다. 그러지 않은 경우에는 [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892)에서 **LaunchUriStatus.AppUnavailable**을 보고합니다.
 
-[
-            **TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511)을 설정할 때 시작된 앱의 제품군 이름이 필요합니다. 패밀리 이름을 가져오는 한 가지 방법은 시작된 앱에서 다음을 호출하는 것입니다.
+[**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511)을 설정할 때 시작된 앱의 제품군 이름이 필요합니다. 패밀리 이름을 가져오는 한 가지 방법은 시작된 앱에서 다음을 호출하는 것입니다.
 
 ```cs
 string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
@@ -206,6 +203,6 @@ inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

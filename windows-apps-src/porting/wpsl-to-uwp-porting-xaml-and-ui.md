@@ -80,8 +80,7 @@ Windows 10 앱이 고유한 화면 크기와 해상도가 구현된 광범위한
 
 ## 알람 및 미리 알림
 
-[
-            **BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 **Alarm** 또는 **Reminder** 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md#background-processing) 및 [알림](#toasts)을 참조하세요.
+[**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 **Alarm** 또는 **Reminder** 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md#background-processing) 및 [알림](#toasts)을 참조하세요.
 
 ## 애니메이션
 
@@ -156,19 +155,15 @@ Windows Phone Silverlight 앱 바 및 앱 바 단추는 UWP 앱에서처럼 바�
 UWP 앱의 바인딩 관련 기능에는 현재 다음과 같은 제한이 있습니다.
 
 -   데이터 입력 유효성 검사와 [**IDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx) 및 [**INotifyDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx) 인터페이스를 기본적으로 지원하지 않습니다.
--   [
-            **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스에 Windows Phone Silverlight에서 사용 가능한 확장된 서식 속성이 포함되어 있지 않습니다. 그러나 사용자 지정 서식을 제공하기 위해 여전히 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 를 구현할 수 있습니다.
--   [
-            **IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
--   [
-            **CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 클래스는 정렬과 필터링, 그리고 작업을 달리 그룹화하는 기능을 기본적으로 지원하지 않습니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946) 및 [데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)을 참조하세요.
+-   [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스에 Windows Phone Silverlight에서 사용 가능한 확장된 서식 속성이 포함되어 있지 않습니다. 그러나 사용자 지정 서식을 제공하기 위해 여전히 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 를 구현할 수 있습니다.
+-   [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
+-   [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 클래스는 정렬과 필터링, 그리고 작업을 달리 그룹화하는 기능을 기본적으로 지원하지 않습니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946) 및 [데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)을 참조하세요.
 
 동일한 바인딩 기능이 대개 여전히 지원되긴 하지만 Windows 10은 컴파일된 바인딩이라는 고성능의 새로운 바인딩 메커니즘의 옵션을 제공합니다. 이 메커니즘은 {x:Bind} 태그 확장을 사용합니다. [XAML 데이터 바인딩의 새로운 향상 기능을 통해 앱 성능 개선](http://channel9.msdn.com/Events/Build/2015/3-635)(영문) 및 [x:Bind 샘플](http://go.microsoft.com/fwlink/p/?linkid=619989)(영문)을 참조하세요.
 
 ## 이미지를 보기 모델에 바인딩
 
-[
-            **Image.Source**](https://msdn.microsoft.com/library/windows/apps/br242760) 속성을 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/br210107) 형식을 가진 보기 모델의 속성에 바인딩할 수 있습니다. Windows Phone Silverlight 앱에서 이러한 속성의 일반적인 구현은 다음과 같습니다.
+[**Image.Source**](https://msdn.microsoft.com/library/windows/apps/br242760) 속성을 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/br210107) 형식을 가진 보기 모델의 속성에 바인딩할 수 있습니다. Windows Phone Silverlight 앱에서 이러한 속성의 일반적인 구현은 다음과 같습니다.
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".
@@ -214,8 +209,7 @@ Windows Phone Silverlight 앱과 Windows 10 앱 사이의 디자인 언어에 �
 
 Windows Phone Silverlight 앱은 **CultureInfo** 클래스를 사용하여 앱을 세계화할 수 있습니다. UWP 앱은 MRT(Modern Resource Technology)를 사용합니다. MRT는 Visual Studio 디자인 화면에서 런타임 시 앱 리소스(지역화, 배율 및 테마)를 동적으로 로드할 수 있도록 합니다. 자세한 내용은 [파일, 데이터 및 세계화 지침](https://msdn.microsoft.com/library/windows/apps/dn611859)을 참조하세요.
 
-[
-            **ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071)에서는 디바이스 패밀리 리소스 선택 배율에 따라 디바이스 패밀리 관련 리소스를 로드하는 방법에 대해 설명합니다.
+[**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071)에서는 디바이스 패밀리 리소스 선택 배율에 따라 디바이스 패밀리 관련 리소스를 로드하는 방법에 대해 설명합니다.
 
 ## 미디어 및 그래픽
 
@@ -293,8 +287,7 @@ UWP 앱에서 명령적 코드를 사용하여 시작 페이지를 정의합니�
     if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
 ```
 
-URI 매핑 및 조각 탐색은 URI 탐색 기술이므로 URI를 기반으로 하지 않는 UWP 탐색에는 적용되지 않습니다. URI 매핑은 URI 문자열로 대상 페이지를 식별하는 약한 형식의 특성에 응답하여 제공되므로 페이지를 다른 폴더로 이동하여 상대 경로가 달라지면 취약성 및 유지 관리 문제가 발생합니다. UWP 앱은 컴파일러를 통해 확인되는 강력한 형식의 형식 기반 탐색을 사용하므로 URI 매핑으로 해결되는 문제가 없습니다. 조각 탐색 사용 사례에서는 일부 컨텍스트를 대상 페이지에 전달하여 페이지에서 표시되지 않은 콘텐츠의 특정 조각이 보기에 스크롤되도록 할 수 있습니다. [
-            **Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드를 호출할 때 탐색 매개 변수를 전달하여 동일한 목적을 달성할 수도 있습니다.
+URI 매핑 및 조각 탐색은 URI 탐색 기술이므로 URI를 기반으로 하지 않는 UWP 탐색에는 적용되지 않습니다. URI 매핑은 URI 문자열로 대상 페이지를 식별하는 약한 형식의 특성에 응답하여 제공되므로 페이지를 다른 폴더로 이동하여 상대 경로가 달라지면 취약성 및 유지 관리 문제가 발생합니다. UWP 앱은 컴파일러를 통해 확인되는 강력한 형식의 형식 기반 탐색을 사용하므로 URI 매핑으로 해결되는 문제가 없습니다. 조각 탐색 사용 사례에서는 일부 컨텍스트를 대상 페이지에 전달하여 페이지에서 표시되지 않은 콘텐츠의 특정 조각이 보기에 스크롤되도록 할 수 있습니다. [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드를 호출할 때 탐색 매개 변수를 전달하여 동일한 목적을 달성할 수도 있습니다.
 
 자세한 내용은 [탐색](https://msdn.microsoft.com/library/windows/apps/mt187344)을 참조하세요.
 
@@ -306,8 +299,7 @@ Windows 10에 대한 디자인 언어가 발전하여 특정 시스템 스타일
 
 ## 상태 표시줄(시스템 트레이)
 
-XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이를 상태 표시줄이라고 합니다. 시스템 트레이는 기본적으로 표시됩니다. [
-            **Windows.UI.ViewManagement.StatusBar.ShowAsync**](https://msdn.microsoft.com/library/windows/apps/dn610343) 및 [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339) 메서드를 호출하여 명령적 코드에서 표시 여부를 제어할 수 있습니다.
+XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이를 상태 표시줄이라고 합니다. 시스템 트레이는 기본적으로 표시됩니다. [**Windows.UI.ViewManagement.StatusBar.ShowAsync**](https://msdn.microsoft.com/library/windows/apps/dn610343) 및 [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339) 메서드를 호출하여 명령적 코드에서 표시 여부를 제어할 수 있습니다.
 
 ## Text
 
@@ -402,6 +394,6 @@ UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

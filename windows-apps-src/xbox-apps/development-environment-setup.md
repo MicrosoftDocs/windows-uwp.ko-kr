@@ -10,7 +10,7 @@ ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
 
 # Xbox 개발 환경에서의 UWP 설정
 
-Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다.
+Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워크를 통해 Xbox One 본체에 연결된 개발 PC로 구성됩니다. 
 개발 PC에는 Windows 10, Visual Studio 2015 업데이트 2, Windows 10 SDK Preview 빌드 14295, 그리고 다양한 지원 도구가 필요합니다.
 
 
@@ -108,6 +108,6 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

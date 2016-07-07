@@ -78,8 +78,7 @@ volumeSlider.ValueChanged += Slider_ValueChanged;
 stackPanel1.Children.Add(volumeSlider);
 ```
 
-[
-            **Value**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx) 이벤트를 처리할 수 있습니다.
+[**Value**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx) 속성에서 슬라이더 값을 가져오고 설정합니다. 값 변경에 응답하기 위해 데이터 바인딩을 사용하여 Value 속성에 바인딩하거나 [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx) 이벤트를 처리할 수 있습니다.
 
 ```csharp
 private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)

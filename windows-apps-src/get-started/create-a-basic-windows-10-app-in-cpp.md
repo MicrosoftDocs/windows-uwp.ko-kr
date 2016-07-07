@@ -284,8 +284,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 1.  MainPage.xaml의 XAML 또는 디자인 뷰에서 이전에 추가한 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)의 "Say Hello" [**단추**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 선택합니다.
 2.  Alt+Enter를 눌러서 **속성 창**을 열고 나서 이벤트 단추(![이벤트 단추](images/eventsbutton.png))를 선택합니다.
-3.  [
-            **Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트를 찾습니다. 텍스트 상자에 **Click** 이벤트를 처리하는 함수의 이름을 입력합니다. 이 예제에서는 "Button\_Click"을 입력합니다.
+3.  [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트를 찾습니다. 텍스트 상자에 **Click** 이벤트를 처리하는 함수의 이름을 입력합니다. 이 예제에서는 "Button\_Click"을 입력합니다.
 
 ![속성 창의 이벤트 보기](images/xaml-hw-event.png)
 
@@ -301,9 +300,7 @@ xaml 코드에 수동으로 추가할 수도 있습니다. 이는 디자이너�
 
 렌더링 중 처리되지 않은 예외가 발생한 경우에는 디자이너가 로드되지 않습니다. 디자이너에서의 렌더링에서는 디자인 타임 버전의 페이지가 실행됩니다. 이는 사용자 코드 실행을 비활성화하는 데 유용할 수 있습니다. 이렇게 하려면 **도구, 옵션** 대화 상자에서 설정을 변경하면 됩니다. **XAML 디자이너**에서 **XAML 디자이너에서 프로젝트 실행(지원되는 경우)**의 선택을 취소합니다.
 
-5.  MainPage.xaml.cpp에서 방금 만든 **Button\_Click** 이벤트 처리기에 다음 코드를 추가합니다. 이 코드는 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자 이름을 검색한 다음 이 이름을 사용하여 인사말을 만듭니다. `greetingOutput`
-            [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 결과가 표시됩니다.
+5.  MainPage.xaml.cpp에서 방금 만든 **Button\_Click** 이벤트 처리기에 다음 코드를 추가합니다. 이 코드는 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자 이름을 검색한 다음 이 이름을 사용하여 인사말을 만듭니다. `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 결과가 표시됩니다.
 
 ```cpp
     void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)

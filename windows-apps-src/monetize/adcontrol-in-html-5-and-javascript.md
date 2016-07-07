@@ -49,8 +49,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 
 6.  default.html 파일(또는 프로젝트에 해당하는 다른 html 파일)을 엽니다.
 
-7.  **
-            &lt;head&gt;** 섹션에서 default.css 및 default.js에 대한 프로젝트의 JavaScript 참조 다음에 ad.js에 대한 참조를 추가합니다.
+7.  **&lt;head&gt;** 섹션에서 default.css 및 default.js에 대한 프로젝트의 JavaScript 참조 다음에 ad.js에 대한 참조를 추가합니다.
 
     UWP 프로젝트에서 다음 코드를 추가합니다.
 

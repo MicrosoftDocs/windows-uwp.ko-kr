@@ -240,13 +240,11 @@ m_d3dDevice->CreateVertexShader(
 
 ![HLSL 셰이더 속성](images/hlslshaderpropertiesmenu.png)![HLSL 셰이더 유형](images/hlslshadertypeproperties.png)
 
-Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. [
-            **D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조를 만들고 이 구조를 사용하여 꼭짓점별 데이터 모양을 Direct3D에 알려 줍니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
+Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃을 만들기 데 좋은 위치입니다. 꼭짓점별 데이터 구조는 꼭짓점 셰이더가 사용하는 것과 일치해야 합니다. Direct3D 11에는 입력 레이아웃에 대한 추가 컨트롤이 있습니다. 부동 소수점 벡터의 배열 크기 및 비트 길이를 정의하고 꼭짓점 셰이더의 의미 체계를 지정할 수 있습니다. [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조를 만들고 이 구조를 사용하여 꼭짓점별 데이터 모양을 Direct3D에 알려 줍니다. API가 꼭짓점 셰이더 리소스에 대해 입력 레이아웃을 확인하므로 입력 레이아웃을 정의하기 위해 꼭짓점 셰이더를 로드할 때까지 대기했습니다. 입력 레이아웃이 호환되지 않는 경우 Direct3D가 예외를 throw합니다.
 
 꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. DirectXMath 데이터 형식을 활용할 수 있습니다. 예를 들어 DXGI\_FORMAT\_R32G32B32\_FLOAT는 [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475)에 해당합니다.
 
-> **참고** 상수 버퍼는 한 번에 4 개의 부동 소수점 숫자에 정렬되는 고정된 입력 레이아웃을 사용합니다. [
-            **XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)(및 해당 파생물)가 상수 버퍼 데이터에 권장됩니다.
+> **참고** 상수 버퍼는 한 번에 4 개의 부동 소수점 숫자에 정렬되는 고정된 입력 레이아웃을 사용합니다. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)(및 해당 파생물)가 상수 버퍼 데이터에 권장됩니다.
 
  
 

@@ -26,13 +26,11 @@ ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
 
 [!code-cs[CreateFormatFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFormatFrame)]
 
-[
-            **MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체가 초기화되고 활성 현재 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926711)를 호출하여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달하여 반환된 프레임의 형식을 지정합니다.
+[**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체가 초기화되고 활성 현재 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926711)를 호출하여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달하여 반환된 프레임의 형식을 지정합니다.
 
 [!code-cs[GetPreviewFrameAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewFrameAsync)]
 
-[
-            **VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성에 액세스하여 미리 보기 프레임의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 표현을 가져옵니다. 소프트웨어 비트맵 저장, 로드 및 수정에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
+[**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성에 액세스하여 미리 보기 프레임의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 표현을 가져옵니다. 소프트웨어 비트맵 저장, 로드 및 수정에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
 
 [!code-cs[GetPreviewBitmap](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewBitmap)]
 

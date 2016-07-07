@@ -31,14 +31,10 @@ Direct3D를 사용하면 디스플레이에 그리기 위한 그래픽 리소스
 
 이 샘플에서의 비교를 위해 각 API의 관련 형식이 다음에 나와 있습니다.
 
--   [
-            **ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): 그래픽 장치 및 해당 리소스의 가상 표현을 제공합니다.
--   [
-            **ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): 버퍼를 구성하고 렌더링 명령을 실행할 수 있는 인터페이스를 제공합니다.
--   [
-            **IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): 스왑 체인은 OpenGL ES 2.0의 백 버퍼와 유사합니다. 스왑 체인은 디스플레이를 위한 렌더링된 최종 이미지가 포함된 그래픽 어댑터상의 메모리 영역이며, 화면에 최신 렌더를 표시하기 위해 작성 및 "스왑"될 수 있는 여러 버퍼를 포함하고 있기 때문에 "스왑 체인"이라고 합니다.
--   [
-            **ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): Direct3D 디바이스 컨텍스트가 그리는 2D 비트맵 버퍼가 포함되어 있고, 이는 스왑 체인에 의해 표시됩니다. OpenGL ES 2.0과 마찬가지로, 여러 렌더링 대상이 있을 수 있으며 이 중 일부는 스왑 체인에 바인딩되어 있지 않지만 멀티패스 음영 기술에 사용됩니다.
+-   [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575): 그래픽 장치 및 해당 리소스의 가상 표현을 제공합니다.
+-   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598): 버퍼를 구성하고 렌더링 명령을 실행할 수 있는 인터페이스를 제공합니다.
+-   [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631): 스왑 체인은 OpenGL ES 2.0의 백 버퍼와 유사합니다. 스왑 체인은 디스플레이를 위한 렌더링된 최종 이미지가 포함된 그래픽 어댑터상의 메모리 영역이며, 화면에 최신 렌더를 표시하기 위해 작성 및 "스왑"될 수 있는 여러 버퍼를 포함하고 있기 때문에 "스왑 체인"이라고 합니다.
+-   [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582): Direct3D 디바이스 컨텍스트가 그리는 2D 비트맵 버퍼가 포함되어 있고, 이는 스왑 체인에 의해 표시됩니다. OpenGL ES 2.0과 마찬가지로, 여러 렌더링 대상이 있을 수 있으며 이 중 일부는 스왑 체인에 바인딩되어 있지 않지만 멀티패스 음영 기술에 사용됩니다.
 
 템플릿에서 렌더러 개체에는 다음과 같은 필드가 포함되어 있습니다.
 
@@ -124,23 +120,15 @@ void Render(GraphicsContext *drawContext)
 
 Direct3D 11에서 이 프로세스는 매우 유사합니다. (Direct3D 템플릿의 뷰포트 및 렌더링 대상 구성을 사용하고 있다고 가정합니다.)
 
--   [
-            **ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790)에 대한 호출로 상수 버퍼(이 경우, 모델-보기-투영 행렬)를 업데이트합니다.
--   [
-            **ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)로 꼭짓점 버퍼를 설정합니다.
--   [
-            **ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)로 인덱스 버퍼를 설정합니다.
--   [
-            **ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)로 특정 삼각형 토폴로지(삼각형 목록)를 설정합니다.
--   [
-            **ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)으로 꼭짓점 버퍼의 입력 레이아웃을 설정합니다.
--   [
-            **ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)로 꼭짓점 셰이더를 바인딩합니다.
--   [
-            **ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)로 조각 셰이더를 바인딩합니다.
+-   [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790)에 대한 호출로 상수 버퍼(이 경우, 모델-보기-투영 행렬)를 업데이트합니다.
+-   [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)로 꼭짓점 버퍼를 설정합니다.
+-   [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453)로 인덱스 버퍼를 설정합니다.
+-   [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)로 특정 삼각형 토폴로지(삼각형 목록)를 설정합니다.
+-   [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454)으로 꼭짓점 버퍼의 입력 레이아웃을 설정합니다.
+-   [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493)로 꼭짓점 셰이더를 바인딩합니다.
+-   [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472)로 조각 셰이더를 바인딩합니다.
 -   셰이더를 통해 인덱싱된 꼭짓점을 보내고 색 결과를 [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409)로 렌더링 대상 버퍼에 출력합니다.
--   [
-            **IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)로 렌더링 대상 버퍼를 표시합니다.
+-   [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)로 렌더링 대상 버퍼를 표시합니다.
 
 Direct3D 11: 디스플레이를 위해 프레임 렌더링
 
@@ -205,8 +193,7 @@ void RenderObject::Render()
 
 ```
 
-[
-            **IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하면 구성된 디스플레이에 프레임이 출력됩니다.
+[**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하면 구성된 디스플레이에 프레임이 출력됩니다.
 
 ## 이전 단계
 

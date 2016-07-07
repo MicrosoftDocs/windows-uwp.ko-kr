@@ -21,8 +21,7 @@ ms.openlocfilehash: 3c2369a2fdc48aed14f7ad363df8792e0ed5d795
 -   3부: 게임 루프 포팅
 
 
-[
-            **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
+[**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
 
 ## 창 만들기
 

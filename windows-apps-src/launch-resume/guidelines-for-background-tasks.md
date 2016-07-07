@@ -25,9 +25,7 @@ ms.openlocfilehash: 3fb6884a968afb87e8de303bbd17feba4993c597
 
 **백그라운드 작업 관리:**앱에서는 등록된 백그라운드 작업 목록을 가져오고, 진행률 및 완료 처리기를 등록하고, 해당 이벤트를 적절하게 처리해야 합니다. 백그라운드 작업 클래스는 진행률, 취소 및 완료를 보고해야 합니다. 자세한 내용은 [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md) 및 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)을 참조하세요.
 
-**
-            [
-            **BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:**백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 그렇지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드가 완료된 후 백그라운드 작업이 영구히 종료될 수 있습니다. 자세한 내용은 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+**[**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:**백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 그렇지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드가 완료된 후 백그라운드 작업이 영구히 종료될 수 있습니다. 자세한 내용은 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 또는 지연을 요청하고 **async/await**를 사용하여 비동기 메서드 호출을 완료합니다. **await** 메서드가 호출된 후 지연을 닫습니다.
 
@@ -69,8 +67,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 -   잠금 화면에 배치하지 않아도 앱이 작동하는지 확인합니다.
 
--   [
-            **PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 등록된 백그라운드 작업을 포함하며 앱 매니페스트에서 백그라운드 작업을 선언합니다. 진입점과 트리거 형식이 올바른지 확인합니다. 이는 인증하는 데 필요하며 사용자가 앱을 잠금 화면에 배치할 수 있도록 해줍니다.
+-   [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 등록된 백그라운드 작업을 포함하며 앱 매니페스트에서 백그라운드 작업을 선언합니다. 진입점과 트리거 형식이 올바른지 확인합니다. 이는 인증하는 데 필요하며 사용자가 앱을 잠금 화면에 배치할 수 있도록 해줍니다.
 
 **참고**  
 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
@@ -98,6 +95,6 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

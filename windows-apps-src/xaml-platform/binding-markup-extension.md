@@ -43,16 +43,14 @@ ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 |------|-------------|
 | *propertyPath* | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | *bindingProperties* | *propName* = *value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
-| *propName* | [
-            **Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 개체에 설정할 속성의 문자열 이름. 예: "Converter" | 
+| *propName* | [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 개체에 설정할 속성의 문자열 이름. 예: "Converter" | 
 | *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-binding) 섹션의 속성에 따라 달라집니다. |
 
 ## 속성 경로
 
 *PropertyPath*는 소스 속성에 바인딩할 속성인 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 값을 설정합니다. 속성 이름을 명시적으로 지정하거나(`{Binding Path=...}`) 생략할 수 있습니다(`{Binding ...}`).
 
-[
-            **Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 형식은 속성 경로, 즉 사용자 지정 형식 또는 프레임워크 형식의 속성 또는 하위 속성으로 평가되는 문자열입니다. 형식은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)일 수 있지만 반드시 그래야 하는 것은 아닙니다. 속성 경로의 단계는 점(.)으로 구분되므로 연속적인 하위 속성을 트래버스하기 위해 여러 구분 기호를 포함할 수 있습니다. 바인딩할 개체를 구현하는 데 사용되는 프로그래밍 언어에 관계없이 점 구분 기호를 사용합니다.
+[**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 형식은 속성 경로, 즉 사용자 지정 형식 또는 프레임워크 형식의 속성 또는 하위 속성으로 평가되는 문자열입니다. 형식은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)일 수 있지만 반드시 그래야 하는 것은 아닙니다. 속성 경로의 단계는 점(.)으로 구분되므로 연속적인 하위 속성을 트래버스하기 위해 여러 구분 기호를 포함할 수 있습니다. 바인딩할 개체를 구현하는 데 사용되는 프로그래밍 언어에 관계없이 점 구분 기호를 사용합니다.
 
 예를 들어 직원 개체의 이름 속성에 UI를 바인딩하려면 속성 경로가 "Employee.FirstName"일 수 있습니다. 직원의 부양가족을 포함하는 속성에 항목 컨트롤을 바인딩하는 경우 속성 경로는 "Employee.Dependents"일 수 있으며 항목 컨트롤의 항목 템플릿은 "Dependents" 항목의 표시를 담당합니다.
 
@@ -74,8 +72,7 @@ ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 | [**경로**](https://msdn.microsoft.com/library/windows/apps/br209830) | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | [**변환기**](https://msdn.microsoft.com/library/windows/apps/br209826) | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 XAML에서 설정할 수 있지만 리소스 사전의 해당 개체에 대한 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조에서 할당한 개체 인스턴스를 참조하는 경우에만 설정할 수 있습니다. |
 | [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) | 변환기가 사용할 문화권을 지정합니다. ([**변환기**](https://msdn.microsoft.com/library/windows/apps/br209826)를 설정하는 경우) 문화권은 표준 기반 식별자로 설정됩니다. 자세한 내용은 **ConverterLanguage**를 참조하세요. | 
-| [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. [
-            **변환기**](https://msdn.microsoft.com/library/windows/apps/br209826)를 설정하는 경우에는 대부분의 변환기가 전달된 값에서 변환을 위해 필요한 모든 정보를 얻는 간단한 논리를 사용하며 **ConverterParameter** 값이 필요하지 않습니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 **ConverterParameter**에서 설명을 참조하세요. |
+| [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827) | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. [**변환기**](https://msdn.microsoft.com/library/windows/apps/br209826)를 설정하는 경우에는 대부분의 변환기가 전달된 값에서 변환을 위해 필요한 모든 정보를 얻는 간단한 논리를 사용하며 **ConverterParameter** 값이 필요하지 않습니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 **ConverterParameter**에서 설명을 참조하세요. |
 | [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) | **Name** 속성 또는 [x:Name](x-name-attribute.md) 특성이 포함된 동일한 XAML 구성에서 다른 요소를 참조하여 데이터 원본을 지정합니다. 이 방법은 관련 값을 공유하거나 한 UI 요소의 하위 속성을 사용하여 다른 요소에 대한 특정 값을 제공하는 데 사용되기도 합니다(예: XAML 컨트롤 템플릿). |
 | [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. | 
 | [**모드**](https://msdn.microsoft.com/library/windows/apps/br209829) | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 이러한 문자열은 [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822) 열거형의 상수 이름에 해당합니다. 기본값은 바인딩 대상에 따라 다르지만 대부분의 경우"OneWay"입니다. 이 값은 **{x:Bind}**에 대한 기본값("OneTime")과 다릅니다. | 
@@ -86,11 +83,9 @@ ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 
 **참고** **{x:Bind}**에서 **{Binding}**으로 태그를 변환하는 경우 **Mode** 속성에 대한 기본값의 차이에 주의하세요.
 
-[
-            **Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
+[**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 
-[
-            **Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) 및 [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828)은 바인딩 소스를 지정하므로 상호 배타적입니다.
+[**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) 및 [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828)은 바인딩 소스를 지정하므로 상호 배타적입니다.
 
 **팁** [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) 또는 [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827)의 경우처럼 값에 단일 중괄호를 지정해야 하는 경우 중괄호 앞에 백슬래시`\{`을 넣습니다. 또는 보조 따옴표 집합에서 이스케이프해야 하는 괄호가 포함된 전체 문자열을 다음과 같이 묶습니다. `ConverterParameter='{Mix}'`.
 
@@ -123,8 +118,7 @@ ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
 
 두 번째 예제에서는 4가지 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 속성 집합([**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828), [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830), [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) 및 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826))을 설정합니다. 이 경우 **Path**는 명시적으로 **Binding** 속성으로 명명되어 표시됩니다. **Path**는 동일한 런타임 개체 트리에 있는 다른 [**Slider**](https://msdn.microsoft.com/library/windows/apps/br209614) 개체(`sliderValueConverter`)인 데이터 바인딩 소스로 평가됩니다.
 
-[
-            **Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) 속성 값은 다른 태그 확장인 [{StaticResource} 태그 확장](staticresource-markup-extension.md)을 사용하므로 여기서 중첩된 태그 확장 두 개가 사용됩니다. 안쪽 태그 확장이 먼저 평가되므로 리소스를 획득한 후에는 바인딩에서 사용할 수 있는 실용적인 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)(리소스에서 `local:S2Formatter` 요소로 인스턴스화되는 사용자 지정 클래스)가 있습니다.
+[**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826) 속성 값은 다른 태그 확장인 [{StaticResource} 태그 확장](staticresource-markup-extension.md)을 사용하므로 여기서 중첩된 태그 확장 두 개가 사용됩니다. 안쪽 태그 확장이 먼저 평가되므로 리소스를 획득한 후에는 바인딩에서 사용할 수 있는 실용적인 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)(리소스에서 `local:S2Formatter` 요소로 인스턴스화되는 사용자 지정 클래스)가 있습니다.
 
 ## 도구 지원
 

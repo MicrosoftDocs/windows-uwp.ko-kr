@@ -220,8 +220,7 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 **Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패.
 
-공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [
-            **CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
+공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) 또는 [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
 
 **앱이 이 테스트에 실패할 경우 수행할 작업**
 

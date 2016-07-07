@@ -27,14 +27,10 @@ API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내�
 
 시각적 개체는 다른 시각적 개체의 컨테이너가 되거나 콘텐츠 시각적 개체를 호스트할 수 있습니다. API를 사용하면 계층의 특정 작업에 대해 명확한 [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) 개체 집합을 제공하여 사용하기 쉽게 만들 수 있습니다.
 
--   [
-            **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체입니다. 대부분의 속성은 여기에 있으며 다른 시각적 개체에 상속됩니다.
--   [
-            **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 삽입할 수 있는 기능을 추가합니다.
--   [
-            **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 이미지, 효과 및 swapchain 형태의 콘텐츠를 포함합니다.
--   [
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – 응용 프로그램과 시스템 작성자 프로세스 간의 관계를 관리하는 개체 팩터리입니다.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체입니다. 대부분의 속성은 여기에 있으며 다른 시각적 개체에 상속됩니다.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 삽입할 수 있는 기능을 추가합니다.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 이미지, 효과 및 swapchain 형태의 콘텐츠를 포함합니다.
+-   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – 응용 프로그램과 시스템 작성자 프로세스 간의 관계를 관리하는 개체 팩터리입니다.
 
 작성자는 트리의 시각적 개체를 클리핑 또는 변환하는 데 사용되는 많은 컴퍼지션 개체뿐 아니라 다양한 애니메이션 및 효과 집합의 팩터리이기도 합니다.
 
@@ -64,8 +60,7 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 표현 애니메�
 
 -   이 API에 대한 Kenny Kerr의 MSDN 문서 [Graphics and Animation - Windows Composition Turns 10](https://msdn.microsoft.com/magazine/mt590968)(그래픽 및 애니메이션 - Windows 컴퍼지션(Windows 10))을 참조하세요.
 -   [컴퍼지션 GitHub](https://github.com/Microsoft/composition)의 컴퍼지션 샘플
--   [
-            **API에 대한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   [**API에 대한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
 -   알려진 문제: [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues)
 
  

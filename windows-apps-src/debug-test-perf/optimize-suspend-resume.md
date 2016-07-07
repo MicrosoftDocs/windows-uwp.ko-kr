@@ -60,8 +60,7 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 성능적 관점에서 [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx) 클래스를 사용하는 것이 좋습니다. **XmlSerializer**의 경우 직렬화 및 역직렬화 시간이 가장 짧고 메모리 사용 공간을 적게 유지합니다. **XmlSerializer**의 경우 일부 .NET Framework에 종속되므로 다른 직렬화 기술에 비해 **XmlSerializer**를 사용하기 위해 앱으로 로드해야 하는 모듈 수가 더 적습니다.
 
-[
-            **DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx)를 사용하면 사용자 지정 클래스를 더 쉽게 직렬화할 수 있지만 **XmlSerializer**보다 성능에 미치는 영향은 큽니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
+[**DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx)를 사용하면 사용자 지정 클래스를 더 쉽게 직렬화할 수 있지만 **XmlSerializer**보다 성능에 미치는 영향은 큽니다. 향상된 성능이 필요한 경우 전환을 고려하세요. 일반적으로 직렬 변환기를 2개 이상 로드하지 않아야 하며 다른 직렬 변환기의 기능이 필요하지 않은 경우 **XmlSerializer**를 사용하는 것이 좋습니다.
 
 ### 메모리 사용 공간 감소
 

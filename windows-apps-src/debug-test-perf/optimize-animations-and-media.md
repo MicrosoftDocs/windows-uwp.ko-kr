@@ -25,12 +25,9 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 
 -   키 프레임을 사용하는 개체 애니메이션
 -   제로 기간 애니메이션
--   [
-            **Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772) 속성에 대한 애니메이션
--   [
-            **UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 대한 애니메이션
--   [
-            **SolidColorBrush.Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) 하위 속성을 대상으로 할 때 유형 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)의 속성에 대한 애니메이션
+-   [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772) 속성에 대한 애니메이션
+-   [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) 속성에 대한 애니메이션
+-   [**SolidColorBrush.Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) 하위 속성을 대상으로 할 때 유형 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)의 속성에 대한 애니메이션
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성에 대한 애니메이션
 
     -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.rendertransform)
@@ -43,13 +40,11 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 -   종속 애니메이션이 UI 스레드에서 실행될 수 있도록 [**EnableDependentAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210356) 속성을 설정할 경우. 이 애니메이션을 독립 버전으로 변환합니다. 예를 들어 개체의 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) 및 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)가 아니라 [**ScaleTransform.ScaleX**](https://msdn.microsoft.com/library/windows/apps/BR242946) 및 [**ScaleTransform.ScaleY**](https://msdn.microsoft.com/library/windows/apps/BR242948)를 애니메이션합니다. 이미지, 텍스트와 같은 개체의 크기를 주저 없이 조정하세요. 프레임워크에서는 [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940)이 애니메이션되는 동안 쌍선형 크기 조정을 적용합니다. 이미지/텍스트는 최종 크기로 다시 변환되므로 항상 분명하게 표시됩니다.
 -   종속 애니메이션에 효과적인 프레임당 업데이트를 만드는 경우. 이와 같은 예는 [**CompositonTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127) 이벤트 처리기의 변형에 적용됩니다.
--   [
-            **CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) 속성이 **BitmapCache**로 설정된 요소에서 독립적으로 간주된 애니메이션을 실행하는 경우. 각 프레임에 대한 캐시가 다시 변환되어야 하므로 이 애니메이션은 종속으로 간주됩니다.
+-   [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) 속성이 **BitmapCache**로 설정된 요소에서 독립적으로 간주된 애니메이션을 실행하는 경우. 각 프레임에 대한 캐시가 다시 변환되어야 하므로 이 애니메이션은 종속으로 간주됩니다.
 
 ### WebView 또는 MediaElement에 애니메이션 효과를 주지 않음
 
-[
-            **WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤 내의 웹 콘텐츠는 XAML 프레임워크에서 직접 렌더링되지 않으므로 나머지 장면을 구성하기 위한 추가 작업이 필요합니다. 이 추가 작업은, 화면 주위에서 컨트롤을 애니메이션으로 만들 때 추가되며 잠재적으로 동기화 문제를 발생시킬 수 있습니다(예: HTML 콘텐츠가 페이지의 나머지 XAML 콘텐츠와 동기화하여 이동하지 않을 수 있음). **WebView** 컨트롤에 애니메이션 효과를 주어야 할 경우 애니메이션 중 컨트롤을 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webviewbrush.aspx)로 전환하세요.
+[**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤 내의 웹 콘텐츠는 XAML 프레임워크에서 직접 렌더링되지 않으므로 나머지 장면을 구성하기 위한 추가 작업이 필요합니다. 이 추가 작업은, 화면 주위에서 컨트롤을 애니메이션으로 만들 때 추가되며 잠재적으로 동기화 문제를 발생시킬 수 있습니다(예: HTML 콘텐츠가 페이지의 나머지 XAML 콘텐츠와 동기화하여 이동하지 않을 수 있음). **WebView** 컨트롤에 애니메이션 효과를 주어야 할 경우 애니메이션 중 컨트롤을 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webviewbrush.aspx)로 전환하세요.
 
 마찬가지로 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
 
@@ -57,21 +52,18 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 대부분의 애니메이션은 지정된 시간 동안 실행되지만 [**Timeline.Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207) 속성을 Forever로 설정하면 애니메이션이 무한 실행됩니다. 무한 애니메이션의 사용은 최소화하는 것이 좋습니다. CPU 리소스를 계속 소비하고 CPU가 절전 또는 유휴 상태로 전환하는 것을 막아 더 일찍 전원 부족 상태가 될 수도 있기 때문입니다.
 
-[
-            **CompositionTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127) 처리기 추가는 무한 애니메이션 실행과 비슷합니다. 보통 UI 스레드는 수행할 작업이 있는 경우에만 활성화되지만 이 이벤트용 처리기를 추가하면 모든 프레임을 강제 실행합니다. 수행할 작업이 없는 경우 처리기를 제거하고 필요할 경우 다시 등록하세요.
+[**CompositionTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127) 처리기 추가는 무한 애니메이션 실행과 비슷합니다. 보통 UI 스레드는 수행할 작업이 있는 경우에만 활성화되지만 이 이벤트용 처리기를 추가하면 모든 프레임을 강제 실행합니다. 수행할 작업이 없는 경우 처리기를 제거하고 필요할 경우 다시 등록하세요.
 
 ### 애니메이션 라이브러리 사용
 
-[
-            **Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) 네임스페이스에는 다른 Windows 애니메이션과 모양과 느낌이 일치하는 고성능의, 자연스러운 애니메이션 라이브러리가 포함되어 있습니다. 관련 클래스에는 해당 이름에 "테마"가 있으며 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/Mt187350)에 설명되어 있습니다. 이 라이브러리는 앱의 첫 화면을 애니메이션하거나 상태 및 콘텐츠 전환을 만드는 것과 같은 여러 일반적인 애니메이션 시나리오를 지원합니다. UWP UI에서 성능과 일관성을 높이기 위해 가능하면 이 애니메이션 라이브러리를 사용하는 것이 좋습니다.
+[**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232) 네임스페이스에는 다른 Windows 애니메이션과 모양과 느낌이 일치하는 고성능의, 자연스러운 애니메이션 라이브러리가 포함되어 있습니다. 관련 클래스에는 해당 이름에 "테마"가 있으며 [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/Mt187350)에 설명되어 있습니다. 이 라이브러리는 앱의 첫 화면을 애니메이션하거나 상태 및 콘텐츠 전환을 만드는 것과 같은 여러 일반적인 애니메이션 시나리오를 지원합니다. UWP UI에서 성능과 일관성을 높이기 위해 가능하면 이 애니메이션 라이브러리를 사용하는 것이 좋습니다.
 
 > **참고** 애니메이션 라이브러리에서 가능한 모든 속성을 애니메이션할 수는 없습니다. 애니메이션 라이브러리가 적용되지 않는 XAML 시나리오의 경우 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187354)을 참조하세요.
 
 
 ### CompositeTransform3D 속성을 독립적으로 애니메이션
 
-[
-            **CompositeTransform3D**](https://msdn.microsoft.com/library/windows/apps/Dn914714)의 각 속성을 독립적으로 애니메이션할 수 있으므로 필요한 애니메이션만 적용합니다. 예제 및 자세한 내용은 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)를 참조하세요. 변형을 애니메이션하는 방법에 대한 자세한 내용은 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187354) 및 [키 프레임 및 감속/가속 함수 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187352)을 참조하세요.
+[**CompositeTransform3D**](https://msdn.microsoft.com/library/windows/apps/Dn914714)의 각 속성을 독립적으로 애니메이션할 수 있으므로 필요한 애니메이션만 적용합니다. 예제 및 자세한 내용은 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d)를 참조하세요. 변형을 애니메이션하는 방법에 대한 자세한 내용은 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187354) 및 [키 프레임 및 감속/가속 함수 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt187352)을 참조하세요.
 
 ## 미디어 리소스 최적화
 
@@ -115,24 +107,20 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 ### MediaElement에 대한 소스 설정 지연
 
-미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [
-            **Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.source) 속성이나 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) 메서드를 통해 소스가 설정된 후 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
+미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.source) 속성이나 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) 메서드를 통해 소스가 설정된 후 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
 
 ### MediaElement.PosterSource 설정
 
-[
-            **MediaElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.postersource)를 설정하면 XAML이 다른 경우에는 사용되었을 수 있는 일부 GPU 리소스를 해제할 수 있습니다. 이 API를 사용하면 앱이 최대한 적은 메모리를 사용할 수 있습니다.
+[**MediaElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.postersource)를 설정하면 XAML이 다른 경우에는 사용되었을 수 있는 일부 GPU 리소스를 해제할 수 있습니다. 이 API를 사용하면 앱이 최대한 적은 메모리를 사용할 수 있습니다.
 
 ### 미디어 스크러빙 개선
 
 언제나 스크러빙은 미디어 플랫폼의 응답 성능을 실현하기 위한 힘든 작업입니다. 일반적으로 사람들은 슬라이더 값을 변경하여 이 목적을 달성합니다. 다음은 스크러빙을 가능한 효율적으로 만드는 방법에 대한 몇 가지 팁입니다.
 
--   [
-            **Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) 값을 [**MediaElement.Position**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.position)에 바인딩하거나 타이머를 기준으로 업데이트합니다. 두 작업 모두 하지 마세요. 두 번째 작업을 선택할 경우 타이머에 대해 적절한 업데이트 빈도를 사용해야 합니다. XAML 프레임워크는 재생 중에 250밀리초마다 **MediaElement.Position**을 업데이트합니다.
+-   [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) 값을 [**MediaElement.Position**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.position)에 바인딩하거나 타이머를 기준으로 업데이트합니다. 두 작업 모두 하지 마세요. 두 번째 작업을 선택할 경우 타이머에 대해 적절한 업데이트 빈도를 사용해야 합니다. XAML 프레임워크는 재생 중에 250밀리초마다 **MediaElement.Position**을 업데이트합니다.
 -   슬라이더에서 단계 빈도 크기는 동영상 길이를 통해 조정되어야 합니다.
 -   슬라이더에서 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**MediaElement.PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.playbackrate) 속성을 0으로 설정합니다.
--   [
-            **PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
+-   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
 
 ### 동영상 해상도를 장치 해상도와 일치
 
@@ -174,9 +162,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 </Image>
 ```
 
-[
-            **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)에 대한 단위는 기본적으로 실제 픽셀입니다. [
-            **DecodePixelType**](https://msdn.microsoft.com/library/windows/apps/Dn298545) 속성을 사용하면 이 동작을 변경할 수 있습니다. 즉 **DecodePixelType**을 **Logical**로 설정하면 디코드 크기가 다른 XAML 콘텐츠와 유사하게 시스템의 현재 배율을 자동으로 고려합니다. 그러므로 예를 들어 **DecodePixelWidth** 및 **DecodePixelHeight**를 이미지가 표시되는 이미지 컨트롤의 Height 및 Width 속성과 일치시키려는 경우 **DecodePixelType**을 **Logical**로 설정하는 것이 일반적으로 적절합니다. 실제 픽셀을 사용하는 기본 동작에서는 직접 시스템의 현재 배율을 고려해야 하므로 사용자가 디스플레이 기본 설정을 변경하는 경우 배율 변경 알림을 수신하게 됩니다.
+[**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)에 대한 단위는 기본적으로 실제 픽셀입니다. [**DecodePixelType**](https://msdn.microsoft.com/library/windows/apps/Dn298545) 속성을 사용하면 이 동작을 변경할 수 있습니다. 즉 **DecodePixelType**을 **Logical**로 설정하면 디코드 크기가 다른 XAML 콘텐츠와 유사하게 시스템의 현재 배율을 자동으로 고려합니다. 그러므로 예를 들어 **DecodePixelWidth** 및 **DecodePixelHeight**를 이미지가 표시되는 이미지 컨트롤의 Height 및 Width 속성과 일치시키려는 경우 **DecodePixelType**을 **Logical**로 설정하는 것이 일반적으로 적절합니다. 실제 픽셀을 사용하는 기본 동작에서는 직접 시스템의 현재 배율을 고려해야 하므로 사용자가 디스플레이 기본 설정을 변경하는 경우 배율 변경 알림을 수신하게 됩니다.
 
 DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시적으로 크게 설정되면 앱에서 픽셀 당 최대 4바이트의 추가 메모리를 불필요하게 사용하게 되므로 큰 이미지의 경우 순식간에 과도하게 사용됩니다. 또한 이미지가 쌍선형 배율을 사용하면서 축소되어 큰 배율의 경우 흐리게 표시될 수 있습니다.
 
@@ -192,8 +178,7 @@ DecodePixelWidth/DecodePixelHeight가 이미지가 화면에 표시되는 것보
 
 명시적인 디코드 크기를 설정하지 않은 경우 XAML은 포함하는 페이지의 초기 레이아웃에 따라 화면에 표시하는 정확한 크기로 이미지를 디코딩함으로써 메모리를 절약하기 위한 최선의 노력을 합니다. 가능한 경우 이 기능을 사용하는 방식으로 응용 프로그램을 작성하는 것이 좋습니다. 다음 조건 중 하나가 충족되는 경우에는 이 기능이 사용되지 않습니다.
 
--   [
-            **BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)가 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) 또는 [**UriSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.urisource.aspx)를 사용하여 콘텐츠를 설정한 다음 라이브 XAML 트리에 연결되었습니다.
+-   [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)가 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) 또는 [**UriSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.urisource.aspx)를 사용하여 콘텐츠를 설정한 다음 라이브 XAML 트리에 연결되었습니다.
 -   이미지가 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/BR243255)와 같은 동기 디코딩을 사용하여 디코드됩니다.
 -   호스트 이미지 요소 또는 브러시 또는 부모 요소에서 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)를 0으로 설정하거나 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정해서 이미지가 숨겨졌습니다.
 -   이미지 컨트롤 또는 브러시가 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/BR242968) **None**을 사용합니다.
@@ -263,8 +248,7 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 ### SoftwareBitmapSource
 
-[
-            **SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/Dn997854) 클래스는 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/BR226176), 카메라 API 및 XAML과 같이 서로 다른 WinRT 네임스페이스 간에 상호 운용이 가능한 압축되지 않은 이미지를 교환합니다. 이 클래스는 [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/BR243259)을 사용하여 일반적으로 필요한 추가 복사본을 제거합니다. 이를 통해 최고 메모리 및 원본 대 화면 대기 시간을 줄일 수 있도록 합니다.
+[**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/Dn997854) 클래스는 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/BR226176), 카메라 API 및 XAML과 같이 서로 다른 WinRT 네임스페이스 간에 상호 운용이 가능한 압축되지 않은 이미지를 교환합니다. 이 클래스는 [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/BR243259)을 사용하여 일반적으로 필요한 추가 복사본을 제거합니다. 이를 통해 최고 메모리 및 원본 대 화면 대기 시간을 줄일 수 있도록 합니다.
 
 또한 원본 정보를 제공하는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Dn887358)은 사용자 지정 [**IWICBitmap**](https://msdn.microsoft.com/library/windows/desktop/Ee719675)을 사용할 수 있도록 구성하여 필요할 때마다 앱에서 메모리를 다시 매핑할 수 있는 재로드 가능 백업 저장소를 제공할 수 있습니다. 이는 고급 C++ 사용 사례입니다.
 
@@ -272,9 +256,7 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 ### 미리 보기에 GetThumbnailAsync 사용
 
-이미지 크기 조정을 위한 하나의 사용 사례는 미리 보기를 만드는 것입니다. [
-            **DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)를 사용하여 작은 이미지 버전을 제공할 수 있지만 UWP에서는 미리 보기 검색을 위한 훨씬 더 효율적인 API를 제공합니다. [
-            **GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210)는 파일 시스템이 이미 캐시된 이미지의 미리 보기를 제공합니다. 이미지를 열거나 디코딩할 필요가 없으므로 XAML API보다 훨씬 더 나은 성능을 제공합니다.
+이미지 크기 조정을 위한 하나의 사용 사례는 미리 보기를 만드는 것입니다. [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) 및 [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241)를 사용하여 작은 이미지 버전을 제공할 수 있지만 UWP에서는 미리 보기 검색을 위한 훨씬 더 효율적인 API를 제공합니다. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210)는 파일 시스템이 이미 캐시된 이미지의 미리 보기를 제공합니다. 이미지를 열거나 디코딩할 필요가 없으므로 XAML API보다 훨씬 더 나은 성능을 제공합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp

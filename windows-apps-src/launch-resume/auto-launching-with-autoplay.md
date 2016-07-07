@@ -340,8 +340,7 @@ protected override void OnActivated(IActivatedEventArgs args)
 
 ### 5단계: 장치 정보 표시 코드 추가
 
-[
-            **StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) 클래스의 속성에서 카메라에 대한 정보를 가져올 수 있습니다. 이 단계의 코드는 앱이 실행될 때 장치 이름 및 기타 정보를 사용자에게 표시합니다. 그런 후 다음 단계에서 추가할 GetImageList 및 GetThumbnail 메서드를 호출하여 카메라에 저장된 이미지의 미리 보기를 표시합니다.
+[**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) 클래스의 속성에서 카메라에 대한 정보를 가져올 수 있습니다. 이 단계의 코드는 앱이 실행될 때 장치 이름 및 기타 정보를 사용자에게 표시합니다. 그런 후 다음 단계에서 추가할 GetImageList 및 GetThumbnail 메서드를 호출하여 카메라에 저장된 이미지의 미리 보기를 표시합니다.
 
 MainPage.xaml.cs 파일에서 **MainPage** 클래스에 다음 코드를 추가합니다.
 
@@ -580,6 +579,6 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -39,14 +39,10 @@ ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
 ## 텍스트 요소 역할  
 UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또는 *textedit 컨트롤*이라고 함)를 사용할 수 있습니다.
 
-* [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
-* [
-            **TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
-* [
-            **RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)(및 오버플로 클래스 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
-* [
-            **RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)(및 오버플로 클래스 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): 역할이 [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
+* [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/BR227548): 역할이 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)임
 
 컨트롤에 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
 
@@ -84,8 +80,7 @@ XAML
 
 평상시에는 자동 확대 기능을 사용하지 않도록 설정하지 마세요. 왜냐하면 모든 앱에서 보편적으로 UI 텍스트의 크기를 조정하는 일은 사용자에게 중요한 접근성 경험이며, 사용자는 이 경험이 앱에서도 작동하기를 기대합니다.
 
-[
-            **TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) 이벤트와 [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
+[**TextScaleFactorChanged**](https://msdn.microsoft.com/library/windows/apps/Dn633867) 이벤트와 [**TextScaleFactor**](https://msdn.microsoft.com/library/windows/apps/Dn633866) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
 
 C#
 ```csharp
@@ -107,13 +102,11 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 
 다음 형식에는 **IsTextScaleFactorEnabled** 속성이 있습니다.  
 * [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)
-* [
-            **Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 및 파생 클래스
+* [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 및 파생 클래스
 * [**FontIcon**](https://msdn.microsoft.com/library/windows/apps/Dn279514)
 * [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)
 * [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)
-* [
-            **TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) 및 파생 클래스
+* [**TextElement**](https://msdn.microsoft.com/library/windows/apps/BR209967) 및 파생 클래스
 
 <span id="related_topics"/>
 ## 관련 항목  
@@ -125,6 +118,6 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

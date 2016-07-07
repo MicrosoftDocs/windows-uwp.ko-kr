@@ -45,6 +45,6 @@ XAML 2009 사양에서는 **x:Uri** 및 **x:Single** 같은 다른 XAML 언어 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

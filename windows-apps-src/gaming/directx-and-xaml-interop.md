@@ -36,31 +36,26 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 -   정적 이미지를 작성하거나 이벤트 구동 간격으로 복잡한 이미지를 그리려는 경우 [**Windows::UI::Xaml::Media::Imaging::SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)를 사용하여 공유 표면에 그립니다. 이 유형은 크기가 조정되는 DirectX 그리기 표면을 처리합니다. 일반적으로 이미지나 텍스처를 문서 또는 UI 요소에 표시할 비트맵으로 작성할 때 이 유형을 사용하며, 고성능 게임 같은 실시간 대화형 작업에는 잘 맞지 않습니다. **SurfaceImageSource** 개체에 대한 업데이트는 XAML 사용자 인터페이스 업데이트와 동기화되므로 가변 프레임 속도 또는 실시간 입력에 대한 응답 사용자에게 제공하는 시각적 피드백에 지연이 발생할 수 있기 때문입니다. 그렇지만 동적 컨트롤이나 데이터 시뮬레이션을 하는 데는 무리 없는 정도로 빠른 업데이트 속도를 제공합니다.
 
-    [
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 그래픽 개체는 다른 XAML UI 요소와 함께 작성할 수 있습니다. 이러한 개체는 변경하거나 투영할 수 있고, XAML 프레임워크는 불투명도 또는 z-인덱스 값을 따릅니다.
+    [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 그래픽 개체는 다른 XAML UI 요소와 함께 작성할 수 있습니다. 이러한 개체는 변경하거나 투영할 수 있고, XAML 프레임워크는 불투명도 또는 z-인덱스 값을 따릅니다.
 
--   이미지가 제공된 화면 크기보다 크고 사용자가 이를 회전하거나 확대/축소할 수 있는 경우 [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)를 사용합니다. 이 유형은 화면보다 큰 크기가 조정되는 DirectX 그리기 표면을 처리합니다. [
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)와 마찬가지로, 복잡한 이미지나 컨트롤을 동적으로 작성할 때 이 유형을 사용할 수 있습니다. 그리고 **SurfaceImageSource**처럼, 고성능 게임에는 적합하지 않습니다. **VirtualSurfaceImageSource**를 사용할 수 있는 XAML 요소의 예는 맵 컨트롤 또는 이미지가 많고 크기가 큰 문서 뷰어입니다.
+-   이미지가 제공된 화면 크기보다 크고 사용자가 이를 회전하거나 확대/축소할 수 있는 경우 [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)를 사용합니다. 이 유형은 화면보다 큰 크기가 조정되는 DirectX 그리기 표면을 처리합니다. [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)와 마찬가지로, 복잡한 이미지나 컨트롤을 동적으로 작성할 때 이 유형을 사용할 수 있습니다. 그리고 **SurfaceImageSource**처럼, 고성능 게임에는 적합하지 않습니다. **VirtualSurfaceImageSource**를 사용할 수 있는 XAML 요소의 예는 맵 컨트롤 또는 이미지가 많고 크기가 큰 문서 뷰어입니다.
 
 -   정기적인 짧은 대기 시간 간격으로 업데이트가 수행되어야 하는 상황에서, 또는 업데이트된 그래픽을 실시간으로 나타내는 데 DirectX를 사용하는 경우 XAML 프레임워크 새로 고침 타이머와 동기화하지 않고 그래픽을 새로 고칠 수 있도록 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 클래스를 사용하세요. 이 유형을 사용하면 그래픽 디바이스의 스왑 체인([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631))에 직접 액세스할 수 있고 렌더링 대상의 최상위 XAML 레이어에 액세스할 수 있습니다. 이 유형은 XAML 기반 사용자 인터페이스가 필요한 게임 및 기타 전체 화면 DirectX 앱에서 잘 작동합니다. 이 방법을 사용하려면 Microsoft DXGI(DirectX Graphics Infrastructure), Direct2D 및 Direct3D 기술을 포함하여 DirectX에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Direct3D 11의 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ff476345)을 참조하세요.
 
 ## SurfaceImageSource
 
 
-[
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)는 그릴 DirectX 공유 표면을 제공하고 비트를 앱 콘텐츠로 작성합니다.
+[**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)는 그릴 DirectX 공유 표면을 제공하고 비트를 앱 콘텐츠로 작성합니다.
 
 다음은 코드 숨김으로 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 개체를 만들고 업데이트하는 기본 프로세스입니다.
 
-1.  [
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 생성자에 높이와 너비를 전달하여 공유 표면의 크기를 정의합니다. 표면에 알파(불투명도) 지원이 필요한지 여부도 지정할 수 있습니다.
+1.  [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 생성자에 높이와 너비를 전달하여 공유 표면의 크기를 정의합니다. 표면에 알파(불투명도) 지원이 필요한지 여부도 지정할 수 있습니다.
 
     예제:
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
-2.  포인터를 [**ISurfaceImageSourceNative**](https://msdn.microsoft.com/library/windows/desktop/hh848322)로 가져갑니다. [
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)(또는 **IUnknown**)로 캐스트하고 그 위에서 **QueryInterface**를 호출하여 기본 **ISurfaceImageSourceNative** 구현을 가져옵니다. 이 구현에 정의된 메서드를 사용하여 디바이스를 설정하고 그리기 작업을 실행합니다.
+2.  포인터를 [**ISurfaceImageSourceNative**](https://msdn.microsoft.com/library/windows/desktop/hh848322)로 가져갑니다. [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)(또는 **IUnknown**)로 캐스트하고 그 위에서 **QueryInterface**를 호출하여 기본 **ISurfaceImageSourceNative** 구현을 가져옵니다. 이 구현에 정의된 메서드를 사용하여 디바이스를 설정하고 그리기 작업을 실행합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ISurfaceImageSourceNative> m_sisNative;
@@ -94,8 +89,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     m_sisNative->SetDevice(dxgiDevice.Get());
     ```
 
-4.  [
-            **IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 개체에 대한 포인터를 [**ISurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)에 전달하고 DirectX를 사용하여 해당 표면에 그립니다. *updateRect* 매개 변수에서 업데이트에 대해 지정한 영역에만 그려집니다.
+4.  [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 개체에 대한 포인터를 [**ISurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)에 전달하고 DirectX를 사용하여 해당 표면에 그립니다. *updateRect* 매개 변수에서 업데이트에 대해 지정한 영역에만 그려집니다.
 
     > **참고** [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527)당 한 번에 하나의 미처리 [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) 작업만 활성 상태로 있을 수 있습니다.
 
@@ -117,8 +111,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     }
     ```
 
-5.  [
-            **ISurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324)를 호출하여 비트맵을 완료합니다. 이 비트맵을 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)에 전달합니다.
+5.  [**ISurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324)를 호출하여 비트맵을 완료합니다. 이 비트맵을 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)에 전달합니다.
 
     ```cpp
     m_sisNative->EndDraw();
@@ -128,22 +121,18 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     brush->ImageSource = surfaceImageSource;
     ```
 
-6.  [
-            **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)를 사용하여 비트맵을 그립니다.
+6.  [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/br210101)를 사용하여 비트맵을 그립니다.
 
-> **참고** 현재 [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255)(**IBitmapSource::SetSource**에서 상속됨)를 호출하면 예외가 발생합니다. [
-            **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 개체에서 이 속성을 호출하지 마세요.
+> **참고** 현재 [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255)(**IBitmapSource::SetSource**에서 상속됨)를 호출하면 예외가 발생합니다. [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 개체에서 이 속성을 호출하지 마세요.
 
  
 
 ## VirtualSurfaceImageSource
 
 
-[
-            **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)는 콘텐츠가 화면에 맞출 수 있는 크기보다 잠재적으로 더 클 때 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)를 확장하며 최적으로 렌더링하려면 콘텐츠를 가상화해야 합니다.
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)는 콘텐츠가 화면에 맞출 수 있는 크기보다 잠재적으로 더 클 때 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)를 확장하며 최적으로 렌더링하려면 콘텐츠를 가상화해야 합니다.
 
-[
-            **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)는 표면의 영역이 화면에 보이게 되면 이를 업데이트하도록 구현하는 콜백 [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337)을 사용한다는 점에서 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)와 다릅니다. XAML 프레임워크가 개발자 대신 수행해 주는 것처럼 숨겨진 영역을 지울 필요는 없습니다.
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)는 표면의 영역이 화면에 보이게 되면 이를 업데이트하도록 구현하는 콜백 [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337)을 사용한다는 점에서 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)와 다릅니다. XAML 프레임워크가 개발자 대신 수행해 주는 것처럼 숨겨진 영역을 지울 필요는 없습니다.
 
 다음은 코드 숨김으로 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) 개체를 만들고 업데이트하는 기본 프로세스입니다.
 
@@ -151,8 +140,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
     `VirtualSurfaceImageSource^ virtualSIS = ref new VirtualSurfaceImageSource(2000, 2000);`
 
-2.  포인터를 [**IVirtualSurfaceImageSourceNative**](https://msdn.microsoft.com/library/windows/desktop/hh848328)로 가져갑니다. [
-            **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821) 또는 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)으로 캐스트하고 그 위에서 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 기본 **IVirtualSurfaceImageSourceNative** 구현을 가져옵니다. 이 구현에 정의된 메서드를 사용하여 디바이스를 설정하고 그리기 작업을 실행합니다.
+2.  포인터를 [**IVirtualSurfaceImageSourceNative**](https://msdn.microsoft.com/library/windows/desktop/hh848328)로 가져갑니다. [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821) 또는 [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509)으로 캐스트하고 그 위에서 [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)를 호출하여 기본 **IVirtualSurfaceImageSourceNative** 구현을 가져옵니다. 이 구현에 정의된 메서드를 사용하여 디바이스를 설정하고 그리기 작업을 실행합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<IVirtualSurfaceImageSourceNative>  m_vsisNative;
@@ -161,8 +149,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     vsisInspectable->QueryInterface(__uuidof(IVirtualSurfaceImageSourceNative), (void **)&m_vsisNative);
     ```
 
-3.  [
-            **IVirtualSurfaceImageSourceNative::SetDevice**](https://msdn.microsoft.com/library/windows/desktop/hh848325)를 호출하여 DXGI 디바이스를 설정합니다. 예제:
+3.  [**IVirtualSurfaceImageSourceNative::SetDevice**](https://msdn.microsoft.com/library/windows/desktop/hh848325)를 호출하여 DXGI 디바이스를 설정합니다. 예제:
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device>              m_d3dDevice;
@@ -187,8 +174,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     m_vsisNative->SetDevice(dxgiDevice.Get());
     ```
 
-4.  [
-            **IVirtualSurfaceUpdatesCallbackNative**](https://msdn.microsoft.com/library/windows/desktop/hh848336)의 구현에 대한 참조를 전달하여 [**IVirtualSurfaceImageSourceNative::RegisterForUpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848334)를 호출합니다.
+4.  [**IVirtualSurfaceUpdatesCallbackNative**](https://msdn.microsoft.com/library/windows/desktop/hh848336)의 구현에 대한 참조를 전달하여 [**IVirtualSurfaceImageSourceNative::RegisterForUpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848334)를 호출합니다.
 
     ```cpp
     class MyContentImageSource : public IVirtualSurfaceUpdatesCallbackNative
@@ -216,8 +202,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
     이는 프레임워크가 영역을 그려야 할 필요가 있는지 결정하는 경우(예: 사용자가 표면의 보기를 회전하거나 확대/축소하는 경우), 또는 앱이 해당 영역에서 [**IVirtualSurfaceImageSourceNative::Invalidate**](https://msdn.microsoft.com/library/windows/desktop/hh848332)를 호출한 후에 발생할 수 있습니다.
 
-5.  [
-            **IVirtualSurfaceImageSourceNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337)에서 [**IVirtualSurfaceImageSourceNative::GetUpdateRectCount**](https://msdn.microsoft.com/library/windows/desktop/hh848329) 및 [**IVirtualSurfaceImageSourceNative::GetUpdateRects**](https://msdn.microsoft.com/library/windows/desktop/hh848330) 메서드를 사용하여 표면의 어떤 영역을 그려야 할지 결정합니다.
+5.  [**IVirtualSurfaceImageSourceNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337)에서 [**IVirtualSurfaceImageSourceNative::GetUpdateRectCount**](https://msdn.microsoft.com/library/windows/desktop/hh848329) 및 [**IVirtualSurfaceImageSourceNative::GetUpdateRects**](https://msdn.microsoft.com/library/windows/desktop/hh848330) 메서드를 사용하여 표면의 어떤 영역을 그려야 할지 결정합니다.
 
     ```cpp
     HRESULT STDMETHODCALLTYPE MyContentImageSource::UpdatesNeeded()
@@ -248,11 +233,9 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 6.  마지막으로, 업데이트해야 할 각 영역에 대해 다음 작업을 수행합니다.
 
-    1.  [
-            **IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 개체에 대한 포인터를 [**IVirtualSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)에 전달하고 DirectX를 사용하여 해당 표면에 그립니다. *updateRect* 매개 변수에서 업데이트에 대해 지정한 영역에만 그려집니다.
+    1.  [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 개체에 대한 포인터를 [**IVirtualSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)에 전달하고 DirectX를 사용하여 해당 표면에 그립니다. *updateRect* 매개 변수에서 업데이트에 대해 지정한 영역에만 그려집니다.
 
-        [
-            **IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)와 마찬가지로, 이 메서드는 업데이트되는 대상 직사각형의 점(x,y) 오프셋을 *offset* 매개 변수에 반환합니다. 이 오프셋을 사용하여 [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 내에 그릴 위치를 결정합니다.
+        [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)와 마찬가지로, 이 메서드는 업데이트되는 대상 직사각형의 점(x,y) 오프셋을 *offset* 매개 변수에 반환합니다. 이 오프셋을 사용하여 [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) 내에 그릴 위치를 결정합니다.
 
         > **참고** [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527)당 한 번에 하나의 미처리 [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) 작업만 활성 상태로 있을 수 있습니다.
 
@@ -274,40 +257,33 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
     2.  특정 콘텐츠를 해당 영역에 그리되, 더 나은 성능을 위해 경계 영역으로 그리기를 제한합니다.
 
-    3.  [
-            **IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324)를 호출합니다. 결과로 비트맵이 생성됩니다.
+    3.  [**IVirtualSurfaceImageSourceNative::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848324)를 호출합니다. 결과로 비트맵이 생성됩니다.
 
 ## SwapChainPanel 및 게임
 
 
-[
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)은 개발자가 스왑 체인을 직접 관리할 수 있는 경우 고성능 그래픽 및 게임을 지원하기 위해 디자인된 Windows 런타임 유형입니다. 이때 자신만의 DirectX 스왑 체인을 만들고 렌더링된 콘텐츠의 표시를 관리합니다. 그런 다음 메뉴, 경고 표시 및 기타 UI 오버레이 등, XAML 요소를 **SwapChainPanel** 개체에 추가할 수 있습니다.
+[**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)은 개발자가 스왑 체인을 직접 관리할 수 있는 경우 고성능 그래픽 및 게임을 지원하기 위해 디자인된 Windows 런타임 유형입니다. 이때 자신만의 DirectX 스왑 체인을 만들고 렌더링된 콘텐츠의 표시를 관리합니다. 그런 다음 메뉴, 경고 표시 및 기타 UI 오버레이 등, XAML 요소를 **SwapChainPanel** 개체에 추가할 수 있습니다.
 
 성능을 보장하기 위해, [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 유형에는 특정 제한이 있습니다.
 
 -   앱별 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 인스턴스는 4개 이하입니다.
--   [
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)에서 상속받은 **Opacity**, **RenderTransform**, **Projection** 및 **Clip** 속성은 지원되지 않습니다.
+-   [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)에서 상속받은 **Opacity**, **RenderTransform**, **Projection** 및 **Clip** 속성은 지원되지 않습니다.
 -   DirectX 스왑 체인의 높이 및 너비를 ([**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) 앱 창의 현재 크기로 설정해야 합니다. 그러지 않으면 (**DXGI\_SCALING\_STRETCH**를 사용하여) 디스플레이 콘텐츠의 크기가 조정됩니다.
 -   DirectX 스왑 체인의 크기 조정 모드를 ([**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) **DXGI\_SCALING\_STRETCH**로 설정해야 합니다.
 -   DirectX 스왑 체인의 알파 모드를 ([**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)에서) **DXGI\_ALPHA\_MODE\_PREMULTIPLIED**로 설정하면 안 됩니다.
--   [
-            **IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558)을 호출하여 DirectX 스왑 체인을 만들어야 합니다.
+-   [**IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558)을 호출하여 DirectX 스왑 체인을 만들어야 합니다.
 
 앱의 요구 사항에 따라 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)을 업데이트합니다. 이때 XAML 프레임워크의 업데이트는 대상이 아닙니다. **SwapChainPanel**의 업데이트를 XAML 프레임워크의 해당 업데이트와 동기화해야 하면 [**Windows::UI::Xaml::Media::CompositionTarget::Rendering**](https://msdn.microsoft.com/library/windows/apps/br228127) 이벤트를 등록합니다. 그렇지 않을 경우 **SwapChainPanel** 패널을 업데이트하는 스레드가 아닌 스레드에서 XAML 요소를 업데이트하려면 스레드 교차 문제를 고려해야 합니다.
 
-[
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)을 사용하여 앱을 디자인할 때 따라야 할 일반적인 모범 사례가 몇 가지 더 있습니다.
+[**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)을 사용하여 앱을 디자인할 때 따라야 할 일반적인 모범 사례가 몇 가지 더 있습니다.
 
--   [
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)은 [**Windows::UI::Xaml::Controls::Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)에서 상속하며 유사한 레이아웃 동작을 지원합니다. 개발자는 **Grid** 유형과 그 속성을 능숙하게 다룰 수 있어야 합니다.
+-   [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)은 [**Windows::UI::Xaml::Controls::Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)에서 상속하며 유사한 레이아웃 동작을 지원합니다. 개발자는 **Grid** 유형과 그 속성을 능숙하게 다룰 수 있어야 합니다.
 
 -   DirectX 스왑 체인이 설정된 후에는 [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)에 대해 발생한 모든 입력 이벤트가 다른 XAML 요소에서와 동일하게 작동합니다. **SwapChainPanel**에 대한 배경 브러시를 설정하지 않으며, **SwapChainPanel**을 사용하지 않는 DirectX 앱에서처럼 앱의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체에서 직접 입력 이벤트를 처리하지 않아도 됩니다.
 
 -   • [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)의 직계 자식 하위에 있는 시각적 XAML 요소 트리의 모든 콘텐츠는 **SwapChainPanel** 개체의 직계 자식의 레이아웃 크기로 잘립니다. 이러한 레이아웃 경계 외부에서 변형된 콘텐츠는 렌더링되지 않습니다. 따라서 XAML [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)로 애니메이션을 실행하는 XAML 콘텐츠는 레이아웃 경계가 애니메이션의 전체 범위를 포함할 만큼 충분히 큰 요소 하위의 시각적 트리에 둡니다.
 
--   [
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 직속 하위의 시각적 XAML 요소의 수를 제한합니다. 가능하면 공통되는 부모 하위의 근접 연결에 있는 요소를 그룹화합니다. 직계 자식인 시각적 요소의 수와 크기 간에는 성능 절충이 필요합니다. 너무 많거나 불필요하게 큰 XAML 요소는 전체 성능을 저하시킬 수 있습니다. 마찬가지로, 앱의 **SwapChainPanel**에 대해 단일의 전체 화면 자식 XAML 요소를 만들지 마세요. 그럴 경우 앱에서 과잉 그리기가 늘어나고 성능은 저하됩니다. 일반적으로 앱의 **SwapChainPanel**에 대해 직계 자식 XAML 시각적 요소를 9개 이상 만들지 말고, 각 요소의 레이아웃 크기는 요소의 시각적 콘텐츠를 포함하는 데 필요한 정도로 제한해야 합니다. 그러나 성능을 현저하게 저하시키지 않고도 상당히 복잡한 **SwapChainPanel**의 자식 요소 하위에 요소의 시각적 트리를 만들 수 있습니다.
+-   [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 직속 하위의 시각적 XAML 요소의 수를 제한합니다. 가능하면 공통되는 부모 하위의 근접 연결에 있는 요소를 그룹화합니다. 직계 자식인 시각적 요소의 수와 크기 간에는 성능 절충이 필요합니다. 너무 많거나 불필요하게 큰 XAML 요소는 전체 성능을 저하시킬 수 있습니다. 마찬가지로, 앱의 **SwapChainPanel**에 대해 단일의 전체 화면 자식 XAML 요소를 만들지 마세요. 그럴 경우 앱에서 과잉 그리기가 늘어나고 성능은 저하됩니다. 일반적으로 앱의 **SwapChainPanel**에 대해 직계 자식 XAML 시각적 요소를 9개 이상 만들지 말고, 각 요소의 레이아웃 크기는 요소의 시각적 콘텐츠를 포함하는 데 필요한 정도로 제한해야 합니다. 그러나 성능을 현저하게 저하시키지 않고도 상당히 복잡한 **SwapChainPanel**의 자식 요소 하위에 요소의 시각적 트리를 만들 수 있습니다.
 
 > **참고** 일반적으로 DirectX 앱은 스왑 체인을 표시 창 크기(일반적으로 대부분의 Windows 스토어 게임에서 기본 화면 해상도)와 동일하게 가로 방향으로 만들어야 합니다. 이렇게 해야 앱에서 표시되는 XAML 오버레이가 없을 때 최적의 스왑 체인 구현을 사용합니다. 앱이 세로 모드로 회전되는 경우 앱은 기존 스왑 체인에서 [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)을 호출하고 필요한 경우 콘텐츠에 변형을 적용한 다음 동일한 스왑 체인에서 [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144)을 다시 호출해야 합니다. 마찬가지로, **SetSwapChain** 호출을 통해 스왑 체인 크기를 변경할 때마다 앱이 동일한 스왑 체인에 대해 [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)를 다시 호출해야 합니다.
 
@@ -330,8 +306,7 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
     …
     ```
 
-2.  포인터를 [**ISwapChainPanelNative**](https://msdn.microsoft.com/library/windows/desktop/dn302143)로 가져갑니다. [
-            **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)(또는 **IUnknown**)로 캐스트하고 그 위에서 **QueryInterface**를 호출하여 기본 **ISwapChainPanelNative** 구현을 가져옵니다.
+2.  포인터를 [**ISwapChainPanelNative**](https://msdn.microsoft.com/library/windows/desktop/dn302143)로 가져갑니다. [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 개체를 [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)(또는 **IUnknown**)로 캐스트하고 그 위에서 **QueryInterface**를 호출하여 기본 **ISwapChainPanelNative** 구현을 가져옵니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ISwapChainPanelNative> m_swapChainNative;

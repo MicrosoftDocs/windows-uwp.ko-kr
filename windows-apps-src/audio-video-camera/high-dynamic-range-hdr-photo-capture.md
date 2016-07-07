@@ -14,19 +14,15 @@ ms.openlocfilehash: 3015aa4338ddb0c0a006eb631026261a4453f376
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-[
-            **AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다. 이 API를 사용하면 최종 이미지의 처리를 완료하기 전에 HDR 캡처에서 참조 프레임을 얻을 수 있습니다.
+[**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 클래스를 사용하여 HDR(High Dynamic Range) 사진을 캡처할 수 있습니다. 이 API를 사용하면 최종 이미지의 처리를 완료하기 전에 HDR 캡처에서 참조 프레임을 얻을 수 있습니다.
 
 HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
--   [
-            **SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)를 사용할 경우 시스템은 미디어 캡처 미리 보기 스트림의 콘텐츠를 평가하여 HDR 처리로 인해 캡처 결과가 향상될 수 있는지 파악할 수 있습니다. 자세한 내용은 [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)을 참조하세요.
+-   [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)를 사용할 경우 시스템은 미디어 캡처 미리 보기 스트림의 콘텐츠를 평가하여 HDR 처리로 인해 캡처 결과가 향상될 수 있는지 파악할 수 있습니다. 자세한 내용은 [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)을 참조하세요.
 
--   [
-            **HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680)을 사용하여 Windows 기본 제공 HDR 처리 알고리즘을 사용해 동영상을 캡처합니다. 자세한 내용은 [비디오 캡처를 위한 캡처 디바이스 컨트롤](capture-device-controls-for-video-capture.md)을 참조하세요.
+-   [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680)을 사용하여 Windows 기본 제공 HDR 처리 알고리즘을 사용해 동영상을 캡처합니다. 자세한 내용은 [비디오 캡처를 위한 캡처 디바이스 컨트롤](capture-device-controls-for-video-capture.md)을 참조하세요.
 
--   [
-            **VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564)를 사용하여 각각이 다른 캡처 설정을 갖는 사진 시퀀스를 캡처하고 고유한 HDR 또는 다른 처리 알고리즘을 구현할 수 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
+-   [**VariablePhotoSequenceCapture**](https://msdn.microsoft.com/library/windows/apps/dn652564)를 사용하여 각각이 다른 캡처 설정을 갖는 사진 시퀀스를 캡처하고 고유한 HDR 또는 다른 처리 알고리즘을 구현할 수 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
 
 **참고**
 -   **AdvancedPhotoCapture**를 사용하는 동영상과 사진 캡처는 동시에 지원되지 않습니다.
@@ -54,8 +50,7 @@ HDR 사진 캡처를 사용하려면 앱에 기본적인 미디어 캡처에 필
 
 [!code-cs[DeclareAdvancedCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareAdvancedCapture)]
 
-앱에서 **MediaCapture** 개체를 초기화한 후에 새 [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) 개체를 만들고 해당 모드를 [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)로 설정합니다. [
-            **AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 개체의 [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) 메서드를 호출하고 만든 **AdvancedPhotoCaptureSettings** 개체를 전달합니다.
+앱에서 **MediaCapture** 개체를 초기화한 후에 새 [**AdvancedPhotoCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/mt147837) 개체를 만들고 해당 모드를 [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)로 설정합니다. [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 개체의 [**Configure**](https://msdn.microsoft.com/library/windows/apps/mt147841) 메서드를 호출하고 만든 **AdvancedPhotoCaptureSettings** 개체를 전달합니다.
 
 **MediaCapture** 개체의 [**PrepareAdvancedPhotoCaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181403)를 호출하고 캡처에 사용될 인코딩 유형을 지정하는 [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) 개체를 전달합니다. **ImageEncodingProperties** 클래스는 **MediaCapture**에서 지원되는 이미지 인코딩을 만들기 위한 정적 메서드를 제공합니다.
 
@@ -65,8 +60,7 @@ HDR 사진 캡처를 사용하려면 앱에 기본적인 미디어 캡처에 필
 
 ## HDR 사진 캡처
 
-[
-            **AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체의[**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) 메서드를 호출하여 HDR 사진을 캡처합니다. 이 메서드는 해당 [**Frame**](https://msdn.microsoft.com/library/windows/apps/mt181382) 속성에 캡처한 사진을 제공하는 [**AdvancedCapturedPhoto**](https://msdn.microsoft.com/library/windows/apps/mt181378) 개체를 반환합니다.
+[**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체의[**CaptureAsync**](https://msdn.microsoft.com/library/windows/apps/mt181388) 메서드를 호출하여 HDR 사진을 캡처합니다. 이 메서드는 해당 [**Frame**](https://msdn.microsoft.com/library/windows/apps/mt181382) 속성에 캡처한 사진을 제공하는 [**AdvancedCapturedPhoto**](https://msdn.microsoft.com/library/windows/apps/mt181378) 개체를 반환합니다.
 
 [!code-cs[CaptureHdrPhotoAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureHdrPhotoAsync)]
 
@@ -86,8 +80,7 @@ HDR 프로세스는 여러 프레임을 캡처한 후, 모든 프레임 캡처�
 
 [!code-cs[CaptureWithContext](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureWithContext)]
 
-[
-            **OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) 이벤트 처리기에서 [**OptionalReferencePhotoCapturedEventArgs**](https://msdn.microsoft.com/library/windows/apps/mt181404) 개체의 [**Context**](https://msdn.microsoft.com/library/windows/apps/mt181405) 속성을 컨텍스트 개체 클래스로 캐스팅합니다. 이 예제에서는 최종 HDR 이미지에서 참조 프레임 이미지를 구분하기 위해 파일 이름을 수정하고 **ReencodeAndSavePhotoAsync** 도우미 메서드를 호출하여 이미지를 저장합니다.
+[**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392) 이벤트 처리기에서 [**OptionalReferencePhotoCapturedEventArgs**](https://msdn.microsoft.com/library/windows/apps/mt181404) 개체의 [**Context**](https://msdn.microsoft.com/library/windows/apps/mt181405) 속성을 컨텍스트 개체 클래스로 캐스팅합니다. 이 예제에서는 최종 HDR 이미지에서 참조 프레임 이미지를 구분하기 위해 파일 이름을 수정하고 **ReencodeAndSavePhotoAsync** 도우미 메서드를 호출하여 이미지를 저장합니다.
 
 [!code-cs[OptionalReferencePhotoCaptured](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOptionalReferencePhotoCaptured)]
 

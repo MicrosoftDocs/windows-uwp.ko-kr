@@ -20,14 +20,11 @@ ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
 
 방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다.
 
-[
-            **Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임스페이스에는 [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 및 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)이라는 두 가지 유형의 방향 센서 API가 있습니다. 두 센서는 모두 방향 센서이지만 해당 용어가 오버로드되어 매우 다른 용도로 사용됩니다. 그러나 둘 다 방향 센서이므로 모두 이 문서에서 다뤄집니다.
+[**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임스페이스에는 [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) 및 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)이라는 두 가지 유형의 방향 센서 API가 있습니다. 두 센서는 모두 방향 센서이지만 해당 용어가 오버로드되어 매우 다른 용도로 사용됩니다. 그러나 둘 다 방향 센서이므로 모두 이 문서에서 다뤄집니다.
 
-[
-            **OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) API는 3차원 앱이 쿼터니언과 회전 행렬을 가져오는 데 사용됩니다. 쿼터니언은 임의의 축을 중심으로 한 점 \[x,y,z\]의 회전이라고 이해하면 제일 쉽습니다(세 축을 중심으로 한 회전을 나타내는 회전 행렬과 대조적). 쿼터니언의 수학적 배경은 쿼터니언이 복소수의 기하학적 속성과 허수의 수학적 속성과 관련이 있으므로 매우 매력적이지만 이에 대한 작업은 간단하고 DirectX같은 프레임워크가 이를 지원합니다. 복합 3-D 앱은 방향 센서를 사용하여 사용자 시각을 조정할 수 있습니다. 이 센서는 가속도계, 회전계 및 나침반의 입력을 결합합니다.
+[**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371) API는 3차원 앱이 쿼터니언과 회전 행렬을 가져오는 데 사용됩니다. 쿼터니언은 임의의 축을 중심으로 한 점 \[x,y,z\]의 회전이라고 이해하면 제일 쉽습니다(세 축을 중심으로 한 회전을 나타내는 회전 행렬과 대조적). 쿼터니언의 수학적 배경은 쿼터니언이 복소수의 기하학적 속성과 허수의 수학적 속성과 관련이 있으므로 매우 매력적이지만 이에 대한 작업은 간단하고 DirectX같은 프레임워크가 이를 지원합니다. 복합 3-D 앱은 방향 센서를 사용하여 사용자 시각을 조정할 수 있습니다. 이 센서는 가속도계, 회전계 및 나침반의 입력을 결합합니다.
 
-[
-            **SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) API는 세로 위로, 세로 아래로, 가로 왼쪽, 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 확인하는 데 사용됩니다. 장치가 앞면 위로 또는 앞면 아래로인지도 탐지할 수 있습니다. 이 센서는 "세로 위로"나 "가로 왼쪽"같은 속성을 반환하기 보다는 "Not rotated(회전하지 않음)", "Rotated90DegreesCounterclockwise" 등과 같은 회전 값을 반환합니다. 다음 표는 일반적인 방향 속성을 해당 센서 표기에 매핑합니다.
+[**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) API는 세로 위로, 세로 아래로, 가로 왼쪽, 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 확인하는 데 사용됩니다. 장치가 앞면 위로 또는 앞면 아래로인지도 탐지할 수 있습니다. 이 센서는 "세로 위로"나 "가로 왼쪽"같은 속성을 반환하기 보다는 "Not rotated(회전하지 않음)", "Rotated90DegreesCounterclockwise" 등과 같은 회전 값을 반환합니다. 다음 표는 일반적인 방향 속성을 해당 센서 표기에 매핑합니다.
 
 | 방향     | 해당 센서 표기      |
 |-----------------|-----------------------------------|

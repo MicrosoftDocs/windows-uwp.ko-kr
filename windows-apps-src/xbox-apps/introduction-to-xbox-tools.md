@@ -3,8 +3,8 @@ author: Mtoepke
 title: "Xbox One 도구 소개"
 description: "Windows Device Portal을 사용하는 Xbox One 특정 도구 개발자 홈입니다."
 area: Xbox
-ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
-ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
+ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
 
 ---
 
@@ -56,6 +56,11 @@ _개발자 홈_은 개발자의 생산성을 지원하도록 설계된 Xbox One 
 | Visual Studio | 배포를 허용하도록 콘솔과 Visual Studio 인스턴스를 연결할 수 있습니다. 필요한 경우 키트에 대한 UWP 앱 배포를 방지하기 위해 연결된 기존 VS 인스턴스를 지웁니다. |
 | [Windows Device Portal](#windows-device-portal) | 키트에서 WDP(브라우저 기반 디바이스 관리 도구)를 사용하도록 설정합니다. |
 | Xbox Live 상태 | Xbox Live 서비스의 현재 상태를 제공합니다. |
+
+### 개발자 저장소 할당 크기 관리
+
+개발자 저장소에 사용되는 디스크 공간의 크기를 늘리거나 줄이려면 주 메뉴에서 **개발자 저장소 관리**를 선택합니다. **개발자 저장소** 막대의 값을 변경하고 **저장 후 다시 시작**을 선택하여 콘솔을 다시 부팅합니다.
+  ![개발자 저장소 할당 관리](images/devhome_storage.png)
 
 ### 개발자 홈 사용자 지정
 
@@ -109,7 +114,7 @@ Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
   ![보안 인증서 경고](images/security_cert_warning.jpg)
 
 ## 참고 항목
-- [Microsoft 개발자 기술: Windows Device Portal](https://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
+- [Microsoft 개발자 기술: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
 - [Xbox One의 UWP](index.md)
 
 
@@ -118,6 +123,6 @@ Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

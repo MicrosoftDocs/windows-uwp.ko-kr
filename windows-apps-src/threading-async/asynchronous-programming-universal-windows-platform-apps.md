@@ -62,8 +62,7 @@ C# 또는 Visual Basic으로 작성된 일반적인 코드 세그먼트는 동�
 
 C++/CX에서 비동기 프로그래밍은 [**task class**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx) 및 해당 [**then method**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx)를 기반으로 합니다. 구문은 JavaScript promise의 구문과 유사합니다. **task class** 및 관련 유형 또한 스레드 컨텍스트에 대한 취소 및 관리 접근 권한 값을 제공합니다. 자세한 내용은 [C++의 비동기 프로그래밍](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
-[
-            **create\_async 함수**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750102.aspx)는 JavaScript 또는 UWP를 지원하는 다른 언어에서 사용할 수 있는 비동기 API 작성에 대한 지원을 제공합니다. 자세한 내용은 [C++로 비동기 작업 만들기](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx)룰 참조하세요.
+[**create\_async 함수**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750102.aspx)는 JavaScript 또는 UWP를 지원하는 다른 언어에서 사용할 수 있는 비동기 API 작성에 대한 지원을 제공합니다. 자세한 내용은 [C++로 비동기 작업 만들기](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx)룰 참조하세요.
 
 ## JavaScript로 작성된 UWP의 비동기 패턴
 

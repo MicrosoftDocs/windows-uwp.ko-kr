@@ -13,8 +13,7 @@ ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 메서드를 사용하여 Windows 스토어 키를 갱신합니다. [
-            **GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 또는 [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) 메서드를 호출하여 생성한 Windows 스토어 ID 키의 유효 기간은 90일입니다. 키가 만료되면 만료된 키를 사용하여 이 메서드를 통해 새 키를 다시 협상할 수 있습니다.
+이 메서드를 사용하여 Windows 스토어 키를 갱신합니다. [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 또는 [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) 메서드를 호출하여 생성한 Windows 스토어 ID 키의 유효 기간은 90일입니다. 키가 만료되면 만료된 키를 사용하여 이 메서드를 통해 새 키를 다시 협상할 수 있습니다.
 
 ## 필수 조건
 
@@ -119,6 +118,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

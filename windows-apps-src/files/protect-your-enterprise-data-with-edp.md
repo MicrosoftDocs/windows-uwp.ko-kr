@@ -53,8 +53,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 특정 네트워크 끝점, 파일, 클립보드, 또는 공유 계약을 비롯한 다양한 방법을 사용해서 엔터프라이즈 데이터를 앱에 입력할 수 있습니다. 앱에서 새 엔터프라이즈 데이터를 만들 수도 있습니다. 인식 앱이 어떤 방식을 통해 엔터프라이즈 데이터에 얻게 되든, 앱은 데이터를 새 파일에 유지할 때, 관리되는 엔터프라이즈 ID로 파일을 보호하도록 주의해야 합니다.
 
-기본 단계는 일반 저장소 API를 사용하여 파일을 만들고, EDP API를 사용하여 엔터프라이즈 ID로 파일을 보호한 다음(다시 일반 저장소 API 사용) 파일에 쓰는 것입니다. 아래 예제와 같이 파일에 쓰기 전에 파일이 보호되도록 해야 합니다. [
-            **FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) 메서드를 사용하여 파일을 보호합니다. 또한 일반적인 경우처럼 ID가 관리되는 경우에만 ID로 보호하는 것이 가능합니다. 그 이유와 앱이 실행 중인 엔터프라이즈의 ID를 확인하는 방법에 대한 자세한 내용은 [ID가 관리되는지 확인](../enterprise/edp-hub.md#confirming_an_identity_is_managed)을 참조하세요.
+기본 단계는 일반 저장소 API를 사용하여 파일을 만들고, EDP API를 사용하여 엔터프라이즈 ID로 파일을 보호한 다음(다시 일반 저장소 API 사용) 파일에 쓰는 것입니다. 아래 예제와 같이 파일에 쓰기 전에 파일이 보호되도록 해야 합니다. [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) 메서드를 사용하여 파일을 보호합니다. 또한 일반적인 경우처럼 ID가 관리되는 경우에만 ID로 보호하는 것이 가능합니다. 그 이유와 앱이 실행 중인 엔터프라이즈의 ID를 확인하는 방법에 대한 자세한 내용은 [ID가 관리되는지 확인](../enterprise/edp-hub.md#confirming_an_identity_is_managed)을 참조하세요.
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -140,8 +139,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
 ## 엔터프라이즈 데이터를 포함하는 데 사용하는 폴더 보호
 
 
-폴더 내의 모든 항목을 보호하는 것도 가능합니다. [
-            **FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157)를 사용하여 빈 폴더를 보호할 수 있습니다. 그런 이후에 폴더 내에서 만든 파일이나 폴더도 보호됩니다. 기존 폴더를 보호하거나, 보호할 새 폴더를 만들 수 있습니다(아래 예제에서는 새 폴더를 만듦). 그러나 두 경우 모두 보호를 성공적으로 적용하려면 항상 폴더가 비어 있어야 합니다. 그렇지 않으면 [**FileProtectionInfo.Status**](https://msdn.microsoft.com/library/windows/apps/dn705150)는 [**FileProtectionStatus.NotProtectable**](https://msdn.microsoft.com/library/windows/apps/dn279147) 값을 갖게 됩니다.
+폴더 내의 모든 항목을 보호하는 것도 가능합니다. [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157)를 사용하여 빈 폴더를 보호할 수 있습니다. 그런 이후에 폴더 내에서 만든 파일이나 폴더도 보호됩니다. 기존 폴더를 보호하거나, 보호할 새 폴더를 만들 수 있습니다(아래 예제에서는 새 폴더를 만듦). 그러나 두 경우 모두 보호를 성공적으로 적용하려면 항상 폴더가 비어 있어야 합니다. 그렇지 않으면 [**FileProtectionInfo.Status**](https://msdn.microsoft.com/library/windows/apps/dn705150)는 [**FileProtectionStatus.NotProtectable**](https://msdn.microsoft.com/library/windows/apps/dn279147) 값을 갖게 됩니다.
 
 ```CSharp
 using Windows.Security.EnterpriseData;

@@ -171,8 +171,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **보조 타일**
 
-보조 타일에 알림을 보내려면 먼저 보조 타일이 있는지 확인합니다. 존재하지 않는 보조 타일에 대한 타일 업데이트 프로그램을 만들려고 하면(예: 사용자가 보조 타일 고정을 해제한 경우) 예외가 발생합니다. [
-            **SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId)를 사용하여 보조 타일이 고정되었는지 검색한 다음 보조 타일에 대한 타일 업데이트 프로그램을 만들고 알림을 보낼 수 있습니다.
+보조 타일에 알림을 보내려면 먼저 보조 타일이 있는지 확인합니다. 존재하지 않는 보조 타일에 대한 타일 업데이트 프로그램을 만들려고 하면(예: 사용자가 보조 타일 고정을 해제한 경우) 예외가 발생합니다. [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId)를 사용하여 보조 타일이 고정되었는지 검색한 다음 보조 타일에 대한 타일 업데이트 프로그램을 만들고 알림을 보낼 수 있습니다.
 
 이 코드 예제에서는 보조 타일에 알림을 보냅니다.
 

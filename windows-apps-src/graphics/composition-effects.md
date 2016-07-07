@@ -12,8 +12,7 @@ ms.openlocfilehash: 10c3b6d0f56d0e8670cc202ac8d8a3f7538eb5a7
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-[
-            **Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) WinRT API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
+[**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) WinRT API를 사용하면 애니메이션 효과를 줄 수 있는 효과 속성을 사용하여 이미지 및 UI에 실시간 효과를 적용할 수 있습니다. 이 개요에서는 컴퍼지션 시각적 개체에 효과를 적용할 수 있는 전체 기능을 실행할 것입니다.
 
 응용 프로그램에서 효과를 설명하는 개발자를 위해 [UWP(유니버설 Windows 플랫폼)](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)를 일관적으로 지원하기 위해, 컴퍼지션 효과에서는 Win2D의 IGraphicsEffect 인터페이스를 활용하여 [Microsoft.Graphics.Canvas.Effects](http://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.md) 네임스페이스를 통해 효과 설명을 사용합니다.
 

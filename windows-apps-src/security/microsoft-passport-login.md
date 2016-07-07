@@ -417,8 +417,7 @@ ms.openlocfilehash: d28f0b9ea08d35a220cdb58367f03af95966e282
     }
     ```
 
--   MicrosoftPassportHelper의 메서드를 참조한 주석으로 처리된 코드를 확인했을 수 있습니다. MicrosoftPassportHelper.cs에서 CreatePassportKeyAsync라는 새 메서드를 추가합니다. 이 메서드는 [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043)에서 Microsoft Passport API를 사용합니다. [
-            **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) 호출은 *accountId* 및 로컬 컴퓨터에 해당하는 Passport 키를 생성합니다. 실제 시나리오에서 이를 구현해 보려면 switch 문의 주석을 확인하세요.
+-   MicrosoftPassportHelper의 메서드를 참조한 주석으로 처리된 코드를 확인했을 수 있습니다. MicrosoftPassportHelper.cs에서 CreatePassportKeyAsync라는 새 메서드를 추가합니다. 이 메서드는 [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043)에서 Microsoft Passport API를 사용합니다. [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) 호출은 *accountId* 및 로컬 컴퓨터에 해당하는 Passport 키를 생성합니다. 실제 시나리오에서 이를 구현해 보려면 switch 문의 주석을 확인하세요.
 
     ```cs
     /// <summary>

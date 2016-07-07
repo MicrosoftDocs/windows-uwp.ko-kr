@@ -189,8 +189,7 @@ Direct3D에서 셰이더 액세스 가능한 버퍼는 [**D3D11\_SUBRESOURCE\_DA
 
 버퍼를 설정하는 경우 버퍼의 시작 부분의 오프셋(여기서 실제로 꼭짓점 데이터 배열이 시작함)뿐만 아니라 stride(개별 꼭짓점에 대한 데이터 요소 크기)를 설정해야 합니다.
 
-[
-            **D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조의 **pSysMem** 필드에 대한 **vertexIndices** 배열에 포인터를 할당합니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
+[**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) 구조의 **pSysMem** 필드에 대한 **vertexIndices** 배열에 포인터를 할당합니다. 올바르지 않으면 메시가 손상되거나 비게 됩니다!
 
 Direct3D: 꼭짓점 버퍼 만들기 및 설정
 

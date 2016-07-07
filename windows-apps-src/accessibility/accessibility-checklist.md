@@ -21,8 +21,7 @@ UWP(유니버설 Windows 플랫폼) 앱에 접근성이 있는지 확인하는 �
 
 1.  앱에 있는 콘텐츠 및 대화형 UI 요소의 접근성 있는 이름(필수) 및 설명(선택)을 설정합니다.
 
-    접근성 있는 이름은 화면 읽기 프로그램이 UI 요소를 읽기 위해 사용하는 짧은 설명 텍스트 문자열입니다. [
-            **TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 같은 일부 UI 요소는 해당 텍스트 콘텐츠를 기본 접근성 있는 이름으로 승격시킵니다. [기본 접근성 정보](basic-accessibility-information.md#name_from_inner_text)를 참조하세요.
+    접근성 있는 이름은 화면 읽기 프로그램이 UI 요소를 읽기 위해 사용하는 짧은 설명 텍스트 문자열입니다. [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 같은 일부 UI 요소는 해당 텍스트 콘텐츠를 기본 접근성 있는 이름으로 승격시킵니다. [기본 접근성 정보](basic-accessibility-information.md#name_from_inner_text)를 참조하세요.
 
     내부 텍스트 콘텐츠를 명시적인 접근성 있는 이름으로 승격시키지 않는 이미지 또는 기타 컨트롤에 대해서는 명시적으로 접근성 있는 이름을 설정해야 합니다. 레이블과 입력을 상호 연결하는 Microsoft UI 자동화 모델에서 레이블 텍스트를 [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) 대상으로 사용할 수 있도록 양식 요소에는 레이블을 사용해야 합니다. 일반적으로 접근성 있는 이름에 포함된 것보다 더 많은 UI 지침을 사용자에게 제공하려는 경우 접근성 있는 설명 및 도구 설명을 사용하면 사용자가 UI를 이해하는 데 도움이 됩니다.
 
@@ -49,8 +48,7 @@ UWP(유니버설 Windows 플랫폼) 앱에 접근성이 있는지 확인하는 �
 
 4.  접근성 도구를 실행하고, 보고된 문제를 해결하고, 화면 읽기 환경을 확인합니다.
 
-    [
-            **Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 같은 도구를 사용하여 프로그래밍 액세스를 확인하고 [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) 같은 진단 도구를 실행하여 일반 오류를 검색하며, 내레이터로 화면 읽기 환경을 확인합니다.
+    [**Inspect**](https://msdn.microsoft.com/library/windows/desktop/Dd318521) 같은 도구를 사용하여 프로그래밍 액세스를 확인하고 [**AccChecker**](https://msdn.microsoft.com/library/windows/desktop/Hh920985) 같은 진단 도구를 실행하여 일반 오류를 검색하며, 내레이터로 화면 읽기 환경을 확인합니다.
 
     자세한 내용은 [접근성 테스트](accessibility-testing.md)를 참조하세요.
 

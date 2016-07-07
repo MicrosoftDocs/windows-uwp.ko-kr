@@ -82,8 +82,7 @@ UWP 앱 설치 관리자의 이 기능을 사용하려면 도구 및 소스가 �
 
      
 
--   [
-            **Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
+-   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022) 및 [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 앱의 로캘별 리소스를 지정하고 로드할 수 있습니다. 또한 이러한 API는 사용자 설정에 따라 올바른 로캘을 결정한 다음 사용자에 맞는 리소스를 검색하기 때문에 특정 로캘을 포함하지 않는 자산 참조를 사용합니다.
 -   Microsoft Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
 
 ## 배율 인수 리소스 팩 정의
@@ -100,8 +99,7 @@ Windows 10에서는 1.0x, 1.4x 및 1.8x의 세 가지 사용자 인터페이스 
 
      
 
--   [
-            **Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
+-   [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 자산을 로드할 수 있습니다. 특정 배율 변형을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 시스템이 디스플레이 및 사용자 설정에 적합한 배율 자산을 검색합니다.
 -   Visual Studio 2015에서 **프로젝트-&gt;스토어-&gt;앱 패키지 만들기...**를 선택하고 패키지를 만듭니다.
 
 ## DirectX 기능 수준 리소스 팩 정의
@@ -164,8 +162,7 @@ DirectX 기능 수준은 이전 및 현재 버전의 DirectX(특히 Direct3D)에
     );
     ```
 
--   [
-            **Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 리소스를 로드할 수 있습니다. 기능 수준을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 그러나 언어 및 배율과 달리 시스템이 지정된 디스플레이에 적합한 기능 수준을 자동으로 결정하지 않으며, 사용자가 코드 논리에 따라 결정해야 합니다. 결정한 후 API를 사용하여 OS에 기본 기능 수준을 알립니다. 그러면 시스템이 해당 기본 설정에 따라 올바른 자산을 검색할 수 있습니다. 다음은 플랫폼의 현재 DirectX 기능 수준을 앱에 알리는 방법을 보여 주는 코드 샘플입니다.
+-   [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)의 API를 사용하여 리소스를 로드할 수 있습니다. 기능 수준을 제외하여 자산 참조를 일반화(접미사 없음)해야 합니다. 그러나 언어 및 배율과 달리 시스템이 지정된 디스플레이에 적합한 기능 수준을 자동으로 결정하지 않으며, 사용자가 코드 논리에 따라 결정해야 합니다. 결정한 후 API를 사용하여 OS에 기본 기능 수준을 알립니다. 그러면 시스템이 해당 기본 설정에 따라 올바른 자산을 검색할 수 있습니다. 다음은 플랫폼의 현재 DirectX 기능 수준을 앱에 알리는 방법을 보여 주는 코드 샘플입니다.
     
     ```cpp
     // Set the current UI thread's MRT ResourceContext's DXFeatureLevel with the right DXFL. 

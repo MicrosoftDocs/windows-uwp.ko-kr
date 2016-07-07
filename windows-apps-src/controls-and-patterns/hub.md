@@ -5,8 +5,8 @@ title: "허브 컨트롤"
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 ---
 # 허브 컨트롤/패턴
@@ -16,7 +16,15 @@ ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
 
 ![허브의 예](images/hub_example_tablet.png)
 
-허브의 콘텐츠는 사용자가 새로운 기능, 사용 가능한 기능 및 관련된 기능을 한눈에 살펴볼 수 있는 강력한 이동 보기로 표시됩니다. 일반적으로 여러 콘텐츠 섹션에는 각각 섹션 헤더가 있으며 허브에는 페이지 머리글이 있습니다.
+허브의 콘텐츠는 사용자가 새로운 기능, 사용 가능한 기능 및 관련된 기능을 한눈에 살펴볼 수 있는 파노라마 보기로 표시됩니다. 일반적으로 허브에는 페이지 머리글이 있고 각 콘텐츠 섹션에는 섹션 머리글이 있습니다.
+
+
+-   [**허브 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+-   [**HubSection 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+
+## 올바른 컨트롤인가요?
+
+허브 컨트롤은 계층에 정렬된 많은 양의 콘텐츠를 표시하는 데 적합합니다. 허브는 새 콘텐츠를 우선적으로 찾고 검색하므로 스토어 또는 미디어 컬렉션에서 항목을 표시하는 데 유용합니다.
 
 허브 컨트롤에는 콘텐츠 탐색 패턴을 원활하게 구성해 주는 여러 가지 기능이 있습니다.
 
@@ -34,24 +42,13 @@ ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
 
 -   **가변 페이지 및 콘텐츠 너비**
 
-    파노라마 모델인 경우 허브에서 다양한 섹션 너비를 허용합니다. 따라서 깊이가 다양한 콘텐츠에 도움이 되며 적거나 많은 항목의 형식을 동일하게 잘 지정할 수 있습니다.
+    파노라마 모델인 경우 허브에서 다양한 섹션 너비를 허용합니다. 다양한 깊이 또는 수량의 콘텐츠에 유용합니다.
 
 -   **유연한 아키텍처**
 
     앱 아키텍처를 단순하게 유지하려는 경우 모든 채널 콘텐츠를 허브 섹션 요약에 맞출 수 있습니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
-
--   [**Hub 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**HubSection 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251845)
--   [**Hub 개체(HTML)**](https://msdn.microsoft.com/library/windows/apps/dn255137)
-
-
-## 올바른 컨트롤인가요?
-
-허브 컨트롤은 계층에 정렬된 많은 양의 콘텐츠를 표시하는 데 적합합니다. 허브는 새 콘텐츠를 우선적으로 찾고 검색하므로 스토어 또는 미디어 컬렉션에서 항목을 표시하는 데 유용합니다.
-
-허브는 사용할 수 있는 여러 탐색 요소 중 하나일 뿐입니다. 탐색 패턴 및 다른 탐색 요소에 대해 자세히 알아보려면 [UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)을 참조하세요.
+허브는 사용할 수 있는 여러 탐색 요소 중 하나일 뿐입니다. 탐색 패턴 및 다른 탐색 요소에 대해 자세히 알아보려면 [UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항](../layout/navigation-basics.md)을 참조하세요.
 
 ## 허브 아키텍처
 
@@ -107,13 +104,13 @@ ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
 
 ## 관련 문서
 
-- [탐색 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)
-- [**Windows.UI.Xaml.Controls Hub 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [허브 클래스](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [탐색 기본 사항](../layout/navigation-basics.md)
 - [허브 사용](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+- [XAML 허브 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

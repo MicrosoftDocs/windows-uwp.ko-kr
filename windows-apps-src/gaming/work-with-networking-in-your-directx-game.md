@@ -42,14 +42,10 @@ DirectX 게임에서는 다양한 네트워킹 API를 사용할 수 있습니다
 
 게임에 많이 사용되는 네트워크 API는 다음과 같습니다.
 
--   TCP 및 소켓 - 안정적인 연결을 제공합니다. 보안이 필요 없는 게임 작업에는 TCP를 사용합니다. TCP를 사용하면 서버가 쉽게 확장되므로 인프라(클라이언트-서버 또는 인터넷 피어 투 피어) 모델을 사용하는 게임에서 자주 사용됩니다. Wi-Fi Direct 및 Bluetooth를 통해 애드혹(로컬 피어 투 피어) 게임에서 TCP를 사용할 수도 있습니다. TCP는 게임 개체 이동, 문자 조작, 텍스트 채팅 및 기타 작업에 주로 사용됩니다. [
-            **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 Windows 스토어 게임에 사용할 수 있는 TCP 소켓을 제공합니다. **StreamSocket** 클래스는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 관련 클래스와 함께 사용됩니다.
--   SSL을 사용한 TCP 및 소켓 - 도청을 차단하는 안정적인 연결을 제공합니다. 보안이 필요한 게임 작업에는 SSL과 함께 TCP 연결을 사용합니다. SSL의 암호화 및 오버헤드로 인해 대기 시간과 성능이 저하되므로 보안이 필요할 때만 사용됩니다. SSL을 사용한 TCP는 로그인, 구매 및 거래 자산, 게임 문자 생성 및 관리에 주로 사용됩니다. [
-            **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL을 지원하는 TCP 소켓을 제공합니다.
--   UDP 및 소켓 - 오버헤드가 작은 신뢰할 수 없는 네트워크 전송을 제공합니다. UDP는 짧은 대기 시간이 필요하고 일부 패킷 손실을 허용할 수 있는 게임 작업에 사용됩니다. 전투 게임, 슈팅 및 추적 프로그램, 네트워크 오디오 및 음성 채팅에 주로 사용됩니다. [
-            **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스는 Windows 스토어 게임에 사용할 수 있는 UDP 소켓을 제공합니다. **DatagramSocket** 클래스는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 관련 클래스와 함께 사용됩니다.
--   HTTP 클라이언트 - HTTP 서버에 대한 안정적인 연결을 제공합니다. 가장 일반적인 네트워킹 시나리오는 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스하는 것입니다. 간단한 예로 웹 사이트를 사용하여 사용자 정보와 게임 점수를 저장하는 게임이 있습니다. 보안을 위해 SSL과 함께 사용할 경우 HTTP 클라이언트를 로그인, 구매, 거래 자산, 게임 문자 생성 및 관리에 사용할 수 있습니다. [
-            **HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스는 Windows 스토어 게임에 사용하기 위한 최신 HTTP 클라이언트 API를 제공합니다. **HttpClient** 클래스는 [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   TCP 및 소켓 - 안정적인 연결을 제공합니다. 보안이 필요 없는 게임 작업에는 TCP를 사용합니다. TCP를 사용하면 서버가 쉽게 확장되므로 인프라(클라이언트-서버 또는 인터넷 피어 투 피어) 모델을 사용하는 게임에서 자주 사용됩니다. Wi-Fi Direct 및 Bluetooth를 통해 애드혹(로컬 피어 투 피어) 게임에서 TCP를 사용할 수도 있습니다. TCP는 게임 개체 이동, 문자 조작, 텍스트 채팅 및 기타 작업에 주로 사용됩니다. [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 Windows 스토어 게임에 사용할 수 있는 TCP 소켓을 제공합니다. **StreamSocket** 클래스는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   SSL을 사용한 TCP 및 소켓 - 도청을 차단하는 안정적인 연결을 제공합니다. 보안이 필요한 게임 작업에는 SSL과 함께 TCP 연결을 사용합니다. SSL의 암호화 및 오버헤드로 인해 대기 시간과 성능이 저하되므로 보안이 필요할 때만 사용됩니다. SSL을 사용한 TCP는 로그인, 구매 및 거래 자산, 게임 문자 생성 및 관리에 주로 사용됩니다. [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL을 지원하는 TCP 소켓을 제공합니다.
+-   UDP 및 소켓 - 오버헤드가 작은 신뢰할 수 없는 네트워크 전송을 제공합니다. UDP는 짧은 대기 시간이 필요하고 일부 패킷 손실을 허용할 수 있는 게임 작업에 사용됩니다. 전투 게임, 슈팅 및 추적 프로그램, 네트워크 오디오 및 음성 채팅에 주로 사용됩니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스는 Windows 스토어 게임에 사용할 수 있는 UDP 소켓을 제공합니다. **DatagramSocket** 클래스는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   HTTP 클라이언트 - HTTP 서버에 대한 안정적인 연결을 제공합니다. 가장 일반적인 네트워킹 시나리오는 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스하는 것입니다. 간단한 예로 웹 사이트를 사용하여 사용자 정보와 게임 점수를 저장하는 게임이 있습니다. 보안을 위해 SSL과 함께 사용할 경우 HTTP 클라이언트를 로그인, 구매, 거래 자산, 게임 문자 생성 및 관리에 사용할 수 있습니다. [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스는 Windows 스토어 게임에 사용하기 위한 최신 HTTP 클라이언트 API를 제공합니다. **HttpClient** 클래스는 [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스의 관련 클래스와 함께 사용됩니다.
 
 ## DirectX 게임에서 네트워크 예외 처리
 
@@ -118,12 +114,9 @@ UWP 앱인 DirectX 게임에 예외가 발생하면 오류의 원인으로 **HRE
     // ... Continue with code to execute with a valid hostname.
 ```
 
-[
-            **Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스에는 소켓을 사용할 때 오류를 처리하는 편리한 도우미 메서드와 열거형이 있습니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
+[**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스에는 소켓을 사용할 때 오류를 처리하는 편리한 도우미 메서드와 열거형이 있습니다. 특정 네트워크 예외를 앱에서 다르게 처리하는 데 유용합니다.
 
-[
-            **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 작업에서 오류가 발생하면 예외가 발생하게 됩니다. 예외의 원인은 **HRESULT** 값으로 표현되는 오류 값입니다. [
-            **SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462) 메서드는 네트워크 오류를 소켓 작업에서 [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **SocketErrorStatus** 열거형 값은 기본 Windows 소켓 작업에서 반환한 오류에 해당합니다. 앱은 특정 **SocketErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+[**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 작업에서 오류가 발생하면 예외가 발생하게 됩니다. 예외의 원인은 **HRESULT** 값으로 표현되는 오류 값입니다. [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462) 메서드는 네트워크 오류를 소켓 작업에서 [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **SocketErrorStatus** 열거형 값은 기본 Windows 소켓 작업에서 반환한 오류에 해당합니다. 앱은 특정 **SocketErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
 
@@ -273,12 +266,9 @@ using namespace Windows::Networking::Sockets;
     // ... Continue with code to execute with a valid URI.
 ```
 
-[
-            **Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) 네임스페이스에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
+[**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) 네임스페이스에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-C++를 사용하는 앱에서 [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [
-            **Platform::Exception::HResult**](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [
-            **Platform::Exception::Message**](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+C++를 사용하는 앱에서 [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [**Platform::Exception::HResult**](https://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [**Platform::Exception::Message**](https://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
 

@@ -29,8 +29,7 @@ ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
 ## 백그라운드 오디오
 
 
-[
-            **MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) 속성의 경우 **ForegroundOnlyMedia** 및 **BackgroundCapableMedia**가 Windows 10 앱에서는 사용되지 않습니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
+[**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) 속성의 경우 **ForegroundOnlyMedia** 및 **BackgroundCapableMedia**가 Windows 10 앱에서는 사용되지 않습니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
 
 ## 앱이 실행되고 있는 플랫폼 검색
 

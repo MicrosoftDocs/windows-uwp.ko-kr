@@ -52,8 +52,7 @@ ms.openlocfilehash: 36c1499b51aa5b8b5ab4b0b354197c67dc89801f
 
 앱의 화면이 로드되면 앱이 인쇄 계약을 등록합니다. 등록 과정에 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 정의하는 것이 포함됩니다. 인쇄 미리 보기 UI에 표시되는 옵션을 사용자 지정할 코드가 **PrintTaskRequested** 이벤트 처리기에 추가됩니다.
 
-[
-            **PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기가 [**printTask.options**](https://msdn.microsoft.com/library/windows/apps/BR226469) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
+[**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기가 [**printTask.options**](https://msdn.microsoft.com/library/windows/apps/BR226469) 지시문을 포함하도록 수정합니다. 이 지시문은 인쇄 미리 보기 UI에 표시할 인쇄 설정을 구성합니다. 인쇄 옵션의 사용자 지정된 목록을 표시할 앱 화면에 대해서는 이 화면이 인쇄될 때 표시할 옵션을 지정하는 코드를 포함하도록 기본 클래스에서 **PrintTaskRequested** 이벤트 처리기를 재정의합니다.
 
 ``` csharp
 protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs e)
@@ -158,8 +157,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 
 추가된 순서대로 첫 번째 옵션이 창의 맨 위에 오도록 인쇄 미리 보기 UI에 옵션이 표시됩니다. 이 예제에서는 사용자 지정 옵션이 옵션 목록의 맨 아래에 나타나도록 마지막에 추가됩니다. 그러나 사용자 지정 인쇄 옵션은 마지막에 추가할 필요가 없으며 목록에서 원하는 곳에 배치할 수 있습니다.
 
-사용자가 개발자의 사용자 지정 옵션에서 선택한 옵션을 변경하는 경우 인쇄 미리 보기 이미지를 업데이트합니다. [
-            **InvalidatePreview**](https://msdn.microsoft.com/library/windows/apps/Hh702146) 메서드를 호출하여 아래 그림과 같이 인쇄 미리 보기 UI에서 이미지를 다시 그립니다.
+사용자가 개발자의 사용자 지정 옵션에서 선택한 옵션을 변경하는 경우 인쇄 미리 보기 이미지를 업데이트합니다. [**InvalidatePreview**](https://msdn.microsoft.com/library/windows/apps/Hh702146) 메서드를 호출하여 아래 그림과 같이 인쇄 미리 보기 UI에서 이미지를 다시 그립니다.
 
 ``` csharp
 async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, PrintTaskOptionChangedEventArgs args)

@@ -15,8 +15,7 @@ ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [
-            **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
+이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
 
 **참고** 작동하는 전체 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](http://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
 
@@ -47,8 +46,7 @@ System.Uri endURI = new System.Uri(endURL);
 ## 온라인 공급자에 연결
 
 
-[
-            **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드를 호출하여 온라인 ID 공급자에 연결하고 액세스 토큰을 가져옵니다. 메서드는 이전 단계에서 구성된 URI*requestUri* 매개 변수로 사용하고 사용자를 리디렉션할 URI를 *callbackUri* 매개 변수로 사용합니다.
+[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드를 호출하여 온라인 ID 공급자에 연결하고 액세스 토큰을 가져옵니다. 메서드는 이전 단계에서 구성된 URI*requestUri* 매개 변수로 사용하고 사용자를 리디렉션할 URI를 *callbackUri* 매개 변수로 사용합니다.
 
 ```cs
 string result;
@@ -84,8 +82,7 @@ catch (Exception ex)
 }
 ```
 
-[
-            **AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 이 메서드는 Windows Phone 8.1만을 대상으로 하는 앱용으로 디자인되었으며 Windows 10부터 사용되지 않습니다.
+[**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) 외에 [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044) 네임스페이스는 [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. 이 메서드는 Windows Phone 8.1만을 대상으로 하는 앱용으로 디자인되었으며 Windows 10부터 사용되지 않습니다.
 
 ## SSO(Single Sign-On)로 연결
 

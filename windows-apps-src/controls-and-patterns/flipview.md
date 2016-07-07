@@ -5,8 +5,8 @@ title: "대칭 이동 보기 컨트롤에 대한 지침"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
 ---
 # 대칭 이동 뷰
@@ -14,7 +14,7 @@ ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
 대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 디바이스의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+
 
 -   [**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)
 -   [**ItemsSource 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)
@@ -205,12 +205,11 @@ stackPanel1.Children.Add(flipView1);
 
 ## 관련 문서
 
-- [목록에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt186889)
-- [**FlipView 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
-- [**CarouselPanel 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
+- [목록에 대한 지침](lists.md)
+- [**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

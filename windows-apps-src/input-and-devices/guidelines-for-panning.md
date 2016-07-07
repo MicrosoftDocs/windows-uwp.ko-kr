@@ -194,6 +194,6 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

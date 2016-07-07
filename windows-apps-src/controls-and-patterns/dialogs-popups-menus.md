@@ -22,7 +22,7 @@ ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 
 상황에 맞는 메뉴는 사용자에게 즉각적인 작업을 제공합니다. 또한 텍스트 명령으로 채울 수 있습니다. 상황에 맞는 메뉴는 메뉴 바깥쪽의 아무 곳이나 탭하거나 클릭하여 빨리 해제할 수 있습니다.
 
-대화 상자는 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대화 상자는 명시적으로 삭제할 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.
+대화 상자는 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대화 상자는 명시적으로 닫을 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.
 
 플라이아웃은 사용자가 수행하는 작업과 관련된 UI를 표시하는 경량의 상황에 맞는 팝업입니다. 이 기능은 배치 및 크기 조정 논리를 포함하며, 숨겨진 컨트롤을 표시하거나, 항목에 대한 세부 정보를 표시하거나, 사용자에게 작업 확인을 요청하는 데 사용할 수 있습니다. 플라이아웃은 플라이아웃 바깥쪽의 아무 곳이나 탭하거나 클릭하여 해제할 수 있습니다.
 
@@ -76,7 +76,7 @@ ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 
 **참고** 취소가 사용 가능한 대화 상자 옵션에 포함된 경우 앱에서는 사용자가 Esc 키를 눌러 대화 상자를 닫을 수 있도록 선택할 수 있습니다. 이 동작은 컨트롤에 기본 제공되지는 않지만 일반적으로 구현된 바로 가기입니다.
 
-플라이아웃 및 상황에 맞는 메뉴는 빠른 해제 컨트롤입니다. 즉 사용자는 임시 UI를 빠르게 해제할 수 있는 다양한 작업을 선택할 수 있습니다. 조작이 간단하고 차단되지 않도록 이렇게 구현되었습니다. 빠른 해제 작업은 다음과 같습니다.
+플라이아웃 및 상황에 맞는 메뉴는 빠른 해제 컨트롤입니다. 즉 사용자는 임시 UI를 빠르게 해제할 수 있는 다양한 작업을 선택할 수 있습니다. 이러한 조작은 간단하고 차단되지 않도록 구현되었습니다 빠른 해제 작업은 다음과 같습니다.
 - 임시 UI 바깥을 클릭 또는 탭
 - Esc 키 누르기
 - 뒤로 단추 누르기
@@ -95,7 +95,7 @@ ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
     -   메시지, 오류 또는 차단 질문은 최대한 간결하게 제공합니다.
     -   대화 상자 제목을 사용하는 경우, 콘텐츠 영역을 사용하여 세부 정보를 제공하거나 용어를 정의할 수 있습니다. 제목과 똑같은 내용을 표현만 조금 바꿔 제공하지 마세요.
 -   하나 이상의 대화 상자 단추가 표시되어야 합니다.
-    -   단추를 사용해야만 대화 상자를 해제할 수 있습니다.
+    -   단추를 사용해야만 대화 상자를 닫을 수 있습니다.
     -   기본 지시 사항이나 내용에 대한 특정 응답을 식별하는 텍스트가 있는 단추를 사용합니다. 예를 들어 "AppName에서 해당 위치에 액세스하도록 하시겠어요?" 뒤에 "허용" 및 "차단" 단추를 제공합니다. 특정 응답은 보다 신속하게 이해할 수 있어서 효율적인 결정을 유도할 수 있습니다.
 -   오류 대화 상자에는 오류 메시지가 관련된 정보와 함께 표시됩니다. 오류 대화 상자에서는 “닫기" 또는 유사한 작업을 나타내는 단추만 사용됩니다.
 -   유효성 검사 오류(예: 암호 필드의 오류)와 같이 페이지의 특정 위치에 해당하는 오류의 경우에는 대화 상자를 사용하지 마세요. 대신 앱의 캔버스 자체를 사용하여 인라인 오류를 표시합니다.
@@ -105,7 +105,7 @@ ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 상황에 맞는 메뉴와 플라이아웃은 서로 밀접한 관련이 있는 컨트롤로 조작하는 동작을 공유합니다. 하지만 두 컨트롤은 주로 허용하는 콘텐츠 형식에서 차이를 보입니다.
 
 ### MenuFlyout
-MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutitem.aspx), [**ToggleMenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), [**MenuFlyoutSubItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutsubitem.aspx) 및 [**MenuFlyoutSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutseparator.aspx)가 포함될 수 있습니다. 다른 유형의 UI 표시하려면 플라이아웃을 사용해 보세요.
+MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutitem.aspx), [**ToggleMenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), [**MenuFlyoutSubItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutsubitem.aspx) 및 [**MenuFlyoutSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutseparator.aspx)가 포함될 수 있습니다. 다른 유형의 UI를 표시하려면 플라이아웃을 사용해 보세요.
 
 - **사용 지침**
   - 상황에 맞는 메뉴의 명령 그룹 사이에 구분 기호를 사용하여 다음을 수행할 수 있습니다.

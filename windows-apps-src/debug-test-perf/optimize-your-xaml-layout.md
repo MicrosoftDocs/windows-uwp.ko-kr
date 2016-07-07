@@ -28,8 +28,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 간단한 방식으로 레이아웃 구조를 줄이면(예: 상위 수준 페이지에서 중첩된 패널 하나 줄이기) 뚜렷한 효과를 거둘 수 없습니다.
 
-[
-            **ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)와 같은 UI에서 반복되는 레이아웃 구조를 줄이면 성능을 가장 크게 개선할 수 있습니다. 이러한 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 요소는 여러 번 인스턴스화되는 UI 요소의 하위 트리를 정의하는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)을 사용합니다. 동일한 하위 트리가 앱에서 여러 번 중복되는 경우 해당 하위 트리의 성능을 개선하면 앱의 전반적인 성능에 미치는 효과가 배가됩니다.
+[**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)와 같은 UI에서 반복되는 레이아웃 구조를 줄이면 성능을 가장 크게 개선할 수 있습니다. 이러한 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 요소는 여러 번 인스턴스화되는 UI 요소의 하위 트리를 정의하는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)을 사용합니다. 동일한 하위 트리가 앱에서 여러 번 중복되는 경우 해당 하위 트리의 성능을 개선하면 앱의 전반적인 성능에 미치는 효과가 배가됩니다.
 
 ### 예제
 
@@ -69,8 +68,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 옵션 2: 단일 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)
 
-[
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)는 약간 복잡하지만, 단일 패널 요소만 사용합니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)는 약간 복잡하지만, 단일 패널 요소만 사용합니다.
 
 ```xml
   <Grid>
@@ -132,8 +130,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 레이아웃에서 요소가 서로 겹칠 수 있어야 하는 것이 일반적인 UI 요구 사항입니다. 요소를 겹쳐서 배치하는 데 일반적으로 안쪽 여백, 여백, 맞춤 및 변형이 사용됩니다. XAML [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 컨트롤은 겹치는 요소에 대한 레이아웃 성능을 향상하는 데 최적화되어 있습니다.
 
-**중요** 기능 향상 효과를 보려면 단일 셀 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용하세요. [
-            **RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
+**중요** 기능 향상 효과를 보려면 단일 셀 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)를 사용하세요. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
 
 ### 예제
 
@@ -159,8 +156,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 ## 패널의 기본 제공 테두리 속성 사용
 
-[
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) 및 [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) 컨트롤은 기본 제공 테두리 속성이 있으므로 이러한 속성을 사용하면 XAML에 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 요소를 추가하지 않고 주위에 테두리를 그릴 수 있습니다. 기본 제공 테두리를 지원하는 새로운 속성은 **BorderBrush**, **BorderThickness**, **CornerRadius** 및 **Padding**입니다. 이러한 각 속성은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362)이므로 바인딩 및 애니메이션과 함께 사용할 수 있습니다. 또한 별도의 **Border** 요소를 완벽히 대체할 수 있도록 설계되었습니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546) 및 [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378) 컨트롤은 기본 제공 테두리 속성이 있으므로 이러한 속성을 사용하면 XAML에 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 요소를 추가하지 않고 주위에 테두리를 그릴 수 있습니다. 기본 제공 테두리를 지원하는 새로운 속성은 **BorderBrush**, **BorderThickness**, **CornerRadius** 및 **Padding**입니다. 이러한 각 속성은 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362)이므로 바인딩 및 애니메이션과 함께 사용할 수 있습니다. 또한 별도의 **Border** 요소를 완벽히 대체할 수 있도록 설계되었습니다.
 
 UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 요소가 이러한 패널 주위에 있는 경우 기본 제공 테두리를 대신 사용합니다. 그러면 앱의 레이아웃 구조에 추가 요소가 저장됩니다. 앞에서 언급했듯이 이를 통해 성능을 크게 개선하고 오버헤드를 줄일 수 있습니다(반복된 UI의 경우 특히).
 
@@ -175,14 +171,11 @@ UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 
 
 ## **SizeChanged** 이벤트를 사용하여 레이아웃 변경에 응답
 
-[
-            **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) 클래스는 레이아웃 변경에 응답하는 두 가지의 유사한 이벤트 즉, [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) 및 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 공개합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
+[**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) 클래스는 레이아웃 변경에 응답하는 두 가지의 유사한 이벤트 즉, [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) 및 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 공개합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
 
-최상의 성능을 위해서는 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 선택하는 것이 거의 항상 좋습니다. **SizeChanged**는 직관적인 시맨틱입니다. [
-            **FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)의 크기가 업데이트된 경우 레이아웃 중 발생합니다.
+최상의 성능을 위해서는 [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged)를 선택하는 것이 거의 항상 좋습니다. **SizeChanged**는 직관적인 시맨틱입니다. [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)의 크기가 업데이트된 경우 레이아웃 중 발생합니다.
 
-[
-            **LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated)도 레이아웃 중에 발생하지만, 전역 시맨틱입니다. 즉, 요소가 업데이트될 때마다 모든 요소에서 발생합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
+[**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated)도 레이아웃 중에 발생하지만, 전역 시맨틱입니다. 즉, 요소가 업데이트될 때마다 모든 요소에서 발생합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
 
 ## 패널 중 선택
 

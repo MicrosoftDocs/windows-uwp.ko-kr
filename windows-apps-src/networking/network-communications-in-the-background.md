@@ -60,12 +60,9 @@ ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
 
     앱에서 소켓의 소유권을 소켓 브로커로 이전하고 다음 메서드 중 적절한 메서드를 사용하여 백그라운드 작업에 대한 ID를 전달합니다.
 
-    -   [
-            **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
-    -   [
-            **StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
-    -   [
-            **StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
+    -   [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
+    -   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
+    -   [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -157,29 +154,24 @@ case SocketActivityTriggerReason.SocketClosed:
   deferral.Complete();
 ```
 
-[
-            **SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
+[**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) 및 소켓 브로커 사용을 보여 주는 전체 샘플은 [SocketActivityStreamSocket 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620606)을 참조하세요. 소켓 초기화는 Scenario1\_Connect.xaml.cs에서 수행되며 백그라운드 작업 구현은 SocketActivityTask.cs에서 수행됩니다.
 
 이 항목에서 설명한 대로 작업을 수행하기 위해 샘플에서는 새 소켓을 만들거나 기존 소켓을 획득하자마자 **OnSuspending** 이벤트 처리기를 사용하는 대신 **TransferOwnership**을 호출합니다. 이는 샘플은 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 설명하는 데 중점을 두고 있으며 실행되는 동안 다른 활동에 대해 소켓을 사용하지 않기 때문입니다. 앱이 더 복잡해질 수 있으며 **OnSuspending**을 호출하는 시기를 결정할 때 **TransferOwnership**을 사용해야 합니다.
 
 ## 컨트롤 채널 트리거
 
-먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [
-            **DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
+먼저 CCT(컨트롤 채널 트리거)를 적절하게 사용하고 있는지 확인합니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) 연결을 사용하는 경우 [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)를 사용하는 것이 좋습니다. **StreamSocket**에 대해 CCT를 사용할 수 있지만 이러한 CCT는 더 많은 리소스를 사용하고 연결된 대기 상태 모드에서 작동하지 않을 수 있습니다.
 
 WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 또는 **Windows.Web.Http.HttpClient**를 사용하는 경우 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)를 사용해야 합니다.
 
 ## ControlChannelTrigger와 WebSockets
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.
 
 -   중요한 소켓 수신은 항상 알림으로 전달되어야 합니다. 그래야만 푸시 알림 작업이 발생할 수 있습니다.
--   WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다. [
-            **WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스는 클라이언트에서 시작한 WebSocket 프로토콜 keep-alive 메시지를 사용자에게 보낼 수 있습니다. **WebSocketKeepAlive** 클래스는 앱에 의해 KeepAliveTrigger에 대한 TaskEntryPoint로 등록되어야 합니다.
+-   WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다. [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스는 클라이언트에서 시작한 WebSocket 프로토콜 keep-alive 메시지를 사용자에게 보낼 수 있습니다. **WebSocketKeepAlive** 클래스는 앱에 의해 KeepAliveTrigger에 대한 TaskEntryPoint로 등록되어야 합니다.
 
 일부 고려 사항은 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. 특히 **StreamWebSocket**을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 앱은 읽기를 처리하기 위해 C# 및 VB.NET의 **await** 모델이나 C++의 Tasks 대신 원시 비동기 패턴을 사용해야 합니다. 원시 비동기 패턴은 이 섹션의 뒷부분에 나오는 코드 샘플에서 확인할 수 있습니다.
 
@@ -273,11 +265,9 @@ public void OnDataReadCompletion(uint bytesRead, DataReader readPacket)
 
 Websockets에 대한 추가 정보는 keep-alive 처리기입니다. WebSocket 프로토콜은 keep-alive 메시지에 대한 표준 모델을 정의합니다.
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 사용할 경우 [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 끝점)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 사용할 경우 [**WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531) 클래스 인스턴스를 KeepAliveTrigger에 대한 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)로 등록해야 앱이 일시 중단되지 않고 keep-alive 메시지를 주기적으로 서버(원격 끝점)에 전송할 수 있습니다. 이 작업은 패키지 매니페스트에서뿐 아니라 라운드 등록 앱 코드의 일부로도 수행해야 합니다.
 
-[
-            **Windows.Sockets.WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531)의 이 작업 진입점을 다음 두 곳에서 지정해야 합니다.
+[**Windows.Sockets.WebSocketKeepAlive**](https://msdn.microsoft.com/library/windows/apps/hh701531)의 이 작업 진입점을 다음 두 곳에서 지정해야 합니다.
 
 -   KeepAliveTrigger 트리거를 만들 때 원본 코드에서(아래 예제 참조)
 -   앱 패키지 매니페스트의 keepalive 백그라운드 작업 선언에서
@@ -441,8 +431,7 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-[
-            **MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 또는 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)을 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [ControlChannelTrigger StreamWebSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=251232)을 참조하세요.
 
 ## ControlChannelTrigger와 HttpClient
 
@@ -596,19 +585,15 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 
 ## ControlChannelTrigger와 IXMLHttpRequest2
 
-[
-            **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **IXMLHTTPRequest2**를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. **ControlChannelTrigger**를 사용하면 **IXMLHTTPRequest2**에서 HTTP 요청을 보내거나 받는 요청이 처리되는 방식에 영향을 주지 않습니다.
+[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **IXMLHTTPRequest2**를 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. **ControlChannelTrigger**를 사용하면 **IXMLHTTPRequest2**에서 HTTP 요청을 보내거나 받는 요청이 처리되는 방식에 영향을 주지 않습니다.
 
-[
-            **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 사용 패턴 및 모법 사례
+[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 경우 사용 패턴 및 모법 사례
 
--   전송으로 사용될 때 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 하나의 요청/응답 수명 주기만 갖습니다. [
-            **ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체와 함께 사용하면 한 번 **ControlChannelTrigger** 개체를 만들어 설정한 다음 새 **IXMLHTTPRequest2** 개체와 연결될 때마다 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드를 반복적으로 호출하는 데 편리합니다. 앱이 할당된 리소스 제한을 초과하지 않으려면 새 **IXMLHTTPRequest2** 개체를 제공하기 전에 이전 **IXMLHTTPRequest2** 개체를 삭제해야 합니다.
+-   전송으로 사용될 때 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 하나의 요청/응답 수명 주기만 갖습니다. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 개체와 함께 사용하면 한 번 **ControlChannelTrigger** 개체를 만들어 설정한 다음 새 **IXMLHTTPRequest2** 개체와 연결될 때마다 [**UsingTransport**](https://msdn.microsoft.com/library/windows/apps/hh701175) 메서드를 반복적으로 호출하는 데 편리합니다. 앱이 할당된 리소스 제한을 초과하지 않으려면 새 **IXMLHTTPRequest2** 개체를 제공하기 전에 이전 **IXMLHTTPRequest2** 개체를 삭제해야 합니다.
 -   앱은 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 메서드를 호출하기 전에 [**SetProperty**](https://msdn.microsoft.com/library/windows/desktop/hh831167) 및 [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/desktop/hh831168) 메서드를 호출하여 HTTP 전송을 설정해야 합니다.
 -   앱은 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용할 전송을 만들기 전에 초기 [**Send**](https://msdn.microsoft.com/library/windows/desktop/hh831164) 요청을 만들어 전송을 테스트하고 적절하게 설정해야 합니다. 앱에서 전송이 적절히 설정되었다고 판단하면 [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151) 개체는 **ControlChannelTrigger**와 함께 사용할 전송 개체로 구성될 수 있습니다. 이 프로세스는 일부 시나리오에서 전송을 통해 설정된 연결이 끊어지는 것을 방지하기 위해 설계되었습니다. SSL 인증서를 사용할 경우, 또는 선택할 수 있는 인증서가 여러 개인 경우 PIN 입력에 사용할 대화 상자가 앱에 필요할 수 있습니다. 또한 프록시 인증 및 서버 인증이 필요할 수 있습니다. 프록시 또는 서버 인증이 만료되면 연결이 닫힙니다. 앱에서 이러한 인증 만료 문제를 처리할 수 있는 방법은 타이머를 설정하는 것입니다. HTTP 리디렉션이 필요한 경우에는 두 번째 연결을 안정적으로 설정할 수 있는지 여부가 확실치 않습니다. 초기 테스트 요청은 **ControlChannelTrigger** 개체와 함께 전송으로서 **IXMLHTTPRequest2** 개체를 사용하기 전에 앱이 가장 최근에 리디렉션된 URL을 사용할 수 있음을 보장합니다.
 
-[
-            **IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](http://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
+[**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151)를 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 함께 사용하는 방법에 대해서는 [IXMLHTTPRequest2와 함께 ControlChannelTrigger 사용 샘플](http://go.microsoft.com/fwlink/p/?linkid=258538)(영문)을 참조하세요.
 
 
 

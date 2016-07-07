@@ -17,7 +17,7 @@ ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
 
 
 
-RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다.
+RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 개발합니다. 
 
 ## <span id="Layout_guidelines"></span><span id="layout_guidelines"></span><span id="LAYOUT_GUIDELINES"></span>레이아웃 지침
 
@@ -108,8 +108,7 @@ CSS에서 가로 방향 텍스트 레이아웃을 지원하려면 [**writing-mod
 
 ui-light.css 또는 ui-dark.css 스타일시트를 사용하는 JavaScript를 사용하는 Windows 스토어 앱은 앱 언어를 기반으로 가장 적절한 글꼴을 자동으로 설정합니다. 앱 호스트는 루트 요소의 **lang** 특성을 앱 언어로 설정합니다.
 
-한 페이지에 여러 언어를 표시하는 앱은 각 언어의 섹션에 대해 **lang** 특성을 설정해야 합니다. [
-            **:-ms-lang()**](https://msdn.microsoft.com/library/cc848867) 의사 클래스 선택기는 페이지의 각 섹션에 대해 올바른 글꼴을 선택합니다.
+한 페이지에 여러 언어를 표시하는 앱은 각 언어의 섹션에 대해 **lang** 특성을 설정해야 합니다. [**:-ms-lang()**](https://msdn.microsoft.com/library/cc848867) 의사 클래스 선택기는 페이지의 각 섹션에 대해 올바른 글꼴을 선택합니다.
 
  
 

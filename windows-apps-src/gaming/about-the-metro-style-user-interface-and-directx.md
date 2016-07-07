@@ -34,28 +34,21 @@ DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임은 Windows UI �
 ## Windows 런타임 앱 개체
 
 
-UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 창 및 보기 공급자가 필요합니다(디스플레이 버퍼). 또한 이 보기를 실행 중인 앱에 대한 창별 이벤트에 연결할 수도 있습니다. [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 정의된 앱 개체의 부모 창을 가져오려면 앞 코드 조각에서 했던 대로 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현합니다.
+UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 창 및 보기 공급자가 필요합니다(디스플레이 버퍼). 또한 이 보기를 실행 중인 앱에 대한 창별 이벤트에 연결할 수도 있습니다. [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 정의된 앱 개체의 부모 창을 가져오려면 앞 코드 조각에서 했던 대로 [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현합니다.
 
 다음은 핵심 사용자 인터페이스 프레임워크를 사용하여 창을 가져오는 기본 단계입니다.
 
-1.  [
-            **IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현하는 유형을 만듭니다. 이는 개발자의 보기입니다.
+1.  [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현하는 유형을 만듭니다. 이는 개발자의 보기입니다.
 
     이 유형에서는 다음을 정의합니다.
 
-    -   [
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)의 인스턴스를 매개 변수로 사용하는 [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) 메서드 이 유형의 인스턴스는 [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)를 호출하여 가져올 수 있습니다. 앱 개체는 앱이 시작되면 이 메서드를 호출합니다.
-    -   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)의 인스턴스를 매개 변수로 사용하는 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드 새 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 인스턴스의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하여 이 유형의 인스턴스를 가져올 수 있습니다.
+    -   [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)의 인스턴스를 매개 변수로 사용하는 [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) 메서드 이 유형의 인스턴스는 [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278)를 호출하여 가져올 수 있습니다. 앱 개체는 앱이 시작되면 이 메서드를 호출합니다.
+    -   [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)의 인스턴스를 매개 변수로 사용하는 [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509) 메서드 새 [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 인스턴스의 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하여 이 유형의 인스턴스를 가져올 수 있습니다.
     -   진입점에 대한 문자열을 단독 매개 변수로 사용하는 [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) 메서드 이 메서드를 호출하면 앱 개체는 진입점 문자열을 제공합니다. 여기가 리소스 설정 위치입니다. 여기서 장치 리소스를 만듭니다 앱 개체는 앱이 시작되면 이 메서드를 호출합니다.
-    -   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 활성화하고 창 이벤트 디스패처를 시작하는 [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드 앱 개체는 앱의 처리가 시작되면 이 메서드를 호출합니다.
-    -   [
-            **Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) 호출에 설정된 리소스를 정리하는 [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) 메서드 앱 개체는 앱이 종료되면 이 메서드를 호출합니다.
+    -   [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 개체를 활성화하고 창 이벤트 디스패처를 시작하는 [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드 앱 개체는 앱의 처리가 시작되면 이 메서드를 호출합니다.
+    -   [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501) 호출에 설정된 리소스를 정리하는 [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523) 메서드 앱 개체는 앱이 종료되면 이 메서드를 호출합니다.
 
-2.  [
-            **IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현하는 유형을 만듭니다. 이는 개발자의 뷰 공급자입니다.
+2.  [**IFrameworkViewSource**](https://msdn.microsoft.com/library/windows/apps/hh700482)를 구현하는 유형을 만듭니다. 이는 개발자의 뷰 공급자입니다.
 
     이 유형에서는 다음을 정의합니다.
 
@@ -78,12 +71,10 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 
 앱의 보기는 앱 창의 뷰 공급자가 생성하고 대부분의 경우 특정 프레임워크 패키지나 시스템 자체에서 구현하므로 직접 구현할 필요가 없습니다. DirectX의 경우 앞에서 설명한 대로 씬 뷰 공급자를 구현해야 합니다. 다음 구성 요소와 동작 간에는 고유한 일대일 관계가 있습니다.
 
--   [
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 유형으로 표시되고 창을 업데이트하는 메서드를 정의하는 앱의 보기
+-   [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) 유형으로 표시되고 창을 업데이트하는 메서드를 정의하는 앱의 보기
 -   앱의 스레딩 동작을 정의하는 속성인 ASTA. ASTA에서는 COM STA 특성이 지정된 유형의 인스턴스를 만들 수 없습니다.
 -   앱이 시스템에서 가져오거나 사용자가 구현하는 뷰 공급자
--   [
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 표시되는 부모 창
+-   [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 유형으로 표시되는 부모 창
 -   모든 활성화 이벤트의 원본. 보기와 창 모두에 별도의 활성화 이벤트가 있습니다.
 
 요약하면, 앱 개체는 뷰 공급자 팩터리를 제공합니다. 앱 개체는 뷰 공급자를 만들고 앱에 대한 부모 창을 인스턴스화합니다. 뷰 공급자는 앱의 부모 창에 대한 앱 보기를 정의합니다. 이제 보기 및 부모 창의
@@ -91,16 +82,14 @@ UWP 앱에서는 보기를 가져오고 스왑 체인을 연결할 수 있는 �
 ## CoreApplicationView 동작 및 속성
 
 
-[
-            **CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)는 현재 앱 보기를 나타냅니다. 앱 singleton은 초기화 중에 앱 보기를 만들지만 보기는 활성화되기 전까지 유휴 상태로 유지됩니다. 그 [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하면 보기를 표시하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 가질 수 있으며, [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트에 대리자를 등록하면 보기에 대한 활성화 및 비활성화를 처리할 수 있습니다.
+[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)는 현재 앱 보기를 나타냅니다. 앱 singleton은 초기화 중에 앱 보기를 만들지만 보기는 활성화되기 전까지 유휴 상태로 유지됩니다. 그 [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) 속성에 액세스하면 보기를 표시하는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 가질 수 있으며, [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트에 대리자를 등록하면 보기에 대한 활성화 및 비활성화를 처리할 수 있습니다.
 
 ## CoreWindow 동작 및 속성
 
 
 앱 개체가 초기화되면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 인스턴스인 부모 창이 만들어지고 뷰 공급자로 전달됩니다. 앱에 표시할 창이 없으면 창을 표시합니다. 그렇지 않으면 보기를 초기화하기만 합니다.
 
-[
-            **CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)는 입력 및 기본 창 동작에 대한 다수의 이벤트를 제공합니다. 자신의 대리자를 이벤트에 등록하여 이러한 이벤트를 처리할 수 있습니다.
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)는 입력 및 기본 창 동작에 대한 다수의 이벤트를 제공합니다. 자신의 대리자를 이벤트에 등록하여 이러한 이벤트를 처리할 수 있습니다.
 
 또한 [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264) 속성에 액세스하여 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)의 인스턴스를 제공하는 창에 대한 창 이벤트 디스패처를 얻을 수 있습니다.
 
@@ -143,8 +132,7 @@ UWP DirectX 앱에 대한 앱 개체가 활성화되면 UI 보기에 사용될 A
 
 기존 코드를 ASTA 스레드에서 실행되도록 이식하려는 경우 다음 고려 사항에 주의해야 합니다.
 
--   [
-            **CoWaitForMultipleObjects**](https://msdn.microsoft.com/library/windows/desktop/hh404144) 같은 대기 기능은 ASTA에서 STA에서와 다르게 작동합니다.
+-   [**CoWaitForMultipleObjects**](https://msdn.microsoft.com/library/windows/desktop/hh404144) 같은 대기 기능은 ASTA에서 STA에서와 다르게 작동합니다.
 -   COM 호출 모달 루프는 ASTA에서 다르게 작동합니다. 발신 호출이 진행되는 동안 관련 없는 호출을 더 이상 받을 수 없습니다. 예를 들어 다음과 같은 동작은 ASTA에서 교착 상태를 만들므로 앱이 바로 작동 중지됩니다.
     1.  ASTA가 MTA 개체를 호출하고 인터페이스 포인터 P1을 전달합니다.
     2.  나중에 ASTA에서 동일한 MTA 개체를 호출합니다. MTA 개체는 ASTA로 반환되기 전에 P1을 호출합니다.

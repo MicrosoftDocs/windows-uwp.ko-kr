@@ -48,15 +48,13 @@ arrivalCalendarDatePicker.Header = "Arrival date";
 
 ![달력 날짜 선택의 예](images/calendar-date-picker-closed.png)
 
-달력 날짜 선택에는 날짜를 선택하기 위한 내부 [**CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)가 있습니다. [
-            **IsTodayHighlighted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted.aspx) 및 [**FirstDayOfWeek**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.firstdayofweek.aspx)와 같은 CalendarView 속성의 하위 집합은 CalendarDatePicker에 있으며 수정할 수 있도록 내부 CalendarView에 전달됩니다. 
+달력 날짜 선택에는 날짜를 선택하기 위한 내부 [**CalendarView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)가 있습니다. [**IsTodayHighlighted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted.aspx) 및 [**FirstDayOfWeek**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.firstdayofweek.aspx)와 같은 CalendarView 속성의 하위 집합은 CalendarDatePicker에 있으며 수정할 수 있도록 내부 CalendarView에 전달됩니다. 
 
 그러나 다중 선택을 하도록 내부 CalendarView의 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx)를 변경할 수 없습니다. 사용자가 여러 날짜를 선택하도록 하거나 달력이 항상 표시되도록 해야 하는 경우 달력 날짜 선택 대신 달력 보기를 사용하는 것이 좋습니다. 달력 표시를 수정할 수 있는 방법에 대한 자세한 내용은 [달력 보기](calendar-view.md) 문서를 참조하세요.
 
 ### 날짜 선택
 
-[
-            **Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx) 속성을 사용하여 선택한 날짜를 가져오거나 설정합니다. 기본적으로 Date 속성은 **null**입니다. 사용자가 달력 보기에서 날짜를 선택할 때 이 속성이 업데이트됩니다. 선택한 날짜를 선택 취소하기 위해 달력 보기에서 클릭하여 날짜를 삭제할 수 있습니다. 
+[**Date**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.date.aspx) 속성을 사용하여 선택한 날짜를 가져오거나 설정합니다. 기본적으로 Date 속성은 **null**입니다. 사용자가 달력 보기에서 날짜를 선택할 때 이 속성이 업데이트됩니다. 선택한 날짜를 선택 취소하기 위해 달력 보기에서 클릭하여 날짜를 삭제할 수 있습니다. 
 
 다음과 같이 코드에서 날짜를 설정할 수 있습니다.
 
@@ -74,8 +72,7 @@ Date 값이 변경될 때 알림을 받도록 [**DateChanged**](https://msdn.mic
 
 ### 헤더 및 개체 틀 텍스트 설정
 
-[
-            **헤더**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.header.aspx)(또는 레이블) 및 [**PlaceholderText**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.placeholdertext.aspx)(또는 워터마크)를 달력 날짜 선택에 추가하여 사용 목적 표시를 제공할 수 있습니다. 헤더의 모양을 사용자 지정하려면 헤더 대신 [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.headertemplate.aspx) 속성을 설정할 수 있습니다.
+[**헤더**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.header.aspx)(또는 레이블) 및 [**PlaceholderText**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.placeholdertext.aspx)(또는 워터마크)를 달력 날짜 선택에 추가하여 사용 목적 표시를 제공할 수 있습니다. 헤더의 모양을 사용자 지정하려면 헤더 대신 [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.headertemplate.aspx) 속성을 설정할 수 있습니다.
 
 기본 개체 틀 텍스트는 "날짜 선택"입니다. PlaceholderText 속성을 빈 문자열로 설정하여 이를 제거하거나 여기 표시된 대로 사용자 지정 텍스트를 제공할 수 있습니다.
 
@@ -94,6 +91,6 @@ Date 값이 변경될 때 알림을 받도록 [**DateChanged**](https://msdn.mic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

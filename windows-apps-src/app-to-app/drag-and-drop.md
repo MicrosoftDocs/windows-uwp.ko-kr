@@ -16,8 +16,7 @@ ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
 
 ## 유효한 영역 설정
 
-[
-            **AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 및 [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) 속성을 사용하여 끌어서 놓기를 사용할 수 있는 앱 영역을 지정할 수 있습니다.
+[**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 및 [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) 속성을 사용하여 끌어서 놓기를 사용할 수 있는 앱 영역을 지정할 수 있습니다.
 
 아래 태그는 XAML에서 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
 
@@ -31,16 +30,13 @@ ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
 
 ## DragOver 이벤트 처리
 
-[
-            **DragOver**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DragOver) 이벤트는 사용자가 앱에서 항목을 놓을 때가 아니라 항목을 끌 때 발생합니다. 이 처리기에서 [**AcceptedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.AcceptedOperation) 속성을 사용하여 앱이 지원하는 작업 종류를 지정해야 합니다. 복사가 가장 일반적입니다.
+[**DragOver**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DragOver) 이벤트는 사용자가 앱에서 항목을 놓을 때가 아니라 항목을 끌 때 발생합니다. 이 처리기에서 [**AcceptedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.AcceptedOperation) 속성을 사용하여 앱이 지원하는 작업 종류를 지정해야 합니다. 복사가 가장 일반적입니다.
 
 [!code-cs[기본](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
 
 ## Drop 이벤트 처리
 
-[
-            **Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) 이벤트는 유효한 놓기 영역에 항목을 놓을 때 발생합니다. [
-            **DataView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DataView) 속성을 사용하여 처리합니다.
+[**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) 이벤트는 유효한 놓기 영역에 항목을 놓을 때 발생합니다. [**DataView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.DragEventArgs.DataView) 속성을 사용하여 처리합니다.
 
 아래 예제에서는 편의상 사용자가 사진 한 장을 놓았다고 가정하고 액세스합니다. 실제로 사용자는 다양한 형식의 여러 항목을 동시에 놓을 수 있습니다. 앱은 사용자가 놓은 파일 형식을 확인하고 그에 따라 처리하며, 앱이 지원하지 않는 작업을 사용자가 시도할 때 알림을 표시함으로써 이러한 가능성을 처리해야 합니다.
 
@@ -63,6 +59,6 @@ ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
 * [놓기](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

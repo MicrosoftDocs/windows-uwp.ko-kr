@@ -66,8 +66,7 @@ ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GI
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```    CSharp
 public MainPage()
     {
@@ -89,8 +88,7 @@ public MainPage()
 
 3.  마지막으로, **저장** 단추의 클릭 이벤트 처리기에 잉크를 저장합니다.
 
-    [
-            **FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
     파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
 
@@ -200,8 +198,7 @@ GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그�
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```    CSharp
 public MainPage()
     {
@@ -223,8 +220,7 @@ public MainPage()
 
 3.  마지막으로, **로드** 단추의 클릭 이벤트 처리기에서 잉크를 로드합니다.
 
-    [
-            **FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
     파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
 
@@ -319,8 +315,7 @@ GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그�
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [
-            **InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기에서 선언합니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기에서 선언합니다.
 
     스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 [고급 처리에 대한 통과 입력](pen-and-stylus-interactions.md#passthrough)을 참조하세요.
 ```    CSharp
@@ -449,6 +444,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

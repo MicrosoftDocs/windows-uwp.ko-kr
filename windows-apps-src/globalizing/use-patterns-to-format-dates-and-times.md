@@ -28,8 +28,7 @@ ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>소개
 
 
-[
-            **Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)은 세계 여러 국가와 언어에 맞게 적절하게 날짜 및 시간의 형식을 지정하는 다양한 방법을 제공합니다. 연도, 월, 일 등에 대한 표준 형식을 사용하거나 "자세한 날짜" 또는 "월 일"과 같은 표준 문자열 템플릿을 사용할 수 있습니다.
+[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)은 세계 여러 국가와 언어에 맞게 적절하게 날짜 및 시간의 형식을 지정하는 다양한 방법을 제공합니다. 연도, 월, 일 등에 대한 표준 형식을 사용하거나 "자세한 날짜" 또는 "월 일"과 같은 표준 문자열 템플릿을 사용할 수 있습니다.
 
 그러나 표시하려는 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) 문자열 구성 요소의 순서 및 형식을 좀더 제어하려는 경우 "패턴"이라는 문자열 템플릿 매개 변수에 대한 특수 구문을 사용할 수 있습니다. 패턴 구문을 사용하면 **DateTime** 개체의 개별 구성 요소인 월 이름만 또는 연도 값만을 가져와 직접 선택한 사용자 지정 형식으로 표시할 수 있습니다. 또한 다른 언어 및 지역에 맞게 패턴을 지역화할 수 있습니다.
 

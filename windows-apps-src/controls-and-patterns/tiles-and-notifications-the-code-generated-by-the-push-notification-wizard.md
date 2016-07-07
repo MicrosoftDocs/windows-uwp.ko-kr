@@ -41,8 +41,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
 ## <span id="Registration_for_push_notifications"></span><span id="registration_for_push_notifications"></span><span id="REGISTRATION_FOR_PUSH_NOTIFICATIONS"></span>푸시 알림 등록
 
 
-push.register.\*에서 UploadChannel 메서드는 푸시 알림을 수신할 디바이스를 등록합니다. 스토어는 설치된 앱 인스턴스를 추적하고 푸시 알림 채널을 제공합니다. [
-            **PushNotificationChannelManager**](https://msdn.microsoft.com/library/windows/apps/br241284)을 참조하세요.
+push.register.\*에서 UploadChannel 메서드는 푸시 알림을 수신할 디바이스를 등록합니다. 스토어는 설치된 앱 인스턴스를 추적하고 푸시 알림 채널을 제공합니다. [**PushNotificationChannelManager**](https://msdn.microsoft.com/library/windows/apps/br241284)을 참조하세요.
 
 클라이언트 코드는 JavaScript 백 엔드와 .NET 백 엔드 모두 비슷합니다. 기본적으로 JavaScript 백 엔드 서비스에 대해 푸시 알림을 추가하면 notifyAllUsers 사용자 지정 API에 대한 샘플 호출이 UploadChannel 메서드에 삽입됩니다.
 

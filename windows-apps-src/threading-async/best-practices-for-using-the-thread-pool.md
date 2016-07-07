@@ -24,8 +24,7 @@ ms.openlocfilehash: 53f7460be63fa9bd440ed6999ac9cca7cdca0174
 
 -   오래가지 않고 독립적인 작업 항목을 만듭니다. 작업 항목은 비동기적으로 실행되며 순서에 관계없이 큐에서 풀로 제출될 수 있습니다.
 
--   [
-            **Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
+-   [**Windows.UI.Core.CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211)를 사용하여 업데이트를 UI 스레드로 디스패치합니다.
 
 -   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)를 사용합니다.
 

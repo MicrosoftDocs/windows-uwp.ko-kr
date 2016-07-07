@@ -92,8 +92,7 @@ HString campaignId;
 HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf());
 ```
 
-[
-            **GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445) 메서드는 Windows 스토어에서 데이터에 액세스합니다. 이 메서드를 사용하는 경우 다음 지침을 따르세요.
+[**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445) 메서드는 Windows 스토어에서 데이터에 액세스합니다. 이 메서드를 사용하는 경우 다음 지침을 따르세요.
 
 -   호출을 완료하려면 이 메서드 호출을 비동기 작업에 래핑합니다.
 -   Windows 스토어에 앱이 아직 게시되지 않은 경우 사용자 지정 캠페인을 테스트하려면 [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스 대신 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 클래스의 [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt187034) 메서드를 사용합니다. 다음 지침을 따르세요.
@@ -106,8 +105,7 @@ HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf()
     </CurrentApp>
     ```
     
-    -   [
-            **CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)과 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 간에 쉽게 전환하려면 다음 문을 코드에 추가하여 **Store** 별칭을 정의한 다음 **Store** 별칭으로 [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt187034) 호출을 수행하는 것이 좋습니다.
+    -   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)과 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 간에 쉽게 전환하려면 다음 문을 코드에 추가하여 **Store** 별칭을 정의한 다음 **Store** 별칭으로 [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt187034) 호출을 수행하는 것이 좋습니다.
 
     ```        CSharp
     #if DEBUG

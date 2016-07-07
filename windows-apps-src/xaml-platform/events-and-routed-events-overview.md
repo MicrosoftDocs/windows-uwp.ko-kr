@@ -159,8 +159,7 @@ ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 -   사용자 지정 정적 이벤트
 -   페이지 탐색 처리기
 
-[
-            **FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) 또는 [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507)은 다른 이벤트 처리기를 제거하는 데 사용할 수 있도록 상태 관리 및 개체 수명에서 적절한 위치에 있는 가능한 이벤트 트리거입니다.
+[**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) 또는 [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507)은 다른 이벤트 처리기를 제거하는 데 사용할 수 있도록 상태 관리 및 개체 수명에서 적절한 위치에 있는 가능한 이벤트 트리거입니다.
 
 예를 들어 다음 코드를 사용하여 대상 개체 **textBlock1**에서 **textBlock1\_PointerEntered**라는 이벤트 처리기를 제거할 수 있습니다.
 
@@ -247,17 +246,14 @@ DHTML(동적 HTML) 또는 HTML5와 같은 웹 기술을 알고 있는 경우 이
 UI에서 요소가 마우스, 터치 및 스타일러스 입력에 보이는지 여부와 그 위치를 결정하는 것을 *적중 테스트*라고 합니다. 터치 동작의 경우와 터치 동작의 결과인 조작 관련 또는 조작 이벤트의 경우에도 이벤트 원본이 되거나 터치 동작과 연관된 이벤트를 실행하려면 요소의 적중 횟수 테스트가 보여야 합니다. 그렇지 않으면 동작이 이 요소를 거쳐 해당 입력을 조작할 수 있는 시각적 트리의 기본 요소나 부모 요소에까지 적용됩니다. 적중 횟수 테스트에 영향을 미치는 요소에는 여러 가지가 있지만 [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) 속성을 확인하여 지정된 요소가 입력 이벤트를 발생시킬 수 있는지 여부를 확인할 수 있습니다. 이 속성은 요소가 다음 기준을 충족하는 경우에만 **true**를 반환합니다.
 
 -   요소의 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) 속성 값이 [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006)입니다.
--   요소의 **Background** 또는 **Fill** 속성 값이 **null**이 아닙니다. [
-            **Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) 값이 **null**이면 투명성이 설정되고 적중 횟수 테스트가 표시되지 않습니다. 요소가 투명하나 적중 횟수를 테스트할 수 있게 하려면 **null** 대신 [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) 브러시를 사용하세요.
+-   요소의 **Background** 또는 **Fill** 속성 값이 **null**이 아닙니다. [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) 값이 **null**이면 투명성이 설정되고 적중 횟수 테스트가 표시되지 않습니다. 요소가 투명하나 적중 횟수를 테스트할 수 있게 하려면 **null** 대신 [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061) 브러시를 사용하세요.
 
 **참고** **Background** 및 **Fill**은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)로 정의되지 않으며 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) 및 [**Shape**](https://msdn.microsoft.com/library/windows/apps/br243377) 같은 다른 파생 클래스로 정의됩니다. 그러나 포그라운드 및 백그라운드 속성에 사용하는 브러시의 의미는 속성을 구현하는 서브클래스와 관계없이 적중 횟수 테스트 및 입력 이벤트의 경우와 동일합니다.
 
 -   요소가 컨트롤인 경우 해당 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) 속성 값이 **true**여야 합니다.
--   요소의 레이아웃에는 실제 차원이 있어야 합니다. [
-            **ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 또는 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)가 0인 요소는 입력 이벤트를 발생시키지 않습니다.
+-   요소의 레이아웃에는 실제 차원이 있어야 합니다. [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 또는 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)가 0인 요소는 입력 이벤트를 발생시키지 않습니다.
 
-일부 컨트롤에는 적중 횟수 테스트를 위한 특수한 규칙이 있습니다. 예를 들어 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에는 **Background** 속성이 없으나 해당 차원의 전체 영역 내에서 여전히 적중 횟수 테스트가 가능합니다. [
-            **Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 및 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 컨트롤은 표시될 미디어 원본 파일의 알파 채널 같은 투명 콘텐츠와 관계없이 정의된 사각형 차원에 대해 적중 횟수 테스트가 가능합니다. 입력이 호스트된 HTML에 의해 처리될 수 있고 스크립트 이벤트를 발생시킬 수 있기 때문에 [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) 컨트롤에는 특수 적중 횟수 테스트 동작이 있습니다.
+일부 컨트롤에는 적중 횟수 테스트를 위한 특수한 규칙이 있습니다. 예를 들어 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에는 **Background** 속성이 없으나 해당 차원의 전체 영역 내에서 여전히 적중 횟수 테스트가 가능합니다. [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 및 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 컨트롤은 표시될 미디어 원본 파일의 알파 채널 같은 투명 콘텐츠와 관계없이 정의된 사각형 차원에 대해 적중 횟수 테스트가 가능합니다. 입력이 호스트된 HTML에 의해 처리될 수 있고 스크립트 이벤트를 발생시킬 수 있기 때문에 [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) 컨트롤에는 특수 적중 횟수 테스트 동작이 있습니다.
 
 대부분의 [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511) 클래스 및 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)의 경우 고유 백그라운드에서는 적중 횟수 테스트가 가능하지 않지만 포함된 요소에서 라우트된 사용자 입력 이벤트는 계속 처리할 수 있습니다.
 

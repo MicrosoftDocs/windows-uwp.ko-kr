@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 게임에 리소스 로드
-description: 대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다.
+title: "DirectX 게임에 리소스 로드"
+description: "대부분의 게임은 특정 시점에 로컬 저장소 또는 몇몇 다른 데이터 스트림에서 셰이더, 텍스처, 미리 정의된 메시 또는 기타 그래픽 데이터 등, 리소스와 자산을 로드합니다."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+
 ---
 
 # DirectX 게임에 리소스 로드
@@ -320,8 +324,7 @@ DDS 파일은 다음 정보를 포함하는 이진 파일입니다.
     DDS_HEADER          header;
     ```
 
-    [
-            **DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984)에서 **dwFlags**의 값은 DDPF\_FOURCC로 설정되고 **dwFourCC**는 "DX10"으로 설정됩니다. 부동 소수점 형식, sRGB 형식 등, RGB 픽셀 형식으로 표현할 수 없는 DXGI 형식 또는 텍스처 배열을 수용하기 위해 추가 [**DDS\_HEADER\_DXT10**](https://msdn.microsoft.com/library/windows/desktop/bb943983) 구조가 표시됩니다. **DDS\_HEADER\_DXT10** 구조가 표시될 때 전체 데이터 설명은 다음과 같이 나타납니다.
+    [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984)에서 **dwFlags**의 값은 DDPF\_FOURCC로 설정되고 **dwFourCC**는 "DX10"으로 설정됩니다. 부동 소수점 형식, sRGB 형식 등, RGB 픽셀 형식으로 표현할 수 없는 DXGI 형식 또는 텍스처 배열을 수용하기 위해 추가 [**DDS\_HEADER\_DXT10**](https://msdn.microsoft.com/library/windows/desktop/bb943983) 구조가 표시됩니다. **DDS\_HEADER\_DXT10** 구조가 표시될 때 전체 데이터 설명은 다음과 같이 나타납니다.
 
     ```cpp
     DWORD               dwMagic;
@@ -706,6 +709,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

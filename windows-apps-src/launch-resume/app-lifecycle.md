@@ -38,13 +38,11 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 
 앱은 **NotRunning** 상태에 있을 때 사용자가 시작 화면 또는 응용 프로그램 목록에서 앱 타일을 탭하면 실행됩니다. 자주 사용하는 앱은 응답성을 최적화하기 위해 사전 실행될 수도 있습니다([앱 사전 실행 처리](handle-app-prelaunch.md) 참조). 앱이 **NotRunning** 상태인 것은 시작된 적이 없거나 실행 후 충돌했거나 중지된 다음 메모리에 상주하지 못하고 시스템에 의해 종료되었기 때문일 수 있습니다. 실행은 활성화와 다릅니다. 활성화는 앱이 검색 계약 등의 계약 또는 확장을 통해 활성화될 때 이루어집니다.
 
-앱이 실행되면 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드가 호출됩니다. 앱이 현재 메모리에서 일시 중단된 경우도 마찬가지입니다. [
-            **LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
+앱이 실행되면 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드가 호출됩니다. 앱이 현재 메모리에서 일시 중단된 경우도 마찬가지입니다. [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
 
 사용자가 종료된 앱으로 전환하면 시스템은 [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)를 **Launch**로, [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)를 **Terminated** 또는 **ClosedByUser**로 설정하여 [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) 인수를 전송합니다. 앱은 저장된 응용 프로그램 데이터를 로드하고 표시 콘텐츠를 새로 고쳐야 합니다.
 
-[
-            **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 값이 **NotRunning**인 경우에는 처음 실행하는 것처럼 앱을 시작해야 합니다.
+[**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 값이 **NotRunning**인 경우에는 처음 실행하는 것처럼 앱을 시작해야 합니다.
 
 앱이 실행되면 Windows는 앱에 대한 시작 화면을 표시합니다. 시작 화면을 구성하려면 [시작 화면 추가](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331)를 참조하세요.
 
@@ -55,18 +53,15 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 
 사용자가 공유 계약과 같은 다양한 계약 및 확장을 통해 앱을 활성화할 수 있습니다. 앱을 활성화할 수 있는 방법에 대한 목록은 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)을 참조하세요.
 
-[
-            **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 여러 활성화 유형에 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336) 등 재정의할 수 있는 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의합니다.
+[**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 여러 활성화 유형에 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336) 등 재정의할 수 있는 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의합니다.
 
 앱의 활성화 코드는 앱이 활성화되어 있는 이유와 이미 **Running** 상태인지 여부를 테스트를 통해 확인할 수 있습니다.
 
 운영 체제에서 앱을 종료하고 이후에 사용자가 앱을 다시 실행하는 경우 앱은 활성화 중에 이전에 저장된 데이터를 복원할 수 있습니다. Windows는 앱이 여러 이유로 일시 중단된 이후에 앱을 종료할 수 있습니다. 사용자가 수동으로 앱을 닫거나, 로그아웃하거나, 시스템의 리소스가 부족한 등이 이유가 될 수 있습니다. Windows에서 앱을 종료한 후 사용자가 앱을 실행하면 앱은 [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 콜백을 받고 앱이 활성화될 때까지 앱의 시작 화면이 사용자에게 표시됩니다. 이 이벤트를 사용하여 앱이 마지막으로 일시 중단될 때 저장한 데이터를 복원해야 하는지 여부나 앱의 기본 데이터를 로드해야 하는지 여부를 결정할 수 있습니다. 시작 화면이 표시되기 때문에 앱 코드는 사용자에게 명확한 지연 없이 처리 시간을 벌 수 있지만 다시 시작하거나 계속하는 경우 이전에 언급한 장기 실행 작업에 관한 문제가 여전히 적용됩니다.
 
-[
-            **OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 데이터에는 앱이 활성화되기 전의 상태를 알려 주는 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 속성이 포함되어 있습니다. 이 속성은 [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형의 값 중 하나입니다.
+[**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 데이터에는 앱이 활성화되기 전의 상태를 알려 주는 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 속성이 포함되어 있습니다. 이 속성은 [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형의 값 중 하나입니다.
 
-| 종료 이유                                                        | [
-            **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 속성의 값 | 수행할 작업          |
+| 종료 이유                                                        | [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) 속성의 값 | 수행할 작업          |
 |-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|-------------------------|
 | 시스템이 종료함(예: 리소스 제한 때문)       | **Terminated**                                                                                          | 세션 데이터 복원    |
 | 사용자가 닫거나 사용자가 프로세스를 종료                             | **ClosedByUser**                                                                                        | 기본 데이터로 시작 |
@@ -78,8 +73,7 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 
  
 
-[
-            **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)의 값이 **Running** 또는 **Suspended**일 수도 있지만 이 경우 앱이 이전에 종료되지 않은 것이므로 데이터를 복원할 필요가 없습니다. 모든 데이터가 메모리에 이미 있습니다.
+[**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)의 값이 **Running** 또는 **Suspended**일 수도 있지만 이 경우 앱이 이전에 종료되지 않은 것이므로 데이터를 복원할 필요가 없습니다. 모든 데이터가 메모리에 이미 있습니다.
 
 **참고**  
 
@@ -89,8 +83,7 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 
 ### **OnActivated** 및 특정 활성화
 
-[
-            **OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드는 모든 가능한 활성화 유형을 처리하는 수단입니다. 그러나 가장 일반적인 활성화 유형 처리를 위해 다른 메서드를 사용하고 **OnActivated**은(는) 덜 일반적인 활성화 유형을 위한 대체 수단으로 사용하는 것이 보통입니다. 예를 들어 [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)은 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)가 **Launch**일 때마다 콜백으로 호출되는 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 가지고 있고 이것이 대부분의 앱의 일반적인 활성화입니다. 특정 활성화를 위한 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806)의 6가지 추가 **On\*** 메서드가 있습니다. XAML 앱의 시작 템플릿에는 **OnLaunched**에 대한 구현 및 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341)에 대한 처리기가 있습니다.
+[**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드는 모든 가능한 활성화 유형을 처리하는 수단입니다. 그러나 가장 일반적인 활성화 유형 처리를 위해 다른 메서드를 사용하고 **OnActivated**은(는) 덜 일반적인 활성화 유형을 위한 대체 수단으로 사용하는 것이 보통입니다. 예를 들어 [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)은 [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)가 **Launch**일 때마다 콜백으로 호출되는 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 가지고 있고 이것이 대부분의 앱의 일반적인 활성화입니다. 특정 활성화를 위한 [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806)의 6가지 추가 **On\*** 메서드가 있습니다. XAML 앱의 시작 템플릿에는 **OnLaunched**에 대한 구현 및 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341)에 대한 처리기가 있습니다.
 
 ## 앱 일시 중단
 
@@ -154,8 +147,7 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 앱이 **Suspending** 이벤트에 대한 이벤트 처리기를 등록했다면 앱이 일시 중단될 때 이 이벤트 처리기가 호출됩니다. 이 이벤트 처리기를 사용하여 관련 응용 프로그램 및 사용자 데이터를 영구적 저장소에 저장할 수 있습니다.
 
-**Closed-by-user behavior:**앱을 사용자가 닫을 때 Windows에서 닫을 때와 다른 작업을 수행해야 하는 경우 활성화 이벤트 처리기를 사용하여 앱을 종료한 주체가 사용자인지 Windows인지를 확인할 수 있습니다. [
-            **ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
+**Closed-by-user behavior:**앱을 사용자가 닫을 때 Windows에서 닫을 때와 다른 작업을 수행해야 하는 경우 활성화 이벤트 처리기를 사용하여 앱을 종료한 주체가 사용자인지 Windows인지를 확인할 수 있습니다. [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694) 열거형에 대한 참조에서 **ClosedByUser** 및 **Terminated** 상태에 대한 설명을 참조하세요.
 
 반드시 필요한 경우가 아니면 앱이 자동으로 닫히지 않도록 하는 것이 좋습니다. 예를 들어 앱이 메모리 누수를 발견한 경우 사용자의 개인 데이터 보안을 위해 스스로 닫을 수 있습니다. 앱을 프로그래밍 방식으로 닫는 경우 시스템은 이를 앱 크래시로 처리합니다.
 
@@ -181,15 +173,11 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 ## 응용 프로그램 수명 주기 키 API
 
 
--   [
-            **Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 네임스페이스
+-   [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 네임스페이스
 -   [ **Windows.ApplicationModel.Activation** ](https://msdn.microsoft.com/library/windows/apps/br224766) 네임스페이스
--   [
-            **Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) 네임스페이스
--   [
-            **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스(XAML)
--   [
-            **Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) 클래스(XAML)
+-   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) 네임스페이스
+-   [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스(XAML)
+-   [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) 클래스(XAML)
 
 **참고**  
 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
@@ -211,6 +199,6 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

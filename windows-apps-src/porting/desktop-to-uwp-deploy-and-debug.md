@@ -220,6 +220,6 @@ VFS라는 폴더 내부에는 앱이 종속되는 DLL이 들어 있는 폴더가
 [GitHub의 UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

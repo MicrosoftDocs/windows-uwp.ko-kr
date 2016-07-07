@@ -101,8 +101,7 @@ ms.openlocfilehash: ec1c0339017fb60ed37f45dfa6f809a5eba6fbb1
 
 Page1.xaml의 UI에 다음 콘텐츠를 추가합니다.
 
--   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [
-            **Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성을 `Page 1`로 변경합니다.
+-   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성을 `Page 1`로 변경합니다.
 
 ```    XAML
 <TextBlock x:Name="pageTitle" Text="Page 1" /></code></pre></td>
@@ -160,8 +159,7 @@ private void HyperlinkButton_Click_nodata(object sender, RoutedEventArgs e)
 
 Page2.xaml의 UI를 다음과 같이 변경합니다.
 
--   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [
-            **Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성의 값을 `Page 2`로 변경합니다.
+-   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성의 값을 `Page 2`로 변경합니다.
 
 ```    XAML
 <TextBlock x:Name="pageTitle" Text="Page 2" /></code></pre></td>
@@ -330,15 +328,13 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 먼저 App.xaml 코드 숨김 파일의 `App.OnLaunched` 메서드에서 앱에 대한 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)(`rootFrame`)이 생성됩니다. 이 **Frame**에 콘텐츠를 표시하려면 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드를 사용합니다.
 
 **참고**  
-[
-            **Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스에서는 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693) 등의 다양한 탐색 메서드와 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547), [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995) 등의 속성을 지원합니다.
+[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스에서는 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693) 등의 다양한 탐색 메서드와 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547), [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995) 등의 속성을 지원합니다.
 
  
 
 이 예제에서는 `Page1`이 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드에 전달됩니다. 이 메서드는 앱의 현재 창의 콘텐츠를 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)으로 설정하고 지정하는 페이지의 콘텐츠를 **Frame**(이 예제에서는 Page1.xaml 또는 기본적으로 MainPage.xaml)에 로드합니다.
 
-`Page1` 은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스의 하위 클래스입니다. **Page** 클래스에는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) 속성이 있는데, 이는 **Page**를 포함하는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 가져오는 읽기 전용 속성입니다. [
-            **HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트 처리기가 ` Frame.Navigate(typeof(Page2))`를 호출하면 앱 창의 **Frame**에 Page2.xaml의 내용이 표시됩니다.
+`Page1` 은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스의 하위 클래스입니다. **Page** 클래스에는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) 속성이 있는데, 이는 **Page**를 포함하는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 가져오는 읽기 전용 속성입니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트 처리기가 ` Frame.Navigate(typeof(Page2))`를 호출하면 앱 창의 **Frame**에 Page2.xaml의 내용이 표시됩니다.
 
 프레임에 페이지가 로드되면 해당 페이지가 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504)의 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) 또는 [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547)에 [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572)로 추가됩니다.
 
@@ -407,8 +403,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-앱을 실행하고, 입력란에 이름을 입력하고, **Click to go to page 2**라는 링크를 클릭합니다. [
-            **HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에서 `this.Frame.Navigate(typeof(Page2), tb1.Text)`를 호출할 때 `name.Text` 속성이 `Page2`로 전달되었으며 이벤트 데이터의 값은 페이지에 표시되는 메시지에 사용됩니다.
+앱을 실행하고, 입력란에 이름을 입력하고, **Click to go to page 2**라는 링크를 클릭합니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에서 `this.Frame.Navigate(typeof(Page2), tb1.Text)`를 호출할 때 `name.Text` 속성이 `Page2`로 전달되었으며 이벤트 데이터의 값은 페이지에 표시되는 메시지에 사용됩니다.
 
 ## <span id="Cache_a__page"></span><span id="cache_a__page"></span><span id="CACHE_A__PAGE"></span>페이지 캐시
 

@@ -19,8 +19,7 @@ ms.openlocfilehash: 17893ac17a741f2a6220b1826547c700af0f0f33
 -   [**StorageFile 클래스**](https://msdn.microsoft.com/library/windows/apps/BR227171)
 -   [**StorageFile.IsAvailable 속성**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx)
 
-[
-            **StorageFile.isAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다.
+[**StorageFile.isAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다.
 
 ## 필수 조건
 
@@ -36,8 +35,7 @@ ms.openlocfilehash: 17893ac17a741f2a6220b1826547c700af0f0f33
 
 사용자는 OneDrive 파일을 '오프라인 사용 가능'(기본값) 또는 '온라인만'으로 표시할 수 있습니다. 이 기능을 통해 사용자는 큰 파일(예: 사진과 동영상)을 OneDrive로 이동하고 '온라인만'으로 표시하여 디스크 공간을 절약할 수 있습니다(메타데이터 파일만 로컬로 보관됨).
 
-[
-            **StorageFile.IsAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx)은 파일을 현재 사용할 수 있는지 확인하는 데 사용됩니다. 다음 표는 다양한 시나리오에서 **StorageFile.IsAvailable** 속성의 값을 보여 줍니다.
+[**StorageFile.IsAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx)은 파일을 현재 사용할 수 있는지 확인하는 데 사용됩니다. 다음 표는 다양한 시나리오에서 **StorageFile.IsAvailable** 속성의 값을 보여 줍니다.
 
 | 파일 형식                              | 온라인 | 데이터 통신 연결 네트워크        | 오프라인 |
 |-------------------------------------------|--------|------------------------|---------|
@@ -51,8 +49,7 @@ ms.openlocfilehash: 17893ac17a741f2a6220b1826547c700af0f0f33
 다음 단계에서는 파일이 현재 사용 가능한지를 확인하는 방법을 설명합니다.
 
 1.  액세스하려는 라이브러리에 적절한 접근 권한 값을 선언합니다.
-2.  [
-            **Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스를 포함합니다. 이 네임스페이스에는 파일, 폴더 및 응용 프로그램 설정을 관리하기 위한 형식이 포함되어 있습니다. 또한 필요한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 형식이 포함되어 있습니다.
+2.  [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스를 포함합니다. 이 네임스페이스에는 파일, 폴더 및 응용 프로그램 설정을 관리하기 위한 형식이 포함되어 있습니다. 또한 필요한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 형식이 포함되어 있습니다.
 3.  원하는 파일의 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체를 가져옵니다. 라이브러리를 열거하고 있는 경우 이 단계는 일반적으로 [**StorageFolder.CreateFileQuery**](https://msdn.microsoft.com/library/windows/apps/BR227252) 메서드를 호출한 다음 결과 [**StorageFileQueryResult**](https://msdn.microsoft.com/library/windows/apps/BR208046) 개체의 [**GetFilesAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/br227276.aspx) 메서드를 호출하여 수행됩니다. **GetFilesAsync** 메서드는 **StorageFile** 개체의 [IReadOnlyList](http://go.microsoft.com/fwlink/p/?LinkId=324970) 컬렉션을 반환합니다.
 4.  원하는 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) 개체에 액세스할 수 있는 경우 [**StorageFile.IsAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성의 값에는 파일의 사용 가능 여부가 반영됩니다.
 

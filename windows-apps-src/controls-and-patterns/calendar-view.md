@@ -26,8 +26,7 @@ ms.openlocfilehash: 466d8fe25cb2dfe8ce3b4efef995d9e3cb682dc1
 
 ## 예제
 
-달력 보기는 3개의 개별적인 보기(월 보기, 연도 보기 및 10년 보기)로 구성됩니다. 기본적으로 월 보기가 열린 상태로 시작합니다. [
-            **DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx) 속성을 설정하여 시작 보기를 지정할 수 있습니다.
+달력 보기는 3개의 개별적인 보기(월 보기, 연도 보기 및 10년 보기)로 구성됩니다. 기본적으로 월 보기가 열린 상태로 시작합니다. [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx) 속성을 설정하여 시작 보기를 지정할 수 있습니다.
 
 ![달력 보기의 3가지 보기](images/calendar-view-3-views.png)
 
@@ -58,8 +57,7 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 
 달력 표에서 선택한 날짜를 클릭 또는 탭하여 선택 취소할 수 있습니다.
 
-[
-            **SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 이벤트를 처리할 수 있습니다.
+[**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 이벤트를 처리할 수 있습니다.
 
 > **참고** &nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
@@ -87,8 +85,7 @@ FirstofYearDecadeLabel(연도 및 10년 보기에서 FirstOfMonthLabel과 같음
 OutofScope | [IsOutOfScopeEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.isoutofscopeenabled.aspx), [OutOfScopeBackground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.outofscopebackground.aspx), [OutOfScopeForeground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.outofscopeforeground.aspx)  
 오늘 | [IsTodayHighlighted](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.istodayhighlighted.aspx), [TodayFontWeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.todayfontweight.aspx), [TodayForeground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.todayforeground.aspx)  
 
- 기본적으로 월 보기에서 한 번에 6주가 표시됩니다. [
-            **NumberOfWeeksInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.numberofweeksinview.aspx) 속성을 설정하여 표시되는 주 수를 변경할 수 있습니다. 표시할 주의 최소 수는 2이며 최대 수는 8입니다.
+ 기본적으로 월 보기에서 한 번에 6주가 표시됩니다. [**NumberOfWeeksInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.numberofweeksinview.aspx) 속성을 설정하여 표시되는 주 수를 변경할 수 있습니다. 표시할 주의 최소 수는 2이며 최대 수는 8입니다.
 
 기본적으로 연도와 10년 보기는 4x4 표에 표시됩니다. 행 또는 열의 수를 변경하려면 원하는 수의 열과 행이 포함된 [**SetYearDecadeDisplayDimensions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.setyeardecadedisplaydimensions.aspx)를 호출합니다. 이렇게 하면 연도와 10년 보기에 대한 표가 변경됩니다.
 
@@ -98,8 +95,7 @@ OutofScope | [IsOutOfScopeEnabled](https://msdn.microsoft.com/library/windows/ap
 calendarView1.SetYearDecadeDisplayDimensions(3, 4);
 ```
 
-기본적으로 달력 보기에 표시되는 최소 날짜는 현재 날짜 이전 100년이며 표시되는 최대 날짜는 현재 날짜 이후 100년입니다. [
-            **MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) 및 [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) 속성을 설정하여 달력이 표시하는 최소 및 최대 날짜를 변경할 수 있습니다.
+기본적으로 달력 보기에 표시되는 최소 날짜는 현재 날짜 이전 100년이며 표시되는 최대 날짜는 현재 날짜 이후 100년입니다. [**MinDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.mindate.aspx) 및 [**MaxDate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.maxdate.aspx) 속성을 설정하여 달력이 표시하는 최소 및 최대 날짜를 변경할 수 있습니다.
 
 ```csharp
 calendarView1.MinDate = new DateTime(2000, 1, 1);
@@ -110,11 +106,9 @@ calendarView1.MaxDate = new DateTime(2099, 12, 31);
 
 달력의 각 날짜는 [**CalendarViewDayItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.aspx) 개체로 표시됩니다. 개별 날짜 항목에 액세스하고 속성 및 메서드를 사용하려면 [**CalendarViewDayItemChanging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging.aspx) 이벤트를 처리하고 이벤트 인수의 항목 속성을 사용하여 CalendarViewDayItem에 액세스합니다.
 
-[
-            **CalendarViewDayItem.IsBlackout**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.isblackout.aspx) 속성을 **true**로 설정하여 달력 보기에서 날짜를 선택할 수 없도록 만들 수 있습니다. 
+[**CalendarViewDayItem.IsBlackout**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.isblackout.aspx) 속성을 **true**로 설정하여 달력 보기에서 날짜를 선택할 수 없도록 만들 수 있습니다. 
 
-[
-            **CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx) 메서드를 호출하여 하루의 이벤트 밀도에 대한 상황별 정보를 표시할 수 있습니다. 각 날짜에 대해 0에서 10 사이 밀도 막대를 표시하고 각 막대의 색을 설정할 수 있습니다. 
+[**CalendarViewDayItem.SetDensityColors**](https://msdn.microsoft.com/library/windows/apps/xaml/dn890067.aspx) 메서드를 호출하여 하루의 이벤트 밀도에 대한 상황별 정보를 표시할 수 있습니다. 각 날짜에 대해 0에서 10 사이 밀도 막대를 표시하고 각 막대의 색을 설정할 수 있습니다. 
 
 달력의 일부 날짜 항목은 다음과 같습니다. 1일과 2일이 블랙아웃됩니다. 2일, 3일 및 4일에 다양한 밀도 막대가 설정되었습니다.
 
@@ -199,6 +193,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

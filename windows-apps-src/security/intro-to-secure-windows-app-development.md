@@ -87,10 +87,8 @@ Windows 10의 웹 인증 브로커는 인증 및 권한 부여 프로토콜(예:
 다음은 공급자와 통신하기 위해 [**WebAuthenticationBroker**](https://msdn.microsoft.com/library/windows/apps/br227025) API를 호출할 때 사용하는 일반 워크플로입니다.
 
 -   ID 공급자에 보낼 요청 문자열을 생성합니다. 문자열의 수 및 각 문자열의 정보는 웹 서비스마다 다르지만 일반적으로는 보낼 인증 요청 URL이 있는 요청 URI 문자열과 권한 부여가 완료된 후 사용자를 리디렉션할 URL이 있는 두 URI 문자열을 포함합니다.
--   [
-            **WebAuthenticationBroker.AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)를 호출하여 요청 문자열을 전달한 다음 ID 공급자에게서 응답을 기다립니다.
--   [
-            **WebAuthenticationResult.ResponseStatus**](https://msdn.microsoft.com/library/windows/apps/br227041)를 호출하여 응답을 받을 때의 상태를 가져옵니다.
+-   [**WebAuthenticationBroker.AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)를 호출하여 요청 문자열을 전달한 다음 ID 공급자에게서 응답을 기다립니다.
+-   [**WebAuthenticationResult.ResponseStatus**](https://msdn.microsoft.com/library/windows/apps/br227041)를 호출하여 응답을 받을 때의 상태를 가져옵니다.
 -   통신이 성공하면 ID 공급자에서 반환된 응답 문자열을 처리합니다. 실패하면 오류를 처리합니다.
 
 통신이 성공하면 ID 공급자에서 반환된 응답 문자열을 처리합니다. 실패하면 오류를 처리합니다.
@@ -396,9 +394,7 @@ Windows 앱이 [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/win
 
 해시 함수는 임의로 긴 데이터 블록을 가져가서 해시 값이라는 고정 크기의 비트 문자열을 반환하는 암호화 알고리즘입니다. 이 작업을 수행할 수 있는 해시 함수의 전체 패밀리가 있습니다.
 
-위의 메시지 전송 시나리오에서 MAC 대신 해시 값을 사용할 수 있습니다. 발신자가 해시 값 및 메시지를 보내고 수신자가 발신자의 해시 값 및 메시지에서 나온 고유한 해시 값을 파생하여 두 해시 값을 비교합니다. Windows 10에서 실행되는 앱은 [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 호출하여 사용 가능한 해시 알고리즘을 열거하고 그중 하나를 실행할 수 있습니다. [
-            **CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스는 해시 값을 나타냅니다. [
-            **CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. **CryptographicHash** 클래스의 Append 메서드는 해시할 버퍼에 새 데이터를 추가합니다. 이 전체 프로세스는 다음 C# 코드 예제에서 보여 줍니다.
+위의 메시지 전송 시나리오에서 MAC 대신 해시 값을 사용할 수 있습니다. 발신자가 해시 값 및 메시지를 보내고 수신자가 발신자의 해시 값 및 메시지에서 나온 고유한 해시 값을 파생하여 두 해시 값을 비교합니다. Windows 10에서 실행되는 앱은 [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 호출하여 사용 가능한 해시 알고리즘을 열거하고 그중 하나를 실행할 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스는 해시 값을 나타냅니다. [**CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. **CryptographicHash** 클래스의 Append 메서드는 해시할 버퍼에 새 데이터를 추가합니다. 이 전체 프로세스는 다음 C# 코드 예제에서 보여 줍니다.
 
 ```cs
 public void SampleReusableHash()

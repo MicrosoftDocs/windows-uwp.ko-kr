@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
-title: 파일 액세스 최적화
-description: 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
+title: "파일 액세스 최적화"
+description: "파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
+ms.openlocfilehash: 354a11fefd7164fd6ba5b21ec871ecbe7916ad25
+
 ---
 # 파일 액세스 최적화
 
@@ -200,9 +204,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-[
-            **Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx) 및 [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [
-            **AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
+[**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx) 및 [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -230,12 +232,12 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 
 읽기 및 쓰기의 대기 시간이 짧아야 하고 기본 UWP 스트림에서 큰 블록을 읽지 않는 경우에도 버퍼링을 방지할 수 있습니다. 예를 들어 네트워크 통신을 위해 스트림을 사용하는 경우 읽기 및 쓰기의 대기 시간이 짧아야 합니다.
 
-채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [
-            **AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
+채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

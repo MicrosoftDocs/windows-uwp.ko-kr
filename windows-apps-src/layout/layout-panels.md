@@ -55,9 +55,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ## RelativePanel
 
-[
-            **RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx)을 통해 다른 요소 및 패널을 기준으로 위치를 지정하여 UI 요소를 배치할 수 있습니다. 기본적으로 요소는 패널의 왼쪽 위 모서리에 위치가 지정됩니다. [
-            **VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) 및 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)와 함께 RelativePanel을 사용하면 다양한 창 크기에 맞게 UI를 다시 정렬할 수 있습니다.
+[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx)을 통해 다른 요소 및 패널을 기준으로 위치를 지정하여 UI 요소를 배치할 수 있습니다. 기본적으로 요소는 패널의 왼쪽 위 모서리에 위치가 지정됩니다. [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) 및 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)와 함께 RelativePanel을 사용하면 다양한 창 크기에 맞게 UI를 다시 정렬할 수 있습니다.
 
 다음 표는 요소를 패널의 가장자리 또는 가운데로 정렬하고 다른 요소를 기준으로 해당 요소를 정렬하고 위치 지정할 수 있는 연결된 속성을 보여 줍니다.
 
@@ -104,11 +102,9 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ## StackPanel
 
-[
-            **StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)은 가로 또는 세로 방향으로 지정할 수 있는 한 줄에 자식 요소를 정렬하는 단순 레이아웃 패널입니다. StackPanel 컨트롤은 일반적으로 페이지에 UI의 일부 섹션을 배열하려는 경우에 사용됩니다.
+[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)은 가로 또는 세로 방향으로 지정할 수 있는 한 줄에 자식 요소를 정렬하는 단순 레이아웃 패널입니다. StackPanel 컨트롤은 일반적으로 페이지에 UI의 일부 섹션을 배열하려는 경우에 사용됩니다.
 
-[
-            **Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx) 속성을 사용하여 자식 요소의 방향을 지정할 수 있습니다. 기본 방향은 [**Vertical**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx)입니다.
+[**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx) 속성을 사용하여 자식 요소의 방향을 지정할 수 있습니다. 기본 방향은 [**Vertical**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx)입니다.
 
 다음 XAML은 항목의 수직 StackPanel을 만드는 방법을 보여줍니다.
 
@@ -130,15 +126,11 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 ## 그리드
 
-[
-            **Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) 패널은 컨트롤의 다중 행/열 레이아웃 배열을 지원합니다. [
-            **RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowdefinitions.aspx) 및 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columndefinitions.aspx) 속성을 사용하여 Grid 패널의 행과 열을 지정할 수 있습니다. XAML에서 속성 요소 구문을 사용하여 Grid 요소에 행과 열을 선언합니다. **Auto** 또는 배율 크기 조정을 사용하면 열이나 행 안에서 공간을 분배할 수 있습니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) 패널은 컨트롤의 다중 행/열 레이아웃 배열을 지원합니다. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowdefinitions.aspx) 및 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columndefinitions.aspx) 속성을 사용하여 Grid 패널의 행과 열을 지정할 수 있습니다. XAML에서 속성 요소 구문을 사용하여 Grid 요소에 행과 열을 선언합니다. **Auto** 또는 배율 크기 조정을 사용하면 열이나 행 안에서 공간을 분배할 수 있습니다.
 
-[
-            **Grid.Column**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.column.aspx) 및 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.row.aspx) 연결된 속성을 사용하여 Grid의 특정 셀에 개체의 위치를 지정합니다.
+[**Grid.Column**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.column.aspx) 및 [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.row.aspx) 연결된 속성을 사용하여 Grid의 특정 셀에 개체의 위치를 지정합니다.
 
-[
-            **Grid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowspan.aspx) 및 [**Grid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columnspan.aspx) 연결된 속성을 사용하면 여러 행과 열에 걸쳐 콘텐츠를 표시할 수도 있습니다.
+[**Grid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowspan.aspx) 및 [**Grid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columnspan.aspx) 연결된 속성을 사용하면 여러 행과 열에 걸쳐 콘텐츠를 표시할 수도 있습니다.
 
 다음 XAML 예제는 행 3개와 열 2개로 이루어진 Grid를 만드는 방법을 보여 줍니다. 첫 번째 행과 세 번째 행의 높이는 텍스트만 포함할 정도의 크기입니다. 두 번째 행의 높이는 나머지 사용 가능한 높이입니다. 열의 너비는 사용 가능한 컨테이너 너비 내에서 고르게 분할됩니다.
 
@@ -171,16 +163,13 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 ## VariableSizedWrapGrid
 
-[
-            **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx)에서는 요소가 행이나 열 형태로 정렬되며 [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx) 값에 도달할 경우 새 행이나 열로 자동 래핑되는 그리드 스타일 레이아웃 패널을 제공합니다. 
+[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx)에서는 요소가 행이나 열 형태로 정렬되며 [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx) 값에 도달할 경우 새 행이나 열로 자동 래핑되는 그리드 스타일 레이아웃 패널을 제공합니다. 
 
-[
-            **Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx) 속성은 그리드에서 줄 바꿈 전에 행 또는 열에 해당 항목을 추가할지 여부를 지정합니다. 기본 방향은 **Vertical**이며 이는 하나의 열이 가득 찰 때까지 위에서 아래로 항목을 추가한 다음 새 열로 래핑된다는 의미입니다. 값이 **Horizontal**인 경우 그리드는 왼쪽에서 오른쪽으로 항목을 추가한 다음 새 행으로 래핑됩니다.
+[**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx) 속성은 그리드에서 줄 바꿈 전에 행 또는 열에 해당 항목을 추가할지 여부를 지정합니다. 기본 방향은 **Vertical**이며 이는 하나의 열이 가득 찰 때까지 위에서 아래로 항목을 추가한 다음 새 열로 래핑된다는 의미입니다. 값이 **Horizontal**인 경우 그리드는 왼쪽에서 오른쪽으로 항목을 추가한 다음 새 행으로 래핑됩니다.
 
 셀 치수는 [**ItemHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.itemheight.aspx)와 [**ItemWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.itemwidth.aspx)에 의해 지정됩니다. 각 셀 크기는 동일합니다. ItemHeight 또는 ItemWidth가 지정되지 않은 경우 첫 번째 셀 크기가 해당 콘텐츠에 맞게 조정된 다음 다른 모든 셀은 첫 번째 셀의 크기로 지정됩니다.
 
-[
-            **VariableSizedWrapGrid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.columnspan.aspx) 및 [**VariableSizedWrapGrid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.rowspan.aspx) 연결된 속성을 사용하여 자식 요소를 채울 인접한 셀 수를 지정할 수 있습니다.
+[**VariableSizedWrapGrid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.columnspan.aspx) 및 [**VariableSizedWrapGrid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.rowspan.aspx) 연결된 속성을 사용하여 자식 요소를 채울 인접한 셀 수를 지정할 수 있습니다.
 
 다음은 XAML에서 VariableSizedWrapGrid를 사용하는 방법입니다.
 
@@ -206,8 +195,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 ## 캔버스
 
-[
-            **Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치합니다. 각 요소의 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.top.aspx) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 레이아웃 중에 부모 Canvas는 자식에서 이러한 연결된 속성 값을 읽고 레이아웃의 [Arrange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.arrange.aspx) 단계 중에 이러한 값을 사용합니다.
+[**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치합니다. 각 요소의 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.top.aspx) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 레이아웃 중에 부모 Canvas는 자식에서 이러한 연결된 속성 값을 읽고 레이아웃의 [Arrange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.arrange.aspx) 단계 중에 이러한 값을 사용합니다.
 
 Canvas의 개체는 겹칠 수 있으므로 한 개체를 다른 개체 위에 그릴 수 있습니다. 기본적으로 Canvas는 선언된 순서로 자식 개체를 렌더링하므로 마지막 자식이 맨 위에 렌더링됩니다(각 요소는 Z-인덱스의 기본값 0을 가짐). 이는 다른 기본 제공 패널과 같습니다. 그러나 Canvas는 각 자식 요소에 설정할 수 있는 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.zindex.aspx) 연결된 속성도 지원합니다. 코드에서 이 속성을 설정하면 런타임 중 요소의 그리기 순서를 변경할 수 있습니다. 가장 큰 Canvas.ZIndex 값을 가진 요소가 마지막에 그려지므로 동일한 공간을 공유하거나 어떤 방식으로든 겹치는 다른 요소 위에 그려집니다. 알파 값(투명도)이 적용되므로 요소가 겹치는 경우에도 위쪽 요소의 알파 값이 최대값이 아니면 겹치는 영역에 표시되는 콘텐츠가 혼합될 수 있습니다.
 
@@ -233,9 +221,7 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 ## ItemsControl용 패널
 
-[
-            **ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)에서 항목을 표시하기 위한 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [
-            **ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
+[**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)에서 항목을 표시하기 위한 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
 
 
