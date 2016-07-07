@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
-description: **AdControl** 속성을 값에 할당하는 방법을 알아봅니다.
-title: XAML 속성 예제
+description: "AdControl 속성을 값에 할당하는 방법을 알아봅니다."
+title: "XAML 속성 예제"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
+
 
 ---
 
@@ -33,6 +37,7 @@ IsEngagedChanged="OnAdEngagedChanged"
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
