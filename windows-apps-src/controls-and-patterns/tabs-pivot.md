@@ -91,7 +91,7 @@ ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
 -   모든 피벗 헤더가 허용되는 공간 내에 맞는 경우 피벗은 고정됩니다.
 -   피벗 레이블을 탭하면 피벗 자체는 움직이지 않지만, 해당 페이지로 이동합니다. 활성 피벗이 강조 표시됩니다.
 
-{{&gt; aside-internal content = "
+{{> aside-internal content = "
 -   특히 10ft 환경에서 항목이 회전하지 않도록 하는 것이 좋습니다. Xbox에서 앱을 실행하는 경우 새로운 `IsHeaderItemsCarouselEnabled` 속성을 False로 설정합니다.
 "}}
 
