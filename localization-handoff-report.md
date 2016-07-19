@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/d412e24735f362eec31207998ec3ceec53745c30/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | OutofSyncHandedBackSuccess | [Details](#43d6d2129008a2489de1f3cc100b9e8b56fd4a2e2310)
+ [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/21cebdc15ee99cbe0d100bd4193d55fdafc1a5cd/windows-apps-src/get-started/get-set-up.md) | OutofSyncHandedBackSuccess | [Details](#fe6dc8f1ae3bd8bf308c0e2bcf5e565deffb3df22312)
+ [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/3eeda3d0e9ceceb4204170423edb57cb24fa0e1c/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md) | OutofSyncHandedBackSuccess | [Details](#20cb7ce04503cfc2eed31db1bbad4878b8c666013502)
 
 ## Item Details
-##### <a name='43d6d2129008a2489de1f3cc100b9e8b56fd4a2e2310'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/d412e24735f362eec31207998ec3ceec53745c30/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
+##### <a name='fe6dc8f1ae3bd8bf308c0e2bcf5e565deffb3df22312'></a> Source: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/21cebdc15ee99cbe0d100bd4193d55fdafc1a5cd/windows-apps-src/get-started/get-set-up.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f7e3c8abe2d4dd5e2094e6e3f4f1dcc1ec35df6b/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.ko-kr.xlf)
-* Handoff Datetime: 2016-07-19 20:36:47
+* Handoff File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fa80171b6dd4896999c55ebf80b00fb890dc163d/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf)
+* Handoff Datetime: 2016-07-19 21:04:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
-* Current Handback File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/get-set-up.md)
+* Current Handback File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-07 14:56:52
+* [Back to Top](#report-top)
+
+##### <a name='20cb7ce04503cfc2eed31db1bbad4878b8c666013502'></a> Source: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/3eeda3d0e9ceceb4204170423edb57cb24fa0e1c/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fa80171b6dd4896999c55ebf80b00fb890dc163d/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.ko-kr.xlf)
+* Handoff Datetime: 2016-07-19 21:04:06
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
+* Current Handback File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-07 14:56:52
 * [Back to Top](#report-top)
 
