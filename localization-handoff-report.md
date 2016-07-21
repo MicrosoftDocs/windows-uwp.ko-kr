@@ -1,27 +1,44 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/f1afc51ed72c30cd99d9cf463725b7f3e788ba8c/windows-apps-src/get-started/learn-more.md) | OutofSyncHandedBackSuccess | [Details](#bcbf0a4aa1ac2c419b442ecb8ed4046fe98afcac2676)
+ [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/a9eb6eefdeb5fd2c5444906c74130d676794e7fb/windows-apps-src/get-started/enable-your-device-for-development.md) | OutofSyncHandedBackSuccess | [Details](#587cee03b98c203f985399b852461cd678ef4f6d2311)
+ [windows-apps-src\get-started\images\devmode-pc-options.png](https://github.com/Microsoft/windows-apps/blob/a9eb6eefdeb5fd2c5444906c74130d676794e7fb/windows-apps-src/get-started/images/devmode-pc-options.png) | OutofSyncHandedBackSuccess | [Details](#6368d201060ce9f7198f67005bfae3c93ad080be2341)
 
 ## Item Details
-##### <a name='bcbf0a4aa1ac2c419b442ecb8ed4046fe98afcac2676'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/f1afc51ed72c30cd99d9cf463725b7f3e788ba8c/windows-apps-src/get-started/learn-more.md)
+##### <a name='587cee03b98c203f985399b852461cd678ef4f6d2311'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/a9eb6eefdeb5fd2c5444906c74130d676794e7fb/windows-apps-src/get-started/enable-your-device-for-development.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/098da349f603617d0032a37fc4823231139e45fd/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
-* Handoff Datetime: 2016-07-21 01:31:51
+* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/540198babed11a02b882fc8e337533947aaf403f/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
+* Handoff Datetime: 2016-07-21 02:01:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/learn-more.md)
-* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/enable-your-device-for-development.md)
+* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-07 14:56:52
+* [Back to Top](#report-top)
+
+##### <a name='6368d201060ce9f7198f67005bfae3c93ad080be2341'></a> Source: [windows-apps-src\get-started\images\devmode-pc-options.png](https://github.com/Microsoft/windows-apps/blob/a9eb6eefdeb5fd2c5444906c74130d676794e7fb/windows-apps-src/get-started/images/devmode-pc-options.png)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [6368d201060ce9f7198f67005bfae3c93ad080be.png](https://github.com/Microsoft/WDG.handoff/blob/540198babed11a02b882fc8e337533947aaf403f/ol-handoff/Microsoft/windows-apps.ko-kr/master/6368d201060ce9f7198f67005bfae3c93ad080be.png)
+* Handoff Datetime: 2016-07-21 02:01:31
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\enable-your-device-for-development.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\images\devmode-pc-options.png](https://github.com/Microsoft/windows-apps.ko-kr/blob/d3c625b8ad3904ae1128af272a9e383c6f8d9c69/windows-apps-src/get-started/images/devmode-pc-options.png)
+* Current Handback File: [834e44aa121a8071febd7e495e0d14b9a1da8e10.png](https://github.com/Microsoft/WDG.handback/blob/3389d8274bc73808cd960e539c39b012496897ef/ol-handback/Microsoft/windows-apps.ko-kr/master/834e44aa121a8071febd7e495e0d14b9a1da8e10.png)
+* Current Handback Datetime: 2016-05-17 11:38:31
 * [Back to Top](#report-top)
 
 
