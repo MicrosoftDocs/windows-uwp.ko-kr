@@ -6599,9 +6599,6 @@
   "468a5a63c57347dc1204479b758b4df640f158bf": [
     "windows-apps-src\\xbox-apps\\images\\devhome_mainmenu.png"
   ],
-  "12575c276ab1e13e69b012abf3309cf2133ea733": [
-    "windows-apps-src\\xbox-apps\\images\\devhome_mainmenu.png"
-  ],
   "4eebbda83fb4eb94926ca29b14f53915d6def50a": [
     "windows-apps-src\\xbox-apps\\images\\devhome_move.png"
   ],
@@ -6833,9 +6830,6 @@
   "bfeac97d2cafb99d71a5d16326efecae9f35e85e": [
     "windows-apps-src\\accessibility\\images\\high-contrast-resources.png"
   ],
-  "6b7b3e65b7373ec44f50af0e955eddfc45c1141b": [
-    "windows-apps-src\\accessibility\\images\\high-contrast-resources.png"
-  ],
   "918fc9f6acb579d368f8ca273f58d25482b49e34": [
     "windows-apps-src\\accessibility\\images\\high-contrast-settings.png"
   ],
@@ -6909,9 +6903,6 @@
     "windows-apps-src\\xbox-apps\\images\\x64-build-platform.png"
   ],
   "766be26fa9692fb7d435e5b737eb73493659dead": [
-    "windows-apps-src\\xbox-apps\\images\\windows-store-app-activation-error.jpg"
-  ],
-  "45db2b325ab38da7d9b549a7a79698fdb64347d8": [
     "windows-apps-src\\xbox-apps\\images\\windows-store-app-activation-error.jpg"
   ],
   "1b629640629d60f60e3739563a3b463ce43f9e1f": [
