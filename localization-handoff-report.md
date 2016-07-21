@@ -1,125 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 8
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | OutofSyncHandedBackSuccess | [Details](#1be32db7ead8dcd13ad97612b0a5a7a7cf4926e02309)
- [windows-apps-src\get-started\images\helloworld-1-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs.png) | HandedOffSuccess | [Details](#7d454561ba2ee740e60507bdff23b04034e17dae2374)
- [windows-apps-src\get-started\images\helloworld-1-winjs-phone.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs-phone.png) | HandedOffSuccess | [Details](#cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d2373)
- [windows-apps-src\get-started\images\helloworld-2-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-2-winjs.png) | HandedOffSuccess | [Details](#92ce4917228a76e66c938b0eeafd5312ec74a97b2378)
- [windows-apps-src\get-started\images\helloworld-4-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-4-winjs.png) | HandedOffSuccess | [Details](#b9e05771e8b326c5ff77e09a486704dca06b54d82382)
- [windows-apps-src\get-started\images\helloworld-5-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-5-winjs.png) | HandedOffSuccess | [Details](#fcbc93ff210aba5a4f6a6575272efee9a37e18082385)
- [windows-apps-src\get-started\images\winjs-tut-helloworld.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-helloworld.png) | HandedOffSuccess | [Details](#a9cab92f705faf0677e5dec0dedb45a5aa59e14f2584)
- [windows-apps-src\get-started\images\winjs-tut-newproject.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-newproject.png) | HandedOffSuccess | [Details](#147a0a48f77c0a5679dff07cf8927969806165c82585)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/a88214593d875f332a25b31202c43b2efdf2f861/windows-apps-src/get-started/learn-more.md) | OutofSyncHandedBackSuccess | [Details](#34536258a6786c6a9d253200130c83c69598f9452676)
+ [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/a88214593d875f332a25b31202c43b2efdf2f861/windows-apps-src/get-started/your-first-app.md) | OutofSyncHandedBackSuccess | [Details](#e810d9219827dacac4d7b394dc413b5f816f75cb2681)
 
 ## Item Details
-##### <a name='1be32db7ead8dcd13ad97612b0a5a7a7cf4926e02309'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+##### <a name='34536258a6786c6a9d253200130c83c69598f9452676'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/a88214593d875f332a25b31202c43b2efdf2f861/windows-apps-src/get-started/learn-more.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
-* Handoff Datetime: 2016-07-21 00:03:48
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ae39e1b7e428ecbe265293811c447e363f0f17b0/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Handoff Datetime: 2016-07-21 00:33:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
-* Current Handback File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-07 14:56:52
 * [Back to Top](#report-top)
 
-##### <a name='7d454561ba2ee740e60507bdff23b04034e17dae2374'></a> Source: [windows-apps-src\get-started\images\helloworld-1-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs.png)
-* Status: HandedOffSuccess
+##### <a name='e810d9219827dacac4d7b394dc413b5f816f75cb2681'></a> Source: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/a88214593d875f332a25b31202c43b2efdf2f861/windows-apps-src/get-started/your-first-app.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [7d454561ba2ee740e60507bdff23b04034e17dae.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/7d454561ba2ee740e60507bdff23b04034e17dae.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
+* Handoff File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ae39e1b7e428ecbe265293811c447e363f0f17b0/ol-handoff/Microsoft/windows-apps.ko-kr/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf)
+* Handoff Datetime: 2016-07-21 00:33:58
+* Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d2373'></a> Source: [windows-apps-src\get-started\images\helloworld-1-winjs-phone.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs-phone.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='92ce4917228a76e66c938b0eeafd5312ec74a97b2378'></a> Source: [windows-apps-src\get-started\images\helloworld-2-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-2-winjs.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [92ce4917228a76e66c938b0eeafd5312ec74a97b.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/92ce4917228a76e66c938b0eeafd5312ec74a97b.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='b9e05771e8b326c5ff77e09a486704dca06b54d82382'></a> Source: [windows-apps-src\get-started\images\helloworld-4-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-4-winjs.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [b9e05771e8b326c5ff77e09a486704dca06b54d8.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/b9e05771e8b326c5ff77e09a486704dca06b54d8.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='fcbc93ff210aba5a4f6a6575272efee9a37e18082385'></a> Source: [windows-apps-src\get-started\images\helloworld-5-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-5-winjs.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [fcbc93ff210aba5a4f6a6575272efee9a37e1808.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/fcbc93ff210aba5a4f6a6575272efee9a37e1808.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a9cab92f705faf0677e5dec0dedb45a5aa59e14f2584'></a> Source: [windows-apps-src\get-started\images\winjs-tut-helloworld.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-helloworld.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [a9cab92f705faf0677e5dec0dedb45a5aa59e14f.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/a9cab92f705faf0677e5dec0dedb45a5aa59e14f.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='147a0a48f77c0a5679dff07cf8927969806165c82585'></a> Source: [windows-apps-src\get-started\images\winjs-tut-newproject.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-newproject.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [147a0a48f77c0a5679dff07cf8927969806165c8.png](https://github.com/Microsoft/WDG.handoff/blob/7b332f2db627c0ae67ae84cc8c244f251b2864c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/147a0a48f77c0a5679dff07cf8927969806165c8.png)
-* Handoff Datetime: 2016-07-21 00:03:48
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/your-first-app.md)
+* Current Handback File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-07 14:56:52
 * [Back to Top](#report-top)
 
 
