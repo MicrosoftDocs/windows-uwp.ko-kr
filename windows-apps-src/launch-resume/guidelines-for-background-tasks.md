@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "백그라운드 작업 지침"
 description: "앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다."
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: 3fb6884a968afb87e8de303bbd17feba4993c597
 

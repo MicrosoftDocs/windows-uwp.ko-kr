@@ -4,6 +4,7 @@ Description: "앱에 대한 자세한 지침과 권장 사항에 대해 외부 �
 title: "외부 도움말 페이지 디자인에 대한 지침"
 label: External help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 9da639dedf46068fb1f555f90b39ab979114ebf3
 ms.openlocfilehash: 0e21737e33f33d7239162ddcf9d4cdf39db17655
 

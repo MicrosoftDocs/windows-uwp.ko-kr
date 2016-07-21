@@ -5,6 +5,7 @@ title: "적응형 타일 만들기"
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
 ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
 
@@ -1494,6 +1495,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

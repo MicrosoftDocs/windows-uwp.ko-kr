@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "백그라운드 작업을 사용하여 앱 지원"
 description: "이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
 

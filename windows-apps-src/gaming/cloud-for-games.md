@@ -3,8 +3,9 @@ author: joannaleecy
 title: "UWP 게임에 클라우드 서비스 사용"
 description: "UWP 게임에 대한 백 엔드로 클라우드를 구현하는 방법을 알아봅니다."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
-ms.sourcegitcommit: b25f02dc4ebcf960882e64f66f0306a8e584ebbd
-ms.openlocfilehash: d9b252783213f0c6a82944729f98c84e21d56535
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
 
 ---
 #  UWP 게임에 클라우드 서비스 사용
@@ -54,7 +55,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
         </td>
         <td>
             <ul>
-                <li>[Azure DocumentDB를 사용하여 구현된 소셜 게임 플레이](https://azure.microsoft.com/en-us/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
+                <li>[Azure DocumentDB를 사용하여 구현된 소셜 게임 플레이](https://azure.microsoft.com/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
             </ul>
     </tr>
     <tr>
@@ -115,18 +116,18 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 ### 단계별 학습 가이드
 
 * [빌드 2016 Codelab: Microsoft Azure 앱 서비스 및 Microsoft SQL Azure 백 엔드를 사용하여 게임 점수 저장](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* [게임의 모바일 참여 전략 디자인](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-gaming-scenario/)
-* [Unity iOS 배포에 Azure Mobile Engagement 사용](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-unity-ios-get-started/)
+* [게임의 모바일 참여 전략 디자인](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
+* [Unity iOS 배포에 Azure Mobile Engagement 사용](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
 ### IaaS, PaaS 또는 SaaS 이해
 
 먼저 게임에 가장 적합한 서비스 수준을 고려해야 합니다. 다음 세 가지 서비스의 차이점을 알면 백 엔드 구축에 사용할 방법을 결정하는 데 도움이 됩니다.
 
-* [IaaS(Infrastructure as a Service)](https://azure.microsoft.com/en-us/overview/what-is-iaas/)
+* [IaaS(Infrastructure as a Service)](https://azure.microsoft.com/overview/what-is-iaas/)
 
     IaaS(Infrastructure as a Service)는 인터넷을 통해 프로비전 및 관리되는 인스턴트 컴퓨팅 인프라입니다. 여러 컴퓨터를 쉽게 사용하여 요청 시 빠르게 확장 및 축소할 수 있다고 상상해 보세요. IaaS는 물리적 서버와 기타 데이터 센터 인프라를 구입하고 관리하는 비용 및 복잡성을 방지하는 데 도움이 됩니다.
 
-* [PaaS(Platform as a Service)](https://azure.microsoft.com/en-us/overview/what-is-paas/)
+* [PaaS(Platform as a Service)](https://azure.microsoft.com/overview/what-is-paas/)
 
     PaaS(Platform as a Service)는 IaaS와 유사하지만 서버, 저장소, 네트워킹 등의 인프라 관리도 포함합니다. 따라서 물리적 서버와 데이터 센터 인프라를 구입하지 않는 것은 물론 소프트웨어 라이선스, 기본 응용 프로그램 인프라, 미들웨어, 개발 도구 또는 기타 리소스도 구입 및 관리할 필요가 없습니다.
 
@@ -201,6 +202,6 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

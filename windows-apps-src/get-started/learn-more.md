@@ -5,8 +5,8 @@ title: "다음 작업"
 description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&#39;"
 keywords: Dev Center, Getting started
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cb77a32f99bc6e27cfe87af16d6cd4e08855d7b6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 5d8f036b7dcaba1c697f574011875cadbf1970c1
 
 ---
 # 다음 작업
@@ -39,7 +39,7 @@ Windows 스토어에서는 Microsoft Windows를 사용하는 수백만 고객과
 
 이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 데 사용할 수 있는 클래스, 속성, 메서드, 이벤트, 스타일 및 기타 API에 대한 자세한 정보가 포함되어 있습니다.
 
-[API 참조](https://msdn.microsoft.com/en-us/library/windows/apps/br211369.aspx)로 이동합니다.
+[API 참조](https://msdn.microsoft.com/library/windows/apps/br211369.aspx)로 이동합니다.
 
 ## 언어 참조
 
@@ -72,6 +72,6 @@ IoT(사물 인터넷)를 위한 개발에 관심이 있는 경우 이 섹션에�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

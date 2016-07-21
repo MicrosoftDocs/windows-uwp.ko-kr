@@ -3,8 +3,9 @@ author: msatranjr
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: "NFC 스마트 카드 앱 만들기"
 description: "Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다."
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: f47303826b9d2d2040a2bd2f2dbd5e2da3dd3cd0
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 1c131951d725107daffd8286e85c53acd9c0b88a
 
 ---
 # NFC 스마트 카드 앱 만들기
@@ -103,7 +104,7 @@ bgTask = taskBuilder.Register();
 
 ## APDU 수신 및 응답
 
-앱을 대상으로 하는 APDU가 있는 경우 시스템에서 백그라운드 작업이 시작됩니다. 백그라운드 작업은 [**SmartCardEmulatorApduReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894640) 개체의 [**CommandApdu**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu.aspx) 속성을 통해 전달된 APDU를 수신하고 동일한 개체의 [**TryRespondAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/mt634299.aspx) 메서드를 사용해 APDU에 응답합니다. 성능상의 이유로 간단한 작업에는 백그라운드 작업을 유지하는 것이 좋습니다. 예를 들어 모든 처리가 완료되면 APDU에 즉시 응답하고 백그라운드 작업을 종료합니다. NFC 트랜잭션의 특성으로 인해 사용자는 매우 짧은 시간 동안만 리더에 장치를 대고 있는 경향이 있습니다. 백그라운드 작업은 연결이 비활성화될 때까지 계속 리더에서 트래픽을 수신합니다. 이 경우 [**SmartCardEmulatorConnectionDeactivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894644) 개체를 수신하게 됩니다. [**SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason) 속성에 표시된 대로 다음과 같은 이유로 연결이 비활성화될 수 있습니다.
+앱을 대상으로 하는 APDU가 있는 경우 시스템에서 백그라운드 작업이 시작됩니다. 백그라운드 작업은 [**SmartCardEmulatorApduReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894640) 개체의 [**CommandApdu**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorapdureceivedeventargs.commandapdu.aspx) 속성을 통해 전달된 APDU를 수신하고 동일한 개체의 [**TryRespondAsync**](https://msdn.microsoft.com/library/windows/apps/mt634299.aspx) 메서드를 사용해 APDU에 응답합니다. 성능상의 이유로 간단한 작업에는 백그라운드 작업을 유지하는 것이 좋습니다. 예를 들어 모든 처리가 완료되면 APDU에 즉시 응답하고 백그라운드 작업을 종료합니다. NFC 트랜잭션의 특성으로 인해 사용자는 매우 짧은 시간 동안만 리더에 장치를 대고 있는 경향이 있습니다. 백그라운드 작업은 연결이 비활성화될 때까지 계속 리더에서 트래픽을 수신합니다. 이 경우 [**SmartCardEmulatorConnectionDeactivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Dn894644) 개체를 수신하게 됩니다. [**SmartCardEmulatorConnectionDeactivatedEventArgs.Reason**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardemulatorconnectiondeactivatedeventargs.reason) 속성에 표시된 대로 다음과 같은 이유로 연결이 비활성화될 수 있습니다.
 
 -   연결이 **ConnectionLost** 값으로 비활성화되는 경우 이는 사용자가 리더에서 장치를 떼었다는 의미입니다. 사용자가 터미널에 더 오래 탭해야 하는 앱인 경우 피드백을 사용하여 메시지를 표시하는 것이 좋습니다. 다시 탭하는 경우 이전 백그라운드 작업이 종료될 때까지 대기하는 동안 지연되지 않도록 신속하게(지연을 완료하여) 백그라운드 작업을 종료해야 합니다.
 -   연결이 **ConnectionRedirected**로 비활성화되는 경우 이는 터미널이 다른 AID로 보내는 새로운 SELECT AID 명령 APDU를 전송했다는 의미입니다. 이 경우 앱은 다른 백그라운드 작업이 실행될 수 있도록 백그라운드 작업을 즉시(지연을 완료하여) 종료해야 합니다.
@@ -207,7 +208,7 @@ void BgTask::HandleHceActivation()
 
 대부분의 결제 카드가 추가 결제 네트워크 카드 관련 AID 함께 동일한 AID(즉, PPSE AID)에 등록합니다. 각 AID 그룹은 카드를 나타내며, 사용자가 카드를 사용하도록 설정하면 그룹의 모든 AID가 활성화됩니다. 마찬가지로, 사용자가 카드를 비활성화하면 그룹의 모든 AID 기능이 비활성화됩니다.
 
-AID 그룹을 등록하려면 [**SmartCardAppletIdGroup**](https://msdn.microsoft.com/library/windows/apps/Dn910955) 개체를 만들고 HCE 기반 결제 카드인 것을 반영하도록 해당 속성을 설정해야 합니다. 표시 이름은 사용자 프롬프트뿐만 아니라 NFC 설정 메뉴에도 표시되므로 설명적이어야 합니다. HCE 결제 카드의 경우 [**SmartCardEmulationCategory**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory.aspx) 속성을 **Payment**로 설정하고 [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) 속성을 **Host**로 설정해야 합니다.
+AID 그룹을 등록하려면 [**SmartCardAppletIdGroup**](https://msdn.microsoft.com/library/windows/apps/Dn910955) 개체를 만들고 HCE 기반 결제 카드인 것을 반영하도록 해당 속성을 설정해야 합니다. 표시 이름은 사용자 프롬프트뿐만 아니라 NFC 설정 메뉴에도 표시되므로 설명적이어야 합니다. HCE 결제 카드의 경우 [**SmartCardEmulationCategory**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory.aspx) 속성을 **Payment**로 설정하고 [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) 속성을 **Host**로 설정해야 합니다.
 
 ```csharp
 public static byte[] AID_PPSE =
@@ -225,7 +226,7 @@ var appletIdGroup = new SmartCardAppletIdGroup(
                                 SmartCardEmulationType.Host);
 ```
 
-미결제 HCE 카드는 [**SmartCardEmulationCategory**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory.aspx) 속성을 **Other**로 설정하고 [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) 속성을 **Host**로 설정해야 합니다.
+미결제 HCE 카드는 [**SmartCardEmulationCategory**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationcategory.aspx) 속성을 **Other**로 설정하고 [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/windows.devices.smartcards.smartcardappletidgroup.smartcardemulationtype) 속성을 **Host**로 설정해야 합니다.
 
 ```csharp
 public static byte[] AID_OTHER =
@@ -385,6 +386,6 @@ Windows Phone 8.1에서 레거시 이진 SMS 가로채기 지원이 제거되었
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

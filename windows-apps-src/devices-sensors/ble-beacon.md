@@ -2,6 +2,7 @@
 author: msatranjr
 title: "Bluetooth 광고"
 description: "이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher API 사용자를 통해 Bluetooth LE(저에너지) 광고를 UWP(유니버설 Windows 플랫폼) 앱에 통합하는 방법에 대한 문서가 포함되어 있습니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
 ms.openlocfilehash: a419ad04fe4f21867f2f1bd1664fbce39a7da792
 

@@ -3,6 +3,7 @@ author: msatranjr
 title: "Windows 런타임 구성 요소 오류 조건 진단"
 description: "이 문서는 관리 코드로 작성된 Windows 런타임 구성 요소의 제한에 대한 추가 정보를 제공합니다."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
 ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
 
@@ -234,20 +235,20 @@ UWP에서 반환 값은 출력 매개 변수로 간주되고, 매개 변수 이�
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> [!div class="tabbedCodeSnippets"]
+> **참고** 반환 값의 이름을 변경했는데 새 이름이 다른 매개 변수 이름과 충돌하면 WME1091 오류가 발생합니다.
 
-**참고** 반환 값의 이름을 변경했는데 새 이름이 다른 매개 변수 이름과 충돌하면 WME1091 오류가 발생합니다. JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다.
+JavaScript 코드는 반환 값을 포함하여 메서드의 출력 매개 변수를 이름으로 액세스할 수 있습니다. 예제를 보려면 [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx) 특성을 참조하세요.
 
-| 예제를 보려면 [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx) 특성을 참조하세요. | 오류 번호 |
+| 오류 번호 | 메시지 내용 |
 |---------------|------------|
-| 메시지 내용 | WME1091 '\{0}' 메서드의 반환 값 이름 '\{1}'이(가) 매개 변수 이름과 동일합니다. |
-| Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. | WME1092 '\{0}' 메서드의 매개 변수 이름 '\{1}'이(가) 기본 반환 값 이름과 동일합니다.<br/>매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요. |
+| WME1091 | '\{0}' 메서드의 반환 값 이름 '\{1}'이(가) 매개 변수 이름과 동일합니다. Windows 런타임 메서드의 매개 변수와 반환 값에는 고유한 이름이 있어야 합니다. |
+| WME1092 | '\{0}' 메서드의 매개 변수 이름 '\{1}'이(가) 기본 반환 값 이름과 동일합니다. 매개 변수에 다른 이름을 사용해 보거나 System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute를 사용하여 반환 값의 이름을 명시적으로 지정하세요.<br/>**참고** 속성 접근자의 경우에만 기본 이름이 "returnValue"입니다. 다른 메서드의 기본 이름은 모두 "value"입니다. |
  
 
-## **참고** 속성 접근자의 경우에만 기본 이름이 "returnValue"입니다. 다른 메서드의 기본 이름은 모두 "value"입니다.
+## 관련 항목
 
-* [관련 항목](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/hh925576.aspx)
+* [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
 

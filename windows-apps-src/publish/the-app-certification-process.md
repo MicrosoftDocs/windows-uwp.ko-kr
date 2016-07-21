@@ -3,6 +3,7 @@ author: jnHs
 Description: "앱 제출을 만들기를 마치고 스토어에 제출을 클릭하면 인증 단계가 시작됩니다."
 title: "앱 인증 프로세스"
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
+translationtype: Human Translation
 ms.sourcegitcommit: 4ea19e85d1e151dd1e03d5acf085c186613be35f
 ms.openlocfilehash: 579d1ef306123f765e19fc9ab3b02c064b690aee
 

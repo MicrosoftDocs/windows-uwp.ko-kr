@@ -3,8 +3,9 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: "브러시 사용"
 description: "Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다."
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 38999529dda7f5e21ef7aee4a99b2420cb37bfa6
 
 ---
 # 브러시 사용
@@ -164,7 +165,7 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 및 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)의 경우 기본 생성자를 사용한 다음 다른 API를 호출한 후 해당 브러시를 UI 속성에 사용합니다.
 
--   코드를 사용하여 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)를 정의하면 [**ImageSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx)에 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)(URI가 아님)가 필요합니다. 소스가 스트림이면 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://msdn.microsoft.com/en-us/library/windows/apps/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다.
+-   코드를 사용하여 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)를 정의하면 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx)에 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235)(URI가 아님)가 필요합니다. 소스가 스트림이면 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다.
 -   [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)의 경우 최근에 [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx) 속성을 다시 설정하거나 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702)의 콘텐츠가 코드와 함께 변경된 경우 [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx)를 호출해야 할 수 있습니다.
 
 코드 예제는 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 및 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)에 대한 참조 페이지를 참조하세요.
@@ -178,6 +179,6 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

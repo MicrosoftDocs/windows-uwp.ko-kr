@@ -5,6 +5,7 @@ title: "음성 인식"
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 66bab97e7108a1728e9659a04ea2f1ecf15f68b7
 

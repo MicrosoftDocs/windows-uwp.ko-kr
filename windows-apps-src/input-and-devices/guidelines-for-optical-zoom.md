@@ -5,6 +5,7 @@ title: "광학 줌 및 크기 조정에 대한 지침"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 38feedfe857f8ce2fc638cf55465f1e719108583
 

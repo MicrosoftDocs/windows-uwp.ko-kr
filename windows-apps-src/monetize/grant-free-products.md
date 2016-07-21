@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용자에게 무료 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 권한을 부여합니다."
 title: "무료 제품에 대한 권한 부여"
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
 
 ---
 
@@ -32,9 +33,9 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 
 | 메서드 | 요청 URI                                            |
 |--------|--------------------------------------------------------|
-| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
+| POST   | ```https://purchase.mp.microsoft.com/v6.0/purchases/grant``` |
 
-<br/> 
+<span/> 
 
 ### 요청 헤더
 
@@ -45,7 +46,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
-<br/>
+<span/>
 
 ### 요청 본문
 
@@ -61,7 +62,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 | quantity       | int    | 구매할 수량입니다. 현재, 1 값만 지원됩니다. 지정되지 않은 경우 기본값은 1입니다.                                                                                                                                                                                                                | 아니요       |
 | skuId          | 문자열 | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                                                                                                                                                                                                | 예      |
 
-<br/> 
+<span/>
 
 ### 요청 예제
 
@@ -107,7 +108,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | 10진수                     | 별도의 결제 방법이나 CSV(저장된 값)를 사용하는 경우 CSV로 청구되는 금액입니다.                                                                | 예      |
 | totalTaxAmount            | 10진수                     | 모든 품목에 대한 세금의 총 금액입니다.                                                                                                              | 예      |
 
-<br/> 
+<span/>
 
 ClientContext 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -115,7 +116,7 @@ ClientContext 개체에는 다음 매개 변수가 포함됩니다.
 |-----------|--------|---------------------------------------|----------|
 | client    | 문자열 | 주문한 클라이언트의 ID입니다. | 아니요       |
 
-<br/> 
+<span/>
 
 OrderLineItemV6 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -147,7 +148,7 @@ OrderLineItemV6 개체에는 다음 매개 변수가 포함됩니다.
 | 제목                   | 문자열         | 품목의 지역화된 제목입니다.                                                                        | 예      |
 | totalAmount             | 10진수        | 세금을 포함한 품목의 총 구매 금액입니다.                                                    | 예      |
 
-<br/> 
+<span/>
 
 IdentityV6 개체에는 다음 매개 변수가 포함됩니다.
 
@@ -156,7 +157,7 @@ IdentityV6 개체에는 다음 매개 변수가 포함됩니다.
 | identityType  | 문자열 | **"pub"** 값을 포함합니다.                                                      | 예      |
 | identityValue | 문자열 | 지정된 Windows 스토어 ID 키에 있는 *publisherUserId*의 문자열 값입니다. | 예      |
 
-<br/> 
+<span/> 
 
 ### 응답 예제
 
@@ -229,7 +230,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | 권한 없음 | InconsistentClientId       | 요청 본문에서 Windows 스토어 ID 키의 *clientId* 클레임과 권한 부여 헤더에서 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.                     |
 | 400  | 불량 요청   | InvalidParameter           | 요청 본문에 대한 정보 및 어떤 필드에 잘못된 값이 있는지에 대한 정보가 세부 사항에 포함됩니다.                                                                                    |
 
-<br/> 
+<span/> 
 
 ## 관련 항목
 
@@ -244,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

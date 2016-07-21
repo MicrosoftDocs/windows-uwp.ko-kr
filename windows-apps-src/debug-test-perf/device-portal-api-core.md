@@ -3,8 +3,9 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "디바이스 포털 핵심 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
-ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
-ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+translationtype: Human Translation
+ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
+ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
 
 ---
 
@@ -1137,6 +1138,60 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 <br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* Xbox
+* HoloLens
+* IoT
+
+---
+### 디바이스 패밀리 가져오기 
+
+**요청**
+
+다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)를 가져올 수 있습니다.
+ 
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/os/devicefamily
+<br />
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)가 포함됩니다.
+
+```
+{
+   "DeviceType" : string
+}
+```
+
+DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다. 
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+
 **사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
@@ -2662,7 +2717,7 @@ GET | /api/wpr/trace
 
 **응답**
 
-- 추적 ETL 파일을 반환합니다.
+- 없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
 
 **상태 코드**
 
@@ -2715,6 +2770,161 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
     "State": string (normal or boot)
 }
 ```
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
+### 완료된 추적 세션(ETL) 나열
+
+**요청**
+
+다음 요청 형식을 사용하여 디바이스의 ETL 추적 목록을 가져올 수 있습니다. 
+
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/wpr/tracefiles
+<br />
+
+**URI 매개 변수**
+
+- 없음
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+완료된 추적 세션 목록은 다음 형식으로 제공됩니다.
+
+```
+{"Items": [{
+    "CurrentDir": string (filepath),
+    "DateCreated": int (File CreationTime),
+    "FileSize": int (bytes),
+    "Id": string (filename),
+    "Name": string (filename),
+    "SubPath": string (filepath),
+    "Type": int
+}]}
+```
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
+### 추적 세션(ETL) 다운로드
+
+**요청**
+
+다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 다운로드할 수 있습니다. 
+
+메서드      | 요청 URI
+:------     | :-----
+GET | /api/wpr/tracefile
+<br />
+
+**URI 매개 변수**
+
+요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+
+URI 매개 변수 | 설명
+:---          | :---
+filename   | (**필수**) 다운로드할 ETL 추적의 이름입니다.  /api/wpr/tracefiles에서 찾을 수 있습니다.
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+- 추적 ETL 파일을 반환합니다.
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인
+4XX | 오류 코드
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* HoloLens
+* IoT
+
+---
+### 추적 세션(ETL) 삭제
+
+**요청**
+
+다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 삭제할 수 있습니다. 
+
+메서드      | 요청 URI
+:------     | :-----
+DELETE | /api/wpr/tracefile
+<br />
+
+**URI 매개 변수**
+
+요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+
+URI 매개 변수 | 설명
+:---          | :---
+filename   | (**필수**) 삭제할 ETL 추적의 이름입니다.  /api/wpr/tracefiles에서 찾을 수 있습니다.
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+- 추적 ETL 파일을 반환합니다.
 
 **상태 코드**
 
@@ -3039,11 +3249,11 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 가져오기
+### 파일 다운로드
 
 **요청**
 
-폴더의 파일 목록을 가져옵니다.
+알려진 폴더 또는 appLocalData에서 파일을 가져옵니다.
 
 메서드      | 요청 URI
 :------     | :-----
@@ -3183,6 +3393,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

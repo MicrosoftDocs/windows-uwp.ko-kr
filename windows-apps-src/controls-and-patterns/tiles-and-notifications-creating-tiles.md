@@ -5,6 +5,7 @@ title: "타일"
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: d3fe62d4de00c42079d62d105acdbb21e296ba5f
 ms.openlocfilehash: a9f5d25dfd359364fa8e16666b03c7c105a867dd
 

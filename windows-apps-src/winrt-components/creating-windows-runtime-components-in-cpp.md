@@ -3,6 +3,7 @@ author: msatranjr
 title: "C++로 Windows 런타임 구성 요소 만들기"
 description: "이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visual Basic, C++)를 사용해 작성된 유니버설 Windows 앱에서 호출할 수 있는 DLL인 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
 ms.openlocfilehash: 1497175723738cc23ec21b280c9639b216a33ddd
 

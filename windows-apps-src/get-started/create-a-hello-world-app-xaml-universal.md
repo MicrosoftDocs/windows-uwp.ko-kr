@@ -4,8 +4,8 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Hello, world 앱 만들기(XAML)"
 description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 \"Hello, world\" 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0a524d51f713c37ce2069b4e750bf3ed20fe19ab
 
 ---
 
@@ -45,6 +45,8 @@ ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
 3.  왼쪽 창에서 **설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows**를 차례로 확장한 후 **유니버설** 템플릿 그룹을 선택합니다. 대화 상자의 가운데 창에 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿 목록이 표시됩니다.
 
    ![새 프로젝트 창 ](images/newproject-cs.png)
+   
+   (이러한 옵션이 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
 
 4.  가운데 창에서 **비어 있는 앱(유니버설 Windows)** 템플릿을 선택합니다.
 
@@ -212,7 +214,9 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 -   **에뮬레이터 <SDK version> WVGA 4인치 1GB**
 -   등(기타 구성의 다양한 에뮬레이터)
 
-화면이 작고 메모리가 제한된 장치에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB** 옵션을 사용합니다.
+(에뮬레이터가 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
+
+화면이 작고 메모리가 제한된 디바이스에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB** 옵션을 사용합니다.
 **모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
 
 1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB**를 선택합니다.
@@ -239,7 +243,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습니다. 이러한 이벤트 메시지는 이벤트에 응답하여 어떤 작업을 수행할 수 있는 기회를 제공합니다. 이벤트 처리기 메서드에서 이벤트에 응답할 코드를 넣습니다. 많은 앱에서 가장 일반적인 이벤트 중 하나는 사용자가 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)을 클릭하는 것입니다.
 
-단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대한 이벤트 처리기를 만들어 보겠습니다. 이 이벤트 처리기는 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 가져와 `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 인사말을 출력하는 데 사용합니다.
+단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대한 이벤트 처리기를 만들어 보겠습니다. 이 이벤트 처리기는 `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 가져와 `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 인사말을 출력하는 데 사용합니다.
 
 ### 터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
 
@@ -261,7 +265,7 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
    <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
-5.  코드 숨김 페이지에서 만든 이벤트 처리기에 코드를 추가합니다. 이 이벤트 처리기에서 `nameInput`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 사용하여 결과를 표시합니다.
+5.  코드 숨김 페이지에서 만든 이벤트 처리기에 코드를 추가합니다. 이 이벤트 처리기에서, `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자의 이름을 검색하고 이 이름을 사용해 인사말을 만듭니다. `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 사용하여 결과를 표시합니다.
     
 ```csharp    
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -309,9 +313,9 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
 
 이전 버전의 XAML에서 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)을(를) 사용한 적이 있으면 여기의 XAML에서 단순화된 구문을 사용할 수 있습니다.
 
-`wideState`라는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 641로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 즉, 창 너비가 최소값인 641픽셀보다 작지 않은 경우에만 상태가 적용됩니다. 이 상태에 대해 어떤 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체도 정의하지 않았으므로 페이지 내용에 대한 XAML에 정의된 레이아웃 속성을 사용합니다.
+`wideState`라는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 641로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 즉, 창 너비가 최소값인 641픽셀보다 작지 않은 경우에만 상태가 적용됩니다. 이 상태에 대해 어떤 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체도 정의하지 않았으므로 페이지 내용에 대한 XAML에 정의된 레이아웃 속성을 사용합니다.
 
-두 번째 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 0으로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 창 너비가 0보다 크지만 641픽셀보다는 작은 경우에 이 상태가 적용됩니다. (641픽셀에서 `wideState`이 적용됩니다.) 이 상태에서는 UI에 있는 컨트롤의 레이아웃 속성을 변경하도록 일부 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체를 다음과 같이 정의합니다.
+두 번째 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 0으로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 창 너비가 0보다 크지만 641픽셀보다는 작은 경우에 이 상태가 적용됩니다. (641픽셀에서 `wideState`이 적용됩니다.) 이 상태에서는 UI에 있는 컨트롤의 레이아웃 속성을 변경하도록 일부 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체를 다음과 같이 정의합니다.
 
 -   `inputPanel` 요소의 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal**에서 **Vertical**로 변경합니다.
 -   4의 상단 여백을 `inputButton` 요소에 추가합니다.
@@ -323,6 +327,6 @@ XAML 요소는 특정 이벤트가 발생할 때 메시지를 보낼 수 있습�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

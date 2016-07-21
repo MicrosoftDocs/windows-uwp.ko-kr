@@ -3,6 +3,7 @@ author: msatranjr
 title: "C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#"
 description: "이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
 ms.openlocfilehash: 860333e3239198cd54eea061195e2a51d786821b
 

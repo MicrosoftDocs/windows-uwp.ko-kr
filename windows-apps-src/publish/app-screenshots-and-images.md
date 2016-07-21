@@ -3,6 +3,7 @@ author: jnHs
 Description: "앱에 다양한 로고, 스크린샷 및 이미지가 포함되어야 합니다."
 title: "앱 스크린샷 및 이미지"
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+translationtype: Human Translation
 ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
 ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
 
@@ -106,6 +107,6 @@ Windows 8.1 이하의 경우 스토어에서, 홍보용 레이아웃에 414 x 18
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

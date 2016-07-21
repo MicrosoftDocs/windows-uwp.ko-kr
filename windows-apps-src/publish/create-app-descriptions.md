@@ -3,8 +3,9 @@ author: jnHs
 Description: "앱 제출 프로세스의 설명 섹션에서는 앱 스토어 목록에서 고객에게 표시되는 텍스트 및 이미지를 제공합니다."
 title: "앱 설명 작성"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
-ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bd10b94cdb3e16e8a6165610fb77adcdaca5b0a4
 
 ---
 
@@ -117,10 +118,10 @@ ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
 
 앱에 대한 기본 개인 정보 취급 방침이 있으면 여기에 해당 URL을 입력합니다. 앱이 개인 정보 관련 법률 및 규정을 준수하는지 확인하고 필요할 경우 개인 정보 취급 방침을 제공하는 것은 개발자의 책임입니다.
 
-**중요** Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 앱에 개인 정보 취급 방침이 필요한지를 확인하려면 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)과 [Windows 스토어 정책](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1)을 검토하세요.
+**중요** Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 앱에 개인 정보 취급 방침이 필요한지를 확인하려면 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)과 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1)을 검토하세요.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

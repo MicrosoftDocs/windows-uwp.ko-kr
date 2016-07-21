@@ -3,6 +3,7 @@ author: mcleanbyron
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
 description: "앱과 IAP(앱에서 바로 구매 제품) 카탈로그가 있는 경우 Windows 스토어 컬렉션 API 및 Windows 스토어 구매 API를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다."
 title: "서비스에서 제품 보기 및 권한 부여"
+translationtype: Human Translation
 ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
 ms.openlocfilehash: 1e17703442ce539de941890a0616fc5e08391d70
 

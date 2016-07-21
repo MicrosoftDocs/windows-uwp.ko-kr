@@ -4,8 +4,8 @@ Description: "패키지 페이지에서는 제출 중인 앱의 모든 패키지
 title: "앱 패키지 업로드"
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+ms.sourcegitcommit: 7f1a40f33a3137e4e0ded674b5bfdf35f11135dc
+ms.openlocfilehash: f628820747f51f7200e2748c2c3f41b58455b2fa
 
 ---
 
@@ -45,12 +45,6 @@ ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
 
 중복 패키지가 감지되면 모든 중복 패키지를 이 제출에서 자동으로 제거하도록 설정할 수 있습니다. 필요하면 패키지를 개별적으로 제출에서 제거할 수도 있습니다.
 
-## Visual Studio Application Insights가 포함된 패키지
-
-
-[앱 사용 원격 분석 세부 정보](usage-report.md)를 제공할 수 있도록 패키지의 [Visual Studio Application Insights](http://go.microsoft.com/fwlink/?LinkId=615086)를 사용(또는 패키지를 빌드할 때 “Windows 개발자 센터에 원격 분석 표시” 확인란을 선택하여 설정)하는 것이 좋습니다. Microsoft Visual Studio에서 Application Insights를 구성하지 않은 경우, 패키지에 Application Insights가 포함된 것으로 감지되면 패키지를 제출함으로써 개발자 계정에 대한 앱 사용 원격 분석을 사용하는 데 동의한다는 것을 확인하는 메시지가 표시됩니다. 언제든지 **계정 설정**에서 앱 사용 원격 분석을 사용하지 않도록 설정할 수 있습니다.
-
- 
 
  
 
@@ -60,6 +54,6 @@ ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

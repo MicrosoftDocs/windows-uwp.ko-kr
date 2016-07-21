@@ -4,8 +4,8 @@ title: "키 프레임 애니메이션 및 감속/가속 함수 애니메이션"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9c010e0abca4dd095b32b42b3a8606f8faf3fcaa
 
 ---
 # 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
@@ -34,7 +34,7 @@ ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
 -   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): 마지막 키 프레임에 도달하면 프레임이 끝에서부터 반대로 반복됩니다. 그러면 애니메이션 기간이 명확히 두 배가 됩니다.
 -   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): 애니메이션 시작을 지연합니다. 프레임의 **KeyTime** 값에 대한 타임라인이 **BeginTime**에 도달한 다음에야 카운팅을 시작하므로 프레임이 잘릴 위험이 없습니다.
 -   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): 마지막 키 프레임에 도달할 때 발생하는 상황을 제어합니다. **FillBehavior**는 중간 키 프레임에 영향을 주지 않습니다.
--   [ **RepeatBehavior** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
+-   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   **Forever**로 설정하면 키 프레임과 타임라인이 무한 반복됩니다.
     -   반복 횟수로 설정하면 타임라인이 해당 횟수만큼 반복됩니다.
     -   [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)으로 설정하면 해당 시간에 도달할 때까지 타임라인이 반복됩니다. 따라서 타임라인의 암시적 기간 중 정수 요소가 아니면 키 프레임 시퀀스 중간에 애니메이션이 잘릴 수 있습니다.
@@ -148,8 +148,8 @@ This example applies a [**CubicEase**](https://msdn.microsoft.com/library/window
 
 다음과 같은 세 가지 방식으로 애니메이션에 감속/가속 함수를 적용할 수 있습니다.
 
--   이전 섹션에서 설명한 대로 키 프레임 애니메이션에서 감속/가속 키 프레임을 사용합니다. [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) 또는 [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279)을 사용합니다.
--   **From**/**To**/**By** 애니메이션 형식 중 하나에서 **EasingFunction** 속성을 설정합니다. [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 또는 [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354)을 사용합니다.
+-   이전 섹션에서 설명한 대로 키 프레임 애니메이션에서 감속/가속 키 프레임을 사용합니다. [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) 또는 [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279)을 사용합니다.
+-   **From**/**To**/**By** 애니메이션 형식 중 하나에서 **EasingFunction** 속성을 설정합니다. [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 또는 [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354)을 사용합니다.
 -   [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034)의 일부로 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037)을 설정합니다. 이 방법은 컨트롤에 대한 시각적 상태 정의와 관련이 있습니다. 자세한 내용은 [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) 또는 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요.
 
 다음은 감속/가속 함수의 목록입니다.
@@ -166,7 +166,7 @@ This example applies a [**CubicEase**](https://msdn.microsoft.com/library/window
 -   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): 공식 f(t) = t5를 사용하여 가속하거나 감속하는 애니메이션을 만듭니다.
 -   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): 사인 공식을 사용하여 가속하거나 감속하는 애니메이션을 만듭니다.
 
-일부 감속/가속 함수에는 고유한 속성이 있습니다. 예를 들어 [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057)에는 특정 **BounceEase**의 시간에 따른 함수 동작을 수정하는 두 가지 [**Bounces**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) 및 [**Bounciness**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) 속성이 있습니다. [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126)와 같은 다른 감속/가속 함수에는 모든 감속/가속 함수가 공유하는 [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) 속성 외에 다른 속성이 없으며 항상 동일한 시간에 따른 함수 동작을 생성합니다.
+일부 감속/가속 함수에는 고유한 속성이 있습니다. 예를 들어 [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057)에는 특정 **BounceEase**의 시간에 따른 함수 동작을 수정하는 두 가지 [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) 및 [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) 속성이 있습니다. [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126)와 같은 다른 감속/가속 함수에는 모든 감속/가속 함수가 공유하는 [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) 속성 외에 다른 속성이 없으며 항상 동일한 시간에 따른 함수 동작을 생성합니다.
 
 이러한 감속/가속 함수 일부는 속성이 있는 감속/가속 함수에서 속성을 설정하는 방법에 따라 약간 겹칩니다. 예를 들어 [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403)는 [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power)가 2인 [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399)와 정확하게 동일합니다. 또한 [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063)는 기본적으로 기본값 [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294)입니다.
 
@@ -283,6 +283,6 @@ You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.co
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

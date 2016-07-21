@@ -4,8 +4,8 @@ ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: "센서"
 description: "센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 디바이스의 방향과 움직임을 앱에 알려줄 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
-ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
 
 ---
 # 센서
@@ -42,7 +42,7 @@ ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
 
 대기 시간을 조정하여 센서가 일괄 처리를 보내는 빈도에 영향을 줄 수 있습니다. 예를 들어 [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687) 센서에는 [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency) 속성이 있습니다. 응용 프로그램에 대해 이 속성을 설정하면 센서가 지정된 시간 후에 데이터를 보냅니다. [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval) 속성을 설정하여 지정된 대기 시간 동안 누적되는 데이터의 양을 제어할 수 있습니다.
 
-대기 시간 설정과 관련하여 염두에 둬야 할 몇 가지 주의 사항이 있습니다. 첫 번째 주의 사항은 각 센서에 센서 자체를 기반으로 지원할 수 있는 [**MaxBatchSize**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx)이(가) 있다는 점입니다. 이는 센서가 강제로 이벤트를 보내기 전에 캐시할 수 있는 이벤트 수입니다. **MaxBatchSize**에 [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval)을 곱하면 최대 [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency) 값이 결정됩니다. 이 값보다 높은 값을 지정하는 경우 데이터가 손실되지 않도록 최대 대기 시간이 사용됩니다. 또한 여러 응용 프로그램에서 각각 원하는 대기 시간을 설정할 수 있습니다. 모든 응용 프로그램의 요구 사항을 충족하기 위해 최단 대기 시간이 사용됩니다. 이러한 사실 때문에 응용 프로그램에 설정한 대기 시간이 관찰된 대기 시간과 일치하지 않을 수 있습니다.
+대기 시간 설정과 관련하여 염두에 둬야 할 몇 가지 주의 사항이 있습니다. 첫 번째 주의 사항은 각 센서에 센서 자체를 기반으로 지원할 수 있는 [**MaxBatchSize**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx)이(가) 있다는 점입니다. 이는 센서가 강제로 이벤트를 보내기 전에 캐시할 수 있는 이벤트 수입니다. **MaxBatchSize**에 [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval)을 곱하면 최대 [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency) 값이 결정됩니다. 이 값보다 높은 값을 지정하는 경우 데이터가 손실되지 않도록 최대 대기 시간이 사용됩니다. 또한 여러 응용 프로그램에서 각각 원하는 대기 시간을 설정할 수 있습니다. 모든 응용 프로그램의 요구 사항을 충족하기 위해 최단 대기 시간이 사용됩니다. 이러한 사실 때문에 응용 프로그램에 설정한 대기 시간이 관찰된 대기 시간과 일치하지 않을 수 있습니다.
 
 센서에서 일괄 처리 보고를 사용하는 경우 [**GetCurrentReading**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.getcurrentreading)을(를) 호출하면 데이터의 현재 일괄 처리가 지워지고 새 대기 시간이 시작됩니다.
 
@@ -74,7 +74,7 @@ ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
 
 ## 나침반
 
-[**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) 센서는 지구의 수평면을 기준으로 자북과 관련된 2D 침로를 반환합니다. 특정 디바이스 방향을 확인하거나 3D 공간의 항목을 나타내는 데 나침반 센서를 사용하면 안 됩니다. 지리적 특성으로 인해 침로에 자연 편차가 발생할 수 있으므로 일부 시스템은 [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) 및 [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx)를 둘 다 지원합니다. 앱에 적합한 값을 고려하지만, 모든 시스템에서 실제 북쪽 값을 보고하는 것은 아닙니다. 회전계 및 자력계(자기 강도 세기를 측정하는 장치) 센서는 해당 데이터를 결합하여 나침반 침로를 생성하므로 데이터 안정화 효과가 있습니다(자기장 세기는 전기 시스템 구성 요소로 인해 불안정함).
+[**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705) 센서는 지구의 수평면을 기준으로 자북과 관련된 2D 침로를 반환합니다. 특정 디바이스 방향을 확인하거나 3D 공간의 항목을 나타내는 데 나침반 센서를 사용하면 안 됩니다. 지리적 특성으로 인해 침로에 자연 편차가 발생할 수 있으므로 일부 시스템은 [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) 및 [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx)를 둘 다 지원합니다. 앱에 적합한 값을 고려하지만, 모든 시스템에서 실제 북쪽 값을 보고하는 것은 아닙니다. 회전계 및 자력계(자기 강도 세기를 측정하는 장치) 센서는 해당 데이터를 결합하여 나침반 침로를 생성하므로 데이터 안정화 효과가 있습니다(자기장 세기는 전기 시스템 구성 요소로 인해 불안정함).
 
 ![자북극과 관련된 나침반 값](images/compass.png)
 
@@ -118,7 +118,7 @@ ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
 
 ## 단순 방향
 
-[**SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx)는 지정된 디바이스의 현재 사분면 방향이나 앞면 위로 또는 앞면 아래로 상태인지 감지합니다. 6개의 가능한 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) 상태(**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**)가 있습니다.
+[**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx)는 지정된 디바이스의 현재 사분면 방향이나 앞면 위로 또는 앞면 아래로 상태인지 감지합니다. 6개의 가능한 [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) 상태(**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**)가 있습니다.
 
 지면에 수평 또는 수직으로 디바이스를 잡고 있는지에 따라 표시를 변경하는 뷰어 앱은 SimpleOrientationSensor의 값을 사용하여 디바이스를 잡고 있는 방식을 확인합니다.
 
@@ -129,6 +129,6 @@ ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,6 +3,7 @@ author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: "개발자 계정 열기"
 description: "Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다."
+translationtype: Human Translation
 ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
 ms.openlocfilehash: 979df6390fef01a32fb1728956622fbfe38bafa9
 

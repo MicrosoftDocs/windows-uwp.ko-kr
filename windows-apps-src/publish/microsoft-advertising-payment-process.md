@@ -3,8 +3,8 @@ author: jnHs
 title: "Microsoft Advertising 지급 프로세스"
 description: "Microsoft Advertising 수익의 지급 프로세스, 임계값 및 통화에 대한 정보를 확인합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 87b34cd37c7594bb76dbf0f1cd388dbba73ea456
-ms.openlocfilehash: b265fb5c6d01f083fac16c36f4d1c12e023a62b6
+ms.sourcegitcommit: b54ea21d12f68830295f59af219c7fe811edd832
+ms.openlocfilehash: 5805f316ed7bc08268fd6c201d740f3a3222629e
 
 ---
 
@@ -17,7 +17,6 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 임계값에 도달하고 지급이 [지급 요약](payout-summary.md)의 **예정된 지급** 섹션에 표시되면 Microsoft에서 15일 이내에 지급을 실행합니다. 수익 잔액이 임계값 아래인 경우 임계값에 도달할 때까지 수익이 계속 누적됩니다.
 
 아래 표에서 별표 표시가 있는 국가/지역을 제외하고 지급은 현지 통화로 처리됩니다. 이러한 시장의 지급은 미국 달러(USD)로 처리됩니다. USD에서 현지 통화로 환전하기 위해 해당 은행이나 PayPal에서 수수료를 적용할 수도 있습니다. 해당 은행이나 PayPal에 문의하여 잠재적인 수수료의 영향이나 지급을 받기 위한 기타 요구 사항을 확인하는 것이 좋습니다.
-
 
 
 |  국가/지역 | 임계값 통화 | 임계값 금액 | 
@@ -51,7 +50,7 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 |  차드 | XAF  | 30,000 XAF | 
 |  칠레* | USD  | 25,000 CLP | 
 |  중국 | USD  | 50 USD | 
-|  콜롬비아* | USD  | 100,000 COP| 
+|  콜롬비아* | COP  | 100,000 COP| 
 |  코모로 | USD  | 50 USD | 
 |  콩고 | XAF  | 30,000 XAF| 
 |  콩고(DRC) | USD  | 50 USD | 
@@ -60,7 +59,7 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 |  크로아티아 | HRK  | 350 HRK | 
 |  키프로스 | EUR  | 50 EUR | 
 |  체코| CZK  | 1000 CZK | 
-|  덴마크 | DKK  | 250 DDK| 
+|  덴마크 | DDK  | 250 DDK| 
 |  도미니카 | XCD  | 135 XCD | 
 |  도미니카 공화국 | DOP  | 2000 DOP | 
 |  에콰도르 | USD  | 50 USD | 
@@ -83,20 +82,21 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 |  홍콩 특별 행정구 | HKD  | 500 HKD | 
 |  헝가리 | HUF  | 10,000 HUF | 
 |  아이슬란드 | USD  | 50 USD | 
-|  인도 | INR  | 아니요 | 
-|  인도네시아 | IDR  | 2500 INR | 
+|  인도 | INR  | 2500 INR | 
+|  인도네시아 | IDR  | 660,000 IDR | 
 |  이라크 | USD  | 50 USD | 
 |  아일랜드 | EUR  | 50 EUR | 
-|  이스라엘 | ILS  | 200 IL | 
+|  이스라엘 | ILS  | 200 ILS | 
 |  이탈리아 | EUR  | 50 EUR | 
 |  자메이카 | JMD  | 5700 JMD | 
 |  일본 | JPY  | 5000 JPY | 
 |  요르단 | JOD  | 35 JOD | 
 |  카자흐스탄 | KZT  | 9200 KZT | 
 |  케냐 | KES  | 5000 KES | 
+|  한국* | WON | 50,000 WON |
 |  쿠웨이트 | KWD  | 15 KWD | 
 |  라오스 | USD  | 50 USD | 
-|  라트비아 | LVL | 30 LVL | 
+|  라트비아 | EUR | 50 EUR | 
 |  레바논 | LBP  | 75,000 LBP | 
 |  라이베리아 | USD  | 50 USD | 
 |  리히텐슈타인 | CHF  | 50 CHF | 
@@ -144,7 +144,6 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 |  슬로베니아 | EUR  | 50 EUR | 
 |  소말리아 | USD  | 50 USD | 
 |  남아프리카 공화국 | ZAR  | 500 ZAR | 
-|  대한민국* | WON | 50,000 WON |
 |  스페인 | EUR  | 50 EUR | 
 |  스리랑카 | LKR  | 6600 LKR | 
 |  스웨덴 | SEK  | 350 SEK | 
@@ -161,7 +160,7 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 |  터키 | TRY  | 130 TRY | 
 |  투르크메니스탄 | USD  | 50 USD | 
 |  우간다 | UGX  | 152,000 UGX | 
-|  우크라이나 | USD  | | 
+|  우크라이나 | USD  | 50 USD | 
 |  아랍에미리트 | EUR  | 50 EUR | 
 |  영국 | GBP  | 35 GBP | 
 |  미국 | USD  | 50 USD | 
@@ -176,13 +175,12 @@ Microsoft Advertising 수익의 지급 정보는 [지급 요약](payout-summary.
 ## 관련 항목
 
 * [지급 계좌 및 세금 양식 설정](setting-up-your-payout-account-and-tax-forms.md)
-* [지급 받기](getting-paid-apps.md)
 * [지급 요약](payout-summary.md)
 * [광고를 통한 수익 창출](monetize-with-ads.md)
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

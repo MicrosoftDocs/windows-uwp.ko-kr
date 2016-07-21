@@ -5,6 +5,7 @@ title: "음성 인식 시간 제한 설정"
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 99ead02e8886ae79b8e8423ac0f78609b4fa1f6f
 

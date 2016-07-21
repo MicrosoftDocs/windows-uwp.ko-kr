@@ -4,8 +4,8 @@ description: "백그라운드 전송 API를 사용하여 네트워크를 통해 
 title: "백그라운드 전송"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+ms.sourcegitcommit: b15d01ec4fd41a8f03345a4416b4795455928533
+ms.openlocfilehash: cbb8308a3390634f0068f72041803989201e2345
 
 ---
 
@@ -74,7 +74,7 @@ ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
 
 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 만들기를 시작하려면 먼저 업로드할 위치의 URI 및 업로드할 파일을 식별해야 합니다. 다음 예에서는 UI 입력의 문자열을 사용하여 *uriString* 값을 채우고 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) 작업에서 반환한 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 *file* 값을 채웁니다.
 
-[!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "파일 및 업로드 대상 식별")]
+[!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "파일 및 업로드 대상 식별")]
 
 **업로드 작업 만들기 및 초기화**
 
@@ -84,7 +84,7 @@ ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
 
 마지막으로 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)에서 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)(*upload*)을 만듭니다.
 
-[!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "업로드 작업 만들기 및 초기화")]
+[!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "업로드 작업 만들기 및 초기화")]
 
 JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유의하세요. 마지막 예제에서 다음 줄을 봅니다.
 
@@ -92,13 +92,13 @@ JavaScript Promise를 사용하여 정의된 비동기 메서드 호출에 유�
 promise = upload.startAsync().then(complete, error, progress);
 ```
 
-    The async method call is followed by a then statement which indicates methods, defined by the app, that are called when a result from the async method call is returned. For more information on this programming pattern, see [Asynchronous programming in JavaScript using promises](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx).
+비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
 
 ### 여러 파일 업로드
 
 **파일 및 업로드 대상 식별**
 
-    In a scenario involving multiple files transferred with a single [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224), the process begins as it usually does by first providing the required destination URI and local file information. Similar to the example in the previous section, the URI is provided as a string by the end-user and [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) can be used to provide the ability to indicate files through the user interface as well. However, in this scenario the app should instead call the [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) method to enable the selection of multiple files through the UI.
+단일 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)으로 여러 파일을 전송하는 시나리오에서, 프로세스는 주로 요청된 대상 URI 및 로컬 파일 정보를 처음 제공하여 수행할 때 시작됩니다. 이전 섹션의 예제에서처럼, URI는 최종 사용자에 의해 문자열로 제공되며 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)는 사용자 인터페이스를 통해 파일을 지정하는 기능을 제공하는 데도 사용할 수 있습니다. 그러나 대신 이 시나리오에서는 UI를 통해 여러 파일을 선택할 수 있도록 앱이 [**PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) 메서드를 호출해야 합니다.
 
 ```javascript
 function uploadFiles() {
@@ -123,12 +123,12 @@ function uploadFiles() {
 
 **제공된 매개 변수에 대한 개체 만들기**
 
-    The next two examples use code contained in a single example method, **startMultipart**, which was called at the end of the last step. For the purpose of instruction the code in the method that creates an array of [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects has been split from the code that creates the resultant [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224).
+다음 두 예제에서는 마지막 단계의 끝에 호출된 단일 예제 메서드 **startMultipart**에 포함된 코드를 사용합니다. 이해를 돕기 위해 [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) 개체의 배열을 만드는 메서드의 코드는 결과 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)을 만드는 코드에서 분리되었습니다.
 
-    First, the URI string provided by the user is initialized as a [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998). Next, the array of [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) objects (**files**) passed to this method is iterated through, each object is used to create a new [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) object which is then placed in the **contentParts** array.
+먼저, 사용자가 제공한 URI가 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)로 초기화됩니다. 다음으로, 이 메서드에 전달된 [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) 개체의 배열(**files**)에서 반복 작업이 수행되며, 각 개체는 **contentParts** 배열에 포함될 새 [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) 개체를 만드는 데 사용됩니다.
 
 ```javascript
-upload.startMultipart = function (uriString, files) {
+    upload.startMultipart = function (uriString, files) {
         try {
             var uri = new Windows.Foundation.Uri(uriString);
             var uploader = new Windows.Networking.BackgroundTransfer.BackgroundUploader();
@@ -143,7 +143,7 @@ upload.startMultipart = function (uriString, files) {
 
 **다중 파트 업로드 작업 만들기 및 초기화**
 
-    With our contentParts array populated with all of the [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) objects representing each [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102) for upload, we are ready to call [**CreateUploadAsync**](https://msdn.microsoft.com/library/windows/apps/hh923973) using the [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) to indicate where the request will be sent.
+업로드할 각 [**IStorageFile**](https://msdn.microsoft.com/library/windows/apps/br227102)을 나타내는 모든 [**BackgroundTransferContentPart**](https://msdn.microsoft.com/library/windows/apps/hh923029) 개체로 채워진 contentParts 배열이 만들어지면 요청이 보내질 위치를 나타내는 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)를 사용하여 [**CreateUploadAsync**](https://msdn.microsoft.com/library/windows/apps/hh923973)를 호출할 준비가 된 것입니다.
 
 ```javascript
         // Create a new upload operation.
@@ -166,11 +166,11 @@ upload.startMultipart = function (uriString, files) {
 
 1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 개체를 포함할 배열을 만들어야 합니다.
 
-[!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "중단된 업로드 작업 다시 시작")]
+    [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "중단된 업로드 작업 다시 시작")]
 
-2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)에 콜백을 다시 할당하기 위해 호출된 **load** 메서드는 앱이 종료될 때까지 지속되는 경우 이 섹션의 뒷부분에서 정의하는 UploadOp 클래스에 있습니다.
+1.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)에 콜백을 다시 할당하기 위해 호출된 **load** 메서드는 앱이 종료될 때까지 지속되는 경우 이 섹션의 뒷부분에서 정의하는 UploadOp 클래스에 있습니다.
 
-[!code-js[uploadFile] (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "지속형 작업 열거")]
+    [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "지속형 작업 열거")]
 
 ## 파일 다운로드
 
@@ -206,13 +206,13 @@ promise = download.startAsync().then(complete, error, progress);
 
 1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 개체를 포함할 배열을 만들어야 합니다.
 
-[!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_D)]
+    [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_D)]
 
-2.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. 지속형 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 대한 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 이 섹션의 뒷 부분에서 정의하는 DownloadOp 예에 있습니다.
+1.  그런 다음 지속형 작업을 열거하고 배열에 저장하는 함수를 정의합니다. 지속형 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 대한 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 이 섹션의 뒷 부분에서 정의하는 DownloadOp 예에 있습니다.
 
-[!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_E)]
+    [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_E)]
 
-3.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
+1.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
 
 ## 사후 처리
 
@@ -317,6 +317,6 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

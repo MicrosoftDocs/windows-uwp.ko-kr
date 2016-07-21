@@ -5,6 +5,7 @@ ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: "접근성 있는 텍스트 요구 사항"
 label: Accessible text requirements
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
 

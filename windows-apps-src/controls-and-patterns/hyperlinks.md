@@ -5,6 +5,7 @@ title: "하이퍼링크"
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
@@ -53,7 +54,7 @@ ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
 ![텍스트 요소로 표시되는 하이퍼링크의 예](images/controls_hyperlink-element.png) 
 
-> **팁** &nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
+> **팁** &nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="default"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
 
 ## HyperlinkButton 만들기
 
@@ -154,6 +155,6 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

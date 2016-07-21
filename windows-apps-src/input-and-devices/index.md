@@ -1,10 +1,11 @@
 ---
-description: "특정 유형의 입력 및 디바이스에 대해 UWP 앱을 사용자 지정합니다."
-title: "입력 및 디바이스 디자인 - Windows 앱 개발"
+description: "특정 유형의 입력 및 디바이스에 대해 UWP 앱을 사용자 지정합니다. 터치 및 음성 명령을 활용합니다. Xbox, 전화 및 TV에서도 앱을 실행합니다."
+title: "UWP 앱 입력 및 디바이스 디자인 - Windows 앱 개발"
 author: mijacobs
+keywords: device primer, app inputs, customize UWP application
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: f2055318fe67a0af2bcc009c6f9782029f9032f1
+ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
+ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
 
 ---
 

@@ -3,6 +3,7 @@ author: jnHs
 Description: "선택한 가격의 세금 고려 사항, 지급 관련 정보 및 납세 책임을 이해하려면 아래 표에서 해당 배포 국가/지역을 참조하세요."
 title: "유료 앱의 세금 세부 정보"
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+translationtype: Human Translation
 ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
 ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 

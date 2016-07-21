@@ -3,6 +3,7 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "데스크톱용 Device Portal"
 description: "Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다."
+translationtype: Human Translation
 ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
 ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
 

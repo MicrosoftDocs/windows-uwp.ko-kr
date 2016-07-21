@@ -3,6 +3,7 @@ author: jnHs
 Description: "앱 제출 시 가격 책정 및 가용성 페이지의 조직 라이선스 섹션에서 비즈니스용 Windows 스토어를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다."
 title: "조직 라이선스 옵션"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+translationtype: Human Translation
 ms.sourcegitcommit: 13603b66bd6168073b855bbe37ea92763e14a5a0
 ms.openlocfilehash: e4adbc66b4b4a88ca3787737e9bbddf0d937b604
 

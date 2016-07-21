@@ -2,6 +2,7 @@
 title: "게임 개발용 CPUSets"
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에 새로 도입된 CPUSets API에 대해 개략적으로 설명하고 게임 및 응용 프로그램 개발과 관련된 핵심적인 정보를 다룹니다."
 author: hammondsp
+translationtype: Human Translation
 ms.sourcegitcommit: 3cefaf4e527d2a0da412dab474a348b55ad409c9
 ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
 

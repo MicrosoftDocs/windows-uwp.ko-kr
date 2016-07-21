@@ -4,8 +4,8 @@ ms.assetid: 23FE28F1-89C5-4A17-A732-A722648F9C5E
 title: "비동기 프로그래밍"
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍 및 C#, Microsoft Visual Basic .NET, Visual C\\+\\+ 구성 요소 확장(C\\+\\+/CX) 및 JavaScript에서의 표현에 대해 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d9a17beb9c637e0a780020ef1cbb7b0b0bddf38
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 36300453bbffd06c675ff63e6e9cb4cafe3a56f5
 
 ---
 # 비동기 프로그래밍
@@ -60,9 +60,9 @@ C# 또는 Visual Basic으로 작성된 일반적인 코드 세그먼트는 동�
 ## C++로 작성된 UWP의 비동기 패턴
 
 
-C++/CX에서 비동기 프로그래밍은 [**task class**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx) 및 해당 [**then method**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx)를 기반으로 합니다. 구문은 JavaScript promise의 구문과 유사합니다. **task class** 및 관련 유형 또한 스레드 컨텍스트에 대한 취소 및 관리 접근 권한 값을 제공합니다. 자세한 내용은 [C++의 비동기 프로그래밍](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
+C++/CX에서 비동기 프로그래밍은 [**task class**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx) 및 해당 [**then method**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx)를 기반으로 합니다. 구문은 JavaScript promise의 구문과 유사합니다. **task class** 및 관련 유형 또한 스레드 컨텍스트에 대한 취소 및 관리 접근 권한 값을 제공합니다. 자세한 내용은 [C++의 비동기 프로그래밍](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
-[**create\_async 함수**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750102.aspx)는 JavaScript 또는 UWP를 지원하는 다른 언어에서 사용할 수 있는 비동기 API 작성에 대한 지원을 제공합니다. 자세한 내용은 [C++로 비동기 작업 만들기](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx)룰 참조하세요.
+[**create\_async 함수**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx)는 JavaScript 또는 UWP를 지원하는 다른 언어에서 사용할 수 있는 비동기 API 작성에 대한 지원을 제공합니다. 자세한 내용은 [C++로 비동기 작업 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx)룰 참조하세요.
 
 ## JavaScript로 작성된 UWP의 비동기 패턴
 
@@ -76,11 +76,11 @@ Promise 개체는 차후에 수행될 값을 나타냅니다. UWP에서는 facto
 
 * [C# 또는 Visual Basic에서 비동기식 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)
 * [Async 및 Await를 사용한 비동기 프로그래밍(C# 및 Visual Basic)](http://msdn.microsoft.com/library/hh191443(vs.110).aspx)
-* [Reversi 샘플 기능 시나리오: 비동기 코드](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj712233.aspx#async)
+* [Reversi 샘플 기능 시나리오: 비동기 코드](https://msdn.microsoft.com/library/windows/apps/xaml/jj712233.aspx#async)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

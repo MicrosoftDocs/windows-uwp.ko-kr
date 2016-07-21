@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다."
 title: "오류 보고 데이터 가져오기"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
 
 ---
 
@@ -33,9 +34,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 메서드 | 요청 URI                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits``` |
 
- 
+<span/> 
 
 ### 요청 헤더
 
@@ -43,9 +44,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
- 
+<span/> 
 
-### 요청 본문
+### 요청 매개 변수
 
 <table>
 <colgroup>
@@ -154,10 +155,11 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
+<span/>
  
 ### 필드 필터링
 
-요청 본문의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 다음은 *filter* 매개 변수의 몇 가지 예입니다.
+요청의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 다음은 *filter* 매개 변수의 몇 가지 예입니다.
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne 'less than 13')*
@@ -241,7 +243,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### 요청 예제
 
@@ -266,7 +268,8 @@ Authorization: Bearer <your access token>
 | @nextLink  | 문자열  | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 오류의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | inumber | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                     |
 
- 
+<span/>
+
 ### 오류 값
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
@@ -288,7 +291,7 @@ Authorization: Bearer <your access token>
 | eventCount      | inumber | 지정된 집계 수준 중에 이 오류를 발생시킨 이벤트의 수입니다.                                                                                                                                            |
 | deviceCount     | inumber | 지정된 집계 수준 중에 이 오류에 해당하는 고유 디바이스의 수입니다.                                                                                                                                        |
 
- 
+<span/> 
 
 ### 응답 예제
 
@@ -330,6 +333,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

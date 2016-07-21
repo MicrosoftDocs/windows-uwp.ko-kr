@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "실행, 다시 시작 및 백그라운드 작업"
 description: "이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+translationtype: Human Translation
 ms.sourcegitcommit: a8e6145f7a5c75d3b37277b80b07b0b3ad739d5c
 ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
 
@@ -101,6 +102,6 @@ ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -2,10 +2,10 @@
 Description: "다음은 휴대폰, 태블릿, PC 등 Windows 10 기반 디바이스에서만 실행할 수 있는 유니버설 Windows 앱을 만드는 데 필요한 정보입니다."
 title: "Windows 10 앱 사용 방법 가이드 - Windows 앱 개발"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
-redirect_url: https://developer.microsoft.com/en-us/windows/develop
+redirect_url: https://developer.microsoft.com/windows/develop
 translationtype: Human Translation
-ms.sourcegitcommit: 9be74892a98765a8a45482ce3f5cc5151ab772b1
-ms.openlocfilehash: 5d0cca643c26458165c388215d34eec76dfe8cf6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 654eac5df1bd3309714348dcfc511850234bb0ae
 
 ---
 
@@ -33,7 +33,7 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 | [디바이스, 센서 및 전원](devices-sensors\index.md) | 프린터, 카메라 및 센서와 같은 다양한 디바이스를 유니버설 Windows 앱에 통합하여 사용자에게 강력하고 유연한 연결된 디바이스 환경을 제공합니다. | 
 | [엔터프라이즈](enterprise/index.md) | Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 대한 주요 엔터프라이즈 기능을 알아봅니다. |
 | [파일, 폴더 및 라이브러리](files/index.md) | 텍스트 및 다른 데이터 형식을 읽고 파일에 쓰며, 파일 및 폴더를 관리하는 방법을 알아봅니다. 또한 앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 "샌드박스"가 적용된 위치에 대해서도 알아봅니다. |
-| [게임 및 DirectX](https://msdn.microsoft.com/en-us/library/windows/apps/mt228375.aspx) | 새 UWP(유니버설 Windows 플랫폼)에서 게임 만들기의 기본 사항을 알아봅니다. |
+| [게임 및 DirectX](https://msdn.microsoft.com/library/windows/apps/mt228375.aspx) | 새 UWP(유니버설 Windows 플랫폼)에서 게임 만들기의 기본 사항을 알아봅니다. |
 | [그래픽 및 애니메이션](graphics/index.md) | 사용자가 사용자 환경에 시각적으로 참여하고 관심을 가지도록 UI 그래픽 및 애니메이션으로 유니버설 Windows 앱을 개선합니다. |
 | [실행, 다시 시작 및 백그라운드 작업](launch-resume/index.md) | 백그라운드 작업을 만들고 시스템 생성 이벤트에 등록하여 유니버설 Windows 앱이 일시 중단되거나 실행되지 않는 경우에도 기능을 제공합니다. |
 | [지도 및 위치](maps-and-location/index.md) | 유니버설 Windows 앱이 Bing 지도 서비스에 연결하여 3D 위성 이미지 및 거리 뷰가 포함된 정확한 지도 시각적 개체를 생성하는 방법을 알아봅니다. |
@@ -48,6 +48,6 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -2,8 +2,9 @@
 author: payzer
 title: "디바이스 포털 Xbox 개발자 설정 API 참조"
 description: "Xbox 개발자 설정에 액세스하는 방법을 알아봅니다."
-ms.sourcegitcommit: c392e6a2356d4180943c17d37512ef8ea35f5719
-ms.openlocfilehash: 52fb6e76bd7ad35127eeebeced8f6f8cc076fb7f
+translationtype: Human Translation
+ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
+ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
 
 ---
 
@@ -46,7 +47,7 @@ RequiresReboot - ("Yes" | "No") 이 필드는 설정을 적용하기 위해 다�
 
 HTTP 상태 코드      | 설명
 :------     | :-----
-200 | 파일 공유의 자격 증명에 대한 액세스 요청이 허가되었습니다.
+200 | 요청에 성공했습니다.
 4XX | 오류 코드
 5XX | 오류 코드
 
@@ -87,7 +88,7 @@ RequiresReboot - ("Yes" | "No") 이 필드는 설정을 적용하기 위해 다�
 
 HTTP 상태 코드      | 설명
 :------     | :-----
-200 | 파일 공유의 자격 증명에 대한 액세스 요청이 허가되었습니다.
+200 | 요청에 성공했습니다.
 4XX | 오류 코드
 5XX | 오류 코드
 
@@ -124,7 +125,7 @@ PUT | /ext/settings/<setting name>
 
 HTTP 상태 코드      | 설명
 :------     | :-----
-200 | 파일 공유의 자격 증명에 대한 액세스 요청이 허가되었습니다.
+200 | 요청에 성공했습니다.
 4XX | 오류 코드
 5XX | 오류 코드
 
@@ -136,6 +137,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

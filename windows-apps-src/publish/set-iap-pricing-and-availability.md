@@ -3,6 +3,7 @@ author: jnHs
 Description: "IAP를 제출할 때 가격 책정 및 가용성 페이지의 옵션을 사용하여 IAP에 대해 청구할 금액 및 고객에게 제공할 방법을 결정합니다."
 title: "IAP 가격 책정 및 가용성 설정"
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
+translationtype: Human Translation
 ms.sourcegitcommit: 52816584a9afbd6c8e213a182bae18732f082aef
 ms.openlocfilehash: 0e6c58f2d892f213d2de53c3cb9b97b1e8152137
 

@@ -5,6 +5,7 @@ title: "터치 조작"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
 

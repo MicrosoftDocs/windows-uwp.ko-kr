@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "결과에 대한 앱 실행"
 description: "다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 결과에 의한 앱 시작이라고 합니다."
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
+translationtype: Human Translation
 ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
 ms.openlocfilehash: 5826b370df3dccd1590e3f67c15126b4e78c2c32
 

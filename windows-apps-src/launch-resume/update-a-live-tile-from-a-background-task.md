@@ -4,6 +4,7 @@ title: "백그라운드 작업에서 라이브 타일 업데이트"
 description: "백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다."
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: 5b11c3d4757d7da0c4c99d8f74a8988babfc26fd
 

@@ -4,8 +4,8 @@ ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "설정 방법"
 description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8c5dfb692d647a25eea13036cd320366f3c5a09c
+ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
+ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
 
 ---
 # 설정 방법
@@ -30,7 +30,11 @@ Visual Studio 2015가 없는 경우 다음 링크를 클릭하여 Microsoft Visu
 
 -   [Windows 10 개발자 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
-## 3. 장치를 개발에 사용하도록 설정
+Visual Studio를 설치하는 경우 사용자 지정 옵션을 사용하고 다음과 같이 모든 유니버설 Windows 앱 개발 도구 옵션을 선택했는지 확인해야 합니다.
+
+![UWP용 Visual Studio 도구](images/vs-2015-community-setup.png)
+
+## 3. 디바이스를 개발에 사용하도록 설정
 
 실제 PC 및 휴대폰에서 UWP 앱을 테스트하는 것이 중요합니다. 앱을 PC 또는 Windows Phone에 배포하려면 먼저 개발용으로 사용할 수 있도록 설정해야 합니다.
 
@@ -56,6 +60,6 @@ Visual Studio 2015가 없는 경우 다음 링크를 클릭하여 Microsoft Visu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

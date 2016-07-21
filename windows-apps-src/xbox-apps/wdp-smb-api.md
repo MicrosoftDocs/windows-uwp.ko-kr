@@ -2,6 +2,7 @@
 author: payzer
 title: "디바이스 포털 SMB API 참조"
 description: "프로그래밍 방식으로 SMB API에 액세스하는 방법을 알아봅니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 3d76bf181baa9dfd973467d43241230fddf2daf7
 ms.openlocfilehash: 5efe2af3524d97e6014c4d6be2a8f1aef22f2e66
 
@@ -54,6 +55,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

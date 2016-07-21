@@ -4,13 +4,13 @@ ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: "계정 설정 및 프로필 정보 관리"
 description: "통합된 Windows 개발자 센터 대시보드의 계정 설정 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3d82caac353eb7cb63692469c5951be1f392ff52
+ms.sourcegitcommit: a9aae8fdc3cb4eaf151934a773a7cc3e6ced177f
+ms.openlocfilehash: 20a995f1a67bfdf0d52340c0964eb05c10935af1
 
 ---
 # 계정 설정 및 프로필 정보 관리
 
-[통합된 Windows 개발자 센터 대시보드](https://msdn.microsoft.com/library/windows/apps/Mt169843)의 **계정 설정** 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다.
+[Windows 개발자 센터 대시보드](https://msdn.microsoft.com/library/windows/apps/Mt169843)의 **계정 설정** 섹션에서 개발자 계정 설정 및 프로필 정보를 보고 업데이트할 수 있습니다.
 
 ## 계정 설정
 
@@ -32,11 +32,11 @@ ms.openlocfilehash: 3d82caac353eb7cb63692469c5951be1f392ff52
 
 또한 이 섹션에는 [지급 계좌 및 세금 양식을 설정](https://msdn.microsoft.com/library/windows/apps/Bg124529)하기 위한 링크도 포함되어 있습니다. 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 금액을 청구하려면 먼저 이 작업을 수행해야 합니다.
 
-일부 프로그램에서는 계정의 기능을 확장할 수 있게 하는 코드를 제공할 수 있습니다. 이러한 코드는 **계정 설정**에 입력할 수 있습니다. 또한 이 페이지에서 [테스트를 위해 잠금을 해제한 Windows Phone 8 또는 Windows Phone 8.1 디바이스](http://go.microsoft.com/fwlink/p/?LinkId=533897)에 대한 세부 정보를 보고, Visual Studio Application Insights에서 사용할 앱 사용 원격 분석의 사용 여부를 설정할 수 있습니다.
+일부 프로그램에서는 계정의 기능을 확장할 수 있게 하는 코드를 제공할 수 있습니다. 이러한 코드는 **계정 설정**에 입력할 수 있습니다. 또한 이 페이지에서 [테스트를 위해 잠금을 해제한 Windows Phone 8 또는 Windows Phone 8.1 디바이스](http://go.microsoft.com/fwlink/p/?LinkId=533897)에 대한 세부 정보를 보고 [개발자 센터 참가자 프로그램](dev-center-insider-program.md)을 옵트인(opt in)하거나 옵트아웃(opt out)할 수 있습니다.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

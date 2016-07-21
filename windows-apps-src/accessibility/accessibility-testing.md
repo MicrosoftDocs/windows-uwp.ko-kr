@@ -5,6 +5,7 @@ ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: "접근성 테스트"
 label: Accessibility testing
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: ec436f939c672d6e6d852d3dd6713fd6ca20a53b
 

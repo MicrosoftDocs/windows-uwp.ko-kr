@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: DE5B084C-DAC1-430B-A15B-5B3D5FB698F7
 title: "애니메이션, 미디어 및 이미지 최적화"
 description: "매끄러운 애니메이션, 높은 프레임 속도 및 고성능 미디어 캡처 및 재생을 지원하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: d3ddc07b214dcfe767d27bf24a36fe19d3534e6e
+translationtype: Human Translation
+ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
+ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
 
 ---
 # 애니메이션, 미디어 및 이미지 최적화
@@ -42,11 +43,13 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 -   종속 애니메이션에 효과적인 프레임당 업데이트를 만드는 경우. 이와 같은 예는 [**CompositonTarget.Rendering**](https://msdn.microsoft.com/library/windows/apps/BR228127) 이벤트 처리기의 변형에 적용됩니다.
 -   [**CacheMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.cachemode) 속성이 **BitmapCache**로 설정된 요소에서 독립적으로 간주된 애니메이션을 실행하는 경우. 각 프레임에 대한 캐시가 다시 변환되어야 하므로 이 애니메이션은 종속으로 간주됩니다.
 
-### WebView 또는 MediaElement에 애니메이션 효과를 주지 않음
+### WebView 또는 MediaPlayerElementWebView에 애니메이션 효과를 주지 않음
 
 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤 내의 웹 콘텐츠는 XAML 프레임워크에서 직접 렌더링되지 않으므로 나머지 장면을 구성하기 위한 추가 작업이 필요합니다. 이 추가 작업은, 화면 주위에서 컨트롤을 애니메이션으로 만들 때 추가되며 잠재적으로 동기화 문제를 발생시킬 수 있습니다(예: HTML 콘텐츠가 페이지의 나머지 XAML 콘텐츠와 동기화하여 이동하지 않을 수 있음). **WebView** 컨트롤에 애니메이션 효과를 주어야 할 경우 애니메이션 중 컨트롤을 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webviewbrush.aspx)로 전환하세요.
 
-마찬가지로 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
+마찬가지로 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
+
+> **참고** **MediaPlayerElement**에 대한 이 문서의 권장 사항은 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)에도 적용됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
 
 ### 꼭 필요한 경우에만 무한 애니메이션 사용
 
@@ -77,11 +80,11 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 ### 가능한 경우 전체 화면 동영상 재생 표시
 
-UWP 앱에서는 항상 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)에서 [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.isfullwindow) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않도록 설정합니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
+UWP 앱에서는 항상 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)에서 [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.isfullwindow.aspx) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않습니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
 
-XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표시를 최적화하므로 전원이 덜 사용되고 프레임 속도가 높아진 환경이 이루어집니다. 가장 효율적인 미디어 재생의 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926) 크기를 화면 너비 및 높이로 설정하며 기타 XAML 요소를 표시하지 않습니다.
+XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표시를 최적화하므로 전원이 덜 사용되고 프레임 속도가 높아진 환경이 이루어집니다. 가장 효율적인 미디어 재생을 위해 **MediaPlayerElement** 크기를 화면 너비 및 높이로 설정하며 기타 XAML 요소를 표시하지 않습니다.
 
-선택 자막 또는 순간적인 전송 컨트롤과 같이 화면의 전체 너비 및 높이를 차지하는 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)에 XAML 요소를 오버레이하는 데는 정당한 이유가 있습니다. 요소가 필요하지 않을 경우 요소를 숨기고(Visibility=”Collapsed” 설정) 미디어 재생을 다시 가장 효율적인 상태로 복구합니다.
+선택 자막 또는 순간적인 전송 컨트롤과 같이 화면의 전체 너비 및 높이를 차지하는 **MediaPlayerElement**에 XAML 요소를 오버레이하는 데는 정당한 이유가 있습니다. 미디어 재생을 다시 가장 효율적인 상태로 설정하는 데 이러한 요소가 필요하지 않는 경우이러한 요소를 숨겨야 합니다(`Visibility="Collapsed"` 설정).
 
 ### 디스플레이 비활성화 및 전원 절약
 
@@ -97,29 +100,29 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 ### 기타 요소를 포함된 동영상에 넣기
 
-종종 앱은 페이지에서 동영상이 재생되는 포함된 보기를 제공합니다. 이제 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)가 페이지 크기가 아니고 다른 XAML 개체가 그려졌으므로 분명히 전체 화면 최적화 상태가 아닙니다. **MediaElement** 주위에 테두리를 그리면 실수로 이 모드로 전환되므로 유의하세요.
+종종 앱은 페이지에서 동영상이 재생되는 포함된 보기를 제공합니다. 이제 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)가 페이지 크기가 아니고 다른 XAML 개체가 그려졌으므로 분명히 전체 화면 최적화 상태가 아닙니다. **MediaPlayerElement** 주위에 테두리를 그리면 실수로 이 모드로 전환되므로 유의하세요.
 
 포함 모드인 경우 동영상의 맨 위에 XAML 요소를 그리지 마세요. 그릴 경우 프레임워크에서 장면을 구성하는 추가 작업을 수행해야 합니다. 동영상 맨 위가 아니라 포함된 미디어 요소 아래에 전송 컨트롤을 배치하는 것이 이 상황에 대한 좋은 최적화 예입니다. 이 이미지에서 빨간색 막대는 일련의 전송 컨트롤을 나타냅니다(재생, 일시 정지, 중지 등).
 
-![오버레이 요소가 있는 MediaElement](images/videowithoverlay.png) 이러한 컨트롤을 전체 화면이 아닌 미디어 맨 위에 배치하지 마세요. 대신에 전송 컨트롤을 미디어가 렌더링되는 영역의 외부에 배치합니다. 다음 이미지에서 컨트롤은 미디어 아래에 배치됩니다.
+![오버레이 요소가 있는 MediaPlayerElement](images/videowithoverlay.png) 이러한 컨트롤을 전체 화면이 아닌 미디어 맨 위에 배치하지 마세요. 대신에 전송 컨트롤을 미디어가 렌더링되는 영역의 외부에 배치합니다. 다음 이미지에서 컨트롤은 미디어 아래에 배치됩니다.
 
-![인접 요소가 있는 MediaElement](images/videowithneighbors.png)
+![인접 요소가 있는 MediaPlayerElement](images/videowithneighbors.png)
 
-### MediaElement에 대한 소스 설정 지연
+### MediaPlayerElement에 대한 소스 설정 지연
 
-미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**Source**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.source) 속성이나 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338) 메서드를 통해 소스가 설정된 후 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/BR242926)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
+미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**소스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
 
-### MediaElement.PosterSource 설정
+### MediaPlayerElement.PosterSource 설정
 
-[**MediaElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.postersource)를 설정하면 XAML이 다른 경우에는 사용되었을 수 있는 일부 GPU 리소스를 해제할 수 있습니다. 이 API를 사용하면 앱이 최대한 적은 메모리를 사용할 수 있습니다.
+[**MediaPlayerElement.PosterSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.postersource.aspx)를 설정하면 XAML이 다른 경우에는 사용되었을 수 있는 일부 GPU 리소스를 해제할 수 있습니다. 이 API를 사용하면 앱이 최대한 적은 메모리를 사용할 수 있습니다.
 
 ### 미디어 스크러빙 개선
 
 언제나 스크러빙은 미디어 플랫폼의 응답 성능을 실현하기 위한 힘든 작업입니다. 일반적으로 사람들은 슬라이더 값을 변경하여 이 목적을 달성합니다. 다음은 스크러빙을 가능한 효율적으로 만드는 방법에 대한 몇 가지 팁입니다.
 
--   [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) 값을 [**MediaElement.Position**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.position)에 바인딩하거나 타이머를 기준으로 업데이트합니다. 두 작업 모두 하지 마세요. 두 번째 작업을 선택할 경우 타이머에 대해 적절한 업데이트 빈도를 사용해야 합니다. XAML 프레임워크는 재생 중에 250밀리초마다 **MediaElement.Position**을 업데이트합니다.
+-   [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx)의 [**Position**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.position.aspx)을 쿼리하는 타이머에 따라 [**Slider**](https://msdn.microsoft.com/library/windows/apps/BR209614) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
 -   슬라이더에서 단계 빈도 크기는 동영상 길이를 통해 조정되어야 합니다.
--   슬라이더에서 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**MediaElement.PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.playbackrate) 속성을 0으로 설정합니다.
+-   슬라이더에서 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointermoved.aspx), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacksession.playbackrate.aspx) 속성을 0으로 설정합니다.
 -   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerreleased.aspx) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
 
 ### 동영상 해상도를 장치 해상도와 일치
@@ -134,9 +137,6 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 짧은 대기 시간의 짤막한 오디오 효과를 포함할 경우(예: 게임) 압축된 오디오 형식에서 흔히 나타나는 처리 오버헤드를 줄이기 위해 압축되지 않은 PCM 데이터의 WAV 파일을 사용합니다.
 
-### 하드웨어 오디오 오프로드
-
-하드웨어 오디오 오프로드를 자동으로 적용하려면 [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaelement.audiocategory)를 **ForegroundOnlyMedia** 또는 **BackgroundCapableMedia**로 설정해야 합니다. 하드웨어 오디오 오프로드는 기능 및 배터리 사용 시간을 향상시킬 수 있는 오디오 렌더링을 최적화합니다.
 
 ## 이미지 리소스 최적화
 
@@ -146,14 +146,14 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 금지 사항:
 
-```xml
+```xaml
 <Image Source="ms-appx:///Assets/highresCar.jpg" 
        Width="300" Height="200"/>    <!-- BAD CODE DO NOT USE.-->
 ```
 
 대신 수행할 작업:
 
-```xml
+```xaml
 <Image>
     <Image.Source>
     <BitmapImage UriSource="ms-appx:///Assets/highresCar.jpg" 
@@ -194,19 +194,19 @@ DecodePixelWidth/DecodePixelHeight가 이미지가 화면에 표시되는 것보
 
 예제 1(좋음) - 태그에 지정된 URI(Uniform Resource Identifier)
 
-```xml
+```xaml
 <Image x:Name="myImage" UriSource="Assets/cool-image.png"/>
 ```
 
 예제 2 태그 - 코드 숨김에 지정된 URI
 
-```xml
+```xaml
 <Image x:Name="myImage"/>
 ```
 
 예제 2 코드 숨김(좋음) - UriSource를 설정하기 전에 BitmapImage를 트리에 연결
 
-```vb
+```csharp
 var bitmapImage = new BitmapImage();
 myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
@@ -214,7 +214,7 @@ bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.Rela
 
 예제 2 코드 숨김(나쁨) - 트리에 연결하기 전에 BitmapImage의 UriSource 설정
 
-```vb
+```csharp
 var bitmapImage = new BitmapImage();
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 myImage.Source = bitmapImage;
@@ -303,6 +303,6 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

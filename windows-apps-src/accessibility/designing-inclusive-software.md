@@ -5,8 +5,9 @@ ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: "Windows 10에서 포괄 소프트웨어 디자인"
 label: Designing inclusive software
 template: detail.hbs
-ms.sourcegitcommit: ea4d413e0b2ade1429d255afbc6a1a73ea308051
-ms.openlocfilehash: 6f1c0663034f81bb0ddfe42c04fbe60562b45c1c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
 
 ---
 
@@ -20,7 +21,7 @@ Microsoft에서는 디자인 원칙과 사례를 개선하고 있습니다. 이�
 이 새로운 디자인 철학을 포괄 디자인이라고 합니다. 즉, 초기 단계부터 모든 사용자를 염두에 두고 소프트웨어를 디자인합니다. 이는 접근성을 일부 소규모 사용자 그룹을 충족하기 위해 개발 과정의 끝에 결합할 수 있는 기술로 이해하는 것과 대조됩니다.
 
 
-"장애를 개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치로 정의합니다. 누구든지 장애를 겪을 수 있습니다. 장애는 배제되는 일반적인 인간의 특성입니다."  \- [포괄](https://www.microsoft.com/en-us/design/inclusive) 동영상에서 발췌  
+"장애를 개인의 요구와 제공되는 서비스, 제품 또는 환경 간의 불일치로 정의합니다. 누구든지 장애를 겪을 수 있습니다. 장애는 배제되는 일반적인 인간의 특성입니다."  \- [포괄](https://www.microsoft.com/design/inclusive) 동영상에서 발췌  
 
 포괄 디자인은 모든 사용자를 위한 더 나은 제품을 만듭니다. 인간의 다양성을 포괄적으로 고려합니다. 대부분의 보도와 차도 경계 구간에서 볼 수 있는 연석 경사로를 살펴보겠습니다. 애초에 연석 경사로는 분명히 휠체어를 이용하는 사람들을 위한 것이었습니다. 하지만 이제는 유모차나 자전거를 이용하는 사람, 스케이트보드를 타는 사람을 비롯한 거의 모든 사람이 연석 경사로를 이용합니다. 보행자도 편의성 때문에 연석 경사로를 종종 이용합니다. TV 리모컨은 신체적 장애가 있는 사람을 위한 AT(보조 기술)로 간주될 수 있습니다. 하지만 지금은 리모컨이 없는 TV를 구입하는 것이 거의 불가능합니다. 아이들은 운동화 끈을 묶는 법을 배우기 전에 끈이 없는 신발이나 쉽게 조여지는 신발을 신을 수 있습니다. 신고 벗기 쉬운 신발은 신발을 벗고 집에 들어가는 문화권에서 흔히 선호됩니다. 이러한 신발은 관절염이 있거나 일시적인 손목 골절로 손을 쓰는 데 문제가 있는 사람에게도 좋습니다.
 
@@ -76,7 +77,7 @@ Microsoft는 컴퓨팅 환경을 개선하고 뛰어난 컴퓨팅 기술을 발�
 3.  UI의 부분이 상호 작용하는 방식 확인  
 
 논리적 계층 구조는 잠재적인 유용성 문제를 해결할 수 있는 좋은 방법입니다. 비교적 간단한 방식으로 UI 구조를 표현할 수 없는 경우 유용성 문제가 있을 수 있습니다.
- 간단한 대화 상자의 논리적 표현을 위해 여러 페이지의 다이어그램이 발생하면 안 됩니다. 너무 깊거나 너무 넓은 논리적 계층 구조의 경우 UI를 다시 디자인해야 할 수도 있습니다. 자세한 내용을 보려면 [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/en-us/download/details.aspx?id=19262) 전자책을 다운로드하세요.  
+ 간단한 대화 상자의 논리적 표현을 위해 여러 페이지의 다이어그램이 발생하면 안 됩니다. 너무 깊거나 너무 넓은 논리적 계층 구조의 경우 UI를 다시 디자인해야 할 수도 있습니다. 자세한 내용을 보려면 [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262) 전자책을 다운로드하세요.  
 
 ### 적절한 시각적 UI 설정 디자인  
 시각적 UI를 디자인하는 경우 제품에 고대비 설정이 있고, 기본 시스템 글꼴 및 다듬기 옵션을 사용하며, dpi(인치당 도트 수) 화면 설정에 맞게 크기가 조정되고, 배경과 5:1 이상의 명암비를 가진 기본 텍스트가 있으며, 색약 사용자가 구분하기 쉬운 색 조합을 사용하는지 확인합니다.  
@@ -104,19 +105,19 @@ ADA(미국 장애인 복지법)의 업데이트된 섹션 508 및 기타 입법�
 3.  표준 컨트롤, 모든 사용자 지정 컨트롤 및 키보드 포커스의 UI 위치에 유의하며 제품의 논리적 계층 구조를 디자인합니다.
   
 4.  유용한 시스템 설정(예: 키보드 탐색, 고대비, 높은 dpi)을 제품에 디자인합니다.  
-5.  [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/en-us/windows/accessible-apps) 및 프레임워크의 접근성 사양을 참조하여 디자인을 구현합니다.  
+5.  [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps) 및 프레임워크의 접근성 사양을 참조하여 디자인을 구현합니다.  
 6.  특별한 요구가 있는 사용자로 제품을 테스트하여 구현된 포괄 디자인 기술을 활용할 수 있는지 확인합니다.  
 7.  완성된 제품을 제공하고 이후의 프로젝트 작업자를 위해 구현을 문서화합니다.
   
 
 ## 관련 항목  
 * [포괄 디자인](http://design.microsoft.com/inclusive)
-* [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
-* [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/en-us/windows/accessible-apps)
+* [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
 * [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md)  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

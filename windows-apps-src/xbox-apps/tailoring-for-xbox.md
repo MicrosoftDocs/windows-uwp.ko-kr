@@ -3,8 +3,9 @@ author: payzer
 title: "Xbox에 적용할 수 있는 최선의 방법"
 description: "Xbox용으로 응용 프로그램을 최적화하는 방법"
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: ef0fef1dd43444771add4ed6d9db1300f8d33210
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bf3f89d29b947c39f818de297556cc438da8901a
 
 ---
 
@@ -21,9 +22,9 @@ Xbox에 대한 최상의 환경을 만들려고 하거나 둘 이상의 TV 플�
 기본적으로 응용 프로그램은 XAML을 사용하는 경우 200%로, HTML을 사용하는 경우에는 150%로 크기가 조정됩니다. 자동 크기 조정을 끌 수 있습니다.  [세부 정보](disable-scaling.md)
 
 ## Xbox 및 TV용 디자인
-디자인 방법에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요.
+디자인 방법에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요.
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

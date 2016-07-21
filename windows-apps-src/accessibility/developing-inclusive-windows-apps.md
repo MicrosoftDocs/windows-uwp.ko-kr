@@ -6,8 +6,8 @@ title: "포괄 Windows 10 앱 개발"
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
 
 ---
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
 
 UI 요소 간 키보드 탐색에 대한 자세한 내용은 [키보드 접근성](keyboard-accessibility.md)을 참조하세요.  
 
-또한 [Engineering Software for Accessibility(접근성을 위해 소프트웨어 엔지니어링)](https://www.microsoft.com/en-us/download/details.aspx?id=19262) 전자책의 _Designing the Logical Hierarchy(논리 계층 디자인)_ 장에 이 주제에 대해 자세히 설명되어 있습니다.
+또한 [Engineering Software for Accessibility(접근성을 위해 소프트웨어 엔지니어링)](https://www.microsoft.com/download/details.aspx?id=19262) 전자책의 _Designing the Logical Hierarchy(논리 계층 디자인)_ 장에 이 주제에 대해 자세히 설명되어 있습니다.
 
 ## 색상 및 대비  
 Windows에서 기본 제공되는 접근성 기능 중 하나는 컴퓨터 화면에서 텍스트와 이미지의 색상 대비를 강조하는 고대비 모드입니다. 일부 사용자의 경우 색상 대비를 높이면 눈의 피로를 줄이고 더 읽기 쉽게 만들어 줍니다. 고대비로 UI를 확인할 때 컨트롤이 일관되고 시스템 색(하드 코드된 색이 아님)으로 코딩되었는지 확인하여 고대비를 사용하지 않는 사용자가 보는 화면에서 모든 컨트롤을 볼 수 있도록 합니다.  
@@ -53,7 +53,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-시스템 색 및 리소스 사용에 대한 자세한 내용은 [XAML 테마 리소스](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/xaml-theme-resources)를 참조하세요.
+시스템 색 및 리소스 사용에 대한 자세한 내용은 [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)를 참조하세요.
 
 시스템 색을 재정의하지 않는 한 UWP 앱은 기본적으로 고대비 테마를 지원합니다. 사용자가 시스템에서 시스템 설정 또는 접근성 도구의 고대비 테마를 사용하도록 선택한 경우 이 프레임워크에서는 UI의 컨트롤 및 구성 요소에 대해 고대비 레이아웃 및 렌더링을 생성하는 색상 및 스타일 설정을 자동으로 사용합니다.   
 
@@ -80,11 +80,11 @@ XAML
 * [포괄 소프트웨어 디자인](designing-inclusive-software.md)  
 * [포괄 디자인](http://design.microsoft.com/inclusive)
 * [피해야 할 접근성 사례](practices-to-avoid.md)
-* [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
+* [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

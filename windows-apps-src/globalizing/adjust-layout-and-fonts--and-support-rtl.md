@@ -6,8 +6,8 @@ ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a1b271360b84e670f0b28557ffc499436487ad5f
 
 ---
 
@@ -50,7 +50,7 @@ XAML 레이아웃 컨트롤(예: [**Grid**](https://msdn.microsoft.com/library/w
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
-JavaScript를 사용하는 Windows 스토어 앱의 경우 [CSS 스타일시트](https://msdn.microsoft.com/library/ms531209) 레이아웃 메커니즘(예: [-ms-grid](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#g_section) 및 [–ms-box](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#f_section))을 사용합니다. 다양한 레이아웃 방향에 대해 지역화를 사용하려면 대칭 안쪽 여백과 여백을 사용합니다.
+JavaScript를 사용하는 Windows 스토어 앱의 경우 [CSS 스타일시트](https://msdn.microsoft.com/library/ms531209) 레이아웃 메커니즘(예: [-ms-grid](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#g_section) 및 [–ms-box](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#f_section))을 사용합니다. 다양한 레이아웃 방향에 대해 지역화를 사용하려면 대칭 안쪽 여백과 여백을 사용합니다.
 
 앱에서 [**:-ms-lang()**](https://msdn.microsoft.com/library/cc848867) 의사 클래스 선택기를 사용하여 CSS 속성(예: 앱 언어 기반의 특정 요소에 대한 너비)을 조정할 수도 있습니다. 이를 위해 앱 호스트는 루트 요소의 **lang** 특성을 앱 언어로 설정합니다.
 
@@ -119,6 +119,6 @@ ui-light.css 또는 ui-dark.css 스타일시트를 사용하는 JavaScript를 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

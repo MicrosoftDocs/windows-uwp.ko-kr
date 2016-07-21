@@ -3,8 +3,9 @@ author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: "셰이프 그리기"
 description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 20bac4421c2f307932bd5a8a4c462b1ef13fe09b
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 3add60b9067f40c5d330bd66a84eea41b465e8d7
 
 ---
 # 셰이프 그리기
@@ -56,9 +57,9 @@ UI 레이아웃에 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps
 
 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 대변이 동일한 4개의 변을 가진 셰이프입니다. 기본 **Rectangle**을 만들려면 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751), [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) 및 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정합니다.
 
-[**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)의 모서리를 둥글게 만들 수 있습니다. 모서리를 둥글게 만들려면 [**RadiusX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx) 및 [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy) 속성에 대해 값을 지정합니다. 이 두 속성은 모서리의 곡선을 정의하는 타원의 x-축과 y-축을 지정합니다. **RadiusX**의 최대값은 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751)를 2로 나눈 값이고 **RadiusY**의 최대값은 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)를 2로 나눈 값입니다.
+[**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)의 모서리를 둥글게 만들 수 있습니다. 모서리를 둥글게 만들려면 [**RadiusX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx) 및 [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy) 속성에 대해 값을 지정합니다. 이 두 속성은 모서리의 곡선을 정의하는 타원의 x-축과 y-축을 지정합니다. **RadiusX**의 최대값은 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751)를 2로 나눈 값이고 **RadiusY**의 최대값은 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)를 2로 나눈 값입니다.
 
-다음 예제에서는 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751)가 200이고 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)가 100인 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 만듭니다. [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 대해서는 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)의 [**Blue**](https://msdn.microsoft.com/library/windows/apps/Hh747837) 값을 사용하고 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke)에 대해서는 **SolidColorBrush**의 [**Black**](https://msdn.microsoft.com/library/windows/apps/Hh747833) 값을 사용합니다. 여기에서는 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness)를 3으로 설정합니다. [**RadiusX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx) 속성을 50으로 설정하고 [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy) 속성을 10으로 설정하여 **Rectangle**의 모서리를 둥글게 만듭니다.
+다음 예제에서는 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751)가 200이고 [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)가 100인 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 만듭니다. [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 대해서는 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)의 [**Blue**](https://msdn.microsoft.com/library/windows/apps/Hh747837) 값을 사용하고 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke)에 대해서는 **SolidColorBrush**의 [**Black**](https://msdn.microsoft.com/library/windows/apps/Hh747833) 값을 사용합니다. 여기에서는 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness)를 3으로 설정합니다. [**RadiusX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusx.aspx) 속성을 50으로 설정하고 [**RadiusY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.radiusy) 속성을 10으로 설정하여 **Rectangle**의 모서리를 둥글게 만듭니다.
 
 ```xml
 <Rectangle Fill="Blue"
@@ -82,7 +83,7 @@ On the other hand, a [**Rectangle**](https://msdn.microsoft.com/library/windows/
 
 ## Polygon
 
-A [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) is a shape with a boundary defined by an arbitrary number of points. The boundary is created by connecting a line from one point to the next, with the last point connected to the first point. The [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) property defines the collection of points that make up the boundary. In XAML, you define the points with a comma-separated list. In code-behind you use a [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220) to define the points and you add each individual point as a [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value to the collection.
+A [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) is a shape with a boundary defined by an arbitrary number of points. The boundary is created by connecting a line from one point to the next, with the last point connected to the first point. The [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) property defines the collection of points that make up the boundary. In XAML, you define the points with a comma-separated list. In code-behind you use a [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220) to define the points and you add each individual point as a [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value to the collection.
 
 You don't need to explicitly declare the points such that the start point and end point are both specified as the same [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value. The rendering logic for a [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) assumes that you are defining a closed shape and will connect the end point to the start point implicitly.
 
@@ -105,19 +106,19 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 
 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345)은 좌표 공간에서 두 점 사이에 그려진 선입니다. **Line**은 내부 공간이 없기 때문에 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 제공된 값을 모두 무시합니다. **Line**에 대해서는 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) 및 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) 속성의 값을 지정해야 하며, 그러지 않으면 **Line**이 렌더링되지 않습니다.
 
-[**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 사용하여 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 셰이프를 지정하지는 않으며 [**X1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) 및 [**Y2**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx)에 대해 불연속 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)을 사용하여 전체 **Line**을 이동할 수 있습니다.
+[**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 사용하여 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 셰이프를 지정하지는 않으며 [**X1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) 및 [**Y2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx)에 대해 불연속 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)을 사용하여 전체 **Line**을 이동할 수 있습니다.
 
 ## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
 
 [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)과 유사합니다.
 
-**참고** [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)에 대해 설정된 [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)에 명시적으로 동일한 시작점과 끝점이 있을 수도 있지만, 이 경우 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)을 대신 사용하는 것이 좋습니다.
+**참고** [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)에 대해 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)에 명시적으로 동일한 시작점과 끝점이 있을 수도 있지만, 이 경우 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)을 대신 사용하는 것이 좋습니다.
 
  
 
-[**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
+[**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 
-[**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)에서와 마찬가지로 [**Points**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 속성은 경계를 구성하는 점의 컬렉션을 정의합니다. XAML에서는 쉼표로 구분된 목록으로 점을 정의합니다. 코드 숨김에서는 [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220)을 사용하여 점을 정의하고 각 개별 점을 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 구조로 컬렉션에 추가합니다.
+[**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)에서와 마찬가지로 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) 속성은 경계를 구성하는 점의 컬렉션을 정의합니다. XAML에서는 쉼표로 구분된 목록으로 점을 정의합니다. 코드 숨김에서는 [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220)을 사용하여 점을 정의하고 각 개별 점을 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 구조로 컬렉션에 추가합니다.
 
 다음 예제에서는 `(10,200)`, `(60,140)`, `(130,140)` 및 `(180,200)`으로 설정된 4개의 점을 가진 [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)을 만듭니다. [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke)도 정의되지만 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)은 정의되지 않습니다.
 
@@ -199,6 +200,6 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

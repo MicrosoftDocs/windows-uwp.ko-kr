@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Xbox One 도구 소개"
 description: "Windows Device Portal을 사용하는 Xbox One 특정 도구 개발자 홈입니다."
 area: Xbox
-ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
-ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
 
 ---
 
@@ -89,7 +90,7 @@ _개발자 홈_은 개발자의 생산성을 지원하도록 설계된 Xbox One 
 
 개발 키트의 호스트 이름을 정의하려면 콘솔 설정 도구로 이동한 다음 __호스트 이름__ 상자에 호스트 이름을 입력합니다.  
 
-  > **참고** &nbsp;&nbsp;호스트 이름을 만들 때는 이름 고유성이 적용되지 않습니다. 이름이 중복되지 않도록 주의하세요. 이렇게 하는 한 가지 방법은 일반적으로 조직 내에서 고유한 개발 컴퓨터의 이름에서 호스트 이름을 파생하는 것입니다.
+  > **참고**&nbsp;&nbsp;호스트 이름을 만들 때는 이름 고유성이 적용되지 않습니다. 이름이 중복되지 않도록 주의하세요. 이렇게 하는 한 가지 방법은 일반적으로 조직 내에서 고유한 개발 컴퓨터의 이름에서 호스트 이름을 파생하는 것입니다.
 
 ## Windows Device Portal
 WDP(Windows Device Portal)는 브라우저 기반 디바이스 관리 환경을 허용하는 OneCore 디바이스 관리 도구입니다.
@@ -114,7 +115,8 @@ Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
   ![보안 인증서 경고](images/security_cert_warning.jpg)
 
 ## 참고 항목
-- [Microsoft 개발자 기술: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
+- [UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법](uwp-fiddler.md)
+- [Microsoft 개발자 기술: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
 - [Xbox One의 UWP](index.md)
 
 
@@ -123,6 +125,6 @@ Xbox One 콘솔에서 WDP를 사용하도록 설정하려면
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

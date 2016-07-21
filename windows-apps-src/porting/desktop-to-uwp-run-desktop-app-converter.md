@@ -3,8 +3,9 @@ author: awkoren
 Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱 앱 변환기 미리 보기(Project Centennial)"
-ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
-ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 
 ---
 
@@ -22,9 +23,14 @@ ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
 
 이 섹션에서는 데스크톱 앱 변환기의 버전 간 변경 내용을 대략적으로 설명합니다. 
 
-### 6/16/2016
+### 2016/7/7(v0.1.22)
 
-* 데스크톱 앱 변환기(v0.1.20)는 최신 Windows 10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제를 해결합니다. 
+* 데스크톱 응용 프로그램에서 자동으로 셸 확장을 검색하고 UWP 패키지의 AppXManifest에서 해당 셸 확장을 선언하기 위한 지원이 추가되었습니다. 데스크톱 확장에 대한 자세한 내용은 [**변환된 데스크톱 앱 확장**](desktop-to-uwp-extensions.md) 항목을 참조하세요. 
+* 대규모 앱 집합에 대한 AppExecutable 검색이 개선되었습니다. 
+
+### 2016/6/16(v0.1.20)
+
+* 최신 Windows 10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제가 해결되었습니다. 
 * ```–CreateX86Package```가 ```–PackageArch```로 대체되어 생성된 패키지에 대한 아키텍처를 지정할 수 있습니다. 
 
 ### 6/8/2016
@@ -61,7 +67,7 @@ ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
 + SLAT(Second Level Address Translation)
 
 ### 권장 리소스
-+ [Windows 10용 Windows SDK(소프트웨어 개발 키트)](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
++ [Windows 10용 Windows SDK(소프트웨어 개발 키트)](http://go.microsoft.com/fwlink/?LinkId=615097)
 
 ## 데스크톱 앱 변환기 설정   
 데스크톱 앱 변환기는 Windows Insider Preview 빌드의 일부로 플라이트된 Windows 10 기능에 의존합니다. 이 변환기를 사용하려면 최신 빌드를 사용하고 있는지 확인합니다.
@@ -114,7 +120,7 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## 변환된 AppX 배포
-PowerShell에서 [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx) cmdlet을 사용하여 서명된 앱 패키지(.appx)를 사용자 계정에 배포합니다. .appx 패키지에 서명하려면 “.Appx 패키지 서명" 섹션을 참조하세요. 또한 개발 프로세스 동안 cmdlet의 *Register* 매개 변수를 포함하여 패키지되지 않은 파일의 폴더에서 설치할 수 있습니다. 자세한 내용은 [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md)를 참조하세요.
+PowerShell에서 [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) cmdlet을 사용하여 서명된 앱 패키지(.appx)를 사용자 계정에 배포합니다. .appx 패키지에 서명하려면 “.Appx 패키지 서명" 섹션을 참조하세요. 또한 개발 프로세스 동안 cmdlet의 *Register* 매개 변수를 포함하여 패키지되지 않은 파일의 폴더에서 설치할 수 있습니다. 자세한 내용은 [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md)를 참조하세요.
 
 ## .AppX 패키지 서명
 
@@ -224,7 +230,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 
 ## 참고 항목
 + [데스크톱 앱 변환기 다운로드](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [데스크톱 앱을 유니버설 Windows 플랫폼으로 가져오기](https://developer.microsoft.com/en-us/windows/bridges/desktop)
++ [데스크톱 앱을 유니버설 Windows 플랫폼으로 가져오기](https://developer.microsoft.com/windows/bridges/desktop)
 + [데스크톱 앱 변환기를 사용하여 데스크톱 앱을 UWP로 가져오기](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
 + [데스크톱 브리지용 UserVoice(Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
@@ -232,6 +238,6 @@ get-help .\DesktopAppConverter.ps1 -detailed
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

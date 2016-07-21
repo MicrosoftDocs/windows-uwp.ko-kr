@@ -2,8 +2,9 @@
 author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 01cd10c72745ff4bd8204a9adaa8eebf5a892efe
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: c7107599529d5af5b118a46cb065106f08afe113
 
 ---
 
@@ -93,7 +94,7 @@ CommandBar 컨트롤에는 명령 및 콘텐츠를 추가하는 데 사용할 �
 
 기본 오버플로 영역은 모음과 구분되도록 스타일을 지정합니다. [**CommandBarOverflowPresenterStyle**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.commandbaroverflowpresenterstyle.aspx) 속성을 [**CommandBarOverflowPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbaroverflowpresenter.aspx)를 대상으로 하는 [Style](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx)로 설정하여 스타일을 조정할 수 있습니다.
 
-필요에 따라 PrimaryCommands와 SecondaryCommands 사이의 명령을 프로그래밍 방식으로 이동할 수 있습니다. {{&gt; internal content = "사용자가 앱 창의 크기를 조정하는 경우와 같이 명령 모음 너비가 변경될 경우 명령이 자동으로 오버플로를 시작하거나 종료할 수도 있습니다. 동적 오버플로는 기본적으로 켜져 있지만 앱에서 `IsDynamicOverflowEnabled` 속성 값을 변경하여 이 동작을 끌 수 있습니다."}}
+필요에 따라 PrimaryCommands와 SecondaryCommands 사이의 명령을 프로그래밍 방식으로 이동할 수 있습니다. 
 
 ### 앱 바 단추
 
@@ -139,7 +140,7 @@ PrimaryCommands와 SecondaryCommands는 모두 [**AppBarButton**](https://msdn.m
 
 **Content** 속성을 설정하여 콘텐츠 영역에 XAML 요소를 추가할 수 있습니다. 둘 이상의 요소를 추가하려는 경우 패널 컨테이너에 배치하고 패널을 Content 속성의 단일 자식으로 만들어야 합니다.
 
-기본 명령 및 콘텐츠가 모두 있는 경우 기본 명령이 우선하며 콘텐츠 잘림을 발생할 수 있습니다. {{&gt; internal content = "기본 명령이 오버플로 메뉴로 이동되어 콘텐츠 공간이 확장되었으므로 동적 오버플로를 사용할 때 콘텐츠가 잘리지 않습니다."}}
+기본 명령 및 콘텐츠가 모두 있는 경우 기본 명령이 우선하며 콘텐츠 잘림을 발생할 수 있습니다. 
 
 [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx)가 **Compact**인 경우 콘텐츠가 명령 모음의 컴팩트 크기보다 크면 잘릴 수 있습니다. 표시할 [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx) 및 [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx) 이벤트를 처리하거나 콘텐츠 영역의 UI 부분이 잘리지 않도록 숨겨야 합니다. 자세한 내용은 [열림 및 닫힘 상태](#open-and-closed-states) 섹션을 참조하세요.
 
@@ -286,6 +287,6 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

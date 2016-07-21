@@ -5,6 +5,7 @@ title: "음성 조작"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
 

@@ -4,8 +4,8 @@ ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: "파일, 폴더 및 라이브러리"
 description: "앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: ea52cafab084f202705282d63f4a37ec0d65bd03
 
 ---
  # 파일, 폴더 및 라이브러리
@@ -24,7 +24,7 @@ ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
 | [EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호](protect-your-enterprise-data-with-edp.md) | 이 항목에서는 가장 일반적인 파일 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다. |
 | [EDP(엔터프라이즈 데이터 보호)를 사용하여 스트림 및 버퍼 보호](use-edp-to-protect-streams-and-buffers.md) | 이 항목에서는 가장 일반적인 스트림 및 버퍼 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다. |
 | [홈 그룹 콘텐츠 액세스](quickstart-accessing-homegroup-content.md) | 사진, 음악, 비디오 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다. |
-| [Microsoft OneDrive 파일의 가용성 확인](quickstart-determining-availability-of-microsoft-onedrive-files.md) | [StorageFile.IsAvailable](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다. |
+| [Microsoft OneDrive 파일의 가용성 확인](quickstart-determining-availability-of-microsoft-onedrive-files.md) | [StorageFile.IsAvailable](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.isavailable.aspx) 속성을 사용하여 Microsoft OneDrive 파일의 사용 가능 여부를 확인합니다. |
 | [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md) | 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다. |
 | [최근에 사용한 파일 및 폴더 추적](how-to-track-recently-used-files-and-folders.md) | 사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다. 플랫폼은 마지막으로 액세스한 시간을 기반으로 항목을 정렬하고 목록의 25개 항목 제한에 도달한 경우 가장 오래된 항목을 제거하여 MRU를 자동으로 관리합니다. 모든 앱에는 자체 MRU가 있습니다. |
 | [SD 카드에 액세스](access-the-sd-card.md) | 특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다. |
@@ -46,6 +46,6 @@ ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

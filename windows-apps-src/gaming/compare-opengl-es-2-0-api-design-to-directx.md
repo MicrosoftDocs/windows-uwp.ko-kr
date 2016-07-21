@@ -4,8 +4,8 @@ title: "OpenGL ES 2.0에서 Direct3D로의 포팅 계획"
 description: "iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다."
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 804faad3db94bda9d1d67ad899a6ba048a4bfd26
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: f1119a9faed4fca7f0538a4c92c667e5b2ba559c
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: 804faad3db94bda9d1d67ad899a6ba048a4bfd26
 **중요 API**
 
 -   [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)
--   [Visual C++](https://msdn.microsoft.com/en-us/library/windows/apps/60k1461a.aspx)
+-   [Visual C++](https://msdn.microsoft.com/library/windows/apps/60k1461a.aspx)
 
 iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 OpenGL ES 2.0에 많은 투자를 했을 것입니다. 그래픽 파이프라인 코드베이스를 Direct3D 11 및 Windows 런타임으로 이동할 준비를 할 때에는 시작하기 전에 몇 가지 사항을 고려해야 합니다.
 
@@ -73,7 +73,7 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 -   [**Windows::ApplicationModel::Core::IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)
 -   [**Windows::ApplicationModel::Core::CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)
 
-또한 WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성 요소를 만들고 사용하는 낮은 수준의 방법을 제공하는 템플릿 라이브러리입니다. UWP 앱용 Direct3D 11 API는 이 라이브러리의 인터페이스 및 형식(예: 스마트 포인터([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)))과 함께 가장 잘 사용됩니다. WRL에 대한 자세한 내용은 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](https://msdn.microsoft.com/en-us/library/windows/apps/hh438466.aspx)을 읽어 보세요.
+또한 WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성 요소를 만들고 사용하는 낮은 수준의 방법을 제공하는 템플릿 라이브러리입니다. UWP 앱용 Direct3D 11 API는 이 라이브러리의 인터페이스 및 형식(예: 스마트 포인터([ComPtr](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)))과 함께 가장 잘 사용됩니다. WRL에 대한 자세한 내용은 [WRL(Windows 런타임 C++ 템플릿 라이브러리)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx)을 읽어 보세요.
 
 ## 좌표계 변경
 
@@ -120,6 +120,6 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -2,6 +2,7 @@
 author: jnHs
 Description: "대량으로 IAP 관리를 사용하면 개별적으로 각 업데이트를 제출하는 대신 한 번에 여러 IAP를 변경할 수 있습니다."
 title: "대량으로 IAP 관리"
+translationtype: Human Translation
 ms.sourcegitcommit: 475371dd55aa111f3743c03dc1600e8cfdbeb5b0
 ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
@@ -52,6 +53,6 @@ ms.openlocfilehash: ae4d4ed33b9bd10a2b01b336c942ad3212de6533
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

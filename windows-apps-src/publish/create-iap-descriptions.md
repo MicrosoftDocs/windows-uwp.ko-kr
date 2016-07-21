@@ -3,6 +3,7 @@ author: jnHs
 Description: "IAP를 제출할 때 제공한 정보는 앱 고객에게 표시됩니다."
 title: "IAP 설명 작성"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
+translationtype: Human Translation
 ms.sourcegitcommit: be199d045feadb352b914bb11dbe2cf3dd5ddbf0
 ms.openlocfilehash: 418907894d3fc9349ca113ff04c575bcb0140347
 

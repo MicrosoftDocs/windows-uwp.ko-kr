@@ -3,8 +3,9 @@ author: jnHs
 Description: "Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결제 방법으로 통신사 청구 기능을 제공합니다."
 title: "통신사 청구"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
-ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+translationtype: Human Translation
+ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
+ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 ---
 
@@ -30,6 +31,7 @@ Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하
 |----------------|------------------|
 | 핀란드        | DNA, Elisa       |
 | 독일        | O2               |
+| 이탈리아          | Wind             |
 | 노르웨이         | Telenor          |
 | 스위스    | Swisscom         |
 | 미국  | Sprint           |
@@ -116,6 +118,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

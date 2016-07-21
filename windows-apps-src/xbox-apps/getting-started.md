@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Xbox One에서 UWP 앱 개발 시작"
 description: "UWP 개발에 대해 PC 및 Xbox One을 설정하는 방법"
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: b070b6bec350c3c893f934e212b1de743b349861
+translationtype: Human Translation
+ms.sourcegitcommit: 5f050eee9430dc7aaa2738a4610a2c4f5083839d
+ms.openlocfilehash: 92a9cc54c6257c35b1e7ae19838b01c8452c4b36
 
 ---
 
@@ -25,7 +26,7 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 
 2.  최신 Windows 10 SDK Preview 빌드를 설치합니다. 이 빌드는 [Windows 참가자 프로그램](http://go.microsoft.com/fwlink/p/?LinkId=780552)에서 다운로드할 수 있습니다.
   
-  > **중요** &nbsp;&nbsp;이 Preview SDK를 PC에 설치하면 이 PC에서 빌드된 앱을 스토어에 제출할 수 없으므로 프로덕션 개발 PC에는 설치하지 마세요. 
+  > **중요**&nbsp;&nbsp;이 Preview SDK를 PC에 설치하면 이 PC에서 빌드된 앱을 스토어에 제출할 수 없으므로 프로덕션 개발 PC에는 설치하지 마세요. 
 
 ## Xbox One 본체 설정
 1.  Xbox One에서 개발자 모드를 활성화합니다. 앱을 다운로드하고, 활성화 코드를 가져온 다음 개발자 센터 계정의 xboxactivate 페이지에 입력합니다. 자세한 내용은 [Xbox One에서 개발자 모드 사용](devkit-activation.md)을 참조하세요. 
@@ -34,9 +35,9 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 
 3.  개발자 모드 활성화 앱으로 이동한 다음 **전환 후 다시 시작**을 선택합니다. 축하합니다. 이제 개발자 모드의 Xbox One을 사용할 수 있습니다.
   
-  > **참고** &nbsp;&nbsp;정품 게임과 앱은 개발자 모드에서 실행되지 않지만 직접 만든 앱이나 게임은 실행됩니다. 좋아하는 게임과 앱을 실행하려면 다시 정품 모드로 전환합니다.
+  > **참고**&nbsp;&nbsp;정품 게임과 앱은 개발자 모드에서 실행되지 않지만 직접 만든 앱이나 게임은 실행됩니다. 좋아하는 게임과 앱을 실행하려면 다시 정품 모드로 전환합니다.
   
-  > **참고** &nbsp;&nbsp;개발자 모드에서 Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어 있어야 합니다. 기존 Xbox Live 계정을 사용하거나, 개발자 모드에서 콘솔용 계정을 새로 만들 수 있습니다. 
+  > **참고**&nbsp;&nbsp;개발자 모드에서 Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어 있어야 합니다. 기존 Xbox Live 계정을 사용하거나, 개발자 모드에서 콘솔용 계정을 새로 만들 수 있습니다. 
 
 ## Visual Studio 2015에서 첫 번째 프로젝트 만들기
 
@@ -55,8 +56,10 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 5.  연결한 후 앱 배포가 시작됩니다. 이 작업을 처음 수행할 때는 속도가 약간 느릴 수 있지만(모든 도구를 Xbox에 복사해야 함), 몇 분 이상 걸리는 경우 문제가 있는 것입니다. 위의 단계를 모두 따랐는지 확인하고(특히 **인증 모드**를 **유니버설**로 설정했나요?), Xbox One에 대해 유선 네트워크 연결을 사용 중인지 확인합니다.  
 
 6. 잠시 기다려 주세요. 첫 번째 앱이 콘솔에서 실행되는 것을 즐기세요.  
-   ![Hello World](images/getting-started-hello-world.png)
-   
+
+## 정말 간단하죠!
+
+![Hello World](images/getting-started-hello-world.png)
 
 ## 참고 항목  
 - [FAQ](frequently-asked-questions.md)  
@@ -65,6 +68,6 @@ UWP 개발에 대해 PC 및 Xbox One을 성공적으로 설정하려면 **신중
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

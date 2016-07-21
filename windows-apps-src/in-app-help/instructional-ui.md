@@ -4,6 +4,7 @@ Description: "Windows 앱 작동 방법을 안내하는 사용 안내 UI를 디�
 title: "사용 안내 UI 디자인에 대한 지침"
 label: Instructional UI
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 08b0b88e8ef17c2a8f264df5db4f971c8c49ab2e
 ms.openlocfilehash: f9f1f34bb02cda89d31caa9453b6e3eb056e7bc9
 

@@ -4,8 +4,8 @@ ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
 description: "AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다."
 title: "C의 AdControl 이벤트#"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: cc5dfbfacefb4be32153f3266878be41a3b923f8
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: f92cbbb00a064ce7569d44ad952838df4d21ac8c
 
 ---
 
@@ -44,7 +44,7 @@ private void OnAdEngagedChanged(object sender, RoutedEventArgs e) {
 
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 * [AdControl 오류 처리](adcontrol-error-handling.md)
-* [RoutedEventArgs 클래스](http://msdn.microsoft.com/en-us/library/system.windows.routedeventargs.aspx)
+* [RoutedEventArgs 클래스](http://msdn.microsoft.com/library/system.windows.routedeventargs.aspx)
 
  
 
@@ -52,6 +52,6 @@ private void OnAdEngagedChanged(object sender, RoutedEventArgs e) {
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

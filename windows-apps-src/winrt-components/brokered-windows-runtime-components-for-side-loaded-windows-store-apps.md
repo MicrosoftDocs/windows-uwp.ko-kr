@@ -2,6 +2,7 @@
 author: msatranjr
 title: "Windows 런타임 구성 요소"
 description: "이 문서에서는 Windows 10에서 지원되며, 쉽게 터치할 수 있는 .NET 앱에서 업무에 중요한 핵심 작업을 담당하는 기존 코드를 사용할 수 있도록 하는 기업 대상 기능에 대해 설명합니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
 ms.openlocfilehash: fa7e7404a9a3ab5d75d47b3a5271bd1fd84b5569
 
@@ -578,6 +579,6 @@ struct PersonStruct
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

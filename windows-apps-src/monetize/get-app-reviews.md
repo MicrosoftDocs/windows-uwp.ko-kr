@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 가져옵니다."
 title: "앱 리뷰 가져오기"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: bb0f912bd3380e21e04fa44f2c75244c6585f03a
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 6e7e8c6a1b870031fb7055bf09c8ebbaa7dc13a5
 
 ---
 
@@ -33,9 +34,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews``` |
 
- 
+<span/> 
 
 ### 요청 헤더
 
@@ -43,9 +44,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
- 
+<span/> 
 
-### 요청 본문
+### 요청 매개 변수
 
 <table>
 <colgroup>
@@ -132,10 +133,11 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
+<span/>
  
 ### 필드 필터링
 
-요청 본문의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 일부 필드는 **contains**, **gt**, **lt**, **ge** 및 **le** 연산자도 지원합니다. 문은 **and** 또는 **or**를 사용하여 결합할 수 있습니다.
+요청의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 일부 필드는 **contains**, **gt**, **lt**, **ge** 및 **le** 연산자도 지원합니다. 문은 **and** 또는 **or**를 사용하여 결합할 수 있습니다.
 
 다음은 *filter* 문자열 예입니다. *filter=contains(reviewText,'great') and contains(reviewText,'ads') and deviceRAM lt 2048 and market eq 'US'*
 
@@ -282,7 +284,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### 요청 예제
 
@@ -307,6 +309,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 구입 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                             |
 
+<span/>
  
 ### 리뷰 값
 
@@ -337,7 +340,7 @@ Authorization: Bearer <your access token>
 | deviceStorageCapacity  | 숫자  | 기본 저장소 디스크의 용량(GB)입니다.                                                                                                                                                                                     |
 | 등급                 | 숫자  | 앱 등급(별 단위)입니다.                                                                                                                                                                                                            |
 
- 
+<span/> 
 
 ### 응답 예제
 
@@ -386,6 +389,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,8 +4,8 @@ title: "xDeferLoadStrategy 특성"
 description: "xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 ---
 
@@ -27,7 +27,7 @@ ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
 
 -   나중에 요소를 찾을 방법이 필요하므로 [x:Name](x-name-attribute.md)을 정의해야 합니다.
 -   [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식을 제외하고 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)만 지연되는 것으로 표시할 수 있습니다.
--   루트 요소는 [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
+-   루트 요소는 [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
 -   [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 요소는 지연될 수 없습니다.
 -   [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)를 통해 로드된 느슨한 XAML과는 작동하지 않습니다.
 -   부모 요소를 이동하면 실현되지 않은 모든 요소가 지워집니다.
@@ -88,6 +88,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

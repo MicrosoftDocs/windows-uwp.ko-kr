@@ -6,20 +6,22 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+ms.sourcegitcommit: 9b9e9ecb70f3a0bb92038ae94f45ddcee3357dbd
+ms.openlocfilehash: a31fc65599f43be5b302b568774a51ab77065300
 
 ---
 
 # EDP(엔터프라이즈 데이터 보호)를 사용하여 파일 보호
 
-__참고__ Windows 10 버전 1511(빌드 10586) 이전에서는 EDP(엔터프라이즈 데이터 보호) 정책을 적용할 수 없습니다.
+> [!NOTE]
+> Windows 10 버전 1511(빌드 10586) 이전에서는 EDP(엔터프라이즈 데이터 보호) 정책을 적용할 수 없습니다.
 
 이 항목에서는 가장 일반적인 파일 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다. EDP 기능이 파일, 스트림, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보려면 [EDP(엔터프라이즈 데이터 보호)](../enterprise/edp-hub.md)를 참조하세요.
 
-**참고** [EDP(엔터프라이즈 데이터 보호) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)에서는 이 항목에 설명된 것과 동일한 여러 시나리오를 다룹니다.
+> [!NOTE]
+> [EDP(엔터프라이즈 데이터 보호) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)에서는 이 항목에 설명된 것과 동일한 여러 시나리오를 다룹니다.
 
-## 필수 조건
+## 사전 요구 사항
 
 -   **EDP 설정**
 
@@ -53,7 +55,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 특정 네트워크 끝점, 파일, 클립보드, 또는 공유 계약을 비롯한 다양한 방법을 사용해서 엔터프라이즈 데이터를 앱에 입력할 수 있습니다. 앱에서 새 엔터프라이즈 데이터를 만들 수도 있습니다. 인식 앱이 어떤 방식을 통해 엔터프라이즈 데이터에 얻게 되든, 앱은 데이터를 새 파일에 유지할 때, 관리되는 엔터프라이즈 ID로 파일을 보호하도록 주의해야 합니다.
 
-기본 단계는 일반 저장소 API를 사용하여 파일을 만들고, EDP API를 사용하여 엔터프라이즈 ID로 파일을 보호한 다음(다시 일반 저장소 API 사용) 파일에 쓰는 것입니다. 아래 예제와 같이 파일에 쓰기 전에 파일이 보호되도록 해야 합니다. [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) 메서드를 사용하여 파일을 보호합니다. 또한 일반적인 경우처럼 ID가 관리되는 경우에만 ID로 보호하는 것이 가능합니다. 그 이유와 앱이 실행 중인 엔터프라이즈의 ID를 확인하는 방법에 대한 자세한 내용은 [ID가 관리되는지 확인](../enterprise/edp-hub.md#confirming_an_identity_is_managed)을 참조하세요.
+기본 단계는 일반 저장소 API를 사용하여 파일을 만들고, EDP API를 사용하여 엔터프라이즈 ID로 파일을 보호한 다음(다시 일반 저장소 API 사용) 파일에 쓰는 것입니다. 아래 예제와 같이 파일에 쓰기 전에 파일이 보호되도록 해야 합니다. [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157) 메서드를 사용하여 파일을 보호합니다. 또한 일반적인 경우처럼 ID가 관리되는 경우에만 ID로 보호하는 것이 가능합니다. 그 이유와 앱이 실행 중인 엔터프라이즈의 ID를 확인하는 방법에 대한 자세한 내용은 [ID가 관리되는지 확인](../enterprise/edp-hub.md#confirming-an-identity-is-managed)을 참조하세요.
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -249,26 +251,23 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> '!참고] 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
 ## 관련 항목
 
+- [EDP(엔터프라이즈 데이터 보호) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
 
-[EDP(엔터프라이즈 데이터 보호) 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409)
-
-[**Windows.Security.EnterpriseData 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/dn279153)
-
- 
-
- 
+- [**Windows.Security.EnterpriseData 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Jul16_HO1-->
 
 

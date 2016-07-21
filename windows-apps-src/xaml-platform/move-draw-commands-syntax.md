@@ -3,6 +3,7 @@ author: jwmsft
 description: "경로 도형을 XAML 특성 값으로 지정하는 데 사용할 수 있는 이동 및 그리기 명령(미니 언어)에 대해 알아봅니다."
 title: "이동 및 그리기 명령 구문"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
 ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
 

@@ -3,6 +3,7 @@ author: Xansky
 description: "Windows.ApplicationModel.Appointments 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다."
 title: "약속 관리"
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 020b020d90a52d45fa989e0f630320b4630b955e
 

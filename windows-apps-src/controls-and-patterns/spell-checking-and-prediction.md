@@ -6,6 +6,7 @@ ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
 label: Spell checking and text prediction
 template: detail.hbs
 redirect_url: text-controls
+translationtype: Human Translation
 ms.sourcegitcommit: 08f982f5c54d596a7624fe63528f91375e7761ca
 ms.openlocfilehash: 8954b14a84241686a7c784c3d250f197bed7c8b6
 

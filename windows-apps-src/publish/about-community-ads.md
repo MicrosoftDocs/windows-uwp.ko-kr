@@ -3,6 +3,7 @@ author: jnHs
 Description: "개발자 앱을 다른 개발자가 게시한 앱과 함께 서로 홍보할 수 있습니다. 이 기능을 커뮤니티 광고라고 합니다."
 title: "커뮤니티 광고 정보"
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+translationtype: Human Translation
 ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
 ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
 

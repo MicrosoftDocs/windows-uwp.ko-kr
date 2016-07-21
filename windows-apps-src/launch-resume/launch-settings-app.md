@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "Windows 설정 앱 실행"
 description: "앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
+translationtype: Human Translation
 ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
 ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
 

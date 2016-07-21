@@ -1,10 +1,11 @@
 ---
-description: "UWP 앱용 디자인 및 UI 관련 다운로드입니다."
+description: "UWP 앱 사용자 인터페이스 레이아웃 및 컨트롤 디자인을 위한 최신 다운로드 및 도구를 가져옵니다."
+keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
 title: "UWP 앱용 디자인 다운로드 – Windows 앱 개발"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 4101b60c0f640fd54d67a8e57f0a06622c6ec85c
+ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
+ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
 
 ---
 
@@ -86,7 +87,7 @@ Illustrator 프로토타입에서 쉽게 redline을 생성합니다. <br/>[Adobe
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>사진 공유 앱</b> <br/>
-이 샘플 앱은 실제 소셜 미디어를 통한 사진 공유 기능을 보여 줍니다. 반응형 디자인, 앱에서 바로 구매, Azure 서비스, 푸시 알림 등을 보여 줍니다. <br/>[사진 공유 앱 샘플 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=760402)<br/>[PhotoSharingApp에 대한 자세한 정보](http://go.microsoft.com/fwlink/p/?LinkId=760401)</p>    
+이 예제 앱은 실제 소셜 미디어를 통한 사진 공유 기능을 보여 줍니다. 반응형 디자인, 앱에서 바로 구매, Azure 서비스, 푸시 알림 등을 보여 줍니다. <br/>[사진 공유 앱 샘플 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=760402)<br/>[PhotoSharingApp에 대한 자세한 정보](http://go.microsoft.com/fwlink/p/?LinkId=760401)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=760402"><img src="images/photo-sharing.png" alt="Download the Photo sharing app sample" /></a>
@@ -98,7 +99,7 @@ Illustrator 프로토타입에서 쉽게 redline을 생성합니다. <br/>[Adobe
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Hue Lights </b><br/>
-이 샘플은 Windows 기능을 지능형 홈 자동화와 통합합니다. 특히 Cortana 및 Bluetooth LE(Bluetooth 저에너지)를 사용하여 Phillips Hue Lights(Wi-Fi 지원 조명 시스템)를 통한 대화형 환경을 만드는 방법을 보여 줍니다. <br/>[Hue Lights 샘플 다운로드](https://github.com/Microsoft/Windows-appsample-huelightcontroller/archive/master.zip)<br/>[Hue Lights 샘플에 대한 자세한 정보](https://github.com/Microsoft/Windows-appsample-huelightcontroller)</p>    
+이 예제는 Windows 기능을 지능형 홈 자동화와 통합합니다. 특히 Cortana 및 Bluetooth LE(Bluetooth 저에너지)를 사용하여 Phillips Hue Lights(Wi-Fi 지원 조명 시스템)를 통한 대화형 환경을 만드는 방법을 보여 줍니다. <br/>[Hue Lights 샘플 다운로드](https://github.com/Microsoft/Windows-appsample-huelightcontroller/archive/master.zip)<br/>[Hue Lights 샘플에 대한 자세한 정보](https://github.com/Microsoft/Windows-appsample-huelightcontroller)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="https://github.com/Microsoft/Windows-appsample-huelightcontroller/archive/master.zip"><img src="images/hue-lights.png" alt="Download the Hue Lights sample" /></a>
@@ -108,6 +109,6 @@ Illustrator 프로토타입에서 쉽게 redline을 생성합니다. <br/>[Adobe
 <b>더 많은 코드가 필요하세요?</b> Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. [샘플 포털로 이동](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

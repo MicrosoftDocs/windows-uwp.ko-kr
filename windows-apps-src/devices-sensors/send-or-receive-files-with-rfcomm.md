@@ -3,8 +3,9 @@ author: msatranjr
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
 description: "이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다."
-ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 61e5844f18d09aa170498d261ca1a6fd60ef170c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a4d7b0c9e51f3d118c5ed9ac83af2cc6d502d6b3
 
 ---
 # Bluetooth RFCOMM
@@ -33,7 +34,7 @@ RFCOMM 작업에 대해 자세히 설명하는 전체 코드 샘플은 GitHub의
 
 -   **RfcommDeviceService.GetDeviceSelector\*** 함수를 사용하여 원하는 서비스의 쌍으로 구성된 디바이스 인스턴스를 열거하는 데 사용할 수 있는 AQS 쿼리를 생성할 수 있습니다.
 -   열거된 디바이스를 선택하고, [**RfcommDeviceService**](https://msdn.microsoft.com/library/windows/apps/Dn263463)를 만들고, 필요에 따라 SDP 특성을 읽습니다([**established data helpers**](https://msdn.microsoft.com/library/windows/apps/BR208119)를 사용하여 특성 데이터 구문 분석).
--   소켓을 만들고 [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) 및 [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) 속성을 사용하여 적절한 매개 변수로 원격 장치 서비스에 [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504)합니다.
+-   소켓을 만들고 [**RfcommDeviceService.ConnectionHostName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname.aspx) 및 [**RfcommDeviceService.ConnectionServiceName**](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename.aspx) 속성을 사용하여 적절한 매개 변수로 원격 장치 서비스에 [**StreamSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701504)합니다.
 -   설정된 데이터 스트림 패턴을 따라 파일의 데이터 청크를 읽어와 소켓의 [**StreamSocket.OutputStream**](https://msdn.microsoft.com/library/windows/apps/BR226920)을 통해 장치로 보낼 수 있습니다.
 
 ```csharp
@@ -367,6 +368,6 @@ void OnConnectionReceived(
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-description: "UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 가져옵니다."
-title: "컨트롤 및 패턴 - Windows 앱 개발"
+description: "UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 가져옵니다. 앱에서 사용할 45가지 이상의 강력한 컨트롤을 찾습니다."
+title: "UWP 컨트롤 및 패턴 - Windows 앱 개발"
 author: mijacobs
+keywords: uwp controls, user interface, app controls
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 0562e3df0c2abbb0808df5f75ff4fe0b96eb6d7e
+ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
+ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -44,8 +45,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 <div class="uwpd-list-of-links">
 <ul>
 
-<li>[활성 캔버스](active-canvas.md)</li>
-
 <li>[자동 제안 상자](auto-suggest-box.md)</li>
 
 <li>[막대](app-bars.md)</li>
@@ -80,11 +79,15 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 <li>[목록](lists.md)</li>
 
+<li>[지도 컨트롤](../maps-and-location/controls-map.md)</li>
+
 <li>[마스터/세부](master-details.md)</li>
 
-<li>[미디어 재생](media-playback.md)</li>
-
+<li>[미디어 재생](media-playback.md)
+<ul>
 <li>[사용자 지정 전송 컨트롤](custom-transport-controls.md)</li>
+</ul>
+</li>
 
 <li>[탐색 창](nav-pane.md)</li>
 
@@ -107,16 +110,13 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 <li>[텍스트 컨트롤](text-controls.md)
 <ul>
 
-<li>[글꼴](fonts.md)</li>
-<li>[레이블](labels.md)</li>
+<li>[Labels(레이블)](labels.md)</li>
 
 <li>[암호 상자](password-box.md)</li>
 
 <li>[Rich-edit 상자](rich-edit-box.md)</li>
 
 <li>[서식 있는 텍스트 블록](rich-text-block.md)</li>
-
-<li>[Segoe MDL2 아이콘](segoe-ui-symbol-font.md)</li>
 
 <li>[맞춤법 검사 및 자동 완성](spell-checking-and-prediction.md)</li>
 
@@ -167,6 +167,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

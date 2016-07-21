@@ -3,8 +3,9 @@ title: "암호화 키"
 description: "이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
-ms.sourcegitcommit: 4c8f586f711b1a9e2d2f252cf28a5239d9d68122
-ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
+translationtype: Human Translation
+ms.sourcegitcommit: e7fba930c108744815f261e7d01d198626d7e7c9
+ms.openlocfilehash: a86f31a0b62958f1300e386dfb99fd7fc1432fc5
 
 ---
 
@@ -14,7 +15,7 @@ ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다.
+이 문서에서는 표준 키 파생 함수를 사용하여 키를 파생하는 방법과 대칭 및 비대칭 키를 사용하여 콘텐츠를 암호화하는 방법을 보여 줍니다. 
 
 ## 대칭 키
 
@@ -75,6 +76,6 @@ CBC와 같은 일부 모드에서는 첫 번째 암호 텍스트 블록에 IV(In
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

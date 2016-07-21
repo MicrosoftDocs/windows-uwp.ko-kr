@@ -4,6 +4,7 @@ Description: "앱이 무료인지 여부와 상관없이, 앱 내에서 바로 �
 title: "앱에서 바로 구매 제품 사용"
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: in-app offer code sample
+translationtype: Human Translation
 ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
 ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
 
@@ -136,6 +137,6 @@ void AppInit()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

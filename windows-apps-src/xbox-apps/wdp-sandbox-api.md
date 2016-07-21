@@ -2,6 +2,7 @@
 author: payzer
 title: "디바이스 포털 Xbox Live 샌드박스 API 참조"
 description: "프로그래밍 방식으로 Xbox Live 샌드박스에 액세스하는 방법을 알아봅니다."
+translationtype: Human Translation
 ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
 ms.openlocfilehash: c1671db55dcb05ab7a126fad271a5e49146fe9ac
 
@@ -89,6 +90,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

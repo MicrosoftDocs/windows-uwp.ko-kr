@@ -3,6 +3,7 @@ author: joannaleecy
 title: "접근성 높은 게임 만들기"
 description: "접근성 높은 게임을 만드는 방법을 알아봅니다. 포괄 게임 디자인 원칙을 사용하여 접근성 높은 게임을 만들 수 있습니다."
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
+translationtype: Human Translation
 ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
 ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
 
@@ -216,6 +217,6 @@ PSE(감광성 간질)는 깜박이는 조명이나 움직이는 특정 시각적
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -8,8 +8,8 @@ template: detail.hbs
 extraBodyClass: style-typography
 brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
 
 ---
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
 
 ![큰 형식이 작은 형식 위에 겹쳐지는 방식을 보여 줍니다.](images/line-height-stacking.png)
 
-XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 겹치고 적절한 여백을 설정합니다.
+XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 겹치고 적절한 여백을 설정합니다.
 
 ```xaml
 <StackPanel Width="200">
@@ -83,7 +83,7 @@ Segoe는 부드럽고 친숙한 모양을 가진 인간 중심의 서체로, 필
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
+XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
     </div>
 </aside>
 
@@ -129,7 +129,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
+XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
     </div>
 </aside>
 
@@ -154,7 +154,7 @@ XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/wind
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다. 
+대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다. 
     </div>
 </aside>
 
@@ -185,6 +185,6 @@ XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/wind
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

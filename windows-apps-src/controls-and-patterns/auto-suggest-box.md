@@ -6,8 +6,9 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: 12f5905fce642a10656864e41325c8f4bd56c025
 
 ---
 # 자동 제안 상자
@@ -144,18 +145,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
     ![검색 결과가 없는 자동 제안 상자의 예](images/controls_autosuggest_noresults.png)
 
-{{&gt; aside-internal content = "
-## 세계화 및 지역화 검사 목록
-
-<table>
-<tr>
-<th>세로 간격</th><td>세로 간격에 라틴어가 아닌 문자를 사용하여 숫자를 비롯한 라틴어가 아닌 스크립트가 제대로 표시되게 합니다.</td>
-</tr>
-<tr>
-<th>스크롤</th><td>자동 제안 텍스트가 선택된 경우 사용자가 문자열의 끝까지 스크롤할 수 있어야 합니다.</td>
-</tr>
-</table>
-"}}
 
 ## 관련 문서
 
@@ -168,6 +157,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,8 +4,8 @@ description: "이 로드맵은 Windows 10&amp;\\#160;UWP(유니버설 Windows �
 title: "엔터프라이즈"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 468c87694f519a5081f3242346039e6e7310d1db
-ms.openlocfilehash: c2cfcc270d6b1380f065e7ada275c1c60ae05b04
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 58f7c9739a000b6cac1c000570807587233018ce
 
 ---
 
@@ -16,7 +16,7 @@ ms.openlocfilehash: c2cfcc270d6b1380f065e7ada275c1c60ae05b04
 
 이 로드맵은 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 대한 주요 엔터프라이즈 기능을 간략하게 설명합니다. Windows 10에서는 모든 디바이스에 맞게 조정되는 하나의 앱을 만들어 한 번 작성하여 모든 디바이스에 배포할 수 있습니다. 조직에서 필요로 하는 보안, 관리 및 구성에 대한 제어 기능을 제공하는 동시에 사용자가 기대하는 멋진 환경을 빌드할 수 있습니다.
 
-**참고** 이 문서는 엔터프라이즈 UWP 앱을 작성하는 개발자를 대상으로 합니다. 일반 UWP 개발에 대한 자세한 내용은 [Windows 10 앱 사용 방법 가이드](https://msdn.microsoft.com/library/windows/apps/mt244352)를 참조하세요. WPF, Windows Forms 또는 Win32 개발에 대한 자세한 내용은 [데스크톱 개발자 센터](https://dev.windows.com/en-us/desktop)를 참조하세요. Windows 10 배포 또는 엔터프라이즈 보안 기능 관리 등의 IT 전문가 리소스에 대한 자세한 내용은 [TechNet의 Windows 10](https://msdn.microsoft.com/library/dn986868)을 참조하세요.
+**참고** 이 문서는 엔터프라이즈 UWP 앱을 작성하는 개발자를 대상으로 합니다. 일반 UWP 개발에 대한 자세한 내용은 [Windows 10 앱 사용 방법 가이드](https://msdn.microsoft.com/library/windows/apps/mt244352)를 참조하세요. WPF, Windows Forms 또는 Win32 개발에 대한 자세한 내용은 [데스크톱 개발자 센터](https://dev.windows.com/desktop)를 참조하세요. Windows 10 배포 또는 엔터프라이즈 보안 기능 관리 등의 IT 전문가 리소스에 대한 자세한 내용은 [TechNet의 Windows 10](https://msdn.microsoft.com/library/dn986868)을 참조하세요.
 
  
 
@@ -95,7 +95,7 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 | 항목 | 설명 |
 |-------|-------------|
 | [엔터프라이즈에 LOB 앱 배포](https://msdn.microsoft.com/library/windows/apps/mt608995) | LOB(기간 업무) 앱을 일반 사용자에게 광범위하게 제공하지 않고 비즈니스용 Windows 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다. |
-| [앱 테스트용 로드](https://technet.microsoft.com/en-us/library/mt269549) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
+| [앱 테스트용 로드](https://technet.microsoft.com/library/mt269549) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
 | [Windows 스토어에 앱 게시](https://dev.windows.com/publish) | 통합 Windows 스토어에서는 모든 Windows 디바이스용 앱을 모두 게시하고 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |
 
  
@@ -116,6 +116,6 @@ Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

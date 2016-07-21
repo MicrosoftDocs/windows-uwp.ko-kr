@@ -4,6 +4,7 @@ Description: "이러한 지침은 앱에 대한 효과적인 도움말 콘텐츠
 title: "앱 도움말에 대한 지침"
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
 ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
 

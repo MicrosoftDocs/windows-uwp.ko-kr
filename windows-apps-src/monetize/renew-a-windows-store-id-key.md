@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "이 메서드를 사용하여 Windows 스토어 키를 갱신합니다."
 title: "Windows 스토어 ID 키 갱신"
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
 
 ---
 
@@ -32,10 +33,10 @@ ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
 
 | 키 유형    | 메서드 | 요청 URI                                              |
 |-------------|--------|----------------------------------------------------------|
-| 컬렉션 | 게시   | `https://collections.mp.microsoft.com/v6.0/b2b/keys/renew` |
-| 구입    | 게시   | `https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew`    |
+| 컬렉션 | 게시   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
+| 구입    | 게시   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
-<br/> 
+<span/>
 
 ### 요청 헤더
 
@@ -45,7 +46,7 @@ ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
 
-<br/> 
+<span/>
 
 ### 요청 본문
 
@@ -54,7 +55,7 @@ ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
 | serviceTicket | 문자열 | Azure AD 액세스 토큰입니다.        | 예      |
 | 키           | 문자열 | 만료된 Windows 스토어 ID 키입니다. | 아니요       |
 
-<br/> 
+<span/> 
 
 ### 요청 예제
 
@@ -79,7 +80,7 @@ Host: collections.mp.microsoft.com
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
 | 키       | 문자열 | Windows 스토어 컬렉션 API 또는 구매 API에 나중에 호출할 때 사용할 수 있는 새로 고친 Windows 서비스 키입니다. | 아니요       |
 
-<br/> 
+<span/>
 
 ### 응답 예제
 
@@ -106,7 +107,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 | 401  | 권한 없음 | AuthenticationTokenInvalid | Azure AD 액세스 토큰이 잘못되었습니다. ServiceError의 세부 정보에 토큰이 만료되거나 *appid* 클레임이 누락되는 경우와 같은 자세한 정보가 포함되는 경우도 있습니다. |
 | 401  | 권한 없음 | InconsistentClientId       | Windows 스토어 ID 키의 *clientId* 클레임과 Azure AD 액세스 토큰의 *appid* 클레임이 일치하지 않습니다.                                                                     |
 
-<br/> 
+<span/>
 
 ## 관련 항목
 
@@ -118,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

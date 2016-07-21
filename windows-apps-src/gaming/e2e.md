@@ -3,8 +3,9 @@ author: mtoepke
 title: "Windows 10 게임 개발 가이드"
 description: "UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종단 간 가이드입니다."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
-ms.sourcegitcommit: 35017dd14f873350d7e9d75ff6c5c519067547b5
-ms.openlocfilehash: 33c158e254a367e65607e86ff425e9829b8255f5
+translationtype: Human Translation
+ms.sourcegitcommit: a9beb420ac13eb74c0109b30508e49d5305bc67c
+ms.openlocfilehash: 30f8408e6d125423e69615a3f9341e8f7d886fc8
 
 ---
 
@@ -30,12 +31,9 @@ Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 �
 
 ## 게임 개발 리소스
 
-
 설명서에서 개발자 프로그램, 포럼, 블로그 및 샘플에 이르기까지 게임 개발 과정에 도움을 줄 수 있는 많은 리소스가 있습니다. 다음은 Windows 10 게임 개발을 시작할 때 알아야 할 리소스입니다.
 
 > **참고** Xbox One 개발 및 선택 Windows 10 게임 기능(예: Xbox Live 서비스)은 ID@Xbox 및 Microsoft Studios와 같은 프로그램을 통해 관리됩니다. 이 가이드에서는 광범위한 리소스를 설명하므로, 사용하는 프로그램 또는 특정 개발 역할에 따라 일부 리소스에는 액세스할 수 없을 수도 있습니다. 예제는 developer.xboxlive.com, forums.xboxlive.com, xdi.xboxlive.com 또는 GDN(게임 개발자 네트워크)으로 확인되는 링크입니다. Microsoft와의 파트너 제휴 방법에 대한 내용은 [개발자 프로그램](#programs)을 참조하세요.
-
- 
 
 ### 게임 개발 설명서
 
@@ -80,7 +78,6 @@ Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 �
     </tr>     
 </table>
 
-
 ### 개발자 프로그램
 
 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. Windows 스토어에 게임을 게시하려면 Windows 개발자 센터에서 개발자 계정을 만들어야 합니다. 게임과 스튜디오 요구 사항에 따라 다른 프로그램이 유용할 수 있으며 Xbox One 개발 및 Xbox Live 통합과 같은 기회를 만들 수 있습니다.
@@ -97,7 +94,7 @@ Windows 개발자 센터에서 개발자 계정을 등록하는 작업은 Window
     <tr>
         <td>개발자 계정 등록</td>
         <td>[등록 준비](https://msdn.microsoft.com/library/windows/apps/bg124287)</td>
-    </tr>
+    </tr> 
 </table>  
 
 
@@ -188,7 +185,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(GDN)</td>
-        <td>[샘플](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx)</td>
+        <td>[샘플](https://developer.xboxlive.com/platform/development/education/Pages/Samples.aspx)</td>
     </tr>
     <tr>
         <td>Windows 8 게임 샘플(MSDN 코드 갤러리)</td>
@@ -329,7 +326,27 @@ UWP 게임 개발을 시작할 때 그래픽, 입력, 오디오, 네트워킹, �
         <td>[Microsoft 에코시스템에서의 게임의 미래](http://channel9.msdn.com/Events/GDC/GDC-2015/The-Future-of-Gaming-Across-the-Microsoft-Ecosystem)</td>
     </tr>
 </table>
- 
+
+### 게임 계획
+
+게임을 계획할 때 고려해야 할 높은 수준의 개념 및 계획 항목이 몇 가지 있습니다.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>게임에 접근성 구현</td>
+        <td>[게임의 접근성](https://msdn.microsoft.com/windows/uwp/gaming/accessibility-for-games)</td>
+    </tr>
+    <tr>
+        <td>게임에 클라우드 사용</td>
+        <td>[게임의 클라우드](https://msdn.microsoft.com/windows/uwp/gaming/cloud-for-games)</td>
+    </tr>
+</table>
+
+
 
 ### 그래픽 기술 및 프로그래밍 언어 선택
 
@@ -1028,7 +1045,7 @@ Direct3D 12의 변경 사항 및 Direct3D 12를 사용하여 프로그래밍을 
  
 #### DirectX 도구 키트 및 라이브러리
 
-DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 기하 도형 처리 라이브러리에서는 텍스처, 메시, 스프라이트 및 기타 유틸리티 기능과 DirectX 개발용 도우미 클래스를 제공합니다. 이러한 라이브러리를 사용하면 이러한 기능을 직접 구현하는 데 비해 많은 시간과 노력을 절약할 수 있습니다. 주로 Direct3D 11용으로 구현되었지만 이러한 라이브러리의 일부는 Direct3D 12에서도 작동합니다.
+DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기하 도형 처리 라이브러리, UVAtlas 라이브러리 및 DirectXMath 라이브러리에서는 텍스처, 메시, 스프라이트 및 기타 유틸리티 기능과 DirectX 개발용 도우미 클래스를 제공합니다. 이러한 라이브러리를 사용하면 개발 시간과 노력을 절약할 수 있습니다.
 
 <table>
     <colgroup>
@@ -1036,16 +1053,28 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>DirectX 도구 키트 가져오기(DirectX 11)</td>
+        <td>DirectX 11용 DirectX 도구 키트 가져오기</td>
         <td>[DirectXTK](http://go.microsoft.com/fwlink/?LinkId=248929)</td>
     </tr>
     <tr>
-        <td>DirectX 텍스처 처리 라이브러리 가져오기(DirectX 11)</td>
+        <td>DirectX 12용 DirectX 도구 키트 가져오기</td>
+        <td>[DirectXTK 12](http://go.microsoft.com/fwlink/?LinkID=615561)</td>
+    </tr>
+    <tr>
+        <td>DirectX 텍스처 처리 라이브러리 가져오기</td>
         <td>[DirectXTex](http://go.microsoft.com/fwlink/?LinkId=248926)</td>
     </tr>
     <tr>
         <td>DirectXMesh 기하 도형 처리 라이브러리 가져오기</td>
         <td>[DirectXMesh](http://go.microsoft.com/fwlink/?LinkID=324981)</td>
+    </tr>
+    <tr>
+        <td>isochart 텍스처 아틀라스의 생성 및 압축용 UVAtlas 가져오기</td>
+        <td>[UVAtlas](http://go.microsoft.com/fwlink/?LinkID=512686)</td>
+    </tr>
+    <tr>
+        <td>DirectXMath 라이브러리 가져오기</td>
+        <td>[DirectXMath](http://go.microsoft.com/fwlink/?LinkID=615560)</td>
     </tr>
     <tr>
         <td>DirectXTK에서 Direct3D 12 지원(블로그 게시물)</td>
@@ -1072,11 +1101,11 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 
     </tr>
     <tr>
         <td>Intel: DirectX 12의 다중 어댑터 지원</td>
-        <td>[DirectX 12를 사용하여 명시적 다중 어댑터 응용 프로그램을 구현하는 방법](https://software.intel.com/en-us/articles/multi-adapter-support-in-directx-12)</td>
+        <td>[DirectX 12를 사용하여 명시적 다중 어댑터 응용 프로그램을 구현하는 방법](https://software.intel.com/articles/multi-adapter-support-in-directx-12)</td>
     </tr>
     <tr>
         <td>Intel: DirectX 12 자습서</td>
-        <td>[Intel, Suzhou Snail 및 Microsoft의 공동 백서](https://software.intel.com/en-us/articles/tutorial-migrating-your-apps-to-directx-12-part-1)</td>
+        <td>[Intel, Suzhou Snail 및 Microsoft의 공동 백서](https://software.intel.com/articles/tutorial-migrating-your-apps-to-directx-12-part-1)</td>
     </tr>
 </table>
 
@@ -1114,6 +1143,14 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리 및 DirectXMesh 
     <tr>
         <td>라이브 타일 템플릿을 대화형으로 개발하기 위한 Windows 10 앱</td>
         <td>[알림 시각화 도우미](https://www.microsoft.com/store/apps/9nblggh5xsl1)</td>
+    </tr>
+    <tr>
+        <td>Visual Studio의 UWP 타일 생성기 확장</td>
+        <td>[단일 이미지를 사용하여 필요한 모든 타일을 만들기 위한 도구](https://visualstudiogallery.msdn.microsoft.com/09611e90-f3e8-44b7-9c83-18dba8275bb2)</td>
+    </tr>
+    <tr>
+        <td>Visual Studio의 UWP 타일 생성기 확장(블로그 게시물)</td>
+        <td>[UWP 타일 생성기 도구 사용에 대한 팁](https://blogs.windows.com/buildingapps/2016/02/15/uwp-tile-generator-extension-for-visual-studio/)</td>
     </tr>
 </table>
  
@@ -1262,6 +1299,14 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
         <td>[게시자의 스토어 계정 액세스 없이 업로드할 수 있는 패키지 만들기](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/)</td>
     </tr>
     <tr>
+        <td>MakeAppx를 사용하여 앱 패키지 및 앱 패키지 번들 만들기</td>
+        <td>[앱 패키지 작성 도구 MakeAppx.exe를 사용하여 패키지 만들기](https://msdn.microsoft.com/library/windows/desktop/hh446767)</td>
+    </tr>
+    <tr>
+        <td>SignTool을 사용하여 파일에 디지털 서명</td>
+        <td>[SignTool을 사용하여 파일에 서명하고 파일의 서명 확인](https://msdn.microsoft.com/library/windows/desktop/aa387764)</td>
+    </tr>      
+    <tr>
         <td>게임 업로드 및 버전 관리</td>
         <td>[앱 패키지 업로드](https://msdn.microsoft.com/library/windows/apps/mt148542)</td>
     </tr>
@@ -1320,6 +1365,10 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     <col width="50%" />
     <col width="50%" />
     </colgroup>
+    <tr>
+        <td>개발자 센터 앱</td>
+        <td>[게시된 앱의 성능을 확인하는 개발자 센터 Windows 10 앱](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)</td>
+    </tr>  
     <tr>
         <td>Windows 개발자 센터 분석</td>
         <td>[분석](https://msdn.microsoft.com/library/windows/apps/mt148522)</td>
@@ -1447,6 +1496,6 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

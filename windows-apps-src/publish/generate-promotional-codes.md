@@ -3,6 +3,7 @@ author: jnHs
 Description: "Windows 스토어에 게시한 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 홍보 코드를 생성할 수 있습니다."
 title: "홍보 코드 생성"
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+translationtype: Human Translation
 ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
 ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
@@ -138,6 +139,6 @@ Windows 스토어에 게시한 앱 또는 IAP에 대한 홍보 코드를 주문�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

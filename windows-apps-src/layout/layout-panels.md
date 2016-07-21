@@ -6,8 +6,8 @@ ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a8abaf9e272af3e9563ddb48a1a53993a762c675
 
 ---
 # 레이아웃 패널
@@ -35,7 +35,7 @@ ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
 
 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
-> **참고** &nbsp;&nbsp;연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
+> **참고**&nbsp;&nbsp;연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
 
 **패널 테두리**
 
@@ -51,7 +51,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ![테두리가 포함된 그리드](images/layout-panel-grid-border.png)
 
-기본 제공 테두리 속성을 사용하면 XAML 요소 수를 줄일 수 있으므로 앱의 UI 성능을 향상시킬 수 있습니다. 레이아웃 패널 및 UI 성능에 대한 자세한 내용은 [XAML 레이아웃 최적화](https://msdn.microsoft.com/en-us/library/windows/apps/mt404609.aspx)를 참조하세요.
+기본 제공 테두리 속성을 사용하면 XAML 요소 수를 줄일 수 있으므로 앱의 UI 성능을 향상시킬 수 있습니다. 레이아웃 패널 및 UI 성능에 대한 자세한 내용은 [XAML 레이아웃 최적화](https://msdn.microsoft.com/library/windows/apps/mt404609.aspx)를 참조하세요.
 
 ## RelativePanel
 
@@ -225,6 +225,6 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

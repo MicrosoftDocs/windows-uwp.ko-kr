@@ -3,6 +3,7 @@ author: jnHs
 Description: "개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다."
 title: "앱 광고 캠페인 만들기"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
+translationtype: Human Translation
 ms.sourcegitcommit: ce26f020480c3f45e3fc4130a49eb66ecbdf5ba7
 ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
 

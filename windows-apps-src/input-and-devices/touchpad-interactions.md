@@ -5,6 +5,7 @@ title: "터치 패드 조작"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
@@ -166,6 +167,6 @@ ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

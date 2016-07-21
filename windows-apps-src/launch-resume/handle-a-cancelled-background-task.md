@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "취소된 백그라운드 작업 처리"
 description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
@@ -46,7 +47,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >    }
 > ```
 
-[!div class="tabbedCodeSnippets"] **\_CancelRequested**라는 플래그 변수를 백그라운드 작업 클래스에 추가합니다.
+**\_CancelRequested**라는 플래그 변수를 백그라운드 작업 클래스에 추가합니다. 이 변수는 취소가 요청된 시점을 나타내는 데 사용됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -57,9 +58,9 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     volatile bool CancelRequested;
 > ```
 
-이 변수는 취소가 요청된 시점을 나타내는 데 사용됩니다.
+1단계에서 만든 OnCanceled 메서드에서 **\_CancelRequested** 플래그 변수를 **true**로 설정합니다.
 
-[!div class="tabbedCodeSnippets"]
+전체 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509) OnCanceled 메서드에서는 **\_CancelRequested**를 **true**로 설정하고 잠재적으로 유용한 디버그 출력을 씁니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -85,7 +86,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     }
 > ```
 
-1단계에서 만든 OnCanceled 메서드에서 **\_CancelRequested** 플래그 변수를 **true**로 설정합니다. 전체 [백그라운드 작업 샘플]( http://go.microsoft.com/fwlink/p/?linkid=227509) OnCanceled 메서드에서는 **\_CancelRequested**를 **true**로 설정하고 잠재적으로 유용한 디버그 출력을 씁니다.
+백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다. 예를 들면 다음 코드 줄을 사용합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -95,14 +96,14 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Run 메서드를 종료하여 취소 처리
 
 
-백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다.
+취소 요청이 수신되면 Run 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다.
 
-예를 들면 다음 코드 줄을 사용합니다. [!div class="tabbedCodeSnippets"]
+작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. **\_cancelRequested**가 true로 설정된 경우 작업을 중지합니다.
 
-Run 메서드를 종료하여 취소 처리
+[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에는 백그라운드 작업이 취소될 경우 추기적 타이머 콜백을 중지하는 검사가 포함되어 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -132,11 +133,11 @@ Run 메서드를 종료하여 취소 처리
 >     }
 > ```
 
-> 취소 요청이 수신되면 Run 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다. 작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다.
+> **참고** 위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
-**\_cancelRequested**가 true로 설정된 경우 작업을 중지합니다.
+작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다.
 
-[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)(영문)에는 백그라운드 작업이 취소될 경우 추기적 타이머 콜백을 중지하는 검사가 포함되어 있습니다.
+[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 LocalSettings에 상태를 기록합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -200,15 +201,15 @@ Run 메서드를 종료하여 취소 처리
 >     }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## 설명
 
-**참고** 위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다.
+[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
 
-[**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
+설명을 위해 샘플 코드에서는 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서 Run 메서드와 콜백 타이머의 일부만 표시합니다.
 
-## 작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다.
+## Run 메서드 예
 
-[백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)(영문)에서는 LocalSettings에 상태를 기록합니다.
+컨텍스트에 대한 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)의 전체 Run 메서드 및 타이머 콜백 코드는 아래와 같습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -327,23 +328,23 @@ Run 메서드를 종료하여 취소 처리
 > }
 > ```
 
-> [!div class="tabbedCodeSnippets"] 설명
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
+## 관련 항목
 
-* [설명을 위해 샘플 코드에서는 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서 Run 메서드와 콜백 타이머의 일부만 표시합니다.](create-and-register-a-background-task.md)
-* [Run 메서드 예](declare-background-tasks-in-the-application-manifest.md)
-* [컨텍스트에 대한 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)(영문)의 전체 Run 메서드 및 타이머 콜백 코드는 아래와 같습니다.](guidelines-for-background-tasks.md)
-* [[!div class="tabbedCodeSnippets"]](monitor-background-task-progress-and-completion.md)
-* [**참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.](register-a-background-task.md)
-* [Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.](respond-to-system-events-with-background-tasks.md)
-* [관련 항목](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 만들기 및 등록](set-conditions-for-running-a-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](update-a-live-tile-from-a-background-task.md)
-* [백그라운드 작업 지침](use-a-maintenance-trigger.md)
+* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
+* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업 등록](register-a-background-task.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 
-* [백그라운드 작업 진행 및 완료 모니터링](debug-a-background-task.md)
-* [백그라운드 작업 등록](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
+* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 

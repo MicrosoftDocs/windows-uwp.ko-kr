@@ -3,6 +3,7 @@ author: jnHs
 Description: "앱에서 AdMediatorControl 또는 AdControl을 사용하여 배너 광고를 표시하는 경우 앱에서 Microsoft 계열사 광고를 표시하여 광고 유효 노출률 및 수익을 늘릴 수 있습니다."
 title: "패키지 플라이트"
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
+translationtype: Human Translation
 ms.sourcegitcommit: 9e62a7aa18950f7e1cc26b42762e3bb937c389ac
 ms.openlocfilehash: c538da2a58f38925938b9e28ec7ca65cdb9858a3
 

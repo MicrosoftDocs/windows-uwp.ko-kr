@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다."
 title: "앱 획득 가져오기"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 7f87f931c92eca1f64fbd23b4fcba3359293f94a
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: e28c309a51d28e14e57b8bd027dc8c353311d89a
 
 ---
 
@@ -33,9 +34,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 메서드 | 요청 URI                                                              |
 |--------|--------------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/appacquisitions``` |
 
- 
+<span/>
 
 ### 요청 헤더
 
@@ -43,9 +44,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
- 
+<span/> 
 
-### 요청 본문
+### 요청 매개 변수
 
 <table>
 <colgroup>
@@ -127,10 +128,11 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
+<span/>
  
 ### 필드 필터링
 
-요청 본문의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 다음은 *filter* 매개 변수의 몇 가지 예입니다.
+요청의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 다음은 *filter* 매개 변수의 몇 가지 예입니다.
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne 'less than 13')*
@@ -233,7 +235,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### 요청 예제
 
@@ -258,6 +260,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 구입 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                             |
 
+<span/>
  
 ### 구입 값
 
@@ -278,7 +281,7 @@ Authorization: Bearer <your access token>
 | acquisitionType     | 문자열 | 구입 형식(무료, 유료 등)입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                                    |
 | acquisitionQuantity | 숫자 | 지정된 집계 수준 중에 발생한 구입 횟수입니다.                                                                                                                                                         |
 
- 
+<span/> 
 
 ### 응답 예제
 
@@ -317,6 +320,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

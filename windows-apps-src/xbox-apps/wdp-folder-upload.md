@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "디바이스 포털 폴더 업로드 API 참조"
 description: "프로그래밍 방식으로 폴더 업로드 API에 액세스하는 방법을 알아봅니다."
+translationtype: Human Translation
 ms.sourcegitcommit: fdc25fa4bd7bd5bfa598b993f23cd0ae9783dd0e
 ms.openlocfilehash: 942ddc13b0deba382ad7758bc30bd9a5b0cceb11
 
@@ -53,6 +54,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,6 +3,7 @@ author: msatranjr
 title: "Windows 런타임 구성 요소"
 description: "Windows 런타임 구성 요소는 C#, Visual Basic, JavaScript, C++ 등 모든 언어에서 인스턴스화하고 사용할 수 있는 자체 포함된 개체입니다."
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
+translationtype: Human Translation
 ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
 ms.openlocfilehash: ddbfc30f765bdb1dacbf5c6b72255233fe134073
 
@@ -36,6 +37,6 @@ Visual Studio 및 C#, Visual Basic 또는 C++를 통해 UWP(유니버설 Windows
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

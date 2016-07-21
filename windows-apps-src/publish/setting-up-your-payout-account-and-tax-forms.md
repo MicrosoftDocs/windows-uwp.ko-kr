@@ -3,6 +3,7 @@ author: jnHs
 Description: "Windows 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌를 설정하고 필요한 세금 양식을 입력해야 합니다."
 title: "지급 계좌 및 세금 양식 설정"
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
+translationtype: Human Translation
 ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
 ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
 

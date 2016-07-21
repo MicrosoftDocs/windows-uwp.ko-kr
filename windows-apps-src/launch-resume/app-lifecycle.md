@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "앱 수명 주기"
 description: "이 항목에서는 활성화된 시점부터 닫힐 때까지의 UWP(유니버설 Windows 플랫폼) 앱 수명 주기에 대해 설명합니다."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: c35f3c4bbc33d7202769badd7a0bcdc91f39bc84
 
 ---
 
@@ -102,7 +103,7 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 
 대개 앱은 일시 중단 이벤트를 받으면 상태를 저장하고 리소스와 파일 핸들을 즉시 해체해야 하며 코드는 완료까지 일반적으로 1초 이상 걸리지 않습니다. 앱이 일시 중단 이벤트에서 몇 초 이내에 반환되지 않으면 Windows는 앱이 응답을 중지했다고 가정하고 앱을 종료합니다.
 
-앱이 백그라운드 작업을 완료하기 위해 계속 실행되어야 하는 앱 시나리오도 있습니다. 예를 들어 앱이 백그라운드에서 오디오를 계속 재생할 수 있습니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요. 또한 앱이 일시 중단되거나 종료된 경우에도 백그라운드 전송 작업은 계속됩니다. 자세한 내용은 [파일을 다운로드하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)을 참조하세요.
+앱이 백그라운드 작업을 완료하기 위해 계속 실행되어야 하는 앱 시나리오도 있습니다. 예를 들어 앱이 백그라운드에서 오디오를 계속 재생할 수 있습니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요. 또한 앱이 일시 중단되거나 종료된 경우에도 백그라운드 전송 작업은 계속됩니다. 자세한 내용은 [파일을 다운로드하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer)을 참조하세요.
 
 지침은 [앱 일시 중단 및 다시 시작에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465088)을 참조하세요.
 
@@ -174,7 +175,7 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 
 -   [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) 네임스페이스
--   [ **Windows.ApplicationModel.Activation** ](https://msdn.microsoft.com/library/windows/apps/br224766) 네임스페이스
+-   [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766) 네임스페이스
 -   [**Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865) 네임스페이스
 -   [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) 클래스(XAML)
 -   [**Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041) 클래스(XAML)
@@ -199,6 +200,6 @@ Windows 8.1 이상에서는 사용자가 앱을 닫으면 앱이 확실히 종�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "URI에 대한 기본 앱 실행"
 description: "URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.sourcegitcommit: 9011d2e2e1e51edc89851e815d31e13390c24f96
-ms.openlocfilehash: d454317d135e2b2b952c16fb00685e34b489865c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 053746735cb9f11bcdeb2244f33b589e4670974b
 
 ---
 
@@ -45,7 +46,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 
 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 사용하여 URI를 실행합니다. 이 메서드를 호출할 때 앱은 포그라운드 앱이어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 URI 실행을 앱의 UI에 직접 연결해야 합니다. 사용자는 항상 URI 실행을 시작하기 위해 일부 작업을 수행해야 합니다. URI를 실행하려는 경우 앱이 포그라운드에 없으면 URI가 실행되지 않으며 오류 콜백이 호출됩니다.
 
-먼저 URI를 나타내는 [**System.Uri**](https://msdn.microsoft.com/en-us/library/windows/apps/system.uri.aspx) 개체를 만든 다음 이 개체를 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드로 전달합니다. 반환되는 결과를 사용하여 다음 예제에 표시된 대로 호출에 성공했는지 확인합니다.
+먼저 URI를 나타내는 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/system.uri.aspx) 개체를 만든 다음 이 개체를 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드로 전달합니다. 반환되는 결과를 사용하여 다음 예제에 표시된 대로 호출에 성공했는지 확인합니다.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -225,6 +226,6 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

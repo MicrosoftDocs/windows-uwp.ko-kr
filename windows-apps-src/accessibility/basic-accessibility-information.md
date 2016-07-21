@@ -5,6 +5,7 @@ ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: "기본적인 접근성 정보 표시"
 label: Expose basic accessibility information
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
 

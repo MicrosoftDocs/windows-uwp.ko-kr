@@ -2,6 +2,7 @@
 Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환하는 방법을 알아봅니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환"
+translationtype: Human Translation
 ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
 ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
 

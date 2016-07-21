@@ -5,6 +5,7 @@ title: "텍스트 및 이미지 선택"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
 

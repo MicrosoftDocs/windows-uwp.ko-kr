@@ -3,20 +3,27 @@ author: v-angraf
 title: "Xbox One의 UWP에 대한 새로운 기능"
 description: "Xbox One의 UWP 앱에 대한 새로운 기능을 강조하여 설명합니다."
 area: Xbox
-ms.sourcegitcommit: 59019f209729b56e02ebdbdfd53a8fbf835c69f7
-ms.openlocfilehash: dfa94ad42a79d0f6b3f72fbf2efe9ce043532c56
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: edc9a914f200c643b1133cf07778e2ca3931d0d9
 
 ---
 
-# Xbox One의 UWP에 대한 2016년 6월 Developer Preview의 새로운 기능
+# Xbox One의 UWP에 대한 2016년 7월 Developer Preview의 새로운 기능
 
-Xbox One의 UWP(유니버설 Windows 플랫폼)에 대한 2016년 6월 Developer Preview 릴리스에는 다음과 같은 새로운 기능, 기존 기능의 업데이트 및 버그 수정이 포함되어 있습니다.
+Xbox One의 UWP(유니버설 Windows 플랫폼)에 대한 2016년 7월 Developer Preview 릴리스에는 다음과 같은 새로운 기능, 기존 기능의 업데이트 및 버그 수정이 포함되어 있습니다.
+
+## TCP/UDP 소켓을 사용하는 네트워킹이 출시되었습니다.  
+이제 기존의 TCP/UDP 소켓(WinSock, Windows.Networking.Sockets)을 사용하는 콘솔에서 인바운드 및 아웃바운드 네트워크 액세스를 사용할 수 있습니다.
+
+## Fiddler 지원
+이제 Xbox One에서 UWP(유니버설 Windows 플랫폼)를 사용하는 콘솔의 프록시로 Fiddler를 사용할 수 있습니다. Fiddler를 통해 Xbox 서비스와 신뢰 당사자 웹 서비스에서 나가고 들어오는 모든 HTTP/HTTPS 트래픽을 기록하고 검사할 수 있습니다. 자세한 내용은 [UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법](uwp-fiddler.md) 항목을 참조하세요.
 
 ## 마우스 모드가 이제 기본적으로 사용하도록 설정됨
 마우스 모드가 이제 XAML 및 호스트된 웹앱에 대해 기본적으로 사용하도록 설정됩니다.
 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.
 마우스 모드를 끄는 방법을 알아보려면 [마우스 모드를 사용하지 않도록 설정하는 방법](how-to-disable-mouse-mode.md)을 참조하세요.
-멋진 Xbox용 앱을 빌드하는 방법에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode)을 참조하세요.
+멋진 Xbox용 앱을 빌드하는 방법에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode)을 참조하세요.
 
 ## 확장된 UWP API 노출 영역이 이제 콘솔에서 작동함
 추가 UWP API가 이제 Xbox 콘솔에서 작동합니다. UWP API 지원에 대한 자세한 내용은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요. 
@@ -47,6 +54,6 @@ Xbox용 WDP(Windows Device Portal) 도구가 다음과 같이 향상되었습니
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

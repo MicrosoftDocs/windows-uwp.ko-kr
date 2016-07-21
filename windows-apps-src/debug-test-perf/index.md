@@ -3,6 +3,7 @@ author: mcleblanc
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: "디버깅, 테스트 및 성능"
 description: "Microsoft Visual Studio를 사용하여 앱을 디버깅 및 테스트할 수 있습니다. Windows 스토어 인증 프로세스에 맞게 앱을 준비하려면 Windows 앱 인증 키트를 사용합니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 3867bca43bef549fc67b202e329e884ee1ff8fa0
 ms.openlocfilehash: c10c1443ac5a0f4cbf07cf0accc8361ad9100168
 
@@ -27,6 +28,6 @@ Microsoft Visual Studio를 사용하여 앱을 디버깅 및 테스트할 수 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

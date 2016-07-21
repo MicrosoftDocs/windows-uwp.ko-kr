@@ -3,6 +3,7 @@ author: Mtoepke
 title: "Xbox 개발 환경에서의 UWP 설정"
 description: "Xbox 개발 환경에서의 UWP 설정 및 테스트 단계"
 area: Xbox
+translationtype: Human Translation
 ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
 ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
 

@@ -3,6 +3,7 @@ author: jnHs
 Description: "Windows 개발자 센터 대시보드에서 새 IAP(앱에서 바로 구매 제품)를 만드는 경우 제품 유형을 지정하고 제품 ID를 할당해야 합니다."
 title: "IAP 제품 유형 및 제품 ID 설정"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+translationtype: Human Translation
 ms.sourcegitcommit: ae4727974af632a275c102a6328734597cee3e9b
 ms.openlocfilehash: 9faee009cd907cd8ccdeded019e23713cbc058f0
 

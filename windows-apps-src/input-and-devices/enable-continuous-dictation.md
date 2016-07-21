@@ -5,6 +5,7 @@ title: "연속 받아쓰기 사용"
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 1bcf6ce700b50ff633a29863fee41c2bfa3d9f98
 

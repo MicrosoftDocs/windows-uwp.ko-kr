@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "URI 활성화 처리"
 description: "앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+translationtype: Human Translation
 ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
 ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
 
@@ -119,55 +120,55 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 > }
 > ```
 
-> [!div class="tabbedCodeSnippets"]
+> **참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다.
 
-**참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다. 앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
+앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML **Frame**을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
 
-시작 및 파일 계약에 단일 XAML **Frame**을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
+프로토콜 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
-## 프로토콜 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
+## 설명
 
 
-설명 악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다.
+악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다. 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다.
 
-> 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다. **참고** 앱에 대해 새 URI 체계 이름을 만들려는 경우 [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550)의 지침에 따라야 합니다.
+> **참고** 앱에 대해 새 URI 체계 이름을 만들려는 경우 [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550)의 지침에 따라야 합니다. 그러면 이름이 URI 스키마에 대한 표준을 충족하게 됩니다.
 
-> 그러면 이름이 URI 스키마에 대한 표준을 충족하게 됩니다.
+> **참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다.
 
-**참고** 프로토콜 계약을 통해 시작될 때 뒤로 단추는 사용자가 앱의 이전 콘텐츠가 아닌 앱이 시작된 화면으로 다시 돌아가도록 해야 합니다. 앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다.
+앱이 새 URI 대상을 여는 각 활성화 이벤트에 대해 새 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다.
 
-이런 식으로 새 XAML **Frame**에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 앱에서 시작 및 프로토콜 계약에 단일 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 사용하도록 결정하는 경우 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다.
+앱에서 시작 및 프로토콜 계약에 단일 XAML [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 사용하도록 결정하는 경우 새 페이지를 탐색하기 전에 **Frame**의 탐색 저널에서 페이지를 지워야 합니다. 프로토콜 계약을 통해 시작된 경우 사용자가 앱의 맨 위로 다시 이동할 수 있도록 하는 UI를 앱에 포함하는 것이 좋습니다.
 
-> 프로토콜 계약을 통해 시작된 경우 사용자가 앱의 맨 위로 다시 이동할 수 있도록 하는 UI를 앱에 포함하는 것이 좋습니다. **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
-## Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+## 관련 항목
 
 
-**관련 항목**
+**전체 예제**
 
-* [전체 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [연결 시작 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
 
-**연결 시작 예제**
+**개념**
 
-* [개념](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [파일 형식 및 URI 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
-**파일 형식 및 URI 연결 모델**
+**작업**
 
-* [작업](launch-default-app.md)
-* [URI에 대한 기본 앱 실행](handle-file-activation.md)
+* [URI에 대한 기본 앱 실행](launch-default-app.md)
+* [파일 활성화 처리](handle-file-activation.md)
 
-**파일 활성화 처리**
+**지침**
 
-* [지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**파일 형식 및 URI에 대한 지침**
+**참조**
 
-* [**참조**](https://msdn.microsoft.com/library/windows/apps/dn934791)
-* [**AppX 패키지 매니페스트**](https://msdn.microsoft.com/library/windows/apps/br224742)
-* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242330)
+* [**AppX 패키지 매니페스트**](https://msdn.microsoft.com/library/windows/apps/dn934791)
+* [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
+* [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
 
  
 

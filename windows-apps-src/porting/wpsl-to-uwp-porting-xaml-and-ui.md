@@ -3,8 +3,9 @@ author: mcleblanc
 description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 Windows Phone Silverlight에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다."
 title: "Windows Phone Silverlight XAML 및 UI를 UWP로 포팅"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
-ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
-ms.openlocfilehash: a34133b42872ce949644dc951255e6214164adad
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7fa520443f242844cd661d70bad0fdeb2297fb1d
 
 ---
 
@@ -154,9 +155,9 @@ Windows Phone Silverlight 앱 바 및 앱 바 단추는 UWP 앱에서처럼 바�
 
 UWP 앱의 바인딩 관련 기능에는 현재 다음과 같은 제한이 있습니다.
 
--   데이터 입력 유효성 검사와 [**IDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx) 및 [**INotifyDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx) 인터페이스를 기본적으로 지원하지 않습니다.
+-   데이터 입력 유효성 검사와 [**IDataErrorInfo**](https://msdn.microsoft.com/library/system.componentmodel.idataerrorinfo.aspx) 및 [**INotifyDataErrorInfo**](https://msdn.microsoft.com/library/system.componentmodel.inotifydataerrorinfo.aspx) 인터페이스를 기본적으로 지원하지 않습니다.
 -   [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스에 Windows Phone Silverlight에서 사용 가능한 확장된 서식 속성이 포함되어 있지 않습니다. 그러나 사용자 지정 서식을 제공하기 위해 여전히 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 를 구현할 수 있습니다.
--   [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
+-   [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) 메서드는 [**CultureInfo**](https://msdn.microsoft.com/library/system.globalization.cultureinfo.aspx) 개체 대신 언어 문자열을 매개 변수로서 가져옵니다.
 -   [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 클래스는 정렬과 필터링, 그리고 작업을 달리 그룹화하는 기능을 기본적으로 지원하지 않습니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946) 및 [데이터 바인딩 샘플](http://go.microsoft.com/fwlink/p/?linkid=226854)을 참조하세요.
 
 동일한 바인딩 기능이 대개 여전히 지원되긴 하지만 Windows 10은 컴파일된 바인딩이라는 고성능의 새로운 바인딩 메커니즘의 옵션을 제공합니다. 이 메커니즘은 {x:Bind} 태그 확장을 사용합니다. [XAML 데이터 바인딩의 새로운 향상 기능을 통해 앱 성능 개선](http://channel9.msdn.com/Events/Build/2015/3-635)(영문) 및 [x:Bind 샘플](http://go.microsoft.com/fwlink/p/?linkid=619989)(영문)을 참조하세요.
@@ -394,6 +395,6 @@ UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

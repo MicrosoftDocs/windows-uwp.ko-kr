@@ -3,8 +3,9 @@ author: awkoren
 Description: "데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)에서 UWP(유니버설 Windows 플랫폼) 앱으로 변환할 수 있게 준비합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환"
-ms.sourcegitcommit: 37d4c8ef6178fe78c7333c47848177b5185c6d61
-ms.openlocfilehash: 16d75ebd2499e56af742c1c9994fd92cc320c22b
+translationtype: Human Translation
+ms.sourcegitcommit: 45b9170ed311e6f17d1c51c0b7d1d288e07184a9
+ms.openlocfilehash: c5ffb1e912c2953d5f813f099e036d2d7b395b69
 
 ---
 
@@ -90,11 +91,12 @@ ms.openlocfilehash: 16d75ebd2499e56af742c1c9994fd92cc320c22b
 |-------|-------------|
 | [데스크톱 앱 변환기 미리 보기(Project Centennial)](desktop-to-uwp-run-desktop-app-converter.md) | 데스크톱 앱 변환기를 실행하는 방법을 보여 줍니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. |
 | [UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 수동으로 만드는 방법을 알아봅니다. |
+| [변환된 데스크톱 앱 확장](desktop-to-uwp-extensions.md) | 광범위한 UWP(유니버설 Windows 플랫폼) API를 사용하여 변환된 데스크톱 응용 프로그램을 향상할 수 있습니다. 그러나 모든 UWP 앱에서 사용할 수 있는 일반 API 외에도 변환된 데스크톱 앱에서만 사용할 수 있는 일부 확장 및 API가 있습니다. 이 문서에서는 이러한 확장을 설명하고 이러한 확장을 사용하는 방법을 보여 줍니다. |
 | [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md) | 앱을 변환한 후 성공적으로 배포하고 디버깅하는 데 도움이 되는 정보가 포함되어 있습니다. 또한 데스크톱 변환 확장의 내부에 대해 알고 싶은 경우 이 항목이 유용할 것입니다. |
 | [UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | 변환된 앱의 기능을 보여 주는 GitHub의 코드 샘플입니다. |
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

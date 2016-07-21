@@ -5,6 +5,7 @@ title: "도움말 및 지침에 대한 UX 지침"
 ms.assetid: 87867BFE-35D1-466E-B1F6-9EDCA3E5EA92
 label: In-app help and instructional UI
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 1e836d61ac242bbd366457cdf7c8acec9ad29ace
 ms.openlocfilehash: ff3d49e098b0b9b0e7a58a7985c77ab8022eb661
 

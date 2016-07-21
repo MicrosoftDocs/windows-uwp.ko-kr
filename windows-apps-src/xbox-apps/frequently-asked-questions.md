@@ -3,8 +3,9 @@ author: Mtoepke
 title: "질문과 대답"
 description: "Xbox의 UWP에 대한 FAQ입니다."
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 34e186049039d5a8366f34e985ad7250ef664f00
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
 
 ---
 
@@ -20,7 +21,7 @@ ms.openlocfilehash: 34e186049039d5a8366f34e985ad7250ef664f00
 
 정품 모드가 아니고 개발자 모드에서 실행 중인지 먼저 확인합니다. 정품 모드에 있을 경우에는 Xbox One에 연결할 수 없습니다. 이는 **홈** 단추를 누르고 화면 오른쪽의 개발자 홈 타일을 찾아 간단히 확인할 수 있습니다. 타일이 없고 대신 골드/라이브 콘텐츠가 표시되는 경우 정품 모드에 있는 것입니다. 개발자 모드로 전환하려면 개발자 모드 활성화 앱을 실행해야 합니다.
 
-> **참고** &nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다.
+> **참고**&nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다.
 
 자세한 내용은 이 페이지의 뒷부분에 있는 [배포 오류 수정](frequently-asked-questions.md#fixing-deployment-failures)을 참조하세요.
 
@@ -63,9 +64,9 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 ### 내 게임을 게시할 수 있나요?
 
-개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/en-us/Developers/id)에 등록해야 합니다. 
-[ID@XBOX](http://www.xbox.com/en-us/Developers/id)는 개발자에게 게이머 점수와 도전 과제 등 게임용 Xbox Live API에 대한 모든 권한을 제공하며 디바이스 간 멀티플레이어, 클라우드 저장, Xbox One에서 Xbox Live의 모든 기능을 활용하도록 해 줍니다. 
-[ID@XBOX](http://www.xbox.com/en-us/Developers/id)를 통해 Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 위한 Xbox One 개발자 키트에 액세스할 수도 있습니다.
+개발자 모드에서 UWP와 Xbox One을 사용하여 Xbox One에서 게임을 빌드하고 테스트할 수 있습니다. UWP 게임을 게시하려면 [ID@XBOX](http://www.xbox.com/Developers/id)에 등록해야 합니다. 
+[ID@XBOX](http://www.xbox.com/Developers/id)는 개발자에게 게이머 점수와 도전 과제 등 게임용 Xbox Live API에 대한 모든 권한을 제공하며 디바이스 간 멀티플레이어, 클라우드 저장, Xbox One에서 Xbox Live의 모든 기능을 활용하도록 해 줍니다. 
+[ID@XBOX](http://www.xbox.com/Developers/id)를 통해 Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 위한 Xbox One 개발자 키트에 액세스할 수도 있습니다.
 
 ### 표준 게임 엔진이 작동하나요?
 
@@ -87,7 +88,7 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 Visual Studio에서 앱을 배포할 수 없는 경우 이러한 단계가 문제 해결에 도움이 될 수 있습니다. 문제 해결이 안 되는 경우 포럼에 도움을 요청합니다.
 
-> **참고** &nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다. 0x87e10008 오류 메시지가 표시되면 사용자가 로그인되어 있는지 확인하고 다시 시도하세요.
+> **참고**&nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다. 0x87e10008 오류 메시지가 표시되면 사용자가 로그인되어 있는지 확인하고 다시 시도하세요.
 
 Visual Studio에서 Xbox One에 연결할 수 없는 경우에는 다음을 확인합니다.
 
@@ -97,7 +98,7 @@ Visual Studio에서 Xbox One에 연결할 수 없는 경우에는 다음을 확�
 3. 아직 따르지 않았다면 [개발 환경 설정](development-environment-setup.md) 항목 및 [Xbox One 도구 소개](introduction-to-xbox-tools.md) 항목을 참조하세요.
 
 4. 개발 PC에서 콘솔 IP 주소에 "ping"할 수 있는지 확인합니다.
-> **참고** &nbsp;&nbsp;최상의 배포 성능을 얻으려면 콘솔에 유선으로 연결하는 것이 좋습니다.
+> **참고**&nbsp;&nbsp;최상의 배포 성능을 얻기 위해서는 콘솔에 유선으로 연결하는 것이 좋습니다.
 
 5. **디버그** 탭의 인증 드롭다운 목록에서 유니버설(암호화되지 않은 프로토콜)을 사용하고 있는지 확인합니다. 자세한 내용은 [개발 환경 설정](development-environment-setup.md)을 참조하세요.
 
@@ -134,6 +135,6 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

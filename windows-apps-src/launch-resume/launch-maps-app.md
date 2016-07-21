@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "Windows 지도 앱 실행"
 description: "앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
 

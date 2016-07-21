@@ -3,6 +3,7 @@ author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
 description: "이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다."
 title: "백그라운드 오디오"
+translationtype: Human Translation
 ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
 ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 

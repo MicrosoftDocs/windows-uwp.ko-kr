@@ -3,8 +3,9 @@ author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: "변환 개요"
 description: "UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임&amp;\\#160;API에서 변형을 사용하는 방법을 알아봅니다."
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: f6212143a83e7423550b6529ea62e25c00728f79
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9e01a64f02d8a36e72c31263400130d0d808eb1b
 
 ---
 
@@ -21,10 +22,10 @@ UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임 API에서 
 
 변형은 변환, 회전, 크기 조정, 기울이기 등 광범위한 네 가지 분류로 나뉩니다. 그래픽 API를 사용하여 UI 요소의 모양을 변경하려는 경우 일반적으로 한 번에 하나의 작업만 정의하는 변형을 만드는 것이 가장 쉽습니다. 따라서 Windows 런타임은 이러한 각 변형 분류에 대한 개별 클래스를 정의합니다.
 
--   [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027): [**X**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.translatetransform.x.aspx) 및 [**Y**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.y)의 값을 설정하여 xy 공간에서 요소를 변환합니다.
--   [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940): [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.centerx.aspx), [**CenterY**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.centery.aspx), [**ScaleX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.scaletransform.scalex.aspx) 및 [**ScaleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scaleyproperty)의 값을 설정하여 중심점을 기준으로 변형 크기를 조정합니다.
--   [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932): [**Angle**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.rotatetransform.angle.aspx), [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.rotatetransform.centerx.aspx) 및 [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centery)의 값을 설정하여 xy 공간에서 회전합니다.
--   [**SkewTransform**](https://msdn.microsoft.com/library/windows/apps/BR242950): [**AngleX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.anglex.aspx), [**AngleY**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.angley.aspx), [**CenterX**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.skewtransform.centerx.aspx) 및 [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centeryproperty)의 값을 설정하여 xy 공간에서 기울입니다.
+-   [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027): [**X**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.x.aspx) 및 [**Y**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.translatetransform.y)의 값을 설정하여 xy 공간에서 요소를 변환합니다.
+-   [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940): [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centerx.aspx), [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centery.aspx), [**ScaleX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scalex.aspx) 및 [**ScaleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.scaleyproperty)의 값을 설정하여 중심점을 기준으로 변형 크기를 조정합니다.
+-   [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932): [**Angle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.angle.aspx), [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centerx.aspx) 및 [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.centery)의 값을 설정하여 xy 공간에서 회전합니다.
+-   [**SkewTransform**](https://msdn.microsoft.com/library/windows/apps/BR242950): [**AngleX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.anglex.aspx), [**AngleY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.angley.aspx), [**CenterX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.skewtransform.centerx.aspx) 및 [**CenterY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.scaletransform.centeryproperty)의 값을 설정하여 xy 공간에서 기울입니다.
 
 이 중에서 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027) 및 [**ScaleTransform**](https://msdn.microsoft.com/library/windows/apps/BR242940)이 UI 시나리오에 가장 많이 사용됩니다.
 
@@ -117,9 +118,9 @@ void StartAnimation (object sender, RoutedEventArgs e) {
 
 ## <span id="3-D_transforms"></span><span id="3-d_transforms"></span><span id="3-D_TRANSFORMS"></span>3D 변형
 
-Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있는 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx) 속성이 새로 도입되었습니다. 이렇게 하려면 [**PerspectiveTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx)를 사용하여 공유 3D 원근 또는 "카메라"를 장면에 추가한 다음 [**CompositeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228105)을 사용하듯이 [**CompositeTransform3D**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx)를 사용하여 3D 공간에서 요소를 변환합니다. 3D 변형을 구현하는 방법에 대한 자세한 내용은 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx)를 참조하세요.
+Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있는 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx) 속성이 새로 도입되었습니다. 이렇게 하려면 [**PerspectiveTransform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.perspectivetransform3d.aspx)를 사용하여 공유 3D 원근 또는 "카메라"를 장면에 추가한 다음 [**CompositeTransform**](https://msdn.microsoft.com/library/windows/apps/BR228105)을 사용하듯이 [**CompositeTransform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.media3d.compositetransform3d.aspx)를 사용하여 3D 공간에서 요소를 변환합니다. 3D 변형을 구현하는 방법에 대한 자세한 내용은 [**UIElement.Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx)를 참조하세요.
 
- 단일 개체에만 적용되는 더 간단한 3D 효과의 경우 [**UIElement.Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection) 속성을 사용할 수 있습니다. [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/br210192)을 이 속성의 값으로 사용하는 것은 고정된 원근 변경과 하나 이상의 3D 변형을 요소에 적용하는 것과 동일합니다. 이 변형 유형은 [XAML UI에 대한 3D 원근감 효과](3-d-perspective-effects.md)에서 자세히 설명합니다.
+ 단일 개체에만 적용되는 더 간단한 3D 효과의 경우 [**UIElement.Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection) 속성을 사용할 수 있습니다. [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/br210192)을 이 속성의 값으로 사용하는 것은 고정된 원근 변경과 하나 이상의 3D 변형을 요소에 적용하는 것과 동일합니다. 이 변형 유형은 [XAML UI에 대한 3D 원근감 효과](3-d-perspective-effects.md)에서 자세히 설명합니다.
 
 ## <span id="related_topics"></span>관련 항목
 
@@ -138,6 +139,6 @@ Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

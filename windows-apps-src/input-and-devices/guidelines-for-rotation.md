@@ -5,6 +5,7 @@ title: "회전"
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: a43bdd27ff7b79f561789a14d1a8e6caed08dc89
 

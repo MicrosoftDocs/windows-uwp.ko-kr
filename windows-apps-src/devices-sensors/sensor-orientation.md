@@ -4,8 +4,8 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "센서 방향"
 description: "Accelerometer, Gyrometer, Compass, Inclinometer 및 OrientationSensor 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 디바이스의 가로 방향에서 정의되고 사용자가 돌릴 때 디바이스와 함께 회전합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0f1123d3be66973d5b56a4789b1ff6e171f94900
 
 ---
 # 센서 방향
@@ -33,7 +33,7 @@ ms.openlocfilehash: 3da7957bf9b162f1ac1533ccff90c8764f34890a
 
 ![디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped임](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
 
-[**CurrentOrientation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx) 속성과 함께 [**GetForCurrentView**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) 메서드를 사용하여 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142) 열거형과 비교하여 논리를 만들 수 있습니다. 지원하는 각 방향에 대해 참조 축을 해당 방향으로 변환할 수 있도록 지원해야 합니다.
+[**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx) 속성과 함께 [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) 메서드를 사용하여 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142) 열거형과 비교하여 논리를 만들 수 있습니다. 지원하는 각 방향에 대해 참조 축을 해당 방향으로 변환할 수 있도록 지원해야 합니다.
 
 ## 가로 방향 우선 및 세로 방향 우선 장치
 
@@ -171,6 +171,6 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

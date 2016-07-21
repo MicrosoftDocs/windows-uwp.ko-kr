@@ -3,6 +3,7 @@ author: jnHs
 Description: "LOB(기간 업무) 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고 비즈니스용 Windows 스토어를 통해 대량 구매하도록 엔터프라이즈에 직접 해당 앱을 게시할 수 있습니다."
 title: "엔터프라이즈에 LOB 앱 배포"
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+translationtype: Human Translation
 ms.sourcegitcommit: 9ad7589344d2af986e52ae43acc3e48de6374ae6
 ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
 

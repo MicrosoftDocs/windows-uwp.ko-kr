@@ -3,8 +3,9 @@ author: Jwmsft
 ms.assetid: 0CBCEEA0-2B0E-44A1-A09A-F7A939632F3A
 title: "스토리보드 애니메이션"
 description: "스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다."
-ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 6c900ae6e1cfde8ec7261acfc57ea19b49f2ede1
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bcb8dbd3c0b2556c3d426687eb9be02ffe7265fb
 
 ---
 # 스토리보드 애니메이션
@@ -139,7 +140,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. Visual C++ 구성 요소 확장(C++/CX)에는 **Nullable** 형식이 없으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864)를 대신 사용합니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) 속성의 형식이 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. Visual C++ 구성 요소 확장(C++/CX)에는 **Nullable** 형식이 없으므로 [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864)를 대신 사용합니다.
 
 ### 애니메이션의 다른 속성
 
@@ -228,7 +229,7 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 -   애니메이션의 [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)이 0초입니다(주의 참조).
 -   애니메이션이 [**UIElement.Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962)를 대상으로 합니다.
--   애니메이션이 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip) 같은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성의 하위 속성 값을 대상으로 합니다.
+-   애니메이션이 [**Transform3D**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.transform3d.aspx), [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980), [**Projection**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.projection.aspx), [**Clip**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.clip) 같은 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) 속성의 하위 속성 값을 대상으로 합니다.
 -   애니메이션이 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/Hh759771) 또는 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/Hh759772)을 대상으로 합니다.
 -   애니메이션이 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 값을 대상으로 하고 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하여 해당 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)에 애니메이션 효과를 줍니다.
 -   애니메이션이 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)입니다.
@@ -262,9 +263,9 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 지금까지 살펴본 모든 내용은 실제로 애니메이션이 실행되거나 적용되도록 하지 않습니다. 애니메이션이 시작되고 실행될 때까지 애니메이션이 XAML에서 선언하는 값 변경 내용은 숨어 있으며 아직 수행되지 않습니다. 앱 수명이나 사용자 환경과 관련이 있는 애니메이션을 어떤 방식으로든 명시적으로 시작해야 합니다. 가장 간단한 수준으로 애니메이션의 부모인 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)에서 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 호출하여 해당 애니메이션을 시작합니다. 메서드를 XAML에서 직접 호출할 수는 없으므로 애니메이션을 사용하도록 설정하기 위해 수행하는 작업은 무엇이든 코드에서 수행해야 합니다. 해당 작업은 앱의 페이지 또는 구성 요소에 대해 코드 숨김이거나 사용자 지정 컨트롤 클래스를 정의하는 경우에는 컨트롤의 논리일 수 있습니다.
 
-일반적으로 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하고 기간이 완료될 때까지 애니메이션이 실행되도록 하면 됩니다. 그러나 고급 애니메이션 제어 시나리오에 사용되는 다른 API뿐만 아니라 [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) 및 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop) 메서드를 사용하여 런타임에 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 제어할 수도 있습니다.
+일반적으로 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하고 기간이 완료될 때까지 애니메이션이 실행되도록 하면 됩니다. 그러나 고급 애니메이션 제어 시나리오에 사용되는 다른 API뿐만 아니라 [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx), [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) 및 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop) 메서드를 사용하여 런타임에 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)를 제어할 수도 있습니다.
 
-무한 반복(`RepeatBehavior="Forever"`)되는 애니메이션을 포함하는 스토리보드에서 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하면 해당 애니메이션을 포함하는 페이지가 언로드되거나 특별히 [**Pause**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 또는 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop)을 호출할 때까지 해당 애니메이션이 실행됩니다.
+무한 반복(`RepeatBehavior="Forever"`)되는 애니메이션을 포함하는 스토리보드에서 [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)을 호출하면 해당 애니메이션을 포함하는 페이지가 언로드되거나 특별히 [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) 또는 [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop)을 호출할 때까지 해당 애니메이션이 실행됩니다.
 
 ### 앱 코드에서 애니메이션 시작
 
@@ -291,47 +292,47 @@ myStoryboard->Begin();
 myStoryBoard.Begin()
 ```
 
-[!div class="tabbedCodeSnippets"] 애니메이션이 값 적용을 마친 후 다른 논리를 실행하려는 경우 [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) 이벤트를 처리할 수 있습니다.
+애니메이션이 값 적용을 마친 후 다른 논리를 실행하려는 경우 [**Completed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx) 이벤트를 처리할 수 있습니다. 또한 속성 시스템/애니메이션 조작 문제 해결을 위해 [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) 메서드가 유용할 수 있습니다.
 
-또한 속성 시스템/애니메이션 조작 문제 해결을 위해 [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358) 메서드가 유용할 수 있습니다. **팁** 앱 코드에서 애니메이션을 시작하는 앱 시나리오를 코딩할 때마다 애니메이션이나 전환이 UI 시나리오에 대한 애니메이션 라이브러리에 이미 있는지 여부를 다시 검토해야 할 수 있습니다.
-
- 
-
-### 라이브러리 애니메이션은 모든 Windows 런타임 앱에서 보다 일관된 UI 환경을 제공하며 사용하기도 더 쉽습니다.
-
-시각적 상태에 대한 애니메이션 컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)의 요소이며 전체 상태는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)가 다릅니다.
-
-### 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
-
-**Storyboard** 및 **EventTrigger** XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법은 한 가지입니다. 그러나 이 기술은 더 이상 광범위하게 사용되지 않습니다. 이 기술은 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) 지원 이전의 WPF 및 이전 버전 Silverlight의 레거시 구문입니다. 이 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 구문은 가져오기/호환성을 이유로 Windows 런타임 XAML에서도 작동하지만 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트를 기반으로 하는 트리거 동작에 대해서만 작동합니다. 다른 이벤트를 트리거하려고 하면 예외가 발생하거나 컴파일되지 않습니다.
-
-## 자세한 내용은 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 또는 [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053)를 참조하세요.
-
-XAML 연결 속성에 애니메이션 효과 주기 일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185579)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다.
-
-## 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
-
-추가 애니메이션 형식 및 UI에 애니메이션 효과를 주는 방법을 알아보는 다음 단계 지금까지는 두 값 사이에서 애니메이션 효과를 준 다음 애니메이션이 실행되는 동안 필요에 따라 값을 선형으로 보간하는 사용자 지정 애니메이션에 대해 살펴보았습니다. 이러한 애니메이션을 **From**/**To**/**By** 애니메이션이라고 합니다. 그러나 사용자가 시작과 끝 사이에 오는 중간 값을 선언할 수 있도록 하는 다른 애니메이션 형식이 있습니다. 이러한 애니메이션을 *키 프레임 애니메이션*이라고 합니다. **From**/**To**/**By** 애니메이션이나 키 프레임 애니메이션에서 보간 논리를 변경하는 방법도 있습니다. 이 방법에는 감속/가속 함수 적용이 포함됩니다.
-
-## 이러한 개념에 대한 자세한 내용은 [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)을 참조하세요.
-
-* [관련 항목](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [종속성 속성 개요](key-frame-and-easing-function-animations.md)
-* [키 프레임 및 감속/가속 함수 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
-* [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/Mt210948)
-* [**컨트롤 템플릿**](https://msdn.microsoft.com/library/windows/apps/BR210490)
-* [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
- 
+**팁** 앱 코드에서 애니메이션을 시작하는 앱 시나리오를 코딩할 때마다 애니메이션이나 전환이 UI 시나리오에 대한 애니메이션 라이브러리에 이미 있는지 여부를 다시 검토해야 할 수 있습니다. 라이브러리 애니메이션은 모든 Windows 런타임 앱에서 보다 일관된 UI 환경을 제공하며 사용하기도 더 쉽습니다.
 
  
 
+### 시각적 상태에 대한 애니메이션
+
+컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)의 요소이며 전체 상태는 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
+
+### **Storyboard** 및 **EventTrigger**
+
+XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법은 한 가지입니다. 그러나 이 기술은 더 이상 광범위하게 사용되지 않습니다. 이 기술은 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) 지원 이전의 WPF 및 이전 버전 Silverlight의 레거시 구문입니다. 이 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 구문은 가져오기/호환성을 이유로 Windows 런타임 XAML에서도 작동하지만 [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723) 이벤트를 기반으로 하는 트리거 동작에 대해서만 작동합니다. 다른 이벤트를 트리거하려고 하면 예외가 발생하거나 컴파일되지 않습니다. 자세한 내용은 [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) 또는 [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053)를 참조하세요.
+
+## XAML 연결 속성에 애니메이션 효과 주기
+
+일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185579)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
+
+## 추가 애니메이션 형식 및 UI에 애니메이션 효과를 주는 방법을 알아보는 다음 단계
+
+지금까지는 두 값 사이에서 애니메이션 효과를 준 다음 애니메이션이 실행되는 동안 필요에 따라 값을 선형으로 보간하는 사용자 지정 애니메이션에 대해 살펴보았습니다. 이러한 애니메이션을 **From**/**To**/**By** 애니메이션이라고 합니다. 그러나 사용자가 시작과 끝 사이에 오는 중간 값을 선언할 수 있도록 하는 다른 애니메이션 형식이 있습니다. 이러한 애니메이션을 *키 프레임 애니메이션*이라고 합니다. **From**/**To**/**By** 애니메이션이나 키 프레임 애니메이션에서 보간 논리를 변경하는 방법도 있습니다. 이 방법에는 감속/가속 함수 적용이 포함됩니다. 이러한 개념에 대한 자세한 내용은 [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)을 참조하세요.
+
+## 관련 항목
+
+* [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [키 프레임 및 감속/가속 함수 애니메이션](key-frame-and-easing-function-animations.md)
+* [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+* [컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/Mt210948)
+* [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
+ 
+
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Jul16_HO2-->
 
 

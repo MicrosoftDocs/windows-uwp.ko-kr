@@ -3,8 +3,9 @@ author: GrantMeStrength
 Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
-ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
-ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 640ddc7b77d5a23562dba2ecd9812464beb8a422
 
 ---
 
@@ -12,7 +13,7 @@ ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
 
 Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
 
-[iOS에서 UWP로 이동](ios-to-uwp-root.md)의 포팅 콘텐츠도 참조하세요. 이 문서는 [다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=52041)를 위해서도 사용할 수 있습니다.
+[iOS에서 UWP로 이동](ios-to-uwp-root.md)의 포팅 콘텐츠도 참조하세요. 이 문서는 [다운로드](https://www.microsoft.com/download/details.aspx?id=52041)를 위해서도 사용할 수 있습니다.
 
 ## UI(사용자 인터페이스)
 
@@ -664,6 +665,6 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

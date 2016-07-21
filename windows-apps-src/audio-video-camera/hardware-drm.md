@@ -3,8 +3,9 @@ author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다."
 title: "하드웨어 DRM"
-ms.sourcegitcommit: b782d1e3d4f5c90e4cac9fbad3877c5457a27c45
-ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
+translationtype: Human Translation
+ms.sourcegitcommit: 22ce05ab6f24c3ee41798732c35314b3dad87ea8
+ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
 
 ---
 
@@ -14,7 +15,8 @@ ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다.
 
-> [!NOTE] 하드웨어 기반 PlayReady DRM은 Windows 디바이스와 TV, 휴대폰, 태블릿 등의 비 Windows 디바이스를 비롯한 다양한 디바이스에서 지원됩니다. Windows 디바이스가 PlayReady 하드웨어 DRM을 지원하려면 Windows 10을 실행하고 있어야 하고 지원되는 하드웨어 구성을 포함해야 합니다.
+> [!NOTE] 
+> 하드웨어 기반 PlayReady DRM은 Windows 디바이스와 TV, 휴대폰, 태블릿 등의 비 Windows 디바이스를 비롯한 다양한 디바이스에서 지원됩니다. Windows 디바이스가 PlayReady 하드웨어 DRM을 지원하려면 Windows 10을 실행하고 있어야 하고 지원되는 하드웨어 구성을 포함해야 합니다.
 
 점점 더 많은 콘텐츠 공급자가 앱에서 높은 가치의 콘텐츠를 모두 재생할 권한을 부여하기 위해 하드웨어 기반 보호로 전환하고 있습니다. 이러한 요구 사항을 충족시키기 위해 암호화 코어를 하드웨어에서 구현하는 강력한 기능이 PlayReady에 추가되었습니다. 이 지원을 통해 여러 디바이스 플랫폼에서 고해상도(1080p) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
 
@@ -97,6 +99,6 @@ boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures en
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

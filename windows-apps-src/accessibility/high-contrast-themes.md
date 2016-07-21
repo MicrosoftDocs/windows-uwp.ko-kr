@@ -5,6 +5,7 @@ ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: "고대비 테마"
 label: High-contrast themes
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
@@ -177,6 +178,6 @@ UI 요소에 기본적으로 테두리가 _있는_ 경우에는 고대비 모드
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

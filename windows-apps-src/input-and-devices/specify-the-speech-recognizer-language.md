@@ -5,6 +5,7 @@ title: "음성 인식기 언어 지정"
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 8af4fe64e586037d68ab5cd422d7195bd3a64b94
 

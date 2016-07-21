@@ -3,6 +3,7 @@ author: msatranjr
 Description: "지도 컨트롤은 도로 지도와 위성뷰, 길 찾기, 검색 결과, 교통 정보를 표시할 수 있습니다."
 title: "지도에 대한 지침"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
 ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
 

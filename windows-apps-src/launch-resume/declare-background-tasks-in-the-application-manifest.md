@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "응용 프로그램 매니페스트에서 백그라운드 작업 선언"
 description: "앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 

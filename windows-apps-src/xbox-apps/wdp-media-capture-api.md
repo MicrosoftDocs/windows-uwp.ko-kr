@@ -2,6 +2,7 @@
 author: WilliamsJason
 title: "미디어 캡처 API 참조"
 description: "프로그래밍 방식으로 미디어 캡처 API에 액세스하는 방법을 알아봅니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 4356bd2cfc7697905ed91d60b5829c06d850e109
 ms.openlocfilehash: 2e32c4d516a35b5f5bd8d57bce75ff8bdce6b461
 
@@ -55,6 +56,6 @@ ms.openlocfilehash: 2e32c4d516a35b5f5bd8d57bce75ff8bdce6b461
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

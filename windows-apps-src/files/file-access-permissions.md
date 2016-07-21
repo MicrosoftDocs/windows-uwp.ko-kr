@@ -4,8 +4,8 @@ ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "파일 액세스 권한"
 description: "앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
 
 ---
 # 파일 액세스 권한
@@ -98,7 +98,7 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
 
     파일 선택기를 통해서는 로컬, 로밍 또는 임시 폴더에 액세스할 수 없습니다.
 
--   **이동식 디바이스.** 또한 앱은 연결된 디바이스의 일부 파일에 기본적으로 액세스할 수 있습니다. 사용자가 카메라나 USB 썸 드라이브(thumb drive)와 같은 장치를 시스템에 연결할 때 앱이 [자동 실행 확장](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464906.aspx#autoplay)을 사용하여 자동으로 실행되는 경우 이것은 옵션입니다. 앱이 액세스할 수 있는 파일은 앱 매니페스트에서 파일 형식 연결 선언을 통해 지정한 특정 파일 형식으로 제한됩니다.
+-   **이동식 디바이스.** 또한 앱은 연결된 디바이스의 일부 파일에 기본적으로 액세스할 수 있습니다. 사용자가 카메라나 USB 썸 드라이브(thumb drive)와 같은 장치를 시스템에 연결할 때 앱이 [자동 실행 확장](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay)을 사용하여 자동으로 실행되는 경우 이것은 옵션입니다. 앱이 액세스할 수 있는 파일은 앱 매니페스트에서 파일 형식 연결 선언을 통해 지정한 특정 파일 형식으로 제한됩니다.
 
     물론 이동식 장치의 파일과 폴더에도 액세스할 수 있는데, 이 경우에는 파일 선택기([**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 및 [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) 사용)를 호출하고 앱에서 액세스할 파일과 폴더를 사용자가 선택하게 합니다. [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)에서 파일 선택기를 사용하는 방법을 알아보세요.
 
@@ -166,6 +166,6 @@ ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

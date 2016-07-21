@@ -3,6 +3,7 @@ description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 
 title: "복사 및 붙여넣기"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
 ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 
@@ -103,6 +104,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

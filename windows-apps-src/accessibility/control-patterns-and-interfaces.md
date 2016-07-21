@@ -5,6 +5,7 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: "컨트롤 패턴 및 인터페이스"
 label: Control patterns and interfaces
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
 

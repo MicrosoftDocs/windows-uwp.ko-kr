@@ -2,6 +2,7 @@
 author: msatranjr
 title: NFC
 description: "이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱에 NFC를 통합하는 방법에 대한 문서가 포함되어 있습니다."
+translationtype: Human Translation
 ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
 ms.openlocfilehash: 2da839b282015c39bd0046d6cf60ce4f79fc485c
 

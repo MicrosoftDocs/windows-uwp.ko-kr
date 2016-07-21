@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "백그라운드 작업 등록"
 description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
 ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
@@ -63,16 +64,16 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## 기존 등록 확인
 
 
-기존 등록 확인 작업이 이미 등록되었는지 확인합니다.
+작업이 이미 등록되었는지 확인합니다. 작업이 여러 번 등록된 경우 작업이 트리거될 때마다 두 번 이상 실행되어 CPU가 초과되거나 예기치 않은 동작이 발생할 수 있기 때문에 이것을 확인해야 합니다.
 
-작업이 여러 번 등록된 경우 작업이 트리거될 때마다 두 번 이상 실행되어 CPU가 초과되거나 예기치 않은 동작이 발생할 수 있기 때문에 이것을 확인해야 합니다. 기존 등록을 확인하려면 [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성을 쿼리하고 결과를 반복합니다.
+기존 등록을 확인하려면 [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성을 쿼리하고 결과를 반복합니다. 각 인스턴스의 이름을 확인합니다. 이 이름이 등록하려는 작업의 이름과 일치하는 경우 루프를 종료하고 플래그 변수를 설정하여 코드에서 다음 단계에는 다른 경로를 선택할 수 있게 합니다.
 
-> 각 인스턴스의 이름을 확인합니다. 이 이름이 등록하려는 작업의 이름과 일치하는 경우 루프를 종료하고 플래그 변수를 설정하여 코드에서 다음 단계에는 다른 경로를 선택할 수 있게 합니다. **참고** 앱에 고유한 백그라운드 작업 이름을 사용하세요.
+> **참고** 앱에 고유한 백그라운드 작업 이름을 사용하세요. 각 백그라운드 작업의 이름이 고유해야 합니다.
 
-각 백그라운드 작업의 이름이 고유해야 합니다.
+다음 코드에서는 마지막 단계에서 만든 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 사용하여 백그라운드 작업을 등록합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -136,16 +137,16 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 > }
 > ```
 
-## 다음 코드에서는 마지막 단계에서 만든 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 사용하여 백그라운드 작업을 등록합니다.
+## 백그라운드 작업 등록(또는 기존 등록 반환)
 
 
-[!div class="tabbedCodeSnippets"] 백그라운드 작업 등록(또는 기존 등록 반환)
+작업이 기존 백그라운드 작업 등록 목록에 있는지 확인합니다. 그럴 경우 작업의 해당 인스턴스를 반환합니다.
 
-작업이 기존 백그라운드 작업 등록 목록에 있는지 확인합니다. 그럴 경우 작업의 해당 인스턴스를 반환합니다. 그런 다음 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 사용하여 작업을 등록합니다.
+그런 다음 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 사용하여 작업을 등록합니다. 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)을 반환합니다.
 
-> 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)을 반환합니다. **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다.
+> **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
-등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다.
+다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -245,10 +246,10 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 > }
 > ```
 
-## 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+## 전체 백그라운드 작업 등록 유틸리티 함수
 
 
-다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다. [!div class="tabbedCodeSnippets"]
+다음 예제에서는 완성된 백그라운드 작업 등록 함수를 보여 줍니다. 이 함수는 네트워킹 백그라운드 작업을 제외하고 대부분의 백그라운드 작업을 등록하는 데 사용할 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -365,29 +366,29 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 > }
 > ```
 
-> 전체 백그라운드 작업 등록 유틸리티 함수 다음 예제에서는 완성된 백그라운드 작업 등록 함수를 보여 줍니다.
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
-## 이 함수는 네트워킹 백그라운드 작업을 제외하고 대부분의 백그라운드 작업을 등록하는 데 사용할 수 있습니다.
+## 관련 항목
 
 
 ****
 
-* [[!div class="tabbedCodeSnippets"]](create-and-register-a-background-task.md)
-* [**참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다.](declare-background-tasks-in-the-application-manifest.md)
-* [Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.](handle-a-cancelled-background-task.md)
-* [관련 항목](monitor-background-task-progress-and-completion.md)
-* [백그라운드 작업 만들기 및 등록](respond-to-system-events-with-background-tasks.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](set-conditions-for-running-a-background-task.md)
-* [취소된 백그라운드 작업 처리](update-a-live-tile-from-a-background-task.md)
-* [백그라운드 작업 진행 및 완료 모니터링](use-a-maintenance-trigger.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 실행 조건 설정](guidelines-for-background-tasks.md)
+* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
+* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
+* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
+* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
+* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
+* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 
 ****
 
-* [백그라운드 작업에서 라이브 타일 업데이트](debug-a-background-task.md)
-* [유지 관리 트리거 사용](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [백그라운드 작업 디버그](debug-a-background-task.md)
+* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 

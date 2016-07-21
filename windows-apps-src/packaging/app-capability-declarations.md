@@ -3,8 +3,9 @@ author: msatranjr
 ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: "앱 접근 권한 값 선언"
 description: "사진, 음악 또는 디바이스(예&#58; 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다."
-ms.sourcegitcommit: 747cdcecfa04005ee4512007bef95059bd81fb56
-ms.openlocfilehash: c3c70afbeab95fa967d5e7bb4b6dc9a9a66b6a39
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 1ac48bd816cb2702adcb78ab00335d4f3533a1b3
 
 ---
 # 앱 접근 권한 값 선언
@@ -13,7 +14,7 @@ ms.openlocfilehash: c3c70afbeab95fa967d5e7bb4b6dc9a9a66b6a39
 
 사진, 음악 또는 장치(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 [패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474)에서 접근 권한 값을 선언해야 합니다.
 
-앱의 [패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474)에서 접근 권한 값을 선언하여 특정 리소스 또는 API에 대한 액세스를 요청합니다. Microsoft Visual Studio에서 [매니페스트 디자이너](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx)를 사용하여 일반 접근 권한 값을 선언하거나 수동으로 추가할 수 있습니다. 자세한 내용은 [패키지 매니페스트에 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/BR211477)을 참조하세요. 고객은 스토어에서 앱 구입 시 앱에서 선언한 모든 접근 권한 값에 관한 알림을 받아야 합니다. 앱에 필요하지 않은 접근 권한 값은 선언하지 마세요.
+앱의 [패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/BR211474)에서 접근 권한 값을 선언하여 특정 리소스 또는 API에 대한 액세스를 요청합니다. Microsoft Visual Studio에서 [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)를 사용하여 일반 접근 권한 값을 선언하거나 수동으로 추가할 수 있습니다. 자세한 내용은 [패키지 매니페스트에 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/BR211477)을 참조하세요. 고객은 스토어에서 앱 구입 시 앱에서 선언한 모든 접근 권한 값에 관한 알림을 받아야 합니다. 앱에 필요하지 않은 접근 권한 값은 선언하지 마세요.
 
 일부 접근 권한 값은 앱에 *중요한 리소스*에 대한 액세스 권한을 제공합니다. 이러한 리소스는 사용자의 개인 데이터에 액세스하거나 사용자의 비용이 들 수 있으므로 중요한 것으로 간주됩니다. 설정 앱에서 관리되는 개인 정보 설정을 통해 사용자는 중요한 리소스에 대한 액세스를 동적으로 제어할 수 있습니다. 따라서 앱에서는 중요한 리소스를 항상 사용 가능한 것으로 가정하지 않는 것이 중요합니다. 중요한 리소스에 액세스하는 방법에 대한 자세한 내용은 [개인정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/Hh768223)을 참조하세요. 앱에 *중요한 리소스*에 대한 액세스 권한을 제공하는 기능은 기능 시나리오 옆에 별표(\*)로 주석 처리됩니다.
 
@@ -160,7 +161,7 @@ ms.openlocfilehash: c3c70afbeab95fa967d5e7bb4b6dc9a9a66b6a39
 
 ## 관련 항목
 
-* [매니페스트 디자이너](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230259.aspx)
+* [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)
 * [개인 정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/Hh768223)
 * [패키지 매니페스트에 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/BR211477)
 * [패키지 매니페스트에 장치 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/Dn263092)
@@ -168,6 +169,6 @@ ms.openlocfilehash: c3c70afbeab95fa967d5e7bb4b6dc9a9a66b6a39
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

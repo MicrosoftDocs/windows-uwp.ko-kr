@@ -3,21 +3,21 @@ author: QuinnRadich
 title: "Windows 10의 새로운 기능"
 description: "Windows 10 Anniversary SDK Preview 빌드 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 46b5ad404811894899810f83efb9970e338e7051
-ms.openlocfilehash: 5cce4a0fbfe85126f15cb013a9b46f058006a5e1
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9623e10b15dbc5f9480d1cd9bd740fa8e914b3c6
 
 ---
 
 # Windows의 새로운 기능
 
-Windows 10 Anniversary SDK Preview 빌드 14295 및 Windows 개발자 도구에 대한 업데이트는 유니버설 Windows 플랫폼에서 제공하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/en-us/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10 Anniversary SDK Preview 빌드 14295 및 Windows 개발자 도구에 대한 업데이트는 유니버설 Windows 플랫폼에서 제공하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## Windows 10 Anniversary SDK Preview 빌드 12295
 
 기능 | 설명
  :---- | :----
 네트워킹 | 이제 [HttpBaseProtocolFilter.ServerCustomValidationRequest](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank) 이벤트를 구독하여 서버 SSL/TLS 인증서의 자체 사용자 지정 유효성 검사를 제공할 수 있습니다. 또한 HTTP 요청에 [HttpCacheReadBehavior.NoCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpcachereadbehavior.aspx#_blank) 열거 값을 지정하여 캐시에서 HTTP 응답을 완전히 읽지 못하게 설정할 수도 있습니다. 이제 [HttpBaseProtocolFilter.ClearAuthenticationCache](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx#_blank) 메서드 호출을 통해 인증 자격 증명을 지워 "로그아웃" 시나리오를 사용하도록 설정할 수 있습니다.
-확장 | Microsoft Edge에는 확장을 사용하는 기능이 새로 추가되었습니다. 확장을 사용하여 Microsoft Edge의 기능을 확장할 수 있으므로 대상 사용자에게 중요한 풍부한 기능을 제공할 수 있습니다. 자세한 내용은 [확장 설명서](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/#_blank)를 참조하세요.
+확장 | Microsoft Edge에는 확장을 사용하는 기능이 새로 추가되었습니다. 확장을 사용하여 Microsoft Edge의 기능을 확장할 수 있으므로 대상 사용자에게 중요한 풍부한 기능을 제공할 수 있습니다. 자세한 내용은 [확장 설명서](https://developer.microsoft.com/microsoft-edge/platform/documentation/extensions/#_blank)를 참조하세요.
 Bluetooth API | 이제 앱에서 원격 Bluetooth 주변 장치와 먼저 페어링하지 않고도 [Windows.Devices.Bluetooth 및 Windows.Devices.Bluetooth.Rfcomm](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.aspx#_blank)을 통해 이러한 주변 장치의 RFCOMM 서비스에 액세스할 수 있습니다. 새 메서드를 사용하여 앱에서 페어링되지 않은 디바이스의 RFCOMM 서비스를 검색하고 액세스할 수 있습니다.
 채팅 API | 새 [ChatSyncManager](https://msdn.microsoft.com/library/windows/apps/mt414181.aspx#_blank) 클래스를 사용하여 클라우드와 문자 메시지를 동기화할 수 있습니다.
 [Android 및 iOS 개발자용 Windows 앱 개념 매핑](https://msdn.microsoft.com/windows/uwp/porting/android-ios-uwp-map#_blank) | Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
@@ -29,6 +29,6 @@ Windows IoT | Windows 10 IoT Core는 친숙한 Windows 기능을 사용하여 Io
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

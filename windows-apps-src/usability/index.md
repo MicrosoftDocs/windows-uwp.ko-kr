@@ -1,10 +1,11 @@
 ---
-description: "이 섹션의 디자인 및 코딩 지침은 특정 유형의 입력 및 디바이스에 대해 UWP 앱을 사용자 지정하는 데 도움이 됩니다."
+description: "앱을 전 세계 사용자들이 사용하고 액세스할 수 있게 하는 방법을 알아봅니다."
+keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
 title: "UWP 앱의 유용성 - Windows 앱 개발"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: f02713dfee278866af53c6dd529d2faa3e9f625c
+ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
+ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
 
 ---
 
@@ -12,11 +13,10 @@ ms.openlocfilehash: f02713dfee278866af53c6dd529d2faa3e9f625c
 
 # UWP 앱의 유용성
 
-UWP 앱은 다양한 입력을 자동으로 처리하고 다양한 디바이스에서 실행됩니다. 터치 입력을 사용하거나 휴대폰에서 앱을 실행하기 위해 수행해야 할 추가 작업이 없습니다. 
+세부 사항에 조금 더 관심을 기울이면 사용자 환경을 전 세계 사용자의 요구를 충족하는 진정으로 포괄적인 사용자 환경으로 변형할 수 있습니다.
 
-그러나 특정 유형의 입력 또는 디바이스에 대해 앱을 최적화해야 하는 경우는 있습니다. 예를 들어 그리기 앱을 만드는 경우 펜 입력을 처리하는 방식을 사용자 지정할 수 있습니다. 
+이 섹션의 디자인 및 코딩 지침을 통해 접근성 기능을 추가하고, 세계화 및 지역화가 가능하도록 설정하고, 사용자가 환경을 사용자 지정할 수 있도록 설정하고, 사용자가 필요로 할 때 지원을 제공하여 UWP 앱을 더욱 포괄적으로 만들 수 있습니다.
 
-이 섹션의 디자인 및 코딩 지침은 특정 유형의 입력 및 디바이스에 대해 UWP 앱을 사용자 지정하는 데 도움이 됩니다. 
 
 ## 접근성
 
@@ -198,6 +198,6 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

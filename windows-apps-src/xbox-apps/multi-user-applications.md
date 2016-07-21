@@ -3,6 +3,7 @@ author: Mtoepke
 title: "다중 사용자 응용 프로그램 소개"
 description: 
 area: Xbox
+translationtype: Human Translation
 ms.sourcegitcommit: f225811bd18be22807160e8670a1b7b8d51e4b10
 ms.openlocfilehash: 20f84783131122343fd01e6cb1f5a60cf50158cd
 

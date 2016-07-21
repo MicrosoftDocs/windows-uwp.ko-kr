@@ -5,6 +5,7 @@ title: "사용자 지정 인식 제약 조건 정의"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 75e7367ee13357d3463213ca7d8f1ff37c4f0b77
 

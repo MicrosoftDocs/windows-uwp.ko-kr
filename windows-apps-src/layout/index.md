@@ -1,10 +1,11 @@
 ---
-description: "다음 문서는 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 데 도움이 됩니다."
-title: "레이아웃 디자인 – Windows 앱 개발"
+description: "다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다."
+title: "UWP 앱 레이아웃 디자인 – Windows 앱 개발"
 author: mijacobs
+keywords: uwp app layout, universal windows platform, app design, interface
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 35a8f78420256cb2da02d7fd4720939a16676600
+ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
+ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
 
 ---
 
@@ -25,7 +26,7 @@ ms.openlocfilehash: 35a8f78420256cb2da02d7fd4720939a16676600
 UWP 앱을 디자인할 때 다양한 디스플레이 크기를 가진 여러 디바이스에 맞는 사용자 인터페이스를 만듭니다. 이 문서에서는 UI 관련 기능 개요, UWP 앱의 이점 및 반응형 UI 개발에 대한 몇 가지 팁과 유용한 정보를 제공합니다. </p>
   </div>
   <div class="side-by-side-content-right">
-    ![An app running on multiple devices](images/rspd-reposition-type1-sm.png)
+    ![여러 디바이스에서 실행되는 앱](images/rspd-reposition-type1-sm.png)
   </div>
 </div>
 </div>
@@ -85,6 +86,6 @@ XAML 속성 및 레이아웃 패널을 사용하여 반응성이 뛰어난 적�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

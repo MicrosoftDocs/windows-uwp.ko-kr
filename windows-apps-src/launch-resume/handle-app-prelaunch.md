@@ -3,6 +3,7 @@ author: TylerMSFT
 title: "앱 사전 실행 처리"
 description: "OnLaunched 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다."
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
+translationtype: Human Translation
 ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
 ms.openlocfilehash: d9d3bdf86d858367008a32d9d6a06ec9fc13787d
 

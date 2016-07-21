@@ -3,8 +3,9 @@ author: jnHs
 Description: "지급 요약에는 앱 및 앱에서 바로 구매 제품으로 벌어들인 금액에 대한 세부 정보가 나와 있습니다. 또한 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다."
 title: "지급 요약"
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
-ms.sourcegitcommit: c626a828f9cee6b23ec26fc2eaa60a6477870baf
-ms.openlocfilehash: 773a072f5656068eb6e0b2d792cf73a7ff1d16f0
+translationtype: Human Translation
+ms.sourcegitcommit: 82ff562a192aa42d383f4cd7221c495c3bfbad0f
+ms.openlocfilehash: 86355a194eb61b8d13eba22d9f6e7c566339cd28
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: 773a072f5656068eb6e0b2d792cf73a7ff1d16f0
 
 **지급 요약**에는 앱 및 앱에서 바로 구매 제품으로 벌어들인 금액에 대한 세부 정보가 나와 있습니다. 또한, 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다.
 
-2016년 4월 1일을 기준으로 Microsoft Advertising을 사용하여 수익을 내고 있는 경우 **지급 요약**에서 광고 수익에 대한 지급 정보도 확인할 수 있습니다. 이러한 수익으로 돈을 벌었거나, 여러 앱에서 활용된 광고 단위에 대해 “매핑되지 않았거나”, 아니면 특정 앱에 매핑할 수 없는 앱에 대해 살펴보겠습니다. 광고 지급 정책에 관한 자세한 내용은 [pubCenter 지급 정책](http://go.microsoft.com/fwlink/p/?LinkID=624469)(영문)을 참조하세요.
+2016년 4월 1일을 기준으로 Microsoft Advertising을 사용하여 수익을 내고 있는 경우 **지급 요약**에서 광고 수익에 대한 지급 정보도 확인할 수 있습니다. 이러한 수익으로 돈을 벌었거나, 여러 앱에서 활용된 광고 단위에 대해 “매핑되지 않았거나”, 아니면 특정 앱에 매핑할 수 없는 앱에 대해 살펴보겠습니다. 광고 지급에 대한 자세한 내용은 [Microsoft Advertising 지급 프로세스](https://msdn.microsoft.com/windows/uwp/publish/microsoft-advertising-payment-process) 항목을 참조하세요.
 
 Azure 마켓플레이스에서 제품을 판매할 경우 2015년 11월 1일부터 **지급 요약**에 성공적인 지급에 대한 정보가 지급 요약에 표시됩니다. Azure 마켓플레이스 지급에 대한 자세한 내용은 [Microsoft Azure 마켓플레이스 참가 정책](http://go.microsoft.com/fwlink/p/?LinkId=722436) 및 [Microsoft Azure 마켓플레이스 게시자 계약](http://go.microsoft.com/fwlink/p/?LinkID=699560 )을 참조하세요. 이전 Azure 마켓플레이스 지급 정보를 보는 방법에 대한 자세한 내용은 [여기](http://go.microsoft.com/fwlink/p/?LinkID=722439)를 참조하세요.
 

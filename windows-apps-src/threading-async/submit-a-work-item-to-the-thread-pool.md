@@ -4,8 +4,8 @@ ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: "스레드 풀에 작업 항목 제출"
 description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
 
 ---
 # 스레드 풀에 작업 항목 제출
@@ -197,7 +197,7 @@ m_workItem = asyncAction;
 
 ## 작업 항목 완료 처리
 
-작업 항목의 [**IAsyncAction.Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
+작업 항목의 [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
 
 다음 예제에서는 1단계에서 제출된 작업 항목의 결과로 UI를 업데이트합니다.
 
@@ -263,6 +263,6 @@ Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

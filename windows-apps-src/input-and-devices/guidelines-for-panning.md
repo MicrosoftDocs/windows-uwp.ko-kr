@@ -5,6 +5,7 @@ title: "이동"
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
 ms.openlocfilehash: 45a2d3cb8cd1db1b138d62b7d6525ed7077207b0
 

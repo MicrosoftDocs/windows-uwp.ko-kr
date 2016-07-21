@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Xbox One Developer Preview의 UWP에 대해 알려진 문제"
 description: 
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: e016be20af9a0d7a67fa383cbdc93083d12a1113
 
 ---
 
@@ -12,7 +13,7 @@ ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
 
 이 항목에서는 Xbox Developer Preview에서 UWP에 대해 알려진 문제를 설명합니다. 이 개발자 미리 보기에 대한 자세한 내용은 [Xbox에서 UWP](index.md)를 참조하세요. 
 
-\[API 참조 항목 링크를 통해 이 페이지를 방문하고 유니버설 디바이스 패밀리 API 정보를 찾는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)(영문)을 참조하세요.\]
+\[API 참조 항목 링크를 통해 이 페이지를 방문하고 유니버설 디바이스 패밀리 API 정보를 찾는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
 
 Xbox Developer Preview 시스템 업데이트에는 실험용 및 초기 시험판 소프트웨어가 포함되어 있습니다. 즉, 일부 인기 있는 게임 및 앱이 예상대로 작동하지 않고 가끔 크래시 및 데이터 손실을 경험할 수 있습니다. Developer Preview를 종료하면 콘솔이 초기화되며 모든 게임, 앱 및 콘텐츠를 다시 설치해야 합니다.
 
@@ -44,16 +45,18 @@ public App() {
 }
 ```
 
-HTML/Javascript 앱에서 마우스 모드를 끄려면 다음 예제를 따릅니다.
+HTML/JavaScript 앱에서 마우스 모드를 끄려면 다음 예제를 따릅니다.
 
 ```code
 // Turn off mouse mode
 navigator.gamepadInputEmulation = "keyboard";
 ```
 
-> **참고** &nbsp;&nbsp;이 개발자 미리 보기에서 마우스 모드가 켜져 있는 경우 컨트롤러의 오른쪽 조이스틱을 사용하여 이동하면 콘솔이 응답하지 않을 수 있습니다. 이 문제가 발생하면 콘솔을 다시 부팅해야 합니다.
+HTML/JavaScript 앱에서 방향 탐색을 켜는 방법을 포함하여 자세한 내용은 [마우스 모드를 사용하지 않도록 설정하는 방법](how-to-disable-mouse-mode.md#html) 항목을 참조하세요.
 
-마우스 모드 지원에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요. 이 항목에는 마우스 모드를 사용하거나 사용하지 않도록 설정하는 방법에 대한 정보가 포함되어 있으므로 앱에 올바른 동작을 선택할 수 있습니다.
+> **참고**&nbsp;&nbsp;이 개발자 미리 보기에서 마우스 모드가 켜져 있는 경우 컨트롤러의 오른쪽 조이스틱을 사용하여 이동하면 콘솔이 응답하지 않을 수 있습니다. 이 문제가 발생하면 콘솔을 다시 부팅해야 합니다.
+
+마우스 모드 지원에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode) 항목을 참조하세요. 이 항목에는 마우스 모드를 사용하거나 사용하지 않도록 설정하는 방법에 대한 정보가 포함되어 있으므로 앱에 올바른 동작을 선택할 수 있습니다.
 
 ## 앱을 배포하려면 사용자가 로그인되어 있어야 함(오류 0x87e10008)
 
@@ -109,7 +112,7 @@ Please use the forum to report any issues you see.-->
 
 ## DirectX 12 지원
 
-Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/en-us/Developers/id) 프로그램에 등록할 수 있습니다.
+Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
@@ -120,7 +123,7 @@ To restore the game streaming feature, you must leave the developer preview. -->
 
 기본적으로 Xbox에서 UWP 앱의 디스플레이 영역은 TV에 적합한 영역으로 음각 처리되어야 합니다. 그러나 Xbox One Developer Preview에는 알려진 버그가 있어 TV에 적합한 영역이 [_오프셋_, _오프셋_]이 아니라 [0, 0]에서 시작됩니다.
 
-> **참고** &nbsp;&nbsp;이는 Javascript를 사용하는 UWP 앱에만 적용됩니다.
+> **참고**&nbsp;&nbsp;이는 JavaScript를 사용하는 UWP 앱에만 적용됩니다.
 
 이 문제를 해결하는 가장 쉬운 방법은 다음 JavaScript 예제와 같이 TV에 적합한 영역을 사용하지 않도록 설정하는 것입니다.
 
@@ -136,10 +139,12 @@ UWP apps and games running on Xbox One share resources with the system and other
 If you are running into memory or performance issues, this may be why. 
 For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
 
+<!--
+## Networking using traditional sockets
 
-## 기존 소켓을 사용하여 네트워킹
-
-이 Developer Preview에서는 기존의 TCP/UDP 소켓(WinSock, Windows.Networking.Sockets)을 사용하는 콘솔에서 인바운드 및 아웃바운드 네트워크 액세스를 사용할 수 없습니다. 개발자는 HTTP 및 WebSocket을 계속 사용할 수 있습니다. 
+In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
+Developers can still use HTTP and WebSockets.
+--> 
 
 
 ## UWP API 검사
@@ -228,6 +233,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

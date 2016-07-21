@@ -4,8 +4,8 @@ ms.assetid: 2383296e-c3d7-4b49-bcd2-621391228fdb
 description: "AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다."
 title: "JavaScript의 AdControl 이벤트"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5a47915b0dd2792ed50cc5d556b1181ee2c259e1
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b3c41f38f42c390c52c96fa93cfce3fe9bbd181d
 
 
 ---
@@ -17,7 +17,7 @@ ms.openlocfilehash: 5a47915b0dd2792ed50cc5d556b1181ee2c259e1
 
 다음 예제에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스의 이벤트를 처리하는 방법을 보여 줍니다. 이러한 예제에서는 이전에 **AdControl** 이벤트에 이벤트 처리기를 할당했다고 가정합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [HTML 속성 예제](html-properties-example.md)를 참조하세요.
 
-Javascript에서는 **AdControl** 이벤트를 [MarkSupportedForProcessing](http://msdn.microsoft.com/en-us/library/windows/apps/Hh967819.aspx) 함수로 묶어야 합니다. JavaScript에서 이벤트를 처리하는 방법에 대한 자세한 내용은 [기본 앱 코딩(HTML)](https://msdn.microsoft.com/en-us/library/windows/apps/hh780660.aspx#adding-event-handlers)을 참조하세요.
+Javascript에서는 **AdControl** 이벤트를 [MarkSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) 함수로 묶어야 합니다. JavaScript에서 이벤트를 처리하는 방법에 대한 자세한 내용은 [기본 앱 코딩(HTML)](https://msdn.microsoft.com/library/windows/apps/hh780660.aspx#adding-event-handlers)을 참조하세요.
 
 ## 예제
 
@@ -48,7 +48,7 @@ window.myAdEngagedChanged = function (sender) {
 
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 * [AdControl 오류 처리](adcontrol-error-handling.md)
-* [RoutedEventArgs 클래스](http://msdn.microsoft.com/en-us/library/system.windows.routedeventargs.aspx)
+* [RoutedEventArgs 클래스](http://msdn.microsoft.com/library/system.windows.routedeventargs.aspx)
 
  
 
@@ -56,6 +56,6 @@ window.myAdEngagedChanged = function (sender) {
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

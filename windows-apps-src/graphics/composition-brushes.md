@@ -4,8 +4,8 @@ ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: "컴퍼지션 브러시"
 description: "브러시는 해당 출력으로 Visual 영역을 그립니다. 각 브러시의 출력 유형은 서로 다릅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
 
 ---
 # 컴퍼지션 브러시
@@ -41,7 +41,7 @@ ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
 
 ## 색 브러시 사용
 
-색 브러시를 만들려면 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 반환하는 Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx) 메서드를 호출합니다. **CompositionColorBrush**의 기본 색은 \#00000000입니다. 다음 그림 및 코드에서는 검은색 브러시로 선을 긋고 색상 값이 0x9ACD32인 단색 브러시로 칠한 사각형을 만드는 작은 시각적 트리를 보여 줍니다.
+색 브러시를 만들려면 [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399)를 반환하는 Compositor.[**CreateColorBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createcolorbrush.aspx) 메서드를 호출합니다. **CompositionColorBrush**의 기본 색은 \#00000000입니다. 다음 그림 및 코드에서는 검은색 브러시로 선을 긋고 색상 값이 0x9ACD32인 단색 브러시로 칠한 사각형을 만드는 작은 시각적 트리를 보여 줍니다.
 
 ![CompositionColorBrush](images/composition-compositioncolorbrush.png)
 ```cs
@@ -79,7 +79,7 @@ LoadImage(Brush,
           "ms-appx:///Assets/liqorice.png");
 ```
 
-표면 브러시를 만들려면 Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx) 메서드를 호출합니다. 이 메서드는 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) 개체를 반환합니다. 아래 코드에서는 **CompositionSurfaceBrush**의 콘텐츠로 시각적 개체를 그리는 데 사용할 수 있는 코드를 보여 줍니다.
+표면 브러시를 만들려면 Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx) 메서드를 호출합니다. 이 메서드는 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) 개체를 반환합니다. 아래 코드에서는 **CompositionSurfaceBrush**의 콘텐츠로 시각적 개체를 그리는 데 사용할 수 있는 코드를 보여 줍니다.
 
 ```cs
 Compositor _compositor;
@@ -94,14 +94,14 @@ visual.Brush = _surfaceBrush;
 
 ## 늘이기 및 맞춤 구성
 
-[**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)의 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 콘텐츠로 작업 중인 시각적 개체의 영역을 완전히 채우지 못하는 경우가 있습니다. 이런 경우 컴퍼지션 API에서는 브러시의 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 및 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 모드 설정을 사용하여 나머지 영역을 채우는 방법을 결정합니다.
+[**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)의 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) 콘텐츠로 작업 중인 시각적 개체의 영역을 완전히 채우지 못하는 경우가 있습니다. 이런 경우 컴퍼지션 API에서는 브러시의 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 및 [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 모드 설정을 사용하여 나머지 영역을 채우는 방법을 결정합니다.
 
--   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio)는 float 형식이며 시각적 개체 경계 내에서 브러시의 위치를 제어하는 데 사용할 수 있습니다.
+-   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio)는 float 형식이며 시각적 개체 경계 내에서 브러시의 위치를 제어하는 데 사용할 수 있습니다.
     -   값이 0.0이면 브러시의 왼쪽/위 모서리를 시각적 개체의 왼쪽/위 모서리에 맞춥니다.
     -   값이 0.5이면 브러시의 중앙을 시각적 개체의 중앙에 맞춥니다.
     -   값이 1.0이면 브러시의 오른쪽/아래 모서리를 시각적 개체의 오른쪽/아래 모서리에 맞춥니다.
 -   [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) 속성에는 [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786) 열거형에서 정의하는 다음 값을 사용할 수 있습니다.
-    -   None: 시각적 개체 경계를 채우기 위해 브러시가 늘어나지 않습니다. 브러시가 시각적 개체의 경계보다 크면 브러시 콘텐츠가 잘리므로 늘이기 설정을 사용할 때는 주의해야 합니다. 시각적 개체 경계를 그리는 데 사용되는 브러시 부분은 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 속성을 사용하여 제어할 수 있습니다.
+    -   None: 시각적 개체 경계를 채우기 위해 브러시가 늘어나지 않습니다. 브러시가 시각적 개체의 경계보다 크면 브러시 콘텐츠가 잘리므로 늘이기 설정을 사용할 때는 주의해야 합니다. 시각적 개체 경계를 그리는 데 사용되는 브러시 부분은 [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) 및 [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) 속성을 사용하여 제어할 수 있습니다.
     -   Uniform: 브러시가 시각적 개체 경계에 맞게 크기가 조정됩니다. 가로 세로 비율은 유지됩니다. 기본값입니다.
     -   UUniformToFillniform: 브러시가 시각적 개체 경계를 완전히 채우도록 크기가 조정됩니다. 가로 세로 비율은 유지됩니다.
     -   Fill: 브러시가 시각적 개체 경계에 맞게 크기가 조정됩니다. 브러시의 높이와 너비가 따로 조정되므로 브러시의 원래 가로 세로 비율은 유지될 수 없습니다. 즉, 시각적 개체 경계를 완전히 채우기 위해 브러시가 왜곡될 수 있습니다.
@@ -116,6 +116,6 @@ visual.Brush = _surfaceBrush;
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -5,8 +5,9 @@ title: "탭 및 피벗"
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: b6cf34346ad557ce53d3009afe8bc83bc7ed21aa
 
 ---
 # 피벗 및 탭
@@ -91,9 +92,6 @@ ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
 -   모든 피벗 헤더가 허용되는 공간 내에 맞는 경우 피벗은 고정됩니다.
 -   피벗 레이블을 탭하면 피벗 자체는 움직이지 않지만, 해당 페이지로 이동합니다. 활성 피벗이 강조 표시됩니다.
 
-{{> aside-internal content = "
--   특히 10ft 환경에서 항목이 회전하지 않도록 하는 것이 좋습니다. Xbox에서 앱을 실행하는 경우 새로운 `IsHeaderItemsCarouselEnabled` 속성을 False로 설정합니다.
-"}}
 
 **회전**
 
@@ -101,16 +99,6 @@ ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
 -   피벗 레이블을 탭하면 해당 페이지로 이동하며 활성 피벗 레이블이 첫 번째 위치로 회전합니다.
 -   회전 모드에서 피벗 항목은 마지막에서부터 첫 번째 피벗 섹션까지 루핑합니다.
 
-{{&gt; aside-internal content = "
-### 피벗 포커스
-
-기본적으로 피벗 헤더의 키보드 포커스는 밑줄로 표시됩니다.
-
-![기본 포커스 밑줄 선택 헤더](images/pivot_focus_selectedHeader.png)
-
-피벗을 사용자 지정했으며 헤더 선택 시각 효과에 밑줄을 통합하는 앱은 새로운 `HeaderFocusVisualPlacement` 속성을 사용하여 기본값을 변경할 수 있습니다. `HeaderFocusVisualPlacement=\"ItemHeaders\"`의 경우 포커스가 전체 헤더 패널 주위에 그려집니다.
-
-![ItemsHeader 옵션은 모든 피벗 헤더 주위에 포커스 직사각형을 그립니다.](images/pivot_focus_headers.png) "}}
 
 ## 권장 사항
 
@@ -129,6 +117,6 @@ ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

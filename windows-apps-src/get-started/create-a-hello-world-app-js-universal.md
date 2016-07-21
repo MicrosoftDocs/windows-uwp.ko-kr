@@ -4,8 +4,8 @@ ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: "Hello, world 앱 만들기(JS)"
 description: "이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
-ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: be731072824e81eadc95cebd5855234f9331962b
 
 ---
 # Hello, world 앱 만들기(JS)
@@ -50,6 +50,8 @@ ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
     ![새 프로젝트 창 ](images/js-tut-newproject.png)
 
     이 자습서에서는 **Blank App** 템플릿을 사용합니다. 이 템플릿은 컴파일과 실행은 가능하지만 사용자 인터페이스 컨트롤이나 데이터는 포함되지 않은 최소한의 UWP 앱을 만듭니다. 이 자습서를 진행하면서 이 앱에 컨트롤과 데이터를 추가하게 됩니다.
+
+   (이러한 옵션이 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
 
 4.  가운데 창에서 **비어 있는 앱(유니버설 Windows)** 템플릿을 선택합니다.
 
@@ -135,7 +137,9 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 -   **에뮬레이터 <SDK version> WVGA 4인치 1GB**
 -   등(기타 구성의 다양한 에뮬레이터)
 
-화면이 작고 메모리가 제한된 장치에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB** 옵션을 사용합니다.
+(에뮬레이터가 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
+
+화면이 작고 메모리가 제한된 디바이스에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB** 옵션을 사용합니다.
 **모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
 
 1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.10240.0 WVGA 4인치 512MB**를 선택합니다.
@@ -219,7 +223,7 @@ default.js 파일을 엽니다.
 
 무엇을 하는 것인지 궁금할 것입니다. 이 몇 줄의 코드는 default.js 코드의 나머지를 자체 실행 익명 함수로 래핑합니다. 자체 실행 익명 함수를 사용하면 이름 지정 충돌이나 수정하지 않으려는 값을 실수로 수정하는 상황을 쉽게 방지할 수 있습니다. 또한 글로벌 네임스페이스에서 불필요한 식별자를 없애 성능을 향상할 수 있습니다. 조금 이상해 보이지만 좋은 프로그래밍 방식입니다.
 
-다음 줄의 코드는 JavaScript 코드를 위해 [strict 모드](https://msdn.microsoft.com/en-us/library/windows/apps/br230269.aspx)를 설정합니다. strict 모드는 코드에 대해 추가적인 오류 검사를 제공합니다. 예를 들어 암시적으로 선언된 변수를 사용하거나 읽기 전용 속성에 값을 지정하는 것을 방지합니다.
+다음 줄의 코드는 JavaScript 코드를 위해 [strict 모드](https://msdn.microsoft.com/library/windows/apps/br230269.aspx)를 설정합니다. strict 모드는 코드에 대해 추가적인 오류 검사를 제공합니다. 예를 들어 암시적으로 선언된 변수를 사용하거나 읽기 전용 속성에 값을 지정하는 것을 방지합니다.
 
 default.js에 있는 나머지 코드를 살펴보시기 바랍니다. 이러한 코드는 앱의 [**activated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 및 [**checkpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839) 이벤트를 처리합니다. 나중에 이러한 이벤트에 대해 보다 자세히 살펴보겠습니다. 지금은 앱이 시작될 때 **activated** 이벤트가 발생한다는 것만 알아 두세요.
 
@@ -252,7 +256,7 @@ default.js에 있는 나머지 코드를 살펴보시기 바랍니다. 이러한
 })();
 ```
 
-[**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
+[**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 가져와 지난 섹션에서 만든 `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소로 인사말을 출력하는 데 사용합니다.
 
 ### 터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
 
@@ -271,7 +275,7 @@ UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차
         }
 ```
 
-2.  이 이벤트 처리기 내에서 `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 읽어 온 다음 이를 사용해 인사말을 만듭니다. `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
+2.  이 이벤트 처리기 내에서, `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자의 이름을 검색하고 이 이름을 사용해 인사말을 만듭니다. `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)를 사용하여 결과를 표시합니다.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -418,7 +422,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
 
 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 앱에 추가합니다.
 
-1.  default.html 파일에서 [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 뒤에 추가합니다.
+1.  default.html 파일에서 [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 뒤에 추가합니다.
 
     ```html
     <body class="win-type-body">
@@ -553,6 +557,6 @@ Here's the updated [**onactivated**](https://msdn.microsoft.com/library/windows/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

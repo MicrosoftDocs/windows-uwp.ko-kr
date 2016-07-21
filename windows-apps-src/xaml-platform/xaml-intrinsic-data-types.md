@@ -3,6 +3,7 @@ author: jwmsft
 description: "CLR(공용 언어 런타임)과 C++ 등 다른 프로그래밍 언어의 특정 데이터 형식에 제공되는 Windows 런타임에 대한 XAML의 언어 수준 지원이 나열됩니다."
 title: "XAML 기본 데이터 형식"
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+translationtype: Human Translation
 ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
 ms.openlocfilehash: 479b900ca14497712f25a7825fde6775a3c1ab60
 
