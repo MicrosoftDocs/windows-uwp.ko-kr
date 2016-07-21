@@ -6,37 +6,37 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/3e762736f42467f97b386f62bc4dd0d69ef0a89a/windows-apps-src/get-started/enable-your-device-for-development.md) | OutofSyncHandedBackSuccess | [Details](#9da8206c10c440cbe53cf57d05de495ddd4148582311)
- [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/75c036fc934a8071f17a8690a22a03e10c4fe1d4/windows-apps-src/get-started/get-set-up.md) | OutofSyncHandedBackSuccess | [Details](#d100a4ae4f7142c7413bccfa7fe247077d829faf2312)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/43ceaa69d85276274f5a5b2041b0392b7ec9d7f7/windows-apps-src/get-started/learn-more.md) | OutofSyncHandedBackSuccess | [Details](#38bb4cb94347455ba5970fa4227a834fac23253c2676)
+ [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/43ceaa69d85276274f5a5b2041b0392b7ec9d7f7/windows-apps-src/get-started/your-first-app.md) | OutofSyncHandedBackSuccess | [Details](#0cf6984f4e93563a4a52ce87d89f19850734c8332681)
 
 ## Item Details
-##### <a name='9da8206c10c440cbe53cf57d05de495ddd4148582311'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/3e762736f42467f97b386f62bc4dd0d69ef0a89a/windows-apps-src/get-started/enable-your-device-for-development.md)
+##### <a name='38bb4cb94347455ba5970fa4227a834fac23253c2676'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/43ceaa69d85276274f5a5b2041b0392b7ec9d7f7/windows-apps-src/get-started/learn-more.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f3e0039ff59623e440dd2cb7a9aa228a9e880c55/ol-handoff/Microsoft/windows-apps.ko-kr/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
-* Handoff Datetime: 2016-07-21 05:28:34
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/4bb3df0a46ed72bc222b855e8d05e096e0f716a2/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Handoff Datetime: 2016-07-21 05:58:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/enable-your-device-for-development.md)
-* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-07 14:56:52
 * [Back to Top](#report-top)
 
-##### <a name='d100a4ae4f7142c7413bccfa7fe247077d829faf2312'></a> Source: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/75c036fc934a8071f17a8690a22a03e10c4fe1d4/windows-apps-src/get-started/get-set-up.md)
+##### <a name='0cf6984f4e93563a4a52ce87d89f19850734c8332681'></a> Source: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/43ceaa69d85276274f5a5b2041b0392b7ec9d7f7/windows-apps-src/get-started/your-first-app.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f3e0039ff59623e440dd2cb7a9aa228a9e880c55/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf)
-* Handoff Datetime: 2016-07-21 05:28:34
+* Handoff File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/4bb3df0a46ed72bc222b855e8d05e096e0f716a2/ol-handoff/Microsoft/windows-apps.ko-kr/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf)
+* Handoff Datetime: 2016-07-21 05:58:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/get-set-up.md)
-* Current Handback File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/5a7d99080add294f10b724030c8d569afd77501c/windows-apps-src/get-started/your-first-app.md)
+* Current Handback File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/1dfb47e28024000982ad191da547262d0e4f1c06/ol-handback/Microsoft/windows-apps.ko-kr/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-07 14:56:52
 * [Back to Top](#report-top)
 
