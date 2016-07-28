@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/b77d4be4f908064f493d1ab03d9c4e0a9d5443f9/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#01fbee12567b9dc2af80385d6421977a846c53e92688)
+ [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/95477644b0f86156d382707033fa82f13de1a0fe/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#8a75344e251ede5c01d47323ebd1b6c170de0ea62688)
 
 ## Item Details
-##### <a name='01fbee12567b9dc2af80385d6421977a846c53e92688'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/b77d4be4f908064f493d1ab03d9c4e0a9d5443f9/windows-apps-src/get-started/universal-application-platform-guide.md)
+##### <a name='8a75344e251ede5c01d47323ebd1b6c170de0ea62688'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/95477644b0f86156d382707033fa82f13de1a0fe/windows-apps-src/get-started/universal-application-platform-guide.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/bfd52aa5c496295f85c4f83030207425a3fc3ac7/ol-handoff/Microsoft/windows-apps.ko-kr/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf)
-* Handoff Datetime: 2016-07-28 03:16:38
+* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/df1db787641875862059bbd3258bc56875f17af0/ol-handoff/Microsoft/windows-apps.ko-kr/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.ko-kr.xlf)
+* Handoff Datetime: 2016-07-28 14:15:00
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
