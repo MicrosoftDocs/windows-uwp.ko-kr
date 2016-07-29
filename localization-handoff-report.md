@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/fae2c6b31c9c6c07026abc4718959b02a36e6600/windows-apps-src/debug-test-perf/device-portal-api-core.md) | OutofSyncHandedBackSuccess | [Details](#080827b93427a387ceebf05a30bb4b13153739071999)
+ [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/a357e2304cb0c5b206726e6580eb370e9bff5e1e/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | OutofSyncHandedBackSuccess | [Details](#4d92bca22f35a76922e75b9a6c4a7966be1f381d2309)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/2e052ba064bf9d96b259d5854ada22ca16410e39/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#24f7d3c25596b9e727ecfd226ee456c995af055b5329)
 
 ## Item Details
-##### <a name='080827b93427a387ceebf05a30bb4b13153739071999'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/fae2c6b31c9c6c07026abc4718959b02a36e6600/windows-apps-src/debug-test-perf/device-portal-api-core.md)
+##### <a name='4d92bca22f35a76922e75b9a6c4a7966be1f381d2309'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/a357e2304cb0c5b206726e6580eb370e9bff5e1e/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c4d00d867cee6a9c8d5eac28b0a9d88923a46048/ol-handoff/Microsoft/windows-apps.ko-kr/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf)
-* Handoff Datetime: 2016-07-29 20:46:01
+* Handoff File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c7bf0845dee58ab2e490849ae3ece6e471ff1f1e/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
+* Handoff Datetime: 2016-07-29 22:15:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/debug-test-perf/device-portal-api-core.md)
-* Current Handback File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+* Current Handback File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='24f7d3c25596b9e727ecfd226ee456c995af055b5329'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/2e052ba064bf9d96b259d5854ada22ca16410e39/windows-apps-src/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/c7bf0845dee58ab2e490849ae3ece6e471ff1f1e/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Handoff Datetime: 2016-07-29 22:15:05
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
