@@ -6,32 +6,38 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\controls-and-patterns\menus.md](https://github.com/Microsoft/windows-apps/blob/2205584554735b1e23282e1043b986f8e1e8fd77/windows-apps-src/controls-and-patterns/menus.md) | HandedOffSuccess | [Details](#4f3a0a819f17eef6255be8a91ba1613bbd548e3f3172)
- [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/cbba1d0bc7ce1755f9f1823bb2af8774dc93c2f2/windows-apps-src/whats-new/windows-10-version-1607.md) | HandedOffSuccess | [Details](#f70b74a9924eeafeb70bb66b0260efe79e16f2137943)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/1bc2d0c5acb35cdcfe30faeb751662d2898b4dab/windows-apps-src/xbox-apps/known-issues.md) | OutofSyncHandedBackSuccess | [Details](#7fca468bea74d53c0540a337405c479fcfa4bbbf8061)
+ [windows-apps-src\xbox-apps\whats-new.md](https://github.com/Microsoft/windows-apps/blob/2b6fe4530e63b6f466cadf2a7159a5c3d04cf739/windows-apps-src/xbox-apps/whats-new.md) | OutofSyncHandedBackSuccess | [Details](#027e1f0e547ee9d6fa6a38f7342132c67ec4ddad8080)
 
 ## Item Details
-##### <a name='4f3a0a819f17eef6255be8a91ba1613bbd548e3f3172'></a> Source: [windows-apps-src\controls-and-patterns\menus.md](https://github.com/Microsoft/windows-apps/blob/2205584554735b1e23282e1043b986f8e1e8fd77/windows-apps-src/controls-and-patterns/menus.md)
-* Status: HandedOffSuccess
+##### <a name='7fca468bea74d53c0540a337405c479fcfa4bbbf8061'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/1bc2d0c5acb35cdcfe30faeb751662d2898b4dab/windows-apps-src/xbox-apps/known-issues.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [menus.a5b788678819bbceb4b3c023db30aeb6efe0ec8e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5fd4862f3b73a9bb0fb7b985d901b8705e750c85/ol-handoff/Microsoft/windows-apps.ko-kr/master/menus.a5b788678819bbceb4b3c023db30aeb6efe0ec8e.ko-kr.xlf)
-* Handoff Datetime: 2016-08-02 18:17:55
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8db14fce0d3179ea1d1cdefcbcdf3dcb7cd7eecd/ol-handoff/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Handoff Datetime: 2016-08-02 19:05:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/xbox-apps/known-issues.md)
+* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
-##### <a name='f70b74a9924eeafeb70bb66b0260efe79e16f2137943'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/cbba1d0bc7ce1755f9f1823bb2af8774dc93c2f2/windows-apps-src/whats-new/windows-10-version-1607.md)
-* Status: HandedOffSuccess
+##### <a name='027e1f0e547ee9d6fa6a38f7342132c67ec4ddad8080'></a> Source: [windows-apps-src\xbox-apps\whats-new.md](https://github.com/Microsoft/windows-apps/blob/2b6fe4530e63b6f466cadf2a7159a5c3d04cf739/windows-apps-src/xbox-apps/whats-new.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5fd4862f3b73a9bb0fb7b985d901b8705e750c85/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.ko-kr.xlf)
-* Handoff Datetime: 2016-08-02 18:17:55
+* Handoff File: [whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8db14fce0d3179ea1d1cdefcbcdf3dcb7cd7eecd/ol-handoff/Microsoft/windows-apps.ko-kr/master/whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.ko-kr.xlf)
+* Handoff Datetime: 2016-08-02 19:05:53
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\whats-new.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/xbox-apps/whats-new.md)
+* Current Handback File: [whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
