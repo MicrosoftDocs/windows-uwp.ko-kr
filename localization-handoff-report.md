@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/f0d8c19179d562d6980bb0148d76cac4a5607f19/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md) | OutofSyncHandedBackSuccess | [Details](#722fd234238688df8676bdee43d603409cf083bc4297)
+ [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/be3ec5b457184ac450836b57ec7eaa940d89919a/windows-apps-src/input-and-devices/save-and-load-ink.md) | OutofSyncHandedBackSuccess | [Details](#b89dfe37a2669fc1d8ea4f2a66013e4c0ee6337d4299)
 
 ## Item Details
-##### <a name='722fd234238688df8676bdee43d603409cf083bc4297'></a> Source: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps/blob/f0d8c19179d562d6980bb0148d76cac4a5607f19/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
+##### <a name='b89dfe37a2669fc1d8ea4f2a66013e4c0ee6337d4299'></a> Source: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps/blob/be3ec5b457184ac450836b57ec7eaa940d89919a/windows-apps-src/input-and-devices/save-and-load-ink.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/bd313c15181c1c8c62c9ce905b9684106fdf4cd8/ol-handoff/Microsoft/windows-apps.ko-kr/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf)
-* Handoff Datetime: 2016-08-03 16:11:07
+* Handoff File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/14dd63394bee43359c49e8bfc878e64d9ef14639/ol-handoff/Microsoft/windows-apps.ko-kr/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf)
+* Handoff Datetime: 2016-08-03 16:39:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\pen-and-stylus-interactions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/input-and-devices/pen-and-stylus-interactions.md)
-* Current Handback File: [pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf)
+* Current Target File: [windows-apps-src\input-and-devices\save-and-load-ink.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/input-and-devices/save-and-load-ink.md)
+* Current Handback File: [save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/save-and-load-ink.3721dcc4d221bc574a7cbe1d1301b306515b50fe.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
