@@ -1,20 +1,48 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://github.com/Microsoft/windows-apps/blob/0b00f711e42ac40493bb3e94448ab6f9feb4bd3d/windows-apps-src/monetize/in-app-purchases-and-trials.md) | HandedOffSuccess | [Details](#7032cf1aa297db9fa48d7ac1378eca3e4a22834f4780)
+ [windows-apps-src\input-and-devices\access-keys.md](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/access-keys.md) | HandedOffSuccess | [Details](#d96d507c6ce8537888619ce174e2ff0e5284dcce3997)
+ [windows-apps-src\input-and-devices\images\keyboard\accesskeys-keytips.png](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/images/keyboard/accesskeys-keytips.png) | HandedOffSuccess | [Details](#e1e5eec07e5ce273f0801c0ca21851bbd4248cf14213)
+ [windows-apps-src\input-and-devices\images\keyboard\accesskeys-keytips-hometab.png](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/images/keyboard/accesskeys-keytips-hometab.png) | HandedOffSuccess | [Details](#d70f874d95a8b93113ec3cf4c7285e4827241a544212)
 
 ## Item Details
-##### <a name='7032cf1aa297db9fa48d7ac1378eca3e4a22834f4780'></a> Source: [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://github.com/Microsoft/windows-apps/blob/0b00f711e42ac40493bb3e94448ab6f9feb4bd3d/windows-apps-src/monetize/in-app-purchases-and-trials.md)
+##### <a name='d96d507c6ce8537888619ce174e2ff0e5284dcce3997'></a> Source: [windows-apps-src\input-and-devices\access-keys.md](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/access-keys.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/95cae79b2ae4997db36f202580fa5e9b30f9ce3d/ol-handoff/Microsoft/windows-apps.ko-kr/master/in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf)
-* Handoff Datetime: 2016-08-10 23:21:01
+* Handoff File: [access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/a14e7854fb1008aa18e2350273f0793db8c5c75e/ol-handoff/Microsoft/windows-apps.ko-kr/master/access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.ko-kr.xlf)
+* Handoff Datetime: 2016-08-11 02:21:10
 * Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='e1e5eec07e5ce273f0801c0ca21851bbd4248cf14213'></a> Source: [windows-apps-src\input-and-devices\images\keyboard\accesskeys-keytips.png](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/images/keyboard/accesskeys-keytips.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [e1e5eec07e5ce273f0801c0ca21851bbd4248cf1.png](https://github.com/Microsoft/WDG.handoff/blob/a14e7854fb1008aa18e2350273f0793db8c5c75e/ol-handoff/Microsoft/windows-apps.ko-kr/master/e1e5eec07e5ce273f0801c0ca21851bbd4248cf1.png)
+* Handoff Datetime: 2016-08-11 02:21:10
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\input-and-devices\access-keys.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='d70f874d95a8b93113ec3cf4c7285e4827241a544212'></a> Source: [windows-apps-src\input-and-devices\images\keyboard\accesskeys-keytips-hometab.png](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/images/keyboard/accesskeys-keytips-hometab.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [d70f874d95a8b93113ec3cf4c7285e4827241a54.png](https://github.com/Microsoft/WDG.handoff/blob/a14e7854fb1008aa18e2350273f0793db8c5c75e/ol-handoff/Microsoft/windows-apps.ko-kr/master/d70f874d95a8b93113ec3cf4c7285e4827241a54.png)
+* Handoff Datetime: 2016-08-11 02:21:10
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\input-and-devices\access-keys.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
