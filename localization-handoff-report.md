@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\audio-device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/0745e96715ba49582ab762d4b25f1b8e681116f5/windows-apps-src/audio-video-camera/audio-device-information-properties.md) | HandedOffSuccess | [Details](#08ebb37679d1dd93458a3ffe846d8bd33574635d159)
+ [windows-apps-src\audio-video-camera\audio-graphs.md](https://github.com/Microsoft/windows-apps/blob/26e9820a0a4a91462b1952f7ed8dc8eb5f3536f7/windows-apps-src/audio-video-camera/audio-graphs.md) | HandedOffSuccess | [Details](#087db9c426a643cc4c7ecfa7686409ed219b07a5160)
+ [windows-apps-src\audio-video-camera\background-audio.md](https://github.com/Microsoft/windows-apps/blob/cf44b8a1a68fea2d8f7f6a0353c61780f0b25f0b/windows-apps-src/audio-video-camera/background-audio.md) | HandedOffSuccess | [Details](#654f14dd88010f21706aa56e5b265df1cb9362a2161)
 
 ## Item Details
-##### <a name='08ebb37679d1dd93458a3ffe846d8bd33574635d159'></a> Source: [windows-apps-src\audio-video-camera\audio-device-information-properties.md](https://github.com/Microsoft/windows-apps/blob/0745e96715ba49582ab762d4b25f1b8e681116f5/windows-apps-src/audio-video-camera/audio-device-information-properties.md)
+##### <a name='087db9c426a643cc4c7ecfa7686409ed219b07a5160'></a> Source: [windows-apps-src\audio-video-camera\audio-graphs.md](https://github.com/Microsoft/windows-apps/blob/26e9820a0a4a91462b1952f7ed8dc8eb5f3536f7/windows-apps-src/audio-video-camera/audio-graphs.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/9b740724f52f2d0d870ef9c652ae0cf758f13d9d/ol-handoff/Microsoft/windows-apps.ko-kr/master/audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf)
-* Handoff Datetime: 2016-08-11 20:50:20
+* Handoff File: [audio-graphs.1c22caea26c2814f38de39f27007b9ce0e5bf073.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/898e9b918defa70445dcb85b414ee1a245a81b4c/ol-handoff/Microsoft/windows-apps.ko-kr/master/audio-graphs.1c22caea26c2814f38de39f27007b9ce0e5bf073.ko-kr.xlf)
+* Handoff Datetime: 2016-08-11 21:20:36
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\audio-video-camera\audio-device-information-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/audio-video-camera/audio-device-information-properties.md)
-* Current Handback File: [audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/audio-device-information-properties.5291144110f2e5094827d1a9264cec8a890df448.ko-kr.xlf)
+* Current Target File: [windows-apps-src\audio-video-camera\audio-graphs.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/audio-video-camera/audio-graphs.md)
+* Current Handback File: [audio-graphs.1c22caea26c2814f38de39f27007b9ce0e5bf073.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/audio-graphs.1c22caea26c2814f38de39f27007b9ce0e5bf073.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='654f14dd88010f21706aa56e5b265df1cb9362a2161'></a> Source: [windows-apps-src\audio-video-camera\background-audio.md](https://github.com/Microsoft/windows-apps/blob/cf44b8a1a68fea2d8f7f6a0353c61780f0b25f0b/windows-apps-src/audio-video-camera/background-audio.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/898e9b918defa70445dcb85b414ee1a245a81b4c/ol-handoff/Microsoft/windows-apps.ko-kr/master/background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.ko-kr.xlf)
+* Handoff Datetime: 2016-08-11 21:20:36
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\audio-video-camera\background-audio.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/audio-video-camera/background-audio.md)
+* Current Handback File: [background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/background-audio.7b1349a8c74aa8ba5aae5f29abd931f1752577ec.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
