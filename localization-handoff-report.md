@@ -1,42 +1,135 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 8
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/ddd7b9acfe9b74e883b73e179195069ce6efa994/windows-apps-src/data-binding/data-binding-quickstart.md) | HandedOffSuccess | [Details](#94320c1ab9f4ea33d15690183285a02dee78a40b3205)
- [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/97dc98e69428117c139b421563a22d762aa259e1/windows-apps-src/publish/feedback-report.md) | HandedOffSuccess | [Details](#223aa1475d8002ded356c9eefdc80c77a5bd553b5000)
+ [windows-apps-src\controls-and-patterns\lists.md](https://github.com/Microsoft/windows-apps/blob/508a09e0c12006c00dbdf7675516b41119eab8a6/windows-apps-src/controls-and-patterns/lists.md) | HandedOffSuccess | [Details](#8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d3150)
+ [windows-apps-src\controls-and-patterns\pull-to-refresh.md](https://github.com/Microsoft/windows-apps/blob/508a09e0c12006c00dbdf7675516b41119eab8a6/windows-apps-src/controls-and-patterns/pull-to-refresh.md) | HandedOffSuccess | [Details](#ef5773f9885a5286ac7ca7c256e6a831673163893160)
+ [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/96a35ded526b09dd1ce1cb8528bb4a99e3511b32/windows-apps-src/input-and-devices/designing-for-tv.md) | HandedOffSuccess | [Details](#734a0f0574ac7698dd6bd963bf3e20225b26d4013999)
+ [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/fe889127ba0f0a7132c9705526df074abcf74eff/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md) | HandedOffSuccess | [Details](#27ed224e7fd4207f95918d63929231524721442d4670)
+ [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | HandedOffSuccess | [Details](#f9b21a6f871ef21802ba885d37ee40ad518ca1c84708)
+ [windows-apps-src\monetize\grant-free-products.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/grant-free-products.md) | HandedOffSuccess | [Details](#0a28e321645b7d3ec8699c5f20c7716c121f8fe24746)
+ [windows-apps-src\monetize\query-for-products.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/query-for-products.md) | HandedOffSuccess | [Details](#0e61b3b521f239062c33709a306630919d7674734790)
+ [windows-apps-src\monetize\view-and-grant-products-from-a-service.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/view-and-grant-products-from-a-service.md) | HandedOffSuccess | [Details](#cecd774544af536c4383a24a6d48bf3ff65b513a4809)
 
 ## Item Details
-##### <a name='94320c1ab9f4ea33d15690183285a02dee78a40b3205'></a> Source: [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/ddd7b9acfe9b74e883b73e179195069ce6efa994/windows-apps-src/data-binding/data-binding-quickstart.md)
+##### <a name='8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d3150'></a> Source: [windows-apps-src\controls-and-patterns\lists.md](https://github.com/Microsoft/windows-apps/blob/508a09e0c12006c00dbdf7675516b41119eab8a6/windows-apps-src/controls-and-patterns/lists.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/3664bb97846422182a80b3573ae0e18c00a809a0/ol-handoff/Microsoft/windows-apps.ko-kr/master/data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf)
-* Handoff Datetime: 2016-08-16 17:26:28
+* Handoff File: [lists.4f6879cf79d2e6099b9dedd54c08f9d78749a21d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/lists.4f6879cf79d2e6099b9dedd54c08f9d78749a21d.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/data-binding/data-binding-quickstart.md)
-* Current Handback File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf)
+* Current Target File: [windows-apps-src\controls-and-patterns\lists.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/controls-and-patterns/lists.md)
+* Current Handback File: [lists.4f6879cf79d2e6099b9dedd54c08f9d78749a21d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/lists.4f6879cf79d2e6099b9dedd54c08f9d78749a21d.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
-##### <a name='223aa1475d8002ded356c9eefdc80c77a5bd553b5000'></a> Source: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/97dc98e69428117c139b421563a22d762aa259e1/windows-apps-src/publish/feedback-report.md)
+##### <a name='ef5773f9885a5286ac7ca7c256e6a831673163893160'></a> Source: [windows-apps-src\controls-and-patterns\pull-to-refresh.md](https://github.com/Microsoft/windows-apps/blob/508a09e0c12006c00dbdf7675516b41119eab8a6/windows-apps-src/controls-and-patterns/pull-to-refresh.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/3664bb97846422182a80b3573ae0e18c00a809a0/ol-handoff/Microsoft/windows-apps.ko-kr/master/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf)
-* Handoff Datetime: 2016-08-16 17:26:28
+* Handoff File: [pull-to-refresh.a9395296294c7280de3b12260dcc4541cf7c57b3.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/pull-to-refresh.a9395296294c7280de3b12260dcc4541cf7c57b3.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/feedback-report.md)
-* Current Handback File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.ko-kr.xlf)
+* [Back to Top](#report-top)
+
+##### <a name='734a0f0574ac7698dd6bd963bf3e20225b26d4013999'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/96a35ded526b09dd1ce1cb8528bb4a99e3511b32/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/input-and-devices/designing-for-tv.md)
+* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='27ed224e7fd4207f95918d63929231524721442d4670'></a> Source: [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/fe889127ba0f0a7132c9705526df074abcf74eff/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\layout\peer-to-peer-navigation-between-two-pages.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/layout/peer-to-peer-navigation-between-two-pages.md)
+* Current Handback File: [peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/peer-to-peer-navigation-between-two-pages.0300cf8a0fd1a68b83b643544575fdeec289c144.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='f9b21a6f871ef21802ba885d37ee40ad518ca1c84708'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
+* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='0a28e321645b7d3ec8699c5f20c7716c121f8fe24746'></a> Source: [windows-apps-src\monetize\grant-free-products.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/grant-free-products.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [grant-free-products.9ce5dd681b14e8792e182d1e6176971dd69c3220.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/grant-free-products.9ce5dd681b14e8792e182d1e6176971dd69c3220.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\grant-free-products.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/grant-free-products.md)
+* Current Handback File: [grant-free-products.9ce5dd681b14e8792e182d1e6176971dd69c3220.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/grant-free-products.9ce5dd681b14e8792e182d1e6176971dd69c3220.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='0e61b3b521f239062c33709a306630919d7674734790'></a> Source: [windows-apps-src\monetize\query-for-products.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/query-for-products.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [query-for-products.cad9cebcc3ee323150842b236699b8fc91d4b02a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/query-for-products.cad9cebcc3ee323150842b236699b8fc91d4b02a.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\query-for-products.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/query-for-products.md)
+* Current Handback File: [query-for-products.cad9cebcc3ee323150842b236699b8fc91d4b02a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/query-for-products.cad9cebcc3ee323150842b236699b8fc91d4b02a.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='cecd774544af536c4383a24a6d48bf3ff65b513a4809'></a> Source: [windows-apps-src\monetize\view-and-grant-products-from-a-service.md](https://github.com/Microsoft/windows-apps/blob/c0bbc0fe5530c3c94850a169aa013ae3050afa06/windows-apps-src/monetize/view-and-grant-products-from-a-service.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [view-and-grant-products-from-a-service.883217ecb204993b55b77e29ab1e2d54b14705b7.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0034592a4a1c235068abffefe97560978e064390/ol-handoff/Microsoft/windows-apps.ko-kr/master/view-and-grant-products-from-a-service.883217ecb204993b55b77e29ab1e2d54b14705b7.ko-kr.xlf)
+* Handoff Datetime: 2016-08-16 20:10:35
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\view-and-grant-products-from-a-service.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/view-and-grant-products-from-a-service.md)
+* Current Handback File: [view-and-grant-products-from-a-service.883217ecb204993b55b77e29ab1e2d54b14705b7.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/view-and-grant-products-from-a-service.883217ecb204993b55b77e29ab1e2d54b14705b7.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
