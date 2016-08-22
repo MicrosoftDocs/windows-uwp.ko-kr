@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/30f135ee37eafba13410d0b0cc496ac95670ea98/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#bd3bc909bf3301074f893961d1913c411b766ceb7934)
+ [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/f90ba930db60f338ee0ebcc80934281363de01ee/windows-apps-src/launch-resume/launch-settings-app.md) | HandedOffSuccess | [Details](#249e485f74364475ff96a8256ee88bdb797492594396)
 
 ## Item Details
-##### <a name='bd3bc909bf3301074f893961d1913c411b766ceb7934'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/30f135ee37eafba13410d0b0cc496ac95670ea98/windows-apps-src/TOC.md)
+##### <a name='249e485f74364475ff96a8256ee88bdb797492594396'></a> Source: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/f90ba930db60f338ee0ebcc80934281363de01ee/windows-apps-src/launch-resume/launch-settings-app.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/2b92439e4d1272b2310160e6ea69ca81bfc763a5/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-08-19 23:24:07
+* Handoff File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8a7b8483132833430705032236a1f4b1542b9e6e/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf)
+* Handoff Datetime: 2016-08-22 17:23:02
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Current Target File: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/launch-resume/launch-settings-app.md)
+* Current Handback File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
