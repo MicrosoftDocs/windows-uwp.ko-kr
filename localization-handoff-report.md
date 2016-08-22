@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | HandedOffSuccess | [Details](#a1e04eab743ef11544ed18544710767608d7c3613545)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#6df086cca293bcdd73a9be0e04b3d6696e62d11e7935)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e7573e222d93d59bab5f55f4585e5c829f2fafa9/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#0f0f231d25383a46e4c951067cb62df958c40aeb7935)
 
 ## Item Details
-##### <a name='a1e04eab743ef11544ed18544710767608d7c3613545'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
+##### <a name='0f0f231d25383a46e4c951067cb62df958c40aeb7935'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e7573e222d93d59bab5f55f4585e5c829f2fafa9/windows-apps-src/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0db47a5475e1de7818cda7d37e17e8d4e8080c60/ol-handoff/Microsoft/windows-apps.ko-kr/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.ko-kr.xlf)
-* Handoff Datetime: 2016-08-22 18:25:03
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='6df086cca293bcdd73a9be0e04b3d6696e62d11e7935'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/0db47a5475e1de7818cda7d37e17e8d4e8080c60/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-08-22 18:25:03
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/79b8fa4efd3b79cd7d23a4b7fbd03ee530dc67c7/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Handoff Datetime: 2016-08-22 18:53:31
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
