@@ -1,24 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a84d3f73f2f46010e65b30c097d90f3936b52a29/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | HandedOffSuccess | [Details](#72ac67b17fc519d374798e5121b309f664ff6b1b3545)
+ [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/eeb7aeace986401e415127e4b2376ae182c135b5/windows-apps-src/porting/desktop-to-uwp-root.md) | HandedOffSuccess | [Details](#e4f465a057ce6e39cb1c57d7e8e6643e8002ab544846)
+ [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps/blob/a92f642b2d28eb801106388648455752c10e013a/windows-apps-src/publish/generate-promotional-codes.md) | HandedOffSuccess | [Details](#cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb565005)
 
 ## Item Details
-##### <a name='72ac67b17fc519d374798e5121b309f664ff6b1b3545'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a84d3f73f2f46010e65b30c097d90f3936b52a29/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
+##### <a name='e4f465a057ce6e39cb1c57d7e8e6643e8002ab544846'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/eeb7aeace986401e415127e4b2376ae182c135b5/windows-apps-src/porting/desktop-to-uwp-root.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/099b1b9a26413cdf1c795ce19b555f058758fdc7/ol-handoff/Microsoft/windows-apps.ko-kr/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.ko-kr.xlf)
-* Handoff Datetime: 2016-08-22 22:53:49
+* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f24115968174d8265660e5006759d11bcf196a38/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf)
+* Handoff Datetime: 2016-08-23 16:24:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/porting/desktop-to-uwp-root.md)
+* Current Handback File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='cf1f6cf680d4ae57513dde2c6a356e8ba4b1cb565005'></a> Source: [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps/blob/a92f642b2d28eb801106388648455752c10e013a/windows-apps-src/publish/generate-promotional-codes.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f24115968174d8265660e5006759d11bcf196a38/ol-handoff/Microsoft/windows-apps.ko-kr/master/generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf)
+* Handoff Datetime: 2016-08-23 16:24:05
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\generate-promotional-codes.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/generate-promotional-codes.md)
+* Current Handback File: [generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/generate-promotional-codes.bee6d8ebf36ccd1e4f9f7400e88422593cca216b.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
