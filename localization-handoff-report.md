@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\csharp-code-examples-for-the-windows-store-submission-api.md](https://github.com/Microsoft/windows-apps/blob/1f577f33563d6acd7d2f791a48176f9a6164d287/windows-apps-src/monetize/csharp-code-examples-for-the-windows-store-submission-api.md) | HandedOffSuccess | [Details](#9ae200699027f908cfc4b59dfc5035dcb09e93f64738)
+ [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e2b88b0eb88d0a3d8d1a5fb944bd4d00a50012e0/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#b9bfc51e9abb0ba15e5873a5693d5b24f4b6dbf73315)
 
 ## Item Details
-##### <a name='9ae200699027f908cfc4b59dfc5035dcb09e93f64738'></a> Source: [windows-apps-src\monetize\csharp-code-examples-for-the-windows-store-submission-api.md](https://github.com/Microsoft/windows-apps/blob/1f577f33563d6acd7d2f791a48176f9a6164d287/windows-apps-src/monetize/csharp-code-examples-for-the-windows-store-submission-api.md)
+##### <a name='b9bfc51e9abb0ba15e5873a5693d5b24f4b6dbf73315'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/e2b88b0eb88d0a3d8d1a5fb944bd4d00a50012e0/windows-apps-src/devices-sensors/3d-print-from-app.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [csharp-code-examples-for-the-windows-store-submission-api.8ccdf2c5c767f54370691120d8a1bce9501537fa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/11efcc49653446d56faf3a146db1e12583fe7391/ol-handoff/Microsoft/windows-apps.ko-kr/master/csharp-code-examples-for-the-windows-store-submission-api.8ccdf2c5c767f54370691120d8a1bce9501537fa.ko-kr.xlf)
-* Handoff Datetime: 2016-08-29 18:10:15
+* Handoff File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/63845da4a7209890d674c114c1edd7bb1575f3f1/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf)
+* Handoff Datetime: 2016-08-29 18:38:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/devices-sensors/3d-print-from-app.md)
+* Current Handback File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
