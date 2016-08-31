@@ -1,27 +1,63 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820/windows-apps-src/xbox-apps/frequently-asked-questions.md) | HandedOffSuccess | [Details](#38e5d48b2b0303b5f7d13fdaf6f71e1b3fa569788054)
+ [windows-apps-src\monetize\create-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/create-an-app-submission.md) | HandedOffSuccess | [Details](#4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd84740)
+ [windows-apps-src\monetize\get-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/get-an-app-submission.md) | HandedOffSuccess | [Details](#c845b59919a3a487949bc8926f7261992dac60ae4769)
+ [windows-apps-src\monetize\manage-app-submissions.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/manage-app-submissions.md) | HandedOffSuccess | [Details](#448eafbdadb21476da43e7408bb8bad354ba486d4829)
+ [windows-apps-src\monetize\update-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/update-an-app-submission.md) | HandedOffSuccess | [Details](#ad1c565f1ec84127b2ac689cc7cb23d2b39764ef4855)
 
 ## Item Details
-##### <a name='38e5d48b2b0303b5f7d13fdaf6f71e1b3fa569788054'></a> Source: [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820/windows-apps-src/xbox-apps/frequently-asked-questions.md)
+##### <a name='4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd84740'></a> Source: [windows-apps-src\monetize\create-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/create-an-app-submission.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/5a852143da02ac271a87fbca29c13e67d99762df/ol-handoff/Microsoft/windows-apps.ko-kr/master/frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf)
-* Handoff Datetime: 2016-08-31 16:09:56
+* Handoff File: [create-an-app-submission.d6d0c3588ca5d2a377e551d71b2d30a9df87ec2a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b9a037f3cc135cc041534d87e6e63a91f0f43bd5/ol-handoff/Microsoft/windows-apps.ko-kr/master/create-an-app-submission.d6d0c3588ca5d2a377e551d71b2d30a9df87ec2a.ko-kr.xlf)
+* Handoff Datetime: 2016-08-31 18:10:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/xbox-apps/frequently-asked-questions.md)
-* Current Handback File: [frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.ko-kr.xlf)
-* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='c845b59919a3a487949bc8926f7261992dac60ae4769'></a> Source: [windows-apps-src\monetize\get-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/get-an-app-submission.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [get-an-app-submission.e4d89c99211d2c2eb6f962fed154ea5ebaecbc0e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b9a037f3cc135cc041534d87e6e63a91f0f43bd5/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-an-app-submission.e4d89c99211d2c2eb6f962fed154ea5ebaecbc0e.ko-kr.xlf)
+* Handoff Datetime: 2016-08-31 18:10:13
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='448eafbdadb21476da43e7408bb8bad354ba486d4829'></a> Source: [windows-apps-src\monetize\manage-app-submissions.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/manage-app-submissions.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b9a037f3cc135cc041534d87e6e63a91f0f43bd5/ol-handoff/Microsoft/windows-apps.ko-kr/master/manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.ko-kr.xlf)
+* Handoff Datetime: 2016-08-31 18:10:13
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='ad1c565f1ec84127b2ac689cc7cb23d2b39764ef4855'></a> Source: [windows-apps-src\monetize\update-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/update-an-app-submission.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [update-an-app-submission.9431ea5b6d437b2ac8c568f5f86b672ece34606f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b9a037f3cc135cc041534d87e6e63a91f0f43bd5/ol-handoff/Microsoft/windows-apps.ko-kr/master/update-an-app-submission.9431ea5b6d437b2ac8c568f5f86b672ece34606f.ko-kr.xlf)
+* Handoff Datetime: 2016-08-31 18:10:13
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
