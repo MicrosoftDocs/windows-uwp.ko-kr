@@ -1,65 +1,54 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/connected-apps-and-devices.md) | HandedOffSuccess | [Details](#4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a4368)
- [windows-apps-src\launch-resume\discover-remote-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/discover-remote-devices.md) | HandedOffSuccess | [Details](#cb1f9cf6915378203919fdf63bcebc935af74a304376)
- [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/launch-a-remote-app.md) | HandedOffSuccess | [Details](#d8c3783d68a1b3b216058790d84255a7fb4b612c4400)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#7795cb65f01fc9e9013c6ad8a7330a34972622c47989)
+ [windows-apps-src\get-started\images\devcenter-topic1.png](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/images/devcenter-topic1.png) | HandedOffSuccess | [Details](#5ce75833952694e1e7571fb49586917e375039ea3576)
+ [windows-apps-src\get-started\images\devcenter-topic2.png](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/images/devcenter-topic2.png) | HandedOffSuccess | [Details](#cb4b464035e0fc6d287c81ef81685d91502c0bc73577)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#09f08bebdfc8355b05f36713e6e04ae80645cbb03933)
 
 ## Item Details
-##### <a name='4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a4368'></a> Source: [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/connected-apps-and-devices.md)
+##### <a name='5ce75833952694e1e7571fb49586917e375039ea3576'></a> Source: [windows-apps-src\get-started\images\devcenter-topic1.png](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/images/devcenter-topic1.png)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc8236f8209f6b79a29a1de518055bce94966912/ol-handoff/Microsoft/windows-apps.ko-kr/master/connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.ko-kr.xlf)
-* Handoff Datetime: 2016-08-31 20:41:01
-* Handoff Reason: Include
+* Handoff File: [5ce75833952694e1e7571fb49586917e375039ea.png](https://github.com/Microsoft/WDG.handoff/blob/f1f2ee237ee78373a7a6079ef4fe950d523cb829/ol-handoff/Microsoft/windows-apps.ko-kr/master/5ce75833952694e1e7571fb49586917e375039ea.png)
+* Handoff Datetime: 2016-08-31 22:11:15
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\learn-more.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cb1f9cf6915378203919fdf63bcebc935af74a304376'></a> Source: [windows-apps-src\launch-resume\discover-remote-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/discover-remote-devices.md)
+##### <a name='cb4b464035e0fc6d287c81ef81685d91502c0bc73577'></a> Source: [windows-apps-src\get-started\images\devcenter-topic2.png](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/images/devcenter-topic2.png)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [discover-remote-devices.b9a8dea8347a056b561eb5c7222bb1dff78a3acd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc8236f8209f6b79a29a1de518055bce94966912/ol-handoff/Microsoft/windows-apps.ko-kr/master/discover-remote-devices.b9a8dea8347a056b561eb5c7222bb1dff78a3acd.ko-kr.xlf)
-* Handoff Datetime: 2016-08-31 20:41:01
-* Handoff Reason: Include
+* Handoff File: [cb4b464035e0fc6d287c81ef81685d91502c0bc7.png](https://github.com/Microsoft/WDG.handoff/blob/f1f2ee237ee78373a7a6079ef4fe950d523cb829/ol-handoff/Microsoft/windows-apps.ko-kr/master/cb4b464035e0fc6d287c81ef81685d91502c0bc7.png)
+* Handoff Datetime: 2016-08-31 22:11:15
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\learn-more.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d8c3783d68a1b3b216058790d84255a7fb4b612c4400'></a> Source: [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/launch-a-remote-app.md)
+##### <a name='09f08bebdfc8355b05f36713e6e04ae80645cbb03933'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/c30f7a4ecfbbda826307a50ea4c81d9e2f95c966/windows-apps-src/get-started/learn-more.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc8236f8209f6b79a29a1de518055bce94966912/ol-handoff/Microsoft/windows-apps.ko-kr/master/launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.ko-kr.xlf)
-* Handoff Datetime: 2016-08-31 20:41:01
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f1f2ee237ee78373a7a6079ef4fe950d523cb829/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
+* Handoff Datetime: 2016-08-31 22:11:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='7795cb65f01fc9e9013c6ad8a7330a34972622c47989'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fc8236f8209f6b79a29a1de518055bce94966912/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-08-31 20:41:01
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
