@@ -1,21 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/4f82494763bdd0a1134ec7c648fc0129a356f19c/windows-apps-src/data-binding/data-binding-quickstart.md) | HandedOffSuccess | [Details](#ed0a55ba18d7578b026cb5fb5dfb2005a2a64dd53205)
- [windows-apps-src\monetize\migrate-from-admediatorcontrol-to-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/07baa54990ec31dc0cb9c289f9f0222754da9d7c/windows-apps-src/monetize/migrate-from-admediatorcontrol-to-adcontrol.md) | HandedOffSuccess | [Details](#3abef943530cc756de117edccc5ab16e5f1786044836)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/558bbfc76e0645ad20abcbdf8c624faaa81fce60/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#d17c1ff676a980f7580149e9a6221399726bf38b7991)
+ [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/e89580ef62d5d6ae095aa27628181181aaac9666/windows-apps-src/data-binding/data-binding-quickstart.md) | HandedOffSuccess | [Details](#d452751fd4ab0cc422c3eae94507923440ec45df3205)
+ [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/8b64cb00c5c06e6dc5a8ee4751e45ba1a5c1e65e/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md) | HandedOffSuccess | [Details](#20e3a37428f2c4c918d0b6f10dfca2e6f02cf41b7998)
 
 ## Item Details
-##### <a name='ed0a55ba18d7578b026cb5fb5dfb2005a2a64dd53205'></a> Source: [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/4f82494763bdd0a1134ec7c648fc0129a356f19c/windows-apps-src/data-binding/data-binding-quickstart.md)
+##### <a name='d452751fd4ab0cc422c3eae94507923440ec45df3205'></a> Source: [windows-apps-src\data-binding\data-binding-quickstart.md](https://github.com/Microsoft/windows-apps/blob/e89580ef62d5d6ae095aa27628181181aaac9666/windows-apps-src/data-binding/data-binding-quickstart.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f324945a7bde285242ae9329149bee977007bcb7/ol-handoff/Microsoft/windows-apps.ko-kr/master/data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf)
-* Handoff Datetime: 2016-09-01 20:42:47
+* Handoff File: [data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d5a88a3332a0398999ca33e34789e36a27733c4a/ol-handoff/Microsoft/windows-apps.ko-kr/master/data-binding-quickstart.829283e17abd682c9422338479b78c816ed593aa.ko-kr.xlf)
+* Handoff Datetime: 2016-09-01 21:11:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -26,31 +25,16 @@
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
-##### <a name='3abef943530cc756de117edccc5ab16e5f1786044836'></a> Source: [windows-apps-src\monetize\migrate-from-admediatorcontrol-to-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/07baa54990ec31dc0cb9c289f9f0222754da9d7c/windows-apps-src/monetize/migrate-from-admediatorcontrol-to-adcontrol.md)
+##### <a name='20e3a37428f2c4c918d0b6f10dfca2e6f02cf41b7998'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/8b64cb00c5c06e6dc5a8ee4751e45ba1a5c1e65e/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [migrate-from-admediatorcontrol-to-adcontrol.8e38f1650791cc09a079b134b29a35eef22b1e9d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f324945a7bde285242ae9329149bee977007bcb7/ol-handoff/Microsoft/windows-apps.ko-kr/master/migrate-from-admediatorcontrol-to-adcontrol.8e38f1650791cc09a079b134b29a35eef22b1e9d.ko-kr.xlf)
-* Handoff Datetime: 2016-09-01 20:42:47
+* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/d5a88a3332a0398999ca33e34789e36a27733c4a/ol-handoff/Microsoft/windows-apps.ko-kr/master/windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf)
+* Handoff Datetime: 2016-09-01 21:11:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='d17c1ff676a980f7580149e9a6221399726bf38b7991'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/558bbfc76e0645ad20abcbdf8c624faaa81fce60/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f324945a7bde285242ae9329149bee977007bcb7/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Handoff Datetime: 2016-09-01 20:42:47
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
-* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
