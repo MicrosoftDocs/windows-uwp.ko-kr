@@ -6,22 +6,19 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/88eb05d15b6845899ab407825340b732f4ae2da9/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#aa91d42ecf2dfc57f377c29294676c9bd8d8f0543933)
+ [windows-apps-src\monetize\migrate-from-admediatorcontrol-to-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/35a10940d7722c7490051e84e6f3cc37d7a4ab9a/windows-apps-src/monetize/migrate-from-admediatorcontrol-to-adcontrol.md) | HandedOffSuccess | [Details](#55b557f41fde5b095a76b52d83b034835398b9f64836)
 
 ## Item Details
-##### <a name='aa91d42ecf2dfc57f377c29294676c9bd8d8f0543933'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/88eb05d15b6845899ab407825340b732f4ae2da9/windows-apps-src/get-started/learn-more.md)
+##### <a name='55b557f41fde5b095a76b52d83b034835398b9f64836'></a> Source: [windows-apps-src\monetize\migrate-from-admediatorcontrol-to-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/35a10940d7722c7490051e84e6f3cc37d7a4ab9a/windows-apps-src/monetize/migrate-from-admediatorcontrol-to-adcontrol.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/9de2fa1ac63c8f0751b7285b531c0e221d2ab360/ol-handoff/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
-* Handoff Datetime: 2016-09-01 18:10:19
+* Handoff File: [migrate-from-admediatorcontrol-to-adcontrol.8e38f1650791cc09a079b134b29a35eef22b1e9d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/6d82db03c2e41e3983b9e857cb32450f9aa70dcb/ol-handoff/Microsoft/windows-apps.ko-kr/master/migrate-from-admediatorcontrol-to-adcontrol.8e38f1650791cc09a079b134b29a35eef22b1e9d.ko-kr.xlf)
+* Handoff Datetime: 2016-09-01 19:39:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/get-started/learn-more.md)
-* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.ko-kr.xlf)
-* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
