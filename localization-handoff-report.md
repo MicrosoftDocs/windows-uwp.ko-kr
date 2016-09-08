@@ -1,24 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/75a69f10fa8639e2613f572ebe5d099efc47493c/windows-apps-src/debug-test-perf/pgo-for-uwp.md) | HandedOffSuccess | [Details](#e14cbc1ba1b6b8bda62b5cbae0031c2c280fcd183307)
+ [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/cb0c425b9764cb20aeab500a0c47db9f573a0042/windows-apps-src/debug-test-perf/pgo-for-uwp.md) | HandedOffSuccess | [Details](#60182879f9cf3d364974d6ec4d3c26ec76e0e1053307)
+ [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/3afac16fb79262dd6a75cd44804747d173e60edf/windows-apps-src/publish/mobile-operator-billing.md) | HandedOffSuccess | [Details](#114783cb93d1d49eb1b2cd0d5218a35318a02df05088)
 
 ## Item Details
-##### <a name='e14cbc1ba1b6b8bda62b5cbae0031c2c280fcd183307'></a> Source: [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/75a69f10fa8639e2613f572ebe5d099efc47493c/windows-apps-src/debug-test-perf/pgo-for-uwp.md)
+##### <a name='60182879f9cf3d364974d6ec4d3c26ec76e0e1053307'></a> Source: [windows-apps-src\debug-test-perf\pgo-for-uwp.md](https://github.com/Microsoft/windows-apps/blob/cb0c425b9764cb20aeab500a0c47db9f573a0042/windows-apps-src/debug-test-perf/pgo-for-uwp.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/bff95b0e5d5f4f1b45dcf24eca85a0564e2ccdbb/ol-handoff/Microsoft/windows-apps.ko-kr/master/pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.ko-kr.xlf)
-* Handoff Datetime: 2016-09-08 20:15:19
+* Handoff File: [pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/094fffd4419dc348de7a8817e63d295445881844/ol-handoff/Microsoft/windows-apps.ko-kr/master/pgo-for-uwp.2dd70475a37ff893d1828f5b16cce6dd3988a8f6.ko-kr.xlf)
+* Handoff Datetime: 2016-09-08 21:15:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='114783cb93d1d49eb1b2cd0d5218a35318a02df05088'></a> Source: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/3afac16fb79262dd6a75cd44804747d173e60edf/windows-apps-src/publish/mobile-operator-billing.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/094fffd4419dc348de7a8817e63d295445881844/ol-handoff/Microsoft/windows-apps.ko-kr/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf)
+* Handoff Datetime: 2016-09-08 21:15:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/mobile-operator-billing.md)
+* Current Handback File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
 
