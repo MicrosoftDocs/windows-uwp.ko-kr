@@ -1,37 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/78c2cb14097fbf232534f9f6bcd4d042bee9fc58/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#4963e05ec9b020b6bf60ab19c1231a9dcfd508f33326)
- [windows-apps-src\devices-sensors\images\unity-app-screenshot-002.png](https://github.com/Microsoft/windows-apps/blob/bbc4f84d1aab1406687bc0459113069a751150ce/windows-apps-src/devices-sensors/images/unity-app-screenshot-002.png) | HandedOffSuccess | [Details](#876cb456af9b381e57ae81e81cdb6f73731af5623392)
+ [windows-apps-src\layout\navigate-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/0cf689ae9d74735f33baa85b3a8791a68a4467d4/windows-apps-src/layout/navigate-between-two-pages.md) | HandedOffSuccess | [Details](#d5ff0dfcb10c6977bb93f28cbf8631b9b5dfb83f4691)
 
 ## Item Details
-##### <a name='4963e05ec9b020b6bf60ab19c1231a9dcfd508f33326'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/78c2cb14097fbf232534f9f6bcd4d042bee9fc58/windows-apps-src/devices-sensors/3d-printing.md)
+##### <a name='d5ff0dfcb10c6977bb93f28cbf8631b9b5dfb83f4691'></a> Source: [windows-apps-src\layout\navigate-between-two-pages.md](https://github.com/Microsoft/windows-apps/blob/0cf689ae9d74735f33baa85b3a8791a68a4467d4/windows-apps-src/layout/navigate-between-two-pages.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/adc41b47e2a2672476b2baa4d47cb44fba73414a/ol-handoff/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Handoff Datetime: 2016-09-09 17:42:24
+* Handoff File: [navigate-between-two-pages.0eaa4a02028eb8b6983afe39f2dc1ff3a363051b.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/6ecc81639b87df81fe8bbaac958aba81a55d67ea/ol-handoff/Microsoft/windows-apps.ko-kr/master/navigate-between-two-pages.0eaa4a02028eb8b6983afe39f2dc1ff3a363051b.ko-kr.xlf)
+* Handoff Datetime: 2016-09-09 18:42:13
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/devices-sensors/3d-printing.md)
-* Current Handback File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.ko-kr.xlf)
-* Current Handback Datetime: 2016-07-21 12:33:34
-* [Back to Top](#report-top)
-
-##### <a name='876cb456af9b381e57ae81e81cdb6f73731af5623392'></a> Source: [windows-apps-src\devices-sensors\images\unity-app-screenshot-002.png](https://github.com/Microsoft/windows-apps/blob/bbc4f84d1aab1406687bc0459113069a751150ce/windows-apps-src/devices-sensors/images/unity-app-screenshot-002.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [876cb456af9b381e57ae81e81cdb6f73731af562.png](https://github.com/Microsoft/WDG.handoff/blob/adc41b47e2a2672476b2baa4d47cb44fba73414a/ol-handoff/Microsoft/windows-apps.ko-kr/master/876cb456af9b381e57ae81e81cdb6f73731af562.png)
-* Handoff Datetime: 2016-09-09 17:42:24
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\devices-sensors\3d-printing.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
