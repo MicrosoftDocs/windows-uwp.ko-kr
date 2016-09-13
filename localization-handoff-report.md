@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/1c3f222b4b3ddb14a48cef138984b07ac58cc66b/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#7bc6694f94eeeb6188470fee00d432b2d71e52e63469)
+ [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps/blob/e4410e715ed1581f6986fe56db48e066f15ccb26/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md) | HandedOffSuccess | [Details](#d6256640f199e4f327f3a6a4bfac1e8b4a8b91734736)
 
 ## Item Details
-##### <a name='7bc6694f94eeeb6188470fee00d432b2d71e52e63469'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/1c3f222b4b3ddb14a48cef138984b07ac58cc66b/windows-apps-src/gaming/e2e.md)
+##### <a name='d6256640f199e4f327f3a6a4bfac1e8b4a8b91734736'></a> Source: [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps/blob/e4410e715ed1581f6986fe56db48e066f15ccb26/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7b75d9d65e53570c50f608540cdc4574f82f90ff/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
-* Handoff Datetime: 2016-09-13 17:40:46
+* Handoff File: [adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/f47603481dcff37d497b32de91a54d11d2f41c5a/ol-handoff/Microsoft/windows-apps.ko-kr/master/adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf)
+* Handoff Datetime: 2016-09-13 18:10:26
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/gaming/e2e.md)
-* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
+* Current Target File: [windows-apps-src\monetize\adcontrol-in-windows-phone-silverlight.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/adcontrol-in-windows-phone-silverlight.md)
+* Current Handback File: [adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/adcontrol-in-windows-phone-silverlight.0a3b805624318d2a0e02ed82adc6f6da6cdcdb1e.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
