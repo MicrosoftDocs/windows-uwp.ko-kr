@@ -106,7 +106,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정 및 Azure Active Directory의 경우 "https://login.microsoft.com"입니다. 
+다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정 및 Azure Active Directory의 경우 "https://login.microsoft.com "입니다. 
 
 ```C#
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -168,9 +168,9 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 서비스 공급자는 서비스에 사용할 토큰을 가져오도록 지정해야 하는 범위에 대한 설명서를 제공합니다. 
 
-Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]을 참조하세요. 
+Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[ https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2 ]을 참조하세요. 
 
-OneDrive의 경우 (OneDrive 인증 및 로그인)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]을 참조하세요. 
+OneDrive의 경우 (OneDrive 인증 및 로그인)[ https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes ]을 참조하세요. 
 
 ## 토큰 사용
 
