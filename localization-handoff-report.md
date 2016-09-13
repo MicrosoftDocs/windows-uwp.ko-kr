@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4/windows-apps-src/monetize/get-in-app-acquisitions.md) | HandedOffSuccess | [Details](#9d895200e6d1bc823ebcb52e0b034883f5a059e04792)
+ [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/1c3f222b4b3ddb14a48cef138984b07ac58cc66b/windows-apps-src/gaming/e2e.md) | HandedOffSuccess | [Details](#7bc6694f94eeeb6188470fee00d432b2d71e52e63469)
 
 ## Item Details
-##### <a name='9d895200e6d1bc823ebcb52e0b034883f5a059e04792'></a> Source: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4/windows-apps-src/monetize/get-in-app-acquisitions.md)
+##### <a name='7bc6694f94eeeb6188470fee00d432b2d71e52e63469'></a> Source: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps/blob/1c3f222b4b3ddb14a48cef138984b07ac58cc66b/windows-apps-src/gaming/e2e.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/82700f007f32ed3dbe8b5e99a01a0c4ca7d20d67/ol-handoff/Microsoft/windows-apps.ko-kr/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.ko-kr.xlf)
-* Handoff Datetime: 2016-09-12 23:40:47
+* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/7b75d9d65e53570c50f608540cdc4574f82f90ff/ol-handoff/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
+* Handoff Datetime: 2016-09-13 17:40:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/monetize/get-in-app-acquisitions.md)
-* Current Handback File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.ko-kr.xlf)
+* Current Target File: [windows-apps-src\gaming\e2e.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/gaming/e2e.md)
+* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
