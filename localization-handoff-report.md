@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/fc5265cf7d455e34225fd74f9792cdb46b0029d7/windows-apps-src/publish/set-app-pricing-and-availability.md) | HandedOffSuccess | [Details](#91a65020c29e990d96ab26f5abbd777da78106585110)
+ [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/fcff9982a0a4f42f864d1ade214b475458b7d37a/windows-apps-src/security/companion-device-unlock.md) | HandedOffSuccess | [Details](#04e68203367b2366fa64decd067dc6e8526ce71e5148)
 
 ## Item Details
-##### <a name='91a65020c29e990d96ab26f5abbd777da78106585110'></a> Source: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps/blob/fc5265cf7d455e34225fd74f9792cdb46b0029d7/windows-apps-src/publish/set-app-pricing-and-availability.md)
+##### <a name='04e68203367b2366fa64decd067dc6e8526ce71e5148'></a> Source: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/fcff9982a0a4f42f864d1ade214b475458b7d37a/windows-apps-src/security/companion-device-unlock.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b41c89637c122e292d637c80df0d6158636e3b0f/ol-handoff/Microsoft/windows-apps.ko-kr/master/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf)
-* Handoff Datetime: 2016-09-13 21:42:13
+* Handoff File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/e7bbfacf1ba3b957d6a34ee4bf72201b7cc9794c/ol-handoff/Microsoft/windows-apps.ko-kr/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
+* Handoff Datetime: 2016-09-14 03:10:52
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\set-app-pricing-and-availability.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/set-app-pricing-and-availability.md)
-* Current Handback File: [set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/set-app-pricing-and-availability.3ec1f87db875e425961116b86bf130e63e81412d.ko-kr.xlf)
+* Current Target File: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/security/companion-device-unlock.md)
+* Current Handback File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
