@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/ff8cd3ab5e38cfc3a2b5fabaad15f78a5f2620f2/windows-apps-src/porting/desktop-to-uwp-root.md) | HandedOffSuccess | [Details](#6cf6367ed0f6acea0f87ac36a050e874425423b14909)
+ [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps/blob/2db7aaccfd56b1bdfda099b197a695bad8a9cba1/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md) | HandedOffSuccess | [Details](#28dfadf6010aed3fb2ed0d03b73f92631c17fcf44033)
 
 ## Item Details
-##### <a name='6cf6367ed0f6acea0f87ac36a050e874425423b14909'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/ff8cd3ab5e38cfc3a2b5fabaad15f78a5f2620f2/windows-apps-src/porting/desktop-to-uwp-root.md)
+##### <a name='28dfadf6010aed3fb2ed0d03b73f92631c17fcf44033'></a> Source: [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps/blob/2db7aaccfd56b1bdfda099b197a695bad8a9cba1/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/b012e32c273296771311697d3b775019b296a06c/ol-handoff/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf)
-* Handoff Datetime: 2016-09-15 18:12:05
+* Handoff File: [guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/ff3fbd9bbc3f6ca30eb208a242d6bc498a2b0e26/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf)
+* Handoff Datetime: 2016-09-15 20:12:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/porting/desktop-to-uwp-root.md)
-* Current Handback File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.ko-kr.xlf)
+* Current Target File: [windows-apps-src\input-and-devices\guidelines-for-user-interaction.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/input-and-devices/guidelines-for-user-interaction.md)
+* Current Handback File: [guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/guidelines-for-user-interaction.395cdfb430259ebca5bb7b1465d331028054c35f.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
