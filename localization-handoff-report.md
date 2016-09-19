@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\maps-and-location\guidelines-and-checklist-for-detecting-location.md](https://github.com/Microsoft/windows-apps/blob/7159aea3feef96781575825d019a379e0eadc603/windows-apps-src/maps-and-location/guidelines-and-checklist-for-detecting-location.md) | HandedOffSuccess | [Details](#133add15e0e5681ec85a0800c52605262a82f8b44703)
+ [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/b2aaf232567ea0910d83208ef77df127592afb0c/windows-apps-src/publish/pubcenter-dev-center-integration.md) | HandedOffSuccess | [Details](#7f841b27e736206c89bb3ad035f497991a01fc745100)
+ [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/bcb57cd9418ae5bd5d7779a1b442d9a236d3eae6/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md) | HandedOffSuccess | [Details](#9b97ab818fdc14d0354e5e9ba4809ac3401d60535101)
 
 ## Item Details
-##### <a name='133add15e0e5681ec85a0800c52605262a82f8b44703'></a> Source: [windows-apps-src\maps-and-location\guidelines-and-checklist-for-detecting-location.md](https://github.com/Microsoft/windows-apps/blob/7159aea3feef96781575825d019a379e0eadc603/windows-apps-src/maps-and-location/guidelines-and-checklist-for-detecting-location.md)
+##### <a name='7f841b27e736206c89bb3ad035f497991a01fc745100'></a> Source: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/b2aaf232567ea0910d83208ef77df127592afb0c/windows-apps-src/publish/pubcenter-dev-center-integration.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [guidelines-and-checklist-for-detecting-location.c5bffe8f6b87c3384095787e6fe9475cacd5260a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/35b10f5fdf427cc0cbd8d7313efeabe90f3c7610/ol-handoff/Microsoft/windows-apps.ko-kr/master/guidelines-and-checklist-for-detecting-location.c5bffe8f6b87c3384095787e6fe9475cacd5260a.ko-kr.xlf)
-* Handoff Datetime: 2016-09-19 17:12:17
+* Handoff File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/725d7c7ba52a3c5b34b18d60991f82bed2fdccc2/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf)
+* Handoff Datetime: 2016-09-19 19:44:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\maps-and-location\guidelines-and-checklist-for-detecting-location.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/maps-and-location/guidelines-and-checklist-for-detecting-location.md)
-* Current Handback File: [guidelines-and-checklist-for-detecting-location.c5bffe8f6b87c3384095787e6fe9475cacd5260a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/guidelines-and-checklist-for-detecting-location.c5bffe8f6b87c3384095787e6fe9475cacd5260a.ko-kr.xlf)
+* Current Target File: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/pubcenter-dev-center-integration.md)
+* Current Handback File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.ko-kr.xlf)
+* Current Handback Datetime: 2016-07-21 12:33:34
+* [Back to Top](#report-top)
+
+##### <a name='9b97ab818fdc14d0354e5e9ba4809ac3401d60535101'></a> Source: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/bcb57cd9418ae5bd5d7779a1b442d9a236d3eae6/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/725d7c7ba52a3c5b34b18d60991f82bed2fdccc2/ol-handoff/Microsoft/windows-apps.ko-kr/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf)
+* Handoff Datetime: 2016-09-19 19:44:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/2bebe2d35edf108de4f3abcf01e6e015027fb267/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
+* Current Handback File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/7f7b2823b47f7df5683220c622b93a78501dad8a/ol-handback/Microsoft/windows-apps.ko-kr/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.ko-kr.xlf)
 * Current Handback Datetime: 2016-07-21 12:33:34
 * [Back to Top](#report-top)
 
