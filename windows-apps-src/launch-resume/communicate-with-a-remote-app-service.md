@@ -1,17 +1,21 @@
 ---
 author: PatrickFarley
-title: Communicate with a remote app service
-description: Exchange messages with an app service running on a remote device.
+title: "원격 앱 서비스와 통신"
+description: "프로젝트 로마를 사용하여 원격 디바이스에서 실행되는 앱 서비스와 메시지를 교환합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: c90304b7ca3f7185fca9146aa2303b09cba5ab9a
+ms.openlocfilehash: bff77a63d0f88907410c74d4dce19fb422c1bd3f
+
 ---
 
-# Communicate with a remote app service
+# 원격 앱 서비스와 통신
 
-In addition to launching an app on a remote device using a URI, you can run and communicate with *app services* on remote devices as well. Any Windows-based device can be used as either the home or target device, or both. This gives you an almost limitless number of ways to interact with connected devices without needing to bring an app to the foreground.
+URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 원격 디바이스에서 *앱 서비스*를 실행하고 통신할 수도 있습니다. 모든 Windows 기반 디바이스를 홈 또는 대상 디바이스나 둘 다로 사용할 수 있습니다. 이 때문에 앱을 포그라운드로 전환할 필요 없이 연결된 디바이스를 다양한 방법으로 조작할 수 있습니다.
 
-## Set up the app service on the target device
-In order to run an app service on a remote device, you must already have a provider of that app service installed on the target device. This guide will use the Random number generator app service, which is available on [Windows universal samples repo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). For instructions on how to write your own app service, see [Create and consume an app service](how-to-create-and-consume-an-app-service.md).
+## 대상 디바이스에서 앱 서비스 설정
+원격 디바이스에서 앱 서비스를 실행하려면 대상 디바이스에 앱 서비스 공급자가 이미 설치되어 있어야 합니다. 이 가이드에서는 [Windows 유니버설 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)에서 제공되는 난수 생성기 앱 서비스를 사용합니다. 고유한 앱 서비스를 작성하는 방법에 대한 자세한 내용은 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조하세요.
 
-Whether you are using an already-made app service or writing your own, you will need to make a few edits in order to make the service compatible with remote systems. In Visual Studio, go to the app service provider's project and select its Package.appxmanifest file. Right-click and select **View Code** to view the full contents of the file. Find the `Extension` element that defines the project as an app service and names its parent project.
+이미 만들어진 앱 서비스를 사용하든, 고유한 앱 서비스를 작성하든 관계없이 서비스가 원격 시스템과 호환되도록 하려면 몇 가지 편집 작업이 필요합니다. Visual Studio에서 앱 서비스 공급자 프로젝트로 이동한 다음 해당 Package.appxmanifest 파일을 선택합니다. 마우스 오른쪽 단추를 클릭하고 **코드 보기**를 선택하여 파일의 전체 내용을 표시합니다. 프로젝트를 앱 서비스로 정의하고 부모 프로젝트의 이름을 지정하는 **Extension** 요소를 찾습니다.
 
 ``` xml
 ...
@@ -23,7 +27,7 @@ Whether you are using an already-made app service or writing your own, you will 
 ...
 ```
 
-Change the namespace of the `AppService` element to `uap3` and add the `SupportsRemoteSystems` attribute:
+**AppService** 요소의 네임스페이스를 **uap3**으로 변경하고 **SupportsRemoteSystems** 특성을 추가합니다.
 
 ``` xml
 ...
@@ -31,7 +35,7 @@ Change the namespace of the `AppService` element to `uap3` and add the `Supports
 ...
 ```
 
-In order to use elements in this new namespace, you must add the namespace definition at the top of the manifest file.
+이 새로운 네임스페이스의 요소를 사용하려면 매니페스트 파일의 맨 위에 네임스페이스 정의를 추가해야 합니다.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,41 +48,47 @@ In order to use elements in this new namespace, you must add the namespace defin
 </Package>
 ```
 
-Build your app service provider project and deploy it to the target device(s).
+앱 서비스 공급자 프로젝트를 작성하고 대상 디바이스에 배포합니다.
 
-## Target the app service from the home device
-The device *from which* the remote app service is to be called needs an app with Remote Systems functionality. This can be added into the same app that provides the app service on the target device (in which case you would install the same app on both devices), or put in a completely different app.
+## 홈 디바이스에서 앱 서비스를 대상으로 지정
+원격 앱 서비스가 호출되는* * 디바이스에 원격 시스템 기능을 가진 앱이 있어야 합니다. 대상 디바이스에서 앱 서비스를 제공하는 앱에 이 앱을 추가하거나(이 경우 두 디바이스에 동일한 앱을 설치함) 완전히 다른 앱에 배치할 수 있습니다.
 
-The following `using` statements are needed for the code in this section to run as-is:
+다음 **using** 문은 이 섹션의 코드를 현재 그대로 실행하는 데 필요합니다.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
+[!code-cs[기본](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
 
 
-You must first instantiate an [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection) object, just as if you were to call an app service locally. This process is covered in more detail in [Create and consume an app service](how-to-create-and-consume-an-app-service.md). In this example, the app service to target is the Random number generator service.
+먼저 로컬에서 앱 서비스를 호출하는 것처럼 [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection) 개체를 인스턴스화해야 합니다. 이 프로세스는 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)에서 자세히 설명합니다. 이 예제에서 대상으로 지정할 앱 서비스는 난수 생성기 서비스입니다.
 
 > [!NOTE]
-> It is assumed that a [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) object has already been acquired by some means within the code that would call the following method. See [Launch a remote app](launch-a-remote-app.md) for instructions on how to set this up.
+> 다음 메서드를 호출하는 코드 내에서 임의 방법으로 [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) 개체를 이미 얻었다고 가정합니다. 설정 방법에 대한 자세한 내용은 [원격 앱 실행](launch-a-remote-app.md)을 참조하세요.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
+[!code-cs[기본](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
 
-Next, a [**RemoteSystemConnectionRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) object is created for the intended remote device. It is then used to open the **AppServiceConnection** to that device. Note that in the example below, error handling and reporting is greatly simplified for the sake of brevity.
+의도한 원격 디바이스에 대한 [**RemoteSystemConnectionRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) 개체가 생성됩니다. 이 개체를 사용하여 해당 디바이스에 대한 **AppServiceConnection**을 엽니다. 아래 예제에서는 간단한 설명을 위해 오류 처리와 보고가 매우 간소화되었습니다.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
+[!code-cs[기본](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
 
-At this point, you should have an open connection to an app service on a remote machine.
+이제 원격 컴퓨터의 앱 서비스에 대한 연결이 열려 있습니다.
 
-## Exchange service-specific messages over the remote connection
+## 원격 연결을 통해 서비스 관련 메시지 교환
 
-From here, you can send and receive messages to and from the service in the form of [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset) objects (for more information, see [Create and consume an app service](how-to-create-and-consume-an-app-service.md)). The Random number generator service takes two integers with the keys `"minvalue"` and `"maxvalue"` as inputs, randomly selects an integer within their range, and returns it to the calling process with the key `"Result"`.
+여기에서 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset) 개체의 형태로 서비스와 메시지를 주고받을 수 있습니다. 자세한 내용은 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조하세요. 난수 생성기 서비스는 `"minvalue"` 및 `"maxvalue"` 키를 가진 두 정수를 입력으로 사용하고 해당 범위 내의 정수를 임의로 선택하여 호출 프로세스에 `"Result"` 키로 반환합니다.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
+[!code-cs[기본](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
 
-Now you have connected to an app service on a targeted remote device, run an operation on that device, and received data to your home device in response.
+이제 대상 원격 디바이스의 앱 서비스에 연결되었으므로 해당 디바이스에서 작업을 실행하고 응답으로 홈 디바이스에 데이터가 수신됩니다.
 
-## Related topics
+## 관련 항목
 
-[Connected apps and devices overview](connected-apps-and-devices.md)  
-[Launch a remote app](launch-a-remote-app.md)  
-[Create and consume an app service](how-to-create-and-consume-an-app-service.md)  
-[Remote Systems API reference](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Remote Systems sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) demonstrates how to discover a remote system, launch an app on a remote system, and use app services to send messages between apps running on two systems.
+[연결된 앱 및 디바이스(프로젝트 "로마") 개요](connected-apps-and-devices.md)  
+[원격 앱 실행](launch-a-remote-app.md)  
+[앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)  
+[원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems )은 원격 시스템 검색, 원격 시스템에서 앱 실행, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지 전송 방법을 보여 줍니다.
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

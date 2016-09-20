@@ -1,34 +1,38 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Ink tools described
-title: Inking Controls
+Description: "설명된 잉크 도구"
+title: "수동 입력 컨트롤"
 label: Inking Controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+
 ---
+# 수동 입력 컨트롤
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# Inking controls
+UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
 
-There are two different controls that facilitate inking in Universal Windows Platform (UWP) apps: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) and [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+InkCanvas 컨트롤은 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링합니다. 이 컨트롤은 기본 잉크 스트로크 속성을 변경하기 위한 기본 제공 UI를 포함하지 않는 투명 오버레이입니다.
 
-The InkCanvas control renders pen input as either an ink stroke (using default settings for color and thickness) or an erase stroke. This control is a transparent overlay that doesn't include any built-in UI for changing the default ink stroke properties.
+>**참고**&nbsp;&nbsp;마우스 및 터치식 입력 둘 다에 대해 유사한 기능을 지원하도록 InkCanvas를 구성할 수 있습니다.
 
->**Note**&nbsp;&nbsp;InkCanvas can be configured to support similar functionality for both mouse and touch input.
+InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함하지 않으므로 InkToolbar 컨트롤과 연결할 수 있습니다. InkToolbar에는 연결된 InkCanvas에서 잉크 관련 기능을 활성화하는, 사용자 지정 및 확장이 가능한 단추 컬렉션이 포함됩니다.
 
-As the InkCanvas control does not include support for changing the default ink stroke settings, it can be paired with an InkToolbar control. The InkToolbar contains a customizable and extensible collection of buttons that activate ink-related features in an associated InkCanvas.
+기본적으로 InkToolbar에는 그리기, 지우기, 강조 표시 및 눈금자 표시 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
 
-By default, the InkToolbar includes buttons for drawing, erasing, highlighting, and displaying a ruler. Depending on the feature, other settings and commands, such as ink color, stroke thickness, erase all ink, are provided in a flyout.
-
->**Note**&nbsp;&nbsp;InkToolbar supports pen and mouse input and can be configured to recognize touch input.
+>**참고**&nbsp;&nbsp;InkToolbar는 펜 및 마우스 입력을 지원하며 터치식 입력을 인식하도록 구성할 수 있습니다.
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300">
 
 <div class="important-apis" >
-<b>Important APIs</b><br/>
+<b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx"><strong>InkCanvas class</strong></a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx"><strong>InkToolbar class</strong></a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx"><strong>InkPresenter class</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx"><strong>InkCanvas 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx"><strong>InkToolbar 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx"><strong>InkPresenter 클래스</strong></a></li>
 <li><a href="https://msdn.microsoft.com/library/windows/apps/br208524"><strong>Windows.UI.Input.Inking</strong></a></li>
 </ul>
 
@@ -38,118 +42,124 @@ By default, the InkToolbar includes buttons for drawing, erasing, highlighting, 
 
 
 
-## Is this the right control?
+## 올바른 컨트롤인가요?
 
-Use the InkCanvas when you need to enable basic inking features in your app without providing any ink settings to the user.
+사용자에게 잉크 설정을 제공하지 않고 앱에서 기본 수동 입력 기능을 사용하도록 설정해야 하는 경우 InkCanvas를 사용합니다.
 
-By default, strokes are rendered as ink when using the pen tip (a black ballpoint pen with a thickness of 2 pixels) and as an eraser when using the eraser tip. If an eraser tip is not present, the InkCanvas can be configured to process input from the pen tip as an erase stroke.
+기본적으로 펜 팁(두께가 2픽셀인 검은색 볼펜)을 사용할 때는 스트로크가 잉크로 렌더링되고 지우개 팁을 사용할 때는 지우개로 렌더링됩니다. 지우개 팁이 없는 경우 펜 팁의 입력을 지우기 스트로크로 처리하도록 InkCanvas를 구성할 수 있습니다.
 
-Pair the InkCanvas with an InkToolbar to provide a UI for activating ink features and setting basic ink properties such as stroke size, color, and shape of the pen tip.
+InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트로크 크기, 색, 펜 팁 모양 등의 기본적인 잉크 속성을 설정하기 위한 UI를 제공합니다.
 
->**Note**&nbsp;&nbsp;For more extensive customization of ink stroke rendering on an InkCanvas, use the underlying [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) object.
+>**참고**&nbsp;&nbsp;InkCanvas에서 잉크 스트로크 렌더링을 보다 광범위하게 사용자 지정하려면 기본 [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) 개체를 사용합니다.
 
-## Examples
+## 예제
 
 **Microsoft Edge**
 
-The Edge browser uses the InkCanvas and InkToolbar for **Web Notes**.  
-![InkCanvas is used to ink in Microsoft Edge](images/ink-tools-edge.png)
+Edge 브라우저는 **웹 노트**에 InkCanvas 및 InkToolbar를 사용합니다.  
+![InkCanvas는 Microsoft Edge에서 수동 입력에 사용됩니다.](images/ink-tools-edge.png)
 
-**Windows Ink Workspace**
+**Windows Ink 작업 영역**
 
-The InkCanvas and InkToolbar are also used for both **Sketchpad** and **Screen sketch** in the **Windows Ink Workspace**.  
-![InkToolbar in the Windows Ink Workspace](images/ink-tools-ink-workspace.png)
+InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과 **화면 스케치**에서도 사용됩니다.  
+![Windows Ink 작업 영역의 InkToolbar](images/ink-tools-ink-workspace.png)
 
-## Create an InkCanvas and InkToolbar
+## InkCanvas 및 InkToolbar 만들기
 
-Adding an InkCanvas to your app requires just one line of markup:
+앱에 InkCanvas를 추가하려면 다음과 같은 한 줄의 태그만 있으면 됩니다.
 
 ```xaml
 <InkCanvas x:Name=“myInkCanvas”/>
 ```
 
->**Note**&nbsp;&nbsp;For detailed InkCanvas customization using InkPresenter, see the ["Pen and stylus interactions in UWP apps"](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/) article.
+>**참고**&nbsp;&nbsp;InkPresenter를 사용하는 자세한 InkCanvas 사용자 지정은 ["UWP 앱에서 펜 및 스타일러스 조작"](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/) 문서를 참조하세요.
 
-The InkToolbar control must be used in conjunction with an InkCanvas. Incorporating an InkToolbar (with all built-in tools) into your app requires one additional line of markup:
+InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(모든 기본 제공 도구 포함)를 앱에 통합하려면 다음과 같은 한 줄의 태그가 추가로 필요합니다.
 
  ```xaml
 <InkToolbar TargetInkCanvas=“{x:Bind myInkCanvas}”/>
  ```
 
-This displays the following InkToolbar:
+이 경우 다음과 같은 InkToolbar가 표시됩니다.
 <img src="images/ink-tools-uninvoked-toolbar.png" width="250">
 
-### Built-in buttons
+### 기본 제공 단추
 
-The InkToolbar includes the following built-in buttons:
+InkToolbar에는 다음과 같은 기본 제공 단추가 포함되어 있습니다.
 
-**Pens**
+**펜**
 
-- Ballpoint pen - draws a solid, opaque stroke with a circle pen tip. The stroke size is dependent on the pen pressure detected.
-- Pencil - draws a soft-edged, textured, and semi-transparent stroke (useful for layered shading effects) with a circle pen tip. The stroke color (darkness) is dependent on the pen pressure detected.
-- Highlighter – draws a semi-transparent stroke with a rectangle pen tip.
+- 볼펜 - 원형 펜 팁으로 단색의 불투명 스트로크를 그립니다. 스트로크 크기는 감지된 펜 압력에 따라 달라집니다.
+- 연필 - 원형 펜 팁으로 가장자리가 부드러운, 텍스처 처리된 반투명 스트로크(계층적 음영 효과에 유용)를 그립니다. 스트로크 색(어둡기)은 감지된 펜 압력에 따라 달라집니다.
+- 형광펜 – 사각형 펜 팁으로 반투명 스트로크를 그립니다.
 
-You can customize both the color palette and size attributes (min, max, default) in the flyout for each pen.
+각 펜에 대한 플라이아웃에서 색상표와 크기 특성(min, max, default)을 둘 다 사용자 지정할 수 있습니다.
 
-**Tool**
+**도구**
 
-- Eraser – deletes any ink stroke touched. Note that the entire ink stroke is deleted, not just the portion under the eraser stroke.
+- 지우개 – 터치된 잉크 스트로크를 모두 삭제합니다. 지우개 스트로크 아래에 있는 부분뿐 아니라 전체 잉크 스트로크가 삭제됩니다.
 
-**Toggle**
+**토글**
 
-- Ruler – shows or hides the ruler. Drawing near the ruler edge causes the ink stroke to snap to the ruler.  
- ![Ruler visual associated with InkToolbar](images/inking-tools-ruler.png)
+- 눈금자 – 눈금자를 표시하거나 숨깁니다. 눈금자 가장자리 근처에 그리면 잉크 스트로크가 눈금자에 맞춰집니다.  
+ ![InkToolbar와 연결된 눈금자 화면 효과](images/inking-tools-ruler.png)
 
-Although this is the default configuration, you have complete control over which built-in buttons are included in the InkToolbar for your app.
+기본 구성이지만 앱의 InkToolbar에 포함되는 기본 제공 단추를 완전히 제어할 수 있습니다.
 
-### Custom buttons
+### 사용자 지정 단추
 
-The InkToolbar consists of two distinct groups of button types:
+InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있습니다.
 
-1. A group of "tool" buttons containing the built-in drawing, erasing, and highlighting buttons. Custom pens and tools are added here.
-> **Note**&nbsp;&nbsp;Feature selection is mutually exclusive.
+1. 기본 제공 그리기, 지우기 및 강조 표시 단추를 포함하는 "도구" 단추 그룹. 사용자 지정 펜과 도구가 여기에 추가됩니다.
+> **참고**&nbsp;&nbsp;기능 선택은 함께 사용할 수 없습니다.
 
-2. A group of "toggle" buttons containing the built-in ruler button. Custom toggles are added here.
-> **Note**&nbsp;&nbsp;Features are not mutually exclusive and can be used concurrently with other active tools.
+2. 기본 제공 눈금자 단추를 포함하는 "토글" 단추 그룹. 사용자 지정 토글이 여기에 추가됩니다.
+> **참고**&nbsp;&nbsp;기능은 함께 사용할 수 있으며 다른 활성 도구와 동시에 사용할 수 있습니다.
 
-Depending on your application and the inking functionality required, you can add any of the following buttons (bound to your custom ink features) to the InkToolbar:
+응용 프로그램 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
 
-- Custom pen – a pen for which the ink color palette and pen tip properties, such as shape, rotation, and size, are defined by the host app.
-- Custom tool – a non-pen tool, defined by the host app.
-- Custom toggle – Sets the state of an app-defined feature to on or off. When turned on, the feature works in conjunction with the active tool.
+- 사용자 지정 펜 – 호스트 앱에서 잉크 색상표와 펜 팁 속성(예: 모양, 회전, 크기)이 정의된 펜입니다.
+- 사용자 지정 도구 - 호스트 앱에서 정의된 펜 이외의 도구입니다.
+- 사용자 지정 토글 - 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
 
-> **Note**&nbsp;&nbsp;You cannot change the display order of the built-in buttons. The default display order is: Ballpoint pen, pencil, highlighter, eraser, and ruler. Custom pens are appended to the last default pen, custom tool buttons are added between the last pen button and the eraser button and custom toggle buttons are added after the ruler button. (Custom buttons are added in the order they are specified.)
+> **참고**&nbsp;&nbsp;기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
 
-Although the InkToolbar can be a top level item, it is typically exposed through an “Inking” button or command. We recommend using EE56 glyph from the Segoe MLD2 Assets font as a top level icon.
+InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 단추 또는 명령을 통해 노출됩니다. Segoe MLD2 자산 글꼴의 EE56 문자 모양을 최상위 수준 아이콘으로 사용하는 것이 좋습니다.
 
-## InkToolbar Interaction
+## InkToolbar 조작
 
-All built-in pen and tool buttons include a flyout menu where ink properties and pen tip shape and size can be set. An "extension glyph" ![InkToolbar glyph](images/ink-tools-glyph.png) is displayed on the button to indicate the existence of the flyout.
+모든 기본 제공 펜 및 도구 단추에는 잉크 속성과 펜 팁 모양 및 크기를 설정할 수 있는 플라이아웃 메뉴가 포함되어 있습니다. "확장 문자 모양" ![InkToolbar 문자 모양](images/ink-tools-glyph.png) 이 단추에 표시되면 플라이아웃이 있음을 나타냅니다.
 
-The flyout is shown when the button of an active tool is selected again. When the color or size is changed, the flyout is automatically dismissed and inking can be resumed. Custom pens and tools can use the default flyout or specify a custom flyout.
+활성 도구의 단추를 다시 선택하면 플라이아웃이 표시됩니다. 색 또는 크기를 변경하면 플라이아웃이 자동으로 해제되고 수동 입력을 다시 시작할 수 있습니다. 사용자 지정 펜과 도구는 기본 플라이아웃을 사용하거나 사용자 지정 플라이아웃을 지정할 수 있습니다.
 
-The eraser also has a flyout that provides the **Erase All Ink** command.  
-![InkToolbar with eraser flyout invoked](images/ink-tools-erase-all-ink.png)
+지우개에는 **모든 잉크 지우기** 명령을 제공하는 플라이아웃도 있습니다.  
+![지우개 플라이아웃이 호출된 InkToolbar](images/ink-tools-erase-all-ink.png)
 
- For information on customization and extensibility, check out [SimpleInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk).
+ 사용자 지정 및 확장성에 대한 자세한 내용은 [SimpleInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)을 참조하세요.
 
-## Do's and don'ts
+## 권장 사항 및 금지 사항
 
-- The InkCanvas, and inking in general, is best experienced through an active pen. However, we recommend supporting inking with mouse and touch (including passive pen) input if required by your app.
-- Use an InkToolbar control with the InkCanvas to provide basic inking features and settings. Both the InkCanvas and InkToolbar can be programmatically customized.
-- The InkToolbar, and inking in general, is best experienced through an active pen. However, inking with mouse and touch can be supported if required by your app.
-- If supporting inking with touch input, we recommend using the ED5F icon from the Segoe MLD2 Assets font for the toggle button, with a “Touch writing” tooltip.
-- If using more than one InkCanvas, we recommend using a single InkToolbar to control inking across canvases.
-- For best performance, we recommend altering the default flyout rather than creating a custom one for both default and custom tools.
+- InkCanvas 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스 및 터치식(수동 펜 포함) 입력을 사용한 수동 입력을 지원하는 것이 좋습니다.
+- InkToolbar 컨트롤을 InkCanvas와 함께 사용하면 기본적인 수동 입력 기능과 설정을 제공할 수 있습니다. InkCanvas와 InkToolbar 모두 프로그래밍 방식으로 사용자 지정할 수 있습니다.
+- InkToolbar 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스와 터치를 사용한 수동 입력을 지원할 수 있습니다.
+- 터치식 입력을 사용한 수동 입력을 지원하는 경우 “터치 쓰기” 도구 설명과 함께 Segoe MLD2 자산 글꼴의 ED5F 아이콘을 토글 단추에 사용하는 것이 좋습니다.
+- 둘 이상의 InkCanvas를 사용하는 경우 단일 InkToolbar를 사용하여 여러 캔버스의 수동 입력을 제어하는 것이 좋습니다.
+- 최상의 성능을 얻으려면 기본 및 사용자 지정 도구 둘 다를 위한 사용자 지정 플라이아웃 하나를 만드는 대신 기본 플라이아웃을 변경하는 것이 좋습니다.
 
-## Get the samples
+## 샘플 다운로드
 
-[SimpleInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstrates 8 scenarios around the customization and extensibility capabilities of the InkCanvas and InkToolbar controls. Each scenario provides basic guidance on common inking situations and control implementations.
+[SimpleInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)에서는 InkCanvas 및 InkToolbar 컨트롤의 사용자 지정 및 확장성 기능과 관련된 8가지 시나리오를 보여 줍니다. 각 시나리오는 일반적인 수동 입력 상황 및 컨트롤 구현에 대한 기본 지침을 제공합니다.
 
-For a more advanced inking sample, see [ComplexInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk).
+보다 수준 높은 수동 입력 샘플을 보려면 [ComplexInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)을 참조하세요.
 
-## Related articles
+## 관련 문서
 
-- [Pen and stylus interactions in UWP apps](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
-- [Recognize ink strokes](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
-- [Store and retrieve ink strokes](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
+- [UWP 앱에서 펜 및 스타일러스 조작](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
+- [잉크 스트로크 인식](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
+- [잉크 스트로크 저장 및 검색](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

@@ -1,18 +1,28 @@
 ---
 author: TylerMSFT
-title: Convert a multi-process background task to a single-process background task
-description: Convert a background task that runs in a separate process into a background task that runs inside your foreground app process.
+title: "다중 프로세스 백그라운드 작업을 단일 프로세스 백그라운드 작업으로 변환"
+description: "별도 프로세스에서 실행되는 백그라운드 작업을 포그라운드 앱 프로세스 내에서 실행되는 백그라운드 작업으로 변환합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 2c34ca40d3c930254500477ab5a2e41e5206d823
+ms.openlocfilehash: e342667347cf3b89a5aa193495cbf7195263b276
+
 ---
 
-# Convert a multi-process background task to a single-process background task
+# 다중 프로세스 백그라운드 작업을 단일 프로세스 백그라운드 작업으로 변환
 
-The simplest way to convert your multiple process background activity into single process is to bring your [IBackgroundTask.Run](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) method code inside your application and initiate it from [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).
+다중 프로세스 백그라운드 작업을 단일 프로세스로 변환하는 가장 간단한 방법은 응용 프로그램 내에서 [IBackgroundTask.Run](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) 메서드 코드를 가져와 [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)에서 시작하는 것입니다.
 
-If your app has multiple background tasks, the [Background Activation Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) shows how you can use `BackgroundActivatedEventArgs.TaskInstance.Task.Name` to identify which task is being initiated.
+앱에 여러 백그라운드 작업이 있는 경우 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation)에서 `BackgroundActivatedEventArgs.TaskInstance.Task.Name`을 사용하여 시작되는 작업을 식별하는 방법을 보여 줍니다.
 
-If you are currently communicating between background and foreground processes, you can remove that state management and communication code.
+현재 백그라운드 및 포그라운드 프로세스 간에 통신 중인 경우 해당 상태 관리 및 통신 코드를 제거할 수 있습니다.
 
-## Background tasks and trigger types that cannot be converted
+## 변환할 수 없는 백그라운드 작업 및 트리거 유형
 
-* Single-process background tasks don't support activating a VoIP background task.
-* Single-process background tasks don't support the following triggers:  [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) and **IoTStartupTask**
+* 단일 프로세스 백그라운드 작업은 VoIP 백그라운드 작업 활성화를 지원하지 않습니다.
+* 단일 프로세스 백그라운드 작업은 [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx), **IoTStartupTask** 등의 트리거를 지원하지 않습니다.
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

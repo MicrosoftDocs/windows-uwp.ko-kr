@@ -4,8 +4,8 @@ ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: "ListView 및 GridView 데이터 가상화"
 description: "데이터 가상화를 통해 ListView 및 GridView 성능과 시작 시간이 향상됩니다."
 translationtype: Human Translation
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+ms.sourcegitcommit: e44dd5c2c3c9fb252062af3a6a9f409e1777a878
+ms.openlocfilehash: 0a16dc27db6fb1e04e1ab0c575077ca10b97f12d
 
 ---
 # ListView 및 GridView 데이터 가상화
@@ -63,7 +63,7 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
 -   항목이 요청될 때
     -   메모리에 사용할 수 있는 경우 해당 항목을 반환합니다.
     -   해당 항목이 없는 경우 null 또는 자리 표시자 항목을 반환합니다.
-    -   필요한 항목을 알고 해당 항목에 대한 데이터를 백 엔드에서 비동기식으로 가져오려면 항목에 대한 요청(또는 [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)의 범위 정보)을 사용합니다. 데이터를 검색한 후에는 항목 컨트롤에서 신규 항목에 대해 알 수 있도록 [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)를 통해 변경 알림을 제공합니다.
+    -   필요한 항목을 알고 해당 항목에 대한 데이터를 백 엔드에서 비동기식으로 가져오려면 항목에 대한 요청(또는 [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)의 범위 정보)을 사용합니다. 데이터를 검색한 후 항목 컨트롤이 새 항목을 인식하도록 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 또는 [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052)를 통해 변경 알림을 발생시킵니다.
 -   (옵션) 항목 컨트롤의 뷰포트가 변경되면 [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)의 구현을 통해 데이터 원본에서 필요한 항목을 식별합니다.
 
 이러한 전략 외에 데이터 항목을 로드할 시점, 로드할 개수 및 메모리에서 유지할 항목에 대한 전략은 응용 프로그램에 달려 있습니다. 몇 가지 일반적인 고려 사항은 다음과 같습니다.
@@ -83,6 +83,6 @@ ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

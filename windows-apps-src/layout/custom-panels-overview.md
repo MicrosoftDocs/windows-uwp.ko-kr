@@ -10,7 +10,7 @@ label: XAML custom panels overview
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 8fba13d28f885d89d5b115eebf1a2e75abb8c890
+ms.openlocfilehash: aebe6b873fff2a4284f03ca519f998ded742f677
 
 ---
 
@@ -69,7 +69,7 @@ XAML 파서가 이 태그를 읽을 때 [**Children**](https://msdn.microsoft.co
 
 후보 레이아웃이 현재 앱 창에 맞아야 하며, 그렇지 않으면 UI의 일부가 잘립니다. 패널에서 클리핑 논리가 결정되는 경우가 많습니다. 패널 논리에 따라 [**MeasureOverride**](https://msdn.microsoft.com/library/windows/apps/br208730) 구현 내에서 사용 가능한 크기를 결정할 수 있으며, 모든 요소가 잘 맞도록 크기 제한을 자식에 적용하고 자식 간에 공간을 나누어야 할 수도 있습니다. 이상적인 레이아웃 결과는 모든 레이아웃 요소의 다양한 속성을 사용하는 동시에 앱 창에 잘 맞는 레이아웃입니다. 이렇게 하려면 패널의 레이아웃 논리에 대한 적절한 구현과 해당 패널을 사용하여 UI를 빌드하는 앱 코드 부분에서 신중한 UI 디자인이 필요합니다. 전체 UI 디자인에 포함된 자식 요소 수가 앱에 들어갈 수 있는 개수보다 많으면 패널 디자인이 멋지게 표시되지 않습니다.
 
-레이아웃 시스템 작동의 핵심 부분은 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)를 기반으로 하는 요소가 컨테이너에서 자식으로 작동할 경우 이미 내재된 동작이 있다는 것입니다. 예를 들어 레이아웃 동작을 알리거나 레이아웃 작동에 필요한 **FrameworkElement**의 여러 API가 있습니다. 여기에는
+레이아웃 시스템 작동의 핵심 부분은 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)를 기반으로 하는 요소가 컨테이너에서 자식으로 작동할 경우 이미 내재된 동작이 있다는 것입니다. 예를 들어 레이아웃 동작을 알리거나 레이아웃 작동에 필요한 **FrameworkElement**의 여러 API가 있습니다. 다음이 포함됩니다.
 
 -   [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921)(실제로 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 속성)
 -   [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) 및 [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)
@@ -194,6 +194,6 @@ protected override Size ArrangeOverride(Size finalSize)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

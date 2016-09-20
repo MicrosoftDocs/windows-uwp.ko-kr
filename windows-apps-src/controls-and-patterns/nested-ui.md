@@ -1,144 +1,148 @@
 ---
 author: Jwmsft
-Description: Use nested UI to enable multiple actions on a list item
-title: Nested UI in list items
+Description: "중첩된 UI를 사용하여 한 목록 항목에서 여러 작업을 사용합니다."
+title: "목록 항목의 중첩된 UI"
 label: Nested UI in list items
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
+
 ---
+# 목록 항목의 중첩된 UI
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Nested UI in list items
+중첩된 UI는 중첩된 실행 가능한 컨트롤을 독립적인 포커스를 가질 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다.
 
-Nested UI is a user interface (UI) that exposes nested actionable controls enclosed inside a container that also can take independent focus.
+중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
-You can use nested UI to present a user with additional options that help accelerate taking important actions. However, the more actions you expose, the more complicated your UI becomes. You need to take extra care when you choose to use this UI pattern. This article provides guidelines to help you determine the best course of action for your particular UI.
+이 문서에서는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 
-In this article, we discuss the creation of nested UI in [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) and [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) items. While this section does not talk about other nested UI cases, these concepts are transferrable. Before you start, you should be familiar with the general guidance for using ListView or GridView controls in your UI, which is found in the [Lists](lists.md) and [List view and grid view](listview-and-gridview.md) articles.
+이 문서에서 사용되는 용어인 *목록*, *목록 항목* 및 *중첩된 UI*의 정의는 다음과 같습니다.
+- *목록*은 목록 보기 또는 그리드 보기에 포함된 항목의 컬렉션을 의미합니다.
+- *목록 항목*은 사용자가 목록에서 작업할 수 있는 개별 항목을 의미합니다.
+- *중첩된 UI*는 목록 항목 자체에 대해 수행할 수 있는 작업과는 별개로 사용자가 작업할 수 있는 목록 항목 내의 UI 요소를 의미합니다.
 
-In this article, we use the terms *list*, *list item*, and *nested UI* as defined here:
-- *List* refers to a collection of items contained in a list view or grid view.
-- *List item* refers to an individual item that a user can take action on in a list.
-- *Nested UI* refers to UI elements within a list item that a user can take action on separate from taking action on the list item itself.
+![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-![Nested UI parts](images/nested-ui-example-1.png)
+> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
-> NOTE&nbsp;&nbsp; ListView and GridView both derive from the [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) class, so they have the same functionality, but display data differently. In this article, when we talk about lists, the info applies to both the ListView and GridView controls.
+## 기본 및 보조 작업
 
-## Primary and secondary actions
+목록을 사용하여 UI를 만들 때 사용자가 이러한 목록 항목을 사용하여 수행할 수 있는 작업을 고려합니다.  
 
-When creating UI with a list, consider what actions the user might take from those list items.  
+- 사용자가 항목을 클릭하여 작업을 수행할 수 있나요?
+    - 일반적으로 목록 항목을 클릭하면 작업이 시작되지만 꼭 그렇지는 않습니다.
+- 사용자가 둘 이상의 작업을 수행할 수 있나요?
+    - 예를 들어 목록에서 메일을 탭하면 해당 메일이 열립니다. 그러나 사용자가 메일을 먼저 열지 않고 삭제하려는 경우도 있습니다. 이 경우 사용자가 목록에서 이 작업에 직접 액세스하면 편리합니다.
+- 사용자에게 작업을 어떻게 표시해야 하나요?
+    - 모든 입력 유형을 고려하세요. 일부 중첩된 UI 형식은 한 가지 입력 방법에서는 제대로 작동하지만 다른 방법에서는 제대로 작동하지 않는 경우가 있습니다.  
 
-- Can a user click on the item to perform an action?
-    - Typically, clicking a list item initiates an action, but it doesn't have too.
-- Is there more than one action the user can take?
-    - For example, tapping an email in a list opens that email. However, there might be other actions, like deleting the email, that the user would want to take without opening it first. It would benefit the user to access this action directly in the list.
-- How should the actions be exposed to the user?
-    - Consider all input types. Some forms of nested UI work great with one method of input, but might not work with other methods.  
+*기본 작업*은 사용자가 목록 항목을 누를 때 발생하는 작업입니다.
 
-The *primary action* is what the user expects to happen when they press the list item.
+*보조 작업*은 일반적으로 목록 항목과 관련된 바로 가기입니다. 이러한 바로 가기는 목록 관리 또는 목록 항목과 관련된 작업일 수 있습니다.
 
-*Secondary actions* are typically accelerators associated with list items. These accelerators can be for list management or actions related to the list item.
+## 보조 작업에 대한 옵션
 
-## Options for secondary actions
+목록 UI를 만들 때는 먼저 UWP를 지원하는 모든 입력 방법을 고려해야 합니다. 다른 종류의 입력에 대한 자세한 내용은 [입력 지침서](../input-and-devices/input-primer.md)를 참조하세요.
 
-When creating list UI, you first need to make sure you account for all input methods that UWP supports. For more info about different kinds of input, see [Input primer](../input-and-devices/input-primer.md).
+UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 후에는 앱의 보조 작업이 기본 목록에 바로 가기로 표시될 정도로 중요한지 결정해야 합니다. 표시하는 작업이 많을수록 UI가 복잡해집니다. 보조 작업을 기본 목록 UI에 반드시 표시해야 하는지 아니면 다른 곳에 배치할 수도 있는지 결정합니다.
 
-After you have made sure that your app supports all inputs that UWP supports, you should decide if your app’s secondary actions are important enough to expose as accelerators in the main list. Remember that the more actions you expose, the more complicated your UI becomes. Do you really need to expose the secondary actions in the main list UI, or can you put them somewhere else?
+항상 모든 입력에서 이러한 작업에 액세스할 수 있어야 하는 경우에는 기본 목록 UI에 추가 작업을 표시할 수 있습니다.
 
-You might consider exposing additional actions in the main list UI when those actions need to be accessible by any input at all times.
+보조 작업을 반드시 기본 목록 UI에 배치할 필요가 없다고 결정한 경우에는 다른 여러 가지 방법으로 사용자에게 표시할 수 있습니다. 다음은 보조 작업을 배치할 수 있는 몇 가지 옵션입니다.
 
-If you decide that putting secondary actions in the main list UI is not necessary, there are several other ways you can expose them to the user. Here are some options you can consider for where to place secondary actions.
+### 세부 정보 페이지에 보조 작업 배치
 
-### Put secondary actions on the detail page
+목록 항목을 누를 때 이동할 페이지에 보조 작업을 배치합니다. 마스터/세부 정보 패턴을 사용하는 경우 세부 정보 페이지에 보조 작업을 배치하는 것이 좋습니다.
 
-Put the secondary actions on the page that the list item navigates to when it’s pressed. When you use the master/details pattern, the detail page is often a good place to put secondary actions.
+자세한 내용은 [마스터/세부 정보 패턴](master-details.md)을 참조하세요.
 
-For more info, see the [Master/detail pattern](master-details.md).
+### 상황에 맞는 메뉴에 보조 작업 배치
 
-### Put secondary actions in a context menu
+사용자가 마우스 오른쪽 단추를 클릭하거나 길게 누르기를 통해 액세스할 수 있는 상황에 맞는 메뉴에 보조 작업을 배치합니다. 이렇게 하면 사용자가 세부 정보 페이지를 로드하지 않고 메일을 삭제하는 등의 작업을 수행할 수 있습니다. 세부 정보 페이지에 이러한 옵션을 배치하면 상황에 맞는 메뉴가 기본 UI가 아닌 바로 가기가 되므로 유용합니다.
 
-Put the secondary actions in a context menu that the user can access via right-click or press-and-hold. This provides the benefit of letting the user perform an action, such as deleting an email, without having to load the detail page. It's a good practice to also make these options available on the detail page, as context menus are intended to be accelerators rather than primary UI.
+게임 패드 또는 리모콘을 사용하여 입력할 때 보조 작업을 표시하려면 상황에 맞는 메뉴를 사용하는 것이 좋습니다.
 
-To expose secondary actions when input is from a gamepad or remote control, we recommend that you use a context menu.
+자세한 내용은 [상황에 맞는 메뉴와 플라이아웃](menus.md)을 참조하세요.
 
-For more info, see [Context menus and flyouts](menus.md).
+### 가리키기 UI에 보조 작업을 배치하여 포인터 입력 최적화
 
-### Put secondary actions in hover UI to optimize for pointer input
+마우스와 펜 등의 포인터 입력을 통해 앱을 자주 사용하고 이러한 입력에서만 보조 작업을 쉽게 사용할 수 있게 하려면 가리킬 때에만 보조 작업을 표시할 수 있습니다. 이 바로 가기는 포인터 입력이 사용될 때만 표시되므로 다른 입력 유형을 지원하려면 다른 옵션을 사용해야 합니다.
 
-If you expect your app to be used frequently with pointer input such as mouse and pen, and want to make secondary actions readily available only to those inputs, then you can show the secondary actions only on hover. This accelerator is visible only when a pointer input is used, so be sure to use the other options to support other input types as well.
-
-![Nested UI shown on hover](images/nested-ui-hover.png)
+![가리킬 때 중첩된 UI 표시](images/nested-ui-hover.png)
 
 
-For more info, see [Mouse interactions](../input-and-devices/mouse-interactions.md).
+자세한 내용은 [마우스 조작](../input-and-devices/mouse-interactions.md)을 참조하세요.
 
-## UI placement for primary and secondary actions
+## 기본 및 보조 작업에 대한 UI 배치
 
-If you decide that secondary actions should be exposed in the main list UI, we recommend the following guidelines.
+보조 작업을 기본 목록 UI에 표시하려는 경우 다음 지침이 권장됩니다.
 
-When you create a list item with primary and secondary actions, place the primary action to the left and secondary actions to the right. In left-to-right reading cultures, users associate actions on the left side of list item as the primary action.
+기본 및 보조 작업으로 목록 항목을 만드는 경우 기본 작업을 왼쪽에, 보조 작업을 오른쪽에 배치합니다. 왼쪽에서 오른쪽으로 읽는 문화권에서는 사용자가 목록 항목의 왼쪽에 있는 작업을 기본 작업으로 연결합니다.
 
-In these examples, we talk about list UI where the item flows more horizontally (it is wider than its height). However, you might have list items that are more square in shape, or taller than their width. Typically, these are items used in a grid. For these items, if the list doesn't scroll vertically, you can place the secondary actions at the bottom of the list item rather than to the right side.
+이 예제에서는 항목이 가로 방향으로 더 많이 나열되는(높이보다 너비가 더 긴) UI에 대해 설명합니다. 그러나 목록 항목이 정사각형에 가깝거나 너비보다 높이가 더 길 수도 있습니다. 일반적으로 이러한 경우에는 그리드를 사용합니다. 이러한 항목의 경우 목록이 세로 방향으로 스크롤되지 않으면 목록 항목의 오른쪽이 아닌 아래쪽에 보조 작업을 배치할 수 있습니다.
 
-## Consider all inputs
+## 모든 입력 고려
 
-When deciding to use nested UI, also evaluate the user experience with all input types. As mentioned earlier, nested UI works great for some input types. However, it does not always work great for some other. In particular, keyboard, controller, and remote inputs can have difficulty accessing nested UI elements. Be sure to follow the guidance below to ensure your UWP works with all input types.
+중첩된 UI를 사용할 경우 모든 입력 유형으로 사용자 환경을 평가해야 합니다. 앞서 언급했듯이 중첩된 UI는 몇 가지 입력 유형에서는 올바르게 작동합니다. 그러나 일부 유형에서는 올바르게 작동하지 않을 수 있습니다. 특히 키보드, 컨트롤러 및 원격 입력은 중첩된 UI 요소에 액세스하는 것이 어려울 수 있습니다. UWP가 모든 입력 유형에 대해 올바르게 작동하려면 아래 지침을 따라야 합니다.
 
-## Nested UI handling
+## 중첩된 UI 처리
 
-When you have more than one action nested in the list item, we recommend this guidance to handle navigation with a keyboard, gamepad, remote control, or other non-pointer input.
+목록 항목에 둘 이상의 작업이 중첩된 경우 이 지침을 참조하여 키보드, 게임 패드, 리모콘 또는 기타 포인터 방식이 아닌 입력을 사용하여 탐색을 처리하는 것이 좋습니다.
 
-### Nested UI where list items perform an action
+### 목록 항목이 작업을 수행하는 중첩된 UI
 
-If your list UI with nested elements supports actions such as invoking, selection (single or multiple), or drag-and-drop operations, we recommend these arrowing techniques to navigate through your nested UI elements.
+중첩된 요소가 있는 목록 UI에서 호출, 선택(단일 또는 다중) 또는 끌어서 놓기 등의 작업을 지원하는 경우 이러한 화살표 지정 기술을 사용하여 중첩된 UI 요소를 탐색하는 것이 좋습니다.
 
-![Nested UI parts](images/nested-ui-navigation.png)
+![중첩된 UI 부분](images/nested-ui-navigation.png)
 
-**Gamepad**
+**게임 패드**
 
-When input is from a gamepad, provide this user experience:
+게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
-- From **A**, right directional key puts focus on **B**.
-- From **B**, right directional key puts focus on **C**.
-- From **C**, right directional key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From **C**, left directional key puts focus on **B**.
-- From **B**, left directional key puts focus on **A**.
-- From **A**, left directional key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From **A**, **B**, or **C**, down directional key puts focus on **D**.
-- From UI element to the left of List Item, right directional key puts focus on **A**.
-- From UI element to the right of List Item, left directional key puts focus on **A**.
+- **A**에서 오른쪽 방향 키를 누르면 포커스가 **B**로 이동합니다.
+- **B**에서 오른쪽 방향 키를 누르면 포커스가 **C**로 이동합니다.
+- **C**에서는 오른쪽 방향 키가 작동하지 않거나 포커스 가능 UI 요소가 목록 오른쪽에 있는 경우 포커스가 이 요소로 이동합니다.
+- **C**에서 왼쪽 방향 키를 누르면 포커스가 **B**로 이동합니다.
+- **B**에서 왼쪽 방향 키를 누르면 포커스가 **A**로 이동합니다.
+- **A**에서는 왼쪽 방향 키가 작동하지 않거나 포커스 가능 UI 요소가 목록 오른쪽에 있는 경우 포커스가 이 요소로 이동합니다.
+- **A**, **B** 또는 **C**에서 아래쪽 방향 키를 누르면 포커스가 **D**로 이동합니다.
+- 목록 항목 왼쪽에 있는 UI 요소에서 오른쪽 방향 키를 누르면 포커스가 **A**로 이동합니다.
+- 목록 항목 오른쪽에 있는 UI 요소에서 왼쪽 방향 키를 누르면 포커스가 **A**로 이동합니다.
 
-**Keyboard**
+**키보드**
 
-When input is from a keyboard, this is the experience user gets:
+키보드에서 입력하는 경우에는 다음과 같이 작동합니다.
 
-- From **A**, tab key puts focus on **B**.
-- From **B**, tab key puts focus on **C**.
-- From **C**, tab key puts focus on next focusable UI element in the tab order.
-- From **C**, shift+tab key puts focus on **B**.
-- From **B**, shift+tab or left arrow key puts focus on **A**.
-- From **A**, shift+tab key puts focus on next focusable UI element in the reverse tab order.
-- From **A**, **B**, or **C**, down arrow key puts focus on **D**.
-- From UI element to the left of List Item, tab key puts focus on **A**.
-- From UI element to the right of List Item, shift tab key puts focus on **C**.
+- **A**에서 Tab 키를 누르면 포커스가 **B**로 이동합니다.
+- **B**에서 Tab 키를 누르면 포커스가 **C**로 이동합니다.
+- **C**에서 Tab 키를 누르면 포커스가 탭 순서상 다음 포커스 가능 UI 요소로 이동합니다.
+- **C**에서 Shift+Tab을 누르면 포커스가 **B**로 이동합니다.
+- **B**에서 Shift+Tab 또는 왼쪽 화살표 키를 누르면 포커스가 **A**로 이동합니다.
+- **A**에서 Shift+Tab을 누르면 포커스가 탭 순서상 다음 포커스 가능 UI 요소로 이동합니다.
+- **A**, **B** 또는 **C**에서 아래쪽 화살표 키를 누르면 포커스가 **D**로 이동합니다.
+- 목록 항목 왼쪽에 있는 UI 요소에서 Tab 키를 누르면 포커스가 **A**로 이동합니다.
+- 목록 항목 오른쪽에 있는 UI 요소에서 Shift+Tab을 누르면 포커스가 **C**로 이동합니다.
 
-To achieve this UI, set [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) to **true** on your list. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) can be any value.
+이 UI를 구현하려면 목록에서 [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx)를 **true**로 설정합니다. [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)는 임의의 값으로 설정할 수 있습니다.
 
-For the code to implement this, see the [Example](#example) section of this article.
+이를 구현하는 코드에 대해서는 이 문서의 [예제](#example) 섹션을 참조하세요.
 
-### Nested UI where list items do not perform an action
+### 목록 항목이 작업을 수행하지 않는 중첩된 UI
 
-You might use a list view because it provides virtualization and optimized scrolling behavior, but not have an action associated with a list item. These UIs typically use the list item only to group elements and ensure they scroll as a set.
+목록 보기에서 가상화 및 최적화된 스크롤 동작을 제공하지만 목록 항목과 연결된 작업이 없는 경우가 있습니다. 이러한 UI는 일반적으로 요소를 그룹화하여 집합으로 스크롤하는 용도로만 목록 항목을 사용합니다.
 
-This kind of UI tends to be much more complicated than the previous examples, with a lot of nested elements that the user can take action on.
+이러한 종류의 UI는 사용자가 작업을 수행할 수 있는 것보다 더 많은 요소가 중첩되어 있으므로 이전 예제보다 훨씬 더 복잡할 수 있습니다.
 
-![Nested UI parts](images/nested-ui-grouping.png)
+![중첩된 UI 부분](images/nested-ui-grouping.png)
 
 
-To achieve this UI, set the following properties on your list:
-- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx) to **None**.
-- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx) to **false**.
-- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx) to **true**.
+이 UI를 구현하려면 목록에서 다음 속성을 설정합니다.
+- [SelectionMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selectionmode.aspx)를 **None**으로 설정합니다.
+- [IsItemClickEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isitemclickenabled.aspx)를 **false**로 설정합니다.
+- [IsFocusEngagementEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isfocusengagementenabled.aspx)를 **true**로 설정합니다.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >
@@ -150,30 +154,30 @@ To achieve this UI, set the following properties on your list:
 </ListView>
 ```
 
-When the list items do not perform an action, we recommend this guidance to handle navigation with a gamepad or keyboard.
+목록 항목에서 작업을 수행하지 않는 경우 이 지침을 사용하여 게임 패드 또는 키보드로 탐색을 처리하는 것이 좋습니다.
 
-**Gamepad**
+**게임 패드**
 
-When input is from a gamepad, provide this user experience:
+게임 패드에서 입력하는 경우 다음 사용자 환경을 제공합니다.
 
-- From List Item, down directional key puts focus on next List Item.
-- From List Item, left/right key is either no op, or if there is a focusable UI element to the right of List, put the focus there.
-- From List Item, 'A' button puts the focus on Nested UI in top/down left/right priority.
-- While inside Nested UI, follow the XY Focus navigation model.  Focus can only navigate around Nested UI contained inside the current List Item until user presses 'B' button, which puts the focus back onto the List Item.
+- 목록 항목에서 아래쪽 방향 키를 누르면 포커스가 다음 목록 항목으로 이동합니다.
+- 목록 항목에서는 왼쪽/오른쪽 방향 키가 작동하지 않거나 포커스 가능 UI 요소가 목록 오른쪽에 있는 경우 포커스가 이 요소로 이동합니다.
+- 목록 항목에서 'A' 단추를 누르면 중첩된 UI에서 위쪽/왼쪽 아래/오른쪽 순서로 포커스가 이동합니다.
+- 중첩된 UI 내에서는 XY 포커스 탐색 모델을 따릅니다.  포커스는 현재 목록 항목 내에 있는 중첩된 UI로만 이동하며 사용자가 'B' 단추를 누르면 포커스가 다시 목록 항목으로 이동합니다.
 
-**Keyboard**
+**키보드**
 
-When input is from a keyboard, this is the experience user gets:
+키보드에서 입력하는 경우에는 다음과 같이 작동합니다.
 
-- From List Item, down arrow key puts focus on the next List Item.
-- From List Item, pressing left/right key is no op.
-- From List Item, pressing tab key puts focus on the next tab stop amongst the Nested UI item.
-- From one of the Nested UI items, pressing tab traverses the nested UI items in tab order.  Once all the Nested UI items are traveled to, it puts the focus onto the next control in tab order after ListView.
-- Shift+Tab behaves in reverse direction from tab behavior.
+- 목록 항목에서 아래쪽 화살표 키를 누르면 포커스가 다음 목록 항목으로 이동합니다.
+- 목록 항목에서는 왼쪽/오른쪽 화살표 키를 눌러도 작동하지 않습니다.
+- 목록 항목에서 Tab 키를 누르면 포커스가 중첩된 UI 항목 사이에서 다음 탭 정지로 이동합니다.
+- 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
+- Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## Example
+## 예제
 
-This example shows how to implement [nested UI where list items perform an action](#nested-ui-where-list-items-perform-an-action).
+이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="True"
@@ -298,3 +302,9 @@ public static class DependencyObjectExtensions
     }
 }
 ```
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

@@ -3,23 +3,31 @@ author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
-ms.openlocfilehash: c7107599529d5af5b118a46cb065106f08afe113
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4ce59951387542124bcea1cbd0f636c0e44e0d1e
 
 ---
-
 # 앱 바 및 명령 모음
 
-명령 모음("앱 바"라고도 함)을 사용하면 가장 일반적인 앱 작업에 쉽게 액세스할 수 있으며 사진 선택이나 그리기 모드와 같이 사용자의 상황에 맞는 명령이나 옵션을 표시할 수도 있습니다. 앱 페이지 또는 앱 섹션 간 탐색에도 사용할 수 있습니다. 명령 모음은 모든 탐색 패턴에서 사용할 수 있습니다.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+명령 모음(앱 바라고도 함)을 사용하면 가장 일반적인 앱 작업에 쉽게 액세스할 수 있으며 사진 선택이나 그리기 모드와 같이 사용자의 상황에 맞는 명령이나 옵션을 표시할 수도 있습니다. 앱 페이지 또는 앱 섹션 간 탐색에도 사용할 수 있습니다. 명령 모음은 모든 탐색 패턴에서 사용할 수 있습니다.
 
 ![아이콘이 있는 명령 모음의 예](images/controls_appbar_icons.png)
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx"><strong>CommandBar</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx"><strong>AppBarButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx"><strong>AppBarToggleButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx"><strong>AppBarSeparator</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)
--   [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx)
--   [**AppBarToggleButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx)
--   [**AppBarSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
 
 ## 올바른 컨트롤인가요?
 
@@ -51,7 +59,7 @@ Windows Phone의 Outlook 일정 명령 모음입니다.
 ![닫힌 명령 모음](images/commandbar_anatomy_open.png)
 
 명령 모음은 다음 4개의 기본 영역으로 구분됩니다.
-- "자세히 보기" \[•••\] 단추는 모음의 오른쪽에 표시됩니다. "자세히 보기" \[•••\] 단추를 누르면 2가지 효과가 나타납니다. 즉, 기본 명령 단추에 레이블을 표시하고 보조 명령이 있는 경우 오버플로 메뉴를 엽니다. 최신 SDK에서 단추는 보조 명령 또는 숨겨진 레이블이 있는 경우에 표시됩니다. [ **OverflowButtonVisibility** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) 속성을 사용하여 앱에서 이 기본 자동 숨기기 동작을 변경할 수 있습니다.
+- "자세히 보기" \[•••\] 단추는 모음의 오른쪽에 표시됩니다. "자세히 보기" \[•••\] 단추를 누르면 2가지 효과가 나타납니다. 즉, 기본 명령 단추에 레이블을 표시하고 보조 명령이 있는 경우 오버플로 메뉴를 엽니다. 최신 SDK에서 단추는 보조 명령 또는 숨겨진 레이블이 있는 경우에 표시됩니다. [**OverflowButtonVisibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) 속성을 사용하면 앱에서 이 기본 자동 숨기기 동작을 변경할 수 있습니다.
 - 콘텐츠 영역은 모음의 왼쪽에 맞춰집니다. [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx) 속성이 채워지면 표시됩니다.
 - 기본 명령 영역은 "자세히 보기" \[•••\] 단추 옆에 모음의 오른쪽에 맞춰집니다. [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx) 속성이 채워지면 표시됩니다.  
 - 오버플로 메뉴는 명령 모음이 열리고 [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx) 속성이 채워지는 경우에만 표시됩니다. 새 동적 오버플로 동작은 공간이 제한된 경우 기본 명령을 SecondaryCommands 영역으로 자동으로 이동합니다.
@@ -213,7 +221,7 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->**참고** &nbsp;&nbsp;편집 명령 구현은 이 예제의 범위를 벗어납니다. 자세한 내용은 [RichEditBox](rich-edit-box.md) 문서를 참조하세요.
+>**참고**&nbsp;&nbsp;편집 명령 구현은 이 예제의 범위를 벗어납니다. 자세한 내용은 [RichEditBox](rich-edit-box.md) 문서를 참조하세요.
 
 최소 및 숨김 모드가 일부 경우에 유용하지만 모든 작업을 숨기면 사용자에게 혼동을 줄 수 있으므로 주의하세요.
 
@@ -280,13 +288,13 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 ## 관련 문서
 
 **디자이너용**
-           [UWP 앱의 명령 디자인 기본 사항](../layout/commanding-basics.md)
+[UWP 앱의 명령 디자인 기본 사항](../layout/commanding-basics.md)
 
-**개발자용(XAML)** 
-           [ **CommandBar** ](https://msdn.microsoft.com/library/windows/apps/dn279427)
+**개발자용(XAML)**
+[**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

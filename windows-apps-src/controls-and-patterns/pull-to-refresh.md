@@ -1,51 +1,55 @@
 ---
 author: Jwmsft
-Description: Use the pull-to-refresh pattern with a list view.
-title: Pull-to-refresh
+Description: "목록 보기에서 당겨서 새로 고침 패턴을 사용합니다."
+title: "당겨서 새로 고침"
 label: Pull-to-refresh
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
+
 ---
+# 당겨서 새로 고침
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Pull to refresh
+당겨서 새로 고침 패턴을 사용하면 데이터 목록을 터치하고 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 당겨서 새로 고침은 모바일 앱에서 널리 사용되지만 터치 스크린이 있는 디바이스에서 유용합니다. [조작 이벤트](../input-and-devices/touch-interactions.md#manipulation-events)를 처리하여 앱에서 당겨서 새로 고침을 구현할 수 있습니다.
 
-The pull-to-refresh pattern lets a user pull down on a list of data using touch in order to retrieve more data. Pull-to-refresh is widely used on mobile apps, but is useful on any device with a touch screen. You can handle [manipulation events]() to implement pull-to-refresh in your app.
+[당겨서 새로 고침 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620635)은 이 패턴을 지원하는 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 컨트롤을 확장하는 방법을 보여 줍니다. 이 문서에서는 이 샘플을 사용하여 당겨서 새로 고침을 구현하는 주요 사항을 설명합니다.
 
-The [pull-to-refresh sample](http://go.microsoft.com/fwlink/p/?LinkId=620635) shows how to extend a [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) control to support this pattern. In this article, we use this sample to explain the key points of implementing pull-to-refresh.
+![당겨서 새로 고침 샘플](images/ptr-phone-1.png)
 
-![pull-to-refresh sample](images/ptr-phone-1.png)
+## 올바른 패턴인가요?
 
-## Is this the right pattern?
+정기적으로 새로 고치려는 데이터 목록이나 그리드가 있고 앱이 터치 우선 모바일 디바이스에서 실행될 수 있는 경우 당겨서 새로 고침 패턴을 사용합니다.
 
-Use the pull-to-refresh pattern when you have a list or grid of data that the user might want to refresh regularly, and your app is likely to be running on mobile, touch-first devices.
+## 당겨서 새로 고침 구현
 
-## Implement pull-to-refresh
+당겨서 새로 고침을 구현하려면 사용자가 목록을 아래로 당길 때 조작 이벤트를 처리하고, 시각적 피드백을 제공하고, 데이터를 새로 고쳐야 합니다. 여기서는 [당겨서 새로 고침 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620635)에서 이 작업을 수행하는 방법에 대해 알아봅니다. 여기에 모든 코드가 표시되지 않으므로 GitHub의 코드를 보거나 샘플을 다운로드해야 합니다.
 
-To implement pull-to-refresh, you need to handle manipulation events to detect when a user has pulled the list down, provide visual feedback, and refresh the data. Here, we look at how this is done in the [pull-to-refresh sample](http://go.microsoft.com/fwlink/p/?LinkId=620635). We don't show all the code here, so you should download the sample or view the code on GitHub.
+당겨서 새로 고침 샘플은 **ListView** 컨트롤을 확장하는 `RefreshableListView`라는 사용자 지정 컨트롤을 만듭니다. 이 컨트롤은 시각적 피드백을 제공하는 새로 고침 표시기를 추가하고 목록 보기의 내부 스크롤 뷰어의 조작 이벤트를 처리합니다. 또한 목록을 끌어오는 경우와 데이터를 새로 고쳐야 하는 경우를 알리는 두 이벤트를 추가합니다. RefreshableListView는 데이터를 새로 고쳐야 하는 알림만 제공합니다. 데이터를 업데이트하려면 앱에서 이벤트를 처리해야 하고 해당 코드는 모든 앱에 따라 다릅니다.
 
-The pull-to-refresh sample creates a custom control called `RefreshableListView` that extends the **ListView** control. This control adds a refresh indicator to provide visual feedback and handles the manipulation events on the list view's internal scroll viewer. It also adds 2 events to notify you when the list is pulled and when the data should be refreshed. RefreshableListView only provides notification that the data should be refreshed. You need to handle the event in your app to update the data, and that code will be different for every app.
+RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 표시기가 사라지는 방법을 결정하는 ‘자동 새로 고침’ 모드를 제공합니다. 자동 새로 고침을 켜거나 끌 수 있습니다.
+- 꺼짐: `PullThreshold`를 초과했을 때 목록이 해제되는 경우에만 새로 고침을 요청합니다. 사용자가 스크롤러를 놓을 때 표시기가 사라지는 애니메이션 효과가 주어집니다. 휴대폰에서 사용할 수 있는 경우 상태 표시줄 표시기가 표시됩니다.
+- 켜짐: `PullThreshold`를 초과하자마자 해제 여부에 상관없이 새로 고침을 요청합니다. 표시기는 새 데이터를 검색할 때까지 표시되며 새 데이터가 검색되면 사라지는 애니메이션 효과가 주어집니다. **Deferral**은 데이터 가져오기가 완료되면 앱에 알리는 데 사용됩니다.
 
-RefreshableListView provides an 'auto refresh' mode that determines when the refresh is requested and how the refresh indicator goes out of view. Auto refresh can be on or off.
-- Off: A refresh is requested only if the list is released while the `PullThreshold` is exceded. The indicator animates out of view when the user releases the scroller. The status bar indicator is shown if it's available (on phone).
-- On: A refresh is requested as soon as the `PullThreshold` is exceded, whether released or not. The indicator remains in view until the new data is retrieved, then animates out of view. A **Deferral** is used to notify the app when fetching the data is complete.
+> **참고**&nbsp;&nbsp;샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
 
-> **Note**&nbsp;&nbsp;The code in sample is also applicable to a [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). To modify a GridView, derive the custom class from GridView instead of ListView and modify the default GridView template.
+## 새로 고침 표시기 추가
 
-## Add a refresh indicator
+사용자에게 시각적 피드백을 제공하여 앱에서 당겨서 새로 고침 기능을 사용할 수 있다고 알립니다. RefreshableListView에는 XAML에서 시각적 표시기를 설정할 수 있는 `RefreshIndicatorContent` 속성이 있습니다. `RefreshIndicatorContent`를 설정하지 않는 경우 대체될 기본 텍스트 표시기도 포함합니다.
 
-It's important to provide visual feedback to the user so they know that your app supports pull-to-refresh. RefreshableListView has a `RefreshIndicatorContent` property that lets you set the indicator visual in your XAML. It also includes a default text indicator that it falls back to if you don't set the `RefreshIndicatorContent`.
+다음은 새로 고침 표시기에 대한 권장 지침입니다.
 
-Here are recommended guidelines for the refresh indicator.
+![새로 고침 표시기 검토](images/ptr-redlines-1.png)
 
-![refresh indicator redlines](images/ptr-redlines-1.png)
+**목록 보기 템플릿 수정**
 
-**Modify the list view template**
+당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)에 배치됩니다.
 
-In the pull-to-refresh sample, the `RefreshableListView` control template modifies the standard **ListView** template by adding a refresh indicator. The refresh indicator is placed in a [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) above the [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), which is the part that shows the list items.
+> **참고**&nbsp;&nbsp;`DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
 
-> **Note**&nbsp;&nbsp;The `DefaultRefreshIndicatorContent` text box provides a text fallback indicator that is shown only if the `RefreshIndicatorContent` property is not set.
-
-Here's the part of the control template that's modified from the default ListView template.
+다음은 기본 ListView 템플릿에서 수정된 컨트롤 템플릿의 일부입니다.
 
 **XAML**
 ```xaml
@@ -75,9 +79,9 @@ Here's the part of the control template that's modified from the default ListVie
 </Grid>
 ```
 
-**Set the content in XAML**
+**XAML에서 콘텐츠 설정**
 
-You set the content of the refresh indicator in the XAML for your list view. The XAML content you set is displayed by the refresh indicator's [ContentPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentpresenter.aspx) (`<ContentPresenter Content="{TemplateBinding RefreshIndicatorContent}">`). If you don't set this content, the default text indicator is shown instead.
+XAML에서 목록 보기에 대한 새로 고침 표시기의 콘텐츠를 설정합니다. 새로 고침 표시기의 [ContentPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentpresenter.aspx)(`<ContentPresenter Content="{TemplateBinding RefreshIndicatorContent}">`)에 의해 설정한 XAML 콘텐츠가 표시됩니다. 이 콘텐츠를 설정하지 않으면 기본 텍스트 표시기가 대신 표시됩니다.
 
 **XAML**
 ```xaml
@@ -111,9 +115,9 @@ You set the content of the refresh indicator in the XAML for your list view. The
 </c:RefreshableListView>
 ```
 
-**Animate the spinner**
+**회전자에 애니메이션 효과 주기**
 
-When the list is pulled down, RefreshableListView's `PullProgressChanged` event occurs. You handle this event in your app to control the refresh indicator. In the sample, this storyboard is started to animate the indicator's [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) and spin the refresh indicator. 
+목록을 아래로 당기면 RefreshableListView의 `PullProgressChanged` 이벤트가 발생합니다. 앱에서 이 이벤트를 처리하여 새로 고침 표시기를 제어합니다. 샘플에서는 이 스토리보드가 표시기의 [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx)에 애니메이션 효과를 주고 새로 고침 표시기를 회전하는 작업부터 시작합니다. 
 
 **XAML**
 ```xaml
@@ -130,31 +134,31 @@ When the list is pulled down, RefreshableListView's `PullProgressChanged` event 
 </Storyboard>
 ```
 
-## Handle scroll viewer manipulation events
+## 스크롤 뷰어 조작 이벤트 처리
 
-The list view control template includes a built-in [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) that lets a user scroll through the list items. To implement pull-to-refresh, you have to handle the manipulation events on the built-in scroll viewer, as well as several related events. For more info about manipulation events, see [Touch interactions](../input-and-devices/touch-interactions.md).
+목록 보기 컨트롤 템플릿에는 사용자가 목록 항목을 스크롤할 수 있도록 해 주는 기본 제공 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)가 포함되어 있습니다. 당겨서 새로 고침을 구현하려면 기본 제공 스크롤 뷰어의 조작 이벤트뿐만 아니라 여러 관련 이벤트를 처리해야 합니다. 조작 이벤트에 대한 자세한 내용은 [터치 조작](../input-and-devices/touch-interactions.md)을 참조하세요.
 
 ** OnApplyTemplate**
 
-To get access to the scroll viewer and other template parts so that you can add event handlers and call them later in your code, you must override the [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) method. In OnApplyTemplate, you call [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) to get a reference to a named part in the control template, which you can save to use later in your code.
+이벤트 처리기를 추가하고 나중에 코드에서 호출할 수 있도록 스크롤 뷰어 및 기타 템플릿 부분에 액세스하려면 [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) 메서드를 재정의해야 합니다. 코드에서 나중에 사용하도록 저장할 수 있는 컨트롤 템플릿의 명명된 부분에 대한 참조를 가져오려면 OnApplyTemplate 템플릿에서 [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx)를 호출합니다.
 
-In the sample, the variables used to store the template parts are declared in the Private Variables region. After they are retrieved in the OnApplyTemplate method, event handlers are added for the [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx), and [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) events.
+샘플에서는 템플릿 부분을 저장하는 데 사용된 변수를 개인 변수 영역에서 선언합니다. OnApplyTemplate 메서드에서 검색된 후 [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx) 및 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트의 이벤트 처리기가 추가됩니다.
 
 **DirectManipulationStarted**
 
-In order to initiate a pull-to-refresh action, the content has to be scrolled to the top of the scroll viewer when the user starts to pull down. Otherwise, it's assumed that the user is pulling in order to pan up in the list. The code in this handler determines whether the manipulation started with the content at the top of the scroll viewer, and can result in the list being refreshed. The control's 'refreshable' status is set accordingly. 
+당겨서 새로 고침 작업을 시작하려면 사용자가 아래로 당기기 시작할 때 콘텐츠가 스크롤 뷰어의 맨 위로 스크롤되어야 합니다. 그러지 않으면 사용자가 목록에서 위로 이동하기 위해 끌어오는 것으로 간주됩니다. 이 처리기의 코드는 조작이 스크롤 뷰어 맨 위의 콘텐츠로 시작되었는지 여부를 확인하고 목록의 결과를 새로 고칠 수 있습니다. 컨트롤의 '새로 고칠 수 있는' 상태가 적절하게 설정됩니다. 
 
-If the control can be refreshed, event handlers for animations are also added.
+컨트롤을 새로 고칠 수 있으면 애니메이션에 대한 이벤트 처리기도 추가됩니다.
 
 **DirectManipulationCompleted**
 
-When the user stops pulling the list down, the code in this handler checks whether a refresh was activated during the manipulation. If a refresh was activated, the `RefreshRequested` event is raised and the `RefreshCommand` command is executed.
+사용자가 목록 당기기를 멈추면 조작하는 동안 이 처리기의 코드가 새로 고침 활성화 여부를 확인합니다. 새로 고침이 활성화된 경우 `RefreshRequested` 이벤트가 발생하고 `RefreshCommand` 명령이 실행됩니다.
 
-The event handlers for animations are also removed.
+애니메이션에 대한 이벤트 처리기도 제거됩니다.
 
-Based on the value of the `AutoRefresh` property, the list can animate back up immediately, or wait until the refresh is complete and then animate back up. A [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) object is used to to mark the completion of the refresh. At that point the refresh indicator UI is hidden.
+`AutoRefresh` 속성 값에 따라 목록에 즉시 애니메이션 효과를 다시 주거나 새로 고침이 완료될 때까지 기다린 후 다시 애니메이션 효과를 줄 수도 있습니다. [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) 개체가 새로 고침 완료 표시에 사용됩니다. 이때 새로 고침 표시기 UI가 숨겨집니다.
 
-This part of the DirectManipulationCompleted event handler raises the `RefreshRequested` event and get's the Deferral if needed.
+DirectManipulationCompleted 이벤트 처리기의 이 부분에서 `RefreshRequested` 이벤트가 발생하고 필요한 경우 Deferral을 가져옵니다.
 
 **C#**
 ```csharp
@@ -178,27 +182,27 @@ if (this.RefreshRequested != null)
 
 **ViewChanged**
 
-Two cases are handled in the ViewChanged event handler.
+다음 두 경우 ViewChanged 이벤트 처리기에서 처리됩니다.
 
-First, if the view changed due to the scroll viewer zooming, the control's 'refreshable' status is canceled.
+첫째, 스크롤 뷰어 확대/축소로 인해 보기가 변경된 경우 컨트롤의 '새로 고칠 수 있는' 상태가 취소됩니다.
 
-Second, if the content finished animating up at the end of an auto refresh, the padding rectangles are hidden, touch interactions with the scroll viewer are re-anabled, the [VerticalOffset](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticaloffset.aspx) is set to 0.
+둘째, 콘텐츠가 자동 새로 고침의 마지막에 애니메이션을 종료한 경우 안쪽 여백 사각형이 숨겨지고 스크롤 뷰어를 사용한 터치 조작을 다시 사용할 수 있으며 [VerticalOffset](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticaloffset.aspx)은 0으로 설정됩니다.
 
 **PointerPressed**
 
-Pull-to-refresh happens only when the list is pulled down by a touch manipulation. In the PointerPressed event handler, the code checks what kind of pointer caused the event and sets a variable (`m_pointerPressed`) to indicate whether it was a touch pointer. This variable is used in the DirectManipulationStarted handler. If the pointer is not a touch pointer, the DirectManipulationStarted handler returns without doing anything.
+당겨서 새로 고침은 터치 조작으로 목록을 당길 때에만 발생합니다. PointerPressed 이벤트 처리기에서 코드는 이벤트를 발생시킨 포인터의 종류를 확인하고 터치 포인터였는지 여부를 나타내는 변수(`m_pointerPressed`)를 설정합니다. 이 변수는 DirectManipulationStarted 처리기에 사용됩니다. 포인터가 터치 포인터가 아닌 경우 아무 작업도 수행되지 않고 DirectManipulationStarted 처리기가 반환됩니다.
 
-## Add pull and refresh events
+## 끌어오기 및 새로 고침 이벤트 추가
 
-'RefreshableListView' adds 2 events that you can handle in your app to refresh the data and manage the refresh indicator.
+'RefreshableListView'는 데이터를 새로 고치고 새로 고침 표시기를 관리할 수 있도록 앱에서 처리할 수 있는 2개의 이벤트를 추가합니다.
 
-For more info about events, see [Events and routed events overview](https://msdn.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
 
 **RefreshRequested**
 
-The 'RefreshRequested' event notifies your app that the user has pulled the list to refresh it. You handle this event to fetch new data and update your list.
+'RefreshRequested' 이벤트는 사용자가 새로 고칠 목록을 끌어온 앱에 알립니다. 이 이벤트를 처리하여 새 데이터를 가져오고 목록을 업데이트합니다.
 
-Here's the event handler from the sample. The important thing to notice is that it check's the list view's `AutoRefresh` property and get's a Deferral if it's **true**. With a Deferral, the refresh indicator is not stopped and hidden until the refresh is complete.
+다음은 샘플의 이벤트 처리기입니다. 목록 보기의 `AutoRefresh` 속성을 확인하여 **true**인 경우 Deferral을 가져오는 것을 알 수 있습니다. Deferral을 사용하면 새로 고침이 완료될 때까지 새로 고침 표시기가 중지되거나 숨겨지지 않습니다.
 
 **C#**
 ```csharp
@@ -218,18 +222,23 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 **PullProgressChanged**
 
-In the sample, content for the refresh indicator is provided and controlled by the app. The 'PullProgressChanged' event notifies your app when the use is pulling the list so that you can start, stop, and reset the refresh indicator. 
+샘플에서는 앱에서 새로 고침 표시기에 대한 콘텐츠를 제공하고 제어합니다. 'PullProgressChanged' 이벤트는 새로 고침 표시기를 시작, 중지 및 다시 설정할 수 있도록 목록을 끌어올 때 앱에 알립니다. 
 
-## Composition animations
+## 컴퍼지션 애니메이션
 
-By default, content in a scroll viewer stops when the scrollbar reaches the top. To let the user continue to pull the list down, you need to access the visual layer and animate the list content. The sample uses [composition animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation) for this; specifically, [expression animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations).
+기본적으로 스크롤 막대가 맨 위에 도달하면 스크롤 뷰어의 콘텐츠는 중지됩니다. 사용자가 계속해서 목록을 아래로 당기면 시각적 계층에 액세스하고 목록 콘텐츠에 애니메이션 효과를 줘야 합니다. 샘플에서는 이를 위해 [컴퍼지션 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), 특히 [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)을 사용합니다.
 
-In the sample, this work is done primarily in the `CompositionTarget_Rendering` event handler and the `UpdateCompositionAnimations` method.
+샘플에서 이 작업은 주로 `CompositionTarget_Rendering` 이벤트 처리기 및 `UpdateCompositionAnimations` 메서드에서 수행됩니다.
 
-## Related articles
+## 관련 문서
 
-- [Styling controls](styling-controls.md)
-- [Touch interactions](../input-and-devices/touch-interactions.md)
-- [List view and grid view](listview-and-gridview.md)
-- [List view item templates](listview-item-templates.md)
-- [Expression animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [컨트롤 스타일 지정](styling-controls.md)
+- [터치 조작](../input-and-devices/touch-interactions.md)
+- [목록 보기 및 그리드 보기](listview-and-gridview.md)
+- [목록 보기 항목 템플릿](listview-item-templates.md)
+- [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

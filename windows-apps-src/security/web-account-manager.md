@@ -1,15 +1,15 @@
 ---
 title: "웹 계정 관리자를 사용하여 ID 공급자에 연결"
-description: "이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예&#58; Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
+description: "이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
-ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
+ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
 
 ---
 # 웹 계정 관리자를 사용하여 ID 공급자에 연결
 
-이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예&#58; Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
+이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
 
 > 참고: 전체 코드 샘플을 보려면 [Github의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
 
@@ -106,7 +106,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정 및 Azure Active Directory의 경우 "https://login.microsoft.com" 입니다. 
+다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정 및 Azure Active Directory의 경우 "https://login.microsoft.com"입니다. 
 
 ```C#
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -168,9 +168,9 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 서비스 공급자는 서비스에 사용할 토큰을 가져오도록 지정해야 하는 범위에 대한 설명서를 제공합니다. 
 
-Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[ https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2 ]을 참조하세요. 
+Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]을 참조하세요. 
 
-OneDrive의 경우 (OneDrive 인증 및 로그인)[ https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes ]을 참조하세요. 
+OneDrive의 경우 (OneDrive 인증 및 로그인)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]을 참조하세요. 
 
 ## 토큰 사용
 
@@ -188,6 +188,8 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
     }
 }
 ```
+
+> 참고: 토큰을 요청할 때 오류가 발생하면 1단계에서 설명한 대로 앱을 스토어에 연결했는지 확인합니다. 이 단계를 건너뛰면 앱은 토큰을 가져올 수 없습니다. 
 
 토큰이 있으면 토큰을 사용하여 공급자의 API를 호출할 수 있습니다. 아래 코드에서는 Microsoft Live API를 호출하여 사용자에 대한 기본 정보를 얻고 UI에 표시합니다. 
 
@@ -388,6 +390,6 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

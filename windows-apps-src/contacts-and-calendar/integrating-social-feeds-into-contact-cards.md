@@ -1,31 +1,37 @@
 ---
 author: normesta
-description: 'Shows how to integrate social feeds into the People app'
-MSHAttr: 'PreferredLib:/library/windows/apps'
-title: 'Provide social feeds to the People app'
+description: "소셜 피드를 피플 앱에 통합하는 방법을 보여 줍니다."
+MSHAttr: PreferredLib:/library/windows/apps
+title: "피플 앱에 소셜 피드 제공"
+translationtype: Human Translation
+ms.sourcegitcommit: 767acdc847e1897cc17918ce7f49f9807681f4a3
+ms.openlocfilehash: c5b9666d8654a4065bc0e4e400d3e47de4773b8b
+
 ---
 
-# Provide social feeds to the People app
+# 피플 앱에 소셜 피드 제공
 
-Integrate social feed data from your database into the People app.
+데이터베이스의 소셜 피드 데이터를 피플 앱에 통합합니다.
 
-Your feed data will appear in the **What's New** pages of the People app or in the **Profile** page of a contact.
+피드 데이터는 피플 앱의 **새 소식** 페이지나 연락처의 **프로필** 페이지에 표시됩니다.
 
-![Social Feeds in People App](images/social-feeds.png)
+사용자는 피드 항목을 탭하여 앱을 열 수 있습니다.
 
-To get started, create a foreground app that tags contacts for social feeds and a background agent that sends feed data to the People app.
+![피플 앱의 소셜 피드](images/social-feeds.png)
 
-For a more complete sample, see [Social Info Sample](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp).
+시작하려면 소셜 피드를 위한 연락처에 태그를 지정하는 포그라운드 앱과 피드 데이터를 피플 앱에 보내는 백그라운드 에이전트를 만듭니다.
 
-## Create a foreground app
+전체 샘플을 보려면 [소셜 정보 샘플](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp)을 참조하세요.
 
-First, create a Universal Windows Platform (UWP) project and then add the **Windows Mobile Extensions for UWP** to it.
+## 포그라운드 앱 만들기
 
-![Mobile Extensions](images/mobile-extensions.png)
+먼저 UWP(유니버설 Windows 플랫폼) 프로젝트를 만들고 **UWP용 Windows 모바일 확장**을 추가합니다.
 
-### Find or create contacts
+![모바일 확장](images/mobile-extensions.png)
 
-You can find contacts by using a name, email address, or phone number.
+### 연락처 찾기 또는 만들기
+
+이름, 메일 주소 또는 전화 번호를 사용하여 연락처를 찾을 수 있습니다.
 
 ```cs
 ContactStore contactStore = await ContactManager.RequestStoreAsync();
@@ -36,7 +42,7 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 
 Contact contact = contacts[0];
 ```
-You can also create contacts and then add them to a contact list.
+연락처를 만든 다음 연락처 목록에 추가할 수도 있습니다.
 
 ```cs
 Contact contact = new Contact();
@@ -67,11 +73,11 @@ else
 await contactList.SaveContactAsync(contact);
 ```
 
-### Tag each contact with an annotation
+### 주석을 사용하여 각 연락처에 태그 지정
 
-This *annotation* causes the People app to request feed data for the contact from your background agent.
+이 *주석* 때문에 피플 앱은 백그라운드 에이전트에서 연락처에 대한 피드 데이터를 요청합니다.
 
-As part of the annotation, associate the ID of the contact to an ID that your app uses internally to identify that contact.
+주석의 일부로, 앱이 해당 연락처를 식별하기 위해 내부적으로 사용하는 ID에 연락처 ID를 연결합니다.
 
 ```cs
 ContactAnnotationStore annotationStore = await
@@ -94,11 +100,11 @@ annotation.SupportedOperations = ContactAnnotationOperations.SocialFeeds;
 await annotationList.TrySaveAnnotationAsync(annotation);
 
 ```
-### Provision the background agent
+### 백그라운드 에이전트 프로비전
 
-Make sure that the [SocialInfoContract](https://msdn.microsoft.com/library/windows/apps/dn706146.aspx) API contract is available on the device that will run your app.
+앱을 실행할 디바이스에서 [SocialInfoContract](https://msdn.microsoft.com/library/windows/apps/dn706146.aspx) API 계약을 사용할 수 있는지 확인합니다.
 
-If it's available, then provision the background agent.
+사용할 수 있으면 백그라운드 에이전트를 프로비전합니다.
 
 ```cs
 if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(
@@ -114,21 +120,21 @@ if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(
     }
 }
 ```
-## Create the background agent
+## 백그라운드 에이전트 만들기
 
-The background agent is a Windows Runtime Component that responds to feed requests from the People app.
+백그라운드 에이전트는 피플 앱의 피드 요청에 응답하는 Windows 런타임 구성 요소입니다.
 
-In your agent, you'll respond to those requests by giving the People app feed data from your database.
+에이전트에서 데이터베이스의 피드 데이터를 피플 앱에 제공하여 해당 요청에 응답합니다.
 
-### Create a Windows Runtime Component
+### Windows 런타임 구성 요소 만들기
 
-Add a **Windows Runtime Component (Universal Windows)** project to your solution.
+**Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트를 솔루션에 추가합니다.
 
-![Windows Runtime Component](images/windows-runtime-component.png)
+![Windows 런타임 구성 요소](images/windows-runtime-component.png)
 
-### Register the background agent as an app service
+### 백그라운드 에이전트를 앱 서비스로 등록
 
-Register by adding protocol handlers to the ``Extensions`` element of the manifest.
+매니페스트의 ``Extensions`` 요소에 프로토콜 처리기를 추가하여 등록합니다.
 
 ```xml
 <Extensions>
@@ -137,27 +143,27 @@ Register by adding protocol handlers to the ``Extensions`` element of the manife
   </uap:Extension>
 </Extensions>
 ```
-You can also add these in the **Declarations** tab of the manifest designer in Visual Studio.
+Visual Studio 매니페스트 디자이너의 **선언** 탭에서 이러한 처리기를 추가할 수도 있습니다.
 
-![App Service in Manifest Designer](images/manifest-designer-app-service.png)
+![매니페스트 디자이너의 앱 서비스](images/manifest-designer-app-service.png)
 
-### Request operations from the People app
+### 피플 앱에서 작업 요청
 
-Ask the People app what type of data it wants next. The People app will respond to your request with a code that indicates which feed it wants data for.
+다음에 원하는 데이터 유형을 피플 앱에 묻습니다. 피플 앱에서 데이터를 원하는 피드를 나타내는 코드를 사용하여 요청에 응답합니다.
 
-This table describes each feed:
+다음 표에서는 각 피드를 설명합니다.
 
-| Feed | Description |
+| 피드 | 설명 |
 |-------|-------------|
-| Home | Feed that appears in the What's New page of the People app. |
-| Contact | Feed that appears in the What's New page of a contact. |
-| Dashboard | Feed that appears in the contact card next to the profile picture. |
+| 홈 | 피플 앱의 새 소식 페이지에 표시되는 피드입니다. |
+| 연락처 | 연락처의 새 소식 페이지에 표시되는 피드입니다. |
+| 대시보드 | 연락처 카드에서 프로필 사진 옆에 표시되는 피드입니다. |
 <br>
-You'll ask the People app by requesting an *operation*. Implement the [IBackgroundTask](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.aspx) interface and override the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method.
+*작업*을 요청하여 피플 앱에 묻습니다. [IBackgroundTask](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.aspx) 인터페이스를 구현하고 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드를 재정의합니다.
 
-In the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method, send the People app two key-value pairs. One of them contains the version of the protocol and the other one contains the type of the operation.
+[Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드에서 두 개의 키 값 쌍을 피플 앱에 보냅니다. 한 쌍에는 프로토콜 버전이 포함되고 다른 한 쌍에는 작업 유형이 포함됩니다.
 
-Then listen for a response from the People app. That response will contain a code.
+피플 앱의 응답을 수신 대기합니다. 해당 응답에는 코드가 포함됩니다.
 
 ```cs
 public sealed class BackgroundAgent : IBackgroundTask
@@ -225,41 +231,41 @@ public sealed class BackgroundAgent : IBackgroundTask
 }
 ```
 
-Refer to the ``Type`` element of the [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) property to get that code. Here's a complete list of the codes.
+[AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) 속성의 ``Type`` 요소를 참조하여 해당 코드를 가져옵니다. 코드의 전체 목록은 다음과 같습니다.
 
-| Type| Description |
+| 형식| 설명 |
 |-----|-------------|
-| 0x10 | A request to the People app for the next operation. |
-| 0x11 | A request from the People app to provide the home feed for the primary user. |
-| 0x13 | A request from the People app to get the contact feed for the selected contact. |
-| 0x15 | A request from the People app to get the dashboard item of the selected contact. |
-| 0x80 | Indicates that the operation is completed. This notifies the People app that the data is now available. |
-| 0xF1 | A message from the People app indicating that it does not require any other operations. The background agent can shut down now. |
+| 0x10 | 피플 앱으로 보내는 다음 작업 요청입니다. |
+| 0X11 | 기본 사용자에 대한 홈 피드를 제공하라는 피플 앱의 요청입니다. |
+| 0x13 | 선택한 연락처에 대한 연락처 피드를 가져오라는 피플 앱의 요청입니다. |
+| 0x15 | 선택한 연락처의 대시보드 항목을 가져오라는 피플 앱의 요청입니다. |
+| 0x80 | 작업이 완료되었음을 나타냅니다. 이제 데이터를 사용할 수 있음을 피플 앱에 알립니다. |
+| 0xF1 | 다른 작업이 필요하지 않음을 나타내는 피플 앱의 메시지입니다. 이제 백그라운드 에이전트를 종료할 수 있습니다. |
 <br>
-The [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) property also returns a collection of other key-value pairs that describe the response. Here's a list of them.
+[AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) 속성은 응답을 설명하는 다른 키 값 쌍의 컬렉션도 반환합니다. 해당 목록은 다음과 같습니다.
 
-| Key | Type | Description |
+| 키 | 형식 | 설명 |
 |-----|------|-------------|
-| Version | UINT32 | (Required) Identifies the version of the message protocol. The upper 16 bits are the major version, and the lower 16 bits are the minor version. |
-| Type | UINT32 | (Required) The type of operation to perform. The previous example uses the Type key to determine what operation the People app is asking for.
-| OperationId | UINT32 | The ID of the operation. |
-| OwnerRemoteId | String | ID that your app uses internally to identify that contact. |
-| LastFeedItemTimeStamp | String | The ID of the last feed item that was retrieved. |
-| LastFeedItemTimeStamp | DateTime | The time stamp of the last feed item that was retrieved. |
-| ItemCount | UINT32 | The number of items that the People app asks for. |
-| IsFetchMore | BOOLEAN | Determines when the internal cache is updated. |
-| ErrorCode | UINT32 | The error code associated with the background agent operation. |
+| Version | UINT32 | (필수) 메시지 프로토콜 버전을 식별합니다. 상위 16비트는 주 버전이고 하위 16비트는 부 버전입니다. |
+| Type | UINT32 | (필수) 수행할 작업 유형입니다. 앞의 예제에서는 Type 키를 사용하여 피플 앱에서 요청하는 작업을 확인합니다.
+| OperationId | UINT32 | 작업 ID입니다. |
+| OwnerRemoteId | 문자열 | 앱에서 해당 연락처를 식별하기 위해 내부적으로 사용하는 ID입니다. |
+| LastFeedItemTimeStamp | 문자열 | 검색된 마지막 피드 항목의 ID입니다. |
+| LastFeedItemTimeStamp | DateTime | 검색된 마지막 피드 항목의 타임스탬프입니다. |
+| ItemCount | UINT32 | 피플 앱에서 요청하는 항목 수입니다. |
+| IsFetchMore | BOOLEAN | 내부 캐시를 업데이트할 시기를 결정합니다. |
+| ErrorCode | UINT32 | 백그라운드 에이전트 작업과 관련된 오류 코드입니다. |
 <br>
-### Provide a data feed to the People app
+### 피플 앱에 데이터 피드 제공
 
-A **Type** value of ``0x11``, ``0x13``, or ``0x15`` is a request from the People app for feed data.  
+``0x11``, ``0x13`` 또는 ``0x15``의 **Type** 값은 피드 데이터에 대한 피플 앱의 요청입니다.  
 
-The next few snippets show an approach to providing that data to the People app.
+다음 몇 개의 조각은 피플 앱에 해당 데이터를 제공하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> These snippets come from the [Social Info Sample](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp). They contain references to interfaces, classes and members that are defined elsewhere in the sample. Use these snippets along with the other examples in this topic to understand the flow of tasks and refer to the sample if you're interested in diving further into the stack of interfaces, classes, and types.
+> 이러한 코드 조각은 [소셜 정보 샘플](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp)에서 가져온 것입니다. 샘플의 다른 곳에서 정의된 인터페이스, 클래스 및 멤버에 대한 참조를 포함합니다. 이 항목의 다른 예제와 함께 이러한 조각을 사용하여 작업 흐름을 파악합니다. 인터페이스, 클래스 및 형식 스택을 자세히 살펴보려는 경우 샘플을 참조하세요.
 
-**Get contact feed items**
+**연락처 피드 항목 가져오기**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -311,7 +317,7 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-**Get dashboard items**
+**대시보드 항목 가져오기**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -354,7 +360,7 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-**Get home feed items**
+**홈 피드 항목 가져오기**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -406,9 +412,9 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-### Send success or failure notification back to the People app
+### 성공 또는 실패 알림을 피플 앱으로 다시 보내기
 
-Encapsulate your calls in a try catch block and then pass back a success or failure message to the People app after you've provided feed data.
+피드 데이터를 제공한 후 try catch 블록에 호출을 캡슐화한 다음 성공 또는 실패 메시지를 피플 앱에 다시 전달합니다.
 
 ```cs
 try
@@ -433,3 +439,9 @@ fields.Add("OperationId", operationID);
 await this.mAppServiceConnection.SendMessageAsync(fields);
 
 ```
+
+
+
+<!--HONumber=Aug16_HO4-->
+
+

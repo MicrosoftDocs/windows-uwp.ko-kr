@@ -5,7 +5,7 @@ title: "Windows Phone Silverlight XAML 및 UI를 UWP로 포팅"
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7fa520443f242844cd661d70bad0fdeb2297fb1d
+ms.openlocfilehash: 344ea7a71fce744bcf90ac99ada9a6fe17568a9b
 
 ---
 
@@ -395,6 +395,6 @@ UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

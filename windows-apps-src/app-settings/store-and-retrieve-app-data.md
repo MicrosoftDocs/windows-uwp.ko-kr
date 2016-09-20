@@ -6,23 +6,19 @@ ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
+ms.sourcegitcommit: 3ee91b9783d06024a719cf7267fc1e25c449a195
+ms.openlocfilehash: 9de98c3d4e58fba085484451029fc3bb54da7a80
 
 ---
 
 # 설정 및 기타 앱 데이터 저장 및 검색
 
-
-
-
-
 *앱 데이터*는 특정 앱에 대한 변경 가능한 데이터입니다. 여기에는 런타임 상태, 사용자 기본 설정 및 기타 설정이 포함됩니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터*와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
 
-**앱 데이터에 대한 중요 정보:**앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
+> [!IMPORTANT]
+> 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
 
-## <span id="Types_of_app_data"></span><span id="types_of_app_data"></span><span id="TYPES_OF_APP_DATA"></span>앱 데이터의 유형
-
+## 앱 데이터의 유형
 
 앱 데이터에는 설정과 파일의 두 가지 유형이 있습니다.
 
@@ -42,19 +38,18 @@ ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
 
     파일을 사용하여 이진 데이터를 저장하거나 고유한 사용자 지정된 직렬화된 형식을 사용하도록 설정합니다.
 
-## <span id="Storing_app_data_in_the_app_data_stores"></span><span id="storing_app_data_in_the_app_data_stores"></span><span id="STORING_APP_DATA_IN_THE_APP_DATA_STORES"></span>앱 데이터 저장소에 앱 데이터 저장
+## 앱 데이터 저장소에 앱 데이터 저장
 
 
 앱이 설치되면 시스템은 설정 및 파일에 대한 사용자별 데이터 저장소를 앱에 할당합니다. 시스템이 실제 저장소를 관리하므로 개발자는 이 데이터가 어디에 또는 어떻게 저장되는지는 알 필요가 없습니다. 데이터가 다른 앱 및 다른 사용자와 격리된 상태로 유지됩니다. 또한 시스템은 사용자가 앱에 업데이트를 설치할 때는 이러한 데이터 저장소의 콘텐츠를 보호하고, 앱을 제거할 때는 데이터 저장소의 콘텐츠가 완전하게 깨끗하게 제거합니다.
 
 각 앱의 앱 데이터 저장소 내에는 시스템에서 정의한 루트 디렉터리가 있습니다. 총 3개로, 각각 로컬 파일, 로밍 파일, 임시 파일을 위한 것입니다. 이러한 각 루트 디렉터리에 새 파일 및 새 컨테이너를 추가할 수 있습니다.
 
-## <span id="Local_app_data"></span><span id="local_app_data"></span><span id="LOCAL_APP_DATA"></span>로컬 앱 데이터
-
+## 로컬 앱 데이터
 
 로컬 앱 데이터는 앱 세션 간에 유지해야 하고 로밍 앱 데이터에 적절하지 않은 모든 정보에 사용해야 합니다. 다른 디바이스에서 적용할 수 없는 데이터도 여기에 저장해야 합니다. 저장된 로컬 데이터에 대한 일반 크기 제한은 없습니다. 로밍하기 적절하지 않은 데이터 및 대규모 데이터 집합에 대해 로컬 앱 데이터 저장소를 사용합니다.
 
-### <span id="Retrieve_the_local_app_data_store"></span><span id="retrieve_the_local_app_data_store"></span><span id="RETRIEVE_THE_LOCAL_APP_DATA_STORE"></span>로컬 앱 데이터 저장소 검색
+### 로컬 앱 데이터 저장소 검색
 
 로컬 앱 데이터를 읽거나 쓰려면 먼저 로컬 앱 데이터 저장소를 검색해야 합니다. 로컬 앱 데이터 저장소를 검색하려면 [**ApplicationData.LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 속성을 사용하여 앱의 로컬 설정을 [**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) 개체로 가져옵니다. [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체의 파일을 가져오려면 [**ApplicationData.LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) 속성을 사용합니다. 백업 및 복원에 포함되지 않는 파일을 저장할 수 있는 로컬 앱 데이터 저장소의 폴더를 가져오려면 [**ApplicationData.LocalCacheFolder**](https://msdn.microsoft.com/library/windows/apps/dn633825) 속성을 사용합니다.
 
@@ -65,7 +60,7 @@ Windows.Storage.StorageFolder localFolder =
     Windows.Storage.ApplicationData.Current.LocalFolder;
 ```
 
-### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>간단한 로컬 설정 만들기 및 검색
+### 간단한 로컬 설정 만들기 및 검색
 
 설정을 만들거나 작성하려면 앞 단계에서 가져온 `localSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 이 예제에서는 `exampleSetting`이라는 설정을 만듭니다.
 
@@ -82,7 +77,7 @@ localSettings.Values["exampleSetting"] = "Hello Windows";
 Object value = localSettings.Values["exampleSetting"];
 ```
 
-### <span id="Create_and_retrieve_a_local_composite_value"></span><span id="create_and_retrieve_a_local_composite_value"></span><span id="CREATE_AND_RETRIEVE_A_LOCAL_COMPOSITE_VALUE"></span>로컬 복합 값 만들기 및 검색
+### 로컬 복합 값 만들기 및 검색
 
 복합 값을 만들거나 작성하려면 [**ApplicationDataCompositeValue**](https://msdn.microsoft.com/library/windows/apps/br241588) 개체를 만듭니다. 이 예제에서는 `exampleCompositeSetting`이라는 복합 설정을 만들어 `localSettings` 컨테이너에 추가합니다.
 
@@ -115,7 +110,7 @@ else
 }
 ```
 
-### <span id="Create_and_read_a_local_file"></span><span id="create_and_read_a_local_file"></span><span id="CREATE_AND_READ_A_LOCAL_FILE"></span>로컬 파일 만들기 및 읽기
+### 로컬 파일 만들기 및 읽기
 
 로컬 앱 데이터 저장소에 파일을 만들고 업데이트하려면 파일 API(예: [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505))를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `localFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
@@ -149,7 +144,7 @@ async void ReadTimestamp()
 }
 ```
 
-## <span id="Roaming_data"></span><span id="roaming_data"></span><span id="ROAMING_DATA"></span>데이터 로밍
+## 데이터 로밍
 
 
 앱에서 로밍 데이터를 사용하는 경우 사용자는 손쉽게 앱의 앱 데이터를 여러 장치 간에 동기화 상태로 유지할 수 있습니다. 사용자가 여러 디바이스에 앱을 설치하는 경우, OS는 앱 데이터를 동기화 상태로 유지하여 사용자가 두 번째 디바이스에 앱을 설치할 때 수행해야 할 설치 작업이 줄어듭니다. 또한 로밍을 사용하면 목록 작성 같은 작업을 중단했다가 다른 디바이스에서 바로 이어서 진행할 수 있습니다. OS는 로밍 데이터가 업데이트되면 이를 클라우드로 복제하고, 앱이 설치된 다른 디바이스의 데이터와 동기화합니다.
@@ -170,31 +165,31 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 -   즉각적인 동기화를 사용하는 데이터에는 로밍을 사용하지 않습니다. Windows는 즉각적인 동기화를 보증하지 않으므로 사용자가 오프라인 상태이거나 지연 시간이 긴 네트워크에 있을 경우 로밍이 현저하게 지연될 수 있습니다. UI가 즉각적인 동기화를 사용하지 않는지 확인하세요.
 -   자주 변경되는 데이터에는 로밍을 사용하지 않습니다. 예를 들어 앱이 노래의 초 단위 위치와 같이 자주 변경되는 정보를 추적하는 경우 이 정보를 로밍 앱 데이터로 저장하지 마세요. 대신 현재 재생 중인 노래와 같이 좋은 사용자 환경을 제공하는 자주 사용되지 않는 표현을 선택합니다.
 
-### <span id="Roaming_pre-requisites"></span><span id="roaming_pre-requisites"></span><span id="ROAMING_PRE-REQUISITES"></span>로밍 필수 조건
+### 로밍 필수 조건
 
-Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 디바이스에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 접근 권한 값을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 디바이스에 대해 로컬이 됩니다.
+Microsoft 계정을 사용하여 디바이스에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 디바이스에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 접근 권한 값을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 디바이스에 대해 로컬이 됩니다.
 
 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081)에 저장된 데이터는 사용자가 디바이스를 "신뢰할 수 있는 디바이스"로 지정한 경우에만 전환됩니다. 장치를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
 
-### <span id="Conflict_resolution"></span><span id="conflict_resolution"></span><span id="CONFLICT_RESOLUTION"></span>충돌 해결
+### 충돌 해결
 
 로밍 앱 데이터는 한 번에 둘 이상의 장치에서 동시에 사용할 수 없습니다. 두 디바이스에서 특정 데이터 단위가 변경되어 동기화 중에 충돌이 발생하면 시스템은 항상 마지막으로 기록된 값을 선호합니다. 따라서 앱은 최신 정보를 사용하게 됩니다. 데이터 단위가 설정 복합인 경우 충돌 해결은 여전히 설정 단위 수준에서 이루어집니다. 즉, 마지막으로 변경된 복합이 동기화됩니다.
 
-### <span id="When_to_write_data"></span><span id="when_to_write_data"></span><span id="WHEN_TO_WRITE_DATA"></span>데이터를 기록하는 시기
+### 데이터를 기록하는 시기
 
 설정의 예상 수명에 따라 데이터는 다른 시간에 기록되어야 합니다. 가끔 또는 느리게 변경되는 앱 데이터는 즉시 기록되어야 합니다. 그러나 자주 변경되는 앱 데이터는 정기적으로(예: 5분마다 한 번씩), 그리고 앱이 일시 중단된 경우에만 기록되어야 합니다. 예를 들어 음악 앱에서는 새로운 곡이 재생되기 시작할 때마다 "현재 곡" 설정을 기록할 수 있지만 곡의 실제 위치는 일시 중단 시에만 기록해야 합니다.
 
-### <span id="Excessive_usage_protection"></span><span id="excessive_usage_protection"></span><span id="EXCESSIVE_USAGE_PROTECTION"></span>과도한 사용 보호
+### 과도한 사용 보호
 
 시스템에 다양한 보호 메커니즘이 갖추어져 있어야 부적절한 리소스 사용을 방지할 수 있습니다. 앱 데이터가 예상대로 전환되지 않는 경우 디바이스가 일시적으로 제한된 상태이기 때문일 수 있습니다. 얼마간 기다리면 대개 이 문제가 자동으로 해결되며 별도의 작업이 필요하지 않습니다.
 
-### <span id="Versioning"></span><span id="versioning"></span><span id="VERSIONING"></span>버전 관리
+### 버전 관리
 
 앱 데이터는 버전 관리를 사용하여 하나의 데이터 구조에서 다른 데이터 구조로 업그레이드될 수 있습니다. 버전 번호는 앱 번호와 다르며 마음대로 설정할 수 있습니다. 최신 데이터를 나타내는 더 낮은 데이터 버전 번호로 전환하려고 하면 원치 않는 혼란(데이터 손실 포함)이 발생할 수 있으므로 가능하면 증가하는 버전 번호를 사용하는 것이 가장 좋습니다.
 
 앱 데이터는 버전 번호가 동일한 앱 간에만 로밍됩니다. 예를 들어 버전 2의 디바이스는 서로 간에 데이터를 전환하고 버전 3의 디바이스도 마찬가지이지만 버전 2를 실행하는 디바이스와 버전 3을 실행하는 디바이스 간에 로밍이 수행되지 않습니다. 다양한 버전 번호를 사용하는 새 앱을 다른 장치에 설치하면 새로 설치된 앱이 가장 높은 버전 번호와 관련된 앱 데이터를 동기화합니다.
 
-### <span id="Testing_and_tools"></span><span id="testing_and_tools"></span><span id="TESTING_AND_TOOLS"></span>테스트 및 도구
+### 테스트 및 도구
 
 개발자는 로밍 앱 데이터의 동기화를 트리거하기 위해 장치를 잠글 수 있습니다. 앱 데이터가 특정 기간 내에 전환되지 않는 것 같으면 다음 항목을 확인하세요.
 
@@ -203,7 +198,7 @@ Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 �
 -   동일한 버전의 앱을 실행하는 디바이스가 2개 이상 있습니다.
 
 
-### <span id="Register_to_receive_notification_when_roaming_data_changes"></span><span id="register_to_receive_notification_when_roaming_data_changes"></span><span id="REGISTER_TO_RECEIVE_NOTIFICATION_WHEN_ROAMING_DATA_CHANGES"></span>로밍 데이터가 변경되면 알림을 받도록 등록
+### 로밍 데이터가 변경되면 알림을 받도록 등록
 
 로밍 앱 데이터를 사용하려면 설정을 읽고 쓸 수 있도록 로밍 데이터 변경을 등록하고 로밍 데이터 컨테이너를 검색해야 합니다.
 
@@ -211,31 +206,30 @@ Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 �
 
     [**DataChanged**](https://msdn.microsoft.com/library/windows/apps/br241620) 이벤트는 로밍 데이터가 변경된 경우 알려 줍니다. 이 예제에서는 `DataChangeHandler`를 로밍 데이터 변경에 대한 처리기로 설정합니다.
 
-```    CSharp
-void InitHandlers()
-    {
-       Windows.Storage.ApplicationData.Current.DataChanged += 
-          new TypedEventHandler<ApplicationData, object>(DataChangeHandler);
-    }
-
-    void DataChangeHandler(Windows.Storage.ApplicationData appData, object o)
-    {
-       // TODO: Refresh your data
-    }
-```
-
-2.  앱 설정 및 파일 컨테이너 가져오기
+    ```CSharp
+    void InitHandlers()
+        {
+           Windows.Storage.ApplicationData.Current.DataChanged += 
+              new TypedEventHandler<ApplicationData, object>(DataChangeHandler);
+        }
+        void DataChangeHandler(Windows.Storage.ApplicationData appData, object o)
+        {
+           // TODO: Refresh your data
+        }
+    ```
+    
+2. 앱 설정 및 파일 컨테이너 가져오기
 
     설정을 가져오려면 [**ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624) 속성을 사용하고 파일을 가져오려면 [**ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) 속성을 사용합니다.
 
-```    CSharp
-Windows.Storage.ApplicationDataContainer roamingSettings = 
-        Windows.Storage.ApplicationData.Current.RoamingSettings;
-    Windows.Storage.StorageFolder roamingFolder = 
-        Windows.Storage.ApplicationData.Current.RoamingFolder;
-```
+    ```CSharp
+    Windows.Storage.ApplicationDataContainer roamingSettings = 
+            Windows.Storage.ApplicationData.Current.RoamingSettings;
+        Windows.Storage.StorageFolder roamingFolder = 
+            Windows.Storage.ApplicationData.Current.RoamingFolder;
+    ```
 
-### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>로밍 설정 만들기 및 검색
+### 로밍 설정 만들기 및 검색
 
 앞 섹션에서 가져온 `roamingSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615) 속성을 사용합니다. 다음 예제에서는 `exampleSetting`이라는 간단한 설정 및 `composite`라는 복합 값을 만듭니다.
 
@@ -279,20 +273,20 @@ else
 }
 ```
 
-### <span id="Create_and_retrieve_roaming_files"></span><span id="create_and_retrieve_roaming_files"></span><span id="CREATE_AND_RETRIEVE_ROAMING_FILES"></span>로밍 파일 만들기 및 검색
+### 로밍 파일 만들기 및 검색
 
 로밍 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `roamingFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
 ```CSharp
-async void WriteTimestamp()
-{
-   Windows.Globalization.DateTimeFormatting.DateTimeFormatter formatter = 
-       new Windows.Globalization.DatetimeFormatting.DateTimeFormatter("longtime");
-
-   StorageFile sampleFile = await roamingFolder.CreateFileAsync("dataFile.txt", 
-       CreationCollisionOption.ReplaceExisting);
-   await FileIO.WriteTextAsync(sampleFile, formatter.Format(DateTime.Now));
-}
+    async void WriteTimestamp()
+    {
+       Windows.Globalization.DateTimeFormatting.DateTimeFormatter formatter = 
+           new Windows.Globalization.DatetimeFormatting.DateTimeFormatter("longtime");
+    
+       StorageFile sampleFile = await roamingFolder.CreateFileAsync("dataFile.txt", 
+           CreationCollisionOption.ReplaceExisting);
+       await FileIO.WriteTextAsync(sampleFile, formatter.Format(DateTime.Now));
+    }
 ```
 
 로밍 앱 데이터 저장소에서 파일을 열고 읽으려면 [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272), [**Windows.Storage.StorageFile.GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) 및 [**Windows.Storage.FileIO.ReadTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701482) 같은 파일 API를 사용합니다. 이 예제에서는 앞 섹션에서 만든 `dataFile.txt` 파일을 열고 파일에서 날짜를 읽습니다. 다양한 위치에서 파일 리소스 로드에 대한 자세한 내용은 [파일 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965322)을 참조하세요.
@@ -314,12 +308,12 @@ async void ReadTimestamp()
 ```
 
 
-## <span id="Temporary_app_data"></span><span id="temporary_app_data"></span><span id="TEMPORARY_APP_DATA"></span>임시 앱 데이터
+## 임시 앱 데이터
 
 
 임시 앱 데이터 저장소는 캐시처럼 작동합니다. 파일이 로밍되지 않으면 언제든 제거할 수 있습니다. 시스템 유지 관리 작업에서 이 위치에 저장된 데이터를 언제든지 자동으로 삭제할 수 있습니다. 사용자는 디스크 정리를 수행하여 임시 데이터 저장소에서 파일을 지울 수도 있습니다. 임시 앱 데이터는 앱 세션 중 임시 정보를 저장하는 데 사용할 수 있습니다. 시스템에서 필요한 경우 사용된 공간을 재사용할 수 있으므로 앱 세션이 끝난 이후까지 이 데이터가 유지된다고 보장할 수는 없습니다. 위치는 [**temporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) 속성을 통해 사용할 수 있습니다.
 
-### <span id="Retrieve_the_temporary_data_container"></span><span id="retrieve_the_temporary_data_container"></span><span id="RETRIEVE_THE_TEMPORARY_DATA_CONTAINER"></span>임시 데이터 컨테이너 검색
+### 임시 데이터 컨테이너 검색
 
 파일을 가져오려면 [**ApplicationData.TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) 속성을 사용합니다. 다음 단계에서는 이 단계의 `temporaryFolder` 변수를 사용합니다.
 
@@ -330,11 +324,11 @@ Windows.Storage.StorageFolder temporaryFolder = ApplicationData.Current.Temporar
 </table>
 ```
 
-### <span id="Create_and_read_temporary_files"></span><span id="create_and_read_temporary_files"></span><span id="CREATE_AND_READ_TEMPORARY_FILES"></span>임시 파일 만들기 및 읽기
+### 임시 파일 만들기 및 읽기
 
 임시 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227249) 및 [**Windows.Storage.FileIO.WriteTextAsync**](https://msdn.microsoft.com/library/windows/apps/hh701505) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `temporaryFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [**CreationCollisionOption**](https://msdn.microsoft.com/library/windows/apps/br241631) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
-<span codelanguage="CSharp"></span>
+
 ```CSharp
 <colgroup>
 <col width="100%" />
@@ -375,7 +369,7 @@ async void ReadTimestamp()
 }
 ```
 
-## <span id="Organize_app_data_with_containers"></span><span id="organize_app_data_with_containers"></span><span id="ORGANIZE_APP_DATA_WITH_CONTAINERS"></span>컨테이너를 사용하여 앱 데이터 구성
+## 컨테이너를 사용하여 앱 데이터 구성
 
 
 앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너([**ApplicationDataContainer**](https://msdn.microsoft.com/library/windows/apps/br241599) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
@@ -398,7 +392,7 @@ if (localSettings.Containers.ContainsKey("exampleContainer"))
 }
 ```
 
-## <span id="Delete_app_settings_and_containers"></span><span id="delete_app_settings_and_containers"></span><span id="DELETE_APP_SETTINGS_AND_CONTAINERS"></span>앱 설정 및 컨테이너 삭제
+## 앱 설정 및 컨테이너 삭제
 
 
 앱에 더 이상 필요 없는 간단한 설정을 삭제하려면 [**ApplicationDataContainerSettings.Remove**](https://msdn.microsoft.com/library/windows/apps/br241608) 메서드를 사용합니다. 다음 예제에서는 앞에서 만든 `exampleSetting` 로컬 설정을 삭제합니다.
@@ -440,13 +434,14 @@ Windows.Storage.StorageFolder localFolder =
 localSettings.DeleteContainer("exampleContainer");
 ```
 
-## <span id="Versioning_your_app_data"></span><span id="versioning_your_app_data"></span><span id="VERSIONING_YOUR_APP_DATA"></span>앱 데이터 버전 관리
+## 앱 데이터 버전 관리
 
 
 선택적으로, 앱에 대한 앱 데이터에 버전을 지정할 수 있습니다. 이렇게 하면 앱의 이전 버전과 호환성 문제를 일으키지 않고 앱 데이터의 형식을 변경하는 차기 앱 버전을 만들 수 있습니다. 앱은 데이터 저장소에서 앱 데이터의 버전을 확인하며, 그 버전이 앱 버전보다 낮을 경우 앱은 앱 데이터를 새 형식으로 업데이트하고 버전을 업데이트해야 합니다. 자세한 내용은 [**Application.Version**](https://msdn.microsoft.com/library/windows/apps/br241630) 속성 및 [**ApplicationData.SetVersionAsync**](https://msdn.microsoft.com/library/windows/apps/hh701429) 메서드를 참조하세요.
 
 ## 관련 문서
 
+* [앱 설정에 대한 지침](guidelines-for-app-settings.md)
 * [**Windows.Storage.ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)
 * [**Windows.Storage.ApplicationData.RoamingSettings**](https://msdn.microsoft.com/library/windows/apps/br241624)
 * [**Windows.Storage.ApplicationData.RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)
@@ -457,6 +452,6 @@ localSettings.DeleteContainer("exampleContainer");
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

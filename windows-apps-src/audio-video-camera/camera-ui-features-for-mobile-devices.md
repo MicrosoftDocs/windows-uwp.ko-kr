@@ -1,63 +1,71 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article show you how to take advantage of special camera UI features that are only present on mobile devices.
-title: Camera UI features for mobile devices
+description: "이 문서에서는 모바일 디바이스에만 존재하는 특수한 카메라 UI 기능을 활용하는 방법을 보여 줍니다."
+title: "모바일 디바이스용 카메라 UI 기능"
+translationtype: Human Translation
+ms.sourcegitcommit: 77d1709cd42253c229b01df21ae3416e57c1c2ab
+ms.openlocfilehash: ec437d7111b1490f52bfc53b3ad2cd06f0c66ef3
+
 ---
 
-#Camera UI features for mobile devices
+#모바일 디바이스용 카메라 UI 기능
 
-This article show you how to take advantage of special camera UI features that are only present on mobile devices. 
+이 문서에서는 모바일 디바이스에만 존재하는 특수한 카메라 UI 기능을 활용하는 방법을 보여 줍니다. 
 
-## Add the mobile extension to your project 
+## 프로젝트에 모바일 확장 추가 
 
-To use these features, you must add a reference to the Microsoft Mobile Extension SDK for Universal App Platform to your project.
+이러한 기능을 사용하려면 유니버설 앱 플랫폼용 Microsoft 모바일 확장 SDK에 대한 참조를 프로젝트에 추가해야 합니다.
 
-**To add a reference to the mobile extension SDK for hardware camera button support**
+**하드웨어 카메라 단추 지원에 위해 모바일 확장 SDK에 대한 참조를 추가하려면**
 
-1.  In **Solution Explorer**, right-click **References** and select **Add Reference...**
+1.  **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
 
-2.  Expand the **Windows Universal** node and select **Extensions**.
+2.  **Windows 유니버설** 노드를 확장하고 **확장**을 선택합니다.
 
-3.  Click the checkbox next to **Microsoft Mobile Extension SDK for Universal App Platform**.
+3.  **유니버설 앱 플랫폼용 Microsoft 모바일 확장 SDK** 확인란을 선택합니다.
 
-## Hide the status bar
+## 상태 표시줄 숨기기
 
-Mobile devices have a [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) control that provides the user with status information about the device. This control takes up space on the screen that can interfere with the media capture UI. You can hide the status bar by calling [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339), but you must make this call from within a conditional block where you use the [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) method to determine if the API is available. This method will only return true on mobile devices that support the status bar. You should hide the status bar when your app launches or when you begin previewing from the camera.
+모바일 디바이스에는 사용자에게 디바이스에 대한 상태 정보를 제공하는 [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864) 컨트롤이 있습니다. 이 컨트롤은 화면에서 공간을 차지하여 미디어 캡처 UI를 방해할 수 있습니다. [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339)를 호출하여 상태 표시줄을 숨길 수 있지만 [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) 메서드를 사용하여 API를 사용할 수 있는지 확인하는 조건부 블록 내에서 이 호출을 수행해야 합니다. 이 메서드는 상태 표시줄을 지원하는 모바일 장치에서만 true를 반환합니다. 앱이 시작되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
 
 [!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
 
-When your app is shutting down or when the user navigates away from the media capture page of your app, you make the control visible again.
+앱이 종료되거나 사용자가 앱의 미디어 캡처 페이지를 닫으면 컨트롤을 다시 보이게 할 수 있습니다.
 
 [!code-cs[ShowStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetShowStatusBar)]
 
-## Use the hardware camera button
+## 하드웨어 카메라 단추 사용
 
-Some mobile devices have a dedicated hardware camera button that some users prefer over an on-screen control. To be notified when the hardware camera button is pressed, register a handler for the [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805) event. Because this API is available on mobile devices only, you must again use the **IsTypePresent** to make sure the API is supported on the current device before attempting to access it.
+일부 모바일 디바이스에는 일부 사용자가 화면 컨트롤보다 선호하는 전용 하드웨어 카메라 단추가 있습니다. 하드웨어 카메라 단추를 누를 때 알림을 받으려면 [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805) 이벤트에 대한 처리기를 등록합니다. 이 API는 모바일 디바이스에서만 사용할 수 있으므로 **IsTypePresent**를 사용하여 액세스를 시도하기 전에 API가 현재 디바이스에서 지원되는지를 확인해야 합니다.
 
 [!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
 
 [!code-cs[RegisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterCameraButtonHandler)]
 
-In the handler for the **CameraPressed** event, you can initiate a photo capture.
+**CameraPressed** 이벤트에 대한 처리기에서 사진 캡처를 시작할 수 있습니다.
 
 [!code-cs[CameraPressed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCameraPressed)]
 
-When your app is shutting down or the user moves away from the media capture page of your app, unregister the hardware button handler.
+앱이 종료되거나 사용자가 앱의 미디어 캡처 페이지를 벗어나 이동하면 하드웨어 단추 처리기를 등록 취소합니다.
 
 [!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
 
-[!NOTE]
-This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you're developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).                                                                                   |
+> [!NOTE]
+> 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.                                                                                   |
 
-## Related topics
+## 관련 항목
 
-* [Camera](camera.md)
-* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
-
- 
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 
 
+
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 
