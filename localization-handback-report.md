@@ -1,11 +1,42 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps/blob/753a917c0ecbf445560203dbc1406acae52e5265/windows-apps-src/index.md) | HandedOffSuccess | [Details](#2b4bae1606f9b51e2d4901218ebd2d616e4c5edc4014)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/1cae625559ad95c1de577e57bfd5087e55a0c2f5/windows-apps-src/TOC.md) | InSyncHandedBackSuccess | [Details](#1c9b52594ed1a3b519d5d20fea23f9a0c5bca1c88004)
 
 ## Item Details
+##### <a name='2b4bae1606f9b51e2d4901218ebd2d616e4c5edc4014'></a> Source: [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps/blob/753a917c0ecbf445560203dbc1406acae52e5265/windows-apps-src/index.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/46433608c4b5e825ea829f81773e1efc6917b083/ol-handoff/Microsoft/windows-apps.ko-kr/master/index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf)
+* Handoff Datetime: 2016-08-30 16:53:53
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\index.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/aa00a65d1a7447c7022a5efb6edd891cd0c742aa/windows-apps-src/index.md)
+* Current Handback File: [index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/628e201f5b89d452f7722f49fe4d1bf4307944ea/ol-handback/Microsoft/windows-apps.ko-kr/master/index.fbb2a0e1c7a82fa0a97bb1e07bc6c801fcd891f4.ko-kr.xlf)
+* Current Handback Datetime: 2016-09-22 14:37:33
+* [Back to Top](#report-top)
+
+##### <a name='1c9b52594ed1a3b519d5d20fea23f9a0c5bca1c88004'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/1cae625559ad95c1de577e57bfd5087e55a0c2f5/windows-apps-src/TOC.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/aa00a65d1a7447c7022a5efb6edd891cd0c742aa/windows-apps-src/TOC.md)
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/8707dada40ed9caf322d3e13e99f932dc6bff555/ol-handoff/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Handoff Datetime: 2016-09-14 22:10:52
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/628e201f5b89d452f7722f49fe4d1bf4307944ea/ol-handback/Microsoft/windows-apps.ko-kr/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf)
+* Handback Datetime: 2016-09-22 14:37:33
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
