@@ -4,8 +4,8 @@ ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
 description: "이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다."
 title: MIDI
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a67b859cc2bd42abc13bcba0d405783b99a0ca5c
 
 ---
 
@@ -132,8 +132,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 2.  **유니버설 Windows** 노드를 확장합니다.
 3.  **확장**을 선택합니다.
 4.  확장 목록에서 **유니버설 Windows 앱에 대한 Microsoft 일반 MIDI DLS**를 선택합니다.
-    > [!NOTE] 
-    > 여러 버전의 확장이 있는 경우 앱의 대상에 맞는 버전을 선택해야 합니다. 프로젝트 속성의 **응용 프로그램** 탭에서 앱이 대상으로 하는 SDK 버전을 확인할 수 있습니다.
+    **참고** 여러 버전의 확장이 있는 경우 앱의 대상에 맞는 버전을 선택해야 합니다. 프로젝트 속성의 **응용 프로그램** 탭에서 앱이 대상으로 하는 SDK 버전을 확인할 수 있습니다.
 
  
 
@@ -145,6 +144,6 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

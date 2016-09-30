@@ -2,19 +2,19 @@
 redirect_url: https://msdn.microsoft.com/windows/uwp/layout/active-canvas
 author: Jwmsft
 Description: 
-title: "활성 캔버스"
+title: 
 ms.assetid: 
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 30fca3dd8fb0dd3b00fd2950a464ecacb4d155ef
-ms.openlocfilehash: 7edfcf2e1a73fe522693c4b328d5d72a8759d5cb
+ms.sourcegitcommit: ef71196ba0aefd4428daae70c54bcc9cbeaa56a2
+ms.openlocfilehash: 22b195475c48f7447c4c08431472efa0ffd48e31
 
 ---
 
-# 이 페이지는 [layout/https://msdn.microsoft.com/windows/uwp/layout/active-canvas]로 리디렉션되었습니다.
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

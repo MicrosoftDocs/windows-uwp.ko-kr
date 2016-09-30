@@ -1,35 +1,29 @@
 ---
 author: TylerMSFT
-title: "연결된 앱 및 디바이스(프로젝트 로마)"
-description: "이 섹션에서는 프로젝트 로마를 사용하여 연결된 디바이스를 검색하고, 다른 디바이스에서 앱을 실행하고, 원격 디바이스의 앱과 통신하는 방법을 설명합니다."
-translationtype: Human Translation
-ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
-ms.openlocfilehash: 4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a
-
+title: Connected apps and devices
+description: This section describes how to discover connected devices, launch an app on another device, and communicate with an app on a remote device.
 ---
 
-# 연결된 앱 및 디바이스(프로젝트 로마)
+# Connected apps and devices
 
-이 섹션에서는 프로젝트 로마를 사용하여 디바이스 및 플랫폼 간에 앱을 연결하는 방법을 설명합니다. 연결된 디바이스를 검색하고, 다른 디바이스에서 앱을 실행하고, 원격 디바이스의 앱과 통신하는 방법을 알아봅니다.
+This section explains how to connect apps across devices and platforms. Learn how to discover connected devices, launch an app on another device, and communicate with an app on a remote device.
 
-대부분의 사람들은 여러 디바이스를 가지고 있으며 한 디바이스에서 작업을 시작한 후 다른 디바이스에서 완료하는 경우도 많습니다. 이러한 경우를 처리하려면 앱이 여러 디바이스와 플랫폼을 포괄해야 합니다.
+Most people have multiple devices, and often begin an activity on one device and finish it on another. To accommodate this, apps need to span devices and platforms.
 
-Windows 10 버전 1607에서 도입된 [원격 시스템 API](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)를 통해 사용자가 한 디바이스에서 작업을 시작하고 다른 디바이스에서 완료할 수 있도록 하는 앱을 작성할 수 있습니다. 작업에 중앙 포커스가 유지되며, 사용자는 가장 편리한 디바이스에서 해당 작업을 수행할 수 있습니다. 예를 들어 자동차에서는 휴대폰을 통해 라디오를 듣지만 집에 도착하면 홈 스테레오 시스템에 연결된 Xbox One으로 재생을 전송할 수 있습니다.
+The [Remote Systems APIs](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)
+introduced in Windows 10, version 1607, enable you to write apps that allow users to start a task on one device and finish it on another. The task remains the central focus, and users can do their work on the device that is most convenient. For example, you might be listening to the radio on your phone in the car, but when you get home you may want to transfer playback to your Xbox One that is hooked up to your home stereo system.
 
-도우미 디바이스나 원격 제어 시나리오에서 프로젝트 "로마"를 사용할 수도 있습니다. 앱 메시지 API를 사용하여 두 디바이스 간에 사용자 지정 메시지를 주고받을 앱 채널을 만들 수 있습니다. 예를 들어 TV의 재생을 제어하는 휴대폰용 앱이나 다른 앱에서 시청 중인 TV 프로그램의 등장 인물에 대한 정보를 제공하는 도우미 앱을 작성할 수 있습니다.  
+You can also use connected apps and devices for companion devices, or remote control scenarios. Use the app messaging APIs to create an app channel between two devices to send and receive custom messages. For example, you can write an app for your phone that controls playback on your TV, or a companion app that provides information about the characters on a TV show you are watching on another app.  
 
-Bluetooth 및 무선을 통해 근접해서 또는 클라우드를 통해 원격으로 디바이스를 연결할 수 있으며 사용자의 Microsoft 계정으로 연결됩니다.
+Devices can be connected proximally through Bluetooth and wireless, or remotely through the cloud, and are connected by the Microsoft account of the person using them.
 
-원격 시스템 검색, 원격 시스템에서 앱 실행, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지 전송 방법의 예는 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems )을 참조하세요.
+See the [Remote Systems sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) for examples of how to discover remote system, launch an app on a remote system, and use app services to send messages between apps running on two systems.  
 
-| 원격 작업 | 설명                                                                                                                                                                |
+
+Install the Connected Apps and Devices SDK to enable remote experiences on iOS and Android devices.
+
+| Remote activity | Description                                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 디바이스를 검색하는 방법을 알아봅니다. |
-| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다.  |
-| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 디바이스에서 앱을 조작하는 방법을 알아봅니다. |
-
-
-
-<!--HONumber=Aug16_HO5-->
-
-
+| [Discover remote devices](discover-connected-devices.md)  | Learn how to discover devices that you can connect to. |
+| [Launch an app on a remote device](launch-a-remote-app.md) | Learn how to launch an app on a remote device.  |
+| [Communicate with a remote app service](communicate-with-a-remote-app-service.md) | Learn how to interact with an app on a remote device. |

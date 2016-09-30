@@ -5,7 +5,7 @@ description: "이 문서에서는 MediaProcessingTrigger 및 백그라운드 작
 title: "백그라운드에서 미디어 파일 처리"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
+ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
 
 ---
 
@@ -140,6 +140,6 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

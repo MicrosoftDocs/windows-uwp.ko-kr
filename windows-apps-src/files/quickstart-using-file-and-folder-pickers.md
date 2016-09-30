@@ -1,11 +1,11 @@
 ---
-author: normesta
+author: TylerMSFT
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "선택기를 사용하여 파일 및 폴더 열기"
 description: "사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 91128639cea8948579ec128e4cd695bdfeb5fe86
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
 
 ---
 
@@ -70,7 +70,7 @@ ms.openlocfilehash: 91128639cea8948579ec128e4cd695bdfeb5fe86
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
 picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-picker.SuggestedStartLocation =
+picker.SuggestedStartLocation = 
     Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
 picker.FileTypeFilter.Add(".jpg");
 picker.FileTypeFilter.Add(".jpeg");
@@ -100,7 +100,7 @@ else
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation =
+    picker.SuggestedStartLocation = 
         Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
     picker.FileTypeFilter.Add(".jpg");
     picker.FileTypeFilter.Add(".jpeg");
@@ -187,6 +187,10 @@ else
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+
+<!--HONumber=Jul16_HO2-->
 
 

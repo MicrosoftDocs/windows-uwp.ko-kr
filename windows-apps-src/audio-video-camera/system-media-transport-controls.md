@@ -2,37 +2,52 @@
 author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
 description: "SystemMediaTransportControls 클래스를 사용하면 Windows에서 기본 제공되는 앱에서 시스템 미디어 전송 컨트롤을 사용하고 앱이 현재 재생 중인 미디어에 대해 컨트롤이 표시하는 메타데이터를 업데이트할 수 있습니다."
-title: "시스템 미디어 전송 컨트롤의 수동 컨트롤"
+title: "시스템 미디어 전송 컨트롤"
 translationtype: Human Translation
-ms.sourcegitcommit: 2cf432bc9d6eb0e564b6d6aa7fdbfd78c7eef272
-ms.openlocfilehash: 6643f6bee55c1c9631ca20d2fe7eb6ac1c5ae3e2
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a94ce4112f7662d3fe9bf3c8a7d3f60b1569931
 
 ---
 
-# 시스템 미디어 전송 컨트롤의 수동 컨트롤
+# 시스템 미디어 전송 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 10 버전 1607부터 미디어를 재생하는 데 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하는 UWP 앱이 기본적으로 SMTC(시스템 미디어 전송 컨트롤)와 자동으로 통합됩니다. 대부분의 시나리오에서 이러한 방식으로 SMTC와 상호 작용하는 것이 좋습니다. **MediaPlayer**와 SMTC의 기본 통합을 사용자 지정하는 방법은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요.
 
-SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습니다. 여기에는 하나 이상의 미디어 플레이어 재생을 제어하는 데 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController)를 사용 중인 경우가 포함됩니다. 또는 여러 미디어 플레이어를 사용 중이고 앱에서 하나의 SMTC 인스턴스만 실행하려는 경우입니다. [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaElement)를 사용하여 미디어를 재생하는 경우 SMTC를 수동으로 제어해야 합니다.
+[**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스를 사용하면 Windows에서 기본 제공되는 앱에서 시스템 미디어 전송 컨트롤을 사용하고 앱이 현재 재생 중인 미디어에 대해 컨트롤이 표시하는 메타데이터를 업데이트할 수 있습니다.
+
+시스템 전송 컨트롤은 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 개체의 전송 컨트롤과 다릅니다. 시스템 전송 컨트롤은 헤드폰 볼륨 컨트롤, 키보드의 미디어 단추 등 하드웨어 미디어 키를 누를 때 팝업되는 컨트롤입니다. 사용자가 키보드에서 Pause 키를 누를 경우 앱이 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)를 지원하면 앱이 알림을 받고 적절한 조치를 취할 수 있습니다.
+
+앱은 또한 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)가 표시하는 곡 제목 및 미리 보기 이미지 등의 미디어 정보를 업데이트할 수 있습니다.
+
+**참고**  
+[시스템 미디어 컨트롤 UWP 샘플](http://go.microsoft.com/fwlink/?LinkId=619488)은 이 개요에 설명된 대로 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
 ## 전송 컨트롤 설정
-**MediaPlayer**를 사용하여 미디어를 재생하는 경우 [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.SystemMediaTransportControls) 속성에 액세스하여 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.SystemMediaTransportControls) 클래스 인스턴스를 가져올 수 있습니다. SMTC를 수동으로 제어하려면 [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) 속성을 false로 설정하여 **MediaPlayer**에서 제공하는 자동 통합을 사용하지 않도록 설정해야 합니다.
 
-[!code-cs[InitSMTCMediaPlayer](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaPlayer)]
+페이지의 XAML 파일에서 시스템 미디어 전송 컨트롤로 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 정의합니다. [**CurrentStateChanged**](https://msdn.microsoft.com/library/windows/apps/br227375) 및 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394) 이벤트는 시스템 미디어 전송 컨트롤을 업데이트하는 데 사용되며 이 문서의 뒷부분에서 설명합니다.
 
-[**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)를 호출하여 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)의 인스턴스를 가져올 수도 있습니다. **MediaElement**를 사용하여 미디어를 재생하는 경우 이 메서드를 사용하여 개체를 가져와야 합니다.
+[!code-xml[MediaElementSystemMediaTransportControls](./code/SMTCWin10/cs/MainPage.xaml#SnippetMediaElementSystemMediaTransportControls)]
 
-[!code-cs[InitSMTCMediaElement](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaElement)]
+사용자가 재생할 파일을 선택할 수 있게 하는 단추를 XAML 파일에 추가합니다.
+
+[!code-xml[OpenButton](./code/SMTCWin10/cs/MainPage.xaml#SnippetOpenButton)]
+
+코드 숨김 페이지에서 다음 네임스페이스에 대한 using 지시문을 추가합니다.
+
+[!code-cs[네임스페이스](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetNamespace)]
+
+사용자가 파일을 선택할 수 있게 하는 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하는 단추 클릭 처리기를 추가한 다음 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/br244338)를 호출하여 이 파일을 **MediaElement**에 대한 활성 파일로 만듭니다.
+
+[!code-cs[OpenMediaFile](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetOpenMediaFile)]
+
+[**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)를 호출하여 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)의 인스턴스를 가져옵니다.
 
 **SystemMediaTransportControls** 개체의 해당 "is enabled" 속성(예: [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712), [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715))을 설정하여 앱에서 처리할 단추를 사용하도록 설정합니다. 사용 가능한 컨트롤의 전체 목록을 보려면 **SystemMediaTransportControls** 참조 문서를 참조하세요.
 
-[!code-cs[EnableContols](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetEnableContols)]
-
 사용자가 단추를 누를 때 알림을 받도록 [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706)이벤트에 대한 처리기를 등록합니다.
 
-[!code-cs[RegisterButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterButtonPressed)]
+[!code-cs[SystemMediaTransportControlsSetup](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsSetup)]
 
 ## 시스템 미디어 전송 컨트롤 단추 누르기 처리
 
@@ -97,16 +112,13 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 ## 백그라운드 오디오에 대한 시스템 미디어 전송 컨트롤 사용
 
-**MediaPlayer**에서 제공하는 자동 SMTC 통합을 사용하지 않는 경우 백그라운드 오디오를 사용하도록 설정하려면 수동으로 SMTC와 통합해야 합니다. 최소한 앱은 [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) 및 [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713)를 true로 설정하여 재생 및 일시 중지 단추를 사용하도록 설정해야 합니다. 앱은 [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) 이벤트도 처리해야 합니다. 앱이 이러한 요구 사항을 충족하지 않는 경우 앱이 백그라운드로 전환될 때 오디오 재생이 중지됩니다.
+백그라운드 오디오에 대한 시스템 미디어 전송 컨트롤을 사용하려면 [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714) 및 [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713)를 true로 설정하여 재생 및 일시 중지 단추를 사용하도록 설정해야 합니다. 앱은 [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706) 이벤트도 처리해야 합니다.
 
-백그라운드 오디오에 대해 새로운 한 프로세스 모델을 사용하는 앱은 [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)를 호출하여 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)의 인스턴스를 가져옵니다. 백그라운드 오디오에 대해 레거시 두 프로세스 모델을 사용하는 앱은 [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635)를 사용하여 백그라운드 프로세스에서 SMTC에 액세스해야 합니다.
+앱의 백그라운드 작업 내에서 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)의 인스턴스를 가져오려면 [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708) 대신 [**BackgroundMediaPlayer.Current.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635)를 사용해야 합니다(포그라운드 앱 내에서만 사용할 수 있음).
 
-백그라운드에서 오디오를 재생하는 방법에 대한 자세한 내용은 [백그라운드에서 미디어 재생](background-audio.md)을 참조하세요.
+백그라운드에서 오디오를 재생하는 방법에 대한 자세한 내용은 [백그라운드 오디오](background-audio.md)를 참조하세요.
 
-## 관련 항목
-* [미디어 재생](media-playback.md)
-* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md) 
-* [시스템 미디어 전송 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
+ 
 
  
 
@@ -116,6 +128,6 @@ SMTC의 수동 제어를 구현해야 하는 몇 가지 시나리오가 있습�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

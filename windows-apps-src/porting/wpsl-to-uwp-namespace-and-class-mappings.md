@@ -5,7 +5,7 @@ title: "Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
+ms.openlocfilehash: 164e5303c48b6c65807984e4afcaf81ac12f6431
 
 ---
 
@@ -27,10 +27,10 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | 광고 | |
 | **Microsoft.Advertising.Mobile.UI.AdControl** 클래스 | [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx) 클래스 |
 | 알람, 미리 알림 및 백그라운드 에이전트 | |
-| **Microsoft.Phone.BackgroundAgent** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
+| **Microsoft.Phone.BackgroundAgent** 클래스 | [ **BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
 | **Microsoft.Phone.Scheduler** 네임스페이스 | [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847) 네임스페이스 |
 | **Microsoft.Phone.Scheduler.Alarm** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 및 [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642) 클래스 |
-| **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
+| **Microsoft.Phone.Scheduler.PeriodicTask**, **ScheduledAction**, **ScheduledActionService**, **ScheduledTask**, **ScheduledTaskAgent** 클래스 | [ **BackgroundTaskBuilder** ](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스 |
 | **Microsoft.Phone.Scheduler.Reminder** 클래스 | [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 및 [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642) 클래스 |
 | **Microsoft.Phone.PictureDecoder** 클래스 | [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 클래스 |
 | **Microsoft.Phone.BackgroundAudio** 네임스페이스 | [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스 |
@@ -67,14 +67,14 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (MPC = **Microsoft.Phone.Controls**) <br/> **MPC.ContextMenu** 클래스 | [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.DatePickerPage** 클래스 | [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.GestureListener** 클래스 | [**GestureRecognizer**](https://msdn.microsoft.com/library/windows/apps/br241937) 클래스 |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.LongListSelector** 클래스 | [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 클래스 |
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.LongListSelector** 클래스 | [ **SemanticZoom** ](https://msdn.microsoft.com/library/windows/apps/hh702601) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.ObscuredEventArgs** 클래스 | [**SystemProtection**](https://msdn.microsoft.com/library/windows/apps/jj585394), [**WindowActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208377) 클래스 | 
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.Panorama** 클래스 | [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) 클래스 | 
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.PhoneApplicationFrame**,<br/>(SWN = **System.Windows.Navigation**) <br/>**SWN.NavigationService** 클래스 | [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.PhoneApplicationPage** 클래스 | [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스|
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TiltEffect** 클래스 | [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/hh969164) 클래스 | 
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TiltEffect** 클래스 | [ **PointerDownThemeAnimation** ](https://msdn.microsoft.com/library/windows/apps/hh969164) 클래스 | 
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.TimePickerPage** 클래스 | [**TimePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn608313) 클래스 |
-| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WebBrowser** 클래스 | [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702) 클래스 | 
+| (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WebBrowser** 클래스 | [ **WebView** ](https://msdn.microsoft.com/library/windows/apps/br227702) 클래스 | 
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WebBrowserExtensions** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.WrapPanel** 클래스 | 일반 레이아웃용으로 직접 해당하는 항목이 없습니다. 항목 컨트롤의 항목 패널 템플릿에서 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/dn298849) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227717)를 사용할 수 있습니다. | 
 | (MPD = **Microsoft.Phone.Data**) <br/>**MPD.Linq** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
@@ -87,7 +87,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | **System.Windows.Automation** 네임스페이스 | [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/br209179) 네임스페이스 | 
 | **System.Windows.Controls**, **System.Windows.Input** 네임스페이스 | [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084), [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) 네임스페이스 | 
 | **System.Windows.Controls.DrawingSurface**, **DrawingSurfaceBackgroundGrid** 클래스 | [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) 클래스 | 
-| **System.Windows.Controls.RichTextBox** 클래스 | [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) 클래스 | 
+| **System.Windows.Controls.RichTextBox** 클래스 | [ **RichEditBox** ](https://msdn.microsoft.com/library/windows/apps/br227548) 클래스 | 
 | **System.Windows.Controls.WrapPanel** 클래스 | 일반 레이아웃용으로 직접 해당하는 항목이 없습니다. 항목 컨트롤의 항목 패널 템플릿에서 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/dn298849) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/br227717)를 사용할 수 있습니다. | 
 | **System.Windows.Controls.Primitives** 네임스페이스 | [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) 네임스페이스 |
 | **System.Windows.Controls.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Controls.Shapes**](https://msdn.microsoft.com/library/windows/apps/br243401) 네임스페이스 | 
@@ -119,7 +119,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
 | 그래픽 및 애니메이션 | |
 | **Microsoft.Xna.Framework.\*** 네임스페이스, [XNA Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/p/?LinkId=263769), [콘텐츠 파이프라인 클래스 라이브러리](http://go.microsoft.com/fwlink/p/?LinkId=263770) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274)를 사용합니다. [게임 개발](https://msdn.microsoft.com/library/windows/apps/hh452744) 및 [DirectX 및 XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 참조하세요. |
-| **Microsoft.Xna.Framework.Audio.Microphone** 클래스 | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스 |
+| **Microsoft.Xna.Framework.Audio.Microphone** 클래스 | [ **MediaCapture** ](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스. |
 | **Microsoft.Xna.Framework.Audio.SoundEffect** 클래스 | [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) 클래스 |
 | **Microsoft.Xna.Framework.GamerServices** 네임스페이스 | (WPS = **Windows.Phone.System**) <br/> [**WPS.UserProfile.GameServices.Core**](https://msdn.microsoft.com/library/windows/apps/jj207609) 네임스페이스 |
 | **Microsoft.Xna.Framework.GamerServices.Guide** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
@@ -128,18 +128,18 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (MXFM = **Microsoft.Xna.Framework.Media**) <br/> **MXFM.MediaLibrary**, **MXFM.PhoneExtensions.MediaLibraryExtensions** 클래스 | [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) 클래스 |
 | **Microsoft.Xna.Framework.Media.MediaQueue** 클래스 | [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스 |
 | **Microsoft.Xna.Framework.Media.Playlist** 클래스 | [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) 클래스 |
-| **System.Windows.Media** 네임스페이스 | [**Windows.UI.Xaml.Media**](https://msdn.microsoft.com/library/windows/apps/br243045) 네임스페이스 |
+| **System.Windows.Media** 네임스페이스 | [ **Windows.UI.Xaml.Media** ](https://msdn.microsoft.com/library/windows/apps/br243045) namespace |
 | **System.Windows.Media.RadialGradientBrush** 클래스 | 직접적으로 해당하는 항목이 없습니다. [미디어 및 그래픽](wpsl-to-uwp-porting-xaml-and-ui.md#media)을 참조하세요. |
 | **System.Windows.Media.Animation** 네임스페이스 | [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) 네임스페이스 |
 | **System.Windows.Media.Effects** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **System.Windows.Media.Imaging** 네임스페이스 | [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) 네임스페이스 |
 | **System.Windows.Media.Media3D** 네임스페이스 | [**Windows.UI.Xaml.Media.Media3D**](https://msdn.microsoft.com/library/windows/apps/br243274) 네임스페이스 |
-| **System.Windows.Shapes** 네임스페이스 | [**Windows.UI.Xaml.Shapes**](https://msdn.microsoft.com/library/windows/apps/br243401) 네임스페이스 |
+| **System.Windows.Shapes** 네임스페이스 | [ **Windows.UI.Xaml.Shapes** ](https://msdn.microsoft.com/library/windows/apps/br243401) namespace |
 | 시작 관리자 및 선택자 | |
 | **Microsoft.Phone.Tasks.AddressChooserTask**, **EmailAddressChooserTask**, **PhoneNumberChooserTask** 클래스 | [**ContactPicker**](https://msdn.microsoft.com/library/windows/apps/br224913) 클래스 |
 | **Microsoft.Phone.Tasks.AddWalletItemTask**, **AddWalletItemResult** 클래스 | [**Windows.ApplicationModel.Wallet**](https://msdn.microsoft.com/library/windows/apps/dn631399) 네임스페이스 |
 | **Microsoft.Phone.Tasks.BingMapsDirectionsTask**, **BingMapsTask** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
-| **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스 | [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스. 또한 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스(Windows 전용). |
+| **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스 | [ **MediaCapture** ](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스. 또한 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스(Windows 전용). |
 | **Microsoft.Phone.Tasks.MarketplaceDetailTask** | [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스([**RequestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813) 메서드) |
 | **Microsoft.Phone.Tasks.ConnectionSettingsTask**, **MarketplaceHubTask**, **MarketplaceReviewTask**, **MarketplaceSearchTask**, **MediaPlayerLauncher**, **SearchTask**, **SmsComposeTask**, **WebBrowserTask** 클래스 | [**Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) 클래스 |
 | **Microsoft.Phone.Tasks.EmailComposeTask** 클래스 | [**EmailMessage**](https://msdn.microsoft.com/library/windows/apps/dn631270) 클래스 |
@@ -151,7 +151,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | **Microsoft.Phone.Tasks.SaveContactTask**, **SaveEmailAddressTask**, **SavePhoneNumberTask** 클래스 | [**StoredContact**](https://msdn.microsoft.com/library/windows/apps/jj207727) 클래스(Windows Phone 전용) | 
 | **Microsoft.Phone.Tasks.SaveRingtoneTask** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **Microsoft.Phone.Tasks.ShareLinkTask**, **ShareMediaTask**, **ShareStatusTask** 클래스 | [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873) 클래스 |
-| 위치 | |
+| 장소 | |
 | **System.Device.Location** 네임스페이스 | [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) 네임스페이스 |
 | **System.Device.GeoCoordinateWatcher** 클래스 | [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 클래스 |
 | 지도 | |
@@ -176,28 +176,28 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (MPNN = **Microsoft.Phone.Net.NetworkInformation**) <br/> **MPNN.WebRequestExtensions** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **Microsoft.Phone.Networking.Voip** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **System.Net.CookieCollection** 클래스 | 여전히 지원되지만 일부 속성은 누락되었음(예: IsReadOnly) |
-| **System.Net.DownloadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)). [System.Net.Http.StreamContent](https://msdn.microsoft.com/library/system.net.http.streamcontent.aspx)에서 파생되어 진행률을 측정합니다. |
+| **System.Net.DownloadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)) [System.Net.Http.StreamContent](https://msdn.microsoft.com/library/system.net.http.streamcontent.aspx)에서 파생되어 진행률을 측정합니다. |
 | **System.Net.DnsEndPoint**, **IPAddress** 클래스 | 이러한 클래스는 여전히 지원되지만 일부 속성은 누락되었습니다. 또는 [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) 클래스로 포팅합니다. |
 | **System.Net.HttpUtility** 클래스 | [**HtmlFormatHelper**](https://msdn.microsoft.com/library/windows/apps/hh738437) 클래스 |
 | **System.Net.HttpWebRequest** 클래스 | 부분적으로 지원되지만 권장되는 미래 지향적인 대안은 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx)를 사용하여 HTTP 요청을 나타냅니다. |
 | **System.Net.HttpWebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.aspx)를 사용하여 HTTP 응답을 나타냅니다. |
 | (SNN = **System.Net.NetworkInformation**) <br/> **SNN.NetworkChange** 클래스 | 생성자를 제외하고 계속 지원됩니다. |
-| **System.Net.OpenReadCompletedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
+| **System.Net.OpenReadCompletedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx)) |
 | **System.Net.Sockets.Socket** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 또는 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스로 포팅합니다. |
 | **System.Net.Sockets.SocketException** 클래스 | 여전히 지원되지만, ErrorCode 대신 SocketErrorCode 속성을 사용합니다.
 | **System.Net.Sockets.UdpAnySourceMulticastClient**, **UdpSingleSourceMulticastClient** 클래스 | [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스 | 
-| **System.Net.UploadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
-| **System.Net.WebClient** 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
+| **System.Net.UploadProgressChangedEventArgs** 클래스 및 **System.Net.WebClient**와 관련된 유사한 클래스 | [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
+| **System.Net.WebClient** 클래스 | [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | **System.Net.WebRequest** 클래스 | 부분적으로 지원되지만(다른 속성 집합), 권장되는 미래 지향적인 대안은 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx)를 사용하여 HTTP 요청을 나타냅니다.
 | **System.Net.WebResponse** 클래스 | 여전히 지원되지만, Close() 대신 Dispose()를 사용합니다. 그러나 권장되는 미래 지향적인 대안은 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx)입니다. 이러한 API는 [System.Net.Http.HttpResponseMessage](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.aspx)를 사용하여 HTTP 응답을 나타냅니다.
-| (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventArgs** 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
-| (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventHandler** 클래스 | [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
+| (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventArgs** 클래스 | [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
+| (SN = **System.Net**) <br/> **SN.WriteStreamClosedEventHandler** 클래스 | [ **HttpClient** ](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx))
 | **System.UriFormatException** 클래스 | **System.FormatException** 클래스 |
 | 알림 | |
 | MPN = **Microsoft.Phone.Notification** 네임스페이스 | [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661), [**Windows.Networking.PushNotifications**](https://msdn.microsoft.com/library/windows/apps/br241307) 네임스페이스 |
 | MPN = **Microsoft.Phone.Notification** <br/> **MPN.HttpNotification** 클래스 | [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) 클래스 |
 | MPN = **Microsoft.Phone.Notification** <br/> **MPN.HttpNotificationChannel** 클래스 | [**PushNotificationChannel**](https://msdn.microsoft.com/library/windows/apps/br241283) 클래스 |
-| 프로그래밍 | |
+| 프로그램 | |
 | **System** 네임스페이스 | [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021) 네임스페이스 |
 | **System.Diagnostics.StackFrame**, **StackTrace** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **System.Diagnostics** 네임스페이스 | [**Windows.Foundation.Diagnostics**](https://msdn.microsoft.com/library/windows/apps/br206677) 네임스페이스 |
@@ -249,6 +249,6 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

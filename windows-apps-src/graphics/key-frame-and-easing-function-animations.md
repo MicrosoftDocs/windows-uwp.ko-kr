@@ -5,7 +5,7 @@ ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
+ms.openlocfilehash: 9c010e0abca4dd095b32b42b3a8606f8faf3fcaa
 
 ---
 # 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
@@ -283,6 +283,6 @@ You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.co
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

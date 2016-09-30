@@ -1,28 +1,23 @@
 ---
 author: mijacobs
-Description: "플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시하는 데 사용되는 경량 팝업입니다."
-title: "메뉴 및 상황에 맞는 메뉴"
+Description: A flyout is a lightweight popup that is used to temporarily show UI that is related to what the user is currently doing.
+title: Menus and context menus
 label: Menus and context menus
 template: detail.hbs
-translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f6ce4bc08e3647cd26dc1537bba5499ddb646a49
-
 ---
-# 메뉴 및 상황에 맞는 메뉴
-
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+# Menus and context menus
 
-메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다.
+Menus and context menus display a list of commands or options when the user requests them.
 
-![일반적인 상황에 맞는 메뉴 예제](images/controls_contextmenu_singlepane.png)
+![Example of a typical context menu](images/controls_contextmenu_singlepane.png)
 
 <div class="important-apis" >
-<b>중요 API</b><br/>
+<b>Important APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">MenuFlyout 클래스</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx">ContextFlyout 속성</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx">FlyoutBase.AttachedFlyout 속성</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">MenuFlyout class</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx">ContextFlyout property</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx">FlyoutBase.AttachedFlyout property</a></li>
 </ul>
 
 </div>
@@ -31,60 +26,59 @@ ms.openlocfilehash: f6ce4bc08e3647cd26dc1537bba5499ddb646a49
 
 
 
-## 올바른 컨트롤인가요?
-메뉴 및 상황에 맞는 메뉴는 명령을 구성하고 사용자가 요청할 때까지 이를 숨겨 공간을 절약합니다. 특정 명령이 자주 사용되고 사용 가능한 공간이 있다면 사용자가 메뉴를 사용하지 않고도 이용할 수 있도록 메뉴 대신 해당 요소에 직접 배치할 수 있습니다. 
+## Is this the right control?
+Menus and context menus save space by organizing commands and hiding them until the user needs them. If a particular command will be used frequently and you have the space available, consider placing it directly in its own element, rather than in a menu, so that users don't have to go through a menu to get to it. 
 
-메뉴 및 상황에 맞는 메뉴의 목적은 명령을 구성하는 것입니다. 알림 등의 임의 콘텐츠를 표시하거나 확인을 요청하려면 [대화 상자 또는 플라이아웃](dialogs.md)을 사용하세요.  
+Menus and context menus are for organizing commands; to display arbitrary content, such as an notification or to request confirmation, use a [dialog or a flyout](dialogs.md).  
 
 
-## 메뉴 및 상황에 맞는 메뉴
+## Menus vs. context menus
 
-메뉴 및 상황에 맞는 메뉴는 모양과 포함할 수 있는 항목 면에서 동일합니다. 실제로 동일한 컨트롤인 [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030)을 사용하여 만들어집니다. 유일한 차이점은 사용자가 액세스하는 방법입니다. 
+Menus and context menus are identical in how they look and what they can contain. In fact, you use the same control, [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/dn299030), to create them. The only difference is how you let the user access it. 
 
-메뉴 또는 상황에 맞는 메뉴는 언제 사용해야 하나요?
-* 호스트 요소가 단추이거나 또는 주 역할이 추가 명령을 제공하는 일부 다른 명령 요소인 경우 메뉴를 사용합니다.
-* 호스트 요소가 주요 목적과 형식이 다른 일부 요소를 사용하는 경우(예: 텍스트 또는 이미지 표시) 상황에 맞는 메뉴를 사용합니다. 
+When should you use a menu or a context menu?
+* If the host element is a button or some other command element whose primary role is to present additional commands, use a menu.
+* If the host element is some other type of element that has another primary purpose (such as presenting text or an image), use a context menu. 
 
-예를 들어 탐색 창의 단추에 메뉴를 사용하여 추가 탐색 옵션을 제공합니다. 이 시나리오에서 단추 컨트롤의 주요 목적은 메뉴에 대한 액세스를 제공하는 것입니다. 
+For example, use a menu on a button in a navigation pane to provide additional navigation options. In this scenario, the primary purpose of the button control is to provide access to a menu. 
 
-잘라내기, 복사 및 붙여넣기 등의 명령을 텍스트 요소에 추가하려면 메뉴 대신 상황에 맞는 메뉴를 사용합니다. 이 시나리오에서 텍스트 요소의 주 역할은 텍스트 표시 및 편집입니다. 잘라내기, 복사 및 붙여넣기 등의 추가 명령은 보조 역할이므로 상황에 맞는 메뉴에 포함됩니다. 
+If you want to add commands (such as cut, copy, and paste) to a text element, use a context menu instead of a menu. In this scenario, the primary role of the text element is to present and edit text; additional commands (such as cut, copy, and paste) are secondary and belong in a context menu. 
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>메뉴</b></p>
+   <p><b>Menus</b></p>
 <p>
 <ul>
-<li>단일 진입점(예: 화면의 맨 위에 있는 파일 메뉴)이 항상 표시되도록 합니다.</li>
-<li>일반적으로 단추 또는 부모 메뉴 항목에 연결됩니다.</li>
-<li>마우스 왼쪽 단추로 클릭하거나 이와 동등한 작업(예: 손가락으로 탭)을 통해 호출됩니다.</li>  
-<li>해당 [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) 또는 [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) 속성을 통해 요소와 연결됩니다.</li> 
+<li>Have a single entry point (a File menu at the top of the screen, for example) that is always displayed.</li>
+<li>Are usually attached to a button or a parent menu item.</li>
+<li>Are invoked by left-clicking (or an equivalent action, such as tapping with your finger).</li>
+<li>Are associated with an element via its [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) or [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) properties.</li>
 </ul>
-</p><br/>
+</p>
 
   </div>
   <div class="side-by-side-content-right">
-   <p><b>상황에 맞는 메뉴</b></p>
+   <p><b>Context menus</b></p>
    
 <ul>
-<li>단일 요소에 연결되지만 컨텍스트에 적합한 경우에만 액세스할 수 있습니다.</li>
-<li>마우스 오른쪽 단추로 클릭하거나 이와 동등한 작업(예: 손가락으로 길게 누르기)을 통해 호출됩니다.</li>
-<li>해당 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 통해 요소와 연결됩니다.  
-</ul><br/>
-
+<li>Are attched to a single element, but are only accessible when the context makes sense.</li>
+<li>Are invoked by right clicking (or an equivalent action, such as pressing and holding with your finger).</li>
+<li>Are associated with an element via its [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) property.</li>
+</ul>
   </div>
 </div>
 </div>
 
-## 메뉴 또는 상황에 맞는 메뉴 만들기
+## Create a menu or a context menu
 
-메뉴 또는 컨텍스트 메뉴를 만들려면 [MenuFlyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn299030)를 사용합니다. [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 및 [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) 개체를 MenuFlyout에 추가하여 메뉴 콘텐츠를 정의합니다. 이러한 개체는 다음 작업에 사용됩니다.
-* [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx)—즉시 작업 수행
-* [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx)—옵션 켜기 또는 끄기
-* [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx)—메뉴 항목을 시각적으로 구분
+To create a menu or a context menu, you use the [MenuFlyout class](https://msdn.microsoft.com/library/windows/apps/dn299030). You define the contents of the menu by adding [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), and [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) objects to the MenuFlyout. These objects are for:
+* [MenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx)—Performing an immediate action.
+* [ToggleMenuFlyoutItem](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx)—Switching an option on or off.
+* [MenuFlyoutSeparator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx)—Visually separating menu items.
 
 
-이 예제에서는 [MenuFlyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn299030)를 사용하고 대부분의 컨트롤에서 사용할 수 있는 [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 사용하여 [MenuFlyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn299030)를 상황에 맞는 메뉴로 표시합니다.
+This example creates a [MenuFlyout class](https://msdn.microsoft.com/library/windows/apps/dn299030) and uses the [ContextFlyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) property, a property available to most controls, to show the [MenuFlyout class](https://msdn.microsoft.com/library/windows/apps/dn299030) as a context menu.
 
 ````xaml
 <Rectangle 
@@ -116,7 +110,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-다음 예제는 거의 동일하지만 [ContextFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 사용하여 [MenuFlyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn299030)를 상황에 맞는 메뉴로 표시하는 대신 [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) 속성을 사용하여 메뉴로 표시합니다. 
+The next example is nearly identical, but instead of using the [ContextFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) property to show the [MenuFlyout class](https://msdn.microsoft.com/library/windows/apps/dn299030) as a context menu, the example uses the [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) property to show it as a menu. 
 
 ````xaml
 <Rectangle 
@@ -153,7 +147,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 }
 ````
 
-> **참고**&nbsp;&nbsp;메뉴, 상황에 맞는 메뉴 및 기타 플라이아웃 등의 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 새로 추가된 [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx) 속성으로 수정할 수 있습니다. 기본적으로 임시 UI는 Xbox에 빠른 해제 오버레이를 그리지만 다른 디바이스 패밀리에는 그리지 않습니다. 그러나 앱에서 오버레이가 항상 **설정** 또는 항상 **해제** 상태가 되도록 선택할 수 있습니다.
+> **Note**&nbsp;&nbsp;Light dismiss controls&mdash;such as menus, context menus, and other flyouts&mdash;trap keyboard and gamepad focus inside the transient UI until dismissed. To provide a visual cue for this behavior, light dismiss controls on Xbox will draw an overlay that dims the visibility of out of scope UI. This behavior can be modified with the new [LightDismissOverlayMode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode.aspx) property. By default, transient UIs will draw the light dismiss overlay on Xbox but not other device families, but apps can choose to force the overlay to be always **On** or always **Off**.
 > 
 > ```xaml
 > <MenuFlyout LightDismissOverlayMode="Off">
@@ -166,9 +160,3 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 ## Related articles
 
 - [**MenuFlyout class**](https://msdn.microsoft.com/library/windows/apps/dn299030)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -1,54 +1,50 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다."
-title: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가"
+Description: Add a default InkToolbar to a Universal Windows Platform (UWP) inking app, add a custom pen button to the InkToolbar, and bind the custom pen button to a custom pen definition.
+title: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: 743ce43be6220d96d7e9bc295ab72bdec4905edc
-ms.openlocfilehash: 4c50c8ded127b2261df901d9da3210ff397b00ca
-
 ---
 
-# UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가
+# Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 
-UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
+There are two different controls that facilitate inking in Universal Windows Platform (UWP) apps: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) and [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
-[**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 컨트롤은 기본적인 Windows Ink 기능을 제공합니다. 이 컨트롤을 사용하여 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링할 수 있습니다.
+The [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) control provides basic Windows Ink functionality. Use it to render pen input as either an ink stroke (using default settings for color and thickness) or an erase stroke.
 
-> InkCanvas 구현에 대한 자세한 내용은 [UWP 앱에서 펜 및 스타일러스 조작](pen-and-stylus-interactions.md)을 참조하세요.
+> For InkCanvas implementation details, see [Pen and stylus interactions in UWP apps](pen-and-stylus-interactions.md).
 
-완전한 투명 오버레이인 InkCanvas는 잉크 스트로크 속성을 설정하기 위한 기본 제공 UI를 제공하지 않습니다. 기본 수동 입력 환경을 변경하고, 사용자가 잉크 스트로크 속성을 설정할 수 있게 하고, 다른 사용자 지정 수동 입력 기능을 지원하려는 경우 다음 두 가지 옵션이 있습니다.
+As a completely transparent overlay, the InkCanvas does not provide any built-in UI for setting ink stroke properties. If you want to change the default inking experience, let users set ink stroke properties, and support other custom inking features, you have two options:
 
-- 코드 숨김에서 InkCanvas에 바인딩된 기본 [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) 개체를 사용합니다.
+- In code-behind, use the underlying [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) object bound to the InkCanvas.
 
-  InkPresenter API는 수동 입력 환경의 광범위한 사용자 지정을 지원합니다. 자세한 내용은 [UWP 앱에서 펜 및 스타일러스 조작](pen-and-stylus-interactions.md)을 참조하세요.
+  The InkPresenter APIs support extensive customization of the inking experience. For more detail, see [Pen and stylus interactions in UWP apps](pen-and-stylus-interactions.md).
 
-- [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)를 InkCanvas에 바인딩합니다. 기본적으로 InkToolbar는 잉크 기능을 활성화하고 스트로크 크기, 잉크 색, 펜 팁 모양 등의 잉크 속성을 설정하기 위한 기본 UI를 제공합니다.
+- Bind an [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) to the InkCanvas. By default, the InkToolbar provides a basic UI for activating ink features and setting ink properties such as stroke size, ink color, and pen tip shape.
 
-  이 항목에서는 InkToolbar에 대해 설명합니다.
+  We discuss the InkToolbar in this topic.
 
-## 중요 API
+## Important APIs
 
-  -   [**InkCanvas 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)
-  -   [**InkToolbar 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)
-  -   [**InkPresenter 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)
+  -   [**InkCanvas class**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)
+  -   [**InkToolbar class**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)
+  -   [**InkPresenter class**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)
   -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-## 기본 InkToolbar
+## Default InkToolbar
 
-기본적으로 InkToolbar에는 그리기, 지우기, 강조 표시 및 눈금자 표시 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
+By default, the InkToolbar includes buttons for drawing, erasing, highlighting, and displaying a ruler. Depending on the feature, other settings and commands, such as ink color, stroke thickness, erase all ink, are provided in a flyout.
 
 ![InkToolbar](.\images\ink\ink-tools-invoked-toolbar-small.png)  
-*기본 Windows Ink 도구 모음*
+*Default Windows Ink toolbar*
 
-기본 InkToolbar를 추가하려면
-1. MainPage.xaml에서 수동 입력 화면에 대한 컨테이너 개체(이 예제에서는 그리드 컨트롤 사용)를 선언합니다.
-2. InkCanvas 개체를 컨테이너의 자식으로 선언합니다. InkCanvas 크기는 컨테이너에서 상속됩니다.
-3. InkToolbar를 선언하고 TargetInkCanvas 특성을 사용하여 InkCanvas에 바인딩합니다.
-  InkCanvas 뒤에 InkToolbar를 선언해야 합니다. 순서가 바뀌면 InkCanvas 오버레이로 인해 InkToolbar에 액세스할 수 없게 됩니다.
+To add a basic default InkToolbar:
+1. In MainPage.xaml, declare a container object (for this example, we use a Grid control) for the inking surface.
+2. Declare an InkCanvas object as a child of the container. (The InkCanvas size is inherited from the container.)
+3. Declare an InkToolbar and use the TargetInkCanvas attribute to bind it to the InkCanvas.
+  Ensure the InkToolbar is declared after the InkCanvas. If not, the InkCanvas overlay renders the InkToolbar inaccessible.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -72,24 +68,24 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 </Grid>
 ```
 
-## 기본 사용자 지정
+## Basic customization
 
-이 섹션에서는 몇 가지 기본적인 Windows Ink 도구 모음 사용자 지정 시나리오에 대해 설명합니다.
+In this section, we cover some basic Windows Ink toolbar customization scenarios.
 
-### 선택되는 단추 지정  
-![초기화 시 연필 단추가 선택됨](.\images\ink\ink-tools-default-toolbar.png)  
-*초기화 시 연필 단추가 선택된 Windows Ink 도구 모음*
+### Specify the selected button  
+![Pencil button selected at initialization](.\images\ink\ink-tools-default-toolbar.png)  
+*Windows Ink toolbar with pencil button selected at initialization*
 
-기본적으로 앱을 실행하고 도구 모음을 초기화하면 첫 번째(또는 맨 왼쪽) 단추가 선택됩니다. 기본 Windows Ink 도구 모음에서는 볼펜 단추입니다.
+By default, the first (or leftmost) button is selected when your app is launched and the toolbar is initialized. In the default Windows Ink toolbar, this is the ballpoint pen button.
 
-프레임워크에서 기본 제공 단추의 순서를 정의하기 때문에 첫 번째 단추가 기본적으로 활성화하려는 펜이나 도구가 아닐 수도 있습니다.
+Because the framework defines the order of the built-in buttons, the first button might not be the pen or tool you want to activate by default.
 
-이 기본 동작을 재정의하고 도구 모음에서 선택되는 단추를 지정할 수 있습니다.
+You can override this default behavior and specify the selected button on the toolbar.
 
-이 예제에서는 볼펜 대신 연필 단추를 선택하고 연필을 활성화하여 기본 도구 모음을 초기화합니다.
+For this example, we initialize the default toolbar with the pencil button selected and the pencil activated (instead of the ballpoint pen).
 
-1. 이전 예제의 InkCanvas 및 InkToolbar에 대한 XAML 선언을 사용합니다.
-2. 코드 숨김에서 [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) 개체의 [Loaded](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loaded.aspx) 이벤트 처리기를 설정합니다.
+1. Use the XAML declaration for the InkCanvas and InkToolbar from the previous example.
+2. In code-behind, set up a handler for the [Loaded](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loaded.aspx) event of the [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) object.
 
   ```csharp
   /// <summary>
@@ -104,12 +100,12 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
   }
   ```
 
-3. [Loaded](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loaded.aspx) 이벤트 처리기에서 다음을 수행합니다.
-  1. 기본 제공 [InkToolbarPencilButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx)에 대한 참조를 가져옵니다.
+3. In the handler for the [Loaded](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loaded.aspx) event:
+  1. Get a reference to the built-in [InkToolbarPencilButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx).
 
-    [GetToolButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.gettoolbutton.aspx) 메서드에 [InkToolbarTool.Pencil](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbartool.aspx) 개체를 전달하면 [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx)에 대한 [InkToolbarToolButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbartoolbutton.aspx) 개체가 반환됩니다.
+    Passing an [InkToolbarTool.Pencil](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbartool.aspx) object in the [GetToolButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.gettoolbutton.aspx) method returns an [InkToolbarToolButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbartoolbutton.aspx) object for the [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx).
 
-  2. [ActiveTool](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.activetool.aspx)을 이전 단계에서 반환된 개체로 설정합니다.
+  2. Set [ActiveTool](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.activetool.aspx) to the object returned in the previous step.
 
 ```CSharp
 /// <summary>
@@ -126,12 +122,12 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-### 기본 제공 단추 지정
+### Specify the built-in buttons
 
-![초기화 시 포함되는 특정 단추](.\images\ink\ink-tools-specific.png)  
-*초기화 시 포함되는 특정 단추*
+![Specific buttons included at initialization](.\images\ink\ink-tools-specific.png)  
+*Specific buttons included at initialization*
 
-설명했듯이 Windows Ink 도구 모음에는 기본 제공 단추 컬렉션이 포함되어 있습니다. 이러한 단추는 다음 순서(왼쪽에서 오른쪽)로 표시됩니다.
+As mentioned, the Windows Ink toolbar includes a collection of default, built-in buttons. These buttons are displayed in the following order (from left to right):
 
 - [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx)
 - [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx)
@@ -139,17 +135,17 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 - [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx)
 - [InkToolbarRulerButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarrulerbutton.aspx)
 
-이 예제에서는 기본 제공 볼펜, 연필 및 지우개 단추만 포함하여 도구 모음을 초기화합니다.
+For this example, we initialize the toolbar with only the built-in ballpoint pen, pencil, and eraser buttons.
 
-XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니다.
+You can do this using either XAML or code-behind.
 
 **XAML**
 
-첫 번째 예제의 InkCanvas 및 InkToolbar에 대한 XAML 선언을 수정합니다.
-- [InitialControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx) 특성을 추가하고 해당 값을 "[None](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)"으로 설정합니다. 그러면 기본 제공 단추 컬렉션이 지워집니다.
-- 앱에 필요한 특정 InkToolbar 단추를 추가합니다. 여기서는 [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx), [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx)만 추가합니다.
+Modify the XAML declaration for the InkCanvas and InkToolbar from the first example.
+- Add an [InitialControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx) attribute and set its value to "[None](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)". This clears the default collection of built-in buttons.
+- Add the specific InkToolbar buttons required by your app. Here, we add [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx), and [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx) only.
 > [!NOTE]
-> 단추는 여기서 지정된 순서가 아니라 프레임워크에서 정의된 순서대로 도구 모음에 추가됩니다.
+> Buttons are added to the toolbar in the order defined by the framework, not the order specified here.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -185,8 +181,8 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
 </Grid>
 ```
 
-**코드 숨김**
-1. 첫 번째 예제의 InkCanvas 및 InkToolbar에 대한 XAML 선언을 사용합니다.
+**Code-behind**
+1. Use the XAML declaration for the InkCanvas and InkToolbar from the first example.
 
   ```xaml
   <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -210,7 +206,7 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
   </Grid>
   ```
 
-2. 코드 숨김에서 [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) 개체의 [Loading](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loading.aspx) 이벤트 처리기를 설정합니다.
+2. In code-behind, set up a handler for the [Loading](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.loading.aspx) event of the [InkToolbar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) object.
 
   ```csharp
   /// <summary>
@@ -225,12 +221,12 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
   }
   ```
 
-3. [InitialControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx)를 "[None](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)"으로 설정합니다.
-4. 앱에 필요한 단추에 대한 개체 참조를 만듭니다. 여기서는 [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx), [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx)만 추가합니다.
+3. Set [InitialControls](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.initialcontrols.aspx) to "[None](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarinitialcontrols.aspx)".
+4. Create object references for the buttons required by your app. Here, we add [InkToolbarBallpointPenButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarballpointpenbutton.aspx), [InkToolbarPencilButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbarpencilbutton.aspx), and [InkToolbarEraserButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbareraserbutton.aspx) only.
   > [!NOTE]
-  > 단추는 여기서 지정된 순서가 아니라 프레임워크에서 정의된 순서대로 도구 모음에 추가됩니다.
+  > Buttons are added to the toolbar in the order defined by the framework, not the order specified here.
 
-5. InkToolbar에 단추를 [추가](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobjectcollection.add.aspx)합니다.
+5. [Add](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobjectcollection.add.aspx) the buttons to the InkToolbar.
 
   ```csharp
   /// <summary>
@@ -262,40 +258,40 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
 By default, the InkToolbar supports both pen and mouse input, you have to enable support for touch input.
 -->
 
-## 사용자 지정 단추 및 수동 입력 기능
+## Custom buttons and inking features
 
-InkToolbar를 통해 제공되는 단추 컬렉션(및 관련된 수동 입력 기능)을 사용자 지정하고 확장할 수 있습니다.
+You can customize and extend the collection of buttons (and associated inking features) that are provided through the InkToolbar.
 
-InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있습니다.
+The InkToolbar consists of two distinct groups of button types:
 
-1. 기본 제공 그리기, 지우기 및 강조 표시 단추를 포함하는 "도구" 단추 그룹. 사용자 지정 펜과 도구가 여기에 추가됩니다.
-> **참고**&nbsp;&nbsp;기능 선택은 함께 사용할 수 없습니다.
+1. A group of "tool" buttons containing the built-in drawing, erasing, and highlighting buttons. Custom pens and tools are added here.
+> **Note**&nbsp;&nbsp;Feature selection is mutually exclusive.
 
-2. 기본 제공 눈금자 단추를 포함하는 "토글" 단추 그룹. 사용자 지정 토글이 여기에 추가됩니다.
-> **참고**&nbsp;&nbsp;기능은 함께 사용할 수 있으며 다른 활성 도구와 동시에 사용할 수 있습니다.
+2. A group of "toggle" buttons containing the built-in ruler button. Custom toggles are added here.
+> **Note**&nbsp;&nbsp;Features are not mutually exclusive and can be used concurrently with other active tools.
 
-응용 프로그램 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
+Depending on your application and the inking functionality required, you can add any of the following buttons (bound to your custom ink features) to the InkToolbar:
 
-- 사용자 지정 펜 – 호스트 앱에서 잉크 색상표와 펜 팁 속성(예: 모양, 회전, 크기)이 정의된 펜입니다.
-- 사용자 지정 도구 - 호스트 앱에서 정의된 펜 이외의 도구입니다.
-- 사용자 지정 토글 - 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
+- Custom pen – a pen for which the ink color palette and pen tip properties, such as shape, rotation, and size, are defined by the host app.
+- Custom tool – a non-pen tool, defined by the host app.
+- Custom toggle – Sets the state of an app-defined feature to on or off. When turned on, the feature works in conjunction with the active tool.
 
-> **참고**&nbsp;&nbsp;기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
+> **Note**&nbsp;&nbsp;You cannot change the display order of the built-in buttons. The default display order is: Ballpoint pen, pencil, highlighter, eraser, and ruler. Custom pens are appended to the last default pen, custom tool buttons are added between the last pen button and the eraser button and custom toggle buttons are added after the ruler button. (Custom buttons are added in the order they are specified.)
 
-### 사용자 지정 펜
+### Custom pen
 
-![사용자 지정 붓글씨 펜 단추](.\images\ink\ink-tools-custompen.png)  
-*사용자 지정 붓글씨 펜 단추*
+![Custom calligraphic pen button](.\images\ink\ink-tools-custompen.png)  
+*Custom calligraphic pen button*
 
-이 예제에서는 기본 붓글씨 잉크 스트로크를 사용하도록 설정하는 광범위한 팁을 가진 사용자 지정 펜을 정의합니다. 단추 플라이아웃에 표시되는 색상표의 브러시 컬렉션도 사용자 지정합니다.
+For this example, we define a custom pen with a broad tip that enables basic calligraphic ink strokes. We also customize the collection of brushes in the palette displayed on the button flyout.
 
-**코드 숨김**
+**Code-behind**
 
-먼저, 사용자 지정 펜을 정의하고 코드 숨김에서 그리기 특성을 지정합니다. 나중에서 XAML에서 이 사용자 지정 펜을 참조합니다.
+First, we define our custom pen and specify the drawing attributes in code-behind. We reference this custom pen from XAML later.
 
-1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가 -&gt; 새 항목을 선택합니다.
-2. Visual C# -&gt; 코드에서 새 클래스 파일을 추가하고 CalligraphicPen.cs를 호출합니다.
-3. Calligraphic.cs에서 기본 using 블록을 다음과 같이 바꿉니다.
+1. Right click the project in Solution Explorer and select Add -> New item.
+2. Under Visual C# -> Code, add a new Class file and call it CalligraphicPen.cs.
+3. In Calligraphic.cs, replace the default using block with the following:
 ```csharp
 using System.Numerics;
 using Windows.UI;
@@ -303,13 +299,13 @@ using Windows.UI.Input.Inking;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 ```
-4. CalligraphicPen 클래스가 [InkToolbarCustomPen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.aspx)에서 파생되도록 지정합니다.
+4. Specify that the CalligraphicPen class is derived from [InkToolbarCustomPen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.aspx).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
 }
 ```
-5. [CreateInkDrawingAttributesCore](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore.aspx)를 재정의하여 고유한 브러시 및 스트로크 크기를 지정합니다.
+5. Override  [CreateInkDrawingAttributesCore](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore.aspx)  to specify your own brush and stroke size.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
@@ -319,7 +315,7 @@ class CalligraphicPen : InkToolbarCustomPen
     }
 }
 ```
-6. [InkDrawingAttributes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.aspx) 개체를 만들고 [펜 팁 모양](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentip.aspx), [팁 회전](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentiptransform.aspx), [스트로크 크기](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.size.aspx) 및 [잉크 색](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.color.aspx)을 설정합니다.
+6. Create an [InkDrawingAttributes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.aspx) object and set the [pen tip shape](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentip.aspx), [tip rotation](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentiptransform.aspx), [stroke size](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.size.aspx), and [ink color](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.color.aspx).
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
@@ -351,9 +347,9 @@ class CalligraphicPen : InkToolbarCustomPen
 
 **XAML**
 
-MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
+Next, we add the necessary references to the custom pen in MainPage.xaml.
 
-1. CalligraphicPen.cs에서 정의된 사용자 지정 펜(`CalligraphicPen`) 및 사용자 지정 펜에서 지원하는 [브러시 컬렉션](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.UI.Xaml.Media.BrushCollection.aspx)(`CalligraphicPenPalette`)에 대한 참조를 만드는 로컬 페이지 리소스 사전을 선언합니다.
+1. We declare a local page resource dictionary that creates a reference to the custom pen (`CalligraphicPen`) defined in CalligraphicPen.cs, and a [brush collection](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.UI.Xaml.Media.BrushCollection.aspx) supported by the custom pen (`CalligraphicPenPalette`).
 ```xaml
 <Page.Resources>
     <!-- Add the custom CalligraphicPen to the page resources. -->
@@ -365,11 +361,11 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
     </BrushCollection>
 </Page.Resources>
 ```
-2. 그런 다음 자식 [InkToolbarCustomPenButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompenbutton.aspx) 요소가 포함된 InkToolbar를 추가합니다.
+2. We then add an InkToolbar with a child [InkToolbarCustomPenButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompenbutton.aspx) element.
 
-  사용자 지정 펜 단추에는 페이지 리소스에서 선언된 두 개의 고정 리소스 참조 `CalligraphicPen` 및 `CalligraphicPenPalette`가 포함되어 있습니다.
+  The custom pen button includes the two static resource references declared in the page resources: `CalligraphicPen` and `CalligraphicPenPalette`.
 
-  스트로크 크기 슬라이더의 범위([MinStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.minstrokewidth.aspx), [MaxStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.maxstrokewidth.aspx), [SelectedStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.selectedstrokewidthproperty.aspx)), 선택한 브러시([SelectedBrushIndex](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.selectedbrushindex.aspx)) 및 사용자 지정 펜 단추의 아이콘([SymbolIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.symbolicon.aspx))도 지정합니다.
+  We also specify the range for the stroke size slider ([MinStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.minstrokewidth.aspx), [MaxStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.maxstrokewidth.aspx), and [SelectedStrokeWidth](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.selectedstrokewidthproperty.aspx)), the selected brush ([SelectedBrushIndex](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarpenbutton.selectedbrushindex.aspx)), and the icon for the custom pen button ([SymbolIcon](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.symbolicon.aspx)).
 ```xaml
 <Grid Grid.Row="1">
     <InkCanvas x:Name="inkCanvas" />
@@ -399,17 +395,11 @@ Enable touch inking
 -->
 
 
-## 관련 문서
+## Related articles
 
-* [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
+* [Pen and stylus interactions](pen-and-stylus-interactions.md)
 
-**샘플**
-* [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-
+**Samples**
+* [Ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Simple ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314)

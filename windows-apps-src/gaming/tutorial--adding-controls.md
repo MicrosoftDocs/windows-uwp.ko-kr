@@ -5,7 +5,7 @@ description: "이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
+ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
 
 ---
 
@@ -1920,6 +1920,6 @@ void MoveLookController::UpdateGameController()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

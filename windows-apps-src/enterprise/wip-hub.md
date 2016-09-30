@@ -1,84 +1,77 @@
 ---
 author: normesta
-Description: "WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태에서의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다."
-MS-HAID: dev\_enterprise.edp\_hub
-MSHAttr: PreferredLib:/library/windows/apps
+Description: 'This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.'
+MS-HAID: 'dev\_enterprise.edp\_hub'
+MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
-title: WIP(Windows Information Protection)
-translationtype: Human Translation
-ms.sourcegitcommit: 1070561ea95cd1d884303fdd476b40a9ec88e390
-ms.openlocfilehash: 2beec354ed7dbb3cc2d4cb502977ce028b4eaf1d
-
+title: 'Windows Information Protection (WIP)'
 ---
 
-# WIP(Windows Information Protection)
+# Windows Information Protection (WIP)
 
-__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+__Note__ Windows Information Protection (WIP) policy can be applied to Windows 10, version 1607.
 
-WIP는 조직에서 정의한 정책을 적용하여 조직에 속한 데이터를 보호합니다. 앱이 이러한 정책에 포함된 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 이 항목은 사용자의 개인 데이터에 영향을 주지 않고 더욱 원활하게 이러한 정책을 적용하는 앱을 빌드하는 데 도움이 됩니다.
+This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
 
-## WIP란?
+For more info about WIP from the point of view of end-users and administrators, see [Windows Information Protection (WIP) overview](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx).
 
-WIP는 조직의 MDM(모바일 디바이스 관리) 시스템을 지원하는 데스크톱, 랩톱, 태블릿 및 휴대폰의 기능 모음입니다. WIP를 사용하면 조직이 관리하는 디바이스에서 데이터가 처리되는 방법을 훨씬 잘 제어할 수 있습니다. 예를 들어 관리자는 조직에 속한 파일에 액세스할 수 있는 앱을 식별할 수 있으며 사용자가 해당 파일에서 데이터를 복사한 다음 그 데이터를 개인 문서에 붙여넣을 수 있는지 여부를 식별할 수 있습니다.
+## What is WIP?
 
-작동 방식은 다음과 같습니다. 사용자는 조직의 MDM(모바일 디바이스 관리) 시스템에 디바이스를 등록합니다. 관리 조직에서 관리자는 Microsoft Intune 또는 SCCM(System Center Configuration Manager)을 사용하여 정책을 정의한 다음 등록된 디바이스에 배포합니다.
+WIP is a set of features on desktops, laptops, tablets, and phones for Mobile Device Management (MDM). WIP gives an enterprise greater control over how its data (enterprise files and data blobs) is handled on devices that the enterprise manages.
 
-정책은 엔터프라이즈 데이터에 액세스할 수 있는 앱을 식별합니다(정책의 *허용 목록*이라고 함). 이러한 앱은 보호된 엔터프라이즈 파일, VPN(가상 사설망) 및 클립보드에 있거나 공유 계약을 통한 엔터프라이즈 데이터에 액세스할 수 있습니다. 또한 정책은 데이터를 제어하는 규칙을 정의합니다. 예를 들어 엔터프라이즈 소유 파일에서 데이터를 복사한 다음 엔터프라이즈 소유가 아닌 파일에 붙여넣을 수 있는지 여부입니다.
+-   Enterprise data is tagged with encryption. This is "enterprise-protected data", or just "protected data" for short.
+-   Only apps that the managing enterprise explicitly allows via WIP policy can access enterprise-protected data, for example, in files.
+-   Only apps explicitly allowed via WIP policy have enterprise Virtual Private Network (VPN) access.
+-   App-restriction policy also determines how allowed apps should handle enterprise data.
+-   Policy-based restrictions apply even to enterprise content exchanged via the Windows clipboard or via the Share contract.
+-   On demand, the managing enterprise can revoke the device's access to protected content, essentially wiping the device of enterprise data while leaving personal data intact.
+-   A channel app is an app that downloads protected data. Examples include mail and file-synchronization apps.
 
-사용자가 조직의 MDM 시스템에서 디바이스 등록을 해제하는 경우 관리자는 디바이스에서 엔터프라이즈 데이터를 원격으로 지울 수 있습니다.
+WIP enhances the [Encrypting File System (EFS)](http://technet.microsoft.com/library/cc700811.aspx) and [Windows Selective Wipe](https://technet.microsoft.com/library/dn486874.aspx) to provide more security and flexibility options. New WIP APIs let you create apps that protect and revoke access to enterprise content, work with protected file properties, and access encrypted data in its raw form. In addition to introducing new APIs for protecting files and folders, it introduces APIs for protecting buffers and streams. It also introduces a set of APIs that allow apps to identify and indicate the enterprise that must enforce data protection policy.
 
-![WIP 수명 주기](images/wip-lifecycle.png)
+So that the managing enterprise can control access to its protected data, the app-restriction policy defines a list of apps, and restrictions on those apps. By default, an app is unable to autonomously access protected data. To gain access, the app must be added to a list called the allowed list, and apps on the allowed list are called allowed apps. On a managed device, Windows can restrict and/or audit access to protected data on the clipboard or via the share contract, so that access by an app not on the allowed list is audited and/or requires user consent, or else is completely blocked.
 
-> **WIP에 대해 자세히 알아보기** <br>
-* [Windows Information Protection 소개](https://blogs.technet.microsoft.com/windowsitpro/2016/06/29/introducing-windows-information-protection/)
-* [WIP(Windows Information Protection)를 사용하여 엔터프라이즈 데이터 보호](https://technet.microsoft.com/library/dn985838(v=vs.85).aspx)
+Policy for WIP is provided to a device by the managing enterprise (this makes the device a "managed device"). Provisioning of policy can happen through enrollment by the user in mobile device management (MDM), through manual configuration by IT, or through another management and policy delivery mechanism such as System Center Configuration Manager (SCCM).
 
-앱이 허용 목록에 있는 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 즉, 관리자가 엔터프라이즈 데이터에 대한 사용자의 액세스를 해지하면 해당 사용자는 앱에서 생성한 모든 데이터에 액세스할 수 없습니다.
+WIP file protection leverages Rights Management Service (RMS) keys, if provisioned, since these keys can roam across devices and therefore allow protected data to roam. In the absence of RMS keys, these APIs will fall back to local Selective Wipe keys and limit roaming functionality. Data that roams encrypted will be accessible on down-level Windows and on third-party devices via platform-specific RMS apps provided by Microsoft, as well as with RMS-enlightened third party apps.
 
-엔터프라이즈 용도로만 설계된 앱일 경우에 좋습니다. 사용자에게 있어 개인적인 데이터가 생성될 경우 앱이 엔터프라이즈와 개인 데이터를 지능적으로 구별하여 *지원*할 수 있으면 좋을 것입니다. 이러한 앱은 사용자 개인 데이터의 무결성을 유지하면서 엔터프라이즈 정책을 적절하게 적용할 수 있기 때문에 이런 유형의 앱을 *엔터프라이즈 지원*이라고 합니다.
+In summary—data protected with the WIP APIs can be managed by the enterprise, so you can build your app in a way that helps the enterprise protect and manage its data. In other words, you can build an enterprise-ready app. And, helping you do just that is what the rest of this guide is about.
 
-## 엔터프라이즈 지원 앱 만들기
+## Enterprise-enlightened apps
 
-WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 지원 앱으로 선언합니다.
+Once your app is on the allowed list, it can read protected data. And, by default, any data output by your app is automatically protected by the system. That automatic protection is because the managing enterprise must, one way or another, ensure that enterprise data stays under its own control. But, keeping your app on such a short leash is only the default way to achieve that. A better way is to ask the system to trust you enough to give you more power and flexibility. And, the price of admission for that is to make your app smarter. That means going a step further than getting on the allowed list; it means making your app—and declaring it to be—enterprise-enlightened.
 
-조직 및 개인 용도로 모두 사용되는 경우 앱을 지원합니다.
+Your app is enlightened if it uses the techniques we'll describe to autonomously keep enterprise data protected whether the data is at rest, in use, or in flight. Your enlightened app recognizes enterprise data sources and enterprise data, and protects it when it arrives in your app. Being enlightened also means being aware of, and abiding by, WIP policy whenever enterprise data leaves your app. This includes disallowing content from going to a non-enterprise network end-point, wrapping the data in a portable encrypted form before allowing it to roam, and potentially (depending on policy settings), prompting the user before pasting enterprise data into an app not on the allowed list. Once you've made your app enlightened, your app announces to the system that it is enlightened by declaring the restricted **enterpriseDataPolicy** capability. For more info about working with restricted capabilities, see [Special and restricted capabilities](https://msdn.microsoft.com/library/windows/apps/mt270968#special_and_restricted_capabilities).
 
-정책 요소의 적용을 적절하게 처리하려는 경우 앱을 지원합니다.
+Ideally, all enterprise data is protected data, both at rest and in flight. But, inevitably, there must be some brief period between enterprise data being initially generated and it being protected. And, sometimes enterprise data can exist on an enterprise network endpoint without being encrypted. An enlightened app is capable of autonomously protecting such data; allowed-but-not-enlightened apps will need to have protection imposed by the system.
 
-예를 들어 정책에서 사용자가 개인 문서에 엔터프라이즈 데이터를 붙여넣는 것을 허용할 경우에는 사용자가 데이터를 붙여넣기 전에 동의 대화 상자에 응답할 필요가 없습니다. 마찬가지로, 이러한 종류의 이벤트에 대한 응답에 사용자 지정 정보 대화 상자를 표시할 수 있습니다.
+This is because an unenlightened app always runs in enterprise mode. The system makes sure of that. But, an enlightened app is free to move between enterprise mode and personal mode at will and as appropriate for the kind of data the app is working with at any given time. It's also important for an enlightened app to respect personal data, and not to tag personal data as enterprise data. An enlightened app may concurrently handle both enterprise data and personal data, so long as these promises are kept. The next section shows how to switch modes in code.
 
-앱을 지원할 준비가 되면 다음 가이드 중 하나를 참조하세요.
+## WIP features at a glance
 
-**C를 사용하여 빌드하는 UWP(유니버설 Windows 플랫폼) 앱의 경우#**
+**File and buffer protection**
 
-[엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드](wip-dev-guide.md)
+-   Your app can protect, containerize and wipe data associated with an enterprise identity.
+-   Key-management is handled by Windows. Windows uses the enterprise’s RMS keys when they are available to the device; otherwise, Windows falls back to local Selective Wipe protection.
 
-**C++를 사용하여 빌드하는 데스크톱 앱의 경우**
+**Device policy management**
 
-[엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드(C++)](http://go.microsoft.com/fwlink/?LinkId=822192)
+-   Your app can query the identity (enterprise or organization) that is managing the device.
+-   Your app can protect users from inadvertent data disclosure by associating an identity with the data in question.
+-   Your app can protect enterprise resources over the network by checking for enterprise-owned network endpoint connections (servers, IP ranges), and associating the data to a managed (that is, MDM-enrolled) identity.
+-   The WIP APIs only work with managed identities that have an WIP policy defined on the device. If an identity is not managed, then, the APIs indicate that to the application, when necessary.
 
-무엇보다도 엔터프라이즈 지원 앱은 다음 특징을 공유합니다.
+## Enlighten your app
 
-* 엔터프라이즈 데이터가 사용되지 않든, 사용 중이든 또는 전송 중이든 관계없이 계속 보호합니다.
-* 개인 데이터를 인식하고 해당 데이터가 정책 제한에 적용되지 않도록 합니다.
-* 엔터프라이즈 데이터를 인식하고 해당 데이터가 앱에 도착할 때 보호합니다.
-* 앱을 떠나는 엔터프라이즈 데이터를 보호합니다.
+If you're ready to enlighten your app, see one of these guides:
 
-  예를 들어, 데이터가 비엔터프라이즈 네트워크 끝점으로 이동할 수 없도록 하고, 데이터 로밍을 허용하기 전에 암호화된 휴대용 형태로 데이터를 래핑하고, 잠재적으로(정책 설정에 따라) 허용된 목록에 없는 앱에 엔터프라이즈 데이터를 붙여넣기 전에 사용자에게 확인 메시지를 표시합니다.
+**For Universal Windows Platform (UWP) apps that you build by using C#**
 
-> **참고** WIP 파일 보호는 프로비전된 경우 RMS(권한 관리 서비스) 키를 활용합니다. 이러한 키는 디바이스 간에 로밍될 수 있으므로 보호된 데이터의 로밍을 허용하기 때문입니다. RMS 키가 없을 경우 이러한 API는 로컬 선택 지우기 키로 대체되며 로밍 기능을 제한합니다. 암호화된 상태로 로밍되는 데이터는 Microsoft에서 제공하는 플랫폼별 RMS 앱 및 RMS 지원 타사 앱을 통해 하위 수준 Windows 및 타사 디바이스에서 액세스할 수 있습니다.
+[Build an enlightened app that consumes both enterprise and personal data](wip-dev-guide.md).
 
+**For Desktop apps that you build by using C++**
 
-
-
-
-
-
-
- 
-
-
-
-<!--HONumber=Aug16_HO3-->
+[Build an enlightened app that consumes both enterprise and personal data (C++)](http://go.microsoft.com/fwlink/?LinkId=822192).
 
 
+ 

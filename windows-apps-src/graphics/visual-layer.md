@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: "시각적 계층"
 description: "Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 1abb663d0ee27d7e57ab83dab2589557d1f9f29a
 
 ---
 # 시각적 계층
@@ -65,7 +65,7 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 표현 애니메�
 -   이 API에 대한 Kenny Kerr의 MSDN 문서 [Graphics and Animation - Windows Composition Turns 10](https://msdn.microsoft.com/magazine/mt590968)(그래픽 및 애니메이션 - Windows 컴퍼지션(Windows 10))을 참조하세요.
 -   [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
 -   [**API에 대한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   알려진 문제: [알려진 문제](http://go.microsoft.com/fwlink/?LinkId=823237)
+-   알려진 문제: [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues)
 
  
 
@@ -77,6 +77,6 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 표현 애니메�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

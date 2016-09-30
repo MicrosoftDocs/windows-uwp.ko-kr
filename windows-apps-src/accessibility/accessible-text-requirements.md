@@ -6,8 +6,8 @@ title: "접근성 있는 텍스트 요구 사항"
 label: Accessible text requirements
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f36c6a8c191f48c6fb04820c19a98891e46ecf9d
-ms.openlocfilehash: a87e578ae9cfb3fd3104392028f6b7412d23d619
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
 
 ---
 
@@ -48,59 +48,6 @@ UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또
 컨트롤에 [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
 
 XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요소, 즉 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 및 [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)이 있습니다. 이 요소는 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390) 하위 클래스가 아니므로 키보드 포커스가 불가능하고 탭 순서로 표시할 수 없습니다. 하지만 보조 기술에서 이를 읽을 수 없거나 읽지 않는다는 의미는 아닙니다. 화면 읽기 프로그램은 일반적으로 "가상 커서"처럼 포커스 및 탭 순서를 벗어난 탐색 패턴이나 읽기 전용 모드를 포함하여 앱의 콘텐츠를 읽는 다양한 모드를 지원하도록 설계되었습니다. 따라서 탭 순서에 따라 사용자가 도달하도록 정적 텍스트를 포커스 가능 컨테이너에 배치하지 마세요. 보조 기술 사용자는 탭 순서 내의 항목이 대화형이기를 기대하므로 정적 텍스트를 발견할 경우 도움이 되기보다는 오히려 혼동을 줍니다. 내레이터로 직접 테스트하여 화면 읽기 프로그램을 사용해 앱의 정적 텍스트를 검사할 때 앱의 사용자 환경이 어떤지 확인해야 합니다.
-
-<span id="Auto-suggest_accessibility"/>
-<span id="auto-suggest_accessibility"/>
-<span id="AUTO-SUGGEST_ACCESSIBILITY"/>
-## 자동 제안 접근성  
-사용자가 입력 필드에 입력하고 잠재적인 제안 목록이 나타날 경우 이러한 유형의 시나리오를 자동 제안이라고 합니다. 이 시나리오는 메일 필드의 **받는 사람:** 줄, Windows의 Cortana 검색 상자, Microsoft Edge의 URL 입력 필드, 날씨 앱의 위치 입력 필드 등에서 일반적으로 사용됩니다. XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox) 또는 HTML 내장 컨트롤을 사용하는 경우 이 환경이 기본적으로 이미 연결되어 있습니다. 이 환경에 액세스할 수 있게 하려면 입력 필드와 목록을 연결해야 합니다. 이 내용은 [자동 제안 구현](#implementing_auto-suggest) 섹션에서 설명합니다.
-
-특수 제안 모드로 이러한 유형의 환경에 액세스할 수 있도록 내레이터가 업데이트되었습니다. 상위 수준에서 편집 필드와 목록이 제대로 연결된 경우 최종 사용자에게 다음과 같은 이점이 있습니다.
-
-* 목록이 있다는 것과 목록이 닫히는 시기를 알 수 있습니다.
-* 사용 가능한 제안 수를 알 수 있습니다.
-* 선택한 항목을 알 수 있습니다(있는 경우).
-* 내레이터 포커스를 목록으로 이동할 수 있습니다.
-* 다른 모든 읽기 모드에서 제안을 탐색할 수 있습니다.
-
-![제안 목록](images/autosuggest-list.png)<br/>
-_제안 목록의 예_
-
-<span id="Implementing_auto-suggest"/>
-<span id="implementing_auto-suggest"/>
-<span id="IMPLEMENTING_AUTO-SUGGEST"/>
-### 자동 제안 구현  
-이 환경에 액세스할 수 있게 하려면 UIA 트리에서 입력 필드와 목록을 연결해야 합니다. 이 연결은 데스크톱 앱의 [UIA_ControllerForPropertyId](https://msdn.microsoft.com/windows/desktop/ee684017) 속성 또는 UWP 앱의 [ControlledPeers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성을 통해 수행됩니다.
-
-상위 수준에는 두 가지 유형의 자동 제안 환경이 있습니다.
-
-**기본 선택**  
-목록에서 기본 선택을 수행하는 경우 내레이터가 데스크톱 앱에서 [**UIA_SelectionItem_ElementSelectedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223) 이벤트를 찾거나, UWP 앱에서 [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다. 선택이 변경될 때마다, 사용자가 다른 문자를 입력하고 제안이 업데이트될 때 또는 사용자가 목록을 통해 탐색할 때 **ElementSelected** 이벤트가 발생해야 합니다.
-
-![기본 선택이 있는 목록](images/autosuggest-default-selection.png)<br/>
-_기본 선택이 있는 경우의 예_
-
-**기본 선택 없음**  
-날씨 앱의 위치 상자와 같이 기본 선택이 없는 경우 내레이터가 데스크톱 [**UIA_LayoutInvalidatedEventId**](https://msdn.microsoft.com/library/windows/desktop/ee671223 ) 이벤트를 찾거나, 목록이 업데이트될 때마다 목록에서 UWP [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다.
-
-![기본 선택이 없는 목록](images/autosuggest-no-default-selection.png)<br/>
-_기본 선택이 없는 경우의 예_
-
-### XAML 구현  
-기본 XAML [**AutosuggestBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.autosuggestbox)를 사용하는 경우 모든 항목이 이미 연결되어 있습니다. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox)와 목록을 사용하여 고유한 자동 제안 환경을 만드는 경우 **TextBox**에서 목록을 [**AutomationProperties.ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers)로 설정해야 합니다. 이 속성을 추가하거나 제거할 때마다 [**ControlledPeers**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대한 **AutomationPropertyChanged** 이벤트를 발생하거나, 이 문서의 앞부분에서 설명한 시나리오 유형에 따라 고유한 [**SelectionItemPatternOnElementSelected**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생해야 합니다.
-
-### HTML 구현  
-HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑되어 있습니다. 다음은 이미 연결되어 있는 구현의 예입니다.
-
-``` HTML
-<label>Sites <input id="input1" type="text" list="datalist1" /></label>
-<datalist id="datalist1">
-        <option value="http://www.google.com/" label="Google"></option>
-        <option value="http://www.reddit.com/" label="Reddit"></option>
-</datalist>
-```
-
- 고유한 컨트롤을 만드는 경우 W3C 표준에서 설명하는 고유한 ARIA 컨트롤을 설정해야 합니다.
 
 <span id="Text_in_graphics"/>
 <span id="text_in_graphics"/>
@@ -168,10 +115,10 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 * [기본적인 접근성 정보](basic-accessibility-information.md)
 * [XAML 텍스트 표시 샘플](http://go.microsoft.com/fwlink/p/?linkid=238579)
 * [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?linkid=251417)
-* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570) 
+* [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

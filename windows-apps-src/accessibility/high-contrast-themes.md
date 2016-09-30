@@ -1,295 +1,173 @@
 ---
 author: Xansky
-description: "고대비 테마가 활성 상태일 때 UWP(유니버설 Windows 플랫폼) 앱을 사용하는 데 필요한 단계에 대해 설명합니다."
+Description: "고대비 테마가 활성 상태일 때 UWP(유니버설 Windows 플랫폼) 앱을 사용하는 데 필요한 단계에 대해 설명합니다."
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: "고대비 테마"
+label: High-contrast themes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
-ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
 ---
 
 # 고대비 테마  
 
-Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용자가 사용하도록 설정할 수 있습니다. 고대비 테마는 인터페이스를 보기 쉽게 만드는 대비색의 작은 색상표를 사용합니다.
+고대비 테마가 활성 상태일 때 UWP(유니버설 Windows 플랫폼 앱을 사용할 수 있도록 하는 데 필요한 단계에 대해 설명합니다.
 
-**그림 1. 밝은 테마 및 고대비 검정 테마로 표시된 계산기**
+UWP 앱은 기본적으로 고대비 테마를 지원합니다. 사용자가 시스템에서 시스템 설정 또는 접근성 도구의 고대비 테마를 사용하도록 선택한 경우 이 프레임워크에서는 UI의 컨트롤 및 구성 요소에 대해 고대비 레이아웃 및 렌더링을 생성하는 색상 및 스타일 설정을 자동으로 사용합니다.
 
-![밝은 테마 및 고대비 검정 테마로 표시된 계산기](images/high-contrast-calculators.png)
+이 기본 기원은 기본 테마 및 템플릿 사용을 기반으로 합니다. 이러한 테마 및 템플릿은 시스템 색상을 리소스 정의로 참조하므로 시스템에서 고대비 모드를 사용하는 경우 리소스 원본이 자동으로 변경됩니다. 그러나 사용자 지정 템플릿, 테마 및 스타일을 컨트롤에 사용하는 경우 고대비에 대한 기본 제공 지원을 사용하도록 해야 합니다. 스타일 지정에 Microsoft Visual Studio용 XAML 디자이너를 사용하는 경우 디자이너에서는 기본 템플릿과 현저하게 다른 템플릿을 정의할 때마다 기본 테마와 함께 별도의 고대비 테마를 생성합니다. 별도의 테마 사전은 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 요소의 전용 속성인 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx) 컬렉션으로 이동합니다.
 
-
-*설정 &gt; 접근성 &gt; 고대비*를 사용하여 고대비 테마로 전환할 수 있습니다.
-
-> [!NOTE]
-> 고대비로 간주되지 않는 훨씬 큰 색상표를 허용하는 밝은 테마 및 어두운 테마와 고대비 테마를 혼동하지 마세요. 밝은 테마 및 어두운 테마를 더 많이 보려면 [색](../style/color.md)과 관련된 문서를 참조하세요.
-
-공용 컨트롤에는 전체 고대비 지원이 무료로 제공되지만 UI를 사용자 지정하는 동안 주의해야 합니다. 가장 일반적인 고대비 버그는 컨트롤에 색을 인라인으로 하드 코딩하여 발생합니다.
-
-```xaml
-<!-- Don't do this! -->
-<Grid Background="#E6E6E6">
-
-<!-- Instead, create BrandedPageBackgroundBrush and do this. -->
-<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
-```
-
-첫 번째 예제에서 인라인으로 `#E6E6E6` 색을 설정하면 모든 테마에서 그리드에 해당 배경색이 유지됩니다. 사용자가 고대비 검정 테마로 전환할 경우 앱에 검은색 배경이 표시될 것으로 기대합니다. `#E6E6E6`은 거의 흰색이므로 일부 사용자는 앱을 조작하지 못할 수도 있습니다.
-
-두 번째 예제에서는 [**{ThemeResource} 태그 확장**](../xaml-platform/themeresource-markup-extension.md)을 사용하여 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 요소의 전용 속성인 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx) 컬렉션의 색을 참조합니다. ThemeDictionaries를 사용하면 XAML에서 사용자의 현재 테마에 따라 자동으로 색을 바꿀 수 있습니다.
+테마 및 컨트롤 템플릿에 대한 자세한 내용은 [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/Hh465374)을 참조하세요. 특정 컨트롤에 대한 XAML 리소스 사전 및 테마를 확인하고 테마가 구성되는 방법 및 가능한 각 고대비 설정에 대해 유사하지만 다른 리소스를 참조하는 방법을 참조하면 매우 도움이 될 수 있습니다.
 
 ## 테마 사전
 
-시스템 기본값에서 색을 변경해야 하는 경우 앱에 대한 ThemeDictionaries 컬렉션을 만듭니다.
+시스템 기본값에서 색을 변경해야 하거나 배경 이미지 등의 이미지를 장식으로 추가해야 하는 경우 앱에 대한 **ThemeDictionaries** 컬렉션을 만듭니다.
 
-1. 이 컬렉션이 없는 경우 적절한 연결을 만들어 시작합니다. App.xaml에서 최소한 **Default** 및 **HighContrast**를 포함하여 ThemeDictionaries 컬렉션을 만듭니다.
-2. Default에서 필요한 유형의 [Brush](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)를 만듭니다. 일반적으로 SolidColorBrush입니다. 이 항목에 용도와 관련된 x:Key 이름을 지정합니다.
-3. 이 항목에 원하는 Color를 할당합니다.
-4. 이 Brush를 HighContrast에 복사합니다.
+* 이 컬렉션이 없는 경우 적절한 연결을 만들어 시작합니다. App.xaml에서 **ThemeDictionaries** 컬렉션을 만듭니다.
+
+``` xaml
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <ResourceDictionary x:Key="Default">
+
+            </ResourceDictionary>
+            <!-- HighContrast is used in any high contrast theme -->
+            <ResourceDictionary x:Key="HighContrast">
+
+            </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+</Application.Resources
+```
+
+* **HighContrast**는 사용할 수 있는 유일한 키 이름이 아닙니다. **HighContrastBlack**, **HighContrastWhite** 및 **HighContrastCustom**도 있습니다. 대부분의 경우 **HighContrast**만 있으면 됩니다.
+* **Default**에서 필요한 [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)의 유형을 만듭니다. 일반적으로 **SolidColorBrush**입니다. 이 항목에 용도와 관련된 **x:Key** 이름을 제공합니다.<br/>
+    `<SolidColorBrush x:Key="BrandedPageBackground" />`
+* 이 항목에 원하는 **Color**를 할당합니다.<br/>
+    `<SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />`
+* 이 **Brush**를 **HighContrast**에 복사합니다.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called
-            out below -->
+            <!-- Default is a fallback if a more precise theme isn't called out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
             </ResourceDictionary>
-
-            <!-- Optional, Light is used in light theme.
-            If included, Default will be used for Dark theme -->
-            <ResourceDictionary x:Key="Light">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
-            </ResourceDictionary>
-
-            <!-- HighContrast is used in all high contrast themes -->
+            <!-- HighContrast is used in any high contrast theme -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-마지막 단계는 고대비에서 사용할 색을 결정하는 것으로, 다음 섹션에서 설명합니다.
+* **Brush**의 색을 결정하고 **HighContrast**에서 수정합니다.
 
-> [!NOTE]
-> HighContrast는 사용할 수 있는 유일한 키 이름이 아닙니다. HighContrastBlack, HighContrastWhite 및 HighContrastCustom도 있습니다. 대부분의 경우 HighContrast만 있으면 됩니다.
+고대비 색을 결정하려면 관련 내용을 어느 정도 알아야 합니다. 위에서 만든 연결 덕분에 쉽게 업데이트할 수 있습니다.
 
 ## 고대비 색
 
-*설정 &gt; 접근성 &gt; 고대비* 페이지에는 기본적으로 4개의 고대비 테마가 있습니다. 
+설정 페이지를 사용하여 고대비로 전환할 수 있습니다. 기본적으로 4가지 고대비 테마가 있습니다. 사용자가 옵션을 선택하면 페이지에 앱의 모양을 보여 주는 미리 보기가 표시됩니다.
 
-**그림 2. 사용자가 옵션을 선택하면 페이지에 미리 보기가 표시됩니다.**
+![고대비 설정](images/high-contrast-settings.png)<br/>
+_고대비 설정_
 
-![고대비 설정](images/high-contrast-settings.png)
+ 미리 보기에서 각 사각형을 클릭하여 값을 변경할 수 있습니다. 또한 각 사각형은 시스템 리소스에 직접 매핑됩니다.
 
-**그림 3. 미리 보기에서 각 색 견본을 클릭하면 값을 변경할 수 있습니다. 또한 각 견본은 XAML 색 리소스에 직접 매핑됩니다.**
+![고대비 리소스](images/high-contrast-resources.png)<br/>
+_고대비 리소스_
 
-![고대비 리소스](images/high-contrast-resources.png)
-
-각 `SystemColor*Color` 리소스는 사용자가 고대비 테마를 전환할 때 자동으로 색을 업데이트하는 변수입니다. 다음은 각 리소스를 사용할 위치 및 시기에 대한 지침입니다.
-
-리소스 | 사용
--------- | -----
-SystemColorWindowTextColor | 본문 복사, 제목, 목록, 조작할 수 없는 모든 텍스트
-SystemColorHotlightColor | 하이퍼링크
-SystemColorGrayTextColor | 사용할 수 없는 UI
-SystemColorHighlightTextColor | 진행 중이거나 선택되었거나 현재 조작 중인 텍스트 또는 UI의 전경색
-SystemColorHighlightColor | 진행 중이거나 선택되었거나 현재 조작 중인 텍스트 또는 UI의 배경색
-SystemColorButtonTextColor | 단추, 조작할 수 있는 모든 UI의 전경색
-SystemColorButtonFaceColor | 단추, 조작할 수 있는 모든 UI의 배경색
-SystemColorWindowColor | 페이지, 창, 팝업, 막대의 배경
-<br/>
-기존 앱, 시작 또는 공용 컨트롤을 살펴보고 다른 개발자가 유사한 고대비 디자인 문제를 어떻게 해결했는지 확인하면 도움이 되는 경우가 많습니다.
-
-**권장 사항**
-
-* 가능하면 배경/전경 쌍을 준수합니다.
-* 앱이 실행되는 동안 4개의 고대비 테마에서 모두 테스트합니다. 사용자가 테마를 전환할 때 앱을 다시 시작할 필요가 없어야 합니다.
-* 일관성을 유지합니다.
-
-**금지 사항**
-
-* 고대비 테마에 색을 하드 코딩하지 않습니다. `SystemColor*Color` 리소스를 사용합니다.
-* 미학적으로 색 리소스를 선택하지 않습니다. 테마에 따라 변경된다는 것을 명심하세요.
-* 2차적이거나 힌트 역할을 하는 본문 복사에는 `SystemColorGrayTextColor`를 사용하지 않습니다.
-
-
-앞의 예제를 계속하려면 `BrandedPageBackgroundBrush`에 대한 리소스를 선택해야 합니다. 이름에서 배경색에 사용됨을 나타내므로 `SystemColorWindowColor`를 선택하는 것이 좋습니다.
+위에 나와 있는 이름의 접두사를 _SystemColor_로 지정하고 접미사를 _Color_로 지정하는 경우(예: **SystemColorWindowTextColor**) 이러한 항목이 사용자가 지정한 것과 일치하도록 동적으로 업데이트됩니다. 이에 따라 고대비에 대한 특정 색을 선택할 필요가 없습니다. 대신 색이 사용될 대상에 해당하는 시스템 리소스를 선택하면 됩니다. 위의 예에서는 페이지 배경색을 **SolidColorBrushBrandedPageBackground**로 지정했습니다. 이 항목은 배경에 사용되므로 고대비에서 **SystemColorWindowColor**에 매핑될 수 있습니다.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called
-            out below -->
+            <!-- Default is a fallback if a more precise theme isn't called out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
             </ResourceDictionary>
-
-            <!-- Optional, Light is used in light theme.
-            If included, Default will be used for Dark theme -->
-            <ResourceDictionary x:Key="Light">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
-            </ResourceDictionary>
-
-            <!-- HighContrast is used in all high contrast themes -->
+            <!-- HighContrast is used in any high contrast theme -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-나중에 해당 앱에서 이제 배경을 설정할 수 있습니다.
+8가지 고대비 색의 색상표를 고수하는 경우 추가 고대비 **ResourceDictionaries**를 만들 필요가 없습니다. 이 제한된 색상표는 복잡한 시각적 상태를 나타낼 때 어려운 문제가 되는 경우가 많습니다. 흔히 고대비에서 영역에 테두리만 추가하면 상황을 명확하게 만드는 데 도움이 될 수 있습니다.
 
-```xaml
-<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
+### 권장 사항 및 금지 사항
+
+* 고대비 모드에서 조기에 자주 테스트를 수행합니다.
+* 원하는 용도에 대한 명명된 색을 사용합니다.
+* **ThemeDictionaries** 내에 **Color**, **Brush** 및 **Thickness**와 같은 기본 요소를 배치합니다. **Style** 요소와 같은 더 복잡한 리소스를 배치하지 않습니다. 다음 예는 원활하게 작동합니다.
+
+``` xaml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <ResourceDictionary x:Key="Default">
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+            </ResourceDictionary>
+            <!-- HighContrast is used in any high contrast theme -->
+            <ResourceDictionary x:Key="HighContrast">
+                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
+            </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="{ThemeResource BrandedPageBackground}" />
+        </Style>
+    </ResourceDictionary>
+</Application.Resources>
+
+...
+
+<Button Style="{StaticResource MyButtonStyle}" />
 ```
 
-`{ThemeResource}`가 어떻게 두 번 사용되는지(`SystemColorWindowColor` 및 `BrandedPageBackgroundBrush`를 참조하기 위해 한 번씩 사용됨) 확인합니다. 앱이 런타임에 테마를 올바르게 적용하려면 둘 다 필요합니다. 이때 앱의 기능을 테스트하는 것이 좋습니다. 고대비 테마로 전환하면 그리드의 배경이 자동으로 업데이트됩니다. 다른 고대비 테마로 전환할 때도 업데이트됩니다.
+* 전경 UI 요소에 고대비 전경색을 사용합니다.
+* 고대비 색을 정의된 색 쌍과 함께 사용합니다. 예를 들어 특히 전경/배경 상황에서 **BUTTONTEXT**를 항상 **BUTTONFACE**와 함께 사용합니다.
+* 필요한 14:1 대비 비율이 충족되도록 특정 UI 요소에 권장되는 고대비 색 쌍을 사용합니다.
+* 고대비 색 쌍을 나누거나 임의로 고대비 색을 혼합하여 사용하지 않습니다. 이렇게 하지 않으면 미리 설치된 고대비 테마 중 하나 이상에 대해 보이지 않는 UI가 만들어집니다.
+* **ThemeDictionaries** 컬렉션 외부에 **Brush** 개체를 배치하지 않습니다.
+* **StaticResource**를 사용하여 **ThemeDictionaries** 컬렉션의 리소스를 참조하지 않습니다. 이렇게 하지 않으면 앱이 실행되는 동안 사용자가 테마를 변경할 때까지는 작동하는 것처럼 보입니다. 대신 **ThemeResource**를 사용합니다.
+* 하드 코드된 색 값을 사용하지 않습니다.
+* 좋아한다는 이유만으로 색을 사용하지 않습니다.
+
+자세한 내용은 [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)를 참조하세요.
 
 ## 테두리를 사용하는 경우
+고대비 모드에서 항목에 인식 가능한 경계 모양을 유지해야 하는 UI 요소에 테두리를 추가합니다. 탐색의 콘텐츠 영역, 작업 및 콘텐츠를 구분하려면 테두리를 사용합니다.
 
-페이지, 창, 팝업 및 막대는 모두 고대비에서 `SystemColorWindowColor`배경에 사용해야 합니다. UI에서 중요한 경계를 유지하기 위해 필요한 경우 고대비 전용 테두리를 추가합니다.
+![페이지의 나머지 부분과 분리된 탐색 창](images/high-contrast-actions-content.png)<br/>
+_페이지의 나머지 부분과 분리된 탐색 창_
 
-**그림 4. 탐색 창과 페이지는 고대비에서 동일한 배경색을 공유합니다. 따라서 두 항목을 구분하는 고대비 전용 테두리가 필요합니다.**
+UI 요소에 기본적으로 테두리나 배경이 _없는_ 경우 고대비 모드에서 테두리나 배경을 기본 상태에 추가하지 마세요.
 
-![페이지의 나머지 부분과 분리된 탐색 창](images/high-contrast-actions-content.png)
+UI 요소에 기본적으로 테두리가 _있는_ 경우에는 고대비 모드에서 테두리를 유지합니다.
 
-## 목록 항목
+겹치는 색이나 인접한 색은 서로 구별 가능해야 하지만 14:1의 색상 대비 비율을 반드시 충족할 필요는 없습니다. 그러나 이러한 유형의 시나리오에는 3:1 대비 비율을 사용하는 것이 가장 좋습니다.
 
-고대비에서 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 항목의 배경은 마우스로 가리키거나 누르거나 선택할 때 `SystemColorHighlightColor`로 설정됩니다. 복잡한 목록 항목에는 일반적으로 항목을 마우스로 가리키거나 누르거나 선택할 때 목록 항목 콘텐츠의 색이 반전되지 않는 버그가 있습니다. 이 때문에 항목을 읽을 수 없게 됩니다.
+고대비 배경색이 겹치는 UI 요소를 구분하는 데 사용되는 경우 이러한 요소 간의 대비를 보장하는 유일한 방법은 테두리를 적용하는 것입니다.
 
-**그림 5. 밝은 테마(왼쪽) 및 고대비 검정 테마(오른쪽)의 간단한 목록. 두 번째 항목이 선택되어 있습니다. 고대비에서 해당 텍스트 색이 어떻게 반전되는지 확인합니다.**
-
-![밝은 테마 및 고대비 검정 테마의 간단한 목록](images/high-contrast-list1.png)
-
-
-
-### 색이 지정된 텍스트가 있는 목록 항목
-
-한 가지 원인은 ListView의 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)에서 TextBlock.Foreground를 설정했기 때문입니다. 일반적으로 이 작업은 시각적 계층 구조를 설정하기 위해 수행됩니다. Foreground 속성은 [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx)에서 설정되며, 항목을 마우스로 가리키거나 누르거나 선택할 때 DataTemplate의 TextBlocks가 올바른 Foreground 색을 상속합니다. 그러나 Foreground를 설정하면 상속이 끊어집니다.
-
-**그림 6. 밝은 테마(왼쪽) 및 고대비 검정 테마(오른쪽)의 복잡한 목록. 고대비에서 선택한 항목의 두 번째 줄이 반전되지 않는 것을 확인합니다.**
-
-![밝은 테마 및 고대비 검정 테마의 복잡한 목록](images/high-contrast-list2.png)
-
-ThemeDictionaries 컬렉션에 있는 Style을 통해 조건부로 Foreground를 설정하면 이 문제를 해결할 수 있습니다. HighContrast에서 SecondaryBodyTextBlockStyle에 의해 Foreground가 설정되지 않았으므로 해당 색이 올바르게 반전됩니다.
-
-```xaml
-<!-- In App.xaml... -->
-<ResourceDictionary.ThemeDictionaries>
-    <ResourceDictionary x:Key="Default">
-        <Style
-            x:Key="SecondaryBodyTextBlockStyle"
-            TargetType="TextBlock"
-            BasedOn="{StaticResource BodyTextBlockStyle}">
-            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
-        </Style>
-    </ResourceDictionary>
-
-    <ResourceDictionary x:Key="Light">
-        <Style
-            x:Key="SecondaryBodyTextBlockStyle"
-            TargetType="TextBlock"
-            BasedOn="{StaticResource BodyTextBlockStyle}">
-            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
-        </Style>
-    </ResourceDictionary>
-
-    <ResourceDictionary x:Key="HighContrast">
-        <!-- The Foreground Setter is omitted in HighContrast -->
-        <Style
-            x:Key="SecondaryBodyTextBlockStyle"
-            TargetType="TextBlock"
-            BasedOn="{StaticResource BodyTextBlockStyle}" />
-    </ResourceDictionary>
-</ResourceDictionary.ThemeDictionaries>
-
-<!-- Usage in your DataTemplate... -->
-<DataTemplate>
-    <StackPanel>
-        <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Double line list item" />
-
-        <!-- Note how ThemeResource is used to reference the Style -->
-        <TextBlock Style="{ThemeResource SecondaryBodyTextBlockStyle}" Text="Second line of text" />
-    </StackPanel>
-</DataTemplate>
-```
-
-### 단추 및 링크가 있는 목록 항목
-
-[HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx), [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) 등의 보다 복잡한 컨트롤이 목록 항목에 포함된 경우도 있습니다. 이러한 컨트롤에는 마우스로 가리키거나 누르거나 때로는 선택한 경우에 대한 고유한 상태가 있으며, 목록 항목 위에서는 작동하지 않습니다. 하이퍼링크는 고대비 검정에서도 노란색이므로 목록 항목을 가리키거나 누르거나 선택할 때 읽기 어렵습니다.
-
-**그림 7. 고대비에서 하이퍼링크가 어떻게 읽기 어려운지 확인합니다.**
-
-![밝은 테마 및 고대비 검정 테마에서 하이퍼링크가 있는 목록](images/high-contrast-list3.png)
-
-해결 방법은 고대비에서 DataTemplate의 배경을 `SystemColorWindowColor`로 설정하는 것입니다. 그러면 고대비에서 테두리 효과가 생성됩니다.
-
-```xaml
-<!-- In App.xaml... -->
-<ResourceDictionary.ThemeDictionaries>
-    <ResourceDictionary x:Key="Default">
-        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="Transparent" />
-    </ResourceDictionary>
-
-    <ResourceDictionary x:Key="HighContrast">
-        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
-    </ResourceDictionary>
-</ResourceDictionary.ThemeDictionaries>
-
-<!-- Usage in your ListView... -->
-<ListView>
-    <ListView.ItemContainerStyle>
-        <Style TargetType="ListViewItem">
-            <!-- Causes the DataTemplate to fill the entire width and height
-            of the list item -->
-            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-            <Setter Property="VerticalContentAlignment" Value="Stretch" />
-
-            <!-- Padding is handled in the DataTemplate -->
-            <Setter Property="Padding" Value="0" />
-        </Style>
-    </ListView.ItemContainerStyle>
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <!-- Margin of 2px allows some of the ListViewItem's background
-            to shine through. An additional left padding of 10px puts the
-            content a total of 12px from the left edge -->
-            <StackPanel
-                Margin="2,2,2,2"
-                Padding="10,0,0,0"
-                Background="{ThemeResource HighContrastOnlyBackgroundBrush}">
-
-                <!-- Foreground is explicitly set so that it doesn't
-                disappear on hovered, pressed, or selected -->
-                <TextBlock
-                    Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
-                    Text="Double line list item" />
-
-                <HyperlinkButton Content="Hyperlink" />
-            </StackPanel>
-        </DataTemplate>
-    </ListView.ItemTemplate>
-</ListView>
-```
-**그림 8. 테두리 효과는 목록 항목에 더 복잡한 컨트롤이 있는 경우에 적합합니다.**
-
-![밝은 테마 및 고대비 검정 테마에서 하이퍼링크가 있는 목록, 수정됨](images/high-contrast-list4.png)
-
-
-
-## 고대비 검색
-
-[**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
+## 고대비 테마가 사용되는 경우 탐색  
+[**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 고대비 테마의 현재 설정을 검색할 수 있습니다. [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast) 속성은 고대비 테마가 현재 선택되어 있는지 여부를 확인합니다. **HighContrast**가 **true**로 설정되어 있으며 다음 단계에서 [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme) 속성의 값을 확인하여 사용되는 고대비 테마의 이름을 가져옵니다. "고대비 흰색" 및 "고대비 검정"은 일반적으로 코드에서 응답해야 하는 **HighContrastScheme**에 대한 값입니다. XAML 정의 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 키에는 공백이 없으므로 리소스 사전에서 이러한 테마에 해당되는 키는 각각 "HighContrastWhite" 및 "HighContrastBlack"입니다. 값이 몇 가지 다른 문자열인 경우 기본 고대비 테마에 대한 폴백 논리도 있어야 합니다. [XAML 고대비 샘플](http://go.microsoft.com/fwlink/p/?linkid=254993)에서는 이에 대한 논리를 보여 줍니다.
 
 > [!NOTE]
-> 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 **AccessibilitySettings** 생성자를 호출해야 합니다.
+> 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 생성기를 호출해야 합니다.
+
+앱은 실행하는 동안 고대비 리소스 값을 사용하는 것으로 전환할 수 있습니다. 이 작업은 스타일 또는 템플릿 XAML에서 [{ThemeResource}](https://msdn.microsoft.com/library/windows/apps/Mt185591)을 사용하여 리소스를 요청한 경우에만 작동합니다. 기본 테마(generic.xaml)는 모두 이 {ThemeResource} 태그 확장 기술을 사용하므로, 기본 컨트롤 테마를 사용하는 경우 이 동작을 구현할 수 있습니다. 이는 사용자 지정 컨트롤 또는 사용자 지정 컨트롤 스타일에서 수행할 수 있습니다. 단, 사용자 지정 템플릿 및 스타일에서도 이 {ThemeResource} 태그 확장 리소스 기술을 사용해야 합니다.
 
 ## 관련 항목  
 * [접근성](accessibility.md)
@@ -300,6 +178,6 @@ ThemeDictionaries 컬렉션에 있는 Style을 통해 조건부로 Foreground를
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jul16_HO1-->
 
 

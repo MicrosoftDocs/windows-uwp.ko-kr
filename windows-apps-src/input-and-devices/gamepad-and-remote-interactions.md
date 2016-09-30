@@ -8,7 +8,7 @@ template: detail.hbs
 isNew: true
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c353d649529eef8361c982ff6451371a4cebc4eb
+ms.openlocfilehash: 463da46dc1f4e2ed5125a26b058075e7fe1faafd
 
 ---
 
@@ -19,17 +19,17 @@ ms.openlocfilehash: c353d649529eef8361c982ff6451371a4cebc4eb
 
 게임 패드 또는 원격 제어를 사용할 때 UWP 앱의 사용자 환경을 성공적이고 재미있게 하려면 다음을 고려해야 합니다.
 
-* [하드웨어 단추](designing-for-tv.md#hardware-buttons) -
+* [하드웨어 버튼](designing-for-tv.md#hardware-buttons)  -
 게임 패드 및 원격은 매우 다른 단추 및 구성을 제공합니다.
 
-* [XY 포커스 탐색 및 조작](designing-for-tv.md#xy-focus-navigation-and-interaction) -
+* [XY 포커스 탐색 및 조작](designing-for-tv.md#xy-focus-navigation-and-interaction)  -
 XY 포커스 탐색은 앱의 UI를 탐색할 수 있도록 합니다.
 
-* [마우스 모드](designing-for-tv.md#mouse-mode) -
+* [마우스 모드](designing-for-tv.md#mouse-mode)  -
 마우스 모드를 통해 XY 포커스 탐색이 충분하지 않은 경우 앱이 마우스 환경을 에뮬레이트할 수 있습니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

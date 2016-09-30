@@ -6,29 +6,20 @@ ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 5752e1a7f7ac358043ec99c8db07cbfda9c4cd37
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
 
 ---
-# 웹 보기
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
+# 웹 보기
 
 
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
-<div class="important-apis" >
-<b>중요 API</b><br/>
-<ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227702"><strong>WebView 클래스</strong></a></li>
-</ul>
+**중요 API**
 
-</div>
-</div>
-
-
-
+-   [**WebView 클래스**](https://msdn.microsoft.com/library/windows/apps/br227702)
 
 ## 올바른 컨트롤인가요?
 
@@ -316,11 +307,11 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 
 기본적으로 웹 보기 콘텐츠는 데스크톱 디바이스 패밀리의 디바이스에 있는 UI 스레드와 다른 모든 디바이스의 UI 스레드 외부에 호스트됩니다. [**WebView.DefaultExecutionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultexecutionmode.aspx) 정적 속성을 사용하여 현재 클라이언트의 기본 스레딩 동작을 쿼리할 수 있습니다. 필요한 경우 [**WebView(WebViewExecutionMode)**](https://msdn.microsoft.com/library/windows/apps/xaml/dn932036.aspx) 생성자를 사용하여 이 동작을 재정의할 수 있습니다. 
 
-> **참고**&nbsp;&nbsp;모바일 디바이스의 UI 스레드에서 콘텐츠를 호스트할 때 성능 문제가 발생할 수도 있으므로 DefaultExecutionMode를 변경하는 경우 모든 대상 디바이스에서 테스트해야 합니다.
+> **참고** &nbsp;&nbsp;모바일 디바이스의 UI 스레드에서 콘텐츠를 호스트할 때 성능 문제가 발생할 수도 있으므로 DefaultExecutionMode를 변경하는 경우 모든 대상 디바이스에서 테스트해야 합니다.
 
 UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 컨트롤에서 부모로 제스처를 전파해야 하는 부모 컨트롤(예: [**FlipView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx), [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) 및 기타 관련 컨트롤)과 호환되지 않습니다. 이러한 컨트롤은 스레드 외부 웹 보기에서 시작된 제스처를 받을 수 없습니다. 또한 스레드 외부 웹 콘텐츠 인쇄는 직접 지원되지 않습니다. 대신 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.aspx) 채우기를 사용하여 요소를 인쇄해야 합니다.
 
-## 권장 사항
+## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>권장 사항
 
 
 -   로드된 웹 사이트의 형식이 장치에 맞게 지정되고 앱의 나머지 부분과 일관된 색, 입력 체계, 탐색이 사용되는지 확인합니다.
@@ -329,7 +320,7 @@ UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 
 
 
 
-## 관련 항목
+## <span id="related_topics"></span>관련 항목
 
 * [**WebView 클래스**](https://msdn.microsoft.com/library/windows/apps/br227702)
  
@@ -342,6 +333,6 @@ UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

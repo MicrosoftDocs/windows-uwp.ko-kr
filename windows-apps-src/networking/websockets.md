@@ -5,7 +5,7 @@ title: WebSocket
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ff2429e1e9ea56c414978c126497551b1e1864b8
+ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
 
 ---
 
@@ -345,6 +345,6 @@ StreamWebSocket과 MessageWebSocket 둘 다에 대해 유사한 시간 제한을
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

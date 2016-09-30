@@ -1,179 +1,169 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: "이 문서에서는 MediaPlayer를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다."
-title: "MediaPlayer를 사용하여 오디오 및 비디오 재생"
-translationtype: Human Translation
-ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
-ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
-
+description: This article shows you how to play media in your Universal Windows app with MediaPlayer.
+title: Play audio and video with MediaPlayer
 ---
 
-# MediaPlayer를 사용하여 오디오 및 비디오 재생
+# Play audio and video with MediaPlayer
 
-이 문서에서는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다. Windows 10 버전 1607에서는 백그라운드 오디오에 대해 간소화된 단일 프로세스 디자인, SMTC(시스템 미디어 전송 컨트롤)와 자동 통합, 여러 미디어 플레이어를 동기화하는 기능, Windows.UI.Composition 표면 기능 및 콘텐츠에서 미디어 중단을 만들고 예약하는 편리한 인터페이스를 포함하여 미디어 재생 API가 크게 개선되었습니다. 이러한 개선된 기능을 활용하려면 미디어 재생을 위해 **MediaElement** 대신 **MediaPlayer** 클래스를 사용하는 것이 좋습니다. XAML 페이지에서 미디어 콘텐츠를 렌더링할 수 있도록 간단한 XAML 컨트롤인 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)가 도입되었습니다. 이제 **MediaElement**를 통해 제공된 많은 재생 컨트롤 및 상태 API가 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체를 통해 사용 가능합니다. **MediaElement**는 이전 버전과의 호환성을 지원하기 위해 계속 작동되지만 이 클래스에 추가 기능은 제공되지 않습니다.
+This article shows you how to play media in your Universal Windows app using the  [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) class. With Windows 10, version 1607, significant improvements were made to the media playback APIs, including a simplified single-process design for background audio, automatic integration with the System Media Transport Controls (SMTC), the ability to synchronize multiple media players, the ability to a Windows.UI.Composition surface, and an easy interface for creating and scheduling media breaks in your content. To take advantage of these improvements, the recommended best practice for playing media is to use the **MediaPlayer** class instead of **MediaElement** for media playback. The lightweight XAML control, [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement), has been introduced to allow you render media content in a XAML page. Many of the playback control and status APIs provided by **MediaElement** are now available through the new [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) object. **MediaElement** continues to function to support backwards compatibility, but no additional features will be added to this class.
 
-이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
+This article will walk you through the **MediaPlayer** features that a typical media playback app will use. Note that **MediaPlayer** uses the [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) class as a container for all media items. This class allows you to load and play media from many different sources, including local files, memory streams, and network sources, all using the same interface. There are also higher-level classes that work with **MediaSource**, such as [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) and [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList), that provide more advanced features like playlists and the ability to manage media sources with multiple audio, video, and metadata tracks. For more information on **MediaSource** and related APIs, see [Media items, playlists, and tracks](media-playback-with-mediasource.md).
 
 
-##MediaPlayer를 사용하여 미디어 파일 재생  
-**MediaPlayer**를 사용한 기본 미디어 재생은 매우 간단히 구현할 수 있습니다. 먼저 **MediaPlayer** 클래스의 새 인스턴스를 만듭니다. 앱에는 한 번에 여러 개의 **MediaPlayer** 인스턴스가 활성화될 수 있습니다. 다음으로 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) 또는 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList)와 같이 [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource)를 구현하는 개체에 플레이어의 [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) 속성을 설정합니다. 이 예제에서는 앱의 로컬 저장소에 있는 파일에서 **MediaSource**가 생성되고 소스에서 **MediaPlaybackItem**이 생성된 다음 플레이어의 **Source** 속성에 할당됩니다.
+##Play a media file with MediaPlayer  
+Basic media playback with **MediaPlayer** is very simple to implement. First, create a new instance of the **MediaPlayer** class. Your app can have multiple **MediaPlayer** instances active at once. Next, set the [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) property of the player to an object that implements the [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource), such as a [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), a [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem), or a [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). In this example, a **MediaSource** is created from a file in the app's local storage, and then a **MediaPlaybackItem** is created from the source and then assigned to the player's **Source** property.
 
-**MediaElement**와 달리 **MediaPlayer**는 기본적으로 자동으로 재생을 시작하지 않습니다. [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하거나 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) 속성을 true로 설정하여 재생을 시작할 수 있습니다. 또는 기본 제공 미디어 컨트롤을 사용하여 사용자가 재생을 시작할 때까지 기다릴 수 있습니다.
+Unlike **MediaElement**, **MediaPlayer** does not automatically begin playback by default. You can start playback by calling [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play), by setting the [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) property to true, or waiting for the user to initiate playback with the built-in media controls.
 
 [!code-cs[SimpleFilePlayback](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSimpleFilePlayback)]
 
-앱의 **MediaPlayer** 사용이 끝나면 [**Close**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Close) 메서드(C#에서 **Dispose**에 프로젝션됨)를 호출하여 플레이어에서 사용한 리소스를 정리해야 합니다.
+When your app is done using a **MediaPlayer**, you should call the [**Close**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Close) method (projected to **Dispose** in C#) to clean up the resources used by the player.
 
 [!code-cs[CloseMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCloseMediaPlayer)]
 
-##MediaPlayerElement를 사용하여 XAML에서 비디오 렌더링
-XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 있지만 많은 미디어 재생 앱은 XAML 페이지에서 미디어를 렌더링하려고 합니다. 이렇게 하려면 경량 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) 컨트롤을 사용합니다. **MediaElement**와 마찬가지로 **MediaPlayerElement**를 사용하여 기본 제공 전송 컨트롤의 표시 여부를 지정할 수 있습니다.
+##Use MediaPlayerElement to render video in XAML
+You can play media in a **MediaPlayer** without displaying it in XAML, but many media playback apps will want to render the media in a XAML page. To do this, use the lightweight [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) control. Like **MediaElement**, **MediaPlayerElement** allows you to specify whether the built-in transport controls should be shown.
 
 [!code-xml[MediaPlayerElementXAML](./code/MediaPlayer_RS1/cs/MainPage.xaml#SnippetMediaPlayerElementXAML)]
 
-[**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764)를 호출하면 요소가 바인딩되는 **MediaPlayer** 인스턴스를 설정할 수 있습니다.
+You can set the **MediaPlayer** instance that the element is bound to by calling [**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764).
 
 [!code-cs[SetMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetMediaPlayer)]
 
-**MediaPlayerElement**에 재생 소스를 설정할 수도 있으며 요소는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer) 속성을 사용하여 액세스할 수 있는 **MediaPlayer** 인스턴스를 자동으로 만듭니다.
+You can also set the playback source on the **MediaPlayerElement** and the element will automatically create a new **MediaPlayer** instance that you can access using the [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer) property.
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
 
-##일반적인 MediaPlayer 작업
-이 섹션에서는 **MediaPlayer**의 몇 가지 기능을 사용하는 방법을 보여 줍니다.
+##Common MediaPlayer tasks
+This section shows you how to use some of the features of the **MediaPlayer**.
 
-###오디오 범주 설정
-시스템이 재생 중인 미디어의 종류를 인식하도록 [**MediaPlayerAudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerAudioCategory) 열거형 값 중 하나에 **MediaPlayer**의 [**AudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioCategory) 속성을 설정합니다. 다른 응용 프로그램이 백그라운드에서 음악을 재생하는 경우 게임 음악은 자동으로 음소거되도록 게임은 해당 음악 스트림을 **GameMedia**로 분류해야 합니다. 음악 또는 동영상 응용 프로그램은 **GameMedia** 스트림보다 우선하도록 **Media** 또는 **Movie**로 스트림을 분류해야 합니다.
+###Set the audio category
+Set the [**AudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioCategory) property of a **MediaPlayer** to one of the values of the [**MediaPlayerAudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerAudioCategory) enumeration to let the system know what kind of media you are playing. Games should categorize their music streams as **GameMedia** so that game music mutes automatically if another application plays music in the background. Music or video applications should categorize their streams as **Media** or **Movie** so they will take priority over **GameMedia** streams.
 
 [!code-cs[SetAudioCategory](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioCategory)]
 
-###특정 오디오 끝점에 출력
-기본적으로 **MediaPlayer**의 오디오 출력은 시스템의 기본 오디오 끝점에 라우팅되지만 **MediaPlayer**가 출력에 사용해야 하는 특정 오디오 끝점을 지정할 수 있습니다. 아래 예제에서 [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector)는 디바이스의 오디오 렌더 범주를 고유하게 식별하는 문자열을 반환합니다. 다음으로 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation) 메서드 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync)가 호출되고 선택된 유형의 사용 가능한 모든 디바이스 목록을 가져옵니다. 사용할 디바이스를 프로그래밍 방식으로 결정하거나 반환된 디바이스를 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox)에 추가하여 사용자가 디바이스를 선택할 수도 있습니다.
+###Output to a specific audio endpoint
+By default, the audio output from a **MediaPlayer** is routed to the default audio endpoint for the system, but you can specify a specific audio endpoint that the **MediaPlayer** should use for output. In the example below, [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) returns a string that uniquely idenfies the audio render category of devices. Next, the [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation) method [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) is called to get a list of all available devices of the selected type. You may programmatically determine which device you want to use or add the returned devices to a [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) to allow the user to select a device.
 
 [!code-cs[SetAudioEndpointEnumerate](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpointEnumerate)]
 
-디바이스 콤보 상자에 대한 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged) 이벤트에서 **ComboBoxItem**의 [**Tag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Tag) 속성에 저장된 **MediaPlayer**의 [**AudioDevice**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioDevice) 속성이 선택한 디바이스로 설정됩니다.
+In the [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged) event for the devices combo box, the [**AudioDevice**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioDevice) property of the **MediaPlayer** is set to the selected device, which was stored in the [**Tag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Tag) property of the **ComboBoxItem**.
 
 [!code-cs[SetAudioEndpontSelectionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpontSelectionChanged)]
 
-###재생 세션
-이 문서의 앞에서 설명한 대로 **MediaElement** 클래스에서 노출하는 대부분의 함수는 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 클래스로 이동되었습니다. 여기에는 재생 위치, 플레이어가 일시 중지되었는지 재생 중인지 및 현재 재생 속도 등 플레이어의 재생 상태에 대한 정보가 포함됩니다. 또한 **MediaPlaybackSession**은 재생 중인 콘텐츠의 현재 버퍼링 및 다운로드 상태와 현재 재생 중인 비디오 콘텐츠의 가로 세로 비율 및 실제 크기를 포함하여 상태가 변경되면 알려주는 몇 가지 이벤트도 제공합니다.
+###Playback session
+As described previously in this article, many of the functions that are exposed by the **MediaElement** class have been moved to the [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) class. This includes information about the playback state of the player, such as the current playback position, whether the player is paused or playing, and the current playback speed. **MediaPlaybackSession** also provides several events to notify you when the state changes, including the current buffering and download status of content being played and the natural size and aspect ratio of the currently playing video content.
 
-다음 예제에서는 콘텐츠에서 10초 앞으로 건너뛰는 단추 클릭 처리기를 구현하는 방법을 보여 줍니다. 먼저 플레이어에 대한 **MediaPlaybackSession** 개체가 [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.PlaybackSession) 속성으로 검색됩니다. 다음으로 [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) 속성이 현재 재생 위치 + 10초로 설정됩니다.
+The following example shows you how to implement a button click handler that skips 10 seconds forward in the content. First, the **MediaPlaybackSession** object for the player is retrieved with the [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.PlaybackSession) property. Next the [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) property is set to the current playback position plus 10 seconds.
 
 [!code-cs[SkipForwardClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSkipForwardClick)]
 
-다음 예제에서는 세션의 [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate) 속성을 설정하여 정상 재생 속도와 2배속 간에 전환하는 토글 단추를 사용하는 방법을 보여 줍니다.
+The next example illustrates using a toggle button to toggle between normal playback speed and 2X speed by setting the [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate) property of the session.
 
 [!code-cs[SpeedChecked](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSpeedChecked)]
 
-###손가락을 모아 비디오 확대/축소
-**MediaPlayer**는 효과적으로 비디오를 확대할 수 있도록 렌더링해야 하는 비디오 콘텐츠 내에서 소스 사각형을 지정할 수 있습니다. 지정하는 사각형은 정규화된 사각형(0,0,1,1)을 기준으로 합니다. 여기서 0,0은 프레임의 왼쪽 상단이고 1,1은 프레임의 전체 너비 및 높이를 가리킵니다. 따라서 예를 들어 비디오의 오른쪽 위 사분면이 렌더링되도록 확대/축소 사각형을 설정하려면 사각형(.5,0,.5,.5)을 지정합니다.  소스 사각형이 정규화된 사각형(0,0,1,1) 내에 있도록 값을 확인하는 것이 중요합니다. 이 범위를 벗어나는 값을 설정하려고 하면 예외가 발생됩니다.
+###Pinch and zoom video
+**MediaPlayer** allows you to specify the source rectangle within video content that should be rendered, effectively allowing you to zoom into video. The rectangle you specify is relative to a normalized rectangle (0,0,1,1) where 0,0 is the upper left hand of the frame and 1,1 specifies the full width and height of the frame. So, for example, to set the zoom rectangle so that the top-right quadrant of the video is rendered, you would specify the rectangle (.5,0,.5,.5).  It is important that you check your values to make sure that your source rectangle is within the (0,0,1,1) normalized rectangle. Attempting to set a value outside of this range will cause an exception to be thrown.
 
-멀티 터치 제스처를 사용하여 손가락을 모아 확대/축소를 구현하려면 먼저 지원하려는 제스처를 지정해야 합니다. 이 예제에서는 크기 조정 및 변환 제스처를 요청합니다. 구독한 제스처 중 하나가 발생하면 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta) 이벤트가 발생합니다. [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트는 전체 프레임으로 확대/축소를 다시 설정하는 데 사용됩니다. 
+To implement pinch and zoom using multi-touch gestures, you must first specify which gestures you want to support. In this example, scale and translate gestures are requested. The [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta) event is raised when one of the subscribed gestures occurs. The [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) event will be used to reset the zoom to the full frame. 
 
 [!code-cs[RegisterPinchZoomEvents](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterPinchZoomEvents)]
 
-다음으로 현재 확대/축소 소스 사각형을 저장할 **Rect** 개체를 선언합니다.
+Next, declare a **Rect** object that will store the current zoom source rectangle.
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-**ManipulationDelta** 처리기는 확대/축소 사각형의 배율 또는 변환을 조정합니다. 델타 배율 값이 1이 아니면 사용자가 축소 제스처를 수행했다는 의미입니다. 값이 1보다 큰 경우 콘텐츠를 확대하려면 소스 사각형을 더 작게 만들어야 합니다. 값이 1보다 작은 경우 축소하려면 소스 사각형을 더 크게 만들어야 합니다. 새 배율 값을 설정하기 전에 결과 사각형이 완전히 (0,0,1,1) 한도 내에 있는지 확인합니다.
+The **ManipulationDelta** handler adjusts either the scale or the translation of the zoom rectangle. If the delta scale value is not 1, it means that the user performed a pinch gesture. If the value is greater than 1, the source rectangle should be made smaller to zoom into the content. If the value is less than 1, then the source rectangle should be made bigger to zoom out. Before setting the new scale values, the resulting rectangle is checked to make sure it lies entirely within the (0,0,1,1) limits.
 
-배율 값이 1이면 변환 제스처가 처리됩니다. 사각형은 단순히 컨트롤의 너비와 높이로 나눈 제스처의 픽셀 수로 변환됩니다. 마찬가지로 결과 사각형이 (0,0,1,1) 범위 안에 있는지 확인합니다.
+If the scale value is 1, then the translation gesture is handled. The rectangle is simply translated by the number of pixels in gesture divided by the width and height of the control. Again, the resulting rectangle is checked to make sure it lies within the (0,0,1,1) bounds.
 
-마지막으로 **MediaPlaybackSession**의 [**NormalizedSourceRect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NormalizedSourceRect)가 새로 조정된 사각형으로 설정되고 렌더링해야 할 비디오 프레임 내의 영역을 지정합니다.
+Finally, the [**NormalizedSourceRect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NormalizedSourceRect) of the **MediaPlaybackSession** is set to the newly adjusted rectangle, specifying the area within the video frame that should be rendered.
 
 [!code-cs[ManipulationDelta](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 
-[**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) 이벤트 처리기에서 소스 사각형을 다시 (0,0,1,1)로 설정하면 전체 비디오 프레임이 렌더링됩니다.
+In the [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) event handler, the source rectangle is set back to (0,0,1,1) to cause the entire video frame to be rendered.
 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
-        
-##MediaPlayerSurface를 사용하여 Windows.UI.Composition 표면에 비디오를 렌더링합니다.
-Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface)에 비디오를 렌더링할 수 있으며 플레이어가 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) 네임스페이스의 API와 상호 작용할 수 있습니다. 컴퍼지션 프레임워크를 사용하면 XAML과 하위 수준 DirectX 그래픽 API 간에 시각적 계층의 그래픽 작업이 가능합니다. 그러면 모든 XAML 컨트롤에 비디오 렌더링과 같은 시나리오를 사용할 수 있습니다. 컴퍼지션 API 사용에 대한 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요.
+		
+##Use MediaPlayerSurface to render video to a Windows.UI.Composition surface
+Starting with Windows 10, version 1607, you can use **MediaPlayer** to render video to an to render video to an [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface), which allows the player to interoperate with the APIs in the [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) namespace. The composition framework allows you to work with graphics in the visual layer between XAML and the low-level DirectX graphics APIs. This enables scenarios like rendering video into any XAML control. For more information on using the composition APIs, see [Visual Layer](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
 
-다음 예제에서는 비디오 플레이어 콘텐츠를 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas) 컨트롤로 렌더링하는 방법을 보여 줍니다. 이 예제에서 미디어 플레이어 관련 호출은 [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) 및 [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963)입니다. **SetSurfaceSize**는 콘텐츠 렌더링에 할당해야 하는 버퍼의 크기를 시스템에 지시합니다. **GetSurface**는 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor)를 인수로 사용하고 [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) 클래스의 인스턴스를 검색합니다. 이 클래스는 표면을 만드는 데 사용된 **Compositor** 및 **MediaPlayer**에 대한 액세스를 제공하고 [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface) 속성을 통해 표면 자체를 노출합니다.
+The following example illustrates how to render video player content onto a [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas) control. The media player-specific calls in this example are [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) and [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963). **SetSurfaceSize** tells the system the size of the buffer that should be allocated for rendering content. **GetSurface** takes a [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor) as an arguemnt and retreives an instance of the [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) class. This class provides access to the **MediaPlayer** and **Compositor** used to create the surface and exposes the surface itself through the [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface) property.
 
-이 예제의 나머지 코드는 비디오가 렌더링되는 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual)을 만들고 시각적 개체를 표시할 캔버스 요소의 크기를 설정합니다. 다음으로 [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.CompositionBrush)가 [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface)에서 만들어지고 시각적 개체의 [**Brush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual.Brush) 속성에 할당됩니다. 다음으로 [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ContainerVisual)이 만들어지고 **SpriteVisual**이 해당 시각적 트리의 맨 위에 삽입됩니다. 마지막으로 [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/mt608981)을 호출하여 **Canvas**에 컨테이너 시각적 개체를 할당합니다.
+The rest of the code in this example creates a [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual) to which the video is rendered and sets the size to the size of the canvas element that will display the visual. Next a [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.CompositionBrush) is created from the [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) and assigned to the [**Brush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual.Brush) property of the visual. Next a [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ContainerVisual) is created and the **SpriteVisual** is inserted at the top of its visual tree. Finally, [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/mt608981) is called to assign the container visual to the **Canvas**.
 
 [!code-cs[Compositor](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCompositor)]
-        
-##MediaTimelineController를 사용하여 여러 플레이어에서 콘텐츠 동기화
-이 문서의 앞에서 설명한 대로 앱에는 한 번에 여러 개의 **MediaPlayer** 개체가 활성화되어 있을 수 있습니다. 기본적으로 만든 각 **MediaPlayer**는 독립적으로 작동합니다. 일부 시나리오의 경우 비디오에 대한 설명 트랙 동기화와 같이 여러 플레이어의 재생 속도, 플레이어 상태, 재생 위치를 동기화할 수 있습니다. Windows 10 버전 1607부터 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) 클래스를 사용하여 이 동작을 구현할 수 있습니다.
+		
+##Use MediaTimelineController to synchronize content across multiple players.
+As discussed previously in this article, your app can have several **MediaPlayer** objects active at a time. By default, each **MediaPlayer** you create operates independently. For some scenarios, such as synchronizing a commentary track to a video, you may want to synchronize the player state, playback position, and playback speed of multiple players. Starting with Windows 10, version 1607, you can implement this behavior by using the [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) class.
 
-###재생 컨트롤 구현
-다음 예제는 **MediaTimelineController**를 사용하여 **MediaPlayer**의 두 인스턴스를 제어하는 방법을 보여 줍니다. 먼저 **MediaPlayer**의 각 인스턴스가 인스턴스화되고 **Source**는 미디어 파일로 설정됩니다. 다음 새 **MediaTimelineController**가 만들어집니다. 각 **MediaPlayer**에서 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) 속성을 false로 설정하면 각 플레이어에 연결된 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)가 사용할 수 없도록 설정됩니다. 그런 다음 [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController) 속성이 타임라인 컨트롤러 개체로 설정됩니다.
+###Implement playback controls
+The following example shows how to use a **MediaTimelineController** to control two instances of **MediaPlayer**. First, each instance of the **MediaPlayer** is instantiated and the **Source** is set to a media file. Next, a new **MediaTimelineController** is created. For each **MediaPlayer**, the [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) associated with each player is disabled by setting the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) property to false. And then then the [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController) property is set to the timeline controller object.
 
 [!code-cs[DeclareMediaTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaTimelineController)]
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**주의** [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)는 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤) 간에 자동 통합을 제공하지만 이 자동 통합은 **MediaTimelineController**로 제어되는 미디어 플레이어와 함께 사용할 수 없습니다. 따라서 플레이어의 타임라인 컨트롤러를 설정하기 전에 미디어 플레이어에 대한 명령 관리자를 사용하지 않도록 설정해야 합니다. 그러지 않으면 예외가 발생하고 "Attaching Media Timeline Controller is blocked because of the current state of the object(개체의 현재 상태 때문에 미디어 타임라인 컨트롤러의 연결이 차단되었습니다.)" 메시지가 표시됩니다. SMTC와 미디어 플레이어 통합에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요. **MediaTimelineController**를 사용 중이면 SMTC를 수동으로 계속 제어할 수 있습니다. 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
+**Caution** The [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) provides automatic integration between **MediaPlayer** and the System Media Transport Controls (SMTC), but this automatic integration can't be used with media players that are controlled with a **MediaTimelineController**. Therefore you must disable the command manager for the media player before setting the player's timeline controller. Failure to do so will result in an exception being thrown with the following message: "Attaching Media Timeline Controller is blocked because of the current state of the object." For more information on media player integration with the SMTC, see [Integrate with the System Media Transport Controls](integrate-with-systemmediatransportcontrols.md). If you are using a **MediaTimelineController** you can still control the SMTC manually. For more information, see [Manual control of the System Media Transport Controls](system-media-transport-controls.md).
 
-하나 이상의 미디어 플레이어에 **MediaTimelineController**를 연결한 후 컨트롤러에서 노출하는 메서드를 사용하여 재생 상태를 제어할 수 있습니다. 다음 예제에서는 [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start)를 호출하여 미디어 시작 시 모든 관련 미디어 플레이어의 재생을 시작합니다.
+Once you have attached a **MediaTimelineController** to one or more media players, you can control the playback state by using the methods exposed by the controller. The following example calls [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start) to begin playback of all associated media players at the beginning of the media.
 
 [!code-cs[PlayButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPlayButtonClick)]
 
-이 예제는 연결된 모든 미디어 플레이어를 일시 중지 및 다시 시작하는 방법을 보여 줍니다.
+This example illustrates pausing and resuming all of the attached media players.
 
 [!code-cs[PauseButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPauseButtonClick)]
 
-연결된 모든 미디어 플레이어를 빨리 감으려면 재생 속도를 1보다 큰 값으로 설정합니다.
+To fast-forward all connected media players, set the playback speed to a value greater that 1.
 
 [!code-cs[FastForwardButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetFastForwardButtonClick)]
 
-다음 예제는 연결된 미디어 플레이어 중 하나의 콘텐츠 기간을 기준으로 타임라인 컨트롤러의 현재 재생 위치를 표시하는 **Slider** 컨트롤을 사용하는 방법을 보여 줍니다. 먼저 새 **MediaSource**가 만들어지고 미디어 소스의 [**OpenOperationCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource.OpenOperationCompleted)에 대한 처리기가 등록됩니다. 
+The next example shows how to use a **Slider** control to show the current playback position of the timeline controller relative to the duration of the content of one of the connected media players. First, a new **MediaSource** is created and a handler for the [**OpenOperationCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource.OpenOperationCompleted) of the media source is registered. 
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)에 대한 호출 내에 설정됩니다.
+The **OpenOperationCompleted** handler is used as an opportunity to discover the duration of the media source content. Once the duration is determined, the maximum value of the **Slider** control is set to the total number of seconds of the media item. The value is set inside a call to [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) to make sure it is run on the UI thread.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 
 [!code-cs[OpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenCompleted)]
 
-다음으로 타임라인 컨트롤러의 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.PositionChanged) 이벤트에 대한 처리기가 등록됩니다. 이 이벤트 처리기는 초당 약 4번 주기적으로 시스템에서 호출합니다.
+Next, a handler for the timeline controller's  [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.PositionChanged) event is registered. This is called periodically by the system, approximately 4 times per second.
 
 [!code-cs[RegisterPositionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterPositionChanged)]
 
-**PositionChanged**에 대한 처리기에서 슬라이더 값은 타임라인 컨트롤러의 현재 위치를 반영하도록 업데이트됩니다.
+In the handler for **PositionChanged**, the slider value is updated to reflect the current position of the timeline controller.
 
 [!code-cs[PositionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPositionChanged)]
 
-###타임라인 위치에서 재생 위치 오프셋
-경우에 따라 타임라인 컨트롤러와 연결된 하나 이상의 미디어 플레이어의 재생 위치를 다른 플레이어에서 오프셋되도록 할 수 있습니다. 오프셋하려는 **MediaPlayer** 개체의 [**TimelineControllerPositionOffset**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineControllerPositionOffset) 속성을 설정하여 이 작업을 수행할 수 있습니다. 다음 예제에서는 두 미디어 플레이어의 콘텐츠 기간을 사용하여 항목의 길이를 더하거나 빼는 두 슬라이더 컨트롤의 최소값과 최대값을 설정합니다.  
+###Offset the playback position from the timeline position
+In some cases you may want the playback position of one or more media players associated with a timeline controller to be offset from the other players. You can do this by setting the [**TimelineControllerPositionOffset**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineControllerPositionOffset) property of the **MediaPlayer** object you want to be offset. The following example uses the durations of the content of two media players to set the minimum and maximum values of two slider control to plus and minus the length of the item.  
 
 [!code-cs[OffsetSliders](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOffsetSliders)]
 
-각 슬라이더에 대한 [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.RangeBase.ValueChanged) 이벤트에서 각 플레이어에 대한 **TimelineControllerPositionOffset**이 해당 값으로 설정됩니다.
+In the [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.RangeBase.ValueChanged) event for each slider, the **TimelineControllerPositionOffset** for each player is set to the corresponding value.
 
 [!code-cs[TimelineOffset](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetTimelineOffset)]
 
-플레이어의 오프셋 값이 음수 재생 위치에 매핑되면 클립이 일시 중지되었다가 오프셋이 0이 되면 재생이 시작됩니다. 마찬가지로 오프셋 값이 미디어 항목 기간보다 큰 재생 위치에 매핑되면 단일 미디어 플레이어가 콘텐츠의 끝에 도달할 때와 같이 마지막 프레임이 표시됩니다.
+Note that if the offset value of a player maps to a negative playback position, the clip will remain paused until the offset reaches zero and then playback will begin. Likewise, if the offset value maps to a playback position greater than the duration of the media item, the final frame will be shown, just as it does when a single media player reached the end of its content.
 
-## 관련 항목
-* [미디어 재생](media-playback.md)
-* [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)
-* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
-* [미디어 중단 만들기, 예약 및 관리](create-schedule-and-manage-media-breaks.md)
-* [백그라운드에서 미디어 재생](background-audio.md)
-
-
-
-
-
- 
-
- 
+## Related topics
+* [Media playback](media-playback.md)
+* [Media items, playlists, and tracks](media-playback-with-mediasource.md)
+* [Integrate with the Sytem Media Transport Controls](integrate-with-systemmediatransportcontrols.md)
+* [Create, schedule, and manage media breaks](create-schedule-and-manage-media-breaks.md)
+* [Play media in the background](background-audio.md)
 
 
 
 
 
+ 
+
+ 
 
 
-<!--HONumber=Aug16_HO3-->
 
 

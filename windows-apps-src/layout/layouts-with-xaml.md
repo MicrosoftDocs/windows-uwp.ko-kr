@@ -7,7 +7,7 @@ label: Page layouts with XAML
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 681023be35b01eac84272a73d1ae3e7a459351db
-ms.openlocfilehash: 8ca8852df2747410b9d139b55a4f24366cc0eefc
+ms.openlocfilehash: 0cc466ccdc4d214539fb4258f95fda72e08ac9db
 
 ---
 # XAML을 사용하여 페이지 레이아웃 정의
@@ -16,22 +16,22 @@ XAML은 자동 크기 조정, 레이아웃 패널, 시각적 상태 및 별도�
 
 여기서는 XAML 속성 및 레이아웃 패널을 사용하여 반응성이 뛰어난 적응형 앱을 만드는 방법을 살펴봅니다. 이 내용은 [UWP 앱 디자인 소개](../layout/design-and-ui-intro.md)에 있는 반응형 UI 디자인 및 기술과 관련한 중요한 정보를 기반으로 합니다. 유효 픽셀이 무엇인지 이해하고 위치 변경, 크기 조정, 재배치, 표시, 바꾸기, 다시 설계와 같은 각각의 반응형 디자인 기술을 이해하게 됩니다.
 
-> **참고**&nbsp;&nbsp;앱 레이아웃은 개발자가 선택하는 탐색 모델(예: ['탭 및 피벗'](../controls-and-patterns/tabs-pivot.md) 모델을 사용하는 [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 또는 ['탐색 창'](../controls-and-patterns/nav-pane.md) 모델을 사용하는 [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 사용)로 시작합니다. 이에 대한 자세한 내용은 [UWP 앱용 탐색 디자인 기본 사항](../layout/navigation-basics.md)을 참조하세요. 여기에서는 여러 요소로 구성된 단일 페이지 또는 그룹의 레이아웃을 반응형으로 만드는 기술에 대해 살펴보겠습니다. 이 정보는 앱에 어떤 탐색 모델을 선택하는지와 관계없이 적용할 수 있습니다.
+> **참고** &nbsp;&nbsp;앱 레이아웃은 개발자가 선택하는 탐색 모델(예: ['탭 및 피벗'](../controls-and-patterns/tabs-pivot.md) 모델을 사용하는 [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 또는 ['탐색 창'](../controls-and-patterns/nav-pane.md) 모델을 사용하는 [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) 사용)로 시작합니다. 이에 대한 자세한 내용은 [UWP 앱용 탐색 디자인 기본 사항](../layout/navigation-basics.md)을 참조하세요. 여기에서는 여러 요소로 구성된 단일 페이지 또는 그룹의 레이아웃을 반응형으로 만드는 기술에 대해 살펴보겠습니다. 이 정보는 앱에 어떤 탐색 모델을 선택하는지와 관계없이 적용할 수 있습니다.
 
 XAML 프레임워크는 반응형 UI를 만드는 데 사용할 수 있는 여러 수준의 최적화를 제공합니다.
-- **유동 레이아웃**
-   레이아웃 속성 및 패널을 사용하여 기본 UI를 유동으로 만듭니다.
+- **유동 레이아웃** 
+             레이아웃 속성 및 패널을 사용하여 기본 UI를 유동으로 만듭니다.
 
     반응형 레이아웃의 기초는 콘텐츠의 위치 변경, 크기 조정 및 재배치를 위해 레이아웃 속성 및 패널을 적절하게 사용하는 것입니다. 요소에 고정된 크기를 설정하거나 자동 크기 조정을 사용하여 부모 레이아웃 패널에서 크기를 지정할 수 있습니다. [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) 및 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)과 같은 다양한 [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx) 클래스에서 자식 클래스의 크기와 위치를 다양한 방법으로 지정할 수 있습니다.
 
-- **적응형 레이아웃**
-   시각적 상태를 사용하여 창 크기 또는 기타 변경 사항에 따라 UI를 크게 변경할 수 있습니다.
+- **적응형 레이아웃** 
+             시각적 상태를 사용하여 창 크기 또는 기타 변경 사항에 따라 UI를 크게 변경할 수 있습니다.
 
     앱 창이 일정 수준 이상으로 늘어나거나 줄어드는 경우 레이아웃 속성을 변경하여 UI 섹션에 대해 위치 변경, 크기 조정, 재배치, 표시 또는 바꾸기 작업을 수행할 수 있습니다. UI에 다양한 시각적 상태를 정의한 후 창 너비 또는 창 높이가 지정한 임계값을 넘어가면 적용할 수 있습니다. [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) 클래스를 통해 상태가 적용되는 임계값('중단점'이라고도 함)을 쉽게 설정할 수 있습니다.
 
-- **맞춤형 레이아웃**
-   맞춤형 레이아웃은 특정 디바이스 패밀리 또는 화면 크기 범위에 맞게 최적화됩니다. 디바이스 패밀리 내에서 맞춤형 레이아웃은 지원되는 창 크기 범위에서 여전히 변경 사항에 응답하고 알맞게 조정됩니다.
-    > **참고**&nbsp;&nbsp; [휴대폰용 Continuum](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결할 수 있습니다. 이 기능은 휴대폰과 데스크톱 디바이스 패밀리의 구분을 희미하게 합니다.
+- **맞춤형 레이아웃** 
+             맞춤형 레이아웃은 특정 디바이스 패밀리 또는 화면 크기 범위에 맞게 최적화됩니다. 디바이스 패밀리 내에서 맞춤형 레이아웃은 지원되는 창 크기 범위에서 여전히 변경 사항에 응답하고 알맞게 조정됩니다.
+    > **참고** &nbsp;&nbsp; [휴대폰용 Continuum](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결할 수 있습니다. 이 기능은 휴대폰과 데스크톱 디바이스 패밀리의 구분을 희미하게 합니다.
 
     맞춤식 포함 방법
     - 사용자 지정 트리거 만들기
@@ -66,7 +66,7 @@ XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모
 
 UI 요소가 해당 콘텐츠 또는 부모 컨테이너에 맞게 크기를 조정하려면 자동 크기 조정을 사용합니다. 그리드의 행과 열에서 자동 크기 조정을 사용할 수도 있습니다. 자동 크기 조정을 사용하려면 UI 요소의 Height 및/또는 Width를 **Auto**로 설정합니다.
 
-> **참고**&nbsp;&nbsp;요소가 해당 콘텐츠에 맞게 크기를 조정할지 아니면 해당 컨테이너에 맞게 크기를 조정할지 여부는 해당 [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성의 값, 부모 컨테이너가 자식의 크기를 처리하는 방법에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [맞춤]() 및 [레이아웃 패널]()을 참조하세요.
+> **참고** &nbsp;&nbsp;요소가 해당 콘텐츠에 맞게 크기를 조정할지 아니면 해당 컨테이너에 맞게 크기를 조정할지 여부는 해당 [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) 속성의 값, 부모 컨테이너가 자식의 크기를 처리하는 방법에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [맞춤]() 및 [레이아웃 패널]()을 참조하세요.
 
 가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다. XAML에서는 배율 값이 \*(또는 가중 배율 크기 조정의 경우 *n*\*)로 표현됩니다. 예를 들어 2열 레이아웃에서 첫 번째 열을 두 번째 열보다 5배 너비로 지정하려면 [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx) 요소에서 [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx) 속성에 대해 "5\*" 및 "\*"를 사용합니다.
 
@@ -150,7 +150,7 @@ Margin 및 Padding의 왼쪽, 오른쪽, 위쪽 및 아래쪽 값은 대칭이 �
 
 코드 또는 시각적 상태에서 요소의 Visibility 속성을 변경할 수 있습니다. 요소의 Visibility가 변경되는 경우 해당하는 모든 자식 요소도 변경됩니다. 한 패널을 표시하고 다른 패널은 축소하여 UI의 섹션을 바꿀 수 있습니다.
 
-> **팁**&nbsp;&nbsp;기본적으로 **Collapsed**인 요소가 UI에 있는 경우 비록 보이지 않아도 시작할 때 해당 개체는 여전히 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
+> **팁** &nbsp;&nbsp;기본적으로 **Collapsed**인 요소가 UI에 있는 경우 비록 보이지 않아도 시작할 때 해당 개체는 여전히 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
 
 ### 스타일 리소스
 
@@ -277,7 +277,7 @@ Windows 10부터는 여기 나와 있는 것처럼 간소화된 [**Setter**](htt
 </Page>
 ```
 
-> **중요**&nbsp;&nbsp;이전 예제에서는 VisualStateManager.VisualStateGroups 연결된 속성이 **Grid** 요소에 설정되었습니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
+> **중요** &nbsp;&nbsp;이전 예제에서는 VisualStateManager.VisualStateGroups 연결된 속성이 **Grid** 요소에 설정되었습니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
 
 ### 연결된 속성 구문
 
@@ -381,7 +381,7 @@ XAML 보기를 사용하여 동일한 코드 숨김을 공유하는 다른 UI �
 
 **앱에 XAML 보기를 추가하려면**
 1. 프로젝트 &gt; 새 항목 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
-    > **팁**&nbsp;&nbsp;솔루션이 아닌 폴더나 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
+    > **팁** &nbsp;&nbsp;솔루션이 아닌 폴더나 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
 2. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다.
 3. 가운데 창에서 XAML 보기를 선택합니다.
 4. 보기의 이름을 입력합니다. 보기의 이름은 올바르게 지정되어야 합니다. 이름 지정에 대한 자세한 내용은 이 섹션의 나머지 부분을 참조하세요.
@@ -415,7 +415,7 @@ MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 모바일 
 
 **앱에 XAML 페이지를 추가하려면**
 1. 프로젝트 &gt; 새 항목 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
-    > **팁**&nbsp;&nbsp;솔루션이 아닌 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
+    > **팁** &nbsp;&nbsp;솔루션이 아닌 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
 2. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다.
 3. 가운데 창에서 빈 페이지를 선택합니다.
 4. 페이지 이름을 입력합니다. 예를 들어 "MainPage_Mobile"입니다. MainPage_Mobile.xaml 및 MainPage_Mobile.xaml.cs/vb/cpp 코드 파일이 둘 다 생성됩니다.
@@ -438,6 +438,6 @@ else
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

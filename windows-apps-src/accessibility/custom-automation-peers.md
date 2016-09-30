@@ -6,8 +6,8 @@ title: "사용자 지정 자동화 피어"
 label: Custom automation peers
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 9e1a458fa7ec51d621156e3ec6ed97b0361a6217
-ms.openlocfilehash: be53632455fe2fa847cc77c82ed0c2e2edff6685
+ms.sourcegitcommit: 99b53a9435f23099a8765ef5de942e803642087d
+ms.openlocfilehash: 3f3d5854114b1289257368f8e0fa618bd7d58c90
 
 ---
 
@@ -21,8 +21,8 @@ UI 자동화를 통해 화면 읽기 프로그램과 같은 접근성 응용 프
 
 UI 자동화 프레임워크를 사용하는 두 개의 대상 그룹이 있습니다.
 
-* **UI 자동화* 클라이언트***는 UI 자동화 API를 호출하여 현재 사용자에게 표시되는 모든 UI에 대해 알아봅니다. 예를 들어 화면 읽기 프로그램 같은 보조 기술은 UI 자동화 클라이언트 역할을 합니다. UI는 관련된 자동화 요소의 트리로 제공됩니다. UI 자동화 클라이언트가 한 번에 하나의 앱에만 관련이 있거나 전체 트리에 관련이 있을 수 있습니다. UI 자동화 클라이언트는 UI 자동화 API를 사용하여 트리를 탐색하고 자동화 요소의 정보를 읽거나 변경할 수 있습니다.
-* **UI 자동화* 공급자***는 앱의 일부로 도입한 요소를 UI에 표시하는 API를 구현하여 UI 자동화 트리에 정보를 제공합니다. 이제 새 컨트롤을 만들 때 사용자는 UI 자동화 공급자 시나리오에서 참가자 역할을 해야 합니다. 공급자로서 사용자는 모든 UI 자동화 클라이언트가 UI 자동화 프레임워크를 사용하여 접근성 및 테스트 용도로 컨트롤을 조작할 수 있도록 해야 합니다.
+* UI 자동화 *클라이언트*는 UI 자동화 API를 호출하여 현재 사용자에게 표시되는 모든 UI에 대해 알아봅니다. 예를 들어 화면 읽기 프로그램 같은 보조 기술은 UI 자동화 클라이언트 역할을 합니다. UI는 관련된 자동화 요소의 트리로 제공됩니다. UI 자동화 클라이언트가 한 번에 하나의 앱에만 관련이 있거나 전체 트리에 관련이 있을 수 있습니다. UI 자동화 클라이언트는 UI 자동화 API를 사용하여 트리를 탐색하고 자동화 요소의 정보를 읽거나 변경할 수 있습니다.
+* UI 자동화 *공급자*는 앱의 일부로 도입한 요소를 UI에 표시하는 API를 구현하여 UI 자동화 트리에 정보를 제공합니다. 이제 새 컨트롤을 만들 때 사용자는 UI 자동화 공급자 시나리오에서 참가자 역할을 해야 합니다. 공급자로서 사용자는 모든 UI 자동화 클라이언트가 UI 자동화 프레임워크를 사용하여 접근성 및 테스트 용도로 컨트롤을 조작할 수 있도록 해야 합니다.
 
 일반적으로 UI 자동화 프레임워크에는 각각 UI 자동화 클라이언트용 API와 유사한 이름의 UI 자동화용 API 등 병렬 API가 있습니다. 이 항목의 대부분에서는 UI 자동화 공급자용 API와 특히 이 UI 프레임워크에서 공급자 확장성을 가능하게 하는 클래스 및 인터페이스에 대해 다룹니다. 특정 관점을 제공하거나 클라이언트와 공급자 API를 연결하는 조회 테이블을 제공하기 위해 UI 자동화 클라이언트가 사용하는 UI 자동화 API를 언급하는 경우도 있습니다. 클라이언트 관점에 대한 자세한 내용은 [UI 자동화 클라이언트 프로그래머 가이드](https://msdn.microsoft.com/library/windows/desktop/Ee684021)를 참조하세요.
 
@@ -334,9 +334,9 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 
 일부 컨트롤은 텍스트 레이블 부분이 비텍스트 부분에 대한 정보를 제공하거나 컨트롤이 UI의 다른 컨트롤과 알려진 레이블 지정 관계에 있어야 하는 레이블 지정 시나리오를 지원할 수 있습니다. 유용한 클래스 기반 동작을 제공할 수 있는 경우 [**GetLabeledByCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getlabeledbycore)를 재정의하여 이 동작을 제공할 수 있습니다.
 
-[**GetBoundingRectangleCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore) 및 [**GetClickablePointCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore)는 주로 자동화된 테스트 시나리오에 사용됩니다. 컨트롤에 대해 자동화된 테스트를 지원하려는 경우 이러한 메서드를 재정의할 수 있습니다. 이는 사용자가 좌표 공간에서 클릭하는 위치가 범위에 다른 효과를 주기 때문에 단일 지점을 제안할 수 없는 경우 범위 형식 컨트롤에 적합할 수 있습니다. 예를 들어 기본 [**ScrollBar**](https://msdn.microsoft.com/library/windows/apps/BR209745) 자동화 피어가 **GetClickablePointCore**를 재정의하여 "숫자가 아닌" [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 반환하도록 합니다.
+[ **GetBoundingRectangleCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore) 및 [**GetClickablePointCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore)는 주로 자동화된 테스트 시나리오에 사용됩니다. 컨트롤에 대해 자동화된 테스트를 지원하려는 경우 이러한 메서드를 재정의할 수 있습니다. 이는 사용자가 좌표 공간에서 클릭하는 위치가 범위에 다른 효과를 주기 때문에 단일 지점을 제안할 수 없는 경우 범위 형식 컨트롤에 적합할 수 있습니다. 예를 들어 기본 [**ScrollBar**](https://msdn.microsoft.com/library/windows/apps/BR209745) 자동화 피어가 **GetClickablePointCore**를 재정의하여 "숫자가 아닌" [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 반환하도록 합니다.
 
-[**GetLiveSettingCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getlivesettingcore)는 UI 자동화의 **LiveSetting** 값에 대한 컨트롤 기본값에 영향을 줍니다. 컨트롤에서 [**AutomationLiveSetting.Off**](https://msdn.microsoft.com/library/windows/apps/JJ191519)가 아닌 값을 반환하도록 하려는 경우 이를 재정의할 수 있습니다. **LiveSetting**이 나타내는 내용에 대한 자세한 내용은 [**AutomationProperties.LiveSetting**](https://msdn.microsoft.com/library/windows/apps/JJ191516)을 참조하세요.
+[ **GetLiveSettingCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getlivesettingcore)는 UI 자동화의 **LiveSetting** 값에 대한 컨트롤 기본값에 영향을 줍니다. 컨트롤에서 [**AutomationLiveSetting.Off**](https://msdn.microsoft.com/library/windows/apps/JJ191519)가 아닌 값을 반환하도록 하려는 경우 이를 재정의할 수 있습니다. **LiveSetting**이 나타내는 내용에 대한 자세한 내용은 [**AutomationProperties.LiveSetting**](https://msdn.microsoft.com/library/windows/apps/JJ191516)을 참조하세요.
 
 컨트롤에 [**AutomationOrientation**](https://msdn.microsoft.com/library/windows/apps/BR209184)으로 매핑할 수 있는, 설정 가능한 방향 속성이 있는 경우 [**GetOrientationCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getorientationcore)를 재정의할 수 있습니다. [**ScrollBarAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242522) 및 [**SliderAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242546) 클래스가 이 역할을 수행합니다.
 
@@ -346,15 +346,15 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### FrameworkElementAutomationPeer의 기본 구현  
 [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472)의 기본 구현에서는 프레임워크 수준에서 정의되는 다양한 레이아웃 및 동작 속성에서 해석될 수 있는 UI 자동화 정보를 제공합니다.
 
-* [**GetBoundingRectangleCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): 알려진 레이아웃 특성을 기준으로 [**Rect**](https://msdn.microsoft.com/library/windows/apps/BR225994) 구조를 반환합니다. [**IsOffscreen**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)이 **true**이면 0 값 **Rect**를 반환합니다.
-* [**GetClickablePointCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore): 0이 아닌 **BoundingRectangle**이 있는 한 알려진 레이아웃 특성을 기준으로 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 구조를 반환합니다.
-* [**GetNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 여기서 요약할 수 있는 것보다 광범위한 동작이 있습니다. [**GetNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getnamecore)를 참조하세요. 기본적으로 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365)의 알려진 콘텐츠나 콘텐츠가 있는 관련 클래스에서 문자열 변환을 시도합니다. 또한 [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) 값이 있는 경우 해당 항목의 **Name** 값이 **Name**으로 사용됩니다.
-* [**HasKeyboardFocusCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.haskeyboardfocuscore): 소유자의 [**FocusState**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.focusstate) 및 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled) 속성을 기준으로 평가됩니다. 컨트롤이 아닌 요소는 항상 **false**를 반환합니다.
-* [**IsEnabledCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isenabledcore): [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)인 경우 소유자의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled) 속성을 기준으로 평가됩니다. 컨트롤이 아닌 요소는 항상 **true**를 반환합니다. 이는 기존 조작의 측면에서 소유자를 사용할 수 있다는 것이 아니라 소유자에게 **IsEnabled** 속성이 없어도 피어를 사용할 수 있다는 것을 의미합니다.
-* [**IsKeyboardFocusableCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.iskeyboardfocusablecore): 소유자가 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)이면 **true**를 반환하고, 그렇지 않으면 **false**입니다.
-* [**IsOffscreenCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreencore): 소유자 요소나 부모 중 하나에서 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility)가 [**Collapsed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visibility)이면 [**IsOffscreen**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)이 **true** 값인 경우와 같습니다. 예외: 소유자의 부모가 표시되지 않아도 [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) 개체가 표시될 수 있습니다.
-* [**SetFocusCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.setfocuscore): [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161)를 호출합니다.
-* [**GetParent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getparent): 소유자에서 [**FrameworkElement.Parent**](https://msdn.microsoft.com/library/windows/apps/BR208739)를 호출하고 적절한 피어를 조회합니다. "Core" 메서드와의 재정의 쌍이 아니므로 이 동작은 변경할 수 없습니다.
+* [ **GetBoundingRectangleCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): 알려진 레이아웃 특성을 기준으로 [**Rect**](https://msdn.microsoft.com/library/windows/apps/BR225994) 구조를 반환합니다. [**IsOffscreen**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)이 **true**이면 0 값 **Rect**를 반환합니다.
+* [ **GetClickablePointCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore): 0이 아닌 **BoundingRectangle**이 있는 한 알려진 레이아웃 특성을 기준으로 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 구조를 반환합니다.
+* [ **GetNameCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 여기서 요약할 수 있는 것보다 광범위한 동작이 있습니다. [**GetNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getnamecore)를 참조하세요. 기본적으로 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365)의 알려진 콘텐츠나 콘텐츠가 있는 관련 클래스에서 문자열 변환을 시도합니다. 또한 [**LabeledBy**](https://msdn.microsoft.com/library/windows/apps/Hh759769) 값이 있는 경우 해당 항목의 **Name** 값이 **Name**으로 사용됩니다.
+* [ **HasKeyboardFocusCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.haskeyboardfocuscore): 소유자의 [**FocusState**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.focusstate) 및 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled) 속성을 기준으로 평가됩니다. 컨트롤이 아닌 요소는 항상 **false**를 반환합니다.
+* [ **IsEnabledCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isenabledcore): [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)인 경우 소유자의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled) 속성을 기준으로 평가됩니다. 컨트롤이 아닌 요소는 항상 **true**를 반환합니다. 이는 기존 조작의 측면에서 소유자를 사용할 수 있다는 것이 아니라 소유자에게 **IsEnabled** 속성이 없어도 피어를 사용할 수 있다는 것을 의미합니다.
+* [ **IsKeyboardFocusableCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.iskeyboardfocusablecore): 소유자가 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)이면 **true**를 반환하고, 그렇지 않으면 **false**입니다.
+* [ **IsOffscreenCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreencore): 소유자 요소나 부모 중 하나에서 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility)가 [**Collapsed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visibility)이면 [**IsOffscreen**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)이 **true** 값인 경우와 같습니다. 예외: 소유자의 부모가 표시되지 않아도 [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842) 개체가 표시될 수 있습니다.
+* [ **SetFocusCore** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.setfocuscore): [**Focus**](https://msdn.microsoft.com/library/windows/apps/hh702161)를 호출합니다.
+* [ **GetParent** ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getparent): 소유자에서 [**FrameworkElement.Parent**](https://msdn.microsoft.com/library/windows/apps/BR208739)를 호출하고 적절한 피어를 조회합니다. "Core" 메서드와의 재정의 쌍이 아니므로 이 동작은 변경할 수 없습니다.
 
 > [!NOTE]
 > 기본 UWP 피어는 UWP를 구현하는 네이티브 코드를 사용하여 동작을 구현합니다. 실제 UWP 코드를 사용하지 않아도 됩니다. CLR(공용 언어 런타임) 리플렉션 또는 다른 기술을 통해 구현 코드나 논리를 확인할 수 없습니다. 또한 기본 피어 동작의 서브클래스별 재정의를 위한 개별 참조 페이지가 표시되지 않습니다. 예를 들어 [**TextBoxAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242550)의 [**GetNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getnamecore)에 대해 추가 동작이 있을 수 있으며, 이러한 추가 동작에 대해서는 **AutomationPeer.GetNameCore** 참조 페이지에서 설명되지 않고 **TextBoxAutomationPeer.GetNameCore**에 대한 참조 페이지가 없습니다. **TextBoxAutomationPeer.GetNameCore** 참조 페이지도 없습니다. 대신 직계 피어 클래스에 대한 참조 항목을 읽고 설명 섹션에서 구현 참고 사항을 찾습니다.
@@ -482,6 +482,6 @@ UWP 앱 텍스트 컨트롤 중 하나에서 파생하고 텍스트 관련 피�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

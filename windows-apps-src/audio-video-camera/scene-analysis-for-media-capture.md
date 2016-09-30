@@ -2,14 +2,14 @@
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: "이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다."
-title: "카메라 프레임 분석 효과"
+title: "미디어 캡처의 장면 분석"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 891c0d274c2d3fb82f855011158ecd3ccdcd87b3
 
 ---
 
-# 카메라 프레임 분석 효과
+# 미디어 캡처의 장면 분석
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -112,8 +112,7 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 ## 관련 항목
 
-* [카메라](camera.md)
-* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
  
 
  
@@ -124,6 +123,6 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

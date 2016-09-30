@@ -7,7 +7,7 @@ label: Touch interactions
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: ca4ab33a58391f36e376323ca29d27961a2a7404
+ms.openlocfilehash: a78dd1030e653d1cf0a1d7f191b4768e5a99860a
 
 ---
 
@@ -620,13 +620,13 @@ End Sub
 ## 관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력 디바이스 식별](identify-input-devices.md)
-**샘플**
+* [입력된 디바이스 식별](identify-input-devices.md) 
+           **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**보관 샘플**
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895) 
+           **보관 샘플**
 * [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -641,6 +641,6 @@ End Sub
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

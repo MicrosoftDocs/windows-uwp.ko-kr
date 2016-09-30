@@ -5,7 +5,7 @@ description: "Windows.Media.Editing 네임스페이스의 API를 사용하면 �
 title: "미디어 컴퍼지션 및 편집"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
+ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
 
 ---
 
@@ -155,6 +155,6 @@ ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

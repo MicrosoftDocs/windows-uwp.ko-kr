@@ -5,7 +5,7 @@ description: "Windows.Services.Maps 네임스페이스에 있는 MapLocationFind
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d42708a82f99e345183b6cbcb87cfdd136b10e52
+ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
 
 ---
 
@@ -138,6 +138,6 @@ town = Redmond
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,7 +5,7 @@ description: "이 문서에서는 이미지 메타데이터를 읽고 쓰는 방
 title: "이미지 메타데이터"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1f97bf89682bee430849a6b962c68a8c4877a609
+ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
 
 ---
 
@@ -92,6 +92,6 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

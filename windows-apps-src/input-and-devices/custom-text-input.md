@@ -7,7 +7,7 @@ label: Custom text input
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 614c1b8f319ea1925cd15c5ad1a3093b2bce54d3
+ms.openlocfilehash: 31f10b862ba53f2ba51f3936a73e874466590b30
 
 ---
 
@@ -97,9 +97,9 @@ ms.openlocfilehash: 614c1b8f319ea1925cd15c5ad1a3093b2bce54d3
 
 ![텍스트 스트림 다이어그램의 예](images/coretext/stream-3.png) 사용자가 "d"를 입력하면 다음 [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229) 데이터가 포함된 상태로 [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176) 이벤트가 발생합니다.
 
--   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
--   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
+-   [ **Range** ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+-   [ **Text** ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [ **NewSelection** ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
 편집 컨트롤에서 지정된 변경 내용을 적용하고 [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235)를 **Succeeded**로 설정합니다. 다음은 변경 내용이 적용된 후 컨트롤의 상태입니다.
 
@@ -165,6 +165,6 @@ ms.openlocfilehash: 614c1b8f319ea1925cd15c5ad1a3093b2bce54d3
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

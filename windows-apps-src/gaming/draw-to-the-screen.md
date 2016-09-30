@@ -5,7 +5,7 @@ description: "마지막으로, 화면에 회전하는 큐브를 그리는 코드
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1e2039743ba45d577c08c0a6d9c17c7f923b2d86
+ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
 
 ---
 
@@ -222,6 +222,6 @@ void RenderObject::Render()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,7 +5,7 @@ title: "XAML UI에 대한 3D 원근감 효과"
 description: "원근 변형을 사용하여 Windows 런타임 앱의 콘텐츠에 3D 효과를 적용할 수 있습니다. 예를 들어 아래와 같이 개체가 회전하면서 다가오거나 멀어지는 환상 효과를 만들 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
-ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
+ms.openlocfilehash: 4141d23c5102df4970ef7c4fb3659bf3ba561ccf
 
 ---
 # XAML UI에 대한 3D 원근감 효과
@@ -186,6 +186,6 @@ ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

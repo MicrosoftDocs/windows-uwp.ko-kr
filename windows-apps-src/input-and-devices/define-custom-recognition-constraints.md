@@ -7,7 +7,7 @@ label: Define custom recognition constraints
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
+ms.openlocfilehash: 75e7367ee13357d3463213ca7d8f1ff37c4f0b77
 
 ---
 
@@ -241,6 +241,6 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

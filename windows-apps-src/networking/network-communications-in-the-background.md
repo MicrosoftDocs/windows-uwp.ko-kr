@@ -4,8 +4,8 @@ description: "앱은 포그라운드에 없을 때 통신을 유지하기 위해
 title: "백그라운드에서의 네트워크 통신"
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 translationtype: Human Translation
-ms.sourcegitcommit: eea01135c60df0323b73bf3fda8b44e6d02cd04b
-ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
 
 ---
 
@@ -18,13 +18,7 @@ ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
 -   [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)
 -   [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
 
-앱은 포그라운드에 없을 때 통신을 유지하기 위해 백그라운드 작업과 두 가지 기본 메커니즘, 즉 소켓 브로커와 컨트롤 채널 트리거를 사용합니다. 오랜 기간 연결하기 위해 소켓을 사용하는 앱은 포그라운드를 벗어날 때 시스템 소켓 브로커에 소켓 소유권을 위임할 수 있습니다. 그런 다음 브로커는 트래픽이 소켓에 도착하면 앱을 활성화하고 소유권을 다시 앱으로 이전하며 앱은 도착하는 트래픽을 처리합니다.
-
-## 백그라운드 작업으로 지속 시간이 짧은 네트워크 작업 수행
-
-SocketActivityTrigger 및 ControlChannelTrigger(이 항목의 뒷부분에 설명)는 앱이 백그라운드로 실행되는 경우에도 지속되는 지속 시간이 긴 네트워크 연결을 유지 관리하는 앱을 위해 디자인되었습니다. 백그라운드 작업 논리의 일부로 지속 시간이 짧은 네트워크 조작을 요구하는 앱(예: 한 개의 HTTP 요청 전달)을 핵심 네트워킹 API([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 또는 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906))로 직접 호출할 수 있습니다. 그러나 모든 환경에서 올바르게 작동하려면 이러한 작업을 특별한 방법으로 구성해야 합니다. 백그라운드 작업은 백그라운드 작업과 함께 [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) 조건을 사용하거나 백그라운드 작업 등록 시 [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) 플래그를 사용해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다.
-
-백그라운드 작업에서 여기에 설명된 대로 [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) 또는 [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx)를 사용하지 않으면 연결된 대기 상태 모드(예: 휴대폰 화면이 꺼져 있는 경우)에서 백그라운드 작업이 네트워크에 액세스할 수 없습니다.
+앱은 포그라운드에 없을 때 통신을 유지하기 위해 백그라운드 작업과 두 가지 기본 메커니즘, 즉 소켓 브로커와 컨트롤 채널 트리거를 사용합니다. 소켓을 사용하는 앱은 포그라운드를 벗어날 때 시스템 소켓 브로커에 소켓 소유권을 위임할 수 있습니다. 그런 다음 브로커는 트래픽이 소켓에 도착하면 앱을 활성화하고 소유권을 다시 앱으로 이전하며 앱은 도착하는 트래픽을 처리합니다.
 
 ## 소켓 브로커 및 SocketActivityTrigger
 
@@ -32,8 +26,10 @@ SocketActivityTrigger 및 ControlChannelTrigger(이 항목의 뒷부분에 설�
 
 앱이 활성 상태가 아닐 때 앱이 소켓에서 데이터를 수신하고 수신한 데이터를 처리하도록 하려면 앱은 시작 시 일회성 설정 작업을 수행한 다음 비활성 상태로 전환할 때 소켓 브로커에 소켓 소유권을 이전해야 합니다.
 
-일회성 설정 단계는 트리거 만들기, 트리거를 위해 백그라운드 작업 등록 및 소켓 브로커를 위해 소켓 설정 등입니다.
-  - **SocketActivityTrigger**를 만들고 TaskEntryPoint 매개 변수가 수신된 패킷을 처리하기 위한 코드로 설정되어 있는 트리거에 대해 백그라운드 작업을 등록합니다.
+-   일회성 설정 단계:
+
+    -   SocketActivityTrigger를 만들고 TaskEntryPoint 매개 변수가 수신된 패킷을 처리하기 위한 코드로 설정되어 있는 트리거에 대해 백그라운드 작업을 등록합니다.
+
 ```csharp
             var socketTaskBuilder = new BackgroundTaskBuilder(); 
             socketTaskBuilder.Name = _backgroundTaskName; 
@@ -42,7 +38,10 @@ SocketActivityTrigger 및 ControlChannelTrigger(이 항목의 뒷부분에 설�
             socketTaskBuilder.SetTrigger(trigger); 
             _task = socketTaskBuilder.Register(); 
 ```
-  - 소켓을 바인딩하기 전에 소켓에서 **EnableTransferOwnership**을 호출합니다.
+
+    -   Call EnableTransferOwnership on the socket, before you bind the socket.
+
+
 ```csharp
            _tcpListener = new StreamSocketListener(); 
           
@@ -55,12 +54,15 @@ SocketActivityTrigger 및 ControlChannelTrigger(이 항목의 뒷부분에 설�
            await _tcpListener.BindServiceNameAsync("my-service-name"); 
 ```
 
-소켓이 올바르게 설정되면 앱이 일시 중단되려고 할 때 소켓에서 **TransferOwnership**을 호출하여 소켓 브로커로 이전합니다. 브로커는 소켓을 모니터링하고 데이터가 수신되면 백그라운드 작업을 활성화합니다. 다음 예제에는 **StreamSocketListener** 소켓에 대해 이전을 수행하는 유틸리티 **TransferOwnership** 함수가 포함되어 있습니다. 여러 유형의 소켓이 각각 고유한 **TransferOwnership** 메서드를 가지고 있으므로 소유권을 이전하는 소켓에 적합한 메서드를 호출해야 합니다.) 코드에는 사용하는 각 소켓 유형에 대해 하나의 구현으로 오버로드된 **TransferOwnership** 도우미가 포함되어 있을 수 있습니다. 따라서 **OnSuspending** 코드는 계속 읽기 쉽게 유지됩니다.
+-   일시 중단 시 수행할 작업:
 
-앱에서 소켓의 소유권을 소켓 브로커로 이전하고 다음 메서드 중 적절한 메서드를 사용하여 백그라운드 작업에 대한 ID를 전달합니다.
--   [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
--   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
--   [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
+    앱이 일시 중단되려고 할 때 소켓에서 **TransferOwnership**을 호출하여 소켓 브로커로 이전합니다. 브로커는 소켓을 모니터링하고 데이터가 수신되면 백그라운드 작업을 활성화합니다. 다음 예제에는 **StreamSocketListener** 소켓에 대해 이전을 수행하는 유틸리티 **TransferOwnership** 함수가 포함되어 있습니다. 여러 유형의 소켓이 각각 고유한 **TransferOwnership** 메서드를 가지고 있으므로 소유권을 이전하는 소켓에 적합한 메서드를 호출해야 합니다.) 코드에는 사용하는 각 소켓 유형에 대해 하나의 구현으로 오버로드된 **TransferOwnership** 도우미가 포함되어 있을 수 있습니다. 따라서 **OnSuspending** 코드는 계속 읽기 쉽게 유지됩니다.
+
+    앱에서 소켓의 소유권을 소켓 브로커로 이전하고 다음 메서드 중 적절한 메서드를 사용하여 백그라운드 작업에 대한 ID를 전달합니다.
+
+    -   [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256) 메서드 중 하나
+    -   [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433) 메서드 중 하나
+    -   [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)의 [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407) 메서드 중 하나
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -82,20 +84,26 @@ SocketActivityTrigger 및 ControlChannelTrigger(이 항목의 뒷부분에 설�
         deferral.Complete(); 
     } 
 ```
-백그라운드 작업의 이벤트 처리기에서:
+
+-  백그라운드 작업의 이벤트 처리기에서:
+
    -  먼저, 비동기 메서드를 사용하여 이벤트를 처리할 수 있도록 백그라운드 작업 지연을 가져옵니다.
+
 ```csharp
 var deferral = taskInstance.GetDeferral();
 ```
+
    -  다음으로 이벤트 인수에서 SocketActivityTriggerDetails를 추출하고 이벤트가 발생한 이유를 찾습니다.
+
 ```csharp
 var details = taskInstance.TriggerDetails as SocketActivityTriggerDetails; 
     var socketInformation = details.SocketInformation; 
     switch (details.Reason) 
 ```
-   -   소켓 작업으로 인해 이벤트가 발생한 경우 소켓에 DataReader를 만들고 판독기를 비동기적으로 로드한 다음 앱의 디자인에 따라 데이터를 사용합니다. 추가 소켓 활동에 대해 다시 알림을 받으려면 소켓의 소유권을 다시 소켓 브로커에 반환해야 합니다.
 
-   다음 예제에서는 소켓에서 받은 텍스트가 알림에 표시됩니다.
+    -   If the event was raised because of socket activity, create a DataReader on the socket, load the reader asynchronously, and then use the data according to your app's design. Note that you must return ownership of the socket back to the socket broker, in order to be notified of further socket activity again.
+
+        In the following example, the text received on the socket is displayed in a toast.
 
 ```csharp
 case SocketActivityTriggerReason.SocketActivity: 
@@ -109,7 +117,7 @@ case SocketActivityTriggerReason.SocketActivity:
             break; 
 ```
 
-   -   연결 유지 타이머가 만료되었으므로 이벤트가 발생한 경우 코드는 소켓의 연결을 유지하고 연결 유지 타이머를 다시 시작하기 위해 소켓에 일부 데이터를 보내야 합니다. 다시 말하자면 추가 이벤트 알림을 받기 위해 소켓의 소유권을 다시 소켓 브로커에 반환하는 것이 중요합니다.
+    -   If the event was raised because a keep alive timer expired, then your code should send some data over the socket in order to keep the socket alive and restart the keep alive timer. Again, it is important to return ownership of the socket back to the socket broker in order to receive further event notifications:
 
 ```csharp
 case SocketActivityTriggerReason.KeepAliveTimerExpired: 
@@ -123,7 +131,7 @@ case SocketActivityTriggerReason.KeepAliveTimerExpired:
             break; 
 ```
 
-   -   소켓이 닫혔으므로 이벤트가 발생한 경우 소켓을 다시 설정하고 새 소켓을 만든 후 소켓의 소유권을 소켓 브로커로 이전합니다. 이 샘플에서는 새 소켓 연결을 설정하는데 사용할 수 있도록 호스트 이름 및 포트가 로컬 설정에 저장됩니다.
+    -   If the event was raised because the socket was closed, re-establish the socket, making sure that after you create the new socket, you transfer ownership of it to the socket broker. In this sample, the hostname and port are stored in local settings so that they can be used to establish a new socket connection:
 
 ```csharp
 case SocketActivityTriggerReason.SocketClosed: 
@@ -140,7 +148,7 @@ case SocketActivityTriggerReason.SocketClosed:
             break; 
 ```
 
-   -   이벤트 알림 처리를 완료한 후에 지연을 완료하는 것을 잊지 마세요.
+-   이벤트 알림 처리를 완료한 후에 지연을 완료하는 것을 잊지 마세요.
 
 ```csharp
   deferral.Complete();
@@ -590,6 +598,6 @@ public string ReadResponse(Task<HttpResponseMessage> httpResponseTask)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

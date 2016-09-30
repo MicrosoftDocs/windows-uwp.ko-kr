@@ -6,8 +6,8 @@ title: "기본적인 접근성 정보 표시"
 label: Expose basic accessibility information
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 05fa9bb674839c255d8b63da04a018e397c84490
-ms.openlocfilehash: a72a49756b5d2828526a39fce50357ae90549aae
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
 
 ---
 
@@ -30,7 +30,7 @@ ms.openlocfilehash: a72a49756b5d2828526a39fce50357ae90549aae
 | 이미지            | XAML [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) 요소에는 **img** 및 유사한 요소의 HTML **alt** 특성과 완전히 유사한 특징이 없습니다. [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 이름을 제공하거나 캡션 기술을 사용합니다. [이미지의 접근성 있는 이름](#images)을 참조하세요. |
 | 양식 요 소     | 양식 요소의 접근성 있는 이름은 해당 요소에 대해 표시되는 레이블과 동일해야 합니다. [레이블 및 LabeledBy](#labels)를 참조하세요. |
 | 단추 및 링크 | 기본적으로 단추 또는 링크의 접근성 있는 이름은 표시되는 텍스트를 기반으로 하며, [내부 텍스트의 이름](#name_from_inner_text)에 설명된 것과 동일한 규칙을 사용합니다. 단추에 이미지만 포함된 경우 [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)을 사용하여 단추의 의도된 동작 중 텍스트 전용 동작만 제공합니다. |
-<br/>
+
 패널과 같은 대부분의 컨테이너 요소는 해당 콘텐츠를 접근성 있는 이름으로 승격시키지 않습니다. 이 콘텐츠는 컨테이너가 아닌 이름 및 해당 역할을 보고해야 하는 항목 콘텐츠이기 때문입니다. 컨테이너 요소는 보조 기술 논리에서 해당 요소를 트래버스할 수 있도록 Microsoft UI 자동화 표현에 자식이 있는 요소로 보고할 수 있습니다. 그러나 보조 기술 사용자는 일반적으로 컨테이너에 대해 알 필요가 없으므로 대부분의 컨테이너에 이름이 지정하지 않습니다.
 
 <span id="role_value"/>
@@ -146,6 +146,6 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

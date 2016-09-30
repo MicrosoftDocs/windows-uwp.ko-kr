@@ -1,23 +1,22 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "자연스러운 필기 및 그리기 환경을 위한 디지털 잉크를 포함하여 펜 및 스타일러스 디바이스의 사용자 지정 조작이 지원되는 UWP(유니버설 Windows 플랫폼) 앱을 빌드합니다."
-title: "UWP 앱에서 펜 조작 및 Windows Ink"
+Description: "자연스러운 필기 및 그리기 환경에 위한 디지털 잉크를 포함하여 펜 및 스타일러스 디바이스의 사용자 지정 조작을 지원되는 UWP(유니버설 Windows 플랫폼) 앱을 빌드하세요."
+title: "UWP 앱에서 펜 및 스타일러스 조작"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
-label: Pen interactions and Windows Ink in UWP apps
+label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
 translationtype: Human Translation
-ms.sourcegitcommit: 8bc5612c0fc9273d32ccbfcd5b4334566d24b017
-ms.openlocfilehash: 67149f51cc16fee6f5ba818915432b18d2c1a549
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
 
 ---
 
-# UWP 앱에서 펜 조작 및 Windows Ink
+# UWP 앱에서 펜 및 스타일러스 조작
 
-UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 사용자에게 표준 [**포인터 디바이스**](https://msdn.microsoft.com/library/windows/apps/br225633) 기능과 최적의 Windows Ink 환경을 제공합니다.
+UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 사용자에게 표준 [**포인터 디바이스**](https://msdn.microsoft.com/library/windows/apps/br225633) 기능과 최적의 Windows Ink 환경을 제공하세요.
 
-> [!NOTE]
-> 이 항목은 Windows Ink 플랫폼을 중점적으로 다룹니다. 일반적인 포인터 입력 처리(마우스, 터치 및 터치 패드와 유사)는 [포인터 입력 처리](handle-pointer-input.md)를 참조하세요.
+> 참고: 이 항목은 Windows Ink 플랫폼을 중점적으로 다룹니다. 일반적인 포인터 입력 처리는 [포인터 입력 처리](handle-pointer-input.md)(마우스, 터치 및 터치 패드와 비슷함)를 참조하세요.
 
 ![터치 패드](images/input-patterns/input-pen.jpg)
 
@@ -31,45 +30,37 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 
 앱은 사용자가 필기를 하거나 그릴 때 펜의 기본 위치 및 움직임을 캡처하는 것 외에, 스트로크에 작용하는 다양한 압력 크기를 추적하고 수집할 수 있습니다. 이 정보와 펜 팁 모양, 크기 및 회전에 대한 설정, 잉크 색 및 용도(일반 잉크, 지우기, 강조 표시 및 선택)를 사용하여 펜, 연필 또는 브러시를 사용하여 종이에 쓰거나 그리는 것과 매우 비슷한 사용자 환경을 제공할 수 있습니다.
 
-> [!NOTE]
-> 앱은 터치 디지타이저 및 마우스 장치를 비롯한 기타 포인터 기반 장치의 잉크 입력을 지원합니다. 
+**참고** 앱은 터치 디지타이저 및 마우스 디바이스를 비롯한 기타 포인터 기반 디바이스의 잉크 입력을 지원합니다. 
 
-잉크 플랫폼은 매우 유연합니다. 사용자의 요구 수준에 따라 다양한 수준의 기능을 지원하도록 디자인되어 있습니다.
+잉크 플랫폼은 매우 유연합니다. 사용자의 요구 수준에 따라, 다양한 수준의 기능을 지원하도록 디자인되어 있습니다.
+
+잉크 플랫폼은 다음 세 가지 구성 요소로 이루어져 있습니다.
+
+-   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) - 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다.
+
+-   [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) - [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.
+
+-   [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 잉크 환경을 완전히 사용자 지정할 수 있습니다.
+
+## InkCanvas를 사용하는 기본 잉크 입력
 
 
+기본 잉크 기능을 사용하려면 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 페이지의 아무 위치에나 놓으면 됩니다.
 
-Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inking-controls.md)을 참조하세요.
+[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 펜의 잉크 입력만 지원합니다. 입력은 색 및 두께의 기본 설정을 사용하는 잉크 스트로크로 렌더링되거나 스트로크 지우개로 처리됩니다(지우기 끝에서 입력이 나오거나 지우기 단추를 사용하여 펜 팁을 수정한 경우).
 
-## Windows Ink 플랫폼의 구성 요소
+이 예에서 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 배경 이미지를 오버레이합니다.
 
-| 구성 요소 | 설명 |
-| --- | --- |
-| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 기본적으로 펜의 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 받아 표시하는 XAML UI 플랫폼 컨트롤입니다.<br/>InkCanvas를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
-| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤([**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.<br/>InkPresenter를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다. 관련된 InkCanvas에서 잉크 관련 기능을 활성화하는 사용자 지정 및 확장이 가능한 단추 컬렉션이 포함된 XAML UI 플랫폼 컨트롤입니다.<br/>InkToolbar를 사용하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md)를 참조하세요. |
-| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 수동 입력 환경을 완전히 사용자 지정할 수 있습니다.<br/>자세한 내용은 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요. |
-
-## InkCanvas를 사용하는 기본 수동 입력
-
-기본 수동 입력 기능을 사용하려면 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 페이지의 아무 위치에나 놓으면 됩니다.
-
-기본적으로 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 펜의 잉크 입력만 지원합니다. 입력은 색 및 두께(두께가 2픽셀인 검은색 볼펜)의 기본 설정을 사용하는 잉크 스트로크로 렌더링되거나 스트로크 지우개로 처리됩니다(지우기 끝에서 입력이 나오거나 지우기 단추를 사용하여 펜 팁을 수정한 경우).
-
-> [!NOTE]
-> 지우개 팁 또는 단추가 없는 경우 InkCanvas는 펜 팁에서 입력을 지우기 스트로크로 처리하도록 구성할 수 있습니다.
-
-이 예제에서 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)는 배경 이미지를 오버레이합니다.
-
-```xaml
+```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-        <TextBlock x:Name="Header"
-                   Text="Basic ink sample"
-                   Style="{ThemeResource HeaderTextBlockStyle}"
+        <TextBlock x:Name="Header" 
+                   Text="Basic ink sample" 
+                   Style="{ThemeResource HeaderTextBlockStyle}" 
                    Margin="10,0,0,0" />            
     </StackPanel>
     <Grid Grid.Row="1">
@@ -91,23 +82,26 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 
 ## InkPresenter를 사용한 기본 사용자 지정
 
+
 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) 개체는 각 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤을 사용하여 인스턴스화됩니다.
 
-해당 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤의 모든 기본 잉크 입력 동작을 제공할 뿐만 아니라, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 추가 스트로크 사용자 지정을 위한 포괄적인 API 집합을 제공합니다. 여기에는 스트로크 속성, 지원되는 입력 장치 유형 및 입력이 개체에 의해 처리되는지 또는 앱으로 전달되는지가 포함됩니다.
+해당 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤의 모든 기본 잉크 입력 동작을 제공할 뿐만 아니라, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 추가 스트로크 사용자 지정을 위한 포괄적인 API 집합을 제공합니다. 여기에는 스트로크 속성, 지원되는 입력 디바이스 유형 및 입력이 개체에 의해 처리되는지 또는 앱으로 전달되는지가 포함됩니다.
 
-> [!NOTE]
-> [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 액세스됩니다. 
+**참고**  
+[**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)는 직접 인스턴스화될 수 없습니다. 대신, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 속성을 통해 액세스됩니다.
+
+ 
 
 여기서 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스의 입력 데이터를 모두 잉크 스트로크로 해석하도록 구성됩니다. 또한 스트로크를 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 렌더링하는 데 사용되는 일부 초기 잉크 스트로크 특성도 설정합니다.
 
-```csharp
+```CSharp
 public MainPage()
 {
     this.InitializeComponent();
 
     // Set supported inking device types.
-    inkCanvas.InkPresenter.InputDeviceTypes =
-        Windows.UI.Core.CoreInputDeviceTypes.Mouse |
+    inkCanvas.InkPresenter.InputDeviceTypes = 
+        Windows.UI.Core.CoreInputDeviceTypes.Mouse | 
         Windows.UI.Core.CoreInputDeviceTypes.Pen;
 
     // Set initial ink stroke attributes.
@@ -123,17 +117,17 @@ public MainPage()
 
 여기서는 잉크 색상 목록에서 선택할 수 있습니다.
 
-```xaml
+```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-        <TextBlock x:Name="Header"
-                   Text="Basic ink customization sample"
+        <TextBlock x:Name="Header" 
+                   Text="Basic ink customization sample" 
                    VerticalAlignment="Center"
-                   Style="{ThemeResource HeaderTextBlockStyle}"
+                   Style="{ThemeResource HeaderTextBlockStyle}" 
                    Margin="10,0,0,0" />
         <TextBlock Text="Color:"
                    Style="{StaticResource SubheaderTextBlockStyle}"
@@ -156,13 +150,13 @@ public MainPage()
 
 그런 다음 선택한 색상의 변경 내용을 처리하고 그에 따라 잉크 스트로크 특성을 업데이트합니다.
 
-```csharp
+```CSharp
 // Update ink stroke color for new strokes.
 private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 {
     if (inkCanvas != null)
     {
-        InkDrawingAttributes drawingAttributes =
+        InkDrawingAttributes drawingAttributes = 
             inkCanvas.InkPresenter.CopyDefaultDrawingAttributes();
 
         string value = ((ComboBoxItem)PenColor.SelectedItem).Content.ToString();
@@ -188,12 +182,15 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 다음 이미지는 펜 입력이 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에 의해 처리 및 사용자 지정되는 방식을 보여 줍니다.
 
 | ![기본 검은색 잉크 스트로크를 사용하는 InkCanvas](images/ink-basic-custom-1-small.png) | ![사용자가 선택한 빨간색 잉크 스트로크를 사용하는 InkCanvas](images/ink-basic-custom-2-small.png) |
-| --- | --- |
-| 기본 검은색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 사용자가 선택한 빨간색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 
+| --- | -- |
+| 기본 검은색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | 사용자가 선택한 빨간색 잉크 스트로크를 사용하는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) |
+
+ 
 
 잉크 입력 및 지우기 이상의 기능(예: 스트로크 선택)을 제공하려면 앱은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에서 앱에서 처리하기 위해 처리되지 않은 상태로 통과시킬 특정 입력을 식별해야 합니다.
 
 ## 고급 처리를 위한 통과 입력
+
 
 기본적으로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 처리합니다. 여기에는 펜 단추, 마우스 오른쪽 단추 등과 같은 보조 하드웨어 기능에 의해 수정되는 입력이 포함됩니다.
 
@@ -212,37 +209,35 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
     여기서는 선택 스트로크를 그릴 캔버스를 추가합니다([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 아래). 별도의 계층을 사용하여 선택 스트로크를 그리면 **InkCanvas**를 빠져 나가고 콘텐츠는 원래 상태가 됩니다.
 
     ![기본 선택 캔버스가 있는 빈 InkCanvas](images/ink-unprocessed-1-small.png)
-
-      ```xaml
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-          <Grid.RowDefinitions>
+```    XAML
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-          </Grid.RowDefinitions>
-          <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-            <TextBlock x:Name="Header"
-              Text="Advanced ink customization sample"
-              VerticalAlignment="Center"
-              Style="{ThemeResource HeaderTextBlockStyle}"
-              Margin="10,0,0,0" />
-          </StackPanel>
-          <Grid Grid.Row="1">
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
+            <TextBlock x:Name="Header" 
+                       Text="Advanced ink customization sample" 
+                       VerticalAlignment="Center"
+                       Style="{ThemeResource HeaderTextBlockStyle}" 
+                       Margin="10,0,0,0" />
+        </StackPanel>
+        <Grid Grid.Row="1">
             <!-- Canvas for displaying selection UI. -->
             <Canvas x:Name="selectionCanvas"/>
             <!-- Inking area -->
             <InkCanvas x:Name="inkCanvas"/>
-          </Grid>
         </Grid>
-      ```
+    </Grid>
+```
 
 2.  MainPage.xaml.cs에서는 선택 UI의 다양한 측면에 대한 참조를 유지하기 위해 몇 개의 전역 변수를 선언합니다. 특히, 선택한 스트로크를 강조 표시하는 경계 직사각형과 선택 올가미 스트로크가 여기에 해당됩니다.
-
-      ```csharp
-        // Stroke selection tool.
-        private Polyline lasso;
-        // Stroke selection area.
-        private Rect boundingRect;
-      ```
+```    CSharp
+// Stroke selection tool.
+    private Polyline lasso;
+    // Stroke selection area.
+    private Rect boundingRect;
+```
 
 3.  다음에는 펜 및 마우스의 입력 데이터를 모두 잉크 스트로크로 해석하도록 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)를 구성하고, 스트로크 렌더링에 사용되는 일부 초기 잉크 스트로크 특성을 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 설정합니다.
 
@@ -253,179 +248,175 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
     마지막으로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)의 [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) 및 [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) 이벤트에 대한 수신기를 할당합니다. 새 스트로크가 시작되거나 기존 스트로크가 지워진 경우 이러한 이벤트의 처리기를 선택 UI를 정리합니다.
 
     ![기본 검은색 잉크 스트로크를 사용하는 InkCanvas](images/ink-unprocessed-2-small.png)
+```    CSharp
+public MainPage()
+    {
+        this.InitializeComponent();
 
-      ```csharp
-        public MainPage()
-        {
-          this.InitializeComponent();
-
-          // Set supported inking device types.
-          inkCanvas.InkPresenter.InputDeviceTypes =
+        // Set supported inking device types.
+        inkCanvas.InkPresenter.InputDeviceTypes =
             Windows.UI.Core.CoreInputDeviceTypes.Mouse |
             Windows.UI.Core.CoreInputDeviceTypes.Pen;
 
-          // Set initial ink stroke attributes.
-          InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
-          drawingAttributes.Color = Windows.UI.Colors.Black;
-          drawingAttributes.IgnorePressure = false;
-          drawingAttributes.FitToCurve = true;
-          inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
+        // Set initial ink stroke attributes.
+        InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
+        drawingAttributes.Color = Windows.UI.Colors.Black;
+        drawingAttributes.IgnorePressure = false;
+        drawingAttributes.FitToCurve = true;
+        inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
 
-          // By default, the InkPresenter processes input modified by
-          // a secondary affordance (pen barrel button, right mouse
-          // button, or similar) as ink.
-          // To pass through modified input to the app for custom processing
-          // on the app UI thread instead of the background ink thread, set
-          // InputProcessingConfiguration.RightDragAction to LeaveUnprocessed.
-          inkCanvas.InkPresenter.InputProcessingConfiguration.RightDragAction =
-              InkInputRightDragAction.LeaveUnprocessed;
+        // By default, the InkPresenter processes input modified by 
+        // a secondary affordance (pen barrel button, right mouse 
+        // button, or similar) as ink.
+        // To pass through modified input to the app for custom processing 
+        // on the app UI thread instead of the background ink thread, set 
+        // InputProcessingConfiguration.RightDragAction to LeaveUnprocessed.
+        inkCanvas.InkPresenter.InputProcessingConfiguration.RightDragAction = 
+            InkInputRightDragAction.LeaveUnprocessed;
 
-          // Listen for unprocessed pointer events from modified input.
-          // The input is used to provide selection functionality.
-          inkCanvas.InkPresenter.UnprocessedInput.PointerPressed +=
-              UnprocessedInput_PointerPressed;
-          inkCanvas.InkPresenter.UnprocessedInput.PointerMoved +=
-              UnprocessedInput_PointerMoved;
-          inkCanvas.InkPresenter.UnprocessedInput.PointerReleased +=
-              UnprocessedInput_PointerReleased;
+        // Listen for unprocessed pointer events from modified input.
+        // The input is used to provide selection functionality.
+        inkCanvas.InkPresenter.UnprocessedInput.PointerPressed += 
+            UnprocessedInput_PointerPressed;
+        inkCanvas.InkPresenter.UnprocessedInput.PointerMoved += 
+            UnprocessedInput_PointerMoved;
+        inkCanvas.InkPresenter.UnprocessedInput.PointerReleased += 
+            UnprocessedInput_PointerReleased;
 
-          // Listen for new ink or erase strokes to clean up selection UI.
-          inkCanvas.InkPresenter.StrokeInput.StrokeStarted +=
-              StrokeInput_StrokeStarted;
-          inkCanvas.InkPresenter.StrokesErased +=
-              InkPresenter_StrokesErased;
-        }
-      ```
+        // Listen for new ink or erase strokes to clean up selection UI.
+        inkCanvas.InkPresenter.StrokeInput.StrokeStarted += 
+            StrokeInput_StrokeStarted;
+        inkCanvas.InkPresenter.StrokesErased += 
+            InkPresenter_StrokesErased;
+    }
+```
 
 4.  그런 후에는 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에 의해 전달된 처리되지 않은 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) 및 [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) 이벤트에 대한 처리기를 정의합니다.
 
     올가미 스트로크 및 경계 사각형을 비롯한 모든 선택 기능이 이러한 처리기에서 구현됩니다.
 
     ![선택 올가미](images/ink-unprocessed-3-small.png)
-
-      ```csharp
-        // Handle unprocessed pointer events from modifed input.
-        // The input is used to provide selection functionality.
-        // Selection UI is drawn on a canvas under the InkCanvas.
-        private void UnprocessedInput_PointerPressed(
-          InkUnprocessedInput sender, PointerEventArgs args)
+```    CSharp
+// Handle unprocessed pointer events from modifed input.
+    // The input is used to provide selection functionality.
+    // Selection UI is drawn on a canvas under the InkCanvas.
+    private void UnprocessedInput_PointerPressed(
+        InkUnprocessedInput sender, PointerEventArgs args)
+    {
+        // Initialize a selection lasso.
+        lasso = new Polyline()
         {
-          // Initialize a selection lasso.
-          lasso = new Polyline()
-          {
             Stroke = new SolidColorBrush(Windows.UI.Colors.Blue),
-              StrokeThickness = 1,
-              StrokeDashArray = new DoubleCollection() { 5, 2 },
-              };
+            StrokeThickness = 1,
+            StrokeDashArray = new DoubleCollection() { 5, 2 },
+        };
 
-              lasso.Points.Add(args.CurrentPoint.RawPosition);
+        lasso.Points.Add(args.CurrentPoint.RawPosition);
 
-              selectionCanvas.Children.Add(lasso);
-          }
+        selectionCanvas.Children.Add(lasso);
+    }
 
-          private void UnprocessedInput_PointerMoved(
-            InkUnprocessedInput sender, PointerEventArgs args)
-          {
-            // Add a point to the lasso Polyline object.
-            lasso.Points.Add(args.CurrentPoint.RawPosition);
-          }
+    private void UnprocessedInput_PointerMoved(
+        InkUnprocessedInput sender, PointerEventArgs args)
+    {
+        // Add a point to the lasso Polyline object.
+        lasso.Points.Add(args.CurrentPoint.RawPosition);
+    }
 
-          private void UnprocessedInput_PointerReleased(
-            InkUnprocessedInput sender, PointerEventArgs args)
-          {
-            // Add the final point to the Polyline object and
-            // select strokes within the lasso area.
-            // Draw a bounding box on the selection canvas
-            // around the selected ink strokes.
-            lasso.Points.Add(args.CurrentPoint.RawPosition);
+    private void UnprocessedInput_PointerReleased(
+        InkUnprocessedInput sender, PointerEventArgs args)
+    {
+        // Add the final point to the Polyline object and 
+        // select strokes within the lasso area.
+        // Draw a bounding box on the selection canvas 
+        // around the selected ink strokes.
+        lasso.Points.Add(args.CurrentPoint.RawPosition);
 
-            boundingRect =
-              inkCanvas.InkPresenter.StrokeContainer.SelectWithPolyLine(
+        boundingRect = 
+            inkCanvas.InkPresenter.StrokeContainer.SelectWithPolyLine(
                 lasso.Points);
 
-            DrawBoundingRect();
-          }
-      ```
+        DrawBoundingRect();
+    }
+```
 
 5.  PointerReleased 이벤트 처리기를 완료하려면 모든 콘텐츠의 선택 계층(올가미 스트로크)을 지운 다음, 올가미 영역으로 둘러싸인 잉크 스트로크 주위에 단일 경계 사각형을 그립니다.
 
     ![선택 경계 직사각형](images/ink-unprocessed-4-small.png)
+```    CSharp
+// Draw a bounding rectangle, on the selection canvas, encompassing 
+    // all ink strokes within the lasso area.
+    private void DrawBoundingRect()
+    {
+        // Clear all existing content from the selection canvas.
+        selectionCanvas.Children.Clear();
 
-      ```csharp
-        // Draw a bounding rectangle, on the selection canvas, encompassing
-        // all ink strokes within the lasso area.
-        private void DrawBoundingRect()
-        {
-          // Clear all existing content from the selection canvas.
-          selectionCanvas.Children.Clear();
-
-          // Draw a bounding rectangle only if there are ink strokes
-          // within the lasso area.
-          if (!((boundingRect.Width == 0) ||
-            (boundingRect.Height == 0) ||
+        // Draw a bounding rectangle only if there are ink strokes 
+        // within the lasso area.
+        if (!((boundingRect.Width == 0) || 
+            (boundingRect.Height == 0) || 
             boundingRect.IsEmpty))
+        {
+            var rectangle = new Rectangle()
             {
-              var rectangle = new Rectangle()
-              {
                 Stroke = new SolidColorBrush(Windows.UI.Colors.Blue),
-                  StrokeThickness = 1,
-                  StrokeDashArray = new DoubleCollection() { 5, 2 },
-                  Width = boundingRect.Width,
-                  Height = boundingRect.Height
-              };
+                StrokeThickness = 1,
+                StrokeDashArray = new DoubleCollection() { 5, 2 },
+                Width = boundingRect.Width,
+                Height = boundingRect.Height
+            };
 
-              Canvas.SetLeft(rectangle, boundingRect.X);
-              Canvas.SetTop(rectangle, boundingRect.Y);
+            Canvas.SetLeft(rectangle, boundingRect.X);
+            Canvas.SetTop(rectangle, boundingRect.Y);
 
-              selectionCanvas.Children.Add(rectangle);
-            }
-          }
-      ```
+            selectionCanvas.Children.Add(rectangle);
+        }
+    }
+```
 
 6.  마지막으로 [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) 및 [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) InkPresenter 이벤트에 대한 처리기를 정의합니다.
 
     이러한 두 항목은 동일한 정리 함수를 호출하여 새 스트로크가 검색될 때마다 현재 선택을 지웁니다.
+```    CSharp
+// Handle new ink or erase strokes to clean up selection UI.
+    private void StrokeInput_StrokeStarted(
+        InkStrokeInput sender, Windows.UI.Core.PointerEventArgs args)
+    {
+        ClearSelection();
+    }
 
-      ```csharp
-        // Handle new ink or erase strokes to clean up selection UI.
-        private void StrokeInput_StrokeStarted(
-          InkStrokeInput sender, Windows.UI.Core.PointerEventArgs args)
-        {
-          ClearSelection();
-        }
-
-        private void InkPresenter_StrokesErased(
-          InkPresenter sender, InkStrokesErasedEventArgs args)
-        {
-          ClearSelection();
-        }
-      ```
+    private void InkPresenter_StrokesErased(
+        InkPresenter sender, InkStrokesErasedEventArgs args)
+    {
+        ClearSelection();
+    }
+```
 
 7.  새 스트로크를 시작하거나 기존 스트로크를 지울 때 선택 캔버스에서 모든 선택 UI를 제거하는 함수는 다음과 같습니다.
-
-      ```csharp
-        // Clean up selection UI.
-        private void ClearSelection()
+```    CSharp
+// Clean up selection UI.
+    private void ClearSelection()
+    {
+        var strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
+        foreach (var stroke in strokes)
         {
-          var strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
-          foreach (var stroke in strokes)
-          {
             stroke.Selected = false;
-          }
-          ClearDrawnBoundingRect();
         }
+        ClearDrawnBoundingRect();
+    }
 
-        private void ClearDrawnBoundingRect()
+    private void ClearDrawnBoundingRect()
+    {
+        if (selectionCanvas.Children.Any())
         {
-          if (selectionCanvas.Children.Any())
-          {
             selectionCanvas.Children.Clear();
             boundingRect = Rect.Empty;
-          }
         }
-      ```
+    }
+```
 
 ## 사용자 지정 잉크 렌더링
+
 
 기본적으로 잉크 입력은 짧은 대기 시간의 백그라운드 스레드에서 처리되고 그릴 때 "젖은" 상태로 렌더링됩니다. 스트로크가 완료되면(펜 또는 손가락을 들거나 마우스 단추를 뗄 때) 스트로크는 UI 스레드에서 처리되고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 계층(응용 프로그램 콘텐츠 위 계층으로, 젖은 잉크를 대체함)에 대해 "건조" 상태로 렌더링됩니다.
 
@@ -433,20 +424,40 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 건조 상태를 사용자 지정하려면 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신, 잉크 입력을 관리한 후 유니버설 Windows 앱의 Direct2D 장치 컨텍스트로 렌더링하기 위해 [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) 개체가 필요합니다.
 
-[**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012)([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 로드되기 전에)를 호출하면 앱은 [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) 개체를 만들어 잉크 스트로크가 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 또는 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)에 대해 건조 상태로 렌더링되는 방식을 사용자 지정합니다. 예를 들어 잉크 스트로크는 별도의 **InkCanvas** 계층 대신 래스터화된 후 응용 프로그램 콘텐츠로 통합될 수 있습니다.
+[**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012)([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 로드되기 전에)를 호출하면 앱은 [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) 개체를 만들어 잉크 스트로크가 [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) 또는 [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)에 대해 건조 상태로 렌더링되는 방식을 사용자 지정합니다. 예를 들어 잉크 스트로크는 별도의 **InkCanvas** 계층 대신, 래스터화된 후 응용 프로그램 콘텐츠로 통합될 수 있습니다.
 
 이 기능의 전체 예제를 보려면 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요.
 
 
-## 이 섹션의 다른 문서
+## 이 섹션의 다른 문서 
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[잉크 스트로크 인식](convert-ink-to-text.md)</p></td>
+<td align="left"><p>잉크 스트로크를 필기 인식을 사용하여 텍스트로 변환하거나 사용자 지정 인식을 사용하여 모양으로 변환합니다.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[잉크 스트로크 저장 및 검색](save-and-load-ink.md)</p></td>
+<td align="left"><p>포함된 ISF(Ink Serialized Format) 메타데이터를 사용하여 GIF(Graphics Interchange Format) 파일에 잉크 스트로크 데이터를 저장합니다.</p></td>
+</tr>
+</tbody>
+</table>
 
-| 항목 | 설명 |
-| --- | --- |
-| [잉크 스트로크 인식](convert-ink-to-text.md) | 잉크 스트로크를 필기 인식을 사용하여 텍스트로 변환하거나 사용자 지정 인식을 사용하여 모양으로 변환합니다. |
-| [잉크 스트로크 저장 및 검색](save-and-load-ink.md) | 포함된 ISF(Ink Serialized Format) 메타데이터를 사용하여 GIF(Graphics Interchange Format) 파일에 잉크 스트로크 데이터를 저장합니다. |
-| [UWP 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md) | UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다. |
+ 
+
 
 ## 관련 문서
+
 
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력 디바이스 식별](identify-input-devices.md)
@@ -471,6 +482,10 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+
+<!--HONumber=Jun16_HO5-->
 
 

@@ -1,131 +1,148 @@
 ---
 author: drewbatgit
-ms.assetid: 
-description: "이 문서에서는 앱이 백그라운드에서 실행되는 동안 미디어를 재생하는 방법을 보여 줍니다."
-title: "백그라운드에서 미디어 재생"
+ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
+description: "이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다."
+title: "백그라운드 오디오"
 translationtype: Human Translation
-ms.sourcegitcommit: c8cbc538e0979f48b657197d59cb94a90bc61210
-ms.openlocfilehash: a477827553ac1780ac625deeee08d84ab638d4c2
+ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
+ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
 
 ---
 
-# 백그라운드에서 미디어 재생
-이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
+# 백그라운드 오디오
 
-백그라운드 오디오 재생 시나리오는 다음과 같습니다.
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
+
+이 문서에서는 백그라운드에서 오디오를 재생하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법을 설명합니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 이 문서에서는 백그라운드 오디오 앱의 구성 요소와 해당 구성 요소가 함께 작동하는 방식에 대해 설명합니다.
+
+백그라운드 오디오 재생에 대한 시나리오는 다음과 같습니다.
 
 -   **오래 실행되는 재생 목록:** 사용자가 간단하게 포그라운드 앱을 표시하여 재생 목록을 선택하고 시작할 수 있으며, 그 후 사용자는 예상대로 백그라운드에서 재생 목록을 계속 재생할 수 있습니다.
 
 -   **작업 전환기 사용:** 사용자가 간단하게 포그라운드 앱을 표시하여 오디오 재생을 시작한 다음 작업 전환을 사용하여 열려 있는 다른 앱으로 전환할 수 있습니다. 사용자는 예상대로 백그라운드에서 오디오를 계속 재생할 수 있습니다.
 
-이 문서에 설명된 배경 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
+이 문서에 설명된 백그라운드 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
 
-> [!NOTE]
-> 이 문서의 코드는 UWP [배경 오디오 샘플](http://go.microsoft.com/fwlink/p/?LinkId=800141)에서 조정되었습니다.
+**참고**  
+[백그라운드 오디오 UWP 샘플](http://go.microsoft.com/fwlink/?LinkId=619485)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
-## 단일 프로세스 모델에 대한 설명.
-Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 프로세스를 훨씬 간소화하는 새로운 단일 프로세스 모델이 도입되었습니다. 이전에는 앱이 포그라운드 앱뿐 아니라 백그라운드 프로세스도 관리한 다음 두 프로세스 간에 상태 변경을 수동으로 통신해야 했습니다. 새 모델에서는 앱 매니페스트에 배경 오디오 접근 권한 값을 추가하기만 하면 앱이 백그라운드로 이동될 때 자동으로 오디오 재생을 계속합니다. 새로운 두 가지 응용 프로그램 수명 주기 이벤트인 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 및 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)를 사용하면 앱이 백그라운드로 이동하고 나가는 시기를 알 수 있습니다. 앱이 백그라운드로 이동하거나 나갈 때 시스템에서 적용하는 메모리 제약 조건이 변경될 수 있으므로 이러한 이벤트를 사용하여 현재 메모리 사용을 확인하고 제한 아래로 유지하기 위해 리소스를 해제할 수 있습니다.
+ 
 
-새 모델을 사용하면 복잡한 프로세스 간 통신 및 상태 관리가 제거되므로 코드 작업이 훨씬 감소하며 배경 오디오를 보다 신속하게 구현할 수 있습니다. 그러나 이전 버전과의 호환성을 위해 현재 릴리스에서는 두 프로세스 모델도 계속 지원됩니다. 자세한 내용은 [레거시 배경 오디오 모델](background-audio.md)을 참조하세요.
+## 백그라운드 오디오 아키텍처
 
-## 배경 오디오에 대한 요구 사항
-앱이 백그라운드에 있는 동안 오디오를 재생하려면 다음 요구 사항을 충족해야 합니다.
+백그라운드 재생을 수행하는 앱은 두 개의 프로세스로 구성됩니다. 첫 번째 프로세스는 포그라운드에서 실행되는, 앱 UI 및 클라이언트 논리를 포함하는 메인 앱입니다. 두 번째 프로세스는 모든 UWP 앱 백그라운드 작업처럼 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)를 구현하는 백그라운드 재생 작업입니다. 백그라운드 작업에서 오디오 재생 논리 및 백그라운드 서비스가 포함됩니다. 백그라운드 작업이 시스템 미디어 전송 컨트롤을 통해 시스템과 통신합니다.
 
-* 이 문서의 뒷부분에 설명된 대로 앱 매니페스트에 **백그라운드 미디어 재생** 접근 권한 값을 추가합니다.
-* 앱이 [**CommandManager.IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) 속성을 false로 설정하는 등 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤)의 자동 통합을 사용하지 않도록 설정하는 경우 백그라운드 미디어 재생을 사용하려면 SMTC와 수동 통합을 구현해야 합니다. **MediaPlayer** 이외의 API(예: [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph))를 사용하여 오디오를 재생하는 경우에도 앱이 백그라운드로 이동할 때 오디오 재생을 계속하려면 수동으로 SMTC와 통합해야 합니다. 최소 SMTC 통합 요구 사항은 [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)에서 "배경 오디오에 대한 시스템 미디어 전송 컨트롤 사용" 섹션에 설명되어 있습니다.
-* 앱이 백그라운드에 있는 동안 시스템에서 백그라운드 앱에 대해 설정한 메모리 사용량 제한 아래로 유지해야 합니다. 백그라운드에 있는 동안 메모리를 관리하기 위한 지침은 이 문서의 뒷부분에 제공되어 있습니다.
+다음 다이어그램은 시스템 설계 방법을 대략적으로 보여 줍니다.
 
-## 백그라운드 미디어 재생 매니페스트 접근 권한 값
-배경 오디오를 사용하려면 Package.appxmanifest 앱 매니페스트 파일에 백그라운드 미디어 재생 접근 권한 값을 추가해야 합니다. 
+![Windows 10 백그라운드 오디오 아키텍처](images/backround-audio-architecture-win10.png)
+## MediaPlayer
 
-**매니페스트 디자이너를 사용하여 앱 매니페스트에 접근 권한 값을 추가하려면**
+[**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스는 백그라운드에서 오디오를 재생하는 데 사용되는 API를 포함합니다. 앱마다 재생이 진행되는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)의 단일 인스턴스가 있습니다. 백그라운드 오디오 앱은 **MediaPlayer** 클래스에서 현재 트랙 설정, 재생 시작, 일시 중지, 빨리 감기, 되감기 등을 설정하기 위한 메서드를 호출하고 속성을 설정합니다. 미디어 플레이어 개체 인스턴스는 항상 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528) 속성을 통해 액세스합니다.
 
-1.  Microsoft Visual Studio의 **솔루션 탐색기**에서 **package.appxmanifest** 항목을 두 번 클릭하여 응용 프로그램 매니페스트 디자이너를 엽니다.
-2.  **접근 권한 값** 탭을 선택합니다.
-3.  **백그라운드 미디어 재생** 확인란을 선택합니다.
+## MediaPlayer 프록시 및 스텁
 
-앱 매니페스트 xml을 수동으로 편집하여 접근 권한 값을 설정하려면 먼저 *uap3* 네임스페이스 접두사가 **Package** 요소에 정의되어 있는지 확인합니다. 정의되지 않은 경우 아래와 같이 추가합니다.
-```xml
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap uap3 mp">
-```
+앱의 백그라운드 프로세스에서 **BackgroundMediaPlayer.Current**에 액세스되면 **MediaPlayer** 인스턴스가 백그라운드 작업 호스트에서 활성화되며 직접 조작할 수 있습니다.
 
-**Capabilities** 요소에 *backgroundMediaPlayback* 접근 권한 값을 추가합니다.
-```xml
-<Capabilities>
-    <uap3:Capability Name="backgroundMediaPlayback"/>
-</Capabilities>
-```
+포그라운드 응용 프로그램에서 **BackgroundMediaPlayer.Current**에 액세스되면 반환되는 **MediaPlayer** 인스턴스는 실제로 백그라운드 프로세스에서 스텁과 통신하는 프록시입니다. 이 스텁은 백그라운드 프로세스에서도 호스트되는 실제 **MediaPlayer** 인스턴스와 통신합니다.
 
-##포그라운드와 백그라운드 간 전환 처리
-앱이 포그라운드에서 백그라운드로 이동하면 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 이벤트가 발생합니다. 앱이 포그라운드로 반환되면 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트가 발생합니다. 이러한 이벤트는 앱 수명 주기 이벤트이기 때문에 앱을 만들 때 해당 이벤트 처리기를 등록해야 합니다. 기본 프로젝트 템플릿에서 이는 App.xaml.cs의 **App** 클래스 생성자에 추가하는 것을 의미합니다. 백그라운드에서 실행할 경우 시스템에서 앱에 허용하는 메모리 리소스가 줄어들기 때문에 앱의 현재 메모리 사용량과 현재 제한을 확인하는 데 사용되는 [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) 및 [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) 이벤트도 등록해야 합니다. 이러한 이벤트 처리기는 다음 예제에 표시되어 있습니다. UWP 앱의 응용 프로그램 수명 주기에 대한 자세한 내용은 [ 수명 주기](../\launch-resume\app-lifecycle.md)를 참조하세요.
+포그라운드 및 백그라운드 프로세스에서는 백그라운드 프로세스에서만 액세스할 수 있는 [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) 및 [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635)를 제외하고 **MediaPlayer** 인스턴스의 속성 대부분에 액세스할 수 있습니다. 포그라운드 앱 및 백그라운드 프로세스 모두 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/dn652609), [**MediaEnded**](https://msdn.microsoft.com/library/windows/apps/dn652603) 및 [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/dn652606)와 같은 미디어 관련 이벤트의 알림을 받을 수 있습니다.
 
-[!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
+## 재생 목록
 
-현재 백그라운드에서 실행 중인지 여부를 추적하기 위한 변수를 만듭니다.
+백그라운드 오디오 응용 프로그램에 대한 일반적인 시나리오는 여러 항목을 차례대로 재생하는 것입니다. 이 시나리오는 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) 개체를 사용하여 백그라운드 프로세스에서 가장 쉽게 수행됩니다. 이 개체를 [**MediaPlayer.Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) 속성에 할당하여 **MediaPlayer**의 소스로 설정할 수 있습니다.
 
-[!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
+백그라운드 프로세스에서 설정된 포그라운드 프로세스에서 **MediaPlaybackList**에 액세스할 수는 없습니다.
 
-[**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 이벤트가 발생하면 추적 변수를 설정하여 현재 백그라운드에서 실행 중임을 나타냅니다. 백그라운드로의 전환 속도가 사용자에게 느려지는 것처럼 보일 수 있으므로 **EnteredBackground** 이벤트에서 장기 실행 작업을 수행하면 안 됩니다.
+## 시스템 미디어 전송 컨트롤
 
-[!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
+사용자는 앱의 UI를 직접 사용하지 않고 Bluetooth 디바이스, SmartGlass, 시스템 미디어 전송 컨트롤과 같은 수단을 통해 오디오 재생을 제어할 수 있습니다. 백그라운드 작업은 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스를 사용하여 이러한 사용자가 시작한 이벤트를 구독합니다.
 
-앱이 백그라운드로 전환하면 현재 포그라운드 앱이 즉각적으로 응답하는 사용자 환경을 제공하기에 충분한 리소스를 사용할 수 있도록 시스템에서 앱의 메모리 제한을 줄입니다. [**AppMemoryUsageLimitChanging**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageLimitChanging) 이벤트 처리기를 사용하면 할당된 메모리가 축소되었음을 앱이 알 수 있으며 처리기에 전달되는 이벤트 인수에서 새 제한이 제공됩니다. 앱의 현재 사용량을 제공하는 [**MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsage) 속성과 새 제한을 지정하는 이벤트 인수의 [**NewLimit**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLimitChangingEventArgs.NewLimit) 속성을 비교합니다. 메모리 사용량이 제한을 초과할 경우 메모리 사용량을 줄여야 합니다. 이 예제에서는 이 문서의 뒷부분에서 정의하는 도우미 메서드 **ReduceMemoryUsage**에서 이 작업이 수행됩니다.
+백그라운드 프로세스 내에서 **SystemMediaTransportControls** 인스턴스를 가져오려면 [**MediaPlayer.SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn926635) 속성을 사용합니다. 포그라운드 앱은 [**SystemMediaTransportControls.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708)를 호출하여 이 클래스의 인스턴스를 가져오지만 반환되는 인스턴스는 백그라운드 작업과 관련이 없는 포그라운드 전용 인스턴스입니다.
 
-[!code-cs[MemoryUsageLimitChanging](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetMemoryUsageLimitChanging)]
+## 작업 간에 메시지 보내기
 
-> [!NOTE] 
-> 일부 디바이스 구성에서는 시스템에서 리소스 압력이 발생할 때까지 새 메모리 제한을 초과해도 응용 프로그램을 계속 실행할 수 있지만 실행할 수 없는 경우도 있습니다. 특히 Xbox에서는 2초 내에 새 메모리 제한 아래로 메모리를 줄이지 않으면 앱이 일시 중단되거나 종료됩니다. 즉, 이 이벤트를 사용하여 이벤트 발생 후 2초 내에 리소스 사용량을 제한 아래로 줄이면 가장 광범위한 디바이스에서 최상의 환경을 제공할 수 있습니다.
+백그라운드 오디오 앱의 두 프로세스 간에 통신이 필요한 경우가 있습니다. 예를 들어 새 트랙 재생이 시작될 때 백그라운드 작업이 포그라운드 작업에 알림을 보낸 다음 새 노래 제목을 포그라운드 작업에 보내 화면에 표시하도록 할 수 있습니다.
 
+간단한 통신 메커니즘을 사용하여 포그라운드 및 백그라운드 프로세스에서 이벤트를 발생시킬 수 있습니다. [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) 및 [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) 메서드는 각각 해당 프로세스에서 이벤트를 호출합니다. [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 및 [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) 이벤트를 구독하여 메시지를 받을 수 있습니다.
 
-앱이 처음 백그라운드로 전환될 때는 메모리 사용량이 백그라운드 앱에 대한 메모리 제한 아래지만 이후에 사용량이 증가하여 제한에 가까워지는 경우도 있습니다. [**AppMemoryUsageIncreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageIncreased) 처리기는 증가 시 현재 사용량을 확인하고 필요한 경우 메모리를 해제할 수 있는 기회를 제공합니다. [**AppMemoryUsageLevel**](https://msdn.microsoft.com/library/windows/apps/Windows.System.AppMemoryUsageLevel)이 **High** 또는 **OverLimit**인지 여부를 확인하고, 맞으면 메모리 사용량을 줄입니다. 이 예제에서는 이 프로세스도 도우미 메서드 **ReduceMemoryUsage**에서 처리됩니다. [**AppMemoryUsageDecreased**](https://msdn.microsoft.com/library/windows/apps/Windows.System.MemoryManager.AppMemoryUsageDecreased) 이벤트를 구독하고 앱이 제한 아래인지 확인한 다음 맞으면 추가 리소스를 할당할 수도 있습니다.
+그러면 데이터가 메시지 전송 메서드에 인수로 전달되며, 해당 메시지 전송 메서드가 메시지 수신 이벤트 처리기로 전달될 수 있습니다. [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) 클래스를 사용하여 데이터를 전달합니다. 이 클래스는 문자열을 키로 포함하고 기타 값 형식을 값으로 포함하는 사전입니다. 정수, 문자열 및 부울 같은 간단한 값 형식을 전달할 수 있습니다.
 
-[!code-cs[MemoryUsageIncreased](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetMemoryUsageIncreased)]
+**참고**  
+포그라운드 앱이 실행되는 동안 앱은 [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533)만 호출해야 합니다. 포그라운드 앱이 실행되지 않는 동안 이 메서드를 호출하면 예외가 발생합니다. 앱은 포그라운드 앱 상태를 백그라운드 프로세스에 전달하는 작업을 담당합니다. 이 작업은 앱 수명 주기 이벤트, 로컬 저장소에 보관된 상태 값 및 프로세스 간의 메시지를 사용하여 수행될 수 있습니다. 
 
-**ReduceMemoryUsage**는 앱이 백그라운드에서 실행되는 앱에 대한 사용량 제한을 초과할 경우 메모리를 해제하기 위해 구현할 수 있는 도우미 메서드입니다. 메모리를 해제하는 방법은 앱의 특징에 따라 다르지만, 메모리를 해제하는 한 가지 권장 방법은 UI 및 앱 보기와 관련된 기타 리소스를 삭제하는 것입니다. 먼저, 백그라운드 모드에서 실행 중인지 확인한 다음 앱 창의 [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content) 속성을 null로 설정합니다. **GC.Collect**를 호출하여 해제된 메모리를 즉시 회수하도록 시스템에 지시합니다.
+## 백그라운드 작업 수명 주기
 
-[!code-cs[UnloadViewContent](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetUnloadViewContent)]
+백그라운드 작업의 수명은 앱의 현재 재생 상태와 밀접하게 연결됩니다. 예를 들어 사용자가 오디오 재생을 일시 중지하면 시스템에서는 상황에 따라 앱을 종료하거나 취소할 수 있습니다. 오디오를 재생하지 않고 일정 시간이 경과되면 시스템에서 백그라운드 작업이 자동으로 종료됩니다.
 
-창 콘텐츠를 수집하는 경우 각 프레임이 해당 연결 끊기 프로세스를 시작합니다. 창 콘텐츠 아래의 시각적 개체 트리에 페이지가 있는 경우 페이지에서 해당 [**Unloaded**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Unloaded) 이벤트가 발생하기 시작합니다. 페이지에 대한 모든 참조를 제거하지 않으면 메모리에서 페이지를 완전히 지울 수 없습니다. **Unloaded** 콜백에서 다음을 수행하여 메모리가 빠르게 해제되도록 합니다.
-* 페이지에 있는 큰 데이터 구조를 선택 취소하고 null로 설정합니다.
-* 페이지 내에 콜백 메서드가 있는 모든 이벤트 처리기를 등록 취소합니다. 페이지에 대한 Loaded 이벤트 처리기에서 해당 콜백을 등록해야 합니다. UI가 재구성되고 페이지가 시각적 개체 트리에 추가되면 Loaded 이벤트가 발생합니다.
-* Unloaded 콜백의 끝에서 **GC.Collect**를 호출하여 방금 null로 설정한 큰 데이터 구조를 빠르게 가비지 수집합니다.
+[**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드는 백그라운드 작업은 앱이 포그라운드 앱에서 실행되는 코드의 [**BackgroundMediaPlayer.Current**](https://msdn.microsoft.com/library/windows/apps/dn652528)에 처음으로 액세스할 때와 [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) 이벤트에 대한 처리기를 등록할 때 중에서 먼저 일어나는 작업 후에 호출됩니다. 포그라운드 앱이 백그라운드 프로세스에서 보낸 메시지를 누락하지 않도록 하기 위해 **BackgroundMediaPlayer.Current**를 처음 호출하기 전에 메시지 수신 처리기를 등록하는 것이 좋습니다.
 
-[!code-cs[Unloaded](./code/BackgroundAudio_RS1/cs/MainPage.xaml.cs#SnippetUnloaded)]
+백그라운드 작업을 계속 유지하려면 앱이 **Run** 메서드 내에서 [**BackgroundTaskDeferral**](https://msdn.microsoft.com/library/windows/apps/hh700499)을 요청하고 작업 인스턴스가 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/br224798) 또는 [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 이벤트를 수신할 때 [**BackgroundTaskDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/hh700504)를 호출해야 합니다. 리소스가 사용되고 앱의 백그라운드 작업이 시스템에 의해 종료될 수 있으므로 **Run** 메서드에서 루핑하거나 기다리지는 마세요.
 
-[**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트 처리기에서 추적 변수를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Window.Content)가 null인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 null이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
+백그라운드 작업은 **Run** 메서드가 완료되고 지연이 요청되지 않을 때 **Completed** 이벤트를 가져옵니다. 경우에 따라 앱이 **Canceled** 이벤트를 가져올 때 **Completed** 이벤트도 따라올 수 있습니다. 작업은 **Run**가 실행되는 동안 **Canceled** 이벤트를 수신할 수 있으므로 이러한 잠재적인 동시 상황을 관리해야 합니다.
 
-[!code-cs[LeavingBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetLeavingBackground)]
+다음과 같이 백그라운드 작업을 취소할 수 있는 상황이 있을 수 있습니다.
 
-**CreateRootFrame** 도우미 메서드는 앱 보기 콘텐츠를 다시 만듭니다. 이 메서드의 코드는 기본 프로젝트 템플릿에 제공된 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 처리기 코드와 같습니다. 한 가지 차이점은 **Launching** 처리기는 [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)의 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState) 속성에서 이전 실행 상태를 확인하고 **CreateRootFrame** 메서드는 단순히 인수로 전달된 이전 실행 상태를 가져온다는 것입니다. 중복 코드를 최소화하기 위해 필요한 경우 **CreateRootFrame**을 호출하도록 기본 **Launching** 이벤트 처리기 코드를 리팩터링할 수 있습니다.
+-   독점 하위 정책을 적용하는 시스템에서 오디오 재생 기능을 가진 새 앱을 시작합니다. 아래의 [백그라운드 오디오 작업 수명에 대한 시스템 정책](#system-policies-for-background-audio-task-lifetime)을 참조하세요.
 
-[!code-cs[CreateRootFrame](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetCreateRootFrame)]
+-   백그라운드 작업이 시작되었으나 음악이 아직 재생되지 않고 이후 포그라운드 앱이 일시 중단된 경우
 
-## 백그라운드 미디어 앱에 대한 네트워크 가용성
-스트림이나 파일에서 생성되지 않은 모든 네트워크 인식 미디어 원본은 원격 콘텐츠를 검색하는 동안 네트워크 연결을 활성 상태로 유지하고 검색하지 않을 때 해제합니다. 특히 [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaStreamSource)의 경우 응용 프로그램이 [**SetBufferedRange**](https://msdn.microsoft.com/library/windows/apps/dn282762)를 사용하여 올바른 버퍼 범위를 플랫폼에 정확하게 보고해야 합니다. 전체 콘텐츠가 완전히 버퍼링된 후에는 더 이상 앱을 위해 네트워크가 예약되지 않습니다.
+-   수신 전화 통화 또는 VoIP 전화와 같은 기타 미디어 중단
 
-미디어를 다운로드하지 않을 때 백그라운드에서 발생하는 네트워크 호출을 수행해야 하는 경우 [**ApplicationTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.ApplicationTrigger), [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.MaintenanceTrigger), [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.TimeTrigger) 등의 적절한 작업에 해당 호출을 래핑해야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
+다음과 같이 예고 없이 백그라운드 작업을 취소할 수 있는 상황
 
-## 관련 항목
-* [미디어 재생](media-playback.md)
-* [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
-* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
-* [백그라운드 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
+-   VoIP 전화가 오고 시스템의 메모리가 부족하여 백그라운드 작업을 유지할 수 없습니다.
+
+-   리소스 정책에 위반된 경우
+
+-   작업 취소 또는 완료가 정상적으로 종료되지 않은 경우
+
+## 백그라운드 오디오 작업 수명에 대한 시스템 정책
+
+다음과 같은 정책은 시스템이 백그라운드 오디오 작업의 수명을 관리하는 방법을 확인하는 데 도움이 됩니다.
+
+### 독점
+
+이 하위 정책은 사용하도록 설정하는 경우 백그라운드 오디오 작업 수를 한 번에 1 이하로 제한합니다. 이 정책은 모바일 및 기타 비데스크톱 SKU에서 사용하도록 설정됩니다.
+
+### 비활성 시간 제한
+
+리소스 제약으로 인해 시스템은 일정 기간의 비활성 상태 후 백그라운드 작업을 종료할 수 있습니다.
+
+백그라운드 작업은 다음 조건이 모두 충족되는 경우 "비활성"으로 간주됩니다.
+
+-   포그라운드 앱은 표시되지 않습니다(일시 중단 또는 중단됨).
+
+-   백그라운드 미디어 플레이어는 재생 상태가 아닙니다.
+
+이러한 조건을 모두 만족할 경우 백그라운드 미디어 시스템 정책이 타이머를 시작합니다. 타이머가 만료될 때 어떤 조건도 변경되지 않으면 백그라운드 미디어 시스템 정책은 백그라운드 작업을 종료합니다.
+
+### 공유 수명
+
+이 옵션을 사용하도록 설정하면 이 하위 정책은 강제로 백그라운드 작업이 포그라운드 작업의 수명에 종속되도록 합니다. 포그라운드 작업이 사용자 또는 시스템에 의해 종료되면 백그라운드 작업도 종료됩니다.
+
+그러나 포그라운드가 백그라운드에 종속되는 것은 아닙니다. 백그라운드 작업이 종료되어도 포그라운드 작업을 강제로 종료되지는 않습니다.
+
+다음 표에는 어떤 정책이 어떤 디바이스 유형에 적용되는지 나와 있습니다.
+
+| 하위 정책             | 바탕 화면  | 모바일   | 기타    |
+|------------------------|----------|----------|----------|
+| **독점**        | 사용 안 함 | 사용  | 사용  |
+| **비활성 시간 제한** | 사용 안 함 | 사용  | 사용 안 함 |
+| **공유 수명**    | 사용  | 사용 안 함 | 사용 안 함 |
 
  
 
  
 
+ 
 
 
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 
