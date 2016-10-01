@@ -5,7 +5,7 @@ description: "앱에서 지오펜스를 설정하고 포그라운드 및 백그�
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+ms.openlocfilehash: e91f0bbb203ef1c77ad1435b1a3f10aa53c3a483
 
 ---
 
@@ -473,6 +473,6 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

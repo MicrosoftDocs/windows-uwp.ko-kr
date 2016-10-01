@@ -4,8 +4,8 @@ description: "이 항목에서는 물리적 스마트 카드 판독기에 액세
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
+ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
+ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
 
 ---
 
@@ -15,7 +15,7 @@ ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 항목에서는 물리적 스마트 카드 판독기에 액세스하고, 가상 스마트 카드를 만들고, 스마트 카드와 통신하고, 사용자를 인증하고, 사용자 PIN을 다시 설정하고 스마트 카드를 제거하거나 분리하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱에서 스마트 카드를 사용하여 사용자를 보안 네트워크 서비스에 연결할 수 있는 방법을 설명합니다.
+이 항목에서는 물리적 스마트 카드 판독기에 액세스하고, 가상 스마트 카드를 만들고, 스마트 카드와 통신하고, 사용자를 인증하고, 사용자 PIN을 다시 설정하고 스마트 카드를 제거하거나 분리하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱에서 스마트 카드를 사용하여 사용자를 보안 네트워크 서비스에 연결할 수 있는 방법을 설명합니다. 
 
 ## 앱 매니페스트 구성
 
@@ -204,6 +204,6 @@ bool result = await SmartCardProvisioning
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

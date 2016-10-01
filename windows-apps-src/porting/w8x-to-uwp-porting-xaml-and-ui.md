@@ -1,11 +1,11 @@
 ---
 author: mcleblanc
 description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다."
-title: "Windows 런타임 8.x XAML 및 UI를 UWP로 포팅&#39;"
+title: "Windows 런타임 8.x XAML 및 UI를 UWP로 포팅'"
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: eb543a5ef1da7c9b39438349757c1b394a3be9b5
+ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
 
 ---
 
@@ -485,6 +485,6 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

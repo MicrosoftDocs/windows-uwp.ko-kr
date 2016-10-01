@@ -5,7 +5,7 @@ description: "이 단계에서는 슈팅 게임 샘플에서 XAudio2 API를 사�
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+ms.openlocfilehash: e44bc1046310b57cffa3eb4009e91885c61470eb
 
 ---
 
@@ -564,6 +564,6 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

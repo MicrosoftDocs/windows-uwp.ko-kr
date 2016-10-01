@@ -6,18 +6,17 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d65e1315e83fef5e53771adad0943c9cb59d9139
-ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
+ms.sourcegitcommit: f9c475a90c270270217999c5a7289e29e7fef208
+ms.openlocfilehash: a1d97c5a66db1b799ccc16769ff18130155743b8
 
 ---
 
 # 키보드 조작
 
 
-키보드 입력은 앱용 전체 사용자 조작 환경에서 중요한 부분을 차지합니다. 키보드가 앱을 조작하는 보다 효율적인 방법이라고 생각하는 사용자나 특정 장애를 가진 사람들에게는 키보드가 필수 도구입니다. 예를 들어 사용자가 Tab 및 화살표 키를 사용하여 앱을 탐색하고, 스페이스바 및 Enter 키를 사용하여 UI 요소를 활성화하고, 바로 가기 키를 사용하여 명령에 액세스할 수 있어야 합니다.
+키보드 입력은 앱용 전체 사용자 조작 환경에서 중요한 부분을 차지합니다. 키보드가 앱을 조작하는 보다 효율적인 방법이라고 생각하는 사용자나 특정 장애를 가진 사람들에게는 키보드가 필수 도구입니다. 예를 들어 사용자가 Tab 및 화살표 키를 사용하여 앱을 탐색하고, 스페이스바 및 Enter 키를 사용하여 UI 요소를 활성화하고, 바로 가기 키를 사용하여 명령에 액세스할 수 있어야 합니다.  
+
 ![키보드 영웅 이미지](images/input-patterns/input-keyboard-small.jpg)
-
-
 
 **중요 API**
 
@@ -79,19 +78,19 @@ ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
 <table>
 <tr>
     <td>**기본 레이아웃 모드의 터치 키보드:  **</td>
-    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>![기본 레이아웃 모드의 터치 키보드](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
     <td>**확장 레이아웃 모드의 터치 키보드:  **</td>
-    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>![확장 레이아웃 모드의 터치 키보드](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
     <td>**기본 미리 보기 레이아웃 모드의 터치 키보드:  **</td>
-    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>![미리 보기 레이아웃 모드의 터치 키보드](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
     <td>**숫자 미리 보기 레이아웃 모드의 터치 키보드:  **</td>
-    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>![숫자 미리 보기 레이아웃 모드의 터치 키보드](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
@@ -355,7 +354,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 -   이벤트를 보낸 사람. 보낸 사람은 이벤트 처리기가 연결된 개체를 보고합니다.
 -   이벤트 데이터. 키보드 이벤트의 경우 이 데이터는 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)의 인스턴스입니다. 처리기의 대리자는 [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs**의 가장 관련된 속성은 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)와 [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)입니다.
--   [ **OriginalSource** ](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
 ### 키보드 이벤트 처리기 연결
 
@@ -400,7 +399,7 @@ void MyProject::MainPage::Grid_KeyUp(
 -   [**키**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [ **OriginalSource** ](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
 
 ### 키
 
@@ -703,6 +702,6 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

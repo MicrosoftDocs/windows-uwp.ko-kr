@@ -7,7 +7,7 @@ label: Specify the speech recognizer language
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 8af4fe64e586037d68ab5cd422d7195bd3a64b94
+ms.openlocfilehash: 1a70ac671c11d2ab3c34a95f2571685f4f851836
 
 ---
 
@@ -108,10 +108,10 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 **개발자**
-* [음성 조작](speech-interactions.md) 
-           **디자이너**
-* [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121) 
-           **샘플**
+* [음성 조작](speech-interactions.md)
+**디자이너**
+* [음성 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596121)
+**샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -123,6 +123,6 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microso
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

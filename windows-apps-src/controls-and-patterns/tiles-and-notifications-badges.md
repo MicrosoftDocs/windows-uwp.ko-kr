@@ -1,125 +1,129 @@
 ---
 author: mijacobs
-Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
-title: Tiles, badges, and notifications
+Description: "타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다."
+title: "타일, 배지 및 알림"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+
 ---
+# UWP 앱에 대한 배지 알림
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Badge notifications for UWP apps
-
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>A tile with a numeric badge displaying<br/> the number 63 to indicate 63 unread mails.</div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>읽지 않은 메일 63개가 있다는 의미의 숫자 63이<br/> 표시된 숫자 배지를 포함하는 타일</div>
 
-A notification badge conveys summary or status information specific to your app. They can be numeric (1-99) or one of a set of system-provided glyphs. Examples of information best conveyed through a badge include network connection status in an online game, user status in a messaging app, number of unread mails in a mail app, and number of new posts in a social media app. 
+알림 배지는 앱에 대한 요약 또는 상태 정보를 전달합니다. 숫자(1-99) 또는 시스템 제공 문자 모양 중 하나일 수 있습니다. 배지를 통해 전달하기 적합한 정보로는 온라인 게임의 네트워크 연결 상태, 메시지 앱의 사용자 상태, 메일 앱의 읽지 않은 메일 수, 소셜 미디어 앱의 새 게시 수 등이 있습니다. 
 
-Notification badges appear on your app's taskbar icon and in the lower-right corner of its start tile, regardless of whether the app is running. Badges can be displayed on all tile sizes.  
+알림 배지는 앱의 작업 표시줄 아이콘 및 시작 타일의 오른쪽 아래 모서리에 앱 실행 여부와 관계없이 나타납니다. 배지는 모든 타일 크기에 표시할 수 있습니다.  
 
-**Note**&nbsp;&nbsp;You cannot provide your own badge image; only system-provided badge images can be used.
+**참고**&nbsp;&nbsp;직접 만든 배지 이미지를 제공할 수 없으며, 시스템 제공 배지 이미지만 사용할 수 있습니다.
 
-## Numeric badges
+## 숫자 배지
 
 <table>
     <tr>
-        <th>Value</th>
-        <th>Badge</th>
+        <th>값</th>
+        <th>배지</th>
         <th>XML</th>
     </tr>
     <tr>
-        <td>A number from 1 to 99. A value of 0 is equivalent to the glyph value "none" and will clear the badge.</td>
-        <td>![A numeric badge less than 100.](images/badges/badge-numeric.png)</td>
+        <td>1-99 사이의 숫자. 값 0은 문자 값 "없음"과 동일하며 배지를 지웁니다.</td>
+        <td>![100보다 작은 숫자 배지](images/badges/badge-numeric.png)</td>
         <td>`<badge value="1"/>`</td>
     </tr>
     <tr>
-        <td>Any number greater than 99.</td>
-        <td>![A numeric badge greater than 99.](images/badges/badge-numeric-greater.png)</td></td>
+        <td>99보다 큰 모든 숫자</td>
+        <td>![99보다 큰 숫자 배지](images/badges/badge-numeric-greater.png)</td></td>
         <td>`<badge value="100"/>`</td>
     </tr>    
 </table>
 
-## Glyph badges
-Instead of a number, a badge can display one of a non-extensible set of status glyphs. 
+## 문자 배지
+배지는 숫자 대신 확장할 수 없는 상태 문자 모양 집합 중 하나를 표시할 수 있습니다. 
 
 <table>
 <tr>
-    <th>Status</th>
-    <th>Glyph</th>
+    <th>상태</th>
+    <th>문자 모양</th>
     <th>XML</th>
 </tr>
 <tr>
     <td>none</td>
-    <td>(No badge shown.)</td>
+    <td>표시되는 배지 없음</td>
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
     <td>activity</td>
-    <td>![Glyph](images/badges/badge-activity.png)</td>
+    <td>![문자 모양](images/badges/badge-activity.png)</td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
     <td>alarm</td>
-    <td>![Glyph](images/badges/badge-alarm.png)</td>
+    <td>![문자 모양](images/badges/badge-alarm.png)</td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
     <td>alert</td>
-    <td>![Glyph](images/badges/badge-alert.png)</td>
+    <td>![문자 모양](images/badges/badge-alert.png)</td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
     <td>attention</td>
-    <td>![Glyph](images/badges/badge-attention.png)</td>
+    <td>![문자 모양](images/badges/badge-attention.png)</td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
     <td>available</td>
-    <td>![Glyph](images/badges/badge-available.png)</td>
+    <td>![문자 모양](images/badges/badge-available.png)</td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
     <td>away</td>
-    <td>![Glyph](images/badges/badge-away.png)</td>
+    <td>![문자 모양](images/badges/badge-away.png)</td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
     <td>busy</td>
-    <td>![Glyph](images/badges/badge-busy.png)</td>
+    <td>![문자 모양](images/badges/badge-busy.png)</td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
     <td>error</td>
-    <td>![Glyph](images/badges/badge-error.png)</td>
+    <td>![문자 모양](images/badges/badge-error.png)</td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
     <td>newMessage</td>
-    <td>![Glyph](images/badges/badge-newMessage.png)</td>
+    <td>![문자 모양](images/badges/badge-newMessage.png)</td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
     <td>paused</td>
-    <td>![Glyph](images/badges/badge-paused.png)</td>
+    <td>![문자 모양](images/badges/badge-paused.png)</td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
     <td>playing</td>
-    <td>![Glyph](images/badges/badge-playing.png)</td>
+    <td>![문자 모양](images/badges/badge-playing.png)</td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
     <td>unavailable</td>
-    <td>![Glyph](images/badges/badge-unavailable.png)</td>
+    <td>![문자 모양](images/badges/badge-unavailable.png)</td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>
 
-## Create a badge
+## 배지 만들기
 
-These examples show you how to to create a badge update.
+다음 예제에서는 배지 업데이트를 만드는 방법을 보여 줍니다.
 
-### Create a numeric badge
+### 숫자 배지 만들기
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -146,7 +150,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### Create a glyph badge
+### 문자 모양 배지 만들기
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -174,7 +178,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### Clear a badge
+### 배지 지우기
 
 ````csharp
 private void clearBadge()
@@ -183,12 +187,17 @@ private void clearBadge()
 }
 ````
 
-## Get the samples
+## 샘플 다운로드
 
-* [Notifications sample](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> Shows how to create live tiles, send badge updates, and display toast notifications. 
+* [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고 배지 업데이트 보내기 및 알림 메시지를 표시하는 방법을 보여 줍니다. 
 
-## Related articles
+## 관련 문서
 
-* [Adaptive and interactive toast notifications](tiles-and-notifications-adaptive-interactive-toasts.md)
-* [Create tiles](tiles-and-notifications-creating-tiles.md)
-* [Create adaptive tiles](tiles-and-notifications-create-adaptive-tiles.md)
+* [적응형 및 대화형 알림 메시지](tiles-and-notifications-adaptive-interactive-toasts.md)
+* [타일 만들기](tiles-and-notifications-creating-tiles.md)
+* [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

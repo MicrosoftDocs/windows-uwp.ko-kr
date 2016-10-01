@@ -5,7 +5,7 @@ title: "네트워킹 기본 사항"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 ---
 
@@ -424,6 +424,6 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

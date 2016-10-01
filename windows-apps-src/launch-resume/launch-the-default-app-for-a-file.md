@@ -4,8 +4,8 @@ title: "파일에 대한 기본 앱 시작"
 description: "파일에 대한 기본 앱을 시작하는 방법을 알아봅니다."
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b9b2d8ba6aeedea7d9db12565de191b1b6307fa6
+ms.sourcegitcommit: c87f66a39e6ae7733ecc75006510b6aede699d4f
+ms.openlocfilehash: 20cbd0ef20cc81c81f686100579059321e3c56fa
 
 ---
 
@@ -40,10 +40,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 | 기본 시작 | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. |
 | 연결 프로그램 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
 | 권장 앱 폴백으로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
-| 원하는 유지 보기로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)(Windows만 해당) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. |
-|  |  |  |
-|  |  | **모바일 디바이스 패밀리:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
-
+| 원하는 유지 보기로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)(Windows만 해당) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다.   |
  
 ### 기본 시작
 
@@ -351,7 +348,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 
 > **참고** Windows는 원본 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
 
-**모바일 디바이스 패밀리:** [**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다.
+**모바일 디바이스 패밀리:**[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)는 모바일 디바이스 패밀리에서 지원되지 않습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -423,7 +420,7 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 
 ## 설명
 
-실행된 앱은 앱에서 선택할 수 없으므로 사용자가 어떤 앱이 실행되고 있는지 확인합니다. 사용자는 UWP(유니버설 Windows 플랫폼) 앱 또는 CWP(클래식 Windows 플랫폼) 앱을 선택할 수 있습니다.
+실행된 앱은 앱에서 선택할 수 없으므로 사용자가 어떤 앱이 실행되고 있는지 확인합니다. 사용자는 UWP(유니버설 Windows 플랫폼) 앱 또는 Windows 데스크톱 앱을 선택할 수 있습니다.
 
 파일을 시작하면 앱은 포그라운드 앱이 되어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 파일 실행을 앱의 UI에 직접 연결해야 합니다. 대부분의 경우, 사용자는 항상 파일 실행을 시작하기 위해 일부 작업을 수행해야 합니다.
 
@@ -457,6 +454,6 @@ Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 �
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

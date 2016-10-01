@@ -5,7 +5,7 @@ title: "스토리보드 애니메이션"
 description: "스토리보드 애니메이션은 시각적 측면의 애니메이션만 의미하는 것이 아닙니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: bcb8dbd3c0b2556c3d426687eb9be02ffe7265fb
+ms.openlocfilehash: 361765de700af2a701e16fc27a5867d80907865a
 
 ---
 # 스토리보드 애니메이션
@@ -84,7 +84,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 다음은 간접 속성 대상 지정 및 사용할 구문과 유사한 몇 가지 속성 경로 문자열을 사용할 수 있는 애니메이션 대상 지정 시나리오 목록입니다.
 
 -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용: `(UIElement.RenderTransform).(TranslateTransform.X)`
--   [**Fill**](https://msdn.microsoft.com/library/windows/apps/BR243378)에 적용된 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)의 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 내에 있는 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)에 애니메이션 효과 적용:  `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
+-   [**Fill**](https://msdn.microsoft.com/library/windows/apps/BR243378)에 적용된 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)의 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 내에 있는 [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963)에 애니메이션 효과 적용: `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
 -   [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)에 적용된 [**TransformGroup**](https://msdn.microsoft.com/library/windows/apps/BR243022)에 있는 4가지 변형 중 하나인 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)의 [**X**](https://msdn.microsoft.com/library/windows/apps/BR243029) 값에 애니메이션 효과 적용:`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`
 
 이러한 예제 중 일부에서 숫자 주위에 대괄호를 사용하는 것을 확인할 수 있습니다. 이는 인덱서이며, 앞에 오는 속성 이름에는 컬렉션이 값으로 포함되며 해당 컬렉션에서 0부터 시작하는 색인으로 식별되는 항목이 필요함을 나타냅니다.
@@ -333,6 +333,6 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

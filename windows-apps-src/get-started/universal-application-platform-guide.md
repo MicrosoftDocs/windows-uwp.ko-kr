@@ -1,11 +1,11 @@
 ---
 author: TylerMSFT
 title: "UWP(유니버설 Windows 플랫폼) 앱 지침"
-description: "이 가이드에서는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
+description: "다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 4ad8dc5883b7edafa2c2579d3733eafba0b9cc1f
-ms.openlocfilehash: 8f4e906c9f1c685a5f6aeebd5fe0ebcc96ff9a7c
+ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
+ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
 
 ---
 
@@ -34,7 +34,7 @@ UWP 앱은 폼 팩터 및 입력 형식이 서로 다른 광범위한 디바이�
 
 Windows 8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 Windows Phone)를 대상으로 합니다. Windows 10에서는 더 이상 특정 운영 체제를 대상으로 하지 않습니다. 대신 하나 이상의 디바이스 패밀리를 대상으로 합니다. 디바이스 패밀리는 디바이스 패밀리 내의 장치에서 기대할 수 있는 API, 시스템 특성 및 동작을 식별합니다. 또한 스토어에서 앱을 설치할 수 있는 장치 집합을 결정합니다. 디바이스 패밀리 계층 구조는 다음과 같습니다.
 
-![디바이스 패밀리](images/devicefamilytree.png)
+![디바이스 패밀리](images/device-family-tree.png)
 
 디바이스 패밀리는 함께 수집되어 하나의 이름과 하나의 버전 번호가 지정된 API 집합입니다. 디바이스 패밀리는 OS의 기초입니다. PC에서는 데스크톱 디바이스 패밀리를 기반으로 하는 데스크톱 OS를 실행합니다. 휴대폰과 태블릿 등에서는 모바일 디바이스 패밀리를 기반으로 하는 모바일 OS를 실행합니다. 이런 식으로 구성됩니다.확인하세요.
 
@@ -51,6 +51,8 @@ Windows 8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는
 -   스토어에서 앱을 설치할 수 있는 장치 집합(이에 따라 고려해야 하는 폼 팩터)
 
 디바이스 패밀리를 선택할 때 두 가지 중요한 결과가 있습니다. 앱에서 무조건적으로 호출할 수 있는 API 표면과 앱에서 연결할 수 있는 장치 수입니다. 이 두 가지 요소는 서로 상반되는 효과가 있습니다. 예를 들어 UWP 앱은 특별히 유니버설 디바이스 패밀리를 대상으로 함에 따라 결과적으로 모든 장치에서 사용할 수 있는 앱입니다. 유니버설 디바이스 패밀리를 대상으로 하는 앱은 유니버설 디바이스 패밀리의 API만 제공하는 것으로 가정할 수 있습니다(이를 대상으로 하기 때문). 다른 API는 조건부로 호출해야 합니다. 또한 이러한 앱은 광범위한 장치에서 실행될 수 있으므로 뛰어난 적응형 UI와 포괄적인 입력 기능이 있어야 합니다. Windows 모바일 앱은 특별히 모바일 디바이스 패밀리를 대상으로 하며 해당 OS가 모바일 디바이스 패밀리(휴대폰, 태블릿 및 유사한 장치 포함)를 기반으로 하는 장치에 사용할 수 있는 앱입니다. 모바일 디바이스 패밀리 앱은 모바일 디바이스 패밀리의 모든 API를 제공하는 것으로 가정할 수 있으며, 해당 UI가 적당히 적응형이어야 합니다. IoT 디바이스 패밀리를 대상으로 하는 앱은 IoT 장치에만 설치할 수 있으며 IoT 디바이스 패밀리의 모든 API를 제공하는 것으로 가정할 수 있습니다. 이 앱은 특정 장치 유형에서만 실행되므로 해당 UI와 입력 기능이 매우 특수할 수 있습니다.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 다음은 대상 디바이스 패밀리를 결정할 때 도움이 되는 몇 가지 고려 사항입니다.
 
@@ -280,12 +282,8 @@ UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API �
 
 Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 Windows 개발자 센터 대시보드 사용](../publish/using-the-windows-dev-center-dashboard.md)을 참조하세요.
 
- 
-
- 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

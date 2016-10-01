@@ -7,7 +7,7 @@ label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
 
 ---
 
@@ -192,6 +192,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

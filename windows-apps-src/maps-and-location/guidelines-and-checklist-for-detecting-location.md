@@ -5,7 +5,7 @@ title: "위치 인식 앱에 대한 지침"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
 ---
 
@@ -172,6 +172,6 @@ ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

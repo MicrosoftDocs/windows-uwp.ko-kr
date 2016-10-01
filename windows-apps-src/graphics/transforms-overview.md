@@ -5,7 +5,7 @@ title: "변환 개요"
 description: "UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임&amp;\\#160;API에서 변형을 사용하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9e01a64f02d8a36e72c31263400130d0d808eb1b
+ms.openlocfilehash: 6534e7337ecaa081d0bb05335425f5b58557ab32
 
 ---
 
@@ -139,6 +139,6 @@ Windows 10에서 XAML에는 UI로 3D 효과를 만드는 데 사용할 수 있�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

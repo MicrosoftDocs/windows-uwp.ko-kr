@@ -5,7 +5,7 @@ title: "컴퍼지션 시각적 트리"
 description: "컴퍼지션 시각적 개체는 컴퍼지션 API의 다른 모든 기능이 사용하고 빌드되는 시각적 트리 구조를 구성합니다. API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내는 시각적 개체를 하나 또는 여러 개 정의하고 만들 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
+ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 
 ---
 # 컴퍼지션 시각적 트리
@@ -39,7 +39,7 @@ ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
 샘플에는 세 가지 시각적 개체도 포함되어 있습니다.
 
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속됩니다.
--   [ **ContainerVisual** ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – 시각적 개체에서 파생되며 자식 시각적 개체를 만들 수 있는 기능을 추가합니다.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – 시각적 개체에서 파생되며 시각적 개체가 이미지, 효과 또는 단색 등의 픽셀을 렌더링할 수 있도록 브러시를 연결하는 기능을 추가합니다.
 
 이 샘플에서는 애니메이션 또는 더 복잡한 효과 등의 개념은 제공하지 않으며 이러한 모든 시스템에서 사용하는 구성 요소만 다룹니다.
@@ -508,6 +508,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "UWP(유니버설 Windows 플랫폼) 게임에서 XAML(Extensible A
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: dda452a6f9b2a47d7ddaee9732bb714f0f5dbe5d
+ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
 
 ---
 
@@ -372,6 +372,6 @@ DirectX를 사용할 방법을 결정했으면 다음 Windows 런타임 형식 �
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

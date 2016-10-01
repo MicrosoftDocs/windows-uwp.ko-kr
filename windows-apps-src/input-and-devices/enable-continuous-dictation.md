@@ -7,7 +7,7 @@ label: Continuous dictation
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 1bcf6ce700b50ff633a29863fee41c2bfa3d9f98
+ms.openlocfilehash: 1f074b210d42b1c40817e88b5d73921652fa7d05
 
 ---
 
@@ -284,6 +284,6 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 
