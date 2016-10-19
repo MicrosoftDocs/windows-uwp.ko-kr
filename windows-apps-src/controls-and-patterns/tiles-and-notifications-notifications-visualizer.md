@@ -6,20 +6,18 @@ ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a954404ccc2e986c1603402315c8497f802ad254
 
 ---
-
 # 알림 시각화 도우미
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 알림 시각화 도우미는 [스토어](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움을 줍니다.
 
-## <span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>개요
+## 개요
 
 
 알림 시각화 도우미 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 유사하게 편집 시 타일을 시각적 미리 보기를 통해 즉각적으로 확인할 수 있도록 합니다. 이 앱은 또한 오류를 검사하여 유효한 타일 페이로드를 만들 수 있도록 돕습니다.
@@ -36,7 +34,7 @@ ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
  
 
-## <span id="Features"></span><span id="features"></span><span id="FEATURES"></span>기능
+## 기능
 
 
 알림 시각화 도우미에는 적응형 라이브 타일을 사용하여 수행할 수 있는 작업을 보여 주고 시작하는 데 도움을 주는 다양한 샘플 페이로드가 함께 제공됩니다. 다른 모든 텍스트 옵션, 그룹/하위 그룹, 배경 이미지 등을 실험해 볼 수 있으며 다양한 디바이스와 화면에서 타일이 조정되는 방식도 확인할 수 있습니다. 변경 후에는 업데이트된 페이로드를 나중에 사용하도록 파일에 저장할 수 있습니다.
@@ -51,7 +49,7 @@ ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
  
 
-## <span id="related_topics"></span>관련 항목
+## 관련 항목
 
 
 * [스토어에서 알림 시각화 도우미 가져오기](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)
@@ -69,6 +67,6 @@ ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

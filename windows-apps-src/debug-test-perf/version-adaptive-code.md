@@ -3,19 +3,16 @@ author: jwmsft
 title: "버전 적응 코드"
 description: "이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3f81d80cef0fef6d24cad1b42ce9726b03857b5a
-ms.openlocfilehash: db6b9c83d36ac876661197dce81e5724e44bb640
+ms.sourcegitcommit: 24a62c9331d4f651937f3f795fb1e7c9704af2ca
+ms.openlocfilehash: 7656018c61688bddbf23f889a82af4fd6d58c3ea
 
 ---
 
-# 버전 적응 코드&#58; 이전 버전과 호환성을 유지하면서 새로운 API 사용
+# 버전 적응 코드: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
 Windows 10 SDK의 각 릴리스에서는 활용하고 싶어할 만한 멋진 기능이 새로 추가됩니다. 그러나 모든 고객이 동시에 최신 버전의 Windows 10으로 디바이스를 업데이트하지는 않을 것이므로 앱이 가능한 한 가장 광범위한 디바이스에서 작동하도록 해야 합니다. 여기서는 이전 버전의 Windows 10에서 실행되지만 최신 업데이트가 설치된 디바이스에서 앱이 실행될 때마다 새로운 기능도 활용하도록 앱을 설계하는 방법을 보여 줍니다.
 
 앱이 가장 광범위한 Windows 10 디바이스를 지원하도록 하려면 두 단계를 수행해야 합니다. 첫째, 최신 API를 대상으로 하도록 Visual Studio 프로젝트를 구성합니다. 이렇게 하면 앱을 컴파일할 때 발생하는 상황에 영향을 주게 됩니다. 둘째, 앱이 실행되고 있는 디바이스에 있는 API만 호출하도록 런타임 검사를 수행합니다.
-
-> [!NOTE] 
-> 이 문서에서는 Windows 10용 Windows Insider Preview SDK, 버전 1607(1주년 업데이트)의 예제를 사용합니다. Preview SDK는 시험판이며 프로덕션 환경에서 사용할 수 없습니다. 테스트 컴퓨터에서만 SDK를 설치하세요. Preview SDK에는 버그 수정과 API 노출 영역에 대한 개발 중인 변경 사항이 포함되어 있습니다. 스토어에 제출해야 하는 응용 프로그램에서 작업하는 경우 미리 보기를 설치하면 안 됩니다.
 
 ## Visual Studio 프로젝트 구성
 
@@ -43,7 +40,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 참조를 위해, 각 SDK에 대한 빌드 번호는 다음과 같습니다.
 - Windows 10, 버전 1506: SDK 버전 10240
 - Windows 10, 버전 1511(11월 업데이트): SDK 버전 10586
-- Windows 10, 버전 1607 Insider Preview(1주년 업데이트): 이 문서가 작성된 시점에서 [최신 Insider Preview SDK 버전은 14332](https://blogs.windows.com/buildingapps/2016/04/28/windows-10-anniversary-sdk-preview-build-14332-released/)입니다.
+- Windows 10 버전 1607(1주년 업데이트): SDK 버전 14393
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 
@@ -481,6 +478,6 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

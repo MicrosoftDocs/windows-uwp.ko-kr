@@ -4,8 +4,8 @@ title: "사용자 위치 가져오기"
 description: "사용자의 위치를 찾고 위치 변경에 대응합니다. 사용자 위치에 대한 액세스는 설정 앱의 개인 정보 설정에서 관리합니다. 또한 이 항목에서는 앱에 사용자 위치 액세스 권한이 있는지 확인하는 방법을 보여 줍니다."
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
+ms.sourcegitcommit: bdb6cbd0b0ccb7b6aa04cf6ba98bb154af325515
+ms.openlocfilehash: 1172aae67169295ac6f2446c839a1cce5a84fa36
 
 ---
 
@@ -41,7 +41,7 @@ ms.openlocfilehash: d35bf3ef13e2b36dfed6613a00f65d19b9013464
 
 ### 1단계: 사용자의 위치에 대한 액세스 요청
 
-**중요** 사용자의 위치에 액세스하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용하여 사용자의 위치에 대한 액세스를 요청해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.
+앱에 동의 없음 위치 접근 권한 값(참고 참조)이 없는 경우 위치에 액세스하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드를 사용하여 위치에 대한 액세스를 요청해야 합니다. UI 스레드에서 **RequestAccessAsync** 메서드를 호출해야 하며 앱이 포그라운드에 있어야 합니다. 사용자가 앱에 권한을 부여할 때까지는 앱에서 사용자의 위치 정보에 액세스할 수 없습니다.\*
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -49,7 +49,11 @@ using Windows.Devices.Geolocation;
 var accessStatus = await Geolocator.RequestAccessAsync();
 ```
 
-[**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+
+
+[**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+
+>참고: 동의 없음 위치 기능을 통해 앱은 사용자의 명시적 권한 없이도 의도적으로 난독 처리된(부정확한) 위치를 가져올 수 있습니다(시스템 수준의 위치 스위치는 계속 **켜짐** 상태여야 함). 앱에서 동의 없음 위치를 활용하는 방법은 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) 클래스의 [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) 메서드를 참조하세요.
 
 ### 2단계: 사용자의 위치를 가져오고 위치 사용 권한 변경에 대해 등록
 
@@ -268,6 +272,6 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

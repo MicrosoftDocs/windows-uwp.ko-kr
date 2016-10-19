@@ -4,8 +4,8 @@ title: "백그라운드 작업 진행 및 완료 모니터링"
 description: "앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법을 알아봅니다."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: 6e6e28bc339364e70282a9db84593188c70a59c4
-ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 0488e47c35b2f7c8a8db2b2aca4527c4c3b67d28
 
 ---
 
@@ -21,7 +21,9 @@ ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
 -   [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법에 대해 알아봅니다. 백그라운드 작업은 앱과 분리되고 개별적으로 실행되지만, 앱 코드를 사용하여 백그라운드 작업의 진행과 완료를 모니터링할 수 있습니다. 이렇게 하려면 시스템에 등록된 백그라운드 작업의 이벤트에 앱을 가입합니다.
+별도의 프로세스로 실행되는 백그라운드 작업이 보고하는 진행 및 완료를 앱에서 인식하는 방법에 대해 알아봅니다. 단일 프로세스 백그라운드 작업의 경우 공유 변수를 설정하여 진행 및 완료를 나타낼 수 있습니다.
+
+ 백그라운드 작업은 앱과 분리되고 개별적으로 실행되지만, 앱 코드를 사용하여 백그라운드 작업의 진행과 완료를 모니터링할 수 있습니다. 이렇게 하려면 시스템에 등록된 백그라운드 작업의 이벤트에 앱을 가입합니다.
 
 -   이 항목에서는 백그라운드 작업을 등록하는 앱이 있다고 가정합니다. 백그라운드 작업을 빠르게 작성하려면 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
@@ -210,7 +212,6 @@ ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

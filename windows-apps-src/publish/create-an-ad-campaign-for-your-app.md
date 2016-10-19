@@ -5,7 +5,7 @@ title: "앱 광고 캠페인 만들기"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 translationtype: Human Translation
 ms.sourcegitcommit: ce26f020480c3f45e3fc4130a49eb66ecbdf5ba7
-ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
+ms.openlocfilehash: 856643dca5b7b25e20b7b5a782de6cef792b94a8
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
 
 앱을 홍보하는 광고 캠페인을 만드는 방법은 다음과 같습니다.
 
-1.  개발자 센터 대시보드의 앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출**&gt;**앱 홍보**를 클릭합니다.
+1.  개발자 센터 대시보드의 앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출** &gt; **앱 홍보**를 클릭합니다.
 2.  다음 중 하나를 수행합니다.
 
     -   이 앱에 대한 광고 캠페인을 아직 만들지 않은 경우 **앱 홍보** 페이지에 광고 캠페인의 이점에 대한 정보가 표시됩니다. **시작** 또는 **광고 캠페인 만들기**를 클릭합니다.
@@ -85,6 +85,6 @@ ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

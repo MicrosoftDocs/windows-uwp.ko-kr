@@ -5,7 +5,7 @@ title: "BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 
 description: "Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 네이티브 상호 운용 인터페이스를 제공합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: c2086e703e3972d4dd38dc1b7147bfa5f01231cf
+ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
 
 ---
 # BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용
@@ -270,6 +270,6 @@ private:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

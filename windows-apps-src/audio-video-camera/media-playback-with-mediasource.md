@@ -1,24 +1,20 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: "MediaSource 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다."
-title: "MediaSource를 사용하여 미디어 재생"
+description: "이 문서에서는 MediaSource 사용 방법을 보여 줍니다. 이 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다."
+title: "미디어 항목, 재생 목록 및 트랙"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
+ms.sourcegitcommit: c2e337e88f9dda3380dd62c32ca6e5d942366636
+ms.openlocfilehash: bb49af7a386356647000e268bcc6983351eaf4b8
 
 ---
 
-# MediaSource를 사용하여 미디어 재생
+# 미디어 항목, 재생 목록 및 트랙
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
+ 이 문서에서는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스 사용 방법을 보여 줍니다. 이 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) 클래스는 **MediaSource**의 기능을 확장하여 미디어 항목에 포함된 여러 오디오, 비디오 및 메타데이터 트랙에서 관리하고 선택할 수 있습니다. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 하나 이상의 미디어 재생 항목에서 재생 목록을 만들 수 있습니다.
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
-
-[**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905) 클래스는 로컬 또는 원격 파일과 같은 여러 원본에서 미디어를 참조하고 재생하는 일반적인 방법을 제공하며 기본 미디어 형식에 상관없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939) 클래스는 **MediaSource**의 기능을 확장하여 미디어 항목에 포함된 여러 오디오, 비디오 및 메타데이터 트랙에서 관리하고 선택할 수 있습니다. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)를 사용하면 하나 이상의 미디어 재생 항목에서 재생 목록을 만들 수 있습니다.
-
-이 문서의 코드는 [비디오 재생 SDK](http://go.microsoft.com/fwlink/p/?LinkId=620020&clcid=0x409) 샘플에서 조정되었습니다. 이 샘플을 다운로드하여 상황에 따라 사용된 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
 ## MediaSource 만들기 및 재생
 
@@ -33,7 +29,9 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 -   [**CreateFromStreamReference**](https://msdn.microsoft.com/library/windows/apps/dn930911)
 -   [**CreateFromUri**](https://msdn.microsoft.com/library/windows/apps/dn930912)
 
-**MediaSource**를 만든 후에 [**SetPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/dn899085)를 호출하여 **[MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)**로 또는 [**Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) 속성을 설정하여 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)로 원본을 직접 재생할 수 있습니다. 다음 예제에서는 **MediaSource**를 사용하여 사용자가 선택한 **MediaElement**의 미디어 파일을 재생하는 방법을 보여 줍니다.
+**MediaSource**를 만든 후에는 [**Source**](https://msdn.microsoft.com/library/windows/apps/dn987010) 속성을 설정하여 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652535)로 재생할 수 있습니다. Windows 10 버전 1607부터는 XAML 페이지의 미디어 플레이어 콘텐츠를 렌더링하기 위해 [**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764)를 호출하여 **MediaPlayer**를 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)에 할당할 수 있습니다. 이것이 기본적인 **MediaElement** 사용 방법입니다. **MediaPlayer** 사용 방법은 [**MediaPlayer를 사용하여 오디오 및 비디오 재생**](play-audio-and-video-with-mediaplayer.md)을 참조하세요.
+
+다음 예제에서는 **MediaSource**를 사용하여 사용자가 선택한 **MediaPlayer**의 미디어 파일을 재생하는 방법을 보여 줍니다.
 
 이 시나리오를 완료하기 위해서는 [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) 및 [**Windows.Media.Playback**](https://msdn.microsoft.com/library/windows/apps/dn640562) 네임스페이스를 포함해야 합니다.
 
@@ -43,13 +41,27 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[DeclareMediaSource](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaSource)]
 
+변수를 선언하여 **MediaPlayer** 개체를 저장하고 XAML에서 미디어 콘텐츠를 렌더링하려는 경우 **MediaPlayerElement** 컨트롤을 페이지에 추가합니다.
+
+[!code-cs[DeclareMediaPlayer](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaPlayer)]
+
+[!code-xml[MediaPlayerElement](./code/MediaSource_RS1/cs/MainPage.xaml#SnippetMediaPlayerElement)]
+
 사용자가 재생할 미디어 파일을 선택할 수 있도록 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용합니다. 선택기의 [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) 메서드에서 반환된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 통해 [**MediaSource.CreateFromStorageFile**](https://msdn.microsoft.com/library/windows/apps/dn930909)을 호출하여 새 MediaObject를 초기화합니다. 마지막으로 [**SetPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/dn899085) 메서드를 호출하여 미디어 원본을 **MediaElement**에 대한 재생 원본으로 설정합니다.
 
 [!code-cs[PlayMediaSource](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPlayMediaSource)]
 
+기본적으로 미디어 원본을 설정해도 **MediaPlayer**가 자동으로 재생되지 않습니다. [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play)를 호출하여 수동으로 재생을 시작할 수 있습니다.
+
+[!code-cs[Play](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetPlay)]
+
+미디어 원본이 설정되자마자 플레이어가 재생을 시작할 수 있도록 **MediaPlayer**의 [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) 속성을 true로 설정할 수도 있습니다.
+
+[!code-cs[자동 실행](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAutoPlay)]
+
 ## MediaPlaybackItem을 사용하여 여러 오디오, 비디오 및 메타데이터 트랙 처리
 
-여러 종류의 원본에서 미디어를 재생하는 것은 일반적인 방법이므로 재생하기 위해 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)를 편하게 사용할 수 있지만 고급 동작을 액세스하려면 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)을 사용해야 할 수 있습니다. 미디어 항목에 대한 여러 오디오, 비디오 및 데이터 트랙을 액세스하고 관리하는 기능이 포함됩니다.
+여러 종류의 원본에서 미디어를 재생하는 것은 일반적인 방법이므로 재생하기 위해 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)를 편하게 사용할 수 있지만 고급 동작에 액세스하려면 **MediaSource**에서 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)을 만들어야 할 수 있습니다. 미디어 항목에 대한 여러 오디오, 비디오 및 데이터 트랙을 액세스하고 관리하는 기능이 포함됩니다.
 
 **MediaPlaybackItem**을 저장하기 위한 변수를 선언합니다.
 
@@ -63,8 +75,8 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[PlayMediaPlaybackItem](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackItem)]
 
-**참고**  
-**MediaSource**는 단일 **MediaPlaybackItem**에만 연결될 수 있습니다. 원본에서 **MediaPlaybackItem**을 만든 후에 동일한 원본에서 다른 재생 항목 만들려고 하면 오류가 발생합니다. 또한 미디어 원본에서 **MediaPlaybackItem**을 만든 후에는 **MediaSource** 개체를 **MediaElement** 또는 **MediaPlayer**에 대한 원본으로 직접 설정할 수 없지만 **MediaPlaybackItem**를 대신 사용해야 합니다.
+> [!NOTE] 
+> **MediaSource**는 단일 **MediaPlaybackItem**에만 연결될 수 있습니다. 원본에서 **MediaPlaybackItem**을 만든 후에 동일한 원본에서 다른 재생 항목 만들려고 하면 오류가 발생합니다. 또한 미디어 원본에서 **MediaPlaybackItem**을 만든 후에는 **MediaSource** 개체를 **MediaPlayer**에 대한 원본으로 직접 설정할 수 없지만 **MediaPlaybackItem**을 대신 사용해야 합니다.
 
 [**VideoTracksChanged**](https://msdn.microsoft.com/library/windows/apps/dn930954) 이벤트는 여러 비디오 트랙을 포함하는 **MediaPlaybackItem**이 임의 재생 원본에 할당된 후 발생하며 비디오 트랙 목록이 항목 변경으로 인해 변경되면 다시 발생할 수 있습니다. 이 이벤트에 대한 처리기를 사용하면 사용자가 사용 가능한 트랙 간에 전환할 수 있도록 UI를 업데이트할 수 있습니다. 이 예제에서는 [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348)를 사용하여 사용 가능한 비디오 트랙을 표시합니다.
 
@@ -100,6 +112,28 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[ToggleUnchecked](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetToggleUnchecked)]
 
+메타데이터 트랙을 처리할 때 [**Cues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.Cues) 또는 [**ActiveCues**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.TimedMetadataTrack.ActiveCues) 속성에 액세스하여 트랙 내의 신호 집합에 액세스할 수 있습니다. 이렇게 하면 미디어 항목의 신호 위치가 표시되도록 UI를 업데이트할 수 있습니다.
+
+## 미디어 항목을 열 때 지원되지 않는 코덱 및 알 수 없는 오류 처리
+Windows 10 버전 1607부터 앱이 실행 중인 디바이스에서 미디어 항목 재생에 필요한 코덱이 전체 또는 부분적으로 지원되는지 확인할 수 있습니다. [**AudioTracksChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracksChanged)와 같은 **MediaPlaybackItem** 트랙 변경 이벤트의 이벤트 처리기에서 먼저 트랙 변경이 새 트랙의 삽입인지 확인합니다. 새 트랙의 삽입인 경우 [**AudioTracks**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.AudioTracks) 컬렉션과 같은 **MediaPlaybackItem** 매개 변수의 적절한 트랙 컬렉션과 함께 **IVectorChangedEventArgs.Index** 매개 변수에 전달된 인덱스를 사용하여 삽입 중인 트랙에 대한 참조를 가져올 수 있습니다.
+
+삽입된 트랙에 대한 참조가 있으면 트랙 [**SupportInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.SupportInfo) 속성의 [**DecoderStatus**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrackSupportInfo.DecoderStatus)를 확인합니다. 값이 [**FullySupported**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus)인 경우 트랙 재생에 필요한 적합한 코덱이 디바이스에 있는 것입니다. 값이 [**Degraded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus)인 경우 시스템에서 트랙을 재생할 수 있지만 재생 성능이 약간 저하됩니다. 예를 들어 5.1 오디오 트랙이 2채널 스테레오로 재생될 수 있습니다. 이 경우 사용자에게 성능 저하에 대해 알리도록 UI를 업데이트할 수 있습니다. 값이 [**UnsupportedSubtype**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus) 또는 [**UnsupportedEncoderProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaDecoderStatus)인 경우 디바이스의 현재 코덱으로 트랙을 재생할 수 없습니다. 사용자에게 알리고 항목 재생을 건너뛰거나 사용자가 올바른 코덱을 다운로드할 수 있도록 UI를 구현할 수 있습니다. 트랙의 [**GetEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.GetEncodingProperties) 메서드를 사용하여 재생에 필요한 코덱을 결정할 수 있습니다.
+
+마지막으로, 트랙이 디바이스에서 지원되지만 파이프라인의 알 수 없는 오류로 인해 열 수 없는 경우 발생되는 트랙의 [**OpenFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.OpenFailed) 이벤트를 등록할 수 있습니다.
+
+[!code-cs[AudioTracksChanged_CodecCheck](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetAudioTracksChanged_CodecCheck)]
+
+[**OpenFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.AudioTrack.OpenFailed) 이벤트 처리기에서 **MediaSource** 상태가 알 수 없음인지 확인하고, 알 수 없음인 경우 프로그래밍 방식으로 다른 재생 트랙을 선택하거나, 사용자에게 다른 트랙을 선택하도록 하거나, 재생을 취소할 수 있습니다.
+
+[!code-cs[OpenFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetOpenFailed)]
+
+## 시스템 미디어 전송 컨트롤에서 사용되는 디스플레이 속성 설정
+Windows 10 버전 1607부터 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)에서 재생되는 미디어는 기본적으로 SMTC(시스템 미디어 전송 컨트롤)와 자동으로 통합됩니다. **MediaPlaybackItem**의 재생 속성을 업데이트하여 SMTC에 의해 재생되는 메타데이터를 지정할 수 있습니다. [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties)를 호출하여 항목에 대한 디스플레이 속성을 나타내는 개체를 가져옵니다. [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) 속성을 설정하여 재생 항목이 음악인지 또는 비디오인지 설정합니다. 그런 다음 개체의 [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties) 또는 [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) 속성을 설정합니다. [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923)를 호출하여 항목의 속성을 제공된 값으로 설정합니다. 일반적으로 앱은 웹 서비스에서 디스플레이 값을 동적으로 검색하지만 다음 예제에서는 이 프로세스를 하드코드된 값을 사 표시합니다.
+
+[!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
+
+[!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+
 ## TimedTextSource를 사용하여 시간이 제한된 외부 텍스트 추가
 
 일부 시나리오의 경우에는 여러 로캘의 자막이 있는 별도 파일과 같이 미디어 항목과 관련된 시간이 지정된 텍스트가 있는 외부 파일이 있을 수 있습니다. [**TimedTextSource**](https://msdn.microsoft.com/library/windows/apps/dn956679) 클래스를 사용하여 스트림이나 URI에서 시간이 지정된 외부 텍스트 파일을 로드합니다.
@@ -128,7 +162,7 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다.  트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
+**CueEntered** 이벤트는 관련된 트랙에 **ApplicationPresented**, **Hidden** 또는 **PlatformPresented**의 프레젠테이션 모드가 있는 한 신호 시작 시간에 도달할 때 발생합니다. 트랙에 대한 프레젠테이션 모드가 **Disabled**인 동안에는 신호 이벤트는 메타데이터 트랙에 대해 발생하지 않습니다. 이 예제에서는 디버그 창에 신호와 관련된 사용자 지정 데이터를 단순히 출력합니다.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -148,11 +182,18 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[DeclareMediaPlaybackList](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDeclareMediaPlaybackList)]
 
-이 문서의 앞부분에서 설명한 동일한 절차를 사용하여 목록에 추가하려는 각 미디어 항목에 대한 **MediaPlaybackItem**을 만듭니다. **MediaPlaybackList** 개체를 초기화하고 이 개체에 미디어 재생 항목을 추가합니다. [**CurrentItemChanged**](https://msdn.microsoft.com/library/windows/apps/dn930957) 이벤트에 대한 처리기를 등록합니다. 이 이벤트를 사용하면 UI를 업데이트하여 현재 재생 중인 미디어 항목을 반영할 수 있습니다. 마지막으로 **MediaElement** 또는 **MediaPlayer**의 재생 원본을 **MediaPlaybackList**로 설정합니다.
+이 문서의 앞부분에서 설명한 동일한 절차를 사용하여 목록에 추가하려는 각 미디어 항목에 대한 **MediaPlaybackItem**을 만듭니다. **MediaPlaybackList** 개체를 초기화하고 이 개체에 미디어 재생 항목을 추가합니다. [**CurrentItemChanged**](https://msdn.microsoft.com/library/windows/apps/dn930957) 이벤트에 대한 처리기를 등록합니다. 이 이벤트를 사용하면 UI를 업데이트하여 현재 재생 중인 미디어 항목을 반영할 수 있습니다. 마지막으로 **MediaPlayer**의 재생 원본을 **MediaPlaybackList**로 설정합니다.
 
 [!code-cs[PlayMediaPlaybackList](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPlayMediaPlaybackList)]
 
 **CurrentItemChanged** 이벤트 처리기에서 UI를 업데이트하여 이벤트로 전달된 [**CurrentMediaPlaybackItemChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn930929) 개체의 [**NewItem**](https://msdn.microsoft.com/library/windows/apps/dn930930) 속성을 사용하여 검색될 수 있는 현재 재생 중인 항목을 반영합니다. 이 이벤트에서 UI를 업데이트하는 경우 UI 스레드에서 업데이트되도록 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)에 대한 호출 안에서 수행해야 합니다.
+
+> [!NOTE] 
+> 시스템에서는 재생된 미디어 항목을 자동으로 지우지 않습니다. 즉, 사용자가 목록에서 뒤로 이동하는 경우 이전에 재생된 노래가 끊김 없이 다시 재생될 수 있지만 목록에서 더 많은 항목이 재생되어 앱의 메모리 사용량이 증가됩니다. 주기적으로 이전에 재생된 미디어 항목에 대한 리소스를 해제해야 합니다. 이는 백그라운드에서 앱이 재생 중이고 리소스가 더 많이 제한된 경우 특히 중요합니다. 
+
+**CurrentItemChanged** 이벤트를 사용하여 이전에 재생된 미디어 항목에서 리소스를 해제할 수 있습니다. 이전에 재생된 항목에 대한 참조를 유지하려면 **Queue** 컬렉션을 만듭니다. 또한 메모리에 유지할 최대 미디어 항목 개수를 결정하는 변수를 설정합니다. 처리기에서 이전에 재생된 항목에 대한 참조를 가져와서 큐에 추가하고 큐에 남아 있는 가장 오래된 항목을 큐에서 제거합니다. 반환된 항목에서 [**Reset**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource.Reset)을 호출하여 해당 리소스를 해제합니다. 그러나 먼저 해당 항목이 아직 큐에 남아 있거나 현재 재생 중이지 않은지 확인하여 항목이 여러 번 재생되는 경우를 처리합니다.
+
+[!code-cs[DeclareItemQueue](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetDeclareItemQueue)]
 
 [!code-cs[MediaPlaybackListItemChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetMediaPlaybackListItemChanged)]
 
@@ -170,16 +211,21 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 [!code-cs[RepeatButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetRepeatButton)]
 
- 
 
- 
+###재생 목록에 있는 미디어 항목의 오류 처리
+목록의 항목을 열 수 없는 경우 [**ItemFailed**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.ItemFailed) 이벤트가 발생합니다. 가능한 경우 처리기에 전달된 [**MediaPlaybackItemError**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError) 개체의 [**ErrorCode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItemError.ErrorCode) 속성에 네트워크 오류, 디코딩 오류 또는 암호화 오류 등 실패의 특정 원인이 열거됩니다.
+
+[!code-cs[ItemFailed](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetItemFailed)]
+
+## 관련 항목
+* [미디어 재생](media-playback.md)
+* [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
+* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
+* [백그라운드에서 미디어 재생](background-audio.md)
 
 
 
 
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

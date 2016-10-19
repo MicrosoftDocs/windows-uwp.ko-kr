@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: "원격 디바이스에서 앱 시작"
-description: "&quot;로마&quot; 프로젝트를 사용하여 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다."
+description: "로마 프로젝트를 사용하여 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
 ms.openlocfilehash: d8c3783d68a1b3b216058790d84255a7fb4b612c

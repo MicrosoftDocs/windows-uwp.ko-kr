@@ -4,8 +4,8 @@ title: "게임 및 DirectX"
 description: "UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 수익을 창출할 수 있는 새로운 기회를 제공합니다. 새 게임을 시작하거나 기존 게임을 포팅하는 방법에 대해 알아봅니다."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
-ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
+ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
+ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
 
 ---
 
@@ -32,6 +32,7 @@ UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 �
 | [게임의 오디오](working-with-audio-in-your-directx-game.md) | 음악 및 사운드를 개발하여 DirectX 게임에 통합하는 방법 및 오디오 신호를 처리하여 동적 및 위치 사운드를 만드는 방법을 알아봅니다. |
 | [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md) | DirectX를 사용하는 UWP C++ 게임에 기본 터치 컨트롤을 추가하는 방법을 알아봅니다. 터치 기반 컨트롤을 추가하여 Direct3D 환경에서 고정 평면 카메라를 이동하는 방법을 보여 줍니다. 이러한 Direct3D 환경에서는 손가락이나 스타일러스로 끌면 카메라 관점이 이동합니다. |
 | [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) | 기존 마우스 및 키보드 이동-보기 컨트롤(마우스 보기 컨트롤이라고도 함)을 DirectX 게임에 추가하는 방법을 알아봅니다. |
+| [상대 마우스 이동](relative-mouse-movement.md) | 시스템 커서를 사용하지 않고 절대 화면 좌표를 반환하지 않는 상대 마우스 컨트롤을 추가하는 방법에 대해 설명합니다. 대신 이 컨트롤은 마우스 이동 사이의 픽셀 델타를 추적합니다. |
 | [입력 및 렌더링 루프 최적화](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | 입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있으며, 최적화하면 게임에 더 세련된 느낌을 줄 수 있습니다. 또한 입력 이벤트를 적절하게 최적화하면 배터리 수명을 향상시킬 수 있습니다. 올바른 [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) 입력 이벤트 처리 옵션을 선택하여 게임에서 입력을 가능한 한 매끄럽게 처리하도록 하는 방법을 알아봅니다. |
 | [스왑 체인 크기 조정 및 오버레이](multisampling--scaling--and-overlay-swap-chains.md) | 모바일 디바이스에서 보다 신속한 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다. |
 | [DXGI 1.3 스왑 체인으로 대기 시간 단축](reduce-latency-with-dxgi-1-3-swap-chains.md) | DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌더링을 시작할 적절한 시간을 신호로 보낼 때까지 기다려 효과적인 프레임 지연을 줄입니다. |
@@ -43,6 +44,7 @@ UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 �
 | [게임의 클라우드](cloud-for-games.md) | 게임 개발에 클라우드 기술을 사용하는 방법을 알아봅니다. |
 | [DirectX 및 XAML interop](directx-and-xaml-interop.md) | UWP 게임에서 XAML(Extensible Application Markup Language)과 Microsoft DirectX를 함께 사용할 수 있습니다. |
 | [게임 패키지 작성](package-your-windows-store-directx-game.md) | 대규모 UWP 게임, 특히 지역별 자산이나 선택적 기능 HD 자산을 사용하여 여러 언어를 지원하는 게임은 크기가 쉽게 급증할 수 있습니다. 이 항목에서는 고객이 실제로 필요한 리소스만 받을 수 있도록 앱 패키지와 앱 번들을 사용하여 앱을 사용자 지정하는 방법을 알아봅니다. |
+| [개념 승인](concept-approval.md) | 제품이 Xbox에서 실행되거나 Xbox Live를 사용하는 경우 필요한 개념 승인을 위해 제품을 제출하는 방법을 알아봅니다. |
 | [게임 포팅 가이드](porting-guides.md) | 기존 게임을 Direct3D 11, UWP 및 Windows 10으로 포팅하는 방법에 대한 가이드를 제공합니다. |
 | [게임 프로그래밍 리소스](additional-directx-game-programming-resources.md) | Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스를 확인하세요. |
 
@@ -70,6 +72,6 @@ UWP(유니버설 Windows 플랫폼)에서는 게임을 만들어 배포하고 �
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

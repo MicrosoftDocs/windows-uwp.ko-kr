@@ -4,19 +4,18 @@ ms.assetid: 2ed21281-f996-402d-a968-d1320a4691df
 description: "이 문서의 테스트 응용 프로그램 ID 및 광고 단위 ID 값을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다."
 title: "테스트 모드 값"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 93b20954ba82b613bde96db30a000902dec3b844
+ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
+ms.openlocfilehash: e1462ae48e8aae8f5ed0e5a7e46a6660bf33e786
 
 ---
 
 # 테스트 모드 값
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱에서 광고를 표시하려면 응용 프로그램 ID 및 광고 단위 ID를 지정해야 합니다. 앱을 개발하는 동안 이 문서의 테스트 응용 프로그램 ID 및 광고 단위 ID 값을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다.
 
-> **중요** 앱에서 광고 조정을 사용하는 경우(즉, 앱에서 **AdMediatorControl** 개체를 사용하는 경우) 광고 단위를 지정하지 않아도 됩니다. 이 시나리오에서는 광고 단위가 자동으로 생성됩니다. 자세한 내용은 [AdMediatorControl과 AdControl의 차이](what-is-the-difference-admediatorcontrol-or-adcontrol.md)를 참조하세요.
 
 게시한 후에 앱에서 테스트 값을 사용하려고 하면 앱에 광고가 수신되지 않습니다. 게시된 앱에서 광고를 수신하려면 Windows 개발자 센터 대시보드에서 제공한 응용 프로그램 ID와 광고 단위 ID를 사용하여 코드를 업데이트해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)을 참조하세요.
  
@@ -77,6 +76,6 @@ ms.openlocfilehash: 93b20954ba82b613bde96db30a000902dec3b844
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

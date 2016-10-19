@@ -1,23 +1,23 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다."
-title: "카메라 프로필"
+description: "이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다."
+title: "카메라 프로필을 사용하여 카메라 기능 검색 및 선택"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
+ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
 
 ---
 
-# 카메라 프로필
+# 카메라 프로필을 사용하여 카메라 기능 검색 및 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다.
+이 문서에서는 카메라 프로필을 사용하여 여러 다양한 비디오 캡처 디바이스의 기능을 검색 및 관리하는 방법을 설명합니다. 특정 해상도 또는 프레임 속도를 지원하는 프로필, 여러 카메라에 대한 동시 액세스를 지원하는 프로필, HDR을 지원하는 프로필 선택 등의 작업이 포함됩니다.
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
  
 
@@ -26,8 +26,6 @@ ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
 여러 다른 디바이스의 카메라는 지원되는 캡처 해상도 집합, 비디오 캡처의 프레임 속도, HDR 또는 가변 프레임 속도 캡처 지원 여부를 비롯한 여러 다른 기능을 지원합니다. UWP(유니버설 Windows 플랫폼) 미디어 캡처 프레임워크는 [**MediaCaptureVideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)에 이러한 기능 집합을 저장합니다. [**MediaCaptureVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn926694) 개체로 나타내는 카메라 프로필은 사진 캡처용 1개, 비디오 캡처용 1개, 비디오 미리 보기용 1개로 이루어진 3개의 미디어 설명 컬렉션을 포함합니다.
 
 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체를 초기화하기 전에 현재 디바이스의 캡처 디바이스를 쿼리하여 지원되는 프로필을 확인할 수 있습니다. 지원되는 프로필을 선택하면 캡처 디바이스가 프로필 미디어 설명의 모든 기능을 지원하는지 알 수 있습니다. 이렇게 하면 특정 디바이스에서 지원되는 기능 조합을 파악하기 위해 시행착오를 거칠 필요가 없습니다.
-
-기본 미디어 캡처에 대한 문서, [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에서 미디어 캡처를 초기화하는 데 사용되는 [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573)는 초기화에 필요한 최소 데이터 크기인 캡처 디바이스의 ID 문자열로만 만들어집니다.
 
 [!code-cs[BasicInitExample](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetBasicInitExample)]
 
@@ -85,7 +83,7 @@ HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 �
 
 정적 메서드 [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710)는 지정된 디바이스에서 지원되는 카메라 프로필을 지정된 [**KnownVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn948843) 값에 따라 분류해서 반환합니다. 이 시나리오에서 **VideoRecording** 값은 반환되는 카메라 프로필을 비디오 녹화를 지원하는 것으로 제한하기 위해 지정됩니다.
 
-반환된 카메라 프로필 목록 전체를 루핑합니다. 각 카메라 프로필에 대해 [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698) 속성이 true인지를 확인하기 위해 프로필의 각 [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695) 전체를 루핑합니다. 적합한 미디어 설명을 찾으면 루프를 중단하고 프로필 및 설명 개체를 **MediaCaptureInitializationSettings** 개체에 할당합니다.
+반환된 카메라 프로필 목록 전체를 루핑합니다. 각 카메라 프로필에 대해 [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698) 속성이 true인지를 확인하기 위해 프로필의 각 [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695) 전체를 루핑합니다. 적합한 미디어 설명을 찾은 후 루프를 중단하고 프로필 및 설명 개체를 **MediaCaptureInitializationSettings** 개체에 할당합니다.
 
 [!code-cs[FindHDRProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindHDRProfile)]
 
@@ -99,7 +97,8 @@ HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 �
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -110,6 +109,6 @@ HDR을 지원하는 프로필을 선택하는 작업은 다른 시나리오의 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

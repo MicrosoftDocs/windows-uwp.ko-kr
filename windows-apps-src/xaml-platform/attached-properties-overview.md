@@ -4,8 +4,8 @@ description: "XAML의 연결된 속성에 대한 개념을 설명하고 몇 가�
 title: "연결된 속성 개요"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
+ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
+ms.openlocfilehash: 06797a616ab828932db6c9d4250b7de253e5d0b2
 
 ---
 
@@ -13,7 +13,7 @@ ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-*연결된 속성*은 XAML 개념입니다. XAML의 모든 개체 요소에 대해 설정할 수 있는 전역 속성과 개념적으로 유사합니다. 일반적으로 연결된 속성은 소유자 형식의 개체 모델에 기존의 속성 래퍼가 없는 특수한 형태의 종속성 속성으로 정의됩니다.
+*연결된 속성*은 XAML 개념입니다. 연결된 속성을 통해 추가 속성/값 쌍이 개체에 설정될 수 있지만 속성은 원본 개체 정의의 일부가 아닙니다. 일반적으로 연결된 속성은 소유자 형식의 개체 모델에 기존의 속성 래퍼가 없는 특수한 형태의 종속성 속성으로 정의됩니다.
 
 ## 사전 요구 사항
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
 
 ## XAML의 연결된 속성
 
-연결된 속성은 대체로 XAML 구문을 사용하도록 설정했기 때문에 발생합니다. XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)를 설정할 수 있는 방법을 보여 주는 예입니다.
+XAML에서는 _AttachedPropertyProvider.PropertyName_ 구문을 사용하여 연결된 속성을 설정합니다. 다음은 XAML에서 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)를 설정할 수 있는 방법을 보여 주는 예입니다.
 
 ```XML
 <Canvas>
@@ -29,13 +29,11 @@ ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
 </Canvas>
 ```
 
-이 사용법은 정적 속성과 약간 유사합니다. 이름별 인스턴스를 참조하지 말고 연결된 속성을 소유하고 등록하는 **Canvas** 형식을 항상 참조하세요.
-
 **참고** 사용 이유를 자세히 설명하지는 않고 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771)를 연결된 속성 예제로 사용합니다. **Canvas.Left**의 용도와 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)에서 해당 레이아웃 자식을 처리하는 방법에 대해 자세히 알아보려면 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 참조 항목이나 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/mt228350)를 참조하세요.
 
 ## 연결된 속성을 사용하는 이유
 
-연결된 속성은 관계된 여러 개체가 런타임에 서로 정보를 전달할 수 없도록 하는 코딩 규칙을 이스케이프하는 방법입니다. 각 개체가 해당 속성만 가져오고 설정할 수 있도록 공통 기본 클래스에 속성을 배치할 수 있습니다. 그러나 이 작업을 수행하는 시나리오 수가 증가할수록 결국 기본 클래스가 공유 가능한 속성들로 꽉 차게 됩니다. 수백 개의 하위 항목 중 두 개만 속성을 사용하는 경우가 발생할 수도 있습니다. 이것은 바람직한 클래스 디자인이 아닙니다. 이 문제를 해결하려면 연결된 속성 개념을 통해 개체가 해당 클래스 구조에서 정의되지 않은 속성에 대해 값을 할당할 수 있도록 합니다. 개체 트리의 관계에 여러 개체를 만든 후에는 정의 클래스가 런타임에 자식 개체에서 값을 읽을 수 있습니다.
+연결된 속성은 관계된 여러 개체가 런타임에 서로 정보를 전달할 수 없도록 하는 코딩 규칙을 이스케이프하는 방법입니다. 각 개체가 해당 속성만 가져오고 설정할 수 있도록 공통 기본 클래스에 속성을 배치할 수 있습니다. 그러나 이 작업을 수행하는 시나리오 수가 증가할수록 결국 기본 클래스가 공유 가능한 속성들로 꽉 차게 됩니다. 수백 개의 하위 항목 중 두 개만 속성을 사용하는 경우가 발생할 수도 있습니다. 이것은 바람직한 클래스 디자인이 아닙니다. 이 문제를 해결하려면 연결된 속성 개념을 통해 개체가 해당 클래스 구조에서 정의되지 않은 속성에 대해 값을 할당할 수 있도록 합니다. 개체 트리에서 여러 개체를 만든 후에는 정의 클래스가 런타임에 자식 개체에서 값을 읽을 수 있습니다.
 
 예를 들어 자식 요소는 연결된 속성을 사용하여 해당 부모 요소에 UI에 표시되는 방법을 알릴 수 있습니다. [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) 연결된 속성이 이 경우에 해당됩니다. **Canvas.Left**는 **Canvas** 자체가 아니라 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) 요소에 포함된 요소에 대해 설정되기 때문에 연결된 속성으로 만들어집니다. 모든 가능한 자식 요소는 **Canvas.Left** 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/hh759772)을 사용하여 **Canvas** 레이아웃 컨테이너 부모 내에서 해당 레이아웃 오프셋을 지정합니다. 연결된 속성을 사용하면 많은 가능한 레이아웃 컨테이너 중 하나에만 각각 적용되는 다양한 속성으로 기본 요소 개체 모델을 복잡하게 만들지 않고 이 시나리오가 작동할 수 있습니다. 대신 많은 레이아웃 컨테이너가 연결된 속성 집합을 자체적으로 구현합니다.
 
@@ -59,7 +57,7 @@ ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
 
 ### 속성 시스템 사용
 
-Windows 런타임의 연결된 속성은 종속성 속성으로 구현되므로 속성 값은 많은 기존의 인스턴스 속성이 저장되는 것과 마찬가지로 속성 시스템에 의해 공유 종속성 속성 저장소에 저장될 수 있습니다. 따라서 연결된 속성은 소유 클래스에서 종속성 속성 식별자를 노출합니다.
+Windows 런타임의 연결된 속성은 종속성 속성으로 구현되므로 값은 속성 시스템에 의해 공유 종속성 속성 저장소에 저장될 수 있습니다. 따라서 연결된 속성은 소유 클래스에서 종속성 속성 식별자를 노출합니다.
 
 코드에서 연결된 속성을 설정하려면 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) 메서드를 호출하고 연결된 속성의 식별자 역할을 하는 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 필드를 전달합니다. 설정할 값을 전달하기도 했습니다.
 
@@ -123,6 +121,6 @@ XAML 프로세서는 XAML이 개체 트리로 구문 분석될 때 연결된 속
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

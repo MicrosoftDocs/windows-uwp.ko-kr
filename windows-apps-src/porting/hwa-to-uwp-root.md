@@ -3,8 +3,8 @@ title: "호스트된 웹앱 - UWP(유니버설 Windows 플랫폼) 앱으로 웹 
 description: "웹 사이트 URL에서 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다. 웹앱 내 코드에서 Windows 10 기본 디바이스 기능에 액세스합니다. 호스트된 웹앱용 Microsoft Windows 브리지(이전의 Project Westminster)를 사용하면 Windows 스토어에 웹앱을 빠르고 쉽게 포함할 수 있습니다."
 author: seksenov
 translationtype: Human Translation
-ms.sourcegitcommit: 765789ef83f9b6a845ab79505b1b9ecbfd987126
-ms.openlocfilehash: 491665558f713dcbaae7ea20739ed72c61a12cd2
+ms.sourcegitcommit: 7fe6e240e4ef221b49f9b103cf30192449ce4502
+ms.openlocfilehash: 95d50aa37f349f494f260ea3af97211a085623a9
 
 ---
 
@@ -45,6 +45,6 @@ Windows 호스트된 웹앱으로 쉽게 [기존의 Chrome 호스트된 앱을 �
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

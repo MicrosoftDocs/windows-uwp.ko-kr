@@ -1,268 +1,271 @@
 ---
 author: TylerMSFT
-Description: The JavaScript API for the Microsoft Take a Test app allows you to do secure assessments. Take a Test provides a secure browser that prevents students from using other computer or internet resources during a test.
-title: Microsoft Take a Test JavaScript API.
+Description: "Microsoft 시험 응시 앱을 위한 JavaScript API를 사용하면 평가의 보안을 유지할 수 있습니다. 시험 응시에서는 테스트 중 학생이 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 보안 브라우저를 제공합니다."
+title: "Microsoft 시험 응시 JavaScript API"
+translationtype: Human Translation
+ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
+ms.openlocfilehash: d7f185e83e81583fd6d7920e5412f76f3a97edd0
+
 ---
 
-# Microsoft Take a Test JavaScript API
+# Microsoft 시험 응시 JavaScript API
 
-**Take a Test** is a browser-based app that renders locked down online assessments for high-stakes testing. It supports the SBAC browser API standard for high stakes common core testing and allows you to focus on the assessment content rather than how to lock down Windows.
+**시험 응시**는 고위험 테스트를 위해 잠긴 온라인 평가를 렌더링하는 브라우저 기반 앱입니다. 고위험 공통 코어 테스트를 위한 SBAC 브라우저 API 표준을 지원하고 Windows를 잠그는 방법 대신 평가 콘텐츠에 초점을 맞출 수 있습니다.
 
-**Take a Test**, powered by Microsoft's Edge browser, provides a JavaScript API that Web applications can use to provide a locked down experience for taking tests.
+Microsoft Edge 브라우저를 기반으로 하는 **시험 응시**에서는 웹 응용 프로그램에서 시험을 위해 잠금 환경을 제공하는 데 사용할 수 있는 JavaScript API를 제공합니다.
 
-The API (based on the [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) provides text to speech and the capability to query if the device is locked down, what the running user and system running processes are, and more.
+이 API([공통 코어 SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) 기반)는 Text to Speech와 디바이스가 잠긴 경우 쿼리하기 위한 접근 권한 값, 실행 중인 사용자와 프로세스를 실행 중인 시스템 등을 제공합니다.
 
-See the [Take a Test app technical reference](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) for information about the app itself.
+앱 자체에 대한 자세한 내용은 [Take a Test app technical reference](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)(시험 응시 앱 기술 참조)를 참조하세요.
 
-**Important**
+**중요**
 
-The APIs do not work in a remote session.  
-Take a Test does not handle HTTP new window requests.
+이 API는 원격 세션에서 작동하지 않습니다.  
+시험 응시는 HTTP 새 창 요청을 처리하지 않습니다.
 
-For troubleshooting help, see [Troubleshoot Microsoft Take a Test with the event viewer](troubleshooting.md).
+문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
 
-**The Take a Test API consists of the following namespaces:**  
+**시험 응시 API는 다음 네임스페이스로 구성됩니다.**  
 
-| Namespace | Description |
+| 네임스페이스 | 설명 |
 |-----------|-------------|
-|[security namespace](#security-namespace)| Text to speech functionality|
-|[tts namespace](#tts-namespace)|Enables you to lock down the device|
+|[보안 네임스페이스](#security-namespace)| Text to Speech 기능입니다.|
+|[tts 네임스페이스](#tts-namespace)|디바이스를 잠글 수 있습니다.|
 
 
- ## security namespace
+ ## 보안 네임스페이스
 
-Enables you to lock down the device, check the list of user and system processes, obtain MAC and IP addresses, and clear cached web resources.
+디바이스를 잠그고, 사용자 및 시스템 프로세스 목록을 확인하고, MAC 및 IP 주소를 가져오고, 캐시된 웹 리소스를 지울 수 있습니다.
 
-| Method | Description   |
+| 메서드 | 설명   |
 |--------|---------------|
-|[clearCache](#clearCache) | Clears cached web resources |
-|[close](#close) | Closes the browser and unlocks the device |
-|[enableLockDown](#enableLockDown) | Locks down the device. Also used to unlock the device |
-|[getIPAddressList](#getIPAddressList) | Gets the list of IP addresses for the device |
-|[getMACAddress](#getMACAddress)|Gets the list of MAC addresses for the device|
-|[getProcessList](#getProcessList)|Gets the list of running user and system processes|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Determines whether the lockdown context is still applied to the device|
+|[clearCache](#clearCache) | 캐시된 웹 리소스를 지웁니다. |
+|[닫기](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
+|[enableLockDown](#enableLockDown) | 디바이스를 잠급니다. 디바이스의 잠금을 해제하는 데도 사용됩니다. |
+|[getIPAddressList](#getIPAddressList) | 디바이스의 IP 주소 목록을 가져옵니다. |
+|[getMACAddress](#getMACAddress)|디바이스의 MAC 주소 목록을 가져옵니다.|
+|[getProcessList](#getProcessList)|실행 중인 사용자 및 시스템 프로세스의 목록을 가져옵니다.|
+|[isEnvironmentSecure](#isEnvironmentSecure)|잠금 컨텍스트가 디바이스에 적용되는지 결정합니다.|
 
 <span id="clearCache" />
 ### void clearCache()
-Clear cached web resources.
+캐시된 웹 리소스를 지웁니다.
 
-**Syntax**  
+**구문**  
 `browser.security.clearCache();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="close"/>
 ### close(boolean restart)
-Closes the browser and unlocks the device.
+브라우저를 닫고 디바이스의 잠금을 해제합니다.
 
-**Syntax**  
+**구문**  
 `browser.security.close(false);`
 
-**Parameters**  
-`restart` - this parameter is ignored but must be provided.
+**매개 변수**  
+`restart` - 이 매개 변수는 무시되지만 제공해야 합니다.
 
-**Return value**  
+**반환 값**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="enableLockDown"/>
 ### enableLockdown(boolean lockdown)
-Locks down the device. Also used to unlock the device.
+디바이스를 잠급니다. 디바이스의 잠금을 해제하는 데도 사용됩니다.
 
-**Syntax**  
+**구문**  
 `browser.security.enableLockDown(true|false);`
 
-**Parameters**  
-`lockdown` - `true` to run the Take-a-Test app above the lock screen and apply policies discussed in this [document](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). `False` stops running Take-a-Test above the lock screen and closes it unless the app is not locked down; in which case there is no effect.
+**매개 변수**  
+`lockdown` - `true` 잠금 화면 위에서 시험 응시 앱을 실행하고 이 [문서](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)에 설명된 정책을 적용합니다. `False` 앱이 잠겨 있지 않으면 잠금 화면 위에서 시험 응시의 실행을 중지하고 닫습니다. 이 경우 영향을 주지 않습니다.
 
-**Return value**  
+**반환 값**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="getIPAddressList"/>
 ### string[] getIPAddressList()
-Gets the list of IP addresses for the device.
+디바이스의 IP 주소 목록을 가져옵니다.
 
-**Syntax**  
+**구문**  
 `browser.security.getIPAddressList();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `An array of IP addresses.`
 
 <span id="getMACAddress" />
 ### string[] getMACAddress()
-Gets the list of MAC addresses for the device.
+디바이스의 MAC 주소 목록을 가져옵니다.
 
-**Syntax**  
+**구문**  
 `browser.security.getMACAddress();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `An array of MAC addresses.`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="getProcessList" />
 ### string[] getProcessList()
-Gets the list the user’s running processes.
+사용자가 실행 중인 프로세스 목록을 가져옵니다.
 
-**Syntax**  
+**구문**  
 `browser.security.getProcessList();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `An array of running process names.`
 
-**Remarks**
-The list does not include system processes.
+**설명** 시스템 프로세스는 이 목록에 포함되지 않습니다.
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="isEnvironmentSecure" />
 ### boolean isEnvironmentSecure()
-Determines whether the lockdown context is still applied to the device.
+잠금 컨텍스트가 디바이스에 적용되는지 결정합니다.
 
-**Syntax**  
+**구문**  
 `browser.security.isEnvironmentSecure();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `True indicates that the lockdown context is applied to the device; otherwise false.`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
-## tts namespace
-| Method | Description |
+## tts 네임스페이스
+| 메서드 | 설명 |
 |--------|-------------|
-|[getStatus](#getStatus) | Gets the speech playback status|
-|[getVoices](#getVoices) | Gets a list of available voice packs|
-|[pause](#pause)|Pauses speech synthesis|
-|[resume](#resume)|Resume paused speech synthesis|
-|[speak](#speak)|Client-side text to speech synthesis|
-|[stop](#stop)|Stops speech synthesis|
+|[getStatus](#getStatus) | 음성 재생 상태를 가져옵니다.|
+|[getVoices](#getVoices) | 사용 가능한 음성 팩 목록을 가져옵니다.|
+|[pause](#pause)|음성 합성을 일시 중지합니다.|
+|[resume](#resume)|일시 중지된 음성 합성을 다시 시작합니다.|
+|[speak](#speak)|클라이언트 쪽 Text to Speech 합성입니다.|
+|[중지](#stop)|음성 합성을 중지합니다.|
 
 > [!Tip]
-> The [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) is an implementation of the [W3C Speech Api](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) and we recommend that developers use that API when possible.
+> [Microsoft Edge 음성 합성 API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/)는 [W3C Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html)의 구현이며 가능한 경우 개발자는 이 API를 사용하는 것이 좋습니다.
 
 <span id="getStatus" />
 ### string getStatus()
-Gets the speech playback status.
+음성 재생 상태를 가져옵니다.
 
-**Syntax**  
+**구문**  
 `browser.tts.getStatus();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="getVoices" />
 ### string[] getVoices()
-Gets a list of available voice packs.
+사용 가능한 음성 팩 목록을 가져옵니다.
 
-**Syntax**  
+**구문**  
 `browser.tts.getVoices();`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="pause" />
 ### void pause()
 
-Pauses speech synthesis.
+음성 합성을 일시 중지합니다.
 
-**Syntax**  
+**구문**  
 `browser.tts.pause();`
 
-**Parameters**
+**매개 변수**
 
 `None`
 
-**Return value**
+**반환 값**
 
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="resume" />
 ### void resume()
-Resume paused speech synthesis.
+일시 중지된 음성 합성을 다시 시작합니다.
 
-**Syntax**  
+**구문**  
 `browser.tts.resume();`
 
-**Parameters**
+**매개 변수**
 `None`
 
-**Return value**
+**반환 값**
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 
 <span id="speak" />
 ### void speak(string text, object options, function callback)
-Client-side text to speech synthesis.
+클라이언트 쪽 Text to Speech 합성입니다.
 
-**Syntax**  
+**구문**  
 `void browser.tts.speak(“Hello world”, options, callback);`
 
-**Parameters**  
+**매개 변수**  
 `Speech options such as gender, pitch, rate, volume. For example:`  
 ```
 var options = {
@@ -275,31 +278,36 @@ var options = {
 };
 ```
 
-**Return value**  
+**반환 값**  
 `None`
 
-**Remarks**
-Option variables must be lowercase. The gender, language, and voice parameters take strings.
-Volume, pitch, and rate must be marked up within the speech synthesis markup language file (SSML), not within the options object.
+**설명** 옵션 변수는 소문자여야 합니다. gender, language, voice 매개 변수는 문자열을 사용합니다.
+volume, pitch, rate은 옵션 개체가 아닌 SSML(Speech Synthesis Markup Language) 파일 내에 표시되어야 합니다.
 
-The options object must follow the order, naming, and casing shown in the example above.
+옵션 개체는 위의 예제에 표시된 순서, 이름 지정 및 대/소문자 표기를 따라야 합니다.
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
 
 ---
 <span id="stop" />
 ### void stop()
-Stops speech synthesis.
+음성 합성을 중지합니다.
 
-**Syntax**  
+**구문**  
 `void browser.tts.speak(“Hello world”, options, callback);`
 
-**Parameters**  
+**매개 변수**  
 `None`
 
-**Return value**  
+**반환 값**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**요구 사항**  
+Windows 10 버전 1607
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

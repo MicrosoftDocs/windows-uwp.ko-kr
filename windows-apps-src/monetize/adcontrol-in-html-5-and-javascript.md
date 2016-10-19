@@ -4,15 +4,15 @@ ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: "Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 JavaScript/HTML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
 title: "HTML 5 및 Javascript의 AdControl"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 501edf178ecccf8a6b62d4602837dbbdf820d744
 
 ---
 
 # HTML 5 및 Javascript의 AdControl
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 JavaScript/HTML 앱에서 배너 광고를 표시하는 방법을 보여 줍니다. 이 연습에서는 **AdMediatorControl** 또는 광고 조정을 사용하지 않습니다.
 
@@ -21,7 +21,8 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 ## 필수 조건
 
 
-* Visual Studio 2015 또는 Visual Studio 2013과 함께 [Microsoft 스토어 참여 및 수익 창출 SDK](http://aka.ms/store-em-sdk)를 설치합니다.
+* UWP 앱: Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
+* Windows 8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
 
 > **참고** 나중에 Visual Studio 2015를 사용하여 Windows 10 Anniversary SDK Preview 빌드 14295 이상을 설치한 경우 WinJS 라이브러리도 설치해야 합니다. 이 라이브러리는 Windows 10용 Windows SDK 이전 버전에는 포함되었지만 Windows 10 Anniversary SDK Preview 빌드 14295부터는 별도로 설치해야 합니다. WinJS를 설치하려면 [WinJS 다운로드](http://try.buildwinjs.com/download/GetWinJS/)를 참조하세요.
 
@@ -31,7 +32,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 
 2. 프로젝트의 대상이 **모든 CPU**인 경우 아키텍처별 빌드 출력(예: **x86**)을 사용하도록 프로젝트를 업데이트합니다. 프로젝트의 대상이 **모든 CPU**인 경우 다음 단계에 따라 Microsoft Advertising 라이브러리에 대한 참조를 성공적으로 추가하지 못할 수 있습니다. 자세한 내용은 [프로젝트에서 모든 CPU를 대상으로 할 경우 발생하는 참조 오류](known-issues-for-the-advertising-libraries.md#reference_errors)를 참조하세요.
 
-3.  **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가...**를 선택합니다.
+3.  **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.**를 선택합니다.
 
 4.  **참조 관리자**에서 프로젝트 유형에 따라 다음 참조 중 하나를 선택합니다.
 
@@ -65,12 +66,11 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
     <script src="/MSAdvertisingJS/ads/ad.js"></script>
     ```
 
-    > **참고** 이 줄은 **&lt;head&gt;** 섹션에서 default.js를 포함한 후에 추가해야 합니다. 그러지 않으면 프로젝트를 빌드할 때 오류가 발생합니다.
+    > **참고**&nbsp;&nbsp;이 줄은 **&lt;head&gt;** 섹션에서 default.js를 포함한 후에 추가해야 합니다. 그러지 않으면 프로젝트를 빌드할 때 오류가 발생합니다.
 
 8.  default.html 파일(또는 프로젝트에 해당하는 다른 html 파일)의 **&lt;body&gt;** 섹션을 **AdControl**에 대한 div를 포함하도록 수정합니다. **AdControl**의 **applicationId** 및 **adUnitId** 속성을 [테스트 모드 값](test-mode-values.md)에 제공된 테스트 값에 할당하고 컨트롤의 너비와 높이를 [배너 광고에 대해 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나로 조정합니다.
 
-    > **참고**  
-    앱을 제출하기 전에 테스트 **applicationId** 및 **adUnitId** 값을 라이브 값으로 바꿉니다.
+    > **참고**&nbsp;&nbsp;앱을 제출하기 전에 테스트 **applicationId** 및 **adUnitId** 값을 라이브 값으로 바꿉니다.
 
     ``` syntax
     <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"
@@ -84,7 +84,7 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 ## Windows 개발자 센터를 사용하여 라이브 광고와 함께 앱 출시
 
 
-1.  개발자 센터 대시보드에서 앱의 **수익 창출**&gt;**광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft 광고 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+1.  개발자 센터 대시보드에서 앱의 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft Advertising 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
 
 2.  코드에서 테스트 광고 단위 값(**applicationId** 및 **adUnitId**)을 개발자 센터에서 생성한 라이브 값으로 바꿉니다.
 
@@ -133,6 +133,6 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

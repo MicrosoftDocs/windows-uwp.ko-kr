@@ -1,37 +1,41 @@
 ---
 author: mcleanbyron
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
-description: Use these methods in the Windows Store submission API to retrieve data for apps that are registered to your Windows Dev Center account.
-title: Get app data using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 데이터를 검색합니다."
+title: "Windows 스토어 제출 API를 사용하여 앱 데이터 가져오기"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 99d609decc8c38952961deac5bb8ec6926d91c88
+
 ---
 
-# Get app data using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 앱 데이터 가져오기
 
-Use the following methods in the Windows Store submission API to get data for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 데이터를 가져옵니다. Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. These methods can only be used to get data for apps. To create or manage submissions for apps, see the methods in [Manage app submissions](manage-app-submissions.md).
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드는 앱에 대한 데이터를 가져오는 데만 사용할 수 있습니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
 
-| Method        | URI    | Description                                                                 |
+| 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` | Retrieves data for all the apps that are registered to your Windows Dev Center account. For more information, see [Get all apps](get-all-apps.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}``` | Retrieves data about a specific app that is registered to your Windows Dev Center account. For more information, see [Get an app](get-an-app.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` | Lists the add-ons (also known as in-app products or IAPs) for an app that is registered to your Windows Dev Center account. For more information, see [Get add-ons for an app](get-add-ons-for-an-app.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` | Lists the package flights for an app that is registered to your Windows Dev Center account. For more information, see [Get package flights for an app](get-flights-for-an-app.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications``` | Windows 개발자 센터 계정에 등록된 모든 앱에 대한 데이터를 검색합니다. 자세한 내용은 [모든 앱 가져오기](get-all-apps.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}``` | Windows 개발자 센터 계정에 등록된 특정 앱에 대한 데이터를 검색합니다. 자세한 내용은 [앱 가져오기](get-an-app.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` | Windows 개발자 센터 계정에 등록된 앱에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 나열합니다. 자세한 내용은 [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights``` | Windows 개발자 센터 계정에 등록된 앱에 대한 패키지 플라이트를 나열합니다. 자세한 내용은 [앱에 대한 패키지 플라이트 가져오기](get-flights-for-an-app.md)를 참조하세요. |
 
 <span/>
 
-## Prerequisites
+## 필수 조건
 
-If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API before trying to use any of these methods.
+아직 완료하지 않은 경우 이러한 메서드를 사용하기 전에 Windows 스토어 제출 API를 위한 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
 
-## Resources
+## 리소스
 
-These methods use the following resources to format data.
+이러한 메서드는 다음 리소스를 사용하여 데이터의 형식을 지정합니다.
 
 <span id="application_object" />
-### Application
+### 응용 프로그램
 
-This resource represents an app that is registered to your account. The following example demonstrates the format of this resource.
+이 리소스는 계정에 등록된 앱을 나타냅니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -52,24 +56,24 @@ This resource represents an app that is registered to your account. The followin
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The Store ID of the app. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).   |
-| primaryName   | string  | The primary name of the app.                                                                                                                                                   |
-| packageFamilyName | string  | The package family name of the app.                                                                                                                                                                                                         |
-| packageIdentityName          | string  | The package identity name of the app.                                                                                                                                                              |
-| publisherName       | string  | The Windows publisher ID that is associated with the app. This corresponds to the **Package/Identity/Publisher** value that appears on the [App identity](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) page for the app in the Windows Dev Center dashboard.                                                                                             |
-| firstPublishedDate      | string  | The date the app was first published, in ISO 8601 format.                                                                                         |
-| lastPublishedApplicationSubmission       | object | An object that provides information about the last published submission for the app. For more information, see the [Submission](#submission_object) section below.                                                                                                                                                          |
-| pendingApplicationSubmission        | object  |  An object that provides information about the current pending submission for the app. For more information, see the [Submission](#submission_object) section below.  |   |
+| id            | 문자열  | 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.   |
+| primaryName   | 문자열  | 앱의 기본 이름입니다.                                                                                                                                                   |
+| packageFamilyName | 문자열  | 앱의 패키지 패밀리 이름입니다.                                                                                                                                                                                                         |
+| packageIdentityName          | 문자열  | 앱의 패키지 ID 이름입니다.                                                                                                                                                              |
+| publisherName       | 문자열  | 앱과 연결된 Windows 게시자 ID입니다. 이 ID는 Windows 개발자 센터 대시보드에서 앱의 [앱 ID](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 나타나는 **패키지/ID/게시자** 값에 해당합니다.                                                                                             |
+| firstPublishedDate      | 문자열  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.                                                                                         |
+| lastPublishedApplicationSubmission       | object | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출](#submission_object) 섹션을 참조하세요.                                                                                                                                                          |
+| pendingApplicationSubmission        | object  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출](#submission_object) 섹션을 참조하세요.  |   |
 
 
 <span id="add-on-object" />
-### Add-on
+### 추가 콘텐츠
 
-This resource provides information about an add-on. The following example demonstrates the format of this resource.
+이 리소스는 추가 기능에 대한 정보를 제공합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -77,17 +81,17 @@ This resource provides information about an add-on. The following example demons
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| inAppProductId            | string  | The Store ID of the add-on. This value is supplied by the Store. An example Store ID is 9NBLGGH4TNMP.   |
+| inAppProductId            | 문자열  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.   |
 
 
 <span id="flight-object" />
-### Flight
+### 플라이트
 
-This resource provides information about a package flight for an app. The following example demonstrates the format of this resource.
+이 리소스는 앱의 패키지 플라이트에 대한 정보를 제공합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -108,22 +112,22 @@ This resource provides information about a package flight for an app. The follow
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | string  | The ID for the package flight. This value is supplied by Dev Center.  |
-| friendlyName           | string  | The name of the package flight, as specified by the developer.   |
-| lastPublishedFlightSubmission       | object | An object that provides information about the last published submission for the package flight. For more information, see the [Submission](#submission_object) section below.  |
-| pendingFlightSubmission        | object  |  An object that provides information about the current pending submission for the package flight. For more information, see the [Submission](#submission_object) section below.  |    
-| groupIds           | array  | An array of strings that contain the IDs of the flight groups that are associated with the package flight. For more information about flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | The friendly name of the package flight that is ranked immediately lower than the current package flight. For more information about ranking flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| flightId            | 문자열  | 패키지 플라이트의 ID입니다. 이 값은 개발자 센터에서 제공됩니다.  |
+| FriendlyName           | 문자열  | 개발자가 지정한 패키지 플라이트 이름입니다.   |
+| lastPublishedFlightSubmission       | object | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출](#submission_object) 섹션을 참조하세요.  |
+| pendingFlightSubmission        | object  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 개체입니다. 자세한 내용은 아래의 [제출](#submission_object) 섹션을 참조하세요.  |    
+| groupIds           | 배열  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
+| rankHigherThan           | 문자열  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
 
 
 <span id="submission_object" />
-### Submission
+### 제출
 
-This resource provides information about a submission. The following example demonstrates the format of this resource.
+이 리소스는 제출에 대한 정보를 제공합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -134,20 +138,26 @@ This resource provides information about a submission. The following example dem
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID of the submission.    |
-| resourceLocation   | string  | A relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to retrieve the complete data for the submission.                                                                                                                                               |
- 
+| id            | 문자열  | 제출의 ID입니다.    |
+| resourceLocation   | 문자열  | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다.                                                                                                                                               |
+ 
 <span/>
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage app submissions using the Windows Store submission API](manage-app-submissions.md)
-* [Get all apps](get-all-apps.md)
-* [Get an app](get-an-app.md)
-* [Get add-ons for an app](get-add-ons-for-an-app.md)
-* [Get package flights for an app](get-flights-for-an-app.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
+* [모든 앱 가져오기](get-all-apps.md)
+* [앱 가져오기](get-an-app.md)
+* [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
+* [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

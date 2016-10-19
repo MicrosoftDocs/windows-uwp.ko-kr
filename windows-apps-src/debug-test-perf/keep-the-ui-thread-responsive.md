@@ -5,7 +5,7 @@ title: "UI 스레드 응답 유지"
 description: "사용자는 컴퓨터 유형에 관계없이 계산하는 동안 앱이 계속 응답할 것으로 기대합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
+ms.openlocfilehash: 2a215264db018dfecff897b13b24ba535e7483ec
 
 ---
 # UI 스레드 응답 유지
@@ -106,6 +106,6 @@ public class AsyncExample
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

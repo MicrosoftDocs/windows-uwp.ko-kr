@@ -4,10 +4,10 @@ Description: "이 문서에서는 비디오 스트림에 대한 사용자 지정
 MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: "사용자 지정 비디오 효과"
+title: "사용자 지정 동영상 효과"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
+ms.sourcegitcommit: 2d10a9a3732612cff8da81ee1921eaed0e838099
+ms.openlocfilehash: 57908ff3329968bba2eea3d8d51cb0277a2afba5
 
 ---
 
@@ -16,8 +16,6 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 이 문서에서는 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 장치의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124)와 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)을 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
 
@@ -28,13 +26,13 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 **비디오 효과에 대한 Windows 런타임 구성 요소 추가**
 
-1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트...**를 선택합니다.
+1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트**를 선택합니다.
 2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
-3.  이 예제에서는 프로젝트 이름을 "VideoEffectComponent"로 지정합니다. 이 이름은 나중에 코드에서 참조됩니다.
+3.  이 예제에서는 프로젝트 이름을 *VideoEffectComponent*로 지정합니다. 이 이름은 나중에 코드에서 참조됩니다.
 4.  **확인**을 클릭합니다.
 5.  프로젝트 템플릿은 Class1.cs라는 클래스를 만듭니다. **솔루션 탐색기**에서 Class1.cs 아이콘을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.
-6.  파일 이름을 "ExampleVideoEffect.cs"로 바꿉니다. Visual Studio에서 새 이름에 대한 모든 참조를 업데이트할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.
-7.  "ExampleVideoEffect.cs"를 열고 클래스 정의를 업데이트하여 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현합니다.
+6.  파일 이름을 *ExampleVideoEffect.cs*로 바꿉니다. Visual Studio에서 새 이름에 대한 모든 참조를 업데이트할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.
+7.  **ExampleVideoEffect.cs**를 열고 클래스 정의를 업데이트하여 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현합니다.
 
 [!code-cs[ImplementIBasicVideoEffect](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetImplementIBasicVideoEffect)]
 
@@ -51,7 +49,7 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 ### Close 메서드
 
-시스템은 효과를 종료해야 하는 경우 클래스에 대해 [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) 메서드를 호출합니다. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 MediaEffectClosedReason입니다.
+시스템은 효과를 종료해야 하는 경우 클래스에 대해 [**Close**](https://msdn.microsoft.com/library/windows/apps/dn764789) 메서드를 호출합니다. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.MediaEffectClosedReason)입니다.
 
 [!code-cs[Close](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetClose)]
 
@@ -69,7 +67,8 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) 속성을 사용하면 효과가 효과의 출력에 쓰는지를 시스템에서 알 수 있게 됩니다. 앱에서 비디오 프레임을 수정하지 않는 경우(예: 비디오 프레임 분석만 수행하는 효과) 이 속성을 true로 설정해야 합니다. 그러면 프레임 입력이 프레임 출력에 효율적으로 복사됩니다.
 
-**팁** [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) 속성이 true로 설정되면 시스템은 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)이 호출되기 전에 입력 프레임을  출력 프레임으로 복사합니다. **IsReadOnly** 속성을 true로 설정해도 **ProcessFrame**에서 효과의 출력 프레임에 쓸 수 없게 제한되지는 않습니다.
+> [!TIP]
+> [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792) 속성이 true로 설정되면 시스템은 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)이 호출되기 전에 입력 프레임을 출력 프레임으로 복사합니다. **IsReadOnly** 속성을 true로 설정해도 **ProcessFrame**에서 효과의 출력 프레임에 쓸 수 없게 제한되지는 않습니다.
 
 [!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)] 
 
@@ -89,7 +88,8 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 [!code-cs[SupportedEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedEncodingProperties)]
 
 
-**참고** **SupportedEncodingProperties**에서 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
+> [!NOTE] 
+> **SupportedEncodingProperties**에서 [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
 
  
 
@@ -100,7 +100,8 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 [!code-cs[SupportedMemoryTypes](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedMemoryTypes)]
 
 
-**참고** [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 지정하는 경우 시스템은 GPU 또는 시스템 메모리 중에서 파이프라인에 더 효율적인 메모리를 사용합니다. 이 값을 사용할 때는 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드를 검사하여 메서드에 전달된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 또는 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) 중에서 어디에 데이터가 들어 있는지 확인한 후 그에 따라 프레임을 처리합니다.
+> [!NOTE]
+> [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822)를 지정하는 경우 시스템은 GPU 또는 시스템 메모리 중에서 파이프라인에 더 효율적인 메모리를 사용합니다. 이 값을 사용할 때는 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드를 검사하여 메서드에 전달된 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 또는 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505) 중에서 어디에 데이터가 들어 있는지 확인한 후 그에 따라 프레임을 처리합니다.
 
  
 
@@ -127,7 +128,7 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) 메서드는 효과가 비디오의 이미지 데이터를 수정하는 위치입니다. 이 메서드는 프레임당 한번씩 호출되고 [**ProcessVideoFrameContext**](https://msdn.microsoft.com/library/windows/apps/dn764826) 개체가 전달됩니다. 이 개체에는 처리될 수신 프레임이 포함된 입력 [**VideoFrame**](https://msdn.microsoft.com/library/windows/apps/dn930917) 개체와 나머지 비디오 파이프라인에 전달되는 이미지 데이터를 쓰는 출력 **VideoFrame** 개체가 포함됩니다. 이러한 각 **VideoFrame** 개체에는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성 및 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) 속성이 있지만 이러한 속성 중에서 사용할 수 있는 속성은 [**SupportedMemoryTypes**](https://msdn.microsoft.com/library/windows/apps/dn764801) 속성에서 반환한 값에 따라 결정됩니다.
 
-다음 예제에서는 소프트웨어 처리를 사용하는 **ProcessFrame** 메서드의 간단한 구현을 보여 줍니다.  [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체 사용에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요. 하드웨어 처리를 사용하는 **ProcessFrame** 구현 예제는 이 문서 뒷부분에 나와 있습니다.
+다음 예제에서는 소프트웨어 처리를 사용하는 **ProcessFrame** 메서드의 간단한 구현을 보여 줍니다. [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체 사용에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요. 하드웨어 처리를 사용하는 **ProcessFrame** 구현 예제는 이 문서 뒷부분에 나와 있습니다.
 
 **SoftwareBitmap**의 데이터 버퍼에 액세스하려면 COM interop이 필요하므로 **System.Runtime.InteropServices** 네임스페이스를 효과 클래스 파일에 포함해야 합니다.
 
@@ -139,10 +140,11 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 [!code-cs[COMImport](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetCOMImport)]
 
 
-**참고** 이 기술은 관리되지 않는 네이티브 이미지 버퍼에 액세스하므로 안전하지 않은 코드를 허용하도록 프로젝트를 구성해야 합니다.
-1.  솔루션 탐색기에서 VideoEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭하고 속성...을 선택합니다.
-2.  빌드 탭을 선택합니다.
-3.  "안전하지 않은 코드 허용" 확인란을 선택합니다.
+> [!NOTE]
+> 이 기술은 관리되지 않는 네이티브 이미지 버퍼에 액세스하므로 안전하지 않은 코드를 허용하도록 프로젝트를 구성해야 합니다.
+> 1.  솔루션 탐색기에서 VideoEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+> 2.  **빌드** 탭을 선택합니다.
+> 3.  **안전하지 않은 코드 허용** 확인란을 선택합니다.
 
  
 
@@ -160,12 +162,12 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
 이 문서 맨 처음에 나오는 [앱에 사용자 지정 효과 추가](#addacustomeffect) 섹션에 설명된 것처럼 다음 단계에 따라 생성된 프로젝트에 Win2D NuGet 패키지를 추가합니다.
 
-**효과 프로젝트에 Win2D NuGet 패키지 추가**
+**효과 프로젝트에 Win2D NuGet 패키지를 추가하려면**
 
-1.  **솔루션 탐색기**에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...**를 선택합니다.
+1.  **솔루션 탐색기**에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 2.  창 위쪽에서 **찾아보기** 탭을 선택합니다.
-3.  검색 상자에 "Win2D"를 입력합니다.
-4.  **Win2D.uwp**를 클릭하고 오른쪽 창에서 설치를 클릭합니다.
+3.  검색 상자에 **Win2D**를 입력합니다.
+4.  **Win2D.uwp**를 선택한 다음 오른쪽 창에서 **설치**를 선택합니다.
 5.  **변경 내용 검토** 대화 상자에 설치할 패키지가 표시됩니다. **확인**을 클릭합니다.
 6.  패키지 라이선스에 동의합니다.
 
@@ -189,7 +191,7 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 [!code-cs[SetEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetEncodingPropertiesWin2D)]
 
 
-[**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 구현은 위의 소프트웨어 처리 예제와 동일합니다. 이 예제에서는 **BlurAmount** 속성을 사용하여 Win2D 흐림 효과를 구성합니다.
+[**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 구현은 이전 소프트웨어 처리 예제와 동일합니다. 이 예제에서는 **BlurAmount** 속성을 사용하여 Win2D 흐림 효과를 구성합니다.
 
 [!code-cs[SetPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetPropertiesWin2D)]
 
@@ -208,9 +210,9 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 
 앱에서 비디오 효과를 사용하려면 앱에 효과 프로젝트에 대한 참조를 추가해야 합니다.
 
-1.  솔루션 탐색기에서 앱 프로젝트 아래에 있는 참조를 마우스 오른쪽 단추로 클릭하고 참조 추가...를 선택합니다.
-2.  프로젝트 탭을 확장하고 솔루션을 클릭한 후 효과 프로젝트 이름에 대한 확인란을 선택합니다. 이 예제에서 프로젝트 이름은 VideoEffectComponent입니다.
-3.  확인을 클릭합니다.
+1.  솔루션 탐색기에서 앱 프로젝트 아래에 있는 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
+2.  **프로젝트** 탭을 확장하고 **솔루션**을 선택한 다음 효과 프로젝트 이름에 대한 확인란을 선택합니다. 이 예제에서 이름은 *VideoEffectComponent*입니다.
+3.  **확인**을 클릭합니다.
 
 ### 카메라의 비디오 스트림에 사용자 지정 효과 추가
 
@@ -226,19 +228,17 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 
 ### MediaComposition의 클립에 사용자 지정 효과 추가
 
-비디오 클립에서 미디어 컴퍼지션을 만드는 방법에 대한 일반적인 지침은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요. 다음 코드 조각은 사용자 지정 비디오 효과를 사용하여 간단한 미디어 컴퍼지션을 만드는 방법을 보여 줍니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)로 사용자가 선택한 비디오 파일을 전달하여 [**CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출함으로써 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체가 만들어지고 새 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)에 클립이 추가됩니다. 다음으로 새 [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) 개체가 만들어지고 효과에 대한 네임스페이스와 클래스 이름이 생성자에 전달됩니다. 마지막으로 효과 정의가 **MediaClip** 개체의 [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) 컬렉션에 추가됩니다.
+비디오 클립에서 미디어 컴퍼지션을 만드는 방법에 대한 일반적인 지침은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요. 다음 코드 조각은 사용자 지정 비디오 효과를 사용하는 간단한 미디어 컴퍼지션을 만드는 방법을 보여 줍니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)로 사용자가 선택한 비디오 파일을 전달하여 [**CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출함으로써 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596) 개체가 만들어지고 새 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)에 클립이 추가됩니다. 다음으로 새 [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055) 개체가 만들어지고 효과에 대한 네임스페이스와 클래스 이름이 생성자에 전달됩니다. 마지막으로 효과 정의가 **MediaClip** 개체의 [**VideoEffectDefinitions**](https://msdn.microsoft.com/library/windows/apps/dn652643) 컬렉션에 추가됩니다.
 
 
 [!code-cs[AddEffectToComposition](./code/VideoEffect_Win10/cs/VideoEffect_Win10/MainPage.xaml.cs#SnippetAddEffectToComposition)]
 
 
 ## 관련 항목
-
-
-[간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md) 
-           [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md) 
-           [Win2D 설명서](http://go.microsoft.com/fwlink/?LinkId=519078)
- 
+* [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
+* [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
+* [Win2D 설명서](http://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [미디어 재생](media-playback.md)
 
  
 
@@ -247,6 +247,6 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

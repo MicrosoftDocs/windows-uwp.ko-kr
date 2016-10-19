@@ -4,8 +4,8 @@ Description: "이전에 Windows 또는 Windows Phone용 스토어에 앱을 게�
 title: "앱이 Windows 10 고객용 스토어에 표시되는 방법"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: a3ecb8a4a1aebc719f8a8a4eb140776685f53b4e
 
 ---
 
@@ -23,10 +23,10 @@ ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
 
 두 스토어에 게시된 앱에 대해 동일한 예약된 이름을 사용한 경우(앱의 ID 공유라고도 함) 이들은 두 개가 아닌 하나의 앱으로 간주됩니다. 대시보드에서 이들은 Windows 및 Windows Phone 패키지가 포함된 단일 앱으로 표시됩니다.
 
-대부분의 개발자가 각 스토어에서 앱 및 모든 IAP(앱에서 바로 제품)에 대해 동일한 가격 및 다른 속성을 설정했지만 이러한 값 중 일부가 다른 경우 Windows 10 고객에게 표시되는 내용을 이해해야 합니다.
+대부분의 개발자가 각 스토어에서 앱 및 모든 추가 기능에 대해 동일한 가격 및 다른 속성을 설정했지만 이러한 값 중 일부가 다른 경우 Windows 10 고객에게 표시되는 내용을 이해해야 합니다.
 
 ### 가격 책정
-각 스토어에서 앱(또는 IAP)에 대해 다른 기본 가격을 선택한 경우 Windows 스토어의 기본 가격이 사용됩니다.
+각 스토어에서 앱(또는 추가 기능)에 대해 다른 기본 가격을 선택한 경우 Windows 스토어의 기본 가격이 사용됩니다.
 
 **참고** Windows Phone 스토어에서 지역/국가별 가격을 설정한 경우 사용자 지정 가격도 Windows 10 고객에게 표시됩니다.
 
@@ -57,10 +57,10 @@ ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
 ### 스크린샷
 제출되는 모든 스크린샷을 가져와 사용되는 디바이스 유형에 따라 적절한 버전을 사용하여 Windows 10 고객에게 표시합니다. 드물게 각 스토어에 대해 지원되는 언어가 다른 경우, 일부 고객에게는 앱을 구매할 때 제공되는 환경을 가장 나타내는 다른 언어의 스크린샷이 표시됩니다.
 
-### 설명
-언어에 따라 Windows 10 고객에게 가장 적절한 설명을 표시합니다. 동일한 언어에서 둘 이상의 소스로부터 설명을 사용할 수 있는 경우 Windows 스토어 앱의 설명이 Windows 10 고객에게 표시됩니다. 드물게, 지원되는 언어가 각 스토어마다 다른 경우 Windows Phone 앱의 설명이 해당 언어로 제공된 유일한 설명이면 일부 고객에게는 이 설명이 표시될 수 있습니다.
+### 스토어 목록
+언어에 따라 Windows 10 고객에게 가장 적절한 스토어 목록을 표시합니다. 동일한 언어에서 둘 이상의 원본으로부터 스토어 목록을 사용할 수 있는 경우 Windows 스토어 앱의 목록이 Windows 10 고객에게 표시됩니다. 드물게, 지원되는 언어가 각 스토어마다 다른 경우 Windows Phone 앱의 스토어 목록이 해당 언어로 제공된 유일한 스토어 목록이면 일부 고객에게는 이 스토어 목록이 표시될 수 있습니다.
 
-여러 디바이스에서 작동하는 환경에 대해 알릴 수 있도록 Windows 10 고객에게 표시되는 설명을 업데이트하려는 경우 [앱 설명](create-app-descriptions.md)을 업데이트하여 이 작업을 수행할 수 있습니다. Windows 10 고객에게는 앱의 기본 설명이 표시되지만 여러 OS 버전의 고객에게 서로 다른 설명을 표시하려는 경우 [플랫폼 관련 설명을 작성](create-platform-specific-descriptions.md)할 수도 있습니다.
+여러 디바이스에서 작동하는 환경에 대해 알릴 수 있도록 Windows 10 고객에게 표시되는 스토어 목록을 업데이트하려는 경우 [앱 설명](create-app-store-listings.md)을 업데이트하여 이 작업을 수행할 수 있습니다. Windows 10 고객에게는 앱의 기본 설명이 표시되지만 여러 OS 버전의 고객에게 서로 다른 스토어 목록을 표시하려는 경우 [플랫폼별 스토어 목록을 작성](create-platform-specific-store-listings.md)할 수도 있습니다.
 
 ## 범주 변경
 
@@ -122,6 +122,6 @@ ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

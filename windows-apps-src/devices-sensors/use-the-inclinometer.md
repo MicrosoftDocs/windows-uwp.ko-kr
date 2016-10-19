@@ -5,7 +5,7 @@ title: "경사계 사용"
 description: "경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: f8b56e0ef13e471d99519256b5a6d124b569102d
+ms.openlocfilehash: 17828018f2c8db8a5a60d839e7f73904de7a1a24
 
 ---
 # 경사계 사용
@@ -177,6 +177,6 @@ InclinometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

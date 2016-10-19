@@ -5,11 +5,11 @@ description: "Microsoft Visual Studio는 Windows용이고 Xcode는 iOS 및 Mac O
 title: "Visual Studio에서 프로젝트 만들기"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+ms.openlocfilehash: 40dc6a52dbd495a78e5aa0d95a590d3e878d4068
 
 ---
 
-# 시작&#58; 프로젝트 만들기
+# 시작: 프로젝트 만들기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -56,6 +56,6 @@ Visual Studio에는 다음 그림과 같은 몇 가지 프로젝트 템플릿이
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

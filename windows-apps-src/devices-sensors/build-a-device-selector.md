@@ -5,7 +5,7 @@ title: "디바이스 선택기 빌드"
 description: "디바이스 선택기를 빌드하면 디바이스를 열거할 때 검색하는 디바이스를 제한할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
+ms.openlocfilehash: 091767d6f223ce2b4538dafb1c81595015589013
 
 ---
 # 디바이스 선택기 빌드
@@ -113,6 +113,6 @@ System.Devices.IpAddress:=[]
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

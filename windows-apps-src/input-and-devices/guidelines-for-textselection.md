@@ -7,7 +7,7 @@ label: Selecting text and images
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
+ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
 
 ---
 
@@ -136,6 +136,6 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

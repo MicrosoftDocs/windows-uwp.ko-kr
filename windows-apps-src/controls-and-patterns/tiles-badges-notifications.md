@@ -6,32 +6,25 @@ ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 
 ---
-
 # UWP 앱에 대한 타일, 배지 및 알림
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><img src="images/tile-and-live-tile.png" alt="Breakdown of tile elements" /></td>
-<td align="left"><p>모든 앱에 타일이 있습니다. <em>타일</em>은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다. 뉴스 헤드라인 또는 읽지 않은 가장 최근 메시지의 제목과 같은 새 정보를 사용자에게 전달하기 위해 <em>타일 알림</em>을 사용하여 타일을 업데이트할 수 있습니다. <em>배지</em> 또는<em> 알림 배지</em>를 사용하여 시스템 제공 문자 모양 또는 1-99의 숫자 형태로 상태 또는 요약 정보를 제공할 수 있습니다.</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
+타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 UWP 앱에는 타일이 있습니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다.</p>
+
+<p>뉴스 헤드라인 또는 읽지 않은 가장 최근 메시지의 제목과 같은 새 정보를 사용자에게 전달하기 위해 <em>타일 알림</em>을 사용하여 타일을 업데이트할 수 있습니다.</p>
+
+<p><em>배지</em>를 사용하여 시스템 제공 문자 모양 또는 1-99의 숫자 형태로 상태 또는 요약 정보를 제공할 수 있습니다. 배지는 앱에 대한 작업 표시줄 아이콘에도 나타납니다. </p>
+
 <p><em>알림 메시지</em>는 앱에서 <em>알림</em>(또는 <em>배너</em>)이라는 팝업 UI 요소를 통해 사용자에게 보내는 알림입니다. 사용자가 앱에 있는지 여부에 상관없이 알림을 볼 수 있습니다.</p>
-<p><em>푸시 알림</em> 또는 <em>원시 알림</em>은 WNS(Windows 푸시 알림 서비스) 또는 백그라운드 작업을 통해 앱에 전송되는 알림입니다. 앱은 관심 가질 만한 사항이 발생했음을 사용자에게 알려(배지 업데이트, 타일 업데이트 또는 알림을 통해) 이러한 알림에 응답하거나 개발자가 선택한 방식으로 응답할 수 있습니다.</p></td>
-</tr>
-</tbody>
-</table>
+<p><em>푸시 알림</em> 또는 <em>원시 알림</em>은 WNS(Windows 푸시 알림 서비스) 또는 백그라운드 작업을 통해 앱에 전송되는 알림입니다. 앱은 관심 가질 만한 사항이 발생했음을 사용자에게 알려(배지 업데이트, 타일 업데이트 또는 알림을 통해) 이러한 알림에 응답하거나 개발자가 선택한 방식으로 응답할 수 있습니다.</p>
 
  
 ## 타일 
@@ -132,6 +125,6 @@ ms.openlocfilehash: 32b1c3ec674a84ca4ed08d98119fe21f77e15554
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

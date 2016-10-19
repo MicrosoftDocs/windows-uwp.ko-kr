@@ -6,19 +6,32 @@ ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: fc685b952db7292a9eea4d8a54bd6e2685cb13c0
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
 
 ---
 # 서식 있는 편집 상자
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 **true**로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx"><strong>Document 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx"><strong>IsReadOnly 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx"><strong>IsSpellCheckEnabled 속성</strong></a></li>
+</ul>
 
--   [**RichEditBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)
--   [**Document 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)
--   [**IsReadOnly 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx)
--   [**IsSpellCheckEnabled 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -38,7 +51,7 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 
 ## 서식 있는 편집 상자 만들기
 
-기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) 속성을 **false**로 설정합니다. 자세한 내용은 맞춤법 검사에 대한 지침 및 검사 목록을 참조하세요.
+기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) 속성을 **false**로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md) 문서를 참조하세요.
 
 RichEditBox의 [Document](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx) 속성을 사용하여 콘텐츠를 가져옵니다. [Windows.UI.Xaml.Documents.Block](https://msdn.microsoft.com/library/windows/apps/xaml/bb774052.aspx) 개체를 해당 콘텐츠로 사용하는 RichTextBlock 컨트롤과 달리 RichEditBox의 콘텐츠는 [Windows.UI.Text.ITextDocument](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.block.aspx) 개체입니다. ITextDocument 인터페이스는 문서를 로드하여 스트림에 저장, 텍스트 범위 검색, 활성 선택 영역 가져오기, 변경 내용 실행 취소 및 다시 실행, 기본 서식 특성 설정 등을 수행하는 방법을 제공합니다.
 
@@ -51,20 +64,20 @@ RichEditBox의 [Document](https://msdn.microsoft.com/library/windows/apps/xaml/w
             <Setter Property="IsCompact" Value="True"/>
         </Style>
     </RelativePanel.Resources>
-    <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
+    <AppBarButton x:Name="openFileButton" Icon="OpenFile"
                   Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
-    <AppBarButton Icon="Save" Click="SaveButton_Click" 
-                  ToolTipService.ToolTip="Save file" 
+    <AppBarButton Icon="Save" Click="SaveButton_Click"
+                  ToolTipService.ToolTip="Save file"
                   RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
 
-    <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
+    <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold"
                   RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
-    <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click" 
+    <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click"
                   ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
-    <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click" 
+    <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click"
                   ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
 
-    <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton" 
+    <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
                  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
 </RelativePanel>
 ```
@@ -120,7 +133,7 @@ private async void SaveButton_Click(object sender, RoutedEventArgs e)
     Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
     if (file != null)
     {
-        // Prevent updates to the remote version of the file until we 
+        // Prevent updates to the remote version of the file until we
         // finish making changes and call CompleteUpdatesAsync.
         Windows.Storage.CachedFileManager.DeferUpdates(file);
         // write to file
@@ -129,7 +142,7 @@ private async void SaveButton_Click(object sender, RoutedEventArgs e)
 
         editor.Document.SaveToStream(Windows.UI.Text.TextGetOptions.FormatRtf, randAccStream);
 
-        // Let Windows know that we're finished changing the file so the 
+        // Let Windows know that we're finished changing the file so the
         // other app can update the remote version of the file.
         Windows.Storage.Provider.FileUpdateStatus status = await Windows.Storage.CachedFileManager.CompleteUpdatesAsync(file);
         if (status != Windows.Storage.Provider.FileUpdateStatus.Complete)
@@ -185,7 +198,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다. 일반적으로 기본 자판 배열은 서식 있는 텍스트 문서 작업에 적합합니다.
 
-입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경]()을 참조하세요.
+입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
 ## 권장 사항
 
@@ -206,7 +219,7 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 **디자이너용**
 - [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
-- [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [검색 추가](search.md)
 - [텍스트 입력에 대한 지침](text-controls.md)
 
 **개발자용(XAML)**
@@ -215,7 +228,6 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

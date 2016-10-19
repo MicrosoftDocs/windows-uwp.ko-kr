@@ -4,8 +4,8 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "디바이스 포털 핵심 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
-ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
+ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
+ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
 
 ---
 
@@ -40,7 +40,8 @@ package   | (**필수**) 설치할 패키지의 파일 이름입니다.
 
 **요청 본문**
 
-- 없음
+- 앱에는 종속성뿐만 아니라 .appx 또는 .appxbundle 파일이 필요합니다. 
+- 인증서는 디바이스가 IoT 또는 Windows 데스크톱인 경우 앱에 서명하는 데 사용됩니다. 다른 플랫폼은 인증서를 요구하지 않습니다. 
 
 **응답**
 
@@ -58,6 +59,7 @@ HTTP 상태 코드      | 설명
 
 * Windows Mobile
 * Windows 데스크톱
+* Xbox
 * HoloLens
 * IoT
 
@@ -100,6 +102,7 @@ HTTP 상태 코드      | 설명
 
 * Windows Mobile
 * Windows 데스크톱
+* Xbox
 * HoloLens
 * IoT
 
@@ -117,7 +120,9 @@ DELETE | /api/app/packagemanager/package
 
 **URI 매개 변수**
 
-- 없음
+URI 매개 변수 | 설명
+:---          | :---
+package   | (**필수**) 대상 앱의 PackageFullName(GET /api/app/packagemanager/packages 사용)
 
 **요청 헤더**
 
@@ -3297,6 +3302,58 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
+### 파일 이름 바꾸기
+
+**요청**
+
+폴더 내 파일의 이름을 변경합니다.
+
+메서드      | 요청 URI
+:------     | :-----
+POST | /api/filesystem/apps/rename
+
+<br />
+**URI 매개 변수**
+
+URI 매개 변수 | 설명
+:------     | :-----
+knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
+filename | (**필수**) 이름을 변경할 원래 파일의 이름입니다. 
+newfilename | (**필수**) 파일의 새 이름입니다.
+packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
+path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. 
+
+**요청 헤더**
+
+- 없음
+
+**요청 본문**
+
+- 없음
+
+**응답**
+
+- 없음
+
+**상태 코드**
+
+이 API에서 예상되는 상태 코드는 다음과 같습니다.
+
+HTTP 상태 코드      | 설명
+:------     | :-----
+200 | 확인. 파일 이름이 변경되었습니다.
+404 | 파일을 찾을 수 없습니다.
+5XX | 오류 코드
+<br />
+**사용 가능한 디바이스 패밀리**
+
+* Windows Mobile
+* Windows 데스크톱
+* HoloLens
+* Xbox
+* IoT
+
+---
 ### 파일 삭제
 
 **요청**
@@ -3325,6 +3382,8 @@ path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 �
 - 없음
 
 **응답**
+
+- 없음 
 
 **상태 코드**
 
@@ -3393,6 +3452,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

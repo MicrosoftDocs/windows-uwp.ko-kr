@@ -5,7 +5,7 @@ title: "계정 유형, 위치 및 수수료"
 description: "여러 국가 및 지역의 개별 개발자 계정과 회사 개발자 계정을 제공합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 93b6d952e42949917a0fff5b39f3f194f49531d5
-ms.openlocfilehash: b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10
+ms.openlocfilehash: 0712a74ffaa691a90a1f57d0ee7f9c0ea3fcc510
 
 ---
 
@@ -260,6 +260,6 @@ Microsoft에서는 개인 계정과 회사 계정의 두 가지 개발자 계정
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,16 +4,18 @@ title: "xDeferLoadStrategy 특성"
 description: "xDeferLoadStrategy는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 ---
 
-# x&#58;DeferLoadStrategy 특성
+# x:DeferLoadStrategy 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-**x:DeferLoadStrategy="Lazy"**는 요소 및 해당 자식의 생성을 지연하므로 시작 시간은 감소하고 메모리 사용량은 약간 늘어납니다. 영향을 받는 각 요소는 메모리 사용량에 약 600바이트를 추가합니다. 지연되는 요소 트리가 클수록 시작 시간이 더 많이 단축되지만 메모리 공간이 증가합니다. 그러므로 성능이 저하될 정도로 이 특성을 지나치게 많이 사용할 수 있습니다.
+**x:DeferLoadStrategy="Lazy"**는 XAML 앱의 시작 또는 트리 생성 시나리오 성능을 최적화하는 데 사용할 수 있는 기능입니다. **x:DeferLoadStrategy="Lazy"**는 요소 및 해당 자식의 생성을 지연하고 요소를 생성할 필요가 없어 시작 시간과 메모리 비용이 감소합니다. 이는 자주 또는 주기적으로 필요하지 않은 요소의 비용을 줄일 때 유용합니다. 이 요소는 코드 또는 VisualStateManager에서 참조될 때 실현됩니다.
+
+그러나 지연의 기록 유지를 위해 영향받는 각 요소에 대한 메모리 사용량이 약 600바이트 추가됩니다. 지연되는 요소 트리가 클수록 시작 시간이 더 많이 단축되지만 메모리 공간이 증가합니다. 그러므로 성능이 저하될 정도로 이 특성을 지나치게 많이 사용할 수 있습니다.
 
 ## XAML 특성 사용
 
@@ -27,7 +29,7 @@ ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 -   나중에 요소를 찾을 방법이 필요하므로 [x:Name](x-name-attribute.md)을 정의해야 합니다.
 -   [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)에서 파생된 형식을 제외하고 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)만 지연되는 것으로 표시할 수 있습니다.
--   루트 요소는 [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
+-   루트 요소는 [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) 또는 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)에서 지연될 수 없습니다.
 -   [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)의 요소는 지연될 수 없습니다.
 -   [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)를 통해 로드된 느슨한 XAML과는 작동하지 않습니다.
 -   부모 요소를 이동하면 실현되지 않은 모든 요소가 지워집니다.
@@ -88,6 +90,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

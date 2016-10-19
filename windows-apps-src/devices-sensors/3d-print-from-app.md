@@ -4,8 +4,8 @@ title: "앱에서 3D 인쇄"
 description: "유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다."
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
 translationtype: Human Translation
-ms.sourcegitcommit: 61d9f5c1fca1ad2e26f052b901361813975ae357
-ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
+ms.sourcegitcommit: e2b88b0eb88d0a3d8d1a5fb944bd4d00a50012e0
+ms.openlocfilehash: b9bfc51e9abb0ba15e5873a5693d5b24f4b6dbf7
 
 ---
 
@@ -19,12 +19,15 @@ ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
-유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 기하 도형 데이터를 앱에 로드하고 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다. 이러한 절차의 작업 예제를 보려면 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)을 참조하세요.
+유니버설 Windows 앱에 3D 인쇄 기능을 추가하는 방법을 알아봅니다. 이 항목에서는 3D 모델이 인쇄 가능하고 올바른 형식인지 확인한 다음 3D 기하 도형 데이터를 앱에 로드하고 3D 인쇄 대화 상자를 시작하는 방법을 설명합니다. 이러한 절차의 예제를 보려면 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)을 참조하세요.
+
+> [!NOTE]
+> 이 가이드의 샘플 코드에서는 편의상 단순하게 오류 보고 및 처리를 보여 줍니다.
 
 ## 클래스 설정
 
 
-3D 인쇄 기능을 사용하는 클래스에 [Windows.Graphics.Printing3D](https://msdn.microsoft.com/library/windows/apps/dn998169) 네임스페이스를 추가합니다.
+3D 인쇄 기능을 사용하는 클래스에 [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169) 네임스페이스를 추가합니다.
 
 [!code-cs[3DPrintNamespace](./code/3dprinthowto/cs/MainPage.xaml.cs#Snippet3DPrintNamespace)]
 
@@ -32,14 +35,13 @@ ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
 
 [!code-cs[OtherNamespaces](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOtherNamespaces)]
 
-그런 다음 클래스에 유용한 멤버 필드를 몇 가지 제공합니다. 인쇄 드라이버로 전달되는 인쇄 작업에 대한 참조로 사용할 [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044) 개체를 선언합니다. 원본 3D 데이터 파일을 저장할 [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 선언합니다. 마지막으로, 모든 필수 메타데이터와 함께 인쇄 가능한 3D 모델을 나타내는 [Printing3D3MFPackage](https://msdn.microsoft.com/library/windows/apps/dn998063) 개체를 선언합니다.
+그런 다음 클래스에 유용한 멤버 필드를 몇 가지 제공합니다. 인쇄 드라이버로 전달되는 인쇄 작업에 대한 참조로 사용할 [**Print3DTask**](https://msdn.microsoft.com/library/windows/apps/dn998044) 개체를 선언합니다. 앱에 로드될 원본 3D 데이터 파일을 저장할 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 선언합니다. 모든 필수 메타데이터와 함께 인쇄 가능한 3D 모델을 나타내는 [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/dn998063) 개체를 선언합니다.
 
 [!code-cs[DeclareVars](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeclareVars)]
 
 ## 간단한 UI 만들기
 
-
-이 샘플에서는 세 가지 사용자 컨트롤인 로드 단추(프로그램 메모리에 파일 저장), 수정 단추(필요에 따라 파일 수정) 및 인쇄 단추(인쇄 작업 시작)가 있습니다. 다음 코드에서는 이러한 단추(및 해당 Click 이벤트 처리기)를 클래스의 XAML 파일에 생성합니다.
+이 샘플에서는 세 가지 사용자 컨트롤인 로드 단추(프로그램 메모리에 파일 저장), 수정 단추(필요에 따라 파일 수정) 및 인쇄 단추(인쇄 작업 시작)가 작동합니다. 다음 코드에서는 이러한 단추(및 해당 Click 이벤트 처리기)를 클래스의 XAML 파일에 만듭니다.
 
 [!code-xml[단추](./code/3dprinthowto/cs/MainPage.xaml#SnippetButtons)]
 
@@ -47,51 +49,55 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 
 [!code-xml[OutputText](./code/3dprinthowto/cs/MainPage.xaml#SnippetOutputText)]
 
+
+
 ## 3D 데이터 가져오기
 
 
-앱에서 인쇄할 3D 기하 도형 데이터를 얻는 방법은 다양합니다. 앱에서 3D 스캔을 통해 데이터를 검색하거나, 웹 리소스에서 모델 데이터를 가져오거나, 수식을 사용하여 프로그래밍 방식으로 3D 메시를 생성합니다. 간편하게 하기 위해 이 가이드에서는 파일 탐색기에서 일반적인 몇 가지 파일 형식의 3D 데이터 파일을 프로그램 메모리로 로드합니다.
+앱에서 3D 기하 도형 데이터를 얻는 방법은 다양합니다. 앱에서 3D Scan을 통해 데이터를 검색하거나, 웹 리소스에서 모델 데이터를 다운로드하거나, 수식 또는 사용자 입력을 사용하여 프로그래밍 방식으로 3D 메시를 생성합니다. 이 가이드에서는 편의상 디바이스 저장소에서 일반적인 몇 가지 파일 형식의 3D 데이터 파일을 프로그램 메모리로 로드하는 방법을 보여 줍니다. [3D Builder 모델 라이브러리](https://developer.microsoft.com/windows/hardware/3d-builder-model-library)는 디바이스에 쉽게 다운로드할 수 있는 다양한 모델을 제공합니다.
 
-`OnLoadClick` 메서드에서 [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하여 단일 파일을 앱의 메모리에 로드합니다.
+`OnLoadClick` 메서드에서 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하여 단일 파일을 앱의 메모리에 로드합니다.
 
 [!code-cs[FileLoad](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetFileLoad)]
 
 ## 3D Builder를 사용하여 3D 제조 형식(.3mf)으로 변환합니다.
 
-이 시점에서 3D 데이터 파일을 앱의 메모리에 로드할 수 있습니다. 그러나 3D 기하 도형 데이터의 형식은 다양하므로 일부 형식은 3D 인쇄에 적합하지 않을 수 있습니다. Windows 10에서는 모든 3D 인쇄 작업에 3D 제조 형식(.3mf) 파일 형식을 사용합니다.
+이 시점에서 3D 데이터 파일을 앱의 메모리에 로드할 수 있습니다. 그러나 3D 기하 도형 데이터의 형식은 다양할 수 있으므로 일부 형식은 3D 인쇄에 적합하지 않을 수 있습니다. Windows 10에서는 모든 3D 인쇄 작업에 3D 제조 형식(.3mf) 파일 형식을 사용합니다.
 
-> **참고** 3MF 파일 형식은 이 자습서에서 다루지 않는 다양한 기능을 제공합니다. 3MF 및 이 형식이 3D 제품 제작자와 소비자에게 제공하는 기능에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요. Windows 10 API를 사용하여 이러한 기능을 활용하는 방법을 알아보려면 [3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf) 자습서를 참조하세요.
+> [!NOTE]  
+> .3mf 파일 형식은 이 자습서에서 다루지 않는 다양한 기능을 제공합니다. 3MF 및 이 형식이 3D 제품 제작자와 소비자에게 제공하는 기능에 대한 자세한 내용은 [3MF 사양](http://3mf.io/what-is-3mf/3mf-specification/)을 참조하세요. Windows 10 API를 사용하여 이러한 기능을 활용하는 방법을 알아보려면 [3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf) 자습서를 참조하세요.
 
 다행히 [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6) 앱에서는 가장 많이 사용하는 3D 형식의 파일을 열고 .3mf 파일로 저장할 수 있습니다. 이 예제에서 파일 형식은 달라질 수 있지만 가장 간단한 솔루션은 3D Builder를 열고 사용자에게 가져온 데이터를 .3mf 파일로 저장하도록 한 다음 다시 로드하는 것입니다.
 
-> **참고** **3D Builder**는 파일 형식을 변환하는 것 외에도 모델을 편집하고, 색상 데이터를 추가하고, 기타 인쇄 관련 작업을 수행하는 간단한 도구를 제공하므로 3D 인쇄를 처리하는 앱에 통합되면 편리합니다.
+> [!NOTE]  
+> 3D Builder는 파일 형식을 변환하는 것 외에도 모델을 편집하고, 색상 데이터를 추가하고, 기타 인쇄 관련 작업을 수행하는 간단한 도구를 제공하므로 3D 인쇄를 처리하는 앱에 통합되면 편리합니다.
 
 [!code-cs[FileCheck](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetFileCheck)]
 
 ## 3D 인쇄를 위해 모델 데이터 복구
 
-모든 3D 모델 데이터를 인쇄할 수 있는 것은 아닙니다. 이는 .3mf 형식도 마찬가지입니다. 프린터에서 채워야 할 공간과 비워 두어야 할 공간을 정확하게 판단하려면 인쇄할 모델이 이음새가 없는 단일 물체로서, 바깥쪽 면이 수직이고 다중 형상으로 되어야 합니다. 이러한 영역의 문제는 다양한 형태로 잘릴 수 있고 복잡한 셰이프에서 선택하기 어렵다는 점입니다. 다행히 현재 원시 기하 도형을 인쇄 가능한 3D 셰이프로 변환할 수 있는 소프트웨어 솔루션이 많이 나와 있습니다. 이 작업은 `OnFixClick` 메서드에서 수행됩니다.
+.3mf 형식에서도 모든 3D 모델 데이터 인쇄가 가능한 것은 아닙니다. 프린터에서 채워야 할 공간과 비워 두어야 할 공간을 정확하게 판단하려면 인쇄할 각각의 모델이 이음새가 없는 메시로서, 바깥쪽 면이 수직이고 다중 형상으로 되어야 합니다. 이러한 영역의 문제는 다양한 형태로 잘릴 수 있고 복잡한 셰이프에서 선택하기 어렵다는 점입니다. 다행히 원시 기하 도형을 인쇄 가능한 3D 셰이프로 변환할 수 있는 최신 소프트웨어 솔루션이 많이 나와 있습니다. 모델 *복구*라는 이 과정은 `OnFixClick` 메서드에서 수행됩니다.
 
-[Printing3DModel](https://msdn.microsoft.com/library/windows/apps/mt203679) 개체를 생성하는 데 사용할 수 있는 [IRandomAccessStream](https://msdn.microsoft.com/library/windows/apps/br241731)을 구현하려면 3D 데이터 파일을 변환해야 합니다.
+[**Printing3DModel**](https://msdn.microsoft.com/library/windows/apps/mt203679) 개체를 생성하는 데 사용할 수 있는 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)을 구현하려면 3D 데이터 파일을 변환해야 합니다.
 
 [!code-cs[RepairModel](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetRepairModel)]
 
-이제 **Printing3DModel** 개체를 복구 및 인쇄할 수 있습니다. **SaveModelToPackageAsync**를 사용하여 클래스 생성 시 선언한 Printing3D3MFPackage 개체에 모델을 할당합니다.
+이제 **Printing3DModel** 개체를 복구 및 인쇄할 수 있습니다. [**SaveModelToPackageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.savemodeltopackageasync)를 사용하여 클래스 생성 시 선언한 **Printing3D3MFPackage** 개체에 모델을 할당합니다.
 
 [!code-cs[SaveModel](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetSaveModel)]
 
 ## 인쇄 작업 실행: TaskRequested 처리기 만들기
 
 
-나중에 3D 인쇄 대화 상자가 사용자에게 표시되고 사용자가 인쇄를 시작하면 앱에서 원하는 매개 변수를 3D 인쇄 파이프라인에 전달해야 합니다. 3D 인쇄 API는 **TaskRequested** 이벤트를 발생시킵니다. 이 이벤트를 적절하게 처리하는 메서드를 작성해야 합니다. 메서드는 항상 해당 이벤트와 동일한 형식이어야 합니다. **TaskRequested** 이벤트에는 [Print3DManager](https://msdn.microsoft.com/library/windows/apps/dn998029) 매개 변수(해당 송신자 개체) 및 대부분의 관련 정보가 포함된 [Print3DTaskRequestedEventArgs](https://msdn.microsoft.com/library/windows/apps/dn998051) 개체가 있습니다. 반환 형식은 **void**입니다.
+나중에 3D 인쇄 대화 상자가 사용자에게 표시되고 사용자가 인쇄를 시작하면 앱에서 원하는 매개 변수를 3D 인쇄 파이프라인에 전달해야 합니다. 3D 인쇄 API는 **TaskRequested** 이벤트를 발생시킵니다. 이 이벤트를 적절하게 처리하는 메서드를 작성해야 합니다. 처리기 메서드는 항상 해당 이벤트와 동일한 형식이어야 합니다. **TaskRequested** 이벤트에는 [**Print3DManager**](https://msdn.microsoft.com/library/windows/apps/dn998029) 매개 변수(해당 송신자 개체에 대한 참조) 및 대부분의 관련 정보가 포함된 [**Print3DTaskRequestedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn998051) 개체가 있습니다. 반환 형식은 **void**입니다.
 
 [!code-cs[MyTaskTitle](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetMyTaskTitle)]
 
-이 메서드의 주요 목적은 *args* 개체를 사용하여 **Printing3D3MFPackage**를 파이프라인 아래쪽으로 보내는 것입니다. **Print3DTaskRequestedEventArgs** 형식에는 **Request** 속성 한 가지가 있습니다. 이 속성의 형식은 [Print3DTaskRequest](https://msdn.microsoft.com/library/windows/apps/dn998050)이며 하나의 인쇄 작업 요청을 나타냅니다. 해당 메서드 **CreateTask**를 사용하면 프로그램에서 인쇄 작업에 대한 올바른 정보를 제출할 수 있으며 3D 인쇄 파이프라인 아래쪽으로 [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044) 개체에 대한 참조를 반환합니다.
+이 메서드의 주요 목적은 *args* 매개 변수를 사용하여 **Printing3D3MFPackage**를 파이프라인 아래쪽으로 보내는 것입니다. **Print3DTaskRequestedEventArgs** 형식에는 [**Request**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequestedeventargs.request.aspx) 속성 한 가지가 있습니다. 이 속성의 형식은 [**Print3DTaskRequest**](https://msdn.microsoft.com/library/windows/apps/dn998050)이며 하나의 인쇄 작업 요청을 나타냅니다. 해당 메서드 [**CreateTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtaskrequest.createtask.aspx)를 사용하면 프로그램에서 인쇄 작업에 대한 올바른 정보를 제출할 수 있으며 3D 인쇄 파이프라인 아래쪽으로 **Print3DTask** 개체에 대한 참조를 반환합니다.
 
-**CreateTask**의 입력 매개 변수로 인쇄 작업 이름에 대한 **string** 매개 변수, 사용할 프린터 ID에 대한 **string** 및 **Print3DTaskSourceRequestedHandler** 대리자가 있습니다. **3DTaskSourceRequested** 이벤트가 발생하면(API에 의해 자동으로 수행됨) 대리자가 자동으로 호출됩니다. 이 대리자는 인쇄 작업이 시작될 때 호출되며 올바른 3D 인쇄 패키지를 제공하는 역할을 한다는 점을 기억해야 합니다.
+**CreateTask**의 입력 매개 변수로 인쇄 작업 이름에 대한 **string** 매개 변수, 사용할 프린터 ID에 대한 **string** 및 [**Print3DTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtasksourcerequestedhandler.aspx) 대리자가 있습니다. **3DTaskSourceRequested** 이벤트가 발생하면(API에 의해 자동으로 수행됨) 대리자가 자동으로 호출됩니다. 이 대리자는 인쇄 작업이 시작될 때 호출되며 올바른 3D 인쇄 패키지를 제공하는 역할을 한다는 점을 기억해야 합니다.
 
-**Print3DTaskSourceRequestedHandler**에서 사용하는 매개 변수는 전송할 데이터를 제공하는 [Print3DTaskSourceRequestedArgs](https://msdn.microsoft.com/library/windows/apps/dn998056) 개체입니다. 이 클래스의 공용 메서드인 **SetSource**는 인쇄할 패키지를 허용합니다. **Print3DTaskSourceRequestedHandler** 대리자는 다음과 같이 구현됩니다.
+**Print3DTaskSourceRequestedHandler**에서 사용하는 매개 변수는 전송할 데이터를 제공하는 [**Print3DTaskSourceRequestedArgs**](https://msdn.microsoft.com/library/windows/apps/dn998056) 개체입니다. 이 클래스의 공용 메서드인 [**SetSource**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dtasksourcerequestedargs.setsource.aspx)는 인쇄할 패키지를 허용합니다. **Print3DTaskSourceRequestedHandler** 대리자는 다음과 같이 구현됩니다.
 
 [!code-cs[SourceHandler](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetSourceHandler)]
 
@@ -103,27 +109,29 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 
 [!code-cs[옵션](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOptional)]
 
-> **참고** 이러한 이벤트에 등록하려면 `Task_Submitting` 및 `Task_Completed` 메서드를 구현해야 합니다.
+> [!NOTE]  
+> 이러한 이벤트에 등록하려면 `Task_Submitting` 및 `Task_Completed` 메서드를 구현해야 합니다.
 
 ## 인쇄 작업 실행: 3D 인쇄 대화 상자 열기
 
 
-앱에서 인쇄하는 데 필요한 코드의 최종 비트는 3D 인쇄 대화 상자를 시작합니다. 기존의 인쇄 대화 상자 창과 마찬가지로 3D 인쇄 대화 상자는 다양한 최신 인쇄 사양을 제공하며 사용자가 사용할 프린터를 선택할 수 있습니다(USB 또는 네트워크 연결 여부에 관계없이).
+필요한 코드의 마지막 부분은 3D 인쇄 대화 상자를 시작합니다. 기존의 인쇄 대화 상자 창과 마찬가지로 3D 인쇄 대화 상자는 다양한 최신 인쇄 옵션을 제공하며 사용자가 사용할 프린터를 선택할 수 있습니다(USB 또는 네트워크 연결 여부에 관계없이).
 
-먼저 `MyTaskRequested` 메서드를 **TaskRequested** 이벤트에 등록합니다.
+`MyTaskRequested` 메서드를 **TaskRequested** 이벤트에 등록합니다.
 
 [!code-cs[RegisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetRegisterMyTaskRequested)]
 
-**TaskRequested** 이벤트 처리기를 등록한 후 현재 응용 프로그램 창에 3D 인쇄 대화 상자를 표시하는 **ShowPrintUIAsync** 메서드를 호출할 수 있습니다.
+**TaskRequested** 이벤트 처리기를 등록한 후 현재 응용 프로그램 창에 3D 인쇄 대화 상자를 표시하는 [**ShowPrintUIAsync**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.print3dmanager.showprintuiasync.aspx) 메서드를 호출할 수 있습니다.
 
 [!code-cs[ShowDialog](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetShowDialog)]
 
-마지막으로 앱이 제어를 다시 시작하면 이벤트 처리기의 등록을 취소하는 것이 좋습니다. [!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
+마지막으로 앱이 제어를 다시 시작하면 이벤트 처리기의 등록을 취소하는 것이 좋습니다.  
+
+[!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
 
 ## 관련 항목
 
-[3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf)
-
+[3MF 패키지 생성](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf)  
 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
@@ -135,6 +143,6 @@ UI 피드백에 대한 **TextBlock**을 추가합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

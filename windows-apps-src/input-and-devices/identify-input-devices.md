@@ -7,7 +7,7 @@ label: Identify input devices
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2ebef9767520d9f54f35ba22e2681cb41766e181
+ms.openlocfilehash: df416821ad67a8eaf8a8a31879b6a1d39526df14
 
 ---
 
@@ -196,6 +196,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

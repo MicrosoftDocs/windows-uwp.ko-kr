@@ -5,7 +5,7 @@ title: "컴퍼지션 효과"
 description: "효과 API를 통해 개발자가 UI를 렌더링하는 방식을 사용자 지정할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
-ms.openlocfilehash: 10c3b6d0f56d0e8670cc202ac8d8a3f7538eb5a7
+ms.openlocfilehash: 12523034d9b3ad50fb5c31b2e66984df68f34de1
 
 ---
 # 컴퍼지션 효과
@@ -248,6 +248,6 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

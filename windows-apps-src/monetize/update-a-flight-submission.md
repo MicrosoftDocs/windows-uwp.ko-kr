@@ -1,72 +1,76 @@
 ---
 author: mcleanbyron
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
-description: Use this method in the Windows Store submission API to update an existing package flight submission.
-title: Update a package flight submission using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출을 업데이트합니다."
+title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 업데이트합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 9dfad9c0cc6b6e03a2196946ac578ca3170fccc5
+
 ---
 
-# Update a package flight submission using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 업데이트합니다.
 
 
-Use this method in the Windows Store submission API to update an existing package flight submission. After you successfully update a submission by using this method, you must [commit the submission](commit-a-flight-submission.md) for ingestion and publishing.
+Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출을 업데이트합니다. 이 메서드를 사용하여 제출을 성공적으로 업데이트한 후 수집 및 게시를 위해 [제출을 커밋](commit-a-flight-submission.md)합니다.
 
-For more information about how this method fits into the process of creating a package flight submission by using the Windows Store submission API, see [Manage package flight submissions](manage-flight-submissions.md).
+이 메서드가 Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 만드는 프로세스에 적용되는 방법은 [패키지 플라이트 제출 관리](manage-flight-submissions.md)를 참조하세요.
 
-## Prerequisites
+## 필수 조건
 
-To use this method, you need to first do the following:
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create a package flight submission for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [create a package flight submission](create-a-flight-submission.md) method.
+* 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
+* 개발자 센터 계정의 앱에 대한 패키지 플라이트 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## Request
+## 요청
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
-| Method | Request URI                                                      |
+| 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
 | PUT    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions{submissionId}``` |
 
 <span/>
- 
+ 
 
-### Request header
+### 요청 헤더
 
-| Header        | Type   | Description                                                                 |
+| 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/>
 
-### Request parameters
+### 요청 매개 변수
 
-| Name        | Type   | Description                                                                 |
+| 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to update a package flight submission. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | string | Required. The ID of the package flight for which you want to update a submission. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight](create-a-flight.md) and [get package flights for an app](get-flights-for-an-app.md).  |
-| submissionId | string | Required. The ID of the submission to update. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight submission](create-a-flight-submission.md).  |
+| applicationId | 문자열 | 필수. 패키지 플라이트 제출을 업데이트하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| flightId | 문자열 | 필수. 제출을 업데이트하려는 패키지 플라이트의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 만들기](create-a-flight.md) 및 [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
+| submissionId | 문자열 | 필수. 업데이트할 제출의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
 
 <span/>
 
-### Request body
+### 요청 본문
 
-The request body has the following parameters.
+요청 본문에는 다음 매개 변수가 있습니다.
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightPackages           | array  | Contains objects that provide details about each package in the submission. For more details about the values in the response body, see [Flight package resource](manage-flight-submissions.md#flight-package-object). When calling this method to update an app submission, only the *fileName*, *fileStatus*, *minimumDirectXVersion*, and *minimumSystemRam* values of these objects are required in the request body. The other values are populated by Dev Center. |
-| targetPublishMode           | string  | The publish mode for the submission. This can be one of the following values: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | The publish date for the submission in in ISO 8601 format, if the *targetPublishMode* is set to SpecificDate.  |
-| notesForCertification           | string  |  Provides additional info for the certification testers, such as test account credentials and steps to access and verify features. For more information, see [Notes for certification](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 응답 본문의 값에 대한 자세한 내용은 [플라이트 패키지 리소스](manage-flight-submissions.md#flight-package-object)를 참조하세요. 이 메서드를 호출하여 앱 제출을 업데이트할 때는 요청 본문에 이러한 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다. |
+| targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
+| notesForCertification           | 문자열  |  테스트 계정 자격 증명, 기능 액세스 및 확인 단계 등 인증 테스터에 대한 추가 정보를 제공합니다. 자세한 내용은 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)을 참조하세요. |
 
 <span/>
 
-### Request example
+### 요청 예제
 
-The following example demonstrates how to update a package flight submission for an app.
+다음 예제에서는 앱에 대한 패키지 플라이트 제출을 업데이트하는 방법을 보여 줍니다.
 
 ```json
 PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243649 HTTP/1.1
@@ -87,9 +91,9 @@ Content-Type: application/json
 }
 ```
 
-## Response
+## 응답
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the updated submission. For more details about the values in the response body, see [Package flight submission resource](manage-flight-submissions.md#flight-submission-object).
+다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 업데이트한 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 [패키지 플라이트 제출 리소스](manage-flight-submissions.md#flight-submission-object)를 참조하세요.
 
 ```json
 {
@@ -120,24 +124,30 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## 오류 코드
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
-| Error code |  Description   |
+| 오류 코드 |  설명   |
 |--------|------------------|
-| 400  | The package flight submission could not be updated because the request is invalid. |
-| 409  | The package flight submission could not be updated because of the current state of the app, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | 요청이 유효하지 않아서 패키지 플라이트 제출을 업데이트할 수 없습니다. |
+| 409  | 앱의 현재 상태 때문에 패키지 플라이트 제출을 업데이트할 수 없거나 앱이 [현재 Windows 스토어 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |   
 
 <span/>
 
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Create a package flight submission](create-a-flight-submission.md)
-* [Commit a package flight submission](commit-a-flight-submission.md)
-* [Delete a package flight submission](delete-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [패키지 플라이트 제출 관리](manage-flight-submissions.md)
+* [패키지 플라이트 제출 가져오기](get-a-flight-submission.md)
+* [패키지 플라이트 제출 만들기](create-a-flight-submission.md)
+* [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)
+* [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)
+* [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

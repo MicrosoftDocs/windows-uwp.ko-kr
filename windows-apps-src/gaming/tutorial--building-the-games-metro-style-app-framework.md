@@ -5,7 +5,7 @@ description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 �
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
 
 ---
 
@@ -1427,6 +1427,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

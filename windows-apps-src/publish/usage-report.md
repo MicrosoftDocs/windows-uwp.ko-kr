@@ -4,8 +4,8 @@ Description: "Windows 개발자 센터 대시보드의 사용 보고서에서는
 title: "사용 보고서"
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 translationtype: Human Translation
-ms.sourcegitcommit: 6dac44032ac217969148ff73c594f99d8a733355
-ms.openlocfilehash: 0cb9d09504a024cabe66661a5c77e21752b7e2e6
+ms.sourcegitcommit: c413ff1d4fe709e92f7a306e671f9a4fe22a5999
+ms.openlocfilehash: 21be2064914189abe8ef68c858d33346b947550c
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 0cb9d09504a024cabe66661a5c77e21752b7e2e6
 
 Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 10의 고객이 앱을 사용하는 방식을 확인하고 정의한 사용자 지정 이벤트에 대한 정보를 얻을 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다.
 
-> **참고** 이전에는 앱에서 Visual Studio Application Insights SDK를 사용하는 경우에만 **사용** 보고서에서 데이터를 제공했습니다. 업데이트된 **사용** 보고서에서는 이 작업이 더 이상 필요하지 않습니다.
+> **참고** 이전에는 앱에서 Visual Studio Application Insights SDK를 활성화한 경우에만 **사용** 보고서에서 데이터를 제공했습니다. 업데이트된 **사용** 보고서에서는 이 작업이 더 이상 필요하지 않습니다.
 
 ## 필터 적용
 
@@ -45,7 +45,7 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 1
 
 **사용자 지정 이벤트** 차트는 앱에 대해 정의한 사용자 지정 이벤트의 총 발생 횟수를 보여 줍니다. 여기에는 같은 고객에 대한 발생이 여러 번 포함될 수 있습니다.
 
-사용자 지정 이벤트는 [Microsoft 스토어 참여 및 수익 창출 SDK](../monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)의 [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx) 메서드를 사용하여 구현됩니다.
+사용자 지정 이벤트는 [Microsoft Store Services SDK](../monetize/microsoft-store-services-sdk.md)의 [StoreServicesCustomEventLogger.Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) 메서드를 사용하여 구현됩니다.
 
 
 
@@ -53,10 +53,6 @@ Windows 개발자 센터 대시보드의 **사용** 보고서에서는 Windows 1
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

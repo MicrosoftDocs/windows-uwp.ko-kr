@@ -4,8 +4,8 @@ ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "네트워크 및 웹 서비스에 액세스하는 기술입니다."
 title: "네트워킹 및 웹 서비스"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
 
 ---
 
@@ -25,10 +25,9 @@ ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
 | [HttpClient](httpclient.md)                                                             | [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스 API를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.             |
 | [RSS/Atom 피드](web-feeds.md)                                                          | [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 기능을 사용하여 RSS 및 Atom 표준에 따라 생성된 신디케이티드 피드로 인기 있는 최신 웹 콘텐츠를 검색하거나 만듭니다.                   |
 | [백그라운드 전송](background-transfers.md)                                         | 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다.           |
-| [EDP ID를 사용하여 네트워크 연결 태그 지정](tagging_network_connections_with_edp_identity.md) | 이 항목에서는 EDP(엔터프라이즈 데이터 보호) 시나리오에서 네트워크 연결을 만들기 전에 보호된 스레드 컨텍스트를 만드는 방법을 보여 줍니다. |
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

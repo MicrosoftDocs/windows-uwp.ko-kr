@@ -4,16 +4,14 @@ title: "유지 관리 트리거 사용"
 description: "디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다."
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 1181605c097f876af49e8055e245a2c445fc30d3
 
 ---
 
 # 유지 관리 트리거 사용
 
-
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -25,14 +23,13 @@ ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
 
 ## 유지 관리 트리거 개체 만들기
 
+이 예에서는 장치가 연결되어 있는 동안 백그라운드에서 실행하여 앱의 성능을 향상시킬 수 있는 경량 코드가 있다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)와 유사한 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)에 중점을 둡니다.
 
-이 예에서는 장치가 연결되어 있는 동안 백그라운드에서 실행하여 앱의 성능을 향상시킬 수 있는 경량 코드가 있다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)와 유사한 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법에 대해서는 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+백그라운드 작업 클래스를 작성하는 방법은 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md) 또는 [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
-새 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*은 유지 관리 작업이 한 번 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
+새 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*은 유지 관리 작업이 한 번만 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
 
 > **참고** *FreshnessTime*이 15분 이하로 설정된 경우 백그라운드 작업을 등록하려면 예외가 발생합니다.
-
- 
 
 이 예제 코드에서는 한 시간에 한 번 실행되는 트리거를 만듭니다.
 
@@ -52,24 +49,23 @@ ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
 
 -   필요한 경우 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만듭니다. 그러면 조건이 충족되는 경우에만 백그라운드 작업이 실행됩니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
 
-    이 예에서는 인터넷을 사용할 수 있거나 인터넷이 사용할 수 있게 될 때 유지 관리 작업이 실행되도록 조건을 **InternetAvailable**로 설정합니다. 가능한 백그라운드 작업 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+이 예에서는 인터넷을 사용할 수 있거나 인터넷이 사용할 수 있게 될 때 유지 관리 작업이 실행되도록 조건을 **InternetAvailable**로 설정합니다. 가능한 백그라운드 작업 조건 목록은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
-    다음 코드는 유지 관리 작업 작성기에 조건을 추가합니다.
+다음 코드는 유지 관리 작업 작성기에 조건을 추가합니다.
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > SystemCondition exampleCondition = new SystemCondition(SystemConditionType.InternetAvailable);
-    > ```
-    > ```cpp
-    > SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
-    > ```
+> [!div class="tabbedCodeSnippets"]
+> ```cs
+> SystemCondition exampleCondition = new SystemCondition(SystemConditionType.InternetAvailable);
+> ```
+> ```cpp
+> SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
+> ```
 
 ## 백그라운드 작업 등록
 
-
 -   백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
-    다음 코드는 유지 관리 작업을 등록합니다.
+    다음 코드는 유지 관리 작업을 등록합니다. 이 코드는 `entryPoint`를 지정하므로 백그라운드 작업이 앱과 별도의 프로세스로 실행된다고 간주됩니다. 백그라운드 작업이 앱과 동일한 프로세스에서 실행되는 경우 `entryPoint`를 지정하지 마세요.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -89,7 +85,7 @@ ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
 
     > **참고** 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
 
-    업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+    앱에 대한 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
     > **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
 
@@ -98,10 +94,10 @@ ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
 
 ## 관련 항목
 
-
 ****
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
+* [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -117,12 +113,8 @@ ms.openlocfilehash: 0da08ba5431f4d5c56d06657d3d6123a67ba5079
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
-
- 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: "WinAppDeployCmd.exe 도구를 사용하여 앱 설치"
 description: "Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 PC에서 Windows 10 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 5f6bfb13e2e80f21902ec923e32f68046f313a13
+ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
+ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
 
 ---
 # WinAppDeployCmd.exe 도구를 사용하여 앱 설치
@@ -139,8 +139,19 @@ WinAppDeployCmd deployfiles -file "C:\apps\App1\AppxManifest.xml" -remotedeployd
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
+## WinAppDeployCmd를 사용하여 Xbox One에 PC에서 실행 배포 설정
+
+PC에서 실행을 통해 이진 파일을 복사하지 않고 Xbox One에 UWP 응용 프로그램을 배포할 수 있습니다. 대신 이진 파일은 Xbox와 동일한 네트워크의 네트워크 공유에 호스트됩니다.  이렇게 하려면 개발자가 Xbox One을 잠금 해제해야 하고 Xbox가 액세스할 수 있는 네트워크 드라이브의 느슨한 파일 UWP 응용 프로그램이 필요합니다.
+
+앱을 등록하려면 다음을 실행합니다.
+``` syntax
+WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
+
+ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
+```
 
 
-<!--HONumber=Jul16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,16 +2,14 @@
 description: "UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 가져옵니다. 앱에서 사용할 45가지 이상의 강력한 컨트롤을 찾습니다."
 title: "UWP 컨트롤 및 패턴 - Windows 앱 개발"
 author: mijacobs
-keywords: uwp controls, user interface, app controls
+keywords: "UWP 컨트롤, 사용자 인터페이스, 앱 컨트롤"
 translationtype: Human Translation
-ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
-ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
 # UWP 앱의 컨트롤 및 패턴
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 UWP 앱 개발에서 <i>컨트롤</i>은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 컨트롤은 사용자 인터페이스의 구성 요소입니다. 간단한 단추에서 그리드 보기처럼 강력한 데이터 컨트롤까지 45개 이상의 사용할 수 있는 컨트롤을 제공합니다. <i>패턴</i>은 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다.
 
@@ -67,9 +65,9 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </li>
 
 
-<li>[대화 상자, 팝업 및 메뉴](dialogs-popups-menus.md)</li>
+<li>[대화 상자 및 플라이아웃](dialogs.md)</li>
 
-<li>[대칭 이동 보기](flipview.md)</li>
+<li>[보기 대칭 이동](flipview.md)</li>
 
 <li>[허브](hub.md)</li>
 
@@ -88,6 +86,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 <li>[사용자 지정 전송 컨트롤](custom-transport-controls.md)</li>
 </ul>
 </li>
+
+<li>[메뉴 및 상황에 맞는 메뉴](menus.md)</li>
 
 <li>[탐색 창](nav-pane.md)</li>
 
@@ -143,6 +143,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 <li>[적응형 및 대화형 알림 메시지](tiles-and-notifications-adaptive-interactive-toasts.md)</li>
 
+<li>[배지 알림](tiles-and-notifications-badges.md)</li>
+
 <li>[알림 시각화 도우미](tiles-and-notifications-notifications-visualizer.md)</li>
 
 <li>[알림 전달 방법](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
@@ -167,6 +169,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

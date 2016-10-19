@@ -5,7 +5,7 @@ description: "기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
+ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
 
 ---
 
@@ -493,6 +493,6 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

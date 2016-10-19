@@ -1,11 +1,11 @@
 ---
 author: mcleblanc
 description: "Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다."
-title: "Windows 런타임 8.x에서 UWP로 이동&#39;"
+title: "Windows 런타임 8.x에서 UWP로 이동'"
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3aa24e61482054dadd9b798063d46abf36623e9b
+ms.openlocfilehash: e1f0e9727a36536fe292902fa7313dcc851932f6
 
 ---
 
@@ -80,6 +80,6 @@ Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

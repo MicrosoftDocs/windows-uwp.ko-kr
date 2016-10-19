@@ -3,10 +3,10 @@ author: Xansky
 description: "Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다."
 title: "연락처 선택"
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
-keywords: contact, selecting specific fields
+keywords: "연락처, 특정 필드 선택"
 translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 6f2c6a546ed3daa0ef0311bc54ca47f31d01f3d8
+ms.openlocfilehash: 70abebb53f96b7d9d818f3542c33ed477ff0c8a4
 
 ---
 
@@ -232,6 +232,6 @@ public class ContactItemAdapter
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

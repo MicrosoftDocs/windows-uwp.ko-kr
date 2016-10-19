@@ -5,7 +5,7 @@ description: "개념적으로 Direct3D 11 셰이더 파이프라인은 OpenGL ES
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bc13df5e7f2648897be31b5cda634d23ffae8b6b
+ms.openlocfilehash: 144e3374c16118418872f6c473c5f39101fbfce0
 
 ---
 
@@ -250,6 +250,6 @@ Direct3D에서 의미 체계를 사용하는 방법에 대한 자세한 내용�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

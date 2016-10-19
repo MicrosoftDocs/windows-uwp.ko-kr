@@ -5,7 +5,7 @@ title: "HoloLens용 디바이스 포털 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 HoloLens REST API의 Windows Device Portal에 대해 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5ed8ffe0a409569777fbf4e56a90ab3b80cd395c
+ms.openlocfilehash: 638ebca167b2ca56f00a83aab13b15c57b2dca2a
 
 ---
 # HoloLens용 디바이스 포털 API 참조
@@ -1415,6 +1415,6 @@ loopback   | (**선택**) 응용 프로그램 오디오 캡처 여부를 나타�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

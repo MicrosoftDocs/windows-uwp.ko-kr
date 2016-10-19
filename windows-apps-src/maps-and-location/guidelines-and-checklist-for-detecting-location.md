@@ -4,8 +4,8 @@ Description: "이 항목에서는 사용자 위치에 액세스해야 하는 앱
 title: "위치 인식 앱에 대한 지침"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
+ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
+ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 ---
 
@@ -100,7 +100,8 @@ ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
     Windows 런타임 API는 자력계를 제외한 모든 센서에 액세스할 수 있습니다. 퓨전 센서는 원시 센서보다 더 정확하고 안정적이지만 전원을 더 많이 사용합니다. 따라서 용도에 적합한 센서를 사용해야 합니다. 자세한 내용은 [센서](https://msdn.microsoft.com/library/windows/apps/mt187358)를 참조하세요.
 
-**연결된 대기 상태:**PC가 연결된 대기 상태이면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 항상 인스턴스화할 수 있습니다. 그러나 **Geolocator** 개체에서 집계할 센서를 찾을 수 없으므로 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 호출은 7초 후 시간 초과되고 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트 수신기가 호출되지 않으며 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트 수신기는 **NoData** 상태로 한 번 호출됩니다.
+**연결된 대기 상태** 
+- PC가 연결된 대기 상태이면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 항상 인스턴스화할 수 있습니다. 그러나 **Geolocator** 개체에서 집계할 센서를 찾을 수 없으므로 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 호출은 7초 후 시간 초과되고 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트 수신기가 호출되지 않으며 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트 수신기는 **NoData** 상태로 한 번 호출됩니다.
 
 ## 추가 사용법 지침
 
@@ -172,6 +173,6 @@ ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

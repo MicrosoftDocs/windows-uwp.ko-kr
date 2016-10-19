@@ -5,7 +5,7 @@ title: "TemplateBinding 태그 확장"
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1a8006e58391c41568731810d9b1901474e8d18f
+ms.openlocfilehash: 4242bb606f29a6b70213dc8cde818ed86c3dda8d
 
 ---
 
@@ -38,7 +38,7 @@ ms.openlocfilehash: 1a8006e58391c41568731810d9b1901474e8d18f
 
 사용자 지정 컨트롤을 만드는 경우 또는 기존 컨트롤에 대한 컨트롤 템플릿을 바꾸는 경우 **TemplateBinding** 사용은 컨트롤 템플릿 정의 방법의 핵심 부분입니다. 자세한 내용은 [빠른 시작: 컨트롤 템플릿](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374)을 참조하세요.
 
-*propertyName* 및 *targetProperty*에서 동일한 속성 이름을 사용하는 것은 일반적입니다. 이 경우 컨트롤은 자체적으로 속성을 정의하고 정의한 속성을 해당 구성 요소 일부 중 하나인 직관적인 이름을 사용하는 기존 속성에 전달할 수 있습니다. 예를 들어 컨트롤 합성으로 [TextBlock****](https://msdn.microsoft.com/library/windows/apps/br209652)을 통합하는 컨트롤을 사용하여 컨트롤의 고유 **Text** 속성을 표시하면 이 XAML을 컨트롤 템플릿의 일부로 포함할 수 있습니다.  `<TextBlock Text="{TemplateBinding Text}" .... />`
+*propertyName* 및 *targetProperty*에서 동일한 속성 이름을 사용하는 것은 일반적입니다. 이 경우 컨트롤은 자체적으로 속성을 정의하고 정의한 속성을 해당 구성 요소 일부 중 하나인 직관적인 이름을 사용하는 기존 속성에 전달할 수 있습니다. 예를 들어 컨트롤 합성으로 [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652)을 통합하는 컨트롤을 사용하여 컨트롤의 고유 **Text** 속성을 표시하면 이 XAML을 컨트롤 템플릿의 일부로 포함할 수 있습니다. `<TextBlock Text="{TemplateBinding Text}" .... />`
 
 원본 속성 및 대상 속성의 값으로 사용된 형식이 일치해야 합니다. **TemplateBinding**을 사용 중인 경우에는 변환기를 도입하는 기회가 없습니다. 값이 일치하지 않으면 XAML을 구문 분석할 때 오류가 발생합니다. 변환기가 필요한 경우 템플릿 바인딩을 위한 자세한 구문을 사용할 수 있습니다(예: ). `{Binding RelativeSource={RelativeSource TemplatedParent}, Converter="..." ...}`
 
@@ -64,6 +64,6 @@ XAML의 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

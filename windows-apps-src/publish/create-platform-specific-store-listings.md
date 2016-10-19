@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems.
-title: Create platform-specific Store listings
+Description: "여러 운영 체제를 대상으로 하는 패키지를 제공한 경우 여러 대상 운영 체제에 대한 스토어 목록 일부를 사용자 지정할 수 있습니다."
+title: "플랫폼별 스토어 목록 만들기"
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 8d9b026cf09d076cd7f7dc8a72d611e68ddd61c7
+
 ---
 
-# Create platform-specific Store listings
+# 플랫폼별 스토어 목록 만들기
 
 
-If you've provided packages targeting different operating systems, you have the option to customize parts of your Store listing for different targeted operating systems. You will not see this option unless you have already uploaded packages, and include packages for earlier OS versions (Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+여러 운영 체제를 대상으로 하는 패키지를 제공한 경우 여러 대상 운영 체제에 대한 스토어 목록 일부를 사용자 지정할 수 있습니다. 패키지를 아직 업로드하지 않고 이전 OS 버전(Windows 8.x 이하 및/또는 Windows Phone 8.x 이하)에 대한 패키지를 포함하지 않은 경우 이 옵션이 표시되지 않습니다.
 
-> **Important**  Customers on Windows 10 will always see your default Store listing.
+> **중요** Windows 10 고객에게는 항상 기본 스토어 목록이 표시됩니다.
 
-Platform-specific Store listings can be useful if you want to mention features that appear only in one OS version, or want to provide screenshots that are specific to a particular OS (independent of device type), rather than having all customers see the same Store listing.
+플랫폼별 스토어 목록은 모든 고객에게 동일한 스토어 목록을 표시하지 않고 하나의 OS 버전에서만 표시되는 기능을 설명하거나, 특정 OS(디바이스 유형에 독립적)에 특정한 스크린샷을 제공하려는 경우에 유용할 수 있습니다.
 
-> **Note**  Creating a platform-specific Store listing in one language does not create a platform-specific Store listing in other languages that your app supports, even if you have [entered Store listing info](create-app-store-listings.md) for those languages. You'll need to create the platform-specific Store listing separately for each language.
+> **참고** 플랫폼별 스토어 목록을 한 언어로 만들면 이러한 언어에 대해 [스토어 목록 정보를 입력](create-app-store-listings.md)해도 앱에서 지원하는 다른 언어로는 플랫폼별 스토어 목록이 만들어지지 않습니다. 각 언어에 대해 플랫폼별 스토어 목록을 개별적으로 만들어야 합니다.
 
-## Creating a platform-specific Store listing
+## 플랫폼별 스토어 목록 만들기
 
-Near the top of your **Store listing** page, you'll see a link to **create a platform-specific app Store listing** if you have uploaded packages that support earlier OS versions ((Windows 8.x or earlier and/or Windows Phone 8.x or earlier).
+이전 OS 버전(Windows 8.x 이하 및/또는 Windows Phone 8.x 이하)을 지원하는 패키지를 업로드한 경우 **스토어 목록** 페이지의 위쪽에 **플랫폼별 앱 스토어 목록 만들기**에 대한 링크가 표시됩니다.
 
-> **Tip** You can't create platform-specific Store listings until after you've uploaded packages.
+> **팁** 패키지를 업로드한 후에 플랫폼별 스토어 목록을 만들 수 있습니다.
 
-When you click the link to **create a platform-specific app Store listing**, a popup will appear asking you to choose from your supported targeted operating systems. Windows 10 is not included in the list of choices, because customers on Windows 10 will always see the app's default Store listing.
+**플랫폼별 앱 스토어 목록 만들기**에 대한 링크를 클릭하면 지원되는 대상 운영 체제에서 선택하라는 팝업이 표시됩니다. Windows 10 고객에게는 항상 앱의 기본 스토어 목록이 표시되므로 Windows 10은 선택 목록에 포함되어 있지 않습니다.
 
-> **Note**  If you've already created platform-specific Store listings for all of the OS versions your app targets, you won't be able to make a selection.
+> **참고** 이미 앱이 대상으로 하고 있는 모든 OS 버전에 대한 플랫폼별 스토어 목록을 만든 경우 선택할 수 없습니다.
 
-You can use your default Store listing as a starting point, which will bring over all of the text and images you've entered for your default Store listing; you'll then be able to make any changes you'd like before saving. You can also start from a completely blank Store listing if you prefer.
+기본 스토어 목록을 시작점으로 사용하면 기본 스토어 목록에 입력한 모든 텍스트와 이미지를 가져옵니다. 저장하기 전에 원하는 내용을 변경할 수 있습니다. 원하는 경우 완전히 빈 스토어 목록에서 시작할 수도 있습니다.
 
-After you click **Continue**, your **Store listing** page will now include a section for the platform-specific Store listing you've just created (underneath the [Default Store listing](create-app-store-listings.md#default-store-listing-fields) section). This section will include its own set of fields for **Description** (required), **Release notes**, **Screenshots**, **App tile icon**, **App features**, and **Additional system requirements**. Make sure to enter info into each field where you want to display info in the custom Store listing, even if it's the same info as in your default Store listing. If you leave any of these fields blank, no info will appear for that field in the custom Store listing.
+**계속**을 클릭하면 **스토어 목록** 페이지에 방금 만든 플랫폼별 스토어 목록에 대한 섹션이 포함됩니다([기본 스토어 목록](create-app-store-listings.md#default-store-listing-fields) 섹션 아래). 이 섹션에는 **설명**(필수), **릴리스 정보**, **스크린샷**, **앱 타일 아이콘**, **앱 기능** 및 **추가 시스템 요구 사항**에 대한 고유한 필드 집합이 있습니다. 기본 스토어 목록과 정보가 동일한 경우에도 사용자 지정 스토어 목록에 표시할 정보를 각 필드에 입력해야 합니다. 이러한 필드를 비워 두면 사용자 지정 스토어 목록의 해당 필드에 아무 정보도 표시되지 않습니다.
 
-> **Note**  Not all fields of your app's Store listing can be customized for a specific targeted OS. For more info, see [Shared fields](create-app-store-listings.md#shared-fields).
+> **참고** 앱의 스토어 목록에 대한 일부 필드는 특정 대상 OS에 맞게 사용자 지정할 수 없습니다. 자세한 내용은 [공유 필드](create-app-store-listings.md#shared-fields)를 참조하세요.
 
-## Removing a platform-specific Store listing
+## 플랫폼별 스토어 목록 제거
 
-If you create a platform-specific Store listing and later decide you'd rather show your default Store listing to customers on that operating system, click the **Delete** link. After confirming that you'd like to show those customers your default Store listing, click **OK**. The platform-specific Store listing will be removed. If you decide you want it back later, you can always create a new platform-specific Store listing for that operating system by following the steps listed above.
+플랫폼별 스토어 목록을 만들고 나중에 해당 운영 체제의 고객에게 기본 스토어 목록을 표시하려는 경우 **삭제** 링크를 클릭합니다. 해당 고객에게 기본 스토어 목록을 표시하도록 확인한 후에 **확인**을 클릭합니다. 플랫폼별 스토어 목록이 제거됩니다. 나중에 다시 되돌리려는 경우 언제든지 위 단계에 따라 해당 운영 체제에 대한 새 플랫폼별 스토어 목록을 만들 수 있습니다.
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

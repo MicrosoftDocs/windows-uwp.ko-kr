@@ -5,7 +5,7 @@ title: "인증에 대한 참고 사항"
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 02a0f17fef730da305f5dfb24c834b53045e3eb8
+ms.openlocfilehash: 9f8bc1fc435c0ee25220c60d68a5adaa34ff6214
 
 ---
 
@@ -48,6 +48,6 @@ ms.openlocfilehash: 02a0f17fef730da305f5dfb24c834b53045e3eb8
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

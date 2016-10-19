@@ -7,7 +7,7 @@ label: Content design basics
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
+ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 
 ---
 
@@ -123,6 +123,6 @@ ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

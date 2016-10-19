@@ -5,7 +5,7 @@ description: "이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임�
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
+ms.openlocfilehash: 83c3fda490d7ab821e8e584291ded642c9c11dd1
 
 ---
 
@@ -356,6 +356,6 @@ Windows 게임 개발 API를 사용하여 게임 엔진을 작성하는 대신 W
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

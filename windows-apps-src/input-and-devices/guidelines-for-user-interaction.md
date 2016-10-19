@@ -5,9 +5,10 @@ title: "터치 디자인 지침"
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
+redirect_url: https://msdn.microsoft.com/windows/uwp/input-and-devices/touch-interactions
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
+ms.sourcegitcommit: 2db7aaccfd56b1bdfda099b197a695bad8a9cba1
+ms.openlocfilehash: 28dfadf6010aed3fb2ed0d03b73f92631c17fcf4
 
 ---
 
@@ -177,6 +178,6 @@ ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

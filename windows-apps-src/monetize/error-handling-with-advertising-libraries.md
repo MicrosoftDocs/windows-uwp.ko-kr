@@ -4,15 +4,15 @@ ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: "Microsoft Advertising 라이브러리의 AdControl 클래스에 의해 생성되는 오류를 처리하는 방법을 알아봅니다."
 title: "Microsoft Advertising 라이브러리로 오류 처리"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5e0c7e6328247e5f686b14b10c80d8aafc13e0e4
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: dedac33d86f50b63de300f78a9f9961efc1c016b
 
 ---
 
 # Microsoft Advertising 라이브러리로 오류 처리
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 Microsoft Advertising 라이브러리의 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스에 의해 생성되는 오류를 처리하는 방법에 대한 기본 정보를 제공합니다.
 
@@ -81,6 +81,6 @@ XAML 및 C#에서의 **AdControl** 오류 처리를 보여 주는 연습에 대�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

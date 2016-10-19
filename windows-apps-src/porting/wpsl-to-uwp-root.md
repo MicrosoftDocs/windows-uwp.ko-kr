@@ -5,7 +5,7 @@ title: "Windows Phone Silverlight에서 UWP로 이동"
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 19dde1c9b0df3b2a5e464feb15e43af9dd283661
+ms.openlocfilehash: c75d1871364a837047c1bd81bc094c5120900a4e
 
 ---
 
@@ -79,16 +79,16 @@ Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반�
 * [Windows 10 개발자를 위한 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
 * [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [C# 또는 Visual Basic을 사용한 UWP(유니버설 Windows 플랫폼) 앱용 로드맵](https://msdn.microsoft.com/library/windows/apps/br229583)
-* [Windows Phone 8 개발자를 위한 다음 계획](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx) 
-           **잡지 기사**
-* [Visual Studio Magazine: Windows Phone 8.1: 수렴을 위한 큰 도약](http://go.microsoft.com/fwlink/p/?LinkID=398541) 
-           **프레젠테이션**
+* [Windows Phone 8 개발자를 위한 다음 계획](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+**잡지 기사**
+* [Visual Studio Magazine: Windows Phone 8.1: 수렴을 위한 큰 도약](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+**프레젠테이션**
 * [Windows Phone에서 Windows 8으로 Nokia Music 가져오기](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

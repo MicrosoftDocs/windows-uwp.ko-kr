@@ -4,8 +4,8 @@ Description: "Windows 스토어는 이 기능을 지원하는 통신사를 위�
 title: "통신사 청구"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
-ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
+ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
+ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
 
 ---
 
@@ -27,14 +27,16 @@ Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구�
 
 Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하고 있습니다.
 
-| 국가/지역 | 통신사 |
-|----------------|------------------|
-| 핀란드        | DNA, Elisa       |
-| 독일        | O2               |
-| 이탈리아          | Wind             |
-| 노르웨이         | Telenor          |
-| 스위스    | Swisscom         |
-| 미국  | Sprint           |
+| 국가/지역  | 통신사 |
+|-----------------|------------------|
+| 핀란드         | DNA, Elisa       |
+| 독일         | O2               |
+| 헝가리         | Telenor          |
+| 이탈리아           | Wind             |
+| 노르웨이          | Telenor          |
+| 스위스     | Swisscom         |
+| 미국   | Sprint           |
+| 영국  | O2               |
 
  
 
@@ -50,10 +52,10 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 오스트레일리아            | Telstra                                                            |
 | 오스트리아              | A1 Telekom, T-Mobile                                               |
 | 바레인              | Zain, VIVA                                                         |
-| 벨기에              | BASE, Mobistar, Proximus                                                     |
+| 벨기에              | BASE, Mobistar, Proximus                                           |
 | 브라질               | Claro                                                              |
 | 불가리아             | Telenor                                                            |
-| 캐나다               | Fido, Rogers, Telus                                                |
+| 캐나다               | Fido, Rogers                                                       |
 | 칠레                | Claro                                                              |
 | 중국                | China Mobile                                                       |
 | 콜롬비아             | Claro, Movistar                                                    |
@@ -70,26 +72,25 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 과테말라            | Claro                                                              |
 | 헝가리              | Telenor, T-Mobile                                                  |
 | 인도                | Idea                                                               |
-| 인도네시아            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| 아일랜드              | O2, Vodafone, 3                                                      |
+| 인도네시아            | Indosat, Telkomsel, XL Axiata, HCPT(Hutchinson CP Telecommunications)     |
+| 아일랜드              | O2, Vodafone, 3                                                |
 | 이탈리아                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | 요르단               | Zain, Umniah                                                       |
 | 케냐                | Safaricom                                                          |
-| 쿠웨이트               | Zain, Viva                                                         |
+| 쿠웨이트               | Zain, Viva, Ooredoo                                                |
 | 라트비아               | Tele2                                                              |
 | 리투아니아            | Tele2                                                              |
 | 말레이시아             | DiGi                                                               |
-| 멕시코               | Iusacell, Telcel, Unefon, Movistar                                 |
+| 멕시코               | Iusacell, Telcel, Movistar                                         |
 | 네덜란드          | T-Mobile, Vodafone                                                 |
 | 노르웨이               | Telenor                                                            |
 | 오만                 | Ooredoo                                                            |
 | 파키스탄             | Telenor                                                            |
 | 페루                 | Claro                                                              |
-| 필리핀          | Globe, Sun                                                         |
-| 폴란드               | T-Mobile, Orange, Polkomtel(Plus)                                 |
-| 푸에르토리코          | Claro                                                              |
+| 필리핀          | Globe, Sun, Smart Communications                                   |
+| 폴란드               | T-Mobile, Orange, Polkomtel(Plus), Play                           |
 | 루마니아              | Orange, Vodafone                                                   |
-| 러시아               | Beeline, MTS                                                          |
+| 러시아               | Beeline, MTS                                                       |
 | 사우디아라비아         | Zain                                                               |
 | 싱가포르            | M1, SingTel, StarHub                                               |
 | 슬로바키아             | T-Mobile                                                           |
@@ -98,7 +99,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 스페인                | Movistar, Vodafone, Orange                                         |
 | 스웨덴               | Telenor, Tele2                                                     |
 | 스위스          | Swisscom                                                           |
-| 태국             | DTAC                                                               |
 | 아랍에미리트 | Etisalat, Du                                                       |
 | 영국       | Everything Everywhere(T-Mobile), Telefonica(O2), Three, Vodafone |
 | 미국        | AT&amp;T, Sprint, T-Mobile, Verizon                                    |
@@ -118,6 +118,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

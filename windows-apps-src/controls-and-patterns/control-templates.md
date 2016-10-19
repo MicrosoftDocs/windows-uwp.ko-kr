@@ -9,19 +9,27 @@ ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 2aa257fa422ed954206dffb5ac68461e4e3a544f
 
 ---
-
 # 컨트롤 템플릿
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209391"><strong>ControlTemplate 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx"><strong>Control.Template 속성</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
-**중요 API**
 
--   [**ControlTemplate 클래스**](https://msdn.microsoft.com/library/windows/apps/br209391)
--   [**Control.Template 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+
 
 XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각적 구조와 동작을 사용자 지정할 수 있습니다. 컨트롤에는 [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) 및 [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404) 등 다양한 속성이 있으며, 이러한 속성을 설정하여 컨트롤 모양의 다양한 측면을 지정할 수 있습니다. 하지만 이러한 속성을 설정하여 수행할 수 있는 변경은 제한되어 있습니다. [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) 클래스를 사용하는 템플릿을 만들어 추가로 사용자 지정할 수 있습니다. 여기서는 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) 컨트롤의 모양을 사용자 지정하기 위해 **ControlTemplate**을 만드는 방법을 보여 줍니다.
 
@@ -105,7 +113,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) 개체를 사용하여 특정 상태일 때 나타나는 컨트롤의 모양을 지정합니다. **VisualState**에는 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)에 있는 요소의 모양을 변경하는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053)가 있습니다. 컨트롤이 [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) 속성이 지정한 상태가 되면 **Setter** 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)의 속성 변경 내용이 적용됩니다. 컨트롤이 상태에서 나가면 변경 내용이 제거됩니다. **VisualState** 개체를 [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 개체에 추가합니다. **VisualStateGroup** 개체를 **ControlTemplate**의 루트 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)에 설정한 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) 연결된 속성에 추가합니다.
 
-이 XAML은 `Checked`, `Unchecked` 및 `Indeterminate` 상태의 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) 개체를 보여 줍니다. 이 예제에서는 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)에 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)의 루트 요소인 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) 연결된 속성을 설정합니다. `Checked`**VisualState**는 `CheckGlyph`라는 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)를 1로 지정합니다(이전 예제에 나와 있음). `Indeterminate`**VisualState**에서는 `IndeterminateGlyph`이라는 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343)의 **Opacity**를 1로 지정합니다. `Unchecked`**VisualState**에는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)가 없으므로 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)가 기본 모양으로 돌아갑니다.
+이 XAML은 `Checked`, `Unchecked` 및 `Indeterminate` 상태의 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) 개체를 보여 줍니다. 이 예제에서는 [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)에 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)의 루트 요소인 [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) 연결된 속성을 설정합니다. `Checked` **VisualState**는 `CheckGlyph`라는 [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)를 1로 지정합니다(이전 예제에 나와 있음). `Indeterminate` **VisualState**에서는 `IndeterminateGlyph`이라는 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343)의 **Opacity**를 1로 지정합니다. `Unchecked` **VisualState**에는 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 또는 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)가 없으므로 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)가 기본 모양으로 돌아갑니다.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -173,9 +181,9 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 |                                      |                                                                                                                                                                                                                                                                                                                                                |                                                   |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | 상태 전환                     | 발생하는 동작                                                                                                                                                                                                                                                                                                                                   | 전환이 완료된 후 CheckBox 모양 |
-| `Unchecked`에서 `Checked`로       | `Checked`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 적용되므로 `CheckGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 1입니다.                                                                                                                                                         | X가 표시됩니다.                                |
-| `Checked`에서 `Indeterminate`로   | `Indeterminate`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 적용되므로 `IndeterminateGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 1입니다. `Checked`**VisualState**의 **Setter** 값이 제거되므로 `CheckGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078)는 0입니다. | 원이 표시됩니다.                            |
-| `Indeterminate`에서 `Unchecked`로 | `Indeterminate`[**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 제거되므로 `IndeterminateGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 0입니다.                                                                                                                                           | 아무것도 표시되지 않습니다.                             |
+| `Unchecked`에서 `Checked`로       | `Checked` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 적용되므로 `CheckGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 1입니다.                                                                                                                                                         | X가 표시됩니다.                                |
+| `Checked`에서 `Indeterminate`로   | `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 적용되므로 `IndeterminateGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 1입니다. `Checked` **VisualState**의 **Setter** 값이 제거되므로 `CheckGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078)는 0입니다. | 원이 표시됩니다.                            |
+| `Indeterminate`에서 `Unchecked`로 | `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)의 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) 값이 제거되므로 `IndeterminateGlyph`의 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br208962)는 0입니다.                                                                                                                                           | 아무것도 표시되지 않습니다.                             |
 
  
 컨트롤의 시각적 상태를 만드는 방법 및 특히 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) 클래스 및 애니메이션 형식을 사용하는 방법에 대한 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808)을 참조하세요.
@@ -214,6 +222,6 @@ XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../xaml-platf
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

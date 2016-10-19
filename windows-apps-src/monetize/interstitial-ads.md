@@ -1,20 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: "Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1에 중간 광고를 포함하는 방법에 알아봅니다."
+description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법에 알아봅니다."
 title: "중간 광고"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
 
 ---
 
 # 중간 광고
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 연습에서는 Microsoft 스토어 참여 및 수익 창출 SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1에 중간 광고를 포함하는 방법을 보여 줍니다.
+
+이 연습에서는 Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법을 보여 줍니다.
 
 C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -36,16 +36,13 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
 ### 필수 조건
 
-1.  Visual Studio 2015 또는 Visual Studio 2013과 함께 [Microsoft 스토어 참여 및 수익 창출 SDK](http://aka.ms/store-em-sdk)를 설치합니다.
-
-2.  Visual Studio에서 프로젝트를 열거나 새 프로젝트를 만듭니다.
+* UWP 앱: Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
+* Windows 8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
 
 ### 코드 개발
 
 * [XAML/.NET 앱에 대한 단계](#interstitialadsxaml10)
-
 * [HTML/JavaScript에 대한 단계](#interstitialadshtml10)
-
 * [C++(DirectX Interop)에 대한 단계](#interstitialadsdirectx10)
 
 <span id="interstitialadsxaml10"/>
@@ -58,9 +55,9 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 중재자 라이브러리를 프로젝트에 추가하지만 광고 중재자 라이브러리는 무시해도 됩니다.
+    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
-    -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 중재자 라이브러리를 프로젝트에 추가하지만 광고 중재자 라이브러리는 무시해도 됩니다.
+    -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
 3.  앱 코드에 다음 네임스페이스 참조를 포함합니다.
 
@@ -249,9 +246,9 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 중재자 라이브러리를 프로젝트에 추가하지만 광고 중재자 라이브러리는 무시해도 됩니다.
+    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
-    -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 중재자 라이브러리를 프로젝트에 추가하지만 광고 중재자 라이브러리는 무시해도 됩니다.
+    -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
 2.  앱에 대한 해당 헤더 파일에서 중간 광고 개체 및 관련된 속성/메서드를 선언합니다.
 
@@ -354,7 +351,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
 ### Windows 개발자 센터를 사용하여 라이브 광고와 함께 앱 출시
 
-1.  개발자 센터 대시보드에서 앱의 **수익 창출**&gt;**광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft 광고 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **동영상 중간 광고**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+1.  개발자 센터 대시보드에서 앱의 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft Advertising 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **동영상 중간 광고**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
 
 2.  코드에서 테스트 광고 단위 값을 개발자 센터에서 생성한 라이브 값으로 바꿉니다.
 
@@ -387,6 +384,6 @@ Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

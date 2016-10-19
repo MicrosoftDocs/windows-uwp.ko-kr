@@ -5,7 +5,7 @@ description: "Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
+ms.openlocfilehash: 59fe007601d16f6586ec52c0026e161ad6350a1e
 
 ---
 
@@ -152,6 +152,6 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

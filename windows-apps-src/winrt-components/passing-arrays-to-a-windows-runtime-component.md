@@ -5,7 +5,7 @@ description: "UWP(유니버설 Windows 플랫폼)에서 매개 변수는 입력 
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 21e4b504b4adc6e2cb9b16d377781aaaab6a4aac
+ms.openlocfilehash: 8ced5e6a4411554fcf82a54b57de64562a305619
 
 ---
 
@@ -65,6 +65,6 @@ ReadOnlyArrayAttribute 특성이나 WriteOnlyArrayAttribute 특성이 있는 매
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

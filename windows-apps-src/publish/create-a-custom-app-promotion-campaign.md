@@ -4,8 +4,8 @@ Description: "Windows 앱에서 실행되는 앱용 광고 캠페인을 만든 �
 title: "사용자 지정 앱 홍보 캠페인 만들기"
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b6fa63727ac636d37c52e2f3247c52efb1f8b763
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: a6e97968df4e9ab986d364b2573a31b4ba9d1958
 
 ---
 
@@ -22,7 +22,7 @@ Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-f
 앱에 대한 사용자 지정 캠페인 성과 데이터는 다음과 같은 방식으로 검색할 수 있습니다.
 
 -   앱이 UWP(유니버설 Windows 플랫폼) 앱인 경우 [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445) 메서드를 사용하여 변환으로 이어진 사용자 지정 캠페인 ID를 프로그래밍 방식으로 검색할 수 있습니다.
--   개발자 센터 대시보드의 [채널 및 변환 보고서](channels-and-conversions-report.md)에서 앱 또는 IAP에 대한 페이지 보기 및 변환에 대한 데이터를 볼 수 있습니다.
+-   개발자 센터 대시보드의 [채널 및 변환 보고서](channels-and-conversions-report.md)에서 앱 또는 추가 기능에 대한 페이지 보기 및 변환에 대한 데이터를 볼 수 있습니다.
 
 > **중요** 이 데이터는 Windows 10을 실행하는 고객에 대해서만 추적됩니다. 다른 운영 체제를 사용하는 고객도 앱 목록 링크를 따라갈 수 있지만 해당 고객의 활동에 대한 데이터는 포함되지 않습니다.
 
@@ -38,7 +38,7 @@ Windows 앱에서 실행되는 [앱용 광고 캠페인](create-an-ad-campaign-f
 -   Facebook 페이지에 게시할 URL에는 사용자 지정 캠페인 ID `my-facebook-campaign`을 포함합니다.
 -   Twitter에 게시할 URL에는 사용자 지정 캠페인 ID `my-twitter-campaign`을 포함합니다.
 
-Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭을 추적하여 해당 사용자 지정 캠페인에 연결합니다. 이후의 게임 다운로드 및 IAP(앱에서 바로 구매 제품) 구매는 사용자 지정 캠페인에 연결되고 변환으로 보고됩니다.
+Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭을 추적하여 해당 사용자 지정 캠페인에 연결합니다. 이후의 게임 다운로드 및 추가 기능 구매는 사용자 지정 캠페인에 연결되고 변환으로 보고됩니다.
 
 ## 앱 설치가 변환으로 인정되는 방법 이해
 
@@ -49,7 +49,7 @@ Facebook 및 Twitter 팔로워가 URL을 클릭하면 Microsoft에서 각 클릭
 
 -   정식 Microsoft 계정을 가진 고객이 사용자 지정 캠페인 ID가 포함된 앱 URL을 클릭하고 앱의 Windows 스토어 페이지로 이동합니다.
 -   이 고객(동일한 Microsoft 계정으로 식별)이 사용자 지정 캠페인 ID가 포함된 Windows 스토어 URL을 처음 클릭한 후 24시간 이내에 앱을 설치합니다. 이는 고객이 사용자 지정 캠페인 ID가 포함된 Windows 스토어 URL을 클릭한 것과 다른 컴퓨터 또는 장치에 앱을 설치한 경우에도 변환으로 인정됩니다.
-    > **참고** 사용자 지정 캠페인에 대한 변환으로 계산되는 앱 설치의 경우 해당 앱의 모든 IAP 구매는 동일한 사용자 지정 캠페인에 대한 변환으로도 계산됩니다.
+    > **참고** 사용자 지정 캠페인에 대한 변환으로 계산되는 앱 설치의 경우 해당 앱의 모든 추가 기능 구매는 동일한 사용자 지정 캠페인에 대한 변환으로도 계산됩니다.
 
      
 
@@ -135,6 +135,6 @@ HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

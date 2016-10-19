@@ -4,15 +4,15 @@ ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "중간 광고와 배너 광고가 지원되는 국가 및 지역에 대해 알아봅니다."
 title: "Microsoft Advertising에 지원되는 시장"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 
 ---
 
 # Microsoft Advertising에 지원되는 시장
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 중간 광고 및 배너 광고는 다음 국가 및 지역에서 지원됩니다.
 
@@ -315,6 +315,6 @@ ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "광고가 있는 앱을 개발하고 게시하기 위한 종단 간 프로세스에 알아봅니다."
 title: "광고가 포함된 앱 만들기 워크플로"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0f832674f0e635f609f09fa15acead109b1d67ff
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 # 광고가 포함된 앱 만들기 워크플로
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 앱에 광고를 표시하려면 앱이 광고 네트워크에서 광고를 수신할 수 있어야 합니다. Microsoft은 Windows 앱 개발자가 광고를 수신할 수 있도록 하는 웹 서비스를 제공합니다. 사용자가 앱에서 광고를 클릭하면 사용자(광고의 *게시자*)는 광고의 생성자(*광고주*)로부터 돈을 받습니다. 광고주로부터 번 돈은 사용자의 계정을 사용하여 사용자에게 지급됩니다.
 
@@ -66,6 +66,6 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 배너 및 동영
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

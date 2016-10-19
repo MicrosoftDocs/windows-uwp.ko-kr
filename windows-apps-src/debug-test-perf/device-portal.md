@@ -4,8 +4,8 @@ ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Windows Device Portal 개요"
 description: "Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 01e83c14304891ff5eaa895e98bbebac33ee7614
-ms.openlocfilehash: 55cbdc077f839166f32605bbada8e0cc707cf5b3
+ms.sourcegitcommit: 7f6aba331ba27d2c0c2ca7925c452da58e155cb8
+ms.openlocfilehash: b316eab1f269dadbe65b7e93b5a33a8e4c4924d7
 
 ---
 # Windows Device Portal 개요
@@ -35,7 +35,7 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 
 디바이스별 설치 지침은 다음을 참조하세요.
 - [HoloLens용 디바이스 포털](https://dev.windows.com/holographic/using_the_windows_device_portal)
-- [IoT용 디바이스 포털](http://ms-iot.github.io/content/win10/tools/DevicePortal.htm)
+- [IoT용 디바이스 포털](https://go.microsoft.com/fwlink/?LinkID=616499)
 - [모바일용 디바이스 포털](device-portal-mobile.md#set-up-device-portal-on-window-phone)
 - [Xbox용 디바이스 포털](device-portal-xbox.md)
 - [데스크톱 디바이스 포털](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
@@ -198,6 +198,6 @@ T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

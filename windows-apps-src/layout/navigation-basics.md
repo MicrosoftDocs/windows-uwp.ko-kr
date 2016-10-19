@@ -6,8 +6,8 @@ ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 2a4005aa12a123c0f9e98486fa1c69839a14276c
 
 ---
 
@@ -99,13 +99,13 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 탐색 요소는 두 가지 서비스를 제공할 수 있습니다. 사용자가 원하는 콘텐츠로 이동하도록 도와줍니다. 일부 요소는 사용자가 앱 내에서의 현재 위치를 알 수 있도록 합니다. 그러나 이러한 요소가 앱이 콘텐츠 또는 명령 요소에 사용할 수 있는 공간을 차지하므로 앱 구조에 적합한 탐색 요소만 사용하는 것이 중요합니다.
 
-### <span id="Peer-to-peer_navigation_elements"></span><span id="peer-to-peer_navigation_elements"></span><span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"></span>피어 투 피어 탐색 요소
+### <span id="Peer_navigation_elements"></span><span id="peer_navigation_elements"></span><span id="PEER_NAVIGATION_ELEMENTS"></span>피어 탐색 요소
 
-피어 투 피어 탐색 요소는 동일한 하위 트리의 동일한 수준에서 페이지 간을 탐색할 수 있도록 합니다.
+피어 탐색 요소는 동일한 하위 트리의 동일한 수준에서 페이지 간을 탐색할 수 있도록 합니다.
 
-![피어 투 피어 탐색](images/nav/nav-lateralmovement.png)
+![피어 탐색](images/nav/nav-lateralmovement.png)
 
-피어 투 피어 탐색을 위해서는 탭이나 탐색 창을 사용하는 것이 좋습니다.
+피어 탐색을 위해서는 탭이나 탐색 창을 사용하는 것이 좋습니다.
 
 <table>
 <colgroup>
@@ -151,11 +151,11 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
  
 
-탐색 구조에 수준이 여러 개인 경우 피어 투 피어 탐색 요소를 현재 하위 트리 내의 피어에만 연결하는 것이 좋습니다. 세 개의 수준이 있는 탐색 구조를 보여 주는 다음 그림을 참조하세요.
+탐색 구조에 수준이 여러 개인 경우 피어 탐색 요소를 현재 하위 트리 내의 피어에만 연결하는 것이 좋습니다. 세 개의 수준이 있는 탐색 구조를 보여 주는 다음 그림을 참조하세요.
 
 ![두 개의 하위 트리가 있는 앱](images/nav/nav-subtrees.png)
--   수준 1의 경우 피어 투 피어 탐색 요소는 A, B, C 및 D 페이지에 대한 액세스를 제공해야 합니다.
--   수준 2에서 A2 페이지에 대한 피어 투 피어 탐색 요소는 다른 A2 페이지에만 연결되어야 하며 C 하위 트리의 수준 2 페이지에는 연결되지 않아야 합니다.
+-   수준 1의 경우 피어 탐색 요소는 A, B, C 및 D 페이지에 대한 액세스를 제공해야 합니다.
+-   수준 2에서 A2 페이지에 대한 피어 탐색 요소는 다른 A2 페이지에만 연결되어야 하며 C 하위 트리의 수준 2 페이지에는 연결되지 않아야 합니다.
 
 ![두 개의 하위 트리가 있는 앱](images/nav/nav-subtrees2.png)
 
@@ -265,10 +265,6 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

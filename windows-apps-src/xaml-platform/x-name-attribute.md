@@ -4,12 +4,12 @@ description: "코드 숨김 또는 일반 코드에서 인스턴스화된 개체
 title: "xName 특성"
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 442c2fa103e1e968ef47ea990bfe8e166daec88b
+ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
+ms.openlocfilehash: 1a70bffd6e6990ece4565b919846503b95ae8f61
 
 ---
 
-# x&#58;Name 특성
+# x:Name 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -66,11 +66,11 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 ### x:Name 및 x:Key
 
-**x:Name**은 [x:Key 특성](x-key-attribute.md)의 대체 항목으로 작용하도록 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내의 요소에 특성으로 적용할 수 있습니다. 일반적으로 **ResourceDictionary**의 모든 요소에는 x:Key 특성이 있어야 합니다. 이는 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)에서 일반적입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273) 섹션을 참조하세요.
+**x:Name**은 [x:Key 특성](x-key-attribute.md)의 대체 항목으로 작용하도록 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내의 요소에 특성으로 적용할 수 있습니다. 일반적으로 **ResourceDictionary**의 모든 요소에는 x:Key 또는 x:Name 특성이 있어야 합니다. 이는 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)에서 일반적입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273) 섹션을 참조하세요.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

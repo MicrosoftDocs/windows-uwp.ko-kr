@@ -5,7 +5,7 @@ title: "소켓"
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 translationtype: Human Translation
 ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
-ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
+ms.openlocfilehash: 49a9ae4d7d3994ad7fbb78fc9dc60cdd9dca07c3
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
 UWP(유니버설 Windows 플랫폼) 개발자는 [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 및 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523)을 둘 다 사용하여 다른 디바이스와 통신할 수 있습니다. 이 항목에서는 네트워킹 작업을 수행하기 위한 **Windows.Networking.Sockets** 네임스페이스 사용에 대해 자세한 지침을 제공합니다.
 
->**참고** [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 일부로 시스템에서는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 금지합니다.  두 UWP 앱 간의 통신을 위해 소켓을 사용할 수 없다는 것을 의미합니다. UWP는 앱 간 통신을 위해 다른 메커니즘을 제공합니다. 자세한 내용은 [앱 간 통신](https://msdn.microsoft.com/windows/uwp/app-to-app/index)을 참조하세요.
+>**참고** [네트워크 격리](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx)의 일부로 시스템에서는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 시스템에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 금지합니다. 두 UWP 앱 간의 통신을 위해 소켓을 사용할 수 없다는 것을 의미합니다. UWP는 앱 간 통신을 위해 다른 메커니즘을 제공합니다. 자세한 내용은 [앱 간 통신](https://msdn.microsoft.com/windows/uwp/app-to-app/index)을 참조하세요.
 
 ## 기본 TCP 소켓 작업
 
@@ -301,6 +301,6 @@ UWP 앱에서도 [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

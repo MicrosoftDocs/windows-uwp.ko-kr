@@ -6,19 +6,29 @@ ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e90760c6894ee5d32ba1063993a703023d23c152
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
 
 ---
 # 토글 스위치
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 토글 스위치는 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. **ToggleSwitch** 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜기/끄기)을 제공합니다. 이러한 옵션은 선택하는 즉시 동작이 실행됩니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>ToggleSwitch 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>IsOn 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Toggled 이벤트</strong></a></li>
+</ul>
 
--   [**ToggleSwitch 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)
--   [**IsOn 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)
--   [**Toggled 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+</div>
+</div>
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -162,6 +172,6 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

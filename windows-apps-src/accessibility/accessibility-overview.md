@@ -6,8 +6,8 @@ title: "접근성 개요"
 label: Accessibility overview
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+ms.sourcegitcommit: a93f6fb154300ac27b9dc700182d90083fb2cbc8
+ms.openlocfilehash: 669672ecd8c15adb2e53eb8e4a8efd8483af14d1
 
 ---
 
@@ -177,9 +177,10 @@ XAML UI([**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/Dn2
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 * [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
+* [접근성](accessibility.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,8 @@ title: "게임 개발용 CPUSets"
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에 새로 도입된 CPUSets API에 대해 개략적으로 설명하고 게임 및 응용 프로그램 개발과 관련된 핵심적인 정보를 다룹니다."
 author: hammondsp
 translationtype: Human Translation
-ms.sourcegitcommit: 3cefaf4e527d2a0da412dab474a348b55ad409c9
-ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
+ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
+ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 
 ---
 
@@ -12,7 +12,7 @@ ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
 
 ## 소개
 
-UWP(유니버설 Windows 플랫폼)는 광범위한 소비자 전자 디바이스의 핵심에 있습니다. 따라서 게임에서 포함 앱, 서버에서 실행되는 엔터프라이즈 소프트웨어에 이르는 모든 유형의 응용 프로그램에 대한 요구 사항을 처리하기 위해 UWP에는 범용 API가 필요합니다. API에서 제공하는 올바른 정보를 활용하여 게임이 모든 하드웨어에서 최상으로 실행되도록 할 수 있습니다.
+UWP(유니버설 Windows 플랫폼)는 광범위한 소비자 전자 디바이스의 핵심입니다. 따라서 게임에서 포함 앱, 서버에서 실행되는 엔터프라이즈 소프트웨어에 이르는 모든 유형의 응용 프로그램에 대한 요구 사항을 처리하기 위해 UWP에는 범용 API가 필요합니다. API에서 제공하는 올바른 정보를 활용하여 게임이 모든 하드웨어에서 최상으로 실행되도록 할 수 있습니다.
 
 ## CPUSets API
 
@@ -86,7 +86,7 @@ SetThreadSelectedCpuSets(audioHandle, cores, 2);
 
 ### SetProcessDefaultCpuSets
 
-**SetThreadSelectedCpuSets**의 반대가 **SetProcessDefaultCpuSets**입니다. 스레드는 만들어질 때 특정 CPU 집합에 잠겨 있을 필요가 없습니다. 이러한 스레드가 특정 CPU 집합(렌더링 스레드 또는 오디오 스레드 등에서 사용되는 CPU 집합)에서 실행되지 않게 하려면 이 함수를 사용하여 이러한 스레드가 예약될 수 있는 코어를 지정할 수 있습니다.
+**SetThreadSelectedCpuSets**의 반대가 **SetProcessDefaultCpuSets**입니다. 스레드는 만들어질 때 특정 CPU 집합에 잠겨 있을 필요가 없습니다. 이러한 스레드가 특정 CPU 집합(예: 렌더링 스레드 또는 오디오 스레드에서 사용되는 CPU 집합)에서 실행되지 않게 하려면 이 함수를 사용하여 이러한 스레드가 예약될 수 있는 코어를 지정할 수 있습니다.
 
 ## 게임 개발에 대한 고려 사항
 
@@ -190,10 +190,11 @@ UWP 개발에 사용할 수 있는 CPUSets API는 다중 스레딩 옵션에 대
 ## 추가 리소스
 - [CPU 집합(MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [ATG에서 제공한 CPUSets 샘플](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [Xbox One의 UWP](index.md)
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

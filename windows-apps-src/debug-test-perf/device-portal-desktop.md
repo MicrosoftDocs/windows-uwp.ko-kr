@@ -4,8 +4,8 @@ ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "데스크톱용 Device Portal"
 description: "Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
-ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
+ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
 
 ---
 # 데스크톱용 Device Portal
@@ -74,8 +74,10 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
     - HttpPort: 필수 DWORD. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.  
     - HttpsPort: 필수 DWORD. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
 
-## 개발자 모드 패키지 설치 실패
-경우에 따라 네트워크 또는 호환성 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 개발자 모드 패키지는 원격 배포(Device Portal 및 SSH)에 필요하며 로컬 개발에는 필요하지 않습니다.  
+## 개발자 모드 패키지 설치 또는 Device Portal 시작 실패
+경우에 따라 네트워크 또는 호환성 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 개발자 모드 패키지는 **원격** 배포(Device Portal 및 SSH)에 필요하며 로컬 개발에는 필요하지 않습니다.  이러한 문제가 발생하더라도 Visual Studio를 사용하여 앱을 로컬로 계속 배포할 수 있습니다. 
+
+[알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼을 참조하여 이러한 문제에 대한 해결 방법 등을 찾을 수 있습니다. 
 
 ### 패키지 찾기 실패
 
@@ -102,10 +104,10 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 이 문제를 해결하려면
 
 1. 설정 &gt; 업데이트 및 보안 &gt; [Windows 업데이트](ms-settings:windowsupdate)에서 Windows 업데이트가 있는지 확인합니다.
-2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록  합니다.
+2. 컴퓨터를 다시 부팅하여 모든 업데이트가 적용되도록 합니다.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

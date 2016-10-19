@@ -1,11 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
-description: "Microsoft 스토어 참여 및 수익 창출 SDK에서 Microsoft Advertising 라이브러리에 대한 일반 개발자 정보를 가져옵니다."
+description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리에 대한 일반 개발자 정보를 가져옵니다."
 title: "Microsoft Advertising 라이브러리에 대한 개발자 정보"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 70692d09c037d9e5802734bc5de6a6c79799bffb
 
 
 ---
@@ -13,11 +13,10 @@ ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
 # Microsoft Advertising 라이브러리에 대한 개발자 정보
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 섹션의 항목에서는 Microsoft 스토어 참여 및 수익 창출 SDK에서 Microsoft Advertising 라이브러리에 대한 유용한 정보를 개발자에게 제공합니다.
 
-  > **중요** Microsoft Advertising 라이브러리는 광고 조정 라이브러리의 다른 확장 집합입니다. Microsoft의 배너 또는 동영상 중간 광고를 XAML 또는 JavaScript 앱에 표시하려면 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 및 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 클래스를 사용합니다. XAML 앱에 여러 광고 네트워크의 배너 광고를 표시하려면 광고 조정 라이브러리의 **AdMediatorControl** 클래스를 사용합니다. 자세한 내용은 [AdMediatorControl과 AdControl의 차이](what-is-the-difference-admediatorcontrol-or-adcontrol.md)를 참조하세요.
+이 섹션의 항목에서는 Microsoft Store Services SDK(UWP 앱용)와 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x(Windows 8.1 및 Windows Phone 8.x 앱용)의 Microsoft Advertising 라이브러리에 대한 개발자에게 유용한 정보를 제공합니다.
+
 
 ## 이 섹션의 내용
 
@@ -39,6 +38,6 @@ ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

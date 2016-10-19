@@ -1,13 +1,21 @@
 ---
-Description&#58; 만든 이&#58; mijacobs 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
-title&#58; UWP 앱의 동작 및 애니메이션 ms.assetid&#58; 21AA1335-765E-433A-85D8-560B340AE966 레이블&#58; 동작 템플릿&#58; detail.hbs testmetadata&#58; testing tocnode&#58;design and ui
+author: mijacobs
+Description: "체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다."
+title: "UWP 앱의 동작 및 애니메이션"
+ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
+label: Motion
+template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
+
 ---
 
 # UWP 앱의 동작
 
 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 
-## <span id="Benefits_of_animation"></span><span id="benefits_of_animation"></span><span id="BENEFITS_OF_ANIMATION"></span>애니메이션의 이점
+## 애니메이션의 이점
 
 
 애니메이션은 사물이 이동하도록 만드는 것에 그치지 않습니다. 애니메이션은 사용자가 내부에 존재하면서 터치를 통해 조작할 수 있는 물리적인 에코시스템을 만들기 위한 도구입니다. 경험의 질은 사용자에 대한 앱 응답성 정도, UI가 통신하는 특성의 종류 등에 따라 달라집니다.
@@ -54,7 +62,7 @@ title&#58; UWP 앱의 동작 및 애니메이션 ms.assetid&#58; 21AA1335-765E-4
         </td>
         <td>목록 애니메이션을 사용하면 사진 앨범이나 검색 결과 목록 같은 컬렉션에서 단일 항목이나 여러 항목을 삽입하거나 제거할 수 있습니다.
         </td>
-    </tr> 
+    </tr>
     <tr>
         <td>[끌어서 놓기](motion-dragdrop.md)
         </td>
@@ -103,10 +111,6 @@ title&#58; UWP 앱의 동작 및 애니메이션 ms.assetid&#58; 21AA1335-765E-4
 
 
 
-
-
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

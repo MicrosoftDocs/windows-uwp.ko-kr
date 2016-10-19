@@ -4,8 +4,8 @@ title: "Windows 10 게임 개발 가이드"
 description: "UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종단 간 가이드입니다."
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 translationtype: Human Translation
-ms.sourcegitcommit: a9beb420ac13eb74c0109b30508e49d5305bc67c
-ms.openlocfilehash: 30f8408e6d125423e69615a3f9341e8f7d886fc8
+ms.sourcegitcommit: 1c3f222b4b3ddb14a48cef138984b07ac58cc66b
+ms.openlocfilehash: 7bc6694f94eeeb6188470fee00d432b2d71e52e6
 
 ---
 
@@ -65,16 +65,20 @@ Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 �
         <td>[DirectX 그래픽 및 게임](https://msdn.microsoft.com/library/windows/desktop/ee663274)</td>
     </tr>
     <tr>
+        <td>Xbox One의 UWP</td>
+        <td>[Xbox One의 UWP 앱 빌드](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)</td>
+    </tr>
+    <tr>
         <td>Xbox Live 설명서</td>
         <td>[Xbox Live SDK](http://aka.ms/xsapi2)</td>
     </tr>
     <tr>
         <td>Xbox One 개발자 설명서(GDN)</td>
-        <td>[Xbox One XDK 설명서](https://developer.xboxlive.com/platform/development/documentation/Pages/home.aspx)</td>
+        <td>[Xbox One XDK 설명서](https://developer.xboxlive.com/en-us/platform/development/documentation/Pages/home.aspx)</td>
     </tr>
     <tr>
         <td>Xbox One 개발자 백서(GDN)</td>
-        <td>[백서](https://developer.xboxlive.com/platform/development/education/Pages/WhitePapers.aspx)</td>
+        <td>[백서](https://developer.xboxlive.com/en-us/platform/development/education/Pages/WhitePapers.aspx)</td>
     </tr>     
 </table>
 
@@ -82,7 +86,7 @@ Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 �
 
 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. Windows 스토어에 게임을 게시하려면 Windows 개발자 센터에서 개발자 계정을 만들어야 합니다. 게임과 스튜디오 요구 사항에 따라 다른 프로그램이 유용할 수 있으며 Xbox One 개발 및 Xbox Live 통합과 같은 기회를 만들 수 있습니다.
 
-### Windows 개발자 센터
+#### Windows 개발자 센터
 
 Windows 개발자 센터에서 개발자 계정을 등록하는 작업은 Windows 게임을 게시하기 위한 첫 번째 단계입니다. 개발자 계정을 사용하여 게임의 이름을 예약하고, 무료 또는 유료 게임을 모든 Windows 디바이스용 Windows 스토어에 제출할 수 있습니다. 개발자 계정을 사용하여 게임 및 게임 내 제품을 관리하고, 자세하게 분석하며, 전 세계 플레이어를 위해 멋진 환경을 만드는 서비스를 사용하도록 설정할 수 있습니다.
 
@@ -95,10 +99,9 @@ Windows 개발자 센터에서 개발자 계정을 등록하는 작업은 Window
         <td>개발자 계정 등록</td>
         <td>[등록 준비](https://msdn.microsoft.com/library/windows/apps/bg124287)</td>
     </tr> 
-</table>  
+</table>
 
-
-### ID@Xbox
+#### ID@Xbox
 
 ID@Xbox 프로그램을 사용하면 정규 게임 개발자가 Windows 및 Xbox One에 게임을 직접 게시할 수 있습니다. Xbox One용 개발 또는 Windows 10 게임에 게이머 점수, 도전 과제 및 순위표와 같은 Xbox Live 기능을 추가하려는 경우 ID@Xbox에 등록합니다. ID@Xbox 개발자로 등록하여 창의력을 발휘하고 성공 가능성을 극대화하는 데 필요한 도구와 지원을 받으시기 바랍니다. ID@Xbox에 적용하기 전에 Windows 개발자 센터에서 개발자 계정을 등록하세요.
 
@@ -117,24 +120,7 @@ ID@Xbox 프로그램을 사용하면 정규 게임 개발자가 Windows 및 Xbox
     </tr>
 </table>
 
-
-### DirectX 미리 경험하기 프로그램
-
-Direct3D 12 API 변경 사항을 미리 경험하고 포럼에 대한 피드백을 제공하려는 전문 게임 개발자는 DirectX 미리 경험하기 프로그램에 참가할 수 있습니다.
-
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>DirectX 12 미리 경험하기 프로그램 등록</td>
-        <td>[DirectX 미리 경험하기 프로그램](http://1drv.ms/1dgelm6)</td>
-    </tr>
-</table>
-
-
-### Xbox 도구 및 미들웨어
+#### Xbox 도구 및 미들웨어
 
 Xbox 도구와 미들웨어 프로그램에서는 게임 도구와 미들웨어의 전문 개발자에게 Xbox 개발자 키트 라이선스를 허여합니다. 이 프로그램에 참여한 개발자는 자신의 Xbox XDK 기술을 사용이 허가된 다른 Xbox 개발자와 공유하고 배포할 수 있습니다.
 
@@ -164,8 +150,16 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는
         <td>[Windows-universal-samples](https://github.com/Microsoft/Windows-universal-samples)</td>
     </tr>
     <tr>
+        <td>Xbox 고급 기술 그룹 공개 샘플</td>
+        <td>[Xbox-ATG-Samples](https://github.com/Microsoft/Xbox-ATG-Samples)</td>
+    </tr>
+    <tr>
         <td>Direct3D 12 그래픽 샘플</td>
         <td>[DirectX-Graphics-Samples](https://github.com/Microsoft/DirectX-Graphics-Samples)</td>
+    </tr>
+    <tr>
+        <td>Direct3D 11 그래픽 샘플</td>
+        <td>[directx-sdk-samples](https://github.com/walbourn/directx-sdk-samples)</td>
     </tr>
     <tr>
         <td>Direct3D 11 1인칭 게임 샘플</td>
@@ -185,7 +179,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하는
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(GDN)</td>
-        <td>[샘플](https://developer.xboxlive.com/platform/development/education/Pages/Samples.aspx)</td>
+        <td>[샘플](https://developer.xboxlive.com/en-us/platform/development/education/Pages/Samples.aspx)</td>
     </tr>
     <tr>
         <td>Windows 8 게임 샘플(MSDN 코드 갤러리)</td>
@@ -588,8 +582,8 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
         <td>[Windows에 iOS 앱 가져오기](https://dev.windows.com/bridges/ios)</td>
     </tr>
     <tr>
-        <td>.NET 및 Win32용 Windows 브리지("Project Centennial") 미리 보기</td>
-        <td>[Windows Developer Preview 프로그램](http://go.microsoft.com/fwlink/p/?LinkID=624543)</td>
+        <td>데스크톱 응용 프로그램용 Windows 브리지(.NET 및 Win32)</td>
+        <td>[데스크톱 응용 프로그램을 UWP 앱으로 변환](https://developer.microsoft.com/windows/bridges/desktop)</td>
     </tr>
 </table>
  
@@ -619,7 +613,7 @@ Unity 5는 수상 경력이 있는 차세대 개발 플랫폼으로, 2D 및 3D �
     </tr>
     <tr>
         <td>Windows용 Unity 설명서</td>
-        <td>[Unity 설명서/Windows](http://docs.unity3d.com/Manual/Windows.mdl)</td>
+        <td>[Unity 설명서/Windows](http://docs.unity3d.com/Manual/Windows.html)</td>
     </tr>
     <tr>
         <td>Unity 게임을 유니버설 Windows 플랫폼 앱으로 게시(동영상)</td>
@@ -690,7 +684,7 @@ Cocos2d-X는 플랫폼 간 오픈 소스 게임 개발 엔진이며 UWP 게임 �
 
 #### Unreal Engine
 
-Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게임 개발 도구 모음입니다. Unreal Engine은 가장 까다로운 콘솔 및 PC 게임에 이르기까지 전 세계의 다양한 게임 개발자가 사용합니다. Unreal Engine 4에 가입한 [DirectX 12 미리 경험하기 프로그램](#dxeap) 회원은 DirectX 12를 지원하는 Unreal Engine 4.4 개발 프로젝트에 액세스할 수 있습니다.
+Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게임 개발 도구 모음입니다. Unreal Engine은 가장 까다로운 콘솔 및 PC 게임에 이르기까지 전 세계의 다양한 게임 개발자가 사용합니다.
 
 <table>
     <colgroup>
@@ -699,10 +693,32 @@ Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게�
     </colgroup>
     <tr>
         <td>Unreal Engine 개요</td>
-        <td>[Unreal Engine 4란?](https://www.unrealengine.com/what-is-unreal-engine-4)</td>
+        <td>[Unreal Engine 4](https://www.unrealengine.com/what-is-unreal-engine-4)</td>
     </tr>
 </table>
- 
+
+#### BabylonJS
+
+BabylonJS는 HTML5, WebGL 및 웹 오디오를 사용하여 3D 게임을 빌드하기 위한 완벽한 JavaScript 프레임워크입니다.
+
+<table>
+    <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+    </colgroup>
+    <tr>
+        <td>BabylonJS</td>
+        <td>[BabylonJS](http://www.babylonjs.com/)</td>
+    </tr>
+    <tr>
+        <td>HTML5 및 BabylonJS를 사용한 WebGL 3D(비디오 시리즈)</td>
+        <td>[WebGL 3D 및 BabylonJS 학습](https://channel9.msdn.com/Series/Introduction-to-WebGL-3D-with-HTML5-and-Babylonjs/01)</td>
+    </tr>
+    <tr>
+        <td>BabylonJS를 사용하여 플랫폼 간 WebGL 게임 빌드</td>
+        <td>[BabylonJS를 사용하여 플랫폼 간 게임 개발](https://www.smashingmagazine.com/2016/07/babylon-js-building-sponza-a-cross-platform-webgl-game/)</td>
+    </tr>    
+</table>
 
 ### 미들웨어 및 파트너
 
@@ -714,12 +730,8 @@ Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게�
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Windows 개발자 센터 게임 파트너</td>
-        <td>[개발자 센터 파트너(게임)](https://devcenterpartners.windows.com/directory#filter=gaming)</td>
-    </tr>
-    <tr>
         <td>Windows 개발자 센터 파트너</td>
-        <td>[개발자 센터 파트너](https://devcenterpartners.windows.com/directory)</td>
+        <td>[개발자 센터 파트너](https://developer.microsoft.com/windows/app-middleware-partners)</td>
     </tr>
 </table>
  
@@ -755,7 +767,7 @@ Unreal Engine 4는 모든 유형의 게임과 개발자를 위한 완벽한 게�
     </tr>
     <tr>
         <td>Xbox 게임을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td>[Xbox One에서 Windows 10 UWP로 포팅](https://developer.xboxlive.com/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)</td>
+        <td>[Xbox One에서 Windows 10 UWP로 포팅](https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx)</td>
     </tr>
     <tr>
         <td>DirectX 9에서 DirectX 11로 포팅</td>
@@ -1267,9 +1279,7 @@ DirectX 개발의 일부는 미묘하고 복잡할 수 있습니다. 프로덕�
     </tr>
 </table>
 
-
 ## 게임 제출 및 게시
-
 
 다음 가이드 및 정보는 게시 및 제출 프로세스를 가능한 한 매끄럽게 하는 데 도움이 됩니다.
 
@@ -1496,6 +1506,6 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

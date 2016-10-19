@@ -7,7 +7,7 @@ label: Motion--Drag and drop
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c975ba3d03c06009710f4f57edf8a4cc517ad90c
+ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
 
 ---
 
@@ -71,6 +71,6 @@ ms.openlocfilehash: c975ba3d03c06009710f4f57edf8a4cc517ad90c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

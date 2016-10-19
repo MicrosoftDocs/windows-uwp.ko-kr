@@ -5,7 +5,7 @@ title: "인쇄 및 스캔"
 description: "이 섹션에서는 유니버설 Windows 앱에서 인쇄 및 스캔하는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 81a96c4c519a112551cab83425caf782b13ea9be
+ms.openlocfilehash: 1e30bfb4f80d955d28799e6a6d5c22b82379a8fc
 
 ---
 # 인쇄 및 스캔
@@ -31,6 +31,6 @@ ms.openlocfilehash: 81a96c4c519a112551cab83425caf782b13ea9be
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

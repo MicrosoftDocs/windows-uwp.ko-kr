@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: "선택기를 사용하여 파일 저장"
 description: "사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
 
 ---
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
 ```cs
 var savePicker = new Windows.Storage.Pickers.FileSavePicker();
-savePicker.SuggestedStartLocation = 
+savePicker.SuggestedStartLocation =
     Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
 // Dropdown of file types the user can save the file as
 savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
@@ -62,7 +62,7 @@ savePicker.SuggestedFileName = "New Document";
 
      
 - 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
- 
+
 - 파일이 저장된 후 앱에서 파일을 열 수 있는지 확인하려고 하므로 [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875)를 사용하여 샘플에서 지원하는 파일 형식(Microsoft Word 문서 및 텍스트 파일)을 지정합니다. 지정하는 모든 파일 형식이 앱에서 지원되는지 확인합니다. 사용자는 자신의 파일을 지정한 파일 형식으로 저장할 수 있습니다. 또한 지정된 다른 파일 형식을 선택하여 파일 형식을 변경할 수 있습니다. 목록에서 첫 번째 파일 형식 항목은 기본적으로 선택됩니다. 이를 제어하려면 [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) 속성을 설정합니다.
 
 > **참고** 파일 선택기는 현재 선택된 파일 형식을 사용하여 표시되는 파일을 필터링하기도 하므로 선택한 파일 형식과 일치하는 파일 형식만 사용자에게 표시됩니다.
@@ -85,7 +85,7 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
         // Let Windows know that we're finished changing the file so
         // the other app can update the remote version of the file.
         // Completing updates may require Windows to ask for user input.
-        Windows.Storage.Provider.FileUpdateStatus status = 
+        Windows.Storage.Provider.FileUpdateStatus status =
             await Windows.Storage.CachedFileManager.CompleteUpdatesAsync(file);
         if (status == Windows.Storage.Provider.FileUpdateStatus.Complete)
         {
@@ -114,10 +114,6 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

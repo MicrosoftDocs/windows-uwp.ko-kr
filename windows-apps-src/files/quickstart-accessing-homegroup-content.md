@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "홈 그룹 콘텐츠 액세스"
 description: "사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 ---
 # 홈 그룹 콘텐츠 액세스
@@ -57,7 +57,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
     picker.FileTypeFilter.Clear();
     picker.FileTypeFilter.Add("*");
     ```
-  
+
 2.  **파일 선택기 표시 및 선택된 파일 처리**
 
     파일 선택기를 만들어 사용자 지정한 후 [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)를 호출하여 사용자가 파일 하나를 선택하거나 [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851)를 호출하여 여러 파일을 선택하도록 할 수 있습니다.
@@ -93,11 +93,11 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
     다음 예에서는 검색 결과를 관련성순으로 정렬한 다음 수정한 날짜순으로 정렬하는 쿼리 옵션을 설정합니다. 검색 필터는 사용자가 이전 단계에서 입력한 쿼리 용어입니다.
     ```csharp
-    Windows.Storage.Search.QueryOptions queryOptions = 
+    Windows.Storage.Search.QueryOptions queryOptions =
             new Windows.Storage.Search.QueryOptions
                 (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
     queryOptions.UserSearchFilter = queryTerm.Text;
-    Windows.Storage.Search.StorageFileQueryResult queryResults = 
+    Windows.Storage.Search.StorageFileQueryResult queryResults =
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
@@ -105,7 +105,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
     다음 예에서는 홈 그룹에서 검색 쿼리를 실행하고 일치하는 파일의 이름으로 문자열 목록으로 저장합니다.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files =
         await queryResults.GetFilesAsync();
 
     if (files.Count > 0)
@@ -127,7 +127,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
     홈 그룹에 있는 각각의 첫 번째 수준 폴더는 개별 홈 그룹 사용자를 나타냅니다. 따라서 홈 그룹 사용자 컬렉션을 가져오려면 [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279)를 호출하여 최상위 수준의 홈 그룹 폴더를 검색합니다.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
@@ -142,7 +142,7 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
         {
             // Found the target user's folder, now find all files in the folder.
             userFound = true;
-            Windows.Storage.Search.QueryOptions queryOptions = 
+            Windows.Storage.Search.QueryOptions queryOptions =
                 new Windows.Storage.Search.QueryOptions
                     (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
             queryOptions.UserSearchFilter = "*";
@@ -211,10 +211,6 @@ ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

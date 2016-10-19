@@ -4,28 +4,25 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다."
 title: "오류 보고 데이터 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
 
 ---
 
 # 오류 보고 데이터 가져오기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 집계 오류 보고 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
 
 ## 필수 조건
 
 
-이 메서드를 사용하려면 다음이 필요합니다.
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
--   이 메서드 호출에 사용할 Azure AD 응용 프로그램을 개발자 센터 계정과 연결합니다.
-
--   응용 프로그램에 대한 Azure AD 액세스 토큰을 가져옵니다.
-
-자세한 내용은 [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)를 참조하세요.
+* 아직 완료하지 않은 경우 Windows 스토어 분석 API에 대한 모든 [필수 조건](access-analytics-data-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
 ## 요청
 
@@ -42,7 +39,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/> 
 
@@ -277,7 +274,7 @@ Authorization: Bearer <your access token>
 | 값           | 유형    | 설명                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | 문자열  | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
-| applicationId   | 문자열  | IAP 구입 데이터를 검색할 앱의 스토어 ID입니다.                                                                                                                                                           |
+| applicationId   | 문자열  | 추가 기능 구입 데이터를 검색하려는 앱의 스토어 ID입니다.                                                                                                                                                           |
 | applicationName | 문자열  | 앱의 표시 이름                                                                                                                                                                                                             |
 | failureName     | 문자열  | 오류의 이름입니다.                                                                                                                                                                                                                 |
 | failureHash     | 문자열  | 오류의 고유 식별자입니다.                                                                                                                                                                                                   |
@@ -327,12 +324,12 @@ Authorization: Bearer <your access token>
 
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [앱 획득 가져오기](get-app-acquisitions.md)
-* [IAP 구입 가져오기](get-in-app-acquisitions.md)
-* [앱 평점 가져오기](get-app-ratings.md)
+* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
+* [앱 등급 가져오기](get-app-ratings.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

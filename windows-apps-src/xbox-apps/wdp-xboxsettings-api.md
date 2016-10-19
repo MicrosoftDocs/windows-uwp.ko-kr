@@ -3,8 +3,8 @@ author: payzer
 title: "디바이스 포털 Xbox 개발자 설정 API 참조"
 description: "Xbox 개발자 설정에 액세스하는 방법을 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
-ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
+ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
+ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
 
 ---
 
@@ -60,7 +60,7 @@ HTTP 상태 코드      | 설명
 
 메서드      | 요청 URI
 :------     | :-----
-GET | /ext/settings/<setting name>
+GET | /ext/settings/\&lt;설정 이름\&gt;
 <br />
 **URI 매개 변수**
 
@@ -101,7 +101,7 @@ HTTP 상태 코드      | 설명
 
 메서드      | 요청 URI
 :------     | :-----
-PUT | /ext/settings/<setting name>
+PUT | /ext/settings/\&lt;설정 이름\&gt;
 <br />
 **URI 매개 변수**
 
@@ -137,6 +137,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: "베타 테스트"
 description: "베타 테스트를 수행하면 앱 개발 팀 외부에 있는 사용자의 디바이스에서 아직 릴리스되지 않은 앱을 시험해보고 사용자의 피드백에 따라 앱을 향상시킬 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+ms.openlocfilehash: 13857b2ba5946149d04ad4f6eda6828cc11a0640
 
 ---
 # 베타 테스트
@@ -50,6 +50,6 @@ ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

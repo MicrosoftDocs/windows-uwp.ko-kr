@@ -5,7 +5,7 @@ title: "커뮤니티 광고 정보"
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
 translationtype: Human Translation
 ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
-ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
+ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
 
 커뮤니티 광고에 옵트인(opt in)하려면
 
-1. Windows 개발자 센터 대시보드에서 **수익 창출**&gt;**광고로 수익 창출** 페이지로 이동합니다.
+1. Windows 개발자 센터 대시보드에서 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동합니다.
 2. **커뮤니티 광고** 섹션에서 **내 앱에 커뮤니티 광고 표시** 확인란을 선택합니다.
    > **참고** 이 확인란을 선택하거나 선택 취소한 후 변경 내용을 적용하기 위해 앱을 다시 게시할 필요가 없습니다.
 
@@ -40,6 +40,6 @@ ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

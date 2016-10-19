@@ -2,18 +2,15 @@
 description: "다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다."
 title: "UWP 앱 레이아웃 디자인 – Windows 앱 개발"
 author: mijacobs
-keywords: uwp app layout, universal windows platform, app design, interface
+keywords: "UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스"
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
 
 ---
-
+# UWP 앱의 레이아웃
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">UWP 앱의 레이아웃</h1>
-</div>
 
 앱 구조, 페이지 레이아웃 및 탐색은 앱 사용자 환경의 기본입니다. 이 섹션의 문서는 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 앱을 만드는 데 도움이 됩니다.
 
@@ -86,6 +83,6 @@ XAML 속성 및 레이아웃 패널을 사용하여 반응성이 뛰어난 적�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

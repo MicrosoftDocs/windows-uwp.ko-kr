@@ -5,7 +5,7 @@ description: "이 항목에서는 그래픽 어댑터가 제거되거나 다시 
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d522a309386b06f97bc63b9eead1ca4cecf165c
+ms.openlocfilehash: 3cb625886add852d9faa36a0ad5bc611c1929077
 
 ---
 
@@ -177,6 +177,6 @@ Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

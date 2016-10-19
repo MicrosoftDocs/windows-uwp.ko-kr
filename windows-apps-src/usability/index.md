@@ -1,17 +1,16 @@
 ---
 description: "앱을 전 세계 사용자들이 사용하고 액세스할 수 있게 하는 방법을 알아봅니다."
-keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
+keywords: "UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항"
 title: "UWP 앱의 유용성 - Windows 앱 개발"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
-ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
+ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
+ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
 
 ---
-
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
 # UWP 앱의 유용성
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 세부 사항에 조금 더 관심을 기울이면 사용자 환경을 전 세계 사용자의 요구를 충족하는 진정으로 포괄적인 사용자 환경으로 변형할 수 있습니다.
 
@@ -104,7 +103,7 @@ ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
 
 ## 세계화 및 지역화
 
-Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 사용합니다. 사용자는 어느 언어든 말할 수 있고 여러 언어를 사용할 수도 있습니다. 지역도 세계 어디든 있을 수 있어서 위치와 언어가 다양할 수 있습니다. 세계화 및 지역화를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다. 
+Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 사용합니다. 사용자는 어느 언어든 말할 수 있고 여러 언어를 사용할 수도 있습니다. 지역도 세계 어디든 있을 수 있어서 위치와 언어가 다양할 수 있습니다. 세계화 및 지역화를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -154,7 +153,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 
 ## 앱 설정
 
-앱 설정을 통해 사용자는 앱을 사용자 지정하여 각자의 요구 사항과 설정에 맞게 최적화할 수 있습니다. 올바르게 설정하고 적절하게 저장하면 훨씬 더 좋은 사용자 환경을 만들 수 있습니다. 
+앱 설정을 통해 사용자는 앱을 사용자 지정하여 각자의 요구 사항과 설정에 맞게 최적화할 수 있습니다. 올바르게 설정하고 적절하게 저장하면 훨씬 더 좋은 사용자 환경을 만들 수 있습니다.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -168,16 +167,16 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 </div>
 
 ## 앱 내 도움말
-앱을 아무리 잘 디자인했더라도 일부 사용자는 추가 지원이 필요합니다. 
+앱을 아무리 잘 디자인했더라도 일부 사용자는 추가 지원이 필요합니다.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[앱 도움말에 대한 지침](../app-help-guidelines/guidelines-for-app-help.md)</b><br/>응용 프로그램은 복잡할 수 있으며, 사용자에게 효과적인 도움말을 제공하면 환경을 훨씬 개선할 수 있습니다. 
+<p><b>[앱 도움말에 대한 지침](../in-app-help/guidelines-for-app-help.md)</b><br/>응용 프로그램은 복잡할 수 있으며, 사용자에게 효과적인 도움말을 제공하면 환경을 훨씬 개선할 수 있습니다.
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[UI 사용 안내](../app-help-guidelines/instructional-ui.md)</b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
+<p><b>[UI 사용 안내](../in-app-help/instructional-ui.md)</b><br/>경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
   </div>
 </div>
 </div>
@@ -185,19 +184,16 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[앱 내 도움말](../app-help-guidelines/in-app-help.md)</b><br/>대부분의 경우 도움말은 앱 내에 표시되고 사용자가 보려고 선택할 때 표시되는 것이 좋습니다. 앱 내 도움말을 만들 때 다음과 같은 지침을 고려합니다.</p>
+<p><b>[앱 내 도움말](../in-app-help/in-app-help.md)</b><br/>대부분의 경우 도움말은 앱 내에 표시되고 사용자가 보려고 선택할 때 표시되는 것이 좋습니다. 앱 내 도움말을 만들 때 다음과 같은 지침을 고려합니다.</p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[외부 도움말](../app-help-guidelines/external-help.md)</b><br/>대부분의 경우 도움말은 앱 내에 표시되고 사용자가 보려고 선택할 때 표시되는 것이 좋습니다. 앱 내 도움말을 만들 때 다음과 같은 지침을 고려합니다.</p>
+<p><b>[외부 도움말](../in-app-help/external-help.md)</b><br/>대부분의 경우 도움말은 앱 내에 표시되고 사용자가 보려고 선택할 때 표시되는 것이 좋습니다. 앱 내 도움말을 만들 때 다음과 같은 지침을 고려합니다.</p>
   </div>
 </div>
 </div>
 
 
 
-
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

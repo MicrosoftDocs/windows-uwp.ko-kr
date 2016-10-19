@@ -5,7 +5,7 @@ description: "이 섹션에는 UWP(유니버설 Windows 플랫폼)으로 DirectX
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1cb77db78fe368c567990c9521122b42ef10ec65
+ms.openlocfilehash: 3988d0cbfb3b7e585622af45c0d7ff3589ee020d
 
 ---
 
@@ -40,6 +40,6 @@ ms.openlocfilehash: 1cb77db78fe368c567990c9521122b42ef10ec65
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

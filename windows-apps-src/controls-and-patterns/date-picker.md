@@ -7,19 +7,30 @@ isNew: true
 label: Date picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: c237d4bc013ad0a1d0d16f695f4332a6aac7efdc
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 2253172ff20ae46b0ada556551adfeac62136398
 
 ---
-
 # 날짜 선택기
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 날짜 선택은 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 지역화된 날짜 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx"><strong>DatePicker 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx"><strong>Date 속성</strong></a></li>
+</ul>
 
--   [**DatePicker 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.aspx)
--   [**Date 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.datepicker.date.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 날짜 선택을 사용하여 사용자는 달력의 컨텍스트가 중요하지 않은 생일과 같은 알려진 날짜를 선택할 수 있습니다.
@@ -49,7 +60,7 @@ birthDatePicker.Header = "Date of birth";
 
 ![날짜 선택의 예](images/date-picker-closed.png)
 
-> **참고** &nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> **참고**&nbsp;&nbsp;날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
 
 
@@ -62,6 +73,6 @@ birthDatePicker.Header = "Date of birth";
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

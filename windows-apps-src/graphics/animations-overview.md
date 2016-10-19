@@ -5,7 +5,7 @@ title: "애니메이션 개요"
 description: "Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 5d50bf2b24d134fd50ae2bea976509b30a511652
+ms.openlocfilehash: d622465ce3da70cdb8dbd064b68ea6983f9fe3f7
 
 ---
 # 애니메이션 개요
@@ -384,6 +384,6 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

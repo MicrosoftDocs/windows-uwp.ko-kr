@@ -5,7 +5,7 @@ description: "입력 대기 시간은 게임 환경에 큰 영향을 줄 수 있
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 19bcf043f3fc8c729f5f9fbbeee237bd1749443d
+ms.openlocfilehash: ae99f88126192866ed18df55497af6390bc38c26
 
 ---
 
@@ -261,6 +261,6 @@ Windows 8.1에서 DXGI는 스왑 체인에 대한 **DXGI\_SWAP\_CHAIN\_FLAG\_FRA
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

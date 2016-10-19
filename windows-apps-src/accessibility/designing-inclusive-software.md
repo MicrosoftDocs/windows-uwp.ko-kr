@@ -6,8 +6,8 @@ title: "Windows 10에서 포괄 소프트웨어 디자인"
 label: Designing inclusive software
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
+ms.sourcegitcommit: c5ccae0e095b7c8e403a230fe8f3442754aa2ad7
+ms.openlocfilehash: 94848fd1acf51e7ab8dab0f45584d3214be58830
 
 ---
 
@@ -114,10 +114,11 @@ ADA(미국 장애인 복지법)의 업데이트된 섹션 508 및 기타 입법�
 * [포괄 디자인](http://design.microsoft.com/inclusive)
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
-* [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md)  
+* [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) 
+* [접근성](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

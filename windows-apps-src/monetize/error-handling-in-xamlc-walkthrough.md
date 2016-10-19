@@ -4,8 +4,8 @@ ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: "앱에서 AdControl 오류를 검색하는 방법을 알아봅니다."
 title: "XAML/C#에서 오류 처리 연습"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
+ms.sourcegitcommit: 90c866fcdb4df0f32a4ace0cb4f6b761d6e9170e
+ms.openlocfilehash: bca54776fb4793fbc9e0b9af070a0cc676168d86
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
 # XAML/C#에서 오류 처리 연습
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 앱에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 오류를 검색하는 방법을 보여 줍니다.
 
@@ -73,7 +73,7 @@ ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
     ``` syntax
     private void OnAdError(object sender, AdErrorEventArgs e)
     {
-        System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name + "): " + e.Error + " ErrorCode: " + e.ErrorCode.ToString());
+        System.Diagnostics.Debug.WriteLine("AdControl error (" + ((AdControl)sender).Name + "): " + e.ErrorMessage + " ErrorCode: " + e.ErrorCode.ToString());
     }
     ```
 
@@ -93,6 +93,6 @@ AdControl error (): MicrosoftAdvertising.Shared.AdException: all ad requests mus
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: "복사 및 붙여넣기"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
-ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
+ms.sourcegitcommit: 0dceeb53737cc790e1c3810b0487e0a839968bef
+ms.openlocfilehash: 2655dc67b14ba665deabc879f13340202d97c494
 
 ---
 #복사 및 붙여넣기
@@ -16,7 +16,6 @@ ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다.
 
 ## 기본 제공 클립보드 지원 확인
-
 
 대부분의 경우에는 클립보드 작업을 지원하는 코드를 작성할 필요가 없습니다. 앱을 만드는 데 사용할 수 있는 많은 기본 XAML 컨트롤이 클립보드 작업을 이미 지원합니다. 
 
@@ -29,11 +28,11 @@ ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 DataPackage dataPackage = new DataPackage();
 ```
 
-AuthenticateAsync
+<!-- AuthenticateAsync-->
 
 ## 복사 및 잘라내기
 
-복사 및 잘라내기(이동이라고도 함)는 거의 정확히 동일하게 작동합니다. [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
+복사 및 잘라내기(*이동*이라고도 함)는 거의 정확히 동일하게 작동합니다. [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
 
 ```cs
 // copy 
@@ -41,6 +40,8 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
+## 끌어서 놓기
+
 이제 사용자가 선택한 데이터를 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에 추가할 수 있습니다. **DataPackage** 클래스에서 이 데이터를 지원하는 경우 **DataPackage** 개체에서 해당 방법 중 하나를 사용할 수 있습니다. 텍스트를 추가하는 방법은 다음과 같습니다.
 
 ```cs
@@ -85,6 +86,7 @@ Clipboard.ContentChanged += (s, e) =>
 
 ## 참고 항목
 
+* [앱 간 통신](index.md)
 * [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
 * [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
 * [DataPackageView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.aspx)
@@ -104,6 +106,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

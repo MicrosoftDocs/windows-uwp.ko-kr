@@ -5,7 +5,7 @@ description: "EF(Entity Framework)는 도메인별 개체를 사용하여 관계
 title: "C# 앱용 SQLite를 사용하는 Entity Framework 7"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4c9b674445e901a370f9822f8f11acdeba6061b6
+ms.openlocfilehash: b453a2a6c3ab0b9418122ae27bf6a3a1c56e5873
 
 ---
 
@@ -29,6 +29,6 @@ EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
+ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
 
 ---
 
@@ -132,6 +132,6 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
 앱 데이터 또는 로밍 설정을 사용하여 자격 증명을 일반 텍스트로 저장하지 마세요.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

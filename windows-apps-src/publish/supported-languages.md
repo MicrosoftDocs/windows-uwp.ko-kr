@@ -5,7 +5,7 @@ title: "지원되는 언어"
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
+ms.openlocfilehash: 3d14f1d11290942a90498f7aff4dc324daa3a84e
 
 ---
 
@@ -139,6 +139,6 @@ ms.openlocfilehash: 17a5a106e24305afd3041f434d2e0890d21fd7ec
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

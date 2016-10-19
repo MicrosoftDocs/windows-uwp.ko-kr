@@ -5,7 +5,7 @@ description: "원격 JavaScript에서 Cortana 음성 명령, 라이브 타일, �
 kw: Hosted Web Apps, Accessing Windows 10 features from remote JavaScript, Building a Win10 Web Application, Windows JavaScript Apps, Microsoft Web Apps, HTML5 app for PC, ACUR URI Rules for Windows App, Call Live Tiles with web app, Use Cortana with web app, Access Cortana from website, msapplication-cortanavcd
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a7f7dccb9c7461e482bd43c8f370a2a7244eb735
+ms.openlocfilehash: fb74bfc40750941860dae0a8f811fde4a614e403
 
 ---
 
@@ -153,6 +153,6 @@ OpenID 또는 OAuth와 같은 인터넷 인증 및 권한 부여 프로토콜을
 - [앱 접근 권한 값 선언](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

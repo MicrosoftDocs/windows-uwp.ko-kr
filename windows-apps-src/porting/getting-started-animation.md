@@ -5,11 +5,11 @@ ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: "이 프로젝트에서는 사각형을 이동하여 사라지게 한 다음 다시 보기로 가져옵니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
+ms.openlocfilehash: ae08bb25d8ac56ca6e03a5c200e8a0d4e05fbfe3
 
 ---
 
-# 시작&#58; 애니메이션
+# 시작: 애니메이션
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -131,6 +131,6 @@ MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

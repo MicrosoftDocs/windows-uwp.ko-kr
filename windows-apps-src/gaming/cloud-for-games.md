@@ -4,8 +4,8 @@ title: "UWP 게임에 클라우드 서비스 사용"
 description: "UWP 게임에 대한 백 엔드로 클라우드를 구현하는 방법을 알아봅니다."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
+ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
+ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
 
 ---
 #  UWP 게임에 클라우드 서비스 사용
@@ -152,7 +152,7 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 | 확장 가능한 관계형 게임 데이터베이스| 데이터베이스에 대한 게임 내 트랜잭션과 같은 관계형 데이터의 구조화된 저장소 | [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)| 서비스로 제공되는 SQL 데이터베이스([VM의 SQL과 비교](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | 대기 시간이 짧은 확장 가능한 분산 게임 데이터베이스| 스키마 유연성을 사용하여 게임 및 플레이어 데이터의 빠른 읽기, 쓰기 및 쿼리 | [Azure DocumentDB](https://azure.microsoft.com/services/documentdb/)| 서비스로 제공되는 대기 시간이 짧은 NoSQL 문서 데이터베이스   |
 | Azure 서비스와 함께 고유한 데이터 센터 사용 | 고유한 데이터 센터에서 게임이 검색되고 클라이언트 디바이스로 전송됩니다. | [Azure 스택](https://azure.microsoft.com/overview/azure-stack/) | 보다 효율적인 작업을 위해 조직이 고유한 데이터 센터에서 Azure 서비스를 제공할 수 있도록 합니다.  |
-| 큰 데이터 청크 전송| Azure CDN을 사용하여 가장 가까운 CDN(콘텐츠 배달 네트워크) 팝 위치에서 게임 이미지, 오디오, 동영상 파일 등의 큰 파일을 사용자에게 보낼 수 있습니다.  | [Azure 콘텐츠 배달 네트워크](https://azure.microsoft.com/services/cdn/) | 큰 중앙 집중식 노드의 최신 네트워크 토폴로지를 기반으로 하는 Azure CDN은 갑작스러운 트래픽 급증과 부하 증가를 처리하여 속도와 가용성을 훨씬 증가시키고 사용자 환경을 개선합니다.  |
+| 큰 데이터 청크 전송| Azure CDN을 사용하여 가장 가까운 CDN(Content Delivery Network) 팝 위치에서 게임 이미지, 오디오, 비디오 등의 큰 파일을 사용자에게 보낼 수 있습니다.    | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | 큰 중앙 집중식 노드의 최신 네트워크 토폴로지를 기반으로 하는 Azure CDN은 갑작스러운 트래픽 급증과 부하 증가를 처리하여 속도와 가용성을 훨씬 증가시키고 사용자 환경을 개선합니다.  |
 | 짧은 대기 시간               | 캐싱을 수행하여 제어가 강화되고 데이터 격리가 보장되는 빠르고 확장 가능한 게임을 빌드합니다. 게임의 일치 기능을 개선하는 데 사용할 수 있습니다. | [Azure Redis Cache](https://azure.microsoft.com/services/cache/) | 처리량이 높고 대기 시간이 짧은 일관성 있는 데이터 액세스를 통해 빠르고 확장 가능한 Azure 응용 프로그램 지원  |
 | 높은 확장성, 짧은 대기 시간 | 대기 시간이 짧은 읽기 및 쓰기로 게임 사용자 수의 변동 처리 | [Azure 서비스 패브릭](https://azure.microsoft.com/services/service-fabric/) | 가장 복잡하고 대기 시간이 짧으며 데이터를 많이 사용하는 시나리오를 지원하고 한 번에 더 많은 사용자를 처리하기 위해 안정적으로 확장될 수 있습니다. 서비스 패브릭을 사용하면 상태 비저장 앱에 필요에 따라 별도의 저장소나 캐시를 만들 필요 없이 게임을 빌드할 수 있습니다. |
 | 디바이스에서 초당 수백만 개의 이벤트 수집 가능                         | 디바이스에서 초당 수백만 개의 이벤트 기록 | [Azure 이벤트 허브](https://azure.microsoft.com/services/event-hubs/) | 게임, 웹 사이트, 앱 및 디바이스에서 클라우드 규모의 원격 분석 수집  |
@@ -202,6 +202,6 @@ Windows 10의 UWP(유니버설 Windows 플랫폼)는 Microsoft 디바이스 간�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

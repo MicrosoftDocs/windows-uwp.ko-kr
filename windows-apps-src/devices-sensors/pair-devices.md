@@ -5,7 +5,7 @@ title: "장치 페어링"
 description: "일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: e719e0ff5f97822f3d0dc937182131bf7f4224eb
+ms.openlocfilehash: 502a1a650d327e914ffef049278581851ad4ec3b
 
 ---
 # 디바이스 페어링
@@ -76,6 +76,6 @@ ms.openlocfilehash: e719e0ff5f97822f3d0dc937182131bf7f4224eb
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

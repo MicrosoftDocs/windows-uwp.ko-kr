@@ -5,7 +5,7 @@ description: "Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
 translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+ms.openlocfilehash: 4d8a00cf7bd151ab97e9abc10a09a3794a0e292f
 
 ---
 
@@ -23,7 +23,7 @@ Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 �
 Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이미지가 프로젝트에 추가되고 시작 화면 이미지로 설정됩니다. 시작 화면의 배경색은 기본적으로 연한 회색으로 설정됩니다. 앱 시작 화면의 기본 이미지 또는 색을 변경하려면 다음 단계를 따르세요.
 
 1.  Visual Studio 2015에서 기존 UWP(유니버설 Windows 플랫폼) 앱 프로젝트를 엽니다.
-2.  **솔루션 탐색기**에서 "Package.appxmanifest" 파일을 엽니다. **프로젝트**&gt;**스토어**&gt;**앱 매니페스트 편집**을 선택하여 메뉴 모음에서 이 파일을 열 수도 있습니다.
+2.  **솔루션 탐색기**에서 "Package.appxmanifest" 파일을 엽니다. **프로젝트** &gt; **스토어** &gt; **앱 매니페스트 편집**을 선택하여 메뉴 모음에서 이 파일을 열 수도 있습니다.
 3.  **시각적 자산** 탭을 열고 "Package.appxmanifest" 창 왼쪽의 **모든 이미지 자산** 창에서 **시작 화면**을 선택합니다. 시작 화면을 처음 변경하는 경우 **시작 화면** 필드에 "Assets\\SplashScreen.png" 경로가 표시됩니다.
 
     다음 스크린샷은 Visual Studio 2015의 "Package.appxmanifest" 창을 보여 줍니다. 프로젝트 유형에 따라 약간 다른 시각적 자산 집합이 표시됩니다.
@@ -77,6 +77,6 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

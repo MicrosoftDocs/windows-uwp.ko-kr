@@ -1,16 +1,20 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "설정 방법"
 description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
 translationtype: Human Translation
-ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
-ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
+ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
+ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
 
 ---
 # 설정 방법
 
-생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
+생각보다 쉽게 시작할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
+
+> [!NOTE]
+> Mac 사용자인가요? 아니면 아직 PC에 아무것도 설치하고 싶지 않은가요? [Build2016의 코딩 챌린지에 대한 웹 기반 가상 컴퓨터 설정](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges)을 사용해 보세요.
+
 
 ## 1. Windows 10 다운로드
 
@@ -21,6 +25,8 @@ UWP 앱을 개발하려면 최신 버전의 Windows가 필요합니다.
 MSDN 구독자인 경우 다음 위치에서 ISO 다운로드를 가져올 수 있습니다.
 
 -   [MSDN 구독자 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=266384)에서 Windows 10 다운로드
+
+
 
 ## 2. Visual Studio 다운로드 또는 업데이트
 
@@ -59,7 +65,6 @@ Visual Studio를 설치하는 경우 사용자 지정 옵션을 사용하고 다
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

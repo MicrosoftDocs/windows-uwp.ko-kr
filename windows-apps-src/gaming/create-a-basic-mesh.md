@@ -5,7 +5,7 @@ description: "3-D UWP(유니버설 Windows 플랫폼) 게임에서는 대개 다
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+ms.openlocfilehash: b8795438053adebfbd36cada86a8ef13afb3eef2
 
 ---
 
@@ -450,6 +450,6 @@ m_swapChain->Present(1, 0);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

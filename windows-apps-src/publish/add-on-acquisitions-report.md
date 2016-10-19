@@ -1,61 +1,71 @@
-﻿---
+---
 author: jnHs
-Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
-title: Add-on acquisitions report
+Description: "Windows 개발자 센터 대시보드의 추가 기능 구입 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다."
+title: "추가 기능 구입 보고서"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: 144a8400acf0333fcd50e698b333c02942081ef3
+
 ---
 
-# Add-on acquisitions report
+# 추가 기능 구입 보고서
 
 
-The **Add-on acquisitions** report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details. You can view this data in your dashboard, or [download the report](download-analytic-reports.md) to view offline. Alternatively, you can programmatically retrieve this data by using the [Windows Store analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).
+Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
-In this report, an add-on acquisition means a customer has purchased an add-on from you. Multiple purchases of the same consumable add-on by the same customer are counted as separate add-on acquisitions.
+이 보고서에서 추가 기능 구입은 고객이 추가 기능을 구매했음을 의미합니다. 같은 고객이 같은 소모성 추가 기능을 여러 번 구매한 경우 각 구매는 별도의 추가 기능 구입으로 계산됩니다.
 
-> **Important**  The **Add-on acquisitions** report does not include data about refunds, reversals, chargebacks, etc. To estimate your app proceeds, visit [Payout summary](payout-summary.md). In the **Reserved** section, click the **Download reserved transactions** link.
+> **중요** **추가 기능 구입** 보고서에는 환불, 취소, 지불 거절 등에 대한 데이터가 포함되지 않습니다. 앱 수익을 예측하려면 [지급 요약](payout-summary.md)을 방문합니다. **예약됨** 섹션에서 **예약된 거래 다운로드** 링크를 클릭합니다.
 
-## Apply filters
-
-
-Near the top of the page, you can expand **Apply filters** to filter all of the data on this page by date range and/or by device type. You can also filter to show only data for a specific add-on.
-
--   **Date**: The default filter is **Last 30 days**, but you can expand this up to **Last 12 months**.
--   **Add-on**: The default filter is **All add-ons**. If you want to show acquisition data for only one of your add-ons, you can choose a specific one here.
--   **Device type**: The default setting is **All devices**. If you want to show data for add-on acquisitions from a certain device type only, you can choose a specific one here.
-
-The info in the charts listed below will reflect the period of time selected in the **Apply filters** section.
-
-The info in all of the charts listed below will reflect the period of time selected in the **Apply filters** section. By default this will include data for all device types, unless you've used **Apply filters** to choose only one.
-
-## Add-on acquisitions
+## 필터 적용
 
 
-The **Add-on acquisitions** chart shows the number of daily or weekly acquisitions of your add-ons over the selected period of time. (When you use **Apply filters** to filter the data over a longer duration, the data will be grouped by week.)
+페이지 위쪽에서 **필터 적용**을 확장하여 날짜 범위 및/또는 장치 유형을 기준으로 이 페이지의 모든 데이터를 필터링할 수 있습니다. 또한 특정 추가 기능에 대한 데이터만 표시하도록 필터링할 수 있습니다.
 
-You can also see the lifetime number of acquisitions for your add-ons. This shows the cumulative total of all acquisitions, starting from when your app was first published.
+-   **날짜**: 기본 필터는 **지난 30일**이지만 **지난 12개월**까지 이 필터를 확장할 수 있습니다.
+-   **추가 기능**: 기본 필터는 **모든 추가 기능**입니다. 추가 기능 중 하나에 대해서만 구입 데이터를 표시하려면 여기서 특정 추가 기능을 선택하면 됩니다.
+-   **장치 유형**: 기본 설정은 **모든 장치**입니다. 특정 디바이스 유형에서만 추가 기능 구입에 대한 데이터를 표시하려는 경우 여기에서 특정한 디바이스를 선택할 수 있습니다.
 
-The chart also shows the price that a customer paid to acquire the add-on.
+아래 나열된 차트의 정보는 **필터 적용** 섹션에서 선택한 기간을 반영합니다.
 
-You can optionally filter the results by market and/or by OS version.
+아래 나열된 모든 차트의 정보는 **필터 적용**에서 선택한 기간을 반영합니다. **필터 적용**을 사용하여 하나만 선택하지 않는 한 기본적으로 여기에는 모든 장치 유형에 대한 데이터가 포함됩니다.
 
-## Top add-ons
+## 추가 기능 구입
 
-The **Top add-ons** chart shows the total number of acquisitions for each of your add-ons over the selected period of time by market. By default, we show you the add-on which had the most acquisitions on top and continue downward from there. You can reverse this order by toggling the arrow in the **Acquisitions** column of this chart.
 
-## Markets
+**추가 기능 구입** 차트는 선택한 기간 동안 일일 또는 주간 추가 기능 구입 수를 보여 줍니다. **필터 적용**을 사용하여 더 오랜 시간 동안 데이터를 필터링하면 데이터가 주 단위로 그룹화됩니다.
 
-The **Markets** chart shows the total number of add-on acquisitions over the selected period of time by market. By default, we show you the market which had the most acquisitions on top and continue downward from there. You can reverse this order by toggling the arrow in the **Acquisitions** column of this chart.
+추가 기능에 대한 총 구입 수를 볼 수도 있습니다. 여기에는 앱이 처음 게시될 때부터 시작하여 총 누적 구입 수가 표시됩니다.
 
-## Customer demographic
+또한 고객이 추가 기능 구입을 위해 지급하는 가격도 차트에 표시됩니다.
 
-The **Customer demographic** chart shows demographic info about the people who acquired your add-on. You can see how many acquisitions (over the selected period of time) were made by people in a certain age group and by which gender.
+선택적으로 지역/국가별 및/또는 OS 버전별로 결과를 필터링할 수 있습니다.
 
-> **Note**  Some customers have opted not to share this info. If we were unable to determine the age group or gender, the acquisition is categorized as **Unknown**.
+## 인기 추가 기능
 
-## OS version
+**인기 추가 기능** 차트는 선택한 기간의 각 추가 기능에 대한 총 구입 수를 지역/국가별로 보여 줍니다. 기본적으로 가장 많이 구매한 추가 기능을 맨 위에 표시하고 이 위치부터 아래쪽으로 계속합니다. 이 차트의 **구입** 열에서 화살표를 전환하여 이 순서를 역방향으로 변경할 수 있습니다.
 
-The **OS version** chart shows the total number of acquisitions based on the customer's operating system (or via [volume acquisition by organizations](organizational-licensing.md)). In some cases we may not be able to determine this info. In that case, the OS version will be listed as **Unknown**.
+## 지역/국가
 
- 
+**지역/국가** 차트는 선택한 기간의 총 추가 기능 구입 수를 지역/국가별로 보여 줍니다. 기본적으로 가장 많이 구매한 지역/국가를 맨 위에 표시하고 이 위치부터 아래쪽으로 계속 표시합니다. 이 차트의 **구입** 열에서 화살표를 전환하여 이 순서를 역방향으로 변경할 수 있습니다.
 
- 
+## 고객 인구 통계
+
+**고객 인구 통계** 차트는 추가 기능을 구입한 사람에 대한 인구 통계 정보를 보여 줍니다. 선택한 기간에 구매한 항목 수를 특정 연령 그룹의 사람별 및 성별별로 확인할 수 있습니다.
+
+> **참고** 일부 고객은 이 정보를 공유하지 않도록 선택했습니다. 연령 그룹 또는 성별을 판별할 수 없으면 구입은 **알 수 없음**으로 분류됩니다.
+
+## OS 버전
+
+**OS 버전** 차트는 고객의 운영 체제를 기준으로(또는 [조직의 대량 구매](organizational-licensing.md)를 통해) 총 구입 수를 보여 줍니다. 경우에 따라 이 정보를 확인하지 못할 수 있습니다. 이 경우 OS 버전은 **알 수 없음**으로 나열됩니다.
+
+ 
+
+ 
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

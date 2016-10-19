@@ -1,71 +1,75 @@
 ---
 author: mcleanbyron
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
-description: Use this method in the Windows Store submission API to retrieve information about an add-on for an app that is registered to your Windows Dev Center account.
-title: Get an add-on using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 추가 기능에 대한 정보를 검색합니다."
+title: "Windows 스토어 제출 API를 사용하여 추가 기능 가져오기"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 20da33d3e06ca97613f4bc317fe8e8fdc9bc73b6
+
 ---
 
-# Get an add-on using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 추가 기능 가져오기
 
 
 
 
-Use this method in the Windows Store submission API to retrieve information about an add-on (also known as in-app product or IAP) for an app that is registered to your Windows Dev Center account.
+Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 정보를 검색합니다.
 
-## Prerequisites
+## 필수 조건
 
-To use this method, you need to first do the following:
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## Request
+## 요청
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
-| Method | Request URI                                                      |
+| 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}``` |
 
 <span/>
- 
+ 
 
-### Request header
+### 요청 헤더
 
-| Header        | Type   | Description                                                                 |
+| 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/>
 
-### Request parameters
+### 요청 매개 변수
 
-| Name        | Type   | Description                                                                 |
+| 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | string | Required. The Store ID of the add-on to retrieve. The Store ID is available on the Dev Center dashboard.  |
+| id | 문자열 | 필수. 검색할 추가 기능의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
 
 <span/>
 
-### Request body
+### 요청 본문
 
-Do not provide a request body for this method.
+이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
 <span/>
 
-### Request example
+### 요청 예제
 
-The following example demonstrates how to retrieve information about an add-on.
+다음 예제에서는 추가 기능에 대한 정보를 검색하는 방법을 보여 줍니다.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## 응답
 
-The following example demonstrates the JSON response body for a successful call to this method. For more details about the values in the response body, see [add-on resource](manage-add-ons.md#add-on-object).
+다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문의 값에 대한 자세한 내용은 [추가 기능 리소스](manage-add-ons.md#add-on-object)를 참조하세요.
 
 ```json
 {
@@ -92,21 +96,27 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## 오류 코드
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
-| Error code |  Description   |
+| 오류 코드 |  설명   |
 |--------|------------------|
-| 404  | The specified add-on could not be found. |
-| 409  | The add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | 지정된 추가 기능을 찾을 수 없습니다. |
+| 409  | 추가 기능이 [현재 Windows 스토어 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다.  |
 
 <span/>
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Get all add-ons](get-all-add-ons.md)
-* [Create an add-on](create-an-add-on.md)
-* [Delete an add-on](delete-an-add-on.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [추가 기능 제출 관리](manage-add-on-submissions.md)
+* [모든 추가 기능 가져오기](get-all-add-ons.md)
+* [추가 기능 만들기](create-an-add-on.md)
+* [추가 기능 삭제](delete-an-add-on.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -5,7 +5,7 @@ title: "RSS/Atom 피드"
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
+ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
 
 ---
 
@@ -261,6 +261,6 @@ function displayCurrentItem() {
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

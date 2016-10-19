@@ -5,11 +5,11 @@ description: "이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데
 title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2"
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
+ms.openlocfilehash: 2d142ddb5522daf5467ce5690b3fe8e7a356ac0a
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore2
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -174,6 +174,6 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

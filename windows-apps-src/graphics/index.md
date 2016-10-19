@@ -5,7 +5,7 @@ title: "그래픽 및 애니메이션"
 description: "이 섹션의 항목은 스토어 앱에서 그래픽 및 애니메이션 사용을 시작하도록 도와줍니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d46498e6e584d85cfce0be237878aff68dee9c50
+ms.openlocfilehash: e06be76cadffd0ee116b0cfd28c90176e25656d5
 
 ---
 # 그래픽 및 애니메이션
@@ -39,6 +39,6 @@ ms.openlocfilehash: d46498e6e584d85cfce0be237878aff68dee9c50
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

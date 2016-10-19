@@ -1,71 +1,75 @@
 ---
 author: mcleanbyron
 ms.assetid: 55315F38-6EC5-4889-A14E-7D8EC282FE98
-description: Use this method in the Windows Store submission API to get the status of an add-on submission.
-title: Get the status of an add-on submission using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 추가 기능 제출의 상태를 가져옵니다."
+title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출의 상태 가져오기"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: e5be4ee466c204255a074adae4d150860286ba0a
+
 ---
 
-# Get the status of an add-on submission using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 추가 기능 제출의 상태 가져오기
 
 
 
 
-Use this method in the Windows Store submission API to get the status of an add-on (also known as in-app product or IAP) submission. For more information about the process of process of creating an add-on submission by using the Windows Store submission API, see [Manage add-on submissions](manage-add-on-submissions.md).
+Windows 스토어 제출 API에서 이 메서드를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)의 상태를 가져옵니다. Windows 스토어 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
 
-## Prerequisites
+## 필수 조건
 
-To use this method, you need to first do the following:
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create an add-on submission for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [Create an add-on submission](create-an-add-on-submission.md) method.
+* 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
+* 개발자 센터 계정의 앱에 대한 추가 기능 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [추가 기능 제출 만들기](create-an-add-on-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## Request
+## 요청
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
-| Method | Request URI                                                      |
+| 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId}/status``` |
 
 <span/>
- 
+ 
 
-### Request header
+### 요청 헤더
 
-| Header        | Type   | Description                                                                 |
+| 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/>
 
-### Request parameters
+### 요청 매개 변수
 
-| Name        | Type   | Description                                                                 |
+| 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Required. The Store ID of the add-on that contains the submission for which you want to get the status. The Store ID is available on the Dev Center dashboard.  |
-| submissionId | string | Required. The ID of the submission for which you want to get the status. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on submission](create-an-add-on-submission.md).  |
+| inAppProductId | 문자열 | 필수. 상태를 가져올 제출이 포함된 추가 기능의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있습니다.  |
+| submissionId | 문자열 | 필수. 상태를 가져올 제출의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
 
 <span/>
 
-### Request body
+### 요청 본문
 
-Do not provide a request body for this method.
+이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
-### Request example
+### 요청 예제
 
-The following example demonstrates how to get the status of an add-on submission.
+다음 예제에서는 추가 기능 제출의 상태를 가져오는 방법을 보여 줍니다.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions/1152921504621243680/status HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## 응답
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the specified submission. For more details about the values in the response body, see the following sections.
+다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 지정된 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 ```json
 {
@@ -78,32 +82,38 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-### Response body
+### 응답 본문
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Contains additional details about the status of the submission, including information about any errors. For more information, see [Status details resource](manage-add-on-submissions.md#status-details-object). |
+| status           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 [상태 세부 정보 리소스](manage-add-on-submissions.md#status-details-object)를 참조하세요. |
 
 <span/>
 
-## Error codes
+## 오류 코드
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
-| Error code |  Description   |
+| 오류 코드 |  설명   |
 |--------|------------------|
-| 404  | The submission could not be found. |
-| 409  | The add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | 제출을 찾을 수 없습니다. |
+| 409  | 추가 기능이 [현재 Windows 스토어 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다.  |
 
 <span/>
 
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get an add-on submission](get-an-add-on-submission.md)
-* [Create an add-on submission](create-an-add-on-submission.md)
-* [Commit an add-on submission](commit-an-add-on-submission.md)
-* [Update an add-on submission](update-an-add-on-submission.md)
-* [Delete an add-on submission](delete-an-add-on-submission.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [추가 기능 제출 가져오기](get-an-add-on-submission.md)
+* [추가 기능 제출 만들기](create-an-add-on-submission.md)
+* [추가 기능 제출 커밋](commit-an-add-on-submission.md)
+* [추가 기능 제출 업데이트](update-an-add-on-submission.md)
+* [추가 기능 제출 삭제](delete-an-add-on-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -7,7 +7,7 @@ label: Put UI strings into resources
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
+ms.openlocfilehash: e404eceb4aad562474cff264bb992a3d71a3bed4
 
 ---
 
@@ -34,18 +34,18 @@ UI용 문자열 리소스를 리소스 파일에 넣습니다. 그러면 코드 
 2.  Visual Studio에서 package.appxmanifest를 열고 **응용 프로그램** 탭으로 이동한 후 기본 언어를 "en-US"(이 예제의 경우)로 설정합니다. 솔루션에 package.appxmanifest 파일이 여러 개 있는 경우에는 파일마다 이 단계를 수행합니다.
     <br>**참고** 이렇게 하면 프로젝트의 기본 언어가 지정됩니다. 기본 언어 리소스는 사용자의 기본 설정 언어 또는 표시 언어가 응용 프로그램에 제공된 언어 리소스와 일치하지 않을 경우 사용됩니다.
 3.  리소스 파일을 넣을 폴더를 만듭니다.
-    1.  솔루션 탐색기에서 프로젝트(솔루션에 프로젝트가 여러 개인 경우에는 공유 프로젝트)를 마우스 오른쪽 단추로 클릭한 후 **추가**&gt;**새 폴더**를 선택합니다.
+    1.  솔루션 탐색기에서 프로젝트(솔루션에 프로젝트가 여러 개인 경우에는 공유 프로젝트)를 마우스 오른쪽 단추로 클릭한 후 **추가** &gt; **새 폴더**를 선택합니다.
     2.  새 폴더의 이름을 "Strings"로 지정합니다.
-    3.  새 폴더가 솔루션 탐색기에 보이지 않으면 프로젝트가 여전히 선택된 상태에서 Microsoft Visual Studio 메뉴에서 **프로젝트**&gt;**모든 파일 표시**를 선택합니다.
+    3.  새 폴더가 솔루션 탐색기에 보이지 않으면 프로젝트가 여전히 선택된 상태에서 Microsoft Visual Studio 메뉴에서 **프로젝트** &gt; **모든 파일 표시**를 선택합니다.
 
 4.  영어(미국)용 하위 폴더와 리소스 파일을 만듭니다.
     1.  문자열 폴더를 마우스 오른쪽 단추로 클릭하고 그 아래에 새 폴더를 추가합니다. 이름을 "en-US"로 지정합니다. 리소스 파일은 [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) 언어 태그용으로 이름이 지정된 폴더에 배치됩니다. 언어 한정자 및 일반 언어 태그 목록에 대한 자세한 내용은 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)을 참조하세요.
-    2.  en-US 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**새 항목...**을 선택합니다.
+    2.  en-US 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** &gt; **새 항목…**을 선택합니다.
     3.  **XAML:** "리소스 파일(.resw)"을 선택합니다.
         <br>**HTML:** "리소스 파일(.resjson)"을 선택합니다.
 
     4.  **추가**를 클릭합니다. 기본 이름의 리소스 파일 "Resources.resw"(**XAML**의 경우) 또는 "resources.rejson"(**HTML**의 경우)이 추가됩니다. 이 기본 파일 이름을 사용하는 것이 좋습니다. 앱에서 리소스를 여러 파일로 분할할 수 있지만 이러한 파일을 참조할 때는 각별히 주의하여 올바르게 참조해야 합니다.[문자열 리소스를 로드하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)을 참조하세요.
-    5.  **XAML만 해당:** 이전 .NET 프로젝트의 문자열 리소스만 포함된 .resx 파일이 있는 경우 **추가**&gt;**기존 항목...**을 선택하고 .resx 파일을 추가한 후 이름을 .resw로 바꿉니다.
+    5.  **XAML만 해당:** 이전 .NET 프로젝트의 문자열 리소스만 포함된 .resx 파일이 있는 경우 **추가** &gt; **기존 항목…**을 선택하고 .resx 파일을 추가한 후 이름을 .resw로 바꿉니다.
     6.  이 파일을 열고 편집기를 사용하여 이 리소스를 추가합니다.
 
         **XAML:**
@@ -249,6 +249,6 @@ auto str = loader->GetString("Farewell");
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

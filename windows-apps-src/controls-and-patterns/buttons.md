@@ -1,23 +1,34 @@
 ---
 author: Jwmsft
+Description: "단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다."
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
 
 ---
 # 단추
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다.
 
 ![단추 예제](images/controls/button.png)
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Button 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>RepeatButton 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Click 이벤트</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+</div>
+</div>
 
--   [**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
--   [**RepeatButton 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)
--   [**Click 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -71,7 +82,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 손가락 또는 스타일러스로 단추를 탭하거나 포인터가 단추 위에 있을 때 마우스 왼쪽 단추를 누르면 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바 키를 눌러도 Click 이벤트가 발생합니다.
 
-단추에는 대신 클릭 동작이 있기 때문에 일반적으로 단추에서 하위 수준의 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx)를 참조하세요.
+단추에는 대신 클릭 동작이 있기 때문에 일반적으로 단추에서 하위 수준의 [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx)를 참조하세요.
 
 [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx) 속성을 변경하여 단추가 Click 이벤트를 발생시키는 방법을 변경할 수 있습니다. 기본 ClickMode 값은 **Release**입니다. ClickMode가 **Hover**인 경우 키보드 또는 터치로 Click 이벤트를 발생시킬 수 없습니다. 
 
@@ -150,85 +161,24 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   단추 안에 너무 많은 콘텐츠를 넣지 마세요. 콘텐츠를 간결하고 이해하기 쉽게 유지하세요(그림과 일부 텍스트만 사용).
 
 ## 뒤로 단추
-뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 어포던스입니다.
+뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [기록 및 뒤로 탐색](../layout/navigation-history-and-backwards-navigation.md)을 참조하세요.
 
-탐색 기록(앱 내 또는 전역)의 범위는 디바이스 및 디바이스 모드에 따라 다릅니다.
+## 샘플 다운로드
+*   [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    대화형 형식의 모든 XAML 컨트롤을 참조하세요.
 
-## <span id="examples"></span><span id="EXAMPLES"></span>예제
-
-
-시스템 뒤로 단추의 UI는 각 디바이스 및 입력 유형에 최적화되어 있지만 탐색 환경은 디바이스 및 UWP(유니버설 Windows 플랫폼) 앱 전체에서 전역적이고 일관됩니다. 이러한 다양한 환경은 다음과 같습니다.
-
-디바이스 전화 ![휴대폰의 시스템 뒤로 기능](images/nav-back-phone.png)
--   항상 제공됩니다.
--   장치 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.
--   앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.
-
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>태블릿![ 태블릿의 시스템 뒤로 기능(태블릿 모드)](images/nav-back-tablet.png)
--   태블릿 모드에서 항상 제공됩니다.
-
-    데스크톱 모드에서는 사용할 수 없습니다. 대신 제목 표시줄 뒤로 단추를 사용할 수 있습니다. [PC, 노트북, 태블릿](#PC)을 참조하세요.
-
-    사용자는 **설정 &gt; 시스템 &gt; 태블릿 모드**로 이동하여 **태블릿과 같은 디바이스를 사용할 때 Windows에서 더 쉽게 터치할 수 있습니다.**를 설정하여 태블릿 모드 실행과 데스크톱 모드 실행 간을 전환할 수 있습니다.
-
--   디바이스 아래쪽의 탐색 모음에 있는 소프트웨어 단추입니다.
--   앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.
-
-<span id="PC"></span><span id="pc"></span>PC, 노트북, 태블릿 ![PC 또는 노트북의 시스템 뒤로 기능](images/nav-back-pc.png)
--   데스크톱 모드에서는 옵션입니다.
-
-    태블릿 모드에서는 사용할 수 없습니다. [태블릿](#Tablet)을 참조하세요.
-
-    기본적으로 사용하지 않도록 설정되어 있습니다. 사용하도록 설정하려면 옵트인(opt in)해야 합니다.
-
-    사용자는 **설정 &gt; 시스템 &gt; 태블릿 모드**로 이동하여 **태블릿과 같은 디바이스를 사용할 때 Windows에서 더 쉽게 터치할 수 있습니다.**를 설정하여 태블릿 모드 실행과 데스크톱 모드 실행 간을 전환할 수 있습니다.
-
--   앱의 제목 표시줄에 있는 소프트웨어 단추입니다.
--   앱 내에서만 뒤로 탐색 기능을 제공합니다. 앱 간 탐색 기능을 지원하지 않습니다.
-
-Surface Hub ![Surface Hub의 시스템 뒤로 기능](images/nav-back-surfacehub.png)
--   항상 제공됩니다.
--   디바이스 아래쪽에 있는 소프트웨어 단추입니다.
--   앱 내 및 앱 간의 뒤로 탐색 기능입니다.
-
- 
-
-## 권장 사항 및 금지 사항
-
-
--   뒤로 탐색 기능을 사용하도록 설정합니다.
-
-    뒤로 탐색 기능을 사용하도록 설정하지 않은 경우 앱이 전역 뒤로 스택에 포함되지만 앱 내 페이지 탐색 기록은 유지되지 않습니다.
-
--   데스크톱 모드에서 제목 표시줄 뒤로 단추를 사용하도록 설정합니다.
-
-    앱 내 페이지 탐색 기록은 유지되고, 앱 간 뒤로 탐색은 지원되지 않습니다.
-
-    **참고** 태블릿 모드에서 사용자가 디바이스의 위쪽에서 아래로 살짝 밀거나 디바이스 위쪽 가까이에서 마우스 포인터를 움직이면 제목 표시줄이 표시됩니다. 중복 및 혼동을 방지하기 위해 태블릿 모드에서는 제목 표시줄 뒤로 단추가 표시되지 않습니다.
-
-     
-
--   앱 내 탐색 기록이 고갈되거나 사용할 수 없는 경우 데스크톱 모드에서 제목 표시줄 뒤로 단추를 숨기거나 사용하지 않도록 설정합니다.
-
-    사용자에게 가능한 한 멀리 뒤로 탐색했음을 명확하게 표시해야 합니다.
-
--   각 뒤로 명령은 뒤로 스택에서 한 페이지를 돌아가거나 데스크톱 모드가 아닌 경우 즉시 이전 앱으로 돌아가야 합니다.
-
-    뒤로 탐색이 직관적이지 않거나 일관되지 않거나 예측 불가능한 경우 사용자는 혼동될 수 있습니다.
 
 ## 관련 문서
 
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
-
-**개발자용(XAML)**
 - [**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

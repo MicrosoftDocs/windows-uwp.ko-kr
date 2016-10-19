@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
-title: Set your add-on product type and product ID
+Description: "Windows 개발자 센터 대시보드에서 새 추가 기능을 만드는 경우 제품 유형을 지정하고 제품 ID를 할당해야 합니다."
+title: "추가 기능 제품 유형 및 제품 ID 설정"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+translationtype: Human Translation
+ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
+ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+
 ---
 
-# Set your add-on product type and product ID
+# 추가 기능 제품 유형 및 제품 ID 설정
 
-An add-on must be associated with an app that you've created in the dashboard already (even if you haven't submitted it yet). You can find the button to **Create a new add-on** on either your app's **Overview** page or its **Add-ons** page.
+아직 앱을 제출하지 않았더라도 이미 대시보드에서 만든 앱과 추가 기능을 연결해야 합니다. 앱의 **개요** 페이지나 **추가 기능** 페이지에서 **새 추가 기능 만들기** 단추를 찾을 수 있습니다.
 
-Once you've clicked the button, you'll see the **Create a new add-on** page. Here, you'll need to specify a product type and assign it a product ID.
+단추를 클릭하면 **새 추가 기능 만들기** 페이지가 표시됩니다. 여기에서 제품 유형을 지정하고 제품 ID를 할당해야 합니다.
 
-## Product type
+## 제품 유형
 
-First, you'll need to indicate which type of add-on you are offering. This selection refers to how the customer can use your add-on.
+먼저 제공할 추가 기능 유형을 표시해야 합니다. 이 선택은 고객이 추가 기능을 사용하는 방법을 나타냅니다.
 
-> **Note** You won't be able to change the product type after you save this page to create the add-on. If you did choose the wrong product type, you can always delete your in-progress add-on submission and start over by creating a new add-on.
+> **참고** 이 페이지를 저장하여 추가 기능을 만든 후에는 제품 유형을 변경할 수 없습니다. 잘못된 제품 유형을 선택한 경우 언제든지 진행 중인 추가 기능 제출을 삭제하고 새 추가 기능을 만들어 다시 시작할 수 있습니다.
 
-If the product can be purchased, used (consumed), and then purchased again, you'll want to select one of the **consumable** proudct types. Consumable add-ons are often used for things like in-game currency (gold, coins, etc.) which can be purchased in set amounts and then used up by the customer. For more info on including consumable add-ons in your app, see [Enable consumable add-on purchases](../monetize/enable-consumable-add-on-purchases.md).
+제품을 구매, 사용 및 재구매할 수 있는 경우 **소모성** 제품 유형 중 하나를 선택합니다. 소모성 추가 기능은 일반적으로 고객이 정해진 금액으로 구매하고 다 사용할 수 있는 게임 내 통화(골드, 코인 등) 같은 항목에 사용됩니다. 앱에 소모성 추가 기능을 포함하는 방법은 [소모성 추가 기능 구매 사용](../monetize/enable-consumable-add-on-purchases.md)을 참조하세요.
 
-There are two types of consumable add-ons that you can select:
+선택할 수 있는 소모성 추가 기능은 두 가지 종류가 있습니다.
 
-- **Developer-managed consumable**: Supported on all OS versions. Balance and fulfillment must be managed within your app. 
-- **Store-managed consumable:** Balance will be tracked by Microsoft across all of the customer’s devices running Windows 10, version 1607 or later; not supported on any earlier OS versions. To use this option, the parent product must be compiled using Windows 10 SDK version 14393 or later. Also note that you cannot submit a Store-managed consumable add-on to the Store until the parent product has been published (though you can create the submission in your dashboard and begin working on it at any time). You'll need to enter the quantity for your Store-managed consumable add-on in the **Properties** page.
+- **개발자 관리 소모성**: 모든 OS 버전에서 지원됩니다. 잔액 및 이행이 앱 내에서 관리되어야 합니다. 
+- **스토어 관리 소모성:** Windows 10 버전 1607 이상을 실행하는 모든 고객 디바이스의 잔액을 Microsoft에서 추적합니다. 이전 버전의 OS에서는 지원되지 않습니다. 이 옵션을 사용하려면 상위 제품이 Windows 10 SDK 버전 14393 이상을 사용하여 컴파일되어야 합니다. 또한 대시보드에서 제출을 만들어 언제든지 작업을 시작할 수는 있지만 상위 제품이 게시될 때까지 스토어 관리 소모성 추가 기능을 스토어에 제출할 수 없습니다. **속성** 페이지에 스토어 관리 소모성 추가 기능에 대한 수량을 입력해야 합니다.
 
-You should select **Durable** if your product can be purchased only once. Durable add-ons are often used to unlock additional functionality in an app. Durable add-ons are not consumed, but you can set the **Product lifetime** so that they expire after a set duration (with options from 1-365 days). The default **Product lifetime** for a durable add-on is **Forever**, which means the add-on never expires. You can change this to a different duration in the [Add-on properties](enter-add-on-properties.md) step of the add-on submission process.
+제품을 한 번만 구매할 수 있는 경우 **지속형**을 선택합니다. 지속형 추가 기능은 일반적으로 앱에서 추가 기능을 잠금 해제하는 데 사용됩니다. 지속형 추가 기능은 소비되지 않지만 1~365일 옵션으로 정해진 기간 후에 만료되도록 **제품 수명**을 설정할 수 있습니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 추가 기능 제출 프로세스의 [추가 기능 속성](enter-add-on-properties.md) 단계에서 제품 수명을 다른 기간으로 변경할 수 있습니다.
 
-## Product ID
+## 제품 ID
 
-Enter a unique product ID for your add-on. This is the same identifier that you will need to reference in [your app's code to call the add-on](https://msdn.microsoft.com/library/windows/apps/mt219684).
+추가 기능에 대한 고유한 제품 ID를 입력합니다. 이는 [추가 기능을 호출하기 위해 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt219684)에서 참조해야 하는 것과 동일한 식별자입니다.
 
-Here are a few things to keep in mind when choosing a product ID:
+다음은 제품 ID를 선택할 때 유의해야 하는 몇 가지 사항입니다.
 
--   Customers won't see this product ID. (Later, you can enter a [title and description](create-add-on-descriptions.md) to be displayed to customers.)
--   You can’t change or delete an add-on's product ID after it's been published.
--   A product ID can't be more than 100 characters in length.
--   A product ID cannot include any of the following characters: **&lt; &gt; \* % & : \\ ? + ,**
--   To offer your add-on on all devices, you must only use alphanumeric characters, periods, and/or underscores. If you use any other types of characters, the add-on will not be available for purchase to customers running Windows Phone 8.1 or earlier.
--   A product ID doesn't have to be unique within the Windows Store, but it must be unique to your developer account.
- 
+-   고객에게 이 제품 ID가 표시되지 않습니다. 나중에 고객에게 표시할 [제목 및 설명](create-add-on-descriptions.md)을 입력할 수 있습니다.
+-   게시된 후에는 추가 기능 제품 ID를 변경하거나 삭제할 수 없습니다.
+-   제품 ID는 100자 이내여야 합니다.
+-   제품 ID에는 다음 문자를 사용할 수 없습니다. **&lt; &gt; \* % &amp; : \\ ? + ,**
+-   추가 기능을 모든 디바이스에서 제공하려면 영숫자 문자, 마침표 및/또는 밑줄만 사용해야 합니다. 다른 종류의 문자를 사용하면 Windows Phone 8.1 이하를 실행하는 고객이 추가 기능을 구매할 수 없습니다.
+-   제품 ID는 Windows 스토어 내에서 고유할 필요가 없지만 개발자 계정에서는 고유해야 합니다.
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

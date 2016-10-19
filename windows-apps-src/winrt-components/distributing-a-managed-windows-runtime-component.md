@@ -5,7 +5,7 @@ description: "Windows 런타임 구성 요소를 파일 복사로 배포할 수 
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+ms.openlocfilehash: 3a82ee44b748c2c8748ed063cbc67e02200a4e31
 
 ---
 
@@ -76,6 +76,6 @@ For example: Microsoft.Cpp.Build.dll
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

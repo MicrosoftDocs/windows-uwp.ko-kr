@@ -5,7 +5,7 @@ title: "애니메이션, 미디어 및 이미지 최적화"
 description: "매끄러운 애니메이션, 높은 프레임 속도 및 고성능 미디어 캡처 및 재생을 지원하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
-ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
+ms.openlocfilehash: 62e35ef31a5c2c4c3ca1ce6f6749057d59c22af3
 
 ---
 # 애니메이션, 미디어 및 이미지 최적화
@@ -303,6 +303,6 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "여기서는 Windows 10 디바이스의 그래픽 하드웨어가 
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
+ms.openlocfilehash: 101ee7a6d0760abfc40145b21478947c0563a346
 
 ---
 
@@ -558,6 +558,6 @@ render 메서드를 호출하면 현재 회전 행렬(클래스 변수 **m\_orie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

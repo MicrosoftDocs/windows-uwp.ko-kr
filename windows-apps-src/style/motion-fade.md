@@ -7,7 +7,7 @@ label: Motion--fades
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 028e3462a0bf34af0486864508b1ac049fdf60ed
+ms.openlocfilehash: 9999c353bfc7a72f04ba8ae0052212f9f2166703
 
 ---
 
@@ -48,6 +48,6 @@ ms.openlocfilehash: 028e3462a0bf34af0486864508b1ac049fdf60ed
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

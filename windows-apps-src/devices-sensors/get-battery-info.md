@@ -5,7 +5,7 @@ title: "배터리 정보 가져오기"
 description: "Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9b1394c28b25b8b1b7401fcc794659dcf38fed6f
+ms.openlocfilehash: 0671ad8deef7c0062172e3a441d206efb15de7dd
 
 ---
 # 배터리 정보 가져오기
@@ -339,6 +339,6 @@ namespace App1
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

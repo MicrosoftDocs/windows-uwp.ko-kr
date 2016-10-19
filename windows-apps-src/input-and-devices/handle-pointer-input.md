@@ -7,7 +7,7 @@ label: Handle pointer input
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
+ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
 
 ---
 
@@ -1106,6 +1106,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

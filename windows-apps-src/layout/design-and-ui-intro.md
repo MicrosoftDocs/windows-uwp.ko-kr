@@ -7,7 +7,7 @@ label: Intro to UWP app design
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
 
 ---
 
@@ -220,6 +220,6 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

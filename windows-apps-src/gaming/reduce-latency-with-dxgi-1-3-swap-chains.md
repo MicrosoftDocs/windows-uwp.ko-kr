@@ -5,7 +5,7 @@ description: "DXGI 1.3을 사용하여 스왑 체인이 새로운 프레임 렌�
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
+ms.openlocfilehash: 7eb0eab864c58b07e29803895423998dd647a87e
 
 ---
 
@@ -163,6 +163,6 @@ Windows의 다중 스레드 프로그래밍에 대한 자세한 내용은 다음
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,20 +5,20 @@ title: "앱 내 도움말 디자인에 대한 지침"
 label: In-app help
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
+ms.sourcegitcommit: 0d13ca6850df1b575eddebdb36b345423392664f
+ms.openlocfilehash: 0c606e3b5be2889e83efce77d4c98ca646fef725
 
 ---
 
 # 앱 내 도움말 페이지
 
-대부분의 경우 도움말은 사용자가 보려고 선택할 때 응용 프로그램 내에 표시되는 것이 좋습니다.
+대부분의 경우 도움말은 앱 내에 표시되고 사용자가 보려고 선택할 때 표시되는 것이 좋습니다. 앱 내 도움말을 만들 때 다음과 같은 지침을 고려합니다.
 
 ## <span id="when_to_use_in_app_help"></span><span id="WHEN_TO_USE_IN_APP_HELP"></span>앱 내 도움말 페이지를 사용하는 경우
 
 앱 내 도움말은 사용자를 위한 도움말을 표시하는 기본 방법이어야 합니다. 단순하고 명확하며 새 콘텐츠를 사용자에게 소개하지 않는 모든 도움말에 사용해야 합니다. 지침, 조언 및 팁과 트릭은 모두 앱 내 도움말에 적합합니다.
 
-복잡한 지침이나 자습서는 빠르게 참조하기 어려우며 많은 양의 공간을 차지합니다. 따라서 외부에 호스트해야 하며 앱 자체에 통합하면 안 됩니다.
+복잡한 지침이나 자습서는 신속하게 참조하기가 쉽지 않으며 큰 공간을 차지하므로 외부에서 호스트되어야 하고 앱 자체에 통합되지 않아야 합니다.
 
 사용자가 기본 지침을 얻거나 새로운 기능을 찾기 위해 도움말을 검색할 필요가 없어야 합니다. 사용자를 교육하는 도움말이 필요한 경우 사용 안내 UI를 사용합니다.
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
 
 앱 내 도움말은 모두 디자인 및 유용성의 동일한 일반 원칙을 따르지만 여러 가지 형태로 제공될 수 있습니다.
 
-#### <span id="help_pages"></span><span id="HELP_PAGES"></span>도움말 페이지
+### <span id="help_pages"></span><span id="HELP_PAGES"></span>도움말 페이지
 
 앱 내에 별도 도움말 페이지를 포함하면 유용한 지침을 빠르고 쉽게 표시할 수 있습니다.
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
 -   **사용자는 읽지 않고 훑어봄:** 사용자가 찾으려는 도움말이 다른 도움말 항목과 동일한 페이지에 있을 수도 있으므로 집중해야 하는 항목을 쉽게 알 수 있도록 합니다.
 
 
-#### <span id="popups"></span><span id="POPUPS"></span>팝업
+### <span id="popups"></span><span id="POPUPS"></span>팝업
 
 팝업은 상황에 맞는 도움말에 효과적이며, 사용자가 시도하는 특정 작업과 관련된 지침 및 조언을 표시합니다.
 
@@ -43,7 +43,7 @@ ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
 -   **가시성이 중요함:** 도움말 팝업은 한 위치에서만 볼 수 있으므로 방해 없이 사용자에게 명확하게 표시되도록 합니다. 사용자가 보지 못할 경우 도움말 페이지를 검색하기 위해 팝업을 벗어날 수도 있습니다.
 -   **너무 많은 리소스 사용 금지:** 도움말이 지연되거나 느리게 로드되면 안 됩니다. 팝업에 동영상 또는 오디오 파일이나 고해상도 이미지를 사용하면 사용자에게 도움이 아니라 불편을 줄 가능성이 더 큽니다.
 
-#### <span id="descriptions"></span><span id="DESCRIPTIONS"></span>설명
+### <span id="descriptions"></span><span id="DESCRIPTIONS"></span>설명
 
 때로는 사용자가 살펴볼 때 기능에 대한 자세한 정보를 제공하는 것이 유용할 수 있습니다. 설명은 사용 안내 UI와 유사하지만, 주요 차이점은 사용 안내 UI는 잘 모르는 기능에 대해 사용자에게 알리려고 하고 자세한 설명은 이미 관심이 있는 앱 기능에 대한 사용자 이해를 높인다는 것입니다.
 
@@ -57,6 +57,6 @@ ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

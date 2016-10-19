@@ -6,11 +6,11 @@ ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # 특수 타일 템플릿
 
 
@@ -19,14 +19,14 @@ ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
 
 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. 각 특수 타일 템플릿은 Windows 10용으로 업데이트된 클래식 특수 템플릿인 아이콘 타일 템플릿을 제외하고 Windows 10용으로 특별히 작성되었습니다. 이 문서에서는 세 가지 특수 타일 템플릿인 아이콘, 사진 및 피플에 대해 설명합니다.
 
-## <span id="Iconic_tile_template"></span><span id="iconic_tile_template"></span><span id="ICONIC_TILE_TEMPLATE"></span>아이콘 타일 템플릿
+## 아이콘 타일 템플릿
 
 
 아이콘 템플릿("IconWithBadge" 템플릿이라고도 함)을 사용하면 타일 중앙에 작은 이미지를 표시할 수 있습니다. Windows 10은 휴대폰과 태블릿/데스크톱 둘 다에서 이 템플릿을 지원합니다.
 
 ![작은 크기 및 중간 크기 메일 타일](images/iconic-template-mail-2sizes.png)
 
-### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>아이콘 타일을 만드는 방법
+### 아이콘 타일을 만드는 방법
 
 다음 단계에서는 Windows 10용 아이콘 타일을 만들기 위해 알아야 할 모든 사항에 대해 설명합니다. 대략적으로 설명하면, 아이콘 이미지 자산이 필요하며, 아이콘 템플릿을 사용하여 타일에 알림을 보내고, 마지막으로 타일에 표시할 번호를 제공하는 배지 알림을 보냅니다.
 
@@ -91,14 +91,14 @@ XML 페이로드에 대한 샘플 코드는 다음과 같습니다.
 
 ![아이콘 타일 템플릿과 연결된 API 및 페이로드](images/iconic-template-properties-info.png)
 
-## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>사진 타일 템플릿
+## 사진 타일 템플릿
 
 
 사진 타일 템플릿을 사용하면 라이브 타일에 사진 슬라이드 쇼를 표시할 수 있습니다. 템플릿은 작은 크기를 포함하여 모든 타일 크기에서 지원되며 각 타일 크기에서 동일하게 동작합니다. 아래 예제에서는 사진 템플릿을 사용하는 중간 크기 타일의 5개 프레임을 보여 줍니다. 템플릿에는 선택한 사진을 순환하고 무한 반복되는 확대/축소 및 크로스 페이드 애니메이션이 있습니다.
 
 ![사진 타일 템플릿을 사용하는 이미지 Slideshow](images/photo-tile-template-image01.jpg)
 
-### <span id="How_to_use_the_photos_template"></span><span id="how_to_use_the_photos_template"></span><span id="HOW_TO_USE_THE_PHOTOS_TEMPLATE"></span>사진 템플릿을 사용하는 방법
+### 사진 템플릿을 사용하는 방법
 
 [Windows 10 버전의 NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx)를 설치한 경우 사진 템플릿을 쉽게 사용할 수 있습니다. 원시 XML을 사용할 수도 있지만 유효한 XML 또는 XML 이스케이프 콘텐츠 생성에 대해 걱정할 필요가 없도록 NotificationExtensions를 사용하는 것이 좋습니다.
 
@@ -106,7 +106,7 @@ Windows Phone은 슬라이드 쇼 하나에 최대 9장의 사진을 표시하�
 
 타일 알림을 보내는 방법에 대한 자세한 내용은 [알림 보내기 문서](tiles-badges-notifications.md)를 참조하세요.
 
-<span codelanguage="XML"></span>
+
 ```XML
 <colgroup>
 <col width="100%" />
@@ -182,7 +182,7 @@ TileContent content = new TileContent()
 };
 ```
 
-## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>피플 타일 템플릿
+## 피플 타일 템플릿
 
 
 Windows 10의 피플 앱 타일은 타일에 세로 또는 가로로 슬라이드되는 원 안의 이미지 컬렉션을 표시하는 특수 타일 템플릿을 사용합니다. 이 타일 템플릿은 Windows 10 빌드 10572부터 제공되었으며 누구든지 해당 앱에서 사용할 수 있습니다.
@@ -270,7 +270,7 @@ TileContent content = new TileContent()
 
 알림을 보내려고 [알림 전달 방법 선택](tiles-and-notifications-choosing-a-notification-delivery-method.md)을 참조하세요.
 
-## <span id="related_topics"></span>관련 항목
+## 관련 항목
 
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-people-tile-template)
@@ -288,6 +288,6 @@ TileContent content = new TileContent()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

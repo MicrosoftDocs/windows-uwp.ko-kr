@@ -4,25 +4,26 @@ title: "앱 일시 중단 처리"
 description: "시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 알아봅니다."
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 translationtype: Human Translation
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
+ms.sourcegitcommit: 231161ba576a140859952a7e9a4e8d3bd0ba4596
+ms.openlocfilehash: 9d78ee8aceb40cacdb464a65c940ad13baf7bb81
 
 ---
 
 # 앱 일시 중단 처리
 
-
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
--   [**일시 중단**](https://msdn.microsoft.com/library/windows/apps/br242341)
+- [**일시 중단**](https://msdn.microsoft.com/library/windows/apps/br242341)
 
 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다. 아래의 예제에서는 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트용 이벤트 처리기를 등록하고 문자열을 파일에 저장합니다.
 
-## suspending 이벤트 처리기 등록
+## Windows 10 버전 1607에 도입된 중요한 변경 사항
 
+Windows 10 버전 1607 이전에는 일시 중단 처리기에 상태를 저장하도록 코드를 작성해야 했습니다. 이제 [Windows 10 유니버설 Windows 플랫폼 앱 수명 주기](app-lifecycle.md)의 설명에 따라 백그라운드 상태를 입력할 때 상태를 저장하는 것이 좋습니다.
+
+## suspending 이벤트 처리기 등록
 
 시스템이 앱을 일시 중단하기 전에 앱에서 응용 프로그램 데이터를 저장해야 함을 나타내는 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하도록 등록합니다.
 
@@ -69,7 +70,6 @@ ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
 
 ## 일시 중단 전에 응용 프로그램 데이터 저장
 
-
 앱에서 [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) 이벤트를 처리하면, 처리기 함수에서 중요한 응용 프로그램 데이터를 저장할 기회가 생깁니다. 간단한 응용 프로그램 데이터를 동기적으로 저장하기 위해 앱에서 [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622) 저장소 API를 사용해야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
@@ -103,16 +103,21 @@ ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
 > }
 > ```
 
-## 설명
+## 리소스 해제
 
+앱이 일시 중단된 동안 다른 앱이 액세스할 수 있도록 단독 리소스와 파일 핸들을 해제해야 합니다. 단독 리소스의 예로는 카메라, I/O 디바이스, 외부 디바이스 및 네트워크 리소스가 있습니다. 단독 리소스와 파일 핸들을 명시적으로 해제하면 앱이 일시 중단된 동안 다른 앱이 액세스하는 데 도움이 됩니다. 앱이 다시 시작되면 단독 리소스와 파일 핸들을 다시 획득해야 합니다.
+
+## 설명
 
 사용자가 다른 앱이나 데스크톱 또는 시작 화면으로 전환할 때마다 시스템에서 앱을 일시 중단합니다. 사용자가 다시 돌아올 때마다 시스템에서 앱을 다시 시작합니다. 시스템에서 앱을 다시 시작할 때, 변수와 데이터 구조의 콘텐츠는 시스템에서 앱을 일시 중단하기 전과 동일합니다. 앱은 중단되었던 곳에서 정확히 복원되므로, 사용자에게는 앱이 배경에서 실행되고 있었던 것처럼 보입니다.
 
 앱이 일시 중단된 동안 시스템은 앱과 데이터를 메모리에 유지하려고 합니다. 그러나 앱을 메모리에 유지할 리소스가 없으면 시스템은 앱을 종료합니다. 사용자가 일시 중단 후 종료된 앱으로 다시 돌아오면, 시스템은 [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) 이벤트를 전송하며 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드에서 응용 프로그램 데이터를 복원해야 합니다.
 
-시스템은 앱이 종료되었을 때 앱에게 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
+시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
 
-> **참고** 앱이 일시 중단 상태에서 비동기 작업을 수행해야 할 경우 작업이 완료될 때까지 일시 중단 종료를 지연해야 합니다. 이벤트 인수를 통해 사용할 수 있는 [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688) 개체의 [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) 메서드를 사용하여 반환된 [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684) 개체에서 [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) 메서드가 호출될 때까지 일시 중단 완료를 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](http://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.deferral.aspx) 개체에서 [**Complete**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.deferral.complete.aspx) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+
+지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다.
 
 > **참고** Windows 8.1에서 시스템 응답을 향상시키기 위해 앱에는 일시 중단 시 리소스에 대한 낮은 우선 순위 액세스 권한이 제공됩니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
 
@@ -120,11 +125,11 @@ ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
 
 ## 관련 항목
 
-
+* [앱 수명 주기](app-lifecycle.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
 * [시작, 일시 중단 및 다시 시작에 대한 UX 지침](https://msdn.microsoft.com/library/windows/apps/dn611862)
-* [앱 수명 주기](app-lifecycle.md)
+
 
  
 
@@ -132,6 +137,6 @@ ms.openlocfilehash: 3ad58dc20a660d89622d215c46d263adf27a0542
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

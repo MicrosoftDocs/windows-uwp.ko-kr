@@ -2,16 +2,15 @@
 description: "특정 유형의 입력 및 디바이스에 대해 UWP 앱을 사용자 지정합니다. 터치 및 음성 명령을 활용합니다. Xbox, 전화 및 TV에서도 앱을 실행합니다."
 title: "UWP 앱 입력 및 디바이스 디자인 - Windows 앱 개발"
 author: mijacobs
-keywords: device primer, app inputs, customize UWP application
+keywords: "디바이스 입문서, 앱 입력, UWP 응용 프로그램 사용자 지정"
 translationtype: Human Translation
-ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
-ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
+ms.sourcegitcommit: 5a6666d4e706d4d49d646b5bb2e43b82394eb215
+ms.openlocfilehash: 85bcd15d4b9262188f0821642faf0d3d0cb7dbad
 
 ---
+# 입력 및 디바이스
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# 입력 및 디바이스
 
 UWP 앱은 다양한 입력을 자동으로 처리하고 다양한 디바이스에서 실행됩니다. 터치 입력을 사용하거나 휴대폰에서 앱을 실행하기 위해 수행해야 할 추가 작업이 없습니다. 
 
@@ -169,6 +168,6 @@ UWP 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

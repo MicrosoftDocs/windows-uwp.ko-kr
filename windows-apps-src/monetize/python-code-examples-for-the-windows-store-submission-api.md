@@ -1,27 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
-description: Use the Python code examples in this section to learn more about using the Windows Store submission API.
-title: Python code examples for the Windows Store submission API
+description: "이 섹션의 Python 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
+title: "Windows 스토어 제출 API에 대한 Python 코드 예제"
+translationtype: Human Translation
+ms.sourcegitcommit: bd8c8cbf6ed10a583d2008e8b01a499b4d400c11
+ms.openlocfilehash: 52fd41ca41628d41140c8c24047e2a50ea72bf40
+
 ---
 
-# Python code examples for the Windows Store submission API
+# Windows 스토어 제출 API에 대한 Python 코드 예제
 
-This article provides Python code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+이 문서에서는 *Windows 스토어 제출 API*를 사용하기 위한 Python 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
-These code examples demonstrate the following tasks:
+이러한 코드 예제는 다음 작업을 보여 줍니다.
 
-* [Obtain an Azure AD access token](python-code-examples-for-the-windows-store-submission-api.md#token).
-* [Create an add-on](python-code-examples-for-the-windows-store-submission-api.md#create-add-on).
-* [Create a package flight](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
-* [Create and commit an app submission](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
-* [Create and commit an add-on submission](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
-* [Create and commit a package flight submission](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
+* [Azure AD 액세스 토큰을 가져옵니다](python-code-examples-for-the-windows-store-submission-api.md#token).
+* [추가 기능 만들기](python-code-examples-for-the-windows-store-submission-api.md#create-add-on)
+* [패키지 플라이트 만들기](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight)
+* [앱 제출 만들기 및 커밋](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission)
+* [추가 기능 제출 만들기 및 커밋](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission)
+* [패키지 플라이트 제출 커밋](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission)
 
 <span id="token" />
-## Obtain an Azure AD access token
+## Azure AD 액세스 토큰 가져오기
 
-The following example demonstrates how to [obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
+다음 예제에서는 [Azure AD 액세스 토큰을 가져오는](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) 방법을 보여 줍니다.
 
 ```python
 import http.client, json
@@ -47,9 +51,9 @@ tokenConnection.close()
 ```
 
 <span id="create-add-on" />
-## Create an add-on
+## 추가 기능 만들기
 
-The following example demonstrates how to [create a new add-on](manage-add-ons.md) (add-ons are also known as in-app products or IAPs).
+다음 예제에서는 [새 추가 기능을 만드는](manage-add-ons.md) 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함).
 
 ```python
 import http.client, json
@@ -82,9 +86,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-package-flight" />
-## Create a package flight
+## 패키지 플라이트 만들기
 
-The following example demonstrates how to [create a new package flight](manage-flights.md).
+다음 예제에서는 [새 패키지 플라이트를 만드는](manage-flights.md) 방법을 보여 줍니다.
 
 ```python
 import http.client, json, requests, time
@@ -121,9 +125,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-app-submission" />
-## Create and commit an app submission
+## 앱 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new app submission](manage-app-submissions.md).
+다음 예제에서는 [새 앱 제출을 만들고 커밋](manage-app-submissions.md)하는 방법을 보여 줍니다.
 
 ```python
 import http.client, json, requests, time
@@ -204,9 +208,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-add-on-submission" />
-## Create and commit an add-on submission
+## 추가 기능 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs).
+다음 예제에서는 [새 추가 기능 제출을 만들고 커밋](manage-add-on-submissions.md)하는 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함).
 
 ```python
 import http.client, json, requests, time
@@ -286,9 +290,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-flight-submission" />
-## Create and commit a package flight submission
+## 패키지 플라이트 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new package flight submission](manage-flight-submissions.md).
+다음 예제에서는 [새 패키지 플라이트 제출을 만들고 커밋](manage-flight-submissions.md)하는 방법을 보여 줍니다.
 
 ```python
 import http.client, json, requests, time, zipfile
@@ -369,6 +373,12 @@ print(submissionJsonObject)
 ingestionConnection.close()
 ```
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

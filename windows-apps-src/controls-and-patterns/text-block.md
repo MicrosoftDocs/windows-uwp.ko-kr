@@ -4,22 +4,32 @@ ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
 label: Text block
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7666c7a82b2959aa1329bbfe2532dccdc7fb38a5
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 94f858912473f2a0d20f4041155b1e1ee93032a2
 
 ---
 # 텍스트 블록
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
  텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>TextBlock 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx"><strong>Text 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx"><strong>Inlines 속성</strong></a></li>
+</ul>
 
--   [**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)
--   [**Text 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx)
--   [**Inlines 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.inlines.aspx)
+</div>
+</div>
+
+
 
 ## 올바른 컨트롤인가요?
 
-텍스트 블록은 일반적으로 서식 있는 텍스트 블록보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 속성의 값을 가져와 앱에서 텍스트 블록의 텍스트에 쉽게 액세스하고 사용할 수 있습니다. 또한 텍스트가 렌더링되는 방식을 사용자 지정할 수 있도록 동일한 서식 옵션을 여러 개 제공합니다. 
+텍스트 블록은 일반적으로 서식 있는 텍스트 블록보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx) 속성의 값을 가져와 앱에서 텍스트 블록의 텍스트에 쉽게 액세스하고 사용할 수 있습니다. 또한 텍스트가 렌더링되는 방식을 사용자 지정할 수 있도록 동일한 서식 옵션을 여러 개 제공합니다.
 
 텍스트에 줄 바꿈을 넣을 수는 있지만, 텍스트 블록은 단일 단락을 표시하도록 디자인되었으며 텍스트 들여쓰기를 지원하지 않습니다. 여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요.
 
@@ -67,16 +77,18 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
 - [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): 가장 중요한 조건은 XAML 또는 코드에서(이전 예제에 나온 대로) 명시적으로 Text 속성을 설정하여 텍스트를 설정할 때만 빠른 경로를 사용한다는 점입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 - [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): 기본값 0만 빠른 경로입니다.
-- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
 - [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): **None**, **CharacterEllipsis** 및 **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
+
+> **참고**&nbsp;&nbsp;Windows 10 버전 1607 이전에는 추가 속성도 빠른 경로에 영향을 주었습니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 버전 적응 코드를 참조하세요.
+- [**Typography**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): 다양한 Typography 속성에 대한 기본값만 빠른 경로입니다.
 - [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
 - [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
 
-디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다. 
+디버그 도중에 [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx) 속성을 **true**로 설정하여 텍스트가 빠른 경로 렌더링을 사용하고 있는지 여부를 확인할 수 있습니다. 이 속성이 true로 설정된 경우 빠른 경로에 있는 텍스트가 밝은 녹색으로 표시됩니다.
 
->**팁** &nbsp;&nbsp; 이 기능에 대해서는 빌드 2015 - [XAML 성능: XAML을 사용하여 빌드한 유니버설 Windows 앱 환경을 극대화하는 기법](https://channel9.msdn.com/Events/Build/2015/3-698)(영문)의 이 세션에서 자세히 설명합니다.
+>**팁**&nbsp;&nbsp;이 기능에 대해서는 빌드 2015 - [XAML Performance: Techniques for Maximizing Universal Windows App Experiences Built with XAML](https://channel9.msdn.com/Events/Build/2015/3-698)(XAML 성능: XAML을 사용하여 빌드한 유니버설 Windows 앱 환경을 극대화하는 기법)의 이 세션에서 자세히 설명합니다.
 
- 
+
 
 일반적으로 App.xaml에 대한 코드 숨김 페이지에서 [OnLaunched](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.application.onlaunched.aspx) 메서드 재정의에서 다음과 같이 디버그 설정을 지정합니다.
 ```csharp
@@ -106,18 +118,18 @@ IsTextPerformanceVisualizationEnabled를 true로 설정하여 이 XAML을 디버
 
 ![디버그 모드에서 렌더링된 텍스트](images/text-block-rendering-performance.png)
 
->**주의**&nbsp;&nbsp; 빠른 경로에 있지 않은 텍스트의 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
+>**주의**&nbsp;&nbsp;빠른 경로에 있지 않은 텍스트의 색은 변경되지 않습니다. 앱에 밝은 녹색으로 지정된 텍스트가 있는 경우 텍스트가 더 느린 렌더링 경로에 있으면 계속 밝은 녹색으로 표시됩니다. 앱에서 녹색으로 설정된 텍스트와, 빠른 경로에 있으며 디버그 설정 때문에 녹색인 텍스트와 혼동하지 않도록 주의해야 합니다.
 
 ## 텍스트 서식 지정
 
 Text 속성이 일반 텍스트를 저장하지만, TextBlock 컨트롤에 다양한 서식 옵션을 적용하여 앱에서 텍스트가 렌더링되는 방법을 사용자 지정할 수 있습니다. FontFamily, FontSize, FontStyle, Foreground 및 CharacterSpacing과 같은 표준 컨트롤 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 또한 인라인 텍스트 요소 및 Typography 연결 속성을 사용하여 텍스트의 서식을 지정할 수 있습니다. 이러한 옵션은 TextBlock이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
->**참고**&nbsp;&nbsp; 이전 섹션에서 설명했듯이 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
- 
+>**참고**&nbsp;&nbsp;이전 섹션에서 설명했듯이 인라인 텍스트 요소 및 기본값이 아닌 입력 체계 값은 빠른 경로에서 렌더링되지 않습니다.
+
 
 ### 인라인 요소
 
-[Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) 네임스페이스는 Bold, Italic, Run, Span 및 LineBreak와 같이 텍스트의 서식을 지정하는 데 사용할 수 있는 다양한 인라인 텍스트 요소를 제공합니다. 
+[Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) 네임스페이스는 Bold, Italic, Run, Span 및 LineBreak와 같이 텍스트의 서식을 지정하는 데 사용할 수 있는 다양한 인라인 텍스트 요소를 제공합니다.
 
 TextBlock에서 일련의 문자열을 표시할 수 있으며, 여기서 각 문자열은 형식이 서로 다릅니다. 이렇게 하려면 Run 요소를 사용하여 각 문자열을 지정된 서식으로 표시하고 각 Run 요소를 LineBreak 요소로 분리하면 됩니다.
 
@@ -125,16 +137,16 @@ TextBlock에서 일련의 문자열을 표시할 수 있으며, 여기서 각 �
 ```xaml
 <TextBlock FontFamily="Arial" Width="400" Text="Sample text formatting runs">
     <LineBreak/>
-    <Run Foreground="Gray" FontFamily="Courier New" FontSize="24"> 
-        Courier New 24 
+    <Run Foreground="Gray" FontFamily="Courier New" FontSize="24">
+        Courier New 24
     </Run>
     <LineBreak/>
-    <Run Foreground="Teal" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic"> 
-        Times New Roman Italic 18 
+    <Run Foreground="Teal" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic">
+        Times New Roman Italic 18
     </Run>
     <LineBreak/>
-    <Run Foreground="SteelBlue" FontFamily="Verdana" FontSize="14" FontWeight="Bold"> 
-        Verdana Bold 14 
+    <Run Foreground="SteelBlue" FontFamily="Verdana" FontSize="14" FontWeight="Bold">
+        Verdana Bold 14
     </Run>
 </TextBlock>
 ```
@@ -170,7 +182,7 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 
 **디자이너용**
 - [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
-- [검색 추가](https://msdn.microsoft.com/library/windows/apps/hh465231)
+- [검색 추가](search.md)
 - [텍스트 입력에 대한 지침](text-controls.md)
 
 **개발자용(XAML)**
@@ -183,6 +195,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

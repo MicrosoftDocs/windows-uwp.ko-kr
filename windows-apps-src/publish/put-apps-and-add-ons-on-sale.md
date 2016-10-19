@@ -1,63 +1,73 @@
-﻿---
+---
 author: jnHs
-Description: You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
-title: Put apps and add-ons on sale
+Description: "Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다."
+title: "앱 및 추가 기능 판매"
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: d5884fc4be04de69132662ade7e42f69d36d2346
+
 ---
 
-# Put apps and add-ons on sale
+# 앱 및 추가 기능 판매
 
-You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
+Windows 스토어에서는 제한된 기간에 할인 판매를 통해 자신의 앱 또는 추가 기능을 홍보할 수 있습니다.
 
-When you schedule a sale to temporarily lower the price of your app or add-on, customers viewing your Store listing will see that the price has been reduced, and they'll be able to purchase it at the lower price during the time period that you have selected. If you lower the price to **Free**, they can download it without paying at all during the sale period.
+앱 또는 추가 기능의 가격을 일시적으로 할인하도록 예약하면 스토어 목록을 보는 고객에게 할인된 가격이 표시되며 선택한 기간 동안 앱을 할인된 가격으로 구매할 수 있습니다. 가격을 **무료** 수준으로 낮출 경우 고객은 할인 기간 동안 대금 결제 없이 해당 앱을 다운로드할 수 있습니다.
 
-> **Note**  Sale pricing is only shown to your customers on Windows 10. On other operating systems, customers will see the regular price for your app or add-on. You can always change a price by choosing a different price tier in a new submission, but it will not be displayed as a limited-time sale.
+> **참고** 할인 판매 가격 정책은 Windows 10 고객에게만 표시됩니다. 다른 운영 체제의 고객에게는 앱 또는 추가 기능의 정가가 표시됩니다. 언제든지 새 제출에서 다른 가격 계층을 선택하여 가격을 변경할 수 있지만 한정 기간 할인으로 표시되지는 않습니다.
 
-## Scheduling a sale
+## 할인 판매 예약
 
-Sales are scheduled as part of the submission for an app or add-on. If you want to schedule a sale for an app or add-on that has already been published, you'll need to create a new submission, even if that is the only change you want to make.
+할인 판매는 앱 또는 추가 기능 제출의 일부로 예약됩니다. 이미 게시된 앱 또는 추가 기능에 대한 할인 판매를 예약하려면 변경 내용이 이것뿐인 경우에도 새로 제출해야 합니다.
 
-**To schedule a sale**
+**할인을 예약하려면**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Click **New sale**.
-3.  Enter the date and time for the start and end of the sale period. The times shown are in UTC.
+1.  진행 중인 앱 또는 추가 기능 제출의 **가격 책정 및 가용성** 페이지에서 **할인 가격** 섹션으로 이동합니다.
+2.  **새 판매**를 클릭합니다.
+3.  할인 판매 기간의 시작 및 종료 날짜/시간을 입력합니다. 시간은 UTC 형식으로 표시됩니다.
 
-   > **Note**  For add-ons, you can't schedule sales that overlap with each other.
+   > **참고** 추가 기능의 경우에는 중복 판매를 예약할 수 없습니다.
 
-4.  Choose your sale price from the drop-down list. You can pick any price, including **Free**.
-5.  If you'd like to enter custom prices for this sale, click **Show custom market pricing options**. You can set custom sale prices per market (or exclude specific markets from the sale) here. For more info, see [Define pricing and market selection](define-pricing-and-market-selection.md).
+4.  드롭다운 목록에서 할인 가격을 선택합니다. **무료**를 포함하여 모든 가격을 선택할 수 있습니다.
+5.  이 할인 판매에 대해 사용자 지정 가격을 입력하려면 **사용자 지정 지역/국가별 가격 옵션 표시**를 클릭합니다. 여기에서 지역/국가별 사용자 지정 할인 가격을 설정하거나 할인 판매에서 특정 지역/국가를 제외할 수 있습니다. 자세한 내용은 [가격 책정 및 지역/국가 선택 정의](define-pricing-and-market-selection.md)를 참조하세요.
 
-    > **Note**  Market selections that you make in the **Sale pricing** section will not affect the markets in which the app is offered; these selections only determine whether a sale price is offered, and in which markets. If you set sale pricing for a market in which your app is not available, this won't cause the app to become available in that market.
+    > **참고** **할인 가격** 섹션에서 선택할 수 있는 지역/국가는 앱이 제공되는 지역/국가에 영향을 주지 않습니다. 이 선택 항목은 할인 가격이 제공되는지와 어떤 지역/국가에서 제공되는지만 결정합니다. 앱을 사용할 수 없는 지역/국가에 대한 할인 판매 가격을 설정한 경우 이로 인해 해당 지역/국가에서 앱을 사용할 수 있게 되는 것은 아닙니다.
 
-6.  Click **Done** to save the scheduled sale.
-7.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+6.  **완료**를 클릭하여 예약된 할인 판매를 저장합니다.
+7.  **가격 책정 및 가용성** 페이지의 아래쪽에 있는 **저장**을 클릭한 다음 제출 개요에서 **스토어에 제출**을 클릭합니다.
 
-> **Note**  It's possible to select a price tier that is higher than your app's base price. However, sale pricing will only be shown to customers if the sale price is lower than the regular price of the app in that market. Selecting a price that is higher than your app's base price might be appropriate for your sale if you've already set custom prices in certain markets that are higher than your app's base price, and you want to temporarily lower the price in those markets (but the sale price is still higher than the app's base price). If your selections would result in the price of the app being raised in a certain market, we won't show that (higher) price to customers in that market; they will continue to see the app at its previous (lower) price. We'll also show customers the lowest price available if you schedule separate overlapping sales with different prices.
+> **참고** 앱의 기본 가격보다 높은 가격 계층을 선택할 수 있습니다. 그러나 할인 가격은 할인 가격이 해당 지역/국가의 앱 정가보다 낮은 경우에만 고객에게 표시됩니다. 앱의 기준 가격보다 높은 가격을 선택하는 것이 할인 판매에 적절할 수 있는 것은 다음과 같은 경우입니다. 이미 특정 지역/국가에서 앱의 기준 가격보다 높은 사용자 지정 가격을 설정했으나, 이러한 지역/국가에서 일시적으로 가격을 낮추려는 경우 (그러나 할인 가격은 앱의 기준 가격보다 여전히 높음) 입니다. 선택 항목으로 인해 특정 지역/국가에서 앱 가격이 상승하는 경우 해당 지역/국가의 고객에게 더 높은 가격을 표시하지 않습니다. 이전(더 낮은) 가격으로 앱이 계속 표시됩니다. 또한 중복되는 별도의 할인 판매가 다른 가격으로 예약된 경우 사용 가능한 최저 가격을 고객에 표시합니다.
 
-## Changing or canceling a scheduled sale
+## 예약된 할인 판매 변경 또는 취소
 
 
-To revise or cancel a sale that you've previously scheduled for an app or add-on, you'll need to create a new submission and submit it to the Store.
+이전에 앱 또는 추가 기능에 대해 예약한 할인 판매를 수정하거나 취소하려면 새 제출을 만들어 스토어에 제출해야 합니다.
 
-**To edit a scheduled sale**
+**예약된 할인 판매를 편집하려면**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to update, then click its price to edit the sale.
-3.  Make your changes and then click **Done**.
-4.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  진행 중인 앱 또는 추가 기능 제출의 **가격 책정 및 가용성** 페이지에서 **할인 가격** 섹션으로 이동합니다.
+2.  업데이트할 할인 판매를 찾은 후 해당 가격을 클릭하여 할인 판매를 편집합니다.
+3.  필요한 사항을 변경한 다음 **완료**를 클릭합니다.
+4.  **가격 책정 및 가용성** 페이지의 아래쪽에 있는 **저장**을 클릭한 다음 제출 개요에서 **스토어에 제출**을 클릭합니다.
 
-After your submission goes through the certification process, the changes will take effect (even if the sale had already started).
+제출에 대한 인증 프로세스가 완료되면 변경 내용이 적용됩니다(할인 판매가 이미 시작된 경우에도 마찬가지).
 
-> **Tip**  You can reuse a completed sale in a new submission by editing its start and end dates. This is especially useful if you’ve configured a sale with complicated custom market pricing.
- 
-**To cancel a scheduled sale**
+> **팁** 완료된 할인 판매의 시작 날짜와 종료 날짜를 바꾸어 새로운 제출에 재사용할 수 있습니다. 이것은 복잡한 사용자 지정 가격으로 할인 판매를 구성한 경우에 특히 유용한 방법입니다.
+ 
+**예약된 할인 판매를 취소하려면**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to cancel and click **Delete** to remove it.
-3.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  진행 중인 앱 또는 추가 기능 제출의 **가격 책정 및 가용성** 페이지에서 **할인 가격** 섹션으로 이동합니다.
+2.  취소할 할인 판매를 찾은 후 **삭제**를 클릭하여 제거합니다.
+3.  **가격 책정 및 가용성** 페이지의 아래쪽에 있는 **저장**을 클릭한 다음 제출 개요에서 **스토어에 제출**을 클릭합니다.
 
-As long as the sale hasn't started by the time the submission completes the certification process, the deleted sale won't run at all. If you delete a sale that has already ended, the sale will simply be removed from your **Pricing and availability** page.
+제출에 대한 인증 프로세스가 완료될 때까지 할인 판매가 시작되지 않는 한 삭제된 할인 판매는 실행되지 않습니다. 이미 종료된 판매를 할인 판매를 삭제하면 **가격 책정 및 가용성** 페이지에서 제거될 뿐입니다.
 
-> **Important**   Since customers can see the scheduled end date when viewing your app's Store listing, we don't recommend deleting a sale after it's started. If you delete a sale that is already in progress, the sale will end when the submission completes the certification process, which can be frustrating to your potential customers.
+> **중요** 고객이 앱 스토어 목록을 볼 때 예약된 종료 날짜를 볼 수 있기 때문에 시작된 후에는 할인 판매를 삭제하지 않는 것이 좋습니다. 이미 진행 중인 할인 판매를 삭제하면 제출에 대한 인증 프로세스가 완료될 때 할인 판매가 종료되므로 잠재 고객에게 혼동을 일으킬 수 있습니다.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

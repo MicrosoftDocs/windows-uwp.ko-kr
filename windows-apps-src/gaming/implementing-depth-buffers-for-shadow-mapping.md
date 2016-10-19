@@ -5,11 +5,11 @@ description: "이 연습에서는 모든 Direct3D 기능 수준의 디바이스�
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4bb1f5c71d83b2dc3271b5b2ceaa9a1156b00004
+ms.openlocfilehash: a323c299d588cdcff7b83d538a705d64207c96b2
 
 ---
 
-# 연습&#58; Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
+# 연습: Direct3D 11에서 깊이 버퍼를 사용하여 섀도 볼륨 구현
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -90,6 +90,6 @@ Windows 8에서는 기능 수준 9\_1과 9\_3에 깊이 비교 기능이 추가�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

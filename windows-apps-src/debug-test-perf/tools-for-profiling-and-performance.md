@@ -5,7 +5,7 @@ title: "프로파일링 및 성능 도구"
 description: "Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상시킬 수 있는 여러 가지 도구를 제공합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
+ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
 
 ---
 # 프로파일링 및 성능 도구
@@ -30,6 +30,6 @@ Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

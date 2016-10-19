@@ -6,16 +6,13 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 
 ---
-
 # 적응형 및 대화형 알림 메시지
 
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다.
 
@@ -29,7 +26,7 @@ ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
 
  
 
-## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>알림 메시지 구조
+## 알림 메시지 구조
 
 
 알림 메시지는 XML을 사용하여 구성되며 이 XML에는 일반적으로 다음 키 요소가 포함됩니다.
@@ -61,7 +58,7 @@ ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
 
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
 
-### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>시각 효과
+### 시각 효과
 
 시각적 요소 내부에는 알림의 시각적 콘텐츠가 포함된 정확히 하나의 바인딩 요소가 있어야 합니다.
 
@@ -72,7 +69,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 타일 알림은 다양한 타일 크
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
 
-### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>동작
+### 동작
 
 UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는 데 사용되는 단추와 다른 입력을 알림 메시지에 추가할 수 있습니다. 이들 작업은 &lt;actions&gt; 요소 아래에 다음 두 가지 형식으로 지정할 수 있습니다.
 
@@ -90,7 +87,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
 
-### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>오디오
+### 오디오
 
 사용자 지정 소리는 현재 데스크톱 플랫폼을 대상으로 지정한 UWP 앱에서 지원되지 않습니다. 대신, 데스크톱의 목록에서 앱에 대한 ms-winsoundevents를 선택할 수 있습니다. 모바일 플랫폼의 UWP 앱은 다음 형식의 사용자 지정 소리와 함께 두 가지 ms-winsoundevents를 모두 지원합니다.
 
@@ -99,7 +96,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오에 대한 자세한 내용은 [오디오 스키마 페이지](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>알람, 미리 알림 및 수신 전화
+## 알람, 미리 알림 및 수신 전화
 
 
 알람, 미리 알림 및 수신 전화에 알림 메시지를 사용할 수 있습니다. 이러한 특수 알림의 표준 토스트와 일치하지만 특수 알림은 시나리오 기반 사용자 지정 UI 및 패턴을 나타냅니다.
@@ -108,7 +105,7 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 -   위의 동작을 미리 알림과 공유할 뿐 아니라 알람 알림도 루핑 오디오를 자동으로 재생합니다.
 -   Windows 모바일 디바이스에서 수신 전화 알림은 전체 화면으로 표시됩니다. 이 작업을 수행하려면 알림 메시지의 루트 요소 내부에 시나리오 특성을 지정합니다. &lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
 
-## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>XML 예
+## XML 예
 
 
 **참고** 아래 예제의 알림 메시지 스크린샷은 데스크톱의 앱에서 생성되었습니다. 모바일 디바이스에서 알림 메시지는 나타날 때 축소될 수 있고 이 경우 알림 아래쪽의 그래버를 통해 확장합니다.
@@ -290,7 +287,7 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 
  
 
-## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>활성화 샘플
+## 활성화 샘플
 
 
 위에서 설명한 대로 알림의 본문과 작업은 다양한 방법으로 앱을 활성화할 수 있습니다. 아래 샘플은 알림 본문 및/또는 알림 작업에서 다양한 활성화 형식을 처리하는 방법을 보여 줍니다.
@@ -352,7 +349,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>스키마: &lt;visual&gt; 및 &lt;audio&gt;
+## 스키마: &lt;visual&gt; 및 &lt;audio&gt;
 
 
 다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
@@ -492,7 +489,7 @@ silent?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>스키마: &lt;action&gt;
+## 스키마: &lt;action&gt;
 
 
 다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
@@ -584,7 +581,7 @@ hint-inputId
 -   값은 연결할 입력 요소의 ID여야 합니다.
 -   모바일 및 데스크톱에서 이 특성은 입력 상자의 오른쪽 옆에 단추를 배치합니다.
 
-## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>시스템 처리 작업의 특성
+## 시스템 처리 작업의 특성
 
 
 앱이 알림의 다시 알림/재예약을 백그라운드 작업으로 처리하지 않게 하려면 알림을 다시 알리고 해제하기 위한 작업을 시스템에서 처리할 수 있습니다. 시스템 처리 작업을 결합하거나 개별적으로 지정할 수 있지만 다시 알림 작업을 구현하려면 해제 작업을 포함하는 것이 좋습니다.
@@ -647,6 +644,6 @@ hint-inputId
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

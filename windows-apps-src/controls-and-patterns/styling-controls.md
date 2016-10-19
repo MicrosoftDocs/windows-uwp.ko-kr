@@ -10,7 +10,7 @@ label: Styling controls
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
+ms.openlocfilehash: 2386ccbc89cad5514c0b1a4879af6d0df328263e
 
 ---
 
@@ -154,6 +154,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: "스레드 풀을 사용하기 위한 모범 사례"
 description: "이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53f7460be63fa9bd440ed6999ac9cca7cdca0174
+ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
 
 ---
 # 스레드 풀을 사용하기 위한 모범 사례
@@ -57,6 +57,6 @@ ms.openlocfilehash: 53f7460be63fa9bd440ed6999ac9cca7cdca0174
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

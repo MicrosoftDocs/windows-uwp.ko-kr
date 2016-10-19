@@ -4,18 +4,27 @@ ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
 title: "장치 열거"
 description: "열거형 네임스페이스를 사용하면 시스템에 내부에서 연결되거나, 외부에서 연결되거나, 무선 또는 네트워킹 프로토콜을 통해 검색 가능한 디바이스를 찾을 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 296ca0ece8cead74112c3e665f13b5e5547e6da3
+ms.sourcegitcommit: 23a600fdcf972fcb291653e8aac447e035c12c6d
+ms.openlocfilehash: 2aa1a86a2cb0b413fae5fbcd87599a9f1a822324
 
 ---
 # 디바이스 열거
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
+## 샘플
 
-** 중요 API **
+모든 사용 가능한 디바이스를 열거하는 가장 간단한 방법은 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx) 명령을 사용하여 스냅숏을 만드는 것입니다(아래 섹션에서 자세히 설명함).
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+```CSharp
+async void enumerateSnapshot(){
+  DeviceInformationCollection collection = await DeviceInformation.FindAllAsync();
+}
+```
+
+[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API의 고급 사용법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+
+## 열거형 API
 
 열거형 네임스페이스를 사용하면 시스템에 내부에서 연결되거나, 외부에서 연결되거나, 무선 또는 네트워킹 프로토콜을 통해 검색 가능한 디바이스를 찾을 수 있습니다. 가능한 장치를 열거하는 데 사용되는 API는 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) 네임스페이스입니다. 이러한 API를 사용하는 몇 가지 이유는 다음과 같습니다.
 
@@ -82,7 +91,13 @@ ms.openlocfilehash: 296ca0ece8cead74112c3e665f13b5e5547e6da3
 
 장치의 스냅숏을 열거하려면 [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.findallasync.aspx) 메서드를 사용합니다. 이 메서드는 전체 열거 프로세스가 완료될 때까지 대기하고 모든 결과를 하나의 [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationcollection.aspx) 개체로 반환합니다. 또한 이 메서드는 결과를 필터링하고 관심 있는 장치로 제한할 수 있는 여러 옵션을 제공하기 위해 오버로드됩니다. 이를 위해 [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)를 제공하거나 장치 선택기를 전달할 수 있습니다. 장치 선택기는 열거할 장치를 지정하는 AQS 문자열입니다. 자세한 내용은 [장치 선택기 빌드](build-a-device-selector.md)를 참조하세요.
 
+디바이스 열거형 스냅숏의 예는 다음과 같습니다.
+
+
+
 결과를 제한하는 것 외에, 장치를 검색할 속성을 지정할 수도 있습니다. 이렇게 하면 컬렉션으로 반환된 각 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체의 속성 모음에서 지정한 속성을 사용할 수 있습니다. 모든 장치 종류에 모든 속성을 사용할 수 있는 것은 아닙니다. 장치 종류에 따라 사용할 수 있는 속성을 확인하려면 [장치 정보 속성](device-information-properties.md)을 참조하세요.
+
+
 
 ## 디바이스 열거 및 감시
 
@@ -136,10 +151,6 @@ ms.openlocfilehash: 296ca0ece8cead74112c3e665f13b5e5547e6da3
 
 모든 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체는 [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id)와 [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx)라는 두 가지 정보의 조합으로 고유하게 식별됩니다. 이 두 가지 정보를 유지하면 **DeviceInformation** 개체가 손실된 후 [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx)에 이 정보를 제공하여 개체를 다시 만들 수 있습니다. 이 작업을 수행하는 경우 앱과 통합되는 장치에 대한 사용자 기본 설정을 저장할 수 있습니다.
 
-## 샘플
-
-
-[**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](http://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
 
  
 
@@ -151,6 +162,6 @@ ms.openlocfilehash: 296ca0ece8cead74112c3e665f13b5e5547e6da3
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

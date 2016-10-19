@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 IAP(앱에서 바로 구매 제품)의 집계 구입 데이터를 가져옵니다."
-title: "IAP 구입 가져오기"
+description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 추가 기능의 집계 구입 데이터를 가져옵니다."
+title: "추가 기능 구입 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
+ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
+ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 ---
 
-# IAP 구입 가져오기
+# 추가 기능 구입 가져오기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 IAP(앱에서 바로 구매 제품)의 집계 구입 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
+
+Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)의 집계 구입 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
 
 ## 필수 조건
 
 
-이 메서드를 사용하려면 다음이 필요합니다.
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
--   이 메서드 호출에 사용할 Azure AD 응용 프로그램을 개발자 센터 계정과 연결합니다.
-
--   응용 프로그램에 대한 Azure AD 액세스 토큰을 가져옵니다.
-
-자세한 내용은 [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)를 참조하세요.
+* 아직 완료하지 않은 경우 Windows 스토어 분석 API에 대한 모든 [필수 조건](access-analytics-data-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
 ## 요청
 
@@ -42,13 +39,13 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/> 
 
 ### 요청 매개 변수
 
-*applicationId* 또는 *inAppProductId* 매개 변수가 필요합니다. 앱에 등록된 모든 IAP의 구입 데이터를 검색하려면 *applicationId* 매개 변수를 지정합니다. 단일 IAP에 대한 구입 데이터를 검색하려면 *inAppProductId* 매개 변수를 지정합니다. 둘 다 지정하는 경우 *inAppProductId* 매개 변수는 무시됩니다.
+*applicationId* 또는 *inAppProductId* 매개 변수가 필요합니다. 앱에 등록된 모든 추가 기능의 구입 데이터를 검색하려면 *applicationId* 매개 변수를 지정합니다. 단일 추가 기능에 대한 구입 데이터를 검색하려면 *inAppProductId* 매개 변수를 지정합니다. 둘 다 지정하는 경우 *applicationId* 매개 변수는 무시됩니다.
 
 <table>
 <colgroup>
@@ -69,25 +66,25 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">문자열</td>
-<td align="left">IAP 구입 데이터를 검색할 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
+<td align="left">추가 기능 구입 데이터를 검색하려는 앱의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다.</td>
 <td align="left">예</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
 <td align="left">문자열</td>
-<td align="left">구입 데이터를 검색할 IAP의 제품 ID입니다.</td>
+<td align="left">구입 데이터를 검색할 추가 기능의 스토어 ID입니다. 스토어 ID는 Windows 개발자 센터 대시보드에서 추가 기능 개요 페이지의 URL에 사용할 수 있습니다. 예를 들어 추가 기능에 대한 대시보드의 URL이 ```https://developer.microsoft.com/en-us/dashboard/iaps/9NBLGGH4SCZS?appId=9NBLGGH29DM8```인 경우 추가 기능에 대한 스토어 ID는 문자열 9NBLGGH4SCZS입니다.</td>
 <td align="left">예</td>
 </tr>
 <tr class="odd">
 <td align="left">startDate</td>
 <td align="left">date</td>
-<td align="left">검색할 IAP 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다.</td>
+<td align="left">검색할 추가 기능 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 기본값은 현재 날짜입니다.</td>
 <td align="left">아니요</td>
 </tr>
 <tr class="even">
 <td align="left">endDate</td>
 <td align="left">date</td>
-<td align="left">검색할 IAP 구입 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다.</td>
+<td align="left">검색할 추가 기능 구입 데이터의 날짜 범위에 대한 종료 날짜입니다. 기본값은 현재 날짜입니다.</td>
 <td align="left">아니요</td>
 </tr>
 <tr class="odd">
@@ -117,7 +114,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <tr class="odd">
 <td align="left">orderby</td>
 <td align="left">문자열</td>
-<td align="left">각 IAP 구입에 대한 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 <em>orderby=field [order],field [order],...</em>입니다. <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.
+<td align="left">각 추가 기능 구입에 대한 결과 데이터 값의 순서를 지정하는 문입니다. 구문은 <em>orderby=field [order],field [order],...</em>입니다. <em>field</em> 매개 변수는 다음 문자열 중 하나일 수 있습니다.
 <ul>
 <li><strong>date</strong></li>
 <li><strong>acquisitionType</strong></li>
@@ -247,7 +244,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 ### 요청 예제
 
-다음 예제에서는 IAP 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *inAppProductId* 및 *applicationId* 값을 IAP에 대한 제품 ID와 앱에 대한 스토어 ID로 적절하게 바꿉니다.
+다음 예제에서는 추가 기능 구입 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *inAppProductId* 및 *applicationId* 값을 추가 기능 또는 앱에 대한 스토어 ID로 적절하게 바꿉니다.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -267,22 +264,23 @@ Authorization: Bearer <your access token>
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 값      | 배열  | 집계 IAP 구입 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [IAP 구입 값](#iap-acquisition-values) 섹션을 참조하세요.                                                                                                              |
-| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 IAP 구입 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
+| 값      | 배열  | 집계 추가 기능 구입 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 아래 [추가 기능 구입 값](#add-on-acquisition-values) 섹션을 참조하세요.                                                                                                              |
+| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 10000으로 설정되어 있지만 쿼리에 대한 추가 기능 구입 데이터의 행이 10000개보다 많은 경우 이 값이 반환됩니다. |
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                                 |
 
 <span/>
 
-### IAP 구입 값
+<span id="add-on-acquisition-values" />
+### 추가 기능 구입 값
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
 | 값               | 유형    | 설명                                                                                                                                                                                                                              |
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | 문자열  | 구입 데이터의 날짜 범위에 대한 시작 날짜입니다. 요청에서 하루를 지정한 경우 이 값은 해당 날짜입니다. 요청에서 주, 월 또는 다른 날짜 범위를 지정한 경우 이 값은 해당 날짜 범위의 시작 날짜입니다. |
-| inAppProductId      | 문자열  | 구입 데이터를 검색할 IAP의 제품 ID입니다.                                                                                                                                                                 |
-| inAppProductName    | 문자열  | IAP의 표시 이름                                                                                                                                                                                                             |
-| applicationId       | 문자열  | IAP 구입 데이터를 검색할 앱의 스토어 ID입니다.                                                                                                                                                           |
+| inAppProductId      | 문자열  | 구입 데이터를 검색할 추가 기능의 스토어 ID입니다.                                                                                                                                                                 |
+| inAppProductName    | 문자열  | 추가 기능의 표시 이름입니다.                                                                                                                                                                                                             |
+| applicationId       | 문자열  | 추가 기능 구입 데이터를 검색하려는 앱의 스토어 ID입니다.                                                                                                                                                           |
 | applicationName     | 문자열  | 앱의 표시 이름                                                                                                                                                                                                             |
 | deviceType          | 문자열  | 구입을 완료한 디바이스의 유형입니다. 지원되는 문자열의 목록은 위의 [필드 필터링](#filter-fields) 섹션을 참조하세요.                                                                                                  |
 | orderName           | 문자열  | 주문의 이름입니다.                                                                                                                                                                                                                   |
@@ -306,7 +304,7 @@ Authorization: Bearer <your access token>
     {
       "date": "2015-01-02",
       "inAppProductId": "9NBLGGH3LHKL",
-      "inAppProductName": "Contoso IAP 7",
+      "inAppProductName": "Contoso add-on 7",
       "applicationId": "9NBLGGGZ5QDR",
       "applicationName": "Contoso Demo",
       "deviceType": "Phone",
@@ -316,7 +314,7 @@ Authorization: Bearer <your access token>
       "market": "GB",
       "gender": "m",
       "ageGroup": "50orover",
-      "acquisitionType": "Iap",
+      "acquisitionType": "iap",
       "acquisitionQuantity": 1
     }
   ],
@@ -339,6 +337,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -7,7 +7,7 @@ label: Manage audio input issues
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 4f926969b5f9f20de904aeaf749e69c0ded3c052
+ms.openlocfilehash: 12f46dd0ec375977cc33efeb73757c5ec75077bd
 
 ---
 
@@ -120,6 +120,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

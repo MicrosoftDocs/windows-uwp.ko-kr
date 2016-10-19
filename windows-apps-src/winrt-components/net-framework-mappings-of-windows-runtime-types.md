@@ -5,7 +5,7 @@ description: "다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET F
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 286f479c86c06c9d08b4e36cf9776b590a13cc5f
+ms.openlocfilehash: 1367664cc4278bb555764cbfdf13ce6653f94920
 
 ---
 
@@ -86,6 +86,6 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,16 +4,14 @@ title: "백그라운드 작업 등록"
 description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 ---
 
 # 백그라운드 작업 등록
 
-
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -23,7 +21,7 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
 대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 
-이 항목에서는 등록해야 하는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업을 작성하는 방법에 대한 자세한 내용은 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+이 항목은 단일 프로세스 백그라운드 작업과 별도 프로세스로 실행되는 백그라운드 작업에 모두 적용됩니다. 이 항목에서는 등록해야 하는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업을 작성하는 방법은 [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)을 참조하세요.
 
 이 항목에서는 백그라운드 작업을 등록하는 유틸리티 함수를 안내합니다. 이 유틸리티 함수는 작업을 여러 번 등록하기 전에 기존 등록을 확인하여 여러 번 등록과 관련된 문제를 방지하며 백그라운드 작업에 시스템 조건을 적용할 수 있습니다. 이 연습에는 이 유틸리티의 전체 작업 예제가 포함됩니다.
 
@@ -35,8 +33,11 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
 ## 메서드 서명 및 반환 형식 정의
 
-
 이 메서드는 작업 진입점, 작업 이름, 미리 구성된 백그라운드 작업 트리거 및 백그라운드 작업에 대한 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)(옵션)을 받아들입니다. 이 메서드는 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) 개체를 반환합니다.
+
+> [!Important]
+> `taskEntryPoint` - 별도의 프로세스로 실행되는 백그라운드 작업의 경우 네임스페이스 이름, '.' 및 백그라운드 클래스가 포함된 클래스 이름으로 구성되어야 합니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgruondTask1"이 됩니다.
+> 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, 단일 프로세스 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -65,7 +66,6 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 > ```
 
 ## 기존 등록 확인
-
 
 작업이 이미 등록되었는지 확인합니다. 작업이 여러 번 등록된 경우 작업이 트리거될 때마다 두 번 이상 실행되어 CPU가 초과되거나 예기치 않은 동작이 발생할 수 있기 때문에 이것을 확인해야 합니다.
 
@@ -145,6 +145,7 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 그런 다음 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 사용하여 작업을 등록합니다. 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)을 반환합니다.
 
 > **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+> **참고** 앱과 동일한 프로세스에서 실행되는 백그라운드 작업을 등록하는 경우 `taskEntryPoint` 매개 변수에 대해 `String.Empty` 또는 `null`을 전송합니다.
 
 다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.
 
@@ -180,12 +181,16 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 >     var builder = new BackgroundTaskBuilder();
 >
 >     builder.Name = name;
->     builder.TaskEntryPoint = taskEntryPoint;
+>
+>     // single-process background tasks don't set TaskEntryPoint
+>     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
+>     {
+>         builder.TaskEntryPoint = taskEntryPoint;
+>     }
 >     builder.SetTrigger(trigger);
 >
 >     if (condition != null)
 >     {
->
 >         builder.AddCondition(condition);
 >     }
 >
@@ -368,13 +373,12 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
 > **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
 ## 관련 항목
-
 
 ****
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -396,6 +400,6 @@ ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

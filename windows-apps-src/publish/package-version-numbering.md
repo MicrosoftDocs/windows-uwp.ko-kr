@@ -4,8 +4,8 @@ Description: "Windows 스토어에서는 버전 번호와 관련 특정 규칙�
 title: "패키지 버전 번호"
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9910ca5b5a3fd5d24643a1dfc6da3644d561c617
+ms.sourcegitcommit: ca273ab6d881b350c2f5a48eafee38c74ac0f36a
+ms.openlocfilehash: 2668152ba471986e00831bdcf46e5a2feba54dcd
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 9910ca5b5a3fd5d24643a1dfc6da3644d561c617
 
 Windows 10 패키지의 버전 번호는 동일한 앱에 대해 게시할 예정인 Windows 8, Windows 8.1 및/또는 Windows Phone 8.1 패키지나 이전에 게시한 OS 버전용 패키지의 모든 버전 번호보다 항상 높아야 합니다. 자세한 내용은 [이전에 게시된 앱에 Windows 10용 패키지 추가](guidance-for-app-package-management.md#adding-packages-for-windows-10-to-a-previously-published-app)를 참조하세요.
 
-> **참고** 버전 번호의 마지막(네 번째) 섹션은 스토어용으로 예약되어 있으므로 0으로 두어야 합니다.
+> **중요** 버전 번호의 마지막(네 번째) 섹션은 스토어 사용을 위해 예약되며 패키지를 빌드할 때 0이어야 합니다. 단, 스토어가 이 섹션의 값을 변경할 수 있습니다.
 
 게시된 제출에서 Windows 10 패키지를 선택할 때 Windows 스토어는 항상 고객의 디바이스에 적용되는 가장 높은 버전의 패키지를 사용합니다. 따라서 특정 디바이스 유형의 고객에게 제공되는 패키지에 대한 유연성 및 제어 기능이 향상됩니다. 특히, 이러한 패키지를 순서에 상관없이 제출할 수 있습니다. 이후의 각 제출에서 더 높은 버전의 패키지를 제공하지 않아도 됩니다.
 
@@ -82,6 +82,6 @@ Windows 8 및 Windows 8.1을 대상으로 하는 .appx 패키지의 경우 아�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ Description: "제출 프로세스 중에 앱 속성 페이지의 앱 선언 섹�
 title: "앱 선언"
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 419d41de3ba26f6470ad99b44826f2935aea4eff
 
 ---
 
@@ -17,7 +17,7 @@ ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
 
 ## 이 앱은 사용자가 구매할 수 있지만 Windows 스토어 상거래 시스템을 사용할 수 없습니다.
 
-앱에서 바로 구매할 수 있는 기회를 제공하는 앱에서는 일반적으로 Microsoft 앱에서 바로 구매 API를 사용하여 IAP를 만들고 [제출](iap-submissions.md)하기 때문에 대부분은 앱에서는 이 상자가 선택되지 않은 상태로 유지되어야 합니다. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에 따라 2015년 6월 29일 이전에 만들어지고 제출된 앱은 구매 기능이 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8)을 준수하는 한 Microsoft의 상거래 엔진을 사용하지 않고 앱에서 바로 구매 기능을 제공할 수 있습니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
+앱에서 바로 구매할 수 있는 기회를 제공하는 앱에서는 일반적으로 Microsoft 앱에서 바로 구매 API를 사용하여 [추가 기능을 만들고 제출](add-on-submissions.md)하기 때문에 대부분은 앱에서는 이 상자가 선택되지 않은 상태로 유지되어야 합니다. [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에 따라 2015년 6월 29일 이전에 만들어지고 제출된 앱은 구매 기능이 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_8)을 준수하는 한 Microsoft의 상거래 엔진을 사용하지 않고 앱에서 바로 구매 기능을 제공할 수 있습니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
 
 ## 이 앱은 접근성 준수하도록 테스트되었습니다.
 
@@ -67,6 +67,6 @@ ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

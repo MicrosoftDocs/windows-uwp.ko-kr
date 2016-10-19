@@ -5,7 +5,7 @@ description: "이 문서에서는 프로젝트가 Windows 런타임 환경에서
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
 
 ---
 
@@ -147,6 +147,6 @@ Marble Maze 응용 프로그램 코드가 구성된 방식 및 DirectX UWP 앱�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

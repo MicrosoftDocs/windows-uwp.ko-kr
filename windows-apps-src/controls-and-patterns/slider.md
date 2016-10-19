@@ -6,21 +6,33 @@ ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 64ae11c8c7e46d973c13cacb69482fd957e0488d
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
 
 ---
 # 슬라이더
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx"><strong>Slider 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx"><strong>Value 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx"><strong>ValueChanged 이벤트</strong></a></li>
+</ul>
 
--   [**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)
--   [**Value 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)
--   [**ValueChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -167,12 +179,12 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 ## 관련 항목
 
 **디자이너용**
-- [토글 스위치에 대한 지침](toggles.md) 
-           **개발자용(XAML)**
+- [토글 스위치에 대한 지침](toggles.md)
+**개발자용(XAML)**
 - [**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

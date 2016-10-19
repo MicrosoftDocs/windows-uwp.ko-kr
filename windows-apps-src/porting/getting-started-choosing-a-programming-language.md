@@ -5,11 +5,11 @@ ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "프로그래밍 언어 선택"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+ms.openlocfilehash: c7d99923a0deac61e289d3a2796b8dd1720430b4
 
 ---
 
-# 시작&#58; 프로그래밍 언어 선택
+# 시작: 프로그래밍 언어 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -145,6 +145,6 @@ C#은 간편한 언어이며 .NET을 구성하는 많은 지원 클래스 및 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

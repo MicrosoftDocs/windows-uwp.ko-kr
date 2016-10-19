@@ -5,7 +5,7 @@ title: "타이머를 사용하여 작업 항목 제출"
 description: "타이머가 경과된 후 실행되는 작업 항목을 만드는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
+ms.openlocfilehash: ea45e3b61f7646b5df978f36961bd6264ff08fe2
 
 ---
 # 타이머를 사용하여 작업 항목 제출
@@ -233,6 +233,6 @@ ms.openlocfilehash: 033669a781aa85cc2c90fa11816e385ffefa997d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

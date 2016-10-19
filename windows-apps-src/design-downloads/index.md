@@ -1,11 +1,11 @@
 ---
 description: "UWP 앱 사용자 인터페이스 레이아웃 및 컨트롤 디자인을 위한 최신 다운로드 및 도구를 가져옵니다."
-keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
+keywords: "UWP 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, UWP 도구"
 title: "UWP 앱용 디자인 다운로드 – Windows 앱 개발"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
-ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
+ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
+ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Photoshop에서 UWP 앱을 디자인하기 위한 컨트롤 및 레이아�
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Adobe Illustrator용 Redliner 도구</b><br/>
-Illustrator 프로토타입에서 쉽게 redline을 생성합니다. <br/>[Adobe Illustrator용 Redliner 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>    
+Illustrator 프로토타입에서 쉽게 redline을 생성합니다. (Adobe Illustrator CC 이상이 필요합니다.)<br/>[Adobe Illustrator용 Redliner 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
   </div>
   <div class="side-by-side-content-right">
 <a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
@@ -109,6 +109,6 @@ Illustrator 프로토타입에서 쉽게 redline을 생성합니다. <br/>[Adobe
 <b>더 많은 코드가 필요하세요?</b> Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. [샘플 포털로 이동](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

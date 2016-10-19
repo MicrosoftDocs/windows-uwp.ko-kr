@@ -4,8 +4,8 @@ ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: "앱에서 AdControl 오류를 검색하는 방법을 알아봅니다."
 title: "JavaScript에서 오류 처리 연습"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: e7ce3cd96286454aaa987483ed4df1cefbee5b57
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
 # JavaScript에서 오류 처리 연습
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 앱에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 오류를 검색하는 방법을 보여 줍니다.
 
@@ -87,6 +87,6 @@ ms.openlocfilehash: d26a8efeb253c6c793d8edd21d7452bbf15da261
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

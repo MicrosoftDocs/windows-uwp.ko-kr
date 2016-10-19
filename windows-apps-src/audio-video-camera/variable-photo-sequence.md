@@ -4,8 +4,8 @@ ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: "이 문서에서는 가변 사진 시퀀스를 캡처하여 여러 이미지 프레임을 빠른 속도로 연속으로 캡처하고 서로 다른 초점, 플래시, ISO, 노출 및 노출 보정 설정을 사용하도록 각 프레임을 구성할 수 있도록 하는 방법을 보여 줍니다."
 title: "가변 사진 시퀀스"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: b4f9bc3ad0340a893474360a542f35315ef01712
 
 ---
 
@@ -18,8 +18,8 @@ ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
 
 HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 않으려는 경우에는 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) API를 사용하여 Windows에서 기본 제공되는 HDR 기능을 사용할 수 있습니다. 자세한 내용은 [HDR(High Dynamic Range) 사진 캡처](high-dynamic-range-hdr-photo-capture.md)를 참조하세요.
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
 ## 가변 사진 시퀀스 캡처를 사용하도록 앱 설정
 
@@ -90,7 +90,8 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -101,6 +102,6 @@ HDR 이미지를 캡처하지만 고유한 처리 알고리즘을 구현하지 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

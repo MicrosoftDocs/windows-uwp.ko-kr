@@ -5,7 +5,7 @@ description: "URI 연결을 사용하여 다른 앱이 특정 URI 스키마를 �
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 2736267bf72b1cadd2c635b15daf6975a70937df
+ms.openlocfilehash: 2d3d647985701a7bbccc606fd485ad9f6361f9e7
 
 ---
 # 예약된 파일 및 URI 스키마 이름
@@ -128,6 +128,6 @@ URI 연결을 사용하여 다른 앱이 특정 URI 스키마를 시작할 때 �
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

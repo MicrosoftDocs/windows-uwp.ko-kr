@@ -5,7 +5,7 @@ title: "센서 보정"
 description: "나침반, 경사계 방향 센서 같이 자력계를 기반으로 한 디바이스의 센서는 환경 요인으로 인해 보정이 필요해질 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4652d20b8dd0d04932dcbda330efa8e9367f53d1
+ms.openlocfilehash: 8b669d7f939da9ee93e5a49d2f6434d5573e23c0
 
 ---
 # 센서 보정
@@ -34,6 +34,6 @@ ms.openlocfilehash: 4652d20b8dd0d04932dcbda330efa8e9367f53d1
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

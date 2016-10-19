@@ -4,8 +4,8 @@ Description: "Windows 스토어에 제출할 앱 패키지를 준비하려면 �
 title: "앱 패키지 요구 사항"
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+ms.sourcegitcommit: c15d4153f6ae83cc7bf1ae02d834bd07189e38ab
+ms.openlocfilehash: 250e94c2766227cabad791db6d994bcfb1a2ac33
 
 ---
 
@@ -24,7 +24,7 @@ Microsoft Visual Studio를 개발 환경으로 사용 중인 경우 빠르고 �
 > **참고** 모든 파일 이름에는 ANSI를 사용해야 합니다. 
 
 
-Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 Microsoft 계정을 사용하여 로그인해야 합니다. 패키지 매니페스트의 일부분은 계정과 관련된 고유한 정보입니다. 이 정보는 자동으로 검색 및 추가됩니다.
+Visual Studio에서 패키지를 만들 때 개발자 계정과 연결된 동일한 계정을 사용하여 로그인해야 합니다. 패키지 매니페스트의 일부분은 계정과 관련된 고유한 정보입니다. 이 정보는 자동으로 검색 및 추가됩니다.
 
 앱 패키지를 빌드하는 경우 Visual Studio에서 .appx 파일이나 .appxupload 파일(또는 Windows Phone 8.1 이하의 경우 .xap 파일)을 만들 수 있습니다. Windows 10을 대상으로 하는 앱의 경우 항상 [패키지](upload-app-packages.md) 페이지에서 .appxupload 파일을 업로드하세요. 스토어용 UWP 앱을 패키징하는 방법에 대한 자세한 내용은 [Windows 10용 유니버설 Windows 앱 패키징](http://go.microsoft.com/fwlink/p/?LinkId=620193 )을 참조하세요.
 
@@ -85,6 +85,6 @@ StoreManifest.xml은 앱 패키지에 포함될 수 있는 선택적 구성 파�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

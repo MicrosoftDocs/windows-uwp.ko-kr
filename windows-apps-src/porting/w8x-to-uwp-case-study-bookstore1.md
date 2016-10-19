@@ -5,11 +5,11 @@ ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; Bookstore1
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -129,6 +129,6 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

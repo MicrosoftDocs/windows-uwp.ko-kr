@@ -2,21 +2,21 @@
 author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다."
-title: "CameraCaptureUI를 사용하여 사진 및 비디오 캡처"
+title: "Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처"
 translationtype: Human Translation
-ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
-ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
+ms.sourcegitcommit: b4bf4d74ae291186100a553a90fd93f890b8ece4
+ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
 
 ---
 
-# CameraCaptureUI를 사용하여 사진 및 비디오 캡처
+# Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다. 이 기능은 사용하기 쉬우며 몇 줄의 코드로 앱이 사용자가 캡처한 사진 또는 동영상을 가져올 수 있도록 합니다.
 
-시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)를 참조하세요.
+자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
 ## CameraCaptureUI로 사진 캡처
 
@@ -26,13 +26,18 @@ ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
 사진을 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058) 속성을 사용하여 사진의 이미지 형식과 같은 반환된 사진에 대한 속성을 지정할 수 있습니다. 기본적으로 이 카메라 캡처 UI는 [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성을 사용하여 해제할 수 있지만 반환되기 전에 사진을 자르는 데 사용할 수 있습니다. 이 예제에서는 [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044)를 설정하여 반환된 이미지가 200x200 픽셀 단위로 되도록 요청합니다.
 
-**참고** CameraCaptureUI의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
+> [!NOTE]
+> **CameraCaptureUI**의 이미징 자르기는 모바일 디바이스 패밀리의 디바이스에 대해 지원되지 않습니다. [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042) 속성 값은 앱이 이러한 디바이스에서 실행되는 경우 무시됩니다.
 
 [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057)를 호출하고 [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040)를 지정하여 사진을 캡처하도록 지정할 수 있습니다. 이 메서드는 캡처가 성공적으로 수행되는 경우 이미지를 포함하는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 인스턴스를 반환합니다. 사용자가 캡처를 취소하면 반환되는 개체는 null입니다.
 
 [!code-cs[CapturePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCapturePhoto)]
 
-캡처된 사진이 들어 있는 **StorageFile**이 있으면 여러 다른 유니버설 Windows 앱 기능에서 사용할 수 있는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체를 만들 수 있습니다.
+캡처한 사진을 포함하고 있는 **StorageFile**은 동적으로 생성된 이름이 지정되고 앱의 로컬 폴더에 저장됩니다. 캡처한 사진을 더 잘 구성하기 위해 해당 파일을 다른 폴더로 이동하는 것이 좋습니다.
+
+[!code-cs[CopyAndDeletePhoto](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetCopyAndDeletePhoto)]
+
+앱에서 사진을 사용하려면 여러 다양한 유니버설 Windows 앱 기능에 사용할 수 있는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체를 만드는 것이 좋습니다.
 
 먼저 프로젝트에 [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/br226400) 네임스페이스를 포함해야 합니다.
 
@@ -93,15 +98,16 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 비디오 클립을 캡처한 후 컴퍼지션에 계속 추가할 수 있습니다. 미디어 컴퍼지션에 대한 자세한 내용은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요.
 
-**참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> [!NOTE] 
+> 이 문서는 UWP(Universal Windows Platform) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
-* [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
  
 
  
@@ -112,6 +118,6 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

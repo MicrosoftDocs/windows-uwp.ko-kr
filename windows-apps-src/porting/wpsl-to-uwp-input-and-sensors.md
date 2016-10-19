@@ -1,11 +1,11 @@
 ---
 author: mcleblanc
 description: "디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다."
-title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅&#39;"
+title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅'"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b29e741c9cad68083502b25445b965fc266ef6e
+ms.openlocfilehash: f3b3e32461b7804639c1c0e8ff9b55fa57a23cf0
 
 ---
 
@@ -29,9 +29,9 @@ Windows Phone Silverlight 앱에는 삭제 표시한 다음 이후에 다시 활
 
 ## Camera
 
-Windows Phone Silverlight 카메라 캡처 코드는 **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** 또는 **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스를 사용합니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) 항목을 참조하세요. 이 방법을 사용하여 사진을 저장소 파일에 캡처할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트에서 **마이크** 및 **웹캠**[**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)을 설정해야 합니다.
+Windows Phone Silverlight 카메라 캡처 코드는 **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** 또는 **Microsoft.Phone.Tasks.CameraCaptureTask** 클래스를 사용합니다. 해당 코드를 UWP(유니버설 Windows 플랫폼)로 포팅하기 위해 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 클래스를 사용할 수 있습니다. 코드 예제는 [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836) 항목을 참조하세요. 이 방법을 사용하여 사진을 저장소 파일에 캡처할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트에서 **마이크** 및 **webcam** [**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)을 설정해야 합니다.
 
-다른 옵션으로는 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스가 있으며, 이 클래스도 **마이크** 및 **웹캠**[**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)이 필요합니다.
+다른 옵션으로는 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 클래스가 있으며, 이 클래스도 **마이크** 및 **webcam** [**디바이스 기능**](https://msdn.microsoft.com/library/windows/apps/dn934747)이 필요합니다.
 
 필터 앱은 UWP 앱에 대해 지원되지 않습니다.
 
@@ -96,6 +96,6 @@ UWP 앱에서 **PhoneApplicationPage.SupportedOrientations** 및 **Orientation**
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

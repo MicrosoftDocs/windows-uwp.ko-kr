@@ -1,59 +1,69 @@
-﻿---
+---
 author: jnHs
-Description: When submitting an add-on, the options on the Pricing and availability page determine what to charge for your add-on and how it should be offered to customers.
-title: Set add-on pricing and availability
+Description: "추가 기능을 제출할 때 가격 책정 및 가용성 페이지의 옵션을 사용하여 추가 기능에 대해 청구할 금액 및 고객에게 제공할 방법을 결정합니다."
+title: "추가 기능 가격 책정 및 가용성 설정"
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: 17fe4e836dc75e0dfd44389a503a6a94afe44f42
+
 ---
 
-# Set add-on pricing and availability
+# 추가 기능 가격 책정 및 가용성 설정
 
 
-When submitting an add-on, the options on the **Pricing and availability** page determine what to charge for your add-on and how it should be offered to customers.
+추가 기능을 제출할 때 **가격 책정 및 가용성** 페이지의 옵션을 사용하여 추가 기능에 대해 청구할 금액 및 고객에게 제공할 방법을 결정합니다.
 
-## Base price
-
-
-You must select a base price for your add-on. These price tiers are the same as the price tiers for apps, starting at .99 USD. You also have the option to offer your add-on for free.
-
-## Markets and custom prices
+## 기본 가격
 
 
-By default, your add-on will be listed in all possible markets, including any future markets that we may add later, at its base price.
+추가 기능의 기본 가격을 선택해야 합니다. 이들 기준 가격은 0.99 USD에서 시작하는 앱의 기준 가격과 같습니다. 추가 기능을 무료로 제공할 수도 있습니다.
 
-However, just as with an app, you have the option to choose the markets in which you'd like to offer your add-on. In most cases you'll want to pick the same set of markets as the app, but you have the flexibility to make changes as needed. You can also set custom prices so that you can charge different prices for the add-on in different markets.
-
-For more info and a full list of the available markets, see [Define pricing and market selection](define-pricing-and-market-selection.md).
-
-## Sale pricing
+## 지역/국가 및 사용자 지정 가격
 
 
-If you want to offer your add-on at a reduced price for a limited period of time, you can create and schedule a sale. For more info, see [Put apps and add-ons on sale](put-apps-and-add-ons-on-sale.md).
+기본적으로 추가 기능은 나중에 추가될 수 있는 잠재 지역/국가를 포함하여 모든 가능한 지역/국가에 기본 가격으로 나열됩니다.
 
-## Distribution and visibility
+그러나 앱과 마찬가지로 추가 기능을 제공하려는 지역/국가를 선택할 수 있습니다. 대부분은 앱과 같은 지역/국가를 선택하려고 하지만 필요에 따라 변경할 수도 있습니다. 지역/국가에 따라 다른 추가 기능 가격을 청구할 수 있도록 사용자 지정 가격을 설정할 수도 있습니다.
+
+자세한 내용과 사용 가능한 지역/국가의 전체 목록을 보려면 [가격 책정 및 지역/국가 선택 정의](define-pricing-and-market-selection.md)를 참조하세요.
+
+## 할인 판매 가격 책정
 
 
-You can determine whether your add-on should be offered for purchase to customers. Choose from one of the following options:
+한정된 기간 동안 추가 기능을 할인된 가격으로 제공하려는 경우 할인 판매를 만들고 예약할 수 있습니다. 자세한 내용은 [할인 앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)를 참조하세요.
 
--   **Available for purchase. May be displayed in your app's listing:** This is the default setting and is recommended unless you want to restrict access to your add-on. Leave this option checked for add-ons that will be made available to any customer.
--   **Available for purchase. Not displayed in your app's listing:** Choosing this option allows customers to purchase the add-on from within your app, but the add-on will not be displayed in your app's Store listing. Use this only when the offer is not broadly available, for example during initial periods of internal testing.
--   **No longer available for purchase. Not displayed in your app's listing.** Choosing this option means that the add-on won't be displayed in your app's listing, and no new customers may purchase the add-on. However, **this option is not supported for customers on Windows 8.1 or earlier**. If your app is available on Windows 8.1 or earlier, the add-on will still be available for purchase to those customers. To stop offering the add-on to customers on Windows 8.1 or earlier, you'll need to update your app to remove the code that offers the add-on, then publish a new submission for the app. This is recommended even if your app doesn't target Windows 8.1 or earlier; it's a better experience for your customers if you never offer them an add-on that you've opted to make unavailable.
+## 배포 및 표시
+
+
+고객에게 추가 기능을 구매하도록 제공할지 결정할 수 있습니다. 다음 옵션 중 하나를 선택합니다.
+
+-   **구매할 수 있습니다. 앱 목록에 표시되지 않습니다.** 이 옵션은 기본 설정이고 추가 기능에 대한 액세스를 제한하려는 경우 이 옵션을 사용하는 것이 좋습니다. 모든 고객이 사용할 수 있도록 설정할 추가 기능에는 이 옵션을 선택해 둡니다.
+-   **구매할 수 있습니다. 앱 목록에 표시되지 않습니다.** 이 옵션을 선택하면 고객이 앱 내에서 추가 기능을 구매할 수 있지만 추가 기능이 앱의 스토어 목록에 표시되지 않습니다. 내부 테스트의 초기 기간과 같이 제품을 광범위하게 사용할 수 없는 경우에만 이 옵션을 사용합니다.
+-   **더 이상 구매할 수 없습니다. 앱 목록에 표시되지 않습니다.** 이 옵션을 선택하면 추가 기능이 앱 목록에 표시되지 않고 새로운 고객이 추가 기능을 구매할 수 없습니다. 그러나 **이 옵션은 Windows 8.1 이하를 사용하는 고객에게 지원되지 않습니다**. Windows 8.1 이하에서 앱을 구매할 수 있으면 해당 고객은 추가 기능을 계속 구매할 수 있습니다. Windows 8.1 이하를 사용하는 고객에게 이 추가 기능을 더 이상 제공하지 않으려면 앱을 업데이트하여 추가 기능을 제공하는 코드를 제거하고 앱에 대한 새 제출을 게시해야 합니다. 앱이 Windows 8.1 이하를 대상으로 하지 않더라도 이 옵션을 사용하는 것이 좋습니다. 구매할 수 없도록 선택한 추가 기능을 고객에게 제공하지 않는 것이 고객에게는 더 나은 환경입니다.
     
- > **Note**  Choosing this setting, and/or submitting an app update that removes the add-on from your app's code, does not affect any customers who have already purchased the add-on, regardless of their operating system.
+ > **참고** 이 설정을 선택하거나 앱 코드에서 추가 기능을 제거하는 앱 업데이트를 제출해도 운영 체제와 관계없이 이미 추가 기능을 구매한 고객에게는 영향을 주지 않습니다.
 
 
-## Publish date
+## 게시 날짜
 
-You can indicate when your add-on submission should be published by choosing an option in the **Publish date** section.
+추가 기능 제출을 게시할 날짜를 지정하려면 **게시 날짜** 섹션에서 옵션을 선택합니다.
 
--   Choose **Publish my add-on as soon as it passes certification** to make this submission available in the Store as soon as possible.
--   Choose **Publish this add-on manually** if you don't want your submission to be published until you indicate that it should be. You can do this from the certification status page by clicking **Publish now**, or by selecting a specific date as described below.
--   Choose **No sooner than \[date\]** to ensure that the submission is not published until a certain date. With this option, your submission will be released as soon as possible on or after the date you specify. The date must be at least 24 hours in the future. Along with the date, you can also specify the time at which the submission should begin to be published.
+-   **내 추가 기능이 인증을 통과하는 즉시 게시**를 선택하여 가능하면 빨리 이 제출을 스토어에서 판매하도록 설정합니다.
+-   게시되도록 지정할 때까지 제출이 게시되지 않게 하려면 **이 추가 기능을 수동으로 게시**를 선택합니다. **지금 게시**를 클릭하거나 아래 설명된 대로 특정 날짜를 선택하여 인증 상태 페이지에서 이 작업을 수행할 수 있습니다.
+-   특정 날짜까지 제출이 게시되지 않도록 하려면 **배포 예정 날짜: \[date\]**를 선택합니다. 이 옵션을 사용하면 제출이 지정하는 날짜 이후에 최대한 빨리 릴리스됩니다. 날짜는 최소 24시간 이후여야 합니다. 날짜와 함께 제출이 게시되기 시작하는 시간을 지정할 수도 있습니다.
 
- > **Note**  Delays during certification or publishing could cause the actual release date to be later than the date you request. The Windows Store cannot guarantee that your add-on (or update) will be available on a specific date.
- 
+ > **참고** 인증 또는 게시의 지연으로 실제 릴리스 날짜는 요청하는 날짜보다 늦어질 수 있습니다. Windows 스토어에서는 추가 기능 또는 업데이트가 특정 날짜에 제공된다고 보장할 수 없습니다.
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

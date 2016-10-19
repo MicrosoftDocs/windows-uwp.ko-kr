@@ -1,20 +1,20 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "잉크 스트로크를 필기 인식을 사용하여 텍스트로 변환하거나 사용자 지정 인식을 사용하여 모양으로 변환합니다."
-title: "Windows 잉크 스트로크를 텍스트로 인식"
+title: "Windows Ink 스트로크를 텍스트로 인식"
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4351901984f9b1f134cfc42acbbc7f756dc6c11f
+ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
+ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
 
 ---
 
-# Windows 잉크 스트로크를 텍스트로 인식
+# Windows Ink 스트로크를 텍스트로 인식
 
-잉크 스트로크를 필기 인식을 사용하여 텍스트로 변환하거나 사용자 지정 인식을 사용하여 모양으로 변환합니다.
+Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트로 변환합니다.
 
 **중요 API**
 
@@ -674,6 +674,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -6,20 +6,33 @@ ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f565acbebbee8b8fb88a72970c9dbe3202ba24df
 
 ---
 # 확인란
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 확인란은 작업 항목을 선택하거나 선택 취소하는 데 사용됩니다. 사용자가 선택할 수 있는 단일 항목이나 여러 항목의 목록에도 사용할 수 있습니다. 컨트롤에는 3개의 선택 상태, 즉 선택되지 않음, 선택됨 및 확정되지 않음이 있습니다. 하위 항목 컬렉션에 선택되지 않음과 선택됨 상태가 둘 다 있는 경우에 확정되지 않은 상태를 사용합니다.
 
 ![확인란 상태의 예](images/templates-checkbox-states-default.png)
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209316"><strong>CheckBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Checked 이벤트</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>IsChecked 속성</strong></a> </li>
+</ul>
 
--   [**CheckBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209316)
--   [**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
--   [**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
+</div>
+</div>
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -295,6 +308,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

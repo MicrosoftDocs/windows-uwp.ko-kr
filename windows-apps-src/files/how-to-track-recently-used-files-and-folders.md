@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: "최근에 사용한 파일 및 폴더 추적"
 description: "사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
 ---
 # 최근에 사용한 파일 및 폴더 추적
@@ -42,17 +42,17 @@ ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
 
  ## MRU에 선택한 파일 추가
 
--   사용자가 선택하는 파일은 해당 사용자가 반복적으로 돌아가는 파일인 경우가 많습니다. 따라서 사용자가 파일을 선택하는 즉시 해당 파일을 앱의 MRU에 추가하는 것이 좋습니다. 다음과 같이 하세요.
+-   사용자가 선택하는 파일은 해당 사용자가 반복적으로 돌아가는 파일인 경우가 많습니다. 따라서 사용자가 파일을 선택하는 즉시 해당 파일을 앱의 MRU에 추가하는 것이 좋습니다. 방법은 다음과 같습니다.
 
     ```CSharp
     ...
-    
+
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
 
     var mru = Windows.Storage.AccessCache.StorageApplicationPermissions.MostRecentlyUsedList;
     string mruToken = mru.Add(file, "profile pic");
     ```
-    
+
     [**StorageItemMostRecentlyUsedList.Add**](https://msdn.microsoft.com/library/windows/apps/br207476)가 오버로드됩니다. 이 예제에서는 메타데이터를 파일과 연결할 수 있도록 [**Add(IStorageItem, String)**](https://msdn.microsoft.com/library/windows/apps/br207481)를 사용합니다. 메타데이터를 설정하면 항목의 용도(예: "프로필 사진")를 기록할 수 있습니다. [**Add(IStorageItem)**](https://msdn.microsoft.com/library/windows/apps/br207480)을 호출하면 메타데이터 없이 파일을 MRU에 추가할 수 있습니다. 항목을 MRU에 추가한 경우 메서드는 항목을 검색하는 데 사용되는 고유하게 식별되는 문자열(토큰)을 반환합니다.
 
     **팁** MRU에서 항목을 검색하려면 토큰이 필요하므로 다른 곳에 유지해야 합니다. 앱 데이터에 대한 자세한 내용은 [응용 프로그램 데이터 관리](https://msdn.microsoft.com/library/windows/apps/hh465109)를 참조하세요.
@@ -106,10 +106,6 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

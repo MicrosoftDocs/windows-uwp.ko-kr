@@ -4,8 +4,8 @@ ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
 description: "이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다."
 title: "카메라 독립적 플래시"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
+ms.sourcegitcommit: 1b32633abc9365bf88137dff7c36ba0f2ad05d72
+ms.openlocfilehash: 8c256d8aba08d42fa00b46a01c8b7e773a0ab40c
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다. 이 문서에서는 램프에 대한 참조를 획득하고 해당 설정을 조정하는 것 외에, 사용하지 않을 때 램프 리소스를 적절히 확보하는 방법과 다른 앱에서 사용되고 있을 때 램프 가용성이 달라지는 경우를 감지하는 방법도 설명합니다.
+이 문서에서는 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다. 이 문서에서는 램프에 대한 참조를 획득하고 해당 설정을 조정하는 것 외에, 사용하지 않을 때 램프 리소스를 적절히 해제하는 방법과 다른 앱에서 사용되고 있을 때 램프 가용성이 달라지는 경우를 감지하는 방법도 설명합니다.
 
 ## 디바이스의 기본 램프 가져오기
 
@@ -70,7 +70,8 @@ ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
 
 [!code-cs[DisposeLamp](./code/Lamp/cs/MainPage.xaml.cs#SnippetDisposeLamp)]
 
- 
+## 관련 항목
+- [미디어 재생](media-playback.md)
 
  
 
@@ -80,6 +81,6 @@ ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

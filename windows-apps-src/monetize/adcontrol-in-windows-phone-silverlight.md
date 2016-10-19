@@ -4,39 +4,45 @@ ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "AdControl 클래스를 사용하여 Windows Phone 8.1 또는 Windows Phone 8.0용 Silverlight 앱에서 배너 광고를 표시하는 방법을 알아봅니다."
 title: "Windows Phone Silverlight의 AdControl"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5a12badfb11cfd43c0833522d996da7df73b3d55
+ms.sourcegitcommit: 3a09b37a5cae0acaaf97a543cae66e4de3eb3f60
+ms.openlocfilehash: 40e68625ed666a9242ed83729b2f8113da363735
 
 
 ---
 
-# Windows Phone Silverlight의 AdControl
+# Windows Phone Silverlight에서의 AdControl
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) 클래스를 사용하여 Windows Phone 8.1 또는 Windows Phone 8.0용 Silverlight 앱에서 배너 광고를 표시하는 방법을 보여 줍니다.
 
-## 필수 조건
-
-*  Visual Studio 2015 또는 Visual Studio 2013과 함께 [Microsoft 스토어 참여 및 수익 창출 SDK](http://aka.ms/store-em-sdk)를 설치합니다.
+> **Windows Phone Silverlight 8.0용 참고 사항**&nbsp;&nbsp;배너 광고는 Universal Ad Client SDK 또는 Microsoft Advertising SDK의 이전 릴리스에서 **AdControl**을 사용하고 스토어에서 이미 사용할 수 있는 기존 Windows Phone 8.0 Silverlight 앱에 대해 계속 지원됩니다. 그러나 배너 광고는 더 이상 새 Windows Phone 8.0 Silverlight 프로젝트에서는 지원되지 않습니다. 또한 일부 디버깅 및 테스트 시나리오는 Windows Phone 8.x Silverlight 프로젝트에서 제한됩니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md#silverlight_support)를 참조하세요.
 
 
-## 광고 어셈블리 참조 추가
+## 프로젝트에 광고 어셈블리 추가
 
-Windows Phone Silverlight 프로젝트에 대한 Microsoft Advertising 어셈블리는 Microsoft 스토어 참여 및 수익 창출 SDK를 사용하여 로컬로 설치되지 않습니다. 코드 업데이트를 시작하려면 먼저 Microsoft 스토어 참여 및 수익 창출 SDK에서 광고 조정 지원과 **연결된 서비스**를 사용하여 이러한 어셈블리를 다운로드하고 프로젝트에서 참조합니다.
+먼저 프로젝트에 Windows Phone Silverlight용 Microsoft Advertising 어셈블리가 포함된 NuGet 패키지를 다운로드하여 설치합니다.
 
-1.  Visual Studio에서 **프로젝트** 및 **연결된 서비스 추가**를 클릭합니다.
+1.  Visual Studio에서 프로젝트를 엽니다.
 
-2.  **연결된 서비스 추가** 대화 상자에서 **광고 중재자**를 클릭한 다음 **구성**을 클릭합니다.
+2.  **도구**를 클릭하고, **NuGet 패키지 관리자**를 가리키고, **패키지 관리자 콘솔**을 클릭합니다.
 
-3.  **광고 네트워크 선택**을 클릭하고 **Microsoft Advertising**만 선택합니다.
+3.  **패키지 관리자 콘솔** 창에서 다음 명령 중 하나를 입력합니다.
 
-    이제 필요한 모든 Silverlight용 Microsoft Advertising 어셈블리가 NuGet 패키지를 통해 로컬 프로젝트에 다운로드되며 이러한 어셈블리에 대한 참조가 프로젝트에 자동으로 추가됩니다. 광고 조정 어셈블리에 대한 참조도 프로젝트에 추가됩니다. 이 시나리오에는 필요 없기 때문에 이후 단계에서는 광고 조정 어셈블리 참조를 제거합니다.
+  * Windows Phone 8.0 대상의 프로젝트인 경우 다음 명령을 입력합니다.
 
-4.  **광고 네트워크 선택** 대화 상자에서 **확인**을 클릭합니다. 다음 **가져오기 상태** 확인 페이지에서 **확인**을 다시 클릭하고 마지막으로 **추가**를 클릭하여 **광고 중재자** 대화 상자를 닫습니다.
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL80 -Version 6.2.40501.1
+      ```
 
-5.  **솔루션 탐색기**에서 **참조** 노드를 확장합니다. 마우스 오른쪽 단추로 **Microsoft.AdMediator.WindowsPhone81SL.MicrosoftAdvertising**을 클릭하고 **제거**를 클릭합니다. 이 어셈블리 참조는 이 시나리오에 필요하지 않습니다.
+  * Windows Phone 8.1 대상의 프로젝트인 경우 다음 명령을 입력합니다.
+
+      ```
+      Install-Package Microsoft.Advertising.WindowsPhone.SL81 -Version 8.1.50112
+      ```
+
+    명령을 입력한 후 필요한 모든 Silverlight용 Microsoft Advertising 어셈블리가 NuGet 패키지를 통해 로컬 프로젝트에 다운로드되며 이러한 어셈블리에 대한 참조가 프로젝트에 자동으로 추가됩니다.
 
 ## 앱 코딩
 
@@ -90,8 +96,7 @@ Windows Phone Silverlight 프로젝트에 대한 Microsoft Advertising 어셈블
 
 6.  **Grid** 태그에 **AdControl**에 대한 다음 코드를 추가합니다. **ApplicationId** 및 **AdUnitId** 속성을 [테스트 모드 값](test-mode-values.md)에 제공된 테스트 값에 할당하고 **Height** 및 **Width** 속성을 [배너 광고에 대해 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나로 조정합니다.
 
-    > **참고**  
-    앱을 제출하기 전에 테스트 **ApplicationId** 및 **AdUnitId** 값을 라이브 값으로 바꿉니다.
+    > **참고**&nbsp;&nbsp;앱을 제출하기 전에 테스트 **ApplicationId** 및 **AdUnitId** 값을 라이브 값으로 바꿉니다.
 
     ``` syntax
     <Grid x:Name="ContentPanel" Grid.Row="1">
@@ -114,7 +119,7 @@ Windows Phone Silverlight 프로젝트에 대한 Microsoft Advertising 어셈블
 ## 개발자 센터를 사용하여 라이브 광고와 함께 앱 출시
 
 
-1.  개발자 센터 대시보드에서 앱의 **수익 창출**&gt;**광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft 광고 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+1.  개발자 센터 대시보드에서 앱의 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동한 후 [독립 실행형 Microsoft Advertising 단위를 만듭니다](../publish/monetize-with-ads.md). 광고 단위 유형으로 **배너**를 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
 
 2.  코드에서 테스트 광고 단위 값(**applicationId** 및 **adUnitId**)을 개발자 센터에서 생성한 라이브 값으로 바꿉니다.
 
@@ -127,6 +132,6 @@ Windows Phone Silverlight 프로젝트에 대한 Microsoft Advertising 어셈블
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

@@ -5,7 +5,7 @@ title: "지도 서비스 사용"
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0d775c67492fd6afe9f65f3e5dede865f9037342
+ms.openlocfilehash: 5ba722ae17fce33ff3a6860c17c1ed5f3e6790b8
 
 ---
 
@@ -32,6 +32,6 @@ Windows Phone 8.1 이하의 앱에서 지도 서비스를 사용하려면 지도
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

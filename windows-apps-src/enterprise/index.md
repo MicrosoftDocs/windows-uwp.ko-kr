@@ -1,11 +1,11 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: "이 로드맵은 Windows 10&amp;\\#160;UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능을 간략하게 설명합니다."
+description: "이 로드맵은 Windows 10 및 UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능을 간략하게 설명합니다."
 title: "엔터프라이즈"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 58f7c9739a000b6cac1c000570807587233018ce
+ms.sourcegitcommit: 8f4b9e7b1b30beb8974a17af77e4d7138bd8f829
+ms.openlocfilehash: 75a7723fb8934a59d44da2f075184dd6bbd85d45
 
 ---
 
@@ -30,7 +30,7 @@ Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보
 | [보안 Windows 앱 개발 소개](https://msdn.microsoft.com/library/windows/apps/mt622741) | 이 기초 문서에서는 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 단계의 다양한 Windows 보안 기능에 대해 설명합니다. 또한 이러한 단계를 앱에 통합하는 방법을 설명합니다. 이 문서는 광범위한 항목을 다루며, 빠르고 쉽게 유니버설 Windows 플랫폼 앱을 만들 수 있게 하는 Windows 기능에 대한 앱 설계자의 이해를 돕기 위해 작성되었습니다. |
 | [인증 및 사용자 ID](https://msdn.microsoft.com/library/windows/apps/mt270184) | UWP 앱에는 이 문서에 요약된 여러 가지 사용자 인증 옵션이 있습니다. 엔터프라이즈에는 새로운 Microsoft Passport 기능을 사용하는 것이 좋습니다. Microsoft Passport는 기존 자격 증명을 확인하고 생체 인식 또는 PIN 기반 사용자 제스처로 보호되는 디바이스별 자격 증명을 만들어 암호를 강력한 2FA(2단계 인증)로 대체함으로써 편리하고 안전한 환경을 만듭니다. |
 | [암호화](https://msdn.microsoft.com/library/windows/apps/mt270191) | 암호화 섹션에서는 UWP 앱이 사용할 수 있는 암호화 기능을 간략하게 설명합니다. 중요한 비즈니스 데이터를 쉽게 암호화하는 방법에 대한 기초 연습에서, 암호화 키 조작, MAC, 해시 및 서명 작업 등의 고급 과정에 이르기까지 다양한 문서가 제공됩니다. |
-| [EDP(엔터프라이즈 데이터 보호)](edp-hub.md) | EDP(엔터프라이즈 데이터 보호) 기능이 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태에서의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다. |
+| [WIP(Windows Information Protection)](wip-hub.md) | WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태에서의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 보여 주는 허브 항목입니다. |
 
  
 
@@ -113,9 +113,6 @@ Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

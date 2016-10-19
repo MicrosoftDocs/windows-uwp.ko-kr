@@ -1,19 +1,16 @@
 ---
 description: "Windows 개발자 센터 UWP 스타일 가이드를 사용하여 색, 입력 체계 및 동작을 통해 UWP 앱의 퍼스낼리티를 정의하는 방법을 알아봅니다."
-keywords: uwp style guide, design guidance, typography, motion, sound, motion, app development
+keywords: "UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발"
 title: "UWP 스타일 가이드 - Windows 앱 개발"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 0a7f655a6f122787873adac76ac4dec9d775a154
-ms.openlocfilehash: d55aab04696441dbbcba0cbda61fd599fdacec67
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 4a96db626f6f3682248e7e720c956fa343186b4a
 
 ---
+# UWP 스타일 가이드
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">UWP 스타일 가이드</h1>
-</div>
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -77,6 +74,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

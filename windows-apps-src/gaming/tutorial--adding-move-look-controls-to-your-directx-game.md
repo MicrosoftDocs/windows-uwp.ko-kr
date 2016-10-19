@@ -5,7 +5,7 @@ description: "기존 마우스 및 키보드 이동-보기 컨트롤(마우스 �
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7adbfdb77af6992be9448969f635bdebac58344b
+ms.openlocfilehash: d5bd0a43c1f261e6a12ed947e497d3e45d0ab6a7
 
 ---
 
@@ -589,6 +589,6 @@ myFirstPersonCamera->SetViewParameters(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

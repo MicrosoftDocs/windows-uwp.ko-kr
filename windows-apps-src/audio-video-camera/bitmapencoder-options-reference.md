@@ -4,8 +4,8 @@ ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: "이 문서에서는 BitmapEncoder에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다."
 title: "BitmapEncoder 옵션 참조"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
+ms.sourcegitcommit: de54d389488d8298ea1341b0a6f27a476d38584e
+ms.openlocfilehash: 0ccaf55215cb82633313e145a126db92aa6d16e6
 
 ---
 
@@ -13,7 +13,7 @@ ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 문서에서는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다. 인코딩 옵션은 문자열인 이름과 특정 데이터 형식([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871))의 값으로 정의됩니다. 이미지 작업에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
+이 문서에서는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다. 인코딩 옵션은 문자열인 이름과 특정 데이터 형식([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871))의 값으로 정의됩니다. 이미지 작업 방법은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.
 
 | 이름                    | PropertyType | 사용법 참고 사항                                                                                        | 유효한 형식 |
 |-------------------------|--------------|----------------------------------------------------------------------------------------------------|---------------|
@@ -27,13 +27,13 @@ ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
 | Chrominance             | uint32Array  | 색상 양자화 상수를 포함하는 64개 요소의 배열입니다.                             | JPEG          |
 | JpegYCrCbSubsampling    | uint8        | [**JpegSubsamplingMode**](https://msdn.microsoft.com/library/windows/apps/br226386) 열거형을 사용합니다.                    | JPEG          |
 | SuppressApp0            | boolean      | App0 메타데이터 블록이 생성되지 않게 할지 여부입니다.                                        | JPEG          |
-| EnableV5Header32bppBGRA | boolean      | 알파를 지원하는 버전 5 BMP로 인코딩할지 여부입니다.                                         | BMP           |
+| EnableV5Header32bppBGRA | boolean      | 알파를 지원하는 버전 5 BMP로 인코드할지 여부입니다.                                         | BMP           |
 
  
 
 ## 관련 항목
 
-* [이미징](imaging.md)
+* [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
  
 
  
@@ -44,6 +44,6 @@ ms.openlocfilehash: 510cb363b258d20688ea212856af4b7ac0311e61
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,8 @@ author: msatranjr
 title: "Windows 런타임 구성 요소"
 description: "이 문서에서는 Windows 10에서 지원되며, 쉽게 터치할 수 있는 .NET 앱에서 업무에 중요한 핵심 작업을 담당하는 기존 코드를 사용할 수 있도록 하는 기업 대상 기능에 대해 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 4e9f3de68c44cf545ceee2efd99d9db8cab08676
-ms.openlocfilehash: fa7e7404a9a3ab5d75d47b3a5271bd1fd84b5569
+ms.sourcegitcommit: 700eeb0416ba73a761030e15df8c7c6d8d212785
+ms.openlocfilehash: f1d9c4f782ddd0933ee82d766bf9c70acde4dc19
 
 ---
 
@@ -39,7 +39,7 @@ Windows에는 *테스트용으로 로드하는 응용 프로그램의 조정된 
 
 **계약**
 
-테스트용으로 로드하는 응용 프로그램과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기서는 UWP를 나타낼 수 있는 하나 이상의 C#\ 클래스를 선언해야 합니다. C\#을 사용하여 Windows 런타임 클래스를 만들기 위한 특정 요구 사항에 대한 자세한 내용은 MSDN 항목 [C\# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/en-us/library/br230301.aspx)를 참조하세요.
+테스트용으로 로드하는 응용 프로그램과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기서는 UWP를 나타낼 수 있는 하나 이상의 C#\ 클래스를 선언해야 합니다. C\#을 사용하여 Windows 런타임 클래스를 만들기 위한 특정 요구 사항에 대한 자세한 내용은 MSDN 항목 [C\# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/br230301.aspx)를 참조하세요.
 
 >**참고** 데스크톱 구성 요소와 테스트용으로 로드하는 응용 프로그램 간의 Windows 런타임 구성 요소 계약에서는 현재 열거형이 지원되지 않습니다.
 
@@ -379,7 +379,7 @@ mdmerge -n 1 -i "$(TargetDir)\impl" -o "$(TargetDir)reference" -metadata_dir "%W
 
 위의 참조는 이 하이브리드 서버의 정상적인 작동에 중요한 참조가 세심하게 혼합된 것입니다. 프로토콜은 프로젝트 OutputType을 편집하는 방법에서 설명한 대로 .csproj 파일을 열고 필요에 따라 이러한 참조를 추가하는 것입니다.
 
-참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다. MSDN 항목 [Windows 런타임 구성 요소와의 상호 운용성 모범 사례(C\#/VB/C++ 및 XAML을 사용하는 Windows 스토어 앱)](https://msdn.microsoft.com/en-us/library/windows/apps/hh750311.aspx)를 참조하세요.
+참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다. MSDN 항목 [Windows 런타임 구성 요소와의 상호 운용성 모범 사례(C\#/VB/C++ 및 XAML을 사용하는 Windows 스토어 앱)](https://msdn.microsoft.com/library/windows/apps/hh750311.aspx)를 참조하세요.
 구현의 일환으로 데스크톱 코드를 호출할 수 있는 Windows 런타임 구성 요소 dll을 만드는 작업입니다. 함께 제공되는 샘플에는 Windows 런타임에서 사용되는 다음과 같은 주요 패턴이 있습니다.
 
 -   메서드 호출
@@ -449,7 +449,7 @@ IPC 방법에서는 두 프로세스 사이에 Windows 런타임 인터페이스
 
 **Visual Studio에서 프록시 만들기**
 
-일반 Windows 스토어 앱 패키지 내부에서 사용하기 위해 프록시 및 스텁을 만들고 등록하는 프로세스는 [Windows 런타임 구성 요소에서 이벤트 발생](https://msdn.microsoft.com/en-us/library/windows/apps/dn169426.aspx) 항목에서 설명합니다.
+일반 Windows 스토어 앱 패키지 내부에서 사용하기 위해 프록시 및 스텁을 만들고 등록하는 프로세스는 [Windows 런타임 구성 요소에서 이벤트 발생](https://msdn.microsoft.com/library/windows/apps/dn169426.aspx) 항목에서 설명합니다.
 이 문서에서 설명하는 단계는 아래에서 설명하는 프로세스보다 더 복잡합니다. 전역으로 등록하는 것이 아니라, 응용 프로그램 패키지 내부에서 프록시/스텁을 등록해야 하기 때문입니다.
 
 **1단계:** 데스크톱 구성 요소 프로젝트의 솔루션을 사용하여 Visual Studio에서 프록시/스텁 프로젝트를 만듭니다.
@@ -569,7 +569,7 @@ struct PersonStruct
 
 -   [안정적이고 신뢰할 수 있는 Windows 스토어 앱 제공](http://go.microsoft.com/fwlink/p/?LinkID=393644)
 
--   [앱 계약 및 확장(Windows 스토어 앱)](https://msdn.microsoft.com/en-us/library/windows/apps/hh464906.aspx)
+-   [앱 계약 및 확장(Windows 스토어 앱)](https://msdn.microsoft.com/library/windows/apps/hh464906.aspx)
 
 -   [Windows 10에서 앱을 테스트용으로 로드하는 방법](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#GroupPolicy)
 
@@ -579,6 +579,6 @@ struct PersonStruct
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

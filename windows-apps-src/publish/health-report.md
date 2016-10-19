@@ -5,7 +5,7 @@ title: "상태 보고서"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+ms.openlocfilehash: 72c5974da441e76f2fad8e844d3391999e42cd72
 
 ---
 
@@ -64,6 +64,6 @@ PDB 기호 파일을 포함하면 **오류 로그** 차트에 총 크래시 수 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

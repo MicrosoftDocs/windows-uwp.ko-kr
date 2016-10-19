@@ -5,7 +5,7 @@ description: "Chrome 앱 또는 Chrome 확장을 Windows 스토어용 UWP(유니
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7d1cceb931d3ee9d128c6ba47113f501625830da
+ms.openlocfilehash: 7847f69c85708cb42b878253839b06929f837708
 
 ---
 
@@ -101,6 +101,6 @@ Chrome은 백그라운드 스크립트로 실행할 수 있는 [특별한 용도
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

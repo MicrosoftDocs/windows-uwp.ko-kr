@@ -4,8 +4,8 @@ ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
 title: "JavaScript의 중간 광고 샘플 코드"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5317895c2f28166c2905d0d49c5e98da5567943a
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
 # JavaScript의 중간 광고 샘플 코드
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 보여 줍니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. JavaScript/HTML 앱에 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -238,6 +238,6 @@ ad.</b>");
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

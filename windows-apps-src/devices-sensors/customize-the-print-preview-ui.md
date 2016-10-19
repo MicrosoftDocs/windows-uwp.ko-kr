@@ -5,7 +5,7 @@ title: "인쇄 미리 보기 UI 사용자 지정"
 description: "이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 36c1499b51aa5b8b5ab4b0b354197c67dc89801f
+ms.openlocfilehash: dd64266c2015e1bb640cf159b0836b9819cf7845
 
 ---
 # 인쇄 미리 보기 UI 사용자 지정
@@ -188,6 +188,6 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

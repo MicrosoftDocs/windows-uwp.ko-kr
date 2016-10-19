@@ -4,19 +4,29 @@ ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f9750e87516d38b16a589e5271de25d9f241e97b
 
 ---
 # 입력란
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다. 일반적으로 한 줄의 텍스트를 캡처하는 데 사용되지만 여러 줄의 텍스트를 캡처하도록 구성할 수 있습니다. 텍스트는 단순하고 균일한 일반 텍스트 형식으로 화면에 표시됩니다.
 
 TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 있습니다. 텍스트 복사 및 붙여넣기를 지원하는 친숙한 기본 제공 상황에 맞는 메뉴와 함께 제공됩니다. "모두 지우기" 단추를 통해 사용자는 입력된 모든 텍스트를 빠르게 삭제할 수 있습니다. 또한 맞춤법 검사 기능이 기본 제공되며 기본적으로 사용됩니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>TextBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx"><strong>Text 속성</strong></a></li>
+</ul>
 
--   [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
--   [**Text 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx)
+</div>
+</div>
+
+
 
 
 ## 올바른 컨트롤인가요?
@@ -60,7 +70,7 @@ rootGrid.Children.Add(textBox);
 
 ### 양식의 데이터 입력에는 입력란을 사용합니다.
 
-입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) 또는 [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) 이벤트를 처리할 수 있습니다. 
+입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanged.aspx) 또는 [TextChanging](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textchanging.aspx) 이벤트를 처리할 수 있습니다.
 
 [Header](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.header.aspx)(또는 레이블) 및 [PlaceholderText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.placeholdertext.aspx)(또는 워터마크)를 입력란에 추가하여 입력란의 용도를 사용자에게 표시할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.headertemplate.aspx) 속성을 설정할 수 있습니다. *디자인 정보는 레이블에 대한 지침을 참조하세요*.
 
@@ -70,7 +80,7 @@ rootGrid.Children.Add(textBox);
 
 ![모두 지우기 단추가 있는 입력란](images/text-box-clear-all.png)
 
-모두 지우기 단추는 텍스트를 포함하며 포커스가 있는 편집 가능한 한 줄 입력란에만 표시됩니다. 
+모두 지우기 단추는 텍스트를 포함하며 포커스가 있는 편집 가능한 한 줄 입력란에만 표시됩니다.
 
 다음과 같은 경우에는 모두 지우기 단추가 표시되지 않습니다.
 - **IsReadOnly**가 **true**인 경우
@@ -83,24 +93,25 @@ rootGrid.Children.Add(textBox);
 
 IsReadOnly 속성을 true로 설정하여 TextBox를 읽기 전용으로 만들 수 있습니다. 예를 들어 사용자가 설명을 입력하는 TextBox를 특정 조건에서만 사용할 수 있게 할 수 있습니다. 조건이 충족될 때까지 TextBox를 읽기 전용으로 만들 수 있습니다. 텍스트를 표시만 해야 하는 경우 TextBlock 또는 RichTextBlock을 대신 사용하는 것이 좋습니다.
 
-읽기 전용 입력란은 읽기/쓰기 입력란과 동일하게 표시되므로 사용자에게 혼동을 줄 수 있습니다. 사용자는 텍스트를 선택하여 복사할 수 있습니다.
+읽기 전용 입력란은 읽기/쓰기 입력란과 동일하게 표시되므로 사용자에게 혼동을 줄 수 있습니다.
+사용자는 텍스트를 선택하여 복사할 수 있습니다.
 IsEnabled
 
 
 ### 여러 줄 입력 사용
 
-TextBox에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
+입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
 - 입력란에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [**AcceptsReturn**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.acceptsreturn.aspx) 속성을 **true**로 설정합니다.
 - 텍스트 줄 바꿈을 사용하도록 설정하려면 [**TextWrapping**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.textwrapping.aspx) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
-> **참고**&nbsp;&nbsp; TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 발생합니다.
+> **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 발생합니다.
 
-여러 줄 TextBox는 해당 [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 또는 [MaxHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) 속성이나 부모 컨테이너에 의해 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 입력란이 표시 영역 이상 증가하지 않는지 테스트하고, 증가할 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다. 
+여러 줄 입력란은 해당 [Height](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx) 또는 [MaxHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.maxheight.aspx) 속성이나 부모 컨테이너에 의해 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 입력란이 표시 영역 이상 증가하지 않는지 테스트하고, 증가할 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
 
-스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility.aspx)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다. 
+스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility.aspx)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
 
 ```xaml
-<TextBox AcceptsReturn="True" TextWrapping="Wrap" 
+<TextBox AcceptsReturn="True" TextWrapping="Wrap"
          MaxHeight="172" Width="300" Header="Description"
          ScrollViewer.VerticalScrollBarVisibility="Auto"/>
 ```
@@ -125,12 +136,12 @@ ScrollViewer.SetVerticalScrollBarVisibility(textBox, ScrollBarVisibility.Auto);
 
 입력란은 서식 없는 텍스트만 지원하지만 입력란에서 텍스트가 표시되는 방식을 브랜딩에 맞게 사용자 지정할 수 있습니다. [FontFamily](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontfamily.aspx), [FontSize](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontsize.aspx), [FontStyle](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.fontstyle.aspx), [Background](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx), [Foreground](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) 및 [CharacterSpacing](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.characterspacing.aspx)과 같은 표준 [컨트롤](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx) 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 이러한 속성은 입력란이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
-이 예제에서는 텍스트 모양을 사용자 지정하기 위해 여러 속성이 설정된 읽기 전용 TextBox를 보여 줍니다.
+이 예제에서는 텍스트 모양을 사용자 지정하기 위해 여러 속성이 설정된 읽기 전용 입력란을 보여 줍니다.
 
 ```xaml
-<TextBox Text="Sample Text" IsReadOnly="True" 
+<TextBox Text="Sample Text" IsReadOnly="True"
          FontFamily="Verdana" FontSize="24"
-         FontWeight="Bold" FontStyle="Italic" 
+         FontWeight="Bold" FontStyle="Italic"
          CharacterSpacing="200" Width="300"
          Foreground="Blue" Background="Beige"/>
 ```
@@ -161,17 +172,17 @@ rootGrid.Children.Add(textBox);
 
 명령 | 표시되는 경우
 ------- | -------------
-복사 | 텍스트를 선택한 경우 
-잘라내기 | 텍스트를 선택한 경우 
-붙여넣기 | 클립보드에 텍스트가 있는 경우 
-모두 선택 | TextBox에 텍스트가 있는 경우 
-실행 취소 | 텍스트가 변경된 경우 
+복사 | 텍스트를 선택한 경우
+잘라내기 | 텍스트를 선택한 경우
+붙여넣기 | 클립보드에 텍스트가 있는 경우
+모두 선택 | TextBox에 텍스트가 있는 경우
+실행 취소 | 텍스트가 변경된 경우
 
 상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.contextmenuopening.aspx) 이벤트를 처리합니다. 이러한 경우의 예제는 [ContextMenu 샘플](http://go.microsoft.com/fwlink/p/?linkid=234891)의 시나리오 2를 참조하세요. 디자인 정보는 상황에 맞는 메뉴에 대한 지침을 참조하세요.
 
 ### 선택, 복사 및 붙여넣기
 
-[SelectedText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectedtext.aspx) 속성을 사용하여 TextBox에 선택한 텍스트를 가져오거나 설정할 수 있습니다. 텍스트 선택을 조작하려면 [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) 및 [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) 속성과 [Select](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.select.aspx) 및 [SelectAll](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectall.aspx) 메서드를 사용합니다. 사용자가 텍스트를 선택하거나 선택을 취소하면 [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx) 이벤트를 처리하여 작업을 수행합니다. [SelectionHighlightColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionhighlightcolor.aspx) 속성을 설정하면 선택한 텍스트를 강조 표시하는 데 사용되는 색을 변경할 수 있습니다.
+[SelectedText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectedtext.aspx) 속성을 사용하여 입력란에서 선택한 텍스트를 가져오거나 설정할 수 있습니다. 텍스트 선택을 조작하려면 [SelectionStart](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionstart.aspx) 및 [SelectionLength](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionlength.aspx) 속성과 [Select](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.select.aspx) 및 [SelectAll](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectall.aspx) 메서드를 사용합니다. 사용자가 텍스트를 선택하거나 선택을 취소하면 [SelectionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionchanged.aspx) 이벤트를 처리하여 작업을 수행합니다. [SelectionHighlightColor](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.selectionhighlightcolor.aspx) 속성을 설정하면 선택한 텍스트를 강조 표시하는 데 사용되는 색을 변경할 수 있습니다.
 
 TextBox는 기본적으로 복사 및 붙여넣기를 지원합니다. 앱의 편집 가능한 텍스트 컨트롤에서 [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) 이벤트를 사용자 지정 처리할 수 있습니다. 예를 들어 한 줄 검색 상자에 붙여넣을 때 여러 줄 주소에서 줄 바꿈을 제거할 수 있습니다. 또는 붙여넣은 텍스트의 길이를 확인하고 데이터베이스에 저장할 수 있는 최대 길이를 초과할 경우 사용자에게 경고 메시지를 표시할 수 있습니다. 자세한 내용과 예제는 [Paste](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.paste.aspx) 이벤트를 참조하세요.
 
@@ -180,10 +191,10 @@ TextBox는 기본적으로 복사 및 붙여넣기를 지원합니다. 앱의 �
 ```xaml
 <StackPanel>
    <TextBox x:Name="textBox1" Height="75" Width="300" Margin="10"
-         Text="The text that is selected in this TextBox will show up in the read only TextBox below." 
+         Text="The text that is selected in this TextBox will show up in the read only TextBox below."
          TextWrapping="Wrap" AcceptsReturn="True"
          SelectionChanged="TextBox1_SelectionChanged" />
-   <TextBox x:Name="textBox2" Height="75" Width="300" Margin="5" 
+   <TextBox x:Name="textBox2" Height="75" Width="300" Margin="5"
          TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True"/>
    <TextBlock x:Name="label1" HorizontalAlignment="Center"/>
    <TextBlock x:Name="label2" HorizontalAlignment="Center"/>
@@ -211,11 +222,11 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.inputscope.aspx) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
-> **중요**&nbsp;&nbsp; 입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 코드에서 입력 유효성을 검사해야 합니다.
+> **중요**&nbsp;&nbsp;입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
-터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isspellcheckenabled.aspx), [IsTextPredictionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.istextpredictionenabled.aspx) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus.aspx)입니다. 하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다. 
+터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.isspellcheckenabled.aspx), [IsTextPredictionEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.istextpredictionenabled.aspx) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus.aspx)입니다. 하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.
 
-자세한 내용과 예제는 [입력 범위를 사용하여 터치 키보드 변경]() 및 속성 설명서를 참조하세요.
+자세한 내용과 예제는 [입력 범위를 사용하여 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229) 및 속성 설명서를 참조하세요.
 
 ## 권장 사항
 
@@ -233,11 +244,11 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 -   한 줄 입력란은 예상되는 제일 긴 입력보다 약간 넓게 만듭니다. 이 경우 컨트롤이 너무 넓어지면 두 개의 컨트롤로 분리합니다. 예를 들어 단일 주소 입력을 "주소 1"과 "주소 2"로 분할할 수 있습니다.
 -   입력할 수 있는 문자의 최대 길이를 설정합니다. 지원 데이터 원본이 긴 입력 문자열을 허용하지 않는 경우 입력을 제한하고 유효성 검사 팝업을 사용하여 사용자에게 한계에 도달했음을 알립니다.
 -   한 줄 텍스트 입력 컨트롤을 사용하여 사용자로부터 텍스트 조각들을 수집할 수 있습니다.
- 
+
     다음 예는 보안 질문에 대한 답변을 캡처하기 위한 한 줄 입력란을 보여줍니다. 답변은 짧을 것이므로 여기서는 한 줄 입력란이 적합합니다.
 
     ![기본 데이터 입력](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
-    
+
 -   짧고 크기가 정해져 있는 한 줄 텍스트 입력 컨트롤 집합을 사용하여 특수한 형식의 데이터를 입력할 수 있습니다.
 
     ![서식이 지정된 데이터 입력](images/textinput_example_productkey.png)
@@ -281,6 +292,6 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

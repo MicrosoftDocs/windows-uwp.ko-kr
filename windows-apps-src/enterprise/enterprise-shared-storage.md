@@ -5,7 +5,7 @@ title: "엔터프라이즈 공유 저장소"
 description: "엔터프라이즈 공유 저장소는 LOB(기간 업무) 앱의 로컬 데이터 위치를 정의하여 데이터를 공유합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 6f0e479081c361d69ab0c9e8cf4c531627304d32
+ms.openlocfilehash: bd4663b25c351551cd2f4e1e780a76431d1c3a19
 
 ---
 # 엔터프라이즈 공유 저장소
@@ -74,6 +74,6 @@ foreach (StorageFile file in sortedItems)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

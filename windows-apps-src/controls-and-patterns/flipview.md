@@ -6,20 +6,32 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
 
 ---
 # 대칭 이동 뷰
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 대칭 이동 보기를 사용하여 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지나 다른 항목을 탐색할 수 있습니다. 터치 디바이스의 경우 항목을 살짝 밀면 컬렉션 내에서 이동됩니다. 마우스를 사용할 경우에는 항목 위로 마우스를 가져가면 탐색 단추가 나타납니다. 키보드를 사용할 경우에는 화살표 키를 사용하여 컬렉션 내에서 이동합니다.
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>FlipView 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>ItemsSource 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>ItemTemplate 속성</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
 
--   [**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)
--   [**ItemsSource 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)
--   [**ItemTemplate 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -106,7 +118,7 @@ stackPanel1.Children.Add(flipView1);
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**참고** &nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
+>**참고**&nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
 
 ### 항목의 모양 지정
 
@@ -211,6 +223,6 @@ stackPanel1.Children.Add(flipView1);
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

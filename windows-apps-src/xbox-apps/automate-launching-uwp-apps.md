@@ -3,8 +3,8 @@ title: "Windows 10 UWP(유니버설 Windows 플랫폼) 앱 시작 자동화"
 description: "개발자는 프로토콜 활성화 및 시작 활성화를 사용하여 자동화 테스트를 위해 해당 UWP 앱 또는 게임을 자동으로 시작할 수 있습니다."
 author: listurm
 translationtype: Human Translation
-ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
-ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
+ms.sourcegitcommit: c5d0f685f4c733cbe4ba4c07aab565b888ddfe58
+ms.openlocfilehash: 4b31ec06b1ded4882d26cffed029eb8179ff47c3
 
 ---
 
@@ -45,7 +45,7 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서드가 있습니다. 자세한 내용은 [URI 클래스(MSDN)](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.uri.aspx)를 참조하세요. 
+Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서드가 있습니다. 자세한 내용은 [URI 클래스(MSDN)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.uri.aspx)를 참조하세요. 
 
 예제:
 
@@ -133,7 +133,7 @@ C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.s
 
 ### 시작 관리자 응용 프로그램
 
-시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://msdn.microsoft.com/en-us/library/windows/desktop/hh706903(v=vs.85).aspx)를 참조하세요.
+시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://msdn.microsoft.com/library/windows/desktop/hh706903(v=vs.85).aspx)를 참조하세요.
 
 ```
 #include <ShObjIdl.h>
@@ -207,8 +207,12 @@ Platform::String^ argval = launchArgs->Arguments;
 ## 요약
 다양한 방법으로 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 좀 더 적절한 방법을 사용하는 것이 좋습니다. 
 
+## 참고 항목
+- [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

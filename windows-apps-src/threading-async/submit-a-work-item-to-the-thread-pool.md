@@ -5,7 +5,7 @@ title: "스레드 풀에 작업 항목 제출"
 description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
+ms.openlocfilehash: d41f53a40c46087c5a1c21367a34c0f60486f24d
 
 ---
 # 스레드 풀에 작업 항목 제출
@@ -263,6 +263,6 @@ Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

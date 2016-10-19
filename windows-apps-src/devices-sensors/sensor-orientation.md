@@ -5,7 +5,7 @@ title: "센서 방향"
 description: "Accelerometer, Gyrometer, Compass, Inclinometer 및 OrientationSensor 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 디바이스의 가로 방향에서 정의되고 사용자가 돌릴 때 디바이스와 함께 회전합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0f1123d3be66973d5b56a4789b1ff6e171f94900
+ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
 
 ---
 # 센서 방향
@@ -171,6 +171,6 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "이 섹션에서는 고객이 모든 유형의 디바이스에 설
 title: "Windows 10으로 앱 포팅"
 translationtype: Human Translation
 ms.sourcegitcommit: 5b7b5f985eccf905698d7995d1574967bbec176f
-ms.openlocfilehash: fd7f2dc0d83ef8c4d075e25d3e2fa453d9ce849d
+ms.openlocfilehash: 777542dd6a105b432e25db082cb0e1b7b87101f2
 
 ---
 
@@ -37,6 +37,6 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

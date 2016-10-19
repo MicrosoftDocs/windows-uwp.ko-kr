@@ -5,7 +5,7 @@ title: "SQLite 데이터베이스"
 description: "SQLite는 서버 없는 포함된 데이터베이스 엔진입니다. 이 문서에서는 SDK에 포함된 SQLite 라이브러리를 사용하거나, 유니버설 Windows 앱에서 고유한 SQLite 라이브러리를 패키지하거나, 소스에서 빌드하는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+ms.openlocfilehash: 33148e8cfe301c6016d3f8a16bbcc904ca403d0e
 
 ---
 # SQLite 데이터베이스
@@ -39,7 +39,7 @@ SDK SQLite를 참조하려면 프로젝트에 다음 헤더를 포함합니다. 
 
 `#include <winsqlite/winsqlite3.h>`
 
-winsqlite3.lib에 연결하도록 프로젝트를 구성합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**&gt;**링커**&gt;**입력**을 선택한 다음 winsqlite3.lib를 **추가 종속성**에 추가합니다.
+winsqlite3.lib에 연결하도록 프로젝트를 구성합니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** &gt; **링커** &gt; **입력**을 선택한 다음 winsqlite3.lib를 **추가 종속성**에 추가합니다.
 
 ### 2. 앱 패키지에 SQLite 포함
 
@@ -95,6 +95,6 @@ SQLite 작동 방식을 잘 이해하려면 SQL 문을 평가하는 SQL 데이�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

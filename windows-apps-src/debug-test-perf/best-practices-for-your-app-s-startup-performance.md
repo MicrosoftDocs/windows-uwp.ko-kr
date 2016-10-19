@@ -5,7 +5,7 @@ title: "앱 시작 성능 모범 사례"
 description: "시작 및 활성화 처리 방법을 개선하여 시작 시간이 최적화된 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
-ms.openlocfilehash: 46e78612c0f4391b9448ea9bd7a001722fb08a28
+ms.openlocfilehash: 2224c6c2ca0a606492d381af85e665170601f054
 
 ---
 # 앱 시작 성능 모범 사례
@@ -364,6 +364,6 @@ XAML, 이미지, 앱에 중요한 기타 파일을 포함한 콘텐츠를 로컬
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

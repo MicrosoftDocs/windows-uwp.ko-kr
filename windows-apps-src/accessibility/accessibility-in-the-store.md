@@ -6,8 +6,8 @@ title: "스토어의 접근성"
 label: Accessibility in the Store
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 46dfe4fba383861c704b2ba9070bdd8102b10562
+ms.sourcegitcommit: 137e8671655c0d20b0343ee7f87086d271fdc531
+ms.openlocfilehash: 8d987e9c1c9476625b8544ee95abc62e2b2c09f5
 
 ---
 
@@ -43,10 +43,10 @@ UWP(유니버설 Windows 플랫폼) 앱을 Windows 스토어에 접근성 있는
 
 <span id="related_topics"/>
 ## 관련 항목    
-* [접근성](accessibility.md)
+* [접근성](accessibility.md) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

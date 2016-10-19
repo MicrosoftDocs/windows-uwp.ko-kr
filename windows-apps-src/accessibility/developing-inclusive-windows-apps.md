@@ -6,20 +6,19 @@ title: "포괄 Windows 10 앱 개발"
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
+ms.sourcegitcommit: 9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5
+ms.openlocfilehash: 19c90991ab86383fa259b05460cbd656d408e977
 
 ---
 
 # 포괄 Windows 앱 개발  
 
-키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
-
-이 문서에서는 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다.  
+이 문서에서는 접근성 있는 UWP(유니버설 Windows 플랫폼) 앱을 개발하는 방법에 대해 설명합니다. 특히 앱에 대한 논리 계층 구조 디자인 방법에 대해 이해하고 있다고 가정합니다. 키보드 탐색, 색 및 대비 설정, 그리고 보조 기술에 대한 지원 기능을 포함하는 액세스 가능한 Windows 10 UWP 앱 개발 방법을 알아봅니다.
 
 아직 이해하지 못했으면 [포괄 소프트웨어 디자인](designing-inclusive-software.md)을 먼저 읽고 시작하세요.
 
 앱에 접근성이 있도록 하려면 다음 세 가지를 수행해야 합니다.
+
 1. [프로그래밍 방식 액세스](#programmatic-access)에 UI 요소를 표시합니다.
 2. 앱이 마우스 또는 터치 스크린을 사용할 수 없는 사용자를 위해 [키보드 탐색](#keyboard-navigation)을 지원하는지 확인합니다.
 3. 앱이 접근성 있는 [색 및 대비](#color-and-contrast) 설정을 지원하는지 확인합니다.
@@ -53,7 +52,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-시스템 색 및 리소스 사용에 대한 자세한 내용은 [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)를 참조하세요.
+시스템 색 및 리소스 사용에 대한 자세한 내용은 [XAML 테마 리소스](../controls-and-patterns/xaml-theme-resources.md)를 참조하세요.
 
 시스템 색을 재정의하지 않는 한 UWP 앱은 기본적으로 고대비 테마를 지원합니다. 사용자가 시스템에서 시스템 설정 또는 접근성 도구의 고대비 테마를 사용하도록 선택한 경우 이 프레임워크에서는 UI의 컨트롤 및 구성 요소에 대해 고대비 레이아웃 및 렌더링을 생성하는 색상 및 스타일 설정을 자동으로 사용합니다.   
 
@@ -66,7 +65,8 @@ XAML
 **색 조합** – 약 7%의 남성(및 1% 미만의 여성)에게 일종의 색각 장애가 있습니다. 색맹 사용자는 특정 색을 구분하는 데 어려움이 있으므로 응용 프로그램에서의 상태 또는 의미를 전달할 때 한 가지 색만을 사용하지 않는 것이 중요합니다. 장식 이미지(예: 아이콘 또는 배경)에 대해서는 색맹 사용자가 이미지를 최대한 인식할 수 있도록 색 조합을 선택해야 합니다.  
 
 ## 접근성 검사 목록  
-다음은 접근성 검사 목록의 간략화된 버전입니다.  
+다음은 접근성 검사 목록의 간략화된 버전입니다.
+
 1. 앱에 있는 콘텐츠 및 대화형 UI 요소의 접근성 있는 이름(필수) 및 설명(선택)을 설정합니다.
 2. 키보드 접근성을 구현합니다.
 3. UI를 시각적으로 검증하여 텍스트 대비가 적절한지, 요소가 고대비 테마에서 올바르게 렌더링되는지, 색이 제대로 사용되는지 확인합니다.
@@ -82,9 +82,10 @@ XAML
 * [피해야 할 접근성 사례](practices-to-avoid.md)
 * [접근성을 위해 소프트웨어 엔지니어링](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 접근성 개발자 허브](https://msdn.microsoft.com/enable)
+* [접근성](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

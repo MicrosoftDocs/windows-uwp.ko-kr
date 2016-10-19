@@ -5,7 +5,7 @@ title: "장치 기능 사용"
 description: "이 자습서에서는 Microsoft Visual Studio에서 디바이스 접근 권한 값을 선언하는 방법을 설명합니다. 이를 통해 앱에서 카메라, 마이크, 위치 센서 및 기타 디바이스를 사용할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 306e10ee9349f3742ac5a06229d22aad04457d7a
+ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
 
 ---
 # 디바이스 기능 사용
@@ -77,6 +77,6 @@ Windows 앱에서는 특정 유형의 장치를 사용할 경우 앱 패키지 �
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

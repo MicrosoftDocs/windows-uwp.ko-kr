@@ -1,18 +1,15 @@
 ---
 author: TylerMSFT
-title: "UWP(유니버설 Windows 플랫폼) 앱 지침"
-description: "다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
+title: "유니버설 Windows 플랫폼 개요"
+description: "이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
-ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
+ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
+ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
 
 ---
 
-# UWP(유니버설 Windows 플랫폼) 앱 지침
-
-
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+# 유니버설 Windows 플랫폼 개요
 
 이 가이드에서는 다음에 대해 알아봅니다.
 
@@ -284,6 +281,6 @@ Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 W
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

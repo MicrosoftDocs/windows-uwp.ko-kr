@@ -5,7 +5,7 @@ title: "정기 작업 항목 만들기"
 description: "주기적으로 반복되는 작업 항목을 만드는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8bf4bb511f84b314d48aedf9dd05c8955875029c
+ms.openlocfilehash: 11e4c5d2ece918854620a89062e164fba7f48953
 
 ---
 # 정기 작업 항목 만들기
@@ -206,6 +206,6 @@ ms.openlocfilehash: 8bf4bb511f84b314d48aedf9dd05c8955875029c
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,8 +6,8 @@ ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+ms.sourcegitcommit: 0d67e3cef26ca6aca07556312a18be93fe758c85
+ms.openlocfilehash: ccbcb1f3f5ee31724416f512138757865ffabc98
 
 ---
 
@@ -94,7 +94,7 @@ int newViewId = 0;</code></pre></td>
 
     [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](http://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
-    XAML에서는 일반적으로 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) 속성에 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)로 이동합니다. 자세한 내용은 [두 페이지 간에 피어 투 피어 탐색](peer-to-peer-navigation-between-two-pages.md)을 참조하세요.
+    XAML에서는 일반적으로 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041)의 [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051) 속성에 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)로 이동합니다. 자세한 내용은 [두 페이지 간 이동](navigate-between-two-pages.md)을 참조하세요.
 
     새 [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041)가 채워진 후 나중에 **Window**를 표시하려면 **Window**의 [**Activate**](https://msdn.microsoft.com/library/windows/apps/br209046) 메서드를 호출해야 합니다. 이 작업은 새 보기의 스레드에서 발생하므로 새 **Window**가 활성화됩니다.
 
@@ -182,10 +182,6 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);</code></pre></td>
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

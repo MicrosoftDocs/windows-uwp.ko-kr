@@ -4,8 +4,8 @@ ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "스토어에 앱을 제출하기 전에 Windows 개발자 센터 대시보드의 응용 프로그램 ID 및 광고 단위 ID 값을 앱에 추가하는 방법을 알아봅니다."
 title: "앱에서 광고 단위 설정"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
+ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
+ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 # 앱에서 광고 단위 설정
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱에서 광고를 표시하려면 응용 프로그램 ID 및 광고 단위 ID를 지정해야 합니다. 앱을 개발하는 동안 해당 [테스트 응용 프로그램 ID 및 광고 단위 ID 값](test-mode-values.md)을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다.
 
@@ -30,8 +30,6 @@ ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 
     * 앱에서 동영상 중간 광고를 표시하는 경우 **InterstitialAd** 개체의 **RequestAd** 메서드에 이러한 값을 전달합니다.
 
-> **중요**앱에서 광고 조정을 사용하여 Microsoft의 배너 광고를 표시하는 경우(즉, 앱에서 **AdMediatorControl** 개체를 사용하는 경우) 광고 단위를 요청하지 않아도 됩니다. 이 시나리오에서는 광고 단위가 자동으로 생성됩니다. 자세한 내용은 [AdMediatorControl과 AdControl의 차이](what-is-the-difference-admediatorcontrol-or-adcontrol.md)를 참조하세요.
-
  
 
 ## 관련 항목
@@ -45,6 +43,6 @@ ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

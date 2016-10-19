@@ -4,8 +4,8 @@ Description: "Windows 스토어의 앱 판매에서 번 돈을 받으려면 지�
 title: "지급 계좌 및 세금 양식 설정"
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 translationtype: Human Translation
-ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
-ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
+ms.sourcegitcommit: ea9ea2d39ecd0fc54381df8d5fa7dd7cdc2fae51
+ms.openlocfilehash: 7de230aeee932f781a282ab7555e1c90bcd76460
 
 ---
 
@@ -16,12 +16,12 @@ Windows 스토어의 앱 판매에서 번 돈을 받으려면 지급액 계좌�
 
 > **참고** 2016년 4월 1일부터 개발자 센터에서 설정한 동일한 지급 계좌로 Microsoft Advertising 수익이 지급됩니다. 자세한 내용은 [pubCenter-개발자 센터 지급 계좌 및 세금 프로필 통합](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)을 참조하세요.
 
-앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 바뀌어 앱 또는 앱에서 바로 제품을 판매하지 않으려면 이때 지급 계좌를 설정하고 세금 양식을 작성할 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 IAP를 제출할 수 없습니다.
+앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에 마음이 바뀌어 앱 또는 앱에서 바로 제품을 판매하지 않으려면 이때 지급 계좌를 설정하고 세금 양식을 작성할 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
 > **참고** [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서 개발자는 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급액 계좌를 설정하는 옵션이 제공되지 않습니다.
 
 
-[개발자 계정을 설정](opening-a-developer-account.md)한 후 Windows 스토어에서 앱 또는 IAP를 판매하기 전에 수행해야 하는 두 가지 작업이 있습니다.
+[개발자 계정을 설정](opening-a-developer-account.md)한 후 Windows 스토어에서 앱(또는 추가 기능)을 판매하기 전에 수행해야 하는 두 가지 작업이 있습니다.
 
 -   [지급 계좌 설정](#setting_up_your_payout_account)
 -   [세금 양식 작성](#paying_taxes)
@@ -88,7 +88,7 @@ Form-R은 지급을 받을 수 있는 달마다 은행에 제출해야 합니다
 
 러시아에 사는 개발자인 경우, 은행에서 자금을 계좌에 입금하기 전에 은행에 관련 문서를 제공해야 할 수 있습니다. 결제를 받아야 하는 경우, 다음 문서를 메일로 제공해야 합니다.
 
-1.  CoA(Certificate of Acceptance) – 계정으로 전환되는 지급액이 포함되어 있습니다.
+1.  AC(Acceptance Certificate) – 계정으로 전환되는 지급액이 포함되어 있습니다.
 2.  ADA(App Developer Agreement) – 서명된 개발자 계약서 복사본으로, 연대 서명이 필요합니다.
 
 지급이 성공적으로 이루어지게 하려면 다음을 명심하시기 바랍니다.
@@ -102,11 +102,11 @@ Form-R은 지급을 받을 수 있는 달마다 은행에 제출해야 합니다
 
 우크라이나에 사는 개발자인 경우, 은행에서 자금을 계좌에 입금하기 전에 은행에 관련 문서를 제공해야 할 수 있습니다. 결제를 받아야 하는 경우, 다음 문서를 메일로 제공해야 합니다.
 
-1.  CoA(Certificate of Acceptance) – 계정으로 전환되는 지급액이 포함되어 있습니다.
+1.  AC(Acceptance Certificate) – 계정으로 전환되는 지급액이 포함되어 있습니다.
 2.  ADA(App Developer Agreement) – 서명된 개발자 계약서 복사본으로, 연대 서명이 필요합니다.
 3.  AA(수정 계약서) – 이 문서는 은행에서 지급 금액 식별을 위해 사용할 수 있습니다.
 
-Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공합니다. 모든 후속 지급 경우에는 CoA 문서만 받게 됩니다. 은행에서 차후의 지급을 받기 위해 필요할 경우에 대비하여 ADA 및 AA 문서를 보관해 두세요.
+Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공합니다. 모든 후속 지급 경우에는 AC 문서만 받게 됩니다. 은행에서 차후의 지급을 받기 위해 필요할 경우에 대비하여 ADA 및 AA 문서를 보관해 두세요.
 
 지급이 성공적으로 이루어지게 하려면 다음을 명심하시기 바랍니다.
 
@@ -160,6 +160,6 @@ Microsoft에서는 첫 번째 지급이 시도되면 세 문서를 모두 제공
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

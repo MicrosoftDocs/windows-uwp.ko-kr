@@ -5,7 +5,7 @@ description: "UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b7b4cba0c88a914c3d0da4cf79adb51bcad2307f
+ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
 
 ---
 
@@ -81,6 +81,6 @@ DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

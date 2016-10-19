@@ -5,7 +5,7 @@ title: "디바이스 정보 속성"
 description: "각 디바이스에는 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 DeviceInformation 속성이 연결되어 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d9cdd55df69941754729d8779ba11d7ce5fafc51
+ms.openlocfilehash: 8f95a0898d0b65f4ed402b5f05e843ace2a18767
 
 ---
 # 디바이스 정보 속성
@@ -161,6 +161,6 @@ ms.openlocfilehash: d9cdd55df69941754729d8779ba11d7ce5fafc51
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

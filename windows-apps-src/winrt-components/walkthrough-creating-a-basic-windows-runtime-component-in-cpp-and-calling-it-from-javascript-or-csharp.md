@@ -5,11 +5,11 @@ description: "이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호�
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 860333e3239198cd54eea061195e2a51d786821b
+ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
 
 ---
 
-<h1>연습&#58; C++로 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#</h1>
+<h1>연습: C++로 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#</h1>
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -635,6 +635,6 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

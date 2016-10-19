@@ -1,35 +1,45 @@
 ---
 author: JnHs
-Description: If your app uses an AdMediatorControl or AdControl to display banner ads, you could increase your ad fill rate and revenue by showing Microsoft affiliate ads in your app.
-title: Gradual package rollout
+Description: "앱에서 AdMediatorControl 또는 AdControl을 사용하여 배너 광고를 표시하는 경우 앱에서 Microsoft 계열사 광고를 표시하여 광고 유효 노출률 및 수익을 늘릴 수 있습니다."
+title: "점진적 패키지 배포"
+translationtype: Human Translation
+ms.sourcegitcommit: ac9eed95edba99cdba914ff21b25383f35a20012
+ms.openlocfilehash: 3ec642ef0a21d06b20cabb12a47d2abcfd19fe59
+
 ---
 
-# Gradual package rollout
+# 점진적 패키지 배포
 
-When you publish an update to a submission, you can choose to gradually roll out the updated packages to a percentage of your app’s customers on Windows 10. This allows you to monitor feedback and analytic data for the specific packages to make sure you’re confident about the update before rolling it out more broadly. You can increase the percentage (or halt the update) any time without having to create a new submission. 
+제출에 대한 업데이트를 게시할 때 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 출시하도록 선택할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들 필요 없이 언제든지 비율을 늘리거나 업데이트를 중지할 수 있습니다. 
 
-> **Important** Your rollout selections apply to all of your packages, but will only apply to your customers running OS versions that support package flights (Windows.Desktop build 10586 or later; Windows.Mobile build 10586.63 or later, and Xbox), including any customers who get the app via [Store-managed (online) licensing](organizational-licensing.md) via the [Windows Store for Business](https://www.microsoft.com/business-store). When using gradual package rollout, customers on earlier OS versions will not get packages from the latest submission until you finalize the package rollout as described below.
+> **중요** 출시 선택은 모든 패키지에 적용되지만 [비즈니스용 Windows 스토어](https://www.microsoft.com/business-store)를 통해 [스토어에서 관리하는(온라인) 라이선싱](organizational-licensing.md)으로 앱을 가져오는 고객을 포함하여, 패키지 플라이트(Windows.Desktop 빌드 10586 이상, Windows.Mobile 빌드 10586.63 이상 및 Xbox)를 지원하는 OS 버전을 실행하는 고객에게만 적용됩니다. 점진적 패키지 출시를 사용할 경우 아래 설명된 대로 패키지 출시를 완료할 때까지 이전 OS 버전 고객은 최신 제출에서 패키지를 가져오지 않습니다.
 
-Note that all of your customers will see the Store listing details that you entered with your latest submission. The rollout settings only apply to the packages that customers receive, both for new acquisitions and for updates to existing customers.
+모든 고객은 최신 제출을 입력한 스토어 목록 세부 정보를 볼 수 있습니다. 출시 설정은 고객이 받는 패키지(새 구입용 및 기존 고객에 대한 업데이트용)에만 적용됩니다.
 
-> **Tip** Package rollout distributes packages to a random selection of customers in the percentages that you specify. To distribute specific packages to selected customers that you specify, you can use package flights.  You can also combine rollout with your package flights if you want to gradually distribute an update to one of your flight groups.
+> **팁** 패키지가 출시되면 지정한 비율로 임의 선택한 고객에게 패키지를 배포합니다. 지정한 고객에게 특정 패키지를 배포하기 위해 패키지 플라이트를 사용할 수 있습니다.  또한 업데이트를 플라이트 그룹의 구성원 중 한 명에게 점진적으로 배포하려는 경우 패키지 플라이트를 출시와 결합할 수 있습니다.
 
-## Setting the rollout percentage
+## 출시 비율 설정
 
-You can select to roll out your update on the **Packages** page of an updated submission. To do so, check the box that says **Roll out update gradually after this submission is published (to Windows 10 customers only)**. Then enter the percentage of customers who should get the update when the submission is first published. For example, you might enter 5 if you want to start by rolling the update out to only a small percentage of your app’s customers.
+업데이트된 제출의 **패키지** 페이지에서 업데이트 출시를 선택할 수 있습니다. 그러려면 **이 제출을 게시(Windows 10 고객에게만)한 후 업데이트를 단계적으로 롤아웃하세요.** 상자를 선택합니다. 제출이 처음 게시될 때 업데이트를 받는 고객의 비율을 입력합니다. 예를 들어 적은 비율의 앱 고객에게만 업데이트를 출시하려는 경우 5를 입력할 수 있습니다.
 
-Click **Update** to save your selections. After your app completes the certification process, the packages will be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+선택 항목을 저장하려면 **업데이트**를 클릭합니다. 앱의 인증 프로세스가 완료되면 패키지(새 구입용 및 기존 고객에 대한 업데이트용)는 지정된 비율에 따라 고객에게 배포됩니다.
 
-## Adjusting the rollout after the submission is published
+## 제출이 게시된 후 출시 조정
 
-To adjust the rollout after the submission has been published, go to your app’s Overview page. You can drag the selector to change the percentage of customers getting the packages from your newest submission. Click **Update** to save your selections. The packages will then start to be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+제출이 게시된 후 출시를 조정하려면 앱의 개요 페이지로 이동합니다. 선택기를 끌어서 최신 제출에서 패키지를 받는 고객의 비율을 변경할 수 있습니다. 선택 항목을 저장하려면 **업데이트**를 클릭합니다. 그런 다음 패키지(새 구입용 및 기존 고객에 대한 업데이트용)를 지정한 비율에 따라 고객에게 배포하기 시작합니다.
 
-## Completing the rollout
+## 출시 완료
 
-Before you can create a new submission, you'll need to complete the package rollout. You can **finalize** the rollout and distribute the latest packages to all of your customers, or **halt** the rollout to stop distributing the latest packages.
+새 제출을 만들기 전에 패키지 출시를 완료해야 합니다. 출시를 **완료**하여 모든 고객에게 최신 패키지를 배포하거나, 출시를 **중단**하여 최신 패키지 배포를 중지할 수 있습니다.
 
-If you have confidence in the update and would like to make it available to all of your customers, click **Finalize package rollout** to distribute the newest packages to all of your customers.
+업데이트에 대한 확신이 있고 모든 고객에게 사용 가능하도록 하려면 **패키지 출시 완료**를 클릭하여 모든 고객에게 최신 패키지를 배포합니다.
 
-> **Tip** Changing the rollout percentage to 100% does not ensure that all of your customers will get the packages from the latest submissions, because some customers may be on OS versions that don’t support rollout. You must finalize the rollout in order to stop distributing the older packages and update all existing customers to the newer ones.
+> **팁** 출시 비율을 100%로 변경한다고 모든 고객이 최신 제출에서 패키지를 가져오지는 못합니다. 출시를 지원하지 않는 OS 버전 고객이 일부 있을 수 있기 때문입니다. 이전 패키지 배포를 중지하고 모든 기존 고객을 최신 패키지로 업데이트하려면 출시를 완료해야 합니다.
 
-If you find that there are problems with the update and you don’t want to distribute it any further, you can click **Halt package rollout** to stop distributing packages from the latest submission. Once you halt a package rollout, those packages will no longer be distributed to any customers; only the packages from the previous submission will be used for any new or updating customers. However, any customers who already had the newer packages will keep those packages; they won’t be rolled back to the previous version. To provide an update to these customers, you’ll need to create a new submission with the packages you’d like them to get. Note that if you use a gradual rollout in your next submission, customers who had the package you halted will be offered the new update in the same order they were offered the halted package. The new rollout will be between your last finalized submission and your newest submission; once you halt a package rollout, those packages will no longer be distributed to any customers.
+업데이트에 문제가 있어 더 이상 배포하지 않으려면 **패키지 출시 중지**를 클릭하여 최신 제출에서 패키지 배포를 중지합니다. 패키지 출시를 중지하면 이러한 패키지는 더 이상 고객에 게 배포되지 않고 이전 제출의 패키지만 새 고객 또는 업데이트 고객에게 사용됩니다. 그러나 고객에게 이미 최신 패키지가 있는 경우에는 해당 패키지가 유지되고 이전 버전으로 롤백되지 않습니다. 이러한 고객에게 업데이트를 제공하려면 가져오려는 패키지가 포함된 새 제출을 만들어야 합니다. 다음 제출에 점진적 출시를 사용할 경우 중지한 패키지가 있는 고객에게 중지한 패키지를 제공했던 순서대로 새 업데이트를 제공합니다. 새 출시는 마지막 완료된 제출과 최신 제출 사이에 있습니다. 패키지 출시를 중지하면 해당 패키지는 더 이상 고객에게 배포되지 않습니다.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

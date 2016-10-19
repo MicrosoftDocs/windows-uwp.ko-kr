@@ -5,7 +5,7 @@ title: "앱 패키지 관리 지침"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 ---
 
@@ -139,6 +139,6 @@ ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

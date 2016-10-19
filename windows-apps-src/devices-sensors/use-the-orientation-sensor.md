@@ -5,7 +5,7 @@ title: "방향 센서 사용"
 description: "방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
+ms.openlocfilehash: 1265697f03e0de74444fc936a3041d1e88147e77
 
 ---
 # 방향 센서 사용
@@ -353,6 +353,6 @@ SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

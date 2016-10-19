@@ -4,16 +4,17 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다."
 title: "확인 메일을 사용하여 제품 구매 검증"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 01b75d25c385d8dd856af79581fb4a346064c400
 
 ---
 
 # 확인 메일을 사용하여 제품 구매 검증
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
+
+>**참고**&nbsp;&nbsp;이 문서의 예제에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용합니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 Windows.ApplicationModel.Store 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매를 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 **중요 API**
 
@@ -156,7 +157,7 @@ namespace ReceiptVerificationSample
             {
                 const int MaxCertificateSize = 10000;
 
-                // We are attempting to retrieve the following url. The getAppReceiptAsync website at 
+                // We are attempting to retrieve the following url. The getAppReceiptAsync website at
                 // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
                 // lists the following format for the certificate url.
                 String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
@@ -241,9 +242,6 @@ namespace ReceiptVerificationSample
 
 
 
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

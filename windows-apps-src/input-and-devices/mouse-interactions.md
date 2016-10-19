@@ -7,7 +7,7 @@ label: Mouse
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
+ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
 
 ---
 
@@ -156,6 +156,6 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

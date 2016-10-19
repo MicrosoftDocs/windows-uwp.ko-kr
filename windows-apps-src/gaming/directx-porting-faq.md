@@ -5,7 +5,7 @@ description: "UWP(유니버설 Windows 플랫폼)로 게임을 포팅하는 방�
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
+ms.openlocfilehash: 908da9d15a49291f6a1c2467858b525c2f3dc7da
 
 ---
 
@@ -140,6 +140,6 @@ DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [화면 형식 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

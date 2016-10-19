@@ -5,7 +5,7 @@ title: "ListView 및 GridView UI 최적화"
 description: "UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
 
 ---
 # ListView 및 GridView UI 최적화
@@ -320,6 +320,6 @@ private void lst-ChoosingItemContainer
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

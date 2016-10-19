@@ -6,15 +6,13 @@ ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
-ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 38ee8ae177898e20d45545c1cfd51a0dd24f7858
 
 ---
-
 # 적응형 타일 만들기
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 적응형 타일 템플릿은 다양한 화면 밀도에 맞게 조정되는 단순하고 유연한 태그 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 하는 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](tiles-and-notifications-adaptive-tiles-schema.md)를 참조하세요.
@@ -1495,6 +1493,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

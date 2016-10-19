@@ -5,7 +5,7 @@ description: "모바일 디바이스에서 보다 신속한 렌더링을 위해 
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
+ms.openlocfilehash: 1eea87b2175872e5a3bc7c41e82cda47bb555f82
 
 ---
 
@@ -329,6 +329,6 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

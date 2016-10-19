@@ -4,15 +4,15 @@ ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다."
 title: "소모성 제품을 처리됨으로 보고"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
 
 ---
 
 # 소모성 제품을 처리됨으로 보고
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다.
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
 | 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -158,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

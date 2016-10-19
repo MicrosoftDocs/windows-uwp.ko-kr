@@ -5,7 +5,7 @@ title: "Windows 스토어 앱 마케팅 지침"
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+ms.openlocfilehash: b6662344996a83c3f1460af8b7387bf7cfd4b087
 
 ---
 
@@ -55,6 +55,6 @@ Microsoft는 Microsoft 마크 및 관련 영업권의 독점 소유자이며 Mic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

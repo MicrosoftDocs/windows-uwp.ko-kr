@@ -5,7 +5,7 @@ title: "일시 중단/다시 시작 최적화"
 description: "프로세스 수명 시스템의 사용을 간소화하여 일시 중단 또는 종료 후 효율적으로 다시 시작하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
 translationtype: Human Translation
 ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
-ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
+ms.openlocfilehash: 312c0a64308a42d74a52fe6587dae10de7c838a3
 
 ---
 # 일시 중단/다시 시작 최적화
@@ -92,6 +92,6 @@ UWP 프로세스 수명 시스템에서는 다양한 이유로 앱을 일시 중
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

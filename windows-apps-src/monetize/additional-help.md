@@ -4,15 +4,15 @@ ms.assetid: 15d8cc6c-80f9-49b7-8036-0abf80ffebba
 description: "광고를 포함하는 앱 개발을 위한 기타 리소스에 대해 알아봅니다."
 title: "추가 도움말"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: bacda14bc48d6707a8f717c554fe7aaa22b202e0
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: a45a09efabf7014658029b0302a56cefac8b0141
 
 ---
 
 # 추가 도움말
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 다음 리소스는 광고가 있는 앱을 개발하는 방법에 대한 자세한 정보를 제공합니다.
 
@@ -34,6 +34,6 @@ ms.openlocfilehash: bacda14bc48d6707a8f717c554fe7aaa22b202e0
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

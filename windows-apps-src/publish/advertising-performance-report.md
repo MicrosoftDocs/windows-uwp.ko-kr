@@ -5,7 +5,7 @@ title: "광고 성과 보고서"
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 translationtype: Human Translation
 ms.sourcegitcommit: 6b354b1b009bf9e4f2899f7ef97ef8791712f52b
-ms.openlocfilehash: 2b06e25a7e96c3645d7067dc0082da3fc942249d
+ms.openlocfilehash: b75d9310e577c77d1caed3e9f34762e925eb11ae
 
 ---
 
@@ -99,6 +99,6 @@ pubCenter 계정을 개발자 센터로 마이그레이션하는 방법에 대�
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "이 항목에서는 ms-people URI 체계에 대해 설명합니다
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
 translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: fd3c38dd0b6df2f430d7be4c40e7131d4ae98616
+ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
 
 ---
 
@@ -209,6 +209,6 @@ ms.openlocfilehash: fd3c38dd0b6df2f430d7be4c40e7131d4ae98616
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

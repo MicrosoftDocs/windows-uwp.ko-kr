@@ -1,36 +1,40 @@
 ---
 author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
-description: Use the Java code examples in this section to learn more about using the Windows Store submission API.
-title: Java code examples for the Windows Store submission API
+description: "이 섹션의 Java 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
+title: "Windows 스토어 제출 API에 대한 Java 코드 예제"
+translationtype: Human Translation
+ms.sourcegitcommit: b0154cc0669dd97e57ed75fa1f65afa8d23ae0b7
+ms.openlocfilehash: 26d5812e41531cf852606227805d0a84255a3f47
+
 ---
 
-# Java code examples for the Windows Store submission API
+# Windows 스토어 제출 API에 대한 Java 코드 예제
 
-This article provides Java code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+이 문서에서는 *Windows 스토어 제출 API*를 사용하기 위한 Java 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
-These code examples demonstrate the following tasks:
+이러한 코드 예제는 다음 작업을 보여 줍니다.
 
-* [Obtain an Azure AD access token](java-code-examples-for-the-windows-store-submission-api.md#token).
-* [Create an add-on](java-code-examples-for-the-windows-store-submission-api.md#create-add-on).
-* [Create a package flight](java-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
-* [Create and commit an app submission](java-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
-* [Create and commit an add-on submission](java-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
-* [Create and commit a package flight submission](java-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
+* [Azure AD 액세스 토큰을 가져옵니다](java-code-examples-for-the-windows-store-submission-api.md#token).
+* [추가 기능 만들기](java-code-examples-for-the-windows-store-submission-api.md#create-add-on)
+* [패키지 플라이트 만들기](java-code-examples-for-the-windows-store-submission-api.md#create-package-flight)
+* [앱 제출 만들기 및 커밋](java-code-examples-for-the-windows-store-submission-api.md#create-app-submission)
+* [추가 기능 제출 만들기 및 커밋](java-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission)
+* [패키지 플라이트 제출 커밋](java-code-examples-for-the-windows-store-submission-api.md#create-flight-submission)
 
-You can review each example to learn more about the task it demonstrates, or you can build all the code examples in this article into a console application. For the complete code listing, see the [code listing](java-code-examples-for-the-windows-store-submission-api.md#code-listing) section at the end of this article.
+각 예제를 검토하여 각 예제에서 보여 주는 작업에 대해 자세히 알아보거나 이 문서의 모든 코드 예제를 콘솔 응용 프로그램으로 빌드할 수 있습니다. 전체 코드 목록은 이 문서의 끝 부분에 있는 [코드 목록](java-code-examples-for-the-windows-store-submission-api.md#code-listing)을 참조하세요.
 
-## Prerequisites
+## 필수 조건
 
-These examples use the following libraries:
+이러한 예제는 다음 라이브러리를 사용합니다.
 
-* [Apache Commons Logging 1.2](http://commons.apache.org/proper/commons-logging)  (commons-logging-1.2.jar).
-* [Apache HttpComponents Core 4.4.5 and Apache HttpComponents Client 4.5.2](https://hc.apache.org/) (httpcore-4.4.5.jar and httpclient-4.5.2.jar).
-* [JSR 353 JSON Processing API 1.0](https://mvnrepository.com/artifact/javax.json/javax.json-api/1.0) and [JSR 353 JSON Processing Default Provider API 1.0.4](https://mvnrepository.com/artifact/org.glassfish/javax.json/1.0.4) (javax.json-api-1.0.jar and javax.json-1.0.4.jar).
+* [Apache Commons Logging 1.2](http://commons.apache.org/proper/commons-logging)(commons-logging-1.2.jar).
+* [Apache HttpComponents Core 4.4.5 및 Apache HttpComponents Client 4.5.2](https://hc.apache.org/)(httpcore-4.4.5.jar 및 httpclient-4.5.2.jar).
+* [JSR 353 JSON Processing API 1.0](https://mvnrepository.com/artifact/javax.json/javax.json-api/1.0) 및 [JSR 353 JSON Processing Default Provider API 1.0.4](https://mvnrepository.com/artifact/org.glassfish/javax.json/1.0.4)(javax.json-api-1.0.jar 및 javax.json-1.0.4.jar).
 
-## Main program and imports
+## 주 프로그램 및 가져오기
 
-The following example shows the imports statements used by all of the code examples and implements a command line program that calls the other example methods.
+다음 예제에서는 모든 코드 예제에 사용되는 가져오기 문을 보여 주고 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다.
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -98,9 +102,9 @@ public class IngestionServiceJavaSamples {
 ```
 
 <span id="token" />
-## Obtain an Azure AD access token
+## Azure AD 액세스 토큰 가져오기
 
-The following example demonstrates how to [obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
+다음 예제에서는 [Azure AD 액세스 토큰을 가져오는](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) 방법을 보여 줍니다.
 
 ```java
 public static String GenerateAccessToken(String tenantId, String clientId, String clientSecret) {        
@@ -135,9 +139,9 @@ public static String GenerateAccessToken(String tenantId, String clientId, Strin
 ```
 
 <span id="create-add-on" />
-## Create an add-on
+## 추가 기능 만들기
 
-The following example demonstrates how to [create a new add-on](manage-add-ons.md) (add-ons are also known as in-app products or IAPs).
+다음 예제에서는 [새 추가 기능을 만드는](manage-add-ons.md) 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함).
 
 ```java
 public static void CreateNewInAppProduct(String accessToken, String inAppProductRequestJson) throws InterruptedException, IOException {
@@ -212,9 +216,9 @@ private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
 ```
 
 <span id="create-package-flight" />
-## Create a package flight
+## 패키지 플라이트 만들기
 
-The following example demonstrates how to [create a new package flight](manage-flights.md).
+다음 예제에서는 [새 패키지 플라이트를 만드는](manage-flights.md) 방법을 보여 줍니다.
 
 ```java
 public static void CreateNewFlight(String accessToken, String applicationId, String flightRequestJson) throws InterruptedException, IOException {
@@ -290,9 +294,9 @@ private static ResponseHandler<JsonObject> CreateJsonResponseHandler(){
 ```
 
 <span id="create-app-submission" />
-## Create and commit an app submission
+## 앱 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new app submission](manage-app-submissions.md).
+다음 예제에서는 [새 앱 제출을 만들고 커밋](manage-app-submissions.md)하는 방법을 보여 줍니다.
 
 ```java
 public static void SubmitNewApplicationSubmission(String accessToken, String applicationId, String appSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
@@ -426,9 +430,9 @@ private static void UploadZipFile(String fileUploadUrl, String zipFilePath) thro
 ```
 
 <span id="create-add-on-submission" />
-## Create and commit an add-on submission
+## 추가 기능 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs).
+다음 예제에서는 [새 추가 기능 제출을 만들고 커밋](manage-add-on-submissions.md)하는 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함).
 
 ```java
 public static void SubmitNewInAppProductSubmission(String accessToken, String inAppProductId, String iapSubmissionRequestJson, String zipFilePath) throws InterruptedException, IOException {
@@ -560,9 +564,9 @@ private static void UploadZipFile(String fileUploadUrl, String zipFilePath) thro
 ```
 
 <span id="create-flight-submission" />
-## Create and commit a package flight submission
+## 패키지 플라이트 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new package flight submission](manage-flight-submissions.md).
+다음 예제에서는 [새 패키지 플라이트 제출을 만들고 커밋](manage-flight-submissions.md)하는 방법을 보여 줍니다.
 
 ```java
 public static void SubmitNewFlightSubmission(String accessToken, String applicationId, String flightId, String flightSubmissionRequestJson, String zipFilePath) throws InterruptedException, URISyntaxException, IOException {
@@ -695,9 +699,9 @@ private static void UploadZipFile(String fileUploadUrl, String zipFilePath) thro
 ```
 
 <span id="code-listing" />
-## Complete code listing
+## 전체 코드 목록
 
-The following code listing contains all of the previous examples organized into one source file.
+다음 코드 목록에는 하나의 원본 파일로 구성된 이전의 모든 예제가 포함되어 있습니다.
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -1129,6 +1133,12 @@ public class IngestionServiceJavaSamples {
 }
 ```
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -5,7 +5,7 @@ description: "이 섹션에는 작성하는 앱에 일반적으로 적용할 수
 title: "XAML 플랫폼"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4deae037857312f891c8c4beae2b6a89adc152cd
+ms.openlocfilehash: bd2423c9c58a2c6bf20b0b15715b9e9e7aa219dd
 
 ---
 
@@ -28,6 +28,6 @@ ms.openlocfilehash: 4deae037857312f891c8c4beae2b6a89adc152cd
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

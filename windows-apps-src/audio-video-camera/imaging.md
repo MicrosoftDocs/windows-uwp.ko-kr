@@ -2,14 +2,14 @@
 author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "이 문서에서는 BitmapDecoder 및 BitmapEncoder를 사용하여 이미지 파일을 로드하고 저장하는 방법과 SoftwareBitmap 개체를 사용하여 비트맵 이미지를 나타내는 방법을 설명합니다."
-title: "이미징"
+title: "비트맵 이미지 만들기, 편집 및 저장"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+ms.sourcegitcommit: c61bad4b4a5440531c0177247c425addaf452920
+ms.openlocfilehash: ff6bff692c4e0e73b2c99e06b46e8a3050ba12c4
 
 ---
 
-# 이미징
+# 비트맵 이미지 만들기, 편집 및 저장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -61,6 +61,8 @@ ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
 [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) 컨트롤을 사용하여 XAML 페이지에 이미지를 표시하려면 먼저 XAML 페이지에 **Image** 컨트롤을 정의합니다.
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
+
+현재 **Image** 컨트롤은 BGRA8 인코딩과 미리 곱한 알파가 있거나 알파가 없는 채널을 사용하는 이미지만 지원합니다. 이미지를 표시하기 전에 형식이 올바른지 테스트하고, 올바른 형식이 아닐 경우 **SoftwareBitmap** 정적 [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362) 메서드를 사용하여 이미지를 지원되는 형식으로 변환합니다.
 
 새 [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854) 개체를 만듭니다. [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856)를 호출하고 **SoftwareBitmap**을 전달하여 원본 개체의 콘텐츠를 설정합니다. 그러면 **Image** 컨트롤의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760) 속성을 새로 만든 **SoftwareBitmapSource**로 설정할 수 있습니다.
 
@@ -130,6 +132,6 @@ Direct3D 화면에서 **SoftwareBitmap** 개체를 만들려면 프로젝트에 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

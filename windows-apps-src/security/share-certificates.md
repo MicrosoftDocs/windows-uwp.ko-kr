@@ -5,7 +5,7 @@ ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 
 ---
 
@@ -32,7 +32,7 @@ ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 ## 보안 웹 서비스 만들기 및 게시
 
 
-1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. **Visual C#** -&gt;**웹** -&gt;**Visual Studio** -&gt;**ASP.NET 웹 서비스 응용 프로그램**을 선택합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
+1.  관리자 권한으로 Microsoft Visual Studio를 실행하고 시작 페이지에서 **새 프로젝트**를 선택합니다. IIS 서버에 웹 서비스를 게시하려면 관리자 액세스 권한이 필요합니다. 새 프로젝트 대화 상자에서 프레임워크를 **.NET Framework 3.5**로 변경합니다. **Visual C#** -&gt; **웹** -&gt; **Visual Studio** -&gt; **ASP.NET 웹 서비스 응용 프로그램**을 선택합니다. 응용 프로그램 이름을 "FirstContosoBank"로 지정합니다. **확인**을 클릭하여 프로젝트를 만듭니다.
 2.  **Service1.asmx.cs** 파일에서 기본 **HelloWorld** 웹 메서드를 다음 "Login" 메서드로 바꿉니다.
     ```cs
             [WebMethod]
@@ -205,6 +205,6 @@ ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 이러한 단계를 따르면 동일한 사용자 인증서를 사용하여 같거나 서로 다른 보안 웹 서비스에 액세스하는 앱을 여러 개 만들 수 있습니다.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

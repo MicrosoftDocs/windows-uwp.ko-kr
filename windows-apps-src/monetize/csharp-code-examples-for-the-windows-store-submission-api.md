@@ -1,33 +1,37 @@
 ---
 author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
-description: Use the C# code examples in this section to learn more about using the Windows Store submission API.
-title: C# code examples for the Windows Store submission API
+description: "이 섹션의 C# 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
+title: "Windows 스토어 제출 API에 대한 C# 코드 예제"
+translationtype: Human Translation
+ms.sourcegitcommit: 1f577f33563d6acd7d2f791a48176f9a6164d287
+ms.openlocfilehash: 9ae200699027f908cfc4b59dfc5035dcb09e93f6
+
 ---
 
-# C\# code examples for the Windows Store submission API
+# Windows 스토어 제출 API에 대한 C\# 코드 예제
 
-This article provides C# code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+이 문서는 *Windows 스토어 제출 API*를 사용하기 위한 C# 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
-These code examples demonstrate the following tasks:
+이러한 코드 예제는 다음 작업을 보여 줍니다.
 
-* [Update an app submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-app-submission).
-* [Create and commit an add-on submission](csharp-code-examples-for-the-windows-store-submission-api.md#create-and-commit-add-on-submission).
-* [Update an add-on submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-add-on-submission).
-* [Update a package flight submission](csharp-code-examples-for-the-windows-store-submission-api.md#update-flight-submission).
+* [앱 제출 업데이트](csharp-code-examples-for-the-windows-store-submission-api.md#update-app-submission)
+* [추가 기능 제출 만들기 및 커밋](csharp-code-examples-for-the-windows-store-submission-api.md#create-and-commit-add-on-submission)
+* [추가 기능 제출 업데이트](csharp-code-examples-for-the-windows-store-submission-api.md#update-add-on-submission)
+* [패키지 플라이트 제출 업데이트](csharp-code-examples-for-the-windows-store-submission-api.md#update-flight-submission)
 
-You can review each example to learn more about the task it demonstrates, or you can build all the code examples in this article into a console application. To build the examples, create a C# console application named **DeveloperApiCSharpSample** in Visual Studio, copy each example to a separate code file in the project, and build the project.
+각 예제를 검토하여 각 예제에서 보여 주는 작업에 대해 자세히 알아보거나 이 문서의 모든 코드 예제를 콘솔 응용 프로그램으로 빌드할 수 있습니다. 예제를 빌드하려면 Visual Studio에서 **DeveloperApiCSharpSample**이라는 C# 콘솔 응용 프로그램을 만들고 각 예제를 프로젝트의 별도 코드 파일에 복사하여 프로젝트를 빌드합니다.
 
-## Prerequisites
+## 필수 조건
 
-These examples use the following libraries:
+이러한 예제는 다음 라이브러리를 사용합니다.
 
-* Microsoft.WindowsAzure.Storage.dll. This library is available in the [Azure SDK for .NET](https://azure.microsoft.com/downloads/), or you can obtain it by installing the [WindowsAzure.Storage NuGet package](https://www.nuget.org/packages/WindowsAzure.Storage).
-* [Json.NET](http://www.newtonsoft.com/json) from Newtonsoft.
+* Microsoft.WindowsAzure.Storage.dll. 이 라이브러리는 [.NET용 Azure SDK](https://azure.microsoft.com/downloads/)에서 사용할 수 있으며 또는 [WindowsAzure.Storage NuGet 패키지](https://www.nuget.org/packages/WindowsAzure.Storage)를 설치하여 가져올 수 있습니다.
+* Newtonsoft의 [Json.NET](http://www.newtonsoft.com/json).
 
-## Main program
+## 기본 프로그램
 
-The following example implements a command line program that calls the other example methods in this article to demonstrate different ways to use the Windows Store submission API.
+다음 예제에서는 Windows 스토어 제출 API를 사용하는 다른 방법을 보여 주기 위해 이 문서의 다른 예제 메서드를 호출하는 명령줄 프로그램을 구현합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -60,14 +64,14 @@ namespace DeveloperApiCSharpSample
 }
 ```
 
-## Helper classes
+## 도우미 클래스
 
-This section provides helper classes that are used by the Windows Store submission API examples in this article.
+이 섹션에서는 이 문서의 Windows 스토어 제출 API 예제에서 사용되는 도우미 클래스를 제공합니다.
 
 <span id="clientconfiguration" />
-### ClientConfiguration helper class
+### ClientConfiguration 도우미 클래스
 
-The following example defines a ```ClientConfiguration``` class that is used to pass data to each of the other example methods that use the Windows Store submission API.
+다음 예제에서는 Windows 스토어 제출 API를 사용하는 다른 예제 메서드 각각에 데이터를 전달하는 데 사용되는 ```ClientConfiguration``` 클래스를 정의합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -134,9 +138,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="ingestionclient" />
-### IngestionClient helper class
+### IngestionClient 도우미 클래스
 
-The following example defines an ```IngestionClient``` class that provides helper methods for some key tasks involving the Windows Store submission API.
+다음 예제에서는 Windows 스토어 제출 API와 관련된 일부 주요 작업에 대해 도우미 메서드를 제공하는 ```IngestionClient``` 클래스를 정의합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -415,9 +419,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-app-submission" />
-## Update an app submission
+## 앱 제출 업데이트
 
-The following example demonstrates how to [update an app submission](manage-app-submissions.md). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+다음 예제에서는 [앱 제출을 업데이트](manage-app-submissions.md)하는 방법을 보여 줍니다. 이 예제에서는 위에서 설명한 [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) 및 [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) 도우미 클래스를 사용합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -645,9 +649,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="create-and-commit-add-on-submission" />
-## Create and commit an add-on submission
+## 추가 기능 제출 만들기 및 커밋
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+다음 예제에서는 [새 추가 기능 제출을 만들고 커밋](manage-add-on-submissions.md)하는 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함). 이 예제에서는 위에서 설명한 [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) 및 [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) 도우미 클래스를 사용합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -822,9 +826,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-add-on-submission" />
-## Update an add-on submission
+## 추가 기능 제출 업데이트
 
-The following example demonstrates how to [update an add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+다음 예제에서는 [추가 기능 제출을 업데이트](manage-add-on-submissions.md)하는 방법을 보여 줍니다(추가 기능은 앱에서 바로 구매 제품 또는 IAP라고도 함). 이 예제에서는 위에서 설명한 [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) 및 [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) 도우미 클래스를 사용합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -1003,9 +1007,9 @@ namespace DeveloperApiCSharpSample
 ```
 
 <span id="update-flight-submission" />
-## Update a package flight submission
+## 패키지 플라인트 제출 업데이트
 
-The following example demonstrates how to [update a new package flight submission](manage-flight-submissions.md). This example uses the [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) and [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) helper classes that are described above.
+다음 예제에서는 [새 패키지 플라이트 제출을 업데이트](manage-flight-submissions.md)하는 방법을 보여 줍니다. 이 예제에서는 위에서 설명한 [ClientConfiguration](csharp-code-examples-for-the-windows-store-submission-api.md#clientconfiguration) 및 [IngestionClient](csharp-code-examples-for-the-windows-store-submission-api.md#ingestionclient) 도우미 클래스를 사용합니다.
 
 ```csharp
 namespace DeveloperApiCSharpSample
@@ -1198,6 +1202,12 @@ namespace DeveloperApiCSharpSample
 }
 ```
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

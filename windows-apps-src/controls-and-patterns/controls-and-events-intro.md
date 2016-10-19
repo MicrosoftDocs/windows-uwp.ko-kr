@@ -1,18 +1,26 @@
 ---
 author: Jwmsft
 Description: "단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다. 여기서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다."
-title: "컨트롤 추가 및 이벤트 처리"
+title: "컨트롤 및 패턴 소개"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Intro to controls and events
+label: Intro to controls and patterns
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
 
 ---
-# 컨트롤 및 이벤트 소개
+# 컨트롤 및 패턴 소개
 
-단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다. 여기서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다. 앱에 컨트롤을 추가하기 위한 주요 3단계가 있습니다. 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
+
+*패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어 [탐색 창](nav-pane.md) 패턴은 앱 탐색을 위해 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, 탭 패턴을 구현하도록 [피벗](tabs-pivot.md) 컨트롤의 템플릿을 사용자 지정할 수 있습니다.
+
+대부분의 경우 컨트롤은 있는 그대로 사용할 수 있습니다. 하지만 XAML 컨트롤은 구조 및 모양과 기능을 분리하기 때문에 다양한 수준의 수정을 통해 요구에 맞게 수정할 수 있습니다. [스타일](../style/index.md) 섹션에서 [XAML 스타일](xaml-styles.md) 및 [컨트롤 템플릿](control-templates.md)을 사용하여 컨트롤을 수정하는 방법을 배울 수 있습니다.
+
+이 섹션에서는 앱 UI를 빌드하는 데 사용할 수 있는 각 XAML 컨트롤에 대한 지침을 제공합니다. 시작을 위해 이 문서는 앱에 컨트롤을 추가하는 방법을 보여 줍니다. 앱에 컨트롤을 사용하기 위한 주요 3단계가 있습니다. 
 
 - 컨트롤을 앱 UI에 추가합니다. 
 - 컨트롤의 속성(예: 너비, 높이, 전경색 등)을 설정합니다. 
@@ -132,12 +140,14 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 ## 관련 항목
 
--   [**명령 모음**](app-bars.md)
--   [검색](search.md)
--   [플라이아웃](dialogs-popups-menus.md)
+-   [기능별 컨트롤 인덱스](controls-by-function.md)
+-   [Windows.UI.Xaml.Controls 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [레이아웃](../layout/index.md)
+-   [스타일](../style/index.md)
+-   [유용성](../usability/index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

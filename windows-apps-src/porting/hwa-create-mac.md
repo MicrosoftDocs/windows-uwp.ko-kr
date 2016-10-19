@@ -5,7 +5,7 @@ description: "Mac을 사용하여 웹 사이트를 Windows 10용 UWP(유니버�
 kw: Hosted Web Apps with a Mac, Porting to Windows 10 with a Mac, Convert website to Windows with Mac, Packaging web application with ManfoldJS for Windows Store, Add website to Windows Store with App Studio
 translationtype: Human Translation
 ms.sourcegitcommit: 0458dcd2aab862ccdecf1ebbc51e883405a929a6
-ms.openlocfilehash: 775963ae3d12023488c79ded1cc83d464e84169c
+ms.openlocfilehash: 3ba820e2ec8a3556874c0c7c7e328831bab783ca
 
 ---
 
@@ -39,7 +39,7 @@ manifoldjs http://codepen.io/seksenov/pen/wBbVyb/?editors=101
 
 4. 아래 동영상의 단계에 따라 패키징을 완료하고 Windows 스토어에 호스트된 웹앱을 게시합니다.
 
-[ ![ManifoldJS를 사용하여 Mac에 UWP 웹앱 게시] (images/hwa-to-uwp/mac_manifoldjs_video.png)](https://sec.ch9.ms/ch9/0a67/9b06e5c7-d7aa-478d-b30d-f99e145a0a67/ManifoldJS_high.mp4 "ManifoldJS를 사용하여 Mac에 UWP 웹앱 게시")
+[![ManifoldJS를 사용하여 Mac에 UWP 웹앱 게시](images/hwa-to-uwp/mac_manifoldjs_video.png)](https://sec.ch9.ms/ch9/0a67/9b06e5c7-d7aa-478d-b30d-f99e145a0a67/ManifoldJS_high.mp4 "ManifoldJS를 사용하여 Mac에 UWP 웹앱 게시")
 
 ## 옵션 2: App Studio
 
@@ -61,6 +61,6 @@ manifoldjs http://codepen.io/seksenov/pen/wBbVyb/?editors=101
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

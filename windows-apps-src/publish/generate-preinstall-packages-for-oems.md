@@ -5,7 +5,7 @@ title: "OEM용 사전 설치 패키지 생성"
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dba1c1f754b4200bd00395e0b71d18bee30e3a2d
+ms.openlocfilehash: 1c08ab2e29e70e198ee72798f29e7667254272fd
 
 ---
 
@@ -51,6 +51,6 @@ ms.openlocfilehash: dba1c1f754b4200bd00395e0b71d18bee30e3a2d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

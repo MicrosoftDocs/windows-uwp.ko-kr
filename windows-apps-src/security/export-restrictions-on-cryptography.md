@@ -5,7 +5,7 @@ ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 37d6131891e93d73021c860df45d1b5fdd7cfa53
+ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 
 ---
 
@@ -60,6 +60,6 @@ ECCN이 없는 경우 [ECCN Questions and Answers](http://go.microsoft.com/fwlin
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

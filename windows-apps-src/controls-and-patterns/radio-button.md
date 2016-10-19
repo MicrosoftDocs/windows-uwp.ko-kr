@@ -6,22 +6,35 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 435a2a6f1b9707d1f64587a693bd9a60d587ca83
 
 ---
 # 라디오 단추
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 라디오 단추를 사용하면 두 가지 이상의 옵션 중 하나를 선택할 수 있습니다. 각 옵션은 하나의 라디오 단추로 표시됩니다. 사용자는 라디오 단추 그룹에서 하나의 라디오 단추만 선택할 수 있습니다.
 
 이름에 대해 궁금할 수 있는데, 라디오의 채널에 미리 설정된 단추에 라디오 단추의 이름이 지정됩니다.
 
 ![라디오 단추](images/controls/radio-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>RadioButton 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Checked 이벤트</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>IsChecked 속성</strong></a></li>
+</ul>
 
--   [**RadioButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br227544)
--   [**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
--   [**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -58,7 +71,7 @@ Microsoft Edge 브라우저 설정의 라디오 단추입니다.
 - 동일한 부모 컨테이너 내에 배치합니다.
 - 각 라디오 단추의 [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) 속성을 동일한 값으로 설정합니다.
 
-> **참고**&nbsp;&nbsp; 라디오 단추 그룹은 키보드를 통해 액세스한 경우 단일 컨트롤처럼 동작합니다. Tab 키를 사용하면 선택한 항목만 액세스할 수 있지만, 사용자가 화살표 키를 사용하면 그룹을 순환할 수 있습니다.
+> **참고**&nbsp;&nbsp;라디오 단추 그룹은 키보드를 통해 액세스한 경우 단일 컨트롤처럼 동작합니다. Tab 키를 사용하면 선택한 항목만 액세스할 수 있지만, 사용자가 화살표 키를 사용하면 그룹을 순환할 수 있습니다.
 
 이 예제에서 첫 번째 라디오 단추 그룹은 동일한 스택 패널에 배치되어 암시적으로 그룹화됩니다. 두 번째 그룹은 두 스택 패널로 나뉘어 있으므로 GroupName별로 명시적으로 그룹화됩니다.
 
@@ -185,6 +198,6 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

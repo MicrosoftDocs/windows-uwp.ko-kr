@@ -6,7 +6,7 @@ keywords:
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
 translationtype: Human Translation
 ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
-ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+ms.openlocfilehash: 1be7229086e1f2f932e0945334098d89a9978b70
 
 ---
 
@@ -65,6 +65,6 @@ Windows 개발자 센터 대시보드에 있는 각 앱에 대한 **앱 관리**
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

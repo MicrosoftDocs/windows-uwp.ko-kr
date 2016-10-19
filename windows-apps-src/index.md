@@ -6,7 +6,7 @@ author: martinekuan
 redirect_url: https://developer.microsoft.com/en-us/windows/develop
 translationtype: Human Translation
 ms.sourcegitcommit: 753a917c0ecbf445560203dbc1406acae52e5265
-ms.openlocfilehash: 97e016047c864026fe0c72e4b7cb819f0fc80748
+ms.openlocfilehash: 2b4bae1606f9b51e2d4901218ebd2d616e4c5edc
 
 ---
 
@@ -26,6 +26,6 @@ UWP(유니버설 Windows 플랫폼) 및 이를 사용하여 동일한 코드로 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

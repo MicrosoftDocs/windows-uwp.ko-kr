@@ -4,15 +4,15 @@ ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: "UWP 앱 패키징"
 description: "UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
+ms.sourcegitcommit: 68081887e16801cd28726a2a33fb7993edf71e89
+ms.openlocfilehash: e274557883071c65313893ce725cc2307856174b
 
 ---
 # UWP 앱 패키징
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다. appxupload를 만들면 테스트 및 테스트용으로 로드하는 데 사용할 다른 appx 패키지도 생성됩니다. 이 appx 패키지를 장치에 테스트용으로 로드하여 앱을 직접 배포할 수 있습니다. 이 문서에서는 UWP 앱 패키지 구성, 생성, 테스트 프로세스에 대해 설명합니다. 테스트용 로드에 대한 자세한 내용은 [DISM을 사용하여 앱을 테스트용으로 로드](http://go.microsoft.com/fwlink/?LinkID=231020)를 참조하세요.
+UWP(유니버설 Windows 플랫폼) 앱을 판매하거나 다른 사용자에게 배포하려면 앱용 appxupload 패키지를 만들어야 합니다. appxupload를 만들면 테스트 및 테스트용으로 로드하는 데 사용할 다른 appx 패키지도 생성됩니다. 이 appx 패키지를 장치에 테스트용으로 로드하여 앱을 직접 배포할 수 있습니다. 이 문서에서는 UWP 앱 패키지 구성, 생성, 테스트 프로세스에 대해 설명합니다. 테스트용 로드에 대한 자세한 내용은 [Windows 10에서 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx)를 참조하세요.
 
 Windows 10의 경우 Windows 스토어에 업로드할 수 있는 하나의 패키지(.appxupload)를 생성합니다. 그러면 앱을 Windows 10 장치에서 설치 및 실행할 수 있습니다. 앱 패키지를 만드는 단계는 다음과 같습니다.
 
@@ -141,6 +141,6 @@ UWP 앱 패키지를 사용할 때는 장치에 데스크톱 앱과 같은 앱�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

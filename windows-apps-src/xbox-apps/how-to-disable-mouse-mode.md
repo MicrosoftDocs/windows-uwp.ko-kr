@@ -1,19 +1,19 @@
 ---
 author: payzer
 title: "마우스 모드를 사용하지 않도록 설정하는 방법"
-description: 
-area: Xbox
+description: "기본 마우스 모드를 사용하지 않도록 설정하는 지침입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6f4719c98d490cdcac8c799c4c68af55b217cbc5
-ms.openlocfilehash: d1ee946693b9f9714b8d570b8ae3718469d2c10d
+ms.sourcegitcommit: b4df1f944d909640791e4ed7e3bcf8d8bdf7a0d1
+ms.openlocfilehash: 91e530a3313d53c4e693b88a64b849f3188a72de
 
 ---
 
 # 마우스 모드를 사용하지 않도록 설정하는 방법
-마우스 모드는 기본적으로 모든 응용 프로그램에 대해 설정되어 있습니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   
+모든 응용 프로그램은 기본적으로 마우스 모드를 사용합니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   
    
 ## HTML   
-JavaScript UWP 앱에서 방향 컨트롤러 탐색을 켜려면 [TVHelpers 방향 탐색](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript 라이브러리를 사용합니다. 앱 패키지에 방향 탐색 JavaScript 파일을 포함하고 방향 컨트롤러 탐색이 필요한 모든 HTML 페이지에서 다음과 같이 참조를 추가합니다.
+JavaScript UWP(유니버설 Windows 플랫폼) 앱에서 방향 컨트롤러 탐색을 켜려면 [TVHelpers 방향 탐색](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript 라이브러리를 사용합니다. 앱 패키지에 방향 탐색 JavaScript 파일을 포함하고 방향 컨트롤러 탐색이 필요한 모든 HTML 페이지에서 다음과 같이 참조를 추가합니다.
+
 ```code
 <script src="directionalnavigation-1.0.0.0.js"></script>
 ```
@@ -25,7 +25,7 @@ JavaScript UWP 앱에서 방향 컨트롤러 탐색을 켜려면 [TVHelpers 방�
 navigator.gamepadInputEmulation = "gamepad";
 ```   
 
-이 속성은 기본적으로 마우스 모드를 사용할 수 있는 ```'mouse'```로 설정됩니다. 이 속성을 ```'keyboard'```로 설정하면 마우스 모드가 꺼지고 대신에, 게임 패드 입력이 DOM 키보드 이벤트를 생성합니다. 이 속성을 ```'gamepad'```로 설정하면 마우스 모드가 꺼지고 DOM 키보드 이벤트가 생성되지 않으며, 사용자가 DOM 또는 WinRT 게임 패드 API를 사용할 수 있게 됩니다.
+   이 속성은 기본적으로 마우스 모드를 사용할 수 있는 `mouse`로 설정됩니다. 이 속성을 `keyboard`로 설정하면 마우스 모드가 꺼지고 대신에, 게임 패드 입력이 DOM 키보드 이벤트를 생성합니다. 이 속성을 `gamepad`로 설정하면 마우스 모드가 꺼지고 DOM 키보드 이벤트가 생성되지 않으며, 사용자가 DOM 또는 WinRT 게임 패드 API를 사용할 수 있게 됩니다.
 
 ## XAML    
 마우스 모드를 끄려면 앱의 생성자에 다음을 추가합니다.   
@@ -41,8 +41,13 @@ public App() {
 ## C++/DirectX   
 C++/DirectX 앱을 작성할 경우에는 수행할 작업이 없습니다. 마우스 모드는 HTML 및 XAML 응용 프로그램에만 적용됩니다.
 
+## 참고 항목
+- [Xbox에 적용할 수 있는 최선의 방법](tailoring-for-xbox.md)
+- [Xbox One의 UWP](index.md)
 
 
-<!--HONumber=Jul16_HO1-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

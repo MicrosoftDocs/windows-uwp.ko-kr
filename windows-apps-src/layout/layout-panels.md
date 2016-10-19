@@ -7,7 +7,7 @@ label: Layout panels
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a8abaf9e272af3e9563ddb48a1a53993a762c675
+ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
 
 ---
 # 레이아웃 패널
@@ -225,6 +225,6 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

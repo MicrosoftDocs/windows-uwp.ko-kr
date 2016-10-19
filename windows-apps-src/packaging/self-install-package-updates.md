@@ -1,43 +1,47 @@
 ---
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
-title: Download and install package updates for your app
-description: Learn how to mark packages as mandatory in the Dev Center dashboard and write code in your app to download and install package updates.
+title: "앱에 대한 패키지 업데이트 다운로드 및 설치"
+description: "개발자 센터 대시보드에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에 코드를 작성하는 방법을 알아봅니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 7df130e13685b519d5cc1353c8d64878ecc3d213
+ms.openlocfilehash: adb9b999c88649fc2c8ade838dfa0dabc407c075
+
 ---
-# Download and install package updates for your app
+# 앱에 대한 패키지 업데이트 다운로드 및 설치
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Starting in Windows 10, version 1607, you can use an API in the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace to programmatically check for package updates for the current app, and download and install the updated packages. You can also query for packages that have been [marked as mandatory on the Windows Dev Center dashboard](#mandatory-dashboard) and disable functionality in your app until the mandatory update is installed.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 API를 사용하여 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. [Windows 개발자 센터 대시보드에 필수로 표시된](#mandatory-dashboard) 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 할 수 있습니다.
 
-These features help you to automatically keep your user base up to date with the latest version of your app and related services.
+이러한 기능을 사용하면 최신 버전의 앱 및 관련 서비스를 사용하여 자동으로 사용자 기반을 최신 상태로 유지할 수 있습니다.
 
-## Download and install package updates in your app
+## 앱에 패키지 업데이트 다운로드 및 설치
 
-Apps that targets Windows 10, version 1607 or later can use the following methods of the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class to download and install package updates:
+Windows 10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 다음 메서드를 사용하여 패키지 업데이트를 다운로드하고 설치할 수 있습니다.
 
-* Use [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) to determine which package updates are available.
-* Use [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) to download (but not install) the package updates.
-* Use [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx) to download and install the package updates. If you already downloaded the package updates by calling [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx), this method skips the download process and only installs the updates.
+* [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx)를 사용하여 사용할 수 있는 패키지 업데이트를 확인합니다.
+* [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx)를 사용하여 패키지 업데이트를 다운로드합니다(설치하지는 않음).
+* [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx)를 사용하여 패키지 업데이트를 다운로드하고 설치합니다. [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx)를 호출하여 패키지 업데이트를 이미 다운로드한 경우 이 메서드는 다운로드 프로세스를 건너뛰고 업데이트 설치만 진행합니다.
 
-The [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) class represents an available update package:
-* Use the  [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) property to determine whether the package is marked as mandatory in the Dev Center dashboard.
-* Use the [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) property to access other package-related data.
+[StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) 클래스는 사용 가능한 업데이트 패키지를 나타냅니다.
+* [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) 속성을 사용하여 개발자 센터 대시보드에 패키지가 필수로 표시되어 있는지 확인합니다.
+* [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) 속성을 사용하여 다른 패키지 관련 데이터에 액세스합니다.
 
->**Note** There is a latency of up to a day between the time when a package passes the certification process and when the [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) method recognizes that the package update is available to the app.
+>**참고** 패키지에서 인증 프로세스를 통과한 후 [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) 메서드에서 패키지 업데이트를 앱에서 사용할 수 있다고 인식할 때까지 최대 1일의 지연 시간이 있습니다.
 
 
-### Code examples
+### 코드 예제
 
-The following code examples demonstrate how to download and install package updates in your app. These example assume:
-* The code runs in the context of a [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx).
-* The **Page** contains a [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx) named ```downloadProgressBar``` to provide status for the download operation.
-* The code file has a **using** statement for the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace.
-* The app is a single-user app that runs only in the context of the user that launched the app. For a [multi-user app](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications), use the [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) method to get a [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) object instead of the [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) method.
+다음 코드 예제에서는 앱에서 패키지 업데이트를 다운로드하고 설치하는 방법을 보여 줍니다. 이러한 예제에서는 다음을 가정합니다.
+* 코드가 [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) 컨텍스트에서 실행됩니다.
+* **Page**에 다운로드 작업의 상태를 제공하는 ```downloadProgressBar```라는 이름의 [ProgressBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressbar.aspx)가 있습니다.
+* 코드 파일에는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 대한 **using** 문이 있습니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) 메서드 대신 [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) 메서드를 사용하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 가져옵니다.
 
-#### Download and install all package updates
+#### 모든 패키지 업데이트 다운로드 및 설치
 
-The following code example demonstrates how to download and install all available package updates.  
+다음 코드 예제에서는 사용 가능한 모든 패키지 업데이트를 다운로드 및 설치하는 방법을 보여 줍니다.  
 
 ```csharp
 private StoreContext context = null;
@@ -86,9 +90,9 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-#### Handle mandatory package updates
+#### 필수 패키지 업데이트 처리
 
-The following code example builds off the previous example, and demonstrates how to determine whether any update packages have been [marked as mandatory on the Windows Dev Center dashboard](#mandatory-dashboard). Typically, you should downgrade your app experience gracefully for the user if a mandatory package update does not successfully download or install.
+다음 코드 예제는 이전 예제를 기반으로 빌드하고 업데이트 패키지가 [Windows 개발자 센터 대시보드에 필수로 표시](#mandatory-dashboard)되었는지 확인하는 방법을 보여 줍니다. 일반적으로 필수 패키지 업데이트가 성공적으로 다운로드 또는 설치되지 않은 경우 사용자를 위해 앱 환경을 정상적으로 다운그레이드해야 합니다.
 
 ```csharp
 private StoreContext context = null;
@@ -201,18 +205,24 @@ private void HandleMandatoryPackageError()
 ```
 
 <span id="mandatory-dashboard" />
-## Make a package submission mandatory in the Dev Center dashboard
+## 개발자 센터 대시보드에 패키지 제출 필수 만들기
 
-When you create a package submission for an app that targets Windows 10, version 1607 or later, you can mark the package as mandatory and the date/time on which it becomes mandatory. When this property is set and your app discovers that the package update is available by using the API described earlier in this article, your app can determine whether the update package is mandatory and alter its behavior until the update is installed (for example, your app can disable features).
+Windows 10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제출을 만들면 해당 패키지를 필수로 표시하고 필수가 되는 날짜/시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 이 문서의 앞부분에서 설명한 API를 사용하여 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
 
->**Note** The mandatory status of a package is not enforced by Microsoft. Developers are intended to use the mandatory setting to enforce mandatory updates in their own code.
+>**참고** 패키지의 필수 상태는 Microsoft에서 적용하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 업데이트를 적용합니다.
 
-To mark a package submission as mandatory:
+패키지 제출을 필수로 표시하려면
 
-1. Sign in to the [Dev Center dashboard](https://dev.windows.com/overview) and navigate to the overview page for your app.
-2. Click the name of the submission that contains the package update you want to make mandatory.
-3. Navigate to the **Packages** page for the submission. Near the bottom of this page, select **Make this update mandatory** and then choose the day and time on which the package update becomes mandatory. This option applies to all UWP packages in the submission.
+1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱 개요 페이지로 이동합니다.
+2. 필수로 만들 패키지 업데이트가 포함된 제출의 이름을 클릭합니다.
+3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.**를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
 
-For more information about configuring packages in the Dev Center dashboard, see [Upload app packages](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages).
+개발자 센터 대시보드에서 패키지를 구성하는 방법은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요.
 
-  >**Note** If you create a [package flight](https://msdn.microsoft.com/windows/uwp/publish/package-flights), you can mark the packages as mandatory using a similar UI on the **Packages** page for the flight. In this case, the mandatory package update applies only to the customers who are part of the flight group.
+  >**참고** [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 만든 경우 플라이트에 대한 **패키지** 페이지에서 유사한 UI를 사용하여 패키지를 필수로 표시할 수 있습니다. 이 경우 필수 패키지 업데이트는 해당 플라이트 그룹에 속한 고객에게만 적용됩니다.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

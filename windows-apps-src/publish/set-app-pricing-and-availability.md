@@ -4,8 +4,8 @@ Description: "앱 제출 프로세스의 가격 책정 및 가용성 페이지�
 title: "앱 가격 책정 및 가용성 설정"
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
+ms.sourcegitcommit: fc5265cf7d455e34225fd74f9792cdb46b0029d7
+ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
 
 ---
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
 ## 할인 판매 가격 책정
 
 
-한정된 기간 동안 앱을 할인된 가격으로 제공하려는 경우 할인 판매를 만들고 예약할 수 있습니다. 자세한 내용은 [할인 앱 및 IAP 판매](put-apps-and-iaps-on-sale.md)를 참조하세요.
+한정된 기간 동안 앱을 할인된 가격으로 제공하려는 경우 할인 판매를 만들고 예약할 수 있습니다. 자세한 내용은 [할인 앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)를 참조하세요.
 
 ## 배포 및 표시
 
@@ -59,21 +59,7 @@ ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
 
 ## Windows 10 디바이스 패밀리
 
-이 섹션에서는 고객이 앱을 얻기 위해 사용할 수 있는 Windows 10 디바이스 유형을 지정할 수 있습니다. 패키지가 특정 디바이스 유형에서 실행되지 않는 경우 해당 유형의 디바이스에는 다운로드를 제공하지 않습니다.
-
-> **중요** 특정 Windows 10 디바이스 패밀리에서 앱을 다운로드하는 것을 완전히 방지하려면 Microsoft Visual Studio에서 appx 매니페스트에 기본적으로 포함하는 **Windows.Universal** 값(범용 디바이스 패밀리의 경우)으로 그대로 두지 말고 지원하려는 디바이스 패밀리(즉, **Windows.Mobile** 또는 **Windows.Desktop**)만을 대상으로 하도록 appx 매니페스트의 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) 요소를 업데이트해야 합니다.
-
-기본적으로 **모바일** 및 **데스크톱** 확인란은 선택되어 있습니다. 앱을 다운로드할 수 있는 Windows 10 디바이스 유형을 제한할 특별한 이유가 없는 한 이러한 상자를 선택된 상태로 두는 것이 좋습니다. 예를 들어 Windows 유니버설 패키지를 만들었지만 모바일 디바이스에서 앱의 몇 가지 문제를 테스트해야 할 수 있습니다. 새 고객이 Windows 10 모바일 디바이스에서 앱을 다운로드하지 못하도록 하려면 여기에서 **모바일** 확인란의 선택을 취소하면 됩니다. 그런 다음 나중에 Windows 10 모바일 디바이스 고객에게 제공할 준비가 되면 **모바일** 상자를 선택하여 새 제출을 만들 수 있습니다.
-
-테스트를 통해 앱이 Microsoft HoloLens에서 제대로 실행되는지 확인한 경우 **홀로그램** 확인란을 선택하여 HoloLens 고객에게 앱을 제공할 수도 있습니다. 홀로그램 앱의 빌드, 테스트 및 게시에 대한 자세한 내용은 [Windows Holographic 개발 개요](http://dev.windows.com/holographic/development_overview)를 참조하세요.
-
-이 섹션에서 선택한 항목은 대상으로 하는 OS 버전(Windows 10, Windows 8.x, Windows Phone 8.x 등)에 관계없이 모든 앱 패키지에 적용됩니다. 그러나 Windows 8.x 또는 Windows Phone 8.x 디바이스가 아닌 Windows 10 디바이스를 사용 중인 고객에게만 가능성이 적용됩니다.
-
-또한 여기에서 선택한 항목은 새 다운로드에만 적용됩니다. 앱에 이미 있는 사용자는 앱을 계속 사용할 수 있으며, 여기에서 해당 디바이스 패밀리를 제거한 경우에도 제출한 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드하기 전에 앱을 다운로드한 고객에게도 적용됩니다. 예를 들어 Windows Phone 8.1 패키지로 앱을 게시하고 나중에 유니버설 디바이스 패밀리를 대상으로 하는 동일한 앱에 Windows 10(UWP) 패키지를 추가한 경우 Windows Phone 8.1 패키지를 가진 Windows 10 Mobile 고객은 **모바일** 상자의 선택을 취소한 경우에도 이 Windows 10(UWP) 패키지에 대한 업데이트를 받게 됩니다(이는 새 다운로드가 아니라 업데이트이기 때문). 그러나 유니버설 또는 모바일 디바이스 패밀리를 대상으로 하는 Windows 10(UWP) 패키지를 제공하지 않은 경우 Windows 10 Mobile 고객은 계속 Windows Phone 8.1 패키지를 사용하게 됩니다.
-
-디바이스 패밀리에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 및 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)를 참조하세요.
-
-> **참고** Microsoft에서 이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록 허용할지 여부를 지정할 수 있는 확인란도 제공됩니다. 새 디바이스 패밀리가 도입됨에 따라 더 많은 잠재 고객에게 앱을 제공할 수 있도록 이 상자를 선택된 상태로 유지하는 것이 좋습니다.
+이제 디바이스 패밀리의 가용성은 제출의 **패키지** 페이지에서 관리합니다. 자세한 내용은 [디바이스 패밀리 가용성](upload-app-packages.md#device-family-availability)을 참조하세요.
 
 ## 조직 라이선스
 
@@ -90,7 +76,8 @@ ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
 -   **인증을 통과하자마자 제출 게시**를 선택하여 가능하면 빨리 이 제출을 스토어에서 판매하도록 설정합니다.
 -   게시되도록 지정할 때까지 제출이 게시되지 않게 하려면 **이 제출을 수동으로 게시**를 선택합니다. **지금 게시**를 클릭하거나 아래 설명된 대로 특정 날짜를 선택하여 인증 상태 페이지에서 이 작업을 수행할 수 있습니다.
 -   특정 날짜까지 제출이 게시되지 않도록 하려면 **배포 예정 날짜: \[date\]**를 선택합니다. 이 옵션을 사용하면 제출이 지정하는 날짜 이후에 최대한 빨리 릴리스됩니다. 날짜는 최소 24시간 이후여야 합니다. 날짜와 함께 제출이 게시되기 시작하는 시간을 지정할 수도 있습니다.
-    > **참고** 인증 또는 게시의 지연으로 실제 릴리스 날짜는 요청하는 날짜보다 늦어질 수 있습니다. Windows 스토어에서는 앱 또는 업데이트가 특정 날짜에 제공된다고 보장할 수 없습니다.
+
+   > **참고** 인증 또는 게시의 지연으로 실제 릴리스 날짜는 요청하는 날짜보다 늦어질 수 있습니다. Windows 스토어에서는 앱 또는 업데이트가 특정 날짜에 제공된다고 보장할 수 없습니다.
 
 아직 **게시** 단계로 전환되지 않은 경우 앱을 제출한 후 릴리스 날짜를 변경할 수도 있습니다.
  
@@ -103,6 +90,6 @@ ms.openlocfilehash: 509ef3b8b9ec06907fccc2dbbe29fa3c72cb8e5d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

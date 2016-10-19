@@ -4,8 +4,8 @@ Description: "올바른 범주와 하위 범주에 앱을 나열하면 고객이
 title: "범주 및 하위 범주 테이블"
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
+ms.sourcegitcommit: b31e399d950a99f0cb6f1e912e391429b5463136
+ms.openlocfilehash: 40891ade1c3383f89eed99176b4e9cf979e1fb64
 
 ---
 
@@ -18,11 +18,11 @@ ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
 
 > **참고** 범주로 **게임**을 선택하면 하위 범주가 필요합니다.
 
- 
-
 앱은 하나의 범주에만 나열될 수 있습니다(또한 가능하면 하나의 하위 범주). 사용할 범주 또는 하위 범주가 확실하지 않으면 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
 
 이미 스토어에 있는 앱의 범주나 하위 범주를 변경하려면 [새 제출을 만들고](app-submissions.md) 새 범주를 선택하여 변경할 수 있습니다.
+
+> **중요** 앱을 **게임** 범주에 게시하는 경우 새 제출에서 다른 범주를 선택할 수 없습니다. 또한 이전에 다른 범주에 게시한 앱에 대한 업데이트에서 **게임** 범주를 선택할 수 없습니다.
 
 Windows 스토어는 앱을 다음 범주와 하위 범주로 구성합니다.
 
@@ -64,6 +64,6 @@ Windows 스토어는 앱을 다음 범주와 하위 범주로 구성합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

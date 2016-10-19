@@ -4,8 +4,8 @@ title: "파일 활성화 처리"
 description: "앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
+ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
 -   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 -   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
-앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다. CWP(클래식 Windows 플랫폼) 앱과 UWP(유니버설 Windows 플랫폼) 앱 모두 기본 파일 처리기로 등록할 수 있습니다. 사용자가 앱을 특정 파일 형식의 기본 처리기로 선택하면 해당 형식의 파일을 시작할 때 앱이 활성화됩니다.
+앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다. Windows 데스크톱 응용 프로그램과 UWP(유니버설 Windows 플랫폼) 앱 모두 기본 파일 처리기로 등록할 수 있습니다. 사용자가 앱을 특정 파일 형식의 기본 처리기로 선택하면 해당 형식의 파일을 시작할 때 앱이 활성화됩니다.
 
 해당 형식의 파일에 대해 모든 파일 시작을 처리하려는 경우에만 파일 형식을 등록하는 것이 좋습니다. 앱에서 파일 형식을 내부적으로만 사용해야 할 경우에는 기본 처리기로 등록할 필요가 없습니다. 파일 형식을 등록할 경우에는 앱이 해당 파일 형식에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어 사진 뷰어 앱은 .jpg 파일을 표시하도록 등록할 수 있습니다. 파일 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)을 참조하세요.
 
@@ -154,6 +154,6 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

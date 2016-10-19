@@ -5,7 +5,7 @@ description: "iOS 또는 Android 플랫폼에서 게임을 포팅하는 경우 O
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f1119a9faed4fca7f0538a4c92c667e5b2ba559c
+ms.openlocfilehash: 84f13d6507d141c468fcfd6a2bcf75f5419d65da
 
 ---
 
@@ -120,6 +120,6 @@ Windows 런타임 API는 UWP 앱을 위한 전체 인프라를 제공합니다. 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

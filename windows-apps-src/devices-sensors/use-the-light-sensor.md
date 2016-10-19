@@ -5,7 +5,7 @@ title: "광원 센서 사용"
 description: "주변 광원 센서를 사용하여 광원 변화를 탐지하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 289d50ff4f45147c46bd66c526cf109d8fdf6d32
+ms.openlocfilehash: fe1b9a508e3b540f202e187dbe1696423c7cd373
 
 ---
 # 광원 센서 사용
@@ -172,6 +172,6 @@ LightSensorReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

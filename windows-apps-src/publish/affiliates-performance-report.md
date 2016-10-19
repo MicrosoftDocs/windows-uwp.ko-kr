@@ -5,7 +5,7 @@ title: "계열사 성과 보고서"
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
 translationtype: Human Translation
 ms.sourcegitcommit: 577b238875b2d0edd47d9ad0e5e73ca79a6acf75
-ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
+ms.openlocfilehash: cfb05b2919f40aeeb83c2ba1a75206cf74d8c51d
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
 
 ## 앱 수준 계열사 광고 성과 보고서
 
-이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고 성능 데이터를 그래프 및 표 형식으로 제공합니다. 이 보고서를 보려면 대시보드에 있는 앱 중 하나를 선택하고 탐색 창에서 **분석**&gt;**계열사 성과**를 클릭합니다.
+이 보고서는 대시보드에서 현재 선택된 앱의 계열사 광고 성능 데이터를 그래프 및 표 형식으로 제공합니다. 이 보고서를 보려면 대시보드에서 앱 중 하나를 선택하고 탐색 창에서 **분석** &gt; **계열사 성과**를 클릭합니다.
 
 앱에서 광고를 추적하는 다음 7가지의 성능 메트릭에서 데이터를 가져옵니다.
 
@@ -50,6 +50,6 @@ ms.openlocfilehash: 8c200c4f4b743aeaae71d6a6179fc15db0e7ec5e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

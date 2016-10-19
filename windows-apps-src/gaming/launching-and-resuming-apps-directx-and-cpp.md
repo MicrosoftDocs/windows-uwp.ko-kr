@@ -5,7 +5,7 @@ description: "UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: cc9468e278d651729740147cb21c70d53b43800f
+ms.openlocfilehash: 9a0a1314aa0b174bfb1c44e5280455ab668a42b7
 
 ---
 
@@ -33,6 +33,6 @@ UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

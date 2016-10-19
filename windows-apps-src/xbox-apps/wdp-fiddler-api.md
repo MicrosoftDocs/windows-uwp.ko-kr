@@ -2,10 +2,9 @@
 author: WilliamsJason
 title: "디바이스 포털 Fiddler API 참조"
 description: "프로그래밍 방식으로 Fiddler 추적을 사용/사용하지 않는 방법을 알아봅니다."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: eeb3bc5c4843fe86c54930315d4e112166664e45
-ms.openlocfilehash: 435a00eaf9c1f0d8e0c0043229c2adc80638ace3
+ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
+ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
 
 ---
 
@@ -102,6 +101,6 @@ HTTP 상태 코드      | 설명
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

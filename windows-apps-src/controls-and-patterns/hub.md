@@ -6,11 +6,13 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 ---
 # 허브 컨트롤/패턴
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 허브 컨트롤을 통해 고유하지만 관련된 섹션 또는 범주로 앱 콘텐츠를 구성할 수 있습니다. 허브의 섹션은 선호 순서에 따라 트래버스하도록 설계되었으며 보다 세부적인 환경의 시작점 역할을 합니다.
@@ -19,9 +21,19 @@ ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 허브의 콘텐츠는 사용자가 새로운 기능, 사용 가능한 기능 및 관련된 기능을 한눈에 살펴볼 수 있는 파노라마 보기로 표시됩니다. 일반적으로 허브에는 페이지 머리글이 있고 각 콘텐츠 섹션에는 섹션 머리글이 있습니다.
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>허브 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>HubSection 클래스</strong></a></li>
+</ul>
 
--   [**허브 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**HubSection 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+</div>
+</div>
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -112,6 +124,6 @@ ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

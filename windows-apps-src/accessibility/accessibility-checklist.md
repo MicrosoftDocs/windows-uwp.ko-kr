@@ -6,8 +6,8 @@ title: "접근성 검사 목록"
 label: Accessibility checklist
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 6ac5430a3e18a02d5f2fc82829631b7649ea547d
-ms.openlocfilehash: 2d632c524de8299378d8cc059d1c522080a2df2e
+ms.sourcegitcommit: 1c569df0684506f703d3ca5707314a96b035fcf6
+ms.openlocfilehash: 5220255a29da9a42bb82df5f450961b5c1b34942
 
 ---
 
@@ -64,10 +64,10 @@ UWP(유니버설 Windows 플랫폼) 앱이 접근 가능한지 확인하는 검�
 ## 관련 항목  
 * [접근성](accessibility.md)
 * [접근성을 위한 디자인](https://msdn.microsoft.com/library/windows/apps/Hh700407)
-* [피해야 할 사례](practices-to-avoid.md)
+* [피해야 할 사례](practices-to-avoid.md) 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,10 +3,10 @@ author: Xansky
 description: "사용자가 메일 메시지를 보낼 수 있도록 메일 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 메일의 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다."
 title: "메일 보내기"
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
-keywords: contacts, email, send
+keywords: "연락처, 메일, 보내기"
 translationtype: Human Translation
 ms.sourcegitcommit: 252e144b2436f047f7b0849bb6e5aee87b2e3464
-ms.openlocfilehash: ff0d2cd86f8ba422db7a26565c52293a3e21a018
+ms.openlocfilehash: ff09393af072eb8aee8c3001e7323cc20201da70
 
 ---
 
@@ -76,6 +76,6 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

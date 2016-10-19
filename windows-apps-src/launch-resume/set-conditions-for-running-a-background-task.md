@@ -4,16 +4,14 @@ title: "백그라운드 작업 실행 조건 설정"
 description: "백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
 
 ---
 
 # 백그라운드 작업 실행 조건 설정
 
-
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -23,18 +21,17 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 
 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.
 
-백그라운드 작업은 성공적으로 수행하려면 작업을 트리거하는 이벤트 이외에 특정한 조건을 충족해야 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 실행되면 조건을 확인합니다. 백그라운드 작업은 큐에 보관되지만 모든 필요한 조건이 충족될 때에만 실행됩니다.
+백그라운드 작업을 성공적으로 수행하려면 작업을 트리거하는 이벤트 이외에 특정한 조건을 충족해야 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 실행되면 조건을 확인합니다. 백그라운드 작업은 큐에 보관되지만 모든 필요한 조건이 충족될 때에만 실행됩니다.
 
-백그라운드 작업에 조건을 설정하면 작업이 불필요하게 실행되지 않으므로 배터리 사용 시간과 CPU 런타임이 절약됩니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에 추가합니다. 그러면 타이머가 경과되고 인터넷을 사용할 수 있을 때 작업을 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
+백그라운드 작업에 조건을 설정하면 작업이 불필요하게 실행되지 않으므로 배터리 사용 시간과 CPU 런타임이 절약됩니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에 추가합니다. 그러면 타이머가 경과*되고* 인터넷을 사용할 수 있을 때 백그라운드 작업만 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
 
-**참고** 동일한 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에서 AddCondition을 여러 번 호출하여 여러 조건을 결합할 수 있습니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
-
- 
+동일한 [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)에서 AddCondition을 여러 번 호출하여 여러 조건을 결합할 수도 있습니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
 
 ## SystemCondition 개체 만들기
 
+이 항목에서는 앱에 백그라운드 작업이 이미 연결되어 있으며, [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체(**taskBuilder**)를 만드는 코드가 앱에 포함되어 있다고 가정합니다.  백그라운드 작업을 먼저 만들어야 하는 경우 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md) 또는 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
-이 항목에서는 앱에 백그라운드 작업이 이미 연결되어 있으며, [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체(**taskBuilder**)를 만드는 코드가 앱에 포함되어 있다고 가정합니다.
+이 항목은 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업뿐만 아니라 별도 프로세스에서 실행되는 백그라운드 작업에도 적용됩니다.
 
 조건을 추가하기 전에 백그라운드 작업이 실행되기 위해 충족해야 하는 조건을 나타내는 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) 개체를 만듭니다. 생성자에서 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) 열거형 값을 제공하여 충족해야 하는 조건을 지정합니다.
 
@@ -156,18 +153,16 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 ## 설명
 
 
-> **참고** 백그라운드 작업이 필요한 경우에만 실행되고 작업이 실패하는 경우에는 실행되지 않도록 백그라운드 작업에 적합한 조건을 선택합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
+> **참고** 백그라운드 작업이 필요한 경우에만 실행되고 필요하지 않은 경우에는 실행되지 않도록 백그라운드 작업에 대한 조건을 선택합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
 > **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
- 
-
 ## 관련 항목
-
 
 ****
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -189,6 +184,6 @@ ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

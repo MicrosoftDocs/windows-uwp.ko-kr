@@ -5,7 +5,7 @@ title: "이동 및 그리기 명령 구문"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
+ms.openlocfilehash: 832e757c5bbdc10c2f0f10db127d3f21932313b3
 
 ---
 
@@ -48,7 +48,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**Figures**](ht
 -   닫기 명령을 제외한 각 명령 뒤에는 일반적으로 하나 이상의 숫자가 나옵니다.
 -   명령에 대해 숫자가 여러 개인 경우 쉼표나 공백을 사용하여 구분합니다.
 
-**\[** _fillRule_ **\]** _moveCommand_ _drawCommand_ **\[** _drawCommand_ **\*\]** **\[** _closeCommand_ **\]**
+**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
 
 다수의 그리기 명령은 점을 사용하며, 이 점에서 _x,y_ 값을 제공합니다. \*_points_ 개체 틀이 표시될 때마다 점의 _x,y_ 값에 대해 두 개의 10진수 값을 제공한다고 가정할 수 있습니다.
 
@@ -240,6 +240,6 @@ XAML 형식으로 벡터를 출력할 수 있으며 일반적으로 사용되는
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

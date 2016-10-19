@@ -1,58 +1,62 @@
 ---
 author: mcleanbyron
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Use these methods in the Windows Store submission API to manage package flight submissions for apps that are registered to your Windows Dev Center account.
-title: Manage package flight submissions using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트 제출을 관리합니다."
+title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 18d28495b80101cf5cfe53869b0f5cd3d61b50c9
+
 ---
 
-# Manage package flight submissions using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리
 
 
 
 
-Use the following methods in the Windows Store submission API to manage package flight submissions for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트 제출을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled. Before you can use these methods to create or manage submissions for package flight, the package flight must already exist in your Dev Center account. You can create a package flight by [using the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/package-flights) or by using the Windows Store submission API methods in described in [Manage package flights](manage-flights.md).
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드를 사용하여 패키지 플라이트를 위한 제출을 만들거나 관리하려면 패키지 플라이트가 이미 해당 개발자 센터 계정에 있어야 합니다. [개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/package-flights)하거나 [패키지 플라이트 관리](manage-flights.md)에 설명된 Windows 스토어 제출 API 방법을 사용하여 패키지 플라이트를 만들 수 있습니다.
 
-| Method        | URI    | Description                                                                 |
+| 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Gets data for an existing package flight submission. For more information, see [Get a package flight submission](get-a-flight-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | Gets the status of an existing package flight submission. For more information, see [Get the status of a package flight submission](get-status-for-a-flight-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/applications/{applicationId}/flights/{flightId}/submissions``` | Creates a new package flight submission for an app that is registered to your Windows Dev Center account. For more information, see [Create a package flight submission](create-a-flight-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Commits a new or updated package flight submission to Windows Dev Center. For more information, see [Commit a package flight submission](commit-a-flight-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Updates an existing package flight submission. For more information, see [Update a package flight submission](update-a-flight-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | Deletes a package flight submission. For more information, see [Delete a package flight submission](delete-a-flight-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다. 자세한 내용은 [패키지 플라이트 제출 가져오기](get-a-flight-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | 기존 패키지 플라이트 제출의 상태를 가져옵니다. 자세한 내용은 [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/applications/{applicationId}/flights/{flightId}/submissions``` | Windows 개발자 센터 계정에 등록된 앱에 대한 새 패키지 플라이트 제출을 만듭니다. 자세한 내용은 [패키지 플라이트 제출 만들기](create-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Windows 개발자 센터에 새로운 또는 업데이트된 패키지 플라이트 제출을 커밋합니다. 자세한 내용은 [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)을 참조하세요. |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출을 업데이트합니다. 자세한 내용은 [패키지 플라이트 제출 업데이트](update-a-flight-submission.md)를 참조하세요. |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 패키지 플라이트 제출을 삭제합니다. 자세한 내용은 [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)를 참조하세요. |
 
 <span id="create-a-package-flight-submission">
-## Create a package flight submission
+## 패키지 플라이트 제출 만들기
 
-To create a submission for a package flight, follow this process.
+패키지 플라이트에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. If you have not yet done so, complete the prerequisites described in [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md), including associating an Azure AD application with your Windows Dev Center account and obtaining your client ID and key. You only need to do this one time; after you have the client ID and key, you can reuse them any time you need to create a new Azure AD access token.  
+1. 아직 수행하지 않은 경우 Windows 개발자 센터 계정으로 Azure AD 응용 프로그램 연결 및 클라이언트 ID와 키 얻기를 비롯하여 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)에 설명된 필수 조건을 완료합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
 
-2. [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). You must pass this access token to the methods in the Windows Store submission API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
-3. Execute the following method in the Windows Store submission API. This method creates a new in-progress submission, which is a copy of your last published submission. For more information, see [Create a package flight submission](create-a-flight-submission.md).
+3. Windows 스토어 제출 API에서 다음 메서드를 실행합니다. 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다. 자세한 내용은 [패키지 플라이트 제출 만들기](create-a-flight-submission.md)를 참조하세요.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
   ```
 
-  The response body contains three items: the ID of the new submission, the data for the new submission (including all the listings and pricing information), and the shared access signature (SAS) URI for uploading any packages for the submission. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+  응답 본문에는 새 제출의 ID, 새 제출의 데이터(모든 목록 및 가격 정보) 및 제출 패키지 업로드를 위한 SAS(공유 액세스 서명) URI가 포함되어 있습니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.
 
-4. If you are adding new packages for the submission, [prepare the packages](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) and add them to a ZIP archive.
+4. 제출에 대한 새 패키지를 추가하는 경우 [패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 ZIP 보관 파일에 추가합니다.
 
-5. Update the submission data with any required changes for the new submission, and execute the following method to update the submission. For more information, see [Update a package flight submission](update-a-flight-submission.md).
+5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 업데이트하고 다음 메서드를 실행하여 제출을 업데이트합니다. 자세한 내용은 [패키지 플라이트 제출 업데이트](update-a-flight-submission.md)를 참조하세요.
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
   ```
 
-  >**Note**&nbsp;&nbsp;If you are adding new packages for the submission, make sure you update the submission data to refer to the name and relative path of these files in the ZIP archive.
+  >**참고**&nbsp;&nbsp;제출에 대한 새 패키지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
-4. If you are adding new packages for the submission, upload the ZIP archive to the SAS URI that was provided in the response body of the POST method you called in step 2. For more information, see [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. 제출에 대한 새 패키지를 추가하는 경우 2단계에서 호출한 POST 메서드의 응답 본문에 제공된 SAS URI에 ZIP 보관 파일을 업로드합니다. 자세한 내용은 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
-  The following code snippet demonstrates how to upload the archive using the [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) class in the Azure Storage Client Library for .NET.
+  다음 코드 조각은 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 보관 파일을 업로드하는 방법을 보여 줍니다.
 
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -62,30 +66,30 @@ To create a submission for a package flight, follow this process.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. Commit the submission by executing the following method. This will alert Dev Center that you are done with your submission and that your updates should now be applied to your account. For more information, see [Commit a package flight submission](commit-a-flight-submission.md).
+5. 다음 메서드를 실행하여 제출을 커밋합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다. 자세한 내용은 [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)을 참조하세요.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
   ```
 
-6. Check on the commit status by executing the following method. For more information, see [Get the status of a package flight submission](get-status-for-a-flight-submission.md).
+6. 다음 메서드를 실행하여 커밋 상태를 확인합니다. 자세한 내용은 [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)를 참조하세요.
 
   ```
   GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
   ```
 
-  To confirm the submission status, review the *status* value in the response body. This value should change from **CommitStarted** to either **PreProcessing** if the request succeeds or to **CommitFailed** if there are errors in the request. If there are errors, the *statusDetails* field contains further details about the error.
+  제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. After the commit has successfully completed, the submission is sent to the Store for ingestion. You can continue to monitor the submission progress by using the previous method, or by visiting the Dev Center dashboard.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
-## Resources
+## 리소스
 
-These methods use the following data resources.
+이러한 메서드는 다음 데이터 리소스를 사용합니다.
 
 <span id="flight-submission-object" />
-### Package flight submission
+### 패키지 플라이트 제출
 
-This resource represents a submission for a package flight. The following example demonstrates the format of this resource.
+이 리소스는 패키지 플라이트에 대한 제출을 나타냅니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -116,58 +120,58 @@ This resource represents a submission for a package flight. The following exampl
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id            | string  | The ID for the submission.  |
-| flightId           | string  |  The ID of the package flight that the submission is associated with.  |  
-| status           | string  | The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
-| statusDetails           | object  |  Contains additional details about the status of the submission, including information about any errors. For more information, see the [Status details](#status-details-object) section below. |
-| flightPackages           | array  | Contains objects that provide details about each package in the submission. For more information, see the [Flight package](#flight-package-object) section below.  |
-| fileUploadUrl           | string  | The shared access signature (SAS) URI for uploading any packages for the submission. If you are adding new packages for the submission, upload the ZIP archive that contains the packages to this URI. For more information, see [Create a package flight submission](#create-a-package-flight-submission).  |
-| targetPublishMode           | string  | The publish mode for the submission. This can be one of the following values: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | The publish date for the submission in ISO 8601 format, if the *targetPublishMode* is set to SpecificDate.  |
-| notesForCertification           | string  |  Provides additional info for the certification testers, such as test account credentials and steps to access and verify features. For more information, see [Notes for certification](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification). |
+| id            | 문자열  | 제출 ID입니다.  |
+| flightId           | 문자열  |  제출이 연결된 패키지 플라이트의 ID입니다.  |  
+| status           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| statusDetails           | object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 아래의 [상태 세부 정보](#status-details-object) 섹션을 참조하세요. |
+| flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 아래의 [플라이트 패키지](#flight-package-object) 섹션을 참조하세요.  |
+| fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [패키지 플라이트 제출 만들기](#create-a-package-flight-submission)를 참조하세요.  |
+| targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
+| notesForCertification           | 문자열  |  테스트 계정 자격 증명, 기능 액세스 및 확인 단계 등 인증 테스터에 대한 추가 정보를 제공합니다. 자세한 내용은 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)을 참조하세요. |
 
 <span id="status-details-object" />
-### Status details
+### 상태 세부 정보
 
-This resource contains additional details about the status of a submission. This resource has the following values.
+이 리소스에는 제출 상태에 대한 추가 세부 정보가 포함됩니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  errors               |    object     |   An array of objects that contain error details for the submission. For more information, see the [Status detail](#status-detail-object) section below.   |     
-|  warnings               |   object      | An array of objects that contain warning details for the submission. For more information, see the [Status detail](#status-detail-object) section below.     |
-|  certificationReports               |     object    |   An array of objects that provide access to the certification report data for the submission. You can examine these reports for more information if the certification fails. For more information, see the [Certification report](#certification-report-object) section below.   |  
+|  오류               |    object     |   제출에 대한 오류 세부 정보가 포함된 개체의 배열입니다. 자세한 내용은 아래의 [상태 세부 정보](#status-detail-object) 섹션을 참조하세요.   |     
+|  경고               |   object      | 제출에 대한 경고 정보가 포함된 개체의 배열입니다. 자세한 내용은 아래의 [상태 세부 정보](#status-detail-object) 섹션을 참조하세요.     |
+|  certificationReports               |     object    |   제출에 대한 인증 보고서 데이터에 대한 액세스를 제공하는 개체의 배열입니다. 인증에 실패할 경우 이러한 보고서에서 자세한 내용을 확인할 수 있습니다. 자세한 내용은 아래의 [인증 보고서](#certification-report-object) 섹션을 참조하세요.   |  
 
 
 <span id="status-detail-object" />
-### Status detail
+### 상태 세부 정보
 
-This resource contains additional information about any related errors or warnings for a submission. This resource has the following values.
+이 리소스에는 제출과 관련된 오류 또는 경고에 대한 추가 정보가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  code               |    string     |   A string that describes the type of error or warning. For more information, see the [Submission status code](#submission-status-code) section below.   |     
-|  details               |     string    |  A message with more details about the issue.     |
+|  code               |    문자열     |   오류 또는 경고의 형식을 설명하는 문자열입니다. 자세한 내용은 아래의 [제출 상태 코드](#submission-status-code) 섹션을 참조하세요.   |     
+|  세부 정보               |     문자열    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 
 <span id="certification-report-object" />
-### Certification report
+### 인증 보고서
 
-This resource provides access to the certification report data for a submission. This resource has the following values.
+이 리소스는 제출의 인증 보고서 데이터에 대한 액세스를 제공합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|     date            |    string     |  The date and time the report was generated, in in ISO 8601 format.    |
-|     reportUrl            |    string     |  The URL at which you can access the report.    |
+|     date            |    문자열     |  보고서가 생성된 날짜 및 시간(ISO 8601 형식)입니다.    |
+|     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 
 <span id="flight-package-object" />
-### Flight package
+### 플라이트 패키지
 
-This resource provides details about a package in a submission. The following example demonstrates the format of this resource.
+이 리소스는 제출의 패키지에 대한 세부 정보를 제공합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -186,59 +190,65 @@ This resource provides details about a package in a submission. The following ex
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
->**Note**&nbsp;&nbsp;When calling the [update a package flight submission](update-a-flight-submission.md) method, only the *fileName*, *fileStatus*, *minimumDirectXVersion*, and *minimumSystemRam* values of this object are required in the request body. The other values are populated by Dev Center.
+>**참고**&nbsp;&nbsp;[패키지 플라이트 제출 업데이트](update-a-flight-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-| fileName   |   string      |  The name of the package.    |  
-| fileStatus    | string    |  The status of the package. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  An ID that uniquely identifies the package. This value is used by Dev Center.   |     
-| version    |  string   |  The version of the app package. For more information, see [Package version numbering](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  string   |  The architecture of the app package (for example, ARM).   |     
-| languages    | array    |  An array of language codes for the languages the app supports. For more information, see For more information, see [Supported languages](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  An array of capabilities required by the package. For more information about capabilities, see [App capability declarations](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  string   |  The minimum DirectX version that is supported by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | string    |  The minimum RAM that is required by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>Memory2GB</li></ul>   |    
+| fileName   |   문자열      |  패키지의 이름입니다.    |  
+| fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 사용됩니다.   |     
+| version    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| architecture    |  문자열   |  앱 패키지의 아키텍처(예: ARM)입니다.   |     
+| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+| capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
+| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |    
 
 <span/>
 
-## Enums
+## 열거
 
-These methods use the following enums.
+이러한 메서드는 다음 열거형을 사용합니다.
 
 <span id="submission-status-code" />
-### Submission status code
+### 제출 상태 코드
 
-The following codes represent the status of a submission.
+다음 코드는 제출 상태를 나타냅니다.
 
-| Code           |  Description      |
+| 코드           |  설명      |
 |-----------------|---------------|
-|  None            |     No code was specified.         |     
-|      InvalidArchive        |     The ZIP archive containing the package is invalid or has an unrecognized archive format.  |
-| MissingFiles | The ZIP archive does not have all files which were listed in your submission data, or they are in the wrong location in the archive. |
-| PackageValidationFailed | One or more packages in your submission failed to validate. |
-| InvalidParameterValue | One of the parameters in the request body is invalid. |
-| InvalidOperation | The operation you attempted is invalid. |
-| InvalidState | The operation you attempted is not valid for the current state of the package flight. |
-| ResourceNotFound | The specified package flight could not be found. |
-| ServiceError | An internal service error prevented the request from succeeding. Try the request again. |
-| ListingOptOutWarning | The developer removed a listing from a previous submission, or did not include listing information that is supported by the package. |
-| ListingOptInWarning  | The developer added a listing. |
-| UpdateOnlyWarning | The developer is trying to insert something that only has update support. |
-| Other  | The submission is in an unrecognized or uncategorized state. |
-| PackageValidationWarning | The package validation process resulted in a warning. |
+|  None            |     코드가 지정되지 않았습니다.         |     
+|      InvalidArchive        |     패키지가 포함된 ZIP 보관 파일이 잘못되거나 인식할 수 없는 보관 파일 형식입니다.  |
+| MissingFiles | 제출 데이터에 나열된 모든 파일이 ZIP 보관 파일에 없거나 보관 파일에서 잘못된 위치에 있습니다. |
+| PackageValidationFailed | 제출에서 하나 이상의 패키지가 유효성 검사에 실패했습니다. |
+| InvalidParameterValue | 요청 본문의 매개 변수 중 하나가 잘못되었습니다. |
+| InvalidOperation | 시도한 작업이 유효하지 않습니다. |
+| InvalidState | 시도한 작업이 패키지 플라이트의 현재 상태에 적합하지 않습니다. |
+| ResourceNotFound | 지정된 패키지 플라이트를 찾을 수 없습니다. |
+| ServiceError | 내부 서비스 오류가 발생하여 요청이 실패했습니다. 요청을 다시 시도하세요. |
+| ListingOptOutWarning | 개발자가 이전 제출에서 목록을 제거하거나 패키지에서 지원되는 목록 정보를 포함하지 않았습니다. |
+| ListingOptInWarning  | 개발자가 목록을 추가했습니다. |
+| UpdateOnlyWarning | 개발자가 업데이트만 지원되는 항목을 삽입하려고 합니다. |
+| 기타  | 제출이 인식할 수 없거나 분류되지 않은 상태입니다. |
+| PackageValidationWarning | 패키지 유효성 검사 프로세스에서 경고가 발생했습니다. |
 
 <span/>
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flights using the Windows Store submission API](manage-flights.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Create a package flight submission](create-a-flight-submission.md)
-* [Update a package flight submission](update-a-flight-submission.md)
-* [Commit a package flight submission](commit-a-flight-submission.md)
-* [Delete a package flight submission](delete-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 제출 API를 사용하여 패키지 플라이트 관리](manage-flights.md)
+* [패키지 플라이트 제출 가져오기](get-a-flight-submission.md)
+* [패키지 플라이트 제출 만들기](create-a-flight-submission.md)
+* [패키지 플라인트 제출 업데이트](update-a-flight-submission.md)
+* [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)
+* [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)
+* [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -5,7 +5,7 @@ title: "성능 계획"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 ---
 # 성능 계획
@@ -161,7 +161,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 -   올인원 및 데스크톱 PC, 랩톱 및 울트라북, 태블릿 및 기타 모바일 디바이스 등 광범위한 하드웨어 구성을 테스트합니다.
 -   다양한 화면 크기에 대해 테스트합니다. 화면 크기가 클수록 더 많은 콘텐츠를 표시할 수 있지만 추가 콘텐츠를 모두 표시하면 성능에 부정적인 영향을 줄 수 있습니다.
 -   테스트 변수를 최대한 많이 제거합니다.
-    -   테스트 디바이스에서 백그라운드 앱을 끕니다. 이렇게 하려면 Windows의 시작 메뉴에서 **설정**을 선택한 후 &gt;**개인 설정**&gt;**화면 잠금**을 선택합니다. 각 활성 앱을 선택하고 **없음**을 선택합니다.
+    -   테스트 디바이스에서 백그라운드 앱을 끕니다. 이렇게 하려면 Windows의 시작 메뉴에서 **설정**을 선택한 후 &gt; **개인 설정** &gt; **잠금 화면**을 선택합니다. 각 활성 앱을 선택하고 **없음**을 선택합니다.
     -   테스트 디바이스에 배포하기 전에 릴리스 구성에서 작성하여 네이티브 코드로 앱을 컴파일합니다.
     -   자동 유지 관리가 테스트 디바이스의 성능에 영향을 주지 않도록 하려면 수동으로 트리거하고 완료될 때까지 기다립니다. Windows의 시작 메뉴에서 **보안 및 유지 관리**를 검색합니다. **유지 관리** 영역의 **자동 유지 관리** 아래에서 **유지 관리 시작**을 선택하고 상태가 **유지 관리 진행 중**에서 변경될 때까지 기다립니다.
     -   앱을 여러 번 실행하여 임의 테스트 변수를 제거하고 일관된 측정을 보장합니다.
@@ -194,6 +194,6 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

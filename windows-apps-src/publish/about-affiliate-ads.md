@@ -5,7 +5,7 @@ title: "계열사 광고 정보"
 ms.assetid: 7B5478FB-7E68-4956-82EF-B43C2873E3EF
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0ac051d5774dadde48e2692683a6bcfae8264d1c
+ms.openlocfilehash: e60ed6b6237b053a370a42bdb87f9366b265e4d0
 
 ---
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: 0ac051d5774dadde48e2692683a6bcfae8264d1c
 
 Microsoft 계열사 광고 프로그램에 옵트인(opt in)하려면
 
-1. Windows 개발자 센터 대시보드에서 **수익 창출**&gt;**광고로 수익 창출** 페이지로 이동합니다.
+1. Windows 개발자 센터 대시보드에서 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동합니다.
 2. **Microsoft 계열사 광고** 섹션에서 **내 앱에 Microsoft 계열사 광고 표시** 확인란을 선택합니다.
 
 이 확인란을 선택하거나 선택 취소한 후 변경 내용을 적용하기 위해 앱을 다시 게시할 필요가 없습니다.
@@ -49,6 +49,6 @@ Microsoft 계열사 광고 프로그램에 옵트인(opt in)하려면
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

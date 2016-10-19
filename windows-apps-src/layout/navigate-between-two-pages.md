@@ -1,54 +1,58 @@
 ---
 author: Jwmsft
-Description: Learn how to navigate in a basic two-page Universal Windows Platform (UWP) app.
-title: Navigate between two pages
+Description: "기본 두 페이지 UWP(유니버설 Windows 플랫폼) 앱에서 탐색하는 방법을 알아봅니다."
+title: "두 페이지 간 이동"
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Navigate between two pages
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 0cf689ae9d74735f33baa85b3a8791a68a4467d4
+ms.openlocfilehash: d5ff0dfcb10c6977bb93f28cbf8631b9b5dfb83f
+
 ---
 
-# Navigate between two pages
+# 두 페이지 간 이동
 
-Learn how to navigate in a basic two-page Universal Windows Platform (UWP) app.
+기본 두 페이지 UWP(유니버설 Windows 플랫폼) 앱에서 탐색하는 방법을 알아봅니다.
 
-![two-page navigation example](images/nav-peertopeer-2page.png)
+![두 페이지의 탐색 예제](images/nav-peertopeer-2page.png)
 
 
-**Important APIs**
+**중요 API**
 
 -   [**Windows.UI.Xaml.Controls.Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)
 -   [**Windows.UI.Xaml.Controls.Page**](https://msdn.microsoft.com/library/windows/apps/br227503)
 -   [**Windows.UI.Xaml.Navigation**](https://msdn.microsoft.com/library/windows/apps/br243300)
 
 
-## Create the blank app
+## 빈 앱 만들기
 
 
-1.  On the Microsoft Visual Studio menu, choose **File &gt; New Project**.
-2.  In the left pane of the **New Project** dialog box, choose the **Visual C# -&gt; Windows -&gt; Universal** or the **Visual C++ -&gt; Windows -&gt; Universal** node.
-3.  In the center pane, choose **Blank App**.
-4.  In the **Name** box, enter **NavApp1**, and then choose the **OK** button.
+1.  Microsoft Visual Studio 메뉴에서 **파일 &gt; 새 프로젝트**를 선택합니다.
+2.  **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C# -&gt; Windows -&gt; 유니버설** 또는 **Visual C++ -&gt; Windows -&gt; 유니버설** 노드를 선택합니다.
+3.  가운데 창에서 **빈 앱**을 선택합니다.
+4.  **이름** 상자에 **NavApp1**을 입력하고 **확인** 단추를 선택합니다.
 
-    The solution is created and the project files appear in **Solution Explorer**.
+    솔루션이 만들어지고 **솔루션 탐색기**에 프로젝트 파일이 나타납니다.
 
-5.  To run the program, choose **Debug** &gt; **Start Debugging** from the menu, or press F5.
+5.  프로그램을 실행하려면 메뉴에서 **디버그** &gt; **디버깅 시작**을 선택하거나 F5 키를 누릅니다.
 
-    A blank page is displayed.
+    빈 페이지가 표시됩니다.
 
-6.  Press Shift+F5 to stop debugging and return to Visual Studio.
+6.  디버깅을 중지하고 Visual Studio로 돌아가려면 Shift+F5를 누릅니다.
 
-## Add basic pages
+## 기본 페이지 추가
 
-Next, add two content pages to the project.
+이제 프로젝트에 두 개의 콘텐츠 페이지를 추가하는데,
 
-Do the following steps two times to add two pages to navigate between.
+다음 단계를 두 번 수행하여 탐색할 두 페이지를 추가합니다.
 
-1.  In **Solution Explorer**, right-click the **BlankApp** project node to open the shortcut menu.
-2.  Choose **Add** &gt; **New Item** from the shortcut menu.
-3.  In the **Add New Item** dialog box, choose **Blank Page** in the middle pane.
-4.  In the **Name** box, enter **Page1** (or **Page2**) and press the **Add** button.
+1.  **솔루션 탐색기**에서, **BlankApp** 프로젝트 노드를 마우스 오른쪽 단추로 클릭하여 바로 가기 메뉴를 엽니다.
+2.  바로 가기 메뉴에서 **추가** &gt; **새 항목**을 선택합니다.
+3.  **새 항목 추가** 대화 상자의 가운데 창에서 **빈 페이지**를 선택합니다.
+4.  **이름** 입력란에 **Page1**(또는 **Page2**)을 입력하고 **추가** 단추를 누릅니다.
 
-These files should now be listed as part of your NavApp1 project.
+이제 이러한 파일이 NavApp1 프로젝트의 일부로 나열됩니다.
 
 <table>
 <colgroup>
@@ -77,28 +81,28 @@ These files should now be listed as part of your NavApp1 project.
 <li>Page2.xaml.cpp</li>
 <li>Page2.xaml.h
 <div class="alert">
-<strong>Note</strong>  
-<p>Functions are declared in the header (.h) file and implemented in the code-behind file (.cpp).</p>
+<strong>참고</strong>  
+<p>함수는 헤더 파일(.h)에서 선언되며 코드 숨김 파일(.cpp)에서 구현됩니다.</p>
 </div>
 <div>
- 
+ 
 </div></li>
 </ul></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-Add the following content to the UI of Page1.xaml.
+Page1.xaml의 UI에 다음 콘텐츠를 추가합니다.
 
--   Add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element named `pageTitle` as a child element of the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704). Change the [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) property to `Page 1`.
+-   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성을 `Page 1`로 변경합니다.
 
 ```xaml
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   Add the following [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) element as a child element of the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element.
+-   다음 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로, `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소 뒤에 추가합니다.
 
 
 ```xaml
@@ -107,7 +111,7 @@ Add the following content to the UI of Page1.xaml.
                  HorizontalAlignment="Center"/>
 ```
 
-Add the following code to the `Page1` class in the Page1.xaml code-behind file to handle the `Click` event of the [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) you added previously. Here, we navigate to Page2.xaml.
+다음 코드를 Page1.xaml 코드 숨김 파일의 `Page1` 클래스에 추가하여 이전에 추가한 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 `Click` 이벤트를 처리합니다. 이제 Page2.xaml로 이동합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -123,15 +127,15 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
-Make the following changes to the UI of Page2.xaml.
+Page2.xaml의 UI를 다음과 같이 변경합니다.
 
--   Add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element named `pageTitle` as a child element of the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704). Change the value of the [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) property to `Page 2`.
+-   `pageTitle`이라는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로 추가합니다. [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성의 값을 `Page 2`로 변경합니다.
 
 ```xaml
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   Add the following [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) element as a child element of the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) and after the `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element.
+-   다음 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 요소를 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 자식 요소로, `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소 뒤에 추가합니다.
 
 ```xaml
 <HyperlinkButton Content="Click to go to page 1"
@@ -139,10 +143,10 @@ Make the following changes to the UI of Page2.xaml.
                  HorizontalAlignment="Center"/>
 ```
 
-Add the following code to the `Page2` class in the Page2.xaml code-behind file to handle the `Click` event of the [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) you added previously. Here, we navigate to Page1.xaml.
+다음 코드를 Page2.xaml 코드 숨김 파일의 `Page2` 클래스에 추가하여 이전에 추가한 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 `Click` 이벤트를 처리합니다. 이제 Page1.xaml로 이동합니다.
 
-**Note**  
-For C++ projects, you must add a `#include` directive in the header file of each page that references another page. For the inter-page navigation example presented here, page1.xaml.h file contains `#include "Page2.xaml.h"`, in turn, page2.xaml.h contains `#include "Page1.xaml.h"`.
+**참고**  
+C++ 프로젝트의 경우 다른 페이지를 참조하는 각 페이지의 헤더 파일에 `#include` 지시문을 추가해야 합니다. 여기에 제공된 페이지 간 탐색 예제의 경우 page1.xaml.h 파일에 `#include "Page2.xaml.h"`가 포함됩니다. 그러면 page2.xaml.h에는 `#include "Page1.xaml.h"`가 포함됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -158,11 +162,11 @@ void Page2::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
-Now that we've prepared the content pages, we need to make Page1.xaml display when the app starts.
+이제 콘텐츠 페이지를 준비했으므로 앱이 시작될 때 Page1.xaml이 표시되도록 해야 합니다.
 
-Open the app.xaml code-behind file and change the `OnLaunched` handler.
+app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니다.
 
-Here, we specify `Page1` in the call to [**Frame.Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) instead of `MainPage`.
+여기서는 `MainPage` 대신 [**Frame.Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694)에 대한 호출에서 `Page1`을 지정합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -238,29 +242,29 @@ Here, we specify `Page1` in the call to [**Frame.Navigate**](https://msdn.micros
 > }
 > ```
 
-**Note**  The code here uses the return value of [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) to throw an app exception if the navigation to the app's initial window frame fails. When **Navigate** returns **true**, the navigation happens.
+**참고** 여기서 코드는 앱의 초기 창 프레임에 대한 탐색이 실패할 경우 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694)의 반환 값을 사용하여 앱 예외를 발생시킵니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
 
-Now, build and run the app. Click the link that says "Click to go to page 2". The second page that says "Page 2" at the top should be loaded and displayed in the frame.
+이제 앱을 빌드하고 실행합니다. "Click to go to page 2"라는 링크를 클릭합니다. 맨 위의 "Page 2"라는 두 번째 페이지가 로드되어 프레임에 표시됩니다.
 
-## Frame and Page classes
+## Frame 및 Page 클래스
 
-Before we add more functionality to our app, let's look at how the pages we added provide navigation support for the app.
+앱이 기능을 추가하기 전에, 지금 추가한 페이지에서 앱의 탐색을 지원하는 방법을 살펴보겠습니다.
 
-First, a [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) (`rootFrame`) is created for the app in the `App.OnLaunched` method of the App.xaml code-behind file. The [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) class supports various navigation methods such as [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), and [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693), and properties such as [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547), and [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995). The [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) method is used to display content in this **Frame**.
- 
-In our example, `Page1` is passed to the [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) method. This method sets the content of the app's current window to the [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) and loads the content of the page you specify into the **Frame** (Page1.xaml in our example, or MainPage.xaml, by default).
+먼저 App.xaml 코드 숨김 파일의 `App.OnLaunched` 메서드에서 앱에 대한 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)(`rootFrame`)이 생성됩니다. [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) 클래스에서는 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694), [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568), [**GoForward**](https://msdn.microsoft.com/library/windows/apps/br242693) 등의 다양한 탐색 메서드와 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543), [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547), [**BackStackDepth**](https://msdn.microsoft.com/library/windows/apps/hh967995) 등의 속성을 지원합니다. 이 **Frame**에 콘텐츠를 표시하려면 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드를 사용합니다.
+ 
+이 예제에서는 `Page1`이 [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) 메서드에 전달됩니다. 이 메서드는 앱의 현재 창의 콘텐츠를 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)으로 설정하고 지정하는 페이지의 콘텐츠를 **Frame**(이 예제에서는 Page1.xaml 또는 기본적으로 MainPage.xaml)에 로드합니다.
 
-`Page1` is a subclass of the [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) class. The **Page** class has a read-only [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) property that gets the [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) containing the **Page**. When the [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event handler of the [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) calls` Frame.Navigate(typeof(Page2))`, the **Frame** in the app's window displays the content of Page2.xaml.
+`Page1` 은 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 클래스의 하위 클래스입니다. **Page** 클래스에는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504) 속성이 있는데, 이는 **Page**를 포함하는 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)을 가져오는 읽기 전용 속성입니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트 처리기가 ` Frame.Navigate(typeof(Page2))`를 호출하면 앱 창의 **Frame**에 Page2.xaml의 내용이 표시됩니다.
 
-Whenever a page is loaded into the frame, that page is added as a [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572) to the [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) or [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547) of the [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504).
+프레임에 페이지가 로드되면 해당 페이지가 [**Frame**](https://msdn.microsoft.com/library/windows/apps/br227504)의 [**BackStack**](https://msdn.microsoft.com/library/windows/apps/dn279543) 또는 [**ForwardStack**](https://msdn.microsoft.com/library/windows/apps/dn279547)에 [**PageStackEntry**](https://msdn.microsoft.com/library/windows/apps/dn298572)로 추가됩니다.
 
-## Pass information between pages
+## 페이지 간 정보 전달
 
-Our app navigates between two pages, but it really doesn't do anything interesting yet. Often, when an app has multiple pages, the pages need to share information. Let's pass some information from the first page to the second page.
+이 앱은 두 페이지 간에 탐색하지만, 아직 흥미로운 것은 나오지 않았습니다. 앱에 여러 페이지가 있으면 정보를 공유해야 하는 경우가 많습니다. 첫 번째 페이지에서 두 번째 페이지로 정보를 전달해보겠습니다.
 
-In Page1.xaml, replace the [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) you added earlier with the following [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+Page1.xaml에서, 앞서 추가한 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)을 다음 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)로 바꿉니다.
 
-Here, we add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) label and a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (`name`) for entering a text string.
+여기서는 텍스트 문자열 입력을 위한 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 레이블 및 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)(`name`)를 추가합니다.
 
 ```xaml
 <StackPanel>
@@ -272,7 +276,7 @@ Here, we add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/b
 </StackPanel>
 ```
 
-In the `HyperlinkButton_Click` event handler of the Page1.xaml code-behind file, add a parameter referencing the `Text` property of the `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) to the `Navigate` method.
+Page1.xaml 코드 숨김 파일의 `HyperlinkButton_Click` 이벤트 처리기에서 `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)의 `Text` 속성을 참조하는 매개 변수를 `Navigate` 메서드에 추가합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -288,9 +292,9 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 }
 ```
 
-In Page2.xaml, replace the  [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) you added earlier with the following [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
+Page2.xaml에서, 앞서 추가한 [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)을 다음 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)로 바꿉니다.
 
-Here, we add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) that will display the text provided by input from the [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) on Page1.
+여기서는 Page1에서 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)의 입력에 의해 제공된 텍스트를 표시하는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)을 추가합니다.
 
 ```XAML
 <StackPanel>
@@ -299,7 +303,7 @@ Here, we add a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/b
 </StackPanel>
 ```
 
-In the Page2.xaml code-behind file, override the `OnNavigatedTo` method with the following:
+Page2.xaml 코드 숨김 파일에서 다음을 사용하여 `OnNavigatedTo` 메서드를 재정의합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -331,19 +335,19 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Run the app, type your name in the text box, and then click the link that says **Click to go to page 2**. When you called `this.Frame.Navigate(typeof(Page2), tb1.Text)` in the [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) event of the [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739), the `name.Text` property was passed to `Page2` and the value from the event data is used for the message displayed on the page.
+앱을 실행하고, 입력란에 이름을 입력하고, **Click to go to page 2**라는 링크를 클릭합니다. [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)의 [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737) 이벤트에서 `this.Frame.Navigate(typeof(Page2), tb1.Text)`를 호출할 때 `name.Text` 속성이 `Page2`로 전달되었으며 이벤트 데이터의 값은 페이지에 표시되는 메시지에 사용됩니다.
 
-## Cache a page
+## 페이지 캐시
 
-Page content and state is not cached by default, you must enable it in each page of your app.
+페이지 콘텐츠 및 상태는 기본적으로 캐시되지 않으므로, 앱의 각 페이지에서 사용하도록 설정해야 합니다.
 
-In this basic example, there is no back button (we demonstrate back navigation in [Back button navigation](navigation-history-and-backwards-navigation.md)), but if you did click a back button on `Page2`, the [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) (and any other field) on `Page1` would be set to its default state. One way to work around this is to use the [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) property to specify that a page be added to the frame's page cache.
+이 기본 예제에서는, 뒤로 단추([뒤로 단추 탐색](navigation-history-and-backwards-navigation.md)에서 설명)가 없지만 `Page2`에서 뒤로 단추를 클릭하면 `Page1`의 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)(및 기타 필드)가 기본 상태로 설정됩니다. 이를 해결하는 한 가지 방법은 [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) 속성을 사용하여 페이지가 프레임의 페이지 캐시에 추가되도록 지정하는 것입니다.
 
-In the constructor of `Page1`, set [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) to [**Enabled**](https://msdn.microsoft.com/library/windows/apps/br243284). This retains all content and state values for the page until the page cache for the frame is exceeded.
+`Page1`의 생성자에서 [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506)를 [**Enabled**](https://msdn.microsoft.com/library/windows/apps/br243284)로 설정합니다. 그렇게 하면 프레임에 대한 페이지 캐시가 초과될 때까지 페이지의 모든 콘텐츠 및 상태 값이 유지됩니다.
 
-Set [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506) to [**Required**](https://msdn.microsoft.com/library/windows/apps/br243284) if you want to ignore cache size limits for the frame. However, cache size limits might be crucial, depending on the memory limits of a device.
+프레임에 대한 캐시 크기 제한을 무시하려는 경우 [**NavigationCacheMode**](https://msdn.microsoft.com/library/windows/apps/br227506)를 [**Required**](https://msdn.microsoft.com/library/windows/apps/br243284)로 설정합니다. 그러나 캐시 크기 제한은 디바이스의 메모리 제한에 따라 중요할 수 있습니다.
 
-**Note**  The [**CacheSize**](https://msdn.microsoft.com/library/windows/apps/br242683) property specifies the number of pages in the navigation history that can be cached for the frame.
+**참고** [**CacheSize**](https://msdn.microsoft.com/library/windows/apps/br242683) 속성은 프레임에 대해 캐시될 수 있는 탐색 기록의 페이지의 수를 지정합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -361,11 +365,17 @@ Page1::Page1()
 }
 ```
 
-## Related articles
+## 관련 문서
 
-* [Navigation design basics for UWP apps](https://msdn.microsoft.com/library/windows/apps/dn958438)
-* [Guidelines for tabs and pivots](https://msdn.microsoft.com/library/windows/apps/dn997788)
-* [Guidelines for navigation panes](https://msdn.microsoft.com/library/windows/apps/dn997766)
- 
+* [UWP 앱의 탐색 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958438)
+* [탭 및 피벗에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn997788)
+* [탐색 창에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn997766)
+ 
 
- 
+ 
+
+
+
+<!--HONumber=Sep16_HO2-->
+
+

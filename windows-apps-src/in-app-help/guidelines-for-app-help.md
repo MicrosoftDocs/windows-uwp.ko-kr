@@ -6,7 +6,7 @@ label: Guidelines for app help
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
-ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
+ms.openlocfilehash: 0ca099b0acfcba16d62c6158c7a829adaf475891
 
 ---
 
@@ -66,6 +66,6 @@ ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

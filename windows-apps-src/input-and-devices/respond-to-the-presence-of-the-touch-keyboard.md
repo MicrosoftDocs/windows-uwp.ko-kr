@@ -7,7 +7,7 @@ label: Respond to the presence of the touch keyboard
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 417668a24c4a2ba28671b6fb0a4da74c0cfab341
+ms.openlocfilehash: 97a626aedff1b0915c845f151b16b3678e1cf977
 
 ---
 
@@ -146,6 +146,6 @@ public class MyApplication
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

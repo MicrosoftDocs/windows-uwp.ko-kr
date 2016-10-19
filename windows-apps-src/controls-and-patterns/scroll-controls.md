@@ -6,24 +6,37 @@ ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
 
 ---
 # 스크롤 막대
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
-
--   [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
--   [**ZoomMode 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.zoommode.aspx)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
 
 스크롤 뷰어 컨트롤은 뷰포트에 맞춰질 만큼 많은 콘텐츠와 한두 개 스크롤 막대로 구성됩니다. 터치 제스처를 사용하여 이동 및 확대/축소할 수 있고(스크롤 막대는 조작 중에만 사라짐) 포인터를 사용하여 스크롤할 수 있습니다. 긋기 제스처는 관성을 사용하여 이동합니다.
 
-**참고** Windows: 검색된 입력 디바이스에 따라 두 가지 이동 표시 모드(터치용 이동 표시기 및 마우스, 터치 패드, 키보드, 스타일러스 등의 기타 입력 디바이스용 스크롤 막대)가 있습니다.
+**참고** Windows에는 사용자의 입력 모드를 기반으로 하는 두 개의 모두 보기 시각화(터치 또는 게임 패드 사용 시 스크롤 표시기 및 마우스, 키보드, 펜 등의 기타 입력 디바이스용 대화형 스크롤 막대)가 있습니다.
 
 ![표준 스크롤 막대 및 이동 표시기 컨트롤의 모양 샘플](images/SCROLLBAR.png)
+
+
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209527"><strong>ScrollViewer 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx"><strong>ScrollBar 클래스</strong></a></li>
+</ul>
+
+</div>
+</div>
+
+
+
+
+
 
 ## 예제
 
@@ -32,11 +45,27 @@ ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
 ![표준 스크롤 막대 컨트롤을 보여 주는 스크린샷](images/ScrollBar_Standard.jpg)
 
 ## 스크롤 뷰어 만들기
+페이지에 세로 스크롤을 추가하려면 스크롤 뷰어에 페이지 콘텐츠를 래핑하세요.
 
+```xaml
+<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1">
+
+    <ScrollViewer>
+        <StackPanel>
+            <TextBlock Text="My Page Title" Style="{StaticResource TitleTextBlockStyle}"/>
+            <!-- more page content -->
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+```
 이 XAML은 스크롤 뷰어에 이미지를 배치하고 확대/축소를 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```xaml
-<ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10" 
+<ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"
               HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"
               Height="200" Width="200">
     <Image Source="Assets/Logo.png" Height="400" Width="400"/>
@@ -54,18 +83,18 @@ ScrollViewer를 포함하는 컨트롤이 ScrollViewer 파트 내에 있는 일�
 **ScrollViewer XAML 연결 속성**
 
 ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
-- [ScrollViewer.BringIntoViewOnFocusChange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.bringintoviewonfocuschange.aspx) 
-- [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx) 
+- [ScrollViewer.BringIntoViewOnFocusChange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.bringintoviewonfocuschange.aspx)
+- [ScrollViewer.HorizontalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility.aspx)
 - [ScrollViewer.HorizontalScrollMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode.aspx)
-- [ScrollViewer.IsDeferredScrollingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isdeferredscrollingenabled.aspx) 
+- [ScrollViewer.IsDeferredScrollingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isdeferredscrollingenabled.aspx)
 - [ScrollViewer.IsHorizontalRailEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalrailenabled.aspx)
-- [ScrollViewer.IsHorizontalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalscrollchainingenabled.aspx) 
+- [ScrollViewer.IsHorizontalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.ishorizontalscrollchainingenabled.aspx)
 - [ScrollViewer.IsScrollInertiaEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isscrollinertiaenabled.aspx)
 - [ScrollViewer.IsVerticalRailEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalrailenabled.aspx)
-- [ScrollViewer.IsVerticalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalscrollchainingenabled.aspx) 
+- [ScrollViewer.IsVerticalScrollChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.isverticalscrollchainingenabled.aspx)
 - [ScrollViewer.IsZoomChainingEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
 - [ScrollViewer.IsZoomInertiaEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.iszoominertiaenabled.aspx)
-- [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibilityproperty.aspx) 
+- [ScrollViewer.VerticalScrollBarVisibility](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibilityproperty.aspx)
 - [ScrollViewer.VerticalScrollMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.verticalscrollmode.aspx)
 - [ScrollViewer.ZoomMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.zoommode.aspx)
 
@@ -73,7 +102,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 예를 들어 다음은 ListView의 기본 제공 스크롤 뷰어에 세로 스크롤 막대가 항상 표시되도록 하는 방법입니다.
 ```xaml
-<ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/> 
+<ListView ScrollViewer.VerticalScrollBarVisibility="Visible"/>
 ```
 
 예제 코드와 같이 ScrollViewer가 XAML에서 명시적인 경우에는 연결된 속성 구문을 사용할 필요가 없습니다. 특성 구문을 사용하면 됩니다(예: `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`).
@@ -81,11 +110,13 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 ## 권장 사항
 
+-   가능하면 가로가 아닌 세로 스크롤로 디자인합니다.
 -   하나의 뷰포트 경계(세로 또는 가로)를 넘어가는 콘텐츠 영역에는 단일 축 이동을 사용합니다. 두 뷰포트 경계(세로 또는 가로)를 모두 넘어가는 콘텐츠 영역에는 2축 이동을 사용합니다.
--   목록 상자, 드롭다운 목록, 텍스트 입력 상자, 그리드 보기, 목록 보기, 허브 컨트롤에서 기본 제공 스크롤 기능을 사용합니다. 이러한 컨트롤을 사용하면 항목이 너무 많아 한 번에 모두 표시할 수 없는 경우 사용자가 항목 목록을 가로질러 가로로 또는 세로로 스크롤할 수 있습니다.
+-   목록 보기, 그리드 보기, 콤보 상자, 목록 상자, 텍스트 입력 상자 및 허브 컨트롤에서 기본 제공 스크롤 기능을 사용합니다. 이러한 컨트롤을 사용하면 항목이 너무 많아 한 번에 모두 표시할 수 없는 경우 사용자가 항목 목록을 가로질러 가로로 또는 세로로 스크롤할 수 있습니다.
 -   사용자가 화면에 맞게 크기 조정된 이미지가 아니라 전체 크기 이미지를 가로질러 이동 및 확대/축소할 수 있게 하려는 경우와 같이 사용자가 더 큰 영역에서 양방향으로 이동하고 확대/축소할 수도 있게 하려면 스크롤 뷰어 내부에 이미지를 배치합니다.
 -   사용자가 긴 텍스트 줄을 스크롤할 경우 세로로만 스크롤하도록 스크롤 뷰어를 구성합니다.
 -   스크롤 뷰어를 사용하여 개체를 하나만 포함합니다. 하나의 개체는 레이아웃 패널이 될 수 있고, 여기에는 고유한 개체가 제한 없이 포함됩니다.
+-   피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](tabs-pivot.md) 컨트롤을 배치하지 않습니다.
 
 ## 관련 항목
 
@@ -94,6 +125,6 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

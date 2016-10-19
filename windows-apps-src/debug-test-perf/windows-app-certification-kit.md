@@ -5,7 +5,7 @@ title: "Windows 앱 인증 키트"
 description: "앱이 Windows 스토어에 게시될 가능성 또는 Windows 인증을 받을 가능성을 최대한 높이려면 인증을 받기 위해 앱을 제출하기 전에 로컬로 앱의 유효성을 검사하고 테스트하세요. 이 항목에서는 Windows 앱 인증 키트를 설치하고 실행하는 방법을 보여 줍니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 16e116c2a92a6ad751b0e4fe58fc7b41de0455cb
+ms.openlocfilehash: 478ba4a24cff3c2df34d98157624c9c4339d432a
 
 ---
 # Windows 앱 인증 키트
@@ -100,6 +100,6 @@ Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

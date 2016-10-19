@@ -1,11 +1,11 @@
 ---
 author: mcleblanc
 description: "이 포팅 가이드를 끝까지 읽어 보시고 프로젝트를 빌드하여 실행하는 단계를 신속하게 진행해 보세요."
-title: "Windows 런타임 8.x를 UWP로 포팅하는 문제 해결&#39;"
+title: "Windows 런타임 8.x를 UWP로 포팅하는 문제 해결'"
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+ms.openlocfilehash: a6901946f873b751515cb5d9805158e4b78b92bb
 
 ---
 
@@ -54,6 +54,6 @@ ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,15 +1,15 @@
 ---
 author: mcleblanc
-title: "시작&#58; 다음에 할 일"
+title: "시작: 다음에 할 일"
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: "이제 이 기본 정보를 사용하여 보다 흥미로운 UWP(유니버설 Windows 플랫폼) 앱을 작성할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2b11133fda76fb42f3a850848c426cbb33fb8366
+ms.openlocfilehash: d71c0026c8658e8aa88827915b8f2d815f10c6ef
 
 ---
 
-# 시작&#58; 다음에 할 일
+# 시작: 다음에 할 일
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -38,6 +38,6 @@ Windows 10은 개발자에게 새로운 앱 빌드 기회를 제공합니다. �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

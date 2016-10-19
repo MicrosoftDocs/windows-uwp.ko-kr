@@ -5,7 +5,7 @@ title: "Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트"
 description: "Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 디바이스 조작을 시뮬레이트하고 앱의 기능을 테스트합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
-ms.openlocfilehash: c53bda2329cd984e3a03d4a166e7353097e62cef
+ms.openlocfilehash: 6889c80d9879295fec31685aa3fd9bea9e6aea3e
 
 ---
 # Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
@@ -659,6 +659,6 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

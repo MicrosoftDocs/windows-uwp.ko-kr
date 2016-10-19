@@ -4,8 +4,8 @@ title: "데이터 수신"
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 7069e55b92e69a0af9ba23a0a737b61d427c615c
-ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
+ms.sourcegitcommit: b8d627da82da463b87ace2a2ef6e739b1caafaa2
+ms.openlocfilehash: 0092fe2832eeafbc4e7cfa36a3444b9551a4f672
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
 
 1.  매니페스트 파일을 엽니다. **package.appxmanifest**와 유사한 방식으로 호출됩니다.
 2.  **선언** 탭을 엽니다.
-3.  **사용 가능한 선언** 목록에서 **대상 공유**를 선택하고 **추가**를 클릭합니다.
+3.  **사용 가능한 선언** 목록에서 **대상 공유**를 선택하고 **추가**를 선택합니다.
 
 ## 파일 유형 및 형식 선택
 
@@ -33,14 +33,14 @@ ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
 파일 형식을 설정하려면
 
 1.  매니페스트 파일을 엽니다. **package.appxmanifest**와 유사한 방식으로 호출됩니다.
-2.  **Declarations(선언)** 페이지의 **Supported File Types(지원되는 파일 형식)** 섹션에서 **Add New(새로 추가)**를 클릭합니다.
-3.  지원할 파일 이름 확장명을 입력합니다. 예를 들어 .docx와 같이 입력합니다. 마침표(.)를 포함해야 합니다. 모든 파일 형식을 지원하려면 **SupportsAnyFileType** 상자를 선택합니다.
+2.  **선언** 페이지의 **지원되는 파일 형식** 섹션에서 **새로 추가**를 클릭합니다.
+3.  지원할 파일 이름 확장명(예: ".docx")을 입력합니다. 마침표(.)를 포함해야 합니다. 모든 파일 형식을 지원하려면 **SupportsAnyFileType** 확인란을 선택합니다.
 
 데이터 형식을 설정하려면
 
 1.  매니페스트 파일을 엽니다.
-2.  **Declarations(선언)** 페이지의 **Data Formats(데이터 형식)** 섹션을 열고 **Add New(새로 추가)**를 클릭합니다.
-3.  지원하는 데이터 서식의 이름을 입력합니다. 예를 들면 "Text"입니다.
+2.  **선언** 페이지의 **데이터 형식** 섹션을 열고 **새로 추가**를 클릭합니다.
+3.  예를 들어 "텍스트" 등 지원하는 데이터 형식의 이름을 입력합니다.
 
 ## 공유 활성화 처리
 
@@ -96,7 +96,7 @@ shareOperation.ReportError("Could not reach the server! Try again later.");
 shareOperation.ReportCompleted();
 ```
 
-이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) 전에 [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 공유 단추를 클릭할 때까지 **ReportStarted**를 호출하지 않습니다.
+이러한 메서드를 사용할 때는 일반적으로 설명된 순서대로 메서드를 호출하고 두 번 이상 호출하지 않습니다. 그러나 대상 앱이 [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) 전에 [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved)를 호출할 수 있는 경우가 있습니다. 예를 들어 앱은 활성화 처리기의 작업의 일부로 데이터를 검색할 수 있지만 사용자가 **공유** 단추를 선택할 때까지 **ReportStarted**를 호출하지 않습니다.
 
 ## 공유가 성공한 경우 QuickLink 반환
 
@@ -130,6 +130,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 ## 참고 항목 
 
+* [앱 간 통신](index.md)
 * [데이터 공유](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
@@ -141,6 +142,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

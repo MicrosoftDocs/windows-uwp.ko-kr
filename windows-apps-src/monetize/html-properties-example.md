@@ -4,8 +4,8 @@ ms.assetid: 5fa16a27-fdc0-43b2-84cd-8547fd4915de
 description: "HTML에서 **AdControl** 속성을 할당하는 방법을 알아봅니다."
 title: "HTML 속성 예제"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 53b9afdcdc697e3ed508ef6e5ed5d684bdf5aa69
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1898ed2ccad74ac33c5130c627363e0a9daebceb
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 53b9afdcdc697e3ed508ef6e5ed5d684bdf5aa69
 # HTML 속성 예제
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 다음 예제에서는 HTML에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 속성을 할당하는 방법을 보여 줍니다. **applicationId** 및 **adUnitId**는 필수 속성입니다. 다른 속성 및 이벤트는 선택적입니다. 선택적 속성의 값을 제공하지 않는 경우 컨트롤에서 앱의 사용자 환경과 일치하는 광고를 만드는 기본값을 사용합니다.
 
@@ -41,6 +41,6 @@ data-win-options="{applicationId: '3f83fe91-d6be-434d-a0ae-7351c5a997f1',
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

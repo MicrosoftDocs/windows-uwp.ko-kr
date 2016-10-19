@@ -6,19 +6,20 @@ ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 
 ---
+# 적응형 타일 템플릿: 스키마 및 지침
 
-# 적응형 타일 템플릿&#58; 스키마 및 지침
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. 지침과 예제는 [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)를 참조하세요.
 
-## <span id="tile_element"></span><span id="TILE_ELEMENT"></span>타일 요소
+## 타일 요소
 
 
-``` syntax
+``` xml
 <tile>
   
   <!-- Child elements -->
@@ -27,10 +28,10 @@ ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
 </tile>
 ```
 
-## <span id="visual_element"></span><span id="VISUAL_ELEMENT"></span>시각적 요소
+## 시각적 요소
 
 
-``` syntax
+``` xml
 <visual
   version? = integer
   lang? = string
@@ -46,10 +47,10 @@ ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
 </visual>
 ```
 
-## <span id="binding_element"></span><span id="BINDING_ELEMENT"></span>바인딩 요소
+## 바인딩 요소
 
 
-``` syntax
+``` xml
 <binding
   template = tileTemplateNameV3
   fallback? = tileTemplateNameV1
@@ -71,10 +72,10 @@ ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
 </binding>
 ```
 
-## <span id="image_element"></span><span id="IMAGE_ELEMENT"></span>이미지 요소
+## 이미지 요소
 
 
-``` syntax
+``` xml
 <image
   src = string
   placement? = "inline" | "background" | "peek"
@@ -85,10 +86,10 @@ ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## <span id="text_element"></span><span id="TEXT_ELEMENT"></span>텍스트 요소
+## 텍스트 요소
 
 
-``` syntax
+``` xml
 <text
   lang? = string
   hint-style? = textStyle
@@ -104,10 +105,10 @@ ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
 
 textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
 
-## <span id="group_element"></span><span id="GROUP_ELEMENT"></span>그룹 요소
+## 그룹 요소
 
 
-``` syntax
+``` xml
 <group>
 
   <!-- Child elements -->
@@ -116,10 +117,10 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </group>
 ```
 
-## <span id="subgroup_element"></span><span id="SUBGROUP_ELEMENT"></span>하위 그룹 요소
+## 하위 그룹 요소
 
 
-``` syntax
+``` xml
 <subgroup
   hint-weight? = [0-100]
   hint-textStacking? = "top" | "center" | "bottom" >
@@ -132,7 +133,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </subgroup>
 ```
 
-## <span id="related_topics"></span>관련 항목
+## 관련 항목
 
 
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
@@ -146,6 +147,6 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

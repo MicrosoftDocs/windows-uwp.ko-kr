@@ -5,7 +5,7 @@ title: "XAML 레이아웃 최적화"
 description: "레이아웃은 CPU 사용과 메모리 오버헤드 모두에서 비용이 많이 드는 XAML 앱 요소입니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다."
 translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+ms.openlocfilehash: ae6ad7a761737613c323eb80af993ab5dfcd7977
 
 ---
 # XAML 레이아웃 최적화
@@ -186,6 +186,6 @@ UI에서 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

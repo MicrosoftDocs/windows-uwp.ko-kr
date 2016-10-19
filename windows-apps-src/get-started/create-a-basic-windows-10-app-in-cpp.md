@@ -1,7 +1,7 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: "C++로 &quot;hello world&quot; 앱 만들기(Windows 10)"
+title: "C++로 hello world 앱 만들기(Windows 10)"
 description: "Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)을 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다."
 translationtype: Human Translation
 ms.sourcegitcommit: cedab04d2969809dca84097b027e973be9b9948b
@@ -9,7 +9,7 @@ ms.openlocfilehash: 55d5b160bbf1d877408a52e981a030dee28515c4
 
 ---
 
-# C++로 "hello world" 앱 만들기(Windows 10)
+# C++로 hello world 앱 만들기(Windows 10)
 
 Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)를 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 
@@ -236,11 +236,11 @@ MainPage::MainPage()
 
 앱에서는 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 입력할 수도 있지만 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 클릭해도 아무런 작동을 하지 않습니다. 이후 단계에서는 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만듭니다.
 
-## 모바일 디바이스 에뮬레이터에서 앱 시작
+## 모바일 장치 에뮬레이터에서 앱 시작
 
 앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다. 이 섹션에는 Windows 10을 실행하는 Windows Phone이 필요합니다. 또는 Windows Phone 에뮬레이터에 액세스해야 하며, HyperV를 지원하고 사용하는 실제 컴퓨터(가상 컴퓨터가 아님)에서 Visual Studio를 실행해야 합니다.
 
-Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 디바이스 또는 모바일 디바이스 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
+Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
 
 -   **장치**
 -   **에뮬레이터 10.0.0.0 WVGA 4인치 512MB**
@@ -253,7 +253,7 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 
 실제 장치에서 앱을 디버그하려면 개발용으로 등록된 장치가 있어야 합니다. 자세한 내용은 [Windows Phone 등록](https://msdn.microsoft.com/library/windows/apps/Dn614128)을 참조하세요.
 
-**모바일 디바이스 에뮬레이터에서 디버깅을 시작하려면**
+**모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
 
 1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.0.0 WVGA 4인치 512MB**를 선택합니다.
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
@@ -266,7 +266,7 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 
    F5 키를 누릅니다.
 
-모바일 디바이스 에뮬레이터에서 앱은 다음과 같이 표시됩니다.
+모바일 장치 에뮬레이터에서 앱은 다음과 같이 표시됩니다.
 
 ![모바일 장치의 초기 앱 화면](images/hw10-screen1-mob.png)
 
@@ -414,7 +414,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
     ```
 
 2.  로컬 컴퓨터에서 앱을 디버그합니다. 641 DIP(장치 독립적인 픽셀)보다 좁은 경우가 아니라면 UI가 이전과 동일한 모양으로 표시됩니다.
-3.  모바일 디바이스 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.
+3.  모바일 장치 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.
 
 ![스타일이 지정된 텍스트가 포함된 모바일 앱 화면](images/hw10-screen2-mob.png)
 

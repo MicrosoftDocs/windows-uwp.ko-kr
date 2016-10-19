@@ -5,11 +5,11 @@ description: "xBind 태그 확장과 함께 xPhase를 사용하여 ListView 및 
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
+ms.openlocfilehash: c6100f59bb91bc3c6451fc2167d914b0a4a36ded
 
 ---
 
-# x&#58;Phase 특성
+# x:Phase 특성
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -81,6 +81,6 @@ ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

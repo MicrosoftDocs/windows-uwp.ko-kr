@@ -4,8 +4,8 @@ title: "그래픽 진단 도구"
 description: "Visual Studio의 그래픽 디버깅, 그래픽 프레임 분석 및 GPU 사용을 비롯하여 그래픽 진단 기능을 가져오고 사용하는 방법에 대해 알아봅니다."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+ms.sourcegitcommit: 765cde8afe32cef6515ee6ca9750365aa35984a2
+ms.openlocfilehash: 5d8f7a8dbba2da76c6093d034c2ca8c2b4592c7e
 
 ---
 
@@ -16,8 +16,9 @@ ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
 
 Windows 10에서는 이제 그래픽 진단 도구를 Windows 내에서 옵션 기능으로 사용할 수 있습니다. 런타임 및 Visual Studio에서 제공하는 그래픽 진단 기능을 사용하여 DirectX 앱 또는 게임을 개발하려면 다음과 같이 선택적 그래픽 도구 기능을 설치합니다.
 
-1.  **설정**으로 이동하여 **시스템**을 선택하고 **선택적 기능**을 선택한 후 **기능 추가**를 클릭합니다. **설정**으로 이동하여 **시스템**을 선택하고 **앱 및 기능**을 선택하고 **선택적 기능 관리**를 선택한 후, **기능 추가**를 클릭합니다.
-2.  **기능 추가** 목록에서 **그래픽 도구**를 클릭합니다.
+1.  **설정**으로 이동하여 **시스템**을 선택하고 **앱 및 기능**을 선택하고 **선택적 기능 관리**를 클릭합니다.
+2.  **기능 추가**를 클릭합니다.   
+3.  **선택적 기능** 목록에서 **그래픽 도구**를 선택한 다음 **설치**를 클릭합니다.
 
 그래픽 진단 기능에는 DirectX 런타임의 Direct3D 디버그 장치(Direct3D SDK 계층을 통한) 생성 기능 외에도 그래픽 디버깅, 프레임 분석 및 GPU 사용이 포함됩니다.
 
@@ -40,6 +41,6 @@ Windows 10에서는 이제 그래픽 진단 도구를 Windows 내에서 옵션 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

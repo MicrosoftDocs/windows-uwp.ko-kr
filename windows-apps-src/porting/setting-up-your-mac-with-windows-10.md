@@ -5,7 +5,7 @@ title: "Windows 10에서 Mac 설정"
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 10ebdb0a534d8f2931d15481c1bee4705268b0bb
+ms.openlocfilehash: b0a6c701237e7eeb1d96964ad429d73373e55252
 
 ---
 
@@ -44,6 +44,6 @@ VirtualBox는 컴퓨터에서 가상 컴퓨터를 실행하기 위한 무료 응
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

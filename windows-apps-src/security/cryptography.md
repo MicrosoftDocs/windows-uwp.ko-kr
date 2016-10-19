@@ -5,7 +5,7 @@ ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: b8cccf54e414de084c5b3fd080007b225b9a9b12
+ms.openlocfilehash: c5feae97563277dc14a64d5c96cb6229b6cfb8b1
 
 ---
 
@@ -148,6 +148,6 @@ SDK는 암호 기반 데이터 보호를 위한 간소화된 인터페이스도 
  
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

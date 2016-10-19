@@ -3,17 +3,19 @@ author: mcleanbyron
 Description: "평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다."
 title: "평가판의 기능 제외 또는 제한"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: free trial code sample
+keywords: "무료 체험 코드 샘플"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: fdca95a6e925ca2238fdcd8791ade2ed4ea5a310
 
 ---
 
 # 평가판의 기능 제외 또는 제한
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
+
+>**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 평가판을 구현하는 것이 좋습니다. 자세한 내용은 [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)을 참조하세요.
 
 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
@@ -73,7 +75,7 @@ void initializeLicense()
     // Initialize the license info for testing.
     // comment the next line for release
     licenseInformation = CurrentAppSimulator.LicenseInformation;
-      
+
 }
 ```
 
@@ -144,8 +146,8 @@ void DisplayTrialVersionExpirationTime()
         if (licenseInformation.IsTrial)
         {
             var longDateFormat = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate");
-                                                
-            // Display the expiration date using the DateTimeFormatter. 
+
+            // Display the expiration date using the DateTimeFormatter.
             // For example, longDateFormat.Format(licenseInformation.ExpirationDate)
 
             var daysRemaining = (licenseInformation.ExpirationDate - DateTime.Now).Days;
@@ -222,7 +224,7 @@ void appInit()
 
 ## 관련 항목
 
-* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [앱 가격 책정 및 가용성 설정](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
@@ -232,10 +234,6 @@ void appInit()
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

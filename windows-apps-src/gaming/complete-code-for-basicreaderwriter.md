@@ -5,7 +5,7 @@ description: "일반적으로 이진 데이터 파일을 읽고 쓰기 위한 �
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
+ms.openlocfilehash: de6ab2687cfbe7b485e51bc90811b1988e29fb7e
 
 ---
 
@@ -266,6 +266,6 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

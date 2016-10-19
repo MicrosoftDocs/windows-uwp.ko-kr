@@ -5,7 +5,7 @@ description: "동영상 파일을 한 형식에서 다른 형식으로 코드 �
 title: "미디어 파일 코드 변환"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
+ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
 
 ---
 
@@ -76,6 +76,6 @@ ms.openlocfilehash: 06c452291f10acd35dde9659c08a386ea38fa90a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

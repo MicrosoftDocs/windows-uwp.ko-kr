@@ -5,7 +5,7 @@ title: "HoloLens용 디바이스 포털"
 description: "HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
+ms.openlocfilehash: 00dec1110ba8cc27f759f05bc4a6f352a235d18d
 
 ---
 # HoloLens용 디바이스 포털
@@ -88,7 +88,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 페이지 맨 위에 있는 도구 모음에서 자주 사용하는 상태 및 기능에 대한 액세스를 제공합니다.
 - **온라인**: 디바이스가 Wi-Fi에 연결되어 있는지 여부를 나타냅니다.
 - **종료**: 디바이스를 끕니다.
-- **다시 시작**:  디바이스의 전원을 하드 부팅합니다.
+- **다시 시작**: 디바이스의 전원을 하드 부팅합니다.
 - **보안**: 디바이스 보안 페이지를 엽니다.
 - **냉각**: 디바이스의 온도를 나타냅니다.
 - **A/C**: 디바이스가 연결되어 있고 충전 중인지 여부를 나타냅니다.
@@ -173,6 +173,6 @@ Enable Kiosk Mode(키오스크 모드 사용)을 선택하여 HoloLens를 키오
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

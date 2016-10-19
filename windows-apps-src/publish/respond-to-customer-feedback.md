@@ -1,54 +1,64 @@
 ---
-title: Respond to customer feedback
-description: You can respond directly to feedback that your customers leave in Feedback Hub.
+title: "고객 피드백에 응답"
+description: "고객이 피드백 허브에 남긴 피드백에 직접 응답할 수 있습니다."
 author: JnHs
+translationtype: Human Translation
+ms.sourcegitcommit: b96053bb6aff04350a1cfd6b74a5d4a2424cc329
+ms.openlocfilehash: c3088c2498a94c988359dd08c6c900ad9a6c4f95
+
 ---
 
-# Respond to customer feedback
+# 고객 피드백에 응답
 
-You can use the [Feedback report](feedback-report.md) to review the feedback that your Windows 10 customers have left about your app in Feedback Hub, and then respond directly to that feedback. You can post your responses in Feedback Hub for everyone to see (either as individual comments, or by updating the status of a piece of feedback and adding a description) to tell customers about new features or bug fixes, or to ask for more specific feedback on how to improve your app. You can also send your response as an email directly to the customer who left the feedback.
+[피드백 보고서](feedback-report.md)를 사용하여 Windows 10 고객이 피드백 허브에서 앱에 대해 남긴 피드백을 검토한 다음 해당 피드백에 직접 응답할 수 있습니다. 모든 사람이 볼 수 있도록 피드백 허브에 응답을 게시(개인 메모로 남기거나 일부 피드백 상태를 업데이트하고 설명을 추가하는 방식으로 게시)하여 고객에게 새로운 기능 또는 버그 수정에 대해 알리거나 앱을 개선하는 방법에 대한 특정 피드백을 요청할 수 있습니다. 피드백을 남긴 고객에게 직접 메일로 응답을 보낼 수도 있습니다.
 
-> **Tip** You can encourage customers to leave feedback by using the Feedback API in the [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) to add a control that lets customers directly [launch Feedback Hub from your UWP app](../monetize/launch-feedback-hub-from-your-app.md). Keep in mind that any customer who has downloaded your app on a Windows 10 device that supports Feedback Hub has the ability to leave feedback for it directly through the Feedback Hub app. Because of this, you may see customer feedback in this report, even if you have not specifically requested feedback from within your app.
+> **팁** 고객이 직접 [UWP 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 디바이스에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
 
-To provide a response to any piece of feedback, click the **Respond to feedback** link that appears by the piece of feedback in your **Feedback report**.
+피드백에 응답을 제공하려면 **피드백 보고서**의 피드백 옆에 나타나는 **피드백에 응답** 링크를 클릭합니다.
 
-Windows Dev Center supports three options for responding to customers who provide feedback about your app. Regardless of which option you choose, keep in mind that there is a 1000-character limit for each response.
+Windows 개발자 센터는 앱에 대한 피드백을 제공하는 고객에게 응답하기 위한 세 가지 옵션을 지원합니다. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
 
-## Public comments in Feedback Hub
+## 피드백 허브의 공개 메모
 
-By default, the radio button for **Comment** is selected after you click **Respond to feedback**. To post a public response to the customer’s feedback, leave this button selected. Enter your comment in the box, and then click **Submit**.
+**피드백에 응답**을 클릭하면 **메모**에 대한 라디오 단추가 기본적으로 선택됩니다. 고객의 피드백에 대해 공개 응답을 게시하려면 이 단추를 선택한 상태로 둡니다. 상자에 메모를 입력한 다음 **제출**을 클릭합니다.
 
-The comment you entered will be displayed as a comment in the Feedback Hub, along with the comments submitted by other customers. Your publisher name and app name will be displayed with your comment to identify you as the developer. There is no limit on the number of comments you can write for a piece of feedback, but note that you can’t edit or delete comments after you submit them. The five most recent comments to a piece of feedback will be shown in your **Feedback report** (as well as in Feedback Hub). When there are more than five comments, you can click **Show all comments** to see all of them in Feedback Hub.
+입력한 메모가 다른 고객이 제출한 메모와 함께 피드백 허브에 메모로 표시됩니다. 개발자인지 알 수 있도록 게시자 이름과 앱 이름이 메모와 함께 표시됩니다. 피드백에 대해 작성할 수 있는 메모 수에는 제한이 없지만 일단 제출하면 메모를 편집하거나 삭제할 수 없습니다. 피드백에 대한 최근 5개의 메모가 피드백 허브와 **피드백 보고서**에 표시됩니다. 메모가 5개를 넘는 경우 **메모 모두 표시**를 클릭하면 피드백 허브의 모든 메모를 볼 수 있습니다.
 
-## Private responses via email
+## 메일을 통해 개인 응답
 
-If you’d prefer not to post a public response, you can check the **Send comment as email** box to send a private response directly to the customer (if they have provided an email address and haven’t opted out of receiving responses via email). When you do so, Microsoft sends an email to the customer on your behalf. The email will contain their original feedback as well as the response you write.
+공개 응답을 게시하지 않으려는 경우 **의견을 메일로 보내기** 확인란을 선택하여 고객(메일 주소를 제공하고 메일로 응답 수신을 옵트아웃(opt out)하지 않은 고객)에게 직접 개인 응답을 보낼 수 있습니다. 이렇게 하면 Microsoft에서 대신 고객에게 메일을 보냅니다. 메일에는 작성한 응답과 원래 피드백이 함께 포함됩니다.
 
-After you check the **Send comment as email** box, enter your comment and then click **Submit**. Note that you must provide an email address in the **Support contact email** field when using this option. By default, we use the email address that you provided in your account contact info. If you prefer to use a different email address, you can update the **Support contact email** field to use a different one. The customer who receives your response will be able to reply directly to this email address.
+**의견을 메일로 보내기** 확인란을 선택한 후 메모를 입력하고 **제출**을 클릭합니다. 이 옵션을 사용할 경우 **지원 연락처 메일** 필드에 메일 주소를 제공해야 합니다. 기본적으로 계정 연락처 정보에 제공한 메일 주소를 사용합니다. 다른 메일 주소를 사용하려면 **지원 연락처 메일** 필드를 업데이트하여 다른 주소를 사용할 수 있습니다. 응답을 수신하는 고객은 이 메일 주소로 바로 회신할 수 있습니다.
 
-## Public status updates and descriptions in Feedback Hub
+## 피드백 허브에서 공개 상태 업데이트 및 설명
 
-A third option for a public response is to set the status on a piece of feedback to let your customers that you’re working on the issue, or have fixed it. When you update the status of a piece of feedback, it is displayed along with the feedback in the Feedback Hub.
+공개 응답의 세 번째 옵션은 문제에 대해 작업 중이라거나 문제가 해결되었음을 고객이 알 수 있도록 해당 피드백의 상태를 설정하는 것입니다. 피드백의 상태를 업데이트하면 피드백 허브에 피드백과 함께 상태가 표시됩니다.
 
-To use this option, select the **Update status** radio button. Then select one of the following options:
+이 옵션을 사용하려면 **상태 업데이트** 라디오 단추를 선택합니다. 그런 후 다음 옵션 중 하나를 선택합니다.
 
-- **Investigating**: You’re aware of an issue and you’re looking into it.
-- **Working on it**: You’re in the process of fixing a problem or adding a requested feature.
-- **Completed**: You’ve published an update to fix the issue or add the requested feature.
+- **조사 중**: 문제를 인식하고 찾고 있습니다.
+- **작업 중**: 문제를 해결하는 중이거나 요청한 기능을 추가하는 중입니다.
+- **완료됨**: 문제를 해결하거나 요청한 기능을 추가하는 업데이트를 게시했습니다.
 
-Along with updating the status, you can enter a comment to provide more info, such as an estimate for when you think it a problem will be fixed, or more info about the latest changes. This description will be displayed at the top of the list of comments (and the Feedback report will display the current status and description).
+상태 업데이트와 함께 메모를 입력하여 추가 정보를 제공할 수 있습니다(예: 문제가 해결될 것으로 예상되는 시점이나 최신 변경 사항에 대한 추가 정보). 이 설명은 메모 목록의 상단에 표시되고 피드백 보고서에 현재 상태와 설명이 표시됩니다.
 
-Using the **Update status** option allows you to change the status whenever you want (along with providing updated descriptions for each status change). Whenever you change the status of a piece of feedback, the status will be updated in Feedback Hub so that customers viewing your response will see the latest status.
+**상태 업데이트** 옵션을 사용하면 언제든지 상태를 변경할 수 있으며 각 상태 변경에 대한 설명을 업데이트할 수 있습니다. 피드백 상태를 변경할 때마다 피드백 허브에 상태가 업데이트되어 응답을 보고 있는 고객이 최신 상태를 확인할 수 있습니다.
 
-## Guidelines for responses
-No matter which method you use to respond to a customer’s feedback, you must follow these guidelines for all responses.
-- Responses must be no longer than 1000 characters.
-- You may not offer any type of compensation, including digital app items, to users for their public comments.
-- Don’t include any marketing content or ads in your response. Remember, the person who left feedback is already your customer.
-- Don’t promote other apps or services in your response.
-- Your response should be directly related to the specific app and feedback.
-- Don’t include any profane, aggressive, personal, or malicious comments in your response. Always be polite and keep in mind that happy customers will likely be your app’s biggest promoters.
+## 응답 지침
+고객의 피드백에 응답하는 데 사용하는 방법과 관계없이 모든 응답에 있어 다음 지침을 따라야 합니다.
+- 응답은 1,000자 이내여야 합니다.
+- 해당 공용 의견을 위해 디지털 앱 항목을 포함하여 어떠한 유형의 보상도 사용자에게 제공할 수 없습니다.
+- 응답에 마케팅 콘텐츠나 광고를 포함하지 마세요. 피드백을 남긴 사람은 이미 고객임을 기억하세요.
+- 응답에 다른 앱이나 서비스를 홍보하지 마세요.
+- 응답은 해당 앱 및 피드백과 직접적인 관련이 있어야 합니다.
+- 응답에 비속어나 공격적, 개인적 또는 악의적인 내용을 포함하지 마세요. 항상 공손하게 응답하고, 앱에 만족하는 고객이 앱을 가장 잘 홍보할 수 있다는 점을 염두에 두세요.
 
-> **Note** Customers can report a developer to Microsoft if they receive an inappropriate feedback response. They can also opt out of receiving feedback responses by email.
+> **참고** 고객은 부적절한 피드백 응답을 받을 경우 개발자를 Microsoft에 보고할 수 있습니다. 피드백 응답을 메일로 받는 것을 옵트아웃(opt out)할 수도 있습니다.
 
-Your relationship with your customers is your own. Microsoft doesn’t get involved in disputes between developers and customers. However, if you think that the content of a customer’s feedback on your product is inappropriate, please submit a [support ticket](http://go.microsoft.com/fwlink/p/?LinkID=401178).
+고객과의 관계는 여러분의 책임입니다. 개발자와 고객 간에 분쟁이 있을 경우 Microsoft는 관여하지 않습니다. 그러나 제품에 대한 고객의 피드백 내용이 부적절하다고 생각되는 경우에는 [지원 티켓](http://go.microsoft.com/fwlink/p/?LinkID=401178)을 제출하세요.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

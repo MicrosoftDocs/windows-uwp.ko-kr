@@ -32,6 +32,8 @@
 
 다음은 변환된 앱에서 지원되는 UWP API의 전체 목록입니다. [변환된 앱에서 새로 지원되는 API](#new) 또는 [변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API](#both)를 확인할 수 있습니다. 
 
+변환된 앱에서 UWP API를 호출하는 방법에 대한 예제를 보려면 [GitHub의 데스크톱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)을 참조하세요.
+
 <span id="new" />
 ### 변환된 앱에서 새로 지원되는 API
 
@@ -1028,6 +1030,6 @@
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO5-->
 
 

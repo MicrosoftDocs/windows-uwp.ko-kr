@@ -4,8 +4,8 @@ ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: "JavaScript/HTML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 읽어보세요."
 title: "HTML 및 JavaScript 문제 해결 가이드"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 2b86d307dfbaf6d82e99a323762cfb5515f865da
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
 # HTML 및 JavaScript 문제 해결 가이드
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 JavaScript/HTML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 제공합니다.
 
@@ -383,6 +383,6 @@ ms.openlocfilehash: af4ea6f3360ea85d1c70ec9b757db65ec23c88af
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

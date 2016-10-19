@@ -4,8 +4,8 @@ description: "XAML 연결된 속성을 종속성 속성으로 구현하는 방�
 title: "사용자 지정 연결된 속성"
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
+ms.sourcegitcommit: 21ca5391fc4f29c33b3501d05d5ebed986188a3e
+ms.openlocfilehash: 77858a864929c99425f9c008e8f6fb8dfbad0b44
 
 ---
 
@@ -29,7 +29,7 @@ ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
 
 엄격하게 기타 형식에서만 사용하도록 연결된 속성을 정의하는 경우 속성이 등록된 클래스가 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생할 필요는 없습니다. 그러나 연결된 속성이 종속성 속성이기도 한 일반 모델을 따를 경우 백업 속성 저장소를 사용할 수 있도록 접근자의 대상 매개 변수에 **DependencyObject**가 사용되게 해야 합니다.
 
-[**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public****static****readonly** 속성을 선언하여 연결된 속성을 종속성 속성으로 정의합니다. 이 속성은 [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드의 반환 값을 사용하여 정의합니다. 속성 이름은 **RegisterAttached***name* 매개 변수로 지정하는 연결된 속성 이름과 일치해야 하며 문자열 "Property"가 끝에 추가됩니다. 표시하는 속성과 관련하여 종속성 속성 식별자를 명명하기 위해 설정된 규칙입니다.
+[**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 형식의 **public** **static** **readonly** 속성을 선언하여 연결된 속성을 종속성 속성으로 정의합니다. 이 속성은 [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833) 메서드의 반환 값을 사용하여 정의합니다. 속성 이름은 **RegisterAttached** *name* 매개 변수로 지정하는 연결된 속성 이름과 일치해야 하며 문자열 "Property"가 끝에 추가됩니다. 표시하는 속성과 관련하여 종속성 속성 식별자를 명명하기 위해 설정된 규칙입니다.
 
 사용자 지정 연결된 속성 정의가 사용자 지정 종속성 속성과 가장 다른 부분은 접근자 또는 래퍼 정의 방식입니다. [사용자 지정 종속성 속성](custom-dependency-properties.md)에 설명된 래퍼 기술을 사용하지 않고 연결된 속성에 대해 정적 **Get***PropertyName* 및 **Set***PropertyName* 메서드도 접근자로 제공해야 합니다. 비XAML 시나리오에서는 다른 호출자도 접근자를 사용하여 값을 설정할 수 있으나 접근자는 주로 XAML 파서에서 사용합니다.
 
@@ -39,21 +39,21 @@ ms.openlocfilehash: cf6ca169623311e515f02a174224d57652afc753
 
 **Get**_PropertyName_ 접근자의 서명은 다음이어야 합니다.
 
-`public static` _valueType_ **Get** _PropertyName_ `(DependencyObject target)`
+`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
 
 Microsoft Visual Basic의 경우 다음과 같습니다.
 
-` Public Shared Function Get`_PropertyName_ `(ByVal target As DependencyObject) As ` _valueType_`)`
+` Public Shared Function Get`_PropertyName_`(ByVal target As DependencyObject) As `_valueType_`)`
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *valueType* 반환 값의 형식도 구현에서 더 구체적일 수 있습니다. 기본 **Object** 형식을 사용할 수 있으나 연결된 속성의 형식 안전성을 강화하려는 경우가 많습니다. 형식 안전성을 강화하는 방법으로 getter 및 setter 시그니처 입력을 사용하는 것이 좋습니다.
 
 **Set***PropertyName* 접근자의 서명은 다음과 같아야 합니다.
 
-`  public static void Set`_PropertyName_ ` (DependencyObject target , ` _valueType_` value)`
+`  public static void Set`_PropertyName_` (DependencyObject target , `_valueType_` value)`
 
 Visual Basic의 경우 다음과 같습니다.
 
-`Public Shared Sub Set`_PropertyName_ ` (ByVal target As DependencyObject, ByVal value As ` _valueType_`)`
+`Public Shared Sub Set`_PropertyName_` (ByVal target As DependencyObject, ByVal value As `_valueType_`)`
 
 *target* 개체의 형식은 구현에서 더 구체적일 수 있으며 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)에서 파생해야 합니다. *value* 개체 및 해당 *valueType*의 형식도 구현에서 더 구체적일 수 있습니다. 이 메서드의 값은 태그에서 연결된 속성을 발견하는 경우 XAML 프로세서에서 제공하는 입력입니다. 특성 값(최종적으로는 문자열임)으로 적절한 형식을 만들 수 있으려면 사용하는 형식에 대한 형식 변환 또는 기존 태그 확장 지원이 있어야 합니다. 기본 **Object** 형식을 사용할 수 있으나 형식 안전성을 강화하려는 경우가 많습니다. 이 경우 접근자에 형식 적용을 넣으세요.
 
@@ -84,6 +84,7 @@ Visual Basic의 경우 다음과 같습니다.
         }
     }
 ```
+
 ```vb
 Public Class GameService
     Inherits DependencyObject
@@ -246,6 +247,6 @@ XAML에 대한 XML 네임스페이스 매핑은 일반적으로 XAML 페이지�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

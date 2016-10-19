@@ -4,8 +4,8 @@ title: "끌어서 놓기"
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 03f3f86ed1310e6e3ac5f53cc5e81ebef708a1a2
-ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
+ms.sourcegitcommit: f2133ca15e30f7451a61f78b48e883db1a5687a6
+ms.openlocfilehash: ee3d0c40effc12382f6fd31154016953f172be70
 
 ---
 # 끌어서 놓기
@@ -19,7 +19,7 @@ ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
 
 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 및 [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) 속성을 사용하여 끌어서 놓기를 사용할 수 있는 앱 영역을 지정할 수 있습니다.
 
-아래 태그는 XAML에서 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
+다음 태그는 XAML에서 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
 
 [!code-xml[기본](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
@@ -49,17 +49,34 @@ ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
 
 [!code-cs[기본](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
+## 터치로 끌 수 있는 항목에서 상황에 맞는 메뉴 열기
+
+터치를 사용할 때 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement)를 끌고 해당 상황에 맞는 메뉴를 여는 작업은 비슷한 터치 제스처를 공유합니다. 각각은 길게 누르기로 시작됩니다. 시스템에서 둘 다 지원하는 앱의 요소의 경우 두 작업 간을 식별하는 방법은 다음과 같습니다. 
+
+* 사용자가 항목을 누른 채 500밀리초 내에 끌기 시작하면 항목이 끌리고 상황에 맞는 메뉴가 표시되지 않습니다. 
+* 사용자가 항목을 누른 채 500밀리초 내에 끌지 않으면 상황에 맞는 메뉴가 열립니다. 
+* 상황에 맞는 메뉴가 열린 후 사용자가 항목을 끌려고 하면(손가락을 떼지 않고) 상황에 맞는 메뉴가 해제되고 끌기가 시작됩니다.
+
+## ListView 또는 GridView의 항목을 폴더로 지정
+
+[**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListViewItem) 또는 [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridViewItem)을 폴더로 지정할 수 있습니다. 이는 TreeView 및 파일 탐색기 시나리오에 특히 유용합니다. 이렇게 하려면 해당 항목에서 명시적으로 [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop) 속성을 **True**로 설정합니다. 
+
+시스템은 폴더 및 비폴더 항목에 놓을 적절한 애니메이션을 자동으로 표시합니다. 데이터 원본을 업데이트하고 대상 폴더에 놓은 항목을 추가하기 위해 앱 코드는 폴더 항목(및 비폴더 항목)에서 [**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) 이벤트를 계속 처리해야 합니다.
+
 ## 참고 항목
 
+* [앱 간 통신](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
 * [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
 * [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
 * [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
 * [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
-* [DragUiOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
+* [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
 * [놓기](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
+* [IsDragSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isdragsource.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

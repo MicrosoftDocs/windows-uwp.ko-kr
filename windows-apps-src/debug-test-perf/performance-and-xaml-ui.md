@@ -5,7 +5,7 @@ title: "성능"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 68f9080cedcc2840fb1e92b81e2fb6bc0b53bee8
+ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
 
 ---
 # 성능
@@ -36,6 +36,6 @@ ms.openlocfilehash: 68f9080cedcc2840fb1e92b81e2fb6bc0b53bee8
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: "앱 활성화 처리"
 description: "OnLaunched 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 translationtype: Human Translation
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
+ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
+ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
 
 ---
 
@@ -14,10 +14,6 @@ ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-
-**중요 API**
-
--   [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)
 
 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다.
 
@@ -183,6 +179,6 @@ ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

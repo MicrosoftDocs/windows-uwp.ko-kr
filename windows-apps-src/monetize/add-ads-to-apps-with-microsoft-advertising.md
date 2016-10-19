@@ -6,7 +6,7 @@ title: "Microsoft Advertising으로 앱에 광고 추가"
 redirect_url: https://msdn.microsoft.com/windows/uwp/monetize/display-ads-in-your-app
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4b8f71249f9358fcc6127b83a7ade10895f5c64e
+ms.openlocfilehash: cc3906e43363d71b70f3b850bc9b339bff80b427
 
 ---
 
@@ -14,6 +14,6 @@ ms.openlocfilehash: 4b8f71249f9358fcc6127b83a7ade10895f5c64e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

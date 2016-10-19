@@ -6,19 +6,27 @@ ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 5056a9f304ca21c977b9cc65b8ead007eccd4288
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 69f682b0edddbcf88515af537c33b3d8297f91f0
 
 ---
-
 # 시간 선택기
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 시간 선택기는 사용자가 터치, 마우스 또는 키보드 입력을 사용하여 시간 값을 선택할 수 있는 표준화된 방법을 제공합니다. 
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx"><strong>TimePicker 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx"><strong>Time 속성</strong></a></li>
+</ul>
 
--   [**TimePicker 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.aspx)
--   [**Time 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.timepicker.time.aspx)
+</div>
+</div>
+
+
+
 
 ## 올바른 컨트롤인가요?
 사용자가 단일 시간 값을 선택할 수 있게 하려면 시간 선택기를 사용합니다.
@@ -48,7 +56,7 @@ arrivalTimePicker.Header = "Arrival time";
 
 ![시간 선택기의 예](images/time-picker-closed.png)
 
-> **참고**&nbsp;&nbsp; 날짜 및 시간 값에 대한 중요한 정보는 *날짜 및 시간 컨트롤* 문서의 [DateTime 및 Calendar](date-and-time.md#datetime-and-calendar-values) 값을 참조하세요.
+> **참고**&nbsp;&nbsp;날짜 및 시간 값에 대한 중요한 정보는 [날짜 및 시간 컨트롤](date-and-time.md#datetime-and-calendar-values) 문서의 *DateTime 및 Calendar* 값을 참조하세요.
 
 
 
@@ -61,6 +69,6 @@ arrivalTimePicker.Header = "Arrival time";
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

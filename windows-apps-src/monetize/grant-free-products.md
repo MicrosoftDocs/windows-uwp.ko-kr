@@ -1,19 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: "Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용자에게 무료 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 권한을 부여합니다."
+description: "Windows 스토어 구매 API에서 이 메서드를 사용하여 지정된 사용자에게 무료 앱 또는 추가 기능에 대한 권한을 부여합니다."
 title: "무료 제품에 대한 권한 부여"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
 
 ---
 
 # 무료 제품에 대한 권한 부여
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용자에게 무료 앱 또는 IAP(앱에서 바로 구매 제품)에 대한 권한을 부여합니다.
+
+Windows 스토어 구매 API에서 이 메서드를 사용하여 지정된 사용자에게 무료 앱 또는 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 권한을 부여합니다.
 
 현재 무료 제품에 대해서만 권한을 부여할 수 있습니다. 서비스에서 이 메서드를 사용하여 유료 제품에 대해 권한을 부여하려고 시도하면 이 메서드가 오류를 반환합니다.
 
@@ -41,7 +41,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
 | 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -58,7 +58,7 @@ Windows 스토어 구매 API에서 이 방법을 사용하여 지정된 사용�
 | 언어       | 문자열 | 사용자의 언어.                                                                                                                                                                                                                                                                                              | 예      |
 | 출시         | 문자열 | 사용자의 지역/국가입니다.                                                                                                                                                                                                                                                                                                | 예      |
 | orderId        | GUID   | 주문에 대해 생성된 GUID입니다. 이 값은 사용자에 대해 고유하지만 모든 주문에서 고유할 필요는 없습니다.                                                                                                                                                                                              | 예      |
-| productId      | 문자열 | Windows 스토어 카탈로그의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. | 예      |
+| productId      | 문자열 | Windows 스토어 카탈로그의 스토어 ID입니다. 앱의 경우 스토어 ID는 개발자 센터 대시보드의 [앱 ID 페이지](../publish/view-app-identity-details.md)에서 사용할 수 있습니다. 추가 기능의 경우 스토어 ID는 Windows 개발자 센터 대시보드에서 추가 기능 개요 페이지의 URL에 사용할 수 있습니다. 스토어 ID의 예로는 9WZDNCRFJ3Q8이 있습니다. | 예      |
 | quantity       | int    | 구매할 수량입니다. 현재, 1 값만 지원됩니다. 지정되지 않은 경우 기본값은 1입니다.                                                                                                                                                                                                                | 아니요       |
 | skuId          | 문자열 | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                                                                                                                                                                                                | 예      |
 
@@ -137,9 +137,9 @@ OrderLineItemV6 개체에는 다음 매개 변수가 포함됩니다.
 | legacyBillingOrderId    | 문자열         | 레거시 청구 ID입니다.                                                                                       | 아니요       |
 | lineItemId              | 문자열         | 이 주문의 항목에 대한 품목 ID입니다.                                                                 | 예      |
 | listPrice               | 10진수        | 이 주문에 있는 항목의 정가입니다.                                                                    | 예      |
-| productId               | 문자열         | 품목의 Windows 스토어 제품 ID입니다.                                                               | 예      |
+| productId               | 문자열         | 품목의 스토어 ID입니다.                                                               | 예      |
 | productType             | 문자열         | 제품 유형입니다. 지원되는 값은 **Durable**, **Application** 및 **UnmanagedConsumable**입니다. | 예      |
-| Quantity                | int            | 주문한 항목의 수량입니다.                                                                            | 예      |
+| quantity                | int            | 주문한 항목의 수량입니다.                                                                            | 예      |
 | retailPrice             | 10진수        | 주문 항목의 소매 가격입니다.                                                                        | 예      |
 | revenueRecognitionState | 문자열         | 수익 인식 상태입니다.                                                                               | 예      |
 | skuId                   | 문자열         | 품목의 Windows 스토어 SKU ID입니다.                                                                   | 예      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

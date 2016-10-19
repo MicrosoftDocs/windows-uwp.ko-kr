@@ -5,7 +5,7 @@ description: "음악 및 사운드를 개발하여 DirectX 게임에 통합하�
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
+ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
 
 ---
 
@@ -120,7 +120,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 <tbody>
 <tr class="odd">
 <td align="left"><p>[방법: XAudio2 초기화](https://msdn.microsoft.com/library/windows/desktop/ee415779)</p></td>
-<td align="left"><p>XAudio2 엔진의 인스턴스를 만들고, 마스터링 음성을 만들어 오디오 재생을 위해  XAudio2를 초기화하는 방법을 알아봅니다.</p></td>
+<td align="left"><p>XAudio2 엔진의 인스턴스를 만들고, 마스터링 음성을 만들어 오디오 재생을 위해 XAudio2를 초기화하는 방법을 알아봅니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[방법: XAudio2에 오디오 데이터 파일 로드](https://msdn.microsoft.com/library/windows/desktop/ee415781)</p></td>
@@ -320,6 +320,6 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

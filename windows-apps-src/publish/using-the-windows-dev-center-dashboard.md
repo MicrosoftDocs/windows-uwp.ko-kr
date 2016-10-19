@@ -4,8 +4,8 @@ Description: "Windows 개발자 센터 대시보드에서는 모든 Windows 디�
 title: "Windows 개발자 센터 대시보드 사용"
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 2ccec6e85666ef328f4aa0baa8ba6a705986a4c4
 
 ---
 
@@ -16,9 +16,9 @@ Windows 개발자 센터 대시보드에서는 모든 Windows 디바이스용 �
 
 > **참고** Windows 개발자 센터 대시보드에 액세스하려면 [개발자 계정](http://go.microsoft.com/fwlink/p/?LinkId=615100)이 있어야 합니다.
 
-[앱에 대한 제출을 만든](app-submissions.md) 경우(처음 또는 업데이트로) 지원되는 운영 체제용 [앱 패키지를 업로드](upload-app-packages.md)할 수 있으며, 스토어에서 고객에게 가장 적합한 패키지를 자동으로 제공합니다. 앱에서 지원하는 모든 운영 체제에 동일한 [설명](create-app-descriptions.md) 및 [아트워크](app-screenshots-and-images.md)를 사용하거나, [특정 플랫폼에 대한 설명을 사용자 지정](create-platform-specific-descriptions.md)할 수 있습니다.
+[앱에 대한 제출을 만든](app-submissions.md) 경우(처음 또는 업데이트로) 지원되는 운영 체제용 [앱 패키지를 업로드](upload-app-packages.md)할 수 있으며, 스토어에서 고객에게 가장 적합한 패키지를 자동으로 제공합니다. 앱에서 지원하는 모든 운영 체제에 동일한 [스토어 목록](create-app-store-listings.md) 및 [아트워크](app-screenshots-and-images.md)를 사용하거나, [특정 OS 버전에 대한 스토어 목록을 사용자 지정](create-platform-specific-Store-listings.md)할 수 있습니다.
 
-IAP(앱에서 바로 구매 제품)가 앱 제출과 개별적으로 관리됩니다. 이를 통해 더욱 뛰어난 유연성과 개별적으로 변경하는 기능이 도입되었습니다. 자세한 내용은 [IAP 제출](iap-submissions.md)을 참조하세요.
+추가 기능(앱에서 바로 구매 제품)이 앱 제출과 개별적으로 관리됩니다. 이를 통해 더욱 뛰어난 유연성과 개별적으로 변경하는 기능이 도입되었습니다. 자세한 내용은 [추가 기능 제출](add-on-submissions.md)을 참조하세요.
 
 개발자 센터 대시보드에서는 [앱 관리 및 구성 서비스](app-management-and-services.md), [분석 데이터 검토](analytics.md), [지급 보고](payout-summary.md), [홍보 및 고객 참여 유도](app-promotion-and-customer-engagement.md), [베타 테스트](beta-testing-and-targeted-distribution.md), [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md) 등의 기능도 제공합니다.
 
@@ -38,6 +38,6 @@ IAP(앱에서 바로 구매 제품)가 앱 제출과 개별적으로 관리됩�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -5,7 +5,7 @@ title: "유료 앱의 세금 세부 정보"
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 translationtype: Human Translation
 ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
-ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+ms.openlocfilehash: 3efc5a575a7ed81b4dfb8e2349e252e61355cfc2
 
 ---
 
@@ -283,6 +283,6 @@ ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: "URI 활성화 처리"
 description: "앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
 translationtype: Human Translation
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
+ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
+ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
 -   [**Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742)
 -   [**Windows.UI.Xaml.Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)
 
-앱을 URI(Uniform Resource Identifier) 스키마 이름의 기본 처리기로 등록하는 방법을 알아봅니다. CWP(클래식 Windows 플랫폼) 앱과 UWP(유니버설 Windows 플랫폼) 앱 모두 URI 스키마 이름의 기본 처리기로 등록할 수 있습니다. 사용자가 앱을 URI 스키마 이름의 기본 처리기로 선택하면 해당 형식의 URI를 시작할 때마다 앱이 활성화됩니다.
+앱을 URI(Uniform Resource Identifier) 스키마 이름의 기본 처리기로 등록하는 방법을 알아봅니다. Windows 데스크톱 앱과 UWP(유니버설 Windows 플랫폼) 앱 모두 URI 스키마 이름의 기본 처리기로 등록할 수 있습니다. 사용자가 앱을 URI 스키마 이름의 기본 처리기로 선택하면 해당 형식의 URI를 시작할 때마다 앱이 활성화됩니다.
 
 해당 형식의 URI 스키마에 대해 모든 URI 시작을 처리하려는 경우에만 URI 스키마 이름을 등록하는 것이 좋습니다. URI 스키마 이름을 등록할 경우에는 앱이 해당 URI 스키마에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어 mailto: URI 스키마 이름에 대해 등록된 앱은 사용자가 새 메일을 작성할 수 있도록 새 메일 메시지로 열려야 합니다. URI 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh700321)을 참조하세요.
 
@@ -176,6 +176,6 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

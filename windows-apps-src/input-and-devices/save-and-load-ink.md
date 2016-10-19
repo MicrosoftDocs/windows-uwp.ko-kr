@@ -7,8 +7,8 @@ label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: cdef00304e1835532eceb8e51fecc8045f2ff300
+ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
+ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
 
 ---
 
@@ -25,8 +25,8 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 
 
 
-**참고**  
-ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
+> [!NOTE]
+> ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
  
 
@@ -157,13 +157,10 @@ public MainPage()
     }
 ```
 
-[!NOTE]  
-GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
-
- 
+> [!NOTE]  
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
 
 ## 파일에서 잉크 스트로크 로드
-
 
 다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
@@ -226,6 +223,10 @@ public MainPage()
     파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
 
     그런 다음, [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)를 호출하여 저장된 잉크 스트로크를 읽고, 역직렬화하고, [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에 로드합니다. 스트로크를 **InkStrokeContainer**에 로드하면 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)가 해당 스트로크를 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 즉시 렌더링합니다.
+
+    > [!NOTE]
+    > InkStrokeContainer의 모든 기존 스트로크는 새 스트로크가 로드되기 전에 지워집니다.
+
 ``` csharp
 // Load ink data from a file.
 private async void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -247,7 +248,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
         // Read from file.
         using (var inputStream = stream.GetInputStreamAt(0))
         {
-            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(stream);
+            await inkCanvas.InkPresenter.StrokeContainer.LoadAsync(inputStream);
         }
         stream.Dispose();
     }
@@ -259,8 +260,8 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고**  
-GIF는 잉크 데이터를 저장할 수 있는 유일한 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원합니다.
+> [!NOTE]
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원합니다.
 
 | 형식                    | 설명 |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -445,6 +446,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

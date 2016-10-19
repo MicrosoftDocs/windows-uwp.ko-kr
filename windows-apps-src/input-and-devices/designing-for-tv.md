@@ -7,12 +7,10 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 translationtype: Human Translation
-ms.sourcegitcommit: 2e7515efa04f6335929e23d31da7d76cb64b9cc9
-ms.openlocfilehash: 54da89e33b81fc8c5439786f8a5133360dbd186c
+ms.sourcegitcommit: 96a35ded526b09dd1ce1cb8528bb4a99e3511b32
+ms.openlocfilehash: 734a0f0574ac7698dd6bd963bf3e20225b26d401
 
 ---
-
-> \[이 문서에서 설명하는 기능은 아직 사용할 수 없습니다. 이 기능은 상업용으로 출시되기 전에 상당 부분 수정될 수 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
 
 # Xbox 및 TV용 디자인
 
@@ -109,7 +107,7 @@ UWP는 기존의 키보드 입력 동작을 게임 패드 및 리모컨 입력�
 | Enter                 | A/선택 단추                       |
 | 이스케이프                | B/뒤로 단추*                        |
 
-\*B 단추에 대한 [KeyDown](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [KeyUp](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.keyup.aspx) 이벤트가 앱에서 처리되지 않는 경우 [SystemNavigationManager.BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx) 이벤트가 발생하여 앱 내에서 뒤로 탐색됩니다. 그러나 다음 코드 조각과 같이 이를 직접 구현해야 합니다.
+\*B 단추에 대한 [KeyDown](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [KeyUp](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.uielement.keyup.aspx) 이벤트가 앱에서 처리되지 않는 경우 [SystemNavigationManager.BackRequested](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx) 이벤트가 발생하여 앱 내에서 뒤로 탐색됩니다. 그러나 다음 코드 조각과 같이 이를 직접 구현해야 합니다.
 
 ```csharp
 // This code goes in the MainPage class
@@ -164,7 +162,7 @@ Xbox One의 UWP 앱은 **메뉴** 단추를 눌러 상황에 맞는 메뉴를 �
 | 조작   | 키보드   | 게임 패드      | 기본 제공:  | 맞춤 항목: |
 |---------------|------------|--------------|----------------|------------------|
 | 페이지 위로/아래로  | 페이지 위로/아래로 | 왼쪽/오른쪽 트리거 | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | 세로 스크롤을 지원하는 보기
-| 페이지 왼쪽/오른쪽으로 | 없음 | 왼쪽/오른쪽 범퍼 | [Pivot](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | 가로 스크롤을 지원하는 보기
+| 페이지 왼쪽/오른쪽으로 | 없음 | 왼쪽/오른쪽 범퍼 | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | 가로 스크롤을 지원하는 보기
 | 확대/축소        | Ctrl +/- | 왼쪽/오른쪽 트리거 | 없음 | `ScrollViewer`, 확대 및 축소를 지원하는 보기 |
 | 탐색 창 열기/닫기 | 없음 | 보기 | 없음 | 탐색 창
 
@@ -273,17 +271,17 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 ### 최소 클릭 경로
 
-사용자가 가장 일반적인 작업을 최소 클릭 수로 수행할 수 있게 합니다. 다음 예제에서는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)이 **재생** 단추(처음 포커스를 받음)와 자주 사용하는 요소 사이에 있으므로 우선 순위 작업 사이에 불필요한 요소가 배치됩니다.
+사용자가 가장 일반적인 작업을 최소 클릭 수로 수행할 수 있게 합니다. 다음 예제에서는 [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)이 **재생** 단추(처음 포커스를 받음)와 자주 사용하는 요소 사이에 있으므로 우선 순위 작업 사이에 불필요한 요소가 배치됩니다.
 
 ![탐색 모범 사례에서는 최소 클릭 경로를 제공합니다.](images/designing-for-tv/2d-navigation-best-practices-provide-path-with-least-clicks.png)
 
-다음 예제에서는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)이 **재생** 단추 위에 있습니다. 우선 순위 작업 사이에 불필요한 요소가 배치되지 않도록 UI를 다시 정렬하기만 해도 앱의 유용성이 크게 향상됩니다.
+다음 예제에서는 [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)이 **재생** 단추 위에 있습니다. 우선 순위 작업 사이에 불필요한 요소가 배치되지 않도록 UI를 다시 정렬하기만 해도 앱의 유용성이 크게 향상됩니다.
 
 ![우선 순위 작업 사이에 배치되지 않도록 TextBlock이 재생 단추 위로 이동됨](images/designing-for-tv/2d-navigation-best-practices-provide-path-with-least-clicks-2.png)
 
 ### CommandBar 및 ContextFlyout
 
-[CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)를 사용하는 경우 [문제: 긴 스크롤 목록/그리드 뒤에 UI 요소가 있음](#problem-ui-elements-located-after-long-scrolling-list-grid)에서 설명한 대로 목록을 스크롤하는 문제에 유의하세요. 다음 그림은 `CommandBar`가 목록/그리드 맨 아래에 있는 UI 레이아웃을 보여 줍니다. 사용자는 `CommandBar`에 접근하기 위해 목록/그리드 맨 아래까지 스크롤해야 합니다.
+[CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)를 사용하는 경우 [문제: 긴 스크롤 목록/그리드 뒤에 UI 요소가 있음](#problem-ui-elements-located-after-long-scrolling-list-grid)에서 설명한 대로 목록을 스크롤하는 문제에 유의하세요. 다음 그림은 `CommandBar`가 목록/그리드 맨 아래에 있는 UI 레이아웃을 보여 줍니다. 사용자는 `CommandBar`에 접근하기 위해 목록/그리드 맨 아래까지 스크롤해야 합니다.
 
 ![CommandBar가 목록/그리드 맨 아래에 있음](images/designing-for-tv/2d-navigation-best-practices-commandbar-and-contextflyout.png)
 
@@ -355,7 +353,7 @@ private void MyButton_ContextRequested(UIElement sender, ContextRequestedEventAr
 
 #### 문제: UI 요소가 긴 스크롤 목록/그리드 뒤에 있음 <a name="problem-ui-elements-located-after-long-scrolling-list-grid"></a>
 
-다음 그림에 표시된 속성의 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)는 매우 긴 스크롤 목록입니다. `ListView`에서 [연결](#focus-engagement)이 요구되지 *않는* 경우 사용자가 목록으로 이동하면 목록의 첫 번째 항목에 포커스가 배치됩니다. 사용자가 **이전** 또는 **다음** 단추에 접근하려면 목록에 있는 모든 항목을 탐색해야 합니다. 이처럼 사용자가 전체 목록을 트래버스하는 것이 힘든 경우&mdash;즉, 이러한 경험이 허용될 만큼&mdash;목록이 짧지 않은 경우에는 다른 옵션을 고려하는 것이 좋습니다.
+다음 그림에 표시된 속성의 [ListView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.listview.aspx)는 매우 긴 스크롤 목록입니다. `ListView`에서 [연결](#focus-engagement)이 요구되지 *않는* 경우 사용자가 목록으로 이동하면 목록의 첫 번째 항목에 포커스가 배치됩니다. 사용자가 **이전** 또는 **다음** 단추에 접근하려면 목록에 있는 모든 항목을 탐색해야 합니다. 이처럼 사용자가 전체 목록을 트래버스하는 것이 힘든 경우&mdash;즉, 이러한 경험이 허용될 만큼&mdash;목록이 짧지 않은 경우에는 다른 옵션을 고려하는 것이 좋습니다.
 
 ![부동산 앱: 50개 항목이 포함된 목록 아래에 있는 단추에 접근하기 위해 51번 클릭해야 함](images/designing-for-tv/2d-focus-navigation-and-interaction-real-estate-app-list.png)
 
@@ -375,7 +373,7 @@ private void MyButton_ContextRequested(UIElement sender, ContextRequestedEventAr
 
 #### 문제: 포커스 가능 요소가 없는 ScrollViewer
 
-XY 포커스 탐색은 한 번에 하나씩 포커스 가능 UI요소로 이동하므로 포커스 가능 요소가 없는 [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)(예: 이 예제와 같이 텍스트만 포함된 경우)에서는 사용자가 `ScrollViewer`의 일부 콘텐츠를 볼 수 없는 시나리오가 발생할 수 있습니다. 이 시나리오 및 기타 관련 시나리오에 대한 해결 방법은 [포커스 연결](#focus-engagement)을 참조하세요.
+XY 포커스 탐색은 한 번에 하나씩 포커스 가능 UI요소로 이동하므로 포커스 가능 요소가 없는 [ScrollViewer](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)(예: 이 예제와 같이 텍스트만 포함된 경우)에서는 사용자가 `ScrollViewer`의 일부 콘텐츠를 볼 수 없는 시나리오가 발생할 수 있습니다. 이 시나리오 및 기타 관련 시나리오에 대한 해결 방법은 [포커스 연결](#focus-engagement)을 참조하세요.
 
 ![부동산 앱: 텍스트만 있는 ScrollViewer](images/designing-for-tv/2d-focus-navigation-and-interaction-scrollviewer.png)
 
@@ -387,7 +385,7 @@ XY 포커스 탐색은 한 번에 하나씩 포커스 가능 UI요소로 이동�
 
 ## 마우스 모드
 
-[XY 포커스 탐색 및 조작](#xy-focus-navigation-and-interaction)에 설명된 대로 Xbox One에서는 XY 탐색 시스템을 통해 포커스가 이동되어 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으로 이동하여 컨트롤 간에 포커스를 전환할 수 있게 합니다. 그러나 [WebView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx) 및 [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx)과 같은 일부 컨트롤에서는 사용자가 컨트롤의 경계 안으로 포인터를 자유롭게 이동할 수 있는 마우스와 유사한 조작이 필요합니다. 사용자가 전체 페이지에서 포인터를 이동하여 PC에서 마우스로 찾을 수 있는 것과 유사한 경험을 게임 패드/리모컨으로 얻을 수 있어야 하는 앱도 있습니다.
+[XY 포커스 탐색 및 조작](#xy-focus-navigation-and-interaction)에 설명된 대로 Xbox One에서는 XY 탐색 시스템을 통해 포커스가 이동되어 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으로 이동하여 컨트롤 간에 포커스를 전환할 수 있게 합니다. 그러나 [WebView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.webview.aspx) 및 [MapControl](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx)과 같은 일부 컨트롤에서는 사용자가 컨트롤의 경계 안으로 포인터를 자유롭게 이동할 수 있는 마우스와 유사한 조작이 필요합니다. 사용자가 전체 페이지에서 포인터를 이동하여 PC에서 마우스로 찾을 수 있는 것과 유사한 경험을 게임 패드/리모컨으로 얻을 수 있어야 하는 앱도 있습니다.
 
 이러한 시나리오의 경우 전체 페이지 또는 페이지 내부 컨트롤에 대한 포인터(마우스 모드)를 요청해야 합니다. 예를 들어 컨트롤 내부에 있는 동안에만 마우스 모드를 사용하고 다른 곳에서는 XY 포커스 탐색을 사용하는 `WebView` 컨트롤이 포함된 페이지가 앱에 있을 수 있습니다. 포인터를 요청하려면 필요한 경우가 **컨트롤 또는 페이지를 연결할 때**인지, 아니면 **페이지에 포커스가 있을 때**인지를 지정할 수 있습니다.
 
@@ -459,7 +457,7 @@ navigator.gamepadInputEmulation = "keyboard";
 ```
 
 > [!NOTE]
-> `WhenFocused` 값은 [페이지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) 개체에서만 지원됩니다. 컨트롤에 이 값을 설정하려고 하면 예외가 발생합니다.
+> `WhenFocused` 값은 [페이지](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.aspx) 개체에서만 지원됩니다. 컨트롤에 이 값을 설정하려고 하면 예외가 발생합니다.
 
 ### 전체 화면 콘텐츠에 마우스 모드를 사용하지 않도록 설정
 
@@ -510,7 +508,7 @@ navigator.gamepadInputEmulation = "keyboard";
 > [!NOTE]
 > 포커스 연결을 설정해도 키보드 또는 기타 입력 디바이스에는 영향을 주지 않습니다.
 
-[FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) 개체의 `IsFocusEngagementEnabled` 속성이 `True`로 설정된 경우 컨트롤이 포커스 연결 필요로 표시됩니다. 즉, 사용자가 **A/선택** 단추를 눌러 컨트롤을 "연결"하고 조작해야 합니다. 작업이 끝나면 **B/뒤로** 단추를 눌러 컨트롤 연결을 해제하고 벗어날 수 있습니다.
+[FrameworkElement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) 개체의 `IsFocusEngagementEnabled` 속성이 `True`로 설정된 경우 컨트롤이 포커스 연결 필요로 표시됩니다. 즉, 사용자가 **A/선택** 단추를 눌러 컨트롤을 "연결"하고 조작해야 합니다. 작업이 끝나면 **B/뒤로** 단추를 눌러 컨트롤 연결을 해제하고 벗어날 수 있습니다.
 
 > [!NOTE]
 > `IsFocusEngagementEnabled` 는 새로운 API로, 아직 문서화되지 않았습니다.
@@ -523,7 +521,7 @@ navigator.gamepadInputEmulation = "keyboard";
 
 ![가로 슬라이더의 왼쪽 및 오른쪽에 있는 단추](images/designing-for-tv/focus-engagement-focus-trapping.png)
 
-사용자가 왼쪽 단추에서 오른쪽 단추로 이동하려는 경우 D-패드/왼쪽 스틱에서 오른쪽을 두 번 누르기만 하면 된다고 가정하는 것이 논리적입니다. 그러나 [Slider](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)에 연결이 필요하지 않은 경우 다음과 같은 동작이 발생합니다. 사용자가 처음 오른쪽을 누르면 포커스가 `Slider`으로 전환되고, 다시 오른쪽을 누르면 `Slider`의 핸들이 오른쪽으로 이동합니다. 사용자는 핸들을 계속 오른쪽으로 이동하려 하지만 단추에 접근할 수 없습니다.
+사용자가 왼쪽 단추에서 오른쪽 단추로 이동하려는 경우 D-패드/왼쪽 스틱에서 오른쪽을 두 번 누르기만 하면 된다고 가정하는 것이 논리적입니다. 그러나 [Slider](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.slider.aspx)에 연결이 필요하지 않은 경우 다음과 같은 동작이 발생합니다. 사용자가 처음 오른쪽을 누르면 포커스가 `Slider`으로 전환되고, 다시 오른쪽을 누르면 `Slider`의 핸들이 오른쪽으로 이동합니다. 사용자는 핸들을 계속 오른쪽으로 이동하려 하지만 단추에 접근할 수 없습니다.
 
 이 문제를 해결하는 방법에는 여러 가지가 있습니다. 하나는 [XY 포커스 탐색 및 조작](#xy-focus-navigation-and-interaction)의 부동산 앱 예제와 유사하게 다른 레이아웃을 디자인하는 것입니다. 해당 예제에서는 **이전** 및 **다음** 단추의 위치를 `ListView` 위로 옮겼습니다. 다음 이미지와 같이 가로가 아니라 세로로 컨트롤을 겹치면 문제가 해결됩니다.
 
@@ -539,12 +537,12 @@ navigator.gamepadInputEmulation = "keyboard";
 
 ### 항목 컨트롤
 
-[Slider](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx) 컨트롤 외에도 연결을 요구할 수 있는 다음과 같은 컨트롤이 있습니다.
+[Slider](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.slider.aspx) 컨트롤 외에도 연결을 요구할 수 있는 다음과 같은 컨트롤이 있습니다.
 
-- [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx)
-- [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
-- [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
-- [FlipView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview)
+- [ListBox](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.listbox.aspx)
+- [ListView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.listview.aspx)
+- [GridView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)
+- [FlipView](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.ui.xaml.controls.flipview)
 
 `Slider` 컨트롤과 달리 이러한 컨트롤은 해당 컨트롤 내에 포커스를 트래핑하지 않습니다. 그러나 대량 데이터를 포함할 경우 유용성 문제가 발생할 수 있습니다. 다음은 대량 데이터를 포함하는 `ListView`의 예입니다.
 
@@ -558,7 +556,7 @@ navigator.gamepadInputEmulation = "keyboard";
 
 #### ScrollViewer
 
-[ScrollViewer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)는 이러한 컨트롤과 약간 다르며 고려해야 하는 자체 쿼크가 있습니다. 포커스 가능 콘텐츠를 포함하는 `ScrollViewer`가 있는 경우 기본적으로 `ScrollViewer`로 이동하면 포커스 가능 요소를 탐색할 수 있습니다. `ListView`에서와 마찬가지로, `ScrollViewer` 외부로 이동하려면 각 항목을 스크롤해야 합니다. 
+[ScrollViewer](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)는 이러한 컨트롤과 약간 다르며 고려해야 하는 자체 쿼크가 있습니다. 포커스 가능 콘텐츠를 포함하는 `ScrollViewer`가 있는 경우 기본적으로 `ScrollViewer`로 이동하면 포커스 가능 요소를 탐색할 수 있습니다. `ListView`에서와 마찬가지로, `ScrollViewer` 외부로 이동하려면 각 항목을 스크롤해야 합니다. 
 
 `ScrollViewer`에 포커스 가능 콘텐츠가 *없는* 경우&mdash;예: 텍스트만 포함된 경우&mdash; 사용자가 **A/선택** 단추를 사용하여 `ScrollViewer`를 연결할 수 있도록 `IsFocusEngagementEnabled="True"`를 설정할 수 있습니다. 연결한 후 **D-패드/왼쪽 스틱**을 사용하여 텍스트를 스크롤한 다음 작업이 끝나면 **B/뒤로** 단추를 눌러 연결 해제할 수 있습니다.
 
@@ -591,7 +589,7 @@ navigator.gamepadInputEmulation = "keyboard";
 
 ![텍스트, 앱 및 기타 항목의 크기 변경](images/designing-for-tv/ui-scaling.png) 
 
-Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 **200%** 기본값으로 배율이 지정됩니다. UI 요소가 다른 디바이스에 적절한 크기로 조정되기만 하면 TV에서도 적절한 크기로 조정됩니다. Xbox One은 앱을 1080p(1920 x 1080 픽셀)로 렌더링합니다. 따라서 PC 등의 다른 디바이스에서 앱을 가져오는 경우 [적응형 기술](https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 이용하여 100%의 960 x 540px에서 UI가 멋지게 표시되도록 합니다.
+Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 **200%** 기본값으로 배율이 지정됩니다. UI 요소가 다른 디바이스에 적절한 크기로 조정되기만 하면 TV에서도 적절한 크기로 조정됩니다. Xbox One은 앱을 1080p(1920 x 1080 픽셀)로 렌더링합니다. 따라서 PC 등의 다른 디바이스에서 앱을 가져오는 경우 [적응형 기술](https://msdn.microsoft.com/en-us/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 이용하여 100%의 960 x 540px에서 UI가 멋지게 표시되도록 합니다.
 
 Xbox용 디자인은 하나의 해상도, 1920 x 1080에 대해서만 고려하면 되기 때문에 PC용 디자인과 약간 다릅니다. 사용자에게 더 나은 해상도의 TV가 있는지 여부는 중요하지 않습니다. &mdash;UWP 앱은 항상 1080p로 크기가 조정됩니다.
 
@@ -668,7 +666,7 @@ bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayo
 
 ### 가장자리까지 UI 그리기
 
-사용자에게 더 몰입감을 제공하기 위해 특정 UI 요소를 사용하여 화면 가장자리까지 확장하는 것이 좋습니다. 여기에는 [ScrollViewers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [탐색 창](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane), [CommandBars](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) 등이 포함됩니다.
+사용자에게 더 몰입감을 제공하기 위해 특정 UI 요소를 사용하여 화면 가장자리까지 확장하는 것이 좋습니다. 여기에는 [ScrollViewers](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [탐색 창](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/nav-pane), [CommandBars](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) 등이 포함됩니다.
 
 반면, 대화형 요소와 텍스트의 경우 항상 화면 가장자리를 피하여 일부 TV에서 잘리지 않도록 하는 것이 중요합니다. 화면 가장자리의 5% 내에는 중요하지 않은 시각 효과만 그리는 것이 좋습니다. [UI 요소 크기 지정](#ui-element-sizing)에 설명된 것처럼 Xbox One 콘솔의 기본 배율 인수 200%를 따르는 UWP 앱은 960 x 540 epx 영역을 이용하므로 앱의 UI에서 다음 영역에는 필수 UI를 배치하지 않도록 해야 합니다.
 
@@ -688,7 +686,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
     (Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);
 ```
 
-이 코드 줄을 사용하면 앱 창이 화면 가장자리까지 확장되므로 모든 대화형 필수 UI를 앞에서 설명한 TV 안전 영역으로 이동해야 합니다. 상황에 맞는 메뉴, 열린 [ComboBoxes](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 등의 임시 UI는 TV 안전 영역 안에 자동으로 유지됩니다.
+이 코드 줄을 사용하면 앱 창이 화면 가장자리까지 확장되므로 모든 대화형 필수 UI를 앞에서 설명한 TV 안전 영역으로 이동해야 합니다. 상황에 맞는 메뉴, 열린 [ComboBoxes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) 등의 임시 UI는 TV 안전 영역 안에 자동으로 유지됩니다.
 
 ![핵심 창 경계](images/designing-for-tv/core-window-bounds.png)
 
@@ -696,7 +694,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 탐색 창은 일반적으로 화면 가장자리 근처에 그려지므로 어색한 간격이 생기지 않도록 배경이 안전하지 않은 TV 영역까지 확장되어야 합니다. 이렇게 하려면 탐색 창의 배경색을 앱의 배경색으로 변경합니다.
 
-앞에서 설명한 대로 핵심 창 경계를 사용하면 UI를 화면 가장자리까지 그릴 수 있지만 [SplitView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.splitview.aspx)의 콘텐츠에서 양수 여백을 사용하여 TV 안전한 영역 내에 유지해야 합니다.
+앞에서 설명한 대로 핵심 창 경계를 사용하면 UI를 화면 가장자리까지 그릴 수 있지만 [SplitView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.splitview.aspx)의 콘텐츠에서 양수 여백을 사용하여 TV 안전한 영역 내에 유지해야 합니다.
 
 ![화면 가장자리까지 확장된 탐색 창](images/designing-for-tv/tv-safe-areas-2.png)
 
@@ -721,7 +719,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 </SplitView>
 ```
 
-[CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)는 앱의 하나 이상 가장자리 근처에 자주 배치되는 창의 또 다른 예이므로 TV에서는 배경이 화면 가장자리까지 확장되어야 합니다. 또한 일반적으로 TV 안전 영역에 유지되어야 하는 **자세히** 단추(“...”로 표시됨)가 오른쪽에 있습니다. 다음은 원하는 조작 및 시각 효과를 얻기 위한 몇 가지 전략입니다.
+[CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)는 앱의 하나 이상 가장자리 근처에 자주 배치되는 창의 또 다른 예이므로 TV에서는 배경이 화면 가장자리까지 확장되어야 합니다. 또한 일반적으로 TV 안전 영역에 유지되어야 하는 **자세히** 단추(“...”로 표시됨)가 오른쪽에 있습니다. 다음은 원하는 조작 및 시각 효과를 얻기 위한 몇 가지 전략입니다.
 
 **옵션 1**: `CommandBar` 배경색을 투명 또는 페이지 배경과 동일한 색으로 변경합니다.
 
@@ -762,7 +760,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 ![스크롤되는 그리드 포커스가 TV 안전 영역에 유지되어야 함](images/designing-for-tv/scrolling-grid-focus.png)
 
-UWP에는 포커스 화면 효과를 [VisibleBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.applicationview.visiblebounds.aspx) 안에 유지하는 기능이 있지만 안쪽 여백을 추가하여 목록/그리드 항목이 안전 영역의 보기로 스크롤될 수 있도록 해야 합니다. 구체적으로, 다음 코드 조각과 같이 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 또는 [GridView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)의 [ItemsPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx)에 양수 여백을 추가합니다.
+UWP에는 포커스 화면 효과를 [VisibleBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.viewmanagement.applicationview.visiblebounds.aspx) 안에 유지하는 기능이 있지만 안쪽 여백을 추가하여 목록/그리드 항목이 안전 영역의 보기로 스크롤될 수 있도록 해야 합니다. 구체적으로, 다음 코드 조각과 같이 [ListView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 또는 [GridView](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)의 [ItemsPresenter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx)에 양수 여백을 추가합니다.
 
 ```xml
 <Style x:Key="TitleSafeListViewStyle" 
@@ -813,7 +811,7 @@ UWP에는 포커스 화면 효과를 [VisibleBounds](https://msdn.microsoft.com/
 ```
 
 > [!NOTE]
-> 이 코드 조각은 `ListView`용으로 특별히 작성되었습니다. `GridView` 스타일의 경우 [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 및 [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) 둘 다의 [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) 특성을 `GridView`로 설정합니다.
+> 이 코드 조각은 `ListView`용으로 특별히 작성되었습니다. `GridView` 스타일의 경우 [ControlTemplate](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) 및 [Style](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.style.aspx) 둘 다의 [TargetType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx) 특성을 `GridView`로 설정합니다.
 
 ## 색
 
@@ -833,7 +831,7 @@ Xbox One에서는 사용자가 PC에서 테마 컬러를 선택할 수 있는 �
 
 또한 Xbox One의 사용자 색 집합은 PC, 휴대폰 및 기타 디바이스와 다릅니다. 이는 부분적으로 Xbox One에서 최상의 10피트 환경을 구현하기 위해 이 문서에 설명된 것과 동일한 방법론 및 전략에 따라 이러한 색이 수동으로 선택되기 때문입니다.
 
-앱에서 **SystemControlForegroundAccentBrush** 등의 브러시 리소스 또는 색 리소스(**SystemAccentColor**)를 사용하거나 [UIColorType.Accent*](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) API를 통해 직접 테마 컬러를 호출하기만 하면 해당 색이 TV에 적합한 테마 컬러로 바뀝니다. 고대비 브러시 색도 PC 및 휴대폰과 동일한 방식으로 시스템에서 가져오지만 TV에 적합한 색이 사용됩니다.
+앱에서 **SystemControlForegroundAccentBrush** 등의 브러시 리소스 또는 색 리소스(**SystemAccentColor**)를 사용하거나 [UIColorType.Accent*](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) API를 통해 직접 테마 컬러를 호출하기만 하면 해당 색이 TV에 적합한 테마 컬러로 바뀝니다. 고대비 브러시 색도 PC 및 휴대폰과 동일한 방식으로 시스템에서 가져오지만 TV에 적합한 색이 사용됩니다.
 
 일반적인 테마 컬러에 대한 자세한 내용은 [테마 컬러](../style/color.md#accent-color)를 참조하세요.
 
@@ -966,7 +964,7 @@ if (IsTenFoot)
 
 ### 피벗 컨트롤
 
-[피벗](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.aspx)을 사용하면 다양한 헤더 또는 탭을 선택하여 앱 내에서 보기를 빠르게 탐색할 수 있습니다. 이 컨트롤은 포커스가 있는 헤더에 밑줄을 표시하여 게임 패드/리모컨을 사용할 때 현재 선택된 헤더를 보다 명확하게 나타냅니다. 
+[피벗](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx)을 사용하면 다양한 헤더 또는 탭을 선택하여 앱 내에서 보기를 빠르게 탐색할 수 있습니다. 이 컨트롤은 포커스가 있는 헤더에 밑줄을 표시하여 게임 패드/리모컨을 사용할 때 현재 선택된 헤더를 보다 명확하게 나타냅니다. 
 
 ![피벗 밑줄](images/designing-for-tv/pivot-underline.png)
 
@@ -988,7 +986,7 @@ if (IsTenFoot)
 
 ### CommandBar 레이블
 
-높이가 최소화되고 일관성이 유지되도록 [CommandBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)에서 아이콘의 오른쪽에 레이블을 배치하는 것이 좋습니다. 이렇게 하려면 [CommandBar.DefaultLabelPosition](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) 속성을 `CommandBarDefaultLabelPosition.Right`로 설정합니다.
+높이가 최소화되고 일관성이 유지되도록 [CommandBar](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)에서 아이콘의 오른쪽에 레이블을 배치하는 것이 좋습니다. 이렇게 하려면 [CommandBar.DefaultLabelPosition](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx) 속성을 `CommandBarDefaultLabelPosition.Right`로 설정합니다.
 
 ![아이콘의 오른쪽에 레이블이 있는 CommandBar](images/designing-for-tv/commandbar.png)
 
@@ -1000,7 +998,7 @@ if (IsTenFoot)
 
 ### Tooltip
 
-[Tooltip](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltip.aspx) 컨트롤은 사용자가 요소를 마우스로 가리키거나 요소를 손가락으로 길게 누 때 UI에 자세한 정보를 제공하는 방법으로 도입되었습니다. 게임 패드 및 리모컨의 경우 요소가 포커스를 받을 때 잠시 후에 `Tooltip`이 나타나고 짧은 시간 동안 화면에 있다가 사라집니다. `Tooltip`을 너무 많이 사용할 경우 이 동작이 방해가 될 수 있습니다. TV용으로 디자인할 때는 `Tooltip`을 사용하지 않도록 합니다.
+[Tooltip](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.tooltip.aspx) 컨트롤은 사용자가 요소를 마우스로 가리키거나 요소를 손가락으로 길게 누 때 UI에 자세한 정보를 제공하는 방법으로 도입되었습니다. 게임 패드 및 리모컨의 경우 요소가 포커스를 받을 때 잠시 후에 `Tooltip`이 나타나고 짧은 시간 동안 화면에 있다가 사라집니다. `Tooltip`을 너무 많이 사용할 경우 이 동작이 방해가 될 수 있습니다. TV용으로 디자인할 때는 `Tooltip`을 사용하지 않도록 합니다.
 
 ### 단추 스타일
 
@@ -1008,13 +1006,11 @@ if (IsTenFoot)
 
 ### 중첩된 UI 요소
 
-UI 요소가 다른 UI 요소 안에 중첩된 경우 기본 동작은 사용자가 중첩된 UI 요소에 액세스할 수 없는 것입니다.
+중첩된 UI는 중첩된 항목과 컨테이너 항목이 각각 독립적인 포커스를 가질 수도 있는 컨테이너 UI 요소 내에 중첩된 실행 가능한 항목을 묶어 표시합니다.
 
-주요 시나리오 중 하나는 사용자가 중첩된 UI 요소를 마우스로 가리킬 때 표시되는 UI가 있지만 그렇지 않은 경우 해당 UI가 표시되지 않는 경우입니다.
+중첩된 UI는 일부 입력 유형과 잘 작동하지만 XY 탐색을 사용하는 게임 패드 및 원격에 대해서는 작동하지 않는 경우도 있습니다. UI가 10피트 환경에 최적화되고 조작 가능한 모든 요소에 사용자가 쉽게 액세스할 수 있도록 이 항목의 지침을 수행해야 합니다. 일반적인 솔루션은 중첩된 UI 요소를 `ContextFlyout`에 배치하는 것입니다([CommandBar 및 ContextFlyout](#commandbar-and-contextflyout) 참조).
 
-![마우스로 가리킬 때 표시되는 UI 요소](images/designing-for-tv/2d-navigation-best-practices-ui-elements-display-on-mouse-hover.png)
-
-게임 패드/리모컨 입력에 대해 이 시나리오를 처리하는 권장 방법은 이러한 UI 요소를 `ContextFlyout`에 배치하는 것입니다([CommandBar 및 ContextFlyout](#commandbar-and-contextflyout) 참조).
+중첩된 UI에 대한 자세한 내용은 [목록 항목의 중첩된 UI](../controls-and-patterns/nested-ui.md)를 참조하세요.
 
 ### MediaTransportControls
 
@@ -1109,6 +1105,6 @@ bool IsTenFoot = (Windows.System.Profile.AnaylticsInfo.VersionInfo.DeviceFamily 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

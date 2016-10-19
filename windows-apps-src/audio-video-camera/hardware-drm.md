@@ -4,8 +4,8 @@ ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼)앱에 PlayReady 하드웨어 기반 DRM(디지털 권한 관리)을 추가하는 방법의 개요를 제공합니다."
 title: "하드웨어 DRM"
 translationtype: Human Translation
-ms.sourcegitcommit: 22ce05ab6f24c3ee41798732c35314b3dad87ea8
-ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
+ms.sourcegitcommit: 56d79a93704021fc18d3e72d00738d0ce7acba91
+ms.openlocfilehash: 643b67c3975a8aea6791c834a9ca3178b9762257
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
 
 ## Windows TEE 구현
 
-이 항목에서는 Windows 10에서 신뢰할 수 있는 실행 환경을 구현하는 방법을 간략하게 설명합니다.
+이 항목에서는 Windows 10에서 TEE(신뢰할 수 있는 실행 환경)를 구현하는 방법을 간략하게 설명합니다.
 
 Windows TEE 구현의 세부 정보는 이 문서의 범위를 벗어납니다. 그러나 표준 포팅 키트 TEE 포트와 Windows 포트 사이의 차이점을 간략하게 설명하면 도움이 될 수 있습니다. Windows에서는 OEM 프록시 계층을 구현하고 Windows Media Foundation 하위 시스템의 사용자 모드 드라이버로 직렬화된 PRITEE 함수 호출을 전송합니다. 결국 이 호출은 Windows TEE(신뢰할 수 있는 실행 환경) 드라이버 또는 OEM의 그래픽 드라이버로 라우트됩니다. 이러한 방법에 대한 세부 정보는 이 문서의 범위를 벗어납니다. 다음 다이어그램에서는 Windows 포트의 구성 요소 조작을 보여줍니다. Windows PlayReady TEE 구현을 개발하려는 경우 <WMLA@Microsoft.com>에 연락할 수 있습니다.
 
@@ -33,8 +33,8 @@ Windows TEE 구현의 세부 정보는 이 문서의 범위를 벗어납니다. 
 이 항목에서는 하드웨어 DRM을 사용하도록 설계된 앱을 개발할 때 고려해야 하는 항목의 간략한 목록을 제공합니다. [PlayReady DRM](playready-client-sdk.md#output-protection)에서 설명했듯이 Windows 10용 PlayReady HWDRM을 사용하는 경우 모든 출력 보호가 Windows TEE 구현 내에서 적용되며 이에 따라 출력 보호 동작에 몇 가지 영향을 주게 됩니다.
 
 -   **압축되지 않은 디지털 비디오 270에 대한 OPL(출력 보호 수준) 지원:** Windows 10용 PlayReady HWDRM은 다운 해상도를 지원하지 않으며 HDCP가 사용되도록 강제합니다. HWDRM의 고해상도 콘텐츠에는 270보다 큰 OPL이 있는 것이 좋습니다(필수는 아님). 또한 라이선스에서 HDCP 유형 제한을 설정하는 것이 좋습니다(Windows 10의 HDCP 버전 2.2).
--   소프트웨어 DRM과 달리 출력 보호는 최소 기능 모니터를 기반으로 모든 모니터에 적용됩니다. 예를 들어, 한 모니터에서는 HDCP를 지원하고 다른 모니터에서는 지원하지 않는 두 개의 모니터가 연결된 경우, 라이선스에 HDCP가 필요하면 HDCP를 지원하는 모니터에서만 콘텐츠가 렌더링되는 경우에도 재생에 실패합니다. SWDRM(소프트웨어 DRM)에서 콘텐츠는 HDCP를 지원하는 모니터에서 렌더링되는 경우에만 재생됩니다.
--   콘텐츠 키와 라이선스가 다음 조건을 만족하지 않으면 클라이언트에서 HWDRM을 사용하지 않거나 안전하지 않을 수 있습니다.
+-   **SWDRM(소프트웨어 DRM)과 달리 출력 보호는 최소 기능 모니터를 기반으로 모든 모니터에 적용됩니다.** 예를 들어, 한 모니터에서는 HDCP를 지원하고 다른 모니터에서는 지원하지 않는 두 개의 모니터가 연결된 경우, 라이선스에 HDCP가 필요하면 HDCP를 지원하는 모니터에서만 콘텐츠가 렌더링되는 경우에도 재생에 실패합니다. 소프트웨어 DRM에서 콘텐츠는 HDCP를 지원하는 모니터에서 렌더링되는 경우에만 재생됩니다.
+-   콘텐츠 키와 라이선스가 **다음 조건을 만족하지 않으면 클라이언트에서 HWDRM을 사용하지 않거나 안전하지 않을 수 있습니다.**
     -   비디오 콘텐츠 키에 사용되는 라이선스의 최소 보안 수준 속성은 3000이어야 합니다.
     -   오디오는 비디오와 다른 콘텐츠 키로 암호화되어야 하고, 오디오에 사용되는 라이선스의 최소 보안 수준 속성은 2000이어야 합니다. 또는 오디오를 암호화하지 않은 상태로 둘 수 있습니다.
     
@@ -86,7 +86,7 @@ mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectio
 
 이 섹션에서는 시스템에서 지원되는 하드웨어 DRM의 유형을 감지하는 방법을 설명합니다.
 
-[**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM(디지털 권한 관리) 기능을 지원하는지 확인할 수 있습니다. 예:
+[**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하여 시스템에서 특정 하드웨어 DRM 기능을 지원하는지 확인할 수 있습니다. 예:
 
 ```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
@@ -96,9 +96,11 @@ boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures en
 
 하드웨어 DRM이 지원되는지 확인하기 위해 클라이언트 인증서의 보안 수준을 얻으려면 [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx) 속성도 사용할 수 있습니다. 반환된 인증서 보안 수준이 3000 이상인 경우 클라이언트가 개별화 또는 프로비전되지 않았거나(두 경우 모두 이 속성은 0을 반환) 하드웨어 DRM이 사용 중이 아닙니다(이 경우 이 속성은 3000 미만인 값을 반환).
 
+## 참고 항목
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

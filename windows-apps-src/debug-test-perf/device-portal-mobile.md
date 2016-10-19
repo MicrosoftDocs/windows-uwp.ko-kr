@@ -5,7 +5,7 @@ title: "모바일용 디바이스 포털"
 description: "Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
-ms.openlocfilehash: eeeb8f98d97468544cc30e3d9884cce15cb913a9
+ms.openlocfilehash: 802030f12f2ca3e29eec053d89ab806298974dc7
 
 ---
 # 모바일용 디바이스 포털
@@ -77,6 +77,6 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

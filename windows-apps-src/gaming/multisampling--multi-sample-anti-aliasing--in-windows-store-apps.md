@@ -5,7 +5,7 @@ description: "Direct3D를 사용하는 UWP(유니버설 Windows 플랫폼) 앱�
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
+ms.openlocfilehash: cf82c34e23a1c66bfc2d59f9ea3b4ebce99ab52e
 
 ---
 
@@ -210,6 +210,6 @@ Direct3D 접근 권한 값 수준은 특정 최소 샘플 수 기능에 대한 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "이제 샘플 게임에서 해당 구조 및 상태를 사용하�
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
 
 ---
 
@@ -6326,6 +6326,6 @@ void Material::RenderSetup(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

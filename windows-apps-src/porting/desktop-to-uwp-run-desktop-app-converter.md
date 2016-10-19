@@ -1,27 +1,47 @@
 ---
 author: awkoren
-Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
+Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 수동으로 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "데스크톱 앱 변환기 미리 보기(Project Centennial)"
+title: "데스크톱 앱 변환기"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
+ms.sourcegitcommit: ed4da94f2732c279c3071135168da9e4b18953cb
+ms.openlocfilehash: c0ed8386cb823ea83e5b1f80cd584f370a85f278
 
 ---
 
-# 데스크톱 앱 변환기 미리 보기(Project Centennial)
+# 데스크톱 앱 변환기
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+[데스크톱 앱 변환기 다운로드](https://aka.ms/converter)
 
-[데스크톱 앱 변환기를 다운로드합니다.](http://go.microsoft.com/fwlink/?LinkId=785437)
+DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있는 도구입니다. 무인(자동) 모드에서 변환기를 통해 데스크톱 설치 관리자를 실행하고 개발 컴퓨터에서 Add-AppxPackage PowerShell cmdlet을 사용하여 설치할 수 있는 AppX 패키지를 가져올 수 있습니다.
 
-데스크톱 앱 변환기는 .NET 4.6.1 또는 Win32용으로 작성된 기존 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)으로 가져올 수 있는 시험판 도구입니다. 무인(자동) 모드에서 변환기를 통해 데스크톱 설치 관리자를 실행하고 개발 컴퓨터에서 Add-AppxPackage PowerShell cmdlet을 사용하여 설치할 수 있는 AppX 패키지를 가져올 수 있습니다.
+이제 [Windows 스토어](https://aka.ms/converter)에서 Desktop App Converter를 사용할 수 있습니다.
 
 변환기는 변환기 다운로드의 일부로 제공된 새로운 기본 이미지를 사용하여 격리된 Windows 환경에서 데스크톱 설치 관리자를 실행합니다. 또한 데스크톱 설치 관리자가 수행한 모든 레지스트리 및 파일 시스템 I/O를 캡처하고 출력의 일부로 패키징합니다. 변환기는 패키지 ID와 방대한 WinRT API를 호출하는 기능을 포함하여 AppX를 출력합니다.
 
 ## 새로운 기능
 
 이 섹션에서는 데스크톱 앱 변환기의 버전 간 변경 내용을 대략적으로 설명합니다. 
+
+### 2016/9/14(v1.0)
+
+* Desktop App Converter는 이제 [Windows 스토어](https://aka.ms/converter)에서 다운로드할 수 있습니다. 
+* [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53833)에서 DAC에 사용할 최신 Windows 10 기본 이미지(.wim)를 가져옵니다.
+* 이제 스토어 앱에서 새 진입점 *DesktopAppConverter.exe <arguments>*를 사용하여 관리자 권한 명령 프롬프트 또는 PowerShell 창의 어디에서든 변환기를 실행할 수 있습니다.  
+
+### 2016/9/2(v0.1.25)
+
+* 최신 dotnet-computervirtualization NuGet 패키지가 통합되었습니다.
+* 새로 도입된 common.dll에 대한 종속성이 추가되었습니다.
+* 여러 버그가 수정되었습니다.
+
+### 2016/8/4(v0.1.24)
+
+* 테스트 목적으로 DAC에서 생성한 변환된 앱을 자동 서명하는 지원이 추가되었습니다. 한 번 시도해 보려면 ```–Sign``` 플래그를 확인하세요. 
+* 패키지에 포함된 AppX 내에서 가상 레지스트리 하이브의 COM 등록이 지원되지 않을 경우 경고가 추가되었습니다.  
+* VC++ 라이브러리에 대한 앱 종속성을 자동 검색한 다음 AppX 매니페스트 종속성으로 변환하는 지원이 추가되었습니다. VC++ 런타임을 사용하여 앱을 테스트용으로 로드하여 테스트하려면 [Using Visual C++ Runtime in a Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 블로그 게시물에 설명된 대로 VCLib 프레임워크 패키지를 다운로드해야 합니다. 컴퓨터의 ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` 폴더 아래에서 패키지를 찾아 사용하는 버전(예: 11.0, 12.0, 14.0)으로 이동하고 적절한 아키텍처 패키지(x64, x86)를 두 번 클릭하여 설치합니다.
+* Windows 10 1주년 업데이트(10.0.14393.0)에 맞게 매니페스트 스키마가 업데이트되었습니다. 
+* 여러 버그가 수정되고 출력 레이아웃이 향상되었습니다. 
 
 ### 2016/7/7(v0.1.22)
 
@@ -52,7 +72,7 @@ ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 - 파일 형식 연결 및 프로토콜에 대한 자동 검색 기능이 추가되었습니다.
 - 시작 메뉴 바로 가기를 감지하는 논리가 개선되었습니다.
 - 앱 설치 MUI 파일을 유지하는 파일 시스템 필터링 기능이 개선되었습니다.
-- 매니페스트에서 Project Centennial에 대한 최소 지원 데스크톱 버전(10.0.14342.0)이 업데이트되었습니다.
+- 매니페스트에서 최소 지원 데스크톱 버전(10.0.14342.0)이 업데이트되었습니다.
 
 ## 시스템 요구 사항
 
@@ -66,10 +86,12 @@ ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 + 하드웨어 지원 가상화
 + SLAT(Second Level Address Translation)
 
-### 권장 리소스
-+ [Windows 10용 Windows SDK(소프트웨어 개발 키트)](http://go.microsoft.com/fwlink/?LinkId=615097)
+### 필수 리소스
+
++ [Windows 10용 Windows SDK(소프트웨어 개발 키트)](https://go.microsoft.com/fwlink/?linkid=821375)
 
 ## 데스크톱 앱 변환기 설정   
+
 데스크톱 앱 변환기는 Windows Insider Preview 빌드의 일부로 플라이트된 Windows 10 기능에 의존합니다. 이 변환기를 사용하려면 최신 빌드를 사용하고 있는지 확인합니다.
 
 1. 최신 Windows 10 Insider Preview OS - Enterprise 또는 Pro Edition(http://insider.windows.com)이 있는지 확인합니다. 
@@ -120,38 +142,34 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## 변환된 AppX 배포
-PowerShell에서 [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) cmdlet을 사용하여 서명된 앱 패키지(.appx)를 사용자 계정에 배포합니다. .appx 패키지에 서명하려면 “.Appx 패키지 서명" 섹션을 참조하세요. 또한 개발 프로세스 동안 cmdlet의 *Register* 매개 변수를 포함하여 패키지되지 않은 파일의 폴더에서 설치할 수 있습니다. 자세한 내용은 [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md)를 참조하세요.
+
+PowerShell에서 [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx) cmdlet을 사용하여 서명된 앱 패키지(.appx)를 사용자 계정에 배포합니다. 
+
+Desktop App Converter(v0.1.24)에서 ```-Sign``` 플래그를 사용하여 변환된 앱에 자동 서명할 수 있습니다. 또는 AppX 패키지에 자체 서명하는 방법은 [변환된 데스크톱 앱에 서명](desktop-to-uwp-signing.md)을 참조하세요.
+
+Add-appxpackage PowerShell cmdlet의 ```-Register``` 매개 변수를 활용하여 개발 프로세스 동안 패키지에 포함되지 않은 파일의 폴더에서 설치할 수도 있습니다. 
+
+변환된 앱 배포 및 디버깅에 대한 자세한 내용은 [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md)를 참조하세요. 
 
 ## .AppX 패키지 서명
 
-Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows 10 SDK에서 제공된 SignTool.exe를 사용합니다.
+Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지에 서명하려면 Microsoft Windows 10 SDK에서 제공하는 변환기 명령줄 또는 SignTool.exe의 일부인 ```-Sign``` 플래그를 사용합니다.
 
-### 예제
-```CMD
-C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
-C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
-C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
-```
-**참고:** MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면 **없음**을 선택합니다.
+.appx 패키지에 서명하는 방법은 [변환된 데스크톱 앱에 서명](desktop-to-uwp-signing.md)을 참조하세요. 
 
-인증서와 서명에 대한 자세한 내용은 다음을 참조하세요.
+## 주의 사항
 
-+ [개발 중 사용할 임시 인증서를 만드는 방법](https://msdn.microsoft.com/library/ms733813.aspx)
-+ [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-+ [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
-
-### 주의 사항
 1. 호스트 컴퓨터의 Windows 10 빌드는 데스크톱 앱 변환기 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
 2. 변환기는 모든 디렉터리 콘텐츠를 격리된 Windows 환경으로 복사하기 때문에 데스크톱 설치 관리자는 독립된 디렉터리에 있습니다.  
 3. 현재 데스크톱 앱 변환기는 64비트 운영 체제에서만 변환 프로세스의 실행을 지원합니다. 변환된 .appx 패키지를 64비트(x64) OS에만 배포할 수 있습니다.  
 4. 데스크톱 앱 변환기를 무인 모드에서 실행하려면 데스크톱 설치 관리자가 필요합니다. *-InstallerArguments* 매개 변수를 사용하여 설치 관리자에 대한 자동 플래그를 변환기에 제공해야 합니다.
-5. 공용 SxS Fusion 어셈블리 게시는 작동하지 않습니다. 설치하는 동안 응용 프로그램이 다른 프로세스에서 액세스할 수 있는 공개 side-by-side Fusion 어셈블리를 게시할 수 있습니다. 프로세스 활성화 컨텍스트 생성 동안 이러한 어셈블리는 CSRSS.exe라는 시스템 프로세스에 의해 검색됩니다. Centennial 프로세스에 대해 이 작업이 수행되면 이러한 어셈블리의 활성화 컨텍스트 생성 및 모듈 로드가 실패합니다. ComCtl과 같은 받은 편지함 어셈블리는 OS와 함께 제공되므로 Centennial 프로세스에서 해당 종속성을 유지하는 것이 안전합니다. SxS Fusion 어셈블리는 다음 위치에 등록됩니다.
+5. 공용 SxS Fusion 어셈블리 게시는 작동하지 않습니다. 설치하는 동안 응용 프로그램이 다른 프로세스에서 액세스할 수 있는 공개 side-by-side Fusion 어셈블리를 게시할 수 있습니다. 프로세스 활성화 컨텍스트 생성 동안 이러한 어셈블리는 CSRSS.exe라는 시스템 프로세스에 의해 검색됩니다. 변환 프로세스에 대해 이 작업이 수행되면 이러한 어셈블리의 활성화 컨텍스트 생성 및 모듈 로드가 실패합니다. ComCtl과 같은 받은 편지함 어셈블리는 OS와 함께 제공되므로 해당 종속성을 유지하는 것이 안전합니다. SxS Fusion 어셈블리는 다음 위치에 등록됩니다.
   + 레지스트리: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
   + 파일 시스템: %windir%\\SideBySide
 
 ## 알려진 문제
 
-+ 이전에 데스크톱 앱 변환기 Preview를 설치한 개발자 컴퓨터에서 Windows Insider 플라이트를 수신하는 경우 새로운 기본 이미지를 설정할 때 `New-ContainerNetwork: The object already exists` 오류가 발생할 수 있습니다. 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음 컴퓨터를 다시 부팅합니다. 
++ 이전에 Desktop App Converter를 설치한 개발자 컴퓨터에서 Windows 참가자 플라이트를 수신하는 경우 새로운 기본 이미지를 설정할 때 `New-ContainerNetwork: The object already exists` 오류가 발생할 수 있습니다. 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음 컴퓨터를 다시 부팅합니다. 
 + 주 실행 파일 또는 종속성이 "Program Files" 또는 "Windows\System32" 아래에 배치된 경우 "AnyCPU" 빌드 옵션을 사용하여 컴파일된 .NET 앱이 설치되지 않습니다. 이 문제를 해결하려면 아키텍처 관련 데스크톱 설치 관리자(32비트 또는 64비트)를 사용하여 AppX 패키지를 성공적으로 생성하세요.
 
 ## 데스크톱 앱 변환기의 원격 분석  
@@ -197,7 +215,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### 선택적 Appx 매니페스트 매개 변수  
 |매개 변수|설명|
 |---------|-----------|
-|```-AppExecutable <String>``` [옵션] | 설치할 수 있는(반드시 설치할 필요는 없음) 응용 프로그램 주 실행 파일의 전체 경로. 예: "C:\Program Files (x86)\MyApp\MyApp.exe"|
+|```-AppExecutable <String> [optional]``` [옵션] | 응용 프로그램의 주 실행 파일(예: "MyApp.exe")의 이름입니다. |
 |```-AppFileTypes <String>``` [옵션] | 응용 프로그램과 연결될 쉼표로 구분된 파일 형식 목록(예: 큰따옴표를 제외한 ".txt, .doc")|
 |```-AppId <String>``` [옵션] | 응용 프로그램 ID를 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다.|
 |```-AppDisplayName <String>``` [옵션] | 응용 프로그램 표시 이름을 appx 매니페스트로 설정하기 위한 값을 지정합니다. 값을 지정하지 않으면 *PackageName*에 대해 제공한 값으로 설정됩니다. |
@@ -211,6 +229,7 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```-ExpandedBaseImage <String>``` [옵션] | 이미 확장된 기본 이미지에 대한 전체 경로.|
 |```-MakeAppx [<SwitchParameter>]``` [옵션] | 스위치(있는 경우)는 출력에 대해 MakeAppx를 호출하도록 이 스크립트에 지시합니다. |
 |```-LogFile <String>``` [옵션] | 로그 파일을 지정합니다. 생략하면 로그 파일의 임시 위치가 생성됩니다. |
+| ```Sign [<SwitchParameter>] [optional]``` | 이 스크립트를 통해 출력 appx에 서명합니다. 이 스위치는 ```-MakeAppx``` 스위치와 함께 있어야 합니다. 
 |```<Common parameters>``` | 이 cmdlet은 *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable*, *OutVariable* 등의 일반 매개 변수를 지원합니다. 자세한 내용은 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)를 참조하세요. |
 
 ### 정리 매개 변수
@@ -219,25 +238,44 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup [<Option>]``` | DesktopAppConverter 아티팩트에 대한 정리를 실행합니다. 정리 모드에는 3가지 유효한 옵션이 있습니다. |
 |```Cleanup All``` | 확장된 기본 이미지를 모두 삭제하고, 임시 변환기 파일을 제거하고, 컨테이너 네트워크를 제거하고, 선택적 Windows 기능인 컨테이너를 사용하지 않도록 설정합니다. |
 |```Cleanup WorkDirectory``` | 모든 임시 변환기 파일을 제거합니다. |
-|```Cleanup ExpandedImages``` | 호스트 컴퓨터에 설치된 확장된 기본 이미지를 모두 삭제합니다. |
+|```Cleanup ExpandedImage``` | 호스트 컴퓨터에 설치된 확장된 기본 이미지를 모두 삭제합니다. |
 
 ### 패키지 아키텍처
-데스크톱 앱 변환기 Preview는 이제 x86 및 amd64 컴퓨터에서 설치하고 실행할 수 있는 x86 및 x64 앱 패키지를 만드는 기능을 지원합니다. 하지만 성공적인 변환을 수행하려면 데스크톱 앱 변환기가 AMD64 컴퓨터에서 실행되어야 합니다.
+Desktop App Converter는 이제 x86 및 amd64 컴퓨터에서 설치하고 실행할 수 있는 x86 및 x64 앱 패키지를 만드는 기능을 지원합니다. 하지만 성공적인 변환을 수행하려면 데스크톱 앱 변환기가 AMD64 컴퓨터에서 실행되어야 합니다.
 
 |매개 변수|설명|
 |---------|-----------|
-|```-PackageArch <String>``` | 지정된 아키텍처를 사용하여 패키지를 생성합니다. 유효한 옵션은 'x86' 또는 'x64'입니다(예: -PackageArch x86). 이 매개 변수는 선택 사항입니다. 지정하지 않으면 DesktopAppConverter는 패키지 아키텍처를 자동으로 검색하려고 합니다. 자동 검색에 실패하면 기본적으로 x64 패키지로 설정합니다. |
+|```-PackageArch <String>``` | 지정된 아키텍처를 사용하여 패키지를 생성합니다. 유효한 옵션은 'x86' 또는 'x64'입니다(예: -PackageArch x86). 이 매개 변수는 선택 사항입니다. 지정하지 않으면 DesktopAppConverter는 패키지 아키텍처를 자동으로 검색하려고 합니다. 자동 검색에 실패하면 기본적으로 x64 패키지로 설정합니다. 
+
+### PEHeaderCertFixTool 실행
+
+변환 프로세스 동안 DesktopAppConverter는 모든 손상된 PE 헤더를 수정하기 위해 자동으로 PEHeaderCertFixTool을 실행합니다. 그러나 UWP appx, 느슨한 파일 또는 특정 이진에서 PEHeaderCertFixTool을 실행할 수도 있습니다. 
+
+PEHeaderCertFixTool은 DesktopAppConverter.zip의 일부로 제공됩니다. 사용 예제: 
+
+```CMD
+PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
+ /c   -- check for corrupted certificate but do not fix (optional)
+ /v   -- verbose (optional)
+example1: PEHeaderCertFixTool app.exe
+example2: PEHeaderCertFixTool c:\package.appx /c
+example3: PEHeaderCertFixTool c:\myapp /c /v
+```
+
+## 언어 지원
+
+Desktop App Converter는 유니코드를 지원하지 않으므로 중국어 문자나 ASCII가 아닌 문자는 도구에 사용할 수 없습니다.
 
 ## 참고 항목
 + [데스크톱 앱 변환기 다운로드](http://go.microsoft.com/fwlink/?LinkId=785437)
 + [데스크톱 앱을 유니버설 Windows 플랫폼으로 가져오기](https://developer.microsoft.com/windows/bridges/desktop)
 + [데스크톱 앱 변환기를 사용하여 데스크톱 앱을 UWP로 가져오기](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
-+ [데스크톱 브리지용 UserVoice(Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
++ [데스크톱 브리지용 UserVoice](http://aka.ms/UserVoiceDesktopToUwp)
 + [GitHub의 UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -4,7 +4,7 @@ title: "Windows 10 IoT Core에서 사용자 모드 액세스 사용"
 description: "이 자습서에서는 Windows 10 IoT Core에서 GPIO, I2C, SPI 및 UART에 대한 사용자 모드 액세스를 사용하도록 설정하는 방법에 대해 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: eddb2ca0aaa4bdbc19b2c3015ec8d599e0ef5584
+ms.openlocfilehash: 363e73101157e1c9cc233d87b3964736c260f665
 
 ---
 # Windows 10 IoT Core에서 사용자 모드 액세스 사용
@@ -1086,6 +1086,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "이제 게임 샘플의 주 개체 및 해당 개체가 구현하�
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
+ms.openlocfilehash: 8af939fee50540e5213e624703400d99cbb6785f
 
 ---
 
@@ -3625,6 +3625,6 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

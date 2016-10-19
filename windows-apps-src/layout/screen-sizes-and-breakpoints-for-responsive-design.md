@@ -7,13 +7,13 @@ label: Screen sizes and break points
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
+ms.openlocfilehash: 5977b6253e2ee10fa0153d79053f89b705c2e1a3
 
 ---
 
 #  반응형 디자인에 대한 화면 크기 및 중단점
 
-Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366 epx 등의 몇 가지 주요 너비("중단점"이라고도 함)에 대해 디자인하는 것이 좋습니다.
+Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366 epx 등의 몇 가지 주요 너비(중단점이라고도 함)에 대해 디자인하는 것이 좋습니다.
 
 **팁** 특정 중단점에 대해 디자인할 때 앱에서 사용할 수 있는 화면 공간(앱의 창) 크기를 고려해서 디자인합니다. 앱이 전체 화면에서 실행되는 경우에는 앱 창이 화면 크기와 같지만 다른 경우에는 더 작습니다.
  
@@ -99,6 +99,6 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

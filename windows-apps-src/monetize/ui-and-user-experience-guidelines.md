@@ -4,8 +4,8 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "앱에 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다."
 title: "앱에 광고에 대한 UI 및 사용자 환경 지침"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 # 앱에 광고에 대한 UI 및 사용자 환경 지침
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 ## Windows 앱용 일반 UI 리소스
 
@@ -143,6 +143,6 @@ ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

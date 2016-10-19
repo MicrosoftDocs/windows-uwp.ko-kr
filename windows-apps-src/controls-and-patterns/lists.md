@@ -6,11 +6,13 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ---
 # 목록
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다. 이 문서에서 다루는 네 가지 목록 패턴은 다음과 같습니다.
 
@@ -21,11 +23,18 @@ ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 각 목록 패턴에 대한 디자인 지침, 기능 및 예제가 제공됩니다. 문서의 끝에는 관련 항목 및 API에 대한 링크가 있습니다.
 
-## 중요 API
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>ListView 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>GridView 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>ComboBox 클래스</strong></a></li>
+</ul>
 
--   [**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)
+</div>
+</div>
+
+
 
 
 ## 목록 보기
@@ -42,20 +51,50 @@ ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 ### 예제
 
-[마스터/세부 정보 패턴](master-details.md)을 사용할 경우 목록 보기를 사용하여 마스터 창을 구성할 수 있습니다. 마스터 창에는 선택 가능한 항목 목록이 표시됩니다. 사용자가 마스터 창에서 항목을 선택하면 해당 항목에 대한 추가 정보가 세부 정보 창에 표시됩니다. 세부 정보 창에는 주로 그리드 보기가 포함됩니다.
+다음은 휴대폰의 그룹화된 데이터를 보여 주는 간단한 목록 보기입니다.
 
-![마스터/세부 정보 패턴의 예](images/Stock_Tracker/uap_finance_desktop700.png)
-
-여러 목록을 함께 연결하여 복잡한 마스터/세부 정보 계층을 만들 수 있습니다. 자세한 내용은 [마스터/세부 정보 패턴](master-details.md)을 참조하세요.
-
-목록 레이아웃의 예제는 그룹 헤더가 있으며 단일 열로 표시됩니다.
-
-![네 가지 기본 단위 유형이 있는 목록 보기 예제](images/controls_listview_4types.png)
+![그룹화된 데이터를 사용한 목록 보기](images/simple-list-view-phone.png)
 
 ### 권장 사항
 
 -   목록 내의 항목은 동작이 동일해야 합니다.
 -   목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
+
+### 목록 보기 문서
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[목록 보기 및 그리드 보기](listview-and-gridview.md)</p></td>
+<td align="left"><p>앱에서 필수인 목록 보기 또는 그리드 보기 사용에 대해 알아봅니다.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[목록 보기 항목 템플릿](listview-item-templates.md)</p></td>
+<td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[반전된 목록](inverted-lists.md)</p></td>
+<td align="left"><p>반전된 목록에는 채팅 앱에서처럼 아래쪽에 추가된 새 항목이 있습니다. 앱에서 반전된 목록을 사용하려면 이 지침을 따릅니다.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[당겨서 새로 고침](pull-to-refresh.md)</p></td>
+<td align="left"><p>당겨서 새로 고침 패턴을 사용하면 데이터 목록을 터치하고 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 목록 보기에서 당겨서 새로 고침을 구현하려면 이 지침을 사용합니다.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[중첩된 UI](nested-ui.md)</p></td>
+<td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 있는 목록 보기 항목이 있을 수 있으며 사용자가 목록 항목을 선택하거나 목록 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 그리드 보기
 
@@ -83,6 +122,34 @@ ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 -   목록 내의 항목은 동작이 동일해야 합니다.
 -   목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
+
+### 그리드 보기 문서
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">항목</th>
+<th align="left">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[목록 보기 및 그리드 보기](listview-and-gridview.md)</p></td>
+<td align="left"><p>앱에서 필수인 목록 보기 또는 그리드 보기 사용에 대해 알아봅니다.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[목록 보기 항목 템플릿](listview-item-templates.md)</p></td>
+<td align="left"><p>목록이나 그리드에 표시하는 항목은 앱의 전체 모양에서 중요한 역할을 담당할 수 있습니다. 컨트롤 템플릿과 데이터 템플릿을 수정하여 항목 모양을 정의하고 앱을 멋지게 만들 수 있습니다.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[중첩된 UI](nested-ui.md)</p></td>
+<td align="left"><p>중첩된 UI는 실행 가능한 컨트롤을 사용자가 실행할 수도 있는 컨테이너 내에 묶어 표시하는 UI(사용자 인터페이스)입니다. 예를 들어 단추가 있는 목록 보기 항목이 있을 수 있으며 사용자가 목록 항목을 선택하거나 목록 항목 내에 중첩된 단추를 누를 수 있습니다. 사용자에게 최상의 중첩된 UI 환경을 제공하려면 다음 모범 사례를 따르세요.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## 드롭다운 목록
 
@@ -187,6 +254,7 @@ ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 - [마스터/세부](master-details.md)
 - [탐색 창](nav-pane.md)
 - [시맨틱 줌](semantic-zoom.md)
+- [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **개발자용**
 - [**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)
@@ -196,6 +264,6 @@ ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

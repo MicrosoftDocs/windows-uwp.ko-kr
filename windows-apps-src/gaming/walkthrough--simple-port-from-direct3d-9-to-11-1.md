@@ -5,11 +5,11 @@ description: "이 포팅 연습에서는 간단한 렌더링 프레임워크를 
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
+ms.openlocfilehash: 53e0b3f5a69f133e74430b1a2e32a13180569f06
 
 ---
 
-# 연습&#58; 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
+# 연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -72,13 +72,13 @@ ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
 ## 관련 항목
 
 
-**Direct3D** 
-           [Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+**Direct3D**
+[Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
 [UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
 
-**Windows 스토어** 
-           [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+**Windows 스토어**
+[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
 [**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
 
@@ -92,6 +92,6 @@ ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

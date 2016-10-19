@@ -4,8 +4,8 @@ ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: "C#을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
 title: "C의 중간 광고 샘플 코드#"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5969bfacd34bcfab5f1bebd2cfbade4fd16c5a39
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
 # C의 중간 광고 샘플 코드# #  
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 이 항목에서는 C#을 사용하여 중간 광고를 실행하는 방법을 보여 줍니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. C#을 사용하여 XAML 앱에 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -106,6 +106,6 @@ namespace BasicCSharpInterstitialUWP
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

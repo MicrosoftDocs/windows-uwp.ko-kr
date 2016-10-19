@@ -5,7 +5,7 @@ description: "DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 929ad82ce057754ee04f1f27537e03520e95157a
+ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
 
 ---
 
@@ -68,6 +68,6 @@ Microsoft 템플릿 및 코드 샘플은 아직 익숙하지 않을 수 있는 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

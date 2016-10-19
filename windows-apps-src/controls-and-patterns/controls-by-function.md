@@ -6,11 +6,13 @@ ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 5d6548a4b72144e3a9bf5d759809720c79472afb
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 3310a661fe709c4b818630f6b6a49b90b99c837d
 
 ---
 # 기능별 컨트롤
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨트롤 라이브러리를 제공합니다. 이러한 컨트롤에는 시각적으로 표시되는 컨트롤도 있고, 이미지와 미디어 같이 다른 컨트롤이나 콘텐츠의 컨테이너 역할을 하는 컨트롤도 있습니다. 
 
@@ -849,6 +851,6 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

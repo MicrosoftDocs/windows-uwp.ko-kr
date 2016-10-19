@@ -1,18 +1,19 @@
 ---
 author: QuinnRadich
-title: "Windows 10의 새로운 기능"
-description: "Windows 10 Anniversary SDK Preview 빌드 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+title: "Windows 10 버전 1607 Preview의 새로운 기능"
+description: "Windows 10 버전 1607 Preview 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+keywords: "새 소식, 새 기능, 업데이트, 새로운 내용, Windows 10, 1607 미리 보기"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9623e10b15dbc5f9480d1cd9bd740fa8e914b3c6
+ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
+ms.openlocfilehash: 33c1888620d4e3c2d95cbf701e9128ce006961da
 
 ---
 
 # Windows의 새로운 기능
 
-Windows 10 Anniversary SDK Preview 빌드 14295 및 Windows 개발자 도구에 대한 업데이트는 유니버설 Windows 플랫폼에서 제공하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10 버전 1607 Preview 및 Windows 개발자 도구 업데이트는 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
 
-## Windows 10 Anniversary SDK Preview 빌드 12295
+## Windows 10 버전 1607 미리 보기
 
 기능 | 설명
  :---- | :----
@@ -29,6 +30,6 @@ Windows IoT | Windows 10 IoT Core는 친숙한 Windows 기능을 사용하여 Io
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

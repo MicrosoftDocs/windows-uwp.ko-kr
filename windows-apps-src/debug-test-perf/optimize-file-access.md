@@ -5,7 +5,7 @@ title: "파일 액세스 최적화"
 description: "파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 354a11fefd7164fd6ba5b21ec871ecbe7916ad25
+ms.openlocfilehash: 53fd6f4c28eaa7d3976658a84dd0aefb4255ff91
 
 ---
 # 파일 액세스 최적화
@@ -238,6 +238,6 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

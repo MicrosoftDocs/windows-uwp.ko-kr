@@ -47,7 +47,7 @@ Windows 10 버전 1607부터 **AdvancedPhotoCapture**를 사용하여 낮은 조
 
 ### 현재 디바이스에서 HDR 사진 캡처가 지원되는지 확인
 
-이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)를 가져온 다음 [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 디바이스 컨트롤러의 [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) 컬렉션을 확인하여 [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)이 포함되어 있는지 검토합니다. 포함되어 있으면 **AdvancedPhotoCapture**를 사용하는 HDR 캡처가 지원됩니다.
+이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)를 가져온 다음 [**AdvancedPhotoControl**](https://msdn.microsoft.com/library/windows/apps/mt147840) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 장치 컨트롤러의 [**SupportedModes**](https://msdn.microsoft.com/library/windows/apps/mt147844) 컬렉션을 확인하여 [**AdvancedPhotoMode.Hdr**](https://msdn.microsoft.com/library/windows/apps/mt147845)이 포함되어 있는지 검토합니다. 포함되어 있으면 **AdvancedPhotoCapture**를 사용하는 HDR 캡처가 지원됩니다.
 
 [!code-cs[HdrSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHdrSupported)]
 

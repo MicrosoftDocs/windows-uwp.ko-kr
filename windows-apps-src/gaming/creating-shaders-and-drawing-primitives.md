@@ -5,7 +5,7 @@ description: "여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴�
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
 
 ---
 
@@ -296,6 +296,6 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

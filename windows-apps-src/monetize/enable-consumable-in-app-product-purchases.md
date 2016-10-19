@@ -1,19 +1,21 @@
 ---
 author: mcleanbyron
 Description: "스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품&amp;\\#8212;구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목&amp;\\#8212;을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다."
-title: "앱에서 바로 소모성 구매 제품 사용"
+title: "앱에서 바로 소모성 제품 구매 사용"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: in-app offer code sample
+keywords: "앱에서 바로 판매 코드 샘플"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 15092f726283f36c8dc5970157d3cd54dea9b837
 
 ---
 
-# 앱에서 바로 소모성 구매 제품 사용
+# 앱에서 바로 소모성 제품 구매 사용
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
+
+>**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 특정 회복 아이템을 구매하여 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
 
@@ -21,7 +23,7 @@ ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
 
 -   이 항목에서는 소모성 앱에서 바로 구매 제품의 구매 및 이행 보고에 대해 설명합니다. 앱에서 바로 구매 제품에 익숙하지 않은 경우 라이선스 정보 및 스토어에 앱에서 바로 구매 제품을 제대로 나열하는 방법을 알아보려면 [앱에서 바로 구매 제품 사용](enable-in-app-product-purchases.md)을 검토하세요.
 -   새 앱에서 바로 구매 제품을 처음 코딩하고 테스트할 때는 [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 개체 대신 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 개체를 사용해야 합니다. 이렇게 하면 라이브 서버를 호출하는 대신 라이선스 서버에 대한 호출을 시뮬레이션하여 라이선스 논리를 확인할 수 있습니다. 이렇게 하려면 %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData에 있는 "WindowsStoreProxy.xml" 파일을 사용자 지정해야 합니다. 처음으로 앱이 실행될 때 Microsoft Visual Studio 시뮬레이터에서 이 파일을 만들거나 런타임에 사용자 지정 파일을 로드할 수도 있습니다. 자세한 내용은 **CurrentAppSimulator**를 참조하세요.
--   이 항목에서는 [스토어 샘플](http://go.microsoft.com/fwlink/p/?LinkID=627610)에 제공된 코드 예제도 참조합니다. 이 샘플은 UWP(유니버설 Windows 플랫폼) 앱에 제공된 다양한 수익 창출 옵션을 실습할 수 있는 좋은 방법입니다.
+-   이 항목에서는 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)에 제공된 코드 예제도 참조합니다. 이 샘플은 UWP(유니버설 Windows 플랫폼) 앱에 제공된 다양한 수익 창출 옵션을 실습할 수 있는 좋은 방법입니다.
 
 ## 1단계: 구매 요청
 
@@ -115,7 +117,7 @@ private async void GetUnfulfilledConsumables()
 ## 관련 항목
 
 * [앱에서 바로 제품 구매 사용](enable-in-app-product-purchases.md)
-* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [스토어 샘플(평가판 및 앱에서 바로 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197)
  
 
@@ -123,10 +125,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

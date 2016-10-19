@@ -1,111 +1,121 @@
-﻿---
+---
 author: jnHs
-Description: The Store listings section of the app submission process is where you provide the text and images that customers will see in your app's Store listing.
-title: Create app Store listings
+Description: "앱 제출 프로세스의 스토어 목록 섹션에서는 앱 스토어 목록에서 고객에게 표시되는 텍스트 및 이미지를 제공합니다."
+title: "앱 스토어 목록 만들기"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+translationtype: Human Translation
+ms.sourcegitcommit: d24294583d1ec0186cd63138979d40a06b0c7351
+ms.openlocfilehash: 9ef2a465cb8f9143775feab163ee1d66d135a6b3
+
 ---
 
-# Create app Store listings
+# 앱 스토어 목록 만들기
 
 
-The **Store listings** section of the [app submission process](app-submissions.md) is where you provide the text and [images](app-screenshots-and-images.md) that customers will see in your app's Store listing.
+[앱 제출 프로세스](app-submissions.md)의 **스토어 목록** 섹션에서는 앱 스토어 목록에서 고객에게 표시되는 텍스트 및 [이미지](app-screenshots-and-images.md)를 제공합니다.
 
-Many of the fields in a **Store listing** are optional, but we suggest providing multiple images and as much info as possible to make your listing stand out. The minimum required for the **Store listings** step to be considered complete is a text description and at least one [screenshot](app-screenshots-and-images.md).
+**스토어 목록** 필드 대부분은 선택 사항이지만, 목록을 한눈에 알아볼 수 있도록 여러 이미지와 최대한 많은 정보를 제공하는 것이 좋습니다. **스토어 목록** 단계가 완료된 것으로 간주되려면 텍스트 설명과 [스크린샷](app-screenshots-and-images.md)이 하나 이상이 필요합니다.
 
-By default, we'll use the same Store listing (per language) for all of your targeted operating systems. If you'd like to use a customized Store listing for a specific operating system, you can [create platform-specific Store listings](create-platform-specific-store-listings.md).
+기본적으로 모든 대상 운영 체제에 동일한 스토어 목록(언어별)을 사용합니다. 특정 운영 체제에 대한 사용자 지정된 스토어 목록을 사용하려는 경우 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md) 수 있습니다.
 
-## Store listing languages
+## 스토어 목록 언어
 
-You must complete the **Store listing** page for at least one language. We recommend providing a Store listing in each language that your packages support, but you have flexibility to remove languages for which you don’t wish to provide a Store listing. You can also create Store listings in additional languages which aren’t supported by your packages.
+하나 이상의 언어에 대한 **스토어 목록** 페이지를 완료해야 합니다. 패키지가 지원하는 각 언어로 스토어 목록을 제공하는 것이 좋지만 스토어 목록을 제공하지 않을 언어는 유연성 있게 제거할 수 있습니다. 패키지에서 지원되지 않는 추가 언어로 스토어 목록을 만들 수도 있습니다.
 
-> **Note**  If your submission includes packages already, we’ll show the [languages](supported-languages.md) supported in your packages on the submission overview page (unless you remove any of them).
+> **참고** 제출에 이미 패키지가 포함된 경우 제출 개요 페이지에서 패키지에 지원되는 [언어](supported-languages.md)를 표시합니다(지원되는 언어를 삭제하지 않은 경우).
 
-To add or remove languages for your Store listings, click **Manage Store listing languages** from the submission overview page. If you‘ve already uploaded packages, you’ll see their languages listed in the **Languages supported by your packages** section. To remove one or more of these languages, click **Remove**. If you later decide to include a language that you previously removed from this section, you can click **Add**.
+스토어 목록에 대한 언어를 추가 또는 제거하려면 제출 개요 페이지에서 **스토어 목록 언어 관리**를 클릭합니다. 패키지를 이미 업로드한 경우 **패키지에서 지원되는 언어** 섹션에 나열된 해당 언어를 확인합니다. 이러한 언어 중 하나 이상을 제거하려면 **제거**를 클릭합니다. 나중에 이 섹션에서 이전에 제거한 언어를 포함하도록 결정하는 경우 **추가**를 클릭하면 됩니다.
 
-In the **Additional Store listing languages** section, you can click **Manage additional languages** to add or remove languages that are *not* included in your packages. Check the boxes for the languages that you’d like to add, then click **Update**. The languages you’ve selected will be displayed in the **Additional Store listing languages** section. To remove one or more of these languages, click **Remove** (or click **Manage additional languages** and uncheck the box for languages you’d like to remove).
+**추가 스토어 목록 언어** 섹션에서 **추가 언어 관리**를 클릭하여 패키지에 포함되지 *않은* 언어를 추가하거나 제거할 수 있습니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 **추가 스토어 목록 언어** 섹션에 표시됩니다. 이러한 언어 중 하나 이상을 제거하려면 **제거**를 클릭하거나 **추가 언어 관리**를 클릭하고 제거할 언어의 확인란을 선택 취소합니다.
 
-When you have finished making your selections, click **Save** to return to the submission overview page.
+선택을 완료하면 **저장**을 클릭하여 제출 개요 페이지로 돌아갑니다.
 
-> **Note** When creating a Store listing in a language that isn't supported by your packages, you'll need to indicate which of your reserved app names should be displayed in that Store listing, since there isn't an associated package in that language from which to pull the name. The name you choose here only applies to the Store listing for this language and does not impact the name displayed when a customer installs the app.
+> **참고** 패키지에서 지원되지 않는 언어로 스토어 목록을 만드는 경우에는 이름을 가져올 언어에 연결된 패키지가 없으므로 예약된 앱 이름 중 어느 것을 해당 스토어 목록에 표시할지 나타내야 합니다. 여기서 선택한 이름만 해당 언어에 대한 스토어 목록에 적용되며 고객이 앱을 설치할 경우 표시되는 이름에는 영향을 주지 않습니다.
 
-To edit a Store listing, click the language name from the Submission overview. The sections of the **Store listing** page are described below.
+스토어 목록을 편집하려면 제출 개요에서 언어 이름을 클릭합니다. **스토어 목록** 페이지의 섹션은 다음과 같습니다.
 
-## Default Store listing fields
+## 기본 스토어 목록 필드
 
-At the top of the **Store listing** page are the fields associated with your default Store listing for the selected language. These fields will be shown to all of your customers, unless you have packages targeting earlier OS versions (Windows 8.x or earlier; Windows Phone 8.x or earlier) and create platform-specific Store listings to include different screenshots or info to display to customers on specified OS versions. For more info, see [Create platform-specific Store listings](create-platform-specific-store-listings.md).
+**스토어 목록** 페이지의 맨 위에 선택 언어에 대한 기본 스토어 목록과 관련된 필드가 있습니다. 이러한 필드는 모든 고객에게 표시되지만, 이전 OS 버전(Windows 8.x 이하, Windows Phone 8.x 이하)을 대상으로 하는 패키지가 있고 지정된 OS 버전에서 고객에게 표시될 다른 스크린샷 또는 정보를 포함하도록 플랫폼별 스토어 목록을 만든 경우는 표시되지 않습니다. 자세한 내용은 [플랫폼별 스토어 목록 만들기](create-platform-specific-store-listings.md)를 참조하세요.
 
-### Description
+### 설명
 
-The description field is where you can tell customers what your app does. This field is required, and will accept up to 10,000 characters of plain text.
+설명 필드에서는 고객에게 앱이 수행하는 작업을 알려 줄 수 있습니다. 이 필드는 필수 필드이며, 일반 텍스트를 최대 10,000자 입력할 수 있습니다.
 
-For some tips on making your description stand out, see [Write a great app description](write-a-great-app-description.md).
+설명이 돋보이게 하는 몇 가지 팁은 [호소력 있는 앱 설명 쓰기](write-a-great-app-description.md)를 참조하세요.
 
-### Release notes
+### 릴리스 정보
 
-If this is the first time you're submitting your app, you'll probably want to leave this field blank. For an update to an existing app, this is where you can let customer know what's changed in the latest release. This field has a 1500 character limit.
+앱을 처음 제출할 경우 이 필드를 공백으로 둘 수 있습니다. 기존 앱의 업데이트를 제출할 경우 이 필드를 통해 고객에게 최신 릴리스에서 변경된 내용을 알릴 수 있습니다. 이 필드는 1,500자로 제한됩니다.
 
-### Screenshots
+### 스크린샷
 
-In most cases, you'll see multiple fields to provide screenshots for different types of devices. You are not required to provide separate screenshots for each device type; only one screenshot is required for your submission (though you can provide up to nine per device type). In most cases we suggest providing screenshots on as many device types as your app supports, so that customers will see images that resemble how the app will look on their device.
+대부분 경우에 다양한 디바이스 유형에 대한 스크린샷을 제공할 수 있는 여러 필드가 표시됩니다. 디바이스 유형별로 다른 스크린샷을 제공할 필요는 없습니다. 제출을 위해 스크린샷 하나는 필수입니다(디바이스 유형별로 최대 9개를 제공할 수 있음). 대부분 경우에 고객이 디바이스에서 앱이 표시되는 대로 이미지를 볼 수 있도록 앱에서 지원하는 디바이스 유형 수만큼 스크린샷을 제공하는 것이 좋습니다.
 
-For more info, see [App screenshots and images](app-screenshots-and-images.md).
+자세한 내용은 [앱 스크린샷 및 이미지](app-screenshots-and-images.md)를 참조하세요.
 
-### App tile icon
+### 앱 타일 아이콘
 
-The app tile icon is used when displaying your app's Store listing to customers on Windows Phone 8.1 and earlier (and in some Store layouts for customers on Windows 10). This must be a .png file measuring 300 x 300 pixels.
+앱 타일 아이콘은 Windows Phone 8.1 이하에서 앱의 스토어 목록을 고객에게 표시할 때 사용됩니다(Windows 10에서 일부 고객용 스토어 레이아웃에서도 사용). 아이콘은 300 x 300픽셀의 .png 파일이어야 합니다.
 
-For more info, see [App tile icon](app-screenshots-and-images.md#app-tile-icon).
+자세한 내용은 [앱 타일 아이콘](app-screenshots-and-images.md#app-tile-icon)을 참조하세요.
 
-### App features
+### 앱 기능
 
-These are short summaries of your app's key features. They are displayed to the customer as a bulleted list in your app's Store listing, along with the Description. Keep these brief, with just a few words (and no more than 200 characters) per feature. You may include up to 20 features.
+앱의 주요 기능에 대한 간단한 요약입니다. 기능은 설명과 함께 앱의 스토어 목록에 글머리 기호 목록으로 고객에게 표시됩니다. 기능당 몇 단어 또는 200자 이하만 사용하여 간단하게 유지합니다. 최대 20개 기능을 포함할 수 있습니다.
 
-**Note**  These will appear bulleted in your Store listing, so don't add your own bullets.
+**참고** 스토어 목록에 글머리 기호가 나타나므로 별도의 글머리 기호를 추가하지 마세요.
 
-### Additional system requirements
+### 추가 시스템 요구 사항
 
-If needed, you can describe the hardware configurations that your app requires to work properly (beyond the info you provided in the **System requirements** section in [App properties](enter-app-properties.md#system-requirements). This is especially important if your app requires hardware that might not be available on every computer.
+필요한 경우 앱이 제대로 작동하는 데 필요한 하드웨어 구성을 [앱 속성](enter-app-properties.md#system-requirements)의 **시스템 요구 사항** 섹션에서 제공한 정보 이상으로 설명할 수 있습니다. 이 정보는 일부 컴퓨터에서 사용할 수 없는 하드웨어가 앱에 필요한 경우에 특히 중요합니다.
 
- You can enter up to 11 items for both **Minimum hardware** and **Recommended hardware**.  They are displayed to the customer as a bulleted list in your app's listing. Keep these brief, with just a few words (and no more than 200 characters) per item. The info you enter here will be shown to customers viewing your app's Store listing on Windows 10, version 1607 or later, along with the requirements you indicated on the product's properties page.
+ **최소 하드웨어** 및 **권장 하드웨어** 모두에 대해 최대 11개 항목까지 입력할 수 있습니다.  기능은 앱 목록에 글머리 기호 목록으로 고객에게 표시됩니다. 항목당 200자 이하의 몇 단어만 사용하여 간단하게 유지합니다. 여기에 입력하는 정보는 Windows 10 버전 1607 이상에서 앱의 스토어 목록을 보는 고객에게 제품의 속성 페이지에 지정한 요구 사항과 함께 표시됩니다.
 
-**Note**  These will appear bulleted in the listing, so don't add your own bullets.
+**참고** 목록에 글머리 기호가 나타나므로 별도의 글머리 기호를 추가하지 마세요.
 
-## Shared fields
+## 공유 필드
 
-The items described below are all shared fields and will apply to all of your Store listings in a given language, regardless of operating system, even if you [create platform-specific Store listings](create-platform-specific-store-listings.md).
+아래 설명된 항목은 모두 공유 필드이고 [플랫폼별 스토어 목록을 만들](create-platform-specific-store-listings.md)더라도 운영 체제와 관계없이 지정된 언어의 모든 스토어 목록에 적용됩니다.
 
-### Keywords
+### 키워드
 
-Keywords are single words or short phrases that are not displayed to customers, but can help your app appear in search results related to the keyword. You can include up to 7 keywords with a maximum of 30 characters each.
+키워드는 고객에게 표시되지 않지만 키워드와 관련된 검색 결과에 앱이 나타나도록 도와주는 한 단어나 간단한 구입니다. 최대 7개 키워드를 각각 30자까지 포함할 수 있습니다.
 
-If you want to add keywords, think about the words that customers might use when searching for apps like yours, especially if they're not part of your app's name. Be sure not to use any keywords that are not actually relevant to your app.
+키워드를 추가하려면, 특히 키워드가 앱 이름에 포함되지 않을 경우, 고객이 개발자의 앱과 유사한 앱을 검색할 때 사용할 수 있는 단어를 고려해 보세요. 실제로 앱과 관련이 없는 키워드는 사용하지 마세요.
 
-### Copyright and trademark info
+### 저작권 및 상표 정보
 
-If you'd like to provide additional copyright and/or trademark info, enter it here. This field has a 200 character limit.
+추가 저작권 및/또는 상표 정보를 제공하려는 경우 여기에 입력합니다. 이 필드는 200자로 제한됩니다.
 
-### Additional license terms
+### 추가 사용 조건
 
-Leave this field blank if you want your app to be licensed to customers under the terms of the **Standard Application License Terms** (which are linked to from the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+[앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에서 연결된 **표준 응용 프로그램 사용 조건**에 따라 고객에게 앱 사용을 허가하려면 이 필드를 비워 둡니다.
 
-If your license terms are different from the **Standard Application License Terms**, enter them here.
+사용 조건이 **표준 응용 프로그램 사용 조건**과 다른 경우 여기에 입력하세요.
 
-If you enter a single URL into this field, it will be displayed to customers as a link that they can click to read your additional license terms. This is useful if your additional license terms are very long, or if you want to include clickable links or formatting in your additional license terms.
+이 필드에 단일 URL을 입력하면 이 URL이 고객이 추가 사용 조건을 읽기 위해 클릭할 수 있는 링크로 고객에게 표시됩니다. 이는 추가 사용 조건이 매우 길거나 추가 사용 조건에 클릭 가능한 링크 또는 서식을 포함하려는 경우에 유용합니다.
 
-You can also up to 10,000 characters of text in this field. If you do that, customers will see these additional license terms displayed as plain text.
+이 필드에는 텍스트를 최대 10,000자 입력할 수 있습니다. 이렇게 하면 고객에게 이러한 추가 사용 조건이 일반 텍스트로 표시됩니다.
 
-### Website
+### 웹 사이트
 
-Enter the URL of the web page for your app. This URL must point to a page on your own website, not your app's web listing in the Store.
+앱에 대한 웹 페이지의 URL을 입력합니다. 이 URL은 스토어의 앱 웹 목록이 아니라 사용자 웹 사이트의 페이지를 가리켜야 합니다.
 
-### Support contact info
+### 지원 연락처 정보
 
-Enter the URL of the web page where your customers can go for support on your app, or an email address that customers can contact for support.
+고객이 앱에 대한 지원을 받을 수 있는 웹 페이지의 URL(또는 지원을 받기 위해 연락할 메일 주소)을 입력합니다.
 
-**Important**  Microsoft doesn't provide your customers with support for your app.
+**중요** Microsoft는 고객에게 앱에 대한 지원을 제공하지 않습니다.
 
-### Privacy policy
+### 개인 정보 취급 방침
 
-If you have a privacy policy for your app, enter its URL here. You are responsible for ensuring your app complies with privacy laws and regulations and for providing a privacy policy, if required.
+앱에 대한 기본 개인 정보 취급 방침이 있으면 여기에 해당 URL을 입력합니다. 앱이 개인 정보 관련 법률 및 규정을 준수하는지 확인하고 필요할 경우 개인 정보 취급 방침을 제공하는 것은 개발자의 책임입니다.
 
-**Important**  Microsoft doesn't provide a default privacy policy for your app. Likewise, your app is not covered by any Microsoft privacy policy. To determine if your app requires a privacy policy, review the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058) and the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+**중요** Microsoft는 앱에 대한 기본 개인 정보 취급 방침을 제공하지 않습니다. 마찬가지로, 사용자 앱에는 Microsoft 개인 정보 취급 방침이 적용되지 않습니다. 앱에 개인 정보 취급 방침이 필요한지를 확인하려면 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)과 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1)을 검토하세요.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

@@ -1,11 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: "이 항목에서는 미디어 캡처 미리 보기 스트림에서 미리 보기 프레임을 가져오는 방법을 보여 줍니다."
+description: "이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다."
 title: "미리 보기 프레임 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
+ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
+ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
 
 ---
 
@@ -13,10 +13,10 @@ ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 항목에서는 미디어 캡처 미리 보기 스트림에서 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
+이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있으며 활성 비디오 미리 보기 스트림의 [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)가 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있으며 활성 비디오 미리 보기 스트림의 [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)가 있다고 가정합니다.
 
 기본 미디어 캡처에 필요한 네임스페이스 외에도, 미리 보기 프레임을 캡처하려면 다음 네임스페이스가 필요합니다.
 
@@ -38,12 +38,12 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 [!code-cs[GetPreviewSurface](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewSurface)]
 
-**중요**  
-반환된 **VideoFrame**의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성 또는 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) 속성은 **GetPreviewFrameAsync** 호출 방법 및 앱이 실행 중인 디바이스에 따라 null이 될 수 있습니다.
+> [!IMPORTANT]
+> 반환된 **VideoFrame**의 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) 속성 또는 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) 속성은 **GetPreviewFrameAsync** 호출 방법 및 앱이 실행 중인 디바이스에 따라 null이 될 수 있습니다.
 
--   **VideoFrame** 인수를 허용하는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713)의 오버로드를 호출하면 반환된 **VideoFrame**의 **SoftwareBitmap**은 null이 아니고 **Direct3DSurface** 속성은 null이 됩니다.
--   내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712)의 오버로드를 호출하면 **Direct3DSurface** 속성은 null이 아닌 값이 되고 **SoftwareBitmap** 속성은 null이 됩니다.
--   내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하지 않는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712)의 오버로드를 호출하면 **SoftwareBitmap** 속성은 null이 아닌 값이 되고 **Direct3DSurface** 속성은 null이 됩니다.
+> - **VideoFrame** 인수를 허용하는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713)의 오버로드를 호출하면 반환된 **VideoFrame**의 **SoftwareBitmap**은 null이 아니고 **Direct3DSurface** 속성은 null이 됩니다.
+> - 내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712)의 오버로드를 호출하면 **Direct3DSurface** 속성은 null이 아닌 값이 되고 **SoftwareBitmap** 속성은 null이 됩니다.
+> - 내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하지 않는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712)의 오버로드를 호출하면 **SoftwareBitmap** 속성은 null이 아닌 값이 되고 **Direct3DSurface** 속성은 null이 됩니다.
 
 **SoftwareBitmap** 또는 **Direct3DSurface** 속성에서 반환하는 개체에 대해 작업하기 전에 항상 null 값을 확인해야 합니다.
 
@@ -53,7 +53,8 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -64,6 +65,6 @@ Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**ID
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

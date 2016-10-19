@@ -5,11 +5,11 @@ title: "xNull 태그 확장"
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a09
+ms.openlocfilehash: c81acb985c54a8dc799df5ad9c811577777dbf9b
 
 ---
 
-# {x&#58;Null} 태그 확장
+# {x:Null} 태그 확장
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -38,6 +38,6 @@ XAML 태그에는 속성의 **null** 값을 지정합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

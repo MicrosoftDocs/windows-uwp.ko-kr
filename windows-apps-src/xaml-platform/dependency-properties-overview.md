@@ -4,8 +4,8 @@ description: "이 항목에서는 UI의 XAML 정의와 함께 C++, C# 또는 Vis
 title: "종속성 속성 개요"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 translationtype: Human Translation
-ms.sourcegitcommit: 2791b5b80bf1405d3efdce5d81824dbe6d347b4f
-ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
+ms.sourcegitcommit: bd08d102aa5de2d9dec89136caf683755db72391
+ms.openlocfilehash: 7a8c39494b69d36553db3a2df7526ba61e57a228
 
 ---
 
@@ -48,8 +48,8 @@ ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
 | 용어 | 설명 |
 |------|-------------|
 | 종속성 속성 | [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) 식별자에 존재하는 속성(아래 참조)입니다. 일반적으로 이 식별자는 정의하는 **DependencyObject** 파생 클래스의 정적 멤버로 사용할 수 있습니다. |
-| 종속성 속성 식별자 | [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), 이 때문에 종속성 속성 식별자가 읽기 전용인 경우에도 일반적으로 공개 식별자입니다. |
-| 속성 래퍼 | Windows 런타임 속성의 호출 가능한 **get** 및 **set** 구현. 또는 원래 정의의 언어별 프로젝션. **get** 속성 래퍼 구현은 [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)를 호출하여 관련 종속성 속성 식별자를 첫 번째 입력으로 전달하고 설정할 값을 두 번째 입력으로 전달합니다. | 
+| 종속성 속성 식별자 | 속성을 식별하는 상수 값이며 일반적으로 공개 읽기 전용입니다. |
+| 속성 래퍼 | Windows 런타임 속성의 호출 가능한 **get** 및 **set** 구현. 또는 원래 정의의 언어별 프로젝션. **get** 속성 래퍼 구현은 [**GetValue**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.getvalue.aspx)를 호출하여 관련 종속성 속성 식별자를 전달합니다. | 
 
 속성 래퍼는 호출자에게 편의를 제공할 뿐만 아니라 속성에 대한 Windows 런타임 정의를 사용하는 모든 프로세스, 도구 또는 프로젝션에 종속성 속성을 노출합니다.
 
@@ -100,7 +100,7 @@ public bool IsSpinning
 
 ###  바인딩 및 우선 순위
 
-바인딩 작업에는 사용되는 모든 범위에 대해 적절한 우선 순위가 있습니다. 예를 들어 로컬 값에 적용되는 바인딩은 로컬 값으로 작동하고 속성 setter에 대한 바인딩([{TemplateBinding} 태그 확장](templatebinding-markup-extension.md))은 스타일 setter가 적용될 때 적용됩니다. 바인딩은 런타임 시 데이터 원본에서 값을 가져올 때까지 기다려야 하기 때문에, 속성에 대한 속성 값 우선 순위를 결정하는 프로세스는 런타임으로도 확장됩니다.
+바인딩 작업에는 사용되는 모든 범위에 대해 적절한 우선 순위가 있습니다. 예를 들어 로컬 값에 적용되는 [{Binding}](binding-markup-extension.md)은 로컬 값으로 작동하고 속성 setter에 대한 [{TemplateBinding} 태그 확장](templatebinding-markup-extension.md)은 스타일 setter가 적용될 때 적용됩니다. 바인딩은 런타임 시 데이터 원본에서 값을 가져올 때까지 기다려야 하기 때문에, 속성에 대한 속성 값 우선 순위를 결정하는 프로세스는 런타임으로도 확장됩니다.
 
 바인딩은 로컬 값과 같은 우선 순위로 작동할 뿐만 아니라 실제로 로컬 값이며, 이 경우 바인딩은 지연된 값의 개체 틀입니다. 속성 값에 대한 바인딩이 기존에 있으며 이에 대해 런타임에 로컬 값을 설정하는 경우 바인딩이 완전히 대체됩니다. 마찬가지로, [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)을 호출하여 런타임에만 존재하는 바인딩을 정의하는 경우 XAML에서 또는 이전에 실행한 코드를 사용하여 적용한 로컬 값이 대체됩니다.
 
@@ -133,7 +133,7 @@ public bool IsSpinning
 
 ### 데이터 바인딩
 
-종속성 속성은 데이터 바인딩 적용을 통해 값을 설정할 수 있습니다. 데이터 바인딩은 XAML의 [{Binding} 태그 확장](binding-markup-extension.md) 구문이나 코드의 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스를 사용합니다. 데이터 바인딩된 속성의 경우 최종 속성 값 결정은 런타임까지 지연됩니다. 런타임에 데이터 원본에서 값을 가져옵니다. 종속성 속성 시스템이 여기서 수행하는 역할은 값을 아직 모르는 경우 XAML 로딩과 같은 작업이 가능하도록 개체 틀 동작을 활성화한 다음 런타임에 Windows 런타임 데이터 바인딩 엔진과 상호 작용하여 값을 제공하는 것입니다.
+종속성 속성은 데이터 바인딩 적용을 통해 값을 설정할 수 있습니다. 데이터 바인딩은 XAML의 [{Binding} 태그 확장](binding-markup-extension.md) 구문이나 코드의 [{x:Bind} 태그 확장](x-bind-markup-extension.md) 또는 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스를 사용합니다. 데이터 바인딩된 속성의 경우 최종 속성 값 결정은 런타임까지 지연됩니다. 런타임에 데이터 원본에서 값을 가져옵니다. 종속성 속성 시스템이 여기서 수행하는 역할은 값을 아직 모르는 경우 XAML 로딩과 같은 작업이 가능하도록 개체 틀 동작을 활성화한 다음 런타임에 Windows 런타임 데이터 바인딩 엔진과 상호 작용하여 값을 제공하는 것입니다.
 
 다음 예에서는 XAML에서 바인딩을 사용하여 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 요소의 [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 값을 설정합니다. 바인딩은 상속된 데이터 컨텍스트와 개체 데이터 원본을 사용합니다. 간략한 예에는 컨텍스트와 원본에 대한 내용이 나와 있지 않습니다. 컨텍스트와 원본을 보여 주는 보다 완전한 샘플을 보려면 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
@@ -145,17 +145,17 @@ public bool IsSpinning
 
 XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257)을 참조하세요.
 
-**참고** 이와 같은 바인딩은 종속성 속성 값 우선 순위에 따라 로컬 값으로 처리됩니다. 원래 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 값이 포함된 속성에 대해 다른 로컬 값을 설정하면 바인딩의 런타임 값뿐만 아니라 바인딩을 완전히 덮어씁니다.
+**참고** 이와 같은 바인딩은 종속성 속성 값 우선 순위에 따라 로컬 값으로 처리됩니다. 원래 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 값이 포함된 속성에 대해 다른 로컬 값을 설정하면 바인딩의 런타임 값뿐만 아니라 바인딩을 완전히 덮어씁니다. {x:Bind} 바인딩은 속성의 로컬 값을 설정하는 생성된 코드를 사용하여 구현됩니다. {x:Bind}를 사용하는 속성의 로컬 값을 설정하면 원본 개체의 속성 변경을 관찰할 때처럼 다음에 바인딩이 평가될 때 해당 값이 바뀝니다.
 
 ### 바인딩 소스, 바인딩 대상, FrameworkElement의 역할
 
-바인딩의 소스가 되기 위해 속성이 종속성 속성일 필요는 없습니다. 일반적으로 어떠한 속성이든 바인딩 소스로 사용할 수 있습니다. 단, 사용된 프로그래밍 언어에 따라 다르며 개별적으로 특정 사례가 있습니다. 그러나 바인딩의 대상이 되려면 속성이 종속성 속성이어야 합니다.
+바인딩의 소스가 되기 위해 속성이 종속성 속성일 필요는 없습니다. 일반적으로 어떠한 속성이든 바인딩 소스로 사용할 수 있습니다. 단, 사용된 프로그래밍 언어에 따라 다르며 개별적으로 특정 사례가 있습니다. 그러나 [{Binding} 태그 확장](binding-markup-extension.md) 또는 [**바인딩**](https://msdn.microsoft.com/library/windows/apps/br209820)의 대상이 되려면 속성이 종속성 속성이어야 합니다. {x:Bind}는 생성된 코드를 사용하여 해당 바인딩 값을 적용하므로 이 요구 사항이 적용되지 않습니다.
 
 코드에서 바인딩을 만드는 경우 [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) API가 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)에 대해서만 정의됩니다. 그러나 [**BindingOperations**](https://msdn.microsoft.com/library/windows/apps/br209823)를 대신 사용하여 바인딩 정의를 만들 수 있으므로 어떠한 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) 속성이든 참조할 수 있습니다.
 
 코드나 XAML에서 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)는 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 속성입니다. 바인딩 시스템은 부모-자식 속성 상속(일반적으로 XAML 태그에서 설정됨)의 형태를 사용하여 부모 요소에 존재하는 **DataContext**를 확인할 수 있습니다. 이 상속은 대상 속성을 가진 자식 개체가 **FrameworkElement**가 아니므로 고유 **DataContext** 값을 보유하지 않는 경우에도 평가할 수 있습니다. 그러나 상속되는 부모 요소는 **DataContext**를 설정하고 보유할 수 있으려면 **FrameworkElement**이어야 합니다. 또는 **DataContext**의 **null** 값을 사용하여 작동할 수 있도록 바인딩을 정의해야 합니다.
 
-바인딩 연결은 대부분의 데이터 바인딩 시나리오에 필요한 여러 요소 중 하나입니다. 단방향 또는 양방향 바인딩이 적용되려면 원본 속성이 바인딩 시스템과 대상으로 전파되는 변경 알림을 지원해야 합니다. 사용자 지정 바인딩 원본의 경우 이는 속성이 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)를 지원해야 함을 의미합니다. 컬렉션은 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)를 지원해야 합니다. 특정 클래스는 해당 구현에서 이러한 인터페이스를 지원하므로 데이터 바인딩 시나리오를 위한 기본 클래스로 유용합니다. 이러한 클래스의 예는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)입니다. 데이터 바인딩 및 데이터 바인딩과 속성 시스템의 관계에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
+바인딩 연결은 대부분의 데이터 바인딩 시나리오에 필요한 여러 요소 중 하나입니다. 단방향 또는 양방향 바인딩이 적용되려면 원본 속성이 바인딩 시스템과 대상으로 전파되는 변경 알림을 지원해야 합니다. 사용자 지정 바인딩 원본의 경우 이는 속성이 종속성 속성이거나 개체가 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)를 지원해야 함을 의미합니다. 컬렉션은 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)를 지원해야 합니다. 특정 클래스는 해당 구현에서 이러한 인터페이스를 지원하므로 데이터 바인딩 시나리오를 위한 기본 클래스로 유용합니다. 이러한 클래스의 예는 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)입니다. 데이터 바인딩 및 데이터 바인딩과 속성 시스템의 관계에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
 **참고** 여기 표시된 형식은 Microsoft .NET 데이터 원본을 지원합니다. C++/CX 데이터 원본은 변경 알림 또는 식별 가능한 동작에 대해 다른 인터페이스를 사용합니다. [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)을 참조하세요.
 
@@ -179,6 +179,8 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 
 속성 변경 동작은 종속성 속성 용어의 "종속성" 부분에 대한 출처입니다. 다른 속성이 첫 번째 속성의 값에 영향을 미칠 수 있는 경우 유효한 속성 값을 유지하는 것은 많은 프레임워크에서 어려운 개발 문제입니다. Windows 런타임 속성 시스템에서 각 종속성 속성은 속성 값이 변경될 때마다 호출되는 콜백을 지정할 수 있습니다. 이 콜백을 사용하여 일반적으로 동기식으로 관련 속성 값을 알리거나 변경할 수 있습니다. 많은 기존 종속성 속성에는 속성 변경 동작이 있습니다. 유사한 콜백 동작을 사용자 지정 종속성 속성에 추가하고 고유한 속성 변경 콜백을 구현할 수도 있습니다. 예는 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.
 
+Windows 10에는 [**RegisterPropertyChangedCallback**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) 메서드가 도입되었습니다. 이를 통해 응용 프로그램 코드를 사용하여 지정된 종속성 속성이 [**DependencyObject**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.dependencyobject.aspx)의 인스턴스에서 변경될 때 변경 알림을 등록할 수 있습니다.
+
 ### 기본값 및 **ClearValue**
 
 종속성 속성에는 속성 메타데이터의 일부로 정의된 기본값이 있을 수 있습니다. 종속성 속성의 경우 기본값은 속성을 처음 설정한 후에는 관련성이 없어집니다. 값 우선 순위에서 다른 결정자가 사라질 때마다 런타임에 기본값을 다시 적용할 수 있습니다. (종속성 속성 값 우선 순위에 대해서는 다음 섹션에서 설명합니다.) 예를 들어 속성에 적용되는 스타일 값이나 애니메이션을 의도적으로 제거한 후 값이 적당한 기본값이 되기를 원할 수 있습니다. 종속성 속성 기본값은 각 속성의 값을 추가 단계로 특정하게 지정하지 않고도 이 값을 제공할 수 있습니다.
@@ -199,14 +201,14 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 * [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)
 * [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581) 
-          **종속성 속성 관련 API**
+* [XAML 사용자 및 사용자 지정 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?linkid=238581)
+**종속성 속성 관련 API**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

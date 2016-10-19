@@ -5,7 +5,7 @@ title: "앱 이름 관리"
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
 translationtype: Human Translation
 ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
-ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+ms.openlocfilehash: e5616be7c3f1b767e4a73af3c6fbc168333090cc
 
 ---
 
@@ -48,6 +48,6 @@ ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

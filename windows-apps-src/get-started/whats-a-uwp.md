@@ -1,23 +1,29 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: "UWP(유니버설 Windows 플랫폼) 앱이란?"
 description: "유니버설 Windows 앱이라 불리는 다양한 유형의 앱(Windows 스토어 앱, Windows Phone 스토어 앱 및 Windows 런타임 앱)에 대해 알아보세요."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f02851d848a82af7104a6038c5d8850d5362c832
+ms.sourcegitcommit: 6be8bb0a78b614e160fb40629601bdab2d7fc71a
+ms.openlocfilehash: 3fd9f4d539977c4b531e08efe0719328365c757c
 
 ---
 
 # UWP(유니버설 Windows 플랫폼) 앱이란?
 
+Windows 플랫폼을 처음 사용하거나 .NET, Windows Forms 또는 Silverlight에서 전환한 경우 UWP 앱에 대해 *궁금할 수 있습니다*. 
+
+당황하지 마세요. 금방 익숙해지실 것입니다. 
+
 UWP(유니버설 Windows 플랫폼) 앱은 Windows 8에서 Windows 런타임으로 처음 도입된 UWP(유니버설 Windows 플랫폼)를 기반으로 하는 Windows 환경입니다. UWP 앱의 핵심은 사용자가 자신의 모든 장치에서 모바일 *환경*을 원하고 작업에 가장 편리하거나 생산적인 장치를 사용하기를 원한다는 개념입니다.
 
-Windows 10에서는 하나의 API 집합과 하나의 앱 패키지, 그리고 하나의 스토어만을 사용해 UWP용 앱을 이전보다 더욱 쉽게 개발하여 PC, 태블릿, 휴대폰 등의 모든 Windows 10 장치에서 사용할 수 있습니다. 다양한 화면 크기뿐만 아니라 터치, 마우스 및 키보드, 게임 컨트롤러, 펜 등 다양한 조작 모델을 손쉽게 지원합니다.
+Windows 10에서는 하나의 API 집합과 하나의 앱 패키지, 그리고 하나의 스토어만을 사용해 UWP용 앱을 이전보다 더욱 쉽게 개발하여 PC, 태블릿, 휴대폰, Xbox, HoloLens, Surface Hub 등의 모든 Windows 10 디바이스에서 사용할 수 있습니다. 다양한 화면 크기뿐만 아니라 터치, 마우스 및 키보드, 게임 컨트롤러, 펜 등 다양한 조작 모델을 손쉽게 지원합니다.
+
+결론: 친숙한 프로그래밍 언어 및 API를 사용하여 하나의 프로젝트에서 작업을 수행하고 현존하는 다양한 Windows 하드웨어에서 동일한 코드를 실행할 수 있습니다.
 
 ![Windows 기반 장치](images/1894834-hig-device-primer-01-500.png)
 
-##그렇다면 UWP 앱이란 무엇인가요?
+##UWP 앱은 *정확히* 무엇인가요?
 
 
 무엇이 UWP 앱을 특별하게 만드나요? 다음은 Windows 10의 UWP 앱을 차별화하는 몇 가지 특성입니다.
@@ -93,8 +99,14 @@ UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 앱 가이드]
 * [유니버설 Windows 플랫폼 앱에 대한 가이드](universal-application-platform-guide.md)
 * [설정 방법](get-set-up.md)
 
+## 고급 항목
+
+* [.NET 네이티브 - UWP(유니버설 Windows 플랫폼) 개발자를 위한 의미](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
+* [.NET의 유니버설 Windows 앱](https://blogs.msdn.microsoft.com/dotnet/2015/07/30/universal-windows-apps-in-net)
+* [UWP 앱용 .NET](https://msdn.microsoft.com/en-us/library/mt185501.aspx)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Sep16_HO3-->
 
 

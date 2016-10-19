@@ -5,7 +5,7 @@ title: "Template settings 클래스"
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
+ms.openlocfilehash: 8a52535e54a321bab6b34b6a73c53222e88d2151
 
 ---
 
@@ -102,6 +102,6 @@ ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

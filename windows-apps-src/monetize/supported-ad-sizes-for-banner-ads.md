@@ -4,15 +4,15 @@ ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: "지원되는 배너 광고 크기에 대해 알아봅니다."
 title: "배너 광고에 지원되는 광고 크기"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: f83febcb6c96ad85329633e652978f5c7724e743
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 488c47e7fd3ab55c51454e867d802d632a0b4df2
 
 
 ---
 
 # 배너 광고에 지원되는 광고 크기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 Microsoft Advertising은 다음 광고 크기의 배너 광고를 지원합니다.
 
@@ -39,7 +39,7 @@ Microsoft Advertising은 다음 광고 크기의 배너 광고를 지원합니�
 <td align="left"><img src="images/13-f6f413da-ddde-4424-9364-41d8ba536d21.jpg" alt="AdSizesPhone320x50" /></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>480x80</p><p>**참고** 이 크기는 Windows Phone Silverlight에서만 지원됩니다.</p></td>
+<td align="left"><p>480x80</p><p>**참고**&nbsp;&nbsp;이 크기는 Windows Phone Silverlight에서만 지원됩니다.</p></td>
 <td align="left"><img src="images/13-0f11f562-0624-40d6-9720-400420f0a486.jpg" alt="AdSizesPhone480x80" /></td>
 </tr>
 <tr class="even">
@@ -92,6 +92,6 @@ Microsoft Advertising은 다음 광고 크기의 배너 광고를 지원합니�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

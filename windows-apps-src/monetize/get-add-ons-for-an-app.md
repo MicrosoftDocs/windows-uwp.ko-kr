@@ -1,77 +1,81 @@
 ---
 author: mcleanbyron
 ms.assetid: E59FB6FE-5318-46DF-B050-73F599C3972A
-description: Use this method in the Windows Store submission API to retrieve information about the in-app purchases for an app that is registered to your Windows Dev Center account.
-title: Get add-ons for an app using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 앱에서 바로 구매에 대한 정보를 검토합니다."
+title: "Windows 스토어 제출 API를 사용하여 앱의 추가 기능 가져오기"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 1edf52b45578078f7abb7e499723b072832d6628
+
 ---
 
-# Get add-ons for an app using the Windows Store submission API
+# Windows 스토어 제출 API를 사용하여 앱의 추가 기능 가져오기
 
 
 
 
-Use this method in the Windows Store submission API to list the add-ons (also known as in-app products or IAPs) for an app that is registered to your Windows Dev Center account.
+Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 나열합니다.
 
-## Prerequisites
+## 필수 조건
 
-To use this method, you need to first do the following:
+이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
+* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## Request
+## 요청
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
-| Method | Request URI                                                      |
+| 메서드 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
 | GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts``` |
 
 <span/>
- 
-### Request header
+ 
+### 요청 헤더
 
-| Header        | Type   | Description                                                                 |
+| 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 <span/>
 
-### Request parameters
+### 요청 매개 변수
 
-| Name        | Type   | Description  |  Required  |    
+| 이름        | 유형   | 설명  |  필수  |    
 |---------------|--------|----------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to retrieve the add-ons. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |  Yes  |
-|  top  |  int  |  The number of items to return in the request (that is, the number of add-ons to return). If the app has more add-ons than the value you specify in the query, the response body includes a relative URI path that you can append to the method URI to request the next page of data.  |  No  |
-|  skip  |  int  |  The number of items to bypass in the query before returning the remaining items. Use this parameter to page through data sets. For example, top=10 and skip=0 retrieves items 1 through 10, top=10 and skip=10 retrieves items 11 through 20, and so on.  |  No  |
+| applicationId | 문자열 | 필수. 추가 기능을 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
+|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 추가 기능 수)입니다. 앱에 쿼리에서 지정한 값보다 더 많은 추가 기능이 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
+|  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니요  |
 
 <span/>
 
-### Request body
+### 요청 본문
 
-Do not provide a request body for this method.
+이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
-### Request examples
+### 요청 예제
 
-The following example demonstrates how to list all the add-ons for an app.
+다음 예제에서는 앱의 모든 추가 기능을 나열하는 방법을 보여 줍니다.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-The following example demonstrates how to list the first 10 add-ons for an app.
+다음 예제에서는 앱의 처음 10개의 추가 기능을 나열하는 방법을 보여 줍니다.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/listinappproducts?top=10 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## 응답
 
-The following example demonstrates the JSON response body returned by a successful request for the first 10 add-ons for an app with 53 total add-ons. For brevity, this example only shows the data for the first three add-ons returned by the request. For more details about the values in the response body, see the following section.
+다음 예제에서는 총 53개의 추가 기능이 있는 앱의 처음 10개의 추가 기능을 성공적으로 요청하여 반환된 JSON 응답 본문을 보여 줍니다. 편의를 위해 이 예제에서는 요청으로 반환된 처음 세 개의 추가 기능에 대한 데이터만 보여 줍니다. 응답 본문의 값에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 ```json
 {
@@ -92,30 +96,36 @@ The following example demonstrates the JSON response body returned by a successf
 }
 ```
 
-### Response body
+### 응답 본문
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @nextLink  | string | If there are additional pages of data, this string contains a relative path that you can append to the base ```https://manage.devcenter.microsoft.com/v1.0/my/``` request URI to request the next page of data. For example, if the *top* parameter of the initial request body is set to 10 but there are 50 add-ons for the app, the response body will include a @nextLink value of ```applications/{applicationid}/listinappproducts/?skip=10&top=10```, which indicates that you can call ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10``` to request the next 10 add-ons. |
-| value      | array  | An array of objects that list the Store ID of each add-on for the specified app. For more information about the data in each object, see [add-on resource](get-app-data.md#add-on-object).                                                                                                                           |
-| totalCount | int    | The total number of rows in the data result for the query (that is, the total number of add-ons for the specified app).                                                                                                                                                                                                                             |
+| @nextLink  | 문자열 | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하기 위해 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI를 추가할 수 있는 상대 경로가 포함됩니다. 예를 들어 초기 요청 본문의 *top* 매개 변수는 10으로 설정되어 있지만 앱의 추가 기능이 50개인 경우 응답 본문에는 ```applications/{applicationid}/listinappproducts/?skip=10&top=10```의 @nextLink 값이 포함되며 이는 ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationid}/listinappproducts/?skip=10&top=10```을 호출하여 다음 10개의 추가 기능을 호출할 수 있음을 나타냅니다. |
+| value      | 배열  | 지정한 앱에 대한 각 추가 기능의 스토어 ID를 나열하는 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 [추가 기능 리소스](get-app-data.md#add-on-object)를 참조하세요.                                                                                                                           |
+| totalCount | int    | 쿼리에 대한 데이터 결과의 총 행 수(즉, 지정한 앱에 대한 추가 기능의 총 수)입니다.                                                                                                                                                                                                                             |
 
 <span/>
 
-## Error codes
+## 오류 코드
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
-| Error code |  Description   |
+| 오류 코드 |  설명   |
 |--------|------------------|
-| 404  | No add-ons were found. |
-| 409  | The add-ons use Dev Center dashboard features that are [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 404  | 추가 기능이 없습니다. |
+| 409  | 추가 기능이 [현재 Windows 스토어 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다.  |
 
 <span/>
 
-## Related topics
+## 관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get all apps](get-all-apps.md)
-* [Get an app](get-an-app.md)
-* [Get package flights for an app](get-flights-for-an-app.md)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [모든 앱 가져오기](get-all-apps.md)
+* [앱 가져오기](get-an-app.md)
+* [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

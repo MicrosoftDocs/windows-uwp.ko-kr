@@ -6,25 +6,36 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
 
 ---
 # 텍스트 컨트롤
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 텍스트 컨트롤은 텍스트 입력란, 암호 상자, 자동 제안 상자 및 텍스트 블록으로 구성됩니다. XAML 프레임워크는 텍스트를 렌더링, 입력 및 편집하는 여러 개의 컨트롤과 텍스트 서식을 지정하는 속성 집합을 제공합니다.
 
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
 - 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다.
 
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>AutoSuggestBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>PasswordBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>TextBlock 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>TextBox 클래스</strong></a></li>
+</ul>
 
--   [**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
--   [**PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
--   [**RichEditBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)
--   [**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)
--   [**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)
--   [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
+</div>
+</div>
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -188,6 +199,6 @@ TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

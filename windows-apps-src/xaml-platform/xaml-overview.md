@@ -5,7 +5,7 @@ title: "XAML 개요"
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 translationtype: Human Translation
 ms.sourcegitcommit: 57b406f8210a9de729deec1fd2003973ac91f9cd
-ms.openlocfilehash: 9ddb584efe7c6406f78b5a0cf0bdc73a974afd18
+ms.openlocfilehash: b32ff4bd37a86b991a0bdfe16328304827eb01a0
 
 ---
 
@@ -240,6 +240,6 @@ Windows 런타임 앱 디버깅에 대한 자세한 내용은 [디버그 세션 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

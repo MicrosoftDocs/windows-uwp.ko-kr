@@ -6,8 +6,8 @@ title: "컨트롤 패턴 및 인터페이스"
 label: Control patterns and interfaces
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
+ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
 
 ---
 
@@ -66,10 +66,10 @@ Microsoft UI 자동화 컨트롤 패턴, 클라이언트가 컨트롤 패턴에 
 <span id="related_topics"/>
 ## 관련 항목  
 * [사용자 지정 자동화 피어](custom-automation-peers.md)
-* [접근성](accessibility.md)
+* [접근성](accessibility.md) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

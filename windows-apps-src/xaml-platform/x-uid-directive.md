@@ -5,11 +5,11 @@ title: "xUid 지시어"
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4f8aa553c99b6071cedc4f9d93cf8258b75eca49
+ms.openlocfilehash: c94db1dc1095f53dc836f78768ecc826470343d5
 
 ---
 
-# x&#58;Uid 지시어
+# x:Uid 지시어
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -50,6 +50,6 @@ Windows 런타임 XAML에서 허용되지 않는 **x:Uid**를 속성 요소에 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

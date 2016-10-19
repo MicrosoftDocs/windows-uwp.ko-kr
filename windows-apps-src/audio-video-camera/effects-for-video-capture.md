@@ -1,11 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "이 항목에서는 비디오 캡처 시나리오에 사용하도록 디자인된 효과에 대해 설명합니다. 여기에는 동영상 손떨림 보정 효과가 포함됩니다."
+description: "이 항목은 동영상 손떨림 보정 효과를 사용하는 방법을 보여 줍니다."
 title: "비디오 캡처 효과"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
+ms.sourcegitcommit: 367ab34663d66d8c454ff305c829be66834e4ebe
+ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 ---
 
@@ -13,10 +13,10 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 항목에서는 비디오 캡처 시나리오에 사용하도록 디자인된 효과에 대해 설명합니다. 여기에는 동영상 손떨림 보정 효과가 포함됩니다.
+이 항목은 동영상 손떨림 보정 효과를 사용하는 방법을 보여 줍니다.
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
 ## 동영상 손떨림 보정 효과
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
-[MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md) 문서에 설명된 기본 비디오 캡처 구현에서 미디어 인코딩 프로필 개체는 코드에서는 사용되지 않으므로 지역 변수에 할당됩니다. 이 시나리오에서 나중에 액세스할 수 있도록 개체를 멤버 변수에 할당해야 합니다.
+이 시나리오에서 나중에 액세스할 수 있도록 미디어 인코딩 프로파일 개체를 멤버 변수에 할당해야 합니다.
 
 [!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
 
@@ -78,7 +78,8 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -89,6 +90,6 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

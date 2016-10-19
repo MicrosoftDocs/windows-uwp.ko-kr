@@ -5,7 +5,7 @@ title: "센서"
 description: "센서를 사용하면 앱에서 디바이스와 디바이스를 둘러싼 실제 주변 환경 간의 관계를 알 수 있습니다. 센서는 디바이스의 방향과 움직임을 앱에 알려줄 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
+ms.openlocfilehash: 73ee42a275d0c0f0a08ddf19ddde4eabd21a7191
 
 ---
 # 센서
@@ -129,6 +129,6 @@ ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

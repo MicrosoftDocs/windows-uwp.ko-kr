@@ -5,7 +5,7 @@ ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
-ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+ms.openlocfilehash: 19f024bd3ad99b4ef9355cc3c9229b1b3ffc51e2
 
 ---
 
@@ -54,6 +54,6 @@ Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

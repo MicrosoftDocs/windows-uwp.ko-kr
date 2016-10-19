@@ -5,7 +5,7 @@ ms.assetid: 53E36DDC-200A-4850-AAF0-07ECA3662BB9
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: 3c890ac8d8363982d9f014c36b6cba59bee39f20
-ms.openlocfilehash: e748b319cdeda82aadaf8516e41883a3e32dc10c
+ms.openlocfilehash: 5ed154b3d31e8741972edc8c8a0fd343f41d4167
 
 ---
 
@@ -38,6 +38,6 @@ Windows 10을 사용하는 기업에서는 수준 높은 2단계 인증을 제�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

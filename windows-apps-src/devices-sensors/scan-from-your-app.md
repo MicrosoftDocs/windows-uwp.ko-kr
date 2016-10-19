@@ -5,7 +5,7 @@ title: "앱에서 스캔"
 description: "여기서는 평판, 문서 공급 디바이스 또는 자동 구성된 스캔 소스를 사용하여 앱에서 콘텐츠를 스캔하는 방법에 대해 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
+ms.openlocfilehash: 9f06f774fd1ed3a13386a4403f98336babeb1506
 
 ---
 # 앱에서 스캔
@@ -175,6 +175,6 @@ cancellationToken = new CancellationTokenSource();
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

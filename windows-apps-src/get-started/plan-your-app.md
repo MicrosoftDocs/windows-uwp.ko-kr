@@ -1,11 +1,11 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 title: "UWP(유니버설 Windows 플랫폼) 앱 계획"
 description: "Microsoft 디자인 팀의 앱을 생성하는 프로세스는 개념, 구조, 역동성, 화면 효과 및 프로토타입의 5가지 단계로 구성됩니다. 유사한 프로세스를 채택하여 전 세계에 즐거움을 줄 새로운 환경을 만들어 보세요."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9a3058aabdc6f710149a14d8f125b66efd076007
+ms.sourcegitcommit: 43214b9e2c786a007b8d9cdef7700e275101aba5
+ms.openlocfilehash: 4d17f7da6969910d2738377174cec9f1c1517dde
 
 ---
 
@@ -238,6 +238,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 계획하는 경우 앱에서 수행�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

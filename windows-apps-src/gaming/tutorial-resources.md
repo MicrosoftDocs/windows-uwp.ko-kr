@@ -7,7 +7,7 @@ keywords:
 - DirectX, XAML
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
+ms.openlocfilehash: 17d34f0edcbe6729fe63204123faf4b7393beea7
 
 ---
 
@@ -1521,6 +1521,6 @@ void MainPage::OnResetButtonClicked(Object^ sender, RoutedEventArgs^ args)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

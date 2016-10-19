@@ -1,24 +1,37 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/dialogs
 Description: "플라이아웃은 사용자가 현재 수행하고 있는 작업과 관련된 UI를 일시적으로 표시하는 데 사용되는 경량 팝업입니다."
 title: "상황에 맞는 메뉴 및 대화 상자"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6572acefa25e464b6edaca9fee5b2b3e3b46ff3f
 
 ---
 # 메뉴, 대화 상자, 플라이아웃 및 팝업
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 메뉴, 대화 상자, 플라이아웃 및 팝업은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">MenuFlyout 클래스</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout 클래스</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog 클래스</a></li>
+</ul>
 
--   [MenuFlyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn299030)
--   [Flyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn279496)
--   [ContentDialog 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+</div>
+</div>
+
+
+
+
+
 
 상황에 맞는 메뉴는 사용자에게 즉각적인 작업을 제공합니다. 또한 텍스트 명령으로 채울 수 있습니다. 상황에 맞는 메뉴는 메뉴 바깥쪽의 아무 곳이나 탭하거나 클릭하여 빨리 해제할 수 있습니다.
 
@@ -100,29 +113,9 @@ ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 -   오류 대화 상자에는 오류 메시지가 관련된 정보와 함께 표시됩니다. 오류 대화 상자에서는 “닫기" 또는 유사한 작업을 나타내는 단추만 사용됩니다.
 -   유효성 검사 오류(예: 암호 필드의 오류)와 같이 페이지의 특정 위치에 해당하는 오류의 경우에는 대화 상자를 사용하지 마세요. 대신 앱의 캔버스 자체를 사용하여 인라인 오류를 표시합니다.
 
-## 상황에 맞는 메뉴와 플라이아웃
+## 플라이아웃
 
-상황에 맞는 메뉴와 플라이아웃은 서로 밀접한 관련이 있는 컨트롤로 조작하는 동작을 공유합니다. 하지만 두 컨트롤은 주로 허용하는 콘텐츠 형식에서 차이를 보입니다.
-
-### MenuFlyout
-MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutitem.aspx), [**ToggleMenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), [**MenuFlyoutSubItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutsubitem.aspx) 및 [**MenuFlyoutSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutseparator.aspx)가 포함될 수 있습니다. 다른 유형의 UI를 표시하려면 플라이아웃을 사용해 보세요.
-
-- **사용 지침**
-  - 상황에 맞는 메뉴의 명령 그룹 사이에 구분 기호를 사용하여 다음을 수행할 수 있습니다.
-    - 관련 명령 그룹 구분
-    - 명령 집합 그룹화
-    - 앱별 또는 보기별 명령과 클립보드 명령(잘라내기/복사/붙여넣기)과 같은 예측 가능한 명령 집합 구분
-  -   노트북 및 데스크톱에서 상황에 맞는 메뉴 및 도구 설명은 응용 프로그램 창으로 제한되지 않으며 창 바깥쪽까지 부분적으로 표시가 확장될 수 있습니다. 앱이 해당 창의 완전한 외부에서 상황에 맞는 메뉴를 렌더링하려는 경우 예외가 발생합니다.
-
-- **권장 사항 및 금지 사항**
-  -   상황에 맞는 메뉴 명령은 짧게 유지합니다. 긴 명령은 잘립니다.
-  -   각 명령 이름은 모두 대문자로 표시합니다.
-  -   모든 상황에 맞는 메뉴에서 가능한 가장 적은 수의 명령을 표시합니다.
-  -   UI 요소의 직접 조작이 가능한 경우 상황에 맞는 메뉴 내에 해당 명령을 배치하지 마세요. 상황에 맞는 메뉴는 화면에서 검색이 불가능한 상황에 맞는 명령을 표시하도록 예약되어 있습니다.
-
-### 플라이아웃
-
-플라이아웃은 개방형 컨테이너로 임의의 UI와 해당 콘텐츠를 표시할 수 있습니다.  플라이아웃은 고유한 시각적 표시가 없는 단순한 콘텐츠 컨트롤입니다. 플라이아웃의 콘텐츠 주변에는 여백과 스크롤 막대(옵션)가 추가되어 있습니다. 플라이아웃의 스타일을 지정하려면 해당 `FlyoutPresenterStyle`을 수정하세요.
+플라이아웃은 개방형 컨테이너로 임의의 UI와 해당 콘텐츠를 표시할 수 있습니다.  플라이아웃은 고유한 시각적 표시가 없는 단순한 콘텐츠 컨트롤입니다. 플라이아웃의 콘텐츠 주변에는 여백과 스크롤 막대(옵션)가 추가되어 있습니다. 플라이아웃의 스타일을 지정하려면 해당 [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx)을 수정합니다.
 
 다음 코드는 줄 바꿈 단락을 보여 주고, 화면 읽기 프로그램에서 텍스트 블록에 액세스하도록 설정합니다.
 
@@ -144,7 +137,7 @@ MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutIte
 
 플라이아웃과 상황에 맞는 메뉴는 특정 컨트롤에 연결됩니다. 표시되는 경우 호출 개체에 고정하고 개체의 기본 상대 위치(위쪽, 왼쪽, 아래쪽 또는 오른쪽)를 지정해야 합니다. 플라이아웃에는 플라이아웃을 확대하고 앱 창 내 가운데로 지정하는 전체 배치 모드도 있습니다.
 
-[Button 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에는 사용자가 단추를 클릭하거나 탭할 때 열리는 임시 UI를 지정할 수 있게 하는 `Flyout` 속성이 있습니다.
+[Button 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에는 사용자가 단추를 클릭하거나 탭할 때 열리는 임시 UI를 지정할 수 있게 하는 [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) 속성이 있습니다.
 
 ````xaml
 <Button Content="Click me">
@@ -156,24 +149,6 @@ MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutIte
 </Button>
 ````
 
-상황에 맞는 메뉴를 열기 위해 다음 작업 중 하나를 수행할 수 있습니다.
-- 마우스 오른쪽 단추 클릭
-- 터치하여 길게 누르기
-- Shift + F10 입력
-- 키보드 메뉴 키 누르기
-- 게임 패드 메뉴 단추 누르기
-
-이중 어떤 작업을 선택하던지 상관없이 상황에 맞는 메뉴나 플라이아웃을 쉽게 열기 위해 앱은 대부분의 컨트롤에 대해 기본 클래스인 [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx)에서 새 [`ContextFlyout`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx) 속성을 활용할 수 있습니다.
-
-````xaml
-<Rectangle Height="100" Width="100" Fill="Red">
-  <Rectangle.ContextFlyout>
-     <MenuFlyout>
-        <MenuFlyoutItem Text="Close"/>
-     </MenuFlyout>
-  </Rectangle.Flyout>
-</Rectangle>
-````
 
 ## 관련 문서
 
@@ -184,6 +159,6 @@ MenuFlyout 클래스로 구현된 상황에 맞는 메뉴에는 [**MenuFlyoutIte
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

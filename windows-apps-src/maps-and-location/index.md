@@ -5,7 +5,7 @@ description: "이 섹션에서는 지도 표시, 지도 서비스 사용, 위치
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 translationtype: Human Translation
 ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
 
 ---
 
@@ -85,6 +85,6 @@ ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

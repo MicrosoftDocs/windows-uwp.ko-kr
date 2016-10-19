@@ -1,10 +1,10 @@
 ---
-Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예&#58; Win32, WPF 및 Windows Forms)을 수동으로 변환하는 방법을 알아봅니다."
+Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 수동으로 변환하는 방법을 알아봅니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환"
 translationtype: Human Translation
-ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
-ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
+ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
+ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
 
 변환기를 사용하면 작업이 편리하고 자동화되며 설치 관리자가 수행하는 작업에 대해 잘 알지 못할 때 유용합니다. Xcopy를 사용하여 앱을 설치하거나 앱의 설치 관리자 시스템 변경에 익숙한 경우 수동으로 앱 패키지와 매니페스트를 만들도록 선택할 수 있습니다.
 
-기본 패키지를 수동으로 만드는 단계는 다음과 같습니다.
+패키지를 수동으로 만드는 단계는 다음과 같습니다.
 
 ## 매니페스트를 직접 만듭니다.
 
@@ -103,6 +103,6 @@ MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

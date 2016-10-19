@@ -2,15 +2,16 @@
 author: QuinnRadich
 title: "Windows 10 버전 1511 - 2015년 11월의 새로운 기능"
 description: "Windows 10 버전 1511 및 새로운 개발자 도구는 새로운 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 제공합니다."
+keywords: "새 소식, 새 기능, 업데이트, 새로운 내용, Windows 10, 1511, 11월"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0bcec2e82afd81f68b36eab5719902d5fb7991fb
+ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
+ms.openlocfilehash: 7f6a0879db5e3ec660866c0c08b9b7c7ca773644
 
 ---
 
 # Windows의 새로운 기능
 
-Windows 10 Anniversary SDK Preview 빌드 14295 및 Windows 개발자 도구에 대한 업데이트는 유니버설 Windows 플랫폼에서 제공하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10 버전 1511 및 Windows 개발자 도구 업데이트는 유니버설 Windows 플랫폼을 기반으로 하는 도구, 기능 및 환경을 계속 제공합니다. Windows 10에 [도구 및 SDK를 설치](http://go.microsoft.com/fwlink/?LinkId=821431)하면 [새로운 유니버설 Windows 앱을 생성](https://msdn.microsoft.com/library/windows/apps/bg124288)하거나 [Windows의 기존 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt238321)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## Windows 10 버전 1511 - 2015년 11월
 
@@ -31,6 +32,6 @@ Windows 앱 인증 키트 | Windows 앱 인증 키트가 향상된 테스트로 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

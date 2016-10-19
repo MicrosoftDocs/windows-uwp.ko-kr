@@ -4,8 +4,8 @@ Description: "모든 UWP 앱에서 사용할 수 있는 일반 API 외에도 변
 Search.Product: eADQiWindows 10XVcnh
 title: "변환된 데스크톱 앱 확장"
 translationtype: Human Translation
-ms.sourcegitcommit: aa64c39c452beb2356186789a0d8bc44f79d82d2
-ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
+ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
+ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
 
 ---
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
 ```XML 
 <uap3:Extension Category="windows.appExecutionAlias" Executable="exes\launcher.exe" EntryPoint="Windows.FullTrustApplication">
     <uap3:AppExecutionAlias>
-        <desktop:ExecutionAlias Alias="Foo.exe">
+        <desktop:ExecutionAlias Alias="Foo.exe" />
     </uap3:AppExecutionAlias>
 </uap3:Extension>
 ```
@@ -179,6 +179,6 @@ ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
 - [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

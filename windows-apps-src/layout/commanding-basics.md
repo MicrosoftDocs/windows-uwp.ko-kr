@@ -7,7 +7,7 @@ label: Command design basics
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
+ms.openlocfilehash: 736ab8ebe74a293efd48ffd7dcd9d2026089147a
 
 ---
 
@@ -157,6 +157,6 @@ UWP(유니버설 Windows 플랫폼) 앱에서 *명령 요소*는 사용자가 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

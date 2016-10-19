@@ -5,7 +5,7 @@ title: "광고 캠페인에 대한 일반적인 질문"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 translationtype: Human Translation
 ms.sourcegitcommit: 3f0664e0387e206c432ce92aa221bb5c604bb675
-ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
+ms.openlocfilehash: 737ae16e7a6b0219730520f09ac4f79fe4da7a7f
 
 ---
 
@@ -61,6 +61,6 @@ ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

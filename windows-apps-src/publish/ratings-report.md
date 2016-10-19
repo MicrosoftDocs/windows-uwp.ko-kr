@@ -5,7 +5,7 @@ title: "평점 보고서"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
 
 ---
 
@@ -73,6 +73,6 @@ Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

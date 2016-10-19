@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Xbox 개발 환경에서의 UWP 설정"
 description: "Xbox 개발 환경에서의 UWP 설정 및 테스트 단계"
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
+ms.sourcegitcommit: e273cc55935f961e0b5493c0648347cba399fa3d
+ms.openlocfilehash: 5ffe0ce35e4aabcfc74e9bfa9017248320925603
 
 ---
 
@@ -29,7 +28,12 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
 최신 Windows 10 SDK Preview 빌드를 설치합니다. 설치 정보는 [개발자용 Insider Preview 업데이트 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=780552)를 참조하세요.
 
-  > **중요** &nbsp;&nbsp;최신 SDK를 설치해야 하지만 운영 체제는 최신 Windows Insider Preview 버전을 설치하지 _않아도_ 됩니다.
+> [!IMPORTANT]
+> 최신 SDK를 설치해야 하지만 운영 체제는 최신 Windows Insider Preview 버전을 설치하지 _않아도_ 됩니다.
+
+## 개발자 모드 사용
+
+개발 PC에서 응용 프로그램을 배포할 수 있으려면 먼저 Windows 메뉴(설정 / 업데이트 및 보안 / 개발자용 / 개발자 모드)를 통해 개발자 모드를 사용하도록 설정해야 합니다.
 
 ## Xbox One 설정
 
@@ -109,6 +113,6 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "대부분의 게임은 특정 시점에 로컬 저장소 또는 �
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
 
 ---
 
@@ -710,6 +710,6 @@ task<void> BasicLoader::LoadShaderAsync(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

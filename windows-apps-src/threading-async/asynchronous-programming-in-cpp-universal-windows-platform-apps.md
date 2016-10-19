@@ -5,7 +5,7 @@ description: "이 문서에서는 ppltasks.h의 concurrency 네임스페이스�
 title: "C++의 비동기 프로그래밍"
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b0a3faa56249ccfe693438c1077b7500736f3ec5
+ms.openlocfilehash: 12fdf79cbf3a79e4789131d0da8eee978b82cdf8
 
 ---
 
@@ -150,7 +150,7 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 
 작업이 취소되면 [**task\_canceled**][taskCanceled] 예외가 작업 체인으로 하향 전파됩니다. 단지 값 기반 연속 작업이 실행되지 않을 뿐이지만 [**task::get**][taskGet]이 호출될 경우 작업 기반 연속 작업에서 예외가 발생합니다. 오류 처리 연속 작업이 있으면 **task\_canceled** 예외를 명시적으로 catch하는지 확인하세요(이 예외는 [**Platform::Exception**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755825.aspx)에서 파생되지 않음).
 
-취소는 공동 작업입니다. 연속 작업에 단지 UWP 메서드를 호출하는 것 이상으로 장기 실행되는 일부 작업이 있을 경우 사용자 스스로 취소 토큰을 정기적으로 확인하고 취소된 토큰이 있으면 실행을 중지해야 합니다. 연속 작업에 할당된 모든 리소스를 정리한 후 [**cancel\_current\_task**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749945.aspx)를 호출하여 해당 작업을 취소하고 값 기반의 후속 연속 작업에 취소를 하향 전파합니다. [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/BR207871) 작업의 결과를 나타내는 작업 체인을 만들 수 있는 다른 예를 살펴봅시다. 사용자가 **취소** 단추를 선택하면 [**IAsyncInfo::Cancel**][IAsyncInfoCancel] 메서드가 호출되지 않습니다. 작업은 계속되는 대신 **nullptr**을 반환합니다. 연속 작업은 입력 매개 변수를 테스트하고 입력이 **nullptr**이면 **cancel\_current\_task**를 호출합니다.
+취소는 공동 작업입니다. 연속 작업에 단지 UWP 메서드를 호출하는 것 이상으로 장기 실행되는 일부 작업이 있을 경우 사용자 스스로 취소 토큰을 정기적으로 확인하고 취소된 토큰이 있으면 실행을 중지해야 합니다. 연속 작업에 할당된 모든 리소스를 정리한 후 [**cancel\_current\_task**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749945.aspx)를 호출하여 해당 작업을 취소하고 값 기반의 후속 연속 작업에 취소를 하향 전파합니다. [ **FileSavePicker** ](https://msdn.microsoft.com/library/windows/apps/BR207871) 작업의 결과를 나타내는 작업 체인을 만들 수 있는 다른 예를 살펴봅시다. 사용자가 **취소** 단추를 선택하면 [**IAsyncInfo::Cancel**][IAsyncInfoCancel] 메서드가 호출되지 않습니다. 작업은 계속되는 대신 **nullptr**을 반환합니다. 연속 작업은 입력 매개 변수를 테스트하고 입력이 **nullptr**이면 **cancel\_current\_task**를 호출합니다.
 
 자세한 내용은 [PPL에서의 취소](https://msdn.microsoft.com/library/windows/apps/xaml/dd984117.aspx)를 참조하세요.
 
@@ -221,9 +221,9 @@ void App::SetFeedText()
 }
 ```
 
-[**IAsyncAction**][IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
+[ **IAsyncAction** ] [IAsyncAction] 또는 [**IAsyncOperation**][IAsyncOperation]을 반환하지 않는 작업은 아파트 인식 작업이 아니며, 기본적으로 해당 작업의 연속 작업은 사용 가능한 첫 백그라운드 스레드에서 실행됩니다.
 
-[**task\_continuation\_context**](https://msdn.microsoft.com/library/windows/apps/xaml/hh749968.aspx)를 가져오는 [**task::then**][taskThen]의 오버로드를 사용하면 두 유형의 작업 모두에 대해 기본 스레드 컨텍스트를 무시할 수 있습니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이 경우 [**task\_continuation\_context::use\_arbitrary**][useArbitrary]를 전달하여 다중 스레드 아파트에서 사용 가능한 다음 스레드에서 작업을 예약할 수 있습니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
+[ **task\_continuation\_context** ](https://msdn.microsoft.com/library/windows/apps/xaml/hh749968.aspx)를 가져오는 [**task::then**][taskThen]의 오버로드를 사용하면 두 유형의 작업 모두에 대해 기본 스레드 컨텍스트를 무시할 수 있습니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이 경우 [**task\_continuation\_context::use\_arbitrary**][useArbitrary]를 전달하여 다중 스레드 아파트에서 사용 가능한 다음 스레드에서 작업을 예약할 수 있습니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
 
 다음 예제는 [**task\_continuation\_context::use\_arbitrary**][useArbitrary] 옵션을 지정하는 것이 언제 유용한지, 그리고 기본 연속 작업 컨텍스트가 스레드로부터 안전하지 않은 컬렉션에서 동시 작업을 동기화하는 데 있어 어떻게 유용한지를 보여 줍니다. 이 코드에서는 RSS 피드 및 각 URL에 대해 URL 목록 전체를 반복하고, 피드 데이터를 검색하기 위해 비동기 작업을 시작합니다. 피드가 검색되는 순서는 제어할 수 없지만 이는 그다지 중요하지 않습니다. 각 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR210642) 작업이 완료되면 첫 번째 연속 작업이 [**SyndicationFeed^**](https://msdn.microsoft.com/library/windows/apps/BR243485) 개체를 받은 다음 이를 사용하여 앱에서 정의된 `FeedData^` 개체를 초기화합니다. 이러한 각각의 작업은 상호 독립적이므로 **task\_continuation\_context::use\_arbitrary** 연속 작업 컨텍스트를 지정하여 잠재적으로 속도를 높일 수 있습니다. 그러나 각 `FeedData` 개체가 초기화된 후에는 스레드로부터 안전한 컬렉션이 아닌 [**Vector**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx)에 추가해야 합니다. 따라서 연속 작업을 만들고 [**task\_continuation\_context::use\_current**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx)를 지정하여 동일한 ASTA(응용 프로그램 단일 스레드 아파트) 컨텍스트에서 모든 [**Append**](https://msdn.microsoft.com/library/windows/apps/BR206632) 호출이 발생하게 합니다. [**task\_continuation\_context::use\_default**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750085.aspx)는 기본 컨텍스트이므로 명시적으로 지정할 필요가 없지만 여기서는 명확히 하기 위해 지정합니다.
 
@@ -319,6 +319,6 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

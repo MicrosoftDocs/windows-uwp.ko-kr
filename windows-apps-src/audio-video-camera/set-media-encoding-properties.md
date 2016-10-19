@@ -2,14 +2,14 @@
 author: drewbatgit
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
 description: "이 문서에서는 IMediaEncodingProperties 인터페이스를 사용하여 카메라 미리 보기 스트림과 캡처한 사진 및 동영상의 해상도 및 프레임 속도를 설정하는 방법을 보여 줍니다."
-title: "미디어 인코딩 속성 설정"
+title: "MediaCapture에 대한 미디어 인코딩 속성 설정"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 1b20578fe52c004a55c5099ccb89e8c180571009
 
 ---
 
-# 미디어 인코딩 속성 설정
+# MediaCapture에 대한 미디어 인코딩 속성 설정
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -20,8 +20,8 @@ ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
 
 이 문서의 코드는 [CameraResolution 샘플](http://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409)에서 조정되었습니다. 샘플을 다운로드하여 상황에 맞게 사용되는 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 샘플을 사용할 수 있습니다.
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
 ## 미디어 인코딩 속성 도우미 클래스
 
@@ -90,6 +90,6 @@ ms.openlocfilehash: d7b44ce9db2e3d540036525c4b43e155a9500010
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

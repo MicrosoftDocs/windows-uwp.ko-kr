@@ -5,7 +5,7 @@ description: "OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포�
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
 translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+ms.openlocfilehash: 1be2c49dc88dcaecfa1d349f9dda7a9cc0619b92
 
 ---
 
@@ -571,6 +571,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

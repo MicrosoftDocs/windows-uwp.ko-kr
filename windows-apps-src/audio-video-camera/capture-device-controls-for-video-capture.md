@@ -1,20 +1,20 @@
 ---
 author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: "이 문서에서는 비디오 디바이스 컨트롤로 HDR 비디오 및 노출 우선 순위를 비롯한 향상된 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다."
-title: "비디오 캡처를 위한 캡처 디바이스 컨트롤"
+description: "이 문서에서는 수동 디바이스 컨트롤을 사용하여 HDR 비디오, 노출 우선 순위 등의 향상된 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다."
+title: "비디오 캡처를 위한 수동 카메라 컨트롤"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
+ms.sourcegitcommit: daeb92e51a005825f1e410da9c924afc723297f1
+ms.openlocfilehash: 5a51ee9c67eb421c2478ca46f415879afb609210
 
 ---
 
-# 비디오 캡처를 위한 캡처 디바이스 컨트롤
+# 비디오 캡처를 위한 수동 카메라 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에서는 비디오 디바이스 컨트롤로 HDR 비디오 및 노출 우선 순위를 비롯한 향상된 비디오 캡처 시나리오를 구현하는 방법을 보여 줍니다.
+이 문서에서는 수동 디바이스 컨트롤을 사용하여 HDR 비디오, 노출 우선 순위 등의 향상된 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다.
 
 이 문서에서 설명하는 비디오 디바이스 컨트롤은 모두 동일한 패턴을 사용하여 앱에 추가됩니다. 먼저, 앱이 실행 중인 현재 디바이스에서 컨트롤이 지원되는지를 확인합니다. 컨트롤이 지원되는 경우 컨트롤에 대해 원하는 모드를 설정합니다. 일반적으로 특정 컨트롤이 현재 디바이스에서 지원되지 않으면 사용자가 기능을 사용하도록 설정할 수 있는 UI 요소를 사용하지 않도록 설정하거나 숨겨야 합니다.
 
@@ -22,8 +22,8 @@ ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
-**참고**  
-이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> [!NOTE] 
+> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
 ## HDR 비디오
 
@@ -47,7 +47,8 @@ HDR 비디오 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지
 
 ## 관련 항목
 
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [카메라](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -58,6 +59,6 @@ HDR 비디오 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "Windows의 게임 프로그래밍에 대한 자세한 내용은 �
 ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 598d5d1afffd394b66aa7af23f22e7a13af48208
+ms.openlocfilehash: 9d7e21a10686a22299e644600414c73f5b4991e7
 
 ---
 
@@ -85,6 +85,6 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

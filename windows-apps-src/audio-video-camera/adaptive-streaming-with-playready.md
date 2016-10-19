@@ -4,8 +4,8 @@ ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다."
 title: "PlayReady를 사용한 적응 스트리밍"
 translationtype: Human Translation
-ms.sourcegitcommit: 176f8989aea5402106e3c14144948cec87a5dc27
-ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
+ms.sourcegitcommit: 8534598b1f3cf49b15a73d03f6f19e67877b25d0
+ms.openlocfilehash: 22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95
 
 ---
 
@@ -23,9 +23,9 @@ HLS(Apple의 HTTP 라이브 스트리밍)는 PlayReady에서 지원되지 않습
 
 이 문서에서는 PlayReady 관련 적응 스트리밍 측면만 다룹니다. 적응 스트리밍의 일반적인 구현에 대한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조하세요.
 
-이 문서에서는 GitHub의 Microsoft **Windows-universal-samples** 리포지토리에서 [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) 코드를 사용합니다. 시나리오 4에서는 PlayReady를 이용한 적응 스트리밍 사용을 다룹니다. 저장소의 루트 수준으로 이동하고 **ZIP 다운로드** 단추를 클릭하여 ZIP 파일의 리포지토리를 다운로드할 수 있습니다.
+이 문서에서는 GitHub의 Microsoft **Windows-universal-samples** 리포지토리에서 [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) 코드를 사용합니다. 시나리오 4에서는 PlayReady를 이용한 적응 스트리밍 사용을 다룹니다. 저장소의 루트 수준으로 이동하고 **ZIP 다운로드** 단추를 선택하여 ZIP 파일의 리포지토리를 다운로드할 수 있습니다.
 
-다음 using 문이 필요합니다.
+다음 **using** 문이 필요합니다.
 
 ```csharp
 using LicenseRequest;
@@ -177,7 +177,7 @@ async Task<bool> ReactiveIndivRequest(
 }
 ```
 
-또는 개별화 서비스 요청을 사전 대응적으로 만들 수 있으며 이 경우에는 `ProtectionManager_ServiceRequested`의 `ReactiveIndivRequest`을 호출하는 코드 대신 아래 함수를 호출합니다.
+또는 개별화 서비스 요청을 사전 대응적으로 만들 수 있으며 이 경우에는 `ProtectionManager_ServiceRequested`의 `ReactiveIndivRequest`을 호출하는 코드 대신 다음 함수를 호출합니다.
 
 ```csharp
 async void ProActiveIndivRequest()
@@ -189,7 +189,7 @@ async void ProActiveIndivRequest()
 
 ## 라이선스 취득 서비스 요청
 
-요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285)인 경우에는 아래 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 MediaProtectionServiceCompletion 개체에 알리고 요청을 완료합니다.
+요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285)인 경우에는 다음 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 **MediaProtectionServiceCompletion** 개체에 알리고 요청을 완료합니다.
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -292,16 +292,15 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 적응 스트리밍의 시작을 처리하는 모든 이벤트(예: 단추 Click 이벤트)에서 이 기능을 호출할 수 있습니다.
 
- 
-
- 
-
+## 참고 항목
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

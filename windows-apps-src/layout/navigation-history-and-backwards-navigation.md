@@ -7,8 +7,8 @@ isNew: true
 label: History and backwards navigation
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
+ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
+ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
 
 ---
 
@@ -29,8 +29,8 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
         <td>뒤로 단추 동작</td>
      </tr>
     <tr>
-        <td>휴대폰</td>
-        <td>![system back on a phone](images/back-systemback-phone.png)</td>
+        <td>Phone</td>
+        <td>![휴대폰의 시스템 뒤로 기능](images/back-systemback-phone.png)</td>
         <td>
         <ul>
 <li>항상 제공됩니다.</li>
@@ -41,7 +41,7 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
      </tr>
      <tr>
         <td>태블릿</td>
-        <td>![system back on a tablet (in tablet mode)](images/back-systemback-tablet.png)</td>
+        <td>![태블릿의 시스템 뒤로 기능(태블릿 모드)](images/back-systemback-tablet.png)</td>
         <td>
 <ul>
 <li>태블릿 모드에서 항상 제공됩니다.
@@ -56,7 +56,7 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
      </tr>
     <tr>
         <td>PC, 노트북, 태블릿</td>
-        <td>![system back on a pc or laptop](images/back-systemback-pc.png)</td>
+        <td>![PC 또는 노트북의 시스템 뒤로 기능](images/back-systemback-pc.png)</td>
         <td>
 <ul>
 <li>데스크톱 모드에서는 옵션입니다.
@@ -73,7 +73,7 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
      </tr>
     <tr>
         <td>Surface Hub</td>
-        <td>![system back on a surface hub](images/nav/nav-back-surfacehub.png)</td>
+        <td>![Surface Hub의 시스템 뒤로 기능](images/nav/nav-back-surfacehub.png)</td>
         <td>
 <ul>
 <li>옵션.</li>
@@ -90,74 +90,75 @@ ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
 
 <table>
 <tr><td colspan="3">입력 장치</td></tr>
-<tr><td>키보드</td><td>![keyboard](images/keyboard-wireframe.png)</td><td>Windows 키 + 백스페이스</td></tr>
-<tr><td>Cortana</td><td>![speech](images/speech-wireframe.png)</td><td>"안녕 코타나, 뒤로 이동"이라고 말하기</td></tr>
+<tr><td>Keyboard</td><td>![Keyboard](images/keyboard-wireframe.png)</td><td>Windows 키 + 백스페이스</td></tr>
+<tr><td>Cortana</td><td>![음성](images/speech-wireframe.png)</td><td>"안녕 코타나, 뒤로 이동"이라고 말하기</td></tr>
 </table>
  
 
 앱이 휴대폰이나 태블릿 또는 시스템 뒤로 기능이 설정된 PC 또는 노트북에서 실행될 경우 시스템은 사용자가 뒤로 단추를 누를 때 앱에 알립니다. 사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
 
 
-## <span id="Enable_system_back_navigation_support"></span><span id="enable_system_back_navigation_support"></span><span id="ENABLE_SYSTEM_BACK_NAVIGATION_SUPPORT"></span>시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
+## 시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
 
 
 앱은 모든 하드웨어 및 소프트웨어 시스템 뒤로 단추에 대해 뒤로 탐색 기능을 사용하도록 설정해야 합니다. [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 수신기를 등록하고 해당 처리기를 정의하여 이 작업을 수행합니다.
 
 여기서는 App.xaml 코드 숨김 파일에서 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 전역 수신기를 등록합니다. 뒤로 탐색에서 특정 페이지를 제외하려는 경우 각 페이지에 이 이벤트를 등록하거나, 페이지를 표시하기 전에 페이지 수준 코드를 실행할 수 있습니다.
 
-```CSharp
+> [!div class="tabbedCodeSnippets"]
+```csharp
+Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += 
+    App_BackRequested;
+```
+```cpp
 Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
     BackRequested += ref new Windows::Foundation::EventHandler<
     Windows::UI::Core::BackRequestedEventArgs^>(
         this, &amp;App::App_BackRequested);
 ```
 
-```CSharp
-Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += 
-    App_BackRequested;
-```
-
 다음은 앱의 루트 프레임에서 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568)을 호출하는 해당 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트 처리기입니다.
 
 이 처리기는 전역 뒤로 이벤트에서 호출됩니다. 앱 내 뒤로 스택이 비어 있으면 시스템이 앱 스택에서 이전 앱으로 이동하거나 시작 화면으로 이동할 수 있습니다. 데스크톱 모드에서는 앱 뒤로 스택이 없으며 사용자는 앱 내 뒤로 스택이 고갈된 경우에도 계속 앱에 있습니다.
 
-```CSharp
-void App::App_BackRequested(
-    Platform::Object^ sender, 
-    Windows::UI::Core::BackRequestedEventArgs^ e)
-{
-    Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
-    if (rootFrame == nullptr)
-        return;
-
-    // Navigate back if possible, and if the event has not
-    // already been handled.
-    if (rootFrame->CanGoBack &amp;&amp; e->Handled == false)
-    {
-        e->Handled = true;
-        rootFrame->GoBack();
-    }
-}
+> [!div class="tabbedCodeSnippets"]
+```csharp
+>private void App_BackRequested(object sender, 
+>    Windows.UI.Core.BackRequestedEventArgs e)
+>{
+>    Frame rootFrame = Window.Current.Content as Frame;
+>    if (rootFrame == null)
+>        return;
+>
+>    // Navigate back if possible, and if the event has not 
+>    // already been handled .
+>    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
+>    {
+>        e.Handled = true;
+>        rootFrame.GoBack();
+>    }
+>}
+```
+```cpp
+>void App::App_BackRequested(
+>    Platform::Object^ sender, 
+>    Windows::UI::Core::BackRequestedEventArgs^ e)
+>{
+>    Frame^ rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
+>    if (rootFrame == nullptr)
+>        return;
+>
+>    // Navigate back if possible, and if the event has not
+>    // already been handled.
+>    if (rootFrame->CanGoBack && e->Handled == false)
+>    {
+>        e->Handled = true;
+>        rootFrame->GoBack();
+>    }
+>}
 ```
 
-```CSharp
-private void App_BackRequested(object sender, 
-    Windows.UI.Core.BackRequestedEventArgs e)
-{
-    Frame rootFrame = Window.Current.Content as Frame;
-    if (rootFrame == null)
-        return;
-
-    // Navigate back if possible, and if the event has not 
-    // already been handled .
-    if (rootFrame.CanGoBack &amp;&amp; e.Handled == false)
-    {
-        e.Handled = true;
-        rootFrame.GoBack();
-    }
-}
-```
-## <span id="Enable_the_title_bar_back_button"></span><span id="enable_the_title_bar_back_button"></span><span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"></span>제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
+## 제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
 
 
 데스크톱 모드를 지원하고(일반적으로 PC 및 노트북이지만 일부 태블릿도 해당) 설정이 사용하도록 설정된(**설정 &gt; 시스템 &gt; 태블릿 모드**) 디바이스는 시스템 뒤로 단추가 포함된 전역 탐색 모음을 제공하지 않습니다.
@@ -181,63 +182,64 @@ private void App_BackRequested(object sender,
 
 이 예제에서는 뒤로 스택의 각 페이지를 나열하고 프레임의 [**CanGoBack**](https://msdn.microsoft.com/library/windows/apps/br242685) 속성 값이 **true**인 경우 뒤로 단추를 사용하도록 설정합니다.
 
-```ManagedCPlusPlus
-void StartPage::OnNavigatedTo(NavigationEventArgs^ e)
-{
-    auto rootFrame = dynamic_cast<Windows::UI::Xaml::Controls::Frame^>(Window::Current->Content);
+> [!div class="tabbedCodeSnippets"]
+>```csharp
+>protected override void OnNavigatedTo(NavigationEventArgs e)
+>{
+>    Frame rootFrame = Window.Current.Content as Frame;
+>
+>    string myPages = "";
+>    foreach (PageStackEntry page in rootFrame.BackStack)
+>    {
+>        myPages += page.SourcePageType.ToString() + "\n";
+>    }
+>    stackCount.Text = myPages;
+>
+>    if (rootFrame.CanGoBack)
+>    {
+>        // Show UI in title bar if opted-in and in-app backstack is not empty.
+>        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
+>            AppViewBackButtonVisibility.Visible;
+>    }
+>    else
+>    {
+>        // Remove the UI from the title bar if in-app back stack is empty.
+>        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
+>            AppViewBackButtonVisibility.Collapsed;
+>    }
+>}
+>```
+>```cpp
+>void StartPage::OnNavigatedTo(NavigationEventArgs^ e)
+>{
+>    auto rootFrame = dynamic_cast<Windows::UI::Xaml::Controls::Frame^>(Window::Current->Content);
+>
+>    Platform::String^ myPages = "";
+>
+>    if (rootFrame == nullptr)
+>        return;
+>
+>    for each (PageStackEntry^ page in rootFrame->BackStack)
+>    {
+>        myPages += page->SourcePageType.ToString() + "\n";
+>    }
+>    stackCount->Text = myPages;
+>
+>    if (rootFrame->CanGoBack)
+>    {
+>        // If we have pages in our in-app backstack and have opted in to showing back, do so
+>        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
+>            Windows::UI::Core::AppViewBackButtonVisibility::Visible;
+>    }
+>    else
+>    {
+>        // Remove the UI from the title bar if there are no pages in our in-app back stack
+>        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
+>            Windows::UI::Core::AppViewBackButtonVisibility::Collapsed;
+>    }
+>}
+>```
 
-    Platform::String^ myPages = "";
-
-    if (rootFrame == nullptr)
-        return;
-
-    for each (PageStackEntry^ page in rootFrame->BackStack)
-    {
-        myPages += page->SourcePageType.ToString() + "\n";
-    }
-    stackCount->Text = myPages;
-
-    if (rootFrame->CanGoBack)
-    {
-        // If we have pages in our in-app backstack and have opted in to showing back, do so
-        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
-            Windows::UI::Core::AppViewBackButtonVisibility::Visible;
-    }
-    else
-    {
-        // Remove the UI from the title bar if there are no pages in our in-app back stack
-        Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility =
-            Windows::UI::Core::AppViewBackButtonVisibility::Collapsed;
-    }
-}
-```
-
-```CSharp
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    Frame rootFrame = Window.Current.Content as Frame;
-
-    string myPages = "";
-    foreach (PageStackEntry page in rootFrame.BackStack)
-    {
-        myPages += page.SourcePageType.ToString() + "\n";
-    }
-    stackCount.Text = myPages;
-
-    if (rootFrame.CanGoBack)
-    {
-        // Show UI in title bar if opted-in and in-app backstack is not empty.
-        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
-            AppViewBackButtonVisibility.Visible;
-    }
-    else
-    {
-        // Remove the UI from the title bar if in-app back stack is empty.
-        SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = 
-            AppViewBackButtonVisibility.Collapsed;
-    }
-}
-```
 
 ### 사용자 지정 뒤로 탐색 동작 지침
 
@@ -295,14 +297,17 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 </table>
 
 
-### <span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>다시 시작
+### 다시 시작
 
 사용자가 다른 앱으로 전환했다가 해당 앱으로 돌아올 경우 탐색 기록의 마지막 페이지로 돌아오는 것이 좋습니다.
 
 
+## 샘플 다운로드
+*   [뒤로 단추 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
+    뒤로 단추 이벤트에 대한 이벤트 처리기를 설정하고 앱이 창 형식의 데스크톱 모드일 때 사용할 제목 표시줄 뒤로 단추를 설정하는 방법을 보여 줍니다.
 
-
-
+## 관련 문서
+* [탐색 기본 사항](navigation-basics.md)
 
  
 
@@ -312,6 +317,6 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

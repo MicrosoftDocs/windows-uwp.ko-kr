@@ -5,7 +5,7 @@ description: "Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 �
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
+ms.openlocfilehash: 723321983418a714ec375db99a0df7f8455c0464
 
 ---
 
@@ -231,6 +231,6 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

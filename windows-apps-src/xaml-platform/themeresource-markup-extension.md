@@ -5,7 +5,7 @@ title: "ThemeResource 태그 확장"
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 translationtype: Human Translation
 ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
-ms.openlocfilehash: 246c991bbdbc95e73ea8d4884cd4d617592bfc51
+ms.openlocfilehash: 803c62987c3a019fc576c6f1d0c343e042ba947b
 
 ---
 
@@ -156,6 +156,6 @@ XAML 페이지에서 **{ThemeResource}** 태그 확장을 사용하는 경우 Mi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

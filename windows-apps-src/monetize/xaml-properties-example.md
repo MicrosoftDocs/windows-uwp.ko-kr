@@ -4,8 +4,8 @@ ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
 description: "AdControl 속성을 값에 할당하는 방법을 알아봅니다."
 title: "XAML 속성 예제"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: fb0533aa0ea760bca686276f886f0afcb21bf6f7
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
 # XAML 속성 예제
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 다음 XAML 예제에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 속성을 값에 할당하는 방법을 보여 줍니다. 이 속성이 설정되지 않은 경우 **AdControl**은 기본값을 사용하여 앱의 사용자 환경과 일치하는 광고를 만듭니다.
 
@@ -38,6 +38,6 @@ IsEngagedChanged="OnAdEngagedChanged"
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -7,7 +7,7 @@ label: Speech interactions
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
+ms.openlocfilehash: d32c38c2f939e03375630439f2aa512004601a70
 
 ---
 
@@ -231,8 +231,8 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 ## 관련 문서
 
 * [음성 조작](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* [Cortana 조작](https://msdn.microsoft.com/library/windows/apps/mt185598) 
-            **샘플**
+* [Cortana 조작](https://msdn.microsoft.com/library/windows/apps/mt185598)
+ **샘플**
 * [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -243,6 +243,6 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

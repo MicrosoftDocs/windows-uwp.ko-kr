@@ -5,11 +5,11 @@ description: "이 연습에서는 Visual Basic 또는 C#과 함께 .NET Framewor
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: c521061d9fdd3eb2c25e3072182fb1d7823f13ba
+ms.openlocfilehash: ff9db6298fd6d0083ae6923f3666ce4315573058
 
 ---
 
-# 연습&#58; 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
+# 연습: 단순한 Windows 런타임 구성 요소를 만들고 JavaScript에서 이를 호출
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -738,6 +738,6 @@ asyncCancel 함수는 WinJS.Promise 개체의 cancel 메서드만 호출합니�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

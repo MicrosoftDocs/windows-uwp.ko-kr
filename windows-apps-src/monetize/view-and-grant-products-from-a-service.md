@@ -1,26 +1,26 @@
 ---
 author: mcleanbyron
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
-description: "앱과 IAP(앱에서 바로 구매 제품) 카탈로그가 있는 경우 Windows 스토어 컬렉션 API 및 Windows 스토어 구매 API를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다."
+description: "앱과 추가 기능 카탈로그가 있는 경우 Windows 스토어 컬렉션 API 및 Windows 스토어 구매 API를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다."
 title: "서비스에서 제품 보기 및 권한 부여"
 translationtype: Human Translation
-ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
-ms.openlocfilehash: 1e17703442ce539de941890a0616fc5e08391d70
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 2bd637985441cf2f8fbe8366f207369b3a4dc696
 
 ---
 
 # 서비스에서 제품 보기 및 권한 부여
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-앱과 IAP(앱에서 바로 구매 제품) 카탈로그가 있는 경우 *Windows 스토어 컬렉션 API* 및 *Windows 스토어 구매 API*를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다.
 
-이러한 API는 플랫폼 간 서비스에서 지원하는 IAP 카탈로그와 개발자가 사용하도록 설계된 REST 메서드로 구성됩니다. 이러한 API를 사용하여 다음 작업을 수행할 수 있습니다.
+앱과 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 카탈로그가 있는 경우 *Windows 스토어 컬렉션 API* 및 *Windows 스토어 구매 API*를 사용하여 서비스에서 이러한 제품에 대한 소유권 정보에 액세스할 수 있습니다.
 
--   Windows 스토어 컬렉션 API: 지정된 사용자가 소유한 앱 및 IAP를 쿼리하거나 소모성 제품을 처리됨으로 보고합니다.
--   Windows 스토어 구매 API: 지정된 사용자에게 무료 앱 또는 IAP를 허가합니다.
+이러한 API는 플랫폼 간 서비스에서 지원하는 추가 기능 카탈로그와 개발자가 사용하도록 설계된 REST 메서드로 구성됩니다. 이러한 API를 사용하여 다음 작업을 수행할 수 있습니다.
+
+-   Windows 스토어 컬렉션 API: 지정된 사용자가 소유한 앱 및 추가 기능을 쿼리하거나 소모성 제품을 처리됨으로 보고합니다.
+-   Windows 스토어 구매 API: 지정된 사용자에게 무료 앱 또는 추가 기능을 허가합니다.
 
 ## Windows 스토어 컬렉션 API 및 Windows 스토어 구매 API 사용
 
@@ -59,16 +59,16 @@ Windows 스토어 컬렉션 API 및 구매 API는 고객 소유권 정보에 액
 
 ### 2단계: Windows 개발자 센터 대시보드에서 Azure AD 클라이언트 ID를 응용 프로그램에 연결
 
-Windows 스토어 컬렉션 API는 Azure AD 클라이언트 ID에 연결한 앱 및 IAP에 대한 사용자 소유권 정보에만 액세스 권한을 제공합니다.
+Windows 스토어 컬렉션 API는 Azure AD 클라이언트 ID에 연결한 앱 및 추가 기능에 대한 사용자 소유권 정보에만 액세스 권한을 제공합니다.
 
 1.  [Windows 개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인하고 앱을 선택합니다.
-2.  **서비스**&gt;**제품 컬렉션 및 구매** 페이지로 이동하고 Azure AD 클라이언트 ID를 사용 가능한 필드 중 하나에 입력합니다.
+2.  **서비스** &gt; **제품 컬렉션 및 구매** 페이지로 이동하고 Azure AD 클라이언트 ID를 사용 가능한 필드 중 하나에 입력합니다.
 
 ### 3단계: Azure AD에서 액세스 토큰 검색
 
 Windows 스토어 ID 키를 검색하거나 Windows 스토어 컬렉션 API 또는 구매 API를 호출하기 전에 먼저 Azure AD에서 게시자 ID를 나타내는 세 개의 액세스 토큰을 요청해야 합니다. 이러한 각각의 액세스 토큰은 다른 대상 그룹 URI와 연결되며 각 토큰은 다른 API 호출에 사용됩니다. 각 토큰의 수명은 60분이며 만료된 이후 새로 고칠 수 있습니다.
 
-액세스 토큰을 만들려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://msdn.microsoft.com/library/azure/dn645543.aspx)의 지침에 따라 서비스에서 OAuth 2.0 API를 사용합니다. 각 토큰에 대해 다음 매개 변수 데이터를 지정합니다.
+액세스 토큰을 만들려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/)의 지침에 따라 서비스에서 OAuth 2.0 API를 사용합니다. 각 토큰에 대해 다음 매개 변수 데이터를 지정합니다.
 
 -   *client\_id* 및 *client\_secret* 매개 변수에 대해 [Azure 관리 포털](http://manage.windowsazure.com/)에서 가져온 응용 프로그램에 대한 클라이언트 ID 및 클라이언트 암호를 지정합니다. 두 매개 변수 모두 Windows 스토어 컬렉션 API 또는 구매 API가 필요로 하는 인증 수준의 액세스 토큰을 생성하기 위해 필요합니다.
 -   *resource* 매개 변수에 대해 다음 앱 ID URI(이전에 응용 프로그램 매니페스트의 `"identifierUris"` 섹션에 추가한 URI와 동일함) 중 하나를 지정합니다. 이 프로세스가 끝날 때 세 개의 액세스 토큰이 있어야 하며 각 토큰에는 이러한 앱 ID URI와 연결된 하나의 URI가 있어야 합니다.
@@ -78,7 +78,7 @@ Windows 스토어 ID 키를 검색하거나 Windows 스토어 컬렉션 API 또�
 
     > **중요** 사용자 서비스에 안전하게 저장된 액세스 토큰을 가진 `https://onestore.microsoft.com` 대상 그룹만 사용합니다. 이 대상 그룹의 액세스 토큰을 서비스 외부에 노출시키면 서비스 재생 공격에 취약해질 수 있습니다.
 
-액세스 토큰의 구조에 대한 자세한 내용은 [지원되는 토큰 및 클레임 유형](http://go.microsoft.com/fwlink/?LinkId=722501)을 참조하세요.
+만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다. 액세스 토큰의 구조에 대한 자세한 내용은 [지원되는 토큰 및 클레임 유형](http://go.microsoft.com/fwlink/?LinkId=722501)을 참조하세요.
 
 > **중요** 앱이 아닌 서비스의 컨텍스트에서만 Azure AD 액세스 토큰을 만들어야 합니다. 앱에 전송되면 클라이언트 암호가 손상될 수 있습니다.
 
@@ -176,6 +176,6 @@ Windows 스토어 ID 키는 액세스하려는 제품 소유권 정보의 소유
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

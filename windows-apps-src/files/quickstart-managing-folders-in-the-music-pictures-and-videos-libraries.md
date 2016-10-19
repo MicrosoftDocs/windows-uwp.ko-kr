@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "음악, 사진 및 비디오 라이브러리의 파일 및 폴더"
 description: "음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
+ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
+ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
 ---
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
     using Windows.Foundation.Collections;
 
     // ...
-            
+
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
@@ -136,6 +136,33 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 
 ## 미디어 라이브러리 쿼리
 
+파일의 컬렉션을 가져오려면 원하는 파일 형식과 라이브러리를 지정합니다.
+
+```cs
+...
+using Windows.Storage;
+using Windows.Storage.Search;
+...
+
+private async void getSongs()
+{
+    QueryOptions queryOption = new QueryOptions
+        (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
+
+    queryOption.FolderDepth = FolderDepth.Deep
+
+    Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
+
+    var files = await KnownFolders.MusicLibrary.CreateFileQueryWithOptions
+      (queryOption).GetFilesAsync();
+
+    foreach (var file in files)
+    {
+        // do something with the music files.
+    }
+
+}
+```
 
 ### 내부 저장소 및 이동식 저장소를 포함하는 쿼리 결과
 
@@ -149,110 +176,6 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 
 `await KnownFolders.PicturesLibrary.GetFilesAsync()`을(를) 호출하여 사진 라이브러리의 콘텐츠를 쿼리하는 경우 결과에 internalPic.jpg 및 SDPic.jpg 모두가 포함됩니다.
 
-### 심층 쿼리
-
-심층 쿼리를 사용하여 미디어 라이브러리의 전체 콘텐츠를 신속하게 열거합니다.
-
-심층 쿼리는 지정된 미디어 형식의 파일만 반환합니다. 예를 들어, 심층 쿼리로 음악 라이브러리를 쿼리하는 경우 쿼리 결과에는 음악 폴더에서 발견한 그림 파일은 포함되지 않습니다.
-
-카메라가 모든 사진의 저해상도 이미지와 고해상도 이미지를 모두 저장하는 장치의 경우 심층 쿼리는 저해상도 이미지만 반환합니다.
-
-카메라 롤과 저장된 사진 폴더는 심층 쿼리를 지원하지 않습니다.
-
-사용할 수 있는 심층 쿼리는 다음과 같습니다.
-
-**사진 라이브러리**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-**음악 라이브러리**
-
--   `GetFilesAsync(CommonFileQuery.OrderByName)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByArtist)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbum)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbumArtist)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByGenre)`
-
-**동영상 라이브러리.**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-### 일반 쿼리
-
-라이브러리에 있는 모든 파일과 폴더의 전체 목록을 얻으려면 `GetFilesAsync(CommonFileQuery.DefaultQuery)`을(를)호출합니다. 이 메서드는 형식에 상관없이 라이브러리의 모든 파일을 반환합니다. 이 쿼리는 단순 쿼리이므로 사용자가 라이브러리에 하위 폴더를 만든 경우 하위 폴더의 콘텐츠를 재귀적으로 열거해야 합니다.
-
-기본 쿼리에서 인식하지 않는 형식의 미디어 파일을 반환하거나 지정된 형식이 아닌 파일을 포함하는 라이브러리의 모든 파일을 반환하려면 일반 쿼리를 사용합니다. 예를 들어, 일반 쿼리로 음악 라이브러리를 쿼리하는 경우 쿼리 결과에는 음악 폴더에서 쿼리가 발견한 모든 그림 파일이 포함됩니다.
-
-### 샘플 쿼리
-
-디바이스와 선택적 SD 카드에 다음 이미지에 표시된 폴더와 파일이 포함되어 있다고 가정합니다.
-
-![포함 파일 ](images/phone-media-queries.png)
-
-다음은 쿼리와 반환되는 결과의 몇 가지 예제입니다.
-
-| 쿼리 | 결과 |
-|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| KnownFolders.PicturesLibrary.GetItemsAsync();  | - 내부 저장소의 카메라 앨범 폴더 <br>- SD 카드의 카메라 앨범 폴더 <br>- 내부 저장소에 저장된 사진 폴더 <br>- SD 카드에 저장된 사진 폴더 <br><br>이 쿼리는 일반 쿼리이므로 사진 폴더의 직속 하위만 표시됩니다. |
-| KnownFolders.PicturesLibrary.GetFilesAsync();  | 결과가 없습니다. <br><br>이 쿼리는 일반 쿼리이므로 사진 폴더의 직속 하위에 아무 파일도 없습니다. |
-| KnownFolders.PicturesLibrary.GetFilesAsync(CommonFileQuery.OrderByDate); | - SD 카드의 4-3-2012.jpg 파일 <br>- 내부 저장소의 1-1-2014.jpg 파일 <br>- 내부 저장소의 1-2-2014.jpg 파일 <br>- SD 카드의 1-6-2014.jpg 파일 <br><br>이 쿼리는 심층 쿼리이므로 사진 폴더와 하위 폴더의 콘텐츠가 반환됩니다. |
-| KnownFolders.CameraRoll.GetFilesAsync(); | - 내부 저장소의 1-1-2014.jpg 파일 <br>- SD 카드의 4-3-2012.jpg 파일 <br><br>일반 쿼리입니다. 결과의 순서는 일정하지 않습니다. |
-
- 
-## 미디어 라이브러리 기능 및 파일 형식
-
-
-앱에서 미디어 파일에 액세스할 수 있도록 앱 매니페스트 파일에서 지정할 수 있는 기능은 다음과 같습니다.
-
--   **음악**. 앱 매니페스트 파일에서 **Music Library** 접근 권한 값을 지정하여 앱이 다음과 같은 파일 형식의 파일을 표시 및 액세스할 수 있도록 합니다.
-
-    -   .qcp
-    -   .wav
-    -   .mp3
-    -   .m4r
-    -   .m4a
-    -   .aac
-    -   .amr
-    -   .wma
-    -   .3g2
-    -   .3gp
-    -   .mp4
-    -   .wm
-    -   .asf
-    -   .3gpp
-    -   .3gp2
-    -   .mpa
-    -   .adt
-    -   .adts
-    -   .pya
--   **사진**. 앱 매니페스트 파일에서 **Pictures Library** 접근 권한 값을 지정하여 앱이 다음과 같은 파일 형식의 파일을 표시 및 액세스할 수 있도록 합니다.
-
-    -   .jpeg
-    -   .jpe
-    -   .jpg
-    -   .gif
-    -   .tiff
-    -   .tif
-    -   .png
-    -   .bmp
-    -   .wdp
-    -   .jxr
-    -   .hdp
--   **동영상**. 앱 매니페스트 파일에서 **Video Library** 접근 권한 값을 지정하여 앱이 다음과 같은 파일 형식의 파일을 표시 및 액세스할 수 있도록 합니다.
-
-    -   .wm
-    -   .m4v
-    -   .wmv
-    -   .asf
-    -   .mov
-    -   .mp4
-    -   .3g2
-    -   .3gp
-    -   .mp4v
-    -   .avi
-    -   .pyv
-    -   .3gpp
-    -   .3gp2
 
 ## 사진 작업
 
@@ -270,7 +193,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 
   propertiesToSave.Add("System.CreatorOpenWithUIOptions", 1);
   propertiesToSave.Add("System.CreatorAppId", appId);
- 
+
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
@@ -323,10 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

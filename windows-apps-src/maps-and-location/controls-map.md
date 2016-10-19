@@ -5,7 +5,7 @@ title: "지도에 대한 지침"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
 translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
+ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
 
 ---
 
@@ -74,6 +74,6 @@ ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

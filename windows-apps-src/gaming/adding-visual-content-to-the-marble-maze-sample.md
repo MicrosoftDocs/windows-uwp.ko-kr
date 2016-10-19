@@ -5,7 +5,7 @@ description: "이 문서에서는 패턴을 학습하고 고유한 게임 콘텐
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
+ms.openlocfilehash: 70f35fe423b8ceb3e3e3e0c1c3c2563dc0d8cd61
 
 ---
 
@@ -905,6 +905,6 @@ else
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

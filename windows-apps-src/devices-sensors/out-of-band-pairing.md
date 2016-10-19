@@ -5,7 +5,7 @@ title: "대역 외 페어링"
 description: "대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 디바이스에 연결할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: d8d37b779a0f9a4bec36d73fcd2d35272c587b11
+ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
 
 ---
 # 대역 외 페어링
@@ -90,6 +90,6 @@ printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

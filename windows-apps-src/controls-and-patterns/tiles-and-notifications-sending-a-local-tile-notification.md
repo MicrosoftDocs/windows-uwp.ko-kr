@@ -6,11 +6,11 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # 로컬 타일 알림 보내기
 
 
@@ -25,14 +25,14 @@ Windows 10의 기본 앱 타일은 앱 매니페스트에서 정의되는 반면
 
  
 
-## <span id="Install_the_NuGet_package"></span><span id="install_the_nuget_package"></span><span id="INSTALL_THE_NUGET_PACKAGE"></span>NuGet 패키지 설치
+## NuGet 패키지 설치
 
 
 원시 XML 대신 개체로 타일 페이로드를 생성하여 작업을 간소화하는 [NotificationsExtensions NuGet 패키지](https://www.nuget.org/packages/NotificationsExtensions.Win10/)를 설치하는 것이 좋습니다.
 
 이 문서에 있는 인라인 코드 예제는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지가 설치된 C#용입니다. 고유한 XML을 만들려는 경우 문서의 끝 부분에서 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)가 없는 코드 예제를 찾을 수 있습니다.
 
-## <span id="Add_namespace_declarations"></span><span id="add_namespace_declarations"></span><span id="ADD_NAMESPACE_DECLARATIONS"></span>네임스페이스 선언 추가
+## 네임스페이스 선언 추가
 
 
 타일 API에 액세스하려면 [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661) 네임스페이스를 포함합니다. 타일 도우미 API를 활용할 수 있도록 **NotificationsExtensions.Tiles** 네임스페이스를 포함하는 것이 좋습니다(이러한 API에 액세스하려면 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지를 설치해야 함).
@@ -42,7 +42,7 @@ using Windows.UI.Notifications;
 using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
 ```
 
-## <span id="Create_the_notification_content"></span><span id="create_the_notification_content"></span><span id="CREATE_THE_NOTIFICATION_CONTENT"></span>알림 콘텐츠 만들기
+## 알림 콘텐츠 만들기
 
 
 Windows 10에서 타일 페이로드는 알림에 대한 사용자 지정 시각적 레이아웃을 만들 수 있는 적응형 타일 템플릿을 사용하여 정의됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md) 및 [적응형 타일 템플릿](tiles-and-notifications-adaptive-tiles-schema.md) 문서를 참조하세요.
@@ -121,7 +121,7 @@ TileContent content = new TileContent()
 
 ![중간 크기 타일의 알림 콘텐츠](images/sending-local-tile-02.png)
 
-## <span id="Create_the_notification"></span><span id="create_the_notification"></span><span id="CREATE_THE_NOTIFICATION"></span>알림 만들기
+## 알림 만들기
 
 
 알림 콘텐츠가 있으면 새 [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)을 만들어야 합니다. **TileNotification** 생성자는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)를 사용하는 경우 **TileContent.GetXml** 메서드에서 얻을 수 있는 Windows 런타임 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) 개체를 사용합니다.
@@ -133,7 +133,7 @@ TileContent content = new TileContent()
 var notification = new TileNotification(content.GetXml());
 ```
 
-## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>알림의 만료 시간 설정(옵션)
+## 알림의 만료 시간 설정(옵션)
 
 
 기본적으로 로컬 타일과 배지 알림은 만료되지 않는 반면 푸시 알림, 정기 알림 및 예약된 알림은 3일 후에 만료됩니다. 타일 콘텐츠가 필요 이상 오래 유지되면 안 되므로 특히 로컬 타일과 배지 알림에는 앱에 적합한 만료 시간을 설정하는 것이 좋습니다.
@@ -147,7 +147,7 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 </table>
 ```
 
-## <span id="Send_the_notification"></span><span id="send_the_notification"></span><span id="SEND_THE_NOTIFICATION"></span>알림 보내기
+## 알림 보내기
 
 
 로컬에 타일 알림 전송은 간단하지만 기본 타일이나 보조 타일에 알림 전송은 약간 다릅니다.
@@ -158,7 +158,7 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 
 이 코드 예제에서는 기본 타일에 알림을 보냅니다.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -189,7 +189,7 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 
-## <span id="Clear_notifications_on_the_tile__optional_"></span><span id="clear_notifications_on_the_tile__optional_"></span><span id="CLEAR_NOTIFICATIONS_ON_THE_TILE__OPTIONAL_"></span>타일에서 알림 지우기(옵션)
+## 타일에서 알림 지우기(옵션)
 
 
 대부분의 경우 사용자가 해당 콘텐츠를 조작한 후에는 알림을 지워야 합니다. 예를 들어 사용자가 앱을 시작하면 타일에서 모든 알림을 지우는 것이 좋습니다. 알림의 시간이 제한된 경우 알림을 명시적으로 지우는 대신 알림에 만료 시간을 설정하는 것이 좋습니다.
@@ -209,7 +209,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Clear();</code></pre></td>
 
 ![알림이 있는 타일 및 지워진 후의 타일](images/sending-local-tile-03.png)
 
-## <span id="Next_steps"></span><span id="next_steps"></span><span id="NEXT_STEPS"></span>다음 단계
+## 다음 단계
 
 
 **알림 큐 사용**
@@ -224,7 +224,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Clear();</code></pre></td>
 
 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)를 사용하지 않는 경우 이 알림 전달 방법이 다른 대체 방법입니다.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -243,7 +243,7 @@ public string XmlEncode(string text)
 }
 ```
 
-## <span id="Code_examples_without_NotificationsExtensions"></span><span id="code_examples_without_notificationsextensions"></span><span id="CODE_EXAMPLES_WITHOUT_NOTIFICATIONSEXTENSIONS"></span>NotificationsExtensions가 없는 코드 예제
+## NotificationsExtensions가 없는 코드 예제
 
 
 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지 대신 원시 XML을 사용하려는 경우 이 문서에 제공된 처음 세 가지 예제 대신 이러한 대체 코드 예제를 사용합니다. 나머지 코드 예제는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) 또는 원시 XML에서 사용할 수 있습니다.
@@ -299,7 +299,7 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## <span id="related_topics"></span>관련 항목
+## 관련 항목
 
 
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
@@ -320,6 +320,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

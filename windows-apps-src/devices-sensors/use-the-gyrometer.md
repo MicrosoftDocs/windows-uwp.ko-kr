@@ -5,7 +5,7 @@ title: "회전계 사용"
 description: "회전계를 사용하여 사용자의 동작 변화를 탐지하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: ad76837574b8887bceb135db156e2744542259b0
+ms.openlocfilehash: f53ae8de70ddca0d8293283012bedb8a39ac7ac1
 
 ---
 # 회전계 사용
@@ -179,6 +179,6 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

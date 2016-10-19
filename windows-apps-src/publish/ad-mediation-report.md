@@ -5,7 +5,7 @@ title: "광고 조정 보고서"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
+ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
 
 ---
 
@@ -68,6 +68,6 @@ ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

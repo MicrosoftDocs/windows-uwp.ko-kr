@@ -1,14 +1,13 @@
 ---
 author: mijacobs
-Description: "색은 앱의 다양한 수준의 정보를 통해 탐색하는 직관적인 방식을 제공하며 상호 작용 모델을 강화하는 데 중요한 도구 역할을 합니다."
+description: "색은 앱의 다양한 수준의 정보를 통해 탐색하는 직관적인 방식을 제공하며 상호 작용 모델을 강화하는 데 중요한 도구 역할을 합니다."
 title: "색"
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-label: Color
 template: detail.hbs
 extraBodyClass: style-color
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 8e253c93f932e04b825478cf0801e4c8c0d43b9d
 
 ---
 
@@ -28,36 +27,21 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
 ![Xbox 테마 컬러](images/accentcolorswatch_xbox.png) Xbox 테마 컬러
 
 
-
 사용자가 테마 컬러를 선택하면 시스템 테마의 일부로 나타납니다. 영향을 받는 영역은 시작, 작업 표시줄, 창 크롬, [공용 컨트롤](https://dev.windows.com/design/controls-patterns) 내의 선택한 상호 작용 상태 및 하이퍼링크입니다. 각 앱은 해당 앱의 입력 체계, 배경 및 상호 작용에 테마 컬러를 추가로 통합하거나 재정의하여 특정 브랜딩을 유지합니다.
 
-## 색의 색
+## 색상표 구성 요소
 
 테마 컬러를 선택하면 색 광도의 HSB 값에 따라 테마 컬러의 밝고 어두운 음영이 만들어집니다. 앱은 음영 변형을 사용하여 시각적 계층 구조를 만들고 상호 작용 지침을 제공할 수 있습니다.
 
 하이퍼링크는 기본적으로 사용자의 테마 컬러를 사용 합니다. 페이지 배경이 유사한 색인 경우 효과적인 대비를 위해 하이퍼링크에 테마 음영을 더 밝거나 더 어둡게 지정할 수 있습니다.
 
-<figure class="figure-img" >
-    <img src="images/shades.png" alt="A single accent color with its 6 shades"  />
-        <figcaption><p>기본 테마 컬러의 다양한 음영(밝음/어둠)</p>
-</figcaption>
-</figure>
+![6개의 음영을 사용한 단일 테마 컬러](images/shades.png) 기본 테마 컬러의 다양한 음영(밝음/어두움)입니다.
 
-<figure class="figure-img" >
-    <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center"  />
-        <figcaption><p>예제 - 디자인 사양에 적용된 색 논리를 가져오기</p>
-</figcaption>
-</figure>
+![색이 지정된 알림 센터에 대한 검토](images/action_center_redline_zoom.png) 디자인 사양에 색 논리가 적용되는 방법에 대한 예입니다.
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 컬러로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
-    </div>
-</aside>
+**참고**&nbsp;&nbsp;XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 컬러로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
 
-## 색 테마
+## 색 테마 지정
 
 사용자는 또한 시스템에 대해 밝거나 어두운 테마를 선택할 수 있습니다. 일부 앱은 사용자의 기본 설정에 따라 해당 테마를 변경하도록 선택하지만 옵트아웃(opt out)하는 앱도 있습니다.
 
@@ -89,20 +73,37 @@ XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.c
 #### 크롬
 ![크롬 어두운 테마](images/themes-dark-chrome.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-각 색은 `System*Color`명명 규칙(예: `SystemChromeHighColor`)을 준수하는 XAML [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes)로 사용할 수 있습니다. [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) 또는 [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx)을 통해 앱 테마를 제어할 수 있습니다.
-    </div>
-</aside>
+
+## 테마 변경
+
+App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경할 수 있습니다.
+
+```XAML
+<Application
+    x:Class="App9.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App9"
+    RequestedTheme="Dark">
+
+</Application>
+```
+
+**RequestedTheme**를 제거하면 응용 프로그램에 사용자의 앱 모드 설정이 적용되고 어둡거나 밝은 테마로 앱을 표시하도록 선택할 수 있음을 의미합니다. 
+
+테마는 앱의 모양에 큰 영향을 미치므로 앱을 만들 때 테마를 고려해야 합니다.
 
 ## 접근성
 
 색상표는 화면 사용에 최적화됩니다. 최적화된 읽기 환경을 위해 배경에 대한 텍스트 대비를 4.5: 1로 유지하는 것이 좋습니다. [명암비](http://leaverou.github.io/contrast-ratio/)와 같이 무료로 색 통과 여부를 테스트할 수 있는 많은 도구가 있습니다.
 
+## 관련 문서
+
+* [XAML 스타일](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
+* [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

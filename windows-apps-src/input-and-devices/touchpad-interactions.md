@@ -7,7 +7,7 @@ label: Touchpad interactions
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
+ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
 ---
 
@@ -149,13 +149,13 @@ ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력된 디바이스 식별](identify-input-devices.md) 
-           **샘플**
+* [입력 디바이스 식별](identify-input-devices.md)
+**샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895) 
-           **보관 샘플**
+* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+**보관 샘플**
 * [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
@@ -167,6 +167,6 @@ ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

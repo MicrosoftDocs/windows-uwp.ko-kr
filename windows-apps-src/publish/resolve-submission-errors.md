@@ -5,7 +5,7 @@ title: "제출 오류 해결"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 translationtype: Human Translation
 ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
-ms.openlocfilehash: cd0e1011bd1f857d8c859428ae0ff7e755db842e
+ms.openlocfilehash: 71f8ee9e2b8d1f892711ada30c58eefde250cca3
 
 ---
 
@@ -52,6 +52,6 @@ UWP 앱을 제출하는 경우 패키지 파일에 Visual Studio에서 스토어
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

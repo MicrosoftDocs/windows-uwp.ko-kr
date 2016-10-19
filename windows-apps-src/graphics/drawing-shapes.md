@@ -5,7 +5,7 @@ title: "셰이프 그리기"
 description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 3add60b9067f40c5d330bd66a84eea41b465e8d7
+ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
 
 ---
 # 셰이프 그리기
@@ -200,6 +200,6 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

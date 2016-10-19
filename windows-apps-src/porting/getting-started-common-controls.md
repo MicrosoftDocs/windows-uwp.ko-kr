@@ -5,11 +5,11 @@ description: "공용 컨트롤 시작"
 title: "공용 컨트롤 시작"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+ms.openlocfilehash: 2cd4b7344074c795f14a56cddbe7807c9ffefafe
 
 ---
 
-# 시작&#58; 공용 컨트롤
+# 시작: 공용 컨트롤
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -62,6 +62,6 @@ UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: ".NET Framework 4.5부터 관리 코드를 사용하여 Windows 런
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+ms.openlocfilehash: e7793cd27d996ce2adbfebfbad91541bdccf0d82
 
 ---
 
@@ -294,6 +294,6 @@ Visual Basic 및 C# 언어 기능과 Windows 런타임용 .NET Framework 지원�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

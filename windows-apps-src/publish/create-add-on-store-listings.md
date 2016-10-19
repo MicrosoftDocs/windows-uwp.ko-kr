@@ -1,42 +1,52 @@
-﻿---
+---
 author: jnHs
-Description: When submitting an add-on, the info you provide in the Store listings step will be displayed to your customers.
-title: Create add-on Store listings
+Description: "추가 기능을 제출할 때 스토어 목록 단계에서 제공하는 정보가 고객에게 표시됩니다."
+title: "추가 기능 저장소 목록 만들기"
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
+translationtype: Human Translation
+ms.sourcegitcommit: fc7b0d7dd85e661e1688f4df3f67280c16eb6742
+ms.openlocfilehash: 607dab75b8e446109cbb60c6c149732501f5b43c
+
 ---
 
-# Create add-on Store listings
+# 추가 기능 저장소 목록 만들기
 
 
-When submitting an add-on, the info you provide in the **Store listings** step will be displayed to your customers when they see the option to acquire your add-on. Make sure to consider the Store listing info carefully in order to represent your add-on accurately in a way that makes it appealing to customers. You can provide customized Store listings for different languages.
+추가 기능을 제출할 때 **스토어 목록** 단계에서 제공하는 정보가, 고객이 추가 기능을 구입하려고 옵션을 확인할 때 고객에게 표시됩니다. 고객에게 매력적인 방식으로 추가 기능을 정확히 표현하려면 스토어 목록을 주의해서 고려해야 합니다. 다른 언어에 대한 사용자 지정된 스토어 목록을 제공할 수 있습니다.
 
-## Languages
-
-
-Before you can enter Store listing info, you need to specify one or more [languages](supported-languages.md). We recommend providing Store listings for every language your app supports.
-
-Under the **Store listing** section of your add-on's submission, click **Manage Store listing languages**, then click **Manage languages** on the next page. Check the boxes for the languages that you’d like to add, then click **Update**. The languages that you’ve selected will be displayed in the **Store listing languages** section of the page. To remove one or more of these languages, click **Remove** (or click **Manage languages** and uncheck the box for languages you’d like to remove). Click **Save** when you're happy with the list of languages.
-
-> **Tip** To add and remove additional languages, click **Manage Store listing languages** from the add-on submission overview.
-
-To edit a Store listing, click the language name on the add-on submission overview. The info you can enter for each language is described below.
-
-## Title
-
-You must provide a title here, which is the name your customers will see for this add-on. Your title can be up to 100 characters.
-
-## Description
-
-If you'd like to display more info than just a title, you can enter up to 200 characters here. This field is optional.
-
-## Icon
-
-You also have the option to provide an image that may be displayed to the customer. This icon must be a .png file that measures exactly 300 x 300 pixels.
-
- 
-
- 
+## 언어
 
 
+스토어 목록 정보를 입력하기 전에 먼저 [언어](supported-languages.md)를 하나 이상 지정해야 합니다. 앱에서 지원하는 모든 언어에 대한 스토어 목록을 제공하는 것이 좋습니다.
+
+추가 기능 제출의 **스토어 목록** 섹션에서 **스토어 목록 언어 관리**를 클릭한 후 다음 페이지에서 **언어 관리**를 클릭합니다. 추가할 언어의 확인란을 선택한 다음 **업데이트**를 클릭합니다. 선택한 언어는 페이지의 **스토어 목록 언어** 섹션에 표시됩니다. 이러한 언어 중 하나 이상을 제거하려면 **제거**를 클릭하거나 **언어 관리**를 클릭하고 제거할 언어의 확인란을 선택 취소합니다. 원하는 언어 목록을 만들었으면 **저장**을 클릭합니다.
+
+> **팁** 추가 언어를 추가 및 제거하려면 추가 기능 제출 개요에서 **스토어 목록 언어 관리**를 클릭합니다.
+
+스토어 목록을 편집하려면 추가 기능 제출 개요에서 언어 이름을 클릭합니다. 각 언어에 대해 입력할 수 있는 정보는 아래에서 설명합니다.
+
+## 제목
+
+이 추가 기능에 대해 고객에게 표시될 이름인 제목을 여기에 제공해야 합니다. 제목은 최대 100자까지 입력할 수 있습니다.
+
+## 설명
+
+제목만이 아니라 추가 정보를 표시하려면 여기에 200자 이내로 입력할 수 있습니다. 이 필드는 옵션입니다.
+
+## 아이콘
+
+고객에게 표시될 수 있는 이미지를 제공할 수도 있습니다. 이 아이콘은 정확히 300 x 300픽셀의 .png 파일이어야 합니다.
+
+ 
+
+ 
+
+
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

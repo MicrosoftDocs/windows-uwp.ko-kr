@@ -5,7 +5,7 @@ ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: fcbc3c8a3f70613635201732f3ca5053d58325c7
+ms.openlocfilehash: 6c55e0dec2198110e0ddcbad743b04439cb3435e
 
 ---
 
@@ -50,6 +50,6 @@ public void CompareBuffers()
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

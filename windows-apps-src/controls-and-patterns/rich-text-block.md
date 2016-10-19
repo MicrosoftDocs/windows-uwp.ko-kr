@@ -6,20 +6,33 @@ ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 28c78b39bad4c66457ec5aba8cf0b4ce0de4f00a
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
 
 ---
 # 서식 있는 텍스트 블록
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx"><strong>RichTextBlockOverflow 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx"><strong>Paragraph 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx"><strong>Typography 클래스</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+</div>
+</div>
 
--   [**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)
--   [**RichTextBlockOverflow 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)
--   [**Paragraph 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)
--   [**Typography 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)
+
+
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -152,6 +165,6 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

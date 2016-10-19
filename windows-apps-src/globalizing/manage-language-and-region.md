@@ -7,7 +7,7 @@ label: Manage language and region
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+ms.openlocfilehash: 5a7519d9ea7a121e3e3087debba6d6193b1d8155
 
 ---
 
@@ -47,7 +47,7 @@ Windows 스토어에서 지원되는 언어 태그 목록을 구체적으로 보
 
 사용자 언어 기본 설정 목록은 사용자의 언어를 사용자가 원하는 순서대로 설명하는 순서가 지정된 언어 목록입니다.
 
-사용자는 **설정**&gt;**시간 및 언어**&gt;**지역 및 언어**에서 목록을 설정합니다. 또는 **제어판**&gt;**시계, 언어 및 지역**을 사용할 수 있습니다.
+사용자는 **설정** &gt; **시간 및 언어** &gt; **지역 및 언어**에서 목록을 설정합니다. 또는 **제어판** &gt; **시계, 언어 및 지역**을 사용할 수 있습니다.
 
 사용자의 언어 기본 설정 목록에는 여러 언어 및 국가별 또는 다른 특정 언어가 포함될 수 있습니다. 예를 들어 사용자가 fr-CA를 기본 설정했지만 en-GB를 이해할 수도 있습니다.
 
@@ -124,11 +124,11 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 ### <span id="Set_the_HTTP_Accept_Language_header."></span><span id="set_the_http_accept_language_header."></span><span id="SET_THE_HTTP_ACCEPT_LANGUAGE_HEADER."></span>HTTP Accept Language 헤더를 설정합니다.
 
-일반 웹 요청 및 XHR(XMLHttpRequest)에서 Windows 스토어 앱 및 데스크톱 앱의 HTTP 요청에서는 표준 HTTP Accept-Language 헤더를 사용합니다. 기본적으로 HTTP 헤더는 **설정**&gt;**시간 및 언어**&gt;**국가 및 언어**에서 지정한 대로 사용자의 언어 선택(사용자가 선호하는 순서)으로 지정됩니다. 목록의 각 언어는 언어 중립과 가중치(q)를 포함하도록 확장됩니다. 예를 들어 fr-FR 및 en-US로 구성된 사용자의 언어 목록은 HTTP Accept-Language 헤더가 fr-FR, fr, en-US, en("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3")으로 나타납니다.
+일반 웹 요청 및 XHR(XMLHttpRequest)에서 Windows 스토어 앱 및 데스크톱 앱의 HTTP 요청에서는 표준 HTTP Accept-Language 헤더를 사용합니다. 기본적으로 HTTP 헤더는 **설정** &gt; **시간 및 언어** &gt; **국가 및 언어**에서 지정한 대로 사용자의 언어 선택(사용자가 선호하는 순서)으로 지정됩니다. 목록의 각 언어는 언어 중립과 가중치(q)를 포함하도록 확장됩니다. 예를 들어 fr-FR 및 en-US로 구성된 사용자의 언어 목록은 HTTP Accept-Language 헤더가 fr-FR, fr, en-US, en("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3")으로 나타납니다.
 
 ### <span id="Use_the_APIs_in_the_Windows.Globalization_namespace."></span><span id="use_the_apis_in_the_windows.globalization_namespace."></span><span id="USE_THE_APIS_IN_THE_WINDOWS.GLOBALIZATION_NAMESPACE."></span>Windows.Globalization 네임스페이스의 API를 사용합니다.
 
-일반적으로 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) 네임스페이스의 API 요소는 응용 프로그램 언어 목록을 사용하여 언어를 결정합니다. 일치하는 형식을 가진 언어가 없으면 사용자 로캘이 사용됩니다. 이 로캘은 시스템 시계에 사용된 것과 같습니다. 사용자 로캘은 **설정**&gt;**시간 및 언어**&gt;**지역 및 언어**&gt;**추가 날짜, 시간 및 국가별 설정**&gt;**지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. 또한 **Windows.Globalization** API는 응용 프로그램 언어 목록 대신 사용할 언어 목록을 지정하는 재정의를 수락합니다.
+일반적으로 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) 네임스페이스의 API 요소는 응용 프로그램 언어 목록을 사용하여 언어를 결정합니다. 일치하는 형식을 가진 언어가 없으면 사용자 로캘이 사용됩니다. 이 로캘은 시스템 시계에 사용된 것과 같습니다. 사용자 로캘은 **설정** &gt; **시간 및 언어** &gt; **지역 및 언어** &gt; **추가 날짜, 시간 및 국가별 설정** &gt; **지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. 또한 **Windows.Globalization** API는 응용 프로그램 언어 목록 대신 사용할 언어 목록을 지정하는 재정의를 수락합니다.
 
 또한 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)에는 도우미 개체로 제공되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체가 있습니다. 이 개체를 통해 앱에서 언어에 대한 세부 정보(예: 언어 스크립트, 표시 이름, 기본 이름)를 검사할 수 있습니다.
 
@@ -224,6 +224,6 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

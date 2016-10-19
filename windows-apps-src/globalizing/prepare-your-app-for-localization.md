@@ -7,7 +7,7 @@ label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
+ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 ---
 
@@ -192,6 +192,6 @@ ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

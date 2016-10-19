@@ -1,68 +1,78 @@
-﻿---
+---
 author: jnHs
-Description: When submitting an add-on, the options on the Properties page help determine the behavior of your add-on when offered to customers.
-title: Enter add-on properties
+Description: "추가 기능을 제출할 때 속성 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 추가 기능의 동작을 결정할 수 있습니다."
+title: "추가 기능 속성 입력"
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
+translationtype: Human Translation
+ms.sourcegitcommit: e3bc74fab0ae75c35581e33323100376ad755e9c
+ms.openlocfilehash: 1c030f7d79de37e20620cf56a30b1c1570e9b90b
+
 ---
 
-# Enter add-on properties
+# 추가 기능 속성 입력
 
 
-When submitting an add-on, the options on the **Properties** page help determine the behavior of your add-on when offered to customers.
+추가 기능을 제출할 때 **속성** 페이지의 옵션을 통해 고객에게 제공되었을 때 나타나는 추가 기능의 동작을 결정할 수 있습니다.
 
-## Product type
+## 제품 유형
 
-Your product type is selected when you first [create the add-on](set-your-add-on-product-id.md). The product type you selected is displayed here, but you can't change it.
+제품 유형은 처음 [추가 기능을 만들 때](set-your-add-on-product-id.md) 선택됩니다. 선택한 제품 유형이 여기에 표시되지만 제품 유형을 변경할 수는 없습니다.
 
-> **Note**  If you haven't published the add-on. you can delete the submission and start again if you need to choose a different product type. 
+> **참고** 추가 기능을 게시하지 않은 경우  다른 제품 유형을 선택해야 하면 제출을 삭제하고 다시 시작할 수 있습니다. 
 
-Depending on the product type you selected, you may see one of the following fields:
+선택한 제품 유형에 따라 다음 필드 중 하나가 나타날 수 있습니다.
 
-### Product lifetime
-If you selected **Durable** for your product type, the **Product lifetime** is shown here. The default **Product lifetime** for a durable add-on is **Forever**, which means the add-on never expires. If you prefer, you can set the **Product lifetime** so that the add-on expires after a set duration (with options from 1-365 days). 
+### 제품 수명
+제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 원하는 경우 1~365일 옵션으로 정해진 기간 후에 추가 기능이 만료되도록 **제품 수명**을 설정할 수 있습니다. 
 
 ### Quantity
-If you selected **Store-managed consumable** for your product type, the **Quantity** is shown here. You'll need to enter a number between 1 and 1000000. This quantity will be granted to the customer when they acquire your add-on, and the Store will track the balance as the app reports the customer’s consumption of the add-on.
+**스토어 관리 소모성** 제품 유형을 선택한 경우 **수량**은 다음과 같습니다. 1과 1000000 사이의 숫자를 입력해야 합니다. 이 수량은 추가 기능을 구입할 때 고객에게 부여되고 스토어는 고객의 추가 기능 소비를 보고하는 앱으로 잔액을 추적합니다.
 
-## Content type
+## 콘텐츠 형식
 
-Regardless of your add-on's product type, you'll also need to indicate the type of content you're offering. For most add-ons, the content type should be **Electronic software download**. If another option from the list seems to describe your add-on better (for example, if you are offering a music download or an e-book), select that option instead. 
+추가 기능의 제품 유형과 관계없이 제공할 콘텐츠 형식도 표시해야 합니다. 대부분의 추가 기능에 대한 콘텐츠 형식은 **전자 소프트웨어 다운로드**여야 합니다. 목록의 다른 옵션이 추가 기능을 더 잘 설명하는 것처럼 보이는 경우(예를 들어 음악 다운로드 또는 전자책을 제공하는 경우) 해당 옵션을 대신 선택합니다. 
 
-These are the possible options for an add-on's content type:
+추가 기능의 콘텐츠 형식에 대한 가능한 옵션은 다음과 같습니다.
 
--   Electronic software download
--   Electronic books
--   Electronic magazine single issue
--   Electronic newspaper single issue
--   Music download
--   Music streaming
--   Online data storage/services
--   Video download
--   Video streaming
--   Software as a service
+-   전자 소프트웨어 다운로드
+-   전자책
+-   전자 잡지 단행본
+-   전자 신문 단행본
+-   음악 다운로드
+-   음악 스트리밍
+-   온라인 데이터 저장소/서비스
+-   동영상 다운로드
+-   동영상 스트리밍
+-   SaaS(Software as a Service)
 
-## Keywords
+## 키워드
 
-You have the option to provide up to ten keywords of up to 30 characters each for each add-on you submit. Your app can then query for add-ons that match these words. This feature lets you build screens in your app that can load add-ons without you having to directly specify the product ID in your app's code. You can then change the add-on's keywords anytime, without having to make code changes in your app or submit the app again.
+제출하는 각 추가 기능에 대해 각각 30자 이내의 키워드를 10개까지 제공할 수 있습니다. 그러면 앱에서 이러한 단어와 일치하는 추가 기능을 쿼리할 수 있습니다. 이 기능을 사용하면 앱 코드에서 제품 ID를 직접 지정하지 않고도 추가 기능을 로드할 수 있는 앱 화면을 만들 수 있습니다. 그러면 앱에서 코드를 변경하거나 앱을 다시 제출하지 않고도 언제든지 추가 기능의 키워드를 변경할 수 있습니다.
 
-> **Note**  Keywords are not available for use in packages targeting Windows 8 and Windows 8.1.
+> **참고** Windows 8 및 Windows 8.1을 대상으로 하는 패키지에서는 키워드를 사용할 수 없습니다.
 
-## Custom developer data
+## 사용자 지정 개발자 데이터
 
-You can enter up to 3000 characters into the **Custom developer data** field to provide extra context for your in-app product.
+**사용자 지정 개발자 데이터** 필드에 최대 3000자를 입력하여 앱에서 바로 구매 제품에 대한 추가 컨텍스트를 제공할 수 있습니다.
 
-> **Note** This field was formerly called **Tag**.
+> **참고** 이 필드를 이전에는 **태그**라고 했습니다.
 
-For example, let’s say you have a game, and you’re selling a bag of gold coins as an add-on. Using the **Custom developer data** field, the app can query for this bag of gold. You can adjust the value at any time (in this case, the number of coins in your bag) by updating the info in the add-on's **Custom developer data** field, without having to make code changes in your app or submit the app again.
+예를 들어 게임을 보유하고 있고 추가 기능으로 금화 주머니를 판매하고 있다고 가정해 보겠습니다. **사용자 지정 개발자 데이터** 필드를 사용하면 앱에서 이 금화 주머니를 쿼리할 수 있습니다. 앱에서 코드를 변경하거나 앱을 다시 제출하지 않고도 추가 기능의 **사용자 지정 개발자 데이터** 필드에서 정보를 업데이트하여 언제든지 값을 조정할 수 있습니다(이 경우 주머니의 금화 수).
 
-> **Note**  The **Custom developer data** field is not available for use in packages targeting Windows 8 and Windows 8.1.
+> **참고** Windows 8 및 Windows 8.1을 대상으로 하는 패키지에서는 **사용자 지정 개발자 데이터** 필드를 사용할 수 없습니다.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

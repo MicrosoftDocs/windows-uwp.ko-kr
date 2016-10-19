@@ -5,7 +5,7 @@ ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: d7c66d9ead6e3dbf750f1d058e311ef3c84a204f
+ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
 
 ---
 
@@ -191,6 +191,6 @@ public void SampleReusableHash()
 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

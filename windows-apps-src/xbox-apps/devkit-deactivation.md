@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Xbox One 개발자 모드 비활성화"
 description: "개발자 모드를 비활성화하는 방법"
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
+ms.sourcegitcommit: c80849904eccae1ef0e0740bb4e882f7f0f37cc8
+ms.openlocfilehash: 273cd14d5f51a693ba8385c13d128bb2888de2ea
 
 ---
 
@@ -45,7 +44,8 @@ ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
 
 콘솔을 초기화하여 개발자 모드를 비활성화할 수도 있습니다.  
 
-> **참고** &nbsp;&nbsp;콘솔을 초기화하면 모든 로컬 저장 게임 데이터가 손실됩니다.
+> [!NOTE]
+> 콘솔을 초기화하면 모든 로컬 저장 게임 데이터가 손실됩니다.
 
 콘솔을 초기화하려면 다음 단계를 수행합니다.
 
@@ -88,6 +88,6 @@ ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

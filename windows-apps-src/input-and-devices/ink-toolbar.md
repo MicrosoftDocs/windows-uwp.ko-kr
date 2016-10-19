@@ -6,8 +6,8 @@ label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
 translationtype: Human Translation
-ms.sourcegitcommit: 743ce43be6220d96d7e9bc295ab72bdec4905edc
-ms.openlocfilehash: 4c50c8ded127b2261df901d9da3210ff397b00ca
+ms.sourcegitcommit: 71b73605bab71dad36977d0506c090c34359a3e2
+ms.openlocfilehash: c4a5b0ae2893fda7697457b9e7449a996707de4b
 
 ---
 
@@ -303,12 +303,14 @@ using Windows.UI.Input.Inking;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 ```
+
 4. CalligraphicPen 클래스가 [InkToolbarCustomPen](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.aspx)에서 파생되도록 지정합니다.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
 {
 }
 ```
+
 5. [CreateInkDrawingAttributesCore](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompen.createinkdrawingattributescore.aspx)를 재정의하여 고유한 브러시 및 스트로크 크기를 지정합니다.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
@@ -319,6 +321,7 @@ class CalligraphicPen : InkToolbarCustomPen
     }
 }
 ```
+
 6. [InkDrawingAttributes](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.aspx) 개체를 만들고 [펜 팁 모양](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentip.aspx), [팁 회전](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.pentiptransform.aspx), [스트로크 크기](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.size.aspx) 및 [잉크 색](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkdrawingattributes.color.aspx)을 설정합니다.
 ```csharp
 class CalligraphicPen : InkToolbarCustomPen
@@ -365,6 +368,7 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
     </BrushCollection>
 </Page.Resources>
 ```
+
 2. 그런 다음 자식 [InkToolbarCustomPenButton](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbarcustompenbutton.aspx) 요소가 포함된 InkToolbar를 추가합니다.
 
   사용자 지정 펜 단추에는 페이지 리소스에서 선언된 두 개의 고정 리소스 참조 `CalligraphicPen` 및 `CalligraphicPenPalette`가 포함되어 있습니다.
@@ -410,6 +414,6 @@ Enable touch inking
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

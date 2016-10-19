@@ -5,7 +5,7 @@ description: "섀도 볼륨에 대한 깊이 테스트를 지원하는 데 필�
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f0aedb99832ecd10da547cf73a074070008a4344
+ms.openlocfilehash: 85fb020e7d476d3b2095875376903c5e28f08d94
 
 ---
 
@@ -265,6 +265,6 @@ m_shadowViewport.MaxDepth = 1.f;
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

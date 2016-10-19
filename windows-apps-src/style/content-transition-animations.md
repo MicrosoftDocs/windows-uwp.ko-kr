@@ -4,8 +4,8 @@ Description: "콘텐츠 전환 애니메이션을 사용하면 컨테이너 또�
 title: "콘텐츠 전환 애니메이션에 대한 지침"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>권장 사항 및 금지 사항
+## 권장 사항 및 금지 사항
 
 
 -   빈 컨테이너에 넣을 새 항목 집합이 있을 때 시작 애니메이션을 사용하세요. 예를 들어, 앱을 최초로 로드한 다음 앱의 콘텐츠 중 일부를 즉시 표시할 수 없는 경우도 있습니다. 콘텐츠가 표시할 수 있게 되면 콘텐츠 전환 애니메이션을 사용하여 그 최신 콘텐츠를 보기로 가져옵니다.
@@ -35,7 +35,7 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 
 
-## <span id="related_topics"></span>관련 문서
+## 관련 문서
 
 **개발자용(XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -53,6 +53,6 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: "이 섹션에서는 Windows 8.1 버전과 달리 Windows 10 버전에 작성된 변경 사항을 지원하도록 PlayReady 웹앱을 수정하는 방법을 설명합니다."
 title: "PlayReady 암호화된 미디어 확장"
 translationtype: Human Translation
-ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
-ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
+ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
 
 ---
 
@@ -20,7 +20,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
 ## PlayReady 암호화된 미디어 확장의 새로운 기능
 
-이 섹션에서는 Windows 10에서 PlayReady 콘텐츠 보호를 사용하기 위해 PlayReady 암호화된 미디어 확장에 작성한 변경 사항 목록을 제공합니다.
+이 섹션에서는 Windows 10에서 PlayReady 콘텐츠 보호를 사용하기 위해 PlayReady EME(암호화된 미디어 확장)에 작성한 변경 사항 목록을 제공합니다.
 
 다음 목록에는 Windows 10용 PlayReady 암호화된 미디어 확장의 새로운 기능과 변경 내용이 설명되어 있습니다.
 
@@ -33,9 +33,8 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 
     Windows 8.1에서와 같이 여러 키 ID(KeyID)와 함께 PlayReady 개체를 사용하거나 여러 KeyID와 함께 [CDMData(콘텐츠 암호 해독 모델 데이터)](https://go.microsoft.com/fwlink/p/?LinkID=626819)를 사용할 수 있습니다.
 
-    **참고** Windows 10에서 여러 키 ID는 CDMData의 &lt;KeyID&gt; 아래에서 지원됩니다.
-
-     
+    > [!NOTE]
+    > Windows 10에서 여러 키 ID는 CDMData의 &lt;KeyID&gt; 아래에서 지원됩니다.
 
 -   실시간 만료 지원 또는 LDL(제한된 기간 라이선스)이 추가되었습니다.
 
@@ -69,9 +68,8 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 
 경우에 따라 일부 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠를 재생해야 하는 경우 하드웨어 DRM을 옵트아웃(opt out)해야 합니다. HEVC를 지원하는 하드웨어 DRM도 있고 지원하지 않는 하드웨어 DRM도 있습니다. HEVC 콘텐츠를 재생하려는 경우 DRM에서 HEVC 콘텐츠를 지원하지 않으면 역시 하드웨어 DRM을 옵트아웃(opt out)할 수 있습니다.
 
-**참고** HEVC 콘텐츠가 지원되는지를 확인하려면 `com.microsoft.playready`를 인스턴스화한 후 [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하세요.
-
- 
+> [!NOTE]
+> HEVC 콘텐츠가 지원되는지를 확인하려면 `com.microsoft.playready`를 인스턴스화한 후 [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441) 메서드를 사용하세요.
 
 ## 웹앱에 보안 중지 추가
 
@@ -260,7 +258,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-**참고** 위의 샘플에 있는 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록된 모든 보안 중지 세션의 와일드 카드인 별표(\*)가 될 수 있습니다. 즉 **SessionID** 태그는 구체적인 세션이거나 모든 보안 중지 세션을 선택하도록 와일드 카드(\*)가 될 수 있습니다.
+> [!NOTE]
+> 위의 샘플에 있는 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록된 모든 보안 중지 세션의 와일드 카드인 별표(\*)가 될 수 있습니다. 즉 **SessionID** 태그는 구체적인 세션이거나 모든 보안 중지 세션을 선택하도록 와일드 카드(\*)가 될 수 있습니다.
 
 ## 암호화된 미디어 확장에 대한 프로그래밍 고려 사항
 
@@ -296,16 +295,15 @@ function foo() {
 
 자세한 내용은 [샘플 응용 프로그램](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738)을 참조하세요.
 
- 
-
- 
-
+## 참고 항목
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

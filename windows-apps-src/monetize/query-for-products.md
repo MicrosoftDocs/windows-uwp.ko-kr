@@ -4,15 +4,15 @@ ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다."
 title: "제품에 대한 쿼리"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 93ed2b850de22d562b16f3f10f4ca409054910d3
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: ea517d66dbb6f373b191937de8c1cbe42c74846f
 
 ---
 
 # 제품에 대한 쿼리
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다.
 
@@ -42,7 +42,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| 권한 부여  | 문자열 | 필수. **Bearer**&lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
+| 권한 부여  | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다.                           |
 | 호스트           | 문자열 | **collections.mp.microsoft.com** 값으로 설정해야 합니다.                                            |
 | Content-Length | 숫자 | 요청 본문의 길이입니다.                                                                       |
 | Content-Type   | 문자열 | 요청 및 응답 유형을 지정합니다. 현재 **application/json** 값만 지원됩니다. |
@@ -57,7 +57,7 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 | continuationToken | 문자열       | 제품 집합이 여러 개 있는 경우 페이지 제한에 도달할 때 응답 본문이 연속 토큰을 반환합니다. 나머지 제품을 검색하는 후속 호출에서 그 연속 토큰을 제공합니다.                                                      | 아니요       |
 | maxPageSize       | 숫자       | 하나의 응답에 반환하는 제품의 최대 수입니다. 기본 및 최대 값은 100입니다.                                                                                                                                                                      | 아니요       |
 | modifiedAfter     | datetime     | 지정한 경우 서비스는 이 날짜 이후 수정된 제품만 반환합니다.                                                                                                                                                                             | 아니요       |
-| parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 IAP만 반환합니다.                                                                                                                                                                                    | 아니요       |
+| parentProductId   | 문자열       | 지정한 경우 서비스는 지정된 앱에 해당하는 추가 기능만 반환합니다.                                                                                                                                                                                    | 아니요       |
 | productSkuIds     | ProductSkuId | 지정한 경우 서비스는 제공된 Product/SKU 쌍에 해당하는 제품만 반환합니다.                                                                                                                                                                        | 아니요       |
 | productTypes      | 문자열       | 지정한 경우 서비스는 지정된 제품 형식과 일치하는 제품만 반환합니다. 지원 되는 제품 유형은 **Application**, **Durable**, 및 **UnmanagedConsumable**입니다.                                                                                       | 아니요       |
 | validityType      | 문자열       | **All**로 설정된 경우 만료된 항목을 포함하여 사용자의 모든 제품이 반환됩니다. **Valid**로 설정된 경우 이 시점에 유효한 제품만 반환됩니다(즉, 현재 활성 상태인 제품, 시작 날짜가 &lt;지금 이전인 제품, 종료 날짜가 &gt;지금 이후인 제품이 있습니다). | 아니요       |
@@ -93,25 +93,25 @@ Content-Length: 2531
 Content-Type: application/json
 
 {
-    "maxPageSize": 100,
-    "beneficiaries": [
-            {
-                "localTicketReference": "1055521810674918",
-                "identityValue": "eyJ0eXAiOiJ……",
-                "identityType": "b2b"
-            }
-        ],
-    "modifiedAfter": "\/Date(-62135568000000)\/",
-    "productSkuIds": [
-            {
-                "productId": "9NBLGGH5WVP6",
-                "skuId": "0010"
-            }
-        ],
-    "productTypes": [
-            "UnmanagedConsumable"
-        ],
-    "validityType": "All"
+  "maxPageSize": 100,
+  "beneficiaries": [
+    {
+      "localTicketReference": "1055521810674918",
+      "identityValue": "eyJ0eXAiOiJ……",
+      "identityType": "b2b"
+    }
+  ],
+  "modifiedAfter": "\/Date(-62135568000000)\/",
+  "productSkuIds": [
+    {
+      "productId": "9NBLGGH5WVP6",
+      "skuId": "0010"
+    }
+  ],
+  "productTypes": [
+    "UnmanagedConsumable"
+  ],
+  "validityType": "All"
 }
 ```
 
@@ -147,12 +147,12 @@ CollectionItemContractV6 개체에는 다음 매개 변수가 포함됩니다.
 | productType          | 문자열             | 다음 제품 유형 중 하나: **Application**, **Durable**, 및 **UnmanagedConsumable**.                                                     | 예      |
 | purchasedCountry     | 문자열             | 해당 없음.                                                                                                                                               | 아니요       |
 | purchaser            | IdentityContractV6 | 있는 경우 항목 구매자의 ID입니다. 아래에 나오는 이 개체에 대한 세부 정보를 참조하세요.                                      | 아니요       |
-| Quantity             | 숫자             | 항목의 수량입니다. 현재 수량은 항상 1입니다.                                                                                        | 아니요       |
+| quantity             | 숫자             | 항목의 수량입니다. 현재 수량은 항상 1입니다.                                                                                        | 아니요       |
 | skuId                | 문자열             | Windows 스토어 카탈로그의 SKU ID입니다. SKU ID의 예로는 "0010"이 있습니다.                                                                            | 예      |
 | skuType              | 문자열             | SKU의 유형입니다. 가능한 값은 **Trial**, **Full** 및 **Rental**입니다.                                                                      | 예      |
 | startDate            | datetime           | 항목이 유효한 시작 날짜입니다.                                                                                                         | 예      |
-| 상태               | 문자열             | 항목의 상태입니다. 가능한 값은 **Active**, **Expired**, **Revoked** 및 **Banned**입니다.                                              | 예      |
-| 태그                 | 문자열             | 해당 없음                                                                                                                                                | 예      |
+| status               | 문자열             | 항목의 상태입니다. 가능한 값은 **Active**, **Expired**, **Revoked** 및 **Banned**입니다.                                              | 예      |
+| tags                 | 문자열             | 해당 없음                                                                                                                                                | 예      |
 | transactionId        | GUID               | 이 항목의 구매 결과인 트랜잭션 ID입니다. 항목을 처리됨으로 보고하는 데 사용할 수 있습니다.                                       | 예      |
 
 <span/> 
@@ -179,32 +179,32 @@ MS-ServerId: 020022359
 Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 {
-    "items" : [
-        {
-            "acquiredDate" : "2015-09-22T19:22:51.2068724+00:00",
-            "devOfferId" : "f9587c53-540a-498b-a281-8a349491ed47",
-            "endDate" : "9999-12-31T23:59:59.9999999+00:00",
-            "fulfillmentData" : [],
-            "inAppOfferToken" : "consumable2",
-            "itemId" : "4b8fbb13127a41f299270ea668681c1d",
-            "localTicketReference" : "1055521810674918",
-            "modifiedDate" : "2015-09-22T19:22:51.2513155+00:00",
-            "orderId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31",
-            "ownershipType" : "OwnedByBeneficiary",
-            "productId" : "9NBLGGH5WVP6",
-            "productType" : "UnmanagedConsumable",
-            "purchaser" : {
-                "identityType" : "pub",
-                "identityValue" : "user123"
-            },
-            "skuId" : "0010",
-            "skuType" : "Full",
-            "startDate" : "2015-09-22T19:22:51.2068724+00:00",
-            "status" : "Active",
-            "tags" : [],
-            "transactionId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31"
-        }
-    ]
+  "items" : [
+    {
+      "acquiredDate" : "2015-09-22T19:22:51.2068724+00:00",
+      "devOfferId" : "f9587c53-540a-498b-a281-8a349491ed47",
+      "endDate" : "9999-12-31T23:59:59.9999999+00:00",
+      "fulfillmentData" : [],
+      "inAppOfferToken" : "consumable2",
+      "itemId" : "4b8fbb13127a41f299270ea668681c1d",
+      "localTicketReference" : "1055521810674918",
+      "modifiedDate" : "2015-09-22T19:22:51.2513155+00:00",
+      "orderId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31",
+      "ownershipType" : "OwnedByBeneficiary",
+      "productId" : "9NBLGGH5WVP6",
+      "productType" : "UnmanagedConsumable",
+      "purchaser" : {
+        "identityType" : "pub",
+        "identityValue" : "user123"
+      },
+      "skuId" : "0010",
+      "skuType" : "Full",
+      "startDate" : "2015-09-22T19:22:51.2068724+00:00",
+      "status" : "Active",
+      "tags" : [],
+      "transactionId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31"
+    }
+  ]
 }
 ```
 
@@ -217,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

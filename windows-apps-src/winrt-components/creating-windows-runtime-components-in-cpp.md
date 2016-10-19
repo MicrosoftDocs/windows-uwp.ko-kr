@@ -5,7 +5,7 @@ description: "이 문서에서는 C++를 사용하여 JavaScript(또는 C#, Visu
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 1497175723738cc23ec21b280c9639b216a33ddd
+ms.openlocfilehash: 65114d476da1a7f9113987ebccc8bdbaca6381a7
 
 ---
 
@@ -598,6 +598,6 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

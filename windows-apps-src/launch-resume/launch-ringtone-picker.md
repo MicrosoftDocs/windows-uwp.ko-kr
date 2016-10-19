@@ -1,24 +1,28 @@
 ---
 author: TylerMSFT
-title: ms-tonepicker scheme
-description: This topic describes the ms-tonepicker URI scheme and how to use it to display a tone picker to select a tone, save a tone, and get the friendly name for a tone.
+title: "ms-tonepicker 스키마"
+description: "이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하고 이를 사용해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다."
+translationtype: Human Translation
+ms.sourcegitcommit: 4c7037cc91603af97a64285fd6610445de0523d6
+ms.openlocfilehash: ef605f9d749148240ecee5e0ecfd473f8440ca25
+
 ---
 
-# Choose and save tones using the ms-tonepicker URI scheme
+# ms-tonepicker URI 스키마를 사용하여 신호음 선택 및 저장
 
-This topic describes how to use the **ms-tonepicker:** URI scheme. This URI scheme can be used to:
-- Determine if the tone picker is available on the device.
-- Display the tone picker to list available ringtones, system sounds, text tones, and alarm sounds; and get a tone token which represents the sound the user selected.
-- Display the tone saver, which takes a sound file token as input and saves it to the device. Saved tones are then available via the tone picker. Users can also give the tone a friendly name.
-- Convert a tone token to its friendly name.
+이 항목에서는 **ms tonepicker:** URI 스키마를 사용하는 방법을 설명합니다. 이 URI 스키마는 다음 작업에 사용할 수 있습니다.
+- 디바이스에서 톤 선택기를 사용할 수 있는지 확인합니다.
+- 톤 선택기를 표시하여 사용 가능한 벨소리, 시스템 소리, 문자 알림음 및 알람 소리를 나열하고 사용자가 선택한 소리를 나타내는 톤 토큰을 가져옵니다.
+- 사운드 파일 토큰을 입력으로 가져와서 디바이스에 저장하는 톤 보호기를 표시합니다. 저장된 톤은 톤 선택기를 통해 사용할 수 있습니다. 사용자는 톤에 식별 이름을 제공할 수도 있습니다.
+- 톤 토큰을 해당 식별 이름으로 변환합니다.
 
-## ms-tonepicker: URI scheme reference
+## ms tonepicker: URI 스키마 참조
 
-This URI scheme does not pass arguments via the URI scheme string, but instead passes arguments via a [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx). All strings are case-sensitive.
+이 URI 스키마는 URI 스키마 문자열을 통해 인수를 전달하지 않지만 대신 [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx)를 통해 인수를 전달합니다. 모든 문자열은 대/소문자를 구분합니다.
 
-The sections below indicate which arguments should be passed to accomplish the specified task.
+아래 섹션은 지정된 작업을 수행하기 위해 전달해야 할 인수를 나타냅니다.
 
-## Task: Determine if the tone picker is available on the device
+## 작업: 디바이스에서 톤 선택기를 사용할 수 있는지 확인
 ```cs
 var status = await Launcher.QueryUriSupportAsync(new Uri("ms-tonepicker:"),     
                                      LaunchQuerySupportType.UriForResults,
@@ -30,25 +34,25 @@ if (status != LaunchQuerySupportStatus.Available)
 }
 ```
 
-## Task: Display the tone picker
+## 작업: 톤 선택기 표시
 
-The arguments you can pass to display the tone picker are as follows:
+톤 선택기를 표시하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| Parameter | Type | Required | Possible values | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "PickRingtone" | Opens the tone picker. |
-| CurrentToneFilePath | string | no | An existing tone token. | The tone to show as the current tone in the tone picker. If this value is not set, the first tone on the list is selected by default.<br>This is not, strictly speaking, a file path. You can get a suitable value for `CurrenttoneFilePath` from the `ToneToken` value returned from the tone picker.  |
-| TypeFilter | string | no | "Ringtones", "Notifications", "Alarms", "None" | Selects which tones to add to the picker. If no filter is specified then all tones are displayed. |
+| 액션 | 문자열 | yes | "PickRingtone" | 톤 선택기가 열립니다. |
+| CurrentToneFilePath | 문자열 | 아니요 | 기존 톤 토큰입니다. | 톤 선택기에서 현재 톤으로 표시할 톤입니다. 이 값을 설정하지 않으면 목록에서 첫 번째 톤이 기본적으로 선택됩니다.<br>이 값은 엄밀히 말해 파일 경로가 아닙니다. 톤 선택기에서 반환된 `ToneToken` 값에서 `CurrenttoneFilePath`에 적합한 값을 가져올 수 있습니다.  |
+| TypeFilter | 문자열 | 아니요 | "Ringtones", "Notifications", "Alarms", "None" | 선택기에 추가할 톤을 선택합니다. 필터가 지정되지 않은 경우에는 모든 톤이 표시됩니다. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
-| Return values | Type | Possible values | Description |
+| 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-success. <br> 1-cancelled. <br> 7-invalid parameters. <br> 8 - no tones match the filter criteria. <br> 255 - specified action is not implemented. | The result of the picker operation. |
-| ToneToken | string | The selected tone's token. <br> The string is empty if the user selects **default** in the picker. | This token can be used in a toast notification payload, or can be assigned as a contact’s ringtone or text tone. The parameter is returned in the ValueSet only if **Result** is 0. |
-| DisplayName | string | The specified tone’s friendly name. | A string that can be shown to the user to represent the selected tone. The parameter is returned in the ValueSet only if **Result** is 0. |
+| 결과 | Int32 | 0-성공했습니다. <br> 1-취소되었습니다. <br> 7-잘못된 매개 변수입니다. <br> 8-필터 조건과 일치하는 톤이 없습니다. <br> 255-지정한 작업이 구현되지 않았습니다. | 선택기 작업의 결과입니다. |
+| ToneToken | 문자열 | 선택한 톤의 토큰입니다. <br> 사용자가 선택기에서 **기본값**을 선택할 경우 문자열은 비어 있습니다. | 이 토큰은 알림 메시지 페이로드에 사용되거나 연락처의 벨소리 또는 문자 알림음으로 할당될 수 있습니다. 매개 변수는 **Result**가 0일 경우에만 ValueSet에 반환됩니다. |
+| DisplayName | 문자열 | 지정된 톤의 식별 이름입니다. | 선택한 톤을 나타내기 위해 사용자에게 표시할 수 있는 문자열입니다. 매개 변수는 **Result**가 0일 경우에만 ValueSet에 반환됩니다. |
 <br>
-**Example: Open the tone picker so that the user can select a tone**
+**예: 사용자가 톤을 선택할 수 있도록 톤 선택기 열기**
 
 ``` cs
 LauncherOptions options = new LauncherOptions();
@@ -76,23 +80,23 @@ if (result.Status == LaunchUriStatus.Success)
 }
 ```
 
-## Task: Display the tone saver
+## 작업: 톤 보호기 표시
 
-The arguments you can pass to display the tone saver are as follows:
+톤 보호기를 표시하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| Parameter | Type | Required | Possible values | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "SaveRingtone" | Opens the picker to save a ringtone. |
-| ToneFileSharingToken | string | yes | [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) file sharing token for the ringtone file to save. | Saves a specific sound file as a ringtone. The supported content types for the file are mpeg audio and x-ms-wma audio. |
-| DisplayName | string | no | The specified tone’s friendly name. | Sets the display name to use when saving the specified ringtone. |
+| 액션 | 문자열 | yes | "SaveRingtone" | 벨소리를 저장할 선택기를 엽니다. |
+| ToneFileSharingToken | 문자열 | yes | 저장할 벨소리 파일에 대한 [SharedStorageAccessManager](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.aspx) 파일 공유 토큰입니다. | 특정 사운드 파일을 벨소리로 저장합니다. 파일에 지원되는 콘텐츠 형식은 mpeg 오디오 및 x-ms-wma 오디오입니다. |
+| DisplayName | 문자열 | 아니요 | 지정된 톤의 식별 이름입니다. | 지정한 벨소리를 저장할 때 사용할 표시 이름을 설정합니다. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
-| Return values | Type | Possible values | Description |
+| 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-success.<br>1-cancelled by user.<br>2-Invalid file.<br>3-Invalid file content type.<br>4-file exceeds maximum ringtone size (1MB in Windows 10).<br>5-File exceeds 40 second length limit.<br>6-File is protected by digital rights management.<br>7-invalid  parameters. | The result of the picker operation. |
+| 결과 | Int32 | 0-성공했습니다.<br>1-사용자에 의해 취소되었습니다.<br>2-잘못된 파일입니다.<br>3-잘못된 파일 콘텐츠 형식입니다.<br>4-파일이 벨소리 최대 크기(Windows 10에서 1MB)를 초과합니다.<br>5-파일이 40초의 시간 제한을 초과합니다.<br>6-파일이 디지털 권한 관리로 보호됩니다.<br>7-잘못된 매개 변수입니다. | 선택기 작업의 결과입니다. |
 <br>
-**Example: Save a local music file as a ringtone**
+**예: 벨소리로 로컬 음악 파일 저장**
 
 ``` cs
 LauncherOptions options = new LauncherOptions();
@@ -140,23 +144,23 @@ if (result.Status == LaunchUriStatus.Success)
  }
 ```
 
-## Task: Convert a tone token to its friendly name
+## 작업: 해당 식별 이름으로 톤 토큰 변환
 
-The arguments you can pass to get the friendly name of a tone are as follows:
+톤의 식별 이름을 가져오기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| Parameter | Type | Required | Possible values | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
-| Action | string | yes | "GetToneName" | Indicates that you want to get the friendly name of a tone. |
-| ToneToken | string | yes | The tone token | The tone token from which to obtain a display name. |
+| 액션 | 문자열 | yes | "GetToneName" | 톤의 식별 이름을 가져올 것인지를 나타냅니다. |
+| ToneToken | 문자열 | yes | 톤 토큰 | 표시 이름을 가져올 톤 토큰입니다. |
 
-<br>The values that are returned in [LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx):
+<br>[LaunchUriResults.Result](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.launchuriresult.result.aspx)에 반환되는 값은 다음과 같습니다.
 
-| Return value | Type | Possible values | Description |
+| 반환 값 | 형식 | 가능한 값 | 설명 |
 |--------------|------|-------|-------------|
-| Result | Int32 | 0-The picker operation succeeded.<br>7-Incorrect parameter (for example, no ToneToken provided).<br>9-Error reading the name for the specified token.<br>10-Unable to find specified tone token. | The result of the picker operation.
-| DisplayName | string | The tone's friendly name. | Returns the selected tone's display name. This parameter is only returned in the ValueSet if **Result** is 0. |
+| 결과 | Int32 | 0-선택기 작업이 성공했습니다.<br>7-잘못된 매개 변수입니다(예: 톤 토큰이 제공되지 않음).<br>9-지정한 토큰의 이름을 읽는 동안 오류가 발생했습니다.<br>10-지정한 톤 토큰을 찾을 수 없습니다. | 선택기 작업의 결과입니다.
+| DisplayName | 문자열 | 톤의 식별 이름입니다. | 선택한 톤의 표시 이름을 반환합니다. 이 매개 변수는 **Result**가 0일 경우에만 ValueSet에 반환됩니다. |
 <br>
-**Example: Retrieve a tone token from Contact.RingToneToken and display its friendly name in the contact card.**
+**예: Contact.RingToneToken에서 톤 토큰을 검색하고 연락처 카드의 해당 식별 이름 표시**
 
 ```cs
 using (var connection = new AppServiceConnection())
@@ -190,3 +194,9 @@ using (var connection = new AppServiceConnection())
     }
 }
 ```
+
+
+
+<!--HONumber=Aug16_HO4-->
+
+

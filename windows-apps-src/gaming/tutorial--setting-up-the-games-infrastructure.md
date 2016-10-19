@@ -5,7 +5,7 @@ description: "게임을 어셈블하는 첫 번째 단계는 Microsoft Visual St
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
 
 ---
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
 
 Visual Studio 템플릿은 기본 언어 및 기술을 기반으로 하는 특정 앱 유형을 대상으로 하는 설정 및 코드 파일 모음입니다. Microsoft Visual Studio 2015에는 게임 및 그래픽 앱 개발을 상당히 쉽게 수행할 수 있는 많은 템플릿이 있습니다. 템플릿을 사용하지 않을 경우 기본 그래픽 렌더링 및 디스플레이 프레임워크 대부분을 직접 개발해야 하는데, 초보 게임 개발자에게는 매우 힘들 일이 될 수 있습니다.
 
-이 자습서에 적합한 템플릿은 DirectX 11(유니버설 Windows)이라는 템플릿입니다. Visual Studio 2015에서 **파일...**&gt;**새 프로젝트**를 클릭하고 나서,
+이 자습서에 적합한 템플릿은 DirectX 11(유니버설 Windows)이라는 템플릿입니다. Visual Studio 2015에서 **파일...** &gt; **새 프로젝트**를 클릭하고 나서,
 
 1.  **템플릿**에서 **Visual C++**, **Windows**, **유니버설**을 선택합니다.
 2.  가운데 창에서 **DirectX 11 앱(유니버설 Windows)**을 선택합니다.
@@ -169,6 +169,6 @@ void App::Run()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

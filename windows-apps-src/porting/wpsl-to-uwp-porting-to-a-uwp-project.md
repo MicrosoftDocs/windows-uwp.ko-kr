@@ -5,7 +5,7 @@ title: "Windows Phone Silverlight 프로젝트를 UWP 프로젝트로 포팅"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+ms.openlocfilehash: ffcc7a76a8604deb4f7cb57ac32b9a29de7be46d
 
 ---
 
@@ -31,7 +31,7 @@ Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프�
 
 찾을 수 없는 네임스페이스, 형식 또는 멤버에 대한 컴파일 오류가 발생하는 경우 이 문제가 원인일 가능성이 큽니다. API 참조 설명서에서 API의 항목을 열고 요구 사항 섹션으로 이동합니다. 그러면 구현하는 디바이스 패밀리에 대해 알 수 있습니다. 대상 디바이스 패밀리가 아닌 경우 해당 디바이스 패밀리의 확장 SDK에 대한 참조가 필요한 프로젝트에서 API를 사용할 수 있도록 합니다.
 
-**프로젝트**&gt;**참조 추가**&gt;**Windows 유니버설**&gt;**확장**을 클릭하고 적절한 확장 SDK를 선택합니다. 예를 들어 호출할 API를 모바일 디바이스 패밀리에서만 사용할 수 있으며 버전 10.0.x.y에서 도입한 경우 **UWP용 Windows 모바일 확장**을 확인합니다.
+**프로젝트** &gt; **참조 추가** &gt; **Windows 유니버설** &gt; **확장**을 클릭하고 적절한 확장 SDK를 선택합니다. 예를 들어 호출할 API를 모바일 디바이스 패밀리에서만 사용할 수 있으며 버전 10.0.x.y에서 도입한 경우 **UWP용 Windows 모바일 확장**을 확인합니다.
 
 프로젝트 파일에 다음 참조를 추가합니다.
 
@@ -149,6 +149,6 @@ Windows Phone Silverlight 앱과 Windows 스토어 앱 간에 공유되지 않�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

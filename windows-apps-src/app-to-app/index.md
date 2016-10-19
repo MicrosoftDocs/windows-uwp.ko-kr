@@ -4,8 +4,8 @@ description: "이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어
 title: "앱 간 통신"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
-ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
+ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
+ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
 
 ---
 
@@ -29,10 +29,12 @@ ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
 | [데이터 수신](receive-data.md) | 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다. |
 | [복사 및 붙여넣기](copy-and-paste.md) | 이 문서에서는 UWP 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. |
 | [끌어서 놓기](drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
-| [EDP를 사용하여 앱 간에 전송되는 엔터프라이즈 데이터 보호](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | 이 항목에서는 가장 일반적인 데이터 전송 관련 EDP(엔터프라이즈 데이터 보호) 시나리오 중 일부를 달성하기 위해 필요한 코딩 작업의 예를 보여 줍니다. |
+
+## 참고 항목
+- [UWP 앱 개발](https://developer.microsoft.com/en-us/windows/develop)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

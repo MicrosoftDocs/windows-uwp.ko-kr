@@ -5,7 +5,7 @@ ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
 translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
+ms.openlocfilehash: e46d31e2f90b9336ea19632099741c1957521578
 
 ---
 
@@ -100,6 +100,6 @@ X.509 버전 3 인증서에는 버전 1과 버전 2에 정의된 기본 필드�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

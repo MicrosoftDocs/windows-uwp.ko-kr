@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "질문과 대답"
 description: "Xbox의 UWP에 대한 FAQ입니다."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
+ms.sourcegitcommit: 07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820
+ms.openlocfilehash: 38e5d48b2b0303b5f7d13fdaf6f71e1b3fa56978
 
 ---
 
@@ -21,9 +20,10 @@ ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
 
 정품 모드가 아니고 개발자 모드에서 실행 중인지 먼저 확인합니다. 정품 모드에 있을 경우에는 Xbox One에 연결할 수 없습니다. 이는 **홈** 단추를 누르고 화면 오른쪽의 개발자 홈 타일을 찾아 간단히 확인할 수 있습니다. 타일이 없고 대신 골드/라이브 콘텐츠가 표시되는 경우 정품 모드에 있는 것입니다. 개발자 모드로 전환하려면 개발자 모드 활성화 앱을 실행해야 합니다.
 
-> **참고**&nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다.
+> [!NOTE]
+> 앱을 배포하려면 사용자가 로그인되어 있어야 합니다.
 
-자세한 내용은 이 페이지의 뒷부분에 있는 [배포 오류 수정](frequently-asked-questions.md#fixing-deployment-failures)을 참조하세요.
+자세한 내용은 이 페이지의 뒷부분에 있는 [배포 오류 수정](#fixing-deployment-failures)을 참조하세요.
 
 ### 정품 모드와 개발자 모드 간에 전환하는 방법은 무엇인가요?
 
@@ -39,28 +39,25 @@ ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
 
 예, 개발자 모드에서 게임을 플레이할 수 있는 정품 모드로 전환할 수 있습니다. 자세한 내용은 [Xbox One 개발자 모드 활성화](devkit-activation.md) 페이지를 참조하세요. 
 
-<!-- > **CAUTION**&nbsp;&nbsp;The Xbox Developer Preview System Update includes experimental and early pre-release software. 
-This means that some popular games and apps will not work as expected and you may experience occasional crashes and data loss. -->
-
 ### 게임과 앱 또는 저장된 변경 내용이 손실되나요?
 
-Developer Preview 프로그램을 종료하려는 경우 초기화를 수행해야 할 수 있으며 이렇게 하면 콘솔의 모든 콘텐츠가 지워집니다. 이 경우 모든 게임과 앱을 다시 설치해야 합니다. 온라인 상태에서 플레이한 경우에는 저장된 게임이 Live 계정 클라우드 프로필에 모두 저장되므로 손실되지 않습니다.
+개발자 프로그램을 종료할 경우 설치된 게임과 앱은 손실되지 않습니다. 또한 온라인 상태에서 플레이한 경우에는 저장된 게임이 Live 계정 클라우드 프로필에 모두 저장되므로 손실되지 않습니다.
 
-### Developer Preview는 어떻게 종료하나요?
+### 개발자 프로그램은 어떻게 종료하나요?
 
-Developer Preview를 종료하는 방법에 대한 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md) 항목을 참조하세요.
+개발자 프로그램을 종료하는 방법은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md) 항목을 참조하세요.
 
 ### Xbox One을 팔고 개발자 모드에서 종료했습니다. 개발자 모드를 비활성화하는 방법은 무엇인가요?
 
 Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터에서 비활성화할 수 있습니다. 자세한 내용은 [Xbox One 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-through-windows-dev-center) 항목의 **Windows 개발자 센터를 사용하여 콘솔 비활성화** 섹션을 참조하세요.
 
-### Windows 개발자 센터를 사용하여 Developer Preview를 종료했지만 개발자 모드에 계속 있습니다. 어떻게 해야 하나요?
+### Windows 개발자 센터를 사용하여 개발자 프로그램을 종료했지만 개발자 모드에 계속 있습니다. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
 
 ### 내 앱을 게시할 수 있나요?
 
-올해 안에 개발자 센터를 통해 앱에 대해 게시할 수 있게 됩니다. 정품 Xbox One에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
+[개발자 계정](https://developer.microsoft.com/store/register)이 있는 경우 개발자 센터를 통해 [앱을 게시](../publish/index.md)할 수 있습니다. 정품 Xbox One 콘솔에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
 
 ### 내 게임을 게시할 수 있나요?
 
@@ -70,7 +67,7 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 ### 표준 게임 엔진이 작동하나요?
 
-이 미리 보기 릴리스에 대해 [알려진 문제](known-issues.md) 페이지를 확인합니다.
+이 릴리스에 대해 [알려진 문제](known-issues.md) 페이지를 확인합니다.
 
 ### Xbox One에서 UWP 게임에 사용할 수 있는 기능 및 시스템 리소스는 무엇인가요? 
 
@@ -82,13 +79,14 @@ Xbox One에 더 이상 액세스할 수 없는 경우 Windows 개발자 센터�
 
 ### 전체 UWP API 화면을 Xbox에서 사용할 수 있나요?
 
-이 미리 보기 릴리스에 대해 [알려진 문제](known-issues.md) 페이지를 확인합니다.
+이 릴리스에 대해 [알려진 문제](known-issues.md) 페이지를 확인합니다.
 
 ### 배포 오류 수정
 
 Visual Studio에서 앱을 배포할 수 없는 경우 이러한 단계가 문제 해결에 도움이 될 수 있습니다. 문제 해결이 안 되는 경우 포럼에 도움을 요청합니다.
 
-> **참고**&nbsp;&nbsp;앱을 배포하려면 사용자가 로그인되어 있어야 합니다. 0x87e10008 오류 메시지가 표시되면 사용자가 로그인되어 있는지 확인하고 다시 시도하세요.
+> [!NOTE]
+> 앱을 배포하려면 사용자가 로그인되어 있어야 합니다. 0x87e10008 오류 메시지가 표시되면 사용자가 로그인되어 있는지 확인하고 다시 시도하세요.
 
 Visual Studio에서 Xbox One에 연결할 수 없는 경우에는 다음을 확인합니다.
 
@@ -98,7 +96,8 @@ Visual Studio에서 Xbox One에 연결할 수 없는 경우에는 다음을 확�
 3. 아직 따르지 않았다면 [개발 환경 설정](development-environment-setup.md) 항목 및 [Xbox One 도구 소개](introduction-to-xbox-tools.md) 항목을 참조하세요.
 
 4. 개발 PC에서 콘솔 IP 주소에 "ping"할 수 있는지 확인합니다.
-> **참고**&nbsp;&nbsp;최상의 배포 성능을 얻기 위해서는 콘솔에 유선으로 연결하는 것이 좋습니다.
+  > [!NOTE]
+  > 최상의 배포 성능을 얻기 위해서는 콘솔에 유선으로 연결하는 것이 좋습니다.
 
 5. **디버그** 탭의 인증 드롭다운 목록에서 유니버설(암호화되지 않은 프로토콜)을 사용하고 있는지 확인합니다. 자세한 내용은 [개발 환경 설정](development-environment-setup.md)을 참조하세요.
 
@@ -120,7 +119,7 @@ Go to Settings > System > Console info & updates > Reset console, and select the
 > **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
 
 > **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
-This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
+This will delete all of your games, apps, settings and content and deactivate Developer Mode.
 -->
 
 ### HTML/JavaScript를 사용하여 앱을 빌드하는 경우 게임 패드 탐색을 사용하도록 설정하는 방법은 무엇인가요?
@@ -130,11 +129,11 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 자세한 내용은 [TVHelpers](https://github.com/Microsoft/TVHelpers) 프로젝트 및 프로젝트 [wiki](https://github.com/Microsoft/TVHelpers/wiki)를 참조하세요.
 
 ## 참고 항목
-- [Xbox One Developer Preview의 UWP에 대해 알려진 문제](known-issues.md)
+- [Xbox One의 UWP에 대해 알려진 문제](known-issues.md)
 - [Xbox One의 UWP](index.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

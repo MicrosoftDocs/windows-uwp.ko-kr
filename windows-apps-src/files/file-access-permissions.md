@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "파일 액세스 권한"
 description: "앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
+ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
+ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
 
 ---
 # 파일 액세스 권한
@@ -47,7 +47,7 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
             }
         );
         ```
-        
+
         [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741)가 완료되면 앱 설치 디렉터리에 있는 *file.txt* 파일(이 예제에서는 `file`)을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다.
 
         URI의 "ms-appx:///" 접두사는 앱의 설치 디렉터리를 나타냅니다. 앱 URI 사용에 대한 자세한 내용은 [URI를 사용하여 콘텐츠를 참조하는 방법](https://msdn.microsoft.com/library/windows/apps/hh781215)을 참조하세요.
@@ -71,7 +71,7 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
         ```javascript
         var localFolder = Windows.Storage.ApplicationData.current.localFolder;
         ```
- 
+
         앱의 로밍 또는 임시 폴더에 액세스하려면 대신 [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623) 또는 [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629) 속성을 사용합니다.
 
         앱 데이터 위치를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 검색한 후 **StorageFolder** 메서드를 사용하여 해당 위치의 파일과 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder** 개체는 `localFolder` 변수에 저장됩니다. 앱 데이터 위치 사용에 대해 자세히 알아보려면 [응용 프로그램 데이터 관리](https://msdn.microsoft.com/library/windows/apps/hh465109)를 참조하거나 Windows 8.1에 대한 [응용 프로그램 데이터 샘플](http://go.microsoft.com/fwlink/p/?linkid=231478)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 다시 사용하세요.
@@ -80,7 +80,7 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
         > [!div class="tabbedCodeSnippets"]
         ```csharp
         using Windows.Storage;
-        StorageFile file = await StorageFile.GetFileFromApplicationUriAsync("ms-appdata:///local/file.txt");
+        StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///file.txt"));
         ```
         ```javascript
         Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appdata:///local/file.txt").done(
@@ -125,7 +125,7 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
             }
         );
         ```
- 
+
         [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 파일이 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 반환합니다. 위 예제에서 이 파일은 `newFile`입니다.
 
     -   아래와 같이 사용자 다운로드 폴더에 하위 폴더를 만들 수 있습니다.
@@ -141,7 +141,7 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
             }
         );
         ```
- 
+
         [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763)는 오버로드되므로 다운로드 폴더에 동일한 이름의 기존 하위 폴더가 이미 있는 경우 시스템에서 어떻게 할지를 지정할 수 있습니다. 이러한 메서드가 완료되면 만든 하위 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)를 반환합니다. 위 예제에서 이 파일은 `newFolder`입니다.
 
     다운로드 폴더에 파일이나 폴더를 만드는 경우 해당 항목의 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에 추가하여 앱이 나중에 해당 항목에 쉽게 액세스할 수 있도록 하는 것이 좋습니다.
@@ -160,12 +160,11 @@ ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
 | 동영상    | VideosLibrary<br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   
 | 이동식 장치  | RemovableDevices <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>[SD 카드 액세스](access-the-sd-card.md)도 참조하세요. | [KnownFolders.RemovableDevices](https://msdn.microsoft.com/library/windows/apps/br227158) |  
 | 홈 그룹 라이브러리  | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.HomeGroup](https://msdn.microsoft.com/library/windows/apps/br227153) |      
-| 미디어 서버 장치(DLNA) | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) | 
+| 미디어 서버 장치(DLNA) | 다음 접근 권한 값 중 하나 이상이 필요합니다. <br>- MusicLibrary <br>- PicturesLibrary <br>- VideosLibrary | [KnownFolders.MediaServerDevices](https://msdn.microsoft.com/library/windows/apps/br227154) |
 | UNC(범용 명명 규칙) 폴더 | 다음과 같은 접근 권한 값의 조합이 필요합니다. <br><br>홈 및 회사 네트워크 접근 권한 값: <br>- PrivateNetworkClientServer <br><br>하나 이상의 인터넷 및 공용 네트워크 접근 권한 값: <br>- InternetClient <br>- InternetClientServer <br><br>해당되는 경우 도메인 자격 증명 접근 권한 값:<br>- EnterpriseAuthentication <br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. | 다음을 사용하여 폴더 검색: <br>[StorageFolder.GetFolderFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227278) <br><br>다음을 사용하여 파일 검색: <br>[StorageFile.GetFileFromPathAsync](https://msdn.microsoft.com/library/windows/apps/br227206) |
 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

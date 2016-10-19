@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
 title: "원격 앱 서비스와 통신"
-description: "프로젝트 &quot;로마&quot;를 사용하여 원격 디바이스에서 실행되는 앱 서비스와 메시지를 교환합니다."
+description: "프로젝트 로마를 사용하여 원격 디바이스에서 실행되는 앱 서비스와 메시지를 교환합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: c90304b7ca3f7185fca9146aa2303b09cba5ab9a
 ms.openlocfilehash: bff77a63d0f88907410c74d4dce19fb422c1bd3f

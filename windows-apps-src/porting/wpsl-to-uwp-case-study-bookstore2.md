@@ -5,11 +5,11 @@ description: "Bookstore에 제공된 정보를 기반으로 하는 이 사례 �
 title: "UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore2"
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b
+ms.openlocfilehash: f421b42798d9472cd97ec9ed51036bd312c3e79e
 
 ---
 
-# UWP에 대한 Windows Phone Silverlight 사례 연구&#58; Bookstore2
+# UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -302,6 +302,6 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: "응용 프로그램 매니페스트에서 백그라운드 작업 선언"
 description: "앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 
 ---
 
@@ -22,7 +22,10 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
-백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 백그라운드 작업을 선언해야 합니다.
+> [!Important]
+>  이 문서는 별도 프로세스에서 실행되는 백그라운드 작업과 관련이 있습니다. 단일 프로세스 백그라운드 작업은 매니페스트에서 선언되지 않습니다.
+
+별도 프로세서에서 실행하는 백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 백그라운드 작업을 선언해야 합니다.
 
 이 항목에서는 백그라운드 작업 클래스를 하나 이상 만들었으며 앱이 하나 이상의 트리거에 응답하여 실행할 각 백그라운드 작업을 등록한다고 가정합니다.
 
@@ -60,28 +63,28 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 이 코드를 Extensions 요소에 복사합니다. 다음 단계에 따라 특성을 추가합니다.
 
 ```xml
-      <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="">
-          <BackgroundTasks>
-            <Task Type="" />
-          </BackgroundTasks>
-        </Extension>
-      </Extensions>
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="">
+      <BackgroundTasks>
+        <Task Type="" />
+      </BackgroundTasks>
+    </Extension>
+</Extensions>
 ```
 
 1.  백그라운드 작업(**namespace.classname**)을 등록할 때 코드에 사용된 것과 동일한 문자열을 진입점으로 사용하도록 EntryPoint 특성을 변경합니다.
 
     이 예에서 진입점은 ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName입니다.
 
-    ```xml
-          <Extensions>
-            <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.ExampleBackgroundTaskClassName">
-              <BackgroundTasks>
-                <Task Type="" />
-              </BackgroundTasks>
-            </Extension>
-          </Extensions>
-    ```
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.ExampleBackgroundTaskClassName">
+       <BackgroundTasks>
+         <Task Type="" />
+       </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
 
 2.  Task Type 특성 목록을 변경하여 이 백그라운드 작업과 함께 사용된 작업 등록 유형을 나타냅니다. 백그라운드 작업을 여러 트리거 유형과 함께 등록할 경우 유형별로 다른 Task 요소 및 Type 특성을 추가합니다.
 
@@ -89,19 +92,17 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 
     이 조각 예에서는 시스템 이벤트 트리거 및 푸시 알림 사용을 나타냅니다.
 
-    ```xml
-                <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
-                  <BackgroundTasks>
-                    <Task Type="systemEvent" />
-                    <Task Type="pushNotification" />
-                  </BackgroundTasks>
-                </Extension>
-    ```
+```xml
+<Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
+    <BackgroundTasks>
+        <Task Type="systemEvent" />
+        <Task Type="pushNotification" />
+    </BackgroundTasks>
+</Extension>
+```
 
-    > **참고** 일반적으로 앱은 “BackgroundTaskHost.exe”라는 특수 프로세스에서 실행됩니다. Extension 요소에 Executable 요소를 추가하여 백그라운드 작업이 앱의 컨텍스트에서 실행되도록 할 수 있습니다. 백그라운드 작업에는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 같이 필요한 Executable 요소만 사용하세요.    
 
 ## 백그라운드 작업 실행 추가
-
 
 앱에서 등록한 각 추가 백그라운드 작업 클래스에 대해 2단계를 반복합니다.
 
@@ -146,7 +147,64 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 </Applications>
 ```
 
+## 다른 프로세스에서 실행되도록 백그라운드 작업 선언
+
+Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
+
+### 포그라운드 응용 프로그램에서 실행
+
+다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. `Executable` 특성에 유의하세요.
+
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="ExecModelTestBackgroundTasks.ApplicationTriggerTask" Executable="$targetnametoken$.exe">
+        <BackgroundTasks>
+            <Task Type="systemEvent" />
+        </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
+
+> [!Note]
+> 백그라운드 작업에는 [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)와 같이 필요한 Executable 요소만 사용하세요.  
+
+### 다른 백그라운드 호스트 프로세스에서 실행
+
+다음은 동일한 앱에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다. 함께 실행되는 백그라운드 작업을 식별하는 `ResourceGroup` 특성에 유의하세요.
+
+```xml
+<Extensions>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.SessionConnectedTriggerTask" ResourceGroup="foo">
+      <BackgroundTasks>
+        <Task Type="systemEvent" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimeZoneTriggerTask" ResourceGroup="foo">
+      <BackgroundTasks>
+        <Task Type="systemEvent" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.TimerTriggerTask" ResourceGroup="bar">
+      <BackgroundTasks>
+        <Task Type="timer" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.ApplicationTriggerTask" ResourceGroup="bar">
+      <BackgroundTasks>
+        <Task Type="general" />
+      </BackgroundTasks>
+    </Extension>
+    <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundTasks.MaintenanceTriggerTask" ResourceGroup="foobar">
+      <BackgroundTasks>
+        <Task Type="general" />
+      </BackgroundTasks>
+    </Extension>
+</Extensions>
+```
+
+
 ## 관련 항목
+
 
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
@@ -154,6 +212,6 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

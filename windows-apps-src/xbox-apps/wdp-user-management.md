@@ -4,7 +4,7 @@ title: "Xbox Live 테스트 사용자 관리 API 참조"
 description: "프로그래밍 방식으로 사용자 관리 API에 액세스하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: ad01d4daf089c61fc50c7927cfbf123d7d7ee4df
+ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
 
 ---  
 
@@ -72,6 +72,6 @@ GET 호출은 다음 속성이 있는 JSON 배열을 반환합니다.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

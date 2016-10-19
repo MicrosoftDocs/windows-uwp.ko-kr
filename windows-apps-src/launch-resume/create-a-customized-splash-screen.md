@@ -5,7 +5,7 @@ description: "앱의 연장된 시작 화면을 만들어 시작 화면을 더 �
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
+ms.openlocfilehash: bec87d2e208ca6f8d310de139692ef13f052b915
 
 ---
 
@@ -551,6 +551,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

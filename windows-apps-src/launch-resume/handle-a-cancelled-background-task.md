@@ -4,8 +4,8 @@ title: "취소된 백그라운드 작업 처리"
 description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 
 ---
 
@@ -21,17 +21,17 @@ ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-> **참고** 데스크톱을 제외한 모든 디바이스 패밀리의 경우 디바이스의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
+이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업 빌드를 빠르게 시작하려면 [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업을 빠르게 작성하려면 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+이 항목은 단일 프로세스 백그라운드 작업에도 적용할 수 있습니다. 그러나 Run() 메서드 대신 OnBackgroundActivated()로 대체합니다. 단일 프로세스 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
 
 ## OnCanceled 메서드를 사용하여 취소 요청 인식
 
 취소 이벤트를 처리하는 메서드를 씁니다.
 
-다음과 같은 공간을 가진 OnCanceled 메서드를 만듭니다. 이 메서드는 백그라운드 작업에 대한 취소 요청이 생성될 때마다 Windows 런타임에서 호출되는 진입점입니다.
+> **참고** 데스크톱을 제외한 모든 디바이스 패밀리의 경우 디바이스의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
 
-OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
+다음과 같이 OnCanceled라는 메서드를 만듭니다. 이 메서드는 백그라운드 작업에 대한 취소 요청이 생성될 때 Windows 런타임에서 호출되는 진입점입니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -86,7 +86,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     }
 > ```
 
-백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다. 예를 들면 다음 코드 줄을 사용합니다.
+백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다. 단일 프로세스 백그라운드 작업에서 응용 프로그램 초기화의 일부로 이 등록을 수행할 수 있습니다. 예를 들면 다음 코드 줄을 사용합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -96,10 +96,9 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## Run 메서드를 종료하여 취소 처리
+## 백그라운드 작업을 종료하여 취소 처리
 
-
-취소 요청이 수신되면 Run 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다.
+취소 요청이 수신되면 백그라운드 작업을 수행하는 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다. 단일 프로세스 백그라운드 작업의 경우 이는 `OnBackgroundActivated()` 메서드에서 반환을 의미합니다. 별도 프로세스에서 실행되는 백그라운드 작업의 경우 `Run()` 메서드에서 반환을 의미합니다.
 
 작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. **\_cancelRequested**가 true로 설정된 경우 작업을 중지합니다.
 
@@ -135,7 +134,7 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 
 > **참고** 위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
-작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다.
+작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 별도 프로세스에서 실행되는 백그라운드 작업에 적용됩니다. 단일 프로세스 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
 
 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 LocalSettings에 상태를 기록합니다.
 
@@ -348,6 +347,6 @@ OnCanceled 메서드는 다음과 같은 공간이 있어야 합니다.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

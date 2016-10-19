@@ -4,8 +4,8 @@ ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "이 항목에서는 FaceDetector를 사용하여 이미지로 얼굴을 감지하는 방법을 보여 줍니다. FaceTracker는 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 최적화되어 있습니다."
 title: "이미지 또는 동영상에서 얼굴 감지"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
+ms.sourcegitcommit: 7526d5ddfbaa6f5128ef5775bc75cc48768f647d
+ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 ---
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 [!code-cs[포맷(F)](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-[**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132)를 호출하여 **FaceDetector** 개체를 인스턴스화한 다음 적절한 크기로 조정되고 지원되는 픽셀 형식으로 변환된 비트맵을 전달하여 [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134)를 호출합니다. 이 메서드는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 반환합니다. **ShowDetectedFaces**는 아래에 표시된 대로 이미지의 얼굴 주위에 사각형을 그리는 도우미 메서드입니다.
+[**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132)를 호출하여 **FaceDetector** 개체를 인스턴스화한 다음 [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134)를 호출하여 적절한 크기로 조정되고 지원되는 픽셀 형식으로 변환된 비트맵을 전달합니다. 이 메서드는 [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123) 개체의 목록을 반환합니다. **ShowDetectedFaces**는 아래에 표시된 대로 이미지의 얼굴 주위에 사각형을 그리는 도우미 메서드입니다.
 
 [!code-cs[검색](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 
@@ -97,10 +97,12 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 * [미디어 캡처의 장면 분석](scene-analysis-for-media-capture.md)
 * [기본 얼굴 감지 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
 * [기본 얼굴 추적 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
-* [MediaCapture를 사용하여 사진 및 비디오 캡처](capture-photos-and-video-with-mediacapture.md)
+* [Camera](camera.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [미디어 재생](media-playback.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

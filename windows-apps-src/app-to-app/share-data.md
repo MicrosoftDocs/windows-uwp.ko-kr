@@ -4,8 +4,8 @@ title: "데이터 공유"
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
-ms.openlocfilehash: a91f0eb8b62a860809f8ffb63278be1eff31a2f3
+ms.sourcegitcommit: 554a2cd1db0f950b8a04a5d562f6a6ba43f1be23
+ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
 
 ---
 
@@ -93,6 +93,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 ## 참고 항목 
 
+* [앱 간 통신](index.md)
 * [데이터 수신](receive-data.md)
 * [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
 * [DataPackagePropertySet](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackagepropertyset.aspx)
@@ -105,6 +106,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

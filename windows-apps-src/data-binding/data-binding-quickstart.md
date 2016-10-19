@@ -4,8 +4,8 @@ ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "데이터 바인딩 개요"
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 092df9799982dc5da5cc085b2e73a5dd376c0eb8
+ms.sourcegitcommit: e89580ef62d5d6ae095aa27628181181aaac9666
+ms.openlocfilehash: d452751fd4ab0cc422c3eae94507923440ec45df
 
 ---
 데이터 바인딩 개요
@@ -19,7 +19,7 @@ ms.openlocfilehash: 092df9799982dc5da5cc085b2e73a5dd376c0eb8
 필수 조건
 -------------------------------------------------------------------------------------------------------------
 
-이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [C# 또는 Visual Basic을 사용하여 첫 UWP 앱 만들기](https://msdn.microsoft.com/library/windows/apps/Hh974581)를 참조하세요.
+이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [Windows 앱 시작](https://developer.microsoft.com/en-us/windows/getstarted)을 참조하세요.
 
 프로젝트 만들기
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -31,8 +31,9 @@ ms.openlocfilehash: 092df9799982dc5da5cc085b2e73a5dd376c0eb8
 
 모든 바인딩은 바인딩 대상과 바인딩 소스로 구성됩니다. 일반적으로 대상은 컨트롤 또는 기타 UI 요소의 속성이고, 소스는 클래스 인스턴스(데이터 모델 또는 뷰 모델)의 속성입니다. 이 예제에서는 컨트롤을 단일 항목에 바인딩하는 방법을 보여 줍니다. 대상은 **TextBlock**의 **Text** 속성입니다. 소스는 오디오 녹음을 나타내는 **Recording**이라는 단순 클래스의 인스턴스를 나타냅니다. 먼저 클래스를 살펴보겠습니다.
 
-프로젝트에 새 클래스를 추가하고 이름을 Recording.cs(C#을 사용하는 경우)로 지정한 후 다음 코드를 추가합니다.
+프로젝트에 새 클래스를 추가하고 이름을 Recording.cs(아래와 같이 C#, C++ 코드 조각을 사용하는 경우)로 지정한 후 다음 코드를 추가합니다.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
 namespace Quickstart
 {
@@ -41,14 +42,12 @@ namespace Quickstart
         public string ArtistName { get; set; }
         public string CompositionName { get; set; }
         public DateTime ReleaseDateTime { get; set; }
-
         public Recording()
         {
             this.ArtistName = "Wolfgang Amadeus Mozart";
             this.CompositionName = "Andante in C for Piano";
             this.ReleaseDateTime = new DateTime(1761, 1, 1);
         }
-
         public string OneLineSummary
         {
             get
@@ -58,7 +57,6 @@ namespace Quickstart
             }
         }
     }
-
     public class RecordingViewModel
     {
         private Recording defaultRecording = new Recording();
@@ -66,130 +64,117 @@ namespace Quickstart
     }
 }
 ```
-
 ```cpp
-#include <sstream>
-
-namespace Quickstart
-{
-    public ref class Recording sealed
+    #include <sstream>
+    namespace Quickstart
     {
-    private:
-        Platform::String^ artistName;
-        Platform::String^ compositionName;
-        Windows::Globalization::Calendar^ releaseDateTime;
-
-    public:
-        Recording(Platform::String^ artistName, Platform::String^ compositionName,
-            Windows::Globalization::Calendar^ releaseDateTime) :
-            artistName{ artistName },
-            compositionName{ compositionName },
-            releaseDateTime{ releaseDateTime } {}
-
-        property Platform::String^ ArtistName
+        public ref class Recording sealed
         {
-            Platform::String^ get() { return this->artistName; }
-        }
-
-        property Platform::String^ CompositionName
-        {
-            Platform::String^ get() { return this->compositionName; }
-        }
-
-        property Windows::Globalization::Calendar^ ReleaseDateTime
-        {
-            Windows::Globalization::Calendar^ get() { return this->releaseDateTime; }
-        }
-
-        property Platform::String^ OneLineSummary
-        {
-            Platform::String^ get()
+        private:
+            Platform::String^ artistName;
+            Platform::String^ compositionName;
+            Windows::Globalization::Calendar^ releaseDateTime;
+        public:
+            Recording(Platform::String^ artistName, Platform::String^ compositionName,
+                Windows::Globalization::Calendar^ releaseDateTime) :
+                artistName{ artistName },
+                compositionName{ compositionName },
+                releaseDateTime{ releaseDateTime } {}
+            property Platform::String^ ArtistName
             {
-                std::wstringstream wstringstream;
-                wstringstream << this->CompositionName->Data();
-                wstringstream << L" by " << this->ArtistName->Data();
-                wstringstream << L", released: " << this->ReleaseDateTime->MonthAsNumericString()->Data();
-                wstringstream << L"/" << this->ReleaseDateTime->DayAsString()->Data();
-                wstringstream << L"/" << this->ReleaseDateTime->YearAsString()->Data();
-                return ref new Platform::String(wstringstream.str().c-str());
+                Platform::String^ get() { return this->artistName; }
             }
-        }
-    };
-
-    public ref class RecordingViewModel sealed
-    {
-    private:
-        Recording^ defaultRecording;
-
-    public:
-        RecordingViewModel()
+            property Platform::String^ CompositionName
+            {
+                Platform::String^ get() { return this->compositionName; }
+            }
+            property Windows::Globalization::Calendar^ ReleaseDateTime
+            {
+                Windows::Globalization::Calendar^ get() { return this->releaseDateTime; }
+            }
+            property Platform::String^ OneLineSummary
+            {
+                Platform::String^ get()
+                {
+                    std::wstringstream wstringstream;
+                    wstringstream << this->CompositionName->Data();
+                    wstringstream << L" by " << this->ArtistName->Data();
+                    wstringstream << L", released: " << this->ReleaseDateTime->MonthAsNumericString()->Data();
+                    wstringstream << L"/" << this->ReleaseDateTime->DayAsString()->Data();
+                    wstringstream << L"/" << this->ReleaseDateTime->YearAsString()->Data();
+                    return ref new Platform::String(wstringstream.str().c-str());
+                }
+            }
+        };
+        public ref class RecordingViewModel sealed
         {
-            Windows::Globalization::Calendar^ releaseDateTime = ref new Windows::Globalization::Calendar();
-            releaseDateTime->Month = 1;
-            releaseDateTime->Day = 1;
-            releaseDateTime->Year = 1761;
-            this->defaultRecording = ref new Recording{ L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime };
-        }
-
-        property Recording^ DefaultRecording
-        {
-            Recording^ get() { return this->defaultRecording; };
-        }
-    };
-}
+        private:
+            Recording^ defaultRecording;
+        public:
+            RecordingViewModel()
+            {
+                Windows::Globalization::Calendar^ releaseDateTime = ref new Windows::Globalization::Calendar();
+                releaseDateTime->Month = 1;
+                releaseDateTime->Day = 1;
+                releaseDateTime->Year = 1761;
+                this->defaultRecording = ref new Recording{ L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime };
+            }
+            property Recording^ DefaultRecording
+            {
+                Recording^ get() { return this->defaultRecording; };
+            }
+        };
+    }
 ```
 
 그런 다음 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출합니다. **RecordingViewModel** 형식의 속성을 **MainPage**에 바인딩하면 됩니다.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
-namespace Quickstart
-{
-    public sealed partial class MainPage : Page
+    namespace Quickstart
     {
-        public MainPage()
+        public sealed partial class MainPage : Page
         {
-            this.InitializeComponent();
-            this.ViewModel = new RecordingViewModel();
+            public MainPage()
+            {
+                this.InitializeComponent();
+                this.ViewModel = new RecordingViewModel();
+            }
+            public RecordingViewModel ViewModel { get; set; }
         }
-
-        public RecordingViewModel ViewModel { get; set; }
     }
-}
 ```
-
 ```cpp
-namespace Quickstart
-{
-    public ref class MainPage sealed
+    namespace Quickstart
     {
-    private:
-        RecordingViewModel^ viewModel;
-
-    public:
-        MainPage()
+        public ref class MainPage sealed
         {
-            InitializeComponent();
-            this->viewModel = ref new RecordingViewModel();
-        }
-
-        property RecordingViewModel^ ViewModel
-        {
-            RecordingViewModel^ get() { return this->viewModel; };
-        }
-    };
-}
+        private:
+            RecordingViewModel^ viewModel;
+        public:
+            MainPage()
+            {
+                InitializeComponent();
+                this->viewModel = ref new RecordingViewModel();
+            }
+            property RecordingViewModel^ ViewModel
+            {
+                RecordingViewModel^ get() { return this->viewModel; };
+            }
+        };
+    }
 ```
 
 마지막 부분은 **TextBlock**를 **ViewModel.DefaultRecording.OneLiner** 속성에 바인딩하는 것입니다.
 
 ```xml
-<Page x:Class="Quickstart.MainPage" ... >
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"/>
-    </Grid>
-</Page>
+    <Page x:Class="Quickstart.MainPage" ... >
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        </Grid>
+    </Page>
 ```
 
 다음은 결과입니다.
@@ -203,14 +188,13 @@ namespace Quickstart
 
 다음 예제에서는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 `Recording` 개체의 컬렉션에 바인딩합니다. 먼저 컬렉션을 뷰 모델에 추가합니다. 다음과 같은 새 멤버를 **RecordingViewModel** 클래스에 추가하면 됩니다.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
     public class RecordingViewModel
     {
         ...
-        
         private ObservableCollection<Recording> recordings = new ObservableCollection<Recording>();
         public ObservableCollection<Recording> Recordings { get { return this.recordings; } }
-
         public RecordingViewModel()
         {
             this.recordings.Add(new Recording() { ArtistName = "Johann Sebastian Bach",
@@ -222,33 +206,28 @@ namespace Quickstart
         }
     }
 ```
-
 ```cpp
     public ref class RecordingViewModel sealed
     {
     private:
         ...
         Windows::Foundation::Collections::IVector<Recording^>^ recordings;
-
     public:
         RecordingViewModel()
         {
             ...
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 7;
             releaseDateTime->Day = 8;
             releaseDateTime->Year = 1748;
             Recording^ recording = ref new Recording{ L"Johann Sebastian Bach", L"Mass in B minor", releaseDateTime };
             this->Recordings->Append(recording);
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 2;
             releaseDateTime->Day = 11;
             releaseDateTime->Year = 1805;
             recording = ref new Recording{ L"Ludwig van Beethoven", L"Third Symphony", releaseDateTime };
             this->Recordings->Append(recording);
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 12;
             releaseDateTime->Day = 3;
@@ -256,9 +235,7 @@ namespace Quickstart
             recording = ref new Recording{ L"George Frideric Handel", L"Serse", releaseDateTime };
             this->Recordings->Append(recording);
         }
-
         ...
-
         property Windows::Foundation::Collections::IVector<Recording^>^ Recordings
         {
             Windows::Foundation::Collections::IVector<Recording^>^ get()
@@ -331,7 +308,8 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 두 가지 방법이 있습니다. 세부 정보 보기를 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 속성에 바인딩할 수 있습니다. 또는 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)를 사용할 수 있습니다. **ListView**와 세부 정보 보기를 모두 **CollectionViewSource**에 바인딩합니다(현재 선택된 항목을 처리함). 두 기술 모두 아래에 나와 있으며, 둘 다 그림과 동일한 결과를 제공합니다.
 
-**참고** 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
+> [!NOTE]
+> 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 필요합니다.
 
 먼저, 다음은 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 기술입니다. Visual C++ 구성 요소 확장(C++/CX)을 사용하는 경우 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용할 것이므로 **Recording** 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가해야 합니다.
 
@@ -452,10 +430,14 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 
 ![사용자 지정 형식으로 날짜 표시](images/xaml-databinding5.png)
 
+> [!NOTE]
+> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+
+## 참고 항목
+- [데이터 바인딩](index.md)
 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

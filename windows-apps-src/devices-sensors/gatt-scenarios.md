@@ -5,7 +5,7 @@ title: Bluetooth GATT
 description: "이 문서에서는 세 가지 일반적인 GATT 시나리오에 대한 샘플 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth GATT(일반 특성 프로필) 개요를 제공합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: 664f6ce7829c9e9a6674daa6cdc21e7561ff094b
+ms.openlocfilehash: 508acd449c156fa0f5b14298e4a7700748fc65bb
 
 ---
 # Bluetooth GATT
@@ -401,6 +401,6 @@ void MainPage::BatteryLevelChanged(
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

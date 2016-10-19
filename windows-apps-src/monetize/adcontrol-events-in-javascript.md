@@ -4,16 +4,16 @@ ms.assetid: 2383296e-c3d7-4b49-bcd2-621391228fdb
 description: "AdControl 클래스의 이벤트를 처리하는 방법을 알아봅니다."
 title: "JavaScript의 AdControl 이벤트"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b3c41f38f42c390c52c96fa93cfce3fe9bbd181d
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: d24030dfae92451924000ba4f1ac19cf6c4d4abe
 
 
 ---
 
-# JavaScript의 AdControl 이벤트
+# JavaScript에서 AdControl 이벤트
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 다음 예제에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스의 이벤트를 처리하는 방법을 보여 줍니다. 이러한 예제에서는 이전에 **AdControl** 이벤트에 이벤트 처리기를 할당했다고 가정합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [HTML 속성 예제](html-properties-example.md)를 참조하세요.
 
@@ -56,6 +56,6 @@ window.myAdEngagedChanged = function (sender) {
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

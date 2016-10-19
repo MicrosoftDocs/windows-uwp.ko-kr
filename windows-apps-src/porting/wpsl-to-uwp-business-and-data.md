@@ -5,7 +5,7 @@ title: "Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 �
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 24e94e91adc0e5ef0b7a076d54299eab8c4ba527
+ms.openlocfilehash: 57288b13af0f2ff4f677e2425442b43f3e76d4d8
 
 ---
 
@@ -142,6 +142,6 @@ UWP 앱에서 사진, 음악 및 동영상 파일에 액세스하는 방법에 �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

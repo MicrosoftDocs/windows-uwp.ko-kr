@@ -4,8 +4,8 @@ Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니�
 Search.Product: eADQiWindows 10XVcnh
 title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 640ddc7b77d5a23562dba2ecd9812464beb8a422
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
 
 ---
 
@@ -120,16 +120,16 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left">정적 및 반응형 레이아웃을 위한 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx">Canvas</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx">Grid</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.relativepanel.aspx">RelativePanel</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx">StackPanel</a></strong> 등의 <strong>레이아웃 패널 클래스</strong>로 구성된 유연한 레이아웃 시스템을 제공하는 XAML입니다. <strong><a href="https://msdn.microsoft.com/library/ms171352.aspx">속성</a></strong>은 요소의 위치와 크기를 제어하는 데 사용됩니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx">XAML을 사용하여 레이아웃 정의</a><br/></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>피어 투 피어 탐색.</strong> <br><br>사용자에게 계층적 중요도가 동일한 페이지 간을 이동하는 방법을 제공합니다.</td>
+<td align="left"><strong>피어 탐색.</strong> <br><br>사용자에게 계층적 중요도가 동일한 페이지 간을 이동하는 방법을 제공합니다.</td>
 <td align="left"><strong>탭</strong>, <strong>살짝 밀기 보기</strong> 및 <strong>탐색 창</strong>은 <strong>측면 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탭 바 컨트롤러</strong>, <strong>분할 보기 컨트롤러</strong> 및 <strong>페이지 보기 컨트롤러</strong>를 사용하면 동일한 계층의 보기 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">탐색</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt465735.aspx">두 페이지 간의 피어 투 피어 탐색</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>계층적 탐색.</strong> <br><br>계층에서 부모와 자식 페이지 간을 탐색합니다.</td>
 <td align="left"><strong>목록</strong>, <strong>그리드 목록</strong>, <strong>단추</strong> 및 기타 컨트롤은 <strong>의도</strong>와 함께 사용하여 다른 <strong>활동</strong>을 로드할 때 <strong>하위 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탐색 컨트롤러</strong>를 사용하면 사용자가 계층 구조 수준 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">허브</a></strong>를 사용하면 하위 페이지로 이동하는 데 선택할 수 있도록 사용자에게 콘텐츠의 미리 보기를 표시합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">마스터/세부 정보</a></strong>를 사용하면 사용자가 해당 세부 정보 섹션 옆에 표시되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">탐색</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">허브</a></strong>를 사용하면 하위 페이지로 이동하는 데 선택할 수 있도록 사용자에게 콘텐츠의 미리 보기를 표시합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">마스터/세부 정보</a></strong>를 사용하면 사용자가 해당 세부 정보 섹션 옆에 표시되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>뒤로 단추 탐색.</strong> <br><br>응용 프로그램을 통해 뒤로 탐색합니다.</td>
@@ -665,6 +665,6 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

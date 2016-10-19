@@ -4,15 +4,15 @@ ms.assetid: 5efb4f40-a021-4dd2-82b4-7c95c3849485
 description: "EULA(최종 사용자 사용권 계약)를 모두 읽고 중요한 정보를 확인하세요."
 title: "중요 알림 - EULA"
 translationtype: Human Translation
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 89af54f5b8cf52366100b4751ed37ddd7a7bacb7
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 1482450a8e5039ffd61a90f7cd38738115c5f2f0
 
 ---
 
 # 중요 알림 - EULA
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+
 
 EULA(최종 사용자 사용권 계약)를 모두 읽으세요.
 
@@ -30,6 +30,6 @@ EULA는 확장 SDK가 있는 폴더에서 찾을 수 있습니다. 설치 중에
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,7 +6,7 @@ Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 5b11c3d4757d7da0c4c99d8f74a8988babfc26fd
+ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
 
 ---
 
@@ -270,6 +270,6 @@ namespace ContosoApp
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

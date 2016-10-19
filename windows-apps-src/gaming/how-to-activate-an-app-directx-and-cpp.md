@@ -5,7 +5,7 @@ description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) DirectX �
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14859d03c7af45a17772c76f8c79b3c1bc56272c
+ms.openlocfilehash: 0b13604d2b0349817881a5c1c56c311931c90759
 
 ---
 
@@ -95,6 +95,6 @@ void App::Run()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

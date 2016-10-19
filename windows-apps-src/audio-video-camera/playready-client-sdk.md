@@ -4,8 +4,8 @@ ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PlayReady 보호된 미디어 콘텐츠를 추가하는 방법을 설명합니다."
 title: PlayReady DRM
 translationtype: Human Translation
-ms.sourcegitcommit: 5cae0870142282eaf2f3db05e0e202db7e74ef26
-ms.openlocfilehash: eef128afc0da6f55a76b8c664f9049dc1ec48da1
+ms.sourcegitcommit: 549826e6c355d6b8150fa20736db20a147ed41e9
+ms.openlocfilehash: 735fdfb04bcf7e4fab8265b294b117be5c614870
 
 ---
 
@@ -66,13 +66,13 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 
 다음과 같은 새 인터페이스, 클래스 및 열거가 PlayReady DRM에 추가되었습니다.
 
--   [ **IPlayReadyLicenseAcquisitionServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986077) 인터페이스
--   [ **IPlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986080) 인터페이스
--   [ **IPlayReadySecureStopServiceRequest** ](https://msdn.microsoft.com/library/windows/apps/dn986090) 인터페이스
--   [ **PlayReadyLicenseSession** ](https://msdn.microsoft.com/library/windows/apps/dn986309) 클래스
--   [ **PlayReadySecureStopIterable** ](https://msdn.microsoft.com/library/windows/apps/dn986371) 클래스
--   [ **PlayReadySecureStopIterator** ](https://msdn.microsoft.com/library/windows/apps/dn986375) 클래스
--   [ **PlayReadyHardwareDRMFeatures** ](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거자
+-   [**IPlayReadyLicenseAcquisitionServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986077) 인터페이스
+-   [**IPlayReadyLicenseSession**](https://msdn.microsoft.com/library/windows/apps/dn986080) 인터페이스
+-   [**IPlayReadySecureStopServiceRequest**](https://msdn.microsoft.com/library/windows/apps/dn986090) 인터페이스
+-   [**PlayReadyLicenseSession**](https://msdn.microsoft.com/library/windows/apps/dn986309) 클래스
+-   [**PlayReadySecureStopIterable**](https://msdn.microsoft.com/library/windows/apps/dn986371) 클래스
+-   [**PlayReadySecureStopIterator**](https://msdn.microsoft.com/library/windows/apps/dn986375) 클래스
+-   [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265) 열거자
 
 PlayReady DRM의 새 기능을 사용하는 방법을 설명하기 위해 새 샘플이 생성되었습니다. 샘플은 [http://go.microsoft.com/fwlink/p/?linkid=331670&amp;clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670)에서 다운로드할 수 있습니다.
 
@@ -97,7 +97,8 @@ PlayReady DRM의 새 기능을 사용하는 방법을 설명하기 위해 새 �
 
 PlayReady DRM은 **Microsoft PlayReady 확장 가능 미디어 권한 사양**에 포함된 출력 보호 수준을 지원합니다. 이 문서는 PlayReady 사용이 허가된 제품과 함께 제공되는 설명서 팩에서 찾을 수 있습니다.
 
-> **참고** &nbsp;&nbsp;라이선스 서버에 의해 설정될 수 있는 출력 보호 수준의 허용되는 값에는 [PlayReady 규정 준수 규칙](https://www.microsoft.com/playready/licensing/compliance/)이 적용됩니다.
+> [!NOTE]
+> 라이선스 서버에 의해 설정될 수 있는 출력 보호 수준의 허용되는 값에는 [PlayReady 규정 준수 규칙](https://www.microsoft.com/playready/licensing/compliance/)이 적용됩니다.
 
 PlayReady DRM은 PlayReady 규정 준수 규칙에 지정된 대로 출력 커넥터에서 출력 보호 정책을 사용한 콘텐츠의 재생만을 허용합니다. PlayReady 준수 규칙에 지정된 출력 커넥터 조건에 대한 자세한 내용은 [PlayReady 규정 준수 및 견고성 규칙에 대해 정의된 조건](https://www.microsoft.com/playready/licensing/compliance/)을 참조하세요.
 
@@ -168,7 +169,7 @@ PlayReady DRM은 PlayReady 규정 준수 규칙에 지정된 대로 출력 커�
         <td colspan="2">콘텐츠를 전달하지 않습니다.</td>
     </tr>
 </table>
-
+<br/>
 #### 오디오
 
 <table>
@@ -207,7 +208,7 @@ PlayReady DRM은 PlayReady 규정 준수 규칙에 지정된 대로 출력 커�
         <td>콘텐츠를 전달하지 않습니다.</td>
     </tr>
 </table>
-
+<br/>
 ### Miracast
 
 PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통해 콘텐츠를 재생할 수 있도록 허용합니다. 그러나 Windows 10에서 Miracast는 *디지털* 출력으로 간주됩니다. Miracast 시나리오에 대한 자세한 내용은 [PlayReady 규정 준수 규칙](https://www.microsoft.com/playready/licensing/compliance/)을 참조하세요. 다음 표에서는 PlayReady 라이선스의 다양한 OPL 간 매핑과 PlayReady DRM이 Miracast 출력에서 OPL을 적용하는 방식에 대해 간략하게 설명합니다.
@@ -248,7 +249,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
         <td>콘텐츠를 전달하지 않습니다.</td>
     </tr>
 </table>
-
+<br/>
 ### 추가 명시적 출력 제한
 
 다음 표에서는 명시적 디지털 비디오 출력 보호 제한의 Windows 10용 PlayReady DRM 구현에 대해 설명합니다.
@@ -266,8 +267,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
         <td>연결된 출력: 디지털 비디오 출력, Miracast, HDMI, DVI 등</td>
         <td>
             <p>
-                아래의 경우 중 하나로 제한되면 콘텐츠를 전달합니다.  
-            </p>
+아래의 경우 중 하나로 제한되면 콘텐츠를 전달합니다. </p>
             <ul>
                 <li>(a) 프레임의 너비가 최대 프레임 너비(픽셀)보다 작거나 같고 프레임의 높이가 최대 프레임 높이(픽셀)보다 작거나 같은 경우</li>
                 <li>(b) 프레임의 높이가 최대 프레임 너비(픽셀)보다 작거나 같고 프레임의 너비가 최대 프레임 높이(픽셀)보다 작거나 같은 경우</li>
@@ -281,7 +281,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
         <td>HDCP 2.2를 사용하고 콘텐츠 스트림 형식을 1로 설정하여 콘텐츠를 전달합니다. HDCP 2.2를 사용하지 못하거나 콘텐츠 스트림 형식을 1로 설정할 수 없는 경우에는 콘텐츠를 전달하지 않습니다. 또한 압축되지 않은 디지털 비디오 출력 보호 수준을 271보다 크거나 같은 값으로 지정해야 합니다.</td>
     </tr>
 </table>
-
+<br/>
 다음 표에서는 명시적 아날로그 비디오 출력 보호 제한의 Windows 10용 PlayReady DRM 구현에 대해 설명합니다.
 
 <table>
@@ -329,8 +329,9 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
         <td colspan="2">콘텐츠를 전달하지 않습니다.</td>
     </tr>
 </table>
-
-> **참고** "Mini DisplayPort-VGA"와 같은 어댑터 동글을 재생에 사용하는 경우 Windows 10에서는 출력을 디지털 비디오 출력으로 간주하고 아날로그 비디오 정책을 적용할 수 없습니다.
+<br/>
+> [!NOTE]
+&gt; "Mini DisplayPort-VGA"와 같은 어댑터 동글을 재생에 사용하는 경우 Windows 10에서는 출력을 디지털 비디오 출력으로 간주하고 아날로그 비디오 정책을 적용할 수 없습니다.s.
 
 다음 표에서는 다른 상황에서 재생할 수 있도록 하는 Windows 10용 PlayReady DRM 구현에 대해 설명합니다.
 
@@ -356,7 +357,7 @@ PlayReady DRM은 HDCP 2.0 이상이 사용되는 즉시 Miracast 출력을 통�
         <td>**HWDRM:** 콘텐츠를 전달하지 않습니다.</td>
     </tr>
 </table>
-
+<br/>
 ## 필수 조건
 
 PlayReady 보호된 UWP 앱 만들기를 시작하기 전에 다음 소프트웨어를 시스템에 설치해야 합니다.
@@ -445,9 +446,20 @@ PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 사후 방�
 
 보안 중지의 샘플 구현에 대해서는 PlayReady 샘플([http://go.microsoft.com/fwlink/p/?linkid=331670&amp;clcid=0x409](http://go.microsoft.com/fwlink/p/?linkid=331670))의 securestop.cs 파일을 참조하세요.
 
- 
+## Xbox One에서 PlayReady DRM 사용
 
- 
+Xbox One의 UWP 앱에서 PlayReady DRM을 사용하려면 추가 `<DeviceCapability>`를 앱 매니페스트에 추가합니다. 현재 앱 매니페스트 디자이너에서 사용할 수 있는 설정이 없으므로 수동으로 추가해야 합니다. 구성하려면 다음 단계를 따르세요.
+
+1. Visual Studio에서 프로젝트를 열고 **솔루션 탐색기**를 열고 **Package.appxmanifest**를 마우스 오른쪽 단추로 클릭합니다.
+2. **연결 프로그램...**을 선택하고 **XML(텍스트) 편집기**를 선택한 다음 **확인**을 클릭합니다.
+3. `<Capabilities>` 태그 사이에 다음 `<DeviceCapability>`를 추가합니다.
+```xml
+<DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5" />
+```
+4. 파일을 저장합니다.
+
+## 참고 항목
+- [미디어 재생](media-playback.md)
 
 
 
@@ -455,6 +467,6 @@ PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 사후 방�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

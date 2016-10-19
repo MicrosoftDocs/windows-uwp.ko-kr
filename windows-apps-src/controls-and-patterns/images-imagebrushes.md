@@ -6,20 +6,32 @@ ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
-ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: bcb23963bfe59006efff2df01bb5ea3d98525497
 
 ---
 # 이미지 및 이미지 브러시
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 이미지를 표시하려면 **Image** 개체 또는 **ImageBrush** 개체를 사용할 수 있습니다. Image 개체는 이미지를 렌더링하고 ImageBrush 개체는 이미지에 다른 개체를 그립니다. 
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx"><strong>Image 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx"><strong>Source 속성</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx"><strong>ImageBrush 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx"><strong>ImageSource 속성</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**Image 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
--   [**Source 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
--   [**ImageBrush 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
--   [**ImageSource 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+
+
+
 
 ## 올바른 요소인가요?
 앱에 독립 실행형 이미지를 표시하려면 **Image** 요소를 사용합니다.
@@ -116,6 +128,10 @@ ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
 
 [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) 및 [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx)용 API에는 미디어 형식의 인코드 및 디코드 전용 메서드가 없습니다. 모든 인코드 및 디코드 작업이 기본 제공되며 인코드 또는 디코드의 측면을 로드 이벤트에 대한 이벤트 데이터의 일부로 표시할 뿐입니다. 앱이 이미지 변환이나 조작을 수행하고 있는 경우 사용할 수 있는 이미지 인코드나 디코드로 특수한 작업을 수행하려면 [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.graphics.imaging.aspx) 네임스페이스에서 사용할 수 있는 API를 사용해야 합니다. 이러한 API는 Windows의 WIC(Windows 이미징 구성 요소)에서도 지원됩니다.
 
+Windows 10 버전 1607부터 **Image** 요소는 애니메이션 GIF 이미지를 지원합니다. 이미지 **Source**로 **BitmapImage**를 사용하는 경우 BitmapImage API에 액세스하여 애니메이션 GIF 이미지의 재생을 제어할 수 있습니다. 자세한 내용은 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) 클래스 페이지의 “설명”을 참조하세요.
+
+> **참고**&nbsp;&nbsp;애니메이션 GIF 지원은 Windows 10 버전 1607용으로 컴파일되고 1607 버전 이상에서 실행하는 앱일 경우에 사용할 수 있습니다. 앱이 이전 버전용으로 컴파일되거나 이전 버전에서 실행되는 경우 GIF의 첫 프레임은 애니메이션이 적용되지 않고 표시됩니다.
+
 앱 리소스 및 앱에서 이미지 리소스를 패키지하는 방법에 대한 자세한 내용은 [앱 리소스 정의](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321)를 참조하세요.
 
 ### WriteableBitmap
@@ -138,7 +154,7 @@ Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하�
 
 코드를 사용하여 Image 또는 ImageBrush를 정의하는 경우 기본 생성자를 사용한 다음 관련 원본 속성([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) 또는 [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx))을 설정합니다. 코드를 사용하여 설정할 때 원본 속성에는 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)(URI 아님)가 필요합니다. 원본이 스트림이면 [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx) 메서드를 사용하여 값을 초기화합니다. 소스가 **ms-appx** 또는 **ms-resource** 구성표를 사용하는 앱에 콘텐츠를 포함하는 URI이면 URI를 사용하는 [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx) 생성자를 사용합니다. 또한 이미지 소스를 검색하거나 디코딩하는 데 타이밍 문제가 있는 경우 [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx) 이벤트 처리를 고려할 수 있으며, 이미지 소스를 사용할 수 있을 때까지 표시할 대체 콘텐츠가 필요할 수 있습니다. 예제 코드는 [XAML 이미지 샘플](http://go.microsoft.com/fwlink/p/?linkid=238575)을 참조하세요.
 
-> **참고** &nbsp;&nbsp;코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.
+> **참고**&nbsp;&nbsp;코드를 사용하여 이미지를 설정하면 현재 크기 및 문화권 한정자로 비정규화된 리소스에 액세스하는 데 자동 처리를 사용하거나 문화권 및 크기에 대한 한정자와 함께 [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) 및 [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx)을 사용하여 리소스를 직접 가져올 수 있습니다. 자세한 내용은 [리소스 관리 시스템](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx)을 참조하세요.
 
 ## 관련 문서
 
@@ -147,6 +163,6 @@ Image 및 ImageBrush 요소는 코드가 아닌 XAML을 사용하여 지정하�
 -   [**ImageBrush 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

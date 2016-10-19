@@ -6,11 +6,10 @@ title: "소리"
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: 7bb23094d569bb29c7227ccd628abd0989b575a4
-ms.openlocfilehash: e6dab48935cd5345ee734e6fda7e6fd4d333bb90
+ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
+ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
 
 ---
-[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.] *이 문서에서는 아직 사용할 수 없는 기능의 미리 보기를 제공합니다.*
 
 # 소리
 
@@ -148,6 +147,6 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

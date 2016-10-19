@@ -6,8 +6,8 @@ title: "접근성"
 label: Accessibility
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+ms.sourcegitcommit: 13894c199a95060395886635ebb7c294f18c9d6b
+ms.openlocfilehash: 8974ea067e033796c491781997067aafea773d96
 
 ---
 
@@ -25,7 +25,7 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 | 문서 | 설명 |
 |---------|-------------|
 | [접근성 개요](accessibility-overview.md) | 이 문서는 UWP 앱의 접근성 시나리오와 관련된 개념 및 기술에 대한 개요입니다. |
-| [포괄 소프트웨어 디자인](designing-inclusive-software.md) | Windows 10용 UWP(유니버설 Windows 플랫폼) 앱을 사용하여 포괄 디자인으로 진화해 나가는 방법에 대해 알아보세요.  접근성을 염두에 둔 포괄 소프트웨어를 디자인하고 빌드하세요. |
+| [포괄 소프트웨어 디자인](designing-inclusive-software.md) | Windows 10용 UWP 앱을 사용하여 포괄 디자인을 개발하는 방법에 대해 알아보세요.  접근성을 염두에 둔 포괄 소프트웨어를 디자인하고 빌드하세요. |
 | [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) | 이 문서는 접근성 있는 UWP 앱을 개발하기 위한 로드맵입니다. |
 | [접근성 테스트](accessibility-testing.md) | UWP 앱에 접근성을 구현하기 위해 따라야 할 몇 가지 테스트 절차입니다. |
 | [스토어의 접근성](accessibility-in-the-store.md) | UWP 앱을 Windows 스토어에 접근 가능한 앱으로 등록하기 위한 요구 사항에 대해 설명합니다. |
@@ -40,10 +40,10 @@ UWP(유니버설 Windows 플랫폼) 앱과 관련된 접근성 개념을 소개�
 
 <span id="related_topics"/>
 ## 관련 항목  
-* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
+* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

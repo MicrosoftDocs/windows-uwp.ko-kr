@@ -6,13 +6,14 @@ ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 0529f212e9fac290bb58925e992518ab0e803bfa
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
 
 
 ---
-
 # 도구 설명
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 
 
@@ -20,10 +21,18 @@ ms.openlocfilehash: 0529f212e9fac290bb58925e992518ab0e803bfa
 
 ![도구 설명](images/controls/tool-tip.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">중요 API</span>
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227608"><strong>ToolTip 클래스</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice"><strong>ToolTipService 클래스</strong></a></li>
+</ul>
 
--   [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
--   [**ToolTipService 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)
+</div>
+</div>
+
+
+
 
 ## 올바른 컨트롤인가요?
 
@@ -68,13 +77,13 @@ Bing 지도 앱의 도구 설명입니다.
 -   대화형 컨트롤을 도구 설명 안에 넣지 마세요.
 -   대화형으로 보이는 이미지를 도구 설명에 넣지 마세요.
 
-<span id="related_topics"></span>관련 항목
+관련 항목
 -----------------------------------------------
 
 * [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

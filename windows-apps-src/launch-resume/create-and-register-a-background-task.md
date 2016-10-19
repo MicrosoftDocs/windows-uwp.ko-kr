@@ -1,19 +1,17 @@
 ---
 author: TylerMSFT
-title: "백그라운드 작업 만들기 및 등록"
+title: "별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록"
 description: "백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다."
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 translationtype: Human Translation
-ms.sourcegitcommit: 579547b7bd2ee76390b8cac66855be4a9dce008e
-ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
+ms.sourcegitcommit: 95c34f70e9610907897cfe9a2bf82aaac408e486
+ms.openlocfilehash: 4eb67f8f63134ab33df79b0b98b252b2b27b2dda
 
 ---
 
-# 백그라운드 작업 만들기 및 등록
-
+# 별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
 
 **중요 API**
 
@@ -21,10 +19,12 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다.
+백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 실행하도록 등록합니다. 이 항목에서는 포그라운드 프로세스가 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 만들고 등록하는 방법을 보여 줍니다. 포그라운드 응용 프로그램에서 직접 백그라운드 작업을 수행하려면 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)을 참조하세요.
+
+> [!Note]
+> 백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 ## 백그라운드 작업 클래스 만들기
-
 
 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현하는 클래스를 작성하여 백그라운드로 코드를 실행할 수 있습니다. 이 코드는 예를 들면, [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 또는 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517)를 사용하여 특정 이벤트가 발생할 때 실행됩니다.
 
@@ -110,9 +110,10 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
-    >     BackgroundTaskDeferral _deferral = taskInstance.GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral _deferral; // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     public async void Run(IBackgroundTaskInstance taskInstance)
     >     {
+    >         _deferral = taskInstance.GetDeferral()
     >         //
     >         // TODO: Insert code to start one or more asynchronous methods using the
     >         //       await keyword, for example:
@@ -124,7 +125,7 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
     >     }
     > ```
     > ```cpp
-    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
     >     {
     >         //
@@ -150,7 +151,6 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 
 > [!NOTE]
 > 백그라운드 작업을 등록하는 데에만 사용되는 함수를 만들 수도 있습니다. [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요. 이 경우 다음 세 단계를 사용하지 않고 트리거를 생성하여 작업 이름, 작업 진입점 및 조건(옵션)과 함께 등록 함수에 제공하면 됩니다.
-
 
 ## 실행할 백그라운드 작업 등록
 
@@ -242,10 +242,11 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 > [!NOTE]
 > 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
 
-업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+업데이트를 릴리스한 후에 유니버설 Windows 앱이 계속 제대로 실행되도록 하려면 **ServicingComplete**([SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839) 참조) 트리거를 사용하여 앱의 데이터베이스를 마이그레이션하고 백그라운드 작업을 등록하는 등 사후 업데이트 구성 변경을 수행합니다. 이때 이전 버전의 앱과 관련된 백그라운드 작업의 등록을 취소([**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 참조)하고 새로운 버전의 앱에 대한 백그라운드 작업을 등록([**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) 참조)하는 것이 가장 좋습니다.
+
+자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
 ## 이벤트 처리기를 사용하여 백그라운드 작업 완료 처리
-
 
 앱에서 백그라운드 작업의 결과를 가져올 수 있도록 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)를 사용하여 메서드를 등록해야 합니다. 앱을 포그라운드에서 마지막으로 실행한 이후에 백그라운드 작업이 완료된 경우 앱을 시작하거나 다시 시작하면 mark 메서드가 호출됩니다. 앱이 포그라운드에서 현재 실행 중인 경우에는 백그라운드 작업이 완료되면 OnCompleted 메서드가 즉시 호출됩니다.
 
@@ -275,7 +276,6 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 
     > [!NOTE]
     > UI 스레드가 중지되는 것을 방지하려면 UI 업데이트를 비동기적으로 수행해야 합니다. 예제를 보려면 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)의 UpdateUI 메서드를 참조하세요.
-
 
 
 2.  백그라운드 작업을 등록한 위치로 돌아갑니다. 해당 코드 줄 뒤에 새 [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781) 개체를 추가합니다. OnCompleted 메서드를 **BackgroundTaskCompletedEventHandler** 생성자에 대한 매개 변수로 제공합니다.
@@ -315,7 +315,6 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 
 ## 요약 및 다음 단계
 
-
 이제 백그라운드 작업 클래스를 작성하는 방법, 앱 내에서 백그라운드 작업을 등록하는 방법 및 백그라운드 작업이 완료될 때 앱에서 인식하는 방법을 이해해야 합니다. 또한 앱에서 백그라운드 작업을 등록할 수 있도록 응용 프로그램 매니페스트를 업데이트하는 방법을 이해해야 합니다.
 
 > [!NOTE]
@@ -337,6 +336,8 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
+* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
+[다중 프로세스 백그라운드 작업을 단일 프로세스 백그라운드 작업으로 변환](convert-multiple-process-background-task.md)  
 
 **백그라운드 작업 지침**
 
@@ -350,6 +351,6 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

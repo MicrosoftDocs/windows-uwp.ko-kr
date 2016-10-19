@@ -5,7 +5,7 @@ description: "이 단계에서는 메시를 포함하는 꼭짓점 버퍼 및 �
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+ms.openlocfilehash: ee8b3f693e40d9c0fba679a44ebcd4986d06d7ac
 
 ---
 
@@ -318,6 +318,6 @@ Direct3D를 구성할 때 디바이스 리소스를 다시 만들어야 할 때�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

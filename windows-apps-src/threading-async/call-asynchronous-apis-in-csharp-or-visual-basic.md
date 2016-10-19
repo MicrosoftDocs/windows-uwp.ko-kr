@@ -5,7 +5,7 @@ title: "C# 또는 Visual Basic에서 비동기식 API 호출"
 description: "UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b13f6b3fac2ce6d264ed0c44e145a89ad8be5996
+ms.openlocfilehash: da2c6eddcc842e176e31b1a1628c91994efb1969
 
 ---
 # C# 또는 Visual Basic에서 비동기식 API 호출
@@ -112,6 +112,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

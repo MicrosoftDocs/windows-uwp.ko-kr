@@ -5,11 +5,11 @@ description: "첫 번째 포팅 연습에 대한 기본 사항인 Visual Studio 
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
 
 ---
 
-# 방법&#58; 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
+# 방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -146,6 +146,6 @@ typedef struct
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

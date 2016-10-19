@@ -5,7 +5,7 @@ title: "앱 ID 세부 정보 보기"
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 translationtype: Human Translation
 ms.sourcegitcommit: a25d87556bb85718f818af5b586f54e6985aaaa4
-ms.openlocfilehash: f00d817616d473ef220ebc1817c2bf9207a7aea0
+ms.openlocfilehash: dc61971865a05e1de17cdcf55ab495fee4917b74
 
 ---
 
@@ -58,6 +58,6 @@ Windows 개발자 센터 대시보드에서 앱 작업을 할 때 Windows 스토
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

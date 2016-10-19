@@ -5,11 +5,11 @@ description: "이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 W
 title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱"
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
+ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구&#58; QuizGame 피어 투 피어 샘플 앱
+# Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 피어 투 피어 샘플 앱
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -87,11 +87,11 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGame10 솔루션**
 
--   새 솔루션을 만들고(**새 프로젝트**&gt;**기타 프로젝트 형식**&gt;**Visual Studio 솔루션**) 이름을 QuizGame10으로 지정합니다.
+-   새 솔루션을 만들고(**새 프로젝트** &gt; **기타 프로젝트 형식** &gt; **Visual Studio 솔루션**) 이름을 QuizGame10으로 지정합니다.
 
 **P2PHelper**
 
--   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만들고(**새 프로젝트**&gt;**Windows 유니버설**&gt;**클래스 라이브러리(Windows 유니버설)**) 이름을 P2PHelper로 지정합니다.
+-   솔루션에서 새 Windows 10 클래스 라이브러리 프로젝트를 만들고(**새 프로젝트** &gt; **Windows 유니버설** &gt; **클래스 라이브러리(Windows 유니버설)**) 이름을 P2PHelper로 지정합니다.
 -   새 프로젝트에서 Class1.cs를 삭제합니다.
 -   P2PSession.cs, P2PSessionClient.cs 및 P2PSessionHost.cs를 새 프로젝트 폴더에 복사하고 복사된 파일을 새 프로젝트에 포함합니다.
 -   추가로 변경할 필요 없이 프로젝트가 빌드됩니다.
@@ -103,9 +103,9 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 
 **QuizGameHost**
 
--   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
--   P2PHelper에 대한 참조를 추가합니다(**참조 추가**&gt;**프로젝트**&gt;**솔루션**&gt;**P2PHelper**).
--   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
+-   새 Windows 10 앱 프로젝트를 만들고(**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameHost로 지정합니다.
+-   P2PHelper에 대한 참조를 추가합니다(**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
+-   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** &gt; **기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   \\QuizGame.Windows\\의 MainPage.xaml을 \\QuizGameHost\\에 복사하고 네임스페이스를 QuizGameHost로 변경합니다.
 -   \\QuizGame.Shared\\의 App.xaml을 \\QuizGameHost\\에 복사하고 네임스페이스를 QuizGameHost로 변경합니다.
 -   app.xaml.cs를 덮어쓰는 대신 새 프로젝트에 해당 버전을 유지하고 로컬 테스트 모드를 지원하기 위한 단 하나의 대상이 지정된 변경 내용을 수행합니다. app.xaml.cs에서 이 코드 줄을
@@ -124,15 +124,15 @@ rootFrame.Navigate(typeof(MainPage), e.Arguments);
 #endif
 ```
 
--   **속성**&gt;**빌드**&gt;**조건부 컴파일 기호**에서 LOCALTESTMODEON을 추가합니다.
+-   **속성** &gt; **빌드** &gt; **조건부 컴파일 기호**에서 LOCALTESTMODEON을 추가합니다.
 -   이제 app.xaml.cs에 추가한 코드로 돌아가서 TestView 형식을 확인할 수 있습니다.
 -   package.appxmanifest에서 internetClient의 접근 권한 값 이름을 internetClientServer로 변경합니다.
 
 **QuizGameClient**
 
--   새 Windows 10 앱 프로젝트를 만들고(**추가**&gt;**새 프로젝트**&gt;**Windows 유니버설**&gt;**빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameClient로 지정합니다.
--   P2PHelper에 대한 참조를 추가합니다(**참조 추가**&gt;**프로젝트**&gt;**솔루션**&gt;**P2PHelper**).
--   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**&gt;**기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
+-   새 Windows 10 앱 프로젝트를 만들고(**추가** &gt; **새 프로젝트** &gt; **Windows 유니버설** &gt; **빈 응용 프로그램(Windows 유니버설)**) 이름을 QuizGameClient로 지정합니다.
+-   P2PHelper에 대한 참조를 추가합니다(**참조 추가** &gt; **프로젝트** &gt; **솔루션** &gt; **P2PHelper**).
+-   **솔루션 탐색기**에서 디스크의 각 공유 폴더에 대한 새 폴더를 만듭니다. 차례로 방금 만든 각 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** &gt; **기존 항목**을 클릭하고 폴더를 위로 탐색합니다. 적절한 공유 폴더를 열고 모든 파일을 선택한 후 **링크로 추가**를 클릭합니다.
 -   \\QuizGame.WindowsPhone\\의 MainPage.xaml을 \\QuizGameClient\\에 복사하고 네임스페이스를 QuizGameClient로 변경합니다.
 -   \\QuizGame.Shared\\의 App.xaml을 \\QuizGameClient\\에 복사하고 네임스페이스를 QuizGameClient로 변경합니다.
 -   package.appxmanifest에서 internetClient의 접근 권한 값 이름을 internetClientServer로 변경합니다.
@@ -196,6 +196,6 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

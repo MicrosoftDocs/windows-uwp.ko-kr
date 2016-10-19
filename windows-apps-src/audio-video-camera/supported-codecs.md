@@ -4,8 +4,8 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다."
 title: "지원되는 코덱"
 translationtype: Human Translation
-ms.sourcegitcommit: b4d6a9f7cc8b343ee1cbd31bcfd8f19e329c82dc
-ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
 
 ---
 
@@ -20,10 +20,10 @@ ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
 
 ## 오디오 코덱 및 형식 지원
 
-다음 표에는 각 디바이스 제품군의 오디오 코덱과 형식 지원이 표시되어 있습니다.
+다음 표에는 각 장치 제품군의 오디오 코덱과 형식 지원이 표시되어 있습니다.
 
-**참고**  
--   AMR-NB 지원이 표시되어 있으며 이 코덱은 서버 SKU에서 지원되지 않습니다.
+> [!NOTE] 
+> AMR-NB 지원이 표시되어 있으며 이 코덱은 서버 SKU에서 지원되지 않습니다.
 
  
 
@@ -1584,11 +1584,11 @@ ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
 
 ## 비디오 코덱 및 형식 지원
 
-다음 표에는 각 디바이스 제품군의 비디오 코덱과 형식 지원이 표시되어 있습니다.
+다음 표에는 각 장치 제품군의 비디오 코덱과 형식 지원이 표시되어 있습니다.
 
-**참고**  
--   H.265 지원이 표시되어 있으면 디바이스 제품군의 일부 디바이스에서는 지원되지 않을 수도 있습니다.
--   MPEG-2/MPEG-1 지원이 표시되어 있으면 선택적 Microsoft DVD 유니버설 Windows 앱이 설치되어 있는 경우에만 지원됩니다.
+> [!NOTE] 
+> H.265 지원이 표시되어 있으면 장치 제품군의 일부 장치에서는 지원되지 않을 수도 있습니다.
+> MPEG-2/MPEG-1 지원이 표시되어 있으면 선택적 Microsoft DVD 유니버설 Windows 앱이 설치되어 있는 경우에만 지원됩니다.
 
  
 
@@ -2697,6 +2697,6 @@ ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

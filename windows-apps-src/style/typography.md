@@ -1,21 +1,18 @@
 ---
 author: mijacobs
-Description: "언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다."
+description: "언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다."
 title: "입력 체계"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
-label: Typography
 template: detail.hbs
-extraBodyClass: style-typography
-brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
+ms.sourcegitcommit: 8338b4ebcdd73f1b7ebf1dedafe68d861cd9d93b
+ms.openlocfilehash: 481c66e3edd42722cfd59bf420fe5b6286706245
 
 ---
 
-# UWP 앱의 입력 체계
+# 입력 체계
 
-언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
+언어의 시각적인 표현으로써 입력 체계의 주요 작업은 명확하게 하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
 
 ## 서체
 
@@ -39,9 +36,9 @@ ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
 
 ![큰 형식이 작은 형식 위에 겹쳐지는 방식을 보여 줍니다.](images/line-height-stacking.png)
 
-XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 겹치고 적절한 여백을 설정합니다.
+XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)을 겹치고 적절한 여백을 설정합니다.
 
-```xaml
+```xml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -61,7 +58,7 @@ XAML에서 이 작업을 수행하려면 두 개의 [TextBlock](https://msdn.mic
 </StackPanel>
 ```
 
-<!-- OP version -->
+
 
 ## 커닝 및 추적
 
@@ -69,7 +66,10 @@ Segoe는 부드럽고 친숙한 모양을 가진 인간 중심의 서체로, 필
 
 커닝을 "메트릭"으로 설정해야 하고 추적을 "0"으로 설정해야 합니다.
 
-<img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
+
+![커닝 및 추적 간의 차이를 보여 줍니다.](images/kerning-tracking.png)
+
+
 
 ## 단어 및 문자 간격
 
@@ -77,29 +77,29 @@ Segoe는 부드럽고 친숙한 모양을 가진 인간 중심의 서체로, 필
 
 기본적으로 단어 간격은 항상 100%이고 문자 간격은 "0"으로 설정해야 합니다.
 
-<img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
-    </div>
-</aside>
+![단어 및 문자 간격 간의 차이를 보여 줍니다.](images/word-letter.png)
+
+**참고**&nbsp;&nbsp;XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
 
 
-<!-- OP version -->
+
+
 ## 맞춤
 
 일반적으로 형식의 시각적 요소 및 열은 왼쪽 맞춤으로 두는 것이 좋습니다. 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다.
 
-<img src="images/alignment.png" alt="Shows flush-left text" />
+
+![텍스트 왼쪽 맞춤 표시](images/alignment.png)
+
+
 
 ## 줄의 끝
 
 입력 체계가 왼쪽 맞춤으로 배치되지 않은 경우 줄의 끝을 맞추고 하이픈 사용을 피하세요.
 
-<img src="images/line-endings.png" alt="Shows even line endings" />
+
+![줄 끝을 맞춰서 표시](images/line-endings.png)
 
 ## 단락
 
@@ -125,13 +125,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
 
 ![여러 아이콘 및 텍스트 쌍을 보여 줍니다.](images/hanging-text-alignment.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
-    </div>
-</aside>
+**참고**&nbsp;&nbsp;XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
 
 ## 클리핑 및 줄임표
 
@@ -141,22 +135,13 @@ XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/ap
 
 ![일부 텍스트 클리핑이 있는 디바이스 프레임을 보여 줍니다.](images/clipping.png)
 
-# 유형 램프
+## 유형 램프
+유형 램프는 헤드라인과 본문 텍스트 간에 중요한 디자인 관계를 설정하고 각 수준 간의 명확하고 쉽게 이해할 수 있는 계층 구조를 보장합니다. 이 계층 구조는 사용자가 서면 통신을 쉽게 탐색할 수 있는 구조를 만듭니다.
 
-다양한 크기의 Segoe UI를 사용하여 유형 램프에 계층 구조를 만들어야 합니다. 이 계층 구조는 사용자가 서면 통신을 쉽게 탐색할 수 있는 구조를 만듭니다.
+![유형 램프 표시](images/type-ramp.png) 모든 크기는 유효 픽셀 단위입니다. 
 
-<figure class="figure-img" >
-    <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>모든 크기는 유효 픽셀로 표시됩니다. 자세한 내용은 TODO: 링크를 참조하세요.</figcaption>
-</figure>
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다. 
-    </div>
-</aside>
+**참고**&nbsp;&nbsp;대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다.
 
 
 ## 기본 및 보조 텍스트
@@ -171,13 +156,25 @@ XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/ap
 그러나 특정 언어에서 대문자로 표시할 경우 적절한 이름의 의미가 변경되므로 이름 또는 사용자 입력 기반의 페이지 제목은 모든 대문자로 변환하지 *않도록* 해야 합니다.
 
 
-## 권장 사항 및 금지 사항
+**권장 사항**
+
+
+
 * 대부분의 텍스트에 Body를 사용합니다.
 * 공간이 제한된 경우 제목에 Base를 사용합니다.
 * SubtitleAlt를 통합하여 최상위 수준 콘텐츠를 강조해서 대비 및 계층 구조를 만듭니다.
+
+
+
+**금지 사항**
+
+
+
 * 긴 문자열 또는 기본 작업에는 캡션을 사용하지 않습니다.
 * 텍스트가 줄 바꿈되어야 하는 경우 Header 또는 Subheader를 사용하지 않습니다.
 * 동일한 페이지에서 Subtitle 및 SubtitleAlt를 함께 사용하지 않습니다.
+
+
 
 ## 관련 문서
 
@@ -185,6 +182,6 @@ XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/ap
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 
