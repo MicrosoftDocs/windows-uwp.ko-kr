@@ -35,7 +35,7 @@ ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
 | 필드 이름                    | 참고                              |   
 |-------------------------------|------------------------------------|
 | [**제품 수명**](enter-add-on-properties.md#product-lifetime)  | 제품 유형이 **지속형**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다. |
-| [**Quantity**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다.
+| [**수량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다.
 | [**콘텐츠 형식**](enter-add-on-properties.md#content-type)          | 필수       |               
 | [**키워드**](enter-add-on-properties.md#keywords)                  | 선택 사항(키워드 최대 10개, 각각 30자 제한) |
 | [**사용자 지정 개발자 데이터**](enter-add-on-properties.md#custom-developer-data)                               | 선택 사항(3,000자 제한)             |
