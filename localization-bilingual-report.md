@@ -1,43 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\publish\add-on-submissions.md](https://github.com/Microsoft/windows-apps/blob/d67931b4ab23d2b6aef945e839d193e140240cf9/windows-apps-src/publish/add-on-submissions.md) | InSyncHandedBackSuccess | [Details](#400c2e2ee65e408c996193230b05c68264830f0d5033)
- [windows-apps-src\publish\enter-add-on-properties.md](https://github.com/Microsoft/windows-apps/blob/e3bc74fab0ae75c35581e33323100376ad755e9c/windows-apps-src/publish/enter-add-on-properties.md) | InSyncHandedBackSuccess | [Details](#1c030f7d79de37e20620cf56a30b1c1570e9b90b5065)
 
 ## Item Details
-##### <a name='400c2e2ee65e408c996193230b05c68264830f0d5033'></a> Source: [windows-apps-src\publish\add-on-submissions.md](https://github.com/Microsoft/windows-apps/blob/d67931b4ab23d2b6aef945e839d193e140240cf9/windows-apps-src/publish/add-on-submissions.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\publish\add-on-submissions.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8734798d01dca594bf7f194b5754fa24561266ce/windows-apps-src/publish/add-on-submissions.md)
-* Handoff File: [add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/fb6fff667b98352cb8c07bf7062464f9636346b5/ol-handoff/Microsoft/windows-apps.ko-kr/master/add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf)
-* Handoff Datetime: 2016-08-30 19:11:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8f0c49adef7cbe42015cf937492105e71424e82d/ol-handback/Microsoft/windows-apps.ko-kr/master/add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf)
-* Handback Datetime: 2016-10-24 15:42:04
-* Bilingual File: [add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8f0c49adef7cbe42015cf937492105e71424e82d/ol-handback/Microsoft/windows-apps.ko-kr/master/add-on-submissions.b11c4e69d2b3bcc0580f4ed748cc1058e9847672.ko-kr.xlf)
-* Bilingual Datetime: 2016-10-24 15:46:50
-* [Back to Top](#report-top)
-
-##### <a name='1c030f7d79de37e20620cf56a30b1c1570e9b90b5065'></a> Source: [windows-apps-src\publish\enter-add-on-properties.md](https://github.com/Microsoft/windows-apps/blob/e3bc74fab0ae75c35581e33323100376ad755e9c/windows-apps-src/publish/enter-add-on-properties.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\publish\enter-add-on-properties.md](https://github.com/Microsoft/windows-apps.ko-kr/blob/8734798d01dca594bf7f194b5754fa24561266ce/windows-apps-src/publish/enter-add-on-properties.md)
-* Handoff File: [enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf](https://github.com/Microsoft/WDG.handoff/blob/dfc27240363b3308949ef064c786d6b9a881d80c/ol-handoff/Microsoft/windows-apps.ko-kr/master/enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf)
-* Handoff Datetime: 2016-08-29 17:43:19
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8f0c49adef7cbe42015cf937492105e71424e82d/ol-handback/Microsoft/windows-apps.ko-kr/master/enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf)
-* Handback Datetime: 2016-10-24 15:42:04
-* Bilingual File: [enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf](https://github.com/Microsoft/WDG.handback/blob/8f0c49adef7cbe42015cf937492105e71424e82d/ol-handback/Microsoft/windows-apps.ko-kr/master/enter-add-on-properties.786c23ca38c72dd05e27fbdda554822fa353e709.ko-kr.xlf)
-* Bilingual Datetime: 2016-10-24 15:46:50
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
