@@ -1,29 +1,38 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xaml-platform\binding-markup-extension.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49?path=windows-apps-src%2Fxaml-platform%2Fbinding-markup-extension.md&_a=contents) | HandedOffSuccess | [Details](#a6431aed9941079bd05c623229f4ae3236a1b3278421)
+ [windows-apps-src\input-and-devices\images\windows-wheel\dial-pen-studio-600px.png](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6dc876d2a983bcde6558c8f00691e7b4eb9d66e1?path=windows-apps-src%2Finput-and-devices%2Fimages%2Fwindows-wheel%2Fdial-pen-studio-600px.png&_a=contents) | HandedOffSuccess | [Details](#6361eb8437dc3397df37bd5dc2162f3aa62424984626)
+ [windows-apps-src\input-and-devices\windows-wheel-interactions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6dc876d2a983bcde6558c8f00691e7b4eb9d66e1?path=windows-apps-src%2Finput-and-devices%2Fwindows-wheel-interactions.md&_a=contents) | HandedOffSuccess | [Details](#ecf70ab3526778f115aad2df06d289b16679e24c4663)
 
 ## Item Details
-##### <a name='a6431aed9941079bd05c623229f4ae3236a1b3278421'></a> Source: [windows-apps-src\xaml-platform\binding-markup-extension.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49?path=windows-apps-src%2Fxaml-platform%2Fbinding-markup-extension.md&_a=contents)
+##### <a name='6361eb8437dc3397df37bd5dc2162f3aa62424984626'></a> Source: [windows-apps-src\input-and-devices\images\windows-wheel\dial-pen-studio-600px.png](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6dc876d2a983bcde6558c8f00691e7b4eb9d66e1?path=windows-apps-src%2Finput-and-devices%2Fimages%2Fwindows-wheel%2Fdial-pen-studio-600px.png&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/4b4802398ce8c6890b30649911f38587d32e2f44?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fbinding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-01 23:04:47
+* Handoff File: [6361eb8437dc3397df37bd5dc2162f3aa6242498.png](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/83440165a02c875f9cf9db14c3e6670258ba2354?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2F6361eb8437dc3397df37bd5dc2162f3aa6242498.png&_a=contents)
+* Handoff Datetime: 2016-11-02 01:07:24
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\input-and-devices\windows-wheel-interactions.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='ecf70ab3526778f115aad2df06d289b16679e24c4663'></a> Source: [windows-apps-src\input-and-devices\windows-wheel-interactions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/6dc876d2a983bcde6558c8f00691e7b4eb9d66e1?path=windows-apps-src%2Finput-and-devices%2Fwindows-wheel-interactions.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [windows-wheel-interactions.6079f0cc244480085000a25018f624dac5fbfa3c.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/83440165a02c875f9cf9db14c3e6670258ba2354?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwindows-wheel-interactions.6079f0cc244480085000a25018f624dac5fbfa3c.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-02 01:07:24
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xaml-platform\binding-markup-extension.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fxaml-platform%2Fbinding-markup-extension.md&_a=contents)
-* Current Handback File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fbinding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-19 17:33:47
-* Bilingual File: [binding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fbinding-markup-extension.904b37b26579ee352288d9a458f8d78a4e9dcf54.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-19 20:56:18
 * [Back to Top](#report-top)
 
 
