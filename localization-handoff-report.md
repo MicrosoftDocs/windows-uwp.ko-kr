@@ -6,24 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\common-questions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c777ea89c9278c88aecde58947f8c7219f60c56a?path=windows-apps-src%2Fpublish%2Fcommon-questions.md&_a=contents) | HandedOffSuccess | [Details](#542ef7c54850e1f2d4c635531dca5a318f0e7f915435)
+ [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/aec7b768ae3bcf0a45a48b2f9a204484b9059dc9?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents) | HandedOffSuccess | [Details](#2449a3198e9265d187557608e097c1369eb471c24742)
 
 ## Item Details
-##### <a name='542ef7c54850e1f2d4c635531dca5a318f0e7f915435'></a> Source: [windows-apps-src\publish\common-questions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c777ea89c9278c88aecde58947f8c7219f60c56a?path=windows-apps-src%2Fpublish%2Fcommon-questions.md&_a=contents)
+##### <a name='2449a3198e9265d187557608e097c1369eb471c24742'></a> Source: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/aec7b768ae3bcf0a45a48b2f9a204484b9059dc9?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/b3d21b5e5939c73fc055bd7615fdd19b6f0125ca?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcommon-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-04 17:11:47
+* Handoff File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/a764b94e9eb44c5b94ff8a8c4fac7d3afd3b62cb?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-04 21:10:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\common-questions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fpublish%2Fcommon-questions.md&_a=contents)
-* Current Handback File: [common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fcommon-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-10-19 17:33:47
-* Bilingual File: [common-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fcommon-questions.32c773e8b8055ddff0f36421bca3cf9bfe6ff40b.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-10-19 20:56:18
+* Bilingual File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/7f7b2823b47f7df5683220c622b93a78501dad8a?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-18 13:32:53
 * [Back to Top](#report-top)
 
 
