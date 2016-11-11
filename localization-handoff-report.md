@@ -1,24 +1,47 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\create-customer-segments.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/eed71b2fc06db71fd105df37a73bd0cd0832931f?path=windows-apps-src%2Fpublish%2Fcreate-customer-segments.md&_a=contents) | HandedOffSuccess | [Details](#28906c98d2826f5312e01713e2621159c6b249235443)
+ [windows-apps-src\publish\resolve-package-upload-errors.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2ff09d43cd39967028b39b4f602f4dfdf2cbcdcc?path=windows-apps-src%2Fpublish%2Fresolve-package-upload-errors.md&_a=contents) | HandedOffSuccess | [Details](#4f7f9698d8b8b17654b6f2e0420c7cdc6031f0185497)
+ [windows-apps-src\style\typography.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0356d9420d85fbf54718223df77ed501d4b6f5e5?path=windows-apps-src%2Fstyle%2Ftypography.md&_a=contents) | HandedOffSuccess | [Details](#45b4bbc86c69cabae4a2ee83d2d43c7189a710ce8369)
 
 ## Item Details
-##### <a name='28906c98d2826f5312e01713e2621159c6b249235443'></a> Source: [windows-apps-src\publish\create-customer-segments.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/eed71b2fc06db71fd105df37a73bd0cd0832931f?path=windows-apps-src%2Fpublish%2Fcreate-customer-segments.md&_a=contents)
+##### <a name='4f7f9698d8b8b17654b6f2e0420c7cdc6031f0185497'></a> Source: [windows-apps-src\publish\resolve-package-upload-errors.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2ff09d43cd39967028b39b4f602f4dfdf2cbcdcc?path=windows-apps-src%2Fpublish%2Fresolve-package-upload-errors.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-customer-segments.f94c633c455680761555ea90c8bf264d7e55b2a4.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/53a9166530913a8e2853eb56184869cd78211c2c?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-customer-segments.f94c633c455680761555ea90c8bf264d7e55b2a4.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-10 21:18:16
+* Handoff File: [resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3037f5381bbd5d243d2e322d3fecac2ba04053ef?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fresolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-11 00:07:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\resolve-package-upload-errors.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fpublish%2Fresolve-package-upload-errors.md&_a=contents)
+* Current Handback File: [resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fresolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-19 17:33:47
+* Bilingual File: [resolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fresolve-package-upload-errors.feff838cf5ab6d62bcb3e3ccb7a29783eb186656.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-19 20:56:18
+* [Back to Top](#report-top)
+
+##### <a name='45b4bbc86c69cabae4a2ee83d2d43c7189a710ce8369'></a> Source: [windows-apps-src\style\typography.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0356d9420d85fbf54718223df77ed501d4b6f5e5?path=windows-apps-src%2Fstyle%2Ftypography.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [typography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3037f5381bbd5d243d2e322d3fecac2ba04053ef?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Ftypography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-11 00:07:12
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\style\typography.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fstyle%2Ftypography.md&_a=contents)
+* Current Handback File: [typography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Ftypography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-10-19 17:33:47
+* Bilingual File: [typography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Ftypography.4206d1eaa813ffdc0f1da4c7d33d63c3a5d928d3.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-10-19 20:56:18
 * [Back to Top](#report-top)
 
 
