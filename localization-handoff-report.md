@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\graphics\animations-overview.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2a08d1def7c4d2fde0ae08eb26076526058e8aae?path=windows-apps-src%2Fgraphics%2Fanimations-overview.md&_a=contents) | HandedOffSuccess | [Details](#e3e21c55ea8ddeab0969e304080394b940da010d4286)
+ [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/006b5d01c2474591a81e4d7a83c5735dc0b3d9d8?path=windows-apps-src%2Fupdates-and-versions%2Fchoose-a-uwp-version.md&_a=contents) | HandedOffSuccess | [Details](#5d05c427ecc1ec57856b7c3909be50c3d87daa288400)
 
 ## Item Details
-##### <a name='e3e21c55ea8ddeab0969e304080394b940da010d4286'></a> Source: [windows-apps-src\graphics\animations-overview.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/2a08d1def7c4d2fde0ae08eb26076526058e8aae?path=windows-apps-src%2Fgraphics%2Fanimations-overview.md&_a=contents)
+##### <a name='5d05c427ecc1ec57856b7c3909be50c3d87daa288400'></a> Source: [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/006b5d01c2474591a81e4d7a83c5735dc0b3d9d8?path=windows-apps-src%2Fupdates-and-versions%2Fchoose-a-uwp-version.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [animations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f4b925f7abb83999bca40473135efcab5a6f1852?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fanimations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-11 21:35:55
+* Handoff File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/766b575df67cc6adcce7ff7069ff948e1c5acafb?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fchoose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-11 23:37:02
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\graphics\animations-overview.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fgraphics%2Fanimations-overview.md&_a=contents)
-* Current Handback File: [animations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fanimations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fupdates-and-versions%2Fchoose-a-uwp-version.md&_a=contents)
+* Current Handback File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fchoose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-19 17:33:47
-* Bilingual File: [animations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fanimations-overview.8197a9a05a89d0ee53785570dab956f1fd01116a.ko-kr.xlf&_a=contents)
+* Bilingual File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fchoose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-19 20:56:18
 * [Back to Top](#report-top)
 
