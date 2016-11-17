@@ -4509,6 +4509,16 @@
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\c85473d8c3267e4f0ccd6018fe5ee349fdf39284.69e3b4c47abdd33d0ddc8e086dc2e135ffb4eb36.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "windows-apps-src\\controls-and-patterns\\tiles-and-notifications-adaptive-interactive-toasts.md.654d79821db63ea23ae63a74a17d238724b79693.HT": {
+      "SourceFilename": "windows-apps-src\\controls-and-patterns\\tiles-and-notifications-adaptive-interactive-toasts.md",
+      "XliffHash": "654d79821db63ea23ae63a74a17d238724b79693",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\14b44ef2f0dcd87fe57f1dce609ea88d626abe7e.2a8f9c2ab71461d157337452e9b131cfaa813d39.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
