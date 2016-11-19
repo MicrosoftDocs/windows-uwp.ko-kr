@@ -1,41 +1,28 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-prepare.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f7a8b8d586983f42fe108cd8935ef084eb108e35?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-prepare.md&_a=contents) | HandedOffSuccess | [Details](#81a2485d5be22dd392c21aaff281c1c9263883a95302)
- [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/41f0847dd7aa52465186cb8415cbe41342ff93f0?path=windows-apps-src%2Fthreading-async%2Fsubmit-a-work-item-to-the-thread-pool.md&_a=contents) | HandedOffSuccess | [Details](#2d73b44933ed71dc388b3d37793b7c99b8d0a3dd8405)
+ [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bee955a671dbdd03f45f4cab7ef01a6748100993?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents) | HandedOffSuccess | [Details](#26db02792eef6bda927bedd1ef8fcb6a644fadcf8533)
 
 ## Item Details
-##### <a name='81a2485d5be22dd392c21aaff281c1c9263883a95302'></a> Source: [windows-apps-src\porting\desktop-to-uwp-prepare.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f7a8b8d586983f42fe108cd8935ef084eb108e35?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-prepare.md&_a=contents)
+##### <a name='26db02792eef6bda927bedd1ef8fcb6a644fadcf8533'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bee955a671dbdd03f45f4cab7ef01a6748100993?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-prepare.a31bd12222af5bf05286bba552b84847905a06ca.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/93a632b01b19346cc25177e039207f0a0153413b?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesktop-to-uwp-prepare.a31bd12222af5bf05286bba552b84847905a06ca.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-19 00:49:07
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f47ed426de767d1170daa56379d72e7919ac81a9?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-19 06:48:25
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='2d73b44933ed71dc388b3d37793b7c99b8d0a3dd8405'></a> Source: [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/41f0847dd7aa52465186cb8415cbe41342ff93f0?path=windows-apps-src%2Fthreading-async%2Fsubmit-a-work-item-to-the-thread-pool.md&_a=contents)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/93a632b01b19346cc25177e039207f0a0153413b?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fsubmit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-19 00:49:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\threading-async\submit-a-work-item-to-the-thread-pool.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fthreading-async%2Fsubmit-a-work-item-to-the-thread-pool.md&_a=contents)
-* Current Handback File: [submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fsubmit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/3e9c3cb1ebac2ec3a4d456f01eb924abb22d4d5e?path=windows-apps-src%2Fxbox-apps%2Fknown-issues.md&_a=contents)
+* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-10-19 17:33:47
-* Bilingual File: [submit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fsubmit-a-work-item-to-the-thread-pool.545c8296a55b5243a1a30cdac516692044dcc5cb.ko-kr.xlf&_a=contents)
+* Bilingual File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/665c9355e02155a7dbb5201e03123308ee1bee16?path=ol-handback%2FMicrosoft%2Fwindows-apps.ko-kr%2Fmaster%2Fknown-issues.83c75815621268c5c51534a658527cef71ffe8bd.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-10-19 20:56:18
 * [Back to Top](#report-top)
 
