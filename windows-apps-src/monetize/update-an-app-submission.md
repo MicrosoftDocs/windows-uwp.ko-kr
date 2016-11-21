@@ -4,8 +4,8 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 업데이트"
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: ad1c565f1ec84127b2ac689cc7cb23d2b39764ef
+ms.sourcegitcommit: 819843c8ba1e4a073f70f7de36fe98dd4087cdc6
+ms.openlocfilehash: 8b1a6da557b966e69345e90c48f90a6df0f27442
 
 ---
 
@@ -17,6 +17,8 @@ ms.openlocfilehash: ad1c565f1ec84127b2ac689cc7cb23d2b39764ef
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다. 이 메서드를 사용하여 제출을 성공적으로 업데이트한 후 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
 
 이 메서드가 Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스에 적용되는 방법은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 요청 본문에서 **가격** 리소스가 무시되고 이 메서드를 사용하는 앱 제출에 대한 평가 기간, 가격 및 판매 데이터를 일시적으로 사용할 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-app-submissions.md#pricing-object)를 참조하세요.
 
 ## 필수 조건
 
@@ -76,9 +78,10 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 | meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
 | notesForCertification           |  문자열  |   앱의 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 [응용 프로그램 패키지](manage-app-submissions.md#application-package-object) 섹션을 참조하세요. 이 메서드를 호출하여 앱 제출을 업데이트할 때는 요청 본문에 이러한 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.   |    
-| enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows 10 디바이스 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |    
+| packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 [패키지 배달 옵션 개체](manage-app-submissions.md#package-delivery-options-object)를 참조하세요.  |
+| enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](manage-app-submissions.md#enterprise-licensing) 값 중 하나입니다.  |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows10 디바이스 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |    
 
 <span/>
 
@@ -144,6 +147,16 @@ Content-Type: application/json
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -237,6 +250,16 @@ Content-Type: application/json
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -273,6 +296,6 @@ Content-Type: application/json
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

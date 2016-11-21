@@ -1,15 +1,15 @@
 ---
 author: PatrickFarley
 title: "원격 디바이스 검색"
-description: "프로젝트 로마를 사용하여 앱에서 원격 디바이스를 검색하는 방법을 알아봅니다."
+description: Learn how to discover remote devices from your app using Project "Rome".
 translationtype: Human Translation
-ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
-ms.openlocfilehash: cb1f9cf6915378203919fdf63bcebc935af74a30
+ms.sourcegitcommit: dc5030fea8e149b3926b926b09bfec3eeb5092ee
+ms.openlocfilehash: b4b4eb28ea56ab3d84e2fe0bc0c281cb53149d5d
 
 ---
 
 # 원격 디바이스 검색
-앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 디바이스와 동일한 Microsoft 계정으로 로그온된 Windows 기반 디바이스를 검색할 수 있습니다. Surface Hub, Xbox One 등 익명 연결을 허용하는 공동 디바이스도 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 디바이스를 검색할 수 있습니다.
+앱에서 무선 네트워크, Bluetooth 및 클라우드 연결을 사용하여 검색 디바이스와 동일한 Microsoft 계정으로 로그온된 Windows 디바이스를 검색할 수 있습니다. Surface Hub, Xbox One 등 익명 연결을 허용하는 공동 디바이스도 검색할 수 있습니다. 특별한 소프트웨어가 설치되어 있지 않아도 원격 디바이스를 검색할 수 있습니다.
 
 > [!NOTE]
 > 이 가이드에서는 [원격 앱 실행](launch-a-remote-app.md)의 단계에 따라 원격 시스템 기능에 대한 액세스 권한이 이미 부여되었다고 가정합니다.
@@ -50,6 +50,6 @@ ms.openlocfilehash: cb1f9cf6915378203919fdf63bcebc935af74a30
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

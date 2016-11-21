@@ -1,11 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
-description: "Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
+description: "Windows10(UWP), Windows8.1 또는 Windows Phone 8.1용 XAML 앱에서 AdControl 클래스를 사용하여 배너 광고를 표시하는 방법을 알아봅니다."
 title: "XAML 및 .NET의 AdControl"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: e3cc04e2c039223729a1e24224ddd19d6485d434
+ms.sourcegitcommit: 35f07c73a72e5242d59c6b45e6d5b4ac62f40741
+ms.openlocfilehash: 0652bd1c3e52c9026b26e14b2475a4b34997ac91
 
 ---
 
@@ -14,14 +14,14 @@ ms.openlocfilehash: e3cc04e2c039223729a1e24224ddd19d6485d434
 
 
 
-이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows 10(UWP), Windows 8.1 또는 Windows Phone 8.1용 XAML 앱에서 배너 광고를 표시하는 방법을 보여 줍니다. 이 연습에서는 **AdMediatorControl** 또는 광고 조정을 사용하지 않습니다.
+이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 클래스를 사용하여 Windows10(UWP), Windows8.1 또는 Windows Phone 8.1용 XAML 앱에서 배너 광고를 표시하는 방법을 보여 줍니다. 이 연습에서는 **AdMediatorControl** 또는 광고 조정을 사용하지 않습니다.
 
 C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
 ## 필수 조건
 
 * UWP 앱: Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
-* Windows 8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
+* Windows8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
 
 ## 코드 개발
 
@@ -35,13 +35,13 @@ C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 �
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
+    -   Windows8.1 프로젝트: **Windows8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
     -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **참고** 이 이미지는 Visual Studio 2015에서 Windows 10용 UWP 프로젝트를 빌드하는 방법을 보여 줍니다. Windows 8.1 또는 Windows Phone 8.1 앱을 빌드하거나 Visual Studio 2013을 사용하는 경우 화면이 다르게 나타납니다.
+    > **참고** 이 이미지는 Visual Studio 2015에서 Windows 10용 UWP 프로젝트를 빌드하는 방법을 보여 줍니다. Windows8.1 또는 Windows Phone 8.1 앱을 빌드하거나 Visual Studio 2013을 사용하는 경우 화면이 다르게 나타납니다.
 
 3.  **참조 관리자**에서 확인을 클릭합니다.
 4.  광고를 포함하는 페이지의 XAML을 **Microsoft.Advertising.WinRT.UI** 네임스페이스를 포함하도록 수정합니다. 예를 들어 Visual Studio에서 생성된 기본 샘플 앱(이 앱에서는 MyAdFundedWindows10AppXAML)에서 XAML 페이지는 **MainPage.XAML**입니다.
@@ -145,13 +145,13 @@ C# 및 C++를 사용하여 XAML 앱에 배너 광고를 추가하는 방법을 �
 
 ## 참고
 
-C#: **AdControl** 이벤트에 이벤트 처리기를 할당하는 방법의 예제를 보려면 [XAML 속성 예제](xaml-properties-example.md)를 참조하세요. 그런 다음 [C#의 AdControl 이벤트](adcontrol-events-in-c.md)에서 C#으로 작성된 이벤트 처리기를 보여 주는 샘플 코드를 참조하세요.
+* C#: **AdControl** 이벤트에 이벤트 처리기를 할당하는 방법의 예제를 보려면 [XAML 속성 예제](xaml-properties-example.md)를 참조하세요. 그런 다음 [C#의 AdControl 이벤트](adcontrol-events-in-c.md)에서 C#으로 작성된 이벤트 처리기를 보여 주는 샘플 코드를 참조하세요.
 
-Visual Basic: **AdControl** 이벤트에 이벤트 처리기를 할당하는 방법의 예제를 보려면 [XAML 속성 예제](xaml-properties-example.md)를 참조하세요.
+* C++: Microsoft Advertising 라이브러리의 현재 릴리스에서는 C++를 지원합니다. **AdControl** 클래스는 네이티브 C++에서 구현되며, .NET CLR은 로드하지 않습니다. C++에서 **AdControl**을 사용하는 방법을 보여 주는 코드 예제는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
-C++: Microsoft Advertising 라이브러리의 현재 릴리스에서는 C++를 지원합니다. **AdControl**은 CLR을 로드하고 관리되는 C++를 사용합니다.
+* Visual Basic: **AdControl** 이벤트에 이벤트 처리기를 할당하는 방법의 예제를 보려면 [XAML 속성 예제](xaml-properties-example.md)를 참조하세요.
 
-오류 처리: 오류를 처리 하는 방법에 대해 알아보려면 [AdControl 오류 처리](adcontrol-error-handling.md)를 참조하세요.
+* 오류 처리: 오류를 처리 하는 방법에 대해 알아보려면 [AdControl 오류 처리](adcontrol-error-handling.md)를 참조하세요.
 
 ## 관련 항목
 
@@ -161,6 +161,6 @@ C++: Microsoft Advertising 라이브러리의 현재 릴리스에서는 C++를 �
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

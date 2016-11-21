@@ -9,13 +9,13 @@ ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: XAML styles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3aad0049bdd43935fa61b6146b81030494ff5bdb
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: d12358e6fcab2afa039426532d47616d74b22ef4
 
 ---
 # XAML 스타일
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 
@@ -141,7 +141,64 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 ## 스타일 작업을 쉽게 할 수 있는 도구 사용
 
-스타일을 컨트롤에 적용하는 가장 빠른 방법은 Microsoft Visual Studio XAML 또는 디자인 화면에서 컨트롤을 마우스 오른쪽 단추로 클릭하고 **스타일 편집** 또는 **템플릿 편집**을 선택하는 것입니다(마우스 오른쪽 단추로 클릭하는 컨트롤에 따라 다름). 그런 다음 **리소스 적용**을 선택하여 기존 스타일을 적용하거나 **빈 스타일 만들기**를 선택하여 새로운 스타일을 정의할 수 있습니다. 빈 스타일을 만드는 경우 페이지, App.xaml 파일, 또는 별도의 리소스 사전에서 스타일을 정의할 수 있는 옵션이 제공됩니다.
+스타일을 컨트롤에 적용하는 가장 빠른 방법은 Microsoft Visual Studio XAML 또는 디자인 화면에서 컨트롤을 마우스 오른쪽 단추로 클릭하고 **스타일 편집** 또는 **템플릿 편집**을 선택하는 것입니다(마우스 오른쪽 단추로 클릭하는 컨트롤에 따라 다름). 그런 다음 **리소스 적용**을 선택하여 기존 스타일을 적용하거나 **빈 스타일 만들기**를 선택하여 새로운 스타일을 정의할 수 있습니다. 빈 스타일을 만드는 경우 페이지, App.xaml 파일 또는 별도의 리소스 사전에서 스타일을 정의할 수 있는 옵션이 제공됩니다.
+
+## 경량 스타일 지정
+
+시스템 브러시를 재정의하는 작업은 일반적으로 앱 또는 페이지 수준에서 수행되며, 두 경우 모두 해당 브러시를 참조하는 모든 컨트롤에 색상 재지정이 적용됩니다. 또한 XAML에서 많은 컨트롤은 동일한 시스템 브러시를 참조할 수 있습니다.
+
+![스타일이 적용된 단추](images/LightweightStyling_ButtonStatesExample.png)
+
+```XAML
+<Page.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+            <ResourceDictionary x:Key="Light">
+                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                 <SolidColorBrush x:Key="ButtonForeground" Color="MediumSlateBlue"/>
+                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="MediumSlateBlue"/>
+            </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+</Page.Resources>
+```
+
+PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 호출됨) 또는 Disabled(단추가 조작 가능하지 않음)와 같은 상태에 해당합니다. **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled** 등의 끝이 원래의 경량 스타일 이름에 추가됩니다. 해당 브러시도 수정하면 컨트롤 색상이 앱 테마와 일관되게 지정됩니다.
+
+이러한 브러시 재정의를 **App.Resources** 수준에 배치하면 단일 페이지가 아닌 전체 앱 내의 모든 단추가 변경됩니다.
+
+### 컨트롤 기준 스타일 지정
+
+특정 컨트롤의 다른 버전은 변경하지 않으면서 한 페이지에서만 특정 방식으로 보이도록 해당 컨트롤을 변경해야 하는 경우가 있을 수 있습니다.
+
+![스타일이 적용된 단추](images/LightweightStyling_CheckboxExample.png)
+
+```XAML
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+    <CheckBox Content="Special CheckBox" Margin="5">
+        <CheckBox.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.ThemeDictionaries>
+                    <ResourceDictionary x:Key="Light">
+                        <SolidColorBrush x:Key="CheckBoxForegroundUnchecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxForegroundChecked"
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked"
+                            Color="White"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked"  
+                            Color="Purple"/>
+                        <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked"
+                            Color="Purple"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
+        </CheckBox.Resources>
+    </CheckBox>
+<CheckBox Content="Normal CheckBox" Margin="5"/>
+```
+
+이것은 해당 컨트롤이 있는 페이지의 단일 "특수 확인란"에만 영향을 미칩니다.
 
 ## 기본 시스템 스타일 수정
 
@@ -153,6 +210,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

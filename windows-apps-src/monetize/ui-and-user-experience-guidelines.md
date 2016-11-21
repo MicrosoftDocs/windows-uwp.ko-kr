@@ -4,8 +4,8 @@ ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "앱에 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다."
 title: "앱에 광고에 대한 UI 및 사용자 환경 지침"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: 3019834a314e552654d74358f4b1eed8451d5119
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 * 사용 환경에 맞게 광고를 디자인합니다. 디자이너에게 광고 형태를 계획하기 위한 샘플 광고를 제공합니다. 앱의 잘 계획된 광고 예제 2가지는 콘텐츠 형태 광고 레이아웃 및 분할 레이아웃입니다.
 
-  다양한 크기의 광고가 앱 내에서 표시되고 작동하는 방식을 보려면 Windows Phone, Windows 8.1 및 Windows 10용 테스트 모드 광고 단위를 활용할 수 있습니다. 테스트 모드 광고 단위 사용을 완료한 경우 인증을 위해 앱을 제출하기 전에 [실제 광고 단위 ID로 앱을 업데이트](set-up-ad-units-in-your-app.md)해야 합니다.
+  다양한 크기의 광고가 앱 내에서 표시되고 작동하는 방식을 보려면 Windows Phone, Windows8.1 및 Windows 10용 테스트 모드 광고 단위를 활용할 수 있습니다. 테스트 모드 광고 단위 사용을 완료한 경우 인증을 위해 앱을 제출하기 전에 [실제 광고 단위 ID로 앱을 업데이트](set-up-ad-units-in-your-app.md)해야 합니다.
 
 * 광고를 사용할 수 없는 시간을 계획합니다. 광고가 앱으로 전송되지 않는 시간이 있을 수 있습니다. 페이지에 광고가 표시되는지 여부에 따라 페이지가 돋보이는 방식으로 레이아웃을 지정합니다. 자세한 내용은 [오류 처리](error-handling-with-advertising-libraries.md)를 참조하세요.
 
@@ -43,7 +43,7 @@ ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 * 사용자가 핵심 작업이 아닌 다른 부분에 정신이 팔리게 하면 안 됩니다. 일차적인 포커스는 항상 앱에 있어야 합니다. 광고 공간은 이차적인 포커스가 유지되도록 통합해야 합니다.
 
 <span id="interstitialbestpractices10"/>
-## 중간 광고 모범 사례
+## 중간 광고 모범 사례 및 정책
 
 * [중간 광고 모범 사례: 할 일](#interstitialbestpracticesdo10)
 * [중간 광고 모범 사례: 피할 일](#interstitialbestpracticesavoid10)
@@ -51,7 +51,7 @@ ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 과하지 않게 사용될 경우 동영상 중간 광고는 사용자 만족도에 부정적인 영향을 주지 않으면서 앱 수익을 크게 높일 수 있습니다. 그렇지만 잘못 사용하면 이러한 광고는 정반대의 효과를 가져올 수 있습니다.
 
-과하지 않은 수준을 유지하는 것이 중요합니다. 정책이 관련되는 경우를 제외하고, 사용자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 등급 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
+과하지 않은 수준을 유지하는 것이 중요합니다. 정책이 관련되는 경우를 제외하고, 사용자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
 
 <span id="interstitialbestpracticesdo10"/>
 ### 중간 광고 모범 사례: 할 일
@@ -124,18 +124,23 @@ ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 <span id="interstitialbestpracticesnever10"/>
 ### 중간 광고 모범 사례: 절대 금지(정책 적용)
 
-* 광고 컨테이너에 모든 UI 요소를 배치합니다.
+* 광고 컨테이너에 어떤 UI 요소도 배치하지 않도록 합니다.
 
     * 광고주는 전체 화면에 대해 비용을 지불했습니다.
 
+<span/>
 
-* 사용자가 앱에 연결된 동안 **Show**를 호출합니다.
+* 사용자가 앱에 연결된 동안 **Show**를 절대 호출하지 않습니다.
 
     * **InterstitialAd**는 전체 화면 오버레이를 만들기 때문에 사용자에게 거슬릴 수 있습니다.
 
     * 또한 광고 클릭률이 부풀려질 수 있습니다.
 
-* 광고를 사용하여 통화로 사용 가능하거나 다른 사용자와 거래할 수 있는 항목을 받을 수 있습니다.
+* 통화로 사용 가능하거나 다른 사용자와 거래할 수 있는 것을 얻기 위해 절대 광고를 사용하지 않도록 합니다.
+
+* [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx) 이벤트에 대한 이벤트 처리기의 컨텍스트에서 새 광고를 절대 요청하지 않습니다. 이렇게 하면 무한 루프가 발생하고 광고 서비스에 대한 작동 문제가 발생할 수 있습니다.
+
+* 중간 광고를 요청한 다음 앱에 제공되는 광고를 표시하는 것을 절대 잊지 말아야 합니다. 광고를 요청하고 요청에 대한 응답으로 [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) 이벤트를 수신하는 경우 광고를 표시해야 합니다. 다른 광고 네트워크를 사용하여 자체 광고 조정 솔루션을 구현하는 경우 다른 광고 네트워크에 대한 요청이 실패한 후에만 **InterstitialAd** 컨트롤에 대한 광고를 요청합니다.
 
  
 
@@ -143,6 +148,6 @@ ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

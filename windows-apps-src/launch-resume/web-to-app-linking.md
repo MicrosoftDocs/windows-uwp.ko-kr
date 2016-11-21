@@ -4,8 +4,8 @@ title: "앱 Uri 처리기로 웹과 앱 연결 지원"
 description: "앱 URI 처리기를 사용하여 사용자의 앱 참여를 강화합니다."
 keywords: "Windows 딥 링크 설정"
 translationtype: Human Translation
-ms.sourcegitcommit: 9ef86dcd4ae3d922b713d585543f1def48fcb645
-ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
+ms.sourcegitcommit: cb3dbf7fd55c92339c77124bd22b3484fa389285
+ms.openlocfilehash: d7ce1dbfdf8ce0069b4d882323de8fd6f1b242f7
 
 ---
 
@@ -53,7 +53,7 @@ ms.openlocfilehash: c9833f29d6080509c849e9d624f2bfcd0b0af04c
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludePaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
 
@@ -68,7 +68,7 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 | *****       | 모든 하위 문자열을 나타냅니다.      |
 | **?**        | 단일 문자를 나타냅니다. |
 
-예를 들어 위의 예제에서처럼 `"excludePaths" : [ "/news/*, /blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. 즉 **msn.com/weather.html**은 지원되지만 ****msn.com/news/topnews.html****은 지원되지 않습니다.
+예를 들어 위의 예제에서처럼 `"excludePaths" : [ "/news/*", "/blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. 즉 **msn.com/weather.html**은 지원되지만 ****msn.com/news/topnews.html****은 지원되지 않습니다.
 
 
 ### 여러 앱
@@ -79,17 +79,17 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 [{
   "packageFamilyName": "YourAppsPFN",
   "paths": [ "*" ],
-  "excludedPaths" : [ "/news/*, /blog/*" ]
+  "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
   "packageFamilyName": "Your2ndAppsPFN",
-  "paths": [ "/example/*, /links/*" ]
+  "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
 사용자에게 최상의 환경을 제공하려면 제외 경로를 사용하여 온라인 전용 콘텐츠가 JSON 파일의 지원되는 경로에서 제외되도록 합니다.
 
-제외된 경로를 먼저 확인하고 일치하는 경로가 있으면 지정된 앱 대신 브라우저에서 해당 페이지가 열립니다. 위의 예제에서 ‘/news/\*’(슬래시 없는 'news')에는 ‘newslocal/’, ‘newsinternational/’과 같이 ‘news\*’ 아래의 모든 경로가 포함되고 그 경로 아래의 모든 페이지가 ‘/news/\*’에 포함됩니다.
+제외 경로를 먼저 확인하고 일치하는 경로가 있으면 지정된 앱 대신 브라우저에서 해당 페이지가 열립니다. 위의 예제에서 ‘/news/\*’(슬래시 없는 'news')에는 ‘newslocal/’, ‘newsinternational/’과 같이 ‘news\*’ 아래의 모든 경로가 포함되고 그 경로 아래의 모든 페이지가 ‘/news/\*’에 포함됩니다.
 
 ## 콘텐츠 연결 활성화에 대한 링크 처리
 
@@ -195,6 +195,6 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

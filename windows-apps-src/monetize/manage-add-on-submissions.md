@@ -4,8 +4,8 @@ ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능 제출을 관리합니다."
 title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 관리"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
+ms.sourcegitcommit: 4a1ea50d72e0f754658d8ee99755b873619e1969
+ms.openlocfilehash: 9d19ecae9d5c43c28e887627372aabb58bf0aab2
 
 ---
 
@@ -16,6 +16,8 @@ ms.openlocfilehash: 52e589c90a8d78905a9617dc2802d76a2f0f0360
 Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 >**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드를 사용하여 추가 기능의 제출을 만들거나 관리하려면 추가 기능이 이미 해당 개발자 센터 계정에 있어야 합니다. [개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)하거나 [추가 기능 관리](manage-add-ons.md)에 설명된 Windows 스토어 제출 API 메서드를 사용하여 추가 기능을 만들 수 있습니다.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **가격** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 가격 및 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 앞으로 이 API를 업데이트하여 추가 기능 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](#pricing-object) 섹션을 참조하세요.
 
 | 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -168,14 +170,14 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id            | 문자열  | 제출의 ID입니다.  |
-| contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](https://msdn.microsoft.com/windows/uwp/publish/enter-iap-properties#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-iap-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
+| contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
 | lifetime           | 문자열  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 추가 기능에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object) 개체입니다.  |
 | pricing           | object  | 추가 기능에 대한 목록 정보를 포함하는 개체입니다. 자세한 내용은 아래의 [가격 리소스](#pricing-object) 섹션을 참조하세요.  |
 | targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
-| 태그           | 문자열  |  추가 기능의 [태그](../publish/enter-iap-properties.md#tag)입니다.   |
+| 태그           | 문자열  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
 | visibility  | 문자열  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>  |
 | status  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 아래의 [상태 세부 정보](#status-details-object) 섹션을 참조하세요. |
@@ -206,19 +208,32 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 <span id="pricing-object" />
 ### 가격 책정
 
-이 리소스는 추가 기능에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
+이 리소스는 추가 기능에 대한 가격 정보를 포함합니다.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **가격** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 가격 및 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 동작이 다음과 같이 변경됩니다.
+
+   > * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) **가격** 리소스가 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 가격 데이터를 가져올 수 있습니다.
+   > * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트할 경우](update-an-add-on-submission.md) **가격** 리소스의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 가격 데이터를 변경할 수 있습니다.
+
+> 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 가격 정보를 프로그래밍 방식으로 가져오고 업데이트하는 새로운 방법을 도입할 예정입니다.
+
+이 리소스의 값은 다음과 같습니다.
 
 | 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.     |     
 |  sales               |   배열      |  추가 기능에 대한 판매 정보를 포함하는 개체의 배열입니다. 자세한 내용은 아래 [판매](#sale-object) 섹션을 참조하세요.    |     
-|  priceId               |   문자열      |  추가 기능에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price)을 지정하는 [기준 가격](#price-tier)입니다.    |
+|  priceId               |   문자열      |  추가 기능에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.    |
 
 
 <span id="sale-object" />
 ### 판매
 
-이 리소스는 추가 기능에 대한 판매 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
+이 리소스는 추가 기능에 대한 판매 정보를 포함합니다.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **판매** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 앞으로 이 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](#pricing-object) 섹션을 참조하세요.
+
+이 리소스의 값은 다음과 같습니다.
 
 | 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
@@ -315,6 +330,6 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

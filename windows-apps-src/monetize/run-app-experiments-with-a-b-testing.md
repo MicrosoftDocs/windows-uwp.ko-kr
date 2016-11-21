@@ -4,8 +4,8 @@ Description: "Windows 개발자 센터 대시보드를 사용하여 A/B 테스�
 title: "A/B 테스트로 앱 실험 실행"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 50f7ad90c04d5b5672fa7910f2df669798761472
+ms.sourcegitcommit: 126fee708d82f64fd2a49b844306c53bb3d4cc86
+ms.openlocfilehash: f6c8e830a3ffcff8db9c280b6a9df5b515b1a356
 
 ---
 
@@ -33,7 +33,7 @@ Windows 개발자 센터의 A/B 테스트는 UWP 앱에 대해서만 지원됩�
 A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해야 합니다.
 
 * [여기](../get-started/get-set-up.md)에 있는 지침에 따라 UWP 개발용으로 개발 컴퓨터를 설정합니다.
-* [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다. 실험에 대한 API 외에, 이 SDK는 광고 표시, 앱에 대한 피드백을 수집하기 위해 고객을 피드백 허브로 보내기 등의 다른 기능을 위한 API도 제공합니다. 이 SDK에 대한 자세한 내용은 [Microsoft Store Services SDK](microsoft-store-services-sdk.md)를 참조하세요.
+* [Microsoft Store Services SDK를 설치합니다.](microsoft-store-services-sdk.md#install-the-sdk) 실험에 대한 API 외에, 이 SDK는 광고 표시, 앱에 대한 피드백을 수집하기 위해 고객을 피드백 허브로 보내기 등의 다른 기능을 위한 API도 제공합니다. 
 
 ## 모범 사례
 
@@ -65,6 +65,6 @@ A/B 테스트로 실험을 실행하려면 먼저 개발 컴퓨터를 설정해�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

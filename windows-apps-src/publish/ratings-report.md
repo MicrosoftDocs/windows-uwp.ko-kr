@@ -4,15 +4,15 @@ Description: "Windows 개발자 센터 대시보드의 평점 보고서를 통�
 title: "평점 보고서"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 45d22b46a750655cc723658b476ba40d18b4f745
 
 ---
 
 # 평점 보고서
 
 
-Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 스토어에서 고객의 앱 평가 분포를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 스토어에서 고객의 앱 평가 분포를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [앱 평점 가져오기](../monetize/get-app-ratings.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 평점은 고객이 스토어에서 앱을 평가할 때 앱에 제공한 별 수(1~5개)를 의미합니다. **평점** 보고서에는 리뷰로 남긴 개별 의견에 대한 정보가 포함되지 않습니다. 의견은 [리뷰 보고서](reviews-report.md)에서 확인할 수 있습니다.
 
@@ -52,7 +52,7 @@ Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 
 
 **시간 경과에 따른 평균 평점** 차트는 선택한 기간에 앱 평균 평점이 변경된 정도를 보여 줍니다.
 
-**시간 경과에 따른 평균 평점** 차트는 선택한 기간 동안 남아 있는 모든 평점의 평균을 계산하는 **평균 등급** 차트와 달리, 고객이 해당 기간 중 지정된 요일 또는 주에 앱에 어떻게 평점을 매겼는지를 보여 줍니다. 이 차트는 추세를 확인하거나, 업데이트나 다른 요인에 의해 평점이 영향을 받았는지를 확인하는 데 도움이 됩니다.
+**시간 경과에 따른 평균 평점** 차트는 선택한 기간 동안 남아 있는 모든 평점의 평균을 계산하는 **평균 평점** 차트와 달리, 고객이 해당 기간 중 지정된 요일 또는 주에 앱에 어떻게 평점을 매겼는지를 보여 줍니다. 이 차트는 추세를 확인하거나, 업데이트나 다른 요인에 의해 평점이 영향을 받았는지를 확인하는 데 도움이 됩니다.
 
 **지난 30일** 또는 **지난 3개월** 기준으로 정보를 필터링하면 차트에 일별 평균 평점이 표시됩니다. **지난 6개월** 또는 **지난 12개월** 기준으로 필터링하면 차트에는 주별 평균 평점이 표시됩니다. 여기서 새 주는 월요일에 시작되는 것으로 간주되고 표시되는 평균 평점은 이전 주의 평점입니다.
 
@@ -73,6 +73,6 @@ Windows 개발자 센터 대시보드의 **평점** 보고서를 통해 Windows 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

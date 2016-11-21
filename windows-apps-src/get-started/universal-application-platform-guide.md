@@ -4,8 +4,8 @@ title: "유니버설 Windows 플랫폼 개요"
 description: "이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
-ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
+ms.sourcegitcommit: 98dd2da8e16552fcde9790bd77f17a2100b63d4f
+ms.openlocfilehash: 170bbb4e22b3ac642b0dfd0c9136d3dd39d519d0
 
 ---
 
@@ -19,9 +19,9 @@ ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
 
 Windows 8에서는 Windows 앱 모델의 발전된 형태인 WinRT(Windows 런타임)를 도입했습니다. 이는 일반적인 응용 프로그램 아키텍처에 사용되었습니다.
 
-Windows Phone 8.1을 사용할 수 있게 되면서 Windows 런타임은 Windows Phone 8.1과 Windows 사이에 정렬되었습니다. 이를 통해 개발자는 공유 코드베이스를 사용하여 Windows와 Windows Phone을 둘 다 대상으로 하는 *유니버설 Windows 8 앱*을 만들 수 있었습니다.
+Windows Phone 8.1을 사용할 수 있게 되면서 Windows 런타임은 Windows Phone 8.1과 Windows 사이에 정렬되었습니다. 이를 통해 개발자는 공유 코드베이스를 사용하여 Windows와 Windows Phone을 둘 다 대상으로 하는 *유니버설 Windows8 앱*을 만들 수 있었습니다.
 
-Windows 10에는 Windows 런타임 모델을 더욱 발전시키고 Windows 10 통합 코드로 가져오는 UWP(Windows 10유니버설 Windows 플랫폼)가 도입되었습니다. 이제 UWP는 코어의 일부로 Windows 10을 실행하는 모든 장치에서 사용 가능한 공통 앱 플랫폼을 제공합니다. 이러한 진화 덕분에 UWP를 대상으로 하는 앱은 모든 장치에 일반적인 WinRT API뿐만 아니라 앱이 실행되는 디바이스 패밀리에 특정한 API(Win32 및 .NET API 포함)를 호출할 수 있습니다. UWP는 장치 간에 보장된 핵심 API 계층을 제공합니다. 따라서 광범위한 장치에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 또한 단일 앱 패키지를 통해 Windows 스토어에서는 앱을 실행할 수 있는 모든 디바이스 유형에 연결되는 통합 배포 채널을 제공합니다.
+Windows 10에는 Windows 런타임 모델을 더욱 발전시키고 Windows10 통합 코드로 가져오는 UWP(Windows 10유니버설 Windows 플랫폼)가 도입되었습니다. 이제 UWP는 코어의 일부로 Windows 10을 실행하는 모든 장치에서 사용 가능한 공통 앱 플랫폼을 제공합니다. 이러한 진화 덕분에 UWP를 대상으로 하는 앱은 모든 장치에 일반적인 WinRT API뿐만 아니라 앱이 실행되는 디바이스 패밀리에 특정한 API(Win32 및 .NET API 포함)를 호출할 수 있습니다. UWP는 장치 간에 보장된 핵심 API 계층을 제공합니다. 따라서 광범위한 장치에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 또한 단일 앱 패키지를 통해 Windows 스토어에서는 앱을 실행할 수 있는 모든 디바이스 유형에 연결되는 통합 배포 채널을 제공합니다.
 
 ![유니버설 Windows 플랫폼 앱은 다양한 디바이스에서 실행되며, 적응형 사용자 인터페이스, 자연스러운 사용자 입력, 하나의 스토어, 하나의 개발자 센터, 다양한 클라우드 서비스를 지원합니다.](images/universalapps-overview.png)
 
@@ -29,7 +29,7 @@ UWP 앱은 폼 팩터 및 입력 형식이 서로 다른 광범위한 디바이�
 
 ## 디바이스 패밀리
 
-Windows 8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 Windows Phone)를 대상으로 합니다. Windows 10에서는 더 이상 특정 운영 체제를 대상으로 하지 않습니다. 대신 하나 이상의 디바이스 패밀리를 대상으로 합니다. 디바이스 패밀리는 디바이스 패밀리 내의 장치에서 기대할 수 있는 API, 시스템 특성 및 동작을 식별합니다. 또한 스토어에서 앱을 설치할 수 있는 장치 집합을 결정합니다. 디바이스 패밀리 계층 구조는 다음과 같습니다.
+Windows8.1 및 Windows Phone 8.1 앱은 특정 OS(운영 체제)(Windows 또는 Windows Phone)를 대상으로 합니다. Windows 10에서는 더 이상 특정 운영 체제를 대상으로 하지 않습니다. 대신 하나 이상의 디바이스 패밀리를 대상으로 합니다. 디바이스 패밀리는 디바이스 패밀리 내의 장치에서 기대할 수 있는 API, 시스템 특성 및 동작을 식별합니다. 또한 스토어에서 앱을 설치할 수 있는 장치 집합을 결정합니다. 디바이스 패밀리 계층 구조는 다음과 같습니다.
 
 ![디바이스 패밀리](images/device-family-tree.png)
 
@@ -190,7 +190,7 @@ Windows 10에는 기존 크기 조정 모델의 진화된 모델이 도입되었
 ## 코드 작성
 
 
-[Visual Studio의 Windows 10 프로젝트](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10)에 대한 프로그래밍 언어 옵션에는 Visual C++, C#, Visual Basic 및 JavaScript가 포함됩니다. Visual C++, C# 및 Visual Basic의 경우 고화질 네이티브 UI 환경을 위해 XAML을 사용할 수 있습니다. Visual C++의 경우 XAML 대신 또는 XAML과 함께 DirectX를 사용하여 그릴 수 있습니다. JavaScript의 경우 프레젠테이션 계층이 HTML이므로 당연히 HTML이 플랫폼 간 웹 표준입니다. 대부분의 코드와 UI는 유니버설이며, 어디서든 같은 방식으로 실행됩니다. 하지만 특정 디바이스 패밀리에 맞게 조정된 코드 및 특정 폼 팩터에 맞게 조정된 UI의 경우 적응형 코드 및 적응형 UI를 사용할 수 있습니다. 다음과 같은 여러 가지 경우를 살펴보겠습니다.
+  [Visual Studio의 Windows10 프로젝트](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx#target_win10)에 대한 프로그래밍 언어 옵션에는 Visual C++, C#, Visual Basic 및 JavaScript가 포함됩니다. Visual C++, C# 및 Visual Basic의 경우 고화질 네이티브 UI 환경을 위해 XAML을 사용할 수 있습니다. Visual C++의 경우 XAML 대신 또는 XAML과 함께 DirectX를 사용하여 그릴 수 있습니다. JavaScript의 경우 프레젠테이션 계층이 HTML이므로 당연히 HTML이 플랫폼 간 웹 표준입니다. 대부분의 코드와 UI는 유니버설이며, 어디서든 같은 방식으로 실행됩니다. 하지만 특정 디바이스 패밀리에 맞게 조정된 코드 및 특정 폼 팩터에 맞게 조정된 UI의 경우 적응형 코드 및 적응형 UI를 사용할 수 있습니다. 다음과 같은 여러 가지 경우를 살펴보겠습니다.
 
 **대상 디바이스 패밀리에서 구현하는 API 호출**
 
@@ -246,7 +246,7 @@ API를 호출하려고 하지만 대상 디바이스 패밀리가 설명서에 �
 
 **UWP의 Win32 API**
 
-C++/CX로 작성된 UWP 앱 또는 Windows 런타임 구성 요소는 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows 10 디바이스 패밀리에서 구현됩니다. 앱을 Windowsapp.lib와 연결합니다. Windowsapp.lib는 UWP API에 대한 내보내기를 제공하는 "umbrella" lib입니다. Windowsapp.lib에 연결하면 모든 Windows 10 디바이스 패밀리에 존재하는 dll에 대한 종속성이 앱에 추가됩니다.
+C++/CX로 작성된 UWP 앱 또는 Windows 런타임 구성 요소는 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows10 디바이스 패밀리에서 구현됩니다. 앱을 Windowsapp.lib와 연결합니다. Windowsapp.lib는 UWP API에 대한 내보내기를 제공하는 "umbrella" lib입니다. Windowsapp.lib에 연결하면 모든 Windows10 디바이스 패밀리에 존재하는 dll에 대한 종속성이 앱에 추가됩니다.
 
 UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API 집합](https://msdn.microsoft.com/library/windows/desktop/mt186421) 및 [UWP 앱의 Dll](https://msdn.microsoft.com/library/windows/desktop/mt186422)을 참조하세요.
 
@@ -279,8 +279,11 @@ UWP 앱에 사용할 수 있는 Win32 API의 전체 목록은 [UWP 앱의 API �
 
 Windows 스토어에 게시하기 위해 앱을 제출하는 방법은 [통합 Windows 개발자 센터 대시보드 사용](../publish/using-the-windows-dev-center-dashboard.md)을 참조하세요.
 
+## 참고 항목 ##
+자세한 소개 자료를 보려면 [Windows10 - Windows10 디바이스용 Windows 앱 빌드 소개](https://msdn.microsoft.com/en-us/magazine/dn973012.aspx)를 참조하세요.
 
 
-<!--HONumber=Sep16_HO3-->
+
+<!--HONumber=Nov16_HO1-->
 
 

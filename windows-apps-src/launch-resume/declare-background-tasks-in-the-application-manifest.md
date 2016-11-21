@@ -4,15 +4,15 @@ title: "응용 프로그램 매니페스트에서 백그라운드 작업 선언"
 description: "앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: b3518780600b9fe8f9be5af48eb5ee6022ec350f
 
 ---
 
 # 응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -23,9 +23,9 @@ ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
 > [!Important]
->  이 문서는 별도 프로세스에서 실행되는 백그라운드 작업과 관련이 있습니다. 단일 프로세스 백그라운드 작업은 매니페스트에서 선언되지 않습니다.
+>  이 문서는 Out-of-process 백그라운드 작업과 관련이 있습니다. In-process 백그라운드 작업은 매니페스트에서 선언되지 않습니다.
 
-별도 프로세서에서 실행하는 백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 백그라운드 작업을 선언해야 합니다.
+Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 합니다. 그렇지 않으면 앱에서 등록할 수 없습니다(예외가 발생함). 또한 인증을 통과하려면 응용 프로그램 매니페스트에서 Out-of-process 백그라운드 작업을 선언해야 합니다.
 
 이 항목에서는 백그라운드 작업 클래스를 하나 이상 만들었으며 앱이 하나 이상의 트리거에 응답하여 실행할 각 백그라운드 작업을 등록한다고 가정합니다.
 
@@ -149,7 +149,7 @@ ms.openlocfilehash: 6ec298a956673c114d34d64b026394ece2c33506
 
 ## 다른 프로세스에서 실행되도록 백그라운드 작업 선언
 
-Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
+Windows10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.exe(백그라운드 작업이 기본적으로 실행되는 프로세스)가 아닌 다른 프로세스에서 백그라운드 작업을 실행할 수 있습니다.  포그라운드 응용 프로그램과 같은 프로세스에서 실행하거나 동일한 응용 프로그램에서 백그라운드 작업의 다른 인스턴스와 별개인 BackgroundTaskHost.exe의 인스턴스에서 실행되는 두 가지 옵션이 있습니다.  
 
 ### 포그라운드 응용 프로그램에서 실행
 
@@ -212,6 +212,6 @@ Windows 10 버전 1507의 새로운 기능을 사용하면 BackgroundTaskHost.ex
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

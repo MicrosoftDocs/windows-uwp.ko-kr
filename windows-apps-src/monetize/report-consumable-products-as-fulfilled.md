@@ -4,8 +4,8 @@ ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "지정된 고객에 대해 소모성 제품을 처리됨으로 보고하려면 Windows 스토어 컬렉션 API에서 이 메서드를 사용합니다. 사용자가 소모성 제품을 다시 구입하려면 앱 또는 서비스에서 해당 사용자에 대해 소모성 제품이 처리됨으로 보고되어야 합니다."
 title: "소모성 제품을 처리됨으로 보고"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 54095c7fd3c29fe7596be4c4b5a7148d078a7091
 
 ---
 
@@ -18,16 +18,16 @@ ms.openlocfilehash: dd3e687d49e538187c123b7123c184f9182905de
 
 두 가지 방법으로 이 메서드를 사용하여 소모성 제품을 처리됨으로 보고할 수 있습니다.
 
--   소모성 제품의 항목 ID와([제품에 대한 쿼리](query-for-products.md)의 **itemId** 매개 변수에 반환된 ID) 고유한 추적 ID를 제공합니다. 동일한 추적 ID가 여러 번 사용되는 경우 항목이 이미 사용된 경우에도 동일한 결과가 반환됩니다. 사용 요청이 성공했는지 확실하지 않으면, 서비스에서 동일한 추적 ID를 사용하여 사용 요청을 다시 제출해야 합니다. 추적 ID는 항상 사용 요청과 연결되며 무제한으로 다시 제출할 수 있습니다.
--   제품 ID([제품에 대한 쿼리](query-for-products.md)의 **productId** 매개 변수에 반환된 ID) 및 아래 요청 본문 섹션의 **transactionId** 매개 변수에 대한 설명에 나열된 소스 중 하나에서 가져온 트랜잭션 ID를 제공합니다.
+* 소모성 제품의 항목 ID와([제품에 대한 쿼리](query-for-products.md)의 **itemId** 매개 변수에 반환된 ID) 고유한 추적 ID를 제공합니다. 동일한 추적 ID가 여러 번 사용되는 경우 항목이 이미 사용된 경우에도 동일한 결과가 반환됩니다. 사용 요청이 성공했는지 확실하지 않으면, 서비스에서 동일한 추적 ID를 사용하여 사용 요청을 다시 제출해야 합니다. 추적 ID는 항상 사용 요청과 연결되며 무제한으로 다시 제출할 수 있습니다.
+* 제품 ID([제품에 대한 쿼리](query-for-products.md)의 **productId** 매개 변수에 반환된 ID) 및 아래 요청 본문 섹션의 **transactionId** 매개 변수에 대한 설명에 나열된 소스 중 하나에서 가져온 트랜잭션 ID를 제공합니다.
 
 ## 필수 조건
 
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
--   앱의 클라이언트 쪽 코드에서 [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 메서드를 호출하여 생성된 Windows 스토어 ID 키
+* `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+* [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키입니다.
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
 
@@ -71,7 +71,7 @@ UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 | 매개 변수            | 유형   | 설명                                                                                                                                 | 필수 |
 |----------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | identityType         | 문자열 | 문자열 값 **b2b**를 지정합니다.                                                                                                           | 예      |
-| identityValue        | 문자열 | Windows 스토어 ID 키의 문자열 값입니다.                                                                                                   | 예      |
+| identityValue        | 문자열 | [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키입니다.                                                                                                   | 예      |
 | localTicketReference | 문자열 | 반환된 응답에 대해 요청된 식별자입니다. Windows 스토어 ID 키의 *userId* 클레임과 동일한 값을 사용하는 것이 좋습니다. | 예      |
 
 <span/> 
@@ -158,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

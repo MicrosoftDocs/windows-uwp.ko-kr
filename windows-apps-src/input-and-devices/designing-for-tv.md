@@ -7,8 +7,8 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 translationtype: Human Translation
-ms.sourcegitcommit: 96a35ded526b09dd1ce1cb8528bb4a99e3511b32
-ms.openlocfilehash: 734a0f0574ac7698dd6bd963bf3e20225b26d401
+ms.sourcegitcommit: 8bf3a4384d97d59d2844614b981a2e837ccb493d
+ms.openlocfilehash: d168c358a3dd68f05b5d0962edb1fb62dfe0570e
 
 ---
 
@@ -18,7 +18,7 @@ Xbox One 및 TV 화면에서 멋지게 보이고 제대로 작동하도록 UWP(�
 
 ## 개요
 
-유니버설 Windows 플랫폼을 사용하면 여러 Windows 10 디바이스에서 흥미로운 환경을 만들 수 있습니다. UWP 프레임워크에서 제공하는 대부분의 기능은 추가 작업 없이 앱이 이러한 디바이스에서 동일한 UI(사용자 인터페이스)를 사용할 수 있게 합니다. 그러나 Xbox One 및 TV 화면에서 잘 작동하도록 앱을 조정하고 최적화하려면 특별한 고려 사항이 필요합니다.
+유니버설 Windows 플랫폼을 사용하면 여러 Windows10 디바이스에서 흥미로운 환경을 만들 수 있습니다. UWP 프레임워크에서 제공하는 대부분의 기능은 추가 작업 없이 앱이 이러한 디바이스에서 동일한 UI(사용자 인터페이스)를 사용할 수 있게 합니다. 그러나 Xbox One 및 TV 화면에서 잘 작동하도록 앱을 조정하고 최적화하려면 특별한 고려 사항이 필요합니다.
 
 실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다. 일반적으로 사용자가 화면에서 약 10피트 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *2피트* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 출력되고 입력에 컨트롤러를 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
 
@@ -164,7 +164,8 @@ Xbox One의 UWP 앱은 **메뉴** 단추를 눌러 상황에 맞는 메뉴를 �
 | 페이지 위로/아래로  | 페이지 위로/아래로 | 왼쪽/오른쪽 트리거 | [CalendarView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.calendarview.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [ComboBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | 세로 스크롤을 지원하는 보기
 | 페이지 왼쪽/오른쪽으로 | 없음 | 왼쪽/오른쪽 범퍼 | [Pivot](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.pivot.aspx), [ListBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listbox.aspx), [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx), [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx), `ScrollViewer`, [Selector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.aspx), [LoopingSelector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.loopingselector.aspx), [FlipView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx) | 가로 스크롤을 지원하는 보기
 | 확대/축소        | Ctrl +/- | 왼쪽/오른쪽 트리거 | 없음 | `ScrollViewer`, 확대 및 축소를 지원하는 보기 |
-| 탐색 창 열기/닫기 | 없음 | 보기 | 없음 | 탐색 창
+| 탐색 창 열기/닫기 | 없음 | 보기 | 없음 | 탐색 창 |
+| [검색](#search-experience) | None | Y 단추 | None | 앱에서 기본 검색 기능에 대한 바로 가기 |
 
 ## XY 포커스 탐색 및 조작
 
@@ -473,7 +474,7 @@ navigator.gamepadInputEmulation = "keyboard";
 
 포커스 화면 효과는 현재 포커스가 있는 UI 요소를 둘러싸는 테두리입니다. 이 기능은 사용자가 헤매지 않고 UI를 쉽게 탐색하는 데 도움이 됩니다.
 
-포커스 화면 효과에 추가된 다양한 사용자 지정 옵션 및 시각적 업데이트를 통해 개발자는 단일 포커스 화면 효과가 원격 PC와 Xbox One은 물론 키보드 및/또는 게임 패드/리모컨을 지원하는 다른 Windows 10 디바이스에서도 잘 작동할 것이라고 신뢰할 수 있습니다.
+포커스 화면 효과에 추가된 다양한 사용자 지정 옵션 및 시각적 업데이트를 통해 개발자는 단일 포커스 화면 효과가 원격 PC와 Xbox One은 물론 키보드 및/또는 게임 패드/리모컨을 지원하는 다른 Windows10 디바이스에서도 잘 작동할 것이라고 신뢰할 수 있습니다.
 
 여러 플랫폼에서 동일한 포커스 화면 효과를 사용할 수 있지만 10피트 환경의 경우 사용자에게 발생하는 컨텍스트가 약간 다릅니다. 사용자가 전체 TV 화면에 완전히 집중하지 않는다고 가정해야 하므로 시각 효과를 쉽게 검색할 수 있도록 현재 포커스가 있는 요소가 항상 사용자에게 명확하게 표시되어야 합니다.
 
@@ -1028,7 +1029,17 @@ if (IsTenFoot)
 
 앱에 미디어를 추가하는 방법에 대한 자세한 내용은 [미디어 재생](../controls-and-patterns/media-playback.md) 항목을 참조하세요.
 
-> ![참고] `MediaPlayerElement`는 Windows 10, 1607 이상 버전에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 위 권장 사항은 `MediaElement`에도 적용되며, `TransportControls` 속성은 동일한 방식으로 액세스됩니다.
+> ![참고] `MediaPlayerElement`는 Windows10, 1607 이상 버전에서만 사용할 수 있습니다. 이전 버전의 Windows10 앱을 개발하는 경우 [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 위 권장 사항은 `MediaElement`에도 적용되며, `TransportControls` 속성은 동일한 방식으로 액세스됩니다.
+
+### 검색 환경
+
+콘텐츠 검색은 10피트 환경에서 가장 일반적으로 수행되는 기능 중 하나입니다. 앱에서 검색 환경을 제공하는 경우 사용자는 게임 패드의 **Y** 단추를 바로 가기로 사용하여 빠르게 액세스할 수 있습니다.
+
+대부분의 고객은 이 바로 가기에 대해 이미 잘 알고 있어야 하지만 원하는 경우 고객이 단추를 사용하여 검색 기능에 액세스할 수 있음을 나타낼 수 있도록 UI에 **Y** 문자 모양을 시각적으로 추가할 수 있습니다. 이 신호를 추가하려면 Xbox 셸 및 다른 앱과의 일관성이 제공되도록 **Segoe Xbox Symbol MDL2** 글꼴(E426)의 기호를 사용해야 합니다.
+
+**Y** 단추는 게임 패드에서만 사용할 수 있기 때문에 UI에서의 단추와 같이 검색을 위해 다른 액세스 방법을 제공해야 합니다. 그렇지 않으면 일부 고객의 경우 기능을 사용하지 못할 수 있습니다.
+
+10피트 환경에서는 디스플레이에 제한된 공간이 있으므로 경우에 따라 고객이 전체 화면 검색 환경을 사용하는 것이 더 쉽습니다. 전체 화면인지, 부분 화면인지에 상관없이 “내부" 검색 시 사용자가 검색 환경을 열 때 화상 키보드가 이미 열려 있는 상태로 나타나 고객이 검색어를 입력할 수 있도록 하는 것이 좋습니다.
 
 ## Xbox에 대한 사용자 지정 시각적 상태 트리거
 
@@ -1105,6 +1116,6 @@ bool IsTenFoot = (Windows.System.Profile.AnaylticsInfo.VersionInfo.DeviceFamily 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -6,15 +6,15 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "사용자 지정 동영상 효과"
 translationtype: Human Translation
-ms.sourcegitcommit: 2d10a9a3732612cff8da81ee1921eaed0e838099
-ms.openlocfilehash: 57908ff3329968bba2eea3d8d51cb0277a2afba5
+ms.sourcegitcommit: 26ed53934ab9237731deda544b8830a26e5ad914
+ms.openlocfilehash: 5e8d8de1c4e4c5068603c60586859dfb3ab76a54
 
 ---
 
 # 사용자 지정 비디오 효과
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788) 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. 사용자 지정 효과는 장치의 카메라에 액세스할 수 있도록 하는 [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124)와 미디어 클립에서 복잡한 컴퍼지션을 만들 수 있도록 하는 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646)을 비롯한 여러 다른 Windows 런타임 API에서 사용할 수 있습니다.
@@ -247,6 +247,6 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://msdn
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

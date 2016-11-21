@@ -1,4 +1,15 @@
-# 변환된 데스크톱 앱에 서명
+---
+author: awkoren
+Description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)로 변환한 데스크톱 앱에 서명하는 방법에 대해 설명합니다."
+Search.Product: eADQiWindows 10XVcnh
+title: "데스크톱-UWP 브리지로 변환된 앱에 서명"
+translationtype: Human Translation
+ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
+ms.openlocfilehash: 2db978089a6334214c3b4c85dbde8d4a4e846092
+
+---
+
+# 데스크톱 브리지로 변환된 앱에 서명
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼)로 변환한 데스크톱 앱에 서명하는 방법에 대해 설명합니다. .appx 패키지를 배포하려면 먼저 인증서로 .appx 패키지에 서명해야 합니다.
 
@@ -27,7 +38,7 @@ C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 
 자세한 내용은 [SignTool을 사용하여 앱 패키지에 서명하는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)을 참조하세요. 
 
-위의 세 도구는 모두 Microsoft Windows 10 SDK에 포함되어 있습니다. 직접 호출하려면 명령 프롬프트에서 ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat``` 스크립트를 호출합니다.
+위의 세 도구는 모두 Microsoft Windows10 SDK에 포함되어 있습니다. 직접 호출하려면 명령 프롬프트에서 ```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat``` 스크립트를 호출합니다.
 
 ## 일반적인 오류
 
@@ -80,6 +91,7 @@ SignTool.exe는 AppX 패키지에 서명하려고 할 때 손상되거나 잘못
 - [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 - [SignTool을 사용하여 앱 패키지에 서명하는 방법](https://msdn.microsoft.com/library/windows/desktop/jj835835.aspx)
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Nov16_HO1-->
 
 

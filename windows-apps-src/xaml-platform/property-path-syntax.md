@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: "PropertyPath 클래스 및 문자열 구문을 사용하여 XAML이나 코드에서 PropertyPath 값을 인스턴스화할 수 있습니다."
-title: "속성 경로 구문'"
+title: "속성 경로 구문&quot;"
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 translationtype: Human Translation
 ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104

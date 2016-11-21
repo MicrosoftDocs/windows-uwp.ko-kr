@@ -1,17 +1,17 @@
 ---
 author: TylerMSFT
 title: "백그라운드 작업 등록"
-description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다."
+description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
+ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
+ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 ---
 
 # 백그라운드 작업 등록
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -19,9 +19,9 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 -   [**BackgroundTaskBuilder 클래스**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**SystemCondition 클래스**](https://msdn.microsoft.com/library/windows/apps/br224834)
 
-대부분의 백그라운드 작업을 안전하게 등록하기 위해 재사용할 수 있는 함수를 만드는 방법을 알아봅니다.
+대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 
-이 항목은 단일 프로세스 백그라운드 작업과 별도 프로세스로 실행되는 백그라운드 작업에 모두 적용됩니다. 이 항목에서는 등록해야 하는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업을 작성하는 방법은 [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)을 참조하세요.
+이 항목은 in-process 백그라운드 작업과 out-of-process 백그라운드 작업에 모두 적용됩니다. 이 항목에서는 등록해야 하는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업을 작성하는 방법에 대한 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md) 또는 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
 이 항목에서는 백그라운드 작업을 등록하는 유틸리티 함수를 안내합니다. 이 유틸리티 함수는 작업을 여러 번 등록하기 전에 기존 등록을 확인하여 여러 번 등록과 관련된 문제를 방지하며 백그라운드 작업에 시스템 조건을 적용할 수 있습니다. 이 연습에는 이 유틸리티의 전체 작업 예제가 포함됩니다.
 
@@ -36,8 +36,8 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 이 메서드는 작업 진입점, 작업 이름, 미리 구성된 백그라운드 작업 트리거 및 백그라운드 작업에 대한 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)(옵션)을 받아들입니다. 이 메서드는 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) 개체를 반환합니다.
 
 > [!Important]
-> `taskEntryPoint` - 별도의 프로세스로 실행되는 백그라운드 작업의 경우 네임스페이스 이름, '.' 및 백그라운드 클래스가 포함된 클래스 이름으로 구성되어야 합니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgruondTask1"이 됩니다.
-> 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, 단일 프로세스 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
+> `taskEntryPoint` - Out of process로 실행되는 백그라운드 작업의 경우 네임스페이스 이름, '.' 및 백그라운드 클래스가 포함된 클래스 이름으로 구성되어야 합니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgruondTask1"이 됩니다.
+> 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, in-process 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -182,7 +182,7 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 >
 >     builder.Name = name;
 >
->     // single-process background tasks don't set TaskEntryPoint
+>     // in-process background tasks don't set TaskEntryPoint
 >     if ( taskEntryPoint != null && taskEntryPoint != String.Empty)
 >     {
 >         builder.TaskEntryPoint = taskEntryPoint;
@@ -371,14 +371,15 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 > }
 > ```
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> 
+  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 ## 관련 항목
 
 ****
 
-* [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -388,9 +389,6 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-
-****
-
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -400,6 +398,6 @@ ms.openlocfilehash: 36352e3ce5b7d853da0d4aca47e7fc5839ccbfbb
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -3,6 +3,10 @@ author: mcleanbyron
 Description: "이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고, 실행하고, 관리합니다."
 title: "A/B 테스트로 첫 번째 실험 만들기 및 실행"
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
+translationtype: Human Translation
+ms.sourcegitcommit: bfe4862c441ca095a40df4f594fdf9b3e213d142
+ms.openlocfilehash: ab15741531b829c496811cdfca35059cd113f91d
+
 ---
 
 # A/B 테스트로 첫 번째 실험 만들기 및 실행
@@ -188,6 +192,7 @@ ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 * [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
+
 
 
 <!--HONumber=Sep16_HO1-->

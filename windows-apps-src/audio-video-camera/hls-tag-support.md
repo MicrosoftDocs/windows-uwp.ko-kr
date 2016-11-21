@@ -4,8 +4,8 @@ ms.assetid:
 description: "이 문서에서는 UWP 앱에서 지원되는 HLS(HTTP 라이브 스트리밍) 프로토콜 태그를 보여 줍니다."
 title: "HLS(HTTP 라이브 스트리밍) 태그 지원"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 779e5d0da7186a6f94251b89cf27636170923d5c
+ms.sourcegitcommit: 3d61f5272e4d11acfb7e0a85436ca60ba458dcae
+ms.openlocfilehash: a561f11a1638d5fea21d1d3b3f8bc47f71271f3f
 
 ---
 
@@ -16,7 +16,7 @@ ms.openlocfilehash: 779e5d0da7186a6f94251b89cf27636170923d5c
 > [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md) 문서에 설명된 대로 "X-"로 시작하는 사용자 지정 태그는 시간이 제한된 메타데이터로 액세스할 수 있습니다.
 
 |태그 |도입된 HLS 프로토콜 버전|HLS 프로토콜 문서 초안 버전|필수인 클라이언트|Windows 10 7월 릴리스|Windows 10 버전 1511|Windows 10 버전 1606 |
-|---------------------|-----------|--------------|---------|--------------|
+|---------------------|-----------|--------------|---------|--------------|-----|-----|
 |4.3.1.  기본 태그                 |             |                   |         |             |     |    |
 | 4.3.1.1.  EXTM3U |1|0|필수|지원함|지원|지원함|
 | 4.3.1.2.  EXT-X-VERSION |2|3|필수|지원함|지원|지원함
@@ -86,6 +86,6 @@ ms.openlocfilehash: 779e5d0da7186a6f94251b89cf27636170923d5c
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

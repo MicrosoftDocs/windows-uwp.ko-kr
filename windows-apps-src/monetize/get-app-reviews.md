@@ -4,8 +4,8 @@ ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 가져옵니다."
 title: "앱 리뷰 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 581532b56851d486f7804364d1d555b81829c1d1
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 4190012c08e22f4efb086c711183332b23ccee38
 
 
 
-Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
+Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [검토 보고서](../publish/reviews-report.md)를 통해서도 사용할 수 있습니다.
 
 ## 필수 조건
 
@@ -168,9 +168,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <li><strong>Windows Phone 8</strong></li>
 <li><strong>Windows Phone 8.1</strong></li>
 <li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
-<li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
+<li><strong>Windows8</strong></li>
+<li><strong>Windows8.1</strong></li>
+<li><strong>Windows10</strong></li>
 <li><strong>알 수 없음</strong></li>
 </ul></td>
 </tr>
@@ -378,6 +378,7 @@ Authorization: Bearer <your access token>
 
 ## 관련 항목
 
+* [리뷰 보고서](../publish/reviews-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [앱 획득 가져오기](get-app-acquisitions.md)
 * [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
@@ -386,6 +387,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,16 +4,16 @@ ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: "셰이프 그리기"
 description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
+ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
+ms.openlocfilehash: 1d3c0f50487aa6204f758303e0e5b05b9087eae5
 
 ---
 # 셰이프 그리기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 -   [**경로**](https://msdn.microsoft.com/library/windows/apps/BR243355)
 -   [**Windows.UI.Xaml.Shapes namespace**](https://msdn.microsoft.com/library/windows/apps/BR243401)
@@ -43,6 +43,15 @@ ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
 <Ellipse Fill="SteelBlue" Height="200" Width="200" />
 ```
 
+```csharp
+var ellipse1 = new Ellipse();
+ellipse1.Fill = new SolidColorBrush(Windows.UI.Colors.SteelBlue);
+ellipse1.Width = 200;
+ellipse1.Height = 200;
+
+layoutRoot.Children.Add(ellipse1);
+```
+
 다음은 렌더링된 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343)입니다.
 
 ![렌더링된 타원](images/shapes-ellipse.jpg)
@@ -69,29 +78,57 @@ UI 레이아웃에 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps
            StrokeThickness="3"
            RadiusX="50"
            RadiusY="10" />
-           ```
+```
 
-Here's the rendered [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371).
+```csharp
+var rectangle1 = new Rectangle();
+rectangle1.Fill = new SolidColorBrush(Windows.UI.Colors.Blue);
+rectangle1.Width = 200;
+rectangle1.Height = 100;
+rectangle1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+rectangle1.StrokeThickness = 3;
+rectangle1.RadiusX = 50;
+rectangle1.RadiusY = 10;
 
-![A rendered Rectangle.](images/shapes-rectangle.jpg)
+layoutRoot.Children.Add(rectangle1);
 
-**Tip**  There are some scenarios for UI definitions where instead of using a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), a [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250) might be more appropriate. If your intention is to create a rectangle shape around other content, it might be better to use **Border** because it can have child content and will automatically size around that content, rather than using the fixed dimensions for height and width like **Rectangle** does. A **Border** also has the option of having rounded corners if you set the [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) property.
+```
+
+다음은 렌더링된 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)입니다.
+
+![렌더링된 사각형](images/shapes-rectangle.jpg)
+
+**Tip** [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 사용하는 대신 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)가 더 적합할 수 있는 UI 정의 시나리오도 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
 
  
 
-On the other hand, a [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371) is probably a better choice for control composition. A **Rectangle** shape is seen in many control templates because it's used as a "FocusVisual" part for focusable controls. Whenever the control is in a "Focused" visual state, this rectangle is made visible, in other states it's hidden.
+반면에 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 컨트롤 컴퍼지션에 더 적합한 선택일 수 있습니다. **Rectangle** 셰이프는 포커스 가능 컨트롤의 "FocusVisual" 부분을 사용되므로 많은 컨트롤 템플릿에 표시됩니다. 이 직사각형은 컨트롤이 "Focused" 시각적 상태일 때마다 표시되며 다른 상태에서는 숨겨집니다.
 
-## Polygon
+## 다각형
 
-A [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) is a shape with a boundary defined by an arbitrary number of points. The boundary is created by connecting a line from one point to the next, with the last point connected to the first point. The [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) property defines the collection of points that make up the boundary. In XAML, you define the points with a comma-separated list. In code-behind you use a [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220) to define the points and you add each individual point as a [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value to the collection.
+[**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)은 임의 개수의 점으로 정의된 경계가 있는 셰이프입니다. 한 점에서 다음 점으로 선을 연결하고 마지막 점이 첫 번째 점으로 연결되어 경계가 만들어집니다. [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) 속성은 경계를 구성하는 점의 컬렉션을 정의합니다. XAML에서는 쉼표로 구분된 목록으로 점을 정의합니다. 코드 숨김에서는 [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220)을 사용하여 점을 정의하고 각 개별 점을 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값으로 컬렉션에 추가합니다.
 
-You don't need to explicitly declare the points such that the start point and end point are both specified as the same [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) value. The rendering logic for a [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) assumes that you are defining a closed shape and will connect the end point to the start point implicitly.
+시작점과 끝점이 모두 동일한 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값으로 지정되도록 점을 명시적으로 선언할 필요는 없습니다. [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)의 렌더링 논리에서 닫힌 셰이프를 정의한다고 가정하여 끝점을 시작점에 암시적으로 연결합니다.
 
-The next example creates a [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) with 4 points set to `(10,200)`, `(60,140)`, `(130,140)`, and `(180,200)`. It uses a [**LightBlue**](https://msdn.microsoft.com/library/windows/apps/Hh747960) value of [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) for its [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill), and has no value for [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) so it has no perimeter outline.
+다음 예제에서는 `(10,200)`, `(60,140)`, `(130,140)` 및 `(180,200)`으로 설정된 4개의 점을 가진 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) 을 만듭니다. [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 대해서는 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)의 [**LightBlue**](https://msdn.microsoft.com/library/windows/apps/Hh747960) 값을 사용하고 경계 윤곽이 없도록 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke)의 값은 없습니다.
 
 ```xml
 <Polygon Fill="LightBlue"
          Points="10,200,60,140,130,140,180,200" />
+```
+
+```csharp
+var polygon1 = new Polygon();
+polygon1.Fill = new SolidColorBrush(Windows.UI.Colors.LightBlue);
+
+var points = new PointCollection();
+points.Add(new Windows.Foundation.Point(10, 200));
+points.Add(new Windows.Foundation.Point(60, 140));
+points.Add(new Windows.Foundation.Point(130, 140));
+points.Add(new Windows.Foundation.Point(180, 200));
+polygon1.Points = points;
+
+layoutRoot.Children.Add(polygon1);
 ```
 
 다음은 렌더링된 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)입니다.
@@ -100,13 +137,24 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 
 **팁** [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 셰이프의 정점 선언이 아닌 다른 시나리오에 대한 XAML에서 한 형식으로 자주 사용됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
 
- 
-
 ## 선
 
 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345)은 좌표 공간에서 두 점 사이에 그려진 선입니다. **Line**은 내부 공간이 없기 때문에 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 제공된 값을 모두 무시합니다. **Line**에 대해서는 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) 및 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) 속성의 값을 지정해야 하며, 그러지 않으면 **Line**이 렌더링되지 않습니다.
 
 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값을 사용하여 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 셰이프를 지정하지는 않으며 [**X1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x1.aspx), [**Y1**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y1.aspx), [**X2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.x2.aspx) 및 [**Y2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.line.y2.aspx)에 대해 불연속 [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) 값을 사용합니다. 이렇게 하면 가로줄 또는 세로줄의 표시가 최소화됩니다. 예를 들어 `<Line Stroke="Red" X2="400"/>`은 400픽셀 길이의 가로줄을 정의합니다. 다른 X,Y 속성은 기본적으로 0이므로 점과 관련하여 이 XAML은 `(0,0)`에서 `(400,0)`까지 선을 그립니다. 그런 다음 (0,0)이 아닌 다른 점에서 시작하도록 하려면 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)을 사용하여 전체 **Line**을 이동할 수 있습니다.
+
+```xml
+<Line Stroke="Red" X2="400"/>
+```
+
+```csharp
+var line1 = new Line();
+line1.Stroke = new SolidColorBrush(Windows.UI.Colors.Red);
+line1.X2 = 400;
+
+layoutRoot.Children.Add(line1);
+
+```
 
 ## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
 
@@ -114,7 +162,6 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 
 **참고** [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)에 대해 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)에 명시적으로 동일한 시작점과 끝점이 있을 수도 있지만, 이 경우 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)을 대신 사용하는 것이 좋습니다.
 
- 
 
 [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정하면 **Polyline**에 설정된 [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx)의 시작점과 끝점이 교차하지 않아도 **Fill**이 셰이프의 내부 공간을 그립니다. **Fill**을 지정하지 않으면 **Polyline**은 연속하는 선의 시작점과 끝점이 교차하는 개별 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345) 요소를 여러 개 지정한 경우에 렌더링되는 모양과 유사합니다.
 
@@ -126,6 +173,21 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 <Polyline Stroke="Black"
         StrokeThickness="4"
         Points="10,200,60,140,130,140,180,200" />
+```
+
+```csharp
+var polyline1 = new Polyline();
+polyline1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+polyline1.StrokeThickness = 4;
+
+var points = new PointCollection();
+points.Add(new Windows.Foundation.Point(10, 200));
+points.Add(new Windows.Foundation.Point(60, 140));
+points.Add(new Windows.Foundation.Point(130, 140));
+points.Add(new Windows.Foundation.Point(180, 200));
+polyline1.Points = points;
+
+layoutRoot.Children.Add(polyline1);
 ```
 
 다음은 렌더링된 [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)입니다. 첫 번째 점과 마지막 점이 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)처럼 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) 윤곽선으로 연결되지 않는다는 점에 유의하시기 바랍니다.
@@ -153,40 +215,93 @@ The next example creates a [**Polygon**](https://msdn.microsoft.com/library/wind
 <Path Stroke="DarkGoldenRod" 
       StrokeThickness="3"
       Data="M 100,200 C 100,25 400,350 400,175 H 280" />
-      ```
+```
 
-Here's the rendered [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355).
+다음은 렌더링된 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)입니다.
 
-![A rendered Path.](images/shapes-path.jpg)
+![렌더링된 경로](images/shapes-path.jpg)
 
-The next example shows a usage of the other technique we discussed: a [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup) with a [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168). This example exercises some of the contributing geometry types that can be used as part of a **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143) and the various elements that can be a segment in [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164).
+다음 예제에서는 이미 설명한 다른 기술 즉, [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168)가 포함된 [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.geometrygroup)의 사용법을 보여 줍니다. 이 예제에서는 **PathGeometry**: [**PathFigure**](https://msdn.microsoft.com/library/windows/apps/BR210143)의 일부로 사용할 수 있는 영향을 주는 기하 도형 형식 일부와 [**PathFigure.Segments**](https://msdn.microsoft.com/library/windows/apps/BR210164)에서 세그먼트가 될 수 있는 다양한 요소를 실행합니다.
 
 ```xml
 <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">
-            <Path.Data>
-              <GeometryGroup>
-                  <RectangleGeometry Rect="50,5 100,10" />
-                  <RectangleGeometry Rect="5,5 95,180" />
-                  <EllipseGeometry Center="100, 100" RadiusX="20" RadiusY="30"/>
-                  <RectangleGeometry Rect="50,175 100,10" />
-                  <PathGeometry>
-                    <PathGeometry.Figures>
-                      <PathFigureCollection>
+    <Path.Data>
+        <GeometryGroup>
+            <RectangleGeometry Rect="50,5 100,10" />
+            <RectangleGeometry Rect="5,5 95,180" />
+            <EllipseGeometry Center="100, 100" RadiusX="20" RadiusY="30"/>
+            <RectangleGeometry Rect="50,175 100,10" />
+            <PathGeometry>
+                <PathGeometry.Figures>
+                    <PathFigureCollection>
                         <PathFigure IsClosed="true" StartPoint="50,50">
-                          <PathFigure.Segments>
-                            <PathSegmentCollection>
-                              <BezierSegment Point1="75,300" Point2="125,100" Point3="150,50"/>
-                              <BezierSegment Point1="125,300" Point2="75,100"  Point3="50,50"/>
-                            </PathSegmentCollection>
-                          </PathFigure.Segments>
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="75,300" Point2="125,100" Point3="150,50"/>
+                                    <BezierSegment Point1="125,300" Point2="75,100"  Point3="50,50"/>
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
                         </PathFigure>
-                      </PathFigureCollection>
-                    </PathGeometry.Figures>
-                  </PathGeometry>               
-              </GeometryGroup>
-            </Path.Data>
-          </Path>
+                    </PathFigureCollection>
+                </PathGeometry.Figures>
+            </PathGeometry>
+        </GeometryGroup>
+    </Path.Data>
+</Path>
 ```
+
+```csharp
+var path1 = new Windows.UI.Xaml.Shapes.Path();
+path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));
+path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+path1.StrokeThickness = 1;
+
+var geometryGroup1 = new GeometryGroup();
+var rectangleGeometry1 = new RectangleGeometry();
+rectangleGeometry1.Rect = new Rect(50, 5, 100, 10);
+var rectangleGeometry2 = new RectangleGeometry();
+rectangleGeometry2.Rect = new Rect(5, 5, 95, 180);
+geometryGroup1.Children.Add(rectangleGeometry1);
+geometryGroup1.Children.Add(rectangleGeometry2);
+
+var ellipseGeometry1 = new EllipseGeometry();
+ellipseGeometry1.Center = new Point(100, 100);
+ellipseGeometry1.RadiusX = 20;
+ellipseGeometry1.RadiusY = 30;
+geometryGroup1.Children.Add(ellipseGeometry1);
+
+var pathGeometry1 = new PathGeometry();
+var pathFigureCollection1 = new PathFigureCollection();
+var pathFigure1 = new PathFigure();
+pathFigure1.IsClosed = true;
+pathFigure1.StartPoint = new Windows.Foundation.Point(50, 50);
+pathFigureCollection1.Add(pathFigure1);
+pathGeometry1.Figures = pathFigureCollection1;
+
+var pathSegmentCollection1 = new PathSegmentCollection();
+var pathSegment1 = new BezierSegment();
+pathSegment1.Point1 = new Point(75, 300);
+pathSegment1.Point2 = new Point(125, 100);
+pathSegment1.Point3 = new Point(150, 50);
+pathSegmentCollection1.Add(pathSegment1);
+
+var pathSegment2 = new BezierSegment();
+pathSegment2.Point1 = new Point(125, 300);
+pathSegment2.Point2 = new Point(75, 100);
+pathSegment2.Point3 = new Point(50, 50);
+pathSegmentCollection1.Add(pathSegment2);
+pathFigure1.Segments = pathSegmentCollection1;
+
+geometryGroup1.Children.Add(pathGeometry1);
+path1.Data = geometryGroup1;
+
+layoutRoot.Children.Add(path1);
+
+```
+
+다음은 렌더링된 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)입니다.
+
+![렌더링된 경로](images/shapes-path-2.png)
 
 [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168)를 사용하면 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) 문자열을 채우는 것보다 읽기 쉬울 수 있습니다. 반면에 [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data)는 SVG(스케일러블 벡터 그래픽) 이미지 경로 정의와 호환되는 구문을 사용하므로 SVG에서 그래픽을 이식하거나 Blend와 같은 도구에서 출력으로 사용하는 데 유용할 수 있습니다.
 
@@ -200,6 +315,6 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

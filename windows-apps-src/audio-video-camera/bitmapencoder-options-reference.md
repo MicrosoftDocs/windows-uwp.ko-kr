@@ -1,17 +1,17 @@
 ---
-author: drewbatgit
+author: laurenhughes
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: "이 문서에서는 BitmapEncoder에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다."
 title: "BitmapEncoder 옵션 참조"
 translationtype: Human Translation
-ms.sourcegitcommit: de54d389488d8298ea1341b0a6f27a476d38584e
-ms.openlocfilehash: 0ccaf55215cb82633313e145a126db92aa6d16e6
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 4edf119d0f8830fec9ece34f1a7eb8f3ffbe67dd
 
 ---
 
 # BitmapEncoder 옵션 참조
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)에서 사용할 수 있는 인코딩 옵션에 대해 설명합니다. 인코딩 옵션은 문자열인 이름과 특정 데이터 형식([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871))의 값으로 정의됩니다. 이미지 작업 방법은 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조하세요.
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: 0ccaf55215cb82633313e145a126db92aa6d16e6
 ## 관련 항목
 
 * [비트맵 이미지 만들기, 편집 및 저장](imaging.md)
- 
+* [지원되는 코덱](supported-codecs.md)
 
  
 
@@ -44,6 +44,6 @@ ms.openlocfilehash: 0ccaf55215cb82633313e145a126db92aa6d16e6
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

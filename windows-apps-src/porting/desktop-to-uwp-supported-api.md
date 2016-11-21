@@ -1,4 +1,14 @@
-# 변환된 데스크톱 앱에서 지원되는 UWP API
+---
+author: awkoren
+Description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)로 변환한 데스크톱 앱에 서명하는 방법에 대해 설명합니다."
+Search.Product: eADQiWindows 10XVcnh
+title: "변환된 데스크톱 앱을 지원하는 UWP API"
+translationtype: Human Translation
+ms.sourcegitcommit: 3751b16837a1e12f68954b2dec7dfaf0fb8554b6
+ms.openlocfilehash: c99d103fe5d613c5b654ba2b0bb83987a7fcb944
+
+---
+# 데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API
 
 변환된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서에는 변환된 앱이 사용할 수 있는 클래스가 나와 있습니다. 
 
@@ -32,7 +42,7 @@
 
 다음은 변환된 앱에서 지원되는 UWP API의 전체 목록입니다. [변환된 앱에서 새로 지원되는 API](#new) 또는 [변환된 앱과 데스크톱 응용 프로그램 둘 다에서 지원되는 API](#both)를 확인할 수 있습니다. 
 
-변환된 앱에서 UWP API를 호출하는 방법에 대한 예제를 보려면 [GitHub의 데스크톱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)을 참조하세요.
+WinRT API를 사용하는 방법에 대한 예는 GitHub에서 [UWP에 대한 데스크톱 앱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요.
 
 <span id="new" />
 ### 변환된 앱에서 새로 지원되는 API
@@ -1030,6 +1040,6 @@
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

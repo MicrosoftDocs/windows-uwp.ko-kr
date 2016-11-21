@@ -4,14 +4,14 @@ title: "실행, 다시 시작 및 백그라운드 작업"
 description: "이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d0fffc46b1fc4ca2fba1422f2094bd411a65058
-ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
+ms.sourcegitcommit: 7ed2596c33338c3954b6cfe1e779284283ae7769
+ms.openlocfilehash: 3b1be5b6951b72d5699e7b31e95702b827b741b5
 
 ---
 
 # 실행, 다시 시작 및 백그라운드 작업
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 다음을 설명합니다.
 
@@ -59,9 +59,9 @@ ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
 | [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)                             | 이 섹션의 항목에서는 백그라운드 작업으로 트리거에 응답하여 백그라운드에서 고유한 경량 코드를 실행하는 방법을 보여 줍니다.                                                       |
 | [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
 | [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                           | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.                                                                                                                          |
-| [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)                               | 백그라운드 작업 클래스를 만든 다음 앱이 포그라운드에 없는 경우 별도 프로세스에서 실행되도록 등록합니다.                                                                                                 |
-| [단일 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)                               | 포그라운드 앱과 동일한 프로세스에서 실행되는 백그라운드 작업 클래스를 만듭니다.                                                                                                 |
-| [다중 프로세스 백그라운드 작업을 단일 프로세스 백그라운드 작업으로 변환](convert-multiple-process-background-task.md)                               | 앱이 백그라운드에 있을 경우 별도 프로세스에서 실행되도록 설계된 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행되는 단일 프로세스 백그라운드 작업으로 변환하는 방법을 알아봅니다.
+| [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)                               | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다.                                                                                                 |
+| [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)                               | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다.                                                                                                 |
+| [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md)                               | Out-of-process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스로 실행하는 In-process 백그라운드 작업으로 변환하는 방법에 대해 알아봅니다.
 | [백그라운드 작업 디버그](debug-a-background-task.md)                                                           | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.                                                                        |
 | [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.                                                                                                       |
 | [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                     | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.                                     |
@@ -80,7 +80,7 @@ ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)                                | 다른 UWP 앱에 서비스를 제공할 수 있는 UWP를 작성하는 방법과 이러한 서비스를 사용하는 방법에 대해 알아봅니다.                                                                                  |
 | [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 디바이스에서 실행되는 앱 서비스와 메시지를 교환하는 방법을 알아봅니다. |
-| [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-single-process.md)                                | 별도 백그라운드 프로세스에서 실행되는 앱 서비스 코드를 앱 서비스 호스트 앱과 동일한 프로세스 내에서 실행되는 코드로 변환하는 방법을 알아봅니다.                                                                                  |
+| [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)                                | 별도 백그라운드 프로세스에서 실행되는 앱 서비스 코드를 앱 서비스를 호스트하는 앱과 동일한 프로세스 내에서 실행되는 코드로 변환하는 방법을 알아봅니다.                                                                                  |
 
 ## 시작 화면 추가
 
@@ -111,6 +111,6 @@ ms.openlocfilehash: 6950f2f4eeee947eb2f7e8b37f72de7c03f53b01
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

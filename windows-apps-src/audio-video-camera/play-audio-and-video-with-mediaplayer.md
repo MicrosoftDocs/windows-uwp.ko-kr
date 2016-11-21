@@ -4,14 +4,14 @@ ms.assetid:
 description: "이 문서에서는 MediaPlayer를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다."
 title: "MediaPlayer를 사용하여 오디오 및 비디오 재생"
 translationtype: Human Translation
-ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
-ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 66240809d47247312d9d4c49c7bf36ff70295559
 
 ---
 
 # MediaPlayer를 사용하여 오디오 및 비디오 재생
 
-이 문서에서는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다. Windows 10 버전 1607에서는 백그라운드 오디오에 대해 간소화된 단일 프로세스 디자인, SMTC(시스템 미디어 전송 컨트롤)와 자동 통합, 여러 미디어 플레이어를 동기화하는 기능, Windows.UI.Composition 표면 기능 및 콘텐츠에서 미디어 중단을 만들고 예약하는 편리한 인터페이스를 포함하여 미디어 재생 API가 크게 개선되었습니다. 이러한 개선된 기능을 활용하려면 미디어 재생을 위해 **MediaElement** 대신 **MediaPlayer** 클래스를 사용하는 것이 좋습니다. XAML 페이지에서 미디어 콘텐츠를 렌더링할 수 있도록 간단한 XAML 컨트롤인 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)가 도입되었습니다. 이제 **MediaElement**를 통해 제공된 많은 재생 컨트롤 및 상태 API가 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체를 통해 사용 가능합니다. **MediaElement**는 이전 버전과의 호환성을 지원하기 위해 계속 작동되지만 이 클래스에 추가 기능은 제공되지 않습니다.
+이 문서에서는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) 클래스를 사용하여 유니버설 Windows 앱에서 미디어를 재생하는 방법을 보여 줍니다. Windows10 버전 1607에서는 백그라운드 오디오에 대해 간소화된 단일 프로세스 디자인, SMTC(시스템 미디어 전송 컨트롤)와 자동 통합, 여러 미디어 플레이어를 동기화하는 기능, Windows.UI.Composition 표면 기능 및 콘텐츠에서 미디어 중단을 만들고 예약하는 편리한 인터페이스를 포함하여 미디어 재생 API가 크게 개선되었습니다. 이러한 개선된 기능을 활용하려면 미디어 재생을 위해 **MediaElement** 대신 **MediaPlayer** 클래스를 사용하는 것이 좋습니다. XAML 페이지에서 미디어 콘텐츠를 렌더링할 수 있도록 간단한 XAML 컨트롤인 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)가 도입되었습니다. 이제 **MediaElement**를 통해 제공된 많은 재생 컨트롤 및 상태 API가 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체를 통해 사용 가능합니다. **MediaElement**는 이전 버전과의 호환성을 지원하기 위해 계속 작동되지만 이 클래스에 추가 기능은 제공되지 않습니다.
 
 이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
@@ -39,6 +39,9 @@ XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 
 **MediaPlayerElement**에 재생 소스를 설정할 수도 있으며 요소는 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer) 속성을 사용하여 액세스할 수 있는 **MediaPlayer** 인스턴스를 자동으로 만듭니다.
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
+
+> [!NOTE] 
+> [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled)를 false로 설정하여 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)의 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)를 비활성화하면, **MediaPlayer** 및 [**TransportControls**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.TransportControls)(**MediaPlayerElement**에서 제공) 간 연결이 끊어지므로 기본 제공 전송 컨트롤이 플레이어의 재생을 더 이상 자동으로 제어할 수 없게 됩니다. 대신 고유한 컨트롤을 구현하여 **MediaPlayer**를 제어해야 합니다.
 
 ##일반적인 MediaPlayer 작업
 이 섹션에서는 **MediaPlayer**의 몇 가지 기능을 사용하는 방법을 보여 줍니다.
@@ -92,7 +95,7 @@ XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
         
 ##MediaPlayerSurface를 사용하여 Windows.UI.Composition 표면에 비디오를 렌더링합니다.
-Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface)에 비디오를 렌더링할 수 있으며 플레이어가 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) 네임스페이스의 API와 상호 작용할 수 있습니다. 컴퍼지션 프레임워크를 사용하면 XAML과 하위 수준 DirectX 그래픽 API 간에 시각적 계층의 그래픽 작업이 가능합니다. 그러면 모든 XAML 컨트롤에 비디오 렌더링과 같은 시나리오를 사용할 수 있습니다. 컴퍼지션 API 사용에 대한 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요.
+Windows10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface)에 비디오를 렌더링할 수 있으며 플레이어가 [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) 네임스페이스의 API와 상호 작용할 수 있습니다. 컴퍼지션 프레임워크를 사용하면 XAML과 하위 수준 DirectX 그래픽 API 간에 시각적 계층의 그래픽 작업이 가능합니다. 그러면 모든 XAML 컨트롤에 비디오 렌더링과 같은 시나리오를 사용할 수 있습니다. 컴퍼지션 API 사용에 대한 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요.
 
 다음 예제에서는 비디오 플레이어 콘텐츠를 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas) 컨트롤로 렌더링하는 방법을 보여 줍니다. 이 예제에서 미디어 플레이어 관련 호출은 [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) 및 [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963)입니다. **SetSurfaceSize**는 콘텐츠 렌더링에 할당해야 하는 버퍼의 크기를 시스템에 지시합니다. **GetSurface**는 [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor)를 인수로 사용하고 [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) 클래스의 인스턴스를 검색합니다. 이 클래스는 표면을 만드는 데 사용된 **Compositor** 및 **MediaPlayer**에 대한 액세스를 제공하고 [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface) 속성을 통해 표면 자체를 노출합니다.
 
@@ -101,7 +104,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurf
 [!code-cs[Compositor](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCompositor)]
         
 ##MediaTimelineController를 사용하여 여러 플레이어에서 콘텐츠 동기화
-이 문서의 앞에서 설명한 대로 앱에는 한 번에 여러 개의 **MediaPlayer** 개체가 활성화되어 있을 수 있습니다. 기본적으로 만든 각 **MediaPlayer**는 독립적으로 작동합니다. 일부 시나리오의 경우 비디오에 대한 설명 트랙 동기화와 같이 여러 플레이어의 재생 속도, 플레이어 상태, 재생 위치를 동기화할 수 있습니다. Windows 10 버전 1607부터 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) 클래스를 사용하여 이 동작을 구현할 수 있습니다.
+이 문서의 앞에서 설명한 대로 앱에는 한 번에 여러 개의 **MediaPlayer** 개체가 활성화되어 있을 수 있습니다. 기본적으로 만든 각 **MediaPlayer**는 독립적으로 작동합니다. 일부 시나리오의 경우 비디오에 대한 설명 트랙 동기화와 같이 여러 플레이어의 재생 속도, 플레이어 상태, 재생 위치를 동기화할 수 있습니다. Windows10 버전 1607부터 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) 클래스를 사용하여 이 동작을 구현할 수 있습니다.
 
 ###재생 컨트롤 구현
 다음 예제는 **MediaTimelineController**를 사용하여 **MediaPlayer**의 두 인스턴스를 제어하는 방법을 보여 줍니다. 먼저 **MediaPlayer**의 각 인스턴스가 인스턴스화되고 **Source**는 미디어 파일로 설정됩니다. 다음 새 **MediaTimelineController**가 만들어집니다. 각 **MediaPlayer**에서 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) 속성을 false로 설정하면 각 플레이어에 연결된 [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)가 사용할 수 없도록 설정됩니다. 그런 다음 [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController) 속성이 타임라인 컨트롤러 개체로 설정됩니다.
@@ -174,6 +177,6 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSurf
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

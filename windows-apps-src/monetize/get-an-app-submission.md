@@ -4,8 +4,8 @@ ms.assetid: BF296C25-A2E6-48E4-9D08-0CCDB5FAE0C8
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출에 대한 데이터를 가져옵니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 178b70db1583790c174d65e060c8bce6e4f69243
-ms.openlocfilehash: c845b59919a3a487949bc8926f7261992dac60ae
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: d7e4e0f355828b3d9b7bbcdd5ceee43dad9fe37c
 
 ---
 
@@ -15,6 +15,8 @@ ms.openlocfilehash: c845b59919a3a487949bc8926f7261992dac60ae
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출에 대한 데이터를 가져옵니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 응답 데이터에서 **가격** 리소스 값이 빈 상태가 되고 이 메서드를 사용하는 앱 제출에 대한 체험 기간, 가격 및 판매 데이터를 일시적으로 받을 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-app-submissions.md#pricing-object)를 참조하세요.
 
 ## 필수 조건
 
@@ -49,7 +51,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | 문자열 | 필수. 제출을 업데이트하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | 문자열 | 필수. 받으려는 제출이 포함된 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
 | submissionId | 문자열 | 필수. 가져올 제출의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [앱 제출 만들기](create-an-app-submission.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
 
 <span/>
@@ -148,6 +150,16 @@ Authorization: Bearer <your access token>
       ]
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "enterpriseLicensing": "Online",
   "allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies": true,
   "allowTargetFutureDeviceFamilies": {
@@ -184,6 +196,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

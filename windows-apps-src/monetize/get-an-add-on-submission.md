@@ -4,8 +4,8 @@ ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출에 대한 데이터를 가져옵니다."
 title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: ecdd4292c7980a647075c55abf7d14edd39d23d6
 
 ---
 
@@ -15,6 +15,8 @@ ms.openlocfilehash: 699f26e8a73e1777f5966faf346945807d460315
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱에서 바로 구매 또는 IAP라고도 함) 제출에 대한 데이터를 가져옵니다. Windows 스토어 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 응답 데이터에서 **가격** 리소스 값이 빈 상태가 되고 이 메서드를 사용하는 추가 기능 제출에 대한 가격 및 판매 데이터를 일시적으로 받을 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-add-on-submissions.md#pricing-object)를 참조하세요.
 
 ## 필수 조건
 
@@ -167,6 +169,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

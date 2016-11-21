@@ -4,8 +4,8 @@ ms.assetid:
 description: "이 문서에서는 시스템 미디어 전송 컨트롤을 조작하는 방법을 보여 줍니다."
 title: "시스템 미디어 전송 컨트롤과 통합"
 translationtype: Human Translation
-ms.sourcegitcommit: 53b1cb94f90cd697a96bca49c5f2109d4749dbd1
-ms.openlocfilehash: c490ea43a6f49e09828cb6b07a6fbf1920acca74
+ms.sourcegitcommit: 34cb2fec3071add8617fe2bee2eaf50356611ac6
+ms.openlocfilehash: 702d5911f6e76d6c047fcc97c1117456ae04c3e5
 
 ---
 
@@ -70,6 +70,7 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 이 문서의 앞부분에서 설명했듯이, SMTC는 앱에서 만드는 모든 **MediaPlayer** 인스턴스에 대한 정보를 자동으로 검색하고 표시합니다. 여러 개의 **MediaPlayer** 인스턴스를 사용하지만 SMTC에서 앱에 대한 단일 항목을 제공하려는 경우 자동 통합을 사용하는 대신 SMTC의 동작을 수동으로 제어해야 합니다. 또한 [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController)를 사용하여 하나 이상의 미디어 플레이어를 제어하는 경우 수동 SMTC 통합을 사용해야 합니다. 또한 앱에서 **MediaPlayer** 이외의 API(예: [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph) 클래스)를 사용하여 미디어를 재생하는 경우 사용자가 SMTC를 사용하여 앱을 제어하려면 수동 SMTC 통합을 구현해야 합니다. SMTC를 수동으로 제어하는 방법에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
 
 
+
 ## 관련 항목
 * [미디어 재생](media-playback.md)
 * [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
@@ -85,6 +86,6 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

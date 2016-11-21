@@ -4,14 +4,14 @@ title: "취소된 백그라운드 작업 처리"
 description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 ---
 
 # 취소된 백그라운드 작업 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -21,9 +21,9 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 
 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업 빌드를 빠르게 시작하려면 [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md) 또는 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-이 항목은 단일 프로세스 백그라운드 작업에도 적용할 수 있습니다. 그러나 Run() 메서드 대신 OnBackgroundActivated()로 대체합니다. 단일 프로세스 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
+이 항목은 In-process 백그라운드 작업에도 적용할 수 있습니다. 그러나 Run() 메서드 대신 OnBackgroundActivated()로 대체합니다. In-process 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
 
 ## OnCanceled 메서드를 사용하여 취소 요청 인식
 
@@ -86,7 +86,7 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 >     }
 > ```
 
-백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다. 단일 프로세스 백그라운드 작업에서 응용 프로그램 초기화의 일부로 이 등록을 수행할 수 있습니다. 예를 들면 다음 코드 줄을 사용합니다.
+백그라운드 작업의 Run 메서드에서 작업을 시작하기 전에 OnCanceled 이벤트 처리기 메서드를 등록합니다. In-process 백그라운드 작업에서 응용 프로그램 초기화의 일부로 이 등록을 수행할 수 있습니다. 예를 들면 다음 코드 줄을 사용합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -98,7 +98,7 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 
 ## 백그라운드 작업을 종료하여 취소 처리
 
-취소 요청이 수신되면 백그라운드 작업을 수행하는 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다. 단일 프로세스 백그라운드 작업의 경우 이는 `OnBackgroundActivated()` 메서드에서 반환을 의미합니다. 별도 프로세스에서 실행되는 백그라운드 작업의 경우 `Run()` 메서드에서 반환을 의미합니다.
+취소 요청이 수신되면 백그라운드 작업을 수행하는 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다. In-process 백그라운드 작업의 경우 이는 `OnBackgroundActivated()` 메서드에서 반환을 의미합니다. Out-of-process 백그라운드 작업의 경우 이는 `Run()` 메서드에서 반환을 의미합니다.
 
 작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. **\_cancelRequested**가 true로 설정된 경우 작업을 중지합니다.
 
@@ -134,7 +134,7 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 
 > **참고** 위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
-작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 별도 프로세스에서 실행되는 백그라운드 작업에 적용됩니다. 단일 프로세스 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
+작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
 
 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 LocalSettings에 상태를 기록합니다.
 
@@ -327,11 +327,13 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 > }
 > ```
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> 
+  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 ## 관련 항목
 
-* [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -341,12 +343,11 @@ ms.openlocfilehash: e1a843448accb5ae2d689a6105c8254b0f868b5b
 * [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
 * [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

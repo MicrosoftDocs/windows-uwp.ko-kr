@@ -4,13 +4,13 @@ title: "키 프레임 애니메이션 및 감속/가속 함수 애니메이션"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "선형 키 프레임 애니메이션, KeySpline 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
+ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
+ms.openlocfilehash: 163109a8e87c0d270eeeed825958af7ec51ee336
 
 ---
 # 키 프레임 애니메이션 및 감속/가속 함수 애니메이션
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 선형 키 프레임 애니메이션, **KeySpline** 값을 사용하는 키 프레임 애니메이션 또는 감속/가속 함수는 거의 동일한 시나리오에 사용되는 세 가지 다른 기술로, 약간 더 복잡하며 시작 상태에서 종료 상태까지 비선형 애니메이션 동작을 사용하는 스토리보드 애니메이션을 만듭니다.
@@ -78,66 +78,63 @@ ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
 
 ```xml
 <Storyboard x:Name="myStoryboard">
+    <!-- Animate the TranslateTransform's X property
+        from 0 to 350, then 50,
+        then 200 over 10 seconds. -->
+    <DoubleAnimationUsingKeyFrames
+        Storyboard.TargetName="MyAnimatedTranslateTransform"
+        Storyboard.TargetProperty="X"
+        Duration="0:0:10" EnableDependentAnimation="True">
 
-            <!-- Animate the TranslateTransform's X property
-             from 0 to 350, then 50,
-             then 200 over 10 seconds. -->
-            <DoubleAnimationUsingKeyFrames
-          Storyboard.TargetName="MyAnimatedTranslateTransform"
-          Storyboard.TargetProperty="X"
-          Duration="0:0:10" EnableDependentAnimation="True">
+        <!-- Using a LinearDoubleKeyFrame, the rectangle moves 
+            steadily from its starting position to 500 over 
+            the first 3 seconds.  -->
+        <LinearDoubleKeyFrame Value="500" KeyTime="0:0:3"/>
 
-                <!-- Using a LinearDoubleKeyFrame, the rectangle moves 
-                 steadily from its starting position to 500 over 
-                 the first 3 seconds.  -->
-                <LinearDoubleKeyFrame Value="500" KeyTime="0:0:3"/>
+        <!-- Using a DiscreteDoubleKeyFrame, the rectangle suddenly 
+            appears at 400 after the fourth second of the animation. -->
+        <DiscreteDoubleKeyFrame Value="400" KeyTime="0:0:4"/>
 
-                <!-- Using a DiscreteDoubleKeyFrame, the rectangle suddenly 
-                 appears at 400 after the fourth second of the animation. -->
-                <DiscreteDoubleKeyFrame Value="400" KeyTime="0:0:4"/>
+        <!-- Using a SplineDoubleKeyFrame, the rectangle moves 
+            back to its starting point. The
+            animation starts out slowly at first and then speeds up. 
+            This KeyFrame ends after the 6th second. -->
+        <SplineDoubleKeyFrame KeySpline="0.6,0.0 0.9,0.00" Value="0" KeyTime="0:0:6"/>
+    </DoubleAnimationUsingKeyFrames>
+</Storyboard>
+```
 
-                <!-- Using a SplineDoubleKeyFrame, the rectangle moves 
-                 back to its starting point. The
-                 animation starts out slowly at first and then speeds up. 
-                 This KeyFrame ends after the 6th
-                 second. -->
-                <SplineDoubleKeyFrame KeySpline="0.6,0.0 0.9,0.00" Value="0" KeyTime="0:0:6"/>
+### 감속/가속 키 프레임
 
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        ```
+감속/가속 키 프레임은 보간이 적용되는 키 프레임이며 보간의 시간에 따른 함수가 여러 가지 미리 정의된 수학 공식에 의해 제어됩니다. 실제로 일부 감속/가속 함수 형식과 동일한 결과를 스플라인 키 프레임에서도 많이 생성할 수 있지만 스플라인에서 재현할 수 없는 [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049)와 같은 몇 가지 감속/가속 함수도 있습니다.
 
-### Easing key frames
+감속/가속 키 프레임에 감속/가속 함수를 적용하려면 해당 키 프레임에 대한 XAML에서 **EasingFunction** 속성을 속성 요소로 설정합니다. 값의 경우 감속/가속 함수 형식 중 하나에 대해 개체 요소를 지정합니다.
 
-An easing key frame is a key frame where interpolation being applied, and the function over time of the interpolation is controlled by several pre-defined mathematical formulas. You can actually produce much the same result with a spline key frame as you can with some of the easing function types, but there are also some easing functions such as [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) that you can't reproduce with a spline.
-
-To apply an easing function to an easing key frame, you set the **EasingFunction** property as a property element in XAML for that key frame. For the value, specify an object element for one of the easing function types.
-
-This example applies a [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) and then a [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) as successive key frames to a [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) to create a bouncing effect.
+다음 예제에서는 [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126)를 적용한 다음 [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057)를 연속 키 프레임으로 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)에 적용하여 튀는 효과를 냅니다.
 
 ```xml
 <Storyboard x:Name="myStoryboard">
-            <DoubleAnimationUsingKeyFrames Duration="0:0:10"
-             Storyboard.TargetProperty="Height"
-             Storyboard.TargetName="myEllipse">
+    <DoubleAnimationUsingKeyFrames Duration="0:0:10"
+        Storyboard.TargetProperty="Height"
+        Storyboard.TargetName="myEllipse">
 
-                <!-- This keyframe animates the ellipse up to the crest 
-                     where it slows down and stops. -->
-                <EasingDoubleKeyFrame Value="-300" KeyTime="00:00:02">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
+        <!-- This keyframe animates the ellipse up to the crest 
+            where it slows down and stops. -->
+        <EasingDoubleKeyFrame Value="-300" KeyTime="00:00:02">
+            <EasingDoubleKeyFrame.EasingFunction>
+                <CubicEase/>
+            </EasingDoubleKeyFrame.EasingFunction>
+        </EasingDoubleKeyFrame>
 
-                <!-- This keyframe animates the ellipse back down and makes
-                     it bounce. -->
-                <EasingDoubleKeyFrame Value="0" KeyTime="00:00:06">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase Bounces="5"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        !-- This keyframe animates the ellipse back down and makes
+            it bounce. -->
+        <EasingDoubleKeyFrame Value="0" KeyTime="00:00:06">
+            <EasingDoubleKeyFrame.EasingFunction>
+                <BounceEase Bounces="5"/>
+            </EasingDoubleKeyFrame.EasingFunction>
+        </EasingDoubleKeyFrame>
+    </DoubleAnimationUsingKeyFrames>
+</Storyboard>
 ```
 
 이는 단 하나의 감속/가속 함수 예제입니다. 다음 섹션에서 더 자세히 살펴보겠습니다.
@@ -204,40 +201,40 @@ This example applies a [**CubicEase**](https://msdn.microsoft.com/library/window
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Grid Background="Transparent">
-                        <TextBlock x:Name="Text"
-                            Text="{TemplateBinding Content}"/>
-                        <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPointerOverForegroundThemeBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPressedForegroundThemeBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="Button">
+                <Grid Background="Transparent">
+                    <TextBlock x:Name="Text"
+                        Text="{TemplateBinding Content}"/>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="PointerOver">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPointerOverForegroundThemeBrush}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <Storyboard>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ApplicationPressedForegroundThemeBrush}"/>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
 ...
-                           </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    ```
+                       </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Grid>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+```
 
-You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) to animate properties that use an enumeration value. Here's another example from a named style that comes from the Windows Runtime default templates. Note how it sets the [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) property that takes a [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006) enumeration constant. In this case you can set the value using attribute syntax. You only need the unqualified constant name from an enumeration for setting a property with an enumeration value, for example "Collapsed".
+또한 [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)를 사용하여 열거형 값을 사용하는 속성에 애니메이션 효과를 줄 수 있습니다. 다음은 Windows 런타임 기본 템플릿에서 가져온 명명된 스타일의 다른 예입니다. [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR209006) 열거형 상수를 사용하는 [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992) 속성을 설정하는 방법을 확인하세요. 이 경우 특성 구문을 사용하여 값을 설정할 수 있습니다. “Collapsed”와 같이 열거형 값으로 속성을 설정하려면 열거형의 비정규화된 상수 이름만 필요합니다.
 
 ```xml
 <Style x:Key="BackButtonStyle" TargetType="Button">
@@ -273,16 +270,8 @@ You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.co
 * [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**스토리보드**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
- 
-
- 
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

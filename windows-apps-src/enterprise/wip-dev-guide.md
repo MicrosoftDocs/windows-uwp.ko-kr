@@ -5,14 +5,15 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드"
 translationtype: Human Translation
-ms.sourcegitcommit: 0da731e1211544ce6b07e783ddc2407da57781c2
-ms.openlocfilehash: 8ead30471371b9b6aca32088f115da9f68784922
+ms.sourcegitcommit: bf1c47e9cca45b626a45ca664bf2bb4be9c529e0
+ms.openlocfilehash: 82b674c72126c66aff34b0396a2c32f88023dd25
 
 ---
 
 # 엔터프라이즈 데이터와 개인 데이터를 모두 사용하는 지원 앱 빌드
 
-__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+
+  __참고__ WIP(Windows Information Protection) 정책을 Windows10 버전 1607에 적용할 수 있습니다.
 
 *지원* 앱은 회사 데이터와 개인 데이터를 구분하고 관리자에 의해 정의된 WIP(Windows Information Protection) 정책에 따라 보호할 데이터를 지원합니다.
 
@@ -28,25 +29,17 @@ WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 다음 사항이 필요합니다.
 
-* Microsoft Intune 계정에 대한 액세스
+* Windows10 버전 1607이 실행되는 테스트 VM(가상 컴퓨터). 이 테스트 VM에 대해 앱을 디버그합니다.
 
-* Windows 10 버전1607을 실행하는 개발 컴퓨터
-
-* Windows 10 버전 1607을 실행하는 테스트 디바이스 이 테스트 디바이스에 대해 앱을 디버그합니다.
-
-  MDM에 등록된 동일한 디바이스에 대해 디버그할 수 없습니다. 따라서 별도의 테스트 디바이스가 필요합니다.
-
-  편의상 테스트 디바이스가 컴퓨터 또는 가상 컴퓨터라고 가정합니다.
+* Windows10 버전1607을 실행하는 개발 컴퓨터 Visual Studio가 설치된 경우 테스트 VM이 될 수 있습니다.
 
 ## 개발 환경 설정
 
 다음 작업을 수행합니다.
 
-* 테스트 컴퓨터를 등록합니다.
+* 테스트 VM에 WIP 설정 개발자 도우미를 설치합니다.
 
-* 보호 정책을 만듭니다.
-
-* 정책을 테스트 컴퓨터에 다운로드합니다.
+* WIP 설정 개발자 도우미를 사용하여 보호 정책을 만듭니다.
 
 * Visual Studio 프로젝트를 설정합니다.
 
@@ -54,23 +47,17 @@ WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 * 코드 파일에 네임스페이스를 추가합니다.
 
-**테스트 컴퓨터 등록**
+**테스트 VM에 WIP 설정 개발자 도우미 설치**
 
- 테스트 컴퓨터를 등록하려면 테스트 컴퓨터에서 **설정**->**회사 또는 학교 액세스** 페이지에 Intune 계정을 추가합니다.
+ 이 도구를 사용하여 테스트 VM에서 Windows Information Protection 정책을 설정합니다.
 
- ![MDM에 연결](images/connect-v2.png)
-
- 그러면 컴퓨터 이름이 Intune 관리자 콘솔에 나타납니다.
+ 여기서 [WIP 설정 개발자 도우미](https://www.microsoft.com/store/p/wip-setup-developer-assistant/9nblggh526jf) 도구를 다운로드합니다.
 
 **보호 정책 만들기**
 
-정책을 만들고 테스트 컴퓨터에 배포합니다. [Microsoft Intune을 사용하여 WIP(Windows Information Protection) 정책 만들기](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-intune)를 참조하세요.
+WIP 설정 개발자 도우미의 각 섹션에 정보를 추가하여 정책을 정의합니다. 설정 옆에 있는 도움말 아이콘을 선택하여 사용 방법을 자세히 알아볼 수 있습니다.
 
-**정책을 디바이스에 다운로드**
-
-테스트 컴퓨터에서 **설정** 페이지로 이동한 다음 **회사 또는 학교 액세스**-> **정보**->**동기화**를 선택합니다.
-
-![MDM과 설정 동기화](images/sync.png)
+이 도구를 사용하는 방법에 대한 일반적인 지침은 앱 다운로드 페이지에서 버전 참고 섹션을 참조하세요.
 
 **Visual Studio 프로젝트 설정**
 
@@ -103,7 +90,7 @@ WIP 및 지원 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 **원격 디버깅 설정**
 
-테스트 컴퓨터에 Visual Studio 원격 도구를 설치합니다. 그런 다음 개발 컴퓨터에서 원격 디버거를 시작하고 대상 컴퓨터에서 앱이 실행되는지 확인합니다.
+VM이 아닌 컴퓨터에서 앱을 개발하는 경우에만 테스트 VM에 Visual Studio 원격 도구를 설치합니다. 그런 다음 개발 컴퓨터에서 원격 디버거를 시작하고 테스트 VM에서 앱이 실행되는지 확인합니다.
 
 [원격 PC 지침](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#remote-pc-instructions)을 참조하세요.
 
@@ -141,7 +128,7 @@ else
 }
 ```
 
-Windows 10 버전 1607에서는 Windows Information Protection이 지원됩니다.
+Windows10 버전 1607에서는 Windows Information Protection이 지원됩니다.
 
 ## 엔터프라이즈 데이터 읽기
 
@@ -1104,6 +1091,6 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

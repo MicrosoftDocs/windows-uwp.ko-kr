@@ -4,8 +4,8 @@ Description: "앱 제출 프로세스의 가격 책정 및 가용성 페이지�
 title: "앱 가격 책정 및 가용성 설정"
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 translationtype: Human Translation
-ms.sourcegitcommit: fc5265cf7d455e34225fd74f9792cdb46b0029d7
-ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
+ms.sourcegitcommit: 2ce776b69eed7d5803db7a37b54c4b00f58dc6c0
+ms.openlocfilehash: e5b956f819af3cbbd7e00d77de77a15678a2ab4c
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
 
 대부분 개발자는 스토어에서 제공되는 평가판 기능을 통해 고객이 앱을 무료로 체험할 수 있도록 합니다. 기본적으로 앱을 무료 평가판으로 사용할 수는 없지만 무료 평가판을 제공하려면 **무료 평가판** 드롭다운에서 값을 선택합니다.
 
-고객이 무기한 무료로 앱에 액세스할 수 있도록 하려면 **평가판은 만료되지 않습니다**를 선택합니다. 그러나 개발자는 고객이 처음 사용자용 버전을 구입하도록 권장하기를 원할 것이므로 [평가판 버전에서 기능을 제외하거나 제한](https://msdn.microsoft.com/library/windows/apps/mt219685)하는 코드를 추가하는 것이 좋습니다.
+고객이 무기한 무료로 앱에 액세스할 수 있도록 하려면 **평가판은 만료되지 않습니다**를 선택합니다. 그러나 개발자는 고객이 처음 사용자용 버전을 구입하도록 권장하기를 원할 것이므로 [평가판 버전에서 기능을 제외하거나 제한](../monetize/in-app-purchases-and-trials.md)하는 코드를 추가하는 것이 좋습니다.
 
 **1일**, **7일**, **15일** 또는 **30일**의 시간 제한 평가판을 선택하는 옵션도 있습니다. 평가 기간 동안 기능을 제한할 수도 있으며, 고객이 해당 기간 동안에만 전체 기능에 액세스하도록 설정할 수도 있습니다.
 
@@ -86,10 +86,6 @@ ms.openlocfilehash: 91a65020c29e990d96ab26f5abbd777da7810658
 
 
 
-
-
-
-
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

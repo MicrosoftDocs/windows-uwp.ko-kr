@@ -3,9 +3,8 @@
 Description: "작성자&#58; jnHs 예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다. 이 항목에서는 각 국가/지역에서 지원되는 임계값 및 결제 방법에 대해 설명합니다."
 title: "지급 임계값, 방법 및 기간"
 translationtype: Human Translation
-ms.sourcegitcommit: 842221e9596f5bb132e9109a1c4f8a5d9e9439dd
-ms.openlocfilehash: 1513c5b7714a1f2169ad7f5b08819dd06448d58c
-
+ms.sourcegitcommit: 85b9993334ecfb3ea2dc5a196cb5b5f9dc99c985
+ms.openlocfilehash: b4f98e31b52b77f6675771fc09bb492ca5cf9021
 
 ---
 
@@ -3383,6 +3382,6 @@ ms.openlocfilehash: 1513c5b7714a1f2169ad7f5b08819dd06448d58c
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

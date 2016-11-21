@@ -4,8 +4,8 @@ Description: "Windows 스토어는 이 기능을 지원하는 통신사를 위�
 title: "통신사 청구"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
-ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
+ms.sourcegitcommit: ac4cf2fd0514fba5446f11f07719f62bec75d960
+ms.openlocfilehash: 827a07f45c64722eaf8be25c4f3eb3fb03780494
 
 ---
 
@@ -16,14 +16,11 @@ Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결�
 
 > **참고** 고객의 통신사가 통신사 청구를 제공하지만 고객의 디바이스에 이러한 옵션이 없는 경우 [문제 해결 단계](http://go.microsoft.com/fwlink/p/?LinkId=523993)를 참조하세요.
 
- 
-
 Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법의 이용 범위를 확장하고 있습니다. 아래 목록에 없는 통신사를 지원하도록 추천하려면 그 통신사로 문의하세요.
 
-## Windows 10 디바이스에 대한 통신사 청구
+## Windows10 및 Xbox One 디바이스에 대한 통신사 청구
 
-
-Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구현을 포함하는 디바이스에서는 통신사 청구를 그 디바이스에 대한 대금 결제 방법으로 추가할 수 있습니다. 이 구현은 Windows 10을 실행하는 PC와 태블릿 그리고 Windows 10 Mobile을 실행하는 휴대폰에서 사용 가능합니다.
+Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구현은 Windows 10을 실행하는 모든 디바이스, Windows10 Mobile을 실행하는 휴대폰 및 Xbox One 콘솔에서 사용 가능합니다. 이러한 디바이스에서 고객은 결제 방법으로 통신사 청구를 추가하고 이를 통해 구매를 수행할 수 있습니다. 
 
 Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하고 있습니다.
 
@@ -34,16 +31,19 @@ Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하
 | 헝가리         | Telenor          |
 | 이탈리아           | Wind             |
 | 노르웨이          | Telenor          |
+| 폴란드          | 주황색           |
+| 러시아          | Beeline          |
+| 스웨덴          | Telenor          |
 | 스위스     | Swisscom         |
 | 미국   | Sprint           |
 | 영국  | O2               |
 
  
 
-## Windows Phone 8.x 및 Windows 10 Mobile 디바이스용 통신사 청구
+## Windows Phone 8.x 및 Windows10 Mobile 디바이스용 통신사 청구
 
 
-Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 가능합니다. Windows 10 Mobile용으로 설계된 휴대폰에 이 구현을 포함시키는 통신사도 있을 수 있습니다. 이 구현이 포함된 디바이스에는 사용자에 대한 지불로서 통신사 청구가 자동으로 제공됩니다.
+Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 가능합니다. Windows10 Mobile용으로 설계된 휴대폰에 이 구현을 포함시키는 통신사도 있을 수 있습니다. 이 구현이 포함된 디바이스에는 사용자에 대한 지불로서 통신사 청구가 자동으로 제공됩니다.
 
 통신사 청구의 레거시 구현은 이들 통신사에서 지원하고 있습니다.
 
@@ -98,7 +98,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 | 남아프리카 공화국         | Vodacom                                                            |
 | 스페인                | Movistar, Vodafone, Orange                                         |
 | 스웨덴               | Telenor, Tele2                                                     |
-| 스위스          | Swisscom                                                           |
 | 아랍에미리트 | Etisalat, Du                                                       |
 | 영국       | Everything Everywhere(T-Mobile), Telefonica(O2), Three, Vodafone |
 | 미국        | AT&amp;T, Sprint, T-Mobile, Verizon                                    |
@@ -118,6 +117,6 @@ Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,22 +1,42 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "이 항목은 동영상 손떨림 보정 효과를 사용하는 방법을 보여 줍니다."
+description: "이 항목에서는 카메라 미리 보기에 효과를 적용하는 방법과 비디오 녹화 스트림을 보여 주고, 동영상 보정 효과를 사용하는 방법을 보여 줍니다."
 title: "비디오 캡처 효과"
 translationtype: Human Translation
-ms.sourcegitcommit: 367ab34663d66d8c454ff305c829be66834e4ebe
-ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
+ms.sourcegitcommit: 25212fede7640c12ea4f1484a9f3c540bf4a0c12
+ms.openlocfilehash: ec7c285df48f37842fe757ef619da3a0d76cd690
 
 ---
 
 # 비디오 캡처 효과
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-이 항목은 동영상 손떨림 보정 효과를 사용하는 방법을 보여 줍니다.
+이 항목에서는 카메라 미리 보기에 효과를 적용하는 방법과 비디오 녹화 스트림을 보여 주고, 동영상 보정 효과를 사용하는 방법을 보여 줍니다.
 
 > [!NOTE] 
 > 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+
+## 카메라 비디오 스트림에서 효과 추가 및 제거
+디바이스의 카메라에서 비디오를 캡처하거나 미리 보려면 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에서 설명한 대로 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture) 개체를 사용하면 됩니다. **MediaCapture** 개체를 초기화하고 나면 [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035)를 호출하여 미리 보기 또는 캡처 스트림에 비디오 효과를 하나 이상 추가하여 추가할 효과를 나타내는 [**IVideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Effects.IVideoEffectDefinition) 개체로 전달하고, 카메라의 미리 보기 스트림 또는 녹화 스트림에 효과를 추가할지 여부를 나타내는 [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType) 열거 구성원을 호출합니다.
+
+> [!NOTE]
+> 일부 디바이스에서 미리 보기 스트림과 캡처 스트림은 같습니다. 즉 **AddVideoEffectAsync**를 호출할 때 **MediaStreamType.VideoPreview** 또는 **MediaStreamType.VideoRecord**를 지정하는 경우 효과가 미리 보기와 녹화 스트림에 모두 적용됩니다. **MediaCapture** 개체에 대해 [**MediaCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture.MediaCaptureSettings)의 [**VideoDeviceCharacteristic**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSettings.VideoDeviceCharacteristic) 속성을 확인하여 현재 디바이스에서 미리 보기 및 녹화 스트림이 동일한지 여부를 확인할 수 있습니다. 이 속성의 값이 **VideoDeviceCharacteristic.AllStreamsIdentical** 또는 **VideoDeviceCharacteristic.PreviewRecordStreamsIdentical**인 경우 스트림은 동일하며 한 스트림에 적용할 효과가 다른 스트림에도 영향을 미칩니다.
+
+다음 예제에서는 카메라 미리 보기 및 녹화 스트림 모두에 효과를 추가합니다. 이 예제에서는 녹화 및 미리 보기 스트림이 동일한지 여부를 확인하는 방법에 대해 보여 줍니다.
+
+[!code-cs[BasicAddEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetBasicAddEffect)]
+
+**AddVideoEffectAsync**는 추가된 비디오 효과를 나타내는 [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.IMediaExtension)를 구현하는 개체를 반환합니다. 몇 가지 효과를 사용하면 [**PropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Collections.PropertySet)를 [**SetProperties**](https://msdn.microsoft.com/library/windows/apps/br240986) 메서드로 전달하여 효과 설정을 변경할 수 있습니다.
+
+Windows10 버전 1607부터는 **AddVideoEffectAsync**에서 반환된 개체를 통해 [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957)로 전달하여 비디오 파이프라인에서 효과를 제거할 수도 있습니다. **RemoveEffectAsync**는 미리 보기 또는 녹화 스트림에 효과 개체 매개 변수를 추가했는지 자동으로 확인하므로 호출할 때 스트림 형식을 지정할 필요가 없습니다.
+
+[!code-cs[RemoveOneEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetRemoveOneEffect)]
+
+[**ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)를 호출하고 모든 효과를 제거해야 하는 스트림을 지정하여 미리 보기 또는 캡처 스트림에서 모든 효과를 제거할 수도 있습니다.
+
+[!code-cs[ClearAllEffects](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetClearAllEffects)]
 
 ## 동영상 손떨림 보정 효과
 
@@ -28,15 +48,15 @@ ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 기본 미디어 캡처에 필요한 네임스페이스 외에도, 동영상 손떨림 보정 효과를 사용하려면 다음 네임스페이스가 필요합니다.
 
-[!code-cs[VideoStabilizationEffectUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoStabilizationEffectUsing)]
+[!code-cs[VideoStabilizationEffectUsing](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetVideoStabilizationEffectUsing)]
 
 [**VideoStabilizationEffect**](https://msdn.microsoft.com/library/windows/apps/dn926760) 개체를 저장하기 위한 멤버 변수를 선언합니다. 효과 구현의 일부로, 캡처된 비디오를 인코딩하는 데 사용하는 인코딩 속성을 수정합니다. 나중에 효과를 사용하지 않도록 설정할 때 복원할 수 있도록 초기 입력 및 출력 인코딩 속성의 백업 복사본을 저장하기 위한 2개의 변수를 선언합니다. 마지막으로 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 형식의 멤버 변수를 선언합니다. 이 개체는 코드 내의 여러 위치에서 액세스되므로 이 작업이 필요합니다.
 
-[!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
+[!code-cs[DeclareVideoStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
 이 시나리오에서 나중에 액세스할 수 있도록 미디어 인코딩 프로파일 개체를 멤버 변수에 할당해야 합니다.
 
-[!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
+[!code-cs[EncodingProfileMember](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetEncodingProfileMember)]
 
 ### 동영상 손떨림 보정 효과 초기화
 
@@ -44,7 +64,7 @@ ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 [**EnabledChanged**](https://msdn.microsoft.com/library/windows/apps/dn948982) 이벤트에 대한 이벤트 처리기를 등록하고 도우미 메서드 **SetUpVideoStabilizationRecommendationAsync**를 호출합니다. 이 두 작업은 이 문서 뒷부분 설명되어 있습니다. 마지막으로 효과의 [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn926775) 속성을 true로 설정하여 효과를 사용하도록 설정합니다.
 
-[!code-cs[CreateVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateVideoStabilizationEffect)]
+[!code-cs[CreateVideoStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCreateVideoStabilizationEffect)]
 
 ### 권장 인코딩 속성 사용
 
@@ -60,7 +80,7 @@ ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 **MediaEncodingProfile** 개체의 [**Video**](https://msdn.microsoft.com/library/windows/apps/hh701124) 속성을 설정합니다. 효과를 사용하지 않도록 설정할 경우 설정을 다시 원래대로 변경할 수 있도록 새 속성을 설정하기 전에 멤버 변수를 사용하여 초기 인코딩 속성을 저장합니다.
 
-[!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
+[!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
 
 ### 동영상 손떨림 보정 효과를 사용할 수 없게 처리
 
@@ -68,13 +88,13 @@ ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 일반적으로 이 이벤트를 사용하여 동영상 손 떨림 보정의 현재 상태를 나타내도록 앱의 UI를 조정합니다.
 
-[!code-cs[VideoStabilizationEnabledChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoStabilizationEnabledChanged)]
+[!code-cs[VideoStabilizationEnabledChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetVideoStabilizationEnabledChanged)]
 
 ### 동영상 손떨림 보정 효과 정리
 
-동영상 손떨림 보정 효과를 정리하려면 [**ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)를 호출하여 비디오 파이프라인의 모든 효과를 선택 취소합니다. 초기 인코딩 속성을 포함하는 멤버 변수가 null이 아닌 경우 인코딩 속성을 복원하는 데 사용합니다. 마지막으로 **EnabledChanged** 이벤트 처리기를 제거하고 효과를 null로 설정합니다.
+동영상 손떨림 보정 효과를 정리하려면 [**RemoveEffectAsync**](https://msdn.microsoft.com/library/windows/apps/mt667957)를 호출하여 비디오 파이프라인의 효과를 제거합니다. 초기 인코딩 속성을 포함하는 멤버 변수가 null이 아닌 경우 인코딩 속성을 복원하는 데 사용합니다. 마지막으로 **EnabledChanged** 이벤트 처리기를 제거하고 효과를 null로 설정합니다.
 
-[!code-cs[CleanUpVisualStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
+[!code-cs[CleanUpVisualStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
 
 ## 관련 항목
 
@@ -90,6 +110,6 @@ ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

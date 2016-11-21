@@ -4,14 +4,18 @@ Description: "A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실
 title: "개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의"
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
+ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
+ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
 
 ---
 
 # 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의
 
 실험을 시작하려면 개발자 센터 대시보드에서 앱에 대한 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만들고 앱이 액세스할 수 있는 원격 변수를 정의합니다.
+
+다음 지침에서는 프로젝트를 만들 때 중요한 단계에 대해 설명합니다. 프로젝트를 만들고 실험을 실행하는 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
+
+## 지침
 
 1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인합니다.
 2. **앱**에서 실험을 만들 앱을 선택합니다.
@@ -41,6 +45,6 @@ ms.openlocfilehash: ea455892717546f7f789054609664ca1c0017699
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

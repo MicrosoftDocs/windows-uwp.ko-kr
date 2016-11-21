@@ -4,15 +4,15 @@ title: "백그라운드 작업에서 센서 및 디바이스에 액세스"
 description: "DeviceUseTrigger를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 디바이스에 액세스할 수 있습니다."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 translationtype: Human Translation
-ms.sourcegitcommit: 42697a185eb941d44714a682931b3e418a123ad1
-ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: 060cec50933860407679edbad5d2cd8a6d3e0396
 
 ---
 
 # 백그라운드 작업에서 센서 및 장치에 액세스
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. 예를 들어 앱이 실행 중인 위치에 따라 백그라운드 작업을 사용하여 장치와 데이터를 동기화하거나 센서를 모니터링할 수 있습니다. 배터리 수명을 보존하고 적절한 사용자가 동의할 수 있도록 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)에는 이 항목에서 설명하는 정책이 적용됩니다.
@@ -20,9 +20,9 @@ ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
 백그라운드에서 센서나 주변 장치에 액세스하려면 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 만듭니다. PC에서 이 작업을 만드는 방법을 보여 주는 예제는 [사용자 지정 USB 장치 샘플](http://go.microsoft.com/fwlink/p/?LinkId=301975 )을 참조하세요. 휴대전화에 대한 예제는 [백그라운드 센서 샘플](http://go.microsoft.com/fwlink/p/?LinkId=393307)을 참조하세요.
 
 > [!Important]
-> **DeviceUseTrigger**는 단일 프로세스 백그라운드 작업에서 사용할 수 없습니다. 이 항목의 내용은 별도 프로세스에서 실행되는 백그라운드 작업에만 적용됩니다.
+> **DeviceUseTrigger**는 프로세스 백그라운드 작업에서 사용할 수 없습니다. 이 항목의 내용은 Out-of-proces를 실행하는 백그라운드 작업에만 적용됩니다.
 
-## 장치 백그라운드 작업 개요
+## 디바이스 백그라운드 작업 개요
 
 앱이 사용자에게 더 이상 보이지 않을 때 Windows는 메모리 및 CPU 리소스를 회수하기 위해 앱을 일시 중단하거나 종료합니다. 그러면 다른 앱이 포그라운드로 실행될 수 있으므로 배터리 소모가 줄어듭니다. 이 경우 백그라운드 작업을 사용하지 않고는 지속적인 데이터 이벤트가 손실됩니다. Windows는 백그라운드 작업 트리거인 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 제공하므로, 앱이 일시 중단된 경우에도 앱이 장치와 센서에서 백그라운드로 안전하게 장기 실행 동기화와 모니터링 작업을 수행할 수 있습니다. 앱 수명 주기에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](index.md)을 참조하세요. 백그라운드 작업에 대한 자세한 내용은 [백그라운드 작업을 통해 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
@@ -81,7 +81,10 @@ ms.openlocfilehash: dcaae6cace6a95cbd03af1571395656a8ee3a4fa
 **중요**  
 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용할 때 다음과 같은 중요한 점을 고려해야 합니다.
 
--   [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 프로그래밍 방식으로 트리거하는 기능은 Windows 8.1 및 Windows Phone 8.1에서 처음 소개되었습니다.
+-   
+  [
+    **DeviceUseTrigger**
+  ](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하는 백그라운드 작업을 프로그래밍 방식으로 트리거하는 기능은 Windows8.1 및 Windows Phone 8.1에서 처음 소개되었습니다.
 
 -   PC에서 주변 장치를 업데이트할 때 사용자 동의를 확인하기 위해 Windows에서 특정 정책을 적용합니다.
 
@@ -178,6 +181,6 @@ Windows는 앱이 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/wind
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -3,6 +3,10 @@ author: jnHs
 Description: "앱에 다양한 로고, 스크린샷 및 이미지가 포함되어야 합니다."
 title: "앱 스크린샷 및 이미지"
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+translationtype: Human Translation
+ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
+ms.openlocfilehash: eb61c9bca6b8ddfba5287482508e7d04b240d29f
+
 ---
 
 # 앱 스크린샷 및 이미지
@@ -102,6 +106,7 @@ Windows Phone 8.1 이하의 경우 스토어에서, 두 가지 이미지 크기 
 ### Windows 8.1 이하의 경우: 414 x 180
 
 Windows 8.1 이하의 경우 스토어에서, 홍보용 레이아웃에 414 x 180픽셀 크기의 이미지를 사용할 수 있습니다. 따라서 앱이 Windows 8.1 이하에서 실행되는 경우 홍보용 이미지로 이 크기의 이미지를 제공하는 것이 좋습니다.
+
 
 
 <!--HONumber=Aug16_HO5-->

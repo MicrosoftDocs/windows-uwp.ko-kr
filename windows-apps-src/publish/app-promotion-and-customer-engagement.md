@@ -4,8 +4,8 @@ Description: "앱이 Windows 스토어에 게시된 후에는 최대한 많은 �
 title: "앱 홍보 및 고객 참여 유도"
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
 translationtype: Human Translation
-ms.sourcegitcommit: 4dec7ebaaeb0bc0dba24002f8cd8a805285de3d6
-ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
+ms.sourcegitcommit: cb816efb9bac6b401a8be93e3fded217a031769e
+ms.openlocfilehash: 1d1f66fad9f4b0c1ef01e1a797526029d54ce33a
 
 ---
 
@@ -16,6 +16,7 @@ ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
 
 -   [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
 -   [사용자 지정 앱 홍보 캠페인 만들기](create-a-custom-app-promotion-campaign.md)
+-   [앱의 고객에게 대상 푸시 알림 보내기](/send-push-notifications-to-your-apps-customers.md)
 -   [홍보 코드 생성](generate-promotional-codes.md)
 -   [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)
 -   [고객 피드백에 응답](respond-to-customer-feedback.md)
@@ -30,6 +31,6 @@ ms.openlocfilehash: 1f43cb9fdf633cecf6848a4ef0dd49a0f07f79c3
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

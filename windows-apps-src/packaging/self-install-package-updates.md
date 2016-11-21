@@ -4,34 +4,40 @@ ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: "앱에 대한 패키지 업데이트 다운로드 및 설치"
 description: "개발자 센터 대시보드에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에 코드를 작성하는 방법을 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 7df130e13685b519d5cc1353c8d64878ecc3d213
-ms.openlocfilehash: adb9b999c88649fc2c8ade838dfa0dabc407c075
+ms.sourcegitcommit: b96d4074a8960db314313c612955900c6a05dc48
+ms.openlocfilehash: 4da8ffe72435501876a1e859d10a16cf19eb11fd
 
 ---
 # 앱에 대한 패키지 업데이트 다운로드 및 설치
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 API를 사용하여 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. [Windows 개발자 센터 대시보드에 필수로 표시된](#mandatory-dashboard) 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 할 수 있습니다.
+Windows10 버전 1607부터 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에서 API를 사용하여 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. [Windows 개발자 센터 대시보드에 필수로 표시된](#mandatory-dashboard) 패키지를 쿼리하고 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 할 수 있습니다.
 
 이러한 기능을 사용하면 최신 버전의 앱 및 관련 서비스를 사용하여 자동으로 사용자 기반을 최신 상태로 유지할 수 있습니다.
 
-## 앱에 패키지 업데이트 다운로드 및 설치
+## API 개요
 
-Windows 10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 다음 메서드를 사용하여 패키지 업데이트를 다운로드하고 설치할 수 있습니다.
+Windows10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 다음 메서드를 사용하여 패키지 업데이트를 다운로드하고 설치할 수 있습니다.
 
-* [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx)를 사용하여 사용할 수 있는 패키지 업데이트를 확인합니다.
-* [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx)를 사용하여 패키지 업데이트를 다운로드합니다(설치하지는 않음).
-* [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx)를 사용하여 패키지 업데이트를 다운로드하고 설치합니다. [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx)를 호출하여 패키지 업데이트를 이미 다운로드한 경우 이 메서드는 다운로드 프로세스를 건너뛰고 업데이트 설치만 진행합니다.
+|  메서드  |  설명  |
+|----------|---------------|
+| [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) | 사용할 수 있는 패키지 업데이트의 목록을 가져오려면 이 메서드를 호출합니다.<br/><br/>**중요**&nbsp;&nbsp; 패키지에서 인증 프로세스를 통과한 후 [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) 메서드에서 패키지 업데이트를 앱에서 사용할 수 있다고 인식할 때까지 최대 1일의 지연 시간이 있습니다. |
+| [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx) | 사용 가능한 패키지 업데이트를 다운로드하려면(설치하지는 않음) 이 메서드를 호출합니다. 이 OS에 업데이트를 다운로드할 수 있는 사용자 권한을 요청하는 대화 상자가 표시됩니다. |
+| [RequestDownloadAndInstallStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706585.aspx) | 사용 가능한 패키지 업데이트를 다운로드 및 설치하려면 이 메서드를 호출합니다. OS에 업데이트를 다운로드 및 설치하기 위한 사용자의 권한을 요청하는 대화 상자가 표시됩니다. [RequestDownloadStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/mt706586.aspx)를 호출하여 패키지 업데이트를 이미 다운로드한 경우 이 메서드는 다운로드 프로세스를 건너뛰고 업데이트 설치만 진행합니다.  |
 
-[StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) 클래스는 사용 가능한 업데이트 패키지를 나타냅니다.
-* [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) 속성을 사용하여 개발자 센터 대시보드에 패키지가 필수로 표시되어 있는지 확인합니다.
-* [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) 속성을 사용하여 다른 패키지 관련 데이터에 액세스합니다.
+<span/>
 
->**참고** 패키지에서 인증 프로세스를 통과한 후 [GetAppAndOptionalStorePackageUpdatesAsync](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync.aspx) 메서드에서 패키지 업데이트를 앱에서 사용할 수 있다고 인식할 때까지 최대 1일의 지연 시간이 있습니다.
+이러한 메서드는 [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) 개체를 사용하여 사용 가능한 업데이트 패키지를 표시합니다. 업데이트 패키지에 대한 정보를 가져오려면 다음의 [StorePackageUpdate](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.aspx) 속성을 사용하세요.
 
+|  속성  |  설명  |
+|----------|---------------|
+| [Mandatory](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.mandatory.aspx) | 이 속성을 사용하여 개발자 센터 대시보드에 패키지가 필수로 표시되어 있는지 확인합니다. |
+| [Package](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storepackageupdate.package.aspx) | 이 속성을 사용하여 기본 패키지 관련 데이터에 액세스합니다. |
 
-### 코드 예제
+<span/>
+
+## 코드 예제
 
 다음 코드 예제에서는 앱에서 패키지 업데이트를 다운로드하고 설치하는 방법을 보여 줍니다. 이러한 예제에서는 다음을 가정합니다.
 * 코드가 [Page](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx) 컨텍스트에서 실행됩니다.
@@ -39,7 +45,9 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱은 [StoreContext](https
 * 코드 파일에는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://msdn.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) 메서드 대신 [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) 메서드를 사용하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 가져옵니다.
 
-#### 모든 패키지 업데이트 다운로드 및 설치
+<span/>
+
+### 모든 패키지 업데이트 다운로드 및 설치
 
 다음 코드 예제에서는 사용 가능한 모든 패키지 업데이트를 다운로드 및 설치하는 방법을 보여 줍니다.  
 
@@ -90,7 +98,7 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 }
 ```
 
-#### 필수 패키지 업데이트 처리
+### 필수 패키지 업데이트 처리
 
 다음 코드 예제는 이전 예제를 기반으로 빌드하고 업데이트 패키지가 [Windows 개발자 센터 대시보드에 필수로 표시](#mandatory-dashboard)되었는지 확인하는 방법을 보여 줍니다. 일반적으로 필수 패키지 업데이트가 성공적으로 다운로드 또는 설치되지 않은 경우 사용자를 위해 앱 환경을 정상적으로 다운그레이드해야 합니다.
 
@@ -207,9 +215,9 @@ private void HandleMandatoryPackageError()
 <span id="mandatory-dashboard" />
 ## 개발자 센터 대시보드에 패키지 제출 필수 만들기
 
-Windows 10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제출을 만들면 해당 패키지를 필수로 표시하고 필수가 되는 날짜/시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 이 문서의 앞부분에서 설명한 API를 사용하여 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
+Windows10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제출을 만들면 해당 패키지를 필수로 표시하고 필수가 되는 날짜/시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 이 문서의 앞부분에서 설명한 API를 사용하여 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
 
->**참고** 패키지의 필수 상태는 Microsoft에서 적용하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 업데이트를 적용합니다.
+>**참고**&nbsp;&nbsp;Microsoft는 패키지 업데이트를 위한 필수 상태를 적용하지 않으며, OS는 필수 앱 업데이트를 설치해야 할 사용자를 나타내기 위한 UI를 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
 
 패키지 제출을 필수로 표시하려면
 
@@ -219,10 +227,10 @@ Windows 10 버전 1607 이상을 대상으로 하는 앱을 위해 패키지 제
 
 개발자 센터 대시보드에서 패키지를 구성하는 방법은 [앱 패키지 업로드](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages)를 참조하세요.
 
-  >**참고** [패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 만든 경우 플라이트에 대한 **패키지** 페이지에서 유사한 UI를 사용하여 패키지를 필수로 표시할 수 있습니다. 이 경우 필수 패키지 업데이트는 해당 플라이트 그룹에 속한 고객에게만 적용됩니다.
+  >**참고**&nbsp;&nbsp;[패키지 플라이트](https://msdn.microsoft.com/windows/uwp/publish/package-flights)를 만든 경우 플라이트에 대한 **패키지** 페이지에서 유사한 UI를 사용하여 패키지를 필수로 표시할 수 있습니다. 이 경우 필수 패키지 업데이트는 해당 플라이트 그룹에 속한 고객에게만 적용됩니다.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

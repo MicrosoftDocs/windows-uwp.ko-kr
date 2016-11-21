@@ -4,8 +4,8 @@ Description: "추가 기능은 Windows 개발자 센터 대시보드를 통해 �
 title: "추가 기능 제출"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 translationtype: Human Translation
-ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
-ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+ms.sourcegitcommit: b0d877e46ba6958bfc61dd87687c30e91b6cd937
+ms.openlocfilehash: 7b44dabfd4badcad795e38a97590d98e1601092d
 
 ---
 
@@ -17,7 +17,7 @@ ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
 
 추가 기능 제출 프로세스의 첫 번째 단계에서는 [제품 유형과 제품 ID를 정의](set-your-add-on-product-id.md)하여 대시보드에서 추가 기능을 만듭니다. 그러고 나서 Windows 스토어를 통해 추가 기능을 구매할 수 있도록 제출을 만들 수 있습니다. [앱을 제출](app-submissions.md)할 때 추가 기능을 함께 제출하거나 개별적으로 작업할 수 있습니다. 또한 앱을 다시 제출할 필요 없이 앱이 스토어에 나열된 후에 추가 기능을 [업데이트](#updating-an-add-on-after-submission)할 수 있습니다.
 
-> **참고**&nbsp;&nbsp;설명서의 이 섹션에서는 개발자 센터 대시보드에서 추가 기능 제출을 만드는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
+> **참고**&nbsp;&nbsp;설명서의 이 섹션에서는 개발자 센터 대시보드에서 추가 기능을 제출하는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 추가 기능 제출을 자동화할 수 있습니다.
 
 ## 추가 기능 제출에 대한 검사 목록
 
@@ -73,7 +73,8 @@ ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
 
 언제든지 게시된 추가 기능을 변경할 수 있습니다. 추가 기능 변경 사항은 앱과 별개로 제출 및 게시되므로 일반적으로 가격이나 설명 업데이트 같은 추가 기능 변경을 위해 전체 앱을 업데이트할 필요가 없습니다.
 
-> **중요** 고객이 Windows 8.x에서 앱을 사용할 수 있는 경우 추가 기능 업데이트가 해당 고객에게 표시되게 하려면 새 앱 제출을 만들고 게시해야 합니다. 마찬가지로 앱이 게시된 후 Windows 8.x가 대상으로 지정된 앱에 새 추가 기능을 추가할 경우 해당 추가 기능을 참조하도록 앱 코드를 업데이트하고 앱을 다시 제출해야 합니다. 그러지 않으면 새 추가 기능이 Windows 8.x의 고객에게 표시되지 않습니다.
+> 
+  **중요** 고객이 Windows8.x에서 앱을 사용할 수 있는 경우 추가 기능 업데이트가 해당 고객에게 표시되게 하려면 새 앱 제출을 만들고 게시해야 합니다. 마찬가지로 앱이 게시된 후 Windows8.x가 대상으로 지정된 앱에 새 추가 기능을 추가할 경우 해당 추가 기능을 참조하도록 앱 코드를 업데이트하고 앱을 다시 제출해야 합니다. 그러지 않으면 새 추가 기능이 Windows8.x의 고객에게 표시되지 않습니다.
 
 업데이트를 제출하려면 대시보드에서 추가 기능 페이지로 이동하고 **업데이트**를 클릭합니다. 이렇게 하면 이전 제출의 정보를 기반으로 추가 기능에 대한 새 제출이 만들어집니다. 원하는 정보를 변경하고 **스토어에 제출**을 클릭합니다.
 
@@ -81,6 +82,6 @@ ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

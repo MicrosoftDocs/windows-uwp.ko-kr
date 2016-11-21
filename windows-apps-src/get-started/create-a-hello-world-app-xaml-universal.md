@@ -4,18 +4,19 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Hello, world 앱 만들기(XAML)"
 description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 275c5cf8f8960f2be7cd9566e59eeb3bf4ee8f46
-ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
+ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
+ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 
 ---
 
 # Hello, world 앱 만들기(XAML)
 
-이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 장치에서 실행되는 앱을 빌드할 수 있습니다.
+이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows10 장치에서 실행되는 앱을 빌드할 수 있습니다.
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
+-   
+  **Windows10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
 -   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
 -   로컬 데스크톱 및 Visual Studio의 휴대폰 에뮬레이터에서 프로젝트를 실행합니다.
 -   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
@@ -24,7 +25,7 @@ ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
 
 -   [유니버설 Windows 앱이란](whats-a-uwp.md)?
 -   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   이 자습서를 완료하려면 Windows 10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   이 자습서를 완료하려면 Windows10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 
@@ -109,21 +110,21 @@ ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
 
     XAML 코드 창을 보면 여기에도 단추가 추가된 것을 볼 수 있습니다.
 
-    ```XAML
+ ```XAML
 <Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
-```
+ ```
 
 4.  단추의 텍스트를 변경합니다.
 
     XAML 코드 보기에서 클릭하고 콘텐츠를 "Button"에서 "Hello, world!"로 변경합니다.
 
-    ```XAML
+```XAML
 <Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-    디자인 캔버스에 표시된 단추가 새 텍스트를 표시하기 위해 어떻게 업데이트되는지 확인합니다.
+디자인 캔버스에 표시된 단추가 새 텍스트를 표시하기 위해 어떻게 업데이트되는지 확인합니다.
 
-    ![솔루션 탐색기 창](images/win10-cs-07.png)
+![솔루션 탐색기 창](images/win10-cs-07.png)
 
 ## 3단계: 앱 시작
 
@@ -177,7 +178,7 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
 ### 모바일 장치 에뮬레이터에서 앱 시작
 
-앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
+앱이 Windows10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
 
 Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
 
@@ -253,10 +254,10 @@ private async void button_Click(object sender, RoutedEventArgs e)
 ## 요약
 
 
-축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+축하합니다. Windows10 및 UWP용 첫 번째 앱을 만들었습니다. [다음 단계](learn-more.md)를 수행할 준비가 되셨나요?
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

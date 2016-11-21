@@ -1,11 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법에 알아봅니다."
+description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows10, Windows8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법에 알아봅니다."
 title: "중간 광고"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
+ms.sourcegitcommit: 8574695fe12042e44831227f81e1f6ea45e9c0da
+ms.openlocfilehash: fdc9bddafc7b80f66bb160183a6c416a8573883a
 
 ---
 
@@ -14,7 +14,7 @@ ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
 
 
 
-이 연습에서는 Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법을 보여 줍니다.
+이 연습에서는 Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows10, Windows8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법을 보여 줍니다.
 
 C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -37,7 +37,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 ### 필수 조건
 
 * UWP 앱: Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치합니다.
-* Windows 8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
+* Windows8.1 또는 Windows Phone 8.1 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)와 Visual Studio 2015 또는 Visual Studio 2013을 설치합니다.
 
 ### 코드 개발
 
@@ -55,7 +55,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
+    -   Windows8.1 프로젝트: **Windows8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
     -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
@@ -155,9 +155,9 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for JavaScript**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for Windows 8.1 Native(JS)** 옆의 확인란을 선택합니다.
+    -   Windows8.1 프로젝트: **Windows8.1**을 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for Windows8.1 Native(JS)** 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for Windows Phone 8.1 Native(JS)** 옆의 확인란을 선택합니다.
+    -   Windows8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for Windows Phone 8.1 Native(JS)** 옆의 확인란을 선택합니다.
 
 3.  HTML에서 다음 스크립트 참조를 포함합니다.
 
@@ -246,7 +246,7 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 
     -   UWP(유니버설 Windows 플랫폼) 프로젝트: **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
 
-    -   Windows 8.1 프로젝트: **Windows 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
+    -   Windows8.1 프로젝트: **Windows8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
     -   Windows Phone 8.1 프로젝트: **Windows Phone 8.1**을 확장하고 **확장**을 클릭한 후 **Ad Mediator SDK for Windows Phone 8.1 XAML** 옆의 확인란을 선택합니다. 이 옵션은 Microsoft Advertising 및 광고 조정자 라이브러리를 프로젝트에 추가하지만 광고 조정자 라이브러리는 무시해도 됩니다.
 
@@ -360,10 +360,10 @@ C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 
 4.  개발자 센터 대시보드에서 [광고 성과 보고서](../publish/advertising-performance-report.md)를 검토합니다.
 
 <span id="interstitialbestpractices10"/>
-## 중간 광고 모범 사례
+## 중간 광고 모범 사례 및 정책
 
 
-중간 광고를 효과적으로 사용하는 방법에 대한 자세한 내용은 [UI 및 사용자 환경 지침](ui-and-user-experience-guidelines.md)을 참조하세요.
+중간 광고를 효과적으로 사용하는 방법과 준수할 정책에 대한 자세한 내용은 [중간 모범 사례 및 정책](ui-and-user-experience-guidelines.md#interstitialbestpractices10)을 참조하세요.
 
 <span id="targetplatform10"/>
 ## 참조 오류 제거: 특정 CPU 플랫폼(XAML 및 HTML) 대상
@@ -384,6 +384,6 @@ Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

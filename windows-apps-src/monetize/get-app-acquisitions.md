@@ -4,15 +4,15 @@ ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다."
 title: "앱 획득 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: c3efa347d11c2694d8814eb31f7e5f6825c7173a
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: db271b0d1ec3b20ab2ead2e35e06fd97adb2ce0c
 
 ---
 
 # 앱 획득 가져오기
 
 
-Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
+Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [구입 보고서](../publish/acquisitions-report.md)를 통해서도 사용할 수 있습니다.
 
 ## 필수 조건
 
@@ -120,6 +120,31 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <p>다음은 <em>orderby</em> 문자열 예입니다. <em>orderby=date,market</em></p></td>
 <td align="left">아니요</td>
 </tr>
+<tr class="odd">
+<td align="left">groupby</td>
+<td align="left">문자열</td>
+<td align="left"><p>지정된 필드에 대한 데이터 집계에만 적용되는 문입니다. 다음 필드를 지정할 수 있습니다.</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationName</strong></li>
+<li><strong>acquisitionType</strong></li>
+<li><strong>ageGroup</strong></li>
+<li><strong>storeClient</strong></li>
+<li><strong>gender</strong></li>
+<li><strong>market</strong></li>
+<li><strong>OSVersion</strong></li>
+<li><strong>deviceType</strong></li>
+<li><strong>orderName</strong></li>
+</ul>
+<p>반환되는 데이터 행은 <em>groupby</em> 매개 변수에서 지정된 필드 및 다음을 포함합니다.</p>
+<ul>
+<li><strong>date</strong></li>
+<li><strong>applicationId</strong></li>
+<li><strong>acquisitionQuantity</strong></li>
+</ul>
+<p><em>groupby</em> 매개 변수는 <em>aggregationLevel</em> 매개 변수와 함께 사용할 수 있습니다. 예: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p></td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
 
@@ -203,9 +228,9 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 <li><strong>Windows Phone 8</strong></li>
 <li><strong>Windows Phone 8.1</strong></li>
 <li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
-<li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
+<li><strong>Windows8</strong></li>
+<li><strong>Windows8.1</strong></li>
+<li><strong>Windows10</strong></li>
 <li><strong>알 수 없음</strong></li>
 </ul></td>
 </tr>
@@ -307,6 +332,7 @@ Authorization: Bearer <your access token>
 
 ## 관련 항목
 
+* [구입 보고서](../publish/acquisitions-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
@@ -315,6 +341,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

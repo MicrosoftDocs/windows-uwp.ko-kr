@@ -4,14 +4,16 @@ Description: "A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실
 title: "개발자 센터 대시보드에서 실험 정의"
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 translationtype: Human Translation
-ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
-ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
+ms.sourcegitcommit: b33e003af6e12df5eedfe150155db6777c5c62f6
+ms.openlocfilehash: fa209464e247e7073da2197ddd0b9a5344f3763b
 
 ---
 
 # 개발자 센터 대시보드에서 실험 정의
 
 [개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 및 [실험용 앱 코딩](code-your-experiment-in-your-app.md)을 완료하면 프로젝트에서 실험을 만들 준비가 된 것입니다. 실험을 만들 때 사용자가 받을 목표와 변형을 정의합니다.
+
+실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
 <span id="get-an-api-key" />
 <span id="create-an-experiment" />
@@ -85,6 +87,6 @@ ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

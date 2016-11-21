@@ -4,8 +4,8 @@ ms.assetid: 7CC11888-8DC6-4FEE-ACED-9FA476B2125E
 description: "Windows 스토어 제출 API를 사용하여 Windows 개발자 센터 계정에 등록된 앱에 대한 제출을 프로그래밍 방식으로 만들고 관리합니다."
 title: "Windows 스토어 서비스를 사용하여 제출 만들기 및 관리"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
+ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
+ms.openlocfilehash: 40855465fa2f9b1c32602b1b636761b608d88fc0
 
 ---
 
@@ -26,8 +26,11 @@ ms.openlocfilehash: 0a566dfee8f7fe08c06ce4963435a70c30b1650d
 >**중요**
 
 > * 이 API는 API를 사용할 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 이 권한은 단계별로 개발자 계정에서 사용할 수 있으며 이때 모든 계정에서 이 권한을 사용할 수 있는 것은 아닙니다. 이전 액세스를 요청하려면 개발자 센터 대시보드에 로그온하고 대시보드의 아래쪽에서 **피드백**을 클릭하여 피드백 영역의 **제출 API**를 선택한 다음 요청을 제출합니다. 계정에 대해 이 권한을 사용할 수 있는 경우 메일을 받게 됩니다.
-
+<br/><br/>
 > * 이 API는 필수 앱 업데이트와 스토어 관리 소모성 추가 기능을 포함하여(하지만 여기에 국한되지는 않음) 2016년 8월에 개발자 센터 대시보드에 도입된 특정 기능을 사용하는 앱 또는 추가 기능에는 사용할 수 없습니다. 이러한 기능 중 하나를 사용하는 앱 또는 추가 기능에서 Windows 스토어 제출 API를 사용하는 경우 이 API는 409 오류 코드를 반환합니다. 이 경우 대시보드를 사용하여 앱 또는 추가 기능에 대한 제출을 관리해야 합니다.
+<br/><br/>
+> * 가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 앱과 추가 기능 제출에 대한 **가격** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 이러한 제출에 대한 평가 기간, 가격 및 판매 데이터를 일시적으로 가져올 수 없게 됩니다. 앞으로 이 API를 업데이트하여 앱 및 추가 기능 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [앱 제출에 대한 가격 리소스](manage-app-submissions.md#pricing-object) 및 [추가 기능 제출에 대한 가격 리소스](manage-add-on-submissions.md#pricing-object)를 참조하세요.
+
 
 <span id="prerequisites" />
 ## 1단계: Windows 스토어 제출 API를 사용하기 위한 필수 조건 완료
@@ -135,6 +138,6 @@ Windows 스토어 제출 API에 대한 질문이 있거나 이 API의 제출을 
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

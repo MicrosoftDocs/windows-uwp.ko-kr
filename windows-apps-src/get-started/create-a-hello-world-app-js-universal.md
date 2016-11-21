@@ -1,20 +1,21 @@
 ---
 author: GrantMeStrength
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
-title: "Hello, world 앱 만들기(JS)"
+title: Create a "Hello, world" app (JS)
 description: "이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 2e0965f964f6f2e10b895d99244b66458eb15903
-ms.openlocfilehash: 6c81b24f7fa9abe036d4ccd22ee8fa24c011fe77
+ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
+ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
 
 ---
 # Hello, world 앱 만들기(JS)
 
-이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
+-   
+  **Windows10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
 -   시작 페이지에 HTML 콘텐츠 추가
 -   터치, 펜 및 마우스 입력 처리
 -   로컬 데스크톱 및 Visual Studio의 휴대폰 에뮬레이터에서 프로젝트를 실행합니다.
@@ -24,7 +25,7 @@ ms.openlocfilehash: 6c81b24f7fa9abe036d4ccd22ee8fa24c011fe77
 
 -   [유니버설 Windows 앱이란](whats-a-uwp.md)?
 -   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   이 자습서를 완료하려면 Windows 10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   이 자습서를 완료하려면 Windows10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 ## 1단계: Visual Studio에서 새 프로젝트 만들기
@@ -114,7 +115,7 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
 ### 모바일 장치 에뮬레이터에서 앱 시작
 
-앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
+앱이 Windows10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
 
 Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
 
@@ -338,7 +339,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
 
 1.  index.html 파일에서 [label](https://msdn.microsoft.com/library/windows/apps/Hh453321) 및 [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 `greetingOutput`**div** 뒤에 추가합니다.
 
-    ```html
+```html
     <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -351,7 +352,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
         <div id="ratingControlDiv" data-win-control="WinJS.UI.Rating">
         </div>
     </body>
-    ```
+```
 
 2.  로컬 컴퓨터에서 앱을 실행합니다. 새로운 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 살펴봅니다.
 
@@ -384,7 +385,7 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
 
 1.  index.html 파일에서 등급 값을 표시하기 위한 [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133) 요소를 만들고 **id** "ratingOutput"을 지정합니다.
 
-    ```html
+```html
         <body class="win-type-body">
         <h1>Hello, world!</h1>
         <p>What's your name?</p>
@@ -402,7 +403,7 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
 
 2.  main.js 파일에서 **Rating** 컨트롤의 [change](https://msdn.microsoft.com/library/windows/apps/BR211891) 이벤트(이름은 `ratingChanged`)에 대한 이벤트 처리기를 만듭니다. [eventInfo](https://msdn.microsoft.com/library/windows/apps/Hh465776) 매개 변수에는 새로운 사용자 등급을 제공하는 **detail.tentativeRating** 속성이 포함되어 있습니다. 이 값을 검색하고 출력 **div**에 표시합니다.
 
-    ```javascript
+```javascript
         function ratingChanged(eventInfo) {
 
             var ratingOutput = document.getElementById("ratingOutput");
@@ -412,7 +413,7 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
 
 3.  [then](https://msdn.microsoft.com/library/windows/apps/BR229728) 메서드 호출을 추가하고 여기에 `completed` 함수를 전달하여 [WinJS.UI.processAll](https://msdn.microsoft.com/library/windows/apps/Hh440975)을 호출하는 코드를 [onactivated](https://msdn.microsoft.com/library/windows/apps/BR212679) 이벤트 처리기에서 업데이트합니다. `completed` 함수에서 [Rating](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤을 호스트하는 `ratingControlDiv` 요소를 검색합니다. 그런 다음 [winControl](https://msdn.microsoft.com/library/windows/apps/Hh770814) 속성을 사용해 실제 **Rating** 컨트롤을 검색합니다. 이 예제에서는 `completed` 함수를 인라인으로 정의합니다.
 
-    ```javascript
+```javascript
            args.setPromise(WinJS.UI.processAll().then(function completed() {
 
                     // Retrieve the div that hosts the Rating control.
@@ -431,7 +432,7 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
 
     업데이트된 [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679) 이벤트 처리기는 다음과 같습니다.
 
-    ```javascript
+```javascript
     (function () {
     "use strict";
 
@@ -484,18 +485,18 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
         isFirstActivation = false;
     };
 
-    ```        
+```        
 
-    앱을 실행합니다. 등급 값을 선택하면 [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤 아래에 수치 값이 출력됩니다.
+    Run the app. When you select a rating value, it outputs the numeric value below the [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895) control.
 
 ![PC의 완료된 Hello world 앱](images/helloworld-5-winjs.png)
 
 ## 요약
 
-축하합니다. JavaScript 및 HTML을 사용하여 Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+축하합니다. JavaScript 및 HTML을 사용하여 Windows10 및 UWP용 첫 번째 앱을 만들었습니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

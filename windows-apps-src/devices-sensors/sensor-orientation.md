@@ -4,13 +4,13 @@ ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: "센서 방향"
 description: "Accelerometer, Gyrometer, Compass, Inclinometer 및 OrientationSensor 클래스의 센서 데이터는 참조 축에 의해 정의됩니다. 이러한 축은 디바이스의 가로 방향에서 정의되고 사용자가 돌릴 때 디바이스와 함께 회전합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
+ms.sourcegitcommit: 62b4042cf1c6296c908a12feb5b2fcbd2b9b8734
+ms.openlocfilehash: 9deb0327f67350af49ba19224a75e766ff9805d7
 
 ---
 # 센서 방향
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 ** 중요 API **
 
@@ -21,30 +21,30 @@ ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
 
 ## 디스플레이 방향 및 장치 방향
 
-센서의 참조 축을 이해하려면 디스플레이 방향과 장치 방향을 구분해야 합니다. 디스플레이 방향은 텍스트 및 이미지가 화면에 표시되는 방향이고, 디바이스 방향은 디바이스의 실제 위치입니다. 다음 그림에서는 디바이스 및 디스플레이 방향이 둘 다 **Landscape**입니다.
+센서의 참조 축을 이해하려면 디스플레이 방향과 장치 방향을 구분해야 합니다. 디스플레이 방향은 텍스트 및 이미지가 화면에 표시되는 방향이고, 디바이스 방향은 디바이스의 실제 위치입니다. 다음 그림에서는 디바이스 및 디스플레이 방향이 모두 **가로**입니다(표시된 센서 축이 가로 방향 우선 디바이스에만 적용됨).
 
-![디스플레이 및 디바이스 방향(Landscape)](images/accelerometer-axis-orientation-landscape-with-text.png)
+![디스플레이 및 디바이스 방향(Landscape)](images/sensor-orientation-a.PNG)
 
 다음 그림에서는 디스플레이 및 디바이스 방향이 둘 다 **LandscapeFlipped**입니다.
 
-![디스플레이 및 디바이스 방향(LandscapeFlipped)](images/accelerometer-axis-orientation-landscape-180-with-text.png)
+![디스플레이 및 디바이스 방향(LandscapeFlipped)](images/sensor-orientation-b.PNG)
 
 다음 그림에서 디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped입니다.
 
-![디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped임](images/accelerometer-axis-orientation-landscape-180-with-text-inverted.png)
+![디스플레이 방향은 Landscape이고 장치 방향은 LandscapeFlipped임](images/sensor-orientation-c.PNG)
 
 [**CurrentOrientation**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.currentorientation.aspx) 속성과 함께 [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.getforcurrentview.aspx) 메서드를 사용하여 [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/Dn264258) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**DisplayOrientations**](https://msdn.microsoft.com/library/windows/apps/BR226142) 열거형과 비교하여 논리를 만들 수 있습니다. 지원하는 각 방향에 대해 참조 축을 해당 방향으로 변환할 수 있도록 지원해야 합니다.
 
 ## 가로 방향 우선 및 세로 방향 우선 장치
 
-제조업체에서는 가로 방향 우선 장치와 세로 방향 우선 장치를 둘 다 생산하고 있습니다. 제조업체는 장치에 구성 요소를 통합할 때 모든 장치가 동일한 참조 프레임 내에서 작동하도록 일관된 통합 방식을 사용합니다. 다음 표에서는 가로 방향 우선 장치와 세로 방향 우선 장치의 센서 축을 보여 줍니다.
+제조업체에서는 가로 방향 우선 디바이스와 세로 방향 우선 디바이스를 둘 다 생산하고 있습니다. 참조 프레임은 가로 방향 우선 디바이스(예: 데스크톱 및 랩톱)와 세로 방향 우선 디바이스(예: 휴대폰 및 일부 태블릿) 간에 다릅니다. 다음 표에서는 가로 방향 우선 디바이스와 세로 방향 우선 디바이스의 센서 축을 보여 줍니다.
 
 | 방향 | 가로 방향 우선 | 세로 방향 우선 |
 |-------------|-----------------|----------------|
-| **가로** | ![Landscape 방향의 가로 방향 우선 디바이스](images/accelerometer-axis-orientation-landscape.png) | ![Landscape 방향의 세로 방향 우선 디바이스](images/accelerometer-axis-orientation-portrait-270.png) |
-| **세로** | ![Portrait 방향의 가로 방향 우선 디바이스](images/accelerometer-axis-orientation-landscape-90.png) | ![Portrait 방향의 세로 방향 우선 디바이스](images/accelerometer-axis-orientation-portrait.png) |
-| **LandscapeFlipped ** | ![LandscapeFlipped 방향의 가로 방향 우선 디바이스](images/accelerometer-axis-orientation-landscape-180.png) | ![LandscapeFlipped 방향의 세로 방향 우선 디바이스](images/accelerometer-axis-orientation-portrait-90.png) | 
-| **PortraitFlipped** | ![PortraitFlipped 방향의 가로 방향 우선 디바이스](images/accelerometer-axis-orientation-landscape-270.png)| ![PortraitFlipped 방향의 세로 방향 우선 장치](images/accelerometer-axis-orientation-portrait-180.png) |
+| **가로** | ![Landscape 방향의 가로 방향 우선 디바이스](images/sensor-orientation-0.PNG) | ![Landscape 방향의 세로 방향 우선 디바이스](images/sensor-orientation-1.PNG) |
+| **세로** | ![Portrait 방향의 가로 방향 우선 디바이스](images/sensor-orientation-2.PNG) | ![Portrait 방향의 세로 방향 우선 디바이스](images/sensor-orientation-3.PNG) |
+| **LandscapeFlipped ** | ![LandscapeFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-4.PNG) | ![LandscapeFlipped 방향의 세로 방향 우선 디바이스](images/sensor-orientation-5.PNG) | 
+| **PortraitFlipped** | ![PortraitFlipped 방향의 가로 방향 우선 디바이스](images/sensor-orientation-6.PNG)| ![PortraitFlipped 방향의 세로 방향 우선 장치](images/sensor-orientation-7.PNG) |
 
 ## 디스플레이 및 헤드리스 장치를 브로드캐스트하는 장치
 
@@ -171,6 +171,6 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

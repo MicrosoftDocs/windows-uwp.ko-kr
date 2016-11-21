@@ -4,8 +4,8 @@ ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클라이언트 ID와 연관된 앱에 대해 고객이 소유한 모든 제품을 가져옵니다. 특정 제품으로 쿼리의 범위를 지정하거나 다른 필터를 사용할 수 있습니다."
 title: "제품에 대한 쿼리"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: ea517d66dbb6f373b191937de8c1cbe42c74846f
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: d614919debd979a475e93909199851390d242deb
 
 ---
 
@@ -23,8 +23,8 @@ Windows 스토어 컬렉션 API에서 이 메서드를 사용하여 Azure AD 클
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
--   앱의 클라이언트 쪽 코드에서 [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 메서드를 호출하여 생성된 Windows 스토어 ID 키
+* `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+* [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키입니다.
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
 
@@ -69,7 +69,7 @@ UserIdentity 개체에는 다음 매개 변수가 포함됩니다.
 | 매개 변수            | 유형   | 설명                                                                                                                                                                                                                  | 필수 |
 |----------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | identityType         | 문자열 | 문자열 값 **b2b**를 지정합니다.                                                                                                                                                                                            | 예      |
-| identityValue        | 문자열 | Windows 스토어 ID 키의 문자열 값입니다.                                                                                                                                                                                    | 예      |
+| identityValue        | 문자열 | [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키입니다.                                                                                                                                                                                     | 예      |
 | localTicketReference | 문자열 | 반환된 제품에 대해 요청된 식별자입니다. 응답 본문에 반환된 항목에는 일치하는 *localTicketReference*가 있습니다. Windows 스토어 ID 키의 *userId* 클레임과 동일한 값을 사용하는 것이 좋습니다. | 예      |
 
 <span/> 
@@ -217,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

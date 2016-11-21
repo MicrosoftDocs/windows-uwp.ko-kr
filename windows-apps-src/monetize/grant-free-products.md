@@ -4,8 +4,8 @@ ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: "Windows 스토어 구매 API에서 이 메서드를 사용하여 지정된 사용자에게 무료 앱 또는 추가 기능에 대한 권한을 부여합니다."
 title: "무료 제품에 대한 권한 부여"
 translationtype: Human Translation
-ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
-ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 2eca8712075ce1f9d876f3ae441381734bd52370
 
 ---
 
@@ -21,8 +21,8 @@ Windows 스토어 구매 API에서 이 메서드를 사용하여 지정된 사�
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
--   앱의 클라이언트 쪽 코드에서 [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) 메서드를 호출하여 생성된 Windows 스토어 ID 키
+* `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+* [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키.
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
 
@@ -53,7 +53,7 @@ Windows 스토어 구매 API에서 이 메서드를 사용하여 지정된 사�
 | 매개 변수      | 유형   | 설명                                                                                                                                                                                                                                                                                                            | 필수 |
 |----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | availabilityId | 문자열 | Windows 스토어 카탈로그에서 구매할 제품의 가용성 ID입니다.                                                                                                                                                                                                                                     | 예      |
-| b2bKey         | 문자열 | 고객 ID를 나타내는 Windows 스토어 ID 키입니다.                                                                                                                                                                                                                                                        | 예      |
+| b2bKey         | 문자열 | [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) Windows 스토어 ID 키입니다.                                                                                                                                                                                                                                                        | 예      |
 | devOfferId     | 문자열 | 구매 후 컬렉션 항목에 표시되는 개발자가 지정한 제품 ID입니다.                                                                                                                                                                                                                                 | 아니요       |
 | 언어       | 문자열 | 사용자의 언어.                                                                                                                                                                                                                                                                                              | 예      |
 | 출시         | 문자열 | 사용자의 지역/국가입니다.                                                                                                                                                                                                                                                                                                | 예      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

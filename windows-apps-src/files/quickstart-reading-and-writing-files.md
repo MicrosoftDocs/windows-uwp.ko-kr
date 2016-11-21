@@ -4,15 +4,15 @@ ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: "파일 만들기, 쓰기 및 읽기"
 description: "StorageFile 개체를 사용하여 파일을 읽고 씁니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 145acd5a5a6143a31b792df721d94f9ddc5718fa
+ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
+ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
 
 ---
 
 # 파일 만들기, 쓰기 및 읽기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -139,7 +139,6 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
 ```
 ```vb
     Dim dataWriter As New DataWriter(outputStream)
-
     dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
@@ -181,9 +180,9 @@ string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
 Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 ```
 
-**버퍼를 사용하여 파일에서 바이트 읽기(2단계)**
+**버퍼를 사용하여 파일에서 텍스트 읽기(2단계)**
 
-1.  먼저 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468) 메서드를 호출하여 파일의 버퍼에서 바이트를 읽습니다.
+1.  먼저 [**FileIO**](https://msdn.microsoft.com/library/windows/apps/hh701440) 클래스의 [**ReadBufferAsync**](https://msdn.microsoft.com/library/windows/apps/hh701468) 메서드를 호출합니다.
 > [!div class="tabbedCodeSnippets"]
 ```cs
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -260,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

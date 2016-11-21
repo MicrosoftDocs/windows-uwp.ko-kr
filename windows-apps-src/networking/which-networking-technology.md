@@ -2,7 +2,7 @@
 author: DelfCo
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
 description: "UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다."
-title: "네트워킹 기술 선택'"
+title: "네트워킹 기술 선택&quot;"
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: fc7793926275dd732ee6c814c9e65a6b656654d2

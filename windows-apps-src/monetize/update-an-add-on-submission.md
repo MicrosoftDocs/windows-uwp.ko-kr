@@ -4,19 +4,19 @@ ms.assetid: 8C63D33B-557D-436E-9DDA-11F7A5BFA2D7
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출을 업데이트합니다."
 title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 업데이트"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: b7a8e1d39d5ee0a0858382b84ab00cc2c481da5d
+ms.sourcegitcommit: 7307ca70467a751d5adb53f3718c7e9cf0b70dbb
+ms.openlocfilehash: f42f2dba155aa0a29e0769fd96cce6d3a0de870b
 
 ---
 
 # Windows 스토어 제출 API를 사용하여 추가 기능 제출 업데이트
 
 
-
-
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱 내 제품 또는 IAP라고도 함) 제출을 업데이트합니다. 이 메서드를 사용하여 제출을 성공적으로 업데이트한 후 수집 및 게시를 위해 [제출을 커밋](commit-an-add-on-submission.md)합니다.
 
 이 메서드가 Windows 스토어 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스에 적용되는 방법은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
+
+>**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 요청 본문에서 **가격** 리소스가 무시되고 이 메서드를 사용하는 추가 기능 제출에 대한 가격 및 판매 데이터를 일시적으로 사용할 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-add-on-submissions.md#pricing-object)를 참조하세요.
 
 ## 필수 조건
 
@@ -62,14 +62,14 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 �
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-iap-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-iap-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
+| contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
 | lifetime           | 문자열  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  | 추가 기능에 대한 목록 정보를 포함하는 개체입니다. 자세한 내용은 [목록 리소스](manage-add-on-submissions.md#listing-object)를 참조하세요.  |
 | pricing           | object  | 추가 기능에 대한 목록 정보를 포함하는 개체입니다. 자세한 내용은 [가격 리소스](manage-add-on-submissions.md#pricing-object)를 참조하세요.  |
 | targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
-| 태그           | 문자열  |  추가 기능의 [태그](../publish/enter-iap-properties.md#tag)입니다.   |
+| 태그           | 문자열  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
 | visibility  | 문자열  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>  |
 
 <span/>
@@ -231,6 +231,6 @@ Content-Type: application/json
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

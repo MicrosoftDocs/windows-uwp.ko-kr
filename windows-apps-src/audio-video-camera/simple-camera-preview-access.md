@@ -4,14 +4,14 @@ ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 설명합니다."
 title: "카메라 미리 보기 표시"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 8330ee43089207faab5f6f72e2ac7b32aada72ce
+ms.sourcegitcommit: 6aacd5ef8043c9c89116a1d287174210f02f7d62
+ms.openlocfilehash: 5eb53d1527f2cd002dfb66110f1f1f3618458b3a
 
 ---
 
 # 카메라 미리 보기 표시
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 XAML 페이지 내의 카메라 미리 보기 스트림을 빠르게 표시하는 방법을 설명합니다. 카메라를 사용하여 사진 및 동영상을 캡처하는 앱을 만들려면 디바이스 및 카메라 방향을 다루거나 캡처된 파일에 대한 인코딩 옵션을 설정하는 것과 같은 작업을 수행해야 합니다. 일부 앱 시나리오의 경우 다른 고려 사항에 신경 쓰지 않고 카메라에서 미리 보기 스트림을 간단히 표시하고자 할 수 있습니다. 이 문서에서는 최소한의 코드로 이 작업을 수행하는 방법을 보여 줍니다. 아래 단계에 따라 작업을 완료했을 때 미리 보기 스트림을 항상 제대로 종료해야 합니다.
 
@@ -65,8 +65,8 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 미리 보기 스트림 사용을 완료했을 때 디바이스의 다른 앱에서 카메라를 사용할 수 있도록 항상 스트림을 종료하고 관련된 리소스를 제대로 해제해야 합니다. 미리 보기 스트림은 다음 단계에 따라 종료해야 합니다.
 
 -   카메라가 현재 미리 보기 상태인 경우 미리 보기 스트림을 중지하려면 [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622)를 호출합니다. 미리 보기가 실행 중이 아닐 때 **StopPreviewAsync**를 호출하면 예외가 발생합니다.
--   **CaptureElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 null로 설정합니다. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler)를 사용하여 이 호출을 UI 스레드에서 실행해야 합니다.
--   **MediaCapture** 개체의 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) 메서드를 호출하여 해당 개체를 해제합니다. 다시 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler)를 사용하여 이 호출을 UI 스레드에서 실행해야 합니다.
+-   **CaptureElement**의 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280) 속성을 null로 설정합니다. 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx)를 사용합니다.
+-   **MediaCapture** 개체의 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/dn278858) 메서드를 호출하여 해당 개체를 해제합니다. 다시, 이 호출이 UI 스레드에서 실행되도록 하려면 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.core.coredispatcher.runasync.aspx)를 사용합니다.
 -   **MediaCapture** 멤버 변수를 null로 설정합니다.
 -   비활성 상태일 때 화면이 꺼지도록 하려면 [**RequestRelease**](https://msdn.microsoft.com/library/windows/apps/Windows.System.Display.DisplayRequest.RequestRelease)를 호출합니다. 
 
@@ -93,6 +93,6 @@ using 지시문을 추가하여 페이지의 .cs 파일에 다음 네임스페�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

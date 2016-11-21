@@ -5,8 +5,8 @@ title: "대화 상자 및 플라이아웃"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
+ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 
 ---
 # 대화 상자 및 플라이아웃
@@ -48,7 +48,7 @@ ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>대화 상자</b> <br/><br/>
-   ![전체 단추 대화 상자 예제](images/controls_dialog_twobutton.png)</p>
+    ![대화 상자 예제](images/dialogs/dialog-delete-file-example.png)</p>
 <p>대화 상자는 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대화 상자는 명시적으로 닫을 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.   
 </p><br/>
 
@@ -130,7 +130,8 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 
 
 
-## 대화 상자 사용 지침
+## 대화 상자
+### 일반 지침
 
 -   대화 상자의 텍스트 첫 줄에서 문제점이나 사용자의 목적을 명확히 식별해야 합니다.
 -   대화 상자 제목은 기본 지침이며 선택 사항입니다.
@@ -146,7 +147,23 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 -   오류 대화 상자에는 오류 메시지가 관련된 정보와 함께 표시됩니다. 오류 대화 상자에서는 “닫기" 또는 유사한 작업을 나타내는 단추만 사용됩니다.
 -   유효성 검사 오류(예: 암호 필드의 오류)와 같이 페이지의 특정 위치에 해당하는 오류의 경우에는 대화 상자를 사용하지 마세요. 대신 앱의 캔버스 자체를 사용하여 인라인 오류를 표시합니다.
 
-## 대화 상자 만들기
+### 확인 대화 상자(확인/취소)
+확인 대화 상자에서는 사용자가 작업을 수행할지 확인할 수 있습니다. 작업을 확정하거나 취소하도록 선택할 수 있습니다.  
+일반적인 확인 대화 상자에는 확정(“확인") 단추와 취소 단추 두 개가 있습니다.  
+
+<ul>
+    <li>
+        <p>일반적으로 확정 단추는 왼쪽에(기본 단추), 취소 단추(보조 단추)는 오른쪽에 있어야 합니다.</p>
+         ![확인/취소 대화 상자](images/dialogs/dialog-delete-file-example.png)
+        
+    </li>
+    <li>일반 권장 사항 섹션에서 설명한 대로 기본 지시 사항이나 내용에 대한 특정 응답을 식별하는 텍스트가 있는 단추를 사용합니다.
+    </li>
+</ul>
+
+> 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 휴대폰을 휴대한다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
+
+### 대화 상자 만들기
 대화 상자를 만들려면 [ContentDialog 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)를 사용합니다. 코드나 태그에서 대화 상자를 만들 수 있습니다. 일반적으로 XAML에서 UI 요소를 정의하는 것이 더 쉽지만 간단한 대화 상자의 경우 코드를 사용하는 것이 실제로 더 쉽습니다. 이 예제에서는 WiFi 연결이 없음을 사용자에게 알리는 대화 상자를 만든 다음 [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) 메서드를 사용하여 대화 상자를 표시합니다.
 
 ```csharp
@@ -174,23 +191,23 @@ private async void displayDeleteFileDialog()
     {
         Title = "Delete file permanently?",
         Content = "If you delete this file, you won't be able to recover it. Do you want to delete it?",
-        PrimaryButtonText = "Cancel",
-        SecondaryButtonText = "Delete file permanently"
+        PrimaryButtonText = "Delete",
+        SecondaryButtonText = "Cancel"
     };
 
     ContentDialogResult result = await deleteFileDialog.ShowAsync();
     
-    // Delete the file if the user clicked the second button. 
+    // Delete the file if the user clicked the primary button. 
     /// Otherwise, do nothing. 
-    if (result == ContentDialogResult.Secondary)
+    if (result == ContentDialogResult.Primary)
     {
         // Delete the file. 
     }
 }
 ```
 
-
-##  플라이아웃 만들기
+## 플라이아웃
+###  플라이아웃 만들기
 
 플라이아웃은 개방형 컨테이너로 임의의 UI와 해당 콘텐츠를 표시할 수 있습니다.  
 
@@ -278,7 +295,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## 플라이아웃 스타일 지정
+### 플라이아웃 스타일 지정
 플라이아웃의 스타일을 지정하려면 해당 [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx)을 수정합니다. 이 예제에서는 줄 바꿈 단락을 보여 주고, 화면 읽기 프로그램에서 텍스트 블록에 액세스하도록 설정합니다.
 
 ````xaml
@@ -308,6 +325,6 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

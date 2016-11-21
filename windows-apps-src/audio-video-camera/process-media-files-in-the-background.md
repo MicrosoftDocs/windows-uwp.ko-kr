@@ -4,14 +4,14 @@ ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "이 문서에서는 MediaProcessingTrigger 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다."
 title: "백그라운드에서 미디어 파일 처리"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
+ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
+ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
 
 ---
 
 # 백그라운드에서 미디어 파일 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
@@ -78,6 +78,10 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
+시스템이 백그라운드 작업을 취소할 때 호출되는 [**Canceled**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Background.IBackgroundTaskInstance.Canceled) 이벤트에 대한 처리기에서 원격 분석을 위해 오류를 로깅할 수 있습니다.
+
+[!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
+
 ## 백그라운드 작업 등록 및 시작
 
 앱에서 백그라운드 작업을 사용함을 시스템에 알릴 수 있도록 포그라운드 앱의 Package.appmanifest 파일을 업데이트해야 포그라운드 앱에서 백그라운드 작업을 시작할 수 있습니다.
@@ -140,6 +144,6 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

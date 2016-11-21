@@ -4,8 +4,8 @@ ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 패키지 플라이트 정보를 검색합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱의 패키지 플라이트 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: a49e4f2cf7110e12dd33a5baa37e328a39bae348
+ms.sourcegitcommit: ef90390fcf7d4aa2e040eae65119ac7959f3423f
+ms.openlocfilehash: eddac4b37f6f00bad33f543f0e55415a5dcea887
 
 ---
 
@@ -45,10 +45,10 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 Windows 개발�
 
 ### 요청 매개 변수
 
-| 이름        | 유형   | 설명  |  필수  |    
-|---------------|--------|----------------------------------|
-| applicationId | 문자열 | 필수. 패키지 플라이트를 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
-|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 앱에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
+|  이름  |  유형  |  설명  |  필수  |
+|------|------|------|------|
+|  applicationId  |  문자열  |  패키지 플라이트를 검색하려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |  예  |
+|  top  |  int  |  요청에 반환할 항목 수(즉, 반환할 패키지 플라이트 수)입니다. 계정에 쿼리에서 지정한 값보다 더 많은 패키지 플라이트가 있을 경우 응답 본문에는 데이터의 다음 페이지를 요청하기 위해 메서드 URI에 추가할 수 있는 상대 URI 경로가 포함됩니다.  |  아니요  |
 |  skip  |  int  |  나머지 항목을 반환하기 전에 쿼리에서 바이패스할 항목 수입니다. 이 매개 변수를 사용하여 데이터 집합의 페이지를 탐색합니다. 예를 들어 top=10이고 skip=0이면 1-10 항목을 검색하고 top=10이고 skip=10이면 11-20 항목을 검색합니다.  |  아니요  |
 
 <span/>
@@ -131,6 +131,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

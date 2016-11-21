@@ -1,123 +1,92 @@
 ---
 author: awkoren
-Description: "데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)에서 UWP(유니버설 Windows 플랫폼) 앱으로 변환할 수 있게 준비합니다."
+Description: "데스크톱-UWP 브리지를 시작하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 변환합니다."
 Search.Product: eADQiWindows 10XVcnh
-title: "UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환"
+title: "데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: ff8cd3ab5e38cfc3a2b5fabaad15f78a5f2620f2
-ms.openlocfilehash: 6cf6367ed0f6acea0f87ac36a050e874425423b1
+ms.sourcegitcommit: 933dcd48c03de1992bbfcf0d86951170264a309f
+ms.openlocfilehash: 170ed75d1cd865bfc8e4feb776fce4332cc67850
 
 ---
 
-# UWP(유니버설 Windows 플랫폼) 앱으로 데스크톱 응용 프로그램 변환
+# 데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+데스크톱-UWP 브리지를 시작하여 UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 변환합니다.
 
-데스크톱 변환 확장을 사용하여 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)에서 UWP(유니버설 Windows 플랫폼) 앱으로 변환할 수 있게 준비합니다.
+데스크톱 브리지는 Windows 데스크톱 응용 프로그램(예: Win32, Windows Forms, WPF) 또는 게임을 UWP 앱이나 게임으로 변환할 수 있는 브리지입니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
-## 응용 프로그램을 UWP로 변환할 때의 이점
+데스크톱 앱을 UWP 패키지로 변환할 수 있도록 하는 기술은 두 부분으로 나뉩니다. 첫 번째는 기존 이진 파일을 가져온 후 UWP 패키지로 다시 패키징하는 변환 프로세스입니다. 코드는 여전히 동일하며 다르게 패키징될 뿐입니다. 두 번째 부분은 Windows 연례 업데이트에 포함된 런타임 기술로, UWP 패키지에 앱 컨테이너가 아닌 완전 신뢰로 실행되는 실행 파일이 포함될 수 있도록 합니다. 또한 이 기술은 변환된 앱에 일부 UWP API를 사용하는 데 필요한 패키지 ID를 제공합니다.
 
-데스크톱 변환 확장을 사용하는 UWP는 Windows 데스크톱 응용 프로그램(예: Win32, Windows Forms, WPF) 또는 게임을 UWP(유니버설 Windows 플랫폼) 앱이나 게임으로 변환할 수 있는 브리지입니다. 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx)을 참조하세요. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
+## 혜택
 
-데스크톱 앱을 UWP 패키지로 변환할 수 있도록 하는 기술은 두 부분으로 나뉩니다. 첫 번째는 기존 이진 파일을 가져온 후 UWP 패키지로 다시 패키징하는 데스크톱 앱 변환기입니다. 코드는 여전히 동일하며 다르게 패키징될 뿐입니다. 두 번째 부분은 Windows 연례 업데이트에 포함된 런타임 기술로, UWP 패키지에 앱 컨테이너가 아닌 완전 신뢰로 실행되는 실행 파일이 포함될 수 있도록 합니다. 또한 이 기술은 변환된 앱에 일부 UWP API를 사용하는 데 필요한 패키지 ID를 제공합니다.
+다음은 Windows 데스크톱 응용 프로그램을 변환할 때의 몇 가지 이점입니다. 
 
-다음은 Windows 데스크톱 응용 프로그램을 변환할 때의 몇 가지 이점입니다.
+**배포 간소화.** 브리지를 사용하는 앱 및 게임은 사용자가 안심하고 설치 및 업데이트할 수 있는 뛰어난 배포 환경을 제공합니다. 사용자가 앱을 제거하도록 선택한 경우 흔적없이 완전히 제거됩니다. 이렇게 하면 설치 환경을 작성하고 사용자를 최신 상태로 유지하는 데 드는 시간이 줄어듭니다.
 
-* 고객이 앱 설치 환경을 보다 원활하게 사용할 수 있습니다. 테스트용 로드를 사용하여 컴퓨터에 배포하고([Windows 10에서 LOB 앱을 테스트용으로 로드](https://technet.microsoft.com/library/mt269549.aspx) 참조) 제거된 후에는 흔적이 남아 있지 않도록 합니다. 장기적으로 보면 Windows 스토어에 앱을 게시할 수 있습니다.
+**자동 업데이트 및 라이선스**. 앱은 Windows 스토어의 기본 제공 라이선스 및 자동 업데이트 기능에 참여할 수 있습니다. 자동 업데이트를 사용할 경우 파일의 변경된 부분만 다운로드되므로 매우 안정적이고 효율적인 메커니즘입니다.
 
-* 변환된 앱에는 패키지 ID가 있으므로 완전 신뢰 파티션에서 이전보다 더 많은 UWP API를 호출할 수 있습니다. [변환된 데스크톱 앱을 지원하는 UWP API](desktop-to-uwp-supported-api.md)의 전체 목록을 참조하세요. 
+**도달 범위 증가 및 수익 창출 간소화**. Windows 스토어를 통해 배포하도록 선택하면 수백만 명의 Windows10 사용자(현지 결제 옵션으로 앱 및 게임을 취득하고 앱에서 바로 구매를 수행할 수 있음)에게 쉽게 도달할 수 있습니다.
 
-* 원하는 속도로 XAML 사용자 인터페이스, 라이브 타일 업데이트, UWP 백그라운드 작업, 앱 서비스 등의 UWP 기능을 앱 패키지에 추가할 수 있습니다. 다른 UWP 앱에 사용할 수 있는 모든 기능을 사용자의 앱에서도 사용할 수 있습니다.
+**UWP 기능 추가**.  원하는 속도로 XAML 사용자 인터페이스, 라이브 타일 업데이트, UWP 백그라운드 작업, 앱 서비스 등의 UWP 기능을 앱 패키지에 추가할 수 있습니다.
 
-* 앱의 완전 신뢰 파티션에서 앱 컨테이너 파티션으로 앱의 모든 기능을 이동하도록 선택하면 모든 Windows 10 장치에서 앱을 실행할 수 있습니다.
+**디바이스에서 폭넓어진 사용 사례**. 브리지를 사용하면 코드를 유니버설 Windows 플랫폼으로 점차적으로 마이그레이션하여 모든 Windows10 디바이스(휴대폰, Xbox One 및 HoloLens 포함)에 도달할 수 있습니다.
 
-* UWP 앱의 경우 Windows 데스크톱 응용 프로그램으로서 수행할 수 있는 작업을 수행할 수 있습니다. 실제 레지스트리 및 파일 시스템과 구분되는 레지스트리 및 파일 시스템의 가상화된 보기와 상호 작용합니다.
+## 준비
 
-* 앱은 Windows 스토어의 기본 제공 라이선스 및 자동 업데이트 기능에 참여할 수 있습니다. 자동 업데이트를 사용할 경우 파일의 변경된 부분만 다운로드되므로 매우 안정적이고 효율적인 메커니즘입니다.
+데스크톱-UWP 브리지는 간편한 사용을 위해 고안되어 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. 그러나 변환 전에 몇 가지 주의 사항과 고유한 상황이 있습니다. 계속하기 전에 [데스크톱-UWP 브리지용 앱 준비](desktop-to-uwp-prepare.md) 문서를 살펴보고 앱에 적용되는 문제를 해결하세요.
 
-## UWP로 변환할 수 있게 데스크톱 앱 준비
-
-앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. Windows 스토어는 라이선스 및 자동 업데이트를 처리하므로 코드베이스에서 해당 기능을 제거해도 됩니다. 사용 중인 응용 프로그램에 이러한 상황이 해당될 경우 변환 전에 이 문제를 해결해야 합니다.
-
-+ __앱에서 4.6.1 이전 버전의 .NET을 사용합니다__. .NET 4.6.1만 지원됩니다. 변환하기 전에 앱의 대상을 .NET 4.6.1로 변경해야 합니다. 
-
-+ __앱은 항상 관리자 보안 권한으로 실행됩니다__. 대화형 사용자로 실행하는 동안 앱은 계속 작동해야 합니다. Windows 스토어에서 앱을 설치하는 사용자가 시스템 관리자가 아닐 수 있으므로 앱을 관리자 권한으로 실행하도록 요구해도 표준 사용자의 경우는 제대로 진행되지 않습니다.
-
-+ __앱에는 커널 모드 드라이버 또는 Windows 서비스가 필요합니다__. 브리지는 앱에 적합하지만 시스템 계정으로 실행해야 하는 커널 모드 드라이버 또는 Windows 서비스를 지원하지 않습니다. Windows 서비스 대신, [백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)을 사용합니다.
-
-+ __앱 모듈은 AppX 패키지에 없는 프로세스에 in-process로 로드됩니다__. 이것은 허용되지 않습니다. 즉 [셸 확장](https://msdn.microsoft.com/library/windows/desktop/dd758089.aspx)과 같은 in-process 확장은 지원되지 않습니다. 그렇지만 두 앱이 같은 패키지에 있는 경우 두 앱의 프로세스 간 통신을 수행할 수 있습니다.
-
-+ __앱에서 [SetDllDirectory](https://msdn.microsoft.com/library/windows/desktop/ms686203) 또는 [AddDllDirectory](https://msdn.microsoft.com/library/windows/desktop/hh310513)를 호출합니다__. 이러한 함수는 현재 변환된 앱에서 지원되지 않습니다. 이후 릴리스에서 지원을 추가하기 위해 노력 중입니다. 이 문제를 해결하기 위해 이러한 함수를 사용하여 찾은 모든 .dll을 패키지 루트에 복사할 수 있습니다. 
-
-+ __앱이 사용자 지정 AUMID(응용 프로그램 사용자 모델 ID)를 사용합니다__. 프로세스가 [SetCurrentProcessExplicitAppUserModelID](https://msdn.microsoft.com/library/windows/desktop/dd378422.aspx)를 호출하여 자체 AUMID를 설정하는 경우 앱 모델 환경/AppX 패키지에 의해 생성된 AUMID만 사용할 수 있습니다. 사용자 지정 AUMID를 정의할 수 없습니다.
-
-+ __앱은 HKEY_LOCAL_MACHINE (HKLM) 레지스트리 하이브를 수정합니다__. 앱에서 HKLM 키를 만들거나 수정을 위해 이 키를 열려고 하면 액세스 거부 오류가 발생합니다. 앱에는 레지스트리의 자체 가상화 보기가 있으므로 사용자 및 컴퓨터 전체 레지스트리 하이브(HKLM의 유형) 개념이 적용되지 않습니다. 대신 HKEY_CURRENT_USER(HKCU)에 쓰는 것과 같은 HKLM 사용 목적을 달성할 수 있는 다른 방법을 찾아야 합니다.
-
-+ __앱은 다른 앱을 시작하는 수단으로 ddeexec 레지스트리 하위 키를 사용합니다__. 대신 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)의 다양 한 Activatable* 확장에 의해 구성된 DelegateExecute 동사 처리기 중 하나를 사용합니다.
-
-+ __앱은 다른 앱과 데이터를 공유하는 데 사용하려는 AppData 폴더에 씁니다__. 변환 후 AppData는 각 UWP 앱에 대한 개인 저장소인 로컬 앱 데이터 저장소로 리디렉션됩니다. 프로세스 간에 데이터를 공유하는 다른 방법을 사용합니다. 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)을 참조하세요.
-
-+ __앱에서 앱용 설치 디렉터리에 씁니다__. 예를 들어 앱은 exe와 동일한 디렉터리에 추가된 로그 파일에 씁니다. 이것이 지원되지 않으면 로컬 앱 데이터 저장소 등의 다른 위치를 찾아야 합니다.
-
-+ __앱 설치에 사용자 조작이 필요합니다__. 앱 설치 관리자는 자동으로 실행될 수 있어야 하며 기본적으로 클린 OS 이미지에 없는 모든 필수 구성 요소를 설치해야 합니다.
-
-+ __앱에서 현재 작업 디렉터리를 사용합니다__. 런타임에 변환된 앱은 이전에 데스크톱 .LNK 바로 가기에서 지정한 동일한 작업 디렉터리를 얻지 못합니다. 앱의 올바른 작동을 위해 올바른 디렉터리를 확보해야 하는 경우 런타임에 CWD를 변경해야 합니다.
-
-+ __앱에는 UIAccess가 필요합니다__. 응용 프로그램에서 UAC 매니페스트의 `requestedExecutionLevel` 요소에 `UIAccess=true`를 지정하는 경우 현재는 UWP로 변환할 수 없습니다. 자세한 내용은 [UI 자동화 보안 개요](https://msdn.microsoft.com/library/ms742884.aspx)를 참조하세요.
-
-+ __앱이 이미 전체 UWP 앱이며 앱 패키지 내에서 완전 신뢰 프로세스를 호출하려고 합니다__. "역방향"으로 브리지 사용은 지원되지 않으며 UWP 앱의 완전 신뢰 프로세스 호출 시도는 스토어 인증에 실패합니다. 테스트용으로 로드된 앱에서 이 시나리오를 사용하려면 먼저 앱의 매니페스트에 ```<desktop:Extension>``` 선언을 포함합니다(*Windows.FullTrustApplication* 값으로 *EntryPoint* 특성을 포함). 그런 다음 앱의 ```<TargetDeviceFamily>```를 *Windows.Desktop*으로 설정합니다. 이는 앱이 모든 UWP 디바이스가 아닌 데스크톱 디바이스 패밀리만 대상으로 하고 있음을 나타냅니다. 앱이 이러한 설정으로 그대로 *APPX0501: 유효성 검사 오류*를 반환하는 경우 대상 디바이스 패밀리를 확인합니다. 앱이 *Windows.Desktop*이 아닌 *Windows.Universal* 패밀리를 대상으로 할 수 있습니다. 
-
-+ __다른 프로세스에서 사용할 수 있도록 앱에서 COM 개체 또는 GAC 어셈블리를 노출합니다__. 현재 릴리스에서 앱은 AppX 패키지 외부의 실행 파일에서 발생한 프로세스에서 사용할 수 있도록 COM 개체 또는 GAC 어셈블리를 노출할 수 없습니다. 패키지 내의 프로세스는 정상적으로 COM 개체와 GAC 어셈블리를 등록하고 사용할 수 있지만 이들 항목이 외부에 표시되지는 않습니다. 즉, OLE와 같은 interop 시나리오는 외부 프로세스에서 호출되는 경우 작동하지 않습니다. 
-
-+ __앱에서 지원되지 않는 방식으로 C 런타임 라이브러리를 연결하고 있습니다__. Microsoft C/C++ 런타임 라이브러리는 Microsoft Windows 운영 체제용 프로그래밍 루틴을 제공합니다. 이러한 루틴은 C 및 C++ 언어에서 제공하지 않는 많은 일반적인 프로그래밍 작업을 자동화합니다. 앱에서 C/C++ 런타임 라이브러리를 사용하는 경우 해당 라이브러리가 지원되는 방식으로 연결되는지 확인해야 합니다. 
-    
-    Visual Studio 2015에서는 현재 버전의 CRT 코드에 대한 동적 연결(코드에서 공통 DLL 파일을 사용할 수 있도록 함)과 정적 연결(라이브러리를 코드에 직접 연결함)을 둘 다 지원합니다. 가능하면 앱에서 VS 2015와 함께 동적 연결을 사용하는 것이 좋습니다. 
-
-    이전 버전의 Visual Studio에서의 지원은 각기 다릅니다. 자세한 내용은 다음 표를 참조하세요. 
-
-    <table>
-    <th>Visual Studio 버전</td><th>동적 연결</th><th>정적 연결</th></th>
-    <tr><td>2005(VC 8)</td><td>지원되지 않음</td><td>지원함</td>
-    <tr><td>2008(VC 9)</td><td>지원되지 않음</td><td>지원함</td>
-    <tr><td>2010(VC 10)</td><td>지원</td><td>지원</td>
-    <tr><td>2012(VC 11)</td><td>지원함</td><td>지원되지 않음</td>
-    <tr><td>2013(VC 12)</td><td>지원함</td><td>지원되지 않음</td>
-    <tr><td>2015(VC 14)</td><td>지원</td><td>지원</td>
-    </table>
-    
-    참고: 모든 경우에 공개적으로 사용 가능한 최신 CRT에 연결해야 합니다.
-
-+ __앱에서 Windows side-by-side 폴더의 어셈블리를 설치하고 로드합니다__. 예를 들어 앱에서 C 런타임 라이브러리 VC8 또는 VC9를 사용하고 Windows side-by-side 폴더에 있는 해당 라이브러리를 동적으로 연결하고 있는 경우 코드에서 공유 폴더의 공통 DLL 파일을 사용하고 있는 것입니다. 이는 지원되지 않습니다. 재배포 가능 라이브러리 파일을 코드에 직접 연결하여 정적으로 연결해야 합니다.
-
-## 변환 프로세스 시작
+## 변환
 
 앱을 변환하기 위한 몇 가지 다른 옵션이 있습니다.
 
-* **DAC(Desktop App Converter)** DAC는 사용자를 위해 앱을 자동으로 변환하고 서명하는 도구입니다. DAC를 사용하면 작업이 편리하고 자동화되며, 앱에서 시스템을 많이 수정하거나 설치 관리자가 수행하는 작업에 대해 잘 알지 못하는 경우 유용합니다. DAC를 시작하려면 [Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)를 참조하세요. 
+**DAC(Desktop App Converter)** DAC는 사용자를 위해 앱을 자동으로 변환하고 서명하는 도구입니다. DAC를 사용하면 작업이 편리하고 자동화되며, 앱에서 시스템을 많이 수정하거나 설치 관리자가 수행하는 작업에 대해 잘 알지 못하는 경우 유용합니다. 시작하려면 [데스크톱 앱 변환기](desktop-to-uwp-run-desktop-app-converter.md)의 문서를 참조하세요. 
 
-* **수동 변환**. xcopy를 사용하여 앱을 설치하거나 설치 관리자가 시스템을 자주 변경할 경우 수동 변환이 더 능률적인 선택일 수 있습니다. 여기에는 매니페스트 파일 만들기, MakeAppx.exe 도구 실행 및 앱 패키지 서명이 포함됩니다. 수동으로 변환하는 방법은 [UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 
+**수동 변환**. xcopy를 사용하여 앱을 설치하거나 설치 관리자가 시스템을 자주 변경할 경우 수동 변환이 더 능률적인 선택일 수 있습니다. 여기에는 매니페스트 파일 만들기, MakeAppx.exe 도구 실행 및 앱 패키지 서명이 포함됩니다. 수동으로 변환하는 방법에 대한 자세한 내용은 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요. 
 
-* **타사 설치 관리자**. 3개의 인기 타사 설치 관리자, 즉 [Flexera의 InstallShield](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer), [FireGiant의 WiX](https://www.firegiant.com/r/appx) 및 [Caphyon의 고급 설치 프로그램](http://www.advancedinstaller.com/uwp-app-package)은 이제 데스크톱 브리지를 지원하여 몇 번의 클릭만으로 MSI 설치 관리자와 변환된 앱 패키지를 모두 생성할 수 있습니다. 자세한 내용은 각 설치 관리자의 해당 웹 사이트를 참조하세요. 
+**타사 설치 관리자**. 3개의 인기 타사 설치 관리자, 즉 [Flexera의 InstallShield](http://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer), [FireGiant의 WiX](https://www.firegiant.com/r/appx) 및 [Caphyon의 고급 설치 프로그램](http://www.advancedinstaller.com/uwp-app-package)은 이제 데스크톱 브리지를 지원하여 몇 번의 클릭만으로 MSI 설치 관리자와 변환된 앱 패키지를 모두 생성할 수 있습니다. 자세한 내용은 각 설치 관리자의 해당 웹 사이트를 참조하세요. 
 
-## 지원 받기 및 피드백 제공
+## 보정 
+
+라이브 타일, 푸시 알림 등과 같은 기능을 추가하는 광범위한 UWP API를 사용하여 변환된 데스크톱 앱을 향상시킬 수 있습니다. 전체 코드 샘플은 GitHub에서 [UWP에 대한 데스크톱 앱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) 리포지토리를 참조하세요. 지원되는 API의 전체 목록을 보려면 [데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API](desktop-to-uwp-supported-api.md)를 검토하세요. 
+
+UWP API를 호출 하는 작업 외에도 변환된 앱에서만 액세스할 수 있는 기능이 포함된 앱을 확장할 수 있습니다. 이러한 기능에는 사용자 로그온 시 프로세스 시작 및 파일 탐색기 통합과 같은 시나리오가 포함되어 있으며, 원래 데스크톱 앱과 전체 UWP 앱 패키지 간의 전환을 부드럽게 하도록 디자인되었습니다. 자세한 내용은 [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md)을 참조하세요. 
+
+## 마이그레이션
+
+브리지를 사용하면 Windows 데스크톱에서 앱을 실행하고 게시하면서 이전 코드를 UWP로 점차적으로 마이그레이션할 수 있습니다. UWP로 완전히 마이그레이션되고 앱에 WPF/Win32 구성 요소가 더 이상 없으면 휴대폰, Xbox One 및 HoloLens를 비롯한 모든 Windows 디바이스에 연결할 수 있습니다.
+
+## 디버그
+
+Visual Studio를 사용하여 앱을 디버그할 수 있습니다. 자세한 내용은 [데스크톱 브리지로 변환된 앱 디버그](desktop-to-uwp-debug.md)를 확인하세요. 
+
+데스크톱 브리지가 이면에서 작동하는 방식에 대해 관심이 있는 경우 [데스크톱 브리지의 백그라운드 작업](desktop-to-uwp-behind-the-scenes.md)을 확인하세요. 
+
+## 배포
+
+Windows 스토어 또는 테스트용으로 로드를 사용하여 앱을 배포할 수 있습니다. 자세한 내용은 [데스크톱 브리지로 변환된 앱 배포](desktop-to-uwp-distribute.md)를 참조하세요. 사용자에게 앱을 배포하기 전에 먼저 앱에 서명해야 합니다. 단계별 지침은 [데스크톱 브리지로 변환된 앱에 서명](desktop-to-uwp-signing.md)을 참조하세요. 
+
+## 지원 및 피드백
 
 앱 변환 문제가 발생할 경우 [포럼](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop)에서 도움을 요청할 수 있습니다. 
 
-피드백을 제공하거나 기능 제안을 만들려면 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 확인하세요. 
+피드백을 제공하거나 기능 제안을 만들려면 [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)에 항목을 제출하거나 찬성해 주세요. 
 
 ## 이 섹션의 내용
 
 | 항목 | 설명 |
 |-------|-------------|
-| [데스크톱 앱 변환기](desktop-to-uwp-run-desktop-app-converter.md) | 데스크톱 앱 변환기를 실행하는 방법을 보여 줍니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. |
-| [데스크톱 앱을 수동으로 변환](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 직접 만드는 방법을 알아봅니다. |
-| [변환된 데스크톱 앱 확장](desktop-to-uwp-extensions.md) | 시작 작업, 파일 탐색기 통합 등과 같은 기능을 사용하도록 설정하려면 확장을 사용하여 변환된 앱을 향상합니다. |
-| [변환된 데스크톱 앱을 지원하는 UWP API](desktop-to-uwp-supported-api.md) | 변환된 데스크톱 앱에서 사용할 수 있는 UWP API를 확인합니다. |
-| [변환된 데스크톱 앱에 서명](desktop-to-uwp-signing.md) | 인증서로 변환된 .appx 패키지에 서명하는 방법을 알아봅니다. |
-| [변환된 UWP 앱 배포 및 디버그](desktop-to-uwp-deploy-and-debug.md) | 앱 변환 후 배포 및 디버깅에 대한 도움말을 확인합니다. 또한 데스크톱 변환 확장의 내부에 대해 알고 싶은 경우 이 항목이 유용할 것입니다. |
+| [데스크톱 앱 변환기](desktop-to-uwp-run-desktop-app-converter.md) | 데스크톱 앱 변환기를 실행하는 방법을 보여 줍니다. |
+| [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md) | 앱 패키지 및 매니페스트를 직접 만드는 방법을 알아봅니다. |
+| [데스크톱 브리지 앱 확장](desktop-to-uwp-extensions.md) | 시작 작업 및 파일 탐색기 통합과 같은 기능을 사용하도록 설정하려면 확장을 사용하여 변환된 앱을 향상합니다. |
+| [데스크톱 브리지로 변환된 앱에 대해 지원되는 UWP API](desktop-to-uwp-supported-api.md) | 변환된 데스크톱 앱에서 사용할 수 있는 UWP API를 확인합니다. |
+| [데스크톱 브리지로 변환된 앱 디버그](desktop-to-uwp-debug.md) | 변환된 앱 디버깅에 대한 옵션에 대해 설명합니다. | 
+| [데스크톱 브리지로 변환된 앱에 서명](desktop-to-uwp-signing.md) | 인증서로 변환된 앱 패키지에 서명하는 방법을 알아봅니다. |
+| [데스크톱 브리지로 변환된 앱 배포](desktop-to-uwp-distribute.md) | 변환된 앱을 사용자에게 배포하는 방법을 참조하세요.  |
+| [데스크톱 브리지의 백그라운드 작업](desktop-to-uwp-behind-the-scenes.md) | 데스크톱 UWP 브리지가 이면에서 작동하는 방식에 대해 깊이 있게 살펴보세요. | 
+| [데스크톱 브리지의 알려진 문제](desktop-to-uwp-known-issues.md) | 데스크톱-UWP 브리지의 알려진 문제를 나열합니다. | 
 | [UWP에 대한 데스크톱 앱 브리지 코드 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) | 변환된 앱의 기능을 보여 주는 GitHub의 코드 샘플입니다. |
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

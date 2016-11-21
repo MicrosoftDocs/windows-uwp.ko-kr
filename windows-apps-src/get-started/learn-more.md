@@ -2,11 +2,11 @@
 author: GrantMeStrength
 ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
 title: "다음 작업"
-description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.'"
+description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&quot;"
 keywords: "개발자 센터, 시작"
 translationtype: Human Translation
-ms.sourcegitcommit: 743a3649613d39083520f8d79f4c0daf97336568
-ms.openlocfilehash: 5a1b5dbb3b9d841ca0c3f14f591acd716c153c54
+ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
+ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
 
 ---
 
@@ -18,10 +18,9 @@ ms.openlocfilehash: 5a1b5dbb3b9d841ca0c3f14f591acd716c153c54
 
 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스 만들기를 알아보는 것이 좋습니다. XAML의 주요 강점은 표시하려는 정보에 컨트롤을 결합하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다.
 
-많은 시작 정보를 한 곳에 모은 [개발자 도구 키트](https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox) 사이트를 둘러볼 수도 있습니다.
+앱에 애니메이션 및 효과 추가와 같이 최신 Windows10 프로그래밍 기술을 확인할 때 [Windows 개발자 블로그](https://blogs.windows.com/buildingapps)를 확인하세요.
 
 <table class="wdg-noborder">
-
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
     <td><h2>UWP 및 UWP 앱 수명 주기</h2><p>앱은 어떻게 시작하고 다른 앱을 시작하면 어떻게 될까요? 다음을 참조하세요.</p> <ul>
@@ -40,6 +39,7 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
       <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-and-events-intro">컨트롤 및 패턴 소개</a></li>
      <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/styling-controls">컨트롤 스타일 지정</a></li>
       <li><a href="https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">반응형 디자인에 대한 화면 크기 및 중단점</a></li>
+      <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">미리 만들어진 컨트롤 및 패턴 선택을 위해 UWP 커뮤니티 도구 키트 사용</a></li>
     </ul></td>  
 </tr>
  
@@ -162,6 +162,6 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

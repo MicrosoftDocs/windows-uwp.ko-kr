@@ -1,17 +1,17 @@
 ---
 title: "웹 계정 관리자를 사용하여 ID 공급자에 연결"
-description: "이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
+description: "이 문서는 새로운 Windows10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
-ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
+ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
+ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
 
 ---
 # 웹 계정 관리자를 사용하여 ID 공급자에 연결
 
-이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
+이 문서는 새로운 Windows10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
 
-> 참고: 전체 코드 샘플을 보려면 [Github의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
+> 참고: 전체 코드 샘플을 보려면 [의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
 
 ## 설정 방법
 
@@ -121,9 +121,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-또한 선택적 *authority* 매개 변수에 문자열 "consumers"를 전달합니다. Microsoft는 두 가지 유형의 인증, 즉 “consumers"의 경우는 MSA(Microsoft 계정)를, “organizations"의 경우는 AAD(Azure Active Directory)를 제공하기 때문입니다. "consumers" 기관에서는 첫 번째 옵션에 관심이 있다는 사실을 공급자에게 알려줍니다.
-
-엔터프라이즈 앱을 개발하는 경우 대신에 AAD 그래프 끝점을 사용하려고 할 수 있습니다. 해당 방법에 대한 자세한 내용은 [GitHub의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621) 전체 및 Azure 설명서를 참조하세요. 
+또한 선택적 *authority* 매개 변수에 문자열 "consumers"를 전달합니다. Microsoft는 두 가지 유형의 인증, 즉 “consumers"의 경우는 MSA(Microsoft 계정)를, “organizations"의 경우는 AAD(Azure Active Directory)를 제공하기 때문입니다. "consumers" 권한은 MSA 옵션을 원한다는 것을 나타냅니다. 엔터프라이즈 앱을 개발하는 경우 문자열 "organizations"를 대신 사용합니다.
 
 마지막으로 다음과 같은 새 WebAccountProviderCommand를 만들어 AccountsSettingsPane에 공급자를 추가합니다. 
 
@@ -168,9 +166,22 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 서비스 공급자는 서비스에 사용할 토큰을 가져오도록 지정해야 하는 범위에 대한 설명서를 제공합니다. 
 
-Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]을 참조하세요. 
+* Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]을 참조하세요. 
+* OneDrive의 경우 (OneDrive 인증 및 로그인)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]을 참조하세요. 
 
-OneDrive의 경우 (OneDrive 인증 및 로그인)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]을 참조하세요. 
+엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
+
+```C#
+private async void GetAadTokenAsync(WebAccountProviderCommand command)
+{
+    string clientId = "your_guid_here"; // Obtain your clientId from the Azure Portal
+    WebTokenRequest request = new WebTokenRequest(provider, "User.Read", clientId);
+    request.Properties.Add("resource", "https://graph.microsoft.com");
+    WebTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(request);
+}
+```
+
+이 문서의 나머지 부분에서는 MSA 시나리오를 계속 설명하지만 AAD에 대한 코드는 매우 유사합니다. GitHub의 전체 샘플을 포함하여 AAD/Graph에 대한 자세한 내용은 [Microsoft Graph 설명서](https://graph.microsoft.io/docs/platform/get-started)를 참조하세요.
 
 ## 토큰 사용
 
@@ -390,6 +401,6 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

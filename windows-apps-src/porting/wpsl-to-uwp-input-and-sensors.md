@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
 description: "디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다."
-title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅'"
+title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅&quot;"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc

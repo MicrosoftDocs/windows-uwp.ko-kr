@@ -4,17 +4,17 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다."
 title: "지원되는 코덱"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
+ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
+ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
 ---
 
 # 지원되는 코덱
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다.
+이 문서에는 UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다.
 
 아래 표에서 “D”는 디코더 지원을 나타내고 “E”는 인코더 지원을 나타냅니다.
 
@@ -2685,18 +2685,80 @@ ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
 </tbody>
 </table>
 
- 
+## 이미지 코덱 및 형식 지원 
 
- 
+<table>
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">코덱</th>
+<th align="left">데스크톱</th>
+<th align="left">기타 디바이스 패밀리</th>
+</tr>
+</thead>
+<tr class="odd">
+<td align="left">BMP</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">DDS</td>
+<td align="left">D/E<sup>1</sup></td>
+<td align="left">D/E<sup>1</sup></td>
+</tr>
+<tr class="odd">
+<td align="left">DNG</td>
+<td align="left">D<sup>2</sup></td>
+<td align="left">D<sup>2</sup></td>
+</tr>
+<tr class="even">
+<td align="left">GIF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">ICO</td>
+<td align="left">D</td>
+<td align="left">D</td>
+</tr>
+<tr class="even">
+<td align="left">JPEG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">JPEG-XR</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">PNG</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="odd">
+<td align="left">TIFF</td>
+<td align="left">D/E</td>
+<td align="left">D/E</td>
+</tr>
+<tr class="even">
+<td align="left">카메라 원시</td>
+<td align="left">D<sup>3</sup></td>
+<td align="left">아니요</td>
+</tr>
+</table>
 
- 
+<sup>1</sup> BC1에서 BC5의 압축을 사용하는 DDS 이미지가 지원됩니다.  
+<sup>2</sup> 원시가 아닌 미리 보기가 포함된 DNG 이미지가 지원됩니다.  
+<sup>3</sup> 특정 카메라 원시 형식만 지원됩니다.  
+
+이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx)을 참조하세요.
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

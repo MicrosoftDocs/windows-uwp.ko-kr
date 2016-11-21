@@ -4,14 +4,14 @@ title: "백그라운드 작업 실행 조건 설정"
 description: "백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 translationtype: Human Translation
-ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
-ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
+ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
+ms.openlocfilehash: c22fed27b77f3287dd11a05c32405fe18521af65
 
 ---
 
 # 백그라운드 작업 실행 조건 설정
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -29,9 +29,9 @@ ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
 
 ## SystemCondition 개체 만들기
 
-이 항목에서는 앱에 백그라운드 작업이 이미 연결되어 있으며, [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체(**taskBuilder**)를 만드는 코드가 앱에 포함되어 있다고 가정합니다.  백그라운드 작업을 먼저 만들어야 하는 경우 [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md) 또는 [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+이 항목에서는 앱에 백그라운드 작업이 이미 연결되어 있으며, [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체(**taskBuilder**)를 만드는 코드가 앱에 포함되어 있다고 가정합니다.  백그라운드 작업을 먼저 만들어야 하는 경우 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)을 참조하세요.
 
-이 항목은 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업뿐만 아니라 별도 프로세스에서 실행되는 백그라운드 작업에도 적용됩니다.
+이 항목은 포그라운드 앱과 동일한 프로세스에서 실행되는 백그라운드 작업뿐만 아니라 out-of-process에서 실행되는 백그라운드 작업에도 적용됩니다.
 
 조건을 추가하기 전에 백그라운드 작업이 실행되기 위해 충족해야 하는 조건을 나타내는 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) 개체를 만듭니다. 생성자에서 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) 열거형 값을 제공하여 충족해야 하는 조건을 지정합니다.
 
@@ -155,14 +155,15 @@ ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
 
 > **참고** 백그라운드 작업이 필요한 경우에만 실행되고 필요하지 않은 경우에는 실행되지 않도록 백그라운드 작업에 대한 조건을 선택합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)을 참조하세요.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> 
+  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
 ## 관련 항목
 
 ****
 
-* [별도 프로세스에서 실행되는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [단일 프로세스 백그라운드 작업 만들기 및 등록](create-and-register-a-singleprocess-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -172,9 +173,6 @@ ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-
-****
-
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
@@ -184,6 +182,6 @@ ms.openlocfilehash: 0d90511c9fcfd722dfcc51a8ff8e5163e31e9fdf
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,14 +4,14 @@ description: "UWP 앱에서 연락처 및 일정 정보를 사용하는 방법"
 title: "연락처 및 일정"
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 translationtype: Human Translation
-ms.sourcegitcommit: 5c0f6ef1f1a346a66ca554a415d9f24c8a314ae1
-ms.openlocfilehash: da73790ca9aec3fa16295eac4880c7b80db033ab
+ms.sourcegitcommit: c21a5f0f859e3a80d01786caaf6941c3d0b11c18
+ms.openlocfilehash: 0b93ab3f5e0a622fb924a752ec581bbb9df32936
 
 ---
 
 # 연락처 및 일정
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자가 연락처 및 약속에 액세스하여 콘텐츠, 메일, 일정 정보, 메시지를 비롯하여 개발자가 디자인하는 모든 기능을 공유하도록 할 수 있습니다.
 
@@ -24,7 +24,6 @@ ms.openlocfilehash: da73790ca9aec3fa16295eac4880c7b80db033ab
 | [SMS 메시지 보내기](sending-an-sms-message.md) | 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다. |
 | [약속 관리](managing-appointments.md) | [<strong>Windows.ApplicationModel.Appointments</strong>](https://msdn.microsoft.com/library/windows/apps/Dn263359) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다. |
 | [연락처 카드의 작업에 앱 연결](integrating-with-contacts.md) | 연락처 카드 또는 미니 연락처 카드의 작업 옆에 앱을 표시하는 방법을 보여 줍니다. 사용자는 앱을 선택하여 프로필 페이지 열기, 전화 걸기, 메시지 보내기 등의 작업을 수행할 수 있습니다. |
-| [피플 앱에 소셜 피드 제공](integrating-social-feeds-into-contact-cards.md) | 데이터베이스의 소셜 피드 데이터를 피플 앱에 통합합니다. 피드 데이터는 피플 앱의 <strong>새 소식</strong> 페이지나 연락처의 <strong>프로필</strong> 페이지에 표시됩니다. |
 
  
 
@@ -35,10 +34,9 @@ ms.openlocfilehash: da73790ca9aec3fa16295eac4880c7b80db033ab
 * [연락처 선택 기능 앱 샘플](http://go.microsoft.com/fwlink/p/?linkid=231575)
 * [접촉 동작 처리 샘플](http://go.microsoft.com/fwlink/p/?LinkID=320151)
 * [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)
-* [소셜 정보 샘플](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

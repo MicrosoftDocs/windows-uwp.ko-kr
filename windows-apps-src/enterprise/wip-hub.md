@@ -6,14 +6,15 @@ MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: WIP(Windows Information Protection)
 translationtype: Human Translation
-ms.sourcegitcommit: 1070561ea95cd1d884303fdd476b40a9ec88e390
-ms.openlocfilehash: 2beec354ed7dbb3cc2d4cb502977ce028b4eaf1d
+ms.sourcegitcommit: 724d9edf67d0f73ceb3eb2ac323e0a0f42f2dd0d
+ms.openlocfilehash: f9cfa8d1d7ea4e78208a4fb3fc853884a13a676c
 
 ---
 
 # WIP(Windows Information Protection)
 
-__참고__ WIP(Windows Information Protection) 정책을 Windows 10 버전 1607에 적용할 수 있습니다.
+
+  __참고__ WIP(Windows Information Protection) 정책을 Windows10 버전 1607에 적용할 수 있습니다.
 
 WIP는 조직에서 정의한 정책을 적용하여 조직에 속한 데이터를 보호합니다. 앱이 이러한 정책에 포함된 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 이 항목은 사용자의 개인 데이터에 영향을 주지 않고 더욱 원활하게 이러한 정책을 적용하는 앱을 빌드하는 데 도움이 됩니다.
 
@@ -66,9 +67,6 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 지원 앱으
 
   예를 들어, 데이터가 비엔터프라이즈 네트워크 끝점으로 이동할 수 없도록 하고, 데이터 로밍을 허용하기 전에 암호화된 휴대용 형태로 데이터를 래핑하고, 잠재적으로(정책 설정에 따라) 허용된 목록에 없는 앱에 엔터프라이즈 데이터를 붙여넣기 전에 사용자에게 확인 메시지를 표시합니다.
 
-> **참고** WIP 파일 보호는 프로비전된 경우 RMS(권한 관리 서비스) 키를 활용합니다. 이러한 키는 디바이스 간에 로밍될 수 있으므로 보호된 데이터의 로밍을 허용하기 때문입니다. RMS 키가 없을 경우 이러한 API는 로컬 선택 지우기 키로 대체되며 로밍 기능을 제한합니다. 암호화된 상태로 로밍되는 데이터는 Microsoft에서 제공하는 플랫폼별 RMS 앱 및 RMS 지원 타사 앱을 통해 하위 수준 Windows 및 타사 디바이스에서 액세스할 수 있습니다.
-
-
 
 
 
@@ -79,6 +77,6 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 지원 앱으
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

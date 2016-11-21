@@ -4,13 +4,13 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: "시각적 계층"
 description: "Windows.UI.Composition API는 프레임워크 계층(XAML)과 그래픽 계층(DirectX) 간의 컴퍼지션 계층에 대한 액세스를 제공합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
-ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
+ms.sourcegitcommit: ad262cc6dcfd53156f3f3a3e850f9cfe99e87dc6
+ms.openlocfilehash: 066e5aea48340f96878a41aa28f0fef0c3bda9f5
 
 ---
 # 시각적 계층
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows 10에서는 모든 Windows 응용 프로그램(데스크톱 또는 모바일)에 사용할 수 있는 새로운 통합 작성자 및 렌더링 엔진을 만들기 위해 중요한 작업이 수행되었습니다. 이러한 작업 결과 Windows.UI.Composition이라는 통합 컴퍼지션 WinRT API가 개발되었으며 이 API는 새 작성기 기반의 애니메이션 및 효과와 함께 새로운 경량 컴퍼지션 개체에 대한 액세스를 제공합니다.
 
@@ -30,6 +30,7 @@ API를 사용하면 개발자가 시각적 트리의 단일 노드를 나타내�
 -   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – 기준 개체입니다. 대부분의 속성은 여기에 있으며 다른 시각적 개체에 상속됩니다.
 -   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)에서 파생되며 자식 시각적 개체를 삽입할 수 있는 기능을 추가합니다.
 -   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810)에서 파생되며 이미지, 효과 및 swapchain 형태의 콘텐츠를 포함합니다.
+-   [**LayerVisual**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.layervisual.aspx) - 자식이 단일 레이어로 병합되는 ContainerVisual입니다.  
 -   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – 응용 프로그램과 시스템 작성자 프로세스 간의 관계를 관리하는 개체 팩터리입니다.
 
 작성자는 트리의 시각적 개체를 클리핑 또는 변환하는 데 사용되는 많은 컴퍼지션 개체뿐 아니라 다양한 애니메이션 및 효과 집합의 팩터리이기도 합니다.
@@ -56,16 +57,16 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 표현 애니메�
 
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>추가 리소스:
 
--   이 API에 대한 Kenny Kerr의 MSDN 문서 [Graphics and Animation - Windows Composition Turns 10](https://msdn.microsoft.com/magazine/mt590968)(그래픽 및 애니메이션 - Windows 컴퍼지션(Windows 10))을 참조하세요.
+-   이 API에 대한 Kenny Kerr의 MSDN 문서 [Graphics and Animation - Windows Composition Turns 10](https://msdn.microsoft.com/magazine/mt590968)(그래픽 및 애니메이션 - Windows 컴퍼지션(Windows10))을 참조하세요.
 -   [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs)의 고급 UI 및 Composition 샘플
 -   [**API에 대한 전체 참조 설명서**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   알려진 문제: [알려진 문제](http://go.microsoft.com/fwlink/?LinkId=823237)
+-   [알려진 문제](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -77,6 +78,6 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 표현 애니메�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

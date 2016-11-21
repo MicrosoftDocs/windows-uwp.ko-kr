@@ -4,8 +4,8 @@ ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: "Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다."
 title: "Windows 스토어 서비스를 사용하여 분석 데이터에 액세스"
 translationtype: Human Translation
-ms.sourcegitcommit: 47e0ac11178af98589e75cc562631c6904b40da4
-ms.openlocfilehash: 1293bb5beb927425928d832f887129263db5a895
+ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
+ms.openlocfilehash: 468be96b70d07567163b2caccebaa8e2f6ecd592
 
 ---
 
@@ -72,6 +72,8 @@ Azure AD 액세스 토큰이 있으면 Windows 스토어 분석 API를 호출할
 -   [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 -   [앱 등급 가져오기](get-app-ratings.md)
 -   [앱 리뷰 가져오기](get-app-reviews.md)
+-   [광고 성과 데이터 가져오기](get-ad-performance-data.md)
+-   [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
 
 ## 코드 예제
 
@@ -233,10 +235,12 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱 등급 가져오기](get-app-ratings.md)
 * [앱 리뷰 가져오기](get-app-reviews.md)
+* [광고 성과 데이터 가져오기](get-ad-performance-data.md)
+* [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
  
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

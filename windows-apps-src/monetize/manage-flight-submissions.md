@@ -4,8 +4,8 @@ ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 패키지 플라이트 제출을 관리합니다."
 title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 관리"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 18d28495b80101cf5cfe53869b0f5cd3d61b50c9
+ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
+ms.openlocfilehash: 7b59bb255774c8050232831e7f0d7a78a921ec6d
 
 ---
 
@@ -20,12 +20,16 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 | 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다. 자세한 내용은 [패키지 플라이트 제출 가져오기](get-a-flight-submission.md)를 참조하세요. |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | 기존 패키지 플라이트 제출의 상태를 가져옵니다. 자세한 내용은 [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)를 참조하세요. |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/applications/{applicationId}/flights/{flightId}/submissions``` | Windows 개발자 센터 계정에 등록된 앱에 대한 새 패키지 플라이트 제출을 만듭니다. 자세한 내용은 [패키지 플라이트 제출 만들기](create-a-flight-submission.md)를 참조하세요. |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Windows 개발자 센터에 새로운 또는 업데이트된 패키지 플라이트 제출을 커밋합니다. 자세한 내용은 [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)을 참조하세요. |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출을 업데이트합니다. 자세한 내용은 [패키지 플라이트 제출 업데이트](update-a-flight-submission.md)를 참조하세요. |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 패키지 플라이트 제출을 삭제합니다. 자세한 내용은 [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다. 자세한 내용은 [이 문서](get-a-flight-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status``` | 기존 패키지 플라이트 제출의 상태를 가져옵니다. 자세한 내용은 [이 문서](get-status-for-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions``` | Windows 개발자 센터 계정에 등록된 앱에 대한 새 패키지 플라이트 제출을 만듭니다. 자세한 내용은 [이 문서](create-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` | Windows 개발자 센터에 새로운 또는 업데이트된 패키지 플라이트 제출을 커밋합니다. 자세한 내용은 [이 문서](commit-a-flight-submission.md)를 참조하세요. |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 기존 패키지 플라이트 제출을 업데이트합니다. 자세한 내용은 [이 문서](update-a-flight-submission.md)를 참조하세요. |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}``` | 패키지 플라이트 제출을 삭제합니다. 자세한 내용은 [이 문서](delete-a-flight-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout``` | 패키지 플라이트 제출에 대한 점진적 출시 정보 가져오기 자세한 내용은 [이 문서](get-package-rollout-info-for-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | 패키지 플라이트 제출에 대한 점진적 출시 백분율 업데이트 자세한 내용은 [이 문서](update-the-package-rollout-percentage-for-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout``` | 패키지 플라이트 제출에 대한 점진적 출시 중지 자세한 내용은 [이 문서](halt-the-package-rollout-for-a-flight-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout``` | 패키지 플라이트 제출에 대한 점진적 출시 마무리 자세한 내용은 [이 문서](finalize-the-package-rollout-for-a-flight-submission.md)를 참조하세요. |
 
 <span id="create-a-package-flight-submission">
 ## 패키지 플라이트 제출 만들기
@@ -36,7 +40,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
-3. Windows 스토어 제출 API에서 다음 메서드를 실행합니다. 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다. 자세한 내용은 [패키지 플라이트 제출 만들기](create-a-flight-submission.md)를 참조하세요.
+3. Windows 스토어 제출 API에서 다음 메서드를 실행하여 [패키지 플라이트 제출을 만듭니다](create-a-flight-submission.md). 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications{applicationId}/flights/{flightId}/submissions
@@ -46,7 +50,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 4. 제출에 대한 새 패키지를 추가하는 경우 [패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 ZIP 보관 파일에 추가합니다.
 
-5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 업데이트하고 다음 메서드를 실행하여 제출을 업데이트합니다. 자세한 내용은 [패키지 플라이트 제출 업데이트](update-a-flight-submission.md)를 참조하세요.
+5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 수정하고 다음 메서드를 실행하여 [패키지 플라이트 제출을 업데이트](update-a-flight-submission.md)합니다.
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}
@@ -66,13 +70,13 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. 다음 메서드를 실행하여 제출을 커밋합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다. 자세한 내용은 [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)을 참조하세요.
+5. 다음 메서드를 실행하여 [패키지 플라이트 제출을 커밋](commit-a-flight-submission.md)합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
   ```
 
-6. 다음 메서드를 실행하여 커밋 상태를 확인합니다. 자세한 내용은 [패키지 플라이트 제출 상태 가져오기](get-status-for-a-flight-submission.md)를 참조하세요.
+6. 다음 메서드 실행을 통해 [패키지 플라이트 제출의 상태를 가져와](get-status-for-a-flight-submission.md) 커밋 상태를 확인합니다.
 
   ```
   GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status
@@ -81,6 +85,51 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
 7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
+
+<span id="manage-gradual-package-rollout">
+## 패키지 플라이트 제출에 대한 점진적 패키지 출시 관리
+
+패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
+
+또한 Windows 스토어 제출 API에서 다음 메서드를 사용하여 패키지 플라이트 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정하고 관리할 수도 있습니다.
+
+* 패키지 플라이트 제출에 대한 점진적 패키지 출시를 사용하도록 설정하려면
+
+  1. [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 또는 [패키지 플라이트 제출 가져오기](get-a-flight-submission.md).
+  2. 응답 데이터에서 [packageRollout](#package-rollout-object) 리소스를 찾고, *isPackageRollout* 필드를 true로 설정하고, *packageRolloutPercentage* 필드를 업데이트된 패키지를 가져와야 하는 앱 고객의 백분율로 설정합니다.
+  3. 업데이트된 패키지 플라이트 제출 데이터를 [패키지 플라이트 제출 업데이트](update-a-flight-submission.md) 메서드에 전달합니다.
+
+<span/>
+
+* [패키지 플라이트 제출에 대한 패키지 출시 정보를 가져오려면](get-package-rollout-info-for-a-flight-submission.md) 다음 메서드를 실행합니다.
+
+  ```
+  GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout
+  ```
+
+<span/>
+
+* [패키지 플라이트 제출에 대한 패키지 출시 백분율을 업데이트](update-the-package-rollout-percentage-for-a-flight-submission.md)하려면 다음 메서드를 실행합니다.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage  
+  ```
+
+<span/>
+
+* [패키지 플라이트 제출에 대한 패키지 출시를 중지](halt-the-package-rollout-for-a-flight-submission.md)하려면 다음 메서드를 실행합니다.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout   
+  ```  
+
+<span/>
+
+* [패키지 플라이트 제출에 대한 패키지 출시를 마무리](finalize-the-package-rollout-for-a-flight-submission.md)하려면 다음 메서드를 실행합니다.
+
+  ```
+  POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout
+  ```
 
 ## 리소스
 
@@ -113,6 +162,16 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "fileUploadUrl": "https://productingestionbin1.blob.core.windows.net/ingestion/8b389577-5d5e-4cbe-a744-1ff2e97a9eb8?sv=2014-02-14&sr=b&sig=wgMCQPjPDkuuxNLkeG35rfHaMToebCxBNMPw7WABdXU%3D&se=2016-06-17T21:29:44Z&sp=rwl",
   "targetPublishMode": "Immediate",
   "targetPublishDate": "",
@@ -129,6 +188,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | status           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 아래의 [상태 세부 정보](#status-details-object) 섹션을 참조하세요. |
 | flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 아래의 [플라이트 패키지](#flight-package-object) 섹션을 참조하세요.  |
+| packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 아래의 [패키지 배달 옵션 개체](#package-delivery-options-object) 섹션을 참조하세요.  |
 | fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [패키지 플라이트 제출 만들기](#create-a-package-flight-submission)를 참조하세요.  |
 | targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
@@ -203,8 +263,49 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | architecture    |  문자열   |  앱 패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
-| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |    
+| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |    
+
+
+<span id="package-delivery-options-object" />
+### 패키지 전송 옵션 개체
+
+이 리소스는 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
+
+```json
+{
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
+}
+```
+
+이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명        |
+|-----------------|---------|------|
+| packageRollout   |   object      |  제출에 대한 점진적 패키지 출시 설정을 포함합니다. 자세한 내용은 아래의 [패키지 출시 개체](#package-rollout-object) 섹션을 참조하세요.    |  
+| isMandatoryUpdate    | boolean    |  이 제출의 패키지를 앱 업데이트 자동 설치를 필수 구성 요소로 처리할지 여부를 나타냅니다. 앱 업데이트 자동 설치를 필수 패키지에 대한 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.    |  
+| mandatoryUpdateEffectiveDate    |  date   |  이 제출의 패키지가 필수가 되는 날짜 및 시간을 ISO 8601 형식 및 UTC 표준 시간대로 나타낸 것입니다.   |        
+
+<span id="package-rollout-object" />
+### 패키지 출시 개체
+
+이 리소스는 제출에 대한 점진적 [패키지 출시 설정](#manage-gradual-package-rollout)을 포함합니다. 이 리소스의 값은 다음과 같습니다.
+
+| 값           | 유형    | 설명        |
+|-----------------|---------|------|
+| isPackageRollout   |   boolean      |  제출에 대해 점진적 패키지 출시를 사용하도록 설정할지 여부를 나타냅니다.    |  
+| packageRolloutPercentage    | float    |  점진적 출시에서 패키지를 받을 사용자의 백분율입니다.    |  
+| packageRolloutStatus    |  문자열   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
 <span/>
 
@@ -249,6 +350,6 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

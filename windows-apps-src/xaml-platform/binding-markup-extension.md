@@ -4,14 +4,14 @@ description: "Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인�
 title: "바인딩 태그 확장"
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 translationtype: Human Translation
-ms.sourcegitcommit: 0f9955b897c626e7f6abb5557658e1b1e5937ffd
-ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
+ms.sourcegitcommit: 3ad7dd8261ceb549de6bd9a5ae513e6f6fdb8d49
+ms.openlocfilehash: a6431aed9941079bd05c623229f4ae3236a1b327
 
 ---
 
 # {Binding} 태그 확장
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **참고** 성능 및 개발자 생산성에 최적화된 새 바인딩 메커니즘을 Windows 10에 사용할 수 있습니다. [{x:Bind} 태그 확장](x-bind-markup-extension.md)을 참조하세요.
 
@@ -20,11 +20,6 @@ ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
 **{Binding}** 태그 확장은 코드 등 데이터 원본에서 가져온 값에 컨트롤의 속성을 데이터 바인딩하는 데 사용됩니다. **{Binding}** 태그 확장은 XAML 로드 시 [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820) 클래스의 인스턴스로 변환됩니다. 이 바인딩 개체는 데이터 원본의 속성에서 값을 가져와서 컨트롤의 속성으로 푸시합니다. 필요한 경우 데이터 원본 속성의 값 변경을 관찰하고 해당 변경 내용에 따라 자체적으로 업데이트하도록 바인딩 개체를 구성할 수 있습니다. 또한 필요한 경우 제어 값 변경을 원본 속성에 다시 적용하도록 구성할 수도 있습니다. 데이터 바인딩의 대상인 속성은 종속성 속성이어야 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
 
 **{Binding}**은 로컬 값과 동일한 종속성 속성 우선 순위를 가지며, 명령적 코드에서 로컬 값을 설정할 경우 태그에 설정된 **{Binding}**의 효과가 제거됩니다.
-
-**{Binding}을 보여 주는 샘플 앱**
-
--   [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) 앱 다운로드
--   [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 앱 다운로드
 
 ## XAML 특성 사용
 
@@ -48,7 +43,7 @@ ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
 
 ## 속성 경로
 
-*PropertyPath*는 원본 속성에 바인딩할 속성을 설명하는 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 값을 설정합니다. PropertyPath는 위치 매개 변수이므로 이름 없는 첫 번째 매개 변수로 지정할 수 있습니다(`{Binding Path=...}`). 또는 매개 변수 이름을 명시적으로 사용할 수 있습니다(`{Binding Path=...}`).
+[**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)는 소스 속성에 바인딩할 속성에 대해 설명합니다. 경로는 위치 매개 변수로, 매개 변수 이름을 명시적으로 사용하거나(`{Binding Path=EmployeeID}`), 이름 없는 첫 번째 매개 변수로 지정할 수 있습니다(`{Binding EmployeeID}`).
 
 [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)의 형식은 속성 경로, 즉 사용자 지정 형식 또는 프레임워크 형식의 속성 또는 하위 속성으로 평가되는 문자열입니다. 형식은 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)일 수 있지만 반드시 그래야 하는 것은 아닙니다. 속성 경로의 단계는 점(.)으로 구분되므로 연속적인 하위 속성을 트래버스하기 위해 여러 구분 기호를 포함할 수 있습니다. 바인딩할 개체를 구현하는 데 사용되는 프로그래밍 언어에 관계없이 점 구분 기호를 사용합니다.
 
@@ -86,7 +81,7 @@ ms.openlocfilehash: 95b48b55f11c4de0b4a51106b6cf5439bfa784b9
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) 및 **ConverterLanguage**는 모두 바인딩 원본의 값 또는 형식을 바인딩 대상 속성과 호환되는 형식 또는 값으로 변환하는 시나리오와 관련이 있습니다. 자세한 내용과 예제는 [데이터 바인딩 심층 분석](https://msdn.microsoft.com/library/windows/apps/mt210946)의 "데이터 변환" 섹션을 참조하세요.
 
 > [!NOTE]
-> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> Windows10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) 및 [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828)은 바인딩 소스를 지정하므로 상호 배타적입니다.
 
@@ -131,6 +126,6 @@ Microsoft Visual Studio의 Microsoft IntelliSense는 XAML 태그 편집기에서
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

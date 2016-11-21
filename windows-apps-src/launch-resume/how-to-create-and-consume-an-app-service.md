@@ -3,30 +3,30 @@ author: TylerMSFT
 title: "앱 서비스 만들기 및 사용"
 description: "다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법을 알아봅니다."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: app to app
+keywords: app to app communication interprocess communication IPC Background messaging background communication app to app
 translationtype: Human Translation
-ms.sourcegitcommit: d7d7edf8d1ed6ae1c4be504cd4827bb941f14380
-ms.openlocfilehash: 13b9456d1f6ee2b592db0e5e38b9f9e7fe41764c
+ms.sourcegitcommit: aec7b768ae3bcf0a45a48b2f9a204484b9059dc9
+ms.openlocfilehash: 2449a3198e9265d187557608e097c1369eb471c2
 
 ---
 
 # 앱 서비스 만들기 및 사용
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법에 대해 알아봅니다.
 
-## 새 앱 서비스 공급자 프로젝트 만들기
+Windows10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행되는 앱 서비스를 만들 수 있습니다. 이 문서는 별도 백그라운드 프로세스에서 실행되는 앱 서비스 만들기에 중점을 둡니다. 공급자와 같은 프로세스에서 실행되는 앱 서비스에 대한 자세한 내용은 [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)을 참조하세요.
 
+## 새 앱 서비스 공급자 프로젝트 만들기
 
 이 방법에서는 편의상 모두를 한 솔루션으로 만듭니다.
 
 -   Microsoft Visual Studio 2015에서 UWP 앱 프로젝트를 만들고 AppServiceProvider로 이름을 지정합니다. **새 프로젝트** 대화 상자에서 **템플릿 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)**을 선택합니다. 이 앱에서 앱 서비스를 제공합니다.
 
 ## package.appxmanifest에 앱 서비스 확장 추가
-
 
 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Application&gt;** 요소에 다음과 같은 AppService 확장 기능을 추가합니다. 이 예제에서는 `com.Microsoft.Inventory` 서비스를 광고하고 이 앱이 앱 서비스 공급자로 식별됩니다. 실제 서비스가 백그라운드 작업으로 구현됩니다. 앱 서비스 앱에서 다른 앱에 서비스를 공개합니다. 서비스 이름에 역방향 도메인 이름 스타일을 사용하는 것이 좋습니다.
 
@@ -51,7 +51,6 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
 **EntryPoint** 특성을 통해 서비스를 구현하는 클래스를 식별합니다. 이 예에서 다음으로 이 클래스를 구현할 것입니다.
 
 ## 앱 서비스 만들기
-
 
 1.  앱 서비스는 백그라운드 작업으로 구현됩니다. 따라서 포그라운드 응용 프로그램이 백그라운드 작업 방식으로 작업을 수행하도록 다른 응용 프로그램에서 앱 서비스를 호출할 수 있습니다. MyAppService라는 솔루션에 새 Windows 런타임 구성 요소 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Windows 런타임 구성 요소(Windows Universal)** 선택)
 2.  AppServiceProvider 프로젝트에서 MyAppService 프로젝트에 참조를 추가합니다.
@@ -105,7 +104,6 @@ AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Appli
     작업이 취소되면 **OnTaskCanceled()**가 호출됩니다. 클라이언트 앱에서 [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704)을 삭제하거나 클라이언트 앱이 일시 중단되거나 OS가 종료 또는 절전 상태이거나 OS에 작업을 실행할 리소스가 없는 경우 이 작업이 취소됩니다.
 
 ## 앱 서비스의 코드 작성
-
 
 **OnRequestedReceived()**로 앱 서비스의 코드가 이동됩니다. MyAppService의 Class1.cs에 있는 스텁 **OnRequestedReceived()**를 이 예의 코드로 바꿉니다. 이 코드에서는 인벤토리 항목의 인덱스를 가져온 다음 지정된 인벤토리 항목의 이름과 가격을 검색하기 위해 명령 문자열과 함께 서비스에 전달합니다. 편의를 위해 오류 처리 코드는 제거되었습니다.
 
@@ -161,7 +159,7 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 이 예제에서는 [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대해 awaitable 메서드를 호출하므로 **OnRequestedReceived()**가 **async**입니다.
 
-서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. [ **SendResponseAsync** ](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
+서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
 
 앱 서비스에서는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 사용하여 정보를 교환합니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 "Command"라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 "ID" 키에 저장됩니다. 반환 값은 "Result" 키에 저장됩니다.
 
@@ -171,14 +169,12 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 ## 서비스 앱 배포 및 패키지 패밀리 이름 가져오기
 
-
 앱 서비스 공급자 앱을 배포해야 클라이언트에서 호출할 수 있습니다. 앱 서비스 앱을 호출하려면 해당 패키지 패밀리 이름도 필요합니다.
 
 -   앱 서비스 응용 프로그램의 패키지 패밀리 이름을 가져오는 방법은 **AppServiceProvider** 프로젝트에서(예: App.xaml.cs의 `public App()`에서) [**Windows.ApplicationModel.Package.Current.Id.FamilyName**](https://msdn.microsoft.com/library/windows/apps/br224670)을 호출하고 결과를 기록하는 것뿐입니다. Microsoft Visual Studio에서 AppServiceProvider를 실행하려면 솔루션 탐색기 창에서 시작 프로젝트로 설정한 다음 프로젝트를 실행합니다.
 -   패키지 패밀리 이름을 가져오는 또 다른 방법은 솔루션을 배포(**빌드 &gt; 솔루션 배포**)하고 출력 창에서 전체 패키지 이름을 기록(**보기 &gt; 출력**)하는 것입니다. 패키지 이름을 파생시키려면 출력 창의 문자열에서 플랫폼 정보를 제거해야 합니다. 예를 들어 출력 창에 보고된 전체 패키지 이름이 "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_1.0.0.0\_x86\_\_yd7nk54bq29ra"이면 "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_yd7nk54bq29ra"를 패키지 패밀리 이름으로 두고 "1.0.0.0\_x86\_\_"을 추출합니다.
 
 ## 앱 서비스를 호출하는 클라이언트 작성
-
 
 1.  ClientApp이라는 솔루션에 Windows 유니버설 앱 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)** 선택).
 2.  ClientApp 프로젝트에서 다음 **using** 문을 MainPage.xaml.cs의 맨 위에 추가합니다.
@@ -278,7 +274,6 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 ## 클라이언트 디버그
 
-
 1.  이전 단계의 지침에 따라 앱 서비스를 디버그합니다.
 2.  시작 메뉴에서 ClientApp을 실행합니다.
 3.  ClientApp.exe 프로세스(ApplicationFrameHost.exe 프로세스가 아님)에 디버거를 연결합니다. (Visual Studio에서 **디버그 &gt; 프로세스에 추가...** 선택)
@@ -287,11 +282,9 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 
 ## 설명
 
-
 이 예제에서는 앱 서비스를 만들고 다른 앱에서 이 앱을 호출하는 데 관해 간단한 소개합니다. 참고해야 할 사항은 앱 서비스를 호스트하도록 백그라운드 작업을 만들고 windows.appservice 확장 기능을 앱 서비스 공급자 앱의 Package.appxmanifest 파일에 추가하여, 클라이언트 앱에서 연결할 수 있도록 앱 서비스 공급자 앱의 패키지 패밀리 이름을 확보하고 [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704)을 사용하여 서비스를 호출하는 것입니다.
 
 ## MyAppService의 전체 코드
-
 
 ```cs
 using System;
@@ -382,15 +375,11 @@ namespace MyAppService
 
 ## 관련 항목
 
-
+* [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)
 * [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
 
- 
-
- 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

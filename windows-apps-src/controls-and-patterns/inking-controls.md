@@ -5,8 +5,8 @@ title: "수동 입력 컨트롤"
 label: Inking Controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+ms.sourcegitcommit: 2fe53747da7995b5442eda0a6c20b120b3b615e5
+ms.openlocfilehash: aacf45c90458d3ca1bd295f904e8f2393d27542d
 
 ---
 # 수동 입력 컨트롤
@@ -143,6 +143,7 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 - InkToolbar 컨트롤을 InkCanvas와 함께 사용하면 기본적인 수동 입력 기능과 설정을 제공할 수 있습니다. InkCanvas와 InkToolbar 모두 프로그래밍 방식으로 사용자 지정할 수 있습니다.
 - InkToolbar 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스와 터치를 사용한 수동 입력을 지원할 수 있습니다.
 - 터치식 입력을 사용한 수동 입력을 지원하는 경우 “터치 쓰기” 도구 설명과 함께 Segoe MLD2 자산 글꼴의 ED5F 아이콘을 토글 단추에 사용하는 것이 좋습니다.
+- 스트로크 선택을 입력할 때 “선택 도구” 도구 설명과 함께 Segoe MLD2 자산 글꼴의 EF20 아이콘을 도구 단추에 사용하는 것이 좋습니다.
 - 둘 이상의 InkCanvas를 사용하는 경우 단일 InkToolbar를 사용하여 여러 캔버스의 수동 입력을 제어하는 것이 좋습니다.
 - 최상의 성능을 얻으려면 기본 및 사용자 지정 도구 둘 다를 위한 사용자 지정 플라이아웃 하나를 만드는 대신 기본 플라이아웃을 변경하는 것이 좋습니다.
 
@@ -160,6 +161,6 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

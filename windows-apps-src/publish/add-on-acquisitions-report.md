@@ -4,15 +4,15 @@ Description: "Windows 개발자 센터 대시보드의 추가 기능 구입 보�
 title: "추가 기능 구입 보고서"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 translationtype: Human Translation
-ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
-ms.openlocfilehash: 144a8400acf0333fcd50e698b333c02942081ef3
+ms.sourcegitcommit: 7b73682ea36574f8b675193a174d6e4b4ef85841
+ms.openlocfilehash: 76ea807f1f8306bb964a61d1c81e9bf578e4b344
 
 ---
 
 # 추가 기능 구입 보고서
 
 
-Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
+Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 통해 구입한 추가 기능 수와 함께 인구 통계 및 플랫폼 세부 정보를 확인할 수 있습니다. 대시보드에서 이 데이터를 보거나 [보고서를 다운로드](download-analytic-reports.md)하여 오프라인으로 볼 수 있습니다. 또는 [Windows 스토어 분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)의 [추가 기능 획득 가져오기](../monetize/get-in-app-acquisitions.md) 메서드를 사용하여 프로그래밍 방식으로 이 데이터를 검색할 수 있습니다.
 
 이 보고서에서 추가 기능 구입은 고객이 추가 기능을 구매했음을 의미합니다. 같은 고객이 같은 소모성 추가 기능을 여러 번 구매한 경우 각 구매는 별도의 추가 기능 구입으로 계산됩니다.
 
@@ -66,6 +66,6 @@ Windows 개발자 센터 대시보드의 **추가 기능 구입** 보고서를 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

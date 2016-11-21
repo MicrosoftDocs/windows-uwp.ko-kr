@@ -4,30 +4,27 @@ ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "이 메서드를 사용하여 Windows 스토어 키를 갱신합니다."
 title: "Windows 스토어 ID 키 갱신"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 1a2cb625f95a5ad8e94911ead2402cb2589e209a
+ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
+ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 ---
 
 # Windows 스토어 ID 키 갱신
 
 
-
-
-이 메서드를 사용하여 Windows 스토어 키를 갱신합니다. [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 또는 [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) 메서드를 호출하여 생성한 Windows 스토어 ID 키의 유효 기간은 90일입니다. 키가 만료되면 만료된 키를 사용하여 이 메서드를 통해 새 키를 다시 협상할 수 있습니다.
+이 메서드를 사용하여 Windows 스토어 키를 갱신합니다. [Windows 스토어 ID 키를 생성](view-and-grant-products-from-a-service.md#step-4)하면 키의 유효 기간은 90일입니다. 키가 만료되면 만료된 키를 사용하여 이 메서드를 통해 새 키를 다시 협상할 수 있습니다.
 
 ## 필수 조건
 
 
 이 메서드를 사용하려면 다음이 필요합니다.
 
--   `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
--   앱의 클라이언트 쪽 코드에서 [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674) 또는 [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675) 메서드를 호출하여 생성했던 만료된 Windows 스토어 ID 키입니다.
+* `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
+* [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) 만료된 Windows 스토어 ID 키입니다.
 
 자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
 
 ## 요청
-
 
 ### 요청 구문
 
@@ -119,6 +116,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -5,8 +5,8 @@ title: "목록 보기 및 그리드 보기"
 label: List view and grid view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: aeb339e54a1363dbfe5ee5a764ad762a42a40ed9
+ms.sourcegitcommit: 8f9d85f0cb15c9fe4ceec9c397e23a134a442d3f
+ms.openlocfilehash: 8a14fa69089f6d796a803c1c1ff9bb678af3c913
 
 ---
 # ListView 및 GridView
@@ -314,8 +314,8 @@ SelectionMode 속성을 **ListViewSelectionMode.None**으로 설정하여 항목
 
 보조 키 | 조작
 -------------|------------
-없음 | <li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택할 수 있습니다.</li>
-Ctrl | <li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택 취소할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
+없음 | <ul><li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택할 수 있습니다.</li></ul>
+Ctrl | <ul><li>사용자가 스페이스바, 마우스 클릭 또는 터치 탭을 사용하여 단일 항목을 선택 취소할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li></ul>
 
 SelectionMode가 **Single**이면 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selecteditem.aspx) 속성에서 선택한 데이터 항목을 가져올 수 있습니다. [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.selector.selectedindex.aspx) 속성을 사용하여 선택한 항목 컬렉션의 인덱스를 가져올 수 있습니다. 선택한 항목이 없으면 SelectedItem은 **null**이고 SelectedIndex는 -1입니다. 
  
@@ -327,8 +327,8 @@ SelectionMode가 **Single**이면 [**SelectedItem**](https://msdn.microsoft.com/
 
 보조 키 | 조작
 -------------|------------
-없음 | <li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
-Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
+없음 | <ul><li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li></ul>
+Shift | <ul><li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li></ul>
 
 ### 확장 선택
 
@@ -336,9 +336,9 @@ Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 
 
 보조 키 | 조작
 -------------|------------
-없음 | <li>동작은 **Single**을 선택할 때와 같습니다.</li>
-Ctrl | <li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
-Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
+없음 | <ul><li>동작은 **Single**을 선택할 때와 같습니다.</li></ul>
+Ctrl | <ul><li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li></ul>
+Shift | <ul><li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li></ul>
 
 SelectionMode가 **Multiple** 또는 **Extended**이면 [**SelectedItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.selecteditems.aspx) 속성에서 선택한 데이터 항목을 가져올 수 있습니다. 
 
@@ -522,6 +522,6 @@ ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

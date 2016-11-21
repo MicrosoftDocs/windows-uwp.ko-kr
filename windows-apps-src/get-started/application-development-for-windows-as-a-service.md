@@ -2,13 +2,16 @@
 title: "Windows as a service용 응용 프로그램 개발(Windows 10)"
 description: "특정 Windows 빌드에서 앱 릴리스와 지원을 분리합니다."
 author: jdeckerMS
+redirect_url: ../updates-and-versions/application-development-for-windows-as-a-service/
 translationtype: Human Translation
 ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
-ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+ms.openlocfilehash: 561f5ea0ab4ba5b456456cedf786479ef168e7c0
 
 ---
 
 # Windows as a service용 응용 프로그램 개발
+
+**이 페이지는 ../updates-and-versions/application-development-for-windows-as-a-service/로 이동되었습니다.**
 
 **적용 대상**
 -   Windows 10
@@ -159,6 +162,6 @@ Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -4,14 +4,14 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다."
 title: "오디오 비디오 및 카메라"
 translationtype: Human Translation
-ms.sourcegitcommit: 18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085
-ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
+ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
+ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 
 ---
 
 # 오디오 비디오 및 카메라
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다.
  
@@ -30,7 +30,7 @@ ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
 | [MIDI](midi.md) | MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 UWP 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다. |
 | [디바이스에서 미디어 가져오기](import-media-from-a-device.md) | 사용 가능한 미디어 원본 검색, 비디오, 사진 및 사이드카 파일과 같은 파일 가져오기, 원본 디바이스에서 가져온 파일 삭제 등 디바이스에서 미디어를 가져오는 방법을 설명합니다. |
 | [카메라 독립적 플래시](camera-independent-flashlight.md) | 디바이스 램프가 있는 경우 이러한 램프에 액세스하고 사용하는 방법을 보여 줍니다. 램프 기능은 디바이스의 카메라 및 카메라 플래시 기능과는 별도로 관리됩니다. |
-| [지원되는 코덱](supported-codecs.md) | UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다. |
+| [지원되는 코덱](supported-codecs.md) | UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다. |
 
 
 ## 참고 항목
@@ -48,6 +48,6 @@ ms.openlocfilehash: 1914690b6417a5ae382e74ec76b54d9db411c213
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,11 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: "Windows 10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
+description: "Windows10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
 title: "Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
+ms.sourcegitcommit: 812fa1789c5c86657b8e73e45a851c7a58a1c84e
+ms.openlocfilehash: 5a4f943357660a22217351f04d735c14cab828ff
 
 ---
 
@@ -13,11 +13,15 @@ ms.openlocfilehash: 649d082cddcf301fe602a5ab99637ad7bea67d49
 
 Windows SDK는 앱으로 수익을 창출하고 새로운 기능을 추가할 수 있도록 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가하는 데 사용할 수 있는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 제공합니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
 
->**참고**&nbsp;&nbsp;앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하는 것이 좋습니다. **Windows.Services.Store** 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 또한 **Windows.Services.Store** 네임스페이스는 보다 나은 성능을 제공하도록 디자인되었습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
-
 이 섹션의 문서에서는 몇 가지 일반적인 시나리오에서 **Windows.ApplicationModel.Store** 네임스페이스의 멤버를 사용하기 위한 자세한 지침과 코드 예제를 제공합니다. UWP 앱의 앱에서 바로 구매와 관련된 개념의 개요를 보려면 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 **Windows.ApplicationModel.Store** 네임스페이스를 사용하여 평가판 및 앱에서 바로 구매를 구현하는 방법을 보여 주는 전체 샘플은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)을 참조하세요.
+
+>**참고**&nbsp;&nbsp;
+>
+> * 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하는 것이 좋습니다. **Windows.Services.Store** 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 또한 **Windows.Services.Store** 네임스페이스는 보다 나은 성능을 제공하도록 디자인되었습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+<br/><br/>
+> * **Windows.ApplicationModel.Store** 네임스페이스는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서 지원되지 않습니다. 이러한 응용 프로그램에서는 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
 
 ## 이 섹션의 내용
 
@@ -32,6 +36,6 @@ Windows SDK는 앱으로 수익을 창출하고 새로운 기능을 추가할 �
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

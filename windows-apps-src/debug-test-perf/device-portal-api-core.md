@@ -821,7 +821,8 @@ URI 매개 변수 | 설명
 autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다.
 dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx)를 참조하세요.
 maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다.
-overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
+overwrite   | (**선택**) True 또는 false입니다. 
+            *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
 <br />
 **요청 헤더**
 
@@ -901,7 +902,8 @@ HTTP 상태 코드      | 설명
 명령 | 설명
 :----- | :-----
 provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}*(괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}*은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다.
-provider *{guid}* disable | *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
+provider *{guid}* disable | 
+            *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
 
 이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
 ```
@@ -1507,7 +1509,7 @@ HTTP 상태 코드      | 설명
  
 메서드      | 요청 URI
 :------     | :-----
-GET | /api/power/cfg/*<power scheme path>*
+GET | /api/power/cfg/
 <br />
 옵션:
 - SCHEME_CURRENT
@@ -1642,7 +1644,7 @@ HTTP 상태 코드      | 설명
  
 메서드      | 요청 URI
 :------     | :-----
-POST | /api/power/cfg/*<power scheme path>*
+POST | /api/power/cfg/
 <br />
 
 **URI 매개 변수**
@@ -2244,7 +2246,8 @@ interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터�
 op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.
 ssid   | (**op == connect인 경우 필수****) 연결할 SSID입니다.
 key   | (**op == connect이고 네트워크에 인증이 필요한 경우 필수****) 공유 키입니다.
-createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. 
+createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. 
+            **예** 또는 **아니요**일 수 있습니다. 
 
 **요청 헤더**
 
@@ -2340,7 +2343,8 @@ GET | /api/wer/report/file
 URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자 이름입니다.
-type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
+type   | (**필수**) 보고서의 유형입니다. 
+            **queried** 또는 **archived**가 될 수 있습니다.
 name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
 file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. 
 <br />
@@ -2391,7 +2395,8 @@ GET | /api/wer/report/files
 URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자입니다.
-type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
+type   | (**필수**) 보고서의 유형입니다. 
+            **queried** 또는 **archived**가 될 수 있습니다.
 name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
 <br />
 **요청 헤더**
@@ -2722,7 +2727,8 @@ GET | /api/wpr/trace
 
 **응답**
 
-- 없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
+- 없음.  
+            **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
 
 **상태 코드**
 
@@ -2974,7 +2980,8 @@ GET | /api/dns-sd/tags
 
 - 없음
 
-**응답** 다음 형식의 현재 적용된 태그입니다. 
+
+            **응답** 다음 형식의 현재 적용된 태그입니다. 
 ```
  {
     "tags": [
@@ -3167,7 +3174,8 @@ GET | /api/filesystem/apps/knownfolders
 
 - 없음
 
-**응답** 다음 형식의 사용 가능한 폴더입니다. 
+
+            **응답** 다음 형식의 사용 가능한 폴더입니다. 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3221,7 +3229,8 @@ path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 �
 
 - 없음
 
-**응답** 다음 형식의 사용 가능한 폴더입니다. 
+
+            **응답** 다음 형식의 사용 가능한 폴더입니다. 
 ```
 {"Items": [
     {

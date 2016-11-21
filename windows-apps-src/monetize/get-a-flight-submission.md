@@ -4,8 +4,8 @@ ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다."
 title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
-ms.openlocfilehash: d9b445361f9931a4745f5c0b17222637b5d83c4d
+ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
+ms.openlocfilehash: e2929ad3e2bb71ba3de5f74a82c4b0a43504dbd6
 
 ---
 
@@ -94,6 +94,16 @@ Authorization: Bearer <your access token>
       "minimumSystemRam": "None"
     }
   ],
+  "packageDeliveryOptions": {
+    "packageRollout": {
+        "isPackageRollout": false,
+        "packageRolloutPercentage": 0,
+        "packageRolloutStatus": "PackageRolloutNotStarted",
+        "fallbackSubmissionId": "0"
+    },
+    "isMandatoryUpdate": false,
+    "mandatoryUpdateEffectiveDate": "1601-01-01T00:00:00.0000000Z"
+  },
   "fileUploadUrl": "https://productingestionbin1.blob.core.windows.net/ingestion/8b389577-5d5e-4cbe-a744-1ff2e97a9eb8?sv=2014-02-14&sr=b&sig=wgMCQPjPDkuuxNLkeG35rfHaMToebCxBNMPw7WABdXU%3D&se=2016-06-17T21:29:44Z&sp=rwl",
   "targetPublishMode": "Immediate",
   "targetPublishDate": "",
@@ -124,6 +134,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
