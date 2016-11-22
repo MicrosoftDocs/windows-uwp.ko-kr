@@ -137,6 +137,9 @@
   "6e67f57fbc00e596bb07cc37f2c9f762a5c9f557": [
     "windows-apps-src\\audio-video-camera\\index.md"
   ],
+  "fc69e3b5bb814752480fa0151c36ae0a8c783c4e": [
+    "windows-apps-src\\audio-video-camera\\media-casting.md"
+  ],
   "e225d5f5b7957ab21136de7294f086af62c2a5ec": [
     "windows-apps-src\\audio-video-camera\\media-casting.md"
   ],
@@ -2515,6 +2518,9 @@
   ],
   "6030f666f213865a92d071210fe66f587c1bffb1": [
     "windows-apps-src\\xbox-apps\\introduction-to-xbox-tools.md"
+  ],
+  "b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8": [
+    "windows-apps-src\\xbox-apps\\known-issues.md"
   ],
   "26db02792eef6bda927bedd1ef8fcb6a644fadcf": [
     "windows-apps-src\\xbox-apps\\known-issues.md"
