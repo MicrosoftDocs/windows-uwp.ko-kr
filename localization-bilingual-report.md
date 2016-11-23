@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8d7ea8adcff944a9be58f164e88623861e4cf8ad?path=windows-apps-src%2Fwhats-new%2Fwindows-10-version-1607-api-diff.md&_a=contents) | InSyncHandedBackSuccess | [Details](#7ab2c9f1054509f816ef9647f340e61b6a281d8a8414)
 
 ## Item Details
-##### <a name='7ab2c9f1054509f816ef9647f340e61b6a281d8a8414'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/8d7ea8adcff944a9be58f164e88623861e4cf8ad?path=windows-apps-src%2Fwhats-new%2Fwindows-10-version-1607-api-diff.md&_a=contents)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fwhats-new%2Fwindows-10-version-1607-api-diff.md&_a=contents)
-* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/97b0682c67cccd79caa2c979c9ea060170a76c2b?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwindows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-01 06:13:29
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwindows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf&_a=contents)
-* Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwindows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-22 11:06:46
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
