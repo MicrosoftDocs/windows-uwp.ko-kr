@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\networking\network-communications-in-the-background.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a6d297ca8510267d21656bd2e22bb3958a4a4b52?path=windows-apps-src%2Fnetworking%2Fnetwork-communications-in-the-background.md&_a=contents) | HandedOffSuccess | [Details](#ea979eceb20c13d4025ec94ec8ed05b484a7eb275270)
+ [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents) | HandedOffSuccess | [Details](#81786f6bf76d1d3840d5cd8c6191550b98a248b24754)
 
 ## Item Details
-##### <a name='ea979eceb20c13d4025ec94ec8ed05b484a7eb275270'></a> Source: [windows-apps-src\networking\network-communications-in-the-background.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/a6d297ca8510267d21656bd2e22bb3958a4a4b52?path=windows-apps-src%2Fnetworking%2Fnetwork-communications-in-the-background.md&_a=contents)
+##### <a name='81786f6bf76d1d3840d5cd8c6191550b98a248b24754'></a> Source: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/712e6eef3bdff2ebdec4d16a11ff42bc7fb56eab?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fnetwork-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-23 20:35:15
+* Handoff File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/41436e9783c029857fed79045216ead110c3de1e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-24 02:40:40
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\networking\network-communications-in-the-background.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fnetworking%2Fnetwork-communications-in-the-background.md&_a=contents)
-* Current Handback File: [network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fnetwork-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\launch-resume\how-to-create-and-consume-an-app-service.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Flaunch-resume%2Fhow-to-create-and-consume-an-app-service.md&_a=contents)
+* Current Handback File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [network-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fnetwork-communications-in-the-background.392e988ada0e7db55009da5cb3fcaf902abcb446.ko-kr.xlf&_a=contents)
+* Bilingual File: [how-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fhow-to-create-and-consume-an-app-service.a15dae966f1f3c76bc61f81f7ed50b4a7fe0e782.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
