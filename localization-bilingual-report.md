@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/18d5c2ecf7d438355c3103ad2aae32dc84fc89ed?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents) | InSyncHandedBackSuccess | [Details](#8858c9f7f9b40e2bca30054b99ab47c7388aef575207)
 
 ## Item Details
+##### <a name='8858c9f7f9b40e2bca30054b99ab47c7388aef575207'></a> Source: [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/18d5c2ecf7d438355c3103ad2aae32dc84fc89ed?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\implement-a-trial-version-of-your-app.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/e0b0c7340c7b7ed6bc7b47fe13ab86982cdd0de5?path=windows-apps-src%2Fmonetize%2Fimplement-a-trial-version-of-your-app.md&_a=contents)
+* Handoff File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/97b0682c67cccd79caa2c979c9ea060170a76c2b?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-01 06:13:29
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/7d73c191bbea60a3359ef5beae6f7d60f9bd5f97?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf&_a=contents)
+* Handback Datetime: 2016-11-25 16:38:41
+* Bilingual File: [implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/7d73c191bbea60a3359ef5beae6f7d60f9bd5f97?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fimplement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-25 16:41:22
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
