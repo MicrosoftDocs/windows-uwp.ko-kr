@@ -2678,7 +2678,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\8858c9f7f9b40e2bca30054b99ab47c7388aef57.0c51f4edeeffbd6d4ab7fedfe61d8c057af84cfd.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\implement-a-trial-version-of-your-app.a6bf42c2c41fd342356b2a6edf81780ccf51351e.ko-kr.xlf",
-      "LocXliffCommit": "c69d038ba1c122da60b66619023f887f5573da13"
+      "LocXliffCommit": "7d73c191bbea60a3359ef5beae6f7d60f9bd5f97"
     },
     "windows-apps-src\\monetize\\get-app-ratings.md.43b075815787d53c6c50a45c2f0ef2bb9b13193d.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\get-app-ratings.md",
