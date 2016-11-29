@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bdba3db84138bcfaa5c9433e546df7beaf77552c?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents) | HandedOffSuccess | [Details](#44dccce89b3edb84cfd9813dd6acc420ae19fc4b5514)
+ [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ee0a2f5a34cbbef198a9012d0425bb84e65f3b33?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents) | HandedOffSuccess | [Details](#de76a3c6d4949b9203df79855e1748a81d76ca644357)
 
 ## Item Details
-##### <a name='44dccce89b3edb84cfd9813dd6acc420ae19fc4b5514'></a> Source: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/bdba3db84138bcfaa5c9433e546df7beaf77552c?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents)
+##### <a name='de76a3c6d4949b9203df79855e1748a81d76ca644357'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ee0a2f5a34cbbef198a9012d0425bb84e65f3b33?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/b5316af86232855bcc5adf709b6572e506d641d4?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-11-29 20:41:30
+* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/4420744f652ab822abed658ae125db5b1017ec96?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-11-29 22:36:44
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\payment-thresholds-methods-and-timeframes.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fpublish%2Fpayment-thresholds-methods-and-timeframes.md&_a=contents)
-* Current Handback File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Finput-and-devices%2Fdesigning-for-tv.md&_a=contents)
+* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [payment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fpayment-thresholds-methods-and-timeframes.a7bdbb15553090183b0fa2cbdd54710d90be2ed3.ko-kr.xlf&_a=contents)
+* Bilingual File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesigning-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
