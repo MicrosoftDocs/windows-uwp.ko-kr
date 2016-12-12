@@ -47,8 +47,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\f2de946ca7210cf3f4c170c73902c1a727067e7c.5937e42a1c060b3c7d7107b026521265d55c1737.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\pen-and-stylus-interactions.945e27470c6cb2f2ab789832deb91ac592d1679f.ko-kr.xlf",
+      "LocXliffCommit": "77ea42a699ea4d6f5512b2d57656428cbea2664b"
     },
     "windows-apps-src\\controls-and-patterns\\tiles-and-notifications-adaptive-interactive-toasts.md.3f7eb58ce16172facccdfff095d4d37044fdfb9b.HT": {
       "SourceFilename": "windows-apps-src\\controls-and-patterns\\tiles-and-notifications-adaptive-interactive-toasts.md",
@@ -317,8 +317,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\2e35da3b3033ecbad8c48184d831ca9465142322.f5e735652a2a69c9b644b755db763341eaa7e381.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.ko-kr.xlf",
+      "LocXliffCommit": "77ea42a699ea4d6f5512b2d57656428cbea2664b"
     },
     "windows-apps-src\\monetize\\csharp-code-examples-for-the-windows-store-submission-api.md.c7317e96f4b97c6f37ed07ccb769fca37a5daf92.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\csharp-code-examples-for-the-windows-store-submission-api.md",
