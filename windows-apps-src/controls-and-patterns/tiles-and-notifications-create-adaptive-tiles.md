@@ -1,42 +1,48 @@
 ---
 author: mijacobs
-Description: "적응형 타일 템플릿은 다양한 화면 밀도에 맞게 조정되는 단순하고 유연한 태그 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 하는 Windows 10의 새로운 기능입니다."
-title: "적응형 타일 만들기"
+Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
+title: Create adaptive tiles
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 38ee8ae177898e20d45545c1cfd51a0dd24f7858
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: a00796da398d6e0246caac43b18fb688a9e03fce
 
 ---
-# 적응형 타일 만들기
+# <a name="create-adaptive-tiles"></a>Create adaptive tiles
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
-적응형 타일 템플릿은 다양한 화면 밀도에 맞게 조정되는 단순하고 유연한 태그 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있도록 하는 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](tiles-and-notifications-adaptive-tiles-schema.md)를 참조하세요.
+Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities. This article tells you how to create adaptive live tiles for your Universal Windows Platform (UWP) app. For the complete list of adaptive elements and attributes, see the [Adaptive tiles schema](tiles-and-notifications-adaptive-tiles-schema.md).
 
-원할 경우 Windows 10용 알림을 디자인할 때 [Windows 8 타일 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761491)에서 미리 설정된 템플릿을 계속 사용할 수 있습니다.
-
-## 시작
+(If you'd like, you can still use the preset templates from the [Windows 8 tile template catalog](https://msdn.microsoft.com/library/windows/apps/hh761491) when designing notifications for Windows 10.)
 
 
-**NotificationsExtensions 설치.** XML 대신 C#을 사용하여 알림을 생성하려면 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NotificationsExtensions를 사용합니다.
+## <a name="getting-started"></a>Getting started
 
-**알림 시각화 도우미 설치.** 이 무료 UWP 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 비슷하게 타일을 편집할 때 시각적 미리 보기를 곧바로 제공하여 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. [이 블로그 게시물](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx)에서 자세한 정보를 얻을 수 있고 [여기](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)에서 알림 시각화 도우미를 다운로드할 수 있습니다.
+**Install Notifications library.** If you'd like to use C# instead of XML to generate notifications, install the NuGet package named [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) (search for "notifications uwp"). The C# samples provided in this article use version 1.0.0 of the NuGet package.
 
-## 사용법 지침
-
-
-적응형 템플릿은 다양한 폼 팩터와 알림 유형에서 작동하도록 설계됩니다. 그룹 및 하위 그룹과 같은 요소는 콘텐츠를 연결하며 자체적으로 특정 시각적 동작을 의미하지 않습니다. 알림의 최종 모양은 휴대폰, 태블릿, 데스크톱 등 알림이 표시될 특정 디바이스에 따라 달라져야 합니다.
-
-힌트는 특정 시각적 동작을 얻기 위해 요소에 추가할 수 있는 선택적 특성입니다. 힌트는 디바이스별 또는 알림별로 다를 수 있습니다.
-
-## 기본 예제
+**Install Notifications Visualizer.** This free UWP app helps you design adaptive live tiles by providing an instant visual preview of your tile as you edit it, similar to Visual Studio's XAML editor/design view. You can read [this blog post](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx) for more information, and you can download Notifications Visualizer [here](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
 
 
-이 예제에서는 적응형 타일 템플릿으로 무엇을 만들 수 있는지 보여 줍니다.
+## <a name="how-to-send-a-tile-notification"></a>How to send a tile notification
+
+Please read our [Quickstart on sending local tile notifications](tiles-and-notifications-create-adaptive-tiles.md). The documentation on this page explains all the visual UI possibilities you have with adaptive tiles.
+
+
+## <a name="usage-guidance"></a>Usage guidance
+
+
+Adaptive templates are designed to work across different form factors and notification types. Elements such as group and subgroup link together content and don't imply a particular visual behavior on their own. The final appearance of a notification should be based on the specific device on which it will appear, whether it's phone, tablet, or desktop, or another device.
+
+Hints are optional attributes that can be added to elements in order to achieve a specific visual behavior. Hints can be device-specific or notification-specific.
+
+## <a name="a-basic-example"></a>A basic example
+
+
+This example demonstrates what the adaptive tile templates can produce.
 
 ```XML
 <tile>
@@ -73,22 +79,22 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Jennifer Parker",
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
   
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Photos from our trip",
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
   
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = "Check out these awesome photos I took while in New Zealand!",
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -99,21 +105,21 @@ TileContent content = new TileContent()
 };
 ```
 
-**결과:**
+**Result:**
 
-![빠른 샘플 타일](images/adaptive-tiles-quicksample.png)
+![quick sample tile](images/adaptive-tiles-quicksample.png)
 
-## 타일 크기
+## <a name="tile-sizes"></a>Tile sizes
 
 
-각 타일 크기에 대한 콘텐츠는 XML 페이로드 내에서 별도의 [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소에 개별적으로 지정합니다. 템플릿 특성을 다음 값 중 하나로 설정하여 대상 크기를 선택합니다.
+Content for each tile size is individually specified in separate [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) elements within the XML payload. Choose the target size by setting the template attribute to one of the following values:
 
 -   TileSmall
 -   TileMedium
 -   TileWide
--   TileLarge(데스크톱에만 해당)
+-   TileLarge (only for desktop)
 
-단일 타일 알림 XML 페이로드에서 이 예제에 나온 대로 지원하려는 각 타일 크기에 대한 &lt;binding&gt; 요소를 제공합니다.
+For a single tile notification XML payload, provide &lt;binding&gt; elements for each tile size that you'd like to support, as shown in this example:
 
 ```XML
 <tile>
@@ -150,7 +156,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Small" }
+                    new AdaptiveText() { Text = "Small" }
                 }
             }
         },
@@ -161,7 +167,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Medium" }
+                    new AdaptiveText() { Text = "Medium" }
                 }
             }
         },
@@ -172,7 +178,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Wide" }
+                    new AdaptiveText() { Text = "Wide" }
                 }
             }
         },
@@ -183,7 +189,7 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText() { Text = "Large" }
+                    new AdaptiveText() { Text = "Large" }
                 }
             }
         }
@@ -191,16 +197,16 @@ TileContent content = new TileContent()
 };
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 크기: 작음, 중간, 넓음 및 큼](images/adaptive-tiles-sizes.png)
+![adaptive tile sizes: small, medium, wide, and large](images/adaptive-tiles-sizes.png)
 
-## 브랜딩
+## <a name="branding"></a>Branding
 
 
-알림 페이로드에서 브랜딩 특성을 사용하여 라이브 타일 아래쪽의 브랜딩(표시 이름 및 모서리 로고)을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
+You can control the branding on the bottom of a live tile (the display name and corner logo) by using the branding attribute on the notification payload. You can choose to display "none," only the "name," only the "logo," or both with "nameAndLogo."
 
-**참고** Windows Mobile에서는 모서리 로고를 지원하지 않으므로 Mobile에서 "logo" 및 "nameAndLogo"는 기본적으로 "name"으로 지정됩니다.
+**Note**  Windows Mobile doesn't support the corner logo, so "logo" and "nameAndLogo" default to "name" on Mobile.
 
  
 
@@ -216,22 +222,16 @@ new TileVisual()
     Branding = TileBranding.Logo,
     ...
 }
-
-new TileVisual()
-{
-    Branding = TileBranding.Logo,
-    ...
-}
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일, 이름 및 로고](images/adaptive-tiles-namelogo.png)
+![adaptive tiles, name and logo](images/adaptive-tiles-namelogo.png)
 
-특정 타일 크기에 대한 브랜딩은 다음 두 가지 방법 중 하나로 적용할 수 있습니다.
+Branding can be applied for specific tile sizes one of two ways:
 
-1. [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소에 특성 적용
-2. 전체 알림 페이로드에 영향을 주는 [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소에 특성 적용. 바인딩에 대한 브랜딩을 지정하지 않으면 시각적 요소에 제공된 브랜딩이 사용됩니다.
+1. By applying the attribute on the [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element
+2. By applying the attribute on the [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element, which affects the entire notification payload If you don't specify branding for a binding, it will use the branding that's provided on the visual element.
 
 ```XML
 <tile>
@@ -256,13 +256,13 @@ TileContent content = new TileContent()
     Visual = new TileVisual()
     {
         Branding = TileBranding.NameAndLogo,
- 
+
         TileMedium = new TileBinding()
         {
             Branding = TileBranding.Logo,
             ...
         },
- 
+
         // Inherits branding from Visual
         TileWide = new TileBinding()
         {
@@ -272,22 +272,22 @@ TileContent content = new TileContent()
 };
 ```
 
-**기본 브랜딩 결과:**
+**Default branding result:**
 
-![타일의 기본 브랜딩](images/adaptive-tiles-defaultbranding.png)
+![default branding on tiles](images/adaptive-tiles-defaultbranding.png)
 
-알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
+If you don't specify the branding in your notification payload, the base tile's properties will determine the branding. If the base tile shows the display name, then the branding will default to "name." Otherwise, the branding will default to "none" if the display name isn't shown.
 
-**참고** 이는 기본 브랜딩이 "logo"이던 Windows 8.x에서 변경된 내용입니다.
+**Note**   This is a change from Windows 8.x, in which the default branding was "logo."
 
  
 
-## 표시 이름
+## <a name="display-name"></a>Display name
 
 
-**displayName** 특성에 원하는 텍스트 문자열을 입력하여 알림의 표시 이름을 재정의할 수 있습니다. 브랜딩과 마찬가지로 표시 이름은 전체 알림 페이로드에 적용되는 [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소나 개별 타일에만 적용되는 [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소에 지정할 수 있습니다.
+You can override the display name of a notification by entering the text string of your choice with the **displayName** attribute. As with branding, you can specify this on the [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element, which affects the entire notification payload, or on the [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element, which only affects individual tiles.
 
-**알려진 문제** Windows Mobile에서 타일의 ShortName을 지정하면 알림에 제공된 표시 이름이 사용되지 않습니다(항상 ShortName이 표시됨). 
+**Known Issue**  On Windows Mobile, if you specify a ShortName for your Tile, the display name provided in your notification will not be used (the ShortName will always be displayed). 
 
 ```XML
 <tile>
@@ -313,13 +313,13 @@ TileContent content = new TileContent()
     {
         Branding = TileBranding.NameAndLogo,
         DisplayName = "Wednesday 22",
- 
+
         TileMedium = new TileBinding()
         {
             DisplayName = "Wed. 22",
             ...
         },
- 
+
         // Inherits DisplayName from Visual
         TileWide = new TileBinding()
         {
@@ -329,83 +329,57 @@ TileContent content = new TileContent()
 };
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 표시 이름](images/adaptive-tiles-displayname.png)
+![adaptive tiles display name](images/adaptive-tiles-displayname.png)
 
-## Text
+## <a name="text"></a>Text
 
 
-[&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소는 텍스트를 표시하는 데 사용됩니다. 힌트를 사용하여 텍스트가 표시되는 방식을 수정할 수 있습니다.
+The [&lt;text&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element is used to display text. You can use hints to modify how text appears.
 
 ```XML
-<text>This is a line of text</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text>This is a line of text</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "This is a line of text"
 };
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 텍스트](images/adaptive-tiles-text.png)
+![adaptive tile text](images/adaptive-tiles-text.png)
 
-## 텍스트 배치
+## <a name="text-wrapping"></a>Text wrapping
 
 
-기본적으로 텍스트는 줄 바꿈되지 않고 타일의 가장자리를 벗어나 계속됩니다. **hint-wrap** 특성을 사용하여 텍스트 요소의 텍스트 배치를 설정할 수 있습니다. 또한 둘 다 양의 정수를 사용할 수 있는 **hint-minLines** 및 **hint-maxLines**를 사용하여 최대 및 최소 줄 수를 제어할 수도 있습니다.
+By default, text doesn't wrap and will continue off the edge of the tile. Use the **hint-wrap** attribute to set text wrapping on a text element. You can also control the minimum and maximum number of lines by using **hint-minLines** and **hint-maxLines**, both of which accept positive integers.
 
 ```XML
-<text hint-wrap="true">This is a line of wrapping text</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text hint-wrap="true">This is a line of wrapping text</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "This is a line of wrapping text",
-    Wrap = true
+    HintWrap = true
 };
 ```
 
-**결과:**
+**Result:**
 
-![텍스트 배치를 적용한 적응형 타일](images/adaptive-tiles-textwrapping.png)
+![adaptive tile with text wrapping](images/adaptive-tiles-textwrapping.png)
 
-## 텍스트 스타일
+## <a name="text-styles"></a>Text styles
 
 
-스타일은 텍스트 요소의 글꼴 크기, 색 및 두께를 제어합니다. 불투명도 60%로 설정하여 일반적으로 텍스트 색을 밝은 회색의 음영으로 만드는 각 스타일의 "미묘한" 변형을 비롯하여 다양한 스타일이 제공됩니다.
+Styles control the font size, color, and weight of text elements. There are a number of available styles, including a "subtle" variation of each style that sets the opacity to 60%, which usually makes the text color a shade of light gray.
 
 ```XML
 <text hint-style="base">Header content</text>
@@ -413,45 +387,45 @@ new TileText()
 ```
 
 ```CSharp
-new TileText()
+new AdaptiveText()
 {
     Text = "Header content",
-    Style = TileTextStyle.Base
+    HintStyle = AdaptiveTextStyle.Base
 },
- 
-new TileText()
+
+new AdaptiveText()
 {
     Text = "Subheader content",
-    Style = TileTextStyle.CaptionSubtle
+    HintStyle = AdaptiveTextStyle.CaptionSubtle
 }
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
+![adaptive tiles text styles](images/adaptive-tiles-textstyles.png)
 
-**참고** hint-style을 지정하지 않으면 스타일의 기본값은 caption입니다.
+**Note**  The style defaults to caption if hint-style isn't specified.
 
  
 
-**기본 텍스트 스타일**
+**Basic text styles**
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style = "\ *" /&gt; | 글꼴 높이               | 글꼴 두께 |
-| 자막                        | 12epx(유효 픽셀) | Regular     |
-| 본문                           | 15epx                    | Regular     |
-| 하단                           | 15epx                    | Semibold    |
-| 부제목                       | 20epx                    | Regular     |
-| 제목                          | 24epx                    | Semilight   |
-| 하위 머리글                      | 34epx                    | Light       |
-| 머리글                         | 46epx                    | Light       |
+| &lt;text hint-style="\*" /&gt; | Font height               | Font weight |
+| caption                        | 12 effective pixels (epx) | Regular     |
+| body                           | 15 epx                    | Regular     |
+| base                           | 15 epx                    | Semibold    |
+| subtitle                       | 20 epx                    | Regular     |
+| title                          | 24 epx                    | Semilight   |
+| subheader                      | 34 epx                    | Light       |
+| header                         | 46 epx                    | Light       |
 
  
 
-**숫자 텍스트 스타일 변형**
+**Numeral text style variations**
 
-다음 변형은 줄 높이를 줄여 위아래 콘텐츠가 텍스트와 더 가까워지게 합니다.
+These variations reduce the line height so that content above and below come much closer to the text.
 
 |                  |
 |------------------|
@@ -461,9 +435,9 @@ new TileText()
 
  
 
-**미묘한 텍스트 스타일 변형**
+**Subtle text style variations**
 
-각 스타일에는 일반적으로 텍스트 색을 밝은 회색의 음영으로 만드는 60% 불투명도를 텍스트에 부여하는 미묘한 변형이 있습니다.
+Each style has a subtle variation that gives the text a 60% opacity, which usually makes the text color a shade of light gray.
 
 |                        |
 |------------------------|
@@ -480,54 +454,40 @@ new TileText()
 
  
 
-## 텍스트 맞춤
+## <a name="text-alignment"></a>Text alignment
 
 
-텍스트를 가로로 왼쪽, 가운데 또는 오른쪽에 맞출 수 있습니다. 영어와 같이 왼쪽에서 오른쪽으로 쓰는 언어에서는 텍스트가 기본적으로 왼쪽에 맞춰집니다. 아랍어와 같이 오른쪽에서 왼쪽으로 쓰는 언어에서는 텍스트가 기본적으로 오른쪽에 맞춰집니다. 요소에서 **hint-align** 특성을 사용하여 맞춤을 수동으로 설정할 수 있습니다.
+Text can be horizontally aligned left, center, or right. In left-to-right languages like English, text defaults to left-aligned. In right-to-left languages like Arabic, text defaults to right-aligned. You can manually set alignment with the **hint-align** attribute on elements.
 
 ```XML
-<text hint-align="center">Hello</text></code></pre></td>
-</tr>
-</tbody>
-</table>
+<text hint-align="center">Hello</text>
 ```
 
 
 ```CSharp
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">C#</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-new TileText()
+new AdaptiveText()
 {
     Text = "Hello",
-    Align = TileTextAlign.Center
+    HintAlign = AdaptiveTextAlign.Center
 };
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 텍스트 맞춤](images/adaptive-tiles-textalignment.png)
+![adaptive tiles text alignment](images/adaptive-tiles-textalignment.png)
 
-## 그룹 및 하위 그룹
+## <a name="groups-and-subgroups"></a>Groups and subgroups
 
 
-그룹을 사용하면 그룹 내의 콘텐츠가 관련이 있고 콘텐츠 전체를 표시해야만 이해될 수 있다고 의미상 선언할 수 있습니다. 예를 들어 머리글과 하위 머리글의 두 텍스트 요소가 있을 경우 머리글만 표시하면 의미가 통하지 않을 수 있습니다. 이러한 요소를 하위 그룹 내로 그룹화하면 요소는 모두 표시되거나(맞을 경우) 전혀 표시되지 않습니다(맞지 않을 경우).
+Groups allow you to semantically declare that the content inside the group is related and must be displayed in its entirety for the content to make sense. For example, you might have two text elements, a header, and a subheader, and it would not make sense for only the header to be shown. By grouping those elements inside a subgroup, the elements will either all be displayed (if they can fit) or not be displayed at all (because they can't fit).
 
-디바이스 및 화면 전체에서 최상의 환경을 제공하려면 여러 그룹을 제공합니다. 여러 그룹이 있으면 타일이 큰 화면에 맞게 조정될 수 있습니다.
+To provide the best experience across devices and screens, provide multiple groups. Having multiple groups allows your tile to adapt to larger screens.
 
-**참고** 그룹의 유효한 하위 요소는 하위 그룹뿐입니다.
+**Note**  The only valid child of a group is a subgroup.
 
  
 
 ```XML
-...
 <binding template="TileWide" branding="nameAndLogo">
   <group>
     <subgroup>
@@ -547,12 +507,9 @@ new TileText()
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileWide = new TileBinding()
 {
     Branding = TileBranding.NameAndLogo,
@@ -564,10 +521,10 @@ TileWide = new TileBinding()
                 from: "Jennifer Parker",
                 subject: "Photos from our trip",
                 body: "Check out these awesome photos I took while in New Zealand!"),
- 
+
             // For spacing
-            new TileText(),
- 
+            new AdaptiveText(),
+
             CreateGroup(
                 from: "Steve Bosniak",
                 subject: "Build 2015 Dinner",
@@ -575,36 +532,33 @@ TileWide = new TileBinding()
         }
     }
 }
- 
+
 ...
- 
- 
-private static TileGroup CreateGroup(string from, string subject, string body)
+
+private static AdaptiveGroup CreateGroup(string from, string subject, string body)
 {
-    return new TileGroup()
+    return new AdaptiveGroup()
     {
         Children =
         {
-            new TileSubgroup()
+            new AdaptiveSubgroup()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from,
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
- 
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -613,16 +567,16 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 }
 ```
 
-**결과:**
+**Result:**
 
-![적응형 타일 그룹 및 하위 그룹](images/adaptive-tiles-groups-subgroups.png)
+![adaptive tiles groups and subgroups](images/adaptive-tiles-groups-subgroups.png)
 
-## 하위 그룹(열)
+## <a name="subgroups-columns"></a>Subgroups (columns)
 
 
-또한 하위 그룹을 사용하여 데이터를 그룹 내의 의미 체계 섹션으로 나눌 수 있습니다. 라이브 타일의 경우 이는 시각적으로 열로 변환됩니다.
+Subgroups also allow you to divide data into semantic sections within a group. For live tiles, this visually translates to columns.
 
-**hint-weight** 특성을 사용하면 열 너비를 제어할 수 있습니다. **hint-weight**의 값은 **GridUnitType.Star** 동작과 동일하게 사용 가능한 공간의 가중 비율로 표시됩니다. 너비가 같은 열의 경우 각 열에 가중치를 1로 할당합니다.
+The **hint-weight** attribute lets you to control the widths of columns. The value of **hint-weight** is expressed as a weighted proportion of available space, which is identical to **GridUnitType.Star** behavior. For equal-width columns, assign each weight to 1.
 
 <table>
 <colgroup>
@@ -632,7 +586,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <tbody>
 <tr class="odd">
 <td align="left">hint-weight</td>
-<td align="left">너비의 백분율</td>
+<td align="left">Percentage of width</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
@@ -651,7 +605,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <td align="left">25%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 4</td>
+<td align="left">Total weight: 4</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -659,9 +613,9 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
  
 
-![하위 그룹, 고른 열](images/adaptive-tiles-subgroups01.png)
+![subgroups, even columns](images/adaptive-tiles-subgroups01.png)
 
-한 열을 다른 열보다 2배 크게 만들려면 작은 열은 가중치 1, 큰 열은 가중치 2를 할당합니다.
+To make one column twice as large as another column, assign the smaller column a weight of 1 and the larger column a weight of 2.
 
 <table>
 <colgroup>
@@ -671,7 +625,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <tbody>
 <tr class="odd">
 <td align="left">hint-weight</td>
-<td align="left">너비의 백분율</td>
+<td align="left">Percentage of width</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
@@ -682,7 +636,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <td align="left">66.7%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 3</td>
+<td align="left">Total weight: 3</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -690,9 +644,9 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
  
 
-![하위 그룹, 열 하나의 크기가 다른 열의 2배](images/adaptive-tiles-subgroups02.png)
+![subgroups, one column twice the size of the other](images/adaptive-tiles-subgroups02.png)
 
-첫 번째 열이 총 너비의 20%를 차지하고 두 번째 열이 총 너비의 80%를 차지하도록 하려면 첫 번째 가중치는 20, 두 번째 가중치는 80으로 할당합니다. 총 가중치가 100과 같으면 백분율로 사용됩니다.
+If you want your first column to take up 20% of the total width and your second column to take up 80% of the total width, assign the first weight to 20 and the second weight to 80. If your total weights equal 100, they'll act as percentages.
 
 <table>
 <colgroup>
@@ -702,7 +656,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <tbody>
 <tr class="odd">
 <td align="left">hint-weight</td>
-<td align="left">너비의 백분율</td>
+<td align="left">Percentage of width</td>
 </tr>
 <tr class="even">
 <td align="left">20</td>
@@ -713,7 +667,7 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 <td align="left">80%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 100</td>
+<td align="left">Total weight: 100</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -721,18 +675,17 @@ private static TileGroup CreateGroup(string from, string subject, string body)
 
  
 
-![하위 그룹, 가중치 합계가 100](images/adaptive-tiles-subgroups03.png)
+![subgroups, with weights totalling 100](images/adaptive-tiles-subgroups03.png)
 
-**참고** 열 사이에는 8픽셀 여백이 자동으로 추가됩니다.
+**Note**  An 8-pixel margin is automatically added between the columns.
 
  
 
-하위 그룹이 두 개 이상인 경우 양의 정수만 사용할 수 있는 **hint-weight**를 지정해야 합니다. 첫 번째 하위 그룹에 대해 hint-weight를 지정하지 않으면 가중치 50이 할당됩니다. hint-weight를 지정하지 않은 다음 하위 그룹에는 100에서 이전 가중치의 합계를 뺀 값과 동일한 가중치 또는 1(결과가 0인 경우)이 할당됩니다. hint-weight를 지정하지 않은 나머지 하위 그룹에는 가중치 1이 할당됩니다.
+When you have more than two subgroups, you should specify the **hint-weight**, which only accepts positive integers. If you don't specify hint-weight for the first subgroup, it will be assigned a weight of 50. The next subgroup that doesn't have a specified hint-weight will be assigned a weight equal to 100 minus the sum of the preceding weights, or to 1 if the result is zero. The remaining subgroups that don't have specified hint-weights will be assigned a weight of 1.
 
-다음은 너비가 같은 열 5개를 포함하는 타일을 얻을 수 있는 방법을 보여 주는 날씨 타일의 샘플 코드입니다.
+Here's sample code for a weather tile that shows how you can achieve a tile with five columns of equal width:
 
 ```XML
-...
 <binding template="TileWide" displayName="Seattle" branding="name">
   <group>
     <subgroup hint-weight="1">
@@ -767,11 +720,9 @@ private static TileGroup CreateGroup(string from, string subject, string body)
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileWide = new TileBinding()
 {
     DisplayName = "Seattle",
@@ -780,81 +731,72 @@ TileWide = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "Cloudy.png", "57°", "38°"),
- 
                     CreateSubgroup("Wed", "Sunny.png", "59°", "43°"),
- 
                     CreateSubgroup("Thu", "Sunny.png", "62°", "42°"),
- 
                     CreateSubgroup("Fri", "Sunny.png", "71°", "66°")
                 }
             }
         }
     }
 }
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
 }
 ```
 
-**결과:**
+**Result:**
 
-![날씨 타일의 예](images/adaptive-tiles-weathertile.png)
+![example of a weather tile](images/adaptive-tiles-weathertile.png)
 
-## 이미지
+## <a name="images"></a>Images
 
 
-&lt;image&gt; 요소는 타일 알림에 이미지를 표시하는 데 사용됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치되거나(기본값) 콘텐츠 뒤에 배경 이미지로 배치되거나 알림 위에서 애니메이션 효과를 주는 미리 보기 이미지로 배치될 수 있습니다.
+The &lt;image&gt; element is used to display images on the tile notification. Images can be placed inline within the tile content (default), as a background image behind your content, or as a peek image that animates in from the top of the notification.
 
-**참고** [이미지의 파일 크기와 이미지 크기에 대한 제한](https://msdn.microsoft.com/library/windows/apps/hh781198)이 있습니다.
+**Note**   There are [restrictions on the file size and dimensions of images](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
  
 
-추가 동작을 지정하지 않으면 이미지는 균일하게 축소 또는 확장되어 사용 가능한 너비를 채웁니다. 아래 샘플에서는 두 열과 인라인 이미지를 사용하는 타일을 보여 줍니다. 인라인 이미지는 늘어나서 열 너비를 채웁니다.
+With no extra behaviors specified, images will uniformly shrink or expand to fill the available width. The sample below shows a tile using two columns and inline images. The inline images stretch to fill the width of the column.
 
 ```XML
-...
 <binding template="TileMedium" displayName="Seattle" branding="name">
   <group>
     <subgroup>
@@ -871,11 +813,9 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileMedium = new TileBinding()
 {
     DisplayName = "Seattle",
@@ -884,12 +824,11 @@ TileMedium = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "Mostly Cloudy.png", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "Cloudy.png", "57°", "38°")
                 }
             }
@@ -897,90 +836,80 @@ TileMedium = new TileBinding()
     }
 }
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
 }
 ```
 
-**결과:**
+**Result:**
 
-![이미지 예제](images/adaptive-tiles-images01.png)
+![image example](images/adaptive-tiles-images01.png)
 
-&lt;binding&gt; 루트 또는 첫 번째 그룹에 배치된 이미지도 사용 가능한 높이에 맞게 늘어납니다.
+Images placed in the &lt;binding&gt; root, or in the first group, will also stretch to fit the available height.
 
-### 이미지 맞춤
+### <a name="image-alignment"></a>Image alignment
 
-**hint-align** 특성을 사용하여 이미지를 왼쪽, 가운데 또는 오른쪽으로 맞추도록 설정할 수 있습니다. 이 경우 이미지는 너비에 맞게 늘어나지 않고 기본 해상도로 표시됩니다.
+Images can be set to align left, center, or right using the **hint-align** attribute. This will also cause images to display at their native resolution instead of stretching to fill width.
 
 ```XML
-...
 <binding template="TileLarge">
   <image src="Assets/fable.jpg" hint-align="center"/>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileLarge = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         Children =
         {
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/fable.jpg"),
-                Align = TileImageAlign.Center
+                Source = "Assets/fable.jpg",
+                HintAlign = AdaptiveImageAlign.Center
             }
         }
     }
 }
-...
 ```
 
-**결과:**
+**Result:**
 
-![이미지 맞춤 예제(왼쪽, 가운데, 오른쪽)](images/adaptive-tiles-imagealignment.png)
+![image alignment example (left, center, right)](images/adaptive-tiles-imagealignment.png)
 
-### 이미지 여백
+### <a name="image-margins"></a>Image margins
 
-기본적으로 인라인 이미지는 위아래 콘텐츠와의 사이에 8픽셀의 여백이 있습니다. 이미지의 **hint-removeMargin** 특성을 사용하면 이 여백을 제거할 수 있습니다. 그러나 이미지는 타일 가장자리와의 8픽셀 여백을 항상 유지하고 하위 그룹(열)은 열 사이의 8픽셀 안쪽 여백을 항상 유지합니다.
+By default, inline images have an 8-pixel margin between any content above or below the image. This margin can be removed by using the **hint-removeMargin** attribute on the image. However, images always retain the 8-pixel margin from the edge of the tile, and subgroups (columns) always retain the 8-pixel padding between columns.
 
 ```XML
-...
 <binding template="TileMedium" branding="none">
   <group>
     <subgroup>
@@ -997,12 +926,9 @@ TileLarge = new TileBinding()
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileMedium = new TileBinding()
 {
     Branding = TileBranding.None,
@@ -1010,67 +936,60 @@ TileMedium = new TileBinding()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     CreateSubgroup("Mon", "4.jpg", "63°", "42°"),
- 
                     CreateSubgroup("Tue", "3.jpg", "57°", "38°")
                 }
             }
         }
     }
 }
- 
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Numbers/" + image),
-                RemoveMargin = true
+                Source = "Assets/Numbers/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
 }
 ```
 
-![Hint remove 여백 예제](images/adaptive-tiles-removemargin.png)
+![hint remove margin example](images/adaptive-tiles-removemargin.png)
 
-### 이미지 자르기
+### <a name="image-cropping"></a>Image cropping
 
-**hint-crop** 특성을 사용하여 이미지를 원으로 자를 수 있습니다. 현재 이 특성은 "none"(기본값) 또는 "circle" 값만 지원합니다.
+Images can be cropped into a circle using the **hint-crop** attribute, which currently only supports the values "none" (default) or "circle."
 
 ```XML
-...
 <binding template="TileLarge" hint-textStacking="center">
   <group>
     <subgroup hint-weight="1"/>
@@ -1083,72 +1002,62 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
   <text hint-style="title" hint-align="center">Hi,</text>
   <text hint-style="subtitleSubtle" hint-align="center">MasterHip</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileLarge = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         TextStacking = TileTextStacking.Center,
- 
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
-                    new TileSubgroup() { Weight = 1 },
- 
-                    new TileSubgroup()
+                    new AdaptiveSubgroup() { HintWeight = 1 },
+                    new AdaptiveSubgroup()
                     {
-                        Weight = 2,
+                        HintWeight = 2,
                         Children =
                         {
-                            new TileImage()
+                            new AdaptiveImage()
                             {
-                                Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg"),
-                                Crop = TileImageCrop.Circle
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
                             }
                         }
                     },
- 
-                    new TileSubgroup() { Weight = 1 }
+                    new AdaptiveSubgroup() { HintWeight = 1 }
                 }
             },
- 
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "Hi,",
-                Style = TileTextStyle.Title,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.Title,
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "MasterHip",
-                Style = TileTextStyle.SubtitleSubtle,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.SubtitleSubtle,
+                HintAlign = AdaptiveTextAlign.Center
             }
         }
     }
 }
-...
 ```
 
-**결과:**
+**Result:**
 
-![이미지 자르기 예제](images/adaptive-tiles-imagecropping.png)
+![image cropping example](images/adaptive-tiles-imagecropping.png)
 
-### 배경 이미지
+### <a name="background-image"></a>Background image
 
-배경 이미지를 설정하려면 이미지 요소를 &lt;binding&gt;의 루트에 배치하고 배치 특성을 "background"로 설정합니다.
+To set a background image, place an image element in the root of the &lt;binding&gt; and set the placement attribute to "background."
 
 ```XML
-...
 <binding template="TileWide">
   <image src="Assets\Mostly Cloudy-Background.jpg" placement="background"/>
   <group>
@@ -1161,23 +1070,21 @@ TileLarge = new TileBinding()
     ...
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
 TileWide = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         BackgroundImage = new TileBackgroundImage()
         {
-            Source = new TileImageSource("Assets/Mostly Cloudy-Background.jpg")
+            Source = "Assets/Mostly Cloudy-Background.jpg"
         },
- 
+
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
@@ -1188,222 +1095,231 @@ TileWide = new TileBinding()
         }
     }
 }
+
 ...
- 
- 
-private static TileSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
+
+private static AdaptiveSubgroup CreateSubgroup(string day, string image, string highTemp, string lowTemp)
 {
-    return new TileSubgroup()
+    return new AdaptiveSubgroup()
     {
-        Weight = 1,
- 
+        HintWeight = 1,
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = day,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileImage()
+            new AdaptiveImage()
             {
-                Source = new TileImageSource("Assets/Weather/" + image),
-                RemoveMargin = true
+                Source = "Assets/Weather/" + image,
+                HintRemoveMargin = true
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = highTemp,
-                Align = TileTextAlign.Center
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+            new AdaptiveText()
             {
                 Text = lowTemp,
-                Align = TileTextAlign.Center,
-                Style = TileTextStyle.CaptionSubtle
+                HintAlign = AdaptiveTextAlign.Center,
+                HintStyle = AdaptiveTextStyle.CaptionSubtle
             }
         }
     };
 }
 ```
 
-**결과:**
+**Result:**
 
-![배경 이미지 예제](images/adaptive-tiles-backgroundimage.png)
+![background image example](images/adaptive-tiles-backgroundimage.png)
 
-또한 **hint-overlay**를 사용하여 배경 이미지에 검정 오버레이를 설정할 수 있습니다. 이 특성에는 0에서 100 사이의 정수를 사용할 수 있으며, 0이면 오버레이가 없고 100이면 전체 검정 오버레이가 설정됩니다. 기본값은 20입니다.
+### <a name="peek-image"></a>Peek image
+
+You can specify an image that "peeks" in from the top of the tile. The peek image uses an animation to slide down/up from the top of the tile, peeking into view, and then later sliding back out to reveal the main content on the tile. To set a peek image, place an image element in the root of the &lt;binding&gt;, and set the placement attribute to "peek."
 
 ```XML
-...
-<binding template="TileWide" hint-overlay="60">
-  <image src="Assets\Mostly Cloudy-Background.jpg" placement="background"/>
-  ...
+<binding template="TileMedium" branding="name">
+  <image placement="peek" src="Assets/Apps/Hipstame/hipster.jpg"/>
+  <text>New Message</text>
+  <text hint-style="captionsubtle" hint-wrap="true">Hey, have you tried Windows 10 yet?</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
+TileWide = new TileBinding()
+{
+    Branding = TileBranding.Name,
+    Content = new TileBindingContentAdaptive()
+    {
+        PeekImage = new TilePeekImage()
+        {
+            Source = "Assets/Apps/Hipstame/hipster.jpg"
+        },
+        Children =
+        {
+            new AdaptiveText()
+            {
+                Text = "New Message"
+            },
+            new AdaptiveText()
+            {
+                Text = "Hey, have you tried Windows 10 yet?",
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintWrap = true
+            }
+        }
+    }
+}
+```
+
+![examples of peeking images](images/adaptive-tiles-imagepeeking.png)
+
+**Circle crop for peek and background images**
+
+Use the hint-crop attribute on peek and background images to do a circle crop:
+
+```XML
+<image placement="peek" hint-crop="circle" src="Assets/Apps/Hipstame/hipster.jpg"/>
+```
+
+```CSharp
+new TilePeekImage()
+{
+    HintCrop = TilePeekImageCrop.Circle,
+    Source = "Assets/Apps/Hipstame/hipster.jpg"
+}
+```
+
+The result will look like this:
+
+![circle crop for peek and background image](images/circlecrop-image.png)
+
+**Use both peek and background image**
+
+To use both a peek and a background image on a tile notification, specify both a peek image and a background image in your notification payload.
+
+The result will look like this:
+
+![peek and background image used together](images/peekandbackground.png)
+
+
+### <a name="peek-and-background-image-overlays"></a>Peek and background image overlays
+
+You can set a black overlay on your background and peek images using **hint-overlay**, which accepts integers from 0-100, with 0 being no overlay and 100 being full black overlay. You can use the overlay to help ensure that text on your tile is readable.
+
+**Use hint-overlay on a background image**
+
+Your background image will default to 20% overlay as long as you have some text elements in your payload (otherwise it will default to 0% overlay).
+
+```XML
+<binding template="TileWide">
+  <image placement="background" hint-overlay="60" src="Assets\Mostly Cloudy-Background.jpg"/>
+  ...
+</binding>
+```
+
+```CSharp
 TileWide = new TileBinding()
 {
     Content = new TileBindingContentAdaptive()
     {
         BackgroundImage = new TileBackgroundImage()
         {
-            Source = new TileImageSource("Assets/Mostly Cloudy-Background.jpg"),
-            Overlay = 60
+            Source = "Assets/Mostly Cloudy-Background.jpg",
+            HintOverlay = 60
         },
- 
+
         ...
     }
 }
- 
-...
 ```
 
-**hint-overlay 결과:**
+**hint-overlay Result:**
 
-![이미지 hint overlay의 예](images/adaptive-tiles-image-hintoverlay.png)
+![example of an image hint overlay](images/adaptive-tiles-image-hintoverlay.png)
 
-### 미리 보기 이미지
+**Use hint-overlay on a peek image**
 
-타일의 위쪽에서 "움직이는" 이미지를 지정할 수 있습니다. 미리 보기 이미지는 애니메이션을 사용하여 타일 위쪽에서 위아래로 미끄러져 나타났다가 나중에 다시 미끄러져 사라져 타일에 주 콘텐츠를 표시합니다. 미리 보기 이미지를 설정하려면 &lt;binding&gt;의 루트에 이미지 요소를 배치하고 배치 특성을 "peek"로 설정합니다.
+In Version 1511 of Windows 10, we support an overlay for your peek image too, just like your background image. Specify hint-overlay on the peek image element as an integer from 0-100. The default overlay for peek images is 0 (no overlay).
 
 ```XML
-...
-<binding template="TileMedium" branding="name">
-  <image placement="peek" src="Assets/Apps/Hipstame/hipster.jpg"/>
-  <text>New Message</text>
-  <text hint-style="captionsubtle" hint-wrap="true">Hey, have you tried Windows 10 yet?</text>
+<binding template="TileMedium">
+  <image hint-overlay="20" src="Assets\Map.jpg" placement="peek"/>
+  ...
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
-TileWide = new TileBinding()
+TileMedium = new TileBinding()
 {
-    Branding = TileBranding.Name,
- 
     Content = new TileBindingContentAdaptive()
     {
         PeekImage = new TilePeekImage()
         {
-            Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg")
+            Source = "Assets/Map.jpg",
+            HintOverlay = 20
         },
- 
-        Children =
-        {
-            new TileText()
-            {
-                Text = "New Message"
-            },
- 
-            new TileText()
-            {
-                Text = "Hey, have you tried Windows 10 yet?",
-                Style = TileTextStyle.CaptionSubtle,
-                Wrap = true
-            }
-        }
+        ...
     }
 }
- 
-...
 ```
 
-![미리 보기 이미지의 예](images/adaptive-tiles-imagepeeking.png)
+This example shows a peek image at 20% opacity (left) and at 0% opacity (right):
 
-**미리 보기 및 배경 이미지에 대한 원 자르기**
+![hint-overlay on a peek image](images/hintoverlay.png)
 
-원 자르기 작업을 수행하려면 미리 보기 및 배경 이미지에 다음 특성을 사용합니다.
-
-hint-crop="circle"
-
-다음과 같은 결과가 표시됩니다.
-
-![미리 보기 및 배경 이미지에 대한 원 자르기](images/circlecrop-image.png)
-
-**미리 보기 및 배경 이미지 둘 다 사용**
-
-타일 알림에 미리 보기 및 배경 이미지 둘 다 사용하려면 알림 페이로드에 미리 보기 이미지와 배경 이미지 둘 다 지정합니다.
-
-다음과 같은 결과가 표시됩니다.
-
-![함께 사용된 미리 보기 및 배경 이미지](images/peekandbackground.png)
-
-**미리 보기 이미지에 힌트 오버레이 사용**
-
-미리 보기 이미지에 **hint-overlay**를 사용하여 불투명도를 추가하고 타일의 표시 이름이 더 잘 보이도록 할 수 있습니다. **binding** 요소에 &lt;hint-overlay&gt;를 지정하는 경우 오버레이가 배경 및 미리 보기 이미지 둘 다에 적용됩니다.
-
-배치="미리 보기" 또는 배치="배경"인 &lt;image&gt; 요소에 **hint-overlay**를 적용하여 각 이미지에 별개의 불투명도 수준을 사용할 수도 있습니다. 오버레이를 지정하지 않으면 배경 이미지의 불투명도 기본값은 20%로 설정되고 미리 보기 이미지의 불투명도 기본값은 0%로 설정됩니다.
-
-이 예에서는 불투명도가 20%(왼쪽)와 0%(오른쪽)인 배경 이미지를 보여줍니다.
-
-![미리 보기 이미지의 힌트 오버레이](images/hintoverlay.png)
-
-## 세로 맞춤(텍스트 스택)
+## <a name="vertical-alignment-text-stacking"></a>Vertical alignment (text stacking)
 
 
-[&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소와 [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 요소 모두에서 **hint-textStacking** 특성을 사용하여 타일에서 콘텐츠의 세로 맞춤을 제어할 수 있습니다. 기본적으로 모든 콘텐츠는 세로로 위쪽에 맞춰지지만 콘텐츠를 아래쪽 또는 가운데에 맞출 수도 있습니다.
+You can control the vertical alignment of content on your tile by using the **hint-textStacking** attribute on both the [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element and [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md) element. By default, everything is vertically aligned to the top, but you can also align content to the bottom or center.
 
-### 바인딩 요소에서 텍스트 스택
+### <a name="text-stacking-on-binding-element"></a>Text stacking on binding element
 
-[&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 수준에서 적용하는 경우 텍스트 스택은 알림 콘텐츠 전체의 세로 맞춤을 설정하며, 브랜딩/배지 영역 위의 사용 가능한 세로 공간에서 맞춥니다.
+When applied at the [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md) level, text stacking sets the vertical alignment of the notification content as a whole, aligning in the available vertical space above the branding/badge area.
 
 ```XML
-...
 <binding template="TileMedium" hint-textStacking="center" branding="logo">
   <text hint-style="base" hint-align="center">Hi,</text>
   <text hint-style="captionSubtle" hint-align="center">MasterHip</text>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileMedium = new TileBinding()
 {
     Branding = TileBranding.Logo,
- 
     Content = new TileBindingContentAdaptive()
     {
         TextStacking = TileTextStacking.Center,
- 
         Children =
         {
-            new TileText()
+            new AdaptiveText()
             {
                 Text = "Hi,",
-                Style = TileTextStyle.Base,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.Base,
+                HintAlign = AdaptiveTextAlign.Center
             },
- 
-            new TileText()
+
+            new AdaptiveText()
             {
                 Text = "MasterHip",
-                Style = TileTextStyle.CaptionSubtle,
-                Align = TileTextAlign.Center
+                HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                HintAlign = AdaptiveTextAlign.Center
             }
         }
     }
 }
- 
-...
 ```
 
-![바인딩 요소에서 텍스트 스택](images/adaptive-tiles-textstack-bindingelement.png)
+![text stacking on binding element](images/adaptive-tiles-textstack-bindingelement.png)
 
-### 하위 그룹 요소에서 텍스트 스택
+### <a name="text-stacking-on-subgroup-element"></a>Text stacking on subgroup element
 
-[&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md) 수준에서 적용하는 경우 텍스트 스택은 하위 그룹(열) 콘텐츠의 세로 맞춤을 설정하며, 전체 그룹 내의 사용 가능한 세로 공간에서 맞춥니다.
+When applied at the [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md) level, text stacking sets the vertical alignment of the subgroup (column) content, aligning in the available vertical space within the entire group.
 
 ```XML
-...
 <binding template="TileWide" branding="nameAndLogo">
   <group>
     <subgroup hint-weight="33">
@@ -1415,56 +1331,51 @@ TileMedium = new TileBinding()
     </subgroup>
   </group>
 </binding>
-...
 ```
 
 ```CSharp
-...
- 
 TileWide = new TileBinding()
 {
     Branding = TileBranding.NameAndLogo,
- 
     Content = new TileBindingContentAdaptive()
     {
         Children =
         {
-            new TileGroup()
+            new AdaptiveGroup()
             {
                 Children =
                 {
                     // Image column
-                    new TileSubgroup()
+                    new AdaptiveSubgroup()
                     {
-                        Weight = 33,
+                        HintWeight = 33,
                         Children =
                         {
-                            new TileImage()
+                            new AdaptiveImage()
                             {
-                                Source = new TileImageSource("Assets/Apps/Hipstame/hipster.jpg"),
-                                Crop = TileImageCrop.Circle
+                                Source = "Assets/Apps/Hipstame/hipster.jpg",
+                                HintCrop = AdaptiveImageCrop.Circle
                             }
                         }
                     },
- 
+
                     // Text column
-                    new TileSubgroup()
+                    new AdaptiveSubgroup()
                     {
                         // Vertical align its contents
                         TextStacking = TileTextStacking.Center,
- 
                         Children =
                         {
-                            new TileText()
+                            new AdaptiveText()
                             {
                                 Text = "Hi,",
-                                Style = TileTextStyle.Subtitle
+                                HintStyle = AdaptiveTextStyle.Subtitle
                             },
- 
-                            new TileText()
+
+                            new AdaptiveText()
                             {
                                 Text = "MasterHip",
-                                Style = TileTextStyle.BodySubtle
+                                HintStyle = AdaptiveTextStyle.BodySubtle
                             }
                         }
                     }
@@ -1473,16 +1384,15 @@ TileWide = new TileBinding()
         }
     }
 }
- 
-...
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
 
-* [적응형 타일 스키마](tiles-and-notifications-adaptive-tiles-schema.md)
-* [GitHub의 NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
-* [특수 타일 템플릿 카탈로그](tiles-and-notifications-special-tile-templates-catalog.md)
+* [Adaptive tiles schema](tiles-and-notifications-adaptive-tiles-schema.md)
+* [Quickstart: Send a local tile notification](tiles-and-notifications-create-adaptive-tiles.md)
+* [Notifications library on GitHub](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
+* [Special tile templates catalog](tiles-and-notifications-special-tile-templates-catalog.md)
  
 
  
@@ -1493,6 +1403,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

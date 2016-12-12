@@ -1,3387 +1,4169 @@
-
 ---
-Description: "작성자&#58; jnHs 예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다. 이 항목에서는 각 국가/지역에서 지원되는 임계값 및 결제 방법에 대해 설명합니다."
-title: "지급 임계값, 방법 및 기간"
+author: jnHs
+Description: The estimated time to transfer payments, applicable payment thresholds, and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type.
+title: Payment thresholds, methods, and timeframes
 translationtype: Human Translation
-ms.sourcegitcommit: 85b9993334ecfb3ea2dc5a196cb5b5f9dc99c985
-ms.openlocfilehash: b4f98e31b52b77f6675771fc09bb492ca5cf9021
+ms.sourcegitcommit: d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367
+ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
 
 ---
 
 
-# 지급 임계값, 방법 및 기간
+# <a name="payment-thresholds-methods-and-timeframes"></a>Payment thresholds, methods, and timeframes
 
-예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다. 이 항목에서는 각 국가/지역에서 지원되는 지급 임계값 및 결제 방법에 대해 설명합니다.
+The estimated time to transfer payments, applicable payment threshold(s), and Microsoft marketplaces from which you can receive payments can vary depending on your country/region and payout account type. This topic outlines the payment thresholds and payment methods supported in each country/region.
 
-특정 국가/지역에서는 ACH/SEPA를 사용하거나 전신 송금을 통해 지급을 전달합니다. 또한 일부 국가/지역에서는 결제 방법으로 PayPal을 지원합니다.
+For any given country/region, we will either use ACH/SEPA or wire transfer to deliver our payments. Additionally, some countries/regions support PayPal as a payment method.
 
-## 지급 계좌에 지급이 입금되기까지의 일 수
+## <a name="number-of-days-for-payments-to-reach-payout-account"></a>Number of days for payments to reach payout account
 
-일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보내지만 계좌에 입금될 때까지 추가 시간이 필요합니다. 이 시간은 아래 설명과 같이 해당 계좌에 대해 사용하는 결제 방법에 따라 달라집니다. 
+We'll typically send any payment due in a given month by the 15th day of that month, but it will take additional time for the payment to reach your account. The amount of days will vary depending on the payment method we use for your account, as described below. 
 
-> 
-            **참고** 아래에 표시된 일 수는 근사값이므로 시간은 더 길거나 짧아질 수 있습니다.
+> **Note** The days shown below are approximate; any given payout may take a longer or shorter amount of time.
 
 
-| 결제 방법 | 지급 계좌에 입금되기까지의 일 수 |
+| Payment method | Number of days to reach payout account |
 |--------------------|--------------------------------------------|
-| PayPal | 1일(영업일 기준) | 
-| ACH/SEPA |2-3일(영업일 기준) |
-| 전신 송금 | 7-10일(영업일 기준) |
+| PayPal | 1 business day | 
+| ACH/SEPA |2-3 business days |
+| Wire Transfer | 7-10 business days |
 
 &nbsp;
 
-각 마켓플레이스에서 이러한 결제 방법이 사용되는 국가/지역은 아래 표를 참조하세요.
+To see the countries/regions in which these payment methods are used for each marketplace, see the tables below.
 
-## 지급 임계값 및 방법
+## <a name="payment-thresholds-and-methods"></a>Payment thresholds and methods
 
-> 
-            **참고** 지급 임계값은 USD 단위로 표시됩니다. 일부 마켓플레이스에서는 현지 통화로 환산한 동일한 금액이 사용됩니다. 
+> **Note** Payment thresholds are listed in USD. In some markets, the equivalent in local currency is used. 
 
-### Windows 스토어 
+### <a name="windows-store"></a>Windows Store 
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">지급 계좌 = 은행 계좌</th>
-    <th colspan="2">지급 계좌 = PayPal</th>
+    <th colspan="2">Payout account = Bank account</th>
+    <th colspan="2">Payout account = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
   </tr>
   <tr>
-    <td>아프가니스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Afghanistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>알바니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Albania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>알제리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Algeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>앙골라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Angola</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>앤티가 바부다</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Antigua and Barbuda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아르헨티나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Argentina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아르메니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Armenia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>오스트레일리아</td>
-    <td>25USD</td>
+    <td>Australia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>오스트리아</td>
-    <td>25USD</td>
+    <td>Austria</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아제르바이잔</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Azerbaijan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>바레인</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bahrain</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>방글라데시</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bangladesh</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>벨로루시</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Belarus</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>벨기에</td>
-    <td>25USD</td>
+    <td>Belgium</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>베냉</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Benin</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>볼리비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bolivia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>보스니아 헤르체고비나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bosnia and Herzegovina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>보츠와나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Botswana</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>브라질</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Brazil</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>불가리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bulgaria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>부르키나파소</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Burkina Faso</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>부룬디</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Burundi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>캄보디아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Cambodia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카메룬</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Cameroon</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>캐나다</td>
-    <td>25USD</td>
+    <td>Canada</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>중앙 아프리카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Central African Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>차드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Chad</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>칠레</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Chile</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>중국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>China</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>콜롬비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Colombia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코모로</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Comoros</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Congo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고 민주 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Congo (DRC)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코스타리카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Costa Rica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코트디부아르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Côte d'Ivoire</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>크로아티아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Croatia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>키프로스</td>
-    <td>25USD</td>
+    <td>Cyprus</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Czech Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>덴마크</td>
-    <td>25USD</td>
+    <td>Denmark</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>도미니카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Dominica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>도미니카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Dominican Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에콰도르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ecuador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>이집트</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Egypt</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>엘살바도르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>El Salvador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Eritrea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에스토니아</td>
-    <td>25USD</td>
+    <td>Estonia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>에티오피아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ethiopia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>피지</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Fiji</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>핀란드</td>
-    <td>25USD</td>
+    <td>Finland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>프랑스</td>
-    <td>25USD</td>
+    <td>France</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>그루지야</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Georgia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>독일</td>
-    <td>25USD</td>
+    <td>Germany</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>가나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ghana</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>그리스</td>
-    <td>25USD</td>
+    <td>Greece</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>과테말라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Guatemala</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>기니</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Guinea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아이티</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Haiti</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>온두라스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Honduras</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>홍콩 특별 행정구</td>
-    <td>25USD</td>
+    <td>Hong Kong SAR</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>헝가리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Hungary</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아이슬란드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Iceland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>인도</td>
-    <td>25USD</td>
+    <td>India</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>인도네시아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Indonesia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>이라크</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Iraq</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아일랜드</td>
-    <td>25USD</td>
+    <td>Ireland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이스라엘</td>
-    <td>25USD</td>
+    <td>Israel</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이탈리아</td>
-    <td>25USD</td>
+    <td>Italy</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>자메이카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Jamaica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>일본</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Japan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>요르단</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Jordan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카자흐스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kazakhstan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>케냐</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kenya</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>한국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Korea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>쿠웨이트</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kuwait</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라오스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Laos</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라트비아</td>
-    <td>25USD</td>
+    <td>Latvia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>레바논</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Lebanon</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라이베리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Liberia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>리히텐슈타인</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Liechtenstein</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>리투아니아</td>
-    <td>25USD</td>
+    <td>Lithuania</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>룩셈부르크</td>
-    <td>25USD</td>
+    <td>Luxembourg</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Macedonia (FYROM)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>마다가스카르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Madagascar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말라위</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Malawi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말레이시아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Malaysia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mali</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몰타</td>
-    <td>25USD</td>
+    <td>Malta</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>모리셔스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mauritius</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>멕시코</td>
-    <td>25USD</td>
+    <td>Mexico</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>모나코</td>
-    <td>25USD</td>
+    <td>Monaco</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몽골</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mongolia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몬테네그로</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Montenegro</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>모로코</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Morocco</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>모잠비크</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mozambique</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>네팔</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nepal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>네덜란드</td>
-    <td>25USD</td>
+    <td>Netherlands</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>뉴질랜드</td>
-    <td>25USD</td>
+    <td>New Zealand</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>니카라과</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nicaragua</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>니제르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Niger</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>나이지리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nigeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>노르웨이</td>
-    <td>25USD</td>
+    <td>Norway</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>오만</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Oman</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파키스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Pakistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파나마</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Panama</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파라과이</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Paraguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>페루</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Peru</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>필리핀</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Philippines</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>폴란드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Poland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>포르투갈</td>
-    <td>25USD</td>
+    <td>Portugal</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>카타르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Qatar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>루마니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Romania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>러시아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Russia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>르완다</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Rwanda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세인트 빈센트 그레나딘</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Saint Vincent and the Grenadines</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>사우디아라비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Saudi Arabia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세네갈</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Senegal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세르비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Serbia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>시에라리온</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Sierra Leone</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>싱가포르</td>
-    <td>25USD</td>
+    <td>Singapore</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로바키아</td>
-    <td>25USD</td>
+    <td>Slovakia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로베니아</td>
-    <td>25USD</td>
+    <td>Slovenia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>소말리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Somalia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>남아프리카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>South Africa</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스페인</td>
-    <td>25USD</td>
+    <td>Spain</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스리랑카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Sri Lanka</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스웨덴</td>
-    <td>25USD</td>
+    <td>Sweden</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스위스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Switzerland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>대만</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Taiwan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>타지키스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tajikistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>탄자니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tanzania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>태국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Thailand</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>동티모르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Timor-Leste</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>토고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Togo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>통가</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tonga</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>트리니다드 토바고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Trinidad and Tobago</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>튀니지</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tunisia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>터키</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Turkey</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>투르크메니스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Turkmenistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>우간다</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Uganda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>우크라이나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ukraine</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아랍에미리트</td>
-    <td>25USD</td>
+    <td>United Arab Emirates</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>영국</td>
-    <td>25USD</td>
+    <td>United Kingdom</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>미국</td>
-    <td>25USD</td>
+    <td>United States</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>우루과이</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Uruguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>우즈베키스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Uzbekistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>베네수엘라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Venezuela</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>베트남</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Vietnam</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>잠비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Zambia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>짐바브웨</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Zimbabwe</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
 </table>
 
 &nbsp;
 
-### Microsoft Advertising 
+### <a name="microsoft-advertising"></a>Microsoft Advertising 
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">지급 계좌 = 은행 계좌</th>
-    <th colspan="2">지급 계좌 = PayPal</th>
+    <th colspan="2">Payout account = Bank account</th>
+    <th colspan="2">Payout account = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
   </tr>
   <tr>
-    <td>아프가니스탄</td>
+    <td>Afghanistan</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>알바니아</td>
+    <td>Albania</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>알제리</td>
+    <td>Algeria</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>앙골라</td>
+    <td>Angola</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>앤티가 바부다</td>
+    <td>Antigua and Barbuda</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아르헨티나</td>
+    <td>Argentina</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아르메니아</td>
+    <td>Armenia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>오스트레일리아</td>
-    <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>오스트리아</td>
+    <td>Australia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아제르바이잔</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>바레인</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>방글라데시</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>벨로루시</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>벨기에</td>
+    <td>Austria</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>베냉</td>
+    <td>Azerbaijan</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>볼리비아</td>
+    <td>Bahrain</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>보스니아 헤르체고비나</td>
+    <td>Bangladesh</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>보츠와나</td>
+    <td>Belarus</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>브라질</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>불가리아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>부르키나파소</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>부룬디</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>캄보디아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>카메룬</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>캐나다</td>
+    <td>Belgium</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>중앙 아프리카 공화국</td>
+    <td>Benin</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>차드</td>
+    <td>Bolivia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>칠레</td>
+    <td>Bosnia and Herzegovina</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>중국</td>
+    <td>Botswana</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콜롬비아</td>
+    <td>Brazil</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코모로</td>
+    <td>Bulgaria</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고</td>
+    <td>Burkina Faso</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고 민주 공화국</td>
+    <td>Burundi</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코스타리카</td>
+    <td>Cambodia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코트디부아르</td>
+    <td>Cameroon</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>크로아티아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>키프로스</td>
+    <td>Canada</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
+    <td>Central African Republic</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Chad</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Chile</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>China</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>덴마크</td>
+    <td>Colombia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Comoros</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Congo</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Congo (DRC)</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Costa Rica</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Côte d'Ivoire</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Croatia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Cyprus</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>도미니카</td>
+    <td>Czech Republic</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
   </tr>
   <tr>
-    <td>도미니카 공화국</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>에콰도르</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>이집트</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>엘살바도르</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>에리트리아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>에스토니아</td>
+    <td>Denmark</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>에티오피아</td>
+    <td>Dominica</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>피지</td>
+    <td>Dominican Republic</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>핀란드</td>
+    <td>Ecuador</td>
     <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>프랑스</td>
+    <td>Egypt</td>
     <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>그루지야</td>
+    <td>El Salvador</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>독일</td>
+    <td>Eritrea</td>
     <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>가나</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>그리스</td>
+    <td>Estonia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>과테말라</td>
+    <td>Ethiopia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>기니</td>
+    <td>Fiji</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아이티</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>온두라스</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>홍콩 특별 행정구</td>
+    <td>Finland</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>헝가리</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>아이슬란드</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>인도</td>
-    <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>인도네시아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>이라크</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>아일랜드</td>
+    <td>France</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이스라엘</td>
+    <td>Georgia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Germany</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이탈리아</td>
+    <td>Ghana</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Greece</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>자메이카</td>
+    <td>Guatemala</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>일본</td>
+    <td>Guinea</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>요르단</td>
+    <td>Haiti</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카자흐스탄</td>
+    <td>Honduras</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>케냐</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>한국</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>쿠웨이트</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>라오스</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>라트비아</td>
-    <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>레바논</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>라이베리아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>리히텐슈타인</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>리투아니아</td>
-    <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>룩셈부르크</td>
+    <td>Hong Kong SAR</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
+    <td>Hungary</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
   </tr>
   <tr>
-    <td>마다가스카르</td>
+    <td>Iceland</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말라위</td>
+    <td>India</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>ACH/SEPA</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말레이시아</td>
+    <td>Indonesia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말리</td>
+    <td>Iraq</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몰타</td>
+    <td>Ireland</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>모리셔스</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>멕시코</td>
+    <td>Israel</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>모나코</td>
-    <td>50 USD</td>
-    <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>몽골</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>몬테네그로</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>모로코</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>모잠비크</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>네팔</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>네덜란드</td>
+    <td>Italy</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>뉴질랜드</td>
+    <td>Jamaica</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Japan</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Jordan</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Kazakhstan</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Kenya</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Korea</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Kuwait</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Laos</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Latvia</td>
+    <td>50 USD</td>
+    <td>ACH/SEPA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Lebanon</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Liberia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Liechtenstein</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Lithuania</td>
+    <td>50 USD</td>
+    <td>ACH/SEPA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Luxembourg</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>니카라과</td>
+    <td>Macedonia (FYROM)</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>니제르</td>
+    <td>Madagascar</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>나이지리아</td>
+    <td>Malawi</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>노르웨이</td>
+    <td>Malaysia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Mali</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Malta</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>오만</td>
+    <td>Mauritius</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파키스탄</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>파나마</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>파라과이</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>페루</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>필리핀</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>폴란드</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>포르투갈</td>
+    <td>Mexico</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>카타르</td>
+    <td>Monaco</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>ACH/SEPA</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>루마니아</td>
+    <td>Mongolia</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>러시아</td>
+    <td>Montenegro</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>르완다</td>
+    <td>Morocco</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세인트 빈센트 그레나딘</td>
+    <td>Mozambique</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>사우디아라비아</td>
+    <td>Nepal</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세네갈</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>세르비아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>시에라리온</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>싱가포르</td>
+    <td>Netherlands</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로바키아</td>
+    <td>New Zealand</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로베니아</td>
+    <td>Nicaragua</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Niger</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Nigeria</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Norway</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>소말리아</td>
+    <td>Oman</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>남아프리카 공화국</td>
+    <td>Pakistan</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스페인</td>
+    <td>Panama</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Paraguay</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Peru</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Philippines</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Poland</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Portugal</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스리랑카</td>
+    <td>Qatar</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스웨덴</td>
+    <td>Romania</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Russia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Rwanda</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Saint Vincent and the Grenadines</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Saudi Arabia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Senegal</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Serbia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Sierra Leone</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Singapore</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스위스</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>대만</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>타지키스탄</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>탄자니아</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>태국</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>50 USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>동티모르</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>토고</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>통가</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>트리니다드 토바고</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>튀니지</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>터키</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>투르크메니스탄</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>우간다</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>우크라이나</td>
-    <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>아랍에미리트</td>
+    <td>Slovakia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>영국</td>
+    <td>Slovenia</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>미국</td>
+    <td>Somalia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>South Africa</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Spain</td>
     <td>50 USD</td>
     <td>ACH/SEPA</td>
     <td>50 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>우루과이</td>
+    <td>Sri Lanka</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>우즈베키스탄</td>
+    <td>Sweden</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>ACH/SEPA</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
   </tr>
   <tr>
-    <td>베네수엘라</td>
+    <td>Switzerland</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
   </tr>
   <tr>
-    <td>베트남</td>
+    <td>Taiwan</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
   </tr>
   <tr>
-    <td>잠비아</td>
+    <td>Tajikistan</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>짐바브웨</td>
+    <td>Tanzania</td>
     <td>50 USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Thailand</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Timor-Leste</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Togo</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Tonga</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Trinidad and Tobago</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Tunisia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Turkey</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Turkmenistan</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Uganda</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Ukraine</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>United Arab Emirates</td>
+    <td>50 USD</td>
+    <td>ACH/SEPA</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>United Kingdom</td>
+    <td>50 USD</td>
+    <td>ACH/SEPA</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>United States</td>
+    <td>50 USD</td>
+    <td>ACH/SEPA</td>
+    <td>50 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Uruguay</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Uzbekistan</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Venezuela</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Vietnam</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Zambia</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Zimbabwe</td>
+    <td>50 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
 </table>
 
 &nbsp;
 
-### Azure Marketplace
+### <a name="azure-marketplace"></a>Azure Marketplace
 
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">지급 계좌 = 은행 계좌</th>
-    <th colspan="2">지급 계좌 = PayPal</th>
+    <th colspan="2">Payout account = Bank account</th>
+    <th colspan="2">Payout account = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
+  </tr>
+  <tr>
+    <td>Afghanistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Albania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Algeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Angola</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+<tr>
+    <td>Antigua and Barbuda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ <tr>
+    <td>Argentina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Armenia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Australia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
   </tr>
     <tr>
-    <td>오스트리아</td>
-    <td>25USD</td>
+    <td>Austria</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
+<tr>
+    <td>Azerbaijan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
   <tr>
-    <td>벨기에</td>
-    <td>25USD</td>
+    <td>Bahrain</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Bangladesh</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Belarus</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+    <tr>
+    <td>Belgium</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>불가리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+ <tr>
+    <td>Benin</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>캐나다</td>
-    <td>25USD</td>
+    <td>Bolivia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Bosnia and Herzegovina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Botswana</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Brazil</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Bulgaria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+<tr>
+    <td>Burkina Faso</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Burundi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Cambodia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Cameroon</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+    <tr>
+    <td>Canada</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>크로아티아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+<tr>
+    <td>Central African Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>키프로스</td>
-    <td>25USD</td>
+    <td>Chad</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Chile</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Colombia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Comoros</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Congo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Congo (DRC)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Costa Rica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Côte d'Ivoire</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Croatia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Cyprus</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Czech Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>덴마크</td>
-    <td>25USD</td>
+    <td>Denmark</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>에스토니아</td>
-    <td>25USD</td>
+    <td>Dominica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Dominican Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Ecuador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Egypt</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>El Salvador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Eritrea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Estonia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>핀란드</td>
-    <td>25USD</td>
+    <td>Ethiopia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Fiji</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Finland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>프랑스</td>
-    <td>25USD</td>
+    <td>France</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>독일</td>
-    <td>25USD</td>
+   <tr>
+    <td>Georgia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ <tr>
+    <td>Germany</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>그리스</td>
-    <td>25USD</td>
+   <tr>
+    <td>Ghana</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ <tr>
+    <td>Greece</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
+ <tr>
+    <td>Guatemala</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
   <tr>
-    <td>홍콩 특별 행정구</td>
-    <td>25USD</td>
+    <td>Guinea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Haiti</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Honduras</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Hong Kong SAR</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>헝가리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Hungary</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아일랜드</td>
-    <td>25USD</td>
+    <td>Iceland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
-    <td>PayPal</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>이탈리아</td>
-    <td>25USD</td>
+    <td>Indonesia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Iraq</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Ireland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>일본</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
-    <td>PayPal</td>
-  </tr>
-  <tr>
-    <td>라트비아</td>
-    <td>25USD</td>
+ <tr>
+    <td>Israel</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>리히텐슈타인</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>리투아니아</td>
-    <td>25USD</td>
+   <tr>
+    <td>Italy</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Jamaica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ <tr>
+    <td>Japan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Jordan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>룩셈부르크</td>
-    <td>25USD</td>
+    <td>Kazakhstan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Kenya</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Korea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Kuwait</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Laos</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Latvia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Lebanon</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Liberia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Liechtenstein</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>몰타</td>
-    <td>25USD</td>
+    <td>Lithuania</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
-    <td>PayPal</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>네덜란드</td>
-    <td>25USD</td>
+    <td>Luxembourg</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
+ <tr>
+    <td>Macedonia (FYROM)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
   <tr>
-    <td>노르웨이</td>
-    <td>25USD</td>
+    <td>Madagascar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Malawi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Malaysia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Mali</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Malta</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-  <tr>
-    <td>폴란드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
-    <td>PayPal</td>
+ <tr>
+    <td>Mauritius</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>포르투갈</td>
-    <td>25USD</td>
+    <td>Mexico</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>루마니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
-  </tr>
-  <tr>
-    <td>슬로바키아</td>
-    <td>25USD</td>
+    <td>Monaco</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
-    <td>PayPal</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>슬로베니아</td>
-    <td>25USD</td>
+    <td>Mongolia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Montenegro</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Morocco</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Mozambique</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Nepal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Netherlands</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
+ <tr>
+    <td>Nicaragua</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
   <tr>
-    <td>스페인</td>
-    <td>25USD</td>
+    <td>Niger</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Nigeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Norway</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Oman</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Pakistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Panama</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Paraguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Peru</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Philippines</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Poland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스웨덴</td>
-    <td>25USD</td>
+    <td>Portugal</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스위스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Qatar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Romania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ <tr>
+    <td>Russia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>영국</td>
-    <td>25USD</td>
+    <td>Rwanda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Saint Vincent and the Grenadines</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Saudi Arabia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Senegal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Serbia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Sierra Leone</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Singapore</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+   <tr>
+    <td>Slovakia</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>미국</td>
-    <td>25USD</td>
+    <td>Slovenia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
-</table>
+ <tr>
+    <td>Somalia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>South Africa</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+   <tr>
+    <td>Spain</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Sri Lanka</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Sweden</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Switzerland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Taiwan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>Tajikistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Tanzania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Thailand</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Timor-Leste</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Togo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Tonga</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Trinidad and Tobago</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Tunisia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Turkey</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Turkmenistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Uganda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Ukraine</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>United Arab Emirates</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+    <tr>
+    <td>United Kingdom</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+  <tr>
+    <td>United States</td>
+    <td>25 USD</td>
+    <td>ACH/SEPA</td>
+    <td>25 USD</td>
+    <td>PayPal</td>
+  </tr>
+ <tr>
+    <td>Uruguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Uzbekistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Venezuela</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Vietnam</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Zambia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Zimbabwe</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+ </table>
 
 &nbsp;
 
-### Office 스토어
+### <a name="office-store"></a>Office Store
 <table>
   <tr>
     <th>&nbsp;</th>
-    <th colspan="2">지급 계좌 = 은행 계좌</th>
-    <th colspan="2">지급 계좌 = PayPal</th>
+    <th colspan="2">Payout account = Bank account</th>
+    <th colspan="2">Payout account = PayPal</th>
   </tr>
   <tr>
-    <td><strong>국가/지역</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
-    <td><strong>지급 임계값</strong></td>
-    <td><strong>결제 방법</strong></td>
+    <td><strong>Country/region</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
+    <td><strong>Payment threshold</strong></td>
+    <td><strong>Payment method</strong></td>
   </tr>
   <tr>
-    <td>알바니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Albania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>알제리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Algeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>안도라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Andorra</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>앙골라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Angola</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아르헨티나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Argentina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>오스트레일리아</td>
-    <td>25USD</td>
+    <td>Australia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>오스트리아</td>
-    <td>25USD</td>
+    <td>Austria</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아제르바이잔</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Azerbaijan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>바레인</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bahrain</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>방글라데시</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bangladesh</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>벨로루시</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Belarus</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>벨기에</td>
-    <td>25USD</td>
+    <td>Belgium</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>베냉</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Benin</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>볼리비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bolivia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>보스니아 헤르체고비나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bosnia and Herzegovina</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>브라질</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Brazil</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>불가리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Bulgaria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>부르키나파소</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Burkina Faso</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>부룬디</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Burundi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>캄보디아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Cambodia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카메룬</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Cameroon</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>캐나다</td>
-    <td>25USD</td>
+    <td>Canada</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>중앙 아프리카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Central African Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>차드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Chad</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>칠레</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Chile</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>중국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>China</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>콜롬비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Colombia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Congo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>콩고 민주 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Congo (DRC)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코스타리카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Costa Rica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>코트디부아르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Côte d'Ivoire</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>크로아티아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Croatia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>키프로스</td>
-    <td>25USD</td>
+    <td>Cyprus</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>체코 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Czech Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>덴마크</td>
-    <td>25USD</td>
+    <td>Denmark</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>도미니카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Dominican Republic</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에콰도르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ecuador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>이집트</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Egypt</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>엘살바도르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>El Salvador</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에리트리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Eritrea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>에스토니아</td>
-    <td>25USD</td>
+    <td>Estonia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>에티오피아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ethiopia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>핀란드</td>
-    <td>25USD</td>
+    <td>Finland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>프랑스</td>
-    <td>25USD</td>
+    <td>France</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>그루지야</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Georgia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>독일</td>
-    <td>25USD</td>
+    <td>Germany</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>가나</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Ghana</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>그리스</td>
-    <td>25USD</td>
+    <td>Greece</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>과테말라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Guatemala</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>기니</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Guinea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아이티</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Haiti</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>온두라스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Honduras</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>홍콩 특별 행정구</td>
-    <td>25USD</td>
+    <td>Hong Kong SAR</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>헝가리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Hungary</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>아이슬란드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Iceland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>인도</td>
-    <td>25USD</td>
+    <td>India</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>인도네시아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Indonesia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아일랜드</td>
-    <td>25USD</td>
+    <td>Ireland</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이스라엘</td>
-    <td>25USD</td>
+    <td>Israel</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>이탈리아</td>
-    <td>25USD</td>
+    <td>Italy</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>자메이카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Jamaica</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>일본</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Japan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>요르단</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Jordan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카자흐스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kazakhstan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>케냐</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kenya</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>한국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Korea</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>쿠웨이트</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kuwait</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>키르기스스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Kyrgyzstan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라오스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Laos</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라트비아</td>
-    <td>25USD</td>
+    <td>Latvia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>라이베리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Liberia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>리히텐슈타인</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Liechtenstein</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>리투아니아</td>
-    <td>25USD</td>
+    <td>Lithuania</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>룩셈부르크</td>
-    <td>25USD</td>
+    <td>Luxembourg</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>마케도니아어(구 유고슬라비아 마케도니아 공화국)</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Macedonia (FYROM)</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>마다가스카르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Madagascar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말라위</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Malawi</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말레이시아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Malaysia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>말리</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mali</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몰타</td>
-    <td>25USD</td>
+    <td>Malta</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>멕시코</td>
-    <td>25USD</td>
+    <td>Mexico</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>몽골</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mongolia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>몬테네그로</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Montenegro</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>모로코</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Morocco</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>모잠비크</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Mozambique</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>네팔</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nepal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>네덜란드</td>
-    <td>25USD</td>
+    <td>Netherlands</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>뉴질랜드</td>
-    <td>25USD</td>
+    <td>New Zealand</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>니카라과</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nicaragua</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>니제르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Niger</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>나이지리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Nigeria</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>노르웨이</td>
-    <td>25USD</td>
+    <td>Norway</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>오만</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Oman</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파키스탄</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Pakistan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파나마</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Panama</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>파라과이</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Paraguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>페루</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Peru</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>필리핀</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Philippines</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>폴란드</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Poland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>포르투갈</td>
-    <td>25USD</td>
+    <td>Portugal</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>푸에르토리코</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Puerto Rico</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>카타르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Qatar</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>루마니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Romania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>르완다</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Rwanda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>사우디아라비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Saudi Arabia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세네갈</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Senegal</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>세르비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Serbia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>시에라리온</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Sierra Leone</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>싱가포르</td>
-    <td>25USD</td>
+    <td>Singapore</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로바키아</td>
-    <td>25USD</td>
+    <td>Slovakia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>슬로베니아</td>
-    <td>25USD</td>
+    <td>Slovenia</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>소말리아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Somalia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>남아프리카 공화국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>South Africa</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스페인</td>
-    <td>25USD</td>
+    <td>Spain</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스리랑카</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Sri Lanka</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>스웨덴</td>
-    <td>25USD</td>
+    <td>Sweden</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>스위스</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Switzerland</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>대만</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Taiwan</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>탄자니아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tanzania</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>태국</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>25USD</td>
+    <td>Thailand</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>동티모르</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Timor-Leste</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>토고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Togo</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>트리니다드 토바고</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Trinidad and Tobago</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>튀니지</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Tunisia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>터키</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Turkey</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>우간다</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Uganda</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>아랍에미리트</td>
-    <td>25USD</td>
+    <td>United Arab Emirates</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>영국</td>
-    <td>25USD</td>
+    <td>United Kingdom</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>미국</td>
-    <td>25USD</td>
+    <td>United States</td>
+    <td>25 USD</td>
     <td>ACH/SEPA</td>
-    <td>25USD</td>
+    <td>25 USD</td>
     <td>PayPal</td>
   </tr>
   <tr>
-    <td>우루과이</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Uruguay</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>베네수엘라</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Venezuela</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>베트남</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Vietnam</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>잠비아</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Zambia</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
   <tr>
-    <td>짐바브웨</td>
-    <td>200USD</td>
-    <td>전신 송금</td>
-    <td>해당 없음</td>
-    <td>해당 없음</td>
+    <td>Zimbabwe</td>
+    <td>200 USD</td>
+    <td>Wire transfer</td>
+    <td>N/A</td>
+    <td>N/A</td>
   </tr>
 </table>
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

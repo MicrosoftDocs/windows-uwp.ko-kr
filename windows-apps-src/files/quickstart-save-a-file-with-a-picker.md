@@ -1,48 +1,48 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
-title: "선택기를 사용하여 파일 저장"
-description: "사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다."
+title: Save a file with a picker
+description: Use FileSavePicker to let users specify the name and location where they want your app to save a file.
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 ---
 
-# 선택기를 사용하여 파일 저장
+# <a name="save-a-file-with-a-picker"></a>Save a file with a picker
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**중요 API**
+**Important APIs**
 
 -   [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)
 -   [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
 
-사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다.
+Use [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) to let users specify the name and location where they want your app to save a file.
 
-> **참고** [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)도 참조하세요.
+> **Note**  Also see the [File picker sample](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
-## 필수 조건
+## <a name="prerequisites"></a>Prerequisites
 
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **Understand async programming for Universal Windows Platform (UWP) apps**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
+    You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). To learn how to write asynchronous apps in C++, see [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **위치에 대한 액세스 권한**
+-   **Access permissions to the location**
 
-    [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
+    See [File access permissions](file-access-permissions.md).
 
-## FileSavePicker: 단계별
+## <a name="filesavepicker-step-by-step"></a>FileSavePicker: step-by-step
 
 
-사용자가 이름, 형식 및 파일 저장 위치를 지정할 수 있도록 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다. 파일 선택기 개체를 만들고, 사용자 지정하고, 표시한 다음, 선택된 파일을 나타내는 반환된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 통해 데이터를 저장합니다.
+Use a [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) so that your users can specify the name, type, and location of a file to save. Create, customize, and show a file picker object, and then save data via the returned [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object that represents the file picked.
 
-1.  **FileSavePicker 만들기 및 사용자 지정**
+1.  **Create and customize the FileSavePicker**
 
 ```cs
 var savePicker = new Windows.Storage.Pickers.FileSavePicker();
@@ -54,24 +54,24 @@ savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
 savePicker.SuggestedFileName = "New Document";
 ```
 
-사용자 및 앱과 관련된 파일 선택기 개체에서 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465182)을 참조하세요.
+Set properties on the file picker object that are relevant to your users and your app. For guidelines to help you decide how to customize the file picker, see [Guidelines and checklist for file pickers](https://msdn.microsoft.com/library/windows/apps/hh465182).
 
-이 예제에서는 세 가지 속성 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) 및 [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878)을 설정합니다.
+This example sets three properties: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) and [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
-> **참고** [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 개체는 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891)를 사용하여 파일 선택기를 표시합니다.
+> **Note**  [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) objects display the file picker using the [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891).
 
      
-- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+- Because our user is saving a document or text file, the sample sets [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) to the app's local folder by using [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621). Set [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) to a location appropriate for the type of file being saved, for example Music, Pictures, Videos, or Documents. From the start location, the user can navigate to other locations.
 
-- 파일이 저장된 후 앱에서 파일을 열 수 있는지 확인하려고 하므로 [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875)를 사용하여 샘플에서 지원하는 파일 형식(Microsoft Word 문서 및 텍스트 파일)을 지정합니다. 지정하는 모든 파일 형식이 앱에서 지원되는지 확인합니다. 사용자는 자신의 파일을 지정한 파일 형식으로 저장할 수 있습니다. 또한 지정된 다른 파일 형식을 선택하여 파일 형식을 변경할 수 있습니다. 목록에서 첫 번째 파일 형식 항목은 기본적으로 선택됩니다. 이를 제어하려면 [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) 속성을 설정합니다.
+- Because we want to make sure our app can open the file after it is saved, we use [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) to specify file types that the sample supports (Microsoft Word documents and text files). Make sure all the file types that you specify are supported by your app. Users will be able to save their file as any of the file types you specify. They can also change the file type by selecting another of the file types that you specified. The first file type choice in the list will be selected by default: to control that, set the [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) property.
 
-> **참고** 파일 선택기는 현재 선택된 파일 형식을 사용하여 표시되는 파일을 필터링하기도 하므로 선택한 파일 형식과 일치하는 파일 형식만 사용자에게 표시됩니다.
+> **Note**  The file picker also uses the currently selected file type to filter which files it displays, so that only file types that match the selected files types are displayed to the user.
 
-- 사용자 입력을 저장하기 위해 예제에서는 [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878)을 설정합니다. 제안된 파일 이름을 저장하려는 파일과 연관되게 만듭니다. 예를 들어, Word처럼, 사용자가 이름이 아직 지정되지 않은 파일을 저장하려 하면 문서의 첫 줄을 이름으로 제안하거나 이름이 있으면 기존 파일 이름을 제안할 수 있습니다.
+- To save the user some typing, the example sets a [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878). Make your suggested file name relevant to the file being saved. For example, like Word, you can suggest the existing file name if there is one, or the first line of a document if the user is saving a file that does not yet have a name.
 
-2.  **FileSavePicker 표시 및 선택한 파일에 저장**
+2.  **Show the FileSavePicker and save to the picked file**
 
-    [**PickSaveFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207876)를 호출하여 파일 선택기를 표시합니다. 사용자가 이름, 파일 형식 및 위치를 지정한 후 파일 저장을 확인하면 **PickSaveFileAsync**는 저장된 파일을 나타내는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 반환합니다. 이제 읽기 및 쓰기 액세스 권한이 있으므로 이 파일을 캡처하고 처리할 수 있습니다.
+    Display the file picker by calling [**PickSaveFileAsync**](https://msdn.microsoft.com/library/windows/apps/br207876). After the user specifies the name, file type, and location, and confirms to save the file, **PickSaveFileAsync** returns a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object that represents the saved file. You can capture and process this file now that you have read and write access to it.
 
 ```cs
 Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
@@ -102,9 +102,9 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
     }
 ```
 
-예제에서는 파일이 유효한지 확인하고 자체 파일 이름을 씁니다. [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md)도 참조하세요.
+The example checks that the file is valid and writes its own file name into it. Also see [Creating, writing, and reading a file](quickstart-reading-and-writing-files.md).
 
-**팁** 다른 처리를 수행하기 전에 항상 저장된 파일을 검사하여 유효한지 확인해야 합니다. 그런 다음 파일을 앱에 맞게 저장하고 선택한 파일이 잘못된 경우 적절한 동작을 제공할 수 있습니다.
+**Tip**  You should always check the saved file to make sure it is valid before you perform any other processing. Then, you can save content to the file as appropriate for your app, and provide appropriate behavior if the picked file is not valid.
 
      
 
@@ -114,6 +114,6 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,200 +1,111 @@
 ---
 author: mcleanbyron
-Description: "이 연습에서는 A/B 테스트로 첫 번째 실험을 만들고, 실행하고, 관리합니다."
-title: "A/B 테스트로 첫 번째 실험 만들기 및 실행"
+Description: In this walkthrough, you will create, run, and manage your first experiment with A/B testing.
+title: Create and run your first experiment with A/B testing
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
 translationtype: Human Translation
-ms.sourcegitcommit: bfe4862c441ca095a40df4f594fdf9b3e213d142
-ms.openlocfilehash: ab15741531b829c496811cdfca35059cd113f91d
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 65785e53b2e5ba788dbda533373737e193e1c792
 
 ---
 
-# A/B 테스트로 첫 번째 실험 만들기 및 실행
+# <a name="create-and-run-your-first-experiment-with-ab-testing"></a>Create and run your first experiment with A/B testing
 
-이 연습에서는 다음을 수행합니다.
-* 개발자 센터 대시보드에서 앱 단추의 텍스트 및 색을 나타내는 여러 원격 변수를 정의하는 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만듭니다.
-* 원격 변수 값을 검색하고 이 데이터를 사용하여 단추의 배경색을 변경하며 보기 및 변환 이벤트 데이터를 다시 개발자 센터에 기록하는 코드를 사용하여 앱을 만듭니다.
-* 앱 단추의 배경색을 변경하면 단추 클릭 수가 늘어나는지 여부를 테스트하도록 프로젝트에 실험을 만듭니다.
-* 실험 데이터를 수집하는 앱을 실행합니다.
-* 개발자 센터 대시보드에서 실험 결과를 검토하고, 앱의 모든 사용자가 사용할 수 있도록 설정할 변형을 선택하고, 실험을 완료합니다.
+In this walkthrough, you will:
+* Create an experimentation [project](run-app-experiments-with-a-b-testing.md#terms) on the Dev Center dashboard that defines several remote variables that represent the text and color of an app button.
+* Create an app with code that retrieves the remote variable values, uses this data to change the background color of a button, and logs view and conversion event data back to Dev Center.
+* Create an experiment in the project to test whether changing the background color of the app button successfully increases the number of button clicks.
+* Run the app to gather experiment data.
+* Review the experiment results on the Dev Center dashboard, choose a variation to enable for all users of the app, and complete the experiment.
 
-개발자 센터를 사용하여 A/B 테스트의 개요를 보려면 [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)을 참조하세요.
+For an overview of A/B testing with Dev Center, see [Run app experiments with A/B testing](run-app-experiments-with-a-b-testing.md).
 
-## 필수 조건
+## <a name="prerequisites"></a>Prerequisites
 
-이 연습을 수행하려면 Windows 개발자 센터 계정이 있어야 하며 [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)에서 설명한 대로 개발 컴퓨터를 구성해야 합니다.
+To follow this walkthrough, you must have a Windows Dev Center account and you must configure your development computer as described in [Run app experiments with A/B testing](run-app-experiments-with-a-b-testing.md).
 
-## Windows 개발자 센터에서 원격 변수로 프로젝트 만들기
+## <a name="create-a-project-with-remote-variables-in-windows-dev-center"></a>Create a project with remote variables in Windows Dev Center
 
-1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인합니다.
-2. 개발자 센터에 실험을 만드는 데 사용할 앱이 이미 있는 경우 대시보드에서 앱을 선택합니다. 대시보드에 아직 앱이 없는 경우 [이름을 예약하여 새 앱을 만든](../publish/create-your-app-by-reserving-a-name.md) 다음 대시보드에서 해당 앱을 선택합니다.
-3. 탐색 창에서 **서비스**를 클릭한 다음 **실험**을 클릭합니다.
-4. 다음 페이지의 **프로젝트** 섹션에서 **새 프로젝트** 단추를 클릭합니다.
-5. **새 프로젝트** 페이지에서 새 프로젝트에 대한 이름 **Button Click Experiments**를 입력합니다.
-6. **원격 변수** 섹션을 확장하고 **변수 추가**를 4번 클릭합니다. 이제 4개의 빈 변수 행이 표시됩니다.
-  * 첫 번째 행에서 변수 이름에 대해 **buttonText**를 입력하고 **기본값** 열에 **Grey Button**을 입력합니다.
-  * 두 번째 행에서 변수 이름에 대해 **r**을 입력하고 **기본값** 열에 **128**을 입력합니다.
-  * 세 번째 행에서 변수 이름에 대해 **g**를 입력하고 **기본값** 열에 **128**을 입력합니다.
-  * 네 번째 행에서 변수 이름에 대해 **b**를 입력하고 **기본값** 열에 **128**을 입력합니다.
-7. **저장**을 클릭하고 **SDK 통합** 섹션에 표시되는 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 기록해 둡니다. 다음 섹션에서 앱 코드를 업데이트하고 코드에서 이 값을 참조합니다.
+1. Sign in to the [Dev Center dashboard](https://dev.windows.com/overview).
+2. If you already have an app in Dev Center that you want to use to create an experiment, select that app in your dashboard. If you do not yet have an app in your dashboard, [create a new app by reserving a name](../publish/create-your-app-by-reserving-a-name.md) and then select that app in your dashboard.
+3. In the navigation pane, click **Services** and then click **Experimentation**.
+4. In the **Projects** section of the next page, click the **New project** button.
+5. In the **New project** page, enter the name **Button Click Experiments** for your new project.
+6. Expand the **Remote variables** section and click **Add variable** four times. You should now have four empty variable rows.
+  * In the first row, type **buttonText** for the variable name and type **Grey Button** in the **Default value** column.
+  * In the second row, type **r** for the variable name and type **128** in the **Default value** column.
+  * In the third row, type **g** for the variable name and type **128** in the **Default value** column.
+  * In the fourth row, type **b** for the variable name and type **128** in the **Default value** column.
+7. Click **Save** and make note of the [project ID](run-app-experiments-with-a-b-testing.md#terms) value that appears in the **SDK integration** section. In the next section, you will update your app code and reference this value in your code.
 
-## 앱에서 실험 코딩
+## <a name="code-the-experiment-in-your-app"></a>Code the experiment in your app
 
-1. Visual Studio 2015에서 Visual C#을 사용하여 새 유니버설 Windows 플랫폼 프로젝트를 만듭니다. 프로젝트 이름을 **SampleExperiment**로 지정합니다.
-2. 솔루션 탐색기에서 프로젝트 노드를 확장하여 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
-3. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
-4. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 선택하고 **확인**을 클릭합니다.
-5. **솔루션 탐색기**에서 MainPage.xaml을 두 번 클릭하여 앱에서 기본 페이지에 대한 디자이너를 엽니다.
-6. **도구 상자**에서 페이지로 **단추**를 끌어다 놓습니다.
-7. 디자이너에서 단추를 두 번 클릭하여 코드 파일을 열고 **Click** 이벤트에 대한 이벤트 처리기를 추가합니다.  
-8. 코드 파일의 전체 내용을 다음 코드로 바꿉니다. ```projectId``` 변수를 이전 섹션의 개발자 센터 대시보드에서 가져온 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값에 할당합니다.
+1. In Visual Studio 2015, create a new Universal Windows Platform project using Visual C#. Name the project **SampleExperiment**.
+2. In Solution Explorer, expand your project node, right-click **References**, and click **Add Reference**.
+3. In **Reference Manager**, expand **Universal Windows** and click **Extensions**.
+4. In the list of SDKs, select the check box next to **Microsoft Engagement Framework** and click **OK**.
+5. In **Solution Explorer**, double-click MainPage.xaml to open the designer for the main page in the app.
+6. Drag a **Button** from **Toolbox** to the page.
+7. Double-click the button on the designer to open the code file and add an event handler for the **Click** event.  
+8. Replace the entire contents of the code file with the following code. Assign the ```projectId``` variable to the [project ID](run-app-experiments-with-a-b-testing.md#terms) value that you obtained from the Dev Center dashboard in the previous section.
 
-  ```CSharp
-  using System;
-  using Windows.UI.Xaml;
-  using Windows.UI.Xaml.Controls;
-  using Windows.UI.Xaml.Media;
-  using System.Threading.Tasks;
-  using Windows.UI;
-  using Windows.UI.Core;
+  > [!div class="tabbedCodeSnippets"]
+  [!code-cs[SampleExperiment](./code/StoreSDKSamples/cs/ExperimentPage.xaml.cs#SampleExperiment)]
 
-  // Namespace for A/B testing.
-  using Microsoft.Services.Store.Engagement;
+10. Save the code file and build the project.
 
-  namespace SampleExperiment
-  {  
-     public sealed partial class MainPage : Page
-     {
-        private StoreServicesExperimentVariation variation;
-        private StoreServicesCustomEventLogger logger;
+## <a name="create-the-experiment-in-windows-dev-center"></a>Create the experiment in Windows Dev Center
 
-        // Assign this variable to the project ID for your experiment from Dev Center.
-        private string projectId = "";
+1. Return to the **Button Click Experiments** project page in the Windows Dev Center dashboard.
+2. In the **Experiments** section, click the **New experiment** button.
+5. In the **Experiment details** section, type the name **Optimize Button Clicks** in the **Experiment name** field.
+6. In the **View event** section, type **userViewedButton** in the **View event name** field. Note that this name matches the view event string that you logged in the code you added in the previous section.
+7. In the **Goals and conversion events** section, enter the following values:
+  * In the **Goal name** field, type **Increase Button Clicks**.
+  * In the **Conversion event name** field, type the name **userClickedButton**. Note that this name matches the conversion event string that you logged in the code you added in the previous section.
+  * In the **Objective** field, choose **Maximize**.
+8. In the **Remote variables and variations** section, confirm that the **Distribute equally** check box is selected so that the variations will be distributed equally to your app.
+9. Add variables to your experiment:
+  9. Click the drop-down control, choose **buttonText**, and click **Add variable**. The string **Grey Button** should automatically appear in the **Variation A** column (this value is derived from the project settings). In the **Variation B** column, type **Blue Button**.
+  9. Click the drop-down control again, choose **r**, and click **Add variable**. The string **128** should automatically appear in the **Variation A** column. In the **Variation B** column, type **1**.
+  9. Click the drop-down control again, choose **g**, and click **Add variable**. The string **128** should automatically appear in the **Variation A** column. In the **Variation B** column, type **1**.  
+  9. Click the drop-down control again, choose **b**, and click **Add variable**. The string **128** should automatically appear in the **Variation A** column. In the **Variation B** column, type **255**.  
+10. Click **Save** and then click **Activate**.
 
-        public MainPage()
-        {
-            this.InitializeComponent();
+> **Important**&nbsp;&nbsp;After you activate an experiment, you can no longer modify the experiment parameters unless it you clicked the **Editable experiment** check box when you created the experiment. Typically, we recommend that you code the experiment in your app before activating your experiment.
 
-            // Because this call is not awaited, execution of the current method
-            // continues before the call is completed.
-#pragma warning disable CS4014
-            InitializeExperiment();
-#pragma warning restore CS4014
-        }
+## <a name="run-the-app-to-gather-experiment-data"></a>Run the app to gather experiment data
 
-        private async Task InitializeExperiment()
-        {
-            // Get the current cached variation assignment for the experiment.
-            var result = await StoreServicesExperimentVariation.GetCachedVariationAsync(projectId);
-            variation = result.ExperimentVariation;
+1. Run the **SampleExperiment** app you created earlier.
+2. Confirm that you see either a grey or blue button. Click the button and then close the app.
+3. Repeat the above steps several times on the same computer to confirm that your app shows the same button color.
 
-            // Check whether the cached variation assignment needs to be refreshed.
-            // If so, then refresh it.
-            if (result.ErrorCode != StoreServicesEngagementErrorCode.None || result.ExperimentVariation.IsStale)
-            {
-                result = await StoreServicesExperimentVariation.GetRefreshedVariationAsync(projectId);
+## <a name="review-the-results-and-complete-the-experiment"></a>Review the results and complete the experiment
 
-                // If the call succeeds, use the new result. Otherwise, use the cached value.
-                if (result.ErrorCode == StoreServicesEngagementErrorCode.None)
-                {
-                    variation = result.ExperimentVariation;
-                }
-            }
+Wait at least several hours after completing the previous section, and then follow these steps to review the results of your experiment and complete the experiment.
 
-            // Get remote variables named "buttonText", "r", "g", and "b" from the variation
-            // assignment. If no variation assignment is available, the variables default
-            // to "Grey button" for the button text and grey RGB value for the button color.
-            var buttonText = variation.GetString("buttonText", "Grey Button");
-            var r = (byte)variation.GetInt32("r", 128);
-            var g = (byte)variation.GetInt32("g", 128);
-            var b = (byte)variation.GetInt32("b", 128);
+> **Note**&nbsp;&nbsp;As soon as you activate an experiment, Dev Center immediately starts collecting data from any apps that are instrumented to log data for your experiment. However, it can take several hours for experiment data to appear in the dashboard.
 
-            // Assign button text and color.
-            await button.Dispatcher.RunAsync(
-                CoreDispatcherPriority.Normal,
-                () =>
-                {
-                    button.Background = new SolidColorBrush(Color.FromArgb(255, r, g, b));
-                    button.Content = buttonText;
-                    button.Visibility = Visibility.Visible;
-                });
+1. In Dev Center, return to the **Experimentation** page for your app.
+2. In the **Active experiments** section, click **Optimize Button Clicks** to go to the page for this experiment.
+3. Confirm that the results shown in the **Results summary** and **Results details** sections matches what you expect to see. For more details about these sections, see [Manage your experiment in the Dev Center dashboard](manage-your-experiment.md#review-the-results-of-your-experiment).
 
-            // Log the view event named "userViewedButton" to Dev Center.
-            if (logger == null)
-            {
-                logger = StoreServicesCustomEventLogger.GetDefault();
-            }
+  >**Note**&nbsp;&nbsp;Dev Center reports only the first conversion event for each user in a 24-hour time period. If a user triggers multiple conversion events in your app within a 24-hour period, only the first conversion event is reported. This is intended to help prevent a single user with many conversion events from skewing the experiment results for a sample group of users.
+4. Now you are ready to end the experiment. In the **Results summary** section, in the **Variation B** column, click **Switch**. This switches all users of your app to the blue button.
+5. Click **OK** to confirm that you want to end the experiment.
+6. Run the **SampleExperiment** app you created in the previous section.
+7. Confirm that you see a blue button. Note that it may take up to two minutes for your app to receive an updated variation assignment.
 
-            logger.LogForVariation(variation, "userViewedButton");
-        }
+## <a name="related-topics"></a>Related topics
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            // Log the conversion event named "userClickedButton" to Dev Center.
-            if (logger == null)
-            {
-                logger = StoreServicesCustomEventLogger.GetDefault();
-            }
-
-            logger.LogForVariation(variation, "userClickedButton");
-        }
-     }
-  }
-  ```
-10. 코드 파일을 저장하고 프로젝트를 빌드합니다.
-
-## Windows 개발자 센터에서 실험 만들기
-
-1. Windows 개발자 센터 대시보드의 **Button Click Experiments** 프로젝트 페이지로 돌아갑니다.
-2. **실험** 섹션에서 **새 실험** 단추를 클릭합니다.
-5. **실험 세부 정보** 섹션에서 **실험 이름** 필드에 **Optimize Button Clicks** 이름을 입력합니다.
-6. **보기 이벤트** 섹션에서 **보기 이벤트 이름** 필드에 **userViewedButton**을 입력합니다. 이 이름은 이전 섹션에서 추가한 코드에 기록한 보기 이벤트 문자열과 일치합니다.
-7. **목표 및 전환 이벤트** 섹션에서 다음 값을 입력합니다.
-  * **목표 이름** 필드에서 **Increase Button Clicks**를 입력합니다.
-  * **전환 이벤트 이름** 필드에서 이름 **userClickedButton**을 입력합니다. 이 이름은 이전 섹션에서 추가한 코드에 기록한 변환 이벤트 문자열과 일치합니다.
-  * **목표** 필드에서 **최대화**를 선택합니다.
-8. 해당 변형이 앱에 고르게 배포되도록 **원격 변수 및 변형** 섹션에서 **고르게 분배** 확인란이 선택되어 있는지 확인합니다.
-9. 실험에 변수를 추가합니다.
-  9. 드롭다운 컨트롤을 클릭하여 **buttonText**를 선택하고 **변수 추가**를 클릭합니다. **Grey Button** 문자열이 **변형 A** 열(이 값은 프로젝트 설정에서 파생됨)에 자동으로 표시되어야 합니다. **변형 B** 열에서 **Blue Button**을 입력합니다.
-  9. 드롭다운 컨트롤을 다시 클릭하여 **r**을 선택하고 **변수 추가**를 클릭합니다. **128** 문자열이 **변형 A** 열에 자동으로 표시됩니다. **변형 B** 열에 **1**을 입력합니다.
-  9. 드롭다운 컨트롤을 다시 클릭하여 **g**를 선택하고 **변수 추가**를 클릭합니다. **128** 문자열이 **변형 A** 열에 자동으로 표시됩니다. **변형 B** 열에 **1**을 입력합니다.  
-  9. 드롭다운 컨트롤을 다시 클릭하여 **b**를 선택하고 **변수 추가**를 클릭합니다. **128** 문자열이 **변형 A** 열에 자동으로 표시됩니다. **변형 B** 열에 **255**를 입력합니다.  
-10. **저장**을 클릭한 다음 **활성화**를 클릭합니다.
-
-> **중요**&nbsp;&nbsp;실험을 활성화한 후 실험을 만들 때 **편집 가능 실험** 확인란을 클릭하지 않은 경우 더 이상 실험 매개 변수를 수정할 수 없습니다. 일반적으로 실험을 활성화하기 전에 앱에서 실험을 코딩하는 것이 좋습니다.
-
-## 실험 데이터를 수집하는 앱 실행
-
-1. 이전에 만든 **SampleExperiment** 앱을 실행합니다.
-2. 회색이나 파란색 단추가 표시되는지 확인합니다. 단추를 클릭한 다음 앱을 닫습니다.
-3. 동일한 컴퓨터에서 위의 단계를 여러 번 반복하여 앱에 동일한 단추 색이 표시되는지 확인합니다.
-
-## 결과 검토 및 실험 완료
-
-이전 섹션을 완료한 후 몇 시간 동안 기다린 후 다음 단계를 수행하여 실험의 결과를 검토하고 실험을 완료합니다.
-
-> **참고**&nbsp;&nbsp;실험을 활성화하자마자 개발자 센터에서 즉시 실험에 대한 데이터를 기록하도록 계측되는 모든 앱에서 데이터를 수집하기 시작합니다. 그러나 실험 데이터를 대시보드에 표시하려면 몇 시간이 걸릴 수 있습니다.
-
-1. 개발자 센터에서 앱의 **실험** 페이지로 돌아갑니다.
-2. **활성 실험** 섹션에서 **단추 클릭 최적화**를 클릭하여 이 실험 페이지로 이동합니다.
-3. **결과 요약** 및 **결과 세부 정보** 섹션에 표시되는 결과가 예상과 일치하는지 확인합니다. 이러한 섹션에 대한 자세한 내용은 [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md#review-the-results-of-your-experiment)를 참조하세요.
-
-  >**참고**&nbsp;&nbsp;개발자 센터에서는 24시간 내의 각 사용자에 대한 첫 번째 전환 이벤트만 보고합니다. 사용자가 24시간 내에 앱에서 여러 전환 이벤트를 트리거하는 경우 첫 번째 전환 이벤트만 보고됩니다. 이렇게 하면 많은 전환 이벤트를 트리거하는 단일 사용자가 샘플 그룹 사용자의 실험 결과를 왜곡시키지 않을 수 있습니다.
-4. 이제 실험을 끝낼 준비가 완료되었습니다. **결과 요약** 섹션의 **변형 B** 열에서 **스위치**를 클릭합니다. 이렇게 하면 앱의 모든 사용자가 파란색 단추로 전환됩니다.
-5. **확인**을 클릭하여 실험을 종료할 것인지 확인합니다.
-6. 이전 섹션에서 만든 **SampleExperiment** 앱을 실행합니다.
-7. 파란색 단추가 표시되는지 확인합니다. 앱에서 업데이트된 변형 할당을 받으려면 최대 2분이 걸릴 수 있습니다.
-
-## 관련 항목
-
-* [개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [실험용 앱 코딩](code-your-experiment-in-your-app.md)
-* [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
-* [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
-* [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
+* [Create a project and define remote variables in the Dev Center dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Code your app for experimentation](code-your-experiment-in-your-app.md)
+* [Define your experiment in the Dev Center dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
+* [Manage your experiment in the Dev Center dashboard](manage-your-experiment.md)
+* [Run app experiments with A/B testing](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

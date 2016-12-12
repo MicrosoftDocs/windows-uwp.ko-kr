@@ -1,25 +1,25 @@
 ---
 author: awkoren
-Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램(예: Win32, WPF 및 Windows Forms)을 수동으로 변환하는 방법을 알아봅니다."
+Description: Shows how to manually convert a Windows desktop application (like Win32, WPF, and Windows Forms) to a Universal Windows Platform (UWP) app.
 Search.Product: eADQiWindows 10XVcnh
-title: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환"
+title: Manually convert a Windows desktop application to a Universal Windows Platform (UWP) app
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
+ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
+ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
 
 ---
 
-# 데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환
+# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>Manually convert your app to UWP using the Desktop Bridge
 
-DAC(데스크톱 앱 변환기)를 사용하면 작업이 편리하고 자동화되며 설치 관리자가 수행하는 작업에 대해 잘 알지 못할 때 유용합니다. Xcopy를 사용하여 앱을 설치하거나 앱의 설치 관리자 시스템 변경에 익숙한 경우 수동으로 앱 패키지와 매니페스트를 만들도록 선택할 수 있습니다.
+Using the [Desktop App Converter (DAC)](desktop-to-uwp-run-desktop-app-converter.md) is convenient and automatic, and it's useful if there's any uncertainty about what your installer does. But if your app is installed by using xcopy, or if you're familiar with the changes that your app's installer makes to the system, you may want to create an app package and manifest manually. This article contains the steps for getting started. It also explains how to add unplated assets to your app, which is not covered by the DAC. 
 
-패키지를 수동으로 만드는 단계는 다음과 같습니다.
+Here's how to get started:
 
-## 매니페스트를 직접 만듭니다.
+## <a name="create-a-manifest-by-hand"></a>Create a manifest by hand
 
-_appxmanifest.xml_ 파일 콘텐츠가 최소로 필요 합니다. \*\*\*THIS\*\*\* 와 같은 서식이 지정된 자리 표시자를 응용 프로그램에 대한 실제 값으로 변경합니다.
+Your _appxmanifest.xml_ file needs to have the following content (at the minimum). Change placeholders that are formatted like \*\*\*THIS\*\*\* to actual values for your application.
 
-    ```XML
+```XML
     <?xml version="1.0" encoding="utf-8"?>
     <Package
        xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -55,15 +55,31 @@ _appxmanifest.xml_ 파일 콘텐츠가 최소로 필요 합니다. \*\*\*THIS\*\
         </Application>
       </Applications>
     </Package>
-    ```
+```
 
-## MakeAppX 도구 실행
+## <a name="add-unplated-assets"></a>Add unplated assets
 
-[앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 사용하여 프로젝트의 AppX 프로젝트를 생성합니다. MakeAppx.exe는 Windows10 SDK에 함께 포함되어 있습니다. 
+Here's how to configure the 44x44 assets for your app that show up on the taskbar.
 
-MakeAppx를 실행하려면 먼저 위에 설명된 대로 매니페스트 파일을 만들었는지 확인합니다. 
+1. Obtain the correct 44x44 images and copy them into the folder that contains your images (i.e., Assets).
 
-그 다음으로 매핑 파일을 만듭니다. 파일은 **[Files]**로 시작해야 하며, 그 다음 디스크의 각 원본 파일을 나열하고 이어서 패키지의 대상 경로가 나와야 합니다. 예를 들면 다음과 같습니다. 
+2. For each 44x44 image, create a copy in the same folder and append *.targetsize-44_altform-unplated* to the file name. You should have two copies of each icon, each named in a specific way. For example, after completing the process, your assets folder might contain *MYAPP_44x44.png* and *MYAPP_44x44.targetsize-44_altform-unplated.png* (note: the former is the icon referenced in the appxmanifest under VisualElements attribute *Square44x44Logo*). 
+
+3.  In the AppXManifest, set the BackgroundColor for every icon you are fixing to transparent. This attribute can be found under VisualElements for each application.
+
+4.  Open CMD, change directory to the package's root folder, and create a priconfig.xml file by running the command ```makepri createconfig /cf priconfig.xml /dq en-US```.
+
+5.  Using CMD, staying in the package’s root folder, create the resources.pri file(s) using the command ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml```. For example, the command for your app might look like ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```. 
+
+6.  Package your AppX using the instructions in the next step to see the results.
+
+## <a name="run-the-makeappx-tool"></a>Run the MakeAppX tool
+
+Use the [App packager (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx) to generate an AppX for your project. MakeAppx.exe is included with the Windows 10 SDK. 
+
+To run MakeAppx, first ensure you've created an manifest file as described above. 
+
+Next, create a mapping file. The file should start with **[Files]**, then list each of your source files on disk followed by their destination path in the package. Here's an example: 
 
 ```
 [Files]
@@ -73,17 +89,17 @@ MakeAppx를 실행하려면 먼저 위에 설명된 대로 매니페스트 파�
 "MyCustomManifest.xml"       "AppxManifest.xml"
 ```
 
-마지막으로 다음 명령을 실행합니다. 
+Finally, run the following command: 
 
 ```cmd
 MakeAppx.exe pack /f mapping_filepath /p filepath.appx
 ```
 
-## AppX 패키지 서명
+## <a name="sign-your-appx-package"></a>Sign your AppX package
 
-Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows10 SDK에서 제공된 [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)를 사용합니다.
+The Add-AppxPackage cmdlet requires that the application package (.appx) being deployed must be signed. Use [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx), which ships in the Microsoft Windows 10 SDK, to sign the .appx package.
 
-사용 예제: 
+Example usage: 
 
 ```cmd
 C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
@@ -91,17 +107,17 @@ C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
 
-MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면 **없음**을 선택합니다. 인증서와 서명에 대한 자세한 내용은 다음을 참조하세요. 
+When you run MakeCert.exe and you're asked to enter a password, select **none**. For more info on certificates and signing, see the following: 
 
-- [개발 중 사용할 임시 인증서를 만드는 방법](https://msdn.microsoft.com/library/ms733813.aspx)
+- [How to: Create Temporary Certificates for Use During Development](https://msdn.microsoft.com/library/ms733813.aspx)
 
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
 
-- [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+- [SignTool.exe (Sign Tool)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,77 +1,72 @@
 ---
 author: mcleanbyron
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
-description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능 제출에 대한 데이터를 가져옵니다."
-title: "Windows 스토어 제출 API를 사용하여 추가 기능 제출 가져오기"
+description: Use this method in the Windows Store submission API to get data for an existing add-on submission.
+title: Get an add-on submission using the Windows Store submission API
 translationtype: Human Translation
-ms.sourcegitcommit: 03942eb9015487cfd5690e4b1933e4febd705971
-ms.openlocfilehash: ecdd4292c7980a647075c55abf7d14edd39d23d6
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 887615bfc07549d82a295bae99dd31f722546341
 
 ---
 
-# Windows 스토어 제출 API를 사용하여 추가 기능 제출 가져오기
+# <a name="get-an-add-on-submission-using-the-windows-store-submission-api"></a>Get an add-on submission using the Windows Store submission API
 
+Use this method in the Windows Store submission API to get data for an existing add-on (also known as in-app product or IAP) submission. For more information about the process of process of creating an add-on submission by using the Windows Store submission API, see [Manage add-on submissions](manage-add-on-submissions.md).
 
+## <a name="prerequisites"></a>Prerequisites
 
+To use this method, you need to first do the following:
 
-Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 추가 기능(앱에서 바로 구매 또는 IAP라고도 함) 제출에 대한 데이터를 가져옵니다. Windows 스토어 제출 API를 사용하여 추가 기능 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [추가 기능 제출 관리](manage-add-on-submissions.md)를 참조하세요.
+* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
+* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Create an add-on submission for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [Create an add-on submission](create-an-add-on-submission.md) method.
 
->**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 추가 기능 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 응답 데이터에서 **가격** 리소스 값이 빈 상태가 되고 이 메서드를 사용하는 추가 기능 제출에 대한 가격 및 판매 데이터를 일시적으로 받을 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 추가 기능 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-add-on-submissions.md#pricing-object)를 참조하세요.
+>**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
 
-## 필수 조건
+## <a name="request"></a>Request
 
-이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
+This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
 
-* 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
-* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 개발자 센터 계정의 앱에 대한 추가 기능 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [추가 기능 제출 만들기](create-an-add-on-submission.md) 메서드를 사용하여 수행할 수 있습니다.
-
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
-
-## 요청
-
-이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
-
-| 메서드 | 요청 URI                                                      |
+| Method | Request URI                                                      |
 |--------|------------------------------------------------------------------|
 | GET   | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions/{submissionId} ``` |
 
 <span/>
  
 
-### 요청 헤더
+### <a name="request-header"></a>Request header
 
-| 헤더        | 유형   | 설명                                                                 |
+| Header        | Type   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| 권한 부여 | 문자열 | 필수. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
+| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### 요청 매개 변수
+### <a name="request-parameters"></a>Request parameters
 
-| 이름        | 유형   | 설명                                                                 |
+| Name        | Type   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | 문자열 | 필수. 가져올 제출이 포함된 추가 기능의 스토어 ID입니다. 스토어 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [추가 기능 만들기](create-an-add-on.md) 또는 [추가 기능 세부 정보 가져오기](get-all-add-ons.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
-| submissionId | 문자열 | 필수. 가져올 제출의 ID입니다. 이 ID는 개발자 센터 대시보드에서 사용할 수 있으며 [추가 기능 제출 만들기](create-an-add-on-submission.md) 요청에 대한 응답 데이터에 포함되어 있습니다.  |
+| inAppProductId | string | Required. The Store ID of the add-on that contains the submission you want to get. The Store ID is available on the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on](create-an-add-on.md) or [get add-on details](get-all-add-ons.md).  |
+| submissionId | string | Required. The ID of the submission to get. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on submission](create-an-add-on-submission.md).  |
 
 <span/>
 
-### 요청 본문
+### <a name="request-body"></a>Request body
 
-이 메서드에 대한 요청 본문을 제공하지 않습니다.
+Do not provide a request body for this method.
 
-### 요청 예제
+### <a name="request-example"></a>Request example
 
-다음 예제에서는 추가 기능 제출을 가져오는 방법을 보여 줍니다.
+The following example demonstrates how to get an add-on submission.
 
 ```
 GET https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions/1152921504621243680 HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## 응답
+## <a name="response"></a>Response
 
-다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 지정된 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 [추가 기능 제출 리소스](manage-add-on-submissions.md#add-on-submission-object)를 참조하세요.
+The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the specified submission. For more details about the values in the response body, see [add-on submission resource](manage-add-on-submissions.md#add-on-submission-object).
 
 ```json
 {
@@ -104,17 +99,7 @@ Authorization: Bearer <your access token>
       "RU": "Tier3",
       "US": "Tier4",
     },
-    "sales": [
-      {
-         "name": "Sale1",
-         "basePriceId": "Free",
-         "startDate": "2016-05-21T18:40:11.7369008Z",
-         "endDate": "2016-05-22T18:40:11.7369008Z",
-         "marketSpecificPricings": {
-            "RU": "NotAvailable"
-         }
-      }
-    ],
+    "sales": [],
     "priceId": "Free"
   },
   "targetPublishDate": "2016-03-15T05:10:58.047Z",
@@ -146,29 +131,29 @@ Authorization: Bearer <your access token>
 }
 ```
 
-## 오류 코드
+## <a name="error-codes"></a>Error codes
 
-요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
+If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
 
-| 오류 코드 |  설명   |
+| Error code |  Description   |
 |--------|------------------|
-| 404  | 제출을 찾을 수 없습니다. |
-| 409  | 제출이 지정된 추가 기능에 속하지 않거나 추가 기능이 [현재 Windows 스토어 제출 API에서 지원되지 않는](create-and-manage-submissions-using-windows-store-services.md#not_supported) 개발자 센터 대시보드 기능을 사용합니다. |   
+| 404  | The submission could not be found. |
+| 409  | The submission does not belong to the specified add-on, or the add-on uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
 
 <span/>
 
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-* [추가 기능 제출 만들기](create-an-add-on-submission.md)
-* [추가 기능 제출 커밋](commit-an-add-on-submission.md)
-* [추가 기능 제출 업데이트](update-an-add-on-submission.md)
-* [추가 기능 제출 삭제](delete-an-add-on-submission.md)
-* [추가 기능 제출 상태 가져오기](get-status-for-an-add-on-submission.md)
+* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Create an add-on submission](create-an-add-on-submission.md)
+* [Commit an add-on submission](commit-an-add-on-submission.md)
+* [Update an add-on submission](update-an-add-on-submission.md)
+* [Delete an add-on submission](delete-an-add-on-submission.md)
+* [Get the status of an add-on submission](get-status-for-an-add-on-submission.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

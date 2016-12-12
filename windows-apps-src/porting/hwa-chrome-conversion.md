@@ -1,106 +1,106 @@
 ---
 author: seksenov
-title: "호스트된 웹앱 - 유니버설 Windows 플랫폼 앱으로 Chrome 앱 변환"
-description: "Chrome 앱 또는 Chrome 확장을 Windows 스토어용 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다."
+title: Hosted Web Apps - Convert your Chrome app to a Universal Windows Platform app
+description: Convert your Chrome App or Chrome Extension in to a Universal Windows Platform (UWP) app for the Windows Store.
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7847f69c85708cb42b878253839b06929f837708
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 84cdd12e2a38aafeb989c0f33b1212077dc1d98e
 
 ---
 
-# 유니버설 Windows 플랫폼 앱으로 기존 Chrome 앱 변환
+# <a name="convert-your-existing-chrome-app-to-a-universal-windows-platform-app"></a>Convert your existing Chrome app to a Universal Windows Platform app
 
-기존의 Chrome 호스트된 앱을 UWP(유니버설 Windows 플랫폼)에서 실행되는 앱으로 쉽게 변환할 수 있습니다. Chrome 앱을 변환하는 방법은 다음과 같이 두 가지가 있습니다.
+We have made it easy to convert your existing Chrome hosted app to an app running on the Universal Windows Platform (UWP). There are two ways to convert your Chrome app:
 
-- 옵션 #1: [ManifoldJS](http://manifoldjs.com/)는 이제 Chrome 매니페스트를 입력 형식으로 허용합니다. 
+- Option #1: [ManifoldJS](http://manifoldjs.com/) now accepts Chrome manifests as a form of input. 
 
-- 옵션 #2: 기존 `.zip` 또는 `.crx` 파일에서 `.appx` 패키지를 생성하는 [CLI 도구](https://github.com/MicrosoftEdge/hwa-cli)를 개발했습니다.
+- Option #2: We have developed a [CLI tool](https://github.com/MicrosoftEdge/hwa-cli) that generates an `.appx` package from your existing `.zip` or `.crx` files.
 
-## 명령줄 인터페이스를 사용하여 기존 Chrome 앱 변환
+## <a name="convert-your-existing-chrome-app-using-the-command-line-interface"></a>Convert your existing Chrome app using the Command-Line Interface
 
-1. [NodeJS](https://nodejs.org/en/)와 패키지 관리자인 [npm](https://www.npmjs.com/)을 설치합니다. 
-
-
-2. 명령 프롬프트 창을 열고 선택한 디렉터리로 이동합니다.
+1. Install [NodeJS](https://nodejs.org/en/) and it's package manager, [npm](https://www.npmjs.com/). 
 
 
-3. 명령줄에서 다음을 입력하여 HWA(호스트된 웹앱) CLI(명령줄 인터페이스)를 설치합니다. `npm i -g hwa-cli`
+2. Open a command prompt window to the directory of your choice
 
-4. 명령줄에서 다음을 입력하여 Chrome 패키지(`.crx` 및 `.zip`은 지원되는 패키지 형식임)를 변환합니다. `hwa convert path/to/chrome/app.crx` 또는 `hwa convert path/to/chrome/app.zip`
 
-    **`path/to/chrome/app`을 Chrome 앱의 경로 정보로 바꿉니다.*
+3. Install Hosted Web Apps (HWA) Command Line Interface (CLI) by entering the following in your command line: `npm i -g hwa-cli`
+
+4. Convert your Chrome package (`.crx` and `.zip` are the supported package formats), by entering the following in your command line: `hwa convert path/to/chrome/app.crx` or `hwa convert path/to/chrome/app.zip`
+
+    **Replace `path/to/chrome/app` with the path information leading to your chrome app.*
     
-5. 생성된 `.appx`는 Chrome 패키지와 동일한 폴더에 표시됩니다. 이제 Windows 스토어에 앱을 업로드할 준비가 되었습니다. 
+5. The generated `.appx` will appear in the same folder as your Chrome package. You are now ready to upload your app to the Windows Store. 
 
-## Windows 스토어에 앱 업로드
+## <a name="uploading-your-app-to-the-windows-store"></a>Uploading your app to the Windows Store
 
-앱을 업로드하려면 [Windows 개발자 센터](https://developer.microsoft.com/windows)의 대시보드를 방문합니다. "[새 앱 만들기](https://developer.microsoft.com/dashboard/Application/New)"를 클릭하고 앱 이름을 예약합니다.
-![Windows 개발자 센터 대시보드에서 이름 예약](images/hwa-to-uwp/reserve_a_name.png)
+To upload your app, visit the Dashboard in the [Windows Dev Center](https://developer.microsoft.com/windows). Click on "[Create a new app](https://developer.microsoft.com/dashboard/Application/New)" and and reserve your app name.
+![Windows Dev Center Dashboard Reserve a Name](images/hwa-to-uwp/reserve_a_name.png)
 
 
-제출 섹션의 "패키지" 페이지로 이동하여 `AppX` 패키지를 업로드합니다.
+Upload your `AppX` package by navigating to the "Packages" page in the Submissions section.
 
-Windows 스토어에 표시되는 메시지에 정보를 입력합니다.
+Fill out the Windows Store prompts.
 
     During the conversion process, you will be prompted for an Identity Name, Publisher Identity, and Publisher Display Name. To retrieve these values, visit the Dashboard in the [Windows Dev Center](https://developer.microsoft.com/windows).
     - Click on "[Create a new app](https://developer.microsoft.com/dashboard/Application/New)" and reserve your app name.
-![Windows 개발자 센터 대시보드에서 이름 예약](images/hwa-to-uwp/reserve_a_name.png)
- - 다음으로, "앱 관리" 섹션에서 왼쪽 메뉴에 있는 "앱 ID"를 클릭합니다.
-    ![Windows 개발자 센터 대시보드 앱 ID](images/hwa-to-uwp/app_identity.png)
- - 페이지에 다음과 같이 세 가지의 값을 묻는 메시지가 표시됩니다. 1. ID 이름: `Package/Identity/Name`
- 2. 게시지 ID: `Package/Identity/Publisher`
- 3. 게시자 표시 이름: `Package/Properties/PublisherDisplayName`
+![Windows Dev Center Dashboard Reserve a Name](images/hwa-to-uwp/reserve_a_name.png)
+    - Next, click on "App identity" in the menu on the left under the "App management" section.
+    ![Windows Dev Center Dashboard App Identity](images/hwa-to-uwp/app_identity.png)
+    - You should see the three values for which you are prompted listed on the page: 1. Identity Name: `Package/Identity/Name`
+        2. Publisher Identity: `Package/Identity/Publisher`
+        3. Publisher Display Name: `Package/Properties/PublisherDisplayName`
 
 
-## 호스트된 웹앱 마이그레이션 가이드
+## <a name="guide-for-migrating-your-hosted-web-app"></a>Guide for migrating your Hosted Web App
 
-Windows 스토어용으로 웹앱을 패키징한 후 PC, 태블릿, 휴대폰, HoloLens, Surface Hub, Xbox 및 Raspberry Pi를 비롯한 모든 Windows 기반 디바이스에서 원활하게 작동하도록 사용자 지정합니다.
+After packaging your web app for the Windows Store, customize it so that it works great across all Windows-based devices, including PCs, tablets, phones, HoloLens, Surface Hub, Xbox and Raspberry Pi.
 
-### 응용 프로그램 콘텐츠 URI 규칙
+### <a name="application-content-uri-rules"></a>Application Content URI Rules
 
-[ACUR(응용 프로그램 콘텐츠 URI 규칙)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) 또는 콘텐츠 URI는 앱 패키지 매니페스트의 URL 허용 목록을 통해 호스트된 웹앱의 범위를 정의합니다. 원격 콘텐츠를 주고받는 통신을 제어하려면 이 목록에 포함 및/또는 이 목록에서 제외할 URL을 정의해야 합니다. 사용자가 명시적으로 포함되지 않은 URL을 클릭하는 경우 Windows는 기본 브라우저에서 대상 경로를 엽니다. ACUR을 사용하면 [유니버설 Windows API](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)에 대한 액세스 권한을 URL에 부여할 수도 있습니다.
+[Application Content URI Rules (ACURs)](/hwa-access-features.md) or Content URIs define the scope of your Hosted Web App through a URL allow list in your app package manifest. In order to control the communication to and from remote content, you must define which URLs are included in, and/or excluded from, this list. If a user clicks a URL that is not explicitly included, Windows will open the target path in the default browser. With ACURs, you are also able to grant a URL access to [Universal Windows APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
-최소한 앱의 시작 페이지를 포함해야 합니다. 변환 도구에서는 시작 페이지 및 해당 도메인에 따라 ACUR 집합을 자동으로 만듭니다. 그러나 서버 또는 클라이언트에 프로그래밍 방식의 리디렉션이 있는 경우 이러한 대상은 허용 목록에 추가해야 합니다.
+At the very minimum, your rules should include your app’s start page. The conversion tool will automatically create a set of ACURs for you, based on your start page and its domain. However, if there are any programmatic redirects, whether on the server or on the client, those destinations will need to be added to the allow list.
 
-*참고: ACUR은 페이지 탐색에만 적용됩니다. 이미지, JavaScript 라이브러리 및 기타 유사한 자산은 이러한 제한의 영향을 받지 않습니다.*
+*Note: ACURs only apply to page navigation. Images, JavaScript libraries, and other similar assets are not affected by these restrictions.*
 
-여러 앱이 로그인 흐름에 Facebook, Google 등 타사 사이트를 사용합니다. 변환 도구에서는 가장 인기 있는 사이트에 따라 ACUR 집합을 자동으로 만듭니다. 인증 방법이 해당 목록에 포함되지 않았으며 리디렉션 흐름인 경우 해당 경로를 ACUR로 추가해야 합니다. 또한 [웹 인증 브로커](/hwa-access-features.md#web-authentication-broker)의 사용도 고려할 수 있습니다.
+Many apps use third-party sites for their login flows, e.g. Facebook and Google. The conversion tool will automatically create a set of ACURs for you, based on the most popular sites. If your method of authentication is not included in that list, and it’s a redirect flow, you will need to add its path(s) as an ACUR. You can also consider using a [web authentication broker](/hwa-access-features.md).
 
-### Flash
+### <a name="flash"></a>Flash
 
-플래시는 Windows 10 앱에서 허용되지 않습니다. 플래시를 사용할 수 없으면 앱 환경이 영향을 받지 않는지 확인해야 합니다.
+Flash is not allowed in Windows 10 apps. You will need to make sure your app experience is not affected by its absence.
 
-광고의 경우 광고 공급자에 HTML5 옵션이 있는지 확인해야 합니다. [Bing 광고](https://bingads.microsoft.com/) 및 [앱 내 광고](http://adsinapps.microsoft.com/)를 확인할 수 있습니다.
+For ads, you will need to make sure your ad provider has an HTML5 option. You can check out [Bing Ads](https://bingads.microsoft.com/) and [Ads in Apps](http://adsinapps.microsoft.com/).
 
-[`<iframe>` embed 메서드](https://developers.google.com/youtube/iframe_api_reference)를 사용하는 한, YouTube 동영상은 이제 [기본적으로 HTML5`<video>`](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html)로 설정되므로 계속 작동합니다. 앱에서 여전히 플래시 API를 사용하는 경우 앞에서 언급한 embed 스타일로 전환해야 합니다.
+YouTube videos should still work, as they now [default to HTML5 `<video>`,](http://youtube-eng.blogspot.com/2015/01/youtube-now-defaults-to-html5_27.html) so long as you are using the [`<iframe>` embed method](https://developers.google.com/youtube/iframe_api_reference). If your app still uses the Flash API, you will need to switch to the aforementioned style of embed.
 
-### 이미지 자산
+### <a name="image-assets"></a>Image assets
 
-Chrome 웹 스토어에서는 이미 앱 패키지에 [128x128 앱 아이콘 이미지](https://developer.chrome.com/webstore/images)를 포함하도록 요구합니다. Windows 10 앱의 경우 최소한 44x44, 50x50, 150x150 및 600x350 앱 아이콘 이미지를 제공해야 합니다. 변환 도구에서는 128x128 이미지를 기반으로 하여 이러한 이미지를 자동으로 만듭니다. 더욱 세련되고 풍부한 앱 환경을 위해 고유한 이미지 파일을 직접 만드는 것이 좋습니다. [타일 및 아이콘 자산에 대한 지침](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx)을 참조하세요.
+The Chrome web store already [requires a 128x128 app icon image](https://developer.chrome.com/webstore/images) in your app package. For Windows 10 apps, you must supply 44x44, 50x50, 150x150, and 600x350 app icon images, at the very minimum. The conversion tool will automatically create these images for you, based on the 128x128 image. For a richer, more polished app experience, we highly recommend creating your own image files. Here are some [guidelines for tile and icon assets](https://msdn.microsoft.com/library/windows/apps/mt412102.aspx).
 
-### 접근 권한 값
+### <a name="capabilities"></a>Capabilities
 
-특정 API 및 리소스에 액세스하려면 앱 접근 권한 값을 패키지 매니페스트에서 [선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)해야 합니다. 변환 도구에서는 세 가지 일반적인 디바이스 기능 즉, 위치, 마이크 및 웹캠을 자동으로 사용할 수 있습니다. 이전과 마찬가지로 시스템은 액세스 권한을 부여하기 전에 먼저 사용 권한을 확인하는 메시지를 표시합니다.
+App capabilities must be [declared](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations) in your package manifest in order to access certain APIs and resources. The conversion tool will automatically enable three popular device capabilities for you: location, microphone, and webcam. With the former, the system will still prompt the user for permission before granting access.
 
-*참고: 사용자는 앱에서 선언하는 모든 접근 권한 값에 대해 알림을 받습니다. 앱에 필요하지 않은 접근 권한 값을 모두 제거하는 것이 좋습니다.*
+*Note: Users are notified of all the capabilities that an app declares. We would recommend removing any capabilities that your app does not need.*
 
-### 파일 다운로드
+### <a name="file-downloads"></a>File downloads
 
-브라우저에 표시되는 것 같은 기존 파일 다운로드는 현재 지원되지 않습니다.
+Traditional file downloads, like you see in the browser, are not currently supported.
 
-### Chrome 플랫폼 API
+### <a name="chrome-platform-apis"></a>Chrome platform APIs
 
-Chrome은 백그라운드 스크립트로 실행할 수 있는 [특별한 용도의 API](https://developer.chrome.com/apps/api_index)를 앱에 제공합니다. 이러한 API는 지원되지 않습니다. 이에 해당하는 기능과 훨씬 더 많은 기능을 [Windows 런타임 API](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)에서 찾을 수 있습니다.
+Chrome provides apps with [special-purpose APIs](https://developer.chrome.com/apps/api_index) that can be run as background script. These are not supported. You can find equivalent functionality, and much more, with the [Windows Runtime APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-- [UWP(유니버설 Windows 플랫폼) 기능에 액세스하여 웹앱 향상](/hwa-access-features.md)
-- [UWP(유니버설 Windows 플랫폼) 앱 지침](http://go.microsoft.com/fwlink/p/?LinkID=397871)
-- [Windows 스토어 앱용 디자인 자산 다운로드](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
+- [Enhance your web app by accessing Universal Windows Platform (UWP) features](/hwa-access-features.md)
+- [Guide to Universal Windows Platform (UWP) apps](http://go.microsoft.com/fwlink/p/?LinkID=397871)
+- [Download design assets for Windows Store apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg125377.aspx)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

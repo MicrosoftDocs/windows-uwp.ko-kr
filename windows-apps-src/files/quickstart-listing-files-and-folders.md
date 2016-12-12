@@ -1,39 +1,41 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
-title: "파일 및 폴더 열거 및 쿼리"
-description: "폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다."
+title: Enumerate and query files and folders
+description: Access files and folders in either a folder, library, device, or network location. You can also query the files and folders in a location by constructing file and folder queries.
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ---
-# 파일 및 폴더 열거 및 쿼리
+# <a name="enumerate-and-query-files-and-folders"></a>Enumerate and query files and folders
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다.
+Access files and folders in either a folder, library, device, or network location. You can also query the files and folders in a location by constructing file and folder queries.
 
-**참고** [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
+For detailed guidance on how to store your Universal Windows Platform app's data, see the [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) class.
+
+**Note**  Also see the [Folder enumeration sample](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
-## 필수 조건
+## <a name="prerequisites"></a>Prerequisites
 
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
+-   **Understand async programming for Universal Windows Platform (UWP) apps**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
+    You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). To learn how to write asynchronous apps in C++, see [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
--   **위치에 대한 액세스 권한**
+-   **Access permissions to the location**
 
-    예를 들어 이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 사용자 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
+    For example, the code in these examples require the **picturesLibrary** capability, but your location may require a different capability or no capability at all. To learn more, see [File access permissions](file-access-permissions.md).
 
-## 위치에 있는 파일 및 폴더 열거
+## <a name="enumerate-files-and-folders-in-a-location"></a>Enumerate files and folders in a location
 
-> **참고** **picturesLibrary** 기능을 선언해야 합니다.
+> **Note**  Remember to declare the **picturesLibrary** capability.
 
-이 예제에서는 먼저 [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) 메서드를 사용하여 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일을 가져오고 각 파일의 이름을 나열합니다. 그런 다음 [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) 메서드를 사용하여 **PicturesLibrary**의 모든 하위 폴더를 가져오고 각 하위 폴더의 이름을 나열합니다.
+In this example we first use the [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) method to get all the files in the root folder of the [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (not in subfolders) and list the name of each file. Next, we use the [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) method to get all the subfolders in the **PicturesLibrary** and list the name of each subfolder.
 
 <!--BUGBUG: IAsyncOperation<IVectorView<StorageFolder^>^>^  causes build to flake out-->
 > [!div class="tabbedCodeSnippets"]
@@ -136,10 +138,10 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 > ```
 
 
-> **참고** C# 또는 Visual Basic에서 **await** 연산자를 사용하는 메서드의 메서드 선언에 **async** 키워드를 넣어야 합니다.
+> **Note**  In C# or Visual Basic, remember to put the **async** keyword in the method declaration of any method in which you use the **await** operator.
  
 
-또는 [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) 메서드를 사용하여 특정 위치에 있는 모든 항목(파일과 하위 폴더)을 가져올 수 있습니다. 다음 예제에서는 **GetItemsAsync** 메서드를 사용하여 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일과 하위 폴더를 가져옵니다. 그런 다음 각 파일 및 하위 폴더의 이름을 나열합니다. 항목이 하위 폴더인 경우 이름에 `"folder"`를 추가합니다.
+Alternatively, you can use the [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) method to get all items (both files and subfolders) in a particular location. The following example uses the **GetItemsAsync** method to get all files and subfolders in the root folder of the [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (not in subfolders). Then the example lists the name of each file and subfolder. If the item is a subfolder, the example appends `"folder"` to the name.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -208,11 +210,11 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 > Next item
 > ```
 
-## 위치에 있는 파일 쿼리 및 일치하는 파일 열거
+## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Query files in a location and enumerate matching files
 
-다음 예제에서는 월별로 그룹화된 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262)를 호출하고 [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066) 개체가 제공됩니다.
+In this example we query for all the files in the [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) grouped by the month, and this time the example recurses into subfolders. First, we call [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) and pass the [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) value to the method. That gives us a [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066) object.
 
-그런 다음 가상 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
+Next we call [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074) which returns [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) objects representing virtual folders. In this case we're grouping by month, so the virtual folders each represent a group of files with the same month.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -311,7 +313,7 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 > Next folder
 > ```
 
-이 예제의 출력은 다음과 비슷합니다.
+The output of the example looks similar to the following.
 
 ``` syntax
 July ‎2015 (2)
@@ -324,6 +326,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

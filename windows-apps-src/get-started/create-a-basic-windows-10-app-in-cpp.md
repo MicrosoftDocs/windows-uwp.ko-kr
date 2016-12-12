@@ -1,117 +1,117 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: "C++로 hello world 앱 만들기(Windows 10)"
-description: "Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)을 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다."
+title: Create a Hello World app in C++ (Windows 10)
+description: With Microsoft Visual Studio 2015, you can use C++ to develop an app that runs on Windows 10, including on phones running Windows 10. These apps have a UI that&quot;s defined in Extensible Application Markup Language (XAML).
 translationtype: Human Translation
-ms.sourcegitcommit: cedab04d2969809dca84097b027e973be9b9948b
-ms.openlocfilehash: 55d5b160bbf1d877408a52e981a030dee28515c4
+ms.sourcegitcommit: 351feda6d9b12b44b0711fe7f4665e08e320580d
+ms.openlocfilehash: d6f90d8bcff80ef8fae5f85a572e1b1ab11f153d
 
 ---
 
-# C++로 hello world 앱 만들기(Windows 10)
+# <a name="create-a-hello-world-app-in-c-windows-10"></a>Create a "hello world" app in C++ (Windows 10)
 
-Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)를 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
+With Microsoft Visual Studio 2015, you can use C++ to develop an app that runs on Windows 10, including on phones running Windows 10. These apps have a UI that's defined in Extensible Application Markup Language (XAML).
 
-다른 프로그래밍 언어의 자습서는 다음을 참조하세요.
+For tutorials in other programming languages, see:
 
--   [JavaScript를 사용하여 첫 Windows 스토어 앱 만들기](https://msdn.microsoft.com/library/windows/apps/BR211385)
+-   [Create your first Windows Store app using JavaScript](https://msdn.microsoft.com/library/windows/apps/BR211385)
 
--   [C를 사용하여 첫 Windows 스토어 앱 만들기#](https://msdn.microsoft.com/library/windows/apps/Hh974581)
+-   [Create your first Windows Store app using C#](https://msdn.microsoft.com/library/windows/apps/Hh974581)
 
-## 시작하기 전에...
+## <a name="before-you-start"></a>Before you start...
 
--   이 자습서를 완료하려면 Windows 10 또는 Windows 8.1을 실행하는 컴퓨터에서 Visual Studio 2015 Community 이상 또는 Visual Studio 2015의 비 Community 버전 중 하나를 사용해야 합니다. 다운로드하려면 [도구 얻기](http://go.microsoft.com/fwlink/p/?LinkId=532666)를 참조하세요.
--   유니버설 Windows 플랫폼 개발에 적합한 [SDK](http://go.microsoft.com/fwlink/?LinkId=533049)를 설치합니다.
--   표준 C++, XAML 및 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)에 나오는 개념을 기본적으로 이해하고 있어야 합니다.
--   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
+-   To complete this tutorial, you must use Visual Studio 2015 Community or later, or one of the non-Community versions of Visual Studio 2015, on a computer that's running Windows 10 or Windows 8.1. To download, see [Get the tools](http://go.microsoft.com/fwlink/p/?LinkId=532666).
+-   Install the appropriate [SDK](http://go.microsoft.com/fwlink/?LinkId=533049) for Windows Universal Platform development.
+-   We assume you have a basic understanding of standard C++, XAML, and the concepts in the [XAML overview](https://msdn.microsoft.com/library/windows/apps/Mt185595).
+-   We assume you're using the default window layout in Visual Studio. To reset to the default layout, on the menu bar, choose **Window** > **Reset Window Layout**.
 
 
-## C++ 데스크톱 앱과 Windows 스토어 앱 비교
+## <a name="comparing-c-desktop-apps-to-windows-apps"></a>Comparing C++ desktop apps to Windows apps
 
-C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이 있는 개발자에게 Windows 스토어 앱 및 Windows Phone 앱 프로그래밍의 일부 측면은 익숙하지만 또 어떤 측면은 추가 학습이 필요할 수 있습니다.
+If you're coming from a background in Windows desktop programming in C++, you'll probably find that some aspects of Windows Store app and Windows Phone app programming are familiar, but other aspects require some learning.
 
-### 같은 점
+### <a name="whats-the-same"></a>What's the same?
 
--   Windows 런타임 환경에서 액세스할 수 없는 Windows 함수를 코드에서 호출하지 않는 한 STL 및 CRT(일부 예외 있음), 기타 C++ 라이브러리를 사용할 수 있습니다.
+-   You can use the STL, the CRT (with some exceptions), and any other C++ library as long as the code does not attempt to call Windows functions that are not accessible from the Windows Runtime environment.
 
--   비주얼 디자이너에 익숙한 경우 여전히 Microsoft Visual Studio에 기본 제공된 디자이너를 사용하거나 전체 기능을 제공하는 Blend for Visual Studio를 사용할 수 있습니다. UI를 직접 코딩하는 데 익숙한 경우 XAML을 직접 코딩할 수 있습니다.
+-   If you're accustomed to visual designers, you can still use the designer built into Microsoft Visual Studio, or you can use the more full-featured Blend for Visual Studio. If you're accustomed to coding UI by hand, you can hand-code your XAML.
 
--   여전히 Windows 운영 체제 형식과 사용자 지정 형식을 사용하는 앱을 만듭니다.
+-   You're still creating apps that use Windows operating system types and your own custom types.
 
--   여전히 Visual Studio 디버거, 프로파일러 및 기타 개발 도구를 사용합니다.
+-   You're still using the Visual Studio debugger, profiler, and other development tools.
 
--   여전히 Visual C++ 컴파일러를 사용하여 네이티브 컴퓨터 코드로 컴파일되는 앱을 만듭니다. C++로 만든 Windows 스토어 앱은 관리되는 런타임 환경에서 실행되지 않습니다.
+-   You're still creating apps that are compiled to native machine code by the Visual C++ compiler. Windows Store apps in C++ don't execute in a managed runtime environment.
 
-### 새로운 기능
+### <a name="whats-new"></a>What's new?
 
--   Windows 스토어 앱 및 유니버설 Windows 앱의 디자인 원칙은 데스크톱 앱의 디자인 원칙과 매우 다릅니다. 창 테두리, 레이블, 대화 상자 등은 별로 중요하지 않고 내용이 가장 중요합니다. 뛰어난 유니버설 Windows 앱은 계획 단계 초기부터 이러한 원칙을 따릅니다.
+-   The design principles for Windows Store apps and Universal Windows apps are very different from those for desktop apps. Window borders, labels, dialog boxes, and so on, are de-emphasized. Content is foremost. Great Universal Windows apps incorporate these principles from the very beginning of the planning stage.
 
--   XAML을 사용하여 전체 UI를 정의합니다. UI와 핵심 프로그램 논리 간의 구분은 MFC 또는 Win32 앱에서보다 Windows 유니버설 앱에서 훨씬 명확하게 나타납니다. 코드 파일에서 동작을 구현하기 위해 작업할 수도 있고 XAML 파일에서 UI의 모양을 구현하기 위해 작업할 수도 있습니다.
+-   You're using XAML to define the entire UI. The separation between UI and core program logic is much clearer in a Windows Universal app than in an MFC or Win32 app. Other people can work on the appearance of the UI in the XAML file while you're working on the behavior in the code file.
 
--   일부 기능에 Windows 장치 Win32를 여전히 사용할 수 있지만 주로 탐색이 용이하고 개체 지향적인 새 API인 Windows 런타임에 대해 프로그래밍을 수행합니다.
+-   You're primarily programming against a new, easy-to-navigate, object-oriented API, the Windows Runtime, although on Windows devices Win32 is still available for some functionality.
 
--   C++/CX를 사용하여 Windows 런타임 개체를 사용하고 만들 수 있습니다. C++/CX에서는 C++ 예외 처리, 대리자, 이벤트 및 동적으로 만들어진 개체에 대한 자동 참조 계산을 지원합니다. C++/CX를 사용할 경우 기본 COM 및 Windows 아키텍처의 세부 사항이 앱 코드에서 숨겨져 있습니다. 자세한 내용은 [C++/CX 언어 참조](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx)를 참조하세요.
+-   You use C++/CX to consume and create Windows Runtime objects. C++/CX enables C++ exception handling, delegates, events, and automatic reference counting of dynamically created objects. When you use C++/CX, the details of the underlying COM and Windows architecture are hidden from your app code. For more information, see [C++/CX Language Reference](https://msdn.microsoft.com/library/windows/apps/hh699871.aspx).
 
--   앱은 앱이 포함하는 형식, 사용하는 리소스 및 필요로 하는 기능(파일 액세스, 인터넷 액세스, 카메라 액세스 등)에 대한 메타데이터도 포함하는 패키지로 컴파일됩니다.
+-   Your app is compiled into a package that also contains metadata about the types that your app contains, the resources that it uses, and the capabilities that it requires (file access, internet access, camera access, and so forth).
 
--   Windows 스토어 및 Windows Phone 스토어에서 인증 프로세스를 통해 앱의 안정성이 확인되면 그에 따라 수백 만의 잠재 고객을 두게 됩니다.
+-   In the Windows Store and Windows Phone Store your app is verified as safe by a certification process and made discoverable to millions of potential customers.
 
-## C++로 작성한 Hello World 스토어 앱
+## <a name="hello-world-store-app-in-c"></a>Hello World Store app in C++
 
-첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. 이전에 Windows 8.1 및 Windows Phone 8.1용 앱을 개발한 경우 Windows 앱용 프로젝트 1개, 휴대폰 앱용 프로젝트 1개, 공유 코드용 프로젝트 1개 이렇게 총 3개의 프로젝트를 Visual Studio에서 사용해야 했던 사실을 기억할 수 있을 것입니다. Windows 10 UWP(유니버설 Windows 플랫폼)를 사용하면 Windows 10을 실행하는 데스크톱 및 노트북 컴퓨터, 태블릿, 휴대폰 등의 장치를 비롯한 모든 장치에서 실행되는 단 하나의 프로젝트를 사용할 수 있습니다.
+Our first app is a "Hello World" that demonstrates some basic features of interactivity, layout, and styles. We'll create an app from the Windows Universal app project template. If you've developed apps for Windows 8.1 and Windows Phone 8.1 before, you might remember that you had to have three projects in Visual Studio, one for the Windows app, one for the phone app, and another with shared code. The Windows 10 Universal Windows Platform (UWP) makes it possible to have just one project, which runs on all devices, including desktop and laptop computers running Windows 10, devices such as tablets, mobile phones, and so on.
 
-다음과 같은 기본 사항에서 시작해 보겠습니다.
+We'll start with the basics:
 
--   Visual Studio 2015 이상에서 유니버설 Windows 프로젝트를 만드는 방법
+-   How to create a Universal Windows project in Visual Studio 2015 or later.
 
--   만든 다양한 프로젝트 및 파일을 이해하는 방법
+-   How to understand the projects and files that are created.
 
--   Visual C++ 구성 요소 확장(C++/CX)에서 이러한 확장을 이해하는 방법과 사용하는 시기
+-   How to understand the extensions in Visual C++ component extensions (C++/CX), and when to use them.
 
-**Visual Studio에서 솔루션 만들기**
+**First, create a solution in Visual Studio**
 
-1.  Visual Studio의 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
+1.  In Visual Studio, on the menu bar, choose **File** > **New** > **Project**.
 
-2.  **새 프로젝트** 대화 상자의 왼쪽 창에서 **설치됨** > **Visual C++** > **Windows** > **유니버설**을 확장합니다.
+2.  In the **New Project** dialog box, in the left pane, expand **Installed** > **Visual C++** > **Windows** > **Universal**.
 
-3.  가운데 창에서 **비어 있는 앱(유니버설 Windows)**을 선택합니다.
+3.  In the center pane, select **Blank App (Universal Windows)**.
 
-   (이러한 옵션이 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
+   (If you don't see these options, make sure you have the Universal Windows App Development Tools installed. See [Get set up](get-set-up.md) for more info.)
 
-4.  프로젝트 이름을 입력합니다. 여기에서는 HelloWorld라고 입력합니다.
+4.  Enter a name for the project. We'll name it HelloWorld.
 
- ![새 프로젝트 대화 상자의 C++ 프로젝트 템플릿 ](images/vs2015-newuniversalproject-cpp.png)
+ ![C++ project templates in the New Project dialog box ](images/vs2015-newuniversalproject-cpp.png)
 
-5.  **확인** 단추를 선택합니다.
+5.  Choose the **OK** button.
 
-   UWP 프로젝트를 처음 만드는 경우 컴퓨터에서 개발자 모드를 활성화하지 않았다면 개발자 모드 활성화 대화 상자가 나타납니다. 링크를 클릭하여 개발자 모드를 설정할 수 있는 설정 페이지를 불러옵니다. 개발자 모드에서는 앱을 개발하고 로컬로 실행할 수 있습니다.
+   If this is the first UWP project you've created, and you haven't enabled Developer Mode on your computer, the Enable Developer mode dialog box appears. Click on the link to bring up the Settings page that lets you set Developer Mode. Developer Mode allows your apps to be deployed and run locally.
 
-   프로젝트 파일이 생성됩니다.
+   Your project files are created.
 
-다음 단계를 진행하기 전에 솔루션의 내용을 살펴보겠습니다.
+Before we go on, let’s look at what's in the solution.
 
-![유니버설 앱 솔루션(노드가 축소된 상태)](images/vs2015-solutionexploreruniversal-0-cpp.png)
+![Univeral app solution with nodes collapsed](images/vs2015-solutionexploreruniversal-0-cpp.png)
 
-### 프로젝트 파일 정보
+### <a name="about-the-project-files"></a>About the project files
 
-프로젝트 폴더의 모든 .xaml 파일은 동일 폴더에 해당 .xaml.h 파일과 .xaml.cpp 파일이 있으며 생성된 파일 폴더(디스크에 있지만 프로젝트의 일부가 아님)에 .g 파일과 .g.hpp 파일이 있습니다. XAML 파일을 수정하여 UI 요소를 만든 다음 이들 요소를 데이터 원본에 연결합니다(DataBinding). .h 및 .cpp 파일을 수정하여 이벤트 처리기에 대한 사용자 지정 논리를 추가합니다. 자동으로 생성된 파일은 XAML 태그가 C++로 변환되었음을 나타냅니다. 코드 숨김 작동 방식을 더 잘 이해할 수 있도록 이러한 파일을 살펴보세요. 단, 수정하지는 마세요. 기본적으로 생성된 파일에는 XAML 루트 요소용 partial 클래스 정의가 포함되어 있으며, 이 클래스는 \*.xaml.h 및 .cpp 파일에서 수정하는 클래스와 동일합니다. 생성된 파일은 XAML UI 자식 요소를 작성하는 코드에서 참조할 수 있도록 클래스 멤버로 선언합니다. 빌드 시, 생성된 코드와 개발자가 작성한 코드가 전체 클래스 정의에 병합되어 컴파일됩니다.
+Every .xaml file in a project folder has a corresponding .xaml.h file and .xaml.cpp file in the same folder and a .g file and a .g.hpp file in the Generated Files folder, which is on disk but not part of the project. You modify the XAML files to create UI elements and connect them to data sources (DataBinding). You modify the .h and .cpp files to add custom logic for event handlers. The auto-generated files represent the transformation of the XAML markup into C++. Don't modify these files, but you can study them to better understand how the code-behind works. Basically, the generated file contains a partial class definition for a XAML root element; this class is the same class that you modify in the \*.xaml.h and .cpp files. The generated files declare the XAML UI child elements as class members so that you can reference them in the code you write. At build time, the generated code and your code are merged into a complete class definition and then compiled.
 
-먼저 프로젝트 파일을 살펴보겠습니다.
+Let's look first at the project files.
 
--   **App.xaml, App.xaml.h, App.xaml.cpp:** 앱의 진입점인 응용 프로그램 개체를 나타냅니다. App.xaml에는 페이지별 UI 태그가 포함되어 있지 않지만, 모든 페이지에서 액세스할 수 있도록 할 UI 스타일과 기타 요소를 추가할 수 있습니다. 코드 숨김 파일에는 **OnLaunched** 및 **OnSuspending** 이벤트에 대한 처리기가 포함되어 있습니다. 일반적으로 시작될 때 앱을 초기화하고 일시 중단되거나 종료될 때 정리를 수행하는 사용자 지정 코드를 여기에 추가할 수 있습니다.
--   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** 앱의 기본 "시작" 페이지에 대한 XAML 태그 및 코드 숨김이 포함되어 있습니다. 탐색 지원 또는 기본 제공 컨트롤이 없습니다.
--   **pch.h, pch.cpp:** 미리 컴파일된 헤더 파일과 프로젝트에 해당 헤더 파일을 포함하는 파일입니다. pch.h에는 자주 변경되지 않고 솔루션의 다른 파일에 포함되어 있는 헤더를 포함할 수 있습니다.
--   **Package.appxmanifest:** 앱에 필요한 장치 기능과, 앱 버전 정보 및 기타 메타데이터를 설명하는 XML 파일입니다. **매니페스트 디자이너**에서 이 파일을 열려면 해당 파일을 두 번 클릭하면 됩니다.
--   **HelloWorld\_TemporaryKey.pfx:** Visual Studio에서 이 컴퓨터의 앱 배포를 지원하는 키입니다.
+-   **App.xaml, App.xaml.h, App.xaml.cpp:** Represent the Application object, which is an app's entry point. App.xaml contains no page-specific UI markup, but you can add UI styles and other elements that you want to be accessible from any page. The code-behind files contain handlers for the **OnLaunched** and **OnSuspending** events. Typically, you add custom code here to initialize your app when it starts and perform cleanup when it's suspended or terminated.
+-   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:**Contain the XAML markup and code-behind for the default "start" page in an app. It has no navigation support or built-in controls.
+-   **pch.h, pch.cpp:** A precompiled header file and the file that includes it in your project. In pch.h, you can include any headers that do not change often and are included in other files in the solution.
+-   **Package.appxmanifest:** An XML file that describes the device capabilities that your app requires, and the app version info and other metadata. To open this file in the **Manifest Designer**, just double-click it.
+-   **HelloWorld\_TemporaryKey.pfx:**A key that enables deployment of the app on this machine, from Visual Studio.
 
-## 코드 개요
+## <a name="a-first-look-at-the-code"></a>A first look at the code
 
-App.xaml.h, 공유 프로젝트의 App.xaml.cpp에 포함된 코드를 살펴보면 대부분이 친숙한 C++ 코드임을 알 수 있습니다. 그러나 Windows 런타임 앱을 처음 사용하거나 C++/CLI로 작업했던 경우 일부 구문 요소가 친숙하지 않을 수 있습니다. 다음은 C++/CX에서 가장 일반적으로 사용되는 표준 이외의 구문 요소입니다.
+If you examine the code in App.xaml.h, App.xaml.cpp in the shared project, you'll notice that it's mostly C++ code that looks familiar. However, some syntax elements might not be as familiar if you are new to Windows Runtime apps, or you've worked with C++/CLI. Here are the most common non-standard syntax elements you'll see in C++/CX:
 
-**Ref 클래스**
+**Ref classes**
 
-Windows API의 모든 형식 즉, XAML 컨트롤, 앱의 페이지, App 클래스 자체, 모든 장치 및 네트워크 개체, 모든 컨테이너 유형을 포함하는 거의 모든 Windows 런타임 클래스가 **ref class**로 선언됩니다. 일부 Windows 형식은 **value class** 또는 **value struct**입니다. ref 클래스는 모든 언어에서 사용할 수 있습니다. C++에서는 이러한 형식에 대한 수명이 자동 참조 계산(가비지 수집 아님)을 통해 제어되므로 이러한 개체를 명시적으로 삭제할 필요가 없습니다. 고유의 ref 클래스를 만들 수도 있습니다.
+Almost all Windows Runtime classes, which includes all the types in the Windows API--XAML controls, the pages in your app, the App class itself, all device and network objects, all container types--are declared as a **ref class**. (A few Windows types are **value class** or **value struct**). A ref class is consumable from any language. In C++, the lifetime of these types is governed by automatic reference counting (not garbage collection) so that you never explicitly delete these objects. You can create your own ref classes as well.
 
 ```cpp
 namespace HelloWorld
@@ -127,13 +127,13 @@ namespace HelloWorld
 }
 ```    
 
-모든 Windows 런타임 형식을 네임스페이스 내에서 선언해야 하며, ISO C++에서와는 달리 형식 자체에 접근성 한정자가 있습니다. **public** 한정자는 네임스페이스 외부에 있는 Windows 런타임 구성 요소에 이 클래스를 표시합니다. **sealed** 키워드는 이 클래스를 기본 클래스로 사용할 수 없음을 의미합니다. 거의 모든 ref 클래스가 봉인됩니다. 클래스 상속성은 Javascript에서 인식되지 않으므로 광범위하게 사용되지 않습니다.
+All Windows Runtime types must be declared within a namespace and unlike in ISO C++ the types themselves have an accessibility modifier. The **public** modifier makes the class visible to Windows Runtime components outside the namespace. The **sealed** keyword means the class cannot serve as a base class. Almost all ref classes are sealed; class inheritance is not broadly used because Javascript does not understand it.
 
-**ref new** 및 **^ (hats)**
+**ref new** and **^ (hats)**
 
-^(해트) 연산자를 사용하여 ref 클래스 변수를 선언하고, ref new 키워드로 개체를 인스턴스화합니다. 그 후에 C++ 포인터처럼 -&gt; 연산자로 개체의 인스턴스 메서드에 액세스합니다. 정적 메서드는 ISO C++에서처럼 :: 연산자로 액세스합니다.
+You declare a variable of a ref class by using the ^ (hat) operator, and you instantiate the object with the ref new keyword. Thereafter you access the object's instance methods with the -> operator just like a C++ pointer. Static methods are accessed with the :: operator just as in ISO C++.
 
-다음 코드에서는 정규화된 이름을 사용하여 개체를 인스턴스화하고 -&gt; 연산자를 사용하여 인스턴스 메서드를 호출합니다.
+In the following code, we use the fully qualified name to instantiate an object, and use the -> operator to call an instance method.
 
 ```cpp
 Windows::UI::Xaml::Media::Imaging::BitmapImage^ bitmapImage =
@@ -142,16 +142,16 @@ Windows::UI::Xaml::Media::Imaging::BitmapImage^ bitmapImage =
 bitmapImage->SetSource(fileStream);
 ```
 
-일반적으로 .cpp 파일에 `using namespace  Windows::UI::Xaml::Media::Imaging` 지시문과 auto 키워드를 추가하여 동일한 코드가 다음과 같이 나타나도록 합니다.
+Typically, in a .cpp file we would add a `using namespace  Windows::UI::Xaml::Media::Imaging` directive and the auto keyword, so that the same code would look like this:
 
 ```cpp
 auto bitmapImage = ref new BitmapImage();
 bitmapImage->SetSource(fileStream);
 ```
 
-**속성**
+**Properties**
 
-ref 클래스에는 관리되는 언어에서처럼 사용 코드에 필드로 표시되는 특수 멤버 함수인 속성이 있을 수 있습니다.
+A ref class can have properties, which, just as in managed languages, are special member functions that appear as fields to consuming code.
 
 ```cpp
 public ref class SaveStateEventArgs sealed
@@ -176,9 +176,9 @@ public ref class SaveStateEventArgs sealed
 }
 ```
 
-**대리자**
+**Delegates**
 
-관리되는 언어에서처럼 대리자는 특정 서명으로 함수를 캡슐화하는 참조 형식입니다. 대리자는 흔히 이벤트 및 이벤트 처리기와 함께 사용됩니다.
+Just as in managed languages, a delegate is a reference type that encapsulates a function with a specific signature. They are most often used with events and event handlers
 
 ```cpp
 // Delegate declaration (within namespace scope)
@@ -199,14 +199,14 @@ MainPage::MainPage()
 }
 ```
 
-## 앱에 콘텐츠 추가
+## <a name="adding-content-to-the-app"></a>Adding content to the app
 
-약간의 콘텐츠를 앱에 추가해 보겠습니다.
+Let's add some content to the app.
 
-**1단계: 시작 페이지 수정**
+**Step 1: Modify your start page**
 
-1.  **솔루션 탐색기**에서 MainPage.xaml을 엽니다.
-2.  다음 XAML을 닫는 태그 바로 앞에서 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)에 추가하여 UI에 대한 컨트롤을 만듭니다. 여기에는 사용자의 이름을 묻는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), 사용자의 이름을 수용하는 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 요소, [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) 및 또 다른 **TextBlock** 요소가 있는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)이 포함됩니다.
+1.  In **Solution Explorer**, open MainPage.xaml.
+2.  Create controls for the UI by adding the following XAML to the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704), immediately before its closing tag. It contains a [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) that has a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) that asks the user's name, a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) element that accepts the user's name, a [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265), and another **TextBlock** element.
 
     ```xaml
     <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
@@ -220,79 +220,79 @@ MainPage::MainPage()
     </StackPanel>
     ```
 
-3.  이제 매우 간단한 유니버설 Windows 앱을 만들었습니다. UWP 앱의 모양을 확인하려면 F5 키를 눌러 디버깅 모드에서 앱을 빌드, 배포 및 실행합니다.
+3.  At this point, you have created a very basic Universal Windows app. To see what the UWP app looks like, press F5 to build, deploy, and run the app in debugging mode.
 
-먼저 기본 시작 화면이 나타납니다. Assets\\SplashScreen.scale-100.png라는 이미지와 앱의 매니페스트 파일에 지정되어 있는 배경색이 있습니다. 시작 화면을 사용자 지정하는 방법에 대해 알아보려면 [시작 화면 추가](https://msdn.microsoft.com/library/windows/apps/Hh465332)를 참조하세요.
+The default splash screen appears first. It has an image—Assets\\SplashScreen.scale-100.png—and a background color that are specified in the app's manifest file. To learn how to customize the splash screen, see [Adding a splash screen](https://msdn.microsoft.com/library/windows/apps/Hh465332).
 
-시작 화면이 사라지고 나면 앱이 나타납니다. 앱의 기본 페이지가 표시됩니다.
+When the splash screen disappears, your app appears. It displays the main page of the App.
 
-![Windows 스토어 앱 화면(컨트롤 포함)](images/xaml-hw-app2.png)
+![Windows Store app screen, with controls](images/xaml-hw-app2.png)
 
-아직 기능은 많지 않지만 첫 유니버설 Windows 플랫폼 앱이 작성되었습니다. 축하합니다.
+It doesn't do much—yet—but congratulations, you've built your first Universal Windows Platform app!
 
-디버깅을 중지하고 앱을 닫으려면 Visual Studio로 돌아가서 Shift+F5를 누릅니다.
+To stop debugging and close the app, return to Visual Studio and press Shift+F5.
 
-자세한 내용은 [Visual Studio에서 스토어 앱 실행](http://go.microsoft.com/fwlink/p/?LinkId=619619)을 참조하세요.
+For more information, see [Run a Store app from Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=619619).
 
-앱에서는 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 입력할 수도 있지만 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 클릭해도 아무런 작동을 하지 않습니다. 이후 단계에서는 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만듭니다.
+In the app, you can type in the [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683), but clicking the [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) doesn't do anything. In later steps, you create an event handler for the button's [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) event, which displays a personalized greeting.
 
-## 모바일 장치 에뮬레이터에서 앱 시작
+## <a name="start-the-app-on-a-mobile-device-emulator"></a>Start the app on a mobile device emulator
 
-앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다. 이 섹션에는 Windows 10을 실행하는 Windows Phone이 필요합니다. 또는 Windows Phone 에뮬레이터에 액세스해야 하며, HyperV를 지원하고 사용하는 실제 컴퓨터(가상 컴퓨터가 아님)에서 Visual Studio를 실행해야 합니다.
+Your app runs on any Windows 10 device, so let’s see how it looks on a Windows Phone. This section requires a Windows Phone running Windows 10, or access to a Windows Phone emulator and it requires that Visual Studio be running on a physical computer (not a virtual machine) with HyperV supported and enabled.
 
-Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
+In addition to the options to debug on a desktop device, Visual Studio provides options for deploying and debugging your app on a physical mobile device connected to the computer, or on a mobile device emulator. You can choose among emulators for devices with different memory and display configurations.
 
--   **장치**
--   **에뮬레이터 10.0.0.0 WVGA 4인치 512MB**
--   기타 구성의 다양한 에뮬레이터
+-   **Device**
+-   **Emulator 10.0.0.0 WVGA 4 inch 512MB**
+-   Various emulators in other configurations
 
-(에뮬레이터가 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.)
+(If you don't see the emulators, make sure you have the Universal Windows App Development Tools installed. See [Get set up](get-set-up.md) for more info.)
 
-화면이 작고 메모리가 제한된 디바이스에서 앱을 테스트하는 것이 좋으므로 **에뮬레이터 10.0.0.0 WVGA 4인치 512MB** 옵션을 사용합니다.
-**팁** Phone 에뮬레이터 사용에 대한 자세한 내용은 [에뮬레이터에서 Windows Phone 앱 실행](http://go.microsoft.com/fwlink/p/?LinkId=394233)을 참조하세요.
+It's a good idea to test your app on a device with a small screen and limited memory, so use the **Emulator 10.0.0.0 WVGA 4 inch 512MB** option.
+**Tip**  For more info about using the phone emulator, see [Run Windows Phone apps in the emulator](http://go.microsoft.com/fwlink/p/?LinkId=394233).
 
-실제 장치에서 앱을 디버그하려면 개발용으로 등록된 장치가 있어야 합니다. 자세한 내용은 [Windows Phone 등록](https://msdn.microsoft.com/library/windows/apps/Dn614128)을 참조하세요.
+To debug your app on a physical device, you must have a device that’s registered for development. For more info, see [Register your Windows Phone](https://msdn.microsoft.com/library/windows/apps/Dn614128).
 
-**모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
+**To start debugging on a mobile device emulator**
 
-1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.0.0 WVGA 4인치 512MB**를 선택합니다.
-2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
+1.  In the target device menu (![Start debugging menu](images/startdebug-full.png)) on the **Standard** toolbar, pick **Emulator 10.0.0.0 WVGA 4 inch 512MB**.
+2.  Click the **Start Debugging** button (![Start debugging button](images/startdebug-sm.png)) in the toolbar.
 
-   –또는–
+   –or–
 
-   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
+   From the **Debug** menu, click **Start Debugging**.
 
-   –또는–
+   –or–
 
-   F5 키를 누릅니다.
+   Press F5.
 
-모바일 장치 에뮬레이터에서 앱은 다음과 같이 표시됩니다.
+On the mobile device emulator, the app looks like this.
 
-![모바일 장치의 초기 앱 화면](images/hw10-screen1-mob.png)
+![Initial app screen on mobile device](images/hw10-screen1-mob.png)
 
-Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포하고 시작합니다. 가장 먼저 눈에 띄는 것은 로컬 컴퓨터에 적절히 표시되는 120 픽셀의 왼쪽 여백이며, 이 여백으로 인해 모바일 장치의 작은 화면에 콘텐츠를 넣은 것처럼 보입니다. 이 자습서 뒷부분에서는 앱이 항상 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용하는 방법을 알아봅니다.
+Visual Studio starts the selected emulator and then deploys and starts your app. The first thing you'll notice is that the 120-pixel left margin that looks good on the local machine pushes your content off the smaller screen of a mobile device. Later in this tutorial, you'll learn how to adapt the UI to different screen sizes so your app always looks good.
 
-## 2단계: 이벤트 처리기 만들기
+## <a name="step-2-create-an-event-handler"></a>Step 2: Create an event handler
 
-1.  MainPage.xaml의 XAML 또는 디자인 뷰에서 이전에 추가한 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)의 "Say Hello" [**단추**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 선택합니다.
-2.  Alt+Enter를 눌러서 **속성 창**을 열고 나서 이벤트 단추(![이벤트 단추](images/eventsbutton.png))를 선택합니다.
-3.  [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트를 찾습니다. 텍스트 상자에 **Click** 이벤트를 처리하는 함수의 이름을 입력합니다. 이 예제에서는 "Button\_Click"을 입력합니다.
+1.  In MainPage.xaml, in either XAML or design view, select the "Say Hello" [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) in the [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) you added earlier.
+2.  Open the **Properties Window** by pressing Alt+Enter, and then choose the Events button (![Events button](images/eventsbutton.png)).
+3.  Find the [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) event. In its text box, type the name of the function that handles the **Click** event. For this example, type "Button\_Click".
 
-    ![속성 창의 이벤트 보기](images/xaml-hw-event.png)
+    ![Properties window, Events view](images/xaml-hw-event.png)
 
-4.  Enter 키를 누릅니다. 이벤트 처리기 메서드가 MainPage.xaml.cpp에서 만들어지고 이벤트 발생 시 실행될 코드를 추가할 수 있도록 열립니다.
+4.  Press Enter. The event handler method is created in MainPage.xaml.cpp and opened so that you can add the code that's executed when the event occurs.
 
-   이와 동시에 MainPage.xaml에서 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 대한 XAML은 다음과 같이 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트 처리기를 선언하도록 업데이트됩니다.
+   At the same time, in MainPage.xaml, the XAML for the [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) is updated to declare the [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) event handler, like this:
 
     ```xaml
-    <Button Content="Say \"Hello\"" Click="Button_Click"/>
+    <Button Content="Say \"Hello\" Click="Button_Click"/>
     ```
 
-    xaml 코드에 수동으로 추가할 수도 있습니다. 이는 디자이너가 로드되지 않은 경우에 유용할 수 있습니다. 수동으로 입력한 경우 "Click"을 입력한 다음 IntelliSense에서 새 이벤트 처리기를 추가하는 옵션을 팝업하도록 합니다. 이렇게 하면 Visual Studio에서 필요한 메서드 선언 및 스텁을 만듭니다.
+    You could also have simply added this to the xaml code manually, which can be helpful if the designer doesn't load. If you enter this manually, type "Click" and then let IntelliSense pop up the option to add a new event handler. That way, Visual Studio creates the necessary method declaration and stub.
 
-    렌더링 중 처리되지 않은 예외가 발생한 경우에는 디자이너가 로드되지 않습니다. 디자이너에서의 렌더링에서는 디자인 타임 버전의 페이지가 실행됩니다. 이는 사용자 코드 실행을 비활성화하는 데 유용할 수 있습니다. 이렇게 하려면 **도구, 옵션** 대화 상자에서 설정을 변경하면 됩니다. **XAML 디자이너**에서 **XAML 디자이너에서 프로젝트 실행(지원되는 경우)**의 선택을 취소합니다.
+    The designer fails to load if an unhandled exception occurs during rendering. Rendering in the designer involves running a design-time version of the page. It can be helpful to disable running user code. You can do this by changing the setting in the **Tools, Options** dialog box. Under **XAML Designer**, uncheck **Run project code in XAML designer (if supported)**.
 
-5.  MainPage.xaml.cpp에서 방금 만든 **Button\_Click** 이벤트 처리기에 다음 코드를 추가합니다. 이 코드는 `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) 컨트롤에서 사용자 이름을 검색한 다음 이 이름을 사용하여 인사말을 만듭니다. `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 결과가 표시됩니다.
+5.  In MainPage.xaml.cpp, add the following code to the **Button\_Click** event handler that you just created. This code retrieves the user's name from the `nameInput` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) control and uses it to create a greeting. The `greetingOutput` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) displays the result.
 
     ```cpp
     void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
@@ -301,26 +301,26 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
     }
     ```
 
-6.  해당 프로젝트를 시작 프로젝트로 설정하고 나서 F5 키를 눌러서 앱을 빌드하고 실행합니다. 텍스트 상자에 이름을 입력하고 단추를 클릭하면 앱에서 개인 설정 인사말을 표시합니다.
+6.  Set the project as the startup, and then press F5 to build and run the app. When you type a name in the text box and click the button, the app displays a personalized greeting.
 
-![메시지가 표시된 앱 화면](images/xaml-hw-app4.png)
+![App screen with message display](images/xaml-hw-app4.png)
 
-## 3단계: 시작 페이지 스타일 지정
+## <a name="step-3-style-the-start-page"></a>Step 3: Style the start page
 
-### 테마 선택
+### <a name="choosing-a-theme"></a>Choosing a theme
 
-앱의 모양과 느낌은 손쉽게 사용자 지정할 수 있습니다. 기본적으로 앱은 밝은 스타일의 리소스를 사용합니다. 시스템 리소스에는 밝은 테마도 있습니다. 테스트해 보고 어떻게 보이는지 확인해 보겠습니다.
+It's easy to customize the look and feel of your app. By default, your app uses resources that have a light style. The system resources also include a light theme. Let's try it out and see what it looks like.
 
-**어두운 테마로 전환하려면**
+**To switch to the dark theme**
 
-1.  App.xaml을 엽니다.
-2.  여는 [**Application**](https://msdn.microsoft.com/library/windows/apps/BR242324) 태그에서 [**RequestedTheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme) 속성을 편집하고 해당 값을 **Dark**로 설정합니다.
+1.  Open App.xaml.
+2.  In the opening [**Application**](https://msdn.microsoft.com/library/windows/apps/BR242324) tag, edit the [**RequestedTheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme) property and set its value to **Dark**:
 
     ```xaml
     RequestedTheme="Light"
     ```
 
-    어두운 테마가 있는 전체 [**Application**](https://msdn.microsoft.com/library/windows/apps/BR242324) 태그는 다음과 같습니다.
+    Here's the full [**Application**](https://msdn.microsoft.com/library/windows/apps/BR242324) tag with the dark theme :
 
     ```xaml 
         <Application
@@ -331,42 +331,42 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
         RequestedTheme="Dark">
     ```
 
-3.  F5 키를 눌러 앱을 빌드 및 실행합니다. 해당 프로젝트에 어두운 테마가 사용됩니다.
+3.  Press F5 to build and run it. Notice that it uses the dark theme.
 
-![어두운 테마를 사용하는 앱 화면](images/xaml-hw-app3.png)
+![App screen with dark theme](images/xaml-hw-app3.png)
 
-어떤 테마를 사용해야 할까요? 어느 것이든 원하는 것을 사용하면 됩니다. 주로 이미지 또는 동영상을 표시하는 앱에는 어두운 테마를 사용하는 것이 좋고, 텍스트가 많이 들어 있는 앱에는 밝은 테마를 사용하는 것이 좋습니다. 사용자 지정 색 구성표를 사용하려는 경우 앱의 모양과 느낌에 가장 잘 맞는 테마를 사용하세요. 이 자습서의 나머지 부분에서는 스크린샷에 밝은 테마를 사용합니다.
+Which theme should you use? Whichever one you want. Here's our take: for apps that mostly display images or video, we recommend the dark theme; for apps that contain a lot of text, we recommend the light theme. If you're using a custom color scheme, use the theme that goes best with your app's look and feel. In the rest of this tutorial, we use the Light theme in screenshots.
 
-**참고** 테마는 앱이 시작될 때 적용되며 앱이 실행되는 동안에는 변경할 수 없습니다.
+**Note**  The theme is applied when the app is started and can't be changed while the app is running.
 
-### 시스템 스타일 사용
+### <a name="using-system-styles"></a>Using system styles
 
-지금은 Windows 앱의 텍스트가 매우 작아서 읽기가 어렵습니다. 시스템 스타일을 적용하여 수정해 보겠습니다.
+Right now, in the Windows app the text is very small and difficult to read. Let's fix that by applying a system style.
 
-**요소의 스타일을 변경하려면**
+**To change the style of an element**
 
-1.  Windows 프로젝트에서 MainPage.xaml을 엽니다.
-2.  XAML 또는 디자인 뷰에서 이전에 추가한 "What's your name?"[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)을 선택합니다.
-3.  **속성** 창(**F4**)의 오른쪽 위에서 속성 단추(![속성 단추](images/propertiesbutton.png))를 선택합니다.
-4.  **텍스트** 그룹을 확장하고 글꼴 크기를 18px로 설정합니다.
-5.  **기타** 그룹을 확장하고 **스타일** 속성을 찾습니다.
-6.  속성 마커(**스타일** 속성 오른쪽에 있는 녹색 상자)를 클릭한 다음 메뉴에서 **시스템 리소스** > **BaseTextBlockStyle**을 선택합니다.
+1.  In the Windows project, open MainPage.xaml.
+2.  In either XAML or design view, select the "What's your name?"[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) that you added earlier.
+3.  In the **Properties** window (**F4**), choose the Properties button (![Properties button](images/propertiesbutton.png)) in the upper right.
+4.  Expand the **Text** group and set the font size to 18 px.
+5.  Expand the **Miscellaneous** group and find the **Style** property.
+6.  Click the property marker (the green box to the right of the **Style** property), and then, on the menu, choose **System Resource** > **BaseTextBlockStyle**.
 
-     **BaseTextBlockStyle**은 <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml의 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)에 정의된 리소스입니다.
+     **BaseTextBlockStyle** is a resource that's defined in the [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) in <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml.
 
-    ![속성 창의 속성 보기](images/xaml-hw-style-cpp.png)
+    ![Properties window, Properties view](images/xaml-hw-style-cpp.png)
 
-     XAML 디자인 화면에서 텍스트의 모양이 변경됩니다. XAML 편집기에서 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에 대한 XAML이 업데이트됩니다.
+     On the XAML design surface, the appearance of the text changes. In the XAML editor, the XAML for the [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) is updated:
 
     ```xaml
     <TextBlock Text="What's your name?" Style="{StaticResource BasicTextStyle}"/><
     ```
 
-7.  프로세스를 반복하여 글꼴 크기를 설정하고 `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) 요소에 **BaseTextBlockStyle**을 할당합니다.
+7.  Repeat the process to set the font size and assign the **BaseTextBlockStyle** to the `greetingOutput`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) element.
 
-    **팁** 이 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)에는 텍스트가 없지만 XAML 디자인 화면 위로 포인터를 이동하면 포인터의 위치가 파란색 윤곽선으로 표시되므로 이를 선택할 수 있습니다.  
+    **Tip**  Although there's no text in this [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652), when you move the pointer over the XAML design surface, a blue outline shows where it is so that you can select it.  
 
-    이제 XAML은 다음과 같습니다.
+    Your XAML now looks like this:
 
     ```xaml
     <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
@@ -379,17 +379,17 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
     </StackPanel>
     ```
 
-8.  F5 키를 눌러 앱을 빌드 및 실행합니다. 이제 모양은 다음과 같습니다.
+8.  Press F5 to build and run the app. It now looks like this:
 
-![큰 텍스트가 포함된 앱 화면](images/xaml-hw-app5.png)
+![App screen with larger text](images/xaml-hw-app5.png)
 
-### 4단계: UI를 다양한 창 크기로 조정
+### <a name="step-4-adapt-the-ui-to-different-window-sizes"></a>Step 4: Adapt the UI to different window sizes
 
-이제 모바일 장치에서 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용할 수 있습니다. 이 작업을 수행하려면 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)을(를) 추가하고 다양한 시각적 상태에 적용되는 속성을 설정합니다.
+Now we'll make the UI adapt to different screen sizes so it looks good on mobile devices. To do this, you add a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) and set properties that are applied for different visual states.
 
-**UI 레이아웃을 조정하려면**
+**To adjust the UI layout**
 
-1.  XAML 편집기에서 이 XAML 블록을 루트 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) 요소의 여는 태그 뒤에 추가합니다.
+1.  In the XAML editor, add this block of XAML after the opening tag of the root [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704) element.
 
     ```xaml
     <VisualStateManager.VisualStateGroups>
@@ -413,34 +413,34 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
     </VisualStateManager.VisualStateGroups>
     ```
 
-2.  로컬 컴퓨터에서 앱을 디버그합니다. 641 DIP(장치 독립적인 픽셀)보다 좁은 경우가 아니라면 UI가 이전과 동일한 모양으로 표시됩니다.
-3.  모바일 장치 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.
+2.  Debug the app on the local machine. Notice that the UI looks the same as before unless the window gets narrower than 641 device-independent pixels (DIPs).
+3.  Debug the app on the mobile device emulator. Notice that the UI uses the properties you defined in the `narrowState` and appears correctly on the small screen.
 
-![스타일이 지정된 텍스트가 포함된 모바일 앱 화면](images/hw10-screen2-mob.png)
+![Mobile app screen with styled text](images/hw10-screen2-mob.png)
 
-이전 버전의 XAML에서 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)을(를) 사용한 적이 있으면 여기의 XAML에서 단순화된 구문을 사용할 수 있습니다.
+If you've used a [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) in previous versions of XAML, you might notice that the XAML here uses a simplified syntax.
 
-`wideState`라는 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 641로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 즉, 창 너비가 최소값인 641 DIP(장치 독립적인 픽셀)보다 작지 않은 경우에만 상태가 적용됩니다. 이 상태에 대해 어떤 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체도 정의하지 않았으므로 페이지 내용에 대한 XAML에 정의된 레이아웃 속성을 사용합니다.
+The [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007) named `wideState` has an [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) with its [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) property set to 641. This means that the state is to be applied only when the window width is not less than the minimum of 641 DIPs. You don't define any [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) objects for this state, so it uses the layout properties you defined in the XAML for the page content.
 
-두 번째 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`에는 해당 [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 0으로 설정된 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)가 있습니다. 창 너비가 0보다 크지만 641 DIP보다는 작은 경우에 이 상태가 적용됩니다. (641DIP에서 `wideState`이(가) 적용됩니다.) 이 상태에서는 UI에 있는 컨트롤의 레이아웃 속성을 변경하도록 일부 [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) 개체를 다음과 같이 정의합니다.
+The second [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007), `narrowState`, has an [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382) with its [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth) property set to 0. This state is applied when the window width is greater than 0, but less than 641 DIPs. (At 641 DIPs, the `wideState` is applied.) In this state, you do define some [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817) objects to change the layout properties of controls in the UI:
 
--   `contentPanel` 요소의 왼쪽 여백을 120에서 20으로 줄입니다.
--   `inputPanel` 요소의 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal**에서 **Vertical**로 변경합니다.
--   4 DIP의 상단 여백을 `inputButton` 요소에 추가합니다.
+-   You reduce the left margin of the `contentPanel` element from 120 to 20.
+-   You change the [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation) of the `inputPanel` element from **Horizontal** to **Vertical**.
+-   You add a top margin of 4 DIPs to the `inputButton` element.
 
-### 요약
+### <a name="summary"></a>Summary
 
-축하합니다! 첫 번째 자습서를 완료했습니다. 이 자습서에서는 Windows 유니버설 앱에 콘텐츠 및 대화형 작업을 추가하는 방법과 앱의 모양을 변경하는 방법에 대해 알아보았습니다.
+Congratulations, you've completed the first tutorial! It taught how to add content to Windows Universal apps, how to add interactivity to them, and how to change their appearance.
 
-## 다음 단계
+## <a name="next-steps"></a>Next steps
 
-Windows 8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트가 있는 경우 해당 프로젝트를 Windows 10으로 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 약간의 작업만 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
+If you have a Windows Universal app project that targets Windows 8.1 and/or Windows Phone 8.1, you can port it to Windows 10. There is no automatic process for this, but you can do it manually with a little effort. Start with a new Windows Universal project to get the latest project system structure and manifest files, copy your code files into the project's directory structure, add the items to your project, and rewrite your XAML using the [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021) according to the guidance in this topic. For more information, see [Porting a Windows Runtime 8 project to a Universal Windows Platform (UWP) project](https://msdn.microsoft.com/library/windows/apps/Mt188203) and [Porting to the Universal Windows Platform (C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525).
 
-기존 응용 프로그램의 새 UWP UI를 만드는 등의 목적으로 UWP 앱과 통합하려는 기존 C++ 코드가 있는 경우 [방법: 유니버설 Windows 프로젝트에서 C++ 코드 사용](http://go.microsoft.com/fwlink/p/?LinkId=619623)을 참조하세요.
-
-
+If you have existing C++ code that you want to integrate with a UWP app, such as to create a new UWP UI for an existing application, see [How to: Use existing C++ code in a Universal Windows project](http://go.microsoft.com/fwlink/p/?LinkId=619623).
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

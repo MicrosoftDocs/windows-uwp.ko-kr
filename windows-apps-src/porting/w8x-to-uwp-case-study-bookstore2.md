@@ -1,115 +1,115 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: "이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다."
-title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2"
+description: This case study builds on the info given in Bookstore1 that begins with a Universal 8.1 app that displays grouped data in a SemanticZoom control.
+title: Windows Runtime 8.x to UWP case study Bookstore2
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 2d142ddb5522daf5467ce5690b3fe8e7a356ac0a
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 34762d74ba34ed3c5cee4da4809c2c509f3932e9
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
+# <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows Runtime 8.x to UWP case study: Bookstore2
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-[Bookstore1](w8x-to-uwp-case-study-bookstore1.md)에 제공된 정보를 기반으로 하는 이 사례 연구는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **SemanticZoom**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 단계를 안내합니다.
+This case study—which builds on the info given in [Bookstore1](w8x-to-uwp-case-study-bookstore1.md)—begins with a Universal 8.1 app that displays grouped data in a [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) control. In the view model, each instance of the class **Author** represents the group of the books written by that author, and in the **SemanticZoom**, we can either view the list of books grouped by author or we can zoom out to see a jump list of authors. The jump list affords much quicker navigation than scrolling through the list of books. We walk through the steps of porting the app to a Windows 10 Universal Windows Platform (UWP) app.
 
-**참고** Visual Studio에서 Bookstore2Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion)의 단계를 수행합니다.
+**Note**   When opening Bookstore2Universal\_10 in Visual Studio, if you see the message "Visual Studio update required", then follow the steps in [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
-## 다운로드
+## <a name="downloads"></a>Downloads
 
-[Bookstore2\_81 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532951).
+[Download the Bookstore2\_81 Universal 8.1 app](http://go.microsoft.com/fwlink/?linkid=532951).
 
-[Bookstore2Universal\_10 Windows 10 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532952).
+[Download the Bookstore2Universal\_10 Windows 10 app](http://go.microsoft.com/fwlink/?linkid=532952).
 
-## 유니버설 8.1 앱
+## <a name="the-universal-81-app"></a>The Universal 8.1 app
 
-포팅할 Bookstore2\_81 앱은 다음과 같습니다. 가로로 스크롤되는(Windows Phone에서는 세로로 스크롤됨)는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)으로, 작성자로 그룹화된 책을 표시합니다. 점프 목록으로 축소할 수 있으며 점프 목록에서 어떤 그룹으로도 다시 이동할 수 있습니다. 이 앱에는 두 가지 주요 특징이 있습니다. 그룹화된 데이터 원본를 제공하는 보기 모델 및 보기 모델에 바인딩하는 사용자 인터페이스가 그것입니다. 앞으로 살펴보겠지만 이러한 특징은 모두 WinRT 8.1 기술에서 Windows 10으로 쉽게 포팅됩니다.
+Here’s what Bookstore2\_81—the app that we're going to port—looks like. It's a horizontally-scrolling (vertically-scrolling on Windows Phone) [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) showing books grouped by author. You can zoom out to the jump list and from there you can navigate back into any group. There are two main pieces to this app: the view model that provides the grouped data source, and the user interface that binds to that view model. As we'll see, both of these pieces port easily from WinRT 8.1 technology to Windows 10.
 
-![Windows의 bookstore2\-81, 확대 보기](images/w8x-to-uwp-case-studies/c02-01-win81-zi-how-the-app-looks.png)
+![bookstore2\-81 on windows, zoomed-in view](images/w8x-to-uwp-case-studies/c02-01-win81-zi-how-the-app-looks.png)
 
-Windows의 Bookstore2\_81, 확대 보기
+Bookstore2\_81 on Windows, zoomed-in view
  
 
-![Windows의 bookstore2\-81, 축소 보기](images/w8x-to-uwp-case-studies/c02-02-win81-zo-how-the-app-looks.png)
+![bookstore2\-81 on windows, zoomed-out view](images/w8x-to-uwp-case-studies/c02-02-win81-zo-how-the-app-looks.png)
 
-Windows의 Bookstore2\_81, 축소 보기
+Bookstore2\_81 on Windows, zoomed-out view
 
-![Windows Phone의 bookstore2\-81, 확대 보기](images/w8x-to-uwp-case-studies/c02-03-wp81-zi-how-the-app-looks.png)
+![bookstore2\-81 on windows phone, zoomed-in view](images/w8x-to-uwp-case-studies/c02-03-wp81-zi-how-the-app-looks.png)
 
-Windows Phone의 Bookstore2\_81, 확대 보기
+Bookstore2\_81 on Windows Phone, zoomed-in view
 
-![Windows Phone의 bookstore2\-81, 축소 보기](images/w8x-to-uwp-case-studies/c02-04-wp81-zo-how-the-app-looks.png)
+![bookstore2\-81 on windows phone, zoomed-out view](images/w8x-to-uwp-case-studies/c02-04-wp81-zo-how-the-app-looks.png)
 
-Windows Phone의 Bookstore2\_81, 축소 보기
+Bookstore2\_81 on Windows Phone, zoomed-out view
 
-##  Windows 10 프로젝트로 포팅
+##  <a name="porting-to-a-windows-10-project"></a>Porting to a Windows 10 project
 
-Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstore2\_81.Windows 프로젝트는 Windows 8.1용 앱 패키지를 빌드하고 Bookstore2_\81.WindowsPhone 프로젝트는 Windows Phone 8.1용 앱 패키지를 빌드합니다. Bookstore2\_81.Shared는 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
+The Bookstore2\_81 solution is an 8.1 Universal App project. The Bookstore2\_81.Windows project builds the app package for Windows 8.1, and the Bookstore2\_81.WindowsPhone project builds the app package for Windows Phone 8.1. Bookstore2\_81.Shared is the project that contains source code, markup files, and other assets and resources, that are used by both of the other two projects.
 
-이전 사례 연구와 마찬가지로 선택할 수 있는 옵션([유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md#if-you-have-a-universal-81-app)에서 설명한 옵션 중 선택)은 유니버설 디바이스 패밀리를 대상으로 하는 Windows 10으로 공유 프로젝트의 콘텐츠를 포팅하는 것입니다.
+Just like with the previous case study, the option we'll take (of the ones described in [If you have a Universal 8.1 app](w8x-to-uwp-root.md)) is to port the contents of the Shared project to a Windows 10 that targets the Universal device family.
 
-비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore2\_81에서 Bookstore2Universal\_10으로 복사할 파일입니다.
+Begin by creating a new Blank Application (Windows Universal) project. Name it Bookstore2Universal\_10. These are the files to copy over from Bookstore2\_81 to Bookstore2Universal\_10.
 
-**공유 프로젝트에서**
+**From the Shared project**
 
--   책 표지 이미지 PNG 파일이 들어 있는 폴더를 복사합니다(폴더는 \\Assets\\CoverImages임) 폴더를 복사한 후에 **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 이 명령은 파일이나 폴더를 프로젝트에 "포함"하여 우리가 의도한 작업을 진행합니다. 파일이나 폴더를 복사할 때마다 **솔루션 탐색기**에서 **새로 고침**을 클릭한 다음 프로젝트에 파일 또는 폴더를 포함합니다. 대상에서 바꾸려는 파일에 대해서는 이 작업을 수행하지 않아도 됩니다.
--   보기 모델 소스 파일이 포함된 폴더(\\ViewModel)를 복사합니다.
--   MainPage.xaml을 복사한 후 대상의 파일을 바꿉니다.
+-   Copy the folder containing the book cover image PNG files (the folder is \\Assets\\CoverImages). After copying the folder, in **Solution Explorer**, make sure **Show All Files** is toggled on. Right-click the folder that you copied and click **Include In Project**. That command is what we mean by "including" files or folders in a project. Each time you copy a file or folder, each copy, click **Refresh** in **Solution Explorer** and then include the file or folder in the project. There's no need to do this for files that you're replacing in the destination.
+-   Copy the folder containing the view model source file (the folder is \\ViewModel).
+-   Copy MainPage.xaml and replace the file in the destination.
 
-**Windows 프로젝트에서**
+**From the Windows project**
 
--   BookstoreStyles.xaml을 복사합니다. 이 파일의 모든 리소스 키가 Windows 10 앱에서 확인되고 해당하는 WindowsPhone 파일의 일부 리소스 키는 확인되지 않으므로 이 파일을 적절한 시작 지점으로 사용하겠습니다.
--   SeZoUC.xaml 및 SeZoUC.xaml.cs를 복사합니다. 넓은 창에 적합한 이 보기의 Windows 버전으로 시작한 후 나중에 작은 창에 맞게 그리고 결과적으로 더 작은 디바이스에 맞게 조정합니다.
+-   Copy BookstoreStyles.xaml. We'll use this one as a good starting-point because all the resource keys in this file will resolve in a Windows 10 app; some of those in the equivalent WindowsPhone file will not.
+-   Copy SeZoUC.xaml and SeZoUC.xaml.cs. We'll start with the Windows version of this view, which is appropriate for wide windows, and then later we'll make it adapt to smaller windows and, consequently, smaller devices.
 
-방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore2\_81 네임스페이스에 대한 참조를 Bookstore2Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델과 다른 명령적 코드에서 코드를 변경할 필요가 없습니다. 그렇지만 실행 중인 앱 버전을 더 쉽게 식별하려면 **Bookstore2Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "Bookstore2\_81"에서 "BOOKSTORE2UNIVERSAL\_10"으로 변경하세요.
+Edit the source code and markup files that you just copied and change any references to the Bookstore2\_81 namespace to Bookstore2Universal\_10. A quick way to do that is to use the **Replace In Files** feature. No code changes are needed in the view model, nor in any other imperative code. But, just to make it easier to see which version of the app is running, change the value returned by the **Bookstore2Universal\_10.BookstoreViewModel.AppName** property from "Bookstore2\_81" to "BOOKSTORE2UNIVERSAL\_10".
 
-이제 앱을 빌드 및 실행할 수 있습니다. Windows 10으로 포팅할 작업을 아직 수행하지 않은 경우 새 UWP 앱의 모양은 다음과 같습니다.
+Right now, you can build and run. Here's how our new UWP app looks after having done no work yet to port it to Windows 10.
 
-![데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-05-desk10-zi-initial-source-code-changes.png)
+![the windows 10 app with initial source code changes running on a desktop device, zoomed-in view](images/w8x-to-uwp-case-studies/c02-05-desk10-zi-initial-source-code-changes.png)
 
-데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 확대 보기
+The Windows 10 app with initial source code changes running on a Desktop device, zoomed-in view
 
-![데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-06-desk10-zo-initial-source-code-changes.png)
+![the windows 10 app with initial source code changes running on a desktop device, zoomed-out view](images/w8x-to-uwp-case-studies/c02-06-desk10-zo-initial-source-code-changes.png)
 
-데스크톱 디바이스에서 실행 중인 초기 소스 코드가 변경된 Windows 10 앱, 축소 보기
+The Windows 10 app with initial source code changes running on a Desktop device, zoomed-out view
 
-보는 것이 약간 어려워지는 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 한 가지 문제는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)이 스크롤되지 않는 것입니다. 이는 Windows 10에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)의 기본 스타일이 세로로 배치되기 때문입니다. Windows 10 디자인 지침에 따르면 새로운 포팅된 앱에서는 이렇게 세로 방식으로 사용하는 것이 좋습니다. 그러나 Bookstore2\_81 프로젝트(8.1 앱용으로 디자인됨)에서 복사한 사용자 지정 항목 패널 템플릿의 가로 스크롤 설정은 Windows 10 앱으로 포팅한 결과로 적용되는 Windows 10 기본 스타일의 세로 스크롤 설정과 충돌합니다. 두 번째 문제는 앱이 다양한 크기의 창과 작은 디바이스에서 최상의 환경을 제공하도록 해당 사용자 인터페이스를 아직 조정하지 않은 것입니다. 세 번째 문제는 올바른 스타일 및 브러시가 사용되지 않아 텍스트의 상당 부분(축소하기 위해 클릭할 수 있는 그룹 헤더를 포함하여)이 표시되지 않는 것입니다. 따라서 다음 세 섹션([SemanticZoom 및 GridView 디자인 변경](#semanticzoom-and-gridview-design-changes), [적응 UI](#adaptive-ui), [범용 스타일 지정](#universal-styling))에서 이러한 세 가지 문제를 바로잡겠습니다.
+The view model and the zoomed-in and zoomed-out views are working together correctly, although there are issues that make that a little hard to see. One issue is that the [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) doesn't scroll. This is because, in Windows 10, the default style of a [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) causes it to be laid out vertically (and the Windows 10 design guidelines recommend that we use it that way in new and in ported apps). But, horizontal scrolling settings in the custom items panel template that we copied from the Bookstore2\_81 project (which was designed for the 8.1 app) are in conflict with vertical scrolling settings in the Windows 10 default style that is being applied as a result of us having ported to a Windows 10 app. A second thing is that the app doesn't yet adapt its user-interface to give the best experience in different-sized windows and on small devices. And, thirdly, the correct styles and brushes are not yet being used, resulting in much of the text being invisible (including the group headers that you can click to zoom out). So, in the next three sections ([SemanticZoom and GridView design changes](#semanticzoom-and-gridview-design-changes), [Adaptive UI](#adaptive-ui), and [Universal styling](#universal-styling)) we'll remedy those three issues.
 
-## SemanticZoom 및 GridView 디자인 변경
+## <a name="semanticzoom-and-gridview-design-changes"></a>SemanticZoom and GridView design changes
 
-[**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 대한 Windows 10의 디자인 변경은 [SemanticZoom 변경](w8x-to-uwp-porting-xaml-and-ui.md#semantic-zoom) 섹션에서 설명합니다. 이러한 변경과 관련하여 이 섹션에서는 수행할 작업이 없습니다.
+The design changes in Windows 10 to the [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) control are described in the section [SemanticZoom changes](w8x-to-uwp-porting-xaml-and-ui.md). We have no work to do in this section in response to those changes.
 
-[**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 변경은 [GridView/ListView 변경](w8x-to-uwp-porting-xaml-and-ui.md#gridview-listview-changes) 섹션에서 설명합니다. 아래에 설명된 대로 해당 변경 내용에 맞춰 일부 사항을 매우 약간 조정했습니다.
+The changes to [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) are described in the section [GridView/ListView changes](w8x-to-uwp-porting-xaml-and-ui.md). We have some very minor adjustments to make to adapt to those changes, as described below.
 
--   SeZoUC.xaml의 `ZoomedInItemsPanelTemplate`에서 `Orientation="Horizontal"` 및 `GroupPadding="0,0,0,20"`을 설정합니다.
--   SeZoUC.xaml에서 `ZoomedOutItemsPanelTemplate`을 삭제하고 축소 보기에서 `ItemsPanel` 특성을 제거합니다.
+-   In SeZoUC.xaml, in `ZoomedInItemsPanelTemplate`, set `Orientation="Horizontal"` and `GroupPadding="0,0,0,20"`.
+-   In SeZoUC.xaml, delete `ZoomedOutItemsPanelTemplate` and remove the `ItemsPanel` attribute from the zoomed-out view.
 
-정말 간단하죠!
+And that's it!
 
-## 적응 UI
+## <a name="adaptive-ui"></a>Adaptive UI
 
-해당 변경 후 SeZoUC.xaml에서 제공하는 UI 레이아웃은 앱이 넓은 창에서 실행되는 경우에 유용합니다(넓은 창은 큰 화면이 있는 장치에서만 가능). 그러나 앱의 창이 좁은 경우(좁은 창은 작은 장치에서 사용 가능하며 큰 장치에서도 사용 가능) Windows Phone 스토어 앱에서 사용한 UI가 거의 틀림없이 가장 적합합니다.
+After that change, the UI layout that SeZoUC.xaml gives us is great for when the app is running in a wide window (which is only possible on a device with a large screen). When the app's window is narrow, though (which happens on a small device, and can also happen on a large device), the UI that we had in the Windows Phone Store app is arguably most appropriate.
 
-이를 위해 적응 Visual State Manager 기능을 사용할 수 있습니다. 기본적으로 Windows Phone 스토어 앱에서 사용하는 더 작은 템플릿을 사용하여 좁은 상태에 UI가 배치되도록 시각적 요소에서 속성을 설정합니다. 그런 다음 앱의 창이 특정 크기([유효 픽셀](w8x-to-uwp-porting-xaml-and-ui.md#effective-pixels-viewing-distance-and-scale-factors)의 단위로 측정)보다 넓거나 같은 경우를 감지하고 그에 따라 더 크고 넓은 레이아웃을 가져오도록 시각적 요소의 속성을 변경합니다. 시각적 상태에서 해당 속성 변경을 적용하고 적응 트리거를 사용하여 끊임없이 모니터링하고 유효 픽셀의 창 너비에 따라 해당 시각적 상태를 적용할지 여부를 결정합니다. 이 경우 창 너비에서 트리거하지만 창 높이에서도 트리거할 수 있습니다.
+We can use the adaptive Visual State Manager feature to achieve this. We'll set properties on visual elements so that, by default, the UI is laid out in the narrow state using the smaller templates that we were using in the Windows Phone Store app. Then, we'll detect when the app's window is wider-than-or-equal-to a specific size (measured in units of [effective pixels](w8x-to-uwp-porting-xaml-and-ui.md)), and in response, we'll change the properties of visual elements so that we get a larger, and wider, layout. We'll put those property changes in a visual state, and we'll use an adaptive trigger to continuously monitor and determine whether to apply that visual state, or not, depending on the width of the window in effective pixels. We're triggering on window width in this case, but it's possible to trigger on window height, too.
 
-548epx의 최소 창 너비가 넓은 레이아웃을 표시하려는 가장 작은 장치의 크기이므로 548epx가 이 사용 사례에 적합합니다. 휴대폰은 일반적으로 548epx보다 작으므로 이와 같은 소형 장치에서는 기본적으로 좁은 레이아웃 상태를 유지합니다. PC에서는 기본적으로 넓은 상태로의 전환을 트리거하기에 충분히 넓은 상태로 창이 시작됩니다. 이러한 넓은 창에서, 창을 끌어 250x250 크기 항목의 두 열을 표시할 정도로 좁힐 수 있습니다. 그보다 너비를 더 좁히면 트리거가 비활성화되고 넓은 시각적 상태가 제거되며 기본 좁은 레이아웃이 적용됩니다.
+A minimum window width of 548 epx is appropriate for this use case because that's the size of the smallest device we would want to show the wide layout on. Phones are typically smaller than 548 epx so on a small device like that we'd remain in the default narrow layout. On a PC, the window will launch by default wide enough to trigger the switch to the wide state. From there, you'll be able to drag the window narrow enough to display two columns of the 250x250-sized items. A little narrower than that and the trigger will deactivate, the wide visual state will be removed, and the default narrow layout will be in effect.
 
-따라서 이러한 두 가지 다른 레이아웃을 적용하려면 어떤 속성을 설정 및 변경해야 하나요? 두 가지 대안이 있으며 각 대안마다 다른 접근 방법을 사용합니다.
+So, what properties do we need to set—and change—to achieve these two different layouts? There are two alternatives and each entails a different approach.
 
-1.  태그에 두 가지 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤을 사용할 수 있습니다. 하나는 Windows 스토어 앱(이 내부에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 컨트롤 사용)에서 사용하는 태그의 복사본으로, 기본적으로 축소됩니다. 다른 하나는 Windows Phone 스토어 앱(이 내부에서 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤 사용)에서 사용하는 태그의 복사본으로, 기본적으로 표시됩니다. 시각적 상태는 두 **SemanticZoom** 컨트롤의 표시 속성을 전환합니다. 이러한 작업을 수행하는 데는 약간의 노력이 필요할 수 있지만, 일반적으로 고성능 기술이 필요하지는 않습니다. 따라서 이 방법을 사용하는 경우 앱을 프로파일링하고 여전히 성능 목표를 충족하는지 확인해야 합니다.
-2.  [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤이 포함된 단일 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)을 사용할 수 있습니다. 두 가지 레이아웃을 적용하려면 넓은 시각적 상태에서, 적용된 템플릿을 비롯해 **ListView** 컨트롤의 속성을 변경하여 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에서 수행한 것과 동일한 방식으로 배치되도록 합니다. 그러면 성능은 더 좋지만, **GridView** 및 **ListView**의 다양한 스타일 및 템플릿 간에 그리고 다양한 항목 종류 간에 작은 차이가 너무 많아서 적용하기에는 더욱 어려운 솔루션입니다. 또한 이 솔루션은 현재 기본 스타일 및 템플릿이 디자인되는 방식과 긴밀하게 결합되어 있으며, 향후 기본값의 변화에 취약하고 민감한 솔루션을 제공합니다.
+1.  We can put two [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) controls in our markup. One would be a copy of the markup that we were using in the Windows Store app (using [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) controls inside it), and collapsed by default. The other would be a copy of the markup that we were using in the Windows Phone Store app (using [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) controls inside it), and visible by default. The visual state would switch the visibility properties of the two **SemanticZoom** controls. This would require very little effort to achieve but this not, in general, a high-performance technique. So, if you use it, you should profile your app and make sure it is still meeting your performance goals.
+2.  We can use a single [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) containing [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) controls. To achieve our two layouts, in the wide visual state, we would change the properties of the **ListView** controls, including the templates that are applied to them, to cause them to lay out in the same way as a [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) does. This might perform better, but there are so many small differences between the various styles and templates of **GridView** and **ListView** and between their various item types that this is the more difficult solution to achieve. This solution is also tightly coupled to the way the default styles and templates are designed at this moment in time, giving us a solution that's fragile and sensitive to any future changes to the defaults.
 
-이 사례 연구에서는 첫 번째 대안을 사용하겠습니다. 그러나 두 번째 대안을 적용하고 싶은 경우 자신에게 그 방법이 더 맞는지 알아보세요. 다음은 첫 번째 대안을 구현하기 위해 수행할 단계입니다.
+In this case study, we're going to go with the first alternative. But, if you like, you can try the second one and see if that works better for you. Here are the steps to take to implement that first alternative.
 
--   새 프로젝트 태그의 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)에서 `x:Name="wideSeZo"` 및 `Visibility="Collapsed"`를 설정합니다.
--   Bookstore2\_81.WindowsPhone 프로젝트로 돌아가 SeZoUC.xaml을 엽니다. 해당 파일에서 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 요소 태그를 복사하여 새 프로젝트의 `wideSeZo` 바로 뒤에 붙여넣습니다. 방금 붙여넣은 요소에서 `x:Name="narrowSeZo"`를 설정합니다.
--   그러나 `narrowSeZo`에는 아직 복사하지 않은 몇 가지의 스타일이 필요합니다. 다시 Bookstore2\_81.WindowsPhone에서, SeZoUC.xaml의 두 스타일(`AuthorGroupHeaderContainerStyle` 및 `ZoomedOutAuthorItemContainerStyle`)을 복사하여 새 프로젝트의 BookstoreStyles.xaml에 붙여넣습니다.
--   이제 새 SeZoUC.xaml에 두 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 요소가 있습니다. **Grid**에서 이러한 두 요소를 래핑합니다.
--   새 프로젝트의 BookstoreStyles.xaml에서 이러한 세 리소스 키(그리고 `wideSeZo` 내부의 SeZoUC.xaml의 해당 참조에)인 `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate`, `BookTemplate`에 `Wide` 단어를 추가합니다.
--   Bookstore2\_81.WindowsPhone 프로젝트에서 BookstoreStyles.xaml을 엽니다. 이 파일에서, 위에서 설명한 것과 동일한 세 리소스, 두 점프 목록 항목 변환기 및 네임스페이스 접두사 선언 Windows\_UI\_Xaml\_Controls\_Primitives를 복사하여 새 프로젝트의 BookstoreStyles.xaml에 모두 붙여넣습니다.
--   마지막으로 새 프로젝트의 SeZoUC.xaml에서 적절한 Visual State Manager 태그를 방금 추가한 **Grid**에 추가합니다.
+-   On the [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) in the markup in your new project, set `x:Name="wideSeZo"` and `Visibility="Collapsed"`.
+-   Go back to the Bookstore2\_81.WindowsPhone project and open SeZoUC.xaml. Copy the [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) element markup out of that file and paste it immediately after `wideSeZo` in your new project. Set `x:Name="narrowSeZo"` on element that you just pasted.
+-   But `narrowSeZo` needs a couple of styles that we haven't copied yet. Again in Bookstore2\_81.WindowsPhone, copy the two styles (`AuthorGroupHeaderContainerStyle` and `ZoomedOutAuthorItemContainerStyle`) out of SeZoUC.xaml and paste them into BookstoreStyles.xaml in your new project.
+-   You now have two [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) elements in your new SeZoUC.xaml. Wrap those two elements in a **Grid**.
+-   In BookstoreStyles.xaml in your new project, append the word `Wide` to these three resource keys (and to their references in SeZoUC.xaml, but only to the references inside `wideSeZo`): `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate`, and `BookTemplate`.
+-   In the Bookstore2\_81.WindowsPhone project, open BookstoreStyles.xaml. From this file, copy those same three resources (mentioned above), and the two jump list item converters, and the namespace prefix declaration Windows\_UI\_Xaml\_Controls\_Primitives, and paste them all into BookstoreStyles.xaml in your new project.
+-   Finally, in SeZoUC.xaml in your new project, add the appropriate Visual State Manager markup to the **Grid** that you added above.
 
 ```xml
     <Grid>
@@ -132,48 +132,48 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
     </Grid>
 ```
 
-## 범용 스타일 지정
+## <a name="universal-styling"></a>Universal styling
 
-이제 이전 프로젝트에서 복사하는 동안 위에서 소개했던 문제를 비롯하여 일부 스타일 지정 문제를 수정하겠습니다.
+Now, let's fix up some styling issues, including one that we introduced above while copying from the old project.
 
--   MainPage.xaml에서 `LayoutRoot`의 배경을 `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`로 변경합니다.
--   BookstoreStyles.xaml에서 리소스 `TitlePanelMargin`의 값을 `0`(또는 적절해 보이는 값)으로 설정합니다.
--   SeZoUC.xaml에서 `wideSeZo`의 여백을 `0`(또는 적절해 보이는 값)으로 설정합니다.
--   BookstoreStyles.xaml의 `AuthorGroupHeaderTemplateWide`에서 Margin 특성을 제거합니다.
--   `AuthorGroupHeaderTemplate` 및 `ZoomedOutAuthorTemplate`에서 FontFamily 특성을 제거합니다.
--   Bookstore2\_81은 단일 키가 두 앱에서 다르게 구현되도록 `BookTemplateTitleTextBlockStyle`, `BookTemplateAuthorTextBlockStyle` 및 `PageTitleTextBlockStyle` 리소스 키를 간접 참조로 사용했습니다. 해당 간접 참조는 더 이상 필요하지 않습니다. 시스템 스타일은 직접 참조할 수만 있습니다. 따라서 앱 전체에서 해당 참조를 각각 `TitleTextBlockStyle`, `CaptionTextBlockStyle` 및 `HeaderTextBlockStyle`로 바꿉니다. Visual Studio **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르고 정확하게 수행할 수 있습니다. 그런 다음 사용하지 않은 세 가지 해당 리소스를 삭제할 수 있습니다.
--   `AuthorGroupHeaderTemplate`에서 `PhoneAccentBrush`를 `SystemControlBackgroundAccentBrush`로 바꾸고, 모바일 디바이스 패밀리에서 실행될 때 올바르게 표시되도록 **TextBlock**에서 `Foreground="White"`를 설정합니다.
--   `BookTemplateWide`에서 두 번째 **TextBlock**의 Foreground 특성을 첫 번째 텍스트 블록에 복사합니다.
--   `ZoomedOutAuthorTemplateWide`에서 `SubheaderTextBlockStyle`(현재 너무 큼)에 대한 참조를 `SubtitleTextBlockStyle`에 대한 참조로 변경합니다.
--   축소 보기(점프 목록)가 새 플랫폼의 확대 보기를 더 이상 오버레이하지 않습니다. 따라서 `narrowSeZo`의 축소 보기에서 `Background` 특성을 제거할 수 있습니다.
--   모든 스타일과 템플릿이 하나의 파일에 있도록 `ZoomedInItemsPanelTemplate`을 SeZoUC.xaml에서 BookstoreStyles.xaml로 이동합니다.
+-   In MainPage.xaml, change `LayoutRoot`'s Background to `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`.
+-   In BookstoreStyles.xaml, set the value of the resource `TitlePanelMargin` to `0` (or whatever value looks good to you).
+-   In SeZoUC.xaml, set the Margin of `wideSeZo` to `0` (or whatever value looks good to you).
+-   In BookstoreStyles.xaml, remove the Margin attribute from `AuthorGroupHeaderTemplateWide`.
+-   Remove the FontFamily attribute from `AuthorGroupHeaderTemplate` and from `ZoomedOutAuthorTemplate`.
+-   Bookstore2\_81 used the `BookTemplateTitleTextBlockStyle`, `BookTemplateAuthorTextBlockStyle`, and `PageTitleTextBlockStyle` resource keys as an indirection so that a single key had different implementations in the two apps. We don't need that indirection any more; we can just reference system styles directly. So, replace those references throughout the app with `TitleTextBlockStyle`, `CaptionTextBlockStyle`, and `HeaderTextBlockStyle` respectively. You can use the Visual Studio **Replace In Files** feature to do this quickly and accurately. You can then delete those three unused resources.
+-   In `AuthorGroupHeaderTemplate`, replace `PhoneAccentBrush` with `SystemControlBackgroundAccentBrush`, and set `Foreground="White"` on the **TextBlock** so that it looks correct when running on the mobile device family.
+-   In `BookTemplateWide`, copy the Foreground attribute from the second **TextBlock** to the first.
+-   In `ZoomedOutAuthorTemplateWide`, change the reference to `SubheaderTextBlockStyle` (which is now a little too big) to a reference to `SubtitleTextBlockStyle`.
+-   The zoomed-out view (the jump list) no longer overlays the zoomed-in view in the new platform, so we can remove the `Background` attribute from the zoomed-out view of `narrowSeZo`.
+-   So that all the styles and templates are in one file, move `ZoomedInItemsPanelTemplate` out of SeZoUC.xaml and into BookstoreStyles.xaml.
 
-스타일 작업의 마지막 시퀀스를 진행하면 앱이 다음과 같은 모양을 유지합니다.
+That last sequence of styling operations leaves the app looking like this.
 
-![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
+![the ported windows 10 app running on a desktop device, zoomed-in view, two sizes of window](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기
+The ported Windows 10 app running on a Desktop device, zoomed-in view, two sizes of window
 
-![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
+![the ported windows 10 app running on a desktop device, zoomed-out view, two sizes of window](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
-데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기
+The ported Windows 10 app running on a Desktop device, zoomed-out view, two sizes of window
 
-![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
+![the ported windows 10 app running on a mobile device, zoomed-in view](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
 
-모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기
+The ported Windows 10 app running on a Mobile device, zoomed-in view
 
-![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
+![the ported windows 10 app running on a mobile device, zoomed-out view](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
 
-모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기
+The ported Windows 10 app running on a Mobile device, zoomed-out view
 
-## 결론
+## <a name="conclusion"></a>Conclusion
 
-이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 이전 사례 연구와 마찬가지로 이 특정 보기 모델에는 작업이 필요하지 않으며 주로 사용자 인터페이스를 리팩터링하는 데 노력을 기울였습니다. 일부 변경 내용은 계속해서 여러 폼 팩터(사실상 이전보다 훨씬 많음)를 지원하면서 두 프로젝트를 하나로 결합하는 데 따른 필연적인 결과였습니다. 몇 가지 변경은 플랫폼에 적용한 변경과 관계가 있었습니다.
+This case study involved a more ambitious user interface than the previous one. As with the previous case study, this particular view model required no work at all, and our efforts went primarily into refactoring the user interface. Some of the changes were a necessary result of combining two projects into one while still supporting many form factors (in fact, many more than we could before). A few of the changes were to do with changes that have been made to the platform.
 
-다음 사례 연구는 [QuizGame](w8x-to-uwp-case-study-quizgame.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
+The next case study is [QuizGame](w8x-to-uwp-case-study-quizgame.md), in which we look at accessing and displaying grouped data.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

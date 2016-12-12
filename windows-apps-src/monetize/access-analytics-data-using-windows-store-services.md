@@ -1,51 +1,51 @@
 ---
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: "Windows 스토어 분석 API를 사용하여 프로그래밍 방식으로 사용자 또는 사용자 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다."
-title: "Windows 스토어 서비스를 사용하여 분석 데이터에 액세스"
+description: Use the Windows Store analytics API to programmatically retrieve analytics data for apps that are registered to your or your organization&quot;&quot;s Windows Dev Center account.
+title: Access analytics data using Windows Store services
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 468be96b70d07567163b2caccebaa8e2f6ecd592
+ms.sourcegitcommit: dcf4c263ff3fd8df846d1d5620ba31a9da7a5e6c
+ms.openlocfilehash: 5ae5dcbe6684aa34a1428760cd5c7e9b8f599ebf
 
 ---
 
-# Windows 스토어 서비스를 사용하여 분석 데이터에 액세스
+# <a name="access-analytics-data-using-windows-store-services"></a>Access analytics data using Windows Store services
 
-*Windows 스토어 분석 API*를 사용하여 프로그래밍 방식으로 조직의 Windows 개발자 센터 계정에 등록된 앱에 대한 분석 데이터를 검색합니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 오류, 앱 평점 및 리뷰에 대한 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+Use the *Windows Store analytics API* to programmatically retrieve analytics data for apps that are registered to your or your organization's Windows Dev Center account. This API enables you to retrieve data for app and add-on (also known as in-app product or IAP) acquisitions, errors, app ratings and reviews. This API uses Azure Active Directory (Azure AD) to authenticate the calls from your app or service.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+The following steps describe the end-to-end process:
 
-1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
-2.  Windows 스토어 분석 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Windows 스토어 분석 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
-3.  [Windows 스토어 분석 API를 호출](#call-the-windows-store-analytics-api)합니다.
+1.  Make sure that you have completed all the [prerequisites](#prerequisites).
+2.  Before you call a method in the Windows Store analytics API, [obtain an Azure AD access token](#obtain-an-azure-ad-access-token). After you obtain a token, you have 60 minutes to use this token in calls to the Windows Store analytics API before the token expires. After the token expires, you can generate a new token.
+3.  [Call the Windows Store analytics API](#call-the-windows-store-analytics-api).
 
 <span id="prerequisites" />
-## 단계 1: Windows 스토어 분석 API를 사용하기 위한 필수 조건 완료
+## <a name="step-1-complete-prerequisites-for-using-the-windows-store-analytics-api"></a>Step 1: Complete prerequisites for using the Windows Store analytics API
 
-Windows 스토어 분석 API를 호출하는 코드를 작성하기 전에 다음과 같은 필수 조건을 완료했는지 확인합니다.
+Before you start writing code to call the Windows Store analytics API, make sure that you have completed the following prerequisites.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](http://go.microsoft.com/fwlink/?LinkId=746654) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 아니면 추가 요금 없이 [개발자 센터 내에서 Azure AD를 새로 만들 수 있습니다](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
+* You (or your organization) must have an Azure AD directory and you must have [Global administrator](http://go.microsoft.com/fwlink/?LinkId=746654) permission for the directory. If you already use Office 365 or other business services from Microsoft, you already have Azure AD directory. Otherwise, you can [create a new Azure AD in Dev Center](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users) for no additional charge.
 
-* Azure AD 응용 프로그램을 개발자 센터 계정과 연결하고 응용 프로그램에 대한 테넌트 ID 및 클라이언트 ID를 검색하고 키를 생성해야 합니다. Azure AD 응용 프로그램은 Windows 스토어 분석 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* You must associate an Azure AD application with your Dev Center account, retrieve the tenant ID and client ID for the application and generate a key. The Azure AD application represents the app or service from which you want to call the Windows Store analytics API. You need the tenant ID, client ID and key to obtain an Azure AD access token that you pass to the API.
 
-  >**참고**&nbsp;&nbsp;이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
+  >**Note**&nbsp;&nbsp;You only need to perform this task one time. After you have the tenant ID, client ID and key, you can reuse them any time you need to create a new Azure AD access token.
 
-Azure AD 응용 프로그램을 개발자 센터 계정에 연결하고 필요한 값을 검색하려면
+To associate an Azure AD application with your Dev Center account and retrieve the required values:
 
-1.  개발자 센터에서 **계정 설정**으로 이동하여 **사용자 관리**를 클릭하고 조직의 개발자 센터 계정을 조직의 Azure AD 디렉터리와 연결합니다. 자세한 내용은 [계정 사용자 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users)를 참조하세요.
+1.  In Dev Center, go to your **Account settings**, click **Manage users**, and associate your organization's Dev Center account with your organization's Azure AD directory. For detailed instructions, see [Manage account users](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users).
 
-2.  **사용자 관리** 페이지에서 **Azure AD 응용 프로그램 추가**를 클릭하여 개발자 센터 계정에 대한 분석 데이터에 액세스하는 데 사용할 앱 또는 서비스를 나타내는 Azure AD 응용 프로그램을 추가하고 **관리자** 역할에 할당합니다. 이 응용 프로그램이 Azure AD 디렉터리에 이미 존재하는 경우 **Azure AD 응용 프로그램 추가** 페이지에서 선택하여 개발자 센터 계정에 추가할 수 있습니다. 그러지 않으면 **Azure AD 응용 프로그램 추가 페이지**에서 새 Azure AD 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)를 참조하세요.
+2.  In the **Manage users** page, click **Add Azure AD applications**, add the Azure AD application that represents the app or service that you will use to access analytics data for your Dev Center account, and assign it the **Manager** role. If this application already exists in your Azure AD directory, you can select it on the **Add Azure AD applications** page to add it to your Dev Center account. Otherwise, you can create a new Azure AD application on the **Add Azure AD applications** page. For more information, see [Add and manage Azure AD applications](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
-3.  **사용자 관리** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
+3.  Return to the **Manage users** page, click the name of your Azure AD application to go to the application settings, and copy down the **Tenant ID** and **Client ID** values.
 
-4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [Azure AD 응용 프로그램 추가 및 관리](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications)에서 키 관리에 대한 내용을 참조하세요.
+4. Click **Add new key**. On the following screen, copy down the **Key** value. You won't be able to access this info again after you leave this page. For more information, see the information about managing keys in [Add and manage Azure AD applications](https://msdn.microsoft.com/windows/uwp/publish/manage-account-users#add-and-manage-azure-ad-applications).
 
 <span id="obtain-an-azure-ad-access-token" />
-## 단계 2: Azure AD 액세스 토큰 가져오기
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>Step 2: Obtain an Azure AD access token
 
-Windows 스토어 분석 API에서 메서드를 호출하기 전에 먼저 API에 있는 각 메서드의 **Authorization** 헤더에 전달하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 API에 대한 추가 호출에 계속 사용할 수 있도록 해당 토큰을 새로 고칠 수 있습니다.
+Before you call any of the methods in the Windows Store analytics API, you must first obtain an Azure AD access token that you pass to the **Authorization** header of each method in the API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can refresh the token so you can continue to use it in further calls to the API.
 
-액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/)의 지시에 따라 HTTP POST를 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` 끝점에 보냅니다. 다음은 샘플 요청입니다.
+To obtain the access token, follow the instructions in [Service to Service Calls Using Client Credentials](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) to send an HTTP POST to the ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` endpoint. Here is a sample request.
 
 ```
 POST https://login.microsoftonline.com/<your_tenant_id>/oauth2/token HTTP/1.1
@@ -58,27 +58,29 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-*tenant\_id*, *client\_id* 및 *client\_secret* 매개 변수의 경우 이전 섹션의 개발자 센터에서 검색한 응용 프로그램에 대한 테넌트 ID, 클라이언트 ID 및 키를 지정합니다. *resource* 매개 변수의 경우 ```https://manage.devcenter.microsoft.com``` URI를 지정해야 합니다.
+For the *tenant\_id*, *client\_id* and *client\_secret* parameters, specify the tenant ID, client ID and the key for your application that you retrieved from Dev Center in the previous section. For the *resource* parameter, you must specify the ```https://manage.devcenter.microsoft.com``` URI.
 
-만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다.
+After your access token expires, you can refresh it by following the instructions [here](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens).
 
 <span id="call-the-windows-store-analytics-api" />
-## 단계 3: Windows 스토어 분석 API 호출
+## <a name="step-3-call-the-windows-store-analytics-api"></a>Step 3: Call the Windows Store analytics API
 
-Azure AD 액세스 토큰이 있으면 Windows 스토어 분석 API를 호출할 준비가 된 것입니다. 각 메서드의 구문에 대한 내용은 다음 문서를 참조하세요. 액세스 토큰을 각 메서드의 **Authorization** 헤더로 전달해야 합니다.
+After you have an Azure AD access token, you are ready to call the Windows Store analytics API. For information about the syntax of each method, see the following articles. You must pass the access token to the **Authorization** header of each method.
 
--   [앱 획득 가져오기](get-app-acquisitions.md)
--   [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
--   [오류 보고 데이터 가져오기](get-error-reporting-data.md)
--   [앱 등급 가져오기](get-app-ratings.md)
--   [앱 리뷰 가져오기](get-app-reviews.md)
--   [광고 성과 데이터 가져오기](get-ad-performance-data.md)
--   [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
+* [Get app acquisitions](get-app-acquisitions.md)
+* [Get add-on acquisitions](get-in-app-acquisitions.md)
+* [Get error reporting data](get-error-reporting-data.md)
+* [Get details for an error in your app](get-details-for-an-error-in-your-app.md)
+* [Get the stack trace for an error in your app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Get app ratings](get-app-ratings.md)
+* [Get app reviews](get-app-reviews.md)
+* [Get ad performance data](get-ad-performance-data.md)
+* [Get ad campaign performance data](get-ad-campaign-performance-data.md)
 
-## 코드 예제
+## <a name="code-example"></a>Code example
 
 
-다음 코드 예제는 Azure AD 액세스 토큰을 얻고 C# 콘솔 앱에서 Windows 스토어 분석 API를 호출하는 방법을 보여 줍니다. 이 코드 예제를 사용하려면 시나리오에 맞는 적절한 값을 *tenantId*, *clientId*, *clientSecret* 및 *appID* 변수에 할당합니다. 이 예제에서 Windows 스토어 분석 API에서 반환된 JSON 데이터를 역직렬화하려면 Newtonsoft의 [Json.NET 패키지](http://www.newtonsoft.com/json)가 필요합니다.
+The following code example demonstrates how to obtain an Azure AD access token and call the Windows Store analytics API from a C# console app. To use this code example, assign the *tenantId*, *clientId*, *clientSecret*, and *appID* variables to the appropriate values for your scenario. This example requires the [Json.NET package](http://www.newtonsoft.com/json) from Newtonsoft to deserialize the JSON data returned by the Windows Store analytics API.
 
 ```CSharp
 using Newtonsoft.Json;
@@ -204,10 +206,10 @@ namespace TestAnalyticsAPI
 }
 ```
 
-## 오류 응답
+## <a name="error-responses"></a>Error responses
 
 
-Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오류 응답을 JSON 개체에 반환합니다. 다음 예제에서는 잘못된 매개 변수로 인해 발생한 오류 응답을 보여 줍니다.
+The Windows Store analytics API returns error responses in a JSON object that contains error codes and messages. The following example demonstrates an error response caused by an invalid parameter.
 
 ```json
 {
@@ -228,19 +230,21 @@ Windows 스토어 분석 API는 오류 코드와 메시지를 포함하는 오�
 }
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-* [앱 획득 가져오기](get-app-acquisitions.md)
-* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
-* [오류 보고 데이터 가져오기](get-error-reporting-data.md)
-* [앱 등급 가져오기](get-app-ratings.md)
-* [앱 리뷰 가져오기](get-app-reviews.md)
-* [광고 성과 데이터 가져오기](get-ad-performance-data.md)
-* [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
+* [Get app acquisitions](get-app-acquisitions.md)
+* [Get add-on acquisitions](get-in-app-acquisitions.md)
+* [Get error reporting data](get-error-reporting-data.md)
+* [Get details for an error in your app](get-details-for-an-error-in-your-app.md)
+* [Get the stack trace for an error in your app](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Get app ratings](get-app-ratings.md)
+* [Get app reviews](get-app-reviews.md)
+* [Get ad performance data](get-ad-performance-data.md)
+* [Get ad campaign performance data](get-ad-campaign-performance-data.md)
  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

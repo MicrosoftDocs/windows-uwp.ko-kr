@@ -1,41 +1,41 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "잉크 스트로크를 필기 인식을 사용하여 텍스트로 변환하거나 사용자 지정 인식을 사용하여 모양으로 변환합니다."
-title: "Windows Ink 스트로크를 텍스트로 인식"
+Description: Convert ink strokes to text using handwriting recognition, or to shapes using custom recognition.
+title: Recognize Windows Ink strokes as text
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
+keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
 translationtype: Human Translation
-ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
-ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
 
 ---
 
-# Windows Ink 스트로크를 텍스트로 인식
+# <a name="recognize-windows-ink-strokes-as-text"></a>Recognize Windows Ink strokes as text
 
-Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트로 변환합니다.
+Convert ink strokes to text using the handwriting recognition support in Windows Ink.
 
-**중요 API**
+**Important APIs**
 
 -   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 
 
-필기 인식은 Windows 잉크 플랫폼에 기본 제공되며 다양한 로캘 및 언어를 지원합니다.
+Handwriting recognition is built in to the Windows ink platform, and supports an extensive set of locales and languages.
 
-여기의 모든 예제에서 잉크 기능에 필요한 네임스페이스 참조를 추가하세요. 여기에는 "Windows.UI.Input.Inking"이 포함됩니다.
+For all examples here, add the namespace references required for ink functionality. This includes "Windows.UI.Input.Inking".
 
-## 기본 필기 인식
+## <a name="basic-handwriting-recognition"></a>Basic handwriting recognition
 
 
-여기에서는 설치된 기본 언어 팩과 연결된 필기 인식 엔진을 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에서 일련의 스트로크를 해석하는 방법을 보여 줍니다.
+Here, we demonstrate how to use the handwriting recognition engine, associated with the default installed language pack, to interpret a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-사용자가 쓰기를 마치고 단추를 클릭하면 인식이 시작됩니다.
+The recognition is initiated by the user clicking a button when they are finished writing.
 
-1.  먼저 UI를 설정합니다.
+1.  First, we set up the UI.
 
-    UI에는 "인식" 단추, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 및 인식 결과를 표시할 영역이 포함됩니다.    
+    The UI includes a "Recognize" button, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.    
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -67,9 +67,9 @@ Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트
     </Grid>
 ```
 
-2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
+2.  We then set some basic ink input behaviors.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다. "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
+    The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050). A listener for the click event on the "Recognize" button is also declared.
 ```    CSharp
 public MainPage()
     {
@@ -92,9 +92,9 @@ public MainPage()
     }
 ```
 
-3.  마지막으로 기본 필기 인식을 수행합니다. 이 예제에서는 "인식" 단추의 Click 이벤트 처리기를 사용하여 필기 인식을 수행합니다.
+3.  Finally, we perform the basic handwriting recognition. For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
+    An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object. The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
@@ -203,35 +203,35 @@ string str = "Recognition result\n";
     }
 ```
 
-## 국가별 인식
+## <a name="international-recognition"></a>International recognition
 
 
-Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식에 사용할 수 있습니다.
+A comprehensive subset of languages supported by Windows can be used for handwriting recognition.
 
-[**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478)에서 지원하는 언어 목록은 [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) 속성을 참조하세요.
+For a list of languages supported by the [**InkRecognizer**](https://msdn.microsoft.com/library/windows/apps/br208478) see the [**InkRecognizer.Name**](https://msdn.microsoft.com/library/windows/apps/windows.ui.input.inking.inkrecognizer.name.aspx) property.
 
-앱에서 설치된 필기 인식 엔진 집합을 쿼리하고 이 중 하나를 선택하거나 사용자가 기본 언어를 선택할 수 있습니다.
+Your app can query the set of installed handwriting recognition engines and use one of those or let a user select their preferred language.
 
-**참고**  
-사용자는 **설정 -&gt; 시간 및 언어**로 이동하여 설치된 언어 목록을 볼 수 있습니다. 설치된 언어는 **언어** 아래에 나열됩니다.
+**Note**  
+Users can see a list of installed languages by going to **Settings -&gt; Time & Language**. Installed languages are listed under **Languages**.
 
-새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
+To install new language packs and enable handwriting recognition for that language:
 
-1.  **설정 &gt; 시간 및 언어 &gt; 국가 및 언어**로 이동합니다.
-2.  **언어 추가**를 선택합니다.
-3.  목록에서 언어를 선택한 다음 국가 버전을 선택합니다. 이제 선택한 언어가 **국가 및 언어** 페이지에 나열됩니다.
-4.  언어를 클릭하고 **옵션**을 선택합니다.
-5.  **언어 옵션** 페이지에서 **필기 인식 엔진**을 다운로드합니다. 여기서 전체 언어 팩, 음성 인식 엔진 및 키보드 레이아웃을 다운로드할 수도 있습니다.
+1.  Go to **Settings &gt; Time & language &gt; Region & language**.
+2.  Select **Add a language**.
+3.  Select a language from the list, then choose the region version. The language is now listed on the **Region & language** page.
+4.  Click the language and select **Options**.
+5.  On the **Language options** page, download the **Handwriting recognition engine** (they can also download the full language pack, speech recognition engine, and keyboard layout here).
 
  
 
-여기서는 필기 인식 엔진을 사용하여 선택한 인식기를 기반으로 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)의 스트로크 집합을 해석하는 방법을 보여 줍니다.
+Here, we demonstrate how to use the handwriting recognition engine to interpret a set of strokes on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) based on the selected recognizer.
 
-사용자가 쓰기를 마치고 단추를 클릭하면 인식이 시작됩니다.
+The recognition is initiated by the user clicking a button when they are finished writing.
 
-1.  먼저 UI를 설정합니다.
+1.  First, we set up the UI.
 
-    UI에는 "인식" 단추, 설치된 필기 인식기를 모두 나열하는 콤보 상자, [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 및 인식 결과를 표시할 영역이 포함됩니다.
+    The UI includes a "Recognize" button, a combo box that lists all installed handwriting recognizers, the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), and an area to display recognition results.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -274,13 +274,13 @@ Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식
     </Grid>
 ```
 
-2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
+2.  We then set some basic ink input behaviors.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다.
+    The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).
 
-    `InitializeRecognizerList` 함수를 호출하여 인식기 콤보 상자에 설치된 필기 인식기 목록을 채웁니다.
+    We call an `InitializeRecognizerList` function to populate the recognizer combo box with a list of installed handwriting recognizers.
 
-    또한 "인식" 단추의 Click 이벤트 및 인식기 콤보 상자의 선택 항목 변경 이벤트에 대한 수신기도 선언합니다.
+    We also declare listeners for the click event on the "Recognize" button and the selection changed event on the recognizer combo box.
 ```    CSharp
  public MainPage()
      {
@@ -310,9 +310,9 @@ Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식
      }
 ```
 
-3.  인식기 콤보 상자에 설치된 필기 인식기의 목록을 채웁니다.
+3.  We populate the recognizer combo box with a list of installed handwriting recognizers.
 
-    필기 인식 프로세스를 관리하기 위해 [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479)를 만듭니다. 이 개체를 사용하여 [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480)를 호출하고 설치된 인식기 목록을 검색하여 인식기 콤보 상자를 채웁니다.
+    An [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) is created to manage the handwriting recognition process. Use this object to call [**GetRecognizers**](https://msdn.microsoft.com/library/windows/apps/br208480) and retrieve the list of installed recognizers to populate the recognizer combo box.
 ```    CSharp
 // Populate the recognizer combo box with installed recognizers.
     private void InitializeRecognizerList()
@@ -331,9 +331,9 @@ Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식
     }
 ```
 
-4.  인식기 콤보 상자 선택이 변경되는 경우 필기 인식기를 업데이트합니다.
+4.  Update the handwriting recognizer if the recognizer combo box selection changes.
 
-    인식기 콤보 상자에서 선택한 인식기를 기반으로 [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479)를 사용하여 [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328)를 호출합니다.
+    Use the [**InkRecognizerContainer**](https://msdn.microsoft.com/library/windows/apps/br208479) to call [**SetDefaultRecognizer**](https://msdn.microsoft.com/library/windows/apps/hh920328) based on the selected recognizer from the recognizer combo box.
 ```    CSharp
 // Handle recognizer change.
     private void comboInstalledRecognizers_SelectionChanged(
@@ -344,9 +344,9 @@ Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식
     }
 ```
 
-5.  마지막으로 선택한 필기 인식기를 기반으로 필기 인식을 수행합니다. 이 예제에서는 "인식" 단추의 Click 이벤트 처리기를 사용하여 필기 인식을 수행합니다.
+5.  Finally, we perform the handwriting recognition based on the selected handwriting recognizer. For this example, we use the click event handler of the "Recognize" button to perform the handwriting recognition.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
+    An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object. The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes =
@@ -448,16 +448,16 @@ string str = "Recognition result\n";
     }
 ```
 
-## 동적 필기 인식
+## <a name="dynamic-handwriting-recognition"></a>Dynamic handwriting recognition
 
 
-앞의 두 예제에서는 사용자가 버튼을 눌러 인식을 시작해야 합니다. 또한 스트로크 입력과 함께 기본 타이밍 함수를 사용하여 동적 인식을 수행할 수도 있습니다.
+The previous two examples require the user to press a button to start recognition. Your app can also perform dynamic recognition using stroke input paired with a basic timing function.
 
-이 예제에서는 이전 국가별 인식 예제와 같은 UI 및 스트로크 설정을 사용합니다.
+For this example, we'll use the same UI and stroke settings as the previous international recognition example.
 
-1.  이전 예제와 마찬가지로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되고([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다.
+1.  Like the previous examples, the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), and ink strokes are rendered on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) using the specified [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050).
 
-    인식을 시작하는 단추 대신 두 가지 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 이벤트 스트로크([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) 및 [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702))에 대한 수신기를 추가하고 기본 타이머([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250))를 1초 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) 간격으로 설정합니다.    
+    Instead of a button to initiate recognition, we add listeners for two [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stroke events ([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) and [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)), and set up a basic timer ([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)) with a one second [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) interval.    
 ```    CSharp
 public MainPage()
     {
@@ -523,16 +523,16 @@ public MainPage()
     }    
 ```
 
-2.  첫 단계에서 추가한 세 가지 이벤트에 대한 처리기는 다음과 같습니다.
+2.  Here are the handlers for the three events we added in the first step.
 
     [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
-    사용자가 펜 또는 손가락을 떼거나 마우스 단추를 놓아 수동 입력을 중지하면 인식 타이머를 시작합니다. 1초 동안 수동 입력이 없으면 인식이 시작됩니다.
+    Start the recognition timer when the user stops inking by lifting their pen or finger, or releasing the mouse button. After one second of no ink input, recognition is initiated.
 
     [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
-    다음 타이머 틱 이벤트 전에 새 스트로크가 시작되면 새 스트로크는 단일 필기 항목의 연속이 될 가능성이 있으므로 타이머를 중지합니다.
+    If a new stroke starts before the next timer tick event, stop the timer as the new stroke is likely the continuation of a single handwriting entry.
 
     [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
-    1초 동안 수동 입력이 없으면 인식 함수를 호출합니다.
+    Call the recognition function after one second of no ink input.
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
     private void recoTimer_Tick(object sender, object e)
@@ -559,9 +559,9 @@ public MainPage()
     }
 ```
 
-3.  마지막으로 선택한 필기 인식기를 기반으로 필기 인식을 수행합니다. 이 예제에서는 [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)의 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) 이벤트 처리기를 사용하여 필기 인식을 시작합니다.
+3.  Finally, we perform the handwriting recognition based on the selected handwriting recognizer. For this example, we use the [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) event handler of a [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250) to initiate the handwriting recognition.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
+    An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) stores all ink strokes in an [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) object. The strokes are exposed through the [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) property of the **InkPresenter** and retrieved using the [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) method.
 ```    CSharp
 // Get all strokes on the InkCanvas.
     IReadOnlyList<InkStroke> currentStrokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
@@ -660,20 +660,22 @@ string str = "Recognition result\n";
     }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>Related articles
 
-* [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
+* [Pen and stylus interactions](pen-and-stylus-interactions.md)
 
-**샘플**
-* [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+**Samples**
+* [Ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Simple ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Coloring book sample](https://aka.ms/cpubsample-coloringbook)
+* [Family notes sample](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

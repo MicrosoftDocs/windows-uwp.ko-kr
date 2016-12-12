@@ -1,184 +1,184 @@
 ---
 author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: "디바이스 포털 핵심 API 참조"
-description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
+title: Device Portal core API reference
+description: Learn about the Windows Device Portal core REST APIs that you can use to access the data and control your device programmatically.
 translationtype: Human Translation
-ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
-ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
+ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
+ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
 
 ---
 
-# 디바이스 포털 핵심 API 참조
+# <a name="device-portal-core-api-reference"></a>Device Portal core API reference
 
-Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 REST API를 기반으로 합니다.
+Everything in the Windows Device Portal is built on top of REST APIs that you can use to access the data and control your device programmatically.
 
-## 앱 배포
+## <a name="app-deployment"></a>App deployment
 
 ---
-### 앱 설치
+### <a name="install-an-app"></a>Install an app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 앱을 설치할 수 있습니다.
+You can install an app by using the following request format.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
-게시 | /api/app/packagemanager/package
+POST | /api/app/packagemanager/package
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-package   | (**필수**) 설치할 패키지의 파일 이름입니다.
+package   | (**required**) The file name of the package to be installed.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 앱에는 종속성뿐만 아니라 .appx 또는 .appxbundle 파일이 필요합니다. 
-- 인증서는 디바이스가 IoT 또는 Windows 데스크톱인 경우 앱에 서명하는 데 사용됩니다. 다른 플랫폼은 인증서를 요구하지 않습니다. 
+- The .appx or .appxbundle file, as well as any dependencies the app requires. 
+- The certificate used to sign the app, if the device is IoT or Windows Desktop. Other platforms do not require the certificate. 
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 수락되어 처리 중인 요청 배포
-4XX | 오류 코드
-5XX | 오류 코드
+200 | Deploy request accepted and being processed
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 앱 설치 상태 가져오기
+### <a name="get-app-installation-status"></a>Get app installation status
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 진행 중인 앱 설치의 상태를 가져올 수 있습니다.
+You can get the status of an app installation that is currently in progress by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/app/packagemanager/state
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 마지막 배포의 결과
-204 | 설치가 진행 중임
-404 | 설치 작업을 찾을 수 없음
+200 | The result of the last deployment
+204 | The installation is running
+404 | No installation action was found
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 앱 제거
+### <a name="uninstall-an-app"></a>Uninstall an app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 앱을 제거할 수 있습니다.
+You can uninstall an app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/app/packagemanager/package
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-package   | (**필수**) 대상 앱의 PackageFullName(GET /api/app/packagemanager/packages 사용)
+package   | (**required**) The PackageFullName (from GET /api/app/packagemanager/packages) of the target app
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 설치된 앱 가져오기
+### <a name="get-installed-apps"></a>Get installed apps
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 시스템에 설치된 앱 목록을 가져올 수 있습니다.
+You can get a list of apps installed on the system by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/app/packagemanager/packages
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 관련 세부 정보가 있는 설치된 패키지 목록이 포함됩니다. 이 응답에 대한 템플릿은 다음과 같습니다.
+The response includes a list of installed packages with associated details. The template for this response is as follows.
 ```
 {"InstalledPackages": [
     {
@@ -203,53 +203,53 @@ GET | /api/app/packagemanager/packages
     },...
 ]}
 ```
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## 디바이스 관리자
+## <a name="device-manager"></a>Device manager
 ---
-### 컴퓨터에 설치된 디바이스 가져오기
+### <a name="get-the-installed-devices-on-the-machine"></a>Get the installed devices on the machine
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 컴퓨터에 설치된 디바이스 목록을 가져올 수 있습니다.
+You can get a list of devices that are installed on the machine by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/devicemanager/devices
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 디바이스에 연결된 디바이스 JSON 배열이 포함됩니다.
+The response includes a JSON array of devices attached to the device.
 ``` 
 {"DeviceList": [
     {
@@ -264,648 +264,662 @@ GET | /api/devicemanager/devices
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-## 덤프 컬렉션
+## <a name="dump-collection"></a>Dump collection
 ---
-### 앱에 대한 모든 크래시 덤프 목록 가져오기
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>Get the list of all crash dumps for apps
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 모든 앱에 대한 사용 가능한 모든 크래시 덤프 목록을 가져올 수 있습니다.
+You can get the list of all the available crash dumps for all sideloaded apps by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/usermode/dumps
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 테스트용으로 로드된 각 응용 프로그램의 크래시 덤프 목록이 포함됩니다.
+The response includes a list of crash dumps for each sideloaded application.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 앱의 크래시 덤프 컬렉션 설정 가져오기
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>Get the crash dump collection settings for an app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프 컬렉션 설정을 가져올 수 있습니다.
+You can get the crash dump collection settings for a sideloaded app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashcontrol
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
+packageFullname   | (**required**) The full name of the package for the sideloaded app.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답 형식은 다음과 같습니다.
+The response has the following format.
 ```
 {"CrashDumpEnabled": bool}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 삭제
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>Delete a crash dump for a sideloaded app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 삭제할 수 있습니다.
+You can delete a sideloaded app's crash dump by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashdump
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
-fileName   | (**필수**) 삭제해야 하는 덤프 파일의 이름입니다.
+packageFullname   | (**required**) The full name of the package for the sideloaded app.
+fileName   | (**required**) The name of the dump file that should be deleted.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 사용 안 함
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>Disable crash dumps for a sideloaded app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 사용하지 않도록 설정할 수 있습니다.
+You can disable crash dumps for a sideloaded app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashcontrol
 
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
+packageFullname   | (**required**) The full name of the package for the sideloaded app.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 다운로드
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>Download the crash dump for a sideloaded app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 다운로드할 수 있습니다.
+You can download a sideloaded app's crash dump by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashdump
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
-fileName   | (**필수**) 다운로드하려는 덤프 파일의 이름입니다.
+packageFullname   | (**required**) The full name of the package for the sideloaded app.
+fileName   | (**required**) The name of the dump file that you want to download.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 덤프 파일이 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 덤프 파일을 검사할 수 있습니다.
+The response includes a dump file. You can use WinDbg or Visual Studio to examine the dump file.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 사용
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>Enable crash dumps for a sideloaded app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 사용하도록 설정할 수 있습니다.
+You can enable crash dumps for a sideloaded app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/debug/dump/usermode/crashcontrol
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-packageFullname   | (**필수**) 테스트용으로 로드된 앱 패키지의 전체 이름입니다.
+packageFullname   | (**required**) The full name of the package for the sideloaded app.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Window Mobile (in Windows Insider Program)
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 오류 검사 파일 목록 가져오기
+### <a name="get-the-list-of-bugcheck-files"></a>Get the list of bugcheck files
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 오류 검사 미니덤프 파일 목록을 가져올 수 있습니다.
+You can get the list of bugcheck minidump files by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dumplist
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 덤프 파일의 이름 및 크기 목록이 포함됩니다. 이 목록 형식은 다음과 같습니다. 두 번째 *FileName* 매개 변수는 파일의 크기입니다. 이것은 알려진 버그입니다.
+The response includes a list of dump file names and the sizes of these files. This list will be in the following format. 
 ```
 {"DumpFiles": [
     {
         "FileName": string,
-        "FileName": string
+        "FileSize": int
     },...
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 오류 검사 덤프 파일 다운로드
+### <a name="download-a-bugcheck-dump-file"></a>Download a bugcheck dump file
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 오류 검사 덤프 파일을 다운로드할 수 있습니다.
+You can download a bugcheck dump file by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dump
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-filename   | (**필수**) 덤프 파일의 파일 이름입니다. 덤프 목록을 가져오기 위해 API를 사용하여 이 파일을 찾을 수 있습니다.
+filename   | (**required**) The file name of the dump file. You can find this by using the API to get the dump list.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 덤프 파일이 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
+The response includes the dump file. You can inspect this file using WinDbg.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 오류 검사 크래시 제어 설정 가져오기
+### <a name="get-the-bugcheck-crash-control-settings"></a>Get the bugcheck crash control settings
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 오류 검사 크래시 제어 설정을 가져올 수 있습니다.
+You can get the bugcheck crash control settings by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/kernel/crashcontrol
 
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 크래시 제어 설정이 포함됩니다. CrashControl에 대한 자세한 내용은 [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) 문서를 참조하세요. 응답에 대한 템플릿은 다음과 같습니다.
+The response includes the crash control settings. For more information about CrashControl, see the [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) article. The template for the response is as follows.
 ```
 {
-    "autoreboot": int,
-    "dumptype": int,
+    "autoreboot": bool (0 or 1),
+    "dumptype": int (0 to 4),
     "maxdumpcount": int,
-    "overwrite": int
+    "overwrite": bool (0 or 1)
 }
 ```
 
-**상태 코드**
+**Dump types**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+0: Disabled
 
-HTTP 상태 코드      | 설명
+1: Complete memory dump (collects all in-use memory)
+
+2: Kernel memory dump (ignores user mode memory)
+
+3: Limited kernel minidump
+
+**Status code**
+
+This API has the following expected status codes.
+
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 라이브 커널 덤프 가져오기
+### <a name="get-a-live-kernel-dump"></a>Get a live kernel dump
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 라이브 커널 덤프를 가져올 수 있습니다.
+You can get a live kernel dump by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/livekernel
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 전체 커널 모드 덤프가 포함됩니다. WinDbg를 사용하여 이 파일을 검사할 수 있습니다.
+The response includes the full kernel mode dump. You can inspect this file using WinDbg.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 라이브 사용자 프로세스에서 덤프 가져오기
+### <a name="get-a-dump-from-a-live-user-process"></a>Get a dump from a live user process
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 라이브 사용자 프로세스 덤프를 가져올 수 있습니다.
+You can get the dump for live user process by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/debug/dump/usermode/live
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-pid   | (**필수**) 관심 있는 프로세스에 대한 고유 프로세스 id입니다.
+pid   | (**required**) The unique process id for the process you are interested in.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 프로세스 덤프가 포함됩니다. WinDbg 또는 Visual Studio를 사용하여 이 파일을 검사할 수 있습니다.
+The response includes the process dump. You can inspect this file using WinDbg or Visual Studio.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 오류 검사 크래시 제어 설정 지정
+### <a name="set-the-bugcheck-crash-control-settings"></a>Set the bugcheck crash control settings
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 오류 검사 데이터를 수집하기 위한 설정을 지정할 수 있습니다.
+You can set the settings for collecting bugcheck data by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/debug/dump/kernel/crashcontrol
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다.
-dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx)를 참조하세요.
-maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다.
-overwrite   | (**선택**) True 또는 false입니다. 
-            *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
+autoreboot   | (**optional**) True or false. This indicates whether the system restarts automatically after it fails or locks.
+dumptype   | (**optional**) The dump type. For the supported values, see the [CrashDumpType Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).
+maxdumpcount   | (**optional**) The maximum number of dumps to save.
+overwrite   | (**optional**) True of false. This indicates whether or not to overwrite old dumps when the dump counter limit specified by *maxdumpcount* has been reached.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-## ETW
+## <a name="etw"></a>ETW
 ---
-### Websocket을 통해 실시간 ETW 세션 만들기
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Create a realtime ETW session over a websocket
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 실시간 ETW 세션을 만들 수 있습니다. 이 세션은 Websocket을 통해 관리됩니다.  ETW 이벤트는 서버에서 일괄 처리되며 1초에 한 번씩 클라이언트로 전송됩니다. 
+You can create a realtime ETW session by using the following request format. This will be managed over a websocket.  ETW events are batched on the server and sent to the client once per second. 
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET/WebSocket | /api/etw/session/realtime
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 활성화된 공급자의 ETW 이벤트가 포함됩니다.  아래의 ETW WebSocket 명령을 참조하세요. 
+The response includes the ETW events from the enabled providers.  See ETW WebSocket commands below. 
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
-### ETW WebSocket 명령
-이러한 명령은 클라이언트에서 서버로 전송됩니다.
+### <a name="etw-websocket-commands"></a>ETW WebSocket commands
+These commands are sent from the client to the server.
 
-명령 | 설명
+Command | Description
 :----- | :-----
-provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}*(괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}*은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다.
-provider *{guid}* disable | 
-            *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
+provider *{guid}* enable *{level}* | Enable the provider marked by *{guid}* (without brackets) at the specified level. *{level}* is an **int** from 1 (least detail) to 5 (verbose).
+provider *{guid}* disable | Disable the provider marked by *{guid}* (without brackets).
 
-이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
+This responses is sent from the server to the client. This is sent as text and you get the following format by parsing the JSON.
 ```
 {
     "Events":[
@@ -923,9 +937,9 @@ provider *{guid}* disable |
 }
 ```
 
-페이로드 개체는 원래 ETW 이벤트에서 제공되는 추가 키-값 쌍(문자열:문자열)입니다.
+Payload objects are extra key-value pairs (string:string) that are provided in the original ETW event.
 
-예:
+Example:
 ```
 {
     "ID" : 42, 
@@ -947,32 +961,32 @@ provider *{guid}* disable |
 ```
 
 ---
-### 등록된 ETW 공급자 열거
+### <a name="enumerate-the-registered-etw-providers"></a>Enumerate the registered ETW providers
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 등록된 공급자를 열거할 수 있습니다.
+You can enumerate through the registered providers by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/etw/providers
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 ETW 공급자 목록이 포함됩니다. 목록에 포함된 각 공급자 이름과 GUID 형식은 다음과 같습니다.
+The response includes the list of ETW providers. The list will include the friendly name and GUID for each provider in the following format.
 ```
 {"Providers": [
     {
@@ -982,48 +996,48 @@ GET | /api/etw/providers
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>Enumerate the custom ETW providers exposed by the platform.
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 등록된 공급자를 열거할 수 있습니다.
+You can enumerate through the registered providers by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/etw/customproviders
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-200 정상입니다. 응답에는 ETW 공급자 목록이 포함됩니다. 목록에는 각 공급자의 식별 이름 및 GUID가 포함됩니다.
+200 OK. The response includes the list of ETW providers. The list will include the friendly name and GUID for each provider.
 
 ```
 {"Providers": [
@@ -1034,96 +1048,96 @@ GET | /api/etw/customproviders
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-- 표준 상태 코드입니다.
+- Standard status codes.
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## OS 정보
+## <a name="os-information"></a>OS information
 ---
-### 컴퓨터 이름 가져오기
+### <a name="get-the-machine-name"></a>Get the machine name
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 컴퓨터의 이름을 가져올 수 있습니다.
+You can get the name of a machine by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/os/machinename
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 다음 형식의 컴퓨터 이름이 포함됩니다. 
+The response includes the computer name in the following format. 
 
 ```
 {"ComputerName": string}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 운영 체제 정보 가져오기
+### <a name="get-the-operating-system-information"></a>Get the operating system information
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 컴퓨터의 OS 정보를 가져올 수 있습니다.
+You can get the OS information for a machine by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/os/info
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 다음 형식의 OS 정보가 포함됩니다.
+The response includes the OS information in the following format.
 
 ```
 {
@@ -1135,51 +1149,51 @@ GET | /api/os/info
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 디바이스 패밀리 가져오기 
+### <a name="get-the-device-family"></a>Get the device family 
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)를 가져올 수 있습니다.
+You can get the device family (Xbox, phone, desktop, etc) using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/os/devicefamily
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 디바이스 패밀리(SKU - 데스크톱, Xbox 등)가 포함됩니다.
+The response includes the device family (SKU - Desktop, Xbox, etc).
 
 ```
 {
@@ -1187,102 +1201,102 @@ GET | /api/os/devicefamily
 }
 ```
 
-DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다. 
+DeviceType will look like "Windows.Xbox", "Windows.Desktop", etc. 
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 컴퓨터 이름 설정
+### <a name="set-the-machine-name"></a>Set the machine name
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 컴퓨터의 이름을 설정할 수 있습니다.
+You can set the name of a machine by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/os/machinename
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-name | (**필수**) 컴퓨터의 새 이름입니다.
+name | (**required**) The new name for the machine.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## 성능 데이터
+## <a name="performance-data"></a>Performance data
 ---
-### 실행 중인 프로세스 목록 가져오기
+### <a name="get-the-list-of-running-processes"></a>Get the list of running processes
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 실행 중인 프로세스 목록을 가져올 수 있습니다.  또한 1초에 한 번씩 클라이언트로 푸시 중인 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수 있습니다. 
+You can get the list of currently running processes by using the following request format.  this can be upgraded to a WebSocket connection as well, with the same JSON data being pushed to the client once per second. 
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/resourcemanager/processes
 GET/WebSocket | /api/resourcemanager/processes
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 각 프로세스에 대한 세부 정보가 있는 프로세스 목록이 포함됩니다. 정보는 JSON 형식이며 템플릿은 다음과 같습니다.
+The response includes a list of processes with details for each process. The information is in JSON format and has the following template.
 ```
 {"Processes": [
     {
@@ -1299,52 +1313,52 @@ GET/WebSocket | /api/resourcemanager/processes
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 시스템 성능 통계 가져오기
+### <a name="get-the-system-performance-statistics"></a>Get the system performance statistics
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 시스템 성능 통계를 가져올 수 있습니다. 읽기/쓰기 주기 및 사용된 메모리 사용량과 같은 정보가 포함됩니다.
+You can get the system performance statistics by using the following request format. This includes information such as read and write cycles and how much memory has been used.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/resourcemanager/systemperf
 GET/WebSocket | /api/resourcemanager/systemperf
 <br />
-이 WebSocket 연결로 업그레이드할 수도 있습니다.  1초에 한 번씩 아래 동일한 JSON 데이터를 제공합니다. 
+This can also be upgraded to a WebSocket connection.  It provides the same JSON data below once every second. 
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 CPU 및 GPU 사용, 메모리 액세스 및 네트워크 액세스와 같은 시스템에 대한 성능 통계가 포함됩니다. 이 정보는 JSON 형식이며 템플릿은 다음과 같습니다.
+The response includes the performance statistics for the system such as CPU and GPU usage, memory access, and network access. This information is in JSON format and has the following template.
 ```
 {
     "AvailablePages": int,
@@ -1377,53 +1391,53 @@ GET/WebSocket | /api/resourcemanager/systemperf
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## 전원
+## <a name="power"></a>Power
 ---
-### 현재 배터리 상태 가져오기
+### <a name="get-the-current-battery-state"></a>Get the current battery state
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 배터리의 현재 상태를 가져올 수 있습니다.
+You can get the current state of the battery by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/battery
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-다음 형식을 사용하여 현재 배터리 상태 정보를 반환합니다.
+The current battery state information is returned using the following format.
 ```
 {
     "AcOnline": int (0 | 1),
@@ -1437,318 +1451,318 @@ GET | /api/power/battery
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Mobile
+* Windows Desktop
 * HoloLens
 * IoT
-* 모바일
 
 ---
-### 현재 전원 구성표 가져오기
+### <a name="get-the-active-power-scheme"></a>Get the active power scheme
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 전원 구성표를 가져올 수 있습니다.
+You can get the active power scheme by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/activecfg
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-활성 전원 구성표 형식은 다음과 같습니다.
+The active power scheme has the following format.
 ```
 {"ActivePowerScheme": string (guid of scheme)}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 전원 구성표에 대한 하위 값 가져오기
+### <a name="get-the-sub-value-for-a-power-scheme"></a>Get the sub-value for a power scheme
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 전원 구성표에 대한 하위 값을 가져올 수 있습니다.
+You can get the sub-value for a power scheme by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
-GET | /api/power/cfg/
+GET | /api/power/cfg/*<power scheme path>*
 <br />
-옵션:
+Options:
 - SCHEME_CURRENT
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-사용할 수 있는 전원 상태의 전체 목록은 응용 프로그램을 기반으로 작성되며 낮거나 위험한 배터리 수준과 같은 다양한 전원 상태의 플래그를 지정하기 위한 설정입니다. 
+A full listing of power states available is on a per-application basis and the settings for flagging various power states like low and critical batterty. 
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 시스템의 전원 상태 가져오기
+### <a name="get-the-power-state-of-the-system"></a>Get the power state of the system
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 시스템의 전원 상태를 확인할 수 있습니다. 시스템이 절전 상태인지 확인할 수 있습니다.
+You can check the power state of the system by using the following request format. This will let you check to see if it is in a low power state.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/state
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-전원 상태 정보 템플릿은 다음과 같습니다.
+The power state information has the following template.
 ```
 {"LowPowerStateAvailable": bool}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 현재 전원 구성표 설정
+### <a name="set-the-active-power-scheme"></a>Set the active power scheme
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 전원 구성표를 설정할 수 있습니다.
+You can set the active power scheme by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/power/activecfg
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-scheme | (**필수**) 시스템의 현재 전원 구성표로 설정하려는 구성표의 GUID입니다.
+scheme | (**required**) The GUID of the scheme you want to set as the active power scheme for the system.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 전원 구성표의 하위 값 설정
+### <a name="set-the-sub-value-for-a-power-scheme"></a>Set the sub-value for a power scheme
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 전원 구성표에 대한 하위 값을 설정할 수 있습니다.
+You can set the sub-value for a power scheme by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
-POST | /api/power/cfg/
+POST | /api/power/cfg/*<power scheme path>*
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-valueAC | (**필수**) A/C 전원에 사용할 값입니다.
-valueDC | (**필수**) 배터리 전원에 사용할 값입니다.
+valueAC | (**required**) The value to use for A/C power.
+valueDC | (**required**) The value to use for battery power.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 절전 연구 보고서 가져오기
+### <a name="get-a-sleep-study-report"></a>Get a sleep study report
 
-**요청**
+**Request**
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/sleepstudy/report
 <br />
-다음 요청 형식을 사용하여 절전 연구 보고서를 가져올 수 있습니다.
+You can get a sleep study report by using the following request format.
 
-**URI 매개 변수**
-URI 매개 변수 | 설명
+**URI parameters**
+URI parameter | Description
 :---          | :---
-FileName | (**필수**) 다운로드하려는 파일의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
+FileName | (**required**) The full name for the file you want to download. This value should be hex64 encoded.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답은 절전 연구를 포함하는 파일입니다. 
+The response is a file containing the sleep study. 
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 사용 가능한 절전 연구 보고서 열거
+### <a name="enumerate-the-available-sleep-study-reports"></a>Enumerate the available sleep study reports
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 사용 가능한 절전 연구 보고서를 열거할 수 있습니다.
+You can enumerate the available sleep study reports by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/sleepstudy/reports
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-사용 가능한 보고서 목록 템플릿은 다음과 같습니다.
+The list of available reports has the following template.
 
 ```
 {"Reports": [
@@ -1758,281 +1772,281 @@ GET | /api/power/sleepstudy/reports
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-### 절전 연구 변환 가져오기
+### <a name="get-the-sleep-study-transform"></a>Get the sleep study transform
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 절전 연구 변환을 가져올 수 있습니다. 이 변환은 절전 연구 보고서를 사람이 읽을 수 있는 XML 형식으로 변환하는 XSLT입니다.
+You can get the sleep study transform by using the following request format. This transform is an XSLT that converts the sleep study report into an XML format that can be read by a person.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/power/sleepstudy/transform
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 절전 연구 변환이 포함되어 있습니다.
+The response contains the sleep study transform.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * IoT
 
 ---
-## 원격 제어
+## <a name="remote-control"></a>Remote control
 ---
-### 대상 컴퓨터 다시 시작
+### <a name="restart-the-target-computer"></a>Restart the target computer
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 대상 컴퓨터를 다시 시작할 수 있습니다.
+You can restart the target computer by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/control/restart
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 대상 컴퓨터 종료
+### <a name="shut-down-the-target-computer"></a>Shut down the target computer
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 대상 컴퓨터를 종료할 수 있습니다.
+You can shut down the target computer by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/control/shutdown
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## 작업 관리자
+## <a name="task-manager"></a>Task manager
 ---
-### 최신 앱 시작
+### <a name="start-a-modern-app"></a>Start a modern app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 최신 앱을 시작할 수 있습니다.
+You can start a modern app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/taskmanager/app
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-appid   | (**필수**) 시작하려는 앱의 PRAID입니다. 이 값은 hex64로 인코드되어야 합니다.
-package   | (**필수**) 시작하려는 앱 패키지의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
+appid   | (**required**) The PRAID for the app you want to start. This value should be hex64 encoded.
+package   | (**required**) The full name for the app package you want to start. This value should be hex64 encoded.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 최신 앱 중지
+### <a name="stop-a-modern-app"></a>Stop a modern app
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 최신 앱을 중지할 수 있습니다.
+You can stop a modern app by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/taskmanager/app
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-package   | (**필수**) 중지하려는 앱 패키지의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다.
-forcestop   | (**선택**) 값 **yes**는 시스템이 모든 프로세스를 강제로 중지함을 나타냅니다.
+package   | (**required**) The full name of the app packages that you want to stop. This value should be hex64 encoded.
+forcestop   | (**optional**) A value of **yes** indicates that the system should force all processes to stop.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## 네트워킹
+## <a name="networking"></a>Networking
 ---
-### 현재 IP 구성 가져오기
+### <a name="get-the-current-ip-configuration"></a>Get the current IP configuration
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 IP 구성을 가져올 수 있습니다.
+You can get the current IP configuration by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/networking/ipconfig
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-응답에는 다음 템플릿의 IP 구성이 포함됩니다.
+The response includes the IP configuration in the following template.
 
 ```
 {"Adapters": [
@@ -2074,51 +2088,51 @@ GET | /api/networking/ipconfig
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 --
-### 무선 네트워크 인터페이스 열거
+### <a name="enumerate-wireless-network-interfaces"></a>Enumerate wireless network interfaces
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 사용 가능한 무선 네트워크 인터페이스를 열거할 수 있습니다.
+You can enumerate the available wireless network interfaces by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wifi/interfaces
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-세부 정보가 있는 사용 가능한 무선 인터페이스 목록 형식은 다음과 같습니다.
+A list of the available wireless interfaces with details in the following format.
 
 ``` 
 {"Interfaces": [{
@@ -2136,55 +2150,55 @@ GET | /api/wifi/interfaces
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 무선 네트워크 열거
+### <a name="enumerate-wireless-networks"></a>Enumerate wireless networks
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 지정된 인터페이스에 무선 네트워크의 목록을 열거할 수 있습니다.
+You can enumerate the list of wireless networks on the specified interface by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wifi/networks
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). 
+interface   | (**required**) The GUID for the network interface to use to search for wireless networks, without brackets. 
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-제공된 *interface*에서 찾은 무선 네트워크 목록입니다. 여기에 포함된 네트워크 세부 정보 형식은 다음과 같습니다.
+The list of wireless networks found on the provided *interface*. This includes details for the networks in the following format.
 
 ```
 {"AvailableNetworks": [
@@ -2206,204 +2220,201 @@ interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### Wi-Fi 네트워크에 연결 및 연결 해제
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Connect and disconnect to a Wi-Fi network.
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 Wi-Fi 네트워크에 연결 및 연결 해제할 수 있습니다.
+You can connect or disconnect to a Wi-Fi network by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/wifi/network
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다.
-op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.
-ssid   | (**op == connect인 경우 필수****) 연결할 SSID입니다.
-key   | (**op == connect이고 네트워크에 인증이 필요한 경우 필수****) 공유 키입니다.
-createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. 
-            **예** 또는 **아니요**일 수 있습니다. 
+interface   | (**required**) The GUID for the network interface you use to connect to the network.
+op   | (**required**) Indicates the action to take. Possible values are connect or disconnect.
+ssid   | (**required if *op* == connect**) The SSID to connect to.
+key   | (**required if *op* == connect and network requires authentication**) The shared key.
+createprofile | (**required**) Create a profile for the network on the device.  This will cause the device to auto-connect to the network in the future. This can be **yes** or **no**. 
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### Wi-Fi 프로필 삭제
+### <a name="delete-a-wi-fi-profile"></a>Delete a Wi-Fi profile
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 특정 인터페이스의 네트워크와 연결된 프로필을 삭제할 수 있습니다.
+You can delete a profile associated with a network on a specific interface by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/wifi/network
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-interface   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다.
-profile   | (**필수**) 삭제할 프로필의 이름입니다.
+interface   | (**required**) The GUID for the network interface associated with the profile to delete.
+profile   | (**required**) The name of the profile to delete.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-## WER(Windows 오류 보고)
+## <a name="windows-error-reporting-wer"></a>Windows Error Reporting (WER)
 ---
-### WER(Windows 오류 보고) 파일 다운로드
+### <a name="download-a-windows-error-reporting-wer-file"></a>Download a Windows error reporting (WER) file
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WER 관련 파일을 다운로드할 수 있습니다.
+You can download a WER-related file by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wer/report/file
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-user   | (**필수**) 보고서와 연결된 사용자 이름입니다.
-type   | (**필수**) 보고서의 유형입니다. 
-            **queried** 또는 **archived**가 될 수 있습니다.
-name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
-file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. 
+user   | (**required**) The user name associated with the report.
+type   | (**required**) The type of report. This can be either **queried** or **archived**.
+name   | (**required**) The name of the report. This should be base64 encoded. 
+file   | (**required**) The name of the file to download from the report. This should be base64 encoded. 
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 응답에는 요청한 파일이 포함됩니다. 
+- Response contains the requested file. 
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### WER(Windows 오류 보고) 보고서에 파일 열거
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>Enumerate files in a Windows error reporting (WER) report
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WER 보고서에 파일을 열거할 수 있습니다.
+You can enumerate the files in a WER report by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wer/report/files
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-user   | (**필수**) 보고서와 연결된 사용자입니다.
-type   | (**필수**) 보고서의 유형입니다. 
-            **queried** 또는 **archived**가 될 수 있습니다.
-name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
+user   | (**required**) The user associated with the report.
+type   | (**required**) The type of report. This can be either **queried** or **archived**.
+name   | (**required**) The name of the report. This should be base64 encoded. 
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
 ```
 {"Files": [
@@ -2414,51 +2425,51 @@ name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 �
 ]}
 ```
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### WER(Windows 오류 보고) 보고서 나열
+### <a name="list-the-windows-error-reporting-wer-reports"></a>List the Windows error reporting (WER) reports
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WER 보고서를 가져올 수 있습니다.
+You can get the WER reports by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wer/reports
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-WER 보고서 형식은 다음과 같습니다.
+The WER reports in the following format.
 
 ```
 {"WerReports": [
@@ -2474,51 +2485,51 @@ WER 보고서 형식은 다음과 같습니다.
 ]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## WPR(Windows Performance Recorder) 
+## <a name="windows-performance-recorder-wpr"></a>Windows Performance Recorder (WPR) 
 ---
-### 사용자 지정 프로필을 사용하여 추적 시작
+### <a name="start-tracing-with-a-custom-profile"></a>Start tracing with a custom profile
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WPR 프로필을 업로드하고 해당 프로필을 사용하여 추적을 시작할 수 있습니다.  추적은 한 번에 하나만 실행할 수 있습니다. 프로필은 디바이스에서 유지되지 않습니다. 
+You can upload a WPR profile and start tracing using that profile by using the following request format.  Only one trace can run at a time. The profile will not remain on the device. 
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/wpr/customtrace
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 사용자 지정 WPR 프로필을 포함하는 http 본문을 준수하는 다중 파트입니다.
+- A multi-part conforming http body that contains the custom WPR profile.
 
-**응답**
+**Response**
 
-WPR 세션 상태 형식은 다음과 같습니다.
+The WPR session status in the following format.
 
 ```
 {
@@ -2527,54 +2538,54 @@ WPR 세션 상태 형식은 다음과 같습니다.
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 부팅 성능 추적 세션 시작
+### <a name="start-a-boot-performance-tracing-session"></a>Start a boot performance tracing session
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 부팅 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.
+You can start a boot WPR tracing session by using the following request format. This is also known as a performance tracing session.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/wpr/boottrace
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다.
+profile   | (**required**) This parameter is required on start. The name of the profile that should start a performance tracing session. The possible profiles are stored in perfprofiles/profiles.json.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-시작할 때 이 API는 다음 형식의 WPR 세션 상태를 반환합니다.
+On start, this API returns the WPR session status in the following format.
 
 ```
 {
@@ -2583,99 +2594,99 @@ profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 부팅 성능 추적 세션 중지
+### <a name="stop-a-boot-performance-tracing-session"></a>Stop a boot performance tracing session
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 부팅 WPR 추적 세션을 중지할 수 있습니다. 성능 추적 세션이라고도 합니다.
+You can stop a boot WPR tracing session by using the following request format. This is also known as a performance tracing session.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wpr/boottrace
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 추적 ETL 파일을 반환합니다.
+-  None.  **Note:** This is a long running operation.  It will return when the ETL is finished writing to disk.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 성능 추적 세션 시작
+### <a name="start-a-performance-tracing-session"></a>Start a performance tracing session
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.  추적은 한 번에 하나만 실행할 수 있습니다. 
+You can start a WPR tracing session by using the following request format. This is also known as a performance tracing session.  Only one trace can run at a time. 
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/wpr/trace
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameters on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다.
+profile   | (**required**) The name of the profile that should start a performance tracing session. The possible profiles are stored in perfprofiles/profiles.json.
 <br />
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-시작할 때 이 API는 다음 형식의 WPR 세션 상태를 반환합니다.
+On start, this API returns the WPR session status in the following format.
 
 ```
 {
@@ -2684,96 +2695,95 @@ profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필�
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 성능 추적 세션 중지
+### <a name="stop-a-performance-tracing-session"></a>Stop a performance tracing session
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 WPR 추적 세션을 중지할 수 있습니다. 성능 추적 세션이라고도 합니다.
+You can stop a WPR tracing session by using the following request format. This is also known as a performance tracing session.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wpr/trace
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 없음.  
-            **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
+- None.  **Note:** This is a long running operation.  It will return when the ETL is finished writing to disk.  
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 추적 세션의 상태 검색
+### <a name="retrieve-the-status-of-a-tracing-session"></a>Retrieve the status of a tracing session
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 현재 WPR 세션의 상태를 검색할 수 있습니다.
+You can retrieve the status of the current WPR session by using the following request format.
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wpr/status
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-WPR 추적 세션 상태의 형식은 다음과 같습니다.
+The status of the WPR tracing session in the following format.
 
 ```
 {
@@ -2782,50 +2792,50 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 완료된 추적 세션(ETL) 나열
+### <a name="list-completed-tracing-sessions-etls"></a>List completed tracing sessions (ETLs)
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 디바이스의 ETL 추적 목록을 가져올 수 있습니다. 
+You can get a listing of ETL traces on the device using the following request format. 
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wpr/tracefiles
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-완료된 추적 세션 목록은 다음 형식으로 제공됩니다.
+The listing of completed tracing sessions is provided in the following format.
 
 ```
 {"Items": [{
@@ -2839,149 +2849,148 @@ GET | /api/wpr/tracefiles
 }]}
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 추적 세션(ETL) 다운로드
+### <a name="download-a-tracing-session-etl"></a>Download a tracing session (ETL)
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 다운로드할 수 있습니다. 
+You can download a tracefile (boot trace or user-mode trace) using the following request format. 
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/wpr/tracefile
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameter on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-filename   | (**필수**) 다운로드할 ETL 추적의 이름입니다.  /api/wpr/tracefiles에서 찾을 수 있습니다.
+filename   | (**required**) The name of the ETL trace to download.  These can be found in /api/wpr/tracefiles
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 추적 ETL 파일을 반환합니다.
+- Returns the trace ETL file.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-### 추적 세션(ETL) 삭제
+### <a name="delete-a-tracing-session-etl"></a>Delete a tracing session (ETL)
 
-**요청**
+**Request**
 
-다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 삭제할 수 있습니다. 
+You can delete a tracefile (boot trace or user-mode trace) using the following request format. 
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/wpr/tracefile
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-요청 URI에 다음과 같은 추가 매개 변수를 지정할 수 있습니다.
+You can specify the following additional parameter on the request URI:
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :---          | :---
-filename   | (**필수**) 삭제할 ETL 추적의 이름입니다.  /api/wpr/tracefiles에서 찾을 수 있습니다.
+filename   | (**required**) The name of the ETL trace to delete.  These can be found in /api/wpr/tracefiles
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 추적 ETL 파일을 반환합니다.
+- Returns the trace ETL file.
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * IoT
 
 ---
-## DNS-SD 태그 
+## <a name="dns-sd-tags"></a>DNS-SD Tags 
 ---
-### 태그 보기
+### <a name="view-tags"></a>View Tags
 
-**요청**
+**Request**
 
-디바이스에 대해 현재 적용된 태그를 봅니다.  이러한 태그는 T 키의 DNS-SD TXT 레코드를 통해 알려집니다.  
+View the currently applied tags for the device.  These are advertised via DNS-SD TXT records in the T key.  
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/dns-sd/tags
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-
-            **응답** 다음 형식의 현재 적용된 태그입니다. 
+**Response** The currently applied tags in the following format. 
 ```
  {
     "tags": [
@@ -2992,245 +3001,243 @@ GET | /api/dns-sd/tags
 }
 ```
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-5XX | 서버 오류 
+200 | OK
+5XX | Server Error 
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 태그 삭제
+### <a name="delete-tags"></a>Delete Tags
 
-**요청**
+**Request**
 
-DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.   
+Delete all tags currently advertised by DNS-SD.   
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/dns-sd/tags
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
- - 없음
+**Response**
+ - None
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-5XX | 서버 오류 
+200 | OK
+5XX | Server Error 
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
 ---
-### 태그 삭제
+### <a name="delete-tag"></a>Delete Tag
 
-**요청**
+**Request**
 
-DNS-SD에 의해 현재 알려진 태그를 삭제합니다.   
+Delete a tag currently advertised by DNS-SD.   
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/dns-sd/tag
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-tagValue | (**필수**) 제거할 태그입니다.
+tagValue | (**required**) The tag to be removed.
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
- - 없음
+**Response**
+ - None
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
+200 | OK
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
  
 ---
-### 태그 추가
+### <a name="add-a-tag"></a>Add a Tag
 
-**요청**
+**Request**
 
-DNS-SD 알림에 태그를 추가합니다.   
+Add a tag to the DNS-SD advertisement.   
  
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/dns-sd/tag
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-tagValue | (**필수**) 추가할 태그입니다.
+tagValue | (**required**) The tag to be added.
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
- - 없음
+**Response**
+ - None
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-401 | 태그 공간 오버플로.  제안된 태그가 생성되는 DNS-SD 서비스 레코드에 너무 긴 경우의 결과입니다.  
+200 | OK
+401 | Tag space Overflow.  Results when the proposed tag is too long for the resulting DNS-SD service record.  
 
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * Xbox
 * HoloLens
 * IoT
 
-## 앱 파일 탐색기
+## <a name="app-file-explorer"></a>App File Explorer
 
 ---
-### 알려진 폴더 가져오기
+### <a name="get-known-folders"></a>Get known folders
 
-**요청**
+**Request**
 
-액세스 가능한 최상위 폴더의 목록을 가져옵니다.
+Obtain a list of accessible top-level folders.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/filesystem/apps/knownfolders
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-- 없음
+- None
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-
-            **응답** 다음 형식의 사용 가능한 폴더입니다. 
+**Response** The available folders in the following format. 
 ```
  {"KnownFolders": [
     "folder0",
     "folder1",...
 ]}
 ```
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 수락되어 처리 중인 요청 배포
-4XX | 오류 코드
-5XX | 오류 코드
+200 | Deploy request accepted and being processed
+4XX | Error codes
+5XX | Error codes
 <br />
 
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 ---
-### 파일 가져오기
+### <a name="get-files"></a>Get files
 
-**요청**
+**Request**
 
-폴더의 파일 목록을 가져옵니다.
+Obtain a list of files in a folder.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/filesystem/apps/files
 <br />
 
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
-path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. 
+knownfolderid | (**required**) The top-level directory where you want the list of files. Use **LocalAppData** for access to sideloaded apps. 
+packagefullname | (**required if *knownfolderid* == LocalAppData**) The package full name of the app you are interested in. 
+path | (**optional**) The sub-directory within the folder or package specified above. 
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-
-            **응답** 다음 형식의 사용 가능한 폴더입니다. 
+**Response** The available folders in the following format. 
 ```
 {"Items": [
     {
@@ -3244,223 +3251,222 @@ path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 �
     },...
 ]}
 ```
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 ---
-### 파일 다운로드
+### <a name="download-a-file"></a>Download a file
 
-**요청**
+**Request**
 
-알려진 폴더 또는 appLocalData에서 파일을 가져옵니다.
+Obtain a file from a known folder or appLocalData.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 GET | /api/filesystem/apps/file
 
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
-filename | (**필수**) 다운로드할 파일의 이름입니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 패키지 전체 이름입니다. 
-path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
+knownfolderid | (**required**) The top-level directory where you want to download files. Use **LocalAppData** for access to sideloaded apps. 
+filename | (**required**) The name of the file being downloaded. 
+packagefullname | (**required if *knownfolderid* == LocalAppData**) The package full name you are interested in. 
+path | (**optional**) The sub-directory within the folder or package specified above.
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 요청된 파일(있는 경우)
+- The file requested, if present
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 요청된 파일
-404 | 파일을 찾을 수 없습니다.
-5XX | 오류 코드
+200 | The requested file
+404 | File not found
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 ---
-### 파일 이름 바꾸기
+### <a name="rename-a-file"></a>Rename a file
 
-**요청**
+**Request**
 
-폴더 내 파일의 이름을 변경합니다.
+Rename a file in a folder.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/filesystem/apps/rename
 
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
-filename | (**필수**) 이름을 변경할 원래 파일의 이름입니다. 
-newfilename | (**필수**) 파일의 새 이름입니다.
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
-path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. 
+knownfolderid | (**required**) The top-level directory where the file is located. Use **LocalAppData** for access to sideloaded apps. 
+filename | (**required**) The original name of the file being renamed. 
+newfilename | (**required**) The new name of the file.
+packagefullname | (**required if *knownfolderid* == LocalAppData**) The package full name of the app you are interested in. 
+path | (**optional**) The sub-directory within the folder or package specified above. 
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 없음
+- None
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인. 파일 이름이 변경되었습니다.
-404 | 파일을 찾을 수 없습니다.
-5XX | 오류 코드
+200 | OK. The file is renamed
+404 | File not found
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 ---
-### 파일 삭제
+### <a name="delete-a-file"></a>Delete a file
 
-**요청**
+**Request**
 
-폴더의 파일을 삭제합니다.
+Delete a file in a folder.
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 DELETE | /api/filesystem/apps/file
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. 
-filename | (**필수**) 삭제할 파일의 이름입니다. 
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
-path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
+knownfolderid | (**required**) The top-level directory where you want to delete files. Use **LocalAppData** for access to sideloaded apps. 
+filename | (**required**) The name of the file being deleted. 
+packagefullname | (**required if *knownfolderid* == LocalAppData**) The package full name of the app you are interested in. 
+path | (**optional**) The sub-directory within the folder or package specified above.
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-- 없음 
+- None 
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인. 파일이 삭제되었습니다.
-404 | 파일을 찾을 수 없습니다.
-5XX | 오류 코드
+200 | OK. The file is deleted
+404 | File not found
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 ---
-### 파일 업로드
+### <a name="upload-a-file"></a>Upload a file
 
-**요청**
+**Request**
 
-폴더에 파일을 업로드합니다.  이름이 같은 기존 파일을 덮어쓰지만 새 폴더를 만들지 않습니다. 
+Upload a file to a folder.  This will overwrite an existing file with the same name, but will not create new folders. 
 
-메서드      | 요청 URI
+Method      | Request URI
 :------     | :-----
 POST | /api/filesystem/apps/file
 <br />
-**URI 매개 변수**
+**URI parameters**
 
-URI 매개 변수 | 설명
+URI parameter | Description
 :------     | :-----
-knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다.
-packagefullname | (**knownfolderid == LocalAppData**인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. 
-path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다.
+knownfolderid | (**required**) The top-level directory where you want to upload files. Use **LocalAppData** for access to sideloaded apps.
+packagefullname | (**required if *knownfolderid* == LocalAppData**) The package full name of the app you are interested in. 
+path | (**optional**) The sub-directory within the folder or package specified above.
 
-**요청 헤더**
+**Request headers**
 
-- 없음
+- None
 
-**요청 본문**
+**Request body**
 
-- 없음
+- None
 
-**응답**
+**Response**
 
-**상태 코드**
+**Status code**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+This API has the following expected status codes.
 
-HTTP 상태 코드      | 설명
+HTTP status code      | Description
 :------     | :-----
-200 | 확인. 파일이 업로드되었습니다.
-4XX | 오류 코드
-5XX | 오류 코드
+200 | OK. The file is uploaded
+4XX | Error codes
+5XX | Error codes
 <br />
-**사용 가능한 디바이스 패밀리**
+**Available device families**
 
 * Windows Mobile
-* Windows 데스크톱
+* Windows Desktop
 * HoloLens
 * Xbox
 * IoT
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

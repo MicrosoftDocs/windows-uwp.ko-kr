@@ -1,57 +1,57 @@
 ---
 author: TylerMSFT
-title: "파일 활성화 처리"
-description: "앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다."
+title: Handle file activation
+description: An app can register to become the default handler for a certain file type.
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
+ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
+ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
 
 ---
 
-# 파일 활성화 처리
+# <a name="handle-file-activation"></a>Handle file activation
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**중요 API**
+**Important APIs**
 
 -   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 -   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
-앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다. Windows 데스크톱 응용 프로그램과 UWP(유니버설 Windows 플랫폼) 앱 모두 기본 파일 처리기로 등록할 수 있습니다. 사용자가 앱을 특정 파일 형식의 기본 처리기로 선택하면 해당 형식의 파일을 시작할 때 앱이 활성화됩니다.
+An app can register to become the default handler for a certain file type. Both Windows desktop applications and Universal Windows Platform (UWP) apps can register to be a default file handler. If the user chooses your app as the default handler for a certain file type, your app will be activated when that type of file is launched.
 
-해당 형식의 파일에 대해 모든 파일 시작을 처리하려는 경우에만 파일 형식을 등록하는 것이 좋습니다. 앱에서 파일 형식을 내부적으로만 사용해야 할 경우에는 기본 처리기로 등록할 필요가 없습니다. 파일 형식을 등록할 경우에는 앱이 해당 파일 형식에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어 사진 뷰어 앱은 .jpg 파일을 표시하도록 등록할 수 있습니다. 파일 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)을 참조하세요.
+We recommend that you only register for a file type if you expect to handle all file launches for that type of file. If your app only needs to use the file type internally, then you don't need to register to be the default handler. If you do choose to register for a file type, you must provide the end user with the functionality that is expected when your app is activated for that file type. For example, a picture viewer app may register to display a .jpg file. For more info on file associations, see [Guidelines for file types and URIs](https://msdn.microsoft.com/library/windows/apps/hh700321).
 
-다음 단계에서는 사용자 지정 파일 형식인 .alsdk를 등록하는 방법 및 사용자가 .alsdk 파일을 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
+These steps show how to register for a custom file type, .alsdk, and how to activate your app when the user launches an .alsdk file.
 
-> **참고** UWP 앱에서 특정 URI 및 파일 확장명은 기본 제공 앱과 운영 체제에서 사용하기 위해 예약되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
+> **Note**  In UWP apps, certain URIs and file extensions are reserved for use by built-in apps and the operating system. Attempts to register your app with a reserved URI or file extension will be ignored. For more information, see [Reserved file and URI scheme names](reserved-uri-scheme-names.md).
 
-## 1단계: 패키지 매니페스트에서 확장점 지정
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>Step 1: Specify the extension point in the package manifest
 
 
-앱은 패키지 매니페스트에 나열된 파일 확장명에 대해서만 활성화 이벤트를 받습니다. 다음은 앱이 `.alsdk` 확장명을 가진 파일을 처리하도록 지정하는 방법입니다.
+The app receives activation events only for the file extensions listed in the package manifest. Here's how you indicate that your app handles the files with the `.alsdk` extension.
 
-1.  **솔루션 탐색기**에서 package.appxmanifest를 두 번 클릭하여 매니페스트 디자이너를 엽니다. **선언** 탭을 선택하고 **사용 가능한 선언** 드롭다운 목록에서 **파일 형식 연결**을 선택한 다음 **추가**를 클릭합니다. 파일 연결에서 사용하는 식별자에 대한 자세한 내용은 [프로그래밍 ID](https://msdn.microsoft.com/library/windows/desktop/cc144152)를 참조하세요.
+1.  In the **Solution Explorer**, double-click package.appxmanifest to open the manifest designer. Select the **Declarations** tab and in the **Available Declarations** drop-down, select **File Type Associations** and then click **Add**. See [Programmatic Identifiers](https://msdn.microsoft.com/library/windows/desktop/cc144152) for more details of identifiers used by file associations.
 
-    다음은 매니페스트 디자이너에서 입력할 수 있는 각 필드에 대한 간략한 설명입니다.
+    Here is a brief description of each of the fields that you may fill in the manifest designer:
 
-| 필드 | 설명 |
+| Field | Description |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **표시 이름** | 파일 형식 그룹에 대한 표시 이름을 지정합니다. 표시 이름은 **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 파일 형식을 식별하는 데 사용됩니다. |
-| **로고** | 데스크톱 및 **제어판**의 [기본 프로그램 설정](https://msdn.microsoft.com/library/windows/desktop/cc144154)에서 파일 형식을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 응용 프로그램의 작은 로고가 사용됩니다. |
-| **정보 팁** | 파일 형식 그룹에 대한 [정보 팁](https://msdn.microsoft.com/library/windows/desktop/cc144152)을 지정합니다. 이 도구 설명 텍스트는 사용자가 이 파일 형식의 아이콘을 가리키면 표시됩니다. |
-| **이름** | 동일한 표시 이름, 로고, 정보 팁 및 편집 플래그를 공유하는 파일 형식 그룹의 이름을 선택합니다. 앱 업데이트 간에 동일하게 유지될 수 있는 그룹 이름을 선택합니다. **참고** 이름은 모두 소문자여야 합니다. |
-| **콘텐츠 형식** | 특정 파일 형식에 대해 **image/jpeg** 같은 MIME 콘텐츠 형식을 지정합니다. **허용된 콘텐츠 형식에 대한 중요 정보:** 다음은 예약되거나 금지되어 있기 때문에 패키지 매니페스트에 입력할 수 없는 MIME 콘텐츠 형식의 사전순 목록입니다. **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **파일 형식** | 앞에 마침표를 추가하여 등록할 파일 형식을 지정합니다(예제: ".jpeg"). **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 기본 제공 앱의 파일 형식에 대한 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
+| **Display Name** | Specify the display name for a group of file types. The display name is used to identify the file type in the [Set Default Programs](https://msdn.microsoft.com/library/windows/desktop/cc144154) on the **Control Panel**. |
+| **Logo** | Specify the logo that is used to identify the file type on the desktop and in the [Set Default Programs](https://msdn.microsoft.com/library/windows/desktop/cc144154) on the **Control Panel**. If no Logo is specified, the application’s small logo is used. |
+| **Info Tip** | Specify the [info tip](https://msdn.microsoft.com/library/windows/desktop/cc144152) for a group of file types. This tool tip text appears when the user hovers on the icon for a file of this type. |
+| **Name** | Choose a name for a group of file types that share the same display name, logo, info tip, and edit flags. Choose a group name that can stay the same across app updates. **Note**  The Name must be in all lower case letters. |
+| **Content Type** | Specify the MIME content type, such as **image/jpeg**, for a particular file type. **Important Note about allowed content types:** Here is an alphabetic list of MIME content types that you cannot enter into the package manifest because they are either reserved or forbidden: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **File type** | Specify the file type to register for, preceded by a period, for example, “.jpeg”. **Reserved and forbidden file types:** See [Reserved URI scheme names and file types](reserved-uri-scheme-names.md) for an alphabetic list of file types for built-in apps that you can't register for your UWP apps because they are either reserved or forbidden. |
 
-2.  **이름**으로 `alsdk`를 입력합니다.
-3.  **파일 형식**으로 `.alsdk`를 입력합니다.
-4.  "images\\Icon.png"를 로고로 입력합니다.
-5.  Ctrl+S를 눌러 package.appxmanifest에 변경 사항을 저장합니다.
+2.  Enter `alsdk` as the **Name**.
+3.  Enter `.alsdk` as the **File Type**.
+4.  Enter “images\\Icon.png” as the Logo.
+5.  Press Ctrl+S to save the change to package.appxmanifest.
 
-위 단계는 이와 같은 [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) 요소를 패키지 매니페스트에 추가합니다. **windows.fileTypeAssociation** 범주는 앱이 `.alsdk` 확장명을 가진 파일을 처리한다는 것을 나타냅니다.
+The steps above add an [**Extension**](https://msdn.microsoft.com/library/windows/apps/br211400) element like this one to the package manifest. The **windows.fileTypeAssociation** category indicates that the app handles files with the `.alsdk` extension.
 
 ```xml
       <Extensions>
@@ -66,23 +66,23 @@ ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
       </Extensions>
 ```
 
-## 2단계: 적절한 아이콘 추가
+## <a name="step-2-add-the-proper-icons"></a>Step 2: Add the proper icons
 
 
-파일 형식의 기본값이 되는 앱에는 시스템 전체의 다양한 위치에 표시되는 아이콘이 있습니다. 예를 들어 다음과 같은 아이콘이 표시됩니다.
+Apps that become the default for a file type have their icons displayed in various places throughout the system. For example these icons are shown in:
 
--   Windows 탐색기 항목 보기, 상황에 맞는 메뉴 및 리본
--   기본 프로그램 제어판
--   파일 선택기
--   시작 화면의 검색 결과
+-   Windows Explorer ItemsView, context menus, and the Ribbon
+-   Default programs Control Panel
+-   File picker
+-   Search results on the Start screen
 
-앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 예제 아이콘은 [연결 시작 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620490)를 참조하세요.
-![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
+Match the look of the app tile logo and use your app's background color rather than making the icon transparent. Have the logo extend to the edge without padding it. Test your icons on white backgrounds. For example icons, see the [Association launching sample](http://go.microsoft.com/fwlink/p/?LinkID=620490).
+![the solution explorer with a view of the files in the images folder. there are 16, 32, 48, and 256 pixel versions of both ‘icon.targetsize’ and ‘smalltile-sdk’](images/seviewofimages.png)
 
-## 3단계: 활성화된 이벤트 처리
+## <a name="step-3-handle-the-activated-event"></a>Step 3: Handle the activated event
 
 
-[**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) 이벤트 처리기는 모든 파일 활성화 이벤트를 받습니다.
+The [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) event handler receives all file activation events.
 
 > [!div class="tabbedCodeSnippets"]
 ```vb
@@ -111,40 +111,40 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-앱이 새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML 프레임을 만들도록 하는 것이 좋습니다. 이런 식으로 새 XAML 프레임에 대한 탐색 백 스택에는 앱이 일시 중단될 때 현재 창에 포함될 수 있는 이전 콘텐츠가 포함되지 않습니다. 시작 및 파일 계약에 단일 XAML 프레임을 사용하도록 결정한 앱은 새 페이지를 탐색하기 전에 프레임의 탐색 저널에서 페이지를 지워야 합니다.
+It is recommended that apps create a new XAML Frame for each activation event that opens a new page. This way, the navigation backstack for the new XAML Frame will not contain any previous content that the app might have on the current window when suspended. Apps that decide to use a single XAML Frame for Launch and File Contracts should clear the pages on the Frame's navigation journal before navigating to a new page.
 
-파일 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
+When launched via File activation, apps should consider including UI that allows the user to go back to the top page of the app.
 
-## 설명
+## <a name="remarks"></a>Remarks
 
 
-받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
+The files that you receive could come from an untrusted source. We recommend that you validate the content of a file before taking action on it. For more info on input validation, see [Writing Secure Code](http://go.microsoft.com/fwlink/p/?LinkID=142053)
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-**전체 예제**
+**Complete example**
 
-* [연결 시작 예제](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+* [Association launching sample](http://go.microsoft.com/fwlink/p/?LinkID=231484)
 
-**개념**
+**Concepts**
 
-* [기본 프로그램](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [파일 형식 및 프로토콜 연결 모델](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+* [Default Programs](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [File Type and Protocol Associations Model](https://msdn.microsoft.com/library/windows/desktop/hh848047)
 
-**작업**
+**Tasks**
 
-* [파일에 대한 기본 앱 시작](launch-the-default-app-for-a-file.md)
-* [URI 활성화 처리](handle-uri-activation.md)
+* [Launch the default app for a file](launch-the-default-app-for-a-file.md)
+* [Handle URI activation](handle-uri-activation.md)
 
-**지침**
+**Guidelines**
 
-* [파일 형식 및 URI에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Guidelines for file types and URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**참조**
+**Reference**
 * [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 * [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
@@ -154,6 +154,6 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

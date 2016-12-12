@@ -1,93 +1,93 @@
 ---
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
-title: "개발자 계정 열기"
-description: "Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다."
+title: Opening a developer account
+description: This overview of how to register for a developer account for the Windows Store and other Microsoft programs will help you understand the process of setting up your account.
 translationtype: Human Translation
-ms.sourcegitcommit: 10446e136d324cd8490f7547f853e75b534368b0
-ms.openlocfilehash: 1f847b9c3302b092dce6eb73dd01f761ec17c0a5
+ms.sourcegitcommit: 323577311d328da6ad1e7bf0a976d3cea099816a
+ms.openlocfilehash: 19096e3f1f94fb4eb98646163c6542a94f8612d4
 
 ---
-# 개발자 계정 열기
+# <a name="opening-a-developer-account"></a>Opening a developer account
 
-Windows 스토어 및 다른 Microsoft 프로그램용 개발자 계정을 등록하는 방법에 대한 이 개요는 계정을 설정하는 프로세스를 파악하도록 도움을 줍니다.
+This overview of how to register for a developer account for the Windows Store and other Microsoft programs will help you understand the process of setting up your account.
 
-> **참고** 개발자 계정을 등록할 때 계정과 관련된 메일 통신을 보낼 연락처 정보에 제공하는 메일 주소가 사용됩니다. 때때로 해당 프로그램에 대한 알림 메일이 포함될 수 있습니다. [옵트아웃(opt out)](http://go.microsoft.com/fwlink/p/?LinkId=533280)하여 이러한 알림 메일을 받지 않도록 선택할 경우에도 거래용 메일은 계속 전송됩니다(예: 앱이 인증을 통과했거나 결제가 진행 중임을 알리기 위해). 이러한 메일이 계정 운영의 필수적인 부분이고, 계정을 해지하지 않는 한 이러한 거래용 메일을 계속 받게 됩니다.
+> **Note**  When you sign up for a developer account, we'll use the email address you provide in your contact info to send email communications related to your account. At times, these may include informational emails about our programs. If you choose not to receive these informational emails by [opting out](http://go.microsoft.com/fwlink/p/?LinkId=533280), be aware that we will still send you transactional emails (for example, to let you know that your app has passed certification or that a payment is on the way). These emails are a necessary part of your account, and unless you close your account, you will continue to receive these transactional emails.
 
-## 계정 등록 프로세스
+## <a name="the-account-signup-process"></a>The account signup process
 
-> **참고** 일부 경우에는 개발자 계정에 등록할 때 표시되는 화면 및 필드가 아래 간략히 설명된 것과 약간 다를 수 있지만 기본 정보 및 프로세스는 동일합니다.
+> **Note**  In some cases, the screens and fields you see when registering for a developer account may vary slightly from what is outlined below, though the basic information and process is the same.
 
-1.  [등록 페이지](http://go.microsoft.com/fwlink/p/?LinkId=615100)로 이동하여 **등록**을 클릭합니다.
-2.  거주하고 있거나 회사/조직이 위치한 [국가/지역](account-types-locations-and-fees.md#account-markets)을 선택합니다. 이는 나중에 변경할 수 없습니다.
-3.  [개발자 계정 유형](account-types-locations-and-fees.md)(개인 또는 회사)을 선택합니다. 나중에 변경할 수 없으므로 올바른 유형의 계정을 선택해야 합니다. 회사 계정의 경우 아래 [지침](#additional-guidelines-for-company-accounts)을 검토해야 합니다.
-4.  개발자 계정에 사용할 연락처 정보를 입력합니다.
+1.  Go to the [registration page](http://go.microsoft.com/fwlink/p/?LinkId=615100) and click **Sign up**.
+2.  Select the [country/region](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) in which you live, or where your business is located. You won't be able to change this later.
+3.  Select your [developer account type](account-types-locations-and-fees.md) (individual or company). You won't be able to change this later, so be sure to choose the right type of account. For a company account, be sure to review the [guidelines](#additional-guidelines-for-company-accounts) below.
+4.  Enter the contact info you want to use for your developer account.
 
-  > **참고** 이 정보는 Microsoft에서 계정 관련 문제로 연락하는 경우에 사용됩니다. 예를 들어 등록을 완료하면 메일 확인 메시지를 받게 됩니다. 이후에는 금액을 지불받거나 계정과 관련된 정보를 수정해야 하는 경우에 메시지를 받습니다. 비거래 메일을 받지 않도록 선택하지 않았다면 위에서 설명한 대로 알림 메일을 받을 수 있습니다.
+  > **Note**  We'll use this to contact you about account-related matters. For example, you'll receive an email confirmation message after you complete your registration. After that, we'll send messages when we pay you, or if you need to fix something with your account. We may also send informational emails as described above, unless you opt out of receiving non-transactional emails.
 
-   회사로 등록하는 경우 회사 계정을 승인할 사람의 이름, 메일 주소 및 전화 번호도 입력해야 합니다.
+   If you are registering as a company, you'll also need to enter the name, email address, and phone number of the person who will approve your company's account.
 
-5.  개별 계정의 경우 사용할 **게시자 표시 이름을** 50자 이하로 입력합니다. 고객이 이 이름을 검색할 때 보고 이 이름으로 앱을 알게 되므로 신중하게 이름을 선택합니다.
+5.  For individual accounts, enter the **publisher display name** that you wish to use (50 characters or fewer). Select this carefully, as customers will see this name when browsing and will come to know your apps by this name.
 
-    회사 계정의 경우 회사의 **등록된 이름**(조직의 등록된 사업체 이름 또는 거래명)을 입력합니다. 이 이름은 게시자 표시 이름으로 사용됩니다.
+    For company accounts, enter the **Registered name** of your company (your organization's registered business name or trade name); this will be used as the publisher display name.
     
-    다른 사용자가 이미 선택한 이름을 입력하거나 다른 사용자에게 해당 이름을 사용할 권한이 있는 것처럼 보이는 경우 해당 이름을 사용하는 것이 허용되지 않습니다. 
+    Note that if you enter a name that someone else has already selected, or if it appears that someone else has the rights to use that name, we will not allow you to use that name. 
 
-  >  **참고** 여기에 입력하는 이름을 사용할 권한이 있는지 확인합니다. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/Hh694058)을 참조하세요. 다른 사람이 사용자가 상표 또는 다른 법적 권한을 보유하는 판매자 표시 이름을 사용하는 경우 [Microsoft에 문의](http://go.microsoft.com/fwlink/p/?LinkId=233777)하세요.    
+  >  **Note**  Make sure you have the rights to use the name you enter here. If someone else has trademarked or copyrighted the name you picked, your account could be closed. See your [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/Hh694058) for more info. If someone else is using a publisher display name for which you hold the trademark or other legal right, [contact Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
-6.  계정에 대한 연락처 정보를 입력합니다. 회사 계정의 경우 조직을 대신하여 계정을 만들 수 있는 권한이 있음을 확인할 수 있는 사람의 연락처 정보도 제공해야 합니다. 완료하면 **다음**을 클릭하여 **결제** 섹션으로 진행합니다.
+6.  Enter the contact info for the account. For a company account, you'll also need to provide contact info for the person who can verify that you are authorized to create the account on behalf of your organization. When you are finished, click **Next** to move on to the **Payment** section.
 
-7.  일회성 등록 회비의 지불 정보를 입력합니다. 등록 비용 지불에 사용할 수 있는 프로모션 코드가 있는 경우 여기에 입력할 수 있습니다. 그렇지 않은 경우 신용 카드 정보(또는 지원되는 시장의 PayPal)를 지정합니다. 선불 신용 카드는 이 구매에 사용할 수 없습니다. 완료하면 **다음**을 클릭하여 **검토** 화면으로 진행합니다.
+7.  Enter your payment info for the one-time registration fee. If you have a promo code that covers the cost of registration, you can enter that here. Otherwise, provide your credit card info (or PayPal in supported markets). Note that prepaid credit cards can't be used for this purchase. When you are finished, click **Next** to move on to the **Review** screen.
 
-8.  계정 정보를 검토하고 모두 올바른지 확인합니다. 그런 다음 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/Hh694058)의 계약조건을 읽고 동의합니다. 이러한 조건을 읽고 동의함을 나타내려면 확인란을 선택합니다.
+8.  Review your account info and confirm that everything is correct. Then, read and accept the terms and conditions of the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/Hh694058). Check the box to indicate you have read and accepted these terms.
 
-9.  구매를 확인하려면 **마침**을 클릭합니다. 개발자 메일 주소로 확인 메시지가 전송됩니다.
+9.  Click **Finish** to confirm your purchase. We'll send a confirmation message to your developer email address.
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 본인이 회사에 대한 계정을 설정할 권한이 있는지도 확인해야 하므로 프로세스가 좀 더 오래 걸립니다. 이러한 확인은 며칠에서 몇 주까지 걸릴 수 있으며 회사에 전화로 문의할 수 있습니다. **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
+After you've completed the signup process, your account will go through the verification process. For individual accounts, we check to make sure another company isn't already using your publisher display name. For company accounts, the process takes a little longer, as we also need to confirm that you’re authorized to set up the account for your company. This verification can take from a few days to a couple of weeks, and often includes a phone call to your company. You can check your verification status on the **Account settings** page. 
 
-## 회사 계정에 대한 추가 지침
+## <a name="additional-guidelines-for-company-accounts"></a>Additional guidelines for company accounts
 
-회사 계정을 만들 때 두 명 이상이 회사 계정을 개설한 Microsoft 계정으로 로그인하여 회사 계정에 액세스해야 하는 경우 다음 지침을 따릅니다. 
+When creating a company account, follow these guidelines if more than one person will need to access the account by logging in with the Microsoft account that opened the account. 
 
-> **중요** 여러 사용자가 개발자 센터 계정에 액세스할 수 있도록 하려면 Azure Active Directory를 사용하여 개별 사용자에게 역할을 할당하는 것이 좋습니다. 이러한 사용자는 개별 Azure AD 자격 증명으로 로그인하여 계정에 액세스할 수 있습니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+> **Important** To allow multiple users to access your Dev Center account, we recommend using Azure Active Directory to assign roles to individual users, who can access the account by signing in with their individual Azure AD credentials. For more info, see [Manage account users](manage-account-users.md).
 
--   회사의 도메인에 속하지만 어느 한 개인의 소유가 아닌 메일 주소(예: windowsapps@fabrikam.com)를 사용하여 Microsoft 계정을 만듭니다.
--   이 Microsoft 계정에 대한 액세스 권한을 최소한의 개발자로 제한합니다.
--   해당 개발자 계정에 액세스해야 하는 모든 사람을 포함하는 회사 메일 그룹을 설정하고 이 메일 주소를 보안 정보에 추가합니다. 그러면 목록에 있는 모든 직원이 Microsoft 계정 보안 정보를 관리해야 할 때 보안 코드를 수신할 수 있습니다. 메일 그룹 설정이 불가능한 경우, 요청 메시지가 나타나면(예: 새 보안 정보가 계정에 추가된 경우 또는 새 디바이스에서 계정에 액세스해야 하는 경우) 보안 코드를 액세스하고 공유하기 위해 개별 메일 계정 소유자 정보를 사용할 수 있어야 합니다.
--   주요 팀 구성원이 액세스할 수 있고 내선 번호를 요구하지 않는 직장 번호를 추가합니다.
--   일반적으로 개발자가 신뢰할 수 있는 디바이스를 사용하여 회사의 개발자 계정에 로그인하도록 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 디바이스에 대한 액세스 권한이 있어야 합니다. 그러면 계정에 액세스할 때 보안 코드를 전송할 필요성이 줄어듭니다.
--   신뢰할 수 없는 PC에서의 계정 액세스를 허용해야 하는 경우 그러한 액세스 권한을 최대 5명의 개발자로 제한합니다. 이러한 개발자는 동일한 지역 및 네트워크 위치를 공유하는 컴퓨터에서 계정에 액세스하는 것이 가장 좋습니다.
--   [https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648)에서 회사 보안 정보를 자주 검토하여 모두 최신 정보인지 확인하세요.
+-   Create your Microsoft account using an email address that belongs to your company's domain, but not to a single individual—for example, windowsapps@fabrikam.com.
+-   Limit access to this Microsoft account to the smallest possible number of developers.
+-   Set up a corporate email distribution list that includes everyone who needs to access the developer account, and add this email address to your security info. This allows all of the employees on the list to receive security codes when needed and to manage your Microsoft account’s security info. If setting up a distribution list is not feasible, the owner of the individual email account will need to be available to access and share the security code when prompted (such as when new security info is added to the account or when it must be accessed from a new device).
+-   Add a company phone number that does not require an extension and is accessible to key team members.
+-   In general, have developers use trusted devices to log in to your company's developer account. All key team members should have access to these trusted devices. This will reduce the need for security codes to be sent when accessing the account.
+-   If you need to allow access to the account from a non-trusted PC, limit that access to a maximum of five developers. Ideally, these developers should access the account from machines that share the same geographical and network location.
+-   Frequently review your company’s security info at [https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648) to make sure it's all current.
 
-개발자 계정에는 기본적으로 신뢰할 수 있는 PC에서 액세스해야 합니다. 이는 계정마다 주당 생성되는 코드 수가 제한되므로 중요합니다. 또한 가장 효율적인 로그인 환경을 사용하기도 합니다.
+Your developer account should be accessed primarily from trusted PCs. This is critical because there is a limit to the number of codes generated per account, per week. It also enables the most seamless sign-in experience.
 
-## 개발자 계정 보안
+## <a name="developer-account-security"></a>Developer account security
 
-Microsoft는 개발자가 제공하는 보안 정보를 사용하여 개발자 계정을 여러 형식의 ID에 연결함으로써 보안 수준을 높입니다. 그러면 Microsoft 계정에 무단으로 액세스하는 것이 훨씬 더 어려워집니다. 또한 암호가 기억나지 않거나 다른 사용자가 개발자 계정에 액세스하려고 시도할 경우 Microsoft는 개발자에게 연락하여 개발자 계정에 대한 적절한 제어 권한을 다시 설정할 수 있습니다.
+We use security info that you provide to raise the security level of your developer account by associating it with multiple forms of identification. This makes unauthorized access to your Microsoft account substantially more difficult. Also, if you ever forget your password or someone tries to access your account, we’ll be able to reach you to reestablish appropriate control of your account.
 
-계정에 대한 메일 주소 및/또는 전화 번호가 2개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토하여 최신으로 유지해야 합니다.
+You must have at least two email addresses and/or phone numbers on your account. We recommend adding as many as possible. Remember that some security info must be confirmed before it will be valid. Also, make sure to review your security info frequently and ensure it's up to date.
 
-[https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648)로 이동한 후 Microsoft 계정으로 로그인하여 보안 정보를 관리할 수 있습니다. 자세한 내용은 [Microsoft 계정 보안 정보: FAQ](http://go.microsoft.com/fwlink/p/?LinkID=272177)를 참조하세요.
+You can manage your security info by going to [https://account.live.com/proofs/Manage](http://go.microsoft.com/fwlink/p/?LinkID=266648) and signing in with your Microsoft account. See [Microsoft account security info: FAQ](http://go.microsoft.com/fwlink/p/?LinkID=272177) for more info.
 
-Windows 개발자 센터 대시보드에 로그인하면 ID를 확인하라는 메시지가 표시됩니다. 메일 주소 또는 전화 번호를 사용할 경우 로그인 프로세스를 완료하기 위해 제공해야 하는 보안 코드를 해당 메일 주소 또는 전화 번호로 보냅니다.
+When you sign in to your Windows Dev Center dashboard, the system requests that you verify your identity. In the case of an email address or a phone number, we send a security code that you must then supply to complete the sign-in process.
 
-자주 사용하는 PC를 신뢰할 수 있는 디바이스로 지정하는 것이 좋습니다. 신뢰할 수 있는 디바이스에서 로그인할 때는 특정 상황에서 또는 오랫동안 해당 디바이스에서 로그인하지 않은 경우 코드를 입력하라는 메시지가 표시될 수도 있지만 대체로 코드를 확인하는 메시지가 표시되지 않습니다. 자세한 내용은 [신뢰할 수 있는 디바이스: FAQ](http://go.microsoft.com/fwlink/p/?LinkID=331123)를 참조하세요.
+We recommend designating PCs that you use frequently as trusted devices. When you sign in from a trusted device, you usually won’t be prompted for a code, although you may occasionally be prompted to provide one in specific situations, or if you haven’t signed in on that device in a long time. See [Trusted devices: FAQ](http://go.microsoft.com/fwlink/p/?LinkID=331123) for more info.
 
-## 계정 해지
+## <a name="closing-your-account"></a>Closing your account
 
-개발자 계정이 만료되지 않으므로 사용할 수 있는 상태를 유지하기 위해 계정을 갱신할 필요가 없습니다. 계정을 완전히 종료하려는 경우에는 지원 부서에 문의하면 됩니다.
+Developer accounts don't expire, so there is no need to renew your account in order to keep it open. If you decide to close your account completely, you can do so by contacting support.
 
-계정을 종료하면 Windows 스토어에 게시한 모든 앱이 어떻게 되는지 아는 것이 중요합니다.
+When you close your account, it's important to understand what happens to any app that you have published in the Windows Store:
 
--   앱의 현재 고객은 계속 앱을 사용할 수 있습니다. 그러나 앱에서 바로 구매는 할 수 없습니다.
--   이전에 앱을 구입한 고객은 앱을 계속 사용할 수 있지만 스토어에서는 앱 목록이 제거됩니다. 새 고객은 더 이상 앱을 구입할 수 없습니다.
--   다른 개발자가 사용할 수 있도록 앱 이름이 해제됩니다.
--   이전의 앱 매출에 대한 미지급액이 있을 경우 금액이 일반 지급 임계값을 충족하지 않을지라도 해당 잔액에 대한 지급을 요청할 수 있습니다.
-
-
+-   Your app's current customers will still be able to use the app. However, they will not be able to make in-app purchases.
+-   Even though the app is still available to customers who have previously acquired it, your app listing will be removed from the Store. No new customers will be able to acquire your app.
+-   Your app's name will be released for potential use by another developer.
+-   If you have a balance due from previous app sales, you can request payment for that balance even if the amount due does not meet the usual payment threshold.
 
 
 
-<!--HONumber=Nov16_HO1-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

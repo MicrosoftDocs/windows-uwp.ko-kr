@@ -1,46 +1,46 @@
 ---
 author: TylerMSFT
-title: "백그라운드 작업 등록"
-description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다."
+title: Register a background task
+description: Learn how to create a function that can be re-used to safely register most background tasks.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
+ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
+ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 ---
 
-# 백그라운드 작업 등록
+# <a name="register-a-background-task"></a>Register a background task
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**중요 API**
+**Important APIs**
 
--   [**BackgroundTaskRegistration 클래스**](https://msdn.microsoft.com/library/windows/apps/br224786)
--   [**BackgroundTaskBuilder 클래스**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**SystemCondition 클래스**](https://msdn.microsoft.com/library/windows/apps/br224834)
+-   [**BackgroundTaskRegistration class**](https://msdn.microsoft.com/library/windows/apps/br224786)
+-   [**BackgroundTaskBuilder class**](https://msdn.microsoft.com/library/windows/apps/br224768)
+-   [**SystemCondition class**](https://msdn.microsoft.com/library/windows/apps/br224834)
 
-대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다.
+Learn how to create a function that can be re-used to safely register most background tasks.
 
-이 항목은 in-process 백그라운드 작업과 out-of-process 백그라운드 작업에 모두 적용됩니다. 이 항목에서는 등록해야 하는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업을 작성하는 방법에 대한 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md) 또는 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
+This topic is applicable to both in-process background tasks and out-of-process background tasks. This topic assumes that you already have a background task that needs to be registered. (See [Create and register a background task that runs out-of-process](create-and-register-an-outofproc-background-task.md) or [Create and register an in-process background task](create-and-register-an-inproc-background-task.md) for information about how to write a background task).
 
-이 항목에서는 백그라운드 작업을 등록하는 유틸리티 함수를 안내합니다. 이 유틸리티 함수는 작업을 여러 번 등록하기 전에 기존 등록을 확인하여 여러 번 등록과 관련된 문제를 방지하며 백그라운드 작업에 시스템 조건을 적용할 수 있습니다. 이 연습에는 이 유틸리티의 전체 작업 예제가 포함됩니다.
+This topic walks through a utility function that registers background tasks. This utility function checks for existing registrations first before registering the task multiple times to avoid problems with multiple registrations, and it can apply a system condition to the background task. The walkthrough includes a complete, working example of this utility function.
 
-**참고**  
+**Note**  
 
-유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
+Universal Windows apps must call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) before registering any of the background trigger types.
 
-업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+To ensure that your Universal Windows app continues to run properly after you release an update, you must call [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) and then call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) when your app launches after being updated. For more information, see [Guidelines for background tasks](guidelines-for-background-tasks.md).
 
-## 메서드 서명 및 반환 형식 정의
+## <a name="define-the-method-signature-and-return-type"></a>Define the method signature and return type
 
-이 메서드는 작업 진입점, 작업 이름, 미리 구성된 백그라운드 작업 트리거 및 백그라운드 작업에 대한 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)(옵션)을 받아들입니다. 이 메서드는 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) 개체를 반환합니다.
+This method takes in the task entry point, task name, a pre-constructed background task trigger, and (optionally) a [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) for the background task. This method returns a [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) object.
 
 > [!Important]
-> `taskEntryPoint` - Out of process로 실행되는 백그라운드 작업의 경우 네임스페이스 이름, '.' 및 백그라운드 클래스가 포함된 클래스 이름으로 구성되어야 합니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgruondTask1"이 됩니다.
-> 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, in-process 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
+> `taskEntryPoint` - for background tasks that run in out of process, this must be constructed as the namespace name, '.', and the name of the class containing your background class. The string is case-sensitive.  For example, if you had a namespace "MyBackgroundTasks" and a class "BackgroundTask1" that contained your background class code, the string for `taskEntryPoint` would be "MyBackgroundTasks.BackgruondTask1".
+> If your background task runs in the same process as your app (i.e. a in-process background task) `taskEntryPoint` should not be set.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -52,7 +52,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -65,18 +65,18 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 기존 등록 확인
+## <a name="check-for-existing-registrations"></a>Check for existing registrations
 
-작업이 이미 등록되었는지 확인합니다. 작업이 여러 번 등록된 경우 작업이 트리거될 때마다 두 번 이상 실행되어 CPU가 초과되거나 예기치 않은 동작이 발생할 수 있기 때문에 이것을 확인해야 합니다.
+Check whether the task is already registered. It's important to check this because if a task is registered multiple times, it will run more than once whenever it’s triggered; this can use excess CPU and may cause unexpected behavior.
 
-기존 등록을 확인하려면 [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 속성을 쿼리하고 결과를 반복합니다. 각 인스턴스의 이름을 확인합니다. 이 이름이 등록하려는 작업의 이름과 일치하는 경우 루프를 종료하고 플래그 변수를 설정하여 코드에서 다음 단계에는 다른 경로를 선택할 수 있게 합니다.
+You can check for existing registrations by querying the [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) property and iterating on the result. Check the name of each instance – if it matches the name of the task you’re registering, then break out of the loop and set a flag variable so that your code can choose a different path in the next step.
 
-> **참고** 앱에 고유한 백그라운드 작업 이름을 사용하세요. 각 백그라운드 작업의 이름이 고유해야 합니다.
+> **Note**  Use background task names that are unique to your app. Ensure each background task has a unique name.
 
-다음 코드에서는 마지막 단계에서 만든 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 사용하여 백그라운드 작업을 등록합니다.
+The following code registers a background task using the [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) we created in the last step:
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -103,7 +103,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     // We'll register the task in the next step.
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -137,20 +137,20 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 백그라운드 작업 등록(또는 기존 등록 반환)
+## <a name="register-the-background-task-or-return-the-existing-registration"></a>Register the background task (or return the existing registration)
 
 
-작업이 기존 백그라운드 작업 등록 목록에 있는지 확인합니다. 그럴 경우 작업의 해당 인스턴스를 반환합니다.
+Check to see if the task was found in the list of existing background task registrations. If so, return that instance of the task.
 
-그런 다음 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 개체를 사용하여 작업을 등록합니다. 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)을 반환합니다.
+Then, register the task using a new [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) object. This code should check whether the condition parameter is null, and if not, add the condition to the registration object. Return the [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) returned by the [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772) method.
 
-> **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
-> **참고** 앱과 동일한 프로세스에서 실행되는 백그라운드 작업을 등록하는 경우 `taskEntryPoint` 매개 변수에 대해 `String.Empty` 또는 `null`을 전송합니다.
+> **Note**  Background task registration parameters are validated at the time of registration. An error is returned if any of the registration parameters are invalid. Ensure that your app gracefully handles scenarios where background task registration fails - if instead your app depends on having a valid registration object after attempting to register a task, it may crash.
+> **Note** If you are registering a background task that runs in the same process as your app, send `String.Empty` or `null` for the `taskEntryPoint` parameter.
 
-다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.
+The following example either returns the existing task, or adds code that registers the background task (including the optional system condition if present):
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -199,7 +199,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -251,13 +251,13 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 전체 백그라운드 작업 등록 유틸리티 함수
+## <a name="complete-background-task-registration-utility-function"></a>Complete background task registration utility function
 
 
-다음 예제에서는 완성된 백그라운드 작업 등록 함수를 보여 줍니다. 이 함수는 네트워킹 백그라운드 작업을 제외하고 대부분의 백그라운드 작업을 등록하는 데 사용할 수 있습니다.
+This example shows the completed background task registration function. This function can be used to register most background tasks, with the exception of networking background tasks.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -310,7 +310,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -371,26 +371,25 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-> 
-  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
 ****
 
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
-* [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
-* [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
-* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
-* [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
-* [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [백그라운드 작업 디버그](debug-a-background-task.md)
-* [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Create and register an out-of-process background task](create-and-register-an-outofproc-background-task.md)
+* [Create and register an in-process background task](create-and-register-an-inproc-background-task.md)
+* [Declare background tasks in the application manifest](declare-background-tasks-in-the-application-manifest.md)
+* [Handle a cancelled background task](handle-a-cancelled-background-task.md)
+* [Monitor background task progress and completion](monitor-background-task-progress-and-completion.md)
+* [Respond to system events with background tasks](respond-to-system-events-with-background-tasks.md)
+* [Set conditions for running a background task](set-conditions-for-running-a-background-task.md)
+* [Update a live tile from a background task](update-a-live-tile-from-a-background-task.md)
+* [Use a maintenance trigger](use-a-maintenance-trigger.md)
+* [Run a background task on a timer](run-a-background-task-on-a-timer-.md)
+* [Guidelines for background tasks](guidelines-for-background-tasks.md)
+* [Debug a background task](debug-a-background-task.md)
+* [How to trigger suspend, resume, and background events in Windows Store apps (when debugging)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -398,6 +397,6 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

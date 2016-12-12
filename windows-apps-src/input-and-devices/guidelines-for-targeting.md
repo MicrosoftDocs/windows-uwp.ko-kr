@@ -1,21 +1,21 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 Windows 런타임 앱에서 타기팅에 대한 모범 사례를 제공합니다."
-title: "대상 지정"
+Description: This topic describes the use of contact geometry for touch targeting and provides best practices for targeting in Windows Runtime apps.
+title: Targeting
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5707d36533e1b6566efb23ca9b6bf2bbf659cc63
+ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
+ms.openlocfilehash: 09e2241523411daa372bc7630d13b96a2aa8203b
 
 ---
 
-# 대상 지정에 대한 지침
+# <a name="guidelines-for-targeting"></a>Guidelines for targeting
 
-Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
+Touch targeting in Windows uses the full contact area of each finger that is detected by a touch digitizer. The larger, more complex set of input data reported by the digitizer is used to increase precision when determining the user's intended (or most likely) target.
 
-**중요 API**
+**Important APIs**
 
 -   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
@@ -23,44 +23,44 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 
 
-이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
+This topic describes the use of contact geometry for touch targeting and provides best practices for targeting in UWP apps.
 
-## 측정값 및 배율
-
-
-다양한 화면 크기 및 픽셀 밀도에서 일관성을 유지하기 위해서는 모든 대상 크기를 실제 단위(밀리미터)로 나타내야 합니다. 실제 단위는 다음 수식을 사용해서 픽셀로 변환할 수 있습니다.
-
-픽셀 수 = 픽셀 밀도 × 측정값
-
-다음 예제에서는 이 수식을 사용하여 135PPI(인치당 픽셀) 디스플레이 및 1x 배율 플라토에서 9mm 대상 크기에 대한 픽셀 크기를 계산합니다.
-
-픽셀 수 = 135PPI × 9mm
-
-픽셀 수 = 135PPI × (0.03937(mm당 인치 수 × 9mm)
-
-픽셀 수 = 135PPI × 0.35433인치
-
-픽셀 수 = 48픽셀
-
-시스템 내에 정의된 배율 플라토에 따라 결과를 조정해야 합니다.
-
-## 임계값
+## <a name="measurements-and-scaling"></a>Measurements and scaling
 
 
-거리 및 시간 임계값은 조작의 결과를 결정하는 데 사용될 수 있습니다.
+To remain consistent across different screen sizes and pixel densities, all target sizes are represented in physical units (millimeters). Physical units can be converted to pixels by using the following equation:
 
-예를 들어 터치다운이 감지될 경우 개체를 터치다운 지점에서 2.7mm 이내로 끈 다음 터치다운의 0.1초 이내에서 터치를 떼면 탭 동작으로 등록됩니다. 이러한 2.7mm 임계값을 벗어나 손가락을 움직이면 개체가 끌기되고 선택 또는 이동됩니다(자세한 내용은 [가로질러 밀기에 대한 지침](guidelines-for-cross-slide.md) 참조). 앱에 따라 0.1초보다 길게 손가락을 대고 있으면 시스템이 자체 노출 상호 작용을 수행하게 됩니다(자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md#selfreveal) 참조).
+Pixels = Pixel Density × Measurement
 
-## 대상 크기
+The following example uses this formula to calculate the pixel size of a 9 mm target on a 135 pixel per inch (PPI) display at a 1x scaling plateau:
+
+Pixels = 135 PPI × 9 mm
+
+Pixels = 135 PPI × (0.03937 inches per mm × 9 mm)
+
+Pixels = 135 PPI × 0.35433 inches
+
+Pixels = 48 pixels
+
+This result must be adjusted according to each scaling plateau defined by the system.
+
+## <a name="thresholds"></a>Thresholds
 
 
-일반적으로 터치 대상 크기를 9mm 정사각형 이상(135 PPI 디스플레이에서 48x48픽셀, 1.0x 배율 수준)으로 설정합니다. 7mm 정사각형보다 작은 터치 대상을 사용하지 마세요.
+Distance and time thresholds may be used to determine the outcome of an interaction.
 
-다음 다이어그램은 시각적 대상, 실제 대상 크기, 실제 대상과 다른 잠재적 대상 사이의 여백이 조합되어 총 대상 크기가 결정되는 방식을 보여 줍니다.
+For example, when a touch-down is detected, a tap is registered if the object is dragged less than 2.7 mm from the touch-down point and the touch is lifted within 0.1 second or less of the touch-down. Moving the finger beyond this 2.7 mm threshold results in the object being dragged and either selected or moved (for more information, see [Guidelines for cross-slide](guidelines-for-cross-slide.md)). Depending on your app, holding the finger down for longer than 0.1 second may cause the system to perform a self-revealing interaction (for more information, see [Guidelines for visual feedback](guidelines-for-visualfeedback.md)).
 
-![시각적 대상, 실제 대상 및 여백의 권장 크기를 보여 주는 다이어그램](images/targeting-size.png)
+## <a name="target-sizes"></a>Target sizes
 
-다음 표에는 터치 대상의 모든 구성 요소에 대한 최소 크기 및 권장 크기가 나와 있습니다.
+
+In general, set your touch target size to 9 mm square or greater (48x48 pixels on a 135 PPI display at a 1.0x scaling plateau). Avoid using touch targets that are less than 7 mm square.
+
+The following diagram shows how target size is typically a combination of a visual target, actual target size, and any padding between the actual target and other potential targets.
+
+![diagram showing the recommended sizes for the visual target, actual target, and padding.](images/targeting-size.png)
+
+The following table lists the minimum and recommended sizes for the components of a touch target.
 
 <table>
 <colgroup>
@@ -70,101 +70,101 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">대상 구성 요소</th>
-<th align="left">최소 크기</th>
-<th align="left">권장 크기</th>
+<th align="left">Target component</th>
+<th align="left">Minimum size</th>
+<th align="left">Recommended size</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">여백</td>
-<td align="left">2mm</td>
-<td align="left">해당 없음</td>
+<td align="left">Padding</td>
+<td align="left">2 mm</td>
+<td align="left">Not applicable.</td>
 </tr>
 <tr class="even">
-<td align="left">시각적 대상 크기</td>
-<td align="left">&lt; 실제 크기의 60%</td>
-<td align="left">실제 크기의 90-100%
-<p>시각적 대상이 4.2mm 정사각형(권장 최소 대상 크기 7mm의 60%)보다 작을 경우 대부분 사용자는 시각적 대상을 터치할 수 있다는 것을 인식하지 못합니다.</p></td>
+<td align="left">Visual target size</td>
+<td align="left">&lt; 60% of actual size</td>
+<td align="left">90-100% of actual size
+<p>Most users won't realize a visual target is touchable if it's less than 4.2 mm square (60% of the recommended minimum target size of 7 mm).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">실제 대상 크기</td>
-<td align="left">7mm 정사각형</td>
-<td align="left">9mm 정사각형(48 x 48px @ 1x)보다 크거나 같음</td>
+<td align="left">Actual target size</td>
+<td align="left">7 mm square</td>
+<td align="left">Greater than or equal to 9 mm square (48 x 48 px @ 1x)</td>
 </tr>
 <tr class="even">
-<td align="left">총 대상 크기</td>
-<td align="left">11 x 11mm (약 60px: 3개의 20px 눈금 단위 @ 1x)</td>
-<td align="left">13.5 x 13.5mm (72 x 72px @ 1x)
-<p>이것은 실제 대상 및 여백이 조합된 크기가 최소 크기보다 커야 함을 의미합니다.</p></td>
+<td align="left">Total target size</td>
+<td align="left">11 x 11 mm (approximately 60 px: three 20-px grid units @ 1x)</td>
+<td align="left">13.5 x 13.5 mm (72 x 72 px @ 1x)
+<p>This implies that the size of the actual target and padding combined should be larger than their respective minimums.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-이러한 권장 대상 크기는 특정 시나리오에 따라 조정될 수 있습니다. 이 권장 크기에는 일부 고려해야 할 사항이 포함되어 있습니다.
+These target size recommendations can be adjusted as required by your particular scenario. Some of the considerations that went into these recommendations include:
 
--   터치 빈도: 반복되거나 자주 눌리는 대상은 최소 크기보다 크게 지정해 보세요.
--   오류 결과: 터치할 때 심각한 오류가 생기는 대상은 여백보다 커야 하며 콘텐츠 영역보다 커야 합니다. 이는 자주 터치되는 대상의 경우 더 합니다.
--   콘텐츠 영역에서의 위치
--   폼 팩터 및 화면 크기
--   손가락 모양
--   터치 시각화
--   하드웨어 및 터치 디지타이저
+-   Frequency of Touches: Consider making targets that are repeatedly or frequently pressed larger than the minimum size.
+-   Error Consequence: Targets that have severe consequences if touched in error should have greater padding and be placed further from the edge of the content area. This is especially true for targets that are touched frequently.
+-   Position in the content area
+-   Form factor and screen size
+-   Finger posture
+-   Touch visualizations
+-   Hardware and touch digitizers
 
-## 대상 지정 지원
-
-
-Windows에서는 여기에 제공된 최소 크기 또는 여백 권장 지침이 적용될 수 없는 시나리오를 위한 대상 지정 지원을 제공합니다. 예를 들면 웹 페이지의 하이퍼링크, 일정 컨트롤, 드롭다운 목록과 콤보 상자, 텍스트 선택 등이 있습니다.
-
-이러한 대상 지정 플랫폼 개선 기능과 사용자 인터페이스 동작은 시각적 피드백(명확성 UI)과 함께 작동하여 사용자 정확도와 신뢰도를 높여줍니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
-
-터치 가능 요소가 최소 권장 대상 크기보다 작아야 하는 경우 다음 기술을 사용하여 대상 지정 문제를 최소화할 수 있습니다.
-
-## 테더링
+## <a name="targeting-assistance"></a>Targeting assistance
 
 
-테더링은 입력 접촉 지점이 개체와 직접적으로 연결되어 있지 않더라도 개체에 연결하고 개체를 조작함을 사용자에게 알리는 데 사용되는 시각 신호(접촉 지점과 개체의 경계 직사각형을 연결하는 연결선)입니다. 다음과 같은 경우에 이러한 현상이 나타날 수 있습니다.
+Windows provides targeting assistance to support scenarios where the minimum size or padding recommendations presented here are not applicable; for example, hyperlinks on a webpage, calendar controls, drop down lists and combo boxes, or text selection.
 
--   터치 접촉은 일부 개체에 근접한 임계값에서 우선 인식되며 이 개체는 접촉하려고 한 대상으로 식별됩니다.
--   터치 접촉이 개체에서 벗어났어도 접촉은 근접 임계값 내에 여전이 남습니다.
+These targeting platform improvements and user interface behaviors work together with visual feedback (disambiguation UI) to improve user accuracy and confidence. For more information, see [Guidelines for visual feedback](guidelines-for-visualfeedback.md).
 
-JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능이 노출되지 않습니다.
+If a touchable element must be smaller than the recommended minimum target size, the following techniques can be used to minimize the targeting issues that result.
 
-## 스크러빙
-
-
-스크러빙은 대상 필드 내의 아무 위치나 터치한 다음 원하는 대상에 도달할 때까지 손가락을 떼지 않고 미는 동작을 의미합니다. 이 동작을 "이륙 활성화"라고 합니다. 여기서 활성화된 개체는 화면에서 손가락을 뗄 때 마지막으로 터치한 개체입니다.
-
-스크러빙 상호 작용을 설계하는 경우 다음 지침을 따르세요.
-
--   스크러빙은 명확성 UI와 함께 사용됩니다. 자세한 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
--   스크러빙 터치 대상의 권장 최소 크기는 20px(3.75mm @ 1x 크기)입니다.
--   스크러빙은 이동할 수 있는 화면(예: 웹 페이지)에서 수행될 때 가장 우선합니다.
--   스크러빙 대상은 서로 가까이 있어야 합니다.
--   사용자가 스크러빙 대상에서 손가락을 떼면 작업이 취소됩니다.
--   대상이 수행하는 작업이 피해를 주지 않는 작업(예: 날짜 간의 전환)이면 스크러빙 대상에 테더링이 지정됩니다.
--   테더링은 가로, 세로 또는 한 방향으로 지정됩니다.
-
-## 관련 문서
+## <a name="tethering"></a>Tethering
 
 
-**샘플**
-* [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+Tethering is a visual cue (a connector from a contact point to the bounding rectangle of an object) used to indicate to a user that they are connected to, and interacting with, an object even though the input contact isn't directly in contact with the object. This can occur when:
 
-**보관 샘플**
-* [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중 횟수 테스트 샘플](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [입력: Windows 8 제스처 샘플](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처(C++) 샘플](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+-   A touch contact was first detected within some proximity threshold to an object and this object was identified as the most likely target of the contact.
+-   A touch contact was moved off an object but the contact is still within a proximity threshold.
+
+This feature is not exposed to Windows Store app using JavaScript developers.
+
+## <a name="scrubbing"></a>Scrubbing
+
+
+Scrubbing means to touch anywhere within a field of targets and slide to select the desired target without lifting the finger until it is over the desired target. This is also referred to as "take-off activation", where the object that is activated is the one that was last touched when the finger was lifted from the screen.
+
+Use the following guidelines when you design scrubbing interactions:
+
+-   Scrubbing is used in conjunction with disambiguation UI. For more information, see [Guidelines for visual feedback](guidelines-for-visualfeedback.md).
+-   The recommended minimum size for a scrubbing touch target is 20 px (3.75 mm @ 1x size).
+-   Scrubbing takes precedence when performed on a pannable surface, such as a webpage.
+-   Scrubbing targets should be close together.
+-   An action is canceled when the user drags a finger off a scrubbing target.
+-   Tethering to a scrubbing target is specified if the actions performed by the target are non-destructive, such as switching between dates on a calendar.
+-   Tethering is specified in a single direction, horizontally or vertically.
+
+## <a name="related-articles"></a>Related articles
+
+
+**Samples**
+* [Basic input sample](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Low latency input sample](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [User interaction mode sample](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Focus visuals sample](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+
+**Archive samples**
+* [Input: XAML user input events sample](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Input: Device capabilities sample](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Input: Touch hit testing sample](http://go.microsoft.com/fwlink/p/?linkid=231590)
+* [XAML scrolling, panning, and zooming sample](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Input: Simplified ink sample](http://go.microsoft.com/fwlink/p/?linkid=246570)
+* [Input: Windows 8 gestures sample](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Input: Manipulations and gestures (C++) sample](http://go.microsoft.com/fwlink/p/?linkid=231605)
+* [DirectX touch input sample](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  
@@ -175,6 +175,6 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

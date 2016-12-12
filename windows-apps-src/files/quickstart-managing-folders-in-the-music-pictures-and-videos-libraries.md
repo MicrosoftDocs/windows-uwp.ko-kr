@@ -1,48 +1,48 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
-title: "음악, 사진 및 비디오 라이브러리의 파일 및 폴더"
-description: "음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다."
+title: Files and folders in the Music, Pictures, and Videos libraries
+description: Add existing folders of music, pictures, or videos to the corresponding libraries. You can also remove folders from libraries, get the list of folders in a library, and discover stored photos, music, and videos.
 translationtype: Human Translation
-ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
-ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
 
 ---
 
-# 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
+# <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Files and folders in the Music, Pictures, and Videos libraries
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다.
+Add existing folders of music, pictures, or videos to the corresponding libraries. You can also remove folders from libraries, get the list of folders in a library, and discover stored photos, music, and videos.
 
-라이브러리는 기본적으로 알려진 폴더와 사용자가 개발자의 앱 또는 기본 제공 앱 중 하나를 사용하여 라이브러리에 추가한 다른 폴더를 포함하는 가상 폴더 컬렉션입니다. 예를 들어 사진 라이브러리에는 기본적으로 알려진 사진 폴더가 포함되어 있습니다. 사용자는 개발자의 앱 또는 기본 제공 사진 앱을 사용하여 사진 라이브러리에서 폴더를 추가하거나 제거할 수 있습니다.
+A library is a virtual collection of folders, which includes a known folder by default plus any other folders the user has added to the library by using your app or one of the built-in apps. For example, the Pictures library includes the Pictures known folder by default. The user can add folders to, or remove them from, the Pictures library by using your app or the built-in Photos app.
 
-## 필수 조건
-
-
--   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
-
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://msdn.microsoft.com/library/windows/apps/mt187337)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
-
--   **위치에 대한 액세스 권한**
-
-    Visual Studio의 매니페스트 디자이너에서 앱 매니페스트 파일을 엽니다. **기능** 페이지에서 앱이 관리하는 라이브러리를 선택합니다.
-
-    -   **음악 라이브러리**
-    -   **사진 라이브러리**
-    -   **비디오 라이브러리**
-
-    자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
-
-## 라이브러리에 대한 참조 가져오기
+## <a name="prerequisites"></a>Prerequisites
 
 
-**참고** 적절한 접근 권한 값을 선언해야 합니다.
+-   **Understand async programming for Universal Windows Platform (UWP) apps**
+
+    You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). To learn how to write asynchronous apps in C++, see [Asynchronous programming in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+
+-   **Access permissions to the location**
+
+    In Visual Studio, open the app manifest file in Manifest Designer. On the **Capabilities** page, select the libraries that your app manages.
+
+    -   **Music Library**
+    -   **Pictures Library**
+    -   **Videos Library**
+
+    To learn more, see [File access permissions](file-access-permissions.md).
+
+## <a name="get-a-reference-to-a-library"></a>Get a reference to a library
+
+
+**Note**  Remember to declare the appropriate capability.
  
 
-사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) 메서드를 호출합니다. [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) 열거형에서 해당 값을 제공합니다.
+To get a reference to the user's Music, Pictures, or Video library, call the [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725) method. Provide the corresponding value from the [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399) enumeration.
 
 -   [**KnownLibraryId.Music**](https://msdn.microsoft.com/library/windows/apps/br227155)
 -   [**KnownLibraryId.Pictures**](https://msdn.microsoft.com/library/windows/apps/br227156)
@@ -53,10 +53,10 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
         (Windows.Storage.KnownLibraryId.Pictures);
 ```
 
-## 라이브러리에 폴더 목록 가져오기
+## <a name="get-the-list-of-folders-in-a-library"></a>Get the list of folders in a library
 
 
-라이브러리에 폴더 목록을 가져오려면 [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성의 값을 가져옵니다.
+To get the list of folders in a library, get the value of the [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) property.
 
 ```CSharp
     using Windows.Foundation.Collections;
@@ -66,43 +66,43 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
-## 기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오기
+## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>Get the folder in a library where new files are saved by default
 
 
-기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오려면 [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728) 속성의 값을 가져옵니다.
+To get the folder in a library where new files are saved by default, get the value of the [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728) property.
 
 ```CSharp
     Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 ```
 
-## 라이브러리에 기존 폴더 추가
+## <a name="add-an-existing-folder-to-a-library"></a>Add an existing folder to a library
 
 
-라이브러리에 폴더를 추가하려면 [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726)를 호출합니다. 예를 들어 사진 라이브러리의 경우 이 메서드를 호출하면 **사진에 이 폴더 추가** 단추가 포함된 폴더 선택기가 표시됩니다. 사용자가 폴더를 선택한 경우 폴더는 디스크의 원래 위치에 유지되고 [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성(및 기본 제공 사진 앱)의 항목이 되지만 파일 탐색기의 사진 폴더 항목으로 표시되지는 않습니다.
+To add a folder to a library, you call the [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726). Taking the Pictures Library as an example, calling this method causes a folder picker to be shown to the user with an **Add this folder to Pictures** button. If the user picks a folder then the folder remains in its original location on disk and it becomes an item in the [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) property (and in the built-in Photos app), but the folder does not appear as a child of the Pictures folder in File Explorer.
 
 
 ```CSharp
     Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync();
 ```
 
-## 라이브러리에서 폴더 제거
+## <a name="remove-a-folder-from-a-library"></a>Remove a folder from a library
 
 
-라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
+To remove a folder from a library, call the [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) method and specify the folder to be removed. You could use [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) and a [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) control (or similar) for the user to select a folder to remove.
 
-[**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
+When you call [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727), the user sees a confirmation dialog saying that the folder "won't appear in Pictures anymore, but won't be deleted." What this means is that the folder remains in its original location on disk, is removed from the [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) property, and will no longer included in the built-in Photos app.
 
-다음 예제에서는 사용자가 **lvPictureFolders**라는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤에서 제거할 폴더를 선택한 것으로 가정합니다.
+The following example assumes that the user has selected the folder to remove from a [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) control named **lvPictureFolders**.
 
 
 ```CSharp
     bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ```
 
-## 라이브러리의 폴더 목록 변경에 대한 알림 받기
+## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>Get notified of changes to the list of folders in a library
 
 
-라이브러리의 폴더 목록 변경에 대한 알림을 받으려면 라이브러리의 [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723) 이벤트에 대한 처리기를 등록합니다.
+To get notified about changes to the list of folders in a library, register a handler for the [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723) event of the library.
 
 
 ```CSharp
@@ -115,28 +115,28 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 }
 ```
 
-## 미디어 라이브러리 폴더
+## <a name="media-library-folders"></a>Media library folders
 
 
-장치에는 사용자 및 앱이 미디어 파일을 저장하도록 사전 정의된 5개의 위치가 있습니다. 기본 제공 앱은 사용자가 만들었거나 다운로드한 미디어를 모두 이러한 위치에 저장합니다.
+A device provides five predefined locations for users and apps to store media files. Built-in apps store both user-created media and downloaded media in these locations.
 
-위치는 다음과 같습니다.
+The locations are:
 
--   **사진** 폴더. 사진이 있습니다.
+-   **Pictures** folder. Contains pictures.
 
-    -   **카메라 앨범** 폴더. 기본 제공 카메라에서 촬영한 사진 및 동영상이 있습니다.
+    -   **Camera Roll** folder. Contains photos and video from the built-in camera.
 
-    -   **저장된 사진** 폴더. 사용자가 다른 앱에서 저장한 사진이 있습니다.
+    -   **Saved Pictures** folder. Contains pictures that the user has saved from other apps.
 
--   **음악** 폴더. 노래, 팟캐스트 및 오디오 책이 있습니다.
+-   **Music** folder. Contains songs, podcasts, and audio books.
 
--   **비디오** 폴더. 비디오가 있습니다.
+-   **Video** folder. Contains videos.
 
-사용자 또는 앱이 SD 카드에 있는 미디어 라이브러리 폴더 외부에 미디어 파일을 저장할 수도 있습니다. SD 카드에서 안정적으로 미디어 파일을 찾으려면 SD 카드의 콘텐츠를 검사하거나 사용자에게 파일 선택기를 사용하여 파일 위치를 찾도록 요청합니다. 자세한 내용은 [SD 카드에 액세스](access-the-sd-card.md)를 참조하세요.
+Users or apps may also store media files outside the media library folders on the SD card. To find a media file reliably on the SD card, scan the contents of the SD card, or ask the user to locate the file by using a file picker. For more info, see [Access the SD card](access-the-sd-card.md).
 
-## 미디어 라이브러리 쿼리
+## <a name="querying-the-media-libraries"></a>Querying the media libraries
 
-파일의 컬렉션을 가져오려면 원하는 파일 형식과 라이브러리를 지정합니다.
+To get a collection of files, specify the library and the type of files that you want.
 
 ```cs
 ...
@@ -164,29 +164,29 @@ private async void getSongs()
 }
 ```
 
-### 내부 저장소 및 이동식 저장소를 포함하는 쿼리 결과
+### <a name="query-results-include-both-internal-and-removable-storage"></a>Query results include both internal and removable storage
 
-사용자는 기본적으로 옵션 SD 카드에 파일을 저장하도록 선택할 수 있습니다. 하지만 앱에서 SD 카드에 파일이 저장되는 것을 허용하지 않도록 선택할 수 있습니다. 결과적으로, 미디어 라이브러리를 장치 내부 저장소와 SD 카드로 분할할 수 있습니다.
+Users can choose to store files by default on the optional SD card. Apps, however, can opt out of allowing files to be stored on the SD card. As a result, the media libraries can be split across the device's internal storage and the SD card.
 
-이 옵션을 처리하기 위해 추가 코드를 작성할 필요가 없습니다. 알려진 폴더를 쿼리하는 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) 네임스페이스의 메서드가 두 위치 모두의 쿼리 결과를 투명하게 결합합니다. 이와 같이 결합된 결과를 얻기 위해 앱 매니페스트 파일에 **removableStorage** 접근 권한 값을 지정할 필요가 없습니다.
+You don't have to write additional code to handle this possibility. The methods in the [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) namespace that query known folders transparently combine the query results from both locations. You don't have to specify the **removableStorage** capability in the app manifest file to get these combined results, either.
 
-디바이스 저장소의 상태가 다음 이미지에 나온 것과 같다고 가정합니다.
+Consider the state of the device's storage shown in the following image:
 
-![휴대폰 및 SD 카드의 이미지](images/phone-media-locations.png)
+![images on the phone and sd card](images/phone-media-locations.png)
 
-`await KnownFolders.PicturesLibrary.GetFilesAsync()`을(를) 호출하여 사진 라이브러리의 콘텐츠를 쿼리하는 경우 결과에 internalPic.jpg 및 SDPic.jpg 모두가 포함됩니다.
-
-
-## 사진 작업
+If you query the contents of the Pictures Library by calling `await KnownFolders.PicturesLibrary.GetFilesAsync()`, the results include both internalPic.jpg and SDPic.jpg.
 
 
-카메라가 모든 사진의 저해상도 이미지와 고해상도 이미지를 모두 저장하는 장치의 경우 심층 쿼리는 저해상도 이미지만 반환합니다.
+## <a name="working-with-photos"></a>Working with photos
 
-카메라 롤과 저장된 사진 폴더는 심층 쿼리를 지원하지 않습니다.
 
-**사진을 캡처한 앱으로 사진 열기**
+On devices where the camera saves both a low-resolution image and a high-resolution image of every picture, the deep queries return only the low-resolution image.
 
-나중에 사용자가 사진을 캡처한 앱으로 사진을 다시 열 수 있도록 하려면 다음 예제와 비슷한 코드를 사용하여 사진의 메타데이터로 **CreatorAppId**을(를) 저장할 수 있습니다. 이 예제에서 **testPhoto**는 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)입니다.
+The Camera Roll and the Saved Pictures folder do not support the deep queries.
+
+**Opening a photo in the app that captured it**
+
+If you want to let the user open a photo again later in the app that captured it, you can save the **CreatorAppId** with the photo's metadata by using code similar to the following example. In this example, **testPhoto** is a [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 ```CSharp
   IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();
@@ -197,12 +197,12 @@ private async void getSongs()
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## 스트림 메서드를 사용하여 미디어 라이브러리에 파일 추가
+## <a name="using-stream-methods-to-add-a-file-to-a-media-library"></a>Using stream methods to add a file to a media library
 
 
-**KnownFolders.PictureLibrary**과(와) 같은 알려진 폴더를 사용하여 미디어 라이브러리에 액세스하고 스트림 메서드를 사용하여 미디어 라이브러리에 파일을 추가할 때 코드가 연 모든 스트림을 닫아야 합니다. 그렇지 않으면 이러한 메서드가 미디어 라이브러리에 제대로 파일을 추가하지 못합니다. 하나 이상의 스트림에 여전히 파일에 대한 핸들이 있기 때문입니다.
+When you access a media library by using a known folder such as **KnownFolders.PictureLibrary**, and you use stream methods to add a file to the media library, you have to make sure to close all the streams that your code opens. Otherwise these methods fail to add the file to the media library as expected because at least one stream still has a handle to the file.
 
-예를 들어, 다음 코드를 실행할 때 파일이 미디어 라이브러리에 추가되지 않습니다. `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))` 코드 줄에서 **OpenAsync** 메서드와 **GetOutputStreamAt** 메서드가 모두 스트림을 엽니다. 그러나 **using**문을 실행하면 **GetOutputStreamAt** 메서드가 연 스트림만 처리됩니다. 다른 스트림은 열린 상태로 남아 파일을 저장할 수 없게 됩니다.
+For example, when you run the following code, the file is not added to the media library. In the line of code, `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`, both the **OpenAsync** method and the **GetOutputStreamAt** method open a stream. However only the stream opened by the **GetOutputStreamAt** method is disposed as a result of the **using** statement. The other stream remains open and prevents saving the file.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -218,7 +218,7 @@ using (var sourceStream = (await sourceFile.OpenReadAsync()).GetInputStreamAt(0)
 
 ```
 
-스트림 메서드를 사용하여 미디어 라이브러리에 파일을 추가하려면 다음 예제에 표시된 대로 코드가 연 모든 스트림을 닫아야 합니다.
+To use stream methods successfully to add a file to the media library, make sure to close all the streams that your code opens, as shown in the following example.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -246,6 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,70 +1,70 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: "Bookstore에 제공된 정보를 기반으로 하는 이 사례 연구는 LongListSelector에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다."
-title: "UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore2"
+description: This case study, which builds on the info given in Bookstore, begins with a Windows Phone Silverlight app that displays grouped data in a LongListSelector.
+title: Windows Phone Silverlight to UWP case study, Bookstore2
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: f421b42798d9472cd97ec9ed51036bd312c3e79e
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: c85473d8c3267e4f0ccd6018fe5ee349fdf39284
 
 ---
 
-# UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore2
+# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore2"></a>Windows Phone Silverlight to UWP case study: Bookstore2
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-[Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공된 정보를 기반으로 하는 이 사례 연구는 **LongListSelector**에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 단계를 안내합니다.
+This case study—which builds on the info given in [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)—begins with a Windows Phone Silverlight app that displays grouped data in a **LongListSelector**. In the view model, each instance of the class **Author** represents the group of the books written by that author, and in the **LongListSelector**, we can either view the list of books grouped by author or we can zoom out to see a jump list of authors. The jump list affords much quicker navigation than scrolling through the list of books. We walk through the steps of porting the app to a Windows 10 Universal Windows Platform (UWP) app.
 
-**참고** Visual Studio에서 Bookstore2Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion)의 단계를 수행합니다.
+**Note**   When opening Bookstore2Universal\_10 in Visual Studio, if you see the message "Visual Studio update required", then follow the steps for setting Target Platform Version in [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
-## 다운로드
+## <a name="downloads"></a>Downloads
 
-[Bookstore2WPSL8 Windows Phone Silverlight 앱을 다운로드하세요.](http://go.microsoft.com/fwlink/p/?linkid=522601).
+[Download the Bookstore2WPSL8 Windows Phone Silverlight app](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
-[Bookstore2Universal\_10 Windows 10 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532952).
+[Download the Bookstore2Universal\_10 Windows 10 app](http://go.microsoft.com/fwlink/?linkid=532952).
 
-##  Windows Phone Silverlight 앱
+##  <a name="the-windows-phone-silverlight-app"></a>The Windows Phone Silverlight app
 
-포팅할 Bookstore2WPSL8 앱은 다음과 같습니다. 저자가 그룹화한 책의 **LongListSelector**을 세로로 스크롤 하는 것입니다. 점프 목록으로 축소할 수 있으며 점프 목록에서 어떤 그룹으로도 다시 이동할 수 있습니다. 이 앱에는 두 가지 주요 특징이 있습니다. 그룹화된 데이터 원본를 제공하는 보기 모델 및 보기 모델에 바인딩하는 사용자 인터페이스가 그것입니다. 앞으로 자세히 알아보겠지만, 이 두 가지 특징 모두 Windows Phone Silverlight 기술에서 UWP(유니버설 Windows 플랫폼)로 쉽게 포팅합니다.
+The illustration below shows what Bookstore2WPSL8—the app that we're going to port—looks like. It's a vertically-scrolling **LongListSelector** of books grouped by author. You can zoom out to the jump list, and from there, you can navigate back into any group. There are two main pieces to this app: the view model that provides the grouped data source, and the user interface that binds to that view model. As we'll see, both of these pieces port easily from Windows Phone Silverlight technology to the Universal Windows Platform (UWP).
 
-![bookstore2wpsl8 모양](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
+![how bookstore2wpsl8 looks](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
-##  Windows 10 프로젝트로 포팅
+##  <a name="porting-to-a-windows-10-project"></a>Porting to a Windows 10 project
 
-Visual Studio에서 새 프로젝트를 만들고 Bookstore2WPSL8의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore2WPSL8에서 Bookstore2Universal\_10으로 복사할 파일입니다.
+It's a quick task to create a new project in Visual Studio, copy files over to it from Bookstore2WPSL8, and include the copied files in the new project. Start by creating a new Blank Application (Windows Universal) project. Name it Bookstore2Universal\_10. These are the files to copy over from Bookstore2WPSL8 to Bookstore2Universal\_10.
 
--   책 표지 이미지 PNG 파일이 들어 있는 폴더를 복사합니다(폴더는 \\Assets\\CoverImages임) 폴더를 복사한 후에 **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 이 명령은 파일이나 폴더를 프로젝트에 "포함"하여 우리가 의도한 작업을 진행합니다. 파일이나 폴더를 복사할 때마다 **솔루션 탐색기**에서 **새로 고침**을 클릭한 다음 프로젝트에 파일 또는 폴더를 포함합니다. 대상에서 바꾸려는 파일에 대해서는 이 작업을 수행하지 않아도 됩니다.
--   보기 모델 소스 파일이 포함된 폴더(\\ViewModel)를 복사합니다.
--   MainPage.xaml을 복사한 후 대상의 파일을 바꿉니다.
+-   Copy the folder containing the book cover image PNG files (the folder is \\Assets\\CoverImages). After copying the folder, in **Solution Explorer**, make sure **Show All Files** is toggled on. Right-click the folder that you copied and click **Include In Project**. That command is what we mean by "including" files or folders in a project. Each time you copy a file or folder, click **Refresh** in **Solution Explorer** and then include the file or folder in the project. There's no need to do this for files that you're replacing in the destination.
+-   Copy the folder containing the view model source file (the folder is \\ViewModel).
+-   Copy MainPage.xaml and replace the file in the destination.
 
-Windows 10 프로젝트에서 Visual Studio를 통해 생성한 App.xaml 및 App.xaml.cs를 유지할 수 있습니다.
+We can keep the App.xaml, and App.xaml.cs that Visual Studio generated for us in the Windows 10 project.
 
-방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore2WPSL8 네임스페이스에 대한 참조를 Bookstore2Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델 소스 파일의 명령적 코드에서 다음과 같은 포팅 변경이 필요합니다.
+Edit the source code and markup files that you just copied and change any references to the Bookstore2WPSL8 namespace to Bookstore2Universal\_10. A quick way to do that is to use the **Replace In Files** feature. In the imperative code in the view model source file, these porting changes are needed.
 
--   `System.ComponentModel.DesignerProperties`을(를) `DesignMode`(으)로 변경한 다음 **확인** 명령을 사용합니다. `IsInDesignTool` 속성을 삭제하고 IntelliSense를 사용하여 올바른 속성 이름(`DesignModeEnabled`)을 추가합니다.
--   `ImageSource`에서 **확인** 명령을 사용합니다.
--   `BitmapImage`에서 **확인** 명령을 사용합니다.
--   `using System.Windows.Media;` 및 `using System.Windows.Media.Imaging;`을(를) 삭제합니다.
--   **Bookstore2Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "BOOKSTORE2WPSL8"에서 "BOOKSTORE2UNIVERSAL"로 변경합니다.
--   [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)의 경우에서 그랬던 것처럼, **BookSku.CoverImage** 속성 구현을 업데이트합니다([이미지를 보기 모델에 바인딩](wpsl-to-uwp-case-study-bookstore1.md#binding-an-image) 참조).
+-   Change `System.ComponentModel.DesignerProperties` to `DesignMode` and then use the **Resolve** command on it. Delete the `IsInDesignTool` property and use IntelliSense to add the correct property name: `DesignModeEnabled`.
+-   Use the **Resolve** command on `ImageSource`.
+-   Use the **Resolve** command on `BitmapImage`.
+-   Delete `using System.Windows.Media;` and `using System.Windows.Media.Imaging;`.
+-   Change the value returned by the **Bookstore2Universal\_10.BookstoreViewModel.AppName** property from "BOOKSTORE2WPSL8" to "BOOKSTORE2UNIVERSAL".
+-   Just as we did for [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), update the implementation of the **BookSku.CoverImage** property (see [Binding an Image to a view model](wpsl-to-uwp-case-study-bookstore1.md)).
 
-MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
+In MainPage.xaml, these initial porting changes are needed.
 
--   `phone:PhoneApplicationPage`에서 `Page`(으)로 변경합니다(속성 요소 구문에서의 발생 횟수 포함).
--   `phone` 및 `shell` 네임스페이스 접두사 선언을 삭제합니다.
--   나머지 네임스페이스 접두사 선언에서 ‘clr 네임스페이스’를 ‘사용’으로 변경합니다.
--   `SupportedOrientations="Portrait"` 및 `Orientation="Portrait"`를 삭제하고 새 프로젝트의 앱 패키지 매니페스트에서 **세로**를 구성합니다.
--   `shell:SystemTray.IsVisible="True"`을(를) 삭제합니다.
--   점프 목록 항목 변환기 유형(태그에서 리소스로 존재)이 [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) 네임스페이스로 이동했습니다. 따라서 네임스페이스 접두사 선언 Windows\_UI\_Xaml\_Controls\_Primitives를 추가하고 **Windows.UI.Xaml.Controls.Primitives**로 매핑합니다. 점프 목록의 항목 변환기 리소스에서 접두사를 `phone:`에서 `Windows_UI_Xaml_Controls_Primitives:`(으)로 변경합니다.
--   [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)의 경우에서 그랬던 것처럼, `PhoneTextExtraLargeStyle` **TextBlock** 스타일에 대한 모든 참조를 `SubtitleTextBlockStyle`에 대한 참조로 바꾸고, `PhoneTextSubtleStyle`은(는) `SubtitleTextBlockStyle`(으)로, `PhoneTextNormalStyle`은(는) `CaptionTextBlockStyle`(으)로, `PhoneTextTitle1Style`은(는) `HeaderTextBlockStyle`(으)로 바꿉니다.
--   `BookTemplate`의 한 가지 예외가 있습니다. 두 번째 **TextBlock**의 스타일은 `CaptionTextBlockStyle`을 참조해야 합니다.
--   `AuthorGroupHeaderTemplate` 내부의 **TextBlock**에서 FontFamily 특성을 제거하고, **Border**의 Background가 `PhoneAccentBrush` 대신 `SystemControlBackgroundAccentBrush`를 참조하도록 설정합니다.
--   [보기 픽셀 관련 변경](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels)으로 인해, 태그를 살펴보고 고정된 크기 치수(여백, 너비, 높이 등)를 0.8로 곱해야 합니다.
+-   Change `phone:PhoneApplicationPage` to `Page` (including the occurrences in property element syntax).
+-   Delete the `phone` and `shell` namespace prefix declarations.
+-   Change "clr-namespace" to "using" in the remaining namespace prefix declaration.
+-   Delete `SupportedOrientations="Portrait"`, and `Orientation="Portrait"`, and configure **Portrait** in the app package manifest in the new project.
+-   Delete `shell:SystemTray.IsVisible="True"`.
+-   The types of the jump list item converters (which are present in the markup as resources) have moved to the [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818) namespace. So, add the namespace prefix declaration Windows\_UI\_Xaml\_Controls\_Primitives and map it to **Windows.UI.Xaml.Controls.Primitives**. On the jump list item converter resources, change the prefix from `phone:` to `Windows_UI_Xaml_Controls_Primitives:`.
+-   Just as we did for [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md), replace all references to the `PhoneTextExtraLargeStyle` **TextBlock** style with a reference to `SubtitleTextBlockStyle`, replace `PhoneTextSubtleStyle` with `SubtitleTextBlockStyle`, replace `PhoneTextNormalStyle` with `CaptionTextBlockStyle`, and replace `PhoneTextTitle1Style` with `HeaderTextBlockStyle`.
+-   There is one exception in `BookTemplate`. The style of the second **TextBlock** should reference `CaptionTextBlockStyle`.
+-   Remove the FontFamily attribute from the **TextBlock** inside `AuthorGroupHeaderTemplate` and set the Background of the **Border** to reference `SystemControlBackgroundAccentBrush` instead of `PhoneAccentBrush`.
+-   Because of [changes related to view pixels](wpsl-to-uwp-porting-xaml-and-ui.md), go through the markup and multiply any fixed size dimension (margins, width, height, etc) by 0.8.
 
-## LongListSelector 교체
+## <a name="replacing-the-longlistselector"></a>Replacing the LongListSelector
 
 
-**LongListSelector**를 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤로 바꾸는 과정은 여러 단계가 필요합니다. 이제 시작하겠습니다. **LongListSelector**는 그룹화된 데이터 원본에 직접 바인딩하지만 **SemanticZoom**은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) 컨트롤을 포함합니다. 후자의 경우 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) 어댑터를 통해 데이터로 간접적으로 바인딩합니다. **CollectionViewSource**는 태그의 리소스로 존재해야 하기 때문에 먼저 `<Page.Resources>` 내 MainPage.xaml의 태그에 추가하겠습니다.
+Replacing the **LongListSelector** with a [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) control will take several steps, so let's make a start on that. A **LongListSelector** binds directly to the grouped data source, but a **SemanticZoom** contains [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) or [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) controls, which bind indirectly to the data via a [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) adapter. The **CollectionViewSource** needs to be present in the markup as a resource, so let's begin by adding that to the markup in MainPage.xaml inside `<Page.Resources>`.
 
 ```xml
     <CollectionViewSource
@@ -73,9 +73,9 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
         IsSourceGrouped="true"/>
 ```
 
-**LongListSelector.ItemsSource**에서 바인딩하는 경우 **CollectionViewSource.Source** 값이 되며, **LongListSelector.IsGroupingEnabled**은(는) **CollectionViewSource.IsSourceGrouped**이(가) 됩니다. **CollectionViewSource**은(는) 이름이 있기에(참고: 예상처럼 키가 아님) 그 이름에 바인딩할 수 있습니다.
+Note that the binding on **LongListSelector.ItemsSource** becomes the value of **CollectionViewSource.Source**, and **LongListSelector.IsGroupingEnabled** becomes **CollectionViewSource.IsSourceGrouped**. The **CollectionViewSource** has a name (note: not a key, as you might expect) so that we can bind to it.
 
-다음으로 `phone:LongListSelector`를 이 태그로 바꿉니다. 이 태그는 다음과 같이 작업할 임시 **SemanticZoom**을 제공합니다.
+Next, replace the `phone:LongListSelector` with this markup, which will give us a preliminary **SemanticZoom** to work with.
 
 ```xml
     <SemanticZoom>
@@ -98,9 +98,9 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
     </SemanticZoom>
 ```
 
-단순 목록과 점프 목록 모드의 **LongListSelector** 개념에 대한 답변은 확대 및 축소 보기의 **SemanticZoom** 개념에 각각 나와 있습니다. 확대 보기는 하나의 속성이며 **ListView**의 인스턴스에 이 속성을 설정합니다. 이 경우 축소 보기도 **ListView**에 설정되며, 두 **ListView** 컨트롤 모두 **CollectionViewSource**에 바인딩됩니다. 확대 보기는 **LongListSelector**의 단순 목록에서 그랬던 것처럼 동일한 항목 템플릿, 그룹 헤더 템플릿, 그리고 **HideEmptyGroups** 설정(이제는 **HidesIfEmpty**(으)로 명명)을 사용합니다. 또한 축소 보기는 **LongListSelector**의 점프 목록 스타일(`AuthorNameJumpListStyle`) 내에 있는 것과 매우 유사한 항목 템플릿을 사용합니다. 그리고 축소 보기는 **CollectionGroups**라는 이름의 **CollectionViewSource**의 특수 속성에 바인딩됩니다. 이는 항목이 아닌 그룹이 포함된 컬렉션입니다.
+The **LongListSelector** notion of flat list and jump list modes is answered in the **SemanticZoom** notion of a zoomed-in and a zoomed-out view, respectively. The zoomed-in view is a property, and you set that property to an instance of a **ListView**. In this case, the zoomed-out view is also set to a **ListView**, and both **ListView** controls are bound to our **CollectionViewSource**. The zoomed-in view uses the same item template, group header template, and **HideEmptyGroups** setting (now named **HidesIfEmpty**) as the **LongListSelector**'s flat list does. And the zoomed-out view uses an item template very much like the one inside the **LongListSelector**'s jump list style (`AuthorNameJumpListStyle`). Also, note that the zoomed-out view binds to a special property of the **CollectionViewSource** named **CollectionGroups**, which is a collection containing the groups rather than the items.
 
-더 이상 `AuthorNameJumpListStyle`이(가) 필요 없습니다(적어도 전체가 필요하지는 않음). 축소 보기에서 그룹(이 앱의 저자 그룹)에 대한 데이터 템플릿만 필요합니다. 따라서 `AuthorNameJumpListStyle` 스타일을 삭제하고 다음과 같은 데이터 템플릿으로 바꿉니다.
+We no longer need `AuthorNameJumpListStyle`, at least not all of it. We only need the data template for the groups (which are authors in this app) in the zoomed-out view. So, we delete the `AuthorNameJumpListStyle` style and replace it with this data template.
 
 ```xml
    <DataTemplate x:Key="ZoomedOutAuthorTemplate">
@@ -111,39 +111,39 @@ MainPage.xaml에서 다음과 같은 초기 포팅 변경이 필요합니다.
     </DataTemplate>
 ```
 
-이 데이터 템플릿의 데이터 컨텍스트는 항목이 아니라 그룹이기 때문에 **Group**(이)라는 이름의 특수 속성에 바인딩합니다.
+Note that, since the data context of this data template is a group rather than an item, we bind to a special property named **Group**.
 
-이제 앱을 빌드 및 실행할 수 있습니다. 모바일 에뮬레이터에서 모양은 다음과 같습니다.
+You can build and run the app now. Here's how it looks on the mobile emulator.
 
-![초기 소스 코드가 변경된 모바일의 UWP 앱](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
+![the uwp app on mobile with initial source code changes](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
 
-스타일 지정 및 템플릿 작업을 조금 더 해야 하는 한 가지 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 예를 들어 올바른 스타일 및 브러시가 아직 사용되지 않아 텍스트가 클릭하여 축소할 수 있는 그룹 헤더에 표시되지 않습니다. 데스크톱 장치에서 앱을 실행하면 창이 모바일 장치 화면보다 훨씬 클 수 있는 큰 장치에서 최상의 환경 및 사용 공간을 제공하도록 앱에서 해당 사용자 인터페이스를 아직 적용하지 않은 두 번째 문제가 있다는 것을 알게 됩니다. 따라서 다음의 몇몇 섹션([초기 스타일 지정 및 템플릿 작업](#initial-styling-and-templating), [적응 UI](#adaptive-ui) 및 [최종 스타일 지정](#final-styling))에서는 이러한 문제를 해결합니다.
+The view model and the zoomed-in and zoomed-out views are working together correctly, although one issue is that we need to do a little more styling and templating work. For example, the correct styles and brushes are not yet being used, so the text is invisible on the group headers that you can click to zoom out. If you run the app on a desktop device, then you'll see a second issue, which is that the app doesn't yet adapt its user-interface to give the best experience and use of space on larger devices where windows can be potentially much larger than the screen of a mobile device. So, in the next few sections ([Initial styling and templating](#initial-styling-and-templating), [Adaptive UI](#adaptive-ui), and [Final styling](#final-styling)), we'll remedy those issues.
 
-## 초기 스타일 지정 및 템플릿 작업
+## <a name="initial-styling-and-templating"></a>Initial styling and templating
 
-그룹 헤더의 간격을 보기 좋게 지정하려면 `AuthorGroupHeaderTemplate`을 편집하여 **Border**의 **Margin**을 `"0,0,0,9.6"`(으)로 설정합니다.
+To space out the group headers nicely, edit `AuthorGroupHeaderTemplate` and set a **Margin** of `"0,0,0,9.6"` on the **Border**.
 
-Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`을 편집하여 두 **TextBlock**에서 **Margin**을 `"9.6,0"`으로 설정합니다.
+To space out the book items nicely, Edit `BookTemplate` and set the **Margin** to `"9.6,0"` on both **TextBlock**s.
 
-앱 이름 및 페이지 제목을 조금 더 보기 좋게 배치하려면 `TitlePanel` 내부에서 값을 `"7.2,0,0,0"`으로 설정하여 두 번째 **TextBlock**의 위쪽 **Margin**을 제거합니다. 그리고 `TitlePanel` 자체에서 여백을 `0`(또는 적절해 보이는 값)으로 설정합니다.
+To lay out the app name and the page title a little better, inside `TitlePanel`, remove the top **Margin** on the second **TextBlock** by setting the value to `"7.2,0,0,0"`. And on `TitlePanel` itself, set the margin to `0` (or whatever value looks good to you)
 
-`LayoutRoot`의 Background를 `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`로 변경합니다.
+Change `LayoutRoot`'s Background to `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`.
 
-## 적응 UI
+## <a name="adaptive-ui"></a>Adaptive UI
 
-휴대폰 앱에서 시작하였으므로 프로세스의 이 단계에서 포팅된 앱의 UI 레이아웃이 소형 장치와 좁은 창에만 적합한 게 놀라운 일은 아닙니다. 그러나 실제로 앱이 넓은 창(큰 화면이 있는 장치에서만 가능함)에서 실행될 경우 UI 레이아웃이 자체적으로 조정되고 공간을 효과적으로 사용하기를 원하며 앱의 창이 좁은 경우(좁은 창은 작은 장치에서 표시되며 큰 장치에서도 표시될 수 있음)에는 현재 UI를 사용하기를 원합니다.
+Because we started out with a phone app, it's no surprise that our ported app's UI layout really only makes sense for small devices and narrow windows at this stage in the process. But, we'd really like the UI layout to adapt itself and make better use of space when the app is running in a wide window (which is only possible on a device with a large screen), and for it only to use the UI that we have currently when the app's window is narrow (which happens on a small device, and can also happen on a large device).
 
-이를 위해 적응 Visual State Manager 기능을 사용할 수 있습니다. 기본적으로 현재 사용하고 있는 템플릿을 사용하여 좁은 상태에 UI가 배치되도록 시각적 요소에서 속성을 설정합니다. 그런 다음 앱의 창이 특정 크기([유효 픽셀](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels)의 단위로 측정)보다 넓거나 같은 경우를 감지하고 그에 따라 더 크고 넓은 레이아웃을 가져오도록 시각적 요소의 속성을 변경합니다. 시각적 상태에서 해당 속성 변경을 적용하고 적응 트리거를 사용하여 끊임없이 모니터링하고 유효 픽셀의 창 너비에 따라 해당 시각적 상태를 적용할지 여부를 결정합니다. 이 경우 창 너비에서 트리거하지만 창 높이에서도 트리거할 수 있습니다.
+We can use the adaptive Visual State Manager feature to achieve this. We'll set properties on visual elements so that, by default, the UI is laid out in the narrow state using the templates that we're using right now. Then, we'll detect when the app's window is wider-than-or-equal-to a specific size (measured in units of [effective pixels](wpsl-to-uwp-porting-xaml-and-ui.md)), and in response, we'll change the properties of visual elements so that we get a larger, and wider, layout. We'll put those property changes in a visual state, and we'll use an adaptive trigger to continuously monitor and determine whether to apply that visual state, or not, depending on the width of the window in effective pixels. We're triggering on window width in this case, but it's possible to trigger on window height, too.
 
-548epx의 최소 창 너비가 넓은 레이아웃을 표시하려는 가장 작은 장치의 크기이므로 548epx가 이 사용 사례에 적합합니다. 휴대폰은 일반적으로 548epx보다 작으므로 이와 같은 소형 장치에서는 기본적으로 좁은 레이아웃 상태를 유지합니다. PC에서는 기본적으로 250x250 크기의 항목을 표시할 넓은 상태로의 전환을 트리거하기에 충분히 넓은 상태로 창이 시작됩니다. 이러한 넓은 창에서, 창을 끌어 최소한 250x250 항목의 두 열을 표시할 정도로 좁힐 수 있습니다. 그보다 너비를 더 좁히면 트리거가 비활성화되고 넓은 시각적 상태가 제거되며 기본값인 좁은 레이아웃이 적용됩니다.
+A minimum window width of 548 epx is appropriate for this use case because that's the size of the smallest device we would want to show the wide layout on. Phones are typically smaller than 548 epx, so on a small device like that, we'd remain in the default narrow layout. On a PC, the window will launch by default wide enough to trigger the switch to the wide state, which will display 250x250-sized items. From there, you'll be able to drag the window narrow enough to display a minimum of two columns of the 250x250 items. Any narrower than that and the trigger will deactivate, the wide visual state will be removed, and the default narrow layout will be in effect.
 
-적응 Visual State Manager 기능을 사용하기 전에 먼저 넓은 상태를 디자인해야 합니다. 즉, 새로운 몇몇 시각적 요소 및 템플릿을 태그에 추가합니다. 다음 단계에서 이 작업을 수행하는 방법을 설명합니다. 시각적 요소 및 템플릿의 명명 규칙을 통해 넓은 상태에 적합한 요소 또는 템플릿의 이름에 "wide"라는 단어를 포함합니다. 요소 또는 템플릿에 "wide"라는 단어가 포함되어 있지 않으면 요소 또는 템플릿이 좁은 상태에 적합하며 좁은 상태가 기본 상태이고 해당 속성 값이 페이지에서 시각적 요소의 로컬 값으로 설정되었다고 가정할 수 있습니다. 넓은 상태의 속성 값만 태그의 실제 시각적 상태를 통해 설정됩니다.
+Before tackling the adaptive Visual State Manager piece, we first need to design the wide state and that means adding some new visual elements and templates to our markup. These steps describe how to do that. By way of naming conventions for visual elements and templates, we'll include the word "wide" in the name of any element or template that is for the wide state. If an element or template does not contain the word "wide", then you can assume that it is for the narrow state, which is the default state and whose property values are set as local values on visual elements in the page. Only the property values for the wide state are set via an actual Visual State in the markup.
 
--   태그에서 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤의 복사본을 만들고 복사본에서 `x:Name="narrowSeZo"`를 설정합니다. 원본에서 `x:Name="wideSeZo"`를 설정하고 기본적으로 넓은 보기가 표시되지 않도록 `Visibility="Collapsed"`도 설정합니다.
--   `wideSeZo`에서 확대 보기와 축소 보기 둘 다의 **ListView**를 **GridView**로 변경합니다.
--   세 가지 리소스 즉, `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate` 및 `BookTemplate`의 복사본을 만들고 `Wide`라는 단어를 복사본의 키에 추가합니다. 또한 `wideSeZo`도 업데이트하여 이러한 새 리소스의 키를 참조하도록 합니다.
--   `AuthorGroupHeaderTemplateWide`의 내용을 `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`으로 바꿉니다.
--   `ZoomedOutAuthorTemplateWide`의 내용을 다음으로 바꿉니다.
+-   Make a copy of the [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) control in the markup and set `x:Name="narrowSeZo"` on the copy. On the original, set `x:Name="wideSeZo"` and also set `Visibility="Collapsed"` so that the wide one is not visible by default.
+-   In `wideSeZo`, change the **ListView**s to **GridView**s in both the zoomed-in view and the zoomed-out view.
+-   Make a copy of these three resources `AuthorGroupHeaderTemplate`, `ZoomedOutAuthorTemplate`, and `BookTemplate` and append the word `Wide` to the keys of the copies. Also, update `wideSeZo` so that it references the keys of these new resources.
+-   Replace the contents of `AuthorGroupHeaderTemplateWide` with `<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Text="{Binding Name}"/>`.
+-   Replace the contents of `ZoomedOutAuthorTemplateWide` with:
 
 ```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250" >
@@ -156,7 +156,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
     </Grid>
 ```
 
--   `BookTemplateWide`의 내용을 다음으로 바꿉니다.
+-   Replace the contents of `BookTemplateWide` with:
 
 ```xml
     <Grid HorizontalAlignment="Left" Width="250" Height="250">
@@ -174,7 +174,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
     </Grid>
 ```
 
--   넓은 상태의 경우 확대 보기의 그룹은 주변에 더 많은 세로 공간을 필요로 합니다. 항목 패널 템플릿을 생성 및 참조하면 원하는 결과를 얻을 수 있습니다. 태그 모양은 다음과 같습니다.
+-   For the wide state, the groups in the zoomed-in view will need more vertical breathing space around them. Creating and referencing an items panel template will give us the results we want. Here's how the markup looks.
 
 ```xml
    <ItemsPanelTemplate x:Key="ZoomedInItemsPanelTemplate">
@@ -190,7 +190,7 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
             ...
 ```
 
--   마지막으로, 적절한 Visual State Manager 태그를 `LayoutRoot`의 첫 번째 자식으로 추가합니다.
+-   Finally, add the appropriate Visual State Manager markup as the first child of `LayoutRoot`.
 
 ```xml
     <Grid x:Name="LayoutRoot" ... >
@@ -211,13 +211,13 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
     ...
 ```
 
-## 최종 스타일 지정
+## <a name="final-styling"></a>Final styling
 
-이제 몇 가지 최종 스타일 조정 작업이 남아 있습니다.
+All that remains are some final styling tweaks.
 
--   `AuthorGroupHeaderTemplate`에서, 모바일 디바이스 패밀리에서 실행될 때 올바르게 표시되도록 **TextBlock**에서 `Foreground="White"`를 설정합니다.
--   `FontWeight="SemiBold"`를 `AuthorGroupHeaderTemplate`과 `ZoomedOutAuthorTemplate` 둘 다의 **TextBlock**에 추가합니다.
--   `narrowSeZo`에서 축소 보기의 그룹 헤더와 저자는 확대되지 않고 왼쪽 맞춤 정렬됩니다. 이제 시작해보겠습니다. [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417)가 `Stretch`로 설정된 확대 보기의 [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841)을 생성합니다. 또한 동일한 [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)를 포함하고 있는 축소 보기의 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817)을 생성합니다. 다음과 같이 표시됩니다.
+-   In `AuthorGroupHeaderTemplate`, set `Foreground="White"` on the **TextBlock** so that it looks correct when running on the mobile device family.
+-   Add `FontWeight="SemiBold"` to the **TextBlock** in both `AuthorGroupHeaderTemplate` and `ZoomedOutAuthorTemplate`.
+-   In `narrowSeZo`, the group headers and the authors in the zoomed-out view are left-aligned instead of stretched, so let's work on that. We'll create a [**HeaderContainerStyle**](https://msdn.microsoft.com/library/windows/apps/dn251841) for the zoomed-in view with [**HorizontalContentAlignment**](https://msdn.microsoft.com/library/windows/apps/br209417) set to `Stretch`. And we'll create an [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/br242817) for the zoomed-out view containing that same [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817). Here's what that looks like.
 
 ```xml
    <Style x:Key="AuthorGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
@@ -246,37 +246,37 @@ Book 항목의 간격을 보기 좋게 공간을 지정하려면 `BookTemplate`�
                 ...
 ```
 
-스타일 작업의 마지막 시퀀스를 진행하면 앱이 다음과 같은 모양을 유지합니다.
+That last sequence of styling operations leaves the app looking like this.
 
-![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
+![the ported windows 10 app running on a desktop device, zoomed-in view, two sizes of window](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기  
-![데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
+The ported Windows 10 app running on a Desktop device, zoomed-in view, two sizes of window  
+![the ported windows 10 app running on a desktop device, zoomed-out view, two sizes of window](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
-데스크톱 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기, 두 개의 창 크기
+The ported Windows 10 app running on a Desktop device, zoomed-out view, two sizes of window
 
-![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
+![the ported windows 10 app running on a mobile device, zoomed-in view](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
 
-모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 확대 보기
+The ported Windows 10 app running on a Mobile device, zoomed-in view
 
-![모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
+![the ported windows 10 app running on a mobile device, zoomed-out view](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
 
-모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기
+The ported Windows 10 app running on a Mobile device, zoomed-out view
 
-## 보기 모델을 보다 유연하게 만들기
+## <a name="making-the-view-model-more-flexible"></a>Making the view model more flexible
 
-UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 한 가지 예가 이 섹션에 포함되어 있습니다. 여기에서는 **CollectionViewSource**을(를) 통해 액세스한 경우 내 보기 모델을 보다 유연하게 하기 위해 따를 수 있는 선택적 단계에 대해 설명합니다. Windows Phone Silverlight 앱 Bookstore2WPSL8에서 포팅한 보기 모델(소스 파일은 ViewModel\\BookstoreViewModel.cs에 있음)은 Author라는 클래스를 포함합니다. 이 클래스는 **T**가 BookSku인 **List&lt;T&gt;**에서 파생됩니다. 즉, ‘저자’ 클래스 *은(는) BookSku의* 그룹입니다.
+This section contains an example of facilities that open up to us by virtue of having moved our app to use the UWP. Here, we explain optional steps that you can follow to make your view model more flexible when accessed via a **CollectionViewSource**. The view model (the source file is in ViewModel\\BookstoreViewModel.cs) that we ported from the Windows Phone Silverlight app Bookstore2WPSL8 contains a class named Author, which derives from **List&lt;T&gt;**, where **T** is BookSku. That means that the Author class *is a* group of BookSku.
 
-**CollectionViewSource.Source**을(를) '저자들'에 바인딩할 때 중요한 것은 바로 '저자들' 속의 각 '저자'는 *무엇*의 그룹이라는 점입니다. 이 경우에 '저자'가 BookSku의 그룹이라는 점을 **CollectionViewSource**에서 결정하도록 맡깁니다. 이 경우 실행되지만 유연하지 않습니다. '저자'가 BookSku 그룹 *그리고* 저자가 살았던 주소 그룹 *둘 다*이길 바라는 경우에는 어떻게 할까요? '저자'는 양 그룹이 동시에 *될 수 없습니다*. 그러나 '저자'가 가질 수 있는 그룹 수에는 *제한이 없습니다*. 다음과 같이 하면 해결할 수 있습니다. 현재 사용하고 있는 *~는 그룹이다* 패턴 대신 또는 그에 추가로 *~그룹이 있다* 패턴을 사용하는 것입니다. 방법은 다음과 같습니다.
+When we bind **CollectionViewSource.Source** to Authors, the only thing we're communicating is that each Author in Authors is a group of *something*. We leave it to the **CollectionViewSource** to determine that Author is, in this case, a group of BookSku. That works: but it's not flexible. What if we want Author to be *both* a group of BookSku *and* a group of the addresses where the author has lived? Author can't *be* both of those groups. But, Author can *have* any number of groups. And that's the solution: use the *has-a-group* pattern instead of, or in addition to, the *is-a-group* pattern that we're using currently. Here's how:
 
--   저자를 변경하여 그것이 더 이상 **List&lt;T&gt;**에서 파생되지 않도록 합니다.
--   `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();` 이 필드를 ‘저자’에 추가합니다.
--   `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }` 이 속성을 '저자'에 추가합니다.
--   물론 위의 두 단계를 반복하여 필요한 만큼의 '저자들'을 추가할 수 있습니다.
--   AddBookSku 메서드의 구현을 `this.BookSkus.Add(bookSku);`(으)로 변경합니다.
--   이제 '작성자'가 하나 이상의 그룹을 *가졌으므로*, **CollectionViewSource**과(와) 통신해야 합니다. 이렇게 하려면 이 속성을 **CollectionViewSource**에 추가합니다. `ItemsPath="BookSkus"`
+-   Change Author so that it no longer derives from **List&lt;T&gt;**.
+-   Add this field to Author: `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();`.
+-   Add this property to Author: `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }`.
+-   And of course we can repeat the above two steps to add as many groups to Author as we need.
+-   Change the implementation of the AddBookSku method to `this.BookSkus.Add(bookSku);`.
+-   Now that Author *has* at least one group, we need to communicate to the **CollectionViewSource** which of those groups it should use. To do that, add this property to the **CollectionViewSource**: `ItemsPath="BookSkus"`
 
-이런 변경 내용으로도 앱의 기능은 변경되지 않지만 필요할 경우 '저자'와 **CollectionViewSource**을(를) 확장할 수 있는 방법을 우리는 이미 알고 있습니다. '저자'에 대한 마지막 변경 내용입니다. 이 변경을 통해 **CollectionViewSource.ItemsPath**을(를) 지정하지 *않고* '저자'를 사용하는 경우, 선택하는 기본 그룹이 사용됩니다.
+Those changes leave this app functionally unchanged, but you now know how you could extend Author, and the **CollectionViewSource**, should you need to. Let's make one last change to Author so that, if we use it *without* specifying **CollectionViewSource.ItemsPath**, a default group of our choosing will be used:
 
 ```csharp
     public class Author : IEnumerable<BookSku>
@@ -294,14 +294,14 @@ UWP를 사용하도록 앱을 이동함으로써 사용 가능해진 기능의 �
     }
 ```
 
-원할 경우 `ItemsPath="BookSkus"`을(를) 제거할 수 있으며 앱은 동일한 방식으로 작동합니다.
+And now we can choose to remove `ItemsPath="BookSkus"` if we like and the app will still behave the same way.
 
-## 결론
+## <a name="conclusion"></a>Conclusion
 
-이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. Windows Phone Silverlight  **LongListSelector**의 모든 기능, 개념 등이 **SemanticZoom**, **ListView**, **GridView** 및 **CollectionViewSource**의 형태로 UWP 앱에서 사용될 수 있습니다. 가장 좁고 가장 넓은 Windows 디바이스 폼 팩터 및 중간의 모든 크기에 맞게 조정된 기능, UI 및 조작 방식을 구현하기 위해 UWP 앱에서 명령적 코드와 태그를 둘 다 다시 사용하거나 복사 및 편집하는 방법을 살펴보았습니다.
+This case study involved a more ambitious user interface than the previous one. All of the facilities and concepts of the Windows Phone Silverlight **LongListSelector**—and more—were found to be available to a UWP app in the form of **SemanticZoom**, **ListView**, **GridView**, and **CollectionViewSource**. We showed how to re-use, or copy-and-edit, both imperative code and markup in a UWP app to achieve functionality, UI, and interactions tailored to suit the narrowest and widest Windows device form factors and all sizes in-between.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

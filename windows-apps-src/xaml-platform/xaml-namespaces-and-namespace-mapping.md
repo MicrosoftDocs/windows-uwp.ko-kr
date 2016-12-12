@@ -1,119 +1,120 @@
 ---
 author: jwmsft
-description: "이 항목에서는 대부분의 XAML 파일 루트 요소에 있는 XML/XAML 네임스페이스(xmlns) 매핑에 대해 설명합니다. 사용자 지정 유형 및 어셈블리를 위해 유사한 매핑을 생성하는 방법도 설명합니다."
-title: "XAML 네임스페이스 및 네임스페이스 매핑"
+description: This topic explains the XML/XAML namespace (xmlns) mappings as found in the root element of most XAML files. It also describes how to produce similar mappings for custom types and assemblies.
+title: XAML namespaces and namespace mapping
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 translationtype: Human Translation
-ms.sourcegitcommit: 3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5
-ms.openlocfilehash: cca962e4d99599206b8a559c2595ea2b0d8a52c7
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 626af2ba6e1b8616f8d23419d94e621f3ce7d043
 
 ---
 
-# XAML 네임스페이스 및 네임스페이스 매핑
+# <a name="xaml-namespaces-and-namespace-mapping"></a>XAML namespaces and namespace mapping
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-이 항목에서는 대부분의 XAML 파일 루트 요소에 있는 XML/XAML 네임스페이스(**xmlns**) 매핑에 대해 설명합니다. 사용자 지정 유형 및 어셈블리를 위해 유사한 매핑을 생성하는 방법도 설명합니다.
+This topic explains the XML/XAML namespace (**xmlns**) mappings as found in the root element of most XAML files. It also describes how to produce similar mappings for custom types and assemblies.
 
-## XAML 네임스페이스가 정의 및 유형 라이브러리와 관련되는 방식
+## <a name="how-xaml-namespaces-relate-to-code-definition-and-type-libraries"></a>How XAML namespaces relate to code definition and type libraries
 
-XAML은 일반적인 목적과 Windows 런타임 앱 프로그래밍에 적용하기 위한 목적으로 개체, 해당 개체의 속성 그리고 계층으로 표시되는 개체-속성 관계를 선언하는 데 사용됩니다. XAML에서 선언하는 개체는 다른 프로그래밍 기술 및 언어로 정의된 유형 라이브러리나 다른 표현에서 지원합니다. 이러한 라이브러리로는 다음이 있습니다.
+Both in its general purpose and for its application to Windows Runtime app programming, XAML is used to declare objects, properties of those objects, and object-property relationships expressed as hierarchies. The objects you declare in XAML are backed by type libraries or other representations that are defined by other programming techniques and languages. These libraries might be:
 
--   Windows 런타임의 기본 제공 개체 집합. 고정된 개체 집합이며 XAML에서 이러한 개체에 액세스하는 경우 내부 유형 매핑 및 활성화 논리를 사용합니다.
--   Microsoft 또는 타사에서 제공하는 분산 라이브러리
--   앱이 통합하고 패키지가 재배포하는 타사 컨트롤의 정의를 나타내는 라이브러리
--   프로젝트의 일부이며 사용자 코드 정의의 일부 또는 전부가 포함된 고유 라이브러리
+-   The built-in set of objects for the Windows Runtime. This is a fixed set of objects, and accessing these objects from XAML uses internal type-mapping and activation logic.
+-   Distributed libraries that are provided either by Microsoft or by third parties.
+-   Libraries that represent the definition of a third-party control that your app incorporates and your package redistributes.
+-   Your own library, which is part of your project and which holds some or all of your user code definitions.
 
-지원 유형 정보는 특정 XAML 네임스페이스 정의와 관련됩니다. Windows 런타임 등의 XAML 프레임워크는 여러 어셈블리 및 여러 코드 네임스페이스를 집계하여 하나의 XAML 네임스페이스에 매핑할 수 있습니다. 이를 통해 더 큰 프로그래밍 프레임워크 또는 기술을 설명하는 XAML 용어 모음의 개념을 활용할 수 있습니다. XAML 용어 모음은 상당히 종합적일 수 있습니다. 예를 들어 이 참조에서 Windows 런타임 앱에 대해 문서화된 대부분의 XAML이 하나의 XAML 용어 모음을 구성합니다. XAML 용어 모음은 확장 가능하기도 합니다. 지원 코드 정의에 유형을 추가하여 확장하고 이미 XAML 용어 모음의 매핑된 네임스페이스 소스로 사용된 코드 네임스페이스에서 이 유형을 포함하도록 합니다.
+Backing type info is associated with particular XAML namespace definitions. XAML frameworks such as the Windows Runtime can aggregate multiple assemblies and multiple code namespaces to map to a single XAML namespace. This enables the concept of a XAML vocabulary that covers a larger programming framework or technology. A XAML vocabulary can be quite extensive—for example, most of the XAML documented for Windows Runtime apps in this reference constitutes a single XAML vocabulary. A XAML vocabulary is also extensible: you extend it by adding types to the backing code definitions, making sure to include the types in code namespaces that are already used as mapped namespace sources for the XAML vocabulary.
 
-XAML 프로세서는 런타임 개체 표시를 만들 때 해당 XAML 네임스페이스와 관련된 지원 어셈블리에서 유형 및 멤버를 찾을 수 있습니다. 이러한 이유로 XAML은 개체 생성 동작의 정의를 형식화하고 교환하는 유용한 방법이 되었으며 Windows 스토어 앱의 UI 정의 기술로 사용됩니다.
+A XAML processor can look up types and members from the backing assemblies associated with that XAML namespace when it creates a run-time object representation. This is why XAML is useful as a way to formalize and exchange definitions of object-construction behavior, and why XAML is used as a UI definition technique for a Windows Store app.
 
-## 일반 XAML 태그 사용에서의 XAML 네임스페이스
+## <a name="xaml-namespaces-in-typical-xaml-markup-usage"></a>XAML namespaces in typical XAML markup usage
 
-XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페이스를 선언합니다. 기본 XAML 네임스페이스는 접두사로 자격을 부여하지 않고 선언할 수 있는 요소를 정의합니다. 예를 들어 `<Balloon />` 요소를 선언하면 XAML 파서는 **Balloon** 요소가 기본 XAML 네임스페이스에 존재하며 유효할 것으로 예상합니다. 반대로, 정의된 기본 XAML 네임스페이스에 **Balloon**이 없으면 `<party:Balloon />` 같은 접두사를 사용하여 대신 해당 요소 이름에 자격을 부여해야 합니다. 이 접두사는 기본 네임스페이스가 아닌 다른 XAML 네임스페이스에 요소가 있으며 이 요소를 사용하려면 먼저 **party** 접두사에 XAML 네임스페이스를 매핑해야 함을 나타냅니다. XAML 네임스페이스는 선언되는 특정 요소에 적용되며 XAML 구조에서 해당 요소에 포함되어 있는 모든 요소에도 적용됩니다. 이러한 이유로 XAML 네임스페이스는 거의 항상 XAML 파일의 루트 요소에서 선언되어 이 상속을 이용합니다.
+A XAML file almost always declares a default XAML namespace in its root element. The default XAML namespace defines which elements you can declare without qualifying them by a prefix. For example, if you declare an element `<Balloon />`, a XAML parser will expect that an element **Balloon** exists and is valid in the default XAML namespace. In contrast, if **Balloon** is not in the defined default XAML namespace, you must instead qualify that element name with a prefix, for example `<party:Balloon />`. The prefix indicates that the element exists in a different XAML namespace than the default namespace, and you must map a XAML namespace to the prefix **party** before you can use this element. XAML namespaces apply to the specific element on which they are declared, and also to any element that is contained by that element in the XAML structure. For this reason, XAML namespaces are almost always declared on root elements of a XAML file to take advantage of this inheritance.
 
-## 기본 및 XAML 언어 XAML 네임스페이스 선언
+## <a name="the-default-and-xaml-language-xaml-namespace-declarations"></a>The default and XAML language XAML namespace declarations
 
-대부분의 XAML 파일의 루트 요소 내에는 두 개의 **xmlns** 선언이 있습니다. 첫 번째 선언은 XAML 네임스페이스를 기본값으로 매핑합니다. `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
+Within the root element of most XAML files, there are two **xmlns** declarations. The first declaration maps a XAML namespace as the default: `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
 
-XAML을 UI 정의 태그 형식으로 사용하는 여러 이전 Microsoft 기술에 사용된 XAML 네임스페이스 식별자와 동일합니다. 동일한 식별자 사용은 의도적이며 C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱으로 이전에 정의된 UI를 마이그레이션하는 경우에 유용합니다.
+This is the same XAML namespace identifier used in several predecessor Microsoft technologies that also use XAML as a UI definition markup format. The use of the same identifier is deliberate, and is helpful when you migrate previously defined UI to a Windows Runtime app using C++, C#, or Visual Basic.
 
-두 번째 선언은 XAML 정의 언어 요소의 개별 XAML 네임스페이스를 일반적으로 "x:" 접두사에 매핑합니다. `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
+The second declaration maps a separate XAML namespace for the XAML-defined language elements, mapping it (typically) to the "x:" prefix: `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
 
-이 **xmlns** 값과, 이 값이 매핑된 "x:" 접두사도 XAML을 사용하는 몇 가지 이전 Microsoft 기술에 사용된 정의와 동일합니다.
+This **xmlns** value, and the "x:" prefix it is mapped to, is also identical to the definitions used in several predecessor Microsoft technologies that use XAML.
 
-이러한 선언 사이의 관계를 보면, XAML은 언어 정의이며 Windows 런타임은 XAML을 언어로 사용하고 해당 유형이 XAML에서 참조되는 특정 용어 모음을 정의하는 하나의 구현입니다.
+The relationship between these declarations is that XAML is a language definition, and the Windows Runtime is one implementation that uses XAML as a language and defines a specific vocabulary where its types are referenced in XAML.
 
-XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 XAML 네임스페이스에 대해 작동하는 XAML 프로세서 구현을 통해 액세스할 수 있어야 합니다. 프로젝트 템플릿, 샘플 코드 및 언어 기능 설명서는 XAML 언어 XAML 네임스페이스의 "x:" 매핑 규칙을 따릅니다. XAML 언어 네임스페이스는 공통으로 사용되는 여러 기능을 정의합니다. 이러한 기능은 C++, C# 또는 Visual Basic으로 작성된 기본 Windows 런타임 앱에도 필요합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 조인하려면 먼저 관련 XAML 파일의 루트 요소에서 해당 클래스를 [x:Class 특성](x-class-attribute.md)으로 명명해야 합니다. 또는 XAML 페이지에 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273)의 키 입력 리소스로 정의된 모든 요소는 해당 개체 요소에서 [x:Key 특성](x-key-attribute.md)이 설정되어 있어야 합니다.
+The XAML language specifies certain language elements, and each of these should be accessible through XAML processor implementations working against the XAML namespace. The "x:" mapping convention for the XAML language XAML namespace is followed by project templates, sample code, and the documentation for language features. The XAML language namespace defines several commonly used features that are necessary even for basic Windows Runtime apps using C++, C#, or Visual Basic. For example, to join any code-behind to a XAML file through a partial class, you must name that class as the [x:Class attribute](x-class-attribute.md) in the root element of the relevant XAML file. Or, any element as defined in a XAML page as a keyed resource in a [ResourceDictionary and XAML resource references](https://msdn.microsoft.com/library/windows/apps/mt187273) must have the [x:Key attribute](x-key-attribute.md) set on the object element in question.
 
-## 다른 XAML 네임스페이스
+<span id="other-XAML-namespaces"/>
+## <a name="other-xaml-namespaces"></a>Other XAML namespaces
 
-기본 네임스페이스 및 XAML 언어 XAML 네임스페이스 "x:" 외에도 다른 매핑된 XAML 네임스페이스를 Microsoft Visual Studio에서 생성된 앱용 초기 기본 XAML에서 볼 수 있습니다.
+In addition to the default namespace and the XAML language XAML namespace "x:", you may also see other mapped XAML namespaces in the initial default XAML for apps as generated by Microsoft Visual Studio.
 
-### **d: (`http://schemas.microsoft.com/expression/blend/2008`)**
+### **<a name="d-httpschemasmicrosoftcomexpressionblend2008"></a>d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
-"d:" XAML 네임스페이스는 디자이너 지원 특히 Microsoft Visual Studio의 XAML 디자인 화면에서 디자이너를 지원하기 위한 것입니다. "d:" XAML 네임스페이스를 통해 XAML 요소에서 디자이너 또는 디자인-시간 특성을 사용할 수 있습니다. 이러한 디자이너 특성은 XAML 작동 방식의 디자인 측면에만 영향을 줍니다. 앱 실행 시 Windows 런타임 XAML 파서에 동일한 XAML이 로드되면 디자이너 특성은 무시됩니다. 일반적으로 디자이너 특성은 모든 XAML 요소에서 유효하지만 실제로 디자이너 특성 적용이 적절한 시나리오는 한정되어 있습니다. 특히 많은 디자이너 특성이 데이터 바인딩을 사용하는 코드와 XAML을 개발하는 동안 데이터 컨텍스트와 데이터 원본 조작 환경을 향상시키기 위한 것입니다.
+The "d:" XAML namespace is intended for designer support, specifically designer support in the XAML design surfaces of Microsoft Visual Studio. The" d:" XAML namespace enables designer or design-time attributes on XAML elements. These designer attributes affect only the design aspects of how XAML behaves. The designer attributes are ignored when the same XAML is loaded by the Windows Runtime XAML parser when an app runs. Generally, the designer attributes are valid on any XAML element, but in practice there are only certain scenarios where applying a designer attribute yourself is appropriate. In particular, many of the designer attributes are intended to provide a better experience for interacting with data contexts and data sources while you are developing XAML and code that use data binding.
 
--   **d:DesignHeight 및 d:DesignWidth 특성:** 경우에 따라 두 특성은 Visual Studio 또는 다른 XAML 디자이너 화면에서 만드는 XAML 파일의 루트에 적용됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
+-   **d:DesignHeight and d:DesignWidth attributes:** These attributes are sometimes applied to the root of a XAML file that Visual Studio or another XAML designer surface creates for you. For example, these attributes are set on the [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647) root of the XAML that is created if you add a new **UserControl** to your app project. These attributes make it easier to design the composition of the XAML content, so that you have some anticipation of the layout constraints that might exist once that XAML content is used for a control instance or other part of a larger UI page.
 
-   **참고** Microsoft Silverlight에서 XAML을 마이그레이션하는 경우 전체 UI 페이지를 나타내는 루트 요소에 이러한 특성이 있을 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
+   **Note**  If you are migrating XAML from Microsoft Silverlight you might have these attributes on root elements that represent an entire UI page. You might want to remove the attributes in this case. Other features of the XAML designers such as the simulator are probably more useful for designing page layouts that handle scaling and view states well than is a fixed size page layout using **d:DesignHeight** and **d:DesignWidth**.
 
--   **d:DataContext 특성:** 페이지 루트나 컨트롤에 이 특성을 설정하면 특성이 없을 경우 개체에 포함되는 명시적 또는 상속된 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)를 재정의할 수 있습니다.
--   **d:DesignSource 특성:** [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)에 대해 디자인 타임 데이터 원본을 지정하고 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835)를 재정의합니다.
--   **d:DesignInstance 및 d:DesignData 태그 확장:** 두 태그 확장은 **d:DataContext** 또는 **d:DesignSource**에 대한 디자인 타임 데이터 리소스를 제공하는 데 사용됩니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](http://go.microsoft.com/fwlink/p/?LinkId=272504)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://msdn.microsoft.com/library/windows/apps/mt517866)를 참조하세요.
+-   **d:DataContext attribute:** You can set this attribute on a page root or a control to override any explicit or inherited [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) that object otherwise has.
+-   **d:DesignSource attribute:** Specifies a design-time data source for a [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833), overriding [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835).
+-   **d:DesignInstance and d:DesignData markup extensions:** These markup extensions are used to provide the design-time data resources for either **d:DataContext** or **d:DesignSource**. We won't fully document how to use design-time data resources here. For more info, see [Design-Time Attributes](http://go.microsoft.com/fwlink/p/?LinkId=272504). For some usage examples, see [Sample data on the design surface, and for prototyping](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
+### **<a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
-"mc:"는 XAML 읽기에 필요한 태그 호환 모드를 나타내고 지원합니다. 일반적으로 "d:" 접두사는 **mc:Ignorable** 특성과 관련됩니다. 이 기술을 통해 런타임 XAML 파서에서 "d:"의 디자인 특성을 무시할 수 있습니다.
+" mc:" indicates and supports a markup compatibility mode for reading XAML. Typically, the "d:" prefix is associated with the attribute **mc:Ignorable**. This technique enables run-time XAML parsers to ignore the design attributes in "d:".
 
-### **local:** 및 **common:**
+### <a name="local-and-common"></a>**local:** and **common:**
 
-"local:" 템플릿 기반의 Windows 스토어 앱 프로젝트에 대해 XAML 페이지 내에서 자주 매핑되는 접두사입니다. [x:Class 특성](x-class-attribute.md) 및 app.xaml을 비롯한 모든 XAML 파일에 대한 코드를 포함하도록 생성된 동일한 네임스페이스를 참조하도록 매핑되어 있습니다. 이 동일한 네임스페이스에서 XAML에 사용할 사용자 지정 클래스를 정의하는 경우 **local:** 접두사를 사용하여 XAML의 사용자 지정 유형을 참조할 수 있습니다. 템플릿 기반의 Windows 스토어 앱 프로젝트에서 가져온 관련 접두사는 **common:**입니다. 이 접두사는 변환기 및 명령과 같은 유틸리티 클래스를 포함하고 있는 중첩된 "Common" 네임스페이스를 참조하며, 개발자는 **솔루션 탐색기** 보기에서 Common 폴더에 있는 정의를 찾을 수 있습니다.
+"local:" is a prefix that is often mapped for you within the XAML pages for a templated Windows Store app project. It's mapped to refer to the same namespace that's created to contain the [x:Class attribute](x-class-attribute.md) and code for all the XAML files including app.xaml. So long as you define any custom classes you want to use in XAML in this same namespace, you can use the **local:** prefix to refer to your custom types in XAML. A related prefix that comes from a templated Windows Store app project is **common:**. This prefix refers to a nested "Common" namespace that contains utility classes such as converters and commands, and you can find the definitions in the Common folder in the **Solution Explorer** view.
 
-### **vsm:**
+### **<a name="vsm"></a>vsm:**
 
-사용하지 마세요. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)을 참조하세요.
+Do not use. "vsm:" is a prefix that is sometimes seen in older XAML templates imported from other Microsoft technologies. The namespace originally addressed a legacy namespace tooling issue. You should delete XAML namespace definitions for "vsm:" in any XAML you use for the Windows Runtime, and change any prefix usages for [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007), [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014) and related objects to use the default XAML namespace instead. For more info on XAML migration, see [Migrating Silverlight or WPF XAML/code to a Windows Runtime app](https://msdn.microsoft.com/library/windows/apps/br229571).
 
-## XAML 네임스페이스 및 접두사에 사용자 지정 유형 매핑
+## <a name="mapping-custom-types-to-xaml-namespaces-and-prefixes"></a>Mapping custom types to XAML namespaces and prefixes
 
-고유 사용자 지정 유형에 액세스하는 데 XAML을 사용할 수 있도록 XAML 네임스페이스를 매핑할 수 있습니다. 다시 말해 사용자 지정 유형을 정의하는 코드 표현에 있는 그대로 코드 네임스페이스를 매핑한 후 사용을 위한 접두사와 함께 XAML 네임스페이스에 할당합니다. XAML의 사용자 지정 유형은 Microsoft .NET 언어(C# 또는 Microsoft Visual Basic) 또는 C++로 정의될 수 있습니다. 매핑은 **xmlns** 접두사를 정의하여 수행합니다. 예를 들어 `xmlns:myTypes`에서는 `myTypes:` 토큰으로 모든 사용에 접두사를 지정하여 액세스하는 새 XAML 네임스페이스를 정의합니다.
+You can map a XAML namespace so that you can use XAML to access your own custom types. In other words, you are mapping a code namespace as it exists in a code representation that defines the custom type, and assigning it a XAML namespace along with a prefix for usage. Custom types for XAML can be defined either in a Microsoft .NET language (C# or Microsoft Visual Basic) or in C++. The mapping is made by defining an **xmlns** prefix. For example, `xmlns:myTypes` defines a new XAML namespace that is accessed by prefixing all usages with the token `myTypes:`.
 
-**xmlns** 정의는 접두사 명명은 물론 값도 포함합니다. 이 값은 등호 뒤, 따옴표 안에 오는 문자열입니다. 일반적인 XML 규칙은 고유성 및 식별 규칙이 존재하도록 XML 네임스페이스를 URI(Uniform Resource Identifier)와 연결하는 것입니다. Windows 런타임 XAML에서 드물게 사용되는 일부 XAML 네임스페이스는 물론 기본 XAML 네임스페이스와 XAML 언어 XAML 네임스페이스에서도 이 규칙을 볼 수 있습니다. 그러나 URI를 지정하지 않고 사용자 지정 유형을 매핑하는 XAML 네임스페이스의 경우 "using:" 토큰을 사용하여 접두사 정의를 시작합니다. "using:" 토큰 다음에는 코드 네임스페이스를 명명합니다.
+An **xmlns** definition includes a value as well as the prefix naming. The value is a string that goes inside quotation marks, following an equal sign. A common XML convention is to associate the XML namespace with a Uniform Resource Identifier (URI), so that there is a convention for uniqueness and identification. You also see this convention for the default XAML namespace and the XAML language XAML namespace, as well as for some lesser-used XAML namespaces that are used by Windows Runtime XAML. But for a XAML namespace that maps custom types, instead of specifying a URI, you begin the prefix definition with the token "using:". Following the "using:" token, you then name the code namespace.
 
-예를 들어 "CustomClasses" 네임스페이스를 참조할 수 있는 "custom1" 접두사를 매핑하여 해당 네임스페이스 또는 어셈블리의 클래스를 XAML의 개체 요소로 사용하려면 XAML 페이지에 루트 요소에 대한 다음 매핑이 있어야 합니다. `xmlns:custom1="using:CustomClasses"`
+For example, to map a "custom1" prefix that enables you to reference a "CustomClasses" namespace, and use classes from that namespace or assembly as object elements in XAML, your XAML page should include the following mapping on the root element: `xmlns:custom1="using:CustomClasses"`
 
-동일한 페이지 범위의 partial 클래스는 매핑할 필요가 없습니다. 예를 들어 페이지 XAML UI 정의의 이벤트를 처리하기 위해 정의한 이벤트 처리기를 참조하는 데는 접두사가 필요하지 않습니다. C++, C# 또는 Visual Basic으로 작성된 Windows 런타임 앱 프로젝트가 생성된 Visual Studio의 여러 시작 XAML 페이지도 이미 프로젝트에서 지정한 기본 네임스페이스와 partial 클래스 정의에 사용된 네임스페이스를 참조하는 "local:" 접두사를 매핑합니다.
+Partial classes of the same page scope do not need to be mapped. For example, you don't need prefixes to reference any event handlers that you defined for handling events from the XAML UI definition of your page. Also, many of the starting XAML pages from Visual Studio generated projects for a Windows Runtime app using C++, C#, or Visual Basic already map a "local:" prefix, which references the project-specified default namespace and the namespace used by partial class definitions.
 
-### CLR 언어 규칙
+### <a name="clr-language-rules"></a>CLR language rules
 
-지원 코드를 .NET 언어(C# 또는 Microsoft Visual Basic)로 작성하는 경우 코드 네임스페이스의 개념 계층을 만들기 위해 점(".")을 네임스페이스 이름의 일부로 사용하는 규칙을 사용할 수 있습니다. 네임스페이스 정의에 점이 포함되는 경우 이 점은 "using:" 토큰 뒤에 지정하는 값의 일부여야 합니다.
+If you are writing your backing code in a .NET language (C# or Microsoft Visual Basic), you might be using conventions that use a dot (".") as part of namespace names to create a conceptual hierarchy of code namespaces. If your namespace definition contains a dot, the dot should be part of the value you specify after the "using:" token.
 
-코드 숨김 파일 또는 코드 정의 파일이 C++ 파일일 경우 CLR(공용 언어 런타임) 언어 폼을 계속 따르는 특정 규칙이 있어서 XAML 구문에서 차이가 없습니다. C++에서 중첩 네임스페이스를 선언하면 "using:" 토큰 뒤의 값을 지정하는 경우 연속된 중첩 네임스페이스 문자열 사이의 구분 기호가 "::"이 아닌 "."여야 합니다.
+If your code-behind file or code definition file is a C++ file, there are certain conventions that still follow the common language runtime (CLR) language form, so that there is no difference in the XAML syntax. If you declare nested namespaces in C++, the separator between the successive nested namespace strings should be "." rather than "::" when you specify the value that follows the "using:" token.
 
-XAML에서 사용할 코드를 정의할 때 중첩 유형(예: 클래스 내에 열거 중첩)을 사용하지 마세요. 중첩 유형은 평가할 수 없습니다. XAML 파서는 점이 네임스페이스 이름의 일부가 아니라 중첩 형식 이름의 일부인지 구별할 수 없습니다.
+Don't use nested types (such as nesting an enumeration within a class) when you define your code for use with XAML. Nested types can't be evaluated. There's no way for the XAML parser to distinguish that a dot is part of the nested type name rather than part of the namespace name.
 
-## 사용자 지정 유형 및 어셈블리
+## <a name="custom-types-and-assemblies"></a>Custom types and assemblies
 
-XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이름은 매핑에서 지정되지 않습니다. 사용 가능한 어셈블리에 대한 논리는 앱 정의 수준에서 제어되며 기본 앱 배포 및 보안 원칙의 일부입니다. XAML에 대한 코드 정의 소스로 포함시키려는 모든 어셈블리를 프로젝트 설정의 종속 어셈블리로 선언하세요. 자세한 내용은 [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)를 참조하세요.
+The name of the assembly that defines the backing types for a XAML namespace is not specified in the mapping. The logic for which assemblies are available is controlled at the app-definition level and is part of basic app deployment and security principles. Declare any assembly that you want included as a code-definition source for XAML as a dependent assembly in project settings. For more info, see [Creating Windows Runtime components in C# and Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx).
 
-기본 앱의 응용 프로그램 정의 또는 페이지 정의에서 사용자 지정 유형을 참조하는 경우 추가 종속 어셈블리 구성 없이 해당 유형을 사용할 수 있으나 여전히 해당 유형이 포함된 코드 네임스페이스를 매핑해야 합니다. 일반적인 규칙은 지정된 XAML 페이지의 기본 코드 네임스페이스에 대해 "local" 접두사를 매핑하는 것입니다. 이 규칙은 XAML 프로젝트의 시작 프로젝트 템플릿에 포함되는 경우가 많습니다.
+If you are referencing custom types from the primary app's application definition or page definitions, those types are available without further dependent assembly configuration, but you still must map the code namespace that contains those types. A common convention is to map the prefix "local" for the default code namespace of any given XAML page. This convention is often included in starting project templates for XAML projects.
 
-## 연결된 속성
+## <a name="attached-properties"></a>Attached properties
 
-연결된 속성을 참조하는 경우 연결된 속성 이름이 소유자 형식 부분은 기본 XAML 네임스페이스로 사용되거나 접두사를 붙일 수 있습니다. 특성 요소와 별개로 특정에 접두사를 붙이는 경우는 드물지만 가끔 필요할 때, 특히 사용자 지정 연결된 속성의 경우에는 접두사를 붙입니다. 자세한 내용은 [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요.
+If you are referencing attached properties, the owner-type portion of the attached property name must either be in the default XAML namespace or be prefixed. It's rare to prefix attributes separately from their elements but this is one case where it's sometimes required, particularly for a custom attached property. For more info, see [Custom attached properties](custom-attached-properties.md).
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-* [XAML 개요](xaml-overview.md)
-* [XAML 구문 가이드](xaml-syntax-guide.md)
-* [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
-* [Windows 런타임 앱용 C#, VB 및 C++ 프로젝트 템플릿](https://msdn.microsoft.com/library/windows/apps/hh768232)
-* [Silverlight 또는 WPF XAML/코드를 Windows 런타임 앱으로 마이그레이션](https://msdn.microsoft.com/library/windows/apps/br229571)
+* [XAML overview](xaml-overview.md)
+* [XAML syntax guide](xaml-syntax-guide.md)
+* [Creating Windows Runtime components in C# and Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
+* [C#, VB, and C++ project templates for Windows Runtime apps](https://msdn.microsoft.com/library/windows/apps/hh768232)
+* [Migrating Silverlight or WPF XAML/code to a Windows Runtime app](https://msdn.microsoft.com/library/windows/apps/br229571)
  
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

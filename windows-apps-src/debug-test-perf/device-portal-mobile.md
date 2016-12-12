@@ -1,82 +1,82 @@
 ---
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: "모바일용 디바이스 포털"
-description: "Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다."
+title: Device Portal for Mobile
+description: Learn how the Windows Device Portal lets you remotely configure and manage your mobile device.
 translationtype: Human Translation
-ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
-ms.openlocfilehash: 802030f12f2ca3e29eec053d89ab806298974dc7
+ms.sourcegitcommit: ea4f755afbf16d4ba5043ebb6be586f19dcc4370
+ms.openlocfilehash: c39c1a843c4f466e1999b4e80bf87f5842ad1996
 
 ---
-# 모바일용 디바이스 포털
+# <a name="device-portal-for-mobile"></a>Device Portal for Mobile
 
-Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바이스 패밀리에 사용할 수 있습니다. 이러한 기능은 개발자 모드를 디바이스에서 사용하는 경우에만 사용됩니다.
+Starting in Windows 10, Version 1511, additional developer features are available for the mobile device family. These features are available only when Developer mode is enabled on the device.
 
-개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
+For info about how to enable Developer mode, see [Enable your device for development](../get-started/enable-your-device-for-development.md).
 
-![디바이스 포털 설정](images/device-portal/mob-dev-mode-options.png)
+![Device Portal settings](images/device-portal/mob-dev-mode-options.png)
 
-## Windows Phone에서 디바이스 포털 설정
+## <a name="set-up-device-portal-on-windows-phone"></a>Set up Device Portal on Windows Phone
 
-### 디바이스 검색 및 페어링 켜기
+### <a name="turn-on-device-discovery-and-pairing"></a>Turn on device discovery and pairing
 
-디바이스 포털에 연결하려면 디바이스 검색을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
+To connect to Device Portal, you must enable Device discovery and Device Portal. This lets you pair your phone with a PC or other Windows 10 device. Both devices must be connected to the same subnet of the network by a wired or wireless connection, or they must be connected by USB.
 
-처음으로 디바이스 포털에 연결할 때 대/소문자가 구분된 6개의 문자로 된 보안 코드를 입력해야 합니다. 이렇게 하면 휴대폰에 액세스할 수 있으며 공격자로부터 보안을 유지할 수 있습니다. 휴대폰의 페어링 단추를 눌러 코드를 생성하고 표시한 다음 브라우저의 텍스트 상자에 6개의 문자를 입력합니다.
+The first time you connect to Device Portal, you are asked for a case-sensitive, 6 character security code. This ensures that you have access to the phone, and keeps you safe from attackers. Press the Pair button on your phone to generate and display the code, then enter the 6 characters into the text box in the browser.
 
-![개발자 모드 디바이스 검색 설정](images/device-portal/mob-dev-mode-pairing.png)
+![Developer mode device discovery settings](images/device-portal/mob-dev-mode-pairing.png)
 
-USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함)를 통하는 세 가지 방법 중 선택하여 디바이스 포털에 연결할 수 있습니다.
+You can choose from 3 ways to connect to Device Portal: USB, local host, and over the local network (including VPN and tethering).
 
-**디바이스 포털에 연결하려면**
+**To connect to Device Portal**
 
-1. 브라우저에 사용할 연결 형식에 대해 표시된 주소를 입력합니다.
+1. In your browser, enter the address shown here for the connection type you're using.
 
     - USB: `http://127.0.0.1:10080`
 
-    USB 연결을 통해 휴대폰을 PC에 연결할 때 이 주소를 사용합니다. 두 디바이스에 Windows 10 버전 1511 이상이 설치되어 있어야 합니다.
+    Use this address when the phone is connected to a PC via a USB connection. Both devices must have Windows 10, Version 1511 or later.
     
     - Localhost: `http://127.0.0.1`
 
-    Windows 10 Mobile용 Microsoft Edge 휴대폰에서 로컬로 디바이스 포털을 보려면 이 주소를 사용합니다.
+    Use this address to view Device Portal locally on the phone in Microsoft Edge for Windows 10 Mobile.
     
-    - 로컬 네트워크: `https://<The IP address of the phone>`
+    - Local Network: `https://<The IP address or hostname of the phone>`
 
-    로컬 네트워크를 통해 연결하려면 이 주소를 사용합니다.
+    Use this address to connect over a local network.
 
-    휴대폰의 IP 주소는 휴대폰의 디바이스 포털 설정에 표시됩니다. 인증 및 보안 통신에 HTTPS가 필요합니다. 호스트 이름(설정 &gt; 시스템 &gt; 정보에서 편집 가능)은 로컬 네트워크(예: http://Phone360)에서 디바이스 포털 액세스에 사용될 수도 있습니다. 이는 네트워크 또는 IP 주소를 자주 변경 또는 공유해야 할 수 있는 디바이스에 대해 유용합니다. 
+    The IP address of the phone is shown in the Device Portal settings on the phone. HTTPS is required for authentication and secure communication. The hostname (editable in Settings > System > About) can also be used to access Device Portal on the local network (e.g. http://Phone360), which is useful for devices that may change networks or IP addresses frequently, or need to be shared. 
 
-2. 휴대폰에서 페어링 단추를 눌러 필요한 보안 코드를 생성하고 표시합니다.
+2. Press the Pair button on your phone to generate and display the required security code
 
-3. 브라우저에서 디바이스 포털 암호 상자에 6개의 문자 보안 코드를 입력합니다.
+3. Enter the 6 character security code into the Device Portal password box in your browser.
 
-4. (옵션) 나중에 이 페어링을 기억하려면 브라우저에서 Remember my computer(내 컴퓨터 기억) 상자를 선택합니다.
+4. (Optional) Check the Remember my computer box in your browser to remember this pairing in the future.
 
-다음은 Windows Phone 개발자 설정 페이지의 디바이스 포털 섹션입니다.
+Here's the Device Portal section of the developer settings page on Windows Phone.
 
-![디바이스 포털 설정](images/device-portal/mob-dev-mode-portal.png)
+![Device Portal settings](images/device-portal/mob-dev-mode-portal.png)
 
-로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 디바이스 포털을 사용하는 경우 인증을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 휴대폰의 IP 주소를 가진 모든 사용자가 제어할 수 있습니다.
+If you are using Device Portal in a protected environment, like a test lab, where you trust everyone on your local network, have no personal information on the device, and have unique requirements, you can disable authentication. This enables unencrypted communication, and allows anyone with the IP address of your phone to control it.
 
-## 도구 참고 사항
+## <a name="tool-notes"></a>Tool Notes
 
-## 디바이스 포털 페이지
-### 프로세스
+## <a name="device-portal-pages"></a>Device Portal pages
+### <a name="processes"></a>Processes
 
-Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이 포함되지 않습니다. 
+The ability to terminate arbitrary processes is not included in the Windows Mobile Device Portal. 
 
-모바일 디바이스에서 디바이스 포털은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
+Device Portal on mobile devices provides the standard set of pages. For detailed descriptions, see [Windows Device Portal overview](device-portal.md).
 
-- 앱
-- 프로세스
-- 성능
-- ETW(Windows용 이벤트 추적)
-- 성능 추적
-- 디바이스
-- 네트워킹
+- App Manager
+- App File Explorer (Isolated Storage Explorer)
+- Processes
+- Performance charts
+- Event Tracing for Windows (ETW)
+- Performance tracing (WPR) 
+- Devices
+- Networking
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

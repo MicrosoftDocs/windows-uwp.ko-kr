@@ -1,35 +1,33 @@
 ---
 author: TylerMSFT
-title: "Windows 설정 앱 실행"
-description: "앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다."
+title: Launch the Windows Settings app
+description: Learn how to launch the Windows Settings app from your app. This topic describes the ms-settings URI scheme. Use this URI scheme to launch the Windows Settings app to specific settings pages.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 translationtype: Human Translation
-ms.sourcegitcommit: f90ba930db60f338ee0ebcc80934281363de01ee
-ms.openlocfilehash: 249e485f74364475ff96a8256ee88bdb79749259
+ms.sourcegitcommit: 1135feec72510e6cbe955161ac169158a71097b9
+ms.openlocfilehash: f762d7eb70a0e9119f32350a815691109f994c75
 
 ---
 
-# Windows 설정 앱 실행
+# <a name="launch-the-windows-settings-app"></a>Launch the Windows Settings app
 
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
-
-
-**중요 API**
+**Important APIs**
 
 -   [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)
 -   [**PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482)
 -   [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314)
 
-앱에서 Windows 설정 앱을 실행하는 방법을 알아봅니다. 이 항목에서는 **ms-settings:** URI 스키마를 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+Learn how to launch the Windows Settings app from your app. This topic describes the **ms-settings:** URI scheme. Use this URI scheme to launch the Windows Settings app to specific settings pages.
 
-설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh768223)을 참조하세요.
+Launching to the Settings app is an important part of writing a privacy-aware app. If your app can't access a sensitive resource, we recommend providing the user a convenient link to the privacy settings for that resource. For more info, see [Guidelines for privacy-aware apps](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
-## 설정 앱을 실행하는 방법
+## <a name="how-to-launch-the-settings-app"></a>How to launch the Settings app
 
-**설정** 앱을 시작하려면 다음 예제에 표시된 대로 `ms-settings:` URI 체계를 사용합니다.
+To launch the **Settings** app, use the `ms-settings:` URI scheme as shown in the following examples.
 
-이 예제에서는 하이퍼링크 XAML 컨트롤은 `ms-settings:privacy-microphone` URI를 사용하여 마이크에 대한 개인 정보 설정 페이지를 시작하는 데 사용됩니다.
+In this example, a Hyperlink XAML control is used to launch the privacy settings page for the microphone using the `ms-settings:privacy-microphone` URI.
 
 ```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
@@ -43,95 +41,344 @@ ms.openlocfilehash: 249e485f74364475ff96a8256ee88bdb79749259
 </TextBlock>
 ```
 
-또는 앱이 [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) 메서드를 호출하여 코드에서 **설정** 앱을 실행할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 설정 페이지를 시작하는 방법을 보여 줍니다.
+Alternatively, your app can call the [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) method to launch the **Settings** app from code. This example shows how to launch to the privacy settings page for the camera using the `ms-settings:privacy-webcam` URI.
 
 ```cs
-using Windows.System;
-...
-bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
+bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
 ```
 
-위의 코드는 카메라의 개인 정보 설정 페이지를 실행합니다.
+The code above launches the privacy settings page for the camera:
 
-![카메라 개인 정보 설정](images/privacyawarenesssettingsapp.png)
+![camera privacy settings.](images/privacyawarenesssettingsapp.png)
+
+For more info about launching URIs, see [Launch the default app for a URI](launch-default-app.md).
+
+## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI scheme reference
+
+Use the following URIs to open various pages of the Settings app. Note that the Supported SKUs column indicates whether the settings page exists in Windows 10 for desktop editions (Home, Pro, Enterprise, and Education), Windows 10 Mobile, or both.
+
+<table border="1">
+    <tr>
+        <th>Category</th>
+        <th>Settings page</th>
+        <th>Supported SKUs</th>
+        <th>URI</th>
+    </tr>
+    <tr>
+        <td>Home page</td>
+        <td>Landing page for Settings</td>
+        <td>Both</td>
+        <td>ms-settings:</td>
+    </tr>
+    <tr>
+        <td rowspan="10">System</td>
+        <td>Display</td>
+        <td>Both</td>
+        <td>ms-settings:screenrotation</td>
+    </tr>
+    <tr>
+        <td>Notifications & actions</td>
+        <td>Both</td>
+        <td>ms-settings:notifications</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>Mobile only</td>
+        <td>ms-settings:phone</td>
+    </tr>
+    <tr>
+        <td>Messaging</td>
+        <td>Mobile only</td>
+        <td>ms-settings:messaging</td>
+    </tr>
+    <tr>
+        <td>Battery Saver</td>
+        <td>Both<br>Only available on devices that have a battery, such as a tablet</td>
+        <td>ms-settings:batterysaver</td>
+    </tr>
+    <tr>
+        <td>Battery use</td>
+        <td>Both<br>Only available on devices that have a battery, such as a tablet</td>
+        <td>ms-settings:batterysaver-usagedetails</td>
+    </tr>
+    <tr>
+        <td>Power & sleep</td>
+        <td>Desktop only</td>
+        <td>ms-settings:powersleep</td>
+    </tr>
+    <tr>
+        <td>About</td>
+        <td>Both</td>
+        <td>ms-settings:about</td>
+    </tr>
+    <tr>
+        <td>Encryption</td>
+        <td>Both</td>
+        <td>ms-settings:deviceencryption</td>
+    </tr>
+    <tr>
+        <td>Offline Maps</td>
+        <td>Both</td>
+        <td>ms-settings:maps</td>
+    </tr>
+    <tr>
+        <td rowspan="4">Devices</td>
+        <td>Default camera</td>
+        <td>Mobile only</td>
+        <td>ms-settings:camera</td>
+    </tr>
+    <tr>
+        <td>Bluetooth</td>
+        <td>Desktop only</td>
+        <td>ms-settings:bluetooth</td>
+    </tr>
+    <tr>
+        <td>Connected Devices</td>
+        <td>Desktop only</td>
+        <td>ms-settings:connecteddevices</td>
+    </tr>
+    <tr>
+        <td>Mouse & touchpad</td>
+        <td>Both<br>Touchpad settings only available on devices that have a touchpad</td>
+        <td>ms-settings:mousetouchpad</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Network & Wireless</td>
+        <td>NFC</td>
+        <td>Both</td>
+        <td>ms-settings:nfctransactions</td>
+    </tr>
+    <tr>
+        <td>Wi-Fi</td>
+        <td>Both</td>
+        <td>ms-settings:network-wifi</td>
+    </tr>
+    <tr>
+        <td>Airplane mode</td>
+        <td>Both</td>
+        <td>ms-settings:network-airplanemode</td>
+    </tr>
+    <tr>
+        <td rowspan="5">Network & Internet</td>
+        <td>Data usage</td>
+        <td>Both</td>
+        <td>ms-settings:datausage</td>
+    </tr>
+    <tr>
+        <td>Cellular & SIM</td>
+        <td>Both</td>
+        <td>ms-settings:network-cellular</td>
+    </tr>
+    <tr>
+        <td>Mobile hotspot</td>
+        <td>Both</td>
+        <td>ms-settings:network-mobilehotspot</td>
+    </tr>
+    <tr>
+        <td>Proxy</td>
+        <td>Desktop only</td>
+        <td>ms-settings:network-proxy</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>Desktop only</td>
+        <td>ms-settings:network-status</td>
+    </tr>
+    <tr>
+        <td rowspan="5">Personalization</td>
+        <td>Personalization (category)</td>
+        <td>Both</td>
+        <td>ms-settings:personalization</td>
+    </tr>
+    <tr>
+        <td>Background</td>
+        <td>Desktop only</td>
+        <td>ms-settings:personalization-background</td>
+    </tr>
+    <tr>
+        <td>Colors</td>
+        <td>Both</td>
+        <td>ms-settings:personalization-colors</td>
+    </tr>
+    <tr>
+        <td>Sounds</td>
+        <td>Mobile only </td>
+        <td>ms-settings:sounds</td>
+    </tr>
+    <tr>
+        <td>Lock screen</td>
+        <td>Both</td>
+        <td>ms-settings:lockscreen</td>
+    </tr>
+    <tr>
+        <td rowspan="7">Accounts</td>
+        <td>Access work or school</td>
+        <td>Both</td>
+        <td>ms-settings:workplace</td>
+    </tr>
+    <tr>
+        <td>Email & app accounts</td>
+        <td>Both</td>
+        <td>ms-settings:emailandaccounts</td>
+    </tr>
+    <tr>
+        <td>Family & other people</td>
+        <td>Both</td>
+        <td>ms-settings:otherusers</td>
+    </tr>
+    <tr>
+        <td>Sign-in options</td>
+        <td>Both</td>
+        <td>ms-settings:signinoptions</td>
+    </tr>
+    <tr>
+        <td>Sync your settings</td>
+        <td>Both</td>
+        <td>ms-settings:sync</td>
+    </tr>
+    <tr>
+        <td>Other people</td>
+        <td>Both</td>
+        <td>ms-settings:otherusers</td>
+    </tr>
+    <tr>
+        <td>Your info</td>
+        <td>Both</td>
+        <td>ms-settings:yourinfo</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Time and language</td>
+        <td>Date & time</td>
+        <td>Both</td>
+        <td>ms-settings:dateandtime</td>
+    </tr>
+    <tr>
+        <td>Region & language</td>
+        <td>Desktop only</td>
+        <td>ms-settings:regionlanguage</td>
+    </tr>
+    <tr>
+        <td rowspan="7">Ease of Access</td>
+        <td>Narrator</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-narrator</td>
+    </tr>
+    <tr>
+        <td>Magnifier</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-magnifier</td>
+    </tr>
+    <tr>
+        <td>High contrast </td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-highcontrast</td>
+    </tr>
+    <tr>
+        <td>Closed captions</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-closedcaptioning</td>
+    </tr>
+    <tr>
+        <td>Keyboard</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-keyboard</td>
+    </tr>
+    <tr>
+        <td>Mouse</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-mouse</td>
+    </tr>
+    <tr>
+        <td>Other options</td>
+        <td>Both</td>
+        <td>ms-settings:easeofaccess-otheroptions</td>
+    </tr>
+    <tr>
+        <td rowspan="15">Privacy</td>
+        <td>Location</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-location</td>
+    </tr>
+    <tr>
+        <td>Camera</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-webcam</td>
+    </tr>
+    <tr>
+        <td>Microphone</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-microphone</td>
+    </tr>
+    <tr>
+        <td>Motion</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-motion</td>
+    </tr>
+    <tr>
+        <td>Speech, inking & typing</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-speechtyping</td>
+    </tr>
+    <tr>
+        <td>Account info</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-accountinfo</td>
+    </tr>
+    <tr>
+        <td>Contacts</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-contacts</td>
+    </tr>
+    <tr>
+        <td>Calendar</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-calendar</td>
+    </tr>
+    <tr>
+        <td>Call history</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-callhistory</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-email</td>
+    </tr>
+    <tr>
+        <td>Messaging</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-messaging</td>
+    </tr>
+    <tr>
+        <td>Radios</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-radios</td>
+    </tr>
+    <tr>
+        <td>Background Apps</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-backgroundapps</td>
+    </tr>
+    <tr>
+        <td>Other devices</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-customdevices</td>
+    </tr>
+    <tr>
+        <td>Feedback & diagnostics</td>
+        <td>Both</td>
+        <td>ms-settings:privacy-feedback</td>
+    </tr>
+    <tr>
+        <td>Update & security</td>
+        <td>For developers</td>
+        <td>Both</td>
+        <td>ms-settings:developers</td>
+    </tr>
+</table><br/>
 
 
 
-URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
-
-## ms-settings: URI 스키마 참조
-
-
-다음 URI를 사용하여 설정 앱의 여러 페이지를 열 수 있습니다. 지원되는 SKU 열은 설정 페이지가 데스크톱용 Windows 10 버전(Home, Pro, Enterprise 및 Education), Windows 10 Mobile 또는 둘 다에 있는지 여부를 나타냅니다.
-
-| 범주           | 설정 페이지                          | 지원되는 SKU | URI                                       |
-|--------------------|----------------------------------------|----------------|-------------------------------------------|
-| 홈 페이지          | 설정을 위한 랜딩 페이지              | 모두           | ms-settings:                              |
-| 시스템             | 디스플레이                                | 모두           | ms-settings:screenrotation                |
-|                    | 알림 및 동작                | 모두           | ms-settings:notifications                 |
-|                    | 전화                                  | 모바일만 해당    | ms-settings:phone                         |
-|                    | 메시지                              | 모바일만 해당    | ms-settings:messaging                     |
-|                    | 배터리 절약 모드                          | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱 | ms-settings:batterysaver                  |
-|                    | 배터리 절약 모드 / 배터리 절약 모드 설정 | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱 | ms-settings:batterysaver-settings         |
-|                    | 배터리 절약 모드 / 배터리 사용            | 태블릿과 같은 배터리 사용 디바이스의 모바일 및 데스크톱 | ms-settings:batterysaver-usagedetails     |
-|                    | 전원 및 절전                          | 데스크톱에만 해당   | ms-settings:powersleep                    |
-|                    | 데스크톱: 정보                         | 모두           | ms-settings:deviceencryption              |
-|                    |                                        |                |                                           |
-|                    | 모바일: 디바이스 암호화              |                |                                           |
-|                    | 오프라인 지도                           | 모두           | ms-settings:maps                          |
-|                    | 정보                                  | 모두           | ms-settings:about                         |
-| 장치            | 기본 카메라                         | 모바일만 해당    | ms-settings:camera                        |
-|                    | Bluetooth                              | 데스크톱에만 해당   | ms-settings:bluetooth                     |
-|                    | 마우스 및 터치 패드                       | 모두           | ms-settings:mousetouchpad                 |
-|                    | NFC                                    | 모두           | ms-settings:nfctransactions               |
-| 네트워크 및 무선 | Wi-Fi                                  | 모두           | ms-settings:network-wifi                  |
-|                    | 비행기 모드                          | 모두           | ms-settings:network-airplanemode          |
-| 네트워크 및 인터넷 | 데이터 사용량                             | 모두           | ms-settings:datausage                     |
-|                    | 셀룰러 및 SIM                         | 모두           | ms-settings:network-cellular              |
-|                    | 모바일 핫스팟                         | 모두           | ms-settings:network-mobilehotspot         |
-|                    | 프록시                                  | 모두           | ms-settings:network-proxy                 |
-|                    | 상태                                 | 데스크톱에만 해당   | ms-settings:network-status                |
-| 개인 설정    | 개인 설정(범주)             | 모두           | ms-settings:personalization               |
-|                    | 배경                             | 데스크톱에만 해당   | ms-settings:personalization-background    |
-|                    | 색                                 | 모두           | ms-settings:personalization-colors        |
-|                    | 소리                                 | 모바일만 해당    | ms-settings:sounds                        |
-|                    | 잠금 화면                            | 모두           | ms-settings:lockscreen                    |
-| Accounts           | 회사 또는 학교 계정에 액세스                  | 모두           | ms-settings:workplace                     |
-|                    | 메일 및 앱 계정                   | 모두           | ms-settings:emailandaccounts              |
-|                    | 가족 및 다른 사용자                  | 모두           | ms-settings:otherusers                    |
-|                    | 로그인 옵션                        | 모두           | ms-settings:signinoptions                 |
-|                    | 설정 동기화                     | 모두           | ms-settings:sync                          |
-|                    | 다른 사용자                           | 모두           | ms-settings:otherusers                    |
-|                    | 사용자 정보                              | 모두           | ms-settings:yourinfo                      |
-| 시간 및 언어  | 날짜 및 시간                            | 모두           | ms-settings:dateandtime                   |
-|                    | 국가 및 언어                      | 데스크톱에만 해당   | ms-settings:regionlanguage                |
-| 접근성     | 내레이터                               | 모두           | ms-settings:easeofaccess-narrator         |
-|                    | 돋보기                              | 모두           | ms-settings:easeofaccess-magnifier        |
-|                    | 고대비                          | 모두           | ms-settings:easeofaccess-highcontrast     |
-|                    | 자막                        | 모두           | ms-settings:easeofaccess-closedcaptioning |
-|                    | 키보드                               | 모두           | ms-settings:easeofaccess-keyboard         |
-|                    | 마우스                                  | 모두           | ms-settings:easeofaccess-mouse            |
-|                    | 기타 옵션                          | 모두           | ms-settings:easeofaccess-otheroptions     |
-| 개인 정보            | 위치                               | 모두           | ms-settings:privacy-location              |
-|                    | Camera                                 | 모두           | ms-settings:privacy-webcam                |
-|                    | 마이크                             | 모두           | ms-settings:privacy-microphone            |
-|                    | 동작                                 | 모두           | ms-settings:privacy-motion                |
-|                    | 음성, 수동 입력 및 입력                | 모두           | ms-settings:privacy-speechtyping          |
-|                    | 계정 정보                           | 모두           | ms-settings:privacy-accountinfo           |
-|                    | 연락처                               | 모두           | ms-settings:privacy-contacts              |
-|                    | Calendar                               | 모두           | ms-settings:privacy-calendar              |
-|                    | 통화 기록                           | 모두           | ms-settings:privacy-callhistory           |
-|                    | 메일                                  | 모두           | ms-settings:privacy-email                 |
-|                    | 메시지                              | 모두           | ms-settings:privacy-messaging             |
-|                    | 무선                                 | 모두           | ms-settings:privacy-radios                |
-|                    | 배경 앱                        | 모두           | ms-settings:privacy-backgroundapps        |
-|                    | 기타 장치                          | 모두           | ms-settings:privacy-customdevices         |
-|                    | 피드백 및 진단                 | 모두           | ms-settings:privacy-feedback              |
-| 업데이트 및 보안  | 개발자용                         | 모두           | ms-settings:developers                    |
- 
-
-
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

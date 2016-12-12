@@ -1,61 +1,61 @@
 ---
-title: "Microsoft Passport 로그인 앱 만들기"
-description: "이 문서는 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대해 설명하는 전체 연습의 1부입니다."
+title: Create a Microsoft Passport login app
+description: This is Part 1 of a complete walkthrough on how to create a Windows 10 UWP (Universal Windows Platform) app that uses Microsoft Passport as an alternative to traditional username and password authentication systems.
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
-ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
 
 ---
 
-# Microsoft Passport 로그인 앱 만들기
+# <a name="create-a-microsoft-passport-login-app"></a>Create a Microsoft Passport login app
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-\[일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.\]
+\[Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.\]
 
-이 문서는 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대해 설명하는 전체 연습의 1부입니다. 앱은 사용자 이름을 사용하여 로그인하고 각 계정에 대한 Passport 키를 만듭니다. 이러한 계정은 Microsoft Passport 구성에서 Windows 설정으로 설정된 PIN으로 보호됩니다.
+This is Part 1 of a complete walkthrough on how to create a Windows 10 UWP (Universal Windows Platform) app that uses Microsoft Passport as an alternative to traditional username and password authentication systems. The app uses a username for sign-in and create a Passport Key for each account. These accounts will be protected by the PIN that is setup in Windows Settings on configuration of Microsoft Passport.
 
-이 연습은 앱을 빌드하고 백 엔드 서비스를 연결하는 두 부분으로 나누어집니다. 이 문서를 마치면 2부: [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)를 계속 진행하세요.
+This walkthrough is split into two parts: building the app and connecting the backend service. When you're finished with this article, continue on to Part 2: [Microsoft Passport login service](microsoft-passport-login-auth-service.md).
 
-시작하기 전에 Microsoft Passport 작동 방식을 전체적으로 이해하기 위해 [Microsoft Passport 및 Windows Hello](microsoft-passport.md) 개요를 검토해야 합니다.
+Before you begin, you should read the [Microsoft Passport and Windows Hello](microsoft-passport.md) overview for a general understanding of how Microsoft Passport works.
 
-## 시작
-
-
-이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
-
--   Visual Studio 2015를 열고 파일 &gt; 새로 만들기 &gt; 프로젝트를 선택합니다.
--   "새 프로젝트" 창이 열립니다. 템플릿 &gt; Visual C#으로 이동합니다.
--   비어 있는 앱(유니버설 Windows)을 선택하고 응용 프로그램의 이름을 "PassportLogin"으로 지정합니다.
--   새 응용 프로그램을 빌드 및 실행(F5)하면 화면에 빈 창이 표시됩니다. 응용 프로그램을 닫습니다.
-
-![](images/passport-login-1.png)
-
-## 연습 1: Microsoft Passport를 사용하여 로그인
+## <a name="get-started"></a>Get started
 
 
-이 연습에서는 컴퓨터에 Microsoft Passport가 설정되어 있는지 확인하는 방법과 Microsoft Passport를 사용하여 계정에 로그인하는 방법을 알아봅니다.
+In order to build this project, you'll need some experience with C#, and XAML. You'll also need to be using Visual Studio 2015 (Community Edition or greater) on a Windows 10 machine.
 
--   새 프로젝트에서 솔루션에 "Views"라는 새 폴더를 만듭니다. 이 폴더에는 이 샘플에서 이동할 페이지가 포함됩니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 추가&gt; 새 폴더를 선택한 다음 폴더 이름을 Views로 바꿉니다.
+-   Open Visual Studio 2015 and select File > New > Project.
+-   This will open a “New Project” window. Navigation to Templates > Visual C#.
+-   Choose Blank App (Universal Windows) and name your application "PassportLogin".
+-   Build and Run the new application (F5), you should see a blank window shown on the screen. Close the application.
 
-    ![](images/passport-login-2.png)
+![passport new project](images/passport-login-1.png)
 
--   새 Views 폴더를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 항목을 선택한 후 빈 페이지를 선택합니다. 이 페이지의 이름을 "Login.xaml"로 지정합니다.
+## <a name="exercise-1-login-with-microsoft-passport"></a>Exercise 1: Login with Microsoft Passport
 
-    ![](images/passport-login-3.png)
 
--   새 로그인 페이지에 대한 사용자 인터페이스를 정의하기 위해 다음 XAML을 추가합니다. 이 XAML은 다음 자식 항목에 맞게 StackPanel을 정의합니다.
+In this exercise you will learn how to check if Microsoft Passport is setup on the machine, and how to sign into an account using Microsoft Passport.
 
-    -   제목을 포함하는 TextBlock
-    -   오류 메시지에 대한 TextBlock
-    -   입력할 사용자 이름에 대한 TextBox
-    -   등록 페이지로 이동하는 단추
-    -   Microsoft Passport의 상태를 포함하는 TextBlock
-    -   백 엔드 또는 구성된 사용자가 없을 때 로그인 페이지를 설명하는 TextBlock
+-   In the new project create a new folder in the solution called "Views". This folder will contain the pages that will be navigated to in this sample. Right click on the project in solution explorer, select Add > New Folder, then rename the folder to Views.
+
+    ![passport add folder](images/passport-login-2.png)
+
+-   Right click on the new Views folder, select Add > New Item and select Blank Page. Name this page "Login.xaml".
+
+    ![passport add blank page](images/passport-login-3.png)
+
+-   To define the user interface for the new login page, add the following XAML. This XAML defines a StackPanel to align the following children:
+
+    -   TextBlock that will contain a title.
+    -   TextBlock for error messages.
+    -   TextBox for the username to input.
+    -   Button to navigate to a register page.
+    -   TextBlock to contain the status of Microsoft Passport.
+    -   TextBlock to explain the Login page as there is no backend or configured users.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -85,7 +85,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     </Grid>
     ```
 
--   솔루션 빌드를 위해 몇 가지 메서드를 코드 숨김에 추가해야 합니다. F7 키를 누르거나 솔루션 탐색기를 사용하여 Login.xaml.cs를 엽니다. 로그인 및 등록 이벤트를 처리하기 위해 다음 두 이벤트 메서드를 추가합니다. 여기서 이 메서드는 ErrorMessage.Text를 빈 문자열로 설정합니다.
+-   A few methods need to be added to the code behind to get the solution building. Either press F7 or use the Solution Explorer to get to the Login.xaml.cs. Add in the following two event methods to handle the Login and Register events. For now these methods will set the ErrorMessage.Text to an empty string.
 
     ```cs
     namespace PassportLogin.Views
@@ -109,7 +109,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   로그인 페이지를 렌더링하기 위해 MainPage가 로드될 때 로그인 페이지로 이동하도록 MainPage 코드를 편집합니다. MainPage.xaml.cs 파일을 엽니다. 솔루션 탐색기에서 MainPage.xaml.cs를 두 번 클릭합니다. MainPage.xaml.cs를 찾을 수 없으면 MainPage.xaml 옆의 작은 화살표를 클릭하여 코드 숨김을 표시합니다. 로그인 페이지로 이동하는 로드된 이벤트 처리기 메서드를 만듭니다. Views 네임스페이스에 대한 참조를 추가해야 합니다.
+-   In order to render the Login page, edit the MainPage code to navigate to the Login page when the MainPage is loaded. Open the MainPage.xaml.cs file. In the solution explorer double click on MainPage.xaml.cs. If you can’t find this click the little arrow next to MainPage.xaml to show the code behind. Create a loaded event handler method that will navigate to the login page. You will need to add a reference to the Views namespace.
 
     ```cs
     using PassportLogin.Views;
@@ -132,7 +132,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   로그인 페이지에서 Microsoft Passport를 이 컴퓨터에서 사용할 수 있는지 확인하는 OnNavigatedTo 이벤트를 처리해야 합니다. Login.xaml.cs에서 다음을 구현합니다. MicrosoftPassportHelper 개체가 오류를 표시하는데 이는 아직 구현하지 않았기 때문입니다.
+-   In the Login page you need to handle the OnNavigatedTo event to validate if Microsoft Passport is available on this machine. In Login.xaml.cs implement the following. You will notice that the MicrosoftPassportHelper object flags an error. This is because we have not implement it yet.
 
     ```cs
     public sealed partial class Login : Page
@@ -160,12 +160,12 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   MicrosoftPassportHelper 클래스를 만들려면 솔루션 PassportLogin(유니버설 Windows)을 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 클릭합니다. 이 폴더의 이름을 Utils로 지정합니다.
+-   To create the MicrosoftPassportHelper class, right click on the solution PassportLogin (Universal Windows) and click Add > New Folder. Name this folder Utils.
 
-    ![](images/passport-login-5.png)
+    ![passport create helper class](images/passport-login-5.png)
 
--   Utils 폴더를 마우스 오른쪽 단추로 클릭하고 추가 &gt; 클래스를 클릭합니다. 이 클래스 이름을 "MicrosoftPassportHelper.cs"로 지정합니다.
--   MicrosoftPassportHelper의 클래스 정의를 public static으로 변경한 후 Microsoft Passport를 사용할 수 있는지 여부를 사용자에게 알려주는 다음 메서드를 추가합니다. 필요한 네임스페이스를 추가해야 합니다.
+-   Right click on the Utils folder and click Add > Class. Name this class "MicrosoftPassportHelper.cs".
+-   Change the class definition of MicrosoftPassportHelper to public static, then add the following method that to inform the user if Microsoft Passport is ready to be used or not. You will need to add the required namespaces.
 
     ```cs
     using System;
@@ -201,20 +201,20 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   Login.xaml.cs에 Utils 네임스페이스에 대한 참조를 추가합니다. 이렇게 하면 OnNavigatedTo 메서드의 오류가 해결됩니다.
+-   In Login.xaml.cs add a reference to the Utils namespace. This will resolve the error in the OnNavigatedTo method.
 
     ```cs
     using PassportLogin.Utils;
     ```
 
--   응용 프로그램을 빌드 및 실행합니다(F5). 로그인 페이지로 이동하고 Passport를 사용할 준비가 되면 Microsoft Passport 배너가 표시됩니다. 컴퓨터에서 Microsoft Passport 상태를 나타내는 녹색 또는 파란색 배너를 볼 수 있습니다.
+-   Build and run the application (F5). You will be navigated to the login page and the Microsoft Passport banner will indicate to you if Passport is ready to be used. You should see either the green or blue banner indicating the Microsoft Passport status on your machine.
 
-    ![](images/passport-login-6.png)
+    ![passport login screen ready](images/passport-login-6.png)
 
-    ![](images/passport-login-7.png)
+    ![passport login screen not setup](images/passport-login-7.png)
 
--   다음으로 수행해야 할 작업은 로그인 논리를 빌드하는 것입니다. "Models"라는 새 폴더를 만듭니다.
--   Models 폴더에 "Account.cs"라는 새 클래스를 만듭니다. 이 클래스는 계정 모델 역할을 합니다. 샘플이므로 사용자 이름만 포함합니다. 클래스 정의를 public으로 변경하고 Username 속성을 추가합니다.
+-   The next thing you need to do is build the logic for signing in. Create a new folder called "Models".
+-   In the Models folder create a new class called "Account.cs". This class will act as your account model. As this is a sample it will only contain a username. Change the class definition to public and add the Username property.
     
     ```cs
     namespace PassportLogin.Models
@@ -226,7 +226,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   계정을 처리할 방법이 필요합니다. 이 실습 연습에 대한 서버나 데이터베이스가 없으므로 사용자 목록을 로컬로 저장하고 로드합니다. Utils 폴더를 마우스 오른쪽 단추로 클릭하고 "AccountHelper.cs"라는 새 클래스를 추가합니다. 클래스 정의를 public static으로 변경합니다. AccountHelper는 계정 목록을 로컬로 저장하고 로드하는 데 필요한 모든 메서드를 포함하는 정적 클래스입니다. 저장 및 로드는 XmlSerializer를 사용하여 수행됩니다. 또한 저장한 파일과 위치를 기억해야 합니다. 추가 네임스페이스를 참조해야 합니다.
+-   You will need a way to handle accounts. For this hands on lab as there is no server, or a database, a list of users will be saved and loaded locally. Right click on the Utils folder and add a new class called "AccountHelper.cs". Change the class definition to be public static. The AccountHelper is a static class that will contain all the necessary methods to save and load the list of accounts locally. Saving and loading will work by using an XmlSerializer. You will also need to remember the file you saved and where you saved it. Additional namespaces will be need to be referenced.
     
     ```cs
     using System.IO;
@@ -309,7 +309,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   다음은 로컬 계정 목록에서 계정을 추가하고 제거하는 방법을 구현합니다. 이러한 작업은 각각의 목록을 저장합니다. 이 실습 연습에 필요한 마지막 메서드는 유효성 검사 메서드입니다. 사용자의 인증 서버나 데이터베이스가 없으므로 이 메서드는 하드 코드된 단일 사용자에 대해 유효성을 검사합니다. 이러한 메서드는 AccountHelper 클래스에 추가해야 합니다.
+-   Next, implement a way to add and remove an account from the local list of accounts. These actions will each save the list. The final method that you will need for this hands on lab is a validation method. As there is no auth server or database of users, this will validate against a single user which is hard coded. These methods should be added to the AccountHelper class.
     
     ```cs
     public static Account AddAccount(string username)
@@ -351,7 +351,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
             }<
     ```
 
--   다음으로 사용자의 로그인 요청을 처리해야 합니다. Login.xaml.cs에 현재 계정 로그인을 보관하는 새 private 변수를 만듭니다. 그런 다음 새 메서드 호출 SignInPassport를 추가합니다. AccountHelper.ValidateAccountCredentials 메서드를 사용하여 계정 자격 증명의 유효성을 검사합니다. 입력한 사용자 이름이 이전 단계에서 설정한 하드 코드된 문자열 값과 같으면 이 메서드는 부울 값을 반환합니다. 이 샘플의 경우 하드 코드된 값은 "sampleUsername"입니다.
+-   The next thing you need to do is handle a sign in request from the user. In Login.xaml.cs create a new private variable that will hold the current account logging in. Then add a new method call SignInPassport. This will validate the account credentials using the AccountHelper.ValidateAccountCredentials method. This method will return a Boolean value if the entered user name is the same as the hard coded string value you set in the previous step. The hard coded value for this sample is "sampleUsername".
 
     ```cs
     using PassportLogin.Models;
@@ -417,7 +417,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   MicrosoftPassportHelper의 메서드를 참조한 주석으로 처리된 코드를 확인했을 수 있습니다. MicrosoftPassportHelper.cs에서 CreatePassportKeyAsync라는 새 메서드를 추가합니다. 이 메서드는 [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043)에서 Microsoft Passport API를 사용합니다. [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) 호출은 *accountId* 및 로컬 컴퓨터에 해당하는 Passport 키를 생성합니다. 실제 시나리오에서 이를 구현해 보려면 switch 문의 주석을 확인하세요.
+-   You may have noticed the commented code that was referencing a method in MicrosoftPassportHelper. In MicrosoftPassportHelper.cs add in a new method called CreatePassportKeyAsync. This method uses the Microsoft Passport API in the [**KeyCredentialManager**](https://msdn.microsoft.com/library/windows/apps/dn973043). Calling [**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) will create a Passport key that is specific to the *accountId* and the local machine. Please note the comments in the switch statement if you are interested in implementing this in a real world scenario.
 
     ```cs
     /// <summary>
@@ -461,7 +461,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   이제 CreatePassportKeyAsync 메서드를 만들었으므로 Login.xaml.cs 파일로 돌아가 SignInPassport 메서드 내에서 코드 주석 처리를 제거합니다.
+-   Now you have created the CreatePassportKeyAsync method, return to the Login.xaml.cs file and uncomment the code inside the SignInPassport method.
 
     ```cs
     private async void SignInPassport()
@@ -484,16 +484,16 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. 로그인 페이지로 이동합니다. "sampleUsername"을 입력하고 로그인을 클릭합니다. PIN을 입력하라는 Microsoft Passport 프롬프트가 표시됩니다. PIN을 올바르게 입력하면 CreatePassportKeyAsync 메서드가 Passport 키를 만들 수 있습니다. 출력 창을 모니터링하여 성공 메시지가 표시되는지 확인합니다.
+-   Build and run the application. You will be taken to the Login page. Type in "sampleUsername" and click login. You will be prompted with a Microsoft Passport prompt asking you to enter your PIN. Upon entering your PIN correctly the CreatePassportKeyAsync method will be able to create a Passport key. Monitor the output windows to see if the messages indicating success are shown.
 
-    ![](images/passport-login-8.png)
+    ![passport login pin prompt](images/passport-login-8.png)
 
-## 연습 2: 환영 및 사용자 선택 페이지
+## <a name="exercise-2-welcome-and-user-selection-pages"></a>Exercise 2: Welcome and User Selection Pages
 
 
-이 연습은 이전 연습에서 계속됩니다. 성공적으로 로그인하면 계정을 삭제 또는 로그아웃할 수 있는 환영 페이지가 표시되어야 합니다. Passport는 모든 컴퓨터에 대한 키를 만들므로 해당 컴퓨터에 로그인한 모든 사용자를 표시하는 사용자 선택 화면을 만들 수 있습니다. 그런 다음 사용자는 이러한 계정 중 하나를 선택하고 컴퓨터에 액세스하도록 이미 인증되었기 때문에 암호를 다시 입력하지 않고도 환영 화면으로 바로 이동할 수 있습니다.
+In this exercise, you will continue from the previous exercise. When a person successfully logs in they should be taken to a welcome page where they can sign out or delete their account. As Passport creates a key for every machine, a user selection screen can be created, which displays all users that have been signed in on that machine. A user can then select one of these accounts and go directly to the welcome screen without needed to re-enter a password as they have already authenticated to access the machine.
 
--   Views 폴더에 "Welcome.xaml"이라는 새 빈 페이지를 추가합니다. 사용자 인터페이스를 완료하려면 다음 XAML을 추가합니다. 제목, 로그인된 사용자 이름 및 두 개의 단추가 표시됩니다. 단추 중 하나는 사용자 목록(나중에 만듦)으로 이동하는 단추이며 다른 단추는 이 사용자를 무시하기 위한 단추입니다.
+-   In the Views folder add a new blank page called "Welcome.xaml". Add the following XAML to complete the user interface. This will display a title, the logged in username, and two buttons. One of the buttons will navigate back to a user list (that you will create later), and the other button will handle forgetting this user.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -512,7 +512,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     </Grid>
     ```
 
--   Welcome.xaml.cs 코드 숨김 파일에 로그인된 계정을 보관하는 새 private 변수를 추가합니다. OnNavigateTo 이벤트를 재정의하는 메서드를 구현해야 하며 이는 환영 페이지에 전달된 계정을 저장합니다. 또한 XAML에 정의된 두 개의 단추에 대한 클릭 이벤트를 구현해야 합니다. Models 및 Utils 폴더에 대한 참조가 필요합니다.
+-   In the Welcome.xaml.cs code behind file, add a new private variable that will hold the account that is logged in. You will need to implement a method to override the OnNavigateTo event, this will store the account passed to the welcome page. You will also need to implement the click event for the two buttons defined in the XAML. You will need a reference to the Models and Utils folders.
 
     ```cs
     using PassportLogin.Models;
@@ -557,7 +557,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   사용자 무시 클릭 이벤트에서 주석 처리된 줄을 확인했을 수 있습니다. 로컬 목록에서 제거되는 계정이지만 현재 Passport에서 제거되는 방법은 없습니다. MicrosoftPassportHelper.cs에 Passport 사용자를 제거할 새 메서드를 구현해야 합니다. 이 메서드는 다른 Microsoft Passport API를 사용하여 계정을 열고 삭제합니다. 실제로 계정을 삭제할 때 사용자 데이터베이스가 여전히 유효하도록 서버나 데이터베이스는 알림을 표시해야 합니다. Models 폴더에 대한 참조가 필요합니다.
+-   You may have noticed a line commented out in the forget user click event. The account is being removed from your local list but currently there is no way to be removed from Passport. You need to implement a new method in MicrosoftPassportHelper.cs that will handle removing a Passport user. This method will use other Microsoft Passport API’s to open and delete the account. In the real world when you delete an account the server or database should be notified so the user database remains valid. You will need a reference to the Models folder.
 
     ```cs
     using PassportLogin.Models;
@@ -583,7 +583,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   Welcome.xaml.cs로 돌아가 RemovePassportAccountAsync를 호출하는 줄의 주석 처리를 제거합니다.
+-   Back in Welcome.xaml.cs, uncomment the line that calls RemovePassportAccountAsync.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -598,7 +598,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   Login.xaml.cs의 SignInPassport 메서드에서 CreatePassportKeyAsync가 성공적으로 수행되면 환영 화면으로 이동하고 계정을 전달해야 합니다.
+-   In the SignInPassport method (of Login.xaml.cs), once the CreatePassportKeyAsync is successful it should navigate to the Welcome screen and pass the Account.
 
     ```cs
     private async void SignInPassport()
@@ -622,11 +622,11 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. "sampleUsername"으로 로그인하고 로그인을 클릭합니다. PIN을 입력하고 성공하면 환영 화면으로 이동해야 합니다. 사용자 무시를 클릭하고 출력 창을 모니터링하여 사용자가 삭제되었는지 확인합니다. 사용자를 삭제할 때 환영 페이지는 그대로 유지됩니다. 앱에서 이동할 수 있는 사용자 선택 페이지를 만들어야 합니다.
+-   Build and run the application. Login with "sampleUsername" and click login. Enter your PIN and if successful you should be navigated to the welcome screen. Try clicking forget user and monitor the output window to see if the user was deleted. Notice that when the user is deleted you remain on the welcome page. You will need to create a user selection page that the app can navigate to.
 
-    ![](images/passport-login-9.png)
+    !passport welcome screen](images/passport-login-9.png)
 
--   Views 폴더에 "UserSelection.xaml"이라는 빈 페이지를 새로 만들고 사용자 인터페이스를 정의하기 위해 다음 XAML을 추가합니다. 이 페이지는 로컬 계정 목록의 모든 사용자를 표시하는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)와 사용자가 다른 계정을 추가할 수 있는 로그인 페이지로 이동하는 단추를 포함합니다.
+-   In the Views folder create a new blank page called "UserSelection.xaml" and add the following XAML to define the user interface. This page will contain a [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) that displays all the users in the local accounts list, and a Button that will navigate to the login page to allow the user to add another account.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -648,7 +648,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     </Grid><
     ```
 
--   UserSelection.xaml.cs에서 로컬 목록에 계정이 없는 경우 로그인 페이지로 이동하는 로드된 메서드를 구현합니다. 또한 ListView에 대한 SelectionChanged 이벤트와 단추에 대한 클릭 이벤트를 구현합니다.
+-   In UserSelection.xaml.cs implement the loaded method that will navigate to the login page if there are no accounts in the local list. Also implement the SelectionChanged event for the ListView and a click event for the Button.
 
     ```cs
     using System.Diagnostics;
@@ -709,7 +709,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
 
 <!-- -->
 
--   앱에서 UserSelection 페이지로 이동하려는 위치가 몇 군데 있습니다. MainPage.xaml.cs에서는 로그인 페이지 대신 UserSelection 페이지로 이동합니다. MainPage에서 로드된 이벤트를 사용하는 동안 UserSelection 페이지가 계정이 있는지 확인할 수 있도록 계정 목록을 로드해야 합니다. 로드된 메서드를 비동기로 변경하고 Utils 폴더에 대한 참조를 추가해야 합니다.
+-   There are a few places in the app where you want to navigated to the UserSelection page. In MainPage.xaml.cs you should navigate to the UserSelection page instead of the Login page. While you are in the loaded event in MainPage you will need to load the accounts list so that the UserSelection page can check if there are any accounts. This will require changing the loaded method to be async and also adding a reference to the Utils folder.
 
     ```cs
     using PassportLogin.Utils;
@@ -722,7 +722,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   다음으로 환영 페이지에서 UserSelection 페이지로 이동하려고 합니다. 두 클릭 이벤트에서 모두 UserSelection 페이지로 다시 이동합니다.
+-   Next you will want to navigate to the UserSelection page from the Welcome page. In both click events you should navigate back to the UserSelection page.
 
     ```cs
     private void Button_Restart_Click(object sender, RoutedEventArgs e)
@@ -745,7 +745,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   로그인 페이지에 UserSelection 페이지 목록에서 선택한 계정에 로그인하는 코드가 필요합니다. OnNavigatedTo 이벤트에서 이동에 전달된 계정을 저장합니다. 기존 계정인지 식별하는 새 private 변수를 추가하는 작업부터 시작합니다. 그런 다음 OnNavigatedTo 이벤트를 처리합니다.
+-   In the Login page you need code to log in to the account selected from the list in the UserSelection page. In OnNavigatedTo event store the account passed to the navigation. Start by adding a new private variable that will identify if the account is an existing account. Then handle the OnNavigatedTo event.
 
     ```cs
     namespace PassportLogin.Views
@@ -792,7 +792,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   선택한 계정에 로그인하려면 SignInPassport 메서드를 업데이트해야 합니다. 계정이 이미 만들어진 Passport 키를 가지고 있기 때문에 MicrosoftPassportHelper는 Passport가 있는 계정을 여는 또 다른 메서드가 필요합니다. Passport가 있는 기존 사용자에 로그인하는 새로운 메서드를 MicrosoftPassportHelper.cs에 구현합니다. 코드의 각 부분에 대한 자세한 내용은 코드 주석을 참조하세요.
+-   The SignInPassport method will need to be updated to sign in to the selected account. The MicrosoftPassportHelper will need another method to open the account with Passport, as the account already has a Passport key created for it. Implement the new method in MicrosoftPassportHelper.cs to sign in an existing user with passport. For information on each part of the code please read through the code comments.
 
     ```cs
     /// <summary>
@@ -839,7 +839,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   기존 계정을 처리하도록 Login.xaml.cs에서 SignInPassport 메서드를 업데이트합니다. 이렇게 하면 MicrosoftPassportHelper.cs에서 새 메서드를 사용합니다. 성공하면 계정에 로그인하고 환영 화면으로 이동합니다.
+-   Update the SignInPassport method in Login.xaml.cs to handle the existing account. This will use the new method in the MicrosoftPassportHelper.cs. If successful the account will be signed in and the user navigated to the welcome screen.
 
     ```cs
     private async void SignInPassport()
@@ -870,16 +870,16 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. "sampleUsername"으로 로그인합니다. PIN을 입력하고 성공하면 환영 화면으로 이동합니다. 사용자 목록으로 돌아가기를 클릭합니다. 이제 목록에 사용자가 표시됩니다. 이 Passport를 클릭하면 암호 등을 다시 입력하지 않고도 다시 로그인할 수 있습니다.
+-   Build and run the application. Login with "sampleUsername". Type in your PIN and if successful you will be navigated to the Welcome screen. Click back to user list. You should now see a user in the list. If you click on this Passport enables you to sign back in without having to re-enter any passwords etc.
 
-    ![](images/passport-login-10.png)
+    ![passport select user list](images/passport-login-10.png)
 
-## 연습 3: 새 Passport 사용자 등록
+## <a name="exercise-3-registering-a-new-passport-user"></a>Exercise 3: Registering a new Passport user
 
 
-이 연습에서는 Passport가 있는 새 계정을 만드는 새로운 페이지를 작성합니다. 로그인 페이지가 작동하는 방법과 유사하게 작동됩니다. 로그인 페이지는 Passport를 사용하도록 마이그레이션하는 기존 사용자를 위해 구현되었습니다. PassportRegister 페이지는 새 사용자에 대한 Passport 등록을 만듭니다.
+In this exercise you will be creating a new page that will create a new account with Passport. This will work similarly to how the Login page works. The Login page is implemented for an existing user that is migrating to use Passport. A PassportRegister page will create Passport registration for a new user.
 
--   Views 폴더에 "PassportRegister.xaml"이라는 빈 페이지를 새로 만듭니다. XAML에서 사용자 인터페이스를 설정하기 위해 다음을 추가합니다. 여기 인터페이스는 로그인 페이지와 비슷합니다.
+-   In the views folder create a new blank page called "PassportRegister.xaml". In the XAML add in the following to setup the user interface. The interface here is similar to the Login page.
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -906,7 +906,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     </Grid>
     ```
 
--   PassportRegister.xaml.cs 코드 숨김 파일에서 private Account 변수와 Register 단추에 대한 클릭 이벤트를 구현합니다. 새 로컬 계정을 추가하고 Passport 키를 만듭니다.
+-   In the PassportRegister.xaml.cs code behind file implement a private Account variable and a click event for the register Button. This will add a new local account and create a Passport key.
 
     ```cs
     using PassportLogin.Models;
@@ -949,7 +949,7 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   Register를 클릭하면 로그인 페이지에서 이 페이지로 이동해야 합니다.
+-   You need to navigate to this page from the Login page when register is clicked.
 
     ```cs
     private void RegisterButtonTextBlock_OnPointerPressed(object sender, PointerRoutedEventArgs e)
@@ -959,20 +959,20 @@ ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다. 새 사용자를 등록하려고 합니다. 사용자 목록으로 돌아가서 해당 사용자 및 로그인을 선택할 수 있는지 유효성을 검사합니다.
+-   Build and run the application. Try to register a new user. Then return to the user list and validate that you can select that user and login.
 
-    ![](images/passport-login-11.png)
+    ![passport register new user](images/passport-login-11.png)
 
-이 랩에서는 새로운 Microsoft Passport API를 사용하여 기존 사용자를 인증하고 새 사용자 계정을 만드는 데 필요한 필수 기술을 배웠습니다. 이 새로운 기술을 사용하면 사용자가 응용 프로그램에 대한 암호를 기억하지 않아도 사용자 인증으로 응용 프로그램을 계속 보호할 수 있습니다. Windows 10은 Passport 기술을 사용하여 Windows Hello의 생체 인식 로그인을 지원합니다. Windows Hello를 지원하는 컴퓨터를 사용하고 있다면 이 일련의 연습이 이미 Windows Hello를 지원하는 것을 알고 있을 것입니다.
+In this lab you have learned the essential skills you need to use the new Microsoft Passport API to authenticate existing users and create accounts for new users. With this new knowledge you can start removing the need for users to remember passwords for your application, yet remain confident that your applications remain protected by user authentication. Windows 10 uses the Passport technology to support the biometrics login of Windows Hello. If you have been using a machine that supports Windows Hello you will have seen that this set of exercises already supports Windows Hello.
 
-Microsoft Passport에 대한 지원을 구현한 후에는 Windows Hello를 지원하기 위해 개발자가 수행해야 하는 추가 작업은 없습니다.
+There is no extra work you as a developer need to do in order to support Windows Hello once you have implemented support for Microsoft Passport.
 
-## 관련 항목
+## <a name="related-topics"></a>Related topics
 
-* [Microsoft Passport 및 Windows Hello](microsoft-passport.md)
-* [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
+* [Microsoft Passport and Windows Hello](microsoft-passport.md)
+* [Microsoft Passport login service](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

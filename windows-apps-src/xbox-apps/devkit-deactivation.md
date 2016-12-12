@@ -1,93 +1,93 @@
 ---
 author: Mtoepke
-title: "Xbox One 개발자 모드 비활성화"
-description: "개발자 모드를 비활성화하는 방법"
+title: Xbox One Developer Mode deactivation
+description: How to deactivate Developer Mode.
 translationtype: Human Translation
-ms.sourcegitcommit: c80849904eccae1ef0e0740bb4e882f7f0f37cc8
-ms.openlocfilehash: 273cd14d5f51a693ba8385c13d128bb2888de2ea
+ms.sourcegitcommit: 0eee645f068614d2368623859dec4e16f3190169
+ms.openlocfilehash: cccc263dcd0ed9ae843cf845438b30605e9b9d9d
 
 ---
 
-# Xbox One 개발자 모드 비활성화
+# <a name="xbox-one-developer-mode-deactivation"></a>Xbox One Developer Mode deactivation
 
-* [정품 모드로 전환](#switch-to-retail-mode)
-* [개발자 모드 활성화 앱을 사용하여 콘솔 비활성화](#deactivate-your-console-using-the-dev-mode-activation-app)  
-* [콘솔 다시 설정](#reset-your-console)
-* [Windows 개발자 센터를 사용하여 콘솔 비활성화](#deactivate-your-console-using-windows-dev-center)
+* [Switch to Retail Mode](#switch-to-retail-mode)
+* [Deactivate your console using the Dev Mode Activation app](#deactivate-your-console-using-the-dev-mode-activation-app)  
+* [Reset your console](#reset-your-console)
+* [Deactivate your console using Windows Dev Center](#deactivate-your-console-using-windows-dev-center)
 
-더 이상 개발을 위해 콘솔을 사용하지 않으려는 경우 다음 단계를 사용하여 개발자 모드를 비활성화합니다.
+If you decide you no longer want to use your console for development, use the following steps to deactivate Developer Mode.
 
-## 정품 모드로 전환
-먼저 Xbox One 콘솔을 정품 모드로 되돌립니다.
+## <a name="switch-to-retail-mode"></a>Switch to Retail Mode
+First, return your Xbox One console to Retail Mode.
 
-1. **개발자 홈**을 엽니다.
-2. **Leave developer mode(개발자 모드 나가기)**를 클릭합니다.  콘솔이 정품 모드로 다시 시작됩니다.  
+1. Open **Dev Home**.
+2. Click **Leave developer mode**.  Your console will restart in Retail Mode.  
 
-   ![](images/deactivation-leave-dev-mode.png)
+   ![Leaving Developer Mode](images/deactivation-leave-dev-mode.png)
 
-이제 다음 방법 중 하나를 사용하여 콘솔을 비활성화합니다.
+Now deactivate your console by using one of the following methods.
 
-## 개발자 모드 활성화 앱을 사용하여 콘솔 비활성화
+## <a name="deactivate-your-console-using-the-dev-mode-activation-app"></a>Deactivate your console using the Dev Mode Activation app
 
-콘솔에서 개발자 모드를 비활성화하는 기본 방법은 개발자 모드 활성화 앱을 사용하는 것입니다. 
+The preferred method of deactivating Developer Mode on your console is to use the Dev Mode Activation app. 
 
-1. **내 게임과 앱** > **앱**으로 이동합니다.
+1. Navigate to **My games & apps** > **Apps**.
   
-   ![활성화 3단계](images/activation-step-3.png)    
+   ![Activation Step 3](images/activation-step-3.png)    
    
-2.  개발자 모드 활성화 앱을 엽니다.    
-3.  **비활성화**를 클릭합니다.
+2.  Open the Dev Mode Activation app.    
+3.  Click **Deactivate**.
   
-![콘솔 비활성화](images/deactivation-app.png)
+![Deactivate console](images/deactivation-app.png)
 
-## 콘솔 다시 설정
+## <a name="reset-your-console"></a>Reset your console
 
-콘솔을 초기화하여 개발자 모드를 비활성화할 수도 있습니다.  
+You can also deactivate Developer Mode by resetting your console.  
 
 > [!NOTE]
-> 콘솔을 초기화하면 모든 로컬 저장 게임 데이터가 손실됩니다.
+> When you reset your console, all local save game data will be lost.
 
-콘솔을 초기화하려면 다음 단계를 수행합니다.
+To reset your console perform the following steps:
 
-1.  **My games &amp; apps(내 게임 및 앱)**로 이동합니다.  
-2.  **앱**을 선택한 다음 **설정**을 선택합니다.  
-3.  왼쪽 창의 **시스템**으로 이동한 다음 오른쪽 창의 **Console info &amp; updates(콘솔 정보 및 업데이트)**를 선택합니다.  
-4.  **Console info &amp; updates(콘솔 정보 및 업데이트)**로 이동합니다.  
+1.  Go to **My games & apps**.  
+2.  Select **Apps**, and then select **Settings**.  
+3.  Go to **System** in the left pane, and then select **Console info & updates** in the right pane.  
+4.  Go to **Console info & updates**.  
    
-    ![콘솔 정보 및 업데이트](images/deactivation-console-info-updates.png)  
+    ![Console info and updates](images/deactivation-console-info-updates.png)  
     
-5.  **콘솔 다시 설정**을 클릭합니다.
+5.  Click **Reset console**.
     
-    ![콘솔 다시 설정](images/deactivation-reset-console.png)
+    ![Reset console](images/deactivation-reset-console.png)
     
-6.  다음으로 **Reset and remove everything(다시 설정 및 모두 제거)**을 클릭합니다. 이 옵션은 콘솔을 원래 정품 상태로 다시 설정합니다.  모든 앱, 게임 및 로컬 저장 데이터가 삭제됩니다. 다른 옵션인 **Reset and keep my games &amp; apps(내 게임 및 앱 다시 설정 및 유지)**를 선택하면 개발자 프로그램에서 콘솔을 제거하지 않습니다.  
+6.  Next, click **Reset and remove everything**. This option resets the console to its original retail state.  All of your apps, games, and local save data will be deleted. Note that choosing the other option, **Reset and keep my games & apps**, will not remove your console from the developer program.  
    
-    ![다시 설정 및 모두 제거](images/deactivation-reset-remove.png)
+    ![Reset and remove everything](images/deactivation-reset-remove.png)
 
-## Windows 개발자 센터를 사용하여 콘솔 비활성화
+## <a name="deactivate-your-console-using-windows-dev-center"></a>Deactivate your console using Windows Dev Center
 
-어떤 이유로든 콘솔에 액세스할 수 없는 경우 Windows 개발자 센터를 사용하여 콘솔에서 개발자 모드를 비활성화할 수도 있습니다.
+If you are unable to access your console for any reason, you can also deactivate Developer Mode on your console by using Windows Dev Center.
 
-1. [developer.microsoft.com/xboxdevices](https://developer.microsoft.com/xboxdevices)로 이동합니다.    
-2. 개발자 센터 계정을 사용하여 개발자 센터에 로그인합니다.    
-3. 콘솔 목록에서 일련 번호, 콘솔 ID 또는 디바이스 ID와 일치하는 비활성화하려는 콘솔을 찾습니다.  
-4. **비활성화**를 클릭합니다.  
+1. Go to [developer.microsoft.com/xboxdevices](https://developer.microsoft.com/xboxdevices).    
+2. Sign in to Dev Center with your Dev Center account.    
+3. Find the console that you want to deactivate in the list of consoles by matching the serial number, console ID, or the device ID.  
+4. Click **Deactivate**.  
   
-![개발자 센터를 사용하여 비활성화](images/deactivation-devcenter.png)
+![Deactivate using DevCenter](images/deactivation-devcenter.png)
 
-이전에 Xbox One 콘솔이 정품 모드로 되돌아가지 않았으면 지금 전환합니다.
+If you didn't previously return your Xbox One console to Retail Mode, do so now.
 
-1. **개발자 홈**을 시작합니다.
-2. **Leave developer mode(개발자 모드 나가기)**를 클릭합니다.  콘솔이 정품 모드로 다시 시작됩니다.
+1. Launch **Dev Home**.
+2. Click **Leave developer mode**.  Your console will restart in Retail Mode.
 
-![활성화 13단계](images/deactivation-leave-dev-mode.png)
+![Activation Step 13](images/deactivation-leave-dev-mode.png)
 
-## 참고 항목
-- [Xbox One 개발자 모드 활성화](devkit-activation.md)
-- [Xbox One의 UWP](index.md)
+## <a name="see-also"></a>See also
+- [Xbox One Developer Mode activation](devkit-activation.md)
+- [UWP on Xbox One](index.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

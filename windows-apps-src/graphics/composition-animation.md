@@ -1,78 +1,78 @@
 ---
 author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
-title: "컴퍼지션 애니메이션"
-description: "키 프레임 및 식 애니메이션을 사용하여 많은 컴퍼지션 개체와 효과 속성에 애니메이션 효과를 줄 수 있으므로 UI 요소의 속성을 시간에 따라 또는 계산을 기준으로 변경할 수 있습니다."
+title: Composition animations
+description: Many composition object and effect properties can be animated using key frame and expression animations allowing properties of a UI element to change over time or based on a calculation.
 translationtype: Human Translation
-ms.sourcegitcommit: 9146f0d3771f1f3687c94dc9f4978b5db5765c5d
-ms.openlocfilehash: 9f098ef590e51547f066289965a7ce9fd02dc8cd
+ms.sourcegitcommit: 9ea05f7ba76c7813b200a4c8cd021613f980355d
+ms.openlocfilehash: 72b70dd2ae4de385f2a4711477aebb6d7023158c
 
 ---
-# 컴퍼지션 애니메이션
+# <a name="composition-animations"></a>Composition animations
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Windows.UI.Composition WinRT API를 사용하면 통합된 API 계층에서 작성자 개체를 만들고, 변환하고, 조작할 수 있으며 작성자 개체에 애니메이션 효과를 줄 수 있습니다.  컴퍼지션 애니메이션은 응용 프로그램 UI에서 애니메이션을 실행하는 강력하고 효율적인 방법을 제공합니다. 컴퍼지션 애니메이션은 UI 스레드와 독립적인 60FPS에서 애니메이션이 실행되도록 하고 시간뿐만 아니라 입력 및 기타 속성을 사용하여 멋진 애니메이션 실행 환경을 구축하기 위한 유연성을 제공하도록 처음부터 디자인되었습니다.
-이 항목에서는 컴퍼지션 개체의 속성에 애니메이션 효과를 주는 데 사용할 수 있는 기능에 대해 개략적으로 설명합니다.
-이 문서에서는 시각적 계층 구조의 기본 사항을 잘 알고 있다고 가정합니다. 자세한 내용은 [여기를 참조](./composition-visual-tree.md)하세요. 컴퍼지션 애니메이션의 유형에는 **키 프레임 애니메이션**과 **식 애니메이션**이 있습니다.  
+The Windows.UI.Composition WinRT API allows you to create, animate, transform and manipulate compositor objects in a unified API layer. Composition animations provide a powerful and efficient way to run animations in your application UI. They have been designed from the ground up to ensure that your animations run at 60 FPS independent of the UI thread and to give you the flexibility to build amazing experiences using not only time, but input and other properties, to drive animations.
+This topic provides an overview of the functionality available that allows you to animate properties of the Composition object.
+This document assumes you are familiar with the basics of the Visual Layer structure. For more information, [see here](./composition-visual-tree.md). There are two types of Composition Animations: **KeyFrame Animations**, and **Expression Animations**  
 
-![](./images/composition-animation-types.png)  
+![Animation types](./images/composition-animation-types.png)  
    
  
-##컴퍼지션 애니메이션의 유형
-**키 프레임 애니메이션**은 기존의 시간 기반 *프레임 단위* 애니메이션 환경을 제공합니다. 개발자는 애니메이션 타임라인의 특정 시점에서 애니메이션 속성에 필요한 값을 설명하는 *제어점*을 명시적으로 정의할 수 있습니다. 더 중요한 점은 감속/가속 함수(보간이라고도 함)를 사용하여 이러한 제어점 간을 전환하는 방법을 설명할 수 있다는 것입니다.  
+## <a name="types-of-composition-animations"></a>Types of Composition Animations
+**KeyFrame Animations** provide your traditional time-driven, *frame-by-frame* animation experiences. Developers can explicitly define *control points* describing values an animating property needs to be at specific points in the animation timeline. More importantly you are able to use Easing Functions (otherwise called Interpolators) to describe how to transition between these control points.  
 
-**암시적 애니메이션**은 개발자가 재사용 가능한 개인 애니메이션이나 일련의 애니메이션을 핵심 앱 논리와 별개로 정의할 수 있도록 해 주는 애니메이션 유형입니다. 암시적 애니메이션을 통해 개발자는 애니메이션 *템플릿*을 만들고 트리거로 연결할 수 있습니다. 이러한 트리거는 명시적 할당에서 발생하는 속성 변경입니다. 개발자는 템플릿을 단일 애니메이션 또는 애니메이션 그룹으로 정의할 수 있습니다. 애니메이션 그룹은 명시적으로 또는 트리거를 사용하여 함께 시작할 수 있는 애니메이션 템플릿의 컬렉션입니다. 암시적 애니메이션을 사용하면 속성의 값을 변경하여 애니메이션 효과를 확인하려 할 때마다 명시적 KeyFrameAnimations를 만들 필요가 없습니다.
+**Implicit Animations** are a type of animation that allows developers to define reusable individual animations or a series of animations separately from the core app logic. Implicit animations let developers create animation *templates* and hook them up with triggers. These triggers are property changes that result from explicit assignments. Developers can define a template as a single animation or an animation group. Animation groups are a collection of animation templates that can be started together either explicitly or with a trigger. Implicit animations remove the need for you to create explicit KeyFrameAnimations every time you want to change the value of a property and see it animate.
 
-**식 애니메이션**은 Windows 10 11월 업데이트(빌드 10586)에서 시각적 계층에 도입된 애니메이션 유형입니다. 식 애니메이션은 개발자가 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 속성과 프레임마다 평가되고 업데이트될 불연속 값 간의 수학적 관계를 만들 수 있다는 사실을 기초로 합니다. 개발자는 컴퍼지션 개체나 속성 집합의 속성을 참조하고, 수학 함수 도우미를 사용하고 입력을 참조하여 이러한 수학적 관계를 얻을 수 있습니다. 식은 Windows 플랫폼에서 시차 및 고정 헤더와 같은 경험을 가능하고 원활하게 만듭니다.  
+**Expression Animations** are a type of animation introduced in the Visual Layer with the Windows 10 November Update (Build 10586). The idea behind expression animations is a developer can create mathematical relationships between [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) properties and discrete values that will get evaluated and updated every frame. Developers can reference properties on Composition objects or property sets, use mathematical function helpers and even reference input to derive these mathematical relationships. Expressions make experiences like parallax and sticky headers possible and smooth on the Windows platform.  
 
-##컴퍼지션 애니메이션을 사용하는 이유
-**성능**  
- 유니버설 Windows 응용 프로그램을 빌드하는 경우 대부분의 개발자 코드는 UI 스레드에서 실행됩니다. 애니메이션이 다양한 디바이스 범주에서 원활하게 실행되도록 하기 위해 시스템에서는 애니메이션 계산을 수행하고 독립적인 스레드에서 작업하여 60FPS를 유지합니다. 즉, 개발자는 응용 프로그램이 고급 사용자 환경을 위해 다른 복잡한 작업을 수행하는 동안 시스템에 의지하여 원활한 애니메이션을 제공할 수 있습니다.    
+## <a name="why-composition-animations"></a>Why Composition Animations?
+**Performance**  
+ When building Universal Windows applications, most developer code runs on the UI thread. To ensure that the animations run smoothly across the different device categories, the system performs the animation calculations and work on an independent thread in order to maintain 60 FPS. This means developers can count on the system to provide smooth animations while their applications perform other complex operations for advanced user experiences.    
  
-**가능성**  
-시각적 계층의 컴퍼지션 애니메이션에 대한 목표는 아름다운 UI를 쉽게 만드는 것입니다. 당사는 개발자가 놀라운 아이디어를 쉽게 구축할 수 있도록 다양한 유형의 애니메이션을 제공하려고 합니다.
+**Possibilities**  
+The goal for composition animations in the Visual Layer is to make it easy to create beautiful UIs. We want to provide developers different types of animations that make it easy to build their amazing ideas.
  
    
 
-**템플릿**  
- 시각적 계층의 모든 컴퍼지션 애니메이션은 템플릿입니다. 즉, 개발자가 여러 개체에서 별도로 애니메이션을 만들 필요 없이 하나의 애니메이션을 사용할 수 있습니다. 이에 따라 개발자는 이전의 사용을 방해한다는 걱정 없이 동일한 애니메이션을 사용하고 다른 요구에 맞게 속성이나 매개 변수를 조정할 수 있습니다.  
+**Templating**  
+ All composition animations in the Visual Layer are templates – this means that developers can use an animation on multiple objects without the need to create separate animations. This allows developers to use the same animation and tweak properties or parameters to meet some other needs without the worry of obstructing the previous uses.  
 
-가능한 작업의 몇 가지 예를 보려면 //BUILD 토론에서 [식 애니메이션](https://channel9.msdn.com/events/Build/2016/P486), [대화형 환경](https://channel9.msdn.com/Events/Build/2016/P405), [암시적 애니메이션](https://channel9.msdn.com/events/Build/2016/P484) 및 [연결된 애니메이션](https://channel9.msdn.com/events/Build/2016/P485)에 대해 확인할 수 있습니다.
+You can check out our //BUILD talks for [Expression Animations](https://channel9.msdn.com/events/Build/2016/P486), [Interactive Experiences](https://channel9.msdn.com/Events/Build/2016/P405), [Implicit Animations](https://channel9.msdn.com/events/Build/2016/P484), and [Connected Animations](https://channel9.msdn.com/events/Build/2016/P485) to see some examples of what is possible.
 
-[컴퍼지션 GitHub](http://go.microsoft.com/fwlink/?LinkID=789439)에서 API 사용 방법에 대한 샘플과 작동하는 API의 고화질 샘플도 확인할 수 있습니다.
+You can also check out the [Composition GitHub](http://go.microsoft.com/fwlink/?LinkID=789439) for samples on how to use the APIs and high fidelity samples of the APIs in action.
  
-##컴퍼지션 애니메이션으로 애니메이션 효과를 줄 수 있는 대상
-컴퍼지션 애니메이션은 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 및 **InsetClip** 같은 컴퍼지션 개체의 대부분의 속성에 적용할 수 있습니다. 컴퍼지션 효과 및 속성 집합에도 컴퍼지션 애니메이션을 적용할 수 있습니다. **애니메이션 효과를 줄 대상을 선택할 때 형식에 유의해야 합니다. 이 형식을 사용하여 생성하는 키 프레임 애니메이션의 형식이나 식이 계산되어야 하는 형식을 결정합니다.**  
+## <a name="what-can-you-animate-with-composition-animations"></a>What can you animate with Composition Animations?
+Composition animations can be applied to most properties of composition objects such as [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), and **InsetClip**. You can also apply composition animations to composition effects and property sets. **When choosing what to animate, take note of the type – use this to determine what type of KeyFrame animation you construct or what type your expression must resolve to.**  
  
-###Visual
-|애니메이션 효과를 줄 수 있는 Visual 속성|  종류|
+### <a name="visual"></a>Visual
+|Animatable Visual Properties|  Type|
 |------|------|
 |AnchorPoint|   Vector2|
 |CenterPoint|   Vector3|
-|오프셋|    Vector3|
-|불투명도|   Scalar|
-|방향|   Quaternion|
+|Offset|    Vector3|
+|Opacity|   Scalar|
+|Orientation|   Quaternion|
 |RotationAngle| Scalar|
 |RotationAngleInDegrees|    Scalar|
 |RotationAxis|  Vector3|
-|배율| Vector3|
-|크기|  Vector2|
+|Scale| Vector3|
+|Size|  Vector2|
 |TransformMatrix*|  Matrix4x4|
-*전체 TransformMatrix 속성에 Matrix4x4로 애니메이션 효과를 주려는 경우 식 애니메이션을 사용해야 합니다. 그러지 않으면 행렬의 개별 셀을 대상으로 지정하고 거기에서 KeyFrame 또는 ExpressionAnimation을 사용할 수 있습니다.  
+*If you want to animate the entire TransformMatrix property as a Matrix4x4, you need to use an ExpressionAnimation to do so. Otherwise, you can target individual cells of the matrix and can use either a KeyFrame or ExpressionAnimation there.  
 
-###InsetClip
-|애니메이션 효과를 줄 수 있는 InsetClip 속성|   종류|
+### <a name="insetclip"></a>InsetClip
+|Animatable InsetClip Properties|   Type|
 |-------------------------------|-------|
 |BottomInset|   Scalar|
 |LeftInset| Scalar|
 |RightInset|    Scalar|
 |TopInset|  Scalar|
 
-##Visual 하위 채널 속성
-[Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 속성에 애니메이션 효과를 줄 수 있을 뿐만 아니라 이러한 속성의 *하위 채널* 구성 요소도 애니메이션 대상으로 지정할 수 있습니다. 예를 들어 전체 Offset 대신 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 X Offset에 애니메이션 효과를 주려고 할 수 있습니다. 애니메이션은 Vector3 Offset 속성 또는 Offset 속성의 Scalar X 구성 요소를 대상으로 지정할 수 있습니다. 속성의 개별 하위 채널 구성 요소를 대상으로 지정할 수 있을 뿐만 아니라 여러 구성 요소를 대상으로 지정할 수도 있습니다. 예를 들어 Scale의 X 및 Y 구성 요소를 대상으로 지정할 수 있습니다.
+## <a name="visual-sub-channel-properties"></a>Visual Sub Channel Properties
+In addition to being able to animate properties of [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), you are also able to target the *sub channel* components of these properties for animations as well. For example, say you simply want to animate the X Offset of a [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) rather than the entire Offset. The animation can either target the Vector3 Offset property, or the Scalar X component of the Offset property. In addition to being able to target an individual sub channel component of a property, you are also able to target multiple components. For example, you can target the X and Y component of Scale.
 
-|애니메이션 효과를 줄 수 있는 Visual 하위 채널 속성|  종류|
+|Animatable Visual Sub Channel Properties|  Type|
 |----------------------------------------|------|
 |AnchorPoint.x, y|Scalar|
 |AnchorPoint.xy|Vector2|
@@ -87,28 +87,28 @@ Windows.UI.Composition WinRT API를 사용하면 통합된 API 계층에서 작�
 |Size.x, y|Scalar|
 |Size.xy|Vector2|
 |TransformMatrix._11 ... TransformMatrix._NN,|Scalar|
-|TransformMatrix._11_12... TransformMatrix._NN_NN|Vector2|
+|TransformMatrix._11_12 ... TransformMatrix._NN_NN|Vector2|
 |TransformMatrix._11_12_13 ... TransformMatrix._NN_NN_NN|Vector3|
 |TransformMatrix._11_12_13_14|Vector4|
-|Color*|    Colors(Windows.UI)|
+|Color*|    Colors (Windows.UI)|
 
-*Brush 속성의 Color 하위 채널에 애니메이션 효과를 주는 것은 약간 다릅니다. StartAnimation()을 Visual.Brush에 연결하고 매개 변수에서 애니메이션 효과를 줄 속성을 "Color"로 선언합니다. 이에 대한 자세한 내용은 나중에 설명합니다.
+*Animating the Color subchannel of the Brush property is a bit different. You attach StartAnimation() to the Visual.Brush, and declare the property to animate in the parameter as "Color". (More details about animating color discussed later)
 
-##속성 집합 및 효과
-[Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 및 InsetClip의 속성에 애니메이션 효과를 주는 것 외에도 PropertySet 또는 효과의 속성에 애니메이션 효과를 줄 수도 있습니다. 속성 집합의 경우 속성을 정의하고 컴퍼지션 속성 집합에 저장합니다. 해당 속성은 나중에 애니메이션의 대상이 될 수 있으며 다른 애니메이션에서 동시에 참조될 수도 있습니다. 이에 대해서는 다음 섹션에서 자세히 설명합니다.  
+## <a name="property-sets-and-effects"></a>Property Sets and Effects
+In addition to animating properties of [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) and InsetClip, you are also able to animate properties in a PropertySet or an Effect. For property sets, you define a property and store it in a Composition Property Set – that property can later be the target of an animation (and also be referenced simultaneously in another). This will be discussed in more detail in the following sections.  
 
-효과의 경우 컴퍼지션 효과 API를 사용하여 그래픽 효과를 정의할 수 있습니다([효과 개요](./composition-effects.md) 참조). 효과를 정의하는 것 외에도 효과의 속성 값에 애니메이션 효과를 줄 수도 있습니다. 이 작업은 Sprite 시각적 개체에 대한 Brush 속성의 속성 구성 요소를 대상으로 지정하여 수행할 수 있습니다.
+For Effects, you are able to define graphical effects using the Composition Effects APIs (See here for the [Effects Overview](./composition-effects.md). In addition to defining Effects, you are also able to animate the property values of the Effect. This is done by targeting the properties component of the Brush property on Sprite Visuals.
 
-##빠른 단계: 컴퍼지션 애니메이션 시작하기
-다양한 유형의 애니메이션을 생성하고 사용하는 방법에 대해 자세히 살펴보기 전에 컴퍼지션 애니메이션을 만드는 방법에 대한 상위 수준의 빠른 단계가 아래에 나와 있습니다.  
-1.  애니메이션 효과를 줄 속성, 하위 채널 속성 또는 효과 결정 - 형식을 기록해 둡니다.  
-2.  애니메이션의 새 개체 만들기 – 키 프레임 애니메이션이거나 식 애니메이션입니다.  
-    *  키 프레임 애니메이션의 경우 애니메이션 효과를 줄 속성의 형식과 일치하는 키 프레임 애니메이션 형식을 만들어야 합니다.  
-    *  식 애니메이션의 형식은 하나밖에 없습니다.  
-3.  애니메이션의 콘텐츠 정의 – 키 프레임을 삽입하거나 식 문자열을 정의합니다.  
-    *  키 프레임 애니메이션의 경우 키 프레임의 값이 애니메이션 효과를 줄 속성과 동일한 형식이어야 합니다.  
-    *  식 애니메이션의 경우 식 문자열이 애니메이션 효과를 줄 속성과 동일한 형식으로 계산되어야 합니다.  
-4.  애니메이션 효과를 줄 속성인 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)에서 애니메이션 시작 – StartAnimation을 호출하고 애니메이션 효과를 줄 속성의 이름(문자열 형식) 및 애니메이션의 개체를 매개 변수로 포함합니다.  
+## <a name="quick-formula-getting-started-with-composition-animations"></a>Quick Formula: Getting Started with Composition Animations
+Before diving into the details on how to construct and use the different types of animations, below is a quick, high level formula for how to put together Composition Animations.  
+1.  Decide which property, sub channel property or Effect you want to animate - make note of the type.  
+2.  Create a new object for your animation – this will either be a KeyFrame or Expression Animation.  
+    *  For KeyFrame animations, make sure you create a KeyFrame Animation type that matches the type of property you want to animate.  
+    *  There is only a single type of Expression Animation.  
+3.  Define the content for animation – Insert your Keyframes or define the Expression string  
+    *  For KeyFrame animations, make sure the value of your KeyFrames are the same type as the property you want to animate.  
+    *  For Expression animations, make sure your Expression string will resolve to the same type as the property you want to animate.  
+4.  Start your animation on the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) whose property you want to animate – call StartAnimation and include as parameters:   the name of the property you want to animate (in string form) and the object for your animation.  
 
 ```cs
 // KeyFrame Animation Example to target Opacity property
@@ -132,11 +132,11 @@ _targetVisual.StartAnimation("Opacity", expression);
 
 ```
 
-##키 프레임 애니메이션 사용
-키 프레임 애니메이션은 하나 이상의 키 프레임을 사용하는 시간 기반 애니메이션으로, 애니메이션 값이 시간에 따라 변경되는 방식을 지정합니다. 프레임은 표식 또는 제어점을 나타내므로 애니메이션 값이 지정된 시간에 무엇이어야 하는지 정의할 수 있습니다.  
+## <a name="using-keyframe-animations"></a>Using KeyFrame Animations
+KeyFrame Animations are time-based animations that use one or more key frames to specify how the animated value should change over time. The frames represent markers or control points, allowing you to define what the animated value should be at a specific time.  
  
-###애니메이션 만들기 및 키 프레임 정의
-키 프레임 애니메이션을 생성하려면 애니메이션 효과를 주려는 속성의 형식과 관련된 Compositor 개체의 생성자 메서드를 사용합니다. 키 프레임 애니메이션의 유형은 다음과 같습니다.
+### <a name="creating-your-animation-and-defining-keyframes"></a>Creating your animation and defining KeyFrames
+To construct a KeyFrame Animation, use the constructor method of your Compositor object that correlates to the type of the property you wish to animate. The different types of KeyFrame Animation are:
 *   ColorKeyFrameAnimation
 *   QuaternionKeyFrameAnimation
 *   ScalarKeyFrameAnimation
@@ -144,119 +144,119 @@ _targetVisual.StartAnimation("Opacity", expression);
 *   Vector3KeyFrameAnimation
 *   Vector4KeyFrameAnimation  
 
-Vector3 키 프레임 애니메이션을 만드는 예제:     
+An example that creates a Vector3 KeyFrame Animation:     
 ```cs
 var animation = _compositor.CreateVector3KeyFrameAnimation(); 
 ```
 
-각 키 프레임 애니메이션은 두 가지 구성 요소(필요한 경우 세 번째 구성 요소 사용)를 정의하는 개별 키 프레임 세그먼트를 삽입하여 생성됩니다.  
-*   시간: 0.0 – 1.0 사이의 키 프레임의 정규화된 진행 상태
-*   값: 시간 상태에서 애니메이션 값의 특정 값
-*   (옵션) 감속/가속 함수: 이전과 현재 키 프레임 사이의 보간을 설명하는 함수(이 항목의 뒷부분에서 설명)  
+Each KeyFrame animation is constructed by inserting individual KeyFrame segments that define two components (with an optional third)  
+*   Time: normalized progress state of the KeyFrame between 0.0 – 1.0
+*   Value: specific value of the animating value at the time state
+*   (Optional) Easing function: function to describe interpolation between previous and current KeyFrame (discussed later in this topic)  
 
-애니메이션의 중간 지점에 키 프레임을 삽입하는 예제:
+An example that inserts a KeyFrame at the halfway point of the animation:
 ```cs
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
-**참고:** 키 프레임 애니메이션으로 색에 애니메이션 효과를 주는 경우 몇 가지 추가 사항에 유의해야 합니다.
-1.  애니메이션 효과를 주려는 속성 매개 변수로 **Color**를 사용하여 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 대신 Visual.Brush에 StartAnimation을 연결합니다.
-2.  키 프레임의 "값" 구성 요소는 Windows.UI 네임스페이스의 Colors 개체에 의해 정의됩니다.
-3.  InterpolationColorSpace 속성을 설정하여 보간이 수행될 색 공간을 정의할 수 있습니다. 가능한 값은 다음과 같습니다.
+**Note:** When animating color with KeyFrame Animations, there are a few additional things to keep in mind:
+1.  You attach StartAnimation to the Visual.Brush, instead of [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), with **Color** as the property parameter you wish to animate.
+2.  The "value" component of the KeyFrame is defined by the Colors object off of the Windows.UI namespace.
+3.  You have the option to define the color space that the interpolation will go through by setting the InterpolationColorSpace property. Possible values include:
     *   CompositionColorSpace.Rgb
-    *   CompositionColorSpace.Hsl입니다.
+    *   CompositionColorSpace.Hsl
 
 
-##키 프레임 애니메이션 속성
-키 프레임 애니메이션 및 개별 키 프레임을 정의했으면 애니메이션의 여러 속성을 정의할 수 있습니다.
-*   DelayTime – StartAnimation()이 호출된 후 애니메이션을 시작하기 전의 시간
-*   Duration – 애니메이션의 지속 시간
-*   IterationBehavior – 애니메이션의 수 또는 무한 반복 동작
-*   IterationCount - 키 프레임 애니메이션이 반복되는 유한 횟수
-*   KeyFrame Count - 특정 키 프레임 애니메이션에서 읽은 키 프레임 수
-*   StopBehavior – StopAnimation이 호출될 때 애니메이션 효과를 주려는 속성 값의 동작 지정  
-*   방향 – 재생에 대한 애니메이션 방향을 지정합니다.  
+## <a name="keyframe-animation-properties"></a>KeyFrame Animation Properties
+Once you've defined your KeyFrame Animation and the individual KeyFrames, you are able to define multiple properties off of your animation:
+*   DelayTime – time before an animation starts after StartAnimation() is called
+*   Duration – duration of the animation
+*   IterationBehavior – count or infinite repeat behavior for an animation
+*   IterationCount – number of finite times a KeyFrame Animation will repeat
+*   KeyFrame Count – read of how many KeyFrames in a particular KeyFrame Animation
+*   StopBehavior – specifies the behavior of an animating property value when StopAnimation is called  
+*   Direction – specifies the direction of the animation for playback  
 
-애니메이션의 Duration을 5초로 설정하는 예제:  
+An example that sets the Duration of the animation to 5 seconds:  
 ```cs
 animation.Duration = TimeSpan.FromSeconds(5);
 ```
 
-##감속/가속 함수
-감속/가속 함수(CompositionEasingFunction)는 이전 키 프레임 값에서 현재 키 프레임 값까지 중간 값이 어떻게 진행되는지를 나타냅니다. 키 프레임에 감속/가속 함수를 제공하지 않는 경우 기본 곡선이 사용됩니다.  
-지원되는 감속/가속 함수는 두 가지 유형이 있습니다.
-*   선형
-*   입방형 3차원  
-*   단계  
+## <a name="easing-functions"></a>Easing Functions
+Easing functions (CompositionEasingFunction) indicate how intermediate values progress from the previous key frame value to the current key frame value. If you do not provide an easing function for the KeyFrame, a default curve will be used.  
+There are two types of easing functions supported:
+*   Linear
+*   Cubic Bezier  
+*   Step  
 
-입방형 3차원은 크기를 조정할 수 있는 부드러운 곡선을 설명하는 데 자주 사용되는 파라메트릭 함수입니다. 컴퍼지션 키 프레임 애니메이션과 함께 사용하는 경우 Vector2 개체인 두 제어점을 정의합니다. 이러한 제어점은 곡선의 모양을 정의하는 데 사용됩니다. 두 제어점이 입방형 3차원의 곡선을 생성하는 방식을 시각화하려면 [이 사이트](http://cubic-bezier.com/#0,-0.01,.48,.99) 등의 유사한 사이트를 사용하는 것이 좋습니다.
+Cubic Beziers are a parametric function frequently used to describe smooth curves that can be scaled. When using with Composition KeyFrame Animations, you define two control points that are Vector2 objects. These control points are used to define the shape of the curve. It is recommended to use similar sites such as [this](http://cubic-bezier.com/#0,-0.01,.48,.99) to visualize how the two control points construct the curve for a Cubic Bezier.
 
-감속/가속 함수를 만들려면 Compositor 개체의 생성자 메서드를 사용합니다. 선형 감속/가속 함수와 기본 입방형 3차원 감속/가속 함수를 만드는 두 예제는 다음과 같습니다.    
+To create an easing function, utilize the constructor method off your Compositor object. Two examples below that create a Linear easing function and a basic Cubic Bezier easing function.    
 ```cs
 var linear = _compositor.CreateLinearEasingFunction();
 var easeIn = _compositor.CreateCubicBezierEasingFunction(new Vector2(0.5f, 0.0f), new Vector2(1.0f, 1.0f));
 var step = _compositor.CreateStepEasingFunction();
 ```
-키 프레임에 감속/가속 함수를 추가하려면 애니메이션에 삽입할 때 키 프레임에 대한 세 번째 매개 변수에 삽입하기만 하면 됩니다.   
-키 프레임을 사용하여 easeIn 감속/가속 함수에서 추가하는 예제:  
+To add your easing function into your KeyFrame, simply add in the third parameter to the KeyFrame when inserting into the Animation.   
+An example that adds in a easeIn easing function with the KeyFrame:  
 ```cs
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 ```
 
-##키 프레임 애니메이션 시작 및 중지
-애니메이션과 키 프레임을 정의한 후에는 애니메이션을 연결할 준비가 됩니다. 애니메이션을 시작할 때 애니메이션 효과를 줄 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), 애니메이션 효과를 줄 대상 속성 및 애니메이션에 대한 참조를 지정합니다. 이렇게 하려면 StartAnimation() 함수를 호출합니다. 속성에 대해 StartAnimation()을 호출하면 이전에 실행 중인 모든 애니메이션이 연결이 끊기고 제거됩니다.  
-**참고:** 애니메이션 효과를 주도록 선택하는 속성에 대한 참조는 문자열 형식입니다.  
+## <a name="starting-and-stopping-keyframe-animations"></a>Starting and Stopping KeyFrame Animations
+After you have defined your animation and KeyFrames, you are ready to hook up your animation. When starting your animation, you specify the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) to be animated, the target property to be animated and a reference to the animation. You do so by calling the StartAnimation() function. Remember that calling StartAnimation() on a property will disconnect and remove any previously running animations.  
+**Note:** The reference to the property you choose to animate is in the form of a string.  
 
-[Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 Offset 속성에서 애니메이션을 설정하고 시작하는 예제:  
+An example that sets and starts an animation on the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)’s Offset property:  
 ```cs
 targetVisual.StartAnimation("Offset", animation);
 ```  
 
-하위 채널 속성을 대상으로 지정하려면 애니메이션 효과를 주려는 속성을 정의하는 문자열에 하위 채널을 추가합니다. 위의 예제에서 구문이 StartAnimation("Offset.X, animation2)으로 변경되며, 여기서 animation2는 ScalarKeyFrameAnimation입니다.  
+If you want to target a sub channel property, you add the subchannel into the string defining the property you want to animate. In the examples above, the syntax would change to StartAnimation("Offset.X, animation2), where animation2 is a ScalarKeyFrameAnimation.  
 
-애니메이션을 시작한 후 애니메이션이 완료되기 전에 중지할 수도 있습니다. 이 작업은 StopAnimation() 함수를 사용하여 수행됩니다.  
-[Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 Offset 속성에서 애니메이션을 중지하는 예제:    
+After starting your animation, you also have the ability to stop it before it finishes. This is done by using the StopAnimation() function.  
+An example that stops an animation on the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)’s Offset property:    
 ```cs
 targetVisual.StopAnimation("Offset");
 ```
 
-애니메이션이 명시적으로 중지될 때 애니메이션의 동작을 정의할 수도 있습니다. 이렇게 하려면 애니메이션의 중지 동작 속성을 정의합니다. 다음 세 가지 옵션이 있습니다.
-*   LeaveCurrentValue: 애니메이션이 애니메이션 효과를 준 속성의 값을 마지막으로 계산된 애니메이션의 값으로 표시합니다.
-*   SetToFinalValue: 애니메이션이 애니메이션 효과를 준 속성의 값을 최종 키 프레임의 값으로 표시합니다.
-*   SetToInitialValue: 애니메이션이 애니메이션 효과를 준 속성의 값을 첫 번째 키 프레임의 값으로 표시합니다.  
+You also have the ability to define the behavior of the animation when it is explicitly stopped. To do so, you define the Stop Behavior property off your animation. There are three options:
+*   LeaveCurrentValue: The animation will mark the value of the animated property to be the last calculated value of the animation
+*   SetToFinalValue: The animation will mark the value of the animated property to be the value of the final keyframe
+*   SetToInitialValue: The animation will mark the value of the animated property to be the value of the first keyframe  
 
-키 프레임 애니메이션의 StopBehavior 속성을 설정하는 예제:  
+An example that sets the StopBehavior property for a KeyFrame Animation:  
 ```cs
 animation.StopBehavior = AnimationStopBehavior.LeaveCurrentValue;
 ```
 
-##애니메이션 완료 이벤트
-키 프레임 애니메이션을 사용하는 경우 개발자는 선택한 애니메이션(또는 애니메이션 그룹)이 완료될 때 애니메이션 일괄 처리를 통해 집계할 수 있습니다. 키 프레임 애니메이션 완료 이벤트만 일괄 처리할 수 있습니다. 식은 확정된 끝을 포함하지 않으므로 완료 이벤트를 발생시키지 않습니다. 식 애니메이션이 일괄 처리 내에서 시작되는 경우 애니메이션이 예상대로 실행되고 일괄 처리가 발생하는 시기에 영향을 주지 않습니다.    
+## <a name="animation-completion-events"></a>Animation Completion Events
+With KeyFrame Animations, developers can use an Animation Batches to aggregate when a select animation (or group of animations) have completed. Only KeyFrame animation completion events can be batched. Expressions do not have a definite end so they do not fire a completion event. If an Expression animation is started within a batch, the animation will execute as expected and it will not affect when the batch fires.    
 
-일괄 처리에서 모든 애니메이션이 완료되면 일괄 처리 완료 이벤트가 발생합니다. 일괄 처리의 이벤트가 발생하는 데 걸리는 시간은 일괄 처리에서 가장 길거나 가장 지연된 애니메이션에 따라 다릅니다.
-일부 다른 작업을 예약하기 위해 선택한 애니메이션 그룹이 언제 완료되는지 알아야 하는 경우 종료 상태 집계가 유용합니다.  
+A batch completion event fires when all animations within the batch have completed. The time it takes for a batch’s event to fire depends on the longest or most delayed animation in the batch.
+Aggregating end states is useful when you need to know when groups of select animations complete in order to schedule some other work.  
 
-일괄 처리는 완료 이벤트가 발생하면 삭제됩니다. 또한 언제든지 Dispose()를 호출하여 조기에 리소스를 해제할 수 있습니다. 일괄 처리된 애니메이션이 조기에 종료되고 완료 이벤트를 수집하지 않으려면 수동으로 일괄 처리를 삭제할 수 있습니다. 애니메이션이 중단되거나 취소되는 경우 완료 이벤트가 발생하고 완료 이벤트가 설정된 일괄 처리에 집계됩니다. 이 방법은 [Windows/컴퍼지션 GitHub](http://go.microsoft.com/fwlink/p/?LinkId=789439)의 Animation_Batch SDK 샘플에서 보여 줍니다.  
+Batches will dispose once the completion event is fired. You can also call Dispose() at any time to release the resource early. You may want to manually dispose the batch object if a batched animation is ended early and you do not wish to pick up the completion event. If an animation is interrupted or canceled the completion event will fire and count towards the batch it was set in. This is demonstrated in the Animation_Batch SDK sample on the [Windows/Composition GitHub](http://go.microsoft.com/fwlink/p/?LinkId=789439).  
  
-##범위 일괄 처리
-특정 애니메이션 그룹을 집계하거나 단일 애니메이션의 완료 이벤트를 대상으로 지정하려면 범위 일괄 처리를 만듭니다.    
+## <a name="scoped-batches"></a>Scoped batches
+To aggregate a specific group of animations or target a single animation’s completion event, you create a Scoped batch.    
 ```cs
 CompositionScopedBatch myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 ``` 
-범위 일괄 처리를 만든 후 시작된 모든 애니메이션은 Suspend 또는 End 함수를 사용하여 일괄 처리가 명시적으로 일시 중단되거나 종료될 때까지 집계됩니다.    
+After creating a Scoped batch, all started animations aggregate until the batch is explicitly suspended or ended using the Suspend or End function.    
 
-Suspend 함수를 호출하면 Resume이 호출될 때까지 애니메이션 종료 상태의 집계가 중지됩니다. 이를 통해 제공된 일괄 처리에서 콘텐츠를 명시적으로 제외할 수 있습니다.  
+Calling the Suspend function stops aggregating animates end states until Resume is called. This allows you to explicitly exclude content from a given batch.  
 
-아래의 예제에서 VisualA의 Offset 속성을 대상으로 하는 애니메이션은 일괄 처리에 포함되지 않습니다.  
+In the example below, the animation targeting the Offset property of VisualA will not be included in the batch:  
 ```cs
 myScopedBatch.Suspend();
 VisualA.StartAnimation("Offset", myAnimation);
 myScopeBatch.Resume();
 ```
 
-일괄 처리를 완료하려면 End()를 호출해야 합니다. 종료 호출이 없는 경우 일괄 처리는 계속 열려 있게 되어 영원히 개체를 수집합니다.  
+In order to complete your batch you must call End(). Without an End call, the batch will remain open forever-collecting objects.  
  
-다음 코드 조각 및 아래의 다이어그램에서는 일괄 처리에서 애니메이션을 집계하여 종료 상태를 추적하는 방법의 예를 보여 줍니다. 이 예제에서 애니메이션 1, 3 및 4에는 이 일괄 처리로 추적되는 종료 상태가 있지만 애니메이션 2에는 없습니다.  
+The following code snippet and diagram below shows an example of how the Batch will aggregate animations to track end states. Note that in this example, Animations 1, 3, and 4 will have end states tracked by this Batch, but Animation 2 will not.  
 ```cs
 myScopedBatch.End();
 CompositionScopedBatch myScopedBatch =  _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
@@ -272,94 +272,94 @@ myScopedBatch.Resume();
 […]
 myScopedBatch.End();
 ```  
-![](./images/composition-scopedbatch.png)
+![The scoped batch contains animation one, animation three, and animation four while animation two is excluded from the scoped batch](./images/composition-scopedbatch.png)
  
-##단일 애니메이션의 완료 이벤트 일괄 처리
-단일 애니메이션이 언제 종료되는지 알고 싶은 경우에는 대상으로 지정할 애니메이션만 포함하는 범위 일괄 처리를 만들어야 합니다. 예:  
+## <a name="batching-a-single-animations-completion-event"></a>Batching a single animation's completion event
+If you want to know when a single animation ends, you need to create a Scoped batch that will include just the animation you are targeting. For example:  
 ```cs
 CompositionScopedBatch myScopedBatch =  _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
 Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
-##일괄 처리의 완료 이벤트 검색
+## <a name="retrieving-a-batchs-completion-event"></a>Retrieving a batch's completion event
 
-한 애니메이션이나 여러 애니메이션을 일괄 처리하는 경우 일괄 처리의 완료 이벤트를 동일한 방식으로 검색합니다. 대상 일괄 처리의 Completed 이벤트에 대한 이벤트 처리 메서드를 등록합니다.  
+When batching an animation or multiple animations, you will retrieve the batch’s completion event the same way. You register the event-handling method for the Completed event of the targeted batch.  
 
 ```cs
 myScopedBatch.Completed += OnBatchCompleted;
 ``` 
 
-##일괄 처리 상태
-기존 일괄 처리의 상태를 확인하는 데 사용할 수 있는 두 가지 속성은 IsActive와 IsEnded입니다.  
+## <a name="batch-states"></a>Batch states
+There are two properties you can use to determine the state of an existing batch; IsActive and IsEnded.  
 
-IsActive 속성은 대상 일괄 처리가 애니메이션 집계에 열려 있는 경우 true를 반환합니다. 일괄 처리가 일시 중단되거나 종료된 경우에는 IsActive가 false를 반환합니다.   
+The IsActive property returns true if a targeted batch is open to aggregating animations. IsActive will return false when a batch is suspended or ended.   
 
-특정 일괄 처리에 애니메이션을 추가할 수 없는 경우 IsEnded 속성은 true를 반환합니다. 특정 일괄 처리에 대해 End()를 명시적으로 호출하면 일괄 처리가 종료됩니다.  
+The IsEnded property returns true when you cannot add an animation to that specific batch. A batch will be ended when you call explicitly call End() for a specific batch.  
  
-##식 애니메이션 사용
-식 애니메이션은 Windows 10 11월 업데이트(10586)에서 컴퍼지션 팀이 도입한 새로운 유형의 애니메이션입니다. 상위 수준에서 식 애니메이션은 불연속 값과 다른 컴포지션 개체 속성에 대한 참조 간의 수학적 수식/관계를 기반으로 합니다. 보간 함수(입방형 3차원, 4차, 5차 등)를 사용하여 시간이 지남에 따라 값이 어떻게 변경되는지를 설명하는 키 프레임 애니메이션과 달리, 식 애니메이션은 수학적 수식을 사용하여 애니메이션 효과를 준 값이 프레임마다 계산되는 방식을 정의합니다. 식 애니메이션에는 정의된 기간이 없다는 점에 유의해야 합니다. 식 에니메이션은 시작된 후 명시적으로 중지될 때까지 실행되며 수학적 수식을 사용하여 애니메이션 효과를 주는 속성의 값을 결정합니다.
+## <a name="using-expression-animations"></a>Using Expression Animations
+Expression Animations are a new type of animation the Composition Team introduced with the November Update for Windows 10 (10586). At a high level, Expression Animations are based on a mathematical equation/relationship between discrete values and references to other Composition object properties. In contrast to KeyFrame Animations that use an interpolator function (Cubic Bezier, Quad, Quintic, etc.) to describe how the value changes over time, Expression Animations use a mathematical equation to define how the animated value is calculated each frame. It’s important to point out that Expression Animations do not have a defined duration – once started, they will run and use the mathematical equation to determine the value of the animating property until they are explicitly stopped.
 
-**그렇다면 식 애니메이션이 유용한 이유는 무엇일까요?** 식 애니메이션의 실질적인 강점은 다른 개체의 매개 변수 또는 속성에 대한 참조가 포함된 수학적 관계를 만드는 기능에서 제공됩니다. 즉, 다른 컴퍼지션 개체, 로컬 변수 또는 컴퍼지션 속성 집합의 공유 값에 대한 속성의 값을 참조하는 수식을 사용할 수 있습니다. 이 참조 모델과 프레임마다 계산되는 수식 때문에 수식을 정의하는 값이 변경되면 수식의 출력도 변경됩니다. 이에 따라 불연속 값이 미리 정의되어야 하는 기존의 키 프레임 애니메이션을 뛰어넘는 가능성이 열립니다. 예를 들어 고정 헤더 및 시차와 같은 경험은 식 애니메이션을 사용하여 쉽게 기술될 수 있습니다.
+**So why are Expression Animations useful?** The real power of Expression Animations comes from their ability to create a mathematical relationship that includes references to parameters or properties on other objects. This means you can have an equation referencing values of properties on other Composition objects, local variables, or even shared values in Composition Property Sets. Because of this reference model, and that the equation is evaluated every frame, if the values that define an equation change, so will the output of the equation. This opens up bigger possibilities beyond traditional KeyFrame Animations where values must be discrete and pre-defined. For example, experiences like Sticky Headers and Parallax can be easily described using Expression Animations.
 
-**참고:** 여기에서 사용되는 "식" 또는 "식 문자열"이라는 용어는 식 애니메이션 개체를 정의하는 수학적 수식을 나타냅니다.
+**Note:** We use the terms "Expression" or "Expression String" as reference to your mathematical equation that defines your Expression Animation object.
 
-##식 애니메이션 만들기 및 연결
-식 애니메이션을 만드는 구문으로 이동하기 전에 언급할 몇 가지 핵심적인 원칙은 다음과 같습니다.  
-*   식 애니메이션은 정의된 수학적 수식을 사용하여 애니메이션 효과를 주는 속성의 값을 프레임마다 결정합니다.
-*   수학적 수식은 식에 문자열로 입력됩니다.
-*   수학적 수식의 출력은 애니메이션 효과를 주려는 속성과 동일한 형식으로 계산되어야 합니다. 두 형식이 일치하지 않는 경우 식이 계산될 때 오류가 발생합니다. 수식이 Nan(숫자/0)으로 계산되는 경우 마지막으로 계산된 값이 사용됩니다.
-*   식 애니메이션의 *수명은 무한*합니다. 식 애니메이션은 중지될 때까지 계속 실행됩니다.  
+## <a name="creating-and-attaching-your-expression-animation"></a>Creating and Attaching your Expression Animation
+Before we jump into the syntax of creating Expression Animations, there are a few core principles to mention:  
+*   Expression Animations use a defined mathematical equation to determine the value of the animating property every frame.
+*   The mathematical equation is inputted into the Expression as a string.
+*   The output of the mathematical equation must resolve to the same type as the property you plan to animate. If they don't match, you will get an error when the Expression gets calculated. If your equation resolves to Nan (number/0), the system will use the last previously calculated value.
+*   Expression Animations have an *infinite lifetime* – they will continue to run until they are stopped.  
 
-식 애니메이션을 만들려면 컴퍼지션 개체의 생성자를 사용하면 됩니다. 이 생성자에서 수학적 식을 정의합니다.  
+To create your Expression Animation, simply use the constructor off your Composition object, where you define your Mathematical expression.  
  
-두 스칼라 값의 합을 계산하는 매우 기본적인 식이 정의된 생성자의 예제(다음 섹션에서 더 복잡한 식에 대해 설명함):  
+An example of the constructor where a very basic expression is defined that sums two Scalar values together (We will dive into more complicated expressions in the next section):  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("0.2 + 0.3");
 ```
-키 프레임 애니메이션과 마찬가지로 식 애니메이션을 정의했으면 Visual에 연결하고 애니메이션 효과를 주려는 속성을 선언해야 합니다. 아래에서는 위의 예제를 계속하여 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 Opacity 속성(Scalar 형식)에 식 애니메이션을 연결합니다.  
+Similar to KeyFrame Animations, once you have defined your Expression Animation, you need to attach it to the Visual and declare the property you wish the animation to animate. Below, we continue with the above example and attach our Expression Animation to the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)’s Opacity property (A Scalar type):  
 ```cs
 targetVisual.StartAnimation("Opacity", expression);
 ```
 
-##식 문자열의 구성 요소
-이전 섹션의 예제에서는 함께 추가될 두 개의 간단한 스칼라 값을 보여 줍니다. 이 예제가 식의 올바른 예제이지만 식으로 수행할 수 있는 작업의 잠재력을 완전히 보여 주지는 않습니다. 위의 예제에 대해 유의할 한 가지 사항은 불연속 값이기 때문에 프레임마다 식이 0.5로 계산되고 애니메이션의 수명 중에 변경되지 않습니다. 식의 진정한 잠재력은 값이 주기적으로나 항상 변경될 수 있는 수학적 관계를 정의하는 것에서 비롯됩니다.  
+## <a name="components-of-your-expression-string"></a>Components of your Expression String
+The example in the previous section demonstrated two simple Scalar values being added together. Although this is a valid example of Expressions, it does not fully demonstrate the potential of what you can do with Expressions. One thing to note about the example above is that because these are discrete values, every frame the equation will resolve to 0.5 and never change throughout the lifetime of the animation. The real potential of Expressions comes from defining a mathematical relationship in which the values could change periodically or all the time.  
  
-이러한 유형의 식을 구성할 수 있는 다양한 부분을 살펴보겠습니다.  
+Let’s walk through the different pieces that can make up these types of Expressions.  
 
-###연산자, 우선 순위 및 연결
-식 문자열은 수식의 여러 구성 요소 간의 수학적 관계를 기술하는 일반적인 연산자의 사용을 지원합니다.  
+### <a name="operators-precedence-and-associativity"></a>Operators, Precedence and Associativity
+The Expression string supports usage of typical operators you would expect to describe mathematical relationships between different components of the equation:  
 
-|범주|  연산자|
+|Category|  Operators|
 |--------|-----------|
-|단항| -|
-|곱셈|    * /|
-|덧셈|  + -|
+|Unary| -|
+|Multiplicative|    * /|
+|Additive|  + -|
 |Mod| %|  
 
-마찬가지로 식은 계산될 때 C# 언어 사양에서 정의된 대로 연산자 우선 순위 및 연결을 준수합니다. 즉, 식은 연산의 기본 순서를 준수합니다.  
+Similarly, when the Expression is evaluated, it will adhere to operator precedence and associativity as defined in the C# Language specification. Put another way, it will adhere to basic order of operations.  
 
-아래의 예제에서 식이 계산될 때 괄호가 먼저 계산된 후 연산 순서에 따라 식의 나머지 부분이 계산됩니다.  
+In the example below, when evaluated, the parentheses will be resolved first before resolving the rest of the equation based on order of operations:  
 ```cs
 "(5.0 * (72.4 – 36.0) + 5.0" // (5.0 * 36.4 + 5) -> (182 + 5) -> 187
 ```
 
-###속성 매개 변수
-속성 매개 변수는 식 애니메이션의 가장 강력한 구성 요소 중 하나입니다. 식 문자열에서 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), 컴퍼지션 속성 집합, 기타 C# 개체 등의 다른 개체로부터 속성의 값을 참조할 수 있습니다.   
+### <a name="property-parameters"></a>Property Parameters
+Property parameters are one of the most powerful components of Expression Animations. In the expression string, you can reference values of properties from other objects such as [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), Composition Property Set or other C# objects.   
 
-식 문자열에서 이러한 참조를 사용하려면 식 애니메이션에 대한 매개 변수로 참조를 정의하기만 하면 됩니다. 이 작업은 식에서 사용되는 문자열을 실제 개체에 매핑하여 수행됩니다. 이에 따라 시스템에서는 식을 계산할 때 값을 계산하기 위해 조사할 항목을 알 수 있습니다. 식에 포함하려는 개체의 형식과 관련된 여러 가지 형식의 매개 변수가 있습니다.  
+To use these in an Expression string, you simply need to define the references as parameters to the Expression Animation. This is done by mapping the string used in the Expression to the actual object. This allows the system when evaluating the equation to know what to inspect to calculate the value. There are different types of parameters that correlate to the type of the object you wish to include in the equation:  
 
-|종류|  매개 변수를 만드는 함수|
+|Type|  Function to create parameter|
 |----|------------------------------|
 |Scalar|    SetScalarParameter(String ref, Scalar obj)|
 |Vector|    SetVector2Parameter(String ref, Vector2 obj)<br/>SetVector3Parameter(String ref, Vector3 obj)<br/>SetVector4Parameter(String ref, Vector4 obj)|
 |Matrix|    SetMatrix3x2Parameter(String ref, Matrix3x2 obj)<br/>SetMatrix4x4Parameter(String ref, Matrix4x4 obj)|
 |Quaternion|    SetQuaternionParameter(String ref, Quaternion obj)|
-|색상| SetColorParameter(String ref, Color obj)|
+|Color| SetColorParameter(String ref, Color obj)|
 |CompositionObject| SetReferenceParameter(String ref, Composition object obj)|
 |Boolean| SetBooleanParameter(String ref, Boolean obj)|  
 
-아래 예제에서는 다른 두 컴퍼지션 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)과 기본 System.Numerics Vector3 개체의 Offset을 참조할 식 애니메이션을 만듭니다.  
+In the example below, we create an Expression Animation that will reference the Offset of two other Composition [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)s and a basic System.Numerics Vector3 object.  
 ```cs
 var commonOffset = new Vector3(25.0, 17.0, 10.0);
 var expression = _compositor.CreateExpressionAnimation("SomeOffset / ParentOffset + additionalOffset);
@@ -368,9 +368,9 @@ expression.SetVector3Parameter("ParentOffset", parentVisual.Offset);
 expression.SetVector3Parameter("additionalOffset", commonOffset);
 ```
 
-또한 위에서 설명한 동일한 모델을 사용하여 식에서 속성 집합의 값을 참조할 수 있습니다. 컴퍼지션 속성 집합은 애니메이션에서 사용되는 데이터를 저장하는 유용한 수단이며 다른 컴퍼지션 개체의 수명에 연결되지 않은 공유 및 재사용이 가능한 데이터를 만드는 데 유용합니다. 속성 집합 값은 다른 속성 참조와 유사하게 식에서 참조될 수 있습니다. 속성 집합에 대해서는 뒷부분의 섹션에서 자세히 설명합니다.  
+Additionally, you can reference a value in a Property Set from an expression using the same model described above. Composition Property Sets are a useful way to store data used by animations, and are useful for creating sharable, reusable data that isn’t tied to the lifetime of any other Composition objects. Property Set values can be referenced in an expression similar to other property references. (Property Sets are discussed in more detail in a later section)  
 
-속성 집합이 로컬 변수 대신 commonOffset을 정의하는 데 사용되는 식으로 위의 예제를 직접 수정할 수 있습니다.
+We can modify the example directly above, such that a property set is used to define the commonOffset instead of a local variable:
 ```cs
 _sharedProperties = _compositor.CreatePropertySet();
 _sharedProperties.InsertVector3("commonOffset", offset);
@@ -380,94 +380,94 @@ expression.SetVector3Parameter("ParentOffset", parentVisual.Offset);
 expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 ```
 
-마지막으로, 다른 개체의 속성을 참조할 때 식 문자열 내에서나 참조 매개 변수의 일부로 하위 채널 속성을 참조할 수도 있습니다.  
+Finally, when referencing properties of other objects, it also possible to reference the subchannel properties either in the Expression string or as part of the reference parameter.  
  
-아래의 예제에서는 두 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)에 대한 Offset 속성의 x 하위 채널을 참조합니다. 하나는 식 문자열 자체에서 참조하고 다른 하나는 매개 변수 참조를 만들 때 참조합니다.
-Offset의 X 구성 요소를 참조할 때 매개 변수 형식을 이전 예제에서와 같이 Vector3 대신 Scalar 매개 변수로 변경합니다.  
+In the example below, we reference the x subchannel of Offset properties from two [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)s – one in the Expression string itself and the other when creating the parameter reference.
+Notice that when referencing the X component of Offset, we change our parameter type to a Scalar Parameter instead of a Vector3 like in the previous example:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("xOffset/ ParentOffset.X");
 expression.SetScalarParameter("xOffset", childVisual.Offset.X);
 expression.SetVector3Parameter("ParentOffset", parentVisual.Offset);
 ```
 
-###식 도우미 함수 및 생성자
-연산자 및 속성 매개 변수에 액세스하는 것 외에도 식에서 사용할 수학 함수의 목록을 활용할 수 있습니다. 이러한 함수는 System.Numerics 개체를 사용하여 유사하게 수행할 계산과 연산을 다양한 형식에 대해 수행하기 위해 제공됩니다.  
+### <a name="expression-helper-functions-and-constructors"></a>Expression Helper Functions and Constructors
+In addition to having access to Operators and Property Parameters, you can leverage a list of mathematical functions to use in their expressions. These functions are provided to perform calculations and operations on different types that you would similarly do with System.Numerics objects.  
 
-아래의 예제에서는 Clamp 도우미 함수를 이용하는 스칼라 대상의 식을 만듭니다.  
+An example below creates an Expression targeted towards Scalars that takes advantage of the Clamp helper function:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("Clamp((scroller.Offset.y * -1.0) – container.Offset.y, 0, container.Size.y – header.Size.y)"
 ```
 
-도우미 함수의 목록뿐만 아니라 식 문자열 내에서 기본 제공 생성자 메서드도 사용할 수 있습니다. 이 메서드는 제공된 매개 변수에 따라 해당 형식의 인스턴스를 생성합니다.  
+In addition to a list of Helper functions, you are also able to use built-in Constructor methods inside an Expression string that will generate an instance of that type based on the provided parameters.  
 
-아래의 예제에서는 식 문자열에서 새 Vector3을 정의하는 식을 만듭니다.  
+An example below creates an Expression that defines a new Vector3 in the Expression string:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("Offset / Vector3(targetX, targetY, targetZ");
 ```
 
-부록 섹션에서 도우미 함수와 생성자의 전체 목록을 찾을 수 있으며, 목록의 각 형식에 대한 링크는 다음과 같습니다.  
+You can find the full extensive list of helper functions and constructors in the Appendix section, or for each type in the list below:  
 *   [Scalar](#scalar)
 *   [Vector2](#vector2)
 *   [Vector3](#vector3)
 *   [Matrix3x2](#matrix3x2)
 *   [Matrix4x4](#matrix4x4)
 *   [Quaternion](#quaternion)
-*   [색상](#color)  
+*   [Color](#color)  
 
-###식 키워드
-식 문자열이 계산될 때 다르게 처리되는 특수 "키워드"를 이용할 수 있습니다. "키워드"로 간주되는 문자열은 속성 참조의 문자열 매개 변수 부분으로 사용할 수 없습니다.  
+### <a name="expression-keywords"></a>Expression Keywords
+You can take advantage of special "keywords" that are treated differently when the Expression string is evaluated. Because they are considered "keywords" they can’t be used as the string parameter portion of their Property references.  
  
-|키워드|   설명|
+|Keyword|   Description|
 |-------|--------------|
-|This.StartingValue| 애니메이션 효과를 줄 속성의 원래 시작 값에 대한 참조를 제공합니다.|
-|This.CurrentValue| 속성의 현재 "알려진" 값에 대한 참조를 제공합니다.|
-|Pi| Pi 값에 대한 키워드 참조를 제공합니다.|
+|This.StartingValue| Provides a reference to the original starting value of the property that is being animated.|
+|This.CurrentValue| Provides a reference to the currently "known" value of the property|
+|Pi| Provides a keyword reference to the value of PI|
 
-this.StartingValue 키워드의 사용을 보여 주는 예제:  
+An example below that demonstrates using the this.StartingValue keyword:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("this.StartingValue + delta");
 ```
 
-###조건이 포함된 식
-연산자, 속성 참조, 함수 및 생성자를 사용하여 수학적 관계를 지원하는 것 외에도 3항 연산자가 포함된 식도 만들 수 있습니다.  
+### <a name="expressions-with-conditionals"></a>Expressions with Conditionals
+In addition to supporting mathematical relationships using operators, property references, and functions and constructors, you can also create an expression that contains a ternary operator:  
 ```
 (condition ? ifTrue_expression : ifFalse_expression)
 ```
 
-조건문을 사용하면 특정 조건에 따라 다른 수학적 관계가 시스템에서 사용되어 애니메이션 효과를 주는 속성의 값이 계산되도록 식을 작성할 수 있습니다. 3항 연산자는 true 또는 false 문에 대한 식으로 중첩될 수 있습니다.  
+Conditional statements enable you to write expressions such that based on a particular condition, different mathematical relationships will be used by the system to calculate the value of the animating property. Ternary operators can be nested as the expressions for the true or false statements.  
 
-다음 조건부 연산자는 조건문에서 지원됩니다. 
-*   같음(==)
-*   같지 않음(!=)
-*   보다 작음(&lt;)
-*   작거나 같음(&lt;=)
-*   보다 큼(&gt;)
-*   크거나 같음(&gt;=)  
+The following conditional operators are supported in the condition statement: 
+*   Equals (==)
+*   Not Equals (!=)
+*   Less than (<)
+*   Less than or equal to (<=)
+*   Great than (>)
+*   Great than or equal to (>=)  
 
-다음 접속사는 조건문의 연산자 또는 함수로 지원됩니다.
-*   제외: ! / Not(bool1)
-*   및: &amp;&amp; / And(bool1, bool2)
-*   또는: || / Or(bool1, bool2)  
+The following conjunctions are supported as operators or functions in the condition statement:
+*   Not: ! / Not(bool1)
+*   And: && / And(bool1, bool2)
+*   Or: || / Or(bool1, bool2)  
 
-다음은 조건을 사용하는 식 애니메이션의 예제입니다.  
+Below is an example of an Expression Animation using a conditional.  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f + (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
-##식 키 프레임
-이 문서의 앞부분에서 키 프레임 애니메이션을 만드는 방법을 설명하고 식 애니메이션과 식 문자열을 구성하는 데 사용할 수 있는 다양한 모든 부분을 소개했습니다. 식 애니메이션의 강력한 기능을 이용하고 싶지만 키 프레임 애니메이션에서 제공하는 시간 보간을 원하는 경우에는 어떻게 해야 할까요? 바로 식 키 프레임을 사용하면 됩니다.  
+## <a name="expression-keyframes"></a>Expression KeyFrames
+Earlier in this document, we described how you create KeyFrame Animations and introduced you to Expression Animations and all the different pieces that you can use to make up the Expression string. What if you wanted the power from Expressions Animations but wanted time interpolation provided by KeyFrame Animations? The answer is Expression KeyFrames!  
 
-키 프레임 애니메이션에서 각 제어점에 대한 불연속 값을 정의하는 대신 값을 식 문자열로 설정할 수 있습니다. 이러한 경우 시스템에서는 식 문자열을 사용하여 타임라인의 지정된 지점에 있어야 하는 애니메이션 효과를 주는 속성의 값을 계산합니다. 그런 다음 일반 키 프레임 애니메이션에서와 같이 이 값에 보간합니다.    
+Instead of defining a discrete value for each control points in the KeyFrame Animation, you can have the value be an Expression string. In this situation, the system will use the expression string to calculate what the value of the animating property should be at the given point in the timeline. The system will then simply interpolate to this value like in a normal keyframe animation.    
 
-식 키 프레임을 사용하기 위해 특수한 애니메이션을 만들 필요는 없습니다. 표준 키 프레임 애니메이션에 식 키 프레임을 삽입하고 시간과 식 문자열을 값으로 제공하면 됩니다. 아래의 예제에서는 식 문자열을 키 프레임 중 하나의 값으로 사용하여 이 방법을 보여 줍니다.   
+You don’t need to create special animations to use Expression KeyFrames – just insert an ExpressionKeyFrame into your standard KeyFrame animation, provide the time and your expression string as the value. The example below demonstrates this, using an Expression string as the value for one of the KeyFrames:   
 ```cs
 var animation = _compositor.CreateScalarKeyFrameAnimation();
 animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
-##식 샘플
-아래의 코드에서는 스크롤 뷰어에서 입력 값을 가져오는 기본적인 시차 경험을 위해 식 애니메이션을 설정하는 예를 보여 줍니다.
+## <a name="expression-sample"></a>Expression Sample
+The code below shows an example of setting up an expression animation for a basic Parallax experience that pulls input values from the Scroll Viewer.
 ```cs
 // Get scrollviewer
 ScrollViewer myScrollViewer = ThumbnailList.GetFirstDescendantOfType<ScrollViewer>();
@@ -482,27 +482,27 @@ _parallaxExpression.SetReferenceParameter("ScrollManipulation", _scrollPropertie
 _parallaxExpression.Expression = "(ScrollManipulation.Translation.Y + StartOffset - (0.5 *  ItemHeight)) * ParallaxValue - (ScrollManipulation.Translation.Y + StartOffset - (0.5   * ItemHeight))";
 ```
 
-##속성 집합을 사용하여 애니메이션 효과 주기
-컴퍼지션 속성 집합을 사용하면 여러 애니메이션에서 공유할 수 있고 다른 컴퍼지션 개체의 수명에 연결되지 않은 값을 저장할 수 있습니다. 속성 집합은 일반적인 값을 저장한 다음 나중에 애니메이션에서 쉽게 참조하는 데 매우 유용합니다. 또한 속성 집합을 사용하여 식을 실행하는 응용 프로그램 논리에 따라 데이터를 저장할 수도 있습니다.  
+## <a name="animating-with-property-sets"></a>Animating With Property Sets
+Composition Property Sets provide you with the ability to store values that can be shared across multiple animations and are not tied to the lifetime of another Composition object. Property Sets are extremely useful to store common values and then easily reference them later on in animations. You can also use Property Sets to store data based on application logic to drive an expression.  
 
-속성 집합을 만들려면 Compositor 개체의 생성자 메서드를 사용합니다.  
+To create a property set, use the constructor method off your Compositor object:  
 ```cs
 _sharedProperties = _compositor.CreatePropertySet();
 ```
 
-속성 집합을 만들었으면 속성과 값을 속성 집합에 추가할 수 있습니다.  
+Once you’ve created your Property Set, you can add a property and value to it:  
 ```cs
 _sharedProperties.InsertVector3("NewOffset", offset);
 ```
 
-앞에서 살펴본 것과 유사하게 식 애니메이션에서 이 속성 집합 값을 참조할 수 있습니다.  
+Similar to what we’ve seen earlier, we can reference this property set value in an Expression Animation:  
 ```cs
 var expression = _compositor.CreateExpressionAnimation("this.target.Offset + sharedProperties.NewOffset");
 expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 targetVisual.StartAnimation("Offset", expression);
 ```
 
-속성 집합 값에 애니메이션 효과를 줄 수도 있습니다. 이 작업은 PropertySet 개체에 애니메이션을 연결한 다음 문자열에서 속성 이름을 참조하여 수행됩니다. 아래에서는 키 프레임 애니메이션을 사용하여 속성 집합의 NewOffset 속성에 애니메이션 효과를 줍니다.  
+Property set values can also be animated. This is done by attaching the animation to the PropertySet object, and then referring to the property name in the string. Below, we animate the NewOffset property in the property set using a KeyFrame Animation.  
 ```cs
 var keyFrameAnimation = _compositor.CreateVector3KeyFrameAnimation()
 keyFrameAnimation.InsertKeyFrame(0.5f, new Vector3(25.0f, 68.0f, 0.0f);
@@ -511,44 +511,44 @@ _sharedProperties.StartAnimation("NewOffset", keyFrameAnimation);
 ```
 
 
-이 코드가 앱에서 실행되면 식 애니메이션이 연결된 애니메이션 효과를 준 속성 값이 어떻게 될지 궁금할 수도 있습니다. 이 경우 식에서 처음에 값이 출력되지만 키 프레임 애니메이션이 속성 집합의 속성에 애니메이션 효과를 주기 시작하면 수식이 프레임마다 계산되므로 식 값도 업데이트됩니다. 이는 식 및 키 프레임 애니메이션을 사용하는 속성 집합의 장점입니다.  
+You might be wondering if this code executed in an app, what happens to the animated property value the Expression Animation is attached to. In this situation, the expression would initially output to a value, however, once the KeyFrame Animation begins to animate the Property in the Property Set, the Expression value will update as well, since the equation is calculated every frame. This is the beauty of Property Sets with Expression and KeyFrame Animations!  
  
-##ManipulationPropertySet
-컴퍼지션 속성 집합을 이용하는 것 외에도 개발자는 XAML ScrollViewer의 속성에 대한 액세스를 허용하는 ManipulationPropertySet에 액세스할 수 있습니다. 그런 다음 식 애니메이션에서 이러한 속성을 사용 및 참조하여 시차 및 고정 헤더와 같은 환경을 제공할 수 있습니다. 참고: 스크롤 가능한 콘텐츠가 있는 XAML 컨트롤(ListView, GridView 등)의 ScrollViewer를 잡고 해당 ScrollViewer를 사용하여 스크롤 가능한 컨트롤의 ManipulationPropertySet를 가져올 수 있습니다.  
+## <a name="manipulationpropertyset"></a>ManipulationPropertySet
+In addition to utilizing Composition Property Sets, a developer is also able to gain access to the ManipulationPropertySet that allows access to properties off of a XAML ScrollViewer. These properties can then be used and referenced in an Expression Animation to power experiences like Parallax and Sticky Headers. Note: You can grab the ScrollViewer of any XAML control (ListView, GridView, etc.) that has scrollable content and use that ScrollViewer to get the ManipulationPropertySet for those scrollable controls.  
 
-식에서 스크롤 뷰어의 다음 속성을 참조할 수 있습니다.  
+In your Expression, you are able to reference the following properties of the Scroll Viewer:  
 
-|속성| 형식|  
+|Property| Type|  
 |--------|-----|  
 |Translation| Vector3|  
 |Pan| Vector3|  
-|배율| Vector3|  
+|Scale| Vector3|  
 |CenterPoint| Vector3|  
 |Matrix| Matrix4x4|  
 
-ManipulationPropertySet에 대한 참조를 가져오려면 ElementCompositionPreview의 GetScrollViewerManipulationPropertySet 메서드를 활용합니다.  
+To get a reference to the ManipulationPropertySet, utilize the GetScrollViewerManipulationPropertySet method of ElementCompositionPreview.  
 ```csharp
 CompositionPropertySet manipPropSet = ElementCompositionPreview.GetScrollViewerManipulationPropertySet(myScroller);
 ```
 
-이 속성 집합에 대한 참조가 있을 경우 속성 집합에 있는 스크롤 뷰어의 속성을 참조할 수 있습니다. 첫 번째 단계에서는 참조 매개 변수를 만듭니다.  
+Once you have a reference to this property set, you can reference properties of the Scroll Viewer that are found in the property set. First step is to create the reference parameter.  
 ```csharp
 ExpressionAnimation exp = compositor.CreateExpressionAnimation();
 exp.SetReferenceParameter("ScrollManipulation", manipPropSet);
 ```
 
-참조 매개 변수를 설정한 후 식에서 ManipulationPropertySet 속성을 참조할 수 있습니다.  
+After setting up the reference parameter, you can reference the ManipulationPropertySet properties in the Expression.  
 ```csharp
 exp.Expression = “ScrollManipulation.Translation.Y / ScrollBounds”;
 _target.StartAnimation(“Opacity”, exp);
 ```
 
-##암시적 애니메이션 사용  
-애니메이션은 사용자에게 동작을 설명하는 좋은 방법입니다. 콘텐츠에 애니메이션 효과를 줄 수 있는 방법은 많지만 지금까지 설명한 모든 메서드는 애니메이션을 명시적으로 *시작*하도록 요구합니다. 이를 통해 애니메이션이 시작되는 때를 정의할 수 있도록 완벽하게 제어할 수 있지만 속성 값이 변경될 때마다 애니메이션이 필요한 시점을 관리하는 것은 어렵습니다. 이는 응용 프로그램이 애니메이션을 정의하는 앱 "퍼스낼리티"를 앱의 핵심 구성 요소 및 인프라를 정의하는 앱 "논리"에서 분리했을 때 자주 발생합니다. 암시적 애니메이션은 핵심 앱 논리와는 별도로 애니메이션을 정의하는 쉽고 명확한 방법을 제공합니다. 특정 속성 변경 트리거로 실행되도록 이러한 애니메이션을 연결할 수 있습니다.
+## <a name="using-implicit-animations"></a>Using Implicit Animations  
+Animations are a great way for you to describe a behavior to your users. There are multiple ways you can animate your content, but all of the methods discussed so far require you to explicitly *Start* your animation. Although this allows you to have complete control to define when an animation will begin, it becomes difficult to manage when an animation is needed every time a property value will be changed. This occurs quite often when applications have separated the app “personality” that defines the animations from the app “logic” that defines core components and infrastructure of the app. Implicit animations provide an easier and cleaner way to define the animation separately from the core app logic. You can hook these animations up to run with specific property change triggers.
 
-###ImplicitAnimationCollection 설정  
-암시적 애니메이션은 다른 **CompositionAnimation** 개체(**KeyFrameAnimation** 또는 **ExpressionAnimation**)로 정의됩니다. **ImplicitAnimationCollection**은 속성 변경 *트리거*가 충족될 때 시작되는 **CompositionAnimation** 개체의 집합을 나타냅니다. 애니메이션을 정의할 때 **Target** 속성을 정의해야 하며 이는 애니메이션이 시작될 때 대상으로 하는 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 속성을 정의합니다. **Target** 속성은 애니메이션 효과를 줄 수 있는 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) 속성만 될 수 있습니다.
-아래 코드 조각에서 단일 **Vector3KeyFrameAnimation**이 **ImplicitAnimationCollection**의 일부로 생성되고 정의됩니다. 그런 다음 **ImplicitAnimationCollection**이 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 **ImplicitAnimation** 속성에 연결되어 트리거가 충족되면 애니메이션이 시작됩니다.  
+### <a name="setting-up-your-implicitanimationcollection"></a>Setting up your ImplicitAnimationCollection  
+Implicit animations are defined by other **CompositionAnimation** objects (**KeyFrameAnimation** or **ExpressionAnimation**). The **ImplicitAnimationCollection** represents the  set of **CompositionAnimation** objects that will start when the property change *trigger* is met. Note when defining animations, make sure to set the **Target** property, this defines the [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) property the animation will target when it is started. The property of **Target** can only be a [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) property that is animatable.
+In the code snippet below, a single **Vector3KeyFrameAnimation** is created and defined as part of the **ImplicitAnimationCollection**. The **ImplicitAnimationCollection** is then attached to the **ImplicitAnimation** property of [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx), such that when the trigger is met, the animation will start.  
 ```csharp
 Vector3KeyFrameAnimation animation = _compositor.CreateVector3KeyFrameAnimation();
 animation.DelayTime =  TimeSpan.FromMilliseconds(index);
@@ -560,41 +560,41 @@ visual.ImplicitAnimations = implicitAnimationCollection;
 ```
 
 
-###ImplicitAnimation 시작 시 트리거  
-트리거는 애니메이션이 암시적으로 시작하는 경우를 설명하는 데 사용하는 용어입니다. 현재 트리거는 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)에서 애니메이션 효과를 줄 수 있는 속성에 대한 변경 사항으로 정의됩니다. 이러한 변경 사항은 속성에서 명시적 집합을 통해 발생합니다. 예를 들어 **Offset** 트리거를 **ImplicitAnimationCollection**에 배치하고 여기에 애니메이션을 연결하면 대상 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 **Offset**에 대한 업데이트가 컬렉션의 애니메이션을 사용하여 새 값으로 애니메이션 효과를 줍니다.  
-위 예제에서 다음 줄을 추가하여 대상 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 **Offset** 속성에 트리거를 설정합니다.  
+### <a name="triggering-when-the-implicitanimation-starts"></a>Triggering when the ImplicitAnimation starts  
+Trigger is the term used to describe when animations will start implicitly. Currently triggers are defined as changes to any of the animatable properties on [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) – these changes occur through explicit sets on the property. For example, by placing an **Offset** trigger on an **ImplicitAnimationCollection**, and associating an animation with it, updates to the **Offset** of the targeted [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) will animate to its new value using the animation in the collection.  
+From the example above, we add this additional line to set the trigger to the **Offset** property of the target [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx).  
 ```csharp
 implicitAnimationCollection["Offset"] = animation;
 ```  
-**ImplicitAnimationCollection**에는 여러 트리거가 있을 수 있습니다. 즉, 암시적 애니메이션이나 애니메이션 그룹은 다른 속성에 대한 변경 사항으로 시작할 수 있습니다. 위 예제에서 개발자는 잠재적으로 Opacity 등 다른 속성에 대한 트리거를 추가할 수 있습니다.  
-###this.FinalValue     
-첫 번째 암시적 예제에서 "1.0" 키 프레임에 대해 ExpressionKeyFrame을 사용하고 여기에 **this.FinalValue** 식을 할당했습니다. **this.FinalValue**는 식 언어에서 암시적 애니메이션에 대해 차별화 동작을 제공하는 예약된 키워드입니다. **this.FinalValue**는 API 속성에 설정된 값을 애니메이션에 바인딩합니다. 이렇게 하면 실제 템플릿을 만들 수 있습니다. **this.FinalValue**는 API 속성이 즉시 설정되므로 명시적 애니메이션에서 유용하지 않지만 암시적 애니메이션의 경우에는 지연됩니다.  
+Note that an **ImplicitAnimationCollection** can have multiple triggers. This means that the implicit animation or group of animations can get started for changes to different properties. In the example above, the developer can potentially add a trigger for other properties such as Opacity.  
+###<a name="thisfinalvalue"></a>this.FinalValue     
+In the first implicit example, we used an ExpressionKeyFrame for the “1.0” KeyFrame and assigned the expression of **this.FinalValue** to it. **this.FinalValue** is a reserved keyword in the expression language that provides differentiating behavior for implicit animations. **this.FinalValue** binds the value set on the API property to the animation. This helps in creating true templates. **this.FinalValue** is not useful in explicit animations, as the API property is set instantly, whereas in case of implicit animations it is deferred.  
  
-##애니메이션 그룹 사용  
-**CompositionAnimationGroup**은 개발자에게 암시적 또는 명시적 애니메이션에서 사용할 수 있는 애니메이션 목록을 그룹화하는 쉬운 방법을 제공합니다.   
-###애니메이션 그룹 만들기 및 채우기  
-Compositor 개체의 **CreateAnimationGroup** 메서드를 통해 개발자는 애니메이션 그룹을 만들 수 있습니다.  
+## <a name="using-animation-groups"></a>Using Animation Groups  
+**CompositionAnimationGroup** provides an easy way for developers to group a list of animations that can be be used with implicit or explicit animations.   
+### <a name="creating-and-populating-animation-groups"></a>Creating and Populating Animation Groups  
+The **CreateAnimationGroup** method of the of the Compositor object enables developers to create an Animation Group:  
 ```sharp
 CompositionAnimationGroup animationGroup = _compositor.CreateAnimationGroup();
 animationGroup.Add(animationA);
 animationGroup.Add(animationB);
 ```   
-그룹이 만들어지면 개별 애니메이션이 애니메이션 그룹에 추가될 수 있습니다. 명시적으로 개별 애니메이션을 시작할 필요는 없습니다. 이러한 개별 애니메이션은 모두 **StartAnimationGroup**이 명시적 시나리오에 대해 호출되거나 트리거가 암시적 시나리오에 대해 충족될 때 시작됩니다.  
-단, 그룹에 추가되는 애니메이션은 해당 **Target** 속성이 정의되어 있어야 합니다. 그러면 애니메이션 효과를 줄 대상 [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx)의 속성이 정의됩니다.
+Once the group is created, individual animations can be added to the animation group. Remember, that you do not need to explicitly start the individual animations – these will all get started when either **StartAnimationGroup** is called for the explicit scenario or when the trigger is met for the implicit one.  
+Note, ensure that the animations that are added to the group have their **Target** property defined. This will define what property of the target [Visual](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.visual.aspx) they will animate.
 
-###암시적 애니메이션에서 애니메이션 그룹 사용  
-개발자는 트리거가 충족될 때 애니메이션 그룹의 형태로 된 애니메이션 집합이 시작되도록 암시적 애니메이션을 만들 수 있습니다. 이 경우 애니메이션 그룹을 트리거가 충족될 때 시작하는 애니메이션 집합으로 정의합니다.  
+### <a name="using-animation-groups-with-implicit-animations"></a>Using Animation Groups with Implicit Animations  
+Developers can create implicit animations such that when a trigger is met, a set of animations in the form of an animation group are started. In this case, define the animation group as the set of animations that start when the trigger is met.  
 ```csharp
 implicitAnimationCollection["Offset"] = animationGroup;
 ```   
-###명시적 애니메이션에서 애니메이션 그룹 사용  
-개발자는 추가된 개별 애니메이션이 **StartAnimationGroup**이 호출될 때 시작하도록 명시적 애니메이션을 만들 수 있습니다. 단, 이 **StartAnimation** 호출에서는 개별 애니메이션이 다양한 속성을 대상으로 할 수 있으므로 그룹에 대한 대상 속성이 없습니다. 각 애니메이션에 대한 대상 속성이 설정되어 있는지 확인합니다.  
+### <a name="using-animation-groups-with-explicit-animations"></a>Using Animation Groups with Explicit Animations  
+Developers can create explicit animations such that the individual animations added will start when **StartAnimationGroup** is called. Note, that in this **StartAnimation** call, there is no targeted property for the group as individual animations could be targeting different properties. Ensure that the target property for each animation is set.  
 ```csharp
 visual.StartAnimationGourp(AnimationGroup);
 ```  
 
-###E2E 샘플 
-이 예제에서는 새 값이 설정될 때 Offset 속성에 암시적으로 애니메이션 효과를 주는 방법을 보여 줍니다.  
+### <a name="e2e-sample"></a>E2E sample 
+This example shows animating the Offset property implicitly when a new value is set.  
 ```csharp 
 class PropertyAnimation
 {
@@ -632,142 +632,140 @@ class PropertyAnimation
 
  
  
-##부록
-###구조 형식별 식 함수
-###Scalar  
+## <a name="appendix"></a>Appendix
+### <a name="expression-functions-by-structure-type"></a>Expression Functions by Structure Type
+### <a name="scalar"></a>Scalar  
 
-|함수 및 생성자 연산| 설명|  
+|Function and Constructor Operations| Description|  
 |-----------------------------------|--------------|  
-|Abs(Float value)| float 매개 변수의 절대값을 나타내는 Float를 반환합니다.|  
-|Clamp(Float value, Float min, Float max)| min보다 크고 max보다 작은 float 값, 값이 min보다 작은 경우 min 또는 값이 max보다 큰 경우 max를 반환합니다.|  
-|Max(Float value1, Float value2)| value1과 value2 중에서 큰 float를 반환합니다.|  
-|Min(Float value1, Float value2)| value1과 value2 중에서 작은 float를 반환합니다.|  
-|Lerp(Float value1, Float value2, Float progress)| 진행률에 따라 두 스칼라 값 간의 계산된 선형 보간 계산을 나타내는 float를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|  
-|Slerp(Float value1, Float value2, Float progress)| 진행률에 따라 두 Float 값 간의 계산된 구면 보간을 나타내는 Float를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|  
-|Mod(Float value1, Float value2)| value1과 value2의 나누기에서 발생한 Float 나머지를 반환합니다.|  
-|Ceil(Float value)| 그다음 큰 정수로 반올림된 Float 매개 변수를 반환합니다.|  
-|Floor(Float value)| 그다음 작은 정수로 반내림된 Float 매개 변수를 반환합니다.|  
-|Sqrt(Float value)| Float 매개 변수의 제곱근을 반환합니다.|  
-|Square(Float value)| Float 매개 변수의 제곱을 반환합니다.|  
-|Sin(Float value1)| Float 매개 변수의 Sin을 반환합니다.|
-|Asin(Float value2)| Float 매개 변수의 ArcSin을 반환합니다.|
-|Cos(Float value1)| Float 매개 변수의 Cos를 반환합니다.|
-|ACos(Float value2)| Float 매개 변수의 ArcCos를 반환합니다.|
-|Tan(Float value1)| Float 매개 변수의 Tan을 반환합니다.|
-|ATan(Float value2)| Float 매개 변수의 ArcTan을 반환합니다.|
-|Round(Float value)| 가장 가까운 정수로 반올림한 Float 매개 변수를 반환합니다.|
-|Log10(Float value)| Float 매개 변수의 상용 로그 결과를 반환합니다.|
-|Ln(Float value)| Float 매개 변수의 자연 로그 결과를 반환합니다.|
-|Pow(Float value, Float power)| Float 매개 변수를 특정 횟수만큼 거듭제곱한 결과를 반환합니다.|
-|ToDegrees(Float radians)| 도로 변환된 Float 매개 변수를 반환합니다.|
-|ToRadians(Float degrees)| 라디안으로 변환된 Float 매개 변수를 반환합니다.|
+|Abs(Float value)| Returns a Float representing the absolute value of the float parameter|  
+|Clamp(Float value, Float min, Float max)| Returns a  float value that is either greater than min and less than max or min if the value is less than min or max if the value is greater than max|  
+|Max (Float value1, Float value2)| Returns the greater float between value1 and value2.|  
+|Min (Float value1, Float value2)| Returns the lesser float between value1 and value2.|  
+|Lerp(Float value1, Float value2, Float progress)| Returns a float that represents the calculated linear interpolation calculation between the two Scalar values based on the progress (Note: Progress is between 0.0 and 1.0)|  
+|Slerp(Float value1, Float value2, Float progress)| Returns a Float that represents the calculated spherical interpolation between the two Float values based on the progress (Note: progress is between 0.0 and 1.0)|  
+|Mod(Float value1, Float value2)| Returns the Float remainder resulting from the division of value1 and value2|  
+|Ceil(Float value)| Returns the Float parameter rounded to next greater whole number|  
+|Floor(Float value)| Returns the Float parameter to the next lesser whole number|  
+|Sqrt(Float value)| Returns the square root of the Float parameter|  
+|Square(Float value)| Returns the square of the Float parameter|  
+|Sin(Float value1)| Returns the Sin of the Float parameter|
+|Asin(Float value2)| Returns the ArcSin of the Float parameter|
+|Cos(Float value1)| Returns the Cos of the Float parameter|
+|ACos(Float value2)| Returns the ArcCos of the Float parameter|
+|Tan(Float value1)| Returns the Tan of the Float parameter|
+|ATan(Float value2)| Returns the ArcTan of the Float parameter|
+|Round(Float value)| Returns the Float parameter rounded to the nearest whole number|
+|Log10(Float value)| Returns the Log (base 10) result of the Float parameter|
+|Ln(Float value)| Returns the Natural Log result of the Float parameter|
+|Pow(Float value, Float power)| Returns the result of the Float parameter raised to a particular power|
+|ToDegrees(Float radians)| Returns the Float parameter converted into Degrees|
+|ToRadians(Float degrees)| Returns the Float parameter converted into Radians|
 
-###Vector2  
+### <a name="vector2"></a>Vector2  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Abs(Vector2 value)|   각 구성 요소에 절대값이 적용된 Vector2를 반환합니다.|
-|Clamp(Vector2 value1, Vector2 min, Vector2 max)|  각각의 개별 구성 요소에 대해 범위로 고정된 값을 포함하는 Vector2를 반환합니다.|
-|Max(Vector2 value1, Vector2 value2)|  value1 및 value2의 해당 구성 요소 각각에 대해 Max를 수행한 Vector2를 반환합니다.|
-|Min(Vector2 value1, Vector2 value2)|  value1 및 value2의 해당 구성 요소 각각에 대해 Min을 수행한 Vector2를 반환합니다.|
-|Scale(Vector2 value, Float factor)|    벡터의 각 구성 요소를 배율 인수로 곱한 Vector2를 반환합니다.|
-|Transform(Vector2 value, Matrix3x2 matrix)|    Vector2와 Matrix3x2 간의 선형 변환(벡터를 행렬과 곱함)에서 생성된 Vector2를 반환합니다.|
-|Lerp(Vector2 value1, Vector2 value2, Float progress)|  진행률에 따라 두 Vector2 값 간의 계산된 선형 보간 계산을 나타내는 Vector2를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Length(Vector2 value)| Vector2의 길이/크기를 나타내는 Float 값을 반환합니다.|
-|LengthSquared(Vector2)|    Vector2에 대한 길이/크기의 제곱을 나타내는 Float 값을 반환합니다.|
-|Distance(Vector2 value1, Vector2 value2)|  두 Vector2 값 간의 거리를 나타내는 Float 값을 반환합니다.|
-|DistanceSquared(Vector2 value1, Vector2 value2)|   두 Vector2 값 간의 거리의 제곱을 나타내는 Float 값을 반환합니다.|
-|Normalize(Vector2 value)|  모든 구성 요소가 정규화된 매개 변수의 단위 벡터를 나타내는 Vector2를 반환합니다.|
-|Vector2(Float x, Float y)| 두 Float 매개 변수를 사용하여 Vector2를 생성합니다.|
+|Abs (Vector2 value)|   Returns a Vector2 with absolute value applied to each component|
+|Clamp (Vector2 value1, Vector2 min, Vector2 max)|  Returns a Vector2 that contains the clamped values for each respective component|
+|Max (Vector2 value1, Vector2 value2)|  Returns a Vector2 that has performed a Max on each of the corresponding components from value1 and value2|
+|Min (Vector2 value1, Vector2 value2)|  Returns a Vector2 that has performed a Min on each of the corresponding components from value1 and value2|
+|Scale(Vector2 value, Float factor)|    Returns a Vector2 with each component of the vector multiplied by the scaling factor.|
+|Transform(Vector2 value, Matrix3x2 matrix)|    Returns a Vector2 resulting from the linear transformation between a Vector2 and a Matrix3x2 (aka multiplying a vector by a matrix).|
+|Lerp(Vector2 value1, Vector2 value2, Float progress)|  Returns a Vector2 that represents the calculated linear interpolation calculation between the two Vector2 values based on the progress (Note: Progress is between 0.0 and 1.0)|
+|Length(Vector2 value)| Returns a Float value representing the length/magnitude of the Vector2|
+|LengthSquared(Vector2)|    Returns a Float value representing the square of the length/magnitude of a Vector2|
+|Distance(Vector2 value1, Vector2 value2)|  Returns a Float value representing the distance between two Vector2 values|
+|DistanceSquared(Vector2 value1, Vector2 value2)|   Returns a Float value representing the square of the distance between two Vector2 values|
+|Normalize(Vector2 value)|  Returns a Vector2 representing the unit vector of the parameter where all components have been normalized|
+|Vector2(Float x, Float y)| Constructs a Vector2 using two Float parameters|
 
-###Vector3  
+### <a name="vector3"></a>Vector3  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Abs(Vector3 value)|   각 구성 요소에 절대값이 적용된 Vector3을 반환합니다.|
-|Clamp(Vector3 value1, Vector3 min, Vector3 max)|  각각의 개별 구성 요소에 대해 범위로 고정된 값을 포함하는 Vector3을 반환합니다.|
-|Max(Vector3 value1, Vector3 value2)|  value1 및 value2의 해당 구성 요소 각각에 대해 Max를 수행한 Vector3을 반환합니다.|
-|Min(Vector3 value1, Vector3 value2)|  value1 및 value2의 해당 구성 요소 각각에 대해 Min을 수행한 Vector3을 반환합니다.|
-|Scale(Vector3 value, Float factor)|    벡터의 각 구성 요소를 배율 인수로 곱한 Vector3을 반환합니다.|
-|Lerp(Vector3 value1, Vector3 value2, Float progress)|  진행률에 따라 두 Vector3 값 간의 계산된 선형 보간 계산을 나타내는 Vector3을 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Length(Vector3 value)| Vector3의 길이/크기를 나타내는 Float 값을 반환합니다.|
-|LengthSquared(Vector3)|    Vector3에 대한 길이/크기의 제곱을 나타내는 Float 값을 반환합니다.|
-|Distance(Vector3 value1, Vector3 value2)|  두 Vector3 값 간의 거리를 나타내는 Float 값을 반환합니다.|
-|DistanceSquared(Vector3 value1, Vector3 value2)|   두 Vector3 값 간의 거리의 제곱을 나타내는 Float 값을 반환합니다.|
-|Normalize(Vector3 value)|  모든 구성 요소가 정규화된 매개 변수의 단위 벡터를 나타내는 Vector3을 반환합니다.|
-|Vector3(Float x, Float y, Float z)|    세 Float 매개 변수를 사용하여 Vector3을 생성합니다.|
+|Abs (Vector3 value)|   Returns a Vector3 with absolute value applied to each component|
+|Clamp (Vector3 value1, Vector3 min, Vector3 max)|  Returns a Vector3 that contains the clamped values for each respective component|
+|Max (Vector3 value1, Vector3 value2)|  Returns a Vector3 that has performed a Max on each of the corresponding components from value1 and value2|
+|Min (Vector3 value1, Vector3 value2)|  Returns a Vector3 that has performed a Min on each of the corresponding components from value1 and value2|
+|Scale(Vector3 value, Float factor)|    Returns a Vector3 with each component of the vector multiplied by the scaling factor.|
+|Lerp(Vector3 value1, Vector3 value2, Float progress)|  Returns a Vector3 that represents the calculated linear interpolation calculation between the two Vector3 values based on the progress (Note: Progress is between 0.0 and 1.0)|
+|Length(Vector3 value)| Returns a Float value representing the length/magnitude of the Vector3|
+|LengthSquared(Vector3)|    Returns a Float value representing the square of the length/magnitude of a Vector3|
+|Distance(Vector3 value1, Vector3 value2)|  Returns a Float value representing the distance between two Vector3 values|
+|DistanceSquared(Vector3 value1, Vector3 value2)|   Returns a Float value representing the square of the distance between two Vector3 values|
+|Normalize(Vector3 value)|  Returns a Vector3 representing the unit vector of the parameter where all components have been normalized|
+|Vector3(Float x, Float y, Float z)|    Constructs a Vector3 using three Float parameters|
 
-###Vector4  
+### <a name="vector4"></a>Vector4  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Abs(Vector4 value)|   각 구성 요소에 절대값이 적용된 Vector3을 반환합니다.|
-|Clamp(Vector4 value1, Vector4 min, Vector4 max)|  각각의 개별 구성 요소에 대해 범위로 고정된 값을 포함하는 Vector4를 반환합니다.|
-|Max(Vector4 value1 Vector4 value2)|   value1 및 value2의 해당 구성 요소 각각에 대해 Max를 수행한 Vector4를 반환합니다.|
-|Min(Vector4 value1 Vector4 value2)|   value1 및 value2의 해당 구성 요소 각각에 대해 Min을 수행한 Vector4를 반환합니다.|
-|Scale(Vector3 value, Float factor)|    벡터의 각 구성 요소를 배율 인수로 곱한 Vector3을 반환합니다.|
-|Transform(Vector4 value, Matrix4x4 matrix)|    Vector4와 Matrix4x4 간의 선형 변환(벡터를 행렬과 곱함)에서 생성된 Vector4를 반환합니다.|
-|Lerp(Vector4 value1, Vector4 value2, Float progress)|  진행률에 따라 두 Vector4 값 간의 계산된 선형 보간 계산을 나타내는 Vector4를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Length(Vector4 value)| Vector4의 길이/크기를 나타내는 Float 값을 반환합니다.|
-|LengthSquared(Vector4)|    Vector4에 대한 길이/크기의 제곱을 나타내는 Float 값을 반환합니다.|
-|Distance(Vector4 value1, Vector4 value2)|  두 Vector4 값 간의 거리를 나타내는 Float 값을 반환합니다.|
-|DistanceSquared(Vector4 value1, Vector4 value2)|   두 Vector4 값 간의 거리의 제곱을 나타내는 Float 값을 반환합니다.|
-|Normalize(Vector4 value)|  모든 구성 요소가 정규화된 매개 변수의 단위 벡터를 나타내는 Vector4를 반환합니다.|
-|Vector4(Float x, Float y, Float z, Float w)|   4개의 Float 매개 변수를 사용하여 Vector4를 생성합니다.|
+|Abs (Vector4 value)|   Returns a Vector3 with absolute value applied to each component|
+|Clamp (Vector4 value1, Vector4 min, Vector4 max)|  Returns a Vector4 that contains the clamped values for each respective component|
+|Max (Vector4 value1 Vector4 value2)|   Returns a Vector4 that has performed a Max on each of the corresponding components from value1 and value2|
+|Min (Vector4 value1 Vector4 value2)|   Returns a Vector4 that has performed a Min on each of the corresponding components from value1 and value2|
+|Scale(Vector3 value, Float factor)|    Returns a Vector3 with each component of the vector multiplied by the scaling factor.|
+|Transform(Vector4 value, Matrix4x4 matrix)|    Returns a Vector4 resulting from the linear transformation between a Vector4 and a Matrix4x4 (aka multiplying a vector by a matrix).|
+|Lerp(Vector4 value1, Vector4 value2, Float progress)|  Returns a Vector4 that represents the calculated linear interpolation calculation between the two Vector4 values based on the progress (Note: progress is between 0.0 and 1.0)|
+|Length(Vector4 value)| Returns a Float value representing the length/magnitude of the Vector4|
+|LengthSquared(Vector4)|    Returns a Float value representing the square of the length/magnitude of a Vector4|
+|Distance(Vector4 value1, Vector4 value2)|  Returns a Float value representing the distance between two Vector4 values|
+|DistanceSquared(Vector4 value1, Vector4 value2)|   Returns a Float value representing the square of the distance between two Vector4 values|
+|Normalize(Vector4 value)|  Returns a Vector4 representing the unit vector of the parameter where all components have been normalized|
+|Vector4(Float x, Float y, Float z, Float w)|   Constructs a Vector4 using four Float parameters|
 
-###Matrix3x2  
+### <a name="matrix3x2"></a>Matrix3x2  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Scale(Matrix3x2 value, Float factor)|  행렬의 각 구성 요소를 배율 인수로 곱한 Matrix3x2를 반환합니다.|
-|Inverse(Matrix 3x2 value)| 역수 행렬을 나타내는 Matrix3x2 개체를 반환합니다.|
-|Lerp(Matrix3x2 value1, Matrix3x2 value2, Float progress)|  진행률에 따라 두 Matrix3x2 값 간의 계산된 선형 보간 계산을 나타내는 Matrix3x2를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   6개의 Float 매개 변수를 사용하여 Matrix3x2를 생성합니다.|
-|Matrix3x2.CreateFromScale(Vector2 scale)|  배율을 나타내는 Vector2에서 Matrix3x2를 생성합니다.<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
-|Matrix3x2.CreateFromTranslation(Vector2 translation)|  변환을 나타내는 Vector2에서 Matrix3x2를 생성합니다.<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
-|Matrix3x2.CreateSkew(Float x, Float y, Vector2 centerpoint)| 기울이기를 나타내는 두 Float 및 Vector2에서 Matrix3x2 생성<br/>\[1.0, Tan(y),<br/>Tan(x), 1.0,<br/>-centerpoint.Y * Tan(x), -centerpoint.X * Tan(y)\]|  
-|Matrix3x2.CreateRotation(Float radians)| 회전(라디안)에서 Matrix3x2 생성<br/>\[Cos(radians), Sin(radians),<br/>-Sin(radians), Cos(radians),<br/>0.0, 0.0 \]|   
-|Matrix3x2.CreateTranslation(Vector2 translation)| CreateFromTranslation과 동일|      
-|Matrix3x2.CreateScale(Vector2 scale)| CreateFromScale과 동일|    
+|Scale(Matrix3x2 value, Float factor)|  Returns a Matrix3x2 with each component of the matrix multiplied by the scaling factor.|
+|Inverse(Matrix 3x2 value)| Returns a Matrix3x2 object that represents the reciprocal matrix|
+|Matrix3x2(Float M11, Float M12, Float M21, Float M22, Float M31, Float M32)|   Constructs a Matrix3x2 using 6 Float parameters|
+|Matrix3x2.CreateFromScale(Vector2 scale)|  Constructs a Matrix3x2 from a Vector2   representing scale<br/>\[scale.X, 0.0<br/> 0.0, scale.Y<br/> 0.0, 0.0 \]|
+|Matrix3x2.CreateFromTranslation(Vector2 translation)|  Constructs a Matrix3x2 from a Vector2 representing translation<br/>\[1.0, 0.0,<br/> 0.0, 1.0,<br/> translation.X, translation.Y\]|  
+|Matrix3x2.CreateSkew(Float x, Float y, Vector2 centerpoint)| Constructs a Matrix3x2 from two Float and a Vector2 representing skew<br/>\[1.0, Tan(y),<br/>Tan(x), 1.0,<br/>-centerpoint.Y * Tan(x), -centerpoint.X * Tan(y)\]|  
+|Matrix3x2.CreateRotation(Float radians)| Constructs a Matrix3x2 from a rotation in radians<br/>\[Cos(radians), Sin(radians),<br/>-Sin(radians), Cos(radians),<br/>0.0, 0.0 \]|   
+|Matrix3x2.CreateTranslation(Vector2 translation)| Same as CreateFromTranslation|      
+|Matrix3x2.CreateScale(Vector2 scale)| Same as CreateFromScale|    
 
     
-###Matrix4x4  
+### <a name="matrix4x4"></a>Matrix4x4  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Scale(Matrix4x4 value, Float factor)|  행렬의 각 구성 요소를 배율 인수로 곱한 Matrix4x4를 반환합니다.|
-|Inverse(Matrix4x4)|    역수 행렬을 나타내는 Matrix4x4 개체를 반환합니다.|
-|Lerp(Matrix4x4 value1, Matrix4x4 value2, Float progress)|  진행률에 따라 두 Matrix4x4 값 간의 계산된 선형 보간 계산을 나타내는 Matrix4x4를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Matrix4x4(Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>    Float M31, Float M32, Float M33, Float M34,<br/>    Float M41, Float M42, Float M43, Float M44)| 16개의 Float 매개 변수를 사용하여 Matrix4x4를 생성합니다.|
-|Matrix4x4.CreateFromScale(Vector3 scale)|  배율을 나타내는 Vector3에서 Matrix4x4를 생성합니다.<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
-|Matrix4x4.CreateFromTranslation(Vector3 translation)|  변환을 나타내는 Vector3에서 Matrix4x4를 생성합니다.<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
-|Matrix4x4.CreateFromAxisAngle(Vector3 axis, Float angle)|  Vector3 축과 각도를 나타내는 Float에서 Matrix4x4를 생성합니다.|
-|Matrix4x4(Matrix3x2 matrix)| Matrix3x2를 사용하여 Matrix4x4 생성<br/>\[matrix.11, matrix.12, 0, 0,<br/>matrix.21, matrix.22, 0, 0,<br/>0, 0, 1, 0,<br/>matrix.31, matrix.32, 0, 1\]|  
-|Matrix4x4.CreateTranslation(Vector3 translation)| CreateFromTranslation과 동일|  
-|Matrix4x4.CreateScale(Vector3 scale)| CreateFromScale과 동일|  
+|Scale(Matrix4x4 value, Float factor)|  Returns a Matrix 4x4 with each component of the matrix multiplied by the scaling factor.|
+|Inverse(Matrix4x4)|    Returns a Matrix4x4 object that represents the reciprocal matrix|
+|Matrix4x4(Float M11, Float M12, Float M13, Float M14,<br/>Float M21, Float M22, Float M23, Float M24,<br/>    Float M31, Float M32, Float M33, Float M34,<br/>    Float M41, Float M42, Float M43, Float M44)| Constructs a Matrix4x4 using 16 Float parameters|
+|Matrix4x4.CreateFromScale(Vector3 scale)|  Constructs a Matrix4x4 from a Vector3 representing scale<br/>\[scale.X, 0.0, 0.0, 0.0,<br/> 0.0, scale.Y, 0.0, 0.0,<br/> 0.0, 0.0, scale.Z, 0.0,<br/> 0.0, 0.0, 0.0, 1.0\]|
+|Matrix4x4.CreateFromTranslation(Vector3 translation)|  Constructs a Matrix4x4 from a Vector3 representing translation<br/>\[1.0, 0.0, 0.0, 0.0,<br/> 0.0, 1.0, 0.0, 0.0,<br/> 0.0, 0.0, 1.0, 0.0,<br/> translation.X, translation.Y, translation.Z, 1.0\]|
+|Matrix4x4.CreateFromAxisAngle(Vector3 axis, Float angle)|  Constructs a Matrix4x4 from a Vector3 axis and a Float representing an angle|
+|Matrix4x4(Matrix3x2 matrix)| Constructs a Matrix4x4 using a Matrix3x2<br/>\[matrix.11, matrix.12, 0, 0,<br/>matrix.21, matrix.22, 0, 0,<br/>0, 0, 1, 0,<br/>matrix.31, matrix.32, 0, 1\]|  
+|Matrix4x4.CreateTranslation(Vector3 translation)| Same as CreateFromTranslation|  
+|Matrix4x4.CreateScale(Vector3 scale)| Same as CreateFromScale|  
 
 
-###Quaternion  
+### <a name="quaternion"></a>Quaternion  
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|Slerp(Quaternion value1, Quaternion value2, Float progress)|   진행률에 따라 두 Quaternion 값 간의 계산된 구면 보간을 나타내는 Quaternion을 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|Concatenate(Quaternion value1 Quaternion value2)|  두 Quaternion의 연결(결합된 두 개별 회전을 나타내는 Quaternion이라고도 함)을 나타내는 Quaternion을 반환합니다.|
-|Length(Quaternion value)|  Quaternion의 길이/크기를 나타내는 Float 값을 반환합니다.|
-|LengthSquared(Quaternion)| Quaternion에 대한 길이/크기의 제곱을 나타내는 Float 값을 반환합니다.|
-|Normalize(Quaternion value)|   구성 요소가 정규화된 Quaternion을 반환합니다.|
-|Quaternion.CreateFromAxisAngle(Vector3 axis, Scalar angle)|    Vector3 축과 각도를 나타내는 Scalar에서 Quaternion을 생성합니다.|
-|Quaternion(Float x, Float y, Float z, Float w)|    4개의 Float 값에서 Quaternion을 생성합니다.|
+|Slerp(Quaternion value1, Quaternion value2, Float progress)|   Returns a Quaternion that represents the calculated spherical interpolation between the two Quaternion values based on the progress (Note: progress is between 0.0 and 1.0)|
+|Concatenate(Quaternion value1 Quaternion value2)|  Returns a Quaternion representing a concatenation of two Quaternions (aka a Quaternion that represents a combined two individual rotations)|
+|Length(Quaternion value)|  Returns a Float value representing the length/magnitude of the Quaternion.|
+|LengthSquared(Quaternion)| Returns a Float value representing the square of the length/magnitude of a Quaternion|
+|Normalize(Quaternion value)|   Returns a Quaternion whose components have been normalized|
+|Quaternion.CreateFromAxisAngle(Vector3 axis, Scalar angle)|    Constructs a Quaternion from a Vector3 axis and a Scalar representing an angle|
+|Quaternion(Float x, Float y, Float z, Float w)|    Constructs a Quaternion from four Float values|
 
-###색상
+### <a name="color"></a>Color
 
-|함수 및 생성자 연산|   설명|
+|Function and Constructor Operations|   Description|
 |-----------------------------------|--------------|
-|ColorLerp(Color colorTo, Color colorFrom, Float progress)| 지정된 진행률에 따라 두 색 개체 간의 계산된 선형 보간 값을 나타내는 Color 개체를 반환합니다(참고: 진행률은 0.0에서 1.0 사이임).|
-|ColorLerpRGB(Color colorTo, Color colorFrom, Float progress)|  RGB 색 공간의 지정된 진행률에 따라 두 개체 간의 계산된 선형 보간 값을 나타내는 Color 개체를 반환합니다.|
-|ColorLerpHSL(Color colorTo, Color colorFrom, Float progress)|  HSL 색 공간의 지정된 진행률에 따라 두 개체 간의 계산된 선형 보간 값을 나타내는 Color 개체를 반환합니다.|
-|ColorArgb(Float a, Float r, Float g, Float b)| ARGB 구성 요소에 의해 정의된 색을 나타내는 개체를 생성합니다.|
-|ColorHsl(Float h, Float s, Float l)|   HSL 구성 요소에 의해 정의된 색을 나타내는 개체를 생성합니다(참고: 색조는 0에서 2pi 사이로 정의됨).|
+|ColorLerp(Color colorTo, Color colorFrom, Float progress)| Returns a Color object that represents the calculated linear interpolation value between two color objects based on a given progress. (Note: Progress is between 0.0 and 1.0)|
+|ColorLerpRGB(Color colorTo, Color colorFrom, Float progress)|  Returns a Color object that represents the calculated linear interpolation value between two objects based on a given progress in the RGB color space.|
+|ColorLerpHSL(Color colorTo, Color colorFrom, Float progress)|  Returns a Color object that represents the calculated linear interpolation value between two objects based on a given progress in the HSL color space.|
+|ColorArgb(Float a, Float r, Float g, Float b)| Constructs an object representing Color defined by ARGB components|
+|ColorHsl(Float h, Float s, Float l)|   Constructs an object representing Color defined by HSL components (Note: Hue is defined from 0 and 2pi)|
 
 
 
@@ -775,6 +773,6 @@ class PropertyAnimation
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

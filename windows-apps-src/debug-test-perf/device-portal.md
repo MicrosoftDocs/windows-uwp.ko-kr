@@ -1,203 +1,205 @@
 ---
 author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
-title: "Windows Device Portal 개요"
-description: "Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다."
+title: Windows Device Portal overview
+description: Learn how the Windows Device Portal lets you configure and manage your device remotely over a network or USB connection.
 translationtype: Human Translation
-ms.sourcegitcommit: 7f6aba331ba27d2c0c2ca7925c452da58e155cb8
-ms.openlocfilehash: b316eab1f269dadbe65b7e93b5a33a8e4c4924d7
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
 
 ---
-# Windows Device Portal 개요
+# <a name="windows-device-portal-overview"></a>Windows Device Portal overview
 
-Windows Device Portal을 사용하면 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있습니다. 또한 Windows 디바이스의 실시간 성능 보기 및 문제 해결을 위한 고급 진단 도구를 제공합니다.
+The Windows Device Portal lets you configure and manage your device remotely over a network or USB connection. It also provides advanced diagnostic tools to help you troubleshoot and view the real time performance of your Windows device.
 
-디바이스 포털은 PC의 웹 브라우저에서 연결 가능한 디바이스에 있는 웹 서버입니다. 디바이스에 웹 브라우저가 있는 경우 디바이스 브라우저와 로컬로 연결할 수도 있습니다.
+The Device Portal is a web server on your device that you can connect to from a web browser on your PC. If your device has a web browser, you can also connect locally with the browser on your device.
 
-Windows Device Portal은 각 디바이스 패밀리에서 사용할 수 있지만 기능 및 설정은 해당 디바이스의 요구 사항에 따라 다릅니다. 이 문서는 디바이스 포털에 대한 일반적인 설명과 각 디바이스 패밀리에 대해 구체적인 정보가 있는 문서의 링크를 제공합니다.
+Windows Device Portal is available on each device family, but features and setup vary based on the device's requirements. This article provides a general description of Device Portal and links to articles with more specific information for each device family.
 
-Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 [REST API](device-portal-api-core.md)를 기반으로 합니다.
+Everything in the Windows Device Portal is built on top of [REST API's](device-portal-api-core.md) that you can use to access the data and control your device programmatically.
 
-## 설치
+## <a name="setup"></a>Setup
 
-각 디바이스에는 디바이스 포털에 연결하기 위한 특정 지침이 있지만 각 디바이스 모두 다음과 같은 일반적인 단계가 필요합니다.
-1. 디바이스에서 개발자 모드와 디바이스 포털을 사용하도록 설정합니다.
-2. 로컬 네트워크 또는 USB를 통해 디바이스와 PC를 연결합니다.
-3. 브라우저에서 디바이스 포털 페이지로 이동합니다. 이 표는 각 디바이스 제품군에 사용되는 포트 및 프로토콜을 보여 줍니다.
+Each device has specific instructions for connecting to Device Portal, but each requires these general steps:
+1. Enable Developer Mode and Device Portal on your device.
+2. Connect your device and PC via local network or USB.
+3. Navigate to the Device Portal page in your browser. This table shows the ports and protcols used by each device family.
 
-디바이스 패밀리 | 기본 설정 여부 | HTTP | HTTPS | USB
+Device family | On by default? | HTTP | HTTPS | USB
 --------------|----------------|------|-------|----
-HoloLens | 예, 개발자 모드에서 | 80(기본값) | 443(기본값) | localhost:10080
-IoT | 예, 개발자 모드에서 | 8080 | regkey를 통해 사용 설정 | 해당 없음
-Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해당 없음
-데스크톱| 개발자 모드 내에서 사용 설정 | 임의 &gt; 50,000(xx080) | 임의 &gt; 50,000(xx443) | 해당 없음
-전화 | 개발자 모드 내에서 사용 설정 | 80| 443 | localhost:10080
+HoloLens | Yes, in Dev Mode | 80 (default) | 443 (default) | http://127.0.0.1:10080
+IoT | Yes, in Dev Mode | 8080 | Enable via regkey | N/A
+Xbox | Enable inside Dev Mode | Disabled | 11443 | N/A
+Desktop| Enable inside Dev Mode | 50080\* | 50043\* | N/A
+Phone | Enable inside Dev Mode | 80| 443 | http://127.0.0.1:10080
 
-디바이스별 설치 지침은 다음을 참조하세요.
-- [HoloLens용 디바이스 포털](https://dev.windows.com/holographic/using_the_windows_device_portal)
-- [IoT용 디바이스 포털](https://go.microsoft.com/fwlink/?LinkID=616499)
-- [모바일용 디바이스 포털](device-portal-mobile.md#set-up-device-portal-on-window-phone)
-- [Xbox용 디바이스 포털](device-portal-xbox.md)
-- [데스크톱 디바이스 포털](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
+\* This is not always the case, as Device Portal on desktop claims ports in the ephemeral range (>50,000) to prevent collisions with existing port claims on the device.  To learn more, see the [Port Settings](device-portal-desktop.md#setting-port-numbers) section for desktop.  
 
-## 기능
+For device-specific setup instructions, see:
+- [Device Portal for HoloLens](https://dev.windows.com/holographic/using_the_windows_device_portal)
+- [Device Portal for IoT](https://go.microsoft.com/fwlink/?LinkID=616499)
+- [Device Portal for Mobile](device-portal-mobile.md)
+- [Device Portal for Xbox](device-portal-xbox.md)
+- [Device Portal for Desktop](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
 
-### 도구 모음 및 탐색
+## <a name="features"></a>Features
 
-페이지 맨 위에 있는 도구 모음에서 자주 사용하는 상태 및 기능에 대한 액세스를 제공합니다.
-- **종료**: 디바이스를 끕니다.
-- **다시 시작**: 디바이스의 전원을 순환합니다.
-- **도움말**: 도움말 페이지를 엽니다.
+### <a name="toolbar-and-navigation"></a>Toolbar and navigation
 
-페이지의 왼쪽 탐색 창에 있는 링크를 사용하여 디바이스에서 사용 가능한 관리 및 모니터링 도구로 이동합니다.
+The toolbar at the top of the page provides access to commonly used status and features.
+- **Shutdown**: Turns off the device.
+- **Restart**: Cycles power on the device.
+- **Help**: Opens the help page.
 
-여기에서는 디바이스 간에 공통된 도구에 대해 설명합니다. 다른 옵션은 디바이스에 따라 사용할 수 있습니다. 자세한 내용은 디바이스에 대한 특정 페이지를 참조하세요.
+Use the links in the navigation pane along the left side of the page to navigate to the available management and monitoring tools for your device.
 
-### 홈
+Tools that are common across devices are described here. Other options might be available depending on the device. For more info, see the specific page for your device.
 
-홈페이지에서 디바이스 포털 세션을 시작합니다. 홈페이지에는 일반적으로 이름 및 OS 버전과 같은 디바이스에 대한 정보와 디바이스를 설정할 수 있는 기본 설정 정보가 있습니다.
+### <a name="home"></a>Home
 
-### 앱
+Your Device Portal session starts at the home page. The home page typically has information about the device, such as name and OS version, and preferences that you can set for the device.
 
-AppX 패키지와 디바이스에 있는 번들에 대해 설치/제거 및 관리 기능을 제공합니다.
+### <a name="apps"></a>Apps
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-apps.png)
+Provides install/uninstall and management functionality for AppX packages and bundles on your device.
 
-- **설치된 앱**: 앱을 제거하고 시작합니다.
-- **실행 중인 앱**: 현재 실행 중인 앱을 나열합니다.
-- **앱 설치**: 컴퓨터 또는 네트워크 폴더에서 설치할 앱 패키지를 선택합니다.
-- **종속성**: 설치하려는 앱에 대한 종속성을 추가합니다.
-- **배포**: 선택한 앱과 종속성을 디바이스에 배포합니다.
+![Device Portal for mobile](images/device-portal/mob-device-portal-apps.png)
 
-**앱을 설치하려면**
+- **Installed apps**: Remove and start apps.
+- **Running apps**: Lists apps that are running currently.
+- **Install app**: Select app packages for installation from a folder on your computer or network.
+- **Dependency**: Add dependencies for the app you are going to install.
+- **Deploy**: Deploy the selected app and dependencies to your device.
 
-1.  [앱 패키지를 만들면](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx) 이를 원격으로 디바이스에 설치할 수 있습니다. Visual Studio에서 빌드한 후 출력 폴더가 생성됩니다.
+**To install an app**
 
-    ![앱 설치](images/device-portal/iot-installapp0.png)
-2.  찾아보기를 클릭하고 앱 패키지(.appx)를 찾습니다.
-3.  찾아보기를 클릭하고 인증서 파일(.cer)을 찾습니다(일부 디바이스에서는 필요 없음).
-4.  종속성을 추가합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
-5.  **배포**에서 **이동**을 클릭합니다. 
-6.  다른 앱을 설치하려면 **초기화** 단추를 클릭하여 필드를 지웁니다.
+1.  When you've [created an app package](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx), you can remotely install it onto your device. After you build it in Visual Studio, an output folder is generated.
+
+    ![App install](images/device-portal/iot-installapp0.png)
+2.  Click browse and find your app package (.appx).
+3.  Click browse and find the certificate file (.cer). (Not required on all devices.)
+4.  Add dependencies. If you have more than one, add each one individually.     
+5.  Under **Deploy**, click **Go**. 
+6.  To install another app, click the **Reset** button to clear the fields.
 
 
-**앱을 제거하려면**
+**To uninstall an app**
 
-1.  앱이 실행되고 있지 않은지 확인합니다. 
-2.  실행 중이면 '실행 중인 앱'으로 이동하고 앱을 닫습니다. 앱이 실행되는 동안 제거를 시도할 경우 해당 앱을 다시 설치하려고 할 때 문제가 발생합니다. 
-3.  준비되면 **제거**를 클릭합니다.
+1.  Ensure that your app is not running. 
+2.  If it is, go to 'running apps' and close it. If you attempt to uninstall while the app is running, it will cause issues when trying to re-install the app. 
+3.  Once you're ready, click **Uninstall**.
 
-### Processes
+### <a name="processes"></a>Processes
 
-현재 실행 중인 프로세스에 대한 세부 정보를 보여 줍니다. 앱 및 시스템 프로세스 모두 포함합니다.
+Shows details about currently running processes. This includes both apps and system processes.
 
-PC에서의 작업 관리자와 매우 유사한 이 페이지에서는 현재 어떤 프로세스가 실행 중인지 뿐만 아니라 이들의 메모리 사용량도 볼 수 있습니다.  일부 플랫폼(데스크톱, IoT 및 HoloLens)에서 프로세스를 종료할 수 있습니다.
+Much like the Task Manager on your PC, this page lets you see which processes are currently running as well as their memory usage.  On some platforms (Desktop, IoT, and HoloLens) you can terminate processes.
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-processes.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-processes.png)
 
-### 성능
+### <a name="performance"></a>Performance
 
-전력 사용량, 프레임 속도 및 CPU 로드와 같은 시스템 진단 정보를 실시간 그래프로 보여 줍니다.
+Shows real-time graphs of system diagnostic info, like power usage, frame rate, and CPU load.
 
-사용 가능한 메트릭은 다음과 같습니다.
-- **CPU**: 총 사용 가능한 백분율
-- **메모리**: 전체, 사용 중, 사용 가능한 약정, 페이징 및 비페이징 메모리
-- **GPU**: GPU 엔진 사용률, 총 사용 가능한 백분율
-- **I/O**: 읽기 및 쓰기
-- **네트워크**: 수신 및 전송
+These are the available metrics:
+- **CPU**: Percent of total available
+- **Memory**: Total, in use, available committed, paged, and non-paged
+- **GPU**: GPU engine utilization, percent of total available
+- **I/O**: Reads and writes
+- **Network**: Received and sent
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-perf.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-perf.png)
 
-### ETW(Windows용 이벤트 추적)
+### <a name="event-tracing-for-windows-etw"></a>Event Tracing for Windows (ETW)
 
-디바이스에서 실시간 ETW(Windows용 이벤트 추적)를 관리합니다.
+Manages realtime Event Tracing for Windows (ETW) on the device.
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-etw.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-etw.png)
 
-**공급자 숨기기**를 선택하여 이벤트 목록만 표시합니다.
-- **등록된 공급자**: ETW 공급자와 추적 수준을 선택합니다. 추적 수준은 다음 값 중 하나입니다.
-    1. 비정상적인 끝내기 또는 종료
-    2. 심각한 오류
-    3. 경고
-    4. 오류가 아닌 경고
-    5. 세부 추적(*)
+Check **Hide providers** to show the Events list only.
+- **Registered providers**: Select the ETW provider and the tracing level. Tracing level is one of these values:
+    1. Abnormal exit or termination
+    2. Severe errors
+    3. Warnings
+    4. Non-error warnings
+    5. Detailed trace (*)
 
-추적을 시작하려면 **사용**을 클릭 또는 탭합니다. 공급자가 **활성화된 공급자** 드롭다운에 추가됩니다.
-- **사용자 지정 공급자**: 사용자 지정 ETW 공급자 및 추적 수준을 선택합니다. 공급자를 GUID로 식별합니다. GUID에 대괄호를 포함하지 마세요.
-- **활성화된 공급자**: 활성화된 공급자를 나열합니다. 추적을 중지하려면 드롭다운에서 공급자를 선택하고 **사용 안 함**을 클릭 또는 탭합니다. 모든 추적을 일시 중단하려면 **모두 중지**를 클릭 또는 탭합니다.
-- **공급자 기록**: 현재 세션 중 활성화된 ETW 공급자를 보여 줍니다. 비활성화된 공급자를 활성화하려면 **사용**을 클릭 또는 탭합니다. 기록을 지우려면 **지우기**를 클릭 또는 탭합니다.
-- **이벤트**: 선택된 공급자의 ETW 이벤트를 표 형식으로 나열합니다. 이 표는 실시간으로 업데이트됩니다. 모든 ETW 이벤트를 표에서 삭제하려면 표 아래에 있는 **지우기** 단추를 클릭합니다. 이렇게 해도 공급자는 비활성화되지 않습니다. **파일로 저장**을 클릭하여 현재 수집된 ETW 이벤트를 CSV 파일에 로컬로 내보낼 수 있습니다.
+Click or tap **Enable** to start tracing. The provider is added to the **Enabled Providers** dropdown.
+- **Custom providers**: Select a custom ETW provider and the tracing level. Identify the provider by its GUID. Don't include brackets in the GUID.
+- **Enabled providers**: Lists the enabled providers. Select a provider from the dropdown and click or tap **Disable** to stop tracing. Click or tap **Stop all** to suspend all tracing.
+- **Providers history**: Shows the ETW providers that were enabled during the current session. Click or tap **Enable** to activate a provider that was disabled. Click or tap **Clear** to clear the history.
+- **Events**: Lists ETW events from the selected providers in table format. This table is updated in real time. Beneath the table, click the **Clear** button to delete all ETW events from the table. This does not disable any providers. You can click **Save to file** to export the currently collected ETW events to a CSV file locally.
 
-ETW 추적 사용에 대한 자세한 내용은 ETW 추적을 사용하여 앱에서 실시간 로그를 수집하는 방법에 대한 [블로그 게시물](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/)을 참조하세요. 
+For more details on using ETW tracing, see the [blogpost](https://blogs.windows.com/buildingapps/2016/06/10/using-device-portal-to-view-debug-logs-for-uwp/) about using it to collect real-time logs from your app. 
 
-### 성능 추적
+### <a name="performance-tracing"></a>Performance tracing
 
-디바이스에서 [WPR(Windows Performance Recorder)](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) 추적을 캡처합니다.
+Capture [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR) traces from your device.
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-perf-tracing.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-perf-tracing.png)
 
-- **사용 가능한 프로필**: 드롭다운 목록에서 WPR 프로필을 선택하고, 추적을 시작하려면 **시작**을 클릭 또는 탭합니다.
-- **사용자 지정 프로필**: PC에서 WPR 프로필을 선택하려면 **찾아보기**를 클릭 또는 탭합니다. 추적을 시작하려면 **업로드 및 시작**을 클릭 또는 탭합니다.
+- **Available profiles**: Select the WPR profile from the dropdown, and click or tap **Start** to start tracing.
+- **Custom profiles**: Click or tap **Browse** to choose a WPR profile from your PC. Click or tap **Upload and start** to start tracing.
 
-추적을 중지하려면 **중지**를 클릭합니다. 추적 파일(.ETL)이 다운로드를 완료할 때까지 이 페이지에 계속 있습니다.
+To stop the trace, click **Stop**. Stay on this page until the trace file (.ETL) has completed downloading.
 
-캡처된 ETL 파일은 [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx)에서 분석을 위해 열 수 있습니다.
+Captured ETL files can be opened for analysis in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
-### 디바이스
+### <a name="devices"></a>Devices
 
-디바이스에 연결된 모든 주변 디바이스를 열거합니다.
+Enumerates all peripherals attached to your device.
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-devices.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-devices.png)
 
-### 네트워킹
+### <a name="networking"></a>Networking
 
-디바이스에서 네트워크 연결을 관리합니다.  USB를 통해 디바이스 포털에 연결하지 않는 한 이러한 설정 변경으로 인해 디바이스 포털과의 연결이 끊어질 수 있습니다.
-- **프로필**: 사용할 다른 WiFi 프로필을 선택합니다.  
-- **사용 가능한 네트워크**: WiFi 네트워크를 디바이스에 사용할 수 있습니다. 네트워크에서 클릭 또는 탭하면 여기에 연결되며 필요한 경우 암호를 제공합니다. 참고: 디바이스 포털은 아직 엔터프라이즈 인증을 지원하지 않습니다. 
+Manages network connections on the device.  Unless you are connected to Device Portal via USB, changing these settings will likely disconnect you from Device Portal.
+- **Profiles**: Select a different WiFi profile to use.  
+- **Available networks**: The WiFi networks available to the device. Clicking or tapping on a network will allow you to connect to it and supply a passkey if needed. Note: Device Portal does not yet support Enterprise Authentication. 
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-network.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-network.png)
 
-### 앱 파일 탐색기
+### <a name="app-file-explorer"></a>App File Explorer
 
-테스트용으로 로드된 앱에서 저장한 파일을 보고 조작할 수 있습니다.  Windows Phone 8.1에서 [격리된 저장소 탐색기](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx)의 새로운 플랫폼 간 버전입니다. 앱 파일 탐색기 및 그 사용 방법에 대한 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/)을 참조하세요. 
+Allows you to view and manipulate files stored by your sideloaded apps.  This is a new, cross-platform version of the [Isolated Storage Explorer](https://msdn.microsoft.com/library/windows/apps/hh286408(v=vs.105).aspx) from Windows Phone 8.1  See [this blog post](https://blogs.windows.com/buildingapps/2016/06/08/using-the-app-file-explorer-to-see-your-app-data/) to learn more about the App File Explorer and how to use it. 
 
-![모바일용 디바이스 포털](images/device-portal/mob-device-portal-AppFileExplorer.png)
+![Device Portal for mobile](images/device-portal/mob-device-portal-AppFileExplorer.png)
 
-## 서비스 기능 및 참고 사항
+## <a name="service-features-and-notes"></a>Service Features and Notes
 
-### DNS-SD
+### <a name="dns-sd"></a>DNS-SD
 
-디바이스 포털은 DNS-SD를 사용하여 로컬 네트워크에서 존재 여부를 알립니다.  모든 디바이스 포털 인스턴스는 디바이스 유형에 관계없이 "WDP._wdp._tcp.local"에서 알립니다. 서비스 인스턴스에 대한 TXT 레코드는 다음을 제공합니다.
+Device Portal advertises its presence on the local network using DNS-SD.  All Device Portal instances, regardless of their device type, advertise under "WDP._wdp._tcp.local". The TXT records for the service instance provide the following:
 
-키 | 형식 | 설명 
+Key | Type | Description 
 ----|------|-------------
-S | int | 디바이스 포털의 보안 포트입니다.  0(영)인 경우 디바이스 포털은 HTTPS 연결을 수신 대기하지 않습니다. 
-D | string | 디바이스의 유형입니다.  "Windows.*" 형식으로 제공됩니다(예: Windows.Xbox 또는 Windows.Desktop).
-A | string | 디바이스 아키텍처입니다.  ARM, x86 또는 AMD64입니다.  
-T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자가 적용한 태그입니다. 사용 방법은 태그 REST API를 참조하세요. 목록은 이중 null로 종료됩니다.  
+S | int | Secure port for Device Portal.  If 0 (zero), Device Portal is not listening for HTTPS connections. 
+D | string | Type of device.  This will be in the format "Windows.*", e.g. Windows.Xbox or Windows.Desktop
+A | string | Device architecture.  This will be ARM, x86, or AMD64.  
+T | null-character delineated list of strings | User-applied tags for the device. See the Tags REST API for how to use this. List is double-null terminated.  
 
-일부 디바이스는 DNS-SD 레코드에 의해 알려진 HTTP 포트에서 수신 대기하지 않으므로 HTTPS 포트에서 연결하는 것이 좋습니다. 
+Connecting on the HTTPS port is suggested, as not all devices are listening on the HTTP port advertised by the DNS-SD record. 
 
-### CSRF 보호 및 스크립팅
+### <a name="csrf-protection-and-scripting"></a>CSRF Protection and Scripting
 
-[CSRF 공격](https://wikipedia.org/wiki/Cross-site_request_forgery)으로부터 보호하기 위해 모든 비 GET 요청에서 고유한 토큰이 필요합니다. 이 토큰(X-CSRF-Token 요청 헤더)은 세션 쿠키(CSRF-Token)에서 파생됩니다. 디바이스 포털 웹 UI에서 CSRF-Token 쿠키는 각 요청에서 X-CSRF-Token 헤더로 복사됩니다.
+In order to protect against [CSRF attacks](https://wikipedia.org/wiki/Cross-site_request_forgery), a unique token is required on all non-GET requests. This token, the X-CSRF-Token request header, is derived from a session cookie, CSRF-Token. In the Device Portal web UI, the CSRF-Token cookie is copied into the X-CSRF-Token header on each request.
 
-**중요** 이 보호는 독립 실행형 클라이언트(예: 명령줄 유틸리티)에서 REST API의 사용을 방지합니다. 이 문제는 다음 세 가지 방법으로 해결할 수 있습니다. 
+**Important** This protection prevents usages of the REST APIs from a standalone client (e.g. command-line utilities). This can be solved in 3 ways: 
 
-1. "auto-" 사용자 이름을 사용합니다. 사용자 이름 앞에 "auto-"를 추가하는 클라이언트는 CSRF 보호를 우회하게 됩니다. 이 사용자 이름은 브라우저를 통해 디바이스 포털에 로그인하는 데 사용할 수 없습니다. 서비스가 CSRF 공격에 노출되기 때문입니다. 예: 디바이스 포털의 사용자 이름이 “admin”인 경우 CSRF 보호를 우회하려면 ```curl -u auto-admin:password <args>```를 사용해야 합니다. 
+1. Use of the "auto-" username. Clients that prepend "auto-" to their username will bypass CSRF protection. It is important that this username not be used to log in to Device Portal through the browser, as it will open up the service to CSRF attacks. Example: If Device Portal's username is "admin", ```curl -u auto-admin:password <args>``` should be used to bypass CSRF protection. 
 
-2. 클라이언트에서 쿠키-헤더 체계를 구현합니다. 이를 위해서는 GET 요청으로 세션 쿠키를 설정한 다음 모든 후속 요청에서 헤더와 쿠키를 둘 다 포함해야 합니다. 
+2. Implement the cookie-to-header scheme in the client. This requires a GET request to establish the session cookie, and then the inclusion of both the header and the cookie on all subsequent requests. 
  
-3. 인증을 사용하지 않도록 설정하고 HTTP를 사용합니다. CSRF 보호는 HTTPS 끝점에만 적용되므로 HTTP 끝점의 연결에서는 위의 작업을 수행할 필요가 없습니다. 
+3. Disable authentication and use HTTP. CSRF protection only applies to HTTPS endpoints, so connections on HTTP endpoints will not need to do either of the above. 
 
-**참고**: "auto-"로 시작되는 사용자 이름은 브라우저를 통해 디바이스 포털에 로그인할 수 없습니다.  
+**Note**: a username that begins with "auto-" will not be able to log into Device Portal via the browser.  
 
-#### CSWSH(사이트 간 WebSocket 하이재킹) 보호
+#### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>Cross-Site WebSocket Hijacking (CSWSH) protection
 
-[CSWSH 공격](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html)으로부터 보호하려면 디바이스 포털에 대한 WebSocket 연결을 여는 모든 클라이언트에서 호스트 헤더와 일치하는 원본 헤더도 제공해야 합니다.  이를 통해 요청이 디바이스 포털 UI 또는 유효한 클라이언트 응용 프로그램에서 비롯되었음을 디바이스 포털에 입증할 수 있습니다.  원본 헤더가 없으면 요청이 거부됩니다. 
+To protect against [CSWSH attacks](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html), all clients opening a WebSocket connection to Device Portal must also provide an Origin header that matches the Host header.  This proves to Device Portal that the request comes either from the Device Portal UI or a valid client application.  Without the Origin header your request will be rejected. 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

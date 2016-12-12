@@ -1,40 +1,40 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: "이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다."
-title: "앱 간 통신"
+description: This section explains how to share data between Universal Windows Platform (UWP) apps, including how to use the Share contract, copy and paste, and drag and drop.
+title: App-to-app communication
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
-ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
+ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
+ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
 
 ---
 
-# 앱 간 통신
+# <a name="app-to-app-communication"></a>App-to-app communication
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어서 놓기의 사용 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱 간에 데이터를 공유하는 방법에 대해 설명합니다.
+This section explains how to share data between Universal Windows Platform (UWP) apps, including how to use the Share contract, copy and paste, and drag and drop.
 
-공유 계약은 앱 간에 데이터를 신속하게 교환할 수 있는 한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다. 앱에 사용자가 다른 앱의 컨텍스트에 있는 동안 빠르게 완료할 수 있는 콘텐츠 받기 시나리오가 있는 경우 공유 계약을 사용하는 것이 좋습니다.
+The Share contract is one way users can quickly exchange data between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later. Consider using a Share contract if your app receives content in scenarios that a user can quickly complete while in the context of another app.
 
-앱에서는 두 가지 방법으로 공유 기능을 지원할 수 있습니다. 먼저, 사용자가 공유하려는 콘텐츠를 제공하는 원본 앱일 수 있습니다. 둘째, 사용자가 공유 콘텐츠의 대상으로 선택하는 대상 앱일 수 있습니다. 앱이 원본 앱이면서 대상 앱일 수도 있습니다. 원본 앱으로 콘텐츠를 공유하려면 앱이 제공할 수 있는 데이터 서식을 결정해야 합니다.
+An app can support the Share feature in two ways. First, it can be a source app that provides content that the user wants to share. Second, the app can be a target app that the user selects as the destination for shared content. An app can also be both a source app and a target app. If you want your app to share content as a source app, you need to decide what data formats your app can provide.
 
-앱은 공유 계약 외에 끌기 및 놓기 또는 복사 및 붙여넣기와 같이 데이터를 전송하기 위한 클래식 기술을 통합할 수도 있습니다. 이러한 방법은 UWP 앱 간 통신 외에 데스크톱 응용 프로그램 간에도 공유를 지원합니다.
+In addition to the Share contract, apps can also integrate classic techniques for transferring data, such as dragging and dropping or copy and pasting. In addition to communication between UWP apps, these methods also support sharing to and from desktop applications.
 
-## 이 섹션의 내용
+## <a name="in-this-section"></a>In this section
 
-| 항목 | 설명 |
+| Topic | Description |
 |-------|-------------|
-| [데이터 공유](share-data.md) | 이 문서에서는 UWP 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다. |
-| [데이터 수신](receive-data.md) | 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다. |
-| [복사 및 붙여넣기](copy-and-paste.md) | 이 문서에서는 UWP 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. |
-| [끌어서 놓기](drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
+| [Share data](share-data.md) | This article explains how to support the Share contract in a UWP app. The Share contract is an easy way to quickly share data, such as text, links, photos, and videos, between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later. |
+| [Receive data](receive-data.md) | This article explains how to receive content in your UWP app shared from another app using Share contract. This Share contract allows your app to be presented as an option when the user invokes Share. |
+| [Copy and paste](copy-and-paste.md) | This article explains how to support copy and paste in UWP apps using the clipboard. Copy and paste is the classic way to exchange data either between apps, or within an app, and almost every app can support clipboard operations to some degree. |
+| [Drag and drop](drag-and-drop.md) | This article explains how to add dragging and dropping in your UWP app. Drag and drop is a classic, natural way of interacting with content such as images and files. Once implemented, drag and drop works seamlessly in all directions, including app-to-app, app-to-desktop, and desktop-to app. |
 
-## 참고 항목
-- [UWP 앱 개발](https://developer.microsoft.com/en-us/windows/develop)
+## <a name="see-also"></a>See also
+- [Develop UWP apps](https://developer.microsoft.com/windows/develop)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
