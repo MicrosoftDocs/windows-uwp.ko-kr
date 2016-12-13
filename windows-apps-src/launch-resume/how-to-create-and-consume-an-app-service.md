@@ -1,34 +1,34 @@
 ---
 author: TylerMSFT
-title: Create and consume an app service
-description: Learn how to write a Universal Windows Platform (UWP) app that can provide services to other UWP apps, and how to consume those services.
+title: "앱 서비스 만들기 및 사용"
+description: "다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 방법과 해당 서비스를 사용하는 방법을 알아봅니다."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: app to app communication, interprocess communication, IPC, Background messaging, background communication, app to app
+keywords: "앱 간 통신, 프로세스 간 통신, IPC, 백그라운드 메시징, 백그라운드 통신, 앱 간"
 translationtype: Human Translation
 ms.sourcegitcommit: fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db
 ms.openlocfilehash: 81786f6bf76d1d3840d5cd8c6191550b98a248b2
 
 ---
 
-# <a name="create-and-consume-an-app-service"></a>Create and consume an app service
+# <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows&nbsp;8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-Learn how to write a Universal Windows Platform (UWP) app that can provide services to other UWP apps, and how to consume those services.
+다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법에 대해 알아봅니다.
 
-Starting in Windows 10, version 1607, you can create app services that run in the same process as the host app. This article focuses on creating app services that run in a separate background process. See [Convert an app service to run in the same process as its host app](convert-app-service-in-process.md) for more details about app services that run in the same process as the provider.
+Windows&nbsp;10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행되는 앱 서비스를 만들 수 있습니다. 이 문서는 별도 백그라운드 프로세스에서 실행되는 앱 서비스 만들기에 중점을 둡니다. 공급자와 같은 프로세스에서 실행되는 앱 서비스에 대한 자세한 내용은 [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)을 참조하세요.
 
-## <a name="create-a-new-app-service-provider-project"></a>Create a new app service provider project
+## <a name="create-a-new-app-service-provider-project"></a>새 앱 서비스 공급자 프로젝트 만들기
 
-In this how-to, we'll create everything in one solution for simplicity.
+이 방법에서는 편의상 모두를 한 솔루션으로 만듭니다.
 
--   In Microsoft Visual Studio 2015, create a new UWP app project and name it AppServiceProvider. (In the **New Project** dialog box, select **Templates &gt; Other Languages &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Blank app (Windows Universal)**). This will be the app that provides the app service.
+-   Microsoft Visual Studio 2015에서 UWP 앱 프로젝트를 만들고 AppServiceProvider로 이름을 지정합니다. **새 프로젝트** 대화 상자에서 **템플릿 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)**을 선택합니다. 이 앱에서 앱 서비스를 제공합니다.
 
-## <a name="add-an-app-service-extension-to-packageappxmanifest"></a>Add an app service extension to package.appxmanifest
+## <a name="add-an-app-service-extension-to-packageappxmanifest"></a>package.appxmanifest에 앱 서비스 확장 추가
 
-In the AppServiceProvider project's Package.appxmanifest file, add the following AppService extension to the **&lt;Application&gt;** element. This example advertises the `com.Microsoft.Inventory` service and is what identifies this app as an app service provider. The actual service will be implemented as a background task. The app service app exposes the service to other apps. We recommend using a reverse domain name style for the service name.
+AppServiceProvider 프로젝트의 Package.appxmanifest 파일에서 **&lt;Application&gt;** 요소에 다음과 같은 AppService 확장 기능을 추가합니다. 이 예제에서는 `com.Microsoft.Inventory` 서비스를 광고하고 이 앱이 앱 서비스 공급자로 식별됩니다. 실제 서비스가 백그라운드 작업으로 구현됩니다. 앱 서비스 앱에서 다른 앱에 서비스를 공개합니다. 서비스 이름에 역방향 도메인 이름 스타일을 사용하는 것이 좋습니다.
 
 ``` syntax
 ...
@@ -46,22 +46,22 @@ In the AppServiceProvider project's Package.appxmanifest file, add the following
 </Applications>
 ```
 
-The **Category** attribute identifies this application as an app service provider.
+**Category** 특성을 통해 이 응용 프로그램을 앱 서비스 공급자로 식별합니다.
 
-The **EntryPoint** attribute identifies the class that implements the service, which we'll implement next.
+**EntryPoint** 특성을 통해 서비스를 구현하는 클래스를 식별합니다. 이 예에서 다음으로 이 클래스를 구현할 것입니다.
 
-## <a name="create-the-app-service"></a>Create the app service
+## <a name="create-the-app-service"></a>앱 서비스 만들기
 
-1.  An app service is implemented as a background task. This enables a foreground application to invoke an app service in another application to perform tasks behind the scenes. Add a new Windows Runtime Component project to the solution (**File &gt; Add &gt; New Project**) named MyAppService. (In the **Add New Project** dialog box, choose **Installed &gt; Other Languages &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Windows Runtime Component (Windows Universal)**
-2.  In the AppServiceProvider project, add a reference to the MyAppService project.
-3.  In the MyappService project, add the following **using** statements to the top of Class1.cs:
+1.  앱 서비스는 백그라운드 작업으로 구현됩니다. 따라서 포그라운드 응용 프로그램이 백그라운드 작업 방식으로 작업을 수행하도록 다른 응용 프로그램에서 앱 서비스를 호출할 수 있습니다. MyAppService라는 솔루션에 새 Windows 런타임 구성 요소 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Windows 런타임 구성 요소(Windows Universal)** 선택)
+2.  AppServiceProvider 프로젝트에서 MyAppService 프로젝트에 참조를 추가합니다.
+3.  MyappService 프로젝트에서 다음 **using** 문을 Class1.cs의 맨 위에 추가합니다.
     ```cs
     using Windows.ApplicationModel.AppService;
     using Windows.ApplicationModel.Background;
     using Windows.Foundation.Collections;
     ```
 
-4.  Replace the stub code for **Class1** with a new background task class named **Inventory**:
+4.  **Class1**의 스텁 코드를 **Inventory**: 라는 새 백그라운드 작업 클래스로 바꿉니다.
 
     ```cs
     public sealed class Inventory : IBackgroundTask
@@ -97,15 +97,15 @@ The **EntryPoint** attribute identifies the class that implements the service, w
     }
     ```
 
-    This class is where the app service will do its work.
+    이 클래스에서 앱 서비스가 작업을 수행합니다.
 
-    **Run()** is called when the background task is created. Because background tasks are terminated after **Run** completes, the code takes a deferral so that the background task will stay up to serve requests.
+    백그라운드 작업을 만들면 **Run()**이 호출됩니다. 백그라운드 작업은 **Run**이 완료되고 나면 종료되므로 백그라운드 작업이 요청을 계속 처리하도록 코드가 지연됩니다.
 
-    **OnTaskCanceled()** is called when the task is canceled. The task is cancelled when the client app disposes the [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704), the client app is suspended, the OS is shut down or sleeps, or the OS runs out of resources to run the task.
+    작업이 취소되면 **OnTaskCanceled()**가 호출됩니다. 클라이언트 앱에서 [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704)을 삭제하거나 클라이언트 앱이 일시 중단되거나 OS가 종료 또는 절전 상태이거나 OS에 작업을 실행할 리소스가 없는 경우 이 작업이 취소됩니다.
 
-## <a name="write-the-code-for-the-app-service"></a>Write the code for the app service
+## <a name="write-the-code-for-the-app-service"></a>앱 서비스의 코드 작성
 
-**OnRequestedReceived()** is where the code for the app service goes. Replace the stub **OnRequestedReceived()** in MyAppService's Class1.cs with the code from this example. This code gets an index for an inventory item and passes it, along with a command string, to the service to retrieve the name and the price of the specified inventory item. Error handling code has been removed for brevity.
+**OnRequestedReceived()**로 앱 서비스의 코드가 이동됩니다. MyAppService의 Class1.cs에 있는 스텁 **OnRequestedReceived()**를 이 예의 코드로 바꿉니다. 이 코드에서는 인벤토리 항목의 인덱스를 가져온 다음 지정된 인벤토리 항목의 이름과 가격을 검색하기 위해 명령 문자열과 함께 서비스에 전달합니다. 편의를 위해 오류 처리 코드는 제거되었습니다.
 
 ```cs
 private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
@@ -157,34 +157,34 @@ private async void OnRequestReceived(AppServiceConnection sender, AppServiceRequ
 }
 ```
 
-Note that **OnRequestedReceived()** is **async** because we make an awaitable method call to [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) in this example.
+이 예제에서는 [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대해 awaitable 메서드를 호출하므로 **OnRequestedReceived()**가 **async**입니다.
 
-A deferral is taken so that the service can use **async** methods in the OnRequestReceived handler. It ensures that the call to OnRequestReceived does not complete until it is done processing the message. [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) is used to send a response alongside the completion. **SendResponseAsync** does not signal the completion of the call. It is the completion of the deferral that signals to [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712) that OnRequestReceived has completed.
+서비스가 OnRequestReceived 처리기에서 **async** 메서드를 사용할 수 있도록 지연됩니다. 메시지 처리를 완료할 때까지 OnRequestReceived에 대한 호출이 완료되지 않게 합니다. [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)는 완료와 함께 응답을 보내는 데 사용합니다. **SendResponseAsync**에서는 호출이 완료되어도 신호를 보내지 않습니다. 지연이 완료되어야 [**SendMessageAsync**](https://msdn.microsoft.com/library/windows/apps/dn921712)에 OnRequestReceived가 완료되었다는 신호를 보냅니다.
 
-App services use a [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) to exchange information. The size of the data you may pass is only limited by system resources. There are no predefined keys for you to use in your **ValueSet**. You must determine which key values you will use to define the protocol for your app service. The caller must be written with that protocol in mind. In this example, we have chosen a key named "Command" that has a value that indicates whether we want the app service to provide the name of the inventory item or its price. The index of the inventory name is stored under the "ID" key. The return value is stored under the "Result" key.
+앱 서비스에서는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 사용하여 정보를 교환합니다. 전달할 수 있는 데이터의 크기는 시스템 리소스를 통해서만 제한될 수 있습니다. **ValueSet**에서 사용할 사전 정의된 키가 없습니다. 앱 서비스의 프로토콜을 정의하는 데 사용할 키 값을 결정해야 합니다. 이 프로토콜을 염두에 두고 호출자를 작성해야 합니다. 이 예제에서는 "Command"라는 키를 선택했습니다. 이 키의 값을 통해 앱 서비스에서 인벤토리 항목의 이름을 제공할지 아니면 값을 제공할지를 나타냅니다. 인벤토리 이름의 색인은 "ID" 키에 저장됩니다. 반환 값은 "Result" 키에 저장됩니다.
 
-An [**AppServiceClosedStatus**](https://msdn.microsoft.com/library/windows/apps/dn921703) enum is returned to the caller to indicate whether the call to the app service succeeded or failed. An example of how the call to the app service could fail is if the OS aborts the service endpoint, resources are exceeded, and so forth. You can return additional error information via the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131). In this example, we use a key named "Status" to return more detailed error information to the caller.
+앱 서비스에 대한 호출의 성공 여부를 표시하기 위해 [**AppServiceClosedStatus**](https://msdn.microsoft.com/library/windows/apps/dn921703) enum이 호출자에게 반환됩니다. OS에서 서비스 끝점을 중단하거나 리소스가 초과되거나 하는 등이 앱 서비스에 대한 호출이 실패하는 예입니다. [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 통해 추가 오류 정보를 반환할 수 있습니다. 이 예제에서는 "Status"라는 키를 사용하여 호출자에게 자세한 오류 정보를 반환합니다.
 
-The call to [**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722) returns the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) to the caller.
+[**SendResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn921722)에 대한 호출을 통해 호출자에게 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)를 반환합니다.
 
-## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>Deploy the service app and get the package family name
+## <a name="deploy-the-service-app-and-get-the-package-family-name"></a>서비스 앱 배포 및 패키지 패밀리 이름 가져오기
 
-The app service provider app must be deployed before you can call it from a client. You will also need the package family name of the app service app in order to call it.
+앱 서비스 공급자 앱을 배포해야 클라이언트에서 호출할 수 있습니다. 앱 서비스 앱을 호출하려면 해당 패키지 패밀리 이름도 필요합니다.
 
--   One way to get the package family name of the app service application is to call [**Windows.ApplicationModel.Package.Current.Id.FamilyName**](https://msdn.microsoft.com/library/windows/apps/br224670) from within the **AppServiceProvider** project (for example, from `public App()` in App.xaml.cs) and note the result. To run AppServiceProvider in Microsoft Visual Studio, set it as the startup project in the Solution Explorer window and run the project.
--   Another way to get the package family name is to deploy the solution (**Build &gt; Deploy solution**) and note the full package name in the output window (**View &gt; Output**). You must remove the platform information from the string in the output window to derive the package name. For example, if the full package name reported in the output window was "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_1.0.0.0\_x86\_\_yd7nk54bq29ra", you would extract "1.0.0.0\_x86\_\_" leaving "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_yd7nk54bq29ra" as the package family name.
+-   앱 서비스 응용 프로그램의 패키지 패밀리 이름을 가져오는 방법은 **AppServiceProvider** 프로젝트에서(예: App.xaml.cs의 `public App()`에서) [**Windows.ApplicationModel.Package.Current.Id.FamilyName**](https://msdn.microsoft.com/library/windows/apps/br224670)을 호출하고 결과를 기록하는 것뿐입니다. Microsoft Visual Studio에서 AppServiceProvider를 실행하려면 솔루션 탐색기 창에서 시작 프로젝트로 설정한 다음 프로젝트를 실행합니다.
+-   패키지 패밀리 이름을 가져오는 또 다른 방법은 솔루션을 배포(**빌드 &gt; 솔루션 배포**)하고 출력 창에서 전체 패키지 이름을 기록(**보기 &gt; 출력**)하는 것입니다. 패키지 이름을 파생시키려면 출력 창의 문자열에서 플랫폼 정보를 제거해야 합니다. 예를 들어 출력 창에 보고된 전체 패키지 이름이 "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_1.0.0.0\_x86\_\_yd7nk54bq29ra"이면 "9fe3058b-3de0-4e05-bea7-84a06f0ee4f0\_yd7nk54bq29ra"를 패키지 패밀리 이름으로 두고 "1.0.0.0\_x86\_\_"을 추출합니다.
 
-## <a name="write-a-client-to-call-the-app-service"></a>Write a client to call the app service
+## <a name="write-a-client-to-call-the-app-service"></a>앱 서비스를 호출하는 클라이언트 작성
 
-1.  Add a new blank Windows Universal app project to the solution (**File &gt; Add &gt; New Project**) named ClientApp. (In the **Add New Project** dialog box, choose **Installed &gt; Other languages &gt; Visual C# &gt; Windows &gt; Windows Universal &gt; Blank App (Windows Universal)**).
-2.  In the ClientApp project, add the following **using** statement to the top of MainPage.xaml.cs:
+1.  ClientApp이라는 솔루션에 Windows 유니버설 앱 프로젝트를 추가합니다(**파일 &gt; 추가 &gt; 새 프로젝트**). (**새 프로젝트 추가** 대화 상자에서 **설치됨 &gt; 기타 언어 &gt; Visual C# &gt; Windows &gt; Windows 유니버설 &gt; 비어 있는 앱(Windows 유니버설)** 선택).
+2.  ClientApp 프로젝트에서 다음 **using** 문을 MainPage.xaml.cs의 맨 위에 추가합니다.
     ```cs
     >using Windows.ApplicationModel.AppService;
     ```
 
-3.  Add a text box and a button to MainPage.xaml.
-4.  Add a button click handler for the button and add the keyword **async** to the button handler's signature.
-5.  Replace the stub of your button click handler with the following code. Be sure to include the `inventoryService` field declaration.
+3.  MainPage.xaml에 텍스트 상자와 단추를 추가합니다.
+4.  단추의 단추 클릭 처리기를 추가하고 **async** 키워드를 단추 처리기의 서명에 추가합니다.
+5.  단추 클릭 처리기의 스텁을 다음 코드로 바꿉니다. `inventoryService` 필드 선언을 포함해야 합니다.
 
    ```cs
    private AppServiceConnection inventoryService;
@@ -244,47 +244,47 @@ The app service provider app must be deployed before you can call it from a clie
     }
     ```
 
-    Replace the package family name in the line `this.inventoryService.PackageFamilyName = "replace with the package family name";` with the package family name of the **AppServiceProvider** project that you obtained in \[Step 5: Deploy the service app and get the package family name\].
+    `this.inventoryService.PackageFamilyName = "replace with the package family name";` 줄의 패키지 패밀리 이름을 \[5단계: 서비스 앱 배포 및 패키지 패밀리 이름 가져오기]에서 가져온 **AppServiceProvider** 프로젝트의 패키지 패밀리 이름으로 바꿉니다.
 
-    The code first establishes a connection with the app service. The connection will remain open until you dispose **this.inventoryService**. The app service name must match the **AppService Name** attribute that you added to the AppServiceProvider project's Package.appxmanifest file. In this example, it is `<uap:AppService Name="com.microsoft.inventory"/>`.
+    코드는 먼저 앱 서비스와 연결합니다. 연결은 **this.inventoryService**를 삭제할 때까지 열린 상태로 유지됩니다. 앱 서비스 이름은 AppServiceProvider 프로젝트의 Package.appxmanifest 파일에 추가한 **AppService 이름** 특성과 일치해야 합니다. 이 예제에서는 `<uap:AppService Name="com.microsoft.inventory"/>`입니다.
 
-    A [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) named **message** is created to specify the command that we want to send to the app service. The example app service expects a command to indicate which of two actions to take. We get the index from the textbox in the ClientApp, and then call the service with the "Item" command to get the description of the item. Then, we make the call with the "Price" command to get the item's price. The button text is set to the result.
+    앱 서비스에 보낼 명령을 지정할 수 있도록 **message**라는 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)이 만들어집니다. 예제 앱 서비스에서는 명령을 사용하여 수행할 두 가지 작업이 나타나게 됩니다. ClientApp의 텍스트 상자에서 인덱스를 가져온 다음 항목 설명을 가져오도록 “Item” 명령을 사용하여 서비스를 호출합니다. 그런 다음 항목 가격을 가져오도록 “Price” 명령을 사용하여 호출합니다. 단추 텍스트는 결과로 설정됩니다.
 
-    Because [**AppServiceResponseStatus**](https://msdn.microsoft.com/library/windows/apps/dn921724) only indicates whether the operating system was able to connect the call to the app service, we check the "Status" key in the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) we receive from the app service to ensure that it was able to fulfill the request.
+    [**AppServiceResponseStatus**](https://msdn.microsoft.com/library/windows/apps/dn921724)는 운영 체제에서 앱 서비스에 호출을 연결할 수 있었는지 여부만 나타내므로 앱 서비스에서 수신한 [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)의 "Status" 키를 확인하여 요청을 수행할 수 있었는지 확인합니다.
 
-6.  In Visual Studio, set the ClientApp project to be the startup project in the Solution Explorer window and run the solution. Enter the number 1 into the text box and click the button. You should get "Chair : Price = 88.99" back from the service.
+6.  Visual Studio의 솔루션 탐색기 창에서 ClientApp 프로젝트를 시작 프로젝트로 설정한 다음 솔루션을 실행합니다. 입력란에 숫자 1을 입력하고 단추를 클릭합니다. 서비스에서 “의자 : 가격 = 88.99”가 반환되어야 합니다.
 
-    ![sample app displaying chair price=88.99](images/appserviceclientapp.png)
+    ![의자 가격=88.99를 표시하는 샘플 앱](images/appserviceclientapp.png)
 
-If the app service call fails, check the following in the ClientApp:
+앱 서비스 호출에 실패하면 ClientApp에서 다음을 확인합니다.
 
-1.  Verify that the package family name assigned to the inventory service connection matches the package family name of the AppServiceProvider app. See: **button\_Click()**`this.inventoryService.PackageFamilyName = "...";`).
-2.  In **button\_Click()**, verify that the app service name that is assigned to the inventory service connection matches the app service name in the AppServiceProvider's Package.appxmanifest file. See: `this.inventoryService.AppServiceName = "com.microsoft.inventory";`.
-3.  Ensure that the AppServiceProvider app has been deployed (In the Solution Explorer, right-click the solution and choose **Deploy**).
+1.  인벤토리 서비스 연결에 할당된 패키지 제품군 이름이 AppServiceProvider 앱의 패키지 제품군 이름과 일치하는지 확인합니다. **button\_Click()**`this.inventoryService.PackageFamilyName = "...";`을 참조하세요.
+2.  **button\_Click()**에서 인벤토리 서비스 연결에 할당된 앱 서비스 이름이 AppServiceProvider의 Package.appxmanifest 파일에 있는 앱 서비스 이름과 일치하는지 확인합니다. `this.inventoryService.AppServiceName = "com.microsoft.inventory";`를 참조하세요.
+3.  AppServiceProvider 앱이 배포되었는지 확인합니다(솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **배포** 선택).
 
-## <a name="debug-the-app-service"></a>Debug the app service
+## <a name="debug-the-app-service"></a>앱 서비스 디버그
 
 
-1.  Ensure that the entire solution is deployed before debugging because the app service provider app must be deployed before the service can be called. (In Visual Studio, **Build &gt; Deploy Solution**).
-2.  In the Solution Explorer, right-click the AppServiceProvider project and choose **Properties**. From the **Debug** tab, change the **Start action** to **Do not launch, but debug my code when it starts**.
-3.  In the MyAppService project, in the Class1.cs file, set a breakpoint in OnRequestReceived().
-4.  Set the AppServiceProvider project to be the startup project and press F5.
-5.  Start ClientApp from the Start menu (not from Visual Studio).
-6.  Enter the number 1 into the text box and press the button. The debugger will stop in the app service call on the breakpoint in your app service.
+1.  앱 서비스 공급자 앱을 배포해야 서비스를 호출할 수 있으므로 디버깅 전에 전체 솔루션이 배포되도록 합니다. (Visual Studio에서 **빌드 &gt; 솔루션 배포**).
+2.  솔루션 탐색기에서 AppServiceProvider 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **디버그** 탭에서 **시작 작업**을 **실행하지 않지만 시작되면 내 코드 디버그**로 변경합니다.
+3.  MyAppService 프로젝트의 Class1.cs 파일에서 OnRequestReceived()에 중단점을 설정합니다.
+4.  AppServiceProvider 프로젝트를 시작 프로젝트가 되도록 설정하고 F5를 누릅니다.
+5.  시작 메뉴에서(Visual Studio에서가 아님) ClientApp을 시작합니다.
+6.  입력란에 숫자 1을 입력하고 단추를 누릅니다. 디버거가 앱 서비스의 중단점에서 앱 서비스 호출을 중단합니다.
 
-## <a name="debug-the-client"></a>Debug the client
+## <a name="debug-the-client"></a>클라이언트 디버그
 
-1.  Follow the instructions in the preceding step to debug the app service.
-2.  Launch ClientApp from the Start menu.
-3.  Attach the debugger to the ClientApp.exe process (not the ApplicationFrameHost.exe process). (In Visual Studio, choose **Debug &gt; Attach to Process...**.)
-4.  In the ClientApp project, set a breakpoint in **button\_Click()**.
-5.  The breakpoints in both the client and the app service will now be hit when you enter the number 1 into the text box of the ClientApp and click the button.
+1.  이전 단계의 지침에 따라 앱 서비스를 디버그합니다.
+2.  시작 메뉴에서 ClientApp을 실행합니다.
+3.  ClientApp.exe 프로세스(ApplicationFrameHost.exe 프로세스가 아님)에 디버거를 연결합니다. (Visual Studio에서 **디버그 &gt; 프로세스에 추가...** 선택)
+4.  ClientApp 프로젝트에서 **button_\Click()**에 중단점을 설정합니다.
+5.  ClientApp의 텍스트 상자에 숫자 1을 입력하고 단추를 클릭하면 클라이언트와 앱 서비스 둘 다의 중단점이 적중됩니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
-This example provides a simple introduction to creating an app service and calling it from another app. The key things to note are the creation of a background task to host the app service, the addition of the windows.appservice extension to the app service provider app's Package.appxmanifest file, obtaining the package family name of the app service provider app so that we can connect to it from the client app, and using [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704) to call the service.
+이 예제에서는 앱 서비스를 만들고 다른 앱에서 이 앱을 호출하는 데 관해 간단한 소개합니다. 참고해야 할 사항은 앱 서비스를 호스트하도록 백그라운드 작업을 만들고 windows.appservice 확장 기능을 앱 서비스 공급자 앱의 Package.appxmanifest 파일에 추가하여, 클라이언트 앱에서 연결할 수 있도록 앱 서비스 공급자 앱의 패키지 패밀리 이름을 확보하고 [**Windows.ApplicationModel.AppService.AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn921704)을 사용하여 서비스를 호출하는 것입니다.
 
-## <a name="full-code-for-myappservice"></a>Full code for MyAppService
+## <a name="full-code-for-myappservice"></a>MyAppService의 전체 코드
 
 ```cs
 using System;
@@ -373,10 +373,10 @@ namespace MyAppService
 }
 ```
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Convert an app service to run in the same process as its host app](convert-app-service-in-process.md)
-* [Support your app with background tasks](support-your-app-with-background-tasks.md)
+* [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)
+* [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
 
 
 

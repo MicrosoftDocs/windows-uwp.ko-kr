@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: If you encounter errors while uploading app packages during the app submission process, you must resolve them before you can submit your app to the Store.
-title: Resolve package upload errors
+Description: "앱 제출 프로세스에서 앱 패키지를 업로드하는 동안 오류가 발생하면 앱을 스토어에 제출하기 전에 먼저 오류를 해결해야 합니다."
+title: "패키지 업로드 오류 해결"
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
 translationtype: Human Translation
 ms.sourcegitcommit: 2ff09d43cd39967028b39b4f602f4dfdf2cbcdcc
@@ -9,25 +9,25 @@ ms.openlocfilehash: 4f7f9698d8b8b17654b6f2e0420c7cdc6031f018
 
 ---
 
-# <a name="resolve-package-upload-errors"></a>Resolve package upload errors
+# <a name="resolve-package-upload-errors"></a>패키지 업로드 오류 해결
 
 
-If you encounter errors while [uploading app packages](upload-app-packages.md) during the [app submission](app-submissions.md) process, you must resolve them before you can submit your app to the Store. The error message will indicate what the problem is and what you might need to do in order to fix the issue. Here are a few pointers to additional info to help you resolve these errors.
+[앱 제출](app-submissions.md) 프로세스에서 [앱 패키지를 업로드](upload-app-packages.md)하는 동안 오류가 발생하면 앱을 스토어에 제출하기 전에 먼저 오류를 해결해야 합니다. 오류 메시지는 문제가 무엇이며, 문제를 해결하기 위해 수행해야 할 수 있는 작업을 나타냅니다. 다음은 이러한 오류를 해결하는 데 도움이 되는 추가 정보입니다.
 
-## <a name="package-type-errors-for-windows-phone-81"></a>Package type errors for Windows Phone 8.1
+## <a name="package-type-errors-for-windows-phone-81"></a>Windows Phone 8.1에 대한 패키지 형식 오류
 
-When you are updating apps that were previously published for Windows Phone 8.1, you may encounter errors related to package types. For more info about package type requirements, see [Maintaining package compatibility for Windows Phone 8.1](guidance-for-app-package-management.md#maintaining-package-compatibility-for-windows-phone-81).
+이전에 Windows Phone 8.1용으로 게시된 앱을 업데이트할 경우 패키지 형식 관련 오류가 발생할 수 있습니다. 패키지 형식 요구 사항에 대한 자세한 내용은 [Windows Phone 8.1용 패키지 호환성 유지 관리](guidance-for-app-package-management.md#maintaining-package-compatibility-for-windows-phone-81)를 참조하세요.
 
-Failure to follow these requirements will result in package upload errors that will prevent you from completing your submission.
+이러한 요구 사항을 따르지 않으면 패키지 업로드 오류가 발생하여 제출을 완료하지 못하게 됩니다.
 
-## <a name="version-number-conflicts"></a>Version number conflicts
+## <a name="version-number-conflicts"></a>버전 번호 충돌
 
 
-For info about resolving errors related to version numbers and the requirements when submitting updates, see [Package version numbering](package-version-numbering.md).
+버전 번호와 관련된 오류를 해결하는 정보 및 업데이트 제출 시 요구 사항은 [패키지 버전 번호](package-version-numbering.md)를 참조하세요.
 
-Additionally, be aware that if your submission has more than one Windows Phone 8.1 XAP, they must have the same version number.
+또한 제출에 Windows Phone 8.1 XAP를 두 개 이상 포함하는 경우에는 버전 번호가 동일해야 합니다.
 
-**Note**  For additional questions related to other error messages and help with resolving them, please visit our [forums](http://go.microsoft.com/fwlink/p/?LinkId=224196).
+**참고** 다른 오류 메시지와 관련된 추가 질문 및 이를 해결하는 방법에 대한 도움말은 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=224196)을 참조하세요.
 
  
 

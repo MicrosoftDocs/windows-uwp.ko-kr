@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app&quot;s user base.
-title: Create an ad campaign for your app
+Description: "개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다."
+title: "앱 광고 캠페인 만들기"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 translationtype: Human Translation
 ms.sourcegitcommit: 65b82f422e602515e9531664e35f1e1c1e9f5932
@@ -9,96 +9,96 @@ ms.openlocfilehash: 3ea67f9e4f0d834bd77ef116c5e0b16008f4ae5f
 
 ---
 
-# <a name="create-an-ad-campaign-for-your-app"></a>Create an ad campaign for your app
+# <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
 
-You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base. By default, we will choose the target audience for your ads based on the settings for your app in the Dev Center dashboard, but you can optionally define your own audience. You can also use a default set of ad templates or upload your own ad designs. For more details about ad campaigns, see [Common questions about ad campaigns](common-questions.md).
+개발자 센터 대시보드로 광고 캠페인을 만들어 앱을 홍보하고 앱의 사용자 기반을 성장시킬 수 있습니다. 기본적으로 개발자 센터 대시보드에서 앱에 대한 설정에 따라 광고의 대상 고객이 선택되지만 선택적으로 고유한 대상 그룹을 정의할 수도 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
 
-> **Note**  You can create ad campaigns only for apps that have passed the final publishing phase of the [app certification process](the-app-certification-process.md).
+> **참고** [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과한 앱에 대한 광고 캠페인만 만들 수 있습니다.
 
-Here's how to create an ad campaign to promote your app.
+앱을 홍보하는 광고 캠페인을 만드는 방법은 다음과 같습니다.
 
-1.  From the left navigation menu on your app's page in the Dev Center dashboard, click **Monetization** &gt; **Promote your app**.
-2.  Do one of the following:
+1.  개발자 센터 대시보드의 앱 페이지에 있는 왼쪽 탐색 메뉴에서 **수익 창출** &gt; **앱 홍보**를 클릭합니다.
+2.  다음 중 하나를 수행합니다.
 
-    -   If you have not yet created an ad campaign for this app, the **Promote your app** page displays information about the benefits of ad campaigns. Click **Get started** or **Create an ad campaign**.
-    -   If you have already created an ad campaign for this app, the **Promote your app** page lists your existing ad campaigns. Click **New campaign**.
-3.  On the **New campaign** page, in the **Campaign objective** section, choose one of the following:
-    -   **Increase installs for your app**. Select this option if your ad campaign is intended to get people to install your app.
-    -   **Increase engagement in your app**. Select this option if your ad campaign is intended to get your customers to increase their usage of your app. When you select this option, you can target your ad campaign at specific [customer segments](create-customer-segments.md) that you define.
+    -   이 앱에 대한 광고 캠페인을 아직 만들지 않은 경우 **앱 홍보** 페이지에 광고 캠페인의 이점에 대한 정보가 표시됩니다. **시작** 또는 **광고 캠페인 만들기**를 클릭합니다.
+    -   이 앱에 대한 광고 캠페인을 이미 만든 경우 **앱 홍보** 페이지에 기존 광고 캠페인이 나열됩니다. **새 캠페인**을 클릭합니다.
+3.  **새 캠페인** 페이지의 **캠페인 목표** 섹션에서 다음 중 하나를 선택합니다.
+    -   **회원님의 앱에 대한 설치 늘리기**. 광고 캠페인을 통해 앱 설치를 유도하게 하려면 이 옵션을 선택합니다.
+    -   **회원님의 앱에서 참여 늘리기**. 광고 캠페인을 통해 고객의 앱 사용을 증가시키려면 이 옵션을 선택합니다. 이 옵션을 선택하면 정의한 특정 [고객층](create-customer-segments.md)을 광고 캠페인의 대상으로 지정할 수 있습니다.
 
-4.  In the **Campaign details** section, define the overall settings for your campaign.
-    -   Name your ad campaign in the **Campaign name** field.
-    -   Under **Campaign type**, choose one of these options:
-        -   **Paid**: These ads will run in any app that matches your app’s device and category.
-        -   **Community (free)**: These ads will run in apps published by other developers who also create community ad campaigns. Before you can select this option, you must first check the **Show community ads in my app** box in the **Monetize with ads** page of the dashboard. For more information, see [About community ads](about-community-ads.md).
-        -   **House (free)**: These ads will only run in your apps (that match the advertised app’s device). House ads are free of charge. For more information, see [About house ads](about-house-ads.md).
-    -   Under **Campaign duration**, choose one of these options:
-        - **Custom**. If you choose this option, your campaign budget will be spent during the date and time range you specify. This option is only available to developers who have a premium account. For more info about premium accounts, see [Common questions about ad campaigns](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign).
-        - **Monthly**. If you choose this option, your campaign budget will be spent every month on a recurring basis until you stop the campaign.
+4.  **캠페인 세부 내용** 섹션에서 캠페인에 대한 전반적인 설정을 정의합니다.
+    -   **캠페인 이름** 필드에서 광고 캠페인 이름을 지정합니다.
+    -   **캠페인 종류**에서 이러한 옵션 중 하나를 선택합니다.
+        -   **유료**: 이러한 광고는 앱의 장치 및 범주와 일치하는 모든 앱에서 실행됩니다.
+        -   **커뮤니티(무료)**: 이러한 광고는 커뮤니티 광고 캠페인을 만드는 다른 개발자가 게시한 앱에서 실행됩니다. 이 옵션을 선택하려면 먼저 대시보드의 **광고로 수익 창출** 페이지에서 **내 앱에 커뮤니티 광고 표시** 확인란을 선택해야 합니다. 자세한 내용은 [커뮤니티 광고 정보](about-community-ads.md)를 참조하세요.
+        -   **하우스(무료)**: 이러한 광고는 광고 앱의 디바이스와 일치하는 앱에서만 실행됩니다. 하우스 광고는 무료입니다. 자세한 내용은 [하우스 광고 정보](about-house-ads.md)를 참조하세요.
+    -   **캠페인 기간**에서 다음 옵션 중 하나를 선택합니다.
+        - **사용자 지정**. 이 옵션을 선택하는 경우 캠페인 예산은 지정한 날짜 및 시간 범위 동안 사용됩니다. 이 옵션은 프리미엄 계정이 있는 개발자만 사용할 수 있습니다. 프리미엄 계정에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)을 참조하세요.
+        - **매월**. 이 옵션을 선택하는 경우 캠페인 예산은 캠페인을 중지할 때까지 매달 반복적으로 사용됩니다.
 
-    > **Note**  If your app is not yet published, you will receive an error message on the **New campaign** page. You must wait for your app to be published before you can create an ad campaign for it.
+    > **참고** 앱이 아직 게시되지 않았으면 **새 캠페인** 페이지에 오류 메시지가 표시됩니다. 앱에 대한 광고 캠페인을 만들기 전에 앱이 게시될 때까지 기다려야 합니다.
 
-5.  If you chose **Increase app installations** as your campaign objective, we will choose the audience for your ads, based on the settings you selected when creating the app in the Dev Center dashboard. If you would rather choose the audience for your ads yourself, select **Manual** to expand the **Audience** section. If you want to go back to default targeting, select **Automatic**.
+5.  캠페인 목표로 **앱 설치 늘리기**를 선택한 경우 개발자 센터 대시보드에서 앱을 개발할 때 선택한 설정에 따라 광고에 가장 적합한 대상이 선택됩니다. 광고의 대상을 직접 선택하려는 경우**수동**을 선택하여 **대상 그룹** 섹션을 확장합니다. 기본 대상 지정으로 다시 돌아가려는 경우 **자동**을 선택합니다.
 
-    If you select **Manual**, you can edit the following targeting information:
+    **수동**을 선택하는 경우 다음 대상 지정 정보를 편집할 수 있습니다.
 
-    -   Choose the countries or regions in which you want these ads to appear. You can choose up to 5. For a list of the supported countries or regions, see [Common questions about ad campaigns](common-questions.md#where-will-my-ad-appear).
-    -   Choose the device types on which you want these ads to appear. Only the device types supported by your app are shown.
-    -   Choose the operating system. Only the operating systems supported by your app are shown.
-    -   Select the gender and age range of your desired audience.
+    -   이러한 광고를 표시하려는 국가 또는 지역을 선택합니다. 최대 5개까지 선택할 수 있습니다. 지원되는 국가 또는 지역 목록은 [광고 캠페인에 대한 일반적인 질문](common-questions.md#where-will-my-ad-appear)을 참조하세요.
+    -   이러한 광고를 표시할 디바이스 유형을 선택합니다. 앱에서 지원하는 디바이스 유형만 표시됩니다.
+    -   운영 체제를 선택합니다. 앱에서 지원하는 운영 체제만 표시됩니다.
+    -   원하는 대상의 성별 및 연령 범위를 선택합니다.
 
-    This section also displays an **Estimated Reach** graph. This graph shows the audience you can reach with your current targeting selections as a percentage of all Windows ad-enabled app users in the selected markets.
+    이 섹션에는 **예상 도달** 그래프도 표시됩니다. 이 그래프에는 선택한 지역/국가에서 모든 Windows 광고 지원 앱 사용자의 백분율로 볼 때 현재 대상 지정 선택으로 도달할 수 있는 대상이 표시됩니다.
 
-6.  If you chose **Increase app engagement** as your campaign objective, you can select one of your customer segments to target.
+6.  캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 대상으로 지정할 고객층 중 하나를 선택할 수 있습니다.
 
-    > **Note**  Ads created using this campaign will be shown only to the customers who are included in the segment. Only one segment can be selected per ad campaign. For info about segments, see [Create customer segments](create-customer-segments.md).
+    > **참고** 이 캠페인을 사용하여 만든 광고는 세그먼트에 포함된 고객에게만 표시됩니다. 세그먼트는 광고 캠페인당 하나만 선택할 수 있습니다. 세그먼트에 대한 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
 
 
-7.  In the **Ad design** section, choose one of these options:
-    -   **Custom**. Choose this option to use your own ad designs. Note that if you selected a customer segment in Step 6, you must use custom creatives. You can upload different files for each of the available ad sizes. The files must meet the following requirements and guidelines:
-        -   Each file must be a .png or .jpg that is 40 KB or smaller.
-        -   Your ad designs must meet the requirements specified in the [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595).
-        -   The content in your ad designs must be relevant to the app you are promoting. Ad designs that are not related to the app will not be distributed to ads in other apps.
-        -   All content in your ad designs should be clearly legible. For example, content should not be blurred, pixelated or stretched.
-    -   **Auto-generated**. Choose this option to use ads from a list of default templates. You have the following options to customize the content in the ads. As you make selections, the previews of your ads will update automatically.
-        -   In the **Language** drop-down, select the language of the ads. The text for the Windows Store badge and your custom tag line text (if specified) will show in the language you select.
-        -   To add an extra line of text to your ad, enter the text in the **Custom tag line** field.
-            > **Note**  The text you enter must be localized into the selected language. The custom tag line will be rejected if the text does not align with [Bing Ads policies](http://go.microsoft.com/fwlink?LinkId=398341). Consult this page for guidance on style and disallowed content.
+7.  **광고 디자인** 섹션에서 다음 옵션 중 하나를 선택합니다.
+    -   **사용자 지정**. 자신의 광고 디자인을 사용하려면 이 옵션을 선택합니다. 6단계에서 고객층을 선택한 경우 사용자 지정 창작 광고를 사용해야 합니다. 사용 가능한 각 광고 크기에 대해 다른 파일을 업로드할 수 있습니다. 파일은 다음 요구 사항 및 지침을 충족해야 합니다.
+        -   각 파일은 .png 또는.jpg로 40KB 이하여야 합니다.
+        -   광고 디자인은 [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595)에 지정된 요구 사항을 충족해야 합니다.
+        -   광고 디자인의 콘텐츠는 홍보하는 앱과 관련이 있어야 합니다. 앱과 관련되지 않은 광고 디자인은 다른 앱에서 광고로 배포되지 않습니다.
+        -   광고 디자인의 모든 콘텐츠는 명확하게 읽을 수 있어야 합니다. 예를 들어 콘텐츠는 흐리거나 모자이크처럼 표시되거나 늘어나지 않아야 합니다.
+    -   **자동 생성**. 기본 템플릿 목록의 광고를 사용하려면 이 옵션을 선택합니다. 다음 옵션을 사용하여 광고 콘텐츠를 사용자 지정할 수 있습니다. 선택을 하면 광고 미리 보기가 자동으로 업데이트됩니다.
+        -   **언어** 드롭다운에서 광고의 언어를 선택합니다. Windows 스토어 배지의 텍스트와 사용자 지정 태그 줄 텍스트(지정된 경우)가 선택한 언어로 표시됩니다.
+        -   광고에 추가 텍스트 줄을 더하려면 **사용자 지정 태그 줄** 필드에서 텍스트를 입력합니다.
+            > **참고** 입력한 텍스트는 선택한 언어로 지역화되어야 합니다. 텍스트가 [Bing 광고 정책](http://go.microsoft.com/fwlink?LinkId=398341)(영문)을 준수하지 않는 경우 사용자 지정 태그 줄은 거부됩니다. 이 페이지에서 스타일 및 허용되지 않는 콘텐츠에 대한 지침을 참조하세요.
 
-        -   To further customize the ad, expand **Customize ad design / See all ad sizes** and choose any of the following:
-            - **Background color**. Choose from the available options.
-            - **Images**. The available images are the images you have associated with your app in the Store.
-            - **Show my app rating**. Select this checkbox if you want to show the app's rating.
-            - **Show that my app is free**. If your app is free in all the selected markets, you will also have the option to select this checkbox.
-            - **Call to action**. If you chose **Increase app engagement** as your campaign objective, you can set your ad's call to action button to **Open**, **Play**, **Read**, **Listen**, or **Shop**.  
+        -   광고를 세부적으로 사용자 지정하려면 **광고 디자인 사용자 지정/모든 광고 크기 보기**를 확장하고 다음 중 하나를 선택합니다.
+            - **배경색**. 사용 가능한 옵션 중 하나를 선택합니다.
+            - **이미지**. 사용 가능한 이미지는 스토어의 앱과 연결한 이미지입니다.
+            - **내 앱 등급 표시**. 앱의 등급을 표시하려면 이 확인란을 선택합니다.
+            - **내 앱을 무료로 표시**. 선택한 모든 지역/국가에서 앱이 무료인 경우 이 확인란을 선택할 수 있는 옵션도 있습니다.
+            - **동작 호출**. 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 광고의 동작 호출 단추를 **열기**, **재생**, **읽기**, **듣기** 또는 **쇼핑**으로 설정할 수 있습니다.  
 
-8.  If you have a [premium account](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign), you can use the **Destination URL** box to control what happens when a customer clicks your ad.
-    - If you leave the box empty, when a customer clicks your ad, your app's Store listing will be displayed.
-    - If you are using Kochava or Tune to measure install analytics for your app, enter your install tracking URL from Kochava or Tune. When you save the campaign, the tracking URL is validated to make sure that it resolves to the listing page for your app in the Windows Store. For more information about install tracking with Kochava and Tune, see the [Kochava](http://support.kochava.com/) and [Tune](https://help.tune.com/) documentation.
-    - If you chose **Increase app engagement** as your campaign objective, you can specify a [deep-link URI](../launch-resume/handle-uri-activation.md) to redirect customers in the selected segment to a specific page within your app.
-    - If you specify any destination that is not your app description page or a page inside of your app, your campaign will automatically be paused.
+8.  [프리미엄 계정](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)이 있는 경우 **대상 URL** 상자를 사용하여 고객이 광고를 클릭할 때 발생하는 상황을 제어할 수 있습니다.
+    - 상자를 비워 두면 고객이 광고를 클릭할 때 앱의 스토어 목록이 표시됩니다.
+    - Kochava 또는 Tune을 사용하여 앱에 대한 설치 분석을 측정하는 경우 Kochava 또는 Tune에서 설치 추적 URL을 입력합니다. 캠페인을 저장할 때 추적 URL이 Windows 스토어의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. Kochava 및 Tune을 사용한 설치 추적에 대한 자세한 내용은 [Kochava](http://support.kochava.com/) 및 [Tune](https://help.tune.com/) 설명서를 참조하세요.
+    - 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 세그먼트의 고객을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
+    - 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 
-9.  Now choose your ad campaign's financial settings in the **Budget and payment** section.
-   > **Note**  If you are creating a house campaign or community campaign, the **Budget and payment** section will not appear, since these campaigns are free of charge.
+9.  이제 **예산 및 지불** 섹션에서 광고 캠페인의 금융 설정을 선택합니다.
+   > **참고** 하우스 캠페인 또는 커뮤니티 캠페인을 만드는 경우 이러한 캠페인은 무료이므로 **예산 및 지불** 섹션이 나타나지 않습니다.
 
-    -   Under **Budget**, use the slider to set the amount of money you want to spend each month to run this ad.
+    -   **예산**에서 슬라이더를 사용하여 매월 이 광고를 실행하기 위해 지출할 금액을 설정합니다.
 
-        The monthly budget is prorated for the month in which the ad campaign is created. In other words, if you create an ad campaign halfway through a calendar month, you will be charged for half of your monthly budget for that month.
+        광고 캠페인을 만든 달의 월별 예산은 비례 배분 방식으로 지출됩니다. 즉, 보름을 지나 광고 캠페인을 만드는 경우 해당 월의 월별 예산 중 절반이 청구됩니다.
 
-    -   Set a payment instrument for your ad campaign by clicking **Add new payment instrument** and fill in your account details.
-        > **Important**  The country/region of your payment instrument's billing address must match the country/region associated with your Dev Center account.
--   If you have received a coupon from a Microsoft representative to pay for an ad campaign, click **Use a coupon**, enter the coupon code, and click **Apply** to apply the coupon to the campaign.
+    -   **Add new payment instrument(새 결제 방법 추가)**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다.
+        > **중요** 결제 방법의 청구 주소 국가/지역은 개발자 센터 계정에 연결된 국가/지역과 일치해야 합니다.
+- Microsoft 담당자로부터 쿠폰을 받고 광고 캠페인을 받고 결제하려면 **Use a coupon**(쿠폰 사용)을 클릭하고, 쿠폰 코드를 입력한 다음 **적용**을 클릭하여 캠페인에 쿠폰을 적용합니다.
 
-10.  Finally, click **Review** to confirm your ad campaign's settings and, if it's a paid ad campaign, its budget and payment information. Click **Confirm** and your ads will typically start appearing on devices within a few hours.
-   > **Tip**  To see how your campaigns are performing, in the top navigation menu of the dashboard, select **Promotions**. Select **Section filters** to scope what's included in the report by **Date**, **Campaign objective**, **App name**, **Campaign type**, or **Status**. In addition to seeing info about your campaign's **Impressions**, **Clicks**, **Conversions**, and **Spend**, you can use the report to **Pause** or **Resume** a campaign. To edit a campaign, select its name in the list.
+10.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 디바이스에 나타나기 시작합니다.
+   > **팁** 광고 캠페인의 성과를 보려면 대시보드의 위쪽 탐색 메뉴에서 **홍보**를 선택합니다. **섹션 필터**를 선택하여 보고서에 포함되는 내용의 범위를 **날짜**, **캠페인 목표**, **앱 이름**, **캠페인 유형** 또는 **상태**별로 지정합니다. 캠페인의 **광고 노출 수**, **클릭 수**, **변환** 및 **지출** 정보를 보는 것은 물론 보고서를 사용하여 캠페인을 **일시 중지** 또는 **다시 시작**할 수도 있습니다. 캠페인을 편집하려면 목록에서 해당 이름을 선택합니다.
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Managing your ad campaign](managing-your-ad-campaign.md)
-* [About house ads](about-house-ads.md)
-* [App install ads report](app-install-ads-reports.md)
-* [Common questions about ad campaigns](common-questions.md)
+* [광고 캠페인 관리](managing-your-ad-campaign.md)
+* [하우스 광고 정보](about-house-ads.md)
+* [앱 설치 광고 보고서](app-install-ads-reports.md)
+* [광고 캠페인에 대한 일반적인 질문](common-questions.md)
  
 
  

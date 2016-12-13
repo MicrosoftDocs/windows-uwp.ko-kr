@@ -1,72 +1,72 @@
 ---
 author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
-title: Access the SD card
-description: You can store and access non-essential data on an optional microSD card, especially on low-cost mobile devices that have limited internal storage.
+title: "SD 카드에 액세스"
+description: "특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
 ms.openlocfilehash: a13f351af3cba8d3d9e645a6f6040dff6e81e1ff
 
 ---
-# <a name="access-the-sd-card"></a>Access the SD card
+# <a name="access-the-sd-card"></a>SD 카드에 액세스
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-You can store and access non-essential data on an optional microSD card, especially on low-cost mobile devices that have limited internal storage.
+특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다.
 
-In most cases, you have to specify the **removableStorage** capability in the app manifest file before your app can store and access files on the SD card. Typically you also have to register to handle the type of files that your app stores and accesses.
+앱에서 SD 카드에 파일을 저장하고 액세스하려면 먼저 앱 매니페스트 파일에서 **removableStorage** 접근 권한 값을 지정해야 합니다. 일반적으로 앱이 저장하고 액세스하는 파일의 형식을 처리하려면 등록해야 합니다.
 
-You can store and access files on the optional SD card by using the following methods:
+다음 방법을 사용하여 선택 사항인 SD 카드에 파일을 저장하고 액세스할 수 있습니다.
 
-- File pickers.
+- 파일 선택기
 
-- The [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) APIs.
+- [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API
 
-## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>What you can and can't access on the SD card
+## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>SD 카드에서 액세스할 수 있는 항목 및 액세스할 수 없는 항목
 
-### <a name="what-you-can-access"></a>What you can access
+### <a name="what-you-can-access"></a>액세스할 수 있는 항목
 
-- Your app can only read and write files of file types that the app has registered to handle in the app manifest file.
+- 앱은 앱 매니페스트 파일에서 앱이 처리하는 것으로 등록되어 있는 파일 형식의 파일만 읽고 쓸 수 있습니다.
 
-- Your app can also create and manage folders.
+- 앱은 폴더를 만들고 관리할 수도 있습니다.
 
-### <a name="what-you-cant-access"></a>What you can't access
+### <a name="what-you-cant-access"></a>액세스할 수 없는 항목
 
-- Your app can't see or access system folders and the files that they contain.
+- 앱은 시스템 폴더 및 이 폴더에 있는 파일을 표시하거나 액세스할 수 없습니다.
 
-- Your app can't see files that are marked with the Hidden attribute. The Hidden attribute is typically used to reduce the risk of deleting data accidentally.
+- 앱은 Hidden 특성으로 표시된 파일을 볼 수 없습니다. Hidden 특성은 일반적으로 데이터를 실수로 삭제하는 위험을 줄이는 데 사용됩니다.
 
-- Your app can't see or access the Documents library by using [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152). However you can access the Documents library on the SD card by traversing the file system.
+- 앱은 [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152)를 사용하여 문서 라이브러리를 보거나 액세스할 수 없습니다. 그러나 파일 시스템을 트래버스하여 SD 카드의 문서 라이브러리에 액세스할 수 있습니다.
 
-## <a name="security-and-privacy-considerations"></a>Security and privacy considerations
+## <a name="security-and-privacy-considerations"></a>보안 및 개인 정보 설정 고려 사항
 
-When an app saves files in a global location on the SD card, those files are not encrypted so they are typically accessible to other apps.
+앱이 SD 카드의 전역 위치에 파일을 저장하면 해당 파일은 암호화되지 않으므로 일반적으로 다른 앱에서 파일에 액세스할 수 있습니다.
 
-- While the SD card is in the device, your files are accessible to other apps that have registered to handle the same file type.
+- SD 카드가 장치에 있는 동안에는 동일한 파일 형식을 처리하도록 등록되어 있는 다른 앱에서 해당 파일에 액세스할 수 있습니다.
 
-- When the SD card is removed from the device and opened from a PC, your files are visible in File Explorer and accessible to other apps.
+- SD 카드를 장치에서 빼고 PC에서 열면 파일을 파일 탐색기에서 볼 수 있으며 다른 앱에서 액세스할 수 있습니다.
 
-When an app installed on the SD card saves files in its [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621), however, those files are encrypted and are not accessible to other apps.
+SD 카드에 설치된 앱이 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)에 파일을 저장하면 해당 파일은 암호화되고 다른 앱에서 파일에 액세스할 수 없습니다.
 
-## <a name="requirements-for-accessing-files-on-the-sd-card"></a>Requirements for accessing files on the SD card
+## <a name="requirements-for-accessing-files-on-the-sd-card"></a>SD 카드에 있는 파일에 액세스하기 위한 요구 사항
 
-To access files on the SD card, typically you have to specify the following things.
+SD 카드에 있는 파일에 액세스하려면 일반적으로 다음 항목을 지정해야 합니다.
 
-1.  You have to specify the **removableStorage** capability in the app manifest file.
-2.  You also have to register to handle the file extensions associated with the type of media that you want to access.
+1.  앱 매니페스트 파일에서 **removableStorage** 기능을 지정해야 합니다.
+2.  액세스할 미디어 형식과 관련된 파일 확장명을 처리하려면 등록해야 합니다.
 
-Use the preceding method also to access media files on the SD card without referencing a known folder like **KnownFolders.MusicLibrary**, or to access media files that are stored outside of the media library folders.
+**KnownFolders.MusicLibrary**과 같이 알려진 폴더를 참조하지 않고도 SD 카드에 있는 미디어 파일에 액세스하거나 미디어 라이브러리 폴더 외부에 저장된 미디어 파일에 액세스하려면 이전 메서드를 사용합니다.
 
-To access media files stored in the media libraries—Music, Photos, or Videos—by using known folders, you only have to specify the associated capability in the app manifest file—**musicLibrary**, **picturesLibrary**, or **videoLibrary**. You do not have to specify the **removableStorage** capability. For more info, see [Files and folders in the Music, Pictures, and Videos libraries](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md).
+알려진 폴더를 사용하여 미디어 라이브러리에 저장된 미디어 파일(음악, 사진 또는 동영상)에 액세스하려면 앱 매니페스트 파일에 관련 기능(**musicLibrary**, **picturesLibrary** 또는 **videoLibrary**)을 지정하기만 하면 됩니다. **removableStorage** 접근 권한 값은 지정하지 않아도 됩니다. 자세한 내용은 [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)를 참조하세요.
 
-## <a name="accessing-files-on-the-sd-card"></a>Accessing files on the SD card
+## <a name="accessing-files-on-the-sd-card"></a>SD 카드에 있는 파일에 액세스
 
-### <a name="getting-a-reference-to-the-sd-card"></a>Getting a reference to the SD card
+### <a name="getting-a-reference-to-the-sd-card"></a>SD 카드에 대한 참조 가져오기
 
-The [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) folder is the logical root [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) for the set of removable devices currently connected to the device. If an SD card is present, the first (and only) **StorageFolder** underneath the **KnownFolders.RemovableDevices** folder represents the SD card.
+[**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) 폴더는 현재 장치에 연결되어 있는 이동식 장치에 대한 논리적 루트 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)입니다. SD 카드가 있는 경우 **KnownFolders.RemovableDevices** 폴더 아래에 있는 첫 번째이자 유일한 **StorageFolder**가 SD 카드를 나타냅니다.
 
-Use code like the following to determine whether an SD card is present and to get a reference to it as a [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230).
+SD 카드가 있는지 여부를 확인하고 이 카드에 대한 참조를 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)로 가져오려면 다음과 같이 코드를 사용합니다.
 
 ```csharp
 using Windows.Storage;
@@ -89,27 +89,27 @@ using Windows.Storage;
             }
 ```
 
-### <a name="querying-the-contents-of-the-sd-card"></a>Querying the contents of the SD card
+### <a name="querying-the-contents-of-the-sd-card"></a>SD 카드의 콘텐츠 쿼리
 
-The SD card can contain many folders and files that aren't recognized as known folders and can't be queried by using a location from [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151). To find files, your app has to enumerate the contents of the card by traversing the file system recursively. Use [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) and [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281) to get the contents of the SD card efficiently.
+SD 카드는 알려진 폴더로 인식되지 않는 파일과 많은 폴더를 포함할 수 있으며 [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)에서 위치를 사용하여 쿼리할 수 없습니다. 파일을 찾으려면 앱이 파일 시스템을 재귀적으로 트래버스하여 카드의 콘텐츠를 열거해야 합니다. SD 카드의 콘텐츠를 효율적으로 가져오려면 [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) 및 [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281)를 사용합니다.
 
-We recommend that you use a background thread to traverse the SD card. An SD card may contain many gigabytes of data.
+백그라운드 스레드를 사용하여 SD 카드를 트래버스하는 것이 좋습니다. SD 카드는 수기가바이트의 데이터를 포함할 수 있습니다.
 
-Your app can also require the user to choose specific folders by using the folder picker.
+사용자에게 폴더 선택기를 사용하여 특정 폴더를 선택하도록 요청하는 메시지가 앱에서 표시될 수 있습니다.
 
-When you access the file system on the SD card with a path that you derived from [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158), the following methods behave in the following way.
+[**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158)에서 파생된 경로를 사용하여 SD 카드에 있는 파일 시스템에 액세스하는 경우, 다음 메서드는 다음과 같은 방법으로 동작합니다.
 
--   The [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) method returns the union of the file extensions that you have registered to handle and the file extensions associated with any media library capabilities that you have specified.
+-   [**GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227273) 메서드는 사용자가 처리하기 위해 등록한 파일 확장명과 사용자가 지정한 모든 미디어 라이브러리 접근 권한 값과 관련된 파일 확장명의 합집합을 반환합니다.
 
--   The [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) method fails if you have not registered to handle the file extension of the file you are trying to access.
+-   액세스하려는 파일의 파일 확장명을 처리하도록 등록하지 않은 경우 [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) 메서드가 실패합니다.
 
-## <a name="identifying-the-individual-sd-card"></a>Identifying the individual SD card
+## <a name="identifying-the-individual-sd-card"></a>개별 SD 카드 식별
 
-When the SD card is first mounted, the operating system generates a unique identifier for the card. It stores this ID in a file in the WPSystem folder at the root of the card. An app can use this ID to determine whether it recognizes the card. If an app recognizes the card, the app may be able to postpone certain operations that were completed previously. However the contents of the card may have changed since the card was last accessed by the app.
+SD 카드를 처음 끼우면 운영 체제에서 카드의 고유 식별자를 생성합니다. 이 ID는 카드 루트의 WPSystem 폴더에 있는 파일에 저장됩니다. 앱은 이 ID를 사용하여 카드 식별 여부를 결정합니다. 앱이 카드를 인식하는 경우 앱은 이전에 완료된 특정 작업을 지연할 수 있습니다. 하지만 앱에서 마지막으로 카드에 액세스한 이후로 카드의 콘텐츠가 변경되었을 수 있습니다.
 
-For example, consider an app that indexes ebooks. If the app has previously scanned the whole SD card for ebook files and created an index of the ebooks, it can display the list immediately if the card is reinserted and the app recognizes the card. Separately it can start a low-priority background thread to search for new ebooks. It can also handle a failure to find an ebook that existed previously when the user tries to access the deleted ebook.
+예를 들어 전자책을 인덱싱하는 앱을 생각해 보겠습니다. 앱이 이전에 전체 SD 카드에서 전자책 파일을 검사하고 전자책의 색인을 만든 경우에는 카드를 다시 끼우고 앱이 카드를 인식하면 즉시 목록을 표시할 수 있습니다. 별도로, 우선 순위가 낮은 백그라운드 스레드를 시작하여 새로운 전자책을 검색할 수 있습니다. 또한 오류를 처리함으로써, 사용자가 삭제된 전자책에 액세스하려고 하면 이전에 있던 전자책을 찾을 수도 있습니다.
 
-The name of the property that contains this ID is **WindowsPhone.ExternalStorageId**.
+이 ID가 포함된 속성의 이름은 **WindowsPhone.ExternalStorageId**입니다.
 
 ```csharp
 using Windows.Storage;

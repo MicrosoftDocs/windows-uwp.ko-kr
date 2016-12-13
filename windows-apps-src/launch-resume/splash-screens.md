@@ -1,33 +1,33 @@
 ---
 author: PatrickFarley
-title: Splash screens
-description: This section describes how to set and configure your app&quot;s splash screen.
+title: "시작 화면"
+description: "이 섹션에서는 앱의 시작 화면을 설정 및 구성하는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 023e37bb6f9b8d8d780bb0a536cb469c87a31ed4
 ms.openlocfilehash: bb0f3ff68b7dc15623e4f337e589989354e08b65
 
 ---
 
-# <a name="splash-screens"></a>Splash screens
+# <a name="splash-screens"></a>시작 화면
 
-All UWP apps must have a splash screen, which is a composite of an image and a background color, both of which can be customized.
+모든 UWP 앱에는 사용자 지정할 수 있는 이미지와 배경색이 조합된 시작 화면이 있어야 합니다.
 
-Your splash screen is displayed immediately when the user launches your app. This provides immediate feedback to users while app resources are initialized. As soon as your app is ready for interaction, the splash screen is dismissed.
+사용자가 앱을 실행하는 즉시 시작 화면이 표시됩니다. 이 화면에서는 앱 리소스가 초기화되는 동안 즉각적인 피드백을 제공합니다. 앱을 조작할 수 있게 되면 시작 화면이 해제됩니다.
 
-A well-designed splash screen can make your app more inviting. Here's a simple, understated splash screen:
+앱의 시작 화면을 잘 디자인할수록 더 많은 사용자가 방문하게 됩니다. 다음은 간단한 절제된 시작 화면입니다.
 
-![a 75% scaled screen capture of the splash screen from the splash screen sample.](images/regularsplashscreen.png)
+![시작 화면 샘플의 시작 화면에 대한 75% 배율 화면 캡처입니다.](images/regularsplashscreen.png)
 
-This splash screen is created by combining a green background color with a transparent-background PNG image.
+이 시작 화면은 녹색 배경색과 투명 배경 PNG 이미지를 결합하여 만든 것입니다.
 
-A simple image with a background color looks good regardless of the device your app is running on. Only the size of the background changes to compensate for a variety of screen sizes. Your image always remains intact.
+배경색이 있는 간단한 이미지는 앱을 실행 중인 디바이스에 관계없이 제대로 표시됩니다. 다양한 화면 크기에 맞게 배경의 크기만 변경됩니다. 이미지는 항상 원래대로 유지됩니다.
 
-Additionally, you can use the [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) class to customize your app's launch experience. You can position an extended splash screen, which you create, to give your app more time to complete additional tasks like preparing app UI or completing networking operations. You can also use the **SplashScreen** class to notify you when the splash screen is dismissed, so that you can begin entrance animations.
+또한 [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763) 클래스를 사용하여 앱의 시작 환경을 사용자 지정할 수 있습니다. 사용자가 만든 연장된 시작 화면을 배치하여 앱에 앱 UI 준비나 네트워킹 작업 완료와 같은 추가 작업을 완료할 수 있는 시간을 제공할 수 있습니다. **SplashScreen** 클래스를 사용하여 시작 화면이 해제될 때 사용자에게 알려 개시 애니메이션을 시작하도록 할 수도 있습니다.
 
-| Topic | Description |
+| 항목 | 설명 |
 |-------|-------------|
-| [Add a splash screen](add-a-splash-screen.md) | Set your app's splash screen image and background color. |
-| [Display a splash screen for more time](create-a-customized-splash-screen.md) | Display a splash screen for more time by creating an extended splash screen for your app. This extended screen imitates the splash screen shown when your app is launched, and can be customized. |
+| [시작 화면 추가](add-a-splash-screen.md) | 앱의 시작 화면 이미지와 배경색을 설정합니다. |
+| [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하며 사용자 지정할 수 있습니다. |
 
 
 <!--HONumber=Dec16_HO1-->

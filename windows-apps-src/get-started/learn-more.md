@@ -1,9 +1,9 @@
 ---
 author: GrantMeStrength
 ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
-title: What&quot;s next?
-description: Now that you&quot;ve created your first app, check out the rest of the Dev Center. Here&quot;s an introduction to the different sections it contains.&quot;
-keywords: Dev Center, Getting started
+title: "다음 작업"
+description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&quot;"
+keywords: "개발자 센터, 시작"
 translationtype: Human Translation
 ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
 ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
@@ -12,61 +12,61 @@ ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# <a name="whats-next"></a>What's next?
+# <a name="whats-next"></a>다음 작업
 
-So you want to write an app and publish it to the Windows Store: where do you start? If you're completely new to the UWP platform, try some of the <a href="https://channel9.msdn.com/">Channel 9</a> videos and <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> courses. If you are already familiar with XAML and C#, you can start reading through the topics below, or go straight to [downloading some samples](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
+앱을 작성하고 Windows 스토어에 게시하려면 어디서부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
 
-There are many tools and frameworks available to help you write apps, and many support cross-platform development. For example, if you want to write 2D games, you might want to look at <a href="http://www.monogame.net">Monogame</a>. For 3D games, there's <a href="http://www.unity3d.com">Unity</a>, and don't forget <a href="http://www.xamarin.com">Xamarin</a> if your focus is mobile devices.
+앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a>을 살펴보는 것이 좋습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 디바이스에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
 
-If you are getting started, our recommendation is that you look through the UWP topics to get a feel for the platform, and then investigate creating your user interface by using, and then customizing, XAML controls. You'll use XAML to layout your app ([here's a tutorial](../layout/grid-tutorial.md) that will walk you through it), but XAML's main strength is the use of *data binding* which couples the controls to the information your app wants to display: if you are new to the Windows platform, this will be an important concept to understand. 
+시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱의 레이아웃을 지정하지만(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조), XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
 <table class="wdg-noborder">
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
-    <td><h2>UWP and the UWP app Lifecycle</h2><p>How does an app start, what happens when you start another one? Here’s the story.</p> <ul>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Guide to Universal Windows Platform (UWP) apps</a></li>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">UWP app lifecycle</a></li>
-    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">What's cool in Windows 10</a></ul></td>  
+    <td><h2>UWP 및 UWP 앱 수명 주기</h2><p>앱은 어떻게 시작하고 다른 앱을 시작하면 어떻게 될까요? 다음을 참조하세요.</p> <ul>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP(유니버설 Windows 플랫폼) 앱 지침</a></li>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">UWP 앱 수명 주기</a></li>
+    <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Windows 10의 새로운 기능</a></ul></td>  
 </tr>
 <tr>
  <td width=60><img src="images/icon7.png" width=64></td>
-    <td><h2>UX and UI</h2><p>What controls do you have at your disposal, and how can they be used? These topics explain how controls and code work together, and how you can customize them to suit the look of your app.</p> <ul>
-    <li><a href="https://developer.microsoft.com/windows/design">Design and UI</a></li>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml">Define page layouts with XAML</a></li>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function">Controls by function</a></li>
-      <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-and-events-intro">Intro to controls and patterns</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/styling-controls">Styling controls</a></li>
-      <li><a href="https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">Screen sizes and break points for responsive design</a></li>
-      <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">Use the UWP Community Toolkit for a selection of prebuilt controls and patterns</a></li>
+    <td><h2>UX 및 UI</h2><p>사용할 수 있는 컨트롤은 무엇이며 어떻게 사용할 수 있을까요? 다음 항목에서는 컨트롤과 코드가 함께 작동하는 방법과 앱의 모양에 맞게 사용자 지정할 수 있는 방법을 설명합니다.</p> <ul>
+    <li><a href="https://developer.microsoft.com/windows/design">디자인 및 UI</a></li>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml">XAML을 사용하여 페이지 레이아웃 정의</a></li>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function">기능별 컨트롤</a></li>
+      <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/controls-and-events-intro">컨트롤 및 패턴 소개</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/styling-controls">컨트롤 스타일 지정</a></li>
+      <li><a href="https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">반응형 디자인에 대한 화면 크기 및 중단점</a></li>
+      <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">미리 만들어진 컨트롤 및 패턴 선택을 위해 UWP 커뮤니티 도구 키트 사용</a></li>
     </ul></td>  
 </tr>
 <tr>
  <td width=60><img src="images/icon6.png" width=64></td>
-    <td><h2>Data and Services</h2><p>Learn about data binding, which lets your code automatically populate lists and grids. Discover how to link to external resources to get data into your apps.</p> <ul>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/data-binding/index">Data binding</a></li>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/listview-and-gridview">ListViews, GridViews and data binding</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/data-access/index">Data access</a></li>
+    <td><h2>데이터 및 서비스</h2><p>코드가 목록과 그리드를 자동으로 채우게 하는 데이터 바인딩에 대해 알아봅니다. 외부 리소스에 연결하여 앱에 데이터를 가져오는 방법을 알아봅니다.</p> <ul>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/data-binding/index">데이터 바인딩</a></li>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/controls-and-patterns/listview-and-gridview">Listview, Gridview 및 데이터 바인딩</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/data-access/index">데이터 액세스</a></li>
     </ul></td>  
 </tr>
 <tr>
  <td width=60><img src="images/icon4.png" width=64></td>
-    <td><h2>Publishing</h2><p>Share your work with the world, make money. We’ll walk you through the process of getting your app onto the store.</p> <ul>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/publish/index">Publish Windows apps</a></li>
-    <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">Packaging apps</a></li>
+    <td><h2>Publishing</h2><p>전 세계와 작업을 공유하여 수익을 창출합니다. 스토어에 앱을 게시하는 프로세스를 안내합니다.</p> <ul>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/publish/index">Windows 앱 게시</a></li>
+    <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">앱 패키징</a></li>
     </ul></td>  
 </tr>
 <tr>
  <td width=60><img src="images/icon2.png" width=64></td>
-    <td><h2>Other resources</h2><p>Samples, tutorials, videos, other tools and SDKs. Take it to the next level.</p>
+    <td><h2>기타 리소스</h2><p>샘플, 자습서, 비디오, 다른 도구 및 SDK입니다. 이를 통해 기술 수준을 한 단계 높일 수 있습니다.</p>
     <ul>
-    <li><a href="https://developer.microsoft.com/windows/develop">How-to articles</a></li>
-    <li><a href="https://developer.microsoft.com/windows/samples">Code samples</a></li>
-    <li><a href="https://msdn.microsoft.com/library/618ayhy6(VS.110).aspx">C# reference</a></li>
-    <li><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">API Reference</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/xbox-apps/index">Writing apps for Xbox One</a></li>
-     <li><a href="https://www.microsoft.com/microsoft-hololens/developers">Developing for HoloLens</a></li>
-     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Porting apps to Windows 10</a></li>
-      <li><a href="https://msdn.microsoft.com/windows/uwp/enterprise/index">Writing apps for the Enterprise</a></li>
-      <li><a href="https://blogs.windows.com/buildingapps/2016/08/17/introducing-the-uwp-community-toolkit/#D1IfVxCZMQGZqlc7.97">The UWP Community Toolkit</a></li>
+    <li><a href="https://developer.microsoft.com/windows/develop">방법 문서</a></li>
+    <li><a href="https://developer.microsoft.com/windows/samples">코드 샘플</a></li>
+    <li><a href="https://msdn.microsoft.com/library/618ayhy6(VS.110).aspx">C# 참고자료</a></li>
+    <li><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">API 참조</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/xbox-apps/index">Xbox One용 앱 작성</a></li>
+     <li><a href="https://www.microsoft.com/microsoft-hololens/developers">HoloLens 대상 개발</a></li>
+     <li><a href="https://msdn.microsoft.com/windows/uwp/porting/index">Windows 10으로 앱 포팅</a></li>
+      <li><a href="https://msdn.microsoft.com/windows/uwp/enterprise/index">엔터프라이즈용 앱 작성</a></li>
+      <li><a href="https://blogs.windows.com/buildingapps/2016/08/17/introducing-the-uwp-community-toolkit/#D1IfVxCZMQGZqlc7.97">UWP 커뮤니티 도구 키트</a></li>
     </ul>
     </td>  
 </tr>
@@ -74,37 +74,37 @@ If you are getting started, our recommendation is that you look through the UWP 
 
 <hr>
 
-## <a name="windows-developer-blog"></a>Windows Developer Blog
+## <a name="windows-developer-blog"></a>Windows 개발자 블로그
 
-The [Windows Developer Blog](https://blogs.windows.com/buildingapps) includes regular postings on the latest in coding techniques, project ideas, and tools. Here are some you might find useful as you explore Windows development.
+[Windows 개발자 블로그](https://blogs.windows.com/buildingapps)에는 최신 코딩 기술, 프로젝트 아이디어 및 도구에 대한 정기 게시물이 포함되어 있습니다. Windows 개발을 진행할 때 유용할 수 있는 몇 가지는 다음과 같습니다.
 
-* [Animations with the Visual layer](https://blogs.windows.com/buildingapps/2016/09/16/animations-with-the-visual-layer/#JM2XkQcL7MRSXe3X.97)
-* [Interop between XAML and the Visual layer](https://blogs.windows.com/buildingapps/2016/08/26/interop-between-xaml-and-the-visual-layer/#ue6O7MWpqrVFE81K.97)
-* [Creating beautiful effects for UWP](https://blogs.windows.com/buildingapps/2016/09/12/creating-beautiful-effects-for-uwp/#85jsfw6PFXX825rR.97)
-* [Beautiful apps made possible and easy with Windows.UI](https://blogs.windows.com/buildingapps/2016/08/23/beautiful-apps-made-possible-and-easy-with-windows-ui/#GBREkRSBwsRvi2uL.97)
-* [Polishing your app with animation and audio cues](https://blogs.windows.com/buildingapps/2016/08/09/polishing-your-app-with-animations-and-audio-cues/#hziKxt2xPwUE1oqU.97) 
-* [Adding color to your design](https://blogs.windows.com/buildingapps/2016/07/28/adding-color-to-your-design/#HcPqMlfPsuKETOIo.97)
-
-<hr>
-
-## <a name="finding-help-in-the-dev-center"></a>Finding help in the Dev Center
-
-The [Microsoft Dev Center](http://devcenter.microsoft.com) contains a mountain of documentation for many different tools, frameworks and platforms. When you are searching for topics and samples, you should make sure you are reading UWP specific content. How can you be sure you're reading the right content?
-Conceptual content, that is, non-API reference content, will have UWP in the topic's URL. API content will have a path that includes Windows Runtime APIs. 
-
-![An example UWP conceptual topic](images/devcenter-topic2.png)
-
-![An example UWP reference topic](images/devcenter-topic1.png)
-
-When using a search engine, appending "Windows app development" to your search string will more often than not lead you to UWP content.
-
+* [시각적 계층을 사용하는 애니메이션](https://blogs.windows.com/buildingapps/2016/09/16/animations-with-the-visual-layer/#JM2XkQcL7MRSXe3X.97)
+* [XAML과 시각적 계층 간의 interop](https://blogs.windows.com/buildingapps/2016/08/26/interop-between-xaml-and-the-visual-layer/#ue6O7MWpqrVFE81K.97)
+* [UWP에 대한 멋진 효과 만들기](https://blogs.windows.com/buildingapps/2016/09/12/creating-beautiful-effects-for-uwp/#85jsfw6PFXX825rR.97)
+* [Windows.UI를 사용하여 쉽게 멋진 앱 만들기](https://blogs.windows.com/buildingapps/2016/08/23/beautiful-apps-made-possible-and-easy-with-windows-ui/#GBREkRSBwsRvi2uL.97)
+* [애니메이션 및 오디오 신호를 사용하여 앱 다듬기](https://blogs.windows.com/buildingapps/2016/08/09/polishing-your-app-with-animations-and-audio-cues/#hziKxt2xPwUE1oqU.97) 
+* [디자인에 색 추가](https://blogs.windows.com/buildingapps/2016/07/28/adding-color-to-your-design/#HcPqMlfPsuKETOIo.97)
 
 <hr>
 
+## <a name="finding-help-in-the-dev-center"></a>개발자 센터에서 도움말 검색
 
-## <a name="important-dev-center-topics"></a>Important Dev Center topics
+[Microsoft 개발자 센터](http://devcenter.microsoft.com)에는 다양한 도구, 프레임워크 및 플랫폼에 대한 방대한 문서가 포함되어 있습니다. 항목과 샘플을 검색할 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. 올바른 콘텐츠를 읽고 있는지 어떻게 확인할 수 있나요?
+개념 콘텐츠, 즉 비API 참조 콘텐츠는 항목의 URL에 UWP가 있습니다. API 콘텐츠에는 Windows 런타임 API가 포함된 경로가 있습니다. 
 
-Here is a list of the key sections of content in the DevCenter. 
+![예제 UWP 개념 항목](images/devcenter-topic2.png)
+
+![예제 UWP 참조 항목](images/devcenter-topic1.png)
+
+검색 엔진을 사용할 때 검색 문자열에 "Windows 앱 개발"을 추가하면 대게 UWP 콘텐츠로 안내합니다.
+
+
+<hr>
+
+
+## <a name="important-dev-center-topics"></a>개발자 센터 중요 항목
+
+다음은 개발자 센터의 주요 콘텐츠 섹션 목록입니다. 
 
 
 <table style="width:100%">
@@ -117,46 +117,46 @@ Here is a list of the key sections of content in the DevCenter.
 <tbody>
 
 <tr class="even" style="background-color: #f2f2f2">
-<td align="left"><strong>Design</strong></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=533896">Design guidelines for UWP apps.</a></td>
+<td align="left"><strong>디자인</strong></td>
+<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=533896">UWP 앱에 대한 디자인 지침</a></td>
 </tr>
 
 
 <tr class="odd" style="background-color: #ffffff">
-<td align="left"><strong>Develop</strong></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=529575">Detailed info and coding examples for the many of the features available to your app.</a></td>
+<td align="left"><strong>개발</strong></td>
+<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=529575">앱에 사용할 수 있는 많은 기능에 대한 자세한 정보와 코딩 예제입니다.</a></td>
 </tr>
 <tr class="even" style="background-color: #f2f2f2">
-<td align="left"><strong>Language reference</strong></td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">The programming languages available for UWP development.</a></td>
+<td align="left"><strong>언어 참조</strong></td>
+<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/bg124285.aspx">UWP 개발에 사용할 수 있는 프로그래밍 언어입니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #ffffff">
-<td align="left"><strong>Games</strong></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534184">Developing games with DirectX.</a></td>
+<td align="left"><strong>게임</strong></td>
+<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534184">DirectX로 게임을 개발합니다.</a></td>
 </tr>
 <tr class="even" style="background-color: #f2f2f2">
-<td align="left"><strong>Internet of Things</strong></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534186">Building your own connected devices.</a></td>
+<td align="left"><strong>IoT(사물 인터넷)</strong></td>
+<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534186">연결된 자체 디바이스를 빌드합니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #ffffff">
-<td align="left"><strong>Porting</strong></td>
-<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/Mt238321">Leverage your Android and iOS skills to quickly make UWP apps.</a></td>
+<td align="left"><strong>포팅</strong></td>
+<td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/Mt238321">Android 및 iOS 기술을 활용하여 UWP 앱을 신속하게 만듭니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>Windows Bridges</strong></td>
-<td align="left"><a href="https://developer.microsoft.com/windows/bridges">Tools for updating older apps and iOS apps to UWP.</a></td>
+<td align="left"><strong>Windows 브리지</strong></td>
+<td align="left"><a href="https://developer.microsoft.com/windows/bridges">이전 앱 및 iOS 앱을 UWP로 업데이트하기 위한 도구입니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #ffffff">
 <td align="left"><strong>Xamarin</strong></td>
-<td align="left"><a href="https://www.xamarin.com">Use C# to write apps for iOS, Android and Windows 10.</a></td>
+<td align="left"><a href="https://www.xamarin.com">C#을 사용하여 iOS, Android 및 Windows 10용 앱을 작성합니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #ffffff">
-<td align="left"><strong>Task snippets</strong></td>
-<td align="left"><a href="https://github.com/Microsoft/Windows-task-snippets">Ready-to-use code that accomplish small but useful tasks.</a></td>
+<td align="left"><strong>작업 코드 조각</strong></td>
+<td align="left"><a href="https://github.com/Microsoft/Windows-task-snippets">작지만 유용한 작업을 수행하는 즉시 사용할 수 있는 코드입니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>How-to topics</strong></td>
-<td align="left"><a href="https://developer.microsoft.com/windows/develop">Sample code covering specific UWP features.</a></td>
+<td align="left"><strong>방법 항목</strong></td>
+<td align="left"><a href="https://developer.microsoft.com/windows/develop">특정 UWP 기능을 다루는 샘플 코드입니다.</a></td>
 </tr>
 </table>
 

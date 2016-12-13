@@ -1,33 +1,33 @@
 ---
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
-title: Submit a work item to the thread pool
-description: Learn how to do work in a separate thread by submitting a work item to the thread pool.
+title: "스레드 풀에 작업 항목 제출"
+description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 41f0847dd7aa52465186cb8415cbe41342ff93f0
 ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 
 ---
-# <a name="submit-a-work-item-to-the-thread-pool"></a>Submit a work item to the thread pool
+# <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** Important APIs **
+** 중요 API **
 
 -   [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)
 -   [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)
 
-Learn how to do work in a separate thread by submitting a work item to the thread pool. Use this to maintain a responsive UI while still completing work that takes a noticeable amount of time, and use it to complete multiple tasks in parallel.
+스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요. 스레드 풀을 사용하면 오랜 시간이 걸리는 작업을 완료하는 동시에 응답하는 UI를 유지하고 여러 작업을 병렬로 완료할 수 있습니다.
 
-## <a name="create-and-submit-the-work-item"></a>Create and submit the work item
+## <a name="create-and-submit-the-work-item"></a>작업 항목 만들기 및 제출
 
-Create a work item by calling [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593). Supply a delegate to do the work (you can use a lambda, or a delegate function). Note that **RunAsync** returns an [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) object; store this object for use in the next step.
+[**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 호출하여 작업 항목을 만듭니다. 작업을 수행할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). **RunAsync**는 [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580) 개체를 반환합니다. 다음 단계에서 사용하기 위해 이 개체를 저장합니다.
 
-Three versions of [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) are available so that you can optionally specify the priority of the work item, and control whether it runs concurrently with other work items.
+선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
-**Note**  Use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI thread and show progress from the work item.
+**참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 작업 항목의 진행률을 표시합니다.
 
-The following example creates a work item and supplies a lambda to do the work:
+다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` cpp
@@ -190,15 +190,15 @@ The following example creates a work item and supplies a lambda to do the work:
 > m_workItem = asyncAction;
 > ```
 
-Following the call to [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593), the work item is queued by the thread pool and runs when a thread becomes available. Thread pool work items run asynchronously and they can run in any order, so make sure your work items function independently.
+[**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) 호출 뒤에 이 작업 항목은 스레드 풀에 의해 대기되고 스레드를 사용할 수 있게 되면 실행됩니다. 스레드 풀 작업 항목은 비동기적으로 실행되며 순서에 관계없이 실행될 수 있으므로 작업 항목이 독립적으로 작동하는지 확인합니다.
 
-Note that the work item checks the [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) property, and exits if the work item is cancelled.
+작업 항목은 [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593) 속성을 검사하고, 작업 항목이 취소된 경우 종료됩니다.
 
-## <a name="handle-work-item-completion"></a>Handle work item completion
+## <a name="handle-work-item-completion"></a>작업 항목 완료 처리
 
-Provide a completion handler by setting the [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) property of the work item. Supply a delegate (you can use a lambda or a delegate function) to handle work item completion. For example, use [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) to access the UI thread and show the result.
+작업 항목의 [**IAsyncAction.Completed**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.completed.aspx) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
 
-The following example updates the UI with the result of the work item submitted in step 1:
+다음 예제에서는 1단계에서 제출된 작업 항목의 결과로 UI를 업데이트합니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` cpp
@@ -246,17 +246,17 @@ The following example updates the UI with the result of the work item submitted 
 > });
 > ```
 
-Note that the completion handler checks whether the work item was cancelled before dispatching a UI update.
+완료 처리기는 UI 업데이트를 디스패치하기 전에 작업 항목이 취소되었는지 여부를 확인합니다.
 
-## <a name="summary-and-next-steps"></a>Summary and next steps
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-You can learn more by downloading the code from this quickstart in the [Creating a ThreadPool work item sample](http://go.microsoft.com/fwlink/p/?LinkID=328569) written for Windows 8.1, and re-using the source code in a win\_unap Windows 10 app.
+Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http://go.microsoft.com/fwlink/p/?LinkID=328569)의 이 빠른 시작에서 코드를 다운로드하고 win\_unap Windows 10 앱에서 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Submit a work item to the thread pool](submit-a-work-item-to-the-thread-pool.md)
-* [Best practices for using the thread pool](best-practices-for-using-the-thread-pool.md)
-* [Use a timer to submit a work item](use-a-timer-to-submit-a-work-item.md)
+* [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
+* [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
+* [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
  
 
 

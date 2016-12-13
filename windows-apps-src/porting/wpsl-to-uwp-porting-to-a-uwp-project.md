@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: You begin the porting process by creating a new Windows 10 project in Visual Studio and copying your files into it.
-title: Porting a Windows Phone Silverlight project to a UWP project
+description: "Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프로젝트로 복사하여 포팅 프로세스를 시작합니다."
+title: "Windows Phone Silverlight 프로젝트를 UWP 프로젝트로 포팅"
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 translationtype: Human Translation
 ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
@@ -9,31 +9,31 @@ ms.openlocfilehash: 273017f4607c25ee56d7400debe59e94acb36d4f
 
 ---
 
-# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Porting a Windows Phone Silverlight project to a UWP project
+# <a name="porting-a-windows-phone-silverlight-project-to-a-uwp-project"></a>Windows Phone Silverlight 프로젝트를 UWP 프로젝트로 포팅
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-The previous topic was [Namespace and class mappings](wpsl-to-uwp-namespace-and-class-mappings.md).
+이전 항목은 [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)이었습니다.
 
-You begin the porting process by creating a new Windows 10 project in Visual Studio and copying your files into it.
+Visual Studio에서 새 Windows 10 프로젝트를 만든 다음 파일을 프로젝트로 복사하여 포팅 프로세스를 시작합니다.
 
-## <a name="create-the-project-and-copy-files-to-it"></a>Create the project and copy files to it
+## <a name="create-the-project-and-copy-files-to-it"></a>프로젝트를 만들고 파일을 프로젝트에 복사
 
-1.  Launch Microsoft Visual Studio 2015 and create a new Blank Application (Windows Universal) project. For more info, see [Jumpstart your Windows Store app using templates (C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Your new project builds an app package (an appx file) that will run on all device families.
-2.  In your Windows Phone Silverlight app project, identify all the source code files and visual asset files that you want to reuse. Using File Explorer, copy data models, view models, visual assets, Resource Dictionaries, folder structure, and anything else that you wish to re-use, to your new project. Copy or create sub-folders on disk as necessary.
-3.  Copy views (for example, MainPage.xaml and MainPage.xaml.cs) into the new project node, too. Again, create new sub-folders as necessary, and remove the existing views from the project. But, before you over-write or remove a view that Visual Studio generated, keep a copy because it may be useful to refer to it later. The first phase of porting a Windows Phone Silverlight app focuses on getting it to look good and work well on one device family. Later, you'll turn your attention to making sure the views adapt themselves well to all form factors, and optionally to adding any adaptive code to get the most from a particular device family.
-4.  In **Solution Explorer**, make sure **Show All Files** is toggled on. Select the files that you copied, right-click them, and click **Include In Project**. This will automatically include their containing folders. You can then toggle **Show All Files** off if you like. An alternative workflow, if you prefer, is to use the **Add Existing Item** command, having created any necessary sub-folders in the Visual Studio **Solution Explorer**. Double-check that your visual assets have **Build Action** set to **Content** and **Copy to Output Directory** set to **Do not copy**.
-5.  The differences in namespace and class names will generate lots of build errors at this stage. For example, if you open the views that Visual Studio generated, you'll see that they are of type [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), and not **PhoneApplicationPage**. There are lots of XAML markup and imperative code differences that the following topics in this porting guide cover in detail. But, you'll make fast progress just following these general steps: change "clr-namespace" to "using" in your namespace prefix declarations in XAML markup; use the [Namespace and class mappings](wpsl-to-uwp-namespace-and-class-mappings.md) topic and Visual Studio's **Find and Replace** command to make bulk changes to your source code (for example, replace "System.Windows" with "Windows.UI.Xaml"); and in the imperative code editor in Visual Studio use the **Resolve** and **Organize Usings** commands on the context menu for more targeted changes.
+1.  Microsoft Visual Studio 2015를 시작하고 비어 있는 새 응용 프로그램(Windows 유니버설) 프로젝트를 만듭니다. 자세한 내용은 [템플릿을 사용하여 Windows 스토어 앱 시작(C#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232)을 참조하세요. 새 프로젝트에서는 모든 디바이스 패밀리에서 실행될 앱 패키지(appx 파일)를 빌드합니다.
+2.  Windows Phone Silverlight 앱 프로젝트에서 다시 사용하려는 모든 소스 코드 파일 및 시각적 자산 파일을 식별합니다. 파일 탐색기를 사용하여 다시 사용할 데이터 모델, 보기 모델, 시각적 자산, 리소스 사전, 폴더 구조 등을 새 프로젝트에 복사합니다. 필요한 경우 디스크에서 하위 폴더를 복사하거나 만듭니다.
+3.  또한 보기(예: MainPage.xaml 및 MainPage.xaml.cs)를 새 프로젝트 노드에 복사합니다. 필요한 경우 새 하위 폴더를 만들고 기존 보기를 프로젝트에서 제거합니다. 하지만 Visual Studio에서 생성된 보기를 덮어쓰거나 제거하기 전에 나중에 유용하게 참조할 수 있도록 복사본을 유지하세요. Windows Phone Silverlight 앱을 포팅하는 첫 단계에서는 한 디바이스 패밀리에서 앱이 제대로 표시되고 잘 작동하도록 하는 데 중점을 둡니다. 나중에 보기가 모든 폼 팩터에 제대로 어울리도록 조정하고 선택적으로 적응 코드를 추가하여 특정 디바이스 패밀리를 최대한 활용하도록 하는 데 집중할 수 있습니다.
+4.  **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 파일을 선택하여 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 그러면 포함하는 폴더가 자동으로 포함됩니다. 원하는 경우 **모든 파일 표시**를 해제할 수 있습니다. 원하는 경우 대체 워크플로로 **기존 항목 추가** 명령을 사용하여 Visual Studio **솔루션 탐색기**에서 필요한 하위 폴더를 만듭니다. 시각적 자산에서 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있는지 다시 확인합니다.
+5.  네임스페이스와 클래스 이름의 차이로 인해 이 단계에서 많은 빌드 오류가 발생합니다. 예를 들어 Visual Studio에서 생성된 보기를 열 경우 보기는 **PhoneApplicationPage** 형식이 아니라 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) 형식으로 표시됩니다. 이 포팅 가이드의 다음 항목에서는 XAML 태그와 명령적 코드의 다양한 차이점에 대해 자세히 설명합니다. 하지만 다음 일반 단계에 따라 빠르게 진행하게 됩니다. XAML 태그의 네임스페이스 접두사 선언에서 "clr-namespace"를 "using"으로 변경하고, [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md) 항목과 Visual Studio의 **Find and Replace** 명령을 사용하여 소스 코드를 대량으로 변경하고(예: "System.Windows"를 "Windows.UI.Xaml"로 바꿈), Visual Studio의 명령적 코드 편집기의 상황에 맞는 메뉴에서 **Resolve** 및 **Organize Usings** 명령을 통해 더 많은 대상을 지정하여 변경합니다.
 
-## <a name="extension-sdks"></a>Extension SDKs
+## <a name="extension-sdks"></a>확장 SDK
 
-Most of the Universal Windows Platform (UWP) APIs your ported app will call are implemented in the set of APIs known as the universal device family. But, some are implemented in extension SDKs, and Visual Studio only recognizes APIs that are implemented by your app's target device family or by any extension SDKs that you have referenced.
+포팅된 앱이 호출하는 대부분의 UWP(유니버설 Windows 플랫폼)는 유니버설 디바이스 패밀리라고 하는 API의 집합으로 구현됩니다. 그러나 일부는 확장 SDK에서 구현되며, Visual Studio는 앱의 대상 디바이스 패밀리에서 또는 참조했던 확장 SDK에서 구현한 API만 인식합니다.
 
-If you get compile errors about namespaces or types or members that could not be found, then this is likely to be the cause. Open the API's topic in the API reference documentation and navigate to the Requirements section: that will tell you what the implementing device family is. If that's not your target device family, then to make the API available to your project, you will need a reference to the extension SDK for that device family.
+찾을 수 없는 네임스페이스, 형식 또는 멤버에 대한 컴파일 오류가 발생하는 경우 이 문제가 원인일 가능성이 큽니다. API 참조 설명서에서 API의 항목을 열고 요구 사항 섹션으로 이동합니다. 그러면 구현하는 디바이스 패밀리에 대해 알 수 있습니다. 대상 디바이스 패밀리가 아닌 경우 해당 디바이스 패밀리의 확장 SDK에 대한 참조가 필요한 프로젝트에서 API를 사용할 수 있도록 합니다.
 
-Click **Project** &gt; **Add Reference** &gt; **Windows Universal** &gt; **Extensions** and select the appropriate extension SDK. For example, if the APIs you want to call are available only in the mobile device family, and they were introduced in version 10.0.x.y, then select **Windows Mobile Extensions for the UWP**.
+**프로젝트** &gt; **참조 추가** &gt; **Windows 유니버설** &gt; **확장**을 클릭하고 적절한 확장 SDK를 선택합니다. 예를 들어 호출할 API를 모바일 디바이스 패밀리에서만 사용할 수 있으며 버전 10.0.x.y에서 도입한 경우 **UWP용 Windows 모바일 확장**을 확인합니다.
 
-That will add the following reference to your project file:
+프로젝트 파일에 다음 참조를 추가합니다.
 
 ```XML
 <ItemGroup>
@@ -43,28 +43,28 @@ That will add the following reference to your project file:
 </ItemGroup>
 ```
 
-The name and version number match the folders in the installed location of your SDK. For example, the above information matches this folder name:
+이름 및 버전 번호는 SDK 설치 위치의 폴더와 일치합니다. 예를 들어 위 정보는 다음 폴더 이름과 일치합니다.
 
 `\Program Files (x86)\Windows Kits\10\Extension SDKs\WindowsMobile\10.0.x.y`
 
-Unless your app targets the device family that implements the API, you'll need to use the [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) class to test for the presence of the API before you call it (this is called adaptive code). This condition will then be evaluated wherever your app runs, but it will only evaluate to true on devices where the API is present and therefore available to call. Only use extension SDKs and adaptive code after first checking whether a universal API exists. Some examples are given in the section below.
+앱이 API를 구현한 디바이스 패밀리를 대상으로 하지 않는 한 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 API가 있는지 테스트한 후 호출해야 합니다(적응 코드라고 함). 그러면 앱이 실행되는 모든 장치에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 장치에 대해서만 true로 평가합니다. 먼저 범용 API가 있는지를 확인한 후 확장 SDK 및 적응 코드만 사용합니다. 아래 섹션에 몇 가지 예제가 나와 있습니다.
 
-Also, see [App package manifest](#appxpackage).
+또한 [앱 패키지 매니페스트](#appxpackage)를 참조하세요.
 
-## <a name="maximizing-markup-and-code-reuse"></a>Maximizing markup and code reuse
+## <a name="maximizing-markup-and-code-reuse"></a>태그 및 코드 재사용 최대화
 
-You will find that refactoring a little, and/or adding adaptive code (which is explained below), will allow you to maximize the markup and code that works across all device families. Here are more details.
+약간 리팩터링하거나 적응 코드(아래에서 설명)를 추가하면 모든 디바이스 패밀리에서 작동하는 코드 및 태그를 최대화할 수 있습니다. 자세한 내용은 다음과 같습니다.
 
--   Files that are common to all device families need no special consideration. Those files will be used by the app on all the device families that it runs on. This includes XAML markup files, imperative source code files, and asset files.
--   It is possible for your app to detect the device family that it is running on and navigate to a view that has been designed specifically for that device family. For more details, see [Detecting the platform your app is running on](wpsl-to-uwp-input-and-sensors.md).
--   A similar technique that you may find useful if there is no alternative is to give a markup file or **ResourceDictionary** file (or the folder that contains the file) a special name such that it is automatically loaded at runtime only when your app runs on a particular device family. This technique is illustrated in the [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) case study.
--   To use features that are not available on all device families (for example, printers, scanners, or the camera button) you can write adaptive code. See the third example in [Conditional compilation, and adaptive code](#conditional-compilation) in this topic.
--   If you want to support both Windows Phone Silverlight and Windows 10, then you may be able to share source code files between projects. Here's how: in Visual Studio, right-click the project in **Solution Explorer**, select **Add Existing Item**, select the files to share, and then click **Add As Link**. Store your source code files in a common folder on the file system where the projects that link to them can see them, and don't forget to add them to source control. If you can factor your imperative source code so that most, if not all, of a file will work on both platforms, then you don't need to have two copies of it. You can wrap any platform-specific logic in the file inside conditional compilation directives where possible, or run-time conditions where necessary. See the next section below, and [C# Preprocessor Directives](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
--   For reuse at the binary level, rather than the source code level, there are Portable Class Libraries, which support the subset of .NET APIs that are available in Windows Phone Silverlight as well as the subset for Windows 10 apps (.NET Core). Portable Class Library assemblies are binary compatible with these .NET platforms and more. Use Visual Studio to create a project that targets a Portable Class Library. See [Cross-Platform Development with the Portable Class Library](http://msdn.microsoft.com/library/gg597391.aspx).
+-   모든 디바이스 패밀리에 공통되는 파일의 경우 특별한 고려 사항이 필요하지 않습니다. 앱이 실행되는 모든 디바이스 패밀리에서 이러한 파일을 사용합니다. 여기에는 XAML 태그 파일, 명령적 소스 코드 파일 및 자산 파일이 포함됩니다.
+-   앱은 실행되고 있는 디바이스 패밀리를 검색하고 해당 디바이스 패밀리용으로 특별히 설계된 보기를 탐색할 수 있습니다. 자세한 내용은 [앱이 실행되고 있는 플랫폼 검색](wpsl-to-uwp-input-and-sensors.md)을 참조하세요.
+-   대안이 없는 경우 유용하다고 생각할 수 있는 유사한 기술은 앱이 특정 디바이스 패밀리에서 실행될 경우에만 런타임 시 자동으로 로드되도록 태그 파일 또는 **ResourceDictionary** 파일(또는 파일이 들어 있는 폴더)의 특별한 이름을 지정하는 것입니다. [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) 사례 연구에서 이 기술을 보여 줍니다.
+-   모든 디바이스 패밀리(예: 프린터, 스캐너 또는 카메라 단추)에서 사용할 수 없는 기능을 사용하기 위해 적응 코드를 작성할 수 있습니다. 이 항목의 [조건부 컴파일 및 적응 코드](#conditional-compilation)에서 세 번째 예제를 참조하세요.
+-   Windows Phone Silverlight 및 Windows 10을 모두 지원하려는 경우 프로젝트 간에 소스 코드 파일을 공유할 수 있습니다. 방법: Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **기존 항목 추가**를 선택하고, 공유할 파일을 선택하고, **링크로 추가**를 클릭합니다. 소스 코드 파일에 연결된 프로젝트에서 해당 파일을 인식할 수 있도록 소스 코드 파일을 파일 시스템의 공통 폴더에 저장하고, 소스 컨트롤에 해당 파일을 추가합니다. 전부는 아니지만 대부분의 파일이 두 플랫폼 모두에서 작동하도록 명령적 소스 코드를 팩터링할 수 있는 경우 코드를 두 번 복사할 필요가 없습니다. 파일의 조건부 컴파일 지시문(가능한 경우) 또는 런타임 조건(필요한 경우) 내에 플랫폼별 논리를 래핑할 수 있습니다. 아래에 나오는 다음 섹션과 [C# 전처리기 지시문](http://msdn.microsoft.com/library/ed8yd1ha.aspx)을 참조하세요.
+-   소스 코드 수준이 아닌 이진 수준에서의 재사용을 위한 포팅 가능한 클래스 라이브러리도 있습니다. 이 라이브러리는 Windows Phone Silverlight와 Windows 10 앱(.NET Core)의 하위 집합에서 사용 가능한 .NET API의 하위 집합을 지원합니다. 포팅 가능한 클래스 라이브러리 어셈블리는 이러한 .NET 플랫폼 등과 이진 호환됩니다. Visual Studio를 사용하여 포팅 가능한 클래스 라이브러리를 대상으로 하는 프로젝트를 만듭니다. [포팅 가능한 클래스 라이브러리를 사용한 플랫폼 간 개발](http://msdn.microsoft.com/library/gg597391.aspx)을 참조하세요.
 
-## <a name="conditional-compilation-and-adaptive-code"></a>Conditional compilation, and adaptive code
+## <a name="conditional-compilation-and-adaptive-code"></a>조건부 컴파일 및 적응 코드
 
-If you want to support both Windows Phone Silverlight and Windows 10 in a single code file then you can do that. If you look in your Windows 10 project at the project properties pages, you'll see that the project defines WINDOWS\_UAP as a conditional compilation symbol. In general, you can use the following logic to perform conditional compilation.
+단일 코드 파일에서 Windows Phone Silverlight 및 Windows 10을 모두 지원하려는 경우 다음을 수행할 수 있습니다. 프로젝트 속성 페이지에서 Windows 10 프로젝트를 살펴보는 경우 프로젝트가 WINDOWS\_UAP를 조건부 컴파일 기호로 정의한 것을 알 수 있습니다. 일반적으로 다음 논리를 사용하여 조건부 컴파일을 수행할 수 있습니다.
 
 ```csharp
 #if WINDOWS_UAP
@@ -74,7 +74,7 @@ If you want to support both Windows Phone Silverlight and Windows 10 in a single
 #endif // WINDOWS_UAP
 ```
 
-If you have code that you've been sharing between a Windows Phone Silverlight app and a Windows Store app, then you may already have source code with logic like this:
+Windows Phone Silverlight 앱과 Windows 스토어 앱 간에 공유되지 않는 코드가 있는 경우 다음과 같은 논리를 가진 소스 코드가 이미 있을 수 있습니다.
 
 ```csharp
 #if NETFX_CORE
@@ -84,7 +84,7 @@ If you have code that you've been sharing between a Windows Phone Silverlight ap
 #endif // NETFX_CORE
 ```
 
-If so, and if you now want to support Windows 10 in addition, then you can do that, too.
+해당 소스 코드가 있고 이제 Windows 10도 지원하려는 경우 다음도 수행할 수 있습니다.
 
 ```csharp
 #if WINDOWS_UAP
@@ -98,7 +98,7 @@ If so, and if you now want to support Windows 10 in addition, then you can do th
 #endif // WINDOWS_UAP
 ```
 
-You may have used conditional compilation to limit handling of the hardware back button to Windows Phone. In Windows 10, the back button event is a universal concept. Back buttons implemented in hardware or in software will all raise the [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) event, so that's the one to handle.
+조건부 컴파일을 사용하여 하드웨어 뒤로 단추의 처리를 Windows Phone으로 제한할 수 있습니다. Windows 10에서 뒤로 단추 이벤트는 범용 개념입니다. 하드웨어에서 구현한 뒤로 단추 또는 소프트웨어에서 구현한 뒤로 단추는 모두 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트를 발생시킵니다. 즉, 처리할 이벤트입니다.
 
 ```csharp
        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
@@ -113,7 +113,7 @@ You may have used conditional compilation to limit handling of the hardware back
 
 ```
 
-You may have used conditional compilation to limit handling of the hardware camera button to Windows Phone. In Windows 10, the hardware camera button is a concept particular to the mobile device family. Because one app package will be running on all devices, we change our compile-time condition into a run-time condition using what is known as adaptive code. To do that, we use the [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) class to query at run-time for the presence of the [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) class. **HardwareButtons** is defined in the mobile extension SDK, so we'll need to add a reference to that SDK to our project for this code to compile. Note, though, that the handler will only be executed on a device that implements the types defined in the mobile extension SDK, and that's the mobile device family. So, the following code is careful only to use features that are present, although it achieves it in a different way from conditional compilation.
+조건부 컴파일을 사용하여 하드웨어 카메라 단추의 처리를 Windows Phone으로 제한할 수 있습니다. Windows 10에서 하드웨어 카메라 단추는 모바일 디바이스 패밀리와 관련된 개념입니다. 한 앱 패키지를 모든 장치에서 실행하므로 적응 코드를 사용하여 컴파일 시간 조건을 런타임 조건으로 변경합니다. 이러한 작업을 수행하기 위해 [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) 클래스를 사용하여 런타임 시 [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) 클래스가 있는지 쿼리합니다. **HardwareButtons**는 모바일 확장 SDK에서 정의되므로 이 코드를 컴파일할 프로젝트에 해당 SDK에 대한 참조를 추가해야 합니다. 그러나 처리기는 모바일 확장 SDK에서 정의한 형식을 구현하는 디바이스이면서 모바일 디바이스 패밀리인 디바이스에서만 실행됩니다. 따라서 다음 코드가 현재 기능을 신중하게 사용하는 데 적합합니다. 그러나 구현 방식은 조건부 컴파일과 다릅니다.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -134,17 +134,17 @@ You may have used conditional compilation to limit handling of the hardware came
     }
 ```
 
-Also, see [Detecting the platform your app is running on](wpsl-to-uwp-input-and-sensors.md).
+또한 [앱이 실행되고 있는 플랫폼 검색](wpsl-to-uwp-input-and-sensors.md)을 참조하세요.
 
-## <a name="the-app-package-manifest"></a>The app package manifest
+## <a name="the-app-package-manifest"></a>앱 패키지 매니페스트
 
-The settings in your project (including any extension SDKs references) determine the API surface area that your app can call. But, your app package manifest is what determines the actual set of devices that your customers can install your app onto from the Store. For more info, see Examples in [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903).
+모든 확장 SDK 참조를 비롯하여 프로젝트의 설정은 앱에서 호출할 수 있는 API 노출 영역을 결정합니다. 하지만 앱 패키지 매니페스트는 고객이 스토어에서 앱을 설치할 수 있는 장치의 실제 집합을 결정합니다. 자세한 내용은 [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)의 예제를 참조하세요.
 
-It's worth knowing how to edit the app package manifest, because the topics that follow talk about using it for various declarations, capabilities, and other settings that some features need. You can use the Visual Studio app package manifest editor to edit it. If the **Solution Explorer** is not shown, choose it from the **View** menu. Double-click **Package.appxmanifest**. This opens the manifest editor window. Select the appropriate tab to make changes and then save the changes. You may want to ensure that the **pm:PhoneIdentity** element in the ported app manifest matches what is in the app manifest of the app you're porting (for full details, see the [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) topic).
+다양한 선언, 기능, 일부 기능에 필요한 기타 설정 등에서 앱 패키지 매니페스트를 사용하는 방법을 설명하는 항목이 뒤에 나오므로, 앱 패키지 매니페스트를 편집하는 방법을 알아두는 것이 좋습니다. Visual Studio 앱 패키지 매니페스트 편집기를 사용하여 앱 패키지 매니페스트를 편집할 수 있습니다. **솔루션 탐색기**가 표시되지 않는 경우 **보기** 메뉴에서 선택합니다. **Package.appxmanifest**를 두 번 클릭합니다. 매니페스트 편집기 창이 열립니다. 적절한 탭을 선택하여 변경한 다음 변경 내용을 저장합니다. 포팅된 앱 매니페스트의 **pm:PhoneIdentity** 요소가 포팅할 앱의 앱 매니페스트에 있는 요소와 일치하는지 확인할 수 있습니다(자세한 내용은 [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763) 항목 참조).
 
-See [Package manifest schema reference for Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
+[Windows 10 용 패키지 매니페스트 스키마](https://msdn.microsoft.com/library/windows/apps/dn934820)를 참조하세요.
 
-The next topic is [Troubleshooting](wpsl-to-uwp-troubleshooting.md).
+다음 항목은 [문제 해결](wpsl-to-uwp-troubleshooting.md)입니다.
 
 
 

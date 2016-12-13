@@ -1,62 +1,62 @@
 ---
 author: shawjohn
-Description: Learn how to create customer segments so you can target a subset of your customer base for promotional or engagement purposes.
-title: Create customer segments
+Description: "프로모션 또는 참여를 목적으로 고객의 하위 집합을 대상으로 지정할 수 있도록 고객층을 만드는 방법을 알아봅니다."
+title: "고객층 만들기"
 translationtype: Human Translation
 ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
 ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
 
 ---
 
-# <a name="create-customer-segments"></a>Create customer segments
+# <a name="create-customer-segments"></a>고객층 만들기
 
-There are times when you may want to target a subset of your customer base for promotional and engagement purposes. You can accomplish this in Windows Dev Center by creating a type of [customer group](create-customer-groups.md) known as a *segment* that includes the Windows 10 customers who meet the demographic or revenue criteria that you choose.
+프로모션 및 참여를 목적으로 앱 고객의 하위 집합을 대상으로 지정하려는 경우가 있습니다. 선택한 인구 또는 수익 기준을 충족하는 Windows&nbsp;10 고객을 포함하는 *세그먼트*로 알려진 [고객 그룹](create-customer-groups.md) 유형을 Windows 개발자 센터에서 만들어 이 작업을 수행할 수 있습니다.
 
-For example, you could create a segment that includes only customers who are age 50 or older, or that includes customers who’ve spent more than $10 in the Windows Store. You could also combine these criteria and create a segment that includes all customers over 50 who have spent more than $10 in the Store. We provide a few segment templates to help get you started, but you can define and combine the criteria however you'd like.
+예를 들어 50세 이상의 고객만 포함하거나 Windows 스토어에서 10달러 이상을 소비한 고객을 포함하는 고객층을 만들 수 있습니다. 또한 이러한 조건을 결합하여 50세 이상이면서 스토어에서 10달러 이상을 소비한 모든 고객을 포함하는 고객층을 만들 수도 있습니다. 시작할 수 있도록 몇 개의 고객층 템플릿이 제공되지만 원하는 방식으로 기준을 정의하고 결합할 수 있습니다.
 
-> **Tip** Segments can be used to [send targeted push notifications](send-push-notifications-to-your-apps-customers.md) to a group of customers as part of an engagement campaign.
+> **팁** 고객층은 고객 그룹에 참여 캠페인의 부분으로 [대상 푸시 알림을 보내는](send-push-notifications-to-your-apps-customers.md) 데 사용할 수 있습니다.
 
-## <a name="to-create-a-customer-segment"></a>To create a customer segment
+## <a name="to-create-a-customer-segment"></a>고객층을 만들려면
 
-1.  In the [Windows Dev Center dashboard](https://developer.microsoft.com/dashboard/overview), select **Customers** in the top menu.
-2.  On the **Customer groups** page, do one of the following:
- - In the **My customer groups** section, select **Create new group** to define a segment from scratch. Be sure that **Segment** is selected in the **Group type** dropdown list.
- - In the **Segment templates** section, select **Copy to use a predefined segment** that you can use as is or modify to suit your needs.
-3.  In the **Include customers from this app** list, select one of your apps to target.
-4.  In the **Segment name** box, choose a name for your segment.
-5.  In the **Define inclusion conditions** section, choose the filter criteria for the segment.
+1.  [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)의 위쪽 메뉴에서 **고객**을 선택합니다.
+2.  **고객 그룹** 페이지에서 다음 중 하나를 수행합니다.
+ - **내 고객 그룹** 섹션에서 **새 그룹 만들기**를 선택하여 처음부터 고객층을 정의합니다. **그룹 유형** 드롭다운 목록에서 **세그먼트**를 선택해야 합니다.
+ - **세그먼트 템플릿** 섹션에서 필요에 따라 그대로 사용하거나 수정할 수 있는 **Copy to use a predefined segment**(미리 정의된 세그먼트를 복사하여 사용)를 선택합니다.
+3.  **이 앱의 고객 포함** 목록에서 대상으로 지정할 앱 중 하나를 선택합니다.
+4.  **세그먼트 이름** 상자에서 세그먼트의 이름을 선택합니다.
+5.  **포함 조건 정의** 섹션에서 세그먼트에 대한 필터 조건을 선택합니다.
 
-    You can choose from a variety of filter criteria, including **Acquisition source**, **Acquisitions**, **Demographic**, **Rating**, **Store acquisitions**, **Store purchases**, and **Store spend**.
+    **취득 소스**, **취득**, **인구 통계**, **평점**, **스토어 취득**, **스토어 구매** 및 **스토어 지출** 등 다양한 필터 조건에서 선택할 수 있습니다.
 
-    For example, if you wanted to create a segment that only included your app customers who are 18- to 24-years old, you’d select the filter criteria [**Demographic**] [**Age group**] [**is**] [**18 to 24**] from the drop-down lists.
+    예를 들어 18-24세 앱 고객만 포함된 세그먼트를 만들려는 경우 드롭다운 목록에서 필터 조건을 [**인구 통계**] [**연령 그룹**] [**is**] **[18 to 24]**로 선택합니다.
 
-    You can build more complex segments by using AND/OR queries to include or exclude customers based on various attributes. To add an OR query, select **+ OR statement**. To add an ADD query, select **Add another filter**.
+    AND/OR 쿼리를 사용하여 다양한 특성을 기반으로 고객을 포함하거나 제외하면 좀 더 복잡한 세그먼트를 만들 수 있습니다. OR 쿼리를 추가하려면 **+ OR 문**을 선택합니다. ADD 쿼리를 추가하려면 **다른 필터 추가**를 선택합니다.
 
-    So, if you wanted to refine that segment to only include male customers who are in the specified age range, you would select **Add another filter** and then select the additional filter criteria [**Demographic**] [**Gender**] [**is**] [**Male**]. For this example, the **Segment definition** would display **Age group == 18 to 24 && Gender == Male**.
+    따라서 지정한 연령 범위에 있는 남성 고객만 포함하는 세그먼트를 세분화하려면 **다른 필터 추가**를 선택한 다음 추가 필터 조건을 [**인구 통계**] [**성별**] [**is**] [**남성**]으로 선택합니다. 이 예제에서 **세그먼트 정의**에는 **연령 그룹 == 18 to 24 &amp;&amp; 성별 == 남성**이 표시됩니다.
 
-    ![Example of filter criteria for a segment](images/create-segment-inclusions.png)
-6. Select **Save**.
+    ![세그먼트에 대한 필터 조건 예](images/create-segment-inclusions.png)
+6. **저장**을 선택합니다.
 
-> **Important** You won't be able to use a segment that includes too few customers. If your segment definition does not include enough customers, you can adjust the segment criteria, or try again later, when your app may have acquired more customers that meet your segment criteria.
+> **중요** 고객이 너무 적게 포함되는 세그먼트는 사용할 수 없습니다. 세그먼트 정의에 포함된 고객이 충분하지 않을 경우 세그먼트 조건을 조정하거나, 나중에 앱이 세그먼트 조건에 맞게 고객을 충분히 확보한 경우 다시 시도해볼 수 있습니다.
 
-Things to keep in mind about customer segments:
-- After you save a segment, it takes 24 hours before you’ll be able to use it for [targeted push notifications](send-push-notifications-to-your-apps-customers.md).
-- Segment results are refreshed daily, so you may see the total count of customers in a segment change from day to day as customers drop in or out of the segment criteria.
-- Most of these attributes are calculated using all historical data, although there are some exceptions. For example, **App acquisition date**, **Campaign ID**, **Store page view date**, and **Referrer URI domain** are limited to the last 90 days of data.
-- The segment will only include customers who have acquired your app on Windows 10. If your app supports older OS versions, customers using those older OS versions will not be included in any segments you create.
-- Segments automatically exclude any customers who are younger than 17 years old.
+고객층에 대해 고려해야 할 사항:
+- 세그먼트를 저장하고 나면 24시간이 지나야 [대상 푸시 알림](send-push-notifications-to-your-apps-customers.md)에 사용할 수 있습니다.
+- 세그먼트 결과는 매일 새로 고쳐지므로 세그먼트 조건에 맞거나 조건을 벗어나는 것과 같이 세그먼트의 총 고객 수 변경을 일 단위로 확인할 수 있습니다.
+- 이러한 특성은 일부 예외는 있지만 대부분 기록 데이터 전체를 사용하여 계산됩니다. 예를 들어 **앱 구입 날짜**, **캠페인 ID**, **스토어 페이지 보기 날짜** 및 **참조 페이지 URI 도메인**은 지난 90인 동안의 데이터로 제한됩니다.
+- 세그먼트는 Windows 10에서 앱을 구입한 고객만 포함합니다. 앱이 이전 OS 버전을 지원하는 경우 이러한 이전 OS 버전을 사용하는 고객은 만들어진 세그먼트에 포함되지 않습니다.
+- 세그먼트에서는 17세 미만의 고객을 자동으로 제외시킵니다.
 
 
-## <a name="app-statistics"></a>App statistics
+## <a name="app-statistics"></a>앱 통계
 
-The **App statistics** section on the segment provides some info about your app, as well as the size of the segment you just created.
+세그먼트에서 **앱 통계** 섹션에서는 방금 만든 세그먼트의 크기뿐 아니라 앱에 대한 몇 가지 정보를 제공합니다.
 
-Note that **Available app customers** does not reflect the actual number of customers who have acquired your app, but only the number of customers that are available to be included in segments (that is, customers that we can determine meet age requirements, have acquired your app on Windows 10, and who are associated with a valid Microsoft account).
+**사용 가능한 앱 고객**은 앱을 구입한 실제 고객 수를 반영하는 것이 아니라 세그먼트에 포함시킬 수 있는 고객 수만 반영합니다(연령 조건을 충족하고, Windows 10에서 앱을 구입했으며, 유효한 Microsoft 계정에 연결된다고 판단한 고객).
 
-If you view the results and **Customers in this segment** says **Small**, the segment doesn't include enough customers and the segment is marked inactive. Inactive segments can't be used for notifications or other features. You might be able to activate and use a segment by doing one of the following:
+결과를 확인하고 **이 세그먼트의 고객**이 **작게**로 표시되는 경우에는 세그먼트에 포함된 고객이 충분하지 않은 것을 나타내며 세그먼트는 비활성으로 표시됩니다. 비활성 세그먼트는 알림 또는 기타 기능에 사용할 수 없습니다. 다음 중 하나를 수행하여 세그먼트를 활성화하고 사용할 수 있습니다.
 
-- In the **Define inclusion conditions** section, adjust the filter criteria so the segment includes more customers.
-- On the **Customer groups** page, in the **Inactive segments** section, select **Refresh** to see if the segment currently contains enough customers. This tactic might work, for example, if more customers who meet your segment criteria have downloaded your app since you first created the segment.
+- **포함 조건 정의** 섹션에서 세그먼트에 더 많은 고객이 포함되도록 필터 조건을 조정합니다.
+- **고객 그룹** 페이지의 **비활성화 상태인 세그먼트** 섹션에서 **새로 고침**을 선택하여 현재 세그먼트에 충분한 고객이 포함되어 있는지 확인합니다. 예를 들어 세그먼트를 처음 만든 이후 앱을 다운로드한 고객 수가 세그먼트 조건을 충족할 경우 이 방식이 적용됩니다.
 
 
 

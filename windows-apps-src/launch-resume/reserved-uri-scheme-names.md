@@ -1,24 +1,24 @@
 ---
 author: TylerMSFT
-title: Reserved file and URI scheme names
-description: This topic lists the reserved file and URI scheme names that are not available to your app.
+title: "예약된 파일 및 URI 체계 이름"
+description: "이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다."
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
 translationtype: Human Translation
 ms.sourcegitcommit: 6f46f5973b9c18ffd7c38bd27cee0a0a21be50e5
 ms.openlocfilehash: c514ae4831f21b4c471b0445b3cf54a6a08ff92a
 
 ---
-# <a name="reserved-file-and-uri-scheme-names"></a>Reserved file and URI scheme names
+# <a name="reserved-file-and-uri-scheme-names"></a>예약된 파일 및 URI 체계 이름
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-You can use URI associations to automatically launch your app when another app launches a specific URI scheme. But there are some URI associations that you can’t use because they are reserved. If your app registers for a reserved association, that registration will be ignored. This topic lists the reserved file and URI scheme names that are not available to your app.
+URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자동으로 앱을 실행할 수 있습니다. 하지만 일부 URI 연결은 사용할 수 없는 예약된 연결입니다. 앱이 예약된 연결에 등록하는 경우 해당 등록은 무시됩니다. 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다.
 
-## <a name="reserved-file-types"></a>Reserved file types
+## <a name="reserved-file-types"></a>예약된 파일 형식
 
-There are two types of reserved file types: file types reserved for built-in apps and file types reserved for the operating system. When a file type reserved for a built-in app is launched, only the built-in app will launch. Any attempt to register your app with that file type is ignored. Similarly, any attempt to register your app with a file type reserved for the operating system also will be ignored.
+제공되는 두 가지 예약된 파일 형식은 기본 제공 앱용으로 예약된 파일 형식 및 운영 체제용으로 예약된 파일 형식입니다. 기본 제공 앱용으로 예약된 파일 형식이 시작되면 기본 제공 앱만 시작됩니다. 파일 형식에 앱을 등록하려는 모든 시도가 무시됩니다. 마찬가지로 운영 체제용으로 예약된 파일 형식에 앱을 등록하려는 모든 시도도 무시됩니다.
 
-File types reserved for built-in apps
+기본 제공 앱용으로 예약된 파일 형식
 
 <table>
 <tr><td>.aac</td><td>.icon</td><td>.pem</td><td>.wdp</td></tr>
@@ -35,9 +35,9 @@ File types reserved for built-in apps
 <tr><td>.ico</td><td>.p7b</td><td>.wav</td><td></td></tr>
 </table> 
 
-## <a name="file-types-reserved-for-the-operating-system"></a>File types reserved for the operating system
+## <a name="file-types-reserved-for-the-operating-system"></a>운영 체제용으로 예약된 파일 형식
 
-The following file types are reserved for the operating system
+다음 파일 형식은 운영 체제용으로 예약됩니다.
 
 <table>
 <tr><td>.accountpicture-ms</td><td>its</td><td>.ops</td><td>.url</td></tr>
@@ -78,7 +78,7 @@ The following file types are reserved for the operating system
 <tr><td>.isp</td><td>.ocx</td><td>.ttf</td><td></td></tr>
 </table>
 
-## <a name="reserved-uri-scheme-names"></a>Reserved URI scheme names
+## <a name="reserved-uri-scheme-names"></a>예약된 URI 스키마 이름
 
 <table>
 <tr><td>application.manifest</td><td>internetshortcut</td><td>ms-settings:network-mobilehotspot</td><td>shbfile</td></tr>
@@ -90,7 +90,7 @@ The following file types are reserved for the operating system
 <tr><td>cerfile</td><td>mailto</td><td>ms-settings:privacy-calendar</td><td>tel</td></tr>
 <tr><td>chm.filecmdfilecomfile</td><td>maps</td><td>ms-settings:privacy-contacts</td><td>telnet</td></tr>
 <tr><td>cplfile</td><td>microsoft.powershellscript.1</td><td>ms-settings:privacy-customdevices</td><td>tn3270</td></tr>
-<tr><td>dllfile</td><td>ms-accountpictureprovider</td><td>ms-settings:privacy-feedback</td><td>ttffile</td></tr>
+<tr><td>dllfile</td><td>ms accountpictureprovider</td><td>ms-settings:privacy-feedback</td><td>ttffile</td></tr>
 <tr><td>drvfile</td><td>ms-appdata</td><td>ms-settings:privacy-location</td><td>unknown</td></tr>
 <tr><td>dtmf</td><td>ms-appx</td><td>ms-settings:privacy-messaging</td><td>usertileprovider</td></tr>
 <tr><td>exefile</td><td>ms-autoplay</td><td>ms-settings:privacy-microphone</td><td>vbefile</td></tr>

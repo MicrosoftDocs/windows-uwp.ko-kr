@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: Handle device removed scenarios in Direct3D 11
-description: This topic explains how to recreate the Direct3D and DXGI device interface chain when the graphics adapter is removed or reinitialized.
+title: "Direct3D 11에서 장치 제거 시나리오 처리"
+description: "이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법을 설명합니다."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 translationtype: Human Translation
 ms.sourcegitcommit: 5ed3815397b076ab3ee14fd3c22b235b46da5f09
@@ -9,35 +9,35 @@ ms.openlocfilehash: b88d85c78ba5d08718b7e2c844f94beb71e5134a
 
 ---
 
-# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Handle device removed scenarios in Direct3D 11
+# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Direct3D 11에서 디바이스 제거 시나리오 처리
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-This topic explains how to recreate the Direct3D and DXGI device interface chain when the graphics adapter is removed or reinitialized.
+이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법에 대해 설명합니다.
 
-In DirectX 9, applications could encounter a "[device lost](https://msdn.microsoft.com/library/windows/desktop/bb174714)" condition where the D3D device enters a non-operational state. For example, when a full-screen Direct3D 9 application loses focus, the Direct3D device becomes "lost;" any attempts to draw with a lost device will silently fail. Direct3D 11 uses virtual graphics device interfaces, enabling multiple programs to share the same physical graphics device and eliminating conditions where apps lose control of the Direct3D device. However, it is still possible for graphics adapter availability to change. For example:
+DirectX 9에서는 D3D 장치가 비작동 상태에 들어서는 경우 응용 프로그램이 "[장치 손실](https://msdn.microsoft.com/library/windows/desktop/bb174714)" 상태에 처할 수 있습니다. 예를 들어 전체 화면 Direct3D 9 응용 프로그램이 초점을 잃으면 Direct3D 장치는 "손실" 상태가 되어, 손실된 장치로 그리려는 모든 시도가 자동으로 실패하게 됩니다. Direct3D 11은 가상 그래픽 인터페이스를 사용하므로, 여러 프로그램이 동일한 물리적 그래픽 장치를 공유할 수 있고 앱이 Direct3D 장치의 제어를 손실하는 상황이 발생하지 않습니다. 그러나 그래픽 어댑터 가용성이 변경될 가능성은 여전히 있습니다. 예를 들면 다음과 같습니다.
 
--   The graphics driver is upgraded.
--   The system changes from a power-saving graphics adapter to a performance graphics adapter.
--   The graphics device stops responding and is reset.
--   A graphics adapter is physically attached or removed.
+-   그래픽 드라이버가 업그레이드됩니다.
+-   절전 그래픽 어댑터에서 성능 그래픽 어댑터로 시스템이 변경됩니다.
+-   그래픽 장치가 응답을 멈추고 다시 설정됩니다.
+-   그래픽 어댑터가 물리적으로 연결되거나 제거됩니다.
 
-When such circumstances arise, DXGI returns an error code indicating that the Direct3D device must be reinitialized and device resources must be recreated. This walkthrough explains how Direct3D 11 apps and games can detect and respond to any circumstance where the graphics adapter is reset, removed, or changed. Code examples are provided from the DirectX 11 App (Universal Windows) template provided with Microsoft Visual Studio 2015.
+그러한 상황이 발생하면 DXGI는 Direct3D 장치를 다시 초기화하고 장치 리소스를 다시 만들어야 한다고 알리는 오류 코드를 반환합니다. 이 연습에서는 Direct3D 11 앱과 게임이 그래픽 어댑터의 재설정, 제거 또는 변경 상황을 검색하고 이에 대응하는 방법에 대해 설명합니다. 코드 예제는 Microsoft Visual Studio 2015에 포함된 DirectX 11 앱(유니버설 Windows) 템플릿에서 가져온 것입니다.
 
-# <a name="instructions"></a>Instructions
+# <a name="instructions"></a>지침
 
-### <a name="spanspanstep-1"></a><span></span>Step 1:
+### <a name="spanspanstep-1"></a><span></span>1단계:
 
-Include a check for the device removed error in the rendering loop. Present the frame by calling [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) (or [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797), and so on). Then, check whether it returned [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET**.
+디바이스 제거 오류 검사를 렌더링 루프에 포함합니다. [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)(또는 [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 등)를 호출하여 프레임을 표시합니다. 그런 다음 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**가 반환되었는지를 확인합니다.
 
-First, the template stores the HRESULT returned by the DXGI swap chain:
+먼저 템플릿은 DXGI 스왑 체인이 반환한 HRESULT를 저장합니다.
 
 ```cpp
 HRESULT hr = m_swapChain->Present(1, 0);
 ```
 
-After taking care of all other work for presenting the frame, the template checks for the device removed error. If necessary, it calls a method to handle the device removed condition:
+프레임을 표시하기 위한 다른 모든 작업을 처리한 후 템플릿은 장치 제거 오류를 검사합니다. 필요한 경우 장치 제거 상태를 처리하기 위한 메서드를 호출합니다.
 
 ```cpp
 // If the device was removed either by a disconnection or a driver upgrade, we
@@ -52,15 +52,15 @@ else
 }
 ```
 
-### <a name="step-2"></a>Step 2:
+### <a name="step-2"></a>2단계:
 
-Also, include a check for the device removed error when responding to window size changes. This is a good place to check for [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) or **DXGI\_ERROR\_DEVICE\_RESET** for several reasons:
+또한 창 크기 변경에 대해 응답할 때 장치 제거 오류에 대한 검사를 포함합니다. 이곳은 여러 가지 이유로 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**를 검사하기에 좋은 위치입니다.
 
--   Resizing the swap chain requires a call to the underlying DXGI adapter, which can return the device removed error.
--   The app might have moved to a monitor that's attached to a different graphics device.
--   When a graphics device is removed or reset, the desktop resolution often changes, resulting in a window size change.
+-   스왑 체인의 크기를 변경하려면 기본 DXGI 어댑터에 대한 호출이 필요한데, 이 경우 장치 제거 오류가 반환될 수 있습니다.
+-   앱이 다른 그래픽 장치에 연결된 모니터로 이동했을 수 있습니다.
+-   그래픽 장치가 제거되거나 재설정되면 데스크톱 해상도가 종종 변경되어, 창 크기가 변경됩니다.
 
-The template checks the HRESULT returned by [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577):
+템플릿은 [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577)에서 반환된 HRESULT를 확인합니다.
 
 ```cpp
 // If the swap chain already exists, resize it.
@@ -87,11 +87,11 @@ else
 }
 ```
 
-### <a name="step-3"></a>Step 3:
+### <a name="step-3"></a>3단계:
 
-Any time your app receives the [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) error, it must reinitialize the Direct3D device and recreate any device-dependent resources. Release any references to graphics device resources created with the previous Direct3D device; those resources are now invalid, and all references to the swap chain must be released before a new one can be created.
+앱에서 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 오류가 발생할 때마다 Direct3D 디바이스가 다시 초기화되고 모든 디바이스 종속 리소스가 다시 생성되어야 합니다. 이전 Direct3D 디바이스로 만든 그래픽 장치 리소스에 대한 모든 참조를 해제합니다. 해당 리소스는 이제 유효하지 않으며, 새 참조를 만들기 전에 스왑 체인에 대한 모든 참조를 해제해야 합니다.
 
-The HandleDeviceLost method releases the swap chain and notifies app components to release device resources:
+HandleDeviceLost 메서드는 스왑 체인을 해제하고 앱 구성 요소에 장치 리소스를 해제하도록 알립니다.
 
 ```cpp
 m_swapChain = nullptr;
@@ -104,7 +104,7 @@ if (m_deviceNotify != nullptr)
 }
 ```
 
-Then, it creates a new swap chain and reinitializes the device-dependent resources controlled by the device management class:
+그런 다음 새 스왑 체인을 만들고, 장치 관리 클래스에서 제어하는 장치 종속 리소스를 다시 초기화합니다.
 
 ```cpp
 // Create the new device and swap chain.
@@ -113,7 +113,7 @@ m_d2dContext->SetDpi(m_dpi, m_dpi);
 CreateWindowSizeDependentResources();
 ```
 
-After the device and swap chain have been re-established, it notifies app components to reinitialize device-dependent resources:
+장치와 스왑 체인이 다시 설정되면, 앱 구성 요소에 장치 종속 리소스를 다시 초기화하도록 알립니다.
 
 ```cpp
 // Create the new device and swap chain.
@@ -128,23 +128,23 @@ if (m_deviceNotify != nullptr)
 }
 ```
 
-When the HandleDeviceLost method exits, control returns to the rendering loop, which continues on to draw the next frame.
+HandleDeviceLost 메서드가 있으면 렌더링 루프로 컨트롤이 반환되는데, 이는 다음 프레임을 그릴 수 있도록 계속됩니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 
-### <a name="investigating-the-cause-of-device-removed-errors"></a>Investigating the cause of device removed errors
+### <a name="investigating-the-cause-of-device-removed-errors"></a>장치 제거 오류의 원인 조사
 
-Repeat issues with DXGI device removed errors can indicate that your graphics code is creating invalid conditions during a drawing routine. It can also indicate a hardware failure or a bug in the graphics driver. To investigate the cause of device removed errors, call [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) before releasing the Direct3D device. This method returns one of six possible DXGI error codes indicating the reason for the device removed error:
+DXGI 장치 제거 오류가 반복해서 발생하면 그리기 루틴 중에 그래픽 코드가 잘못된 조건을 만들고 있음을 나타내는 것일 수 있습니다. 또한 그래픽 드라이버의 하드웨어 오류 또는 버그를 나타내는 것일 수도 있습니다. 장치 제거 오류의 원인을 조사하려면 Direct3D 장치를 해제하기 전에 [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526)을 호출하세요. 이 메서드는 장치 제거 오류의 원인을 나타내는 여섯 가지 가능한 DXGI 오류 코드 중 하나를 반환합니다.
 
--   **DXGI\_ERROR\_DEVICE\_HUNG**: The graphics driver stopped responding because of an invalid combination of graphics commands sent by the app. If you get this error repeatedly, it is a likely indication that your app caused the device to hang and needs to be debugged.
--   **DXGI\_ERROR\_DEVICE\_REMOVED**: The graphics device has been physically removed, turned off, or a driver upgrade has occurred. This happens occasionally and is normal; your app or game should recreate device resources as described in this topic.
--   **DXGI\_ERROR\_DEVICE\_RESET**: The graphics device failed because of a badly formed command. If you get this error repeatedly, it may mean that your code is sending invalid drawing commands.
--   **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: The graphics driver encountered an error and reset the device.
--   **DXGI\_ERROR\_INVALID\_CALL**: The application provided invalid parameter data. If you get this error even once, it means that your code caused the device removed condition and must be debugged.
--   **S\_OK**: Returned when a graphics device was enabled, disabled, or reset without invalidating the current graphics device. For example, this error code can be returned if an app is using [Windows Advanced Rasterization Platform (WARP)](https://msdn.microsoft.com/library/windows/desktop/gg615082) and a hardware adapter becomes available.
+-   **DXGI\_ERROR\_DEVICE\_HUNG**: 앱에서 보낸 그래픽 명령의 조합이 잘못되어 그래픽 드라이버의 응답이 중지되었습니다. 이 오류가 반복해서 발생하면 앱이 장치 중단을 일으켰음을 나타내는 것일 수 있으므로 디버깅이 필요합니다.
+-   **DXGI\_ERROR\_DEVICE\_REMOVED**: 그래픽 디바이스를 물리적으로 제거 또는 껐거나, 드라이버가 업그레이드되었습니다. 이는 가끔 발생하는 정상적인 현상입니다. 이 항목에서 설명한 대로 앱 또는 게임이 장치 리소스를 다시 만듭니다.
+-   **DXGI\_ERROR\_DEVICE\_RESET**: 잘못된 형식의 명령 때문에 그래픽 디바이스가 실패했습니다. 이 오류가 반복해서 발생하면 코드가 잘못된 그리기 명령을 보내고 있는 것일 수 있습니다.
+-   **DXGI\_ERROR\_DRIVER\_INTERNAL\_ERROR**: 그래픽 드라이버에 오류가 발생하여 디바이스가 다시 설정되었습니다.
+-   **DXGI\_ERROR\_INVALID\_CALL**: 응용 프로그램이 잘못된 매개 변수 데이터를 제공했습니다. 이 오류가 두 번 이상 발생하면 코드가 장치 제거 상태를 일으켰음을 나타내는 것이므로 디버깅이 필요합니다.
+-   **S\_OK**: 현재 그래픽 디바이스를 무효화하지 않은 채 그래픽 디바이스를 활성화, 비활성화 또는 재설정할 때 반환됩니다. 예를 들면 앱이 [WARP(Windows Advanced Rasterization Platform)](https://msdn.microsoft.com/library/windows/desktop/gg615082)를 사용 중이며 하드웨어 어댑터가 사용 가능해질 때 이 오류 코드가 반환될 수 있습니다.
 
-The following code will retrieve the [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) error code and print it to the debug console. Insert this code at the beginning of the HandleDeviceLost method:
+다음 코드는 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 오류 코드를 검색하고 이를 디버그 콘솔에 출력합니다. 이 코드를 HandleDeviceLost 메서드의 시작 부분에 추가합니다.
 
 ```cpp
     HRESULT reason = m_d3dDevice->GetDeviceRemovedReason();
@@ -157,13 +157,13 @@ The following code will retrieve the [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://
 #endif
 ```
 
-For more details, see [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) and [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553).
+자세한 내용은 [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) 및 [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553)를 참조하세요.
 
-### <a name="testing-device-removed-handling"></a>Testing Device Removed Handling
+### <a name="testing-device-removed-handling"></a>제거된 디바이스 처리 테스트
 
-Visual Studio's Developer Command Prompt supports a command line tool 'dxcap' for Direct3D event capture and playback related to the Visual Studio Graphics Diagnostics. You can use the command line option "-forcetdr" while your app is running which will force a GPU Timeout Detection and Recovery event, thereby triggering DXGI\_ERROR\_DEVICE\_REMOVED and allowing you to test your error handling code.
+Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진단과 관련된 Direct3D 이벤트 캡처 및 재생에 대한 명령줄 도구 'dxcap'를 지원합니다. 앱이 실행되는 동안 명령줄 옵션 "-forcetdr"을 사용하여 GPU 시간 제한 검색 및 복구 이벤트를 강제로 발생시킬 수 있으므로 DXGI\_ERROR\_DEVICE\_REMOVED를 트리거하고 오류 처리 코드를 테스트할 수 있습니다.
 
-> **Note**  DXCap and its support DLLs are installed into system32/syswow64 as part of the Graphics Tools for Windows 10 which are no longer distributed via the Windows SDK. Instead they are provided via the Graphics Tools Feature on Demand that is an optional OS component and must be installed in order to enable and use the Graphics Tools on Windows 10. More information on how to Install the Graphics Tools for Windows 10 can be found here: <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>
+> **참고** DXCap와 해당 지원 DLL이 Windows SDK를 통해 더 이상 배포되지 않는 Windows 10용 그래픽 도구의 일부로 system32/syswow64에 설치됩니다. 대신 선택적 OS 구성 요소인 주문형 그래픽 도구 기능을 통해 제공되며 Windows 10에서 그래픽 도구를 사용하기 위해 설치되어야 합니다. Windows 10용 그래픽 도구를 설치하는 방법에 대한 자세한 내용은 <https://msdn.microsoft.com/library/mt125501.aspx#InstallGraphicsTools>를 참조하세요.
 
  
 

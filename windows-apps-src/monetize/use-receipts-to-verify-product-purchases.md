@@ -1,33 +1,33 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: Each Windows Store transaction that results in a successful product purchase can optionally return a transaction receipt.
-title: Use receipts to verify product purchases
+description: "제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다."
+title: "확인 메일을 사용하여 제품 구매 검증"
 translationtype: Human Translation
 ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
 ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
 
 ---
 
-# <a name="use-receipts-to-verify-product-purchases"></a>Use receipts to verify product purchases
+# <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
 
 
->**Note**&nbsp;&nbsp;This article shows how to use members of the [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) namespace to get and validate a receipt for an in-app purchase. If you are using the alternative [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace for in-app purchases (introduced in Windows 10, version 1607), this namespace does not provide an API for getting purchase receipts for in-app purchases. However, you can use a REST method in the Windows Store collection API to get data for a purchase transaction. For more information, see [Receipts for in-app purchases](in-app-purchases-and-trials.md#receipts).
+>**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매에 대체 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하는 경우(Windows 10 버전 1607에서 도입됨), 이 네임스페이스는 앱에서 바로 구매의 구매 영수증을 가져오기 위한 API를 제공하지 않습니다. 그러나 Windows 스토어 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
 
 
-Each Windows Store transaction that results in a successful product purchase can optionally return a transaction receipt. This receipt provides information about the listed product and monetary cost to the customer.
+제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 나열된 제품 및 통화 비용에 대한 정보를 고객에게 제공합니다.
 
-Having access to this information supports scenarios where your app needs to verify that a user purchased your app, or has made add-on (also called in-app product or IAP) purchases from the Windows Store. For example, imagine a game that offers downloaded content. If the user who purchased the game content wants to play it on a different device, you need to verify that the user already owns the content. Here's how.
+사용자가 앱을 구매했거나, Windows 스토어에서 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 다음과 같이 하세요.
 
-## <a name="requesting-a-receipt"></a>Requesting a receipt
+## <a name="requesting-a-receipt"></a>영수증 요청
 
 
-The **Windows.ApplicationModel.Store** namespace supports several ways to get a receipt:
+**Windows.ApplicationModel.Store** 네임스페이스는 영수증을 가져오는 다음 몇 가지 방법을 지원합니다.
 
-* When you make a purchase by using [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) or [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx) (or one of the other overloads of this method), the return value contains the receipt.
-* You can call the [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) method to retrieve the current receipt info for your app and any add-ons in your app.
+* [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) 또는 [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx)(또는 이 메서드의 다른 오버로드 중 하나)를 사용하여 구매하는 경우 반환 값에 영수증이 포함되어 있습니다.
+* [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) 메서드를 호출하여 앱과 앱의 모든 추가 기능에 대한 현재 영수증 정보를 검색할 수 있습니다.
 
-An app receipt looks something like this.
+앱 영수증은 다음과 같습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -51,7 +51,7 @@ An app receipt looks something like this.
 </Receipt>
 ```
 
-A product receipt looks like this.
+제품 영수증은 다음과 같습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -74,69 +74,69 @@ A product receipt looks like this.
 </Receipt>
 ```
 
-You can use either of these receipt examples to test your validation code. For more information about the contents of the receipt, see the [element and attribute descriptions](#receipt-descriptions).
+이러한 영수증 예제 중 하나를 사용하여 유효성 검사 코드를 테스트할 수 있습니다. 영수증 내용에 대한 자세한 내용은 [요소 및 특성 설명](#receipt-descriptions)을 참조하세요.
 
-## <a name="validating-a-receipt"></a>Validating a receipt
+## <a name="validating-a-receipt"></a>영수증 유효성 검사
 
-To validate a receipt's authenticity, you need your back-end system (a web service or something similar) to check the receipt's signature using the public certificate. To get this certificate, use the URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```, where ```CertificateId``` is the **CertificateId** value in the receipt.
+영수증의 신뢰성을 확인하려면 공용 인증서를 사용하여 영수증의 서명을 확인할 백 엔드 시스템(웹 서비스 또는 이와 유사한 것)이 필요합니다. 이 인증서를 가져오려면 URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```를 사용합니다. 여기서 ```CertificateId```는 영수증의 **CertificateId** 값입니다.
 
-Here's an example of that validation process. This code runs in a .NET Framework console application that includes a reference to the **System.Security** assembly.
+다음은 해당 유효성 검사 프로세스 예입니다. 이 코드는 **System.Security** 어셈블리에 대한 참조를 포함하는 .NET Framework 콘솔 응용 프로그램에서 실행됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
-## <a name="element-and-attribute-descriptions-for-a-receipt"></a>Element and attribute descriptions for a receipt
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a>영수증의 요소 및 특성 설명
 
-This section describes the elements and attributes in a receipt.
+이 섹션에서는 영수증의 요소와 특성을 설명합니다.
 
-### <a name="receipt-element"></a>Receipt element
+### <a name="receipt-element"></a>영수증 요소
 
-The root element of this file is the **Receipt** element, which contains information about app and in-app purchases. This element contains the following child elements.
+이 파일의 루트 요소는 앱과 앱에서 바로 구매에 대한 정보를 포함하는 **Receipt** 요소입니다. 이 요소에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  |  Description   |
+|  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    No        |  0 or 1  |  Contains purchase information for the current app.            |
-|  [ProductReceipt](#productreceipt)  |     No       |  0 or more    |   Contains information about an in-app purchase for the current app.     |
-|  Signature  |      Yes      |  1   |   This element is a standard [XML-DSIG construct](http://go.microsoft.com/fwlink/p/?linkid=251093). It contains a **SignatureValue** element, which contains the signature you can use to validate the receipt, and a **SignedInfo** element.      |
+|  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
+|  [ProductReceipt](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
+|  Signature  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](http://go.microsoft.com/fwlink/p/?linkid=251093)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
 
-**Receipt** has the following attributes.
+**Receipt**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Description   |
+|  특성  |  설명   |
 |-------------|-------------------|
-|  **Version**  |    The version number of the receipt.            |
-|  **CertificateId**  |     The certificate thumbprint used to sign the receipt.          |
-|  **ReceiptDate**  |    Date the receipt was signed and downloaded.           |  
-|  **ReceiptDeviceId**  |   Identifies the device used to request this receipt.         |  |
+|  **Version**  |    영수증의 버전 번호입니다.            |
+|  **CertificateId**  |     영수증에 서명하는 데 사용된 인증서 지문입니다.          |
+|  **ReceiptDate**  |    영수증이 서명되고 다운로드된 날짜입니다.           |  
+|  **ReceiptDeviceId**  |   이 영수증을 요청하는 데 사용된 디바이스를 식별합니다.         |  |
 
 <span id="appreceipt" />
-### <a name="appreceipt-element"></a>AppReceipt element
+### <a name="appreceipt-element"></a>AppReceipt 요소
 
-This element contains purchase information for the current app.
+이 요소는 현재 앱에 대한 구매 정보를 포함합니다.
 
-**AppReceipt** has the following attributes.
+**AppReceipt**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Description   |
+|  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    Identifies the purchase.           |
-|  **AppId**  |     The Package Family Name value that the OS uses for the app.           |
-|  **LicenseType**  |    **Full**, if the user purchased the full version of the app. **Trial**, if the user downloaded a trial version of the app.           |  
-|  **PurchaseDate**  |    Date when the app was acquired.          |  |
+|  **Id**  |    구매를 식별합니다.           |
+|  **AppId**  |     OS에서 앱에 사용하는 패키지 패밀리 이름 값입니다.           |
+|  **LicenseType**  |    **Full** - 사용자가 앱의 처음 사용자용 버전을 구매한 경우 **Trial** - 사용자가 앱의 평가판을 다운로드한 경우           |  
+|  **PurchaseDate**  |    앱을 구매한 날짜입니다.          |  |
 
 <span id="productreceipt" />
-### <a name="productreceipt-element"></a>ProductReceipt element
+### <a name="productreceipt-element"></a>ProductReceipt 요소
 
-This element contains information about an in-app purchase for the current app.
+이 요소는 현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.
 
-**ProductReceipt** has the following attributes.
+**ProductReceipt**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Description   |
+|  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    Identifies the purchase.           |
-|  **AppId**  |     Identifies the app through which the user made the purchase.           |
-|  **ProductId**  |     Identifies the product purchased.           |
-|  **ProductType**  |    Determines the product type. Currently only supports a value of **Durable**.          |  
-|  **PurchaseDate**  |    Date when the purchase occurred.          |  |
+|  **Id**  |    구매를 식별합니다.           |
+|  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
+|  **ProductId**  |     구매한 제품을 식별합니다.           |
+|  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
+|  **PurchaseDate**  |    구매가 발생한 날짜입니다.          |  |
 
  
 

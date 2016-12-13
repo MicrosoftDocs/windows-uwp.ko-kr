@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: Behind your UI are your business and data layers.
-title: Porting Windows Phone Silverlight business and data layers to UWP
+description: "UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다."
+title: "Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅"
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 translationtype: Human Translation
 ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
@@ -9,45 +9,45 @@ ms.openlocfilehash: 6e6cea49064f49a15b557aad037c5baaa1e9b57b
 
 ---
 
-#  <a name="porting-windows-phone-silverlight-business-and-data-layers-to-uwp"></a>Porting Windows Phone Silverlight business and data layers to UWP
+#  <a name="porting-windows-phone-silverlight-business-and-data-layers-to-uwp"></a>Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-The previous topic was [Porting for I/O, device, and app model](wpsl-to-uwp-input-and-sensors.md).
+이전 항목에서는 [I/O, 디바이스 및 앱 모델에 대한 포팅](wpsl-to-uwp-input-and-sensors.md)을 살펴보았습니다.
 
-Behind your UI are your business and data layers. The code in these layers calls operating system and .NET Framework APIs (for example, background processing, location, the camera, the file system, network, and other data access). The vast majority of those are [available to a Universal Windows Platform (UWP) app](https://msdn.microsoft.com/library/windows/apps/br211369), so you can expect to be able to port much of this code without change.
+UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다. 이러한 계층의 코드는 운영 체제 및 .NET Framework API를 호출합니다(예제: 후순위 처리, 위치, 카메라, 파일 시스템, 네트워크 및 기타 데이터 액세스). 대부분은 [UWP(유니버설 Windows 플랫폼) 앱](https://msdn.microsoft.com/library/windows/apps/br211369)에서 사용할 수 있으므로, 이 코드의 대부분을 변경하지 않고 포팅할 수 있습니다.
 
-## <a name="asynchronous-methods"></a>Asynchronous methods
+## <a name="asynchronous-methods"></a>비동기 메서드
 
-One of the priorities of the Universal Windows Platform (UWP) is to enable you to build apps that are truly, and consistently, responsive. Animations are always smooth, and touch interactions such as panning and swiping are instantaneous and free of lag, making it feel like the UI is glued to your finger. To achieve this, any UWP API that can't guarantee to complete within 50ms has been made asynchronous and its name suffixed with **Async**. Your UI thread will return immediately from calling an **Async** method, and the work will take place on another thread. Consuming an **Async** method is made very easy, syntactically, using the C# **await** operator, JavaScript promise objects, and C++ continuations. For more info, see [Asynchronous programming](https://msdn.microsoft.com/library/windows/apps/mt187335).
+UWP(유니버설 Windows 플랫폼)는 실질적이고 일관되게 반응하는 앱을 빌드할 수 있도록 하는 것이 최우선 목표 중 하나입니다. 애니메이션은 항상 자연스럽고 터치 조작(예제: 회전, 살짝 밀기)은 지연 없이 즉각적으로 이루어져서 UI가 손가락에 접착되어 있다는 느낌이 들 정도입니다. 이렇게 하기 위해 50밀리초 이내에 완료를 보장할 수 없는 UWP API를 비동기화하고 이름에 **Async** 접미사를 붙였습니다. UI 스레드는 **Async** 메서드를 호출하는 즉시 반환되고 작업은 다른 스레드에서 수행됩니다. **Async** 메서드를 사용하면 C# **await** 연산자, JavaScript promise 개체 및 C++ 연속을 구문적으로 매우 쉽게 사용할 수 있습니다. 자세한 내용은 [비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187335)을 참조하세요.
 
-## <a name="background-processing"></a>Background processing
+## <a name="background-processing"></a>후순위 처리
 
-A Windows Phone Silverlight app can use a managed **ScheduledTaskAgent** object to perform a task while the app is not in the foreground. A UWP app uses the [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) class to create and register a background task in a similar way. You define a class that implements the work of your background task. The system runs your background task periodically, calling the [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) method of your class to execute the work. In a UWP app, remember to set the **Background Tasks** declaration in the app package manifest. For more info, see [Support your app with background tasks](https://msdn.microsoft.com/library/windows/apps/mt299103).
+Windows Phone Silverlight 앱은 포그라운드에 있지 않은 상태에서 관리되는 **ScheduledTaskAgent** 개체를 사용하여 작업을 수행할 수 있습니다. UWP 앱은 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) 클래스를 사용하여 비슷한 방식으로 백그라운드 작업을 만들고 등록합니다. 백그라운드 작업의 작동을 구현하는 클래스를 정의합니다. 시스템에서는 클래스의 [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811) 메서드를 호출하여 작업을 실행함으로써 백그라운드 작업을 주기적으로 실행합니다. UWP 앱에서는 앱 패키지 매니페스트에서 **백그라운드 작업** 선언을 설정합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103)을 참조하세요.
 
-To transfer large data files in the background, a Windows Phone Silverlight app uses the **BackgroundTransferService** class. A UWP app uses APIs in the [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) namespace to do this. The features use a similar pattern to initiate transfers, but the new API has improved capabilities and performance. For more info, see [Transferring data in the background](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
+백그라운드에서 대용량 데이터 파일을 전송하기 위해 Windows Phone Silverlight 앱은 **BackgroundTransferService** 클래스를 사용합니다. UWP 앱은 [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 API를 사용하여 이 작업을 수행합니다. 이러한 기능은 비슷한 패턴으로 전송을 시작하지만 새로운 API에서는 기능과 성능이 개선되었습니다. 자세한 내용은 [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975)을 참조하세요.
 
-A Windows Phone Silverlight app uses the managed classes in the **Microsoft.Phone.BackgroundAudio** namespace to play audio while the app is not in the foreground. The UWP uses the Windows Phone Store app model, see [Background Audio](https://msdn.microsoft.com/library/windows/apps/mt282140) and the [Background audio](http://go.microsoft.com/fwlink/p/?linkid=619997) sample.
+Windows Phone Silverlight 앱은 앱이 포그라운드에 없을 때 **Microsoft.Phone.BackgroundAudio** 네임스페이스의 관리 클래스를 사용하여 오디오를 재생합니다. UWP는 Windows Phone 스토어 앱 모델을 사용합니다. 자세한 내용은 [백그라운드 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140) 및 [백그라운드 오디오](http://go.microsoft.com/fwlink/p/?linkid=619997) 샘플을 참조하세요.
 
-## <a name="cloud-services-networking-and-databases"></a>Cloud services, networking, and databases
+## <a name="cloud-services-networking-and-databases"></a>클라우드 서비스, 네트워킹 및 데이터베이스
 
-Hosting data and app services in the cloud is possible using Azure. See [Getting Started with Mobile Services](http://go.microsoft.com/fwlink/p/?LinkID=403138). For solutions that require both online and offline data see: [Using offline data sync in Mobile Services](http://azure.microsoft.com/documentation/articles/mobile-services-windows-store-dotnet-get-started-offline-data/).
+Azure를 사용하여 클라우드에서 데이터 및 앱 서비스를 호스팅할 수 있습니다. [모바일 서비스 시작](http://go.microsoft.com/fwlink/p/?LinkID=403138)을 참조하세요. 온라인과 오프라인 데이터가 모두 필요한 솔루션에 대해서는 [모바일 서비스에서 오프라인 데이터 동기화 사용](http://azure.microsoft.com/documentation/articles/mobile-services-windows-store-dotnet-get-started-offline-data/)을 참조하세요.
 
-The UWP has partial support for the **System.Net.HttpWebRequest** class, but the **System.Net.WebClient** class is not supported. The recommended, forward-looking alternative is the [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) class (or [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx) if you need your code to be portable to other platforms that support .NET). These APIs use [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx) to represent an HTTP request.
+UWP에서는 **System.Net.HttpWebRequest** 클래스가 부분적으로 지원되지만 **System.Net.WebClient** 클래스는 지원되지 않습니다. 권장되는 미래 지향적인 대안은 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 (또는 .NET을 지원하는 다른 플랫폼으로 이식할 수 있는 코드가 필요한 경우 [System.Net.Http.HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.118).aspx))입니다. 이러한 API는 [System.Net.Http.HttpRequestMessage](https://msdn.microsoft.com/library/system.net.http.httprequestmessage.aspx)를 사용하여 HTTP 요청을 나타냅니다.
 
-UWP apps do not currently include built-in support for data-intensive scenarios such as line of business (LOB) scenarios. However, you can make use SQLite for local transactional database services. For more info, see [SQLite](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936).
+UWP 앱은 현재 LOB(기간 업무) 시나리오와 같이 데이터 사용이 많은 시나리오를 기본적으로 지원하지 않습니다. 그러나 로컬 트랜잭션 데이터베이스 서비스에 대해 SQLite를 사용할 수 있습니다. 자세한 내용은 [SQLite](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936)를 참조하세요.
 
-Pass absolute URIs, not relative URIs, to Windows Runtime types. See [Passing a URI to the Windows Runtime](https://msdn.microsoft.com/library/hh763341.aspx).
+Windows 런타임 형식에 상대 URI가 아니라 절대 URI를 전달합니다. [Windows 런타임에 URI 전달](https://msdn.microsoft.com/library/hh763341.aspx)을 참조하세요.
 
-## <a name="launchers-and-choosers"></a>Launchers and Choosers
+## <a name="launchers-and-choosers"></a>시작 관리자 및 선택자
 
-With Launchers and Choosers (found in the **Microsoft.Phone.Tasks** namespace), a Windows Phone Silverlight app can interact with the operating system to perform common operations such as composing an email, choosing a photo, or sharing certain kinds of data with another app. Search for **Microsoft.Phone.Tasks** in the topic [Windows Phone Silverlight to Windows 10 namespace and class mappings](wpsl-to-uwp-namespace-and-class-mappings.md) to find the equivalent UWP type. These range from similar mechanisms, called launchers and pickers, to implementing a contract for sharing data between apps.
+Windows Phone Silverlight 앱에서는 **Microsoft.Phone.Tasks** 네임스페이스에 있는 시작 관리자와 선택자를 통해 운영 체제를 조작하여 메일 작성, 사진 선택, 다른 앱과 특정 형식의 데이터 공유 등과 같은 일반 작업을 수행할 수 있습니다. [Windows Phone Silverlight를 Windows 10 네임스페이스 및 클래스에 매핑](wpsl-to-uwp-namespace-and-class-mappings.md) 항목에서 **Microsoft.Phone.Tasks**를 검색하여 해당 UWP 형식을 찾습니다. 여기에는 시작 관리자와 선택기라는 비슷한 메커니즘부터 앱 간 데이터 공유에 대한 계약 구현까지 포함됩니다.
 
-A Windows Phone Silverlight app can be put into a dormant state or even tombstoned when using, for example, the photo Chooser task. A UWP app remains active and running while using the [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) class.
+Windows Phone Silverlight 앱은 유휴 상태로 전환되거나 삭제 표시될 수 있습니다(예제: 사진 선택자 작업을 사용할 때). UWP 앱은 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 클래스를 사용하는 동안 활성 및 실행 상태를 유지합니다.
 
-## <a name="monetization-trial-mode-and-in-app-purchases"></a>Monetization (trial mode and in-app purchases)
+## <a name="monetization-trial-mode-and-in-app-purchases"></a>수익 창출(평가 모드 및 앱에서 바로 구매)
 
-A Windows Phone Silverlight app can use the UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) class for most of its trial mode and in-app purchase functionality, so that code doesn't need to be ported. But, a Windows Phone Silverlight app calls **MarketplaceDetailTask.Show** to offer the app for purchase:
+Windows Phone Silverlight 앱에서는 대부분의 체험 모드 및 앱에서 바로 구매 기능에 대해 UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) 클래스를 사용할 수 있으므로 코드를 포팅할 필요가 없습니다. 하지만 Windows Phone Silverlight 앱에서는 구매용 앱을 제공하기 위해 **MarketplaceDetailTask.Show**를 호출합니다.
 
 ```csharp
     private void Buy()
@@ -58,7 +58,7 @@ A Windows Phone Silverlight app can use the UWP [**CurrentApp**](https://msdn.
     }
 ```
 
-Port that code to call the UWP [**RequestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813) method:
+다음과 같이 해당 코드를 포팅하여 UWP [**RequestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813) 메서드를 호출합니다.
 
 ```csharp
     private async void Buy()
@@ -67,19 +67,19 @@ Port that code to call the UWP [**RequestAppPurchaseAsync**](https://msdn.micr
     }
 ```
 
-If you have code that simulates your app purchase and in-app purchase features for testing purposes, then you can port that to use the [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) class instead.
+테스트를 위해 앱 구매 및 앱에서 바로 구매 기능을 시뮬레이션하는 코드가 있는 경우 해당 코드를 포팅하여 [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) 클래스를 대신 사용할 수 있습니다.
 
-## <a name="notifications-for-tile-or-toast-updates"></a>Notifications for tile or toast updates
+## <a name="notifications-for-tile-or-toast-updates"></a>타일 또는 알림 업데이트 알림
 
-Notifications are an extension of the push notification model for Windows Phone Silverlight apps. When you receive a notification from the Windows Push Notification Service (WNS), you can surface the info to the UI with a tile update or with a toast. For porting the UI side of your notification features, see [Tiles and toasts](w8x-to-uwp-porting-xaml-and-ui.md).
+알림은 Windows Phone Silverlight 앱을 위한 푸시 알림 모델의 확장입니다. WNS(Windows 푸시 알림 서비스)에서 알림을 수신할 때 타일 업데이트 또는 알림을 통해 정보를 UI에 표시할 수 있습니다. 알림 기능의 UI 측면을 포팅하려면 [타일 및 알림](w8x-to-uwp-porting-xaml-and-ui.md)을 참조하세요.
 
-For more details on the use of notifications in a UWP app, see [Sending toast notifications](https://msdn.microsoft.com/library/windows/apps/xaml/hh868266).
+UWP 앱에서 알림을 사용하는 방법에 대한 자세한 내용은 [알림 메시지 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868266)를 참조하세요.
 
-For info and tutorials on using tiles, toasts, badges, banners, and notifications in a Windows Runtime app using C++, C#, or Visual Basic, see [Working with tiles, badges, and toast notifications](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱에서 타일, 알림, 배지 및 배너를 사용하는 방법에 대한 정보와 자습서는 [타일, 배지 및 알림 메시지 작업](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259)을 참조하세요.
 
-## <a name="storage-file-access"></a>Storage (file access)
+## <a name="storage-file-access"></a>저장소(파일 액세스)
 
-Windows Phone Silverlight code that stores app settings as key-value pairs in isolated storage is easily ported. Here is a before-and-after example, first the Windows Phone Silverlight version:
+앱 설정을 격리된 저장소에 키-값 쌍으로 저장하는 Windows Phone Silverlight 코드는 쉽게 포팅됩니다. 다음은 이전 및 이후 예제입니다. Windows Phone Silverlight 버전:
 
 ```csharp
     var propertySet = IsolatedStorageSettings.ApplicationSettings;
@@ -89,7 +89,7 @@ Windows Phone Silverlight code that stores app settings as key-value pairs in is
     string myFavoriteAuthor = propertySet.Contains(key) ? (string)propertySet[key] : "<none>";
 ```
 
-And the UWP equivalent:
+UWP 해당 버전:
 
 ```csharp
     var propertySet = Windows.Storage.ApplicationData.Current.LocalSettings.Values;
@@ -98,7 +98,7 @@ And the UWP equivalent:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Although a subset of the **Windows.Storage** namespace is available to them, many Windows Phone Silverlight apps perform file i/o with the **IsolatedStorageFile** class because it has been supported for longer. Assuming that **IsolatedStorageFile** is being used, here's a before-and-after example of writing and reading a file, first the Windows Phone Silverlight version:
+**Windows.Storage** 네임스페이스의 하위 집합을 사용할 수 있지만 많은 Windows Phone Silverlight 앱에서는 이 네임스페이스가 더 이상 지원되지 않으므로 **IsolatedStorageFile** 클래스를 통해 파일 I/O를 수행합니다. 다음은 **IsolatedStorageFile**을 사용할 경우의 파일 읽기 및 쓰기에 대한 이전 및 이후 예제입니다. Windows Phone Silverlight 버전:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";
@@ -115,7 +115,7 @@ Although a subset of the **Windows.Storage** namespace is available to them, man
     }
 ```
 
-And the same functionality using the UWP:
+UWP를 사용하는 동일한 기능:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";
@@ -126,17 +126,17 @@ And the same functionality using the UWP:
     string myFavoriteAuthor = await Windows.Storage.FileIO.ReadTextAsync(file);
 ```
 
-A Windows Phone Silverlight app has read-only access to the optional SD card. A UWP app has read-write access to the SD card. For more info, see [Access the SD card](https://msdn.microsoft.com/library/windows/apps/mt188699).
+Windows Phone Silverlight 앱은 선택적 SD 카드에 대한 읽기 전용 권한이 있습니다. UWP 앱은 SD 카드에 대해 읽기/쓰기 권한이 있습니다. 자세한 내용은 [SD 카드에 액세스](https://msdn.microsoft.com/library/windows/apps/mt188699)를 참조하세요.
 
-For info about accessing photos, music, and video files in a UWP app, see [Files and folders in the Music, Pictures, and Videos libraries](https://msdn.microsoft.com/library/windows/apps/mt188703).
+UWP 앱에서 사진, 음악 및 동영상 파일에 액세스하는 방법에 대한 자세한 내용은 [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](https://msdn.microsoft.com/library/windows/apps/mt188703)를 참조하세요.
 
-For more info, see [Files, folders, and libraries](https://msdn.microsoft.com/library/windows/apps/mt185399).
+자세한 내용은 [파일, 폴더 및 라이브러리](https://msdn.microsoft.com/library/windows/apps/mt185399)를 참조하세요.
 
-The next topic is [Porting for form factor and UX](wpsl-to-uwp-form-factors-and-ux.md).
+다음 항목은 [폼 팩터 및 UX에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md)입니다.
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Namespace and class mappings](wpsl-to-uwp-namespace-and-class-mappings.md)
+* [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)
  
 
 

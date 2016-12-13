@@ -1,8 +1,8 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: Learn about UI and user experience guidelines for ads in apps.
-title: UI and user experience guidelines for ads in apps
+description: "앱에 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다."
+title: "앱에 광고에 대한 UI 및 사용자 환경 지침"
 translationtype: Human Translation
 ms.sourcegitcommit: 148aca16104f599f3048f5965c4131a3f37799f8
 ms.openlocfilehash: 97feb4f79e0592a7b54a8263b15cd2b85dd3243d
@@ -10,137 +10,137 @@ ms.openlocfilehash: 97feb4f79e0592a7b54a8263b15cd2b85dd3243d
 
 ---
 
-# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>UI and user experience guidelines for ads in apps
+# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>앱에 광고에 대한 UI 및 사용자 환경 지침
 
 
-## <a name="general-ui-resources-for-windows-apps"></a>General UI resources for Windows apps
+## <a name="general-ui-resources-for-windows-apps"></a>Windows 앱용 일반 UI 리소스
 
-You can find information about how to design the look and feel for apps at [Design & UI](https://developer.microsoft.com/windows/design).
+[디자인 및 UI](https://developer.microsoft.com/windows/design)에서 앱의 모양과 느낌을 디자인하는 방법에 대한 정보를 찾을 수 있습니다.
 
-## <a name="adcontrol-best-practices"></a>AdControl best practices
+## <a name="adcontrol-best-practices"></a>AdControl 모범 사례
 
-* [AdControl best practices: DO](#adcontrolbestpracticesdo10)
-* [AdControl best practices: DON'T](#adcontrolbestpracticesdont10)
+* [AdControl 모범 사례: 할 일](#adcontrolbestpracticesdo10)
+* [AdControl 모범 사례: 하지 않을 일](#adcontrolbestpracticesdont10)
 
 <span id="adcontrolbestpracticesdo10"/>
-### <a name="adcontrol-best-practices-do"></a>AdControl best practices: DO
+### <a name="adcontrol-best-practices-do"></a>AdControl 모범 사례: 할 일
 
-* Design advertising into your experience. Give your designers a sample ad to plan how the advertising is going to look. Two examples of well-planned ads in apps are the ads-as-content layout and the split layout.
+* 사용 환경에 맞게 광고를 디자인합니다. 디자이너에게 광고 형태를 계획하기 위한 샘플 광고를 제공합니다. 앱의 잘 계획된 광고 예제 2가지는 콘텐츠 형태 광고 레이아웃 및 분할 레이아웃입니다.
 
-  To see how different ad sizes will look and function within your app, you can utilize our test mode ad units for Windows Phone, Windows 8.1, and Windows 10. When you’re done with the test mode ad units, remember to [update your app with real ad unit IDs](set-up-ad-units-in-your-app.md) before submitting the app for certification.
+  다양한 크기의 광고가 앱 내에서 표시되고 작동하는 방식을 보려면 Windows Phone, Windows&nbsp;8.1 및 Windows 10용 테스트 모드 광고 단위를 활용할 수 있습니다. 테스트 모드 광고 단위 사용을 완료한 경우 인증을 위해 앱을 제출하기 전에 [실제 광고 단위 ID로 앱을 업데이트](set-up-ad-units-in-your-app.md)해야 합니다.
 
-* Plan for times when no ads are available. There may be times when ads aren't being sent to your app. Lay out your pages in such a way that they look great whether they showcase an ad or not. For more information, see [Error handling](error-handling-with-advertising-libraries.md).
+* 광고를 사용할 수 없는 시간을 계획합니다. 광고가 앱으로 전송되지 않는 시간이 있을 수 있습니다. 페이지에 광고가 표시되는지 여부에 따라 페이지가 돋보이는 방식으로 레이아웃을 지정합니다. 자세한 내용은 [오류 처리](error-handling-with-advertising-libraries.md)를 참조하세요.
 
 <span id="adcontrolbestpracticesdont10"/>
-### <a name="adcontrol-best-practices-dont"></a>AdControl best practices: DON'T
+### <a name="adcontrol-best-practices-dont"></a>AdControl 모범 사례: 하지 않을 일
 
-* Bolt advertising into open real estate. Ad space shouldn't be placed into the first open piece of real estate you can find. Instead, it should be incorporated into your app's overall design.
+* 열린 공간에 광고를 고정하지 않습니다. 광고 공간을 찾을 수 있는 첫 번째 열린 공간에 배치하면 안 됩니다. 대신, 앱의 전체 디자인에 통합되어야 합니다.
 
-* Over-advertise and saturate your app. Too many ads in your app detract from its appearance and usability. You want to make money with advertising, but not at the expense of the app itself.
+* 지나치게 광고하여 광고로 앱을 포화시키지 않습니다. 앱에 광고가 너무 많으면 모양이 정신 없고 유용성이 떨어집니다. 광고로 수익을 창출할 수 있지만 앱 자체를 희생해서는 안 됩니다.
 
-* Distract user from their core tasks. The primary focus should always be on the app. The ad space should be incorporated so it remains a secondary focus.
+* 사용자가 핵심 작업이 아닌 다른 부분에 정신이 팔리게 하면 안 됩니다. 일차적인 포커스는 항상 앱에 있어야 합니다. 광고 공간은 이차적인 포커스가 유지되도록 통합해야 합니다.
 
 <span id="interstitialbestpractices10"/>
-## <a name="interstitial-best-practices-and-policies"></a>Interstitial best practices and policies
+## <a name="interstitial-best-practices-and-policies"></a>중간 광고 모범 사례 및 정책
 
-* [Interstitial best practices: DO](#interstitialbestpracticesdo10)
-* [Interstitial best practices: AVOID](#interstitialbestpracticesavoid10)
-* [Interstitial best practices: NEVER (policy enforced)](#interstitialbestpracticesnever10)
+* [중간 광고 모범 사례: 할 일](#interstitialbestpracticesdo10)
+* [중간 광고 모범 사례: 피할 일](#interstitialbestpracticesavoid10)
+* [중간 광고 모범 사례: 절대 금지(정책 적용)](#interstitialbestpracticesnever10)
 
-When used elegantly, video interstitial ads can vastly increase your app revenue, without negatively impacting user satisfaction. When used improperly, such ads can have the exact opposite effect.
+과하지 않게 사용될 경우 동영상 중간 광고는 사용자 만족도에 부정적인 영향을 주지 않으면서 앱 수익을 크게 높일 수 있습니다. 그렇지만 잘못 사용하면 이러한 광고는 정반대의 효과를 가져올 수 있습니다.
 
-Here we aim to help you achieve elegance. Since you know your app better than anyone, except where policy is concerned, we leave it up to you to make the best final decision. What’s most important to keep in mind is that your app ratings and revenue are tightly coupled.
+과하지 않은 수준을 유지하는 것이 중요합니다. 정책이 관련되는 경우를 제외하고, 사용자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
 
 <span id="interstitialbestpracticesdo10"/>
-### <a name="interstitial-best-practices-do"></a>Interstitial best practices: DO
+### <a name="interstitial-best-practices-do"></a>중간 광고 모범 사례: 할 일
 
-* Fit interstitial ads within the natural flow of the app, such as between game levels.
+* 게임 레벨 중간과 같이 앱의 자연스러운 흐름 도중에 중간 광고를 표시합니다.
 
-* Associate ads with tangible upsides, such as:
+* 광고를 다음과 같은 구체적인 혜택과 연결합니다.
 
-    * Hints towards level completion.
+    * 레벨 완료를 위한 힌트
 
-    * Extra time to retry a level.
+    * 레벨을 다시 시도하기 위한 추가 시간
 
-    * Custom avatar features, like a tattoo or hat.
+    * 사용자 지정 아바타 특징(예: 문신 또는 모자)
 
-* If your app requires that a video ad be watched to completion, mention that rule upfront so they aren’t surprised with an error message upon hitting the close button.
+* 앱이 완료를 위해 동영상 광고를 시청하도록 요구하는 경우 닫기 단추를 누를 때 오류 메시지가 나타나도 놀라지 않도록 해당 규칙을 미리 언급합니다.
 
-* Pre-fetch the ad (by calling [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)) ideally 30-60 seconds before you need to show it.
+* 이상적으로 광고를 표시해야 하는 시간보다 30-60초 전쯤에 광고를 미리 가져옵니다([RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx) 호출).
 
-* Subscribe to all four events exposed in the [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) class (**Canceled**, **Completed**, **AdReady**, and **ErrorOccurred**) and use them to make the right decisions for your app.
+* [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 클래스에 노출된 4개의 모든 이벤트(**Canceled**, **Completed**, **AdReady** 및 **ErrorOccurred**)를 구독한 후 앱에 적절한 결정을 내리는 데 사용합니다.
 
-* Have some built-in experience to use in lieu of a server-matched ad. You’ll find this useful in a few scenarios:
+* 서버 일치 광고 대신 일부 기본 제공 환경이 사용되도록 합니다. 이렇게 하면 다음과 같은 시나리오에서 유용할 수 있습니다.
 
-    * Offline mode, when ad servers can’t be reached.
+    * 광고 서버에 연결할 수 없는 오프라인 모드
 
-    * When the **ErrorOccurred** event fires.
+    * **ErrorOccurred** 이벤트가 발생하는 경우
 
-    * If you opt to save user bandwidth based on [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx), there are APIs in the **ConnectionProfile** class which can help.
+    * [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)을 기준으로 사용자 대역폭을 저장하도록 선택하는 경우 **ConnectionProfile** 클래스에 도움이 될 수 있는 API가 있습니다.
 
-* Use the default (30s) timeout unless you have a valid reason to do otherwise, in which case don’t go below 10s.
+* 10초 이내에 이동할 수 없는 경우와 같은 타당한 이유가 있는 경우가 아니면 기본(30초) 시간 제한을 사용합니다.
 
-    * Video ads take substantially longer to download than banners, especially in markets that don’t have high speed connections.
+    * 동영상 광고는 특히, 고속 연결이 제공되지 않는 시장에서 배너보다 다운로드하는 데 더 오래 걸립니다.
 
 <span/>
 
-* Be mindful of the user’s data plan. For example, either don’t show, or warn user, before serving a video ad on a mobile device that is near/over its data limit. There are APIs in the [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) class which can help.
+* 사용자의 데이터 요금제를 염두에 둡니다. 예를 들어 데이터 제한에 가까워졌거나 제한을 초과하는 모바일 디바이스에서는 동영상 광고를 표시하지 않거나 광고를 제공하기 전에 사용자에게 경고를 합니다. [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) 클래스에 도움이 될 수 있는 API가 있습니다.
 
-* Continuously improve your app after the initial submission. Look at the ad reports and make design changes to improve fill and video completion rates.
+* 초기 전송 후 앱을 지속적으로 향상시킵니다. 광고 보고서를 살펴보고 채우기 및 동영상 완료 속도 향상에 도움이 되도록 디자인을 변경합니다.
 
 <span id="interstitialbestpracticesavoid10"/>
-### <a name="interstitial-best-practices-avoid"></a>Interstitial best practices: AVOID
+### <a name="interstitial-best-practices-avoid"></a>중간 광고 모범 사례: 피할 일
 
-* Overdoing it. Don’t force ads more than every 5 minutes or so, unless the user explicitly engages with an optional tangible benefit, beyond just playing the game.
+* 너무 많은 광고 사용을 피함. 사용자가 게임을 하는 것 외에 분명하게 선택적인 구체적 혜택을 받는 경우가 아니면 5분 이상마다 광고를 제공하지 않도록 합니다.
 
-* Video interstitials at app launch, since users may believe they clicked the wrong tile.
+* 사용자가 잘못된 타일을 클릭한 것으로 오인할 수 있으므로 앱을 시작할 때 동영상 중간 광고를 사용하지 않음
 
-* Video interstitials at exit. This is bad inventory, since completion rates will be near zero.
+* 종료할 때 동영상 중간 광고를 표시하지 않음. 완료 속도가 거의 제로에 가까워지므로 잘못된 인벤토리입니다.
 
-    * Two or more video ads back to back.
+    * 두 개 이상의 동영상 광고를 연속으로 표시하지 않음
 
-    * Users will be frustrated to see the ad progress bar reset to the starting point.
+    * 진행률 표시줄이 시작점으로 다시 설정되게 되어 사용자에게 혼란을 줍니다.
 
-    * Many will think it’s just a coding or ad serving bug.
+    * 많은 사람들이 코딩 버그나 광고 제공 버그 정도로 생각합니다.
 
-* Fetching a video ad more than 5 minutes before calling [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx).
+* 동영상 광고를 가져오고 5분 이상 경과한 후 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) 호출
 
-  * Good inventory will maximize the conversion of pre-fetched ads to billable impressions.
+  * 좋은 인벤토리는 미리 가져온 광고가 청구 가능한 광고 노출로 최대한 많이 변환되도록 합니다.
 
 <span/>
 
-* Penalizing a user for failures in ad serving, such as no ad available. For example, if you show a UI option to “Watch an ad to get *xxx*”, you should provide *xxx* if the user did her part. Two options to consider:
+* 광고 제공이 실패할 경우 광고를 사용할 수 없는 것과 같은 벌칙 부과. 예를 들어 "광고를 시청하여 *xxx* 받기" UI 옵션을 표시하는 경우 사용자가 자신의 역할을 해낼 경우 *xxx*를 제공해야 합니다. 다음 두 가지 옵션을 고려해야 합니다.
 
-    * Don’t include the option unless the [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) event has fired.
+    * [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) 이벤트가 발생하지 않는 한, 이 옵션을 포함하지 마세요.
 
-    * Have the app include a built-in experience that yields the same benefit as a real ad.
+    * 앱에 실제 광고와 동일한 이점을 가져오는 기본 제공 환경을 포함합니다.
 
-* Letting a user gain a competitive advantage in a multi-player game.
+* 멀티 플레이어 게임을 하는 사용자에게 경쟁적 우위 제공
 
-    * A better gun in a first-person shooter game would clearly fall into this bucket.
+    * 1인칭 슈팅 게임에서 더 나은 총이 이 버킷에 제공됩니다.
 
-    * A custom shirt on the player’s avatar is fine, so long as it doesn’t provide camouflage!
+    * 플레이어의 아바타에 적용된 사용자 지정 셔츠는 위장 효과를 제공하지 않으면 괜찮습니다.
 
 <span id="interstitialbestpracticesnever10"/>
-### <a name="interstitial-best-practices-never-policy-enforced"></a>Interstitial best practices: NEVER (policy enforced)
+### <a name="interstitial-best-practices-never-policy-enforced"></a>중간 광고 모범 사례: 절대 금지(정책 적용)
 
-* Never put any UI elements over the ad container.
+* 광고 컨테이너에 UI 요소를 배치하지 않습니다.
 
-    * Advertisers have paid for the full screen.
+    * 광고주는 전체 화면에 대해 비용을 지불했습니다.
 
 <span/>
 
-* Never call [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) while the user is engaged with the app.
+* 사용자가 앱에 연결된 동안 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)를 호출하지 않습니다.
 
-    * The user will find this jarring, because the [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) will create a full screen overlay.
+    * [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)는 전체 화면 오버레이를 만들기 때문에 사용자에게 거슬릴 수 있습니다.
 
-    * It may also lead to exaggerated click-through rates.
+    * 또한 광고 클릭률이 부풀려질 수 있습니다.
 
-* Never use ads to obtain anything that may be consumed as a currency or traded with other users.
+* 통화로 사용 가능하거나 다른 사용자와 거래할 수 있는 것을 얻기 위해 절대 광고를 사용하지 않도록 합니다.
 
-* Never request a new ad in the context of the event handler for the [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx) event. This can result in an infinite loop and can cause operational issues for the advertising service.
+* [ErrorOccurred](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.erroroccurred.aspx) 이벤트에 대한 이벤트 처리기의 컨텍스트에서 새 광고를 절대 요청하지 않습니다. 이렇게 하면 무한 루프가 발생하고 광고 서비스에서 작동 문제가 발생할 수 있습니다.
 
-* Never request an interstitial ad merely to have a backup ad for a waterfall sequence of ads. If you request an interstitial ad and then receive the [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) event, the next interstitial ad shown in your app must be the ad that is ready to be shown via the [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) method.
+* 단순히 일련의 광고에 대한 백업 광고를 위해 중간 광고를 요청하지 마세요. 중간 광고를 요청한 후 [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx) 이벤트를 받은 경우 앱에 표시되는 다음 중간 광고는 [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx) 메서드를 통해 표시할 준비가 된 광고여야 합니다.
 
  
 

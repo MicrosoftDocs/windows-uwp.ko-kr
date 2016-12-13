@@ -1,7 +1,7 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Incorporate speech into your apps using Cortana voice commands, speech recognition, and speech synthesis.
-title: Speech interactions
+Description: "Cortana 음성 명령, 음성 인식, 음성 합성을 사용하여 음성 명령을 앱에 통합합니다."
+title: "음성 조작"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
@@ -11,223 +11,223 @@ ms.openlocfilehash: 5efb2d1fc6a63e372e91cfdc8ae5e8117ff047d5
 
 ---
 
-# <a name="speech-interactions"></a>Speech interactions
+# <a name="speech-interactions"></a>음성 조작
 
 
-Integrate speech recognition and text-to-speech (also known as TTS, or speech synthesis) directly into the user experience of your app.
+음성 인식과 텍스트 음성 변환(TTS 또는 음성 합성이라고도 함)을 앱의 사용자 환경에 직접 통합합니다.
 
 
-**Other speech components**
+**다른 음성 구성 요소**
 
--   See the [Cortana design guidelines](cortana-interactions.md) if you are exposing app functionality in the **Cortana** UI.
+-   **Cortana** UI에 앱 기능을 표시하는 경우 [Cortana 디자인 지침](cortana-interactions.md)을 참조하세요.
 
 
-**Speech recognition:** converts words spoken by the user into text for form input, for text dictation, to specify an action or command, and to accomplish tasks. Both pre-defined grammars for free-text dictation and web search, and custom grammars authored using Speech Recognition Grammar Specification (SRGS) Version 1.0 are supported.
+**음성 인식:** 사용자가 말한 단어를 양식 입력 또는 텍스트 받아쓰기용 텍스트로 변환하여 동작 또는 명령을 지정하고 작업을 완료합니다. 자유 텍스트 받아쓰기 및 웹 검색에 대해 미리 정의된 문법과 SRGS(Speech Recognition Grammar Specification) 버전 1.0을 사용하여 작성된 사용자 지정 문법이 둘 다 지원됩니다.
 
-**TTS:** uses a speech synthesis engine (voice) to convert a text string into spoken words. The input string can be either basic, unadorned text or more complex Speech Synthesis Markup Language (SSML). SSML provides a standard way to control characteristics of speech output, such as pronunciation, volume, pitch, rate or speed, and emphasis.
+**TTS:** 음성 합성 엔진(음성)을 사용하여 텍스트 문자열을 음성으로 변환합니다. 입력 문자열은 일반적인 기본 텍스트이거나 더욱 복잡한 SSML(Speech Synthesis Markup Language)일 수 있습니다. SSML은 발음, 볼륨, 피치, 비율 또는 속도, 강조 등의 음성 출력 특성을 제어하는 표준 방법을 제공합니다.
 
 > [!NOTE]
-> Using **Cortana** and customized voice commands, your app can be launched in the foreground (the app takes focus, just as if it was launched from the Start menu) or activated as a background service (**Cortana** retains focus but provides results from the app).
+> **Cortana**와 사용자 지정 음성 명령을 사용하여 앱을 포그라운드(앱이 시작 메뉴에서 시작된 것처럼 포커스가 앱에 있음)에서 실행하거나 백그라운드 서비스(**Cortana**가 포커스를 유지하지만 앱의 결과를 제공함)로 활성화할 수 있습니다.
 > 
-> Commands that require additional context or user input (such as sending a message to a specific contact) are best handled in a foreground app, while basic commands can be handled in **Cortana** through a background app.
+> 추가 컨텍스트 또는 사용자 입력(예: 특정 연락처에 메시지 보내기)이 필요한 명령은 포그라운드 앱에서 가장 잘 처리할 수 있지만, 기본 명령은 백그라운드 앱을 통해 **Cortana**에서 처리할 수 있습니다.
 >
-> If you are exposing functionality as a background service through voice commands in the **Cortana** UI, see the [Cortana design guidelines](cortana-design-guidelines.md).
+> **Cortana** UI의 음성 명령을 통해 백그라운드 서비스로 기능을 표출할 경우 [Cortana 디자인 지침](cortana-design-guidelines.md)을 참조하세요.
 
-Designed and implemented thoughtfully, speech can be a robust and enjoyable way for people to interact with your app, complementing, or even replacing, keyboard, mouse, touch, and gestures.
+신중하게 디자인되고 구현된 음성을 통해 사람들은 효과적이고 즐겁게 앱을 조작할 수 있으며, 음성으로 키보드, 마우스, 터치 및 제스처를 보완하거나 심지어 대체할 수 있습니다.
 
-## <a name="speech-interaction-design"></a>Speech interaction design
+## <a name="speech-interaction-design"></a>음성 조작 디자인
 
-These guidelines and recommendations describe how to best integrate both speech recognition and TTS into the interaction experience of your app.
+다음 지침과 권장 사항에서는 앱 조작 환경에 음성 인식과 TTS를 모두 통합하는 최고의 방법에 관해 설명합니다.
 
-If you are considering supporting speech interactions in your app:
+앱에서 음성 조작 지원을 고려하고 있는 경우:
 
--   What actions can be taken through speech? Can a user navigate between pages, invoke commands, or enter data as text fields, brief notes, or long messages?
--   Is speech input a good option for completing a task?
--   How does a user know when speech input is available?
--   Is the app always listening, or does the user need to take an action for the app to enter listening mode?
--   What phrases initiate an action or behavior? Do the phrases and actions need to be enumerated on screen?
--   Are prompt, confirmation, and disambiguation screens or TTS required?
--   What is the interaction dialog between app and user?
--   Is a custom or constrained vocabulary required (such as medicine, science, or locale) for the context of your app?
--   Is network connectivity required?
+-   음성을 통해 어떤 작업을 수행할 수 있나요? 사용자가 페이지 간을 탐색하거나, 명령을 호출하거나, 텍스트 필드, 간단한 메모 또는 긴 메시지와 같은 데이터를 입력할 수 있나요?
+-   음성 입력이 작업을 완료하기 위한 좋은 방법인가요?
+-   사용자가 음성 입력을 사용할 수 있는 경우를 어떻게 알 수 있나요?
+-   앱이 항상 수신 대기하나요, 아니면 앱이 듣기 모드를 시작하도록 사용자가 작업을 수행해야 하나요?
+-   작업이나 동작을 시작하려면 어떤 구를 말해야 하나요? 구 및 작업을 화면에 열거해야 하나요?
+-   프롬프트, 확인 및 명확성 화면 또는 TTS가 필요한가요?
+-   앱과 사용자 간 조작 대화는 무엇인가요?
+-   앱의 컨텍스트에 사용자 지정 어휘 또는 제한된 어휘(예: 의학, 과학 또는 로캘)가 필요한가요?
+-   네트워크 연결이 필요한가요?
 
-## <a name="text-input"></a>Text input
+## <a name="text-input"></a>텍스트 입력
 
-Speech for text input can range from short form (single word or phrase) to long form (continuous dictation). Short form input must be less than 10 seconds in length, while long form input session can be up to two minutes in length. (Long form input can be restarted without user intervention to give the impression of continuous dictation.)
+텍스트 입력용 음성은 짧은 양식(한 단어 또는 구)에서 긴 양식(연속 받아쓰기)에 이르기까지 다양합니다. 짧은 양식 입력의 길이는 10초 미만이어야 하며, 긴 양식 입력 세션의 길이는 최대 2분까지 가능합니다. 사용자의 개입 없이 긴 양식 입력을 다시 시작할 수 있으므로 사용자에게 연속 받아쓰기와 같은 인상을 줍니다.
 
-You should provide a visual cue to indicate that speech recognition is supported and available to the user and whether the user needs to turn it on. For example, a command bar button with a microphone glyph (see [Command bars](../controls-and-patterns/app-bars.md)) can be used to show both availability and state.
+음성 인식을 지원하고 사용자가 음성 인식을 사용할 수 있으며 음성 인식을 켜야 하는지 여부를 나타내는 시각 신호를 제공해야 합니다. 예를 들어 마이크 문자 모양이 있는 명령 모음 단추([명령 모음](../controls-and-patterns/app-bars.md) 참조)를 사용하여 가용성과 상태를 모두 표시할 수 있습니다.
 
-Provide ongoing recognition feedback to minimize any apparent lack of response while recognition is being performed.
+지속적인 인식 피드백을 제공하여 인식이 수행되는 동안 응답이 부족해 보이는 문제를 최소화합니다.
 
-Let users revise recognition text using keyboard input, disambiguation prompts, suggestions, or additional speech recognition.
+사용자가 키보드 입력, 명확성 프롬프트, 제안 또는 추가 음성 인식을 사용하여 인식 텍스트를 수정하도록 합니다.
 
-Stop recognition if input is detected from a device other than speech recognition, such as touch or keyboard. This probably indicates that the user has moved onto another task, such as correcting the recognition text or interacting with other form fields.
+터치 또는 키보드와 같이 음성 인식이 아닌 다른 장치에서의 입력이 감지되면 인식을 중지합니다. 이러한 다른 장치의 입력은 사용자가 인식 텍스트를 수정하거나 다른 양식 필드를 조작하는 등 다른 작업으로 이동했음을 나타냅니다.
 
-Specify the length of time for which no speech input indicates that recognition is over. Do not automatically restart recognition after this period of time as it typically indicates the user has stopped engaging with your app.
+인식이 끝났음을 나타내는 침묵 시간 즉, 음성 입력이 없는 시간을 지정합니다. 이는 일반적으로 사용자가 앱 참여를 중지했음을 나타내므로 이 시간 이후에 인식을 자동으로 다시 시작하지 마세요.
 
-Disable all continuous recognition UI and terminate the recognition session if a network connection is not available. Continuous recogntion requires a network connection.
+네트워크 연결을 사용할 수 없는 경우 모든 연속 인식 UI를 비활성화하고 인식 세션을 종료합니다. 연속 인식에는 네트워크 연결이 필요합니다.
 
-## <a name="commanding"></a>Commanding
+## <a name="commanding"></a>명령
 
-Speech input can initiate actions, invoke commands, and accomplish tasks.
+음성 입력으로 작업을 시작하고, 명령을 호출하고, 작업을 수행할 수 있습니다.
 
-If space permits, consider displaying the supported responses for the current app context, with examples of valid input. This reduces the potential responses your app has to process and also eliminates confusion for the user.
+공간이 허용되는 경우 올바른 입력 예를 사용하여 현재 앱 컨텍스트에 대해 지원되는 응답을 표시하는 것이 좋습니다. 그러면 앱이 처리해야 하는 잠재적인 응답을 최소화하고 사용자의 혼동도 제거할 수 있습니다.
 
-Try to frame your questions such that they elicit as specific a response as possible. For example, "What do you want to do today?" is very open ended and would require a very large grammar definition due to how varied the responses could be. Alternatively, "Would you like to play a game or listen to music?" constrains the response to one of two valid answers with a correspondingly small grammar definition. A small grammar is much easier to author and results in much more accurate recognition results.
+가능한 한 구체적인 응답을 끌어낼 수 있는 질문 표현을 시도합니다. 예를 들어 "오늘은 무엇을 하고 싶나요?"라는 질문은 매우 개방적이어서 응답이 크게 달라질 수 있으므로 매우 큰 문법 정의가 필요합니다. 그러나 "게임을 하시겠어요? 음악을 들으시겠어요?"라는 질문은 상대적으로 작은 문법 정의의 두 가지 유효한 대답 중 하나로 응답을 제한합니다. 작은 문법이 작성하기에 훨씬 더 쉬우므로 훨씬 더 정확한 인식 결과를 낳습니다.
 
-Request confirmation from the user when speech recognition confidence is low. If the user's intent is unclear, it's better to get clarification than to initiate an unintended action.
+음성 인식 신뢰도가 낮을 경우 사용자의 확인을 요청합니다. 사용자의 의도가 명확하지 않은 경우 의도하지 않은 작업을 시작하는 것보다 명확성을 추구하는 것이 좋습니다.
 
-You should provide a visual cue to indicate that speech recognition is supported and available to the user and whether the user needs to turn it on. For example, a command bar button with a microphone glyph (see [Guidelines for command bars](../controls-and-patterns/app-bars.md)) can be used to show both availability and state.
+음성 인식을 지원하고 사용자가 음성 인식을 사용할 수 있으며 음성 인식을 켜야 하는지 여부를 나타내는 시각 신호를 제공해야 합니다. 예를 들어 마이크 문자 모양이 있는 명령 모음 단추([명령 모음에 대한 지침](../controls-and-patterns/app-bars.md) 참조)를 사용하여 가용성과 상태를 모두 표시할 수 있습니다.
 
-If the speech recognition switch is typically out of view, consider displaying a state indicator in the content area of the app.
+일반적으로 음성 인식 스위치가 표시되지 않는 경우 앱의 콘텐츠 영역에 상태 표시기를 표시하는 것이 좋습니다.
 
-If recognition is initiated by the user, consider using the built-in recognition experience for consistency. The built-in experience includes customizable screens with prompts, examples, disambiguations, confirmations, and errors.
+사용자가 인식을 시작한 경우 일관성을 위해 기본 제공 인식 환경을 사용하는 것이 좋습니다. 기본 제공 환경에는 프롬프트, 예제, 명확성, 확인 및 오류로 사용자 지정 가능한 화면이 포함되어 있습니다.
 
-The screens vary depending on the specified constraints:
+화면은 다음과 같은 지정된 제약 조건에 따라 달라집니다.
 
--   Pre-defined grammar (dictation or web search)
+-   미리 정의된 문법(받아쓰기 또는 웹 검색)
 
-    -   The **Listening** screen.
-    -   The **Thinking** screen.
-    -   The **Heard you say** screen or the error screen.
--   List of words or phrases, or a SRGS grammar file
+    -   **듣는 중** 화면
+    -   **생각하는 중** 화면
+    -   **들은 내용** 화면 또는 오류 화면
+-   단어 또는 구 목록 또는 SRGS 문법 파일
 
-    -   The **Listening** screen.
-    -   The **Did you say** screen, if what the user said could be interpreted as more than one potential result.
-    -   The **Heard you say** screen or the error screen.
+    -   **듣는 중** 화면
+    -   **확인 내용** 화면 - 사용자가 말한 내용을 둘 이상의 가능한 결과로 해석할 수 있는 경우
+    -   **들은 내용** 화면 또는 오류 화면
 
-On the **Listening** screen you can:
+**듣는 중** 화면에서 다음을 수행할 수 있습니다.
 
--   Customize the heading text.
--   Provide example text of what the user can say.
--   Specify whether the **Heard you say** screen is shown.
--   Read the recognized string back to the user on the **Heard you say** screen.
+-   제목 텍스트를 사용자 지정합니다.
+-   사용자가 말할 수 있는 예제 텍스트를 제공합니다.
+-   **들은 내용** 화면을 표시할지 지정합니다.
+-   **들은 내용** 화면에서 인식된 문자열을 사용자에게 다시 읽어줍니다.
 
-Here is an example of the built-in recognition flow for a speech recognizer that uses a SRGS-defined constraint. In this example, speech recognition is successful.
+다음은 SRGS에서 정의된 제약 조건을 사용하는 음성 인식기에 대한 기본 제공 인식 흐름의 예입니다. 이 예제에서는 음성 인식이 성공적이었습니다.
 
-![initial recognition screen for a constraint based on a sgrs grammar file](images/speech/speech-listening-initial.png)
+![SGRS 문법 파일을 기반으로 한 제약 조건의 초기 인식 화면](images/speech/speech-listening-initial.png)
 
-![intermediate recognition screen for a constraint based on a sgrs grammar file](images/speech/speech-listening-intermediate.png)
+![SGRS 문법 파일을 기반으로 한 제약 조건의 중간 인식 화면](images/speech/speech-listening-intermediate.png)
 
-![final recognition screen for a constraint based on a sgrs grammar file](images/speech/speech-listening-complete.png)
+![SGRS 문법 파일을 기반으로 한 제약 조건의 최종 인식 화면](images/speech/speech-listening-complete.png)
 
-## <a name="always-listening"></a>Always listening
+## <a name="always-listening"></a>항상 수신 대기
 
-Your app can listen for and recognize speech input as soon as the app is launched, without user intervention.
+앱이 시작되는 즉시 사용자 개입 없이 음성 입력을 듣고 인식할 수 있습니다.
 
-You should customize the grammar constraints based on the app context. This keeps the speech recognition experience very targeted and relevant to the current task, and minimizes errors.
+앱 컨텍스트에 따라 문법 제약 조건을 사용자 지정해야 합니다. 그러면 음성 인식 환경의 대상을 명확히 하고 현재 작업과 관련성을 유지하고 오류를 최소화합니다.
 
-## <a name="what-can-i-say"></a>"What can I say?"
+## <a name="what-can-i-say"></a>"이렇게 말 하세요~"
 
-When speech input is enabled, it's important to help users discover what exactly can be understood and what actions can be performed.
+음성 입력을 사용할 수 있는 경우 앱에서 정확하게 이해할 수 있는 내용 및 수행할 수 있는 작업을 사용자가 알아내도록 돕는 것이 중요합니다.
 
-If speech recognition is user enabled, consider using the command bar or a menu command to show all words and phrases supported in the current context.
+사용자가 음성 인식을 사용할 수 있는 경우 명령 모음 또는 메뉴 명령을 사용하여 현재 컨텍스트에서 지원되는 모든 단어와 구를 표시하는 것이 좋습니다.
 
-If speech recognition is always on, consider adding the phrase "What can I say?" to every page. When the user says this phrase, display all words and phrases supported in the current context. Using this phrase provides a consistent way for users to discover speech capabilities across the system.
+음성 인식이 항상 켜져 있는 경우 모든 페이지에 "이렇게 말 하세요~" 구를 추가하는 것이 좋습니다. 사용자가 이 구를 말하는 경우 현재 컨텍스트에서 지원되는 모든 단어와 구를 표시합니다. 이 구를 사용하면 사용자가 시스템 전체에서 음성 기능을 검색하는 데 일관된 방법을 제공할 수 있습니다.
 
-## <a name="recognition-failures"></a>Recognition failures
+## <a name="recognition-failures"></a>인식 오류
 
-Speech recognition will fail. Failures happen when audio quality is poor, when only part of a phrase is recognized, or when no input is detected at all.
+음성 인식에 실패합니다. 오류는 오디오 품질이 불량하거나 구의 일부만 인식하거나 입력이 전혀 감지되지 않을 때 발생합니다.
 
-Handle failure gracefully, help a user understand why recognition failed, and recover.
+오류를 적절하게 처리하고 사용자가 인식 실패의 원인을 이해하고 복구하도록 지원합니다.
 
-Your app should inform the user that they weren't understood and that they need to try again.
+앱에서 음성 입력을 이해하지 못했으므로 다시 시도해야 함을 사용자에게 알려야 합니다.
 
-Consider providing examples of one or more supported phrases. The user is likely to repeat a suggested phrase, which increases recognition success.
+지원되는 구의 예를 하나 이상 제공하는 것이 좋습니다. 사용자가 제안된 구를 반복할 가능성이 크므로 인식 성공 확률이 증가합니다.
 
-You should display a list of potential matches for a user to select from. This can be far more efficient than going through the recognition process again.
+사용자가 선택할 가능성이 있는 일치 목록을 표시합니다. 그러면 인식 프로세스를 다시 거치는 것보다 훨씬 더 효율적일 수 있습니다.
 
-You should always support alternative input types, which is especially helpful for handling repeated recognition failures. For example, you could suggest that the user try to use a keyboard, or use touch or a mouse to select from a list of potential matches.
+항상 대체 입력 유형을 지원해야 하며, 이는 반복된 인식 오류를 처리하는 데 특히 유용합니다. 예를 들어 사용자가 키보드를 사용하거나 터치 또는 마우스를 사용하여 가능성이 있는 일치 목록에서 선택하도록 제안할 수 있습니다.
 
-Use the built-in speech recognition experience as it includes screens that inform the user that recognition was not successful and lets the user make another recognition attempt.
+사용자에게 인식이 실패했음을 알리는 화면이 포함되어 있어 사용자가 다른 인식을 시도할 수 있는 기본 제공 음성 인식 환경을 사용합니다.
 
-Listen for and try to correct issues in the audio input. The speech recognizer can detect issues with the audio quality that might adversely affect speech recognition accuracy. You can use the information provided by the speech recognizer to inform the user of the issue and let them take corrective action, if possible. For example, if the volume setting on the microphone is too low, you can prompt the user to speak louder or turn the volume up.
+오디오 입력을 잘 듣고 문제를 해결합니다. 음성 인식기는 음성 인식의 정확도에 악영향을 줄 수 있는 오디오 품질 문제를 검색할 수 있습니다. 음성 인식기에서 제공한 정보를 사용하여 사용자에게 문제를 알리고 가능한 경우 사용자가 수정 작업을 수행할 수 있도록 합니다. 예를 들어 마이크의 볼륨 설정이 너무 낮을 경우 더 크게 말하거나 볼륨을 높이라는 메시지를 사용자에게 표시할 수 있습니다.
 
-## <a name="constraints"></a>Constraints
+## <a name="constraints"></a>제약 조건
 
-Constraints, or grammars, define the spoken words and phrases that can be matched by the speech recognizer. You can specify one of the pre-defined web service grammars or you can create a custom grammar that is installed with your app.
+제약 조건 또는 문법은 음성 인식기에서 일치시킬 수 있는 음성 단어 및 구를 정의합니다. 미리 정의된 웹 서비스 문법 중 하나를 지정하거나 앱과 함께 설치된 사용자 지정 문법을 만들 수 있습니다.
 
-### <a name="predefined-grammars"></a>Predefined grammars
+### <a name="predefined-grammars"></a>미리 정의된 문법
 
-Predefined dictation and web-search grammars provide speech recognition for your app without requiring you to author a grammar. When using these grammars, speech recognition is performed by a remote web service and the results are returned to the device
+미리 정의된 받아쓰기 및 웹 검색 문법은 사용자가 문법을 작성할 필요 없이 앱에 대한 음성 인식 기능을 제공합니다. 이러한 문법을 사용할 때 음성 인식은 원격 웹 서비스에서 수행되고 결과가 장치로 반환됩니다.
 
--   The default free-text dictation grammar can recognize most words and phrases that a user can say in a particular language, and is optimized to recognize short phrases. Free-text dictation is useful when you don't want to limit the kinds of things a user can say. Typical uses include creating notes or dictating the content for a message.
--   The web-search grammar, like a dictation grammar, contains a large number of words and phrases that a user might say. However, it is optimized to recognize terms that people typically use when searching the web.
-
-> [!NOTE]
-> Because predefined dictation and web-search grammars can be large, and because they are online (not on the device), performance might not be as fast as with a custom grammar installed on the device.
-
-These predefined grammars can be used to recognize up to 10 seconds of speech input and require no authoring effort on your part. However, they do require connection to a network.
-
-### <a name="custom-grammars"></a>Custom grammars
-
-A custom grammar is designed and authored by you and is installed with your app. Speech recognition using a custom constraint is performed on the device.
-
--   Programmatic list constraints provide a lightweight approach to creating simple grammars using a list of words or phrases. A list constraint works well for recognizing short, distinct phrases. Explicitly specifying all words in a grammar also improves recognition accuracy, as the speech recognition engine must only process speech to confirm a match. The list can also be programmatically updated.
--   An SRGS grammar is a static document that, unlike a programmatic list constraint, uses the XML format defined by the [SRGS Version 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302). An SRGS grammar provides the greatest control over the speech recognition experience by letting you capture multiple semantic meanings in a single recognition.
-
-    Here are some tips for authoring SRGS grammars:
-
-    -   Keep each grammar small. Grammars that contain fewer phrases tend to provide more accurate recognition than larger grammars that contain many phrases. It's better to have several smaller grammars for specific scenarios than to have a single grammar for your entire app.
-    -   Let users know what to say for each app context and enable and disable grammars as needed.
-    -   Design each grammar so users can speak a command in a variety of ways. For example, you can use the **GARBAGE** rule to match speech input that your grammar does not define. This lets users speak additional words that have no meaning to your app. For example, "give me", "and", "uh", "maybe", and so on.
-    -   Use the [sapi:subset](http://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) element to help match speech input. This is a Microsoft extension to the SRGS specification to help match partial phrases.
-    -   Try to avoid defining phrases in your grammar that contain only one syllable. Recognition tends to be more accurate for phrases containing two or more syllables.
-    -   Avoid using phrases that sound similar. For example, phrases such as "hello", "bellow", and "fellow" can confuse the recognition engine and result in poor recognition accuracy.
+-   기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며 짧은 구를 인식하도록 최적화되어 있습니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 내용을 제한하지 않으려는 경우에 유용합니다. 일반적인 사용에는 노트 만들기나 메시지 내용 받아쓰기가 포함됩니다.
+-   받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
 > [!NOTE]
-> Which type of constraint type you use depends on the complexity of the recognition experience you want to create. Any could be the best choice for a specific recognition task, and you might find uses for all types of constraints in your app.
+> 미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 장치가 아니라 온라인상에 있으므로 장치에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.
 
-### <a name="custom-pronunciations"></a>Custom pronunciations
+이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
 
-If your app contains specialized vocabulary with unusual or fictional words, or words with uncommon pronunciations, you might be able to improve recognition performance for those words by defining custom pronunciations.
+### <a name="custom-grammars"></a>사용자 지정 문법
 
-For a small list of words and phrases, or a list of infrequently used words and phrases, you can create custom pronunciations in a SRGS grammar. See [token Element](http://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx) for more info.
+직접 디자인하고 작성하는 사용자 지정 문법은 앱과 함께 설치됩니다. 사용자 지정 제약 조건을 사용하는 음성 인식은 장치에서 수행됩니다.
 
-For larger lists of words and phrases, or frequently used words and phrases, you can create separate pronunciation lexicon documents. See [About Lexicons and Phonetic Alphabets](http://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx) for more info.
+-   프로그래밍 방식 목록 제약 조건은 단어 또는 구 목록을 사용하여 간단한 문법을 만드는 가벼운 방법을 제공합니다. 짧고 고유한 구를 인식하는 데는 목록 제약 조건이 유용합니다. 음성 인식 엔진이 일치를 확인하기 위해서만 음성을 처리해야 하므로 문법의 모든 단어를 명시적으로 지정하면 인식 정확도도 향상됩니다. 또한 목록은 프로그래밍 방식으로도 업데이트할 수 있습니다.
+-   SRGS 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용한 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
 
-## <a name="testing"></a>Testing
+    다음은 SRGS 문법 작성을 위한 몇 가지 팁입니다.
 
-Test speech recognition accuracy and any supporting UI with your app's target audience. This is the best way to determine the effectiveness of the speech interaction experience in your app. For example, are users getting poor recognition results because your app isn't listening for a common phrase?
+    -   각 문법을 작게 유지합니다. 더 적은 구가 포함된 문법은 많은 구가 포함된 더 큰 문법보다 더욱 정확한 인식을 제공하는 경향이 있습니다. 전체 앱용으로 하나의 문법을 사용하는 것보다 특정 시나리오용으로 더 작은 여러 문법을 사용하는 것이 더 좋습니다.
+    -   사용자가 각 앱 컨텍스트에 대해 말할 내용을 알도록 하고 필요에 따라 문법을 사용하거나 사용하지 않도록 합니다.
+    -   사용자가 다양한 방법으로 명령을 말할 수 있도록 각 문법을 설계합니다. 예를 들어 문법에서 정의하지 않는 음성 입력과 일치시키는 데 **GARBAGE** 규칙을 사용할 수 있습니다. 이 규칙을 통해 사용자가 앱에 의미가 없는 추가 단어를 말할 수 있습니다. 예를 들어 "주세요", "그리고", "어", "어쩌면" 등을 말할 수 있습니다.
+    -   음성 입력 일치에 도움이 되는 [sapi:subset](http://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx) 요소를 사용합니다. 이 요소는 부분 구 일치에 도움이 되는 SRGS 사양의 Microsoft 확장입니다.
+    -   하나의 음절만 포함하는 구는 문법에 정의하지 않도록 합니다. 인식은 둘 이상의 음절을 포함하는 구에 대해 더욱 정확한 경향이 있습니다.
+    -   비슷하게 소리 나는 구는 사용하지 마세요. 예를 들어 "hello", "bellow" 및 "fellow"와 같이 유사한 소리의 구는 인식 엔진에 혼동을 주므로 인식 정확도가 떨어질 수 있습니다.
 
-Either modify the grammar to support this phrase or provide users with a list of supported phrases. If you already provide the list of supported phrases, ensure it is easily discoverable.
+> [!NOTE]
+> 사용할 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 다릅니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
 
-## <a name="text-to-speech-tts"></a>Text-to-speech (TTS)
+### <a name="custom-pronunciations"></a>사용자 지정 발음
 
-TTS generates speech output from plain text or SSML.
+앱에 특이하거나 가상의 단어가 있는 전문 어휘 또는 발음이 일반적이지 않은 단어가 포함된 경우 사용자 지정 발음을 정의하여 해당 단어에 대한 인식 성능을 향상시킬 수 있습니다.
 
-Try to design prompts that are polite and encouraging.
+단어와 구의 작은 목록 또는 드물게 사용하는 단어와 구 목록의 경우 SRGS 문법에서 사용자 지정 발음을 만들 수 있습니다. 자세한 내용은 [token 요소](http://msdn.microsoft.com/library/windowsphone/design/hh361600.aspx)를 참조하세요.
 
-Consider whether you should read long strings of text. It's one thing to listen to a text message, but quite another to listen to a long list of search results that are difficult to remember.
+단어와 구의 더욱 큰 목록 또는 자주 사용하는 단어와 구의 경우 별도의 발음 어휘집을 만들 수 있습니다. 자세한 내용은 [사전 및 음성 기호 정보](http://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx)를 참조하세요.
 
-You should provide media controls to let users pause, or stop, TTS.
+## <a name="testing"></a>테스트
 
-You should listen to all TTS strings to ensure they are intelligible and sound natural.
+음성 인식 정확도 및 앱의 대상 사용자에 대한 지원 UI를 테스트합니다. 이러한 테스트는 앱에서 음성 조작 환경의 효율성을 판단하는 최상의 방법입니다. 예를 들어 앱에서 일반적인 구를 듣지 못해 사용자의 인식 결과가 만족스럽지 못한가요?
 
--   Stringing together an unusual sequence of words or speaking part numbers or punctuation might cause a phrase to become unintelligible.
--   Speech can sound unnatural when the prosody or cadence is different from how a native speaker would say a phrase.
+이 구를 지원하도록 문법을 수정하거나 사용자에게 지원되는 구 목록을 제공합니다. 지원되는 구 목록을 이미 제공하고 있는 경우 해당 목록을 쉽게 검색할 수 인지 확인합니다.
 
-Both issues can be addressed bu using SSML instead of plain text as input to the speech synthesizer. For more info about SSML, see [Use SSML to Control Synthesized Speech](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) and [Speech Synthesis Markup Language Reference](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
+## <a name="text-to-speech-tts"></a>TTS(텍스트 음성 변환)
 
-## <a name="other-articles-in-this-section"></a>Other articles in this section 
+TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
-| Topic | Description |
+정중하고 권유하는 형식으로 프롬프트를 디자인하려고 노력합니다.
+
+긴 텍스트 문자열을 읽어야 하는지 여부를 고려합니다. 문자 메시지를 듣는 것과 기억하기 어려운 긴 검색 결과 목록을 듣는 것은 서로 전혀 다른 일입니다.
+
+사용자가 TTS를 일시 중지 또는 중지할 수 있도록 미디어 컨트롤을 제공해야 합니다.
+
+모든 TTS 문자열을 들어보고 쉽게 이해할 수 있고 자연스럽게 들리도록 해야 합니다.
+
+-   비정상적인 단어 순서로 연결하거나 문장 구성 숫자 또는 문장 부호를 발음하면 구를 이해할 수 없게 될 수 있습니다.
+-   원어민이 구를 말하는 방식과 음성 운율 또는 억양이 다른 경우 음성이 부자연스럽게 들릴 수 있습니다.
+
+두 문제 모두 일반 텍스트 대신 SSML을 음성 신시사이저에 입력하여 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) 및 [음성 합성 생성 언어 참조](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx)를 참조하세요.
+
+## <a name="other-articles-in-this-section"></a>이 섹션의 다른 문서 
+
+| 항목 | 설명 |
 | --- | --- |
-| [Speech recognition](speech-recognition.md) | Use speech recognition to provide input, specify an action or command, and accomplish tasks. |
-| [Specify the speech recognizer language](specify-the-speech-recognizer-language.md) | Learn how to select an installed language to use for speech recognition. |
-| [Define custom recognition constraints](define-custom-recognition-constraints.md) | Learn how to define and use custom constraints for speech recognition. |
-| [Enable continuous dictation](enable-continuous-dictation.md) |Learn how to capture and recognize long-form, continuous dictation speech input. |
-| [Manage issues with audio input](manage-issues-with-audio-input.md) | Learn how to manage issues with speech-recognition accuracy caused by audio-input quality. |
-| [Set speech recognition timeouts](set-speech-recognition-timeouts.md) | Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input. |
+| [음성 인식](speech-recognition.md) | 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다. |
+| [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md) | 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다. |
+| [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md) | 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다. |
+| [연속 받아쓰기 사용](enable-continuous-dictation.md) |긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다. |
+| [오디오 입력 관련 문제 관리](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
+| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
 
-## <a name="related-articles"></a>Related articles
+## <a name="related-articles"></a>관련 문서
 
-* [Speech interactions](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* [Cortana interactions](https://msdn.microsoft.com/library/windows/apps/mt185598)
+* [음성 조작](https://msdn.microsoft.com/library/windows/apps/mt185614)
+* [Cortana 조작](https://msdn.microsoft.com/library/windows/apps/mt185598)
 
- **Samples**
+ **샘플**
 
-* [Speech recognition and speech synthesis sample](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [음성 인식 및 음성 합성 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  

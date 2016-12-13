@@ -1,225 +1,225 @@
 ---
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
-title: Create a Hello, world app (XAML)
-description: This tutorial teaches you how to use Extensible Application Markup Language (XAML) with C# to create a simple Hello, world app that targets the Universal Windows Platform (UWP) on Windows 10.
+title: "Hello, world 앱 만들기(XAML)"
+description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
 ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 
 ---
 
-# <a name="create-a-hello-world-app-xaml"></a>Create a "Hello, world" app (XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
-This tutorial teaches you how to use XAML and C# to create a simple "Hello, world" app for the Universal Windows Platform (UWP) on Windows 10. With a single project in Microsoft Visual Studio, you can build an app that runs on any Windows 10 device.
+이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows&nbsp;10 장치에서 실행되는 앱을 빌드할 수 있습니다.
 
-Here you'll learn how to:
+여기에서는 다음에 대한 방법을 알아봅니다.
 
--   Create a new **Visual Studio 2015** project that targets **Windows 10** and the **UWP**.
--   Write XAML to change the UI on your start page.
--   Run the project on the local desktop and on the phone emulator in Visual Studio.
--   Use a SpeechSynthesizer to make the app talk when you press a button.
+-   **Windows&nbsp;10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
+-   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
+-   로컬 데스크톱 및 Visual Studio의 휴대폰 에뮬레이터에서 프로젝트를 실행합니다.
+-   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
 
-## <a name="before-you-start"></a>Before you start...
+## <a name="before-you-start"></a>시작하기 전에...
 
--   [What's a Universal Windows app](whats-a-uwp.md)?
--   [What's new in Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview)?
--   To complete this tutorial, you need Windows 10 and Visual Studio 2015. [Get set up](get-set-up.md).
--   We also assume you're using the default window layout in Visual Studio. If you change the default layout, you can reset it in the **Window** menu by using the **Reset Window Layout** command.
+-   [유니버설 Windows 앱이란](whats-a-uwp.md)?
+-   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
+-   이 자습서를 완료하려면 Windows&nbsp;10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 
-## <a name="if-you-would-rather-watch-a-video"></a>If you would rather watch a video...
+## <a name="if-you-would-rather-watch-a-video"></a>비디오를 보려면...
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
-If you prefer a visual approach over a step-by-step guide, this video covers the same material but with a nice soundtrack.
+단계별 가이드보다 시각적인 접근 방식을 원하는 경우 이 비디오는 멋진 사운드트랙과 함께 동일한 내용을 제공합니다.
 
-## <a name="step-1-create-a-new-project-in-visual-studio"></a>Step 1: Create a new project in Visual Studio.
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
 
-1.  Launch Visual Studio 2015.
+1.  Visual Studio 2015를 시작합니다.
 
-2.  From the **File** menu, select **New > Project...** to open the *New Project* dialog.
+2.  **파일** 메뉴에서 **새로 만들기 &gt; 프로젝트...**를 선택하여 *새 프로젝트* 대화 상자를 엽니다.
 
-3.  From the list of templates on the left, open **Installed > Templates > Visual C# > Windows**, and then choose **Universal** to see the list of UWP project templates.
+3.  왼쪽에 있는 템플릿 목록에서 **설치됨 &gt; 템플릿 &gt; Visual C# &gt; Windows**를 확장하고 **유니버설**을 선택하여 UWP 프로젝트 템플릿 목록을 표시합니다.
 
-    (If you don't see any Universal templates, you might not have Visual Studio 2015, or may be missing the components for creating UWP apps. Please see [Get set up](get-set-up.md) to fix your tools.)
+    (범용 템플릿이 보이지 않는 경우 Visual Studio 2015가 없거나 UWP 앱을 만들기 위한 구성 요소가 누락되었을 수 있습니다. [설정 방법](get-set-up.md)을 참조하여 도구를 수정합니다.)
 
-4.  Choose the **Blank App (Universal Windows)** template, and enter "HelloWorld" as the **Name**. Select **OK**.
+4.  **빈 앱(유니버설 Windows)** 템플릿을 선택하고 "HelloWorld"를 **이름**으로 입력합니다. **확인**을 선택합니다.
 
-    ![The new project window](images/win10-cs-01.png)
+    ![새 프로젝트 창](images/win10-cs-01.png)
 
-5.  The target version/minimum version dialog appears. The default settings are fine, so select **OK** to create the project.
+5.  대상 버전/최소 버전 대화 상자가 나타납니다. 기본 설정이 적합하므로 **확인**을 선택하여 프로젝트를 만듭니다.
 
-    ![The solution explorer window](images/win10-cs-02.png)
+    ![솔루션 탐색기 창](images/win10-cs-02.png)
 
-6.  When your new project opens, its files are displayed in the **Solution Explorer** pane on the right. You may need to choose the **Solution Explorer** tab instead of the **Properties** tab to see your files.
+6.  새 프로젝트가 열리면 해당 파일이 오른쪽의 **솔루션 탐색기** 창에 표시됩니다. 파일을 보려면 **속성** 탭 대신 **솔루션 탐색기** 탭을 선택해야 할 수 있습니다.
 
-    ![The solution explorer window](images/win10-cs-03.png)
+    ![솔루션 탐색기 창](images/win10-cs-03.png)
 
-Although the **Blank App (Universal Window)** is a minimal template, it still contains a lot of files. These files are essential to all UWP apps using C#. Every project that you create in Visual Studio contains them.
+**새 앱**(유니버설 Window)은 최소한의 템플릿이지만 많은 파일이 포함되어 있습니다. 이러한 파일은 C#을 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
 
 
-### <a name="whats-in-the-files"></a>What's in the files?
+### <a name="whats-in-the-files"></a>파일에 포함된 항목
 
-To view and edit a file in your project, double-click the file in the **Solution Explorer**. Expand a XAML file just like a folder to see its associated code file. XAML files open in a split view that shows both the design surface and the XAML editor.
+프로젝트의 파일을 보고 편집하려면 **솔루션 탐색기**에서 해당 파일을 두 번 클릭합니다. 폴더와 같이 XAML 파일을 확장하여 관련 코드 파일을 봅니다. XAML 파일은 디자인 화면과 XAML 편집기가 모두 표시되는 분할 보기로 열립니다.
 > [!NOTE]
-> What is XAML? Extensible Application Markup Language (XAML) is the language used to define your app's user interface. It can be entered manually, or created using the Visual Studio design tools. A .xaml file has a .xaml.cs code-behind file which contains the logic. Together, the XAML and code-behind make a complete class. For more information, see [XAML overview](https://msdn.microsoft.com/library/windows/apps/Mt185595).
+> XAML이란? XAML(Extensible Application Markup Language)은 앱의 사용자 인터페이스를 정의하는 데 사용되는 언어입니다. 수동으로 입력하거나 Visual Studio 디자인 도구를 사용하여 만들 수 있습니다. .xaml 파일에는 논리가 포함된 .xaml.cs 코드 숨김 파일이 있습니다. XAML은 코드 숨김과 함께 완전한 클래스를 만듭니다. 자세한 내용은 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595)를 참조하세요.
 
-*App.xaml and App.xaml.cs*
+*App.xaml 및 App.xaml.cs*
 
--   App.xaml is where you declare resources that are used across the app.
--   App.xaml.cs is the code-behind file for App.xaml. Like all code-behind pages, it contains a constructor that calls the `InitializeComponent` method. You don't write the `InitializeComponent` method. It's generated by Visual Studio, and its main purpose is to initialize the elements declared in the XAML file.
--   App.xaml.cs is the entry point for your app.
--   App.xaml.cs also contains methods to handle activation and suspension of the app.
+-   App.xaml은 앱 전체에서 사용되는 리소스를 선언하는 파일입니다.
+-   App.xaml.cs는 App.xaml의 코드 숨김 파일입니다. 모든 코드 숨김 페이지와 같이 여기에는 `InitializeComponent` 메서드를 호출하는 생성자가 포함되어 있습니다. `InitializeComponent` 메서드는 작성하지 않습니다. 이 메서드는 Visual Studio에서 생성되며 그 주요 목적은 XAML 파일에 선언된 요소를 초기화하는 것입니다.
+-   App.xaml.cs는 앱의 진입점입니다.
+-   App.xaml.cs에는 앱의 활성화와 일시 중단을 처리하는 메서드도 포함되어 있습니다.
 
 *MainPage.xaml*
 
--   MainPage.xaml is where you define the UI for your app. You can add elements directly using XAML markup, or you can use the design tools provided by Visual Studio.
--   MainPage.xaml.cs is the code-behind page for MainPage.xaml. It's where you add your app logic and event handlers.
--   Together these two files define a new class called `MainPage`, which inherits from [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503), in the `HelloWorld` namespace.
+-   MainPage.xaml에서는 앱의 UI를 정의합니다. XAML 마크업을 사용하여 직접 요소를 추가하거나 Visual Studio에서 제공하는 디자인 도구를 사용할 수 있습니다.
+-   MainPage.xaml.cs는 MainPage.xaml의 코드 숨김 페이지입니다. 여기에서 앱 논리와 이벤트 처리기를 추가합니다.
+-   이러한 두 파일은 `HelloWorld` 네임스페이스의 [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503)에서 상속되는 `MainPage`이라는 새 클래스를 함께 정의합니다.
 
 *Package.appxmanifest*
--   A manifest file that describes your app: its name, description, tile, start page, etc.
--   Includes a list of the files that your app contains.
+-   이름, 설명, 타일, 시작 페이지 등 앱을 설명하는 매니페스트 파일입니다.
+-   앱에 포함된 파일의 목록이 포함되어 있습니다.
 
-*A set of logo images*
--   Assets/Square150x150Logo.scale-200.png represents your app in the start menu.
--   Assets/StoreLogo.png represents your app in the Windows Store.
--   Assets/SplashScreen.scale-200.png is the splash screen that appears when your app starts.
+*로고 이미지 집합*
+-   Assets/Square150x150Logo.scale-200.png는 시작 메뉴에서 앱을 나타냅니다.
+-   Assets/StoreLogo.png는 Windows 스토어의 앱을 나타냅니다.
+-   Assets/SplashScreen.scale-200.png는 앱 시작 시 표시되는 시작 화면입니다.
 
-## <a name="step-2-adding-a-button"></a>Step 2: Adding a button
+## <a name="step-2-adding-a-button"></a>2단계: 단추 추가
 
-### <a name="using-the-designer-view"></a>Using the designer view
+### <a name="using-the-designer-view"></a>디자이너 보기 사용
 
-Let's add a button to our page. In this tutorial, you work with just a few of the files listed previously: App.xaml, MainPage.xaml, and MainPage.xaml.cs.
+페이지에 단추를 추가해 보겠습니다. 이 자습서에서는 이전에 나열한 파일 중 App.xaml, MainPage.xaml 및 MainPage.xaml.cs만 다룹니다.
 
-1.  Double-click on **MainPage.xaml** to open it in the Design view.
+1.  **MainPage.xaml**을 두 번 클릭하여 디자인 뷰에서 엽니다.
 
-    You'll notice there is a graphical view on the top part of the screen, and the XAML code view underneath. You can make changes to either, but for now we'll use the graphical view.
+    화면 맨 윗부분에 그래픽 보기가 있고 아래에 XAML 코드 보기가 있습니다. 둘 중 하나를 변경할 수 있지만 현재는 그래픽 보기를 사용하겠습니다.
 
-    ![The solution explorer window](images/win10-cs-04.png)
+    ![솔루션 탐색기 창](images/win10-cs-04.png)
 
-2.  Click on the vertical **Toolbox** tab on the left to open the list of UI controls. (You can click the pin icon in its title bar to keep it visible.)
+2.  왼쪽의 세로 **도구 상자** 탭을 클릭하여 UI 컨트롤 목록을 엽니다. (제목 표시줄의 고정 아이콘을 클릭하면 표시된 상태가 유지됩니다.)
 
-    ![The solution explorer window](images/win10-cs-05.png)
+    ![솔루션 탐색기 창](images/win10-cs-05.png)
 
-3.  Expand **Common XAML Controls**, and drag the **Button** out to the middle of the design canvas.
+3.  **공용 XAML 컨트롤**을 확장하고 **단추**를 디자인 캔버스의 중앙으로 끌어옵니다.
 
-    ![The solution explorer window](images/win10-cs-06.png)
+    ![솔루션 탐색기 창](images/win10-cs-06.png)
 
-    If you look at the XAML code window, you'll see that the Button has been added there too:
+    XAML 코드 창을 보면 여기에도 단추가 추가된 것을 볼 수 있습니다.
 
  ```XAML
 <Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
  ```
 
-4.  Change the button's text.
+4.  단추의 텍스트를 변경합니다.
 
-    Click in the XAML code view, and change the Content from "Button" to "Hello, world!".
+    XAML 코드 보기에서 클릭하고 콘텐츠를 "Button"에서 "Hello, world!"로 변경합니다.
 
 ```XAML
 <Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-Notice how the button displayed in the design canvas updates to display the new text.
+디자인 캔버스에 표시된 단추가 새 텍스트를 표시하기 위해 어떻게 업데이트되는지 확인합니다.
 
-![The solution explorer window](images/win10-cs-07.png)
+![솔루션 탐색기 창](images/win10-cs-07.png)
 
-## <a name="step-3-start-the-app"></a>Step 3: Start the app
-
-
-At this point, you've created a very simple app. This is a good time to build, deploy, and launch your app and see what it looks like. You can debug your app on the local machine, in a simulator or emulator, or on a remote device. Here's the target device menu in Visual Studio.
-
-![Drop-down list of device targets for debugging your app](images/uap-debug.png)
-
-### <a name="start-the-app-on-a-desktop-device"></a>Start the app on a Desktop device
-
-By default, the app runs on the local machine. The target device menu provides several options for debugging your app on devices from the desktop device family.
-
--   **Simulator**
--   **Local Machine**
--   **Remote Machine**
-
-**To start debugging on the local machine**
-
-1.  In the target device menu (![Start debugging menu](images/startdebug-full.png)) on the **Standard** toolbar, make sure that **Local Machine** is selected. (It's the default selection.)
-2.  Click the **Start Debugging** button (![Start debugging button](images/startdebug-sm.png)) on the toolbar.
-
-   –or–
-
-   From the **Debug** menu, click **Start Debugging**.
-
-   –or–
-
-   Press F5.
-
-The app opens in a window, and a default splash screen appears first. The splash screen is defined by an image (SplashScreen.png) and a background color (specified in your app's manifest file).
-
-The splash screen disappears, and then your app appears. It looks like this.
-
-![Initial app screen](images/win10-cs-08.png)
-
-Press the Windows key to open the **Start** menu, then show all apps. Notice that deploying the app locally adds its tile to the **Start** menu. To run the app again later (not in debugging mode), tap or click its tile in the **Start** menu.
-
-It doesn't do much—yet—but congratulations, you've built your first UWP app!
-
-**To stop debugging**
-
-   Click the **Stop Debugging** button (![Stop debugging button](images/stopdebug.png)) in the toolbar.
-
-   –or–
-
-   From the **Debug** menu, click **Stop debugging**.
-
-   –or–
-
-   Close the app window.
-
-### <a name="start-the-app-on-a-mobile-device-emulator"></a>Start the app on a mobile device emulator
-
-Your app runs on any Windows 10 device, so let’s see how it looks on a Windows Phone.
-
-In addition to the options to debug on a desktop device, Visual Studio provides options for deploying and debugging your app on a physical mobile device connected to the computer, or on a mobile device emulator. You can choose among emulators for devices with different memory and display configurations.
-
--   **Device**
--   **Emulator <SDK version> WVGA 4 inch 512MB**
--   **Emulator <SDK version> WVGA 4 inch 1GB**
--   etc... (Various emulators in other configurations)
-
-(Don't see the emulators? See [Get set up](get-set-up.md) to make sure you have the Universal Windows App Development Tools installed.)
-
-**To start debugging on a mobile device emulator**
-
-1.  It's a good practice to test your app on a device with a small screen and limited memory, so in the target device menu (![Start debugging menu](images/startdebug-full.png)) on the **Standard** toolbar, pick **Emulator 10.0.14393.0 WVGA 4 inch 512MB**.
-
-2.  Click the **Start Debugging** button (![Start debugging button](images/startdebug-sm.png)) in the toolbar.
-
-   –or–
-
-   From the **Debug** menu, click **Start Debugging**.
-
-   –or–
-
-   Press F5.
-
-Visual Studio starts the selected emulator and then deploys and starts your app. This might take a little time the first time it starts up. On the mobile device emulator, the app looks like this.
-
-![Initial app screen on mobile device](images/win10-cs-09.png)
-
-If you have a Windows Phone running Windows 10, you can also connect it to the computer and deploy and run the app on it directly (although you will need to [enable developer mode](enable-your-device-for-development.md) first).
+## <a name="step-3-start-the-app"></a>3단계: 앱 시작
 
 
-## <a name="step-3-event-handlers"></a>Step 3: Event handlers
+이제 매우 간단한 앱을 만들었습니다. 앱을 빌드, 배포 및 시작하고 앱의 모양을 확인할 시간입니다. 로컬 컴퓨터, 시뮬레이터, 에뮬레이터 또는 원격 장치에서 앱을 디버그할 수 있습니다. 다음은 Visual Studio의 대상 장치 메뉴입니다.
 
-An "event handler" sounds complicated, but it's just another name for the code that is called when an event happens (such as the user clicking on your button).
+![앱 디버깅을 위한 장치 대상의 드롭다운 목록](images/uap-debug.png)
 
-1.  Stop the app from running, if you haven't already.
+### <a name="start-the-app-on-a-desktop-device"></a>데스크톱 장치에서 앱 시작
 
-2.  Double-click on the button control on the design canvas to make Visual Studio create an event handler for your button.
+기본적으로 앱은 로컬 컴퓨터에서 실행합니다. 대상 장치 메뉴는 데스크톱 장치 제품군의 장치에서 앱을 디버깅하기 위한 여러 옵션을 제공합니다.
 
-  You can of course, create all the code manually too. Or you can click on the button to select it, and look in the **Properties** pane on the lower right. If you switch to **Events** (the little lightning bolt) you can add the name of your event handler.
+-   **시뮬레이터**
+-   **로컬 컴퓨터**
+-   **원격 컴퓨터**
 
-3.  Edit the event handler code in *MainPage.xaml.cs*, the code-behind page. This is where things get interesting. The default event handler looks like this:
+**로컬 컴퓨터에서 디버깅을 시작하려면**
+
+1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터**가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
+2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
+
+   –또는–
+
+   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
+
+   –또는–
+
+   F5 키를 누릅니다.
+
+창에서 앱이 열리고 먼저 기본 시작 화면이 나타납니다. 시작 화면은 이미지(SplashScreen.png)와 배경색(앱의 매니페스트 파일에서 지정함)으로 정의됩니다.
+
+시작 화면이 사라진 다음 앱이 나타납니다. 모양은 다음과 같습니다.
+
+![초기 앱 화면](images/win10-cs-08.png)
+
+Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다. 로컬에서 앱을 배포하면 **시작** 메뉴에 해당 타일이 추가됩니다. 앱을 나중에 다시 실행하려면(디버깅 모드 아님) **시작** 메뉴에서 해당 타일을 탭하거나 클릭합니다.
+
+아직 기능은 많지 않지만, 첫 UWP 앱을 빌드한 것을 축하드립니다.
+
+**디버깅을 중지하려면**
+
+   도구 모음에서 **디버깅 중지** 단추(![디버깅 중지 단추](images/stopdebug.png))를 클릭합니다.
+
+   –또는–
+
+   **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.
+
+   –또는–
+
+   앱 창을 닫습니다.
+
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>모바일 장치 에뮬레이터에서 앱 시작
+
+앱이 Windows&nbsp;10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
+
+Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
+
+-   **장치**
+-   **에뮬레이터 <SDK version> WVGA 4인치 512MB**
+-   **에뮬레이터 <SDK version> WVGA 4인치 1GB**
+-   등(기타 구성의 다양한 에뮬레이터)
+
+(에뮬레이터가 표시되지 않나요? [설정 방법](get-set-up.md)을 참조하여 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다.)
+
+**모바일 장치 에뮬레이터에서 디버깅을 시작하려면**
+
+1.  화면이 작고 메모리가 제한된 디바이스에서 앱을 테스트하는 것이 좋으므로 **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **에뮬레이터 10.0.14393.0 WVGA 4인치 512MB**를 선택합니다.
+
+2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
+
+   –또는–
+
+   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
+
+   –또는–
+
+   F5 키를 누릅니다.
+
+Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포하고 시작합니다. Visual Studio가 처음 시작할 때 약간 시간이 걸릴 수 있습니다. 모바일 장치 에뮬레이터에서 앱은 다음과 같이 표시됩니다.
+
+![모바일 장치의 초기 앱 화면](images/win10-cs-09.png)
+
+Windows 10을 실행하는 Windows Phone을 사용하는 경우 컴퓨터에 연결하여 앱을 배포하고 여기서 직접 앱을 실행할 수도 있습니다(먼저 [개발자 모드를 사용하도록 설정](enable-your-device-for-development.md)해야 함).
+
+
+## <a name="step-3-event-handlers"></a>3단계: 이벤트 처리기
+
+"이벤트 처리기"는 복잡하게 들릴 수 있지만 이벤트가 발생할 때(예: 사용자가 단추 클릭) 호출되는 코드에 대한 다른 이름일 뿐입니다.
+
+1.  앱이 아직 실행 중인 경우 중지합니다.
+
+2.  디자인 캔버스의 단추 컨트롤을 두 번 클릭하여 Visual Studio가 단추에 대한 이벤트 처리기를 만들도록 합니다.
+
+  물론 모든 코드를 수동으로 만들 수도 있습니다. 또는 단추를 클릭하여 선택하고 오른쪽 아래의 **속성** 창을 확인할 수 있습니다. **이벤트**(작은 번개 모양)로 전환하면 이벤트 처리기의 이름을 추가할 수 있습니다.
+
+3.  *MainPage.xaml.cs*, 코드 숨김 페이지에서 이벤트 처리기 코드를 편집합니다. 이 부분에서 점점 흥미로워집니다. 기본 이벤트 처리기는 다음과 같이 표시됩니다.
 
 ```C#
 private void button_Click(object sender, RouteEventArgs e)
@@ -228,7 +228,7 @@ private void button_Click(object sender, RouteEventArgs e)
 }
 ```
 
-  Let's change it, so it looks like this:
+  다음과 같이 바꿔 보세요.
 
 ```C#
 private async void button_Click(object sender, RoutedEventArgs e)
@@ -241,21 +241,21 @@ private async void button_Click(object sender, RoutedEventArgs e)
         }
 ```
 
-Make sure you include the **async** keyword as well, or you'll get an error when you try to run the app.
+**async** 키워드도 포함되어 있어야 하며 그렇지 않은 경우 앱을 실행하려고 할 때 오류가 발생할 수 있습니다.
 
-### <a name="what-did-we-just-do"></a>What did we just do?
+### <a name="what-did-we-just-do"></a>방금 어떤 작업을 수행했나요?
 
-This code uses some Windows APIs to create a speech synthesis object, and then gives it some text to say. (For more information on using SpeechSynthesis, see the [SpeechSynthesis namespace](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx) docs.)
+이 코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음 여기에 말할 텍스트를 제공합니다. SpeechSynthesis 사용에 대한 자세한 내용은 [SpeechSynthesis 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx) 문서를 참조하세요.
 
-When you run the app and click on the button, your computer (or phone) will literally say "Hello, World!".
-
-
-## <a name="summary"></a>Summary
+앱을 실행하고 단추를 클릭하면 컴퓨터(또는 휴대폰)가 문자 그대로 "Hello, World!"라고 말합니다.
 
 
-Congratulations, you've created your first app for Windows 10 and the UWP!
+## <a name="summary"></a>요약
 
-To learn how to use XAML to lay out the controls your app will use, try the ([grid tutorial](../layout/grid-tutorial.md), or jump straight to the [next step](learn-more.md)?
+
+축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+
+XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [그리드 자습서](../layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 
 
 

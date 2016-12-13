@@ -1,7 +1,7 @@
 ---
 author: jnHs
-Description: The Windows Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability.
-title: Mobile operator billing
+Description: "Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결제 방법으로 통신사 청구 기능을 제공합니다."
+title: "통신사 청구"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
 ms.sourcegitcommit: e829808a8e521f2308454e05e8911579b22be807
@@ -9,80 +9,80 @@ ms.openlocfilehash: fe11b56430a07e1326f78b59579ffd9e733ed1b0
 
 ---
 
-# <a name="mobile-operator-billing"></a>Mobile operator billing
+# <a name="mobile-operator-billing"></a>통신사 청구
 
 
-The Windows Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability. If a customer’s mobile operator supports this capability, the customer can make Store purchases using their mobile account.
+Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결제 방법으로 통신사 청구 기능을 제공합니다. 고객의 통신사가 이러한 스토어 기능을 제공할 경우 고객은 모바일 계정을 사용하여 스토어에서 구매할 수 있습니다.
 
-> **Note**  If a customer’s mobile operator offers Mobile Operator Billing, but the customer does not have this option on their device, see these [troubleshooting steps](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> **참고** 고객의 통신사가 통신사 청구를 제공하지만 고객의 디바이스에 이러한 옵션이 없는 경우 [문제 해결 단계](http://go.microsoft.com/fwlink/p/?LinkId=523993)를 참조하세요.
 
-We are regularly working with mobile operators to expand the availability of this payment method. If you’d like to suggest that we support a mobile operator that you don’t see in the lists below, contact the mobile operator.
+Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법의 이용 범위를 확장하고 있습니다. 아래 목록에 없는 통신사를 지원하도록 추천하려면 그 통신사로 문의하세요.
 
-## <a name="mobile-operator-billing-for-windows-10-and-xbox-one-devices"></a>Mobile Operator Billing for Windows 10 and Xbox One devices
+## <a name="mobile-operator-billing-for-windows-10-and-xbox-one-devices"></a>Windows&nbsp;10 및 Xbox One 디바이스에 대한 통신사 청구
 
-Windows 10 introduces a new implementation of Mobile Operator Billing. This implementation is available for all devices running Windows 10, phones running Windows 10 Mobile, and Xbox One consoles. On these devices, customers can add Mobile Operator Billing as a payment method and use it to make purchases. 
+Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구현은 Windows 10을 실행하는 모든 디바이스, Windows&nbsp;10 Mobile을 실행하는 휴대폰 및 Xbox One 콘솔에서 사용 가능합니다. 이러한 디바이스에서 고객은 결제 방법으로 통신사 청구를 추가하고 이를 통해 구매를 수행할 수 있습니다. 
 
-The Windows 10 implementation of Mobile Operator Billing is currently supported by these mobile operators.
+Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하고 있습니다.
 
-| Country/region  | Mobile operators |
+| 국가/지역  | 통신사 |
 |-----------------|------------------|
-| Finland         | DNA, Elisa       |
-| Germany         | O2               |
-| Hungary         | Telenor          |
-| Italy           | Wind             |
-| Norway          | Telenor          |
-| Poland          | Orange           |
-| Russia          | Beeline          |
-| Sweden          | Telenor          |
-| Switzerland     | Swisscom         |
-| United States   | Sprint           |
-| United Kingdom  | O2               |
+| 핀란드         | DNA, Elisa       |
+| 독일         | O2               |
+| 헝가리         | Telenor          |
+| 이탈리아           | Wind             |
+| 노르웨이          | Telenor          |
+| 폴란드          | 주황색           |
+| 러시아          | Beeline          |
+| 스웨덴          | Telenor          |
+| 스위스     | Swisscom         |
+| 미국   | Sprint           |
+| 영국  | O2               |
 
  
 
-## <a name="mobile-operator-billing-for-windows-phone-8x-and-windows-10-mobile-devices"></a>Mobile Operator Billing for Windows Phone 8.x and Windows 10 Mobile devices
+## <a name="mobile-operator-billing-for-windows-phone-8x-and-windows-10-mobile-devices"></a>Windows Phone 8.x 및 Windows&nbsp;10 Mobile 디바이스용 통신사 청구
 
 
-A legacy implementation of Mobile Operator Billing is available to Windows Phone 8.x devices. Some mobile operators may choose to include this implementation on phones designed for Windows 10 Mobile. On devices that include this implementation, Mobile Operator Billing is offered automatically as a payment to users.
+Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 가능합니다. Windows&nbsp;10 Mobile용으로 설계된 휴대폰에 이 구현을 포함시키는 통신사도 있을 수 있습니다. 이 구현이 포함된 디바이스에는 사용자에 대한 지불로서 통신사 청구가 자동으로 제공됩니다.
 
-The legacy implementation of Mobile Operator Billing is supported by these mobile operators.
+통신사 청구의 레거시 구현은 이들 통신사에서 지원하고 있습니다.
 
-| Country/region       | Mobile operators                                                   |
+| 국가/지역       | 통신사                                                   |
 |----------------------|--------------------------------------------------------------------|
-| Australia            | Telstra                                                            |
-| Austria              | A1 Telekom, T-Mobile                                               |
-| Belgium              | BASE, Mobistar, Proximus                                           |
-| Brazil               | Claro                                                              |
-| Canada               | Fido, Rogers                                                       |
-| China                | China Mobile                                                       |
-| Colombia             | Movistar                                                           |
-| Czech Republic       | T-Mobile, Vodafone, O2                                             |
-| Ecuador              | Claro                                                              |
-| Finland              | Elisa, TeliaSonera, DNA                                            |
-| France               | Orange, SFR, Bouygues                                              |
-| Germany              | Telefonica, Telekom Deutschland, Vodafone                          |
-| Greece               | Vodafone                                                           |
-| Hungary              | Telenor, T-Mobile                                                  |
-| India                | Idea                                                               |
-| Indonesia            | Indosat, Telkomsel, Hutchinson CP Telecommunications (HCPT)        |
-| Ireland              | O2, Vodafone, Three                                                |
-| Italy                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
-| Jordan               | Umniah                                                             |
-| Mexico               | Iusacell, Telcel, Movistar                                         |
-| Netherlands          | T-Mobile, Vodafone                                                 |
-| Poland               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
-| Romania              | Orange, Vodafone                                                   |
-| Russia               | Beeline, MTS                                                       |
-| Slovakia             | T-Mobile                                                           |
-| South Africa         | Vodacom                                                            |
-| Spain                | Movistar, Vodafone, Orange                                         |
-| United Kingdom       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
-| United States        | AT&T, Sprint, T-Mobile, Verizon                                    |
-| Vietnam              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
+| 오스트레일리아            | Telstra                                                            |
+| 오스트리아              | A1 Telekom, T-Mobile Austria                                               |
+| 벨기에              | BASE, Mobistar, Proximus                                           |
+| 브라질               | Claro                                                              |
+| 캐나다               | Fido, Rogers                                                       |
+| 중국                | China Mobile                                                       |
+| 콜롬비아             | Movistar                                                           |
+| 체코 공화국       | T-Mobile, Vodafone, O2                                             |
+| 에콰도르              | Claro                                                              |
+| 핀란드              | Elisa, TeliaSonera, DNA                                            |
+| 프랑스               | Orange, SFR, Bouygues                                              |
+| 독일              | Telefonica, Telekom Deutschland, Vodafone                          |
+| 그리스               | Vodafone                                                           |
+| 헝가리              | Telenor, T-Mobile                                                  |
+| 인도                | Idea                                                               |
+| 인도네시아            | Indosat, Telkomsel, HCPT(Hutchinson CP Telecommunications)        |
+| 아일랜드              | O2, Vodafone, 3                                                |
+| 이탈리아                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
+| 요르단               | Umniah                                                             |
+| 멕시코               | Iusacell, Telcel, Movistar                                         |
+| 네덜란드          | T-Mobile, Vodafone                                                 |
+| 폴란드               | T-Mobile, Orange, Polkomtel(Plus), Play                           |
+| 루마니아              | Orange, Vodafone                                                   |
+| 러시아               | Beeline, MTS                                                       |
+| 슬로바키아             | T-Mobile                                                           |
+| 남아프리카 공화국         | Vodacom                                                            |
+| 스페인                | Movistar, Vodafone, Orange                                         |
+| 영국       | Everything Everywhere(T-Mobile), Telefonica(O2), Three, Vodafone |
+| 미국        | AT&amp;T, Sprint, T-Mobile, Verizon                                    |
+| 베트남              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
 
-This list will be regularly updated as we expand support for Mobile Operator Billing.
+이 목록은 통신사 청구 지원이 연장될 경우 정기적으로 업데이트됩니다.
 
  
 

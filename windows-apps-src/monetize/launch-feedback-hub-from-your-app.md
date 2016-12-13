@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
-Description: You can encourage your customers to leave feedback by launching Feedback Hub from your app.
-title: Launch Feedback Hub from your app
+Description: "고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다."
+title: "앱에서 피드백 허브 시작"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 translationtype: Human Translation
 ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
@@ -9,73 +9,73 @@ ms.openlocfilehash: 4296bd4007ae5109c9a3736c977ba68f312b208c
 
 ---
 
-# <a name="launch-feedback-hub-from-your-app"></a>Launch Feedback Hub from your app
+# <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
-You can encourage your customers to leave feedback by adding a control (such as a button) to your Universal Windows Platform (UWP) app that launches Feedback Hub. Feedback Hub is a preinstalled app that provides a single place to gather feedback on Windows and installed apps. All customer feedback that is submitted for your app through Feedback Hub is collected and presented to you in the [Feedback report](../publish/feedback-report.md) in the Windows Dev Center dashboard, so you can see the problems, suggestions, and upvotes that your customers have submitted in one report.
+피드백 허브를 시작하는 UWP(유니버설 Windows 플랫폼) 앱에 컨트롤(예: 단추)을 추가하여 피드백을 남기도록 고객을 권유할 수 있습니다. 피드백 허브는 Windows 및 설치된 앱에 대한 피드백을 수집할 단일 위치를 제공하는 사전 설치된 앱입니다. 피드백 허브를 통해 앱에 대해 제출된 모든 고객 피드백은 수집되어 Windows 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 제공되므로 고객이 제출한 문제, 제안 및 좋아요를 하나의 보고서에서 볼 수 있습니다.
 
-To launch Feedback Hub from your app, use an API that is provided by the [Microsoft Store Services SDK](http://aka.ms/store-em-sdk). We recommend that you use this API to launch Feedback Hub from a UI element in your app that follows our design guidelines.
+앱에서 피드백 허브를 시작하려면 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 
->**Note**&nbsp;&nbsp;Feedback Hub is available only on devices that run version 10.0.14271 or later of a Windows 10 OS that is based on the desktop and mobile [device families](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). We recommend that you show a feedback control in your app only if the Feedback Hub is available on the user's device. The code in this topic demonstrates how to do this.
+>**참고** &nbsp;&nbsp;피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows&nbsp;10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다. 사용자 디바이스에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
 
-## <a name="how-to-launch-feedback-hub-from-your-app"></a>How to launch Feedback Hub from your app
+## <a name="how-to-launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브를 시작하는 방법
 
-To launch Feedback Hub from your app:
+앱에서 피드백 허브를 시작하려면
 
-1. [Install the Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk). In addition to the API for launching Feedback Hub, this SDK also provides APIs for other features such as running experiments in your apps with A/B testing and displaying ads.
-2. Open your project in Visual Studio.
-3. In Solution Explorer, right-click the **References** node for your project and click **Add Reference**.
-4. In **Reference Manager**, expand **Universal Windows** and click **Extensions**.
-5. In the list of SDKs, click the check box next to **Microsoft Engagement Framework** and click **OK**.
-6. In your project, add the control that you want to show to users to launch Feedback Hub, such as a button. We recommend that you configure the control as follows:
-  * Set the font of the content shown in the control to **Segoe MDL2 Assets**.
-  * Set the text in the control to the hexadecimal Unicode character code E939. This is the character code for the recommended feedback icon in the **Segoe MDL2 Assets** font.
-  * Set the visibility of the control to hidden.
+1. [Microsoft Store Services SDK를 설치합니다.](microsoft-store-services-sdk.md#install-the-sdk) 피드백 허브를 시작하는 API 외에, 이 SDK는 A/B 테스트로 앱에서 실험 실행, 광고 표시 등의 다른 기능을 위한 API도 제공합니다.
+2. Visual Studio에서 프로젝트를 엽니다.
+3. 솔루션 탐색기에서 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
+4. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
+5. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 클릭하고 **확인**을 클릭합니다.
+6. 프로젝트에서 사용자에게 표시하려는 피드백 허브를 시작하는 컨트롤(예: 단추)을 추가합니다. 컨트롤을 다음과 같이 구성하는 것이 좋습니다.
+  * 컨트롤에 표시된 콘텐츠의 글꼴을 **Segoe MDL2 자산**으로 설정합니다.
+  * 컨트롤의 텍스트를 16진수 유니코드 문자 코드 E939로 설정합니다. 이는 **Segoe MDL2 자산** 글꼴에서 권장되는 피드백 아이콘에 대한 문자 코드입니다.
+  * 컨트롤의 표시 여부를 숨김으로 설정합니다.
 
-    > **Note**&nbsp;&nbsp;We recommend that you hide your feedback control by default and show it in your initialization code only if the Feedback Hub is available on the user's device. The next step demonstrates how to do this.
+    > **참고**&nbsp;&nbsp;기본적으로 피드백 컨트롤을 숨기고 사용자 디바이스에서 피드백 허브를 사용할 수 있는 경우에만 초기화 코드에 표시하는 것이 좋습니다. 다음 단계에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
-  The following code demonstrates the XAML definition of a [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) that is configured as described above.
+  다음 코드는 위에서 설명한 대로 구성된 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 XAML 정의를 보여 줍니다.
 
   > [!div class="tabbedCodeSnippets"]
   ```xml
   <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
   ```
 
-7. In your initialization code for the app page that hosts your feedback control, use the static [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) method of the [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) class to determine whether the Feedback Hub is available on the user's device. Feedback Hub is available only on devices that run version 10.0.14271 or later of a Windows 10 OS that is based on the desktop and mobile [device families](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families).
+7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 클래스의 정적 [IsSupported](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported.aspx) 메서드를 사용하여 사용자 디바이스에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families)를 기반으로 하는 Windows&nbsp;10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다.
 
-  If this property returns **true**, make the control visible. The following code demonstrates how to do this for a [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
+  이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
 
   <span/>
-  >**Note**&nbsp;&nbsp;Although Feedback Hub is not supported on Xbox devices at this time, the **IsSupported** property currently returns **true** on Xbox devices that run version 10.0.14271 or later of Windows 10. This is a known issue that will be fixed in a future release of the Microsoft Store Services SDK.  
+  >**참고**&nbsp;&nbsp;피드백 허브는 현재 Xbox 디바이스에서 지원되지 않지만 **IsSupported** 속성은 Windows 10 버전 10.0.14271 이상을 실행하는 Xbox 디바이스에서 현재 **true**를 반환합니다. 이것은 알려진 문제로 Microsoft Store Services SDK의 이후 릴리스에서 수정될 예정입니다.  
 
-8. In the event handler that runs when the user clicks the control, get a [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) object and call the [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) method to launch the Feedback Hub app. There are two overloads for this method: one without parameters, and another one that accepts a dictionary of key and value pairs that contain metadata that you want to associate with the feedback. The following example demonstrates how to launch Feedback Hub in the [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) event handler for a [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx).
+8. 사용자가 컨트롤을 클릭할 때 실행되는 이벤트 처리기에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 개체를 가져오고 [LaunchAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync.aspx) 메서드를 호출하여 피드백 허브 앱을 시작합니다. 이 메서드에 대한 두 개의 오버로드가 있습니다. 하나는 매개 변수가 없고, 다른 하나는 피드백과 연결하려는 메타데이터를 포함하는 키/값 쌍의 사전을 사용합니다. 다음 예제는 [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)의 [Click](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트 처리기에서 피드백 허브를 실행하는 방법을 보여 줍니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
 
-## <a name="design-recommendations-for-your-feedback-ui"></a>Design recommendations for your feedback UI
+## <a name="design-recommendations-for-your-feedback-ui"></a>피드백 UI에 대한 디자인 권장 사항
 
-To launch Feedback Hub, we recommend that you add a UI element in your app (such as a button) that displays the following standard feedback icon from the Segoe MDL2 Assets font and the character code E939.
+피드백 허브를 시작하려면 Segoe MDL2 자산 글꼴 및 문자 코드 E939에서 다음과 같은 표준 피드백 아이콘을 표시하는 UI 요소(예: 단추)를 앱에 추가하는 것이 좋습니다.
 
 ![]Feedback icon](images/feedback_icon.PNG)
 
-We also recommend that you use one or more of the following placement options for linking to Feedback Hub in your app.
-* **Directly in the app bar**. Depending on your implementation, you may wish to use the icon only or add text (as shown below).
+앱에서 피드백 허브 연결에 대해 다음 배치 옵션 중 하나 이상을 사용하는 것이 좋습니다.
+* **앱 바에 직접 배치**. 구현에 따라 아이콘만 사용하거나 아래와 같이 텍스트를 추가할 수 있습니다.
 
   ![]Feedback icon](images/feedback_appbar_placement.png)
 
-* **In your app's settings**. This is a more subtle way to provide access to Feedback Hub. In the example below, the Feedback link appears as one of the links under App.
+* **앱의 설정에 배치**. 피드백 허브에 대한 액세스를 제공하는 보다 정교한 방법입니다. 아래 예제에서는 앱 아래의 링크 중 하나로 피드백 링크가 나타납니다.
 
   ![]Feedback icon](images/feedback_settings_placement.png)
 
-* **In an event-driven flyout**. This is useful when you want to query your customers about a specific question before launching into the Windows Feedback Hub. For example, after your app uses a certain feature, you might prompt the customer with a specific question about their satisfaction with that feature. If the customer chooses to respond, your app launches Feedback Hub.
+* **이벤트 구동 플라이아웃에 배치**. Windows 피드백 허브를 시작하기 전에 고객에게 특정 질문을 쿼리하려는 경우에 유용합니다. 예를 들어 앱에서 특정 기능을 사용한 후 해당 기능의 고객 만족도에 대한 특정 질문을 고객에게 표시할 수 있습니다. 고객이 응답하도록 선택하면 앱이 피드백 허브를 시작합니다.
 
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Feedback report](../publish/feedback-report.md)
+* [피드백 보고서](../publish/feedback-report.md)
 
 
 

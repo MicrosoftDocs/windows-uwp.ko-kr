@@ -1,96 +1,96 @@
 ---
 author: mcleanbyron
-Description: Learn how to register your UWP app to receive push notifications that you send from Windows Dev Center.
-title: Configure your app to receive Dev Center push notifications
+Description: "UWP 앱에서 Windows 개발자 센터에서 보낸 푸시 알림을 받도록 등록하는 방법을 알아봅니다."
+title: "개발자 센터 푸시 알림을 받도록 앱 구성"
 translationtype: Human Translation
 ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
 ms.openlocfilehash: d840fbe66e5ccb439148c7849e44b923a5586740
 
 ---
 
-# <a name="configure-your-app-to-receive-dev-center-push-notifications"></a>Configure your app to receive Dev Center push notifications
+# <a name="configure-your-app-to-receive-dev-center-push-notifications"></a>개발자 센터 푸시 알림을 받도록 앱 구성
 
-You can use the **Push notifications** page in the Windows Dev Center dashboard to directly engage with customers by sending targeted push notifications to the devices on which your Universal Windows Platform (UWP) app is installed. For example, you can use targeted push notifications to encourage your customers to take an action, such as rating your app or trying a new feature. You can send several different types of push notifications, including toast notifications, tile notifications, and raw XML notifications. You can also track the rate of app launches that resulted from your push notifications. For more information about this feature, see [Send push notifications to your app's customers](../publish/send-push-notifications-to-your-apps-customers.md).
+Windows 개발자 센터 대시보드의 **푸시 알림** 페이지에서 UWP(유니버설 Windows 플랫폼) 앱이 설치된 디바이스에 대상 푸시 알림을 보내 고객 참여를 직접 유도할 수 있습니다. 예를 들어 대상 푸시 알림을 사용하면 앱 평가, 새 기능 확인 등 고객의 참여를 유도할 수 있습니다. 알림 메시지, 타일 알림, 원시 XML 알림과 같이 여러 가지 유형의 푸시 알림을 보낼 수 있습니다. 푸시 알림을 통해 앱 실행 속도 결과를 추적할 수도 있습니다. 이 기능에 대한 자세한 내용은 [앱의 고객에 게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
-Before you can send targeted push notifications to your customers from Dev Center, you must use a method of the [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) class in the Microsoft Store Services SDK to register your app to receive notifications. You can use additional methods of this class to notify Dev Center that your app was launched in response to a targeted push notification (if you want to track the rate of app launches that resulted from your notifications) and to stop receiving notifications.
+개발자 센터에서 고객에게 대상 푸시 알림을 보내려면 먼저 Microsoft Store Services SDK에서 [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) 클래스의 메서드를 사용하여 알림을 받도록 앱을 등록해야 합니다. 이 클래스에서 별도의 메서드를 사용하여 대상 푸시 알림에 대한 응답으로 앱이 시작되었음을 개발자 센터에 알리고(알림으로 발생한 앱 실행 속도를 추적하려는 경우) 알림 수신을 중지할 수 있습니다.
 
-## <a name="configure-your-project"></a>Configure your project
+## <a name="configure-your-project"></a>프로젝트 구성
 
-Before you write any code, follow these steps to add a reference to the Microsoft Store Services SDK in your project:
+코드를 작성하려면 먼저 다음 단계에 따라 프로젝트에서 Microsoft Store Services SDK에 참조를 추가합니다.
 
-1. If you have not done so already, [Install the Microsoft Store Services SDK](microsoft-store-services-sdk.md#install-the-sdk) on your development computer. In addition to the API for registering an app to receive notifications, this SDK also provides APIs for other features such as running experiments in your apps with A/B testing and displaying ads.
-2. Open your project in Visual Studio.
-3. In Solution Explorer, right-click the **References** node for your project and click **Add Reference**.
-4. In **Reference Manager**, expand **Universal Windows** and click **Extensions**.
-5. In the list of SDKs, click the check box next to **Microsoft Engagement Framework** and click **OK**.
+1. 아직 수행하지 않은 경우에는 관리 컴퓨터에 [Microsoft Store Services SDK를 설치](microsoft-store-services-sdk.md#install-the-sdk)하세요. 알림을 받기 위해 앱을 등록하는 데 필요한 API 외에, 이 SDK는 A/B 테스트로 앱에서 실험 실행, 광고 표시 등의 다른 기능을 위한 API도 제공합니다.
+2. Visual Studio에서 프로젝트를 엽니다.
+3. 솔루션 탐색기에서 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
+4. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
+5. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 클릭하고 **확인**을 클릭합니다.
 
-## <a name="register-for-push-notifications"></a>Register for push notifications
+## <a name="register-for-push-notifications"></a>푸시 알림 등록
 
-To register your app to receive targeted push notifications from Dev Center:
+앱에서 개발자 센터의 대상 푸시 알림을 수신하도록 등록하려면
 
-1. In your project, locate a section of code that runs during startup in which you can register your app to receive Dev Center notifications.
-2. Add the following statement to the top of the code file.
+1. 프로젝트에서, 시작 시 실행되는 코드에서 개발자 센터 알림을 받도록 앱을 등록할 수 있는 섹션을 찾습니다.
+2. 코드 파일의 맨 위에 다음 문을 추가합니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#EngagementNamespace)]
 
-3. Get a [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) object and call one of the [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync.aspx) overloads in the startup code you identified earlier. This method should be called each time that your app is launched.
+3. [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) 개체를 가져와 이전에 식별한 시작 코드에서 [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync.aspx) 오버로드 중 하나를 호출합니다. 앱이 시작 될 때마다 이 메서드를 호출해야 합니다.
 
-  * If you want Dev Center to create its own channel URI for the notifications, call the [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) overload.
+  * 개발자 센터에서 알림에 대한 고유한 채널 URI를 만들게 하려면 [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 오버로드를 호출합니다.
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
 
     <span/>
-    >**Important**&nbsp;&nbsp;If your app also calls [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) to create a notification channel for WNS, make sure that your code does not call [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) and the [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) overload simultaneously. If you need to call both of these methods, make sure that you call them sequentially and await the return of one method before calling the other.
+    >**중요**&nbsp;&nbsp;앱에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx)를 호출하여 WNS에 대한 알림 채널도 만드는 경우 코드에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) 및 [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 오버로드를 동시에 호출하지 않도록 하세요. 이 두 메서드를 모두 호출해야 하는 경우 순차적으로 호출하고 다른 메서드를 호출하기 전에 한 메서드가 반환될 때까지 기다려야 합니다.
 
-  * If you want to specify the channel URI to use for targeted push notifications from Dev Center, call the [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx) overload. For example, might want to do this if your app already uses Windows Push Notification Services (WNS) and you want to use the same channel URI. You must first create a [StoreServicesNotificationChannelParameters](https://msdns.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) object and assign the [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) property to your channel URI.
+  * 개발자 센터의 대상 푸시 알림에 사용할 채널 URI를 지정하려면 [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx) 오버로드를 호출합니다. 예를 들어 앱에서 이미 WNS(Windows 푸시 알림 서비스)를 사용하는 데 동일한 채널 URI를 사용하려는 경우 이 작업이 필요할 수도 있습니다. 먼저 [StoreServicesNotificationChannelParameters](https://msdns.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) 개체를 만들고 채널 URI에 [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) 속성을 할당해야 합니다.
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
 
-  >#### <a name="understanding-how-your-app-responds-when-the-user-launches-your-app"></a>Understanding how your app responds when the user launches your app
+  >#### <a name="understanding-how-your-app-responds-when-the-user-launches-your-app"></a>사용자가 앱을 시작할 때 앱의 응답 방식 이해
 
-  >After your app is registered to receive notifications and you [send a push notification to your app's customers from Dev Center](../publish/send-push-notifications-to-your-apps-customers.md), one of the following entry points in your app will be called when the user launches your app in response to your push notification. If you have some code that you want to run when the user launches your app, you can add the code to one of these entry points in your app.
+  >앱에서 알림을 수신하도록 등록한 후 [개발자 센터에서 앱 고객에게 푸시 알림을 보내고](../publish/send-push-notifications-to-your-apps-customers.md) 나면 사용자가 푸시 알림에 대한 응답으로 앱을 시작할 때 앱에서 다음 진입점 중 하나가 호출됩니다. 사용자가 앱을 시작할 때 실행할 코드 중 일부가 있는 경우에는 앱에서 이러한 진입점 중 하나에 코드를 추가할 수 있습니다.
 
-  >* If the push notification has a foreground activation type, override the [OnActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onactivated.aspx) method of the **App** class in your project and add your code to this method.
+  >* 푸시 알림이 포그라운드 활성화 유형인 경우 프로젝트에서 **App** 클래스의 [OnActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onactivated.aspx) 메서드를 재정의하고 이 메서드에 코드를 추가합니다.
 
-  >* If the push notification has a background activation type, add your code to the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method for your [background task](../launch-resume/support-your-app-with-background-tasks.md).
+  >* 푸시 알림이 백그라운드 활성화 유형인 경우 [백그라운드 작업](../launch-resume/support-your-app-with-background-tasks.md)을 위해 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드에 코드를 추가합니다.
 
-  >For example, you might want to reward the users of your app that have purchased any paid add-ons in your app by granting them a free add-on. In this case, you can send a push notification to a [customer segment](../publish/create-customer-segments.md) that targets these users. Then, you can add code to grant them a free [in-app purchase](in-app-purchases-and-trials.md) in one of the entry points listed above.
+  >예를 들어 앱의 유료 추가 기능을 구입한 앱 사용자에게 무료 추가 기능 사용 권한을 부여하여 사용자에게 보상하길 원할 수 있습니다. 이 경우 이러한 사용자를 대상으로 하는 [고객층](../publish/create-customer-segments.md)에게 푸시 알림을 보낼 수 있습니다. 그런 다음 위에 나열된 진입점 중 하나에서 [앱에서 바로 구매](in-app-purchases-and-trials.md) 무료 사용 권한을 부여하도록 코드를 추가할 수 있습니다.
 
-## <a name="notify-dev-center-of-your-app-launch"></a>Notify Dev Center of your app launch
+## <a name="notify-dev-center-of-your-app-launch"></a>개발자 센터에 앱 시작 알림
 
-If you select the **Track app launch rate** option for a Dev Center push notification, call the [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) method from the appropriate entry point in your app to notify Dev Center that your app was launched in response to a push notification.
+개발자 센터 푸시 알림에 대해 [Track app launch rate](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx)(앱 실행 속도 추적) 옵션을 선택한 경우 앱의 적절한 진입점에서 **ParseArgumentsAndTrackAppLaunch** 메서드를 호출하여 푸시 알림에 대한 응답으로 앱이 시작되었음을 개발자 센터에 알립니다.
 
-This method also returns the original launch arguments for your app. After you choose to track the app launch rate for a Dev Center push notification, an opaque tracking ID is added to the launch arguments to help track the app launch in Dev Center. You must pass the launch arguments for your app to the [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) method, and this method sends the tracking ID to Dev Center, removes the tracking ID from the launch arguments, and returns the original launch arguments to your code.
+이 메서드는 앱에 대한 원래 실행 인수도 반환합니다. 개발자 센터 푸시 알림에 대해 앱 시작 속도를 추적하도록 선택하고 나면 불특정 추적 id가 시작 인수에 추가되어 개발자 센터에서 앱 실행 추적이 지원됩니다. 앱에 대한 실행 인수는 [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) 메서드에 전달해야 합니다. 그러면 이 메서드는 개발자 센터에 추적 ID를 보내고, 시작 인수에서 추적 ID를 제거하고, 코드에 원래 실행 인수를 반환합니다.
 
-The way you call this method depends on the activation type of the targeted push notification:
+이 메서드를 호출하는 방법은 대상 푸시 알림의 활성화 유형에 따라 다릅니다.
 
-* If the push notification has a foreground activation type, call this method from the [OnActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onactivated.aspx) method override in your app and pass the arguments that are available in the [ToastNotificationActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.toastnotificationactivatedeventargs.aspx) object that is passed to this method. The following code example assumes that your code file has **using** statements for the **Microsoft.Services.Store.Engagement** and  **Windows.ApplicationModel.Activation** namespaces.
+* 푸시 알림이 포그라운드 활성화 유형인 경우 앱의 [OnActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onactivated.aspx) 메서드 재정의에서 이 메서드를 호출하고, 이 메서드에 전달된 [ToastNotificationActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.toastnotificationactivatedeventargs.aspx) 개체에서 사용할 수 있는 인수를 전달합니다. 다음 코드 예제에서는 코드 파일에 **Microsoft.Services.Store.Engagement** 및 **Windows.ApplicationModel.Activation** 네임스페이스에 대한 **using** 문이 있다고 가정합니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/App.xaml.cs#OnActivated)]
 
-* If the push notification has a background activation type, call this method from the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method for your [background task](../launch-resume/support-your-app-with-background-tasks.md) and pass the arguments that are available in the [ToastNotificationActionTriggerDetail](https://msdn.microsoft.com/library/windows/apps/windows.ui.notifications.toastnotificationactiontriggerdetail.aspx) object that is passed to this method. The following code example assumes that your code file has **using** statements for the **Microsoft.Services.Store.Engagement**, **Windows.ApplicationModel.Background**, and **Windows.UI.Notifications** namespaces.
+* 푸시 알림이 백그라운드 활성화 유형인 경우 [백그라운드 작업](../launch-resume/support-your-app-with-background-tasks.md)에 대한 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드에서 이 메서드를 호출하고 이 메서드에 전달된 [ToastNotificationActionTriggerDetail](https://msdn.microsoft.com/library/windows/apps/windows.ui.notifications.toastnotificationactiontriggerdetail.aspx) 개체에서 사용할 수 있는 인수를 전달합니다. 다음 코드 예제에서는 코드 파일에 **Microsoft.Services.Store.Engagement**, **Windows.ApplicationModel.Background** 및 **Windows.UI.Notifications** 네임스페이스에 대한 **using** 문이 있다고 가정합니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#Run)]
 
-## <a name="unregister-for-push-notifications"></a>Unregister for push notifications
+## <a name="unregister-for-push-notifications"></a>푸시 알림 등록 취소
 
-If you want your app to stop receiving targeted Windows Dev Center push notifications, call the [UnregisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) method.
+앱에서 대상이 지정된 Windows 개발자 센터 푸시 알림 수신을 중지하려면 [UnregisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) 메서드를 호출합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#UnregisterNotificationChannelAsync)]
 
-Note that this method invalidates the channel that is being used for notifications so the app no longer receives push notifications from *any* services. After it has been closed, the channel can never be used again for any services, including targeted Windows Dev Center push notifications and other notifications using WNS. To resume sending push notifications to this app, the app must request a new channel.
+이 메서드는 앱에서 *모든* 서비스의 푸시 알림을 받지 않도록 알림에 사용되고 있는 채널을 무효화합니다. 알림이 종료되면 채널은 대상이 지정된 Windows 개발자 센터 푸시 알림 및 WNS를 사용하는 다른 알림을 포함하여 어떤 서비스에 대해서도 다시 사용할 수 없게 됩니다. 이 앱에 푸시 알림 보내기를 다시 시작하려면 앱에서 새 채널을 요청 해야합니다.
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Send push notifications to your app's customers](../publish/send-push-notifications-to-your-apps-customers.md)
-* [Windows Push Notification Services (WNS) overview](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
-* [How to request, create, and save a notification channel](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868221)
+* [앱의 고객에게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)
+* [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [알림 채널 요청, 만들기 및 저장 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868221)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
 
 

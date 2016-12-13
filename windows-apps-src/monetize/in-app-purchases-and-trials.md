@@ -1,75 +1,75 @@
 ---
 author: mcleanbyron
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
-description: Learn how to enable in-app purchases and trials in UWP apps.
-title: In-app purchases and trials
+description: "UWP 앱에서 ‘앱에서 바로 구매’ 및 평가판을 사용하도록 설정하는 방법을 알아봅니다."
+title: "앱에서 바로 구매 및 평가판"
 translationtype: Human Translation
 ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
 ms.openlocfilehash: 7783b6017a314ddb24509c55db8134a4c214430f
 
 ---
 
-# <a name="in-app-purchases-and-trials"></a>In-app purchases and trials
+# <a name="in-app-purchases-and-trials"></a>앱에서 바로 구매 및 평가판
 
-The Windows SDK provides APIs you can use to implement the following features to make more money from your Universal Windows Platform (UWP) app:
+Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익을 올릴 수 있도록 다음과 같은 기능을 구현하는 데 사용할 수 있는 API를 제공합니다.
 
-* **In-app purchases**&nbsp;&nbsp;Whether your app is free or not, you can sell content or new app functionality (such as unlocking the next level of a game) from right within the app.
+* **앱에서 바로 구매**&nbsp;&nbsp;앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
 
-* **Trial functionality**&nbsp;&nbsp;If you configure your app as a [free trial in the Windows Dev Center dashboard](../publish/set-app-pricing-and-availability.md#free-trial), you can entice your customers to purchase the full version of your app by excluding or limiting some features during the trial period. You can also enable features, such as banners or watermarks, that are shown only during the trial, before a customer buys your app.
+* **평가판 기능**&nbsp;&nbsp;Windows 개발자 센터 대시보드에서 [무료 평가판](../publish/set-app-pricing-and-availability.md#free-trial)으로 앱을 구성하면 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전을 구매하도록 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
-This article provides an overview of how in-app purchases and trials work in UWP apps.
+이 문서에서는 앱에서 바로 구매와 평가판이 UWP 앱에서 작동하는 방식에 대해 간략하게 보여 줍니다.
 
 <span id="choose-namespace" />
-## <a name="choose-which-namespace-to-use"></a>Choose which namespace to use
+## <a name="choose-which-namespace-to-use"></a>사용할 네임스페이스 선택
 
-There are two different namespaces you can use to add in-app purchases and trial functionality to your UWP apps, depending on which version of Windows 10 your apps target. Although the APIs in these namespaces serve the same goals, they are designed quite differently, and code is not compatible between the two APIs.
+앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows&nbsp;10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Starting in Windows 10, version 1607, apps can use the API in this namespace to implement in-app purchases and trials. We recommend that you use the members in this namespace if your app targets Windows 10, version 1607, or a later release. This namespace supports the latest add-on types, such as Store-managed consumable add-ons, and is designed to be compatible with future types of products and features supported by Windows Dev Center and the Store. For more information about this namespace, see the [Using the Windows.Services.Store namespace](#api_intro) section in this article.
+* ** [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) ** &nbsp;&nbsp;Windows&nbsp;10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Windows&nbsp;10 버전 1607 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 구성원을 사용하는 것이 좋습니다. 이 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스 사용](#api_intro) 섹션을 참조하세요.
 
-* **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;All versions of Windows 10 also support an older API for in-app purchases and trials in this namespace. Although any UWP app for Windows 10 can use this namespace, this namespace may not be updated to support new types of products and features in Dev Center and the Store in the future. For information about this namespace, see [In-app purchases and trials using the Windows.ApplicationModel.Store namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+* **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. Windows 10용 UWP 앱이 이 네임스페이스를 사용할 수는 있지만 이 네임스페이스는 나중에 개발자 센터 및 스토어에서 새로운 유형의 제품 및 기능을 지원하도록 업데이트되지 않을 수 있습니다. 이 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 <span id="concepts" />
-## <a name="basic-concepts"></a>Basic concepts
+## <a name="basic-concepts"></a>기본 개념
 
-This section introduces basic concepts for in-app purchases and trials in UWP apps. Most of these concepts apply to both the **Windows.Services.Store** and **Windows.ApplicationModel.Store** namespaces, except where noted.
+이 섹션에서는 UWP 앱의 앱에서 바로 구매와 평가판에 대한 기본 개념을 소개합니다. 이러한 개념의 대부분은 별도의 설명을 제외하고 **Windows.Services.Store** 및 **Windows.ApplicationModel.Store** 네임스페이스 둘 다에 적용됩니다.
 
-Every item that is offered in the Store is generally called a *product*. Most developers work with the following types of products: *apps* and *add-ons* (also known as in-app products or IAPs).
+스토어에서 제공하는 각 항목을 일반적으로 *제품*이라고 합니다. 대부분의 개발자는 *앱*과 *추가 기능*(앱에서 바로 구매 제품 또는 IAP라고도 함) 유형의 제품을 사용합니다.
 
-An add-on refers to a product or feature that you make available to your customers in the context of your app. An add-on can represent any functionality that your app offers to customers: for example, currency to be used in an app or game, new maps or weapons for a game, the ability to use your app without ads, or digital content such as music or videos for apps that have the ability to offer that type of content. Every app and add-on has an associated license that indicates whether the user is entitled to use the app or add-on. If the user is entitled to use the app or add-on as a trial, the license also provides additional info about the trial.
+추가 기능은 앱의 컨텍스트에서 고객에게 제공하는 제품 또는 기능을 가리킵니다. 추가 기능은 앱에서 고객에게 제공하는 모든 기능을 나타낼 수 있습니다. 예를 들어 앱 또는 게임에서 사용할 통화, 게임용 새로운 지도 또는 무기, 광고 없이 앱을 사용하는 기능, 해당 형식의 콘텐츠를 제공할 수 있는 앱을 위한 음악, 비디오 등의 디지털 콘텐츠 등이 포함됩니다. 모든 앱과 추가 기능에는 사용자가 앱 또는 추가 기능을 사용할 자격이 있는지 여부를 나타내는 관련 라이선스가 있습니다. 사용자가 앱 또는 추가 기능을 평가판으로 사용할 자격이 있으면 라이선스에서 평가판에 대한 추가 정보도 제공합니다.
 
-To offer an add-on to customers in your app, you must [define the add-on for your app in the Dev Center dashboard](../publish/iap-submissions.md) so the Store knows about it. Then, your app can use APIs in the **Windows.Services.Store** or **Windows.ApplicationModel.Store** namespace to offer the add-on for sale to the user as an in-app purchase.
+앱에서 고객에게 추가 기능을 제공하려면 스토어에서도 알고 있도록 [개발자 센터 대시보드에서 앱에 대한 추가 기능을 정의](../publish/iap-submissions.md)해야 합니다. 그런 다음 **Windows.Services.Store** 또는 **Windows.ApplicationModel.Store** 네임스페이스에서 API를 사용하여 앱에서 바로 구매로 사용자에게 추가 기능을 판매용으로 제공할 수 있습니다.
 
-UWP apps can offer the following types of add-ons.
+UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
-| Add-on type |  Description  |
+| 추가 기능 유형 |  설명  |
 |---------|-------------------|
-| Durable  |  An add-on that persists for the lifetime that you specify in the [Windows Dev Center dashboard](../publish/enter-iap-properties.md). <p/><p/>By default, durable add-ons never expire, in which case they can only be purchased once. If you specify a particular duration for the add-on, the user can repurchase the add-on after it expires. |
-| Developer-managed consumable  |  An add-on that can be purchased, used, and purchased again. This type of add-on is often used for in-app currency. <p/><p/>For this type of consumable, you are responsible for keeping track of the user's balance of items that the add-on represents, and for reporting the purchase of the add-on as fulfilled to the Store after the user has consumed all the items. The user cannot purchase the add-on again until your app has reported the previous add-on purchase as fulfilled. <p/><p/>For example, if your add-on represents 100 coins in a game and the user consumes 10 coins, your app or service must maintain the new remaining balance of 90 coins for the user. After the user has consumed all 100 coins, your app must report the add-on as fulfilled, and then the user can purchase the 100 coin add-on again.    |
-| Store-managed consumable  |  An add-on that can be purchased, used, and purchased again. This type of add-on is often used for in-app currency.<p/><p/>For this type of consumable, the Store keeps track of the user's balance of items that the add-on represents. When the user consumes any items, you are responsible for reporting those items as fulfilled to the Store, and the Store updates the user's balance. Your app can query for the current balance for the user at any time. After the user consumes all of the items, the user can purchase the add-on again.  <p/><p/> For example, if your add-on represents an initial quantity of 100 coins in a game and the user consumes 10 coins, your app reports to the Store that 10 units of the add-on were fulfilled, and the Store updates the remaining balance. After the user has consumed all 100 coins, the user can purchase the 100 coin add-on again. <p/><p/>**Note**&nbsp;&nbsp;Store-managed consumables are available starting in Windows 10, version 1607. To use Store-managed consumables, your app must target Windows 10, version 1607, or a later version, and it must use the API in the **Windows.Services.Store** namespace instead of the **Windows.ApplicationModel.Store** namespace.  |
+| 지속형  |  [Windows 개발자 센터 대시보드](../publish/enter-iap-properties.md)에서 지정한 수명 동안 지속되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
+| 개발자 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다. <p/><p/>이 소모성 유형의 경우 개발자가 추가 기능이 나타내는 항목의 사용자 잔액을 추적하고 사용자가 항목을 모두 사용한 후 추가 기능 구매를 처리된 것으로 스토어에 보고해야 합니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
+| 스토어 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다.<p/><p/>이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. 사용자는 모든 항목을 사용한 후 추가 기능을 다시 구매할 수 있습니다.  <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다. <p/><p/>**참고** &nbsp;&nbsp;스토어 관리 소모성은 Windows&nbsp;10 버전 1607부터 사용할 수 있습니다. 스토어에서 관리하는 소모품을 사용하려면 앱에서 Windows&nbsp;10 버전 1607 또는 그 이후 버전을 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 API를 사용해야 합니다.  |
 
 <span />
 
->**Note**&nbsp;&nbsp;Other types of add-ons, such as durable add-ons with packages (also known as downloadable content or DLC) are only available to a restricted set of developers, and are not covered in this documentation.
+>**참고**&nbsp;&nbsp;패키지를 사용한 지속형 추가 기능(다운로드 가능한 콘텐츠 또는 DLC라고도 함) 등 다른 유형의 추가 기능은 제한된 일부 개발자만 사용할 수 있으며 이 설명서에서 다루지 않습니다.
 
 <span id="api_intro" />
-## <a name="using-the-windowsservicesstore-namespace"></a>Using the Windows.Services.Store namespace
+## <a name="using-the-windowsservicesstore-namespace"></a>Windows.Services.Store 네임스페이스 사용
 
-The remainder of this article describes how to implement in-app purchases and trials using the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace. This namespace is available only to apps that target Windows 10, version 1607, or later, and we recommend that apps use this namespace instead of the [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) namespace if possible.
+이 문서의 나머지 부분에서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현하는 방법에 대해 설명합니다. 이 네임스페이스는 Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱에만 사용 가능하므로 앱에서 가능하다면 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스 대신 이 네임스페이스를 사용하는 것이 좋습니다.
 
-If you're looking for information about the **Windows.ApplicationModel.Store** namespace, see [In-app purchases and trials using the Windows.ApplicationModel.Store namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
+**Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용을 살펴보려면 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
-### <a name="get-started-with-the-storecontext-class"></a>Get started with the StoreContext class
+### <a name="get-started-with-the-storecontext-class"></a>StoreContext 클래스 시작
 
-The main entry point to the **Windows.Services.Store** namespace is the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class. This class provides methods you can use to get info for the current app and its available add-ons, get license info for the current app or its add-ons, purchase an app or add-on for the current user, and perform other tasks. To get a [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) object, do one of the following:
+**Windows.Services.Store** 네임스페이스의 기본 진입점은 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 메서드를 제공합니다. [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 가져오려면 다음 중 하나를 수행합니다.
 
-* In a single-user app (that is, an app that runs only in the context of the user that launched the app), use the [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) method to get a **StoreContext** object that you can use to access and manage Windows Store-related data for the user. Most Universal Windows Platform (UWP) apps are single-user apps.
+* 단일 사용자 앱(즉, 앱을 실행한 사용자의 컨텍스트에서만 실행되는 앱)에서는 [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) 메서드를 통해 사용자에 대한 Windows 스토어 관련 데이터를 액세스 및 관리하는 데 사용할 수 있는 **StoreContext** 개체를 가져옵니다. 대부분의 UWP(유니버설 Windows 플랫폼) 앱은 단일 사용자 앱입니다.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
   Windows.Services.Store.StoreContext context = StoreContext.GetDefault();
   ```
 
-* In a [multi-user app](../xbox-apps/multi-user-applications.md), use the [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) method to get a **StoreContext** object that you can use to access and manage Windows Store-related data for a specific user who is signed in with their Microsoft account while using the app. The following example gets a **StoreContext** object for the first available user.
+* [다중 사용자 앱](../xbox-apps/multi-user-applications.md)에서는 [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx) 메서드를 통해 앱을 사용하는 동안 해당 Microsoft 계정으로 로그인한 특정 사용자에 대한 Windows 스토어 관련 데이터를 액세스 및 관리하는 데 사용할 수 있는 **StoreContext** 개체를 가져옵니다. 다음 예제에서는 사용 가능한 첫 번째 사용자에 대한 **StoreContext** 개체를 가져옵니다.
 
   > [!div class="tabbedCodeSnippets"]
   ```csharp
@@ -77,86 +77,86 @@ The main entry point to the **Windows.Services.Store** namespace is the [StoreCo
   Windows.Services.Store.StoreContext context = StoreContext.GetForUser(users[0]);
   ```
 
->**Note**&nbsp;&nbsp;Windows desktop applications that use the [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop) must perform additional steps to configure the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) object before they can use this object. For more information, see [Using the StoreContext class in a desktop application that uses the Desktop Bridge](#desktop).
+>**참고**&nbsp;&nbsp;[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서는 이 개체를 사용하기 전에 먼저 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성하는 추가 단계를 수행해야 합니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](#desktop)을 참조하세요.
 
-After you have a [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) object, you can start calling methods to get Store product info for the current app and its add-ons, retrieve license info for the current app and its add-ons, purchase an app or add-on for the current user, and perform other tasks. For more information about common tasks you can perform using this namespace, see the following articles:
+[StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체가 확보되면 메서드 호출을 시작하여 현재 앱과 추가 기능에 대한 스토어 제품 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업 수행을 위한 메서드를 제공합니다. 이 네임스페이스를 사용하여 수행할 수 있는 일반적인 작업에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Get product info for apps and add-ons](get-product-info-for-apps-and-add-ons.md)
-* [Get license info for apps and add-ons](get-license-info-for-apps-and-add-ons.md)
-* [Enable in-app purchases of apps and add-ons](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Enable consumable add-on purchases](enable-consumable-add-on-purchases.md)
-* [Implement a trial version of your app](implement-a-trial-version-of-your-app.md)
+* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 및 추가 기능에 대한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
+* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
+* [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
 
-For a sample app that demonstrates how to use the **Windows.Services.Store** namespace, see the [Store sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store).
+**Windows.Services.Store** 네임스페이스를 사용하는 방법을 보여 주는 샘플 앱은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
 
 <span id="implement-iap" />
-### <a name="implement-in-app-purchases"></a>Implement in-app purchases
+### <a name="implement-in-app-purchases"></a>앱에서 바로 구매 구현
 
-To offer an in-app purchase to customers in your app using the **Windows.Services.Store** namespace:
+**Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 방식을 고객에게 제공하려면
 
-1. If your app offers add-ons that customers can purchase, [create add-on submissions for your app in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+1. 앱에서 고객이 구매할 수 있는 추가 기능을 제공하는 경우 [개발자 센터 대시보드에서 앱에 대한 추가 기능 제출을 만듭니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-2. Write code in your app to [retrieve product info for your app or an add-on offered by your app](get-product-info-for-apps-and-add-ons.md) and then [determine whether the license is active](get-license-info-for-apps-and-add-ons.md) (that is, whether the user has a license to use the app or add-on). If the license isn't active, display a UI that offers the app or add-on for sale to the user as an in-app purchase.
+2. 앱에서 코드를 기록하여 [앱이나 앱이 제공하는 추가 기능에 대한 제품 정보를 검색](get-product-info-for-apps-and-add-ons.md)한 다음 [라이선스가 활성 상태인지 확인](get-license-info-for-apps-and-add-ons.md)(사용자에게 앱이나 추가 기능을 사용할 수 있는 라이선스가 있는지 여부)합니다. 라이선스 활성화되지 않으면 판매를 위해 사용자에게 앱과 추가 기능을 제공하는 UI를 앱에서 바로 구매로 나타냅니다.
 
-3. If the user chooses to purchase your app or add-on, use the appropriate method to purchase the product. If the user is purchasing your app or a durable add-on, follow the process in [Enable in-app purchases of apps and add-ons](enable-in-app-purchases-of-apps-and-add-ons.md). If the user is purchasing a consumable add-on, follow the instructions in [Enable consumable add-on purchases](enable-consumable-add-on-purchases.md).
+3. 사용자가 앱 또는 추가 기능을 구매하기로 선택한 경우 적절한 방법을 사용하여 제품을 구입합니다. 사용자가 앱 또는 지속형 추가 기능을 구매할 경우 [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md) 프로세스를 따릅니다. 사용자가 소모성 추가 기능을 구매할 경우 [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)의 지침을 따르세요.
 
-4. Test your implementation by following the [testing guidance](#testing) in this article.
+4. 이 문서에서는 [테스트 지침](#testing)에 따라 구현 방식을 테스트합니다.
 
 <span id="implement-trial" />
-### <a name="implement-trial-functionality"></a>Implement trial functionality
+### <a name="implement-trial-functionality"></a>평가판의 기능 구현
 
-To exclude or limit features in a trial version of your app using the **Windows.Services.Store** namespace:
+**Windows.Services.Store** 네임스페이스를 사용하여 앱의 평가판 버전에서 기능을 제외하거나 제한하려면
 
-1. [Configure your app as a free trial in the Windows Dev Center dashboard](../publish/set-app-pricing-and-availability.md#free-trial).
+1. [앱을 Windows 개발자 센터 대시보드에서 무료 평가판 앱으로 구성합니다](../publish/set-app-pricing-and-availability.md#free-trial).
 
-2. Write code in your app to [retrieve product info for your app or an add-on offered by your app](get-product-info-for-apps-and-add-ons.md) and then [determine whether the license associated with the app is a trial license](get-license-info-for-apps-and-add-ons.md).
+2. 앱에서 코드를 기록하여 [앱이나 앱이 제공하는 추가 기능에 대한 제품 정보를 검색](get-product-info-for-apps-and-add-ons.md)한 다음 [앱과 연결된 라이선스가 평가판 라이선스인지 확인](get-license-info-for-apps-and-add-ons.md)합니다.
 
-3. Exclude or limit certain features in your app if it is a trial, and then enable the features when the user purchases a full license. For more information, see [Implement a trial version of your app](implement-a-trial-version-of-your-app.md).
+3. 평가판인 경우 앱의 특정 기능을 제외하거나 제안한 다음 사용자가 정식 라이선스를 구매할 때 해당 기능을 사용하도록 설정합니다. 자세한 내용은 [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)을 참조하세요.
 
-4. Test your implementation by following the [testing guidance](#testing) in this article.
+4. 이 문서에서는 [테스트 지침](#testing)에 따라 구현 방식을 테스트합니다.
 
 <span id="testing" />
-### <a name="test-your-implementation"></a>Test your implementation
+### <a name="test-your-implementation"></a>구현 테스트
 
-The **Windows.Services.Store** namespace does not provide a class that you can use to simulate license info during testing. Instead, you must publish an app to the Store and download that app to your development device to use its license for testing. This is a different experience from apps that use the **Windows.ApplicationModel.Store** namespace, which can use the [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) class to simulate license info during testing.
+**Windows.Services.Store** 네임스페이스는 테스트 중에 라이선스 정보를 시뮬레이트하는 데 사용할 수 있는 클래스를 제공하지 않습니다. 대신에 개발자가 스토어에 앱을 게시하고 개발 디바이스에 앱을 다운로드하여 해당 라이선스를 테스트에 사용해야 합니다. 이는 **Windows.ApplicationModel.Store** 네임스페이스를 사용하는 앱과 다른 환경으로, 해당 앱은 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/hh779766) 클래스를 사용하여 테스트 중에 라이선스 정보를 시뮬레이트할 수 있습니다.
 
-If your app uses APIs in the **Windows.Services.Store** namespace to access info for your app and its add-ons, follow this process to test your code:
+앱에서 **Windows.Services.Store** 네임스페이스의 API를 사용하여 앱과 추가 기능에 대한 정보에 액세스하는 경우 코드를 테스트하려면 다음 프로세스를 따르세요.
 
-1. If your app is not yet published and available in the Store, make sure your app meets the minimum [Windows App Certification Kit](https://developer.microsoft.com/windows/develop/app-certification-kit) requirements, [submit your app](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) to the Windows Dev Center dashboard, and make sure your app passes the certification process so it is listed in the Store. Optionally, you can [hide your app from the Store](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) so it is unavailable to customers while you test it.
+1. 앱이 아직 게시되지 않고 스토어에서 사용할 수 없는 경우 앱이 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는지 확인하고, Windows 개발자 센터 대시보드에 [앱을 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)하고 앱이 스토어에 나열되도록 인증 프로세스를 전달해야 합니다. 경우에 따라 [스토어에서 앱을 숨길](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 수 있으므로 테스트하는 동안 고객이 사용하지 못할 수 있습니다.
 
-2. Next, make sure you have completed the following:
+2. 그다음에 아래 작업을 완료해야 합니다.
 
-  * Write code in your app that uses the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class and other related types in the **Windows.Services.Store** namespace to implement [in-app purchases](#implement-iap) or [trial functionality](#implement-trial).
+  * **Windows.Services.Store** 네임스페이스에서 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스 및 기타 관련 형식을 사용하는 앱에서 코드를 작성하여 [앱에서 바로 구매](#implement-iap) 또는 [평가판 기능](#implement-trial)을 구현합니다.
 
-  * If your app offers add-ons that customers can purchase, [create add-on submissions for your app in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
+  * 앱에서 고객이 구매할 수 있는 추가 기능을 제공하는 경우 [개발자 센터 대시보드에서 앱에 대한 추가 기능 제출을 만듭니다](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-  * If you want to exclude or limit some features in a trial version of your app, [configure your app as a free trial in the Windows Dev Center dashboard](../publish/set-app-pricing-and-availability.md#free-trial).
+  * 앱의 평가판 버전에서 일부 기능을 제외하거나 제한하려면 앱을 [Windows 개발자 센터 대시보드에서 무료 평가판 앱으로 구성](../publish/set-app-pricing-and-availability.md#free-trial)합니다.
 
-3. With your project open in Visual Studio, click the **Project menu**, point to **Store**, and then click **Associate App with the Store**. Complete the instructions in the wizard to associate the app project with the app in your Windows Dev Center account that you want to use for testing.
+3. 프로젝트가 열리면 Visual Studio에서 **프로젝트 메뉴**를 클릭하고 **스토어**를 가리킨 다음 **스토어에 앱 연결**을 클릭합니다. 마법사의 지침에 따라 테스트에 사용하려는 Windows 개발자 센터 계정에서 앱 프로젝트를 앱에 연결합니다.
 
-  >**Note**&nbsp;&nbsp;If you do not associate your project with an app in the Store, the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) methods set the **ExtendedError** property of their return values to the error code value 0x803F6107. This value indicates that the Store doesn't have any knowledge about the app.
+  >**참고**&nbsp;&nbsp;스토어에서 프로젝트를 앱에 연결하지 않으면 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 메서드가 해당 반환 값의 **ExtendedError** 속성을 오류 코드 값 0x803F6107로 설정합니다. 이 값은 스토어에 앱에 대한 정보가 없음을 나타냅니다.
 
-4. If you have not done so already, install the app from the Store that you specified in the previous step, run the app once, and then close this app. This ensures that a valid license for the app is installed to your development device.
+4. 아직 수행하지 않은 경우 이전 단계에서 지정한 앱을 스토어에서 설치하고 앱을 한 번 실행한 다음 이 앱을 닫습니다. 이렇게 하면 앱에 대한 유효한 라이선스가 개발 디바이스에 설치됩니다.
 
-5. In Visual Studio, start running or debugging your project. Your code should retrieve app and add-on data from the Store app that you associated with your local project. If you are prompted to reinstall the app, follow the instructions and then run or debug your project.
+5. Visual Studio에서 프로젝트 실행 또는 디버깅을 시작합니다. 코드를 통해 로컬 프로젝트와 연결된 스토어 앱에서 앱 및 추가 기능 데이터를 검색해야 합니다. 앱을 다시 설치하라는 메시지가 표시되면 지침을 따른 다음 프로젝트를 실행하거나 디버그합니다.
 
 <span id="receipts" />
-### <a name="receipts-for-in-app-purchases"></a>Receipts for in-app purchases
+### <a name="receipts-for-in-app-purchases"></a>앱에서 바로 구매에 대한 확인
 
-The **Windows.Services.Store** namespace does not provide an API you can use to obtain a transaction receipt for successful purchases in your app's code. This is a different experience from apps that use the **Windows.ApplicationModel.Store** namespace, which can [use a client-side API to retrieve a transaction receipt](use-receipts-to-verify-product-purchases.md).
+**Windows.Services.Store** 네임스페이스는 앱 코드에서 성공한 구매에 대한 거래 영수증을 가져오는 데 사용할 수 있는 API를 제공하지 않습니다. 이는 **Windows.ApplicationModel.Store** 네임스페이스를 사용하는 앱과 다른 환경으로, 해당 앱은 [거래 영수증을 검색할 수 있는 고객 쪽 API를 사용](use-receipts-to-verify-product-purchases.md)할 수 있습니다.
 
-If you implement in-app purchases using the **Windows.Services.Store** namespace and you want to validate whether a given customer has purchased an app or add-on, you can use the [query for products method](query-for-products.md) in the [Windows Store collection REST API](view-and-grant-products-from-a-service.md). The return data for this method confirms whether the specified customer has an entitlement for a given product, and provides data for the transaction in which the user acquired the product. The Windows Store collection API uses Azure AD authentication to retrieve this information.
+**Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매를 구현하고 지정된 고객이 앱이나 추가 기능을 구매했는지 확인하려면 [Windows 스토어 컬렉션 REST API](view-and-grant-products-from-a-service.md)에서 [제품 메서드에 대한 쿼리](query-for-products.md)를 사용할 수 있습니다. 이 메서드에 대한 반환 데이터에서는 지정된 고객에게 특정 제품에 대한 자격이 있는지 확인하고, 사용자가 제품을 구입할 때 해당 거래에 대한 데이터를 제공합니다. Windows 스토어 컬렉션 API는 Azure AD 인증을 사용하여 이 정보를 검색합니다.
 
 <span id="desktop" />
-### <a name="using-the-storecontext-class-in-an-app-that-uses-the-desktop-bridge"></a>Using the StoreContext class in an app that uses the Desktop Bridge
+### <a name="using-the-storecontext-class-in-an-app-that-uses-the-desktop-bridge"></a>데스크톱 브리지를 사용하는 앱에서 StoreContext 클래스 사용
 
-Desktop applications that use the [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop) can use the [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) class to implement in-app purchases and trials. However, if you have a Win32 desktop application or a desktop application that has a window handle (HWND) that is associated with the rendering framework (such as a WPF application), your application must configure the **StoreContext** object to specify which application window is the owner window for modal dialogs that are shown by the object.
+[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램은 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 그러나 Win32 데스크톱 응용 프로그램이나, 렌더링 프레임워크(예: WPF 응용 프로그램)와 연결된 창 핸들(HWND)이 있는 데스크톱 응용 프로그램이 있는 경우 응용 프로그램에서 **StoreContext** 개체를 구성하여 개체에서 표시하는 모달 대화 상자에 대한 소유자 창인 응용 프로그램 창을 지정합니다.
 
-Many **StoreContext** members (and members of other related types that are accessed through the **StoreContext** object) display a modal dialog to the user for Store-related operations such as purchasing a product. If a desktop application does not configure the **StoreContext** object to specify the owner window for modal dialogs, this object will return inaccurate data or errors.
+많은 **StoreContext** 구성원(및 **StoreContext** 개체를 통해 액세스한 기타 관련된 구성원 유형)들은 제품 구입과 같은 스토어 관련 작업에 대한 모달 대화 상자를 사용자에게 표시합니다. 데스크톱 응용 프로그램에서 **StoreContext** 개체를 구성하지 않고 모달 대화 상자에 대한 소유자 창을 지정한 경우 이 개체는 부정확한 데이터 또는 오류를 반환합니다.
 
-To configure a **StoreContext** object in a desktop application that uses the Desktop Bridge, follow these steps.
+데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 **StoreContext** 개체를 구성하려면 다음 단계를 따릅니다.
 
-  1. If your application is written in a managed language such as C# or Visual Basic, declare the [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) interface in your app's code with the [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) attribute as shown in the following example. This example assumes that your code file has a **using** statement for the **System.Runtime.InteropServices** namespace.
+  1. 응용 프로그램이 C# 또는 Visual Basic 등 관리되는 언어로 작성된 경우 앱 코드의 [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) 인터페이스를 다음 예에 나타나는 [ComImport](https://msdn.microsoft.com/library/system.runtime.interopservices.comimportattribute.aspx) 특성을 사용하여 선언합니다. 이 예제에서는 **System.Runtime.InteropServices** 네임스페이스에 대한 코드 파일에 **using** 문이 있다고 가정합니다.
 
     > [!div class="tabbedCodeSnippets"]
     ```csharp
@@ -169,9 +169,9 @@ To configure a **StoreContext** object in a desktop application that uses the De
     }
     ```
 
-    If your application is written in native code, such as C++, you do not need to import the **IInitializeWithWindow** interface. Simply add a reference to the shobjidl.h header file in your code.
+    응용 프로그램이 C++과 같은 네이티브 코드로 작성된 경우 **IInitializeWithWindow** 인터페이스를 가져오지 않아도 됩니다. 코드에서 shobjidl.h 헤더 파일에 참조를 추가하기만 하면 됩니다.
 
-  2. Use the [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx) (or [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)) method to get a [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) object as described earlier in this article and cast this object to an [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) object. Then, call the [Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) method, and pass the handle of the window that you want to be the owner for any modal dialogs that are shown by **StoreContext** methods. The following example shows how to pass the handle of your app's main window to the method.
+  2. 이 문서의 앞부분에서 설명한 대로 [GetDefault](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getdefault.aspx)(또는 [GetForUser](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.getforuser.aspx)) 메서드를 사용하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 가져와 이 개체를 [IInitializeWithWindow](https://msdn.microsoft.com/library/windows/desktop/hh706981.aspx) 개체로 캐스팅합니다. 그런 다음 [Initialize](https://msdn.microsoft.com/library/windows/desktop/hh706982.aspx) 메서드를 호출하고 **StoreContext** 메서드에서 표시한 모달 대화 상자에 대한 소유자가 되도록 창의 핸들을 전달합니다. 다음 예제에서는 앱의 주 창의 핸들을 메서드에 전달하는 방법을 보여 줍니다.
 
     > [!div class="tabbedCodeSnippets"]
     ```csharp
@@ -181,35 +181,35 @@ To configure a **StoreContext** object in a desktop application that uses the De
     ```
 
 <span id="products-skus" />
-### <a name="products-skus-and-availabilities"></a>Products, SKUs, and availabilities
+### <a name="products-skus-and-availabilities"></a>제품, SKU 및 가용성
 
-Every product in the Store has at least one *SKU*, and each SKU has at least one *availability*. These concepts are abstracted away from most developers in the Windows Dev Center dashboard, and most developers will never define SKUs or availabilities for their apps or add-ons. However, because the object model for Store products in the **Windows.Services.Store** namespace includes SKUs and availabilities, a basic understanding of these concepts can be helpful.
+스토어의 모든 제품에는 *SKU*가 하나 이상 있으며, 각 SKU에 *가용성*이 하나 이상 있습니다. 대부분의 개발자는 Windows 개발자 센터 대시보드에서 이러한 개념을 도외시하며 해당 앱이나 추가 기능에 대한 SKU 또는 가용성을 정의하지 않습니다. 그러나 **Windows.Services.Store** 네임스페이스의 스토어 제품에 대한 개체 모델에는 SKU와 가용성이 포함되어 있으므로 이러한 개념에 대한 기본적인 이해가 도움이 될 수 있습니다.
 
-| Object type |  Description  |
+| 개체 유형 |  설명  |
 |---------|-------------------|
-| [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)  |  This class represents any type of product that is available in the Store, including an app or add-on. This class provides properties you can use to access data such as the Store ID of the product, the images and videos for the Store listing, and pricing info. It also provides methods you can use to purchase the product. |
-| [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) |  This class represents a *SKU* for a product. A SKU is a specific version of a product with its own description, price, and other unique product details. Each app or add-on has a default SKU. The only time most developers will ever have multiple SKUs for an app is if they publish a full version of their app and a trial version (in the Store catalog, each of these versions is a different SKU of the same app). <p/><p/> Some publishers have the ability to define their own SKUs. For example, a large game publisher might release a game with one SKU that shows green blood in markets that don't allow red blood and a different SKU that shows red blood in all other markets. Alternatively, a publisher who sells digital video content might publish two SKUs for a video, one SKU for the high-definition version and a different SKU for the standard-definition version. <p/><p/> Each product has a [Skus](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.skus.aspx) property you can use to access the SKUs. |
-| [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx)  |  This class represents an *availability* for a SKU. An availability is a specific version of a SKU with its own unique pricing info. Each SKU has a default availability. Some publishers have the ability to define their own availabilities to introduce different price options for a given SKU. <p/><p/> Each SKU has an [Availabilities](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.availabilities.aspx) property you can use to access the availabilities. For most developers, each SKU has a single default availability.  |
+| [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)  |  이 클래스는 앱 또는 추가 기능을 포함하여 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
+| [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) |  이 클래스는 제품에 대한 *SKU*를 나타냅니다. SKU는 자체 설명, 가격 및 기타 고유한 제품 정보가 있는 특정 버전의 제품입니다. 앱이나 추가 기능마다 기본 SKU가 있습니다. 대부분의 개발자가 앱용 SKU를 여러 개 사용할 때는 전체 버전의 앱과 평가판을 게시하는 경우뿐입니다(스토어 카탈로그에서 이러한 각 버전은 동일한 앱의 다른 SKU임). <p/><p/> 일부 판매자는 해당 SKU를 정의할 수 있습니다. 예를 들어 대규모 게임 판매자가 빨간색 피를 허용하지 않는 지역/국가에서 녹색 피를 표시하는 SKU와 다른 모든 지역/국가에서 빨간색 피를 표시하는 SKU로 게임을 출시할 수 있습니다. 또는 디지털 비디오 콘텐츠의 판매자가 HD 버전용 SKU와 표준 화질 버전용 SKU의 두 SKU를 게시할 수 있습니다. <p/><p/> 각 제품에는 SKU에 액세스할 수 있는 [Skus](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.skus.aspx) 속성이 있습니다. |
+| [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx)  |  이 클래스는 SKU에 대한 *가용성*을 나타냅니다. 가용성은 고유한 가격 정보가 있는 특정 버전의 SKU입니다. SKU마다 기본 가용성이 있습니다. 일부 판매자는 고유한 가용성을 정의하여 주어진 SKU에 대해 다른 가격 옵션을 도입할 수 있습니다. <p/><p/> 각 SKU에는 가용성에 액세스할 수 있는 [Availabilities](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.availabilities.aspx) 속성이 있습니다. 대부분의 개발자의 경우 SKU마다 하나의 기본 가용성이 있습니다.  |
 
 <span id="store_ids" />
-### <a name="store-ids"></a>Store IDs
+### <a name="store-ids"></a>스토어 ID
 
-Every app and add-on in the Store has an associated **Store ID**. Many of the APIs in the **Windows.Services.Store** namespace require the Store ID in order to perform an operation on an app or add-on. Products, SKUs, and availabilities have different Store ID formats.
+스토어의 모든 앱과 추가 기능에는 관련 **스토어 ID**가 있습니다. **Windows.Services.Store** 네임스페이스에 있는 대부분의 API는 스토어 ID가 있어야 앱이나 추가 기능에 대한 작업을 수행할 수 있습니다. 제품, SKU 및 가용성은 서로 다른 스토어 ID 형식을 사용합니다.
 
-| Object type |  Store ID format  |
+| 개체 유형 |  스토어 ID 형식  |
 |---------|-------------------|
-| [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)  |  The Store ID of any product in the Store is 12-character alpha-numeric string, such as ```9NBLGGH4R315```. This Store ID is available in the Windows Dev Center dashboard page for the app or add-on, and it is returned by the [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.storeid.aspx) property [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) object. This ID is sometimes called the *product Store ID*. |
-| [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) |  For a SKU, the Store ID has the format ```<product Store ID>/xxxx```, where ```xxxx``` is a 4-character alpha-numeric string that identifies a SKU for the product. For example, ```9NBLGGH4R315/000N```. This ID is returned by the [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.storeid.aspx) property of a  [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) object, and it is sometimes called the *SKU Store ID*. |
-| [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx)  |  For an availability, the Store ID has the format ```<product Store ID>/xxxx/yyyyyyyyyyyy```, where ```xxxx``` is a 4-character alpha-numeric string that identifies a SKU for the product and ```yyyyyyyyyyyy``` is a 12-character alpha-numeric string that identifies an availability for the SKU. For example, ```9NBLGGH4R315/000N/4KW6QZD2VN6X```. This ID is returned by the [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.storeid.aspx) property of a  [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx) object, and it is sometimes called the *availability Store ID*.  |
+| [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx)  |  스토어에 있는 모든 제품의 스토어 ID는 12자의 영숫자 문자열입니다(예: ```9NBLGGH4R315```). 이 스토어 ID는 앱 또는 추가 기능에 대한 Windows 개발자 센터 대시보드 페이지에서 제공되며 [StoreProduct](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.aspx) 개체의 [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeproduct.storeid.aspx) 속성에 의해 반환됩니다. 이 ID를 *제품 스토어 ID*라고도 합니다. |
+| [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) |  SKU의 스토어 ID는 ```<product Store ID>/xxxx``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N```입니다. 이 ID는 [StoreSku](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.aspx) 개체의 [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storesku.storeid.aspx) 속성에서 반환하며 *SKU 스토어 ID*라고도 합니다. |
+| [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx)  |  사용 가능성의 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.aspx) 개체의 [StoreId](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storeavailability.storeid.aspx) 속성에서 반환하며 * 스토어 ID*라고도 합니다.  |
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Get product info for apps and add-ons](get-product-info-for-apps-and-add-ons.md)
-* [Get license info for apps and add-ons](get-license-info-for-apps-and-add-ons.md)
-* [Enable in-app purchases of apps and add-ons](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Enable consumable add-on purchases](enable-consumable-add-on-purchases.md)
-* [Implement a trial version of your app](implement-a-trial-version-of-your-app.md)
-* [In-app purchases and trials using the Windows.ApplicationModel.Store namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)
+* [앱 및 추가 기능에 대한 제품 정보 가져오기](get-product-info-for-apps-and-add-ons.md)
+* [앱 및 추가 기능에 대한 라이선스 정보 가져오기](get-license-info-for-apps-and-add-ons.md)
+* [앱에서 바로 앱 및 추가 기능 구매 사용](enable-in-app-purchases-of-apps-and-add-ons.md)
+* [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
+* [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
+* [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)
 
 
 

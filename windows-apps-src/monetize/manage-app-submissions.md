@@ -1,67 +1,67 @@
 ---
 author: mcleanbyron
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Use these methods in the Windows Store submission API to manage submissions for apps that are registered to your Windows Dev Center account.
-title: Manage app submissions using the Windows Store submission API
+description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다."
+title: "Windows 스토어 제출 API를 사용하여 앱 제출 관리"
 translationtype: Human Translation
 ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
 ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
 
 ---
 
-# <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Manage app submissions using the Windows Store submission API
+# <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출 관리
 
 
-Use the following methods in the Windows Store submission API to manage submissions for apps that are registered to your Windows Dev Center account. For an introduction to the Windows Store submission API, including prerequisites for using the API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**Note**&nbsp;&nbsp;These methods can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 
-| Method        | URI    | Description                                                                 |
+| 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Gets data for an existing app submission. For more information, see [this article](get-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | Gets the status of an existing app submission. For more information, see [this article](get-status-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Creates a new submission for an app that is registered to your Windows Dev Center account. For more information, see [this article](create-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Commits a new or updated app submission to Windows Dev Center. For more information, see [this article](commit-an-app-submission.md). |
-| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Updates an existing app submission. For more information, see [this article](update-an-app-submission.md). |
-| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | Deletes an app submission. For more information, see [this article](delete-an-app-submission.md). |
-| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout``` | Gets the gradual rollout info for an app submission. For more information, see [this article](get-package-rollout-info-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | Updates the gradual rollout percentage for an app submission. For more information, see [this article](update-the-package-rollout-percentage-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` | Halts the gradual rollout for an app submission. For more information, see [this article](halt-the-package-rollout-for-an-app-submission.md). |
-| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | Finalizes the gradual rollout for an app submission. For more information, see [this article](finalize-the-package-rollout-for-an-app-submission.md). |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | 기존 앱 제출에 대한 데이터를 가져옵니다. 자세한 내용은 [이 문서](get-an-app-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status``` | 기존 앱 제출의 상태를 가져옵니다. 자세한 내용은 [이 문서](get-status-for-an-app-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions``` | Windows 개발자 센터 계정에 등록된 앱에 대한 새 제출을 만듭니다. 자세한 내용은 [이 문서](create-an-app-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit``` | Windows 개발자 센터에 새로운 또는 업데이트된 앱 제출을 커밋합니다. 자세한 내용은 [이 문서](commit-an-app-submission.md)를 참조하세요. |
+| PUT | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | 기존 앱 제출을 업데이트합니다. 자세한 내용은 [이 문서](update-an-app-submission.md)를 참조하세요. |
+| DELETE | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}``` | 앱 제출을 삭제합니다. 자세한 내용은 [이 문서](delete-an-app-submission.md)를 참조하세요. |
+| GET | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout``` | 앱 제출에 대한 점진적 배포 정보를 가져옵니다. 자세한 내용은 [이 문서](get-package-rollout-info-for-an-app-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage``` | 앱 제출에 대한 점진적 배포 백분율을 업데이트합니다. 자세한 내용은 [이 문서](update-the-package-rollout-percentage-for-an-app-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout``` | 앱 제출에 대한 점진적 배포를 중지합니다. 자세한 내용은 [이 문서](halt-the-package-rollout-for-an-app-submission.md)를 참조하세요. |
+| POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | 앱 제출에 대한 점진적 배포를 마무리합니다. 자세한 내용은 [이 문서](finalize-the-package-rollout-for-an-app-submission.md)를 참조하세요. |
 
 <span id="create-an-app-submission">
-## <a name="create-an-app-submission"></a>Create an app submission
+## <a name="create-an-app-submission"></a>앱 제출 만들기
 
-To create a submission for an app, follow this process.
+앱에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
+1. 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 
-  >**Note**&nbsp;&nbsp;Make sure the app already has at least one completed submission with the [age ratings](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) information completed.
+  >**참고**&nbsp;&nbsp;앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
 
-2. [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). You must pass this access token to the methods in the Windows Store submission API. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
-3. [Create an app submission](create-an-app-submission.md) by executing the following method in the Windows Store submission API. This method creates a new in-progress submission, which is a copy of your last published submission.
+3. Windows 스토어 제출 API에서 다음 메서드를 실행하여 [앱 제출을 만듭니다](create-an-app-submission.md). 이 메서드는 마지막으로 게시된 제출의 복사본인 새 진행 중 제출을 만듭니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
   ```
 
-  The response body contains three items: the ID of the new submission, the data for the new submission (including all the listings and pricing information), and the shared access signature (SAS) URI for uploading any app packages and listing images for the submission. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+  응답 본문에는 새 제출의 ID, 새 제출의 데이터(모든 목록 및 가격 정보) 및 제출에 대한 앱 패키지 및 목록 이미지 업로드를 위한 SAS(공유 액세스 서명) URI가 포함되어 있습니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.
 
-4. If you are adding new packages or images for the submission, [prepare the app packages](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements) and [prepare the app screenshots and images](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). Add all of these files to a ZIP archive.
+4. 제출에 대한 새 패키지 또는 이미지를 추가하려면 [앱 패키지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지를 준비](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
 
-5. Revise the submission data with any required changes for the new submission, and execute the following method to [update the app submission](update-an-app-submission.md).
+5. 새 제출에 대해 필요한 변경 사항으로 제출 데이터를 수정하고 다음 메서드를 실행하여 [앱 제출을 업데이트](update-an-app-submission.md)합니다.
 
   ```
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
   ```
 
-  >**Note**&nbsp;&nbsp;If you are adding new packages or images for the submission, make sure you update the submission data to refer to the name and relative path of these files in the ZIP archive.
+  >**참고**&nbsp;&nbsp;제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
-4. If you are adding new packages or images for the submission, upload the ZIP archive to the SAS URI that was provided in the response body of the POST method you called in step 2. For more information, see [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/).
+4. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 2단계에서 호출한 POST 메서드의 응답 본문에 제공된 SAS URI에 ZIP 보관 파일을 업로드합니다. 자세한 내용은 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
-  The following code snippet demonstrates how to upload the archive using the [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) class in the Azure Storage Client Library for .NET.
+  다음 코드 조각은 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.blob.cloudblockblob.aspx) 클래스를 사용하여 보관 파일을 업로드하는 방법을 보여 줍니다.
 
   ```csharp
   string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -71,38 +71,38 @@ To create a submission for an app, follow this process.
   await blockBob.UploadFromStreamAsync(stream);
   ```
 
-5. [Commit the app submission](commit-an-app-submission.md) by executing the following method. This will alert Dev Center that you are done with your submission and that your updates should now be applied to your account.
+5. 다음 메서드를 실행하여 [앱 제출을 커밋](commit-an-app-submission.md)합니다. 이렇게 하면 제출이 완료되었으며 업데이트를 해당 계정에 지금 적용해야 한다는 사실을 개발자 센터에 알려줍니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
   ```
 
-6. Check on the commit status by executing the following method to [get the status of the app submission](get-status-for-an-app-submission.md).
+6. 다음 메서드 실행을 통해 [앱 제출의 상태를 가져와](get-status-for-an-app-submission.md) 커밋 상태를 확인합니다.
 
     ```
     GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/status
     ```
 
-    To confirm the submission status, review the *status* value in the response body. This value should change from **CommitStarted** to either **PreProcessing** if the request succeeds or to **CommitFailed** if there are errors in the request. If there are errors, the *statusDetails* field contains further details about the error.
+    제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. After the commit has successfully completed, the submission is sent to the Store for ingestion. You can continue to monitor the submission progress by using the previous method, or by visiting the Dev Center dashboard.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
 <span id="manage-gradual-package-rollout">
-## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>Manage a gradual package rollout for an app submission
+## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>앱 제출에 대한 점진적 패키지 출시 관리
 
-You can gradually roll out the updated packages in an app submission to a percentage of your app’s customers on Windows 10. This allows you to monitor feedback and analytic data for the specific packages to make sure you’re confident about the update before rolling it out more broadly. You can change the rollout percentage (or halt the update) for a published submission without having to create a new submission. For more details, including instructions for how to enable and manage a gradual package rollout in the Dev Center dashboard, see [this article](../publish/gradual-package-rollout.md).
+앱 제출에서 업데이트된 패키지를 앱의 Windows&nbsp;10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
 
-You can also programmatically enable and manage a gradual package rollout for an app submission by using the following methods in the Windows Store submission API.
+또한 Windows 스토어 제출 API에서 다음 메서드를 사용하여 앱 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정하고 관리할 수도 있습니다.
 
-* To enable a gradual package rollout for an app submission:
+* 앱 제출에 대한 점진적 패키지 출시를 사용하도록 설정하려면
 
-  1. [Create an app submission](create-an-app-submission.md) or [get an app submission](get-an-app-submission.md).
-  2. In the response data, locate the [packageRollout](#package-rollout-object) resource, set the *isPackageRollout* field to true, and set the *packageRolloutPercentage* field to the percentage of your app's customers who should get the updated packages.
-  3. Pass the updated app submission data to the [update an app submission](update-an-app-submission.md) method.
+  1. [앱 제출 만들기](create-an-app-submission.md) 또는 [앱 제출 가져오기](get-an-app-submission.md).
+  2. 응답 데이터에서 [packageRollout](#package-rollout-object) 리소스를 찾고, *isPackageRollout* 필드를 true로 설정하고, *packageRolloutPercentage* 필드를 업데이트된 패키지를 가져와야 하는 앱 고객의 백분율로 설정합니다.
+  3. 업데이트된 앱 제출 데이터를 [앱 제출 업데이트](update-an-app-submission.md) 메서드로 전달합니다.
 
 <span/>
 
-* To [get the package rollout info for an app submission](get-package-rollout-info-for-an-app-submission.md), execute the following method.
+* [앱 제출에 대한 패키지 출시 정보를 가져오려면](get-package-rollout-info-for-an-app-submission.md) 다음 메서드를 실행합니다.
 
   ```
   GET https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/packagerollout
@@ -110,7 +110,7 @@ You can also programmatically enable and manage a gradual package rollout for an
 
 <span/>
 
-* To [update the package rollout percentage for an app submission](update-the-package-rollout-percentage-for-an-app-submission.md), execute the following method.
+* [앱 제출에 대한 패키지 출시 백분율을 업데이트하려면](update-the-package-rollout-percentage-for-an-app-submission.md) 다음 메서드를 실행합니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage  
@@ -118,7 +118,7 @@ You can also programmatically enable and manage a gradual package rollout for an
 
 <span/>
 
-* To [halt the package rollout for an app submission](halt-the-package-rollout-for-an-app-submission.md), execute the following method.
+* [앱 제출에 대한 패키지 출시를 중지하려면](halt-the-package-rollout-for-an-app-submission.md) 다음 메서드를 실행합니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout   
@@ -126,20 +126,20 @@ You can also programmatically enable and manage a gradual package rollout for an
 
 <span/>
 
-* To [finalize the package rollout for an app submission](finalize-the-package-rollout-for-an-app-submission.md), execute the following method.
+* [앱 제출에 대한 패키지 출시를 마무리하려면](finalize-the-package-rollout-for-an-app-submission.md) 다음 메서드를 실행합니다.
 
   ```
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
   ```
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>리소스
 
-These methods use the following resources to format data.
+이러한 메서드는 다음 리소스를 사용하여 데이터의 형식을 지정합니다.
 
 <span id="app-submission-object" />
-### <a name="app-submission"></a>App submission
+### <a name="app-submission"></a>앱 제출
 
-This resource represents a submission for an app. The following example demonstrates the format of this resource.
+이 리소스는 앱에 대한 제출을 나타냅니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -241,143 +241,143 @@ This resource represents a submission for an app. The following example demonstr
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value      | Type   | Description      |
+| 값      | 유형   | 설명      |
 |------------|--------|-------------------|
-| id            | string  | The ID of the submission.  |
-| applicationCategory           | string  |   A string that specifies the [category and/or subcategory](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) for your app. Categories and subcategories are combined into a single string with the underscore '_' character, such as **BooksAndReference_EReader**.      |  
-| pricing           |  object  | An object that contains pricing info for the app. For more information, see the [Pricing resource](#pricing-object) section below.       |   
-| visibility           |  string  |  The visibility of the app. This can be one of the following values: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | string  | The publish mode for the submission. This can be one of the following values: <ul><li>Immediate</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | string  | The publish date for the submission in ISO 8601 format, if the *targetPublishMode* is set to SpecificDate.  |  
-| listings           |   object  |  A dictionary of key and value pairs, where each key is a country code and each value is a [Listing resource](#listing-object) object that contains listing info for the app.       |   
-| hardwarePreferences           |  array  |   An array of strings that define the [hardware preferences](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences) for your app. This can be one of the following values: <ul><li>Touch</li><li>Keyboard</li><li>Mouse</li><li>Camera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
-| automaticBackupEnabled           |  boolean  |   Indicates whether Windows can include your app's data in automatic backups to OneDrive. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).   |   
-| canInstallOnRemovableMedia           |  boolean  |   Indicates whether customers can install your app to removable storage. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| isGameDvrEnabled           |  boolean |   Indicates whether game DVR is enabled for the app.    |   
-| hasExternalInAppProducts           |     boolean          |   Indicates whether your app allows users to make purchase outside the Windows Store commerce system. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).     |   
-| meetAccessibilityGuidelines           |    boolean           |  Indicates whether your app has been tested to meet accessibility guidelines. For more information, see [App declarations](https://msdn.microsoft.com/windows/uwp/publish/app-declarations).      |   
-| notesForCertification           |  string  |   Contains [notes for certification](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) for your app.    |    
-| status           |   string  |  The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
-| statusDetails           |   object  |  Contains additional details about the status of the submission, including information about any errors. For more information, see the [Status details](#status-details-object) section below.       |    
-| fileUploadUrl           |   string  | The shared access signature (SAS) URI for uploading any packages for the submission. If you are adding new packages or images for the submission, upload the ZIP archive that contains the packages and images to this URI. For more information, see [Create an app submission](#create-an-app-submission).       |    
-| applicationPackages           |   array  | Contains objects that provide details about each package in the submission. For more information, see the [Application package](#application-package-object) section below. |    
-| packageDeliveryOptions    | object  | Contains gradual package rollout and mandatory update settings for the submission. For more information, see the [Package delivery options object](#package-delivery-options-object) section below.  |
-| enterpriseLicensing           |  string  |  One of the [enterprise licensing values](#enterprise-licensing) values that indicate the enterprise licensing behavior for the app.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Indicates whether Microsoft is allowed to [make the app available to future Windows 10 device families](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families).    |    
-| allowTargetFutureDeviceFamilies           | object   |  A dictionary of key and value pairs, where each key is a [Windows 10 device family](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) and each value is a boolean that indicates whether your app is allowed to target the specified device family.     |    
-| friendlyName           |   string  |  The friendly name of the app, used for display purposes.       |  
+| id            | 문자열  | 제출의 ID입니다.  |
+| applicationCategory           | 문자열  |   앱에 대한 [범주 및/또는 하위 범주](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
+| pricing           |  object  | 앱에 대한 가격 정보를 포함하는 개체입니다. 자세한 내용은 아래의 [가격 리소스](#pricing-object) 섹션을 참조하세요.       |   
+| visibility           |  문자열  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>       |   
+| targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |  
+| listings           |   object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 국가 코드이며 각 값은 앱에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object) 개체입니다.       |   
+| hardwarePreferences           |  배열  |   앱에 대한 [하드웨어 기본 설정](https://msdn.microsoft.com/windows/uwp/publish/enter-app-properties#hardware_preferences)을 정의하는 문자열의 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>Keyboard</li><li>마우스</li><li>Camera</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
+| automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
+| canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
+| isGameDvrEnabled           |  boolean |   앱에 대한 게임 DVR을 사용할지 여부를 나타냅니다.    |   
+| hasExternalInAppProducts           |     boolean          |   Windows 스토어 상거래 시스템 밖에서 사용자가 이 앱을 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
+| meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://msdn.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
+| notesForCertification           |  문자열  |   앱의 [인증에 대한 참고 사항](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
+| status           |   문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
+| statusDetails           |   object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 아래의 [상태 세부 정보](#status-details-object) 섹션을 참조하세요.       |    
+| fileUploadUrl           |   문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
+| applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 아래의 [응용 프로그램 패키지](#application-package-object) 섹션을 참조하세요. |    
+| packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 아래의 [패키지 배달 옵션 개체](#package-delivery-options-object) 섹션을 참조하세요.  |
+| enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows&nbsp;10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows&nbsp;10 디바이스 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 디바이스 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
+| FriendlyName           |   문자열  |  표시 목적으로 사용되는 앱의 식별 이름입니다.       |  
 
 
 <span id="listing-object" />
-### <a name="listing"></a>Listing
+### <a name="listing"></a>목록
 
-This resource contains listing info for an app. This resource has the following values.
+이 리소스는 앱에 대한 목록 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  baseListing               |   object      |  The [base listing](#base-listing-object) info for the app, which defines the default listing info for all platforms.   |     
-|  platformOverrides               | object |   A dictionary of key and value pairs, where each key is string that identifies a platform for which to override the listing info, and each value is a [base listing](#base-listing-object)  object (containing only the values from description to title) that specifies the listing info to override for the specified platform. The keys can have the following values: <ul><li>Unknown</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
+|  baseListing               |   object      |  모든 플랫폼에 대한 기본 목록 정보를 정의하는 앱의 [기본 목록](#base-listing-object) 정보입니다.   |     
+|  platformOverrides               | object |   키와 값 쌍의 사전입니다. 여기서 각 키는 목록 정보를 재정의할 플랫폼을 식별하는 문자열이며 각 값은 지정된 플랫폼에 대해 재정의할 목록 정보를 지정하는 [기본 목록](#base-listing-object) 개체(제목에 대한 설명 값만 포함)입니다. 키는 다음 값을 가질 수 있습니다. <ul><li>알 수 없음</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### <a name="base-listing"></a>Base listing
+### <a name="base-listing"></a>기본 목록
 
-This resource contains base listing info for an app. This resource has the following values.
+이 리소스는 앱에 대한 기본 목록 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description       |
+| 값           | 유형    | 설명       |
 |-----------------|---------|------|
-|  copyrightAndTrademarkInfo                |   string      |  Optional [copyright and/or trademark info](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
-|  keywords                |  array       |  An array of [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords) to help your app appear in search results.    |
-|  licenseTerms                |    string     | The optional [license terms](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) for your app.     |
-|  privacyPolicy                |   string      |   The URL for the [privacy policy](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) for your app.    |
-|  supportContact                |   string      |  The URL or email address for the [support contact info](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info) for your app.     |
-|  websiteUrl                |   string      |  The URL of the [web page](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website) for your app.    |    
-|  description               |    string     |   The [description](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) for the app listing.   |     
-|  features               |    array     |  An array of up to 20 strings that list the [features](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) for your app.     |
-|  releaseNotes               |  string       |  The [release notes](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) for your app.    |
-|  images               |   array      |  An array of [image and icon](#image-object) data for the app listing.  |
-|  recommendedHardware               |   array      |  An array of up to 11 strings that list the [recommended hardware configurations](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware) for your app.     |
-|  title               |     string    |   The title for the app listing.   |  
+|  copyrightAndTrademarkInfo                |   문자열      |  선택적 [저작권 및/또는 상표 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info)입니다.  |
+|  키워드                |  배열       |  검색 결과에 앱을 표시하는 데 도움이 되는 [키워드](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords)의 배열입니다.    |
+|  licenseTerms                |    문자열     | 앱에 대한 선택적 [사용 조건](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms)입니다.     |
+|  privacyPolicy                |   문자열      |   앱의 [개인 정보 취급 방침](https://msdn.microsoft.com/windows/uwp/publish/privacy-policy) URL입니다.    |
+|  supportContact                |   문자열      |  앱의 [연락처 정보 지원](https://msdn.microsoft.com/windows/uwp/publish/support-contact-info)을 위한 URL 또는 메일 주소입니다.     |
+|  websiteUrl                |   문자열      |  앱에 대한 [웹 페이지](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#website)의 URL입니다.    |    
+|  설명               |    문자열     |   앱 목록에 대한 [설명](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description)입니다.   |     
+|  기능               |    배열     |  앱의 [기능](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features)을 나열하는 최대 20개 문자열의 배열입니다.     |
+|  releaseNotes               |  문자열       |  앱의 [릴리스 정보](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes)입니다.    |
+|  이미지               |   배열      |  앱 목록의 [이미지 및 아이콘](#image-object)의 배열입니다.  |
+|  recommendedHardware               |   배열      |  앱의 [권장되는 하드웨어 구성](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#recommended-hardware)을 나열하는 최대 11개 문자열의 배열입니다.     |
+|  제목               |     문자열    |   앱 목록에 대한 제목입니다.   |  
 
 
 <span id="image-object" />
-### <a name="image"></a>Image
+### <a name="image"></a>이미지
 
-This resource contains image and icon data for an app listing. For more information about images and icons for listing, see [App screenshots and images](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images). This resource has the following values.
+이 리소스에는 앱 목록에 대한 이미지 및 아이콘 데이터가 포함되어 있습니다. 목록의 이미지 및 아이콘에 대한 자세한 내용은 [앱 스크린샷 및 이미지](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)를 참조하세요. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description           |
+| 값           | 유형    | 설명           |
 |-----------------|---------|------|
-|  fileName               |    string     |   The name of the image file in the ZIP archive that you uploaded for the submission.    |     
-|  fileStatus               |   string      |  The status of the image file. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  string  | The ID for the image, as specified by Dev Center.  |
-|  description  |  string  | The description for the image.  |
-|  imageType  |  string  | One of the following strings that indicates the type of the image: <ul><li>Unknown</li><li>Screenshot</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>Icon</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
+|  fileName               |    문자열     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 이미지 파일의 이름입니다.    |     
+|  fileStatus               |   문자열      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  id  |  문자열  | 개발자 센터에서 지정한 대로 이미지에 대한 ID입니다.  |
+|  설명  |  문자열  | 이미지에 대한 설명입니다.  |
+|  imageType  |  문자열  | 이미지의 유형을 나타내는 다음 문자열 중 하나입니다. <ul><li>알 수 없음</li><li>스크린샷</li><li>PromotionalArtwork414X180</li><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>PromotionalArtwork2400X1200</li><li>아이콘</li><li>WideIcon358X173</li><li>BackgroundImage1000X800</li><li>SquareIcon358X358</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul>      |
 
 
 <span id="pricing-object" />
-### <a name="pricing"></a>Pricing
+### <a name="pricing"></a>가격 책정
 
-This resource contains pricing info for the app. This resource has the following values.
+이 리소스는 앱에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  trialPeriod               |    string     |  A string that specifies the trial period for the app. This can be one of the following values: <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    object     |  A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your app in specific markets](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Any items in this dictionary override the base price specified by the *priceId* value for the specified market.      |     
-|  sales               |   array      |  **Deprecated**. An array of objects that contain sales information for the app. For more information, see the [Sale](#sale-object) section below.    |     
-|  priceId               |   string      |  A [price tier](#price-tiers) that specifies the [base price](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price) for the app.   |
+|  trialPeriod               |    문자열     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
+|  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
+|  sales               |   array      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 개체 배열입니다. 자세한 내용은 아래 [판매](#sale-object) 섹션을 참조하세요.    |     
+|  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |
 
 
 <span id="sale-object" />
-### <a name="sale"></a>Sale
+### <a name="sale"></a>판매
 
-This resources contains sale info for an app.
+이 리소스는 앱에 대한 판매 정보를 포함합니다.
 
->**Important**&nbsp;&nbsp;The **Sale** resource is no longer supported, and currently you cannot get or modify the sale data for an app submission using the Windows Store submission API:
+>**중요**&nbsp;&nbsp;**판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
 
-   > * After calling the [GET method to get an app submission](get-an-app-submission.md), the *sales* value will be empty. You can continue to use the Dev Center dashboard to get the sale data for your app submission.
-   > * When calling the [PUT method to update an app submission](update-an-app-submission.md), the information in the *sales* value is ignored. You can continue to use the Dev Center dashboard to change the sale data for your app submission.
+   > * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
+   > * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
 
-> In the future, we will update the Windows Store submission API to introduce a new way to programmatically access sales information for app submissions.
+> 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  name               |    string     |   The name of the sale.    |     
-|  basePriceId               |   string      |  The [price tier](#price-tiers) to use for the base price of the sale.    |     
-|  startDate               |   string      |   The start date for the sale in ISO 8601 format.  |     
-|  endDate               |   string      |  The end date for the sale in ISO 8601 format.      |     
-|  marketSpecificPricings               |   object      |   A dictionary of key and value pairs, where each key is a two-letter ISO 3166-1 alpha-2 country code and each value is a [price tier](#price-tiers). These items represent the [custom prices for your app in specific markets](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices). Any items in this dictionary override the base price specified by the *basePriceId* value for the specified market.    |
+|  name               |    문자열     |   판매의 이름입니다.    |     
+|  basePriceId               |   문자열      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
+|  startDate               |   문자열      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
+|  endDate               |   문자열      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
+|  marketSpecificPricings               |   object      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 
 <span id="status-details-object" />
-### <a name="status-details"></a>Status details
+### <a name="status-details"></a>상태 세부 정보
 
-This resource contains additional details about the status of a submission. This resource has the following values.
+이 리소스에는 제출 상태에 대한 추가 세부 정보가 포함됩니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  errors               |    object     |   An array of objects that contain error details for the submission. For more information, see the [Status detail](#status-detail-object) section below.   |     
-|  warnings               |   object      | An array of objects that contain warning details for the submission. For more information, see the [Status detail](#status-detail-object) section below.     |
-|  certificationReports               |     object    |   An array of objects that provide access to the certification report data for the submission. You can examine these reports for more information if the certification fails. For more information, see the [Certification report](#certification-report-object) section below.   |  
+|  오류               |    object     |   제출에 대한 오류 세부 정보가 포함된 개체의 배열입니다. 자세한 내용은 아래의 [상태 세부 정보](#status-detail-object) 섹션을 참조하세요.   |     
+|  경고               |   object      | 제출에 대한 경고 정보가 포함된 개체의 배열입니다. 자세한 내용은 아래의 [상태 세부 정보](#status-detail-object) 섹션을 참조하세요.     |
+|  certificationReports               |     object    |   제출에 대한 인증 보고서 데이터에 대한 액세스를 제공하는 개체의 배열입니다. 인증에 실패할 경우 이러한 보고서에서 자세한 내용을 확인할 수 있습니다. 자세한 내용은 아래의 [인증 보고서](#certification-report-object) 섹션을 참조하세요.   |  
 
 
 <span id="status-detail-object" />
-### <a name="status-detail"></a>Status detail
+### <a name="status-detail"></a>상태 세부 정보
 
-This resource contains additional information about any related errors or warnings for a submission. This resource has the following values.
+이 리소스에는 제출과 관련된 오류 또는 경고에 대한 추가 정보가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|  code               |    string     |   A string that describes the type of error or warning. For more information, see the [Submission status code](#submission-status-code) section below.   |     
-|  details               |     string    |  A message with more details about the issue.     |
+|  code               |    문자열     |   오류 또는 경고의 형식을 설명하는 문자열입니다. 자세한 내용은 아래의 [제출 상태 코드](#submission-status-code) 섹션을 참조하세요.   |     
+|  세부 정보               |     문자열    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 
 <span id="application-package-object" />
-### <a name="application-package"></a>Application package
+### <a name="application-package"></a>응용 프로그램 패키지
 
-This resource contains details about an app package for the submission. The following example demonstrates the format of this resource.
+이 리소스는 제출의 앱 패키지에 대한 세부 정보를 포함합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -406,40 +406,40 @@ This resource contains details about an app package for the submission. The foll
 }
 ```
 
-This resource has the following values.  
+이 리소스의 값은 다음과 같습니다.  
 
->**Note**&nbsp;&nbsp;When calling the [update an app submission](update-an-app-submission.md) method, only the *fileName*, *fileStatus*, *minimumDirectXVersion*, and *minimumSystemRam* values of this object are required in the request body. The other values are populated by Dev Center.
+>**참고**&nbsp;&nbsp;[앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
 
-| Value           | Type    | Description                   |
+| 값           | 유형    | 설명                   |
 |-----------------|---------|------|
-| fileName   |   string      |  The name of the package.    |  
-| fileStatus    | string    |  The status of the package. This can be one of the following values: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  An ID that uniquely identifies the package. This value is used by Dev Center.   |     
-| version    |  string   |  The version of the app package. For more information, see [Package version numbering](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
-| architecture    |  string   |  The architecture of the package (for example, ARM).   |     
-| languages    | array    |  An array of language codes for the languages the app supports. For more information, see For more information, see [Supported languages](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
-| capabilities    |  array   |  An array of capabilities required by the package. For more information about capabilities, see [App capability declarations](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations).   |     
-| minimumDirectXVersion    |  string   |  The minimum DirectX version that is supported by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | string    |  The minimum RAM that is required by the app package. This can be set only for apps that target Windows 8.x; it is ignored for apps that target other versions. This can be one of the following values: <ul><li>None</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | array    |  An array of strings that represent the device families that the package targets. This value is used only for packages that target Windows 10; for packages that target earlier releases, this value has the value **None**. The following device family strings are currently supported for Windows 10 packages, where *{0}* is a Windows 10 version string such as 10.0.10240.0, 10.0.10586.0 or 10.0.14393.0: <ul><li>Windows.Universal min version *{0}*</li><li>Windows.Desktop min version *{0}*</li><li>Windows.Mobile min version *{0}*</li><li>Windows.Xbox min version *{0}*</li><li>Windows.Holographic min version *{0}*</li></ul>   |    
+| fileName   |   문자열      |  패키지의 이름입니다.    |  
+| fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 개발자 센터에서 사용됩니다.   |     
+| version    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| architecture    |  문자열   |  패키지의 아키텍처(예: ARM)입니다.   |     
+| languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+| capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
+| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows&nbsp;8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows&nbsp;8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
+| targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 디바이스 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 디바이스 패밀리 문자열은 현재 Windows&nbsp;10 패키지에 지원됩니다. 여기서 *{0}*은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows&nbsp;10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
 
 <span/>
 
 <span id="certification-report-object" />
-### <a name="certification-report"></a>Certification report
+### <a name="certification-report"></a>인증 보고서
 
-This resource provides access to the certification report data for a submission. This resource has the following values.
+이 리소스는 제출의 인증 보고서 데이터에 대한 액세스를 제공합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description                                                                                                                                                                                                                          |
+| 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
-|     date            |    string     |  The date and time the report was generated, in in ISO 8601 format.    |
-|     reportUrl            |    string     |  The URL at which you can access the report.    |
+|     date            |    문자열     |  보고서가 생성된 날짜 및 시간(ISO 8601 형식)입니다.    |
+|     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 
 <span id="package-delivery-options-object" />
-### <a name="package-delivery-options-object"></a>Package delivery options object
+### <a name="package-delivery-options-object"></a>패키지 전송 옵션 개체
 
-This resource contains gradual package rollout and mandatory update settings for the submission. The following example demonstrates the format of this resource.
+이 리소스는 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -456,87 +456,87 @@ This resource contains gradual package rollout and mandatory update settings for
 }
 ```
 
-This resource has the following values.
+이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description        |
+| 값           | 유형    | 설명        |
 |-----------------|---------|------|
-| packageRollout   |   object      |  Contains gradual package rollout settings for the submission. For more information, see the [Package rollout object](#package-rollout-object) section below.    |  
-| isMandatoryUpdate    | boolean    |  Indicates whether you want to treat the packages in this submission as mandatory for self-installing app updates. For more information about mandatory packages for self-installing app updates, see [Download and install package updates for your app](../packaging/self-install-package-updates.md).    |  
-| mandatoryUpdateEffectiveDate    |  date   |  The date and time when the packages in this submission become mandatory, in ISO 8601 format and UTC time zone.   |        
+| packageRollout   |   object      |  제출에 대한 점진적 패키지 출시 설정을 포함합니다. 자세한 내용은 아래의 [패키지 출시 개체](#package-rollout-object) 섹션을 참조하세요.    |  
+| isMandatoryUpdate    | boolean    |  이 제출의 패키지를 앱 업데이트 자동 설치를 필수 구성 요소로 처리할지 여부를 나타냅니다. 앱 업데이트 자동 설치를 필수 패키지에 대한 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.    |  
+| mandatoryUpdateEffectiveDate    |  date   |  이 제출의 패키지가 필수가 되는 날짜 및 시간을 ISO 8601 형식 및 UTC 표준 시간대로 나타낸 것입니다.   |        
 
 <span id="package-rollout-object" />
-### <a name="package-rollout-object"></a>Package rollout object
+### <a name="package-rollout-object"></a>패키지 출시 개체
 
-This resource contains gradual [package rollout settings](#manage-gradual-package-rollout) for the submission. This resource has the following values.
+이 리소스는 제출에 대한 점진적 [패키지 출시 설정](#manage-gradual-package-rollout)을 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| Value           | Type    | Description        |
+| 값           | 유형    | 설명        |
 |-----------------|---------|------|
-| isPackageRollout   |   boolean      |  Indicates whether gradual package rollout is enabled for the submission.    |  
-| packageRolloutPercentage    | float    |  The percentage of users who will receive the packages in the gradual rollout.    |  
-| packageRolloutStatus    |  string   |  One of the following strings that indicates the status of the gradual package rollout: <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  string   |  The ID of the submission that will be received by customers who do not get the gradual rollout packages.   |          
+| isPackageRollout   |   boolean      |  제출에 대해 점진적 패키지 출시를 사용하도록 설정할지 여부를 나타냅니다.    |  
+| packageRolloutPercentage    | float    |  점진적 출시에서 패키지를 받을 사용자의 백분율입니다.    |  
+| packageRolloutStatus    |  문자열   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
 <span/>
 
-## <a name="enums"></a>Enums
+## <a name="enums"></a>열거
 
-These methods use the following enums.
+이러한 메서드는 다음 열거형을 사용합니다.
 
 
 <span id="price-tiers" />
-### <a name="price-tiers"></a>Price tiers
+### <a name="price-tiers"></a>기준 가격
 
-The following values represent available price tiers for an app submission.
+다음 값은 앱 제출에 사용 가능한 기준 가격을 나타냅니다.
 
-| Value           | Description                                                                                                                                                                                                                          |
+| 값           | 설명                                                                                                                                                                                                                          |
 |-----------------|------|
-|  Base               |   The price tier is not set; use the base price for the app.      |     
-|  NotAvailable              |   The app is not available in the specified region.    |     
-|  Free              |   The app is free.    |    
-|  Tier2 through Tier194               |   Tier2 represents the .99 USD price tier. Each additional tier represents additional increments (1.29 USD, 1.49 USD, 1.99 USD, and so on).    |
+|  기본               |   기준 가격이 설정되지 않았습니다. 앱에 대한 기본 가격을 사용합니다.      |     
+|  NotAvailable              |   지정된 영역에 앱을 사용할 수 없습니다.    |     
+|  무료              |   앱은 무료입니다.    |    
+|  Tier2~Tier194               |   Tier2는 .99 USD 기준 가격을 나타냅니다. 각 추가 기준은 가격 증가를 나타냅니다(1.29 USD, 1.49 USD, 1.99 USD 등).    |
 
 
 <span id="enterprise-licensing" />
-### <a name="enterprise-licensing-values"></a>Enterprise licensing values
+### <a name="enterprise-licensing-values"></a>엔터프라이즈 라이선스 값
 
-The following values represent the enterprise licensing behavior for the app. For more information about these options, see [Organizational licensing options](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
+다음 값은 앱에 대한 엔터프라이즈 라이선스 동작을 나타냅니다. 이러한 옵션에 대한 자세한 내용은 [조직 라이선스 옵션](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing)을 참조하세요.
 
-| Value           |  Description      |
+| 값           |  설명      |
 |-----------------|---------------|
-| None            |     Do not make your app available to enterprises with Store-managed (online) volume licensing.         |     
-| Online        |     Make your app available to enterprises with Store-managed (online) volume licensing.  |
-| OnlineAndOffline | Make your app available to enterprises with Store-managed (online) volume licensing, and make your app available to enterprises via disconnected (offline) licensing. |
+| None            |     엔터프라이즈에서 스토어 관리(온라인) 볼륨 라이선싱으로 앱을 사용할 수 없습니다.         |     
+| 온라인        |     엔터프라이즈에서 스토어 관리(온라인) 볼륨 라이선싱으로 앱을 사용할 수 있습니다.  |
+| OnlineAndOffline | 엔터프라이즈에서 스토어 관리(온라인) 볼륨 라이선싱으로 앱을 사용하고, 연결이 끊어진(오프라인) 라이선싱을 통해 앱을 사용할 수 있습니다. |
 
 
 <span id="submission-status-code" />
-### <a name="submission-status-code"></a>Submission status code
+### <a name="submission-status-code"></a>제출 상태 코드
 
-The following values represent the status code of a submission.
+다음 값은 제출의 상태 코드를 나타냅니다.
 
-| Value           |  Description      |
+| 값           |  설명      |
 |-----------------|---------------|
-| None            |     No code was specified.         |     
-| InvalidArchive        |     The ZIP archive containing the package is invalid or has an unrecognized archive format.  |
-| MissingFiles | The ZIP archive does not have all files which were listed in your submission data, or they are in the wrong location in the archive. |
-| PackageValidationFailed | One or more packages in your submission failed to validate. |
-| InvalidParameterValue | One of the parameters in the request body is invalid. |
-| InvalidOperation | The operation you attempted is invalid. |
-| InvalidState | The operation you attempted is not valid for the current state of the package flight. |
-| ResourceNotFound | The specified package flight could not be found. |
-| ServiceError | An internal service error prevented the request from succeeding. Try the request again. |
-| ListingOptOutWarning | The developer removed a listing from a previous submission, or did not include listing information that is supported by the package. |
-| ListingOptInWarning  | The developer added a listing. |
-| UpdateOnlyWarning | The developer is trying to insert something that only has update support. |
-| Other  | The submission is in an unrecognized or uncategorized state. |
-| PackageValidationWarning | The package validation process resulted in a warning. |
+| None            |     코드가 지정되지 않았습니다.         |     
+| InvalidArchive        |     패키지가 포함된 ZIP 보관 파일이 잘못되거나 인식할 수 없는 보관 파일 형식입니다.  |
+| MissingFiles | 제출 데이터에 나열된 모든 파일이 ZIP 보관 파일에 없거나 보관 파일에서 잘못된 위치에 있습니다. |
+| PackageValidationFailed | 제출에서 하나 이상의 패키지가 유효성 검사에 실패했습니다. |
+| InvalidParameterValue | 요청 본문의 매개 변수 중 하나가 잘못되었습니다. |
+| InvalidOperation | 시도한 작업이 유효하지 않습니다. |
+| InvalidState | 시도한 작업이 패키지 플라이트의 현재 상태에 적합하지 않습니다. |
+| ResourceNotFound | 지정된 패키지 플라이트를 찾을 수 없습니다. |
+| ServiceError | 내부 서비스 오류가 발생하여 요청이 실패했습니다. 요청을 다시 시도하세요. |
+| ListingOptOutWarning | 개발자가 이전 제출에서 목록을 제거하거나 패키지에서 지원되는 목록 정보를 포함하지 않았습니다. |
+| ListingOptInWarning  | 개발자가 목록을 추가했습니다. |
+| UpdateOnlyWarning | 개발자가 업데이트만 지원되는 항목을 삽입하려고 합니다. |
+| 기타  | 제출이 인식할 수 없거나 분류되지 않은 상태입니다. |
+| PackageValidationWarning | 패키지 유효성 검사 프로세스에서 경고가 발생했습니다. |
 
 <span/>
 
-## <a name="related-topics"></a>Related topics
+## <a name="related-topics"></a>관련 항목
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get app data using the Windows Store submission API](get-app-data.md)
-* [App submissions in the Dev Center dashboard](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Windows 스토어 제출 API를 사용하여 앱 데이터 가져오기](get-app-data.md)
+* [개발자 센터 대시보드에서 앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
 
 
 

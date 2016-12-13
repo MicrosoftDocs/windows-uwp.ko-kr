@@ -1,31 +1,31 @@
 ---
 author: PatrickFarley
-title: Launch an app with a URI
-description: This section describes how to use a Uniform Resource Identifier (URI) to launch one app from another app.
+title: "URI를 사용하여 앱 실행"
+description: "이 섹션에서는 URI(Uniform Resource Identifier)를 사용하여 다른 앱에서 앱을 실행하는 방법을 설명합니다."
 translationtype: Human Translation
 ms.sourcegitcommit: dfbfe75d19c08e549263b97350dfca1dbfb96447
 ms.openlocfilehash: e4b070db5180538732e08b10ace1aaa196ae5eaa
 
 ---
 
-# <a name="launch-an-app-with-a-uri"></a>Launch an app with a URI
+# <a name="launch-an-app-with-a-uri"></a>URI를 사용하여 앱 실행
 
-This section describes how to use a Uniform Resource Identifier (URI) to launch one app from another app, enabling helpful app-to-app scenarios.
+이 섹션에서는 유용한 앱 간 시나리오를 지원하기 위해 URI(Uniform Resource Identifier)를 사용하여 다른 앱에서 앱을 실행하는 방법을 설명합니다.
 
-| Topic | Description |
+| 항목 | 설명 |
 |-------|-------------|
-| [Launch the default app for a URI](launch-default-app.md) | Learn how to launch the default app for a Uniform Resource Identifier (URI). URIs allow you to launch another app to perform a specific task. This topic also provides an overview of the many URI schemes built into Windows. |
-| [Handle URI activation](handle-uri-activation.md) | Learn how to register an app to become the default handler for a Uniform Resource Identifier (URI) scheme name. |
-| [Launch an app for results](how-to-launch-an-app-for-results.md) | Learn how to launch an app from another app and exchange data between the two. This is called launching an app for results. |
-| [Choose and save tones using the ms-tonepicker URI scheme](launch-ringtone-picker.md) | This topic describes the ms-tonepicker URI scheme and how to use it to display a tone picker to select a tone, save a tone, and get the friendly name for a tone. |
-| [Launch the Windows Settings app](launch-settings-app.md) | Learn how to launch the Windows Settings app from your app. This topic describes the ms-settings URI scheme. Use this URI scheme to launch the Windows Settings app to specific settings pages. |
-| [Launch the Windows Store app](launch-store-app.md) | This topic describes the ms-windows-store URI scheme. Your app can use this URI scheme to launch the Windows Store app to specific pages in the Store. |
-| [Launch the Windows Maps app](launch-maps-app.md) | Learn how to launch the Windows Maps app from your app. |
-| [Launch the People app](launch-people-apps.md) | This topic describes the ms-people URI scheme. Your app can use this URI scheme to launch the People app for specific actions. |
-| [Support web-to-app linking with app URI handlers](web-to-app-linking.md) | Drive user engagement with your app by using app URI handlers. |
+| [URI에 대한 기본 앱 실행](launch-default-app.md) | URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대해서도 간략하게 설명합니다. |
+| [URI 활성화 처리](handle-uri-activation.md) | 앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다. |
+| [결과를 위한 앱 실행](how-to-launch-an-app-for-results.md) | 다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 결과를 위한 앱 실행이라고 합니다. |
+| [ms-tonepicker URI 체계를 사용하여 톤 선택 및 저장](launch-ringtone-picker.md) | 이 항목에서는 ms-tonepicker URI 체계 및 이 체계를 통해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다. |
+| [Windows 설정 앱 실행](launch-settings-app.md) | 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 체계를 통해 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다. |
+| [Windows 스토어 앱 실행](launch-store-app.md) | 이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 이 URI 체계를 통해 Windows 스토어 앱을 실행하여 스토어의 특정 페이지를 표시할 수 있습니다. |
+| [Windows 지도 앱 실행](launch-maps-app.md) | 앱에서 Windows 지도 앱을 실행하는 방법을 알아봅니다. |
+| [피플 앱 실행](launch-people-apps.md) | 이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 체계를 사용하여 특정 작업을 위한 피플 앱을 실행할 수 있습니다. |
+| [앱 URI 처리기로 웹과 앱 연결 지원](web-to-app-linking.md) | 앱 URI 처리기를 사용하여 사용자의 앱 참여를 강화합니다. |
 
-## <a name="related-topics"></a>Related Topics
-* [Launch an app on a remote device](launch-a-remote-app.md)
+## <a name="related-topics"></a>관련 항목
+* [원격 디바이스에서 앱 실행](launch-a-remote-app.md)
 
 
 <!--HONumber=Dec16_HO1-->

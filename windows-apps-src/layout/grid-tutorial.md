@@ -1,22 +1,22 @@
-# <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Create a simple weather app by using Grid and StackPanel
+# <a name="create-a-simple-weather-app-by-using-grid-and-stackpanel"></a>Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 
-Use XAML to create the layout for a simple weather app using the **Grid** and **StackPanel** elements. With these tools it's easy to make apps that look great across any device running Windows 10. This tutorial takes 10-20 minutes.
+XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱의 레이아웃을 만들 수 있습니다. 이러한 도구를 사용하면 Windows 10을 실행하는 디바이스에서 멋지게 표시되는 앱을 쉽게 만들 수 있습니다. 이 자습서는 10-20분 정도 걸립니다.
 
-## <a name="prerequisites"></a>Prerequisites
-- Windows 10 and Microsoft Visual Studio 2015. [Click here to learn how to get set up with Visual Studio](../get-started/get-set-up.md).
-- Knowledge of how to create a basic "Hello World" app by using XAML and C#. If you don't have that yet, [click here to learn how to create a "Hellow World" app](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+## <a name="prerequisites"></a>필수 조건
+- Windows 10 및 Microsoft Visual Studio 2015. [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../get-started/get-set-up.md).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 잘 모르는 경우 ["Hellow World" 앱을 만드는 방법을 알아보려면 여기를 클릭하세요](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>Step 1: Create a blank app
-1. In Visual Studio menu, select **File** > **New Project**.
-2. In the left pane of the **New Project** dialog box, select **Visual C#** > **Windows** > **Universal** or **Visual C++** > **Windows** > **Universal**.
-3. In the center pane, select **Blank App**.
-4. In the **Name** box, enter **WeatherPanel**, and select **OK**.
-5. To run the program, select **Debug** > **Start Debugging** from the menu, or select F5.
+## <a name="step-1-create-a-blank-app"></a>1단계: 빈 앱 만들기
+1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.
+2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#** > **Windows** > **유니버설** 또는 **Visual C++** > **Windows** > **유니버설**을 선택합니다.
+3. 가운데 창에서 **빈 앱**을 선택합니다.
+4. **이름** 상자에 **WeatherPanel**을 입력하고 **확인**을 선택합니다.
+5. 프로그램을 실행하려면 메뉴에서 **디버그** > **디버깅 시작**을 선택하거나 F5 키를 선택합니다.
 
-## <a name="step-2-define-a-grid"></a>Step 2: Define a Grid
-In XAML a **Grid** is made up of a series of rows and columns. By specifying the row and column of an element within a **Grid**, you can easily place and space other elements within a user interface. Rows and columns are defined with the **RowDefinition** and **ColumnDefinition** elements.
+## <a name="step-2-define-a-grid"></a>2단계: 그리드 정의
+XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내에서 요소의 행과 열을 지정하면 사용자 인터페이스 내에서 다른 요소를 쉽게 배치하고 간격을 지정할 수 있습니다. 행과 열은 **RowDefinition** 및 **ColumnDefinition** 요소로 정의됩니다.
 
-To start creating a layout, open **MainPage.xaml** by using the **Solution Explorer**, and replace the automatically generated **Grid** element with this code.
+레이아웃을 만들기 시작하려면 **솔루션 탐색기**를 사용하여 **MainPage.xaml**을 열고 자동으로 생성된 **Grid** 요소를 이 코드로 바꿉니다.
 
 ```xml
 <Grid>
@@ -31,14 +31,14 @@ To start creating a layout, open **MainPage.xaml** by using the **Solution Explo
 </Grid>
 ```
 
-The new **Grid** creates a set of two rows and columns, which defines the layout of the app interface. The first column has a **Width** of "3\*", while the second has "5\*", dividing the horizontal space between the two columns at a ratio of 3:5. In the same way, the two rows have a **Height** of "3\*" and "\*" respectively, so the **Grid** allocates three times as much space for the first row as for the second ("\*" is the same as "1\*"). These ratios are maintained even if the window is resized or the device is changed.
+새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **Width**가 "3\*"이고, 두 번째 열은 "5\*"이므로 두 열 사이의 가로 공간이 3:5 비율로 분할됩니다. 마찬가지로, 두 행의 **Height**는 각각 "3\*" 및 "\*"이므로 **Grid**에서 두 번째 행보다 세 배의 공간이 첫 번째 행에 할당됩니다("\*"는 "1\*"와 같음). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
 
-To learn about other methods of sizing rows and columns, see [Define layouts with XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#layout-properties).
+행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml#layout-properties)를 참조하세요.
 
-If you run the application now you won't see anything except a blank page, because none of the **Grid** areas have any content. To show the **Grid** let's give it some color.
+지금 응용 프로그램을 실행하면 **Grid** 영역에 콘텐츠가 없으므로 빈 페이지만 표시됩니다. **Grid**를 표시하기 위해 색을 지정하겠습니다.
 
-## <a name="step-3-color-the-grid"></a>Step 3: Color the Grid
-To color the **Grid** we add three **Border** elements, each with a different background color. Each is also assigned to a row and column in the parent **Grid** by using the **Grid.Row** and **Grid.Column** attributes. The values of these attributes default to 0, so you don't need to assign them to the first **Border**. Add the following code to the **Grid** element after the row and column definitions.
+## <a name="step-3-color-the-grid"></a>3단계: Grid에 색 지정
+**Grid**에 색을 지정하기 위해 각각 다른 배경색을 가진 **Border** 요소 세 개를 추가합니다. 또한 **Grid.Row** 및 **Grid.Column** 특성을 사용하여 부모 **Grid**의 행과 열에 각각 할당합니다. 이러한 특성 값은 기본적으로 0으로 설정되므로 첫 번째 **Border**에는 할당할 필요가 없습니다. **Grid** 요소에서 행과 열 정의 뒤에 다음 코드를 추가합니다.
 
 ```xml
 <Border Background="#2f5cb6"/>
@@ -46,16 +46,16 @@ To color the **Grid** we add three **Border** elements, each with a different ba
 <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#152951"/>
 ```
 
-Notice that for the third **Border** we use an extra attribute, **Grid.ColumnSpan**, which causes this **Border** to span both columns in the lower row. You can use **Grid.RowSpan** in the same way, and together these attributes let you span an element over any number of rows and columns. The upper-left corner of such a span is always the **Grid.Column** and **Grid.Row** specified in the element attributes.
+세 번째 **Border**에 대해 추가 특성 **Grid.ColumnSpan**을 사용하여 이 **Border**가 아래쪽 행의 두 열에 모두 적용되도록 합니다. 동일한 방식으로 **Grid.RowSpan**을 사용할 수 있으며, 두 특성을 함께 사용하여 원하는 개수의 행과 열에 걸쳐 있는 요소를 만들 수 있습니다. 이러한 범위의 왼쪽 위 모서리는 항상 요소 특성에 지정된 **Grid.Column** 및 **Grid.Row**입니다.
 
-If you run the app, the result looks something like this.
+앱을 실행하면 결과가 다음과 같이 표시됩니다.
 
-![Coloring the Grid](images/grid-weather-1.png)
+![Grid에 색 지정](images/grid-weather-1.png)
 
-## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>Step 4: Organize content by using StackPanel elements
-**StackPanel** is the second UI element we'll use to create our weather app. The **StackPanel** is a fundamental part of many basic app layouts, allowing you to easily stack elements vertically or horizontally.
+## <a name="step-4-organize-content-by-using-stackpanel-elements"></a>4단계: StackPanel 요소를 사용하여 콘텐츠 구성
+**StackPanel**은 날씨 앱을 만드는 데 사용할 두 번째 UI 요소입니다. **StackPanel**은 많은 기본 앱 레이아웃의 핵심 부분으로, 요소를 세로 또는 가로로 쉽게 스택할 수 있습니다.
 
-In the following code, we create two **StackPanel** elements and fill each with three **TextBlocks**. Add these **StackPanel** elements to the **Grid** below the **Border** elements from Step 3. This causes the **TextBlock** elements to render on top of the colored **Grid** we created earlier.
+다음 코드에서는 **StackPanel** 요소 두 개를 만들고 각 요소에 **TextBlock** 세 개를 채웁니다. **Grid**에서 3단계의 **Border** 요소 아래에 해당 **StackPanel** 요소를 추가합니다. 이렇게 하면 **TextBlock** 요소가 앞에서 만든 색이 지정된 **Grid** 위에 렌더링됩니다.
 
 ```xml
 <StackPanel Grid.Column="1" Margin="40,0,0,0" VerticalAlignment="Center">
@@ -71,40 +71,40 @@ In the following code, we create two **StackPanel** elements and fill each with 
 </StackPanel>
 ```
 
-In the first **Stackpanel**, each **TextBlock** stacks vertically below the next. This is the default behavior of a StackPanel, so we don't need to set the **Orientation** attribute. In the second StackPanel, we want the child elements to stack horizontally from left to right, so we set the **Orientation** attribute to "Horizontal". We must also set the **Grid.ColumnSpan** attribute to "2", so that the text is centered over the lower **Border**.
+첫 번째 **Stackpanel**에서 각 **TextBlock**이 다음 요소 아래에 세로로 스택됩니다. 이는 StackPanel의 기본 동작이므로 **Orientation** 특성을 설정할 필요는 없습니다. 두 번째 StackPanel에서는 자식 요소를 왼쪽에서 오른쪽으로 가로로 스택하려고 하므로 **Orientation** 특성을 "Horizontal"로 설정합니다. 또한 텍스트가 아래쪽 **Border** 위의 가운데에 배치되도록 **Grid.ColumnSpan** 특성을 "2"로 설정해야 합니다.
 
-If you run the app now, you'll see something like this.
+이제 앱을 실행하면 다음과 같이 표시됩니다.
 
-![Adding StackPanels](images/grid-weather-2.png)
+![StackPanel 추가](images/grid-weather-2.png)
 
-## <a name="step-5-add-an-image-icon"></a>Step 5: Add an image icon
+## <a name="step-5-add-an-image-icon"></a>5단계: 이미지 아이콘 추가
 
-Finally, let's fill the empty section in our **Grid** with an image that represents today's weather—something that says "partially cloudy."
+마지막으로, **Grid**의 빈 섹션에 오늘 날씨를 나타내는 이미지(예: "부분적으로 흐림")를 채우겠습니다.
 
-Download the image below and save it as a PNG named "partially-cloudy".
+아래 이미지를 다운로드하고 "partially-cloudy"라는 PNG로 저장합니다.
 
-![Partially cloudy](images/partially-cloudy.PNG)
+![부분적으로 흐림](images/partially-cloudy.PNG)
 
-In the **Solution Explorer**, right click the **Assets** folder, and select **Add** -> **Existing Item...** Find partially-cloudy.png in the browser that pops up, select it, and click **Add**.
+**솔루션 탐색기**에서 **Assets** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** -> **기존 항목...**을 선택합니다. 팝업되는 브라우저에서 partially-cloudy.png를 찾아서 선택한 다음 **추가**를 클릭합니다.
 
-Next, in **MainPage.xaml**, add the following **Image** element below the StackPanels from Step 4.
+**MainPage.xaml**에서 4단계의 StackPanel 아래에 다음 **Image** 요소를 추가합니다.
 
 ```xml
 <Image Margin="20" Source="Assets/partially-cloudy.png"/>
 ```
 
-Because we want the Image in the first row and column, we don't need to set its **Grid.Row** or **Grid.Column** attributes, allowing them to default to "0".
+첫 번째 행과 열에 Image를 배치하려고 하므로 해당 **Grid.Row** 또는 **Grid.Column** 특성을 설정할 필요는 없으며 기본값 "0"으로 두면 됩니다.
 
-And that's it! You've successfully created the layout for a simple weather application. If you run the application by pressing **F5**, you should see something like this:
+정말 간단하죠! 간단한 날씨 응용 프로그램의 레이아웃을 만들었습니다. **F5** 키를 눌러 응용 프로그램을 실행하는 경우 다음과 같이 표시됩니다.
 
-![Weather pane sample](images/grid-weather-3.PNG)
+![날씨 창 샘플](images/grid-weather-3.PNG)
 
-If you like, try experimenting with the layout above, and explore different ways you might represent weather data.
+원하는 경우 위의 레이아웃을 실험해보고, 날씨 데이터를 표시할 수 있는 다양한 방법을 살펴보세요.
 
-## <a name="related-articles"></a>Related articles
-For an introduction to designing UWP app layouts, see [Introduction to UWP app design](https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro)
+## <a name="related-articles"></a>관련 문서
+UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
 
-To learn about creating responsive layouts that adapt to different screen sizes, see [Define Page Layouts with XAML](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml)
+다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://msdn.microsoft.com/en-us/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
 
 
 <!--HONumber=Dec16_HO1-->

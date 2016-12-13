@@ -1,24 +1,24 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: UWP apps that support Windows Ink can serialize and deserialize ink strokes to an Ink Serialized Format (ISF) file. The ISF file is a GIF image with additional metadata for all ink stroke properties and behaviors. Apps that are not ink-enabled, can view the static GIF image, including alpha-channel background transparency.
-title: Store and retrieve Windows Ink stroke data
+Description: "Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다."
+title: "Windows Ink 스트로크 데이터 저장 및 검색"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format"
 translationtype: Human Translation
 ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
 ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
 
 ---
 
-# <a name="store-and-retrieve-windows-ink-stroke-data"></a>Store and retrieve Windows Ink stroke data
+# <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
 
-UWP apps that support Windows Ink can serialize and deserialize ink strokes to an Ink Serialized Format (ISF) file. The ISF file is a GIF image with additional metadata for all ink stroke properties and behaviors. Apps that are not ink-enabled, can view the static GIF image, including alpha-channel background transparency.
+Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
 
 
-**Important APIs**
+**중요 API**
 
 -   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
@@ -26,18 +26,18 @@ UWP apps that support Windows Ink can serialize and deserialize ink strokes to a
 
 
 > [!NOTE]
-> ISF is the most compact persistent representation of ink. It can be embedded within a binary document format, such as a GIF file, or placed directly on the Clipboard.
+> ISF는 잉크 데이터를 가장 많이 압축한 영구적 표시입니다. GIF 파일과 같은 이진 문서 형식에 포함하거나 클립보드에 직접 배치할 수 있습니다.
 
  
 
-## <a name="save-ink-strokes-to-a-file"></a>Save ink strokes to a file
+## <a name="save-ink-strokes-to-a-file"></a>파일에 잉크 스트로크 저장
 
 
-Here, we demonstrate how to save ink strokes drawn on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
+여기서는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
 
-1.  First, we set up the UI.
+1.  먼저 UI를 설정합니다.
 
-    The UI includes "Save", "Load", and "Clear" buttons, and the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -65,9 +65,9 @@ Here, we demonstrate how to save ink strokes drawn on an [**InkCanvas**](https:/
     </Grid>
 ```
 
-2.  We then set some basic ink input behaviors.
+2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), and listeners for the click events on the buttons are declared.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```    CSharp
 public MainPage()
     {
@@ -87,13 +87,13 @@ public MainPage()
     }
 ```
 
-3.  Finally, we save the ink in the click event handler of the **Save** button.
+3.  마지막으로, **저장** 단추의 클릭 이벤트 처리기에 잉크를 저장합니다.
 
-    A [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) lets the user select both the file and the location where the ink data is saved.
+    [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    Once a file is selected, we open an [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) stream set to [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
 
-    We then call [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) to serialize the ink strokes managed by the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) to the stream.
+    그런 다음, [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114)를 호출하여 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)로 관리되는 잉크 스트로크를 스트림으로 직렬화합니다.
 ```    CSharp
 // Save ink data to a file.
     private async void btnSave_Click(object sender, RoutedEventArgs e)
@@ -158,15 +158,15 @@ public MainPage()
 ```
 
 > [!NOTE]  
-> GIF is the only file format supported for saving ink data. However, the [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) method (demonstrated in the next section) does support additional formats for backward compatibility.
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
 
-## <a name="load-ink-strokes-from-a-file"></a>Load ink strokes from a file
+## <a name="load-ink-strokes-from-a-file"></a>파일에서 잉크 스트로크 로드
 
-Here, we demonstrate how to load ink strokes from a file and render them on an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
+다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
-1.  First, we set up the UI.
+1.  먼저 UI를 설정합니다.
 
-    The UI includes "Save", "Load", and "Clear" buttons, and the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    UI에는 "저장", "로드" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -194,9 +194,9 @@ Here, we demonstrate how to load ink strokes from a file and render them on an [
     </Grid>
 ```
 
-2.  We then set some basic ink input behaviors.
+2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)), and listeners for the click events on the buttons are declared.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 단추의 클릭 이벤트에 대한 수신기가 선언됩니다.
 ```    CSharp
 public MainPage()
     {
@@ -216,16 +216,16 @@ public MainPage()
     }
 ```
 
-3.  Finally, we load the ink in the click event handler of the **Load** button.
+3.  마지막으로, **로드** 단추의 클릭 이벤트 처리기에서 잉크를 로드합니다.
 
-    A [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) lets the user select both the file and the location from where to retrieve the saved ink data.
+    [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    Once a file is selected, we open an [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) stream set to [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635).
+    파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
 
-    We then call [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) to read, de-serialize, and load the saved ink strokes into the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492). Loading the strokes into the **InkStrokeContainer** causes the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to immediately render them to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
+    그런 다음, [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)를 호출하여 저장된 잉크 스트로크를 읽고, 역직렬화하고, [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에 로드합니다. 스트로크를 **InkStrokeContainer**에 로드하면 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)가 해당 스트로크를 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 즉시 렌더링합니다.
 
     > [!NOTE]
-    > All existing strokes in the InkStrokeContainer are cleared before new strokes are loaded.
+    > InkStrokeContainer의 모든 기존 스트로크는 새 스트로크가 로드되기 전에 지워집니다.
 
 ``` csharp
 // Load ink data from a file.
@@ -261,27 +261,27 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!NOTE]
-> GIF is the only file format supported for saving ink data. However, the [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) method does support the following formats for backward compatibility.
+> GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원합니다.
 
-| Format                    | Description |
+| 형식                    | 설명 |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| InkSerializedFormat       | Specifies ink that is persisted using ISF. This is the most compact persistent representation of ink. It can be embedded within a binary document format or placed directly on the Clipboard.                                                                                                                                                                                                         |
-| Base64InkSerializedFormat | Specifies ink that is persisted by encoding the ISF as a base64 stream. This format is provided so ink can be encoded directly in an XML or HTML file.                                                                                                                                                                                                                                                |
-| Gif                       | Specifies ink that is persisted by using a GIF file that contains ISF as metadata embedded within the file. This enables ink to be viewed in applications that are not ink-enabled and maintain its full ink fidelity when it returns to an ink-enabled application. This format is ideal when transporting ink content within an HTML file and for making it usable by ink and non-ink applications. |
-| Base64Gif                 | Specifies ink that is persisted by using a base64-encoded fortified GIF. This format is provided when ink is to be encoded directly in an XML or HTML file for later conversion into an image. A possible use of this is in an XML format generated to contain all ink information and used to generate HTML through Extensible Stylesheet Language Transformations (XSLT). 
+| InkSerializedFormat       | ISF를 사용하여 유지되는 잉크를 지정합니다. 이 형식은 잉크에 대한 최대로 압축된 영구적 표현입니다. 이진 문서 형식에 포함되거나 클립보드에 직접 배치될 수 있습니다.                                                                                                                                                                                                         |
+| Base64InkSerializedFormat | ISF를 base64 스트림으로 인코딩하여 유지되는 잉크를 지정합니다. 이 형식은 XML 또는 HTML 파일에서 직접 잉크를 인코딩할 수 있도록 제공됩니다.                                                                                                                                                                                                                                                |
+| Gif                       | ISF를 파일에 포함된 메타데이터로 포함하는 GIF 파일을 사용하여 유지되는 잉크를 지정합니다. 이 형식을 사용하면 잉크 불가능 응용 프로그램에서 잉크를 볼 수 있고 잉크 가능 응용 프로그램으로 돌아갈 때 최대 잉크 화질을 유지할 수 있습니다. 이 형식은 HTML 파일 내에서 잉크 콘텐츠를 전송하고 잉크 가능 및 잉크 불가능 응용 프로그램에서 사용할 수 있도록 하는 경우에 적합합니다. |
+| Base64Gif                 | base64 인코딩된 강화된 GIF를 사용하여 유지되는 잉크를 지정합니다. 이 형식은 XML 또는 HTML 파일에서 직접 잉크를 인코딩하고 나중에 이미지로 변환하는 경우에 제공됩니다. 이 형식은 모든 잉크 정보를 포함하기 위해 생성되며 XSLT(Extensible Stylesheet Language Transformations)를 통해 HTML을 생성하는 데 사용되는 XML 형식에 사용할 수 있습니다. 
 
-## <a name="copy-and-paste-ink-strokes-with-the-clipboard"></a>Copy and paste ink strokes with the clipboard
+## <a name="copy-and-paste-ink-strokes-with-the-clipboard"></a>클립보드를 사용한 잉크 스트로크 복사 및 붙여넣기
 
 
-Here, we demonstrate how to use the clipboard to transfer ink strokes between apps.
+다음은 클립보드를 사용하여 앱 간에 잉크 스트로크를 전송하는 방법을 설명합니다.
 
-To support clipboard functionality, the built-in [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) cut and copy commands require one or more ink strokes be selected.
+기본 제공 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 잘라내기 및 복사 명령에서 클립보드 기능을 지원하려면 먼저 잉크 스트로크를 하나 이상 선택해야 합니다.
 
-For this example, we enable stroke selection when input is modified with a pen barrel button (or right mouse button). For a complete example of how to implement stroke selection, see Pass-through input for advanced processing in [Pen and stylus interactions](pen-and-stylus-interactions.md).
+이 예제에서는 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 
-1.  First, we set up the UI.
+1.  먼저 UI를 설정합니다.
 
-    The UI includes "Cut", "Copy", "Paste", and "Clear" buttons, along with the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) and a selection canvas.
+    UI에는 "잘라내기", "복사", "붙여넣기" 및 "지우기" 단추와 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 및 선택 캔버스가 포함됩니다.
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -315,11 +315,11 @@ For this example, we enable stroke selection when input is modified with a pen b
     </Grid>
 ```
 
-2.  We then set some basic ink input behaviors.
+2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) is configured to interpret input data from both pen and mouse as ink strokes ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). Listeners for the click events on the buttons as well as pointer and stroke events for selection functionality are also declared here.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
 
-    For a complete example of how to implement stroke selection, see Pass-through input for advanced processing in [Pen and stylus interactions](pen-and-stylus-interactions.md).
+    스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 ```    CSharp
 public MainPage()
     {
@@ -365,13 +365,13 @@ public MainPage()
     }
 ```
 
-3.  Finally, after adding stroke selection support, we implement clipboard functionality in the click event handlers of the **Cut**, **Copy**, and **Paste** buttons.
+3.  마지막으로, 스트로크 선택 지원을 추가한 후 **잘라내기**, **복사** 및 **붙여넣기** 단추의 클릭 이벤트 처리기에서 클립보드 기능을 구현합니다.
 
-    For cut, we first call [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) on the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
+    잘라내기의 경우 먼저, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에서 [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232)를 호출합니다.
 
-    We then call [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233) to remove the strokes from the ink canvas.
+    그런 다음, [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233)를 호출하여 잉크 캔버스에서 스트로크를 제거합니다.
 
-    Finally, we delete all selection strokes from the selection canvas.
+    마지막으로, 선택 캔버스에서 선택 스트로크를 모두 삭제합니다.
 ```    CSharp
 private void btnCut_Click(object sender, RoutedEventArgs e)
     {
@@ -428,16 +428,16 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## <a name="related-articles"></a>Related articles
+## <a name="related-articles"></a>관련 문서
 
-* [Pen and stylus interactions](pen-and-stylus-interactions.md)
+* [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
-**Samples**
-* [Ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Simple ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Coloring book sample](https://aka.ms/cpubsample-coloringbook)
-* [Family notes sample](https://aka.ms/cpubsample-familynotessample)
+**샘플**
+* [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
 
 
  

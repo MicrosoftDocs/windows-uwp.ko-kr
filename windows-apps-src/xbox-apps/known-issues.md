@@ -1,6 +1,6 @@
 ---
 author: Mtoepke
-title: Known issues with UWP on Xbox One Developer Program
+title: "Xbox One 개발자 프로그램의 UWP에 대해 알려진 문제"
 description: 
 translationtype: Human Translation
 ms.sourcegitcommit: 20ac6fb738de1c8aaf10f46c359842f31714dbbf
@@ -8,43 +8,43 @@ ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
 
 ---
 
-# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Known issues with UWP on Xbox Developer Program
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
-This topic describes known issues with the UWP on Xbox One Developer Program. For more information about this program, see [UWP on Xbox](index.md). 
+이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[If you came here from a link in an API reference topic, and are looking for Universal device family API information, please see [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/?LinkID=760755).\]
+\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 디바이스 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
 
-The following list highlights some known issues that you may encounter, but this list is not exhaustive. 
+다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
-**We want to get your feedback**, so please report any issues that you find on the [Developing Universal Windows Platform apps](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop) forum. 
+**피드백을 받고 싶으니**, [유니버설 Windows 플랫폼 앱 개발](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop) 포럼에서 발견된 문제를 모두 신고해 주세요. 
 
-If you get stuck, read the information in this topic, see [Frequently asked questions](frequently-asked-questions.md), and use the forums to ask for help.
+문제가 있으면 이 항목의 내용을 살펴보고, [질문과 대답](frequently-asked-questions.md)을 확인하고, 포럼을 통해 도움을 요청하세요.
 
 
 <!--## Developing games-->
  
-## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>Memory limits for background apps are partially enforced
+## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>백그라운드 앱에 대한 메모리 제한이 부분적으로 적용됨
  
-The maximum memory footprint for apps running in the background is 128 megabytes. In the current version of UWP on Xbox One, your app will be suspended if it is above this limit when it is moved to the background. This limit is not currently enforced if your app exceeds the limit while it is already running in the background—this means that if your app exceeds 128 MB while running in the background, it will still be able to allocate memory.
+백그라운드에서 실행되는 앱의 최대 메모리 공간은 128MB입니다. Xbox One의 UWP에 대한 현재 버전에서 백그라운드로 이동할 때 이 제한을 초과하면 앱이 일시 중단됩니다. 이 제한은 현재 앱이 이미 백그라운드에서 실행되고 있는 동안에는 제한을 초과하더라도 적용되지 않습니다. 즉, 백그라운드에서 실행하는 동안 앱이 128MB를 초과할 경우 여전히 메모리를 할당할 수 있습니다.
  
-There is currently no workaround for this issue. Apps should govern their memory usage accordingly and continue to stay under the 128 MB limit while running in the background.
+현재 이 문제에 대한 해결 방법은 없습니다. 앱의 메모리 사용을 적절하게 제어하여 백그라운드에서 실행하는 동안 128MB 제한을 넘지 않도록 유지해야 합니다.
  
-## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>Deploying from VS fails with Parental Controls turned on
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>자녀 보호를 켠 상태로 VS에서 배포하지 못함
 
-Launching your app from VS will fail if the console has Parental Controls turned on in Settings.
+콘솔의 자녀 보호가 설정에서 켜져 있는 경우 VS에서 앱을 시작하지 못합니다.
 
-To work around this issue, either temporarily disable Parental Controls, or:
-1. Deploy your app to the console with Parental Controls turned off.
-2. Turn on Parental Controls.
-3. Launch your app from the console.
-4. Enter a PIN or password to allow the app to launch.
-5. App will launch.
-6. Close the app.
-7. Launch from VS using F5, and the app will launch with no prompting.
+이 문제를 해결하려면 자녀 보호를 일시적으로 사용하지 않도록 설정하거나 다음을 수행합니다.
+1. 자녀 보호를 끄고 콘솔에 앱을 배포합니다.
+2. 자녀 보호를 켭니다.
+3. 콘솔에서 앱을 시작합니다.
+4. 앱이 시작될 수 있도록 PIN 또는 암호를 입력합니다.
+5. 앱이 시작됩니다.
+6. 앱을 종료합니다.
+7. F5 키를 사용하여 VS에서 시작합니다. 앱이 확인 없이 시작됩니다.
 
-At this point the permission is _sticky_ until you sign the user out, even if you uninstall and reinstall the app.
+이 시점에서는 앱을 제거하고 다시 설치하는 경우에도 사용자를 로그아웃시킬 때까지 권한은 _고정_되어 있습니다.
  
-There is another type of exemption that is only available for child accounts. A child account requires a parent to sign in to grant permission, but when they do, the parent has the option of choosing to **Always** allow the child to launch the app. That exemption is stored in the cloud and will persist even if the child signs out and signs back in.   
+자녀 계정에만 사용할 수 있는 다른 유형의 예외가 있습니다. 자녀 계정에는 부모가 로그인하여 권한을 부여해야 하지만 권한을 부여할 때 부모는 자녀가 앱을 시작하는 것을 **항상** 허용하도록 선택할 수 있습니다. 이 예외는 클라우드에 저장되고 자녀가 로그아웃하고 다시 로그인하는 경우에도 유지됩니다.   
 
 <!--### x86 vs. x64
 
@@ -67,11 +67,11 @@ The following game engines have been confirmed to work:
 There are likely others that are working too. We would love to get your feedback on what you find. 
 Please use the forum to report any issues you see.-->
 
-## <a name="directx-12-support"></a>DirectX 12 support
+## <a name="directx-12-support"></a>DirectX 12 지원
 
-UWP on Xbox One supports DirectX 11 Feature Level 10. DirectX 12 is not supported at this time. 
+Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 
 
-Xbox One, like all traditional games consoles, is a specialized piece of hardware that requires a specific SDK to access its full potential. If you are working on a game that requires access to the maximum potential of the Xbox One hardware, you can register with the [ID@XBOX](http://www.xbox.com/Developers/id) program to get access to that SDK, which includes DirectX 12 support.
+기존의 모든 게임 콘솔과 마찬가지로, Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 SDK가 필요한 특수 하드웨어입니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 해당 SDK에 액세스하기 위해 [ID@XBOX](http://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
@@ -91,13 +91,13 @@ In this developer preview, inbound and outbound network access from the console 
 Developers can still use HTTP and WebSockets.
 --> 
 
-## <a name="blocked-networking-ports-on-xbox-one"></a>Blocked networking ports on Xbox One
+## <a name="blocked-networking-ports-on-xbox-one"></a>Xbox One에서 차단된 네트워킹 포트
 
-Universal Windows Platform (UWP) apps on Xbox One devices are restricted from binding to ports in the range [49152, 65535]. Although binding to these ports might appear to succeed at run-time, network traffic can be silently dropped before reaching your app. Your app should bind to port 0 wherever possible, which allows the system to select the local port. If you need to use a specific port, the port number must be in the range [1025, 49151], and you should check and avoid conflicts with the IANA registry. For more information, see the [Service Name and Transport Protocol Port Number Registry](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+Xbox One 디바이스의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [49152, 65535]의 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
 
-## <a name="uwp-api-coverage"></a>UWP API coverage
+## <a name="uwp-api-coverage"></a>UWP API 검사
 
-Not all UWP APIs are supported on Xbox. For the list of APIs that we know don’t work, see [UWP features that aren't yet supported on Xbox](http://go.microsoft.com/fwlink/p/?LinkId=760755). If you find issues with other APIs, please report them on the forums. 
+일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
 <!--## XAML controls do not look like or behave like the controls in the Xbox One shell
 
@@ -160,20 +160,20 @@ This will delete all of your games, apps, settings and content, deactivate Devel
 
 Sometimes this is resolved by sorting a column on the table.-->
 
-## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>Navigating to WDP causes a certificate warning
+## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨
 
-You will receive a warning about the certificate that was provided, similar to the following screenshot, because the security certificate signed by your Xbox One console is not considered a well-known trusted publisher. To access the Windows Device Portal, click **Continue to this website**.
+Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows Device Portal에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
 
-![Website security certificate warning](images/security_cert_warning.jpg)
+![웹 사이트 보안 인증서 경고](images/security_cert_warning.jpg)
 
 <!--## Dev Home
 
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
-## <a name="see-also"></a>See also
-- [Frequently asked questions](frequently-asked-questions.md)
-- [UWP on Xbox One](index.md)
+## <a name="see-also"></a>참고 항목
+- [질문과 대답](frequently-asked-questions.md)
+- [Xbox One의 UWP](index.md)
 
 
 

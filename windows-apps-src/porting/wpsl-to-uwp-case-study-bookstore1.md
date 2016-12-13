@@ -1,138 +1,138 @@
 ---
 author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: This topic presents a case study of porting a very simple Windows Phone Silverlight app to a Windows 10 Universal Windows Platform (UWP) app.
-title: Windows Phone Silverlight to UWP case study, Bookstore1
+description: "이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
+title: "UWP에 대한 Windows Phone Silverlight 사례 연구, Bookstore1"
 translationtype: Human Translation
 ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
 ms.openlocfilehash: 631dab52c1d8f5745179d79182d299688be05d05
 
 ---
 
-# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>Windows Phone Silverlight to UWP case study: Bookstore1
+# <a name="windows-phone-silverlight-to-uwp-case-study-bookstore1"></a>UWP에 대한 Windows Phone Silverlight 사례 연구: Bookstore1
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-This topic presents a case study of porting a very simple Windows Phone Silverlight app to a Windows 10 Universal Windows Platform (UWP) app. With Windows 10, you can create a single app package that your customers can install onto a wide range of devices, and that's what we'll do in this case study. See [Guide to UWP apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다. Windows 10을 사용하면 고객이 다양한 디바이스에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 이 사례 연구에서는 이 작업을 수행합니다. [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
-The app we'll port consists of a **ListBox** bound to a view model. The view model has a list of books that shows title, author, and book cover. The book cover images have **Build Action** set to **Content** and **Copy to Output Directory** set to **Do not copy**.
+포팅할 앱은 보기 모델에 바인딩되는 **ListBox**로 구성됩니다. 보기 모델에는 제목, 저자 및 책 표지를 보여주는 책 목록이 있습니다. 책 표지 이미지에는 **빌드 작업**이 **콘텐츠**로 설정되어 있고 **출력 디렉터리로 복사**가 **복사 안 함**으로 설정되어 있습니다.
 
-The previous topics in this section describe the differences between the platforms, and they give details and guidance on the porting process for various aspects of an app from XAML markup, through binding to a view model, down to accessing data. A case study aims to complement that guidance by showing it in action in a real example. The case studies assume you've read the guidance, which they do not repeat.
+이 섹션의 이전 항목에서는 플랫폼 간의 차이점에 대해 설명하고 XAML 태그, 보기 모델에 바인딩, 데이터 액세스 등 앱의 다양한 측면에 대한 포팅 프로세스와 관련된 세부 정보와 지침을 제공했습니다. 사용 사례는 실제 작업 사례를 제공하여 지침을 보완하는 데 목표를 두고 있습니다. 사례 연구에서는 지침을 이미 읽었다고 가정하고 더 이상 반복하지 않습니다.
 
-**Note**   When opening Bookstore1Universal\_10 in Visual Studio, if you see the message "Visual Studio update required", then follow the steps for selecting a Target Platform Versioning in [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md).
+**참고** Visual Studio에서 Bookstore1Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md)에서 대상 플랫폼 버전 선택 단계를 따르세요.
 
-## <a name="downloads"></a>Downloads
+## <a name="downloads"></a>다운로드
 
-[Download the Bookstore1WPSL8 Windows Phone Silverlight app](http://go.microsoft.com/fwlink/?linkid=517053).
+[Bookstore1WPSL8 Windows Phone Silverlight 앱을 다운로드하세요.](http://go.microsoft.com/fwlink/?linkid=517053).
 
-[Download the Bookstore1Universal\_10 Windows 10 app](http://go.microsoft.com/fwlink/?linkid=532950).
+[Bookstore1Universal\_10 Windows 10 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## <a name="the-windows-phone-silverlight-app"></a>The Windows Phone Silverlight app
+## <a name="the-windows-phone-silverlight-app"></a>Windows Phone Silverlight 앱
 
-Here’s what Bookstore1WPSL8—the app that we're going to port—looks like. It's just a vertically-scrolling list box of books beneath the heading of the app's name and page title.
+포팅할 Bookstore1WPSL8 앱은 다음과 같습니다. 앱의 이름과 페이지 제목 아래에는 세로로 스크롤되는 책의 목록 상자가 있습니다.
 
-![how bookstore1wpsl8 looks](images/wpsl-to-uwp-case-studies/c01-01-wpsl-how-the-app-looks.png)
+![bookstore1wpsl8 모양](images/wpsl-to-uwp-case-studies/c01-01-wpsl-how-the-app-looks.png)
 
-## <a name="porting-to-a-windows-10-project"></a>Porting to a Windows 10 project
+## <a name="porting-to-a-windows-10-project"></a>Windows 10 프로젝트로 포팅
 
-It's a very quick task to create a new project in Visual Studio, copy files over to it from Bookstore1WPSL8, and include the copied files in the new project. Start by creating a new Blank Application (Windows Universal) project. Name it Bookstore1Universal\_10. These are the files to copy over from Bookstore1WPSL8 to Bookstore1Universal\_10.
+Visual Studio에서 새 프로젝트를 만들고 Bookstore1WPSL8의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 매우 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore1Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore1WPSL8에서 Bookstore1Universal\_10으로 복사할 파일입니다.
 
--   Copy the folder containing the book cover image PNG files (the folder is \\Assets\\CoverImages). After copying the folder, in **Solution Explorer**, make sure **Show All Files** is toggled on. Right-click the folder that you copied and click **Include In Project**. That command is what we mean by "including" files or folders in a project. Each time you copy a file or folder, click **Refresh** in **Solution Explorer** and then include the file or folder in the project. There's no need to do this for files that you're replacing in the destination.
--   Copy the folder containing the view model source file (the folder is \\ViewModel).
--   Copy MainPage.xaml and replace the file in the destination.
+-   책 표지 이미지 PNG 파일이 들어 있는 폴더를 복사합니다(폴더는 \\Assets\\CoverImages임) 폴더를 복사한 후에 **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다. 이 명령은 파일이나 폴더를 프로젝트에 "포함"하여 우리가 의도한 작업을 진행합니다. 파일이나 폴더를 복사할 때마다 **솔루션 탐색기**에서 **새로 고침**을 클릭한 다음 프로젝트에 파일 또는 폴더를 포함합니다. 대상에서 바꾸려는 파일에 대해서는 이 작업을 수행하지 않아도 됩니다.
+-   보기 모델 소스 파일이 포함된 폴더(\\ViewModel)를 복사합니다.
+-   MainPage.xaml을 복사한 후 대상의 파일을 바꿉니다.
 
-We can keep the App.xaml, and App.xaml.cs that Visual Studio generated for us in the Windows 10 project.
+Windows 10 프로젝트에서 Visual Studio를 통해 생성한 App.xaml 및 App.xaml.cs를 유지할 수 있습니다.
 
-Edit the source code and markup files that you just copied and change any references to the Bookstore1WPSL8 namespace to Bookstore1Universal\_10. A quick way to do that is to use the **Replace In Files** feature. In the imperative code in the view model source file, these porting changes are needed:
+방금 복사한 소스 코드 및 태그 파일을 편집하고 Bookstore1WPSL8 네임스페이스에 대한 참조를 Bookstore1Universal\_10으로 변경합니다. **파일에서 바꾸기** 기능을 사용하면 이 작업을 빠르게 수행할 수 있습니다. 보기 모델 소스 파일의 명령적 코드에서 다음과 같은 포팅 변경이 필요합니다.
 
--   Change `System.ComponentModel.DesignerProperties` to `DesignMode` and then use the **Resolve** command on it. Delete the `IsInDesignTool` property and use IntelliSense to add the correct property name: `DesignModeEnabled`.
--   Use the **Resolve** command on `ImageSource`.
--   Use the **Resolve** command on `BitmapImage`.
--   Delete using `System.Windows.Media;` and `using System.Windows.Media.Imaging;`.
--   Change the value returned by the **Bookstore1Universal\_10.BookstoreViewModel.AppName** property from "BOOKSTORE1WPSL8" to "BOOKSTORE1UNIVERSAL".
+-   `System.ComponentModel.DesignerProperties`을(를) `DesignMode`(으)로 변경한 다음 **확인** 명령을 사용합니다. `IsInDesignTool` 속성을 삭제하고 IntelliSense를 사용하여 올바른 속성 이름(`DesignModeEnabled`)을 추가합니다.
+-   `ImageSource`에서 **확인** 명령을 사용합니다.
+-   `BitmapImage`에서 **확인** 명령을 사용합니다.
+-   `System.Windows.Media;` 및 `using System.Windows.Media.Imaging;`을 사용하여 삭제합니다.
+-   **Bookstore1Universal\_10.BookstoreViewModel.AppName** 속성에 의해 반환된 값을 "BOOKSTORE1WPSL8"에서 "BOOKSTORE1UNIVERSAL"로 변경합니다.
 
-In MainPage.xaml, these porting changes are needed:
+MainPage.xaml에서 다음과 같은 변경 내용이 필요합니다.
 
--   Change `phone:PhoneApplicationPage` to `Page` (don't forget the occurrences in property element syntax).
--   Delete the `phone` and `shell` namespace prefix declarations.
--   Change "clr-namespace" to "using" in the remaining namespace prefix declaration.
+-   `phone:PhoneApplicationPage`에서 `Page`(으)로 변경합니다(속성 요소 구문에서의 발생 횟수를 잊지 말 것).
+-   `phone` 및 `shell` 네임스페이스 접두사 선언을 삭제합니다.
+-   나머지 네임스페이스 접두사 선언에서 ‘clr 네임스페이스’를 ‘사용’으로 변경합니다.
 
-We can choose to correct markup compilation errors very cheaply if we want to see results soonest, even if that means temporarily removing markup. But, let's keep a record of the debt we accrue by doing so. Here it is in this case.
+태그를 일시적으로 제거하더라도 결과를 최대한 빠르게 표시하려면 태그 컴파일 오류를 매우 저렴하게 수정할 수 있습니다. 하지만 이렇게 하여 증가하는 부채를 기록해 보겠습니다. 이 경우는 다음과 같습니다.
 
-1.  In the root **Page** element in **MainPage.xaml**, delete `SupportedOrientations="Portrait"`.
-2.  In the root **Page** element in **MainPage.xaml**, delete `Orientation="Portrait"`.
-3.  In the root **Page** element in **MainPage.xaml**, delete `shell:SystemTray.IsVisible="True"`.
-4.  In the `BookTemplate` data template, delete the references to the `PhoneTextExtraLargeStyle` and `PhoneTextSubtleStyle` **TextBlock** styles.
-5.  In the `TitlePanel` **StackPanel**, delete the references to the `PhoneTextNormalStyle` and `PhoneTextTitle1Style` **TextBlock** styles.
+1.  **MainPage.xaml**의 루트 **Page** 요소에서 `SupportedOrientations="Portrait"`를 삭제합니다.
+2.  **MainPage.xaml**의 루트 **Page** 요소에서 `Orientation="Portrait"`를 삭제합니다.
+3.  **MainPage.xaml**의 루트 **Page** 요소에서 `shell:SystemTray.IsVisible="True"`를 삭제합니다.
+4.  `BookTemplate` 데이터 템플릿에서 `PhoneTextExtraLargeStyle` 및 `PhoneTextSubtleStyle` **TextBlock** 스타일에 대한 참조를 삭제합니다.
+5.  `TitlePanel` **StackPanel**에서 `PhoneTextNormalStyle` 및 `PhoneTextTitle1Style` **TextBlock** 스타일에 대한 참조를 삭제합니다.
 
-Let's work on the UI for the mobile device family first, and we can consider other form factors after that. You can build and run the app now. Here's how it looks on the mobile emulator.
+먼저 모바일 디바이스 패밀리의 UI에 대해 작업하겠습니다. 그 후에야 다른 폼 팩터를 고려할 수 있습니다. 이제 앱을 빌드 및 실행할 수 있습니다. 모바일 에뮬레이터에서 모양은 다음과 같습니다.
 
-![the uwp app on mobile with initial source code changes](images/wpsl-to-uwp-case-studies/c01-02-mob10-initial-source-code-changes.png)
+![초기 소스 코드가 변경된 모바일의 UWP 앱](images/wpsl-to-uwp-case-studies/c01-02-mob10-initial-source-code-changes.png)
 
-The view and the view model are working together correctly, and the **ListBox** is functioning. We mostly just need to fix the styling and get the images to show up.
+보기와 보기 모델이 함께 올바르게 작동하고 **ListBox**가 작동하고 있습니다. 대부분 스타일을 수정하고 표시할 이미지를 가져와야 합니다.
 
-## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>Paying off the debt items, and some initial styling
+## <a name="paying-off-the-debt-items-and-some-initial-styling"></a>부채 항목 청산 및 일부 초기 스타일 지정
 
-By default, all orientations are supported. The Windows Phone Silverlight app explicitly constrains itself to portrait-only, though, so debt items \#1 and \#2 are paid off by going into the app package manifest in the new project and checking **Portrait** under **Supported orientations**.
+기본적으로 모든 방향이 지원됩니다. 하지만 Windows Phone Silverlight 앱은 세로 전용으로 명시적으로 제한되므로 새 프로젝트에서 앱 패키지 매니페스트로 이동한 후 **지원되는 방향**에서 **세로**를 선택하여 부채 항목 #\1 및 #\2를 청산합니다.
 
-For this app, item \#3 is not a debt since the status bar (formerly called the system tray) is shown by default. For items \#4 and \#5, we need to find four Universal Windows Platform (UWP) **TextBlock** styles that correspond to the Windows Phone Silverlight styles that we were using. You can run the Windows Phone Silverlight app in the emulator and compare it side-by-side with the illustration in the [Text](wpsl-to-uwp-porting-xaml-and-ui.md) section. From doing that, and from looking at the properties of the Windows Phone Silverlight system styles, we can make this table.
+이 앱의 경우 상태 표시줄(이전의 시스템 트레이)이 기본적으로 표시되므로 항목 #\3은 부채가 아닙니다. 항목 #\4 및 #\5에 대해 사용 중인 Windows Phone Silverlight 스타일에 해당하는 네 가지 UWP(유니버설 Windows 플랫폼)  **TextBlock** 스타일을 찾아야 합니다. 에뮬레이터에서 Windows Phone Silverlight 앱을 실행하고 [텍스트](wpsl-to-uwp-porting-xaml-and-ui.md) 섹션의 그림과 나란히 비교할 수 있습니다. 그런 다음 Windows Phone Silverlight 시스템 스타일의 속성을 참조하여 이 테이블을 만들 수 있습니다.
 
-| Windows Phone Silverlight style key | UWP style key          |
+| Windows Phone Silverlight 스타일 키 | UWP 스타일 키          |
 |-------------------------------------|------------------------|
 | PhoneTextExtraLargeStyle            | TitleTextBlockStyle    |
 | PhoneTextSubtleStyle                | SubtitleTextBlockStyle |
 | PhoneTextNormalStyle                | CaptionTextBlockStyle  |
 | PhoneTextTitle1Style                | HeaderTextBlockStyle   |
  
-To set those styles, you can just type them into the markup editor or you can use the Visual Studio XAML Tools and set them without typing a thing. To do that, you right-click a **TextBlock** and click **Edit Style** &gt; **Apply Resource**. To do that with the **TextBlock**s in the item template, right click the **ListBox** and click **Edit Additional Templates** &gt; **Edit Generated Items (ItemTemplate)**.
+이러한 스타일을 설정하려면 태그 편집기에 스타일을 입력하거나 Visual Studio XAML 도구를 사용하여 별도로 입력하지 않고 스타일을 설정할 수 있습니다. 이렇게 하려면 **TextBlock**을 마우스 오른쪽 단추로 클릭하고 **스타일 편집** &gt; **리소스 적용**을 클릭합니다. 항목 템플릿의 **TextBlock**을 사용하려면 **ListBox**를 마우스 오른쪽 단추로 클릭하고 **추가 템플릿 편집** &gt; **생성된 항목 편집(ItemTemplate)**을 클릭합니다.
 
-There is an 80% opaque white background behind the items, because the default style of the **ListBox** control sets its background to the `ListBoxBackgroundThemeBrush` system resource. Set `Background="Transparent"` on the **ListBox** to clear that background. To left-align the **TextBlock**s in the item template, edit it again the same way as described above and set a **Margin** of `"9.6,0"` on both **TextBlock**s.
+**ListBox** 컨트롤의 기본 스타일에서는 배경을 `ListBoxBackgroundThemeBrush` 시스템 리소스로 설정하기 때문에 항목의 뒤에는 80% 불투명 흰색 배경이 있습니다. **ListBox**에서 `Background="Transparent"`를 설정하여 해당 배경의 선택을 취소합니다. 항목 템플릿의 **TextBlock**을 왼쪽 맞춤으로 설정하려면 위에 설명한 것과 동일한 방법으로 편집하고 두 **TextBlock** 모두에 대해 **Margin**을 `"9.6,0"`으로 설정합니다.
 
-After that is done, because of [changes related to view pixels](wpsl-to-uwp-porting-xaml-and-ui.md), we need to go through and multiply any fixed size dimension that we haven’t yet changed (margins, width, height, etc) by 0.8. So, for example, the images should change from 70x70px to 56x56px.
+완료되면 [보기 픽셀 관련 변경](wpsl-to-uwp-porting-xaml-and-ui.md)으로 인해 아직 변경하지 않은 고정 크기 치수(여백, 너비, 높이 등)를 0.8로 곱해야 합니다. 예를 들어 이미지가 70x70px에서 56x56px로 변경되어야 합니다.
 
-But, let’s get those images to render before we show the results of our styling.
+그러나 스타일 지정의 결과를 보여 주기 전에 렌더링할 해당 이미지를 가져오겠습니다.
 
-## <a name="binding-an-image-to-a-view-model"></a>Binding an Image to a view model
+## <a name="binding-an-image-to-a-view-model"></a>이미지를 보기 모델에 바인딩
 
-In Bookstore1WPSL8, we did this:
+Bookstore1WPSL8에서 다음과 같이 했습니다.
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-In Bookstore1Universal, we use the ms-appx [URI scheme](https://msdn.microsoft.com/library/windows/apps/jj655406). So that we can keep the rest of our code the same, we can use a different overload of the **System.Uri** constructor to put the ms-appx URI scheme in a base URI and append the rest of the path onto that. Like this:
+Bookstore1Universal에서 ms-appx [URI 스키마](https://msdn.microsoft.com/library/windows/apps/jj655406)를 사용합니다. 코드의 나머지 부분을 동일하게 유지할 수 있도록 **System.Uri** 생성자의 다른 오버로드를 사용하여 ms-appx URI 스키마를 기본 URI에 삽입하고 나머지 경로를 URI에 추가합니다. 다음과 같습니다.
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".
     return new BitmapImage(new Uri(new Uri("ms-appx://"), this.CoverImagePath));
 ```
 
-## <a name="universal-styling"></a>Universal styling
+## <a name="universal-styling"></a>범용 스타일 지정
 
-Now, we just need to make some final styling tweaks and confirm that the app looks good on desktop (and other) form factors as well as mobile. The steps are below. And you can use the links at the top of this topic to download the projects and see the results of all the changes between here and the end of the case study.
+이제 일부 최종 스타일을 조정하고 앱이 모바일뿐만 아니라 데스크톱(및 기타) 폼 팩터에서도 멋지게 표시되는지 확인해야 합니다. 단계는 다음과 같습니다. 이 항목 맨 위에 있는 링크를 사용하여 프로젝트를 다운로드하고, 여기서부터 사례 연구 끝까지 포함된 모든 변경의 결과를 확인할 수 있습니다.
 
--   To tighten up the spacing between items, find the `BookTemplate` data template in MainPage.xaml and delete the `Margin` attribute from the root **Grid**.
--   If you want to give the page title a little more breathing room, you can reset the bottom margin of `-5.6` to `0` on the page title **TextBlock**.
--   Now, we need to set `LayoutRoot`'s Background to the correct default value so that the app looks appropriate when running on all devices no matter what the theme is. Change it from `"Transparent"` to `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`.
+-   항목 사이의 간격을 촘촘히 하려면 MainPage.xaml에서 `BookTemplate` 데이터 템플릿을 찾고 루트 **Grid**에서 `Margin` 특성을 삭제합니다.
+-   페이지 제목에 안정감을 조금 더 부여하려는 경우 페이지 제목 **TextBlock**에서 아래쪽 여백 `-5.6`을 `0`으로 다시 설정할 수 있습니다.
+-   이제 테마에 관계없이 앱이 모든 디바이스에서 실행될 때 적절해 보이도록 `LayoutRoot`의 Background를 올바른 기본값으로 설정해야 합니다. `"Transparent"`에서 `"{ThemeResource ApplicationPageBackgroundThemeBrush}"`로 변경합니다.
 
-With a more sophisticated app, this would be the point at which we'd use the guidance in [Porting for form factor and user experience](wpsl-to-uwp-form-factors-and-ux.md) and really make optimal use of the form factor of each of the many devices the app can now run on. But, for this simple app, we can stop here and see how the app looks after that last sequence of styling operations. It actually looks the same on mobile and desktop devices, although it's not making best use of space on wide form factors (but we'll investigate how to do that in a later case study).
+더 정교한 앱에서는 [폼 팩터 및 사용자 환경에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md)의 지침에 따라 현재 앱이 실행될 수 있는 여러 디바이스 각각의 폼 팩터를 최대한 활용하세요. 그러나 간단한 이 앱의 경우 여기에서 중지하고 스타일 지정 작업의 마지막 해당 시퀀스 후 앱이 어떻게 표시되는지 확인할 수 있습니다. 모바일과 데스크톱 장치에서 실제로 똑같이 표시되지만 와이드 폼 팩터에서는 공간을 효과적으로 사용하지 못하는 것입니다. 이후 사례 연구에서 효과적으로 활용하는 방법을 살펴보겠습니다.
 
-See [Theme changes](wpsl-to-uwp-porting-xaml-and-ui.md) to see how to control the theme of your app.
+앱의 테마를 제어하는 방법을 알아보려면 [테마 변경](wpsl-to-uwp-porting-xaml-and-ui.md)을 참조하세요.
 
-![the ported windows 10 app](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
+![포팅된 Windows 10 앱](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
 
-The ported Windows 10 app running on a Mobile device
+모바일 디바이스에서 실행되는 포팅된 Windows 10 앱
 
-## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>An optional adjustment to the list box for Mobile devices
+## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>모바일 장치에 대한 목록 상자를 선택적으로 조정
 
-When the app is running on a Mobile device, the background of a list box is light by default in both themes. That may be the style that you prefer and, if so, then there's nothing more to do. But, controls are designed so that you can customize their look while leaving their behavior unaffected. So, if you want the list box to be dark in the dark theme—the way the original app looked—then follow [these instructions](w8x-to-uwp-case-study-bookstore1.md) under "An optional adjustment".
+앱이 모바일 장치에서 실행되는 경우 기본적으로 두 테마에서 목록 상자의 배경이 밝습니다. 이러한 설정이 선호하는 스타일일 수 있으며, 그런 경우 다른 작업을 하지 않아도 됩니다. 그러나 컨트롤은 해당 동작에 영향을 주지 않으면서 모양을 사용자 지정할 수 있도록 디자인되었습니다. 원래 앱의 모양대로 어두운 테마에서 목록 상자를 어둡게 유지하려면 "선택적 조정" 아래에서 [해당 지침](w8x-to-uwp-case-study-bookstore1.md)을 따르세요.
 
-## <a name="conclusion"></a>Conclusion
+## <a name="conclusion"></a>결론
 
-This case study showed the process of porting a very simple app—arguably an unrealistically simple one. For instance, list controls can be used for selection or for establishing a context for navigation; the app navigates to a page with more details about the item that was tapped. This particular app does nothing with the user's selection, and it has no navigation. Even so, the case study served to break the ice, to introduce the porting process, and to demonstrate important techniques that you can use in real UWP apps.
+이 사례 연구에서는 비현실적으로 간단한 앱을 포팅하는 프로세스에 대해 살펴보았습니다. 예를 들어 목록 컨트롤을 사용하여 선택하거나 탐색할 컨텍스트를 설정할 수 있습니다. 앱에서는 탭되는 항목에 대한 세부 정보가 나오는 페이지를 탐색합니다. 이 특정 앱에서는 사용자 선택과 관련하여 아무 작업도 수행하지 않고 탐색도 하지 않습니다. 하지만 이 사례 연구에서는 분위기를 쇄신하고 포팅 프로세스를 소개하고 실제 UWP 앱에서 사용할 수 있는 중요한 기술을 보여 주었습니다.
 
-The next case study is [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), in which we look at accessing and displaying grouped data.
+다음 사례 연구는 [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md)이며, 여기에서는 그룹화된 데이터에 대한 액세스 및 표시에 대해 살펴봅니다.
 
 
 

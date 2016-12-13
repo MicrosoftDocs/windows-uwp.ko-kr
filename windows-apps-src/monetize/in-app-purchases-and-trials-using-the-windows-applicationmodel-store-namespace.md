@@ -1,62 +1,62 @@
 ---
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
-description: Learn how to enable in-app purchases and trials in UWP apps that target releases before Windows 10, version 1607.
-title: In-app purchases and trials using the Windows.ApplicationModel.Store namespace
+description: "Windows&nbsp;10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
+title: "Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판"
 translationtype: Human Translation
 ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
 ms.openlocfilehash: ee2a52a54be8510b962f1ef5c40570f3836d28c3
 
 ---
 
-# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>In-app purchases and trials using the Windows.ApplicationModel.Store namespace
+# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판
 
-You can use members in the [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) namespace to add in-app purchases and trial functionality to your Universal Windows Platform (UWP) app to help monetize your app. These APIs also provide access to the license info for your app.
+앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
 
-The articles in this section provide in-depth guidance and code examples for using the members in the **Windows.ApplicationModel.Store** namespace for several common scenarios. For an overview of basic concepts related to in-app purchases in UWP apps, see [In-app purchases and trials](in-app-purchases-and-trials.md).
+이 섹션의 문서에서는 몇 가지 일반적인 시나리오에서 **Windows.ApplicationModel.Store** 네임스페이스의 멤버를 사용하기 위한 자세한 지침과 코드 예제를 제공합니다. UWP 앱의 앱에서 바로 구매와 관련된 기본 개념의 개요를 보려면 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
-For a complete sample that demonstrates how to implement trials and in-app purchases using the **Windows.ApplicationModel.Store** namespace, see the [Store sample](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store).
+**Windows.ApplicationModel.Store** 네임스페이스를 사용하여 평가판 및 앱에서 바로 구매를 구현하는 방법을 보여 주는 전체 샘플은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)을 참조하세요.
 
->**Notes**&nbsp;&nbsp;
+>**참고**&nbsp;&nbsp;
 >
-> * If your app targets Windows 10, version 1607, or later, we recommend that you use members of the [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) namespace instead of the **Windows.ApplicationModel.Store** namespace. The **Windows.Services.Store** namespace supports the latest add-on types, such as Store-managed consumable add-ons, and is designed to be compatible with future types of products and features supported by Windows Dev Center and the Store. The **Windows.Services.Store** namespace is also designed to have better performance. For more information, see [In-app purchases and trials](in-app-purchases-and-trials.md).
+> * 앱이 Windows&nbsp;10 버전 1607 이상을 대상으로 하는 경우 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스의 멤버를 사용하는 것이 좋습니다. **Windows.Services.Store** 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 또한 **Windows.Services.Store** 네임스페이스는 보다 나은 성능을 제공하도록 디자인되었습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 <br/><br/>
-> * The **Windows.ApplicationModel.Store** namespace is not supported in Windows desktop applications that use the [Desktop Bridge](https://developer.microsoft.com/windows/bridges/desktop). These applications must use the **Windows.Services.Store** namespace to implement in-app purchases and trials.
+> * **Windows.ApplicationModel.Store** 네임스페이스는 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서 지원되지 않습니다. 해당 응용 프로그램은 **Windows.Services.Store** 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현해야 합니다.
 
-## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>Get started with the CurrentApp and CurrentAppSimulator classes
+## <a name="get-started-with-the-currentapp-and-currentappsimulator-classes"></a>CurrentApp 및 CurrentAppSimulator 클래스 시작
 
-The main entry point to the **Windows.ApplicationModel.Store** namespace is the [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) class. This class provides static properties and methods you can use to get info for the current app and its available add-ons (also known as in-app products or IAPs), get license info for the current app or its add-ons, purchase an app or add-on for the current user, and perform other tasks.
+**Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 정적 속성과 메서드를 제공합니다.
 
-The [CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) class obtains its data from the Windows Store, so you must have a developer account and the app must be published in the Store before you can successfully use this class in your app. Before you submit your app to the Store, you can test your code with a simulated version of this class called [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx). After you test your app, and before you submit it to the Windows Store, you must replace the instances of **CurrentAppSimulator** with **CurrentApp**. Your app will fail certification if it uses **CurrentAppSimulator**.
+[CurrentApp](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.aspx) 클래스는 Windows 스토어에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 스토어에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. 스토어에 앱을 제출하기 전에 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Windows 스토어에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
 
-When the **CurrentAppSimulator** is used, the initial state of your app's licensing and in-app products is described in a local file on your development computer named WindowsStoreProxy.xml. For more information about this file, see [Using the WindowsStoreProxy.xml file with CurrentAppSimulator](#proxy).
+**CurrentAppSimulator**를 사용하는 경우 앱 라이선싱 및 앱에서 바로 구매 제품의 초기 상태는 WindowsStoreProxy.xml이라는 개발 컴퓨터의 로컬 파일에서 설명됩니다. 이 파일에 대한 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](#proxy)을 참조하세요.
 
-For more information about common tasks you can perform using **CurrentApp** and **CurrentAppSimulator**, see the following articles.
+**CurrentApp** 및 **CurrentAppSimulator**를 사용하여 수행할 수 있는 일반적인 작업에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-| Topic       | Description                 |
+| 항목       | 설명                 |
 |----------------------------|-----------------------------|
-| [Exclude or limit features in a trial version](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | If you enable customers to use your app for free during a trial period, you can entice your customers to upgrade to the full version of your app by excluding or limiting some features during the trial period. |
-| [Enable in-app product purchases](enable-in-app-product-purchases.md)      |  Whether your app is free or not, you can sell content, other apps, or new app functionality (such as unlocking the next level of a game) from right within the app. Here we show you how to enable these products in your app.  |
-| [Enable consumable in-app product purchases](enable-consumable-in-app-product-purchases.md)      | Offer consumable in-app products—items that can be purchased, used, and purchased again—through the Store commerce platform to provide your customers with a purchase experience that is both robust and reliable. This is especially useful for things like in-game currency (gold, coins, etc.) that can be purchased and then used to purchase specific power-ups. |
-| [Manage a large catalog of in-app products](manage-a-large-catalog-of-in-app-products.md)      |   If your app offers a large in-app product catalog, you can optionally follow the process described in this topic to help manage your catalog.    |
-| [Use receipts to verify product purchases](use-receipts-to-verify-product-purchases.md)      |   Each Windows Store transaction that results in a successful product purchase can optionally return a transaction receipt that provides information about the listed product and monetary cost to the customer. Having access to this information supports scenarios where your app needs to verify that a user purchased your app, or has made in-app product purchases from the Windows Store. |
+| [평가판의 기능 제외 또는 제한](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | 체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다. |
+| [앱에서 바로 구매 제품 구매 사용](enable-in-app-product-purchases.md)      |  앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.  |
+| [앱에서 바로 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)      | 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 구매한 후 특정 회복 아이템을 구매하는 데 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다. |
+| [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)      |   앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다.    |
+| [확인 메일을 사용하여 제품 구매 검증](use-receipts-to-verify-product-purchases.md)      |   제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 고객에게 나열된 제품 및 통화 비용에 대한 정보를 제공하는 거래 영수증을 선택적으로 반환할 수 있습니다. 사용자가 앱을 구매했거나, Windows 스토어에서 앱에서 바로 구매 제품을 구매했는지 앱이 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. |
 
 <span id="proxy" />
-## <a name="using-the-windowsstoreproxyxml-file-with-currentappsimulator"></a>Using the WindowsStoreProxy.xml file with CurrentAppSimulator
+## <a name="using-the-windowsstoreproxyxml-file-with-currentappsimulator"></a>CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용
 
-When the **CurrentAppSimulator** is used, the initial state of your app's licensing and in-app products is described in a local file on your development computer named WindowsStoreProxy.xml. **CurrentAppSimulator** methods that alter the app's state, for example by buying a license or handling an in-app purchase, only update the state of the **CurrentAppSimulator** object in memory. The contents of WindowsStoreProxy.xml are not changed. When the app starts again, the license state reverts to what is described in WindowsStoreProxy.xml.
+**CurrentAppSimulator**를 사용하는 경우 앱 라이선싱 및 앱에서 바로 구매 제품의 초기 상태는 WindowsStoreProxy.xml이라는 개발 컴퓨터의 로컬 파일에서 설명됩니다. 예를 들어 라이선스를 구입하거나 앱에서 바로 구매를 처리하여 앱 상태를 변경하는 **CurrentAppSimulator** 메서드는 메모리에 있는 **CurrentAppSimulator** 개체의 상태만 업데이트합니다. WindowsStoreProxy.xml의 내용은 변경되지 않습니다. 앱을 다시 시작하면 라이선스 상태가 WindowsStoreProxy.xml에 설명된 상태로 돌아갑니다.
 
-A WindowsStoreProxy.xml file is created by default at the following location: %UserProfile%\AppData\Local\Packages\\&lt;app package folder&gt;\LocalState\Microsoft\Windows Store\ApiData. You can edit this file to define the scenario that you want to simulate in the **CurrentAppSimulator** properties.
+WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다. %UserProfile%\AppData\Local\Packages\\&lt;앱 패키지 폴더&gt;\LocalState\Microsoft\Windows Store\ApiData. 이 파일을 편집하여 시뮬레이트할 시나리오를 **CurrentAppSimulator** 속성에서 정의할 수 있습니다.
 
-Although you can modify the values in this file, we recommend that you create your own WindowsStoreProxy.xml file (in a data folder of your Visual Studio project) for **CurrentAppSimulator** to use instead. When simulating the transaction, call [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx) to load your file. If you do not call **ReloadSimulatorAsync** to load your own WindowsStoreProxy.xml file, **CurrentAppSimulator** will create/load (but not overwrite) the default WindowsStoreProxy.xml file.
+이 파일의 값을 수정할 수는 있지만 **CurrentAppSimulator**에 대한 고유한 WindowsStoreProxy.xml 파일(Visual Studio 프로젝트의 데이터 폴더)을 만들어 대신 사용하는 것이 좋습니다. 거래를 시뮬레이트하는 경우 [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx)를 호출하여 파일을 로드합니다. **ReloadSimulatorAsync**를 호출하여 고유한 WindowsStoreProxy.xml 파일을 로드하지 않으면 **CurrentAppSimulator**에서 기본 WindowsStoreProxy.xml 파일을 만들고 로드합니다(덮어쓰지 않음).
 
->**Note**&nbsp;&nbsp;Be aware that **CurrentAppSimulator** is not fully initialized until **ReloadSimulatorAsync** completes. And, since **ReloadSimulatorAsync** is an asynchronous method, care should be taken to avoid the race condition of querying **CurrentAppSimulator** on one thread while it is being initialized on another. One technique is to use a flag to indicate that initialization is complete. An app that is installed from the Windows Store must use **CurrentApp** instead of **CurrentAppSimulator**, and in that case **ReloadSimulatorAsync** is not called and therefore the race condition just mentioned does not apply. For this reason, design your code so that it will work in both cases, both asychronously and synchronously.
+>**참고**&nbsp;&nbsp;**ReloadSimulatorAsync**가 완료되기 전에는 **CurrentAppSimulator**가 완전히 초기화되지 않은 것입니다. 또한 **ReloadSimulatorAsync**는 비동기 메서드이므로 다른 스레드에서 초기화되는 동안 한 스레드에서 **CurrentAppSimulator**를 쿼리하는 경합 상태가 발생하지 않도록 주의해야 합니다. 한 가지 방법은 플래그를 사용하여 초기화가 완료되었음을 나타내는 것입니다. Windows 스토어에서 설치된 앱은 **CurrentAppSimulator** 대신 **CurrentApp**을 사용해야 하며, 이 경우 **ReloadSimulatorAsync**가 호출되지 않으므로 방금 언급한 경합 상태가 적용되지 않습니다. 이 때문에 비동기적 및 동기적으로 두 경우에서 모두 작동하도록 코드를 설계합니다.
 
 
 <span id="proxy-examples" />
-### <a name="examples"></a>Examples
+### <a name="examples"></a>예제
 
-This example is a WindowsStoreProxy.xml file (UTF-16 encoded) that describes an app with a trial mode that expires at 05:00 (UTC) on Jan. 19, 2015.
+이 예제는 2015년 1월 19일 5시(UTC)에 만료되는 평가판 모드의 앱을 설명하는 WindowsStoreProxy.xml 파일(UTF-16으로 인코드됨)입니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -89,7 +89,7 @@ This example is a WindowsStoreProxy.xml file (UTF-16 encoded) that describes an 
 </CurrentApp>
 ```
 
-The next example is a WindowsStoreProxy.xml file (UTF-16 encoded) that describes an app that has been purchased, has a feature that expires at 05:00 (UTC) on Jan. 19, 2015, and has a consumable in-app purchase.
+다음 예제는 구입했으며 2015년 1월 19일 5시(UTC)에 만료되는 기능이 있고 앱에서 바로 구매 소모성이 있는 앱을 설명하는 WindowsStoreProxy.xml 파일(UTF-16으로 인코드됨)입니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -141,18 +141,18 @@ The next example is a WindowsStoreProxy.xml file (UTF-16 encoded) that describes
 
 
 <span id="proxy-schema" />
-### <a name="schema"></a>Schema
+### <a name="schema"></a>스키마
 
-This section lists the XSD file that defines the structure of the WindowsStoreProxy.xml file. To apply this schema to the XML editor in Visual Studio when working with your WindowsStoreProxy.xml file, do the following:
+이 섹션에서는 WindowsStoreProxy.xml 파일의 구조를 정의하는 XSD 파일을 보여 줍니다. WindowsStoreProxy.xml 파일을 사용할 때 Visual Studio의 XML 편집기에 이 스키마를 적용하려면 다음을 수행합니다.
 
-1. Open the WindowsStoreProxy.xml file in Visual Studio.
-2. On the **XML** menu, click **Create Schema**. This will create a temporary WindowsStoreProxy.xsd file based on the contents of the XML file.
-3. Replace the contents of that .xsd file with the schema below.
-4. Save the file to a location where you can apply it to multiple app projects.
-5. Switch to your WindowsStoreProxy.xml file in Visual Studio.
-6. On the **XML** menu, click **Schemas**, then locate the row in the list for the WindowsStoreProxy.xsd file. If the location for the file is not the one you want (for example, if the temporary file is still shown), click **Add**. Navigate to the right file, then click **OK**. You should now see that file in the list. Make sure a checkmark appears in the **Use** column for that schema.
+1. Visual Studio에서 WindowsStoreProxy.xml 파일을 엽니다.
+2. **XML** 메뉴에서 **스키마 만들기**를 클릭합니다. XML 파일의 내용을 기반으로 하여 임시 WindowsStoreProxy.xsd 파일이 생성됩니다.
+3. .xsd 파일의 내용을 아래 스키마로 바꿉니다.
+4. 여러 앱 프로젝트에 적용할 수 위치에 파일을 저장합니다.
+5. Visual Studio에서 WindowsStoreProxy.xml 파일로 전환합니다.
+6. **XML** 메뉴에서 **스키마**를 클릭한 다음 목록에서 WindowsStoreProxy.xsd 파일의 행을 찾습니다. 파일 위치가 원하는 위치가 아닌 경우(예: 임시 파일이 여전히 표시되는 경우) **추가**를 클릭합니다. 올바른 파일을 찾은 다음 **확인**을 클릭합니다. 이제 해당 파일이 목록에 표시됩니다. 해당 스키마에 대한 **사용** 열에 확인 표시가 있는지 확인합니다.
 
-Once you've done this, edits you make to WindowsStoreProxy.xml will be subject to the schema. For more information, see [How to: Select the XML Schemas to Use](http://go.microsoft.com/fwlink/p/?LinkId=403014).
+이 작업을 완료하면 WindowsStoreProxy.xml에서 편집하는 내용에 스키마가 적용됩니다. 자세한 내용은 [방법: 사용할 XML 스키마 선택](http://go.microsoft.com/fwlink/p/?LinkId=403014)을 참조하세요.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -345,198 +345,198 @@ Once you've done this, edits you make to WindowsStoreProxy.xml will be subject t
 
 
 <span id="proxy-descriptions" />
-### <a name="element-and-attribute-descriptions"></a>Element and attribute descriptions
+### <a name="element-and-attribute-descriptions"></a>요소 및 특성 설명
 
-This section describes the elements and attributes in the WindowsStoreProxy.xml file.
+이 섹션에서는 WindowsStoreProxy.xml 파일의 요소와 특성에 대해 설명합니다.
 
-The root element of this file is the **CurrentApp** element, which represents the current app. This element contains the following child elements.
+이 파일의 루트 요소는 현재 앱을 나타내는 **CurrentApp** 요소입니다. 이 요소에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  |  Description   |
+|  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
-|  [ListingInformation](#listinginformation)  |    Yes        |  1  |  Contains data from the app's listing.            |
-|  [LicenseInformation](#licenseinformation)  |     Yes       |   1    |   Describes the licenses available for this app and its durable add-ons.     |
-|  [ConsumableInformation](#consumableinformation)  |      No      |   0 or 1   |   Describes the consumable add-ons that are available for this app.      |
-|  [Simulation](#simulation)  |     No       |      0 or 1      |   Describes how calls to various [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) methods will work in the app during testing.    |
+|  [ListingInformation](#listinginformation)  |    예        |  1  |  앱 목록의 데이터를 포함합니다.            |
+|  [LicenseInformation](#licenseinformation)  |     예       |   1    |   이 앱과 지속형 추가 기능에 사용할 수 있는 라이선스를 설명합니다.     |
+|  [ConsumableInformation](#consumableinformation)  |      아니요      |   0 또는 1   |   이 앱에 사용할 수 있는 소모성 추가 기능을 설명합니다.      |
+|  [Simulation](#simulation)  |     아니요       |      0 또는 1      |   테스트 중에 다양한 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) 메서드 호출이 앱에서 작동하는 방식을 설명합니다.    |
 
 <span id="listinginformation" />
-#### <a name="listinginformation-element"></a>ListingInformation element
+#### <a name="listinginformation-element"></a>ListingInformation 요소
 
-This element contains data from the app's listing. **ListingInformation** is a required child of the **CurrentApp** element.
+이 요소는 앱 목록의 데이터를 포함합니다. **ListingInformation**은 **CurrentApp** 요소의 필수 자식입니다.
 
-**ListingInformation** contains the following child elements.
+**ListingInformation**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  |  Description   |
+|  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
-|  [App](#app-child-of-listinginformation)  |    Yes   |  1   |    Provides data about the app.         |
-|  [Product](#product-child-of-listinginformation)  |    No  |  0 or more   |      Describes an add-on for the app.     |     |
+|  [App](#app-child-of-listinginformation)  |    예   |  1   |    앱에 대한 데이터를 제공합니다.         |
+|  [Product](#product-child-of-listinginformation)  |    아니요  |  0개 이상   |      앱용 추가 기능을 설명합니다.     |     |
 
 <span id="app-child-of-listinginformation"/>
-#### <a name="app-element-child-of-listinginformation"></a>App element (child of ListingInformation)
+#### <a name="app-element-child-of-listinginformation"></a>App 요소(ListingInformation의 자식)
 
-This element describes the app's license. **App** is a required child of the [ListingInformation](#listinginformation) element.
+이 요소는 앱의 라이선스를 설명합니다. **App**은 [ListingInformation](#listinginformation) 요소의 필수 자식입니다.
 
-**App** contains the following child elements.
+**App**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  **AppId**  |    Yes   |  1   |   The GUID that identifies the app in the Store. This can be any GUID for testing.        |
-|  **LinkUri**  |    Yes  |  1   |    The URI of the listing page in the store. This can be any valid URI for testing.         |
-|  **CurrentMarket**  |    Yes  |  1   |    The customer's country/region.         |
-|  **AgeRating**  |    Yes  |  1   |     An integer that represents the minimum age rating of the app. This is the same value you would specify in the Dev Center dashboard when you submit the app. The values used by the Store are: 3, 7, 12, and 16. For more info on these ratings, see [Age ratings](../publish/age-ratings.md).        |
-|  [MarketData](#marketdata-child-of-app)  |    Yes  |  1 or more      |    Contains info about the app for a given country/region. For each country/region in which the app is listed, you must include a **MarketData** element.       |    |
+|  **AppId**  |    예   |  1   |   스토어에서 앱을 식별하는 GUID입니다. 테스트할 임의 GUID일 수 있습니다.        |
+|  **LinkUri**  |    예  |  1   |    스토어 목록 페이지의 URI입니다. 테스트할 임의의 유효한 URI일 수 있습니다.         |
+|  **CurrentMarket**  |    예  |  1   |    고객의 국가/지역입니다.         |
+|  **AgeRating**  |    예  |  1   |     앱의 최소 연령별 등급을 나타내는 정수입니다. 앱을 제출할 때 개발자 센터 대시보드에서 지정하는 값과 같습니다. 스토어에서 사용되는 값은 3, 7, 12, 16입니다. 이러한 등급에 대한 자세한 내용은 [연령별 등급](../publish/age-ratings.md)을 참조하세요.        |
+|  [MarketData](#marketdata-child-of-app)  |    예  |  1개 이상      |    지정된 국가/지역에 대한 앱 정보를 포함합니다. 앱이 나열되는 각 국가/지역에 대한 **MarketData** 요소를 포함해야 합니다.       |    |
 
 <span id="marketdata-child-of-app"/>
-#### <a name="marketdata-element-child-of-app"></a>MarketData element (child of App)
+#### <a name="marketdata-element-child-of-app"></a>MarketData 요소(App의 자식)
 
-This element provides info about the app for a given country/region. For each country/region in which the app is listed, you must include a **MarketData** element. **MarketData** is a required child of the [App](#app-child-of-listinginformation) element.
+이 요소는 지정된 국가/지역에 대한 앱 정보를 제공합니다. 앱이 나열되는 각 국가/지역에 대한 **MarketData** 요소를 포함해야 합니다. **MarketData**는 [App](#app-child-of-listinginformation) 요소의 필수 자식입니다.
 
-**MarketData** contains the following child elements.
+**MarketData**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  **Name**  |    Yes   |  1   |   The name of the app in this country/region.        |
-|  **Description**  |    Yes  |  1   |      The description of the app for this country/region.       |
-|  **Price**  |    Yes  |  1   |     The price of the app in this country/region.        |
-|  **CurrencySymbol**  |    Yes  |  1   |     The currency symbol used in this country/region.        |
-|  **CurrencyCode**  |    No  |  0 or 1      |      The currency code used in this country/region.         |  |
+|  **Name**  |    예   |  1   |   이 국가/지역의 앱 이름입니다.        |
+|  **Description**  |    예  |  1   |      이 국가/지역에 대한 앱 설명입니다.       |
+|  **Price**  |    예  |  1   |     이 국가/지역의 앱 가격입니다.        |
+|  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
+|  **CurrencyCode**  |    아니요  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  |
 
-**MarketData** has the following attributes.
+**MarketData**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Yes        |     Specifies the country/region for which the market data info applies.          |  |
+|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="product-child-of-listinginformation"/>
-#### <a name="product-element-child-of-listinginformation"></a>Product element (child of ListingInformation)
+#### <a name="product-element-child-of-listinginformation"></a>Product 요소(ListingInformation의 자식)
 
-This element describes an add-on for the app. **Product** is an optional child of the [ListingInformation](#listinginformation) element, and it contains one or more [MarketData](#marketdata-child-of-product) elements.
+이 요소는 앱용 추가 기능을 설명합니다. **Product**는 [ListingInformation](#listinginformation) 요소의 선택적 자식이며 [MarketData](#marketdata-child-of-product) 요소를 하나 이상 포함합니다.
 
-**Product** has the following attributes.
+**Product**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    Yes        |    Contains the string used by the app to identify the add-on.           |
-|  **LicenseDuration**  |    No        |    Indicates the number of days for which the license will be valid after the item has been purchased. The expiration date of the new license created by a product purchase is the purchase date plus the license duration. This attribute is used only if the **ProductType** attribute is **Durable**; this attribute is ignored for consumable add-ons.           |
-|  **ProductType**  |    No        |    Contains a value to identify the persistence of the in-app product. The supported values are **Durable** (the default) and **Consumable**. For durable types, additional information is described by a [Product](#product-child-of-licenseinformation) element under [LicenseInformation](#licenseinformation); for consumable types, additional information is described by a [Product](#product-child-of-consumableinformation) element under [ConsumableInformation](#consumableinformation).           |  |
+|  **ProductId**  |    예        |    앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.           |
+|  **LicenseDuration**  |    아니요        |    항목을 구매한 후 라이선스가 유효한 일수를 나타냅니다. 제품 구매를 통해 생성된 새 라이선스의 만료 날짜는 구매 날짜에 라이선스 기간을 더한 날짜입니다. 이 특성은 **ProductType** 특성이 **Durable**인 경우에만 사용됩니다. 소모성 추가 기능의 경우 이 특성이 무시됩니다.           |
+|  **ProductType**  |    아니요        |    앱에서 바로 구매 제품의 지속성을 식별하는 값을 포함합니다. 지원되는 값은 **Durable**(기본값) 및 **Consumable**입니다. 지속성 유형의 경우 [LicenseInformation](#licenseinformation) 아래의 [Product](#product-child-of-licenseinformation) 요소에서 추가 정보를 설명하고, 소모성 유형의 경우 [ConsumableInformation](#consumableinformation) 아래의 [Product](#product-child-of-consumableinformation) 요소에서 추가 정보를 설명합니다.           |  |
 
 <span id="marketdata-child-of-product"/>
-#### <a name="marketdata-element-child-of-product"></a>MarketData element (child of Product)
+#### <a name="marketdata-element-child-of-product"></a>MarketData 요소(Product의 자식)
 
-This element provides info about the add-on for a given country/region. For each country/region in which the add-on is listed, you must include a **MarketData** element. **MarketData** is a required child of the [Product](#product-child-of-listinginformation) element.
+이 요소는 지정된 국가/지역에 대한 추가 기능 정보를 제공합니다. 추가 기능이 나열되는 각 국가/지역에 대한 **MarketData** 요소를 포함해야 합니다. **MarketData**는 [Product](#product-child-of-listinginformation) 요소의 필수 자식입니다.
 
-**MarketData** contains the following child elements.
+**MarketData**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  **Name**  |    Yes   |  1   |   The name of the add-on in this country/region.        |
-|  **Price**  |    Yes  |  1   |     The price of the add-on in this country/region.        |
-|  **CurrencySymbol**  |    Yes  |  1   |     The currency symbol used in this country/region.        |
-|  **CurrencyCode**  |    No  |  0 or 1      |      The currency code used in this country/region.         |  
-|  **Description**  |    No  |   0 or 1   |      The description of the add-on for this country/region.       |
-|  **Tag**  |    No  |   0 or 1   |      The [custom developer data](../publish/enter-add-on-properties.md#custom-developer-data) (also called tag) for the add-on.       |
-|  **Keywords**  |    No  |   0 or 1   |      Contains up to 10 **Keyword** elements that contain the [keywords](../publish/enter-add-on-properties.md#keywords) for the add-on.       |
-|  **ImageUri**  |    No  |   0 or 1   |      The [URI for the image](../publish/create-add-on-store-listings.md#icon) in the add-on's listing.           |  |
+|  **Name**  |    예   |  1   |   이 국가/지역의 추가 기능 이름입니다.        |
+|  **Price**  |    예  |  1   |     이 국가/지역의 추가 기능 가격입니다.        |
+|  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
+|  **CurrencyCode**  |    아니요  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
+|  **설명**  |    아니요  |   0 또는 1   |      이 국가/지역에 대한 추가 기능 설명입니다.       |
+|  **Tag**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
+|  **Keywords**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)가 포함된 **Keyword** 요소를 최대 10개까지 포함합니다.       |
+|  **ImageUri**  |    아니요  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
 
-**MarketData** has the following attributes.
+**MarketData**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **xml:lang**  |    Yes        |     Specifies the country/region for which the market data info applies.          |  |
+|  **xml:lang**  |    예        |     지역/국가 데이터 정보가 적용되는 국가/지역을 지정합니다.          |  |
 
 <span id="licenseinformation"/>
-#### <a name="licenseinformation-element"></a>LicenseInformation element
+#### <a name="licenseinformation-element"></a>LicenseInformation 요소
 
-This element describes the licenses available for this app and its durable in-app products. **LicenseInformation** is a required child of the **CurrentApp** element.
+이 요소는 이 앱과 앱에서 바로 구매 지속형 제품에 사용할 수 있는 라이선스를 설명합니다. **LicenseInformation**은 **CurrentApp** 요소의 필수 자식입니다.
 
-**LicenseInformation** contains the following child elements.
+**LicenseInformation**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  [App](#app-child-of-licenseinformation)  |    Yes   |  1   |    Describes the app's license.         |
-|  [Product](#product-child-of-licenseinformation)  |    No  |  0 or more   |      Describes the license status of a durable add-on in the app.         |   |
+|  [App](#app-child-of-licenseinformation)  |    예   |  1   |    앱의 라이선스를 설명합니다.         |
+|  [Product](#product-child-of-licenseinformation)  |    아니요  |  0개 이상   |      앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다.         |   |
 
-The following table shows how to simulate some common conditions by combining values under the **App** and **Product** elements.
+다음 표에서는 **App** 및 **Product** 요소 아래의 값을 결합하여 몇 가지 일반적인 조건을 시뮬레이트하는 방법을 보여 줍니다.
 
-|  Condition to simulate  |  IsActive  |  IsTrial  | ExpirationDate   |
+|  시뮬레이트할 조건  |  IsActive  |  IsTrial  | ExpirationDate   |
 |-------------|------------|--------|--------|
-|  Fully licensed  |    true   |  false  |    Absent. It actually may be present and specify a future date, but you're advised to omit the element from the XML file. If it is present and specifies a date in the past, then **IsActive** will be ignored and taken to be false.          |
-|  In trial period  |    true  |  true   |      &lt;a datetime in the future&gt; This element must be present because **IsTrial** is true. You can visit a website showing the current Coordinated Universal Time (UTC) to know how far in the future to set this to get the remaining trial period you want.         |
-|  Expired trial  |    false  |  true   |      &lt;a datetime in the past&gt; This element must be present because **IsTrial** is true. You can visit a website showing the current Coordinated Universal Time (UTC) to know when "the past" is in UTC.         |
-|  Invalid  |    false  | false       |     &lt;any value or omitted&gt;          |  |
+|  완전히 사용이 허가됨  |    true   |  false  |    없음. 실제로 만료 날짜가 있고 이후 날짜를 지정할 수도 있지만 XML 파일에서는 이 요소를 생략하는 것이 좋습니다. 만료 날짜가 있고 이전 날짜를 지정하는 경우에는 **IsActive**가 무시되고 false로 간주됩니다.          |
+|  체험 기간 내  |    true  |  true   |      &lt;이후 datetime&gt; **IsTrial**이 true이기 때문에 이 요소가 있어야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 원하는 남은 체험 기간을 얻기 위해 이 날짜를 얼마나 이후로 설정해야 하는지 확인할 수 있습니다.         |
+|  만료된 평가판  |    false  |  true   |      &lt;이전 datetime&gt; **IsTrial**이 true이기 때문에 이 요소가 있어야 합니다. 현재 UTC(협정 세계시)를 표시하는 웹 사이트를 방문하여 "이전 날짜"가 UTC로 언제인지 확인할 수 있습니다.         |
+|  잘못됨  |    false  | false       |     &lt;임의 값 또는 생략&gt;          |  |
 
 <span id="app-child-of-licenseinformation"/>
-#### <a name="app-element-child-of-licenseinformation"></a>App element (child of LicenseInformation)
+#### <a name="app-element-child-of-licenseinformation"></a>App 요소(LicenseInformation의 자식)
 
-This element describes the app's license. **App** is a required child of the [LicenseInformation](#licenseinformation) element.
+이 요소는 앱의 라이선스를 설명합니다. **App**은 [LicenseInformation](#licenseinformation) 요소의 필수 자식입니다.
 
-**App** contains the following child elements.
+**App**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  **IsActive**  |    Yes   |  1   |    Describes the current license state of this app. The value **true** indicates the license is valid; **false** indicates an invalid license. Normally this value is **true**, whether the app has a trial mode or not.  Set this value to **false** to test how your app behaves when it has an invalid license.           |
-|  **IsTrial**  |    Yes  |  1   |      Describes the current trial state of this app. The value **true** indicates the app is being used during the trial period; **false** indicates the app is not in a trial, either because the app has been purchased or the trial period has expired.         |
-|  **ExpirationDate**  |    No  |  0 or 1       |     The date the trial period for this app expires, in Coordinated Universal Time (UTC). The date must be expressed as: yyyy-mm-ddThh:mm:ss.ssZ. For example, 05:00 on January 19, 2015 would be specified as 2015-01-19T05:00:00.00Z. This element is required when **IsTrial** is **true**. Otherwise, it is not required.          |  |
+|  **IsActive**  |    예   |  1   |    이 앱의 현재 라이선스 상태를 설명합니다. 값이 **true**이면 라이선스가 유효함을 나타냅니다. **false**이면 잘못된 라이선스를 나타냅니다. 일반적으로 이 값은 앱이 평가판 모드인지 여부에 관계없이 **true**입니다.  잘못된 라이선스가 있을 경우 앱의 동작을 테스트하려면 이 값을 **false**로 설정합니다.           |
+|  **IsTrial**  |    예  |  1   |      이 앱의 현재 평가판 상태를 설명합니다. 값이 **true**이면 체험 기간 동안 앱이 사용되고 있음을 나타냅니다. **false**이면 앱을 구매했거나 체험 기간이 만료되어 앱이 평가판 상태가 아님을 나타냅니다.         |
+|  **ExpirationDate**  |    아니요  |  0 또는 1       |     이 앱의 체험 기간이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. **IsTrial**이 **true**이면 이 요소는 필수입니다. 그렇지 않으면 필요하지 않습니다.          |  |
 
 <span id="product-child-of-licenseinformation"/>
-#### <a name="product-element-child-of-licenseinformation"></a>Product element (child of LicenseInformation)
+#### <a name="product-element-child-of-licenseinformation"></a>Product 요소(LicenseInformation의 자식)
 
-This element describes the license status of a durable add-on in the app. **Product** is an optional child of the [LicenseInformation](#licenseinformation) element.
+이 요소는 앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다. **Product**는 [LicenseInformation](#licenseinformation) 요소의 선택적 자식입니다.
 
-**Product** contains the following child elements.
+**Product**에는 다음과 같은 자식 요소가 있습니다.
 
-|  Element  |  Required  |  Quantity  | Description   |
+|  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
-|  **IsActive**  |    Yes   |  1     |    Describes the current license state of this add-on. The value **true** indicates the add-on can be used; **false** indicates the add-on cannot be used or has not been purchased           |
-|  **ExpirationDate**  |    No   |  0 or 1     |     The date the add-on expires, in Coordinated Universal Time (UTC). The date must be expressed as: yyyy-mm-ddThh:mm:ss.ssZ. For example, 05:00 on January 19, 2015 would be specified as 2015-01-19T05:00:00.00Z. If this element is present, the add-on has an expiration date. If it's not present, the add-on does not expire.  |  
+|  **IsActive**  |    예   |  1     |    이 추가 기능의 현재 라이선스 상태를 설명합니다. 값이 **true**이면 추가 기능을 사용할 수 있음을 나타냅니다. **false**이면 추가 기능을 사용할 수 없거나 구매하지 않았음을 나타냅니다.           |
+|  **ExpirationDate**  |    아니요   |  0 또는 1     |     추가 기능이 만료되는 UTC(협정 세계시) 날짜입니다. 날짜는 yyyy-mm-ddThh:mm:ss.ssZ로 표시되어야 합니다. 예를 들어 2015년 1월 19일 5시는 2015-01-19T05:00:00.00Z로 지정됩니다. 이 요소가 있으면 추가 기능에 만료 날짜가 있습니다. 이 요소가 없으면 추가 기능이 만료되지 않습니다.  |  
 
-**Product** has the following attributes.
+**Product**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    Yes        |   Contains the string used by the app to identify the add-on.            |
-|  **OfferId**  |     No       |   Contains the string used by the app to identify the category in which the add-on belongs. This provides support for large item catalogs, as described in [Manage a large catalog of in-app products](manage-a-large-catalog-of-in-app-products.md).           |
+|  **ProductId**  |    예        |   앱에서 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **OfferId**  |     아니요       |   앱에서 추가 기능이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
 
 <span id="simulation"/>
-#### <a name="simulation-element"></a>Simulation element
+#### <a name="simulation-element"></a>Simulation 요소
 
-This element describes how calls to various [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) methods will work in the app during testing. **Simulation** is an optional child of the **CurrentApp** element, and it contains zero or more [DefaultResponse](#defaultresponse) elements.
+이 요소는 테스트 중에 다양한 [CurrentAppSimulator](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.aspx) 메서드 호출이 앱에서 작동하는 방식을 설명합니다. **Simulation**은 **CurrentApp**의 선택적 자식이며 [DefaultResponse](#defaultresponse) 요소를 0개 이상 포함합니다.
 
-**Simulation** has the following attributes.
+**Simulation**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **SimulationMode**  |    No        |      Values can be **Interactive** or **Automatic**. When this attribute is set to **Automatic**, the methods will automatically return the specified HRESULT error codes. This can be used when running automated test cases.       |
+|  **SimulationMode**  |    아니요        |      값은 **Interactive** 또는 **Automatic**일 수 있습니다. 이 특성이 **Automatic**으로 설정된 경우 메서드가 지정된 HRESULT 오류 코드를 자동으로 반환합니다. 자동화된 테스트 사례를 실행할 때 사용할 수 있습니다.       |
 
 <span id="defaultresponse"/>
-#### <a name="defaultresponse-element"></a>DefaultResponse element
+#### <a name="defaultresponse-element"></a>DefaultResponse 요소
 
-This element describes the default error code returned by a **CurrentAppSimulator** method. **DefaultResponse** is an optional child of the [Simulation](#simulation) element.
+이 요소는 **CurrentAppSimulator** 메서드에서 반환되는 기본 오류 코드를 설명합니다. **DefaultResponse**는 [Simulation](#simulation) 요소의 선택적 자식입니다.
 
-**DefaultResponse** has the following attributes.
+**DefaultResponse**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **MethodName**  |    Yes        |   Assign this attribute to one of the enum values shown for the **StoreMethodName** type in the [schema](#schema). Each of these enum values represents a **CurrentAppSimulator** method for which you want to simulate an error code return value in your app during testing. For example, the value **RequestAppPurchaseAsync_GetResult** indicates you want to simulate the error code return value of the [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync.aspx) method.            |
-|  **HResult**  |     Yes       |   Assign this attribute to one of the enum values shown for the **ResponseCodes** type in the [schema](#schema). Each of these enum values represents the error code you want to return for the method that is assigned to the **MethodName** attribute for this **DefaultResponse** element.           |
+|  **MethodName**  |    예        |   [schema](#schema)의 **StoreMethodName** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 테스트 중에 앱에서 오류 코드 반환 값을 시뮬레이트하려는 **CurrentAppSimulator** 메서드를 나타냅니다. 예를 들어 값이 **RequestAppPurchaseAsync_GetResult**이면 [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.requestapppurchaseasync.aspx) 메서드의 오류 코드 반환 값을 시뮬레이트하려는 것입니다.            |
+|  **HResult**  |     예       |   [schema](#schema)의 **ResponseCodes** 형식에 대해 표시되는 열거형 값 중 하나에 이 특성을 할당합니다. 이 열거형 값은 각각 이 **DefaultResponse** 요소의 **MethodName** 특성에 할당된 메서드에 대해 반환하려는 오류 코드를 나타냅니다.           |
 
 <span id="consumableinformation"/>
-#### <a name="consumableinformation-element"></a>ConsumableInformation element
+#### <a name="consumableinformation-element"></a>ConsumableInformation 요소
 
-This element describes the consumable add-ons available for this app. **ConsumableInformation** is an optional child of the **CurrentApp** element, and it can contain zero or more [Product](#product-child-of-consumableinformation) elements.
+이 요소는 이 앱에 사용할 수 있는 소모성 추가 기능을 설명합니다. **ConsumableInformation**은 **CurrentApp**의 선택적 자식이며 [Product](#product-child-of-consumableinformation) 요소를 0개 이상 포함할 수 있습니다.
 
 <span id="product-child-of-consumableinformation"/>
-#### <a name="product-element-child-of-consumableinformation"></a>Product element (child of ConsumableInformation)
+#### <a name="product-element-child-of-consumableinformation"></a>Product 요소(ConsumableInformation의 자식)
 
-This element describes a consumable add-on. **Product** is an optional child of the [ConsumableInformation](#consumableinformation) element.
+이 요소는 소모성 추가 기능을 설명합니다. **Product**는 [ConsumableInformation](#consumableinformation) 요소의 선택적 자식입니다.
 
-**Product** has the following attributes.
+**Product**에는 다음 특성이 있습니다.
 
-|  Attribute  |  Required  |  Description   |
+|  특성  |  필수  |  설명   |
 |-------------|------------|----------------|
-|  **ProductId**  |    Yes        |   Contains the string used by the app to identify the consumable add-on.            |
-|  **TransactionId**  |     Yes       |   Contains a GUID (as a string) used by the app to track the purchase transaction of a consumable through the process of fulfillment. See [Enable consumable in-app product purchases](enable-consumable-in-app-product-purchases.md).            |
-|  **Status**  |      Yes      |  Contains the string used by the app to indicate the fulfillment status of a consumable. Values can be **Active**, **PurchaseReverted**, **PurchasePending**, or **ServerError**.             |
-|  **OfferId**  |     No       |    Contains the string used by the app to identify the category in which the consumable belongs. This provides support for large item catalogs, as described in [Manage a large catalog of in-app products](manage-a-large-catalog-of-in-app-products.md).           |
+|  **ProductId**  |    예        |   앱에서 소모성 추가 기능을 식별하는 데 사용하는 문자열을 포함합니다.            |
+|  **TransactionId**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
+|  **Status**  |      예      |  앱에서 소모성의 이행 상태를 나타내는 데 사용하는 문자열을 포함합니다. 값은 **Active**, **PurchaseReverted**, **PurchasePending** 또는 **ServerError**일 수 있습니다.             |
+|  **OfferId**  |     아니요       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
 
 
 

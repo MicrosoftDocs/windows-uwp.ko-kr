@@ -1,7 +1,7 @@
 ---
 author: mcleblanc
-description: Code that integrates with the device itself and its sensors involves input from, and output to, the user.
-title: Porting Windows Runtime 8.x to UWP for I/O, device, and app model&quot;
+description: "디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다."
+title: "I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅&quot;"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
 translationtype: Human Translation
 ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
@@ -9,42 +9,42 @@ ms.openlocfilehash: c3fb6a76800198c15ef05da9ba198ac5e73b35a8
 
 ---
 
-# <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Porting Windows Runtime 8.x to UWP for I/O, device, and app model
+# <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>I/O, 디바이스 및 앱 모델에 대해 Windows 런타임 8.x를 UWP로 포팅
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-The previous topic was [Porting XAML and UI](w8x-to-uwp-porting-xaml-and-ui.md).
+이전 항목에서는 [XAML 및 UI 포팅](w8x-to-uwp-porting-xaml-and-ui.md)에 대해 살펴봤습니다.
 
-Code that integrates with the device itself and its sensors involves input from, and output to, the user. It can also involve processing data. But, this code is not generally thought of as either the UI layer *or* the data layer. This code includes integration with the vibration controller, accelerometer, gyroscope, microphone and speaker (which intersect with speech recognition and synthesis), (geo)location, and input modalities such as touch, mouse, keyboard, and pen.
+디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다. 데이터 처리를 포함할 수도 있습니다. 하지만 이 코드는 UI 계층 *또는* 데이터 계층으로 간주되지 않습니다. 이 코드는 진동 컨트롤러, 가속도계, 자이로스코프, 마이크와 스피커(음성 인식 및 음성 합성과 교차), 지리적 위치, 입력 형식(예제: 터치, 마우스, 키보드, 펜) 등과의 통합을 포함합니다.
 
-## <a name="application-lifecycle-process-lifetime-management"></a>Application lifecycle (process lifetime management)
-
-
-For a Universal 8.1 app, there is a two-second "debounce window" of time between the app becoming inactive and the system raising the suspending event. Using this debounce window as extra time to suspend state is unsafe, and for a Universal Windows Platform (UWP) app, there is no debounce window at all; the suspension event is raised as soon as an app becomes inactive.
-
-For more info, see [App lifecycle](https://msdn.microsoft.com/library/windows/apps/mt243287).
-
-## <a name="background-audio"></a>Background audio
+## <a name="application-lifecycle-process-lifetime-management"></a>응용 프로그램 수명 주기(프로세스 수명 관리)
 
 
-For the [**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) property, **ForegroundOnlyMedia** and **BackgroundCapableMedia** are deprecated for Windows 10 apps. Use the Windows Phone Store app model instead. For more information, see [Background Audio](https://msdn.microsoft.com/library/windows/apps/mt282140).
+유니버설 8.1 앱의 경우 비활성화되는 앱과 일시 중단 이벤트를 발생시키는 시스템 간에 2초의 "디바운스 기간"이 있습니다. 일시 중단 상태에 대한 추가 시간으로 이 디바운스 기간을 사용하는 것은 안전하지 않으며 UWP(유니버설 Windows 플랫폼) 앱의 경우 디바운스 기간이 없습니다. 즉, 앱이 비활성화되는 즉시 일시 중단 이벤트가 발생합니다.
 
-## <a name="detecting-the-platform-your-app-is-running-on"></a>Detecting the platform your app is running on
+자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/mt243287)를 참조하세요.
+
+## <a name="background-audio"></a>백그라운드 오디오
 
 
-The way of thinking about app-targeting changes with Windows 10. The new conceptual model is that an app targets the Universal Windows Platform (UWP) and runs across all Windows devices. It can then opt to light up features that are exclusive to particular device families. If needed, the app also has the option to limit itself to targeting one or more device families specifically. For more info on what device families are—and how to decide which device family to target—see [Guide to UWP apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+[**MediaElement.AudioCategory**](https://msdn.microsoft.com/library/windows/apps/br227352) 속성의 경우 **ForegroundOnlyMedia** 및 **BackgroundCapableMedia**가 Windows 10 앱에서는 사용되지 않습니다. Windows Phone 스토어 앱 모델을 대신 사용합니다. 자세한 내용은 [배경 오디오](https://msdn.microsoft.com/library/windows/apps/mt282140)를 참조하세요.
 
-If you have code in your Universal 8.1 app that detects what operating system it is running on, then you may need to change that depending on the reason for the logic. If the app is passing the value through, and not acting on it, then you may want to continue to collect the operating system info.
+## <a name="detecting-the-platform-your-app-is-running-on"></a>앱이 실행되고 있는 플랫폼 검색
 
-**Note**   We recommend that you not use operating system or device family to detect the presence of features. Identifying the current operating system or device family is usually not the best way to determine whether a particular operating system or device family feature is present. Rather than detecting the operating system or device family (and version number), test for the presence of the feature itself (see [Conditional compilation, and adaptive code](w8x-to-uwp-porting-to-a-uwp-project.md)). If you must require a particular operating system or device family, be sure to use it as a minimum supported version, rather than design the test for that one version.
+
+앱 대상에 대해 생각하는 방식이 Windows 10의 등장으로 바뀝니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
+
+실행되고 있는 운영 체제를 검색하는 유니버설 8.1 앱의 코드가 있다면 논리에 대한 원인에 따라 코드를 변경해야 할 수 있습니다. 앱이 값에 대해 작업하지 않고 통과시킨다면 계속해서 운영 체제 정보를 수집할 수 있습니다.
+
+**참고** 기능이 있는지 검색하는 데 운영 체제 또는 디바이스 패밀리를 사용하지 않는 것이 좋습니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
 
  
 
-To tailor your app's UI to different devices, there are several techniques that we recommend. Continue to use auto-sized elements and dynamic layout panels as you always have. In your XAML markup, continue to use sizes in effective pixels (formerly view pixels) so that your UI adapts to different resolutions and scale factors (see [Effective pixels, viewing distance, and scale factors](w8x-to-uwp-porting-xaml-and-ui.md).). And use Visual State Manager's adaptive triggers and setters to adapt your UI to the window size (see [Guide to UWP apps](https://msdn.microsoft.com/library/windows/apps/dn894631).).
+앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다(참조 [유효 픽셀, 가시거리 및 배율 인수](w8x-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 참조).
 
-However, if you have a scenario where it is unavoidable to detect the device family, then you can do that. In this example, we use the [**AnalyticsVersionInfo**](https://msdn.microsoft.com/library/windows/apps/dn960165) class to navigate to a page tailored for the mobile device family where appropriate, and we make sure to fall back to a default page otherwise.
+그러나 디바이스 패밀리 검색이 반드시 필요한 경우에는 검색을 수행할 수 있습니다. 이 예제에서는 [**AnalyticsVersionInfo**](https://msdn.microsoft.com/library/windows/apps/dn960165) 클래스를 사용하여 적절한 경우 디바이스 패밀리에 맞게 조정된 페이지를 탐색하고 그렇지 않은 경우 다시 기본 페이지를 사용할 수 있는지 확인합니다.
 
 ```csharp
    if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Mobile")
@@ -53,7 +53,7 @@ However, if you have a scenario where it is unavoidable to detect the device fam
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
 ```
 
-Your app can also determine the device family that it is running on from the resource selection factors that are in effect. The example below shows how to do this imperatively, and the [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) topic describes the more typical use case for the class in loading device family-specific resources based on the device family factor.
+또한 앱이 적용되는 리소스 선택 요소에서 실행되고 있는 디바이스 패밀리를 결정할 수도 있습니다. 아래 예제는 명령을 통해 이를 수행하는 방법을 보여 주며, [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071) 항목에서는 디바이스 패밀리 요소에 따라 디바이스 패밀리별 리소스를 로드하는 데 있어 클래스의 일반적인 사용 사례에 관해 설명합니다.
 
 ```csharp
 var qualifiers = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;
@@ -61,12 +61,12 @@ string deviceFamilyName;
 bool isDeviceFamilyNameKnown = qualifiers.TryGetValue("DeviceFamily", out deviceFamilyName);
 ```
 
-Also, see [Conditional compilation, and adaptive code](w8x-to-uwp-porting-to-a-uwp-project.md).
+또한 [조건부 컴파일 및 적응 코드](w8x-to-uwp-porting-to-a-uwp-project.md)를 참조하세요.
 
-## <a name="location"></a>Location
+## <a name="location"></a>위치
 
 
-When an app that declares the Location capability in its app package manifest runs on Windows 10, the system will prompt the end-user for consent. This is true whether the app is a Windows Phone Store app or a Windows 10 app. So, if your app displays its own custom consent prompt, or if it provides an on-off toggle, then you will want to remove that so that the end-user is only prompted once.
+해당 앱 패키지 매니페스트에서 위치 기능을 선언하는 앱이 Windows 10에서 실행될 때 시스템에서 최종 사용자에게 동의를 묻는 메시지를 표시합니다. 이는 앱이 Windows Phone 스토어 앱이든지 Windows 10 앱이든지 관계없이 적용됩니다. 따라서 앱에서 고유한 사용자 지정 동의 확인 프롬프트가 표시되거나 켜기-끄기 토글이 제공되면 최종 사용자에게 한 번만 묻도록 제거할 수 있습니다.
 
  
 
