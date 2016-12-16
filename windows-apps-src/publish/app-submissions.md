@@ -19,7 +19,7 @@ ms.openlocfilehash: ce9858da15cac0e34a2bb2c68c25ba63ec79af4c
 
 앱이 게시된 후에는 대시보드에서 또 다른 제출을 만들어서 업데이트된 버전을 게시할 수 있습니다. 새 패키지를 업로드하든, 가격이나 범주와 같은 세부 정보를 변경하든, 새 제출을 만드는 방법으로 필요한 변경 내용을 적용하고 게시할 수 있습니다. 앱에 대한 새 제출을 만들려면 앱 개요 페이지에 표시된 최근 제출 옆의 **업데이트**를 클릭합니다.
 
-> **참고**&nbsp;&nbsp;설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
+> **참고**  설명서의 이 섹션에서는 개발자 센터 대시보드에서 앱 제출을 만드는 방법을 설명합니다. 또는 [Windows 스토어 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 앱 제출을 자동화할 수 있습니다.
 
 ## 앱 제출 검사 목록
 
@@ -101,7 +101,7 @@ ms.openlocfilehash: ce9858da15cac0e34a2bb2c68c25ba63ec79af4c
 
 <span/>
 
-**참고**&nbsp;&nbsp;LOB(기간 업무) 앱을 엔터프라이즈에 직접 게시하는 방법은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
+**참고**  LOB(기간 업무) 앱을 엔터프라이즈에 직접 게시하는 방법은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
 
 
 

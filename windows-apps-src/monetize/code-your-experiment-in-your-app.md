@@ -20,7 +20,7 @@ ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
 
 다음 섹션에서는 실험에 대한 변형을 가져오고 이벤트를 개발자 센터에 기록하는 일반적인 프로세스를 설명합니다. 실험용 앱을 코딩한 후 [개발자 센터 대시보드에서 실험을 정의](define-your-experiment-in-the-dev-center-dashboard.md)할 수 있습니다. 실험 만들기 및 실행의 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
->**참고**&nbsp;&nbsp;Windows 스토어 서비스 SDK에서 실험 API 중 일부는 개발자 센터에서 데이터를 검색하는 데 [비동기 패턴](../threading-async/asynchronous-programming-universal-windows-platform-apps.md)을 사용합니다. 즉 이러한 메서드 실행 중 일부는 메서드를 호출한 이후에 발생할 수 있으므로 작업이 완료되더라도 앱 UI는 응답 상태를 유지할 수 있습니다. 비동기 패턴에서는 이 문서의 코드 예제에서 살펴본 것처럼 API를 호출할 때 앱에서 **async** 키워드 및 **await** 연산자를 사용해야 합니다. 규칙에 따라 비동기 메서드는 **Async**로 끝납니다.
+>**참고**  Windows 스토어 서비스 SDK에서 실험 API 중 일부는 개발자 센터에서 데이터를 검색하는 데 [비동기 패턴](../threading-async/asynchronous-programming-universal-windows-platform-apps.md)을 사용합니다. 즉 이러한 메서드 실행 중 일부는 메서드를 호출한 이후에 발생할 수 있으므로 작업이 완료되더라도 앱 UI는 응답 상태를 유지할 수 있습니다. 비동기 패턴에서는 이 문서의 코드 예제에서 살펴본 것처럼 API를 호출할 때 앱에서 **async** 키워드 및 **await** 연산자를 사용해야 합니다. 규칙에 따라 비동기 메서드는 **Async**로 끝납니다.
 
 ## <a name="configure-your-project"></a>프로젝트 구성
 
@@ -32,7 +32,7 @@ ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
 3. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
 4. SDK 목록에서 **Microsoft Engagement Framework**(Microsoft 참여 프레임워크) 옆의 확인란을 선택하고 **확인**을 클릭합니다.
 
->**참고**&nbsp;&nbsp;이 문서의 코드 예제에서는 코드 파일에서 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임스페이스에 **using** 문이 있다고 가정합니다.
+>**참고**  이 문서의 코드 예제에서는 코드 파일에서 **System.Threading.Tasks** 및 **Microsoft.Services.Store.Engagement** 네임스페이스에 **using** 문이 있다고 가정합니다.
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>변형 데이터를 가져와 실험에 대한 보기 이벤트 기록
 
@@ -51,7 +51,7 @@ ms.openlocfilehash: cc32e2688bce636e1f4bda02aade4ed1d94f3e28
   [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet1)]
 
 1. 검색할 실험의 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms)에 할당되는 문자열 변수를 선언합니다.
-  >**참고**&nbsp;&nbsp;[개발자 센터 대시보드에서 프로젝트를 만들](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 때 프로젝트 ID를 가져옵니다. 아래 표시된 프로젝트 ID는 예제용으로만 사용됩니다.
+  >**참고**  [개발자 센터 대시보드에서 프로젝트를 만들](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) 때 프로젝트 ID를 가져옵니다. 아래 표시된 프로젝트 ID는 예제용으로만 사용됩니다.
 
   > [!div class="tabbedCodeSnippets"]
   [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]

@@ -56,7 +56,7 @@ arrivalTimePicker.Header = "Arrival time";
 
 ![시간 선택기의 예](images/time-picker-closed.png)
 
-> **참고**&nbsp;&nbsp;날짜 및 시간 값에 대한 중요한 정보는 [날짜 및 시간 컨트롤](date-and-time.md#datetime-and-calendar-values) 문서의 *DateTime 및 Calendar* 값을 참조하세요.
+> **참고**  날짜 및 시간 값에 대한 중요한 정보는 [날짜 및 시간 컨트롤](date-and-time.md#datetime-and-calendar-values) 문서의 *DateTime 및 Calendar* 값을 참조하세요.
 
 
 

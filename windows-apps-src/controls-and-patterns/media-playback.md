@@ -31,7 +31,7 @@ ms.openlocfilehash: 6945708f0d81cd9f2edd363ed193c76601ec5652
 
 
 
-> **참고**&nbsp;&nbsp; **MediaPlayerElement**는 Windows 10 버전 1607 이상에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지에 있는 모든 권장 사항은 MediaElement에도 적용됩니다.
+> **참고**   **MediaPlayerElement**는 Windows 10 버전 1607 이상에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지에 있는 모든 권장 사항은 MediaElement에도 적용됩니다.
 
 ## 올바른 컨트롤인가요?
 
@@ -80,7 +80,7 @@ XAML에서 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/a
 
 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)는 시스템 미디어 전송 컨트롤과 자동으로 통합됩니다. 시스템 미디어 전송 컨트롤은 키보드의 미디어 단추 등 하드웨어 미디어 키를 누를 때 팝업되는 컨트롤입니다. 자세한 내용은 [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)를 참조하세요.
 
-> **참고**&nbsp;&nbsp; [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)는 시스템 미디어 전송 컨트롤과 자동으로 통합되지 않으므로 직접 연결해야 합니다. 자세한 내용은 [시스템 미디어 전송 컨트롤](https://msdn.microsoft.com/library/windows/apps/mt228338)을 참조하세요.
+> **참고**   [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)는 시스템 미디어 전송 컨트롤과 자동으로 통합되지 않으므로 직접 연결해야 합니다. 자세한 내용은 [시스템 미디어 전송 컨트롤](https://msdn.microsoft.com/library/windows/apps/mt228338)을 참조하세요.
 
 
 ### 미디어 원본 설정
@@ -233,7 +233,7 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 -   재생이 중지되었습니다. 예를 들어 비디오 재생이 완료되거나 프레젠테이션이 끝난 경우입니다.
 -   재생 오류가 발생했습니다. 예를 들어 네트워크 연결 문제 또는 손상된 파일의 경우입니다.
 
-> **참고**&nbsp;&nbsp; [**MediaPlayerElement.IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx)가 true로 설정되고 미디어가 재생 중인 경우 디스플레이의 비활성화가 자동으로 금지됩니다.
+> **참고**   [**MediaPlayerElement.IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.IsFullWindow.aspx)가 true로 설정되고 미디어가 재생 중인 경우 디스플레이의 비활성화가 자동으로 금지됩니다.
 
 **화면을 활성 상태로 유지하려면**
 
@@ -374,7 +374,7 @@ mp.MediaPlayer.RealTimePlayback = true;
 
 화면 공간이 있거나 10피트 환경에 맞게 디자인된 경우 이중 행 레이아웃을 사용합니다. 이중 행 레이아웃은 간단한 단일 행 레이아웃보다 컨트롤에 더 많은 공간을 제공하고 10피트의 게임 패드를 사용하여 더 쉽게 이동할 수 있습니다.
 
-> **참고**&nbsp;&nbsp; 10피트 환경을 위한 응용 프로그램 최적화에 대한 자세한 내용은 [Xbox 및 TV용 디자인](../input-and-devices/designing-for-tv.md) 문서를 참조하세요.
+> **참고**   10피트 환경을 위한 응용 프로그램 최적화에 대한 자세한 내용은 [Xbox 및 TV용 디자인](../input-and-devices/designing-for-tv.md) 문서를 참조하세요.
 
 기본 컨트롤은 미디어 재생을 위해 최적화되어 있지만 앱에 최상의 환경을 제공하기 위해 미디어 플레이어에 필요한 사용자 지정 옵션을 추가할 수 있습니다. 사용자 지정 컨트롤 추가에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](custom-transport-controls.md)를 참조하세요.
 

@@ -118,7 +118,7 @@ stackPanel1.Children.Add(flipView1);
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**참고**&nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
+>**참고**  항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
 
 ### 항목의 모양 지정
 

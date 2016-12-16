@@ -33,7 +33,7 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 ### <a name="9142016-v10"></a>2016/9/14(v1.0)
 
 * Desktop App Converter는 이제 [Windows 스토어](https://aka.ms/converter)에서 다운로드할 수 있습니다. 
-* [다운로드 센터](https://aka.ms/converterimages)에서 DAC에 사용할 최신 Windows&nbsp;10 기본 이미지(.wim)를 가져옵니다.
+* [다운로드 센터](https://aka.ms/converterimages)에서 DAC에 사용할 최신 Windows 10 기본 이미지(.wim)를 가져옵니다.
 * 이제 스토어 앱에서 새 진입점 *DesktopAppConverter.exe <arguments>*를 사용하여 관리자 권한 명령 프롬프트 또는 PowerShell 창의 어디에서든 변환기를 실행할 수 있습니다.  
 
 
@@ -48,7 +48,7 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 * 테스트 목적으로 DAC에서 생성한 변환된 앱을 자동 서명하는 지원이 추가되었습니다. 한 번 시도해 보려면 ```–Sign``` 플래그를 확인하세요. 
 * 패키지에 포함된 AppX 내에서 가상 레지스트리 하이브의 COM 등록이 지원되지 않을 경우 경고가 추가되었습니다.  
 * VC++ 라이브러리에 대한 앱 종속성을 자동 검색한 다음 AppX 매니페스트 종속성으로 변환하는 지원이 추가되었습니다. VC++ 런타임을 사용하여 앱을 테스트용으로 로드하여 테스트하려면 [Using Visual C++ Runtime in a Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 블로그 게시물에 설명된 대로 VCLib 프레임워크 패키지를 다운로드해야 합니다. 컴퓨터의 ```Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop``` 폴더 아래에서 패키지를 찾아 사용하는 버전(예: 11.0, 12.0, 14.0)으로 이동하고 적절한 아키텍처 패키지(x64, x86)를 두 번 클릭하여 설치합니다.
-* Windows&nbsp;10 1주년 업데이트(10.0.14393.0)에 맞게 매니페스트 스키마가 업데이트되었습니다. 
+* Windows 10 1주년 업데이트(10.0.14393.0)에 맞게 매니페스트 스키마가 업데이트되었습니다. 
 * 여러 버그가 수정되고 출력 레이아웃이 향상되었습니다. 
 
 ### <a name="772016-v0122"></a>2016/7/7(v0.1.22)
@@ -58,7 +58,7 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 ### <a name="6162016-v0120"></a>2016/6/16(v0.1.20)
 
-* 최신 Windows&nbsp;10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제가 해결되었습니다. 
+* 최신 Windows 10 Insider Preview 빌드에서 성공적인 변환을 방해하는 문제가 해결되었습니다. 
 * ```–CreateX86Package```가 ```–PackageArch```로 대체되어 생성된 패키지에 대한 아키텍처를 지정할 수 있습니다. 
 
 ### <a name="682016"></a>6/8/2016
@@ -86,7 +86,7 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 ### <a name="operating-system"></a>운영 체제
 
-+ Windows&nbsp;10 1주년 업데이트(10.0.14393.0 이상) Pro 또는 Enterprise 버전입니다.
++ Windows 10 1주년 업데이트(10.0.14393.0 이상) Pro 또는 Enterprise 버전입니다.
 
 ### <a name="hardware-configuration"></a>하드웨어 구성
 
@@ -100,7 +100,7 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 ## <a name="set-up-the-desktop-app-converter"></a>Desktop App Converter 설정
 
-Desktop App Converter는 최신 Windows&nbsp;10 기능을 사용합니다. Windows&nbsp;10 1주년 업데이트(14393.0) 또는 이후 빌드를 사용 중인지 확인하세요.
+Desktop App Converter는 최신 Windows 10 기능을 사용합니다. Windows 10 1주년 업데이트(14393.0) 또는 이후 빌드를 사용 중인지 확인하세요.
 
 ### <a name="store-download"></a>스토어 다운로드
 
@@ -169,13 +169,13 @@ Add-appxpackage PowerShell cmdlet의 ```-Register``` 매개 변수를 활용하�
 
 ## <a name="sign-your-appx-package"></a>.AppX 패키지 서명
 
-Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지에 서명하려면 Microsoft Windows&nbsp;10 SDK에서 제공하는 변환기 명령줄 또는 SignTool.exe의 일부인 ```-Sign``` 플래그를 사용합니다.
+Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지에 서명하려면 Microsoft Windows 10 SDK에서 제공하는 변환기 명령줄 또는 SignTool.exe의 일부인 ```-Sign``` 플래그를 사용합니다.
 
 .appx 패키지에 서명하는 방법은 [변환된 데스크톱 앱에 서명](desktop-to-uwp-signing.md)을 참조하세요. 
 
 ## <a name="caveats"></a>주의 사항
 
-1. 호스트 컴퓨터의 Windows&nbsp;10 빌드는 Desktop App Converter 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
+1. 호스트 컴퓨터의 Windows 10 빌드는 Desktop App Converter 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
 2. 변환기는 모든 디렉터리 콘텐츠를 격리된 Windows 환경으로 복사하기 때문에 데스크톱 설치 관리자는 독립된 디렉터리에 있습니다.  
 3. 현재 Desktop App Converter는 64비트 운영 체제에서만 변환 프로세스의 실행을 지원합니다. 변환된 .appx 패키지를 64비트(x64) OS에만 배포할 수 있습니다.  
 4. Desktop App Converter를 무인 모드에서 실행하려면 데스크톱 설치 관리자가 필요합니다. *-InstallerArguments* 매개 변수를 사용하여 설치 관리자에 대한 자동 플래그를 변환기에 제공해야 합니다.

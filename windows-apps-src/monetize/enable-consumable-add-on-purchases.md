@@ -12,13 +12,13 @@ ms.openlocfilehash: 12191a946ec080c8e386191363617a9c437671c5
 
 # <a name="enable-consumable-add-on-purchases"></a>소모성 추가 기능 구매 사용
 
-Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 UWP 앱의 소모성 추가 기능에 대한 사용자 처리를 관리할 수 있습니다. 구매하고 사용한 후 다시 구매할 수 있는 항목을 위한 소모성 추가 기능을 사용합니다. 이 기능은 특정 회복 아이템을 구매하여 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
+Windows 10 버전 1607 이상을 대상으로 하는 앱은 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스에 있는 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 클래스의 메서드를 사용하여 UWP 앱의 소모성 추가 기능에 대한 사용자 처리를 관리할 수 있습니다. 구매하고 사용한 후 다시 구매할 수 있는 항목을 위한 소모성 추가 기능을 사용합니다. 이 기능은 특정 회복 아이템을 구매하여 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다.
 
->**참고** &nbsp;&nbsp;이 문서는 Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+>**참고**   이 문서는 Windows 10 버전 1607 이상을 대상으로 하는 앱에 적용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 **Windows.Services.Store** 네임스페이스 대신 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스를 사용해야 합니다. 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 ## <a name="overview-of-consumable-add-ons"></a>소모성 추가 기능 개요
 
-Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱은 처리 관리 방법이 서로 다른 두 가지 유형의 소모성 추가 기능을 제공할 수 있습니다.
+Windows 10 버전 1607 이상을 대상으로 하는 앱은 처리 관리 방법이 서로 다른 두 가지 유형의 소모성 추가 기능을 제공할 수 있습니다.
 
 * **개발자 관리 소모성**. 이 소모성 유형의 경우 개발자가 추가 기능이 나타내는 항목의 사용자 잔액을 추적하고 사용자가 항목을 모두 사용한 후 추가 기능 구매를 처리된 것으로 스토어에 보고해야 합니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다.
 
@@ -28,7 +28,7 @@ Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱은 처리 관리 �
 
   예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다.
 
-  >**참고** &nbsp;&nbsp;스토어 관리 소모성은 Windows&nbsp;10 버전 1607부터 사용할 수 있습니다. Windows 개발자 센터 대시보드에서 스토어 관리 소모성을 만드는 기능이 곧 제공될 예정입니다.
+  >**참고**   스토어 관리 소모성은 Windows 10 버전 1607부터 사용할 수 있습니다. Windows 개발자 센터 대시보드에서 스토어 관리 소모성을 만드는 기능이 곧 제공될 예정입니다.
 
 사용자에게 소모성 추가 기능을 제공하려면 다음과 같은 일반 프로세스를 따르세요.
 
@@ -40,7 +40,7 @@ Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱은 처리 관리 �
 ## <a name="prerequisites"></a>필수 조건
 
 이러한 예제의 필수 조건은 다음과 같습니다.
-* Windows&nbsp;10 버전 1607 이상을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
+* Windows 10 버전 1607 이상을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱에 대한 Visual Studio 프로젝트.
 * 소모성 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 사용하여 Windows 개발자 센터 대시보드에서 앱을 만들었으며, 이 앱은 스토어에서 게시되고 사용할 수 있습니다. 고객에게 릴리스하려는 앱일 수도 있고, 테스트용으로만 사용 중인 최소 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 요구 사항을 충족하는 기본 앱일 수도 있습니다. 자세한 내용은 [테스트 지침](in-app-purchases-and-trials.md#testing)을 참조하세요.
 
 이러한 예제의 코드에서는 다음과 같이 가정합니다.
@@ -50,7 +50,7 @@ Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱은 처리 관리 �
 
 전체 샘플 응용 프로그램은 [스토어 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조하세요.
 
->**참고**&nbsp;&nbsp;[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
+>**참고**  [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 데스크톱 응용 프로그램이 있는 경우 이 예에서 표시되지 않는 별도의 코드를 추가하여 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성해야 할 수도 있습니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](in-app-purchases-and-trials.md#desktop)을 참조하세요.
 
 <span id="report_fulfilled" />
 ## <a name="report-a-consumable-add-on-as-fulfilled"></a>소모성 추가 기능을 처리된 것으로 보고

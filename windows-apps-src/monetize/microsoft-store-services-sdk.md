@@ -20,10 +20,10 @@ Microsoft Store Services SDK는 앱에 광고 표시, A/B 실험 실행 등 UWP(
 |  시나리오  |  설명   |
 |------------|----------------|
 |  [A/B 테스트로 UWP 앱에서 실험 실행](run-app-experiments-with-a-b-testing.md)    |  UWP(유니버설 Windows 플랫폼) 앱에서 A/B 테스트를 실행하여, 모든 고객에게 기능을 릴리스하기 전에 일부 고객에 대한 기능의 효과를 측정합니다. 개발자 센터 대시보드에서 실험을 정의한 후 [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx) 클래스를 사용하여 실험에 대한 변형을 가져오고, 이 데이터를 사용하여 테스트할 기능의 동작을 수정한 다음 [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx) 메서드를 사용하여 보기 이벤트 및 전환 이벤트를 개발자 센터로 보냅니다. 마지막으로, 대시보드를 사용하여 결과를 보고 실험을 관리합니다.  |
-|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows10 고객을 안내합니다. 그런 다음, 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다. |
+|  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx) 클래스를 사용하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음, 개발자 센터 대시보드의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다. |
 |  [개발자 센터 푸시 알림을 받도록 UWP 앱 구성](configure-your-app-to-receive-dev-center-notifications.md)    |  UWP 앱에서 [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) 클래스를 사용하여 Windows 개발자 센터 대시보드를 통해 고객에게 보내는 대상 지정 푸시 알림을 받도록 앱을 등록합니다.  |
 |   [개발자 센터에서 사용 보고서에 대한 UWP 앱에 사용자 지정 이벤트 로깅](log-custom-events-for-dev-center.md)   |  UWP 앱에서 [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx) 클래스를 사용하여 개발자 센터의 앱과 연결된 사용자 지정 이벤트를 로깅합니다. 그런 다음 개발자 센터 대시보드에서 [사용 보고서](https://msdn.microsoft.com/windows/uwp/publish/usage-report)의 **사용자 지정 이벤트** 섹션에서 사용자 지정 이벤트의 총 발생 횟수를 검토합니다.  |
-|  [UWP 앱에서 광고 표시](display-ads-in-your-app.md)    |  UWP 앱에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 컨트롤을 사용하여 배너 광고 또는 중간 광고를 표시함으로써 수익을 늘립니다.<br/><br/>**참고**&nbsp;&nbsp;Microsoft Store Services SDK는 Windows 10용 UWP 앱만 지원합니다. Windows8.1 및 Windows Phone 8.x 앱에서 광고를 표시하려면 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 사용합니다.  |
+|  [UWP 앱에서 광고 표시](display-ads-in-your-app.md)    |  UWP 앱에서 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) 컨트롤을 사용하여 배너 광고 또는 중간 광고를 표시함으로써 수익을 늘립니다.<br/><br/>**참고**  Microsoft Store Services SDK는 Windows 10용 UWP 앱만 지원합니다. Windows 8.1 및 Windows Phone 8.x 앱에서 광고를 표시하려면 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 사용합니다.  |
 
 <span id="prerequisites" />
 ## 필수 조건
@@ -33,19 +33,19 @@ Microsoft Store Services SDK에는 다음이 필요합니다.
 * Visual Studio 2015 이상 버전
 * 사용 중인 Visual Studio 버전과 함께 설치되는 유니버설 Windows 앱용 Visual Studio Tools
 
->**참고**&nbsp;&nbsp;Visual Studio 2015와 함께 이 SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 유니버설 Windows 앱용 Visual Studio Tools의 이 업데이트에 대한 자세한 내용은 [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
+>**참고**  Visual Studio 2015와 함께 이 SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 유니버설 Windows 앱용 Visual Studio Tools의 이 업데이트에 대한 자세한 내용은 [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
 
 <span id="install" />
 ## SDK 설치
 
 개발 컴퓨터에서 Visual Studio 2015(또는 이후 릴리스)와 함께 사용할 Microsoft Store Services SDK를 설치하기 위한 옵션에는 다음 두 가지가 있습니다.
 
-* **MSI 설치 관리자**&nbsp;&nbsp;[여기](http://aka.ms/store-em-sdk)에서 사용 가능한 MSI 설치 관리자를 통해 SDK를 설치할 수 있습니다. 이 옵션을 사용하면 Visual Studio에서 UWP 프로젝트에 의해 참조될 수 있도록 개발 컴퓨터의 공유 위치에 SDK 라이브러리가 설치됩니다.
-* **NuGet 패키지**&nbsp;&nbsp;NuGet을 사용하여 Visual Studio에서 특정 UWP 프로젝트에 대한 SDK 라이브러리를 설치할 수 있습니다. 이 옵션을 사용하면 NuGet 패키지를 설치한 프로젝트에 대해서만 SDK 라이브러리가 설치됩니다.
+* **MSI 설치 관리자**  [여기](http://aka.ms/store-em-sdk)에서 사용 가능한 MSI 설치 관리자를 통해 SDK를 설치할 수 있습니다. 이 옵션을 사용하면 Visual Studio에서 UWP 프로젝트에 의해 참조될 수 있도록 개발 컴퓨터의 공유 위치에 SDK 라이브러리가 설치됩니다.
+* **NuGet 패키지**  NuGet을 사용하여 Visual Studio에서 특정 UWP 프로젝트에 대한 SDK 라이브러리를 설치할 수 있습니다. 이 옵션을 사용하면 NuGet 패키지를 설치한 프로젝트에 대해서만 SDK 라이브러리가 설치됩니다.
 
 Microsoft는 성능 향상과 새로운 기능을 추가하여 주기적으로 새 버전의 Microsoft Store Services SDK를 릴리스합니다. 이 SDK를 사용하는 기존 프로젝트가 있고 최신 버전을 사용하려는 경우 개발 컴퓨터에 최신 버전의 SDK를 다운로드하고 설치합니다.
 
->**참고**&nbsp;&nbsp;Visual Studio 2015와 함께 이 SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 유니버설 Windows 앱용 Visual Studio Tools의 이 업데이트에 대한 자세한 내용은 [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
+>**참고**  Visual Studio 2015와 함께 이 SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 유니버설 Windows 앱용 Visual Studio Tools의 이 업데이트에 대한 자세한 내용은 [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
 
 <span id="install-msi" />
 ### MSI를 통해 설치
@@ -85,13 +85,13 @@ NuGet을 통해 특정 프로젝트에 대한 Microsoft Store Services SDK 라�
 
 3.  Visual Studio를 시작하고 Microsoft Store Services SDK 라이브러리를 사용하려는 프로젝트를 엽니다.
 
-  >**참고**&nbsp;&nbsp;프로젝트에 이 SDK의 이전 MSI 설치에 포함된 라이브러리 참조가 이미 들어 있으면 프로젝트에서 이러한 참조를 제거합니다. 이러한 참조는 참조하는 라이브러리가 이전 단계에서 제거되었으므로 옆에 경고 아이콘이 표시됩니다.
+  >**참고**  프로젝트에 이 SDK의 이전 MSI 설치에 포함된 라이브러리 참조가 이미 들어 있으면 프로젝트에서 이러한 참조를 제거합니다. 이러한 참조는 참조하는 라이브러리가 이전 단계에서 제거되었으므로 옆에 경고 아이콘이 표시됩니다.
 
 4. Visual Studio에서 **프로젝트** 및 **NuGet 패키지 관리**를 클릭합니다.
 
 5. 검색 상자에 **Microsoft.Services.Store.SDK**를 입력하고 Microsoft.Services.Store.SDK 패키지를 설치합니다.
 
-  >**참고**&nbsp;&nbsp;**출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다.
+  >**참고**  **출력** 창이 지정된 경로가 너무 길다는 것을 나타내는 *Install-Package* 오류를 보고하는 경우 기본 위치보다 경로가 더 짧은 다른 위치로 패키지를 추출하도록 NuGet을 구성해야 할 수 있습니다. 이렇게 하려면 컴퓨터의 nuget.config 파일에 ```repositoryPath``` 값을 추가하고 NuGet 패키지를 추출할 수 있는 더 짧은 폴더에 할당합니다. 자세한 내용은 NuGet 설명서에서 [이 문서](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)를 참조하세요. 또는 Visual Studio 프로젝트를 더 짧은 경로의 대체 폴더로 이동하려고 할 수 있습니다.
 
 6. 프로젝트 닫았다가 다시 엽니다.
 
@@ -106,7 +106,7 @@ MSI 설치 관리자 또는 NuGet을 통해 Microsoft Store Services SDK를 설�
 
 1. Visual Studio에서 프로젝트를 엽니다.
 
-  >**참고**&nbsp;&nbsp;프로젝트의 대상이 **모든 CPU**인 JavaScript 앱인 경우 아키텍처별 빌드 출력(예: **x86**)을 사용하도록 프로젝트를 업데이트합니다.
+  >**참고**  프로젝트의 대상이 **모든 CPU**인 JavaScript 앱인 경우 아키텍처별 빌드 출력(예: **x86**)을 사용하도록 프로젝트를 업데이트합니다.
 
 2. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가...**를 선택합니다.
 
@@ -118,7 +118,7 @@ MSI 설치 관리자 또는 NuGet을 통해 Microsoft Store Services SDK를 설�
 
 3. **확인**을 클릭합니다.
 
->**참고**&nbsp;&nbsp;NuGet을 통해 SDK 라이브러리를 설치한 경우 프로젝트에 **Microsoft Advertising SDK for XAML** 또는 **Microsoft Advertising SDK for JavaScript** 외에 **Microsoft.Services.Store.SDK** 참조가 포함됩니다. **Microsoft.Services.Store.SDK** 참조는 NuGet 패키지(포함된 라이브러리가 아님)를 나타내며 이는 무시해도 됩니다.
+>**참고**  NuGet을 통해 SDK 라이브러리를 설치한 경우 프로젝트에 **Microsoft Advertising SDK for XAML** 또는 **Microsoft Advertising SDK for JavaScript** 외에 **Microsoft.Services.Store.SDK** 참조가 포함됩니다. **Microsoft.Services.Store.SDK** 참조는 NuGet 패키지(포함된 라이브러리가 아님)를 나타내며 이는 무시해도 됩니다.
 
 <span id="framework" />
 ## SDK의 프레임워크 패키지 이해

@@ -80,7 +80,7 @@ Segoe는 부드럽고 친숙한 모양을 가진 인간 중심의 서체로, 필
 
 ![단어 및 문자 간격 간의 차이를 보여 줍니다.](images/word-letter.png)
 
-**참고**&nbsp;&nbsp;XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
+**참고**  XAML 텍스트 컨트롤에서는 커닝 제어를 위해 [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx)을, 추적 제어를 위해 [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx)를 사용합니다. 기본적으로 Typography.Kerning은 “true”로, FontStretch는 “Normal”로 설정되어 있으며, 이것이 권장되는 값입니다.
 
 
 
@@ -125,7 +125,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
 
 ![여러 아이콘 및 텍스트 쌍을 보여 줍니다.](images/hanging-text-alignment.png)
 
-**참고**&nbsp;&nbsp;XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
+**참고**  XAML의 [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) 속성은 대문자 높이와 기본 글꼴 메트릭에 대한 액세스를 제공합니다. 또한 글씨를 세로 중간이나 위쪽에 맞추기 위해서도 사용할 수 있습니다.
 
 ## <a name="clipping-and-ellipses"></a>클리핑 및 줄임표
 
@@ -141,7 +141,7 @@ Segoe는 다양한 문자를 제공하며, 작고 큰 크기와 낮고 높은 �
 ![유형 램프 표시](images/type-ramp.png) 모든 크기는 유효 픽셀 단위입니다. 
 
 
-**참고**&nbsp;&nbsp;대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다.
+**참고**  대부분의 램프 수준은 `*TextBlockStyle` 명명 규칙(예: `HeaderTextBlockStyle`)을 따르는 XAML [정적 리소스](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp)로 사용할 수 있습니다.
 
 
 ## <a name="primary-and-secondary-text"></a>기본 및 보조 텍스트

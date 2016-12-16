@@ -17,7 +17,7 @@ ms.openlocfilehash: 40e68625ed666a9242ed83729b2f8113da363735
 
 이 연습에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/hh524191.aspx) 클래스를 사용하여 Windows Phone 8.1 또는 Windows Phone 8.0용 Silverlight 앱에서 배너 광고를 표시하는 방법을 보여 줍니다.
 
-> **Windows Phone Silverlight 8.0용 참고 사항**&nbsp;&nbsp;배너 광고는 Universal Ad Client SDK 또는 Microsoft Advertising SDK의 이전 릴리스에서 **AdControl**을 사용하고 스토어에서 이미 사용할 수 있는 기존 Windows Phone 8.0 Silverlight 앱에 대해 계속 지원됩니다. 그러나 배너 광고는 더 이상 새 Windows Phone 8.0 Silverlight 프로젝트에서는 지원되지 않습니다. 또한 일부 디버깅 및 테스트 시나리오는 Windows Phone 8.x Silverlight 프로젝트에서 제한됩니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md#silverlight_support)를 참조하세요.
+> **Windows Phone Silverlight 8.0용 참고 사항**  배너 광고는 Universal Ad Client SDK 또는 Microsoft Advertising SDK의 이전 릴리스에서 **AdControl**을 사용하고 스토어에서 이미 사용할 수 있는 기존 Windows Phone 8.0 Silverlight 앱에 대해 계속 지원됩니다. 그러나 배너 광고는 더 이상 새 Windows Phone 8.0 Silverlight 프로젝트에서는 지원되지 않습니다. 또한 일부 디버깅 및 테스트 시나리오는 Windows Phone 8.x Silverlight 프로젝트에서 제한됩니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md#silverlight_support)를 참조하세요.
 
 
 ## 프로젝트에 광고 어셈블리 추가
@@ -96,7 +96,7 @@ ms.openlocfilehash: 40e68625ed666a9242ed83729b2f8113da363735
 
 6.  **Grid** 태그에 **AdControl**에 대한 다음 코드를 추가합니다. **ApplicationId** 및 **AdUnitId** 속성을 [테스트 모드 값](test-mode-values.md)에 제공된 테스트 값에 할당하고 **Height** 및 **Width** 속성을 [배너 광고에 대해 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나로 조정합니다.
 
-    > **참고**&nbsp;&nbsp;앱을 제출하기 전에 테스트 **ApplicationId** 및 **AdUnitId** 값을 라이브 값으로 바꿉니다.
+    > **참고**  앱을 제출하기 전에 테스트 **ApplicationId** 및 **AdUnitId** 값을 라이브 값으로 바꿉니다.
 
     ``` syntax
     <Grid x:Name="ContentPanel" Grid.Row="1">

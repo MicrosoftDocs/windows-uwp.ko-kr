@@ -12,7 +12,7 @@ ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
 # <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
 
 
->**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매에 대체 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하는 경우(Windows 10 버전 1607에서 도입됨), 이 네임스페이스는 앱에서 바로 구매의 구매 영수증을 가져오기 위한 API를 제공하지 않습니다. 그러나 Windows 스토어 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
+>**참고**  이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매에 대체 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하는 경우(Windows 10 버전 1607에서 도입됨), 이 네임스페이스는 앱에서 바로 구매의 구매 영수증을 가져오기 위한 API를 제공하지 않습니다. 그러나 Windows 스토어 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
 
 
 제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 나열된 제품 및 통화 비용에 대한 정보를 고객에게 제공합니다.

@@ -73,7 +73,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | storeClient | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 스토어(클라이언트)</strong></li><li><strong>Windows 스토어(클라이언트)</strong></li><li><strong>Windows 스토어(웹)</strong></li><li><strong>조직에서 대량 구매</strong></li><li><strong>기타</strong></li></ul> |
 | gender | 다음 문자열 중 하나입니다.<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | 출시 | 구입이 발생한 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
-| OSVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows&nbsp;8</strong></li><li><strong>Windows&nbsp;8.1</strong></li><li><strong>Windows&nbsp;10</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| OSVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | deviceType | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | orderName | 앱을 구입하는 데 사용한 홍보 코드 주문 이름을 지정하는 문자열입니다(이는 사용자가 홍보 코드를 사용하여 앱을 구입한 경우에만 적용됩니다). |
 

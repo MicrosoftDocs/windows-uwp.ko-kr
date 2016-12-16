@@ -13,20 +13,20 @@ ms.openlocfilehash: 7783b6017a314ddb24509c55db8134a4c214430f
 
 Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익을 올릴 수 있도록 다음과 같은 기능을 구현하는 데 사용할 수 있는 API를 제공합니다.
 
-* **앱에서 바로 구매**&nbsp;&nbsp;앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
+* **앱에서 바로 구매**  앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
 
-* **평가판 기능**&nbsp;&nbsp;Windows 개발자 센터 대시보드에서 [무료 평가판](../publish/set-app-pricing-and-availability.md#free-trial)으로 앱을 구성하면 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전을 구매하도록 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+* **평가판 기능**  Windows 개발자 센터 대시보드에서 [무료 평가판](../publish/set-app-pricing-and-availability.md#free-trial)으로 앱을 구성하면 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전을 구매하도록 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서에서는 앱에서 바로 구매와 평가판이 UWP 앱에서 작동하는 방식에 대해 간략하게 보여 줍니다.
 
 <span id="choose-namespace" />
 ## <a name="choose-which-namespace-to-use"></a>사용할 네임스페이스 선택
 
-앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows&nbsp;10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
+앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows 10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* ** [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) ** &nbsp;&nbsp;Windows&nbsp;10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Windows&nbsp;10 버전 1607 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 구성원을 사용하는 것이 좋습니다. 이 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스 사용](#api_intro) 섹션을 참조하세요.
+* ** [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) **   Windows 10 버전 1607부터 이 네임스페이스에서 API를 사용하여 앱에서 바로 구매 및 평가판을 구현할 수 있습니다. 앱이 Windows 10 버전 1607 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 구성원을 사용하는 것이 좋습니다. 이 네임스페이스는 스토어 관리 소모성 추가 기능 등의 최신 추가 기능 유형을 지원하며 Windows 개발자 센터 및 스토어에서 지원하는 이후 제품 및 기능 유형과 호환되도록 설계되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스 사용](#api_intro) 섹션을 참조하세요.
 
-* **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. Windows 10용 UWP 앱이 이 네임스페이스를 사용할 수는 있지만 이 네임스페이스는 나중에 개발자 센터 및 스토어에서 새로운 유형의 제품 및 기능을 지원하도록 업데이트되지 않을 수 있습니다. 이 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+* **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**  모든 버전의 Windows 10은 이 네임이 스페이스에서 앱에서 바로 구매 및 평가판을 위한 이전 API도 지원합니다. Windows 10용 UWP 앱이 이 네임스페이스를 사용할 수는 있지만 이 네임스페이스는 나중에 개발자 센터 및 스토어에서 새로운 유형의 제품 및 기능을 지원하도록 업데이트되지 않을 수 있습니다. 이 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 <span id="concepts" />
 ## <a name="basic-concepts"></a>기본 개념
@@ -45,16 +45,16 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 |---------|-------------------|
 | 지속형  |  [Windows 개발자 센터 대시보드](../publish/enter-iap-properties.md)에서 지정한 수명 동안 지속되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
 | 개발자 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다. <p/><p/>이 소모성 유형의 경우 개발자가 추가 기능이 나타내는 항목의 사용자 잔액을 추적하고 사용자가 항목을 모두 사용한 후 추가 기능 구매를 처리된 것으로 스토어에 보고해야 합니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
-| 스토어 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다.<p/><p/>이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. 사용자는 모든 항목을 사용한 후 추가 기능을 다시 구매할 수 있습니다.  <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다. <p/><p/>**참고** &nbsp;&nbsp;스토어 관리 소모성은 Windows&nbsp;10 버전 1607부터 사용할 수 있습니다. 스토어에서 관리하는 소모품을 사용하려면 앱에서 Windows&nbsp;10 버전 1607 또는 그 이후 버전을 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 API를 사용해야 합니다.  |
+| 스토어 관리 소모성  |  구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. 이 유형의 추가 기능은 주로 앱에서 바로 구매 통화에 사용됩니다.<p/><p/>이 소모성 유형의 경우 스토어에서 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다. 사용자는 항목을 사용할 때 해당 항목을 처리된 것으로 스토어에 보고해야 하며, 스토어에서 사용자 잔액을 업데이트합니다. 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. 사용자는 모든 항목을 사용한 후 추가 기능을 다시 구매할 수 있습니다.  <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱은 추가 기능의 10개 단위가 처리되었다고 스토어에 보고하고 스토어에서 남은 잔액을 업데이트합니다. 사용자는 100개 동전을 모두 사용한 후 100개 동전 추가 기능을 다시 구매할 수 있습니다. <p/><p/>**참고**   스토어 관리 소모성은 Windows 10 버전 1607부터 사용할 수 있습니다. 스토어에서 관리하는 소모품을 사용하려면 앱에서 Windows 10 버전 1607 또는 그 이후 버전을 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스에서 API를 사용해야 합니다.  |
 
 <span />
 
->**참고**&nbsp;&nbsp;패키지를 사용한 지속형 추가 기능(다운로드 가능한 콘텐츠 또는 DLC라고도 함) 등 다른 유형의 추가 기능은 제한된 일부 개발자만 사용할 수 있으며 이 설명서에서 다루지 않습니다.
+>**참고**  패키지를 사용한 지속형 추가 기능(다운로드 가능한 콘텐츠 또는 DLC라고도 함) 등 다른 유형의 추가 기능은 제한된 일부 개발자만 사용할 수 있으며 이 설명서에서 다루지 않습니다.
 
 <span id="api_intro" />
 ## <a name="using-the-windowsservicesstore-namespace"></a>Windows.Services.Store 네임스페이스 사용
 
-이 문서의 나머지 부분에서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현하는 방법에 대해 설명합니다. 이 네임스페이스는 Windows&nbsp;10 버전 1607 이상을 대상으로 하는 앱에만 사용 가능하므로 앱에서 가능하다면 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스 대신 이 네임스페이스를 사용하는 것이 좋습니다.
+이 문서의 나머지 부분에서는 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판을 구현하는 방법에 대해 설명합니다. 이 네임스페이스는 Windows 10 버전 1607 이상을 대상으로 하는 앱에만 사용 가능하므로 앱에서 가능하다면 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스 대신 이 네임스페이스를 사용하는 것이 좋습니다.
 
 **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용을 살펴보려면 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
@@ -77,7 +77,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
   Windows.Services.Store.StoreContext context = StoreContext.GetForUser(users[0]);
   ```
 
->**참고**&nbsp;&nbsp;[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서는 이 개체를 사용하기 전에 먼저 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성하는 추가 단계를 수행해야 합니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](#desktop)을 참조하세요.
+>**참고**  [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하는 Windows 데스크톱 응용 프로그램에서는 이 개체를 사용하기 전에 먼저 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체를 구성하는 추가 단계를 수행해야 합니다. 자세한 내용은 [데스크톱 브리지를 사용하는 데스크톱 응용 프로그램에서 StoreContext 클래스 사용](#desktop)을 참조하세요.
 
 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 개체가 확보되면 메서드 호출을 시작하여 현재 앱과 추가 기능에 대한 스토어 제품 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업 수행을 위한 메서드를 제공합니다. 이 네임스페이스를 사용하여 수행할 수 있는 일반적인 작업에 대한 자세한 내용은 다음 문서를 참조하세요.
 
@@ -134,7 +134,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 3. 프로젝트가 열리면 Visual Studio에서 **프로젝트 메뉴**를 클릭하고 **스토어**를 가리킨 다음 **스토어에 앱 연결**을 클릭합니다. 마법사의 지침에 따라 테스트에 사용하려는 Windows 개발자 센터 계정에서 앱 프로젝트를 앱에 연결합니다.
 
-  >**참고**&nbsp;&nbsp;스토어에서 프로젝트를 앱에 연결하지 않으면 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 메서드가 해당 반환 값의 **ExtendedError** 속성을 오류 코드 값 0x803F6107로 설정합니다. 이 값은 스토어에 앱에 대한 정보가 없음을 나타냅니다.
+  >**참고**  스토어에서 프로젝트를 앱에 연결하지 않으면 [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx) 메서드가 해당 반환 값의 **ExtendedError** 속성을 오류 코드 값 0x803F6107로 설정합니다. 이 값은 스토어에 앱에 대한 정보가 없음을 나타냅니다.
 
 4. 아직 수행하지 않은 경우 이전 단계에서 지정한 앱을 스토어에서 설치하고 앱을 한 번 실행한 다음 이 앱을 닫습니다. 이렇게 하면 앱에 대한 유효한 라이선스가 개발 디바이스에 설치됩니다.
 

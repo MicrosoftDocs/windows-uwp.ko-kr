@@ -64,7 +64,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | 필드        | 지원되는 연산자   |  설명        |
 |---------------|--------|-----------------|
 | 출시 | eq, ne | 디바이스 시장의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
-| OSVersion  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows&nbsp;8</strong></li><li><strong>Windows&nbsp;8.1</strong></li><li><strong>Windows&nbsp;10</strong></li><li><strong>알 수 없음</strong></li></ul>  |
+| OSVersion  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>알 수 없음</strong></li></ul>  |
 | deviceType  | eq, ne  | 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul>  |
 | isRevised  | eq, ne  | 수정된 리뷰를 필터링하려면 <strong>true</strong>를 지정하고, 그렇지 않으면 <strong>false</strong>를 지정합니다.  |
 | packageVersion  | eq, ne  | 검토된 앱 패키지의 버전입니다.  |

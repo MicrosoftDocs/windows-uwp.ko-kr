@@ -14,7 +14,7 @@ ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
 
 Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**  이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 
 | 메서드        | URI    | 설명                                                                 |
@@ -37,7 +37,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 1. 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 
-  >**참고**&nbsp;&nbsp;앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
+  >**참고**  앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -57,7 +57,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
   ```
 
-  >**참고**&nbsp;&nbsp;제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
+  >**참고**  제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
 4. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 2단계에서 호출한 POST 메서드의 응답 본문에 제공된 SAS URI에 ZIP 보관 파일을 업로드합니다. 자세한 내용은 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
@@ -90,7 +90,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 <span id="manage-gradual-package-rollout">
 ## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>앱 제출에 대한 점진적 패키지 출시 관리
 
-앱 제출에서 업데이트된 패키지를 앱의 Windows&nbsp;10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
+앱 제출에서 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
 
 또한 Windows 스토어 제출 API에서 다음 메서드를 사용하여 앱 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정하고 관리할 수도 있습니다.
 
@@ -265,8 +265,8 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 아래의 [응용 프로그램 패키지](#application-package-object) 섹션을 참조하세요. |    
 | packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 아래의 [패키지 배달 옵션 개체](#package-delivery-options-object) 섹션을 참조하세요.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows&nbsp;10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows&nbsp;10 디바이스 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 디바이스 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 디바이스 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 디바이스 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
 | FriendlyName           |   문자열  |  표시 목적으로 사용되는 앱의 식별 이름입니다.       |  
 
 
@@ -333,7 +333,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 이 리소스는 앱에 대한 판매 정보를 포함합니다.
 
->**중요**&nbsp;&nbsp;**판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
+>**중요**  **판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
 
    > * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
    > * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
@@ -408,7 +408,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 이 리소스의 값은 다음과 같습니다.  
 
->**참고**&nbsp;&nbsp;[앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
+>**참고**  [앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
 
 | 값           | 유형    | 설명                   |
 |-----------------|---------|------|
@@ -419,9 +419,9 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | architecture    |  문자열   |  패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
-| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows&nbsp;8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows&nbsp;8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 디바이스 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 디바이스 패밀리 문자열은 현재 Windows&nbsp;10 패키지에 지원됩니다. 여기서 *{0}*은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows&nbsp;10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
+| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
+| targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 디바이스 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 디바이스 패밀리 문자열은 현재 Windows 10 패키지에 지원됩니다. 여기서 *{0}*은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows 10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
 
 <span/>
 

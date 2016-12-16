@@ -64,7 +64,7 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 ![텍스트 요소로 표시되는 하이퍼링크의 예](images/controls_hyperlink-element.png) 
 
-> **팁**&nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
+> **팁**  XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
 
 ## HyperlinkButton 만들기
 
@@ -95,7 +95,7 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성을 설정합니다. 사용자가 하이퍼링크를 클릭하거나 탭하면 지정된 URI가 기본 브라우저에서 열립니다. 기본 브라우저는 앱과는 별도의 프로세스에서 실행됩니다.
 
-> **참고**&nbsp;&nbsp;http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적당한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
+> **참고**  http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적당한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
 
 > 사용자가 하이퍼링크를 클릭하면 NavigateUri 속성 값이 URI 형식 및 체계에 대한 시스템 처리기에 전달됩니다. 그런 다음 시스템은 NavigateUri에 제공된 URI의 체계를 등록한 앱을 시작합니다.
 

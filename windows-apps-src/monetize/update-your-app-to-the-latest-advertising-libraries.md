@@ -25,8 +25,8 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 >
   **참고**
-  &nbsp;&nbsp;
-  [Microsoft 스토어 서비스 SDK](http://aka.ms/store-services-sdk) (UWP 앱 용) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows8.1 및 Windows Phone 8.x 앱용)를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 사용 가능한 최신 광고 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
+    
+  [Microsoft 스토어 서비스 SDK](http://aka.ms/store-services-sdk) (UWP 앱 용) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱용)를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 사용 가능한 최신 광고 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
 
 ## 필수 조건
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 * 앱에 대한 .appx 또는 .xap 패키지
 
-  >**참고**&nbsp;&nbsp;앱에 대한 .appx 또는 .xap 패키지가 더 이상 없으나 Visual Studio 버전의 개발 컴퓨터가 있고 앱 빌드에 사용했던 광고 SDK가 있는 경우 Visual Studio에서 .appx 또는 .xap 패키지를 다시 생성할 수 있습니다.
+  >**참고**  앱에 대한 .appx 또는 .xap 패키지가 더 이상 없으나 Visual Studio 버전의 개발 컴퓨터가 있고 앱 빌드에 사용했던 광고 SDK가 있는 경우 Visual Studio에서 .appx 또는 .xap 패키지를 다시 생성할 수 있습니다.
 
 <span id="part-1" />
 ## 1부: 앱을 업데이트해야 하는지 여부 결정
@@ -57,7 +57,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-**Windows8.1 또는 Windows Phone 8.x 앱**
+**Windows 8.1 또는 Windows Phone 8.x 앱**
 
 1. 원본을 손상시키지 않기 위해 앱용 .appx 또는 .xap 패키지의 복사본을 만들고 .zip 확장명으로 이름을 바꾸고 파일의 압축을 풉니다.
 
@@ -89,7 +89,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
     </thead>
     <tbody>
       <tr class="odd">
-        <td align="left"><p>Windows8.1 XAML</p></td>
+        <td align="left"><p>Windows 8.1 XAML</p></td>
         <td align="left"><p>UniversalXamlAdControl.Windows.dll</p></td>
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
@@ -99,7 +99,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
       <tr class="odd">
-        <td align="left"><p>Windows8.1 JavaScript/HTML<br/>Windows Phone 8.1 JavaScript/HTML</p></td>
+        <td align="left"><p>Windows 8.1 JavaScript/HTML<br/>Windows Phone 8.1 JavaScript/HTML</p></td>
         <td align="left"><p>UniversalSharedLibrary.Windows.dll</p></td>
         <td align="left"><p>8.5.1601.07018</p></td>
       </tr>
@@ -122,15 +122,15 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-**Windows8.0 앱**
+**Windows 8.0 앱**
 
-* Windows8.0을 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows8.0 앱 트래픽은 Windows10 디바이스에서 실행됩니다.
+* Windows 8.0을 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 8.0 앱 트래픽은 Windows 10 디바이스에서 실행됩니다.
 
 <span/>
 
 **Windows Phone 7.x 앱**
 
-* Windows Phone 7.x를 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows10 디바이스에서 실행됩니다.
+* Windows Phone 7.x를 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows 10 디바이스에서 실행됩니다.
 
 <span/>
 
@@ -144,7 +144,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-**Windows8.1 또는 Windows Phone 8.1 앱**
+**Windows 8.1 또는 Windows Phone 8.1 앱**
 
 1. 원본을 손상시키지 않기 위해 앱용 .appx 또는 .xap 패키지의 복사본을 만들고 .zip 확장명으로 이름을 바꾸고 파일의 압축을 풉니다.
 
@@ -163,9 +163,9 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 앱이 이전 SDK 릴리스를 사용하는 경우 다음 지침에 따라 개발 컴퓨터에 최신 SDK가 있는지 확인하세요.
 
-1. 개발 컴퓨터에 Visual Studio 2015(UWP, Windows8.1 또는 Windows Phone 8.x 프로젝트용) 또는 Visual Studio 2013(Windows8.1 또는 Windows Phone 8.x 프로젝트용)이 설치되어 있는지 확인합니다.
+1. 개발 컴퓨터에 Visual Studio 2015(UWP, Windows 8.1 또는 Windows Phone 8.x 프로젝트용) 또는 Visual Studio 2013(Windows 8.1 또는 Windows Phone 8.x 프로젝트용)이 설치되어 있는지 확인합니다.
 
-  >**참고**&nbsp;&nbsp;개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
+  >**참고**  개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
 
 1.  개발 컴퓨터에서 Microsoft Advertising SDK 및 Ad Mediator SDK의 모든 이전 버전을 제거합니다.
 
@@ -195,7 +195,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-### Windows8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
+### Windows 8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
 
 <span/>
 

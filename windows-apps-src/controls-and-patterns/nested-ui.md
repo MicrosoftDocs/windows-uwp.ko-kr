@@ -26,7 +26,7 @@ ms.openlocfilehash: 37f47db0d7085bf61836ed3fc9ccdc03470f58da
 
 ![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-> 참고&nbsp;&nbsp; ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
+> 참고   ListView 및 GridView 모두 [ListViewBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.aspx) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
 ## 기본 및 보조 작업
 

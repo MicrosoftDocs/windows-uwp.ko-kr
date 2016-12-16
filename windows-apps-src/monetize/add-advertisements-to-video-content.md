@@ -14,7 +14,7 @@ ms.openlocfilehash: 5fd097d978b1960ed957a7e12ab7eece012c5b41
 
 이 연습에서는 HTML과 함께 JavaScript를 사용하여 작성된 UWP(유니버설 Windows 플랫폼) 앱에서 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx) 클래스를 사용하여 비디오 콘텐츠에 광고를 추가하는 방법을 보여 줍니다.
 
->**참고**&nbsp;&nbsp;이 기능은 현재 HTML과 함께 JavaScript를 사용하여 작성된 UWP 앱에만 지원됩니다.
+>**참고**  이 기능은 현재 HTML과 함께 JavaScript를 사용하여 작성된 UWP 앱에만 지원됩니다.
 
 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 프로그레시브 및 스트리밍 미디어에서 모두 작동하며 IAB 표준인 VAST(Video Ad Serving Template) 2.0/3.0과 VMAP 페이로드 형식을 사용합니다. 이러한 표준이 적용되는 [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 상호 작용하는 광고 서비스에 독립적입니다.
 
@@ -112,7 +112,7 @@ ms.openlocfilehash: 5fd097d978b1960ed957a7e12ab7eece012c5b41
         });
   ```
 
-  >**참고**&nbsp;&nbsp;[AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 광고를 건너뛰고 바로 콘텐츠로 이동하도록 **MediaPlayer**에 알려주므로 함수가 실패할 경우에도 **play**를 호출해야 합니다. 광고를 원격으로 가져올 수 없는 경우 기본 제공 광고를 삽입하는 등 다른 비즈니스 요구 사항이 있을 수 있습니다.
+  >**참고**  [AdScheduler](https://msdn.microsoft.com/library/windows/apps/mt732197.aspx)는 광고를 건너뛰고 바로 콘텐츠로 이동하도록 **MediaPlayer**에 알려주므로 함수가 실패할 경우에도 **play**를 호출해야 합니다. 광고를 원격으로 가져올 수 없는 경우 기본 제공 광고를 삽입하는 등 다른 비즈니스 요구 사항이 있을 수 있습니다.
 
 8.  재생하는 동안 앱 트랙을 진행시키거나 초기 광고 일치 프로세스 후 발생할 수 있는 오류에 대한 추가 이벤트가 존재합니다. 다음 코드에서는 이러한 이벤트 중 일부를 보여 줍니다.
   * [onPodStart](https://msdn.microsoft.com/library/windows/apps/mt732206.aspx):

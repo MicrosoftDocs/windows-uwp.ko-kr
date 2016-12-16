@@ -16,7 +16,7 @@ Microsoft Visual Studio에서 UWP 앱을 작성하는 경우 대상 버전을 �
 | --- | --- |
 | 빌드 14393(Anniversary Edition) | 2016년 7월에 릴리스된 Windows 10의 최신 버전입니다. 이 릴리스의 몇 가지 주요 기능은 다음과 같습니다. </br> \* **Windows Ink:** 새 InkCanvas 및 InkToolbar 컨트롤입니다. </br> \* **Cortana API:** 새 Cortana 작업을 사용하여 Cortana 지원과 앱의 특정 기능을 통합합니다. </br> \* **Windows Hello:** 이제 Microsoft Edge에서 Windows Hello를 지원하여 웹 개발자가 생체 인식 인증에 액세스할 수 있습니다. </br> 이러한 사항과 Windows의 이 릴리스에 추가된 다른 많은 기능에 대한 자세한 내용은 [개발자 센터](https://developer.microsoft.com/en-us/windows/windows-10-for-developers) 또는 [개발자를 위한 Windows 10의 새로운 기능](../whats-new/windows-10-version-1607.md)에 있는 세부 정보 페이지를 방문하세요.  |
 | 빌드 10586 | Windows 10의 이 버전은 2015년 11월에 릴리스되었습니다. 주요 기능으로 Microsoft Edge의 비디오 통신을 위한 ORTC(개체 실시간 통신) API와 앱에서 Windows Hello 얼굴 인증을 사용할 수 있도록 해주는 공급자 API가 있습니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-version-1511.md) |
-| 빌드 10240 | 이 버전은 2015년 7월의 Windows&nbsp;10 초기 릴리스 버전입니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-version-1507.md) |
+| 빌드 10240 | 이 버전은 2015년 7월의 Windows 10 초기 릴리스 버전입니다. [이 빌드에 도입된 기능에 대한 자세한 내용입니다.](../whats-new/windows-10-version-1507.md) |
 
 새 개발자와 모든 연령 시청가용 코드를 작성하는 개발자는 항상 Windows의 최신 빌드(14393)를 사용하는 것이 좋습니다. 엔터프라이즈 앱을 작성하는 개발자는 이전 **최소 버전**을 지원하는 것을 고려해야 합니다.
 

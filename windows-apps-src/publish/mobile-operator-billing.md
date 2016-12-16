@@ -18,9 +18,9 @@ Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결�
 
 Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법의 이용 범위를 확장하고 있습니다. 아래 목록에 없는 통신사를 지원하도록 추천하려면 그 통신사로 문의하세요.
 
-## <a name="mobile-operator-billing-for-windows-10-and-xbox-one-devices"></a>Windows&nbsp;10 및 Xbox One 디바이스에 대한 통신사 청구
+## <a name="mobile-operator-billing-for-windows-10-and-xbox-one-devices"></a>Windows 10 및 Xbox One 디바이스에 대한 통신사 청구
 
-Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구현은 Windows 10을 실행하는 모든 디바이스, Windows&nbsp;10 Mobile을 실행하는 휴대폰 및 Xbox One 콘솔에서 사용 가능합니다. 이러한 디바이스에서 고객은 결제 방법으로 통신사 청구를 추가하고 이를 통해 구매를 수행할 수 있습니다. 
+Windows 10은 새로운 통신사 청구를 구현하고 있습니다. 이 구현은 Windows 10을 실행하는 모든 디바이스, Windows 10 Mobile을 실행하는 휴대폰 및 Xbox One 콘솔에서 사용 가능합니다. 이러한 디바이스에서 고객은 결제 방법으로 통신사 청구를 추가하고 이를 통해 구매를 수행할 수 있습니다. 
 
 Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하고 있습니다.
 
@@ -40,10 +40,10 @@ Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하
 
  
 
-## <a name="mobile-operator-billing-for-windows-phone-8x-and-windows-10-mobile-devices"></a>Windows Phone 8.x 및 Windows&nbsp;10 Mobile 디바이스용 통신사 청구
+## <a name="mobile-operator-billing-for-windows-phone-8x-and-windows-10-mobile-devices"></a>Windows Phone 8.x 및 Windows 10 Mobile 디바이스용 통신사 청구
 
 
-Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 가능합니다. Windows&nbsp;10 Mobile용으로 설계된 휴대폰에 이 구현을 포함시키는 통신사도 있을 수 있습니다. 이 구현이 포함된 디바이스에는 사용자에 대한 지불로서 통신사 청구가 자동으로 제공됩니다.
+Windows Phone 8.x 디바이스에서는 통신사 청구의 레거시 구현이 가능합니다. Windows 10 Mobile용으로 설계된 휴대폰에 이 구현을 포함시키는 통신사도 있을 수 있습니다. 이 구현이 포함된 디바이스에는 사용자에 대한 지불로서 통신사 청구가 자동으로 제공됩니다.
 
 통신사 청구의 레거시 구현은 이들 통신사에서 지원하고 있습니다.
 

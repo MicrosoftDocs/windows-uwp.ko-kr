@@ -69,7 +69,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 앱의 특정 �
 
 | 필드        |  설명        |
 |---------------|-----------------|
-| osVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows&nbsp;8</strong></li><li><strong>Windows&nbsp;8.1</strong></li><li><strong>Windows&nbsp;10</strong></li><li><strong>알 수 없음</strong></li></ul> |
+| osVersion | 다음 문자열 중 하나입니다.<ul><li><strong>Windows Phone 7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows 8</strong></li><li><strong>Windows 8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>알 수 없음</strong></li></ul> |
 | osBuild | 오류가 발생했을 때 앱을 실행한 OS의 빌드 번호입니다. |
 | market | 오류가 발생했을 때 앱을 실행한 디바이스의 지역/국가의 ISO 3166 국가 코드를 포함하는 문자열입니다. |
 | deviceType | 오류가 발생했을 때 앱을 실행한 디바이스 유형을 지정하는 다음 문자열 중 하나입니다.<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>콘솔</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>알 수 없음</strong></li></ul> |

@@ -69,7 +69,7 @@ TreeView에서 비노드 목록 항목에도 아이콘이 있는 경우에만 �
 
 TreeView에는 다음과 같은 기본 클래스가 있습니다. 이 모두는 참조 구현에 정의되고 포함됩니다.
 
-> **참고**&nbsp;&nbsp;TreeView는 C++로 작성된 [Windows 런타임 구성 요소](https://msdn.microsoft.com/windows/uwp/winrt-components/index)로 구현되어 UWP 앱에서 어느 언어로든 참조될 수 있습니다. 샘플에서 TreeView 코드는 *cpp/Control* 폴더에 위치합니다. C#의 경우 해당 *cs/Control* 폴더가 없습니다.
+> **참고**  TreeView는 C++로 작성된 [Windows 런타임 구성 요소](https://msdn.microsoft.com/windows/uwp/winrt-components/index)로 구현되어 UWP 앱에서 어느 언어로든 참조될 수 있습니다. 샘플에서 TreeView 코드는 *cpp/Control* 폴더에 위치합니다. C#의 경우 해당 *cs/Control* 폴더가 없습니다.
 
 - `TreeNode` 클래스는 TreeView에 대한 계층적 레이아웃을 구현합니다. 또한 항목 템플릿에서 바인딩할 수 있는 데이터를 포함합니다.
 - `TreeView` 클래스는 ItemClick, 폴더 확장/축소 및 끌기 시작 이벤트를 구현합니다.

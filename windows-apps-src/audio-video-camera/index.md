@@ -11,7 +11,7 @@ ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
 
 # <a name="audio-video-and-camera"></a>오디오 비디오 및 카메라
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows&nbsp;8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다.
  

@@ -221,7 +221,7 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->**참고**&nbsp;&nbsp;편집 명령 구현은 이 예제의 범위를 벗어납니다. 자세한 내용은 [RichEditBox](rich-edit-box.md) 문서를 참조하세요.
+>**참고**  편집 명령 구현은 이 예제의 범위를 벗어납니다. 자세한 내용은 [RichEditBox](rich-edit-box.md) 문서를 참조하세요.
 
 최소 및 숨김 모드가 일부 경우에 유용하지만 모든 작업을 숨기면 사용자에게 혼동을 줄 수 있으므로 주의하세요.
 

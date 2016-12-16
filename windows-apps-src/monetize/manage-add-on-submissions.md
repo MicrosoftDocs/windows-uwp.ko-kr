@@ -15,7 +15,7 @@ ms.openlocfilehash: a5e1f8940f53f228808e5a6540759199c4440645
 
 Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱을 위한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드를 사용하여 추가 기능의 제출을 만들거나 관리하려면 추가 기능이 이미 해당 개발자 센터 계정에 있어야 합니다. [개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)하거나 [추가 기능 관리](manage-add-ons.md)에 설명된 Windows 스토어 제출 API 메서드를 사용하여 추가 기능을 만들 수 있습니다.
+>**참고**  이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다. 이러한 메서드를 사용하여 추가 기능의 제출을 만들거나 관리하려면 추가 기능이 이미 해당 개발자 센터 계정에 있어야 합니다. [개발자 센터 대시보드를 사용](https://msdn.microsoft.com/windows/uwp/publish/iap-submissions)하거나 [추가 기능 관리](manage-add-ons.md)에 설명된 Windows 스토어 제출 API 메서드를 사용하여 추가 기능을 만들 수 있습니다.
 
 | 메서드        | URI    | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   PUT https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}
   ```
 
-  >**참고**&nbsp;&nbsp;제출에 대한 새 아이콘을 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
+  >**참고**  제출에 대한 새 아이콘을 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 2단계에서 호출한 POST 메서드의 응답 본문에 제공된 SAS URI에 ZIP 보관 파일을 업로드합니다. 자세한 내용은 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
@@ -210,7 +210,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 이 리소스는 추가 기능에 대한 판매 정보를 포함합니다.
 
->**중요**&nbsp;&nbsp;**판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
+>**중요**  **판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
 
    > * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져올 수 있습니다.
    > * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 추가 기능 제출에 대한 판매 데이터를 변경할 수 있습니다.

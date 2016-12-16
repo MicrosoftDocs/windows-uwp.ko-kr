@@ -50,7 +50,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 -   `<x:String>` - "greeting" 키를 사용하여 리소스를 정의합니다.
 -   `{StaticResource greeting}` - [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)의 [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676) 속성에 할당된 "greeting" 키를 사용하여 리소스를 찾습니다.
 
-> **참고**&nbsp;&nbsp;[**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 관련 개념을 **리소스** 빌드 작업, 리소스(.resw) 파일 또는 앱 패키지를 생성하는 코드 프로젝트 구성 컨텍스트에서 설명되는 다른 "리소스"와 혼동하지 마세요.
+> **참고**  [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 관련 개념을 **리소스** 빌드 작업, 리소스(.resw) 파일 또는 앱 패키지를 생성하는 코드 프로젝트 구성 컨텍스트에서 설명되는 다른 "리소스"와 혼동하지 마세요.
 
 리소스는 문자열이 아니어도 되며, 스타일, 템플릿, 브러시 및 색과 같은 공유 가능 개체가 될 수 있습니다. 그러나 컨트롤, 도형 및 기타 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)는 공유할 수 없으므로 재사용 가능 리소스로 선언할 수 없습니다. 공유에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [XAML 리소스는 공유 가능이어야 함](#xaml_resources_must_be_sharable) 섹션을 참조하세요.
 
@@ -104,7 +104,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
 다른 모든 사전과 마찬가지로 리소스 사전의 멤버에 액세스합니다.
 
-> **주의**&nbsp;&nbsp;코드에서 리소스를 찾을 경우 `Page.Resources` 사전의 리소스만 확인됩니다. [StaticResource 태그 확장](../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
+> **주의**  코드에서 리소스를 찾을 경우 `Page.Resources` 사전의 리소스만 확인됩니다. [StaticResource 태그 확장](../xaml-platform/staticresource-markup-extension.md)과 달리 코드에서는 첫 번째 사전에서 리소스를 찾을 수 없는 경우 `Application.Resources` 사전으로 대체되지 않습니다.
 
  
 
@@ -254,7 +254,7 @@ sealed partial class App : Application
 
 *병합된 리소스 사전*은 일반적으로 다른 파일에 있는 다른 리소스 사전에 리소스 사전을 결합합니다.
 
-> **팁**&nbsp;&nbsp;Microsoft Visual Studio에서 **프로젝트** 메뉴의 **추가 &gt; 새 항목... &gt; 리소스 사전** 옵션을 사용하여 리소스 사전 파일을 만들 수 있습니다.
+> **팁**  Microsoft Visual Studio에서 **프로젝트** 메뉴의 **추가 &gt; 새 항목... &gt; 리소스 사전** 옵션을 사용하여 리소스 사전 파일을 만들 수 있습니다.
 
 여기서는 Dictionary1.xaml이라는 개별 XAML 파일에 리소스 사전을 정의합니다.
 
@@ -396,7 +396,7 @@ XAML 리소스 참조에 대한 조회 동작은 실제 사용이 적용되는 �
 
 그런 다음 조회 시퀀스는 앱의 런타임 개체 트리에서 다음 부모 개체를 확인합니다. [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)가 있고 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)를 보유한 경우 지정된 키 문자열이 포함된 사전 항목을 요청합니다. 리소스를 찾으면 조회 시퀀스가 중지되고 참조를 작성한 위치에 해당 개체가 제공됩니다. 그렇지 않으면 개체 트리 루트 방향의 다음 부모 수준으로 조회 동작이 진행됩니다. 검색은 XAML의 루트 요소에 도달하여 모든 가능한 즉시 실행 리소스 위치 검색이 완료될 때까지 재귀적으로 위쪽으로 계속됩니다.
 
-> **참고**&nbsp;&nbsp;이러한 리소스 조회 동작을 활용하기 위해 그리고 XAML 태그 스타일 규칙으로 인해 일반적으로 페이지의 루트 수준에서 모든 즉시 실행 리소스를 정의합니다.
+> **참고**  이러한 리소스 조회 동작을 활용하기 위해 그리고 XAML 태그 스타일 규칙으로 인해 일반적으로 페이지의 루트 수준에서 모든 즉시 실행 리소스를 정의합니다.
 
  
 

@@ -13,12 +13,12 @@ ms.openlocfilehash: 81786f6bf76d1d3840d5cd8c6191550b98a248b2
 # <a name="create-and-consume-an-app-service"></a>앱 서비스 만들기 및 사용
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows&nbsp;8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼)를 작성하는 방법과 이러한 서비스를 사용하는 방법에 대해 알아봅니다.
 
-Windows&nbsp;10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행되는 앱 서비스를 만들 수 있습니다. 이 문서는 별도 백그라운드 프로세스에서 실행되는 앱 서비스 만들기에 중점을 둡니다. 공급자와 같은 프로세스에서 실행되는 앱 서비스에 대한 자세한 내용은 [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)을 참조하세요.
+Windows 10 버전 1607부터 호스트 앱과 같은 프로세스에서 실행되는 앱 서비스를 만들 수 있습니다. 이 문서는 별도 백그라운드 프로세스에서 실행되는 앱 서비스 만들기에 중점을 둡니다. 공급자와 같은 프로세스에서 실행되는 앱 서비스에 대한 자세한 내용은 [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)을 참조하세요.
 
 ## <a name="create-a-new-app-service-provider-project"></a>새 앱 서비스 공급자 프로젝트 만들기
 

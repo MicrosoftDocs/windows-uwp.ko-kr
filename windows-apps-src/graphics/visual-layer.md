@@ -10,7 +10,7 @@ ms.openlocfilehash: de6fe0688bec196fc90433ab9274f2e4c4fd9b90
 ---
 # <a name="visual-layer"></a>시각적 계층
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows&nbsp;8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows 10에서는 모든 Windows 응용 프로그램(데스크톱 또는 모바일)에 사용할 수 있는 새로운 통합 작성자 및 렌더링 엔진을 만들기 위해 중요한 작업이 수행되었습니다. 이러한 작업 결과 Windows.UI.Composition이라는 통합 컴퍼지션 WinRT API가 개발되었으며 이 API는 새 작성기 기반의 애니메이션 및 효과와 함께 새로운 경량 컴퍼지션 개체에 대한 액세스를 제공합니다.
 
@@ -57,7 +57,7 @@ Windows.UI.Composition에는 키 프레임 애니메이션과 식 애니메이�
 
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows&nbsp;10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x용으로 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x용으로 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
