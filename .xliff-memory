@@ -318,7 +318,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\2e35da3b3033ecbad8c48184d831ca9465142322.f5e735652a2a69c9b644b755db763341eaa7e381.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\get-app-acquisitions.f14b6d2a411a11089761ab93454ca2bd46c9fee7.ko-kr.xlf",
-      "LocXliffCommit": "76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f"
+      "LocXliffCommit": "9912306fab3c8b8e7624e6c8155d6e72b8b2217f"
     },
     "windows-apps-src\\monetize\\csharp-code-examples-for-the-windows-store-submission-api.md.c7317e96f4b97c6f37ed07ccb769fca37a5daf92.HT": {
       "SourceFilename": "windows-apps-src\\monetize\\csharp-code-examples-for-the-windows-store-submission-api.md",
@@ -368,7 +368,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\817238529effa410802bb3ff76cdbff763062667.c7de83c385da7141a59c13d06975c841a039311f.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\TOC.350f1fabd525c277c15320fda16caad6a319dd0a.ko-kr.xlf",
-      "LocXliffCommit": "76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f"
+      "LocXliffCommit": "9912306fab3c8b8e7624e6c8155d6e72b8b2217f"
     },
     "windows-apps-src\\launch-resume\\index.md.37440ca44ffb97c94a239f283aa2863ca02bca0e.HT": {
       "SourceFilename": "windows-apps-src\\launch-resume\\index.md",
@@ -1407,8 +1407,8 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\709a75d214a70b7f2cff4e2c2684833ae64d0c89.3f17914c494d5036fb4cfcb84f3b55cd71b57e95.xml",
-      "LocXliff": null,
-      "LocXliffCommit": null
+      "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\ink-toolbar.170e398d5be743c69a0ff308127388f211d2b7ee.ko-kr.xlf",
+      "LocXliffCommit": "9912306fab3c8b8e7624e6c8155d6e72b8b2217f"
     },
     "windows-apps-src\\input-and-devices\\guidelines-for-textselection.md.803f7a1ab342cb907fa38e01bef018a933c6962c.HT": {
       "SourceFilename": "windows-apps-src\\input-and-devices\\guidelines-for-textselection.md",
