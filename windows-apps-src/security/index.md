@@ -4,23 +4,23 @@ description: "이 섹션에는 Windows 10용 보안 UWP(유니버설 Windows 플
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
-ms.openlocfilehash: 19f024bd3ad99b4ef9355cc3c9229b1b3ffc51e2
+ms.sourcegitcommit: 82f6e2decde2d332bd08b0b9798350b973860f21
+ms.openlocfilehash: b30492c3c74b19d5ce306829302be17ff303723f
 
 ---
 
-# 보안
+# <a name="security"></a>보안
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에는 Windows 10용 보안 UWP(유니버설 Windows 플랫폼) 앱을 빌드하는 방법에 대한 문서가 포함되어 있습니다.
 
-## 소개 
+## <a name="introduction"></a>소개 
 
-Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 개발 소개](web-authentication-broker.md)부터 시작합니다. 소개 수준의 이 문서는 앱 및 Windows 10에서 사용할 수 있는 다양한 기능의 보안 고려 사항에 대한 개요를 제공합니다.
+Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 개발 소개](intro-to-secure-windows-app-development.md)부터 시작합니다. 소개 수준의 이 문서는 앱 및 Windows 10에서 사용할 수 있는 다양한 기능의 보안 고려 사항에 대한 개요를 제공합니다.
 
-## 인증 및 사용자 ID
+## <a name="authentication-and-user-identity"></a>인증 및 사용자 ID
 
 [인증 및 사용자 ID 섹션](authentication-and-user-identity.md)에는 사용자 로그인 및 ID와 관련된 시나리오에 대한 연습이 포함되어 있습니다. 앱에는 [웹 인증 브로커](web-authentication-broker.md)를 사용하는 간단한 SSO(single sign-on)부터 높은 보안 수준의 2단계 인증에 이르기까지 사용자 인증을 위한 여러 옵션이 있습니다.
 
@@ -39,7 +39,7 @@ Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 �
 <tr><td>[웹 인증 브로커](web-authentication-broker.md)</td><td>이 문서에서는 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.</td></tr>
 </table>
 
-## 암호화 
+## <a name="cryptography"></a>암호화 
 
 암호화 섹션에는 더 복잡한, 암호화 관련 항목에 대한 정보가 포함되어 있습니다. 
 
@@ -54,6 +54,6 @@ Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 �
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

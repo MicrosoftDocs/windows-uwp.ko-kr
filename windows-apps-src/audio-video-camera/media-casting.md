@@ -4,19 +4,19 @@ ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: "이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다."
 title: "미디어 캐스팅"
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: e225d5f5b7957ab21136de7294f086af62c2a5ec
+ms.sourcegitcommit: ebcd2f2b28a7cd2a8a9dad16c30239b06e147ec3
+ms.openlocfilehash: fc69e3b5bb814752480fa0151c36ae0a8c783c4e
 
 ---
 
-# 미디어 캐스팅
+# <a name="media-casting"></a>미디어 캐스팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 유니버설 Windows 앱에서 원격 디바이스로 미디어를 캐스팅하는 방법을 보여 줍니다.
 
-## MediaElement를 사용하는 기본 제공 미디어 캐스팅
+## <a name="built-in-media-casting-with-mediaplayerelement"></a>MediaPlayerElement를 사용하는 기본 제공 미디어 캐스팅
 
 유니버설 Windows 앱에서 미디어를 캐스팅하는 가장 간단한 방법은 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) 컨트롤의 기본 제공 캐스팅 접근 권한 값을 사용하는 것입니다.
 
@@ -45,7 +45,7 @@ ms.openlocfilehash: e225d5f5b7957ab21136de7294f086af62c2a5ec
 > [!NOTE] 
 > Windows 10 버전 1607부터는 **MediaPlayer** 클래스를 사용하여 미디어 항목을 재생하는 것이 좋습니다. **MediaPlayerElement**는 XAML 페이지의 **MediaPlayer** 콘텐츠를 렌더링하는 데 사용되는 간단한 XAML 컨트롤입니다. **MediaElement** 컨트롤은 이전 버전과의 호환성을 위해 계속 지원됩니다. **MediaPlayer** 및 **MediaPlayerElement**를 사용하여 미디어 콘텐츠를 재생하는 방법은 [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)을 참조하세요. **MediaSource** 및 관련 API를 미디어 콘텐츠와 함께 사용하는 방법은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
-## CastingDevicePicker를 사용하여 미디어 캐스팅
+## <a name="media-casting-with-the-castingdevicepicker"></a>CastingDevicePicker를 사용하여 미디어 캐스팅
 
 디바이스에 미디어를 캐스팅하는 두 번째 방법은 [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/dn972525)를 사용하는 것입니다. 이 클래스를 사용하려면 프로젝트에 [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568) 네임스페이스를 포함합니다.
 
@@ -78,7 +78,7 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 [!code-cs[EmptyStateHandlers](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetEmptyStateHandlers)]
 
-## 사용자 지정 디바이스 선택기를 사용하여 미디어 캐스팅
+## <a name="media-casting-with-a-custom-device-picker"></a>사용자 지정 디바이스 선택기를 사용하여 미디어 캐스팅
 
 다음 섹션에서는 캐스팅 디바이스를 열거하고 코드에서 연결을 시작하여 고유한 캐스팅 디바이스 선택기 UI를 만드는 방법을 설명합니다.
 
@@ -160,6 +160,6 @@ XAML 파일에 사용자가 선택기를 시작할 수 있게 하는 단추를 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

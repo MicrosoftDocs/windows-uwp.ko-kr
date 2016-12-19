@@ -4,19 +4,17 @@ ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: "Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 관리"
 translationtype: Human Translation
-ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
-ms.openlocfilehash: 49d60048a0dd5dae3e80abb9fd4e21b8cf7b417e
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: 5c19a05f51a14d9df38e64aac3b741e916fc0524
 
 ---
 
-# Windows 스토어 제출 API를 사용하여 앱 제출 관리
+# <a name="manage-app-submissions-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출 관리
 
 
 Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개발자 센터 계정에 등록된 앱의 제출을 관리합니다. API 사용을 위한 필수 조건을 비롯하여 Windows 스토어 제출 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
->**참고**&nbsp;&nbsp;이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
-
->**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **가격** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 평가 기간, 가격 및 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 앞으로 이 API를 업데이트하여 앱 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](#pricing-object) 섹션을 참조하세요.
+>**참고**  이러한 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한을 가진 Windows 개발자 센터 계정에 대해서만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
 
 | 메서드        | URI    | 설명                                                                 |
@@ -33,13 +31,13 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | POST | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout``` | 앱 제출에 대한 점진적 배포를 마무리합니다. 자세한 내용은 [이 문서](finalize-the-package-rollout-for-an-app-submission.md)를 참조하세요. |
 
 <span id="create-an-app-submission">
-## 앱 제출 만들기
+## <a name="create-an-app-submission"></a>앱 제출 만들기
 
 앱에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
 1. 아직 완료하지 않은 경우 Windows 스토어 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
 
-  >**참고**&nbsp;&nbsp;앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
+  >**참고**  앱에 [연령별 등급](https://msdn.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Windows 스토어 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -59,7 +57,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   PUT https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}
   ```
 
-  >**참고**&nbsp;&nbsp;제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
+  >**참고**  제출에 대한 새 패키지 또는 이미지를 추가하는 경우 ZIP 보관 파일에서 이러한 파일의 상대 경로 및 이름을 참조하도록 제출 데이터를 업데이트해야 합니다.
 
 4. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 2단계에서 호출한 POST 메서드의 응답 본문에 제공된 SAS URI에 ZIP 보관 파일을 업로드합니다. 자세한 내용은 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
@@ -90,9 +88,9 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 메서드를 사용하거나 개발자 센터 대시보드를 방문하여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
 <span id="manage-gradual-package-rollout">
-## 앱 제출에 대한 점진적 패키지 출시 관리
+## <a name="manage-a-gradual-package-rollout-for-an-app-submission"></a>앱 제출에 대한 점진적 패키지 출시 관리
 
-앱 제출에서 업데이트된 패키지를 앱의 Windows10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
+앱 제출에서 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 개발자 센터 대시보드에서 점진적 패키지 출시를 사용하도록 설정하고 관리하는 방법에 대한 지침을 비롯한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조하세요.
 
 또한 Windows 스토어 제출 API에서 다음 메서드를 사용하여 앱 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정하고 관리할 수도 있습니다.
 
@@ -134,12 +132,12 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
   POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout
   ```
 
-## 리소스
+## <a name="resources"></a>리소스
 
 이러한 메서드는 다음 리소스를 사용하여 데이터의 형식을 지정합니다.
 
 <span id="app-submission-object" />
-### 앱 제출
+### <a name="app-submission"></a>앱 제출
 
 이 리소스는 앱에 대한 제출을 나타냅니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
@@ -265,15 +263,15 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | statusDetails           |   object  |  오류에 대한 정보를 포함하여 제출 상태에 대한 추가 세부 정보가 포함됩니다. 자세한 내용은 아래의 [상태 세부 정보](#status-details-object) 섹션을 참조하세요.       |    
 | fileUploadUrl           |   문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지 또는 이미지를 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 아래의 [응용 프로그램 패키지](#application-package-object) 섹션을 참조하세요. |    
-| packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 아래의 [패키지 배달 옵션 개체](#package-delivery-options-object) 섹션을 참조하세요.  |
+| packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 아래의 [패키지 배달 옵션 개체](#package-delivery-options-object) 섹션을 참조하세요.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows10 디바이스 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 디바이스 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 디바이스 패밀리](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families)이며 각 값은 앱이 지정된 디바이스 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
 | FriendlyName           |   문자열  |  표시 목적으로 사용되는 앱의 식별 이름입니다.       |  
 
 
 <span id="listing-object" />
-### 목록
+### <a name="listing"></a>목록
 
 이 리소스는 앱에 대한 목록 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -283,7 +281,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 |  platformOverrides               | object |   키와 값 쌍의 사전입니다. 여기서 각 키는 목록 정보를 재정의할 플랫폼을 식별하는 문자열이며 각 값은 지정된 플랫폼에 대해 재정의할 목록 정보를 지정하는 [기본 목록](#base-listing-object) 개체(제목에 대한 설명 값만 포함)입니다. 키는 다음 값을 가질 수 있습니다. <ul><li>알 수 없음</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
-### 기본 목록
+### <a name="base-listing"></a>기본 목록
 
 이 리소스는 앱에 대한 기본 목록 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -304,7 +302,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="image-object" />
-### 이미지
+### <a name="image"></a>이미지
 
 이 리소스에는 앱 목록에 대한 이미지 및 아이콘 데이터가 포함되어 있습니다. 목록의 이미지 및 아이콘에 대한 자세한 내용은 [앱 스크린샷 및 이미지](https://msdn.microsoft.com/windows/uwp/publish/app-screenshots-and-images)를 참조하세요. 이 리소스의 값은 다음과 같습니다.
 
@@ -318,33 +316,29 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="pricing-object" />
-### 가격 책정
+### <a name="pricing"></a>가격 책정
 
-이 리소스는 앱에 대한 가격 정보를 포함합니다.
-
->**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **가격** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 평가 기간, 가격 및 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 동작이 다음과 같이 변경됩니다.
-
-   > * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) **가격** 리소스가 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 가격 데이터를 가져올 수 있습니다.
-   > * [PUT 메서드를 호출하여 앱 제출을 업데이트할 경우](update-an-app-submission.md) **가격** 리소스의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 가격 데이터를 변경할 수 있습니다.
-
-> 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 가격 정보를 프로그래밍 방식으로 가져오고 업데이트하는 새로운 방법을 도입할 예정입니다.
-
-이 리소스의 값은 다음과 같습니다.
+이 리소스는 앱에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
 | 값           | 유형    | 설명                                                                                                                                                                                                                          |
 |-----------------|---------|------|
 |  trialPeriod               |    문자열     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
-|  sales               |   배열      |  앱에 대한 판매 정보를 포함하는 개체의 배열입니다. 자세한 내용은 아래 [판매](#sale-object) 섹션을 참조하세요.    |     
+|  sales               |   array      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 개체 배열입니다. 자세한 내용은 아래 [판매](#sale-object) 섹션을 참조하세요.    |     
 |  priceId               |   문자열      |  앱에 대한 [기본 가격](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#base-price)을 지정하는 [기준 가격](#price-tiers)입니다.   |
 
 
 <span id="sale-object" />
-### 판매
+### <a name="sale"></a>판매
 
 이 리소스는 앱에 대한 판매 정보를 포함합니다.
 
->**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 **판매** 리소스가 더 이상 지원되지 않으며 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 일시적으로 가져오거나 수정할 수 없게 됩니다. 앞으로 이 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](#pricing-object) 섹션을 참조하세요.
+>**중요**  **판매** 리소스는 더 이상 지원되지 않으며, 현재 Windows 스토어 제출 API를 사용하여 앱 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다.
+
+   > * [GET 메서드를 호출하여 앱 제출을 가져오면](get-an-app-submission.md) *판매* 값이 빈 상태로 표시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 가져올 수 있습니다.
+   > * [PUT 메서드를 호출하여 앱 제출을 업데이트하는 경우](update-an-app-submission.md) *판매* 값의 정보는 무시됩니다. 계속해서 개발자 센터 대시보드를 사용하여 앱 제출에 대한 판매 데이터를 변경할 수 있습니다.
+
+> 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
 
 이 리소스의 값은 다음과 같습니다.
 
@@ -358,7 +352,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="status-details-object" />
-### 상태 세부 정보
+### <a name="status-details"></a>상태 세부 정보
 
 이 리소스에는 제출 상태에 대한 추가 세부 정보가 포함됩니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -370,7 +364,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="status-detail-object" />
-### 상태 세부 정보
+### <a name="status-detail"></a>상태 세부 정보
 
 이 리소스에는 제출과 관련된 오류 또는 경고에 대한 추가 정보가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -381,7 +375,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="application-package-object" />
-### 응용 프로그램 패키지
+### <a name="application-package"></a>응용 프로그램 패키지
 
 이 리소스는 제출의 앱 패키지에 대한 세부 정보를 포함합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
@@ -414,7 +408,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 이 리소스의 값은 다음과 같습니다.  
 
->**참고**&nbsp;&nbsp;[앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
+>**참고**  [앱 제출 업데이트](update-an-app-submission.md)를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.
 
 | 값           | 유형    | 설명                   |
 |-----------------|---------|------|
@@ -425,14 +419,14 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | architecture    |  문자열   |  패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://msdn.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://msdn.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
-| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 디바이스 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 디바이스 패밀리 문자열은 현재 Windows10 패키지에 지원됩니다. 여기서 *{0}*은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
+| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>None</li><li>Memory2GB</li></ul>   |       
+| targetDeviceFamilies    | 배열    |  패키지가 대상으로 하는 디바이스 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용되며 이전 릴리스를 대상으로 하는 패키지의 경우 이 값은 **None** 값을 갖습니다. 다음 디바이스 패밀리 문자열은 현재 Windows 10 패키지에 지원됩니다. 여기서 *{0}*은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0과 같은 Windows 10 버전 문자열입니다. <ul><li>Windows.Universal 최소 버전 *{0}*</li><li>Windows.Desktop 최소 버전 *{0}*</li><li>Windows.Mobile 최소 버전 *{0}*</li><li>Windows.Xbox 최소 버전 *{0}*</li><li>Windows.Holographic 최소 버전 *{0}*</li></ul>   |    
 
 <span/>
 
 <span id="certification-report-object" />
-### 인증 보고서
+### <a name="certification-report"></a>인증 보고서
 
 이 리소스는 제출의 인증 보고서 데이터에 대한 액세스를 제공합니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -443,7 +437,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="package-delivery-options-object" />
-### 패키지 전송 옵션 개체
+### <a name="package-delivery-options-object"></a>패키지 전송 옵션 개체
 
 이 리소스는 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
 
@@ -471,7 +465,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 | mandatoryUpdateEffectiveDate    |  date   |  이 제출의 패키지가 필수가 되는 날짜 및 시간을 ISO 8601 형식 및 UTC 표준 시간대로 나타낸 것입니다.   |        
 
 <span id="package-rollout-object" />
-### 패키지 출시 개체
+### <a name="package-rollout-object"></a>패키지 출시 개체
 
 이 리소스는 제출에 대한 점진적 [패키지 출시 설정](#manage-gradual-package-rollout)을 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
@@ -484,13 +478,13 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 <span/>
 
-## 열거
+## <a name="enums"></a>열거
 
 이러한 메서드는 다음 열거형을 사용합니다.
 
 
 <span id="price-tiers" />
-### 기준 가격
+### <a name="price-tiers"></a>기준 가격
 
 다음 값은 앱 제출에 사용 가능한 기준 가격을 나타냅니다.
 
@@ -503,7 +497,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="enterprise-licensing" />
-### 엔터프라이즈 라이선스 값
+### <a name="enterprise-licensing-values"></a>엔터프라이즈 라이선스 값
 
 다음 값은 앱에 대한 엔터프라이즈 라이선스 동작을 나타냅니다. 이러한 옵션에 대한 자세한 내용은 [조직 라이선스 옵션](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing)을 참조하세요.
 
@@ -515,7 +509,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 <span id="submission-status-code" />
-### 제출 상태 코드
+### <a name="submission-status-code"></a>제출 상태 코드
 
 다음 값은 제출의 상태 코드를 나타냅니다.
 
@@ -538,7 +532,7 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 <span/>
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [Windows 스토어 제출 API를 사용하여 앱 데이터 가져오기](get-app-data.md)
@@ -546,6 +540,6 @@ Windows 스토어 제출 API에서 다음 메서드를 사용하여 Windows 개�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

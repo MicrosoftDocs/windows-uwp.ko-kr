@@ -4,14 +4,14 @@ title: "백그라운드 작업 등록"
 description: "대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다."
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 translationtype: Human Translation
-ms.sourcegitcommit: 0f1bf88b1470cc5205f2e98ef15300da705203b1
-ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
+ms.sourcegitcommit: 2f46f5cd26656b2d6b7d14c0d85aa7a0a6950fb8
+ms.openlocfilehash: 809cd0ea85d4dfc6ecf633d0ca9f16bbefee78ca
 
 ---
 
-# 백그라운드 작업 등록
+# <a name="register-a-background-task"></a>백그라운드 작업 등록
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-## 메서드 서명 및 반환 형식 정의
+## <a name="define-the-method-signature-and-return-type"></a>메서드 서명 및 반환 형식 정의
 
 이 메서드는 작업 진입점, 작업 이름, 미리 구성된 백그라운드 작업 트리거 및 백그라운드 작업에 대한 [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)(옵션)을 받아들입니다. 이 메서드는 [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) 개체를 반환합니다.
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, in-process 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -52,7 +52,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -65,7 +65,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 기존 등록 확인
+## <a name="check-for-existing-registrations"></a>기존 등록 확인
 
 작업이 이미 등록되었는지 확인합니다. 작업이 여러 번 등록된 경우 작업이 트리거될 때마다 두 번 이상 실행되어 CPU가 초과되거나 예기치 않은 동작이 발생할 수 있기 때문에 이것을 확인해야 합니다.
 
@@ -76,7 +76,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 다음 코드에서는 마지막 단계에서 만든 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)를 사용하여 백그라운드 작업을 등록합니다.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -103,7 +103,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     // We'll register the task in the next step.
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -137,7 +137,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 백그라운드 작업 등록(또는 기존 등록 반환)
+## <a name="register-the-background-task-or-return-the-existing-registration"></a>백그라운드 작업 등록(또는 기존 등록 반환)
 
 
 작업이 기존 백그라운드 작업 등록 목록에 있는지 확인합니다. 그럴 경우 작업의 해당 인스턴스를 반환합니다.
@@ -150,7 +150,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
 >                                                 string taskEntryPoint,
 >                                                 string name,
@@ -199,7 +199,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > BackgroundTaskRegistration^ MainPage::RegisterBackgroundTask(
 >                                              Platform::String ^ taskEntryPoint,
 >                                              Platform::String ^ taskName,
@@ -251,13 +251,13 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-## 전체 백그라운드 작업 등록 유틸리티 함수
+## <a name="complete-background-task-registration-utility-function"></a>전체 백그라운드 작업 등록 유틸리티 함수
 
 
 다음 예제에서는 완성된 백그라운드 작업 등록 함수를 보여 줍니다. 이 함수는 네트워킹 백그라운드 작업을 제외하고 대부분의 백그라운드 작업을 등록하는 데 사용할 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
-> ```cs
+> ``` csharp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -310,7 +310,7 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 >     return task;
 > }
 > ```
-> ```cpp
+> ``` cpp
 > //
 > // Register a background task with the specified taskEntryPoint, name, trigger,
 > // and condition (optional).
@@ -371,10 +371,9 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 > }
 > ```
 
-> 
-  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 ****
 
@@ -398,6 +397,6 @@ ms.openlocfilehash: 2d27b46caefcae12e3ff3aeb300129eec0c5b7d7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

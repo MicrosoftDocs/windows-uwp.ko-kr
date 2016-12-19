@@ -4,12 +4,12 @@ title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, Bookstore1"
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "이 항목에서는 매우 간단한 유니버설 8.1 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 사례 연구를 제공합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 348012b4a23e60e24d2185baf71cbe147e30053a
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1
+# <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore1
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -19,15 +19,15 @@ ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
 
 이 섹션의 이전 항목에서는 플랫폼 간의 차이점에 대해 설명하고 XAML 태그, 보기 모델에 바인딩, 데이터 액세스 등 앱의 다양한 측면에 대한 포팅 프로세스와 관련된 세부 정보와 지침을 제공했습니다. 사용 사례는 실제 작업 사례를 제공하여 지침을 보완하는 데 목표를 두고 있습니다. 사례 연구에서는 지침을 이미 읽었다고 가정하고 더 이상 반복하지 않습니다.
 
-**참고** Visual Studio에서 Bookstore1Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion)의 단계를 수행합니다.
+**참고** Visual Studio에서 Bookstore1Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)의 단계를 수행합니다.
 
-## 다운로드
+## <a name="downloads"></a>다운로드
 
 [Bookstore1\_81 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532946).
 
 [Bookstore1Universal\_10 Windows 10 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532950).
 
-## 유니버설 8.1 앱
+## <a name="the-universal-81-app"></a>유니버설 8.1 앱
 
 포팅할 Bookstore1\_81 앱은 다음과 같습니다. 앱의 이름과 페이지 제목 아래에는 세로로 스크롤되는 책의 목록 상자가 있습니다.
 
@@ -39,7 +39,7 @@ Windows의 Bookstore1\_81
 
 Windows Phone의 Bookstore1\_81
 
-##  Windows 10 프로젝트로 포팅
+##  <a name="porting-to-a-windows-10-project"></a>Windows 10 프로젝트로 포팅
 
 Bookstore1\_81 솔루션은 8.1 유니버설 앱 프로젝트이며 다음 프로젝트를 포함합니다.
 
@@ -47,7 +47,7 @@ Bookstore1\_81 솔루션은 8.1 유니버설 앱 프로젝트이며 다음 프�
 -   Bookstore1\_81.WindowsPhone. Windows Phone 8.1용 앱 패키지를 빌드하는 프로젝트입니다.
 -   Bookstore1\_81.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app)에 설명된 일반적인 옵션을 제공합니다. 여기서 결정할 사항은 간단합니다. 이 앱은 Windows 8.1 및 Windows Phone 8.1 양식에서 동일한 기능을 가지게 되므로 주로 동일한 코드로 구현되어야 합니다. 따라서 공유 프로젝트의 내용(및 다른 프로젝트의 필요한 항목)을, 범용 디바이스 패밀리를 대상으로 하는 Windows 10(광범위한 디바이스에 설치할 수 있는 앱)에 포팅합니다.
+이 사례 연구를 위해 지원할 장치와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다. 여기서 결정할 사항은 간단합니다. 이 앱은 Windows 8.1 및 Windows Phone 8.1 양식에서 동일한 기능을 가지게 되므로 주로 동일한 코드로 구현되어야 합니다. 따라서 공유 프로젝트의 내용(및 다른 프로젝트의 필요한 항목)을, 범용 디바이스 패밀리를 대상으로 하는 Windows 10(광범위한 디바이스에 설치할 수 있는 앱)에 포팅합니다.
 
 Visual Studio에서 새 프로젝트를 만들고 Bookstore1\_81의 파일을 이 프로젝트로 복사한 후 복사한 파일을 새 프로젝트에 포함하는 과정은 매우 빠르게 진행되는 작업입니다. 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore1Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore1\_81에서 Bookstore1Universal\_10으로 복사할 파일입니다.
 
@@ -75,7 +75,7 @@ Visual Studio에서 새 프로젝트를 만들고 Bookstore1\_81의 파일을 �
 
 보기와 보기 모델이 함께 올바르게 작동하고 **ListBox**가 작동하고 있습니다. 스타일만 수정하면 됩니다. 밝은 테마의 모바일 장치에서는 목록 상자 테두리를 볼 수 있지만 쉽게 숨길 수 있습니다. 또한 서체가 너무 커서 사용 중인 스타일을 변경할 것입니다. 그뿐만 아니라 앱을 데스크톱 장치에서 실행할 경우 기본 색상으로 보이게 하려면 더 밝게 지정해야 합니다. 따라서 색상도 변경할 것입니다.
 
-## 범용 스타일 지정
+## <a name="universal-styling"></a>범용 스타일 지정
 
 Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)을 사용하여 Windows 8.1 및 Windows Phone 8.1 운영 체제에 맞게 스타일을 조정했습니다. 이 두 BookstoreStyles.xaml 파일 모두 Windows 10 앱에 필요한 스타일을 정확히 포함하고 있지 않습니다. 하지만 다행히도 우리가 원하는 결과는 실제로 이러한 두 파일의 스타일보다 훨씬 더 간단합니다. 따라서 다음 단계에서는 프로젝트 파일 및 태그를 제거하고 단순화하는 작업을 주로 진행할 것입니다. 단계는 다음과 같습니다. 이 항목 맨 위에 있는 링크를 사용하여 프로젝트를 다운로드하고, 여기서부터 사례 연구 끝까지 포함된 모든 변경의 결과를 확인할 수 있습니다.
 
@@ -96,7 +96,7 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 
 모바일 디바이스에서 실행되는 포팅 직전의 Windows 10 앱
 
-## 모바일 장치에 대한 목록 상자를 선택적으로 조정
+## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>모바일 장치에 대한 목록 상자를 선택적으로 조정
 
 앱이 모바일 장치에서 실행되는 경우 기본적으로 두 테마에서 목록 상자의 배경이 밝습니다. 이러한 스타일을 선호한다면 추가적인 정리 외에는 더 수행할 작업이 없습니다. 예를 들어 프로젝트에서 BookstoreStyles.xaml 리소스 사전 파일을 삭제하고 MainPage.xaml에 병합하는 태그를 제거합니다.
 
@@ -119,7 +119,7 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 
 모바일 디바이스에서 실행되는 포팅된 Windows 10 앱
 
-## 결론
+## <a name="conclusion"></a>결론
 
 이 사례 연구에서는 비현실적으로 간단한 앱을 포팅하는 프로세스에 대해 살펴보았습니다. 예를 들어 목록 상자를 사용하여 선택하거나 탐색할 컨텍스트를 설정할 수 있습니다. 앱에서는 탭되는 항목에 대한 세부 정보가 나오는 페이지를 탐색합니다. 이 특정 앱에서는 사용자 선택과 관련하여 아무 작업도 수행하지 않고 탐색도 하지 않습니다. 하지만 이 사례 연구에서는 분위기를 쇄신하고 포팅 프로세스를 소개하고 실제 UWP 앱에서 사용할 수 있는 중요한 기술을 보여 주었습니다.
 
@@ -129,6 +129,6 @@ Bookstore1\_81 앱은 두 개의 다른 리소스 사전(BookstoreStyles.xaml)�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

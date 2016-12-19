@@ -129,7 +129,7 @@ PasswordBox에는 사용자가 암호 텍스트를 표시하기 위해 터치하
 
 [PasswordRevealMode](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.passwordrevealmode.aspx) 속성의 값이 암호 표시 단추가 사용자에게 표시되는지 여부를 결정하는 유일한 요소는 아닙니다. 기타 요소로는 컨트롤이 최소 너비보다 큰지 여부, PasswordBox에 포커스가 있는지 여부, 텍스트 입력 필드에서 하나 이상의 문자가 포함되어 있는지 여부 등이 있습니다. 암호 표시 단추는 PasswordBox에 처음 포커스가 배치되고 문자를 입력하는 경우에만 표시됩니다. PasswordBox가 포커스를 잃었다가 다시 얻으면 암호를 지우고 문자 입력을 다시 시작해야만 표시 단추가 다시 표시됩니다.
 
-> **주의**&nbsp;&nbsp;Windows 10 이전에는 기본적으로 암호 표시 단추가 표시되지 않았습니다. 앱 보안 정책에 따라 암호를 항상 가려야 하는 경우 PasswordRevealMode를 Hidden으로 설정하세요.
+> **주의**  Windows 10 이전에는 기본적으로 암호 표시 단추가 표시되지 않았습니다. 앱 보안 정책에 따라 암호를 항상 가려야 하는 경우 PasswordRevealMode를 Hidden으로 설정하세요.
 
 ### 숨김 및 표시 모드
 

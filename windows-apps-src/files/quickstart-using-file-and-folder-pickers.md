@@ -1,18 +1,18 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "선택기를 사용하여 파일 및 폴더 열기"
 description: "사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 232008b7f80aceab201d5bedd744eedfe995648e
-ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
 
 ---
 
-# 선택기를 사용하여 파일 및 폴더 열기
+# <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -27,7 +27,7 @@ ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
 
  
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
@@ -38,7 +38,7 @@ ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
-## 파일 선택기 UI
+## <a name="file-picker-ui"></a>파일 선택기 UI
 
 
 파일 선택기는 사용자를 안내하고 파일을 열거나 저장할 때 일관된 환경을 제공하기 위해 정보를 표시합니다.
@@ -53,7 +53,7 @@ ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
 
 ![두 개의 파일이 열기 위해 선택되어 있는 파일 선택기](images/picker-multifile-600px.png)
 
-## 선택기 작동 방식
+## <a name="how-pickers-work"></a>선택기 작동 방식
 
 
 선택기를 통해 앱은 사용자 시스템의 파일 및 폴더를 액세스하고 찾아보고 저장할 수 있습니다. 앱은 사용자가 작업할 수 있도록 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 및 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체로 이러한 선택을 수신합니다.
@@ -64,7 +64,7 @@ ms.openlocfilehash: a27f81be16b5f032d852b377b14f1aaf89b93a2f
 
 ![한 앱이 파일 선택기를 두 앱 간의 인터페이스로 사용하여 다른 앱에서 열 파일을 가져오는 프로세스를 보여 주는 다이어그램입니다.](images/app-to-app-diagram-600px.png)
 
-## 단일 파일 선택: 전체 코드 목록
+## <a name="pick-a-single-file-complete-code-listing"></a>단일 파일 선택: 전체 코드 목록
 
 
 ```CSharp
@@ -88,7 +88,7 @@ else
 }
 ```
 
-## 단일 파일 선택: 단계별
+## <a name="pick-a-single-file-step-by-step"></a>단일 파일 선택: 단계별
 
 
 파일 선택기 사용에는 파일 선택기 개체를 만들고 사용자 지정한 다음 사용자가 하나 이상의 항목을 선택할 수 있도록 파일 선택기를 표시하는 과정이 포함됩니다.
@@ -153,7 +153,7 @@ var files = await picker.PickMultipleFilesAsync();
         }
 ```
 
-## 폴더 선택: 전체 코드 목록
+## <a name="pick-a-folder-complete-code-listing"></a>폴더 선택: 전체 코드 목록
 
 
 ```CSharp
@@ -185,6 +185,6 @@ else
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

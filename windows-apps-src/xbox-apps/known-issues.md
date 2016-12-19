@@ -3,33 +3,33 @@ author: Mtoepke
 title: "Xbox One 개발자 프로그램의 UWP에 대해 알려진 문제"
 description: 
 translationtype: Human Translation
-ms.sourcegitcommit: 5774ada049e5f300e9cb990f5a079c8c21796f8b
-ms.openlocfilehash: 5892e00f4da74af5aa4e24fdd12b0df0e8a4a7d9
+ms.sourcegitcommit: 20ac6fb738de1c8aaf10f46c359842f31714dbbf
+ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
 
 ---
 
-# Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[API 참조 항목 링크를 통해 이 페이지를 방문하고 유니버설 디바이스 패밀리 API 정보를 찾는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
+\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 디바이스 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
 
-다음 목록에는 이 릴리스에서 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
+다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
-**피드백을 받고 싶으니**, [유니버설 Windows 플랫폼 앱 개발](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) 포럼에서 발견된 문제를 모두 신고해 주세요. 
+**피드백을 받고 싶으니**, [유니버설 Windows 플랫폼 앱 개발](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop) 포럼에서 발견된 문제를 모두 신고해 주세요. 
 
 문제가 있으면 이 항목의 내용을 살펴보고, [질문과 대답](frequently-asked-questions.md)을 확인하고, 포럼을 통해 도움을 요청하세요.
 
 
 <!--## Developing games-->
  
-## 백그라운드 앱에 대한 메모리 제한이 부분적으로 적용됨
+## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>백그라운드 앱에 대한 메모리 제한이 부분적으로 적용됨
  
 백그라운드에서 실행되는 앱의 최대 메모리 공간은 128MB입니다. Xbox One의 UWP에 대한 현재 버전에서 백그라운드로 이동할 때 이 제한을 초과하면 앱이 일시 중단됩니다. 이 제한은 현재 앱이 이미 백그라운드에서 실행되고 있는 동안에는 제한을 초과하더라도 적용되지 않습니다. 즉, 백그라운드에서 실행하는 동안 앱이 128MB를 초과할 경우 여전히 메모리를 할당할 수 있습니다.
  
 현재 이 문제에 대한 해결 방법은 없습니다. 앱의 메모리 사용을 적절하게 제어하여 백그라운드에서 실행하는 동안 128MB 제한을 넘지 않도록 유지해야 합니다.
  
-## 자녀 보호를 켠 상태로 VS에서 배포하지 못함
+## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>자녀 보호를 켠 상태로 VS에서 배포하지 못함
 
 콘솔의 자녀 보호가 설정에서 켜져 있는 경우 VS에서 앱을 시작하지 못합니다.
 
@@ -67,7 +67,7 @@ The following game engines have been confirmed to work:
 There are likely others that are working too. We would love to get your feedback on what you find. 
 Please use the forum to report any issues you see.-->
 
-## DirectX 12 지원
+## <a name="directx-12-support"></a>DirectX 12 지원
 
 Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 
 
@@ -91,11 +91,11 @@ In this developer preview, inbound and outbound network access from the console 
 Developers can still use HTTP and WebSockets.
 --> 
 
-## Xbox One에서 차단된 네트워킹 포트
+## <a name="blocked-networking-ports-on-xbox-one"></a>Xbox One에서 차단된 네트워킹 포트
 
 Xbox One 디바이스의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [49152, 65535]의 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
 
-## UWP API 검사
+## <a name="uwp-api-coverage"></a>UWP API 검사
 
 일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
@@ -160,7 +160,7 @@ This will delete all of your games, apps, settings and content, deactivate Devel
 
 Sometimes this is resolved by sorting a column on the table.-->
 
-## WDP로 이동하면 인증서 경고가 표시됨
+## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨
 
 Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows Device Portal에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
 
@@ -171,12 +171,12 @@ Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

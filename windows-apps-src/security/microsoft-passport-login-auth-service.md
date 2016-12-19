@@ -4,12 +4,12 @@ description: "전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows �
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: d02c2029121927192430ce030684200de1656418
 
 ---
 
-# Microsoft Passport 로그인 서비스 만들기
+# <a name="create-a-microsoft-passport-login-service"></a>Microsoft Passport 로그인 서비스 만들기
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -21,7 +21,7 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
 
 이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
-## 연습 1: 서버 쪽 논리
+## <a name="exercise-1-server-side-logic"></a>연습 1: 서버 쪽 논리
 
 
 이 연습에서는 첫 번째 랩에 빌드된 Passport 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육은 Microsoft Passport가 기존 시스템에 통합될 수 있는 방법을 설명하도록 설계되었습니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
@@ -30,11 +30,11 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
 -   모의 서버와 모의 데이터베이스를 구현하는 작업부터 시작합니다. "AuthService"라는 새 폴더를 만듭니다. 솔루션 탐색기에서 "PassportLogin(유니버설 Windows)" 솔루션을 마우스 오른쪽 단추로 클릭하고 추가 &gt; 새 폴더를 선택합니다.
 -   모의 데이터베이스에 저장할 데이터에 대한 모델로 사용할 UserAccount 및 PassportDevices 클래스를 만듭니다. UserAccount는 기존 인증 서버에 구현된 사용자 모델과 유사합니다. AuthService 폴더를 마우스 오른쪽 단추로 클릭하고 "UserAccount.cs"라는 새 클래스를 추가합니다.
 
-    ![](images/passport-auth-1.png)
+    ![passport 권한 부여 폴더 만들기](images/passport-auth-1.png)
 
-    ![](images/passport-auth-2.png)
+    ![passport 권한 부여 클래스 만들기](images/passport-auth-2.png)
 
--   클래스 정의를 public이 되도록 변경한 후 다음 public 속성을 추가합니다. 다음과 같은 참조가 필요합니다.
+-   클래스 정의를 public으로 변경한 후 다음 public 속성을 추가합니다. 다음과 같은 참조가 필요합니다.
 
     ```cs
     using System.ComponentModel.DataAnnotations;
@@ -538,7 +538,7 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
     }
     ```
 
-## 연습 2: 클라이언트 쪽 논리
+## <a name="exercise-2-client-side-logic"></a>연습 2: 클라이언트 쪽 논리
 
 
 이 연습에서 AuthService 클래스를 사용하도록 클라이언트 쪽 뷰 및 도우미 클래스를 첫 번째 랩에서 변경합니다. 실제 환경에서 AuthService가 인증 서버가 되고 서버에서 데이터를 보내고 받으려면 Web API를 사용해야 합니다. 이 실습 교육의 경우 간단히 하기 위해 클라이언트와 서버 모두 로컬입니다. 목표는 Microsoft Passport API를 사용하는 방법을 배우는 것입니다.
@@ -988,13 +988,13 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
     }
     ```
 
--   응용 프로그램을 빌드 및 실행합니다(F5). "sampleUsername" 및 "samplePassword" 자격 증명을 사용하여 샘플 사용자 계정으로 로그인합니다. 환영 화면에서 디바이스 무시 단추가 표시되어 있지만 디바이스는 없다는 것을 알 수 있습니다. Microsoft Passport로 작동하도록 사용자를 만들거나 마이그레이션할 때 Passport 정보는 AuthService로 푸시되지 않습니다.
+-   응용 프로그램을 빌드 및 실행합니다(F5). "sampleUsername" 및 "samplePassword" 자격 증명을 사용하여 샘플 사용자 계정으로 로그인합니다. 환영 화면에서 디바이스 무시 단추가 표시되어 있지만 디바이스는 없다는 것을 알 수 있습니다. Microsoft Passport로 작동하도록 사용자를 만들거나 마이그레이션하는 경우 Passport 정보는 AuthService로 푸시되지 않습니다.
 
-    ![](images/passport-auth-3.png)
+    ![passport 로그인 화면](images/passport-auth-3.png)
 
-    ![](images/passport-auth-4.png)
+    ![passport 로그인 성공](images/passport-auth-4.png)
 
--   Passport 정보를 AuthService에 가져오려면 MicrosoftPassportHelper.cs를 업데이트해야 합니다. CreatePassportKeyAsync 메서드에서 성공하는 경우 true를 반환하는 작업 외에 KeyAttestation을 가져오려고 하는 새 메서드를 호출해야 합니다. 이 실습 교육에서는 AuthService에 이 정보를 기록하지 않지만 클라이언트 쪽에서 이 정보를 가져오는 방법을 배우게 됩니다. CreatePassportKeyAsync 메서드를 업데이트합니다.
+-   Passport 정보를 AuthService로 가져오려면 MicrosoftPassportHelper.cs를 업데이트해야 합니다. CreatePassportKeyAsync 메서드에서 성공하는 경우 true를 반환하는 작업 외에 KeyAttestation을 가져오려고 하는 새 메서드를 호출해야 합니다. 이 실습 교육에서는 AuthService에 이 정보를 기록하지 않지만 클라이언트 쪽에서 이 정보를 가져오는 방법을 배우게 됩니다. CreatePassportKeyAsync 메서드를 업데이트합니다.
 
     ```cs
     public static async Task<bool> CreatePassportKeyAsync(Guid userId, string username)
@@ -1082,11 +1082,11 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
     ```
 
 -   Microsoft Passport 정보가 AuthService에 전송되도록 GetKeyAttestationAsync 메서드에서 마지막 줄의 주석 처리를 제거합니다.
--   이전처럼 응용 프로그램을 빌드 및 실행하고 기본 자격 증명으로 로그인합니다. 이제 환영 화면에서 디바이스 ID가 표시되는지 확인합니다. 다른 디바이스에서 로그인한 경우에도 여기에 표시됩니다(클라우드 호스트된 인증 서비스가 있는 경우). 이 실습 교육의 경우 실제 디바이스 ID가 표시됩니다. 실제 구현에서 사람이 이해할 수 있고 각 디바이스를 확인하는 데 사용할 수 있는 식별 이름을 표시하려고 합니다.
+-   이전처럼 응용 프로그램을 빌드 및 실행하고 기본 자격 증명으로 로그인합니다. 이제 환영 화면에서 디바이스 ID가 표시되는지 확인합니다. 다른 디바이스에서 로그인한 경우에도 여기에 표시됩니다(클라우드 호스트된 인증 서비스가 있는 경우). 이 실습 교육의 경우 실제 디바이스 ID가 표시됩니다. 실제 구현에서는 사람이 이해할 수 있고 각 디바이스를 확인하는 데 사용할 수 있는 식별 이름을 표시하는 것이 좋습니다.
 
-    ![](images/passport-auth-5.png)
+    ![passport 로그인 성공 디바이스 id](images/passport-auth-5.png)
 
--   21. 이 실습 교육을 완료하려면 사용자가 사용자 선택 페이지에서 선택하고 다시 로그인할 때 사용자에 대한 요청 및 질문이 필요합니다. AuthService에는 질문을 요청하도록 만든 두 메서드가 있으며, 하나는 서명된 질문을 사용합니다. MicrosoftPassportHelper.cs에서 "RequestSignAsync"라는 새 메서드를 만듭니다. 이렇게 하려면 AuthService의 질문을 요청하고 Passport API를 사용하여 해당 질문을 로컬로 서명하고 서명된 질문을 AuthService에 보냅니다. 이 실습 교육에서 AuthService는 서명된 질문을 받고 true를 반환합니다. 실제 구현에서 질문이 올바른 디바이스에서 올바른 사용자에 의해 서명되었는지 확인할 수 있도록 확인 메커니즘을 구현해야 합니다. 아래 메서드를 MicrosoftPassportHelper.cs에 추가합니다.
+-   21. 이 실습 교육의 최종 단계로, 사용자가 사용자 선택 페이지에서 선택하고 다시 로그인할 때 사용자에 대한 요청 및 질문이 필요합니다. AuthService에는 질문을 요청하도록 만든 두 메서드가 있으며, 하나는 서명된 질문을 사용합니다. MicrosoftPassportHelper.cs에서 "RequestSignAsync"라는 새 메서드를 만듭니다. 이렇게 하려면 AuthService의 질문을 요청하고 Passport API를 사용하여 해당 질문을 로컬로 서명하고 서명된 질문을 AuthService에 보냅니다. 이 실습 교육에서 AuthService는 서명된 질문을 받고 true를 반환합니다. 실제 구현에서 질문이 올바른 디바이스에서 올바른 사용자에 의해 서명되었는지 확인할 수 있도록 확인 메커니즘을 구현해야 합니다. 아래 메서드를 MicrosoftPassportHelper.cs에 추가합니다.
 
     ```cs
     private static async Task<bool> RequestSignAsync(Guid userId, KeyCredentialRetrievalResult openKeyResult)
@@ -1175,12 +1175,12 @@ ms.openlocfilehash: 2250cc400828b2142bc5d152f54de554daa24aa9
 
 서비스와 서버 쪽에서 인증을 구현하는 방법의 세부 정보에 대해서는 연습으로 남겨 두었습니다. 대부분 Microsoft Passport로 작업을 시작하려면 마이그레이션해야 하는 기존 시스템이 있고 각 시스템의 세부 정보가 다를 것으로 예상됩니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Microsoft Passport 및 Windows Hello](microsoft-passport.md)
 * [Microsoft Passport 로그인 앱](microsoft-passport-login.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

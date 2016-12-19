@@ -4,31 +4,33 @@ ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: "제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다."
 title: "확인 메일을 사용하여 제품 구매 검증"
 translationtype: Human Translation
-ms.sourcegitcommit: 18d5c2ecf7d438355c3103ad2aae32dc84fc89ed
-ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
+ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
+ms.openlocfilehash: 55631d364ca6f2d76d214eca6d00fbdd969c0e15
 
 ---
 
-# 확인 메일을 사용하여 제품 구매 검증
+# <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
 
 
->**참고**&nbsp;&nbsp;이 문서의 예제에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용합니다. 앱이 Windows10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매를 관리하는 것이 좋습니다. 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
-
-**중요 API**
-
--   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
--   [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
-
-제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 고객에게 나열된 제품 및 통화 비용에 대한 정보를 제공합니다.
-
-사용자가 앱을 구매했거나, Windows 스토어에서 앱에서 바로 구매 제품을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드된 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 다음과 같이 하세요.
-
-## 영수증 요청
+>**참고**  이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매에 대체 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스를 사용하는 경우(Windows 10 버전 1607에서 도입됨), 이 네임스페이스는 앱에서 바로 구매의 구매 영수증을 가져오기 위한 API를 제공하지 않습니다. 그러나 Windows 스토어 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
 
 
-**Windows.ApplicationModel.Store** 네임스페이스는 영수증을 가져오는 두 가지 방법을 지원합니다. 하나는 [**CurrentApp.RequestProductPurchaseAsync | requestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263381) 또는 [**CurrentApp.RequestAppPurchaseAsync | requestAppPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/hh967813) 메서드를 사용한 다음 *includeReceipt* 매개 변수를 사용하는 것이고 다른 하나는 [**CurrentApp.GetAppReceiptAsync | getAppReceiptAsync**](https://msdn.microsoft.com/library/windows/apps/hh967811) 메서드를 호출하는 것입니다. 앱 영수증은 다음과 같습니다.
+제품 구매를 성공적으로 이행한 각 Windows 스토어 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 나열된 제품 및 통화 비용에 대한 정보를 고객에게 제공합니다.
 
-```XML
+사용자가 앱을 구매했거나, Windows 스토어에서 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 다음과 같이 하세요.
+
+## <a name="requesting-a-receipt"></a>영수증 요청
+
+
+**Windows.ApplicationModel.Store** 네임스페이스는 영수증을 가져오는 다음 몇 가지 방법을 지원합니다.
+
+* [CurrentApp.RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) 또는 [CurrentApp.RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh779780.aspx)(또는 이 메서드의 다른 오버로드 중 하나)를 사용하여 구매하는 경우 반환 값에 영수증이 포함되어 있습니다.
+* [CurrentApp.GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) 메서드를 호출하여 앱과 앱의 모든 추가 기능에 대한 현재 영수증 정보를 검색할 수 있습니다.
+
+앱 영수증은 다음과 같습니다.
+
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:10:05Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <AppReceipt Id="8ffa256d-eca8-712a-7cf8-cbf5522df24b" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" PurchaseDate="2012-06-04T23:07:24Z" LicenseType="Full" />
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
@@ -51,7 +53,8 @@ ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
 
 제품 영수증은 다음과 같습니다.
 
-```XML
+> [!div class="tabbedCodeSnippets"]
+```xml
 <Receipt Version="1.0" ReceiptDate="2012-08-30T23:08:52Z" CertificateId="b809e47cd0110a4db043b3f73e83acd917fe1336" ReceiptDeviceId="4e362949-acc3-fe3a-e71b-89893eb4f528">
     <ProductReceipt Id="6bbf4366-6fb2-8be8-7947-92fd5f683530" ProductId="Product1" PurchaseDate="2012-08-30T23:08:52Z" ExpirationDate="2012-09-02T23:08:49Z" ProductType="Durable" AppId="55428GreenlakeApps.CurrentAppSimulatorEventTest_z7q3q7z11crfr" />
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -71,168 +74,69 @@ ms.openlocfilehash: ea79a33a52bc45a9c8609e12bfac953c3f92db09
 </Receipt>
 ```
 
-이러한 영수증 예제 중 하나를 사용하여 유효성 검사 코드를 테스트할 수 있습니다.
+이러한 영수증 예제 중 하나를 사용하여 유효성 검사 코드를 테스트할 수 있습니다. 영수증 내용에 대한 자세한 내용은 [요소 및 특성 설명](#receipt-descriptions)을 참조하세요.
 
-## 영수증 유효성 검사
+## <a name="validating-a-receipt"></a>영수증 유효성 검사
 
+영수증의 신뢰성을 확인하려면 공용 인증서를 사용하여 영수증의 서명을 확인할 백 엔드 시스템(웹 서비스 또는 이와 유사한 것)이 필요합니다. 이 인증서를 가져오려면 URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```를 사용합니다. 여기서 ```CertificateId```는 영수증의 **CertificateId** 값입니다.
 
-영수증을 가져온 후에는 유효성을 검사하기 위해 백 엔드 시스템(웹 서비스 또는 유사 서비스)이 필요합니다. 다음은 .NET Framework의 해당 유효성 검사 프로세스 예입니다.
+다음은 해당 유효성 검사 프로세스 예입니다. 이 코드는 **System.Security** 어셈블리에 대한 참조를 포함하는 .NET Framework 콘솔 응용 프로그램에서 실행됩니다.
 
-```CSharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml;
-using System.IO;
-using System.Security.Cryptography.Xml;
-using System.Net;
+> [!div class="tabbedCodeSnippets"]
+[!code-cs[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
-namespace ReceiptVerificationSample
-{
-        public sealed class RSAPKCS1SHA256SignatureDescription : SignatureDescription
-        {
-            public RSAPKCS1SHA256SignatureDescription()
-            {
-                base.KeyAlgorithm = typeof(RSACryptoServiceProvider).FullName;
-                base.DigestAlgorithm = typeof(SHA256Managed).FullName;
-                base.FormatterAlgorithm = typeof(RSAPKCS1SignatureFormatter).FullName;
-                base.DeformatterAlgorithm = typeof(RSAPKCS1SignatureDeformatter).FullName;
-            }
+<span id="receipt-descriptions" />
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a>영수증의 요소 및 특성 설명
 
-            public override AsymmetricSignatureDeformatter CreateDeformatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+이 섹션에서는 영수증의 요소와 특성을 설명합니다.
 
-                RSAPKCS1SignatureDeformatter deformatter = new RSAPKCS1SignatureDeformatter(key);
-                deformatter.SetHashAlgorithm("SHA256");
-                return deformatter;
-            }
+### <a name="receipt-element"></a>영수증 요소
 
-            public override AsymmetricSignatureFormatter CreateFormatter(AsymmetricAlgorithm key)
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException("key");
-                }
+이 파일의 루트 요소는 앱과 앱에서 바로 구매에 대한 정보를 포함하는 **Receipt** 요소입니다. 이 요소에는 다음과 같은 자식 요소가 있습니다.
 
-                RSAPKCS1SignatureFormatter formatter = new RSAPKCS1SignatureFormatter(key);
-                formatter.SetHashAlgorithm("SHA256");
-                return formatter;
-            }
+|  요소  |  필수  |  수량  |  설명   |
+|-------------|------------|--------|--------|
+|  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
+|  [ProductReceipt](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
+|  Signature  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](http://go.microsoft.com/fwlink/p/?linkid=251093)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
 
-        }
+**Receipt**에는 다음 특성이 있습니다.
 
-        class Program
-        {
+|  특성  |  설명   |
+|-------------|-------------------|
+|  **Version**  |    영수증의 버전 번호입니다.            |
+|  **CertificateId**  |     영수증에 서명하는 데 사용된 인증서 지문입니다.          |
+|  **ReceiptDate**  |    영수증이 서명되고 다운로드된 날짜입니다.           |  
+|  **ReceiptDeviceId**  |   이 영수증을 요청하는 데 사용된 디바이스를 식별합니다.         |  |
 
-            // Utility function to read the bytes from an HTTP response
-            private static int ReadResponseBytes(byte[] responseBuffer, Stream resStream)
-            {
-                int count = 0;
+<span id="appreceipt" />
+### <a name="appreceipt-element"></a>AppReceipt 요소
 
-                int numBytesRead = 0;
-                int numBytesToRead = responseBuffer.Length;
+이 요소는 현재 앱에 대한 구매 정보를 포함합니다.
 
-                do
-                {
-                    count = resStream.Read(responseBuffer, numBytesRead, numBytesToRead);
+**AppReceipt**에는 다음 특성이 있습니다.
 
-                    numBytesRead += count;
-                    numBytesToRead -= count;
+|  특성  |  설명   |
+|-------------|-------------------|
+|  **Id**  |    구매를 식별합니다.           |
+|  **AppId**  |     OS에서 앱에 사용하는 패키지 패밀리 이름 값입니다.           |
+|  **LicenseType**  |    **Full** - 사용자가 앱의 처음 사용자용 버전을 구매한 경우 **Trial** - 사용자가 앱의 평가판을 다운로드한 경우           |  
+|  **PurchaseDate**  |    앱을 구매한 날짜입니다.          |  |
 
-                } while (count > 0);
+<span id="productreceipt" />
+### <a name="productreceipt-element"></a>ProductReceipt 요소
 
-                return numBytesRead;
-            }
+이 요소는 현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.
 
-            public static X509Certificate2 RetrieveCertificate(string certificateId)
-            {
-                const int MaxCertificateSize = 10000;
+**ProductReceipt**에는 다음 특성이 있습니다.
 
-                // We are attempting to retrieve the following url. The getAppReceiptAsync website at
-                // http://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentapp.getappreceiptasync.aspx
-                // lists the following format for the certificate url.
-                String certificateUrl = String.Format("https://go.microsoft.com/fwlink/?LinkId=246509&cid={0}", certificateId);
-
-                // Make an HTTP GET request for the certificate
-                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(certificateUrl);
-                request.Method = "GET";
-
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-                // Retrieve the certificate out of the response stream
-                byte[] responseBuffer = new byte[MaxCertificateSize];
-                Stream resStream = response.GetResponseStream();
-                int bytesRead = ReadResponseBytes(responseBuffer, resStream);
-
-                if (bytesRead < 1)
-                {
-                    //TODO: Handle error here
-                }
-
-                return new X509Certificate2(responseBuffer);
-            }
-
-            static bool ValidateXml(XmlDocument receipt, X509Certificate2 certificate)
-            {
-                // Create the signed XML object.
-                SignedXml sxml = new SignedXml(receipt);
-
-                // Get the XML Signature node and load it into the signed XML object.
-                XmlNode dsig = receipt.GetElementsByTagName("Signature", SignedXml.XmlDsigNamespaceUrl)[0];
-                if (dsig == null)
-                {
-                    // If signature is not found return false
-                    System.Console.WriteLine("Signature not found.");
-                    return false;
-                }
-
-                sxml.LoadXml((XmlElement)dsig);
-
-                // Check the signature
-                bool isValid = sxml.CheckSignature(certificate, true);
-
-                return isValid;
-            }
-
-            static void Main(string[] args)
-            {
-                // .NET does not support SHA256-RSA2048 signature verification by default, so register this algorithm for verification
-                CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256");
-
-                // Load the receipt that needs to be verified as an XML document
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("..\\..\\receipt.xml");
-
-                // The certificateId attribute is present in the document root, retrieve it
-                XmlNode node = xmlDoc.DocumentElement;
-                string certificateId = node.Attributes["CertificateId"].Value;
-
-                // Retrieve the certificate from the official site.
-                // NOTE: For sake of performance, you would want to cache this certificate locally.
-                //       Otherwise, every single call will incur the delay of certificate retrieval.
-                X509Certificate2 verificationCertificate = RetrieveCertificate(certificateId);
-
-                try
-                {
-                    // Validate the receipt with the certificate retrieved earlier
-                    bool isValid = ValidateXml(xmlDoc, verificationCertificate);
-                    System.Console.WriteLine("Certificate valid: " + isValid);
-                }
-                catch (Exception ex)
-                {
-                    System.Console.WriteLine(ex.ToString());
-                }
-            }
-        }
-}
-```
+|  특성  |  설명   |
+|-------------|-------------------|
+|  **Id**  |    구매를 식별합니다.           |
+|  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
+|  **ProductId**  |     구매한 제품을 식별합니다.           |
+|  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
+|  **PurchaseDate**  |    구매가 발생한 날짜입니다.          |  |
 
  
 
@@ -240,6 +144,6 @@ namespace ReceiptVerificationSample
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,12 +4,12 @@ description: "Windows Phone Silverlight 앱을 사용하는 개발자는 Windows
 title: "Windows Phone Silverlight에서 UWP로 이동"
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c75d1871364a837047c1bd81bc094c5120900a4e
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 05831f3e357086b338d32e83146d380ca9c78a74
 
 ---
 
-#  Windows Phone Silverlight에서 UWP로 이동
+#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Windows Phone Silverlight에서 UWP로 이동
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -21,7 +21,7 @@ Windows Phone Silverlight 앱을 Windows 10 앱으로 포팅할 경우 [Windows 
 
 **참고** 이 가이드는 Windows Phone Silverlight 앱을 Windows 10으로 수동으로 포팅하는 데 도움이 되도록 설계되었습니다. 이 가이드의 정보를 사용하여 앱을 포팅하는 것 외에도 **Mobilize.NET의 Silverlight 브리지**의 개발자 미리 보기를 시도하여 포팅 프로세스를 자동화할 수 있습니다. 이 도구는 앱의 소스 코드를 분석하고 Windows Phone Silverlight 컨트롤 및 API에 대한 참조를 해당 UWP 항목으로 변환합니다. 이 도구는 여전히 개발자 미리 보기 상태이므로 아직 모든 변환 시나리오를 처리하지는 않습니다. 그러나 이 도구로 시작하면 대부분의 개발자가 일부 시간과 노력을 줄일 수 있습니다. 개발자 미리 보기를 시도하려면 [Mobilize.NET 웹 사이트](http://go.microsoft.com/fwlink/p/?LinkId=624546)를 방문하세요.
 
-## XAML 및 .NET 또는 HTML?
+## <a name="xaml-and-net-or-html"></a>XAML 및 .NET 또는 HTML?
 
 Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반으로 하고 개발자는 .NET Framework 버전과 UWP API의 일부 하위 집합에 대해 프로그래밍합니다. Windows Phone Silverlight 앱에서 XAML(EXtensible Application Markup Language)을 사용했으므로 Windows 10 버전에서도 XAML을 선택할 가능성이 있습니다. 대부분의 지식 및 경험과 마찬가지로 사용한 소스 코드 및 소프트웨어 패턴의 상당 부분을 그대로 사용할 수 있기 때문입니다. UI 태그와 디자인도 쉽게 포팅될 수 있습니다. Managed API, XAML 태그, UI 프레임워크 및 도구가 매우 친숙함을 알 수 있으며, UWP 앱에서 XAML과 함께 C++, C# 또는 Visual Basic을 사용할 수 있습니다. 처리하는 과정에서 한 두 가지 문제가 있긴 하지만 프로세스는 상대적으로 쉽습니다.
 
@@ -32,23 +32,23 @@ Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반�
 
 이 포팅 가이드에서는 XAML에 집중하지만, JavaScript, CSS 스타일시트 및 HTML5를 JavaScript용 Windows 라이브러리와 함께 사용하여 동일한 UWP API 중 다수를 많이 호출하는 기능적으로 동일한 앱을 빌드할 수 있습니다. XAML과 HTML의 Windows 런타임 UI 프레임워크는 서로 다르지만 어느 경우든 모든 Windows 디바이스에서 보편적으로 작동합니다.
 
-## 범용 또는 모바일 디바이스 패밀리를 대상으로 지정
+## <a name="targeting-the-universal-or-the-mobile-device-family"></a>범용 또는 모바일 디바이스 패밀리를 대상으로 지정
 
 선택할 수 있는 한 가지 옵션은 범용 디바이스 패밀리를 대상으로 하는 앱으로 앱을 포팅하는 것입니다. 이 경우 앱을 광범위한 장치에 설치할 수 있습니다. 앱이 모바일 디바이스 패밀리에서만 구현되는 API를 호출하는 경우 적응 코드로 이러한 호출을 지원할 수 있습니다. 또는 적응 코드를 작성할 필요가 없는 경우에는 모바일 디바이스 패밀리를 대상으로 하는 앱으로 앱을 포팅하도록 선택할 수 있습니다.
 
-## 여러 양식 요소에 맞게 앱 조정
+## <a name="adapting-your-app-to-multiple-form-factors"></a>여러 양식 요소에 맞게 앱 조정
 
 이전 섹션에서 선택한 옵션에 따라 앱이 실행되는 장치 범위가 결정되며, 이러한 장치는 다양할 수 있습니다. 앱을 모바일 디바이스 패밀리로 제한해도 지원할 화면 크기는 무척 다양합니다. 따라서 이전에는 지원하지 않았던 폼 팩터에서 앱을 실행할 계획이므로 해당 폼 팩터에서 UI를 테스트하고 UI가 각 폼 팩터에 잘 맞도록 필요한 사항을 변경하도록 합니다. 이것을 포팅 후 작업 또는 포팅 추가 목표로 생각해도 되며 [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) 사례 연구의 연습에 예제가 있습니다.
 
-## 계층별 포팅에 대한 접근법
+## <a name="approaching-porting-layer-by-layer"></a>계층별 포팅에 대한 접근법
 
 -   **보기**. 보기는 보기 모델과 함께 앱의 UI를 구성합니다. 보기는 보기 모델의 관찰 가능한 속성에 바인딩되는 태그로 구성되는 것이 좋습니다. 다른 패턴(일반적이고 편리하지만 단기적으로만 사용)은 코드 숨김 파일의 명령적 코드에서 UI 요소를 직접 조작하는 데 사용됩니다. 어느 경우든 대부분의 UI 태그와 디자인 및 UI 요소를 조작하는 명령적 코드를 포팅하는 것은 간단합니다.
--   **보기 모델 및 데이터 모델**. 관심사 분리 패턴(예제: MVVM)을 공식적으로 따르지 않더라도 앱에는 보기 모델과 데이터 모델의 기능을 수행하는 코드가 있기 마련입니다. 보기 모델 코드에서는 UI 프레임워크 네임스페이스의 형식을 활용합니다. 또한 보기 모델 및 데이터 모델 코드는 모두 비시각적 운영 체제와 .NET API(데이터 액세스를 위한 API 포함)를 사용합니다. 대부분은 [UWP 앱](https://msdn.microsoft.com/library/windows/apps/br211369)에서 사용할 수 있으므로, 이 코드의 대부분을 변경하지 않고 포팅할 수 있습니다. 보기 모델은 보기의 모델 또는 *추상화*입니다. 보기 모델은 UI의 상태와 동작을 제공하지만, 보기 자체는 시각적 기능을 제공합니다. 따라서 UWP를 통해 실행할 수 있도록 다른 폼 팩터에 맞게 UI를 조정할 경우 해당 보기 모델을 변경해야 합니다. 클라우드 서비스 네트워킹 및 호출의 경우 일반적으로 .NET 또는 UWP API 사용에 선택할 수 있는 옵션이 있습니다. 해당 의사 결정과 관련한 요소에 대해서는 [클라우드 서비스, 네트워킹 및 데이터베이스](wpsl-to-uwp-business-and-data.md#networking-cloud)를 참조하세요.
+-   **보기 모델 및 데이터 모델**. 관심사 분리 패턴(예제: MVVM)을 공식적으로 따르지 않더라도 앱에는 보기 모델과 데이터 모델의 기능을 수행하는 코드가 있기 마련입니다. 보기 모델 코드에서는 UI 프레임워크 네임스페이스의 형식을 활용합니다. 또한 보기 모델 및 데이터 모델 코드는 모두 비시각적 운영 체제와 .NET API(데이터 액세스를 위한 API 포함)를 사용합니다. 대부분은 [UWP 앱](https://msdn.microsoft.com/library/windows/apps/br211369)에서 사용할 수 있으므로, 이 코드의 대부분을 변경하지 않고 포팅할 수 있습니다. 보기 모델은 보기의 모델 또는 *추상화*입니다. 보기 모델은 UI의 상태와 동작을 제공하지만, 보기 자체는 시각적 기능을 제공합니다. 따라서 UWP를 통해 실행할 수 있도록 다른 폼 팩터에 맞게 UI를 조정할 경우 해당 보기 모델을 변경해야 합니다. 클라우드 서비스 네트워킹 및 호출의 경우 일반적으로 .NET 또는 UWP API 사용에 선택할 수 있는 옵션이 있습니다. 해당 의사 결정과 관련한 요소에 대해서는 [클라우드 서비스, 네트워킹 및 데이터베이스](wpsl-to-uwp-business-and-data.md)를 참조하세요.
 -   **클라우드 서비스**. 앱의 상당 부분이 클라우드에서 서비스의 형태로 실행될 수 있습니다. 클라이언트 장치에서 실행 중인 앱 부분이 해당 부분에 연결됩니다. 이 부분은 클라이언트 부분을 포팅할 때 변경되지 않고 유지되는 분산 앱 부분입니다. UWP 앱에 대한 클라우드 서비스 옵션이 없을 경우, 유니버설 Windows 앱에서 간단한 라이브 타일 업데이트 알림부터 서버 팜에서 제공 가능한 복잡한 확장성까지 다양한 서비스를 호출할 수 있는 강력한 백 엔드 구성 요소를 제공하는 [Microsoft Azure 모바일 서비스](http://azure.microsoft.com/services/mobile-services/)를 선택하는 것이 좋습니다.
 
 포팅 전이나 포팅 중에 비슷한 용도를 가진 코드가 임의적으로 분산되지 않고 계층으로 함께 수집되도록 앱을 리펙터링하여 개선할 수 있는지 여부를 고려하세요. 위에서 설명한 대로 UWP 앱을 계층으로 팩터링하면 앱을 수정하고 테스트한 다음 지속적으로 읽고 유지 관리하기가 쉬워집니다. [MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)(Model-View-ViewModel) 패턴을 따르면 기능을 쉽게 재사용하고 플랫폼 간의 UI API 차이로 인한 일부 문제를 방지할 수 있습니다. 이 패턴은 앱의 데이터, 비즈니스 및 UI 부분을 서로 별도로 유지합니다. UI 내에서도 상태와 동작을 시각적으로 분리하고 별도로 테스트할 수 있습니다. MVVM을 사용하면 데이터와 비즈니스 논리를 한 번 작성하여 UI에 관계없이 모든 장치에서 사용할 수 있습니다. 또한 장치 간에 많은 보기 모델 및 보기 부분이 다시 사용될 수 있습니다.
 
-## 규칙의 한두 가지 예외
+## <a name="one-or-two-exceptions-to-the-rule"></a>규칙의 한두 가지 예외
 
 이 포팅 가이드를 읽었으므로 [네임스페이스 및 클래스 매핑](wpsl-to-uwp-namespace-and-class-mappings.md)을 참조할 수 있습니다. 상당히 간단한 매핑은 일반 규칙이며, 네임스페이스 및 클래스 매핑 테이블은 예외를 설명합니다.
 
@@ -73,7 +73,7 @@ Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반�
 |[사례 연구: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | 이 항목에서는 매우 간단한 Windows Phone Silverlight 앱을 Windows 10 UWP 앱으로 포팅하는 사례 연구를 제공합니다. Windows 10을 사용하면 고객이 다양한 디바이스에 설치할 수 있는 단일 앱 패키지를 만들 수 있습니다. 이 사례 연구에서는 이 작업을 수행합니다. |
 | [사례 연구: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)에 제공된 정보를 기반으로 하는 이 사례 연구는 **LongListSelector**에서 그룹화된 데이터를 표시하는 Windows Phone Silverlight 앱으로 시작합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **LongListSelector**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. |
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **설명서**
 * [Windows 10 개발자를 위한 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
@@ -89,6 +89,6 @@ Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

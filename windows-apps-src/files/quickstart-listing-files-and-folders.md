@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: "파일 및 폴더 열거 및 쿼리"
 description: "폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ---
-# 파일 및 폴더 열거 및 쿼리
+# <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -16,10 +16,12 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
 폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다.
 
+유니버설 Windows 플랫폼 앱의 데이터를 저장하는 방법에 대한 자세한 내용은 [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) 클래스를 참조하세요.
+
 **참고** [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
 
  
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
@@ -29,7 +31,7 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
     예를 들어 이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 사용자 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
-## 위치에 있는 파일 및 폴더 열거
+## <a name="enumerate-files-and-folders-in-a-location"></a>위치에 있는 파일 및 폴더 열거
 
 > **참고** **picturesLibrary** 기능을 선언해야 합니다.
 
@@ -208,7 +210,7 @@ ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 > Next item
 > ```
 
-## 위치에 있는 파일 쿼리 및 일치하는 파일 열거
+## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>위치에 있는 파일 쿼리 및 일치하는 파일 열거
 
 다음 예제에서는 월별로 그룹화된 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262)를 호출하고 [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066) 개체가 제공됩니다.
 
@@ -324,6 +326,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

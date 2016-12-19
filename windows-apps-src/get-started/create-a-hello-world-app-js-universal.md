@@ -4,31 +4,29 @@ ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Create a "Hello, world" app (JS)
 description: "이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b4676e5c5a66450b321ab6f5f8670f9491b7a9d
-ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
+ms.sourcegitcommit: 1a4aea3d31bad97fa0933e1274c037a4bb8d81bb
+ms.openlocfilehash: ad34b1bc62abf6c93f5124e774ad374f5b767f2c
 
 ---
-# Hello, world 앱 만들기(JS)
+# <a name="create-a-hello-world-app-js"></a>Hello, world 앱 만들기(JS)
 
-이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
+이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   
-  **Windows10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
+-   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
 -   시작 페이지에 HTML 콘텐츠 추가
 -   터치, 펜 및 마우스 입력 처리
 -   로컬 데스크톱 및 Visual Studio의 휴대폰 에뮬레이터에서 프로젝트를 실행합니다.
 -   JavaScript용 Windows 라이브러리 컨트롤 사용
 
-## 시작하기 전에...
+## <a name="before-you-start"></a>시작하기 전에...
 
 -   [유니버설 Windows 앱이란](whats-a-uwp.md)?
--   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   이 자습서를 완료하려면 Windows10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   이 자습서를 완료하려면 Windows 10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
-## 1단계: Visual Studio에서 새 프로젝트 만들기
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
 
 `HelloWorld`라는 새 앱을 만들겠습니다. 방법은 다음과 같습니다.
 1.  Visual Studio 2015를 시작합니다.
@@ -63,14 +61,14 @@ ms.openlocfilehash: 31bd2d40750e5acf09679d8ff5ea1a1540f60934
 
 이러한 파일은 JavaScript를 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
 
-## 2단계: 앱 시작
+## <a name="step-2-launch-the-app"></a>2단계: 앱 시작
 
 
 이제 매우 간단한 앱을 만들었습니다. 앱을 빌드, 배포 및 시작하고 앱의 모양을 확인할 시간입니다. 로컬 컴퓨터, 시뮬레이터, 에뮬레이터 또는 원격 장치에서 앱을 디버그할 수 있습니다. 다음은 Visual Studio의 대상 장치 메뉴입니다.
 
 ![앱 디버깅을 위한 장치 대상의 드롭다운 목록](images/uap-debug.png)
 
-### 데스크톱 장치에서 앱 시작
+### <a name="start-the-app-on-a-desktop-device"></a>데스크톱 장치에서 앱 시작
 
 기본적으로 앱은 로컬 컴퓨터에서 실행합니다. 대상 장치 메뉴는 데스크톱 장치 제품군의 장치에서 앱을 디버깅하기 위한 여러 옵션을 제공합니다.
 
@@ -113,9 +111,9 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
    앱 창을 닫습니다.
 
-### 모바일 장치 에뮬레이터에서 앱 시작
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>모바일 장치 에뮬레이터에서 앱 시작
 
-앱이 Windows10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
+앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
 
 Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
 
@@ -142,7 +140,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 ![모바일 장치의 초기 앱 화면](images/helloworld-1-winjs-phone.png)
 
-## 3단계: 시작 페이지 수정
+## <a name="step-3-modify-your-start-page"></a>3단계: 시작 페이지 수정
 
 Visual Studio가 작성한 파일 중 하나는 앱의 시작 페이지인 **index.html**입니다. 앱이 실행되면 시작 페이지의 콘텐츠가 표시됩니다. 시작 페이지에는 앱의 코드 파일과 스타일시트에 대한 참조도 포함되어 있습니다. 다음은 Visual Studio에서 개발자를 위해 생성한 시작 페이지입니다.
 
@@ -192,7 +190,7 @@ default.html 파일에 새로운 콘텐츠를 몇 가지 추가해 보겠습니�
 
    다음 단계에서 **button**에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만들고 이벤트 처리기 코드를 main.js 파일에 추가하게 됩니다.
 
-## 4단계: 이벤트 처리기 만들기
+## <a name="step-4-create-an-event-handler"></a>4단계: 이벤트 처리기 만들기
 
 새 프로젝트를 만들 때 Visual Studio에서 /js/main.js 파일이 생성되었습니다. 이 파일에는 앱의 수명 주기를 처리하는 코드가 포함됩니다. 또한 index.html 파일에 대화형 작업을 제공하는 추가 코드도 여기서 작성합니다.
 
@@ -262,7 +260,7 @@ main.js에 있는 나머지 코드를 살펴보시기 바랍니다. 이러한 �
 
 [button](https://msdn.microsoft.com/library/windows/apps/Hh453017)에 대한 이벤트 처리기를 정의하겠습니다. 새 이벤트 처리기는 `nameInput` [input](https://msdn.microsoft.com/library/windows/apps/Hh453271) 컨트롤에서 사용자 이름을 가져와 지난 섹션에서 만든 `greetingOutput`**div** 요소로 인사말을 출력하는 데 사용합니다.
 
-### 터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
+### <a name="using-events-that-work-for-touch-mouse-and-pen-input"></a>터치, 마우스 및 펜 입력에 대해 작동하는 이벤트 사용
 
 UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차이에 대해 염려할 필요가 없습니다. [click](https://msdn.microsoft.com/library/windows/apps/Hh441312)과 같이 이미 알고 있는 이벤트를 사용할 수 있으며 그러한 이벤트는 모든 형태의 입력에 대해 작동합니다.
 
@@ -290,7 +288,7 @@ UWP 앱에서는 터치, 마우스 및 기타 포인터 입력 형태 간의 차
 
 main.js에 이벤트 처리기를 추가했습니다. 이제 이벤트 처리기를 등록해야 합니다.
 
-## 5단계: 앱 시작 시 이벤트 처리기 등록
+## <a name="step-5-register-the-event-handler-when-your-app-launches"></a>5단계: 앱 시작 시 이벤트 처리기 등록
 
 
 이제 이벤트 처리기를 단추에 등록하기만 하면 됩니다. 권장되는 이벤트 처리기 등록 방법은 코드에서 [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145)를 호출하는 것입니다. 이벤트 처리기를 등록하기에 좋은 위치는 앱이 활성화될 때입니다. 보시는 것처럼 다행히 Visual Studio에서 main.js 파일 내에 앱의 활성화를 처리하는 일부 코드를 생성했습니다.
@@ -328,7 +326,7 @@ WinJS가 아닌 컨트롤에 대해 이벤트 처리기를 등록하기 좋은 �
 
 **참고** HTML에서 [onclick](https://msdn.microsoft.com/library/windows/apps/Hh441312) 이벤트를 설정하지 않고 코드에서 [addEventListener](https://msdn.microsoft.com/library/windows/apps/Hh441145)를 사용하여 이벤트를 등록하는 이유가 궁금하다면 [기본 앱 코딩](https://msdn.microsoft.com/library/windows/apps/Hh780660)에서 자세한 설명을 참조하세요.
 
-## 6단계: JavaScript용 Windows 라이브러리 컨트롤 추가
+## <a name="step-6-add-a-windows-library-for-javascript-control"></a>6단계: JavaScript용 Windows 라이브러리 컨트롤 추가
 
 
 표준 HTML 컨트롤 외에도 앱에서 [WinJS.UI.DatePicker](https://msdn.microsoft.com/library/windows/apps/BR211681), [WinJS.UI.FlipView](https://msdn.microsoft.com/library/windows/apps/BR211711), [WinjS.UI.ListView](https://msdn.microsoft.com/library/windows/apps/BR211837), [WinJS.UI.Rating](https://msdn.microsoft.com/library/windows/apps/BR211895) 컨트롤 등 [JavaScript용 Windows 라이브러리](https://msdn.microsoft.com/library/windows/apps/BR229782)의 모든 컨트롤을 사용할 수 있습니다.
@@ -362,7 +360,7 @@ HTML 컨트롤과 달리, WinJS 컨트롤에는 전용 태그 요소가 없으�
 
 지금 **Rating** 컨트롤을 클릭하면 등급이 변경되지만, 다른 것은 바뀌지 않습니다. 사용자가 등급을 변경할 때 수행될 일을 위해 이벤트 처리기를 사용하겠습니다.
 
-## 7단계: JavaScript용 Windows 라이브러리 컨트롤용 이벤트 처리기 등록
+## <a name="step-7-register-an-event-handler-for-a-windows-library-for-javascript-control"></a>7단계: JavaScript용 Windows 라이브러리 컨트롤용 이벤트 처리기 등록
 
 
 WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤트 처리기 등록과 약간 다릅니다. 앞에서, **onactivated** 이벤트 처리기가 **WinJS.UI.processAll** 메서드를 호출하여 태그에서 WinJS를 초기화하는 것에 대해 설명했습니다. **WinJS.UI.processAll** 호출은 **setPromise** 메서드 호출에 둘러싸입니다.
@@ -491,12 +489,14 @@ WinJS 컨트롤용 이벤트 처리기 등록은 표준 HTML 컨트롤용 이벤
 
 ![PC의 완료된 Hello world 앱](images/helloworld-5-winjs.png)
 
-## 요약
+## <a name="summary"></a>요약
 
-축하합니다. JavaScript 및 HTML을 사용하여 Windows10 및 UWP용 첫 번째 앱을 만들었습니다.
+축하합니다. JavaScript 및 HTML을 사용하여 Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+
+다음 작업 [WinJS](https://developer.microsoft.com/en-us/windows/develop/winjs) 문서에서는 JavaScript용 Windows 라이브러리를 활용하는 방법을 설명합니다.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

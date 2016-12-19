@@ -1,18 +1,18 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: "파일 만들기, 쓰기 및 읽기"
 description: "StorageFile 개체를 사용하여 파일을 읽고 씁니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 24f50f2c4ac7fcfe931759d42ba73e758d77f6e8
-ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 0709d9c9126dc4523eae58d5db8d9037a2fb618e
 
 ---
 
-# 파일 만들기, 쓰기 및 읽기
+# <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -25,7 +25,7 @@ ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
 
 > **참고** [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)도 참조하세요.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: 2a9f5de71712e657bc9a0a39b668085c399ce9fb
 
     파일 선택기를 사용하여 파일을 가져오는 방법은 [선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)를 참조하세요.
 
-## 파일 만들기
+## <a name="creating-a-file"></a>파일 만들기
 
 앱의 로컬 폴더에 파일을 만드는 방법은 다음과 같습니다. 이미 있는 경우 바꿉니다.
 > [!div class="tabbedCodeSnippets"]
@@ -53,7 +53,7 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## 파일에 쓰기
+## <a name="writing-to-a-file"></a>파일에 쓰기
 
 
 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 쓰기 가능 파일에 쓰는 방법은 다음과 같습니다. 파일에 쓰는 각 방법의 공통적인 첫 번째 단계(파일을 만든 즉시 해당 파일에 쓰는 경우 제외)는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
@@ -153,7 +153,7 @@ using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
         Await outputStream.FlushAsync()
 ```
 
-## 파일에서 읽기
+## <a name="reading-from-a-file"></a>파일에서 읽기
 
 
 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 클래스를 사용하여 디스크의 파일에서 읽는 방법은 다음과 같습니다. 파일에서 읽는 각 방법의 공통적인 첫 번째 단계는 [**StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)를 사용하여 파일을 가져오는 것입니다.
@@ -259,6 +259,6 @@ Dim dataReader As New DataReader(inputStream)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

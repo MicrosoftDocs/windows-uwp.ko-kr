@@ -4,22 +4,22 @@ Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱
 Search.Product: eADQiWindows 10XVcnh
 title: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환"
 translationtype: Human Translation
-ms.sourcegitcommit: fe96945759739e9260d0cdfc501e3e59fb915b1e
-ms.openlocfilehash: 6ca48fd829b7437fe2db8aa1251f6ed8976919ab
+ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
+ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
 
 ---
 
-# 데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환
+# <a name="manually-convert-your-app-to-uwp-using-the-desktop-bridge"></a>데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환
 
-DAC(데스크톱 앱 변환기)를 사용하면 작업이 편리하고 자동화되며 설치 관리자가 수행하는 작업에 대해 잘 알지 못할 때 유용합니다. Xcopy를 사용하여 앱을 설치하거나 앱의 설치 관리자 시스템 변경에 익숙한 경우 수동으로 앱 패키지와 매니페스트를 만들도록 선택할 수 있습니다.
+[DAC(Desktop App Converter)](desktop-to-uwp-run-desktop-app-converter.md)를 사용하면 작업이 편리하고 자동화되며 설치 관리자가 수행하는 작업에 대해 잘 알지 못할 때 유용합니다. 그러나 Xcopy를 사용하여 앱을 설치하거나 앱 설치 관리자의 시스템 변경에 대해 잘 아는 경우 수동으로 앱 패키지와 매니페스트를 만드는 것이 좋습니다. 이 문서에는 시작하는 단계가 포함되어 있습니다. 또한 DAC에서 다루지 않는, 판이 없는 자산을 앱에 추가하는 방법도 설명합니다. 
 
-패키지를 수동으로 만드는 단계는 다음과 같습니다.
+시작하는 방법은 다음과 같습니다.
 
-## 매니페스트를 직접 만듭니다.
+## <a name="create-a-manifest-by-hand"></a>수동으로 매니페스트 만들기
 
-_appxmanifest.xml_ 파일 콘텐츠가 최소로 필요 합니다. \*\*\*THIS\*\*\* 와 같은 서식이 지정된 자리 표시자를 응용 프로그램에 대한 실제 값으로 변경합니다.
+_appxmanifest.xml_ 파일에 적어도 다음 내용이 포함되어야 합니다. \*\*\*THIS\*\*\*와 같은 서식이 지정된 자리 표시자를 응용 프로그램에 대한 실제 값으로 변경합니다.
 
-    ```XML
+```XML
     <?xml version="1.0" encoding="utf-8"?>
     <Package
        xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -55,11 +55,27 @@ _appxmanifest.xml_ 파일 콘텐츠가 최소로 필요 합니다. \*\*\*THIS\*\
         </Application>
       </Applications>
     </Package>
-    ```
+```
 
-## MakeAppX 도구 실행
+## <a name="add-unplated-assets"></a>판이 없는 자산 추가
 
-[앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 사용하여 프로젝트의 AppX 프로젝트를 생성합니다. MakeAppx.exe는 Windows10 SDK에 함께 포함되어 있습니다. 
+작업 표시줄에 표시되는 44x44 자산을 앱에 대해 구성하는 방법은 다음과 같습니다.
+
+1. 올바른 44x44 이미지를 가져와 이미지가 들어 있는 폴더(즉, Assets)에 복사합니다.
+
+2. 각 44x44 이미지의 복사본을 동일한 폴더에서 만들고 파일 이름에 *.targetsize-44_altform-unplated*를 추가합니다. 아이콘마다 각각 특정 방식으로 이름이 지정된 두 복사본이 있어야 합니다. 예를 들어 프로세스를 완료한 후 Assets 폴더에 *MYAPP_44x44.png* 및 *MYAPP_44x44.targetsize-44_altform-unplated.png*가 포함될 수 있습니다(참고: 전자는 appxmanifest의 VisualElements 특성 *Square44x44Logo* 아래에서 참조되는 아이콘임). 
+
+3.  AppXManifest에서 수정할 각 아이콘의 BackgroundColor를 투명으로 설정합니다. 이 특성은 각 응용 프로그램에 대해 VisualElements 아래에서 찾을 수 있습니다.
+
+4.  CMD를 열고 디렉터리를 패키지의 루트 폴더로 변경한 다음 ```makepri createconfig /cf priconfig.xml /dq en-US``` 명령을 실행하여 priconfig.xml 파일을 만듭니다.
+
+5.  CMD를 통해 계속 패키지의 루트 폴더에서 ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` 명령을 사용하여 resources.pri 파일을 만듭니다. 예를 들어 앱에 대한 명령은 ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```과 같을 수 있습니다. 
+
+6.  다음 단계의 지침에 따라 AppX를 패키징하여 결과를 확인합니다.
+
+## <a name="run-the-makeappx-tool"></a>MakeAppX 도구 실행
+
+[앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 사용하여 프로젝트의 AppX 프로젝트를 생성합니다. MakeAppx.exe는 Windows 10 SDK에 함께 포함되어 있습니다. 
 
 MakeAppx를 실행하려면 먼저 위에 설명된 대로 매니페스트 파일을 만들었는지 확인합니다. 
 
@@ -79,9 +95,9 @@ MakeAppx를 실행하려면 먼저 위에 설명된 대로 매니페스트 파�
 MakeAppx.exe pack /f mapping_filepath /p filepath.appx
 ```
 
-## AppX 패키지 서명
+## <a name="sign-your-appx-package"></a>AppX 패키지 서명
 
-Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows10 SDK에서 제공된 [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)를 사용합니다.
+Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows 10 SDK에서 제공된 [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)를 사용합니다.
 
 사용 예제: 
 
@@ -102,6 +118,6 @@ MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

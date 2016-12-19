@@ -1,21 +1,21 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "파일 액세스 권한"
 description: "앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133
-ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d6cb8bd32766157b1edf886621bdc605ca160db5
 
 ---
-# 파일 액세스 권한
+# <a name="file-access-permissions"></a>파일 액세스 권한
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
 
-## 모든 앱이 액세스할 수 있는 위치
+## <a name="the-locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
 
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 
@@ -106,7 +106,7 @@ ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
 
      
 
-## Windows 스토어 앱이 액세스할 수 있는 위치
+## <a name="locations-windows-store-apps-can-access"></a>Windows 스토어 앱이 액세스할 수 있는 위치
 
 -   **사용자의 다운로드 폴더입니다.** 다운로드된 파일이 기본적으로 저장되는 폴더입니다.
 
@@ -146,7 +146,7 @@ ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
 
     다운로드 폴더에 파일이나 폴더를 만드는 경우 해당 항목의 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)에 추가하여 앱이 나중에 해당 항목에 쉽게 액세스할 수 있도록 하는 것이 좋습니다.
 
-## 추가 위치 액세스
+## <a name="accessing-additional-locations"></a>추가 위치 액세스
 
 기본 위치 외에 앱은 앱 매니페스트에 접근 권한 값을 선언하거나([앱 접근 권한 값 선언](https://msdn.microsoft.com/library/windows/apps/mt270968) 참조), 파일 선택기를 호출하여 앱이 액세스할 파일과 폴더를 사용자가 선택할 수 있게 하는([선택기를 사용하여 파일 및 폴더 열기](quickstart-using-file-and-folder-pickers.md)) 방법으로 추가 파일과 폴더에 액세스할 수 있습니다.
 
@@ -165,6 +165,6 @@ ms.openlocfilehash: e58cdce7f803cd15b66371e3b03c4405cbdeb3ff
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

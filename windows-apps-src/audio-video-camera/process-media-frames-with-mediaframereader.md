@@ -4,12 +4,12 @@ ms.assetid:
 description: "이 문서에서는 MediaFrameReader와 MediaCapture를 사용하여 색, 깊이, 적외선 카메라, 오디오 디바이스, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다."
 title: "MediaFrameReader를 사용하여 미디어 프레임 처리"
 translationtype: Human Translation
-ms.sourcegitcommit: 21433f812915a2b4da6b4d68151bbc922a97a7a7
-ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
+ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
+ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 
 ---
 
-# MediaFrameReader를 사용하여 미디어 프레임 처리
+# <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
 이 문서에서는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)와 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)를 사용하여 색, 깊이, 적외선 카메라, 오디오 디바이스, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다. 이 기능은 증강 현실 및 깊이 인식 카메라 앱과 같이 미디어 프레임의 실시간 처리를 수행하는 앱에 사용되도록 설계되었습니다.
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
 > [!NOTE] 
 > 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
 
-## 프로젝트 설정
+## <a name="setting-up-your-project"></a>프로젝트 설정
 **MediaCapture**를 사용하는 앱의 경우 카메라 디바이스에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 디바이스에서 캡처하는 경우 *마이크* 디바이스 기능도 선언해야 합니다. 
 
 **앱 매니페스트에 접근 권한 값 추가**
@@ -35,7 +35,7 @@ ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
 
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
-## 프레임 원본과 프레임 원본 그룹 선택
+## <a name="select-frame-sources-and-frame-source-groups"></a>프레임 원본과 프레임 원본 그룹 선택
 미디어 프레임을 처리하는 대부분의 앱은 디바이스의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체는 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync)를 호출하여 현재 디바이스에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
@@ -60,7 +60,7 @@ ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
 
 [!code-cs[ColorInfraredDepth](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetColorInfraredDepth)]
 
-## 선택한 프레임 원본 그룹을 사용하기 위해 MediaCapture 개체 초기화
+## <a name="initialize-the-mediacapture-object-to-use-the-selected-frame-source-group"></a>선택한 프레임 원본 그룹을 사용하기 위해 MediaCapture 개체 초기화
 다음 단계는 이전 단계에서 선택한 프레임 원본 그룹을 사용하기 위해 **MediaCapture**를 초기화하는 것입니다.
 
 **MediaCapture** 개체는 일반적으로 앱 내의 여러 위치에서 사용되므로 이 개체를 포함하는 클래스 멤버 변수를 선언해야 합니다.
@@ -78,14 +78,14 @@ ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
 
 [!code-cs[InitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitMediaCapture)]
 
-## 프레임 원본에 대한 기본 형식 설정
+## <a name="set-the-preferred-format-for-the-frame-source"></a>프레임 원본에 대한 기본 형식 설정
 프레임 원본에 대한 기본 형식을 설정하려면 원본을 나타내는 [**MediaFrameSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource) 개체를 가져와야 합니다. 이 개체를 가져오려면 초기화된 **MediaCapture** 개체의 [**Frames**](https://msdn.microsoft.com/library/windows/apps/Windows.Phone.Media.Capture.CameraCaptureSequence.Frames) 사전에 액세스하여 사용할 프레임 원본의 식별자를 지정합니다. 이러한 이유로 프레임 원본 그룹을 선택할 때 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체를 저장한 것입니다.
 
 [**MediaFrameSource.SupportedFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSource.SupportedFormats) 속성에는 프레임 원본에 대해 지원되는 형식을 설명하는 [**MediaFrameFormat**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameFormat) 개체 목록이 있습니다. **Where** Linq 확장 메서드를 사용하여 원하는 속성을 기반으로 형식을 선택합니다. 이 예제에서는 너비가 1080픽셀이고 32비트 RGB 형식으로 제공할 수 있는 형식이 선택됩니다. **FirstOrDefault** 확장 메서드는 목록의 첫 번째 항목을 선택합니다. 선택한 형식이 null이면 요청한 형식이 프레임 원본에서 지원되지 않습니다. 형식이 지원되는 경우 [**SetFormatAsync**](https://msdn.microsoft.com/library/windows/apps/)를 호출하여 원본에서 이 형식을 사용하도록 요청할 수 있습니다.
 
 [!code-cs[GetPreferredFormat](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetGetPreferredFormat)]
 
-## 프레임 원본에 대한 프레임 읽기 프로그램 만들기
+## <a name="create-a-frame-reader-for-the-frame-source"></a>프레임 원본에 대한 프레임 읽기 프로그램 만들기
 미디어 프레임 원본에 대한 프레임을 수신하려면 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)를 사용합니다.
 
 [!code-cs[DeclareMediaFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaFrameReader)]
@@ -98,7 +98,7 @@ ms.openlocfilehash: 5c4bb51ea3b1740cdbb5fa43746ce7b3edca6aa1
 
 [!code-cs[CreateFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateFrameReader)]
 
-## 프레임 도착 이벤트 처리
+## <a name="handle-the-frame-arrived-event"></a>프레임 도착 이벤트 처리
 새 프레임을 사용할 수 있을 때마다 [**MediaFrameReader.FrameArrived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.FrameArrived) 이벤트가 발생합니다. 도착하는 모든 프레임을 처리하거나 필요한 프레임만 사용할 수 있습니다. 프레임 읽기 프로그램은 해당 자체 스레드에서 이벤트를 발생시키므로 여러 스레드에서 동일한 데이터에 액세스하지 않도록 일부 동기화 논리를 구현해야 합니다. 이 섹션에서는 그리기 색 프레임을 XAML 페이지의 이미지 컨트롤과 동기화하는 방법을 보여 줍니다. 이 시나리오에서는 XAML 컨트롤에 대한 모든 업데이트가 UI 스레드에서 수행되어야 하는 추가 동기화 제약 조건을 설명합니다.
 
 XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을 만드는 것입니다. 
@@ -123,18 +123,22 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 작업 내에서 *_taskRunning* 변수를 검사하여 한 번에 작업의 한 인스턴스만 실행 중인지 확인합니다. 작업이 실행되고 있지 않은 경우 작업이 다시 실행되지 않도록 *_taskRunning*이 true로 설정됩니다. *while* 루프에서 백 버퍼 이미지가 null이 될 때까지 백 버퍼에서 임시 **SoftwareBitmap**으로 복사하기 위해 **Interlocked.Exchange**를 호출합니다. 임시 비트맵을 채울 때마다 **Image**의 **Source** 속성이 **SoftwareBitmapSource**로 캐스트된 다음 [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856)가 호출되어 이미지의 원본을 설정합니다.
 
-마지막으로 다음에 처리기를 호출할 때 작업이 다시 실행될 수 있도록 *_taskRunning* 변수를 다시 false로 설정합니다.
+마지막으로, 다음에 처리기를 호출할 때 작업이 다시 실행될 수 있도록 *_taskRunning* 변수를 다시 false로 설정합니다.
+
+> [!NOTE] 
+> [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference)의 [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame) 속성에서 제공하는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap) 또는 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface) 개체에 액세스하는 경우 시스템에서 해당 개체에 대한 강력한 참조를 만듭니다. 즉, 이러한 참조는 포함하는 **MediaFrameReference**에서 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close)를 호출할 때 삭제되지 않습니다. 개체를 즉시 삭제하려면 **SoftwareBitmap** 또는 **Direct3DSurface**의 **Dispose** 메서드를 직접 명시적으로 호출해야 합니다. 그러지 않으면 가비지 수집기에서 결국 이러한 개체의 메모리를 해제하지만 언제 수행될지 알 수 없으며, 할당된 비트맵 또는 화면 수가 시스템에서 허용된 최대 크기를 초과할 경우 새 프레임의 흐름이 중단됩니다.
+
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
 
-## 리소스 정리
+## <a name="cleanup-resources"></a>리소스 정리
 프레임 읽기가 완료된 후에는 [**StopAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader.StopAsync)를 호출하고, **FrameArrived** 처리기의 등록을 취소하고, **MediaCapture** 개체를 삭제하여 미디어 프레임 읽기 프로그램을 중지해야 합니다.
 
 [!code-cs[정리](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCleanup)]
 
 응용 프로그램이 일시 중지될 때 미디어 캡처 개체 정리에 대한 자세한 내용은 [**카메라 미리 보기 표시**](simple-camera-preview-access.md)를 참조하세요.
 
-## FrameRenderer 도우미 클래스
+## <a name="the-framerenderer-helper-class"></a>FrameRenderer 도우미 클래스
 유니버설 Windows [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)은 앱의 색, 적외선 및 깊이 원본을 통해 프레임을 쉽게 표시할 수 있는 도우미 클래스를 제공합니다. 일반적으로 단순히 화면에 표시하는 대신 색과 적외선 데이터를 사용하여 더 많은 작업을 수행하려고 하지만 이 도우미 클래스를 사용하면 프레임 읽기 프로그램 기능을 보여 주고 프레임 읽기 프로그램 구현을 디버깅할 수 있습니다.
 
 **FrameRenderer** 도우미 클래스는 다음 메서드를 구현합니다.
@@ -148,7 +152,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetFrameRenderer)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -163,6 +167,6 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

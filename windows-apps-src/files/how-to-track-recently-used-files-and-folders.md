@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: "최근에 사용한 파일 및 폴더 추적"
 description: "사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: fc873da2d0b48cdc614fa319a294e67642440cdf
 
 ---
-# 최근에 사용한 파일 및 폴더 추적
+# <a name="track-recently-used-files-and-folders"></a>최근에 사용한 파일 및 폴더 추적
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
  
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
     선택한 파일은 종종 사용자가 반복해서 열어 보는 파일과 동일한 파일입니다.
 
- ## MRU에 선택한 파일 추가
+ ## <a name="add-a-picked-file-to-the-mru"></a>MRU에 선택한 파일 추가
 
 -   사용자가 선택하는 파일은 해당 사용자가 반복적으로 돌아가는 파일인 경우가 많습니다. 따라서 사용자가 파일을 선택하는 즉시 해당 파일을 앱의 MRU에 추가하는 것이 좋습니다. 방법은 다음과 같습니다.
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: 84b78cc4af9490f142c0f74fec127e1d003ce6df
 
      
 
-## 토큰을 사용하여 MRU에서 항목 검색
+## <a name="use-a-token-to-retrieve-an-item-from-the-mru"></a>토큰을 사용하여 MRU에서 항목 검색
 
 검색하려는 항목에 가장 적합한 검색 방법을 사용합니다.
 
@@ -87,11 +87,11 @@ foreach (Windows.Storage.AccessCache.AccessListEntry entry in mru.Entries)
 
 [**AccessListEntryView**](https://msdn.microsoft.com/library/windows/apps/br227349)를 사용하면 MRU에서 항목을 반복할 수 있습니다. 이러한 항목은 항목에 대한 토큰과 메타데이터가 포함된 [**AccessListEntry**](https://msdn.microsoft.com/library/windows/apps/br227348) 구조입니다.
 
-## 가득 찬 경우 MRU에서 항목 제거
+## <a name="removing-items-from-the-mru-when-its-full"></a>가득 찬 경우 MRU에서 항목 제거
 
 MRU의 25개 항목 제한에 도달한 후 새 항목을 추가하려고 하면 가장 오래 전에 액세스한 항목이 자동으로 제거됩니다. 따라서 새 항목을 추가하기 전에 항목을 제거할 필요가 없습니다.
 
-## 향후 액세스 목록
+## <a name="future-access-list"></a>향후 액세스 목록
 
 MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 및 폴더를 선택하여 사용자는 액세스하지 못할 수 있는 항목에 대한 액세스 권한을 앱에 부여할 수 있습니다. 이러한 항목을 향후 액세스 목록에 추가하면 나중에서 앱이 이러한 항목에 다시 액세스하려는 경우 해당 권한이 유지됩니다. 앱의 향후 액세스 목록은 정적 [**StorageApplicationPermissions.FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 속성에서 가져오는 [**StorageItemAccessList**](https://msdn.microsoft.com/library/windows/apps/br207459) 클래스로 표현됩니다.
 
@@ -106,6 +106,6 @@ MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

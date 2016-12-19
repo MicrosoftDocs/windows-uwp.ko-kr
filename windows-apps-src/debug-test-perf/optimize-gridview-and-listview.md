@@ -4,11 +4,11 @@ ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "ListView 및 GridView UI 최적화"
 description: "UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
+ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
+ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
 
 ---
-# ListView 및 GridView UI 최적화
+# <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -17,7 +17,7 @@ ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
 
 UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 성능과 시작 시간을 개선합니다. 데이터 가상화 기술은 [ListView 및 GridView 데이터 가상화](listview-and-gridview-data-optimization.md)를 참조하세요.
 
-## 컬렉션 성능의 두 가지 주요 요소
+## <a name="two-key-factors-in-collection-performance"></a>컬렉션 성능의 두 가지 주요 요소
 
 컬렉션 조작은 일반적인 시나리오입니다. 사진 뷰어에는 사진 컬렉션이 있고, 판독기에는 기사/책/스토리 컬렉션이 있으며, 쇼핑 앱에는 제품 컬렉션이 있습니다. 이 항목에서는 컬렉션 조작에 효율적인 앱을 만들기 위해 수행할 수 있는 작업을 보여 줍니다.
 
@@ -25,7 +25,7 @@ UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [
 
 원활한 이동/스크롤을 위해서는 UI 스레드가 항목을 인스턴스화, 데이터 바인딩 및 배치하는 작업을 효율적이고 지능적으로 수행해야 합니다.
 
-## UI 가상화
+## <a name="ui-virtualization"></a>UI 가상화
 
 UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)(및 기타 표준 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
@@ -33,7 +33,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 뷰포트는 **ListView** 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) 및 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704))에 무제한 공간을 허용합니다. 가상화된 **ItemsControl**이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 이 경우 **ItemsControl**에서 너비와 높이를 설정하여 가상화를 복원합니다.
 
-## 항목별 요소 감소
+## <a name="element-reduction-per-item"></a>항목별 요소 감소
 
 항목을 렌더링하는 데 사용되는 UI 요소 수를 적절한 최소값으로 유지합니다.
 
@@ -64,7 +64,8 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 [**SelectionCheckMarkVisualEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled.aspx) 및 [**SelectedBackground**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.selectedbackground.aspx)와 유사한 자체 설명 이름을 가진 약 25개의 속성이 있습니다. 프리젠터 형식이 사용 사례에 맞게 사용자 지정할 수 없는 것으로 증명된 경우 대신 `ListViewItemExpanded` 또는 `GridViewItemExpanded` 컨트롤 템플릿의 복사본을 편집할 수 있습니다. 이러한 템플릿은 `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`에서 찾을 수 있습니다. 이러한 템플릿을 사용하면 사용자 지정성이 증가하는 대신 성능이 저하됩니다.
 
-## 점진적으로 ListView 및 GridView 항목 업데이트
+<span id="update-items-incrementally"/>
+## <a name="update-listview-and-gridview-items-progressively"></a>점진적으로 ListView 및 GridView 항목 업데이트
 
 데이터 가상화를 사용하는 경우 로드 중인 항목에 대한 임시 UI 요소를 렌더링하도록 컨트롤을 구성하여 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)의 응답성을 높게 유지할 수 있습니다. 임시 요소는 데이터가 로드되면서 점점 실제 UI로 대체됩니다.
 
@@ -72,7 +73,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 이러한 기술의 예는 종종 사진 보기 앱에서 볼 수 있습니다. 일부 이미지가 로드 및 표시되지 않은 경우에도 사용자는 계속 이동/스크롤하면서 컬렉션을 조작할 수 있습니다. 또는 "영화" 항목의 경우 첫 번째 단계에서는 제목, 두 번째 단계에서는 평점, 세 번째 단계에서는 포스터 이미지를 표시할 수 있습니다. 사용자에게는 각 항목에 대한 가장 중요한 데이터가 최대한 빨리 표시되므로 한 번에 작업을 수행할 수 있습니다. 그런 다음 시간이 남으면 중요하지 않은 정보가 채워집니다. 다음은 이러한 기술을 구현하는 데 사용할 수 있는 플랫폼 기능입니다.
 
-### 자리 표시자
+### <a name="placeholders"></a>자리 표시자
 
 임시 자리 표시자 시각 요소 기능은 기본적으로 켜져 있으며 [**ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) 속성을 통해 제어됩니다. 빠른 이동/스크롤 중에 이 기능은 원활함을 유지하면서 완전히 표시할 항목이 아직 더 있음을 알려 주는 시각적 힌트를 사용자에게 제공합니다. 아래 기법 중 하나를 사용하는 경우 시스템이 자리 표시자를 렌더링하지 않게 하려면 **ShowsScrollingPlaceholders**를 false로 설정할 수 있습니다.
 
@@ -239,7 +240,7 @@ namespace LotsOfItems
 
 4.  이제 앱을 실행하고 그리드 보기를 통해 신속하게 이동/스크롤하면 **x:Phase**에 대해 동일한 동작이 표시됩니다.
 
-## 다른 유형의 컬렉션에서 컨테이너 재생
+## <a name="container-recycling-with-heterogeneous-collections"></a>다른 유형의 컬렉션에서 컨테이너 재생
 
 일부 응용 프로그램에서는 컬렉션 내의 다른 항목 유형에 대해 다른 UI가 있어야 합니다. 이로 인해 가상화 패널에서 항목을 표시하는 데 사용되는 시각적 요소를 재사용/재활용하는 것이 불가능한 상황이 생길 수 있습니다. 이동 중 항목에 대한 시각적 요소를 다시 만들면 가상화에서 제공하는 성능 향상의 많은 이점이 취소됩니다. 그러나 조금만 계획하면 가상화 패널에서 요소를 재사용할 수 있습니다. 개발자는 시나리오에 따라 두 가지 옵션, 즉 [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)이벤트 또는 항목 템플릿 선택기의 옵션이 있습니다. **ChoosingItemContainer**응 성능이 더 우수한 접근 방식입니다.
 
@@ -320,6 +321,6 @@ private void lst-ChoosingItemContainer
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

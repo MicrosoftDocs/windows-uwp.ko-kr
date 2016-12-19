@@ -4,12 +4,12 @@ description: "이 소개 문서를 읽으면 앱 설계자 및 개발자가 보�
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
+ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
+ms.openlocfilehash: 2ac9edf074ceb91d5cfea17228f0a39fef200b74
 
 ---
 
-# 보안 Windows 앱 개발 소개
+# <a name="intro-to-secure-windows-app-development"></a>보안 Windows 앱 개발 소개
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,7 +17,7 @@ ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
 
 이 소개 문서를 읽으면 앱 설계자 및 개발자가 보안 UWP(유니버설 Windows 플랫폼) 앱 만들기를 가속화하는 다양한 Windows 10 플랫폼 기능을 더 잘 이해할 수 있습니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
 
-## 1 소개
+## <a name="1-introduction"></a>1 소개
 
 
 보안 앱 개발은 어려울 수 있습니다. 오늘날처럼 빠르게 진행되는 모바일, 소셜, 클라우드 및 복잡한 엔터프라이즈 앱 세상의 고객들은 앱이 전보다 더 빠르게 상용화 및 업데이트되기를 기대합니다. 또한 고객들은 다양한 유형의 디바이스를 사용하므로 앱 환경 만들기는 더욱 복잡해지고 있습니다. Windows 10 UWP(유니버설 Windows 플랫폼)을 빌드하는 경우에는 데스크톱, 랩톱, 태블릿 및 모바일 디바이스 등의 기존 목록이 포함될 수 있으며, 여기에 사물 인터넷, Xbox One, Microsoft Surface Hub 및 HoloLens 등 새로운 디바이스들까지 차차 목록에 추가할 수 있습니다. 개발자는 모든 플랫폼 또는 관련 디바이스에서 앱들이 안전하게 통신하고 데이터를 저장하는지 확인해야 합니다.
@@ -34,7 +34,7 @@ ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
 
 마지막으로, 저장 데이터(data-at-rest)는 메모리 또는 저장소 미디어에 상주하는 데이터와 관련이 있습니다. Windows 10에는 앱 사이의 데이터 무단 액세스를 방지하고 디바이스의 데이터 보안을 강화하기 위한 암호화 API를 제공하는 앱 모델이 있습니다. 자격 증명 보관이라는 기능은 운영 체제가 다른 앱이 액세스하지 못하도록 방지하는 디바이스에서 사용자 자격 증명을 안전하게 저장하는 데 사용할 수 있습니다.
 
-## 2 인증 요소
+## <a name="2-authentication-factors"></a>2 인증 요소
 
 
 데이터를 보호하려면 액세스를 요청하는 사용자를 식별하고 요청한 데이터 리소스에 액세스할 권한을 부여해야 합니다. 사용자를 식별하는 프로세스는 인증이라고 하며, 리소스에 대한 액세스 권한을 결정하는 것을 권한 부여라고 합니다. 이는 밀접하게 관련된 작업이며, 사용자는 이 두 가지를 구분하지 못할 수 있습니다. 많은 요인(예: 데이터가 한 서버에 있는지 아니면 여러 시스템에 분산되어 있는지 여부)에 따라 상대적으로 간단하거나 복잡할 수 있습니다. 인증 및 권한 부여 서비스를 제공하는 서버를 ID 공급자라고 합니다.
@@ -49,7 +49,7 @@ ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
 
 따라서 컴퓨터에서 사용하는 인증 방법은 데이터 보안의 복잡하고 중요한 측면입니다. 일반적으로 인증에 더 많은 요소를 사용할수록 컴퓨터의 보안이 더 강화됩니다. 동시에 인증도 사용 가능해야 합니다. 사용자가 일반적으로 하루에도 몇 번씩 시스템에 로그인할 수 있으므로 프로세스가 빨라야 합니다. 인증 유형을 선택할 때는 보안과 사용 편의성 사이에서 절충안을 찾게 됩니다. 단일 요소 인증은 최소의 보안으로 가장 쉽게 사용할 수 있으며, 다단계 인증은 보다 안전하며 요소가 추가될수록 더 복잡해집니다.
 
-## 2.1 단일 요소 인증
+## <a name="21-single-factor-authentication"></a>2.1 단일 요소 인증
 
 
 이 인증 형태는 단일 사용자 자격 증명을 기반으로 합니다. 이는 일반적으로 암호이지만 PIN(개인 식별 번호)도 될 수 있습니다.
@@ -69,7 +69,7 @@ ms.openlocfilehash: 434505a697e045198972ce529366be281774af86
 
 이러한 모든 단점에도 불구하고 단일 요소 인증을 통해 사용자는 자격 증명을 제어할 수 있습니다. 사용자는 자격 증명을 만들고 수정할 수 있으며 인증 프로세스를 위해 키보드만 있으면 됩니다. 바로 이 점이 다단계 인증과 단일 요소 인증을 구별하는 주요 측면입니다.
 
-## 2.1.1 웹 인증 브로커
+## <a name="211-web-authentication-broker"></a>2.1.1 웹 인증 브로커
 
 
 앞에서 설명한 대로, 암호 인증의 문제 중 하나는 IT 부서에 사용자 이름/암호, 복원 메커니즘 등의 기본 관리에 따른 오버헤드가 추가된다는 점입니다. 점점 많이 사용되고 있는 방법은 개방형 인증 표준인 OAuth를 통해 인증을 제공하는 타사 ID 공급자를 이용하는 것입니다.
@@ -128,7 +128,7 @@ catch (Exception ex)
 }
 ```
 
-## 2.2 다단계 인증
+## <a name="22-multi-factor-authentication"></a>2.2 다단계 인증
 
 
 다단계 인증은 둘 이상의 인증 요소를 이용합니다. 일반적으로 암호같이 "알고 있는 내용"이 휴대폰 또는 스마트 카드같이 "갖고 있는 것"과 결합됩니다. 공격자가 사용자의 암호를 알아도 디바이스 또는 카드가 없으면 여전히 계정에 액세스할 수 없습니다. 또한 디바이스 또는 카드를 알아도 암호가 없으면 공격자에게는 소용이 없습니다. 따라서 다단계 인증은 단일 요소 인증보다 더욱 안전하면서 복잡합니다.
@@ -146,7 +146,7 @@ catch (Exception ex)
 
 표시된 것처럼 이 프로세스는 두 번째 사용자 자격 증명이 사용자에 의해 만들어지거나 제공되지 않고 사용자에게 전송된다는 점에서 단일 요소 인증과 다릅니다. 그렇기 때문에 사용자는 필요한 자격 증명을 완전히 제어하지 못합니다. 이는 스마트 카드가 두 번째 자격 증명으로 사용될 때에도 적용됩니다. 조직이 해당 자격 증명을 만들고 사용자에게 이 자격 증명을 제공하는 것을 담당합니다.
 
-## 2.2.1 Azure Active Directory
+## <a name="221-azure-active-directory"></a>2.2.1 Azure Active Directory
 
 
 Azure AD(Azure Active Directory)는 단일 요소 인증 또는 다단계 인증에서 ID 공급자 역할을 할 수 있는 클라우드 기반 ID 및 액세스 관리 서비스입니다. Azure AD 인증은 인증 코드 여부에 관계없이 사용할 수 있습니다.
@@ -155,7 +155,7 @@ Azure AD는 단일 요소 인증을 구현할 수도 있지만 기업은 일반�
 
 또한 Azure AD를 OAuth 공급자로 사용하여 표준 사용자에게 다양한 플랫폼 간 앱에 대한 인증 및 권한 부여 메커니즘을 제공할 수 있습니다. 자세한 내용은 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) 및 [Azure에서 다단계 인증](https://azure.microsoft.com/services/multi-factor-authentication/)을 참조하세요.
 
-## 2.4 Microsoft Passport 및 Windows Hello
+## <a name="24-microsoft-passport-and-windows-hello"></a>2.4 Microsoft Passport 및 Windows Hello
 
 
 Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. 관련된 두 가지 구성 요소를 Microsoft Passport 및 Windows Hello라고 합니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다.
@@ -174,12 +174,12 @@ Microsoft Passport는 단순히 기존 2FA 시스템의 대체가 아닙니다. 
 
 Microsoft Passport 및 Windows Hello에 대한 자세한 내용은 [Microsoft Passport 가이드](https://msdn.microsoft.com/library/mt589441) 및 [Microsoft Passport 개발자 가이드](microsoft-passport.md)를 참조하세요.
 
-## 3 진행 데이터(data-in-flight) 보안 방법
+## <a name="3-data-in-flight-security-methods"></a>3 진행 데이터(data-in-flight) 보안 방법
 
 
 진행 데이터(data-in-flight) 보안 방법은 네트워크에 연결된 디바이스 간에 전송 중인 데이터에 적용됩니다. 데이터는 개인 회사 인트라넷의 높은 수준의 보안 환경에 있는 시스템 간 또는 웹의 비보안 환경에 있는 클라이언트와 웹 서비스 간에 전송될 수 있습니다. Windows 10은 네트워킹 API를 통해 SSL과 같은 표준을 지원하고 Azure API 관리와 같은 기술을 사용하여 작동합니다. Azure API를 통해 개발자는 해당 앱에 대한 적절한 보안 수준을 확보할 수 있습니다.
 
-## 3.1 원격 시스템 인증
+## <a name="31-remote-system-authentication"></a>3.1 원격 시스템 인증
 
 
 원격 컴퓨터 시스템과의 통신이 발생하게 되는 두 가지 일반적인 시나리오가 있습니다.
@@ -193,14 +193,14 @@ Microsoft Passport 및 Windows Hello에 대한 자세한 내용은 [Microsoft Pa
 
 두 번째 요구 사항은 메시지 무결성입니다. 클라이언트 및 웹 서비스는 받은 메시지가 상대방이 보내려던 메시지이고 해당 메시지가 전송 중에 변경되지 않았는지 확인할 수 있어야 합니다. 이를 수행하는 방법은 디지털 서명을 사용하여 메시지를 서명하고 인증서 인증을 사용하는 것입니다.
 
-## 3.2 SSL 연결
+## <a name="32-ssl-connections"></a>3.2 SSL 연결
 
 
 클라이언트에 보안 연결을 설정하고 유지 관리하기 위해 웹 서비스가 SSL(Secure Sockets Layer)을 사용하며 이는 HTTPS(Secure Hypertext Transfor Protocol)에서 지원됩니다. SSL은 서버 인증서뿐만 아니라 공개 키 암호화를 지원하여 메시지 기밀성 및 무결성을 제공합니다. SSL은 TLS(전송 계층 보안)로 대체되지만 TLS를 종종 SSL이라고도 합니다.
 
 클라이언트가 서버에서 리소스에 대한 액세스를 요청하면 SSL은 서버와 협상 프로세스를 시작합니다. 이를 SSL 핸드셰이크라고 합니다. SSL 연결 기간 동안 암호화 수준, 공개 및 개인 암호화 키 집합 및 클라이언트와 서버 인증서의 ID 정보가 모든 통신의 기초로 합의됩니다. 또한 이때 서버가 클라이언트에게 인증을 받으라고 요구할 수도 있습니다. 연결이 설정되면 모든 메시지가 연결이 닫힐 때까지 협상된 공개 키로 암호화됩니다.
 
-## 3.2.1 SSL 고정
+## <a name="321-ssl-pinning"></a>3.2.1 SSL 고정
 
 
 SSL은 암호화 및 인증서를 사용하여 메시지 기밀성을 제공할 수 있지만 클라이언트와 통신 중인 서버가 클라이언트가 원하는 서버인지 확인하는 작업은 전혀 없습니다. 무단 침입자가 서버의 동작을 모방하여 클라이언트가 전송하는 중요한 데이터를 가로챌 수 있습니다. 이 문제를 방지하기 위해 SSL 고정이라는 기술을 사용하면 서버 인증서가 클라이언트가 기대하고 신뢰하는 인증서인지 확인할 수 있습니다.
@@ -260,7 +260,7 @@ private bool ValidateCertificates(IReadOnlyList<Certificate> certs)
 }
 ```
 
-## 3.3 REST API에 대한 액세스 게시 및 보안
+## <a name="33-publishing-and-securing-access-to-rest-apis"></a>3.3 REST API에 대한 액세스 게시 및 보안
 
 
 웹 서비스에 대한 액세스 권한을 가지려면 API 호출이 이루어질 때마다 인증이 필요합니다. 성능 및 크기를 제어할 수 있는지 여부는 웹 서비스가 웹에서 노출될 때 고려해야 할 사항이기도 합니다. Azure API 관리는 세 가지 수준에서 기능을 제공하는 동안 웹에서 API를 노출하는 데 도움이 되는 서비스입니다.
@@ -273,12 +273,12 @@ API의 **Publishers/Administrators**는 Azure API 관리의 게시자 포털을 
 
 Azure API 관리는 서비스(제한이라는 프로시저)에 API 호출 수를 줄여서 웹 서비스의 성능을 최적화할 수도 있습니다. 자세한 내용은 [Azure API 관리](https://azure.microsoft.com/services/api-management/) 및 [AzureCon 2015에서 Azure API 관리](https://channel9.msdn.com/events/Microsoft-Azure/AzureCon-2015/ACON313)를 참조하세요.
 
-## 4 저장 데이터(data-at-rest) 보안 메서드
+## <a name="4-data-at-rest-security-methods"></a>4 저장 데이터(data-at-rest) 보안 메서드
 
 
 데이터가 디바이스에 도착할 때 해당 데이터를 "저장 데이터(data-at-rest)"라고 합니다. 이 데이터는 권한이 없는 사용자 또는 앱이 액세스할 수 없도록 안전한 방법으로 디바이스에 저장되어야 합니다. Windows 10의 앱 모델에서는 많은 기능으로 앱에서 저장한 데이터가 기본적으로 해당 앱에만 액세스할 수 있도록 하지만 필요할 때는 데이터를 공유하기 위해 API를 제공합니다. 또한 데이터를 암호화하고 자격 증명을 안전하게 저장할 수 있도록 추가 API를 사용할 수도 있습니다.
 
-## 4.1 Windows 앱 모델
+## <a name="41-windows-app-model"></a>4.1 Windows 앱 모델
 
 
 일반적으로 Windows에는 앱에 대한 정의가 없습니다. 가장 흔히 실행 파일(.exe)이라고 하지만 설치, 상태 저장, 실행 길이, 버전 관리, OS 통합 및 앱 간 통신은 정의에 들어가지 않습니다. 유니버설 Windows 플랫폼 모델에서는 설치, 런타임 환경, 리소스 관리, 업데이트, 데이터 모델 및 설치 제거를 다루는 앱 모델을 정의합니다.
@@ -293,7 +293,7 @@ Windows 10 앱은 기본적으로 권한이 제한되어 있으므로 컨테이�
 
 자세한 내용은 [유니버설: Windows 10 응용 프로그램의 수명 주기 이해](https://visualstudiomagazine.com/articles/2015/09/01/its-universal.aspx)를 참조하세요.
 
-## 4.2 저장된 자격 증명 보호
+## <a name="42-stored-credential-protection"></a>4.2 저장된 자격 증명 보호
 
 
 인증된 서비스에 액세스하는 Windows 앱은 로컬 디바이스에 해당 자격 증명을 저장하는 옵션을 사용자에게 제공하는 경우가 많습니다. 이는 사용자에게 편리한 기능입니다. 사용자가 사용자 이름 및 암호를 제공한 경우 다음에 앱을 시작할 때 자동으로 해당 사용자 이름 및 암호를 사용합니다. 공격자가 저장된 이 데이터에 대한 액세스 권한을 얻는 경우 보안 문제가 될 수 있으므로 Windows 10은 Windows 앱이 보안 자격 증명 보관에 사용자 자격 증명을 저장하는 기능을 제공합니다. 앱은 앱의 저장소 컨테이너에 자격 증명을 저장하지 않고 자격 증명 보관 API를 호출하여 자격 증명 보관에 저장하고 검색합니다. 자격 증명 보관은 운영 체제에서 관리되지만 액세스가 자격 증명을 저장하는 앱에 제한되며 자격 증명 저장을 위해 안전한 관리형 솔루션을 제공합니다.
@@ -359,12 +359,12 @@ private PasswordCredential GetCredentialFromLocker()
 
 자세한 내용은 [자격 증명 보관](credential-locker.md)을 참조하세요.
 
-## 4.3 저장된 데이터 보호
+## <a name="43-stored-data-protection"></a>4.3 저장된 데이터 보호
 
 
 데이터가 저장되었을 때 일반적으로 저장 데이터(data-at-rest)라고 하며 이를 암호화하면 권한이 없는 사용자가 저장된 데이터에 액세스하지 못하도록 할 수 있습니다. 데이터를 암호화는 두 가지 일반적인 메커니즘은 대칭 키 또는 비대칭 키를 사용하는 것입니다. 그러나 데이터 암호화는 데이터를 보낸 시간과 저장한 시간 사이에 데이터가 변경되지 않는다고 보장할 수 없습니다. 즉, 데이터 무결성을 보장할 수 없습니다. 이 문제를 해결하는 일반적인 기술은 메시지 인증 코드, 해시 및 디지털 서명을 사용하는 것입니다.
 
-## 4.3.1 데이터 암호화
+## <a name="431-data-encryption"></a>4.3.1 데이터 암호화
 
 
 대칭형 암호화를 사용하면 발신자와 수신자가 동일한 키를 사용하여 데이터를 암호화하고 암호 해독합니다. 이 접근 방식의 과제는 키를 공유하므로 양쪽 모두 그 키를 알고 있다는 것입니다.
@@ -373,10 +373,10 @@ private PasswordCredential GetCredentialFromLocker()
 
 Windows 앱 개발자는 [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) 및 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 클래스를 사용하여 해당 UWP 앱에서 대칭형 및 비대칭형 암호화를 구현할 수 있습니다. 또한 [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스가 데이터를 암호화하고 암호 해독하고 콘텐츠를 서명하고 디지털 서명을 확인하는 데 사용할 수 있습니다. 또한 앱은 [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) 네임스페이스의 [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) 클래스를 사용하여 저장된 로컬 데이터를 암호화하고 암호 해독할 수 있습니다.
 
-## 4.3 메시지 변조(MAC, 해시 및 서명) 감지
+## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 메시지 변조(MAC, 해시 및 서명) 검색
 
 
-MAC은 대칭 키(비밀 키라고도 함)를 사용한 결과의 코드(또는 태그)이거나 MAC 암호화 알고리즘의 입력으로 사용하는 메시지입니다. 메시지를 전송하기 전에 발신자와 수신자가 비밀 키 및 알고리즘에 동의합니다.
+MAC는 대칭 키(비밀 키라고도 함)를 사용한 결과인 코드(또는 태그)이거나 MAC 암호화 알고리즘의 입력으로 사용되는 메시지입니다. 메시지를 전송하기 전에 발신자와 수신자가 비밀 키 및 알고리즘에 동의합니다.
 
 MAC에서 다음과 같은 메시지를 확인합니다.
 
@@ -385,14 +385,14 @@ MAC에서 다음과 같은 메시지를 확인합니다.
 -   수신자가 MAC 알고리즘에 대한 입력으로 사용하는 비밀 키 및 메시지를 사용하여 MAC 태그를 파생합니다.
 -   수신자가 MAC 태그를 발신자의 MAC 태그와 비교합니다. 두 태그가 서로 같으면 메시지가 변조되지 않은 것입니다.
 
-![](images/secure-macs.png)
+![mac 확인](images/secure-macs.png)
 
-Windows 앱이 [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) 클래스를 호출하여 키를 생성하고 [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스를 호출하여 MAC 암호화 알고리즘을 수행함으로써 MAC 메시지 확인을 구현할 수 있습니다.
+Windows 앱은 [**MacAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241530) 클래스 호출을 통해 키를 생성하고 [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) 클래스 호출을 통해 MAC 암호화 알고리즘을 수행하여 MAC 메시지 확인을 구현할 수 있습니다.
 
-## 4.3.1 해시 사용
+## <a name="433-using-hashes"></a>4.3.3 해시 사용
 
 
-해시 함수는 임의로 긴 데이터 블록을 가져가서 해시 값이라는 고정 크기의 비트 문자열을 반환하는 암호화 알고리즘입니다. 이 작업을 수행할 수 있는 해시 함수의 전체 패밀리가 있습니다.
+해시 함수는 임의로 긴 데이터 블록을 사용하고 해시 값이라는 고정 크기의 비트 문자열을 반환하는 암호화 알고리즘입니다. 이 작업을 수행할 수 있는 해시 함수의 전체 패밀리가 있습니다.
 
 위의 메시지 전송 시나리오에서 MAC 대신 해시 값을 사용할 수 있습니다. 발신자가 해시 값 및 메시지를 보내고 수신자가 발신자의 해시 값 및 메시지에서 나온 고유한 해시 값을 파생하여 두 해시 값을 비교합니다. Windows 10에서 실행되는 앱은 [**HashAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241511) 클래스를 호출하여 사용 가능한 해시 알고리즘을 열거하고 그중 하나를 실행할 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스는 해시 값을 나타냅니다. [**CryptographicHash.GetValueAndReset**](https://msdn.microsoft.com/library/windows/apps/hh701376) 메서드를 사용하면 사용할 때마다 개체를 다시 만들지 않고도 여러 데이터를 반복적으로 해시할 수 있습니다. **CryptographicHash** 클래스의 Append 메서드는 해시할 버퍼에 새 데이터를 추가합니다. 이 전체 프로세스는 다음 C# 코드 예제에서 보여 줍니다.
 
@@ -428,7 +428,7 @@ public void SampleReusableHash()
 }
 ```
 
-## 4.3.2 디지털 서명
+## <a name="434-digital-signatures"></a>4.3.4 디지털 서명
 
 
 디지털 서명된 저장 메시지의 데이터 무결성은 MAC 인증과 유사한 방식으로 확인됩니다. 디지털 서명 워크플로가 작동하는 방법은 다음과 같습니다.
@@ -444,7 +444,7 @@ public void SampleReusableHash()
 
 자세한 내용은 [디지털 서명](https://msdn.microsoft.com/library/windows/desktop/aa381977), [MAC, 해시, 서명](macs-hashes-and-signatures.md) 및 [암호화](cryptography.md)에 관한 기사를 참조하세요.
 
-## 5 요약
+## <a name="5-summary"></a>5 요약
 
 
 Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드는 데에 운영 체제 기능을 활용하는 방법을 제공합니다. 단일 요소 인증, 다단계 인증, OAuth ID 공급자를 사용하여 조정된 인증 등의 여러 가지 인증 시나리오에서 API는 인증과 관련된 가장 일반적인 문제를 완화하기 위해 존재합니다. Windows Hello에서는 사용자를 인식하고 적절한 식별을 우회하려는 노력을 적극적으로 방어하는 새로운 생체 인식 로그인 시스템을 제공합니다. Microsoft Passport는 Windows Hello와 함께 작동하여 신뢰할 수 있는 플랫폼 모듈 외부에서 절대로 노출되거나 사용되지 않는 여러 계층의 인증서 및 키를 제공합니다. 또한 선택적으로 증명 확인 키 및 인증서를 사용하여 추가 보안 계층도 적용할 수 있습니다.
@@ -453,10 +453,10 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 
 데이터가 디바이스에 도착하면 Windows 앱 모델은 앱이 설치 및 업데이트되는 방법과 그 데이터에 액세스하는 방법을 보다 잘 제어할 수 있도록 하면서 다른 앱이 무단으로 데이터에 액세스하지 못하게 합니다. 자격 증명 보관은 운영 체제에 의해 관리되는 사용자 자격 증명의 보안 저장소를 제공할 수 있으며 다른 데이터는 유니버설 Windows 플랫폼에서 제공하는 API 해시 및 암호화를 사용하여 디바이스에서 보호할 수 있습니다.
 
-## 6 리소스
+## <a name="6-resources"></a>6 리소스
 
 
-### 6.1 방법 문서
+### <a name="61-how-to-articles"></a>6.1 방법 문서
 
 -   [인증 및 사용자 ID](authentication-and-user-identity.md)
 -   [Microsoft Passport](microsoft-passport.md)
@@ -473,7 +473,7 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [암호화에 대한 내보내기 제한](export-restrictions-on-cryptography.md)
 -   [일반적인 암호화 작업](common-cryptography-tasks.md)
 
-### 6.2 코드 샘플
+### <a name="62-code-samples"></a>6.2 코드 샘플
 
 -   [자격 증명 보관](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/PasswordVault)
 -   [자격 증명 선택](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CredentialPicker)
@@ -484,7 +484,7 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [웹 계정 관리](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAccountManagement)
 -   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/WebAuthenticationBroker)
 
-### 6.3 API 참조
+### <a name="63-api-reference"></a>6.3 API 참조
 
 -   [**Windows.Security.Authentication.OnlineId**](https://msdn.microsoft.com/library/windows/apps/hh701371)
 -   [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)
@@ -501,6 +501,6 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

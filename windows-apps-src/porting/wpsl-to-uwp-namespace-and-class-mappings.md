@@ -4,12 +4,12 @@ description: "이 항목에서는 Windows Phone Silverlight API를 해당 UWP(�
 title: "Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑"
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
 
 ---
 
-# Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑
+# <a name="windows-phone-silverlight-to-uwp-namespace-and-class-mappings"></a>Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Appointments** 클래스 | [**AppointmentCalendar**](https://msdn.microsoft.com/library/windows/apps/dn596134) 클래스 |
 | (MPU = **Microsoft.Phone.UserData**) <br/> **MPU.Contacts** 클래스 | [**ContactStore**](https://msdn.microsoft.com/library/windows/apps/dn624859) 클래스 |
 | 컨트롤 및 UI 인프라 | |
-| **ControlTiltEffect.TiltEffect** 클래스 | Windows 런타임 애니메이션 라이브러리의 애니메이션은 공용 컨트롤의 기본 스타일로 기본 제공됩니다. [애니메이션](wpsl-to-uwp-porting-xaml-and-ui.md#animation)을 참조하세요. |
+| **ControlTiltEffect.TiltEffect** 클래스 | Windows 런타임 애니메이션 라이브러리의 애니메이션은 공용 컨트롤의 기본 스타일로 기본 제공됩니다. [애니메이션](wpsl-to-uwp-porting-xaml-and-ui.md)을 참조하세요. |
 | **Microsoft.Phone.Controls** 네임스페이스 | [**Windows.UI.Xaml.Controls**](https://msdn.microsoft.com/library/windows/apps/br227716) 네임스페이스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/> **MPC.ContextMenu** 클래스 | [**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693) 클래스 |
 | (MPC = **Microsoft.Phone.Controls**) <br/>**MPC.DatePickerPage** 클래스 | [**DatePickerFlyout**](https://msdn.microsoft.com/library/windows/apps/dn625013) 클래스 |
@@ -80,7 +80,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | (MPD = **Microsoft.Phone.Data**) <br/>**MPD.Linq** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
 | (MPD = **Microsoft.Phone.Data**) <br/>**MPD.Linq.Mapping** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Phone.Globalization** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
-| (MPI = **Microsoft.Phone.Info**) <br/>**MPI.DeviceExtendedProperties**, **DeviceStatus** 클래스 | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) 클래스. 자세한 내용은 [디바이스 상태](wpsl-to-uwp-input-and-sensors.md#device-status)를 참조하세요. | 
+| (MPI = **Microsoft.Phone.Info**) <br/>**MPI.DeviceExtendedProperties**, **DeviceStatus** 클래스 | [**EasClientDeviceInformation**](https://msdn.microsoft.com/library/windows/apps/hh701390), [**MemoryManager**](https://msdn.microsoft.com/library/windows/apps/dn633831) 클래스. 자세한 내용은 [디바이스 상태](wpsl-to-uwp-input-and-sensors.md)를 참조하세요. | 
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.MediaCapabilities** 클래스 | 직접적으로 해당하는 항목이 없습니다. | 
 | (MPI = **Microsoft.Phone.Info**) <br/>**MPI.UserExtendedProperties** 클래스 | [**AdvertisingManager**](https://msdn.microsoft.com/library/windows/apps/dn363391) 클래스 | 
 | **System.Windows** 네임스페이스 | [**Windows.UI.Xaml**](https://msdn.microsoft.com/library/windows/apps/br209045) 네임스페이스 | 
@@ -129,7 +129,7 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 | **Microsoft.Xna.Framework.Media.MediaQueue** 클래스 | [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) 클래스 |
 | **Microsoft.Xna.Framework.Media.Playlist** 클래스 | [**BackgroundMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/dn652527) 클래스 |
 | **System.Windows.Media** 네임스페이스 | [**Windows.UI.Xaml.Media**](https://msdn.microsoft.com/library/windows/apps/br243045) 네임스페이스 |
-| **System.Windows.Media.RadialGradientBrush** 클래스 | 직접적으로 해당하는 항목이 없습니다. [미디어 및 그래픽](wpsl-to-uwp-porting-xaml-and-ui.md#media)을 참조하세요. |
+| **System.Windows.Media.RadialGradientBrush** 클래스 | 직접적으로 해당하는 항목이 없습니다. [미디어 및 그래픽](wpsl-to-uwp-porting-xaml-and-ui.md)을 참조하세요. |
 | **System.Windows.Media.Animation** 네임스페이스 | [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/br243232) 네임스페이스 |
 | **System.Windows.Media.Effects** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. | 
 | **System.Windows.Media.Imaging** 네임스페이스 | [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258) 네임스페이스 |
@@ -249,6 +249,6 @@ ms.openlocfilehash: 6b33127c6b76ef820a93b200a655426a0f516b68
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

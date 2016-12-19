@@ -5,14 +5,14 @@ title: "선택키"
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
-keyword: Access keys, keyboard, accessibility
+keywords: "선택키, 키보드, 접근성"
 translationtype: Human Translation
-ms.sourcegitcommit: ac86012b63646e53dbde492eef504cb8230f2afd
-ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: dfe89e4d4fd089dde6b7b307325b8fe43de82c10
 
 ---
 
-# 선택키
+# <a name="access-keys"></a>선택키
 
 행동 장애가 있는 사용자와 같이 마우스를 사용하기 어려운 사용자는 키보드를 사용하여 앱을 탐색 및 조작하는 경우가 많습니다.  XAML 프레임워크를 사용하면 탭 탐색과 선택키를 통해 키보드에서 UI 요소에 액세스할 수 있습니다.
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
 
 키보드 탐색과 접근성에 대한 자세한 내용은 [키보드 조작](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) 및 [키보드 접근성](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)을 참조하세요. 이 문서에서는 이러한 문서에 설명된 개념을 알고 있다고 가정합니다.
 
-## 선택키 개요
+## <a name="access-key-overview"></a>선택키 개요
 
 선택키를 사용하면 화살표 키와 Tab 키를 반복적으로 누르지 않고도 키보드를 사용하여 직접 단추를 호출하거나 포커스를 설정할 수 있습니다. 선택키는 쉽게 검색할 수 있어야 하므로 선택키가 있는 컨트롤 위의 부동 배지 등과 같이 UI에서 직접 문서화해야 합니다.
 
@@ -49,7 +49,7 @@ _그림 2: Microsoft Word의 홈 탭 범위에 대한 선택키 및 연결된 �
 
 호출된 후 선택키 시퀀스를 완료하는 요소도 있고(예: 서식 복사 단추) 완료하지 않는 요소도 있습니다(예: 홈 탭). 선택키를 호출하면 명령이 실행되거나, 포커스가 이동되거나, 선택키 범위가 변경되거나, 다른 연결된 작업이 수행됩니다.
 
-## 선택키 사용자 조작
+## <a name="access-key-user-interaction"></a>선택키 사용자 조작
 
 선택키 API를 이해하려면 먼저 사용자 조작 모델을 이해해야 합니다. 다음은 선택키 사용자 조작 모델에 대한 요약입니다.
 
@@ -79,7 +79,7 @@ _그림 2: Microsoft Word의 홈 탭 범위에 대한 선택키 및 연결된 �
  - 선택키 시퀀스를 종료하는 특수 키: Esc, Alt, 화살표 키, Enter, Tab 등입니다.
  - 선택키에 할당된 영숫자 문자
 
-## 선택키 API
+## <a name="access-key-apis"></a>선택키 API
 
 선택키 사용자 조작을 지원하기 위해 XAML 프레임워크는 여기에 설명된 API를 제공합니다.
 
@@ -125,7 +125,7 @@ XAML 프레임워크에서 선택키를 처리하도록 하려면 시각적 트�
 
 선택키를 여러 언어로 지역화하고 [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx) API를 사용하여 런타임에 로드할 수 있습니다.
 
-## 선택키를 호출할 때 사용되는 컨트롤 패턴
+## <a name="control-patterns-used-when-an-access-key-is-invoked"></a>선택키를 호출할 때 사용되는 컨트롤 패턴
 
 컨트롤 패턴은 공용 컨트롤 기능을 노출하는 인터페이스 구현입니다. 예를 들어 단추는 **Invoke** 컨트롤 패턴을 구현하고 이 패턴은 **클릭** 이벤트를 발생합니다. 선택키를 호출하면 XAML 프레임워크에서 호출된 요소가 컨트롤 패턴을 구현하는지 여부를 조회하고, 구현하는 경우 컨트롤 패턴을 실행합니다. 요소에 둘 이상의 컨트롤 패턴이 있는 경우 하나만 호출되고 나머지는 무시됩니다. 컨트롤 패턴은 다음 순서로 검색됩니다.
 
@@ -150,11 +150,11 @@ private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args
 
 컨트롤 패턴에 대한 자세한 내용은 [UI 자동화 컨트롤 패턴 개요](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx)를 참조하세요.
 
-## 선택키 및 내레이터
+## <a name="access-keys-and-narrator"></a>선택키 및 내레이터
 
 Windows 런타임에는 Microsoft UI 자동화 요소의 속성을 노출하는 UI 자동화 공급자가 있습니다. UI 자동화 클라이언트 응용 프로그램은 이러한 속성을 통해 사용자 인터페이스 부분에 대한 정보를 검색할 수 있습니다. [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) 속성을 사용하면 내레이터 등의 클라이언트가 요소와 연결된 선택키를 검색할 수 있습니다. 내레이터는 요소가 포커스를 받을 때마다 이 속성을 읽습니다. AutomationProperties.AccessKey에 값이 없는 경우 XAML 프레임워크는 UIElement 또는 TextElement의 [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) 속성 값을 반환합니다. AccessKey 속성에 이미 값이 있는 경우에는 AutomationProperties.AccessKey를 설정할 필요가 없습니다.
 
-## 예제: 단추의 선택키
+## <a name="example-access-key-for-button"></a>예제: 단추의 선택키
 
 이 예제에서는 단추의 선택키를 만드는 방법을 보여 줍니다. 도구 설명을 시각적 어포던스로 사용하여 선택키가 포함된 부동 배지를 구현합니다.
 
@@ -229,7 +229,7 @@ XAML 프레임워크에서 Click 이벤트 처리기를 자동으로 호출하�
     }
 ```
 
-## 예제: 범위가 지정된 선택키
+## <a name="example-scoped-access-keys"></a>예제: 범위가 지정된 선택키
 
 이 예제에서는 범위가 지정된 선택키를 만드는 방법을 보여 줍니다. PivotItem의 IsAccessKeyScope 속성은 사용자가 Alt 키를 누를 때 PivotItem 자식 요소의 선택키가 표시되지 않도록 합니다. XAML 프레임워크에서 범위를 자동으로 전환하기 때문에 이러한 선택키는 사용자가 PivotItem을 호출할 때만 표시됩니다. 또한 프레임워크에서 다른 범위의 선택키를 숨깁니다.
 
@@ -385,6 +385,6 @@ public sealed partial class ScopedAccessKeys : Page
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

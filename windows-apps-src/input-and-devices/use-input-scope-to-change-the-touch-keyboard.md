@@ -36,7 +36,7 @@ ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
 
 앱에서 사용할 수 있는 입력 범위는 [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028) 열거의 멤버입니다. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) 또는 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548)의 **InputScope** 속성을 이러한 값 중 하나로 설정할 수 있습니다.
 
-> **중요**&nbsp;&nbsp;[**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)에 대한 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) 속성은 **Password** 및 **NumericPin** 값만 지원합니다. 다른 값이 무시됩니다.
+> **중요**  [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)에 대한 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) 속성은 **Password** 및 **NumericPin** 값만 지원합니다. 다른 값이 무시됩니다.
 
 여기서는 여러 텍스트 상자의 예상 데이터와 일치하도록 각 텍스트 상자의 입력 범위를 변경할 수 있습니다.
 
@@ -125,7 +125,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 
     입력 범위가 **Default**가 아니면 [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) 속성이 **true**이더라도 텍스트 자동 완성이 비활성화될 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 있는 표를 참조하세요.
 
-    **참고**&nbsp;&nbsp;모바일 디바이스 패밀리에서 텍스트 자동 완성 및 맞춤법 수정 사항이 SIP의 키보드 위 영역에 표시됩니다. [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690)가 **false**로 설정되면, [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)가 **true**이더라도 이 SIP 부분이 숨겨지고 자동 수정이 비활성화됩니다.
+    **참고**  모바일 디바이스 패밀리에서 텍스트 자동 완성 및 맞춤법 수정 사항이 SIP의 키보드 위 영역에 표시됩니다. [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690)가 **false**로 설정되면, [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)가 **true**이더라도 이 SIP 부분이 숨겨지고 자동 수정이 비활성화됩니다.
 
 -   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273) 이 속성을 **true**로 설정하면 텍스트 컨트롤에서 포커스가 프로그래밍 방식으로 설정될 경우 SIP가 표시되지 않도록 할 수 있습니다. 대신 사용자가 컨트롤을 사용할 때만 키보드가 표시됩니다.
 
@@ -133,9 +133,9 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 이 표는 일반적인 입력 범위 값에 대한 데스크톱 및 모바일 디바이스의 SIP(Soft Input Panel) 레이아웃을 보여 줍니다. **IsSpellCheckEnabled** 및 **IsTextPredictionEnabled** 속성으로 활성화되는 기능에 입력 범위가 미치는 효과가 각 입력 범위에 대해 나열되어 있습니다. 이 목록은 사용 가능한 입력 범위에 대한 전체 목록이 아닙니다.
 
-> **참고**&nbsp;&nbsp;특히 모바일 앱의 경우 모바일 디바이스의 SIP의 크기가 작기 때문에 올바른 입력 범위를 설정하는 것이 중요합니다. 여기에 표시된 것처럼 Windows Phone은 다양한 종류의 특수한 키보드 레이아웃을 제공합니다. Windows 스토어 앱에서 입력 범위를 설정할 필요가 없는 텍스트 필드는 Windows Phone 스토어 앱에서 이를 설정할 수 있는 이점이 있습니다.
+> **참고**  특히 모바일 앱의 경우 모바일 디바이스의 SIP의 크기가 작기 때문에 올바른 입력 범위를 설정하는 것이 중요합니다. 여기에 표시된 것처럼 Windows Phone은 다양한 종류의 특수한 키보드 레이아웃을 제공합니다. Windows 스토어 앱에서 입력 범위를 설정할 필요가 없는 텍스트 필드는 Windows Phone 스토어 앱에서 이를 설정할 수 있는 이점이 있습니다.
 
-> **팁**&nbsp;&nbsp;대부분의 터치 키보드는 영문자 레이아웃과 숫자 및 기호 레이아웃으로 전환할 수 있습니다. Windows에서는 **&amp;123** 키로 전환합니다. Windows Phone에서 **&amp;123** 키를 눌러 숫자 및 기호 레이아웃을 변경하고 **abcd** 키를 눌러 영문자 레이아웃을 변경합니다.
+> **팁**  대부분의 터치 키보드는 영문자 레이아웃과 숫자 및 기호 레이아웃으로 전환할 수 있습니다. Windows에서는 **&amp;123** 키로 전환합니다. Windows Phone에서 **&amp;123** 키를 눌러 숫자 및 기호 레이아웃을 변경하고 **abcd** 키를 눌러 영문자 레이아웃을 변경합니다.
 
 ### 기본값
 

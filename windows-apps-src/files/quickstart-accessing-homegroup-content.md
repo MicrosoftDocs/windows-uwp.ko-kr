@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: "홈 그룹 콘텐츠 액세스"
 description: "사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: d55908186e5e0687c7dbd22fee9d2f7b70ba1707
 
 ---
-# 홈 그룹 콘텐츠 액세스
+# <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 사진, 음악, 비디오 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
@@ -41,7 +41,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
     쿼리를 사용하여 홈 그룹의 파일 및 폴더를 열거할 수 있습니다. 파일 및 폴더 쿼리에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](quickstart-listing-files-and-folders.md)를 참조하세요.
 
-## 홈 그룹에서 파일 선택기 열기
+## <a name="open-the-file-picker-at-the-homegroup"></a>홈 그룹에서 파일 선택기 열기
 
 사용자가 홈 그룹에서 파일 및 폴더를 선택할 수 있도록 하는 파일 선택기 인스턴스를 열려면 다음 단계를 수행하세요.
 
@@ -76,7 +76,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
     }   
     ```
 
-## 홈 그룹에서 파일 검색
+## <a name="search-the-homegroup-for-files"></a>홈 그룹에서 파일 검색
 
 이 섹션에서는 사용자가 제공한 쿼리 용어와 일치하는 홈 그룹 항목을 찾는 방법을 보여 줍니다.
 
@@ -119,7 +119,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
     ```
 
 
-## 홈 그룹에서 특정 사용자의 공유 파일 검색
+## <a name="search-the-homegroup-for-a-particular-users-shared-files"></a>홈 그룹에서 특정 사용자의 공유 파일 검색
 
 이 섹션에서는 특정 사용자가 공유하는 홈 그룹을 찾는 방법을 보여 줍니다.
 
@@ -164,7 +164,7 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
     }    
     ```
 
-## 홈 그룹에서 비디오 스트리밍
+## <a name="stream-video-from-the-homegroup"></a>홈 그룹에서 비디오 스트리밍
 
 홈 그룹에서 비디오 콘텐츠를 스트리밍하려면 다음 단계를 수행하세요.
 
@@ -211,6 +211,6 @@ ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: "SD 카드에 액세스"
 description: "특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: a13f351af3cba8d3d9e645a6f6040dff6e81e1ff
 
 ---
-# SD 카드에 액세스
+# <a name="access-the-sd-card"></a>SD 카드에 액세스
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -23,15 +23,15 @@ ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
 
 - [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346) API
 
-## SD 카드에서 액세스할 수 있는 항목 및 액세스할 수 없는 항목
+## <a name="what-you-can-and-cant-access-on-the-sd-card"></a>SD 카드에서 액세스할 수 있는 항목 및 액세스할 수 없는 항목
 
-### 액세스할 수 있는 항목
+### <a name="what-you-can-access"></a>액세스할 수 있는 항목
 
 - 앱은 앱 매니페스트 파일에서 앱이 처리하는 것으로 등록되어 있는 파일 형식의 파일만 읽고 쓸 수 있습니다.
 
 - 앱은 폴더를 만들고 관리할 수도 있습니다.
 
-### 액세스할 수 없는 항목
+### <a name="what-you-cant-access"></a>액세스할 수 없는 항목
 
 - 앱은 시스템 폴더 및 이 폴더에 있는 파일을 표시하거나 액세스할 수 없습니다.
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
 
 - 앱은 [**KnownFolders.DocumentsLibrary**](https://msdn.microsoft.com/library/windows/apps/br227152)를 사용하여 문서 라이브러리를 보거나 액세스할 수 없습니다. 그러나 파일 시스템을 트래버스하여 SD 카드의 문서 라이브러리에 액세스할 수 있습니다.
 
-## 보안 및 개인 정보 설정 고려 사항
+## <a name="security-and-privacy-considerations"></a>보안 및 개인 정보 설정 고려 사항
 
 앱이 SD 카드의 전역 위치에 파일을 저장하면 해당 파일은 암호화되지 않으므로 일반적으로 다른 앱에서 파일에 액세스할 수 있습니다.
 
@@ -49,7 +49,7 @@ ms.openlocfilehash: c3ce9103f78a78e95214239e41a302ccd0e59796
 
 SD 카드에 설치된 앱이 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)에 파일을 저장하면 해당 파일은 암호화되고 다른 앱에서 파일에 액세스할 수 없습니다.
 
-## SD 카드에 있는 파일에 액세스하기 위한 요구 사항
+## <a name="requirements-for-accessing-files-on-the-sd-card"></a>SD 카드에 있는 파일에 액세스하기 위한 요구 사항
 
 SD 카드에 있는 파일에 액세스하려면 일반적으로 다음 항목을 지정해야 합니다.
 
@@ -60,9 +60,9 @@ SD 카드에 있는 파일에 액세스하려면 일반적으로 다음 항목�
 
 알려진 폴더를 사용하여 미디어 라이브러리에 저장된 미디어 파일(음악, 사진 또는 동영상)에 액세스하려면 앱 매니페스트 파일에 관련 기능(**musicLibrary**, **picturesLibrary** 또는 **videoLibrary**)을 지정하기만 하면 됩니다. **removableStorage** 접근 권한 값은 지정하지 않아도 됩니다. 자세한 내용은 [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)를 참조하세요.
 
-## SD 카드에 있는 파일에 액세스
+## <a name="accessing-files-on-the-sd-card"></a>SD 카드에 있는 파일에 액세스
 
-### SD 카드에 대한 참조 가져오기
+### <a name="getting-a-reference-to-the-sd-card"></a>SD 카드에 대한 참조 가져오기
 
 [**KnownFolders.RemovableDevices**](https://msdn.microsoft.com/library/windows/apps/br227158) 폴더는 현재 장치에 연결되어 있는 이동식 장치에 대한 논리적 루트 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)입니다. SD 카드가 있는 경우 **KnownFolders.RemovableDevices** 폴더 아래에 있는 첫 번째이자 유일한 **StorageFolder**가 SD 카드를 나타냅니다.
 
@@ -89,7 +89,7 @@ using Windows.Storage;
             }
 ```
 
-### SD 카드의 콘텐츠 쿼리
+### <a name="querying-the-contents-of-the-sd-card"></a>SD 카드의 콘텐츠 쿼리
 
 SD 카드는 알려진 폴더로 인식되지 않는 파일과 많은 폴더를 포함할 수 있으며 [**KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)에서 위치를 사용하여 쿼리할 수 없습니다. 파일을 찾으려면 앱이 파일 시스템을 재귀적으로 트래버스하여 카드의 콘텐츠를 열거해야 합니다. SD 카드의 콘텐츠를 효율적으로 가져오려면 [**GetFilesAsync (CommonFileQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227274) 및 [**GetFoldersAsync (CommonFolderQuery.DefaultQuery)**](https://msdn.microsoft.com/library/windows/apps/br227281)를 사용합니다.
 
@@ -103,7 +103,7 @@ SD 카드는 알려진 폴더로 인식되지 않는 파일과 많은 폴더를 
 
 -   액세스하려는 파일의 파일 확장명을 처리하도록 등록하지 않은 경우 [**GetFileFromPathAsync**](https://msdn.microsoft.com/library/windows/apps/br227206) 메서드가 실패합니다.
 
-## 개별 SD 카드 식별
+## <a name="identifying-the-individual-sd-card"></a>개별 SD 카드 식별
 
 SD 카드를 처음 끼우면 운영 체제에서 카드의 고유 식별자를 생성합니다. 이 ID는 카드 루트의 WPSystem 폴더에 있는 파일에 저장됩니다. 앱은 이 ID를 사용하여 카드 식별 여부를 결정합니다. 앱이 카드를 인식하는 경우 앱은 이전에 완료된 특정 작업을 지연할 수 있습니다. 하지만 앱에서 마지막으로 카드에 액세스한 이후로 카드의 콘텐츠가 변경되었을 수 있습니다.
 
@@ -148,6 +148,6 @@ using Windows.Storage;
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

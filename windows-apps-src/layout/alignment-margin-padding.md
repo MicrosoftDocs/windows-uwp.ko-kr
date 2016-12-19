@@ -18,7 +18,7 @@ ms.openlocfilehash: ec16fa013e177529c517f91610b77ea22402a958
 
 [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208720) 및 [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/br208749) 속성은 부모 요소에 할당된 레이아웃 공간 내에서 자식 요소의 위치를 지정하는 방법을 설명합니다. 이러한 속성을 함께 사용하면 컨테이너에 대한 레이아웃 논리에 따라 컨테이너(패널 또는 컨트롤) 내에서 자식 요소의 위치가 지정될 수 있습니다. 맞춤 속성은 원하는 레이아웃을 적응형 레이아웃 컨테이너로 암시하므로 기본적으로 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) 자식에 설정되고 다른 **FrameworkElement** 컨테이너 부모에서 해석됩니다. 맞춤 값은 요소를 방향의 두 가장자리 중 하나에 맞출지 또는 가운데에 맞출지 지정할 수 있습니다. 그러나 두 맞춤 속성의 기본값은 모두 **Stretch**입니다. **Stretch** 맞춤을 사용하면 요소가 레이아웃에 제공된 공간을 채웁니다. **Stretch**가 기본값이므로 명시적 측정이 없거나 레이아웃의 측정 단계에서 제공된 [**DesiredSize**](https://msdn.microsoft.com/library/windows/apps/br208921) 값이 없는 경우 적응형 레이아웃을 더 쉽게 사용할 수 있습니다. 이 기본값을 사용하면 각 컨테이너의 크기를 조정할 때까지 명시적 높이/너비가 컨테이너에 맞지 않아서 잘릴 위험이 없습니다.
 
-> **참고**&nbsp;&nbsp;일반적인 레이아웃 원칙으로, 특정 주요 요소에만 측정을 적용하고 다른 요소에는 적응형 레이아웃 동작을 사용하는 것이 가장 좋습니다. 그러면 사용자가 언제든지 가능한 작업인 최상위 앱 창의 크기를 조정할 때 유연한 레이아웃 동작이 제공됩니다.
+> **참고**  일반적인 레이아웃 원칙으로, 특정 주요 요소에만 측정을 적용하고 다른 요소에는 적응형 레이아웃 동작을 사용하는 것이 가장 좋습니다. 그러면 사용자가 언제든지 가능한 작업인 최상위 앱 창의 크기를 조정할 때 유연한 레이아웃 동작이 제공됩니다.
 
  
 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) 값이 있거나 적응 컨테이너 내에서 클리핑이 발생하는 경우 맞춤 값으로 **Stretch**를 설정해도 레이아웃이 해당 컨테이너의 동작으로 제어됩니다. 패널에서 **Stretch** 값이 **Height** 및 **Width**로 제거된 경우 값이 **Center**인 것처럼 동작합니다.

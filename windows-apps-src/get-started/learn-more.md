@@ -5,21 +5,20 @@ title: "다음 작업"
 description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&quot;"
 keywords: "개발자 센터, 시작"
 translationtype: Human Translation
-ms.sourcegitcommit: 1c059edde92a48af610af1033c3b18ca729410aa
-ms.openlocfilehash: 6b7985137e02a348fafabf0aaf298c5d20095bd7
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# 다음 작업
+# <a name="whats-next"></a>다음 작업
 
-앱을 작성하려면 어디서부터 시작해야 할까요? 다음은 시작하는 데 도움이 되는 몇 가지 개발자 센터 항목입니다. UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#에 이미 익숙한 경우 아래 항목을 통해 시작할 수 있습니다.
+앱을 작성하고 Windows 스토어에 게시하려면 어디서부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
 
-UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스 만들기를 알아보는 것이 좋습니다. XAML의 주요 강점은 표시하려는 정보에 컨트롤을 결합하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다.
+앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a>을 살펴보는 것이 좋습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 디바이스에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
 
-앱에 애니메이션 및 효과 추가와 같이 최신 Windows10 프로그래밍 기술을 확인할 때 [Windows 개발자 블로그](https://blogs.windows.com/buildingapps)를 확인하세요.
-
+시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱의 레이아웃을 지정하지만(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조), XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
 <table class="wdg-noborder">
 <tr>
  <td width=60><img src="images/icon3.png" width=64></td>
@@ -28,8 +27,6 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
     <li><a href="https://msdn.microsoft.com/windows/uwp/launch-resume/app-lifecycle">UWP 앱 수명 주기</a></li>
     <li><a href="https://developer.microsoft.com/windows/windows-10-for-developers">Windows 10의 새로운 기능</a></ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon7.png" width=64></td>
     <td><h2>UX 및 UI</h2><p>사용할 수 있는 컨트롤은 무엇이며 어떻게 사용할 수 있을까요? 다음 항목에서는 컨트롤과 코드가 함께 작동하는 방법과 앱의 모양에 맞게 사용자 지정할 수 있는 방법을 설명합니다.</p> <ul>
@@ -42,8 +39,6 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
       <li><a href="https://developer.microsoft.com/windows/projects/campaigns/welcome-toolbox">미리 만들어진 컨트롤 및 패턴 선택을 위해 UWP 커뮤니티 도구 키트 사용</a></li>
     </ul></td>  
 </tr>
- 
- 
 <tr>
  <td width=60><img src="images/icon6.png" width=64></td>
     <td><h2>데이터 및 서비스</h2><p>코드가 목록과 그리드를 자동으로 채우게 하는 데이터 바인딩에 대해 알아봅니다. 외부 리소스에 연결하여 앱에 데이터를 가져오는 방법을 알아봅니다.</p> <ul>
@@ -52,8 +47,6 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
      <li><a href="https://msdn.microsoft.com/windows/uwp/data-access/index">데이터 액세스</a></li>
     </ul></td>  
 </tr>
- 
-
 <tr>
  <td width=60><img src="images/icon4.png" width=64></td>
     <td><h2>Publishing</h2><p>전 세계와 작업을 공유하여 수익을 창출합니다. 스토어에 앱을 게시하는 프로세스를 안내합니다.</p> <ul>
@@ -61,7 +54,6 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
     <li><a href="https://msdn.microsoft.com/windows/uwp/packaging/index">앱 패키징</a></li>
     </ul></td>  
 </tr>
- 
 <tr>
  <td width=60><img src="images/icon2.png" width=64></td>
     <td><h2>기타 리소스</h2><p>샘플, 자습서, 비디오, 다른 도구 및 SDK입니다. 이를 통해 기술 수준을 한 단계 높일 수 있습니다.</p>
@@ -78,14 +70,24 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
     </ul>
     </td>  
 </tr>
- 
-
-
 </table>
 
 <hr>
 
-## 개발자 센터에서 도움말 검색
+## <a name="windows-developer-blog"></a>Windows 개발자 블로그
+
+[Windows 개발자 블로그](https://blogs.windows.com/buildingapps)에는 최신 코딩 기술, 프로젝트 아이디어 및 도구에 대한 정기 게시물이 포함되어 있습니다. Windows 개발을 진행할 때 유용할 수 있는 몇 가지는 다음과 같습니다.
+
+* [시각적 계층을 사용하는 애니메이션](https://blogs.windows.com/buildingapps/2016/09/16/animations-with-the-visual-layer/#JM2XkQcL7MRSXe3X.97)
+* [XAML과 시각적 계층 간의 interop](https://blogs.windows.com/buildingapps/2016/08/26/interop-between-xaml-and-the-visual-layer/#ue6O7MWpqrVFE81K.97)
+* [UWP에 대한 멋진 효과 만들기](https://blogs.windows.com/buildingapps/2016/09/12/creating-beautiful-effects-for-uwp/#85jsfw6PFXX825rR.97)
+* [Windows.UI를 사용하여 쉽게 멋진 앱 만들기](https://blogs.windows.com/buildingapps/2016/08/23/beautiful-apps-made-possible-and-easy-with-windows-ui/#GBREkRSBwsRvi2uL.97)
+* [애니메이션 및 오디오 신호를 사용하여 앱 다듬기](https://blogs.windows.com/buildingapps/2016/08/09/polishing-your-app-with-animations-and-audio-cues/#hziKxt2xPwUE1oqU.97) 
+* [디자인에 색 추가](https://blogs.windows.com/buildingapps/2016/07/28/adding-color-to-your-design/#HcPqMlfPsuKETOIo.97)
+
+<hr>
+
+## <a name="finding-help-in-the-dev-center"></a>개발자 센터에서 도움말 검색
 
 [Microsoft 개발자 센터](http://devcenter.microsoft.com)에는 다양한 도구, 프레임워크 및 플랫폼에 대한 방대한 문서가 포함되어 있습니다. 항목과 샘플을 검색할 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. 올바른 콘텐츠를 읽고 있는지 어떻게 확인할 수 있나요?
 개념 콘텐츠, 즉 비API 참조 콘텐츠는 항목의 URL에 UWP가 있습니다. API 콘텐츠에는 Windows 런타임 API가 포함된 경로가 있습니다. 
@@ -100,7 +102,7 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
 <hr>
 
 
-## 개발자 센터 중요 항목
+## <a name="important-dev-center-topics"></a>개발자 센터 중요 항목
 
 다음은 개발자 센터의 주요 콘텐츠 섹션 목록입니다. 
 
@@ -162,6 +164,10 @@ UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤�
 
 
 
-<!--HONumber=Nov16_HO1-->
+
+
+
+
+<!--HONumber=Dec16_HO1-->
 
 

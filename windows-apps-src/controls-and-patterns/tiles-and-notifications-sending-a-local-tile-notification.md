@@ -6,12 +6,12 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
+ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
+ms.openlocfilehash: 8fc2fc007d14bd9c5d08ca4eb7e61a2dfdf04d3b
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# 로컬 타일 알림 보내기
+# <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
 
 
 
@@ -25,31 +25,31 @@ Windows 10의 기본 앱 타일은 앱 매니페스트에서 정의되는 반면
 
  
 
-## NuGet 패키지 설치
+## <a name="install-the-nuget-package"></a>NuGet 패키지 설치
 
 
-원시 XML 대신 개체로 타일 페이로드를 생성하여 작업을 간소화하는 [NotificationsExtensions NuGet 패키지](https://www.nuget.org/packages/NotificationsExtensions.Win10/)를 설치하는 것이 좋습니다.
+원시 XML 대신 개체로 타일 페이로드를 생성하여 작업을 간소화하는 [알림 라이브러리 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 설치하는 것이 좋습니다.
 
-이 문서에 있는 인라인 코드 예제는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지가 설치된 C#용입니다. 고유한 XML을 만들려는 경우 문서의 끝 부분에서 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)가 없는 코드 예제를 찾을 수 있습니다.
+이 문서에 있는 인라인 코드 예제는 알림 라이브러리를 사용하는 C#용입니다. 고유한 XML을 만들려는 경우 문서의 끝 부분에서 알림 라이브러리가 없는 코드 예제를 찾을 수 있습니다.
 
-## 네임스페이스 선언 추가
+## <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
 
-타일 API에 액세스하려면 [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661) 네임스페이스를 포함합니다. 타일 도우미 API를 활용할 수 있도록 **NotificationsExtensions.Tiles** 네임스페이스를 포함하는 것이 좋습니다(이러한 API에 액세스하려면 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지를 설치해야 함).
+타일 API에 액세스하려면 [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661) 네임스페이스를 포함합니다. 타일 도우미 API를 활용할 수 있도록 **NotificationsExtensions.Tiles** 네임스페이스를 포함하는 것이 좋습니다(이러한 API에 액세스하려면 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) NuGet 패키지를 설치해야 함).
 
-```
+```CSharp
 using Windows.UI.Notifications;
-using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
+using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ```
 
-## 알림 콘텐츠 만들기
+## <a name="create-the-notification-content"></a>알림 콘텐츠 만들기
 
 
 Windows 10에서 타일 페이로드는 알림에 대한 사용자 지정 시각적 레이아웃을 만들 수 있는 적응형 타일 템플릿을 사용하여 정의됩니다. 적응형 타일로 수행할 수 있는 작업에 대한 자세한 내용은 [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md) 및 [적응형 타일 템플릿](tiles-and-notifications-adaptive-tiles-schema.md) 문서를 참조하세요.
 
 이 코드 예제에서는 중간 크기 및 와이드 타일에 대한 적응형 타일 콘텐츠를 만듭니다.
 
-```
+```CSharp
 // In a real app, these would be initialized with actual data
 string from = "Jennifer Parker";
 string subject = "Photos from our trip";
@@ -67,48 +67,48 @@ TileContent content = new TileContent()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
         },
- 
+
         TileWide = new TileBinding()
         {
             Content = new TileBindingContentAdaptive()
             {
                 Children =
                 {
-                    new TileText()
+                    new AdaptiveText()
                     {
                         Text = from,
-                        Style = TileTextStyle.Subtitle
+                        HintStyle = AdaptiveTextStyle.Subtitle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = subject,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     },
- 
-                    new TileText()
+
+                    new AdaptiveText()
                     {
                         Text = body,
-                        Style = TileTextStyle.CaptionSubtle
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
                 }
             }
@@ -121,33 +121,30 @@ TileContent content = new TileContent()
 
 ![중간 크기 타일의 알림 콘텐츠](images/sending-local-tile-02.png)
 
-## 알림 만들기
+## <a name="create-the-notification"></a>알림 만들기
 
 
-알림 콘텐츠가 있으면 새 [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)을 만들어야 합니다. **TileNotification** 생성자는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)를 사용하는 경우 **TileContent.GetXml** 메서드에서 얻을 수 있는 Windows 런타임 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) 개체를 사용합니다.
+알림 콘텐츠가 있으면 새 [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)을 만들어야 합니다. **TileNotification** 생성자는 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하는 경우 **TileContent.GetXml** 메서드에서 얻을 수 있는 Windows 런타임 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) 개체를 사용합니다.
 
 이 코드 예제에서는 새 타일에 대한 알림을 만듭니다.
 
-```
+```CSharp
 // Create the tile notification
 var notification = new TileNotification(content.GetXml());
 ```
 
-## 알림의 만료 시간 설정(옵션)
+## <a name="set-an-expiration-time-for-the-notification-optional"></a>알림의 만료 시간 설정(옵션)
 
 
 기본적으로 로컬 타일과 배지 알림은 만료되지 않는 반면 푸시 알림, 정기 알림 및 예약된 알림은 3일 후에 만료됩니다. 타일 콘텐츠가 필요 이상 오래 유지되면 안 되므로 특히 로컬 타일과 배지 알림에는 앱에 적합한 만료 시간을 설정하는 것이 좋습니다.
 
 이 코드 예제에서는 10분 후에 만료되고 타일에서 제거되는 알림을 만듭니다.
 
-```
-tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></pre></td>
-</tr>
-</tbody>
-</table>
+```CSharp
+tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);
 ```
 
-## 알림 보내기
+## <a name="send-the-notification"></a>알림 보내기
 
 
 로컬에 타일 알림 전송은 간단하지만 기본 타일이나 보조 타일에 알림 전송은 약간 다릅니다.
@@ -159,13 +156,8 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 이 코드 예제에서는 기본 타일에 알림을 보냅니다.
 
 
-```
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-// And send the notification
+```CSharp
+// Send the notification to the primary tile
 TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 ```
 
@@ -175,7 +167,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 이 코드 예제에서는 보조 타일에 알림을 보냅니다.
 
-```
+```CSharp
 // If the secondary tile is pinned
 if (SecondaryTile.Exists("MySecondaryTile"))
 {
@@ -189,27 +181,24 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 
-## 타일에서 알림 지우기(옵션)
+## <a name="clear-notifications-on-the-tile-optional"></a>타일에서 알림 지우기(옵션)
 
 
 대부분의 경우 사용자가 해당 콘텐츠를 조작한 후에는 알림을 지워야 합니다. 예를 들어 사용자가 앱을 시작하면 타일에서 모든 알림을 지우는 것이 좋습니다. 알림의 시간이 제한된 경우 알림을 명시적으로 지우는 대신 알림에 만료 시간을 설정하는 것이 좋습니다.
 
-이 코드 예제에서는 타일 알림을 지웁니다.
+이 코드 예제에서는 기본 타일에 대한 타일 알림을 지웁니다. 보조 타일에 대한 타일 업데이트 프로그램을 만들어 보조 타일에 대해서도 동일한 작업을 수행할 수 있습니다.
 
-```
-TileUpdateManager.CreateTileUpdaterForApplication().Clear();</code></pre></td>
-</tr>
-</tbody>
-</table>
+```CSharp
+TileUpdateManager.CreateTileUpdaterForApplication().Clear();
 ```
 
-알림 큐가 사용하도록 설정되고 큐에 알림이 있는 타일의 경우 Clear 메서드를 호출하면 큐가 비워집니다. 그러나 앱의 서버를 통해 알림을 지울 수는 없습니다, 로컬 앱 코드만 알림을 지울 수 있습니다.
+알림 큐가 사용되고 큐에 알림이 있는 타일의 경우 Clear 메서드를 호출하면 큐가 비워집니다. 그러나 앱의 서버를 통해 알림을 지울 수는 없습니다, 로컬 앱 코드만 알림을 지울 수 있습니다.
 
 정기 또는 푸시 알림은 새 알림을 추가하거나 기존 알림을 바꿀 수만 있습니다. Clear 메서드를 로컬에서 호출하면 알림 자체가 푸시, 정기 또는 로컬로 제공되었는지 여부에 관계없이 타일이 지워집니다. 아직 표시되지 않은 예약된 알림은 이 메서드로 지워지지 않습니다.
 
 ![알림이 있는 타일 및 지워진 후의 타일](images/sending-local-tile-03.png)
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 **알림 큐 사용**
@@ -222,15 +211,10 @@ TileUpdateManager.CreateTileUpdaterForApplication().Clear();</code></pre></td>
 
 **XmlEncode 전달 방법**
 
-[NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)를 사용하지 않는 경우 이 알림 전달 방법이 다른 대체 방법입니다.
+[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하지 않는 경우 이 알림 전달 방법이 다른 대체 방법입니다.
 
 
-```
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
+```CSharp
 public string XmlEncode(string text)
 {
     StringBuilder builder = new StringBuilder();
@@ -243,21 +227,21 @@ public string XmlEncode(string text)
 }
 ```
 
-## NotificationsExtensions가 없는 코드 예제
+## <a name="code-examples-without-notifications-library"></a>알림 라이브러리를 사용하지 않는 코드 예제
 
 
-[NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) NuGet 패키지 대신 원시 XML을 사용하려는 경우 이 문서에 제공된 처음 세 가지 예제 대신 이러한 대체 코드 예제를 사용합니다. 나머지 코드 예제는 [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) 또는 원시 XML에서 사용할 수 있습니다.
+[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) NuGet 패키지 대신 원시 XML을 사용하려는 경우 이 문서에 제공된 처음 세 가지 예제 대신 이러한 대체 코드 예제를 사용합니다. 나머지 코드 예제는 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 또는 원시 XML에서 사용할 수 있습니다.
 
 네임스페이스 선언 추가
 
-```
+```CSharp
 using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
 ```
 
 알림 콘텐츠 만들기
 
-```
+```CSharp
 // In a real app, these would be initialized with actual data
 string from = "Jennifer Parker";
 string subject = "Photos from our trip";
@@ -272,16 +256,16 @@ string content = $@"
 <tile>
     <visual>
  
-        <binding template=&#39;TileMedium&#39;>
+        <binding template='TileMedium'>
             <text>{from}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{subject}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{body}</text>
+            <text hint-style='captionSubtle'>{subject}</text>
+            <text hint-style='captionSubtle'>{body}</text>
         </binding>
  
-        <binding template=&#39;TileWide&#39;>
-            <text hint-style=&#39;subtitle&#39;>{from}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{subject}</text>
-            <text hint-style=&#39;captionSubtle&#39;>{body}</text>
+        <binding template='TileWide'>
+            <text hint-style='subtitle'>{from}</text>
+            <text hint-style='captionSubtle'>{subject}</text>
+            <text hint-style='captionSubtle'>{body}</text>
         </binding>
  
     </visual>
@@ -290,7 +274,7 @@ string content = $@"
 
 알림 만들기
 
-```
+```CSharp
 // Load the string into an XmlDocument
 XmlDocument doc = new XmlDocument();
 doc.LoadXml(content);
@@ -299,13 +283,12 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
 * [적응형 타일 템플릿: 스키마 및 설명서](tiles-and-notifications-adaptive-tiles-schema.md)
-* [NotificationsExtensions.Win10(NuGet 패키지)](https://www.nuget.org/packages/NotificationsExtensions.Win10/)
-* [GitHub의 NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki)
+* [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-tile-win10)
 * [**Windows.UI.Notifications 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/br208661)
 * [알림 큐 사용 방법(XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
@@ -320,6 +303,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

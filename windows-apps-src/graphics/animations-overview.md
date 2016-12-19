@@ -4,11 +4,11 @@ ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "애니메이션 개요"
 description: "Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d622465ce3da70cdb8dbd064b68ea6983f9fe3f7
+ms.sourcegitcommit: 2a08d1def7c4d2fde0ae08eb26076526058e8aae
+ms.openlocfilehash: e3e21c55ea8ddeab0969e304080394b940da010d
 
 ---
-# 애니메이션 개요
+# <a name="animations-overview"></a>애니메이션 개요
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -31,7 +31,7 @@ Windows 10 버전 1607에서는 요소가 탐색 중 보기 간에 애니메이�
 
 또한 ScrollViewer의 스크롤 위치에 따라 항목에 애니메이션 효과를 주는 등의 특정 고급 시나리오의 경우 개발자가 시각적 계층 상호 운용을 사용하여 사용자 지정 애니메이션을 구현하려고 할 수 있습니다. 자세한 내용은 [시각적 계층](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요.
 
-## 애니메이션 유형
+## <a name="types-of-animations"></a>애니메이션 유형
 
 Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리는 컨트롤 및 UI의 다른 부분에 애니메이션 동작을 적용하는 더 큰 목적으로 사용할 수 있습니다. 애니메이션 유형에는 여러 가지가 있습니다.
 
@@ -41,7 +41,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 -   *스토리보드 애니메이션*은 시간에 따라 Windows 런타임 종속성 속성의 값에 애니메이션 효과를 줍니다. 스토리보드는 시각적 전환의 일부로 정의하거나 런타임에 응용 프로그램에 의해 트리거될 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요. 종속성 속성 및 이 속성이 있는 위치에 대한 자세한 내용은 [종속성 속성 개요](https://msdn.microsoft.com/library/windows/apps/Mt185583)를 참조하세요.
 -   개발자는 새 [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) API에서 제공하는 *연결된 애니메이션*을 통해 요소가 탐색 중 보기 간에 애니메이션 효과를 주기 위해 표시하는 효과를 쉽게 만들 수 있습니다. 이 API는 Windows 10 버전 1607부터 사용할 수 있습니다. 자세한 내용은 [**ConnectedAnimationService**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.connectedanimationservice.aspx) 항목을 참조하세요.
 
-## 라이브러리에서 사용 가능한 애니메이션
+## <a name="animations-available-in-the-library"></a>라이브러리에서 사용 가능한 애니메이션
 
 애니메이션 라이브러리에는 다음 애니메이션이 제공됩니다. 애니메이션의 주 사용 시나리오, 정의 방법에 대해 자세히 알아보고 애니메이션 예제를 보려면 애니메이션의 이름을 클릭하세요.
 
@@ -55,45 +55,48 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 -   [목록 항목 변경](./animations-overview.md#list-item-changes): 목록에서 항목을 추가 또는 삭제하거나 항목의 순서를 변경합니다.
 -   [끌기/놓기](./animations-overview.md#drag-drop): 끌어서 놓기 작업 중 시각적 피드백을 제공합니다.
 
-### 페이지 전환
+### <a name="page-transition"></a>페이지 전환
 
 페이지 전환을 사용하여 앱 내 탐색에 애니메이션 효과를 줄 수 있습니다. 거의 모든 앱에서 탐색을 사용하므로 페이지 전환 애니메이션은 앱에서 사용되는 테마 애니메이션의 가장 일반적인 유형입니다. 페이지 전환 API에 대한 자세한 내용은 [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition)을 참조하세요.
 
 
 
-### 콘텐츠 전환 및 시작 전환
+### <a name="content-transition-and-entrance-transition"></a>콘텐츠 전환 및 시작 전환
 
 콘텐츠 전환 애니메이션([**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103))은 하나의 콘텐츠 또는 콘텐츠 집합을 현재 보기의 안이나 밖으로 이동하는 데 사용합니다. 예를 들어 콘텐츠 전환 애니메이션은 처음 페이지가 로드되었을 때나 페이지에서 한 섹션의 콘텐츠가 변경될 때 표시할 준비가 되지 않은 콘텐츠를 표시합니다.
 
 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 UI의 큰 섹션이나 페이지가 처음 로드될 때 콘텐츠에 적용될 수 있는 동작을 나타냅니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다. [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)은 기본 매개 변수를 사용하는 [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition)과 동일하지만 [**프레임**](https://msdn.microsoft.com/library/windows/apps/br242682) 외부에서 사용될 수 있습니다.
  
  
-
-### 페이드 인/페이드 아웃 및 크로스페이드
+<span id="fade-in-out-and-crossfade"/>
+### <a name="fade-inout-and-crossfade"></a>페이드 인/페이드 아웃 및 크로스페이드
 
 페이드 인/페이드 아웃 애니메이션은 임시 UI 또는 컨트롤을 표시하거나 숨기는 데 사용합니다. XAML에서 이러한 애니메이션은 [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302)으로 표현됩니다. 하나의 예는 사용자 조작으로 새 컨트롤이 표시될 수 있는 앱 바에 있습니다. 또 다른 예는 일정 시간 동안 사용자 입력이 감지되지 않을 경우 흐려지는 이동 표시기 또는 임시 스크롤 막대입니다. 또한 콘텐츠가 동적으로 로드되어 앱이 자리 표시자 항목에서 최종 항목으로 전환할 때도 페이드 인 애니메이션을 사용해야 합니다.
 
 크로스페이드 애니메이션은 항목의 상태가 변경될 때, 예를 들면 앱이 현재 보기의 콘텐츠를 새로 고칠 때 전환을 부드럽게 하기 위해 사용합니다. XAML 애니메이션 라이브러리는 전용 크로스페이드 애니메이션([**crossFade**](https://msdn.microsoft.com/library/windows/apps/BR212661)과 동일한 애니메이션 없음)을 제공하지 않지만 타이밍이 겹친 [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210298) 및 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302)을 사용하여 동일한 결과를 얻을 수 있습니다.
 
-### 포인터 위로/아래로
+<span id="pointer-up-down"/>
+### <a name="pointer-updown"></a>포인터 위로/아래로
 
 [**PointerUpThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969168) 및 [**PointerDownThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/Hh969164) 애니메이션은 성공한 타일 탭 또는 클릭에 대한 사용자 피드백을 제공하는 데 사용합니다. 예를 들어 사용자가 타일의 아래쪽을 클릭하거나 탭하면 포인터 아래로 애니메이션이 재생됩니다. 클릭 또는 탭이 해제되면 포인터 위로 애니메이션이 재생됩니다.
 
-### 위치 변경
+### <a name="reposition"></a>위치 변경
 
 위치 변경 애니메이션([**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) 또는 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429))은 요소를 새 위치로 이동하는 데 사용합니다. 예를 들어 항목 컨트롤에서 헤더를 이동할 때 위치 변경 애니메이션이 사용됩니다.
 
-### 팝업 표시/숨기기
+<span id="show-hide-popup"/>
+### <a name="showhide-popup"></a>팝업 표시/숨기기
 
 [**PopInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210383) 및 [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210391)은 현재 보기의 맨 위에 [**Popup**](https://msdn.microsoft.com/library/windows/apps/BR227842)이나 유사한 컨텍스트 UI를 표시하거나 숨기는 데 사용합니다. [**PopupThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969172)은 팝업을 빨리 해제하려는 경우에 유용한 피드백인 테마 전환입니다.
 
-### 가장자리 UI 표시/숨기기
+<span id="show-hide-edge-ui"/>
+### <a name="showhide-edge-ui"></a>가장자리 UI 표시/숨기기
 
 [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) 애니메이션은 가장자리 기반의 작은 UI를 보기의 안이나 밖으로 미는 데 사용합니다. 예를 들어 화면의 맨 위 또는 맨 아래에 사용자 지정 앱 바를 표시하거나 화면의 맨 위에 오류 및 경고에 대한 UI 화면을 표시할 때 이러한 애니메이션을 사용합니다.
 
 [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh969160) 애니메이션은 창이나 패널을 표시하거나 숨기는 데 사용합니다. 이 애니메이션은 사용자 지정 키보드나 작업 창과 같이 가장자리 기반의 큰 UI에 적합합니다.
 
-### 목록 항목 변경
+### <a name="list-item-changes"></a>목록 항목 변경
 
 [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) 애니메이션은 기존 목록에서 항목을 추가하거나 삭제할 때 애니메이션 동작을 추가하는 데 사용합니다. 추가의 경우 전환은 먼저 목록에서 기존 항목의 위치를 변경하여 새 항목을 위한 공간을 확보한 다음 새 항목을 추가합니다. 삭제의 경우 전환은 목록에서 항목을 제거하고, 필요한 경우 삭제한 항목이 제거된 다음 나머지 목록 항목의 위치를 변경합니다.
 
@@ -101,13 +104,14 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
 이러한 애니메이션은 기본 [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) 템플릿에 포함되므로 이러한 컨트롤을 이미 사용하고 있지 않은 경우 이러한 애니메이션을 수동으로 추가할 필요가 없습니다.
 
-### 끌기/놓기
+<span id="drag-drop"/>
+### <a name="dragdrop"></a>끌기/놓기
 
 끌기 애니메이션([**DragItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243173), [**DragOverThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243177))과 놓기 애니메이션([**DropTargetItemThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243185))은 사용자가 항목을 끌거나 놓을 때 시각적 피드백을 제공하는 데 사용합니다.
 
 활성화된 애니메이션은 사용자에게 놓은 항목 주위로 목록을 다시 정렬할 수 있음을 보여줍니다. 이는 항목을 현재 위치에 놓을 경우 목록의 어느 곳에 배치될지 사용자가 아는 데 도움이 됩니다. 이 애니메이션은 끌고 있는 항목을 목록의 다른 두 항목 사이에 놓을 수 있고 해당 두 항목이 사라지게 됨을 시각적 피드백으로 제공합니다.
 
-## 사용자 지정 컨트롤에 애니메이션 사용
+## <a name="using-animations-with-custom-controls"></a>사용자 지정 컨트롤에 애니메이션 사용
 
 다음 표에는 이러한 Windows 런타임 컨트롤의 사용자 지정 버전을 만들 때 사용해야 하는 애니메이션에 대한 권장 사항이 요약되어 있습니다.
 
@@ -124,7 +128,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 
  
 
-## 전환 애니메이션 예
+## <a name="transition-animation-examples"></a>전환 애니메이션 예
 
 앱에서 애니메이션을 사용하여 사용자 인터페이스를 향상시키거나 사용자에게 불편을 주지 않으면서 더 멋진 모습으로 만들 수 있습니다. 그 방법 중 하나는 UI에 애니메이션 전환을 적용하는 것입니다. 그러면 뭔가가 화면에 들어오거나 나갈 때 또는 다른 변화가 있을 때 애니메이션을 이용하여 그 변화에 사용자의 관심을 끌 수 있습니다. 예를 들어 단추가 단순히 표시되거나 사라지기보다는 빠른 속도로 페이드 인하거나 페이드 아웃할 수 있습니다. 일관된 권장 또는 일반 애니메이션 전환을 만드는 데 사용할 수 있도록 다양한 API가 마련되었습니다. 다음 예제는 단추에 애니메이션을 적용하여 빠른 속도로 미끄러지듯 나타나게 하는 방법을 보여 줍니다.
 
@@ -196,13 +200,11 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 </ItemsControl>
 ```
 
-[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)의 하위 직사각형이 차례로 화면으로 전환되는데, 직사각형 각각에 이 애니메이션을 적용하여 한꺼번에 전환되는 것보다 큰 시각적인 즐거움을 선사합니다.
+[**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)의 자식 직사각형이 차례로 화면으로 전환되는데, 직사각형 각각에 이 애니메이션을 적용하여 한꺼번에 전환되는 것보다 큰 시각적인 즐거움을 선사합니다.
 
-다음은 이 애니메이션을 보여 주는 동영상입니다.
+이 애니메이션의 데모는 다음과 같습니다.
 
 ![보기로 전환하는 자식 직사각형을 보여 주는 애니메이션](./images/animation-child-rectangles.gif)
-
-<iframe src="https://videoplayercdn.osi.office.net/embed/bb48c68b-c15d-44e4-86e5-8a8065da7a2e?autoplay=true&mkt=en-us&csid=IA-en-us" width="640" height="360" allowFullScreen="true" frameBorder="0" scrolling="no" ></iframe>
 
 컨테이너의 하위 개체 중 하나 이상의 위치가 바뀔 경우에도 이 하위 개체들은 재배치될 수 있습니다. 다음 예제에서는 직사각형의 그리드에 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429)을 적용합니다. 직사각형 중 하나를 제거하면 나머지 직사각형들은 새로운 위치로 재배치됩니다.
 
@@ -266,8 +268,6 @@ void BlankPage::RemoveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::
 }
 ```
 
-이 동영상에서는 제거할 직사각형에 대해 실행되는 애니메이션을 보여 줍니다.
-
 하나의 개체 또는 개체 컨테이너에 여러 전환 애니메이션을 적용할 수 있습니다. 예를 들어 직사각형의 목록이 애니메이션 형태로 화면에 나타나게 하고 이들의 위치가 변경될 때도 애니메이션하려는 경우 다음과 같이 [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) 및 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210288)을 적용할 수 있습니다.
 
 ```xml
@@ -297,7 +297,7 @@ UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매
 
  
 
-## 테마 애니메이션 예
+## <a name="theme-animation-examples"></a>테마 애니메이션 예
 
 전환 애니메이션은 간단하게 적용할 수 있습니다. 그러나 애니메이션 효과의 타이밍 및 순서를 추가로 제어하는 것이 필요한 경우도 있습니다. 애니메이션의 동작에 대해 일관성 있는 테마를 사용하면서 테마 애니메이션을 사용하여 추가적인 제어가 가능합니다. 또한 테마 애니메이션에는 사용자 지정 애니메이션보다 태그가 덜 필요합니다. 여기서는 [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302)을 사용하여 직사각형이 화면에서 페이드 아웃하게 합니다.
 
@@ -366,7 +366,7 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
  
 
-## 직접 애니메이션 만들기
+## <a name="create-your-own-animations"></a>직접 애니메이션 만들기
 
 테마 애니메이션으로는 필요 사항을 해결하기에 부족할 경우 직접 애니메이션을 만들 수 있습니다. 하나 이상의 속성 값에 애니메이션 효과를 주어 개체에 애니메이션 효과를 줍니다. 예를 들어 직사각형의 너비, [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/BR242932)의 각도 또는 단추의 색상 값에 애니메이션 효과를 줄 수 있습니다. 이런 유형의 사용자 지정 애니메이션을 스토리보드 애니메이션이라고 하고, Windows 런타임에서 미리 구성된 애니메이션 유형으로 이미 제공하는 라이브러리 애니메이션과 구분합니다. 스토리보드 애니메이션의 경우 특정 유형의 값을 변경할 수 있는 애니메이션(예: **Double**을 애니메이션하는 [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136))을 사용하고 해당 애니메이션을 [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) 내에 배치하여 제어합니다.
 
@@ -384,6 +384,6 @@ UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

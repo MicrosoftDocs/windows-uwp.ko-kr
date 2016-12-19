@@ -39,7 +39,7 @@ Microsoft Advertising은 다음 광고 크기의 배너 광고를 지원합니�
 <td align="left"><img src="images/13-f6f413da-ddde-4424-9364-41d8ba536d21.jpg" alt="AdSizesPhone320x50" /></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>480x80</p><p>**참고**&nbsp;&nbsp;이 크기는 Windows Phone Silverlight에서만 지원됩니다.</p></td>
+<td align="left"><p>480x80</p><p>**참고**  이 크기는 Windows Phone Silverlight에서만 지원됩니다.</p></td>
 <td align="left"><img src="images/13-0f11f562-0624-40d6-9720-400420f0a486.jpg" alt="AdSizesPhone480x80" /></td>
 </tr>
 <tr class="even">

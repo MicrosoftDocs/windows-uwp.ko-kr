@@ -1,14 +1,14 @@
 ---
-author: msatranjr
+author: laurenhughes
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: "WinAppDeployCmd.exe 도구를 사용하여 앱 설치"
 description: "Windows 응용 프로그램 배포(WinAppDeployCmd.exe)는 Windows 10 PC에서 Windows 10 디바이스로 UWP(유니버설 Windows 플랫폼) 앱을 배포하는 데 사용할 수 있는 명령줄 도구입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
-ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
+ms.sourcegitcommit: f467bd83c2f700d94a232c99a06f86f1f1b1a0ac
+ms.openlocfilehash: 37028e1e119f27a8c82bc024e52f939a89243244
 
 ---
-# WinAppDeployCmd.exe 도구를 사용하여 앱 설치
+# <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>WinAppDeployCmd.exe 도구를 사용하여 앱 설치
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -20,7 +20,7 @@ Windows 10 SDK를 설치하여 명령 프롬프트나 스크립트 파일에서 
 
 **WinAppDeployCmd.exe** 도구는 Windows 10 PC의 **C:\\Program Files (x86)\\Windows Kits\\10\\bin\\x86\\WinAppDeployCmd.exe**(SDK 설치 경로에 따라 다름) 위치에 설치되어 있습니다. 먼저 Windows 10 디바이스를 동일한 서브넷에 연결하거나 USB 연결로 Windows 10 컴퓨터에 직접 연결합니다. 그런 후 다음 구문이나 이 문서의 뒷부분에 있는 이 명령의 예를 사용하여 UWP 앱을 배포합니다.
 
-## WinAppDeployCmd 구문 및 옵션
+## <a name="winappdeploycmd-syntax-and-options"></a>WinAppDeployCmd 구문 및 옵션
 
 다음은 **WinAppDeployCmd.exe**에 사용할 수 있는 구문입니다.
 
@@ -99,7 +99,7 @@ WinAppDeployCmd command -option <argument> ...
 | &lt;remotedeploydir&gt;| 배포 위치에 상대적인 디바이스의 디렉터리                      |
 
  
-## WinAppDeployCmd.exe 예제
+## <a name="winappdeploycmdexe-examples"></a>WinAppDeployCmd.exe 예제
 
 다음은 **WinAppDeployCmd.exe**에 대한 구문을 사용하여 명령줄에서 배포하는 방법에 대한 몇 가지 예입니다.
 
@@ -139,7 +139,7 @@ WinAppDeployCmd deployfiles -file "C:\apps\App1\AppxManifest.xml" -remotedeployd
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
-## WinAppDeployCmd를 사용하여 Xbox One에 PC에서 실행 배포 설정
+## <a name="using-winappdeploycmd-to-set-up-run-from-pc-deployment-on-xbox-one"></a>WinAppDeployCmd를 사용하여 Xbox One에 PC에서 실행 배포 설정
 
 PC에서 실행을 통해 이진 파일을 복사하지 않고 Xbox One에 UWP 응용 프로그램을 배포할 수 있습니다. 대신 이진 파일은 Xbox와 동일한 네트워크의 네트워크 공유에 호스트됩니다.  이렇게 하려면 개발자가 Xbox One을 잠금 해제해야 하고 Xbox가 액세스할 수 있는 네트워크 드라이브의 느슨한 파일 UWP 응용 프로그램이 필요합니다.
 
@@ -152,6 +152,6 @@ ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myA
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

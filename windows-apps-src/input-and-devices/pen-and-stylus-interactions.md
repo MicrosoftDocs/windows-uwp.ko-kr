@@ -1,31 +1,43 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "자연스러운 필기 및 그리기 환경을 위한 디지털 잉크를 포함하여 펜 및 스타일러스 디바이스의 사용자 지정 조작이 지원되는 UWP(유니버설 Windows 플랫폼) 앱을 빌드합니다."
-title: "UWP 앱에서 펜 조작 및 Windows Ink"
+title: "UWP 앱의 펜 조작 및 Windows Ink"
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas"
 translationtype: Human Translation
-ms.sourcegitcommit: f7bc2ccbdd34bec671864323df53ab7bdda25a87
-ms.openlocfilehash: 4c87dea0387b2da055d07df5bab14c4ad61638d7
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: 49098df1bf7fb72264a633aae37f941951cee2cf
 
 ---
 
-# UWP 앱에서 펜 조작 및 Windows Ink
+# <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>UWP 앱의 펜 조작 및 Windows Ink
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 사용자에게 표준 [**포인터 디바이스**](https://msdn.microsoft.com/library/windows/apps/br225633) 기능과 최적의 Windows Ink 환경을 제공합니다.
+<!--
+![touchpad](images/input-patterns/input-pen.jpg)
+-->
+
+<!--
+![Surface Pen](images/ink/hero2-small.png)  
+*Surface Studio with Surface Pen* (available for purchase at the [Microsoft Store](https://aka.ms/purchasesurfacepen)).
+-->
+
+![Surface 펜](images/ink/hero-small.png)  
+*Surface 펜*([Microsoft 스토어](https://aka.ms/purchasesurfacepen)에서 구매 가능)
+
+## <a name="overview"></a>개요
+
+UWP(유니버설 Windows 플랫폼) 앱을 펜 입력에 최적화하여 사용자에게 표준 [**포인터 디바이스**](https://msdn.microsoft.com/library/windows/apps/br225633) 기능과 최상의 Windows Ink 환경을 제공합니다.
 
 > [!NOTE]
 > 이 항목은 Windows Ink 플랫폼을 중점적으로 다룹니다. 일반적인 포인터 입력 처리(마우스, 터치 및 터치 패드와 유사)는 [포인터 입력 처리](handle-pointer-input.md)를 참조하세요.
 
-![터치 패드](images/input-patterns/input-pen.jpg)
-
-**중요 API**
-
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
--   [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
+| 비디오 |   |
+| --- | --- |
+| <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
+| *UWP 앱에서 잉크 사용* | *Windows Pen 및 Windows Ink를 사용하여 보다 매력적인 엔터프라이즈 앱 빌드* |
 
 펜 디바이스와 더불어 Windows Ink 플랫폼을 사용하면 자연스럽게 디지털 필기 메모, 드로잉, 주석을 만들 수 있습니다. 플랫폼에서는 디지타이저 입력을 잉크 데이터로 캡처, 잉크 데이터 생성, 잉크 데이터 관리, 출력 디바이스에서 잉크 데이터를 스트로크로 렌더링 및 잉크를 필기 인식을 통해 텍스트로 변환 등을 지원합니다.
 
@@ -36,11 +48,9 @@ UWP(유니버설 Windows 플랫폼) 앱을 최적화하여 펜 입력을 통해 
 
 잉크 플랫폼은 매우 유연합니다. 사용자의 요구 수준에 따라 다양한 수준의 기능을 지원하도록 디자인되어 있습니다.
 
-
-
 Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inking-controls.md)을 참조하세요.
 
-## Windows Ink 플랫폼의 구성 요소
+## <a name="components-of-the-windows-ink-platform"></a>Windows Ink 플랫폼의 구성 요소
 
 | 구성 요소 | 설명 |
 | --- | --- |
@@ -49,7 +59,7 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 | [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다. 관련된 InkCanvas에서 잉크 관련 기능을 활성화하는 사용자 지정 및 확장이 가능한 단추 컬렉션이 포함된 XAML UI 플랫폼 컨트롤입니다.<br/>InkToolbar를 사용하는 방법은 [UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md)를 참조하세요. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | 기본 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤 대신 유니버설 Windows 앱의 지정된 Direct2D 디바이스 컨텍스트 위에 잉크 스트로크를 렌더링할 수 있도록 합니다. 이렇게 하면 수동 입력 환경을 완전히 사용자 지정할 수 있습니다.<br/>자세한 내용은 [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)을 참조하세요. |
 
-## InkCanvas를 사용하는 기본 수동 입력
+## <a name="basic-inking-with-inkcanvas"></a>InkCanvas를 사용하는 기본 수동 입력
 
 기본 수동 입력 기능을 사용하려면 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 페이지의 아무 위치에나 놓으면 됩니다.
 
@@ -89,7 +99,7 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 
 기본 수동 입력을 위해 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 사용할 필요는 없습니다. 그러나 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 대해 수동 입력 동작을 사용자 지정하고 구성하려면 해당하는 **InkPresenter** 개체에 액세스해야 합니다.
 
-## InkPresenter를 사용한 기본 사용자 지정
+## <a name="basic-customization-with-inkpresenter"></a>InkPresenter를 사용한 기본 사용자 지정
 
 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) 개체는 각 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤을 사용하여 인스턴스화됩니다.
 
@@ -193,7 +203,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 잉크 입력 및 지우기 이상의 기능(예: 스트로크 선택)을 제공하려면 앱은 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)에서 앱에서 처리하기 위해 처리되지 않은 상태로 통과시킬 특정 입력을 식별해야 합니다.
 
-## 고급 처리를 위한 통과 입력
+## <a name="pass-through-input-for-advanced-processing"></a>고급 처리를 위한 통과 입력
 
 기본적으로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 입력을 잉크 스트로크 또는 지우기 스트로크로 처리합니다. 여기에는 펜 단추, 마우스 오른쪽 단추 등과 같은 보조 하드웨어 기능에 의해 수정되는 입력이 포함됩니다.
 
@@ -425,7 +435,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
         }
       ```
 
-## 사용자 지정 잉크 렌더링
+## <a name="custom-ink-rendering"></a>사용자 지정 잉크 렌더링
 
 기본적으로 잉크 입력은 짧은 대기 시간의 백그라운드 스레드에서 처리되고 그릴 때 "젖은" 상태로 렌더링됩니다. 스트로크가 완료되면(펜 또는 손가락을 들거나 마우스 단추를 뗄 때) 스트로크는 UI 스레드에서 처리되고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 계층(응용 프로그램 콘텐츠 위 계층으로, 젖은 잉크를 대체함)에 대해 "건조" 상태로 렌더링됩니다.
 
@@ -441,7 +451,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 > 사용자 지정 건조 및 [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
 > 앱이 사용자 지정 건조를 구현하여 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 기본 잉크 렌더링 동작을 재정의하는 경우 렌더링된 잉크 스트로크를 InkToolbar에서 더 이상 사용할 수 없고 InkToolbar의 기본 제공 지우기 명령이 예상대로 작동하지 않습니다. 지우기 기능을 제공하려면 모든 포인터 이벤트를 처리하고, 각 스트로크에 대해 적중 횟수 테스트를 수행하고, 기본 제공 "모든 잉크 지우기" 명령을 재정의해야 합니다.
 
-## 이 섹션의 다른 문서
+## <a name="other-articles-in-this-section"></a>이 섹션의 다른 문서
 
 | 항목 | 설명 |
 | --- | --- |
@@ -449,15 +459,23 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 | [잉크 스트로크 저장 및 검색](save-and-load-ink.md) | 포함된 ISF(Ink Serialized Format) 메타데이터를 사용하여 GIF(Graphics Interchange Format) 파일에 잉크 스트로크 데이터를 저장합니다. |
 | [UWP 수동 입력 앱에 InkToolbar 추가](ink-toolbar.md) | UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 InkToolbar를 추가하고, InkToolbar에 사용자 지정 펜 단추를 추가하고, 사용자 지정 펜 정의에 사용자 지정 펜 단추를 바인딩합니다. |
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력 디바이스 식별](identify-input-devices.md)
+
+**API**
+
+* [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
+* [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+* [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
 
 **샘플**
 * [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [짧은 대기 시간 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
@@ -474,6 +492,6 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

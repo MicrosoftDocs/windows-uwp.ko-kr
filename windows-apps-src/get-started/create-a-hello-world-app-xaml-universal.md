@@ -4,38 +4,37 @@ ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Hello, world 앱 만들기(XAML)"
 description: "이 자습서에서는 C#과 함께 XAML(Extensible Application Markup Language)을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 344ffda398c789f82973b5f08a0e3b791fc5ad10
-ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
+ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
+ms.openlocfilehash: e928b4bb116ad98ffe7c225ac1ef2306e56a13ea
 
 ---
 
-# Hello, world 앱 만들기(XAML)
+# <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
 
-이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows10 장치에서 실행되는 앱을 빌드할 수 있습니다.
+이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 장치에서 실행되는 앱을 빌드할 수 있습니다.
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   
-  **Windows10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
+-   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2015** 프로젝트를 만듭니다.
 -   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
 -   로컬 데스크톱 및 Visual Studio의 휴대폰 에뮬레이터에서 프로젝트를 실행합니다.
 -   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
 
-## 시작하기 전에...
+## <a name="before-you-start"></a>시작하기 전에...
 
 -   [유니버설 Windows 앱이란](whats-a-uwp.md)?
 -   [Windows 10의 새로운 기능](https://dev.windows.com/whats-new-windows-10-dev-preview)
--   이 자습서를 완료하려면 Windows10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
+-   이 자습서를 완료하려면 Windows 10 및 Visual Studio 2015가 필요합니다. [설정 방법](get-set-up.md)
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 
-## 비디오를 보려면...
+## <a name="if-you-would-rather-watch-a-video"></a>비디오를 보려면...
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 단계별 가이드보다 시각적인 접근 방식을 원하는 경우 이 비디오는 멋진 사운드트랙과 함께 동일한 내용을 제공합니다.
 
-## 1단계: Visual Studio에서 새 프로젝트 만들기
+## <a name="step-1-create-a-new-project-in-visual-studio"></a>1단계: Visual Studio에서 새 프로젝트 만들기
 
 1.  Visual Studio 2015를 시작합니다.
 
@@ -60,7 +59,7 @@ ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 **새 앱**(유니버설 Window)은 최소한의 템플릿이지만 많은 파일이 포함되어 있습니다. 이러한 파일은 C#을 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
 
 
-### 파일에 포함된 항목
+### <a name="whats-in-the-files"></a>파일에 포함된 항목
 
 프로젝트의 파일을 보고 편집하려면 **솔루션 탐색기**에서 해당 파일을 두 번 클릭합니다. 폴더와 같이 XAML 파일을 확장하여 관련 코드 파일을 봅니다. XAML 파일은 디자인 화면과 XAML 편집기가 모두 표시되는 분할 보기로 열립니다.
 > [!NOTE]
@@ -88,9 +87,9 @@ ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 -   Assets/StoreLogo.png는 Windows 스토어의 앱을 나타냅니다.
 -   Assets/SplashScreen.scale-200.png는 앱 시작 시 표시되는 시작 화면입니다.
 
-## 2단계: 단추 추가
+## <a name="step-2-adding-a-button"></a>2단계: 단추 추가
 
-### 디자이너 보기 사용
+### <a name="using-the-designer-view"></a>디자이너 보기 사용
 
 페이지에 단추를 추가해 보겠습니다. 이 자습서에서는 이전에 나열한 파일 중 App.xaml, MainPage.xaml 및 MainPage.xaml.cs만 다룹니다.
 
@@ -126,14 +125,14 @@ ms.openlocfilehash: 6cf960781862649588f361b6bfcd87605f3e8d55
 
 ![솔루션 탐색기 창](images/win10-cs-07.png)
 
-## 3단계: 앱 시작
+## <a name="step-3-start-the-app"></a>3단계: 앱 시작
 
 
 이제 매우 간단한 앱을 만들었습니다. 앱을 빌드, 배포 및 시작하고 앱의 모양을 확인할 시간입니다. 로컬 컴퓨터, 시뮬레이터, 에뮬레이터 또는 원격 장치에서 앱을 디버그할 수 있습니다. 다음은 Visual Studio의 대상 장치 메뉴입니다.
 
 ![앱 디버깅을 위한 장치 대상의 드롭다운 목록](images/uap-debug.png)
 
-### 데스크톱 장치에서 앱 시작
+### <a name="start-the-app-on-a-desktop-device"></a>데스크톱 장치에서 앱 시작
 
 기본적으로 앱은 로컬 컴퓨터에서 실행합니다. 대상 장치 메뉴는 데스크톱 장치 제품군의 장치에서 앱을 디버깅하기 위한 여러 옵션을 제공합니다.
 
@@ -176,9 +175,9 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
    앱 창을 닫습니다.
 
-### 모바일 장치 에뮬레이터에서 앱 시작
+### <a name="start-the-app-on-a-mobile-device-emulator"></a>모바일 장치 에뮬레이터에서 앱 시작
 
-앱이 Windows10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
+앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다.
 
 Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴퓨터에 연결된 실제 모바일 장치 또는 모바일 장치 에뮬레이터에서 앱을 배포 및 디버깅하는 옵션도 제공합니다. 메모리 및 디스플레이 구성이 서로 다른 장치에 대한 에뮬레이터 중에서 선택할 수 있습니다.
 
@@ -210,7 +209,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 Windows 10을 실행하는 Windows Phone을 사용하는 경우 컴퓨터에 연결하여 앱을 배포하고 여기서 직접 앱을 실행할 수도 있습니다(먼저 [개발자 모드를 사용하도록 설정](enable-your-device-for-development.md)해야 함).
 
 
-## 3단계: 이벤트 처리기
+## <a name="step-3-event-handlers"></a>3단계: 이벤트 처리기
 
 "이벤트 처리기"는 복잡하게 들릴 수 있지만 이벤트가 발생할 때(예: 사용자가 단추 클릭) 호출되는 코드에 대한 다른 이름일 뿐입니다.
 
@@ -244,20 +243,22 @@ private async void button_Click(object sender, RoutedEventArgs e)
 
 **async** 키워드도 포함되어 있어야 하며 그렇지 않은 경우 앱을 실행하려고 할 때 오류가 발생할 수 있습니다.
 
-### 방금 어떤 작업을 수행했나요?
+### <a name="what-did-we-just-do"></a>방금 어떤 작업을 수행했나요?
 
 이 코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음 여기에 말할 텍스트를 제공합니다. SpeechSynthesis 사용에 대한 자세한 내용은 [SpeechSynthesis 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx) 문서를 참조하세요.
 
 앱을 실행하고 단추를 클릭하면 컴퓨터(또는 휴대폰)가 문자 그대로 "Hello, World!"라고 말합니다.
 
 
-## 요약
+## <a name="summary"></a>요약
 
 
-축하합니다. Windows10 및 UWP용 첫 번째 앱을 만들었습니다. [다음 단계](learn-more.md)를 수행할 준비가 되셨나요?
+축하합니다. Windows 10 및 UWP용 첫 번째 앱을 만들었습니다.
+
+XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보려면 [그리드 자습서](../layout/grid-tutorial.md)를 살펴보거나 [다음 단계](learn-more.md)로 바로 이동하세요.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

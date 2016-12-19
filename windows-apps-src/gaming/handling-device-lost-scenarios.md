@@ -1,15 +1,15 @@
 ---
 author: mtoepke
 title: "Direct3D 11에서 장치 제거 시나리오 처리"
-description: "이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법에 대해 설명합니다."
+description: "이 항목에서는 그래픽 어댑터가 제거되거나 다시 초기화될 때 Direct3D 및 DXGI 디바이스 인터페이스 체인을 다시 만드는 방법을 설명합니다."
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3cb625886add852d9faa36a0ad5bc611c1929077
+ms.sourcegitcommit: 5ed3815397b076ab3ee14fd3c22b235b46da5f09
+ms.openlocfilehash: b88d85c78ba5d08718b7e2c844f94beb71e5134a
 
 ---
 
-# <span id="dev_gaming.handling_device-lost_scenarios"></span>Direct3D 11에서 디바이스 제거 시나리오 처리
+# <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Direct3D 11에서 디바이스 제거 시나리오 처리
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -25,11 +25,11 @@ DirectX 9에서는 D3D 장치가 비작동 상태에 들어서는 경우 응용 
 
 그러한 상황이 발생하면 DXGI는 Direct3D 장치를 다시 초기화하고 장치 리소스를 다시 만들어야 한다고 알리는 오류 코드를 반환합니다. 이 연습에서는 Direct3D 11 앱과 게임이 그래픽 어댑터의 재설정, 제거 또는 변경 상황을 검색하고 이에 대응하는 방법에 대해 설명합니다. 코드 예제는 Microsoft Visual Studio 2015에 포함된 DirectX 11 앱(유니버설 Windows) 템플릿에서 가져온 것입니다.
 
-# 지침
+# <a name="instructions"></a>지침
 
-### <span></span>1단계:
+### <a name="spanspanstep-1"></a><span></span>1단계:
 
-디바이스 제거 오류에 대한 검사를 렌더링 루프에 포함합니다. [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)(또는 [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 등)를 호출하여 프레임을 표시합니다. 그런 다음 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**가 반환되었는지를 확인합니다.
+디바이스 제거 오류 검사를 렌더링 루프에 포함합니다. [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576)(또는 [**Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) 등)를 호출하여 프레임을 표시합니다. 그런 다음 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**가 반환되었는지를 확인합니다.
 
 먼저 템플릿은 DXGI 스왑 체인이 반환한 HRESULT를 저장합니다.
 
@@ -52,7 +52,7 @@ else
 }
 ```
 
-### 2단계:
+### <a name="step-2"></a>2단계:
 
 또한 창 크기 변경에 대해 응답할 때 장치 제거 오류에 대한 검사를 포함합니다. 이곳은 여러 가지 이유로 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 또는 **DXGI\_ERROR\_DEVICE\_RESET**를 검사하기에 좋은 위치입니다.
 
@@ -87,9 +87,9 @@ else
 }
 ```
 
-### 3단계:
+### <a name="step-3"></a>3단계:
 
-앱에서 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 오류가 발생할 때마다 Direct3D 디바이스와 모든 디바이스 종속 리소스가 다시 초기화되어야 합니다. 이전 Direct3D 장치로 만든 그래픽 장치 리소스에 대한 모든 참조를 해제합니다. 그러한 리소스는 이제 유효하지 않으며, 새 참조를 만들기 전에 스왑 체인에 대한 모든 참조를 해제해야 합니다.
+앱에서 [**DXGI\_ERROR\_DEVICE\_REMOVED**](https://msdn.microsoft.com/library/windows/desktop/bb509553) 오류가 발생할 때마다 Direct3D 디바이스가 다시 초기화되고 모든 디바이스 종속 리소스가 다시 생성되어야 합니다. 이전 Direct3D 디바이스로 만든 그래픽 장치 리소스에 대한 모든 참조를 해제합니다. 해당 리소스는 이제 유효하지 않으며, 새 참조를 만들기 전에 스왑 체인에 대한 모든 참조를 해제해야 합니다.
 
 HandleDeviceLost 메서드는 스왑 체인을 해제하고 앱 구성 요소에 장치 리소스를 해제하도록 알립니다.
 
@@ -130,10 +130,10 @@ if (m_deviceNotify != nullptr)
 
 HandleDeviceLost 메서드가 있으면 렌더링 루프로 컨트롤이 반환되는데, 이는 다음 프레임을 그릴 수 있도록 계속됩니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 
-### 장치 제거 오류의 원인 조사
+### <a name="investigating-the-cause-of-device-removed-errors"></a>장치 제거 오류의 원인 조사
 
 DXGI 장치 제거 오류가 반복해서 발생하면 그리기 루틴 중에 그래픽 코드가 잘못된 조건을 만들고 있음을 나타내는 것일 수 있습니다. 또한 그래픽 드라이버의 하드웨어 오류 또는 버그를 나타내는 것일 수도 있습니다. 장치 제거 오류의 원인을 조사하려면 Direct3D 장치를 해제하기 전에 [**ID3D11Device::GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526)을 호출하세요. 이 메서드는 장치 제거 오류의 원인을 나타내는 여섯 가지 가능한 DXGI 오류 코드 중 하나를 반환합니다.
 
@@ -159,7 +159,7 @@ DXGI 장치 제거 오류가 반복해서 발생하면 그리기 루틴 중에 �
 
 자세한 내용은 [**GetDeviceRemovedReason**](https://msdn.microsoft.com/library/windows/desktop/ff476526) 및 [**DXGI\_ERROR**](https://msdn.microsoft.com/library/windows/desktop/bb509553)를 참조하세요.
 
-### 제거된 디바이스 처리 테스트
+### <a name="testing-device-removed-handling"></a>제거된 디바이스 처리 테스트
 
 Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진단과 관련된 Direct3D 이벤트 캡처 및 재생에 대한 명령줄 도구 'dxcap'를 지원합니다. 앱이 실행되는 동안 명령줄 옵션 "-forcetdr"을 사용하여 GPU 시간 제한 검색 및 복구 이벤트를 강제로 발생시킬 수 있으므로 DXGI\_ERROR\_DEVICE\_REMOVED를 트리거하고 오류 처리 코드를 테스트할 수 있습니다.
 
@@ -177,6 +177,6 @@ Visual Studio 개발자의 명령 프롬프트에서 Visual Studio 그래픽 진
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

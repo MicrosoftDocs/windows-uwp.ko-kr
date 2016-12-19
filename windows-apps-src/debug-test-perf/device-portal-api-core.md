@@ -4,19 +4,19 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: "디바이스 포털 핵심 API 참조"
 description: "데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
-ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
+ms.sourcegitcommit: b4222774dc4b0f9cdcac871311f5ead69c1e70a9
+ms.openlocfilehash: 3bacb9ac42e157afaed5e9e0e6438654db03ff28
 
 ---
 
-# 디바이스 포털 핵심 API 참조
+# <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
 Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 REST API를 기반으로 합니다.
 
-## 앱 배포
+## <a name="app-deployment"></a>앱 배포
 
 ---
-### 앱 설치
+### <a name="install-an-app"></a>앱 설치
 
 **요청**
 
@@ -64,7 +64,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 앱 설치 상태 가져오기
+### <a name="get-app-installation-status"></a>앱 설치 상태 가져오기
 
 **요청**
 
@@ -107,7 +107,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 앱 제거
+### <a name="uninstall-an-app"></a>앱 제거
 
 **요청**
 
@@ -153,7 +153,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 설치된 앱 가져오기
+### <a name="get-installed-apps"></a>설치된 앱 가져오기
 
 **요청**
 
@@ -222,9 +222,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 디바이스 관리자
+## <a name="device-manager"></a>디바이스 관리자
 ---
-### 컴퓨터에 설치된 디바이스 가져오기
+### <a name="get-the-installed-devices-on-the-machine"></a>컴퓨터에 설치된 디바이스 가져오기
 
 **요청**
 
@@ -281,9 +281,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 덤프 컬렉션
+## <a name="dump-collection"></a>덤프 컬렉션
 ---
-### 앱에 대한 모든 크래시 덤프 목록 가져오기
+### <a name="get-the-list-of-all-crash-dumps-for-apps"></a>앱에 대한 모든 크래시 덤프 목록 가져오기
 
 **요청**
 
@@ -322,12 +322,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 앱의 크래시 덤프 컬렉션 설정 가져오기
+### <a name="get-the-crash-dump-collection-settings-for-an-app"></a>앱의 크래시 덤프 컬렉션 설정 가져오기
 
 **요청**
 
@@ -373,12 +374,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 삭제
+### <a name="delete-a-crash-dump-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 삭제
 
 **요청**
 
@@ -420,12 +422,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 사용 안 함
+### <a name="disable-crash-dumps-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 사용 안 함
 
 **요청**
 
@@ -466,12 +469,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 다운로드
+### <a name="download-the-crash-dump-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 다운로드
 
 **요청**
 
@@ -515,12 +519,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 테스트용으로 로드된 앱의 크래시 덤프 사용
+### <a name="enable-crash-dumps-for-a-sideloaded-app"></a>테스트용으로 로드된 앱의 크래시 덤프 사용
 
 **요청**
 
@@ -559,12 +564,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### 오류 검사 파일 목록 가져오기
+### <a name="get-the-list-of-bugcheck-files"></a>오류 검사 파일 목록 가져오기
 
 **요청**
 
@@ -589,12 +595,12 @@ GET | /api/debug/dump/kernel/dumplist
 
 **응답**
 
-응답에는 덤프 파일의 이름 및 크기 목록이 포함됩니다. 이 목록 형식은 다음과 같습니다. 두 번째 *FileName* 매개 변수는 파일의 크기입니다. 이것은 알려진 버그입니다.
+응답에는 덤프 파일의 이름 및 크기 목록이 포함됩니다. 이 목록의 형식은 다음과 같습니다. 
 ```
 {"DumpFiles": [
     {
         "FileName": string,
-        "FileName": string
+        "FileSize": int
     },...
 ]}
 ```
@@ -613,7 +619,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 오류 검사 덤프 파일 다운로드
+### <a name="download-a-bugcheck-dump-file"></a>오류 검사 덤프 파일 다운로드
 
 **요청**
 
@@ -660,7 +666,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 오류 검사 크래시 제어 설정 가져오기
+### <a name="get-the-bugcheck-crash-control-settings"></a>오류 검사 크래시 제어 설정 가져오기
 
 **요청**
 
@@ -685,15 +691,25 @@ GET | /api/debug/dump/kernel/crashcontrol
 
 **응답**
 
-응답에는 크래시 제어 설정이 포함됩니다. CrashControl에 대한 자세한 내용은 [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) 문서를 참조하세요. 응답에 대한 템플릿은 다음과 같습니다.
+응답에는 크래시 제어 설정이 포함됩니다. CrashControl에 대한 자세한 내용은 [CrashControl](https://technet.microsoft.com/library/cc951703.aspx) 문서를 참조하세요. 응답 템플릿은 다음과 같습니다.
 ```
 {
-    "autoreboot": int,
-    "dumptype": int,
+    "autoreboot": bool (0 or 1),
+    "dumptype": int (0 to 4),
     "maxdumpcount": int,
-    "overwrite": int
+    "overwrite": bool (0 or 1)
 }
 ```
+
+**덤프 유형**
+
+0: 사용 안 함
+
+1: 전체 메모리 덤프(사용 중 메모리 모두 수집)
+
+2: 커널 메모리 덤프(사용자 모드 메모리 무시)
+
+3: 제한된 커널 미니덤프
 
 **상태 코드**
 
@@ -711,7 +727,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 라이브 커널 덤프 가져오기
+### <a name="get-a-live-kernel-dump"></a>라이브 커널 덤프 가져오기
 
 **요청**
 
@@ -754,7 +770,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 라이브 사용자 프로세스에서 덤프 가져오기
+### <a name="get-a-dump-from-a-live-user-process"></a>라이브 사용자 프로세스에서 덤프 가져오기
 
 **요청**
 
@@ -801,7 +817,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 오류 검사 크래시 제어 설정 지정
+### <a name="set-the-bugcheck-crash-control-settings"></a>오류 검사 크래시 제어 설정 지정
 
 **요청**
 
@@ -821,8 +837,7 @@ URI 매개 변수 | 설명
 autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다.
 dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx)를 참조하세요.
 maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다.
-overwrite   | (**선택**) True 또는 false입니다. 
-            *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
+overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다.
 <br />
 **요청 헤더**
 
@@ -850,9 +865,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## ETW
+## <a name="etw"></a>ETW
 ---
-### Websocket을 통해 실시간 ETW 세션 만들기
+### <a name="create-a-realtime-etw-session-over-a-websocket"></a>Websocket을 통해 실시간 ETW 세션 만들기
 
 **요청**
 
@@ -896,14 +911,13 @@ HTTP 상태 코드      | 설명
 * HoloLens
 * IoT
 
-### ETW WebSocket 명령
+### <a name="etw-websocket-commands"></a>ETW WebSocket 명령
 이러한 명령은 클라이언트에서 서버로 전송됩니다.
 
 명령 | 설명
 :----- | :-----
 provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}*(괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}*은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다.
-provider *{guid}* disable | 
-            *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
+provider *{guid}* disable | *{guid}*(괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다.
 
 이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
 ```
@@ -947,7 +961,7 @@ provider *{guid}* disable |
 ```
 
 ---
-### 등록된 ETW 공급자 열거
+### <a name="enumerate-the-registered-etw-providers"></a>등록된 ETW 공급자 열거
 
 **요청**
 
@@ -998,7 +1012,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
+### <a name="enumerate-the-custom-etw-providers-exposed-by-the-platform"></a>플랫폼에 의해 노출된 사용자 지정 ETW 공급자 열거
 
 **요청**
 
@@ -1046,9 +1060,9 @@ GET | /api/etw/customproviders
 * IoT
 
 ---
-## OS 정보
+## <a name="os-information"></a>OS 정보
 ---
-### 컴퓨터 이름 가져오기
+### <a name="get-the-machine-name"></a>컴퓨터 이름 가져오기
 
 **요청**
 
@@ -1098,7 +1112,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 운영 체제 정보 가져오기
+### <a name="get-the-operating-system-information"></a>운영 체제 정보 가져오기
 
 **요청**
 
@@ -1154,7 +1168,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 디바이스 패밀리 가져오기 
+### <a name="get-the-device-family"></a>디바이스 패밀리 가져오기 
 
 **요청**
 
@@ -1208,7 +1222,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 컴퓨터 이름 설정
+### <a name="set-the-machine-name"></a>컴퓨터 이름 설정
 
 **요청**
 
@@ -1254,9 +1268,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 성능 데이터
+## <a name="performance-data"></a>성능 데이터
 ---
-### 실행 중인 프로세스 목록 가져오기
+### <a name="get-the-list-of-running-processes"></a>실행 중인 프로세스 목록 가져오기
 
 **요청**
 
@@ -1317,7 +1331,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 시스템 성능 통계 가져오기
+### <a name="get-the-system-performance-statistics"></a>시스템 성능 통계 가져오기
 
 **요청**
 
@@ -1396,9 +1410,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 전원
+## <a name="power"></a>전원
 ---
-### 현재 배터리 상태 가져오기
+### <a name="get-the-current-battery-state"></a>현재 배터리 상태 가져오기
 
 **요청**
 
@@ -1449,13 +1463,13 @@ HTTP 상태 코드      | 설명
 <br />
 **사용 가능한 디바이스 패밀리**
 
+* Windows Mobile
 * Windows 데스크톱
 * HoloLens
 * IoT
-* 모바일
 
 ---
-### 현재 전원 구성표 가져오기
+### <a name="get-the-active-power-scheme"></a>현재 전원 구성표 가져오기
 
 **요청**
 
@@ -1501,7 +1515,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 전원 구성표에 대한 하위 값 가져오기
+### <a name="get-the-sub-value-for-a-power-scheme"></a>전원 구성표에 대한 하위 값 가져오기
 
 **요청**
 
@@ -1544,7 +1558,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 시스템의 전원 상태 가져오기
+### <a name="get-the-power-state-of-the-system"></a>시스템의 전원 상태 가져오기
 
 **요청**
 
@@ -1591,7 +1605,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 현재 전원 구성표 설정
+### <a name="set-the-active-power-scheme"></a>현재 전원 구성표 설정
 
 **요청**
 
@@ -1636,7 +1650,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 전원 구성표의 하위 값 설정
+### <a name="set-the-sub-value-for-a-power-scheme"></a>전원 구성표의 하위 값 설정
 
 **요청**
 
@@ -1680,7 +1694,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 절전 연구 보고서 가져오기
+### <a name="get-a-sleep-study-report"></a>절전 연구 보고서 가져오기
 
 **요청**
 
@@ -1723,7 +1737,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 사용 가능한 절전 연구 보고서 열거
+### <a name="enumerate-the-available-sleep-study-reports"></a>사용 가능한 절전 연구 보고서 열거
 
 **요청**
 
@@ -1774,7 +1788,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 절전 연구 변환 가져오기
+### <a name="get-the-sleep-study-transform"></a>절전 연구 변환 가져오기
 
 **요청**
 
@@ -1817,9 +1831,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 원격 제어
+## <a name="remote-control"></a>원격 제어
 ---
-### 대상 컴퓨터 다시 시작
+### <a name="restart-the-target-computer"></a>대상 컴퓨터 다시 시작
 
 **요청**
 
@@ -1861,7 +1875,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 대상 컴퓨터 종료
+### <a name="shut-down-the-target-computer"></a>대상 컴퓨터 종료
 
 **요청**
 
@@ -1905,9 +1919,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 작업 관리자
+## <a name="task-manager"></a>작업 관리자
 ---
-### 최신 앱 시작
+### <a name="start-a-modern-app"></a>최신 앱 시작
 
 **요청**
 
@@ -1956,7 +1970,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 최신 앱 중지
+### <a name="stop-a-modern-app"></a>최신 앱 중지
 
 **요청**
 
@@ -2005,9 +2019,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## 네트워킹
+## <a name="networking"></a>네트워킹
 ---
-### 현재 IP 구성 가져오기
+### <a name="get-the-current-ip-configuration"></a>현재 IP 구성 가져오기
 
 **요청**
 
@@ -2093,7 +2107,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 --
-### 무선 네트워크 인터페이스 열거
+### <a name="enumerate-wireless-network-interfaces"></a>무선 네트워크 인터페이스 열거
 
 **요청**
 
@@ -2155,7 +2169,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 무선 네트워크 열거
+### <a name="enumerate-wireless-networks"></a>무선 네트워크 열거
 
 **요청**
 
@@ -2225,7 +2239,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### Wi-Fi 네트워크에 연결 및 연결 해제
+### <a name="connect-and-disconnect-to-a-wi-fi-network"></a>Wi-Fi 네트워크에 연결 및 연결 해제
 
 **요청**
 
@@ -2246,8 +2260,7 @@ interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터�
 op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.
 ssid   | (**op == connect인 경우 필수****) 연결할 SSID입니다.
 key   | (**op == connect이고 네트워크에 인증이 필요한 경우 필수****) 공유 키입니다.
-createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. 
-            **예** 또는 **아니요**일 수 있습니다. 
+createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. 
 
 **요청 헤더**
 
@@ -2276,7 +2289,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### Wi-Fi 프로필 삭제
+### <a name="delete-a-wi-fi-profile"></a>Wi-Fi 프로필 삭제
 
 **요청**
 
@@ -2323,9 +2336,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## WER(Windows 오류 보고)
+## <a name="windows-error-reporting-wer"></a>WER(Windows 오류 보고)
 ---
-### WER(Windows 오류 보고) 파일 다운로드
+### <a name="download-a-windows-error-reporting-wer-file"></a>WER(Windows 오류 보고) 파일 다운로드
 
 **요청**
 
@@ -2343,8 +2356,7 @@ GET | /api/wer/report/file
 URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자 이름입니다.
-type   | (**필수**) 보고서의 유형입니다. 
-            **queried** 또는 **archived**가 될 수 있습니다.
+type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
 name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
 file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. 
 <br />
@@ -2377,7 +2389,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### WER(Windows 오류 보고) 보고서에 파일 열거
+### <a name="enumerate-files-in-a-windows-error-reporting-wer-report"></a>WER(Windows 오류 보고) 보고서에 파일 열거
 
 **요청**
 
@@ -2395,8 +2407,7 @@ GET | /api/wer/report/files
 URI 매개 변수 | 설명
 :---          | :---
 user   | (**필수**) 보고서와 연결된 사용자입니다.
-type   | (**필수**) 보고서의 유형입니다. 
-            **queried** 또는 **archived**가 될 수 있습니다.
+type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다.
 name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. 
 <br />
 **요청 헤더**
@@ -2433,7 +2444,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### WER(Windows 오류 보고) 보고서 나열
+### <a name="list-the-windows-error-reporting-wer-reports"></a>WER(Windows 오류 보고) 보고서 나열
 
 **요청**
 
@@ -2491,9 +2502,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## WPR(Windows Performance Recorder) 
+## <a name="windows-performance-recorder-wpr"></a>WPR(Windows Performance Recorder) 
 ---
-### 사용자 지정 프로필을 사용하여 추적 시작
+### <a name="start-tracing-with-a-custom-profile"></a>사용자 지정 프로필을 사용하여 추적 시작
 
 **요청**
 
@@ -2545,7 +2556,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 부팅 성능 추적 세션 시작
+### <a name="start-a-boot-performance-tracing-session"></a>부팅 성능 추적 세션 시작
 
 **요청**
 
@@ -2601,7 +2612,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 부팅 성능 추적 세션 중지
+### <a name="stop-a-boot-performance-tracing-session"></a>부팅 성능 추적 세션 중지
 
 **요청**
 
@@ -2626,7 +2637,7 @@ GET | /api/wpr/boottrace
 
 **응답**
 
-- 추적 ETL 파일을 반환합니다.
+-  없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.
 
 **상태 코드**
 
@@ -2646,7 +2657,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 성능 추적 세션 시작
+### <a name="start-a-performance-tracing-session"></a>성능 추적 세션 시작
 
 **요청**
 
@@ -2702,7 +2713,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 성능 추적 세션 중지
+### <a name="stop-a-performance-tracing-session"></a>성능 추적 세션 중지
 
 **요청**
 
@@ -2727,8 +2738,7 @@ GET | /api/wpr/trace
 
 **응답**
 
-- 없음.  
-            **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
+- 없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
 
 **상태 코드**
 
@@ -2748,7 +2758,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 추적 세션의 상태 검색
+### <a name="retrieve-the-status-of-a-tracing-session"></a>추적 세션의 상태 검색
 
 **요청**
 
@@ -2800,7 +2810,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 완료된 추적 세션(ETL) 나열
+### <a name="list-completed-tracing-sessions-etls"></a>완료된 추적 세션(ETL) 나열
 
 **요청**
 
@@ -2857,7 +2867,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 추적 세션(ETL) 다운로드
+### <a name="download-a-tracing-session-etl"></a>추적 세션(ETL) 다운로드
 
 **요청**
 
@@ -2906,7 +2916,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 추적 세션(ETL) 삭제
+### <a name="delete-a-tracing-session-etl"></a>추적 세션(ETL) 삭제
 
 **요청**
 
@@ -2955,9 +2965,9 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-## DNS-SD 태그 
+## <a name="dns-sd-tags"></a>DNS-SD 태그 
 ---
-### 태그 보기
+### <a name="view-tags"></a>태그 보기
 
 **요청**
 
@@ -2980,8 +2990,7 @@ GET | /api/dns-sd/tags
 
 - 없음
 
-
-            **응답** 다음 형식의 현재 적용된 태그입니다. 
+**응답** 다음 형식의 현재 적용된 태그입니다. 
 ```
  {
     "tags": [
@@ -3011,7 +3020,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 태그 삭제
+### <a name="delete-tags"></a>태그 삭제
 
 **요청**
 
@@ -3056,7 +3065,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 태그 삭제
+### <a name="delete-tag"></a>태그 삭제
 
 **요청**
 
@@ -3102,7 +3111,7 @@ HTTP 상태 코드      | 설명
 * IoT
  
 ---
-### 태그 추가
+### <a name="add-a-tag"></a>태그 추가
 
 **요청**
 
@@ -3148,10 +3157,10 @@ HTTP 상태 코드      | 설명
 * HoloLens
 * IoT
 
-## 앱 파일 탐색기
+## <a name="app-file-explorer"></a>앱 파일 탐색기
 
 ---
-### 알려진 폴더 가져오기
+### <a name="get-known-folders"></a>알려진 폴더 가져오기
 
 **요청**
 
@@ -3174,8 +3183,7 @@ GET | /api/filesystem/apps/knownfolders
 
 - 없음
 
-
-            **응답** 다음 형식의 사용 가능한 폴더입니다. 
+**응답** 다음 형식의 사용 가능한 폴더입니다. 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3202,7 +3210,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 가져오기
+### <a name="get-files"></a>파일 가져오기
 
 **요청**
 
@@ -3229,8 +3237,7 @@ path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 �
 
 - 없음
 
-
-            **응답** 다음 형식의 사용 가능한 폴더입니다. 
+**응답** 다음 형식의 사용 가능한 폴더입니다. 
 ```
 {"Items": [
     {
@@ -3263,7 +3270,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 다운로드
+### <a name="download-a-file"></a>파일 다운로드
 
 **요청**
 
@@ -3311,7 +3318,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 이름 바꾸기
+### <a name="rename-a-file"></a>파일 이름 바꾸기
 
 **요청**
 
@@ -3363,7 +3370,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 삭제
+### <a name="delete-a-file"></a>파일 삭제
 
 **요청**
 
@@ -3413,7 +3420,7 @@ HTTP 상태 코드      | 설명
 * IoT
 
 ---
-### 파일 업로드
+### <a name="upload-a-file"></a>파일 업로드
 
 **요청**
 
@@ -3460,7 +3467,6 @@ HTTP 상태 코드      | 설명
 * IoT
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

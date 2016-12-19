@@ -4,12 +4,12 @@ description: "선언적 XAML 태그 형식으로 UI를 정의하는 방법을 �
 title: "Windows 런타임 8.x XAML 및 UI를 UWP로 포팅&quot;"
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 translationtype: Human Translation
-ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: ea8844925cc227d9f082595b039dd68164ad1228
 
 ---
 
-# Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
+# <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -17,15 +17,15 @@ ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
 
 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다. 사용 중인 시스템 리소스 키 또는 사용자 지정 템플릿을 약간 조정해야 할 수도 있지만 대부분의 태그는 호환됩니다. 보기 모델의 명령적 코드의 경우는 거의 또는 전혀 변경할 필요가 없습니다. UI 요소를 조작하는 프레젠테이션 계층에 있는 코드의 상당 부분 또는 대부분도 간단히 포팅할 수 있습니다.
 
-## 명령적 코드
+## <a name="imperative-code"></a>명령적 코드
 
 프로젝트 빌드 단계로 진행하려면 필수가 아닌 코드에 주석이나 설명을 추가할 수 있습니다. 그런 다음 문제를 한 번에 하나씩 반복하고 이 섹션의 다음 항목과 이전 [문제 해결](w8x-to-uwp-troubleshooting.md) 항목을 참조하여 모든 빌드 및 런타임 문제를 해결하고 포팅을 완료합니다.
 
-## 적응/반응형 UI
+## <a name="adaptiveresponsive-ui"></a>적응/반응형 UI
 
-앱이 고유한 화면 크기와 해상도가 구현된 광범위한 디바이스에서 실행될 수도 있으므로 앱을 포팅하는 최소한의 단계 이상을 진행하고 앱이 해당 디바이스에서 최상으로 표시되도록 UI를 맞춤화하려고 합니다. 적응 Visual State Manager 기능을 사용하여 동적으로 창 크기를 검색하고 그 결과에 따라 레이아웃을 변경할 수 있으며, 이러한 작업을 수행하는 방법에 대한 예제는 Bookstore2 사례 연구 항목의 [적응 UI](w8x-to-uwp-case-study-bookstore2.md#adaptive-ui) 섹션에 나와 있습니다.
+앱이 고유한 화면 크기와 해상도가 구현된 광범위한 디바이스에서 실행될 수도 있으므로 앱을 포팅하는 최소한의 단계 이상을 진행하고 앱이 해당 디바이스에서 최상으로 표시되도록 UI를 맞춤화하려고 합니다. 적응 Visual State Manager 기능을 사용하여 동적으로 창 크기를 검색하고 그 결과에 따라 레이아웃을 변경할 수 있으며, 이러한 작업을 수행하는 방법에 대한 예제는 Bookstore2 사례 연구 항목의 [적응 UI](w8x-to-uwp-case-study-bookstore2.md) 섹션에 나와 있습니다.
 
-## 뒤로 단추 처리
+## <a name="back-button-handling"></a>뒤로 단추 처리
 
 유니버설 8.1 앱의 경우 Windows 스토어 앱과 Windows Phone 스토어 앱은 표시하는 UI와 뒤로 단추에 대해 처리하는 이벤트에 다른 접근 방식을 사용합니다. 그러나 Windows 10 앱의 경우 앱에서 하나의 접근 방식을 사용할 수 있습니다. 모바일 장치에서는 단추가 장치의 용량성 단추로 또는 셸의 단추로 제공됩니다. 데스크톱 장치에서는 앱 내에서 뒤로 탐색이 가능할 때마다 앱의 크롬에 단추를 추가합니다. 그러면 해당 단추는 태블릿 모드의 작업 표시줄에 또는 창으로 표시된 앱의 제목 표시줄에 표시됩니다. 뒤로 단추 이벤트는 모든 디바이스 패밀리에서 범용 개념이며, 하드웨어 또는 소프트웨어에서 구현된 단추는 동일한 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트를 발생시킵니다.
 
@@ -77,11 +77,11 @@ ms.openlocfilehash: c81c017817e55aed5dc4d19d919e22dd511c2b01
    Windows.UI.Xaml.Application.Current.Exit();
 ```
 
-## 참 메뉴
+## <a name="charms"></a>참 메뉴
 
 참 메뉴와 통합되는 코드를 변경할 필요는 없지만 Windows 10 셸의 일부가 아닌 참 메뉴를 대신할 UI를 앱에 추가해야 합니다. Windows 10에서 실행되는 유니버설 8.1 앱의 제목 표시줄에는 시스템 렌더링 크롬에서 제공하는 고유한 대체 UI가 있습니다.
 
-## 컨트롤 및 컨트롤 스타일/템플릿
+## <a name="controls-and-control-stylestemplates"></a>컨트롤 및 컨트롤 스타일/템플릿
 
 Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤에 대해 8.1 모양 및 동작을 유지합니다. 그러나 해당 앱을 Windows 10 앱에 포팅하는 경우 모양 및 동작에서 주의해야 할 일부 차이점이 있습니다. 기본적으로 Windows 10 앱에서 컨트롤의 아키텍처 및 디자인은 변경되지 않았으며 주로 [디자인 언어](#design-language), 간소화 및 유용성 개선과 관련하여 변경되었습니다.
 
@@ -117,11 +117,11 @@ Windows 10에서 실행되는 유니버설 8.1 앱은 컨트롤에 대해 8.1 �
 
 UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://msdn.microsoft.com/library/windows/apps/mt185405), [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406) 및 [컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/dn611856)을 참조하세요.
 
-##  Windows 10의 디자인 언어
+##  <a name="design-language-in-windows-10"></a>Windows 10의 디자인 언어
 
 유니버설 8.1 앱과 Windows 10 앱 사이의 디자인 언어에 중요한 차이점이 몇 가지 있습니다. 자세한 내용은 [디자인](http://dev.windows.com/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
 
-## 유효 픽셀, 가시거리 및 배율 인수
+## <a name="effective-pixels-viewing-distance-and-scale-factors"></a>유효 픽셀, 가시거리 및 배율 인수
 
 이전에 보기 픽셀은 장치의 실제 물리적 크기와 해상도에서 UI 요소의 크기 및 레이아웃을 추상화하는 방법이었습니다. 이제 보기 픽셀은 유효 픽셀로 발전했으며 해당 용어의 설명, 의미하는 내용 및 이러한 용어가 제공하는 추가 가치는 다음과 같습니다.
 
@@ -139,7 +139,7 @@ UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://ms
 
 리터럴 차원 값이 태그(크기 모양 또는 기타 요소, 입력 체계)에 사용되는 Windows 스토어 앱의 XAML 태그를 다시 사용할 수도 있습니다. 그러나 일부의 경우에 큰 배율 인수가 유니버설 8.1 앱이 아닌 Windows 10 앱의 장치에서 사용됩니다(예를 들어 150%는 이전에 140%였던 곳에서 사용되며 200%는 180%였던 곳에서 사용됨). 따라서 Windows 10에서 현재 이러한 리터럴 값이 너무 크다고 생각되면 0.8을 곱해 보세요. 자세한 내용은 [UWP 앱용 반응형 디자인 101](https://msdn.microsoft.com/library/windows/apps/dn958435)을 참조하세요.
 
-## GridView/ListView 변경
+## <a name="gridviewlistview-changes"></a>GridView/ListView 변경
 
 컨트롤을 세로로(이전에 기본적으로 가로였던 대신) 스크롤할 수 있도록 하기 위해 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 기본 스타일 setter에 몇 가지 변경 내용이 적용되었습니다. 프로젝트의 기본 스타일 복사본을 편집하면 복사본에 이러한 변경이 없으므로 수동으로 변경해야 합니다. 변경 목록은 다음과 같습니다.
 
@@ -230,15 +230,15 @@ UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://ms
 -   SelectionStates 시각적 상태 그룹에서 Selected 시각적 상태를 CommonStates 시각적 상태 그룹으로 이동합니다.
 -   전체 SelectionStates 시각적 상태 그룹을 제거합니다.
 
-## 지역화 및 세계화
+## <a name="localization-and-globalization"></a>지역화 및 세계화
 
 UWP 앱 프로젝트의 유니버설 8.1 프로젝트에서 Resources.resw 파일을 다시 사용할 수 있습니다. 파일을 복사한 후 프로젝트에 추가하고 **빌드 작업**을 **PRIResource**로 설정하고 **출력 디렉터리로 복사**를 **복사 안 함**으로 설정합니다. [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/br206071)에서는 디바이스 패밀리 리소스 선택 배율에 따라 디바이스 패밀리 관련 리소스를 로드하는 방법에 대해 설명합니다.
 
-## 재생
+## <a name="play-to"></a>재생
 
 [**Windows.Media.PlayTo**](https://msdn.microsoft.com/library/windows/apps/br207025) 네임스페이스의 API는 Windows 10 앱에서 사용되지 않으며, 대신 [**Windows.Media.Casting**](https://msdn.microsoft.com/library/windows/apps/dn972568) API가 사용됩니다.
 
-## 리소스 키 및 TextBlock 스타일 크기
+## <a name="resource-keys-and-textblock-style-sizes"></a>리소스 키 및 TextBlock 스타일 크기
 
 Windows 10에 대한 디자인 언어가 발전하여 특정 시스템 스타일이 변경되었습니다. 어떤 경우에는 변경된 스타일 속성과 어울리도록 보기의 시각적 디자인을 다시 확인할 수 있습니다.
 
@@ -405,7 +405,7 @@ Windows 10에 대한 디자인 언어가 발전하여 특정 시스템 스타일
 -   TextStyleSmallFontSize
 -   TimeRemainingElementMargin
 
-## AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox
+## <a name="searchbox-deprecated-in-favor-of-autosuggestbox"></a>AutoSuggestBox를 위해 더 이상 사용되지 않는 SearchBox
 
 [**SearchBox**](https://msdn.microsoft.com/library/windows/apps/dn252803)는 범용 디바이스 패밀리에 구현되어 있지만 모바일 디바이스에서 완전히 작동하지 않습니다. 유니버설 검색 환경에 [**AutoSuggestBox**](https://msdn.microsoft.com/library/windows/apps/dn633874)를 사용합니다. 일반적으로 **AutoSuggestBox**를 사용하여 검색 환경을 구현하는 방법은 다음과 같습니다.
 
@@ -423,7 +423,7 @@ Windows 10에 대한 디자인 언어가 발전하여 특정 시스템 스타일
 
 [AutoSuggestBox 포팅 샘플](http://go.microsoft.com/fwlink/p/?linkid=619996)을 참조하세요.
 
-## SemanticZoom 변경
+## <a name="semanticzoom-changes"></a>SemanticZoom 변경
 
 Windows Phone 모델에서 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)에 대한 축소 제스처가 그룹 헤더를 탭하거나 클릭하는 것으로 수렴되었습니다(따라서 데스크톱 컴퓨터에서 축소에 해당하는 빼기 단추가 더 이상 표시되지 않음). 이제 모든 장치에서 무료로 동일하고 일관된 동작을 가져옵니다. Windows Phone 모델의 한 가지 표면적인 차이는 축소 보기(점프 목록)가 확대 보기를 오버레이하는 대신 확대 보기를 대체한다는 점입니다. 이러한 이유로 축소 보기에서 모든 반투명 배경을 제거할 수 있습니다.
 
@@ -435,7 +435,7 @@ Windows 스토어 앱에서 앱이 비활성화되고 다시 활성화되면 축
 
 Windows Phone 스토어 앱 및 Windows 10 앱에서는 뒤로 단추를 누를 경우 축소 보기가 사라집니다. Windows 스토어 앱의 경우 기본 제공 뒤로 단추 처리가 없으므로 이 문제가 해당되지 않습니다.
 
-## 설정
+## <a name="settings"></a>설정
 
 Windows 런타임 8.x **SettingsPane** 클래스는 Windows 10에 적합하지 않습니다. 대신, 설정 페이지를 빌드하는 것 외에도 사용자가 앱 내에서 해당 페이지에 액세스할 수 있는 방법을 제공해야 합니다. 탐색 창에 고정된 마지막 항목으로 최상위 수준에 이 앱 설정 페이지를 표시하는 것이 좋지만 전체 옵션 집합은 다음과 같습니다.
 
@@ -447,7 +447,7 @@ Windows 런타임 8.x **SettingsPane** 클래스는 Windows 10에 적합하지 �
 
 설정 페이지는 앱 창 전체를 채워야 하며, 설정 페이지에도 정보 및 피드백이 있어야 합니다. 설정 페이지의 디자인에 대한 지침은 [앱 설정에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh770544)을 참조하세요.
 
-## 텍스트
+## <a name="text"></a>텍스트
 
 텍스트(또는 입력 체계)는 UWP 앱의 중요한 측면이며, 포팅하는 동안 보기가 새 디자인 언어와 조화를 이루도록 보기의 시각적 디자인을 다시 검토할 수 있습니다. 다음 그림을 사용하여 사용 가능한 UWP(유니버설 Windows 플랫폼)  **TextBlock** 시스템 스타일을 찾을 수 있습니다. 사용한 Windows Phone Silverlight 스타일에 해당하는 스타일을 찾을 수 있습니다. 범용 스타일을 직접 만든 다음 Windows Phone Silverlight 시스템 스타일의 속성을 해당 스타일로 복사할 수도 있습니다.
 
@@ -459,11 +459,11 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 
 자세한 내용은 [글꼴에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) 및 [UWP 앱 디자인](http://go.microsoft.com/fwlink/p/?LinkID=533896)을 참조하세요. 또한 텍스트 컨트롤에 대한 변경은 위의 [컨트롤](#controls) 섹션을 참조하세요.
 
-## 테마 변경
+## <a name="theme-changes"></a>테마 변경
 
 유니버설 8.1 앱의 경우 기본 테마는 기본적으로 어둡습니다. Windows 10 디바이스의 경우 기본 테마가 변경되었지만, App.xaml에서 요청된 테마를 선언하여 사용되는 테마를 제어할 수 있습니다. 예를 들어 모든 디바이스에서 어두운 테마를 사용하려면 루트 응용 프로그램 요소에 `RequestedTheme="Dark"`를 추가합니다.
 
-## 타일 및 알림
+## <a name="tiles-and-toasts"></a>타일 및 알림
 
 타일 및 알림의 경우, 현재 사용 중인 템플릿이 Windows 10 앱에서 작업을 계속 작동합니다. 그렇지만 사용할 수 있는 새로운 조정 가능 템플릿이 있으며 이러한 템플릿은 [알림, 타일 및 배지](https://msdn.microsoft.com/library/windows/apps/mt185606)에 설명되어 있습니다.
 
@@ -471,7 +471,7 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 
 알림 메시지를 보내기 위해 더 이상 기능을 선언해야 할 필요가 없습니다.
 
-## 창 크기
+## <a name="window-size"></a>창 크기
 
 유니버설 8.1 앱의 경우 [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/dn391667) 앱 매니페스트 요소가 최소 창 너비를 선언하는 데 사용됩니다. UWP 앱에서 명령 코드로 최소 크기(너비 및 높이)를 지정할 수 있습니다. 기본 최소 크기는 500x320epx이며, 이 크기는 허용되는 가장 작은 최소 크기이기도 합니다. 허용되는 가장 큰 최소 크기는 500x500epx입니다.
 
@@ -485,6 +485,6 @@ Windows 스토어 앱 및 Windows Phone 스토어 앱에서 텍스트의 기본 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

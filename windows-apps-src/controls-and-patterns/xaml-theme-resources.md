@@ -36,7 +36,7 @@ XAML의 테마 리소스는 활성 상태인 시스템 테마에 따라 다른 �
 
 각 테마 리소스는 XAML 파일 themeresources.xaml의 일부입니다. 디자인 상 themeresources.xaml은 Windows SDK(소프트웨어 개발 키트) 설치의 \\(Program Files)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK version&gt;\\Generic 폴더에 제공됩니다. 또한 themeresources.xaml의 리소스 사전은 동일한 디렉터리의 generic.xaml에서 재현됩니다.
 
-> **참고**&nbsp;&nbsp;Windows 런타임은 런타임 조회를 위해 이러한 물리적 파일을 사용하지 않습니다. 따라서 이러한 물리적 파일은 특별히 DesignTime 폴더에 있으며, 기본적으로 앱에 복사되지 않습니다. 대신 이러한 리소스 사전은 Windows 런타임 자체의 일부로 메모리에 존재하고, 여기서 테마 리소스 또는 시스템 리소스에 대한 앱의 XAML 리소스 참조를 런타임에 확인합니다.
+> **참고**  Windows 런타임은 런타임 조회를 위해 이러한 물리적 파일을 사용하지 않습니다. 따라서 이러한 물리적 파일은 특별히 DesignTime 폴더에 있으며, 기본적으로 앱에 복사되지 않습니다. 대신 이러한 리소스 사전은 Windows 런타임 자체의 일부로 메모리에 존재하고, 여기서 테마 리소스 또는 시스템 리소스에 대한 앱의 XAML 리소스 참조를 런타임에 확인합니다.
 
  ## 테마 리소스 사용 지침
 
@@ -122,7 +122,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 시스템 고대비 테마 색 외에도 `SystemAccentColor` 키를 사용하는 특수한 색 리소스로 시스템 테마 컬러가 제공됩니다. 런타임에 이 리소스는 사용자가 Windows 개인 설정에서 테마 컬러로 지정한 색을 가져옵니다.
 
-> **참고**&nbsp;&nbsp;동일한 이름의 리소스를 만들어 고대비 색과 테마 컬러에 대한 시스템 색 리소스를 재정의할 수 있지만, 특히 고대비 설정의 경우 사용자가 선택한 색을 유지하는 것이 가장 좋습니다.
+> **참고**  동일한 이름의 리소스를 만들어 고대비 색과 테마 컬러에 대한 시스템 색 리소스를 재정의할 수 있지만, 특히 고대비 설정의 경우 사용자가 선택한 색을 유지하는 것이 가장 좋습니다.
 
 ### 테마 종속 브러시
 
@@ -150,7 +150,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 For many examples of how the brushes are used in the XAML control templates, see the [Default control styles and templates](default-control-styles-and-templates.md).
 -->
 
-> **참고**&nbsp;&nbsp;\[*Simple HighContrast name*\]\[*Simple light/dark name*\]의 모든 조합이 브러시 리소스로 제공되는 것은 아닙니다.
+> **참고**  \[*Simple HighContrast name*\]\[*Simple light/dark name*\]의 모든 조합이 브러시 리소스로 제공되는 것은 아닙니다.
 
 ## XAML 유형 램프
 
@@ -311,7 +311,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [**TextBlock*
 </Style>
 ```
 
-> **참고**&nbsp;&nbsp; [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일은 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에 있는 텍스트 램프 스타일을 모두 보유하지는 않습니다. 이는 주로 **RichTextBlock**에 대한 블록 기반 문서 개체 모델이 개별 텍스트 요소에 대한 특성을 더 쉽게 설정할 수 있도록 하기 때문입니다. 또한 XAML 콘텐츠 속성을 사용하여 [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
+> **참고**   [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565) 스타일은 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)에 있는 텍스트 램프 스타일을 모두 보유하지는 않습니다. 이는 주로 **RichTextBlock**에 대한 블록 기반 문서 개체 모델이 개별 텍스트 요소에 대한 특성을 더 쉽게 설정할 수 있도록 하기 때문입니다. 또한 XAML 콘텐츠 속성을 사용하여 [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676)를 설정하면 스타일 지정할 텍스트 요소가 없어서 컨테이너의 스타일을 지정해야 하는 상황이 발생합니다. 이는 **RichTextBlock**의 경우 문제가 아닙니다. 왜냐하면 해당 텍스트 콘텐츠가 항상 페이지 머리글, 페이지 하위 머리글 및 비슷한 텍스트 램프 정의에 대해 XAML 스타일을 적용하는 [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) 같은 특정 텍스트 요소여야 하기 때문입니다.
 
 ## 기타 명명된 스타일
 

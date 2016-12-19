@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: "음악, 사진 및 비디오 라이브러리의 파일 및 폴더"
 description: "음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
-ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: 4e2b7d10e1d24427aede21ccae176d7cd55f9de8
 
 ---
 
-# 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
+# <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -19,7 +19,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
 라이브러리는 기본적으로 알려진 폴더와 사용자가 개발자의 앱 또는 기본 제공 앱 중 하나를 사용하여 라이브러리에 추가한 다른 폴더를 포함하는 가상 폴더 컬렉션입니다. 예를 들어 사진 라이브러리에는 기본적으로 알려진 사진 폴더가 포함되어 있습니다. 사용자는 개발자의 앱 또는 기본 제공 사진 앱을 사용하여 사진 라이브러리에서 폴더를 추가하거나 제거할 수 있습니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
@@ -36,7 +36,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
     자세한 내용은 [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
-## 라이브러리에 대한 참조 가져오기
+## <a name="get-a-reference-to-a-library"></a>라이브러리에 대한 참조 가져오기
 
 
 **참고** 적절한 접근 권한 값을 선언해야 합니다.
@@ -53,7 +53,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
         (Windows.Storage.KnownLibraryId.Pictures);
 ```
 
-## 라이브러리에 폴더 목록 가져오기
+## <a name="get-the-list-of-folders-in-a-library"></a>라이브러리에 폴더 목록 가져오기
 
 
 라이브러리에 폴더 목록을 가져오려면 [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성의 값을 가져옵니다.
@@ -66,7 +66,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
-## 기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오기
+## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오기
 
 
 기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오려면 [**StorageLibrary.SaveFolder**](https://msdn.microsoft.com/library/windows/apps/dn251728) 속성의 값을 가져옵니다.
@@ -75,7 +75,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
     Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 ```
 
-## 라이브러리에 기존 폴더 추가
+## <a name="add-an-existing-folder-to-a-library"></a>라이브러리에 기존 폴더 추가
 
 
 라이브러리에 폴더를 추가하려면 [**StorageLibrary.RequestAddFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251726)를 호출합니다. 예를 들어 사진 라이브러리의 경우 이 메서드를 호출하면 **사진에 이 폴더 추가** 단추가 포함된 폴더 선택기가 표시됩니다. 사용자가 폴더를 선택한 경우 폴더는 디스크의 원래 위치에 유지되고 [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 속성(및 기본 제공 사진 앱)의 항목이 되지만 파일 탐색기의 사진 폴더 항목으로 표시되지는 않습니다.
@@ -85,7 +85,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
     Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync();
 ```
 
-## 라이브러리에서 폴더 제거
+## <a name="remove-a-folder-from-a-library"></a>라이브러리에서 폴더 제거
 
 
 라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://msdn.microsoft.com/library/windows/apps/dn251727) 메서드를 호출하고 제거할 폴더를 지정합니다. [**StorageLibrary.Folders**](https://msdn.microsoft.com/library/windows/apps/dn251724) 및 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
@@ -99,7 +99,7 @@ ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
     bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ```
 
-## 라이브러리의 폴더 목록 변경에 대한 알림 받기
+## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>라이브러리의 폴더 목록 변경에 대한 알림 받기
 
 
 라이브러리의 폴더 목록 변경에 대한 알림을 받으려면 라이브러리의 [**StorageLibrary.DefinitionChanged**](https://msdn.microsoft.com/library/windows/apps/dn251723) 이벤트에 대한 처리기를 등록합니다.
@@ -115,7 +115,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 }
 ```
 
-## 미디어 라이브러리 폴더
+## <a name="media-library-folders"></a>미디어 라이브러리 폴더
 
 
 장치에는 사용자 및 앱이 미디어 파일을 저장하도록 사전 정의된 5개의 위치가 있습니다. 기본 제공 앱은 사용자가 만들었거나 다운로드한 미디어를 모두 이러한 위치에 저장합니다.
@@ -134,7 +134,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 
 사용자 또는 앱이 SD 카드에 있는 미디어 라이브러리 폴더 외부에 미디어 파일을 저장할 수도 있습니다. SD 카드에서 안정적으로 미디어 파일을 찾으려면 SD 카드의 콘텐츠를 검사하거나 사용자에게 파일 선택기를 사용하여 파일 위치를 찾도록 요청합니다. 자세한 내용은 [SD 카드에 액세스](access-the-sd-card.md)를 참조하세요.
 
-## 미디어 라이브러리 쿼리
+## <a name="querying-the-media-libraries"></a>미디어 라이브러리 쿼리
 
 파일의 컬렉션을 가져오려면 원하는 파일 형식과 라이브러리를 지정합니다.
 
@@ -164,7 +164,7 @@ private async void getSongs()
 }
 ```
 
-### 내부 저장소 및 이동식 저장소를 포함하는 쿼리 결과
+### <a name="query-results-include-both-internal-and-removable-storage"></a>내부 저장소 및 이동식 저장소를 포함하는 쿼리 결과
 
 사용자는 기본적으로 옵션 SD 카드에 파일을 저장하도록 선택할 수 있습니다. 하지만 앱에서 SD 카드에 파일이 저장되는 것을 허용하지 않도록 선택할 수 있습니다. 결과적으로, 미디어 라이브러리를 장치 내부 저장소와 SD 카드로 분할할 수 있습니다.
 
@@ -177,7 +177,7 @@ private async void getSongs()
 `await KnownFolders.PicturesLibrary.GetFilesAsync()`을(를) 호출하여 사진 라이브러리의 콘텐츠를 쿼리하는 경우 결과에 internalPic.jpg 및 SDPic.jpg 모두가 포함됩니다.
 
 
-## 사진 작업
+## <a name="working-with-photos"></a>사진 작업
 
 
 카메라가 모든 사진의 저해상도 이미지와 고해상도 이미지를 모두 저장하는 장치의 경우 심층 쿼리는 저해상도 이미지만 반환합니다.
@@ -197,7 +197,7 @@ private async void getSongs()
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## 스트림 메서드를 사용하여 미디어 라이브러리에 파일 추가
+## <a name="using-stream-methods-to-add-a-file-to-a-media-library"></a>스트림 메서드를 사용하여 미디어 라이브러리에 파일 추가
 
 
 **KnownFolders.PictureLibrary**과(와) 같은 알려진 폴더를 사용하여 미디어 라이브러리에 액세스하고 스트림 메서드를 사용하여 미디어 라이브러리에 파일을 추가할 때 코드가 연 모든 스트림을 닫아야 합니다. 그렇지 않으면 이러한 메서드가 미디어 라이브러리에 제대로 파일을 추가하지 못합니다. 하나 이상의 스트림에 여전히 파일에 대한 핸들이 있기 때문입니다.
@@ -246,6 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

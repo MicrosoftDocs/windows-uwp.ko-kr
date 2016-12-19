@@ -4,12 +4,12 @@ ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: "이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에 포팅하는 사례 연구를 제공합니다."
 title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구, QuizGame 피어 투 피어 샘플 앱"
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 62d747a06f26bd2d069d2f23f36f48249fd11e95
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 피어 투 피어 샘플 앱
+# <a name="windows-runtime-8x-to-uwp-case-study-quizgame-peer-to-peer-sample-app"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: QuizGame 피어 투 피어 샘플 앱
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -27,11 +27,11 @@ ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
 
  
 
-**참고** Visual Studio에서 QuizGame10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion)의 단계를 수행합니다.
+**참고** Visual Studio에서 QuizGame10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)의 단계를 수행합니다.
 
  
 
-## 다운로드
+## <a name="downloads"></a>다운로드
 
 [QuizGame 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532953). 포팅하기 전 앱의 초기 상태입니다. 
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 353ee8511be38ad437a64e153d43523f355e080f
 
 [GitHub에서 이 샘플의 최신 버전을 참조하세요](https://github.com/Microsoft/Windows-appsample-quizgame).
 
-## WinRT 8.1 솔루션
+## <a name="the-winrt-81-solution"></a>WinRT 8.1 솔루션
 
 
 다음은 포팅할 앱인 QuizGame의 모습입니다.
@@ -54,7 +54,7 @@ Windows에서 실행되는 QuizGame 호스트 앱
 
 Windows Phone에서 실행되는 QuizGame 클라이언트 앱
 
-## 사용 중인 QuizGame 연습
+## <a name="a-walkthrough-of-quizgame-in-use"></a>사용 중인 QuizGame 연습
 
 다음은 사용 중인 앱에 대해 간단한 가상 설명이지만, 무선 네트워크를 통해 앱을 사용해 보려는 경우 유용한 정보를 제공합니다.
 
@@ -66,13 +66,13 @@ Windows Phone에서 실행되는 QuizGame 클라이언트 앱
 
 이러한 동일한 주기로 계속 질문을 하고 응답하게 됩니다. 마지막 질문이 호스트 앱에 표시되면 **다음 질문**이 아니라 **결과 표시**가 단추의 내용이 됩니다. **결과 표시**를 클릭하면 결과가 표시됩니다. **대기실로 돌아가기**를 클릭하면 참가한 플레이어가 참가한 상태로 유지되는 점을 제외하고는 게임 수명 주기의 시작으로 돌아갑니다. 그러나 대기실로 돌아가면 새 플레이어에게 게임에 참가할 수 있는 기회가 제공되며, 참가한 플레이어는 편리하게 게임에서 나갈 수 있습니다(그러나 참가한 플레이어는 언제든지 **게임 나가기**를 탭하여 게임에서 나갈 수 있음).
 
-## 로컬 테스트 모드
+## <a name="local-test-mode"></a>로컬 테스트 모드
 
 여러 디바이스에 걸쳐 분산된 것이 아니라 단일 PC에서 앱과 해당 조작을 사용해 보려면 로컬 테스트 모드에서 호스트 앱을 빌드하면 됩니다. 이 모드는 네트워크 사용을 완전히 무시합니다. 대신 호스트 앱의 UI에서 창의 왼쪽에 호스트 부분이 표시되고, 오른쪽에 클라이언트 앱 UI의 두 복사본이 세로 막대형으로 표시됩니다(이 버전에서 로컬 테스트 모드 UI는 PC 디스플레이에 대해 고정되며 소형 디바이스에 맞게 조정되지 않음에 주의). 모두 동일한 앱에 있는 이러한 UI 세그먼트는 모의 클라이언트 Communicator를 통해 서로 통신하며, 이는 그러지 않은 경우 네트워크를 통해 발생하는 조작을 시뮬레이트합니다.
 
 로컬 테스트 모드를 활성화하려면 프로젝트 속성의 **LOCALTESTMODEON**을 조건부 컴파일 기호로 정의하고 다시 빌드합니다.
 
-## Windows 10 프로젝트로 포팅
+## <a name="porting-to-a-windows-10-project"></a>Windows 10 프로젝트로 포팅
 
 QuizGame에는 다음과 같은 부분에 있습니다.
 
@@ -81,7 +81,7 @@ QuizGame에는 다음과 같은 부분에 있습니다.
 -   QuizGame.WindowsPhone. Windows Phone 8.1을 대상으로 하는 클라이언트 앱용 앱 패키지를 빌드하는 프로젝트입니다.
 -   QuizGame.Shared. 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-이 사례 연구를 위해 지원할 디바이스와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md#if-you-have-an-81-universal-windows-app)에 설명된 일반적인 옵션을 제공합니다.
+이 사례 연구를 위해 지원할 디바이스와 관련하여 [유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에 설명된 일반적인 옵션을 제공합니다.
 
 해당 옵션에 따라 QuizGame.Windows를 QuizGameHost라는 새 Windows 10 프로젝트에 포팅합니다. 또한 QuizGame.WindowsPhone을 QuizGameClient라는 새 Windows 10 프로젝트에 포팅합니다. 이러한 프로젝트는 유니버설 디바이스 패밀리를 대상으로 하므로 모든 디바이스에서 실행됩니다. 또한 QuizGame.Shared 원본 파일 등을 자체 폴더에 유지하고 해당 공유 파일을 두 개의 새 프로젝트에 연결합니다. 이전과 마찬가지로, 모든 항목을 하나의 솔루션에 유지하고 이름을 QuizGame10으로 지정합니다.
 
@@ -139,7 +139,7 @@ rootFrame.Navigate(typeof(MainPage), e.Arguments);
 
 이제 빌드하고 실행할 수 있습니다.
 
-## 적응 UI
+## <a name="adaptive-ui"></a>적응 UI
 
 QuizGameHost Windows 10 앱은 넓은 창에서 실행될 때는 제대로 표시됩니다(화면이 큰 디바이스에서만 가능함). 그러나 앱의 창이 좁은 경우(소형 디바이스에서 이렇고 대형 디바이스에서도 이럴 수 있음) UI가 너무 압축되어 읽을 수 없습니다.
 
@@ -171,7 +171,7 @@ QuizGameHost Windows 10 앱은 넓은 창에서 실행될 때는 제대로 표�
 </VisualStateManager.VisualStateGroups>
 ```
 
-## 범용 스타일 지정
+## <a name="universal-styling"></a>범용 스타일 지정
 
 
 Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩이 없음을 알 수 있습니다. 두 가지 사소한 변경으로 이 문제를 해결할 수 있습니다. 먼저, QuizGameHost 및 QuizGameClient 둘 다에서 app.xaml에 이 태그를 추가합니다.
@@ -190,12 +190,12 @@ Windows 10에서는 단추의 해당 템플릿에 동일한 터치 대상 패딩
 
 이러한 마지막 조정으로 앱이 포팅 이전과 동일하게 동작하고 동일한 모습을 가지며, 이제 모든 곳에서 실행된다는 가치가 더해졌습니다.
 
-## 결론
+## <a name="conclusion"></a>결론
 
 이 사례 연구에서 포팅한 앱은 여러 프로젝트, 클래스 라이브러리 1개 및 상당한 양의 코드 및 사용자 인터페이스가 관련된 상대적으로 복잡한 앱이었습니다. 그럼에도 불구하고 포팅은 간단했습니다. 이렇게 포팅이 손쉬웠던 직접적인 이유 중에는 Windows 10 개발자 플랫폼과 Windows 8.1 및 Windows Phone 8.1 플랫폼이 유사하기 때문인 것도 있습니다. 또 다른 이유는 원래 앱이 모델, 보기 모델 및 보기를 별도로 유지하도록 설계된 방식 때문입니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

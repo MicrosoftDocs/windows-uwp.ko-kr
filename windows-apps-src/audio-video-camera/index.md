@@ -4,14 +4,14 @@ ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다."
 title: "오디오 비디오 및 카메라"
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
+ms.sourcegitcommit: 77f47bce2a4be3f7c5ee3d320ff6c68e8c7ce6b0
+ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
 
 ---
 
-# 오디오 비디오 및 카메라
+# <a name="audio-video-and-camera"></a>오디오 비디오 및 카메라
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다.
  
@@ -22,6 +22,7 @@ ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 | [이미지 또는 동영상에서 얼굴 감지](detect-and-track-faces-in-an-image.md) | 비디오 프레임의 시퀀스에서 시간에 따라 얼굴을 추적하도록 [FaceTracker](https://msdn.microsoft.com/library/windows/apps/dn974150)를 사용하는 방법을 보여 줍니다. |
 | [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md) | [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) 네임스페이스의 API를 사용하여 사용자가 오디오 및 비디오 원본 파일에서 미디어 컴퍼지션을 만들 수 있게 허용하는 앱을 신속하게 개발하는 방법에 대해 설명합니다. |
 | [사용자 지정 동영상 효과](custom-video-effects.md) | 비디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 **IBasicVideoEffect** 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. |
+| [사용자 지정 오디오 효과](custom-audio-effects.md) | 오디오 스트림에 대한 사용자 지정 효과를 만들 수 있도록 하는 **IBasicAudioEffect** 인터페이스를 구현하는 Windows 런타임 구성 요소를 만드는 방법을 설명합니다. |
 | [비트맵 이미지 만들기, 편집 및 저장](imaging.md) | [SoftwareBitmap](https://msdn.microsoft.com/library/windows/apps/dn887358) 개체로 비트맵 이미지를 나타내어 이미지 파일을 로드하고 저장하는 방법을 설명합니다.  |
 | [오디오 디바이스 정보 속성](audio-device-information-properties.md)  | 오디오 디바이스와 관련된 디바이스 정보 속성이 나열되어 있습니다. |
 | [미디어 파일 코드 변환](transcode-media-files.md) | [Windows.Media.Transcoding](https://msdn.microsoft.com/library/windows/apps/br207105) API를 사용하여 비디오 파일을 한 형식에서 다른 형식으로 트랜스코딩하는 방법을 보여 줍니다. |
@@ -33,7 +34,7 @@ ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 | [지원되는 코덱](supported-codecs.md) | UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다. |
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [UWP 앱 개발](https://developer.microsoft.com/en-us/windows/develop)
 
  
@@ -48,6 +49,6 @@ ms.openlocfilehash: 6e67f57fbc00e596bb07cc37f2c9f762a5c9f557
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

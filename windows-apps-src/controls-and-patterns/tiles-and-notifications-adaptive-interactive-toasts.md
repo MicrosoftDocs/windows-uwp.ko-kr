@@ -6,11 +6,11 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
+ms.sourcegitcommit: 2ac3a4a1efa85a3422d8964ad4ee62db28bc975f
+ms.openlocfilehash: cfbbf110ed6df1b7e81e0505dcf55a63ba8739aa
 
 ---
-# 적응형 및 대화형 알림 메시지
+# <a name="adaptive-and-interactive-toast-notifications"></a>적응형 및 대화형 알림 메시지
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,11 +22,17 @@ ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 -   기본 알림 메시지 및 각 작업에 대한 세 가지 활성화 유형.
 -   알람, 미리 알림 및 수신 전화를 포함한 특정 시나리오에 대한 알림을 만드는 옵션.
 
-**참고** Windows 8.1 및 Windows Phone 8.1의 레거시 템플릿을 확인하려면 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조하세요.
+**참고** Windows 8.1 및 Windows Phone 8.1의 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조하세요.
 
- 
 
-## 알림 메시지 구조
+## <a name="getting-started"></a>시작
+
+**알림 라이브러리 설치.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
+
+**알림 시각화 도우미 설치.** 이 무료 UWP 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 비슷하게, 알림을 편집할 때 시각적 미리 보기를 곧바로 제공하여 대화형 알림 메시지를 디자인하는 데 도움이 됩니다. [이 블로그 게시물](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx)에서 자세한 정보를 얻을 수 있고 [여기](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)서 알림 시각화 도우미를 다운로드할 수 있습니다.
+
+
+## <a name="toast-notification-structure"></a>알림 메시지 구조
 
 
 알림 메시지는 XML을 사용하여 구성되며 이 XML에는 일반적으로 다음 키 요소가 포함됩니다.
@@ -54,11 +60,72 @@ ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 </toast>
 ```
 
-그리고 구조의 시각적 표현:
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Sample"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "This is a simple toast notification example"
+                }
+            },
+ 
+            AppLogoOverride = new ToastGenericAppLogo()
+            {
+                Source = "oneAlarm.png"
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Buttons =
+        {
+            new ToastButton("check", "check")
+            {
+                ImageUri = "check.png"
+            },
+ 
+            new ToastButton("cancel", "cancel")
+            {
+                ImageUri = "cancel.png"
+            }
+        }
+    },
+ 
+    Audio = new ToastAudio()
+    {
+        Src = new Uri("ms-winsoundevent:Notification.Reminder")
+    }
+};
+```
+
+이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+
+```CSharp
+ToastNotification notification = new ToastNotification(content.GetXml());
+ToastNotificationManager.CreateToastNotifier().Show(notification);
+```
+
+알림 메시지를 표시하는 완전히 작동하는 앱을 보려면 [로컬 알림 메시지 보내기에 대한 빠른 시작](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)을 참조하세요.
+
+구조의 시각적 표현은 다음과 같습니다.
 
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
 
-### 시각 효과
+### <a name="visual"></a>시각 효과
 
 시각적 요소 내부에는 알림의 시각적 콘텐츠가 포함된 정확히 하나의 바인딩 요소가 있어야 합니다.
 
@@ -67,9 +134,15 @@ UWP(유니버설 Windows 플랫폼) 앱의 타일 알림은 다양한 타일 크
 -   다른 텍스트 줄을 추가하거나, 인라인 이미지를 추가하거나, 앱 아이콘 표시부터 다른 작업까지 미리 보기 이미지를 변경하는 것과 같이 알림 콘텐츠를 변경하고 템플릿 이름과 콘텐츠가 일치하지 않아서 잘못된 페이로드를 만들거나 전체 템플릿을 변경하는 것에 대해 결정하지 않고 이러한 작업을 수행할 수 있습니다.
 -   같은 코드를 사용하여 휴대폰, 태블릿, PC, Xobx One을 비롯한 다양한 Microsoft Windows 디바이스 유형에 배달하도록 대상이 지정된 **toast notification**에 대한 같은 페이로드를 구성할 수 있습니다. 이러한 각 디바이스는 알림을 허용하고 적절한 시각적 어포던스 및 조작 모델을 사용하여 UI 정책에 따라 사용자에게 표시합니다.
 
-시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
+시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제를 보려면 아래 XML 예제 섹션을 참조하세요.
 
-### 동작
+앱의 ID는 앱 아이콘을 통해 전달됩니다. 그러나 appLogoOverride를 사용하는 경우 텍스트 줄 아래에 앱 이름이 표시됩니다.
+
+| 일반적인 알림                                                                              | appLogoOverride를 사용하는 알림                                                          |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| ![appLogoOverride를 사용하지 않는 알림](images/adaptivetoasts-withoutapplogooverride.jpg) | ![appLogoOverride를 사용하는 알림](images/adaptivetoasts-withapplogooverride.jpg) |
+
+### <a name="actions"></a>작업
 
 UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는 데 사용되는 단추와 다른 입력을 알림 메시지에 추가할 수 있습니다. 이들 작업은 &lt;actions&gt; 요소 아래에 다음 두 가지 형식으로 지정할 수 있습니다.
 
@@ -87,7 +160,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제에 대해서는 아래 XML 예 섹션을 참조하세요.
 
-### 오디오
+### <a name="audio"></a>오디오
 
 사용자 지정 소리는 현재 데스크톱 플랫폼을 대상으로 지정한 UWP 앱에서 지원되지 않습니다. 대신, 데스크톱의 목록에서 앱에 대한 ms-winsoundevents를 선택할 수 있습니다. 모바일 플랫폼의 UWP 앱은 다음 형식의 사용자 지정 소리와 함께 두 가지 ms-winsoundevents를 모두 지원합니다.
 
@@ -96,7 +169,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 
 ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오에 대한 자세한 내용은 [오디오 스키마 페이지](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## 알람, 미리 알림 및 수신 전화
+## <a name="alarms-reminders-and-incoming-calls"></a>알람, 미리 알림 및 수신 전화
 
 
 알람, 미리 알림 및 수신 전화에 알림 메시지를 사용할 수 있습니다. 이러한 특수 알림의 표준 토스트와 일치하지만 특수 알림은 시나리오 기반 사용자 지정 UI 및 패턴을 나타냅니다.
@@ -105,7 +178,7 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 -   위의 동작을 미리 알림과 공유할 뿐 아니라 알람 알림도 루핑 오디오를 자동으로 재생합니다.
 -   Windows 모바일 디바이스에서 수신 전화 알림은 전체 화면으로 표시됩니다. 이 작업을 수행하려면 알림 메시지의 루트 요소 내부에 시나리오 특성을 지정합니다. &lt;toast&gt;: &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
 
-## XML 예
+## <a name="xml-examples"></a>XML 예
 
 
 **참고** 아래 예제의 알림 메시지 스크린샷은 데스크톱의 앱에서 생성되었습니다. 모바일 디바이스에서 알림 메시지는 나타날 때 축소될 수 있고 이 경우 알림 아래쪽의 그래버를 통해 확장합니다.
@@ -119,18 +192,60 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 ```XML
 <toast launch="app-defined-string">
   <visual>
-<binding template="ToastGeneric">
-    <text>Photo Share</text>
+    <binding template="ToastGeneric">
+      <text>Photo Share</text>
       <text>Andrew sent you a picture</text>
       <text>See it in full size!</text>
-      <image placement="appLogoOverride" src="A.png" />
-    <image placement="inline" src="hiking.png" />
+      <image src="https://unsplash.it/360/180?image=1043" />
+      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
     </binding>
   </visual>
 </toast>
 ```
 
-![다양한 시각적 콘텐츠가 있는 알림](images/adaptivetoasts-xmlsample01.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Photo Share"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "Andrew sent you a picture"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "See it in full size!"
+                },
+ 
+                new AdaptiveImage()
+                {
+                    Source = "https://unsplash.it/360/180?image=1043"
+                }
+            },
+ 
+            AppLogoOverride = new ToastGenericAppLogo()
+            {
+                Source = "https://unsplash.it/64?image=883",
+                HintCrop = ToastGenericAppLogoCrop.Circle
+            }
+        }
+    }
+};
+```
+
+![다양한 시각적 콘텐츠가 있는 알림](images/adaptivetoasts-xmlsample01.jpg)
 
  
 
@@ -144,17 +259,55 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
     <binding template="ToastGeneric">
       <text>Microsoft Company Store</text>
       <text>New Halo game is back in stock!</text>
-      <image placement="appLogoOverride" src="A.png" />
     </binding>
   </visual>
   <actions>
-    <action activationType="foreground" content="see more details" arguments="details" imageUri="check.png"/>
-    <action activationType="background" content="remind me later" arguments="later" imageUri="cancel.png"/>
+    <action activationType="foreground" content="See more details" arguments="details"/>
+    <action activationType="background" content="Remind me later" arguments="later"/>
   </actions>
 </toast>
 ```
 
-![작업이 있는 알림, 예제 1](images/adaptivetoasts-xmlsample02.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Microsoft Company Store"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "New Halo game is back in stock!"
+                }
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Buttons =
+        {
+            new ToastButton("See more details", "details"),
+ 
+            new ToastButton("Remind me later", "later")
+            {
+                ActivationType = ToastActivationType.Background
+            }
+        }
+    }
+};
+```
+
+![작업이 있는 알림, 예제 1](images/adaptivetoasts-xmlsample02.jpg)
 
  
 
@@ -166,20 +319,57 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 <toast launch="app-defined-string">
   <visual>
     <binding template="ToastGeneric">
-      <text>Cortana</text>
-      <text>We noticed that you are near Wasaki.</text>
-      <text>Thomas left a 5 star rating after his last visit, do you want to try?</text>
-      <image placement="appLogoOverride" src="A.png" />
+      <text>Restaurant suggestion...</text>
+      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
     </binding>
   </visual>
   <actions>
-    <action activationType="foreground" content="reviews" arguments="reviews" />
-    <action activationType="protocol" content="show map" arguments="bingmaps:?q=sushi" />
+    <action activationType="foreground" content="Reviews" arguments="reviews" />
+    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
   </actions>
 </toast>
 ```
 
-![작업이 있는 알림, 예제 2](images/adaptivetoasts-xmlsample03.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Restaurant suggestion..."
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
+                }
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Buttons =
+        {
+            new ToastButton("Reviews", "reviews"),
+ 
+            new ToastButton("Show map", "bingmaps:?q=sushi")
+            {
+                ActivationType = ToastActivationType.Protocol
+            }
+        }
+    }
+};
+```
+
+![작업이 있는 알림, 예제 2](images/adaptivetoasts-xmlsample03.jpg)
 
  
 
@@ -193,18 +383,74 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
     <binding template="ToastGeneric">
       <text>Andrew B.</text>
       <text>Shall we meet up at 8?</text>
-      <image placement="appLogoOverride" src="A.png" />
+      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
     </binding>
   </visual>
   <actions>
-    <input id="message" type="text" placeHolderContent="reply here" />
-    <action activationType="background" content="reply" arguments="reply" />
-    <action activationType="foreground" content="video call" arguments="video" />
+    <input id="message" type="text" placeHolderContent="Type a reply" />
+    <action activationType="background" content="Reply" arguments="reply" />
+    <action activationType="foreground" content="Video call" arguments="video" />
   </actions>
 </toast>
 ```
 
-![텍스트 및 입력 작업이 있는 알림](images/adaptivetoasts-xmlsample04.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Andrew B."
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "Shall we meet up at 8?"
+                }
+            },
+ 
+            AppLogoOverride = new ToastGenericAppLogo()
+            {
+                Source = "https://unsplash.it/64?image=883",
+                HintCrop = ToastGenericAppLogoCrop.Circle
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastTextBox("message")
+            {
+                PlaceholderContent = "Type a reply"
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButton("Reply", "reply")
+            {
+                ActivationType = ToastActivationType.Background
+            },
+ 
+            new ToastButton("Video call", "video")
+            {
+                ActivationType = ToastActivationType.Foreground
+            }
+        }
+    }
+};
+```
+
+![텍스트 및 입력 작업이 있는 알림](images/adaptivetoasts-xmlsample04.jpg)
 
  
 
@@ -218,17 +464,70 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
     <binding template="ToastGeneric">
       <text>Andrew B.</text>
       <text>Shall we meet up at 8?</text>
-      <image placement="appLogoOverride" src="A.png" />
+      <image placement="appLogoOverride" src="https://unsplash.it/64?image=883" hint-crop="circle" />
     </binding>
   </visual>
   <actions>
-    <input id="message" type="text" placeHolderContent="reply here" />
-    <action activationType="background" content="reply" arguments="reply" imageUri="send.png" hint-inputId="message"/>
+    <input id="message" type="text" placeHolderContent="Type a reply" />
+    <action activationType="background" content="Reply" arguments="reply" hint-inputId="message" imageUri="Assets/Icons/send.png"/>
   </actions>
 </toast>
 ```
 
-![텍스트 입력 및 작업이 있는 알림](images/adaptivetoasts-xmlsample05.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Andrew B."
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "Shall we meet up at 8?"
+                }
+            },
+ 
+            AppLogoOverride = new ToastGenericAppLogo()
+            {
+                Source = "https://unsplash.it/64?image=883",
+                HintCrop = ToastGenericAppLogoCrop.Circle
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastTextBox("message")
+            {
+                PlaceholderContent = "Type a reply"
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButton("Reply", "reply")
+            {
+                TextBoxId = "message",
+                ImageUri = "Assets/Icons/send.png",
+                ActivationType = ToastActivationType.Background
+            }
+        }
+    }
+};
+```
+
+![텍스트 입력 및 작업이 있는 알림](images/adaptivetoasts-xmlsample05.jpg)
 
  
 
@@ -242,22 +541,77 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
     <binding template="ToastGeneric">
       <text>Spicy Heaven</text>
       <text>When do you plan to come in tomorrow?</text>
-      <image placement="appLogoOverride" src="A.png" />
     </binding>
   </visual>
   <actions>
     <input id="time" type="selection" defaultInput="2" >
-  <selection id="1" content="Breakfast" />
-  <selection id="2" content="Lunch" />
-  <selection id="3" content="Dinner" />
+      <selection id="1" content="Breakfast" />
+      <selection id="2" content="Lunch" />
+      <selection id="3" content="Dinner" />
     </input>
     <action activationType="background" content="Reserve" arguments="reserve" />
-    <action activationType="background" content="Call Restaurant" arguments="call" />
+    <action activationType="foreground" content="Call Restaurant" arguments="call" />
   </actions>
 </toast>
 ```
 
-![선택 입력 및 작업이 있는 알림](images/adaptivetoasts-xmlsample06.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "app-defined-string",
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Spicy Heaven"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "When do you plan to come in tomorrow?"
+                }
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastSelectionBox("time")
+            {
+                DefaultSelectionBoxItemId = "2",
+                Items =
+                {
+                    new ToastSelectionBoxItem("1", "Breakfast"),
+                    new ToastSelectionBoxItem("2", "Lunch"),
+                    new ToastSelectionBoxItem("3", "Dinner")
+                }
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButton("Reserve", "reserve")
+            {
+                ActivationType = ToastActivationType.Background
+            },
+ 
+            new ToastButton("Call Restaurant", "call")
+            {
+                ActivationType = ToastActivationType.Foreground
+            }
+        }
+    }
+};
+```
+
+![선택 입력 및 작업이 있는 알림](images/adaptivetoasts-xmlsample06.jpg)
 
  
 
@@ -266,107 +620,187 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 이 예제의 내용...
 
 ```XML
-<toast scenario="reminder" launch="developer-pre-defined-string">
+<toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
+   
   <visual>
     <binding template="ToastGeneric">
-      <text>Adam&#39;s Hiking Camp</text>
-      <text>You have an upcoming event for this Friday!</text>
-      <text>RSVP before it"s too late.</text>
-      <image placement="appLogoOverride" src="A.png" />
-      <image placement="inline" src="hiking.png" />
+      <text>Adaptive Tiles Meeting</text>
+      <text>Conf Room 2001 / Building 135</text>
+      <text>10:00 AM - 10:30 AM</text>
     </binding>
   </visual>
+ 
   <actions>
-    <action activationType="background" content="RSVP" arguments="rsvp" />
-    <action activationType="background" content="Reminder me later" arguments="later" />
+     
+    <input id="snoozeTime" type="selection" defaultInput="15">
+      <selection id="1" content="1 minute"/>
+      <selection id="15" content="15 minutes"/>
+      <selection id="60" content="1 hour"/>
+      <selection id="240" content="4 hours"/>
+      <selection id="1440" content="1 day"/>
+    </input>
+ 
+    <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content="" />
+ 
+    <action activationType="system" arguments="dismiss" content=""/>
+     
   </actions>
+   
 </toast>
 ```
 
-![미리 알림](images/adaptivetoasts-xmlsample07.png)
+```CSharp
+ToastContent content = new ToastContent()
+{
+    Launch = "action=viewEvent&eventId=1983",
+    Scenario = ToastScenario.Reminder,
+ 
+    Visual = new ToastVisual()
+    {
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = "Adaptive Tiles Meeting"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "Conf Room 2001 / Building 135"
+                },
+ 
+                new AdaptiveText()
+                {
+                    Text = "10:00 AM - 10:30 AM"
+                }
+            }
+        }
+    },
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastSelectionBox("snoozeTime")
+            {
+                DefaultSelectionBoxItemId = "15",
+                Items =
+                {
+                    new ToastSelectionBoxItem("5", "5 minutes"),
+                    new ToastSelectionBoxItem("15", "15 minutes"),
+                    new ToastSelectionBoxItem("60", "1 hour"),
+                    new ToastSelectionBoxItem("240", "4 hours"),
+                    new ToastSelectionBoxItem("1440", "1 day")
+                }
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButtonSnooze()
+            {
+                SelectionBoxId = "snoozeTime"
+            },
+ 
+            new ToastButtonDismiss()
+        }
+    }
+};
+```
+
+![미리 알림](images/adaptivetoasts-xmlsample07.jpg)
 
  
 
-## 활성화 샘플
+## <a name="handling-activation-foreground-and-background"></a>활성화 처리(포그라운드 및 백그라운드)
+
+알림 활성화를 처리하는 방법(사용자가 알림 또는 알림에 있는 단추 클릭)을 알아보려면 [빠른 시작: 로컬 알림 메시지 보내기 및 활성화 처리](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10/)를 참조하세요.
 
 
-위에서 설명한 대로 알림의 본문과 작업은 다양한 방법으로 앱을 활성화할 수 있습니다. 아래 샘플은 알림 본문 및/또는 알림 작업에서 다양한 활성화 형식을 처리하는 방법을 보여 줍니다.
-
-**전경**
-
-이 시나리오에서 앱은 포그라운드 활성화를 사용하여 앱을 시작하고 올바른 콘텐츠로 이동하는 방식으로 실행 가능한 알림 메시지 내부의 작업에 응답합니다.
-
-OnLaunched()를 호출하는 데 사용되는 알림 메시지에서 활성화. Windows 10에서 알림에는 고유한 활성화가 있고 알림이 OnActivated()를 호출합니다.
-
-```
-async protected override void OnActivated(IActivatedEventArgs args)
-{
-        //Initialize your app if it&#39;s not yet initialized;
-    //Find out if this is activated from a toast;
-    If (args.Kind == ActivationKind.ToastNotification)
-    {
-                //Get the pre-defined arguments and user inputs from the eventargs;
-        var toastArgs = args as ToastNotificationActivatedEventArgs;
-        var arguments = toastArgs.Arguments;
-        var input = toastArgs.UserInput["1"]; 
-}
-     
-    //...
-}
-```
-
-**배경**
-
-이 시나리오에서 앱은 백그라운드 작업을 사용하여 대화형 알림 메시지 내부의 작업을 처리합니다. 아래 코드는 앱 매니페스트 내부에서 알림 활성화를 처리하기 위해 이 백그라운드 작업을 선언하는 방법과 단추를 클릭할 때 작업 및 사용자 입력에서 인수를 가져오는 방법을 보여 줍니다.
-
-```
-<!-- Manifest Declaration -->
-<!-- A new task type toastNotification is added -->
-<Extension Category = "windows.backgroundTasks" 
-EntryPoint = "Tasks.BackgroundTaskClass" >
-  <BackgroundTasks>
-    <Task Type="systemEvent" />
-  </BackgroundTasks>
-</Extension>
-```
-
-```
-namespace ToastNotificationTask
-{
-    public sealed class ToastNotificationBackgroundTask : IBackgroundTask
-    {
-        public void Run(IBackgroundTaskInstance taskInstance)
-        {
-        //Inside here developer can retrieve and consume the pre-defined 
-        //arguments and user inputs;
-        var details = taskInstance.TriggerDetails as ToastNotificationActionTriggerDetail;
-        var arguments = details.Arguments;
-        var input = details.Input.Lookup("1");
-
-            // ...
-        }        
-    }
-}
-```
-
-## 스키마: &lt;visual&gt; 및 &lt;audio&gt;
+## <a name="schemas-ltvisualgt-and-ltaudiogt"></a>스키마: &lt;visual&gt; 및 &lt;audio&gt;
 
 
-다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
+다음 XML 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
 
 ```
 <toast launch? duration? activationType? scenario? >
-    <visual version? lang? baseUri? addImageQuery? >
-        <binding template? lang? baseUri? addImageQuery? >
-            <text lang? >content</text>
-            <text />
-            <image src placement? alt? addImageQuery? hint-crop? />
-        </binding>
-    </visual>
-    <audio src? loop? silent? />
-    <actions>
-    </actions>
+  <visual lang? baseUri? addImageQuery? >
+    <binding template? lang? baseUri? addImageQuery? >
+      <text lang? hint-maxLines? >content</text>
+      <image src placement? alt? addImageQuery? hint-crop? />
+      <group>
+        <subgroup hint-weight? hint-textStacking? >
+          <text />
+          <image />
+        </subgroup>
+      </group>
+    </binding>
+  </visual>
+  <audio src? loop? silent? />
 </toast>
+```
+
+```
+ToastContent content = new ToastContent()
+{
+    Launch = ?,
+    Duration = ?,
+    ActivationType = ?,
+    Scenario = ?,
+ 
+    Visual = new ToastVisual()
+    {
+        Language = ?,
+        BaseUri = ?,
+        AddImageQuery = ?,
+        BindingGeneric = new ToastBindingGeneric()
+        {
+            Children =
+            {
+                new AdaptiveText()
+                {
+                    Text = ?,
+                    Language = ?,
+                    HintMaxLines = ?
+                },
+ 
+                new AdaptiveGroup()
+                {
+                    Children =
+                    {
+                        new AdaptiveSubgroup()
+                        {
+                            HintWeight = ?,
+                            HintTextStacking = ?,
+                            Children =
+                            {
+                                new AdaptiveText(),
+                                new AdaptiveImage()
+                            }
+                        }
+                    }
+                },
+ 
+                new AdaptiveImage()
+                {
+                    Source = ?,
+                    AddImageQuery = ?,
+                    AlternateText = ?,
+                    HintCrop = ?
+                }
+            }
+        }
+    },
+ 
+    Audio = new ToastAudio()
+    {
+        Src = ?,
+        Loop = ?,
+        Silent = ?
+    }
+};
 ```
 
 **&lt;toast의 특성&gt;**
@@ -402,11 +836,6 @@ scenario?
 -   화면에 알림을 계속 표시하기 위한 목적만으로 이 특성을 사용하지 마세요.
 
 **&lt;visual의 특성&gt;**
-
-version?
-
--   version? = nonNegativeInteger
--   &lt;visual&gt;에서 버전 관리가 더 사용되지 않으므로 이 특성이 필요하지 않습니다. 필요한 경우 더 높은 계층 구조에서 지정할 새 버전 관리 모델을 기대하시기 바랍니다.
 
 lang?
 
@@ -489,23 +918,70 @@ silent?
 
 -   이 선택적 특성에 대한 자세한 내용은 [이 요소 스키마 문서](https://msdn.microsoft.com/library/windows/apps/br230842)를 참조하세요.
 
-## 스키마: &lt;action&gt;
+## <a name="schemas-ltactiongt"></a>스키마: &lt;action&gt;
 
 
-다음 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
+다음 XML 스키마에서 "?" 접미사는 특성이 선택 사항임을 의미합니다.
 
 ```
 <toast>
-    <visual>
-    </visual>
-    <audio />
-    <actions>
-        <input id type title? placeHolderContent? defaultInput? >
-            <selection id content />
-        </input>
-        <action content arguments activationType? imageUri? hint-inputId />
-    </actions>
+  <visual>
+  </visual>
+  <audio />
+  <actions>
+    <input id type title? placeHolderContent? defaultInput? >
+      <selection id content />
+    </input>
+    <action content arguments activationType? imageUri? hint-inputId />
+  </actions>
 </toast>
+```
+
+```
+ToastContent content = new ToastContent()
+{
+    Visual = ...
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastSelectionBox("id")
+            {
+                Title = ?
+                DefaultSelectionBoxItemId = ?,
+                Items =
+                {
+                    new ToastSelectionBoxItem("id", "content")
+                }
+            },
+ 
+            new ToastTextBox("id")
+            {
+                Title = ?,
+                PlaceholderContent = ?,
+                DefaultInput = ?
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButton("content", "args")
+            {
+                ActivationType = ?,
+                ImageUri = ?,
+                TextBoxId = ?
+            },
+ 
+            new ToastButtonSnooze("content")
+            {
+                SelectionBoxId = "snoozeTime"
+            },
+ 
+            new ToastButtonDismiss("content")
+        }
+    }
+};
 ```
 
 **&lt;input의 특성&gt;**
@@ -581,7 +1057,7 @@ hint-inputId
 -   값은 연결할 입력 요소의 ID여야 합니다.
 -   모바일 및 데스크톱에서 이 특성은 입력 상자의 오른쪽 옆에 단추를 배치합니다.
 
-## 시스템 처리 작업의 특성
+## <a name="attributes-for-system-handled-actions"></a>시스템 처리 작업의 특성
 
 
 앱이 알림의 다시 알림/재예약을 백그라운드 작업으로 처리하지 않게 하려면 알림을 다시 알리고 해제하기 위한 작업을 시스템에서 처리할 수 있습니다. 시스템 처리 작업을 결합하거나 개별적으로 지정할 수 있지만 다시 알림 작업을 구현하려면 해제 작업을 포함하는 것이 좋습니다.
@@ -590,32 +1066,75 @@ hint-inputId
 
 ```
 <toast>
-    <visual>
-    </visual>
-    <audio />
-    <actions hint-systemCommands? = "SnoozeAndDismiss" />
+  <visual>
+  </visual>
+  <actions hint-systemCommands="SnoozeAndDismiss" />
 </toast>
+```
+
+```
+ToastContent content = new ToastContent()
+{
+    Visual = ...
+ 
+    Actions = new ToastActionsSnoozeAndDismiss()
+};
 ```
 
 개별 시스템 처리 작업
 
 ```
 <toast>
-    <visual>
-    </visual>
-    <audio />
-<actions>
-<input id="snoozeTime" type="selection" defaultInput="10">
-  <selection id="5" content="5 minutes" />
-  <selection id="10" content="10 minutes" />
-  <selection id="20" content="20 minutes" />
-  <selection id="30" content="30 minutes" />
-  <selection id="60" content="1 hour" />
-</input>
-<action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
-<action activationType="system" arguments="dismiss" content=""/>
-</actions>
+  <visual>
+  </visual>
+  <actions>
+  <input id="snoozeTime" type="selection" defaultInput="10">
+    <selection id="5" content="5 minutes" />
+    <selection id="10" content="10 minutes" />
+    <selection id="20" content="20 minutes" />
+    <selection id="30" content="30 minutes" />
+    <selection id="60" content="1 hour" />
+  </input>
+  <action activationType="system" arguments="snooze" hint-inputId="snoozeTime" content=""/>
+  <action activationType="system" arguments="dismiss" content=""/>
+  </actions>
 </toast>
+```
+
+```
+ToastContent content = new ToastContent()
+{
+    Visual = ...
+ 
+    Actions = new ToastActionsCustom()
+    {
+        Inputs =
+        {
+            new ToastSelectionBox("snoozeTime")
+            {
+                DefaultSelectionBoxItemId = "15",
+                Items =
+                {
+                    new ToastSelectionBoxItem("5", "5 minutes"),
+                    new ToastSelectionBoxItem("10", "10 minutes"),
+                    new ToastSelectionBoxItem("20", "20 minutes"),
+                    new ToastSelectionBoxItem("30", "30 minutes"),
+                    new ToastSelectionBoxItem("60", "1 hour")
+                }
+            }
+        },
+ 
+        Buttons =
+        {
+            new ToastButtonSnooze()
+            {
+                SelectionBoxId = "snoozeTime"
+            },
+ 
+            new ToastButtonDismiss()
+        }
+    }
+};
 ```
 
 개별 다시 알림 및 해제 작업을 구성하려면 다음을 수행합니다.
@@ -637,13 +1156,12 @@ hint-inputId
  
 
  
+## <a name="related-topics"></a>관련 항목
+
+* [빠른 시작: 로컬 알림 보내기 및 활성화 처리](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/07/08/quickstart-sending-a-local-toast-notification-and-handling-activations-from-it-windows-10.aspx)
+* [GitHub의 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

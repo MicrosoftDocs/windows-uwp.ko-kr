@@ -4,23 +4,18 @@ ms.assetid: E8751EBF-AE0F-4107-80A1-23C186453B1C
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출 업데이트"
 translationtype: Human Translation
-ms.sourcegitcommit: 819843c8ba1e4a073f70f7de36fe98dd4087cdc6
-ms.openlocfilehash: 8b1a6da557b966e69345e90c48f90a6df0f27442
+ms.sourcegitcommit: f52059a37194b78db2f9bb29a5e8959b2df435b4
+ms.openlocfilehash: ec533c5a021d006787a7d217fa7f5eb98835fdd3
 
 ---
 
-# Windows 스토어 제출 API를 사용하여 앱 제출 업데이트
-
-
-
+# <a name="update-an-app-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출 업데이트
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제출을 업데이트합니다. 이 메서드를 사용하여 제출을 성공적으로 업데이트한 후 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
 
 이 메서드가 Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스에 적용되는 방법은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
->**중요**&nbsp;&nbsp;가까운 미래에 Microsoft는 Windows 개발자 센터에서 앱 제출에 대한 가격 데이터 모델을 변경할 예정입니다. 이 변경이 수행된 후에는 이 메서드의 요청 본문에서 **가격** 리소스가 무시되고 이 메서드를 사용하는 앱 제출에 대한 평가 기간, 가격 및 판매 데이터를 일시적으로 사용할 수 없게 됩니다. 앞으로 Windows 스토어 제출 API를 업데이트하여 앱 제출에 대한 가격 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다. 자세한 내용은 [가격 리소스](manage-app-submissions.md#pricing-object)를 참조하세요.
-
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -28,9 +23,9 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**  이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## 요청
+## <a name="request"></a>요청
 
 이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
@@ -41,7 +36,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 <span/>
  
 
-### 요청 헤더
+### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -49,7 +44,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 
 <span/>
 
-### 요청 매개 변수
+### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -58,7 +53,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 
 <span/>
 
-### 요청 본문
+### <a name="request-body"></a>요청 본문
 
 요청 본문에는 다음 매개 변수가 있습니다.
 
@@ -80,12 +75,12 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 앱 제�
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 개체가 포함됩니다. 자세한 내용은 [응용 프로그램 패키지](manage-app-submissions.md#application-package-object) 섹션을 참조하세요. 이 메서드를 호출하여 앱 제출을 업데이트할 때는 요청 본문에 이러한 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 개발자 센터에 의해 채워집니다.   |    
 | packageDeliveryOptions    | 개체  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함합니다. 자세한 내용은 [패키지 배달 옵션 개체](manage-app-submissions.md#package-delivery-options-object)를 참조하세요.  |
 | enterpriseLicensing           |  문자열  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](manage-app-submissions.md#enterprise-licensing) 값 중 하나입니다.  |    
-| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows10 디바이스 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |    
+| allowMicrosftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 허용할지 여부를 나타냅니다.    |    
+| allowTargetFutureDeviceFamilies           | boolean   |  앱에서 [이후의 Windows 10 디바이스 패밀리를 대상으로](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) 할 수 있는지 여부를 나타냅니다.     |    
 
 <span/>
 
-### 요청 예제
+### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 앱 제출을 업데이트하는 방법을 보여 줍니다.
 
@@ -169,7 +164,7 @@ Content-Type: application/json
 }
 ```
 
-## 응답
+## <a name="response"></a>응답
 
 다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 업데이트한 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 [앱 제출 리소스](manage-app-submissions.md#app-submission-object)를 참조하세요.
 
@@ -273,7 +268,7 @@ Content-Type: application/json
 }
 ```
 
-## 오류 코드
+## <a name="error-codes"></a>오류 코드
 
 요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
@@ -285,7 +280,7 @@ Content-Type: application/json
 <span/>
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [앱 제출 가져오기](get-an-app-submission.md)
@@ -296,6 +291,6 @@ Content-Type: application/json
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

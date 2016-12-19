@@ -33,7 +33,7 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 - 꺼짐: `PullThreshold`를 초과했을 때 목록이 해제되는 경우에만 새로 고침을 요청합니다. 사용자가 스크롤러를 놓을 때 표시기가 사라지는 애니메이션 효과가 주어집니다. 휴대폰에서 사용할 수 있는 경우 상태 표시줄 표시기가 표시됩니다.
 - 켜짐: `PullThreshold`를 초과하자마자 해제 여부에 상관없이 새로 고침을 요청합니다. 표시기는 새 데이터를 검색할 때까지 표시되며 새 데이터가 검색되면 사라지는 애니메이션 효과가 주어집니다. **Deferral**은 데이터 가져오기가 완료되면 앱에 알리는 데 사용됩니다.
 
-> **참고**&nbsp;&nbsp;샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
+> **참고**  샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
 
 ## 새로 고침 표시기 추가
 
@@ -47,7 +47,7 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 
 당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)에 배치됩니다.
 
-> **참고**&nbsp;&nbsp;`DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
+> **참고**  `DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
 
 다음은 기본 ListView 템플릿에서 수정된 컨트롤 템플릿의 일부입니다.
 

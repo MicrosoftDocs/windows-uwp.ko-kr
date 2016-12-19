@@ -5,14 +5,14 @@ title: "Windows Ink 스트로크를 텍스트로 인식"
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, 필기 인식"
 translationtype: Human Translation
-ms.sourcegitcommit: dfb790980a8016da0ed9a080d7cf56b5a8a784ff
-ms.openlocfilehash: 26dc8910c779dc46d19be75abd49c20b750a9843
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
 
 ---
 
-# Windows Ink 스트로크를 텍스트로 인식
+# <a name="recognize-windows-ink-strokes-as-text"></a>Windows Ink 스트로크를 텍스트로 인식
 
 Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트로 변환합니다.
 
@@ -26,7 +26,7 @@ Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트
 
 여기의 모든 예제에서 잉크 기능에 필요한 네임스페이스 참조를 추가하세요. 여기에는 "Windows.UI.Input.Inking"이 포함됩니다.
 
-## 기본 필기 인식
+## <a name="basic-handwriting-recognition"></a>기본 필기 인식
 
 
 여기에서는 설치된 기본 언어 팩과 연결된 필기 인식 엔진을 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에서 일련의 스트로크를 해석하는 방법을 보여 줍니다.
@@ -203,7 +203,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## 국가별 인식
+## <a name="international-recognition"></a>국가별 인식
 
 
 Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식에 사용할 수 있습니다.
@@ -448,7 +448,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## 동적 필기 인식
+## <a name="dynamic-handwriting-recognition"></a>동적 필기 인식
 
 
 앞의 두 예제에서는 사용자가 버튼을 눌러 인식을 시작해야 합니다. 또한 스트로크 입력과 함께 기본 타이밍 함수를 사용하여 동적 인식을 수행할 수도 있습니다.
@@ -660,7 +660,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
@@ -668,12 +668,14 @@ string str = "Recognition result\n";
 * [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
-
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

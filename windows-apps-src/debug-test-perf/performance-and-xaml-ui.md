@@ -4,11 +4,11 @@ ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: "성능"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
+ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
+ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
 
 ---
-# 성능
+# <a name="performance"></a>성능
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,7 +18,8 @@ ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
 
 | 항목 | 설명 |
 |-------|-------------|
-| [성능 계획](planning-and-measuring-performance.md) | 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다. |
+| [성능 계획](planning-and-measuring-performance.md) | 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기뿐 아니라 프로젝트 수명 주기 동안 목표 달성을 확신할 수 있을 만큼 자주 측정합니다. |
+| [백그라운드 작업 최적화](optimize-background-activity.md) | 시스템과 연동하여 배터리에 효율적인 방식으로 백그라운드 작업을 사용하는 UWP 앱을 만듭니다. |
 | [ListView 및 GridView UI 최적화](optimize-gridview-and-listview.md) | UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705)의 성능과 시작 시간을 개선합니다. |
 | [ListView 및 GridView 데이터 가상화](listview-and-gridview-data-optimization.md) | 데이터 가상화를 통해 [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) 성능과 시작 시간이 향상됩니다. |
 | [가비지 수집 성능 향상](improve-garbage-collection-performance.md) | C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다. |
@@ -36,6 +37,6 @@ ms.openlocfilehash: f4589b187d05ae122839fab74d8086779847b120
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

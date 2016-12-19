@@ -1,18 +1,18 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: "Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다."
-title: "Windows 잉크 스트로크 데이터 저장 및 검색"
+title: "Windows Ink 스트로크 데이터 저장 및 검색"
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format"
 translationtype: Human Translation
-ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
-ms.openlocfilehash: 8ba48ed9aa7589ddee6009c5a8cb8ec1091d51ef
+ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
+ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
 
 ---
 
-# Windows 잉크 스트로크 데이터 저장 및 검색
+# <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
 
 Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
@@ -30,7 +30,7 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 
  
 
-## 파일에 잉크 스트로크 저장
+## <a name="save-ink-strokes-to-a-file"></a>파일에 잉크 스트로크 저장
 
 
 여기서는 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
@@ -160,7 +160,7 @@ public MainPage()
 > [!NOTE]  
 > GIF는 잉크 데이터를 저장할 수 있는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) 메서드(다음 섹션에서 설명)는 이전 버전과의 호환성을 위해 추가 형식을 지원합니다.
 
-## 파일에서 잉크 스트로크 로드
+## <a name="load-ink-strokes-from-a-file"></a>파일에서 잉크 스트로크 로드
 
 다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
@@ -270,14 +270,14 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 | Gif                       | ISF를 파일에 포함된 메타데이터로 포함하는 GIF 파일을 사용하여 유지되는 잉크를 지정합니다. 이 형식을 사용하면 잉크 불가능 응용 프로그램에서 잉크를 볼 수 있고 잉크 가능 응용 프로그램으로 돌아갈 때 최대 잉크 화질을 유지할 수 있습니다. 이 형식은 HTML 파일 내에서 잉크 콘텐츠를 전송하고 잉크 가능 및 잉크 불가능 응용 프로그램에서 사용할 수 있도록 하는 경우에 적합합니다. |
 | Base64Gif                 | base64 인코딩된 강화된 GIF를 사용하여 유지되는 잉크를 지정합니다. 이 형식은 XML 또는 HTML 파일에서 직접 잉크를 인코딩하고 나중에 이미지로 변환하는 경우에 제공됩니다. 이 형식은 모든 잉크 정보를 포함하기 위해 생성되며 XSLT(Extensible Stylesheet Language Transformations)를 통해 HTML을 생성하는 데 사용되는 XML 형식에 사용할 수 있습니다. 
 
-## 클립보드를 사용한 잉크 스트로크 복사 및 붙여넣기
+## <a name="copy-and-paste-ink-strokes-with-the-clipboard"></a>클립보드를 사용한 잉크 스트로크 복사 및 붙여넣기
 
 
 다음은 클립보드를 사용하여 앱 간에 잉크 스트로크를 전송하는 방법을 설명합니다.
 
 기본 제공 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 잘라내기 및 복사 명령에서 클립보드 기능을 지원하려면 먼저 잉크 스트로크를 하나 이상 선택해야 합니다.
 
-이 예제의 경우 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 [고급 처리에 대한 통과 입력](pen-and-stylus-interactions.md#passthrough)을 참조하세요.
+이 예제에서는 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 
 1.  먼저 UI를 설정합니다.
 
@@ -317,9 +317,9 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기에서 선언합니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 선택 기능에 대한 포인터 및 스트로크 이벤트뿐만 아니라 단추의 클릭 이벤트에 대한 수신기도 여기서 선언합니다.
 
-    스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 [고급 처리에 대한 통과 입력](pen-and-stylus-interactions.md#passthrough)을 참조하세요.
+    스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 ```    CSharp
 public MainPage()
     {
@@ -428,7 +428,7 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
@@ -436,16 +436,18 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 * [잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [간단한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620312)
 * [복잡한 잉크 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [색칠하기 책 샘플](https://aka.ms/cpubsample-coloringbook)
+* [가족 메모 샘플](https://aka.ms/cpubsample-familynotessample)
+
+
  
 
- 
 
 
 
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

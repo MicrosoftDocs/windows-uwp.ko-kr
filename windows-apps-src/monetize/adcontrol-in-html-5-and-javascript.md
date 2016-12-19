@@ -66,11 +66,11 @@ JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전
     <script src="/MSAdvertisingJS/ads/ad.js"></script>
     ```
 
-    > **참고**&nbsp;&nbsp;이 줄은 **&lt;head&gt;** 섹션에서 default.js를 포함한 후에 추가해야 합니다. 그러지 않으면 프로젝트를 빌드할 때 오류가 발생합니다.
+    > **참고**  이 줄은 **&lt;head&gt;** 섹션에서 default.js를 포함한 후에 추가해야 합니다. 그러지 않으면 프로젝트를 빌드할 때 오류가 발생합니다.
 
 8.  default.html 파일(또는 프로젝트에 해당하는 다른 html 파일)의 **&lt;body&gt;** 섹션을 **AdControl**에 대한 div를 포함하도록 수정합니다. **AdControl**의 **applicationId** 및 **adUnitId** 속성을 [테스트 모드 값](test-mode-values.md)에 제공된 테스트 값에 할당하고 컨트롤의 너비와 높이를 [배너 광고에 대해 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나로 조정합니다.
 
-    > **참고**&nbsp;&nbsp;앱을 제출하기 전에 테스트 **applicationId** 및 **adUnitId** 값을 라이브 값으로 바꿉니다.
+    > **참고**  앱을 제출하기 전에 테스트 **applicationId** 및 **adUnitId** 값을 라이브 값으로 바꿉니다.
 
     ``` syntax
     <div id="myAd" style="position: absolute; top: 50px; left: 0px; width: 300px; height: 250px; z-index: 1"

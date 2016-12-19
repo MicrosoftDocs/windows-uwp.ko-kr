@@ -4,12 +4,12 @@ description: "이 섹션에서는 공유 계약, 복사 및 붙여넣기, 끌어
 title: "앱 간 통신"
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
-ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
+ms.sourcegitcommit: ea67ae5b568d1c51af3bb951fe3a68a8def8a556
+ms.openlocfilehash: 951e2ea29a47e362d9fdee0f597d2e7c808212b6
 
 ---
 
-# 앱 간 통신
+# <a name="app-to-app-communication"></a>앱 간 통신
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
 
 앱은 공유 계약 외에 끌기 및 놓기 또는 복사 및 붙여넣기와 같이 데이터를 전송하기 위한 클래식 기술을 통합할 수도 있습니다. 이러한 방법은 UWP 앱 간 통신 외에 데스크톱 응용 프로그램 간에도 공유를 지원합니다.
 
-## 이 섹션의 내용
+## <a name="in-this-section"></a>이 섹션의 내용
 
 | 항목 | 설명 |
 |-------|-------------|
@@ -30,11 +30,11 @@ ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
 | [복사 및 붙여넣기](copy-and-paste.md) | 이 문서에서는 UWP 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. |
 | [끌어서 놓기](drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
 
-## 참고 항목
-- [UWP 앱 개발](https://developer.microsoft.com/en-us/windows/develop)
+## <a name="see-also"></a>참고 항목
+- [UWP 앱 개발](https://developer.microsoft.com/windows/develop)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

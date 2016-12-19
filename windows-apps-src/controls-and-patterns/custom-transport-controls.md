@@ -18,7 +18,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 시작하기 전에 MediaPlayerElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaPlayerElement 컨트롤 가이드를 참조하세요.
 
-> **팁**&nbsp;&nbsp;이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)을 기반으로 합니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
+> **팁**  이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)을 기반으로 합니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
@@ -33,7 +33,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 
 
-> **참고**&nbsp;&nbsp;**MediaPlayerElement**는 Windows 10 버전 1607 이상에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
+> **참고**  **MediaPlayerElement**는 Windows 10 버전 1607 이상에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
 
 ## 템플릿을 사용자 지정해야 하는 경우
 
@@ -45,11 +45,11 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 - 컨트롤 크기를 조정할 때 명령이 드롭아웃되는 순서를 변경합니다.
 - 기본 설정에 없는 명령 단추를 제공합니다.
 
->**참고**&nbsp;&nbsp;화면에 표시된 단추는 화면에 충분한 공간이 없는 경우 미리 정의된 순서로 기본 제공 전송 컨트롤에서 삭제됩니다. 이 순서를 변경하거나 오버플로 메뉴에 맞지 않은 명령을 배치하려면 컨트롤을 사용자 지정해야 합니다.
+>**참고**  화면에 표시된 단추는 화면에 충분한 공간이 없는 경우 미리 정의된 순서로 기본 제공 전송 컨트롤에서 삭제됩니다. 이 순서를 변경하거나 오버플로 메뉴에 맞지 않은 명령을 배치하려면 컨트롤을 사용자 지정해야 합니다.
 
 기본 서식 파일을 수정하여 컨트롤의 모양을 사용자 지정할 수 있습니다. 컨트롤의 동작을 수정하거나 새 명령을 추가하려면 MediaTransportControls에서 파생된 사용자 지정 컨트롤을 만들면 됩니다.
 
->**팁**&nbsp;&nbsp;사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
+>**팁**  사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
 
 ## 템플릿 구조
 
@@ -58,7 +58,7 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 - 두 번째 섹션에서는 MediaTransportControls에서 사용하는 다양한 시각적 상태를 정의합니다.
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
 
-> **참고**&nbsp;&nbsp;템플릿을 수정하는 방법은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
+> **참고**  템플릿을 수정하는 방법은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다.
 - [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
@@ -184,7 +184,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 </CommandBar.SecondaryCommands>
 ```
 
-> **중요**&nbsp;&nbsp;여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
+> **중요**  여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
 
 ### 사용자 지정 단추 추가
 

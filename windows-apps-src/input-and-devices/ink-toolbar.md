@@ -4,14 +4,16 @@ Description: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 기본 In
 title: "UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가"
 label: Add an InkToolbar to a Universal Windows Platform (UWP) inking app
 template: detail.hbs
-keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, InkToolbar, Universal Windows Platform, UWP
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, InkToolbar, 유니버설 Windows 플랫폼, UWP"
 translationtype: Human Translation
-ms.sourcegitcommit: 9e971104a7f7de9425787f32edcb7c376fb0c934
-ms.openlocfilehash: f5c8f7f8e60317a3ef30ff1900d99f9f6d63d391
+ms.sourcegitcommit: 2b6b1d7b1755aad4d75a29413d989c6e8112128a
+ms.openlocfilehash: 1b810a42166c48c1359dcf9adfba84184234b42c
 
 ---
 
-# UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가
+# <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-inking-app"></a>UWP(유니버설 Windows 플랫폼) 수동 입력 앱에 InkToolbar 추가
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
 
 UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) 및 [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)입니다.
 
@@ -29,15 +31,17 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 
   이 항목에서는 InkToolbar에 대해 설명합니다.
 
-## 중요 API
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**InkCanvas 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)</li>
+<li>[**InkToolbar 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)</li>
+<li>[**InkPresenter 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)</li>
+<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
+</ul>
+</div>
 
-  -   [**InkCanvas 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx)
-  -   [**InkToolbar 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)
-  -   [**InkPresenter 클래스**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)
-  -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
-
-
-## 기본 InkToolbar
+## <a name="default-inktoolbar"></a>기본 InkToolbar
 
 기본적으로 InkToolbar에는 그리기, 지우기, 강조 표시 및 눈금자 표시 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
 
@@ -72,11 +76,11 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 </Grid>
 ```
 
-## 기본 사용자 지정
+## <a name="basic-customization"></a>기본 사용자 지정
 
 이 섹션에서는 몇 가지 기본적인 Windows Ink 도구 모음 사용자 지정 시나리오에 대해 설명합니다.
 
-### 선택되는 단추 지정  
+### <a name="specify-the-selected-button"></a>선택되는 단추 지정  
 ![초기화 시 연필 단추가 선택됨](.\images\ink\ink-tools-default-toolbar.png)  
 *초기화 시 연필 단추가 선택된 Windows Ink 도구 모음*
 
@@ -126,7 +130,7 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 }
 ```
 
-### 기본 제공 단추 지정
+### <a name="specify-the-built-in-buttons"></a>기본 제공 단추 지정
 
 ![초기화 시 포함되는 특정 단추](.\images\ink\ink-tools-specific.png)  
 *초기화 시 포함되는 특정 단추*
@@ -262,17 +266,17 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
 By default, the InkToolbar supports both pen and mouse input, you have to enable support for touch input.
 -->
 
-## 사용자 지정 단추 및 수동 입력 기능
+## <a name="custom-buttons-and-inking-features"></a>사용자 지정 단추 및 수동 입력 기능
 
 InkToolbar를 통해 제공되는 단추 컬렉션(및 관련된 수동 입력 기능)을 사용자 지정하고 확장할 수 있습니다.
 
 InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있습니다.
 
 1. 기본 제공 그리기, 지우기 및 강조 표시 단추를 포함하는 "도구" 단추 그룹. 사용자 지정 펜과 도구가 여기에 추가됩니다.
-> **참고**&nbsp;&nbsp;기능 선택은 함께 사용할 수 없습니다.
+> **참고**  기능 선택은 함께 사용할 수 없습니다.
 
 2. 기본 제공 눈금자 단추를 포함하는 "토글" 단추 그룹. 사용자 지정 토글이 여기에 추가됩니다.
-> **참고**&nbsp;&nbsp;기능은 함께 사용할 수 있으며 다른 활성 도구와 동시에 사용할 수 있습니다.
+> **참고**  기능은 함께 사용할 수 있으며 다른 활성 도구와 동시에 사용할 수 있습니다.
 
 응용 프로그램 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
 
@@ -280,9 +284,9 @@ InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있�
 - 사용자 지정 도구 - 호스트 앱에서 정의된 펜 이외의 도구입니다.
 - 사용자 지정 토글 - 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
 
-> **참고**&nbsp;&nbsp;기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
+> **참고**  기본 제공 단추의 표시 순서는 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
 
-### 사용자 지정 펜
+### <a name="custom-pen"></a>사용자 지정 펜
 
 사용자 지정 펜(사용자 지정 펜 단추를 통해 활성화됨)을 만들어 잉크 색상표와 펜 팁 속성(예: 모양, 회전, 크기)을 정의합니다.
 
@@ -396,7 +400,7 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
 </Grid>
 ```
 
-### 사용자 지정 토글
+### <a name="custom-toggle"></a>사용자 지정 토글
 
 사용자 지정 토글(사용자 지정 토글 단추를 통해 활성화됨)을 만들어 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
 
@@ -520,7 +524,7 @@ namespace Ink_Basic_InkToolbar
 }
 ```
 
-### 사용자 지정 도구
+### <a name="custom-tool"></a>사용자 지정 도구
 
 사용자 지정 도구 단추를 만들어 앱에서 정의한 펜 이외의 도구를 호출할 수 있습니다.
 
@@ -783,7 +787,7 @@ namespace Ink_Basic_InkToolbar
 
 
 
-### 사용자 지정 잉크 렌더링
+### <a name="custom-ink-rendering"></a>사용자 지정 잉크 렌더링
 
 기본적으로 잉크 입력은 짧은 대기 시간의 백그라운드 스레드에서 처리되고 그릴 때 "젖은" 상태로 렌더링됩니다. 스트로크가 완료되면(펜 또는 손가락을 들거나 마우스 단추를 뗄 때) 스트로크는 UI 스레드에서 처리되고 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) 계층(응용 프로그램 콘텐츠 위 계층으로, 젖은 잉크를 대체함)에 대해 "건조" 상태로 렌더링됩니다.
 
@@ -795,7 +799,7 @@ namespace Ink_Basic_InkToolbar
 > 사용자 지정 건조 및 [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
 > 앱이 사용자 지정 건조를 구현하여 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 기본 잉크 렌더링 동작을 재정의하는 경우 렌더링된 잉크 스트로크를 InkToolbar에서 더 이상 사용할 수 없고 InkToolbar의 기본 제공 지우기 명령이 예상대로 작동하지 않습니다. 지우기 기능을 제공하려면 모든 포인터 이벤트를 처리하고, 각 스트로크에 대해 적중 횟수 테스트를 수행하고, 기본 제공 "모든 잉크 지우기" 명령을 재정의해야 합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)
 
@@ -806,6 +810,6 @@ namespace Ink_Basic_InkToolbar
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

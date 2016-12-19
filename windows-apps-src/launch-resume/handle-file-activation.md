@@ -4,12 +4,12 @@ title: "파일 활성화 처리"
 description: "앱을 특정 파일 형식의 기본 처리기로 등록할 수 있습니다."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
+ms.sourcegitcommit: ed7aee6add80d31b48006d9dec9e207c449a1912
+ms.openlocfilehash: ffcfa8991e9eb73b8d6a47bb7dd1cd23220097e0
 
 ---
 
-# 파일 활성화 처리
+# <a name="handle-file-activation"></a>파일 활성화 처리
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -28,7 +28,7 @@ ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
 
 > **참고** UWP 앱에서 특정 URI 및 파일 확장명은 기본 제공 앱과 운영 체제에서 사용하기 위해 예약되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
 
-## 1단계: 패키지 매니페스트에서 확장점 지정
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
 
 
 앱은 패키지 매니페스트에 나열된 파일 확장명에 대해서만 활성화 이벤트를 받습니다. 다음은 앱이 `.alsdk` 확장명을 가진 파일을 처리하도록 지정하는 방법입니다.
@@ -66,7 +66,7 @@ ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
       </Extensions>
 ```
 
-## 2단계: 적절한 아이콘 추가
+## <a name="step-2-add-the-proper-icons"></a>2단계: 적절한 아이콘 추가
 
 
 파일 형식의 기본값이 되는 앱에는 시스템 전체의 다양한 위치에 표시되는 아이콘이 있습니다. 예를 들어 다음과 같은 아이콘이 표시됩니다.
@@ -79,7 +79,7 @@ ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
 앱 타일 로고의 모양을 일치시키고 아이콘을 투명으로 설정하는 대신 앱의 배경색을 사용합니다. 로고를 안쪽 여백 없이 가장자리로 확장합니다. 흰색 배경에서 아이콘을 테스트합니다. 예제 아이콘은 [연결 시작 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620490)를 참조하세요.
 ![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
 
-## 3단계: 활성화된 이벤트 처리
+## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화된 이벤트 처리
 
 
 [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331) 이벤트 처리기는 모든 파일 활성화 이벤트를 받습니다.
@@ -115,16 +115,16 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 파일 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 
 받게 되는 파일은 신뢰할 수 없는 원본에서 올 수 있으므로 파일에 대한 작업을 수행하기 전에 파일 내용의 유효성을 검사하는 것이 좋습니다. 입력 유효성 검사에 대한 자세한 내용은 [안전한 코드 작성](http://go.microsoft.com/fwlink/p/?LinkID=142053)을 참조하세요.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **전체 예제**
 
@@ -154,6 +154,6 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

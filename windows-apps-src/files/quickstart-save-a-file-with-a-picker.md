@@ -1,15 +1,15 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: "선택기를 사용하여 파일 저장"
 description: "사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
-ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 ---
 
-# 선택기를 사용하여 파일 저장
+# <a name="save-a-file-with-a-picker"></a>선택기를 사용하여 파일 저장
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -26,7 +26,7 @@ ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
 
  
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
@@ -37,7 +37,7 @@ ms.openlocfilehash: 8e65131a913f5ea69438ff986151da11d3126314
 
     [파일 액세스 권한](file-access-permissions.md)을 참조하세요.
 
-## FileSavePicker: 단계별
+## <a name="filesavepicker-step-by-step"></a>FileSavePicker: 단계별
 
 
 사용자가 이름, 형식 및 파일 저장 위치를 지정할 수 있도록 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다. 파일 선택기 개체를 만들고, 사용자 지정하고, 표시한 다음, 선택된 파일을 나타내는 반환된 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 통해 데이터를 저장합니다.
@@ -114,6 +114,6 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

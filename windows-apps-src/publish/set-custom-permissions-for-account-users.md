@@ -97,11 +97,11 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한&nbsp;이름</th>
-    <th align="left">읽기&nbsp;전용</th>
+    <th align="left">사용 권한 이름</th>
+    <th align="left">읽기 전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
-    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
+    <th align="left">읽기만(추가 기능)  </th>
+    <th align="left">읽기-쓰기(추가 기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -119,11 +119,11 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한&nbsp;이름</th>
-    <th align="left">읽기&nbsp;전용</th>
+    <th align="left">사용 권한 이름</th>
+    <th align="left">읽기 전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
-    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
+    <th align="left">읽기만(추가 기능)  </th>
+    <th align="left">읽기-쓰기(추가 기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -138,11 +138,11 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한&nbsp;이름</th>
-    <th align="left">읽기&nbsp;전용</th>
+    <th align="left">사용 권한 이름</th>
+    <th align="left">읽기 전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
-    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
+    <th align="left">읽기만(추가 기능)  </th>
+    <th align="left">읽기-쓰기(추가 기능)</th>
     </tr>
     </thead>
     <tbody>
@@ -163,11 +163,11 @@ ms.openlocfilehash: 19874f940798e76a18b3377a295505f0aef201c7
 <table>
     <thead>
     <tr class="header">
-    <th align="left">사용 권한&nbsp;이름</th>
-    <th align="left">읽기&nbsp;전용</th>
+    <th align="left">사용 권한 이름</th>
+    <th align="left">읽기 전용</th>
     <th align="left">읽기/쓰기</th>
-    <th align="left">읽기만(추가&nbsp;기능)&nbsp; </th>
-    <th align="left">읽기-쓰기(추가&nbsp;기능)</th>
+    <th align="left">읽기만(추가 기능)  </th>
+    <th align="left">읽기-쓰기(추가 기능)</th>
     </tr>
     </thead>
     <tbody>

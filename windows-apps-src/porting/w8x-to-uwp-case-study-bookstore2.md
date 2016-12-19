@@ -4,26 +4,26 @@ ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: "이 사례 연구는 SemanticZoom 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작하는 Bookstore1에 제공된 정보를 기반으로 합니다."
 title: "Windows 런타임 8.x에서 UWP로 이동 사례 연구 Bookstore2"
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 2d142ddb5522daf5467ce5690b3fe8e7a356ac0a
+ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
+ms.openlocfilehash: 34762d74ba34ed3c5cee4da4809c2c509f3932e9
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
+# <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows 런타임 8.x에서 UWP로 이동 사례 연구: Bookstore2
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [Bookstore1](w8x-to-uwp-case-study-bookstore1.md)에 제공된 정보를 기반으로 하는 이 사례 연구는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에서 그룹화된 데이터를 표시하는 유니버설 8.1 앱으로 시작합니다. 보기 모델에서 **Author** 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, **SemanticZoom**에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 앱을 Windows 10 UWP(유니버설 Windows 플랫폼) 앱으로 포팅하는 단계를 안내합니다.
 
-**참고** Visual Studio에서 Bookstore2Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion)의 단계를 수행합니다.
+**참고** Visual Studio에서 Bookstore2Universal\_10을 열 때 "Visual Studio 업데이트 필요"라는 메시지가 표시되면 [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md)의 단계를 수행합니다.
 
-## 다운로드
+## <a name="downloads"></a>다운로드
 
 [Bookstore2\_81 유니버설 8.1 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532951).
 
 [Bookstore2Universal\_10 Windows 10 앱을 다운로드합니다](http://go.microsoft.com/fwlink/?linkid=532952).
 
-## 유니버설 8.1 앱
+## <a name="the-universal-81-app"></a>유니버설 8.1 앱
 
 포팅할 Bookstore2\_81 앱은 다음과 같습니다. 가로로 스크롤되는(Windows Phone에서는 세로로 스크롤됨)는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)으로, 작성자로 그룹화된 책을 표시합니다. 점프 목록으로 축소할 수 있으며 점프 목록에서 어떤 그룹으로도 다시 이동할 수 있습니다. 이 앱에는 두 가지 주요 특징이 있습니다. 그룹화된 데이터 원본를 제공하는 보기 모델 및 보기 모델에 바인딩하는 사용자 인터페이스가 그것입니다. 앞으로 살펴보겠지만 이러한 특징은 모두 WinRT 8.1 기술에서 Windows 10으로 쉽게 포팅됩니다.
 
@@ -44,11 +44,11 @@ Windows Phone의 Bookstore2\_81, 확대 보기
 
 Windows Phone의 Bookstore2\_81, 축소 보기
 
-##  Windows 10 프로젝트로 포팅
+##  <a name="porting-to-a-windows-10-project"></a>Windows 10 프로젝트로 포팅
 
 Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstore2\_81.Windows 프로젝트는 Windows 8.1용 앱 패키지를 빌드하고 Bookstore2_\81.WindowsPhone 프로젝트는 Windows Phone 8.1용 앱 패키지를 빌드합니다. Bookstore2\_81.Shared는 두 프로젝트 모두에서 사용되는 소스 코드, 태그 파일, 기타 자산 및 리소스가 포함된 프로젝트입니다.
 
-이전 사례 연구와 마찬가지로 선택할 수 있는 옵션([유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md#if-you-have-a-universal-81-app)에서 설명한 옵션 중 선택)은 유니버설 디바이스 패밀리를 대상으로 하는 Windows 10으로 공유 프로젝트의 콘텐츠를 포팅하는 것입니다.
+이전 사례 연구와 마찬가지로 선택할 수 있는 옵션([유니버설 8.1 앱이 있는 경우](w8x-to-uwp-root.md)에서 설명한 옵션 중 선택)은 유니버설 디바이스 패밀리를 대상으로 하는 Windows 10으로 공유 프로젝트의 콘텐츠를 포팅하는 것입니다.
 
 비어 있는 응용 프로그램(Windows 유니버설) 프로젝트를 새로 만들어 시작합니다. Bookstore2Universal\_10이라고 이름을 지정합니다. 다음은 Bookstore2\_81에서 Bookstore2Universal\_10으로 복사할 파일입니다.
 
@@ -77,22 +77,22 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 보는 것이 약간 어려워지는 문제가 있긴 하지만 보기 모델, 확대 및 축소 보기는 다 함께 올바르게 작동됩니다. 한 가지 문제는 [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)이 스크롤되지 않는 것입니다. 이는 Windows 10에서 [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)의 기본 스타일이 세로로 배치되기 때문입니다. Windows 10 디자인 지침에 따르면 새로운 포팅된 앱에서는 이렇게 세로 방식으로 사용하는 것이 좋습니다. 그러나 Bookstore2\_81 프로젝트(8.1 앱용으로 디자인됨)에서 복사한 사용자 지정 항목 패널 템플릿의 가로 스크롤 설정은 Windows 10 앱으로 포팅한 결과로 적용되는 Windows 10 기본 스타일의 세로 스크롤 설정과 충돌합니다. 두 번째 문제는 앱이 다양한 크기의 창과 작은 디바이스에서 최상의 환경을 제공하도록 해당 사용자 인터페이스를 아직 조정하지 않은 것입니다. 세 번째 문제는 올바른 스타일 및 브러시가 사용되지 않아 텍스트의 상당 부분(축소하기 위해 클릭할 수 있는 그룹 헤더를 포함하여)이 표시되지 않는 것입니다. 따라서 다음 세 섹션([SemanticZoom 및 GridView 디자인 변경](#semanticzoom-and-gridview-design-changes), [적응 UI](#adaptive-ui), [범용 스타일 지정](#universal-styling))에서 이러한 세 가지 문제를 바로잡겠습니다.
 
-## SemanticZoom 및 GridView 디자인 변경
+## <a name="semanticzoom-and-gridview-design-changes"></a>SemanticZoom 및 GridView 디자인 변경
 
-[**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 대한 Windows 10의 디자인 변경은 [SemanticZoom 변경](w8x-to-uwp-porting-xaml-and-ui.md#semantic-zoom) 섹션에서 설명합니다. 이러한 변경과 관련하여 이 섹션에서는 수행할 작업이 없습니다.
+[**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 대한 Windows 10의 디자인 변경은 [SemanticZoom 변경](w8x-to-uwp-porting-xaml-and-ui.md) 섹션에서 설명합니다. 이러한 변경과 관련하여 이 섹션에서는 수행할 작업이 없습니다.
 
-[**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 변경은 [GridView/ListView 변경](w8x-to-uwp-porting-xaml-and-ui.md#gridview-listview-changes) 섹션에서 설명합니다. 아래에 설명된 대로 해당 변경 내용에 맞춰 일부 사항을 매우 약간 조정했습니다.
+[**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)에 대한 변경은 [GridView/ListView 변경](w8x-to-uwp-porting-xaml-and-ui.md) 섹션에서 설명합니다. 아래에 설명된 대로 해당 변경 내용에 맞춰 일부 사항을 매우 약간 조정했습니다.
 
 -   SeZoUC.xaml의 `ZoomedInItemsPanelTemplate`에서 `Orientation="Horizontal"` 및 `GroupPadding="0,0,0,20"`을 설정합니다.
 -   SeZoUC.xaml에서 `ZoomedOutItemsPanelTemplate`을 삭제하고 축소 보기에서 `ItemsPanel` 특성을 제거합니다.
 
 정말 간단하죠!
 
-## 적응 UI
+## <a name="adaptive-ui"></a>적응 UI
 
 해당 변경 후 SeZoUC.xaml에서 제공하는 UI 레이아웃은 앱이 넓은 창에서 실행되는 경우에 유용합니다(넓은 창은 큰 화면이 있는 장치에서만 가능). 그러나 앱의 창이 좁은 경우(좁은 창은 작은 장치에서 사용 가능하며 큰 장치에서도 사용 가능) Windows Phone 스토어 앱에서 사용한 UI가 거의 틀림없이 가장 적합합니다.
 
-이를 위해 적응 Visual State Manager 기능을 사용할 수 있습니다. 기본적으로 Windows Phone 스토어 앱에서 사용하는 더 작은 템플릿을 사용하여 좁은 상태에 UI가 배치되도록 시각적 요소에서 속성을 설정합니다. 그런 다음 앱의 창이 특정 크기([유효 픽셀](w8x-to-uwp-porting-xaml-and-ui.md#effective-pixels-viewing-distance-and-scale-factors)의 단위로 측정)보다 넓거나 같은 경우를 감지하고 그에 따라 더 크고 넓은 레이아웃을 가져오도록 시각적 요소의 속성을 변경합니다. 시각적 상태에서 해당 속성 변경을 적용하고 적응 트리거를 사용하여 끊임없이 모니터링하고 유효 픽셀의 창 너비에 따라 해당 시각적 상태를 적용할지 여부를 결정합니다. 이 경우 창 너비에서 트리거하지만 창 높이에서도 트리거할 수 있습니다.
+이를 위해 적응 Visual State Manager 기능을 사용할 수 있습니다. 기본적으로 Windows Phone 스토어 앱에서 사용하는 더 작은 템플릿을 사용하여 좁은 상태에 UI가 배치되도록 시각적 요소에서 속성을 설정합니다. 그런 다음 앱의 창이 특정 크기([유효 픽셀](w8x-to-uwp-porting-xaml-and-ui.md)의 단위로 측정)보다 넓거나 같은 경우를 감지하고 그에 따라 더 크고 넓은 레이아웃을 가져오도록 시각적 요소의 속성을 변경합니다. 시각적 상태에서 해당 속성 변경을 적용하고 적응 트리거를 사용하여 끊임없이 모니터링하고 유효 픽셀의 창 너비에 따라 해당 시각적 상태를 적용할지 여부를 결정합니다. 이 경우 창 너비에서 트리거하지만 창 높이에서도 트리거할 수 있습니다.
 
 548epx의 최소 창 너비가 넓은 레이아웃을 표시하려는 가장 작은 장치의 크기이므로 548epx가 이 사용 사례에 적합합니다. 휴대폰은 일반적으로 548epx보다 작으므로 이와 같은 소형 장치에서는 기본적으로 좁은 레이아웃 상태를 유지합니다. PC에서는 기본적으로 넓은 상태로의 전환을 트리거하기에 충분히 넓은 상태로 창이 시작됩니다. 이러한 넓은 창에서, 창을 끌어 250x250 크기 항목의 두 열을 표시할 정도로 좁힐 수 있습니다. 그보다 너비를 더 좁히면 트리거가 비활성화되고 넓은 시각적 상태가 제거되며 기본 좁은 레이아웃이 적용됩니다.
 
@@ -132,7 +132,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
     </Grid>
 ```
 
-## 범용 스타일 지정
+## <a name="universal-styling"></a>범용 스타일 지정
 
 이제 이전 프로젝트에서 복사하는 동안 위에서 소개했던 문제를 비롯하여 일부 스타일 지정 문제를 수정하겠습니다.
 
@@ -166,7 +166,7 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 모바일 디바이스에서 실행되는 포팅된 Windows 10 앱, 축소 보기
 
-## 결론
+## <a name="conclusion"></a>결론
 
 이 사례 연구는 이전보다 더욱 복잡한 사용자 인터페이스를 포함합니다. 이전 사례 연구와 마찬가지로 이 특정 보기 모델에는 작업이 필요하지 않으며 주로 사용자 인터페이스를 리팩터링하는 데 노력을 기울였습니다. 일부 변경 내용은 계속해서 여러 폼 팩터(사실상 이전보다 훨씬 많음)를 지원하면서 두 프로젝트를 하나로 결합하는 데 따른 필연적인 결과였습니다. 몇 가지 변경은 플랫폼에 적용한 변경과 관계가 있었습니다.
 
@@ -174,6 +174,6 @@ Bookstore2\_81 솔루션은 8.1 유니버설 앱 프로젝트입니다. Bookstor
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

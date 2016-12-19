@@ -4,12 +4,12 @@ ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: "C++로 hello world 앱 만들기(Windows 10)"
 description: "Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)을 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다."
 translationtype: Human Translation
-ms.sourcegitcommit: cedab04d2969809dca84097b027e973be9b9948b
-ms.openlocfilehash: 55d5b160bbf1d877408a52e981a030dee28515c4
+ms.sourcegitcommit: 351feda6d9b12b44b0711fe7f4665e08e320580d
+ms.openlocfilehash: d6f90d8bcff80ef8fae5f85a572e1b1ab11f153d
 
 ---
 
-# C++로 hello world 앱 만들기(Windows 10)
+# <a name="create-a-hello-world-app-in-c-windows-10"></a>C++로 hello world 앱 만들기(Windows 10)
 
 Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 실행하는 휴대폰 포함)를 실행하는 앱을 개발할 수 있습니다. 이러한 앱에는 XAML(Extensible Application Markup Language)로 정의된 UI가 포함됩니다.
 
@@ -19,7 +19,7 @@ Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 
 
 -   [C를 사용하여 첫 Windows 스토어 앱 만들기#](https://msdn.microsoft.com/library/windows/apps/Hh974581)
 
-## 시작하기 전에...
+## <a name="before-you-start"></a>시작하기 전에...
 
 -   이 자습서를 완료하려면 Windows 10 또는 Windows 8.1을 실행하는 컴퓨터에서 Visual Studio 2015 Community 이상 또는 Visual Studio 2015의 비 Community 버전 중 하나를 사용해야 합니다. 다운로드하려면 [도구 얻기](http://go.microsoft.com/fwlink/p/?LinkId=532666)를 참조하세요.
 -   유니버설 Windows 플랫폼 개발에 적합한 [SDK](http://go.microsoft.com/fwlink/?LinkId=533049)를 설치합니다.
@@ -27,11 +27,11 @@ Microsoft Visual Studio 2015에서 C++를 사용하여 Windows 10(Windows 10을 
 -   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
 
 
-## C++ 데스크톱 앱과 Windows 스토어 앱 비교
+## <a name="comparing-c-desktop-apps-to-windows-apps"></a>C++ 데스크톱 앱과 Windows 스토어 앱 비교
 
 C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이 있는 개발자에게 Windows 스토어 앱 및 Windows Phone 앱 프로그래밍의 일부 측면은 익숙하지만 또 어떤 측면은 추가 학습이 필요할 수 있습니다.
 
-### 같은 점
+### <a name="whats-the-same"></a>같은 점
 
 -   Windows 런타임 환경에서 액세스할 수 없는 Windows 함수를 코드에서 호출하지 않는 한 STL 및 CRT(일부 예외 있음), 기타 C++ 라이브러리를 사용할 수 있습니다.
 
@@ -43,7 +43,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   여전히 Visual C++ 컴파일러를 사용하여 네이티브 컴퓨터 코드로 컴파일되는 앱을 만듭니다. C++로 만든 Windows 스토어 앱은 관리되는 런타임 환경에서 실행되지 않습니다.
 
-### 새로운 기능
+### <a name="whats-new"></a>새로운 기능
 
 -   Windows 스토어 앱 및 유니버설 Windows 앱의 디자인 원칙은 데스크톱 앱의 디자인 원칙과 매우 다릅니다. 창 테두리, 레이블, 대화 상자 등은 별로 중요하지 않고 내용이 가장 중요합니다. 뛰어난 유니버설 Windows 앱은 계획 단계 초기부터 이러한 원칙을 따릅니다.
 
@@ -57,7 +57,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   Windows 스토어 및 Windows Phone 스토어에서 인증 프로세스를 통해 앱의 안정성이 확인되면 그에 따라 수백 만의 잠재 고객을 두게 됩니다.
 
-## C++로 작성한 Hello World 스토어 앱
+## <a name="hello-world-store-app-in-c"></a>C++로 작성한 Hello World 스토어 앱
 
 첫 번째로 작성할 앱은 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여 주는 "Hello World"입니다. Windows 유니버설 앱 프로젝트 템플릿에서 앱을 만듭니다. 이전에 Windows 8.1 및 Windows Phone 8.1용 앱을 개발한 경우 Windows 앱용 프로젝트 1개, 휴대폰 앱용 프로젝트 1개, 공유 코드용 프로젝트 1개 이렇게 총 3개의 프로젝트를 Visual Studio에서 사용해야 했던 사실을 기억할 수 있을 것입니다. Windows 10 UWP(유니버설 Windows 플랫폼)를 사용하면 Windows 10을 실행하는 데스크톱 및 노트북 컴퓨터, 태블릿, 휴대폰 등의 장치를 비롯한 모든 장치에서 실행되는 단 하나의 프로젝트를 사용할 수 있습니다.
 
@@ -93,7 +93,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 ![유니버설 앱 솔루션(노드가 축소된 상태)](images/vs2015-solutionexploreruniversal-0-cpp.png)
 
-### 프로젝트 파일 정보
+### <a name="about-the-project-files"></a>프로젝트 파일 정보
 
 프로젝트 폴더의 모든 .xaml 파일은 동일 폴더에 해당 .xaml.h 파일과 .xaml.cpp 파일이 있으며 생성된 파일 폴더(디스크에 있지만 프로젝트의 일부가 아님)에 .g 파일과 .g.hpp 파일이 있습니다. XAML 파일을 수정하여 UI 요소를 만든 다음 이들 요소를 데이터 원본에 연결합니다(DataBinding). .h 및 .cpp 파일을 수정하여 이벤트 처리기에 대한 사용자 지정 논리를 추가합니다. 자동으로 생성된 파일은 XAML 태그가 C++로 변환되었음을 나타냅니다. 코드 숨김 작동 방식을 더 잘 이해할 수 있도록 이러한 파일을 살펴보세요. 단, 수정하지는 마세요. 기본적으로 생성된 파일에는 XAML 루트 요소용 partial 클래스 정의가 포함되어 있으며, 이 클래스는 \*.xaml.h 및 .cpp 파일에서 수정하는 클래스와 동일합니다. 생성된 파일은 XAML UI 자식 요소를 작성하는 코드에서 참조할 수 있도록 클래스 멤버로 선언합니다. 빌드 시, 생성된 코드와 개발자가 작성한 코드가 전체 클래스 정의에 병합되어 컴파일됩니다.
 
@@ -105,7 +105,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 -   **Package.appxmanifest:** 앱에 필요한 장치 기능과, 앱 버전 정보 및 기타 메타데이터를 설명하는 XML 파일입니다. **매니페스트 디자이너**에서 이 파일을 열려면 해당 파일을 두 번 클릭하면 됩니다.
 -   **HelloWorld\_TemporaryKey.pfx:** Visual Studio에서 이 컴퓨터의 앱 배포를 지원하는 키입니다.
 
-## 코드 개요
+## <a name="a-first-look-at-the-code"></a>코드 개요
 
 App.xaml.h, 공유 프로젝트의 App.xaml.cpp에 포함된 코드를 살펴보면 대부분이 친숙한 C++ 코드임을 알 수 있습니다. 그러나 Windows 런타임 앱을 처음 사용하거나 C++/CLI로 작업했던 경우 일부 구문 요소가 친숙하지 않을 수 있습니다. 다음은 C++/CX에서 가장 일반적으로 사용되는 표준 이외의 구문 요소입니다.
 
@@ -199,7 +199,7 @@ MainPage::MainPage()
 }
 ```
 
-## 앱에 콘텐츠 추가
+## <a name="adding-content-to-the-app"></a>앱에 콘텐츠 추가
 
 약간의 콘텐츠를 앱에 추가해 보겠습니다.
 
@@ -236,7 +236,7 @@ MainPage::MainPage()
 
 앱에서는 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)에 입력할 수도 있지만 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 클릭해도 아무런 작동을 하지 않습니다. 이후 단계에서는 단추의 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만듭니다.
 
-## 모바일 장치 에뮬레이터에서 앱 시작
+## <a name="start-the-app-on-a-mobile-device-emulator"></a>모바일 장치 에뮬레이터에서 앱 시작
 
 앱이 Windows 10 장치에서 실행되므로 Windows Phone에서 어떻게 표시되는지 살펴보겠습니다. 이 섹션에는 Windows 10을 실행하는 Windows Phone이 필요합니다. 또는 Windows Phone 에뮬레이터에 액세스해야 하며, HyperV를 지원하고 사용하는 실제 컴퓨터(가상 컴퓨터가 아님)에서 Visual Studio를 실행해야 합니다.
 
@@ -272,7 +272,7 @@ Visual Studio는 데스크톱 장치에서 디버깅하는 옵션 외에도 컴�
 
 Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포하고 시작합니다. 가장 먼저 눈에 띄는 것은 로컬 컴퓨터에 적절히 표시되는 120 픽셀의 왼쪽 여백이며, 이 여백으로 인해 모바일 장치의 작은 화면에 콘텐츠를 넣은 것처럼 보입니다. 이 자습서 뒷부분에서는 앱이 항상 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용하는 방법을 알아봅니다.
 
-## 2단계: 이벤트 처리기 만들기
+## <a name="step-2-create-an-event-handler"></a>2단계: 이벤트 처리기 만들기
 
 1.  MainPage.xaml의 XAML 또는 디자인 뷰에서 이전에 추가한 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)의 "Say Hello" [**단추**](https://msdn.microsoft.com/library/windows/apps/BR209265)를 선택합니다.
 2.  Alt+Enter를 눌러서 **속성 창**을 열고 나서 이벤트 단추(![이벤트 단추](images/eventsbutton.png))를 선택합니다.
@@ -285,7 +285,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
    이와 동시에 MainPage.xaml에서 [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)에 대한 XAML은 다음과 같이 [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) 이벤트 처리기를 선언하도록 업데이트됩니다.
 
     ```xaml
-    <Button Content="Say \"Hello\"" Click="Button_Click"/>
+    <Button Content="Say \"Hello\" Click="Button_Click"/>
     ```
 
     xaml 코드에 수동으로 추가할 수도 있습니다. 이는 디자이너가 로드되지 않은 경우에 유용할 수 있습니다. 수동으로 입력한 경우 "Click"을 입력한 다음 IntelliSense에서 새 이벤트 처리기를 추가하는 옵션을 팝업하도록 합니다. 이렇게 하면 Visual Studio에서 필요한 메서드 선언 및 스텁을 만듭니다.
@@ -305,9 +305,9 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 ![메시지가 표시된 앱 화면](images/xaml-hw-app4.png)
 
-## 3단계: 시작 페이지 스타일 지정
+## <a name="step-3-style-the-start-page"></a>3단계: 시작 페이지 스타일 지정
 
-### 테마 선택
+### <a name="choosing-a-theme"></a>테마 선택
 
 앱의 모양과 느낌은 손쉽게 사용자 지정할 수 있습니다. 기본적으로 앱은 밝은 스타일의 리소스를 사용합니다. 시스템 리소스에는 밝은 테마도 있습니다. 테스트해 보고 어떻게 보이는지 확인해 보겠습니다.
 
@@ -339,7 +339,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 **참고** 테마는 앱이 시작될 때 적용되며 앱이 실행되는 동안에는 변경할 수 없습니다.
 
-### 시스템 스타일 사용
+### <a name="using-system-styles"></a>시스템 스타일 사용
 
 지금은 Windows 앱의 텍스트가 매우 작아서 읽기가 어렵습니다. 시스템 스타일을 적용하여 수정해 보겠습니다.
 
@@ -383,7 +383,7 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 
 ![큰 텍스트가 포함된 앱 화면](images/xaml-hw-app5.png)
 
-### 4단계: UI를 다양한 창 크기로 조정
+### <a name="step-4-adapt-the-ui-to-different-window-sizes"></a>4단계: UI를 다양한 창 크기로 조정
 
 이제 모바일 장치에서 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용할 수 있습니다. 이 작업을 수행하려면 [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)을(를) 추가하고 다양한 시각적 상태에 적용되는 속성을 설정합니다.
 
@@ -428,11 +428,11 @@ Visual Studio에서 선택한 에뮬레이터를 시작한 다음 앱을 배포�
 -   `inputPanel` 요소의 [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal**에서 **Vertical**로 변경합니다.
 -   4 DIP의 상단 여백을 `inputButton` 요소에 추가합니다.
 
-### 요약
+### <a name="summary"></a>요약
 
 축하합니다! 첫 번째 자습서를 완료했습니다. 이 자습서에서는 Windows 유니버설 앱에 콘텐츠 및 대화형 작업을 추가하는 방법과 앱의 모양을 변경하는 방법에 대해 알아보았습니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 Windows 8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트가 있는 경우 해당 프로젝트를 Windows 10으로 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 약간의 작업만 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://msdn.microsoft.com/library/windows/apps/Mt188203) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](http://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
 
@@ -441,6 +441,6 @@ Windows 8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -316,7 +316,7 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 
 기본적으로 웹 보기 콘텐츠는 데스크톱 디바이스 패밀리의 디바이스에 있는 UI 스레드와 다른 모든 디바이스의 UI 스레드 외부에 호스트됩니다. [**WebView.DefaultExecutionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultexecutionmode.aspx) 정적 속성을 사용하여 현재 클라이언트의 기본 스레딩 동작을 쿼리할 수 있습니다. 필요한 경우 [**WebView(WebViewExecutionMode)**](https://msdn.microsoft.com/library/windows/apps/xaml/dn932036.aspx) 생성자를 사용하여 이 동작을 재정의할 수 있습니다. 
 
-> **참고**&nbsp;&nbsp;모바일 디바이스의 UI 스레드에서 콘텐츠를 호스트할 때 성능 문제가 발생할 수도 있으므로 DefaultExecutionMode를 변경하는 경우 모든 대상 디바이스에서 테스트해야 합니다.
+> **참고**  모바일 디바이스의 UI 스레드에서 콘텐츠를 호스트할 때 성능 문제가 발생할 수도 있으므로 DefaultExecutionMode를 변경하는 경우 모든 대상 디바이스에서 테스트해야 합니다.
 
 UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 컨트롤에서 부모로 제스처를 전파해야 하는 부모 컨트롤(예: [**FlipView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx), [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx) 및 기타 관련 컨트롤)과 호환되지 않습니다. 이러한 컨트롤은 스레드 외부 웹 보기에서 시작된 제스처를 받을 수 없습니다. 또한 스레드 외부 웹 콘텐츠 인쇄는 직접 지원되지 않습니다. 대신 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.aspx) 채우기를 사용하여 요소를 인쇄해야 합니다.
 

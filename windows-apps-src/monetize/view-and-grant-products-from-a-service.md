@@ -36,7 +36,7 @@ Windows 스토어 컬렉션 API 및 구매 API는 고객 소유권 정보에 액
 
 1.  [응용 프로그램과 Azure Active Directory 통합](http://go.microsoft.com/fwlink/?LinkId=722502)의 지침에 따라 웹 응용 프로그램을 Azure AD에 추가합니다.
 
-    > **참고**&nbsp;&nbsp;**응용 프로그램 정보 제공 페이지**에서 **웹 응용 프로그램 및/또는 웹 API**를 선택했는지 확인합니다. 이 작업을 통해 응용 프로그램에 대한 키(*클라이언트 암호*라고도 함)를 가져올 수 있습니다. Windows 스토어 컬렉션 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
+    > **참고**  **응용 프로그램 정보 제공 페이지**에서 **웹 응용 프로그램 및/또는 웹 API**를 선택했는지 확인합니다. 이 작업을 통해 응용 프로그램에 대한 키(*클라이언트 암호*라고도 함)를 가져올 수 있습니다. Windows 스토어 컬렉션 API를 호출하려면 이후 단계에서 Azure AD의 액세스 토큰을 요청할 때 클라이언트 암호를 제공해야 합니다.
 
 2.  [Azure 관리 포털](http://manage.windowsazure.com/)에서 **Active Directory**로 이동합니다. 디렉터리를 선택하고 맨 위의 **응용 프로그램** 탭을 클릭한 다음 응용 프로그램을 선택합니다.
 3.  **구성** 탭을 클릭합니다. 이 탭에서 응용 프로그램에 대한 클라이언트 ID를 가져오고 키(이후 단계에서는 *클라이언트 암호*라고 함)를 요청합니다.
@@ -75,11 +75,11 @@ Windows 스토어 ID 키를 검색하거나 Windows 스토어 컬렉션 API 또�
     -   `https://onestore.microsoft.com/b2b/keys/create/purchase`: 이후 단계에서 이 URI를 사용하여 만든 액세스 토큰을 사용하여 Windows 스토어 구매 API와 함께 사용할 수 있는 Windows 스토어 ID 키를 요청합니다.
     -   `https://onestore.microsoft.com`: 이후 단계에서 이 URI를 사용하여 만든 액세스 토큰을 사용하여 Windows 스토어 컬렉션 API 또는 구매 API를 직접 호출합니다.
 
-    > **중요**&nbsp;&nbsp;사용자 서비스에 안전하게 저장된 액세스 토큰을 가진 `https://onestore.microsoft.com` 대상 그룹만 사용합니다. 이 대상 그룹의 액세스 토큰을 서비스 외부에 노출시키면 서비스 재생 공격에 취약해질 수 있습니다.
+    > **중요**  사용자 서비스에 안전하게 저장된 액세스 토큰을 가진 `https://onestore.microsoft.com` 대상 그룹만 사용합니다. 이 대상 그룹의 액세스 토큰을 서비스 외부에 노출시키면 서비스 재생 공격에 취약해질 수 있습니다.
 
 만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다. 액세스 토큰의 구조에 대한 자세한 내용은 [지원되는 토큰 및 클레임 유형](http://go.microsoft.com/fwlink/?LinkId=722501)을 참조하세요.
 
-> **중요**&nbsp;&nbsp;앱이 아닌 서비스의 컨텍스트에서만 Azure AD 액세스 토큰을 만들어야 합니다. 앱에 전송되면 클라이언트 암호가 손상될 수 있습니다.
+> **중요**  앱이 아닌 서비스의 컨텍스트에서만 Azure AD 액세스 토큰을 만들어야 합니다. 앱에 전송되면 클라이언트 암호가 손상될 수 있습니다.
 
 <span id="step-4"/>
 ### 4단계: 앱의 클라이언트 쪽 코드에서 Windows 스토어 ID 키 생성
@@ -102,11 +102,11 @@ Windows 스토어 컬렉션 API 또는 구매 API를 호출하려면 Windows 스
 
     모든 메서드에서 Azure AD 액세스 토큰을 해당 메서드의 *serviceTicket* 매개 변수에 전달합니다. 서비스의 컨텍스트에서 현재 사용자를 식별하는 *publisherUserId* 매개 변수에 ID를 선택적으로 전달할 수 있습니다. 서비스에 대한 사용자 ID를 유지하는 경우 이 매개 변수를 사용하여 이러한 사용자 ID를 Windows 스토어 컬렉션 API 또는 구매 API 호출과 연결할 수 있습니다.
 
-    >**참고**&nbsp;&nbsp;**Windows.Services.Store** 및 **Windows.ApplicationModel.Store** 네임스페이스 간 차이점에 대한 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
+    >**참고**  **Windows.Services.Store** 및 **Windows.ApplicationModel.Store** 네임스페이스 간 차이점에 대한 자세한 내용은 [앱에서 바로 구매 및 평가판](in-app-purchases-and-trials.md)을 참조하세요.
 
 3.  앱에서 Windows 스토어 ID 키를 성공적으로 검색한 후 키를 서비스로 다시 전달합니다.
 
-> **참고**&nbsp;&nbsp;각 Windows 스토어 ID 키는 90일 동안 유효합니다. 키가 만료된 후 [키를 갱신](renew-a-windows-store-id-key.md)할 수 있습니다. 새로 만들기보다는 Windows 스토어 ID 키를 갱신하는 것이 좋습니다.
+> **참고**  각 Windows 스토어 ID 키는 90일 동안 유효합니다. 키가 만료된 후 [키를 갱신](renew-a-windows-store-id-key.md)할 수 있습니다. 새로 만들기보다는 Windows 스토어 ID 키를 갱신하는 것이 좋습니다.
 
 <span id="step-5"/>
 ### 5단계: 서비스에서 Windows 스토어 컬렉션 API 또는 구매 API 호출

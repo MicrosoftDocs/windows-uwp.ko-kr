@@ -1,14 +1,14 @@
 ---
-author: normesta
+author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: "파일, 폴더 및 라이브러리"
 description: "앱 설정 읽기/쓰기, 파일 및 폴더 선택기, 비디오/음악 라이브러리와 같은 특수 샌드박스가 적용된 위치에 대해 알아봅니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
+ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
+ms.openlocfilehash: e248a0898772f1fde38e312b1cbd24da5b2946a7
 
 ---
- # 파일, 폴더 및 라이브러리
+ # <a name="files-folders-and-libraries"></a>파일, 폴더 및 라이브러리
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -28,7 +28,7 @@ ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
 | [SD 카드에 액세스](access-the-sd-card.md) | 특히 내부 저장 용량이 제한적인 저가대의 디바이스에서는 중요하지 않은 데이터를 선택적 microSD 카드에 저장하고 액세스할 수 있습니다. |
 | [파일 액세스 권한](file-access-permissions.md) | 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다. |
 
-## 관련 샘플
+## <a name="related-samples"></a>관련 샘플
 [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)
 
 [파일 액세스 샘플](http://go.microsoft.com/fwlink/p/?linkid=619995)
@@ -40,6 +40,6 @@ ms.openlocfilehash: 32c6e33f9506abc1876075f6ca11656241921005
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -169,11 +169,11 @@ namespace ColorsListApp
 
 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate를 할당합니다.
 
-> **중요**&nbsp;&nbsp;**ItemTemplate** 및 **DisplayMemberPath**를 동시에 사용할 수 없습니다. 두 속성을 모두 설정한 경우 예외가 발생합니다.
+> **중요**  **ItemTemplate** 및 **DisplayMemberPath**를 동시에 사용할 수 없습니다. 두 속성을 모두 설정한 경우 예외가 발생합니다.
 
 여기서는 항목 색의 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) 및 색 이름과 RGB 값을 표시하는 DataTemplate을 정의합니다. 
 
-> **참고**&nbsp;&nbsp;DataTemplate에서 [x:Bind 태그 확장](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> **참고**  DataTemplate에서 [x:Bind 태그 확장](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
 
 **XAML**
 ```XAML
@@ -300,7 +300,7 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 ListView 및 GridView 컨트롤은 항목당 만들어지는 XAML 요소의 수를 줄이도록 최적화됩니다. **ListViewItem** 시각적 개체는 많은 UIElement 오버헤드 없이 포커스, 선택 항목 및 다른 시각적 상태에 대한 복잡한 시각적 개체를 표시하는 특수 XAML 요소인 [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.listviewitempresenter.aspx)에 의해 만들어집니다.
  
-> **참고**&nbsp;&nbsp;Windows 10용 UWP 앱에서 **ListViewItem** 및 **GridViewItem**은 모두 **ListViewItemPresenter**를 사용합니다. GridViewItemPresenter는 더 이상 사용되지 않습니다. ListViewItem 및 GridViewItem은 ListViewItemPresenter에 다양한 속성 값을 설정하여 다양한 기본 모양을 표시합니다.
+> **참고**  Windows 10용 UWP 앱에서 **ListViewItem** 및 **GridViewItem**은 모두 **ListViewItemPresenter**를 사용합니다. GridViewItemPresenter는 더 이상 사용되지 않습니다. ListViewItem 및 GridViewItem은 ListViewItemPresenter에 다양한 속성 값을 설정하여 다양한 기본 모양을 표시합니다.
 
 항목 컨테이너의 모양을 수정하려면 [**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle.aspx) 속성을 사용하고 [**Style**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx)을 해당 [**TargetType**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.targettype.aspx)(**ListViewItem** 또는 **GridViewItem**으로 설정)과 함께 제공합니다.
 
@@ -328,7 +328,7 @@ ListViewItem 기본 스타일에서 ListViewItemPresenter **ContentMargin** 속�
 
 템플릿에 바인딩되지 않는 다른 ListViewItemPresenter 속성을 ListViewItems 속성으로 수정하려면 속성을 수정할 수 있는 새 ListViewItemPresenter를 사용하여 ListViewItem의 템플릿을 다시 작성해야 합니다. 
 
-> **참고**&nbsp;&nbsp;ListViewItem 및 GridViewItem 기본 스타일은 ListViewItemPresenter에 대해 많은 속성을 설정합니다. 항상 기본 스타일의 복사본을 사용하여 시작한 다음 필요한 속성만 수정해야 합니다. 그러지 않으면 일부 속성이 올바르게 설정되지 않으므로 시각적 개체가 예상대로 표시되지 않습니다.
+> **참고**  ListViewItem 및 GridViewItem 기본 스타일은 ListViewItemPresenter에 대해 많은 속성을 설정합니다. 항상 기본 스타일의 복사본을 사용하여 시작한 다음 필요한 속성만 수정해야 합니다. 그러지 않으면 일부 속성이 올바르게 설정되지 않으므로 시각적 개체가 예상대로 표시되지 않습니다.
 
 **Visual Studio에서 기본 템플릿의 복사본을 만들려면**
  
@@ -411,7 +411,7 @@ SelectionMode:&nbsp;&nbsp; | Single/Extended | Multiple
 인라인 | ![인라인 단일 또는 확장 선택](images/listview-single-selection.png) | ![인라인 다중 선택](images/listview-multi-selection.png)
 오버레이 | ![오버레이 단일 또는 확장 선택](images/gridview-single-selection.png) | ![오버레이 다중 선택](images/gridview-multi-selection.png)
 
-> **참고**&nbsp;&nbsp;이 예제와 다음 예제에서는 간단한 문자열 데이터 항목이 데이터 템플릿 없이 표시되어 컨트롤 템플릿에서 제공하는 시각적 개체를 강조합니다.
+> **참고**  이 예제와 다음 예제에서는 간단한 문자열 데이터 항목이 데이터 템플릿 없이 표시되어 컨트롤 템플릿에서 제공하는 시각적 개체를 강조합니다.
 
 또한 여러 가지 브러시 속성을 사용하여 확인란의 색을 변경할 수도 있습니다. 이러한 기능에 대해서는 다음에 다른 브러시 속성과 함께 살펴보겠습니다.
 
@@ -421,7 +421,7 @@ SelectionMode:&nbsp;&nbsp; | Single/Extended | Multiple
 
 이 표에서는 ListViewItem에 대한 공통 및 선택 시각적 상태와 각 상태에 대한 시각적 개체를 렌더링하는 데 사용되는 브러시를 보여 줍니다. 이 이미지는 인라인 및 오버레이 선택 시각적 스타일에 적용한 브러시 효과를 보여 줍니다.
 
-> **참고**&nbsp;&nbsp;이 표에서 브러시에 대해 수정된 색 값은 하드코드된 명명된 색이며 색은 템플릿에 적용되는 위치를 더 명확하게 표시하기 위해 선택됩니다. 시각적 상태의 기본 색은 아닙니다. 앱에서 기본 색을 수정하는 경우 기본 템플릿에서 수행한 것처럼 브러시 리소스를 사용하여 색 값을 수정해야 합니다.
+> **참고**  이 표에서 브러시에 대해 수정된 색 값은 하드코드된 명명된 색이며 색은 템플릿에 적용되는 위치를 더 명확하게 표시하기 위해 선택됩니다. 시각적 상태의 기본 색은 아닙니다. 앱에서 기본 색을 수정하는 경우 기본 템플릿에서 수행한 것처럼 브러시 리소스를 사용하여 색 값을 수정해야 합니다.
 
 상태/브러시 이름 | 인라인 스타일 | 오버레이 스타일
 ------------|--------------|--------------
@@ -441,7 +441,7 @@ ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대�
 
 앞서 언급했듯이 항목 템플릿의 UIElements 수는 목록 보기의 성능에 큰 영향을 줍니다. ListViewItemPresenter를 확장된 XAML 템플릿으로 바꾸면 요소 수가 크게 증가하므로 목록 보기에 표시되는 항목 수가 많거나 성능이 중요한 경우에는 권장되지 않습니다.
 
-> **참고**&nbsp;&nbsp;**ListViewItemPresenter**는 목록 보기의 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)이 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)인 경우에만 지원됩니다. ItemsPanel을 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx)로 변경하면 항목 템플릿이 자동으로 확장된 XAML 템플릿으로 전환됩니다. 자세한 내용은 [ListView 및 GridView UI 최적화](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)를 참조하세요.
+> **참고**  **ListViewItemPresenter**는 목록 보기의 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)이 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemswrapgrid.aspx) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)인 경우에만 지원됩니다. ItemsPanel을 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.variablesizedwrapgrid.aspx), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.wrapgrid.aspx) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx)로 변경하면 항목 템플릿이 자동으로 확장된 XAML 템플릿으로 전환됩니다. 자세한 내용은 [ListView 및 GridView UI 최적화](https://msdn.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)를 참조하세요.
 
 확장된 XAML 템플릿을 사용자 지정하려면 앱에서 해당 템플릿의 복사본을 만든 다음 **ItemContainerStyle** 속성을 복사본으로 설정해야 합니다.
 

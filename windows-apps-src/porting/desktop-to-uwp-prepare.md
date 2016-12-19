@@ -4,12 +4,12 @@ Description: "이 문서에는 데스크톱-UWP 브리지를 사용하여 앱을
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱-UWP 브리지용 앱 준비"
 translationtype: Human Translation
-ms.sourcegitcommit: 8429e6e21319a03fc2a0260c68223437b9aed02e
-ms.openlocfilehash: 4cf9c509be52a8b2c03cdaa9ac68b98ba49b7094
+ms.sourcegitcommit: f7a8b8d586983f42fe108cd8935ef084eb108e35
+ms.openlocfilehash: 81a2485d5be22dd392c21aaff281c1c9263883a9
 
 ---
 
-# 데스크톱 브리지를 사용하여 앱 변환 준비
+# <a name="prepare-an-app-for-conversion-with-the-desktop-bridge"></a>데스크톱 브리지를 사용하여 앱 변환 준비
 
 이 문서에는 데스크톱-UWP 브리지를 사용하여 앱을 변환하기 전에 알아야 할 사항이 나열되어 있습니다. 앱의 변환 프로세스를 준비하는 데 많은 작업을 수행하지 않아도 됩니다. 하지만 아래의 항목이 사용 중인 응용 프로그램에 적용되는 경우 변환 전에 문제를 해결해야 합니다. Windows 스토어는 라이선스 및 자동 업데이트를 처리하므로 코드베이스에서 해당 기능을 제거해도 됩니다.
 
@@ -61,7 +61,14 @@ ms.openlocfilehash: 4cf9c509be52a8b2c03cdaa9ac68b98ba49b7094
 
 + __앱에서 Windows side-by-side 폴더의 어셈블리를 설치하고 로드합니다__. 예를 들어 앱에서 C 런타임 라이브러리 VC8 또는 VC9를 사용하고 Windows side-by-side 폴더에 있는 해당 라이브러리를 동적으로 연결하고 있는 경우 코드에서 공유 폴더의 공통 DLL 파일을 사용하고 있는 것입니다. 이는 지원되지 않습니다. 재배포 가능 라이브러리 파일을 코드에 직접 연결하여 정적으로 연결해야 합니다.
 
++ __앱에서 System32/SysWOW64 폴더의 종속성을 사용합니다__. 해당 DLL이 작동하려면 AppX 패키지의 가상 파일 시스템 부분에 포함해야 합니다. 이렇게 하면 **System32**/**SysWOW64** 폴더에 DLL이 설치된 것처럼 앱이 동작합니다. 패키지의 루트에 **VFS**라는 폴더를 만듭니다. 해당 폴더 안에 **SystemX64** 및 **SystemX86** 폴더를 만듭니다. 그런 다음 32비트 버전의 DLL은 **SystemX86** 폴더에 넣고 64비트 버전은 **SystemX64** 폴더에 넣습니다.
 
-<!--HONumber=Nov16_HO1-->
++ __앱에서 Dev11 VCLibs 프레임워크 패키지를 사용합니다__. AppX 패키지에서 종속성으로 정의된 경우 Windows 스토어에서 직접 VCLibs 11 라이브러리를 설치할 수 있습니다. 이렇게 하려면 앱 패키지 매니페스트를 다음과 같이 변경합니다. `<Dependencies>` 노드 아래에 다음을 추가합니다.  
+`<PackageDependency Name="Microsoft.VCLibs.110.00.UWPDesktop" MinVersion="11.0.24217.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />`  
+Windows 스토어에서 설치하는 동안 앱이 설치되기 전에 적절한 버전(x86 또는 x64)의 VCLibs 11 프레임워크가 설치됩니다.  
+테스트용으로 로드하여 앱을 설치하는 경우에는 종속성이 설치되지 않습니다. 수동으로 컴퓨터에 종속성을 설치하려면 [데스크톱 브리지용 VC 11.0 프레임워크 패키지](https://www.microsoft.com/download/details.aspx?id=53340&WT.mc_id=DX_MVP4025064)를 다운로드하고 설치해야 합니다. 이러한 시나리오에 대한 자세한 내용은 [Centennial 프로젝트에서 Visual C++ 런타임 사용](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)을 참조하세요.
+
+
+<!--HONumber=Dec16_HO1-->
 
 

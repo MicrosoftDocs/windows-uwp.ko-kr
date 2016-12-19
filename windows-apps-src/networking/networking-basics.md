@@ -4,18 +4,18 @@ description: "네트워크 지원 앱에 대해 수행해야 하는 사항입니
 title: "네트워킹 기본 사항"
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
+ms.sourcegitcommit: 28cf7084fd7ea6ad41c7c2817522891617928abb
+ms.openlocfilehash: 13457b7da3472f3530805198a74b3a6b2ff78f50
 
 ---
 
-# 네트워킹 기본 사항
+# <a name="networking-basics"></a>네트워킹 기본 사항
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
 
-## 접근 권한 값
+## <a name="capabilities"></a>접근 권한 값
 
 네트워킹을 사용하려면 앱 매니페스트에 적절한 접근 권한 값 요소를 추가해야 합니다. 네트워크 접근 권한 값이 앱 매니페스트에 지정되지 않은 경우에는 앱에 네트워킹 접근 권한 값이 없으므로 네트워크 연결 시도가 실패합니다.
 
@@ -31,12 +31,11 @@ ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 | 접근 권한 값 | 설명 |
 |------------|-------------|
-| **pushNotifications** | 앱에서 소켓 작업 트리거를 사용하는 경우 앱 매니페스트에서 이 접근 권한 값을 지정해야 합니다. |
 | **enterpriseAuthentication** | 앱이 도메인 자격 증명이 필요한 네트워크 리소스에 연결할 수 있게 합니다. 이 접근 권한 값을 사용하려면 도메인 관리자가 모든 앱에 대해 해당 접근 권한 값을 사용하도록 설정해야 합니다. 개인 인트라넷의 Sharepoint 서버에서 데이터를 검색하는 앱을 예로 들 수 있습니다. <br/> 이 접근 권한 값을 사용할 경우 자격 증명이 필요한 네트워크의 네트워크 리소스에 액세스하는 데 사용자의 자격 증명을 사용할 수 있습니다. 이 접근 권한 값이 있는 앱은 네트워크에서 사용자로 가장할 수 있습니다. <br/> 앱이 인증 프록시를 통해 인터넷에 액세스하도록 허용하는 데는 이 접근 권한 값이 필요하지 않습니다. |
 | **proximity** | 컴퓨터와 가까운 거리에 있는 디바이스와의 근거리 근접 통신에 필요합니다. 근거리 근접을 사용하여 가까운 장치의 응용 프로그램과 연결하거나 데이터를 보낼 수 있습니다. <br/> 이 접근 권한 값을 사용할 경우, 사용자가 초대를 보내거나 수락하는 데 동의한다면 앱에서 네트워크에 액세스하여 가까운 거리의 디바이스에 연결할 수 있습니다. |
 | **sharedUserCertificates** | 이 접근 권한 값은 앱이 소프트웨어 및 하드웨어 인증서(예: 스마트 카드 인증서)에 액세스할 수 있게 합니다. 런타임에 이 접근 권한 값을 호출하면 사용자는 카드를 삽입하거나 인증서를 선택하는 것과 같은 조치를 수행해야 합니다. <br/> 이 접근 권한 값을 사용할 경우 앱에서 식별하는 데 소프트웨어 및 하드웨어 인증서 또는 스마트 카드를 사용합니다. 회사, 은행 또는 정부 기관에서 식별의 용도로 이 접근 권한 값을 사용할 수 있습니다. |
 
-## 앱이 포그라운드에 없는 경우의 통신
+## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>앱이 포그라운드에 없는 경우의 통신
 
 [백그라운드 작업을 사용하여 앱 지원](https://msdn.microsoft.com/library/windows/apps/mt299103) 섹션에서는 앱이 포그라운드에 없을 때 작업을 위해 백그라운드 작업을 사용하는 방법에 대한 일반적인 정보를 제공합니다. 더 구체적으로 말하자면, 코드가 현재 포그라운드 앱용이 아니고 데이터가 네트워크를 통해 수신된 경우 알림을 받을 수 있도록 특별한 조치를 취해야 합니다. Windows 8에서는 이러한 목적으로 컨트롤 채널 트리거를 사용했으며, 이는 Windows 10에서도 계속 지원됩니다. 컨트롤 채널 트리거를 사용하는 방법에 대한 전체 정보는 [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032)에서 확인할 수 있습니다. Windows 10의 새로운 기술에서는 푸시 사용 스트림 소켓과 같은 일부 시나리오에서 오버헤드를 감소시키는 향상된 기능(소켓 브로커와 소켓 작업 트리거)을 제공합니다.
 
@@ -44,9 +43,8 @@ ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 소켓 브로커는 동일한 기능을 제공하지만 제한 사항 및 메모리 공간이 더 적기 때문에 해당되는 경우 컨트롤 채널 트리거를 대체하기 위한 용도로 사용됩니다. 소켓 브로커는 화면 앱을 잠그지 않는 앱에서 사용될 수 있으며, 다른 장치와 동일한 방식으로 휴대폰에서 사용됩니다. 트래픽이 도착했을 때 소켓 브로커에서 활성화하기 위해 앱을 실행할 필요가 없습니다. 소켓 브로커는 컨트롤 채널 트리거에서 지원하지 않는 TCP 소켓의 수신 대기도 지원합니다.
 
-앱에서 소켓 작업 트리거를 사용하는 경우 앱 매니페스트에서 **pushNotifications** 접근 권한 값을 지정해야 합니다.
 
-### 네트워크 트리거 선택
+### <a name="choosing-a-network-trigger"></a>네트워크 트리거 선택
 
 특정한 종류의 트리거가 적합한 몇 가지 시나리오가 있습니다. 앱에서 사용할 트리거 종류를 선택할 때 다음 사항을 고려합니다.
 
@@ -57,11 +55,11 @@ ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 소켓 브로커를 사용하는 방법에 대한 자세한 내용과 예는 [백그라운드에서의 네트워크 통신](network-communications-in-the-background.md)을 참조하세요.
 
-## 보안 연결
+## <a name="secured-connections"></a>보안 연결
 
 SSL(Secure Sockets Layer) 및 더 최근의 TLS(전송 계층 보안)는 네트워크 통신에 인증 및 암호화를 제공하도록 설계된 암호화 프로토콜입니다. 이러한 프로토콜은 네트워크 데이터를 보내고 받을 때 도청 및 변조를 방지하도록 설계되었습니다. 이러한 프로토콜은 프로토콜 교환에 클라이언트-서버 모델을 사용합니다. 이러한 프로토콜은 또한 디지털 인증서 및 인증 기관을 사용하여 서버가 인증이 필요한 개체인지 확인합니다.
 
-### 보안 소켓 연결 만들기
+### <a name="creating-secure-socket-connections"></a>보안 소켓 연결 만들기
 
 클라이언트와 서버 간 통신에 SSL/TLS를 사용하도록 [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 개체를 구성할 수 있습니다. SSL/TLS에 대한 이 지원은 클라이언트가 SSL/TLS 협상 중일 때 **StreamSocket** 개체를 사용하는 것으로 제한됩니다. **StreamSocket** 클래스에서 서버로서의 SSL/TLS 협상을 구현하지 않으므로 들어오는 통신을 수신할 때 [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)가 생성한 **StreamSocket**에서 SSL/TLS를 사용할 수 없습니다.
 
@@ -74,7 +72,7 @@ SSL/TLS를 통해 [**StreamSocket**](https://msdn.microsoft.com/library/windows/
 
 > **참고** 코드는 암시적으로 특정 보호 수준 사용에 의존하거나 특정 보안 수준이 기본적으로 사용된다는 가정에 의존해서는 안 됩니다. 보안 환경은 지속적으로 변화하며, 알려진 단점이 있는 프로토콜을 사용하는 것을 피하기 위해 프로토콜 및 기본 보호 수준은 시간이 지남에 따라 변경됩니다. 기본값은 개별 컴퓨터 구성에 따라, 또는 설치된 소프트웨어 및 적용된 패치에 따라 다양할 수 있습니다. 앱을 사용하려면 특정 보안 수준을 사용해야 하는 경우 해당 수준을 명시적으로 지정한 다음 설정된 연결에서 이 수준이 실제로 사용되고 있는지 확인해야 합니다.
 
-### ConnectAsync 사용
+### <a name="use-connectasync"></a>ConnectAsync 사용
 
 [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)를 사용하면 네트워크 서비스에 대한 초기 연결을 설정한 다음 모든 통신에 SSL/TLS를 사용하도록 즉시 협상할 수 있습니다. *protectionLevel* 매개 변수 전달을 지원하는 두 가지 **ConnectAsync** 메서드는 다음과 같습니다.
 
@@ -164,7 +162,7 @@ using Windows::Networking::Sockets;
     // Then close the clientSocket when done
 ```
 
-### UpgradeToSslAsync 사용
+### <a name="use-upgradetosslasync"></a>UpgradeToSslAsync 사용
 
 코드에 [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)를 사용하면 이 코드는 암호화하지 않고 먼저 네트워크 서비스에 대한 연결을 설정합니다. 앱은 일부 데이터를 보내거나 받은 다음 이후의 모든 통신에 SSL/TLS를 사용하도록 연결을 업그레이드할 수 있습니다.
 
@@ -353,7 +351,7 @@ using Windows::Storage::Streams;
     });
 ```
 
-### 보안 WebSocket 연결 만들기
+### <a name="creating-secure-websocket-connections"></a>보안 WebSocket 연결 만들기
 
 기존 소켓 연결과 마찬가지로 WebSocket 연결도 Windows 스토어 앱용 Windows 8에서 [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) 및 [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) 기능을 사용할 경우 TLS(전송 계층 보안)/SSL(Secure Sockets Layer)을 통해 암호화할 수 있습니다. 대부분의 경우 보안 WebSocket 연결을 사용합니다. 이 경우 많은 프록시가 암호화되지 않은 WebSocket 연결을 거부하므로 연결이 성공할 가능성이 높아집니다.
 
@@ -363,11 +361,11 @@ using Windows::Storage::Streams;
 
 클라이언트의 초기 요청에 이 값이 포함되어 있지 않거나 서버에서 예상하는 값과 일치하지 않는 값을 제공하면 WebSocket 핸드셰이크 오류 시 예상한 값이 서버에서 클라이언트로 전송됩니다.
 
-## 인증
+## <a name="authentication"></a>인증
 
 네트워크를 통해 연결할 때 인증 자격 증명을 제공하는 방법입니다.
 
-### StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
+### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
 
 [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
@@ -380,7 +378,7 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-### 웹 서비스에 인증 자격 증명 제공
+### <a name="providing-authentication-credentials-to-a-web-service"></a>웹 서비스에 인증 자격 증명 제공
 
 앱이 보안 웹 서비스와 상호 작용할 수 있도록 하는 네트워킹 API는 각각 서버 및 프록시 인증 자격 증명으로 클라이언트를 초기화하거나 요청 헤더를 설정하는 고유한 메서드를 제공합니다. 각 메서드는 이러한 자격 증명이 사용되는 사용자 이름, 암호 및 리소스를 나타내는 [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) 개체로 설정됩니다. 다음 표에서는 이러한 API의 매핑을 제공합니다.
 
@@ -403,7 +401,7 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 |  | [**AtomPubClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243428) |
 |  | [**AtomPubClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243423) |
  
-## 네트워크 예외 처리
+## <a name="handling-network-exceptions"></a>네트워크 예외 처리
 
 대부분의 프로그래밍 영역에서 예외는 프로그램의 일부 결함으로 인해 발생하는 중요한 문제나 오류를 나타냅니다. 네트워크 프로그래밍에는 예외에 대한 추가적인 원인(예: 네트워크 자체 및 네트워크 통신 특성)이 있습니다. 네트워크 통신은 본질적으로 신뢰할 수 없으며 예기치 않은 오류가 발생하기 쉽습니다. 앱에서 네트워킹을 사용하는 각 방법에 대해 일부 상태 정보를 유지 관리해야 하며, 앱 코드에서 해당 상태 정보를 업데이트하고 앱이 통신 오류를 다시 설정하거나 다시 시도할 수 있는 적절한 논리를 시작하여 네트워크를 예외를 처리해야 합니다.
 
@@ -416,7 +414,7 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 -   일부 API는 예외의 **HRESULT** 값을 열거형 값으로 변환하는 도우미 메서드를 제공합니다.
 -   다른 API는 실제 **HRESULT** 값을 검색하는 메서드를 제공합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 10의 향상된 네트워킹 API 기능](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
  
@@ -424,6 +422,6 @@ await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

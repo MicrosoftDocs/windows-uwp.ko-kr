@@ -4,12 +4,12 @@ description: "이 문서에서는 새로운 Windows 10 운영 체제의 일부�
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 979eb3c6ac41f304e19093055574db7805a115ff
+ms.sourcegitcommit: 6dbc98867c3a1a14a04590c65ba54ca3c37cd426
+ms.openlocfilehash: cb24b1e75dbb8f37fcd4482e3e0d468855155f04
 
 ---
 
-# Microsoft Passport 및 Windows Hello
+# <a name="microsoft-passport-and-windows-hello"></a>Microsoft Passport 및 Windows Hello
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,76 +23,76 @@ ms.openlocfilehash: 979eb3c6ac41f304e19093055574db7805a115ff
 
 Microsoft Passport 및 백업 인증 서비스를 사용하여 UWP 앱을 만드는 방법에 대한 단계별 연습에 대해서는 [Microsoft Passport 로그인 앱](microsoft-passport-login.md) 및 [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md) 문서를 참조하세요.
 
-## 1 소개
+## <a name="1-introduction"></a>1 소개
 
 
 정보 보안에 관한 기본 가정은 시스템에서 사용자를 식별할 수 있다는 것입니다. 사용자를 식별하면 시스템에서 사용자의 신원이 적절하게 확인되었는지 결정(인증 프로세스)한 다음 올바르게 인증된 사용자가 수행할 수 있는 작업을 결정(권한 부여)할 수 있습니다. 전 세계에 배포된 대다수 컴퓨터 시스템에서는 인증 및 권한 부여를 결정하는 수단으로 사용자 자격 증명을 사용합니다. 즉, 이러한 시스템은 보안을 위한 기반으로 사용자가 만든 재사용 가능한 암호를 사용합니다. 인증이 "사용자가 무엇을 알고 있고, 갖고 있고, 또 누구인지"와 관련된다는 말은 재사용 가능한 암호 자체가 인증 요소이므로 암호를 알고 있는 누구나가 소유자로 가장할 수 있다는 것을 의미합니다.
 
-## 1.1 기존 자격 증명의 문제
+## <a name="11-problems-with-traditional-credentials"></a>1.1 기존 자격 증명의 문제
 
 
 1960년대 중반 Fernando Corbató가 Massachusetts Institute of Technology의 팀원들과 함께 암호 사용을 주장한 이후, 사용자와 관리자는 암호를 사용하여 사용자 인증 및 권한 부여를 처리해야 했습니다. 시간이 지남에 따라 암호 저장 및 사용 기술은 더욱 진보했지만(예를 들어 보안 해시 및 솔트 사용) 여전히 두 가지 문제가 있습니다. 암호를 쉽게 복제할 수 있고 도용하기도 쉽다는 점입니다. 뿐만 아니라 잘못 구현할 경우 보안 문제가 발생할 수 있으므로 편리성과 보안성을 적절히 조절해야 합니다.
 
-## 1.1.1 자격 증명 도용
+## <a name="111-credential-theft"></a>1.1.1 자격 증명 도용
 
 
 암호의 가장 큰 위험은 공격자가 쉽게 도용할 수 있다는 점입니다. 암호를 입력, 처리 또는 저장하는 모든 위치는 취약합니다. 예를 들어 공격자는 응용 프로그램 서버로의 네트워크 트래픽을 도청하거나, 응용 프로그램 또는 디바이스에 맬웨어를 이식하거나, 디바이스에서 사용자 키스트로크를 기록하거나, 사용자가 입력하는 글자를 확인하는 등의 방법으로 인증 서버에서 암호 또는 해시 모음을 훔칠 수 있습니다. 이것이 가장 일반적인 공격 방법입니다.
 
 또한 공격자가 비보안 네트워크를 도청하여 유효한 자격 증명을 캡처한 다음 나중에 유효한 사용자를 가장하는 자격 증명 재생의 위험이 있습니다. Kerberos 및 OAuth를 비롯한 대부분의 인증 프로토콜은 자격 증명 교환 프로세스에 타임스탬프를 포함시켜 재생 공격으로부터 보호하지만 이런 방법은 사용자가 처음 티켓을 얻기 위해 제공하는 암호가 아니라 인증 시스템에서 발급한 토큰만 보호합니다.
 
-## 1.1.2 자격 증명 다시 사용
+## <a name="112-credential-reuse"></a>1.1.2 자격 증명 다시 사용
 
 
 
 
 메일 주소를 사용자 이름으로 사용하는 경우가 많은데 이 방법은 문제를 더 악화시킵니다. 공격자가 한 시스템에 침투하여 사용자 이름-암호 쌍을 알아낸 다음 동일한 쌍을 다른 시스템에 대해 시도할 수 있습니다. 이러한 방법으로 한 시스템에 침투한 공격자가 다른 시스템으로 연쇄 침투하는 사례는 놀랄 정도로 많습니다. 메일 주소를 사용자 이름으로 사용하면 이 가이드의 뒷부분에 나오는 추가 문제로 이어질 수 있습니다.
 
-## 1.2 자격 증명 문제 해결
+## <a name="12-solving-credential-problems"></a>1.2 자격 증명 문제 해결
 
 
 암호로 인해 발생할 수 있는 문제를 해결하는 것은 어렵습니다. 사용자가 암호를 재사용, 공유 또는 기록해 둘 수 있기 때문에 암호 정책을 강화하는 것만으로는 이 문제를 해결할 수 없습니다. 인증 보안에 대한 사용자 교육도 중요하지만 교육만으로 문제를 해결할 수도 없습니다.
 
 Microsoft Passport는 기존 자격 증명을 확인하고 생체 인식 또는 PIN 기반 사용자 제스처로 보호되는 디바이스별 자격 증명을 만들어 암호를 강력한 2FA(2단계 인증)로 바꿉니다. 
 
-## 2 Microsoft Passport란?
+## <a name="2-what-is-microsoft-passport"></a>2 Microsoft Passport란?
 
 
-## 2.1 Windows Hello란?
+## <a name="21-what-is-windows-hello"></a>2.1 Windows Hello란?
 
 
 Windows Hello는 Windows 10에서 기본 제공되는 새 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. 사용자가 장치별 Microsoft Passport 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없다는 의미입니다. Windows 보안 자격 증명 저장소는 장치의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
 
 Windows Hello 인증자를 Hello라고 합니다. Hello는 개별 디바이스 및 특정 사용자의 조합에만 있습니다. Hello는 디바이스 간에 로밍되지 않고 서버 또는 호출 앱과 공유되지 않으며 디바이스에서 쉽게 추출할 수 없습니다. 여러 사용자가 디바이스를 공유하는 경우 각 사용자가 자신의 계정을 설정해야 합니다. 모든 계정이 해당 디바이스의 고유 Hello를 갖게 됩니다. Hello는 저장된 자격 증명을 잠금 해제하는 데 사용할 수 있는 토큰이라고 생각할 수 있습니다. Hello 자체는 사용자를 앱이나 서비스에 인증하지 않지만 인증할 수 있는 자격 증명을 해제합니다. 즉, Hello는 사용자 자격 증명이 아니라 Microsoft Passport에 대한 두 번째 요소입니다.
 
-## 2.2 Microsoft Passport란?
+## <a name="22-what-is-microsoft-passport"></a>2.2 Microsoft Passport란?
 
 
 Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 결정하려면 먼저 사용자를 인증해야 합니다. Microsoft Passport는 Windows에 완전히 통합된 강력한 2FA를 제공하며 재사용 가능한 암호를 특정 디바이스 및 생체 인식 제스처 또는 PIN 조합으로 대체합니다.
 
 Microsoft Passport는 단순히 기존 2FA 시스템의 대체가 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 변조 방지 하드웨어 내에서 보호합니다. Microsoft Passport는 스마트 카드 배포에 필요한 추가 인프라 구성 요소가 필요하지 않습니다. 특히, 현재 없는 경우는 인증서 관리를 위한 인프라 PKI(공개 키)가 필요 없습니다. Microsoft Passport는 스마트 카드의 단점을 제외하고 장점(가상 스마트 카드의 배포 유연성 및 물리적 스마트 카드의 강력한 보안성)만 가져왔습니다.
 
-## 2.3 Microsoft Passport 작동 방식
+## <a name="23-how-microsoft-passport-works"></a>2.3 Microsoft Passport 작동 방식
 
 
-사용자가 자신의 컴퓨터에서 Microsoft Passport를 설정하면 Microsoft Passport가 해당 디바이스에 새 공개-개인 키 쌍을 생성합니다. TPM은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM이 없는 경우 개인 키는 암호화되고 소프트웨어에 의해 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 이 증명 정보는 예를 들어 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인하는 솔루션에서 사용할 수 있습니다.
+사용자가 자신의 컴퓨터에서 Microsoft Passport를 설정하면 Microsoft Passport가 해당 디바이스에 새 공개-개인 키 쌍을 생성합니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://technet.microsoft.com/itpro/windows/keep-secure/trusted-platform-module-overview))은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 개인 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
 
 디바이스에서 Microsoft Passport를 사용하려면 사용자가 Azure Active Directory 계정 또는 Windows 설정에서 연결된 Microsoft 계정이 있어야 합니다.
 
-## 2.3.1 키 보호 방법
+## <a name="231-how-keys-are-protected"></a>2.3.1 키 보호 방법
 
 
 키 자료가 생성될 때마다 공격으로부터 보호해야 합니다. 가장 강력한 보호 방법은 특수 하드웨어를 사용하는 것입니다. 오랫동안 보안에 중요한 응용 프로그램의 키를 생성, 저장 및 처리하는 데 HSM(하드웨어 보안 모듈)이 사용되었습니다. 스마트 카드는 특수한 형식의 HSM으로서, 신뢰할 수 있는 컴퓨팅 그룹 TPM 표준 규격의 디바이스입니다. 가능한 경우 Microsoft Passport 구현은 온보드 TPM 하드웨어를 이용하여 키를 생성, 저장, 처리합니다. 그러나 Microsoft Passport 및 Microsoft Passport for Work에는 온보드 TPM이 필요하지 않습니다.
 
 가능한 경우 TPM 하드웨어를 사용하는 것이 좋습니다. TPM은 PIN 무차별 암호 대입 공격(brute-force attack)을 포함하여 여러 가지 알려진 잠재적 공격으로부터 보호합니다. TPM은 계정 잠금 이후 추가 보호 계층도 제공합니다. TPM이 키 자료를 잠그면 사용자는 PIN을 재설정해야 합니다. PIN을 재설정한다는 것은 이전 키 자료로 암호화된 모든 키와 인증서가 제거된다는 의미입니다.
 
-## 2.3.2 인증
+## <a name="232-authentication"></a>2.3.2 인증
 
 
 사용자가 보호된 키 자료에 액세스하려고 하면 PIN 또는 생체 인식 제스처를 입력하여 디바이스 잠금을 해제한 사용자에 대한 인증 프로세스가 시작됩니다. 이러한 프로세스를 "키 릴리스"라고도 합니다.
 
 한 응용 프로그램에서 다른 응용 프로그램의 키를 사용할 수 없으며, 사용자는 다른 사용자의 키를 사용할 수 없습니다. 이러한 키는 ID 공급자 또는 IDP로 전송된 특정 리소스에 대한 액세스 요청에 서명하는 데 사용됩니다. 응용 프로그램에서는 특정 API를 사용하여 특정 작업을 위한 키 자료를 요구하는 작업을 요청할 수 있습니다. 이러한 API를 통한 액세스에는 사용자 제스처를 통한 명시적 유효성 검사가 필요하며, 요청하는 응용 프로그램에 키 자료가 공개되지 않습니다. 대신, 응용 프로그램이 데이터 서명과 같은 특정 작업을 요청하고 Microsoft Passport 계층에서 실제 작업을 처리하여 결과를 반환합니다.
 
-## 2.4 Passport 구현 준비
+## <a name="24-getting-ready-to-implement-passport"></a>2.4 Passport 구현 준비
 
 
 Microsoft Passport 및 Windows Hello의 작동 방식에 대해 기본적인 사항을 이해했으므로 이제 응용 프로그램에서 Microsoft Passport 및 Windows Hello를 구현하는 방법을 알아보겠습니다. 참고로 명확히 할 부분이 있습니다. 여기서 API라고 하면 Microsoft Passport API를 의미합니다. 현재 Windows Hello에 대한 API는 없습니다.
@@ -101,14 +101,14 @@ Microsoft Passport를 사용하여 구현할 수 있는 여러 가지 시나리�
 
 마지막으로, Microsoft Passport API는 앱에 사용할 운영 체제와 일치하는 Windows 10 SDK를 사용해야 한다는 점에 유의하세요. 즉, Windows 10에 배포될 앱에는 10.0.10240 Windows SDK를 사용하고 Windows 10 버전 1511에 배포될 앱에는 10.0.10586을 사용해야 합니다.
 
-## 3 Microsoft Passport 구현
+## <a name="3-implementing-microsoft-passport"></a>3 Microsoft Passport 구현
 
 
 이 장에서는 기존 인증 시스템이 없는 개발 가능한 시나리오부터 시작하고 Microsoft Passport를 구현하는 방법을 설명합니다.
 
 다음 섹션에서는 기존 사용자 이름과 암호 시스템에서 마이그레이션하는 방법에 대해 설명합니다. 그러나 그 장에 관심이 더 가더라도 우선 필요한 코드와 프로세스에 대한 기본적인 지식을 얻기 위해 이 장을 훑어보는 것이 좋습니다.
 
-## 3.1 새 사용자 등록
+## <a name="31-enrolling-new-users"></a>3.1 새 사용자 등록
 
 
 Microsoft Passport를 사용 하는 새 서비스와 새 디바이스에 등록할 준비가 된 가상의 새 사용자부터 시작합니다.
@@ -213,7 +213,7 @@ static async void RegisterUser(string AccountId)
 }
 ```
 
-## 3.1.1 증명
+## <a name="311-attestation"></a>3.1.1 증명
 
 
 키 쌍을 만들 때 TPM 칩에 의해 생성된 증명 정보를 요청하는 옵션도 있습니다. 선택적인 이 정보는 등록 프로세스의 일환으로 서버로 전송할 수 있습니다. TPM 키 증명은 키가 TPM에 바인딩되었음을 암호 방식으로 증명하는 프로토콜입니다. 이 유형의 증명을 사용하여 특정 컴퓨터의 TPM에서 특정 암호화 작업이 발생했음을 보증할 수 있습니다.
@@ -231,12 +231,12 @@ static async void RegisterUser(string AccountId)
 
 이러한 조건에 따라 앱은 사용자에게 다른 권한 부여 수준을 할당할 수도 있습니다. 예를 들어, 이러한 검사 중 하나에 실패 하는 경우 사용자를 등록하지 않거나 사용자가 수행할 수 있는 것을 제한할 수도 있습니다.
 
-## 3.2 Microsoft Passport를 사용하여 로그온
+## <a name="32-logging-on-with-microsoft-passport"></a>3.2 Microsoft Passport를 사용하여 로그온
 
 
 시스템에 등록된 후에는 사용자가 앱을 사용할 수 있습니다. 시나리오에 따라 사용자에게 앱을 사용하려면 먼저 인증하도록 요청하거나 사용자에게 백 엔드 서비스를 사용하기 시작하면 인증하도록 요청할 수 있습니다.
 
-## 3.3 사용자에게 다시 로그인하도록 강제
+## <a name="33-force-the-user-to-sign-in-again"></a>3.3 사용자에게 다시 로그인하도록 강제
 
 
 일부 시나리오에서는 앱에 액세스하기 전에 또는 앱 내에서 특정 작업을 수행하기 전에 사용자가 현재 로그인한 사용자가 맞는지 입증하기를 원할 수도 있습니다. 예를 들어, 뱅킹 앱이 서버에 전송 금액 명령을 전송하기 전에 트랜잭션을 시도하는 로그인한 디바이스를 찾은 사용자가 아닌 사용자인지 확인할 수도 있습니다. 이 경우 [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) 클래스를 사용하면 사용자에게 앱에 다시 로그인하도록 강제할 수 있습니다. 다음 코드 줄은 사용자에게 자격 증명을 입력하도록 강제합니다.
@@ -253,7 +253,7 @@ if (consentResult.Equals(UserConsentVerificationResult.Verified))
 
 물론 다음 장의 설명대로, 사용자에게 PIN 코드나 생체 인식 자격 증명을 입력하도록 요구하는 서버와 함께 시도 응답 메커니즘을 사용할 수도 있습니다. 개발자가 구현해야 하는 시나리오에 따라 다릅니다. 다음 섹션에서 이 메커니즘에 대해 설명합니다.
 
-## 3.4 백 엔드에서 인증
+## <a name="34-authentication-at-the-backend"></a>3.4 백 엔드에서 인증
 
 
 앱에서 보호된 백 엔드 서비스에 액세스하려는 경우 서비스는 앱에 시도를 보냅니다. 앱에서는 사용자의 개인 키를 사용하여 시도에 서명하고 시도를 다시 서버로 보냅니다. 서버에서는 사용자의 공개 키를 저장했으므로 표준 암호 API를 사용하여 메시지가 올바른 개인 키를 사용해 서명되었는지 확인합니다. 클라이언트 로그온은 Microsoft Passport API를 통해 이루어지며, 개발자는 사용자의 개인 키에 액세스할 수 없습니다.
@@ -355,7 +355,7 @@ static async Task<IBuffer> GetAuthenticationMessageAsync(IBuffer message, String
 
 올바른 시도-응답 메커니즘을 구현하는 것은 이 문서의 범위를 벗어나지만 재생 공격이나 메시지 가로채기(man-in-the-middle) 공격 등을 방지하는 보안 메커니즘을 만들기 위해서는 많이 고려해야 할 부분입니다.
 
-## 3.5 다른 디바이스 등록
+## <a name="35-enrolling-another-device"></a>3.5 다른 디바이스 등록
 
 
 요즘에는 사용자가 여러 디바이스에 동일한 앱을 설치하여 사용하는 것이 상당히 일반적입니다. 여러 디바이스에서 Microsoft Passport를 사용하는 경우 어떻게 작동하나요?
@@ -375,7 +375,7 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
 
 사용자가 등록되는 디바이스를 더 쉽게 인식할 수 있게 만들려면 등록 과정의 일부로 디바이스 이름 또는 다른 식별자를 전송하도록 선택하면 됩니다. 이렇게 하면 예를 들어 사용자가 디바이스 분실 시 디바이스 등록을 해제할 수 있는 서비스를 백 엔드에 구현하려고 할 때 유용합니다.
 
-## 3.6 앱에서 여러 계정 사용
+## <a name="36-using-multiple-accounts-in-your-app"></a>3.6 앱에서 여러 계정 사용
 
 
 단일 계정에 대해 여러 디바이스를 지원할 뿐만 아니라 단일 앱에서 여러 계정을 지원하는 것도 일반적입니다. 예를 들어 앱 내에서 여러 Twitter 계정에 연결할 수 있습니다. Microsoft Passport를 사용하면 여러 키 쌍을 생성하여 앱 내에서 여러 계정을 지원활 수 있습니다.
@@ -390,7 +390,7 @@ var openKeyResult = await KeyCredentialManager.OpenAsync(AccountId);
 
 흐름의 나머지 부분은 앞에서 설명한 것과 같습니다. 분명히 말하자면 이러한 계정은 모두 동일한 Windows 계정을 가진 단일 디바이스에 사용되므로 동일한 PIN 또는 생체 인식 제스처에 의해 보호됩니다.
 
-## 4 기존 시스템을 Microsoft Passport로 마이그레이션
+## <a name="4-migrating-an-existing-system-to-microsoft-passport"></a>4 기존 시스템을 Microsoft Passport로 마이그레이션
 
 
 이 짧은 섹션에서는 사용자 이름 및 해시된 암호를 저장하는 데이터베이스를 사용하는 기존 유니버설 Windows 플랫폼 앱 및 백 엔드 시스템이 있다고 가정합니다. 이러한 앱은 앱이 시작되면 사용자로부터 자격 증명을 수집하며 백 엔드 시스템이 인증 질문을 반환할 때 그 자격 증명을 사용합니다.
@@ -415,7 +415,7 @@ UI는 다음과 같습니다.
 
 전체 Microsoft Passport로 마이그레이션하는 시나리오에서 마지막 단계는 앱에서 로그온 이름 및 암호 옵션을 사용하지 않도록 설정한 후 저장해 둔 해시된 암호를 데이터베이스에서 제거하는 것입니다.
 
-## 5 요약
+## <a name="5-summary"></a>5 요약
 
 
 Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있는 보안을 도입했습니다. Windows Hello에서는 사용자를 인식하고 적절한 식별을 우회하려는 노력을 적극적으로 방어하는 새로운 생체 인식 로그인 시스템을 제공합니다. Microsoft Passport는 Windows Hello와 함께 작동하여 신뢰할 수 있는 플랫폼 모듈 외부에서 절대로 노출되거나 사용되지 않는 여러 계층의 인증서 및 키를 제공합니다. 또한 선택적으로 증명 확인 키 및 인증서를 사용하여 추가 보안 계층도 적용할 수 있습니다.
@@ -426,16 +426,16 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 임무가 완수되었습니다! 인터넷을 더욱 안전하게 만든 것이죠!
 
-## 6 리소스
+## <a name="6-resources"></a>6 리소스
 
 
-### 6.1 문서 및 샘플 코드
+### <a name="61-articles-and-sample-code"></a>6.1 문서 및 샘플 코드
 
 -   [Windows Hello 개요](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
 -   [Microsoft Passport 및 Windows Hello 구현 세부 정보](https://msdn.microsoft.com/library/mt589441)
 -   [GitHub의 Microsoft Passport 코드 샘플](http://go.microsoft.com/fwlink/?LinkID=717812)
 
-### 6.2 용어
+### <a name="62-terminology"></a>6.2 용어
 
 |                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -448,12 +448,12 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Microsoft Passport 로그인 앱](microsoft-passport-login.md)
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 
