@@ -6,24 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\manage-flight-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/41203bffb65de3d4d6cc0fec2c7436e0b9d5821b?path=windows-apps-src%2Fmonetize%2Fmanage-flight-submissions.md&_a=contents) | HandedOffSuccess | [Details](#9fc42f3abf1d876f271d18c1747ed7462dd20bd65463)
+ [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents) | HandedOffSuccess | [Details](#d3ed0af32c9a44078d0f772d7fc130121f5d49705554)
 
 ## Item Details
-##### <a name='9fc42f3abf1d876f271d18c1747ed7462dd20bd65463'></a> Source: [windows-apps-src\monetize\manage-flight-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/41203bffb65de3d4d6cc0fec2c7436e0b9d5821b?path=windows-apps-src%2Fmonetize%2Fmanage-flight-submissions.md&_a=contents)
+##### <a name='d3ed0af32c9a44078d0f772d7fc130121f5d49705554'></a> Source: [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [manage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/3c069099f55f895d1e3fa93d12408cffca398dd8?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fmanage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-12-20 00:00:08
+* Handoff File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/bafbd7eba3e73a9ffb2e4bf386c57fdc66d75841?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-12-20 17:59:27
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\manage-flight-submissions.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/b2c53b75f07e333f8fec53dde063337f5d452905?path=windows-apps-src%2Fmonetize%2Fmanage-flight-submissions.md&_a=contents)
-* Current Handback File: [manage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9912306fab3c8b8e7624e6c8155d6e72b8b2217f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fmanage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-16 08:03:41
-* Bilingual File: [manage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9912306fab3c8b8e7624e6c8155d6e72b8b2217f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fmanage-flight-submissions.4afa7ab4e2a440847d3697a5ec10333c28907677.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-16 08:09:48
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-known-issues.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-known-issues.md&_a=contents)
+* Current Handback File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-21 17:02:15
+* Bilingual File: [desktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesktop-to-uwp-known-issues.ff0eb3336b7a863932c0c8923f8bd0476ed212d6.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
 
