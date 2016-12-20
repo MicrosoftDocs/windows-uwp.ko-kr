@@ -1,11 +1,31 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f88a71491e185aec84a86248c44e1200a65ff179?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents) | HandedOffSuccess | [Details](#053981b33a58b8317ea999ceac1d1d26027aba345448)
 
 ## Item Details
+##### <a name='053981b33a58b8317ea999ceac1d1d26027aba345448'></a> Source: [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/f88a71491e185aec84a86248c44e1200a65ff179?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/5f18ab9172947dc86757eb488d2754e098964ea5?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-12-14 20:18:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\in-app-purchases-and-trials.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/9bd801611c02e50dcede4900d0bc983af89f88f7?path=windows-apps-src%2Fmonetize%2Fin-app-purchases-and-trials.md&_a=contents)
+* Current Handback File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/0b29ad07c7fa8135e733591a8a27737fd375452c?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-12-20 18:03:02
+* Bilingual File: [in-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9912306fab3c8b8e7624e6c8155d6e72b8b2217f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fin-app-purchases-and-trials.a3afb0af7e5d84cc7ffe7aa7ebe241757a3b869d.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-12-16 08:09:48
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
