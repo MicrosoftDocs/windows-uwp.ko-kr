@@ -6,23 +6,23 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/56421bc1ce426310189ddcb1c9893437469c075a?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents) | HandedOffSuccess | [Details](#69ae8d29df626f6a1e2ce1bb4a8a09e99353a0ac5788)
+ [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0aef3cc9a3312a647197d8b2a7b815ed42d54fa3?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents) | HandedOffSuccess | [Details](#10851432b6e28934ab60041d23a5cf319671f7045880)
 
 ## Item Details
-##### <a name='69ae8d29df626f6a1e2ce1bb4a8a09e99353a0ac5788'></a> Source: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/56421bc1ce426310189ddcb1c9893437469c075a?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
+##### <a name='10851432b6e28934ab60041d23a5cf319671f7045880'></a> Source: [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0aef3cc9a3312a647197d8b2a7b815ed42d54fa3?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/767a1b443168753d11562b85b9758b3532150823?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-12-30 00:02:44
+* Handoff File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ab67f1e63b58d56ebf994ddca1459c6ce18fbb98?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2016-12-30 20:05:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fpublish%2Ftax-details-for-paid-apps.md&_a=contents)
-* Current Handback File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents)
+* Current Handback File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Ftax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.ko-kr.xlf&_a=contents)
+* Bilingual File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
