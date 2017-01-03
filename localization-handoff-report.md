@@ -1,29 +1,47 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0aef3cc9a3312a647197d8b2a7b815ed42d54fa3?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents) | HandedOffSuccess | [Details](#10851432b6e28934ab60041d23a5cf319671f7045880)
+ [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/99a21818fc3b8552de18792f408da860bf6dea22?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents) | HandedOffSuccess | [Details](#08782286228fa25dc492b0e7ccc90958bdec5a7f3489)
+ [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c30aed9681d7c091e9831df3f53d8779dfacce38?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents) | HandedOffSuccess | [Details](#1990a3ad4e56fa039d024c53a04b021e60bed1454840)
 
 ## Item Details
-##### <a name='10851432b6e28934ab60041d23a5cf319671f7045880'></a> Source: [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0aef3cc9a3312a647197d8b2a7b815ed42d54fa3?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents)
+##### <a name='08782286228fa25dc492b0e7ccc90958bdec5a7f3489'></a> Source: [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/99a21818fc3b8552de18792f408da860bf6dea22?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/ab67f1e63b58d56ebf994ddca1459c6ce18fbb98?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2016-12-30 20:05:01
+* Handoff File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f2d5c6fc723cdd1a6d512f31ef7659de9645ac5f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-01-03 20:05:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\web-account-manager.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fsecurity%2Fweb-account-manager.md&_a=contents)
-* Current Handback File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fweb-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-11-21 17:13:42
+* Current Target File: [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/372da6ac75c53ed02644ef3d884950560e41be3e?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents)
+* Current Handback File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-12-13 14:20:02
+* Bilingual File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-12-13 14:24:51
+* [Back to Top](#report-top)
+
+##### <a name='1990a3ad4e56fa039d024c53a04b021e60bed1454840'></a> Source: [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c30aed9681d7c091e9831df3f53d8779dfacce38?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f2d5c6fc723cdd1a6d512f31ef7659de9645ac5f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-01-03 20:05:28
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/372da6ac75c53ed02644ef3d884950560e41be3e?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents)
+* Current Handback File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-12-13 14:20:02
+* Bilingual File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-12-13 14:24:51
 * [Back to Top](#report-top)
 
 
