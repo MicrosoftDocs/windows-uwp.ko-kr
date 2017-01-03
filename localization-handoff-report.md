@@ -6,42 +6,42 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/99a21818fc3b8552de18792f408da860bf6dea22?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents) | HandedOffSuccess | [Details](#08782286228fa25dc492b0e7ccc90958bdec5a7f3489)
- [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c30aed9681d7c091e9831df3f53d8779dfacce38?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents) | HandedOffSuccess | [Details](#1990a3ad4e56fa039d024c53a04b021e60bed1454840)
+ [windows-apps-src\launch-resume\create-and-register-an-inproc-background-task.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b9acb35645ee4f069f2ddb999865c3fd087fb792?path=windows-apps-src%2Flaunch-resume%2Fcreate-and-register-an-inproc-background-task.md&_a=contents) | HandedOffSuccess | [Details](#2ab02b8edda9aeadc9962464a63e08f1fb4077774776)
+ [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e44392a1dc69a98655ba7e576d2af102a608acaa?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents) | HandedOffSuccess | [Details](#ce39829cd6cd2dfb0c6a3aef930dd8fa82351b755500)
 
 ## Item Details
-##### <a name='08782286228fa25dc492b0e7ccc90958bdec5a7f3489'></a> Source: [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/99a21818fc3b8552de18792f408da860bf6dea22?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents)
+##### <a name='2ab02b8edda9aeadc9962464a63e08f1fb4077774776'></a> Source: [windows-apps-src\launch-resume\create-and-register-an-inproc-background-task.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b9acb35645ee4f069f2ddb999865c3fd087fb792?path=windows-apps-src%2Flaunch-resume%2Fcreate-and-register-an-inproc-background-task.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f2d5c6fc723cdd1a6d512f31ef7659de9645ac5f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2017-01-03 20:05:28
+* Handoff File: [create-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/7de3f341d2e51f0e2a2d626f437c2aaa91065a1e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-01-03 22:02:18
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\files\quickstart-using-file-and-folder-pickers.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/372da6ac75c53ed02644ef3d884950560e41be3e?path=windows-apps-src%2Ffiles%2Fquickstart-using-file-and-folder-pickers.md&_a=contents)
-* Current Handback File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-13 14:20:02
-* Bilingual File: [quickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fquickstart-using-file-and-folder-pickers.c6c934bf5fac51d6383c450ecec9eb5a9ec5b56e.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-13 14:24:51
+* Current Target File: [windows-apps-src\launch-resume\create-and-register-an-inproc-background-task.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Flaunch-resume%2Fcreate-and-register-an-inproc-background-task.md&_a=contents)
+* Current Handback File: [create-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-11-21 17:02:15
+* Bilingual File: [create-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-and-register-an-inproc-background-task.a544e6d6962223efddebbc9e41d55720ca48d0ed.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
-##### <a name='1990a3ad4e56fa039d024c53a04b021e60bed1454840'></a> Source: [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c30aed9681d7c091e9831df3f53d8779dfacce38?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents)
+##### <a name='ce39829cd6cd2dfb0c6a3aef930dd8fa82351b755500'></a> Source: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/e44392a1dc69a98655ba7e576d2af102a608acaa?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/f2d5c6fc723cdd1a6d512f31ef7659de9645ac5f?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2017-01-03 20:05:28
+* Handoff File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/7de3f341d2e51f0e2a2d626f437c2aaa91065a1e?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-01-03 22:02:18
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\layout\grid-tutorial.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/372da6ac75c53ed02644ef3d884950560e41be3e?path=windows-apps-src%2Flayout%2Fgrid-tutorial.md&_a=contents)
-* Current Handback File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
-* Current Handback Datetime: 2016-12-13 14:20:02
-* Bilingual File: [grid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/76bb007bcfbfeb9607b31aa3dfc483974f1a3f1f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fgrid-tutorial.c455ef353353b6c53d98766b94441edb5d28f0c1.ko-kr.xlf&_a=contents)
-* Bilingual Datetime: 2016-12-13 14:24:51
+* Current Target File: [windows-apps-src\monetize\ui-and-user-experience-guidelines.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/b2c53b75f07e333f8fec53dde063337f5d452905?path=windows-apps-src%2Fmonetize%2Fui-and-user-experience-guidelines.md&_a=contents)
+* Current Handback File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9912306fab3c8b8e7624e6c8155d6e72b8b2217f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2016-12-16 08:03:41
+* Bilingual File: [ui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/9912306fab3c8b8e7624e6c8155d6e72b8b2217f?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fui-and-user-experience-guidelines.600d817be1f5d0a7af7d2a83c06a9c3454c1c7f9.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2016-12-16 08:09:48
 * [Back to Top](#report-top)
 
 
