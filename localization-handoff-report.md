@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/75c74321c68261bb37a0063af3bae62577f7b5b1?path=windows-apps-src%2Fgaming%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.md&_a=contents) | HandedOffSuccess | [Details](#694b16cd867315ddc3981340d566d245b3b019613608)
+ [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/4af66ceeb617abdb4dfa157854c788831d51138a?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents) | HandedOffSuccess | [Details](#53818d16232fbe31b467b12fbb66496f85fbeb943517)
 
 ## Item Details
-##### <a name='694b16cd867315ddc3981340d566d245b3b019613608'></a> Source: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/75c74321c68261bb37a0063af3bae62577f7b5b1?path=windows-apps-src%2Fgaming%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.md&_a=contents)
+##### <a name='53818d16232fbe31b467b12fbb66496f85fbeb943517'></a> Source: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/4af66ceeb617abdb4dfa157854c788831d51138a?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/fc9d3943a3dab2407ba7c7ea0b827b603610af34?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2017-01-11 20:11:21
+* Handoff File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/cb1b1c1f201a1a9c58ced3cad271c07915f2b598?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-01-11 22:07:52
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +21,10 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fgaming%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.md&_a=contents)
-* Current Handback File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf&_a=contents)
+* Current Target File: [windows-apps-src\gaming\e2e.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fgaming%2Fe2e.md&_a=contents)
+* Current Handback File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fwalkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.ko-kr.xlf&_a=contents)
+* Bilingual File: [e2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fe2e.40fddb66c16c630e55b73b8224d1043b6f587bc2.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
