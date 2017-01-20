@@ -4,8 +4,8 @@ description: "이 문서는 기존의 사용자 이름 및 암호 인증 시스�
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: a70a59283fe664bef9ddab56df57a9fc46c91033
-ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
+ms.sourcegitcommit: 126811b615117c0204e3ac4326d810c986a51e55
+ms.openlocfilehash: 27f06fe3031d391a03bc5f5b08723983b34308f0
 
 ---
 
@@ -624,7 +624,7 @@ ms.openlocfilehash: 04311e9c3242bdaf6588c8102a06ae658e6637e2
 
 -   응용 프로그램을 빌드 및 실행합니다. "sampleUsername"으로 로그인하고 로그인을 클릭합니다. PIN을 입력하고 성공하면 환영 화면으로 이동해야 합니다. 사용자 무시를 클릭하고 출력 창을 모니터링하여 사용자가 삭제되었는지 확인합니다. 사용자를 삭제할 때 환영 페이지는 그대로 유지됩니다. 앱에서 이동할 수 있는 사용자 선택 페이지를 만들어야 합니다.
 
-    !passport 시작 화면](images/passport-login-9.png)
+    ![passport 시작 화면](images/passport-login-9.png)
 
 -   Views 폴더에 "UserSelection.xaml"이라는 빈 페이지를 새로 만들고 사용자 인터페이스를 정의하기 위해 다음 XAML을 추가합니다. 이 페이지는 로컬 계정 목록의 모든 사용자를 표시하는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)와 사용자가 다른 계정을 추가할 수 있는 로그인 페이지로 이동하는 단추를 포함합니다.
 
@@ -973,6 +973,6 @@ Microsoft Passport에 대한 지원을 구현한 후에는 Windows Hello를 지�
 * [Microsoft Passport 로그인 서비스](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,22 +6,24 @@ ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
-ms.openlocfilehash: 09e2241523411daa372bc7630d13b96a2aa8203b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 9710e3060410428e1a4b7cfe89442c7df8602ed2
 
 ---
 
 # <a name="guidelines-for-targeting"></a>대상 지정에 대한 지침
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가락의 전체 접촉 영역을 사용합니다. 사용자가 의도했거나 대상이 될 가능성 높은 대상을 결정할 때 정확도를 높이기 위해 디지타이저가 보고하는 좀 더 크고 좀 더 복잡한 입력 데이터 집합이 사용됩니다.
 
-**중요 API**
-
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
 이 항목에서는 터치 타기팅을 위한 접촉 기하 사용에 대해 설명하고 UWP 앱에서 타기팅에 대한 모범 사례를 제공합니다.
 
@@ -107,7 +109,7 @@ Windows의 터치 타기팅은 터치 디지타이저로 감지되는 각 손가
 
 -   터치 빈도: 반복되거나 자주 눌리는 대상은 최소 크기보다 크게 지정해 보세요.
 -   오류 결과: 터치할 때 심각한 오류가 생기는 대상은 여백보다 커야 하며 콘텐츠 영역보다 커야 합니다. 이는 자주 터치되는 대상의 경우 더 합니다.
--   콘텐츠 영역에서의 위치
+-   콘텐츠 영역의 위치
 -   폼 팩터 및 화면 크기
 -   손가락 모양
 -   터치 시각화
@@ -175,6 +177,6 @@ JavaScript를 사용하는 Windows 스토어 앱 개발자에게는 이 기능�
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

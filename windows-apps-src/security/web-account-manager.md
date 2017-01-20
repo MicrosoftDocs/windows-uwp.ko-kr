@@ -1,19 +1,19 @@
 ---
 title: "웹 계정 관리자를 사용하여 ID 공급자에 연결"
-description: "이 문서는 새로운 Windows10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
+description: "이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: e16977a9a11b292ea9624ff421aa964c11d615be
-ms.openlocfilehash: d234811b395790a35ad50dea9ef4cc56d60458e8
+ms.sourcegitcommit: 0aef3cc9a3312a647197d8b2a7b815ed42d54fa3
+ms.openlocfilehash: 10851432b6e28934ab60041d23a5cf319671f704
 
 ---
-# 웹 계정 관리자를 사용하여 ID 공급자에 연결
+# <a name="connect-to-identity-providers-with-web-account-manager"></a>웹 계정 관리자를 사용하여 ID 공급자에 연결
 
-이 문서는 새로운 Windows10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
+이 문서는 새로운 Windows 10 웹 계정 관리자를 사용하여 AccountsSettingsPane을 표시하고 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
 
-> 참고: 전체 코드 샘플을 보려면 [의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
+> 참고: 전체 코드 샘플을 보려면 [GitHub의 WebAccountManagement 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
 
-## 설정 방법
+## <a name="get-set-up"></a>설정 방법
 
 먼저 Visual Studio에서 비어 있는 새 솔루션을 만듭니다. 
 
@@ -51,7 +51,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Web.Http;
 ```
 
-## AccountSettingsPane 표시
+## <a name="show-the-accountsettingspane"></a>AccountSettingsPane 표시
 
 시스템은 ID 공급자 및 AccountSettingsPane이라고 하는 웹 계정을 관리하기 위한 기본 제공 사용자 인터페이스를 제공합니다. 아래와 같이 표시할 수 있습니다.
 
@@ -68,7 +68,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 시스템은 UI 셸만 제공하므로 창으 비어 있습니다. 프로그래밍 방식을 사용하여 ID 공급자로 창을 채우는 것은 개발자의 책임입니다. 
 
-## AccountCommandsRequested 등록
+## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested 등록
 
 창에 명령을 추가하려면 먼저 AccountCommandsRequested 이벤트 처리기를 등록합니다. 이렇게 하면 사용자가 창을 표시하도록 요청할 때(예: XAML 단추 클릭) 시스템은 빌드 논리를 실행하라는 지시를 받게 됩니다. 
 
@@ -90,7 +90,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
 
 사용자가 계정을 자주 조작하지 않으므로 이러한 방식으로 이벤트 처리기를 등록 및 등록 취소하면 메모리 누수를 방지하는 데 도움이 됩니다. 이러한 방식으로 사용자 지정된 창은 사용자가 요청할 가능성이 높은 경우에만 메모리에 있습니다(예를 들어 “설정" 또는 “로그인” 페이지에 있음). 
 
-## 계정 설정 창 빌드
+## <a name="build-the-account-settings-pane"></a>계정 설정 창 빌드
 
 AccountSettingsPane이 표시될 때마다 BuildPaneAsync 메서드가 호출됩니다. 창에 표시되는 명령을 사용자 지정하기 위한 코드를 여기에 삽입합니다. 
 
@@ -148,7 +148,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 
 ![계정 설정 창](images/tb-2.png)
 
-### 토큰 요청
+### <a name="request-a-token"></a>토큰 요청
 
 AccountsSettingsPane에 Microsoft 계정 옵션이 표시되면 사용자가 선택할 때 어떤 결과가 나타날지 처리해야 합니다. 사용자가 해당 Microsoft 계정으로 로그인하도록 선택할 때 GetMsaToken 메서드가 발생하도록 등록했으므로 해당 토큰을 가져올 것입니다. 
 
@@ -166,8 +166,8 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 서비스 공급자는 서비스에 사용할 토큰을 가져오도록 지정해야 하는 범위에 대한 설명서를 제공합니다. 
 
-* Office 365 및 Outlook.com 범위의 경우 (v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증)[https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2]을 참조하세요. 
-* OneDrive의 경우 (OneDrive 인증 및 로그인)[https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes]을 참조하세요. 
+* Office 365 및 Outlook.com 범위의 경우 [v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증](https://msdn.microsoft.com/office/office365/howto/authenticate-Office-365-APIs-using-v2)을 참조하세요. 
+* OneDrive의 경우 [OneDrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조하세요. 
 
 엔터프라이즈 앱을 개발하는 경우 AAD(Azure Active Directory) 인스턴스에 연결하고 일반 MSA 서비스 대신 Microsoft Graph API를 사용하려고 할 것입니다. 이 시나리오에서는 다음 코드를 대신 사용합니다. 
 
@@ -183,7 +183,7 @@ private async void GetAadTokenAsync(WebAccountProviderCommand command)
 
 이 문서의 나머지 부분에서는 MSA 시나리오를 계속 설명하지만 AAD에 대한 코드는 매우 유사합니다. GitHub의 전체 샘플을 포함하여 AAD/Graph에 대한 자세한 내용은 [Microsoft Graph 설명서](https://graph.microsoft.io/docs/platform/get-started)를 참조하세요.
 
-## 토큰 사용
+## <a name="use-the-token"></a>토큰 사용
 
 RequestTokenAsync 메서드는 요청의 결과를 포함하는 WebTokenRequestResult 개체를 반환합니다. 요청이 성공한 경우 토큰이 포함됩니다.  
 
@@ -234,7 +234,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 다양한 REST API를 호출하는 방법은 공급자마다 다릅니다. 토큰 사용 방법에 대한 자세한 내용은 공급자 API 설명서를 참조하세요. 
 
-## 계정 상태 저장
+## <a name="save-account-state"></a>계정 상태 저장
 
 토큰은 사용자에 대한 정보를 즉시 얻는 데 유용하지만 일반적으로 수명이 다양합니다. 예를 들어 MSA 토큰은 몇 시간 동안만 유효합니다. 다행히 토큰이 만료될 때마다 AccountsSettingsPane을 다시 표시할 필요가 없습니다. 사용자가 앱에 대한 권한을 부여하면 나중에 사용할 수 있게 사용자의 계정 정보를 저장할 수 있습니다. 
 
@@ -304,7 +304,7 @@ private async Task<string> GetTokenSilentlyAsync()
 
 위 예제는 기본적인 성공 및 실패 사례만 제공합니다. 또한 앱은 비정상적인 시나리오(예: 사용자가 앱의 사용 권한 해지 또는 Windows에서 계정 제거)를 고려하고 적절히 처리해야 합니다.  
 
-## 계정 로그아웃 
+## <a name="log-out-an-account"></a>계정 로그아웃 
 
 WebAccount를 유지하는 경우 계정을 전환하거나 앱과 계정을 간단히 분리할 수 있도록 사용자에게 "로그아웃" 기능을 제공하려고 할 수 있습니다. 이렇게 하려면 먼저 저장된 계정 및 공급자 정보를 제거합니다. 그런 후 WebAccount.SignOutAsync()를 호출하여 캐시를 지우고 앱에 있을 수 있는 기존 토큰을 무효화합니다. 
 
@@ -317,7 +317,7 @@ private async Task SignOutAccountAsync(WebAccount account)
 }
 ```
 
-## WebAccountManager를 지원하지 않는 공급자를 추가합니다.
+## <a name="add-providers-that-dont-support-webaccountmanager"></a>WebAccountManager를 지원하지 않는 공급자를 추가합니다.
 
 서비스의 인증을 앱에 통합하려고 하지만 해당 서비스가 WebAccountManager(예: Google+ 또는 Twitter)를 지원하지 않을 경우 AccountsSettingsPane에 해당 공급자를 수동으로 추가할 수 있습니다. 이렇게 하려면 새 WebAccountProvider 개체를 만들고 고유한 이름 및 .png 아이콘을 제공한 다음 WebAccountProviderCommands에 추가합니다. 일부 스텁 코드는 다음과 같습니다. 
 
@@ -342,7 +342,7 @@ private async void GetTwitterTokenAsync(WebAccountProviderCommand command)
 
 이 코드를 사용하면 아이콘이 AccountsSettingsPane에 추가되기만 하며, 아이콘을 클릭해야만 지정한 메서드가 실행됩니다(이 경우 GetTwitterTokenAsync). 실제 인증을 처리하는 코드를 제공해야 합니다. 자세한 내용은 REST 서비스를 사용하여 인증하기 위한 도우미 메서드를 제공하는 (웹 인증 브로커)[web-authentication-broker]를 참조하세요. 
 
-## 사용자 지정 헤더 추가
+## <a name="add-a-custom-header"></a>사용자 지정 헤더 추가
 
 아래와 같이 HeaderText 속성을 사용하여 계정 설정 창을 사용자 지정할 수 있습니다. 
 
@@ -361,7 +361,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 헤더 텍스트를 복잡하게 만들면 느려지므로 간단하게 유지합니다. 로그인 프로세스가 복잡하고 자세한 정보를 표시해야 하는 경우 사용자 지정 링크를 사용하여 사용자를 별도 페이지로 연결합니다. 
 
-## 사용자 지정 링크 추가
+## <a name="add-custom-links"></a>사용자 지정 링크 추가
 
 지원되는 WebAccountProviders 아래에 나타나는 AccountsSettingsPane에 사용자 지정 명령을 추가할 수 있습니다. 사용자 지정 명령은 개인 정보 취급 방침 표시 또는 문제가 있는 사용자를 위한 지원 페이지 실행 등, 사용자 계정과 관련된 간단한 작업에 적합합니다. 
 
@@ -387,7 +387,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 이론적으로는 모든 경우에 설정 명령을 사용할 수 있습니다. 그러나 위에 설명된 것과 같은 계정과 관련된 직관적인 시나리오로 사용을 제한하는 것이 좋습니다. 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 [Windows.Security.Authentication.Web.Core 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.core.aspx)
 
@@ -401,6 +401,6 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO5-->
 
 

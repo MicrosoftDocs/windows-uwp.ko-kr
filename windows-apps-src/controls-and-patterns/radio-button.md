@@ -6,11 +6,11 @@ ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: f26b042bb7efb6599993b8fd7cee6ee35e1765fd
-ms.openlocfilehash: 0e9cd8db21577bdbfe4c53fc9a17fbcbf5c81f76
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 95ddb1ddd1dfd318a5c491504c95f7833f98115e
 
 ---
-# 라디오 단추
+# <a name="radio-buttons"></a>라디오 단추
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -23,20 +23,14 @@ ms.openlocfilehash: 0e9cd8db21577bdbfe4c53fc9a17fbcbf5c81f76
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227544"><strong>RadioButton 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx"><strong>Checked 이벤트</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx"><strong>IsChecked 속성</strong></a></li>
+<li>[**RadioButton 클래스**](https://msdn.microsoft.com/library/windows/apps/br227544)</li>
+<li>[**Checked 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)</li>
+<li>[**IsChecked 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 라디오 단추를 사용하여 사용자에게 상호 배타적인 두 개 이상의 옵션을 제공합니다.
 
@@ -60,18 +54,18 @@ ms.openlocfilehash: 0e9cd8db21577bdbfe4c53fc9a17fbcbf5c81f76
 
 사용 가능한 옵션이 앱의 현재 컨텍스트에 따라 달라지거나 동적으로 변경될 수 있는 경우 대신 단일 선택 [목록 상자](lists.md)를 사용하세요.
 
-## 예제
+## <a name="example"></a>예제
 Microsoft Edge 브라우저 설정의 라디오 단추입니다.
 
 ![Microsoft Edge 브라우저 설정의 라디오 단추](images/control-examples/radio-buttons-edge.png)
 
-## 라디오 단추 만들기
+## <a name="create-a-radio-button"></a>라디오 단추 만들기
 
 라디오 단추는 그룹으로 작동합니다. 다음 두 가지 방법으로 라디오 단추 컨트롤을 그룹화할 수 있습니다.
 - 동일한 부모 컨테이너 내에 배치합니다.
 - 각 라디오 단추의 [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx) 속성을 동일한 값으로 설정합니다.
 
-> **참고**  라디오 단추 그룹은 키보드를 통해 액세스한 경우 단일 컨트롤처럼 동작합니다. Tab 키를 사용하면 선택한 항목만 액세스할 수 있지만, 사용자가 화살표 키를 사용하면 그룹을 순환할 수 있습니다.
+> **참고**&nbsp;&nbsp;라디오 단추 그룹은 키보드를 통해 액세스한 경우 단일 컨트롤처럼 동작합니다. Tab 키를 사용하면 선택한 항목만 액세스할 수 있지만, 사용자가 화살표 키를 사용하면 그룹을 순환할 수 있습니다.
 
 이 예제에서 첫 번째 라디오 단추 그룹은 동일한 스택 패널에 배치되어 암시적으로 그룹화됩니다. 두 번째 그룹은 두 스택 패널로 나뉘어 있으므로 GroupName별로 명시적으로 그룹화됩니다.
 
@@ -155,13 +149,13 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 }
 ```
 
-사용자가 파란색 배경과 녹색 테두리를 선택한 후 라디오 단추 그룹은 다음과 같이 표시됩니다.
+라디오 단추 그룹의 모습은 다음과 같습니다.
 
 ![두 그룹으로 나뉜 라디오 단추](images/radio-button-groups.png)
 
 라디오 단추에는 *selected* 또는 *cleared*의 두 가지 상태가 있습니다. 라디오 단추가 선택된 경우 해당 [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 속성은 **true**입니다. 라디오 단추가 선택 취소된 경우 해당 **IsChecked** 속성은 **false**입니다. 동일한 그룹의 다른 라디오 단추를 클릭하여 라디오 단추 선택을 취소할 수 있지만 다시 클릭하여 선택을 취소할 수는 없습니다. 그러나 IsChecked 속성을 **false**로 설정하여 프로그래밍 방식으로 라디오 단추 선택을 취소할 수 있습니다.
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   라디오 단추 집합의 용도와 현재 상태가 명확한지 확인합니다.
 -   사용자가 라디오 단추를 탭하면 항상 시각적 피드백이 제공됩니다.
@@ -176,12 +170,12 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 -   라디오 단추 그룹에 옵션을 9개 이상 넣지 마세요. 더 많은 옵션을 제공해야 하는 경우 대신 [드롭다운 목록](lists.md), [목록 상자](lists.md) 또는 [목록 보기](lists.md)를 사용하세요.
 -   라디오 단추 두 개를 나란히 넣지 마세요. 두 라디오 단추 그룹이 나란히 배치된 경우 어느 단추가 어느 그룹에 속하는지 확인하는 데 어려움이 있습니다. 그룹 레이블을 사용하여 그룹을 분리합니다.
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 다음 그림에서는 라디오 단추를 배치하고 간격을 지정하는 적절한 방법을 보여 줍니다.
 
 ![라디오 단추 집합](images/radiobutton_layout1.png)
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **디자이너용**
 - [단추에 대한 지침](buttons.md)
@@ -198,6 +192,6 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

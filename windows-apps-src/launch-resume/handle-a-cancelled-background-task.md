@@ -4,14 +4,14 @@ title: "취소된 백그라운드 작업 처리"
 description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
 
 ---
 
-# 취소된 백그라운드 작업 처리
+# <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -21,15 +21,15 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md) 또는 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+이 항목에서는 백그라운드 작업 진입점으로 사용되는 Run 메서드를 비롯하여 백그라운드 작업 클래스를 이미 만들었다고 가정합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [ 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 이 항목은 In-process 백그라운드 작업에도 적용할 수 있습니다. 그러나 Run() 메서드 대신 OnBackgroundActivated()로 대체합니다. In-process 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
 
-## OnCanceled 메서드를 사용하여 취소 요청 인식
+## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>OnCanceled 메서드를 사용하여 취소 요청 인식
 
 취소 이벤트를 처리하는 메서드를 씁니다.
 
-> **참고** 데스크톱을 제외한 모든 디바이스 패밀리의 경우 디바이스의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
+> **참고**  데스크톱을 제외한 모든 장치 패밀리의 경우 장치의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
 
 다음과 같이 OnCanceled라는 메서드를 만듭니다. 이 메서드는 백그라운드 작업에 대한 취소 요청이 생성될 때 Windows 런타임에서 호출되는 진입점입니다.
 
@@ -96,7 +96,7 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## 백그라운드 작업을 종료하여 취소 처리
+## <a name="handle-cancellation-by-exiting-your-background-task"></a>백그라운드 작업을 종료하여 취소 처리
 
 취소 요청이 수신되면 백그라운드 작업을 수행하는 메서드는 **\_cancelRequested**가 **true**로 설정되는 것을 인식하여 작업을 중지하고 종료해야 합니다. In-process 백그라운드 작업의 경우 이는 `OnBackgroundActivated()` 메서드에서 반환을 의미합니다. Out-of-process 백그라운드 작업의 경우 이는 `Run()` 메서드에서 반환을 의미합니다.
 
@@ -132,7 +132,7 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 >     }
 > ```
 
-> **참고** 위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
+> **참고**  위에 표시된 코드 샘플에서는 백그라운드 작업 진행률을 기록하는 데 사용 중인 [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800) 속성을 사용합니다. [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
 작업을 중지한 후에 작업이 완료되었는지 취소되었는지 여부를 기록하도록 Run 메서드를 수정합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
 
@@ -200,13 +200,13 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 >     }
 > ```
 
-## 설명
+## <a name="remarks"></a>설명
 
 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
 
 설명을 위해 샘플 코드에서는 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)에서 Run 메서드와 콜백 타이머의 일부만 표시합니다.
 
-## Run 메서드 예
+## <a name="run-method-example"></a>Run 메서드 예
 
 컨텍스트에 대한 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)의 전체 Run 메서드 및 타이머 콜백 코드는 아래와 같습니다.
 
@@ -327,13 +327,12 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 > }
 > ```
 
-> 
-  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고**  이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
@@ -348,6 +347,6 @@ ms.openlocfilehash: a8fe98ab60012c2183e8394bfc8d7089f51552f0
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

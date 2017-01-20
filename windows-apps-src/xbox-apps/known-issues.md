@@ -3,8 +3,8 @@ author: Mtoepke
 title: "Xbox One 개발자 프로그램의 UWP에 대해 알려진 문제"
 description: 
 translationtype: Human Translation
-ms.sourcegitcommit: 20ac6fb738de1c8aaf10f46c359842f31714dbbf
-ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
+ms.sourcegitcommit: 3f0647bb76340ccbd538e9e4fefe173924d6baf4
+ms.openlocfilehash: 18c8d1fcd696f336601dc6c531424fe8bfb78304
 
 ---
 
@@ -12,7 +12,7 @@ ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 디바이스 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
+\[API 참조 항목 링크를 통해 이 페이지를 방문했으며 유니버설 장치 패밀리 API 정보를 보려는 경우 [Xbox에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/?LinkID=760755)을 참조하세요.\]
 
 다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
@@ -22,12 +22,18 @@ ms.openlocfilehash: b6fe2f90e0aff4b8e77b4c20aec0d29f2a6a36f8
 
 
 <!--## Developing games-->
+
+## <a name="issue-when-leaving-dev-mode"></a>개발자 모드 종료 시의 문제
+때때로 개발자 홈 사용 중에 또는 개발자 설정에서 개발자 모드를 종료하지 못하는 상황이 발생할 수도 있습니다.
+이 문제에는 두 가지 가능한 해결 방법이 있습니다. 
+1. 개발자 모드를 종료할 때 **테스트용으로 로드된 게임 및 앱 삭제** 상자의 선택을 취소합니다.
+2. 내 게임 및 앱으로 이동하여 콘솔에 설치된 모든 개발자 앱을 제거합니다.
  
-## <a name="memory-limits-for-background-apps-are-partially-enforced"></a>백그라운드 앱에 대한 메모리 제한이 부분적으로 적용됨
+<!--## Memory limits for background apps are partially enforced
  
-백그라운드에서 실행되는 앱의 최대 메모리 공간은 128MB입니다. Xbox One의 UWP에 대한 현재 버전에서 백그라운드로 이동할 때 이 제한을 초과하면 앱이 일시 중단됩니다. 이 제한은 현재 앱이 이미 백그라운드에서 실행되고 있는 동안에는 제한을 초과하더라도 적용되지 않습니다. 즉, 백그라운드에서 실행하는 동안 앱이 128MB를 초과할 경우 여전히 메모리를 할당할 수 있습니다.
+The maximum memory footprint for apps running in the background is 128 megabytes. In the current version of UWP on Xbox One, your app will be suspended if it is above this limit when it is moved to the background. This limit is not currently enforced if your app exceeds the limit while it is already running in the background—this means that if your app exceeds 128 MB while running in the background, it will still be able to allocate memory.
  
-현재 이 문제에 대한 해결 방법은 없습니다. 앱의 메모리 사용을 적절하게 제어하여 백그라운드에서 실행하는 동안 128MB 제한을 넘지 않도록 유지해야 합니다.
+There is currently no workaround for this issue. Apps should govern their memory usage accordingly and continue to stay under the 128 MB limit while running in the background.-->
  
 ## <a name="deploying-from-vs-fails-with-parental-controls-turned-on"></a>자녀 보호를 켠 상태로 VS에서 배포하지 못함
 
@@ -93,7 +99,7 @@ Developers can still use HTTP and WebSockets.
 
 ## <a name="blocked-networking-ports-on-xbox-one"></a>Xbox One에서 차단된 네트워킹 포트
 
-Xbox One 디바이스의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [49152, 65535]의 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
+Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 65535]의 모든 포트에 바인딩할 수 없습니다. 이러한 포트에 바인딩하면 런타임 시 성공하는 것처럼 보이지만 앱에 도달하기 전에 네트워크 트래픽이 자동으로 삭제될 수 있습니다. 가능할 때마다 앱을 포트 0에 바인딩해야 시스템이 로컬 포트를 선택할 수 있습니다. 특정 포트를 사용해야 할 경우 포트 번호는 범위 [1025 49151]에 있어야 하고 IANA 레지스트리를 사용하여 충돌을 확인하고 방지해야 합니다. 자세한 내용은 [서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)를 참조하세요.
 
 ## <a name="uwp-api-coverage"></a>UWP API 검사
 
@@ -177,6 +183,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

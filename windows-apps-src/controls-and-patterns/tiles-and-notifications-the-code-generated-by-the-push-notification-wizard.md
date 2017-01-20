@@ -6,19 +6,17 @@ ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: e61c887cc474504cc283de1d433180eb3cfe72a0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5329c72034b1be540f7b0fdd7f7d1ddfb2fa6a0d
 
 ---
+
+# <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# 푸시 알림 마법사에서 생성된 코드
-
-
-
 
 Visual Studio의 마법사를 사용하여 Azure Mobile Services와 함께 만든 모바일 서비스에서 푸시 알림을 생성할 수 있습니다. Visual Studio 마법사는 시작하는 데 유용한 코드를 생성합니다. 이 항목에서는 마법사에서 프로젝트를 수정하는 방법, 생성된 코드가 수행하는 작업, 이 코드를 사용하는 방법 및 푸시 알림을 최대한 활용하기 위해 다음에 수행할 수 있는 작업에 대해 설명합니다. [WNS(Windows 푸시 알림 서비스) 개요](tiles-and-notifications-windows-push-notification-services--wns--overview.md)를 참조하세요.
 
-## 마법사에서 프로젝트를 수정하는 방법
+## <a name="how-the-wizard-modifies-your-project"></a>마법사에서 프로젝트를 수정하는 방법
 
 
 푸시 알림 마법사는 다음과 같은 방법으로 프로젝트를 수정합니다.
@@ -38,7 +36,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
                 "<your client secret>");
 ```
 
-## 푸시 알림 등록
+## <a name="registration-for-push-notifications"></a>푸시 알림 등록
 
 
 push.register.\*에서 UploadChannel 메서드는 푸시 알림을 수신할 디바이스를 등록합니다. 스토어는 설치된 앱 인스턴스를 추적하고 푸시 알림 채널을 제공합니다. [**PushNotificationChannelManager**](https://msdn.microsoft.com/library/windows/apps/br241284)을 참조하세요.
@@ -170,7 +168,7 @@ void mymobileservice1234Push::HandleExceptionsComingFromTheServer()
 
 푸시 알림 태그를 사용하여 알림을 클라이언트의 하위 집합으로 제한할 수 있습니다. registerNative 메서드 또는 RegisterNativeAsync 메서드에 대해 태그를 지정하지 않고 모든 푸시 알림을 등록하거나, 두 번째 인수인 태그 배열을 제공하여 태그와 함께 등록할 수 있습니다. 하나 이상의 태그와 함께 등록할 경우 해당 태그와 일치하는 알림만 수신됩니다.
 
-## 서버 쪽 스크립트(JavaScript 백 엔드에만 해당)
+## <a name="server-side-scripts-javascript-backend-only"></a>서버 쪽 스크립트(JavaScript 백 엔드에만 해당)
 
 
 JavaScript 백 엔드를 사용하는 모바일 서비스의 경우 삭제, 삽입, 읽기 또는 업데이트 작업을 수행하면 서버 쪽 스크립트가 실행됩니다. 스크립트에서 이러한 작업을 구현하지는 않지만 클라이언트의 Windows Mobile REST API 호출에서 이러한 이벤트를 트리거할 때 실행됩니다. 그런 다음 스크립트는 request.execute 또는 request.respond 호출을 통해 호출 컨텍스트에 대한 응답을 실행하여 직접 제어를 작업에 전달합니다. [Azure Mobile Services REST API 참조](http://go.microsoft.com/fwlink/p/?linkid=511139)를 참조하세요.
@@ -206,11 +204,11 @@ function sendNotifications(request) {
 
 SendNotifications 함수는 단일 알림을 알림 메시지로 보냅니다. 다른 형식의 푸시 알림을 사용할 수도 있습니다.
 
-**팁** 스크립트를 편집하는 동안 도움말을 보는 방법에 대한 자세한 내용은 [서버 쪽 JavaScript에 IntelliSense 사용](http://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조하세요.
+**팁**  스크립트를 편집하는 동안 도움말을 보는 방법에 대한 자세한 내용은 [서버 쪽 JavaScript에 IntelliSense 사용](http://go.microsoft.com/fwlink/p/?LinkId=309275)을 참조하세요.
 
  
 
-## 푸시 알림 형식
+## <a name="push-notification-types"></a>푸시 알림 형식
 
 
 Windows에서는 푸시 알림이 아닌 알림을 지원합니다. 알림에 대한 일반적인 내용은 [예약, 정기 및 푸시 알림 제공](https://msdn.microsoft.com/library/windows/apps/hh761484)을 참조하세요.
@@ -223,20 +221,20 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 
 푸시 알림으로 라이브 타일을 업데이트하는 경우 [타일 및 배지에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)도 따라야 합니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
-### WNS(Windows 푸시 알림 서비스) 사용
+### <a name="using-the-windows-push-notification-services-wns"></a>WNS(Windows 푸시 알림 서비스) 사용
 
 모바일 서비스에서 충분한 유연성을 제공하지 않는 경우, C# 또는 Visual Basic으로 서버 코드를 작성하려는 경우 또는 클라우드 서비스가 이미 있으며 해당 서비스에서 푸시 알림을 보내려는 경우 WNS(Windows 푸시 알림 서비스)를 직접 호출할 수 있습니다. WNS를 직접 호출하면 데이터베이스 또는 다른 웹 서비스의 데이터를 모니터링하는 작업자 역할과 같은 고유한 클라우드 서비스에서 푸시 알림을 보낼 수 있습니다. 클라우드 서비스에서 푸시 알림을 앱에 보내려면 WNS에 인증해야 합니다. [Windows 푸시 알림 서비스에 인증하는 방법(JavaScript)](https://msdn.microsoft.com/library/windows/apps/hh465407) 또는 [(C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868206)을 참조하세요.
 
 모바일 서비스에서 예약된 작업을 실행하여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](http://go.microsoft.com/fwlink/p/?linkid=301694)을 참조하세요.
 
-**경고** 한 번 푸시 알림 마법사를 실행한 후에는 다른 모바일 서비스에 대한 등록 코드를 추가하기 위해 마법사를 다시 실행하지 마세요. 프로젝트당 마법사를 두 번 이상 실행하면 [**CreatePushNotificationChannelForApplicationAsync**](https://msdn.microsoft.com/library/windows/apps/br241287) 메서드에 대한 호출이 겹치게 되어 런타임 예외를 발생하는 코드가 생성됩니다. 두 개 이상의 모바일 서비스에 대해 푸시 알림을 등록하려면 마법사를 한 번 실행한 다음 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출이 동시에 실행되지 않도록 등록 코드를 다시 작성합니다. 예를 들어 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출을 포함하여 push.register.\*의 마법사 생성 코드를 OnLaunched 이벤트 외부로 이동하면 이 작업을 완료할 수 있지만 이 작업의 특징은 앱의 아키텍처에 따라 다릅니다.
+**경고**  한 번 푸시 알림 마법사를 실행한 후에는 다른 모바일 서비스에 대한 등록 코드를 추가하기 위해 마법사를 다시 실행하지 마세요. 프로젝트당 마법사를 두 번 이상 실행하면 [**CreatePushNotificationChannelForApplicationAsync**](https://msdn.microsoft.com/library/windows/apps/br241287) 메서드에 대한 호출이 겹치게 되어 런타임 예외를 발생하는 코드가 생성됩니다. 두 개 이상의 모바일 서비스에 대해 푸시 알림을 등록하려면 마법사를 한 번 실행한 다음 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출이 동시에 실행되지 않도록 등록 코드를 다시 작성합니다. 예를 들어 **CreatePushNotificationChannelForApplicationAsync**에 대한 호출을 포함하여 push.register.\*의 마법사 생성 코드를 OnLaunched 이벤트 외부로 이동하면 이 작업을 완료할 수 있지만 이 작업의 특징은 앱의 아키텍처에 따라 다릅니다.
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [WNS(Windows 푸시 알림 서비스) 개요](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
@@ -254,6 +252,6 @@ Windows는 푸시 알림에 응답하기 때문에 앱이 실행되지 않을 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

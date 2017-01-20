@@ -1,18 +1,21 @@
 ---
 author: mijacobs
 Description: "UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다."
-title: "UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항"
+title: "탐색 기록 및 뒤로 탐색(Windows 앱)"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 75e8c342775f7d6c564cb1014519f8e4707a0632
-ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
+ms.sourcegitcommit: 5f7f40d754ec9408fe5b4ba18d6d64bd49cb449f
+ms.openlocfilehash: bfff3a4787a37156ef3232372a125db60678ebac
 
 ---
 
-#  탐색 기록 및 뒤로 탐색
+#  <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 웹에서 개별 웹 사이트는 목차, 단추, 메뉴, 간단한 링크 목록 등과 같은 자체 탐색 시스템을 제공합니다. 탐색 환경은 웹 사이트마다 크게 다를 수 있습니다. 그러나 일관된 한 가지 탐색 환경은 바로 뒤로 기능입니다. 대부분의 브라우저는 웹 사이트와 관계없이 동일한 방식으로 동작하는 뒤로 단추를 제공합니다.
 
@@ -25,13 +28,13 @@ ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
 
 <table>
     <tr>
-        <td colspan="2">디바이스</td>
-        <td>뒤로 단추 동작</td>
+        <td colspan="2">장치</td>
+        <td style="vertical-align:top;">뒤로 단추 동작</td>
      </tr>
     <tr>
-        <td>Phone</td>
-        <td>![휴대폰의 시스템 뒤로 기능](images/back-systemback-phone.png)</td>
-        <td>
+        <td style="vertical-align:top;">Phone</td>
+        <td style="vertical-align:top;">![휴대폰의 시스템 뒤로 기능](images/back-systemback-phone.png)</td>
+        <td style="vertical-align:top;">
         <ul>
 <li>항상 제공됩니다.</li>
 <li>장치 아래쪽에 있는 소프트웨어 단추 또는 하드웨어 버튼입니다.</li>
@@ -40,41 +43,31 @@ ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
 </td>
      </tr>
      <tr>
-        <td>태블릿</td>
-        <td>![태블릿의 시스템 뒤로 기능(태블릿 모드)](images/back-systemback-tablet.png)</td>
-        <td>
+        <td style="vertical-align:top;">태블릿</td>
+        <td style="vertical-align:top;">![태블릿의 시스템 뒤로 기능(태블릿 모드)](images/back-systemback-tablet.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>태블릿 모드에서 항상 제공됩니다.
-
-    Not available in Desktop mode. Title bar back button can be enabled, instead. See [PC, Laptop, Tablet](#PC).
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
-<li> 디바이스 아래쪽의 탐색 모음에 있는 소프트웨어 단추입니다.</li>
+<li>태블릿 모드에서 항상 제공됩니다. 데스크톱 모드에서 사용할 수 없습니다. 대신 제목 표시줄의 뒤로 단추를 사용하도록 설정할 수 있습니다. 자세한 내용은 [PC, 노트북, 태블릿](#PC)을 참조하세요.
+사용자는 **설정 &gt; 시스템 &gt; 태블릿 모드**로 이동하여 **장치를 태블릿으로 사용할 때 Windows 터치 조작 향상시키기**를 설정하여 태블릿 모드와 데스크톱 모드 간에 전환하여 실행할 수 있습니다.</li>
+<li> 장치 아래쪽의 탐색 모음에 있는 소프트웨어 단추입니다.</li>
 <li>앱 내 및 앱 간의 전역 뒤로 탐색 기능입니다.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>PC, 노트북, 태블릿</td>
-        <td>![PC 또는 노트북의 시스템 뒤로 기능](images/back-systemback-pc.png)</td>
-        <td>
+        <td style="vertical-align:top;">PC, 노트북, 태블릿</td>
+        <td style="vertical-align:top;">![PC 또는 노트북의 시스템 뒤로 기능](images/back-systemback-pc.png)</td>
+        <td style="vertical-align:top;">
 <ul>
-<li>데스크톱 모드에서는 옵션입니다.
-
-    Not available in Tablet mode. See [Tablet](#Tablet).
-
-    Disabled by default. Must opt in to enable it.
-
-    Users can switch between running in Tablet mode and Desktop mode by going to **Settings &gt; System &gt; Tablet mode** and setting **Make Windows more touch-friendly when using your device as a tablet**.</li>
-
+<li>데스크톱 모드에서는 옵션입니다. 태블릿 모드에서는 사용할 수 없습니다. 자세한 내용은 [태블릿](#Tablet)을 참조하세요. 기본적으로 사용하지 않도록 설정되어 있습니다. 사용하도록 설정하려면 옵트인(opt in)해야 합니다.
+사용자는 **설정 &gt; 시스템 &gt; 태블릿 모드**로 이동하여 **장치를 태블릿으로 사용할 때 Windows 터치 조작 향상시키기**를 설정하여 태블릿 모드와 데스크톱 모드 간에 전환하여 실행할 수 있습니다.</li>
 <li>앱의 제목 표시줄에 있는 소프트웨어 단추입니다.</li>
 <li>앱 내에서만 뒤로 탐색 기능을 제공합니다. 앱 간 탐색 기능을 지원하지 않습니다.</li></ul>        
         </td>
      </tr>
     <tr>
-        <td>Surface Hub</td>
-        <td>![Surface Hub의 시스템 뒤로 기능](images/nav/nav-back-surfacehub.png)</td>
-        <td>
+        <td style="vertical-align:top;">Surface Hub</td>
+        <td style="vertical-align:top;">![Surface Hub의 시스템 뒤로 기능](images/nav/nav-back-surfacehub.png)</td>
+        <td style="vertical-align:top;">
 <ul>
 <li>옵션.</li>
 <li>기본적으로 사용하지 않도록 설정되어 있습니다. 사용하도록 설정하려면 옵트인(opt in)해야 합니다.</li>
@@ -90,15 +83,15 @@ ms.openlocfilehash: f18fc0806313cc1656860b0fd8b5ae692fa3d4c6
 
 <table>
 <tr><td colspan="3">입력 장치</td></tr>
-<tr><td>Keyboard</td><td>![Keyboard](images/keyboard-wireframe.png)</td><td>Windows 키 + 백스페이스</td></tr>
-<tr><td>Cortana</td><td>![음성](images/speech-wireframe.png)</td><td>"안녕 코타나, 뒤로 이동"이라고 말하기</td></tr>
+<tr><td style="vertical-align:top;">Keyboard</td><td style="vertical-align:top;">![Keyboard](images/keyboard-wireframe.png)</td><td style="vertical-align:top;">Windows 키 + 백스페이스</td></tr>
+<tr><td style="vertical-align:top;">Cortana</td><td style="vertical-align:top;">![음성](images/speech-wireframe.png)</td><td style="vertical-align:top;">"안녕 코타나, 뒤로 이동"이라고 말하기</td></tr>
 </table>
  
 
 앱이 휴대폰이나 태블릿 또는 시스템 뒤로 기능이 설정된 PC 또는 노트북에서 실행될 경우 시스템은 사용자가 뒤로 단추를 누를 때 앱에 알립니다. 사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
 
 
-## 시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
+## <a name="how-to-enable-system-back-navigation-support"></a>시스템 뒤로 탐색 지원을 사용하도록 설정하는 방법
 
 
 앱은 모든 하드웨어 및 소프트웨어 시스템 뒤로 단추에 대해 뒤로 탐색 기능을 사용하도록 설정해야 합니다. [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트에 대한 수신기를 등록하고 해당 처리기를 정의하여 이 작업을 수행합니다.
@@ -117,7 +110,7 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
         this, &amp;App::App_BackRequested);
 ```
 
-다음은 앱의 루트 프레임에서 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn996568)을 호출하는 해당 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn893596) 이벤트 처리기입니다.
+다음은 앱의 루트 프레임에서 [**GoBack**](https://msdn.microsoft.com/library/windows/apps/dn893596)을 호출하는 해당 [**BackRequested**](https://msdn.microsoft.com/library/windows/apps/dn996568) 이벤트 처리기입니다.
 
 이 처리기는 전역 뒤로 이벤트에서 호출됩니다. 앱 내 뒤로 스택이 비어 있으면 시스템이 앱 스택에서 이전 앱으로 이동하거나 시작 화면으로 이동할 수 있습니다. 데스크톱 모드에서는 앱 뒤로 스택이 없으며 사용자는 앱 내 뒤로 스택이 고갈된 경우에도 계속 앱에 있습니다.
 
@@ -158,16 +151,16 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 >}
 ```
 
-## 제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
+## <a name="how-to-enable-the-title-bar-back-button"></a>제목 표시줄 뒤로 단추를 사용하도록 설정하는 방법
 
 
-데스크톱 모드를 지원하고(일반적으로 PC 및 노트북이지만 일부 태블릿도 해당) 설정이 사용하도록 설정된(**설정 &gt; 시스템 &gt; 태블릿 모드**) 디바이스는 시스템 뒤로 단추가 포함된 전역 탐색 모음을 제공하지 않습니다.
+데스크톱 모드를 지원하고(일반적으로 PC 및 노트북이지만 일부 태블릿도 해당) 설정이 사용하도록 설정된(**설정 &gt; 시스템 &gt; 태블릿 모드**) 장치는 시스템 뒤로 단추가 포함된 전역 탐색 모음을 제공하지 않습니다.
 
 데스크톱 모드에서는 모든 앱이 제목 표시줄이 있는 창에서 실행됩니다. 이 제목 표시줄에 표시되는 앱에 대체 뒤로 단추를 제공할 수 있습니다.
 
-제목 표시줄 뒤로 단추는 데스크톱 모드의 디바이스에서 실행되는 앱에서만 사용할 수 있으며 앱 내 탐색 기록만 지원합니다. 즉, 앱 간 탐색 기록을 지원하지 않습니다.
+제목 표시줄 뒤로 단추는 데스크톱 모드의 장치에서 실행되는 앱에서만 사용할 수 있으며 앱 내 탐색 기록만 지원합니다. 즉, 앱 간 탐색 기록을 지원하지 않습니다.
 
-**중요** 기본적으로 제목 표시줄 뒤로 단추는 표시되지 않습니다. 옵트인(opt in)해야 합니다.
+**중요**  기본적으로 제목 표시줄의 뒤로 단추는 표시되지 않습니다. 옵트인(opt in)해야 합니다.
 
  
 
@@ -241,15 +234,11 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 >```
 
 
-### 사용자 지정 뒤로 탐색 동작 지침
+### <a name="guidelines-for-custom-back-navigation-behavior"></a>사용자 지정 뒤로 탐색 동작 지침
 
 고유한 뒤로 스택 탐색 기능을 제공하려는 경우 다른 앱과 일관된 환경을 구현해야 합니다. 탐색 작업에 대해 다음과 같은 패턴을 따르는 것이 좋습니다.
 
 <table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">탐색 작업</th>
@@ -258,38 +247,38 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><strong>페이지 간, 다른 피어 그룹</strong></p></td>
-<td align="left"><strong>예</strong>
+<td style="vertical-align:top;"><strong>페이지 간, 다른 피어 그룹</strong></td>
+<td style="vertical-align:top;"><strong>예</strong>
 <p>이 그림에서 사용자는 피어 그룹을 교차해서 앱의 수준 1에서 수준 2로 이동하므로 탐색이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>다음 그림에서 사용자는 동일한 수준의 두 피어 그룹 간을 이동하고 피어 그룹을 교차하므로 탐색이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong></p>
+<td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하지 않고 동일한 피어 그룹의 페이지 간</strong>
 <p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지로 직접 이동할 수 있도록 하는 항상 존재하는 탐색 요소(예: 탭/피벗 또는 도킹된 탐색 창)가 없습니다.</p></td>
-<td align="left"><strong>예</strong>
+<td style="vertical-align:top;"><strong>예</strong>
 <p>다음 그림에서 사용자는 동일한 피어 그룹의 두 페이지 간을 이동합니다. 페이지에서 탭 또는 도킹된 탐색 창이 사용되지 않으므로 해당 탐색 내용이 탐색 기록에 추가됩니다.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong></p>
+<td style="vertical-align:top;"><strong>화면의 탐색 요소를 사용하여 페이지 간, 동일한 피어 그룹</strong>
 <p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지 모두 동일한 탐색 요소에 표시됩니다. 예를 들어 두 페이지 모두 동일한 탭/피벗 요소를 사용하거나 두 페이지 모두 도킹된 탐색 창에 표시됩니다.</p></td>
-<td align="left"><strong>아니요</strong>
+<td style="vertical-align:top;"><strong>아니요</strong>
 <p>사용자가 뒤로를 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>임시 UI 표시</strong>
+<td style="vertical-align:top;"><strong>임시 UI 표시</strong>
 <p>앱은 대화 상자, 시작 화면 또는 화상 키보드와 같은 팝업 또는 자식 창을 표시하거나 다중 선택 모드와 같은 특수 모드를 시작합니다.</p></td>
-<td align="left"><strong>아니요</strong>
+<td style="vertical-align:top;"><strong>아니요</strong>
 <p>사용자가 뒤로 단추를 누르면 임시 UI를 해제하고(화상 키보드 숨기기, 대화 상자 취소 등) 임시 UI를 생성한 페이지로 돌아갑니다.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>항목 열거</strong>
+<td style="vertical-align:top;"><strong>항목 열거</strong>
 <p>앱은 마스터/세부 정보 목록에서 선택한 항목에 대한 세부 정보와 같이 화면상의 항목에 대한 콘텐츠를 표시합니다.</p></td>
-<td align="left"><strong>아니요</strong>
+<td style="vertical-align:top;"><strong>아니요</strong>
 <p>항목을 열거하는 것은 피어 그룹 내를 탐색하는 것과 비슷합니다. 사용자가 뒤로를 누르면 항목이 열거된 현재 페이지의 이전 페이지로 이동됩니다.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
@@ -297,16 +286,16 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 </table>
 
 
-### 다시 시작
+### <a name="resuming"></a>다시 시작
 
 사용자가 다른 앱으로 전환했다가 해당 앱으로 돌아올 경우 탐색 기록의 마지막 페이지로 돌아오는 것이 좋습니다.
 
 
-## 샘플 다운로드
+## <a name="get-the-samples"></a>샘플 다운로드
 *   [뒤로 단추 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackButton)<br/>
     뒤로 단추 이벤트에 대한 이벤트 처리기를 설정하고 앱이 창 형식의 데스크톱 모드일 때 사용할 제목 표시줄 뒤로 단추를 설정하는 방법을 보여 줍니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 * [탐색 기본 사항](navigation-basics.md)
 
  
@@ -317,6 +306,6 @@ Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

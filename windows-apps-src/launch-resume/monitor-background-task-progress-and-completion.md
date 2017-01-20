@@ -4,15 +4,15 @@ title: "백그라운드 작업 진행 및 완료 모니터링"
 description: "앱에서 백그라운드 작업이 보고하는 진행 및 완료를 인식하는 방법을 알아봅니다."
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: c12c3184cf6f4dce3d3ee2a4cf49843c8b9828d3
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: c7b6062a624b194b2806788c5f498d87aaa209a2
 
 ---
 
-# 백그라운드 작업 진행 및 완료 모니터링
+# <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -25,9 +25,9 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 
  앱 코드에 의해 백그라운드 작업 진행 및 완료를 모니터링할 수 있습니다. 이렇게 하려면 시스템에 등록된 백그라운드 작업의 이벤트에 앱을 가입합니다.
 
--   이 항목에서는 백그라운드 작업을 등록하는 앱이 있다고 가정합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+-   이 항목에서는 백그라운드 작업을 등록하는 앱이 있다고 가정합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-## 완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
+## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
 
 1.  완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 및 [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) 개체에서 사용되는 특정 공간을 따라야 합니다.
 
@@ -65,7 +65,7 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
     >     };
     > ```
 
-## 백그라운드 작업 진행률을 처리하는 이벤트 처리기 함수를 만듭니다.
+## <a name="create-an-event-handler-function-to-handle-background-task-progress"></a>백그라운드 작업 진행률을 처리하는 이벤트 처리기 함수를 만듭니다.
 
 1.  완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) 및 [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782) 개체에서 사용되는 특정 공간을 따라야 합니다.
 
@@ -109,7 +109,7 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
     >     };
     > ```
 
-## 새 백그라운드 작업 및 기존 백그라운드 작업과 함께 이벤트 처리기 함수를 등록합니다.
+## <a name="register-the-event-handler-functions-with-new-and-existing-background-tasks"></a>새 백그라운드 작업 및 기존 백그라운드 작업과 함께 이벤트 처리기 함수를 등록합니다.
 
 
 1.  앱에서는 백그라운드 작업을 처음으로 등록할 때 앱이 포그라운드에서 활성화된 상태에서 작업이 실행될 경우 작업에 대한 진행 및 완료 업데이트를 수신하도록 등록해야 합니다.
@@ -195,10 +195,10 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
     >     }
     > ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
@@ -213,6 +213,6 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

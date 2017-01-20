@@ -6,11 +6,11 @@ ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: d1f1b0575f9f1a968d21629a73df6146db156cf5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 28528b77fdd2e01a9e2feaa33a3a38f2f9b86661
 
 ---
-# 사용자 지정 전송 컨트롤 만들기
+# <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -18,24 +18,22 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 
 시작하기 전에 MediaPlayerElement 및 MediaTransportControls 클래스에 익숙해야 합니다. 자세한 내용은 MediaPlayerElement 컨트롤 가이드를 참조하세요.
 
-> **팁**  이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)을 기반으로 합니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
+> [!TIP]
+> 이 항목의 예제는 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)에 기반을 두고 있습니다. 샘플을 다운로드하여 전체 코드를 보고 실행할 수 있습니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx"><strong>MediaPlayerElement</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx"><strong>MediaPlayerElement.AreTransportControlsEnabled</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn278677"><strong>MediaTransportControls</strong></a></li>
+<li>[**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)</li>
+<li>[**MediaPlayerElement.AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aretransportcontrolsenabled.aspx) </li>
+<li>[**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)</li>
 </ul>
-
-</div>
 </div>
 
+> [!NOTE]
+> **MediaPlayerElement**는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
 
-
-> **참고**  **MediaPlayerElement**는 Windows 10 버전 1607 이상에서만 사용할 수 있습니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)를 대신 사용해야 합니다. 이 페이지의 모든 예제는 **MediaElement**에서도 작동합니다.
-
-## 템플릿을 사용자 지정해야 하는 경우
+## <a name="when-should-you-customize-the-template"></a>템플릿을 사용자 지정해야 하는 경우
 
 **MediaPlayerElement**는 수정하지 않고도 대부분의 비디오 및 오디오 재생 앱에서 우수하게 작동하도록 설계된 기본 제공 전송 컨트롤이 있습니다. 이 컨트롤은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스에서 제공하며 미디어 재생, 중지, 탐색 단추를 비롯하여, 볼륨 조정, 전체 화면으로 전환, 두 번째 디바이스로 캐스팅, 자막 사용, 오디오 트랙 전환 및 재생 속도 조정을 처리하는 단추를 포함합니다. MediaTransportControls에는 각 단추의 표시 여부와 사용 설정 여부를 제어할 수 있는 속성이 있습니다. 또한 [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.iscompact.aspx) 속성을 설정하여 컨트롤을 한 행에 표시할지 아니면 두 행에 표시할지 여부를 지정할 수 있습니다.
 
@@ -43,33 +41,36 @@ MediaPlayerElement에는 UWP(유니버설 Windows 플랫폼) 앱에서 오디오
 - 아이콘, 슬라이더 동작 및 색을 변경합니다.
 - 자주 사용하지 않는 명령 단추를 오버플로 메뉴로 이동합니다.
 - 컨트롤 크기를 조정할 때 명령이 드롭아웃되는 순서를 변경합니다.
-- 기본 설정에 없는 명령 단추를 제공합니다.
+- 기본 집합에 없는 명령 단추를 제공합니다.
 
->**참고**  화면에 표시된 단추는 화면에 충분한 공간이 없는 경우 미리 정의된 순서로 기본 제공 전송 컨트롤에서 삭제됩니다. 이 순서를 변경하거나 오버플로 메뉴에 맞지 않은 명령을 배치하려면 컨트롤을 사용자 지정해야 합니다.
+> [!NOTE]
+> 화면에 표시된 단추는 화면에 충분한 공간이 없는 경우 미리 정의된 순서로 기본 제공 전송 컨트롤에서 삭제됩니다. 이 순서를 변경하거나 오버플로 메뉴에 맞지 않은 명령을 배치하려면 컨트롤을 사용자 지정해야 합니다.
 
 기본 서식 파일을 수정하여 컨트롤의 모양을 사용자 지정할 수 있습니다. 컨트롤의 동작을 수정하거나 새 명령을 추가하려면 MediaTransportControls에서 파생된 사용자 지정 컨트롤을 만들면 됩니다.
 
->**팁**  사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
+> [!TIP]
+> 사용자 지정 가능한 컨트롤 템플릿은 XAML 플랫폼의 강력한 기능이지만 이 기능의 사용에 따른 결과를 고려해야 합니다. 템플릿을 사용자 지정하면 앱의 정적 부분이 되므로 Microsoft에서 배포하는 템플릿의 플랫폼 업데이트를 받지 못합니다. Microsoft에서 템플릿을 업데이트한 경우 새 템플릿을 받아 다시 수정해야 업데이트된 템플릿의 이점을 얻을 수 있습니다.
 
-## 템플릿 구조
+## <a name="template-structure"></a>템플릿 구조
 
 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.controltemplate.aspx)은 기본 스타일의 일부입니다. 전송 컨트롤의 기본 스타일은 [**MediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediatransportcontrols.aspx) 클래스 참조 페이지에 나와 있습니다. 이 기본 스타일을 프로젝트에 복사하여 수정할 수 있습니다. ControlTemplate은 다른 XAML 컨트롤 템플릿과 비슷하게 여러 섹션으로 구분됩니다.
 - 템플릿의 첫 번째 섹션에는 [**Style**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.style.aspx)의 여러 구성 요소에 대한 MediaTransportControls 정의가 포함되어 있습니다.
 - 두 번째 섹션에서는 MediaTransportControls에서 사용하는 다양한 시각적 상태를 정의합니다.
 - 세 번째 섹션에는 다양한 MediaTransportControls 요소를 포함하고 구성 요소가 배치되는 방식을 정의하는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)가 있습니다.
 
-> **참고**  템플릿을 수정하는 방법은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
+> [!NOTE]
+> 템플릿을 수정하는 방법은 [컨트롤 템플릿]()을 참조하세요. 텍스트 편집기 또는 IDE의 유사한 편집기를 사용하여 \(*Program Files*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK version*)\Generic에 있는 XAML 파일을 열 수 있습니다. 각 컨트롤의 기본 스타일과 템플릿은 **generic.xaml** 파일에 정의되어 있습니다. "MediaTransportControls"를 검색하여 generic.xaml에서 MediaTransportControls 템플릿을 찾을 수 있습니다.
 
 다음 섹션에서는 전송 컨트롤의 기본 요소 중 몇 가지를 사용자 지정하는 방법에 대해 알아봅니다.
 - [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): 사용자는 이 요소를 통해 미디어를 삭제할 수 있으며, 이 요소는 진행률도 표시합니다.
 - [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): 모든 단추를 포함합니다.
 자세한 내용은 MediaTransportControls 참조 항목의 구조 섹션을 참조하세요.
 
-## 전송 컨트롤 사용자 지정
+## <a name="customize-the-transport-controls"></a>전송 컨트롤 사용자 지정
 
 MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스타일과 템플릿의 복사본을 작성하여 수정하면 됩니다. 그러나 컨트롤 기능에 추가하거나 해당 기능을 수정하려는 경우 MediaTransportControls에서 파생되는 새 클래스를 만들어야 합니다.
 
-### 컨트롤 다시 템플릿
+### <a name="re-template-the-control"></a>컨트롤 다시 템플릿
 
 **MediaTransportControls 기본 스타일 및 템플릿을 사용자 지정하려면**
 1. MediaTransportControls 스타일 및 템플릿의 기본 스타일을 프로젝트의 ResourceDictionary로 복사합니다.
@@ -91,7 +92,7 @@ MediaTransportControls의 모양만 수정하려는 경우 기본 컨트롤 스�
 
 스타일 및 템플릿 수정에 대한 자세한 내용은 [스타일링 컨트롤]() 및 [컨트롤 템플릿]()을 참조하세요.
 
-### 파생된 컨트롤 만들기
+### <a name="create-a-derived-control"></a>파생된 컨트롤 만들기
 
 전송 컨트롤의 기능을 추가하거나 수정하려면 MediaTransportControls에서 파생된 새 클래스를 만들어야 합니다. `CustomMediaTransportControls`라는 파생 클래스가 [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023) 및 이 페이지의 나머지 예제에 나와 있습니다.
 
@@ -141,7 +142,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 ```
 이제 컨트롤 스타일 및 템플릿을 수정하여 사용자 지정 컨트롤의 모양을 업데이트하고 제어 코드를 수정하여 해당 동작을 업데이트할 수 있습니다.
 
-### 오버플로 메뉴에 대한 작업
+### <a name="working-with-the-overflow-menu"></a>오버플로 메뉴에 대한 작업
 
 MediaTransportControls 명령 단추를 오버플로 메뉴로 이동하면 사용자가 필요로 할 때까지 자주 사용하지 않는 명령이 숨겨집니다.
 
@@ -175,7 +176,7 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 3. 명령으로 이 메뉴를 채우려면 원하는 [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx) 개체에 대한 XAML을 PrimaryCommands에서 잘라내어 SecondaryCommands에 붙여넣습니다. 이 예제에서 `PlaybackRateButton`를 오버플로 메뉴로 이동합니다.
 
 4. 다음과 같이 단추에 레이블을 추가하고 스타일 지정 정보를 제거합니다.
-오버플로 메뉴는 텍스트 단추로 구성되어 있기 때문에 단추에 텍스트 레이블을 추가하고 단추의 너비와 높이를 설정하는 스타일도 제거해야 합니다. 그렇지 않으면 단추가 오버플로 메뉴에 제대로 나타나지 않습니다.
+오버플로 메뉴는 텍스트 단추로 구성되어 있기 때문에 단추에 텍스트 레이블을 추가하고 단추의 너비와 높이를 설정하는 스타일도 제거해야 합니다. 그러지 않으면 단추가 오버플로 메뉴에 제대로 나타나지 않습니다.
 ```xaml
 <CommandBar.SecondaryCommands>
     <AppBarButton x:Name='PlaybackRateButton'
@@ -184,9 +185,10 @@ MediaTransportControls 템플릿에서 명령 단추는 [**CommandBar**](https:/
 </CommandBar.SecondaryCommands>
 ```
 
-> **중요**  여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
+> [!IMPORTANT]
+> 여전히 단추를 보이게 하고 오버플로 메뉴에서 사용할 수 있도록 설정해야 합니다. 이 예제에서 IsPlaybackRateButtonVisible 속성이 true가 아니면 PlaybackRateButton 요소가 오버플로 메뉴에서 보이지 않습니다. IsPlaybackRateEnabled 속성이 true가 아니면 사용되지 않습니다. 이러한 속성 설정은 이전 섹션에 나와 있습니다.
 
-### 사용자 지정 단추 추가
+### <a name="adding-a-custom-button"></a>사용자 지정 단추 추가
 
 MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 이유는 사용자 지정 명령을 컨트롤에 추가할 수 있기 때문입니다. 기본 명령으로 추가하든 아니면 보조 명령으로 추가하든 명령 단추를 만들고 해당 동작을 수정하기 위한 절차는 동일합니다. [미디어 전송 컨트롤 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620023)에서 "등급" 단추가 기본 명령에 추가됩니다.
 
@@ -256,11 +258,11 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 **"좋아요" 단추가 추가된 사용자 지정 미디어 전송 컨트롤**
 ![추가 좋아요 단추가 있는 사용자 지정 미디어 전송 컨트롤](images/controls/mtc_double_custom_inprod.png)
 
-### 슬라이더 수정
+### <a name="modifying-the-slider"></a>슬라이더 수정
 
 MediaTransportControls의 "검색" 컨트롤은 [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) 요소에서 제공됩니다. 이 컨트롤을 사용자 지정할 수 있는 한 가지 방법은 검색 동작의 세분성을 변경하는 것입니다.
 
-기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)의 [**MediaOpened**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx) 이벤트 처리기에 있는 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaPlayerElement는 `MediaPlayerElement1`라고 합니다.
+기본 검색 슬라이더는 100개의 부분으로 나뉘어져 있으므로 검색 동작은 이 수만큼의 섹션으로 제한됩니다. [**MediaPlayerElement.MediaPlayer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.playback.mediaplayer.mediaopened.aspx)의 [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) 이벤트 처리기에 있는 XAML 시각적 트리에서 Slider를 가져와서 검색 슬라이더의 세분성을 변경할 수 있습니다. 이 예제는 [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx)를 사용하여 Slider에 대한 참조를 가져온 다음 미디어가 120분보다 긴 경우 1%에서 0.1%까지(1000단계) 슬라이더의 기본 단계 빈도를 변경하는 방법을 보여 줍니다. MediaPlayerElement는 `MediaPlayerElement1`라고 합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -280,15 +282,12 @@ private void MediaPlayerElement_MediaPlayer_MediaOpened(object sender, RoutedEve
   }
 }
 ```
-
-
-
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [미디어 재생](media-playback.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,25 +4,25 @@ title: "백그라운드 작업 지침"
 description: "앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다."
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 translationtype: Human Translation
-ms.sourcegitcommit: 04cb13ce355b3983a55b7f7f253e6b22a7cebece
-ms.openlocfilehash: 04e8776852a68d2e15c0a08732da48756f403d15
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
 
 ---
 
-# 백그라운드 작업 지침
+# <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.
 
-## 백그라운드 작업 지침
+## <a name="background-task-guidance"></a>백그라운드 작업 지침
 
 백그라운드 작업을 개발할 때와 앱을 게시하기 전에 다음 지침을 고려하세요.
 
-백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 
-  **In-process 및 Out-of-process 백그라운드 작업:** Windows10 버전 1607에서는 포그라운드 앱과 동일한 프로세스에서 백그라운드 코드를 실행할 수 있는 [In-process 프로세스 백그라운드 작업](create-and-register-an-inproc-background-task.md)이 도입되었습니다. 백그라운드 작업에 대해 In-process를 사용할지 또는 Out-of-process 프로세스를 사용할지를 결정할 때 고려할 요소는 다음과 같습니다.
+  **In-process 및 Out-of-process 백그라운드 작업:** Windows 10 버전 1607에서는 포그라운드 앱과 동일한 프로세스에서 백그라운드 코드를 실행할 수 있는 [In-process 프로세스 백그라운드 작업](create-and-register-an-inproc-background-task.md)이 도입되었습니다. 백그라운드 작업에 대해 In-process를 사용할지 또는 Out-of-process를 사용할지를 결정할 때 고려할 요소는 다음과 같습니다.
 
 |고려 사항 | 영향 |
 |--------------|--------|
@@ -35,11 +35,11 @@ ms.openlocfilehash: 04e8776852a68d2e15c0a08732da48756f403d15
 
 **백그라운드 작업 관리:** 앱에서는 등록된 백그라운드 작업 목록을 가져오고, 진행률 및 완료 처리기를 등록하고, 해당 이벤트를 적절하게 처리해야 합니다. 백그라운드 작업 클래스는 진행률, 취소 및 완료를 보고해야 합니다. 자세한 내용은 [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md) 및 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)을 참조하세요.
 
-**[BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:** 백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 사용하지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드(또는 In-process 프로세스 백그라운드 작업의 경우 [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 메서드)가 완료될 때 백그라운드 작업이 중간에 종료될 수 있습니다. 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)을 참조하세요.
+**[BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:** 백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 사용하지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드(또는 In-process 프로세스 백그라운드 작업의 경우 [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 메서드)가 완료될 때 백그라운드 작업이 중간에 종료될 수 있습니다. 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 또는 지연을 요청하고 **async/await**를 사용하여 비동기 메서드 호출을 완료합니다. **await** 메서드가 호출된 후 지연을 닫습니다.
 
-**앱 매니페스트 업데이트:** Out-of-process 프로세스를 실행하는 백그라운드 작업의 경우 응용 프로그램 매니페스트에서 각 백그라운드 작업을 사용되는 트리거 유형과 함께 선언합니다. 그렇지 않으면 앱에서 런타임에 백그라운드 작업을 등록할 수 없습니다.
+**앱 매니페스트 업데이트:**  Out-of-process로 실행되는 백그라운드 작업의 경우 응용 프로그램 매니페스트에서 각 백그라운드 작업을 사용되는 트리거 유형과 함께 선언합니다. 그러지 않으면 앱에서 런타임에 백그라운드 작업을 등록할 수 없습니다.
 
 포그라운드 앱과 동일한 프로세스에서 실행되는 백그라운드 작업은 응용 프로그램 매니페스트에서 선언할 필요가 없습니다. Out-of-process를 실행하는 백그라운드 작업을 매니페스트에서 선언하는 방법에 대한 자세한 내용은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
 
@@ -47,10 +47,10 @@ ms.openlocfilehash: 04e8776852a68d2e15c0a08732da48756f403d15
 
 **백그라운드 작업 실행 요청:**
 
-> **중요** Windows 10부터 백그라운드 작업을 실행하기 위한 필수 조건으로 앱을 잠금 화면에 배치하지 않아도 됩니다.
+> **중요**  Windows 10부터 백그라운드 작업을 실행하기 위한 필수 조건으로 앱을 잠금 화면에 배치하지 않아도 됩니다.
 
 UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아도 지원되는 모든 작업 형식을 실행할 수 있습니다. 그러나 모든 형식의 백그라운드 작업을 등록하기 전에 앱이 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다. 사용자가 장치 설정에서 해당 앱에 대해 명시적으로 백그라운드 작업 권한을 거부한 경우에는 이 메서드가 [**BackgroundAccessStatus.Denied**](https://msdn.microsoft.com/library/windows/apps/hh700439)를 반환합니다.
-## 백그라운드 작업 검사 목록
+## <a name="background-task-checklist"></a>백그라운드 작업 검사 목록
 
 *In-process 및 out of process 백그라운드 작업 모두에 적용*
 
@@ -76,7 +76,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 -   지속 시간이 짧은 백그라운드 작업을 씁니다. 백그라운드 작업은 벽시계로 측정하는 30초로 제한됩니다.
 -   백그라운드 작업에서 사용자 조작을 요구하지 않습니다.
 
-## Windows: 잠금 화면 지원 앱에 대한 백그라운드 작업 검사 목록
+## <a name="windows-background-task-checklist-for-lock-screen-capable-apps"></a>Windows: 잠금 화면 지원 앱에 대한 백그라운드 작업 검사 목록
 
 잠금 화면에 배치할 수 있는 앱에 대한 백그라운드 작업을 개발하는 경우 다음 지침을 따릅니다. [잠금 화면 타일에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465403)의 지침을 따르세요.
 
@@ -87,12 +87,12 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 -   [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) 또는 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)를 사용하여 등록된 백그라운드 작업을 포함하며 앱 매니페스트에서 백그라운드 작업을 선언합니다. 진입점과 트리거 형식이 올바른지 확인합니다. 이는 인증하는 데 필요하며 사용자가 앱을 잠금 화면에 배치할 수 있도록 해줍니다.
 
 **참고**  
-이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
@@ -112,6 +112,6 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

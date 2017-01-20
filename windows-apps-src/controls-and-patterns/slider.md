@@ -6,11 +6,11 @@ ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8be3dfed1e6fda1777905a73db4b0eae1e3368dd
 
 ---
-# 슬라이더
+# <a name="sliders"></a>슬라이더
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,20 +21,14 @@ ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx"><strong>Slider 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx"><strong>Value 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx"><strong>ValueChanged 이벤트</strong></a></li>
+<li>[**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)</li>
+<li>[**Value 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)</li>
+<li>[**ValueChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 정의된 연속 값(예, 볼륨 또는 밝기) 또는 불연속 값 범위(예, 화면 해상도 설정)를 사용자가 설정할 수 있도록 하려면 슬라이더를 사용합니다.
 
@@ -59,7 +53,7 @@ ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
 
 -   즉각적인 피드백이 사용자에게 도움이 되는 경우
 
-## 예제
+## <a name="examples"></a>예제
 
 Windows Phone에서 볼륨을 제어하는 슬라이더입니다.
 
@@ -69,7 +63,7 @@ Windows 표시 설정에서 텍스트 크기를 변경하는 슬라이더입니�
 
 ![Windows 표시 설정에서 텍스트 크기를 변경하는 슬라이더](images/control-examples/slider-display-settings.png)
 
-## 슬라이더 만들기
+## <a name="create-a-slider"></a>슬라이더 만들기
 
 XAML에서 슬라이더를 만드는 방법은 다음과 같습니다.
 
@@ -103,7 +97,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 }
 ```
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   컨트롤은 사용자가 원하는 값을 쉽게 설정할 수 있는 크기로 만듭니다. 불연속 값이 포함된 설정의 경우 마우스를 사용하여 어떤 값이든 쉽게 선택할 수 있도록 만듭니다. 슬라이더의 끝점이 항상 뷰의 범위 내에 있는지 확인합니다.
 -   사용자가 실제로 선택을 하는 동안이나 후에 즉각적인 피드백을 제공합니다. 예를 들어 Windows 볼륨 컨트롤은 사용자가 선택한 오디오 볼륨을 들려줍니다.
@@ -114,9 +108,9 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   슬라이더 위치 조정 컨트롤의 크기는 기본 크기에서 변경하지 마세요.
 -   값 범위가 큰 경우에는 연속 슬라이더를 만들지 마세요. 사용자가 범위 내에서 여러 대표 값 중 하나를 선택하게 될 가능성이 큽니다. 이 경우에는 단계로만 선택이 가능한 값을 사용합니다. 예를 들어 시간 값이 최대 1개월까지 가능하나 사용자는 1분, 1시간, 1일 또는 1개월 중에서만 선택해야 하는 경우 이 4단계만 있는 슬라이더를 만듭니다.
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-### 올바른 레이아웃 선택: 수평 또는 수직
+### <a name="choosing-the-right-layout-horizontal-or-vertical"></a>올바른 레이아웃 선택: 수평 또는 수직
 
 수평 또는 수직으로 슬라이더의 방향을 지정할 수 있습니다. 다음 지침을 사용하여 사용할 레이아웃을 결정합니다.
 
@@ -125,7 +119,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   한 방향(가로 또는 세로)으로 이동할 수 있는 페이지에 슬라이더를 사용할 때는 이동 방향과 다른 방향을 슬라이더에 사용합니다. 그렇지 않으면, 페이지를 이동하려 할 때 실수로 슬라이더를 밀어 값이 달라질 수도 있습니다.
 -   어떤 방향을 사용할지 잘 모르겠으면 페이지 레이아웃에 가장 잘 맞는 방향을 사용합니다.
 
-### 범위 방향
+### <a name="range-direction"></a>범위 방향
 
 범위 방향은 현재 값에서 최대값으로 슬라이더를 밀어 이동하는 방향입니다.
 
@@ -133,7 +127,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   가로 스타일에서는 왼쪽에서 오른쪽 방향 레이아웃의 경우 낮은 값을 슬라이더의 왼쪽, 오른쪽에서 왼쪽 방향 레이아웃의 경우 낮은 값을 오른쪽에 오도록 합니다.
 -   그러나 미디어 검색 막대의 경우 예외적으로 더 작은 값을 항상 슬라이더의 왼쪽에 배치합니다.
 
-### 단계 및 눈금
+### <a name="steps-and-tick-marks"></a>단계 및 눈금
 
 -   슬라이더로 최소값과 최대값 사이의 중간 값도 선택할 수 있도록 하려면 단계 포인트를 사용합니다. 예를 들어 슬라이더를 사용하여 예매할 영화 티켓 수를 지정하는 경우에는 부동 소수점 값을 사용하지 마세요. 단계 값으로 1을 지정하세요.
 -   단계(끌기 지점이라고도 함)를 지정하는 경우 마지막 단계가 슬라이더의 최대값에 정렬되어 있는지 확인합니다.
@@ -142,7 +136,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   사용자가 컨트롤과 상호 작용하지 않고도 선택한 설정 값을 정확히 알아야 하는 경우에는 눈금과 값 레이블을 표시합니다. 그렇지 않은 경우에는 값 도구 설명을 사용하여 정확한 값을 알 수 있습니다.
 -   단계 지점이 분명하지 않은 경우 항상 눈금 표시를 표시합니다. 예를 들어 슬라이더의 너비가 200픽셀이고 슬라이더에 200개의 끌기 지점이 있는 경우에는 사용자가 끌기 동작을 눈치채지 못하므로 눈금 표시를 숨길 수 있습니다. 그러나 끌기 지점이 10개만 있는 경우에는 눈금을 표시합니다.
 
-### 레이블
+### <a name="labels"></a>레이블
 
 -   **슬라이더 레이블**
 
@@ -168,7 +162,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
     -   텍스트는 컨트롤을 기준으로 중앙에 오도록 하고 픽셀 등의 단위를 포함시킵니다.
     -   슬라이더의 위치 조정 컨트롤이 삭제 중에 포함되므로 레이블 또는 다른 시각 효과를 사용하여 현재 값을 다른 방법으로 표시하는 것이 좋습니다. 텍스트 크기를 설정하는 슬라이더는 슬라이더 옆에 있는 올바른 크기의 샘플 텍스트를 렌더링할 수 있습니다.
 
-### 모양 및 조작
+### <a name="appearance-and-interaction"></a>모양 및 조작
 
 슬라이더는 트랙과 위치 조정 컨트롤로 구성됩니다. 트랙은 입력할 수 있는 값의 범위를 나타내는 막대(다양한 스타일의 눈금을 선택적으로 표시 가능)입니다. 위치 조정 컨트롤은 사용자가 트랙을 탭하거나 앞뒤로 문질러서 위치를 지정할 수 있는 선택기입니다.
 
@@ -176,15 +170,12 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 사용자 지정 슬라이더를 디자인할 경우 사용자에게 모든 필요한 정보를 최대한 복잡하지 않게 제공하는 것이 좋습니다. 사용자가 설정을 이해하기 위해 단위를 알아야 하는 경우 값 레이블을 사용하고, 해당 값을 그래픽으로 나타낼 수 있는 창의적인 방법을 찾습니다. 예를 들어 볼륨을 제어하는 슬라이더는 최소값 쪽에 음파가 없는 스피커 그래픽을 표시하고, 최대값 쪽에 음파가 있는 스피커 그래픽을 표시할 수 있습니다.
 
-## 관련 항목
-
-**디자이너용**
-- [토글 스위치에 대한 지침](toggles.md)
-**개발자용(XAML)**
+## <a name="related-topics"></a>관련 항목
+- [토글 스위치](toggles.md)
 - [**Slider 클래스**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

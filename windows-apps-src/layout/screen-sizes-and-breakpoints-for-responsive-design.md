@@ -5,17 +5,21 @@ description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 5977b6253e2ee10fa0153d79053f89b705c2e1a3
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7189987209e894d81b2574aff576c64fb5f7a97a
 
 ---
 
-#  반응형 디자인에 대한 화면 크기 및 중단점
+#  <a name="screen-sizes-and-break-points-for-responsive-design"></a>반응형 디자인에 대한 화면 크기 및 중단점
 
-Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366 epx 등의 몇 가지 주요 너비(중단점이라고도 함)에 대해 디자인하는 것이 좋습니다.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-**팁** 특정 중단점에 대해 디자인할 때 앱에서 사용할 수 있는 화면 공간(앱의 창) 크기를 고려해서 디자인합니다. 앱이 전체 화면에서 실행되는 경우에는 앱 창이 화면 크기와 같지만 다른 경우에는 더 작습니다.
+Windows 10 에코시스템에서는 장치 대상 및 화면 크기가 너무 다양해서 각각에 맞게 UI를 최적화하는 것에 대해 걱정할 수조차 없습니다. 대신 360, 640, 1024, 1366epx 등의 몇 가지 주요 너비("중단점"이라고도 함)에 대해 디자인하는 것이 좋습니다.
+
+> [!TIP]
+> 특정 중단점에 대해 디자인할 때 앱에서 사용할 수 있는 화면 공간(앱의 창) 크기를 고려해서 디자인합니다. 앱이 전체 화면에서 실행되는 경우에는 앱 창이 화면 크기와 같지만 다른 경우에는 더 작습니다.
  
 
 다음 표에는 다양한 크기 클래스가 설명되어 있으며 해당 크기 클래스에 맞추기 위한 일반 권장 사항이 나와 있습니다.
@@ -39,32 +43,32 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">일반적인 화면 크기(대각선)</td>
-<td align="left">4&quot;~6&quot;</td>
-<td align="left">7&quot;~12&quot; 또는 TV</td>
-<td align="left">13&quot; 이상</td>
+<td style="vertical-align:top;">일반적인 화면 크기(대각선)</td>
+<td style="vertical-align:top;">4&quot;~6&quot;</td>
+<td style="vertical-align:top;">7&quot;~12&quot; 또는 TV</td>
+<td style="vertical-align:top;">13&quot; 이상</td>
 </tr>
 <tr class="even">
-<td align="left">일반 디바이스</td>
-<td align="left">휴대폰</td>
-<td align="left">패블릿, 태블릿, TV</td>
-<td align="left">PC, 노트북, Surface Hub</td>
+<td style="vertical-align:top;">일반 장치</td>
+<td style="vertical-align:top;">휴대폰</td>
+<td style="vertical-align:top;">패블릿, 태블릿, TV</td>
+<td style="vertical-align:top;">PC, 노트북, Surface Hub</td>
 </tr>
 <tr class="odd">
-<td align="left">일반적인 창 크기(유효 픽셀)</td>
-<td align="left">320x569, 360x640, 480x854</td>
-<td align="left">960x540, 1024x640</td>
-<td align="left">1366x768, 1920x1080</td>
+<td style="vertical-align:top;">일반적인 창 크기(유효 픽셀)</td>
+<td style="vertical-align:top;">320x569, 360x640, 480x854</td>
+<td style="vertical-align:top;">960x540, 1024x640</td>
+<td style="vertical-align:top;">1366x768, 1920x1080</td>
 </tr>
 <tr class="even">
-<td align="left">창 너비 중단점(유효 픽셀)</td>
-<td align="left">640px 이하</td>
-<td align="left">641px - 1007px</td>
-<td align="left">1008px 이상</td>
+<td style="vertical-align:top;">창 너비 중단점(유효 픽셀)</td>
+<td style="vertical-align:top;">640px 이하</td>
+<td style="vertical-align:top;">641px - 1007px</td>
+<td style="vertical-align:top;">1008px 이상</td>
 </tr>
 <tr class="odd">
-<td align="left" valign="top">일반 권장 사항</td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;">일반 권장 사항</td>
+<td style="vertical-align:top;"><ul>
 <li>탭 요소를 가운데 정렬합니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 12픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
 <li>접근성 향상을 위해 창의 맨 아래에 [앱 바](../controls-and-patterns/app-bars.md)를 도킹합니다.</li>
@@ -73,7 +77,7 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 <li>[탐색 창](../controls-and-patterns/nav-pane.md)을 오버레이 모드로 전환하여 화면 공간 절약</li>
 <li>[마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.</li>
 </ul></td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;"><ul>
 <li>탭 요소를 왼쪽에 맞춥니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
 <li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
@@ -82,7 +86,7 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 <li>좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/nav-pane.md)을 작은 모드로 전환합니다.</li>
 <li>[TV 환경](http://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.</li>
 </ul></td>
-<td align="left" valign="top"><ul>
+<td style="vertical-align:top;"><ul>
 <li>탭 요소를 왼쪽에 맞춥니다.</li>
 <li>왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.</li>
 <li>[앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.</li>
@@ -94,11 +98,11 @@ Windows 10 에코시스템에서는 디바이스 대상 및 화면 크기가 너
 </tbody>
 </table>
 
-호환되는 Windows 10 Mobile 디바이스를 위한 새 환경인 [**휴대폰용 Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결하여 노트북처럼 사용할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 작은 크기 클래스로 유지되지는 않습니다.
+호환되는 Windows 10 Mobile 장치를 위한 새 환경인 [**휴대폰용 Continuum**](http://go.microsoft.com/fwlink/p/?LinkID=699431)을 사용하면 사용자가 휴대폰을 모니터, 마우스 및 키보드에 연결하여 노트북처럼 사용할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 작은 크기 클래스로 유지되지는 않습니다.
  
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

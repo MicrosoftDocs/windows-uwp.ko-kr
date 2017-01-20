@@ -6,22 +6,20 @@ ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
-ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8aa2c34969b87fbe440c578d93553dbdd6f3d8c4
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-# 원시 알림 개요
-
-
-
+# <a name="raw-notification-overview"></a>원시 알림 개요
 
 
 원시 알림은 짧고 일반적인 목적의 알림으로, 오로지 사용 안내만 하며 UI 구성 요소는 포함하지 않습니다. 다른 푸시 알림과 마찬가지로, WNS(Windows 푸시 알림 서비스) 기능은 클라우드 서비스에서 앱으로 원시 알림을 전달합니다.
 
-원시 알림은 사용자에게 적절한 앱 권한이 있는 경우 앱이 백그라운드 작업을 실행하도록 트리거하는 것을 비롯하여 다용도로 사용할 수 있습니다. WNS를 사용하여 앱과 통신하면 영구적 소켓 연결 만들기, HTTP GET 메시지 보내기 및 다른 서비스-앱 연결에 대한 오버헤드를 처리를 피할 수 있습니다.
+원시 알림은 사용자에게 적절한 앱 권한이 있는 경우 앱이 백그라운드 작업을 실행하도록 트리거하는 것을 비롯하여 다용도로 사용할 수 있습니다. WNS를 사용하여 앱과 통신하면 영구적 소켓 연결 만들기, HTTP GET 메시지 보내기 및 다른 서비스-앱 연결에 대한 처리 오버헤드를 피할 수 있습니다.
 
-**중요** 원시 알림을 이해하려면 [WNS(Windows 푸시 알림 서비스) 개요](tiles-and-notifications-windows-push-notification-services--wns--overview.md)에 설명되어 있는 개념에 익숙해야 합니다.
+> [!IMPORTANT]
+> 원시 알림을 이해하려면 [WNS(Windows 푸시 알림 서비스) 개요](tiles-and-notifications-windows-push-notification-services--wns--overview.md)에 설명된 개념을 익히는 것이 가장 좋습니다.
 
  
 
@@ -29,7 +27,7 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
 원시 알림을 사용하여 이점을 누릴 수 있는 앱의 실제 사례로, 이론상의 문서 공동 작업 앱을 살펴보겠습니다. 두 명의 사용자가 동시에 같은 문서를 편집 중이라고 가정해 보세요. 공유 문서를 호스트하는 클라우드 서비스는 원시 알림을 사용하여 한 사용자가 문서를 변경하면 이를 각 사용자에게 알릴 수 있습니다. 문서에 대한 변경 사항을 반드시 원시 알림에 포함할 필요는 없으며, 대신 중앙 위치에 연결하여 적용 가능한 변경 사항을 동기화하도록 각 사용자의 앱 사본을 알립니다. 원시 알림을 사용하여 앱과 앱의 클라우드 서비스는 문서가 열려 있는 전체 시간 동안 연결을 유지하는 데 따르는 오버헤드를 줄일 수 있습니다.
 
-## 원시 알림 작동 방법
+## <a name="how-raw-notifications-work"></a>원시 알림 작동 방법
 
 
 모든 원시 알림은 푸시 알림입니다. 따라서 원시 알림을 보내고 받는 데 필요한 설정은 원시 알림에도 적용됩니다.
@@ -43,7 +41,7 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
 클라이언트에서 원시 알림이 취할 수 있는 가능한 경로는 세 개뿐입니다. 이러한 경로는 알림 전달 이벤트를 통해 실행 중인 앱에 전달되고, 백그라운드 작업에 보내지거나, 삭제됩니다. 따라서 클라이언트가 오프라인인 상태에서 WNS가 원시 알림을 보내려고 시도하면 알림은 삭제됩니다.
 
-## 원시 알림 만들기
+## <a name="creating-a-raw-notification"></a>원시 알림 만들기
 
 
 원시 알림 보내기는 타일, 알림 메시지 또는 배지 푸시 알림을 보내는 것과 유사하지만 다음과 같은 차이점이 있습니다.
@@ -56,7 +54,7 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
 푸시 알림 보내기에 대한 자세한 내용은 [빠른 시작: 푸시 알림 보내기](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252)를 참조하세요.
 
-## 원시 알림 받기
+## <a name="receiving-a-raw-notification"></a>원시 알림 받기
 
 
 앱이 원시 알림을 받을 수 있는 경로는 두 가지입니다.
@@ -69,7 +67,7 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 -   앱이 실행 중일 때는 알림 전달 이벤트가 백그라운드 작업보다 우선하며 앱은 알림을 처리할 첫 번째 기회를 갖습니다.
 -   알림 전달 이벤트 처리기는 이벤트의 [**PushNotificationReceivedEventArgs.Cancel**](https://msdn.microsoft.com/library/windows/apps/br241297) 속성을 **true**로 설정하여 처리기가 있으면 원시 알림이 백그라운드 작업으로 전달되지 않도록 지정할 수 있습니다. **Cancel** 속성이 **false**로 설정되거나 또는 설정되지 않을 경우(기본값이 **false**) 알림 전달 이벤트 처리기가 작업을 완료한 후 원시 알림이 백그라운드 작업을 트리거합니다.
 
-### 알림 전달 이벤트
+### <a name="notification-delivery-events"></a>알림 전달 이벤트
 
 앱이 사용 중인 동안 앱에서는 알림 전달 이벤트([**PushNotificationReceived**](https://msdn.microsoft.com/library/windows/apps/br241292))를 사용하여 원시 알림을 받을 수 있습니다. 클라우드 서비스에서 원시 알림을 보내면 실행 중인 앱이 채널 URI에서 알림 전달 이벤트를 처리하여 원시 알림을 받을 수 있습니다.
 
@@ -87,9 +85,10 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
     자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](https://msdn.microsoft.com/library/windows/apps/hh465435)를 참조하세요.
 
-### 원시 알림에 의해 트리거된 백그라운드 작업
+### <a name="background-tasks-triggered-by-raw-notifications"></a>원시 알림에 의해 트리거된 백그라운드 작업
 
-**중요** 원시 알림 백그라운드 작업을 사용하기 전에 [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 통한 백그라운드 액세스가 앱에 허용되어야 합니다.
+> [!IMPORTANT]
+> 원시 알림 백그라운드 작업을 사용하기 전에 [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 통한 백그라운드 액세스가 앱에 허용되어야 합니다.
 
  
 
@@ -108,13 +107,12 @@ ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
 각 앱에 대해 한 번에 하나의 백그라운드 작업만 실행할 수 있습니다. 백그라운드 작업이 이미 실행 중인 앱에 대해 백그라운드 작업이 트리거되면 새 백그라운드 작업이 실행되기 전에 첫 번째 백그라운드 작업을 완료해야 합니다.
 
-## 기타 리소스
+## <a name="other-resources"></a>기타 리소스
 
 
 Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=241553) 및 Windows 8.1용 [푸시 알림 및 정기 알림 샘플](http://go.microsoft.com/fwlink/p/?LinkId=231476)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 다시 사용하여 자세히 알아볼 수 있습니다.
 
-## 관련 항목
-
+## <a name="related-topics"></a>관련 항목
 
 * [원시 알림에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh761463)
 * [빠른 시작: 원시 알림 백그라운드 작업 만들기 및 등록](https://msdn.microsoft.com/library/windows/apps/jj676800)
@@ -131,6 +129,6 @@ Windows 8.1용 [원시 알림 샘플](http://go.microsoft.com/fwlink/p/?linkid=2
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

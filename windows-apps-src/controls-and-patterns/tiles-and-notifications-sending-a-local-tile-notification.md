@@ -6,22 +6,19 @@ ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 8fc2fc007d14bd9c5d08ca4eb7e61a2dfdf04d3b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bbc09a6638fd7c0798e49600bd74388d5bb4629d
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
-
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Windows 10의 기본 앱 타일은 앱 매니페스트에서 정의되는 반면, 보조 타일은 프로그래밍 방식으로 앱 코드에서 생성 및 정의됩니다. 이 문서에서는 적응형 타일 템플릿을 사용하여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명합니다. 로컬 알림은 웹 서버에서 푸시되거나 끌어온 알림이 아니라 앱 코드에서 전송된 알림입니다.
 
 ![기본 타일 및 알림 타일](images/sending-local-tile-01.png)
 
-**참고** [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md) 및 [적응형 타일 템플릿 스키마](tiles-and-notifications-adaptive-tiles-schema.md)에 대해 자세히 알아봅니다.
+> [!NOTE] 
+>[적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md) 및 [적응형 타일 템플릿 스키마](tiles-and-notifications-adaptive-tiles-schema.md)에 대해 자세히 알아봅니다.
 
  
 
@@ -124,7 +121,7 @@ TileContent content = new TileContent()
 ## <a name="create-the-notification"></a>알림 만들기
 
 
-알림 콘텐츠가 있으면 새 [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)을 만들어야 합니다. **TileNotification** 생성자는 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 사용하는 경우 **TileContent.GetXml** 메서드에서 얻을 수 있는 Windows 런타임 [**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620) 개체를 사용합니다.
+알림 콘텐츠가 있으면 새 [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)을 만들어야 합니다. **TileNotification** 생성자는 [알림 라이브러리](https://msdn.microsoft.com/library/windows/apps/br208620)를 사용하는 경우 **TileContent.GetXml** 메서드에서 얻을 수 있는 Windows 런타임 [**XmlDocument**](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 개체를 사용합니다.
 
 이 코드 예제에서는 새 타일에 대한 알림을 만듭니다.
 
@@ -285,7 +282,6 @@ var notification = new TileNotification(doc);
 
 ## <a name="related-topics"></a>관련 항목
 
-
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
 * [적응형 타일 템플릿: 스키마 및 설명서](tiles-and-notifications-adaptive-tiles-schema.md)
 * [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
@@ -303,6 +299,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

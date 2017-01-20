@@ -2,14 +2,14 @@
 author: mcleanbyron
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 가져옵니다."
-title: "앱 획득 가져오기"
+title: "앱 사용 권한 가져오기"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: b82136348936d436a374cfef42d5e349ed0d0f36
+ms.sourcegitcommit: ce6535508136f8f7bfc8e0da599eea10a936908d
+ms.openlocfilehash: 2e35da3b3033ecbad8c48184d831ca9465142322
 
 ---
 
-# <a name="get-app-acquisitions"></a>앱 획득 가져오기
+# <a name="get-app-acquisitions"></a>앱 사용 권한 가져오기
 
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 집계 구입 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [구입 보고서](../publish/acquisitions-report.md)를 통해서도 사용할 수 있습니다.
@@ -163,6 +163,6 @@ Authorization: Bearer <your access token>
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

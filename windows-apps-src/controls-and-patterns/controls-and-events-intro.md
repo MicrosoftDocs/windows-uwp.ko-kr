@@ -6,11 +6,11 @@ ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and patterns
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8a9a9009574b46ff3ae5b05569fb871a49e2f1ea
 
 ---
-# 컨트롤 및 패턴 소개
+# <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -26,7 +26,7 @@ UWP 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가�
 - 컨트롤의 속성(예: 너비, 높이, 전경색 등)을 설정합니다. 
 - 컨트롤 이벤트 처리기에 특정 작업을 수행하는 코드를 추가합니다. 
 
-## 컨트롤 추가
+## <a name="add-a-control"></a>컨트롤 추가
 다음과 같은 여러 가지 방법으로 앱에 컨트롤을 추가할 수 있습니다.
  
 - Blend for Visual Studio 또는 Microsoft Visual Studio XAML(Extensible Application Markup Language) 디자이너와 같은 디자인 도구를 사용합니다. 
@@ -43,7 +43,7 @@ Visual Studio 도구 상자에는 앱에 사용할 수 있는 다양한 컨트�
 
 또한 도구 상자에서 XAML 디자이너로 컨트롤을 끌 수 있습니다.
 
-## 컨트롤 이름 설정 
+## <a name="set-the-name-of-a-control"></a>컨트롤 이름 설정 
 
 코드에서 컨트롤 작업을 하려면 해당 [x:Name](../xaml-platform/x-name-attribute.md) 특성을 설정하고 이름으로 컨트롤을 참조합니다. 컨트롤 이름은 Visual Studio 속성 창이나 XAML에서 설정할 수 있습니다. 속성 창의 맨 위에 있는 이름 입력란을 사용하여 현재 선택한 컨트롤의 이름을 설정하는 방법은 다음과 같습니다. 
 
@@ -60,7 +60,7 @@ XAML 편집기에서 x:Name 특성을 변경하여 컨트롤 이름을 설정하
 <Button x:Name="Button1" Content="Button"/>
 ```
 
-## 컨트롤 속성 설정 
+## <a name="set-the-control-properties"></a>컨트롤 속성 설정 
 
 속성을 사용하여 컨트롤의 모양, 콘텐츠 및 기타 특성을 지정합니다. 디자인 도구를 사용하여 컨트롤을 추가할 경우 크기, 위치 및 콘텐츠를 제어하는 일부 속성은 Visual Studio에서 사용자를 위해 설정할 수 있습니다. 디자인 보기에서 컨트롤을 선택하고 조작하여 Width, Height, Margin 등의 속성을 변경할 수 있습니다. 다음 그림에서는 디자인 보기에서 사용할 수 있는 몇 가지 크기 조정 도구를 보여 줍니다. 
 
@@ -98,7 +98,7 @@ Foreground 속성을 설정하면 XAML은 다음과 같이 됩니다.
 Button1.Foreground = new SolidColorBrush(Windows.UI.Colors.Beige);
 ```
 
-## 이벤트 처리기 만들기 
+## <a name="create-an-event-handler"></a>이벤트 처리기 만들기 
 
 각 컨트롤에는 사용자의 동작이나 기타 앱 변경 사항에 응답할 수 있는 이벤트가 포함되어 있습니다. 예를 들어 Button 컨트롤에는 사용자가 Button을 클릭하면 발생하는 Click 이벤트가 있습니다. 이벤트를 처리하려면 이벤트 처리기라고 하는 메서드를 만듭니다. XAML 또는 코드에서, 속성 창에서 컨트롤의 이벤트와 이벤트 처리기 메서드를 연결할 수 있습니다. 이벤트에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](../xaml-platform/events-and-routed-events-overview.md)를 참조하세요.
 
@@ -136,9 +136,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-
-
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 -   [기능별 컨트롤 인덱스](controls-by-function.md)
 -   [Windows.UI.Xaml.Controls 네임스페이스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
@@ -148,6 +146,6 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

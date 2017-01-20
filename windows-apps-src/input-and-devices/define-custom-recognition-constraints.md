@@ -5,27 +5,38 @@ title: "사용자 지정 인식 제약 조건 정의"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+keywords: "음성 명령, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: c75ee725ce4bc9fc33d9ea13e4ab92ed60bfb04d
 
 ---
 
-# 사용자 지정 인식 제약 조건 정의
+# <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
 
-**중요 API**
-
--   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)
--   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)</li>
+<li>[**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)</li>
+<li>[**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)</li>
+</ul>
+</div>
 
 
 인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 유니버설 Windows 앱의 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
 
 
-## 제약 조건 추가
+## <a name="add-constraints"></a>제약 조건 추가
 
 
 [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
@@ -41,9 +52,9 @@ ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
 -   단일 항목 제약 조건 또는 미리 정의된 문법(받아쓰기 또는 웹 검색). 기타 제약 조건은 허용되지 않습니다.
 -   목록 제약 조건 및/또는 문법 파일 제약 조건 조합
 
-**유의:** 인식 프로세스를 시작하기 전에 [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) 메서드를 호출하여 제약 조건을 컴파일합니다.
+**유의:  **인식 프로세스를 시작하기 전에 [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) 메서드를 호출하여 제약 조건을 컴파일합니다.
 
-## 웹 검색 문법(SpeechRecognitionTopicConstraint) 지정
+## <a name="specify-a-web-search-grammar-speechrecognitiontopicconstraint"></a>웹 검색 문법(SpeechRecognitionTopicConstraint) 지정
 
 
 음성 인식기의 제약 조건 컬렉션에 항목 제약 조건(받아쓰기 또는 웹 검색 문법)을 추가해야 합니다.
@@ -80,7 +91,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 프로그래밍 방식으로 목록 제약 조건(SpeechRecognitionListConstraint) 지정
+## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>프로그래밍 방식으로 목록 제약 조건(SpeechRecognitionListConstraint) 지정
 
 
 음성 인식기의 제약 조건 컬렉션에 목록 제약 조건을 추가해야 합니다.
@@ -120,7 +131,7 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## SRGS 문법 제약 조건(SpeechRecognitionGrammarFileConstraint) 지정
+## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>SRGS 문법 제약 조건(SpeechRecognitionGrammarFileConstraint) 지정
 
 
 음성 인식기의 제약 조건 컬렉션에 SRGS 문법 파일을 추가해야 합니다.
@@ -211,7 +222,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 </grammar>
 ```
 
-## 제약 조건 관리
+## <a name="manage-constraints"></a>제약 조건 관리
 
 
 인식에 대한 제약 조건 컬렉션이 로드된 후 앱은 제약 조건의 [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) 속성을 **true** 또는 **false**로 설정하여 인식 작업에 어떤 제약 조건을 사용할지 관리할 수 있습니다. 기본 설정은 **true**입니다.
@@ -222,9 +233,9 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 현재 인식 작업의 컨텍스트에서 앱에 필요할 수 있는 구에 따라 어떤 제약 조건을 사용할지 결정합니다. 예를 들어 현재 앱 컨텍스트가 색을 표시하는 것일 경우 동물 이름을 인식하는 제약 조건을 사용할 필요가 없습니다.
 
-말할 수 있는 내용을 사용자에게 메시지로 표시하려면 [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254) 속성을 통해 설정되는 [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653235) 및 [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653236) 속성을 사용합니다. 사용자가 인식 작업 중 말할 수 있는 내용을 알면 활성 제약 조건과 일치할 수 있는 구를 말할 가능성이 증가합니다.
+말할 수 있는 내용을 사용자에게 메시지로 표시하려면 [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653235) 속성을 통해 설정되는 [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653236) 및 [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653254) 속성을 사용합니다. 사용자가 인식 작업 중 말할 수 있는 내용을 알면 활성 제약 조건과 일치할 수 있는 구를 말할 가능성이 증가합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 * [음성 조작](speech-interactions.md)
@@ -241,6 +252,6 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

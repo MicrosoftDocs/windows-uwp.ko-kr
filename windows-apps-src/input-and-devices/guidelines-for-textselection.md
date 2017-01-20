@@ -5,26 +5,34 @@ title: "텍스트 및 이미지 선택"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+keywords: "키보드, 텍스트, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: bb3a231a842698c18fc496c87705d269dfbeaa58
 
 ---
 
-# 텍스트 및 이미지 선택
+# <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택하고 조작하는 방법을 설명하고 앱에서 이러한 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
+ 
 
 
-
-**중요 API**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   고유한 위치 조정 막대 UI를 구현하는 경우 글꼴 문자 모양을 사용합니다. 위치 조정 막대는 시스템 전체에서 사용할 수 있는 두 가지 Segoe UI 글꼴의 조합입니다. 글꼴 리소스를 사용하면 여러 dpi에서 렌더링 문제가 간소화되며 다양한 UI 크기 조정에서도 제대로 작동합니다. 고유한 위치 조정 막대를 구현하는 경우 다음 UI 특성을 공유해야 합니다.
@@ -40,7 +48,7 @@ ms.openlocfilehash: 45184c6ce84b9db215c576c5521e8ec1e834b162
 
 -   컨트롤, 레이블, 이미지, 소유 콘텐츠 등의 UI 요소를 선택할 수 없게 합니다. 일반적으로 Windows 응용 프로그램은 특정 컨트롤 내에서만 선택을 허용합니다. 단추, 레이블, 로고 등의 컨트롤은 선택할 수 없습니다. 앱에서 선택 작업이 중요한지 평가하고 중요한 경우 선택이 금지되어야 하는 UI 영역을 식별합니다. 
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 
 텍스트 선택 및 조작은 터치 조작으로 인해 발생하는 사용자 환경 문제에 특히 영향을 미칠 수 있습니다. 마우스, 펜/스타일러스 및 키보드 입력은 고도로 세분화되어 있습니다. 마우스 클릭이나 펜/스타일러스 접촉은 일반적으로 단일 픽셀에 매핑되고 키는 누른 상태 또는 누르지 않은 상태가 됩니다. 그렇지만 터치식 입력은 세분화되어 있지 않습니다. 한 손가락의 전체 표면을 화면의 특정 x-y 위치에 매핑시켜 텍스트 캐럿을 정확히 배치하는 것은 어려운 일입니다.
@@ -78,7 +86,7 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 ![선택 영역 내부 또는 위치 조정 막대를 탭하여(또는 길게 눌러) 상황에 맞는 메뉴를 호출합니다.](images/textselection-show-context.png)
 
-**참고** 철자가 틀린 단어의 경우에는 이러한 조작이 다소 다르게 진행됩니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
+**참고**  철자가 틀린 단어의 경우에는 이러한 조작이 다소 다르게 진행됩니다. 철자가 틀린 것으로 표시된 단어를 탭하면 전체 단어가 강조 표시되고 제안되는 맞춤법 상황에 맞는 메뉴가 호출됩니다.
 
  
 
@@ -104,7 +112,7 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 *자르기 위치 조정 막대가 있는 이미지 편집기입니다.*
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 
@@ -136,6 +144,6 @@ Windows에서는 선택 조작에 대해 가능한 두 가지 상태인 편집 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

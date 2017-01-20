@@ -6,11 +6,11 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ad5a8dfab77c78b1c53762f5de868819e0b37d6f
 
 ---
-# 허브 컨트롤/패턴
+# <a name="hub-controlpattern"></a>허브 컨트롤/패턴
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,21 +21,17 @@ ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 허브의 콘텐츠는 사용자가 새로운 기능, 사용 가능한 기능 및 관련된 기능을 한눈에 살펴볼 수 있는 파노라마 보기로 표시됩니다. 일반적으로 허브에는 페이지 머리글이 있고 각 콘텐츠 섹션에는 섹션 머리글이 있습니다.
 
+
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>허브 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>HubSection 클래스</strong></a></li>
+<li>[**허브 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251843)</li>
+<li>[**HubSection 클래스**](https://msdn.microsoft.com/library/windows/apps/dn251845)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 허브 컨트롤은 계층에 정렬된 많은 양의 콘텐츠를 표시하는 데 적합합니다. 허브는 새 콘텐츠를 우선적으로 찾고 검색하므로 스토어 또는 미디어 컬렉션에서 항목을 표시하는 데 유용합니다.
 
@@ -63,13 +59,13 @@ ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 허브는 사용할 수 있는 여러 탐색 요소 중 하나일 뿐입니다. 탐색 패턴 및 다른 탐색 요소에 대해 자세히 알아보려면 [UWP(유니버설 Windows 플랫폼) 앱용 탐색 디자인 기본 사항](../layout/navigation-basics.md)을 참조하세요.
 
-## 허브 아키텍처
+## <a name="hub-architecture"></a>허브 아키텍처
 
 허브 컨트롤은 계층적 탐색 패턴을 사용하여 관계형 정보 아키텍처가 있는 앱을 지원합니다. 허브는 다양한 콘텐츠 범주로 구성되며, 각 범주는 앱의 섹션 페이지에 매핑됩니다. 섹션 페이지는 시나리오와 섹션에 포함된 콘텐츠를 가장 잘 나타내는 형식으로 표시할 수 있습니다.
 
 ![계층적 Food with Friends 앱의 와이어프레임](images/navigation_diagram_food_with_friends_app_new.png)
 
-## 레이아웃 및 이동/스크롤
+## <a name="layouts-and-panningscrolling"></a>레이아웃 및 이동/스크롤
 
 허브에서 콘텐츠를 배치하고 탐색하는 몇 가지 방법이 있습니다. 단, 허브의 콘텐츠 목록이 허브 스크롤 방향과 항상 수직으로 이동해야 합니다.
 
@@ -86,17 +82,17 @@ ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 ![가로 이동 허브의 예](images/controls_hub_vertical_horizontal_scroll.png)
 
-## 예제
+## <a name="examples"></a>예제
 
 허브는 상당한 디자인 유연성을 제공합니다. 따라서 매력적이고 시각적으로 풍부한 다양한 환경을 가진 앱을 디자인할 수 있습니다. 첫 번째 그룹에 영웅 이미지 또는 콘텐츠 섹션을 사용할 수 있습니다. 관심의 중심을 잃지 않고 큰 영웅 이미지를 세로 및 가로로 자를 수 있습니다. 다음은 하나의 영웅 이미지와 가로, 세로 및 좁은 너비에서 해당 이미지가 잘릴 수 있는 방법의 예제입니다.
 
 ![다양한 창 크기에 맞게 잘린 영웅 이미지](images/hub_hero_cropped2.png)
 
-모바일 디바이스에서는 한 번에 하나의 허브 섹션이 표시됩니다.
+모바일 장치에서는 한 번에 하나의 허브 섹션이 표시됩니다.
 
 ![작은 화면에서의 허브 패턴 예](images/phone_hub_example.png)
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   허브 섹션에 더 많은 콘텐츠가 있음을 알리기 위해서는 일정량이 미리 보이도록 콘텐츠를 클리핑하는 것이 좋습니다.
 -   앱의 요구 사항에 따라 여러 가지 허브 섹션을 허브 컨트롤에 추가할 수 있으며, 각 섹션은 고유한 기능 용도를 제공합니다. 예를 들어 한 섹션에는 일련의 링크 및 컨트롤이 포함되고 다른 섹션은 미리 보기 이미지의 리포지토리일 수 있습니다. 사용자는 허브 컨트롤에 기본 제공되는 제스처 지원을 사용하여 이러한 섹션 간에 이동할 수 있습니다.
@@ -114,8 +110,11 @@ ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
     -   배경, 섹션, 섹션 머리글 및 섹션 콘텐츠의 색
 
 
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## 관련 문서
+
+## <a name="related-articles"></a>관련 문서
 
 - [허브 클래스](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [탐색 기본 사항](../layout/navigation-basics.md)
@@ -124,6 +123,6 @@ ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

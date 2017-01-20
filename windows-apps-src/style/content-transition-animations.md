@@ -3,26 +3,27 @@ author: mijacobs
 Description: "콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다."
 title: "콘텐츠 전환 애니메이션에 대한 지침"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
+template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed2d580568b73e787ad7b980981e025652232a83
 
 ---
 
-# 콘텐츠 전환 애니메이션
+# <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 
-
-
-
-
-**중요 API**
-
--   [**ContentThemeTransition 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)
--   [**enterContent 함수(HTML)**](https://msdn.microsoft.com/library/windows/apps/hh701582)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
 
-## 권장 사항 및 금지 사항
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**ContentThemeTransition 클래스(XAML)**](https://msdn.microsoft.com/library/windows/apps/br243104)</li>
+</ul>
+</div>
+
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   빈 컨테이너에 넣을 새 항목 집합이 있을 때 시작 애니메이션을 사용하세요. 예를 들어, 앱을 최초로 로드한 다음 앱의 콘텐츠 중 일부를 즉시 표시할 수 없는 경우도 있습니다. 콘텐츠가 표시할 수 있게 되면 콘텐츠 전환 애니메이션을 사용하여 그 최신 콘텐츠를 보기로 가져옵니다.
@@ -35,7 +36,7 @@ ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 **개발자용(XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -53,6 +54,6 @@ ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

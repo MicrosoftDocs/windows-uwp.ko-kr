@@ -7,38 +7,28 @@ ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: a779d4ff5d404c2eca658cee836c5d45c42f14d8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1e7914c0641d2897efbcbe5c9479a2ecc1a8dd2d
 
 ---
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+# <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
-# Segoe MDL2 아이콘
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 이 문서는 Segoe MDL2 자산 글꼴에서 제공하는 아이콘을 나열합니다. 
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn252842"><strong>Symbol 열거(XAML)</strong></a></li>
+<li>[**Symbol 열거(XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)</li>
 </ul>
-
-</div>
 </div>
 
 
+## <a name="about-segoe-mdl2-assets"></a>Segoe MDL2 자산 정보
 
-## 글꼴을 가져오는 방법
-Segoe MDL2 자산을 얻으려면 Windows 10을 설치해야 합니다. 
-
-## Segoe MDL2 자산 정보
-
-Segoe MDL2 자산 글꼴 Windows 8/8.1 Segoe UI Symbol 아이콘 글꼴은 Windows 10의 릴리스에서 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> **Segoe UI Symbol**을 계속 "레거시" 리소스로 사용할 수 있지만 새 **Segoe MDL2 자산**을 사용하도록 앱을 업데이트하는 것이 좋습니다.
-
-> **참고**
->
-> **Em**은 글꼴의 측정 단위입니다. 글꼴의 1 Em은 72ppi로 지정된 포인트 값의 100%와 같습니다. 예를 들어 16pt는 72ppi에서 16px과 같습니다(100% 플라토라고도 함). 새 MDL2 글꼴은 아이콘 영역의 공간이 정사각형 Em이 되도록 디자인되었습니다. 따라서 코드에서 너비와 높이를 16px로 지정하면 16x16px 아이콘 공간이 생성됩니다. 이는 아이콘이 항상 전체 공간을 차지함을 의미하는 것은 아닙니다.
+Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol**을 계속 "레거시" 리소스로 사용할 수 있지만 새 **Segoe MDL2 자산**을 사용하도록 앱을 업데이트하는 것이 좋습니다.)
 
 **Segoe MDL2 Assets** 글꼴에 포함된 아이콘 및 UI 컨트롤은 대부분 PUA(Private Use Area of Unicode)에 매핑됩니다. PUA를 통해 글꼴 개발자는 기존 코드 점에 매핑되지 않는 문자 모양에 개인 유니코드 값을 할당할 수 있습니다. 이 글꼴은 기호 글꼴을 만들 때 유용하지만 상호 운용성 문제가 발생될 수 있습니다. 글꼴을 사용할 수 없으면 문자 모양이 표시되지 않습니다. **Segoe MDL2 Assets** 글꼴을 지정할 수 있을 때만 이러한 문자 모양을 사용하세요.
 
@@ -46,27 +36,30 @@ Segoe MDL2 자산 글꼴 Windows 8/8.1 Segoe UI Symbol 아이콘 글꼴은 Windo
 
 **Segoe UI Symbol**과 달리 **Segoe MDL2 Assets** 글꼴의 아이콘은 텍스트와 함께 인라인으로 사용되지 않습니다. 즉, 점진적 표시 화살표와 같은 일부 이전 "힌트"가 더 이상 적용되지 않습니다. 마찬가지로, 모든 새 아이콘은 크기와 위치가 동일하게 지정되므로 너비를 0으로 만들 필요가 없습니다. 하나의 집합으로 작동하는지 확인하기만 하면 됩니다. 이상적으로, 하나의 집합으로 디자인된 두 개의 아이콘을 오버레이할 수 있습니다. 이는 코드에서 색 지정을 허용하기 위한 것입니다. 예를 들어 U+EA3A 및 U+EA3B는 시작 타일 배지 상태를 위해 만들어졌습니다. 이미 중앙에 배치되어 있기 때문에 원 채우기 색을 지정하여 다른 상태를 나타낼 수 있습니다.
 
-## 계층화 및 미러링
+## <a name="layering-and-mirroring"></a>계층화 및 미러링
 
 **Segoe MDL2 Assets**의 모든 문자 모양은 높이와 왼쪽 원점이 일관된 동일한 고정 너비를 가지므로 서로 위에 직접 문자 모양을 그려 계층화 및 색 지정 효과를 얻을 수 있습니다. 이 예제는 너비가 0인 빨간색 하트 위에 그려진 검은색 윤곽선을 보여 줍니다.
 
 ![폭이 0인 문자 모양 사용](images/segoe-ui-symbol-layering.png)
 
-또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러된 양식이 있습니다.
+또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
-## Symbol 열거형
+## <a name="symbol-enumeration"></a>Symbol 열거형
 C#/VB/C++ 및 XAML로 앱을 개발하는 경우 [**Symbol 열거형**](https://msdn.microsoft.com/library/windows/apps/dn252842)을 사용하여 Segoe MDL2 자산 글꼴에서 아이콘을 사용할 수 있습니다. 
+
+## <a name="how-do-i-get-this-font"></a>글꼴을 가져오는 방법
+Segoe MDL2 자산을 얻으려면 Windows 10을 설치해야 합니다. 
 
 <!--
 Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons than we can show here. Many of these are intended for specialized purposed and are not typically used anywhere else.
 -->
 
-## 아이콘 목록
+## <a name="icon-list"></a>아이콘 목록
 
 <table>
 
  <tr>
-  <td>기호</td>
+  <td>Symbol</td>
   <td>유니코드 포인트</td>
   <td>설명</td>
  </tr>
@@ -5143,10 +5136,7 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-
-
-
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [글꼴에 대한 지침](fonts.md)
 * [**Symbol 열거형**](https://msdn.microsoft.com/library/windows/apps/dn252842)
@@ -5160,6 +5150,6 @@ Also, keep in mind that the **Segoe MDL2 Assets** font includes many more icons 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

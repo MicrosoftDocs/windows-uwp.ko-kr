@@ -3,10 +3,15 @@ author: GrantMeStrength
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: "디바이스를 개발에 사용하도록 설정"
 description: "개발 및 디버깅을 위해 Windows 10 디바이스를 구성합니다."
-keywords: "장치 사용"
+keywords: "개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ed91f7585b63199ab9d591c712d4260a3b452b85
-ms.openlocfilehash: 416dce2f7cbe3bba9285f7e354868a2c00728802
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 3641fdd1f7eb74a11233115d9dfb809ea959926e
 
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
@@ -213,6 +218,6 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

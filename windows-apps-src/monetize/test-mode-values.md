@@ -4,22 +4,18 @@ ms.assetid: 2ed21281-f996-402d-a968-d1320a4691df
 description: "이 문서의 테스트 응용 프로그램 ID 및 광고 단위 ID 값을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다."
 title: "테스트 모드 값"
 translationtype: Human Translation
-ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
-ms.openlocfilehash: e1462ae48e8aae8f5ed0e5a7e46a6660bf33e786
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: dcc83c3d654cfb290981f27ec2923fd3b37c5a8f
 
 ---
 
-# 테스트 모드 값
-
-
-
+# <a name="test-mode-values"></a>테스트 모드 값
 
 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) 또는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱에서 광고를 표시하려면 응용 프로그램 ID 및 광고 단위 ID를 지정해야 합니다. 앱을 개발하는 동안 이 문서의 테스트 응용 프로그램 ID 및 광고 단위 ID 값을 사용하여 테스트 동안 앱이 광고를 렌더링하는 방법을 확인합니다.
 
 
 게시한 후에 앱에서 테스트 값을 사용하려고 하면 앱에 광고가 수신되지 않습니다. 게시된 앱에서 광고를 수신하려면 Windows 개발자 센터 대시보드에서 제공한 응용 프로그램 ID와 광고 단위 ID를 사용하여 코드를 업데이트해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)을 참조하세요.
  
-
 동영상 중간 광고 및 배너 광고에 사용할 테스트 값은 다음과 같습니다.
 
 * 동영상 중간 광고의 경우:
@@ -66,7 +62,7 @@ ms.openlocfilehash: e1462ae48e8aae8f5ed0e5a7e46a6660bf33e786
     </table>
 
 
-> **중요** 라이브 광고의 크기는 **AdControl**의 **Width** 및 **Height**로 정의됩니다. 최상의 결과를 얻으려면 코드의 **Width** 및 **Height** 속성이 [배너 광고에 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나인지 확인합니다. **Width** 및 **Height** 속성은 라이브 광고의 크기에 따라 변경되지 않습니다.
+> **중요**&nbsp;&nbsp;라이브 광고의 크기는 **AdControl**의 **Width** 및 **Height** 속성으로 정의됩니다. 최상의 결과를 얻으려면 코드의 **Width** 및 **Height** 속성이 [배너 광고에 지원되는 광고 크기](supported-ad-sizes-for-banner-ads.md) 중 하나인지 확인합니다. **Width** 및 **Height** 속성은 라이브 광고의 크기에 따라 변경되지 않습니다.
 
 
 
@@ -76,6 +72,6 @@ ms.openlocfilehash: e1462ae48e8aae8f5ed0e5a7e46a6660bf33e786
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

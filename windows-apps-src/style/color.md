@@ -6,42 +6,158 @@ ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 template: detail.hbs
 extraBodyClass: style-color
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 8e253c93f932e04b825478cf0801e4c8c0d43b9d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a9f9974cee58dd3c347f9f74ae1ed4c86f6c49e1
 
 ---
 
-# 색
+# <a name="color"></a>색
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 색은 앱의 다양한 수준의 정보를 통해 탐색하는 직관적인 방식을 제공하며 상호 작용 모델을 강화하는 데 중요한 도구 역할을 합니다.
 
 Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선택하거나 어두운 테마를 선택하여 환경에 전체적으로 반영할 수 있습니다.
 
-## 테마 컬러
+## <a name="accent-color"></a>테마 컬러
 
 사용자는 *설정 &gt; 개인 설정 &gt; 색*에서 강조색이라고 하는 단일 색을 선택할 수 있습니다. 사용자는 48색 견본의 큐레이팅된 집합에서 테마를 선택할 수 있습니다(TV에 적합한 21색 색상표가 포함된 Xbox의 경우 제외).
 
-<!-- Alternate version for the dev center. Need to add hex values. -->
-![기본 테마 컬러](images/accentcolorswatch.png) 기본 테마 컬러
+### <a name="default-accent-colors"></a>기본 테마 컬러
+<table class="uwpd-color-table" style="border: solid 4px white;">
+        <tr >
+            <td class="uwpd-color-table" style="background-color: #FFB900">FFB900</td>
+            <td class="uwpd-color-table" style=" background-color: #E74856">E74856</td>
+            <td class="uwpd-color-table" style=" background-color: #0078D7">0078D7</td>
+            <td class="uwpd-color-table" style=" background-color: #0099BC">0099BC</td>
+            <td class="uwpd-color-table" style=" background-color: #7A7574">7A7574</td>
+            <td class="uwpd-color-table" style=" background-color: #767676">767676</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #FF8C00">FF8C00</td>
+            <td class="uwpd-color-table" style=" background-color: #E81123">E81123</td>
+            <td class="uwpd-color-table" style=" background-color: #0063B1">0063B1</td>
+            <td class="uwpd-color-table" style=" background-color: #2D7D9A">2D7D9A</td>
+            <td class="uwpd-color-table" style=" background-color: #5D5A58">5D5A58</td>
+            <td class="uwpd-color-table" style=" background-color: #4C4A48" >4C4A48</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #F7630C" >F7630C</td>
+            <td class="uwpd-color-table" style=" background-color: #EA005E" >EA005E</td>
+            <td class="uwpd-color-table" style=" background-color: #8E8CD8" >8E8CD8</td>
+            <td class="uwpd-color-table" style=" background-color: #00B7C3" >00B7C3</td>
+            <td class="uwpd-color-table" style=" background-color: #68768A" >68768A</td>
+            <td class="uwpd-color-table" style=" background-color: #69797E" >69797E</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #CA5010" >CA5010</td>
+            <td class="uwpd-color-table" style=" background-color: #C30052" >C30052</td>
+            <td class="uwpd-color-table" style=" background-color: #6B69D6" >6B69D6</td>
+            <td class="uwpd-color-table" style=" background-color: #038387" >038387</td>
+            <td class="uwpd-color-table" style=" background-color: #515C6B" >515C6B</td>
+            <td class="uwpd-color-table" style=" background-color: #4A5459" >4A5459</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #DA3B01" >DA3B01</td>
+            <td class="uwpd-color-table" style=" background-color: #E3008C" >E3008C</td>
+            <td class="uwpd-color-table" style=" background-color: #8764B8" >8764B8</td>
+            <td class="uwpd-color-table" style=" background-color: #00B294" >00B294</td>
+            <td class="uwpd-color-table" style=" background-color: #567C73" >567C73</td>
+            <td class="uwpd-color-table" style=" background-color: #647C64" >647C64</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #EF6950" >EF6950</td>
+            <td class="uwpd-color-table" style=" background-color: #BF0077" >BF0077</td>
+            <td class="uwpd-color-table" style=" background-color: #744DA9" >744DA9</td>
+            <td class="uwpd-color-table" style=" background-color: #018574" >018574</td>
+            <td class="uwpd-color-table" style=" background-color: #486860" >486860</td>
+            <td class="uwpd-color-table" style=" background-color: #525E54" >525E54</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #D13438" >D13438</td>
+            <td class="uwpd-color-table" style=" background-color: #C239B3" >C239B3</td>
+            <td class="uwpd-color-table" style=" background-color: #B146C2" >B146C2</td>
+            <td class="uwpd-color-table" style=" background-color: #00CC6A" >00CC6A</td>
+            <td class="uwpd-color-table" style=" background-color: #498205" >498205</td>
+            <td class="uwpd-color-table" style=" background-color: #847545" >847545</td>
+        </tr>
+        <tr >
+            <td class="uwpd-color-table" style=" background-color: #FF4343" >FF4343</td>
+            <td class="uwpd-color-table" style=" background-color: #9A0089" >9A0089</td>
+            <td class="uwpd-color-table" style=" background-color: #881798" >881798</td>
+            <td class="uwpd-color-table" style=" background-color: #10893E" >10893E</td>
+            <td class="uwpd-color-table" style=" background-color: #107C10" >107C10</td>
+            <td class="uwpd-color-table" style=" background-color: #7E735F" >7E735F</td>
+        </tr>
 
-![Xbox 테마 컬러](images/accentcolorswatch_xbox.png) Xbox 테마 컬러
+</table>
+
+### <a name="xbox-accent-colors"></a>Xbox 테마 컬러
+  <table class="uwpd-color-table" style="border: solid 4px white;">
+      <tr >
+          <td class="uwpd-color-table" style="background-color: #EB8C10" >EB8C10</td>
+          <td class="uwpd-color-table" style="background-color: #ED5588" >ED5588</td>
+          <td class="uwpd-color-table" style="background-color: #1073D6" >1073D6</td>
+          <td class="uwpd-color-table" style="background-color: #148282" >148282</td>
+          <td class="uwpd-color-table" style="background-color: #107C10" >107C10</td>
+          <td class="uwpd-color-table" style="background-color: #4C4A4B" >4C4A4B</td>
+      </tr>
+      <tr >
+          <td class="uwpd-color-table" style="background-color: #EB4910" >EB4910</td>
+          <td class="uwpd-color-table" style="background-color: #BF1077" >BF1077</td>
+          <td class="uwpd-color-table" style="background-color: #193E91" >193E91</td>
+          <td class="uwpd-color-table" style="background-color: #54A81B" >54A81B</td>
+          <td class="uwpd-color-table" style="background-color: #737373" >737373</td>
+          <td class="uwpd-color-table" style="background-color: #7E715C" >7E715C</td>
+      </tr>
+      <tr >
+          <td class="uwpd-color-table" style="background-color: #E31123" >E31123</td>
+          <td class="uwpd-color-table" style="background-color: #B144C0" >B144C0</td>
+          <td class="uwpd-color-table" style="background-color: #1081CA" >1081CA</td>
+          <td class="uwpd-color-table" style="background-color: #547A72" >547A72</td>
+          <td class="uwpd-color-table" style="background-color: #677488" >677488</td>
+          <td class="uwpd-color-table" style="background-color: #724F2F" >724F2F</td>
+      </tr>
+      <tr >
+          <td class="uwpd-color-table" style="background-color: #A21025" >A21025</td>
+          <td class="uwpd-color-table" style="background-color: #744DA9" >744DA9</td>
+          <td class="uwpd-color-table" style="background-color: #108272" >108272</td>
+          <td class="uwpd-color-table"></td>
+          <td class="uwpd-color-table"></td>
+          <td class="uwpd-color-table"></td>
+      </tr>
+  </table>
 
 
-사용자가 테마 컬러를 선택하면 시스템 테마의 일부로 나타납니다. 영향을 받는 영역은 시작, 작업 표시줄, 창 크롬, [공용 컨트롤](https://dev.windows.com/design/controls-patterns) 내의 선택한 상호 작용 상태 및 하이퍼링크입니다. 각 앱은 해당 앱의 입력 체계, 배경 및 상호 작용에 테마 컬러를 추가로 통합하거나 재정의하여 특정 브랜딩을 유지합니다.
+<div class="microsoft-internal-note">
+경험상, 테마 컬러가 배경으로 사용될 경우에는 그 위에 항상 흰색 텍스트를 삽입하는 것이 좋습니다. Windows와 함께 제공되는 기본 테마 컬러는 흰색 텍스트와 뛰어난 명암비를 이룹니다. 사용자는 자신의 선호도에 따라 흰색과 낮은 대비를 이루는 테마 컬러를 선택할 수도 있습니다. 텍스트를 분간하기 힘들 경우에는 항상 더 어두운 테마 컬러를 선택해야 합니다.
+</div>
 
-## 색상표 구성 요소
+
+사용자가 테마 컬러를 선택하면 시스템 테마의 일부로 나타납니다. 영향을 받는 영역은 시작, 작업 표시줄, 창 크롬, [공용 컨트롤](../controls-and-patterns/index.md) 내의 선택한 상호 작용 상태 및 하이퍼링크입니다. 각 앱은 해당 앱의 입력 체계, 배경 및 상호 작용에 테마 컬러를 추가로 통합하거나 재정의하여 특정 브랜딩을 유지합니다.
+
+## <a name="color-palette-building-blocks"></a>색상표 구성 요소
 
 테마 컬러를 선택하면 색 광도의 HSB 값에 따라 테마 컬러의 밝고 어두운 음영이 만들어집니다. 앱은 음영 변형을 사용하여 시각적 계층 구조를 만들고 상호 작용 지침을 제공할 수 있습니다.
 
 하이퍼링크는 기본적으로 사용자의 테마 컬러를 사용 합니다. 페이지 배경이 유사한 색인 경우 효과적인 대비를 위해 하이퍼링크에 테마 음영을 더 밝거나 더 어둡게 지정할 수 있습니다.
 
-![6개의 음영을 사용한 단일 테마 컬러](images/shades.png) 기본 테마 컬러의 다양한 음영(밝음/어두움)입니다.
 
-![색이 지정된 알림 센터에 대한 검토](images/action_center_redline_zoom.png) 디자인 사양에 색 논리가 적용되는 방법에 대한 예입니다.
+<div class="uwpd-image-with-caption">
+    <img src="images/shades.png" alt="A single accent color with its 6 shades" />
+    <div>기본 테마 컬러의 다양한 음영(밝음/어두움)입니다.</div>
+</div>
 
-**참고**  XAML에서 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 컬러로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
+<div class="uwpd-image-with-caption">
+    <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center" />
+    <div>디자인 사양에 색 논리가 적용되는 방법에 대한 예입니다.</div>
+</div>
 
-## 색 테마 지정
+>[!NOTE]
+>XAML에서는 `SystemAccentColor`라는 [테마 리소스](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx)가 기본 테마 컬러로 표시됩니다. `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2`, 및 `SystemAccentColorDark3`를 음영으로 사용할 수 있습니다. 또한 [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) 및 [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx) 열거를 통해 프로그래밍 방식으로 사용할 수 있습니다.
+
+
+## <a name="color-theming"></a>색 테마 지정
 
 사용자는 또한 시스템에 대해 밝거나 어두운 테마를 선택할 수 있습니다. 일부 앱은 사용자의 기본 설정에 따라 해당 테마를 변경하도록 선택하지만 옵트아웃(opt out)하는 앱도 있습니다.
 
@@ -53,28 +169,27 @@ Windows에서 색도 개인 고유의 것입니다. 색과 밝은 테마를 선�
 
 테마를 더 쉽게 디자인하기 위해 Windows에서는 자동으로 테마에 맞게 조정되는 추가 색상표를 제공합니다.
 
-<!-- OP version -->
-### 밝은 테마
-#### 기본
+### <a name="light-theme"></a>밝은 테마
+#### <a name="base"></a>기본
 ![기본 밝은 테마](images/themes-light-base.png)
-#### 대체
+#### <a name="alt"></a>대체
 ![대체 밝은 테마](images/themes-light-alt.png)
-#### 목록
+#### <a name="list"></a>목록
 ![목록 밝은 테마](images/themes-light-list.png)
-#### 크롬
+#### <a name="chrome"></a>크롬
 ![크롬 밝은 테마](images/themes-light-chrome.png)
-### 어두운 테마
-#### 기본
+### <a name="dark-theme"></a>어두운 테마
+#### <a name="base"></a>기본
 ![기본 어두운 테마](images/themes-dark-base.png)
-#### 대체
+#### <a name="alt"></a>대체
 ![대체 어두운 테마](images/themes-dark-alt.png)
-#### 목록
+#### <a name="list"></a>목록
 ![목록 어두운 테마](images/themes-dark-list.png)
-#### 크롬
+#### <a name="chrome"></a>크롬
 ![크롬 어두운 테마](images/themes-dark-chrome.png)
 
 
-## 테마 변경
+## <a name="changing-the-theme"></a>테마 변경
 
 App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경할 수 있습니다.
 
@@ -93,17 +208,17 @@ App.xaml에서 **RequestedTheme** 속성을 변경하여 쉽게 테마를 변경
 
 테마는 앱의 모양에 큰 영향을 미치므로 앱을 만들 때 테마를 고려해야 합니다.
 
-## 접근성
+## <a name="accessibility"></a>접근성
 
 색상표는 화면 사용에 최적화됩니다. 최적화된 읽기 환경을 위해 배경에 대한 텍스트 대비를 4.5: 1로 유지하는 것이 좋습니다. [명암비](http://leaverou.github.io/contrast-ratio/)와 같이 무료로 색 통과 여부를 테스트할 수 있는 많은 도구가 있습니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [XAML 스타일](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 * [XAML 테마 리소스](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -7,15 +7,13 @@ ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3149eb8275cc74c61ff0e35963f3fd1dbdc4e833
 
 ---
 
-# 세계화 및 지역화
-
-
-
+# <a name="globalization-and-localization"></a>세계화 및 지역화
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 사용합니다. 사용자는 어느 언어든 말할 수 있고 여러 언어를 사용할 수도 있습니다. 지역도 세계 어디든 있을 수 있어서 위치와 언어가 다양할 수 있습니다. *세계화* 및 *지역화*를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
 
@@ -36,7 +34,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 
 세계에 판매하기 위해 앱을 준비하는 방법을 간략히 소개하는 [세계화 및 지역화 소개](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization) 동영상을 시청하세요.
 
-## 기사
+## <a name="articles"></a>기사
 <table>
 <colgroup>
 <col width="50%" />
@@ -51,7 +49,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 <tbody>
 <tr class="odd">
 <td align="left"><p>[권장 사항 및 금지 사항](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
-<td align="left"><p>앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.</p></td>
+<td align="left"><p>앱을 더 광범위한 사용자를 위해 세계화하거나 특정 시장을 위해 지역화할 때는 다음과 같은 모범 사례를 따르세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[세계화를 대비한 형식 사용](use-global-ready-formats.md)</p></td>
@@ -99,6 +97,6 @@ UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10에도 적용되며 원래
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

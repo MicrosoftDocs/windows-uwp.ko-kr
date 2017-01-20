@@ -5,21 +5,30 @@ title: "Windows Ink 스트로크를 텍스트로 인식"
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
-keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, 필기 인식"
+keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, 필기 인식, 사용자 조작, 입력"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: c402843cce752a54d8ff7301d892ef8014350a07
+ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
+ms.openlocfilehash: c832c3c3626ac5f75eaac4317b6779c410693742
 
 ---
 
 # <a name="recognize-windows-ink-strokes-as-text"></a>Windows Ink 스트로크를 텍스트로 인식
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트로 변환합니다.
+Windows Ink에서 필기 인식 지원을 사용하여 잉크 스트로크를 텍스트로 변환합니다.
 
-**중요 API**
-
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)</li>
+<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
+</ul>
+</div> 
 
 
 필기 인식은 Windows 잉크 플랫폼에 기본 제공되며 다양한 로캘 및 언어를 지원합니다.
@@ -69,7 +78,7 @@ Windows Ink에서 필기 인식 지원을 사용하여 스트로크를 텍스트
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다. "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다. "인식" 단추의 Click 이벤트에 대한 수신기도 선언합니다.
 ```    CSharp
 public MainPage()
     {
@@ -276,7 +285,7 @@ Windows에서 지원되는 언어의 포괄적인 하위 집합을 필기 인식
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정합니다.
 
-    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다.
+    [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되어 있습니다([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)). 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다.
 
     `InitializeRecognizerList` 함수를 호출하여 인식기 콤보 상자에 설치된 필기 인식기 목록을 채웁니다.
 
@@ -455,7 +464,7 @@ string str = "Recognition result\n";
 
 이 예제에서는 이전 국가별 인식 예제와 같은 UI 및 스트로크 설정을 사용합니다.
 
-1.  이전 예제와 마찬가지로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되고([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/desktop/ms695050)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)에 렌더링됩니다.
+1.  이전 예제와 마찬가지로 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크로 해석하도록 구성되고([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) 잉크 스트로크는 지정된 [**InkDrawingAttributes**](https://msdn.microsoft.com/library/windows/apps/dn858535)를 사용하여 [**InkCanvas**](https://msdn.microsoft.com/library/windows/desktop/ms695050)에 렌더링됩니다.
 
     인식을 시작하는 단추 대신 두 가지 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) 이벤트 스트로크([**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024) 및 [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702))에 대한 수신기를 추가하고 기본 타이머([**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250))를 1초 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) 간격으로 설정합니다.    
 ```    CSharp
@@ -559,7 +568,7 @@ public MainPage()
     }
 ```
 
-3.  마지막으로 선택한 필기 인식기를 기반으로 필기 인식을 수행합니다. 이 예제에서는 [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244250)의 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256) 이벤트 처리기를 사용하여 필기 인식을 시작합니다.
+3.  마지막으로 선택한 필기 인식기를 기반으로 필기 인식을 수행합니다. 이 예제에서는 [**DispatcherTimer**](https://msdn.microsoft.com/library/windows/apps/br244256)의 [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244250) 이벤트 처리기를 사용하여 필기 인식을 시작합니다.
 
     [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)는 모든 잉크 스트로크를 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) 개체에 저장합니다. 스트로크는 **InkPresenter**의 [**StrokeContainer**](https://msdn.microsoft.com/library/windows/apps/dn948766) 속성을 통해 노출되고 [**GetStrokes**](https://msdn.microsoft.com/library/windows/apps/br208499) 메서드를 사용하여 검색합니다.
 ```    CSharp
@@ -676,6 +685,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

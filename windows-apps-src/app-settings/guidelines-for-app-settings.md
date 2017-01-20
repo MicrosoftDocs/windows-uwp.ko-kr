@@ -6,19 +6,19 @@ ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 78ede41d559613e89d3174430f5474559f48c6bf
-ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 
 ---
 
 
-# 앱 설정에 대한 지침
+# <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
 앱 설정은 앱의 사용자 지정 가능한 부분이고 앱 설정 페이지 내에 있습니다. 예를 들어 사용자는 뉴스 뷰어 앱의 앱 설정을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있지만, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 모범 사례에 대해 설명합니다.
 
 ![설정 창의 예](images/app-settings.png)
 
-## 앱에 설정 페이지를 포함해야 하나요?
+## <a name="should-i-include-a-settings-page-in-my-app"></a>앱에 설정 페이지를 포함해야 하나요?
 
 다음은 앱 설정 페이지에 속한 앱 옵션의 예입니다. 
 
@@ -26,18 +26,19 @@ ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
 -   음악, 사운드 효과 또는 색 테마와 같이 사용자의 기본 설정에 따라 달라지는 옵션
 -   자주 액세스하지 않는 앱 정보(예: 개인 정보 취급 방침, 도움말, 앱 버전 또는 저작권 정보)
 
-일반적인 앱 워크플로에 속하는 명령(예: 미술 앱에서 브러시 크기 변경)은 설정 창에 있으면 안 됩니다. 명령 배치에 대한 자세한 내용은 [명령 디자인 기본 사항](../layout/commanding-basics.md)을 참조하세요.
+일반적인 앱 워크플로에 속하는 명령(예: 미술 앱에서 브러시 크기 변경)은 설정 페이지에 있으면 안 됩니다. 명령 배치에 대한 자세한 내용은 [명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)을 참조하세요.
 
-## 일반 권장 사항
+## <a name="general-recommendations"></a>일반 권장 사항
+
 
 -   설정 페이지를 간단하게 유지하고 이진(켜기/끄기) 컨트롤을 사용합니다. [토글 스위치](../controls-and-patterns/toggles.md)는 일반적으로 이진 설정에 가장 적합한 컨트롤입니다.
--   사용자가 함께 사용할 수 없는 5개의 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있는 설정에는 [라디오 단추](../controls-and-patterns/radio-button.md)를 사용합니다.
+-   사용자가 함께 사용할 수 없는 최대 5개의 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있는 설정에는 [라디오 단추](../controls-and-patterns/radio-button.md)를 사용합니다.
 -   앱 설정 페이지에서 모든 앱 설정에 대한 진입점을 만듭니다.
 -   설정을 간단하게 유지합니다. 스마트 기본값을 정의하고 설정 수를 최소한으로 유지합니다.
 -   사용자가 설정을 변경할 경우 변경 내용이 앱에 즉시 반영되어야 합니다.
 -   일반적인 앱 워크플로에 포함된 명령은 포함하지 마세요.
 
-## 진입점
+## <a name="entry-point"></a>진입점
 
 
 사용자가 앱 설정 페이지에 액세스하는 방법은 앱 레이아웃에 기반을 두어야 합니다.
@@ -50,7 +51,7 @@ ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
 
 **앱 바**
 
-일반적으로 허브 또는 탭/피벗 탐색 레이아웃에 포함된 앱 바 또는 도구 모음을 사용하고 있으면 "자세히" 플라이아웃 메뉴에 진입점을 배치합니다. 앱에 대한 설정 진입점의 검색 기능을 향상해야 하면 "자세히" 플라이아웃 메뉴 내가 아니라 앱 바에 직접 진입점을 배치하세요.
+일반적으로 허브 또는 탭/피벗 탐색 레이아웃에 포함된 앱 바 또는 도구 모음을 사용 중인 경우 "자세히" 플라이아웃 메뉴에 진입점의 마지막 항목을 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 "자세히" 플라이아웃 메뉴가 아니라 앱 바에 직접 진입점을 배치하세요.
 
 ![앱 바의 앱 설정 진입점](images/appsettings-entrypoint-tabs.png)
 
@@ -66,32 +67,32 @@ ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
 
 앱 설정 진입점을 마스터-세부 창 내에 깊이 포함하는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
 
-## 레이아웃
+## <a name="layout"></a>레이아웃
 
 
-데스크톱 및 모바일에서 모두 앱 설정 창은 전체 화면으로 열리고 전체 창을 채워야 합니다. 앱 설정 메뉴가 최대 4개의 최상위 그룹 사이에 있으면 이들 그룹은 한 열씩 아래로 계단식 배열되어야 합니다.
+데스크톱 및 모바일 모두에서 앱 설정 창은 전체 화면으로 열리고 전체 창을 채워야 합니다. 앱 설정 메뉴가 최대 4개의 최상위 그룹 사이에 있으면 이들 그룹은 한 열씩 아래로 계단식 배열되어야 합니다.
 
-**데스크톱**
+데스크톱:
 
 ![데스크톱의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-desktop.png)
 
-**모바일**
+모바일:
 
 ![휴대폰의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-mobile.png)
 
-## "정보" 섹션 및 "피드백 보내기" 단추
+## <a name="about-section-and-give-feedback-button"></a>"정보" 섹션 및 "피드백 보내기" 단추
 
 
 앱에 "이 앱에 대한 정보" 섹션이 필요하면 해당 섹션에 대한 전용 앱 설정 페이지를 만듭니다. "피드백 보내기" 단추가 필요하면 "이 앱에 대한 정보" 페이지의 맨 아래에 단추를 배치합니다.
 
 "사용 약관" 및 "개인 정보 취급 방침"은 텍스트 줄 바꿈이 있는 [하이퍼링크 단추](../controls-and-patterns/hyperlinks.md)여야 합니다.
 
-!["피드백 제공" 단추가 있는 "이 앱에 대한 정보" 섹션](images/appsettings-about.png)
+!["피드백 보내기" 단추가 있는 "이 앱에 대한 정보" 섹션](images/appsettings-about.png)
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 
-### 앱 설정 페이지 콘텐츠
+## <a name="app-settings-page-content"></a>앱 설정 페이지 콘텐츠
 
 
 앱 설정 페이지에 포함할 항목 목록이 있으면 다음 지침을 고려해 보세요.
@@ -104,7 +105,7 @@ ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
 -   더 일반적인 설정이 각각 자체 진입점을 가질 수 있도록 덜 사용하는 설정을 단일 진입점으로 결합합니다. "정보" 설정에는 정보만 포함된 콘텐츠나 링크를 배치합니다.
 -   "사용 권한" 창에서 기능을 중복하지 마세요. 이 창은 Windows에서 기본적으로 제공되며 수정할 수 없습니다.
 
-###  설정 플라이아웃에 설정 콘텐츠 추가
+##  <a name="add-settings-content-to-settings-flyouts"></a>설정 플라이아웃에 설정 콘텐츠 추가
 
 
 -   필요한 경우 스크롤 가능한 단일 열에 위쪽에서 아래쪽으로 콘텐츠를 제공합니다. 스크롤을 화면 높이의 최대 두 배로 제한합니다.
@@ -118,22 +119,22 @@ ms.openlocfilehash: 6302ec1bf332a27986876dbde4da92bbc916f85b
 -   컨트롤 중 하나가 비활성화되면 설명 메시지를 추가합니다. 이 메시지를 비활성화된 컨트롤 위에 배치합니다.
 -   설정 플라이아웃 및 헤더에 애니메이션 효과를 준 후 단일 블록으로 콘텐츠 및 컨트롤에 애니메이션 효과를 줍니다. 100px 왼쪽 오프셋과 함께 [**enterPage**](https://msdn.microsoft.com/library/windows/apps/br212672) 또는 [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288) 애니메이션을 사용하여 콘텐츠에 애니메이션 효과를 줍니다.
 -   필요한 경우 구역 머리글, 단락 및 레이블을 사용하여 콘텐츠를 구성하고 명확하게 표시합니다.
--   설정을 반복해야 하는 경우 추가 UI 수준이나 확장/축소 모델을 사용하지만 두 수준보다 더 깊은 계층 구조는 사용하지 않습니다. 예를 들어 도시별 설정을 제공하는 날씨 앱은 도시를 나열하고 사용자가 도시를 탭하여 새 플라이아웃을 열거나 설정 옵션을 확장하여 표시하도록 할 수 있습니다.
--   컨트롤 또는 웹 콘텐츠를 로드하는 데 시간이 걸리는 경우 확정되지 않은 진행률 컨트롤을 사용하여 정보가 로드되고 있음을 사용자에게 표시합니다. 자세한 내용은 [진행률 컨트롤에 대한 지침](../controls-and-patterns/progress-controls.md)을 참조하세요.
+-   설정을 반복해야 하는 경우 추가 UI 수준이나 확장/축소 모델을 사용하되 두 수준보다 더 깊은 계층 구조는 사용하지 않습니다. 예를 들어 도시별 설정을 제공하는 날씨 앱은 도시를 나열하고 사용자가 도시를 탭하여 새 플라이아웃을 열거나 설정 옵션을 확장하여 표시하도록 할 수 있습니다.
+-   컨트롤 또는 웹 콘텐츠를 로드하는 데 시간이 걸리는 경우 확정되지 않은 진행률 컨트롤을 사용하여 정보가 로드되고 있음을 사용자에게 표시합니다. 자세한 내용은 [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)을 참조하세요.
 -   탐색이나 변경 내용 커밋에 단추를 사용하지 마세요. 하이퍼링크를 사용하여 다른 페이지를 탐색하고, 단추를 사용하여 변경 내용을 커밋하는 대신 사용자가 설정 플라이아웃을 해제할 때 변경 내용을 앱 설정에 자동으로 저장합니다.
 
-\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows 10과 관련된 정보가 있습니다. Windows 8.1 참고 자료는 [Windows 8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
+\[이 문서에는 UWP(유니버설 Windows 플랫폼) 앱 및 Windows�10과 관련된 정보가 있습니다. Windows�8.1 참고 자료를 보려면 [Windows�8.1 지침 PDF](https://go.microsoft.com/fwlink/p/?linkid=258743)를 다운로드하세요.\]
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
-* [명령 디자인 기본 사항](../layout/commanding-basics.md)
-* [진행률 컨트롤에 대한 지침](../controls-and-patterns/progress-controls.md)
-* [앱 데이터 저장 및 검색](store-and-retrieve-app-data.md)
+* [명령 디자인 기본 사항](https://msdn.microsoft.com/library/windows/apps/dn958433)
+* [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
+* [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

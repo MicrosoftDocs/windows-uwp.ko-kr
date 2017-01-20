@@ -4,15 +4,15 @@ Description: "이 문서에는 데스크톱-UWP 브리지의 알려진 문제가
 Search.Product: eADQiWindows 10XVcnh
 title: "데스크톱 브리지의 알려진 문제"
 translationtype: Human Translation
-ms.sourcegitcommit: 537c6a3d4559da4673b68c3ab5bdddb612760849
-ms.openlocfilehash: d02921247bd77d59bbb09037a4ced8d3967c33b2
+ms.sourcegitcommit: ec4c5f937e4fd133bfc4f7aa96d00cee03a13c26
+ms.openlocfilehash: d3ed0af32c9a44078d0f772d7fc130121f5d4970
 
 ---
-# 데스크톱 브리지의 알려진 문제
+# <a name="known-issues-with-the-desktop-bridge"></a>데스크톱 브리지의 알려진 문제
 
 이 문서에는 데스크톱-UWP 브리지의 알려진 문제가 포함되어 있습니다.
 
-## 블루 스크린, 오류 코드 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
+## <a name="blue-screen-with-error-code-0x139-kernelsecuritycheckfailure"></a>블루 스크린, 오류 코드 0x139 (KERNEL_SECURITY_CHECK_FAILURE)
 
 Windows 스토어에서 특정 앱을 설치하거나 실행한 후 컴퓨터가 **0x139 (KERNEL\_SECURITY\_CHECK\_ FAILURE)** 오류로 인해 예기치 않게 다시 부팅될 수 있습니다.
 
@@ -27,10 +27,10 @@ Windows 스토어에서 특정 앱을 설치하거나 실행한 후 컴퓨터가
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
 Windows 업데이트에 대한 세부 정보는 다음 페이지에서 확인할 수 있습니다. 
-* https://support.microsoft.com/3197954
+* https://support.microsoft.com/kb/3197954
 * https://support.microsoft.com/help/12387/windows-10-update-history
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

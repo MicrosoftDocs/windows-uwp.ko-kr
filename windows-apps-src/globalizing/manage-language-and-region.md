@@ -6,26 +6,28 @@ ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 5a7519d9ea7a121e3e3087debba6d6193b1d8155
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: f9c30e68d5cc94769c9304234db0276e34e1d945
 
 ---
 
-# 언어 및 지역 관리
+# <a name="manage-language-and-region"></a>언어 및 지역 관리
 
-
-
-
-
-**중요 API**
-
--   [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)
--   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
--   [**WinJS.Resources 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/br229779)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows에서 제공되는 다양한 언어 및 지역 설정을 사용하여 Windows에서 UI 리소스를 선택하고 앱의 UI 요소 형식을 지정하는 방법을 제어합니다.
 
-## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>소개
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)</li>
+<li>[**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)</li>
+<li>[**WinJS.Resources 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/br229779)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>소개
 
 
 언어 및 지역 설정을 관리하는 방법을 설명하는 샘플 앱은 [응용 프로그램 리소스 및 지역화 샘플](http://go.microsoft.com/fwlink/p/?linkid=231501)(영문)을 참조하세요.
@@ -40,10 +42,10 @@ Windows 스토어 앱의 경우 언어는 [BCP-47 언어 태그](http://go.micro
 
 Windows 스토어에서 지원되는 언어 태그 목록을 구체적으로 보려면 [지원되는 언어](https://msdn.microsoft.com/library/windows/apps/jj657969)를 참조하세요.
 
-## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>작업
+## <a name="tasks"></a>작업
 
 
-### <span id="Users_can_set_their_language_preferences."></span><span id="users_can_set_their_language_preferences."></span><span id="USERS_CAN_SET_THEIR_LANGUAGE_PREFERENCES."></span>사용자가 언어 선택을 지정할 수 있습니다.
+### <a name="users-can-set-their-language-preferences"></a>사용자가 언어 선택을 지정할 수 있습니다.
 
 사용자 언어 기본 설정 목록은 사용자의 언어를 사용자가 원하는 순서대로 설명하는 순서가 지정된 언어 목록입니다.
 
@@ -51,11 +53,11 @@ Windows 스토어에서 지원되는 언어 태그 목록을 구체적으로 보
 
 사용자의 언어 기본 설정 목록에는 여러 언어 및 국가별 또는 다른 특정 언어가 포함될 수 있습니다. 예를 들어 사용자가 fr-CA를 기본 설정했지만 en-GB를 이해할 수도 있습니다.
 
-### <span id="Specify_the_supported_languages_in_the_app_s_manifest."></span><span id="specify_the_supported_languages_in_the_app_s_manifest."></span><span id="SPECIFY_THE_SUPPORTED_LANGUAGES_IN_THE_APP_S_MANIFEST."></span>앱의 매니페스트에서 지원되는 언어를 지정합니다.
+### <a name="specify-the-supported-languages-in-the-apps-manifest"></a>앱의 매니페스트에서 지원되는 언어를 지정합니다.
 
 앱의 매니페스트 파일(보통 Package.appxmanifest)의 [**Resources element**](https://msdn.microsoft.com/library/windows/apps/dn934770)에서 앱의 지원되는 언어 목록을 지정하거나, Visual Studio가 프로젝트에 있는 언어를 기반으로 매니페스트 파일에서 언어 목록을 자동으로 생성합니다. 매니페스트는 지원되는 언어를 적절한 수준으로 정확하게 설명해야 합니다. 매니페스트에 나열된 언어는 Windows 스토어에서 사용자에게 표시되는 언어입니다.
 
-### <span id="Specify_the_default_language."></span><span id="specify_the_default_language."></span><span id="SPECIFY_THE_DEFAULT_LANGUAGE."></span>기본 언어를 지정합니다.
+### <a name="specify-the-default-language"></a>기본 언어를 지정합니다.
 
 Visual Studio에서 package.appxmanifest를 열고 **응용 프로그램** 탭으로 이동한 다음 기본 언어를 응용 프로그램을 작성하는 데 사용 중인 언어로 설정합니다.
 
@@ -63,7 +65,7 @@ Visual Studio에서 package.appxmanifest를 열고 **응용 프로그램** 탭�
 
 또한 응용 프로그램 언어를 적절하게 설정하려면 기본 언어 속성을 매니페스트의 첫 번째 언어로 설정해야 합니다(아래의 "응용 프로그램 언어 목록을 만듭니다" 단계 설명 참조). 기본 언어의 리소스는 해당 언어(예: en-US/logo.png)로 한정되어야 합니다. 기본 언어는 정규화되지 않은 자산의 암시적 언어를 지정하지 않습니다. 자세한 내용은 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)을 참조하세요.
 
-### <span id="Qualify_resources_with_their_language."></span><span id="qualify_resources_with_their_language."></span><span id="QUALIFY_RESOURCES_WITH_THEIR_LANGUAGE."></span>해당 언어와 관련하여 리소스를 인증합니다.
+### <a name="qualify-resources-with-their-language"></a>해당 언어와 관련하여 리소스를 인증합니다.
 
 대상을 신중히 고려하고 대상으로 할 사용자의 언어 및 위치도 고려합니다. 어떤 지역에 사는 많은 사람이 그 지역의 기본 언어를 선호하지 않습니다. 예를 들어 미국에는 스페인어를 기본 언어로 사용하는 수백만 가구가 있습니다.
 
@@ -87,7 +89,7 @@ Visual Studio에서 package.appxmanifest를 열고 **응용 프로그램** 탭�
 -   일부 언어에서 특정 예외 사항이 있고 다른 모든 언어는 공통 리소스에 매핑되는 리소스의 경우 모든 언어에 사용해야 하는 리소스는 미확인 언어 태그 'und'로 표시해야 합니다. Windows는 '\*'와 유사한 방식으로 'und' 언어 태그를 해석합니다. 즉, 일치하는 특정 다른 언어를 찾은 후 일치하는 최상위 응용 프로그램 언어를 찾습니다. 예를 들어 몇 개의 리소스(요소 너비 등)가 핀란드어에 대해 서로 다르지만 나머지 리소스가 모든 언어에 대해 동일할 경우 핀란드어 리소스는 핀란드어 태그로 표시하고 나머지는 'und'로 표시해야 합니다.
 -   글꼴이나 텍스트 높이와 같이, 언어 대신 언어의 스크립트를 기반으로 하는 리소스의 경우 미확인 언어 태그를 'und-&lt;script&gt;'와 같이 지정된 스크립트와 함께 사용해야 합니다. 예를 들어 라틴 글꼴의 경우 und-Latn\\fonts.css를 사용하고 키릴 글꼴의 경우 und-Cryl\\fonts.css를 사용합니다.
 
-### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>응용 프로그램 언어 목록을 만듭니다.
+### <a name="create-the-application-language-list"></a>응용 프로그램 언어 목록을 만듭니다.
 
 런타임 시, 시스템은 앱이 매니페스트에 대한 지원을 선언하는 사용자 언어 기본 설정을 결정하고 *응용 프로그램 언어 목록*을 만듭니다. 이 목록을 사용하여 응용 프로그램이 사용해야 할 언어를 결정합니다. 이 목록은 앱 및 시스템 리소스, 날짜, 시간, 숫자 및 기타 구성 요소에 대해 사용되는 언어를 결정합니다. 예를 들어 리소스 관리 시스템([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) 및 [**WinJS.Resources 네임스페이스**](https://msdn.microsoft.com/library/windows/apps/br229779))은 응용 프로그램 언어에 따라 UI 리소스를 로드합니다. 또한 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)은 응용 프로그램 언어 목록을 기반으로 형식을 선택합니다. 응용 프로그램 언어 목록은 [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396)를 통해 사용할 수 있습니다.
 
@@ -122,23 +124,23 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 예제는 아래의 설명 섹션을 참조하세요.
 
-### <span id="Set_the_HTTP_Accept_Language_header."></span><span id="set_the_http_accept_language_header."></span><span id="SET_THE_HTTP_ACCEPT_LANGUAGE_HEADER."></span>HTTP Accept Language 헤더를 설정합니다.
+### <a name="set-the-http-accept-language-header"></a>HTTP Accept Language 헤더를 설정합니다.
 
 일반 웹 요청 및 XHR(XMLHttpRequest)에서 Windows 스토어 앱 및 데스크톱 앱의 HTTP 요청에서는 표준 HTTP Accept-Language 헤더를 사용합니다. 기본적으로 HTTP 헤더는 **설정** &gt; **시간 및 언어** &gt; **국가 및 언어**에서 지정한 대로 사용자의 언어 선택(사용자가 선호하는 순서)으로 지정됩니다. 목록의 각 언어는 언어 중립과 가중치(q)를 포함하도록 확장됩니다. 예를 들어 fr-FR 및 en-US로 구성된 사용자의 언어 목록은 HTTP Accept-Language 헤더가 fr-FR, fr, en-US, en("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3")으로 나타납니다.
 
-### <span id="Use_the_APIs_in_the_Windows.Globalization_namespace."></span><span id="use_the_apis_in_the_windows.globalization_namespace."></span><span id="USE_THE_APIS_IN_THE_WINDOWS.GLOBALIZATION_NAMESPACE."></span>Windows.Globalization 네임스페이스의 API를 사용합니다.
+### <a name="use-the-apis-in-the-windowsglobalization-namespace"></a>Windows.Globalization 네임스페이스의 API를 사용합니다.
 
 일반적으로 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) 네임스페이스의 API 요소는 응용 프로그램 언어 목록을 사용하여 언어를 결정합니다. 일치하는 형식을 가진 언어가 없으면 사용자 로캘이 사용됩니다. 이 로캘은 시스템 시계에 사용된 것과 같습니다. 사용자 로캘은 **설정** &gt; **시간 및 언어** &gt; **지역 및 언어** &gt; **추가 날짜, 시간 및 국가별 설정** &gt; **지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. 또한 **Windows.Globalization** API는 응용 프로그램 언어 목록 대신 사용할 언어 목록을 지정하는 재정의를 수락합니다.
 
 또한 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)에는 도우미 개체로 제공되는 [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804) 개체가 있습니다. 이 개체를 통해 앱에서 언어에 대한 세부 정보(예: 언어 스크립트, 표시 이름, 기본 이름)를 검사할 수 있습니다.
 
-### <span id="Use_geographic_region_when_appropriate."></span><span id="use_geographic_region_when_appropriate."></span><span id="USE_GEOGRAPHIC_REGION_WHEN_APPROPRIATE."></span>필요할 경우 지리적 지역을 사용합니다.
+### <a name="use-geographic-region-when-appropriate"></a>필요할 경우 지리적 지역을 사용합니다.
 
 언어 대신 사용자 홈의 지리적 지역 설정을 사용하여 사용자에게 표시할 콘텐츠를 선택해야 합니다. 예를 들어 새 앱은 사용자의 홈 위치에서 콘텐츠를 표시하도록 기본 설정될 수 있습니다. 사용자의 홈 위치는 Windows를 설치할 때 설정되며 이전 작업에서 설명된 대로 Windows UI의 **지역: 날짜, 시간 또는 숫자 형식 변경**에서 사용할 수 있습니다. [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829)을 사용하여 현재 사용자 홈의 국가별 설정을 검색할 수 있습니다.
 
 또한 [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)에는 도우미 개체로 제공되는 [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795) 개체가 있습니다. 이 개체를 통해 앱에서 특정 지역에 대한 세부 정보(예: 표시 이름, 기본 이름, 사용 중인 통화)를 검색할 수 있습니다.
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>설명
+## <a name="remarks"></a>설명
 
 
 다음 표에는 다양한 언어 및 국가별 설정에 따라 앱의 UI로 표시되는 항목의 예가 나와 있습니다.
@@ -208,7 +210,7 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
  
 
-## <span id="related_topics"></span>관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [BCP-47 언어 태그](http://go.microsoft.com/fwlink/p/?linkid=227302)
@@ -224,6 +226,6 @@ Windows에서는 언어의 일치를 잘 이해할 수 있는 표준 방식으�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

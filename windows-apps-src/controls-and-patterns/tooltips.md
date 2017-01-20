@@ -6,16 +6,13 @@ ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1ed8bc2339b0616ea5e34b640bb572693d397cce
 
 
 ---
-# 도구 설명
+# <a name="tooltips"></a>도구 설명
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
-
 
 도구 설명은 다른 컨트롤이나 개체에 연결된 간단한 설명입니다. 도구 설명은 UI에서 직접 설명되지 않은 낯선 개체를 이해하는 데 도움을 줍니다. 도구 설명은 사용자가 포커스를 컨트롤로 이동하거나, 컨트롤을 길게 누르거나, 컨트롤을 마우스 포인터로 가리키면 자동으로 표시됩니다. 도구 설명은 몇 초 후에 또는 사용자가 손가락, 포인터 또는 키보드/게임 패드 포커스를 이동할 때 사라집니다.
 
@@ -24,17 +21,12 @@ ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br227608"><strong>ToolTip 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice"><strong>ToolTipService 클래스</strong></a></li>
+<li>[**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)</li>
+<li>[**ToolTipService 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.tooltipservice)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다. 도구 설명은 작업을 완료하려는 사용자에게 필요한 경우에만 사용해야 합니다. 경험상, 동일한 환경의 다른 곳에서 정보를 사용할 수 있는 경우에는 도구 설명이 필요하지 않습니다. 도구 설명은 불명확한 작업을 확실하게 설명합니다.
 
@@ -61,13 +53,13 @@ ms.openlocfilehash: 4110f902adf01e5e25ac674faf9be8faf61f4ea0
 -   **도구 설명이 사용자를 짜증나게 하거나 주의를 분산시키나요?**
     그렇다면 다른 해결 방법을 생각해 보세요. 아무것도 하지 않는 방법도 있습니다. 주의가 산만해질 수 있는 곳에 도구 설명을 사용하고 있다면 사용자가 끌 수 있도록 합니다.
 
-## 예제
+## <a name="example"></a>예제
 
 Bing 지도 앱의 도구 설명입니다.
 
 ![Bing 지도 앱의 도구 설명](images/control-examples/tool-tip-maps.png)
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   가능한 한 도구 설명을 사용하지 마세요. 도구 설명은 인터럽트입니다. 팝업처럼 도구 설명 때문에 주의가 분산될 수 있으므로 중요한 가치를 추가하지 않을 경우 사용하지 마세요.
 -   도구 설명 텍스트를 간결하게 유지합니다. 도구 설명은 짧은 문장과 문장 조각에 적합합니다. 큰 텍스트 블록은 지나칠 수 있으며 사용자가 읽기를 완료하기 전에 도구 설명이 시간 초과될 수도 있습니다.
@@ -78,12 +70,11 @@ Bing 지도 앱의 도구 설명입니다.
 -   대화형으로 보이는 이미지를 도구 설명에 넣지 마세요.
 
 관련 항목
------------------------------------------------
 
 * [**ToolTip 클래스**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

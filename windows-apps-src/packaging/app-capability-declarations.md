@@ -4,11 +4,11 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: "앱 접근 권한 값 선언"
 description: "사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 리소스 및 API에 액세스하려면 UWP(유니버설 Windows 플랫폼) 앱의 패키지 매니페스트에서 접근 권한 값을 선언해야 합니다."
 translationtype: Human Translation
-ms.sourcegitcommit: a86efd3e50be6a5cbe0271c1024d3b405fc0d160
-ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
+ms.sourcegitcommit: ece16df809e7f030c3cbb7a6ab5e727ae77614e3
+ms.openlocfilehash: 5b1052c8b20908cef431a4d1d144d5e8fe1a0eac
 
 ---
-# 앱 접근 권한 값 선언
+# <a name="app-capability-declarations"></a>앱 접근 권한 값 선언
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -28,7 +28,7 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 
 -   Microsoft 및 해당 파트너만 사용할 수 있는 제한된 접근 권한 값입니다.
 
-## 범용 접근 권한 값
+## <a name="general-use-capabilities"></a>범용 접근 권한 값
 
 범용 접근 권한 값은 대부분의 앱 시나리오에 적용됩니다.
 
@@ -55,7 +55,7 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 | **백그라운드 미디어 재생** | **backgroundMediaPlayback** 접근 권한 값은 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 및 [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/windows.media.audio.audiograph.aspx) 클래스 같은 미디어 관련 API의 동작을 변경하여 앱이 백그라운드에 있는 동안 미디어 재생을 사용하도록 설정합니다. 모든 활성 오디오 스트림은 더 이상 음소거되지 않고 앱이 백그라운드로 전환할 때 계속 들을 수 있습니다. 또한 재생 중 자동으로 앱 수명이 확장됩니다.
 | **원격 시스템** | **remoteSystem** 접근 권한 값을 통해 앱이 사용자의 Microsoft 계정과 연결된 디바이스 목록에 액세스할 수 있습니다. 디바이스 목록에 대한 액세스는 디바이스 간에 유지되는 모든 작업을 수행하는 데 필요합니다. 다음의 모든 멤버에 액세스하려면 이 접근 권한 값이 필요합니다.<br /><br />Windows.System.RemoteSystems 네임스페이스<br />Windows.System.RemoteLauncher 네임스페이스<br />AppServiceConnection.OpenRemoteAsync 메서드
 
-## 장치 접근 권한 값
+## <a name="device-capabilities"></a>장치 접근 권한 값
 
 장치 접근 권한 값은 앱이 주변 장치 및 내부 장치에 액세스할 수 있게 합니다. 장치 접근 권한 값은 앱 패키지 매니페스트의 **DeviceCapability** 요소를 사용하여 지정합니다. 이 요소에는 추가 자식 요소가 필요할 수 있으며 일부 장치 접근 권한 값을 패키지 매니페스트에 수동으로 추가해야 합니다. 자세한 내용은 [패키지 매니페스트에서 장치 접근 권한 값을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/Dn263092) 및 [**DeviceCapability Schema reference**](https://msdn.microsoft.com/library/windows/apps/BR211430)를 참조하세요.
 
@@ -74,11 +74,11 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 | **광 디스크** | **optical** 장치 기능을 통해 앱은 CD, DVD 및 블루레이와 같은 광 디스크 드라이브의 기능에 액세스할 수 있습니다.<br/>이 접근 권한 값은 [**Windows.Devices.Custom**](https://msdn.microsoft.com/library/windows/apps/Dn263667) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
 | **동작 활동** | **activity** 장치 기능을 통해 앱은 장치의 현재 동작을 감지할 수 있습니다.<br/>이 접근 권한 값은 [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408) 네임스페이스의 일부 API를 사용하는 데 필요합니다. |
 
-## 특수 및 제한된 접근 권한 값
+## <a name="special-and-restricted-capabilities"></a>특수 및 제한된 접근 권한 값
 
 예를 들어 사용자가 자신의 ID를 확인하는 디지털 인증서와 함께 스마트 카드를 제공하는 2단계 인증을 사용하는 뱅킹과 같이 이러한 접근 권한 값이 필요하고 적합한 경우가 있습니다. 다른 예로는 기본적으로 기업 고객용으로 디자인되고 사용자의 도메인 자격 증명 없이는 액세스할 수 없는 회사 리소스에 액세스해야 하는 앱을 들 수 있습니다.
 
-특수 용도 접근 권한 값을 적용하는 앱을 스토어에 제출하려면 회사 계정이 필요합니다. 그에 반해서, 제한된 접근 권한 값은 스토어에 대한 특별 회사 계정이 필요하지 않으며 개발자가 사용할 수 없습니다. 제한된 접근 권한 값은 Microsoft 및 해당 파트너가 개발한 앱에만 사용할 수 있습니다. 회사 계정에 대한 자세한 내용은 [계정 유형, 위치 및 요금](https://msdn.microsoft.com/library/windows/apps/JJ863494)을 참조하세요.
+특수 용도 접근 권한 값을 선언하는 앱을 스토어에 제출하려면 회사 계정이 필요합니다. 반면, 제한된 접근 권한 값은 스토어 제출을 위한 특별 회사 계정이 필요 없습니다. 제한된 접근 권한 값은 개발자가 앱에서 사용할 수 있지만 스토어에 제출하려면 승인이 필요합니다. 회사 계정에 대한 자세한 내용은 [계정 유형, 위치 및 요금](https://msdn.microsoft.com/library/windows/apps/JJ863494)을 참조하세요. 
 
 제한된 모든 접근 권한 값은 앱의 패키지 매니페스트에서 다른 접근 권한 값과 다르게 선언할 경우 **rescap** 네임스페이스를 포함해야 합니다. 다음 예제에서는 **appCaptureSettings** 접근 권한 값을 선언하는 방법을 보여 줍니다.
 
@@ -117,7 +117,7 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 | **장치 잠금 해제** | **deviceUnlock** 제한된 접근 권한 값을 통해 앱은 개발자 및 엔터프라이즈 테스트용 로드 시나리오에 대해 장치의 잠금을 해제할 수 있습니다.<br /><br /> 스토어 제출에 대해 어떤 사용자도 이 접근 권한 값에 대한 액세스 권한을 요청할 수 없습니다.
 | **듀얼 SIM 타일** | **dualSimTiles** 제한된 접근 권한 값을 통해 앱은 SIM이 여러 개인 장치에서 추가 앱 목록 항목을 만들 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.UI.StartScreen**](https://msdn.microsoft.com/library/windows/apps/BR242235) 네임스페이스의 일부 API를 사용하는 데 필요합니다. <br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
 | **엔터프라이즈 공유 저장소** | **enterpriseDeviceLockdown** 제한된 접근 권한 값을 통해 앱은 장치 잠금 API를 사용하고 엔터프라이즈 공유 저장소 폴더에 액세스할 수 있습니다. <br /><br />스토어 제출에 대해 어떤 사용자도 이 접근 권한 값에 대한 액세스 권한을 요청할 수 없습니다.
-| **시스템 입력 주입** | **inputInjection** 제한된 접근 권한 값을 통해 앱은 HID, 터치, 펜, 키보드 또는 마우스와 같은 다양한 형식의 입력을 프로그래밍 방식으로 시스템에 주입할 수 있습니다. 이 접근 권한 값은 일반적으로 시스템을 제어할 수 있는 협업 앱에 사용됩니다.<br /><br /><div class="alert">**참고** PC의 경우 이 기능이 있는 앱의 입력 주입은 동일한 앱 컨테이너의 프로세스에서만 수신됩니다.</div><br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
+| **시스템 입력 주입** | **inputInjection** 제한된 접근 권한 값을 통해 앱은 HID, 터치, 펜, 키보드 또는 마우스와 같은 다양한 형식의 입력을 프로그래밍 방식으로 시스템에 주입할 수 있습니다. 이 접근 권한 값은 일반적으로 시스템을 제어할 수 있는 협업 앱에 사용됩니다.<br /><br /><div class="alert">**참고**  PC의 경우 이 기능이 있는 앱의 입력 주입은 동일한 앱 컨테이너의 프로세스에서만 수신됩니다.</div><br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
 | **입력 관찰**\* | **inputObservation** 제한된 접근 권한 값을 통해 앱은 최종 대상과 관계없이 시스템에서 수신되는 HID, 터치, 펜, 키보드 또는 마우스와 같은 다양한 형식의 원시 입력을 관찰할 수 있습니다. <br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
 | **입력 표시 안 함** | **inputSuppression** 제한된 접근 권한 값을 통해 앱은 HID, 터치, 펜, 키보드 또는 마우스와 같은 다양한 형식의 원시 입력을 시스템에서 받지 않도록 할 수 있습니다. <br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
 | **VPN 앱** | **networkingVpnProvider** 제한된 접근 권한 값을 통해 앱은 연결을 관리하고 VPN 플러그 인 기능을 제공하는 기능을 비롯한 VPN 기능에 대한 모든 권한을 가질 수 있습니다.<br /><br />이 접근 권한 값은 [**Windows.Networking.Vpn**](https://msdn.microsoft.com/library/windows/apps/Dn434040) 네임스페이스의 일부 API를 사용하는 데 필요합니다. <br /><br />스토어 제출에 대해 모든 사용자가 이 접근 권한 값에 대한 액세스 권한을 요청할 수 있습니다.
@@ -168,7 +168,7 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 **참고**  
 이 문서는 UWP 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [매니페스트 디자이너](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx)
 * [개인 정보 인식 앱에 대한 지침](https://msdn.microsoft.com/library/windows/apps/Hh768223)
@@ -178,6 +178,6 @@ ms.openlocfilehash: 100d1b94dec44cbf00d4a3cacd6aa74f94c20d9c
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

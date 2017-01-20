@@ -4,9 +4,15 @@ Description: "Cortana 음성 명령, 음성 인식, 음성 합성을 사용하�
 title: "Surface Dial 조작"
 label: Surface Dial interactions
 template: detail.hbs
+keywords: "Surface Dial, Windows 휠, RadialController, Radial controller, 사용자 조작, 입력"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: 08ac5d58f2650306b162e4dec7f4e606543ca80f
+ms.sourcegitcommit: eb86863d6ce2e545b3e534ef6cafb220904e3dc8
+ms.openlocfilehash: 96b9a2e213c36b8f92664185e9cdcaea6d457368
 
 ---
 
@@ -24,7 +30,7 @@ Surface Dial 등의 Windows Wheel 디바이스는 Windows 및 Windows 앱을 위
 
 | 비디오 |   |
 | --- | --- |
-| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe width="300" height="200" src="https://www.youtube.com/embed/2tajuOfs9p0" frameborder="0" allowfullscreen></iframe> |
+| <iframe width="300" height="200" src="https://www.youtube.com/embed/WMklcdzcNcU" frameborder="0" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
 | *Surface Dial 앱 파트너* | *개발자용 Surface Dial* |
 
 *회전* 작업(또는 제스처) 기반의 폼 팩터를 사용하는 Surface Dial은 기본 디바이스의 입력을 보완하는 보조 다중 모달 입력 디바이스로 고안되었습니다. 대부분의 경우에서 주요 손으로 작업을 수행하면서 나머지 손으로 이 디바이스를 조작합니다(예: 펜으로 수동 입력 수행). 즉, 정밀 포인터 입력(예: 터치, 펜 또는 마우스)용으로 고안되지 않았습니다. 
@@ -169,13 +175,13 @@ Surface Dial 메뉴 항목은 비활성된 상태를 지원하지 않기 때문�
 
 2. 그런 다음 코드 숨김 방식으로 Surface Dial 메뉴에 사용자 지정 도구를 추가하 고 [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 입력 처리기를 선언합니다. 
 
-   [**CreateForCurrentView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.CreateForCurrentView)를 호출하여 Surface Dial에 대한 [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 개체(myController)에 대한 참조를 가져옵니다.
+   [**CreateForCurrentView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController)를 호출하여 Surface Dial에 대한 [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.CreateForCurrentView) 개체(myController)에 대한 참조를 가져옵니다.
 
-   그런 후 [**RadialControllerMenuItem.CreateFromIcon**](https://msdn.microsoft.com/library/windows/apps/mt759255)을 호출하여 [**RadialControllerMenuItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem)(myItem)의 인스턴스를 만듭니다. 
+   그런 후 [**RadialControllerMenuItem.CreateFromIcon**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerMenuItem)을 호출하여 [**RadialControllerMenuItem**](https://msdn.microsoft.com/library/windows/apps/mt759255)(myItem)의 인스턴스를 만듭니다. 
 
    다음으로 메뉴 항목 컬렉션에 해당 항목을 추가합니다.
 
-   [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 개체에 대한 입력 이벤트 처리기([**ButtonClicked**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.ButtonClicked) 및 [**RotationChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationChanged))를 선언합니다.
+   [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.ButtonClicked) 개체에 대한 입력 이벤트 처리기([**ButtonClicked**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationChanged) 및 [**RotationChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController))를 선언합니다.
 
    마지막으로, 이벤트 처리기를 정의합니다.
 
@@ -311,18 +317,18 @@ Surface Dial은 어느 쪽 손을 사용하고 있는지 감지할 수 없으나
 
 |   |   |   |
 | --- | --- | --- |
-| 왼쪽<br/>Up<br/>Out | ![Surface Dial 이미지](images/windows-wheel/surface-dial-rotate.png) | 오른쪽<br/>아래<br/>검색에 |
+| 왼쪽<br/>위쪽<br/>바깥쪽 | ![Surface Dial 이미지](images/windows-wheel/surface-dial-rotate.png) | 오른쪽<br/>아래쪽<br/>안쪽 |
 |   |   |   |
 
 | 개념적 방향 | Surface Dial에 매핑 | 시계 방향 회전 | 시계 반대 방향 회전 |
 | --- | --- | --- | --- |
 | 수평 | Surface Dial 위쪽 기준으로 왼쪽 및 오른쪽 매핑 | 오른쪽 | 왼쪽 |
-| 수직 | Surface Dial 왼쪽 기준으로 위쪽 및 아래쪽 매핑 | 아래 | Up |
-| Z축 | 위쪽/오른쪽에 안쪽으로(또는 가깝게) 매핑<br/>아래쪽/왼쪽에 바깥쪽으로(또는 멀게) 매핑 | 검색에 | Out |
+| 수직 | Surface Dial 왼쪽 기준으로 위쪽 및 아래쪽 매핑 | 아래쪽 | 위쪽 |
+| Z축 | 위쪽/오른쪽에 안쪽으로(또는 가깝게) 매핑<br/>아래쪽/왼쪽에 바깥쪽으로(또는 멀게) 매핑 | 안쪽 | 바깥쪽 |
 
 #### <a name="developer-guidance"></a>개발자 참고 자료
 
-사용자가 디바이스를 회전하면 회전 방향에 상대적으로 델타([**RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees))[**RadialController.RotationChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationChanged)를 기준으로 발생합니다. 데이터의 민감도(또는 해상도)는 [**RadialController.RotationResolutionInDegrees**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationResolutionInDegrees) 속성을 사용하여 설정할 수 있습니다.
+사용자가 디바이스를 회전하면 회전 방향에 상대적으로 델타([**RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationChanged))[**RadialController.RotationChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialControllerRotationChangedEventArgs.RotationDeltaInDegrees)를 기준으로 발생합니다. 데이터의 민감도(또는 해상도)는 [**RadialController.RotationResolutionInDegrees**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController.RotationResolutionInDegrees) 속성을 사용하여 설정할 수 있습니다.
 
 > [!NOTE]
 > 기본적으로 회전 입력 이벤트는 디바이스가 최소 10도로 회전될 때만 [**RadialController**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Input.RadialController) 개체로 전달됩니다. 각 입력 이벤트로 인해 디바이스가 진동합니다.
@@ -662,6 +668,6 @@ private void ActivateGridAtLocation(Point Location)
 [Windows 클래식 데스크톱 샘플](https://aka.ms/radialcontrollerclassicsample)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

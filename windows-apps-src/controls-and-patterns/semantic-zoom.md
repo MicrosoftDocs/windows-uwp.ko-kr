@@ -6,11 +6,11 @@ ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: b3ca48b678fb4e1ddb4b26ad7add723474527591
 
 ---
-# 시맨틱 줌
+# <a name="semantic-zoom"></a>시맨틱 줌
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -24,18 +24,11 @@ ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/hh702601"><strong>SemanticZoom 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx"><strong>ListView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx"><strong>GridView 클래스</strong></a></li>
+<li>[**SemanticZoom 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702601)</li>
+<li>[**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
-
 
 **기능**:
 
@@ -43,13 +36,13 @@ ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
 -   그룹 헤더를 탭하면 보기가 전환됩니다. 보기 간에 전환하는 방법으로 손가락 모으기를 사용할 수 있습니다.
 -   활성 헤더는 보기 간에 전환합니다.
 
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 **SemanticZoom** 컨트롤은 하나 또는 두 페이지에 모두 표시할 수 없을 정도로 큰 그룹화된 데이터 집합 그룹을 표시해야 할 때 필요합니다.
 
 시맨틱 줌을 광학 줌과 혼동하지 마세요. 두 확대 방식은 조작 방식과 기본 동작(확대 축소 비율에 따라 더 많이 또는 더 자세히 표시)은 같지만, 광학 줌은 사진처럼 개체나 콘텐츠 영역에 대해 배율을 조정하는 것을 의미합니다. 광학 줌을 수행하는 컨트롤에 대한 정보는 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) 컨트롤을 참조하세요.
 
-## 예제
+## <a name="examples"></a>예제
 
 **사진 앱**
 
@@ -63,7 +56,7 @@ ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
 
 ![연락처 목록에 사용된 시맨틱 줌의 예](images/semanticzoom-win10.png)
 
-## 시맨틱 줌 만들기
+## <a name="create-a-semantic-zoom"></a>시맨틱 줌 만들기
 
 **SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 두 가지 다른 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [**ZoomedInView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedinview.aspx) 및 [**ZoomedOutView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.zoomedoutview.aspx) 속성으로 설정합니다.
 
@@ -74,7 +67,7 @@ ms.openlocfilehash: 125cb6e45defe3213af3f5cd20f524a5311241af
 
 시맨틱 줌을 사용하기 전에 그룹화된 데이터를 사용하여 목록 보기를 사용하는 방법을 이해해야 합니다. 자세한 내용은 [목록 보기 및 그리드 보기](listview-and-gridview.md) 및 [목록의 항목 그룹화]()를 참조하세요. 
 
-> **참고**  SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [**ISemanticZoomInformation**]() 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView 및 Hub)을 제공합니다.
+> **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [**ISemanticZoomInformation**]() 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView 및 Hub)을 제공합니다.
  
  이 XAML은 SemanticZoom 컨트롤의 구조를 보여 줍니다. ZoomedInView 및 ZoomedOutView 속성에 다른 컨트롤을 할당합니다.
  
@@ -182,7 +175,7 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 }
 ```
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   앱에서 시맨틱 줌을 사용하는 경우 항목 레이아웃 및 이동 방향이 확대/축소 수준에 따라 변경되지 않아야 합니다. 레이아웃 및 이동 조작 방식은 확대/축소 수준이 달라져도 일관되고 예측 가능해야 합니다.
 -   시맨틱 줌을 사용하면 콘텐츠로 신속하게 이동할 수 있으므로 축소 모드에서는 페이지/화면 수를 3개 이내로 제한합니다. 이동을 너무 많이 하면 시맨틱 줌의 실용성이 떨어집니다.
@@ -191,17 +184,18 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 -   그룹화된 모음에 포함된 항목에는 그룹 이름을 사용합니다.
 -   그룹화되지 않았지만 정렬된 컬렉션에는 정렬 순서(예: 날짜의 경우 시간순 또는 명단의 경우 사전순)를 사용합니다.
 
-## 관련 문서
+
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+
+- [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)
+
+
+## <a name="related-articles"></a>관련 문서
 
 - [탐색 디자인 기본 사항](../layout/navigation-basics.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [목록 보기 항목 템플릿](listview-item-templates.md)
 
-**샘플**
-
-- [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619992)
-
- 
 
 
 
@@ -209,6 +203,6 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

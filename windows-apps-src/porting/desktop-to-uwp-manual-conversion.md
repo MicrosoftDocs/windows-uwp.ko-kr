@@ -4,8 +4,8 @@ Description: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱
 Search.Product: eADQiWindows 10XVcnh
 title: "UWP(유니버설 Windows 플랫폼) 앱으로 Windows 데스크톱 응용 프로그램을 수동으로 변환"
 translationtype: Human Translation
-ms.sourcegitcommit: ee697323af75f13c0d36914f65ba70f544d046ff
-ms.openlocfilehash: f55f3bd6479cdf076c51cf574b07bfb5ce3a805c
+ms.sourcegitcommit: b612b2c94de79f48a375ae3469c35dee6ce3939d
+ms.openlocfilehash: 73f30d564fcec1b748b4d59ff545e25b62b1c719
 
 ---
 
@@ -57,25 +57,11 @@ _appxmanifest.xml_ 파일에 적어도 다음 내용이 포함되어야 합니�
     </Package>
 ```
 
-## <a name="add-unplated-assets"></a>판이 없는 자산 추가
-
-작업 표시줄에 표시되는 44x44 자산을 앱에 대해 구성하는 방법은 다음과 같습니다.
-
-1. 올바른 44x44 이미지를 가져와 이미지가 들어 있는 폴더(즉, Assets)에 복사합니다.
-
-2. 각 44x44 이미지의 복사본을 동일한 폴더에서 만들고 파일 이름에 *.targetsize-44_altform-unplated*를 추가합니다. 아이콘마다 각각 특정 방식으로 이름이 지정된 두 복사본이 있어야 합니다. 예를 들어 프로세스를 완료한 후 Assets 폴더에 *MYAPP_44x44.png* 및 *MYAPP_44x44.targetsize-44_altform-unplated.png*가 포함될 수 있습니다(참고: 전자는 appxmanifest의 VisualElements 특성 *Square44x44Logo* 아래에서 참조되는 아이콘임). 
-
-3.  AppXManifest에서 수정할 각 아이콘의 BackgroundColor를 투명으로 설정합니다. 이 특성은 각 응용 프로그램에 대해 VisualElements 아래에서 찾을 수 있습니다.
-
-4.  CMD를 열고 디렉터리를 패키지의 루트 폴더로 변경한 다음 ```makepri createconfig /cf priconfig.xml /dq en-US``` 명령을 실행하여 priconfig.xml 파일을 만듭니다.
-
-5.  CMD를 통해 계속 패키지의 루트 폴더에서 ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` 명령을 사용하여 resources.pri 파일을 만듭니다. 예를 들어 앱에 대한 명령은 ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```과 같을 수 있습니다. 
-
-6.  다음 단계의 지침에 따라 AppX를 패키징하여 결과를 확인합니다.
+판이 없는 자산을 추가하려고 하십니까? 이 문서의 뒷부분에 나오는 [판이 없는 자산](#unplated-assets) 섹션에서 자세한 방법을 참조하세요.
 
 ## <a name="run-the-makeappx-tool"></a>MakeAppX 도구 실행
 
-[앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 사용하여 프로젝트의 AppX 프로젝트를 생성합니다. MakeAppx.exe는 Windows 10 SDK에 함께 포함되어 있습니다. 
+[앱 패키지 작성 도구(MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)를 사용하여 프로젝트의 AppX를 생성합니다. MakeAppx.exe는 Windows 10 SDK에 함께 포함되어 있습니다. 
 
 MakeAppx를 실행하려면 먼저 위에 설명된 대로 매니페스트 파일을 만들었는지 확인합니다. 
 
@@ -99,21 +85,35 @@ MakeAppx.exe pack /f mapping_filepath /p filepath.appx
 
 Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.appx)가 서명되어야 합니다. .appx 패키지를 서명하려면 Microsoft Windows 10 SDK에서 제공된 [SignTool.exe](https://msdn.microsoft.com/library/windows/desktop/aa387764(v=vs.85).aspx)를 사용합니다.
 
-사용 예제: 
+예제 사용법: 
 
 ```cmd
 C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -sv <my.pvk> <my.cer>
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-
 MakeCert.exe를 실행하고 암호를 입력하라는 메시지가 표시되면 **없음**을 선택합니다. 인증서와 서명에 대한 자세한 내용은 다음을 참조하세요. 
 
-- [개발 중 사용할 임시 인증서를 만드는 방법](https://msdn.microsoft.com/library/ms733813.aspx)
-
+- [방법: 개발 중 사용할 임시 인증서 만들기](https://msdn.microsoft.com/library/ms733813.aspx)
 - [SignTool](https://msdn.microsoft.com/library/windows/desktop/aa387764.aspx)
-
 - [SignTool.exe(서명 도구)](https://msdn.microsoft.com/library/8s9b9yaz.aspx)
+
+<span id="unplated-assets" />
+## <a name="add-unplated-assets"></a>판이 없는 자산 추가
+
+필요에 따라 작업 표시줄에 표시되는 앱의 44x44 자산을 구성하는 방법은 다음과 같습니다. 
+
+1. 올바른 44x44 이미지를 가져와 이미지가 들어 있는 폴더(즉, Assets)에 복사합니다.
+
+2. 각 44x44 이미지의 복사본을 동일한 폴더에서 만들고 파일 이름에 *.targetsize-44_altform-unplated*를 추가합니다. 아이콘마다 각각 특정 방식으로 이름이 지정된 두 복사본이 있어야 합니다. 예를 들어 프로세스를 완료한 후 Assets 폴더에 *MYAPP_44x44.png* 및 *MYAPP_44x44.targetsize-44_altform-unplated.png*가 포함될 수 있습니다(참고: 전자는 appxmanifest의 VisualElements 특성 *Square44x44Logo* 아래에서 참조되는 아이콘임). 
+
+3.  AppXManifest에서 수정할 각 아이콘의 BackgroundColor를 투명으로 설정합니다. 이 특성은 각 응용 프로그램에 대해 VisualElements 아래에서 찾을 수 있습니다.
+
+4.  CMD를 열고 디렉터리를 패키지의 루트 폴더로 변경한 다음 ```makepri createconfig /cf priconfig.xml /dq en-US``` 명령을 실행하여 priconfig.xml 파일을 만듭니다.
+
+5.  CMD를 통해 계속 패키지의 루트 폴더에서 ```makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``` 명령을 사용하여 resources.pri 파일을 만듭니다. 예를 들어 앱에 대한 명령은 ```makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml```과 같을 수 있습니다. 
+
+6.  다음 단계의 지침에 따라 AppX를 패키징하여 결과를 확인합니다.
 
 
 

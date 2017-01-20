@@ -4,8 +4,8 @@ ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "선택기를 사용하여 파일 및 폴더 열기"
 description: "사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
+ms.sourcegitcommit: 99a21818fc3b8552de18792f408da860bf6dea22
+ms.openlocfilehash: 08782286228fa25dc492b0e7ccc90958bdec5a7f
 
 ---
 
@@ -23,9 +23,7 @@ ms.openlocfilehash: e7884f140915d66b4a9f95a4197e717d63b0f25f
 
 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 및 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
 
-**참고** 전체 샘플에 대해서는 [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
-
- 
+**참고**  전체 샘플에 대해서는 [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -95,63 +93,63 @@ else
 
 1.  **FileOpenPicker 만들기 및 사용자 지정**
 
-```CSharp
-var picker = new Windows.Storage.Pickers.FileOpenPicker();
-    picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation =
-        Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
-    picker.FileTypeFilter.Add(".jpg");
-    picker.FileTypeFilter.Add(".jpeg");
-    picker.FileTypeFilter.Add(".png");
-```
+    ```CSharp
+    var picker = new Windows.Storage.Pickers.FileOpenPicker();
+        picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+        picker.SuggestedStartLocation =
+            Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+        picker.FileTypeFilter.Add(".jpg");
+        picker.FileTypeFilter.Add(".jpeg");
+        picker.FileTypeFilter.Add(".png");
+    ```
 
-사용자 및 앱과 관련된 파일 선택기 개체에서 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465182)을 참조하세요.
+    사용자 및 앱과 관련된 파일 선택기 개체에서 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://msdn.microsoft.com/library/windows/apps/hh465182)을 참조하세요.
 
-이 예제에서는 세 가지 속성([**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) 및 [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850))을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 표시를 만듭니다.
+    이 예제에서는 세 가지 속성([**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855), [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) 및 [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850))을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 표시를 만듭니다.
 
--   [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855)를 [**PickerViewMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) **Thumbnail** 열거 값으로 설정하면 사진 미리 보기를 사용하여 파일 선택기에 파일을 표시함으로써 풍부한 시각적 표시가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
+    -   [**ViewMode**](https://msdn.microsoft.com/library/windows/apps/br207855)를 [**PickerViewMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#thumbnail) **Thumbnail** 열거 값으로 설정하면 사진 미리 보기를 사용하여 파일 선택기에 파일을 표시함으로써 풍부한 시각적 표시가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.storage.pickers.pickerviewmode.aspx#list)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
 
--   [**PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207890)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+    -   [**PickerLocationId.PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br207854)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207890)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
--   [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](https://msdn.microsoft.com/library/windows/apps/br207834) 대신 [**ReplaceAll**](https://msdn.microsoft.com/library/windows/apps/br207844)을 사용합니다.
+    -   [**FileTypeFilter**](https://msdn.microsoft.com/library/windows/apps/br207850)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](https://msdn.microsoft.com/library/windows/apps/br207844) 대신 [**ReplaceAll**](https://msdn.microsoft.com/library/windows/apps/br207834)을 사용합니다.
 
 2.  **FileOpenPicker 표시**
 
-    -   **단일 파일을 선택하려면**
+    - **단일 파일을 선택하려면**
 
-```CSharp
-Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
-        if (file != null)
-        {
-            // Application now has read/write access to the picked file
-            this.textBlock.Text = "Picked photo: " + file.Name;
-        }
-        else
-        {
-            this.textBlock.Text = "Operation cancelled.";
-        }
-```
-
-    -   **여러 파일을 선택하려면**
-
-```CSharp
-var files = await picker.PickMultipleFilesAsync();
-        if (files.Count > 0)
-        {
-            StringBuilder output = new StringBuilder("Picked files:\n");
-
-            // Application now has read/write access to the picked file(s)
-            foreach (Windows.Storage.StorageFile file in files)
+    ```CSharp
+    Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
             {
-                output.Append(file.Name + "\n");
+                // Application now has read/write access to the picked file
+                this.textBlock.Text = "Picked photo: " + file.Name;
             }
-            this.textBlock.Text = output.ToString();
-        }
-        else
-        {
-            this.textBlock.Text = "Operation cancelled.";
-        }
-```
+            else
+            {
+                this.textBlock.Text = "Operation cancelled.";
+            }
+    ```
+
+    - **여러 파일을 선택하려면**  
+
+    ```CSharp
+    var files = await picker.PickMultipleFilesAsync();
+            if (files.Count > 0)
+            {
+                StringBuilder output = new StringBuilder("Picked files:\n");
+
+                // Application now has read/write access to the picked file(s)
+                foreach (Windows.Storage.StorageFile file in files)
+                {
+                    output.Append(file.Name + "\n");
+                }
+                this.textBlock.Text = output.ToString();
+            }
+            else
+            {
+                this.textBlock.Text = "Operation cancelled.";
+            }
+    ```
 
 ## <a name="pick-a-folder-complete-code-listing"></a>폴더 선택: 전체 코드 목록
 
@@ -159,6 +157,7 @@ var files = await picker.PickMultipleFilesAsync();
 ```CSharp
 var folderPicker = new Windows.Storage.Pickers.FolderPicker();
 folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
+folderPicker.FileTypeFilter.Add("*");
 
 Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
 if (folder != null)
@@ -175,16 +174,9 @@ else
 }
 ```
 
-**팁** 앱이 선택기를 통해 파일 또는 폴더에 액세스할 경우 해당 항목을 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 또는 [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)에 추가하여 추적합니다. 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [최근에 사용한 파일 및 폴더를 추적하는 방법](how-to-track-recently-used-files-and-folders.md)을 참조하세요.
-
- 
-
- 
-
- 
+**팁**  앱이 선택기를 통해 파일 또는 폴더에 액세스할 경우 해당 항목을 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 또는 [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)에 추가하여 추적합니다. 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [최근에 사용한 파일 및 폴더를 추적하는 방법](how-to-track-recently-used-files-and-folders.md)을 참조하세요.
 
 
-
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

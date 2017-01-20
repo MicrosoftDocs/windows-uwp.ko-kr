@@ -1,33 +1,42 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다."
-title: "입력 디바이스 식별"
+Description: "UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별하고 해당 기능 및 특성을 식별합니다."
+title: "입력 장치 식별"
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
+keywords: "장치, 디지타이저, 입력, 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: df416821ad67a8eaf8a8a31879b6a1d39526df14
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 20230362a38d4541fbed25ac822c96032f7b6d8f
 
 ---
 
-# 입력 장치 식별
+# <a name="identify-input-devices"></a>입력 장치 식별
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-UWP(유니버설 Windows 플랫폼) 디바이스에 연결된 입력 디바이스를 식별하고 해당 기능 및 특성을 식별합니다.
+UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별하고 해당 기능 및 특성을 식별합니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-
-## 마우스 속성 검색
+## <a name="retrieve-mouse-properties"></a>마우스 속성 검색
 
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 하나 이상의 연결된 마우스가 제공하는 속성을 검색하는 데 사용되는 [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) 클래스가 포함되어 있습니다. 새 **MouseCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고** 여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 마우스를 기반으로 합니다. 하나 이상의 마우스가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 마우스 하나가 제공하는 최대값을 반환합니다.
+**참고**  여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 마우스를 기반으로 합니다. 하나 이상의 마우스가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 마우스 하나가 제공하는 최대값을 반환합니다.
 
  
 
@@ -45,7 +54,7 @@ private void GetMouseProperties()
 }
 ```
 
-## 키보드 속성 검색
+## <a name="retrieve-keyboard-properties"></a>키보드 속성 검색
 
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 키보드가 연결되었는지 여부를 검색하는 데 사용되는 [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) 클래스가 포함되어 있습니다. 새 **KeyboardCapabilities** 개체를 만들고 [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625) 속성을 가져옵니다.
@@ -60,12 +69,12 @@ private void GetKeyboardProperties()
 }
 ```
 
-## 터치 속성 검색
+## <a name="retrieve-touch-properties"></a>터치 속성 검색
 
 
 [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 터치 디지타이저가 연결되었는지 여부를 검색하는 데 사용되는 [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) 클래스가 포함되어 있습니다. 새 **TouchCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고** 여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 터치 디지타이저를 기반으로 합니다. 하나 이상의 디지타이저가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 디지타이저 하나가 제공하는 최대값을 반환합니다.
+**참고**  여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 터치 디지타이저를 기반으로 합니다. 하나 이상의 디지타이저가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 디지타이저 하나가 제공하는 최대값을 반환합니다.
 
  
 
@@ -80,16 +89,16 @@ private void GetTouchProperties()
 }
 ```
 
-## 포인터 속성 검색
+## <a name="retrieve-pointer-properties"></a>포인터 속성 검색
 
 
-[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 감지된 디바이스 지원 포인터 입력(터치, 터치 패드, 마우스 또는 펜)을 지원하는 디바이스가 연결되어 있는지 여부를 검색하는 데 사용되는 [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) 클래스가 포함되어 있습니다. 새 **PointerDevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
+[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) 네임스페이스에는 감지된 장치 지원 포인터 입력(터치, 터치 패드, 마우스 또는 펜)을 지원하는 장치가 연결되어 있는지 여부를 검색하는 데 사용되는 [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) 클래스가 포함되어 있습니다. 새 **PointerDevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고** 여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 포인터 디바이스를 기반으로 합니다. 하나 이상의 디바이스가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 포인터 디바이스 하나가 제공하는 최대값을 반환합니다.
+**참고**  여기에 설명된 속성에 의해 반환되는 값은 감지된 모든 포인터 장치를 기반으로 합니다. 하나 이상의 장치가 특정 접근 권한 값을 지원하는 경우에는 부울 속성이 0이 아닌 값을 반환하고 숫자 속성이 포인터 장치 하나가 제공하는 최대값을 반환합니다.
 
  
 
-다음 코드에서는 표를 사용하여 각 포인터 디바이스의 속성과 값을 표시합니다.
+다음 코드에서는 표를 사용하여 각 포인터 장치의 속성과 값을 표시합니다.
 
 ```CSharp
 private void GetPointerDevices()
@@ -176,7 +185,7 @@ private void GetPointerDevices()
     }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 **샘플**
@@ -185,7 +194,7 @@ private void GetPointerDevices()
 * [사용자 조작 모드 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 
 **보관 샘플**
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
  
 
  
@@ -196,6 +205,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

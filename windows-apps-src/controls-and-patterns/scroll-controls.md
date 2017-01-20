@@ -6,11 +6,11 @@ ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 8ead56e84e21aaf5005530ed0509efa9440bce59
 
 ---
-# 스크롤 막대
+# <a name="scroll-bars"></a>스크롤 막대
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,33 +18,30 @@ ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
 
 스크롤 뷰어 컨트롤은 뷰포트에 맞춰질 만큼 많은 콘텐츠와 한두 개 스크롤 막대로 구성됩니다. 터치 제스처를 사용하여 이동 및 확대/축소할 수 있고(스크롤 막대는 조작 중에만 사라짐) 포인터를 사용하여 스크롤할 수 있습니다. 긋기 제스처는 관성을 사용하여 이동합니다.
 
-**참고** Windows에는 사용자의 입력 모드를 기반으로 하는 두 개의 모두 보기 시각화(터치 또는 게임 패드 사용 시 스크롤 표시기 및 마우스, 키보드, 펜 등의 기타 입력 디바이스용 대화형 스크롤 막대)가 있습니다.
+**참고**  Windows에는 사용자의 입력 모드를 기반으로 하는 두 개의 모두 보기 시각화(터치 또는 게임 패드 사용 시 스크롤 표시기 및 마우스, 키보드, 펜 등의 기타 입력 장치용 대화형 스크롤 막대)가 있습니다.
 
 ![표준 스크롤 막대 및 이동 표시기 컨트롤의 모양 샘플](images/SCROLLBAR.png)
 
+<div class="microsoft-internal-note">
+[Design Depot](http://designdepot/DesignDepot.FrontEnd/#/ML/Dashboard/1805)에서 전체 검토 보기
+</div>
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209527"><strong>ScrollViewer 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx"><strong>ScrollBar 클래스</strong></a></li>
+<li>[**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)</li>
+<li>[**ScrollBar 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.scrollbar.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## 예제
+## <a name="examples"></a>예제
 
 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx)를 사용하면 실제 크기보다 작은 영역에 콘텐츠를 표시할 수 있습니다. 스크롤 뷰어의 콘텐츠를 완전히 볼 수 없는 경우 스크롤 뷰어에 표시되는 스크롤 막대를 사용하여 표시되는 콘텐츠 영역을 이동할 수 있습니다. 스크롤 뷰어의 모든 콘텐츠가 포함된 영역은 *범위*입니다. 표시되는 콘텐츠 영역은 *뷰포트*입니다.
 
 ![표준 스크롤 막대 컨트롤을 보여 주는 스크린샷](images/ScrollBar_Standard.jpg)
 
-## 스크롤 뷰어 만들기
+## <a name="create-a-scroll-viewer"></a>스크롤 뷰어 만들기
 페이지에 세로 스크롤을 추가하려면 스크롤 뷰어에 페이지 콘텐츠를 래핑하세요.
 
 ```xaml
@@ -72,7 +69,7 @@ ms.openlocfilehash: 3dd5912bdd210751257bb9e495c5a95ce0be20a5
 </ScrollViewer>
 ```
 
-## 컨트롤 템플릿의 ScrollViewer
+## <a name="scrollviewer-in-a-control-template"></a>컨트롤 템플릿의 ScrollViewer
 
 ScrollViewer 컨트롤은 다른 컨트롤의 복합 파트로 사용되는 것이 일반적입니다. ScrollViewer 파트는 호스트 컨트롤의 레이아웃 공간이 확장된 콘텐츠 크기보다 더 작게 제한되는 경우에만 지원용 [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx) 클래스와 더불어 스크롤 막대와 함께 뷰포트를 표시합니다. 종종 목록에도 이러한 경우가 발생하므로 [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx) 템플릿에는 항상 ScrollViewer가 포함됩니다. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) 및 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)의 템플릿에도 ScrollViewer가 포함됩니다.
 
@@ -108,7 +105,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 예제 코드와 같이 ScrollViewer가 XAML에서 명시적인 경우에는 연결된 속성 구문을 사용할 필요가 없습니다. 특성 구문을 사용하면 됩니다(예: `<ScrollViewer VerticalScrollBarVisibility="Visible"/>`).
 
 
-## 권장 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 -   가능하면 가로가 아닌 세로 스크롤로 디자인합니다.
 -   하나의 뷰포트 경계(세로 또는 가로)를 넘어가는 콘텐츠 영역에는 단일 축 이동을 사용합니다. 두 뷰포트 경계(세로 또는 가로)를 모두 넘어가는 콘텐츠 영역에는 2축 이동을 사용합니다.
@@ -118,13 +115,13 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 -   스크롤 뷰어를 사용하여 개체를 하나만 포함합니다. 하나의 개체는 레이아웃 패널이 될 수 있고, 여기에는 고유한 개체가 제한 없이 포함됩니다.
 -   피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](tabs-pivot.md) 컨트롤을 배치하지 않습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **개발자용(XAML)**
 * [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

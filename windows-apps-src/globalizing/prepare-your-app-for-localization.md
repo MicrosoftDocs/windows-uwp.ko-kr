@@ -6,32 +6,31 @@ ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4eb57a836cace6cc41ccd15b74ecc9f62f8b0f60
 
 ---
 
-# 앱 지역화 준비
+# <a name="prepare-your-app-for-localization"></a>앱 지역화 준비
 
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 다른 시장, 언어 또는 지역으로의 앱 지역화를 준비합니다. 시작하기 전에 [권장 사항 및 금지 사항](guidelines-and-checklist-for-globalizing-your-app.md)을 확인하세요.
 
-## <span id="use_resource_files_and_qualifiers."></span><span id="USE_RESOURCE_FILES_AND_QUALIFIERS."></span>리소스 파일 및 한정자 사용
+## <a name="use-resource-files-and-qualifiers"></a>리소스 파일 및 한정자 사용
 
 
 코드에 배치하는 대신 리소스 파일에서 앱의 UI 문자열을 지정해야 합니다. 자세한 내용은 [리소스에 UI 문자열 배치](put-ui-strings-into-resources.md)를 참조하세요.
 
 파일 또는 폴더에서 적절한 언어 태그를 사용하여 이미지 또는 다른 파일 리소스를 지정합니다. 이미지, 오디오 및 비디오를 지역화하려면 많은 양의 시스템 리소스가 필요하므로 가능하면 중립 미디어 자산을 사용하는 것이 좋습니다. 자세한 내용은 [한정자를 사용하여 리소스 이름을 지정하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324)을 참조하세요.
 
-## <span id="add_contextual_comments."></span><span id="ADD_CONTEXTUAL_COMMENTS."></span>문맥에 맞는 설명 추가
+## <a name="add-contextual-comments"></a>문맥에 맞는 설명 추가
 
 
 앱의 리소스 파일에 지역화 설명을 추가합니다. 설명은 로컬라이저에게 표시되며, 로컬라이저가 리소스를 정확하게 번역하는 데 도움이 되는 문맥에 맞는 정보를 제공해야 합니다. 또한 설명은 번역으로 인해 소프트웨어가 중단되지 않도록 리소스에 대한 충분한 제약 조건 정보를 제공해야 합니다. 선택적으로 Makepri.exe 도구로 설명을 기록할 수 있습니다.
 
-**XAML:** Resw 파일(XAML을 사용하는 앱에 대해 Visual Studio에서 만든 리소스)에는 설명 요소가 있습니다. 예제:
+**XAML:** Resw 파일(XAML을 사용하는 앱에 대해 Visual Studio에서 만든 리소스)에는 설명 요소가 있습니다. 예:
 
 ```XML
 <data name="String1">
@@ -40,16 +39,7 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 </data>
 ```
 
-**HTML:** Resjson 파일(HTML을 사용하여 앱에 대해 Visual Studio에서 만든 리소스)에서는 설명과 같이 밑줄로 시작되는 필드의 메타데이터가 허용됩니다.
-
-```json
-{
-    "String1"  : "Hello World",
-    "_String1.comment" : "A greeting (This is a comment to the localizer)"
-}
-```
-
-## <span id="localize_sentences_instead_of_words."></span><span id="LOCALIZE_SENTENCES_INSTEAD_OF_WORDS."></span>단어 대신 문장을 지역화합니다.
+## <a name="localize-sentences-instead-of-words"></a>단어 대신 문장을 지역화합니다.
 
 
 다음 문자열을 예로 들어봅니다. "The {0} could not be synchronized."
@@ -72,14 +62,14 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 -   로컬라이저가 대체할 문자열에 대해 질문할 필요가 없습니다.
 -   앱을 완성한 후에 이러한 문제가 발생할 경우 많은 비용을 들여서 코드 수정을 구현할 필요가 없습니다.
 
-## <span id="ensure_the_correct_parameter_order."></span><span id="ENSURE_THE_CORRECT_PARAMETER_ORDER."></span>올바른 매개 변수 순서를 확인합니다.
+## <a name="ensure-the-correct-parameter-order"></a>올바른 매개 변수 순서를 확인합니다.
 
 
 모든 언어에서 매개 변수가 동일한 순서로 사용된다고 생각하지 마세요. 예를 들어 "Every %s %s" 문자열을 고려합니다. 여기서 첫 번째 %s는 월 이름으로 대체되고, 두 번째 %s는 날짜로 대체됩니다. 이 예는 영어에서는 적합하지만 날짜와 월이 역순으로 표시되는 독일어로 앱을 지역화할 경우에는 적합하지 않습니다.
 
 이 문제를 해결하려면 언어에 따라 순서를 교체할 수 있도록 문자열을 "Every %1 %2"로 변경합니다.
 
-## <span id="don_t_over_localize."></span><span id="DON_T_OVER_LOCALIZE."></span>과도한 지역화는 금지됩니다.
+## <a name="dont-over-localize"></a>과도한 지역화는 금지됩니다.
 
 
 태그가 아니라 특정 문자열을 지역화하세요. 다음 예를 참조하세요.
@@ -93,18 +83,18 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 리소스에 위의 &lt;link&gt; 태그를 포함하면 이 역시 지역화되므로 태그가 잘못 렌더링됩니다. 문자열 자체만 지역화해야 합니다. 일반적으로 태그를 지역화 가능한 콘텐츠와 구분되어야 하는 코드라고 생각해야 합니다. 하지만 일부 긴 문자열은 컨텍스트와 순서를 유지하기 위해 태그를 포함해야 합니다.
 
-## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>다른 컨텍스트에서 동일한 문자열 사용은 금지됩니다.
+## <a name="do-not-use-the-same-strings-in-dissimilar-contexts"></a>다른 컨텍스트에서 동일한 문자열 사용은 금지됩니다.
 
 
 문자열을 다시 사용하는 것이 가장 좋은 솔루션처럼 보일 수도 있지만, 동일한 단어 또는 구문이 다른 의미나 컨텍스트로 사용될 수 있는 경우 지역화 문제가 발생할 수 있습니다.
 
 두 컨텍스트가 동일한 경우 문자열을 다시 사용할 수 있습니다. 예를 들어 소리 효과 볼륨과 음악 볼륨은 모두 소리의 세기를 나타내므로 두 경우 모두에 대해 "Volume" 문자열을 다시 사용할 수 있습니다. 하드 디스크 볼륨을 나타낼 때는 컨텍스트와 의미가 다르고 단어가 다르게 번역될 수 있으므로 동일한 문자열을 다시 사용해서는 안 됩니다.
 
-또는 "on" 및 "off" 문자열 사용을 예로 들 수 있습니다. 영어에서는 비행기 모드, Bluetooth 및 디바이스를 전환하는 데 "on" 및 "off"를 사용할 수 있습니다. 하지만 이탈리아어에서는 켜거나 끌 항목의 컨텍스트에 따라 다르게 번역됩니다. 컨텍스트별로 문자열 쌍을 만들어야 합니다.
+또는 "on" 및 "off" 문자열 사용을 예로 들 수 있습니다. 영어에서는 비행기 모드, Bluetooth 및 장치를 전환하는 데 "on" 및 "off"를 사용할 수 있습니다. 하지만 이탈리아어에서는 켜거나 끌 항목의 컨텍스트에 따라 다르게 번역됩니다. 컨텍스트별로 문자열 쌍을 만들어야 합니다.
 
 또는 "text" 또는 "fax"와 같은 문자열은 영어에서 동사와 명사 모두로 사용될 수 있으므로 번역 과정에서 혼동될 수 있습니다. 대신 동사 형식과 명사 형식 모두에 대해 별도의 문자열을 만듭니다. 컨텍스트가 동일한지 확실하지 않은 경우 만전을 기하여 고유한 문자열을 사용하는 것이 제일입니다.
 
-## <span id="identify_resources_with_unique_attributes."></span><span id="IDENTIFY_RESOURCES_WITH_UNIQUE_ATTRIBUTES."></span>고유한 특성으로 리소스를 식별합니다.
+## <a name="identify-resources-with-unique-attributes"></a>고유한 특성으로 리소스를 식별합니다.
 
 
 리소스 식별자는 대/소문자를 구분하지 않으며 리소스 파일별로 고유해야 합니다. 리소스에 액세스할 때 리소스의 실제 값이 아닌 리소스 식별자를 사용합니다. 리소스 식별자는 변경되지 않지만, 리소스의 실제 값은 언어에 따라 변경됩니다.
@@ -113,7 +103,7 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 문자열 리소스를 번역으로 보낸 이후에는 리소스 식별자를 변경하지 마세요. 지역화 팀은 리소스 식별자를 사용하여 리소스의 추가, 삭제, 업데이트를 추적합니다. 리소스 식별자를 변경하면("리소스 식별자 전환"이라고도 함) 문자열을 삭제하고 다른 문자열을 추가한 것처럼 보이므로 문자열을 다시 번역해야 합니다.
 
-## <span id="choose_an_appropriate_translation_approach."></span><span id="CHOOSE_AN_APPROPRIATE_TRANSLATION_APPROACH."></span>적절한 번역 방법을 선택합니다.
+## <a name="choose-an-appropriate-translation-approach"></a>적절한 번역 방법을 선택합니다.
 
 
 문자열을 리소스 파일로 구분한 후에 번역할 수 있습니다. 일반적으로 프로젝트를 종료할 때 프로젝트의 문자열을 완료한 이후에 문자열을 번역하는 것이 좋습니다. 번역 프로세스에 접근하는 방식은 여러 가지가 있습니다. 이는 번역할 문자열의 볼륨, 번역할 언어 수 및 번역을 수행할 방식(사내 및 외부 공급업체 고용)에 따라 달라집니다.
@@ -121,31 +111,23 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 다음 옵션을 고려하세요.
 
 -   **리소스 파일을 프로젝트에서 직접 열어서 번역할 수 있습니다.** 이 방식은 문자열의 양이 적고 2~3개 국어로 번역해야 하는 프로젝트에 적합합니다. 또한 개발자가 여러 언어를 사용하고 번역 프로세스를 처리하려고 하는 경우에 적합할 수 있습니다. 이 방법은 빠르고 도구가 필요 없으며 번역을 잘못할 위험이 최소화된다는 이점이 있지만 확장할 수 없습니다. 특히, 다른 언어의 리소스가 동기화되지 않아서 잘못된 사용자 환경과 유지 관리 문제가 발생할 수 있습니다.
--   **문자열 리소스 파일은 XML 또는 ResJSON 텍스트 형식이므로 텍스트 편집기를 사용하는 번역을 위해 전달할 수 있습니다. 그런 다음 번역된 파일을 프로젝트에 다시 복사합니다.** 이 방식을 사용하면 번역자가 XML 태그를 실수로 편집할 가능성이 있기는 하지만, Microsoft Visual Studio 프로젝트 외부에서 번역 작업을 수행할 수 있습니다. 소수의 언어로만 번역하면 되는 프로젝트에 이 방식이 적합할 수 있습니다. XLIFF 형식은 지역화에 사용하도록 특별히 설계된 XML 형식이며 일부 지역화 공급업체 또는 지역화 도구에서 적절히 지원해야 합니다. [다국어 앱 도구 키트](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx)를 사용하여 .resw, .resjson 등의 다른 리소스 파일에서 XLIFF 파일을 생성할 수 있습니다.
+-   **문자열 리소스 파일은 XML 또는 ResJSON 텍스트 형식이므로 텍스트 편집기를 사용하는 번역을 위해 전달할 수 있습니다. 그런 다음 번역된 파일을 프로젝트에 다시 복사합니다.** 이 방식을 사용하면 번역자가 XML 태그를 실수로 편집할 가능성이 있기는 하지만, Microsoft Visual Studio 프로젝트 외부에서 번역 작업을 수행할 수 있습니다. 소수의 언어로만 번역하면 되는 프로젝트에 이 방식이 적합할 수 있습니다. XLIFF 형식은 지역화에 사용하도록 특별히 설계된 XML 형식이며 일부 지역화 공급업체 또는 지역화 도구에서 적절히 지원해야 합니다. [다국어 앱 도구 키트](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx)를 사용하여 .resw, .resjson 등의 다른 리소스 파일에서 XLIFF 파일을 생성할 수 있습니다.
 
 이미지 또는 오디오 파일과 같은 다른 파일용으로 로컬라이저에게 제공해야 할 수 있습니다. 일반적으로 문화적으로 종속된 파일은 지역화하기 어려우므로 만들지 않는 것이 좋습니다.
 
 또한 다음 제안을 고려하세요.
 
--   **지역화 도구를 사용합니다.** 많은 지역화 도구를 사용하여 리소스 파일을 구문 분석하고 번역자가 번역 가능한 문자열만 편집하도록 허용할 수 있습니다. 이 접근 방식은 번역자가 실수로 XML 태그를 편집하는 위험을 줄여줍니다. 단, 로컬리제이션 프로세스에 새로운 도구나 프로세스를 도입해야 하는 단점이 있습니다. 지역화 도구는 문자열의 양이 많지만 언어 수가 적은 프로젝트에 적합합니다. 자세한 내용은 [다국어 앱 도구 키트를 사용하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx)을 참조하세요.
+-   **지역화 도구를 사용합니다.** 많은 지역화 도구를 사용하여 리소스 파일을 구문 분석하고 번역자가 번역 가능한 문자열만 편집하도록 허용할 수 있습니다. 이 접근 방식은 번역자가 실수로 XML 태그를 편집하는 위험을 줄여줍니다. 단, 로컬리제이션 프로세스에 새로운 도구나 프로세스를 도입해야 하는 단점이 있습니다. 지역화 도구는 문자열의 양이 많지만 언어 수가 적은 프로젝트에 적합합니다. 자세한 내용은 [다국어 앱 도구 키트를 사용하는 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx)을 참조하세요.
 -   **지역화 공급업체를 사용합니다.** 프로젝트에 많은 양의 문자열이 포함되어 있고 프로젝트를 많은 언어로 번역해야 하는 경우에 지역화 공급업체를 사용해 보세요. 지역화 공급업체는 리소스 파일 번역은 물론, 도구 및 프로세스에 대해서도 알려줄 수 있습니다. 이 방법은 이상적인 솔루션이지만, 가장 많은 비용이 들고 번역된 콘텐츠에 대한 소요 시간이 늘어날 수 있습니다.
 -   **로컬라이저에게 정보를 제공합니다.** 로컬라이저에게 명사 또는 동사로 간주될 수 있는 문자열에 대해 알립니다. 용어 도구를 사용하여 로컬라이저에게 꾸며진 단어에 대해 설명합니다. 혼동을 방지하기 위해 문자열을 문법적으로 정확하고 모호하지 않으면서 최대한 기술적이지 않게 유지합니다.
 
-## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>액세스 키 및 레이블을 일관되게 유지합니다.
+## <a name="keep-access-keys-and-labels-consistent"></a>액세스 키 및 레이블을 일관되게 유지합니다.
 
 
 두 문자열 리소스가 두 개의 개별 섹션으로 분류되므로 지역화 과정에서 접근성에 사용되는 액세스 키를 지역화된 액세스 키 표시와 "동기화"하는 데는 어려움이 있습니다. 레이블 문자열에 대한 설명을 제공해야 합니다. 예를 들면 다음과 같습니다. `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
-**HTML:**
 
-아래와 같은 구현을 따를 수 있습니다. 마찬가지로 레이블 문자열을 액세스 키 정의에 연결할 수 있도록 올바르게 설명해야 합니다.
-
-```HTML
-<label id="theLabel" data-win-res="{accessKey: 'theLabelAccessKey'}" for="xPrinterRedirection" accessKey="L">The <u>L</u>abel</label>
-<input type="checkbox" value="OFF" id="xPrinterRedirection" name="xPrinterRedirection" />
-```
-
-## <span id="support_furigana_for_japanese_strings_that_can_be_sorted."></span><span id="SUPPORT_FURIGANA_FOR_JAPANESE_STRINGS_THAT_CAN_BE_SORTED."></span>정렬 가능한 일본어 문자열에 대해 후리가나를 지원합니다.
+## <a name="support-furigana-for-japanese-strings-that-can-be-sorted"></a>정렬 가능한 일본어 문자열에 대해 후리가나를 지원합니다.
 
 
 일본어 간지 문자는 단어 및 사용되는 컨텍스트에 따라 발음이 달라지는 고유한 속성이 있습니다. 따라서 일본어로 명명된 개체(예: 응용 프로그램 이름, 파일, 노래, 등)를 정렬할 때 문제가 발생합니다. 과거에는 일본어 간지가 컴퓨터 인식이 가능한 XJIS라는 순서로 주로 정렬되었습니다. 이 정렬 순서는 발음을 따르지 않으므로 사람에게는 적합하지 않습니다.
@@ -177,7 +159,7 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
     -   후리가나가 사용하도록 설정되어 있는 경우 "希蒼"이 "の" 아래에 정렬됩니다.
     -   후리가나가 없는 경우 "希蒼"이 "漢字" 아래에 정렬됩니다.
 
-## <span id="related_topics"></span>관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [세계화 및 지역화 권장 사항 및 금지 사항](guidelines-and-checklist-for-globalizing-your-app.md)
@@ -192,6 +174,6 @@ ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

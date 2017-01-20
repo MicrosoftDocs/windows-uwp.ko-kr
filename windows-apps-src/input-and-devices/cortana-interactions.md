@@ -5,17 +5,23 @@ title: "Cortana 조작"
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
+keywords: "Cortana, Cortana 캔버스, Cortana 디자인, 사용자 인터페이스, 음성 명령, VCD"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 75e93920422b5ad8ad0e9399bccc403ea69e7feb
-ms.openlocfilehash: 8e853962cdea36a6738c094851d461c700aafd73
+ms.sourcegitcommit: 76b012ab4cf737f00fc986c81c88fd48339867fc
+ms.openlocfilehash: 8dcf45951723c0bf2302b59ef475f3b0fa973d5e
 
 ---
 
-# UWP 앱에서 Cortana 조작
+# <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 
 Cortana는 앱 또는 서비스의 기능을 Cortana 환경에 원활하게 통합할 수 있도록 강력하고 포괄적인 확장성 프레임워크를 제공합니다.
 
-## 변경 사항
+## <a name="weve-moved"></a>변경 사항
 
 Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cortana 개발자 센터](https://developer.microsoft.com/en-us/cortana)를 통해 사용할 수 있습니다.
 
@@ -23,7 +29,7 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 
 음성 명령을 사용하여 UWP 앱의 기능으로 Cortana를 확장하는 방법을 알아보려면 [Cortana 음성 명령](https://developer.microsoft.com/en-us/cortana)을 참조하세요. 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [**VCD 요소 및 특성 v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
@@ -43,6 +49,6 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

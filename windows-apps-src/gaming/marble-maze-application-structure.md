@@ -4,12 +4,12 @@ title: "Marble Maze 응용 프로그램 구조"
 description: "DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 84dbe1730274bd39b1ba359c588bc68976a2d19e
+ms.sourcegitcommit: 931d790ea54ff9ff27202f6c92d415b17e2215ed
+ms.openlocfilehash: 696d4227bcd3ff4238d81e6f951a61e098fbc2f6
 
 ---
 
-# Marble Maze 응용 프로그램 구조
+# <a name="marble-maze-application-structure"></a>Marble Maze 응용 프로그램 구조
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,7 +17,7 @@ ms.openlocfilehash: 84dbe1730274bd39b1ba359c588bc68976a2d19e
 
 DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다. **HWND**와 같은 핸들 형식과 **CreateWindow**와 같은 함수로 작업하는 대신 Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 [**Windows::UI::Core::ICoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208296)와 같은 인터페이스를 제공합니다. 이 설명서 섹션에서는 Marble Maze 응용 프로그램 코드가 구성된 방식을 보여 줍니다.
 
-> **참고** 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> **참고**   이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
 
  
 ## 
@@ -29,7 +29,7 @@ DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스
 -   이벤트 처리기를 사용하여 창 이벤트에 응답합니다. 데스크톱 Windows 응용 프로그램의 창 메시지가 이벤트 처리기로 대체됩니다.
 -   상태 시스템을 사용하여 게임 논리의 흐름과 순서를 제어합니다.
 
-##  파일 구성
+##  <a name="file-organization"></a>파일 구성
 
 
 Marble Maze의 일부 구성 요소를 거의 또는 전혀 수정하지 않고 모든 게임에 다시 사용할 수 있습니다. 이러한 파일이 제공하는 구성과 아이디어를 고유한 게임에 맞게 조정할 수 있습니다. 다음 표에서는 중요한 소스 코드 파일에 대해 간략하게 설명합니다.
@@ -60,7 +60,7 @@ Marble Maze의 일부 구성 요소를 거의 또는 전혀 수정하지 않고 
 
  
 
-##  디자인 타임 및 런타임 리소스 형식
+##  <a name="design-time-versus-run-time-resource-formats"></a>디자인 타임 및 런타임 리소스 형식
 
 
 가능한 경우 디자인 타임 형식 대신 런타임 형식을 사용하여 더 효율적으로 게임 리소스를 로드합니다.
@@ -73,19 +73,19 @@ HLSL 셰이더는 다른 디자인 타임 및 런타임 형식을 사용하는 �
 
 지침을 위해 Marble Maze 프로젝트에는 다양한 리소스에 대한 디자인 타임 형식 및 런타임 형식이 둘 다 포함되지만, 필요할 때 런타임 형식으로 변환할 수 있으므로 고유한 게임에 대한 원본 프로젝트에는 디자인 타임 형식만 유지하면 됩니다. 이 설명서에서는 디자인 타임 형식을 런타임 형식으로 변환하는 방법을 보여 줍니다.
 
-##  응용 프로그램 수명 주기
+##  <a name="application-life-cycle"></a>응용 프로그램 수명 주기
 
 
 Marble Maze는 일반적인 UWP 앱의 수명 주기를 따릅니다. UWP 앱의 수명 주기에 대한 자세한 내용은 [앱 수명 주기](https://msdn.microsoft.com/library/windows/apps/mt243287)를 참조하세요.
 
 UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 모든 입력, 오디오 또는 물리학 라이브러리 등의 런타임 구성 요소를 초기화합니다. 또한 게임이 시작되기 전에 필요한 게임 관련 리소스를 로드합니다. 이 초기화는 게임 세션 중에 한 번 발생합니다.
 
-초기화 후 게임은 일반적으로 *게임 루프*를 실행합니다. 이 루프에서 게임은 일반적으로 Windows 이벤트 처리, 입력 수집, 장면 개체 업데이트, 장면 렌더링의 4개 작업을 수행합니다. 게임은 장면을 업데이트할 때 장면 개체에 현재 입력 상태를 적용하고 개체 충돌 등의 물리적 이벤트를 시뮬레이트할 수 있습니다. 게임에서 소리 효과 재생, 네트워크를 통해 데이터 전송 등의 기타 작업을 수행할 수도 있습니다. 게임은 장면을 렌더링할 때 장면의 현재 상태를 캡처하고 디스플레이 장치에 그립니다. 다음 섹션에서는 이러한 작업에 대해 자세히 설명합니다.
+초기화 후 게임은 일반적으로 *게임 루프*를 실행합니다. 이 루프에서 게임은 일반적으로 Windows 이벤트 처리, 입력 수집, 장면 개체 업데이트, 장면 렌더링의 4개 작업을 수행합니다. 게임은 장면을 업데이트할 때 장면 개체에 현재 입력 상태를 적용하고 개체 충돌 등의 물리적 이벤트를 시뮬레이션할 수 있습니다. 게임에서 소리 효과 재생, 네트워크를 통해 데이터 전송 등의 기타 작업을 수행할 수도 있습니다. 게임은 장면을 렌더링할 때 장면의 현재 상태를 캡처하고 디스플레이 장치에 그립니다. 다음 섹션에서는 이러한 작업에 대해 자세히 설명합니다.
 
-##  템플릿에 추가
+##  <a name="adding-to-the-template"></a>템플릿에 추가
 
 
-*DirectX 11 앱(유니버설 Windows)* 템플릿은 Direct3D로 렌더링할 수 있는 핵심 창을 만듭니다. 템플릿에는 UWP 앱에서 3D 콘텐츠 렌더링에 필요한 모든 Direct3D 디바이스 리소스를 만드는 **DeviceResources** 클래스도 포함되어 있습니다. **AppMain** 클래스는 **MarbleMaze** 클래스 개체를 만들고, 리소스의 로딩을 시작하고, 루프를 통해 타이머를 업데이트하고, 프레임별 **MarbleMaze** 렌더 메서드를 호출합니다. 이 클래스에 대한 **CreateWindowSizeDependentResources**, Update 및 Render 메서드는 **MarbleMaze** 클래스에 있는 해당 메서드를 호출합니다. 다음 예제는 **AppMain** 생성자가 **MarbleMaze** 클래스 개체를 만드는 곳을 보여 줍니다. 렌더링에 Direct3D 개체를 사용할 수 있도록 디바이스 리소스 클래스가 클래스로 전달됩니다.
+*DirectX 11 앱(유니버설 Windows)* 템플릿은 Direct3D로 렌더링할 수 있는 핵심 창을 만듭니다. 템플릿에는 UWP 앱에서 3D 콘텐츠 렌더링에 필요한 모든 Direct3D 장치 리소스를 만드는 **DeviceResources** 클래스도 포함되어 있습니다. **AppMain** 클래스는 **MarbleMaze** 클래스 개체를 만들고, 리소스의 로딩을 시작하고, 루프를 통해 타이머를 업데이트하고, 프레임별 **MarbleMaze** 렌더 메서드를 호출합니다. 이 클래스에 대한 **CreateWindowSizeDependentResources**, Update 및 Render 메서드는 **MarbleMaze** 클래스에 있는 해당 메서드를 호출합니다. 다음 예제는 **AppMain** 생성자가 **MarbleMaze** 클래스 개체를 만드는 곳을 보여 줍니다. 렌더링에 Direct3D 개체를 사용할 수 있도록 장치 리소스 클래스가 클래스로 전달됩니다.
 
 ```cpp
     m_marbleMaze = std::unique_ptr<MarbleMaze>(new MarbleMaze(m_deviceResources));
@@ -96,12 +96,12 @@ UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 
 
 이러한 이벤트의 처리기가 호출되면 입력이 **MarbleMaze** 클래스로 전달됩니다.
 
-## 백그라운드에서 게임 자산 로드
+## <a name="loading-game-assets-in-the-background"></a>백그라운드에서 게임 자산 로드
 
 
 게임이 시작 후 5초 내에 창 이벤트에 응답할 수 있게 하려면 비동기적으로 또는 백그라운드에서 게임 자산을 로드하는 것이 좋습니다. 자산이 백그라운드에서 로드될 때 게임이 창 이벤트에 응답할 수 있습니다.
 
-> **참고** 준비된 경우 주 메뉴를 표시하고 나머지 자산이 백그라운드에서 계속 로드되도록 허용할 수도 있습니다. 모든 리소스가 로드되기 전에 사용자가 메뉴에서 옵션을 선택하는 경우 진행률 표시줄 등을 표시하여 장면 리소스가 계속 로드되고 있음을 나타낼 수 있습니다.
+> **참고**  준비된 경우 주 메뉴를 표시하고 나머지 자산이 백그라운드에서 계속 로드되도록 허용할 수도 있습니다. 모든 리소스가 로드되기 전에 사용자가 메뉴에서 옵션을 선택하는 경우 진행률 표시줄 등을 표시하여 장면 리소스가 계속 로드되고 있음을 나타낼 수 있습니다.
 
  
 
@@ -121,11 +121,11 @@ UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 
 
 UWP 앱용 비동기 프로그래밍에 대한 자세한 내용은 [C++의 비동기 프로그래밍](https://msdn.microsoft.com/library/windows/apps/mt187334)을 참조하세요.
 
->> > **팁** Windows 런타임 C++ 라이브러리(즉, DLL)에 포함된 게임 코드를 작성하는 경우 [C++로 Windows 스토어 앱용 비동기 작업 만들기](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx)를 참조하여 앱 및 다른 라이브러리에서 사용할 수 있는 비동기 작업을 만드는 방법을 알아볼지 여부를 고려합니다.
+> **팁**   Windows 런타임 C++ 라이브러리(즉, DLL)에 포함된 게임 코드를 작성하는 경우 [C++로 Windows 스토어 앱용 비동기 작업 만들기](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx)를 참조하여 앱 및 다른 라이브러리에서 사용할 수 있는 비동기 작업을 만드는 방법을 알아볼지 여부를 고려합니다.
 
  
 
-## 게임 루프
+## <a name="the-game-loop"></a>게임 루프
 
 
 **DirectPage::OnRendering** 메서드는 기본 게임 루프를 실행합니다. 프레임마다 이 메서드가 호출됩니다.
@@ -150,7 +150,7 @@ void DirectXPage::OnRendering(Object^ sender, Object^ args)
 }
 ```
 
-## 상태 시스템
+## <a name="the-state-machine"></a>상태 시스템
 
 
 일반적으로 게임에는 게임 논리의 흐름 및 순서를 제어하는 *상태 시스템*(*유한 상태 시스템* 또는 FSM이라고도 함)이 포함됩니다. 상태 시스템은 지정된 개수의 상태를 포함하며 상태 간에 전환할 수 있습니다. 일반적으로 상태 시스템은 *초기* 상태로 시작되고, 하나 이상의 *중간* 상태로 전환된 다음 *터미널* 상태로 끝납니다.
@@ -197,12 +197,12 @@ case GameState::InGamePaused:
 
 게임 논리 또는 렌더링이 특정 게임 상태에 따라 달라지는 경우 이 설명서에서 강조됩니다.
 
-## 앱 및 창 이벤트 처리
+## <a name="handling-app-and-window-events"></a>앱 및 창 이벤트 처리
 
 
 Windows 런타임은 Windows 메시지를 더 쉽게 관리할 수 있도록 개체 지향적인 이벤트 처리 시스템을 제공합니다. 응용 프로그램에서 이벤트를 사용하려면 이벤트에 응답하는 이벤트 처리기 또는 이벤트 처리 메서드를 제공해야 합니다. 또한 이벤트 원본에 이벤트 처리기를 등록해야 합니다. 이 프로세스를 이벤트 연결이라고 합니다.
 
-### 일시 중단, 계속 및 다시 시작 지원
+### <a name="supporting-suspend-resume-and-restart"></a>일시 중단, 계속 및 다시 시작 지원
 
 사용자가 잠깐 조작을 멈추거나 Windows가 전원 부족 상태가 되면 Marble Maze가 일시 중단됩니다. 사용자가 게임을 포그라운드로 이동하거나 Windows가 전원 부족 상태에서 벗어나면 게임이 다시 시작됩니다. 일반적으로 앱을 닫지 않습니다. Windows에서 앱이 일시 중단 상태이고 앱에 사용 중인 리소스(예: 메모리)가 필요한 경우 앱을 종료할 수 있습니다. Windows는 일시 중단하거나 다시 시작할 때 앱에 알리지만 종료할 때는 앱에 알리지 않습니다. 따라서 Windows가 앱을 일시 중단한다고 알릴 때 앱을 다시 시작할 경우 현재 사용자 상태를 복원하는 데 필요한 모든 데이터를 저장할 수 있어야 합니다. 앱에 저장할 중요한 사용자 상태가 많은 경우 앱이 일시 중단 알림을 수신하기 전에 정기적으로 상태를 저장해야 할 수도 있습니다. Marble Maze는 다음 두 가지 이유로 일시 중단 및 다시 시작 알림에 응답합니다.
 
@@ -351,18 +351,18 @@ void MarbleMaze::LoadState()
 }
 ```
 
-> **중요** Marble Maze는 콜드 시작(이전 일시 중단 이벤트 없이 처음부터 시작)과 일시 중단 상태에서 다시 시작을 구분하지 않습니다. 이것이 모든 UWP 앱에 대해 권장되는 디자인입니다.
+> **중요**  Marble Maze는 콜드 시작(이전 일시 중단 이벤트 없이 처음부터 시작)과 일시 중단 상태에서 다시 시작을 구분하지 않습니다. 이것이 모든 UWP 앱에 대해 권장되는 디자인입니다.
 
  
 
 로컬 응용 프로그램 데이터 저장소에서 설정 및 파일을 저장하고 검색하는 방법을 보여 주는 추가 예제는 [빠른 시작: 로컬 응용 프로그램 데이터](https://msdn.microsoft.com/library/windows/apps/hh465118)를 참조하세요. 응용 프로그램 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)을 참조하세요.
 
-##  다음 단계
+##  <a name="next-steps"></a>다음 단계
 
 
 시각적 리소스 작업을 할 때 고려할 몇 가지 주요 사항에 대한 자세한 내용은 [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)
 * [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)
@@ -378,6 +378,6 @@ void MarbleMaze::LoadState()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

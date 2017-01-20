@@ -6,11 +6,11 @@ ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: aa605b3862c33633904822bb88de7e647a2b3d5b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 6757e612d5a04db52222cfb73c855a0a4f615bf6
 
 ---
-# Labels(레이블)
+# <a name="labels"></a>Labels(레이블)
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -20,33 +20,31 @@ ms.openlocfilehash: aa605b3862c33633904822bb88de7e647a2b3d5b
 <b>중요 API</b><br/>
 <ul>
 <li>Header 속성</li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209652"><strong>TextBlock 클래스</strong></a></li>
+<li>[**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/br209652)</li>
 </ul>
-
 </div>
-</div>
-
-
-
-
 
 
 XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)을 사용할 수 있습니다.
 
 
-## 예제
+## <a name="example"></a>예제
 
 
 ![표준 레이블 컨트롤을 보여 주는 스크린샷](images/label-standard.png)
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 
 -   레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다.
 -   컨트롤에 레이블을 지정할 경우 문장이나 지침 텍스트가 아니라 명사나 간결한 명사구로 레이블을 작성하세요. 콜론 또는 기타 문장 부호를 사용하지 마세요.
 -   레이블에 지침 텍스트가 있는 경우 텍스트 문자열 길이를 더욱 자유롭게 사용할 수 있으며 문장 부호도 사용할 수 있습니다.
 
-## 관련 항목
+
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+
+## <a name="related-topics"></a>관련 항목
 * [텍스트 컨트롤](text-controls.md)
 
 **개발자용**
@@ -70,6 +68,6 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

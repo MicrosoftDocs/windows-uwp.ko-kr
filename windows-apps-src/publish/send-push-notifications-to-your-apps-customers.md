@@ -3,12 +3,12 @@ author: shawjohn
 Description: "앱을 평가하거나 추가 기능을 구매하는 등의 행동을 유도하기 위해 Windows 개발자 센터에서 앱으로 대상 푸시 알림을 전송하는 방법을 알아보세요."
 title: "앱의 고객에게 대상 푸시 알림 보내기"
 translationtype: Human Translation
-ms.sourcegitcommit: 3e3c9737784c81f5eb882296a82a4dcd879363e1
-ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
+ms.sourcegitcommit: e9cbfec938ebc71da6f41df69defcac1bb902245
+ms.openlocfilehash: c4bdd398db570c4962325c2164651e9e8a1935ff
 
 ---
 
-# 앱의 고객에게 대상 푸시 알림 보내기
+# <a name="send-targeted-push-notifications-to-your-apps-customers"></a>앱의 고객에게 대상 푸시 알림 보내기
 
 올바른 시간에 올바른 메시지로 고객의 참여를 유도하는 것이 앱 개발자로서 성공하기 위한 핵심입니다. Windows 개발자 센터에서는 푸시 알림을 모든 고객에게 또는 [고객층](create-customer-segments.md)에서 정의한 기준을 충족하는 Windows 10의 일부 고객에게만 전송하기 위해 사용할 수 있는 데이터 기반 고객 참여 플랫폼을 제공합니다.
 
@@ -16,14 +16,14 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
 
 > **중요** 대상 지정 푸시 알림은 UWP 앱에만 사용할 수 있습니다.
 
-## 푸시 알림 시작
+## <a name="getting-started-with-push-notifications"></a>푸시 알림 시작
 
 고객 참여를 유도하기 위한 푸시 알림을 사용하려면 상위 수준에서 세 가지를 수행해야 합니다.
-1. **푸시 알림을 받기 위해 앱을 등록합니다.** 앱에서 Microsoft Store Services SDK에 대한 참조를 추가한 다음, 개발자 센터와 앱 사이의 알림 채널을 등록하는 코드 몇 줄을 추가하면 됩니다. 고객에게 푸시 알림을 전달하는 데 이 채널을 사용하게 됩니다. 자세한 내용은 [알림 채널 등록](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.registernotificationchannelasync.aspx)을 참조하세요.
+1. **푸시 알림을 받기 위해 앱을 등록합니다.** 앱에서 Microsoft Store Services SDK에 대한 참조를 추가한 다음, 개발자 센터와 앱 사이의 알림 채널을 등록하는 코드 몇 줄을 추가하면 됩니다. 고객에게 푸시 알림을 전달하는 데 이 채널을 사용하게 됩니다. 자세한 내용은 [개발자 센터 알림을 받도록 앱 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
 2. **대상으로 지정할 하나 이상의 고객층을 만듭니다.** 인구 또는 수익 기준을 기반으로 고객층을 그룹화할 수 있습니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
 3. **푸시 알림을 만들고 특정 고객층으로 보냅니다.** 예를 들면, 새 고객에게 앱을 평가해달라는 알림을 보내거나 추가 기능을 특가에 구매할 수 있다는 알림을 보낼 수 있습니다.
 
-## 대상 알림 만들기 및 보내기
+## <a name="to-create-and-send-a-targeted-push-notification"></a>대상 알림 만들기 및 보내기
 
 1. 아직 수행하지 않은 경우, [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치하고 앱의 시작 코드에서 [RegisterNotificationChannelAsync](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 메서드를 호출하여 알림을 수신하도록 앱을 등록합니다. 이 메서드를 호출하는 방법에 대한 자세한 내용은 [Configure your app to receive Dev Center notifications](../monetize/configure-your-app-to-receive-dev-center-notifications.md)(개발자 센터 알림을 받도록 앱 구성)를 참조하세요.
 2.  [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)에서 앱을 선택합니다.
@@ -49,13 +49,13 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
    - **입력**/**작업**/**선택**(대화형 알림 유형). 사용자와 알림의 상호 작용을 허용할 수 있습니다. 자세한 내용은 [적응형 및 대화형 알림 메시지](../controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts.md#actions)를 참조하세요.
    - **바인딩**(대화형 타일 유형). 알림 템플릿. 자세한 내용은 [binding](https://msdn.microsoft.com/en-us/library/windows/apps/br230843)을 참조하세요.
 
-   > **팁** 적응형 타일 및 대화형 알림 메시지를 디자인하고 테스트하려면 [알림 시각화 도우미](https://www.microsoft.com/store/apps/9nblggh5xsl1) 앱을 사용해 보세요.
+   > **팁**  적응형 타일 및 대화형 알림 메시지를 디자인하고 테스트하려면 [알림 시각화 도우미](https://www.microsoft.com/store/apps/9nblggh5xsl1) 앱을 사용해 보세요.
 
 11. 나중에 알림 작업을 계속 수행하려면 **초안으로 저장**을 선택하고, 모두 완료했으면 **보내기**를 선택합니다.
 
 > **참고** 알림의 콘텐츠는 스토어 [콘텐츠 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#content_policies)을 준수해야 합니다.
 
-## 알림 템플릿 유형
+## <a name="notification-template-types"></a>알림 템플릿 유형
 
 다양한 알림 템플릿 중에서 선택할 수 있습니다.
 
@@ -73,16 +73,16 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
 -   **판매 홍보(알림).** 앱 특가 판매를 발표하기 위해 사용할 수 있는 알림 메시지. 고객이 알림을 선택하면 앱의 스토어 목록이 표시됩니다.
 - **업데이트 확인(알림).** 앱의 이전 버전을 실행 중인 고객에게 최신 버전을 설치하도록 권고하는 알림 메시지. 고객이 알림을 선택하면 스토어 앱의 **다운로드 및 업데이트** 목록이 표시됩니다. 이 템플릿을 사용하기 위해 고객층을 만들 필요는 없습니다. Microsoft에서는 이 알림을 24시간 내에 예약하고, 아직 앱의 최신 버전을 실행하지 않는 모든 사용자를 대상으로 지정하기 위해 노력할 것입니다.
 
-## 알림 성과 측정
+## <a name="measure-notification-performance"></a>알림 성과 측정
 
 각 알림을 통해 고객의 참여를 얼마나 잘 유도하는지를 측정할 수 있습니다.
 
-###알림 성과를 측정하려면
+###<a name="to-measure-notification-performance"></a>알림 성과를 측정하려면
 
 1.  알림을 만들 때 **알림 콘텐츠** 섹션에서 **앱 시작 속도 추적** 확인란을 선택합니다.
 2.  대상 지정 알림에 대한 응답으로 앱이 시작되었음을 개발자 센터에 알리려면 앱에서 [ParseArgumentsAndTrackAppLaunch](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch.aspx) 메서드를 호출합니다. 이 메서드는 Microsoft Store SDK에서 제공됩니다. 이 메서드를 호출하는 방법에 대한 자세한 내용은 [Configure your app to receive Dev Center notifications](../monetize/configure-your-app-to-receive-dev-center-notifications.md)(개발자 센터 알림을 받도록 앱 구성)를 참조하세요.
 
-###알림 성과 보기
+###<a name="to-view-notification-performance"></a>알림 성과 보기
 
 위에서 설명한 대로 [알림 성과를 측정](#to-measure-notification-performance)하도록 알림과 앱을 구성한 경우 대시보드를 사용하여 알림의 성과를 확인할 수 있습니다.
 
@@ -97,7 +97,7 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
  - **시작**: 알림을 보냈고 고객이 클릭했으며 그 결과 앱이 열렸습니다. 여기에서는 앱 시작만 추적합니다. 다른 작업(예: 스토어를 시작하여 평가 남기기)을 수행하도록 고객을 초대하는 알림은 이 상태에 포함되지 않습니다.
  - **알 수 없음**: 이 알림의 상태를 확인할 수 없습니다.
 
-## 알림 번역
+## <a name="translate-your-notifications"></a>알림 번역
 
 알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. [Microsoft Translator](https://msdn.microsoft.com/library/dd576287.aspx) 서비스를 활용하면 개발자 센터에서 알림을 원하는 언어로 자동으로 손쉽게 번역할 수 있습니다.
 
@@ -111,7 +111,7 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
  - 자동 번역을 재정의한 후 또 다른 텍스트 상자를 알림의 영어 버전에 추가하는 경우 새 텍스트 상자는 번역된 알림에 추가되지 않습니다. 이 경우 번역된 각 알림에 새 텍스트 상자를 수동으로 추가해야 합니다.
  - 알림이 번역된 후 영어 텍스트를 변경하는 경우 변경 사항과 일치하도록 번역된 알림이 자동으로 업데이트됩니다. 그러나 이전에 초기 번역을 재정의하도록 선택한 경우에는 자동으로 업데이트되지 않습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 - [UWP 앱에 대한 타일, 배지 및 알림](../controls-and-patterns/tiles-badges-notifications.md)
 - [WNS(Windows 푸시 알림 서비스) 개요](../controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview.md)
 - [WNS(Windows 푸시 알림 서비스) 개요(Windows 런타임 앱)](https://msdn.microsoft.com/en-us/library/windows/apps/hh913756.aspx)
@@ -121,6 +121,6 @@ ms.openlocfilehash: 817043579cfd068267c54f2eab9210ef303ca364
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

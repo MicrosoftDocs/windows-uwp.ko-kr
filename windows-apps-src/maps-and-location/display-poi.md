@@ -4,12 +4,12 @@ title: "지도에 POI(관심 지점) 표시"
 description: "고정핀, 이미지, 셰이프 및 XAML UI 요소를 사용하여 지도에 POI(안내 표시)를 추가합니다."
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
+ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
+ms.openlocfilehash: 8afdb41d6790bb9647a6b89086c4b86872940c51
 
 ---
 
-# 지도에 POI(관심 지점) 표시
+# <a name="display-points-of-interest-poi-on-a-map"></a>지도에 POI(관심 지점) 표시
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,7 +23,7 @@ ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
 
 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077), [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 및 [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 개체를 지도 컨트롤의 [**MapElements**](https://msdn.microsoft.com/library/windows/apps/dn637033) 컬렉션에 추가하여 고정핀, 이미지 및 셰이프를 표시합니다. 데이터 바인딩을 사용하거나 항목을 프로그래밍 방식으로 추가합니다. XAML 태그에서 **MapElements** 컬렉션에 선언적으로 바인딩할 수 없습니다.
 
-[**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008)으로서 추가하여 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265), [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739) 또는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) 같은 XAML 사용자 인터페이스 요소를 지도에 표시합니다. 또한 [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)에 추가하거나 **MapItemsControl**을 항목 컬렉션으로 바인딩할 수도 있습니다.
+[**MapControl**](https://msdn.microsoft.com/library/windows/apps/br209265)의 [**Children**](https://msdn.microsoft.com/library/windows/apps/br242739)으로서 추가하여 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209652), [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/dn637008) 또는 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/dn637004) 같은 XAML 사용자 인터페이스 요소를 지도에 표시합니다. 또한 [**MapItemsControl**](https://msdn.microsoft.com/library/windows/apps/dn637094)에 추가하거나 **MapItemsControl**을 항목 컬렉션으로 바인딩할 수도 있습니다.
 
 요약하면 다음과 같습니다.
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
 
 지도에 배치할 요소가 많은 경우 [바둑판식 이미지를 지도에 오버레이](overlay-tiled-images.md)하는 것이 좋습니다. 지도에 도로를 표시하려면 [경로 및 길 찾기를 표시](routes-and-directions.md)합니다.
 
-## MapIcon 추가
+## <a name="add-a-mapicon"></a>MapIcon 추가
 
 
 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) 클래스를 사용하여 텍스트가 있거나 없는 고정핀 등과 같은 이미지를 표시합니다. 기본 이미지를 적용하거나 [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) 속성을 사용하여 사용자 지정 이미지를 제공할 수 있습니다. 다음 이미지는 [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088) 속성에 대해 지정된 값이 없고, 짧은 제목, 긴 제목 및 매우 긴 제목을 가진 **MapIcon**에 대한 기본 이미지를 표시합니다.
@@ -83,10 +83,10 @@ ms.openlocfilehash: aec420d6591546e63c6343d7151afe9e95d1afd8
 
 -   [**Image**](https://msdn.microsoft.com/library/windows/apps/dn637078) 속성은 최대 2048×2048 픽셀의 이미지 크기를 지원합니다.
 -   기본적으로 지도 아이콘의 이미지는 표시되지 않을 수도 있습니다. 지도에 있는 다른 요소나 레이블을 가릴 경우 MapIcon이 숨겨질 수도 있습니다. 표시된 상태로 유지하려면 지도 아이콘의 [**CollisionBehaviorDesired**](https://msdn.microsoft.com/library/windows/apps/dn974327) 속성을 [**MapElementCollisionBehavior.RemainVisible**](https://msdn.microsoft.com/library/windows/apps/dn974314)로 설정합니다.
--   [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077)의 [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637088)(옵션)이(가) 표시되지 않을 수도 있습니다. 텍스트가 보이지 않으면 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068) 속성에 대한 값을 낮춰서 축소합니다.
+-   [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637088)의 [**Title**](https://msdn.microsoft.com/library/windows/apps/dn637077)(옵션)이(가) 표시되지 않을 수도 있습니다. 텍스트가 보이지 않으면 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637068)의 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637004) 속성에 대한 값을 낮춰서 축소합니다.
 -   지도에 있는 특정 위치를 가리키는 [**MapIcon**](https://msdn.microsoft.com/library/windows/apps/dn637077) 이미지(예제: 고정핀이나 화살표)를 표시할 경우 [**NormalizedAnchorPoint**](https://msdn.microsoft.com/library/windows/apps/dn637082) 속성의 값을 이미지에 표시되는 포인터의 대략적인 위치로 설정해 보세요. **NormalizedAnchorPoint** 값을 이미지의 오른쪽 위 모서리를 나타내는 기본값인 (0, 0)으로 유지하면 지도의 [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068)을 변경할 경우 이미지가 다른 위치를 가리킬 수 있습니다.
 
-## MapPolygon 추가
+## <a name="add-a-mappolygon"></a>MapPolygon 추가
 
 
 [**MapPolygon**](https://msdn.microsoft.com/library/windows/apps/dn637103) 클래스를 사용하여 지도에 다중 지점 셰이프를 표시할 수 있습니다. 다음 예제에서는 [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파란색 테두리가 있는 빨간색 상자를 지도에 표시합니다.
@@ -114,7 +114,7 @@ private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEven
 }
 ```
 
-## MapPolyline 추가
+## <a name="add-a-mappolyline"></a>MapPolyline 추가
 
 
 [**MapPolyline**](https://msdn.microsoft.com/library/windows/apps/dn637114) 클래스를 사용하여 지도에 선을 표시합니다. 다음 예제에서는 [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)에서 파선을 지도에 표시합니다.
@@ -137,7 +137,7 @@ private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEve
 }
 ```
 
-## XAML 추가
+## <a name="add-xaml"></a>XAML 추가
 
 
 XAML을 사용하여 지도에 사용자 지정 UI 요소를 표시할 수 있습니다. XAML의 위치 및 정규화된 앵커 지점을 지정하여 XAML을 지도에 배치합니다.
@@ -174,9 +174,9 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-다음 예제에서는 지도에 파란색 테두리를 표시합니다.
+이 예제에서는 지도에 파란색 테두리를 표시합니다.
 
-![](images/displaypoixaml.png)
+![지도상의 관심 지점에 표시된 xaml의 스크린샷](images/displaypoixaml.png)
 
 다음 예제에서는 데이터 바인딩을 사용하여 페이지의 XAML 태그에 직접 XAML UI 요소를 추가하는 방법을 보여 줍니다. 콘텐츠를 표시하는 다른 XAML 요소와 마찬가지로, [**Children**](https://msdn.microsoft.com/library/windows/apps/dn637008)은 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)의 기본 콘텐츠 속성이므로 XAML 태그에서 명시적으로 지정할 필요가 없습니다.
 
@@ -216,7 +216,7 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 </maps:MapControl>
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
@@ -231,6 +231,6 @@ private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

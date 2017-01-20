@@ -6,11 +6,11 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 04f8e82f05c46d41657dae0b30e04f49341bb5db
 
 ---
-# 텍스트 컨트롤
+# <a name="text-controls"></a>텍스트 컨트롤
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,29 +19,23 @@ ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
 - 텍스트 입력 및 편집에 대한 컨트롤은 [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) 및 [RichEditBox](rich-edit-box.md)입니다.
 
-
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>AutoSuggestBox 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>PasswordBox 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>TextBlock 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>TextBox 클래스</strong></a></li>
+<li>[**AutoSuggestBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)</li>
+<li>[**PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)</li>
+<li>[**RichEditBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
+<li> [**TextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)</li>
+<li>[**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 사용하는 텍스트 컨트롤은 시나리오에 따라 다릅니다. 이 정보를 사용하여 앱에서 사용할 올바른 텍스트 컨트롤을 선택합니다.
 
-### 읽기 전용 텍스트 렌더링
+### <a name="render-read-only-text"></a>읽기 전용 텍스트 렌더링
 
 앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock**을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
 
@@ -51,9 +45,9 @@ TextBlock은 일반적으로 RichTextBlock보다 사용하기 쉬우며 더 나�
 
 여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요. RichTextBlock은 고급 텍스트 레이아웃에 대한 여러 기능을 제공합니다.
 
-RichTextBlock의 콘텐츠 속성은 [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다.  
+RichTextBlock의 콘텐츠 속성은 [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다.  
 
-### 텍스트 입력
+### <a name="text-input"></a>텍스트 입력
 
 사용자가 양식 등에서 서식 없는 텍스트를 입력하고 편집할 수 있게 하려면 **TextBox** 컨트롤을 사용합니다. [Text](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.text.aspx) 속성을 사용하여 TextBox에 텍스트를 가져오고 설정할 수 있습니다.
 
@@ -80,7 +74,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
     -   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 이익이 되나요?** 그렇다면 함께 표시되는 컨트롤과 함께 [슬라이더](slider.md)를 사용하세요.
     -   **결과를 확인한 후 입력한 값을 조정할 수 있나요(예: 볼륨 또는 화면 밝기)?** 그렇다면 [슬라이더](slider.md)를 사용하세요.
 
-## 예
+## <a name="examples"></a>예제
 
 입력란
 
@@ -94,7 +88,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 ![텍스트 입력에 포커스를 둔 상태의 암호 상자](images/passwordbox-focus-typing.png)
 
-## 텍스트 컨트롤 만들기
+## <a name="create-a-text-control"></a>텍스트 컨트롤 만들기
 
 각 텍스트 컨트롤과 관련된 정보와 예제는 다음 문서를 참조하세요.
 
@@ -105,14 +99,14 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 -   [**TextBlock**](text-block.md)
 -   [**TextBox**](text-box.md)
 
-## 글꼴 및 스타일 지침
+## <a name="font-and-style-guidelines"></a>글꼴 및 스타일 지침
 글꼴 지침은 다음 문서를 참조하세요.
 
 - [**글꼴 지침**](fonts.md)
 - [**Segoe MDL2 아이콘 목록 및 지침**](segoe-ui-symbol-font.md)
 
 
-## 텍스트 컨트롤에 맞는 키보드를 선택합니다.
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>텍스트 컨트롤에 맞는 키보드를 선택합니다.
 
 **적용 대상:** TextBox, PasswordBox RichEditBox
 
@@ -129,7 +123,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
-## 컬러 글꼴
+## <a name="color-fonts"></a>컬러 글꼴
 
 **적용 대상:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
@@ -147,7 +141,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 자세한 내용은 [**IsColorFontEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.iscolorfontenabled.aspx) 속성을 참조하세요.
 
-## 줄 및 단락 구분 기호에 대한 지침
+## <a name="guidelines-for-line-and-paragraph-separators"></a>줄 및 단락 구분 기호에 대한 지침
 
 **적용 대상:** TextBlock, RichTextBlock, multi-line TextBox, RichEditBox
 
@@ -159,7 +153,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 앱에서 텍스트 단락 사이에 단락 구분 기호를 삽입할 수 있습니다. 이 구분 기호를 사용하면 각 운영 체제에서 서로 다른 줄로 서식이 지정될 수 있는 일반 텍스트 파일을 만들 수 있습니다. 대상 시스템은 모든 줄 구분 기호를 무시하고 단락 구분 기호에서만 단락을 나눌 수 있습니다.
 
-## 맞춤법 검사에 대한 지침
+## <a name="guidelines-for-spell-checking"></a>맞춤법 검사에 대한 지침
 
 **적용 대상:** TextBox, RichEditBox
 
@@ -185,7 +179,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 
 TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 켜져 있습니다. **IsSpellCheckEnabled** 속성을 **false**로 설정하면 기능을 끌 수 있습니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 **디자이너용**
 - [**글꼴 지침**](fonts.md)
@@ -199,6 +193,6 @@ TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

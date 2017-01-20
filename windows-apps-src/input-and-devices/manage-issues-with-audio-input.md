@@ -5,26 +5,35 @@ title: "오디오 입력 관련 문제 관리"
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
+keywords: "음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 12f46dd0ec375977cc33efeb73757c5ec75077bd
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a6f6e4c04f608898d2871113f38fe647b62bf8a5
 
 ---
 
-# 오디오 입력 관련 문제 관리
+# <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)</li>
+<li>[**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)</li>
+<li>[**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)</li>
 
--   [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)
--   [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243)
--   [**SpeechRecognitionAudioProblem**](https://msdn.microsoft.com/library/windows/apps/dn631406)
+</ul>
+</div>
 
 
-
-
-## 오디오 입력 품질 평가
+## <a name="assess-audio-input-quality"></a>오디오 입력 품질 평가
 
 
 음성 인식이 활성 상태일 때는 음성 인식기의 [**RecognitionQualityDegrading**](https://msdn.microsoft.com/library/windows/apps/dn653243) 이벤트를 사용해서 하나 이상의 오디오 문제로 인해 음성 입력이 방해되는지 여부를 확인합니다. 이벤트 인수([**SpeechRecognitionQualityDegradingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn631430))는 오디오 입력으로 검색된 문제를 기술하는 [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성을 제공합니다.
@@ -63,7 +72,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 음성 인식 환경 관리
+## <a name="manage-the-speech-recognition-experience"></a>음성 인식 환경 관리
 
 
 [**Problem**](https://msdn.microsoft.com/library/windows/apps/dn631431) 속성에서 제공하는 설명을 사용하여 사용자가 인식 조건을 향상시킬 수 있도록 지원합니다.
@@ -103,7 +112,7 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 * [음성 조작](speech-interactions.md)
@@ -120,6 +129,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

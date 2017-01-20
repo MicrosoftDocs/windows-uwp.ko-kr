@@ -4,8 +4,8 @@ Description: "데스크톱 변환기 앱을 실행하여 UWP(유니버설 Window
 Search.Product: eADQiWindows 10XVcnh
 title: Desktop App Converter
 translationtype: Human Translation
-ms.sourcegitcommit: a5ac8acdbb7480bb776cef6d1dffa303dab5a9e1
-ms.openlocfilehash: 4095cfbe96f239afb5f3173e0a7f84e01d63452c
+ms.sourcegitcommit: bf6da2f4d780774819fe7a4abf6367345304767c
+ms.openlocfilehash: 3ffd664892fe5ee589d3bf5704e2eeed178bf5f3
 
 ---
 
@@ -23,7 +23,13 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 이 섹션에서는 Desktop App Converter 버전 간의 변경 내용을 대략적으로 설명합니다. 
 
-### <a name="1122016-v101"></a>11/2/2016(v1.0.1)
+### <a name="12142016-v104"></a>2016/12/14(v1.0.4)
+
+* 기본 이미지 유효성 검사가 유효하지 않은 .wim 파일을 확인하도록 향상되었습니다. 
+* ```-Publisher``` 매개 변수의 특수 문자에 대한 버그가 수정되었습니다. 
+* 자산이 업데이트되었습니다.
+
+### <a name="1122016-v101"></a>2016/11/2(v1.0.1)
 
 * 매니페스트 스키마 유효성 검사가 향상되었습니다. 
 * 오류 메시지가 향상되었습니다. 
@@ -100,32 +106,19 @@ DAC(Desktop App Converter)는 .NET 4.6.1 또는 Win32용으로 작성된 기존 
 
 ## <a name="set-up-the-desktop-app-converter"></a>Desktop App Converter 설정
 
-Desktop App Converter는 최신 Windows 10 기능을 사용합니다. Windows 10 1주년 업데이트(14393.0) 또는 이후 빌드를 사용 중인지 확인하세요.
+Desktop App Converter는 최신 Windows 10 기능을 사용합니다. Windows 10 1주년 업데이트(14393.0) 또는 이후 빌드를 사용 중인지 확인하세요.
 
-### <a name="store-download"></a>스토어 다운로드
-
-1.  [Windows 스토어에서 DesktopAppConverter](https://aka.ms/converter) 및 [빌드에 맞는 기본 이미지.wim 파일](https://aka.ms/converterimages)을 다운로드합니다.  
+1.  [Windows 스토어의 DesktopAppConverter](https://aka.ms/converter) 및 [빌드에 맞는 기본 이미지 .wim 파일](https://aka.ms/converterimages)을 다운로드합니다.  
 2.  DesktopAppConverter를 관리자로 실행합니다. 이 작업은 시작 메뉴에서 타일을 마우스 오른쪽 단추로 클릭하고 *자세히*에서 *관리자 권한으로 실행*을 선택하거나, 작업 표시줄에서 타일을 마우스 오른쪽 단추로 클릭하여 나타나는 앱 이름을 마우스 오른쪽 단추로 짧게 클릭한 다음 *관리자 권한으로 실행*을 선택합니다.
-3.  앱 콘솔 창에서 ```CMD PS C:\> Set-ExecutionPolicy bypass```를 실행합니다.
-4.  앱 콘솔 창에서 ```CMD PS C:\> DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose```를 실행하여 변환기를 설정합니다.
+3.  앱 콘솔 창에서 ```Set-ExecutionPolicy bypass```를 실행합니다.
+4.  앱 콘솔 창에서 ```DesktopAppConverter.exe -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose```를 실행하여 변환기를 설정합니다.
 5.  이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하세요.
-
-### <a name="zip-file"></a>파일 압축 
-
-DAC는 [다운로드 센터](https://aka.ms/converterimages)에서 계속 zip 파일로 제공되어 오프라인 시나리오를 용이하게 합니다. 그러나 이후 업데이트는 모두 스토어 버전으로만 게시됩니다.
-
-1.  DAC zip과, [빌드에 맞는 기본 이미지.wim 파일](https://aka.ms/converterimages)을 다운로드합니다.  
-2. 로컬 폴더에 DesktopAppConverter.zip의 압축을 풉니다.
-3. 관리자 PowerShell 창에서 ```CMD PS C:\> Set-ExecutionPolicy bypass```를 수행합니다.
-4. 관리자 PowerShell 창에서 ```CMD PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose```를 실행하여 변환기를 설정합니다.
-5. 이전 명령을 실행할 경우 다시 부팅하라는 메시지가 표시되면 컴퓨터를 다시 시작하세요.
 
 ## <a name="run-the-desktop-app-converter"></a>Desktop App Converter 실행
 
 + **스토어 다운로드**: ```DesktopAppConverter.exe```를 사용하여 변환기를 실행합니다.
-+ **Zip 파일**: ```DesktopAppConverter.ps1```을 사용하여 변환기를 실행합니다. 
 
-### <a name="usage"></a>사용
+### <a name="usage"></a>사용법
 
 ```CMD
 DesktopAppConverter.exe
@@ -149,7 +142,7 @@ DesktopAppConverter.exe
 
 ### <a name="example"></a>예제
 
-다음 예제에서는 *&lt;publisher_name&gt;*에 의해 데스크톱 앱 *MyApp*을 UWP 패키지(AppX)로 변환하는 방법을 보여 줍니다.
+다음 예제에서는 *&lt;publisher_name&gt;*을 사용하여 데스크톱 앱 *MyApp*을 UWP 패키지(AppX)로 변환하는 방법을 보여 줍니다.
 
 ```CMD
 DesktopAppConverter.exe -Installer C:\Installer\MyApp.exe 
@@ -173,9 +166,20 @@ Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.app
 
 .appx 패키지에 서명하는 방법은 [변환된 데스크톱 앱에 서명](desktop-to-uwp-signing.md)을 참조하세요. 
 
+참고: 자동 생성 인증서를 사용하여 패키지에 서명하려는 경우에는 기본 암호 "123456"을 사용해야 합니다.
+
+## <a name="modify-vfs-folder-and-registry-hive-optional"></a>VFS 폴더 및 레지스트리 하이브 수정(선택 사항)
+
+Desktop App Converter는 컨테이너에서 파일과 시스템 노이즈를 걸러낼 때 매우 보수적으로 접근합니다.  필수는 아니지만 변환 후에는 다음과 같은 작업을 수행하는 것이 좋습니다.
+
+1. VFS 폴더를 검토하고 설치 관리자에 필요하지 않은 파일이 있으면 삭제합니다.
+2. Reg.dat의 내용을 검토하고 앱에서 설치하지 않았거나 앱에 필요하지 않은 키가 있으면 삭제합니다.
+
+변환된 앱에 변경 작업을 수행한 경우(위의 작업 포함) 컨버터를 다시 실행할 필요 없이 DAC에서 앱을 위해 생성한 appxmanifest.xml 파일과 MakeAppx 도구를 사용하여 앱을 수동으로 다시 패키징할 수 있습니다. 도움이 필요하면 [데스크톱 브리지를 사용하여 수동으로 앱을 UWP로 변환](desktop-to-uwp-manual-conversion.md)을 참조하세요.
+
 ## <a name="caveats"></a>주의 사항
 
-1. 호스트 컴퓨터의 Windows 10 빌드는 Desktop App Converter 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
+1. 호스트 컴퓨터의 Windows 10 빌드는 Desktop App Converter 다운로드의 일부로 받은 기본 이미지와 일치해야 합니다.  
 2. 변환기는 모든 디렉터리 콘텐츠를 격리된 Windows 환경으로 복사하기 때문에 데스크톱 설치 관리자는 독립된 디렉터리에 있습니다.  
 3. 현재 Desktop App Converter는 64비트 운영 체제에서만 변환 프로세스의 실행을 지원합니다. 변환된 .appx 패키지를 64비트(x64) OS에만 배포할 수 있습니다.  
 4. Desktop App Converter를 무인 모드에서 실행하려면 데스크톱 설치 관리자가 필요합니다. *-InstallerArguments* 매개 변수를 사용하여 설치 관리자에 대한 자동 플래그를 변환기에 제공해야 합니다.
@@ -185,14 +189,24 @@ Add-appxpackage cmdlet에서는 배포 중인 응용 프로그램 패키지(.app
 
 ## <a name="known-issues"></a>알려진 문제
 
-+ 이전에 Desktop App Converter를 설치한 개발자 컴퓨터에서 Windows 참가자 플라이트를 수신하는 경우 새로운 기본 이미지를 설정할 때 `New-ContainerNetwork: The object already exists` 오류가 발생할 수 있습니다. 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음 컴퓨터를 다시 부팅합니다. 
-+ 주 실행 파일 또는 종속성이 "Program Files" 또는 "Windows\System32" 아래에 배치된 경우 "AnyCPU" 빌드 옵션을 사용하여 컴파일된 .NET 앱이 설치되지 않습니다. 이 문제를 해결하려면 아키텍처 관련 데스크톱 설치 관리자(32비트 또는 64비트)를 사용하여 AppX 패키지를 성공적으로 생성하세요.
+* 일부 OS 빌드에서 발생하는 다음 오류는 현재 조사 중입니다.
+    
+    * ```E_CREATTING_ISOLATED_ENV_FAILED```
+    * ```E_STARTING_ISOLATED_ENV_FAILED```
+    
+    이러한 오류를 발견할 경우 [다운로드 센터](https://aka.ms/converterimages)의 유효한 기본 이미지를 사용하고 있는지 확인하세요. 유효한 .wim을 사용 중인 경우 converter@microsoft.com으로 로그를 보내 주시면 조사에 많은 도움이 될 것입니다. 
 
-## <a name="telemetry-from-desktop-app-converter"></a>Desktop App Converter의 원격 분석  
+* 이전에 Desktop App Converter를 설치한 개발자 컴퓨터에서 Windows 참가자 플라이트를 수신하는 경우 새로운 기본 이미지를 설정할 때 `New-ContainerNetwork: The object already exists` 오류가 발생할 수 있습니다. 이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 `Netsh int ipv4 reset` 명령을 실행한 다음 컴퓨터를 다시 부팅합니다. 
+
+* 주 실행 파일 또는 종속성이 "Program Files" 또는 "Windows\System32" 아래에 배치된 경우 "AnyCPU" 빌드 옵션을 사용하여 컴파일된 .NET 앱이 설치되지 않습니다. 이 문제를 해결하려면 아키텍처 관련 데스크톱 설치 관리자(32비트 또는 64비트)를 사용하여 AppX 패키지를 성공적으로 생성하세요.
+
+## <a name="telemetry-from-desktop-app-converter"></a>Desktop App Converter의 원격 분석
+
 Desktop App Converter가 사용자 및 사용자의 소프트웨어 사용에 대한 정보를 수집한 후 Microsoft로 보낼 수 있습니다. 제품 설명서 및 [Microsoft 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=521839)에서Microsoft의 데이터 수집 및 사용에 대해 알아볼 수 있습니다. Microsoft 개인 정보 취급 방침의 모든 규정을 준수한다는 데 동의합니다.
 
 기본적으로 Desktop App Converter에 대한 원격 분석은 사용되도록 설정됩니다. 원격 분석을 원하는 설정으로 구성하려면 다음 레지스트리 키를 추가합니다.  
-```CMD
+
+```cmd
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DesktopAppConverter
 ```
 + 1로 설정된 DWORD를 사용하여 *DisableTelemetry* 값을 추가 또는 편집합니다.
@@ -275,9 +289,7 @@ Desktop App Converter는 이제 x86 및 amd64 컴퓨터에서 설치하고 실�
 
 ### <a name="running-the-peheadercertfixtool"></a>PEHeaderCertFixTool 실행
 
-변환 프로세스 동안 DesktopAppConverter는 모든 손상된 PE 헤더를 수정하기 위해 자동으로 PEHeaderCertFixTool을 실행합니다. 그러나 UWP appx, 느슨한 파일 또는 특정 이진에서 PEHeaderCertFixTool을 실행할 수도 있습니다. 
-
-PEHeaderCertFixTool은 DesktopAppConverter.zip의 일부로 제공됩니다. 사용 예제: 
+변환 프로세스 동안 DesktopAppConverter는 모든 손상된 PE 헤더를 수정하기 위해 자동으로 PEHeaderCertFixTool을 실행합니다. 하지만 UWP appx, 느슨한 파일 또는 특정 이진에서 PEHeaderCertFixTool을 실행할 수도 있습니다. 예제 사용법: 
 
 ```CMD
 PEHeaderCertFixTool.exe <binary file>|<.appx package>|<folder> [/c] [/v]
@@ -298,6 +310,6 @@ Desktop App Converter는 유니코드를 지원하지 않으므로 중국어 문
 + [Project Centennial: 기존 데스크톱 응용 프로그램을 유니버설 Windows 플랫폼으로 가져오기](https://channel9.msdn.com/events/Build/2016/B829)  
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

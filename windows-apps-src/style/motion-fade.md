@@ -6,22 +6,27 @@ ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 9999c353bfc7a72f04ba8ae0052212f9f2166703
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: cbe1a4ca77f0d6e15b3d12b2b3a0f2f8363530ae
 
 ---
 
-# 페이드 애니메이션
+# <a name="fade-animations"></a>페이드 애니메이션
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 항목을 보기로 가져오거나 보기 외부로 이동하려면 페이드 애니메이션을 사용합니다. 두 가지의 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)</li>
+<li>[**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)</li>
+</ul>
+</div>
 
--   [**FadeInThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210298)
--   [**FadeOutThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br210302)
 
-
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   앱이 관련이 없거나 텍스트가 많은 요소 간을 전환할 때는 페이드 아웃을 사용한 다음 페이드 인을 사용합니다. 이렇게 하면 들어오는 개체가 보이기 전에 나가는 개체가 완전히 사라집니다.
@@ -29,9 +34,8 @@ ms.openlocfilehash: 9999c353bfc7a72f04ba8ae0052212f9f2166703
 -   목록의 항목을 추가하거나 삭제하는 데 페이드 애니메이션을 사용하지 마세요. 대신, 해당 용도에 맞게 만들어진 목록 애니메이션을 사용합니다.
 -   페이지의 전체 콘텐츠를 변경하는 데 페이드 애니메이션을 사용하지 마세요. 대신, 해당 용도에 맞게 만들어진 페이지 전환 애니메이션을 사용합니다.
 -   페이드 아웃은 요소를 제거하는 적절한 방법입니다.
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
-**개발자용(XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [페이드 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649429)
 * [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -48,6 +52,6 @@ ms.openlocfilehash: 9999c353bfc7a72f04ba8ae0052212f9f2166703
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

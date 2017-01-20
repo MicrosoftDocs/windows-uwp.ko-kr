@@ -6,29 +6,35 @@ ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 5255da14ccdd0aed3852c41fa662de63a7160fba
-ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: eb524ae7369874e8a2f81cd4a8cbb112829387c8
 
 ---
 
-# 세계화를 대비한 형식 사용
+# <a name="use-global-ready-formats"></a>세계화를 대비한 형식 사용
 
-**중요 API**
-
--   [**Windows.Globalization.Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**Windows.Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
--   [**Windows.Globalization.PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting)
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 개발합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
 
-## 소개
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Globalization.Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)</li>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**Windows.Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)</li>
+<li>[**Windows.Globalization.PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting)</li>
+</ul>
+</div>
+
+
+## <a name="introduction"></a>소개
 
 많은 앱 개발자들은 기본적으로 자신의 언어 및 문화만을 고려하여 앱을 만듭니다. 그러나 앱이 다른 시장으로 확대되면 새 언어 및 지역에 맞게 앱을 조정하는 것이 예상치 않게 어려울 수 있습니다. 예를 들어 날짜, 시간, 숫자, 달력, 통화, 전화 번호, 측정 단위 및 용지 크기는 문화 또는 언어마다 다르게 표시될 수 있는 항목입니다.
 
 앱을 개발할 때 몇 가지 사항만 고려하면 간단한 절차를 통해 새로운 지역/국가에 맞게 조정할 수 있습니다.
 
-## 날짜 및 시간의 형식을 적절하게 지정
+## <a name="format-dates-and-times-appropriately"></a>날짜 및 시간의 형식을 적절하게 지정
 
 날짜 및 시간을 적절하게 표시하는 방법에는 여러 가지가 있습니다. 날짜의 일과 월의 순서, 시간 및 분 분리, 구분 기호로 사용되는 문자 부호 등에 대한 규칙은 지역과 문화마다 다릅니다. 또한 날짜의 경우 문화마다 다양한 긴 형식("2012년 3월 28일, 수요일") 또는 짧은 형식("12/03/28")으로 표시할 수 있습니다. 요일과 월의 이름 및 약어도 언어마다 다릅니다.
 
@@ -56,7 +62,7 @@ ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
                   "Short Time: " + stime;
 ```
 
-## 숫자 및 통화의 형식을 적절하게 지정
+## <a name="format-numbers-and-currencies-appropriately"></a>숫자 및 통화의 형식을 적절하게 지정
 
 각 문화에는 저마다의 숫자 형식이 있습니다. 표시할 소수 자릿수, 소수점 구분 기호로 사용할 문자 및 사용할 통화 기호 등이 문화별 숫자 형식 차이점에 포함될 수 있습니다. [**NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)을 사용하여 소수점, 백분율 또는 천분율 숫자, 통화를 표시합니다. 대부분의 경우는 사용자의 현재 기본 설정에 따라 간단하게 숫자 또는 통화를 표시합니다. 그러나 포맷터를 사용하여 특정 지역 또는 형식의 통화를 표시할 수도 있습니다.
 
@@ -94,13 +100,13 @@ ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
 ```
 
-## 문화적으로 적절한 달력 사용
+## <a name="use-a-culturally-appropriate-calendar"></a>문화적으로 적절한 달력 사용
 
 달력은 지역과 언어에 따라 다릅니다. 모든 문화에서 양력이 기본 설정인 것은 아닙니다. 일부 지역의 사용자는 일본 연도 또는 아랍 음력 같은 대체 달력을 선택하기도 합니다. 달력의 날짜 및 시간 또한 서로 다른 표준 시간대 및 일광 절약 시간을 따릅니다.
 
 표준 [날짜 및 시간 선택기](https://msdn.microsoft.com/library/windows/apps/hh465466) 컨트롤을 사용하면 사용자가 날짜를 선택할 때 기본 설정 달력 형식이 사용됩니다. 달력 날짜로 직접 작업해야 하는 더 복잡한 시나리오의 경우 Windows.Globalization은 지정된 문화, 지역 및 달력 유형에 적절한 달력 표시를 제공하는 [**Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724) 클래스를 제공합니다.
 
-## 적절한 전화 번호 형식 지정
+## <a name="format-phone-numbers-appropriately"></a>적절한 전화 번호 형식 지정
 전화 번호는 지역에 따라 형식이 다르게 지정됩니다. 자릿수, 숫자 그룹화 방법, 전화 번호 중 특정 부분의 의미는 국가마다 다릅니다. Windows 10 버전 1607부터 [**PhoneNumberFormatting**](https://msdn.microsoft.com/library/windows/apps/Windows.Globalization.PhoneNumberFormatting)을 사용하여 전화 번호의 형식을 현재 지역에 맞게 설정할 수 있습니다.
 
 [**PhoneNumberInfo**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.phonenumberformatting.phonenumberinfo.aspx)는 숫자 문자열의 구문을 분석하여 숫자가 현재 지역의 전화 번호에 유효한지 확인하고, 두 번호가 동일한지 비교하고, 국가 코드 또는 지리적 영역 코드 등 전화 번호의 다양한 기능 부분을 추출할 수 있도록 해줍니다.
@@ -140,11 +146,11 @@ ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
     }
 ```    
 
-## 사용자의 언어 및 문화 기본 설정 준수
+## <a name="respect-the-users-language-and-cultural-preferences"></a>사용자의 언어 및 문화 기본 설정 준수
 
 사용자의 언어, 지역 또는 문화 기본 설정에 따라 다른 기능을 제공하는 시나리오의 경우 Windows는 [**Windows.System.UserProfile.GlobalizationPreferences**](https://msdn.microsoft.com/library/windows/apps/br241825)를 통해 이러한 기본 설정에 액세스할 수 있는 방법을 제공합니다. 필요한 경우 **GlobalizationPreferences** 클래스를 사용하여 사용자의 현재 지역, 기본 설정 언어, 기본 설정 통화 등의 값을 가져옵니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [세계 시장에 대한 계획](https://msdn.microsoft.com/library/windows/apps/hh465405)
 * [날짜 및 시간 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465466)
@@ -163,6 +169,6 @@ ms.openlocfilehash: 3615d1301a9d163390a2d709690c1e583c9b4f7e
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

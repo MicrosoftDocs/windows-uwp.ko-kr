@@ -4,233 +4,45 @@ ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
 title: "JavaScript의 중간 광고 샘플 코드"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: 5317895c2f28166c2905d0d49c5e98da5567943a
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: 5d7f81e16f3ecdc73fba5010cfbc6082a19cd24c
 
 
 ---
 
-# JavaScript의 중간 광고 샘플 코드
+# <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 
+이 항목에서는 중간 광고를 게재하는 기본 JavaScript 및 HTML UWP(유니버설 Windows 플랫폼) 앱의 전체 샘플 코드를 제공합니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
+## <a name="code-example"></a>코드 예제
 
+이 섹션에서는 중간 광고를 게재하는 기본 앱의 HTML 및 JavaScript 파일 콘텐츠를 보여 줍니다. 이들 예제를 사용하려면 이 코드를 Visual Studio 2015의 JavaScript**WinJS 앱(유니버설 Windows)** 프로젝트로 복사합니다.
 
-이 항목에서는 JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 보여 줍니다. 이 코드를 사용하도록 프로젝트를 구성하는 방법을 보여 주는 단계별 지침은 [중간 광고](interstitial-ads.md)를 참조하세요. JavaScript/HTML 앱에 동영상 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
+이 샘플 앱은 2개의 버튼을 사용하여 중간 광고를 요청한 다음 실행합니다. Visual Studio에서 생성된 main.js 및 index.html은 수정되었으며 아래와 같습니다. 아래의 script.js 파일에는 샘플의 코드 대부분이 포함되어 있으므로 이 파일을 프로젝트의 **js** 폴더에 추가해야 합니다.
 
-## 코드 예제
+>**참고(Windows 8.x 및 Windows Phone 8.1의 경우)**&nbsp;&nbsp;Windows 8.1 또는 Windows Phone 8.1 대상의 프로젝트인 경우 프로젝트의 기본 HTML 파일 이름이 index.html이 아닌 default.html이고 프로젝트의 기본 JavaScript 파일 이름이 main.js가 아닌 default.js입니다.
 
+앱을 스토어에 제출하기 전에 ```applicationId``` 및 ```adUnitId``` 변수의 값을 Windows 개발자 센터에서 라이브 값으로 바꿉니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md)을 참조하세요.
 
-이 JavaScript/HTML 샘플에서는 중간 광고를 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 코드를 보여 줍니다. 이 샘플에서는 JavaScript 범용 Windows 비어 있는 앱 템플릿을 사용하여 새 Visual Studio 2015 프로젝트를 만듭니다.
+### <a name="indexhtml"></a>index.html
 
-이 코드는 단추를 사용하여 중간 광고를 시작하는 이벤트를 발생합니다. Visual Studio에서 생성된 default.js 및 default.html은 수정되었으며 아래와 같습니다. 아래에 표시된 script.js 파일은 프로젝트의 **js** 폴더/경로 아래에 추가됩니다.
+> [!div class="tabbedCodeSnippets"]
+[!code-html[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/index.html#L1-L21)]
 
-**applicationId** 및 **adUnitId** 할당의 텍스트를 작업 값으로 바꿉니다.
+<span/>
+>**참고(Windows 8.x 및 Windows Phone 8.1의 경우)**&nbsp;&nbsp;Windows 8.1 또는 Windows Phone 8.1 대상의 프로젝트인 경우 예제의 ```<script src="//Microsoft.Advertising.JavaScript/ad.js"></script>``` 줄을 ```<script src="/MSAdvertisingJS/ads/ad.js"></script>```로 바꿉니다.
 
-### script.js
+### <a name="scriptjs"></a>script.js
 
-``` syntax
-(function () {
-    "use strict";
+> [!div class="tabbedCodeSnippets"]
+[!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#script)]
 
-    // Assign applicationId and adUnitId.
-    // Test values. Replace test values with live values before submitting an app to the store.
-    var applicationId = "d25517cb-12d4-4699-8bdc-52040c712cab";
-    var adUnitId = "11389925";
+### <a name="mainjs"></a>main.js
 
-    var intAd = null;
+> [!div class="tabbedCodeSnippets"]
+[!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/main.js#main)]
 
-    window.startInterstitial = function () {
-        writeText("<br>Interstitial Ads in JavaScript Windows 10 Apps");
-        registerEvents();
-
-        // We know the opportunity to show an ad is coming soon (because this silly game is
-        // so short), so prepare the ad now. In a real app, you should request the interstitial
-        // close to when you think it will be shown, but with enough advance time to make the
-        // request and prepare the ad (say 30 seconds to a few minutes).
-        prepareInterstitial();
-
-        writeText("Press the Button to show the interstitial ad.");
-    };
-
-    var registerEvents = function () {
-        button1.addEventListener("click", onButtonClick);
-    };
-
-    var onButtonClick = function (evt) {
-        if (intAd && intAd.state !== MicrosoftNSJS.Advertising.InterstitialAdState.showing) {
-            showInterstitial();
-        }
-    }
-
-    var restart = function () {
-        if (intAd) {
-            intAd.dispose();
-        }
-        intAd = null;
-        window.startInterstitial();
-    };
-
-    var clearText = function (msg) {
-        description.innerHTML = "";
-    };
-
-    var writeText = function (msg) {
-        description.innerHTML = description.innerHTML + msg + "<br>";
-        description.scrollTop = description.scrollHeight;
-    };
-
-    var prepareInterstitial = function () {
-        if (!intAd) {
-            intAd = new MicrosoftNSJS.Advertising.InterstitialAd();
-
-            intAd.onErrorOccurred = errorOccurredHandler;
-            intAd.onAdReady = adReadyHandler;
-            intAd.onCancelled = cancelledHandler;
-            intAd.onCompleted = completedHandler;
-
-            intAd.requestAd(MicrosoftNSJS.Advertising.InterstitialAdType.video, applicationId, adUnitId);
-        }
-    };
-
-    var showInterstitial = function () {
-        if (intAd && intAd.state === MicrosoftNSJS.Advertising.InterstitialAdState.ready) {
-            intAd.show();
-        } else {
-            // No ad is available to show. Allow user to try again anyway
-            clearText();
-            writeText("<br>Unable to show an ad. Check the error log. You can try again.");
-            restart();
-        }
-    };
-
-    var errorOccurredHandler = function (sender, args) {
-        console.log("error: " + args.errorMessage + " (" + args.errorCode + ")");
-        if (!isPlaying) {
-            clearText();
-            writeText("<br>Unable to show an ad. Check the error log. You can try again.");
-            restart();
-        }
-    };
-
-    var adReadyHandler = function (sender) {
-        console.log("ad ready");
-    };
-
-    var cancelledHandler = function (sender) {
-        console.log("ad cancelled");
-        writeText("<br>You must watch the entire ad to continue. <b>Press the Button to watch the
-
-ad.</b>");
-        intAd.dispose();
-        intAd = null;
-        prepareInterstitial();
-    };
-
-    var completedHandler = function (sender) {
-        console.log("ad complete");
-        clearText();
-        writeText("<br>Thanks for watching the ad! You can try again!");
-        restart();
-    };
-
-})();
-```
-
-### default.js
-
-``` syntax
-// For an introduction to the Blank template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232509
-(function () {
-    "use strict";
-
-    var app = WinJS.Application;
-    var activation = Windows.ApplicationModel.Activation;
-
-    app.onactivated = function (args) {
-        if (args.detail.kind === activation.ActivationKind.launch) {
-            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: This application has been newly launched. Initialize your application here.
-            } else {
-                // TODO: This application was suspended and then terminated.
-                // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
-            }
-
-            startInterstitial();
-
-            args.setPromise(WinJS.UI.processAll());
-        }
-    };
-
-    app.oncheckpoint = function (args) {
-        // TODO: This application is about to be suspended. Save any state that needs to persist across suspensions here.
-        // You might use the WinJS.Application.sessionState object, which is automatically saved and restored across suspension.
-        // If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
-    };
-
-    app.start();
-})();
-```
-
-### default.html(Windows 10)
-
-``` syntax
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>App3JSInterstitial</title>
-
-    <!-- WinJS references -->
-    <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
-    <script src="WinJS/js/base.js"></script>
-    <script src="WinJS/js/ui.js"></script>
-
-    <!-- App3JSInterstitial references -->
-    <link href="/css/default.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/script.js"></script>
-
-    <!-- ad.js src for Windows 10 -->
-    <script src="//Microsoft.Advertising.JS/ad.js"></script>
-</head>
-<body class="win-type-body">
-    <button id="button1" onclick="onButtonClick" class="win-button">Interstitial</button>
-    <div id="description" style="height:100%; overflow:auto"></div>
-</body>
-</html>
-```
-
-### default.html(Windows 8.x)
-
-``` syntax
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>App3JSInterstitial</title>
-
-    <!-- WinJS references -->
-    <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
-    <script src="WinJS/js/base.js"></script>
-    <script src="WinJS/js/ui.js"></script>
-
-    <!-- App3JSInterstitial references -->
-    <link href="/css/default.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/script.js"></script>
-
-    <!-- ad.js src for Windows 8.x -->
-    <script src="//Microsoft.Advertising.JS/ads/ad.js"></script>
-</head>
-<body class="win-type-body">
-    <button id="button1" onclick="onButtonClick" class="win-button">Interstitial</button>
-    <div id="description" style="height:100%; overflow:auto"></div>
-</body>
-</html>
-```
-
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
@@ -238,6 +50,6 @@ ad.</b>");
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
