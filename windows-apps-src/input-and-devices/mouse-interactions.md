@@ -6,13 +6,13 @@ ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: ed0c8e86d38865fad8bb784550b9b4fc61a8b40a
 
 ---
 
-# 마우스 조작
-
+# <a name="mouse-interactions"></a>마우스 조작
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적화하고 기본적으로 기본 마우스 지원을 받으세요.
 
@@ -28,7 +28,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 이 항목에서는 마우스 조작에 대한 디자인 고려 사항을 설명합니다.
 
-## UWP 앱 마우스 언어
+## <a name="the-uwp-app-mouse-language"></a>UWP 앱 마우스 언어
 
 
 마우스 조작의 축약된 집합이 전체 시스템에서 일관되게 사용됩니다.
@@ -61,7 +61,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 명령 선택</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 탐색 모음 (사용 가능한 경우) 및 글로벌 명령이 포함된 앱 바를 표시합니다. 요소를 마우스 오른쪽 단추로 클릭하여 선택하고 선택한 요소에 대한 상황에 맞는 명령이 포함된 앱 바를 표시합니다.</p>
 <div class="alert">
-<strong>참고</strong> 선택 또는 앱 바 명령이 적합한 UI 동작이 아닌 경우 마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 표시합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
+<strong>참고</strong>  선택 또는 앱 바 명령이 적합한 UI 동작이 아닌 경우 마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 표시합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
 </div>
 <div>
  
@@ -86,22 +86,22 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 </tbody>
 </table>
 
-## 마우스 이벤트
+## <a name="mouse-events"></a>마우스 이벤트
 
 터치 및 펜 입력에 사용하는 것과 동일한 기본 포인터 이벤트를 처리하여 앱에서 마우스 입력에 응답합니다.
 
-[**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트를 사용하여 각 포인터 입력 장치에 대한 코드를 작성하지 않고 기본적인 입력 기능을 구현합니다. 그러나 이 개체의 포인터, 제스처 및 조작 이벤트를 사용하여 이 개체의 각 디바이스의 특수 기능(예: 마우스 휠 이벤트)을 활용할 수도 있습니다.
+[**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 이벤트를 사용하여 각 포인터 입력 장치에 대한 코드를 작성하지 않고 기본적인 입력 기능을 구현합니다. 그러나 이 개체의 포인터, 제스처 및 조작 이벤트를 사용하여 이 개체의 각 장치의 특수 기능(예: 마우스 휠 이벤트)을 활용할 수도 있습니다.
 
-**샘플:** 이 기능의 작동 방식을 보려면 [앱 샘플](http://go.microsoft.com/fwlink/p/?LinkID=264996)을 참조하세요.
+**샘플:**  이 기능의 작동 방식을 보려면 [앱 샘플](http://go.microsoft.com/fwlink/p/?LinkID=264996)을 참조하세요.
 
 
-- [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+- [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 
 - [입력 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 
 - [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## 시각적 피드백에 대한 지침
+## <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 
 -   이동 또는 가리키기 이벤트를 통해 마우스가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 마우스가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 마우스 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -114,7 +114,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
 
-## 커서
+## <a name="cursors"></a>커서
 
 
 마우스 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
@@ -129,10 +129,10 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 -   개체 크기를 조정할 수 있는 경우 가로, 세로 및 대각선 크기 조정 커서(![세로 크기 조정 커서](images/cursor-vertical.png), ![가로 크기 조정 커서](images/cursor-horizontal.png), ![대각선 크기 조정 커서(왼쪽 아래, 오른쪽 위)](images/cursor-diagonal2.png), ![대각선 크기 조정 커서(왼쪽 위, 오른쪽 아래)](images/cursor-diagonal1.png))를 사용합니다.
 -   고정 캔버스 내에서 콘텐츠를 이동하는 경우(예제: 지도) 잡는 손 모양 커서(![잡는 손 모양(열림)](images/cursor-pan1.png), ![잡는 손 모양(닫힘)](images/cursor-pan2.png))를 사용합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
-* [입력 디바이스 식별](identify-input-devices.md)
+* [입력 장치 식별](identify-input-devices.md)
 
 **샘플**
 * [기본 입력 샘플](http://go.microsoft.com/fwlink/p/?LinkID=620302)
@@ -141,7 +141,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 * [포커스 화면 효과 샘플](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **보관 샘플**
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: XAML 사용자 입력 이벤트 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [XAML 스크롤, 이동 및 확대/축소 샘플](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [입력: GestureRecognizer를 사용한 조작 및 제스처](http://go.microsoft.com/fwlink/p/?LinkID=231605)
@@ -156,6 +156,6 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,17 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: "이 문서에서는 MediaFrameReader와 MediaCapture를 사용하여 색, 깊이, 적외선 카메라, 오디오 디바이스, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다."
+description: "이 문서에서는 MediaFrameReader와 MediaCapture를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다."
 title: "MediaFrameReader를 사용하여 미디어 프레임 처리"
 translationtype: Human Translation
-ms.sourcegitcommit: 881f806a61d247c6c4f73aa770ba4c5dab91af00
-ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
+ms.sourcegitcommit: e6ab1fc16f150de2fed3797d89375a52b3965182
+ms.openlocfilehash: 11e09d9b447e9daa0498377a67ef235bdab168dd
 
 ---
 
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
-이 문서에서는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)와 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)를 사용하여 색, 깊이, 적외선 카메라, 오디오 디바이스, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다. 이 기능은 증강 현실 및 깊이 인식 카메라 앱과 같이 미디어 프레임의 실시간 처리를 수행하는 앱에 사용되도록 설계되었습니다.
+이 문서에서는 [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)와 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다. 이 기능은 증강 현실 및 깊이 인식 카메라 앱과 같이 미디어 프레임의 실시간 처리를 수행하는 앱에 사용되도록 설계되었습니다.
 
 일반적인 사진 앱 등 단순히 비디오 또는 사진을 캡처하려면 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)에서 지원하는 다른 캡처 기술 중 하나를 사용할 수 있습니다. 미디어 캡처 기술 및 사용 방법을 보여 주는 문서 목록은 [**카메라**](camera.md)를 참조하세요.
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 > 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](http://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
 
 ## <a name="setting-up-your-project"></a>프로젝트 설정
-**MediaCapture**를 사용하는 앱의 경우 카메라 디바이스에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 디바이스에서 캡처하는 경우 *마이크* 디바이스 기능도 선언해야 합니다. 
+**MediaCapture**를 사용하는 앱의 경우 카메라 장치에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 장치에서 캡처하는 경우 *마이크* 장치 기능도 선언해야 합니다. 
 
 **앱 매니페스트에 접근 권한 값 추가**
 
@@ -36,23 +36,23 @@ ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>프레임 원본과 프레임 원본 그룹 선택
-미디어 프레임을 처리하는 대부분의 앱은 디바이스의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체는 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync)를 호출하여 현재 디바이스에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
+미디어 프레임을 처리하는 대부분의 앱은 장치의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체는 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.FindAllAsync)를 호출하여 현재 장치에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-또한 [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector)에서 반환한 값을 사용하여 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher)를 만들면 외부 카메라가 연결될 때 등 디바이스에서 사용 가능한 프레임 원본 그룹이 변경될 때 알림을 받을 수 있습니다. 자세한 내용은 [**디바이스 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
+또한 [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) 및 [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/br225427)에서 반환한 값을 사용하여 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector)를 만들면 외부 카메라가 연결될 때 등 장치에서 사용 가능한 프레임 원본 그룹이 변경될 때 알림을 받을 수 있습니다. 자세한 내용은 [**장치 열거**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
 
-[**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 디바이스에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
+[**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 장치에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
 
-다음 예제에서는 프레임 원본 그룹을 간단히 선택하는 방법을 보여 줍니다. 이 코드는 단순히 사용 가능한 모든 그룹을 반복한 다음 [**SourceInfos**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.SourceInfos) 컬렉션 내에서 각 항목을 반복합니다. 각 **MediaFrameSourceInfo**에서 검색 중인 기능을 지원하는지 확인합니다. 이 경우 [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.MediaStreamType) 속성 값이 [**VideoPreview**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType)(디바이스에서 비디오 미리 보기 스트림 제공)와 [**SourceKind**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.SourceKind) 속성 값이 [**Color**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceKind)(원본에서 색 프레임 제공)인지 확인합니다.
+다음 예제에서는 프레임 원본 그룹을 간단히 선택하는 방법을 보여 줍니다. 이 코드는 단순히 사용 가능한 모든 그룹을 반복한 다음 [**SourceInfos**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.SourceInfos) 컬렉션 내에서 각 항목을 반복합니다. 각 **MediaFrameSourceInfo**에서 검색 중인 기능을 지원하는지 확인합니다. 이 경우 [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.MediaStreamType) 속성 값이 [**VideoPreview**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaStreamType)(장치에서 비디오 미리 보기 스트림 제공)와 [**SourceKind**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo.SourceKind) 속성 값이 [**Color**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceKind)(원본에서 색 프레임 제공)인지 확인합니다.
 
 [!code-cs[SimpleSelect](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSimpleSelect)]
 
-이 방법은 간단한 경우에는 원하는 프레임 원본 그룹과 프레임 원본을 식별할 수 있지만 더 복잡한 기준을 기반으로 프레임 원본을 선택하려는 경우에는 까다로울 수 있습니다. 또 다른 방법은 Linq 구문과 익명 개체를 사용하여 선택하는 것입니다. 다음 예제에서는 **Select** 확장 메서드를 사용하여 *frameSourceGroups* 목록의 **MediaFrameSourceGroup** 개체를 두 필드가 포함된 익명 개체로 변환합니다. 이 두 필드는 그룹 자체를 나타내는 *sourceGroup*과 그룹의 색 프레임 원본을 나타내는 *colorSourceInfo*입니다. *colorSourceInfo* 필드는 제공된 조건자가 true로 확인되는 첫 번째 개체를 선택하는 **FirstOrDefault**의 결과로 설정됩니다. 이 경우 스트림 형식이 **VideoPreview**이고, 원본 종류가 **Color**이며, 카메라가 디바이스의 앞면에 있으면 조건자가 true입니다.
+이 방법은 간단한 경우에는 원하는 프레임 원본 그룹과 프레임 원본을 식별할 수 있지만 더 복잡한 기준을 기반으로 프레임 원본을 선택하려는 경우에는 까다로울 수 있습니다. 또 다른 방법은 Linq 구문과 익명 개체를 사용하여 선택하는 것입니다. 다음 예제에서는 **Select** 확장 메서드를 사용하여 *frameSourceGroups* 목록의 **MediaFrameSourceGroup** 개체를 두 필드가 포함된 익명 개체로 변환합니다. 이 두 필드는 그룹 자체를 나타내는 *sourceGroup*과 그룹의 색 프레임 원본을 나타내는 *colorSourceInfo*입니다. *colorSourceInfo* 필드는 제공된 조건자가 true로 확인되는 첫 번째 개체를 선택하는 **FirstOrDefault**의 결과로 설정됩니다. 이 경우 스트림 형식이 **VideoPreview**이고, 원본 종류가 **Color**이며, 카메라가 장치의 앞면에 있으면 조건자가 true입니다.
 
 위에서 설명한 쿼리에서 반환한 익명 개체 목록에서 **Where** 확장 메서드는 *colorSourceInfo* 필드가 null이 아닌 개체만 선택하는 데 사용됩니다. 마지막으로 **FirstOrDefault**가 목록의 첫 번째 항목을 선택하기 위해 호출됩니다.
 
-이제 선택한 개체의 필드를 사용하여 선택한 **MediaFrameSourceGroup** 및 컬러 카메라를 나타내는 **MediaFrameSourceInfo** 개체에 대한 참조를 가져올 수 있습니다. 이러한 참조는 나중에 **MediaCapture** 개체를 초기화하고 선택한 원본에 대한 **MediaFrameReader**를 만드는 데 사용됩니다. 마지막으로 원본 그룹이 null인지, 즉 현재 디바이스에 요청된 캡처 원본이 있는지 테스트해야 합니다.
+이제 선택한 개체의 필드를 사용하여 선택한 **MediaFrameSourceGroup** 및 컬러 카메라를 나타내는 **MediaFrameSourceInfo** 개체에 대한 참조를 가져올 수 있습니다. 이러한 참조는 나중에 **MediaCapture** 개체를 초기화하고 선택한 원본에 대한 **MediaFrameReader**를 만드는 데 사용됩니다. 마지막으로 원본 그룹이 null인지, 즉 현재 장치에 요청된 캡처 원본이 있는지 테스트해야 합니다.
 
 [!code-cs[SelectColor](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetSelectColor)]
 
@@ -70,7 +70,7 @@ ms.openlocfilehash: 648874a50dbe333f1bb6291de646d9088eec1528
 생성자를 호출하여 **MediaCapture** 개체의 인스턴스를 만듭니다. 다음으로 **MediaCapture** 개체를 초기화하는 데 사용할 [**MediaCaptureSettings**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSettings) 개체를 만듭니다. 이 예제에서는 다음 설정이 사용됩니다.
 
 * [**SourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SourceGroup) - 프레임을 가져오는 데 사용할 원본 그룹을 지정합니다. 원본 그룹은 동시에 사용할 수 있는 미디어 프레임 원본 집합을 정의합니다.
-* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) - 캡처 원본 디바이스를 단독으로 제어해야 하는지 지정합니다. 이 값을 [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 디바이스 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 디바이스를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 디바이스의 설정을 변경할 수는 없습니다.
+* [**SharingMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.SharingMode) - 캡처 원본 장치를 단독으로 제어해야 하는지 지정합니다. 이 값을 [**ExclusiveControl**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 장치 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 장치를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 장치의 설정을 변경할 수는 없습니다.
 * [**MemoryPreference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.MemoryPreference) - [**CPU**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference)를 지정하는 경우 시스템에서 프레임이 수신될 때 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap) 개체로 사용할 수 있을 만큼 충분한 CPU 메모리를 사용합니다. [**Auto**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureMemoryPreference)로 지정할 경우 시스템에서는 프레임을 저장하는 데 가장 적합한 메모리 위치를 동적으로 선택합니다. 시스템에서 GPU 메모리를 사용하도록 선택한 경우 미디어 프레임이 **SoftwareBitmap**이 아닌 [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체로 수신됩니다.
 * [**StreamingCaptureMode**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCaptureInitializationSettings.StreamingCaptureMode) - 이 값을 [**Video**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.StreamingCaptureMode)로 설정하여 오디오를 스트리밍할 필요가 없다는 것을 나타냅니다.
 
@@ -117,7 +117,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 **Image** 컨트롤은 프리멀티플라이되거나 알파가 없는 BRGA8 형식으로만 이미지를 표시할 수 있습니다. 도착하는 프레임이 해당 형식이 아니면 정적 메서드 [**Convert**](https://msdn.microsoft.com/library/windows/apps/Windows.Graphics.Imaging.SoftwareBitmap.Covert)가 소프트웨어 비트맵을 올바른 형식으로 변환합니다.
 
-다음으로 [**Interlocked.Exchange**](https://msdn.microsoft.com/en-us/library/bb337971) 메서드를 사용하여 도착하는 비트맵의 참조를 백 버퍼 비트맵으로 바꿉니다. 이 메서드는 스레드로부터 안전한 원자성 작업에서 이러한 참조를 바꿉니다. 바꾼 후에는 이제 *softwareBitmap* 변수에 있는 이전 백 버퍼 이미지가 삭제되어 해당 리소스가 정리됩니다.
+다음으로 [**Interlocked.Exchange**](https://msdn.microsoft.com/library/bb337971) 메서드를 사용하여 도착하는 비트맵의 참조를 백 버퍼 비트맵으로 바꿉니다. 이 메서드는 스레드로부터 안전한 원자성 작업에서 이러한 참조를 바꿉니다. 바꾼 후에는 이제 *softwareBitmap* 변수에 있는 이전 백 버퍼 이미지가 삭제되어 해당 리소스가 정리됩니다.
 
 다음으로 **Image** 요소와 연관된 [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Core.CoreDispatcher)를 사용하여 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)를 호출하여 UI 스레드에서 실행할 작업을 만듭니다. 작업 내에서 비동기 작업이 수행되므로 *async* 키워드를 사용하여 **RunAsync**로 전달된 람다 식이 선언됩니다.
 
@@ -126,7 +126,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 마지막으로, 다음에 처리기를 호출할 때 작업이 다시 실행될 수 있도록 *_taskRunning* 변수를 다시 false로 설정합니다.
 
 > [!NOTE] 
-> [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference)의 [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame) 속성에서 제공하는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap) 또는 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface) 개체에 액세스하는 경우 시스템에서 해당 개체에 대한 강력한 참조를 만듭니다. 즉, 이러한 참조는 포함하는 **MediaFrameReference**에서 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close)를 호출할 때 삭제되지 않습니다. 개체를 즉시 삭제하려면 **SoftwareBitmap** 또는 **Direct3DSurface**의 **Dispose** 메서드를 직접 명시적으로 호출해야 합니다. 그러지 않으면 가비지 수집기에서 결국 이러한 개체의 메모리를 해제하지만 언제 수행될지 알 수 없으며, 할당된 비트맵 또는 화면 수가 시스템에서 허용된 최대 크기를 초과할 경우 새 프레임의 흐름이 중단됩니다.
+> [**MediaFrameReference**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.SoftwareBitmap)의 [**VideoMediaFrame**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.VideoMediaFrame.Direct3DSurface) 속성에서 제공하는 [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.VideoMediaFrame) 또는 [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference) 개체에 액세스하는 경우 시스템에서 해당 개체에 대한 강력한 참조를 만듭니다. 즉, 이러한 참조는 포함하는 **MediaFrameReference**에서 [**Dispose**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReference.Close)를 호출할 때 삭제되지 않습니다. 개체를 즉시 삭제하려면 **SoftwareBitmap** 또는 **Direct3DSurface**의 **Dispose** 메서드를 직접 명시적으로 호출해야 합니다. 그러지 않으면 가비지 수집기에서 결국 이러한 개체의 메모리를 해제하지만 언제 수행될지 알 수 없으며, 할당된 비트맵 또는 화면 수가 시스템에서 허용된 최대 크기를 초과할 경우 새 프레임의 흐름이 중단됩니다.
 
 
 [!code-cs[FrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFrameArrived)]
@@ -167,6 +167,6 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

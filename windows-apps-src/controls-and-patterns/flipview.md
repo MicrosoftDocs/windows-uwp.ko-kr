@@ -6,11 +6,11 @@ ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
+ms.sourcegitcommit: 92c523c100a021808e01dffe4cd9b5c47c21b58a
+ms.openlocfilehash: 3ad89682248462efa5022467ceb330da03843de4
 
 ---
-# 대칭 이동 뷰
+# <a name="flip-view"></a>대칭 이동 뷰
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,25 +19,18 @@ ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx"><strong>FlipView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx"><strong>ItemsSource 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx"><strong>ItemTemplate 속성</strong></a></li>
+<li>[**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)</li>
+<li> [**ItemsSource 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)</li>
+<li>[**ItemTemplate 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)</li>
+
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 대칭 이동 보기는 작은 크기부터 중간 크기의 컬렉션에 있는 이미지를 읽는 데 가장 적합합니다(최대 25개 항목). 이러한 컬렉션의 예에는 제품 세부 정보 페이지의 품목 또는 사진 앨범의 사진이 포함됩니다. 대부분의 대형 컬렉션의 경우에는 대칭 이동 보기가 권장되지 않지만 사진 앨범의 개별 이미지를 보는 데는 보통 괜찮습니다.
 
-## 예제
+## <a name="examples"></a>예제
 
 가장 왼쪽 항목에서 시작하고 오른쪽에서 대칭 이동하는 가로 검색은 보통 대칭 이동 보기에 대한 일반적인 레이아웃입니다. 이 레이아웃은 모든 디바이스에서 세로 또는 가로 방향으로 원활하게 작동합니다.
 
@@ -47,13 +40,13 @@ ms.openlocfilehash: 7e52f9d379b909c4dd35bc535cbca2d7b8cca6ac
 
 ![세로 대칭 이동 보기 예제](images/controls_flipview_vertical.jpg)
 
-## 대칭 이동 뷰 만들기
+## <a name="create-a-flip-view"></a>대칭 이동 뷰 만들기
 
 FlipView는 [ItemsControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.aspx)이므로 모든 유형의 항목 컬렉션을 포함할 수 있습니다. 뷰를 채우려면 [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) 컬렉션에 항목을 추가하거나 [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) 속성을 데이터 원본에 설정합니다.
 
 기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 대칭 이동 뷰에서 항목 표시 방법을 정확히 지정하려면 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.datatemplate.aspx)을 만들어 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. FlipView의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 DataTemplate를 할당합니다.
 
-### 항목 컬렉션에 항목 추가
+### <a name="add-items-to-the-items-collection"></a>항목 컬렉션에 항목 추가
 
 XAML 또는 코드를 사용하여 [**Items**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.items.aspx) 컬렉션에 항목을 추가할 수 있습니다. 일반적으로 XAML로 쉽게 정의되며 변경되지 않는 항목 수가 적은 경우 또는 런타임 시 코드에서 항목을 생성하는 경우 이 방식으로 항목을 추가합니다. 다음은 인라인으로 정의된 항목이 있는 대칭 이동 뷰입니다.
 
@@ -80,7 +73,7 @@ stackPanel1.Children.Add(flipView1);
 
 항목이 XAML로 정의된 경우에는 Items 컬렉션에도 자동으로 추가됩니다.
 
-### 항목 원본 설정
+### <a name="set-the-items-source"></a>항목 원본 설정
 
 일반적으로 대칭 이동 보기를 사용하여 데이터베이스나 인터넷과 같은 원본의 데이터를 표시합니다. 데이터 원본에서 대칭 이동 보기를 채우려면 [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) 속성을 데이터 항목의 컬렉션으로 설정합니다.
 
@@ -118,9 +111,9 @@ stackPanel1.Children.Add(flipView1);
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**참고**  항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
+>**참고**&nbsp;&nbsp;항목을 해당 Items 컬렉션에 추가하거나 ItemsSource 속성을 설정하여 FlipView를 채울 수 있지만, 두 방법을 동시에 사용할 수는 없습니다. ItemsSource 속성을 설정하고 항목을 XAML에 추가하는 경우 추가된 항목이 무시됩니다. ItemsSource 속성을 설정하고 코드에서 항목을 Items 컬렉션에 추가하는 경우 예외가 발생합니다.
 
-### 항목의 모양 지정
+### <a name="specify-the-look-of-the-items"></a>항목의 모양 지정
 
 기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 대칭 이동 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.datatemplate.aspx)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. DataTemplate은 FlipView 컨트롤의 [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) 속성에 할당됩니다.
 
@@ -149,7 +142,7 @@ stackPanel1.Children.Add(flipView1);
 
 전환 보기 데이터 템플릿
 
-### 대칭 이동 뷰 방향 설정
+### <a name="set-the-orientation-of-the-flip-view"></a>대칭 이동 뷰 방향 설정
 
 기본적으로 대칭 이동 보기는 가로로 전환됩니다. 세로로 전환되도록 하려면 세로 방향의 스택 패널을 대칭 이동 보기의 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)로 사용합니다.
 
@@ -186,17 +179,19 @@ stackPanel1.Children.Add(flipView1);
 
 ![세로 대칭 이동 보기 예제](images/controls_flipview_vertical.jpg)
 
-## 상황 표시 추가
+## <a name="adding-a-context-indicator"></a>상황 표시 추가
 
 대칭 이동 보기의 상황 표시를 사용하면 참조하기 쉽습니다. 표준 상황의 점은 대화형으로 작동하지 않습니다. 이 예제와 같이 가장 좋은 위치는 일반적으로 갤러리 아래의 가운데입니다.
 
 ![페이지 표시기 예제](images/controls_pageindicator.png)
 
-대형 컬렉션(10-25개 항목 포함)의 경우 미리 보기 표시줄과 같이 더 많은 상황별 정보를 제공하는 표시기를 사용해 보세요. 간단한 점을 사용하는 상황 표시와 달리 표시줄의 각 미리 보기는 해당 이미지의 작은 버전을 표시하며 선택 가능합니다.
+대형 컬렉션(10-25개 항목 포함)의 경우 미리 보기 표시줄과 같이 더 많은 상황별 정보를 제공하는 표시기를 사용해 보세요. 간단한 점을 사용하는 상황 표시기와 달리 표시줄의 각 미리 보기는 해당 이미지의 작은 버전을 표시하며 선택 가능합니다.
 
-![상황 표시기 컨트롤 예제](images/controls_contextindicator.jpg)
+![상황 표시기 예제](images/controls_contextindicator.jpg)
 
-## 권장 사항 및 금지 사항
+FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](http://go.microsoft.com/fwlink/p/?LinkID=311760)을 참조하세요.
+
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 -   대칭 이동 보기는 최대 25개 항목으로 구성된 컬렉션에 가장 적합합니다.
 -   각 항목을 전환하는 반복적인 동작이 번거로울 수 있으므로 대형 컬렉션의 경우에는 대칭 이동 보기 컨트롤을 사용하지 않도록 합니다. 수백 또는 수천 개의 이미지가 있는 사진 앨범의 경우는 예외입니다. 그리드 보기 레이아웃에서 사진을 선택하면 사진 앨범은 거의 항상 대칭 이동 보기로 바뀝니다. 기타 큰 컬렉션의 경우는 [목록 보기 또는 그리드 보기](lists.md)를 고려하세요.
@@ -206,7 +201,7 @@ stackPanel1.Children.Add(flipView1);
     -   강조된 점은 현재 항목을 나타냅니다. 일반적으로 강조된 점은 흰색이며 다른 점은 회색입니다.
     -   점의 수는 다를 수 있지만 사용자가 자신을 찾는 데 어려움을 겪을 정도로 너무 많은 수를 포함하지는 않습니다. 10개 점이 일반적으로 표시하는 최대 수입니다.
 
-## 세계화 및 지역화 검사 목록
+## <a name="globalization-and-localization-checklist"></a>세계화 및 지역화 검사 목록
 
 <table>
 <tr>
@@ -215,14 +210,17 @@ stackPanel1.Children.Add(flipView1);
 
 </table>
 
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 
-## 관련 문서
+
+## <a name="related-articles"></a>관련 문서
 
 - [목록에 대한 지침](lists.md)
 - [**FlipView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

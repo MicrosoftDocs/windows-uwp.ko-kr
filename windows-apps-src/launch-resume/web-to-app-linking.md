@@ -3,9 +3,14 @@ author: TylerMSFT
 title: "앱 URI 처리기로 웹과 앱 연결 지원"
 description: "앱 URI 처리기를 사용하여 사용자의 앱 참여를 강화합니다."
 keywords: "Windows 딥 링크 설정"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3e57ca2cf0e7c788f5a8be12ebaf3e6b05a4fe51
-ms.openlocfilehash: e5c815ef0c776954e5b0d7f1cb9bd5e32e10356c
+ms.sourcegitcommit: ffa6ad17ee865dda5349565094c38e09dc42e0e3
+ms.openlocfilehash: 524a0897b6b8a8d17bb7493dc4d9e4357d8c1456
 
 ---
 
@@ -65,7 +70,7 @@ Windows는 웹 사이트에 https로 연결하여 웹 서버에서 해당 JSON �
 
 | **와일드카드** | **설명**               |
 |--------------|-------------------------------|
-| *****       | 모든 하위 문자열을 나타냅니다.      |
+| **\***       | 모든 하위 문자열을 나타냅니다.      |
 | **?**        | 단일 문자를 나타냅니다. |
 
 예를 들어 위의 예제에서처럼 `"excludePaths" : [ "/news/*", "/blog/*" ]`를 지정하면 앱은 `/news/` 및 `/blog/` 아래의 경로를 **제외**하고 웹 사이트의 주소(예: msn.com)로 시작하는 모든 경로를 지원합니다. 즉 **msn.com/weather.html**은 지원되지만 ****msn.com/news/topnews.html****은 지원되지 않습니다.
@@ -163,7 +168,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 앱이 닫혀 있는지 확인합니다. **Windows 키+R**을 눌러 **실행** 대화 상자를 열고 창에 링크를 붙여넣습니다. 웹 브라우저 대신 앱이 실행되어야 합니다.
 
-또한 [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx) API를 사용하여 다른 앱에서 앱을 시작하여 테스트할 수 있습니다. 휴대폰에서도 이 API를 사용하여 테스트할 수 있습니다.
+또한 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API를 사용하여 다른 앱에서 앱을 시작하여 테스트할 수 있습니다. 휴대폰에서도 이 API를 사용하여 테스트할 수 있습니다.
 
 프로토콜 활성화 논리를 수행하려면 **OnActivated** 이벤트 처리기에 중단점을 설정합니다.
 
@@ -183,18 +188,18 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 - AppUriHandlers를 사용하여 테스트용으로 로드된 모든 앱에는 설치 시 호스트에 대해 유효성이 검사된 링크가 있습니다. 기능을 테스트하기 위해 JSON 파일을 업로드할 필요는 없습니다.
 
-- 이 기능은 [LaunchUriAsync](https://msdn.microsoft.com/en-us/library/windows/apps/hh701480.aspx)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
+- 이 기능은 [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx)를 사용하여 UWP 앱을 시작하거나 [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx)를 사용하여 Windows 데스크톱 앱을 시작할 때마다 작동합니다. 등록된 앱 URI 처리기에 해당하는 URL의 경우 브라우저 대신 앱이 시작됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[windows.protocol 등록](https://msdn.microsoft.com/en-us/library/windows/apps/br211458.aspx)
+[windows.protocol 등록](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 
-[URI 활성화 처리](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/handle-uri-activation)
+[URI 활성화 처리](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 
 [연결 시작 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching)에서는 LaunchUriAsync() API를 사용하는 방법을 보여 줍니다.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

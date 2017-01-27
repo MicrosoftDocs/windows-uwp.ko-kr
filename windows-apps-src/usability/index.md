@@ -3,12 +3,19 @@ description: "앱을 전 세계 사용자들이 사용하고 액세스할 수 �
 keywords: "UWP 앱 접근성, 세계화, 디자인 포괄 앱, 접근성 앱 요구 사항"
 title: "UWP 앱의 유용성 - Windows 앱 개발"
 author: mijacobs
+label: Usability
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
-ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 011d4e7dcebc20e0568fd5bdc4a207a66597f073
 
 ---
-# UWP 앱의 유용성
+# <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
@@ -17,7 +24,7 @@ ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
 이 섹션의 디자인 및 코딩 지침을 통해 접근성 기능을 추가하고, 세계화 및 지역화가 가능하도록 설정하고, 사용자가 환경을 사용자 지정할 수 있도록 설정하고, 사용자가 필요로 할 때 지원을 제공하여 UWP 앱을 더욱 포괄적으로 만들 수 있습니다.
 
 
-## 접근성
+## <a name="accessiblity"></a>접근성
 
 접근성은 신체적 제약으로 인해 기존 사용자 인터페이스를 제대로 사용할 수 없는 사람들이 앱을 사용할 수 있도록 하는 것입니다. 일부 상황의 경우 접근성 요구 사항이 법으로 지정됩니다. 그러나 앱이 최대한 많은 사용자층을 확보할 수 있도록 하려면 법적 요구 사항에 관계없이 접근성 문제를 해결하는 것이 좋습니다.
 
@@ -101,7 +108,7 @@ ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
 
 
 
-## 세계화 및 지역화
+## <a name="globalization-and-localization"></a>세계화 및 지역화
 
 Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 사용합니다. 사용자는 어느 언어든 말할 수 있고 여러 언어를 사용할 수도 있습니다. 지역도 세계 어디든 있을 수 있어서 위치와 언어가 다양할 수 있습니다. 세계화 및 지역화를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
 
@@ -151,7 +158,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 </div>
 
 
-## 앱 설정
+## <a name="app-settings"></a>앱 설정
 
 앱 설정을 통해 사용자는 앱을 사용자 지정하여 각자의 요구 사항과 설정에 맞게 최적화할 수 있습니다. 올바르게 설정하고 적절하게 저장하면 훨씬 더 좋은 사용자 환경을 만들 수 있습니다.
 
@@ -166,7 +173,7 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 </div>
 </div>
 
-## 앱 내 도움말
+## <a name="in-app-help"></a>앱 내 도움말
 앱을 아무리 잘 디자인했더라도 일부 사용자는 추가 지원이 필요합니다.
 
 <div class="side-by-side">
@@ -194,6 +201,6 @@ Windows는 전 세계에서 문화, 지역 및 언어가 다양한 사용자가 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

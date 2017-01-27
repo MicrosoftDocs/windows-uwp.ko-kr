@@ -6,11 +6,11 @@ ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: f26bcc596417f607ee348e93009905ec4a3e27c8
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a8e8e42c87809eb08685fb137a242b1177b824b4
 
 ---
-# 서식 있는 편집 상자
+# <a name="rich-edit-box"></a>서식 있는 편집 상자
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,14 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx"><strong>Document 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx"><strong>IsReadOnly 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx"><strong>IsSpellCheckEnabled 속성</strong></a></li>
+<li>[**RichEditBox 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)</li>
+<li>[**Document 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.document.aspx)</li>
+<li>[**IsReadOnly 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isreadonly.aspx)</li>
+<li>[**IsSpellCheckEnabled 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 텍스트 파일을 표시하고 편집하려면 **RichEditBox**를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
 -   여러 줄 입력란의 주된 목적이 문서(예, 블로그 항목 또는 메일 메시지의 본문)를 만드는 것이며 그 문서에 서식을 지정해야 하는 경우에는 서식 있는 입력란을 사용합니다.
@@ -43,13 +36,13 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 
-## 예제
+## <a name="examples"></a>예제
 
 이 서식 있는 편집 상자에는 서식 있는 텍스트 문서가 열려 있습니다. 서식 및 파일 단추는 서식 있는 편집 상자에 없으므로 최소한의 스타일 지정 단추 집합을 제공하고 해당 작업을 구현해야 합니다.
 
 ![문서가 열려 있는 서식 있는 입력란](images/rich-edit-box.png)
 
-## 서식 있는 편집 상자 만들기
+## <a name="create-a-rich-edit-box"></a>서식 있는 편집 상자 만들기
 
 기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.isspellcheckenabled.aspx) 속성을 **false**로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md) 문서를 참조하세요.
 
@@ -194,40 +187,33 @@ private void UnderlineButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 텍스트 컨트롤에 맞는 키보드를 선택합니다.
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>텍스트 컨트롤에 맞는 키보드를 선택합니다.
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다. 일반적으로 기본 자판 배열은 서식 있는 텍스트 문서 작업에 적합합니다.
 
 입력 범위를 사용하는 방법에 대한 자세한 내용은 [입력 범위를 사용하여 터치 키보드를 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
-## 권장 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
--   서식 있는 입력란을 만들 때 스타일 단추를 제공하고 해당 작업을 구현합니다.
+-   서식 있는 텍스트 상자를 만들 때 스타일 단추를 제공하고 해당 작업을 구현합니다.
 -   앱의 스타일과 일치하는 글꼴을 사용합니다.
 -   텍스트 컨트롤의 높이는 기본 입력을 수용하기에 충분하게 만듭니다.
 -   사용자가 입력하는 동안 텍스트 입력 컨트롤의 높이가 늘어나도록 만들지 마세요.
 -   한 줄만 필요한 경우에는 여러 줄 입력란을 사용하지 마세요.
--   일반 텍스트 컨트롤이 적절한 경우 서식 있는 텍스트 컨트롤을 사용하지 마세요.
+-   일반 텍스트 컨트롤으로도 충분한 경우 서식 있는 텍스트 컨트롤을 사용하지 마세요.
 
 
+## <a name="related-articles"></a>관련 문서
 
-
-
-## 관련 문서
-
-[텍스트 컨트롤](text-controls.md)
-
-**디자이너용**
+* [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사에 대한 지침](spell-checking-and-prediction.md)
 - [검색 추가](search.md)
 - [텍스트 입력에 대한 지침](text-controls.md)
-
-**개발자용(XAML)**
 - [**TextBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209683)
 - [**Windows.UI.Xaml.Controls PasswordBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

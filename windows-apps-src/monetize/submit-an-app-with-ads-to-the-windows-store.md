@@ -4,22 +4,19 @@ ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
 description: "스토어에 게시되기 위해 Microsoft Advertising 라이브러리를 사용하는 앱에서 충족해야 하는 요구 사항에 대해 알아봅니다."
 title: "Windows 스토어에 광고가 포함된 앱 제출"
 translationtype: Human Translation
-ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
-ms.openlocfilehash: cf9cc2d9ed59e80d5e9a5222d17c277aa79c7814
-
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: fd1610a2b0ad637f87bd0b7ee4ec0726d21d65d2
 
 ---
 
-# Windows 스토어에 광고가 포함된 앱 제출
+# <a name="submit-an-app-with-ads-to-the-windows-store"></a>Windows 스토어에 광고가 포함된 앱 제출
 
 
-
-
-광고가 있는 앱 개발을 마친 후 Windows 스토어에서 사용할 수 있도록 Windows 개발자 센터 대시보드에 앱을 게시할 수 있습니다. 이 프로세스에 대한 자세한 내용은 [Windows 앱 게시](https://developer.microsoft.com/windows/publish)를 참조하세요.
+광고가 있는 앱 개발을 마친 후 Windows 스토어에서 사용할 수 있도록 Windows 개발자 센터 대시보드에 앱을 게시할 수 있습니다. 이 프로세스에 대한 자세한 내용은 [앱 제출](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)을 참조하세요.
 
 Windows 스토어에 제출하는 모든 앱은 [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) 및 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058.aspx)에 지정된 약관을 준수해야 합니다. Microsoft Advertising 라이브러리를 사용하는 앱은 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058.aspx)의 증거 자료 E에 지정된 추가 요구 사항을 충족해야 합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [중요 알림 - EULA](important-notice-eula.md)
@@ -30,6 +27,6 @@ Windows 스토어에 제출하는 모든 앱은 [Windows 스토어 정책](https
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

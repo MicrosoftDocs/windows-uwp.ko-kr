@@ -4,14 +4,14 @@ title: "백그라운드 작업으로 시스템 이벤트에 응답"
 description: "SystemTrigger 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 1774b853839e65fd08acb9eb8f9cbb1735cd9bee
 
 ---
 
-# 백그라운드 작업으로 시스템 이벤트에 응답
+# <a name="respond-to-system-events-with-background-tasks"></a>백그라운드 작업으로 시스템 이벤트에 응답
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 
@@ -21,9 +21,9 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)을 참조하세요.
+이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
-## SystemTrigger 개체 만들기
+## <a name="create-a-systemtrigger-object"></a>SystemTrigger 개체 만들기
 
 -   앱 코드에서 새 [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) 개체를 만듭니다. 첫 번째 매개 변수인 *triggerType*은 이 백그라운드 작업을 활성화할 시스템 이벤트 트리거 형식을 지정합니다. 이벤트 형식 목록은 [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)을 참조하세요.
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
     > SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
     > ```
 
-## 백그라운드 작업 등록
+## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
 -   백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
@@ -59,13 +59,13 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
     > ```
 
-    > **참고** 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
+    > **참고**  유니버설 Windows 앱은 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 호출해야 합니다.
 
     업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) 및 [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-    > **참고** 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+    > **참고**  백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
  
-## 설명
+## <a name="remarks"></a>설명
 
 적용 중인 백그라운드 작업 등록을 보려면 [백그라운드 작업 샘플](http://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드합니다.
 
@@ -73,14 +73,13 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 앱은 [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) 및 [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831) 이벤트에 응답하는 백그라운드 작업을 등록하여, 앱이 포그라운드에 있지 않은 경우에도 사용자와 실시간으로 통신할 수 있습니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-> 
-  **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows10 개발자용입니다. Windows8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고**  이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 ****
 
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
@@ -96,6 +95,6 @@ ms.openlocfilehash: a3d7ac01724b1e8dcabe3219855eabe172924764
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

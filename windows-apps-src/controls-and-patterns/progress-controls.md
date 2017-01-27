@@ -6,11 +6,11 @@ ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5679c2bb8e8b3fff205f8071fcf52a52e0c939cd
 
 ---
-# 진행률 컨트롤
+# <a name="progress-controls"></a>진행률 컨트롤
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,21 +19,14 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx"><strong>ProgressBar 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx"><strong>IsIndeterminate 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx"><strong>ProgressRing 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx"><strong>IsActive 속성</strong></a></li>
+<li>[**ProgressBar 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.aspx)</li>
+<li>[**IsIndeterminate 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx)</li>
+<li>[**ProgressRing 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.aspx)</li>
+<li>[**IsActive 속성**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressring.isactive.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-## 진행률 유형
+## <a name="types-of-progress"></a>진행률 유형
 
 사용자에게 작업 진행을 표시하기 위해 ProgressBar 또는 ProgressRing 두 가지 컨트롤이 있습니다.
 
@@ -51,11 +44,11 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
 
 *확정되지 않음 ProgressRing*
 
-## 각 컨트롤 사용 시기
+## <a name="when-to-use-each-control"></a>각 컨트롤 사용 시기
 
 현재 상태를 표시하려고 할 때 사용할 컨트롤 또는 상태(확정 및 확정되지 않음)가 항상 명확한 것은 아닙니다. 때로는 진행률 컨트롤이 필요하지 않을 정도로 작업이 명확하거나, 진행률 컨트롤이 사용되더라도 사용자에게 작업이 진행 중임을 설명하는 텍스트 줄이 필요할 수 있습니다.
 
-### ProgressBar
+### <a name="progressbar"></a>ProgressBar
 -   **컨트롤에 기간 또는 예측 가능한 종료 시점이 정의되어 있나요?**
 
     확정 ProgressBar를 사용하고 백분율 또는 값을 적절히 업데이트합니다.
@@ -72,7 +65,7 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
     - *검색 중*
     - *작업 중...*
 
-### ProgressRing
+### <a name="progressring"></a>ProgressRing
 
 -   **작업으로 인해 사용자가 계속 대기 중인가요?**
 
@@ -90,7 +83,7 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
     - *로그인 중...*
     - *연결하는 중...*
 
-### 진행률 표시가 필요하지 않음
+### <a name="no-progress-indication-necessary"></a>진행률 표시가 필요하지 않음
 -   **어떤 일이 일어나고 있는지를 사용자가 알아야 하나요?**
 
     예를 들어 앱이 백그라운드에서 다운로드하고 있을 때 사용자가 다운로드를 시작하지 않았다면 사용자는 이를 알 필요가 없습니다.
@@ -103,7 +96,7 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
 
     경우에 따라 작업이 완료될 때만 알림을 표시하거나 작업이 완료된 즉시 시각적으로 표시하고 백그라운드에서 완료 작업을 실행하는 것이 좋을 때가 있습니다.
 
-## 진행률 컨트롤 모범 사례
+## <a name="progress-controls-best-practices"></a>진행률 컨트롤 모범 사례
 
 다음과 같이 다양한 진행률 컨트롤을 사용할 시기 및 위치를 시각적으로 표시하는 것이 가장 좋은 경우가 있습니다.
 
@@ -129,7 +122,7 @@ ms.openlocfilehash: de18267de982ef50913ed605e7a9272f7f8c476b
 
 확정되지 않음 ProgressRing은 앱에 대한 사용자의 추가 조작이 중단되거나 앱이 사용자가 계속 입력하기를 기다릴 때 사용됩니다. 위의 "로그인 중...." 예제는 ProgressRing에 대한 완벽한 시나리오이며 로그인이 완료될 때까지 사용자는 앱을 사용할 수 없습니다.
 
-## 진행률 컨트롤 사용자 지정
+## <a name="customizing-a-progress-control"></a>진행률 컨트롤 사용자 지정
 
 두 진행률 컨트롤은 비교적 간단하지만 컨트롤의 일부 시각적 기능은 사용자 지정하기에 명확하지 않습니다.
 
@@ -171,7 +164,7 @@ ProgressRing의 전경색을 변경하면 점의 색도 변경됩니다. Progres
 Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Wait, 10);
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 - [**ProgressBar 클래스**](https://msdn.microsoft.com/library/windows/apps/br227529)
@@ -183,6 +176,6 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

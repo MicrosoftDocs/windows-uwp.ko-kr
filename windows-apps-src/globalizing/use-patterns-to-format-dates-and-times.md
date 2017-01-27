@@ -6,37 +6,39 @@ ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 564062173544ab368d8dd7fc8fe2c35e9d518444
 
 ---
 
-# 날짜 및 시간 형식 지정 패턴 사용
+# <a name="use-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 패턴 사용
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+날짜 및 시간을 원하는 형식으로 정확히 표시하려면 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) API와 사용자 지정 패턴을 사용하세요.
+
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)</li>
+<li>[**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)</li>
+</ul>
+</div>
 
 
-
-
-
-**중요 API**
-
--   [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)
--   [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)
-
-정확히 개발자가 원하는 날짜 및 시간을 표시하려면 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) API와 사용자 지정 패턴을 사용하세요.
-
-## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>소개
+## <a name="introduction"></a>소개
 
 
 [**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)은 세계 여러 국가와 언어에 맞게 적절하게 날짜 및 시간의 형식을 지정하는 다양한 방법을 제공합니다. 연도, 월, 일 등에 대한 표준 형식을 사용하거나 "자세한 날짜" 또는 "월 일"과 같은 표준 문자열 템플릿을 사용할 수 있습니다.
 
 그러나 표시하려는 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) 문자열 구성 요소의 순서 및 형식을 좀더 제어하려는 경우 "패턴"이라는 문자열 템플릿 매개 변수에 대한 특수 구문을 사용할 수 있습니다. 패턴 구문을 사용하면 **DateTime** 개체의 개별 구성 요소인 월 이름만 또는 연도 값만을 가져와 직접 선택한 사용자 지정 형식으로 표시할 수 있습니다. 또한 다른 언어 및 지역에 맞게 패턴을 지역화할 수 있습니다.
 
-**참고** 이는 형식 패턴의 개요입니다. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828) 클래스의 설명 섹션을 참조하세요.
+**참고**  이는 형식 패턴의 개요입니다. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828) 클래스의 설명 섹션을 참조하세요.
 
  
 
-## <span id="What_you_need_to_know"></span><span id="what_you_need_to_know"></span><span id="WHAT_YOU_NEED_TO_KNOW"></span>알아야 할 사항
+## <a name="what-you-need-to-know"></a>알아야 할 사항
 
 
 패턴을 사용할 때는 해당 문화권에서 유효한 것이라고 보장할 수 없는 사용자 지정 형식을 작성 중이라는 점을 염두에 두어야 합니다. "월 일" 템플릿을 예로 들어 보겠습니다.
@@ -111,7 +113,7 @@ Ja-JP: 1月1 (inappropriate for Japan; the day symbol is missing)
 -   문화권에 맞게 표현되도록 보장되지 않습니다.
 -   구성 요소의 조합은 임의의 순서로 지정될 수 있습니다.
 
-## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>작업
+## <a name="tasks"></a>작업
 
 
 현재 월 및 일과 함께 현재 시간을 특정 형식으로 표시하려는 상황을 가정해 보세요. 예를 들면, 미국 영어 사용자에게는 다음과 같이 표시되어야 합니다.
@@ -177,7 +179,7 @@ var mydateplustimefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFor
 var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 ```
 
-## <span id="related_topics"></span>관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [날짜 및 시간 형식 지정 샘플](http://go.microsoft.com/fwlink/p/?LinkId=231618)
@@ -192,6 +194,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -6,23 +6,29 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keywords: "Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0f7f54c5c5baccdedfe32bc7c71994e43a93f032
-ms.openlocfilehash: d4458b66f4f1917e99495353a088680b19cb94c9
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 11bd4c1d8c4f675fb1dad38e249d64324fa29ecf
 
 ---
 
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 잉크 스트로크를 직렬화하고 역직렬화할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성과 동작에 대한 추가 메타 데이터가 포함된 GIF 이미지입니다. 잉크 불가능 앱에서는 알파 채널 배경 투명도를 포함하여 정적 GIF 이미지를 볼 수 있습니다.
 
-
-**중요 API**
-
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)
--   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)</li>
+<li>[**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)</li>
+</ul>
+</div>
 
 
 > [!NOTE]
@@ -91,7 +97,7 @@ public MainPage()
 
     [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하면 잉크 데이터가 저장되는 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
+    파일을 선택한 후 [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
 
     그런 다음, [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114)를 호출하여 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)로 관리되는 잉크 스트로크를 스트림으로 직렬화합니다.
 ```    CSharp
@@ -220,7 +226,7 @@ public MainPage()
 
     [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)를 사용하면 저장된 잉크 데이터를 검색할 파일과 위치를 모두 사용자가 선택할 수 있습니다.
 
-    파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731) 스트림 설정을 엽니다.
+    파일을 선택한 후 [**Read**](https://msdn.microsoft.com/library/windows/apps/br241731)에 대한 [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635) 스트림 설정을 엽니다.
 
     그런 다음, [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)를 호출하여 저장된 잉크 스트로크를 읽고, 역직렬화하고, [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에 로드합니다. 스트로크를 **InkStrokeContainer**에 로드하면 [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)가 해당 스트로크를 [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)로 즉시 렌더링합니다.
 
@@ -367,7 +373,7 @@ public MainPage()
 
 3.  마지막으로, 스트로크 선택 지원을 추가한 후 **잘라내기**, **복사** 및 **붙여넣기** 단추의 클릭 이벤트 처리기에서 클립보드 기능을 구현합니다.
 
-    잘라내기의 경우 먼저, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에서 [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232)를 호출합니다.
+    잘라내기의 경우 먼저, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/br244232)의 [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492)에서 [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/dn922011)를 호출합니다.
 
     그런 다음, [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233)를 호출하여 잉크 캔버스에서 스트로크를 제거합니다.
 
@@ -448,6 +454,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

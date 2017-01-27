@@ -6,39 +6,34 @@ ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 4d67cf41bf44904e094476d6350ad68cc46ab52f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 86062f744efa487cc70adb9648ff3f3584226000
 
 ---
-# 달력 보기
+# <a name="calendar-view"></a>달력 보기
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다. 사용자는 단일 날짜 또는 날짜 범위를 선택할 수 있습니다. 선택 화면이 없고 달력이 항상 표시됩니다. 
 
+
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx"><strong>CalendarView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx"><strong>SelectedDatesChanged 이벤트</strong></a></li>
+<li>[**CalendarView 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.aspx)</li>
+<li>[**SelectedDatesChanged 이벤트**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 달력 보기를 사용하여 항상 표시되는 달력에서 단일 날짜 또는 날짜 범위를 선택할 수 있도록 합니다.
 
 사용자가 한 번에 여러 날짜를 선택하도록 해야 할 경우 달력 보기를 사용해야 합니다. 사용자가 단일 날짜만 선택하도록 해야 하고 달력이 항상 표시될 필요가 없는 경우 [달력 날짜 선택](calendar-date-picker.md) 또는 [날짜 선택](date-picker.md) 컨트롤을 사용하는 것이 좋습니다.
 
 올바른 컨트롤을 선택하는 방법에 대한 자세한 내용은 [날짜 및 시간 컨트롤](date-and-time.md) 문서를 참조하세요.
 
-## 예제
+## <a name="examples"></a>예제
 
 달력 보기는 3개의 개별적인 보기(월 보기, 연도 보기 및 10년 보기)로 구성됩니다. 기본적으로 월 보기가 열린 상태로 시작합니다. [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.displaymode.aspx) 속성을 설정하여 시작 보기를 지정할 수 있습니다.
 
@@ -46,7 +41,7 @@ ms.openlocfilehash: 4d67cf41bf44904e094476d6350ad68cc46ab52f
 
 월 보기의 헤더를 클릭하여 연도 보기를 열고 연도 보기의 헤더를 클릭하여 10년 보기를 엽니다. 10년 보기의 연도를 선택하여 연도 보기로 돌아가고 연도 보기의 월을 선택하여 월 보기로 돌아갑니다. 헤더 측면의 두 개의 화살표는 월, 연도 또는 10년으로 앞뒤로 이동합니다. 
 
-## 달력 보기 만들기
+## <a name="create-a-calendar-view"></a>달력 보기 만들기
 
 이 예제에서는 간단한 달력 보기를 만드는 방법을 보여 줍니다.
 
@@ -58,7 +53,7 @@ ms.openlocfilehash: 4d67cf41bf44904e094476d6350ad68cc46ab52f
 
 ![달력 보기의 예](images/controls_calendar_monthview.png)
 
-### 날짜 선택
+### <a name="selecting-dates"></a>날짜 선택
 
 기본적으로 [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selectionmode.aspx) 속성은 **Single**로 설정됩니다. 이렇게 하면 사용자가 달력에서 단일 날짜를 선택할 수 있습니다. SelectionMode를 **None**으로 설정하여 날짜 선택을 사용하지 않도록 설정합니다. 
 
@@ -73,9 +68,10 @@ calendarView1.SelectedDates.Add(new DateTime(1977, 1, 5));
 
 [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx) 컬렉션이 변경되었을 때 알림을 받도록 [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx) 이벤트를 처리할 수 있습니다.
 
-> **참고**  날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
+> [!NOTE]
+> 날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
-### 달력 보기의 표시 형식 사용자 지정
+### <a name="customizing-the-calendar-views-appearance"></a>달력 보기의 표시 형식 사용자 지정
 
 달력 보기는 ControlTemplate에서 정의되는 XAML 요소와 컨트롤에서 직접 렌더링되는 시각적 요소로 구성됩니다. 
 - 컨트롤 템플릿에서 정의되는 XAML 요소는 컨트롤, 헤더, 이전 및 다음 단추와 DayOfWeek 요소를 묶는 테두리를 포함합니다. 모든 XAML 컨트롤과 마찬가지로 이러한 요소의 스타일을 지정하고 다시 템플릿을 만들 수 있습니다. 
@@ -116,7 +112,7 @@ calendarView1.MinDate = new DateTime(2000, 1, 1);
 calendarView1.MaxDate = new DateTime(2099, 12, 31);
 ```
 
-### 달력 날짜 항목 업데이트
+### <a name="updating-calendar-day-items"></a>달력 날짜 항목 업데이트
 
 달력의 각 날짜는 [**CalendarViewDayItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarviewdayitem.aspx) 개체로 표시됩니다. 개별 날짜 항목에 액세스하고 속성 및 메서드를 사용하려면 [**CalendarViewDayItemChanging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging.aspx) 이벤트를 처리하고 이벤트 인수의 항목 속성을 사용하여 CalendarViewDayItem에 액세스합니다.
 
@@ -128,7 +124,7 @@ calendarView1.MaxDate = new DateTime(2099, 12, 31);
 
 ![밀도 막대가 있는 달력 날짜](images/calendar-view-density-bars.png)
 
-### 단계적인 렌더링
+### <a name="phased-rendering"></a>단계적인 렌더링
 
 달력 보기에는 많은 CalendarViewDayItem 개체를 포함할 수 있습니다. UI를 응답 가능한 상태로 유지하고 달력을 통해 부드러운 이동을 가능하도록 하기 위해 달력 보기에서는 단계별 렌더링을 지원합니다. 이를 통해 날짜 항목 처리를 단계로 나눌 수 있습니다. 모든 단계가 완료되기 전에 하루가 보기 외부로 이동할 경우 더 이상 해당 항목을 처리하고 렌더링하는 데 시간을 사용하지 않습니다.
 
@@ -198,7 +194,7 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [날짜 및 시간 컨트롤](date-and-time.md)
 - [달력 날짜 선택](calendar-date-picker.md)
@@ -207,6 +203,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

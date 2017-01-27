@@ -3,10 +3,15 @@ author: GrantMeStrength
 ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
 title: "다음 작업"
 description: "첫 번째 앱을 만들었으므로 이제 개발자 센터의 나머지 부분을 확인합니다. 여기서는 개발자 센터에 포함된 여러 섹션을 소개합니다.&quot;"
-keywords: "개발자 센터, 시작"
+keywords: "Windows 개발자 센터, Windows 개발자 센터 둘러보기, 시작"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7e76c9abd4157c22b38d79b178f5f07827d336ca
-ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 ---
 
@@ -14,9 +19,9 @@ ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 # <a name="whats-next"></a>다음 작업
 
-앱을 작성하고 Windows 스토어에 게시하려면 어디서부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
+앱을 작성하고 Windows 스토어에 게시하려면 무엇부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
 
-앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a>을 살펴보는 것이 좋습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 디바이스에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
+앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a>을 살펴보는 것이 좋습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 장치에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
 
 시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱의 레이아웃을 지정하지만(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조), XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
 <table class="wdg-noborder">
@@ -136,7 +141,7 @@ ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 </tr>
 <tr class="even" style="background-color: #f2f2f2">
 <td align="left"><strong>IoT(사물 인터넷)</strong></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534186">연결된 자체 디바이스를 빌드합니다.</a></td>
+<td align="left"><a href="http://go.microsoft.com/fwlink/p/?LinkId=534186">연결된 자체 장치를 빌드합니다.</a></td>
 </tr>
 <tr class="odd" style="background-color: #ffffff">
 <td align="left"><strong>포팅</strong></td>
@@ -168,6 +173,6 @@ ms.openlocfilehash: 087c298f59798010628aefc428eedf9933bb2686
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

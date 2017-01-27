@@ -5,25 +5,33 @@ title: "터치 조작"
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
+keywords: "터치, 포인터, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 526493614666424089199063013b5fc72d9bc5d8
-ms.openlocfilehash: db38bfecadb7568e602646222358e0a111c638bc
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 26f80e2619ea7b80a49d54278507c83461fe2336
 
 ---
 
-# 터치 조작
+# <a name="touch-interactions"></a>터치 조작
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-
-터치가 사용자의 기본적인 입력 방법이 될 것이라는 가정 하에 앱을 디자인하세요. UWP 컨트롤을 사용하는 경우 터치 패드, 마우스 및 펜/스타일러스 지원은 UWP 앱에서 무료로 제공되기 때문에 추가 프로그래밍이 필요하지 않습니다.
+터치가 사용자의 기본적인 입력 방법이 될 것이라는 가정하에 앱을 디자인하세요. UWP 컨트롤을 사용하는 경우 터치 패드, 마우스 및 펜/스타일러스 지원은 UWP 앱에서 무료로 제공되기 때문에 추가 프로그래밍이 필요하지 않습니다.
 
 그러나 터치에 최적화된 UI가 기존 UI보다 항상 나은 것은 아닙니다. 둘 다 기술 및 응용 방식에 고유한 장점과 단점이 있습니다. 터치 우선식 UI로 전환할 경우 터치(터치 패드 포함), 펜/스타일러스, 마우스 및 키보드 입력 간의 주요 차이점을 이해하는 것이 중요합니다.
 
-**중요 API**
-
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+</ul>
+</div>
 
 
 여러 디바이스에, 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
@@ -52,7 +60,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 모든 입력 디바이스에 고유하고 독특한 조작 환경을 제공하면 가장 포괄적인 기능 및 기본 설정을 지원하므로 최대한 많은 사용자에게 환영받게 되어 앱으로 더 많은 고객을 이끌 수 있습니다.
 
-## 터치 조작 요구 사항 비교
+## <a name="compare-touch-interaction-requirements"></a>터치 조작 요구 사항 비교
 
 다음 표에는 터치 최적화된 UWP 앱을 디자인할 때 고려해야 할 입력 디바이스 간의 몇 가지 차이점이 나와 있습니다.
 
@@ -64,9 +72,9 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 <tr><td rowspan="3">인체 구조</td><td>하나 이상의 손가락을 사용하여 직선으로 이동하는 것은 어렵기 때문에 손끝을 이용한 이동은 정확하지 않습니다. 이것은 손 마디의 곡률과 동작에 관련된 마디 수 때문입니다.</td><td>손으로 마우스나 펜/스타일러스를 조정할 경우에는 화면의 커서보다 실제로 더 짧은 거리를 이동하게 되므로 이러한 도구로 직선 동작을 수행하는 것이 더 쉽습니다.</td><td>마우스와 동일합니다.</td></tr>
 <tr><td>디스플레이 장치에서 터치 화면의 일부 영역은 손가락 포스처 때문에, 그리고 사용자가 장치를 잡아야 하기 때문에 닿기 어려울 수 있습니다.</td><td>마우스 및 펜/스타일러스는 탭 순서를 통해 키보드로 컨트롤에 액세스하면서 화면의 어디에든 닿을 수 있습니다. </td><td>손가락 위치와 잡는 방법이 문제가 될 수 있습니다.</td></tr>
 <tr><td>하나 이상의 손가락이나 사용자의 손으로 물체를 가릴 수 있습니다. 이것을 폐색이라고 합니다.</td><td>간접 입력 장치는 폐색을 야기하지 않습니다.</td><td>마우스와 동일합니다.</td></tr>
-<tr><td>개체 상태</td><td>터치는 두 개의 상태로 존재하는 모델을 사용합니다. 디스플레이 장치의 터치 표면은 터치됨(켜짐) 또는 터치되지 않음(꺼짐)으로 존재합니다. 추가적인 시각적 피드백을 발생할 수 있는 가리키기 상태는 없습니다.</td><td>
+<tr><td>개체 상태</td><td>터치는 두 개의 상태로 존재하는 모델을 사용합니다. 디스플레이 장치의 터치 표면은 터치됨(켜짐) 또는 터치되지 않음(꺼짐)의 상태로 존재합니다. 추가적인 시각적 피드백을 발생할 수 있는 가리키기 상태는 없습니다.</td><td>
 <p>마우스, 펜/스타일러스 및 키보드는 모두 위쪽(꺼짐), 아래쪽(켜짐), 및 가리키기(포커스)의 세 가지 상태로 존재합니다.</p>
-<p>가리키기를 사용하면 UI 요소와 관련된 도구 설명을 보고 정보를 얻을 수 있습니다. 가리키기 및 포커스 효과는 조작하는 개체에 연결되며 대상지정에도 도움이 될 수 있습니다. 
+<p>가리키기를 사용하면 UI 요소와 관련된 도구 설명을 보고 정보를 얻을 수 있습니다. 가리키기 및 포커스 효과는 조작하는 개체에 연결되며 타기팅에도 도움이 될 수 있습니다. 
 </p>
 </td><td>마우스와 동일합니다.</td></tr>
 <tr><td rowspan="2">풍부한 조작 방식</td><td>멀티 터치, 즉 터치 화면의 다중 입력 지점(손가락 끝)이 지원됩니다.</td><td>단일 입력 지점이 지원됩니다.</td><td>터치와 동일합니다.</td></tr>
@@ -80,14 +88,14 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
  
 
-## 터치 피드백 사용
+## <a name="use-touch-feedback"></a>터치 피드백 사용
 
 앱과의 조작 중에 적절한 시각적 피드백이 제공되면 사용자들이 앱 및 Windows 8에서 조작이 해석되는 방식을 인식하고, 익히고, 적응하는 데 도움이 됩니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
 
 위치에 따라 정확도와 정밀도를 요구하는 활동에 터치식 입력을 사용할 경우 시각적 피드백이 중요합니다. 터치식 입력이 감지될 때마다 피드백을 표시하면 사용자가 앱 및 컨트롤이 정의하는 사용자 지정 대상 지정 규칙을 이해하는 데 도움이 됩니다.
 
 
-## 대상 지정
+## <a name="targeting"></a>대상 지정
 
 다음을 통해 대상을 최적으로 지정할 수 있습니다.
 
@@ -107,14 +115,14 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
     손가락을 아래로 누르고 밀지 않고 앞뒤로 흔들어 고밀도로 압축된 항목(예제: 하이퍼링크) 대상을 쉽게 다시 지정합니다. 폐색으로 인해 현재 항목이 도구 설명 또는 상태바를 통해 식별되며 손가락을 떼면 활성화됩니다.
 
-## 정확도
+## <a name="accuracy"></a>정확도
 
 정확하지 않은 조작에 대해 다음을 사용하여 디자인합니다.
 
 -   사용자가 콘텐츠를 조작할 때 원하는 위치에서 쉽게 멈출 수 있는 끌기 지점
 -   손이 약간 호를 그리며 움직일 경우에도 가로 또는 세로로 이동하도록 도와주는 방향 "길" 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
 
-## 폐색
+## <a name="occlusion"></a>폐색
 
 다음을 통해 손가락 및 손의 폐색을 피합니다.
 
@@ -134,7 +142,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
     텍스트 선택과 같이 정확해야 하는 경우 정확도를 향상시키도록 선택 핸들을 제공합니다. 자세한 내용은 [텍스트 및 이미지 선택에 대한 지침(Windows 런타임 앱)](guidelines-for-textselection.md)을 참조하세요.
 
-## 타이밍
+## <a name="timing"></a>타이밍
 
 직접 조작을 위해 시간 제한 모드를 변경하지 마세요. 직접 조작은 개체의 직접적인 실시간 실제 처리를 시뮬레이트합니다. 개체는 손가락이 이동할 때 반응합니다.
 
@@ -153,14 +161,14 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 -   조작 방식은 복합적인 조작을 지원해야 합니다. 예를 들어, 손가락을 끌어서 이동하는 동안 손가락을 모아 확대/축소할 경우
 -   조작은 시간으로 구분되어서는 안 됩니다. 같은 조작은 수행하는 데 걸린 시간과 상관 없이 결과가 같아야 합니다. 시간 기반 활성화는 사용자를 강제로 지연시키며 직접 조작의 몰입성과 시스템 응답 성능의 인식 능력을 모두 저하시킵니다.
 
-    **참고** 학습 및 탐색에 도움이 되도록 특정 시간이 지정된 조작(예: 길게 누르기)을 사용하는 경우는 예외입니다.
+    **참고**  학습 및 탐색에 도움이 되도록 특정 시간이 지정된 조작(예: 길게 누르기)을 사용하는 경우는 예외입니다.
 
      
 
 -   적절한 설명 및 시각 신호는 앞으로의 조작에 큰 영향을 미칩니다.
 
 
-## 앱 보기
+## <a name="app-views"></a>앱 보기
 
 
 앱 뷰의 이동/스크롤 및 확대/축소 설정을 통해 사용자 조작 환경을 조정할 수 있습니다. 앱 뷰는 사용자가 앱과 해당 콘텐츠를 액세스하고 조작하는 방법을 제어합니다. 뷰는 관성, 콘텐츠 경계 바운스 및 끌기 지점과 같은 동작도 제공합니다.
@@ -173,7 +181,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 앱 보기에 대한 자세한 내용은 [컨트롤, 레이아웃 및 텍스트](https://msdn.microsoft.com/library/windows/apps/mt228348)를 참조하세요.
 
-## 사용자 지정 터치 조작
+## <a name="custom-touch-interactions"></a>사용자 지정 터치 조작
 
 
 조작 지원을 직접 구현할 경우 사용자들은 앱의 UI 요소와의 직접적 조작이 이루어지는 직관적인 환경을 기대한다는 점에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
@@ -210,12 +218,12 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
 -->
 
-## 제스처 이벤트
+## <a name="gesture-events"></a>제스처 이벤트
 
 
 개별 컨트롤에 대한 자세한 내용은 [컨트롤 목록](https://msdn.microsoft.com/library/windows/apps/mt185406)을 참조하세요.
 
-## 포인터 이벤트
+## <a name="pointer-events"></a>포인터 이벤트
 
 
 포인터 이벤트는 터치, 터치 패드, 펜 및 마우스를 비롯한 다양한 활성 입력 소스에 의해 발생합니다(기존 마우스 이벤트를 대체함).
@@ -303,7 +311,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로, [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트 처리기에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)의 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)를 증가시키며, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 및 [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
+마지막으로, [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) 이벤트 처리기에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br208718)의 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208751) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br243371)를 증가시키며, [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) 및 [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
 
 ```ManagedCPlusPlus
 // Handler for pointer exited event.
@@ -424,7 +432,7 @@ Private Sub touchRectangle_PointerPressed(sender As Object, e As PointerRoutedEv
 End Sub
 ```
 
-## 조작 이벤트
+## <a name="manipulation-events"></a>조작 이벤트
 
 
 앱에서 여러 손가락 조작 또는 속도 데이터가 필요한 조작을 지원해야 할 경우 조작 이벤트를 사용합니다.
@@ -453,13 +461,13 @@ End Sub
 
 다음에는 하나 이상의 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트가 발생합니다. 예를 들어 화면을 터치한 후 손가락을 화면에서 끌면 이벤트가 발생합니다. 마지막으로 조작이 완료되면 [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945) 이벤트가 발생합니다.
 
-**참고** 터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용하여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
+**참고**  터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용하여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
 
  
 
 다음 예제에서는 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트를 사용하여 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) 개체에 대한 슬라이드 조작을 처리하고 화면에서 이동하는 방법을 보여 줍니다.
 
-먼저 이름이 `touchRectangle`이며 [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)가 200인 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)이 XAML에 만들어집니다.
+먼저 이름이 `touchRectangle`이며 [**Height**](https://msdn.microsoft.com/library/windows/apps/br243371) 및 [**Width**](https://msdn.microsoft.com/library/windows/apps/br208718)가 200인 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br208751)이 XAML에 만들어집니다.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -485,7 +493,7 @@ End Sub
 </Grid>
 ```
 
-다음에는 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)을 변환하기 위해 이름이 `dragTranslation`인 전역 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/br243027)이 만들어집니다. **Rectangle**에서 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트 수신기를 지정하고, **Rectangle**의 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/br208980)에 `dragTranslation`을 추가합니다.
+다음에는 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243027)을 변환하기 위해 이름이 `dragTranslation`인 전역 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/br243371)이 만들어집니다. **Rectangle**에서 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트 수신기를 지정하고, **Rectangle**의 [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/br208980)에 `dragTranslation`을 추가합니다.
 
 ```ManagedCPlusPlus
 // Global translation transform used for changing the position of 
@@ -556,7 +564,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트 처리기에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)의 위치가 [**Delta**](https://msdn.microsoft.com/library/windows/apps/hh702058) 속성의 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/br243027)을 사용하여 업데이트됩니다.
+마지막으로 [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946) 이벤트 처리기에서 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)의 위치가 [**Delta**](https://msdn.microsoft.com/library/windows/apps/br243027) 속성의 [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/hh702058)을 사용하여 업데이트됩니다.
 
 ```ManagedCPlusPlus
 // Handler for the ManipulationDelta event.
@@ -600,12 +608,12 @@ Private Sub testRectangle_ManipulationDelta(
 End Sub
 ```
 
-## 라우트된 이벤트
+## <a name="routed-events"></a>라우트된 이벤트
 
 
 여기서 언급한 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현됩니다. 즉, 원래 이벤트를 발생시킨 개체가 아닌 개체에서 이벤트를 처리할 수 있습니다. [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)의 부모 컨테이너 또는 앱의 루트 [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)와 같은 개체 트리의 연속된 부모는 원래 요소가 처리하지 않는 경우에도 이러한 이벤트를 처리하도록 선택할 수 있습니다. 반대로, 이벤트를 처리하는 개체는 더 이상 부모 요소에 도달하지 않도록 이벤트를 처리된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트의 처리기를 작성하는 방법에 미치는 영향에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/hh758286)를 참조하세요.
 
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   터치 조작이 있는 응용 프로그램을 기본 입력 방법으로 디자인합니다.
@@ -617,7 +625,7 @@ End Sub
 -   가능하면 조작을 구분하기 위해 손가락 수를 사용하지 마세요.
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [포인터 입력 처리](handle-pointer-input.md)
 * [입력 디바이스 식별](identify-input-devices.md)
@@ -645,6 +653,6 @@ End Sub
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -6,11 +6,11 @@ ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: a5a4c96723bd5c4cabdc7dd6dfc114b7af4d10f8
 
 ---
-# 서식 있는 텍스트 블록
+# <a name="rich-text-block"></a>서식 있는 텍스트 블록
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,22 +19,14 @@ ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx"><strong>RichTextBlockOverflow 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx"><strong>Paragraph 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx"><strong>Typography 클래스</strong></a></li>
+<li>[**RichTextBlock 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)</li>
+<li>[**RichTextBlockOverflow 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx)</li>
+<li>[**Paragraph 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx)</li>
+<li> [**Typography 클래스**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 여러 단락, 다중 열 또는 기타 복잡한 텍스트 레이아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요.
 
@@ -42,10 +34,7 @@ ms.openlocfilehash: 82c7e80afde143d7d12bbf4fe49aa2c52f244f6f
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 
-## 예제
-
-
-## 서식 있는 텍스트 블록 만들기
+## <a name="create-a-rich-text-block"></a>서식 있는 텍스트 블록 만들기
 
 RichTextBlock의 콘텐츠 속성은 [Paragraph](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.blocks.aspx) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다. 그러나 RichTextBlock은 TextBlock에서 제공하지 않는 여러 고유한 기능을 제공합니다. 
 
@@ -54,7 +43,7 @@ RichTextBlock은 다음을 지원합니다.
 - 인라인 UI 요소. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx)를 사용하여 이미지와 같은 UI 요소를 인라인 텍스트로 표시할 수 있습니다.
 - 오버플로 컨테이너. [RichTextBlockOverflow](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) 요소를 사용하여 다중 열 텍스트 레이아웃을 만들 수 있습니다.
 
-### 단락
+### <a name="paragraphs"></a>단락
 
 [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.paragraph.aspx) 요소를 사용하여 RichTextBlock 컨트롤 내에 표시할 텍스트 블록을 정의할 수 있습니다. 모든 RichTextBlock은 Paragraph를 하나 이상 포함해야 합니다. 
 
@@ -68,7 +57,7 @@ RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.mic
 </RichTextBlock>
 ```
 
-### 인라인 UI 요소
+### <a name="inline-ui-elements"></a>인라인 UI 요소
 
 [**InlineUIContainer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.inlineuicontainer.aspx) 클래스를 사용하면 UIElement 인라인 텍스트를 포함할 수 있습니다. 일반적인 시나리오는 Image 인라인 텍스트를 배치하는 것이지만, Button 또는 CheckBox와 같은 대화형 요소를 사용할 수도 있습니다.
 
@@ -88,7 +77,7 @@ RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.mic
 </RichTextBlock>
 ```
 
-## 오버플로 컨테이너
+## <a name="overflow-containers"></a>오버플로 컨테이너
 
 [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblockoverflow.aspx) 요소와 함께 RichTextBlock을 사용하여 다중 열 또는 기타 고급 페이지 레이아웃을 만들 수 있습니다. RichTextBlockOverflow 요소의 콘텐츠는 항상 RichTextBlock 요소에서 가져옵니다. RichTextBlock의 OverflowContentTarget 또는 다른 RichTextBlockOverflow로 설정하여 RichTextBlockOverflow 요소를 링크합니다.
 
@@ -110,11 +99,11 @@ RichTextBlock.TextIndent 속성을 설정하여 [RichTextBlock](https://msdn.mic
 </Grid>
 ```
 
-## 텍스트 서식 지정
+## <a name="formatting-text"></a>텍스트 서식 지정
 
 RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을 적용하면 앱에서 텍스트를 렌더링하는 방법을 사용자 지정할 수 있습니다. FontFamily, FontSize, FontStyle, Foreground 및 CharacterSpacing과 같은 표준 컨트롤 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 또한 인라인 텍스트 요소 및 Typography 연결 속성을 사용하여 텍스트의 서식을 지정할 수 있습니다. 이러한 옵션은 RichTextBlock이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
-### 인라인 요소
+### <a name="inline-elements"></a>인라인 요소
 
 [Windows.UI.Xaml.Documents](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.aspx) 네임스페이스는 Bold, Italic, Run, Span 및 LineBreak와 같이 텍스트의 서식을 지정하는 데 사용할 수 있는 다양한 인라인 텍스트 요소를 제공합니다. 텍스트의 섹션에 서식을 적용하는 일반적인 방법은 Run 또는 Span 요소에 텍스트를 배치한 후 해당 요소에서 속성을 설정하는 것입니다.
 
@@ -127,7 +116,7 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 </Paragraph>
 ```
 
-### 입력 체계
+### <a name="typography"></a>입력 체계
 
 [Typography](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx) 클래스의 연결된 속성을 통해 Microsoft OpenType 입력 체계 속성 집합에 액세스할 수 있습니다. 다음과 같이 RichTextBlock 또는 개별 인라인 텍스트 요소에서 이러한 연결된 속성을 설정할 수 있습니다.
 
@@ -140,13 +129,13 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 </RichTextBlock>
 ```
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 글꼴에 대한 지침 및 입력 체계를 참조하세요.
 
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 [텍스트 컨트롤](text-controls.md)
 
@@ -165,6 +154,6 @@ RichTextBlock이 일반 텍스트를 저장하지만, 다양한 서식 옵션을
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

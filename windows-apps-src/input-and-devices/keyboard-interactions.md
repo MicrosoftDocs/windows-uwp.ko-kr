@@ -6,23 +6,27 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 667228e10456ffbc64b7d0782d5a8bdc02f2f203
-ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 1226d097e911e79c800a16c33fcbb9bd524bd17a
 
 ---
 
-# 키보드 조작
+# <a name="keyboard-interactions"></a>키보드 조작
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-
-키보드 입력은 앱용 전체 사용자 조작 환경에서 중요한 부분을 차지합니다. 키보드가 앱을 조작하는 보다 효율적인 방법이라고 생각하는 사용자나 특정 장애를 가진 사람들에게는 키보드가 필수 도구입니다. 예를 들어 사용자가 Tab 및 화살표 키를 사용하여 앱을 탐색하고, 스페이스바 및 Enter 키를 사용하여 UI 요소를 활성화하고, 바로 가기 키를 사용하여 명령에 액세스할 수 있어야 합니다.  
+키보드 입력은 앱용 전체 사용자 조작 환경에서 중요한 부분을 차지합니다. 키보드가 더 효율적인 앱 조작 방법이라고 생각하는 사용자나 특정 장애를 가진 사람들에게는 키보드가 필수 도구입니다. 예를 들어 사용자가 Tab 및 화살표 키를 사용하여 앱을 탐색하고, 스페이스바 및 Enter 키를 사용하여 UI 요소를 활성화하고, 바로 가기 키를 사용하여 명령에 액세스할 수 있어야 합니다.  
 
 ![키보드 영웅 이미지](images/input-patterns/input-keyboard-small.jpg)
 
-**중요 API**
-
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)
--   [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)</li>
+<li>[**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)</li>
+<li>[**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)</li>
+</ul>
+</div>
+ 
 
 
 잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다.
@@ -30,11 +34,11 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 사용자는 하드웨어 키보드 및 두 가지 가상 키보드(OSK(화상 키보드) 및 터치 키보드)를 통해 유니버설 앱을 조작할 수 있습니다.
 
 화상 키보드  
-화상 키보드는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있는 시각적 가상 키보드입니다(터치 스크린이 필요하지 않음). 실제 키보드가 없는 시스템이나 움직일 수 없어서 일반적인 입력 디바이스를 사용할 수 없는 사용자는 화상 키보드를 사용할 수 있습니다. 화상 키보드는 하드웨어 키보드의 기능을 전부는 아니라도 대부분 에뮬레이트합니다.
+화상 키보드는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있는 시각적 가상 키보드입니다(터치 스크린이 필요하지 않음). 실제 키보드가 없는 시스템이나 움직일 수 없어서 일반적인 입력 장치를 사용할 수 없는 사용자는 화상 키보드를 사용할 수 있습니다. 화상 키보드는 하드웨어 키보드의 기능을 전부는 아니라도 대부분 에뮬레이트합니다.
 
 화상 키보드는 설정 &gt; 접근성의 키보드 페이지에서 켤 수 있습니다.
 
-**참고** 화상 키보드는 터치 키보드보다 우선하며, 현재 화상 키보드가 사용 중이면 터치 키보드는 나타나지 않습니다.
+**참고**  화상 키보드는 터치 키보드보다 우선하며, 현재 화상 키보드가 사용 중이면 터치 키보드는 나타나지 않습니다.
 
  
 
@@ -45,11 +49,11 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 터치 키보드  
 터치 키보드는 터치식 입력과 함께 텍스트 입력에 사용되는 시각적 가상 키보드입니다. 터치 키보드는 텍스트 입력용으로만 사용되므로 화상 키보드를 대체하지 않습니다(하드웨어 키보드를 에뮬레이트하지 않음).
 
-디바이스에 따라, 터치 키보드는 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤이 포커스를 받을 때 또는 사용자가 **알림 센터**를 통해 수동으로 설정할 때 나타납니다.
+장치에 따라, 터치 키보드는 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤이 포커스를 받을 때 또는 사용자가 **알림 센터**를 통해 수동으로 설정할 때 나타납니다.
 
 ![알림 센터의 터치 키보드 아이콘](images/input-patterns/touch-keyboard-notificationcenter.png)
 
-**참고** 터치 키보드를 자동으로 표시하려면 설정 &gt; 시스템의 **태블릿 모드** 화면으로 이동하여 "태블릿과 같은 디바이스를 사용할 때 Windows에서 더 쉽게 터치할 수 있습니다."를 켜야 할 수 있습니다.
+**참고**  터치 키보드를 자동으로 표시하려면 설정 &gt; 시스템의 **태블릿 모드** 화면으로 이동하여 "태블릿과 같은 장치를 사용할 때 Windows에서 더 쉽게 터치할 수 있습니다."를 켜야 할 수 있습니다.
 
  
 
@@ -97,9 +101,9 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 
 성공적인 키보드 조작을 통해 사용자는 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 요소에 액세스하고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 내게 필요한 옵션에 대한 선택키, 고급 사용자를 위한 바로 가기 등 다양한 요소가 성공의 수준에 영향을 미칠 수 있습니다.
 
-**참고** 터치 키보드는 토글 및 대부분의 시스템 명령을 지원하지 않습니다([패턴](#keyboard_command_patterns) 참조).
+**참고**  터치 키보드는 토글 및 대부분의 시스템 명령을 지원하지 않습니다([패턴](#keyboard_command_patterns) 참조).
 
-## 탐색
+## <a name="navigation"></a>탐색
 
 
 키보드에서 컨트롤(탐색 요소 포함)을 사용하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 받는 한 가지 방법은 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다. 잘 디자인된 키보드 탐색 모델은 사용자가 앱을 빠르고 효율적으로 탐색 및 사용할 수 있도록 해주는 논리적이고 예측 가능한 탭 순서를 제공합니다.
@@ -129,7 +133,7 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 경우에 따라 전체 시간 동안 화면에 유지해야 하는 UI 요소가 있습니다. 양식 컨트롤은 이동 영역에 포함되고 중요한 UI 요소는 고정되도록 UI를 디자인해 보세요. 예를 들면 다음과 같습니다.
 
 ![뷰에 항상 유지되어야 하는 영역이 있는 양식](images/input-patterns/touch-keyboard-pan2.png)
-## 활성화
+## <a name="activation"></a>활성화
 
 
 현재 포커스가 있는지 여부에 상관없이 다양한 방식으로 컨트롤을 활성화할 수 있습니다.
@@ -165,7 +169,7 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 
 ![연결된 레이블에서 식별된 선택키를 입력한 후 왼쪽에서 들여쓰기 텍스트 필드 값이 강조 표시됨](images/input-patterns/accesskeys-entered.png)
 
-## 유용성 및 접근성
+## <a name="usability-and-accessibility"></a>유용성 및 접근성
 
 
 잘 디자인된 키보드 조작 환경은 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며, 대신 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 판독기 및 음성 입력 유틸리티)을 사용해야 합니다. 이러한 사용자에게는 포괄성이 일관성보다 더 중요합니다.
@@ -214,10 +218,10 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 
 성공적인 키보드 조작 환경을 위해서는 키보드로만 앱을 철저히 테스트해야 합니다.
 
-## 텍스트 입력
+## <a name="text-input"></a>텍스트 입력
 
 
-키보드 입력을 사용할 경우 할상 장치 기능을 쿼리합니다. 휴대폰과 같은 일부 디바이스의 경우 터치 키보드는 Alt 키, 기능 키 또는 Windows 로고 키처럼 하드웨어 키보드에 포함된 다양한 바로 가기 또는 명령 키를 제공하지 않으므로 텍스트 입력에만 사용될 수 있습니다.
+키보드 입력을 사용할 경우 할상 장치 기능을 쿼리합니다. 휴대폰과 같은 일부 장치의 경우 터치 키보드는 Alt 키, 기능 키 또는 Windows 로고 키처럼 하드웨어 키보드에 포함된 다양한 바로 가기 또는 명령 키를 제공하지 않으므로 텍스트 입력에만 사용될 수 있습니다.
 
 사용자가 터치 키보드를 사용하여 앱을 탐색하지 않도록 합니다. 포커스를 가져오는 컨트롤에 따라 터치 키보드가 해제될 수도 있습니다.
 
@@ -246,10 +250,10 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 
 ![선택키와 바로 가기 키를 모두 포함하는 확장된 파일 메뉴가 포함된 메모장 앱](images/input-patterns/notepad.png)
 
-## 키보드 명령
+## <a name="keyboard-commands"></a>키보드 명령
 
 
-다음은 키보드 입력을 지원하는 다양한 장치에서 제공되는 키보드 조작의 포괄적인 목록입니다. 일부 디바이스 및 플랫폼에는 기본 키 입력과 조작이 필요하며, 이러한 사항이 나와 있습니다.
+다음은 키보드 입력을 지원하는 다양한 장치에서 제공되는 키보드 조작의 포괄적인 목록입니다. 일부 장치 및 플랫폼에는 기본 키 입력과 조작이 필요하며, 이러한 사항이 나와 있습니다.
 
 사용자 지정 컨트롤 및 조작을 디자인할 때 이 키보드 언어를 일관성 있게 사용하면 앱이 친숙하고 신뢰할 수 있으며 쉽게 배울 수 있게 됩니다.
 
@@ -308,7 +312,7 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
  
 
 참고: 재생/일시 중지와 다음 항목에 대한 미디어 탐색 키 명령은 각각 인쇄 및 찾기의 키 명령과 같습니다. 일반적인 명령이 미디어 탐색 명령보다 우선 순위가 높아야 합니다. 예를 들어 앱이 미디어 재생과 인쇄를 둘 다 지원하는 경우 키 명령 Ctrl+P는 인쇄를 수행해야 합니다.
-## 시각적 피드백
+## <a name="visual-feedback"></a>시각적 피드백
 
 
 키보드 조작 시에만 포커스 사각형을 사용합니다. 사용자가 터치 조작을 시작하는 경우 키보드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -322,7 +326,7 @@ ms.openlocfilehash: 5ab84def6e73329f59d8ae6ef8be335d66ef4334
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](guidelines-for-visualfeedback.md)을 참조하세요.
 
 
-## 키보드 이벤트 및 포커스
+## <a name="keyboard-events-and-focus"></a>키보드 이벤트 및 포커스
 
 
 다음 키보드 이벤트는 하드웨어 및 터치 키보드 둘 다에서 발생할 수 있습니다.
@@ -347,7 +351,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 기본적으로 컨트롤의 탭 시퀀스는 XAML(Extensible Application Markup Language)에 표시되는 순서입니다. 그러나 이 순서는 [**TabIndex**](https://msdn.microsoft.com/library/windows/apps/br209461) 속성을 사용하여 수정할 수 있습니다. 자세한 내용은 [키보드 접근성 구현](https://msdn.microsoft.com/library/windows/apps/hh868161)을 참조하세요.
 
-## 키보드 이벤트 처리기
+## <a name="keyboard-event-handlers"></a>키보드 이벤트 처리기
 
 
 입력 이벤트 처리기는 다음 정보를 제공하는 대리자를 구현합니다.
@@ -356,9 +360,9 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 -   이벤트 데이터. 키보드 이벤트의 경우 이 데이터는 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)의 인스턴스입니다. 처리기의 대리자는 [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs**의 가장 관련된 속성은 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)와 [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)입니다.
 -   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). 키보드 이벤트는 라우트된 이벤트이므로 이벤트 데이터에서 **OriginalSource**를 제공합니다. 의도적으로 이벤트가 개체 트리를 통해 버블 업되도록 허용하는 경우 **OriginalSource**가 보낸 사람이 아니라 관련 개체일 수도 있지만 이것은 디자인에 따라 달라집니다. 보낸 사람 대신 **OriginalSource**를 사용하는 방법에 대한 자세한 내용은 이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-### 키보드 이벤트 처리기 연결
+### <a name="attaching-a-keyboard-event-handler"></a>키보드 이벤트 처리기 연결
 
-이벤트를 멤버로 포함하는 모든 개체에 대해 키보드 이벤트 처리기 함수를 연결할 수 있습니다. 임의의 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 파생 클래스도 여기에 포함됩니다. 다음 XAML 예제는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)의 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트에 대해 처리기를 연결하는 방법을 보여 줍니다.
+이벤트를 멤버로 포함하는 모든 개체에 대해 키보드 이벤트 처리기 함수를 연결할 수 있습니다. 임의의 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) 파생 클래스도 여기에 포함됩니다. 다음 XAML 예제는 [**Grid**](https://msdn.microsoft.com/library/windows/apps/br208942)의 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br242704) 이벤트에 대해 처리기를 연결하는 방법을 보여 줍니다.
 
 ```xaml
 <Grid KeyUp="Grid_KeyUp">
@@ -368,7 +372,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 코드에서 이벤트 처리기를 연결할 수도 있습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://msdn.microsoft.com/library/windows/apps/mt185584)를 참조하세요.
 
-### 키보드 이벤트 처리기 정의
+### <a name="defining-a-keyboard-event-handler"></a>키보드 이벤트 처리기 정의
 
 다음 예제에서는 이전 예제에서 연결된 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트 처리기의 불완전한 이벤트 처리기 정의를 보여 줍니다.
 
@@ -394,7 +398,7 @@ void MyProject::MainPage::Grid_KeyUp(
   }
 ```
 
-### KeyRoutedEventArgs 사용
+### <a name="using-keyroutedeventargs"></a>KeyRoutedEventArgs 사용
 
 모든 키보드 이벤트는 이벤트 데이터에 [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)를 사용하며 **KeyRoutedEventArgs**에 다음 속성이 포함되어 있습니다.
 
@@ -403,11 +407,11 @@ void MyProject::MainPage::Grid_KeyUp(
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
 -   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810)([**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)에서 상속됨)
 
-### 키
+### <a name="key"></a>키
 
 키를 누르면 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 이벤트가 발생합니다. 마찬가지로, 키를 놓으면 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)이 발생합니다. 일반적으로 특정 키 값을 처리하기 위해 이벤트를 수신 대기합니다. 어떤 키를 누르거나 놓았는지 알아보려면 이벤트 데이터에서 [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) 값을 확인하세요. **Key**는 [**VirtualKey**](https://msdn.microsoft.com/library/windows/apps/br241812) 값을 반환합니다. **VirtualKey** 열거형에는 지원되는 모든 키가 포함됩니다.
 
-### 보조 키
+### <a name="modifier-keys"></a>보조 키
 
 보조 키는 Ctrl 또는 Shift 키와 같이 사용자가 일반적으로 다른 키와 함께 누르는 키입니다. 앱에서 이러한 조합을 바로 가기 키로 사용하여 앱 명령을 호출할 수 있습니다.
 
@@ -418,7 +422,7 @@ void MyProject::MainPage::Grid_KeyUp(
 
  
 
-### 바로 가기 키 예제
+### <a name="shortcut-keys-example"></a>바로 가기 키 예제
 
 
 다음 예제에서는 바로 가기 키를 구현하는 방법을 보여 줍니다. 이 예제에서 사용자는 [재생], [일시 중지] 및 [증지] 단추나 .Ctrl+P, Ctrl+A 및 Ctrl+S 바로 가기 키를 사용하여 미디어 재생을 제어할 수 있습니다. 단추 XAML은 단추 레이블의 [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/br209081) 속성 및 도구 설명을 사용하여 바로 가기를 표시합니다. 이 자체 설명서는 앱의 유용성과 접근성을 향상시키는 데 중요합니다. 자세한 내용은 [키보드 접근성](https://msdn.microsoft.com/library/windows/apps/mt244347)을 참조하세요.
@@ -584,12 +588,12 @@ End Sub
 
  
 
-## 키보드 라우트된 이벤트
+## <a name="keyboard-routed-events"></a>키보드 라우트된 이벤트
 
 
 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941), [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 등의 특정 이벤트는 라우트된 이벤트입니다. 라우트된 이벤트는 버블링 라우팅 전략을 사용합니다. 버블링 라우팅 전략은 이벤트가 자식 개체에서 발생한 다음 개체 트리에서 다음 부모 개체로 라우트됨을 의미합니다. 이 경우 동일한 이벤트를 처리하고 동일한 이벤트 데이터로 상호 작용할 수 있는 기회가 제공됩니다.
 
-[**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)와 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 개체에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트를 처리하는 다음 XAML 예제를 살펴보세요. 이 경우 포커스가 **Button** 개체 중 하나에 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생합니다. 이 이벤트는 부모 **Canvas**로 버블 업됩니다.
+[**Canvas**](https://msdn.microsoft.com/library/windows/apps/br208942)와 두 개의 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209267) 개체에 대해 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br209265) 이벤트를 처리하는 다음 XAML 예제를 살펴보세요. 이 경우 포커스가 **Button** 개체 중 하나에 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생합니다. 이 이벤트는 부모 **Canvas**로 버블 업됩니다.
 
 ```xaml
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -612,21 +616,21 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 이전 처리기의 [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) 속성 사용을 살펴보세요. 여기서 **OriginalSource**는 이벤트를 발생시킨 개체를 보고합니다. [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)은 컨트롤이 아니며 포커스를 가질 수 없으므로 개체가 **StackPanel**일 수는 없습니다. **StackPanel** 내의 두 단추 중 하나만 이벤트를 발생시킬 수 있는데 어떤 단추일까요? 부모 개체에서 이벤트를 처리하는 경우 **OriginalSource**를 사용하여 실제 이벤트 원본 개체를 구별합니다.
 
-### 이벤트 데이터의 Handled 속성
+### <a name="the-handled-property-in-event-data"></a>이벤트 데이터의 Handled 속성
 
 이벤트 처리 전략에 따라 하나의 이벤트 처리기만 버블링 이벤트에 반응하도록 할 수 있습니다. 예를 들어 특정 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 처리기가 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 컨트롤 중 하나에 연결되어 있는 경우 해당 이벤트를 처리할 수 있는 첫 번째 기회가 제공됩니다. 이 경우 부모 패널에서는 이벤트를 처리하지 않는 것이 좋습니다. 이 시나리오에서는 이벤트 데이터에 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성을 사용할 수 있습니다.
 
 라우트된 이벤트 데이터 클래스의 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) 속성은 이전에 이벤트 경로에 등록한 다른 처리기가 이미 적용되었음을 보고하는 데 사용됩니다. 이 속성은 라우트된 이벤트 시스템의 동작에 영향을 줍니다. 이벤트 처리기에서 **Handled**를 **true**로 설정하면 이 이벤트는 라우팅을 중지하고 다음 부모 요소로 전송되지 않습니다.
 
-### AddHandler 및 이미 처리된 키보드 이벤트
+### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler 및 이미 처리된 키보드 이벤트
 
 이미 처리된 것으로 표시된 이벤트에서 작동할 수 있는 처리기를 연결하는 특별한 기술을 사용할 수 있습니다. 이 기술은 XAML 특성 또는 C\#에서 += 등의 처리기를 추가하는 언어별 구문을 사용하는 대신 [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399) 메서드를 사용하여 처리기를 등록합니다. 
 
-이 기술의 일반적인 제한 사항은 **AddHandler** API가 해당 라우트된 이벤트를 식별하는 [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) 유형의 매개 변수를 사용한다는 데 있습니다. 일부 라우트된 이벤트는 **RoutedEvent** 식별자를 제공하지 않으므로 이 경우 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)에서 처리할 수 있는 라우트된 이벤트에 영향을 미칠 수 있습니다. [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트는 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702416) 및 [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418))가 있습니다. 그러나 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
+이 기술의 일반적인 제한 사항은 **AddHandler** API가 해당 라우트된 이벤트를 식별하는 [**RoutedEvent**](https://msdn.microsoft.com/library/windows/apps/br208808) 유형의 매개 변수를 사용한다는 데 있습니다. 일부 라우트된 이벤트는 **RoutedEvent** 식별자를 제공하지 않으므로 이 경우 [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)에서 처리할 수 있는 라우트된 이벤트에 영향을 미칠 수 있습니다. [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) 및 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 이벤트는 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/hh702416)에 라우트된 이벤트 식별자([**KeyDownEvent**](https://msdn.microsoft.com/library/windows/apps/hh702418) 및 [**KeyUpEvent**](https://msdn.microsoft.com/library/windows/apps/br208911))가 있습니다. 그러나 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술에 사용할 수 없습니다.
 
-### 키보드 이벤트 및 동작 재정의
+### <a name="overriding-keyboard-events-and-behavior"></a>키보드 이벤트 및 동작 재정의
 
-특정 컨트롤에 대한 키 이벤트를 재정의하여(예: [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) 키보드와 게임 패드와 같이 다양한 입력 디바이스에 대해 일관된 포커스 탐색 기능을 제공할 수 있습니다.
+특정 컨트롤에 대한 키 이벤트를 재정의하여(예: [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)) 키보드와 게임 패드와 같이 다양한 입력 장치에 대해 일관된 포커스 탐색 기능을 제공할 수 있습니다.
 
 다음 예제에서는 화살표 키를 누를 때 GridView 콘텐츠로 포커스가 이동하도록 컨트롤의 하위 클래스를 설정하고 KeyDown 동작을 재정의하겠습니다.
 
@@ -650,7 +654,7 @@ public class CustomGridView : GridView
 > [!NOTE]
 > GridView를 레이아웃용으로만 사용할 경우 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsControl)과 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ItemsWrapGrid)와 같은 다른 컨트롤을 사용하는 것이 좋습니다.
 
-## 명령
+## <a name="commanding"></a>명령
 
 일부 UI 요소는 명령 지원을 기본 제공합니다. 기본 구현에서 명령은 입력 관련 라우트된 이벤트를 사용합니다. 단일 명령 처리기를 호출하여 특정 포인터 작업이나 특정 액셀러레이터 키와 같은 관련 UI 입력을 처리할 수 있습니다.
 
@@ -658,7 +662,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 [**ICommand**](https://msdn.microsoft.com/library/windows/apps/br227885)를 구현하여 일반 이벤트 처리기에서 호출하는 명령 기능을 캡슐화할 수도 있습니다. 이렇게 하면 사용 가능한 **Command** 속성이 없는 경우에도 명령을 사용할 수 있습니다.
 
-## 텍스트 입력 및 컨트롤
+## <a name="text-input-and-controls"></a>텍스트 입력 및 컨트롤
 
 일부 컨트롤은 직접 처리를 통해 키보드 이벤트에 반응합니다. 예를 들어 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)는 키보드로 입력된 텍스트를 캡처한 다음 시각적으로 표현하는 컨트롤입니다. 해당 논리에 [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) 및 [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)을 사용하여 키 입력을 캡처한 다음 텍스트가 실제로 변경된 경우 고유한 [**TextChanged**](https://msdn.microsoft.com/library/windows/apps/br209706) 이벤트도 발생시킵니다.
 
@@ -670,7 +674,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 사용자 지정 컨트롤은 [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983)을 재정의하여 키 이벤트에 대해 유사한 재정의 동작을 구현할 수 있습니다. 사용자 지정 컨트롤이 특정 액셀러레이터 키를 처리하거나 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)에 대해 설명된 시나리오와 비슷한 컨트롤 또는 포커스 동작을 갖는 경우 이 논리를 해당 **OnKeyDown** / **OnKeyUp** 재정의에 적용해야 합니다.
 
-## 터치 키보드
+## <a name="the-touch-keyboard"></a>터치 키보드
 
 텍스트 입력 컨트롤은 터치 키보드를 자동으로 지원합니다. 사용자가 터치식 입력을 사용하여 텍스트 컨트롤에 입력 포커스를 설정하면 터치 키보드가 자동으로 나타납니다. 텍스트 컨트롤에 입력 포커스가 없으면 터치 키보드가 숨겨집니다.
 
@@ -683,7 +687,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 제공합니다. 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632) 속성을 [**Number**](https://msdn.microsoft.com/library/windows/apps/hh702028)로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다. 자세한 내용은 [입력 범위를 사용해서 터치 키보드 변경](https://msdn.microsoft.com/library/windows/apps/mt280229)을 참조하세요.
 
 
-## 이 섹션의 추가 문서
+## <a name="additional-articles-in-this-section"></a>이 섹션의 추가 문서
 
 <table>
 <colgroup>
@@ -704,10 +708,10 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 </tbody>
 </table>
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 **개발자**
-* [입력 디바이스 식별](identify-input-devices.md)
+* [입력 장치 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 
 **디자이너**
@@ -720,7 +724,7 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 **보관 샘플**
 * [입력 샘플](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 디바이스 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [입력: 장치 기능 샘플](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [입력: 터치 키보드 샘플](http://go.microsoft.com/fwlink/p/?linkid=246019)
 * [화상 키보드의 모양에 응답 샘플](http://go.microsoft.com/fwlink/p/?linkid=231633)
 * [XAML 텍스트 편집 샘플](http://go.microsoft.com/fwlink/p/?LinkID=251417)
@@ -730,6 +734,6 @@ UI 요소에 명령을 사용할 수 있는 경우 불연속 입력 이벤트 �
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

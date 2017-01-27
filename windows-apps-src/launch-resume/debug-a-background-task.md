@@ -4,24 +4,24 @@ title: "백그라운드 작업 디버그"
 description: "Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 translationtype: Human Translation
-ms.sourcegitcommit: e094ed9e0110fee33275721c4b6547ba53c1da3e
-ms.openlocfilehash: c4717ac41992d9a0c04d098067881ce5ca6952f0
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 6e1184729af929b771f21112083593e321cacc38
 
 ---
 
-# 백그라운드 작업 디버그
+# <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 **중요 API**
 -   [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847)
 
 Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다.
 
-## Out-of-process 및 In-process 백그라운드 작업 디버그
+## <a name="debugging-out-of-process-vs-in-process-background-tasks"></a>Out-of-process 및 In-process 백그라운드 작업 디버그
 이 항목에서는 호스트 앱이 아닌 별도 프로세스에서 실행되는 백그라운드 작업을 주로 설명합니다. In-process 백그라운드 작업을 디버그하는 경우 별도 백그라운드 작업 프로젝트가 없으며 **OnBackgroundActivated()**(In-process 프로세스 백그라운드 코드가 실행되는 위치)에 중단점을 설정할 수 있습니다. 실행할 백그라운드 코드를 트리거하는 방법에 대한 자세한 내용은 아래의 [백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그](#Trigger-background-tasks-manually-to-debug-background-task-code)에서 2단계를 참조하세요.
 
-## 백그라운드 작업 프로젝트가 올바르게 설정되어 있는지 확인합니다.
+## <a name="make-sure-the-background-task-project-is-set-up-correctly"></a>백그라운드 작업 프로젝트가 올바르게 설정되어 있는지 확인합니다.
 
 이 항목에서는 기존 앱에 디버그할 백그라운드 작업이 이미 있다고 가정합니다. 다음은 Out-of-process에서 실행되는 특정 백그라운드 작업과 관련이 있으며 In-process 백그라운드 작업에는 적용되지 않습니다.
 
@@ -29,7 +29,7 @@ Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 �
 -   C# 및 C++에서 백그라운드 작업 프로젝트의 **출력 유형**이 "Windows 런타임 구성 요소"인지 확인합니다.
 -   백그라운드 클래스를 패키지 매니페스트의 진입점 특성에서 선언해야 합니다.
 
-## 백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그
+## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>백그라운드 작업을 수동으로 트리거하여 백그라운드 작업 코드 디버그
 
 Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리거할 수 있습니다. 그런 다음 코드를 단계별로 실행하여 디버그할 수 있습니다.
 
@@ -49,7 +49,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 3.  백그라운드 작업이 활성화되면 디버거가 작업에 연결하고 VS에 디버그 출력을 표시합니다.
 
-## 백그라운드 작업 활성화 디버그
+## <a name="debug-background-task-activation"></a>백그라운드 작업 활성화 디버그
 
 > [!NOTE]
 > 이 섹션은 Out-of-process에서 실행되는 특정 백그라운드 작업과 관련이 있으며 In-process 백그라운드 작업에는 적용되지 않습니다.
@@ -83,7 +83,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 ![이벤트 뷰어의 백그라운드 작업 디버그 정보](images/event-viewer.png)
 
-## 백그라운드 작업 및 Visual Studio 패키지 배포
+## <a name="background-tasks-and-visual-studio-package-deployment"></a>백그라운드 작업 및 Visual Studio 패키지 배포
 
 백그라운드 작업을 사용하는 앱을 Visual Studio를 사용하여 배포하고 매니페스트 디자이너에서 지정한 버전(주 및/또는 부)을 업데이트하는 경우 이후에 Visual Studio를 사용하여 앱을 다시 배포하면 앱의 백그라운드 작업이 정지할 수 있습니다. 이 문제는 다음과 같이 해결할 수 있습니다.
 
@@ -92,7 +92,7 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 -   C# 프로젝트에서 "Always re-install my package(내 패키지 항상 다시 설치)" 디버깅 옵션을 선택하여 이 문제를 방지할 수 있습니다.
 -   앱이 최종 배포되어 패키지 버전을 증가시킬 수 있을 때까지 기다립니다(디버그하는 중에 변경하지 않음).
 
-## 설명
+## <a name="remarks"></a>설명
 
 -   앱이 백그라운드 작업을 다시 등록하기 전에 기존 백그라운드 작업 등록을 확인하도록 하세요. 동일한 백그라운드 작업을 여러 번 등록하면 백그라운드 작업이 트리거될 때마다 두 번 이상 실행되어 예기치 않은 결과가 발생할 수 있습니다.
 -   백그라운드 작업에서 잠금 화면에 액세스해야 하는 경우 백그라운드 작업을 디버그하기 전에 앱을 잠금 화면에 배치해야 합니다. 잠금 화면 지원 앱에 대한 매니페스트 옵션을 지정하는 방법은 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조하세요.
@@ -100,9 +100,9 @@ Microsoft Visual Studio를 통해 백그라운드 작업을 수동으로 트리�
 
 Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법에 대해서는 [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)을 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
@@ -116,6 +116,6 @@ Visual Studio를 사용하여 백그라운드 작업을 디버그하는 방법�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

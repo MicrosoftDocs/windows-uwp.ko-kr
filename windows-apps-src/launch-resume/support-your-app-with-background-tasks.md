@@ -4,8 +4,8 @@ title: "백그라운드 작업을 사용하여 앱 지원"
 description: "이 섹션의 항목에서는 트리거에 대한 응답으로 백그라운드에서 경량 코드가 실행되도록 하는 방법을 보여 줍니다."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 translationtype: Human Translation
-ms.sourcegitcommit: 7208ca16fe7eee2ec4039f3c4bc6305dceac96f3
-ms.openlocfilehash: b33fd118289ca575207be97bd8a1a33ddcc49a87
+ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
+ms.openlocfilehash: 9f83717657fddf2df51589aae75a3aa21c6ef5da
 
 ---
 
@@ -31,7 +31,7 @@ Windows 10 버전 1607에서는 백그라운드 작업을 만들지 않고 백�
 
 In-process 백그라운드 작업을 빠르게 시작하려면 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요.
 
-Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)을 참조하세요.
+Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 > [!TIP]
 > Windows 10부터 더 이상 백그라운드 작업을 등록하기 위해 앱을 잠금 화면에 배치할 필요가 없습니다.
@@ -45,8 +45,8 @@ Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-proce
 | **InternetAvailable**            | 인터넷을 사용할 수 있게 됩니다.                                                                                |
 | **NetworkStateChange**           | 네트워크 변경(예제: 비용 또는 연결 변경)이 발생합니다.                                              |
 | **OnlineIdConnectedStateChange** | 계정에 연결된 온라인 ID가 변경됩니다.                                                                 |
-| **SmsReceived**                  | 설치된 모바일 광대역 디바이스에 새 SMS 메시지가 수신됩니다.                                         |
-| **TimeZoneChange**               | 디바이스의 표준 시간대가 변경됩니다(예제: 시스템이 일광 절약 시간에 맞게 시계를 조정할 때). |
+| **SmsReceived**                  | 설치된 모바일 광대역 장치에 새 SMS 메시지가 수신됩니다.                                         |
+| **TimeZoneChange**               | 장치의 표준 시간대가 변경됩니다(예제: 시스템이 일광 절약 시간에 맞게 시계를 조정할 때). |
 
 자세한 내용은 [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)을 참조하세요.
 
@@ -135,14 +135,14 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 유지 관리 작업은 장치가 AC 전원에 연결되는 경우에만 실행됩니다. 자세한 내용은 [유지 관리 트리거 사용](use-a-maintenance-trigger.md)을 참조하세요.
 
-## <a name="background-tasks-for-sensors-and-devices"></a>센서 및 디바이스에 대한 백그라운드 작업
+## <a name="background-tasks-for-sensors-and-devices"></a>센서 및 장치에 대한 백그라운드 작업
 
 앱은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) 클래스를 사용하여 백그라운드 작업에서 센서 및 주변 장치에 액세스할 수 있습니다. 데이터 동기화나 모니터링 같이 오래 실행되는 작업에 이 트리거를 사용할 수 있습니다. 시스템 이벤트에 대한 작업과 달리 **DeviceUseTrigger** 작업은 앱이 포그라운드로 실행되고 조건이 설정되지 않은 경우에만 트리거할 수 있습니다.
 
 > [!IMPORTANT]
 > **DeviceUseTrigger** 및 **DeviceServicingTrigger**를 in-process 백그라운드 작업과 함께 사용할 수 없습니다.
 
-장기 실행 펌웨어 업데이트와 같은 일부 중요한 디바이스 작업은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 디바이스 메타데이터는 디바이스에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Windows 스토어 장치 앱용 장치 동기화 및 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=306619)를 참조하세요.
+장기 실행 펌웨어 업데이트와 같은 일부 중요한 장치 작업은 [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Windows 스토어 장치 앱용 장치 동기화 및 업데이트](http://go.microsoft.com/fwlink/p/?LinkId=306619)를 참조하세요.
 
 ## <a name="managing-background-tasks"></a>백그라운드 작업 관리
 
@@ -163,9 +163,9 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 **관련 백그라운드 작업 지침**
 
 * [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
-* [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)
+* [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-an-outofproc-background-task.md)
+* [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
@@ -182,6 +182,6 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

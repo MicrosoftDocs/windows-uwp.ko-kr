@@ -5,36 +5,43 @@ title: "음성 인식"
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
+keywords: "음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 59cebc2235b8ae4214156a4140b0b003c717375d
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: a4de0955eb6bd01ef5279b5b8d553fe1d1dd50f2
 
 ---
 
-# 음성 인식
-
+# <a name="speech-recognition"></a>음성 인식
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
 
-**중요 API**
-
--   [**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)
-
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Media.SpeechRecognition**](https://msdn.microsoft.com/library/windows/apps/dn653262)</li>
+</ul>
+</div>
 
 음성 인식은 음성 런타임, 런타임을 프로그래밍하기 위한 인식 API, 바로 사용할 수 있는 받아쓰기 및 웹 검색 문법, 사용자가 음성 인식 기능을 검색하고 사용하는 데 도움이 되는 기본 시스템 UI로 구성됩니다.
 
 
-## 오디오 피드 설정
+## <a name="set-up-the-audio-feed"></a>오디오 피드 설정
 
 
-디바이스에 마이크 또는 이와 동등한 요소가 있는지 확인합니다.
+장치에 마이크 또는 이와 동등한 요소가 있는지 확인합니다.
 
-마이크의 오디오 피드에 액세스할 수 있도록 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/br211474)(**package.appxmanifest** 파일)의 **마이크** 디바이스 기능([**DeviceCapability**](https://msdn.microsoft.com/library/windows/apps/br211430))을 설정합니다. 이렇게 하면 앱이 연결된 마이크에서 오디오를 녹음할 수 있습니다.
+마이크의 오디오 피드에 액세스할 수 있도록 [앱 패키지 매니페스트](https://msdn.microsoft.com/library/windows/apps/br211430)(**package.appxmanifest** 파일)의 **마이크** 장치 기능([**DeviceCapability**](https://msdn.microsoft.com/library/windows/apps/br211474))을 설정합니다. 이렇게 하면 앱이 연결된 마이크에서 오디오를 녹음할 수 있습니다.
 
 [앱 기능 선언](https://msdn.microsoft.com/library/windows/apps/mt270968)을 참조하세요.
 
-## 음성 입력 인식
+## <a name="recognize-speech-input"></a>음성 입력 인식
 
 
 *제약 조건*은 앱이 음성 입력에서 인식하는 단어와 구(어휘)를 정의합니다. 제약 조건은 음성 인식의 핵심이며 앱의 음성 인식 정확도를 높입니다.
@@ -43,13 +50,13 @@ ms.openlocfilehash: 59cebc2235b8ae4214156a4140b0b003c717375d
 
 1.  **미리 정의된 문법**([**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)).
 
-    미리 정의된 받아쓰기 및 웹 검색 문법은 사용자가 문법을 작성할 필요 없이 앱에 대한 음성 인식 기능을 제공합니다. 이러한 문법을 사용할 때 음성 인식은 원격 웹 서비스에서 수행되고 결과가 디바이스로 반환됩니다.
+    미리 정의된 받아쓰기 및 웹 검색 문법은 사용자가 문법을 작성할 필요 없이 앱에 대한 음성 인식 기능을 제공합니다. 이러한 문법을 사용할 때 음성 인식은 원격 웹 서비스에서 수행되고 결과가 장치로 반환됩니다.
 
     기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며 짧은 구를 인식하도록 최적화되어 있습니다. [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226) 개체에 대한 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 내용을 제한하지 않으려는 경우에 유용합니다. 일반적인 사용에는 노트 만들기나 메시지 내용 받아쓰기가 포함됩니다.
 
     받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
 
-    **참고** 미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 디바이스가 아니라 온라인상에 있으므로 디바이스에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.
+    **참고**  미리 정의된 받아쓰기 및 웹 검색 문법은 용량이 클 수 있으며 장치가 아니라 온라인상에 있으므로 장치에 설치된 사용자 지정 문법만큼 성능이 빠르지 않을 수 있습니다.
 
      
 
@@ -116,7 +123,7 @@ catch (Exception exception)
 
     VCD(음성 명령 정의) XML 파일을 사용하여 사용자가 앱을 활성화할 때 동작을 시작하기 위해 말할 수 있는 명령을 정의합니다. 자세한 내용은 [Cortana에서 음성 명령으로 포그라운드 앱 시작](launch-a-foreground-app-with-voice-commands-in-cortana.md)을 참조하세요.
 
-**참고** 사용할 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 다릅니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
+**참고**  사용할 제약 조건 유형은 만들려는 인식 환경의 복잡성에 따라 다릅니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
 제약 조건을 시작하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)을 참조하세요.
 
  
@@ -147,7 +154,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 인식 UI 사용자 지정
+## <a name="customize-the-recognition-ui"></a>인식 UI 사용자 지정
 
 
 앱에서 [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245)를 호출하여 음성 인식을 시도하는 경우 여러 화면이 다음과 같은 순서로 표시됩니다.
@@ -204,7 +211,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 **개발자**
@@ -223,6 +230,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

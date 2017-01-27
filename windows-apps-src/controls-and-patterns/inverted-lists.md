@@ -5,11 +5,11 @@ title: "반전된 목록"
 label: Inverted lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
+ms.sourcegitcommit: 5f50e490caa5d1d88c2f8315dc47e15b0ae22a05
+ms.openlocfilehash: de90c49dfc961241c1da028c8f7278e370a810bd
 
 ---
-# 반전된 목록
+# <a name="inverted-lists"></a>반전된 목록
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -22,29 +22,24 @@ ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx"><strong>ListView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx"><strong>ItemsStackPanel 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx"><strong>ItemsUpdatingScrollMode 속성</strong></a></li>
+<li>[**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)</li>
+<li>[**ItemsStackPanel 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)</li>
+<li>[**ItemsUpdatingScrollMode 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-
-
-## 반전된 목록 만들기
+## <a name="create-an-inverted-list"></a>반전된 목록 만들기
 
 반전된 목록을 만들려면 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.aspx)을 항목 패널로 지정하여 목록 보기를 사용합니다. ItemsStackPanel에서 [**ItemsUpdatingScrollMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsstackpanel.itemsupdatingscrollmode.aspx)를 [**KeepLastItemInView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemsupdatingscrollmode.aspx)로 설정합니다.
 
-> **중요**  **KeepLastItemInView** 열거형 값은 Windows 10 버전 1607부터 사용할 수 있습니다. 이전 버전의 Windows 10에서 앱을 실행할 때는 이 값을 사용할 수 없습니다.
+> [!IMPORTANT]
+> **KeepLastItemInView** 열거형 값은 Windows 10 버전 1607부터 사용할 수 있습니다. 이전 버전의 Windows 10에서 앱을 실행할 때는 이 값을 사용할 수 없습니다.
 
 이 예제에서는 목록 보기의 항목을 아래쪽에 맞추고 항목이 변경될 때 마지막 항목이 보기에 유지되도록 지정하는 방법을 보여 줍니다.
  
  **XAML**
- ```xaml
+```xaml
 <ListView>
     <ListView.ItemsPanel>
         <ItemsPanelTemplate>
@@ -55,7 +50,7 @@ ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
 </ListView>
 ```
 
-## 권장 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 - 사용자가 대화 흐름을 파악하기 쉽도록 발신자/수신자의 메시지를 반대쪽에 정렬합니다.
 - 사용자가 이미 대화 끝에서 다음 메시지를 기다리고 있는 경우 최신 메시지 표시에 방해가 되지 않도록 기존 메시지에 애니메이션 효과를 줍니다.
@@ -63,6 +58,6 @@ ms.openlocfilehash: c70cafe4d1dd3db46d48e9844ba9086dbba9acaa
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

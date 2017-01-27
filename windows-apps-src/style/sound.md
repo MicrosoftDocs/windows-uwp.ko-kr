@@ -6,16 +6,18 @@ title: "소리"
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
 translationtype: Human Translation
-ms.sourcegitcommit: e240197b4cc233b9fc1ecaa4a1835c4a4dcd3bf8
-ms.openlocfilehash: 91021d76b180e2bc26c0d502098e0a0b21f0219f
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 5e4decdfdda0cad59d80395440f974d4ff3303a6
 
 ---
 
-# 소리
+# <a name="sound"></a>소리
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 소리를 사용하여 앱을 향상시키는 여러 가지 방법이 있습니다. 사용자가 이벤트를 경고음으로 인식할 수 있도록 소리를 사용하여 다른 UI 요소를 보완할 수 있습니다. 소리는 시각 장애가 있는 사용자에게 효과적인 사용자 인터페이스 요소일 수 있습니다. 소리를 사용하여 사용자를 몰입시키는 분위기를 만들 수 있습니다. 예를 들어 퍼즐 게임의 백그라운드에서 기발한 사운드트랙을 재생하거나 공포/서바이벌 게임에 음울한 사운드 효과를 사용할 수 있습니다.
 
-## 소리 전역 API
+## <a name="sound-global-api"></a>소리 전역 API
 
 UWP는 단순히 "스위치를 플리핑"하여 전체 앱에서 몰입형 오디오 환경을 얻을 수 있는, 쉽게 액세스할 수 있는 사운드 시스템을 제공합니다.
 
@@ -27,12 +29,12 @@ ElementSoundPlayer.State = ElementSoundPlayerState.On;
 
 **꺼짐**으로 설정된 경우 앱을 실행하는 위치에 관계없이 소리가 재생되지 않습니다. **켜짐**으로 설정된 경우 앱의 소리가 모든 플랫폼에서 재생됩니다.
 
-### TV 및 Xbox의 소리
+### <a name="sound-for-tv-and-xbox"></a>TV 및 Xbox의 소리
 
 소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
 Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)을 참조하세요.
 
-## 소리 볼륨 재정의
+## <a name="sound-volume-override"></a>소리 볼륨 재정의
 
 **볼륨** 컨트롤을 사용하여 앱 내의 모든 소리를 낮출 수 있습니다. 그러나 앱 내의 소리는 *시스템 볼륨보다 더 클* 수 없습니다.
 
@@ -42,7 +44,7 @@ ElementSoundPlayer.Volume = 0.5f;
 ```
 여기서 최대 볼륨(시스템 볼륨 기준)은 1.0이고 최소 볼륨은 0.0(기본적으로 무음)입니다.
 
-## 컨트롤 수준 상태
+## <a name="control-level-state"></a>컨트롤 수준 상태
 
 컨트롤의 기본 소리가 부적절한 경우 사용하지 않도록 설정할 수 있습니다. 이 작업은 컨트롤의 **ElementSoundMode**를 통해 수행합니다.
 
@@ -56,17 +58,17 @@ ElementSoundPlayer.Volume = 0.5f;
 ButtonName.ElementSoundState = ElementSoundMode.Off;
 ```
 
-## 올바른 소리인가요?
+## <a name="is-this-the-right-sound"></a>올바른 소리인가요?
 
 사용자 지정 컨트롤을 만들거나 기존 컨트롤의 소리를 변경하는 경우 시스템에서 제공하는 모든 소리의 사용을 이해하는 것이 중요합니다.
 
 각 소리는 특정 기본 사용자 조작과 관련이 있으며, 임의 조작 시 재생되도록 소리를 사용자 지정할 수 있지만 이 섹션은 모든 UWP 앱에서 일관된 환경을 유지하도록 소리를 사용해야 하는 시나리오를 설명합니다.
 
-### 요소 호출
+### <a name="invoking-an-element"></a>요소 호출
 
 오늘날 컨트롤에 의해 트리거되는 가장 일반적인 시스템 소리는 **Invoke** 소리입니다. 이 소리는 사용자가 탭/클릭/Enter/스페이스 또는 게임 패드의 'A' 단추 누르기를 통해 컨트롤을 호출할 때 재생됩니다.
 
-일반적으로 이 소리는 사용자가 [입력 디바이스](../input-and-devices/input-primer.md)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
+일반적으로 이 소리는 사용자가 [입력 장치](../input-and-devices/input-primer.md)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
 
 &lt;여기에 SelectButtonClick.mp3 사운드 클립 포함&gt;
 
@@ -75,7 +77,7 @@ ButtonName.ElementSoundState = ElementSoundMode.Off;
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
 
-### 콘텐츠 표시 및 숨기기
+### <a name="showing--hiding-content"></a>콘텐츠 표시 및 숨기기
 
 XAML에는 많은 플라이아웃, 대화 상자 및 해제 가능한 UI가 있으며, 이러한 오버레이 중 하나를 트리거하는 작업은 **Show** 또는 **Hide** 소리를 호출해야 합니다.
 
@@ -93,7 +95,7 @@ ElementSoundPlayer.Play(ElementSoundKind.Show);
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Hide);
 ```
-### 페이지 내의 탐색
+### <a name="navigation-within-a-page"></a>페이지 내의 탐색
 
 앱 페이지 내의 패널 또는 보기 간에 탐색하는 경우([허브](../controls-and-patterns/hub.md) 또는 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md) 참조) 일반적으로 양방향 이동이 있습니다. 따라서 현재 앱 페이지를 나가지 않고도 다음 보기/패널 또는 이전 보기/패널로 이동할 수 있습니다.
 
@@ -113,7 +115,7 @@ ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ```
-### 뒤로 탐색
+### <a name="back-navigation"></a>뒤로 탐색
 
 현재 페이지에서 앱 내의 이전 페이지로 이동하는 경우 **GoBack** 소리를 호출해야 합니다.
 
@@ -122,7 +124,7 @@ ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```
-### 요소에 집중
+### <a name="focusing-on-an-element"></a>요소에 집중
 
 **Focus** 소리는 시스템에서 유일한 암시적 소리입니다. 따라서 사용자가 아무것도 직접 조작하지 않아도 소리가 들립니다.
 
@@ -135,18 +137,18 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Focus);
 ```
-### 포커스 소리 순환
+### <a name="cycling-focus-sounds"></a>포커스 소리 순환
 
 **ElementSound.Focus** 호출에 추가되는 기능으로, 사운드 시스템은 기본적으로 각 탐색 트리거 시 4가지 다른 소리를 순환합니다. 따라서 동일한 포커스 소리가 두 번 연속해서 재생되지 않습니다.
 
 이 순환 기능의 목적은 포커스 소리가 단조롭게 반복되고 사용자가 알아차릴 수 없게 하기 위한 것입니다. 포커스 소리는 가장 자주 재생되므로 가장 감지하기 힘든 소리여야 합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [Xbox 및 TV용 디자인](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

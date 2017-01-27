@@ -3,21 +3,26 @@ author: Xansky
 description: "Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다."
 title: "연락처 선택"
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
-keywords: "연락처, 특정 필드 선택"
+keywords: "연락처, 연락처 선택, 단일 연락처 선택, 여러 연락처 선택, 여러 데이터 연락처 선택, 특정 연락처 선택, 특정 데이터 연락처 선택, 특정 필드 선택"
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 70abebb53f96b7d9d818f3542c33ed477ff0c8a4
+ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
+ms.openlocfilehash: 7181a51a91997124b2c5c8ba184261de63de9caf
 
 ---
 
-# 연락처 선택
+# <a name="select-contacts"></a>연락처 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 [**Windows.ApplicationModel.Contacts**](https://msdn.microsoft.com/library/windows/apps/BR225002) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
 
-## 연락처 선택 기능 설정
+## <a name="set-up-the-contact-picker"></a>연락처 선택 기능 설정
 
 [**Windows.ApplicationModel.Contacts.ContactPicker**](https://msdn.microsoft.com/library/windows/apps/BR224913) 인스턴스를 만들고 변수에 할당합니다.
 
@@ -25,7 +30,7 @@ ms.openlocfilehash: 70abebb53f96b7d9d818f3542c33ed477ff0c8a4
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 ```
 
-## 선택 모드 설정(옵션)
+## <a name="set-the-selection-mode-optional"></a>선택 모드 설정(옵션)
 
 기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [**SelectionMode**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
 
@@ -41,7 +46,7 @@ contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelection
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
 ```
 
-## 선택기 시작
+## <a name="launch-the-picker"></a>선택기 시작
 
 ```cs
 Contact contact = await contactPicker.PickContactAsync();
@@ -54,7 +59,7 @@ public IList<Contact> contacts;
 contacts = await contactPicker.PickContactsAsync();
 ```
 
-## 연락처 처리
+## <a name="process-the-contacts"></a>연락처 처리
 
 선택 기능이 반환되면 사용자가 연락처를 선택했는지 확인합니다. 선택한 경우 연락처 정보를 처리합니다.
 
@@ -83,7 +88,7 @@ if (contacts != null && contacts.Count > 0)
 }
 ```
 
-## 완전한 예제(단일 연락처)
+## <a name="complete-example-single-contact"></a>완전한 예제(단일 연락처)
 
 이 예제에서는 연락처 선택 기능을 사용하여 메일 주소, 위치 및 전화 번호와 함께 단일 연락처의 이름을 검색합니다.
 
@@ -163,7 +168,7 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 }
 ```
 
-## 완전한 예제(여러 연락처)
+## <a name="complete-example-multiple-contacts"></a>완전한 예제(여러 연락처)
 
 이 예제에서는 연락처 선택 기능을 사용하여 여러 연락처를 검색한 다음 `OutputContacts`라는 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 컨트롤에 연락처를 추가합니다.
 
@@ -226,12 +231,12 @@ public class ContactItemAdapter
 }
 ```
 
-## 요약 및 다음 단계
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 지금까지 연락처 선택 기능을 사용하여 연락처 정보를 검색하는 방법을 간략히 살펴보았습니다. 연락처 및 연락처 선택 기능을 사용하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](http://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

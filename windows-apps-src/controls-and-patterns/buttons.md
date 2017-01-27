@@ -4,11 +4,11 @@ Description: "단추를 사용하면 즉각적인 작업을 트리거할 수 있
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bb670533769d8bae9cdea0f18e9cbb5717eb3877
 
 ---
-# 단추
+# <a name="buttons"></a>단추
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다.
@@ -18,19 +18,16 @@ ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Button 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>RepeatButton 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Click 이벤트</strong></a></li>
+<li>[**Button 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)</li>
+<li>[**RepeatButton 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)</li>
+<li>[**Click 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)</li>
+<li> </li>
+<li> </li>
+<li> </li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 단추를 사용하면 양식을 전송하는 등의 즉각적인 작업을 시작할 수 있습니다.
 
@@ -38,13 +35,13 @@ ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
     
 > 예외: 마법사 탐색인 경우에는 '뒤로' 및 '다음'이라는 레이블이 붙은 단추를 사용합니다. 역방향 탐색 또는 상위 수준 탐색 등의 경우에는 뒤로 단추를 사용합니다.
 
-## 예제
+## <a name="example"></a>예제
 
 이 예제에서는 Microsoft Edge 브라우저의 대화 상자에서 모두 닫기 및 취소의 두 가지 단추를 사용합니다. 
 
 ![대화 상자에서 사용되는 단추의 예제](images/control-examples/buttons-edge.png)
 
-## 단추 만들기
+## <a name="create-a-button"></a>단추 만들기
 
 이 예제에서는 클릭에 응답하는 단추를 보여 줍니다. 
 
@@ -78,7 +75,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### 단추 조작
+### <a name="button-interaction"></a>단추 조작
 
 손가락 또는 스타일러스로 단추를 탭하거나 포인터가 단추 위에 있을 때 마우스 왼쪽 단추를 누르면 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트가 발생합니다. 단추에 키보드 포커스가 있는 경우 Enter 키 또는 스페이스바 키를 눌러도 Click 이벤트가 발생합니다.
 
@@ -87,7 +84,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx) 속성을 변경하여 단추가 Click 이벤트를 발생시키는 방법을 변경할 수 있습니다. 기본 ClickMode 값은 **Release**입니다. ClickMode가 **Hover**인 경우 키보드 또는 터치로 Click 이벤트를 발생시킬 수 없습니다. 
 
 
-### 단추 콘텐츠
+### <a name="button-content"></a>단추 콘텐츠
 
 단추는 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.aspx)입니다. 단추의 XAML 콘텐츠 속성은 [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.aspx)인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
 
@@ -109,7 +106,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 ![이미지 및 텍스트 콘텐츠가 포함된 단추](images/button-orange.png)
 
-## 반복 단추 만들기
+## <a name="create-a-repeat-button"></a>반복 단추 만들기
 
 [**RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)은 사용자가 눌렀다가 놓을 때까지 반복해서 [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx) 이벤트를 발생시키는 컨트롤입니다. [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx) 속성을 설정하여 RepeatButton이 클릭 동작 반복을 시작하기 전에 눌러진 후 대기해야 하는 시간을 지정합니다. [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx) 속성을 설정하여 클릭 동작의 반복 간 시간을 지정합니다. 두 속성에 대한 시간은 밀리초로 지정됩니다.
 
@@ -141,10 +138,17 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   단추의 목적과 상태가 사용자에게 명확하게 전달되는지 확인합니다.
 -   단추가 수행하는 작업을 명확히 설명해 주는 간결하고 구체적이며 설명적인 텍스트를 사용합니다. 일반적으로 단추 텍스트 콘텐츠는 한 단어로 된 동사입니다.
+-   확인 대화 상자 등에서 동일한 결정에 대한 단추가 여러 개 있을 경우 다음과 같은 순서로 커밋 단추를 표시하세요. 
+    -   확인/[그렇게 함]/예
+    -   [그렇게 하지 않음]/아니요
+    -   취소
+
+    (여기서 [그렇게 함] 및 [그렇게 하지 않음]은 기본 지침에 대한 구체적인 응답입니다.)
+
 -   예를 들어 단추 텍스트 콘텐츠가 동적인 경우 단추 크기를 조정하는 방법과 주위의 컨트롤이 어떻게 되는지를 고려하세요.
 -   텍스트 콘텐츠가 있는 명령 단추에는 최소 단추 너비를 사용합니다.
 -   좁거나 짧거나 높은 명령 단추를 텍스트 콘텐츠와 함께 사용하지 마세요.
@@ -160,15 +164,15 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   기본 제출, 리셋 및 단추 스타일을 바꾸지 마세요.
 -   단추 안에 너무 많은 콘텐츠를 넣지 마세요. 콘텐츠를 간결하고 이해하기 쉽게 유지하세요(그림과 일부 텍스트만 사용).
 
-## 뒤로 단추
-뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [기록 및 뒤로 탐색](../layout/navigation-history-and-backwards-navigation.md)을 참조하세요.
+## <a name="back-buttons"></a>뒤로 단추
+뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [검색 기록 및 뒤로 탐색](../layout/navigation-history-and-backwards-navigation.md)을 참조하세요.
 
-## 샘플 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 *   [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     대화형 형식의 모든 XAML 컨트롤을 참조하세요.
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
@@ -179,6 +183,6 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

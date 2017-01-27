@@ -6,11 +6,11 @@ ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 465c75ccb2af9b162202a79025aa292fbd626a58
 
 ---
-# UWP 앱에 대한 배지 알림
+# <a name="badge-notifications-for-uwp-apps"></a>UWP 앱에 대한 배지 알림
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,9 +21,11 @@ ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
 
 알림 배지는 앱의 작업 표시줄 아이콘 및 시작 타일의 오른쪽 아래 모서리에 앱 실행 여부와 관계없이 나타납니다. 배지는 모든 타일 크기에 표시할 수 있습니다.  
 
-**참고**  직접 만든 배지 이미지를 제공할 수 없으며, 시스템 제공 배지 이미지만 사용할 수 있습니다.
+> [!NOTE]
+> 직접 만든 배지 이미지를 제공할 수는 없으며, 시스템 제공 배지 이미지만 사용할 수 있습니다.
 
-## 숫자 배지
+
+## <a name="numeric-badges"></a>숫자 배지
 
 <table>
     <tr>
@@ -43,7 +45,7 @@ ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
     </tr>    
 </table>
 
-## 문자 배지
+## <a name="glyph-badges"></a>문자 배지
 배지는 숫자 대신 확장할 수 없는 상태 문자 모양 집합 중 하나를 표시할 수 있습니다. 
 
 <table>
@@ -119,11 +121,11 @@ ms.openlocfilehash: a02793e45f190b9401f18e845af3dc73d235c3fc
 </tr>
 </table>
 
-## 배지 만들기
+## <a name="create-a-badge"></a>배지 만들기
 
 다음 예제에서는 배지 업데이트를 만드는 방법을 보여 줍니다.
 
-### 숫자 배지 만들기
+### <a name="create-a-numeric-badge"></a>숫자 배지 만들기
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -150,7 +152,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### 문자 모양 배지 만들기
+### <a name="create-a-glyph-badge"></a>문자 모양 배지 만들기
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -178,7 +180,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### 배지 지우기
+### <a name="clear-a-badge"></a>배지 지우기
 
 ````csharp
 private void clearBadge()
@@ -187,17 +189,17 @@ private void clearBadge()
 }
 ````
 
-## 샘플 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
-* [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고 배지 업데이트 보내기 및 알림 메시지를 표시하는 방법을 보여 줍니다. 
+* [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [적응형 및 대화형 알림 메시지](tiles-and-notifications-adaptive-interactive-toasts.md)
 * [타일 만들기](tiles-and-notifications-creating-tiles.md)
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

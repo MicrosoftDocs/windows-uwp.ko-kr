@@ -6,24 +6,27 @@ ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e71b936be1649f8ede394b019369176c7e3ca631
 
 ---
 
-# 끌기 애니메이션
+# <a name="drag-animations"></a>끌기 애니메이션
 
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**DragItemThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br243174)</li>
+</ul>
+</div>
 
--   [**DragItemThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/br243174)
 
-
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 **끌기 시작 애니메이션**
@@ -52,9 +55,9 @@ ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
 -   나가기 사이 끌기 애니메이션은 들어가기 사이 끌기 애니메이션을 먼저 사용한 경우에만 사용합니다.
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
-**개발자용(XAML)**
+**개발자용**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [끌어서 놓기 시퀀스 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
 * [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -71,6 +74,6 @@ ms.openlocfilehash: 58934982554aa3caf0060c84df113d483e62e1d2
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

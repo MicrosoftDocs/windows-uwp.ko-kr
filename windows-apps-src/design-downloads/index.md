@@ -3,21 +3,23 @@ description: "UWP 앱 사용자 인터페이스 레이아웃 및 컨트롤 디�
 keywords: "UWP 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, UWP 도구"
 title: "UWP 앱용 디자인 다운로드 – Windows 앱 개발"
 author: mijacobs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f1ea979f5179cce0bb059534b064c2ecf805ce89
-ms.openlocfilehash: da21817eea3a26ffd162bd19c8eb69345ac1d726
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d18696de51451552aef14c55d2a1b62c6037fb59
 
 ---
-
+# <a name="design-downloads-for-uwp-apps"></a>UWP 앱용 디자인 다운로드
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# UWP 앱용 디자인 다운로드
-
 
 이 섹션에는 UWP 앱용 디자인 및 UI 관련 다운로드가 들어 있습니다. Visual Studio 같은 추가 도구는 [Microsoft 기본 다운로드 페이지](https://developer.microsoft.com/downloads)를 참조하세요. 
 
 
-## 디자인 템플릿
+## <a name="design-templates"></a>디자인 템플릿
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -55,13 +57,13 @@ Adobe Photoshop에서 UWP 앱을 디자인하기 위한 컨트롤 및 레이아�
 </div>
 </div>
 
-## 도구
+## <a name="tools"></a>도구
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
             <p><b>Adobe Photoshop용 타일 및 아이콘 생성기</b><br/>
-이 Adobe Photoshop용 작업 집합은 단 7개의 파일에서 68개의 권장 타일 및 아이콘 자산을 생성합니다. <br/>[타일 및 아이콘 생성기 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
+이 Adobe Photoshop용 작업들은 단 7개의 파일에서 68개의 권장 타일 및 아이콘 자산을 생성합니다. <br/>[타일 및 아이콘 생성기 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=760394)</p>    
   </div>
   <div class="side-by-side-content-right">
 <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator" /></a>
@@ -69,19 +71,8 @@ Adobe Photoshop에서 UWP 앱을 디자인하기 위한 컨트롤 및 레이아�
 </div>
 </div>
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-            <p><b>Adobe Illustrator용 Redliner 도구</b><br/>
-Illustrator 프로토타입에서 쉽게 redline을 생성합니다. (Adobe Illustrator CC 이상이 필요합니다.)<br/>[Adobe Illustrator용 Redliner 도구 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=534641)</p>  
-  </div>
-  <div class="side-by-side-content-right">
-<a href="https://go.microsoft.com/fwlink/p/?LinkId=534641"><img src="images/redliner-tool.png" alt="Download the Redliner tool for Adobe Illustrator" /></a>
-  </div>
-</div>
-</div>
 
-## 샘플
+## <a name="samples"></a>샘플
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -109,6 +100,6 @@ Illustrator 프로토타입에서 쉽게 redline을 생성합니다. (Adobe Illu
 <b>더 많은 코드가 필요하세요?</b> Windows 샘플 페이지에서 모든 UWP 앱 샘플의 전체 목록을 확인하세요. [샘플 포털로 이동](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

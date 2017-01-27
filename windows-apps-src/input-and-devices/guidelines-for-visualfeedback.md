@@ -5,30 +5,40 @@ title: "시각적 피드백"
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+keywords: "시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시각화, 입력, 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: ab7a6cfabb98eaf841849f5045e7ebce1ec86d65
 
 ---
 
-# 시각적 피드백에 대한 지침
+# <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)</li>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)</li>
+</ul>
+</div>
 
--   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
-
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   컨트롤 및 응용 프로그램 성능을 최적화하기 위해 원래 컨트롤 템플릿에 최대한 가까운 곳에 유지합니다.
 -   앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969)를 참조하세요.
 -   반드시 필요한 경우가 아니면 피드백을 표시하지 마세요. 다른 곳에서 제공되지 않는 가치를 추가하는 경우가 아니면 시각적 피드백을 표시하지 않고 UI를 깔끔하고 간결하게 유지합니다.
 -   기본 제공 Windows 제스처의 시각적 피드백 동작을 과도하게 사용자 지정하지 마세요. 사용자 지정하면 일관되지 않고 혼란을 주는 사용자 환경이 생성될 수 있습니다.
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 접촉 시각화는 정확도 및 정밀도를 요구하는 터치 조작에 특히 중요합니다. 예를 들어 앱은 사용자가 대상을 빗나갔는지 여부, 빗나간 간격 및 필요한 조정을 알 수 있도록 탭 위치를 명확하게 표시해야 합니다.
 
@@ -50,11 +60,11 @@ ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
 | --- | --- | --- | --- |
 | 터치 시각화 | 마우스/터치 패드 시각화 | 펜 시각화 | 키보드 시각화 |
 
-## 높은 가시성 포커스 화면 효과
+## <a name="high-visibility-focus-visuals"></a>높은 가시성 포커스 화면 효과
 
 모든 Windows 앱은 응용 프로그램 내의 조작 가능한 컨트롤 주위에 보다 정의된 포커스 화면 효과를 표시합니다. 이러한 새 포커스 화면 효과는 완전히 사용자 지정할 수 있으며 필요에 따라 사용하지 않도록 설정할 수도 있습니다.
 
-## 색 브랜딩 및 사용자 지정
+## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 
 **테두리 속성**
 
@@ -100,7 +110,7 @@ ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
 <Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
 ```
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 **디자이너용**
 * [이동에 대한 지침](guidelines-for-panning.md)
@@ -129,6 +139,6 @@ ms.openlocfilehash: 388bdc42610d05a4decb5c8aecadcaf2f78b26f8
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -3,19 +3,26 @@ description: "UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한
 title: "UWP 컨트롤 및 패턴 - Windows 앱 개발"
 author: mijacobs
 keywords: "UWP 컨트롤, 사용자 인터페이스, 앱 컨트롤"
+label: Controls & patterns
+template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
-ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e530c8fab64c160737ccc06faf676d1d113896c4
 
 ---
-# UWP 앱의 컨트롤 및 패턴
+# <a name="controls-and-patterns-for-uwp-apps"></a>UWP 앱의 컨트롤 및 패턴
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 UWP 앱 개발에서 <i>컨트롤</i>은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 컨트롤은 사용자 인터페이스의 구성 요소입니다. 간단한 단추에서 그리드 보기처럼 강력한 데이터 컨트롤까지 45개 이상의 사용할 수 있는 컨트롤을 제공합니다. <i>패턴</i>은 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다.
 
 이 섹션의 문서에서는 UWP 앱에 컨트롤 및 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 제공합니다. 
 
-## 소개
+## <a name="intro"></a>소개
 
 XAML 및 C#으로 컨트롤을 추가하고 스타일을 지정하는 방법에 대한 일반 지침과 코드 예제입니다.
 
@@ -34,7 +41,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </div>
 </div>
 
-## 사전순 인덱스 
+## <a name="alphabetical-index"></a>사전순 인덱스 
 
 특정 컨트롤 및 패턴에 대한 자세한 정보입니다.
 
@@ -169,6 +176,6 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

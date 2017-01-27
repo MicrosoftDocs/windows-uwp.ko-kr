@@ -6,27 +6,29 @@ ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2fe8814d98dd5ce4471530c7367b8ad266cc6b05
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 3217dd6bda6d9692ff450133af23002a7040347b
 
 ---
 
-# 회전
+# <a name="rotation"></a>회전
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 이 문서에서는 회전하기 위한 새로운 Windows UI에 대해 설명하고 UWP 앱에서 이러한 새로운 조작 방식 메커니즘을 사용할 때 고려해야 할 사용자 환경 지침을 제공합니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
-
-## 권장 사항 및 금지 사항
-
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 -   사용자들이 UI 요소를 직접 회전하는 데 도움을 주려는 경우 회전을 사용합니다.
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 
 **회전의 개요**
@@ -89,7 +91,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 <td align="left">조합형 회전</td>
 <td align="left"><p>조합형 회전은 제한된 회전에 의해 적용된 각각의 90도 끌기 지점에서 구역을 통한 자유형 회전([이동에 대한 지침](guidelines-for-panning.md)의 이동 경로와 비슷)을 지원합니다. 사용자가 90도 구역 중 하나 밖에서 개체를 놓으면 개체는 해당 위치에 그대로 남아 있고 그렇지 않은 경우 자동으로 끌기 지점으로 회전합니다.</p>
 <div class="alert">
-<strong>참고</strong> 사용자 인터페이스 이동 경로는 대상 주변 영역이 선택에 영향을 미칠 수 있는 특정 값이나 위치로의 이동을 제한하는 기능입니다.
+<strong>참고</strong>  사용자 인터페이스 이동 경로는 대상 주변 영역이 선택에 영향을 미칠 수 있는 특정 값이나 위치로의 이동을 제한하는 기능입니다.
 </div>
 <div>
  
@@ -100,7 +102,7 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 **샘플**
@@ -128,6 +130,6 @@ Windows 8에서는 자유형, 제한형 및 조합형의 세 가지 회전 유�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

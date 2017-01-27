@@ -6,11 +6,11 @@ ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 685ef17e17fb17fa620eea84335ce6688a5cfb3e
 
 ---
-# 토글 스위치
+# <a name="toggle-switches"></a>토글 스위치
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -19,18 +19,13 @@ ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx"><strong>ToggleSwitch 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx"><strong>IsOn 속성</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx"><strong>Toggled 이벤트</strong></a></li>
+<li>[**ToggleSwitch 클래스**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx)</li>
+<li>[**IsOn 속성**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)</li>
+<li>[**Toggled 이벤트**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 사용자가 토글 스위치를 전환하면 바로 적용되는 이진 파일 작업용 토글 스위치를 사용합니다. 예를 들어 WiFi처럼 서비스 또는 하드웨어 구성 요소를 켜거나 끌 때 전환 스위치를 사용합니다.
 
@@ -40,7 +35,7 @@ ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
 
 전환 스위치를 켜거나 끈 직후 해당 작업을 수행하는 것이 좋습니다.
 
-### 전환 스위치와 확인란 중 선택
+### <a name="choosing-between-toggle-switch-and-check-box"></a>전환 스위치와 확인란 중 선택
 
 일부 작업에 대해 토글 스위치나 확인란을 사용할 수 있습니다. 어떤 컨트롤이 더 잘 작동하는지 결정하려면 다음 팁을 따르세요.
 
@@ -58,7 +53,7 @@ ms.openlocfilehash: a4fe19dcd6f555273e74236192c5c61e8c6579ab
 
     ![여러 항목이 선택된 확인란](images/guidelines_and_checklist_for_toggle_switches_checkbox_multi_select.png)
 
-## 예제
+## <a name="examples"></a>예제
 
 뉴스 앱의 일반 설정에서 있는 토글 스위치입니다.
 
@@ -68,7 +63,7 @@ Windows의 시작 메뉴 설정에 있는 토글 스위치입니다.
 
 ![Windows의 시작 메뉴 설정에 있는 토글 스위치](images/control-examples/toggle-switch-start-settings.png)
 
-## 토글 스위치 만들기
+## <a name="create-a-toggle-switch"></a>토글 스위치 만들기
 
 간단한 토글 스위치를 만드는 방법은 다음과 같습니다. 이 XAML은 앞에 표시된 WiFi 토글 스위치를 만듭니다.
 
@@ -85,7 +80,7 @@ wiFiToggle.Header = "WiFi";
 stackPanel1.Children.Add(wiFiToggle);
 ```
 
-### IsOn
+### <a name="ison"></a>IsOn
 
 스위치는 켜짐 또는 꺼짐일 수 있습니다. [**IsOn**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
 
@@ -96,7 +91,7 @@ stackPanel1.Children.Add(wiFiToggle);
 </StackPanel>
 ```
 
-### Toggled
+### <a name="toggled"></a>Toggled
 
 다른 경우에서는 [**Toggled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx) 이벤트를 처리하여 상태 변경에 응답할 수 있습니다.
 
@@ -140,7 +135,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 }
 ```
 
-### 켜짐/꺼짐 레이블
+### <a name="onoff-labels"></a>켜짐/꺼짐 레이블
 
 기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [**OnContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) 및 [**OffContent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
 
@@ -154,24 +149,20 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 [**OnContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) 및 [**OffContentTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   설정에 더 적합한 레이블이 있는 경우 켜짐 및 꺼짐 레이블을 바꿉니다. 특정 설정에 더 적합한 두 개의 상반되는 옵션을 나타내는 3-4자의 짧은 레이블이 있는 경우에는 해당 레이블을 사용합니다. 예를 들어 설정이 "이미지 표시"인 경우 "표시/숨기기"를 사용할 수 있습니다. 더 구체적인 레이블을 사용하면 UI를 지역화하는 데 도움이 될 수 있습니다.
 -   꼭 그래야 하는 경우 외에는 켜짐과 꺼짐 레이블을 바꾸지 마세요. 사용자 지정 레이블이 필요한 경우 외에는 기본 레이블을 고수하세요.
 -   레이블은 4자 이하여야 합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
-[**ToggleSwitch**](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [**ToggleSwitch 클래스**](https://msdn.microsoft.com/library/windows/apps/hh701411)
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)
 
-**개발자용(XAML)**
-- [**ToggleSwitch 클래스**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
-
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

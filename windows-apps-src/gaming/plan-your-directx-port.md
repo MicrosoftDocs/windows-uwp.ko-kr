@@ -4,12 +4,12 @@ title: "DirectX 포트 계획"
 description: "DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다."
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
+ms.sourcegitcommit: 115377ed3e5a13668481d1122f354610b3077763
+ms.openlocfilehash: f5f66f5da79eb62e3a81f4fe0d7398fed689d378
 
 ---
 
-# DirectX 포트 계획
+# <a name="plan-your-directx-port"></a>DirectX 포트 계획
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,16 +23,16 @@ ms.openlocfilehash: fbd582b2cc90ee763cb167c65dac88cee4e7a025
 
 DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다.
 
-## 그래픽 코드 포팅 계획
+## <a name="plan-to-port-graphics-code"></a>그래픽 코드 포팅 계획
 
 
 UWP에 게임 포팅을 시작하기 전에 해당 게임에 Direct3D 8의 기존 내용이 없는지 확인하는 것이 중요합니다. 게임에 고정된 함수 파이프라인의 나머지 부분이 있지 않은지 확인합니다. 고정된 파이프라인 기능을 포함하여 사용되지 않는 기능의 전체 목록은 [사용되지 않는 기능](https://msdn.microsoft.com/library/windows/desktop/cc308047)을 참조하세요.
 
-Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변경 사항 이상을 활용할 수 있습니다. Direct3D 장치, 디바이스 컨텍스트 및 그래픽 인프라 간의 차이 알아보고 Direct3D 9 이후 다른 중요한 변경 사항에 대해 학습해야 합니다. 이 섹션의 다른 항목을 참조하여 이 프로세스를 시작할 수 있습니다.
+Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변경 사항 이상을 활용할 수 있습니다. Direct3D 장치, 장치 컨텍스트 및 그래픽 인프라 간의 차이 알아보고 Direct3D 9 이후 다른 중요한 변경 사항에 대해 학습해야 합니다. 이 섹션의 다른 항목을 참조하여 이 프로세스를 시작할 수 있습니다.
 
 고유한 도우미 라이브러리 또는 커뮤니티 도구로 D3DX 및 DXUT 도우미 라이브러리를 교체해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
-> **참고** [DirectX Tool Kit](http://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926)를 사용하여 이전에 D3DX 및 DXUT에서 제공한 일부 기능을 교체할 수 있습니다.
+> **참고**   [DirectX Tool Kit](http://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926)를 사용하여 이전에 D3DX 및 DXUT에서 제공한 일부 기능을 교체할 수 있습니다.
 
  
 
@@ -40,7 +40,7 @@ Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변�
 
 여러 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876)에 익숙해지세요. 기능 수준은 알려진 기능 집합을 정의하여 다양한 범위의 비디오 하드웨어를 분류합니다. 각 집합은 대략 각각 9.1에서 11.2까지 Direct3D 버전에 해당합니다. 모든 기능 수준은 DirectX 11 API를 사용합니다.
 
-## Win32 UI 코드를 CoreWindow로 포팅하기 위한 계획
+## <a name="plan-to-port-win32-ui-code-to-corewindow"></a>Win32 UI 코드를 CoreWindow로 포팅하기 위한 계획
 
 
 UWP 앱은 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)라는 앱 컨테이너에 대해 작성된 창에서 실행됩니다. 게임은 바탕 화면 창보다 구현 세부 사항이 적게 필요한 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)에서 상속하여 이 창을 제어합니다. 게임의 주 루프는 [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) 메서드에 있습니다.
@@ -55,7 +55,7 @@ Microsoft 템플릿 및 코드 샘플은 아직 익숙하지 않을 수 있는 �
 
 자주 사용하게 되는 두 가지 개념이 있습니다.
 
--   관리되는 참조([**^**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx) 및 [**관리되는 클래스**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx)(ref 클래스)는 Windows 런타임의 기본적인 부분입니다. 예를 들어 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)(연습의 추가 정보)와 같은 Windows 런타임 구성 요소와 함께 인터페이스에 대한 관리되는 ref 클래스를 사용해야 합니다.
+-   관리되는 참조([**^ 연산자**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) 및 [**관리되는 클래스**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx)(ref 클래스)는 Windows 런타임의 기본적인 부분입니다. 예를 들어 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)(연습의 추가 정보)와 같은 Windows 런타임 구성 요소와 함께 인터페이스에 대한 관리되는 ref 클래스를 사용해야 합니다.
 -   Direct3D 11 COM 인터페이스 작업 시 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) 템플릿 종류 사용하여 COM 포인터를 보다 쉽게 사용할 수 있게 합니다.
 
  
@@ -68,6 +68,6 @@ Microsoft 템플릿 및 코드 샘플은 아직 익숙하지 않을 수 있는 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

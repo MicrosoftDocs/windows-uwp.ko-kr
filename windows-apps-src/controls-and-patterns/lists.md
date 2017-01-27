@@ -6,11 +6,11 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 93f5d7fe5ec14a0d5ccb69e84e9419488192a5c4
 
 ---
-# 목록
+# <a name="lists"></a>목록
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -26,22 +26,17 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>ListView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>GridView 클래스</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>ComboBox 클래스</strong></a></li>
+<li>[**ListView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242878)</li>
+<li>[**GridView 클래스**](https://msdn.microsoft.com/library/windows/apps/br242705)</li>
+<li>[**ComboBox 클래스**](https://msdn.microsoft.com/library/windows/apps/br209348)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-
-## 목록 보기
+## <a name="list-views"></a>목록 보기
 
 목록 보기를 사용하면 항목을 분류하고, 그룹 헤더를 할당하며, 항목을 끌어서 놓고, 콘텐츠를 구성하며, 항목의 순서를 다시 매길 수 있습니다.
 
-### 올바른 컨트롤인가요?
+### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 목록 보기를 사용하여 다음을 수행할 수 있습니다.
 
@@ -49,18 +44,18 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 -   단일 또는 분류된 콘텐츠 모음을 탐색합니다.
 -   [마스터/세부 정보 패턴](master-details.md)의 마스터 창을 만듭니다. 마스터/세부 정보 패턴은 메일 앱에서 흔히 사용되는 패턴으로, 하나의 창(마스터)에는 선택 가능한 항목이 있으며 다른 창(세부 정보)에는 선택한 항목의 자세히 보기가 있습니다.
 
-### 예제
+### <a name="examples"></a>예제
 
 다음은 휴대폰의 그룹화된 데이터를 보여 주는 간단한 목록 보기입니다.
 
 ![그룹화된 데이터를 사용한 목록 보기](images/simple-list-view-phone.png)
 
-### 권장 사항
+### <a name="recommendations"></a>권장 사항
 
 -   목록 내의 항목은 동작이 동일해야 합니다.
 -   목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
 
-### 목록 보기 문서
+### <a name="list-view-articles"></a>목록 보기 문서
 <table>
 <colgroup>
 <col width="50%" />
@@ -96,11 +91,11 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 </tbody>
 </table>
 
-## 그리드 보기
+## <a name="grid-views"></a>그리드 보기
 
 그리드 보기는 이미지 기반 콘텐츠 모음의 정렬 및 탐색에 적합합니다. 그리드 보기 레이아웃은 세로로 스크롤되고 가로로 이동합니다. 항목은 왼쪽에서 오른쪽으로, 위에서 아래로 읽기 순서에 따라 배치됩니다.
 
-### 올바른 컨트롤인가요?
+### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 목록 보기를 사용하여 다음을 수행할 수 있습니다.
 
@@ -108,7 +103,7 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 -   콘텐츠 라이브러리를 표시합니다.
 -   [시맨틱 줌](semantic-zoom.md)과 연결된 두 콘텐츠 보기의 서식을 지정합니다.
 
-### 예제
+### <a name="examples"></a>예제
 
 이 예제에서는 일반적인 그리드 보기 레이아웃(앱 찾아보기)을 보여 줍니다. 그리드 보기 항목에 대한 메타데이터는 일반적으로 몇 줄의 텍스트 및 항목 등급으로 제한됩니다.
 
@@ -118,12 +113,12 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ![콘텐츠 라이브러리의 예](images/controls_list_contentlibrary.png)
 
-### 권장 사항
+### <a name="recommendations"></a>권장 사항
 
 -   목록 내의 항목은 동작이 동일해야 합니다.
 -   목록이 그룹으로 나뉜 경우 [시맨틱 줌](semantic-zoom.md)을 사용하면 사용자가 그룹화된 콘텐츠를 쉽게 탐색할 수 있습니다.
 
-### 그리드 보기 문서
+### <a name="grid-view-articles"></a>그리드 보기 문서
 <table>
 <colgroup>
 <col width="50%" />
@@ -151,18 +146,18 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 </tbody>
 </table>
 
-## 드롭다운 목록
+## <a name="drop-down-lists"></a>드롭다운 목록
 
 콤보 상자라고도 하는 드롭다운 목록은 압축 상태로 시작되어 선택 가능한 항목의 목록을 표시하도록 확장됩니다. 선택한 항목은 항상 표시되며, 표시되지 않은 항목은 사용자가 콤보 상자를 탭하여 확장하면 보기로 가져올 수 있습니다.
 
-### 올바른 컨트롤인가요?
+### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 -   드롭다운 목록을 사용하여 사용자가 한 줄의 텍스트로 적절하게 나타낼 수 있는 일련의 항목에서 단일 값을 선택할 수 있도록 합니다.
 -   여러 줄의 텍스트나 이미지가 포함된 항목을 표시하려면 콤보 상자 대신 목록 또는 그리드 보기를 사용합니다.
 -   항목이 4개 이하이면 [라디오 단추](radio-button.md)(한 항목만 선택할 수 있는 경우) 또는 [확인란](checkbox.md)(여러 항목을 선택할 수 있는 경우)을 사용합니다.
 -   선택 항목이 앱 흐름에서 두 번째로 중요한 경우 콤보 상자를 사용합니다. 대부분의 상황에서 대부분의 사용자에게 기본 옵션이 권장되는 경우 목록 보기를 사용하여 모든 항목을 표시하면 필요 이상으로 옵션에 주의를 집중시킬 수 있습니다. 콤보 상자를 사용하여 공간을 절약하고 주의 분산을 최소화할 수 있습니다.
 
-### 예
+### <a name="examples"></a>예
 
 압축 상태의 콤보 상자는 헤더를 표시할 수 있습니다.
 
@@ -176,20 +171,20 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ![드롭다운 목록에 있는 스크롤 막대의 예](images/combo_box_scroll.png)
 
-### 권장 사항
+### <a name="recommendations"></a>권장 사항
 
 -   콤보 상자 항목의 텍스트 콘텐츠를 한 줄로 제한합니다.
 -   가장 논리적인 순서로 콤보 상자의 항목을 정렬합니다. 관련 옵션을 그룹화하고 가장 일반적인 옵션을 맨 위에 배치합니다. 이름은 사전순으로 정렬하고, 숫자는 숫자순으로 정렬하고, 날짜는 시간순으로 정렬합니다.
 
-### 텍스트 검색
+### <a name="text-search"></a>텍스트 검색
 
 콤보 상자는 자동으로 컬렉션 내의 검색을 지원합니다. 사용자가 열리거나 닫힌 콤보 상자에 포커스가 있는 상태에서 실제 키보드를 통해 문자를 입력하면 사용자 문자열과 일치하는 항목이 표시됩니다. 이 기능은 긴 목록을 탐색할 때 특히 유용합니다. 예를 들어 상태 목록이 포함된 드롭다운을 조작하는 경우 사용자는 빠른 선택을 위해 "w" 키를 눌러 "워싱턴"을 표시할 수 있습니다. 
 
-## 목록 상자
+## <a name="list-boxes"></a>목록 상자
 
 목록 상자를 사용하면 사용자가 모음에서 단일 항목 또는 여러 항목을 선택할 수 있습니다. 목록 상자는 항상 열려 있다는 점을 제외하고는 드롭다운 목록과 유사합니다. 목록 상자에는 압축(확장되지 않은) 상태가 없습니다. 모두 표시할 공간이 없는 경우 목록 상자의 항목을 스크롤할 수 있습니다.
 
-### 올바른 컨트롤인가요?
+### <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 -   목록 상자는 목록의 항목이 중요하여 강조 표시해야 하거나 전체 목록을 표시하기에 충분한 화면 공간이 있는 경우에 유용할 수 있습니다.
 -   목록 상자는 중요한 선택 시 전체 대안 집합에 대한 사용자의 주의를 끌어야 합니다. 반면, 드롭다운 목록은 처음에 선택한 항목에 대한 사용자의 주의를 끕니다.
@@ -200,7 +195,7 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
     -   항목이 연속적인 숫자 값입니다. 이 경우 [슬라이더](slider.md)를 사용하는 것이 좋습니다.
     -   선택 항목이 앱 흐름에서 두 번째로 중요하거나, 대부분의 상황에서 대부분 사용자에게 기본 옵션이 권장됩니다. 드롭다운 목록을 사용합니다.
 
-### 권장 사항
+### <a name="recommendations"></a>권장 사항
 
 -   목록 상자의 항목에 대한 이상적인 범위는 3~9개입니다.
 -   목록 상자는 항목이 동적으로 달라질 수 있는 경우에도 제대로 작동합니다.
@@ -211,7 +206,7 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 -   브랜드 지침에 다른 글꼴을 사용하도록 규정되어 있지 않은 경우 기본 글꼴을 사용하세요.
 -   명령을 수행하거나 다른 컨트롤을 동적으로 표시하거나 숨기는 데 목록 상자를 사용하지 마세요.
 
-## 선택 모드
+## <a name="selection-mode"></a>선택 모드
 
 선택 모드를 통해 사용자는 단일 항목 또는 여러 항목에 대한 작업을 수행할 수 있습니다. 이 모드는 Ctrl 키 또는 Shift 키를 누른 채 항목을 클릭하거나 갤러리 보기에서 항목의 대상을 롤오버하여 상황에 맞는 메뉴를 통해 호출할 수 있습니다. 선택 모드가 활성화되면 각 목록 항목 옆에 확인란이 표시되고 화면의 위쪽이나 아래쪽에 작업이 표시될 수 있습니다.
 
@@ -233,7 +228,7 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 명령 모음 권장 사항에 대해서는 [명령 모음에 대한 지침](app-bars.md)을 참조하세요.
 
-## 세계화 및 지역화 검사 목록
+## <a name="globalization-and-localization-checklist"></a>세계화 및 지역화 검사 목록
 
 <table>
 <tr>
@@ -248,7 +243,7 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 </table>
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [허브](hub.md)
 - [마스터/세부](master-details.md)
@@ -264,6 +259,6 @@ ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

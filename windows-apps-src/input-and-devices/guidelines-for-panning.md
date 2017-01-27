@@ -6,23 +6,26 @@ ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: d043555d0b467c6b27bc4f0a3b86ccb1404e16a3
 
 ---
 
-# 이동에 대한 지침
+# <a name="guidelines-for-panning"></a>이동에 대한 지침
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br227994)
 
-
-
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 **이동 표시기 및 스크롤 막대**
@@ -31,7 +34,7 @@ ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
 
 -   위치 및 크기 신호를 제공하기 위해 이동 표시기와 스크롤 막대를 표시합니다. 사용자 지정 탐색 기능을 제공하는 경우에는 이동 표시기와 스크롤 막대를 숨깁니다.
 
-    **참고** 표준 스크롤 막대와 달리 이동 표시기는 정보 제공 용도로만 사용됩니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
+    **참고**  표준 스크롤 막대와 달리 이동 표시기는 정보 제공 용도로만 사용됩니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
 
      
 
@@ -73,7 +76,7 @@ ms.openlocfilehash: 5d82af288d389c6eeb5373d1b1f4230fc992a441
 
     ![컨테이너와 같은 방향으로 스크롤되는 포함된 이동 가능 영역을 보여 주는 이미지](images/scrolling-embedded3.png)
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 
 터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. API에서 구분되거나 일부 디바이스별 Windows UI에 필요한 경우가 아니면 두 조작을 모두 이동으로 간주합니다.
@@ -110,7 +113,7 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 -   터치의 이동 표시기
 -   마우스, 터치 패드, 키보드, 스타일러스를 비롯한 다른 입력 장치에 대한 스크롤 막대입니다.
 
-**참고** 이동 표시기는 터치 접촉이 이동 가능 영역 내에 있을 때만 표시됩니다. 마찬가지로, 스크롤 막대도 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 이동 가능 영역 내에 있을 때만 표시됩니다.
+**참고**  이동 표시기는 터치 접촉이 이동 가능 영역 내에 있을 때만 표시됩니다. 마찬가지로, 스크롤 막대도 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 이동 가능 영역 내에 있을 때만 표시됩니다.
 
  
 
@@ -163,7 +166,7 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 이 지침은 앨범(이전 또는 다음 이미지로 이동) 또는 세부 정보 영역 내에서 단일 축 이동을 지원하는 동시에 개별 이미지나 지도 내에서 제약 없는 이동을 지원하는 사진 앨범이나 지도 앱 같은 앱에도 유용합니다. 자유형 이동 이미지나 지도에 해당하는 세부 정보 또는 옵션 영역을 제공하는 앱에서는 이미지나 지도의 제약 없는 이동 영역이 세부 정보 영역으로의 이동을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작하는 것이 좋습니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 * [사용자 지정 사용자 조작](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -195,6 +198,6 @@ Windows 8에서는 다음 세 가지 이동 유형을 지원합니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

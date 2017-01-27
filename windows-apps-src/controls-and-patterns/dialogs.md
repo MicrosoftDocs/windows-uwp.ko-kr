@@ -5,11 +5,11 @@ title: "대화 상자 및 플라이아웃"
 label: Dialogs
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 86f28a0509ead0632c942c6746fea19acac54931
-ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: bc428b42324cd584dfaee1db3c9eb834d30cd69d
 
 ---
-# 대화 상자 및 플라이아웃
+# <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -18,31 +18,11 @@ ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog 클래스</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout 클래스</a></li>
+<li>[ContentDialog 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)</li>
+<li>[Flyout 클래스](https://msdn.microsoft.com/library/windows/apps/dn279496)</li>
 </ul>
-
-</div>
 </div>
 
-
-
-<!--
-<table>
-<tr>
-<th>Dialogs</th><th>Flyouts</th>
-</tr>
-<tr>
-<td>![Example of a full-button dialog](images/controls_dialog_twobutton.png)</td>
-<td>![Example of a flyout](images/flyout-example.png)</td>
-</tr>
-<tr>
-<td>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.  </td>
-<td>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. Flyouts can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
-</td>
-</tr>
-</table>
--->
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -64,7 +44,7 @@ ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 </div>
 </div>
 
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 * 대화 상자 및 플라이아웃을 사용하여 사용자에게 중요한 정보를 알리거나 확인 또는 추가 정보를 요청한 후에 작업을 완료할 수 있습니다. 
 * [도구 설명](tooltips.md) 또는 [상황에 맞는 메뉴](menus.md) 대신에 플라이아웃을 사용하지 마세요. 도구 설명을 사용하여 지정된 시간 후에 숨겨지는 간단한 설명을 표시합니다. 복사 및 붙여넣기 등 UI 요소에 관련된 상황별 작업을 위한 상황에 맞는 메뉴를 사용합니다.  
@@ -78,22 +58,9 @@ ms.openlocfilehash: 6b0b680cd85d6f57c3ca06758ab7dcaef3f7ffe5
 
 
 
-## 대화 상자와 플라이아웃
+## <a name="dialogs-vs-flyouts"></a>대화 상자와 플라이아웃
 
 대화 상자 또는 플라이아웃을 사용하기로 결정했으면 무엇을 사용할 것인지 선택해야 합니다. 
-
-<!--
-Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
-
-A flyout is a light dismiss control, meaning that users can choose from a variety of actions to quickly dismiss it. These interactions are intended to be lightweight and non-blocking. Light dismiss actions include
-
-* Clicking or tap outside the transient UI
-* Pressing the Escape key
-* Pressing the Back button
-* Resizing the app window
-* Changing device orientation
-
--->
 
 대화 상자는 상호 작용을 차단하고 플라이아웃은 그러지 않으므로 질문에 대답하거나 소량의 특정 정보에 중점을 두는 상황에서는 대화 상자를 예약해야 합니다. 반면 무언가에 주의를 집중시키지만 사용자가 무시해도 되는 경우 플라이아웃을 사용할 수 있습니다. 
 
@@ -128,10 +95,16 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 </div>
 </div>
 
+<div class="microsoft-internal-note">
+빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 새로 추가된 `LightDismissOverlayMode` 속성으로 수정할 수 있습니다. 기본적으로 임시 UI는 Xbox에 빠른 해제 오버레이를 그리지만 다른 디바이스 패밀리에는 그리지 않습니다. 그러나 앱에서 오버레이가 항상 **설정** 또는 항상 **해제** 상태가 되도록 선택할 수 있습니다.
 
+```xaml
+<MenuFlyout LightDismissOverlayMode=\"Off\">
+```
+</div>
 
-## 대화 상자
-### 일반 지침
+## <a name="dialogs"></a>대화 상자
+### <a name="general-guidelines"></a>일반 지침
 
 -   대화 상자의 텍스트 첫 줄에서 문제점이나 사용자의 목적을 명확히 식별해야 합니다.
 -   대화 상자 제목은 기본 지침이며 선택 사항입니다.
@@ -144,10 +117,17 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 -   하나 이상의 대화 상자 단추가 표시되어야 합니다.
     -   단추를 사용해야만 대화 상자를 닫을 수 있습니다.
     -   기본 지시 사항이나 내용에 대한 특정 응답을 식별하는 텍스트가 있는 단추를 사용합니다. 예를 들어 "AppName에서 해당 위치에 액세스하도록 하시겠어요?" 뒤에 "허용" 및 "차단" 단추를 제공합니다. 특정 응답은 보다 신속하게 이해할 수 있어서 효율적인 결정을 유도할 수 있습니다.
--   오류 대화 상자에는 오류 메시지가 관련된 정보와 함께 표시됩니다. 오류 대화 상자에서는 “닫기" 또는 유사한 작업을 나타내는 단추만 사용됩니다.
+    - 다음과 같은 순서로 커밋 단추를 표시하세요. 
+        -   확인/[그렇게 함]/예
+        -   [그렇게 하지 않음]/아니요
+        -   취소
+        
+        (여기서 [그렇게 함] 및 [그렇게 하지 않음]은 기본 지침에 대한 구체적인 응답입니다.)
+   
+-   오류 대화 상자에는 오류 메시지와 관련된 정보와 함께 표시됩니다. 오류 대화 상자에서는 “닫기" 또는 유사한 작업을 나타내는 단추만 사용됩니다.
 -   유효성 검사 오류(예: 암호 필드의 오류)와 같이 페이지의 특정 위치에 해당하는 오류의 경우에는 대화 상자를 사용하지 마세요. 대신 앱의 캔버스 자체를 사용하여 인라인 오류를 표시합니다.
 
-### 확인 대화 상자(확인/취소)
+### <a name="confirmation-dialogs-okcancel"></a>확인 대화 상자(확인/취소)
 확인 대화 상자에서는 사용자가 작업을 수행할지 확인할 수 있습니다. 작업을 확정하거나 취소하도록 선택할 수 있습니다.  
 일반적인 확인 대화 상자에는 확정(“확인") 단추와 취소 단추 두 개가 있습니다.  
 
@@ -163,7 +143,7 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 
 > 일부 플랫폼에서는 확정 단추가 왼쪽 대신 오른쪽에 배치됩니다. 왼쪽에 배치하는 것을 권장하는 이유는 무엇일까요?  대부분의 사용자가 오른손잡이고 오른손으로 휴대폰을 휴대한다고 가정하면 확정 단추가 왼쪽에 있을 때 실제로 좀 더 편안하다고 느낍니다. 단추가 사용자의 엄지 손가락을 뻗어 닿기 편한 곳에 있기 때문입니다. 화면의 오른쪽에 있는 단추는 사용자가 엄지 손가락을 약간 불편한 위치로 안쪽으로 당겨야 합니다.
 
-### 대화 상자 만들기
+### <a name="create-a-dialog"></a>대화 상자 만들기
 대화 상자를 만들려면 [ContentDialog 클래스](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)를 사용합니다. 코드나 태그에서 대화 상자를 만들 수 있습니다. 일반적으로 XAML에서 UI 요소를 정의하는 것이 더 쉽지만 간단한 대화 상자의 경우 코드를 사용하는 것이 실제로 더 쉽습니다. 이 예제에서는 WiFi 연결이 없음을 사용자에게 알리는 대화 상자를 만든 다음 [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) 메서드를 사용하여 대화 상자를 표시합니다.
 
 ```csharp
@@ -206,12 +186,16 @@ private async void displayDeleteFileDialog()
 }
 ```
 
-## 플라이아웃
-###  플라이아웃 만들기
+## <a name="flyouts"></a>플라이아웃
+###  <a name="create-a-flyout"></a>플라이아웃 만들기
 
-플라이아웃은 개방형 컨테이너로 임의의 UI와 해당 콘텐츠를 표시할 수 있습니다.  
+플라이아웃은 개방형 컨테이너로 임의의 UI를 내용으로 표시할 수 있습니다. 
 
-플라이아웃은 특정 컨트롤에 연결됩니다. [배치](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) 속성을 사용하여 플라이아웃이 표시되는 위치(위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체)를 지정할 수 있습니다. [전체 배치 모드](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. 표시되는 경우 호출 개체에 고정하고 개체의 기본 상대 위치(위쪽, 왼쪽, 아래쪽 또는 오른쪽)를 지정해야 합니다. 플라이아웃에는 플라이아웃을 확대하고 앱 창 내 가운데로 지정하는 전체 배치 모드도 있습니다. [단추](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)와 같은 일부 컨트롤은 플라이아웃을 연결하는 데 사용할 수 있는 [플라이아웃](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) 속성을 제공합니다. 
+<div class="microsoft-internal-note">
+여기에는 다른 플라이아웃 내에 중첩할 수 있는 플라이아웃 및 상황에 맞는 메뉴가 포함됩니다.
+</div>
+
+플라이아웃은 특정 컨트롤에 연결됩니다. [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) 속성을 사용하여 플라이아웃이 표시되는 위치(위쪽, 왼쪽, 아래쪽, 오른쪽 또는 전체)를 지정할 수 있습니다. [전체 배치 모드](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx)를 선택하면 앱은 플라이아웃을 확대하고 앱 창 내에서 가운데로 지정합니다. 표시되는 경우 호출 개체에 고정하고 개체의 기본 상대 위치(위쪽, 왼쪽, 아래쪽 또는 오른쪽)를 지정해야 합니다. 플라이아웃에는 플라이아웃을 확대하고 앱 창 내 가운데로 지정하는 전체 배치 모드도 있습니다. [단추](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)와 같은 일부 컨트롤은 플라이아웃을 연결하는 데 사용할 수 있는 [플라이아웃](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) 속성을 제공합니다. 
 
 이 예제에서는 단추를 누를 때 일부 텍스트를 표시하는 간단한 플라이아웃을 만듭니다. 
 ````xaml
@@ -295,7 +279,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-### 플라이아웃 스타일 지정
+### <a name="style-a-flyout"></a>플라이아웃 스타일 지정
 플라이아웃의 스타일을 지정하려면 해당 [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx)을 수정합니다. 이 예제에서는 줄 바꿈 단락을 보여 주고, 화면 읽기 프로그램에서 텍스트 블록에 액세스하도록 설정합니다.
 
 ````xaml
@@ -313,11 +297,11 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 </Flyout>
 ````
 
-## 샘플 다운로드
+## <a name="get-the-samples"></a>샘플 다운로드
 *   [XAML UI 기본 사항](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     대화형 형식의 모든 XAML 컨트롤을 참조하세요.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 - [도구 설명](tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](menus.md)
 - [**Flyout 클래스**](https://msdn.microsoft.com/library/windows/apps/dn279496)
@@ -325,6 +309,6 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

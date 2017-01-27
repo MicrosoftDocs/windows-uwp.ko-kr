@@ -1,19 +1,22 @@
 ---
 author: mijacobs
 Description: "이 문서에서는 디자인 관점에서 UWP(유니버설 Windows 플랫폼)의 기능, 장점 및 요구 사항에 대해 설명합니다. 무료로 제공되는 플랫폼 및 원하는 대로 사용할 수 있는 도구에 대해 알아보세요."
-title: "UWP(유니버설 Windows 플랫폼) 앱 디자인 소개"
+title: "UWP(유니버설 Windows 플랫폼) 앱 디자인 소개(Windows 앱)"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: e6169f033a224c6ad9c3ba47ef1fd0a80e137dff
 
 ---
 
-#  UWP 앱 디자인 소개 
+#  <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개 
 
-UWP(유니버설 Windows Platform) 앱은 휴대폰에서 태블릿 또는 PC에 이르기까지 모든 Windows 기반 디바이스에서 실행할 수 있습니다.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+UWP(유니버설 Windows 플랫폼) 앱은 휴대폰에서 태블릿 또는 PC에 이르기까지 모든 Windows 기반 디바이스에서 실행할 수 있습니다.
 
 ![Windows 기반 디바이스](images/1894834-hig-device-primer-01-500.png)
 
@@ -23,19 +26,19 @@ UWP(유니버설 Windows Platform) 앱은 휴대폰에서 태블릿 또는 PC에
 
 이 문서에서는 UI 기능 및 UWP 앱의 이점을 설명하고 첫 UWP 앱 만들기에 대한 몇 가지 고급 디자인 참조 자료를 제공합니다. UWP 앱을 만들 때 얻게 되는 몇 가지 기능부터 살펴보겠습니다. 
 
-## UWP 앱 기능
+## <a name="uwp-app-features"></a>UWP 앱 기능
 
-### 유효 픽셀 및 크기 조정
+### <a name="effective-pixels-and-scaling"></a>유효 픽셀 및 크기 조정
 
 UWP 앱은 모든 디바이스에서 읽을 수 있도록 컨트롤, 글꼴 및 다른 UI 요소의 크기를 조정합니다.
 
-디바이스에서 앱이 실행될 때 시스템은 화면에 UI 요소가 표시되는 방식을 정규화하는 알고리즘을 사용합니다. 이 크기 조정 알고리즘은 가시거리 및 화면 밀도(인치당 픽셀)를 고려하여 물리적 크기가 아닌 인식되는 크기를 최적화합니다. 크기 조정 알고리즘에 따르면 10피트 떨어져 있는 Surface Hub의 24픽셀 글꼴은 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴과 마찬가지로 읽힙니다.
+디바이스에서 앱이 실행될 때 시스템은 화면에 UI 요소가 표시되는 방식을 정규화하는 알고리즘을 사용합니다. 이 크기 조정 알고리즘은 가시거리 및 화면 밀도(인치당 픽셀)를 고려하여 물리적 크기가 아닌 인식되는 크기를 최적화합니다. 크기 조정 알고리즘에 따르면 3m 떨어져 있는 Surface Hub의 24픽셀 글꼴은 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴과 마찬가지로 읽힙니다.
 
 ![다양한 디바이스의 가시거리](images/1910808-hig-uap-toolkit-03.png)
 
 크기 조정 시스템의 작동 방식 때문에 UWP 앱을 디자인할 때 실제 물리적 픽셀이 아닌 *유효 픽셀*로 디자인하게 됩니다. 그렇다면 이러한 특성이 앱을 디자인하는 방식에는 어떤 영향을 미치나요?
 
--   디자인할 때는 픽셀 밀도 및 실제 화면 해상도를 무시해도 됩니다. 대신, 크기 클래스에 대한 유효 해상도(유효 픽셀로 나타낸 해상도)를 고려해서 디자인합니다(크기 클래스는 [이 문서 뒷부분에서](#sizeclasses) 정의함).
+-   디자인할 때는 픽셀 밀도 및 실제 화면 해상도를 무시해도 됩니다. 대신, 크기 클래스에 대한 유효 해상도(유효 픽셀로 나타낸 해상도)를 고려해서 디자인합니다(자세한 내용은 [화면 크기 및 중단점 문서](screen-sizes-and-breakpoints-for-responsive-design.md) 참조).
 
 -   시스템은 UI 크기를 확장할 때 4의 배수씩 확장합니다. 명확하게 나타내기 위해 디자인을 4x4 픽셀 그리드에 맞추고, UI 요소의 여백, 크기 및 위치를 지정하고, 텍스트의 위치(크기는 지정 안 함, 텍스트는 어떤 크기여도 상관없음)를 4 유효 픽셀의 배수로 설정합니다.
 
@@ -47,14 +50,15 @@ UWP 앱은 모든 디바이스에서 읽을 수 있도록 컨트롤, 글꼴 및 
 
 ![4x4 픽셀 그리드로 정렬되지 않은 디자인 요소](images/rsp-design/offthegridillustration.png)
 
-**팁** 이미지 편집 프로그램에서 화면 모형을 만드는 경우 DPI를 72로 설정하고 이미지 크기를 목표로 하는 크기 클래스의 유효 해상도로 설정하세요. 크기 클래스 및 유효 해상도 목록은 이 문서의 [특정 크기 클래스에 대한 권장 사항](#sizeclasses)을 참조하세요.
+> [!TIP]
+> 이미지 편집 프로그램에서 화면 모형을 만드는 경우 DPI를 72로 설정하고 이미지 크기를 목표로 하는 크기 클래스의 유효 해상도로 설정하세요. 크기 클래스 및 유효 해상도 목록은 이 문서의 [특정 크기 클래스에 대한 권장 사항](#sizeclasses)을 참조하세요.
 
 
-### 범용 입력 및 스마트 조작
+### <a name="universal-input-and-smart-interactions"></a>범용 입력 및 스마트 조작
 
 UWP의 다른 기본 제공 기능은 스마트 조작을 통해 활성화되는 유니버설 입력입니다. 특정 입력 모드 및 디바이스에 대한 앱을 디자인할 수 있지만 그럴 필요는 없습니다. 유니버설 Windows 앱이 기본적으로 스마트 조작을 사용하기 때문입니다. 즉, 클릭이 실제 마우스 클릭인지 또는 손가락으로 탭한 것인지를 알거나 정의하지 않고 클릭 조작을 디자인할 수 있습니다.
 
-### 유니버설 컨트롤 및 스타일
+### <a name="universal-controls-and-styles"></a>유니버설 컨트롤 및 스타일
 
 
 UWP 플랫폼은 여러 디바이스 패밀리를 위한 앱을 더욱 쉽게 디자인할 수 있도록 하는 몇 가지 유용한 기본 구성 요소도 제공합니다.
@@ -85,7 +89,7 @@ UWP 플랫폼은 여러 디바이스 패밀리를 위한 앱을 더욱 쉽게 �
 
 UWP 앱의 구성 요소를 설명했으므로 구성 요소를 배치하여 UI를 만드는 방법을 살펴보겠습니다. 
     
-## 일반적인 UWP 앱의 구조
+## <a name="the-anatomy-of-a-typical-uwp-app"></a>일반적인 UWP 앱의 구조
 
 
 최신 사용자 인터페이스는 궁극적으로 사용하는 장치 화면의 개별 픽셀로 만들어진 텍스트, 모양, 색 및 애니메이션으로 구성된 복잡한 것입니다. 사용자 인터페이스 디자인을 시작할 때 순전히 가능한 선택의 수는 굉장히 많습니다.
@@ -94,7 +98,7 @@ UWP 앱의 구성 요소를 설명했으므로 구성 요소를 배치하여 UI�
 
 
 
-<table>
+<table class="uwpd-noborder" >
 <colgroup>
 <col width="50%" />
 <col width="50%" />
@@ -122,7 +126,7 @@ UWP 앱의 구성 요소를 설명했으므로 구성 요소를 배치하여 UI�
 
 앱에 알맞은 UI 요소를 결정할 때에는 앱에서 실행되는 디바이스 및 화면 크기를 고려해야 할 수 있습니다.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>특정 디바이스 및 화면 크기에 맞게 앱 조정
+## <a name="tailoring-your-app-for-specific-devices-and-screen-sizes"></a>특정 디바이스 및 화면 크기에 맞게 앱 조정
 
 
 UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에서 디자인 요소를 읽고 사용할 수 있습니다. 그렇다면 특정 디바이스 패밀리에 대한 앱의 UI를 사용자 지정하려는 이유는 무엇일까요?
@@ -146,12 +150,12 @@ UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에�
 
     범용 컨트롤 라이브러리는 모든 입력 유형(터치, 펜, 키보드, 마우스)에서 작동하지만 UI 요소를 다시 정렬하여 특정 입력 유형에 맞게 최적화할 수 있습니다. 예를 들어 화면 아래쪽에 탐색 요소를 배치할 경우 휴대폰 사용자는 더 쉽게 액세스할 수 있지만 대부분의 PC 사용자는 화면의 위쪽에 탐색 요소가 있을 것으로 기대합니다.
 
-## <span id="Responsive_design_techniques"></span><span id="responsive_design_techniques"></span><span id="RESPONSIVE_DESIGN_TECHNIQUES"></span>반응형 디자인 기술
+## <a name="responsive-design-techniques"></a>반응형 디자인 기술
 
 
 특정 화면 너비에 맞게 앱의 UI를 최적화하는 경우 반응형 디자인을 만든다고 할 수 있습니다. 다음은 앱의 UI를 사용자 지정하는 데 사용할 수 있는 6가지 반응형 디자인 기술입니다.
 
-### <span id="Reposition"></span><span id="reposition"></span><span id="REPOSITION"></span>위치 변경
+### <a name="reposition"></a>위치 변경
 
 앱 UI 요소의 위치와 배치를 변경하여 각 장치 공간을 최대한 활용할 수 있습니다. 이 예제에서는 한 번에 하나의 전체 프레임만 표시되므로 휴대폰 또는 패블릿의 세로 보기에는 스크롤 UI가 필요합니다. 앱이 세로 방향이든, 가로 방향이든, 두 개의 전체 화면 프레임을 허용하는 장치로 변환되면 프레임 B가 전용 공간을 차지할 수 있습니다. 위치 지정을 위해 그리드를 사용하는 경우 동일한 그리드에 UI 요소를 재배치할 수 있습니다.
 
@@ -161,13 +165,13 @@ UWP 앱은 유효 픽셀을 사용하여 모든 Windows 기반 디바이스에�
 
 ![더 큰 화면에서 콘텐츠의 위치를 변경하는 앱에 대한 디자인](images/rsp-design/rspd-reposition-type1.png)
 
-### <span id="Resize"></span><span id="resize"></span><span id="RESIZE"></span>크기 조정
+### <a name="resize"></a>크기 조정
 
 UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 수 있습니다. 여기에 나온 예제와 같이 이러한 기능을 사용하여 단순히 콘텐츠 프레임을 늘려 더 넓은 화면에서 읽을 수 있습니다.
 
 ![디자인 요소 크기 조정](images/rsp-design/rspd-resize.png)
 
-### <span id="Reflow"></span><span id="reflow"></span><span id="REFLOW"></span>재배치
+### <a name="reflow"></a>재배치
 
 장치 및 방향에 따라 UI 요소의 흐름을 변경하여 콘텐츠를 최적 상태로 표시할 수 있습니다. 예를 들어 더 큰 화면으로 전환할 때는 그에 맞게 더 큰 컨테이너로 전환하고, 열을 추가하고, 다른 방식으로 목록 항목을 생성할 수 있습니다.
 
@@ -175,7 +179,7 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 ![디자인 요소 재배치](images/rsp-design/rspd-reflow.png)
 
-### <span id="_____________Reveal___________"></span><span id="_____________reveal___________"></span><span id="_____________REVEAL___________"></span> 표시
+###  <a name="reveal"></a>표시
 
 화면 공간에 따라서나 장치가 추가 기능, 특정 상황 또는 기본 설정 화면 방향을 지원하는 경우 UI를 표시할 수 있습니다.
 
@@ -191,13 +195,13 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 -   앱에서는 열을 나누어 좀 더 자세한 내용을 표시할 수 있습니다.
 -   앱에서는 세로로 접히고 가로로 펼쳐지는 항목을 사용할 수 있습니다. 휴대폰 또는 패블릿에서 더 큰 장치로 전환할 경우 누적된 목록 항목이 바뀌면서 목록 항목의 행과 메타데이터 열이 표시될 수 있습니다.
 
-### <span id="Replace"></span><span id="replace"></span><span id="REPLACE"></span>바꾸기
+### <a name="replace"></a>바꾸기
 
 이 기술은 특정 장치 크기 등급 또는 방향에 맞게 사용자 인터페이스를 전환할 수 있도록 합니다. 이 예제에서 탐색 창과 소형의 임시 UI는 좀 더 작은 장치에서 잘 작동하지만 좀 더 큰 장치에서는 탭을 사용하는 것이 좋습니다.
 
 ![디자인 요소 바꾸기](images/rsp-design/rspd-replace.png)
 
-### <span id="_____________Re-architect___________"></span><span id="_____________re-architect___________"></span><span id="_____________RE-ARCHITECT___________"></span> 다시 설계
+###  <a name="re-architect"></a>다시 설계
 
 특정 장치에 보다 적합하도록 앱 아키텍처를 축소하거나 분기할 수 있습니다. 이 예제에서는 왼쪽 장치에서 오른쪽 장치로 이동하면서 페이지가 어떻게 연결되는지 보여 줍니다.
 
@@ -208,7 +212,7 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 ![반응형 디자인 다시 설계 기술을 사용하는 디자인의 예](images/rsp-design/rspd-rearchitect-type1.png)
 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱이란 무엇인가요?](https://msdn.microsoft.com/library/windows/apps/dn726767.aspx)
 
@@ -220,6 +224,6 @@ UI 요소의 여백과 크기를 조정하여 프레임 크기를 최적화할 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

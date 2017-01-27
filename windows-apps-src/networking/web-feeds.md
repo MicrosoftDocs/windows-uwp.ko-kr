@@ -4,12 +4,12 @@ description: "Windows.Web.Syndication 네임스페이스의 기능을 사용하�
 title: "RSS/Atom 피드"
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
+ms.sourcegitcommit: a30b58737befaae10a1dbb30416f338d8eb1cbb1
+ms.openlocfilehash: 623c11eba097a072b456738b84750eb4b2d888bb
 
 ---
 
-# RSS/Atom 피드
+# <a name="rssatom-feeds"></a>RSS/Atom 피드
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -21,11 +21,11 @@ ms.openlocfilehash: b20eb8a241d3cb7800904c26331ac39da93f4d44
 
 [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 기능을 사용하여 RSS 및 Atom 표준에 따라 생성된 신디케이티드 피드로 인기 있는 최신 웹 콘텐츠를 검색하거나 만듭니다.
 
-## 피드란?
+## <a name="what-is-a-feed"></a>피드란?
 
 웹 피드는 텍스트, 링크 및 이미지로 구성된 임의 개수의 개별 항목이 포함되어 있는 문서입니다. 피드의 업데이트는 최신 콘텐츠를 웹 전체에 홍보하는 데 사용되는 새 항목 형식으로 표시됩니다. 콘텐츠 소비자는 피드 뷰어 앱을 사용하여 여러 개별 콘텐츠 만든 이의 피드를 집계하고 모니터링하여 최신 콘텐츠에 빠르고 편리하게 액세스할 수 있습니다.
 
-## 지원되는 피드 형식 표준
+## <a name="which-feed-format-standards-are-supported"></a>지원되는 피드 형식 표준
 
 UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 표준과 0.3에서 1.0까지의 Atom 표준에 대한 피드 검색을 지원합니다. [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 클래스는 RSS 및 Atom 요소를 모두 나타낼 수 있는 피드 및 피드 항목을 정의할 수 있습니다.
 
@@ -33,7 +33,7 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 신디케이티드 콘텐츠 게시물의 경우 Atom 게시물 프로토콜의 UWP 구현([**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609))은 Atom 및 Atom 게시물 표준에 따라서만 피드 콘텐츠 작업을 지원합니다.
 
-## 네트워크 격리와 함께 신디케이티드 콘텐츠 사용
+## <a name="using-syndicated-content-with-network-isolation"></a>네트워크 격리와 함께 신디케이티드 콘텐츠 사용
 
 개발자는 UWP의 네트워크 격리 기능을 사용하여 UWP 앱의 네트워크 액세스를 제어하고 제한할 수 있습니다. 일부 앱은 네트워크에 대한 액세스 권한이 필요하지 않을 수 있습니다. 그러나 네트워크에 대한 액세스 권한이 필요한 앱의 경우 UWP에서 적절한 접근 권한 값을 선택하여 사용할 수 있는 다양한 수준의 네트워크 액세스 권한을 제공합니다.
 
@@ -45,9 +45,9 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 네트워크 격리 및 네트워킹 기능에 대한 자세한 내용은 [네트워킹기본 사항](networking-basics.md) 항목의 "기능" 섹션을 참조하세요.
 
-## 웹 피드에 액세스하는 방법
+## <a name="how-to-access-a-web-feed"></a>웹 피드에 액세스하는 방법
 
-이 섹션에서는 C# 또는 Javascript로 작성한 UWP 앱에서 [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 클래스를 사용하여 웹 피드를 검색하고 표시하는 방법을 보여 줍니다.
+이 섹션에서는 C# 또는 JavaScript로 작성한 UWP 앱에서 [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 클래스를 사용하여 웹 피드를 검색하고 표시하는 방법을 보여 줍니다.
 
 **필수 조건**
 
@@ -63,13 +63,10 @@ UWP 앱에서 네트워크에 대비하려면 프로젝트 **Package.appxmanifes
 ```csharp
 Windows.Web.Syndication.SyndicationClient client = new Windows.Web.Syndication.SyndicationClient();
 Windows.Web.Syndication.SyndicationFeed feed;
-
 // The URI is validated by catching exceptions thrown by the Uri constructor.
 Uri uri = null;
-
 // Use your own uriString for the feed you are connecting to.
 string uriString = "";
-
 try
 {
     uri = new Uri(uriString);
@@ -82,9 +79,7 @@ catch (Exception ex)
 ```javascript
 var currentFeed = null;
 var currentItemIndex = 0;
-        
 var client = new Windows.Web.Syndication.SyndicationClient();
-
 // The URI is validated by catching exceptions thrown by the Uri constructor.
 var uri = null;
 try {
@@ -101,7 +96,7 @@ try {
 
 따라서 대부분의 비동기 네트워크 메서드를 호출할 때 예외를 처리하는 코드를 작성해야 합니다. 예외 처리기는 예외의 원인에 대해 보다 자세한 정보를 검색하므로 오류를 더 잘 이해하고 적절한 의사 결정을 내릴 수 있습니다.
 
-HTTP 서버에 연결할 수 없거나 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017) 개체가 유효한 AtomPub 또는 RSS 피드를 가리키지 않는 경우 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) 메서드에서 예외가 발생합니다. Javascript 샘플 코드는 **onError** 함수를 사용하여 예외를 catch하고, 오류가 발생할 경우 예외에 대한 자세한 정보를 출력합니다.
+HTTP 서버에 연결할 수 없거나 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br243460) 개체가 유효한 AtomPub 또는 RSS 피드를 가리키지 않는 경우 [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br226017) 메서드에서 예외가 발생합니다. JavaScript 샘플 코드는 **onError** 함수를 사용하여 예외를 catch하고, 오류가 발생할 경우 예외에 대한 자세한 정보를 출력합니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -111,12 +106,9 @@ try
     // others will reject the request or return a different response if this header is missing.
     // Use the setRequestHeader() method to add custom headers.
     client.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-
     feed = await client.RetrieveFeedAsync(uri);
-
     // Retrieve the title of the feed and store it in a string.
     string title = feed.Title.Text;
-
     // Iterate through each feed item.
     foreach (Windows.Web.Syndication.SyndicationItem item in feed.Items)
     {
@@ -131,7 +123,6 @@ catch (Exception ex)
 ```javascript
 function onError(err) {
     WinJS.log && WinJS.log(err, "sample", "error");
-
     // Match error number with a ErrorStatus value.
     // Use Windows.Web.WebErrorStatus.getStatus() to retrieve HTTP error status codes.
     var errorStatus = Windows.Web.Syndication.SyndicationError.getStatus(err.number);
@@ -139,31 +130,24 @@ function onError(err) {
         displayLog("An invalid XML exception was thrown. Please make sure to use a URI that points to a RSS or Atom feed.");
     }
 }
-
 // Retrieve and display feed at given feed address.
 function retreiveFeed(uri) {
-
     // Although most HTTP servers do not require User-Agent header, 
     // others will reject the request or return a different response if this header is missing.
     // Use the setRequestHeader() method to add custom headers.
     client.setRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-
     client.retrieveFeedAsync(uri).done(function (feed) {
         currentFeed = feed;
-
         WinJS.log && WinJS.log("Feed download complete.", "sample", "status");
-
         var title = "(no title)";
         if (currentFeed.title) {
             title = currentFeed.title.text;
         }
         document.getElementById("CurrentFeedTitle").innerText = title;
-
         currentItemIndex = 0;
         if (currentFeed.items.size > 0) {
             displayCurrentItem();
         }
-
         // List the items.
         displayLog("Items: " + currentFeed.items.size);
      }, onError);
@@ -180,32 +164,26 @@ private void displayCurrentItem(Windows.Web.Syndication.SyndicationItem item)
     string itemLink = item.Links == null ? "No link" : item.Links.FirstOrDefault().ToString();
     string itemContent = item.Content == null ? "No content" : item.Content.Text;
     //displayCurrentItem is continued below.
-
 ```
 ```javascript
 function displayCurrentItem() {
     var item = currentFeed.items[currentItemIndex];
-
     // Display item number.
     document.getElementById("Index").innerText = (currentItemIndex + 1) + " of " + currentFeed.items.size;
-
     // Display title.
     var title = "(no title)";
     if (item.title) {
         title = item.title.text;
     }
     document.getElementById("ItemTitle").innerText = title;
-
     // Display the main link.
     var link = "";
     if (item.links.size > 0) {
         link = item.links[0].uri.absoluteUri;
     }
-
     var link = document.getElementById("Link");
     link.innerText = link;
     link.href = link;
-
     // Display the body as HTML.
     var content = "(no content)";
     if (item.content) {
@@ -224,16 +202,13 @@ function displayCurrentItem() {
 ```csharp
     //displayCurrentItem continued.
     string extensions = "";
-
     foreach (Windows.Web.Syndication.SyndicationNode node in item.ElementExtensions)
     {
         string nodeName = node.NodeName;
         string nodeNamespace = node.NodeNamespace;
         string nodeValue = node.NodeValue;
-
         extensions += nodeName + "\n" + nodeNamespace + "\n" + nodeValue + "\n";
     }
-
     this.listView.Items.Add(itemTitle + "\n" + itemLink + "\n" + itemContent + "\n" + extensions);
 }
 ```
@@ -248,19 +223,16 @@ function displayCurrentItem() {
         };
         bindableNodes.push(bindableNode);
     }
-
     var dataList = new WinJS.Binding.List(bindableNodes);
     var listView = document.getElementById("extensionsListView").winControl;
     WinJS.UI.setOptions(listView, {
         itemDataSource: dataList.dataSource
-
     });
 }
 ```
 
 
 
-
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

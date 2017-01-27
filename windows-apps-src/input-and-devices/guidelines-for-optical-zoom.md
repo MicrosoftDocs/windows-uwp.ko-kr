@@ -6,20 +6,24 @@ ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 2776fe18d20286a3beaf8ba280976316e40119dd
 
 ---
 
-# 광학 줌 및 크기 조정
+# <a name="optical-zoom-and-resizing"></a>광학 줌 및 크기 조정
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 이 문서에서는 Windows 확대/축소 및 크기 조정 요소에 대해 설명하고, 앱에서 이러한 조작 메커니즘 사용을 위한 사용자 환경 지침을 제공합니다.
 
-**중요 API**
-
--   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
--   [**Input(XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</li>
+<li>[**Input(XAML)**](https://msdn.microsoft.com/library/windows/apps/br227994)</li>
+</ul>
+</div>
 
 광학 줌을 사용하면 콘텐츠 영역 내에서 콘텐츠 보기를 확대할 수 있지만(콘텐츠 영역 자체에 대해 수행) 크기 조정을 사용하면 콘텐츠 영역 보기는 바뀌지 않으면서 콘텐츠 영역 내에서 하나 이상 개체의 상대 크기를 변경할 수 있습니다(콘텐츠 영역 내 개체에 대해 수행).
 
@@ -40,7 +44,7 @@ ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
 
  
 
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 크기 조정 및 광학 줌을 지원하는 앱에 대해 다음 지침을 사용하세요.
@@ -69,7 +73,7 @@ ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
 
      
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 **샘플**
@@ -97,6 +101,6 @@ ms.openlocfilehash: 54c0dc3ffa9fd8716a8f147f408c1c8de5775783
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

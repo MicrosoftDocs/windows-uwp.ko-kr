@@ -7,21 +7,30 @@ Search.Product: eADQiWindows 10XVcnh
 title: "입력 범위를 사용하여 터치 키보드 변경"
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+keywords: "키보드, 손쉬운 사용, 탐색, 포커스, 텍스트, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: caaa6228f2d5b2bb6566ccb285d90a396a1caf01
 
 ---
 
-# 입력 범위를 사용하여 터치 키보드 변경
+# <a name="use-input-scope-to-change-the-touch-keyboard"></a>입력 범위를 사용하여 터치 키보드 변경
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다.
 
-**중요 API**
-
--   [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)
--   [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)
-
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702632)</li>
+<li>[**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028)</li>
+</ul>
+</div>
 
 
 터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) 또는 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 *입력 범위*를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
@@ -32,11 +41,11 @@ ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
 - 이 정보는 SIP에만 적용됩니다. Windows 접근성 옵션에서 제공되는 화상 키보드 또는 하드웨어 키보드에는 적용되지 않습니다.
 - 입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
-## 텍스트 컨트롤의 입력 범위 변경
+## <a name="changing-the-input-scope-of-a-text-control"></a>텍스트 컨트롤의 입력 범위 변경
 
 앱에서 사용할 수 있는 입력 범위는 [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028) 열거의 멤버입니다. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) 또는 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548)의 **InputScope** 속성을 이러한 값 중 하나로 설정할 수 있습니다.
 
-> **중요**  [**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)에 대한 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) 속성은 **Password** 및 **NumericPin** 값만 지원합니다. 다른 값이 무시됩니다.
+> **중요**&nbsp;&nbsp;[**PasswordBox**](https://msdn.microsoft.com/library/windows/apps/br227519)에 대한 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/dn996570) 속성은 **Password** 및 **NumericPin** 값만 지원합니다. 다른 값이 무시됩니다.
 
 여기서는 여러 텍스트 상자의 예상 데이터와 일치하도록 각 텍스트 상자의 입력 범위를 변경할 수 있습니다.
 
@@ -76,13 +85,13 @@ ms.openlocfilehash: 692905c1c6d9b3d706baeadc480041c77163c272
     InputScopeName scopeName = new InputScopeName();
     ```
 
-4.  [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027) 개체의 [**NameValue**](https://msdn.microsoft.com/library/windows/apps/hh702032) 속성을 [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028) 열거형 값으로 설정합니다.
+4.  [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702032) 개체의 [**NameValue**](https://msdn.microsoft.com/library/windows/apps/hh702027) 속성을 [**InputScopeNameValue**](https://msdn.microsoft.com/library/windows/apps/hh702028) 열거형 값으로 설정합니다.
 
     ```csharp
     scopeName.NameValue = InputScopeNameValue.TelephoneNumber;
     ```
 
-5.  [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027) 개체를 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702025) 개체의 [**Names**](https://msdn.microsoft.com/library/windows/apps/hh702034) 컬렉션에 추가합니다.
+5.  [**InputScopeName**](https://msdn.microsoft.com/library/windows/apps/hh702027) 개체를 [**InputScope**](https://msdn.microsoft.com/library/windows/apps/hh702034) 개체의 [**Names**](https://msdn.microsoft.com/library/windows/apps/hh702025) 컬렉션에 추가합니다.
 
     ```csharp
     scope.Names.Add(scopeName);
@@ -113,7 +122,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 };
 ```
 
-## 텍스트 자동 완성, 맞춤법 검사 및 자동 고침
+## <a name="text-prediction-spell-checking-and-auto-correction"></a>텍스트 자동 완성, 맞춤법 검사 및 자동 고침
 
 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) 및 [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/br227548) 컨트롤은 SIP의 동작에 영향을 주는 몇 가지 속성을 포함합니다. 사용자에게 최상의 환경을 제공하기 위해서는 이러한 속성이 터치를 사용한 텍스트 입력에 어떤 영향을 주는지 이해하는 것이 중요합니다.
 
@@ -125,19 +134,19 @@ phoneNumberTextBox.InputScope = new InputScope()
 
     입력 범위가 **Default**가 아니면 [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690) 속성이 **true**이더라도 텍스트 자동 완성이 비활성화될 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 있는 표를 참조하세요.
 
-    **참고**  모바일 디바이스 패밀리에서 텍스트 자동 완성 및 맞춤법 수정 사항이 SIP의 키보드 위 영역에 표시됩니다. [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690)가 **false**로 설정되면, [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)가 **true**이더라도 이 SIP 부분이 숨겨지고 자동 수정이 비활성화됩니다.
+    **참고**&nbsp;&nbsp;모바일 디바이스 패밀리에서 텍스트 자동 완성 및 맞춤법 수정 사항이 SIP의 키보드 위 영역에 표시됩니다. [**IsTextPredictionEnabled**](https://msdn.microsoft.com/library/windows/apps/br209690)가 **false**로 설정되면, [**IsSpellCheckEnabled**](https://msdn.microsoft.com/library/windows/apps/br209688)가 **true**이더라도 이 SIP 부분이 숨겨지고 자동 수정이 비활성화됩니다.
 
 -   [**PreventKeyboardDisplayOnProgrammaticFocus**](https://msdn.microsoft.com/library/windows/apps/dn299273) 이 속성을 **true**로 설정하면 텍스트 컨트롤에서 포커스가 프로그래밍 방식으로 설정될 경우 SIP가 표시되지 않도록 할 수 있습니다. 대신 사용자가 컨트롤을 사용할 때만 키보드가 표시됩니다.
 
-## Windows 및 Windows Phone의 터치 키보드 인덱스
+## <a name="touch-keyboard-index-for-windows-and-windows-phone"></a>Windows 및 Windows Phone의 터치 키보드 인덱스
 
 이 표는 일반적인 입력 범위 값에 대한 데스크톱 및 모바일 디바이스의 SIP(Soft Input Panel) 레이아웃을 보여 줍니다. **IsSpellCheckEnabled** 및 **IsTextPredictionEnabled** 속성으로 활성화되는 기능에 입력 범위가 미치는 효과가 각 입력 범위에 대해 나열되어 있습니다. 이 목록은 사용 가능한 입력 범위에 대한 전체 목록이 아닙니다.
 
-> **참고**  특히 모바일 앱의 경우 모바일 디바이스의 SIP의 크기가 작기 때문에 올바른 입력 범위를 설정하는 것이 중요합니다. 여기에 표시된 것처럼 Windows Phone은 다양한 종류의 특수한 키보드 레이아웃을 제공합니다. Windows 스토어 앱에서 입력 범위를 설정할 필요가 없는 텍스트 필드는 Windows Phone 스토어 앱에서 이를 설정할 수 있는 이점이 있습니다.
+> **참고**&nbsp;&nbsp;특히 모바일 앱의 경우 모바일 디바이스의 SIP의 크기가 작기 때문에 올바른 입력 범위를 설정하는 것이 중요합니다. 여기에 표시된 것처럼 Windows Phone은 다양한 종류의 특수한 키보드 레이아웃을 제공합니다. Windows 스토어 앱에서 입력 범위를 설정할 필요가 없는 텍스트 필드는 Windows Phone 스토어 앱에서 이를 설정할 수 있는 이점이 있습니다.
 
-> **팁**  대부분의 터치 키보드는 영문자 레이아웃과 숫자 및 기호 레이아웃으로 전환할 수 있습니다. Windows에서는 **&amp;123** 키로 전환합니다. Windows Phone에서 **&amp;123** 키를 눌러 숫자 및 기호 레이아웃을 변경하고 **abcd** 키를 눌러 영문자 레이아웃을 변경합니다.
+> **팁**&nbsp;&nbsp;대부분의 터치 키보드는 영문자 레이아웃과 숫자 및 기호 레이아웃으로 전환할 수 있습니다. Windows에서는 **&amp;123** 키로 전환합니다. Windows Phone에서 **&amp;123** 키를 눌러 숫자 및 기호 레이아웃을 변경하고 **abcd** 키를 눌러 영문자 레이아웃을 변경합니다.
 
-### 기본값
+### <a name="default"></a>기본값
 
 `<TextBox InputScope="Default"/>`
 
@@ -154,7 +163,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 -   자동 대문자화: **IsSpellCheckEnabled** = **true**의 경우 활성화, **IsSpellCheckEnabled** = **false**의 경우 비활성화
 -   텍스트 자동 완성: **IsTextPredictionEnabled** = **true**의 경우 활성화, **IsTextPredictionEnabled** = **false**의 경우 비활성화
 
-### CurrencyAmountAndSymbol
+### <a name="currencyamountandsymbol"></a>CurrencyAmountAndSymbol
 
 `<TextBox InputScope="CurrencyAmountAndSymbol"/>`
 
@@ -165,7 +174,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![통화용 Windows 터치 키보드](images/input-scopes/kbdpccurrencyamountandsymbol.png)<br>추가 기호를 표시하기 위한 페이지 왼쪽/오른쪽 키도 포함됩니다.| ![통화용 Windows Phone 터치 키보드](images/input-scopes/kbdwpcurrencyamountandsymbol.png) |
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul>**Number** 및 **TelephoneNumber**와 동일합니다. | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li>| 
 
-### URL
+### <a name="url"></a>URL
 
 `<TextBox InputScope="Url"/>`
 
@@ -176,7 +185,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![URL용 Windows 터치 키보드](images/input-scopes/kbdpcurl.png)<br>**:**, **-**, 및 **/** 키도 포함됩니다.| ![URL용 Windows Phone 터치 키보드](images/input-scopes/kbdwpurl.png)<br>마침표 키를 길게 누르면 추가 옵션(- + &quot; / &amp; : ,)이 표시됩니다. |
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 대문자화: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>텍스트 자동 완성: 기본적으로 해제되어 있으며, 활성화할 수 있음</li></ul> |
 
-### EmailSmtpAddress
+### <a name="emailsmtpaddress"></a>EmailSmtpAddress
 
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
@@ -187,7 +196,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![메일 주소용 Windows 터치 키보드](images/input-scopes/kbdpcemailsmtpaddress.png)<br>**_** 및 **-** 키도 포함됩니다.| ![메일 주소용 Windows Phone 터치 키보드](images/input-scopes/kbdwpemailsmtpaddress.png)<br>마침표 키를 길게 누르면 추가 옵션( - _ , ; )이 표시됩니다. |
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 대문자화: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>텍스트 자동 완성: 기본적으로 해제되어 있으며, 활성화할 수 있음</li></ul> |
 
-### 숫자
+### <a name="number"></a>숫자
 
 `<TextBox InputScope="Number"/>`
 
@@ -196,7 +205,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![숫자용 Windows 터치 키보드](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![숫자용 Windows Phone 터치 키보드](images/input-scopes/kbdwpnumber.png)<br>키보드에 숫자 및 소수점이 포함됩니다. 마침표 키를 길게 누르면 추가 옵션( , - )이 표시됩니다. |
 |**CurrencyAmountAndSymbol** 및 **TelephoneNumber**와 동일합니다. | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 항상 비활성화됨</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> |
 
-### TelephoneNumber
+### <a name="telephonenumber"></a>TelephoneNumber
 
 `<TextBox InputScope="TelephoneNumber"/>`
 
@@ -205,7 +214,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![전화 번호용 Windows 터치 키보드](images/input-scopes/kbdpccurrencyamountandsymbol.png)| ![전화 번호용 Windows Phone 터치 키보드](images/input-scopes/kbdwptelephonenumber.png)<br>키보드가 전화 키패드와 비슷합니다. 마침표 키를 길게 누르면 추가 옵션( , ( ) X . ). +를 입력하려면 0 키를 길게 누릅니다. |
 |**CurrencyAmountAndSymbol** 및 **TelephoneNumber**와 동일합니다. | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 항상 비활성화됨</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> |
 
-### 검색
+### <a name="search"></a>검색
 
 `<TextBox InputScope="Search"/>`
 
@@ -216,7 +225,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![검색용 Windows 터치 키보드](images/input-scopes/kbdpcsearch.png)| ![검색용 Windows Phone 터치 키보드](images/input-scopes/kbdwpsearch.png)|
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li></ul> |
 
-### SearchIncremental
+### <a name="searchincremental"></a>SearchIncremental
 
 `<TextBox InputScope="SearchIncremental"/>`
 
@@ -225,7 +234,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![기본 Windows 터치 키보드](images/input-scopes/kbdpcdefault.png)<br>**Default**와 동일한 레이아웃입니다.| ![기본 Windows Phone 터치 키보드](images/input-scopes/kbdwpdefault.png)|
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | **Default.**과(와) 동일합니다. |
 
-### 수식
+### <a name="formula"></a>수식
 
 `<TextBox InputScope="Formula"/>`
 
@@ -236,7 +245,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![수식용 Windows 터치 키보드](images/input-scopes/kbdpcformula.png)<br>**%**, **$**, 및 **+** 키도 포함됩니다.| ![수식용 Windows Phone 터치 키보드](images/input-scopes/kbdwpformula.png)<br>마침표 키를 길게 누르면 추가 옵션( - ! ? , ). **=** 키를 길게 누르면 추가 옵션(( ) : &lt;&gt;)이 표시됩니다. |
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li></ul> |
 
-### 채팅
+### <a name="chat"></a>채팅
 
 `<TextBox InputScope="Chat"/>`
 
@@ -245,7 +254,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 | ![기본 Windows 터치 키보드](images/input-scopes/kbdpcdefault.png)<br>**Default**와 동일한 레이아웃입니다.| ![기본 Windows Phone 터치 키보드](images/input-scopes/kbdwpdefault.png)<br>**Default**와 동일한 레이아웃입니다.|
 |기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 해제되어 있으며, 활성화할 수 있음</li><li>자동 수정: 항상 비활성화됨</li><li>자동 대문자화: 항상 비활성화됨</li><li>텍스트 자동 완성: 항상 비활성화됨</li></ul> | 기능 사용 가능 여부:<ul><li>맞춤법 검사: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 수정: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>자동 대문자화: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li><li>텍스트 자동 완성: 기본적으로 설정되어 있으며, 비활성화할 수 있음</li></ul> |
 
-### NameOrPhoneNumber
+### <a name="nameorphonenumber"></a>NameOrPhoneNumber
 
 `<TextBox InputScope="NameOrPhoneNumber"/>`
 
@@ -256,6 +265,6 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

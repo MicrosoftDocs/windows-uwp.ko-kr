@@ -3,13 +3,13 @@ author: mcleanbyron
 description: "앱을 업데이트하여 지원되는 최신 Microsoft 광고 라이브러리를 사용하고 앱이 배너 광고를 계속 받도록 하는 방법을 알아봅니다."
 title: "최신 Microsoft Advertising 라이브러리로 앱 업데이트"
 translationtype: Human Translation
-ms.sourcegitcommit: 9bd83a41ea4ec4ec7a75ef89e9c92f73d86cc731
-ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
+ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
+ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
 
 
 ---
 
-# 최신 Microsoft Advertising 라이브러리로 앱 업데이트
+# <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>최신 Microsoft Advertising 라이브러리로 앱 업데이트
 
 2017년 1월부터 Microsoft의 이전 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고를 제공하지 않을 예정입니다. **AdControl** 또는 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 기존 앱(스토어에 이미 들어 있거나 개발 중인)이 2017년 1월 이후에도 배너 광고를 계속 받으려면 최신 광고 SDK를 사용할 수 있도록 앱을 업데이트해야 할 수 있습니다. 이 변경이 앱에 해당되는지 여부를 확인하고 필요한 경우 앱 업데이트 방법을 알아보려면 이 문서의 지침을 따릅니다.
 
@@ -23,25 +23,22 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](http://go.microsoft.com/fwlink/?LinkId=393643)하세요.
 
->
-  **참고**
-    
-  [Microsoft 스토어 서비스 SDK](http://aka.ms/store-services-sdk) (UWP 앱 용) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱용)를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 사용 가능한 최신 광고 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
+>**참고**&nbsp;&nbsp;[Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱용) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱용)를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 사용 가능한 최신 광고 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 * **AdControl** 또는 **AdMediatorControl**을 사용하는 앱에 대한 전체 소스 코드 및 Visual Studio 프로젝트 파일
 
 * 앱에 대한 .appx 또는 .xap 패키지
 
-  >**참고**  앱에 대한 .appx 또는 .xap 패키지가 더 이상 없으나 Visual Studio 버전의 개발 컴퓨터가 있고 앱 빌드에 사용했던 광고 SDK가 있는 경우 Visual Studio에서 .appx 또는 .xap 패키지를 다시 생성할 수 있습니다.
+  >**참고**&nbsp;&nbsp;앱에 대한 .appx 또는 .xap 패키지가 더 이상 없으나 Visual Studio 버전의 개발 컴퓨터가 있고 앱 빌드에 사용했던 광고 SDK가 있는 경우 Visual Studio에서 .appx 또는 .xap 패키지를 다시 생성할 수 있습니다.
 
 <span id="part-1" />
-## 1부: 앱을 업데이트해야 하는지 여부 결정
+## <a name="part-1-determine-whether-you-need-to-update-your-app"></a>1부: 앱을 업데이트해야 하는지 여부 결정
 
 다음 섹션의 지침에 따라 앱을 업데이트해야 하는지 결정합니다.
 
-### 앱에 AdControl이 사용되는 경우
+### <a name="your-app-uses-adcontrol"></a>앱에 AdControl이 사용되는 경우
 
 앱이 **AdControl**을 사용하여 배너 광고를 표시하는 경우 다음 지침을 따르세요.
 
@@ -65,13 +62,15 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
   * Microsoft.Advertising.winmd 파일이 있으나 UniversalXamlAdControl.\*.dll 파일(XAML 앱용) 또는 UniversalSharedLibrary.Windows.dll 파일(JavaScript/HTML 앱용)은 없으면 앱은 이전 SDK를 사용하는 것이며 아래 섹션의 지침에 따라 프로젝트를 업데이트해야 합니다. [2부](update-your-app-to-the-latest-advertising-libraries.md#part-2)를 계속 진행합니다.
 
-  * 그렇지 않으면 다음 단계를 계속 진행합니다.
+  * 그러지 않으면 다음 단계를 계속 진행합니다.
 
 2. Windows PowerShell을 열고 다음 명령을 입력하고 앱 패키지의 압축 푼 내용에 대한 전체 경로에 ```-Path``` 인수를 할당합니다. 이 명령은 프로젝트에서 참조되는 모든 광고 라이브러리와 각 라이브러리의 버전을 표시합니다.
 
-    ```
-    get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
+  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+  ```
+
 2. 다음 표에서 앱의 대상 플랫폼에 해당하는 파일을 찾고 해당 파일 버전을 표에 나열된 버전과 비교합니다.
 
   <table>
@@ -134,7 +133,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-### 앱이 AdMediatorControl을 사용하는 경우
+### <a name="your-app-uses-admediatorcontrol"></a>앱이 AdMediatorControl을 사용하는 경우
 
 앱이 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 경우 다음 지침에 따라 앱을 업데이트해야 하는지 여부를 결정합니다.
 
@@ -150,28 +149,30 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 2. Windows PowerShell을 열고 다음 명령을 입력하고 앱 패키지의 압축 푼 내용에 대한 전체 경로에 ```-Path``` 인수를 할당합니다. 이 명령은 프로젝트에서 참조되는 모든 광고 라이브러리와 각 라이브러리의 버전을 표시합니다.
 
-    ```
-    get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-    ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
+  get-childitem -Path "<path to your extracted package>" * -Recurse -include *advert*.dll,*admediator*.dll,*xamladcontrol*.dll,*universalsharedlibrary*.dll | where-object {$_.Name -notlike "*resources*" -and $_.Name -notlike "*design*" } | foreach-object { "{0}`t{1}" -f $_.FullName, [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+  ```
 
 2. 출력에 표시된 Microsoft.AdMediator.\*.dll 파일의 버전이 2.0.1603.18005 이상이면 프로젝트를 변경할 필요가 없습니다.
 
   파일 버전이 더 낮은 버전이면 아래 섹션의 지침에 따라 프로젝트를 업데이트해야 합니다. [2부](update-your-app-to-the-latest-advertising-libraries.md#part-2)를 계속 진행합니다.
 
 <span id="part-2" />
-## 2부: 최신 SDK 설치
+## <a name="part-2-install-the-latest-sdk"></a>2부: 최신 SDK 설치
 
 앱이 이전 SDK 릴리스를 사용하는 경우 다음 지침에 따라 개발 컴퓨터에 최신 SDK가 있는지 확인하세요.
 
 1. 개발 컴퓨터에 Visual Studio 2015(UWP, Windows 8.1 또는 Windows Phone 8.x 프로젝트용) 또는 Visual Studio 2013(Windows 8.1 또는 Windows Phone 8.x 프로젝트용)이 설치되어 있는지 확인합니다.
 
-  >**참고**  개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
+  >**참고**&nbsp;&nbsp;개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
 
 1.  개발 컴퓨터에서 Microsoft Advertising SDK 및 Ad Mediator SDK의 모든 이전 버전을 제거합니다.
 
 2.  **명령 프롬프트** 창을 열고 다음 명령을 실행하여 Visual Studio와 함께 설치되었을 수 있으나 컴퓨터에 설치된 프로그램 목록에 나타나지 않을 수 있는 SDK 버전을 모두 정리합니다.
 
-  ```
+  > [!div class="tabbedCodeSnippets"]
+  ```syntax
   MsiExec.exe /x{5C87A4DB-31C7-465E-9356-71B485B69EC8}
   MsiExec.exe /x{6AB13C21-C3EC-46E1-8009-6FD5EBEE515B}
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
@@ -181,11 +182,11 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
   * Windows 10용 UWP 앱의 경우 [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)를 설치합니다.
   * 이전 OS 버전을 대상으로 하는 앱의 경우 [Windows 및 Windows Phone 8.x용 Microsoft Advertising SDK](http://aka.ms/store-8-sdk)를 설치합니다.
 
-## 3부: 프로젝트 업데이트
+## <a name="part-3-update-your-project"></a>3부: 프로젝트 업데이트
 
 다음 지침에 따라 프로젝트를 업데이트합니다.
 
-### Windows 10용 UWP 프로젝트
+### <a name="uwp-projects-for-windows-10"></a>Windows 10용 UWP 프로젝트
 
 <span/>
 
@@ -195,7 +196,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-### Windows 8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
+### <a name="windows-81-or-windows-phone-81-xaml-or-javascripthtml-projects"></a>Windows 8.1 또는 Windows Phone 8.1(XAML 또는 JavaScript/HTML) 프로젝트
 
 <span/>
 
@@ -215,7 +216,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 <span/>
 
-### Windows Phone 8.x Silverlight 프로젝트
+### <a name="windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight 프로젝트
 
 <span/>
 
@@ -233,7 +234,7 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 * Windows Phone 8.x Silverlight 앱의 경우 에뮬레이터의 프로덕션 단위 테스트는 지원되지 않습니다. 디바이스에서 테스트를 수행하는 것이 좋습니다.
 
-## 4단계: 앱 테스트 및 다시 게시
+## <a name="part-4-test-and-republish-your-app"></a>4단계: 앱 테스트 및 다시 게시
 
 앱을 테스트하여 앱이 예상대로 배너 광고를 표시하는지 확인합니다.
 
@@ -247,6 +248,6 @@ ms.openlocfilehash: 710a5f4a3ae566550939fe783af7e97d20dd1b28
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

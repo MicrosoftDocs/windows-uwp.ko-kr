@@ -1,38 +1,38 @@
 ---
 author: DelfCo
-Description: "앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요."
+Description: "앱을 더 광범위한 사용자를 위해 세계화하거나 특정 시장을 위해 지역화할 때는 다음과 같은 모범 사례를 따르세요."
 Search.Refinement.TopicID: 180
 title: "세계화 및 지역화에 대한 지침"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 9d16e553eb38526b4ae1f5aa827132e130cd05c7
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 72849c304d2150fd7fe6768181a504f94ef98d5f
 
 ---
 
-# 세계화 및 지역화 권장 사항 및 금지 사항
+# <a name="globalization-and-localization-dos-and-donts"></a>세계화 및 지역화 권장 사항 및 금지 사항
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
+
+앱을 더 광범위한 사용자를 위해 세계화하거나 특정 시장을 위해 지역화할 때는 다음과 같은 모범 사례를 따르세요.
+
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**세계화**](https://msdn.microsoft.com/library/windows/apps/br206813)</li>
+<li>[**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)</li>
+<li>[**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)</li>
+<li>[**리소스**](https://msdn.microsoft.com/library/windows/apps/br206022)</li>
+<li>[**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)</li>
+</ul>
+</div>
 
 
 
+## <a name="globalization"></a>세계화
 
-
-**중요 API**
-
--   [**세계화**](https://msdn.microsoft.com/library/windows/apps/br206813)
--   [**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
--   [**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
--   [**리소스**](https://msdn.microsoft.com/library/windows/apps/br206022)
--   [**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)
-
-앱을 광범위한 대상에 대해 세계화하거나 특정 시장을 위해 지역화하는 모범 사례를 따르세요.
-
-
-
-## <span id="guidelines_for_internationalization"></span><span id="GUIDELINES_FOR_INTERNATIONALIZATION"></span>세계화
-
-UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) API를 사용하여 앱 데이터의 서식을 지정하고, 위치 또는 언어를 기반으로 가정하는 것을 피하여 앱을 시장에 따라 쉽게 조정할 수 있도록 준비하세요.
+UI에 전 세계적으로 적합한 단어와 이미지를 선택하고, [**세계화**](https://msdn.microsoft.com/library/windows/apps/br206813) API를 사용하여 앱 데이터의 서식을 지정하고, 위치 또는 언어를 기반으로 가정하는 것을 피하여 앱을 시장에 따라 쉽게 조정할 수 있도록 준비하세요.
 
 <table>
 <colgroup>
@@ -106,7 +106,7 @@ UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization*
 
  
 
-## <span id="guidelines_for_localization"></span><span id="GUIDELINES_FOR_LOCALIZATION"></span>지역화
+## <a name="localization"></a>지역화
 
 <table>
 <colgroup>
@@ -178,7 +178,7 @@ UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization*
 
  
 
-## <span id="related_topics"></span>관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 **샘플**
@@ -193,6 +193,6 @@ UI에 적합한 전역적 조건과 이미지를 선택하고, [**Globalization*
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

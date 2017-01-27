@@ -5,9 +5,15 @@ title: "음성 조작"
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
+keywords: "음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5b52f6a8e944e4166c2f4c7e16e4a83ddff23dac
-ms.openlocfilehash: 5efb2d1fc6a63e372e91cfdc8ae5e8117ff047d5
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: 5080fe9496b7a13336b42a83fd569e44f43ba2db
 
 ---
 
@@ -237,6 +243,6 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

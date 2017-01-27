@@ -5,19 +5,22 @@ title: "UWP(유니버설 Windows 플랫폼) 앱용 콘텐츠 디자인 기본 �
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 7433fcabe455c0a0198cd23f883ed72b0b4558fc
 
 ---
 
-#  UWP 앱의 콘텐츠 디자인 기본 사항
+#  <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 모든 앱의 기본 목적은 콘텐츠에 액세스할 수 있도록 하는 것입니다. 사진 편집 앱에서는 사진이 콘텐츠이고, 여행 앱에서는 여행 목적지에 대한 지도와 정보가 콘텐츠인 식입니다. 탐색 요소는 콘텐츠에 액세스할 수 있도록 하고, 명령 요소는 사용자가 콘텐츠를 조작할 수 있도록 하며, 콘텐츠 요소는 실제 콘텐츠를 표시합니다.
 
 이 문서에서는 세 가지 콘텐츠 시나리오에 대한 콘텐츠 디자인 권장 사항을 제공합니다.
 
-## <span id="Design_for_the_right_content_scenario"></span><span id="design_for_the_right_content_scenario"></span><span id="DESIGN_FOR_THE_RIGHT_CONTENT_SCENARIO"></span>올바른 콘텐츠 시나리오에 대한 디자인
+## <a name="design-for-the-right-content-scenario"></a>올바른 콘텐츠 시나리오에 대한 디자인
 
 
 다음과 같은 세 가지 기본 콘텐츠 시나리오가 있습니다.
@@ -26,7 +29,7 @@ ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 -   **만들기**: 포커스가 새 콘텐츠를 만드는 것인 기본적으로 단방향 환경입니다. 만들기는 사진 또는 동영상 촬영, 그리기 앱에서 새 이미지 만들기 또는 새 문서 열기와 같은 처음부터 만들기로 나눌 수 있습니다.
 -   **대화형**: 콘텐츠 사용, 만들기 및 수정을 포함하는 양방향 콘텐츠 환경입니다.
 
-## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>사용 중심 앱
+## <a name="consumption-focused-apps"></a>사용 중심 앱
 
 
 콘텐츠 요소는 사용 중심 앱에서 최고 우선 순위를 가지며 그 뒤를 사용자가 원하는 콘텐츠를 찾는 데 필요한 [탐색 요소](navigation-basics.md)가 따릅니다. 사용 중심 앱의 예로는 동영상 플레이어, 읽기 앱, 음악 앱 및 사진 뷰어가 있습니다.
@@ -38,7 +41,7 @@ ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 -   사용자가 원하는 콘텐츠를 찾을 때 집중하여 전용 페이지에서 해당 콘텐츠를 볼 수 있도록 전용 [탐색](navigation-basics.md) 페이지와 콘텐츠 보기 페이지를 만드는 것을 고려하세요.
 -   전체 화면을 채우도록 콘텐츠를 확장하고 다른 모든 UI 요소를 숨기는 전체 화면 보기 옵션을 만드는 것을 고려하세요.
 
-## <span id="Creation-focused_apps"></span><span id="creation-focused_apps"></span><span id="CREATION-FOCUSED_APPS"></span>만들기 중심 앱
+## <a name="creation-focused-apps"></a>만들기 중심 앱
 
 
 콘텐츠 및 [명령](commanding-basics.md) 요소는 만들기 중심 앱에서 가장 중요한 UI 요소이며, 명령 요소를 통해 사용자는 새 콘텐츠를 만들 수 있습니다. 그리기 앱, 사진 편집 앱, 동영상 편집 앱 및 워드 프로세싱 앱을 예로 들 수 있습니다.
@@ -52,7 +55,7 @@ ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 -   [탐색](navigation-basics.md) 요소 사용을 최소화하세요.
 -   [명령](commanding-basics.md) 요소는 만들기 중심 앱에서 특히 중요합니다. 사용자가 많은 명령을 실행하므로 명령 기록/실행 취소 기능을 제공하는 것이 좋습니다.
 
-## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>대화형 콘텐츠가 있는 앱
+## <a name="apps-with-interactive-content"></a>대화형 콘텐츠가 있는 앱
 
 
 대화형 콘텐츠가 있는 앱에서 사용자는 콘텐츠를 만들고 보고 편집합니다. 많은 앱이 이 범주에 속합니다. 이러한 유형의 앱의 예로는 LOB(기간 업무) 앱, 인벤토리 관리 앱, 사용자가 레시피를 만들거나 수정할 수 있는 요리 앱이 있습니다.
@@ -68,7 +71,7 @@ ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 
 -   탐색, 콘텐츠 및 명령 요소가 모두 중요한 경우 이들 간의 균형을 맞추기가 어려울 수 있습니다. 가능한 경우 콘텐츠 검색, 만들기 및 편집을 위한 별도의 화면을 만들거나 모드 전환을 제공하는 것을 고려하세요.
 
-## <span id="Commonly_used_content_elements"></span><span id="commonly_used_content_elements"></span><span id="COMMONLY_USED_CONTENT_ELEMENTS"></span>일반적으로 사용되는 콘텐츠 요소
+## <a name="commonly-used-content-elements"></a>일반적으로 사용되는 콘텐츠 요소
 
 
 일반적으로 콘텐츠를 표시하는 데 사용되는 몇 가지 UI 요소는 다음과 같습니다. (전체 UI 요소 목록은 [컨트롤 및 UI 요소](https://msdn.microsoft.com/library/windows/apps/dn611856)를 참조하세요.)
@@ -123,6 +126,6 @@ ms.openlocfilehash: 4ac800f9d2dd51ac074ec50cd1046e5a78c80710
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

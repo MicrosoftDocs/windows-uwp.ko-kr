@@ -6,34 +6,28 @@ ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: b79a6f3ee32494f04fa472c0531c06aa0a60098b
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 0b25dc91a5ec82a83ae24a41854e9eeab8990128
 
 ---
 
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# UWP 앱의 글꼴
+# <a name="fonts-for-uwp-apps"></a>UWP 앱의 글꼴
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 이 문서에는 UWP 앱에 권장되는 글꼴이 나열되어 있습니다. 이러한 글꼴은 UWP 앱을 지원하는 모든 Windows 10 버전에서 사용이 보장됩니다.
 
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br209655"><strong>FontFamily 속성</strong></a></li>
+<li>[**FontFamily 속성**](https://msdn.microsoft.com/library/windows/apps/br209655)</li>
 </ul>
-
 </div>
-</div>
-
-
 
 [UWP 입력 체계 가이드](typography.md)는 앱에 Segoe UI 글꼴 사용을 권장합니다. Segoe UI가 대부분의 앱에 적합하긴 하지만 모든 앱에 사용할 필요는 없습니다. 독서 또는 영어가 아닌 특정 언어로 텍스트를 표시하는 경우 등 특정 시나리오에는 다른 글꼴을 사용할 수 있습니다. 
-
-
-
  
-## Sans-serif 글꼴
+## <a name="sans-serif-fonts"></a>Sans-serif 글꼴
 
 Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다. 
 
@@ -94,7 +88,7 @@ Sans-serif 글꼴은 제목 및 UI 요소에 적합합니다.
 </table>
 
 
-## Serif 글꼴
+## <a name="serif-fonts"></a>Serif 글꼴
 
 Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다. 
 
@@ -133,7 +127,7 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 </tbody>
 </table>
 
-## 기호 및 아이콘
+## <a name="symbols-and-icons"></a>기호 및 아이콘
 
 
 <table>
@@ -165,7 +159,7 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 
 
 
-## 라틴어가 아닌 언어용 글꼴
+## <a name="fonts-for-non-latin-languages"></a>라틴어가 아닌 언어용 글꼴
 
 하지만 이러한 글꼴 중 대부분은 라틴 문자를 제공합니다.
 
@@ -294,21 +288,17 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 </table>
 
 
-## 글꼴 세계화/지역화
+## <a name="globalizinglocalizing-fonts"></a>글꼴 세계화/지역화
 특정 언어에 대한 권장 글꼴 패밀리, 크기, 두께 및 스타일에 프로그래밍 방식으로 액세스하려면 [LanguageFont 글꼴 매핑 API](https://msdn.microsoft.com/library/windows/apps/br206864)를 사용합니다. LanguageFont 개체는 UI 헤더, 알림, 본문, 사용자 편집 가능한 문서 본문 글꼴을 비롯하여 콘텐츠의 다양한 범주에 대한 올바른 글꼴 정보에 액세스합니다. 자세한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)을 참조하세요.
 
-<!--
-## Triggering a font download
-If you use a font that's not listed in this article, your app might trigger an automatic download of the font data from a Microsoft service. This can have performance and other impacts that may be a concern, particularly for mobile devices. In particular, note that this might consume some of a user's mobile data plan or result in mobile data usage costs. UWP apps that will available on mobile devices should never use fonts for UI content other than fonts in this list.
--->
 
-## 샘플 다운로드
+## <a name="get-the-samples"></a>샘플 다운로드
 
 * [다운로드 가능한 글꼴 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlCloudFontIntegration)
 * [UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [DirectWrite를 사용한 줄 간격 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DWriteLineSpacingModes) 
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [세계화를 지원하도록 레이아웃 및 글꼴 조정](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)
 * [Segoe MDL2](segoe-ui-symbol-font.md)
@@ -325,6 +315,6 @@ If you use a font that's not listed in this article, your app might trigger an a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

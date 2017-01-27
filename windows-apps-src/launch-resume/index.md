@@ -4,8 +4,8 @@ title: "실행, 다시 시작 및 백그라운드 작업"
 description: "이 섹션에서는 UWP(유니버설 Windows 플랫폼) 앱을 시작, 일시 중단, 다시 시작 및 종료할 때 발생하는 상황을 설명합니다."
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
 translationtype: Human Translation
-ms.sourcegitcommit: a21b2e9bb41e951660916bbbdb09b0bd3e5ecf2d
-ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
+ms.sourcegitcommit: 32737991b31eaceb33fc2ecb5152def167c36fdd
+ms.openlocfilehash: 6b350ef65f381d18585c8b080c6259f7607c7bf9
 
 ---
 
@@ -19,7 +19,7 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 - URI를 사용하거나 파일 활성화를 통해 앱을 실행하는 방법
 - UWP(유니버설 Windows) 앱이 다른 앱과 데이터 및 기능을 공유할 수 있도록 하는 앱 서비스를 사용하는 방법
 - UWP 앱 자체가 포그라운드에 없는 동안 작동할 수 있도록 하는 백그라운드 작업을 사용하는 방법
-- 디바이스 간에 일관된 사용자 환경을 만들 수 있도록 연결된 디바이스를 검색하고, 다른 디바이스에서 앱을 실행하고, 원격 디바이스의 앱 서비스와 통신하는 방법
+- 장치 간에 일관된 사용자 환경을 만들 수 있도록 연결된 장치를 검색하고, 다른 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법
 - 앱의 시작 화면을 추가 및 구성하는 방법
 
 ## <a name="the-app-lifecycle"></a>앱 수명 주기
@@ -33,7 +33,8 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 | [앱 활성화 처리](activate-an-app.md)     | 앱 활성화 처리 방법에 대해 알아봅니다.                                                                             |
 | [앱 일시 중단 처리](suspend-an-app.md)         | 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다.                                 |
 | [앱 다시 시작 처리](resume-an-app.md)           | 시스템에서 앱을 다시 시작할 때 표시 콘텐츠를 새로 고치는 방법을 알아봅니다.                                        |
-| [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md)           | 앱이 종료되지 않도록 백그라운드 상태에 있을 때 앱에서 사용하는 메모리 양을 줄이는 방법을 알아봅니다.                                        |
+| [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md) | 앱이 종료되지 않도록 백그라운드 상태에 있을 때 앱에서 사용하는 메모리 양을 줄이는 방법을 알아봅니다.|
+| [확장 실행으로 최소화된 상태에서 실행](run-minimized-with-extended-execution.md) | 확장 실행을 사용하여 앱이 최소화된 상태에서 계속 실행되도록 하는 방법을 살펴봅니다. |
 
 ## <a name="launch-apps"></a>앱 실행
 
@@ -63,7 +64,7 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 | 항목 | 설명 |
 |-------|-------------|
 | [예약된 파일 및 URI 체계 이름](reserved-uri-scheme-names.md) | 이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다. |
-| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 디바이스나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 디바이스가 포함됩니다. |
+| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
 
 ## <a name="app-services"></a>앱 서비스
 
@@ -80,7 +81,7 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 
 | 항목 | 설명 |
 |-------|-------------|
-| [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
+| [백그라운드 작업에서 센서 및 장치에 액세스](access-sensors-and-devices-from-a-background-task.md)       | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다. |
 | [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                           | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.                                                                                                                          |
 | [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)                               | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다.                                                                                                 |
 | [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)                               | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다.                                                                                                 |
@@ -95,17 +96,17 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 | [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)                 | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.                                                                                                                  |
 | [백그라운드에서 데이터 전송](https://msdn.microsoft.com/library/windows/apps/mt280377)                                           | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다.                                                                                                                              |
 | [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                       | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.                                                                                                                      |
-| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                       | 디바이스가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.                             |
+| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                       | 장치가 연결되어 있는 동안 [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.                             |
 
 ## <a name="remote-systems"></a>원격 시스템
 
-[연결된 앱 및 디바이스(프로젝트 "로마")](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 디바이스를 검색하고, 원격 디바이스에서 앱을 실행하고, 원격 디바이스의 앱 서비스와 통신하는 방법을 설명합니다.
+[연결된 앱 및 장치(프로젝트 "로마")](connected-apps-and-devices.md) 섹션에서는 원격 시스템 플랫폼을 사용하여 원격 장치를 검색하고, 원격 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법을 설명합니다.
 
 | 항목 | 설명 |
 |-------|-------------|
-| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 디바이스를 검색하는 방법을 알아봅니다. |
-| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다.  |
-| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 디바이스에서 앱을 조작하는 방법을 알아봅니다. |
+| [원격 장치 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
+| [원격 장치에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
+| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
 
 ## <a name="splash-screens"></a>시작 화면
 
@@ -118,6 +119,6 @@ ms.openlocfilehash: 7667cfb9671a7517a394f6f691aef4c305c02087
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

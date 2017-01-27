@@ -5,12 +5,15 @@ title: "UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+op-migration-status: ready
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
+ms.sourcegitcommit: 98b3a9739b1906b7abb529cea1e7d433118cbcdd
+ms.openlocfilehash: b1c3d5ca03a99e2fff1c37cfddfb7a00db45d251
 
 ---
-# 레이아웃 패널
+# <a name="layout-panels"></a>레이아웃 패널
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다. 기본 제공 XAML 레이아웃 패널은 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx), [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) 및 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)가 포함되어 있습니다. 여기서는 각 패널에 대해 설명하고 XAML UI 요소를 배치하기 위해 패널을 사용하는 방법을 설명합니다.
 
@@ -35,7 +38,7 @@ ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
 
 연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../xaml-platform/attached-properties-overview.md)를 참조하세요.
 
-> **참고**  연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
+> **참고**&nbsp;&nbsp;연결된 속성은 특수 구문을 코드에서 가져오거나 설정해야 하는 XAML 개념입니다. 코드에서 연결된 속성을 사용하려면 *연결된 속성 개요* 문서의 *코드의 연결된 속성* 섹션을 참조하세요.
 
 **패널 테두리**
 
@@ -51,9 +54,9 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ![테두리가 포함된 그리드](images/layout-panel-grid-border.png)
 
-기본 제공 테두리 속성을 사용하면 XAML 요소 수를 줄일 수 있으므로 앱의 UI 성능을 향상시킬 수 있습니다. 레이아웃 패널 및 UI 성능에 대한 자세한 내용은 [XAML 레이아웃 최적화](https://msdn.microsoft.com/library/windows/apps/mt404609.aspx)를 참조하세요.
+기본 제공 테두리 속성을 사용하면 XAML 요소 수를 줄일 수 있으므로 앱의 UI 성능을 향상시킬 수 있습니다. 레이아웃 패널 및 UI 성능에 대한 자세한 내용은 [XAML 레이아웃 최적화](https://msdn.microsoft.com/en-us/library/windows/apps/mt404609.aspx)를 참조하세요.
 
-## RelativePanel
+## <a name="relativepanel"></a>RelativePanel
 
 [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx)을 통해 다른 요소 및 패널을 기준으로 위치를 지정하여 UI 요소를 배치할 수 있습니다. 기본적으로 요소는 패널의 왼쪽 위 모서리에 위치가 지정됩니다. [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) 및 [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)와 함께 RelativePanel을 사용하면 다양한 창 크기에 맞게 UI를 다시 정렬할 수 있습니다.
 
@@ -100,7 +103,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 - 녹색 사각형은 명시적으로 높이가 44로 지정되며 왼쪽 면은 빨간색 사각형에 맞춰 정렬되고 오른쪽 면은 파란색 사각형에 맞춰 정렬됨으로써 너비가 결정됩니다.
 - 노란색 사각형은 크기가 명시적으로 지정되지 않고 왼쪽 면이 파란색 사각형에 맞춰 정렬됩니다. 오른쪽 및 아래쪽 가장자리는 패널의 가장자리에 맞춰 정렬됩니다. 크기가 이러한 맞춤에 따라 결정되므로 패널 크기가 조정되면 같이 조정됩니다.
 
-## StackPanel
+## <a name="stackpanel"></a>StackPanel
 
 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)은 가로 또는 세로 방향으로 지정할 수 있는 한 줄에 자식 요소를 정렬하는 단순 레이아웃 패널입니다. StackPanel 컨트롤은 일반적으로 페이지에 UI의 일부 섹션을 배열하려는 경우에 사용됩니다.
 
@@ -124,7 +127,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 **Horizontal**인 경우에는 높이)를 채웁니다. 이 예제에서는 직사각형의 너비는 설정되지 않습니다. 직사각형은 StackPanel의 전체 너비에 맞게 확장됩니다.
 
-## 그리드
+## <a name="grid"></a>그리드
 
 [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) 패널은 컨트롤의 다중 행/열 레이아웃 배열을 지원합니다. [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowdefinitions.aspx) 및 [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columndefinitions.aspx) 속성을 사용하여 Grid 패널의 행과 열을 지정할 수 있습니다. XAML에서 속성 요소 구문을 사용하여 Grid 요소에 행과 열을 선언합니다. **Auto** 또는 배율 크기 조정을 사용하면 열이나 행 안에서 공간을 분배할 수 있습니다.
 
@@ -132,7 +135,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 [**Grid.RowSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.rowspan.aspx) 및 [**Grid.ColumnSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.columnspan.aspx) 연결된 속성을 사용하면 여러 행과 열에 걸쳐 콘텐츠를 표시할 수도 있습니다.
 
-다음 XAML 예제는 행 3개와 열 2개로 이루어진 Grid를 만드는 방법을 보여 줍니다. 첫 번째 행과 세 번째 행의 높이는 텍스트만 포함할 정도의 크기입니다. 두 번째 행의 높이는 나머지 사용 가능한 높이입니다. 열의 너비는 사용 가능한 컨테이너 너비 내에서 고르게 분할됩니다.
+다음 XAML 예제는 행 2개와 열 2개로 이루어진 그리드를 만드는 방법을 보여 줍니다.
 
 ```xaml
 <Grid>
@@ -161,7 +164,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 - 첫 번째 열의 너비가 **Auto**으로 설정되므로 해당 자식에 필요한 만큼 넓어집니다. 이 경우 너비는 빨간색 사각형의 너비를 수용하는 44 유효 픽셀입니다.
 - 사각형에 다른 크기 제한이 없으므로 각각 늘어나서 자기가 속한 그리드 셀을 채웁니다.
 
-## VariableSizedWrapGrid
+## <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 
 [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx)에서는 요소가 행이나 열 형태로 정렬되며 [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx) 값에 도달할 경우 새 행이나 열로 자동 래핑되는 그리드 스타일 레이아웃 패널을 제공합니다. 
 
@@ -193,7 +196,7 @@ StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 
 
 이 예제에서 각 열의 최대 행 수는 3입니다. 첫 번째 열은 파란색 사각형이 2행에 걸쳐 있기 때문에 2개 항목만(빨간색 및 파란색 사각형) 포함합니다. 그러면 녹색 사각형은 다음 열의 맨 위로 래핑됩니다.
 
-## 캔버스
+## <a name="canvas"></a>캔버스
 
 [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치합니다. 각 요소의 [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) 및 [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.top.aspx) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 레이아웃 중에 부모 Canvas는 자식에서 이러한 연결된 속성 값을 읽고 레이아웃의 [Arrange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.arrange.aspx) 단계 중에 이러한 값을 사용합니다.
 
@@ -219,12 +222,12 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 원하는 대로 Canvas 패널을 사용하세요. UI의 요소 위치를 정확하게 제어하는 것이 편리한 시나리오도 있지만 고정 위치가 지정된 레이아웃 패널에서 UI의 해당 영역은 전체 앱 창 크기 변경에 맞게 제대로 적응되지 않습니다. 앱 창 크기 조정은 장치 방향 변경, 분할된 앱 창, 모니터 변경 및 기타 여러 사용자 시나리오에서 발생할 수 있습니다.
 
-## ItemsControl용 패널
+## <a name="panels-for-itemscontrol"></a>ItemsControl용 패널
 
-[**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)에서 항목을 표시하기 위한 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
+[**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)에서 항목을 표시하기 위한 [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) 및 [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

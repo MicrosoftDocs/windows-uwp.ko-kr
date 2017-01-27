@@ -6,33 +6,33 @@ ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 label: Motion--Pointer animations
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 24f79997c1fd105bf6156cd1df13aa95a62056c0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: c208b67829e2053302ec0cc7c6da013b89cee8b3
 
 ---
 
-# 포인터 클릭 애니메이션
+# <a name="pointer-click-animations"></a>포인터 클릭 애니메이션
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 사용자가 항목을 탭할 때 사용자에게 시각적 피드백을 제공하려면 포인터 애니메이션을 사용합니다. 포인터 아래로 애니메이션은 눌린 항목을 약간 축소하고 기울이며 항목을 처음 탭할 때 재생됩니다. 포인터 위로 애니메이션은 항목을 원래 위치로 복원하며 사용자가 포인터를 놓을 때 재생됩니다.
 
 
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**PointerUpThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969168)</li>
+<li>[**PointerDownThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969164)</li>
+</ul>
+</div>
 
 
-**중요 API**
-
--   [**PointerUpThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969168)
--   [**PointerDownThemeAnimation 클래스**](https://msdn.microsoft.com/library/windows/apps/hh969164)
-
-
-
-## 권장 사항 및 금지 사항
-
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 -   포인터 위로 애니메이션을 사용할 때는 사용자가 포인터를 놓을 때 애니메이션을 즉시 트리거합니다. 이 애니메이션은 탭에 의해 트리거된 동작(예: 새 페이지로 이동)에 응답하는 것이 더 느린 경우에도 동작이 인식되었음을 사용자에게 즉시 알립니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
-**개발자용(XAML)**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [포인터 클릭 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432)
 * [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -49,6 +49,6 @@ ms.openlocfilehash: 24f79997c1fd105bf6156cd1df13aa95a62056c0
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

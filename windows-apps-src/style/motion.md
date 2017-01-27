@@ -6,16 +6,18 @@ ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
-ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
 
 ---
 
-# UWP 앱의 동작
+# <a name="motion-for-uwp-apps"></a>UWP 앱의 동작
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 
-## 애니메이션의 이점
+## <a name="benefits-of-animation"></a>애니메이션의 이점
 
 
 애니메이션은 사물이 이동하도록 만드는 것에 그치지 않습니다. 애니메이션은 사용자가 내부에 존재하면서 터치를 통해 조작할 수 있는 물리적인 에코시스템을 만들기 위한 도구입니다. 경험의 질은 사용자에 대한 앱 응답성 정도, UI가 통신하는 특성의 종류 등에 따라 달라집니다.
@@ -48,15 +50,13 @@ ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
 
     애니메이션을 사용하여 사용자에게 휴대폰이 동결 상태가 아니라 처리 중이라는 것을 알릴 수 있으며 휴대폰이 사용자가 관심을 가질 만한 새 정보를 수동적으로 노출할 수 있습니다.
 
-## 이 섹션의 내용
+<h2>이 섹션의 내용</h2>
+
 <table>
-<thead>
-<tr class="header">
+<tr>
 <th align="left">애니메이션 형식</th>
 <th align="left">설명</th>
 </tr>
-</thead>
-<tbody>
     <tr>
         <td>[추가 및 삭제](motion-list.md)
         </td>
@@ -99,8 +99,6 @@ ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
         <td>요소를 새 위치로 이동합니다.
         </td>
     </tr>
-
-</tbody>
 </table>
 
  
@@ -111,6 +109,6 @@ ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

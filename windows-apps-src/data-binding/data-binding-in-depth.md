@@ -1,61 +1,61 @@
 ---
 author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
-title: Data binding in depth
-description: Data binding is a way for your app&quot;s UI to display data, and optionally to stay in sync with that data.
+title: "데이터 바인딩 심층 분석"
+description: "데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다."
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 48db13fec4ce9c6a9a998c84ddaaba30f7a24d83
+ms.sourcegitcommit: fa3a3cf6194f04a05301ae4dfb75a7a21ff22e73
+ms.openlocfilehash: fca2c9a795e38983f439d6df5c5a7394c29c1217
 
 ---
-# <a name="data-binding-in-depth"></a>Data binding in depth
+# <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-**Important APIs**
+**중요 API**
 
--   [**Binding class**](https://msdn.microsoft.com/library/windows/apps/BR209820)
+-   [**Binding 클래스**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-> **Note**  This topic describes data binding features in detail. For a short, practical introduction, see [Data binding overview](data-binding-quickstart.md).
+> **참고**&nbsp;&nbsp;이 항목에서는 데이터 바인딩 기능에 대해 자세히 설명합니다. 간단하고 실용적인 소개는 [데이터 바인딩 개요](data-binding-quickstart.md)를 참조하세요.
 
 
-Data binding is a way for your app's UI to display data, and optionally to stay in sync with that data. Data binding allows you to separate the concern of data from the concern of UI, and that results in a simpler conceptual model as well as better readability, testability, and maintainability of your app.
+데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다. 데이터 바인딩은 데이터 문제를 UI 문제와 분리하여 개념 모델을 간소화하고 앱의 가독성, 테스트 용이성 및 유지 관리성을 향상시킬 수 있도록 해줍니다.
 
-You can use data binding to simply display values from a data source when the UI is first shown, but not to respond to changes in those values. This is called one-time binding, and it works well for data whose values don't change during run-time. Additionally, you can choose to "observe" the values and to update the UI when they change. This is called one-way binding, and it works well for read-only data. Ultimately, you can choose to both observe and update, so that changes that the user makes to values in the UI are automatically pushed back into the data source. This is called two-way binding, and it works well for read-write data. Here are some examples.
+이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 일회성 바인딩이라는 이 기능은 런타임에 해당 값이 변경되지 않는 데이터에 적합합니다. 또한 값을 "관찰"하여 변경될 경우 UI를 업데이트할 수 있습니다. 단방향 바인딩이라는 이 기능은 읽기 전용 데이터에 적합합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 양방향 바인딩이라는 이 기능은 읽기-쓰기 데이터에 적합합니다. 예를 들면 다음과 같습니다.
 
--   You could use one-time binding to bind an [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) to the current user's photo.
--   You could use one-way binding to bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) to a collection of real-time news articles grouped by newspaper section.
--   You could use two-way binding to bind a [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) to a customer's name in a form.
+-   일회성 바인딩을 사용하여 현재 사용자의 사진을 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)에 바인딩할 수 있습니다.
+-   단방향 바인딩을 사용하여 신문 섹션별로 그룹화된 실시간 뉴스 기사 모음에 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)를 바인딩할 수 있습니다.
+-   양방향 바인딩을 사용하여 양식에 있는 고객의 이름에 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)를 바인딩할 수 있습니다.
 
-There are two kinds of binding, and they're both typically declared in UI markup. You can choose to use either the [{x:Bind} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204783) or the [{Binding} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204782). And you can even use a mixture of the two in the same app—even on the same UI element. {x:Bind} is new for Windows 10 and it has better performance. All the details described in this topic apply to both kinds of binding unless we explicitly say otherwise.
+바인딩에는 두 종류가 있으며, 일반적으로 둘 다 UI 태그에 있습니다. [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하도록 선택할 수 있습니다. 동일한 앱에서 이 둘을 혼합하여 사용할 수도 있으며, 동일한 UI 요소에도 마찬가지입니다. {x:Bind}는 Windows 10의 새로운 기능으로, 향상된 성능을 제공합니다. 이 항목에 설명된 모든 세부 정보는 명시적으로 설명하지 않더라도 두 종류의 바인딩 모두에 적용됩니다.
 
-**Sample apps that demonstrate {x:Bind}**
+**{x:Bind}를 보여 주는 샘플 앱**
 
--   [{x:Bind} sample](http://go.microsoft.com/fwlink/p/?linkid=619989).
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
--   [XAML UI Basics sample](http://go.microsoft.com/fwlink/p/?linkid=619992).
+-   [{x:Bind} 샘플](http://go.microsoft.com/fwlink/p/?linkid=619989)
+-   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)
+-   [XAML UI 기본 사항 샘플](http://go.microsoft.com/fwlink/p/?linkid=619992)
 
-**Sample apps that demonstrate {Binding}**
+**{Binding}을 보여 주는 샘플 앱**
 
--   Download the [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) app.
--   Download the [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) app.
+-   [Bookstore1](http://go.microsoft.com/fwlink/?linkid=532950) 앱 다운로드
+-   [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 앱 다운로드
 
-## <a name="every-binding-involves-these-pieces"></a>Every binding involves these pieces
+## <a name="every-binding-involves-these-pieces"></a>모든 바인딩에 포함된 요소
 
--   A *binding source*. This is the source of the data for the binding, and it can be an instance of any class that has members whose values you want to display in your UI.
--   A *binding target*. This is a [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) of the [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) in your UI that displays the data.
--   A *binding object*. This is the piece that transfers data values from the source to the target, and optionally from the target back to the source. The binding object is created at XAML load time from your [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) or [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) markup extension.
+-   *바인딩 소스*. 바인딩할 데이터의 소스이며, 해당 값을 UI에 표시할 멤버가 있는 모든 클래스의 인스턴스일 수 있습니다.
+-   *바인딩 대상*. 데이터를 표시하는 UI에서 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)의 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362)입니다.
+-   *바인딩 개체*. 소스에서 대상으로, 그리고 선택적으로 대상에서 다시 소스로 데이터 값을 전송하는 요소입니다. 바인딩 개체는 XAML 로드 시 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 또는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 태그 확장에서 만들어집니다.
 
-In the following sections, we'll take a closer look at the binding source, the binding target, and the binding object. And we'll link the sections together with the example of binding a button's content to a string property named **NextButtonText**, which belongs to a class named **HostViewModel**.
+다음 섹션에서는 바인딩 소스, 바인딩 대상 및 바인딩 개체에 대해 자세히 알아봅니다. 또한 단추의 콘텐츠를 **HostViewModel**이라는 클래스에 속한 **NextButtonText**라는 문자열 속성에 바인딩하는 예제를 이러한 섹션과 함께 링크합니다.
 
-### <a name="binding-source"></a>Binding source
+### <a name="binding-source"></a>바인딩 소스
 
-Here's a very rudimentary implementation of a class that we could use as a binding source.
+다음은 바인딩 소스로 사용할 수 있는 클래스의 매우 기본적인 구현입니다.
 
-**Note**  If you're using [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) with Visual C++ component extensions (C++/CX) then you'll need to add the [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) attribute to your binding source class. If you're using [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) then you don't need that attribute. See [Adding a details view](data-binding-quickstart.md#adding-a-details-view) for a code snippet.
+**참고**  Visual C++ 구성 요소 확장(C++/CX)과 함께 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용하는 경우 바인딩 소스 클래스에 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) 특성을 추가해야 합니다. [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용하는 경우 해당 특성을 추가할 필요가 없습니다. 코드 조각은 [세부 정보 보기 추가](data-binding-quickstart.md#adding-a-details-view)를 참조하세요.
 
 ```csharp
 public class HostViewModel
@@ -69,13 +69,13 @@ public class HostViewModel
 }
 ```
 
-That implementation of **HostViewModel**, and its property **NextButtonText**, are only appropriate for one-time binding. But one-way and two-way bindings are extremely common, and in those kinds of binding the UI automatically updates in response to changes in the data values of the binding source. In order for those kinds of binding to work correctly, you need to make your binding source "observable" to the binding object. So in our example, if we want to one-way or two-way bind to the **NextButtonText** property, then any changes that happen at run-time to the value of that property need to be made observable to the binding object.
+이 구현의 **HostViewModel**과 해당 속성인 **NextButtonText**는 일회성 바인딩에만 적합합니다. 그러나 단방향 및 양방향 바인딩은 매우 일반적이므로 이러한 종류의 바인딩에서는 바인딩 소스의 데이터 값 변경에 응답하여 UI가 자동으로 업데이트됩니다. 이러한 종류의 바인딩이 제대로 작동하려면 바인딩 개체에서 바인딩 소스를 "관찰할 수 있도록" 확인해야 합니다. 따라서 이 예제에서는 **NextButtonText** 속성에 단방향 또는 양방향 바인딩하려는 경우 해당 속성 값에 대해 런타임에 발생하는 모든 변경 내용을 바인딩 개체에서 관찰할 수 있도록 해야 합니다.
 
-One way of doing that is to derive the class that represents your binding source from [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356), and expose a data value through a [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362). That's how a [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) becomes observable. **FrameworkElements** are good binding sources right out of the box.
+한 가지 방법은 바인딩 소스를 나타내는 클래스를 [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356)에서 파생하고 [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362)를 통해 데이터 값을 노출하는 것입니다. 그러면 [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)가 관찰 가능하게 됩니다. **FrameworkElements**는 즉시 사용할 수 있는 유용한 바인딩 소스입니다.
 
-A more lightweight way of making a class observable—and a necessary one for classes that already have a base class—is to implement [**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). This really just involves implementing a single event named **PropertyChanged**. An example using **HostViewModel** is below.
+클래스를 관찰 가능하게 하고 이미 기본 클래스가 있는 클래스에 필요한 클래스로 만드는 보다 간단한 방법은[**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)를 구현하는 것입니다. 여기에는 실제로 **PropertyChanged**라는 단일 이벤트의 구현이 포함됩니다. **HostViewModel**을 사용하는 예제는 아래와 같습니다.
 
-**Note**  For C++/CX, you implement [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), and the binding source class must either have the [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) or implement [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).
+**참고**  C++/CX의 경우 [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)를 구현하며, 바인딩 소스 클래스는 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)를 가지고 있거나 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)를 구현해야 합니다.
 
 ```csharp
 public class HostViewModel : INotifyPropertyChanged
@@ -107,9 +107,9 @@ public class HostViewModel : INotifyPropertyChanged
 }
 ```
 
-Now the **NextButtonText** property is observable. When you author a one-way or a two-way binding to that property (we'll show how later), the resulting binding object subscribes to the **PropertyChanged** event. When that event is raised, the binding object's handler receives an argument containing the name of the property that has changed. That's how the binding object knows which property's value to go and read again.
+이제 **NextButtonText** 속성을 관찰할 수 있습니다. 이 속성에 대한 단방향 또는 양방향 바인딩을 작성할 경우(방법은 나중에 설명) 결과 바인딩 개체는 **PropertyChanged** 이벤트를 구독합니다. 이 이벤트가 발생하면 바인딩 개체의 처리기에 변경된 속성 이름이 포함된 인수가 수신됩니다. 이를 통해 바인딩 개체는 다시 읽어야 하는 속성 값을 인식할 수 있습니다.
 
-So that you don't have to implement the pattern shown above multiple times, you can just derive from the **BindableBase** bass class that you'll find in the [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) sample (in the "Common" folder). Here's an example of how that looks.
+위에 표시된 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **BindableBase** 기본 클래스에서 파생할 수 있습니다. 관련 예제는 다음과 같습니다.
 
 ```csharp
 public class HostViewModel : BindableBase
@@ -129,25 +129,25 @@ public class HostViewModel : BindableBase
 }
 ```
 
-Raising the **PropertyChanged** event with an argument of [**String.Empty**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.empty.aspx) or **null** indicates that all non-indexer properties on the object should be re-read. You can raise the event to indicate that indexer properties on the object have changed by using an argument of "Item\[*indexer*\]" for specific indexers (where *indexer* is the index value), or a value of "Item\[\]" for all indexers.
+[**String.Empty**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.empty.aspx) 또는 **null** 인수를 사용하여 **PropertyChanged** 이벤트를 발생시킨 경우 이는 개체에 대한 모든 비인덱서 속성을 다시 읽어야 함을 나타냅니다. 특정 인덱서의 경우 "Item\[*indexer*\]"(여기서 *indexer*는 인덱스 값) 인수, 모든 인덱서의 경우 "Item\[\]" 값을 사용하여 개체에 대한 인덱서 속성이 변경되었음을 나타내는 이벤트를 발생시킬 수 있습니다.
 
-A binding source can be treated either as a single object whose properties contain data, or as a collection of objects. In C# and Visual Basic code, you can one-time bind to an object that implements [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx) to display a collection that does not change at run-time. For an observable collection (observing when items are added to and removed from the collection), one-way bind to [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) instead. In C++ code, you can bind to [**Vector&lt;T&gt;**](https://msdn.microsoft.com/library/dn858385.aspx) for both observable and non-observable collections. To bind to your own collection classes, use the guidance in the following table.
+바인딩 소스를 해당 속성에 데이터가 포함된 단일 개체 또는 개체 컬렉션으로 처리할 수 있습니다. C# 및 Visual Basic 코드에서는 런타임에 변경되지 않은 컬렉션을 표시하도록 [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx)를 구현하는 개체에 일회성으로 바인딩할 수 있습니다. 관찰 가능한 컬렉션(컬렉션에서 항목이 추가 및 제거된 경우 관찰)의 경우에는 대신 [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)에 단방향으로 바인딩합니다. C++ 코드에서는 관찰 가능한 컬렉션과 관찰 가능하지 않은 컬렉션 모두에 대해 [**Vector&lt;T&gt;**](https://msdn.microsoft.com/library/dn858385.aspx)에 바인딩할 수 있습니다. 사용자 컬렉션 클래스에 바인딩하려면 다음 표의 지침을 따르세요.
 
-| Scenario                                                        | C# and VB (CLR)                                                                                                                                                                                                                                                                                                                                                                                                                   | C++/CX                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 시나리오                                                        | C# 및 VB(CLR)                                                                                                                                                                                                                                                                                                                                                                                                                   | C++/CX                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bind to an object.                                              | Can be any object.                                                                                                                                                                                                                                                                                                                                                                                                                 | Object must have [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) or implement [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878).                                                                                                                                                                                                                                                                                                             |
-| Get property change updates from a bound object.                | Object must implement [**System.ComponentModel. INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx).                                                                                                                                                                                                                                                                                                         | Object must implement [**Windows.UI.Xaml.Data. INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899).                                                                                                                                                                                                                                                                                                                                                           |
-| Bind to a collection.                                           | [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx)                                                                                                                                                                                                                                                                                                                                                                            | [**Platform::Collections::Vector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx)                                                                                                                                                                                                                                                                                                                                                                                         |
-| Get collection change updates from a bound collection.          | [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)                                                                                                                                                                                                                                                                                                                                        | [**Windows::Foundation::Collections::IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/br226052.aspx)                                                                                                                                                                                                                                                                                                                                                                                         |
-| Implement a collection that supports binding.                   | Extend [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx) or implement [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx), [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/5y536ey6.aspx)(Of [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)), [**IEnumerable**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ienumerable.aspx), or [**IEnumerable**](https://msdn.microsoft.com/library/windows/apps/xaml/9eekhta0.aspx)(Of **Object**). Binding to generic **IList(Of T)** and **IEnumerable(Of T)** is not supported. | Implement [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979), [**IBindableIterable**](https://msdn.microsoft.com/library/windows/apps/Hh701957), [**IVector**](https://msdn.microsoft.com/library/windows/apps/BR206631)&lt;[**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)^&gt;, [**IIterable**](https://msdn.microsoft.com/library/windows/apps/BR226024)&lt;**Object**^&gt;, **IVector**&lt;[**IInspectable**](https://msdn.microsoft.com/library/BR205821)\*&gt;, or **IIterable**&lt;**IInspectable**\*&gt;. Binding to generic **IVector&lt;T&gt;** and **IIterable&lt;T&gt;** is not supported. |
-| Implement a collection that supports collection change updates. | Extend [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) or implement (non-generic) [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) and [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx).                                                                                                                                                               | Implement [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979) and [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974).                                                                                                                                                                                                                                                                                                                       |
-| Implement a collection that supports incremental loading.       | Extend [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) or implement (non-generic) [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) and [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx). Additionally, implement [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916).                                                          | Implement [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979), [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974), and [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916).                                                                                                                                                                                                                                         |
+| 개체에 바인딩합니다.                                              | 어떤 개체든 가능합니다.                                                                                                                                                                                                                                                                                                                                                                                                                 | 개체는 [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)을(를) 가지고 있거나 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)을(를) 구현해야 합니다.                                                                                                                                                                                                                                                                                                             |
+| 바운드 개체에서 속성 변경 업데이트를 가져옵니다.                | 개체는 [**System.ComponentModel. INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)을(를) 구현해야 합니다.                                                                                                                                                                                                                                                                                                         | 개체는 [**Windows.UI.Xaml.Data. INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)을(를) 구현해야 합니다.                                                                                                                                                                                                                                                                                                                                                           |
+| 컬렉션에 바인딩됩니다.                                           | [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx)                                                                                                                                                                                                                                                                                                                                                                            | [**Platform::Collections::Vector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/hh441570.aspx)                                                                                                                                                                                                                                                                                                                                                                                         |
+| 바운드 컬렉션에서 컬렉션 변경 업데이트를 가져옵니다.          | [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)                                                                                                                                                                                                                                                                                                                                        | [**Windows::Foundation::Collections::IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/br226052.aspx)                                                                                                                                                                                                                                                                                                                                                                                         |
+| 바인딩을 지원하는 컬렉션을 구현합니다.                   | [**List(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/6sh2ey19.aspx)를 확장하거나 [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx), [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/5y536ey6.aspx)(Of [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)), [**IEnumerable**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ienumerable.aspx) 또는 [**IEnumerable**](https://msdn.microsoft.com/library/windows/apps/xaml/9eekhta0.aspx)(Of **Object**)를 구현합니다. 제네릭 **IList(Of T)** 및 **IEnumerable(Of T)**에는 바인딩할 수 없습니다. | [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979), [**IBindableIterable**](https://msdn.microsoft.com/library/windows/apps/Hh701957), [**IVector**](https://msdn.microsoft.com/library/windows/apps/BR206631)&lt;[**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)^&gt;, [**IIterable**](https://msdn.microsoft.com/library/windows/apps/BR226024)&lt;**Object**^&gt;, **IVector**&lt;[**IInspectable**](https://msdn.microsoft.com/library/BR205821)\*&gt;또는 **IIterable**&lt;**IInspectable**\*&gt;을 구현합니다. 제네릭 **IVector&lt;T&gt;** 및 **IIterable&lt;T&gt;**에는 바인딩할 수 없습니다. |
+| 컬렉션 변경 업데이트를 지원하는 컬렉션을 구현합니다. | [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)을(를) 확장하거나 제네릭이 아닌 [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)을(를) 구현합니다.                                                                                                                                                               | [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979) 및 [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974)을(를) 구현합니다.                                                                                                                                                                                                                                                                                                                       |
+| 증분 로드를 지원하는 컬렉션을 구현합니다.       | [**ObservableCollection(Of T)**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)을(를) 확장하거나 제네릭이 아닌 [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)을(를) 구현합니다. 또한 [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)을(를) 구현합니다.                                                          | [**IBindableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701979), [**IBindableObservableVector**](https://msdn.microsoft.com/library/windows/apps/Hh701974) 및 [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)을 구현합니다.                                                                                                                                                                                                                                         |
 
-You can bind list controls to arbitrarily large data sources, and still achieve high performance, by using incremental loading. For example, you can bind list controls to Bing image query results without having to load all the results at once. Instead, you load only some results immediately, and load additional results as needed. To support incremental loading, you must implement [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916) on a data source that supports collection change notification. When the data binding engine requests more data, your data source must make the appropriate requests, integrate the results, and then send the appropriate notifications in order to update the UI.
+목록 컨트롤을 임의 크기의 데이터 원본에 바인딩하고 증분 로드를 사용하여 고성능을 유지할 수 있습니다. 예를 들어 한 번에 모든 결과를 로드할 필요 없이 목록 컨트롤을 Bing 이미지 쿼리 결과에 바인딩할 수 있습니다. 대신 일부 결과만 즉시 로드하고 필요에 따라 추가 결과를 로드합니다. 증분 로드를 지원하려면 컬렉션 변경 알림을 지원하는 데이터 원본에서 [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)을(를) 구현해야 합니다. 데이터 바인딩 엔진이 더 많은 데이터를 요청할 경우 데이터 원본는 적절한 요청을 하고 결과를 통합한 다음 UI를 업데이트하기 위해 적절한 알림을 보내야 합니다.
 
-### <a name="binding-target"></a>Binding target
+### <a name="binding-target"></a>바인딩 대상
 
-In the two examples below, the **Button.Content** property is the binding target, and its value is set to a markup extension which declares the binding object. First [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) is shown, and then [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Declaring bindings in markup is the common case (it's convenient, readable, and toolable). But you can avoid markup and imperatively (programmatically) create an instance of the [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) class instead if you need to.
+아래 두 예제에서 **Button.Content** 속성은 바인딩 대상이고 해당 값은 바인딩 개체를 선언하는 태그 확장으로 설정됩니다. 먼저 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)가 표시된 다음 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)이 표시됩니다. 태그에서 바인딩을 선언하는 것이 일반적입니다(편리하고 읽기 쉬우며 도구 사용이 간편함). 그러나 태그를 피하고 필요한 경우 명령을 통해(프로그래밍 방식으로) [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 클래스의 인스턴스를 대신 만들 수 있습니다.
 
 <!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
 ```xml
@@ -158,9 +158,9 @@ In the two examples below, the **Button.Content** property is the binding target
 <Button Content="{Binding ...}" ... />
 ```
 
-### <a name="binding-object-declared-using-xbind"></a>Binding object declared using {x:Bind}
+### <a name="binding-object-declared-using-xbind"></a>{x:Bind}를 사용하여 선언된 바인딩 개체
 
-There's one step we need to do before we author our [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) markup. We need to expose our binding source class from the class that represents our page of markup. We do that by adding a property (of type **HostViewModel** in this case) to our **HostView** page class.
+[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 태그를 작성하기 전에 수행해야 하는 한 가지 단계가 있습니다. 태그 페이지를 나타내는 클래스에서 바인딩 소스 클래스를 노출해야 합니다. **HostView** 페이지 클래스에 속성(이 예제의 경우 **HostViewModel** 형식)을 추가하면 됩니다.
 
 ```csharp
 namespace QuizGame.View
@@ -178,7 +178,7 @@ namespace QuizGame.View
 }
 ```
 
-That done, we can now take a closer look at the markup that declares the binding object. The example below uses the same **Button.Content** binding target we used in the "Binding target" section earlier, and shows it being bound to the **HostViewModel.NextButtonText** property.
+이제 바인딩 개체를 선언하는 태그에 대해 좀 더 자세히 알아보겠습니다. 아래 예제에서는 위의 "바인딩 대상" 섹션에서 사용한 것과 동일한 **Button.Content** 바인딩 대상을 사용하여 이 대상이 **HostViewModel.NextButtonText** 속성에 바인딩됨을 보여 줍니다.
 
 ```xml
 <Page x:Class="QuizGame.View.HostView" ... >
@@ -186,15 +186,15 @@ That done, we can now take a closer look at the markup that declares the binding
 </Page>
 ```
 
-Notice the value that we specify for **Path**. This value is interpreted in the context of the page itself, and in this case the path begins by referencing the **ViewModel** property that we just added to the **HostView** page. That property returns a **HostViewModel** instance, and so we can dot into that object to access the **HostViewModel.NextButtonText** property. And we specify **Mode**, to override the [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) default of one-time.
+**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지 자체의 컨텍스트에서 해석되며, 이 예제에서는 **HostView** 페이지에 방금 추가한 **ViewModel** 속성을 참조하여 경로가 시작됩니다. 이 속성은 **HostViewModel** 인스턴스를 반환하므로 해당 개체에 점을 찍어 **HostViewModel.NextButtonText** 속성에 액세스할 수 있습니다. 또한 **Mode**를 지정하여 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 기본값 일회성을 재정의합니다.
 
-The [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) property supports a variety of syntax options for binding to nested properties, attached properties, and integer and string indexers. For more info, see [Property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Binding to string indexers gives you the effect of binding to dynamic properties without having to implement [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). For other settings, see [{x:Bind} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204783).
+[**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) 속성은 중첩된 속성, 연결된 속성, 정수 및 문자열 인덱서 등에 바인딩하는 데 필요한 다양한 구문 옵션을 지원합니다. 자세한 내용은 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)을 참조하세요. 문자열 인덱서에 바인딩하면 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)을(를) 구현할 필요 없이 동적 속성에 바인딩하는 효과가 있습니다. 다른 설정은 [{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 참조하세요.
 
-**Note**  Changes to [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) are sent to a two-way bound source when the [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) loses focus, and not after every user keystroke.
+**참고**  [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text)에 대한 변경 내용은 모든 사용자 키 입력 후가 아니라 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)가 포커스를 잃을 때 양방향 바인딩 소스로 전송됩니다.
 
-**DataTemplate and x:DataType**
+**DataTemplate 및 x:DataType**
 
-Inside a [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (whether used as an item template, a content template, or a header template), the value of **Path** is not interpreted in the context of the page, but in the context of the data object being templated. When using {x:Bind} in a data template, so that its bindings can be validated (and efficient code generated for them) at compile-time, the **DataTemplate** needs to declare the type of its data object using **x:DataType**. The example given below could be used as the **ItemTemplate** of an items control bound to a collection of **SampleDataGroup** objects.
+[**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348)(항목 템플릿, 콘텐츠 템플릿 또는 헤더 템플릿 중 무엇으로 사용되든지 관계없음) 내에서 **Path** 값은 페이지의 컨텍스트가 아니라 템플릿을 기반으로 만들 데이터 개체의 컨텍스트에서 해석됩니다. 데이터 템플릿에서 {x:Bind}를 사용할 때 컴파일 시간에 해당 바인딩의 유효성을 검사(그리고 해당 바인딩에 대해 효율적인 코드를 생성)할 수 있도록 **DataTemplate**에서 **x:DataType**을 사용하여 데이터 개체 형식을 선언해야 합니다. 아래 제공된 예제는 **SampleDataGroup** 개체의 컬렉션에 바인딩된 항목 컨트롤의 **ItemTemplate**으로 사용할 수 있습니다.
 
 ```xml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
@@ -205,21 +205,21 @@ Inside a [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR24
   </DataTemplate>
 ```
 
-**Weakly-typed objects in your Path**
+**경로의 약한 형식의 개체**
 
-Consider for example that you have a type named SampleDataGroup, which implements a string property named Title. And you have a property MainPage.SampleDataGroupAsObject, which is of type object but which actually returns an instance of SampleDataGroup. The binding `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>` will result in a compile error because the Title property is not found on the type object. The remedy for this is to add a cast to your Path syntax like this: `<TextBlock Text="{x:Bind ((data:SampleDataGroup)SampleDataGroupAsObject).Title}"/>`. Here's another example where Element is declared as object but is actually a TextBlock: `<TextBlock Text="{x:Bind Element.Text}"/>`. And a cast remedies the issue: `<TextBlock Text="{x:Bind ((TextBlock)Element).Text}"/>`.
+Title이라는 문자열 속성을 구현하는 SampleDataGroup이라는 형식을 예로 들어보겠습니다. 또한 형식 개체이지만 실제로는 SampleDataGroup의 인스턴스를 반환하는 MainPage.SampleDataGroupAsObject라는 속성이 있습니다. `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>` 바인딩은 형식 개체에서 Title 속성을 찾을 수 없으므로 컴파일 오류를 발생시킵니다. 이 문제의 해결 방법은 다음과 같이 경로 구문에 캐스트를 추가하는 것입니다. `<TextBlock Text="{x:Bind ((data:SampleDataGroup)SampleDataGroupAsObject).Title}"/>`. 다음은 Element가 개체로 선언되지만 실제로는 TextBlock인 다른 예입니다. `<TextBlock Text="{x:Bind Element.Text}"/>`. 그리고 캐스트는 이 문제를 해결합니다. `<TextBlock Text="{x:Bind ((TextBlock)Element).Text}"/>`.
 
-**If your data loads asynchronously**
+**데이터가 비동기적으로 로드되는 경우**
 
-Code to support **{x:Bind}** is generated at compile-time in the partial classes for your pages. These files can be found in your `obj` folder, with names like (for C#) `<view name>.g.cs`. The generated code includes a handler for your page's [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) event, and that handler calls the **Initialize** method on a generated class that represent's your page's bindings. **Initialize** in turn calls **Update** to begin moving data between the binding source and the target. **Loading** is raised just before the first measure pass of the page or user control. So if your data is loaded asynchronously it may not be ready by the time **Initialize** is called. So, after you've loaded data, you can force one-time bindings to be initialized by calling `this.Bindings.Update();`. If you only need one-time bindings for asynchronously-loaded data then it’s much cheaper to initialize them this way than it is to have one-way bindings and to listen for changes. If your data does not undergo fine-grained changes, and if it's likely to be updated as part of a specific action, then you can make your bindings one-time, and force a manual update at any time with a call to **Update**.
+**{x:Bind}**를 지원하는 코드는 컴파일 시간에 페이지의 partial 클래스에서 생성됩니다. 이러한 파일은 `obj` 폴더(C#의 경우 이름이 `<view name>.g.cs`와 같음)에서 찾을 수 있습니다. 생성된 코드에는 페이지의 [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706) 이벤트에 대한 처리기가 포함되며, 해당 처리기는 페이지의 바인딩을 나타내는 생성된 클래스의 **Initialize** 메서드를 호출합니다. 그러면 **Initialize**는 차례로 **Update**를 호출하여 바인딩 소스와 바인딩 대상 간에 데이터를 이동하기 시작합니다. **Loading**은 페이지 또는 사용자 정의 컨트롤의 첫 번째 측정 단계 바로 전에 발생합니다. 따라서 데이터가 비동기적으로 로드되는 경우 **Initialize**가 호출될 때까지 데이터가 준비되지 않을 수 있습니다. 그러므로 데이터를 로드한 후 `this.Bindings.Update();`을 호출하여 일회성 바인딩이 강제로 초기화되도록 할 수 있습니다. 비동기적으로 로드된 데이터에 대해서만 일회성 바인딩이 필요한 경우 이 방법으로 데이터를 초기화하는 것이 단방향 바인딩을 사용하고 변경 내용을 수신 대기하는 것보다 훨씬 비용이 저렴합니다. 데이터가 세분화된 변경을 거치지 않고 특정 작업의 일부로 업데이트될 가능성이 큰 경우 바인딩을 일회성으로 만들고 언제든지 **Update**를 호출하여 강제로 수동 업데이트를 수행할 수 있습니다.
 
-**Limitations**
+**제한 사항**
 
-**{x:Bind}** is not suited to late-bound scenarios, such as navigating the dictionary structure of a JSON object, nor duck typing which is a weak form of typing based on lexical matches on property names ("if it walks, swims, and quacks like a duck then it's a duck"). With duck typing, a binding to the Age property would be equally satisfied with a Person or a Wine object. For these scenarios, use **{Binding}**.
+**{x:Bind}**는 JSON 개체의 사전 구조를 탐색하는 것과 같은 런타임에 바인딩되는 시나리오에는 적합하지 않을 뿐만 아니라, 속성 이름에 대한 어휘 일치를 기반으로 한 약한 형식의 입력인 덕 타이핑(duck typing)("오리처럼 걷고 헤엄치고 꽥꽥거리면 그것은 오리입니다.")에도 적합하지 않습니다. 덕 타이핑(duck typing)을 사용할 경우 Age 속성에 대한 바인딩은 Person 또는 Wine 개체도 동일하게 만족합니다. 이러한 시나리오의 경우 **{Binding}**을 사용하세요.
 
-### <a name="binding-object-declared-using-binding"></a>Binding object declared using {Binding}
+### <a name="binding-object-declared-using-binding"></a>{Binding}을 사용하여 선언된 바인딩 개체
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) assumes, by default, that you're binding to the [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) of your markup page. So we'll set the **DataContext** of our page to be an instance of our binding source class (of type **HostViewModel** in this case). The example below shows the markup that declares the binding object. We use the same **Button.Content** binding target we used in the "Binding target" section earlier, and we bind to the **HostViewModel.NextButtonText** property.
+[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)은 기본적으로 태그 페이지의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)에 바인딩하는 것으로 가정합니다. 따라서 페이지의 **DataContext**를 바인딩 소스 클래스(이 예제의 경우 **HostViewModel** 형식)의 인스턴스로 설정합니다. 아래 예제에서는 바인딩 개체를 선언하는 태그를 보여 줍니다. 위의 "바인딩 대상" 섹션에서 사용한 것과 동일한 **Button.Content** 바인딩 대상을 사용하고 **HostViewModel.NextButtonText** 속성에 바인딩합니다.
 
 ```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
@@ -231,13 +231,13 @@ Code to support **{x:Bind}** is generated at compile-time in the partial classes
 </Page>
 ```
 
-Notice the value that we specify for **Path**. This value is interpreted in the context of the page's [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), which in this example is set to an instance of **HostViewModel**. The path references the **HostViewModel.NextButtonText** property. We can omit **Mode**, because the [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) default of one-way works here.
+**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) 컨텍스트(이 예제에서는 **HostViewModel**의 인스턴스로 설정됨)에서 해석됩니다. 경로는 **HostViewModel.NextButtonText** 속성을 참조합니다. 여기에서는 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)의 기본값 단방향이 적용되므로 **Mode**를 생략할 수 있습니다.
 
-The default value of [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) for a UI element is the inherited value of its parent. You can of course override that default by setting **DataContext** explicitly, which is in turn inherited by children by default. Setting **DataContext** explicitly on an element is useful when you want to have multiple bindings that use the same source.
+UI 요소에 대한 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)의 기본값은 해당 부모에서 상속된 값입니다. 물론 기본적으로 자식에서 상속되는 **DataContext**를 명시적으로 설정하여 기본값을 재정의할 수 있습니다. 요소에서 **DataContext**를 명시적으로 설정하는 것은 여러 바인딩에서 동일한 소스를 사용하려는 경우에 유용합니다.
 
-A binding object has a **Source** property, which defaults to the [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) of the UI element on which the binding is declared. You can override this default by setting **Source**, **RelativeSource**, or **ElementName** explicitly on the binding (see [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) for details).
+바인딩 개체에는 기본적으로 바인딩이 선언된 UI 요소의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)로 설정되는 **Source** 속성이 있습니다. 바인딩에서 **Source**, **RelativeSource** 또는 **ElementName**을 명시적으로 설정하여 이 기본값을 재정의할 수 있습니다(자세한 내용은 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 참조).
 
-Inside a [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348), the [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) is set to the data object being templated. The example given below could be used as the **ItemTemplate** of an items control bound to a collection of any type that has string properties named **Title** and **Description**.
+[**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) 내에서 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)는 템플릿을 기반으로 만들 데이터 개체로 설정됩니다. 아래 제공된 예제는 **Title** 및 **Description**이라는 문자열 속성이 있는 모든 형식의 컬렉션에 바인딩된 항목 컨트롤의 **ItemTemplate**으로 사용할 수 있습니다.
 
 ```xml
 <DataTemplate x:Key="SimpleItemTemplate">
@@ -248,20 +248,20 @@ Inside a [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR24
   </DataTemplate>
 ```
 
-**Note**  By default, changes to [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) are sent to a two-way bound source when the [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) loses focus. To cause changes to be sent after every user keystroke, set **UpdateSourceTrigger** to **PropertyChanged** on the binding in markup. You can also completely take control of when changes are sent to the source by setting **UpdateSourceTrigger** to **Explicit**. You then handle events on the text box (typically [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), call [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) on the target to get a [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) object, and finally call [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) to programmatically update the data source.
+**참고**  기본적으로 [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text)에 대한 변경 내용은 [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)가 포커스를 잃을 때 양방향 바인딩 소스로 전송됩니다. 변경 내용이 모든 사용자 키 입력 후 전송되도록 하려면 태그의 바인딩에서 **UpdateSourceTrigger**를 **PropertyChanged**로 설정합니다. **UpdateSourceTrigger**를 **Explicit**로 설정하여 변경 내용이 소스로 전송되는 경우를 완전히 제어할 수도 있습니다. 그런 다음 텍스트 상자(일반적으로 [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683))에서 이벤트를 처리하고, 대상에서 [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression)을 호출하여 [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx) 개체를 가져온 다음 마지막으로 [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx)를 호출하여 데이터 원본을 프로그래밍 방식으로 업데이트합니다.
 
-The [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) property supports a variety of syntax options for binding to nested properties, attached properties, and integer and string indexers. For more info, see [Property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Binding to string indexers gives you the effect of binding to dynamic properties without having to implement [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878). The [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) property is useful for element-to-element binding. The [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) property has several uses, one of which is as a more powerful alternative to template binding inside a [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391). For other settings, see [{Binding} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204782) and the [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) class.
+[**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path) 속성은 중첩된 속성, 연결된 속성, 정수 및 문자열 인덱서 등에 바인딩하는 데 필요한 다양한 구문 옵션을 지원합니다. 자세한 내용은 [속성 경로 구문](https://msdn.microsoft.com/library/windows/apps/Mt185586)을 참조하세요. 문자열 인덱서에 바인딩하면 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)을(를) 구현할 필요 없이 동적 속성에 바인딩하는 효과가 있습니다. [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname) 속성은 요소 간 바인딩에 유용합니다. [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource) 속성은 다양하게 사용되며, 그중 하나로 [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391) 내에서 템플릿 바인딩을 대신하여 더 유용하게 사용됩니다. 다른 설정은 [{Binding} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204782) 및 [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 클래스를 참조하세요.
 
-## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>What if the source and the target are not the same type?
+## <a name="what-if-the-source-and-the-target-are-not-the-same-type"></a>소스와 대상의 형식이 서로 다른 경우
 
-If you want to control the visibility of a UI element based on the value of a boolean property, or if you want to render a UI element with a color that's a function of a numeric value's range or trend, or if you want to display a date and/or time value in a UI element property that expects a string, then you'll need to convert values from one type to another. There will be cases where the right solution is to expose another property of the right type from your binding source class, and keep the conversion logic encapsulated and testable there. But that isn't flexible nor scalable when you have large numbers, or large combinations, of source and target properties. In that case you have a couple of options:
+부울 속성 값을 기반으로 UI 요소의 가시성을 제어하려는 경우, 숫자 값의 범위나 추세를 보여 주는 색상을 사용하여 UI 요소를 렌더링하려는 경우 또는 문자열이 필요한 UI 요소 속성에 날짜 및/또는 시간 값을 표시하려는 경우 형식 간에 값을 변환해야 합니다. 바인딩 소스 클래스에서 올바른 형식의 다른 속성을 노출하고 변환 논리를 캡슐화되고 테스트 가능하도록 유지하는 것이 올바른 해결 방법인 경우가 있습니다. 하지만 이 방법은 소스 및 대상 속성의 개수 또는 조합이 많은 경우 유연하지 않고 확장할 수도 없습니다. 이 경우 다음 두 가지 옵션이 있습니다.
 
-* If using {x:Bind} then you can bind directly to a function to do that conversion
-* Or you can specify a value converter which is an object designed to perform the conversion 
+* {x:Bind}를 사용할 경우에는 함수에 직접 바인딩하여 해당 변환을 수행할 수 있습니다.
+* 또는 변환을 수행하도록 설계된 개체인 값 변환기를 지정할 수 있습니다. 
 
-## <a name="value-converters"></a>Value Converters
+## <a name="value-converters"></a>값 변환기
 
-Here's a value converter, suitable for a one-time or a one-way binding, that converts a [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) value to a string value containing the month. The class implements [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
+다음은 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) 값을 월이 포함된 문자열 값으로 변환하는 일회성 또는 단방향 바인딩에 적합한 값 변환기입니다. 이 클래스는 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903)를 구현합니다.
 
 ```csharp
 public class DateToStringConverter : IValueConverter
@@ -340,7 +340,7 @@ Public Class DateToStringConverter
 End Class
 ```
 
-And here's how you consume that value converter in your binding object markup.
+그리고 바인딩 개체 태그에서 해당 값 변환기를 사용할 방법을 다음과 같습니다.
 
 ```xml
 <UserControl.Resources>
@@ -356,27 +356,27 @@ And here's how you consume that value converter in your binding object markup.
   Text="{Binding Month, Converter={StaticResource Converter1}}"/>
 ```
 
-The binding engine calls the [**Convert**](https://msdn.microsoft.com/library/windows/apps/hh701934) and [**ConvertBack**](https://msdn.microsoft.com/library/windows/apps/hh701938) methods if the [**Converter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converter) parameter is defined for the binding. When data is passed from the source, the binding engine calls **Convert** and passes the returned data to the target. When data is passed from the target (for a two-way binding), the binding engine calls **ConvertBack** and passes the returned data to the source.
+바인딩에 대해 [**Converter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converter) 매개 변수가 정의되어 있는 경우 바인딩 엔진은 [**Convert**](https://msdn.microsoft.com/library/windows/apps/hh701934) 및 [**ConvertBack**](https://msdn.microsoft.com/library/windows/apps/hh701938) 메서드를 호출합니다. 소스에서 데이터가 전달되면 바인딩 엔진은 **Convert**를 호출하고 반환되는 데이터를 대상에 전달합니다. 대상에서 데이터가 전달되면(양방향 바인딩의 경우) 바인딩 엔진은 **ConvertBack**을 호출하고 반환되는 데이터를 소스에 전달합니다.
 
-The converter also has optional parameters: [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage), which allows specifying the language to be used in the conversion, and [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter), which allows passing a parameter for the conversion logic. For an example that uses a converter parameter, see [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
+변환기는 다음과 같은 선택적 매개 변수를 사용합니다. [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage) 매개 변수는 변환에 사용할 언어를 지정하는 데 사용되고, [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter) 매개 변수는 변환 논리에 대한 매개 변수를 전달하는 데 사용됩니다. 변환기 매개 변수에 대한 사용 예제는 [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903)를 참조하세요.
 
-**Note**  If there is an error in the conversion, do not throw an exception. Instead, return [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue), which will stop the data transfer.
+**참고**  변환 중에 오류가 발생하더라도 예외가 발생하지 않습니다. 대신 [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue)을(를) 반환하고 데이터 전송을 중지합니다.
 
-To display a default value to use whenever the binding source cannot be resolved, set the **FallbackValue** property on the binding object in markup. This is useful to handle conversion and formatting errors. It is also useful to bind to source properties that might not exist on all objects in a bound collection of heterogeneous types.
+바인딩 소스를 확인할 수 없을 때마다 사용할 기본값을 표시하려면 태그에서 바인딩 개체에 대해 **FallbackValue** 속성을 설정합니다. 이 방법은 변환 및 형식 지정 오류를 처리하는 데 유용합니다. 또한 형식이 다른 바인딩된 컬렉션의 일부 개체에 존재하지 않을 수 있는 소스 속성에 바인딩하는 데에도 유용합니다.
 
-If you bind a text control to a value that is not a string, the data binding engine will convert the value to a string. If the value is a reference type, the data binding engine will retrieve the string value by calling [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) or [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136) if available, and will otherwise call [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx). Note, however, that the binding engine will ignore any **ToString** implementation that hides the base-class implementation. Subclass implementations should override the base class **ToString** method instead. Similarly, in native languages, all managed objects appear to implement [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) and [**IStringable**](https://msdn.microsoft.com/library/Dn302135). However, all calls to **GetStringRepresentation** and **IStringable.ToString** are routed to **Object.ToString** or an override of that method, and never to a new **ToString** implementation that hides the base-class implementation.
+텍스트 컨트롤을 문자열이 아닌 값에 바인딩하면 데이터 바인딩 엔진이 값을 문자열로 변환합니다. 값이 참조 형식이면 데이터 바인딩 엔진은 [**ICustomPropertyProvider.GetStringRepresentation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.icustompropertyprovider.getstringrepresentation) 또는 [**IStringable.ToString**](https://msdn.microsoft.com/library/Dn302136)을 호출하여(있는 경우) 문자열 값을 검색하고, 그렇지 않으면 [**Object.ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx)을 호출합니다. 그러나 바인딩 엔진은 기본 클래스 구현을 숨기는 **ToString** 구현을 무시합니다. 대신 하위 클래스 구현은 기본 클래스 **ToString** 메서드를 재정의해야 합니다. 마찬가지로, 네이티브 언어에서는 모든 관리되는 개체가 [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) 및 [**IStringable**](https://msdn.microsoft.com/library/Dn302135)을 구현하는 것처럼 보입니다. 그러나 **GetStringRepresentation** 및 **IStringable.ToString**에 대한 모든 호출은 **Object.ToString** 또는 해당 메서드의 재정의로 라우트되며, 기본 클래스 구현을 숨기는 새로운 **ToString** 구현으로는 라우트되지 않습니다.
 
 > [!NOTE]
-> Starting in Windows 10, version 1607, the XAML framework provides a built in boolean to Visibility converter. The converter maps **true** to the **Visible** enumeration value and **false** to **Collapsed** so you can bind a Visibility property to a boolean without creating a converter. To use the built in converter, your app's minimum target SDK version must be 14393 or later. You can't use it when your app targets earlier versions of Windows 10. For more info about target versions, see [Version adaptive code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-## <a name="function-binding-in-xbind"></a>Function binding in {x:Bind}
+## <a name="function-binding-in-xbind"></a>{x:Bind}에서 함수 바인딩
 
-{x:Bind} enables the final step in a binding path to be a function. This can be used to perform conversions, and to perform bindings that depend on more than one property. See [**{x:Bind} Markup Extension**](https://msdn.microsoft.com/en-us/windows/uwp/xaml-platform/x-bind-markup-extension)
+{x:Bind}를 사용하면 바인딩 경로의 마지막 단계가 함수가 됩니다. 이는 변환을 수행하고 둘 이상의 속성에 종속된 바인딩을 수행하는 데 사용할 수 있습니다. [**{x:Bind} 태그 확장**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 참조하세요.
 
 <span id="resource-dictionaries-with-x-bind"/>
-## <a name="resource-dictionaries-with-xbind"></a>Resource dictionaries with {x:Bind}
+## <a name="resource-dictionaries-with-xbind"></a>{x:Bind}를 사용하는 리소스 사전
 
-The [{x:Bind} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204783) depends on code generation, so it needs a code-behind file containing a constructor that calls **InitializeComponent** (to initialize the generated code). You re-use the resource dictionary by instantiating its type (so that **InitializeComponent** is called) instead of referencing its filename. Here's an example of what to do if you have an existing resource dictionary and you want to use {x:Bind} in it.
+[{x:Bind} 태그 확장](https://msdn.microsoft.com/library/windows/apps/Mt204783)은 코드 생성에 종속되므로 **InitializeComponent**를 호출하여 생성된 코드를 초기화하는 생성자가 포함된 코드 숨김 파일이 필요합니다. 파일 이름을 참조하는 대신 해당 형식을 인스턴스화(**InitializeComponent**가 호출되도록)하여 리소스 사전을 다시 사용합니다. 다음은 기존 리소스 사전이 있고 해당 사전에서 {x:Bind}를 사용하려는 경우에 수행할 작업에 대한 예제입니다.
 
 TemplatesResourceDictionary.xaml
 
@@ -429,9 +429,9 @@ MainPage.xaml
 </Page>
 ```
 
-## <a name="event-binding-and-icommand"></a>Event binding and ICommand
+## <a name="event-binding-and-icommand"></a>이벤트 바인딩 및 ICommand
 
-[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) supports a feature called event binding. With this feature, you can specify the handler for an event using a binding, which is an additional option on top of handling events with a method on the code-behind file. Let's say you have a **RootFrame** property on your **MainPage** class.
+[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)는 이벤트 바인딩이라는 기능을 지원합니다. 이 기능을 사용하면 바인딩을 사용하여 이벤트에 대한 처리기를 지정할 수 있습니다. 이는 코드 숨김 파일의 메서드를 사용하여 이벤트를 처리하는 것 외의 추가 옵션입니다. **MainPage** 클래스에 **RootFrame** 속성이 있다고 가정해 보겠습니다.
 
 ```csharp
     public sealed partial class MainPage : Page
@@ -441,7 +441,7 @@ MainPage.xaml
     }
 ```
 
-You can then bind a button's **Click** event to a method on the **Frame** object returned by the **RootFrame** property like this. Note that we also bind the button's **IsEnabled** property to another member of the same **Frame**.
+이와 같은 **RootFrame** 속성에서 반환되는 **Frame** 개체의 메서드에 단추의 **Click** 이벤트를 바인딩할 수 있습니다. 또한 단추의 **IsEnabled** 속성을 동일한 **Frame**의 다른 멤버에 바인딩할 수 있습니다.
 
 ```xml
     <AppBarButton Icon="Forward" IsCompact="True"
@@ -449,14 +449,14 @@ You can then bind a button's **Click** event to a method on the **Frame** object
     Click="{x:Bind RootFrame.GoForward}"/>
 ```
 
-Overloaded methods cannot be used to handle an event with this technique. Also, if the method that handles the event has parameters then they must all be assignable from the types of all of the event's parameters, respectively. In this case, [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693) is not overloaded and it has no parameters (but it would still be valid even if it took two **object** parameters). [**Frame.GoBack**](https://msdn.microsoft.com/library/windows/apps/Dn996568) is overloaded, though, so we can't use that method with this technique.
+오버로드된 메서드는 이 기술을 사용하여 이벤트를 처리하는 데 사용할 수 없습니다. 또한 이벤트를 처리하는 메서드에 매개 변수가 있는 경우 각각 모든 이벤트 매개 변수의 형식에서 할당 가능해야 합니다. 이 경우 [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693)는 오버로드되지 않고 매개 변수가 없습니다(그러나 두 개의 **object** 매개 변수를 사용한 경우에도 유효함). [**Frame.GoBack**](https://msdn.microsoft.com/library/windows/apps/Dn996568)은 오버로드되므로 이 기술에서는 이 메서드를 사용할 수 없습니다.
 
-The event binding technique is similar to implementing and consuming commands (a command is a property that returns an object that implements the [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx) interface). Both [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) and [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) work with commands. So that you don't have to implement the command pattern multiple times, you can use the **DelegateCommand** helper class that you'll find in the [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) sample (in the "Common" folder).
+이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)와 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
 
 
-## <a name="binding-to-a-collection-of-folders-or-files"></a>Binding to a collection of folders or files
+## <a name="binding-to-a-collection-of-folders-or-files"></a>폴더 또는 파일 컬렉션에 바인딩
 
-You can use the APIs in the [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) namespace to retrieve folder and file data. However, the various **GetFilesAsync**, **GetFoldersAsync**, and **GetItemsAsync** methods do not return values that are suitable for binding to list controls. Instead, you must bind to the return values of the [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428), and [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) methods of the [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501) class. The following code example from the [StorageDataSource and GetVirtualizedFilesVector sample](http://go.microsoft.com/fwlink/p/?linkid=228621) shows the typical usage pattern. Remember to declare the **picturesLibrary** capability in your app package manifest, and confirm that there are pictures in your Pictures library folder.
+[**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346) 네임스페이스의 API를 사용하여 폴더 및 파일 데이터를 검색할 수 있습니다. 그러나 다양한 **GetFilesAsync**, **GetFoldersAsync** 및 **GetItemsAsync** 메서드는 목록 컨트롤에 바인딩하기에 적합한 값을 반환하지 않습니다. 대신 [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501) 클래스의 [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422), [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428) 및 [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430) 메서드의 반환 값에 바인딩해야 합니다. [StorageDataSource 및 GetVirtualizedFilesVector 샘플](http://go.microsoft.com/fwlink/p/?linkid=228621)의 다음 코드 예제는 일반적인 사용 패턴을 보여 줍니다. 앱 패키지 매니페스트에서 **picturesLibrary** 기능을 선언하고 그림 라이브러리 폴더에 그림이 있는지 확인해야 합니다.
 
 ```csharp
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -481,21 +481,21 @@ You can use the APIs in the [**Windows.Storage**](https://msdn.microsoft.com/lib
         }
 ```
 
-You will typically use this approach to create a read-only view of file and folder info. You can create two-way bindings to the file and folder properties, for example to let users rate a song in a music view. However, any changes are not persisted until you call the appropriate **SavePropertiesAsync** method (for example, [**MusicProperties.SavePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/BR207760)). You should commit changes when the item loses focus because this triggers a selection reset.
+일반적으로 이 접근 방식을 사용하여 파일 및 폴더 정보의 읽기 전용 보기를 만듭니다. 예를 들어 사용자가 음악 보기에서 노래를 평가할 수 있도록 파일 및 폴더 속성에 대한 양방향 바인딩을 만들 수 있습니다. 그러나 적절한 **SavePropertiesAsync** 메서드(예: [**MusicProperties.SavePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/BR207760))를 호출할 때까지 변경 사항은 지속되지 않습니다. 항목이 초점을 잃으면 선택 초기화가 트리거되므로 변경 사항을 적용해야 합니다.
 
-Note that two-way binding using this technique works only with indexed locations, such as Music. You can determine whether a location is indexed by calling the [**FolderInformation.GetIndexedStateAsync**](https://msdn.microsoft.com/library/windows/apps/BR207627) method.
+이 기술을 사용한 양방향 바인딩은 음악과 같이 인덱싱된 위치에서만 작동합니다. [**FolderInformation.GetIndexedStateAsync**](https://msdn.microsoft.com/library/windows/apps/BR207627) 메서드를 호출하여 위치가 인덱싱되었는지 여부를 확인할 수 있습니다.
 
-Note also that a virtualized vector can return **null** for some items before it populates their value. For example, you should check for **null** before you use the [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) value of a list control bound to a virtualized vector, or use [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/BR209768) instead.
+가상화된 벡터는 해당 값을 채우기 전에 일부 항목에 대해 **null**을 반환할 수도 있습니다. 예를 들어 가상화된 벡터에 바인딩된 목록 컨트롤의 [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770) 값을 사용하기 전에 **null**을 확인하거나 [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/BR209768)를 대신 사용해야 합니다.
 
-## <a name="binding-to-data-grouped-by-a-key"></a>Binding to data grouped by a key
+## <a name="binding-to-data-grouped-by-a-key"></a>키별로 그룹화된 데이터에 바인딩
 
-If you take a flat collection of items—books, for example, represented by a **BookSku** class—and you group the items by using a common property as a key—the **BookSku.AuthorName** property, for example—then the result is called grouped data. When you group data, it is no longer a flat collection. Grouped data is a collection of group objects, where each group object has a) a key and b) a collection of items whose property matches that key. To take the books example again, the result of grouping the books by author name results in a collection of author name groups where each group has a) a key, which is an author name, and b) a collection of the **BookSku**s whose **AuthorName** property matches the group's key.
+항목의 단순 컬렉션(예를 들어 **BookSku** 클래스로 표현되는 책)을 가져와 공용 속성(예를 들어 **BookSku.AuthorName** 속성)을 키로 사용하여 항목을 그룹화한 경우 그룹화된 데이터가 호출됩니다. 데이터를 그룹화한 경우 해당 데이터는 더 이상 단순 컬렉션이 아닙니다. 그룹화된 데이터는 각 그룹 개체에 a) 키 및 b) 속성이 해당 키와 일치하는 항목의 컬렉션이 있는 그룹 개체의 컬렉션입니다. 책을 다시 예로 들어 저자 이름별로 책을 그룹화하면 각 그룹에 a) 저자 이름인 키 및 b) **AuthorName** 속성이 그룹의 키와 일치하는 **BookSku** 컬렉션이 있는 저자 이름 그룹 컬렉션이 생성됩니다.
 
-In general, to display a collection, you bind the [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) of an items control (such as [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) or [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)) directly to a property that returns a collection. If that's a flat collection of items then you don't need to do anything special. But if it's a collection of group objects (as it is when binding to grouped data) then you need the services of an intermediary object called a [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) which sits between the items control and the binding source. You bind the **CollectionViewSource** to the property that returns grouped data, and you bind the items control to the **CollectionViewSource**. An extra value-add of a **CollectionViewSource** is that it keeps track of the current item, so you can keep more than one items control in sync by binding them all to the same **CollectionViewSource**. You can also access the current item programmatically through the [**ICollectionView.CurrentItem**](https://msdn.microsoft.com/library/windows/apps/BR209857) property of the object returned by the [**CollectionViewSource.View**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.view) property.
+일반적으로 컬렉션을 표시하려면 항목 컨트롤의 [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828)(예: [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 또는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705))를 컬렉션을 반환하는 속성에 직접 바인딩합니다. 항목의 단순 컬렉션이 없는 경우에는 특별히 수행해야 하는 작업이 없습니다. 그러나 그룹화된 데이터에 바인딩하는 경우처럼 그룹 개체의 컬렉션인 경우 항목 컨트롤과 바인딩 소스 사이에 있는 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)라는 중간 개체의 서비스가 필요합니다. **CollectionViewSource**를 그룹화된 데이터를 반환하는 속성에 바인딩하고, 항목 컨트롤을 **CollectionViewSource**에 바인딩합니다. **CollectionViewSource**의 추가적인 부가 가치는 현재 항목을 추적하므로 둘 이상의 항목 컨트롤을 모두 동일한 **CollectionViewSource**에 바인딩하여 동기화된 상태로 유지할 수 있다는 점입니다. 또한 [**CollectionViewSource.View**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.view) 속성에서 반환되는 개체의 [**ICollectionView.CurrentItem**](https://msdn.microsoft.com/library/windows/apps/BR209857) 속성을 통해 현재 항목에 프로그래밍 방식으로 액세스할 수 있습니다.
 
-To activate the grouping facility of a [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833), set [**IsSourceGrouped**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.issourcegrouped) to **true**. Whether you also need to set the [**ItemsPath**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.itemspath) property depends on exactly how you author your group objects. There are two ways to author a group object: the "is-a-group" pattern, and the "has-a-group" pattern. In the "is-a-group" pattern, the group object derives from a collection type (for example, **List&lt;T&gt;**), so the group object actually is itself the group of items. With this pattern you do not need to set **ItemsPath**. In the "has-a-group" pattern, the group object has one or more properties of a collection type (such as **List&lt;T&gt;**), so the group "has a" group of items in the form of a property (or several groups of items in the form of several properties). With this pattern you need to set **ItemsPath** to the name of the property that contains the group of items.
+[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)의 그룹화 기능을 활성화하려면 [**IsSourceGrouped**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.issourcegrouped)를 **true**로 설정합니다. [**ItemsPath**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.collectionviewsource.itemspath) 속성을 설정해야 하는지 여부는 정확히 그룹 개체를 작성하는 방법에 따라 결정됩니다. 그룹 개체를 작성하는 방법에는 "is-a-group" 패턴과 "has-a-group" 패턴의 두 가지 방법이 있습니다. "is-a-group" 패턴에서는 그룹 개체가 컬렉션 형식(예: **List&lt;T&gt;**)에서 파생되므로 실제로 그룹 개체는 항목 그룹 자체입니다. 이 패턴을 사용하면 **ItemsPath**를 설정하지 않아도 됩니다. "has-a-group" 패턴에서는 그룹 개체가 하나 이상의 컬렉션 형식(예: **List&lt;T&gt;**) 속성을 가지므로 그룹에 속성 형식의 항목 그룹 "하나가 있습니다"(또는 여러 속성 형식의 여러 항목 그룹). 이 패턴을 사용하면 **ItemsPath**를 항목 그룹을 포함하는 속성 이름으로 설정해야 합니다.
 
-The example below illustrates the "has-a-group" pattern. The page class has a property named [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713), which returns an instance of our view model. The [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) binds to the **Authors** property of the view model (**Authors** is the collection of group objects) and also specifies that it's the **Author.BookSkus** property that contains the grouped items. Finally, the [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) is bound to the **CollectionViewSource**, and has its group style defined so that it can render the items in groups.
+아래 예제에서는 "has-a-group" 패턴을 보여 줍니다. 페이지 클래스에서 뷰 모델의 인스턴스를 반환하는 [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713)이라는 속성이 있습니다. [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)는 뷰 모델의 **Authors** 속성(**Authors**는 그룹 개체의 컬렉션)에 바인딩되며, 그룹화된 항목을 포함하는 **Author.BookSkus** 속성임을 지정합니다. 마지막으로 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)는 **CollectionViewSource**에 바인딩되며, 그룹의 항목을 렌더링할 수 있도록 그룹 스타일이 정의되어 있습니다.
 
 ```csharp
     <Page.Resources>
@@ -516,11 +516,11 @@ The example below illustrates the "has-a-group" pattern. The page class has a pr
     </GridView>
 ```
 
-Note that the [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828) must use [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) (and not [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)) because it needs to set the **Source** property to a resource. To see the above example in the context of the complete app, download the [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) sample app. Unlike the markup shown above, [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) uses {Binding} exclusively.
+[**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828)는 **Source** 속성을 리소스로 설정해야 하므로 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)가 아니라 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용해야 합니다. 완전한 앱의 컨텍스트에서 위의 예제를 보려면 [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 샘플 앱을 다운로드하세요. 위에 표시된 태그와 달리 [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952)는 {Binding}을 단독으로 사용합니다.
 
-You can implement the "is-a-group" pattern in one of two ways. One way is to author your own group class. Derive the class from **List&lt;T&gt;** (where *T* is the type of the items). For example, `public class Author : List<BookSku>`. The second way is to use a [LINQ](http://msdn.microsoft.com/library/bb397926.aspx) expression to dynamically create group objects (and a group class) from like property values of the **BookSku** items. This approach—maintaining only a flat list of items and grouping them together on the fly—is typical of an app that accesses data from a cloud service. You get the flexibility to group books by author or by genre (for example) without needing special group classes such as **Author** and **Genre**.
+"is-a-group" 패턴을 구현하는 방법에는 두 가지 방법이 있습니다. 한 가지 방법은 사용자 고유의 그룹 클래스를 작성하는 것입니다. **List&lt;T&gt;**(여기서 *T*는 항목의 형식)에서 클래스를 파생합니다. 예를 들면 `public class Author : List<BookSku>`입니다. 두 번째 방법은 [LINQ](http://msdn.microsoft.com/library/bb397926.aspx) 식을 사용하여 **BookSku** 항목의 유사한 속성 값에서 그룹 개체(및 그룹 클래스)를 동적으로 만드는 것입니다. 이 방법(항목의 단순 목록만 유지하고 즉석에서 그룹화)은 클라우드 서비스에서 데이터에 액세스하는 앱에 일반적입니다. **Author** 및 **Genre**와 같이 특정 그룹 클래스가 필요 없는 책을 저자 또는 장르 등으로 유연하게 그룹화할 수 있게 됩니다.
 
-The example below illustrates the "is-a-group" pattern using [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). This time we group books by genre, displayed with the genre name in the group headers. This is indicated by the "Key" property path in reference to the group [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) value.
+아래 예제에서는 [LINQ](http://msdn.microsoft.com/library/bb397926.aspx)를 사용하는 "is-a-group" 패턴을 보여 줍니다. 여기에서는 장르별로 책을 그룹화합니다. 따라서 그룹 머리글에 장르 이름으로 책이 표시됩니다. 이는 그룹 [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx) 값에 대한 "Key" 속성 경로로 표시됩니다.
 
 ```csharp
     using System.Linq;
@@ -544,7 +544,7 @@ The example below illustrates the "is-a-group" pattern using [LINQ](http://msdn.
     }
 ```
 
-Remember that when using [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) with data templates we need to indicate the type being bound to by setting an **x:DataType** value. If the type is generic then we can't express that in markup so we need to use [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) instead in the group style header template.
+데이터 템플릿에서 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)를 사용할 때는 **x:DataType** 값을 설정하여 바인딩할 형식을 나타내야 합니다. 형식이 제네릭인 경우 태그로 표현할 수 없으므로 대신 그룹 스타일 헤더 템플릿에서 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)을 사용해야 합니다.
 
 ```xml
     <Grid.Resources>
@@ -570,28 +570,28 @@ Remember that when using [{x:Bind}](https://msdn.microsoft.com/library/windows/a
     </GridView>
 ```
 
-A [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) control is a great way for your users to view and navigate grouped data. The [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) sample app illustrates how to use the **SemanticZoom**. In that app, you can view a list of books grouped by author (the zoomed-in view) or you can zoom out to see a jump list of authors (the zoomed-out view). The jump list affords much quicker navigation than scrolling through the list of books. The zoomed-in and zoomed-out views are actually **ListView** or **GridView** controls bound to the same **CollectionViewSource**.
+[**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/Hh702601) 컨트롤은 사용자가 그룹화된 데이터를 보고 탐색하는 데 유용한 방법입니다. [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) 샘플 앱은 **SemanticZoom**을 사용하는 방법을 보여 줍니다. 이 앱에서는 저자별로 그룹화된 책 목록을 보거나(확대 보기), 축소하여 저자의 점프 목록(축소 보기)을 볼 수 있습니다. 점프 목록은 책 목록을 스크롤할 때보다 훨씬 더 빠른 탐색이 가능케 합니다. 확대 및 축소 보기는 실제로 동일한 **CollectionViewSource**에 바인딩된 **ListView** 또는 **GridView** 컨트롤입니다.
 
-![An illustration of a SemanticZoom](images/sezo.png)
+![SemanticZoom의 그림](images/sezo.png)
 
-When you bind to hierarchical data—such as subcategories within categories—you can choose to display the hierarchical levels in your UI with a series of items controls. A selection in one items control determines the contents of subsequent items controls. You can keep the lists synchronized by binding each list to its own [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) and binding the **CollectionViewSource** instances together in a chain. This is called a master/details (or list/details) view. For more info, see [How to bind to hierarchical data and create a master/details view](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md).
+계층적 데이터(예: 범주 내의 하위 범주)에 바인딩하는 경우 UI에서 일련의 항목 컨트롤이 포함된 계층 수준을 표시할 수 있습니다. 하나의 항목 컨트롤에서 선택한 사항에 따라 이후 항목 컨트롤의 콘텐츠가 결정됩니다. 각 목록을 자체 [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) 및 **CollectionViewSource** 인스턴스에 체인으로 함께 바인딩하여 목록을 동기화 상태로 유지할 수 있습니다. 이를 마스터/세부 정보(또는 목록/세부 정보) 보기라고 합니다. 자세한 내용은 [계층적 데이터에 바인딩하고 마스터/세부 정보 보기를 만드는 방법](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md)을 참조하세요.
 
 <span id="debugging"/>
-## <a name="diagnosing-and-debugging-data-binding-problems"></a>Diagnosing and debugging data binding problems
+## <a name="diagnosing-and-debugging-data-binding-problems"></a>데이터 바인딩 문제 진단 및 디버깅
 
-Your binding markup contains the names of properties (and, for C#, sometimes fields and methods). So when you rename a property, you'll also need to change any binding that references it. Forgetting to do that leads to a typical example of a data binding bug, and your app either won't compile or won't run correctly.
+바인딩 태그는 속성(C#의 경우 때로 필드와 메서드도 포함됨) 이름을 포함합니다. 따라서 속성 이름을 바꾼 경우 해당 속성을 참조하는 바인딩도 변경해야 합니다. 그러지 않으면 일반적인 데이터 바인딩 버그가 발생하며 앱이 컴파일되지 않거나 제대로 작동하지 않습니다.
 
-The binding objects created by [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) and [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) are largely functionally equivalent. But {x:Bind} has type information for the binding source, and it generates source code at compile-time. With {x:Bind} you get the same kind of problem detection that you get with the rest of your code. That includes compile-time validation of your binding expressions, and debugging by setting breakpoints in the source code generated as the partial class for your page. These classes can be found in the files in your `obj` folder, with names like (for C#) `<view name>.g.cs`). If you have a problem with a binding then turn on **Break On Unhandled Exceptions** in the Microsoft Visual Studio debugger. The debugger will break execution at that point, and you can then debug what has gone wrong. The code generated by {x:Bind} follows the same pattern for each part of the graph of binding source nodes, and you can use the info in the **Call Stack** window to help determine the sequence of calls that led up to the problem.
+[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 및 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)에서 만든 바인딩 개체는 기능적으로 거의 동일합니다. 그러나 {x:Bind}는 바인딩 소스에 대한 형식 정보가 있으며, 컴파일 타임에 소스 코드를 생성합니다. {x:Bind}를 사용하면 코드의 나머지 부분에서 발생한 것과 동일한 종류의 문제를 검색할 수 있습니다. 여기에는 바인딩 식에 대한 컴파일 타임 유효성 검사와 페이지의 부분 클래스로 생성된 소스 코드에 중단점을 설정하는 방식의 디버깅이 포함됩니다. 이러한 클래스는 `obj` 폴더의 파일(C#의 경우 이름이 `<view name>.g.cs`와 같음)에서 찾을 수 있습니다. 바인딩에 문제가 있는 경우 Microsoft Visual Studio 디버거에서 **처리되지 않은 예외 발생 시 중단**을 설정합니다. 디버거가 이 시점에 실행을 중단하므로 잘못된 것을 디버그할 수 있습니다. {x:Bind}에 의해 생성된 코드는 바인딩 소스 코드 그래프의 각 부분에 대해 동일한 패턴을 따르며, **호출 스택** 창의 정보를 사용하여 문제에 이르는 호출 시퀀스를 결정할 수 있습니다.
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) does not have type information for the binding source. But when you run your app with the debugger attached, any binding errors appear in the **Output** window in Visual Studio.
+[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)에는 바인딩 소스에 대한 형식 정보가 없습니다. 그러나 디버거를 연결한 상태로 앱을 실행하면 Visual Studio의 **출력** 창에 모든 바인딩 오류가 표시됩니다.
 
-## <a name="creating-bindings-in-code"></a>Creating bindings in code
+## <a name="creating-bindings-in-code"></a>코드에서 바인딩 만들기
 
-**Note**  This section only applies to [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), because you can't create [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) bindings in code. However, some of the same benefits of {x:Bind} can be achieved with [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx), which enables you to register for change notifications on any dependency property.
+**참고**  이 섹션은 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782)에만 적용됩니다. 코드에서 [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 바인딩을 만들 수 없기 때문입니다. 그러나 모든 종속성 속성에 대한 변경 알림을 등록할 수 있는 [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx)을 사용해서도 {x:Bind}를 사용할 때와 동일한 이점을 얻을 수 있습니다.
 
-You can also connect UI elements to data using procedural code instead of XAML. To do this, create a new [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) object, set the appropriate properties, then call [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) or [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx). Creating bindings programmatically is useful when you want to choose the binding property values at run-time or share a single binding among multiple controls. Note, however, that you cannot change the binding property values after you call **SetBinding**.
+XAML 대신 절차 코드를 사용하여 UI 요소를 데이터에 연결할 수도 있습니다. 이렇게 하려면 새로운 [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820) 개체를 만들고, 적절한 속성을 설정하고, [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) 또는 [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx)을 호출합니다. 런타임에 바인딩 속성 값을 선택하거나 여러 컨트롤 간에 단일 바인딩을 공유하려는 경우 프로그래밍 방식으로 바인딩을 만드는 것이 유용합니다. 그러나 **SetBinding**을 호출한 후에는 바인딩 속성 값을 변경할 수 없습니다.
 
-The following example shows how to implement a binding in code.
+다음 예제는 코드에서 바인딩을 구현하는 방법을 보여 줍니다.
 
 ```xml
 <TextBox x:Name="MyTextBox" Text="Text"/>
@@ -629,30 +629,30 @@ Dim binding As New Binding() With {.Path = New PropertyPath("Brush1")}
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 ```
 
-## <a name="xbind-and-binding-feature-comparison"></a>{x:Bind} and {Binding} feature comparison
+## <a name="xbind-and-binding-feature-comparison"></a>{x:Bind}와 {Binding}의 기능 비교
 
-| Feature | {x:Bind} | {Binding} | Notes |
+| 기능 | {x:Bind} | {Binding} | 참고 |
 |---------|----------|-----------|-------|
-| Path is the default property | `{x:Bind a.b.c}` | `{Binding a.b.c}` | | 
-| Path property | `{x:Bind Path=a.b.c}` | `{Binding Path=a.b.c}` | In x:Bind, Path is rooted at the Page by default, not the DataContext. | 
-| Indexer | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | Binds to the specified item in the collection. Only integer-based indexes are supported. | 
-| Attached properties | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | Attached properties are specified using parentheses. If the property is not declared in a XAML namespace, then prefix it with an xml namespace, which should be mapped to a code namespace at the head of the document. | 
-| Casting | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | Not needed< | Casts are specified using parentheses. If the property is not declared in a XAML namespace, then prefix it with an xml namespace, which should be mapped to a code namespace at the head of the document. | 
-| Converter | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}}` | Converters must be declared at the root of the Page/ResourceDictionary, or in App.xaml. | 
-| ConverterParameter, ConverterLanguage | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | Converters must be declared at the root of the Page/ResourceDictionary, or in App.xaml. | 
-| TargetNullValue | `{x:Bind Name, TargetNullValue=0}` | `{Binding Name, TargetNullValue=0}` | Used when the leaf of the binding expression is null. Use single quotes for a string value. | 
-| FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | Used when any part of the path for the binding (except for the leaf) is null. | 
-| ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | With {x:Bind} you're binding to a field; Path is rooted at the Page by default, so any named element can be accessed via its field. | 
-| RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | With {x:Bind}, name the element and use its name in Path. | 
-| RelativeSource: TemplatedParent | Not supported | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Regular template binding can be used in control templates for most uses. But use TemplatedParent where you need to use a converter, or a two-way binding.< | 
-| Source | Not supported | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | For {x:Bind} use a property or a static path instead. | 
-| Mode | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | Mode can be OneTime, OneWay, or TwoWay. {x:Bind} defaults to OneTime; {Binding} defaults to OneWay. | 
-| UpdateSourceTrigger | Not supported | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x:Bind} uses PropertyChanged behavior for all cases except TextBox.Text where it waits for lost focus to update the source. | 
+| 경로가 기본 속성 | `{x:Bind a.b.c}` | `{Binding a.b.c}` | | 
+| 속성 경로 | `{x:Bind Path=a.b.c}` | `{Binding Path=a.b.c}` | x:Bind에서는 경로의 루트가 기본적으로 DataContext가 아니라 Page에서 지정됩니다. | 
+| 인덱서 | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | 컬렉션의 지정된 항목에 바인딩됩니다. 정수 기반 인덱스만 지원됩니다. | 
+| 연결된 속성 | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | 연결된 속성은 괄호 안에 지정됩니다. XAML 네임스페이스에서 속성이 선언되지 않은 경우 문서 헤드의 코드 네임스페이스에 매핑되어야 하는 xml 네임스페이스를 접두사로 사용합니다. | 
+| 캐스팅 | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | 필요하지 않습니다.&lt; | 캐스트는 괄호 안에 지정됩니다. XAML 네임스페이스에서 속성이 선언되지 않은 경우 문서 헤드의 코드 네임스페이스에 매핑되어야 하는 xml 네임스페이스를 접두사로 사용합니다. | 
+| 변환기 | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}}` | 변환기는 Page/ResourceDictionary 또는 App.xaml에서 선언해야 합니다. | 
+| ConverterParameter, ConverterLanguage | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | 변환기는 Page/ResourceDictionary 또는 App.xaml에서 선언해야 합니다. | 
+| TargetNullValue | `{x:Bind Name, TargetNullValue=0}` | `{Binding Name, TargetNullValue=0}` | 바인딩 식의 리프가 null일 때 사용됩니다. 문자열 값에 작은따옴표를 사용합니다. | 
+| FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | 바인딩에 대한 경로의 일부(리프 제외)가 null일 때 사용됩니다. | 
+| ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | {x:Bind}를 사용하면 필드에 바인딩됩니다. 경로의 루트가 기본적으로 Page에서 지정되므로 해당 필드를 통해 모든 명명된 요소에 액세스할 수 있습니다. | 
+| RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | {x:Bind}를 사용하는 경우 요소의 이름을 지정하고 경로에서 해당 이름을 사용합니다. | 
+| RelativeSource: TemplatedParent | 지원되지 않음 | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | 일반 템플릿 바인딩은 대부분 컨트롤 템플릿에서 사용할 수 있습니다. 하지만 변환기 또는 양방향 바인딩을 사용해야 하는 경우 TemplatedParent를 사용합니다.&lt; | 
+| 원본 | 지원되지 않음 | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | {x:Bind}의 경우 속성 또는 정적 경로를 대신 사용합니다. | 
+| 모드 | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | 모드는 OneTime, OneWay 또는 TwoWay일 수 있습니다. {x:Bind} defaults to OneTime; {Binding} defaults to OneWay. | 
+| UpdateSourceTrigger | 지원되지 않음 | `<Binding UpdateSourceTrigger="Default [or] PropertyChanged [or] Explicit"/>` | {x:Bind}에서는 손실된 포커스에서 소스를 업데이트할 때까지 기다리는 TextBox.Text를 제외하고 모든 경우에 PropertyChanged 동작을 사용합니다. | 
 
 
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

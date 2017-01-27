@@ -6,11 +6,11 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 4d474af6930354482f9f8b6e7754ddaf6fe65dac
 
 ---
-# 하이퍼링크
+# <a name="hyperlinks"></a>하이퍼링크
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -21,17 +21,13 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 <div class="important-apis" >
 <b>중요 API</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279356"><strong>Hyperlink 텍스트 요소</strong></a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/br242739"><strong>HyperlinkButton 컨트롤</strong></a></li>
+<li>[**Hyperlink 텍스트 요소**](https://msdn.microsoft.com/library/windows/apps/dn279356)</li>
+<li>[**HyperlinkButton 컨트롤**](https://msdn.microsoft.com/library/windows/apps/br242739)</li>
 </ul>
-
-</div>
 </div>
 
 
-
-
-## 올바른 컨트롤인가요?
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 선택하면 반응하고 선택한 텍스트에 대한 추가 정보로 이동되는 텍스트가 필요할 때는 하이퍼링크를 사용합니다.
 
@@ -41,13 +37,13 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 -   **HyperlinkButton**은 독립 실행형 하이퍼링크에 사용합니다. HyperlinkButton은 특수화된 단추 컨트롤로, 단추를 사용하는 모든 위치에서 사용할 수 있습니다.
 -   클릭할 수 있는 이미지를 만들려면 콘텐츠로 [이미지](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.aspx)가 있는 **HyperlinkButton**을 사용합니다.
 
-## 예제
+## <a name="examples"></a>예제
 
 계산기 앱의 하이퍼링크
 
 ![계산기 앱에 있는 하이퍼링크의 예](images/control-examples/hyperlinks-calculator.png)
 
-## Hyperlink 텍스트 요소 만들기
+## <a name="create-a-hyperlink-text-element"></a>Hyperlink 텍스트 요소 만들기
 
 이 예제는 [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 내에서 Hyperlink 텍스트 요소를 사용하는 방법을 보여 줍니다.
 
@@ -64,9 +60,9 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 ![텍스트 요소로 표시되는 하이퍼링크의 예](images/controls_hyperlink-element.png) 
 
-> **팁**  XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
+> **팁**&nbsp;&nbsp;XAML에서 텍스트 컨트롤에 다른 텍스트 요소와 함께 Hyperlink를 사용하는 경우에는 콘텐츠를 [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx) 컨테이너에 넣고 `xml:space="preserve"` 특성을 Span에 적용하여 Hyperlink와 기타 요소 사이의 공백을 유지합니다.
 
-## HyperlinkButton 만들기
+## <a name="create-a-hyperlinkbutton"></a>HyperlinkButton 만들기
 
 다음은 텍스트와 이미지가 모두 있는 HyperlinkButton을 사용하는 방법입니다.
 
@@ -87,7 +83,7 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 ![단추 컨트롤로 표시되는 하이퍼링크의 예](images/controls_hyperlink-button-image.png)
 
-## 이동 처리
+## <a name="handle-navigation"></a>이동 처리
 
 두 종류의 하이퍼링크에 대한 이동 처리 방법은 동일하며 **NavigateUri** 속성을 설정하거나 **Click** 이벤트를 처리할 수 있습니다.
 
@@ -95,7 +91,8 @@ ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성을 설정합니다. 사용자가 하이퍼링크를 클릭하거나 탭하면 지정된 URI가 기본 브라우저에서 열립니다. 기본 브라우저는 앱과는 별도의 프로세스에서 실행됩니다.
 
-> **참고**  http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적당한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
+> [!NOTE]
+> http: 또는 https: 체계를 사용하지 않아도 됩니다. 브라우저에서 로드하기 적합한 위치에 리소스 콘텐츠가 있으면 ms-appx:, ms-appdata: 또는 ms-resources:와 같은 체계를 사용할 수 있습니다. 그러나 file: 체계는 특별히 차단됩니다. 자세한 내용은 [URI 체계](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx)를 참조하세요.
 
 > 사용자가 하이퍼링크를 클릭하면 NavigateUri 속성 값이 URI 형식 및 체계에 대한 시스템 처리기에 전달됩니다. 그런 다음 시스템은 NavigateUri에 제공된 URI의 체계를 등록한 앱을 시작합니다.
 
@@ -110,7 +107,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 
 기본 브라우저에서 NavigateUri에 지정된 모든 유효한 대상이 로드되지 않도록 하는 데 Click 이벤트 처리기 내에서 수행할 수 있는 작업은 없습니다. 이 작업은 하이퍼링크가 활성화되면 자동으로(비동기적으로) 수행되며 Click 이벤트 처리기 내에서 취소할 수 없습니다. 
 
-## 하이퍼링크 밑줄
+## <a name="hyperlink-underlines"></a>하이퍼링크 밑줄
 기본적으로 하이퍼링크에 밑줄이 표시됩니다. 이 밑줄은 접근성 요구 사항을 충족하는 데 도움이 되므로 중요합니다. 색맹인 사용자는 밑줄을 사용하여 하이퍼링크 및 기타 텍스트를 구분합니다. 밑줄을 사용하지 않도록 설정하려면 하이퍼링크와 다른 텍스트를 구분할 수 있는 다른 유형의 서식(FontWeight 또는 FontStyle)을 지정하는 것이 좋습니다.
 
 **Hyperlink 텍스트 요소**
@@ -127,7 +124,7 @@ URI로 이동하기 위해 하이퍼링크를 사용하려면 NavigateUri 속성
 
 밑줄이 없는 텍스트로 표시되는 단추가 필요한 경우 표준 단추 컨트롤을 사용하고 기본 제공 `TextBlockButtonStyle` 시스템 리소스를 해당 Style 속성에 적용합니다.
 
-## Hyperlink 텍스트 요소에 대한 참고 사항
+## <a name="notes-for-hyperlink-text-element"></a>Hyperlink 텍스트 요소에 대한 참고 사항
 
 이 섹션은 Hyperlink 텍스트 요소에만 적용되고 HyperlinkButton 컨트롤에는 적용되지 않습니다.
 
@@ -145,16 +142,14 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 
 하이퍼링크의 기본 색상은 시스템의 테마 컬러입니다. [Foreground](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.foreground.aspx) 속성에서 이를 재정의할 수 있습니다.
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 -   하이퍼링크는 탐색하는 데만 사용하고 다른 작업에는 사용하지 않도록 합니다.
 -   텍스트 기반 하이퍼링크의 유형 램프에서 본문 스타일을 사용합니다. [**fonts and the Windows 10 type ramp**](fonts.md)를 참조하세요.
 -   사용자 구별할 수 있고 각각을 쉽게 선택할 수 있게 하이퍼링크 사이에 충분한 공간을 둡니다.
 -   사용자가 이동될 위치를 나타내는 도구 설명을 하이퍼링크에 추가합니다. 사용자가 외부 사이트로 이동되면 도구 설명 내에 최상위 도메인 이름을 포함하고 텍스트에 보조 글꼴 색을 지정합니다.
 
-
-
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [텍스트 컨트롤](text-controls.md)
 - [도구 설명에 대한 지침](tooltips.md)
@@ -165,6 +160,6 @@ Hyperlink는 [Control](https://msdn.microsoft.com/library/windows/apps/windows.u
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

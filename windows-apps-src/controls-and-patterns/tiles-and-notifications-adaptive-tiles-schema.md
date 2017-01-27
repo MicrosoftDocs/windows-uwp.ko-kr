@@ -6,17 +6,17 @@ ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 70c06949ee9ac8f9a3f914fc4e020de0460124fa
 
 ---
-# 적응형 타일 템플릿: 스키마 및 지침
+# <a name="adaptive-tile-templates-schema-and-guidance"></a>적응형 타일 템플릿: 스키마 및 지침
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. 지침과 예제는 [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)를 참조하세요.
 
-## 타일 요소
+## <a name="tile-element"></a>타일 요소
 
 
 ``` xml
@@ -28,7 +28,7 @@ ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 </tile>
 ```
 
-## 시각적 요소
+## <a name="visual-element"></a>시각적 요소
 
 
 ``` xml
@@ -47,7 +47,7 @@ ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 </visual>
 ```
 
-## 바인딩 요소
+## <a name="binding-element"></a>바인딩 요소
 
 
 ``` xml
@@ -72,7 +72,7 @@ ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 </binding>
 ```
 
-## 이미지 요소
+## <a name="image-element"></a>이미지 요소
 
 
 ``` xml
@@ -86,7 +86,7 @@ ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## 텍스트 요소
+## <a name="text-element"></a>텍스트 요소
 
 
 ``` xml
@@ -103,9 +103,9 @@ ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 </text>
 ```
 
-textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
+textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral
 
-## 그룹 요소
+## <a name="group-element"></a>그룹 요소
 
 
 ``` xml
@@ -117,7 +117,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </group>
 ```
 
-## 하위 그룹 요소
+## <a name="subgroup-element"></a>하위 그룹 요소
 
 
 ``` xml
@@ -133,7 +133,7 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 </subgroup>
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
@@ -147,6 +147,6 @@ textStyle 값: caption captionSubtle body bodySubtle base baseSubtle subtitle su
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

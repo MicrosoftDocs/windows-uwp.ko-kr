@@ -6,24 +6,28 @@ ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a835e57c3ae778149cda933d57cf74408b74b416
+ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
+ms.openlocfilehash: 925826f2702474a0003f2ca2dee6ff10992f5f25
 
 ---
 
-# 가장자리 기반 UI 애니메이션
+# <a name="edge-based-ui-animations"></a>가장자리 기반 UI 애니메이션
 
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 
 가장자리 기반 애니메이션은 화면의 가장자리에서 시작되는 UI를 표시하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱에 오버레이하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 화면의 일부일 경우 나머지 앱 화면은 UI를 포함하도록 크기를 조정해야 합니다.
 
-**중요 API**
+<div class="important-apis" >
+<b>중요 API</b><br/>
+<ul>
+<li>[**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)</li>
+</ul>
+</div>
 
--   [**EdgeUIThemeTransition 클래스**](https://msdn.microsoft.com/library/windows/apps/hh702324)
 
-
-## 권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   화면으로 확장되지 않는 사용자 지정 메시지나 오류 바를 표시하거나 숨기려면 가장자리 UI 애니메이션을 사용합니다.
@@ -38,10 +42,10 @@ ms.openlocfilehash: a835e57c3ae778149cda933d57cf74408b74b416
 
     ![Edge UI 또는 패널 UI를 사용하는 경우 및 위치 변경을 사용하는 경우를 보여 줍니다.](images/edgevsreposition.png)
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
-**개발자용(XAML)**
+**개발자용**
 * [애니메이션 개요](https://msdn.microsoft.com/library/windows/apps/mt187350)
 * [가장자리 기반 UI 애니메이션](https://msdn.microsoft.com/library/windows/apps/xaml/jj649428)
 * [빠른 시작: 라이브러리 애니메이션을 사용하여 UI에 애니메이션 효과 주기](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
@@ -60,6 +64,6 @@ ms.openlocfilehash: a835e57c3ae778149cda933d57cf74408b74b416
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

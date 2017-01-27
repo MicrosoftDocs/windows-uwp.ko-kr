@@ -4,12 +4,12 @@ ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "이 문서에서는 CameraCaptureUI 클래스를 사용하여 Windows에 기본 제공된 카메라 UI로 사진 또는 동영상을 캡처하는 방법을 설명합니다."
 title: "Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처"
 translationtype: Human Translation
-ms.sourcegitcommit: b4bf4d74ae291186100a553a90fd93f890b8ece4
-ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
+ms.sourcegitcommit: 65508d32995f57672f94dffa4866a86d57903d00
+ms.openlocfilehash: 10ac3f53f0f8128985c39154f74a9348a40641b5
 
 ---
 
-# Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
+# <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용하여 사진 및 비디오 캡처
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,7 +18,11 @@ ms.openlocfilehash: fea1c2f8f52ec9ac485d9a4846cc0661243a7ccc
 
 자체 카메라 UI를 제공하려고 하거나 시나리오가 캡처 작업에 대해 좀 더 강력한 하위 수준의 제어를 요구하는 경우 [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124) 개체를 사용하고 자체 캡처 환경을 구현해야 합니다. 자세한 내용은 [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)를 참조하세요.
 
-## CameraCaptureUI로 사진 캡처
+> [!NOTE]
+> CameraCaptureUI를 사용 중인 경우 앱 매니페스트 파일에 **웹캠** 또는 **마이크** 기능을 지정해서는 안 됩니다. 그러면 디바이스의 카메라 개인 정보 설정에 앱이 표시되지만 사용자가 앱에 대한 카메라 액세스를 거부하더라도 CameraCaptureUI의 미디어 캡처가 차단되지 않습니다. Windows 기본 제공 카메라 앱은 사용자가 단추를 눌러서 사진, 오디오 및 비디오 캡처를 시작해야 하는 신뢰할 수 있는 자사 앱이기 때문입니다. CameraCaptureUI 사용 시 웹캠 또는 마이크 기능을 지정하면 스토어에 제출된 앱이 WACK(Windows 응용 프로그램 인증 키트) 인증에 실패할 수 있습니다.
+> MediaCapture를 사용하여 오디오, 사진 또는 비디오를 프로그래밍 방식으로 캡처하는 경우 앱 매니페스트 파일에 웹캠 또는 마이크 기능을 지정해야 합니다.
+
+## <a name="capture-a-photo-with-cameracaptureui"></a>CameraCaptureUI로 사진 캡처
 
 카메라 캡처 UI를 사용하려면 프로젝트에 [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738) 네임스페이스를 포함합니다. 반환된 이미지 파일을 사용하여 파일 작업을 수행하려면 [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/br227346)를 포함합니다.
 
@@ -59,7 +63,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 [!code-cs[SetImageSource](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetSetImageSource)]
 
-## CameraCaptureUI로 비디오 캡처
+## <a name="capture-a-video-with-cameracaptureui"></a>CameraCaptureUI로 비디오 캡처
 
 비디오를 캡처하려면 새 [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 개체를 만듭니다. 개체의 [**VideoSettings**](https://msdn.microsoft.com/library/windows/apps/br241059) 속성을 사용하여 비디오의 형식과 같은 반환된 비디오에 대한 속성을 지정할 수 있습니다.
 
@@ -78,7 +82,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 [!code-cs[UsingMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingMediaComposition)]
 
-페이지의 수명 범위 내에 유지하려는 [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn282716) 및 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646) 개체에 대해 멤버 변수를 선언합니다.
+페이지의 수명 범위 내에 유지하려는 [**MediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652646) 및 [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn282716) 개체에 대해 멤버 변수를 선언합니다.
 
 [!code-cs[DeclareMediaComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
 
@@ -86,7 +90,7 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 [!code-cs[InitComposition](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetInitComposition)]
 
-카메라 캡처 UI에서 반환된 동영상 파일을 사용하고 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652607)를 호출하여 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652596)을 만듭니다. 미디어 클립을 컴퍼지션의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 컬렉션에 추가합니다.
+카메라 캡처 UI에서 반환된 동영상 파일을 사용하고 [**MediaClip.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn652596)를 호출하여 새 [**MediaClip**](https://msdn.microsoft.com/library/windows/apps/dn652607)을 만듭니다. 미디어 클립을 컴퍼지션의 [**Clips**](https://msdn.microsoft.com/library/windows/apps/dn652648) 컬렉션에 추가합니다.
 
 [**GeneratePreviewMediaStreamSource**](https://msdn.microsoft.com/library/windows/apps/dn652674)를 호출하여 컴퍼지션에서 **MediaStreamSource** 개체를 만듭니다.
 
@@ -99,11 +103,11 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 비디오 클립을 캡처한 후 컴퍼지션에 계속 추가할 수 있습니다. 미디어 컴퍼지션에 대한 자세한 내용은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요.
 
 > [!NOTE] 
-> 이 문서는 UWP(Universal Windows Platform) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -118,6 +122,6 @@ XAML 페이지에서 소프트웨어 비트맵을 사용하려면 프로젝트�
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

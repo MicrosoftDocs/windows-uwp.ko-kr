@@ -5,13 +5,19 @@ title: "터치 패드 조작"
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
+keywords: "터치 패드, PTP, 터치, 포인터, 입력, 사용자 조작"
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
+ms.sourcegitcommit: 482530931fe5764f65d2564107318c272c5c7b7f
+ms.openlocfilehash: dd91c8a6c58c25799a0c43b8632fade5309850cc
 
 ---
 
-# 터치 패드 디자인 지침
+# <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
 
 사용자가 터치 패드를 통해 조작할 수 있는 앱을 디자인하세요. 터치 패드는 간접 멀티 터치 입력을 마우스와 같은 포인팅 장치의 정밀도 입력과 결합합니다. 이러한 결합을 통해 터치 패드는 터치 최적화된 UI와 생산성 앱의 작은 대상에 모두 적합합니다.
@@ -42,7 +48,7 @@ ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
 이 항목에서 설명하는 제스처 및 지침은 앱이 터치 패드 입력을 최소한의 코드로 매끄럽게 지원할 수 있게 합니다.
 
-## 터치 패드 언어
+## <a name="the-touchpad-language"></a>터치 패드 언어
 
 
 터치 패드 조작의 축약된 집합이 전체 시스템에서 일관되게 사용됩니다. 앱을 터치 및 마우스 입력에 최적화하면 이 언어를 통해 사용자가 앱에 즉시 친숙해져서 사용자의 신뢰가 증가하며 앱을 쉽게 배우고 사용할 수 있습니다.
@@ -112,14 +118,14 @@ ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
  
 
-## 하드웨어
+## <a name="hardware"></a>하드웨어
 
 
 마우스 장치 기능([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI 측면을 식별합니다. 터치와 마우스 입력 둘 다에 대한 UI를 제공하는 것이 좋습니다.
 
 디바이스 기능 쿼리에 대한 자세한 내용은 [입력 디바이스 식별](identify-input-devices.md)을 참조하세요.
 
-## 시각적 피드백
+## <a name="visual-feedback"></a>시각적 피드백
 
 
 -   이동 또는 가리키기 이벤트를 통해 터치 패드 커서가 검색되면 마우스 관련 UI를 표시하여 이벤트에 의해 노출되는 기능을 나타냅니다. 터치 패드 커서가 정해진 시간 동안 이동하지 않거나 사용자가 터치 조작을 시작하면 터치 패드 UI가 점점 사라지도록 합니다. 이렇게 하면 UI가 깔끔하고 간결하게 유지됩니다.
@@ -130,7 +136,7 @@ ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
 시각적 피드백에 대한 일반적인 내용은 [시각적 피드백에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465342)을 참조하세요.
 
-## 커서
+## <a name="cursors"></a>커서
 
 
 터치 패드 포인터에 일련의 표준 커서를 사용할 수 있습니다. 이러한 커서는 요소의 기본 동작을 나타내는 데 사용됩니다.
@@ -145,7 +151,7 @@ ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 -   개체 크기를 조정할 수 있는 경우 가로, 세로 및 대각선 크기 조정 커서(![세로 크기 조정 커서](images/cursor-vertical.png), ![가로 크기 조정 커서](images/cursor-horizontal.png), ![대각선 크기 조정 커서(왼쪽 아래, 오른쪽 위)](images/cursor-diagonal2.png), ![대각선 크기 조정 커서(왼쪽 위, 오른쪽 아래)](images/cursor-diagonal1.png))를 사용합니다.
 -   고정 캔버스 내에서 콘텐츠를 이동하는 경우(예제: 지도) 잡는 손 모양 커서(![잡는 손 모양(열림)](images/cursor-pan1.png), ![잡는 손 모양(닫힘)](images/cursor-pan2.png))를 사용합니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 
 * [포인터 입력 처리](handle-pointer-input.md)
@@ -167,6 +173,6 @@ ms.openlocfilehash: 30607a9db9f5a7d5ea1085fa1105e6a2bd8ebd1b
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Dec16_HO3-->
 
 

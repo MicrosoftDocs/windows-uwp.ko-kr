@@ -6,8 +6,8 @@ ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 2ac3a4a1efa85a3422d8964ad4ee62db28bc975f
-ms.openlocfilehash: cfbbf110ed6df1b7e81e0505dcf55a63ba8739aa
+ms.sourcegitcommit: 76a7a6dd3f0e0026e54483fa0ee5f82376ca0c99
+ms.openlocfilehash: 4420ecac17c41858aac7379b4dfaaa43b853318d
 
 ---
 # <a name="adaptive-and-interactive-toast-notifications"></a>적응형 및 대화형 알림 메시지
@@ -22,7 +22,7 @@ ms.openlocfilehash: cfbbf110ed6df1b7e81e0505dcf55a63ba8739aa
 -   기본 알림 메시지 및 각 작업에 대한 세 가지 활성화 유형.
 -   알람, 미리 알림 및 수신 전화를 포함한 특정 시나리오에 대한 알림을 만드는 옵션.
 
-**참고** Windows 8.1 및 Windows Phone 8.1의 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조하세요.
+**참고**   Windows 8.1 및 Windows Phone 8.1의 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://msdn.microsoft.com/library/windows/apps/hh761494)를 참조하세요.
 
 
 ## <a name="getting-started"></a>시작
@@ -112,14 +112,28 @@ ToastContent content = new ToastContent()
 };
 ```
 
-이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+<<<<<<< HEAD 다음에는 알림을 [XmlDocument](https://msdn.microsoft.com/en-us/library/windows/apps/windows.data.xml.dom.xmldocument.aspx) 개체로 변환해야 합니다. XML 파일(이 경우에는 "content.xml")에 알림을 정의한 경우 이 코드를 사용하세요.
 
 ```CSharp
-ToastNotification notification = new ToastNotification(content.GetXml());
+string xmlText = File.ReadAllText("content.xml");
+XmlDocument xmlContent = new XmlDocument();
+xmlContent.LoadXml(xmlText);
+```
+
+또는 C#에 알림 템플릿을 정의한 경우 이 코드를 사용하세요.
+
+```CSharp
+XmlDocument xmlContent = content.GetXml();
+```
+
+XMLDocument를 만든 방법과 상관없이 이 코드를 사용하여 알림을 만들고 보낼 수 있습니다.
+
+```CSharp
+ToastNotification notification = new ToastNotification(xmlContent);
 ToastNotificationManager.CreateToastNotifier().Show(notification);
 ```
 
-알림 메시지를 표시하는 완전히 작동하는 앱을 보려면 [로컬 알림 메시지 보내기에 대한 빠른 시작](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)을 참조하세요.
+알림 메시지를 표시하는 완전한 앱이 작동하는 모습을 보려면 [로컬 알림 메시지 보내기에 대한 빠른 시작](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)을 참조하세요.
 
 구조의 시각적 표현은 다음과 같습니다.
 
@@ -132,7 +146,7 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 UWP(유니버설 Windows 플랫폼) 앱의 타일 알림은 다양한 타일 크기를 기반으로 하는 여러 템플릿을 지원합니다. 그러나 알림 메시지에는 단 하나의 템플릿 이름 **ToastGeneric**이 있습니다. 템플릿 이름이 하나만 있다는 것은 다음을 의미합니다.
 
 -   다른 텍스트 줄을 추가하거나, 인라인 이미지를 추가하거나, 앱 아이콘 표시부터 다른 작업까지 미리 보기 이미지를 변경하는 것과 같이 알림 콘텐츠를 변경하고 템플릿 이름과 콘텐츠가 일치하지 않아서 잘못된 페이로드를 만들거나 전체 템플릿을 변경하는 것에 대해 결정하지 않고 이러한 작업을 수행할 수 있습니다.
--   같은 코드를 사용하여 휴대폰, 태블릿, PC, Xobx One을 비롯한 다양한 Microsoft Windows 디바이스 유형에 배달하도록 대상이 지정된 **toast notification**에 대한 같은 페이로드를 구성할 수 있습니다. 이러한 각 디바이스는 알림을 허용하고 적절한 시각적 어포던스 및 조작 모델을 사용하여 UI 정책에 따라 사용자에게 표시합니다.
+-   같은 코드를 사용하여 휴대폰, 태블릿, PC, Xbox One을 비롯한 다양한 Microsoft Windows 장치 유형에 배달하도록 대상이 지정된 **알림 메시지**에 대한 같은 페이로드를 구성할 수 있습니다. 이러한 각 디바이스는 알림을 허용하고 적절한 시각적 어포던스 및 조작 모델을 사용하여 UI 정책에 따라 사용자에게 표시합니다.
 
 시각적 섹션 및 하위 요소에서 지원되는 모든 특성에 대해서는 아래 스키마 섹션을 참조하세요. 추가 예제를 보려면 아래 XML 예제 섹션을 참조하세요.
 
@@ -149,7 +163,7 @@ UWP 앱에서는 사용자가 앱 외부에서 더 많은 작업을 수행하는
 -   &lt;action&gt; 이 형식은 데스크톱 및 모바일 디바이스에 단추로 나타납니다. 알림 메시지 내부에 사용자 지정 또는 시스템 작업을 5개까지 지정할 수 있습니다.
 -   &lt;input&gt; 이 형식을 사용하면 사용자가 메시지에 빠르게 회신하거나 드롭다운 메뉴에서 옵션을 선택하는 것 같이 입력을 제공할 수 있습니다.
 
-&lt;action&gt; 및 &lt;input&gt;은 Windows 디바이스 패밀리 내에서 조정됩니다. 예를 들어 모바일 또는 데스크톱 디바이스에서 사용자에 대한 &lt;action&gt;은 탭/클릭할 단추입니다. 텍스트 &lt;input&gt;은 사용자가 물리적 키보드나 화상 키보드를 사용하여 텍스트를 입력할 수 있는 상자입니다. 이러한 요소는 음성으로 알린 작업이나 받아쓰기로 수행된 텍스트 입력 같이 이후 조작 시나리오에 맞게 조정됩니다.
+&lt;action&gt; 및 &lt;input&gt;은 Windows 장치 패밀리 내에서 조정됩니다. 예를 들어 모바일 또는 데스크톱 디바이스에서 사용자에 대한 &lt;action&gt;은 탭/클릭할 단추입니다. 텍스트 &lt;input&gt;은 사용자가 물리적 키보드나 화상 키보드를 사용하여 텍스트를 입력할 수 있는 상자입니다. 이러한 요소는 음성으로 알린 작업이나 받아쓰기로 수행된 텍스트 입력 같이 이후 조작 시나리오에 맞게 조정됩니다.
 
 사용자가 작업을 수행하면 &lt;action&gt; 요소 내부에서 [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) 특성을 지정하여 다음 중 하나를 수행할 수 있습니다.
 
@@ -181,7 +195,7 @@ ms-winsoundevents의 전체 목록을 포함하여 알림 메시지의 오디오
 ## <a name="xml-examples"></a>XML 예
 
 
-**참고** 아래 예제의 알림 메시지 스크린샷은 데스크톱의 앱에서 생성되었습니다. 모바일 디바이스에서 알림 메시지는 나타날 때 축소될 수 있고 이 경우 알림 아래쪽의 그래버를 통해 확장합니다.
+**참고**  이러한 예제의 알림 메시지 스크린샷은 데스크톱의 앱에서 생성되었습니다. 모바일 디바이스에서 알림 메시지는 나타날 때 축소될 수 있고 이 경우 알림 아래쪽의 그래버를 통해 확장합니다.
 
  
 
@@ -249,9 +263,9 @@ ToastContent content = new ToastContent()
 
  
 
-**작업이 있는 알림, 예제 1**
+**작업이 있는 알림**
 
-이 예제의 내용...
+이 예제에서는 가능한 응답 작업이 2개인 알림을 만듭니다.
 
 ```XML
 <toast launch="app-defined-string">
@@ -309,73 +323,11 @@ ToastContent content = new ToastContent()
 
 ![작업이 있는 알림, 예제 1](images/adaptivetoasts-xmlsample02.jpg)
 
- 
 
-**작업이 있는 알림, 예제 2**
-
-이 예제의 내용...
-
-```XML
-<toast launch="app-defined-string">
-  <visual>
-    <binding template="ToastGeneric">
-      <text>Restaurant suggestion...</text>
-      <text>We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?</text>
-    </binding>
-  </visual>
-  <actions>
-    <action activationType="foreground" content="Reviews" arguments="reviews" />
-    <action activationType="protocol" content="Show map" arguments="bingmaps:?q=sushi" />
-  </actions>
-</toast>
-```
-
-```CSharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Restaurant suggestion..."
-                },
- 
-                new AdaptiveText()
-                {
-                    Text = "We noticed that you are near Wasaki. Thomas left a 5 star rating after his last visit, do you want to try it?"
-                }
-            }
-        }
-    },
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("Reviews", "reviews"),
- 
-            new ToastButton("Show map", "bingmaps:?q=sushi")
-            {
-                ActivationType = ToastActivationType.Protocol
-            }
-        }
-    }
-};
-```
-
-![작업이 있는 알림, 예제 2](images/adaptivetoasts-xmlsample03.jpg)
-
- 
 
 **텍스트 입력 및 작업이 있는 알림, 예제 1**
 
-이 예제의 내용...
+이 예제에서는 응답 작업이 2개이고 텍스트 입력을 허용하는 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -456,7 +408,7 @@ ToastContent content = new ToastContent()
 
 **텍스트 입력 및 작업이 있는 알림, 예제 2**
 
-이 예제의 내용...
+이 예제에서는 텍스트 입력과 단일 작업을 허용하는 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -533,7 +485,7 @@ ToastContent content = new ToastContent()
 
 **선택 입력 및 작업이 있는 알림**
 
-이 예제의 내용...
+이 예제에서는 드롭다운 선택 메뉴가 1개이고 가능한 작업이 2개인 알림을 만듭니다.
 
 ```XML
 <toast launch="developer-defined-string">
@@ -617,7 +569,7 @@ ToastContent content = new ToastContent()
 
 **미리 알림**
 
-이 예제의 내용...
+이전 예제와 마찬가지로 선택 메뉴 1개와 작업 2개를 사용하여 미리 알림을 만들 수 있습니다.
 
 ```XML
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
@@ -1162,6 +1114,6 @@ ToastContent content = new ToastContent()
 * [GitHub의 알림 라이브러리](https://github.com/Microsoft/UWPCommunityToolkit/tree/dev/Notifications)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
