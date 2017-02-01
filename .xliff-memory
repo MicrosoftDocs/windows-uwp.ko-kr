@@ -2728,7 +2728,7 @@
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\cpubwin\\windows-uwp.ko-kr\\master\\5306ef31bf20b25a5f2a24dee8bd8b55de2773da.8a0c5d4738fdb7214a1705ad2e37c8e6e61b40d0.xml",
       "LocXliff": "ol-handback\\cpubwin\\windows-uwp.ko-kr\\master\\headset.4a461e6c1e6f0d799e154ce271ac7d4bffa92cc1.ko-kr.xlf",
-      "LocXliffCommit": "eb611c044bb399536d724d430e05ea9a4cab7c71"
+      "LocXliffCommit": "86581d0b0ff87ed78cbe9c66d47023555d6be03d"
     },
     "windows-apps-src\\gaming\\input-practices-for-games.md.0e136893ea62171208aa490dc5a7a71dbf1248fc.HT": {
       "SourceFilename": "windows-apps-src\\gaming\\input-practices-for-games.md",
