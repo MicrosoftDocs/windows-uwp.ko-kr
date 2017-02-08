@@ -1,11 +1,33 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b14cb95ea5aeba85c3db6c5f74c86f01b177a336?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents) | HandedOffSuccess | [Details](#9076c8ecc81f9dfd691e6b425f7dedca88c5b5704814)
 
 ## Item Details
+##### <a name='9076c8ecc81f9dfd691e6b425f7dedca88c5b5704814'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/b14cb95ea5aeba85c3db6c5f74c86f01b177a336?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/1c7a16705d846d34e40f517c542afb125e5d4506?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-02-08 00:39:05
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/a4d788f0b469c2ee8c42ed0df9ecbc86601d238d?path=windows-apps-src%2Fpublish%2Fdev-center-insider-program.md&_a=contents)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/eb611c044bb399536d724d430e05ea9a4cab7c71?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf&_a=contents)
+* Current Handback Datetime: 2017-01-20 14:45:01
+* Bilingual File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/eb611c044bb399536d724d430e05ea9a4cab7c71?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.ko-kr.xlf&_a=contents)
+* Bilingual Datetime: 2017-01-20 14:57:09
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
