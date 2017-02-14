@@ -1,19 +1,20 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\reference.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0e22d9ba0ba1e62d1b68fdd8d40c6d24c8398597?path=windows-apps-src%2Fxbox-apps%2Freference.md&_a=contents) | HandedOffSuccess | [Details](#fa3805d5befbd05824d093d3505b00a810f1a7267941)
+ [windows-apps-src\porting\desktop-to-uwp-packaging-dot-net.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c3d13fe139107fe5329e406990aef8fe67dabbba?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-packaging-dot-net.md&_a=contents) | HandedOffSuccess | [Details](#f487965dfbb006cdd7256022aa742b506928957c4648)
+ [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ef987035e42cfc990a8e23d5f717bdb878e3d2f5?path=windows-apps-src%2Fpublish%2Fcreate-a-custom-app-promotion-campaign.md&_a=contents) | HandedOffSuccess | [Details](#6f07c5c68efde0174b6ef6a90ee98854e984e6434806)
 
 ## Item Details
-##### <a name='fa3805d5befbd05824d093d3505b00a810f1a7267941'></a> Source: [windows-apps-src\xbox-apps\reference.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/0e22d9ba0ba1e62d1b68fdd8d40c6d24c8398597?path=windows-apps-src%2Fxbox-apps%2Freference.md&_a=contents)
+##### <a name='f487965dfbb006cdd7256022aa742b506928957c4648'></a> Source: [windows-apps-src\porting\desktop-to-uwp-packaging-dot-net.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/c3d13fe139107fe5329e406990aef8fe67dabbba?path=windows-apps-src%2Fporting%2Fdesktop-to-uwp-packaging-dot-net.md&_a=contents)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [reference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/e8ec7c534c73f876c4a201884167fe459f2ecfd8?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Freference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf&_a=contents)
-* Handoff Datetime: 2017-02-14 19:31:27
+* Handoff File: [desktop-to-uwp-packaging-dot-net.8592395f4270a6ff7682f412d70e18ac235d5e32.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/70e163cc63da39c4d37f2f4a5a6acbf102b732fd?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fdesktop-to-uwp-packaging-dot-net.8592395f4270a6ff7682f412d70e18ac235d5e32.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-02-14 21:30:21
 * Handoff Reason: Include
 * Handoff Name: 
 * Archive File: 
@@ -21,10 +22,24 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Name: 
-* Current Target File: [windows-apps-src\xbox-apps\reference.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fxbox-apps%2Freference.md&_a=contents)
-* Current Handback File: [reference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Freference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf&_a=contents)
+* [Back to Top](#report-top)
+
+##### <a name='6f07c5c68efde0174b6ef6a90ee98854e984e6434806'></a> Source: [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp/commit/ef987035e42cfc990a8e23d5f717bdb878e3d2f5?path=windows-apps-src%2Fpublish%2Fcreate-a-custom-app-promotion-campaign.md&_a=contents)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handoff/commit/70e163cc63da39c4d37f2f4a5a6acbf102b732fd?path=ol-handoff%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf&_a=contents)
+* Handoff Datetime: 2017-02-14 21:30:21
+* Handoff Reason: Include
+* Handoff Name: 
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Handback Name: 
+* Current Target File: [windows-apps-src\publish\create-a-custom-app-promotion-campaign.md](https://cpubwin.visualstudio.com/windows-uwp/_git/windows-uwp.ko-kr/commit/1e3e4899d11d2023cca1537fc5982a2981ee8d89?path=windows-apps-src%2Fpublish%2Fcreate-a-custom-app-promotion-campaign.md&_a=contents)
+* Current Handback File: [create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf&_a=contents)
 * Current Handback Datetime: 2016-11-21 17:02:15
-* Bilingual File: [reference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Freference.626dfb5537cffcf798971423ba8d5b8ed5ec5291.ko-kr.xlf&_a=contents)
+* Bilingual File: [create-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf](https://cpubwin.visualstudio.com/windows-uwp/_git/WDCLib.handback/commit/c69d038ba1c122da60b66619023f887f5573da13?path=ol-handback%2Fcpubwin%2Fwindows-uwp.ko-kr%2Fmaster%2Fcreate-a-custom-app-promotion-campaign.220d97eaa84a1e4742a64b01094a0451e54772a7.ko-kr.xlf&_a=contents)
 * Bilingual Datetime: 2016-11-21 17:13:42
 * [Back to Top](#report-top)
 
