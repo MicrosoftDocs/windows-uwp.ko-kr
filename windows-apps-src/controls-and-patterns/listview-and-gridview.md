@@ -4,9 +4,17 @@ Description: "목록 보기 또는 그리드 보기 컨트롤을 사용하여 �
 title: "목록 보기 및 그리드 보기"
 label: List view and grid view
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: f8532ba0-5510-4686-9fcf-87fd7c643e7b
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 2887e2aed2c3b638343f2bd211c32f99b3c7da1a
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: fd8d538e6431bbff011c99ce8d17736d70f0c0ea
+ms.lasthandoff: 02/08/2017
 
 ---
 # <a name="listview-and-gridview"></a>ListView 및 GridView
@@ -514,9 +522,4 @@ ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 �
 - [목록](lists.md)
 - [목록 보기 항목 템플릿](listview-item-templates.md)
 - [끌어서 놓기](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

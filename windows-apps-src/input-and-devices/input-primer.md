@@ -5,9 +5,16 @@ title: "조작 입문서"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: b754e3f039e4dca0949bb31fe1da52f6a404dfb4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d11efb262dfbdd604dc249f19ae35e4110369654
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -347,9 +354,4 @@ Windows에서 지원하는 조작 환경 수렴 때문에 전적으로 터치식
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

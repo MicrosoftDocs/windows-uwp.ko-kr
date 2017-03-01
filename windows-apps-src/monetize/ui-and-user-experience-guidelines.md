@@ -1,23 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: "앱 내 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다."
-title: "앱 내 광고에 대한 UI 및 사용자 환경 지침"
+description: "앱 내 광고의 UI 및 사용자 환경 지침을 알아봅니다."
+title: "앱 내 광고의 UI 및 사용자 환경 지침"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, 지침, 모범 사례"
 translationtype: Human Translation
-ms.sourcegitcommit: e44392a1dc69a98655ba7e576d2af102a608acaa
-ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e1c3fef6e8cc7cc483b72b6ba142d323055c960c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>앱 내 광고에 대한 UI 및 사용자 환경 지침
+# <a name="ui-and-user-experience-guidelines-for-ads-in-apps"></a>앱 내 광고의 UI 및 사용자 환경 지침
 
-이 문서에서는 앱 내 배너 광고와 중간 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/design)를 참조하세요.
+이 문서에서는 앱 내 배너 광고와 중간 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/apps/design)를 참조하세요.
 
->**중요**&nbsp;&nbsp;앱 내 광고를 사용할 때는 [정책 10.10](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)(광고 수행 및 콘텐츠)을 포함하되 이에 국한되지 않는 Windows 스토어 정책을 준수해야 합니다. 특히 앱의 배너 광고 또는 중간 광고 구현은 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10) 요구 사항을 충족해야 합니다. 이 문서에는 이 정책을 위반하는 구현의 예가 포함되어 있습니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 정보 제공의 목적으로만 제공됩니다. 일부만 예로 든 것이며 이 문서에는 열거되지 않았지만 Windows 스토어 정책을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+>**중요**&nbsp;&nbsp;앱 내 광고를 사용할 때는 [정책 10.10](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)(광고 수행 및 콘텐츠)을 포함하되 이에 국한되지 않는 Windows 스토어 정책을 준수해야 합니다. 특히 앱의 배너 광고 또는 중간 광고 구현은 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10) 요구 사항을 충족해야 합니다. 이 문서에는 이 정책을 위반하는 구현의 예가 포함되어 있습니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 정보 제공의 목적으로만 제공됩니다. 일부만 예로 든 것이며 이 문서에는 열거되지 않았지만 Windows 스토어 정책을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
 
 ## <a name="guidelines-for-banner-ads"></a>배너 광고에 대한 지침
 
-다음 섹션에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)을 사용하여 앱 내 배너 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다.
+다음 섹션에서는 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)을 사용하여 앱 내 배너 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다.
 
 ### <a name="best-practices"></a>모범 사례
 
@@ -49,7 +56,7 @@ ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
 <span />
 ### <a name="examples-of-policy-violations"></a>정책 위반의 예
 
-이 섹션에서는 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 배너 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+이 섹션에서는 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 배너 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
 
 * [AdControl.Suspend](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.suspend.aspx)를 먼저 호출하지 않고 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)의 불투명도를 변경하거나 **AdControl** 위에 다른 컨트롤을 배치하는 등 사용자의 배너 광고 보기 기능을 방해하는 모든 행위.
 
@@ -68,7 +75,7 @@ ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
 
 과하지 않게 사용될 경우 중간 광고는 사용자 만족도에 부정적인 영향을 주지 않으면서 앱 수익을 크게 높일 수 있습니다. 그렇지만 잘못 사용하면 이러한 광고는 정반대의 효과를 가져올 수 있습니다.
 
-다음 섹션에서는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱 내 중간 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다. 정책이 관련되는 경우를 제외하고, 개발자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
+다음 섹션에서는 [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)를 사용하여 앱 내 중간 광고를 구현하는 방법에 대한 권장 사항과 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 구현의 예를 제시합니다. 정책이 관련되는 경우를 제외하고, 개발자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
 
 ### <a name="best-practices"></a>모범 사례
 
@@ -132,7 +139,7 @@ ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
 <span />
 ### <a name="examples-of-policy-violations"></a>정책 위반의 예
 
-이 섹션에서는 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 중간 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+이 섹션에서는 Windows 스토어 정책의 [정책 10.10.1](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_10)을 위반하는 중간 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
 
 * 중간 광고 컨테이너 위에 UI 요소 배치.
 
@@ -153,9 +160,4 @@ ms.openlocfilehash: ce39829cd6cd2dfb0c6a3aef930dd8fa82351b75
  
 
  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

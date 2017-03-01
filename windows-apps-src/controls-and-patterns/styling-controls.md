@@ -8,19 +8,26 @@ title: "컨트롤 스타일 지정"
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 2386ccbc89cad5514c0b1a4879af6d0df328263e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 60eb44ab45873b638181bb4b3194e443d21356bc
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 컨트롤 스타일 지정
+# <a name="styling-controls"></a>컨트롤 스타일 지정
 
 
 
 XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용자 지정할 수 있습니다. 스타일을 사용하면 컨트롤 속성을 설정하고 이 설정을 재사용하여 여러 컨트롤에서 일관된 모양을 얻을 수 있습니다.
 
-## 스타일 기본
+## <a name="style-basics"></a>스타일 기본
 
 
 스타일을 사용하여 시각적 속성 설정을 재사용 가능한 리소스로 추출합니다. 다음은 [**BorderBrush**](https://msdn.microsoft.com/library/windows/apps/br209397), [**BorderThickness**](https://msdn.microsoft.com/library/windows/apps/br209399) 및 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) 속성을 설정하는 스타일을 사용한 3개의 단추를 보여줍니다. 스타일을 적용하면 각 컨트롤에서 이러한 속성을 별도로 설정하지 않고도 컨트롤이 동일하게 표시되도록 만들 수 있습니다.
@@ -58,7 +65,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </StackPanel>
 ```
 
-## 암시적 또는 명시적 스타일 적용
+## <a name="apply-an-implicit-or-explicit-style"></a>암시적 또는 명시적 스타일 적용
 
 스타일을 리소스로 정의할 경우 다음 두 가지 방법으로 스타일을 컨트롤에 적용할 수 있습니다.
 
@@ -103,7 +110,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </Grid>
 ```
 
-## 파생 스타일 사용
+## <a name="use-based-on-styles"></a>파생 스타일 사용
 
 스타일을 더 쉽게 유지 관리하고 스타일 재사용을 최적화하기 위해 다른 스타일에서 상속받는 스타일을 만들 수 있습니다. [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852) 속성을 사용하여 상속받은 스타일을 만들 수 있습니다. 다른 스타일에서 상속받은 스타일은 동일한 유형의 컨트롤 또는 기본 스타일이 대상으로 하는 유형에서 파생된 컨트롤을 대상으로 지정해야 합니다. 예를 들어, 기본 스타일이 [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365)을 대상으로 지정할 경우 이 스타일을 기반으로 하는 파생 스타일은 **ContentControl**, 또는 [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) 및 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527)와 같은 **ContentControl**에서 파생된 유형을 대상으로 지정할 수 있습니다. 파생 스타일에 값이 설정되어 있지 않으면 기본 스타일에서 상속받습니다. 기본 스타일의 값을 변경하면 파생 스타일이 이 값보다 우선합니다. 다음 예제는 동일한 기본 스타일에서 상속받은 스타일이 적용된 **Button** 및 [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)를 보여 줍니다.
 
@@ -139,21 +146,16 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 </StackPanel>
 ```
 
-## 스타일 작업을 쉽게 할 수 있는 도구 사용
+## <a name="use-tools-to-work-with-styles-easily"></a>스타일 작업을 쉽게 할 수 있는 도구 사용
 
 스타일을 컨트롤에 적용하는 가장 빠른 방법은 Microsoft Visual Studio XAML 또는 디자인 화면에서 컨트롤을 마우스 오른쪽 단추로 클릭하고 **스타일 편집** 또는 **템플릿 편집**을 선택하는 것입니다(마우스 오른쪽 단추로 클릭하는 컨트롤에 따라 다름). 그런 다음 **리소스 적용**을 선택하여 기존 스타일을 적용하거나 **빈 스타일 만들기**를 선택하여 새로운 스타일을 정의할 수 있습니다. 빈 스타일을 만드는 경우 페이지, App.xaml 파일, 또는 별도의 리소스 사전에서 스타일을 정의할 수 있는 옵션이 제공됩니다.
 
-## 기본 시스템 스타일 수정
+## <a name="modify-the-default-system-styles"></a>기본 시스템 스타일 수정
 
 가능한 경우 Windows 런타임 기본 XAML 리소스에서 가져온 스타일을 사용해야 합니다. 고유한 스타일을 지정해야 할 경우 가능하면 기본 스타일을 기반으로 스타일을 지정합니다(이전에 설명한 대로 파생 스타일을 사용하거나 원래 기본 스타일의 복사본을 편집하여).
 
-## Template 속성
+## <a name="the-template-property"></a>Template 속성
 
 스타일 setter는 [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)의 [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465) 속성에 사용할 수 있으며 사실 대부분의 일반적인 XAML 스타일과 앱의 XAML 리소스를 구성합니다. 이 스타일 setter는 [컨트롤 템플릿](control-templates.md)에서 더 자세히 알아봅니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

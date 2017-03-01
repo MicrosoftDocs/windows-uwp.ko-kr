@@ -3,16 +3,23 @@ author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: "방향 센서 사용"
 description: "방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1265697f03e0de74444fc936a3041d1e88147e77
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 349a28f1980b863091cedd4515737a48de51b390
+ms.lasthandoff: 02/07/2017
 
 ---
-# 방향 센서 사용
+# <a name="use-the-orientation-sensor"></a>방향 센서 사용
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)
@@ -33,17 +40,17 @@ ms.openlocfilehash: 1265697f03e0de74444fc936a3041d1e88147e77
 | Portrait Down(세로 아래로)   | Rotated180DegreesCounterclockwise |
 | Landscape Right(가로 오른쪽) | Rotated270DegreesCounterclockwise |
 
-## 사전 요구 사항
+## <a name="prerequisites"></a>사전 요구 사항
 
 XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 방향 센서를 지원해야 합니다.
 
-## OrientationSensor 앱 만들기
+## <a name="create-an-orientationsensor-app"></a>OrientationSensor 앱 만들기
 
 이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 방향 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
 
-###  지침
+###  <a name="instructions"></a>지침
 
 -   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)**를 선택하여 새 프로젝트를 만듭니다.
 
@@ -107,7 +114,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
             {
                 this.InitializeComponent();
                 _sensor = OrientationSensor.GetDefault();
-     
+
                 // Establish the report interval for all scenarios
                 uint minReportInterval = _sensor.MinimumReportInterval;
                 uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
@@ -174,7 +181,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
-###  설명
+###  <a name="explanation"></a>설명
 
 앞의 예는 앱에서 방향 센서 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
 
@@ -195,17 +202,17 @@ _sensor.ReportInterval = reportInterval;
 새 센서 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
 ```csharp
-_sensor.ReadingChanged += new TypedEventHandler<OrientationSensor, 
+_sensor.ReadingChanged += new TypedEventHandler<OrientationSensor,
 OrientationSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
 이 새 값은 프로젝트의 XAML에서 찾은 TextBlock에 쓰입니다.
 
-## SimpleOrientation 앱 만들기
+## <a name="create-a-simpleorientation-app"></a>SimpleOrientation 앱 만들기
 
 이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 간단한 방향 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
 
-### 지침
+### <a name="instructions"></a>지침
 
 -   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)**를 선택하여 새 프로젝트를 만듭니다.
 
@@ -240,7 +247,7 @@ OrientationSensorReadingChangedEventArgs>(ReadingChanged);
             // Sensor and dispatcher variables
             private SimpleOrientationSensor _simpleorientation;
 
-            // This event handler writes the current sensor reading to 
+            // This event handler writes the current sensor reading to
             // a text block on the app' s main page.
 
             private async void OrientationChanged(object sender, SimpleOrientationSensorOrientationChangedEventArgs e)
@@ -320,7 +327,7 @@ OrientationSensorReadingChangedEventArgs>(ReadingChanged);
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
-### 설명
+### <a name="explanation"></a>설명
 
 앞의 예는 앱에서 단순 방향 센서 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
 
@@ -333,7 +340,7 @@ _simpleorientation = SimpleOrientationSensor.GetDefault();
 새 센서 데이터는 **OrientationChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
 ```csharp
-_simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientationSensor, 
+_simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientationSensor,
 SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 ```
 
@@ -344,15 +351,9 @@ SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
  <TextBlock x:Name="txtOrientation" HorizontalAlignment="Left" Height="24" Margin="118,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="175" Foreground="#FFFEFAFA"/>
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [OrientationSensor 샘플](http://go.microsoft.com/fwlink/p/?linkid=241382)
 * [SimpleOrientation 센서 샘플](http://go.microsoft.com/fwlink/p/?linkid=241383)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

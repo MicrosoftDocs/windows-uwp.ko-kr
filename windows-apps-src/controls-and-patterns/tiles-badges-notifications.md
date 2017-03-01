@@ -5,12 +5,19 @@ title: "타일, 배지 및 알림"
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f8b063f45afadda50fa9ea091bf6cba71a25e8c1
+ms.lasthandoff: 02/07/2017
 
 ---
-# UWP 앱에 대한 타일, 배지 및 알림
+# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>UWP 앱에 대한 타일, 배지 및 알림
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
@@ -27,7 +34,7 @@ ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 <p><em>푸시 알림</em> 또는 <em>원시 알림</em>은 WNS(Windows 푸시 알림 서비스) 또는 백그라운드 작업을 통해 앱에 전송되는 알림입니다. 앱은 관심 가질 만한 사항이 발생했음을 사용자에게 알려(배지 업데이트, 타일 업데이트 또는 알림을 통해) 이러한 알림에 응답하거나 개발자가 선택한 방식으로 응답할 수 있습니다.</p>
 
  
-## 타일 
+## <a name="tiles"></a>타일 
 <table>
 <colgroup>
 <col width="50%" />
@@ -63,7 +70,7 @@ ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 </tbody>
 </table>
 
-## 알림
+## <a name="notifications"></a>알림
 
 
 <table>
@@ -121,10 +128,5 @@ ms.openlocfilehash: dbc178f5df541e482f4a2e86c6662ead1992a1ce
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

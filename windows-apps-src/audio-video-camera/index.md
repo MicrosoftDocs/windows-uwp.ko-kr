@@ -3,9 +3,16 @@ author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "이 섹션에서는 사진, 비디오 또는 오디오를 캡처하거나 재생하거나 편집하는 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법에 대한 정보를 제공합니다."
 title: "오디오 비디오 및 카메라"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 77f47bce2a4be3f7c5ee3d320ff6c68e8c7ce6b0
-ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2d3b61b35307536bc54f19b5857acfe946a010ce
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -35,7 +42,7 @@ ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
 
 
 ## <a name="see-also"></a>참고 항목
-- [UWP 앱 개발](https://developer.microsoft.com/en-us/windows/develop)
+- [UWP 앱 개발](https://developer.microsoft.com/windows/develop)
 
  
 
@@ -45,10 +52,5 @@ ms.openlocfilehash: d1aad0800bfe4982a316aa5da719db005b687fa1
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

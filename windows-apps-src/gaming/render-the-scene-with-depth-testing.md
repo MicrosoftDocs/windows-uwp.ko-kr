@@ -3,13 +3,20 @@ author: mtoepke
 title: "깊이 테스트로 장면 렌더링"
 description: "꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다."
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 깊이 테스트로 장면 렌더링
+# <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,7 +24,7 @@ ms.openlocfilehash: 6351cc9f6efe0d4bffb54961624a35b4a9f4136a
 
 꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다. [연습의 3부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
 
-## 광원 절두체에 대한 변환 포함
+## <a name="include-transformation-for-light-frustum"></a>광원 절두체에 대한 변환 포함
 
 
 꼭짓점 셰이더는 각 꼭짓점에 대한 변형된 광원 공간 위치를 계산해야 합니다. 상수 버퍼를 사용하는 광원 공간 모델, 보기 및 프로젝션 매트릭스를 제공합니다. 또한 이 상수 버퍼를 사용하여 조명 계산을 위해 광원 위치 및 법선을 제공할 수 있습니다. 깊이 테스트 중 광원 공간에서 변환된 위치를 사용합니다.
@@ -61,7 +68,7 @@ PixelShaderInput main(VertexShaderInput input)
 
 그 다음에 픽셀 셰이더는 픽셀이 그림자에 있는지 여부를 테스트하기 위해 꼭짓점 셰이더에서 제공하는 보간된 광원 공간 위치를 사용합니다.
 
-## 위치가 광원 절두체에 있는지 여부 테스트
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a>위치가 광원 절두체에 있는지 여부 테스트
 
 
 먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 둘 다 \[0, 1\] 범위 내에 있는 경우 픽셀이 그림자에 있을 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
@@ -83,7 +90,7 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## 그림자 맵에 대한 깊이 테스트
+## <a name="depth-test-against-the-shadow-map"></a>그림자 맵에 대한 깊이 테스트
 
 
 샘플 비교 함수([SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) 또는 [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697))를 사용하여 깊이 맵에 대해 광원 공간에서 픽셀의 깊이를 테스트합니다. `z / w`를 사용하여 정규화된 광원 공간 깊이 값을 계산하고 값을 비교 함수에 전달합니다. 여기서는 샘플러에 대해 LessOrEqual 비교 테스트를 사용하므로 비교 테스트에 통과하면 내장 함수에서 0을 반환하며, 이는 픽셀이 그림자에 있다는 것을 나타냅니다.
@@ -115,7 +122,7 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## 그림자 안이나 밖에서 조명 계산
+## <a name="compute-lighting-in-or-out-of-shadow"></a>그림자 안이나 밖에서 조명 계산
 
 
 픽셀이 그림자에 없는 경우 픽셀 셰이더가 직접 조명을 계산하고 픽셀 값에 이 값을 추가해야 합니다.
@@ -161,10 +168,5 @@ return float4(input.color * ambient, 1.f);
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

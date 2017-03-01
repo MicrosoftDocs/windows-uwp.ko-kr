@@ -4,13 +4,20 @@ description: "고대비 테마가 활성 상태일 때 UWP(유니버설 Windows 
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: "고대비 테마"
 template: detail.hbs
+ms.author: mhopkins
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
-ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b75d36d6a537f465545729cf90b36fdde1f552e0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 고대비 테마  
+# <a name="high-contrast-themes"></a>고대비 테마  
 
 Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용자가 사용하도록 설정할 수 있습니다. 고대비 테마는 인터페이스를 보기 쉽게 만드는 대비색의 작은 색상표를 사용합니다.
 
@@ -38,7 +45,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 두 번째 예제에서는 [**{ThemeResource} 태그 확장**](../xaml-platform/themeresource-markup-extension.md)을 사용하여 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794) 요소의 전용 속성인 [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx) 컬렉션의 색을 참조합니다. ThemeDictionaries를 사용하면 XAML에서 사용자의 현재 테마에 따라 자동으로 색을 바꿀 수 있습니다.
 
-## 테마 사전
+## <a name="theme-dictionaries"></a>테마 사전
 
 시스템 기본값에서 색을 변경해야 하는 경우 앱에 대한 ThemeDictionaries 컬렉션을 만듭니다.
 
@@ -77,7 +84,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 > [!NOTE]
 > HighContrast는 사용할 수 있는 유일한 키 이름이 아닙니다. HighContrastBlack, HighContrastWhite 및 HighContrastCustom도 있습니다. 대부분의 경우 HighContrast만 있으면 됩니다.
 
-## 고대비 색
+## <a name="high-contrast-colors"></a>고대비 색
 
 *설정 &gt; 접근성 &gt; 고대비* 페이지에는 기본적으로 4개의 고대비 테마가 있습니다. 
 
@@ -152,7 +159,7 @@ SystemColorWindowColor | 페이지, 창, 팝업, 막대의 배경
 
 `{ThemeResource}`가 어떻게 두 번 사용되는지(`SystemColorWindowColor` 및 `BrandedPageBackgroundBrush`를 참조하기 위해 한 번씩 사용됨) 확인합니다. 앱이 런타임에 테마를 올바르게 적용하려면 둘 다 필요합니다. 이때 앱의 기능을 테스트하는 것이 좋습니다. 고대비 테마로 전환하면 그리드의 배경이 자동으로 업데이트됩니다. 다른 고대비 테마로 전환할 때도 업데이트됩니다.
 
-## 테두리를 사용하는 경우
+## <a name="when-to-use-borders"></a>테두리를 사용하는 경우
 
 페이지, 창, 팝업 및 막대는 모두 고대비에서 `SystemColorWindowColor`배경에 사용해야 합니다. UI에서 중요한 경계를 유지하기 위해 필요한 경우 고대비 전용 테두리를 추가합니다.
 
@@ -160,7 +167,7 @@ SystemColorWindowColor | 페이지, 창, 팝업, 막대의 배경
 
 ![페이지의 나머지 부분과 분리된 탐색 창](images/high-contrast-actions-content.png)
 
-## 목록 항목
+## <a name="list-items"></a>목록 항목
 
 고대비에서 [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) 항목의 배경은 마우스로 가리키거나 누르거나 선택할 때 `SystemColorHighlightColor`로 설정됩니다. 복잡한 목록 항목에는 일반적으로 항목을 마우스로 가리키거나 누르거나 선택할 때 목록 항목 콘텐츠의 색이 반전되지 않는 버그가 있습니다. 이 때문에 항목을 읽을 수 없게 됩니다.
 
@@ -170,7 +177,7 @@ SystemColorWindowColor | 페이지, 창, 팝업, 막대의 배경
 
 
 
-### 색이 지정된 텍스트가 있는 목록 항목
+### <a name="list-items-with-colored-text"></a>색이 지정된 텍스트가 있는 목록 항목
 
 한 가지 원인은 ListView의 [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)에서 TextBlock.Foreground를 설정했기 때문입니다. 일반적으로 이 작업은 시각적 계층 구조를 설정하기 위해 수행됩니다. Foreground 속성은 [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx)에서 설정되며, 항목을 마우스로 가리키거나 누르거나 선택할 때 DataTemplate의 TextBlocks가 올바른 Foreground 색을 상속합니다. 그러나 Foreground를 설정하면 상속이 끊어집니다.
 
@@ -221,7 +228,7 @@ ThemeDictionaries 컬렉션에 있는 Style을 통해 조건부로 Foreground를
 </DataTemplate>
 ```
 
-### 단추 및 링크가 있는 목록 항목
+### <a name="list-items-with-buttons-and-links"></a>단추 및 링크가 있는 목록 항목
 
 [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx), [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) 등의 보다 복잡한 컨트롤이 목록 항목에 포함된 경우도 있습니다. 이러한 컨트롤에는 마우스로 가리키거나 누르거나 때로는 선택한 경우에 대한 고유한 상태가 있으며, 목록 항목 위에서는 작동하지 않습니다. 하이퍼링크는 고대비 검정에서도 노란색이므로 목록 항목을 가리키거나 누르거나 선택할 때 읽기 어렵습니다.
 
@@ -284,22 +291,17 @@ ThemeDictionaries 컬렉션에 있는 Style을 통해 조건부로 Foreground를
 
 
 
-## 고대비 검색
+## <a name="detecting-high-contrast"></a>고대비 검색
 
 [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237) 클래스의 멤버를 사용하여 프로그래밍 방식으로 현재 테마가 고대비 테마인지 확인할 수 있습니다.
 
 > [!NOTE]
 > 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 **AccessibilitySettings** 생성자를 호출해야 합니다.
 
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [UI 대비 및 설정 샘플](http://go.microsoft.com/fwlink/p/?linkid=231539)
 * [XAML 접근성 샘플](http://go.microsoft.com/fwlink/p/?linkid=238570)
 * [XAML 고대비 샘플](http://go.microsoft.com/fwlink/p/?linkid=254993)
 * [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -4,12 +4,20 @@ Description: "목록 보기에서 당겨서 새로 고침 패턴을 사용합니
 title: "당겨서 새로 고침"
 label: Pull-to-refresh
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
+ms.assetid: aaeb1e74-b795-4015-bf41-02cb1d6f467e
 translationtype: Human Translation
-ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
-ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e062ed2910e20ba187b8a0726a0061f0dd4b07f8
+ms.lasthandoff: 02/08/2017
 
 ---
-# 당겨서 새로 고침
+# <a name="pull-to-refresh"></a>당겨서 새로 고침
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
@@ -19,11 +27,11 @@ ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
 
 ![당겨서 새로 고침 샘플](images/ptr-phone-1.png)
 
-## 올바른 패턴인가요?
+## <a name="is-this-the-right-pattern"></a>올바른 패턴인가요?
 
 정기적으로 새로 고치려는 데이터 목록이나 그리드가 있고 앱이 터치 우선 모바일 디바이스에서 실행될 수 있는 경우 당겨서 새로 고침 패턴을 사용합니다.
 
-## 당겨서 새로 고침 구현
+## <a name="implement-pull-to-refresh"></a>당겨서 새로 고침 구현
 
 당겨서 새로 고침을 구현하려면 사용자가 목록을 아래로 당길 때 조작 이벤트를 처리하고, 시각적 피드백을 제공하고, 데이터를 새로 고쳐야 합니다. 여기서는 [당겨서 새로 고침 샘플](http://go.microsoft.com/fwlink/p/?LinkId=620635)에서 이 작업을 수행하는 방법에 대해 알아봅니다. 여기에 모든 코드가 표시되지 않으므로 GitHub의 코드를 보거나 샘플을 다운로드해야 합니다.
 
@@ -33,9 +41,9 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 - 꺼짐: `PullThreshold`를 초과했을 때 목록이 해제되는 경우에만 새로 고침을 요청합니다. 사용자가 스크롤러를 놓을 때 표시기가 사라지는 애니메이션 효과가 주어집니다. 휴대폰에서 사용할 수 있는 경우 상태 표시줄 표시기가 표시됩니다.
 - 켜짐: `PullThreshold`를 초과하자마자 해제 여부에 상관없이 새로 고침을 요청합니다. 표시기는 새 데이터를 검색할 때까지 표시되며 새 데이터가 검색되면 사라지는 애니메이션 효과가 주어집니다. **Deferral**은 데이터 가져오기가 완료되면 앱에 알리는 데 사용됩니다.
 
-> **참고**  샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
+> **참고**&nbsp;&nbsp;샘플의 코드는 [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx)에 적용될 수도 있습니다. GridView를 수정하려면 ListView 대신 GridView에서 사용자 지정 클래스를 파생하고 기본 GridView 템플릿을 수정합니다.
 
-## 새로 고침 표시기 추가
+## <a name="add-a-refresh-indicator"></a>새로 고침 표시기 추가
 
 사용자에게 시각적 피드백을 제공하여 앱에서 당겨서 새로 고침 기능을 사용할 수 있다고 알립니다. RefreshableListView에는 XAML에서 시각적 표시기를 설정할 수 있는 `RefreshIndicatorContent` 속성이 있습니다. `RefreshIndicatorContent`를 설정하지 않는 경우 대체될 기본 텍스트 표시기도 포함합니다.
 
@@ -45,9 +53,9 @@ RefreshableListView는 새로 고침을 요청하는 시기 및 새로 고침 �
 
 **목록 보기 템플릿 수정**
 
-당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)에 배치됩니다.
+당겨서 새로 고침 샘플에서 `RefreshableListView` 컨트롤 템플릿은 새로 고침 표시기를 추가하여 표준 **ListView** 템플릿을 수정합니다. 새로 고침 표시기는 목록 항목을 보여 주는 부분인 [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) 위의 [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx)에 배치됩니다.
 
-> **참고**  `DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
+> **참고**&nbsp;&nbsp; `DefaultRefreshIndicatorContent` 텍스트 상자는 `RefreshIndicatorContent` 속성이 설정되지 않은 경우에만 표시되는 텍스트 대체 표시기를 제공합니다.
 
 다음은 기본 ListView 템플릿에서 수정된 컨트롤 템플릿의 일부입니다.
 
@@ -134,7 +142,7 @@ XAML에서 목록 보기에 대한 새로 고침 표시기의 콘텐츠를 설�
 </Storyboard>
 ```
 
-## 스크롤 뷰어 조작 이벤트 처리
+## <a name="handle-scroll-viewer-manipulation-events"></a>스크롤 뷰어 조작 이벤트 처리
 
 목록 보기 컨트롤 템플릿에는 사용자가 목록 항목을 스크롤할 수 있도록 해 주는 기본 제공 [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx)가 포함되어 있습니다. 당겨서 새로 고침을 구현하려면 기본 제공 스크롤 뷰어의 조작 이벤트뿐만 아니라 여러 관련 이벤트를 처리해야 합니다. 조작 이벤트에 대한 자세한 내용은 [터치 조작](../input-and-devices/touch-interactions.md)을 참조하세요.
 
@@ -192,7 +200,7 @@ if (this.RefreshRequested != null)
 
 당겨서 새로 고침은 터치 조작으로 목록을 당길 때에만 발생합니다. PointerPressed 이벤트 처리기에서 코드는 이벤트를 발생시킨 포인터의 종류를 확인하고 터치 포인터였는지 여부를 나타내는 변수(`m_pointerPressed`)를 설정합니다. 이 변수는 DirectManipulationStarted 처리기에 사용됩니다. 포인터가 터치 포인터가 아닌 경우 아무 작업도 수행되지 않고 DirectManipulationStarted 처리기가 반환됩니다.
 
-## 끌어오기 및 새로 고침 이벤트 추가
+## <a name="add-pull-and-refresh-events"></a>끌어오기 및 새로 고침 이벤트 추가
 
 'RefreshableListView'는 데이터를 새로 고치고 새로 고침 표시기를 관리할 수 있도록 앱에서 처리할 수 있는 2개의 이벤트를 추가합니다.
 
@@ -224,21 +232,16 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 샘플에서는 앱에서 새로 고침 표시기에 대한 콘텐츠를 제공하고 제어합니다. 'PullProgressChanged' 이벤트는 새로 고침 표시기를 시작, 중지 및 다시 설정할 수 있도록 목록을 끌어올 때 앱에 알립니다. 
 
-## 컴퍼지션 애니메이션
+## <a name="composition-animations"></a>컴퍼지션 애니메이션
 
 기본적으로 스크롤 막대가 맨 위에 도달하면 스크롤 뷰어의 콘텐츠는 중지됩니다. 사용자가 계속해서 목록을 아래로 당기면 시각적 계층에 액세스하고 목록 콘텐츠에 애니메이션 효과를 줘야 합니다. 샘플에서는 이를 위해 [컴퍼지션 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), 특히 [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)을 사용합니다.
 
 샘플에서 이 작업은 주로 `CompositionTarget_Rendering` 이벤트 처리기 및 `UpdateCompositionAnimations` 메서드에서 수행됩니다.
 
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [컨트롤 스타일 지정](styling-controls.md)
 - [터치 조작](../input-and-devices/touch-interactions.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [목록 보기 항목 템플릿](listview-item-templates.md)
 - [식 애니메이션](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -2,13 +2,21 @@
 author: Mtoepke
 title: "Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스"
 description: "Xbox의 UWP 시스템 리소스"
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 translationtype: Human Translation
-ms.sourcegitcommit: 9187e39e1be8b98ad8315487633dfebd068491e6
-ms.openlocfilehash: c3ca70936e30ce67b19971e5ccbb01fa89253f35
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8d6876ee6235546e74341609a55db995a77323d6
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
+# <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a>Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스
 
 Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 리소스를 공유합니다. 따라서 UWP 앱 및 게임은 다음 리소스에 액세스할 수 있습니다.
 
@@ -23,17 +31,14 @@ Xbox One에서 실행되는 UWP 앱 및 게임은 시스템 및 다른 앱과 �
 
 * 시스템에서 실행되는 앱과 게임 수에 따라 GPU의 45%가 공유됩니다.
 
-* Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다. 
+* Xbox One의 UWP는 DirectX 11 기능 수준 10을 지원합니다. 지금은 DirectX 12가 지원되지 않습니다.
+
+* 모든 앱은 Xbox용으로 개발하거나 Xbox 스토어에 제출하려면 x64 아키텍처를 대상으로 해야 합니다.  
 
 **응용 프로그램 개발**의 경우 사용 가능한 리소스가 표준 PC에 비해 제한될 수 있다는 것에 유의해야 합니다.
 
 **게임 개발**의 경우 다른 게임 콘솔과 마찬가지로 Xbox One은 전체 잠재 기능에 액세스하기 위해 특정 하드웨어 기반 개발 키트가 필요한 특수 하드웨어라는 것에 유의해야 합니다. Xbox One 하드웨어의 최대 잠재 기능에 액세스해야 하는 게임을 개발하는 경우 DirectX 12 지원을 포함하는 Xbox One 개발 키트에 액세스하기 위해 [ID@Xbox](http://www.xbox.com/Developers/id) 프로그램에 등록할 수 있습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

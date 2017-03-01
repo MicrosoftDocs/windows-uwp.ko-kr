@@ -3,9 +3,16 @@ author: mcleanbyron
 Description: "고객이 앱에서 피드백 허브를 시작하여 피드백을 남기도록 권유할 수 있습니다."
 title: "앱에서 피드백 허브 시작"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 피드백 허브, 시작"
 translationtype: Human Translation
-ms.sourcegitcommit: a3c4ebc9bfda5ed41363de139d43a6a2c7934e0e
-ms.openlocfilehash: 54c6503add19ead5226da5a862b199bc3f305b7e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 65a54d96b556b58a83af58b3d52d666372f337bb
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -76,9 +83,4 @@ ms.openlocfilehash: 54c6503add19ead5226da5a862b199bc3f305b7e
 ## <a name="related-topics"></a>관련 항목
 
 * [피드백 보고서](../publish/feedback-report.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

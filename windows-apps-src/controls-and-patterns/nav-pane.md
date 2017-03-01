@@ -5,16 +5,23 @@ title: "탐색 창에 대한 지침"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 3aed1658f0a9fa81677f5089d343969840ab33f1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a5f15129c424c92ac537116458c8433f6c96fa87
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="nav-panes"></a>탐색 창
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-탐색 창은 실제 화면 공간을 절약하면서 많은 수의 최상위 수준 탐색 항목을 허용하는 패턴입니다. 탐색 창은 모바일 앱에서 널리 사용되지만, 더욱 큰 화면에서도 잘 작동합니다. 창이 오버레이로 사용될 경우 사용자가 단추를 누를 때까지 축소된 상태를 유지하고 표시되지 않으므로 더 작은 화면에 편리합니다. 창이 고정 모드로 사용될 경우 열린 상태를 유지하므로 실제 화면 공간이 충분한 경우 더욱 실용적입니다.
+탐색 창은 실제 화면 공간을 절약함과 동시에 많은 수의 최상위 수준 탐색 항목을 허용하는 패턴입니다. 탐색 창은 모바일 앱에서 널리 사용되지만, 더욱 큰 화면에서도 잘 작동합니다. 창이 오버레이로 사용될 경우 사용자가 단추를 누를 때까지 축소된 상태를 유지하고 표시되지 않으므로 더 작은 화면에 편리합니다. 창이 고정 모드로 사용될 경우 열린 상태를 유지하므로 실제 화면 공간이 충분한 경우 더욱 실용적입니다.
 
 ![탐색 창의 예](images/navHero.png)
 
@@ -125,9 +132,4 @@ ms.openlocfilehash: 3aed1658f0a9fa81677f5089d343969840ab33f1
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

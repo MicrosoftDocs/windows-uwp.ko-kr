@@ -1,29 +1,36 @@
 ---
 author: jnHs
-Description: "Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다."
+Description: "Windows 스토어는 전 세계 200여 개 이상의 국가와 지역에 있는 고객이 사용할 수 있습니다."
 title: "가격 책정 및 지역/국가 선택 정의"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
-ms.openlocfilehash: 3fb8594748d303216a4437983604b5d78c993934
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: acf14f886f36d74941769954041325514a386e86
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 가격 책정 및 지역/국가 선택 정의
+# <a name="define-pricing-and-market-selection"></a>가격 책정 및 지역/국가 선택 정의
 
 
-Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고객에게 다가갑니다. 앱을 제공할 지역/국가를 선택하고 고객에게 청구할 가격을 결정할 수 있고 지역/국가에 따라 가격을 사용자 지정할 수도 있습니다.
+Windows 스토어는 전 세계 200여 개 이상의 국가와 지역에 있는 고객이 사용할 수 있습니다. 앱을 제공할 지역/국가를 선택하고 고객에게 청구할 가격을 결정할 수 있고 지역/국가에 따라 가격을 사용자 지정할 수도 있습니다.
 
-**참고** [앱 전역화에 도움이 되는 지침](https://msdn.microsoft.com/library/windows/apps/hh969150)을 고려해야 합니다.
+**참고** [앱 세계화에 도움이 되는 지침](https://msdn.microsoft.com/library/windows/apps/hh969150)을 고려해야 합니다.
 
  
 
-## 기본 가격
+## <a name="base-price"></a>기본 가격
 
 
 앱의 **기본 가격**을 선택하면 특정 지역/국가에 대한 사용자 지정 가격을 지정하는 않는 한 해당 가격은 앱이 판매되는 모든 지역/국가에 사용됩니다.
 
-**기본 가격**을 **무료**로 설정하거나 사용 가능한 기준 가격을 선택할 수 있습니다. 기준 가격은 앱을 배포하기로 선택한 모든 국가에서 판매가를 설정합니다. 기준 가격은 0.99 USD에서 시작하여 증가합니다(1.29 USD, 1.49 USD, 1.99 USD 등). 가격이 높아질수록 이러한 증분도 커집니다.
+**기본 가격**을 **무료**로 설정하거나 사용 가능한 기준 가격을 선택할 수 있습니다. 기준 가격은 앱을 배포하기로 선택한 모든 국가에서 판매가를 설정합니다. 가격 기준은 0.99USD에서 시작하며, 추가 기준은 증가된 가격(1.10USD, 1.29USD 등)으로 제공됩니다. 증가치는 일반적으로 가격이 높아질수록 커집니다.
 
 > **참고** 이러한 기준 가격은 [추가 기능](add-on-submissions.md)에도 적용됩니다.
 
@@ -31,7 +38,7 @@ Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고�
 
 선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 선택한 지역/국가에서 앱의 세금 관련 정보에 대해 자세히 알아보려면 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요. 자세한 내용은 아래의 [특정 지역/국가에 대한 가격 고려 사항](#price-considerations-for-specific-markets)을 참조하세요.
 
-## 지역/국가 및 사용자 지정 가격
+## <a name="markets-and-custom-prices"></a>지역/국가 및 사용자 지정 가격
 
 
 기본적으로 앱은 나중에 추가될 수 있는 잠재 지역/국가를 포함하여 모든 가능한 지역/국가에 기본 가격으로 나열됩니다.
@@ -50,7 +57,7 @@ Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고�
 
  
 
-## Windows 스토어 소비자 지역/국가
+## <a name="windows-store-consumer-markets"></a>Windows 스토어 소비자 지역/국가
 
 
 다음 지역/국가 중 하나 이상에 앱 또는 추가 기능을 나열하도록 선택할 수 있습니다.
@@ -298,7 +305,7 @@ Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고�
 -   잠비아
 -   짐바브웨
 
-## 특정 시장에 대한 가격 고려 사항
+## <a name="price-considerations-for-specific-markets"></a>특정 시장에 대한 가격 고려 사항
 
 
 기프트 카드 및 통신사 청구와 같은 결제 방법은 유료 앱 및 앱에서 바로 구매하는 항목의 판매를 늘리는 데 도움이 될 수 있습니다. 이러한 결제 방법을 사용할 수 있도록 하는 데 비용이 많이 들기 때문에, 아래 표의 결제 방법을 사용하여 순수입에서 스토어 수수료를 공제한 금액에 상거래 확장 조정을 더해 국가/지역에서 유료 앱 및 앱에서 바로 구매하는 거래에 지급할 수 있는 앱 수익을 계산합니다. 앱을 사용할 수 있는 국가/지역에서 Commerce Expansion Adjustment가 적용되는지 여부를 고려하고 이를 시장 가격 전략에 반영할 수 있습니다. Commerce Expansion Adjustment에 대한 자세한 내용은 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에서 찾을 수 있습니다.
@@ -375,7 +382,7 @@ Windows 스토어는 전 세계 200여 이상의 국가와 지역에 있는 고�
 
  
 
-## Windows 8.x용 "나머지 국가" 지역/국가
+## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x용 "나머지 국가" 지역/국가
 
 
 앱에 Windows 8.x를 대상으로 하는 패키지가 포함되어 있는 경우 현재 Windows 개발자 센터 대시보드(이전의 Windows 스토어 대시보드에서는 하나의 "나머지 국가" 지역/국가 옵션을 선택할 수 있었음)에서 개별 지역/국가로 표시된다 하더라도 많은 지역/국가가 Windows 8.x에서 스토어를 사용하는 고객에게는 하나의 "나머지 국가" 지역/국가로 간주되는 것을 알고 있어야 합니다.
@@ -552,9 +559,4 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
 -   짐바브웨
 
 > **참고** 개발자 계정을 등록할 수 있는 국가 및 지역 목록은 [계정 유형, 위치 및 수수료](https://msdn.microsoft.com/library/windows/apps/jj863494)를 참조하세요.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

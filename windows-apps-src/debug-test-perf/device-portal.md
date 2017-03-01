@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
 title: "Windows Device Portal 개요"
 description: "Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: 6c697782683bca6671c01aa0941a78bc66fb052a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8dfbdad7604e3aa7fad60ed777d16b4acd56b5ab
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
@@ -73,21 +80,21 @@ AppX 패키지와 디바이스에 있는 번들에 대해 설치/제거 및 관�
 
 **앱을 설치하려면**
 
-1.  [앱 패키지를 만들면](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx) 이를 원격으로 디바이스에 설치할 수 있습니다. Visual Studio에서 빌드한 후 출력 폴더가 생성됩니다.
+1.    [앱 패키지를 만들면](https://msdn.microsoft.com/library/windows/apps/xaml/hh454036(v=vs.140).aspx) 이를 원격으로 디바이스에 설치할 수 있습니다. Visual Studio에서 빌드한 후 출력 폴더가 생성됩니다.
 
     ![앱 설치](images/device-portal/iot-installapp0.png)
-2.  찾아보기를 클릭하고 앱 패키지(.appx)를 찾습니다.
-3.  찾아보기를 클릭하고 인증서 파일(.cer)을 찾습니다(일부 디바이스에서는 필요 없음).
-4.  종속성을 추가합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
-5.  **배포**에서 **이동**을 클릭합니다. 
-6.  다른 앱을 설치하려면 **초기화** 단추를 클릭하여 필드를 지웁니다.
+2.    찾아보기를 클릭하고 앱 패키지(.appx)를 찾습니다.
+3.    찾아보기를 클릭하고 인증서 파일(.cer)을 찾습니다(일부 디바이스에서는 필요 없음).
+4.    종속성을 추가합니다. 두 개 이상 있는 경우 개별적으로 각각 추가합니다.     
+5.    **배포**에서 **이동**을 클릭합니다. 
+6.    다른 앱을 설치하려면 **초기화** 단추를 클릭하여 필드를 지웁니다.
 
 
 **앱을 제거하려면**
 
-1.  앱이 실행되고 있지 않은지 확인합니다. 
-2.  실행 중이면 '실행 중인 앱'으로 이동하고 앱을 닫습니다. 앱이 실행되는 동안 제거를 시도할 경우 해당 앱을 다시 설치하려고 할 때 문제가 발생합니다. 
-3.  준비되면 **제거**를 클릭합니다.
+1.    앱이 실행되고 있지 않은지 확인합니다. 
+2.    실행 중이면 '실행 중인 앱'으로 이동하고 앱을 닫습니다. 앱이 실행되는 동안 제거를 시도할 경우 해당 앱을 다시 설치하려고 할 때 문제가 발생합니다. 
+3.    준비되면 **제거**를 클릭합니다.
 
 ### <a name="processes"></a>Processes
 
@@ -197,9 +204,4 @@ T | null 문자로 구분된 문자열 목록 | 디바이스에 대해 사용자
 #### <a name="cross-site-websocket-hijacking-cswsh-protection"></a>CSWSH(사이트 간 WebSocket 하이재킹) 보호
 
 [CSWSH 공격](https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html)으로부터 보호하려면 디바이스 포털에 대한 WebSocket 연결을 여는 모든 클라이언트에서 호스트 헤더와 일치하는 원본 헤더도 제공해야 합니다.  이를 통해 요청이 디바이스 포털 UI 또는 유효한 클라이언트 응용 프로그램에서 비롯되었음을 디바이스 포털에 입증할 수 있습니다.  원본 헤더가 없으면 요청이 거부됩니다. 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

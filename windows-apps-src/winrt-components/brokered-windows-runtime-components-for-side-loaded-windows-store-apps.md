@@ -2,9 +2,17 @@
 author: msatranjr
 title: "Windows 런타임 구성 요소"
 description: "이 문서에서는 Windows 10에서 지원되며, 쉽게 터치할 수 있는 .NET 앱에서 업무에 중요한 핵심 작업을 담당하는 기존 코드를 사용할 수 있도록 하는 기업 대상 기능에 대해 설명합니다."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 translationtype: Human Translation
-ms.sourcegitcommit: 019d3d256becb06ad88cc87962c86829fcfb80cf
-ms.openlocfilehash: 2ac22675f44fab8ff123c26151efc25aad01b3a0
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8844196503c45e9488d3fa2a543d588229d01cdd
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -575,10 +583,5 @@ struct PersonStruct
 
 -   [기업에 Windows 스토어 앱 배포](http://go.microsoft.com/fwlink/p/?LinkID=264770)
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

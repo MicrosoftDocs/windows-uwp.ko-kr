@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "Direct3D 9에서 Direct3D 11로의 중요 변경 사항"
-description: "이 항목에서는 DirectX 9와 DirectX 11의 전반적인 차이점을 설명합니다."
+description: "이 항목에서는 DirectX 9과 DirectX 11의 전반적인 차이점을 설명합니다."
 ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, direct3d 9, direct3d 11, 변경 사항"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9812e3a4528b0ce8abd76b1bfcfb93b1268f362c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e46bb663a5497cb17f396b410fbdcb5d0295e5fe
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Direct3D 9에서 Direct3D 11로의 중요 변경 사항
+# <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Direct3D 9부터 Direct3D 11의 주요 변경 사항
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -25,12 +32,12 @@ ms.openlocfilehash: 9812e3a4528b0ce8abd76b1bfcfb93b1268f362c
 
 Direct3D 11은 기본적으로 그래픽 하드웨어로 가상화된 하위 수준의 인터페이스인 Direct3D 9과 같은 유형의 API입니다. Direct3D 11에서는 여전히 다양한 하드웨어 구현에서 그래픽 그리기 작업을 수행할 수 있습니다. Direct3D 9 이후로 그래픽 API의 레이아웃이 변경되었습니다. 디바이스 컨텍스트의 개념이 확장되고 특히 그래픽 인프라에 대한 API가 추가되었습니다. Direct3D 디바이스에 저장된 리소스는 리소스 뷰라고 하는 고유한 데이터 다형성 메커니즘을 갖습니다.
 
-## 주요 API 기능
+## <a name="core-api-functions"></a>주요 API 기능
 
 
 Direct3D 9에서 Direct3D API를 사용하려면 먼저 이에 대한 인터페이스를 만들어야 했습니다. Direct3D 11 UWP(유니버설 Windows 플랫폼) 게임에서는 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)라는 정적 함수를 호출하여 장치와 디바이스 컨텍스트를 만듭니다.
 
-## 장치 및 디바이스 컨텍스트
+## <a name="devices-and-device-context"></a>장치 및 디바이스 컨텍스트
 
 
 Direct3D 11 장치는 가상화된 그래픽 어댑터를 나타냅니다. 이 장치는 비디오 메모리에 리소스를 만드는 데 사용됩니다(예: GPU에 텍스처 업로드, 텍스처 리소스 및 스왑 체인에서 뷰 만들기, 텍스처 샘플러 만들기). Direct3D 11 장치 인터페이스가 어떤 용도로 사용되는지 전체 목록을 보려면 [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) 및 [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)을 참조하세요.
@@ -39,14 +46,14 @@ Direct3D 11 디바이스 컨텍스트는 파이프라인 상태를 설정하고 
 
 Direct3D 11에서 장치 핸들과 디바이스 컨텍스트 핸들은 모두 [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)를 호출하여 가져옵니다. 이 메서드는 또한 특정 하드웨어 기능 집합을 요청하고 그래픽 어댑터에서 지원하는 Direct3D 기능 수준에 대한 정보를 검색하는 데도 사용됩니다. 장치, 디바이스 컨텍스트 및 스레딩 고려 사항에 대한 자세한 내용은 [Direct3D 11의 장치 소개](https://msdn.microsoft.com/library/windows/desktop/ff476880)를 참조하세요.
 
-## 디바이스 인프라, 프레임 버퍼 및 렌더링 대상 뷰
+## <a name="device-infrastructure-frame-buffers-and-render-target-views"></a>디바이스 인프라, 프레임 버퍼 및 렌더링 대상 뷰
 
 
 Direct3D 11에서 디바이스 어댑터 및 하드웨어 구성은 [**IDXGIAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174523) 및 [**IDXGIDevice1**](https://msdn.microsoft.com/library/windows/desktop/hh404543) COM 인터페이스를 사용하여 DXGI(DirectX Graphics Infrastructure) API와 함께 설정됩니다. 버퍼 및 기타 창 리소스(표시 또는 오프스크린)는 특정 DXGI 인터페이스를 통해 만들고 구성합니다. [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556) 팩터리 패턴 구현에서는 프레임 버퍼 등의 DXGI 리소스를 가져옵니다. DXGI가 스왑 체인을 소유하므로 화면에 프레임을 제공하는 데 DXGI 인터페이스가 사용됩니다([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) 참조).
 
 [**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)를 사용하여 게임과 호환되는 스왑 체인을 만들 수 있습니다. HWND를 위해 스왑 체인을 만드는 대신 주요 창 또는 컴퍼지션(XAML interop)을 위해 스왑 체인을 만들어야 합니다.
 
-## 장치 리소스 및 리소스 뷰
+## <a name="device-resources-and-resource-views"></a>장치 리소스 및 리소스 뷰
 
 
 Direct3D 11은 비디오 메모리 리소스에서 뷰라고 하는 추가 수준의 다형성을 지원합니다. 기본적으로, 이전에는 텍스처에 대한 Direct3D 9 개체가 하나였지만 이제는 데이터를 보관하는 텍스처 리소스와 뷰가 렌더링에 사용되는 방식을 나타내는 리소스 뷰 등 두 개의 개체가 제공됩니다. 리소스를 기반으로 하는 뷰를 사용하면 해당 리소스를 특정 용도로 사용할 수 있습니다. 예를 들어 2D 텍스처 리소스를 [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)로 만든 다음 여기에 셰이더 리소스 뷰([**ID3D11ShaderResourceView**](https://msdn.microsoft.com/library/windows/desktop/ff476628))를 만들면 이 리소스를 셰이더에서 텍스처로 사용할 수 있습니다. 또한 동일한 2D 텍스처 리소스에 렌더링 대상 뷰([**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582))를 만들면 이 리소스를 그리기 화면으로 사용할 수 있습니다. 또 다른 예로, 단일 텍스처 리소스에서 2개의 개별 뷰를 사용하여 동일한 픽셀 데이터를 2개의 다른 픽셀 형식으로 나타낼 수 있습니다.
@@ -59,7 +66,7 @@ Direct3D 11은 비디오 메모리 리소스에서 뷰라고 하는 추가 수�
 
 장면을 렌더링하기 전에 먼저 Direct3D 디바이스 리소스와 리소스 뷰를 만듭니다. 디바이스 컨텍스트는 렌더링 체인을 설정하는 데 사용됩니다(아래 설명 참조).
 
-## 디바이스 컨텍스트 및 렌더링 체인
+## <a name="device-context-and-the-rendering-chain"></a>디바이스 컨텍스트 및 렌더링 체인
 
 
 Direct3D 9과 Direct3D 10.x에서는 단일 Direct3D 장치 개체가 리소스 생성, 상태 및 그리기를 관리했습니다. Direct3D 11에서도 Direct3D 장치 인터페이스가 리소스 생성을 관리하지만 모든 상태 및 그리기 작업은 Direct3D 디바이스 컨텍스트를 사용하여 처리합니다. 다음은 디바이스 컨텍스트([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) 인터페이스)를 사용하여 렌더링 체인을 설정하는 방법에 대한 예입니다.
@@ -73,7 +80,7 @@ Direct3D 9과 Direct3D 10.x에서는 단일 Direct3D 장치 개체가 리소스 
 
 [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) 메서드 중 하나가 호출되면 렌더링 대상 뷰에 장면이 그려집니다. 그리기를 모두 마치면 [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)을 호출하여 완성된 프레임을 표시하는 데 DXGI 어댑터가 사용됩니다.
 
-## 상태 관리
+## <a name="state-management"></a>상태 관리
 
 
 Direct3D 9에서는 SetRenderState, SetSamplerState 및 SetTextureStageState 메서드로 설정한 다양한 개별 토글 집합을 사용하여 상태 설정을 관리했습니다. Direct3D 11에서는 레거시 고정 함수 파이프라인을 지원하지 않으므로 SetTextureStageState 대신 PS(픽셀 셰이더)를 작성합니다. Direct3D 9 상태 블록에 해당하는 기능도 없습니다. Direct3D 11에서는 대신 렌더링 상태를 그룹화하는 더 간소화된 방법을 제공하는 4종류의 상태 개체를 사용하여 상태를 관리합니다.
@@ -82,7 +89,7 @@ Direct3D 9에서는 SetRenderState, SetSamplerState 및 SetTextureStageState 메
 
 Direct3D 9 응용 프로그램을 상태 개체로 포팅할 경우 다양한 상태 조합이 변경이 불가능한 상태 개체로 표시됩니다. 이러한 상태 개체를 만들면 유효한 경우 계속 다시 사용해야 합니다.
 
-## Direct3D 기능 수준
+## <a name="direct3d-feature-levels"></a>Direct3D 기능 수준
 
 
 Direct3D는 하드웨어 지원을 결정할 수 있는, 기능 수준이라는 새로운 메커니즘을 사용합니다. 기능 수준은 잘 정의된 GPU 기능 집합을 요청할 수 있도록 하여 그래픽 어댑터의 기능을 알아내는 작업을 간소화합니다. 예를 들어 9\_1 기능 수준은 셰이더 모델 2.x를 포함하여 Direct3D 9 그래픽 어댑터가 제공하는 기능을 구현합니다. 9\_1은 가장 낮은 기능 수준이므로 모든 디바이스에서 꼭짓점 셰이더와 픽셀 셰이더를 지원하는 것(Direct3D 9 프로그램 가능 셰이더 모델에서 지원하는 것과 동일한 단계)을 기대할 수 있습니다.
@@ -93,7 +100,7 @@ Direct3D는 하드웨어 지원을 결정할 수 있는, 기능 수준이라는 
 
 기능 수준 지원에 대한 자세한 설명을 보려면 [Direct3D 기능 수준](https://msdn.microsoft.com/library/windows/desktop/ff476876)을 참조하세요. 전체 Direct3D 11 기능 목록을 보려면 [Direct3D 11 기능](https://msdn.microsoft.com/library/windows/desktop/ff476342) 및 [Direct3D 11.1 기능](https://msdn.microsoft.com/library/windows/desktop/hh404562)을 참조하세요.
 
-## 기능 수준 및 프로그램 가능 파이프라인
+## <a name="feature-levels-and-the-programmable-pipeline"></a>기능 수준 및 프로그램 가능 파이프라인
 
 
 하드웨어는 Direct3D 9 이후로 계속 진화하여, 프로그램 가능 그래픽 파이프라인에 여러 가지 선택적 단계가 새로 추가되었습니다. 그래픽 파이프라인에 사용할 수 있는 옵션 집합은 Direct3D 기능 수준에 따라 다릅니다. 기능 수준 10.0에는 GPU의 멀티패스 렌더링을 위한 선택적 스트림 아웃과 함께 기하 도형 셰이더 단계가 포함되어 있습니다. 기능 수준 11\_0에는 하드웨어 공간 분할(tessellation)에 사용할 수 있는 헐 셰이더 및 도메인 셰이더가 포함되어 있습니다. 기능 수준 11\_0에서는 또한 DirectCompute 셰이더를 완전히 지원합니다. 반면 기능 수준 10.x에서는 제한된 형태의 DirectCompute만 지원합니다.
@@ -112,10 +119,5 @@ Direct3D 9에서는 SetVertexShaderConstant 및 SetPixelShaderConstant를 통해
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

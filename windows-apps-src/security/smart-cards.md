@@ -3,13 +3,20 @@ title: "스마트 카드"
 description: "이 항목에서는 물리적 스마트 카드 판독기에 액세스하고, 가상 스마트 카드를 만들고, 스마트 카드와 통신하고, 사용자를 인증하고, 사용자 PIN을 다시 설정하고 스마트 카드를 제거하거나 분리하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱에서 스마트 카드를 사용하여 사용자를 보안 네트워크 서비스에 연결할 수 있는 방법을 설명합니다."
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
-ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 42062dc9dcc11e3db6ddbb761e158d75e1259950
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 스마트 카드
+# <a name="smart-cards"></a>스마트 카드
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,12 +24,12 @@ ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
 
 이 항목에서는 물리적 스마트 카드 판독기에 액세스하고, 가상 스마트 카드를 만들고, 스마트 카드와 통신하고, 사용자를 인증하고, 사용자 PIN을 다시 설정하고 스마트 카드를 제거하거나 분리하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 앱에서 스마트 카드를 사용하여 사용자를 보안 네트워크 서비스에 연결할 수 있는 방법을 설명합니다. 
 
-## 앱 매니페스트 구성
+## <a name="configure-the-app-manifest"></a>앱 매니페스트 구성
 
 
 앱에서 스마트 카드 또는 가상 스마트 카드를 사용하여 사용자를 인증하려면 먼저 프로젝트 Package.appxmanifest 파일에서 **공유 사용자 인증서** 기능을 설정해야 합니다.
 
-## 연결된 카드 판독기 및 스마트 카드 액세스
+## <a name="access-connected-card-readers-and-smart-cards"></a>연결된 카드 판독기 및 스마트 카드 액세스
 
 
 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)에 지정된 디바이스 ID를 [**SmartCardReader.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn263890) 메서드에 전달하여 판독기 및 연결된 스마트 카드를 쿼리할 수 있습니다. 현재 반환된 판독기 디바이스에 연결된 스마트 카드에 액세스하려면 [**SmartCardReader.FindAllCardsAsync**](https://msdn.microsoft.com/library/windows/apps/dn263887)를 호출합니다.
@@ -56,7 +63,7 @@ private void reader_CardAdded(SmartCardReader sender, CardAddedEventArgs args)
 
 그런 다음 반환된 각 [**SmartCard**](https://msdn.microsoft.com/library/windows/apps/dn297565) 개체를 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)에 전달하여 앱이 해당 구성을 액세스하고 사용자 지정할 수 있도록 하는 메서드에 액세스할 수 있습니다.
 
-## 가상 스마트 카드 만들기
+## <a name="create-a-virtual-smart-card"></a>가상 스마트 카드 만들기
 
 
 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801)을 사용하여 가상 스마트 카드를 만들려면 앱에서 먼저 이름, 관리자 키 및 [**SmartCardPinPolicy**](https://msdn.microsoft.com/library/windows/apps/dn297642)를 제공해야 합니다. 이름은 일반적으로 앱에 제공되지만, 앱이 3개 값을 모두 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에 전달하기 전에 관리자 키를 제공하고 현재 **SmartCardPinPolicy**의 인스턴스를 생성해야 합니다.
@@ -80,7 +87,7 @@ SmartCardProvisioning provisioning = await
 
 [**RequestVirtualSmartCardCreationAsync**](https://msdn.microsoft.com/library/windows/apps/dn263830)에서 연결된 [**SmartCardProvisioning**](https://msdn.microsoft.com/library/windows/apps/dn263801) 개체를 반환하면 가상 스마트 카드가 프로비전되고 사용할 준비가 됩니다.
 
-## 인증 질문 처리
+## <a name="handle-authentication-challenges"></a>인증 질문 처리
 
 
 스마트 카드 또는 가상 스마트 카드를 사용하여 인증하려면 앱에서 카드에 저장된 관리자 키 데이터와 인증 서버 또는 관리 도구에서 유지된 관리자 키 데이터 간의 질문을 완료하는 동작을 제공해야 합니다.
@@ -107,7 +114,7 @@ static class ChallengeResponseAlgorithm
 
 이 코드는 이 항목의 나머지 부분 전체에서 참조되며, 인증 작업을 완료하는 방법과 스마트 카드 및 가상 스마트 카드 정보 변경을 적용하는 방법을 검토합니다.
 
-## 스마트 카드 또는 가상 스마트 카드 인증 응답 검증
+## <a name="verify-smart-card-or-virtual-smart-card-authentication-response"></a>스마트 카드 또는 가상 스마트 카드 인증 응답 검증
 
 
 이제 인증 질문에 대한 논리가 정의되었으므로 판독기와 통신하여 인증을 위해 스마트 카드 또는 가상 스마트 카드에 액세스할 수 있습니다.
@@ -135,7 +142,7 @@ using (SmartCardChallengeContext context =
 }
 ```
 
-## 사용자 PIN 변경 또는 초기화
+## <a name="change-or-reset-a-user-pin"></a>사용자 PIN 변경 또는 초기화
 
 
 스마트 카드와 연결된 PIN을 변경하려면
@@ -184,7 +191,7 @@ bool result = await provisioning.RequestPinResetAsync(
 }
 ```
 
-## 스마트 카드 또는 가상 스마트 카드 제거
+## <a name="remove-a-smart-card-or-virtual-smart-card"></a>스마트 카드 또는 가상 스마트 카드 제거
 
 
 물리적 스마트 카드를 제거하는 경우 카드를 삭제할 때 [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875) 이벤트가 발생합니다.
@@ -202,8 +209,3 @@ reader.CardRemoved += HandleCardRemoved;
 bool result = await SmartCardProvisioning
     .RequestVirtualSmartCardDeletionAsync(card);
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -1,11 +1,18 @@
 ---
 author: mcleblanc
 description: "디바이스 및 센서와 통합되는 코드는 사용자의 입력과 사용자에 대한 출력을 포함합니다."
-title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅&quot;"
+title: "I/O, 디바이스 및 앱 모델에 대해 Windows Phone Silverlight를 UWP로 포팅"
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: fedba87189e6ee5b6f8f81dfa06703b2011adf6a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 975f364fec4edfcf90ee65912f509741bd1f80dd
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -39,7 +46,7 @@ Windows Phone Silverlight 카메라 캡처 코드는 **Microsoft.Devices.Camera*
 
 앱 대상에 대해 생각하는 방식이 Windows 10의 등장으로 바뀝니다. 새로운 개념적 모델에서는 앱이 UWP(유니버설 Windows 플랫폼)를 대상으로 하고 모든 Windows 디바이스에서 실행됩니다. 그런 다음 특정 디바이스 패밀리에 독점적으로 사용되는 기능을 돋보이도록 선택할 수 있습니다. 또한 필요한 경우 앱에는 특별히 하나 이상의 디바이스 패밀리를 대상으로 하도록 자체적으로 제한하는 옵션도 있습니다. 디바이스 패밀리와 대상으로 할 디바이스 패밀리를 결정하는 방법에 대한 자세한 내용은 [UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)을 참조하세요.
 
-**참고** 기능이 있는지 검색하는 데 운영 체제 또는 디바이스 패밀리를 사용하지 않는 것이 좋습니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](wpsl-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
+**참고** 기능이 있는지 검색하기 위해 운영 체제 또는 디바이스 제품군을 사용하는 것은 좋은 방법이 아닙니다. 일반적으로 현재 운영 체제 또는 디바이스 패밀리를 식별하는 방법이 특정 운영 체제 또는 디바이스 패밀리 기능이 있는지 확인하는 가장 좋은 방법은 아닙니다. 운영 체제 또는 디바이스 패밀리(및 버전 번호)를 검색하는 대신 기능 자체의 존재에 대해 테스트합니다([조건부 컴파일 및 적응 코드](wpsl-to-uwp-porting-to-a-uwp-project.md) 참조). 특정 운영 체제 또는 디바이스 패밀리가 필요한 경우 해당 버전에 대한 테스트를 디자인하지 않고 해당 버전을 지원되는 최소 버전으로 사용해야 합니다.
 
 앱의 UI를 서로 다른 디바이스에 맞게 구성하는 데 권장되는 여러 기술이 있습니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 유효 픽셀(이전의 보기 픽셀)로 크기를 사용하므로 다른 해상도 및 배율에 맞게 UI를 조정할 수 있습니다([보기/유효 픽셀, 가시거리 및 배율 인수](wpsl-to-uwp-porting-xaml-and-ui.md) 참조). Visual State Manager의 적응 트리거 및 setter를 사용하여 창 크기에 맞게 UI를 조정할 수 있습니다([UWP 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631) 참조).
 
@@ -92,10 +99,5 @@ UWP 앱에서 **PhoneApplicationPage.SupportedOrientations** 및 **Orientation**
 디바이스 방향과 화면 크기와 상관없이 UWP 앱의 UI를 보기 좋게 디자인하는 것이 좋습니다. 자세한 내용은 다음 항목인 [폼 팩터 및 사용자 환경에 대한 포팅](wpsl-to-uwp-form-factors-and-ux.md)을 참조하세요.
 
 다음 항목은 [비즈니스 및 데이터 계층 포팅](wpsl-to-uwp-business-and-data.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

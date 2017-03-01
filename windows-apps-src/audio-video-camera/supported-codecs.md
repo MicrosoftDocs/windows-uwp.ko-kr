@@ -3,22 +3,29 @@ author: drewbatgit
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다."
 title: "지원되는 코덱"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7bd0002d62519757cf582d6070a22890a0e1837e
-ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2c477e9dc0cc86534a179edb8e3a9415f4872d93
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지원되는 코덱
+# <a name="supported-codecs"></a>지원되는 코덱
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에는 UWP 앱의 오디오, 비디오, 이미지 코덱 및 지원 형식이 나열되어 있습니다.
 
 아래 표에서 “D”는 디코더 지원을 나타내고 “E”는 인코더 지원을 나타냅니다.
 
-## 오디오 코덱 및 형식 지원
+## <a name="audio-codec--format-support"></a>오디오 코덱 및 형식 지원
 
 다음 표에는 각 장치 제품군의 오디오 코덱과 형식 지원이 표시되어 있습니다.
 
@@ -27,7 +34,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### 데스크톱
+### <a name="desktop"></a>데스크톱
 
 <table>
 <colgroup>
@@ -338,7 +345,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### 모바일
+### <a name="mobile"></a>모바일
 
 <table>
 <colgroup>
@@ -649,7 +656,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### IoT Core(x86)
+### <a name="iot-core-x86"></a>IoT Core(x86)
 
 <table>
 <colgroup>
@@ -960,7 +967,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### IoT Core(ARM)
+### <a name="iot-core-arm"></a>IoT Core(ARM)
 
 <table>
 <colgroup>
@@ -1271,7 +1278,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -1582,7 +1589,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-## 비디오 코덱 및 형식 지원
+## <a name="video-codec--format-support"></a>비디오 코덱 및 형식 지원
 
 다음 표에는 각 장치 제품군의 비디오 코덱과 형식 지원이 표시되어 있습니다.
 
@@ -1592,7 +1599,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### 데스크톱
+### <a name="desktop"></a>데스크톱
 
 <table>
 <colgroup>
@@ -1811,7 +1818,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### 모바일
+### <a name="mobile"></a>모바일
 
 <table>
 <colgroup>
@@ -2030,7 +2037,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### IoT Core(x86)
+### <a name="iot-core-x86"></a>IoT Core(x86)
 
 <table>
 <colgroup>
@@ -2249,7 +2256,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### IoT(ARM)
+### <a name="iot-arm"></a>IoT(ARM)
 
 <table>
 <colgroup>
@@ -2468,7 +2475,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 
  
 
-### XBox
+### <a name="xbox"></a>XBox
 
 <table>
 <colgroup>
@@ -2685,7 +2692,7 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 </tbody>
 </table>
 
-## 이미지 코덱 및 형식 지원 
+## <a name="image-codec--format-support"></a>이미지 코덱 및 형식 지원 
 
 <table>
 <colgroup>
@@ -2757,8 +2764,3 @@ ms.openlocfilehash: ec8ef39e3b1e014fb701e9d4bfa161faa8acbba8
 <sup>3</sup> 특정 카메라 원시 형식만 지원됩니다.  
 
 이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://msdn.microsoft.com/library/windows/desktop/gg430027.aspx)을 참조하세요.
-
-
-<!--HONumber=Nov16_HO1-->
-
-

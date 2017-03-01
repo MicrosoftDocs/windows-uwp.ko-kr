@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: "Windows 10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다."
-title: "Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판"
+title: "Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store"
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: ee2a52a54be8510b962f1ef5c40570f3836d28c3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 787007b870675749d96afa59a6e9cb5f3be68991
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판
+# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
 앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
 
@@ -50,7 +57,7 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 
 이 파일의 값을 수정할 수는 있지만 **CurrentAppSimulator**에 대한 고유한 WindowsStoreProxy.xml 파일(Visual Studio 프로젝트의 데이터 폴더)을 만들어 대신 사용하는 것이 좋습니다. 거래를 시뮬레이트하는 경우 [ReloadSimulatorAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.currentappsimulator.reloadsimulatorasync.aspx)를 호출하여 파일을 로드합니다. **ReloadSimulatorAsync**를 호출하여 고유한 WindowsStoreProxy.xml 파일을 로드하지 않으면 **CurrentAppSimulator**에서 기본 WindowsStoreProxy.xml 파일을 만들고 로드합니다(덮어쓰지 않음).
 
->**참고**  **ReloadSimulatorAsync**가 완료되기 전에는 **CurrentAppSimulator**가 완전히 초기화되지 않은 것입니다. 또한 **ReloadSimulatorAsync**는 비동기 메서드이므로 다른 스레드에서 초기화되는 동안 한 스레드에서 **CurrentAppSimulator**를 쿼리하는 경합 상태가 발생하지 않도록 주의해야 합니다. 한 가지 방법은 플래그를 사용하여 초기화가 완료되었음을 나타내는 것입니다. Windows 스토어에서 설치된 앱은 **CurrentAppSimulator** 대신 **CurrentApp**을 사용해야 하며, 이 경우 **ReloadSimulatorAsync**가 호출되지 않으므로 방금 언급한 경합 상태가 적용되지 않습니다. 이 때문에 비동기적 및 동기적으로 두 경우에서 모두 작동하도록 코드를 설계합니다.
+>**참고**&nbsp;&nbsp;**ReloadSimulatorAsync**가 완료되기 전에는 **CurrentAppSimulator**가 완전히 초기화되지 않은 것입니다. 또한 **ReloadSimulatorAsync**는 비동기 메서드이므로 다른 스레드에서 초기화되는 동안 한 스레드에서 **CurrentAppSimulator**를 쿼리하는 경합 상태가 발생하지 않도록 주의해야 합니다. 한 가지 방법은 플래그를 사용하여 초기화가 완료되었음을 나타내는 것입니다. Windows 스토어에서 설치된 앱은 **CurrentAppSimulator** 대신 **CurrentApp**을 사용해야 하며, 이 경우 **ReloadSimulatorAsync**가 호출되지 않으므로 방금 언급한 경합 상태가 적용되지 않습니다. 이 때문에 비동기적 및 동기적으로 두 경우에서 모두 작동하도록 코드를 설계합니다.
 
 
 <span id="proxy-examples" />
@@ -537,9 +544,4 @@ WindowsStoreProxy.xml 파일은 기본적으로 다음 위치에 생성됩니다
 |  **TransactionId**  |     예       |   앱에서 이행 프로세스를 통해 소모성의 구매 거래를 추적하는 데 사용하는 GUID(문자열)를 포함합니다. [앱에서 바로 구매 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)을 참조하세요.            |
 |  **Status**  |      예      |  앱에서 소모성의 이행 상태를 나타내는 데 사용하는 문자열을 포함합니다. 값은 **Active**, **PurchaseReverted**, **PurchasePending** 또는 **ServerError**일 수 있습니다.             |
 |  **OfferId**  |     아니요       |    앱에서 소모성이 속하는 범주를 식별하는 데 사용하는 문자열을 포함합니다. [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)에 설명된 대로 큰 항목 카탈로그를 지원합니다.           |
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

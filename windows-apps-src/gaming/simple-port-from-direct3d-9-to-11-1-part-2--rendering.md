@@ -3,13 +3,20 @@ author: mtoepke
 title: "렌더링 프레임워크 변환"
 description: "기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다."
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 렌더링 프레임 워크, 변환, direct3d 9, direct3d 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 렌더링 프레임워크 변환
+# <a name="convert-the-rendering-framework"></a>렌더링 프레임워크 변환
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: c5cdddbf2bf75da761f4439ef2d890170c6681c5
 
 기하 도형 버퍼를 포팅하는 방법, HLSL 셰이더 프로그램을 컴파일하고 로드하는 방법 및 Direct3D 11에서 렌더링 체인을 구현하는 방법을 포함하여 간단한 렌더링 프레임 워크를 Direct3D 9에서 Direct3D 11로 변환하는 방법을 보여 줍니다. [간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)으로 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 2부.
 
-## HLSL 셰이더로 효과 변환
+## <a name="convert-effects-to-hlsl-shaders"></a>HLSL 셰이더로 효과 변환
 
 
 다음 예제에서는 하드웨어 꼭짓점 변환 및 통과 색상 데이터에 대한 레거시 효과 API용으로 작성된 간단한 D3DX 기술입니다.
@@ -103,7 +110,7 @@ HLSL 파일은 셰이더 의미 체계에 대한 이전 구문을 사용할 수 
 
 하드웨어 변환 꼭짓점 셰이더는 다음과 같습니다. 이번에는 고유한 파일에 정의되어 있습니다.
 
-> **참고** 꼭짓점 셰이더는 SV_POSITION 시스템 값 의미 체계를 출력하는 데 필요합니다. 이 의미 체계는 꼭짓점 위치 데이터를 결정하여 값을 조정합니다. 여기서 x는 -1과 1 사이입니다. y는 -1과 1 사이입니다. z는 원래 같은 유형의 좌표 w 값으로 나눕니다(z/w). w는 원래 w 값으로 1을 나눈 값입니다(1/w).
+> **참고**  꼭짓점 셰이더는 SV\_POSITION 시스템 값 의미 체계를 출력하는 데 필요합니다. 이 의미 체계는 꼭짓점 위치 데이터를 결정하여 값을 조정합니다. 여기서 x는 -1과 1 사이입니다. y는 -1과 1 사이입니다. z는 원래 같은 유형의 좌표 w 값으로 나눕니다(z/w). w는 원래 w 값으로 1을 나눈 값입니다(1/w).
 
  
 
@@ -150,7 +157,7 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 
 통과 픽셀 셰이더에는 이것만 있으면 됩니다. 이를 통과라고 하지만 각 픽셀에 대한 보간된 원근 수정 색상 데이터를 실제로 가져옵니다. SV\_TARGET 시스템 값 의미 체계는 API에서 필요한 대로 픽셀 셰이더에 의해 색상 값 출력에 적용됩니다.
 
-> **참고** 셰이더 수준 9\_x 픽셀 셰이더는 SV\_POSITION 시스템 값 의미 체계를 읽을 수 없습니다. Model 4.0 이상 픽셀 셰이더는 SV\_POSITION을 사용하여 화면에서 픽셀 위치를 검색합니다. 여기서 x는 0과 렌더링 대상 너비 사이이고 y는 0과 렌더링 대상 높이 사이입니다(각각 0.5 기준 오프셋).
+> **참고**  셰이더 수준 9\_x 픽셀 셰이더는 SV\_POSITION 시스템 값 의미 체계를 읽을 수 없습니다. Model 4.0 이상 픽셀 셰이더는 SV\_POSITION을 사용하여 화면에서 픽셀 위치를 검색합니다. 여기서 x는 0과 렌더링 대상 너비 사이이고 y는 0과 렌더링 대상 높이 사이입니다(각각 0.5 기준 오프셋).
 
  
 
@@ -180,7 +187,7 @@ PS_OUTPUT main(PS_INPUT In)
 }
 ```
 
-## 셰이더 컴파일 및 로드
+## <a name="compile-and-load-shaders"></a>셰이더 컴파일 및 로드
 
 
 Direct3D 9 게임은 프로그래밍 가능한 파이프라인을 구현하는 편리한 방법으로 효과 라이브러리를 종종 사용합니다. 효과는 런타임에서 [**D3DXCreateEffectFromFile function**](https://msdn.microsoft.com/library/windows/desktop/bb172768) 메서드를 사용하여 컴파일할 수 있습니다.
@@ -234,7 +241,7 @@ m_d3dDevice->CreateVertexShader(
 
 셰이더 바이트 코드를 컴파일된 앱 패키지에 포함하려면 HLSL 파일을 Visual Studio 프로젝트에 추가하기만 하면 됩니다. Visual Studio는 [효과 컴파일러 도구](https://msdn.microsoft.com/library/windows/desktop/bb232919)(FXC)를 사용하여 HLSL 파일을 컴파일된 셰이더 개체(.CSO 파일)로 컴파일하여 앱 패키지에 포함합니다.
 
-> **참조** HLSL 컴파일러에 대한 올바른 대상 기능 수준을 설정해야 합니다. Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭하고, 속성을 선택하고, **HLSL 컴파일러 -&gt; 일반**에서 **셰이더 모델** 설정을 변경합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
+> **참조**   HLSL 컴파일러에 대한 올바른 대상 기능 수준을 설정해야 합니다. Visual Studio에서 HLSL 소스 파일을 마우스 오른쪽 단추로 클릭하고, 속성을 선택하고, **HLSL 컴파일러 -&gt; 일반**에서 **셰이더 모델** 설정을 변경합니다. 앱이 Direct3D 셰이더 자원을 만들 때 Direct3D는 하드웨어 기능에 대해 이 속성을 확인합니다.
 
  
 
@@ -244,7 +251,7 @@ Direct3D 9에서 꼭짓점 스트림 선언에 해당하는 입력 레이아웃�
 
 꼭짓점별 데이터는 시스템 메모리에서 호환되는 형식으로 저장해야 합니다. DirectXMath 데이터 형식을 활용할 수 있습니다. 예를 들어 DXGI\_FORMAT\_R32G32B32\_FLOAT는 [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475)에 해당합니다.
 
-> **참고** 상수 버퍼는 한 번에 4 개의 부동 소수점 숫자에 정렬되는 고정된 입력 레이아웃을 사용합니다. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)(및 해당 파생물)가 상수 버퍼 데이터에 권장됩니다.
+> **참고**   상수 버퍼는 한 번에 4 개의 부동 소수점 숫자에 정렬되는 고정된 입력 레이아웃을 사용합니다. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608)(및 해당 파생물)가 상수 버퍼 데이터에 권장됩니다.
 
  
 
@@ -262,7 +269,7 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 };
 ```
 
-## 기하 도형 리소스 만들기
+## <a name="create-geometry-resources"></a>기하 도형 리소스 만들기
 
 
 Direct3D 9에서는 Direct3D 장치에서 버퍼를 만들고, 메모리를 잠그고, CPU 메모리에서 GPU 메모리로 데이터를 복사하여 기하 도형 리소스를 저장했습니다.
@@ -315,7 +322,7 @@ m_d3dDevice->CreateBuffer(
     );
 ```
 
-## 렌더링 체인 구현
+## <a name="implement-the-rendering-chain"></a>렌더링 체인 구현
 
 
 Direct3D 9 게임은 종종 효과 기반 렌더링 체인을 사용합니다. 이러한 유형의 렌더링 체인은 효과 개체를 설정하고, 필요로 하는 리소스와 함께 이 개체를 제공하며, 각 단계가 렌더링되게 합니다.
@@ -489,10 +496,5 @@ m_swapChain->Present(1, 0);
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

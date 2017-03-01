@@ -3,19 +3,26 @@ author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: "스레드 풀을 사용하기 위한 모범 사례"
 description: "이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스레드, 스레드 풀"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d3b45da6a11bab926812682c209207bbbb436bf1
+ms.lasthandoff: 02/07/2017
 
 ---
-# 스레드 풀을 사용하기 위한 모범 사례
+# <a name="best-practices-for-using-the-thread-pool"></a>스레드 풀을 사용하기 위한 모범 사례
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다.
 
-## 권장 사항
+## <a name="dos"></a>권장 사항
 
 
 -   스레드 풀을 사용하여 앱에서 병렬 작업을 수행합니다.
@@ -28,13 +35,13 @@ ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
 
 -   **Sleep** 함수 대신 [**ThreadPoolTimer.CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)를 사용합니다.
 
--   고유한 스레드 관리 시스템을 만드는 대신 스레드 풀을 사용합니다. 스레드 풀은 고급 접근 권한 값을 사용하여 OS 수준에서 실행되며 디바이스 리소스 및 활동에 따라 시스템 전체와 프로세스 내에서 동적으로 조정되도록 최적화되어 있습니다.
+-   고유한 스레드 관리 시스템을 만드는 대신 스레드 풀을 사용합니다. 스레드 풀은 고급 접근 권한 값을 사용하여 OS 수준에서 실행되며 장치 리소스 및 활동에 따라 시스템 전체와 프로세스 내에서 동적으로 조정되도록 최적화되어 있습니다.
 
 -   C++에서 작업 항목 대리자가 Agile 스레딩 모델을 사용하는지 확인합니다(C++ 대리자는 기본적으로 Agile임).
 
 -   사용 시 리소스 할당 오류를 허용할 수 없는 경우 미리 할당된 작업 항목을 사용합니다.
 
-## 금지 사항
+## <a name="donts"></a>금지 사항
 
 
 -   *period* 값이 &lt;1밀리초보다 작은(0 포함) 주기적 타이머를 만들지 마세요. 이렇게 하면 작업 항목이 일회성 타이머로 동작합니다.
@@ -47,16 +54,10 @@ ms.openlocfilehash: 796625fe5c1892ac99195a4920dbc7e539aebf76
 
 -   미리 할당된 작업 항목을 다시 초기화하지 않고 여러 번 실행하지 마세요. [정기 작업 항목 만들기](create-a-periodic-work-item.md)
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [정기 작업 항목 만들기](create-a-periodic-work-item.md)
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

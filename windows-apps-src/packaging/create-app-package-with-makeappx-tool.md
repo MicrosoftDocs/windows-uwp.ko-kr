@@ -2,9 +2,17 @@
 author: laurenhughes
 title: "MakeAppx.exe 도구를 사용하여 앱 패키지 만들기"
 description: "MakeAppx.exe는 앱 패키지와 번들을 만들고, 암호화 및 암호 해독하고, 파일을 추출합니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 translationtype: Human Translation
-ms.sourcegitcommit: 28cd2b2a922a20e0b9ffc4d1ca65f6a55e92aa8f
-ms.openlocfilehash: c99c76fac9303e174b5d804c2f1b99856be25006
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 616340bcc5159dce12d3b888697ac4f60d30f175
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -269,8 +277,3 @@ MakeAppx.exe decrypt p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile
 - 응용 프로그램이 이 목록에서 금지된 프로토콜(SMB, FILE, MS-WWA-WEB, MS-WWA)에 등록하지 않습니다. 
 
 일반적인 오류만 catch하도록 설계되었기 때문에 전체 의미 체계 유효성 검사는 아닙니다. **MakeAppx.exe**에서 빌드된 패키지는 설치 가능한 패키지가 아닐 수도 있습니다.
-
-
-<!--HONumber=Dec16_HO1-->
-
-

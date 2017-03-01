@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: "디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터"
 description: "앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
-ms.openlocfilehash: 6f157688cba014ffc1f8d09c2a291d62c564c8c9
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 35df3de9b56b9539a559e161e80658c23a9d0480
+ms.lasthandoff: 01/19/2017
 
 ---
-디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
+<a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -18,7 +25,7 @@ ms.openlocfilehash: 6f157688cba014ffc1f8d09c2a291d62c564c8c9
 
 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다. 컨트롤에 데이터를 채워 앱의 레이아웃, 템플릿 및 기타 시각적 속성을 작업할 수 있도록 하기 위해 다양한 방법으로 디자인 타임 샘플 데이터를 사용할 수 있습니다. 스케치(또는 프로토타입) 앱을 빌드하는 경우에도 샘플 데이터를 사용하면 정말 유용하고 시간을 절약할 수 있습니다. 스케치 또는 프로토타입에서 런타임에 샘플 데이터를 사용하면 실제 라이브 데이터에 연결하지 않더라도 아이디어를 설명할 수 있습니다.
 
-태그에서 DataContext 설정
+<a name="setting-datacontext-in-markup"></a>태그에서 DataContext 설정
 -----------------------------
 
 개발자가 코드 숨김에 필수적인 코드를 사용하여 페이지 또는 사용자 컨트롤의 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)를 뷰 모델 인스턴스로 설정하는 것은 아주 일반적인 방법입니다.
@@ -67,7 +74,7 @@ else
 
 초기화 코드에 매개 변수를 전달해야 하는 경우 뷰 모델 로케이터를 사용할 수 있습니다. 뷰 모델 로케이터는 앱 리소스에 넣을 수 있는 클래스입니다. 이 클래스에는 뷰 모델을 노출하는 속성이 있고 페이지의 **DataContext**가 해당 속성에 바인딩됩니다. 로케이터 또는 뷰 모델에서 사용할 수 있는 다른 패턴은 종속성 주입입니다. 이 패턴은 해당되는 디자인 타임 또는 런타임 데이터 공급자(각각 공용 인터페이스 구현)를 생성할 수 있습니다.
 
-"클래스의 샘플 데이터" 및 디자인 타임 특성
+<a name="sample-data-from-class-and-design-time-attributes"></a>"클래스의 샘플 데이터" 및 디자인 타임 특성
 ---------------------------------------------------------------------------------------
 
 어떤 이유로든 이전 섹션의 옵션이 작동하지 않더라도 XAML 도구 기능 및 디자인 타임 특성을 통해 사용할 수 있는 디자인 타임 데이터 옵션이 여전히 많습니다. 한 가지 좋은 옵션은 Blend for Visual Studio의 **클래스에서 예제 데이터 만들기** 기능입니다. 해당 명령은 **데이터** 패널 위쪽에 있는 단추 중 하나에서 찾을 수 있습니다.
@@ -132,7 +139,7 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 
 **IsDesignTimeCreatable** 속성은 디자인 도구에서 실제로 클래스의 인스턴스를 만들어야 함을 의미합니다. 즉, 이 클래스는 공용 기본 생성자가 있고 자체적으로 실제 또는 샘플 데이터로 채워집니다. **IsDesignTimeCreatable**을 설정하지 않거나 **False**로 설정하면 샘플 데이터가 디자인 화면에 표시되지 않습니다. 이 경우 디자인 도구는 클래스를 구문 분석하여 바인딩 가능한 속성을 찾고 이러한 속성을 **데이터** 패널과 **데이터 바인딩 만들기** 대화 상자에 표시하기만 합니다.
 
-프로토타입 생성용 샘플 데이터
+<a name="sample-data-for-prototyping"></a>프로토타입 생성용 샘플 데이터
 --------------------------------------------------------
 
 프로토타입 생성을 위해 디자인 타임과 런타임 모두에 샘플 데이터가 필요합니다. 해당 사용 사례를 위해 Blend for Visual Studio에는 **새 샘플 데이터** 기능이 있습니다. 해당 명령은 **데이터** 패널 위쪽에 있는 단추 중 하나에서 찾을 수 있습니다.
@@ -142,9 +149,4 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 **새 샘플 데이터** 기능은 **d:DataContext**가 아니라 [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
 
 ![프로토타입 생성용 샘플 데이터](images/displaying-data-in-the-designer-04.png)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

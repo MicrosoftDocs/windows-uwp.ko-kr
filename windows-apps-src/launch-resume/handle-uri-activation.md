@@ -3,13 +3,20 @@ author: TylerMSFT
 title: "URI 활성화 처리"
 description: "앱을 URI(Uniform Resource Identifier) 체계 이름의 기본 처리기로 등록하는 방법을 알아봅니다."
 ms.assetid: 92D06F3E-C8F3-42E0-A476-7E94FD14B2BE
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
-ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 233044095bc8e994ef1a425ec7069fc7fdc93b86
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# URI 활성화 처리
+# <a name="handle-uri-activation"></a>URI 활성화 처리
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -28,7 +35,7 @@ ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
 
 > **참고** UWP 앱에서 특정 URI 및 파일 확장명은 기본 제공 앱과 운영 체제에서 사용하기 위해 예약되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 예약되거나 금지되어 UWP 앱에 등록할 수 없는 URI 스키마의 사전순 목록은 [예약된 URI 스키마 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요.
 
-## 1단계: 패키지 매니페스트에서 확장점 지정
+## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
 
 
 앱은 패키지 매니페스트에 나열된 URI 스키마 이름에 대해서만 활성화 이벤트를 받습니다. 다음은 앱이 `alsdk` URI 스키마 이름을 처리하도록 지정하는 방법입니다.
@@ -48,7 +55,7 @@ ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
 | **진입점** | 프로토콜 확장명을 처리하는 작업을 지정합니다. 이는 일반적으로 Windows 런타임 형식의 정규화된 네임스페이스 이름입니다. 지정하지 않으면 앱에 대한 진입점이 사용됩니다. |
 | **시작 페이지** | 확장성 지점을 처리하는 웹 페이지입니다. |
 | **리소스 그룹** | 리소스 관리 목적으로 확장명 활성화를 그룹화하기 위해 사용할 수 있는 태그입니다. |
-| **원하는 보기**(Windows만 해당) | **Desired View** 필드를 지정하여 URI 체계 이름에 대해 시작을 처리할 때 앱의 창에 필요한 공간을 나타냅니다. **Desired View**에 사용 가능한 값은 **Default**, **UseLess**, **UseHalf**, **UseMore** 또는 **UseMinimum**입니다. <br/>**참고** Windows는 대상 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. **원하는 보기**를 설정해도 대상 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.<br/> **모바일 디바이스 패밀리: Desired View**는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
+| **원하는 보기**(Windows만 해당) | **Desired View** 필드를 지정하여 URI 체계 이름에 대해 시작을 처리할 때 앱의 창에 필요한 공간을 나타냅니다. **Desired View**에 사용 가능한 값은 **Default**, **UseLess**, **UseHalf**, **UseMore** 또는 **UseMinimum**입니다. <br/>**참고** Windows는 대상 앱의 최종 창 크기를 결정할 때 원본 앱의 기본 설정, 화면의 앱 수, 화면 방향 같은 여러 가지 요소를 고려합니다. **원하는 보기**를 설정해도 대상 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.<br/> **모바일 디바이스 패밀리: 원하는 보기**는 모바일 디바이스 패밀리에서 지원되지 않습니다. |
 2.  **로고**로 `images\Icon.png`를 입력합니다.
 3.  **표시 이름**으로 `SDK Sample URI Scheme`를 입력합니다.
 4.  **이름**으로 `alsdk`를 입력합니다.
@@ -67,7 +74,7 @@ ms.openlocfilehash: 9577ac3dd2b89daaacab4792a4c09fc37c400365
           </Extensions>
     ```
 
-## 2단계: 적절한 아이콘 추가
+## <a name="step-2-add-the-proper-icons"></a>2단계: 적절한 아이콘 추가
 
 
 URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양한 위치(예제: 기본 프로그램 제어판)에 표시되는 아이콘이 있습니다.
@@ -76,7 +83,7 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 ![images 폴더의 파일이 표시된 솔루션 탐색기 'icon.targetsize'와 'smalltile-sdk' 모두 16, 32, 48 및 256픽셀 버전이 있습니다.](images/seviewofimages.png)
 
-## 3단계: 활성화된 이벤트 처리
+## <a name="step-3-handle-the-activated-event"></a>3단계: 활성화된 이벤트 처리
 
 
 [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) 이벤트 처리기는 모든 활성화 이벤트를 받습니다. **Kind** 속성은 활성화 이벤트의 형식을 나타냅니다. 이 예제는 [**Protocol**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.activation.activationkind.aspx#Protocol) 활성화 이벤트를 처리하도록 설정되었습니다.
@@ -126,7 +133,7 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
 프로토콜 활성화를 통해 시작된 경우 앱은 사용자가 앱의 최상위 페이지로 다시 이동할 수 있도록 하는 UI를 포함해야 합니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 
 악의적인 경우를 비롯하여 어떤 앱이나 웹 사이트도 URI 스키마 이름을 사용할 수 있습니다. 따라서 URI를 통해 가져오는 데이터는 신뢰할 수 없는 원본에서 온 것일 수 있으므로 URI를 통해 받은 매개 변수를 기반으로 영구 작업을 수행하지 않는 것이 좋습니다. 예를 들어 사용자의 계정 페이지로 앱을 실행하는 데 URI 매개 변수를 사용할 수 있지만 사용자의 계정을 직접 수정하는 데는 사용하지 않는 것이 좋습니다.
@@ -143,7 +150,7 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 **전체 예제**
@@ -173,9 +180,4 @@ URI 스키마 이름의 기본값이 되는 앱에는 시스템 전체의 다양
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

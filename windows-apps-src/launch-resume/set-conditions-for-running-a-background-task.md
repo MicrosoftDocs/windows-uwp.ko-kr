@@ -1,11 +1,18 @@
 ---
 author: TylerMSFT
 title: "백그라운드 작업 실행 조건 설정"
-description: "백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다."
+description: "백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: c83f861f43209c42dff661e3277e1d8a1b67d37c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 486e0cd3938a09c663e8e805092377709672359f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -178,9 +185,4 @@ ms.openlocfilehash: c83f861f43209c42dff661e3277e1d8a1b67d37c
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

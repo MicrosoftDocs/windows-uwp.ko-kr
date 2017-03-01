@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: "UWP 앱에서 ‘앱에서 바로 구매’ 및 평가판을 사용하도록 설정하는 방법을 알아봅니다."
 title: "앱에서 바로 구매 및 평가판"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, 소모성, 지속형"
 translationtype: Human Translation
-ms.sourcegitcommit: ebac7d8edf9787ad810b84f3855fe23ae3007dcf
-ms.openlocfilehash: 33004b5229167bedd4cbafe5279709f1225ed02c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ade314f79edf73527f29e937f8eab987c902802f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -218,9 +225,4 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 * [소모성 추가 기능 구매 사용](enable-consumable-add-on-purchases.md)
 * [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)
 * [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)
-
-
-
-<!--HONumber=Dec16_HO4-->
-
 

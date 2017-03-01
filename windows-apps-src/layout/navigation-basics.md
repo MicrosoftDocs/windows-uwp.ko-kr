@@ -1,14 +1,21 @@
 ---
 author: mijacobs
-Description: "UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다."
+Description: "UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델에 기반을 두고 있습니다."
 title: "UWP 앱의 탐색 기본 사항(Windows 앱)"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d0c1858727d4a19e699d2ec9cf5d869460873524
-ms.openlocfilehash: 25a84e7a72fb87faea47845d7d32a5c3071a78a7
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 72596a2d902dff72af76c84115bc1eb0be8fa743
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -16,7 +23,7 @@ ms.openlocfilehash: 25a84e7a72fb87faea47845d7d32a5c3071a78a7
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다. 이러한 것이 모여 앱, 페이지, 콘텐츠 간에 이동할 때 다양한 직관적인 사용자 환경을 제공합니다.
+UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델에 기반을 두고 있습니다. 이러한 것이 모여 앱, 페이지, 콘텐츠 간에 이동할 때 다양한 직관적인 사용자 환경을 제공합니다.
 
 경우에 따라 사용자가 이동 작업만으로 해당 콘텐츠를 탐색할 수 있도록 앱의 콘텐츠와 기능을 모두 단일 페이지에 맞출 수도 있습니다. 그러나 대부분의 앱에는 일반적으로 탐색, 참여 및 조작할 여러 페이지의 콘텐츠 및 기능이 있습니다. 앱에 페이지가 두 개 이상 있는 경우 적절한 탐색 환경을 제공해야 합니다.
 
@@ -250,10 +257,5 @@ UWP(유니버설 Windows 플랫폼) 앱의 탐색은 탐색 구조, 탐색 요�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO3-->
 
 

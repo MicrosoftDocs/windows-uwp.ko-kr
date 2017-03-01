@@ -1,34 +1,41 @@
 ---
 author: TylerMSFT
-ms.assetid: 
+ms.assetid: 3a3ea86e-fa47-46ee-9e2e-f59644c0d1db
 description: "이 문서에서는 앱이 백그라운드로 이동할 때 메모리를 줄이는 방법을 보여 줍니다."
 title: "앱이 백그라운드 상태로 이동할 때 메모리 사용량 줄이기"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: bf0cb8f072a2a6974ab582329d8b482add37f1d9
-ms.openlocfilehash: 80e89e24236903ab90f7c4fe326782a0a7e5272f
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: ef4527f72898c8c5a6ad9c56d975966402894b2c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 앱이 백그라운드로 이동할 때 메모리 회수
+# <a name="free-memory-when-your-app-moves-to-the-background"></a>앱이 백그라운드로 이동할 때 메모리 회수
 
 이 문서에서는 앱이 백그라운드 상태로 이동할 때 일시 중단되거나 종료되지 않도록 앱에서 사용하는 메모리 양을 줄이는 방법을 알아봅니다.
 
-## 새 백그라운드 이벤트
+## <a name="new-background-events"></a>새 백그라운드 이벤트
 
 Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 이벤트 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 및 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground)가 추가되었습니다. 이러한 이벤트를 사용하면 백그라운드 상태가 되거나 백그라운드 상태에서 벗어날 때 앱이 알 수 있습니다.
 
 앱이 백그라운드로 이동하면 시스템에 의해 메모리 제약 조건이 변경될 수 있습니다. 이러한 이벤트를 사용하여 현재 메모리 소비를 확인하고 리소스를 해제하여 앱이 백그라운드 상태일 때 일시 중단되거나 종료되지 않도록 제한값 이하로 유지합니다.
 
-### 앱의 메모리 사용량 제어를 위한 이벤트
+### <a name="events-for-controlling-your-apps-memory-usage"></a>앱의 메모리 사용량 제어를 위한 이벤트
 
-[MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx)은 앱에서 사용할 수 있는 총 메모리 제한이 변경되기 직전에 발생합니다. 예를 들어 앱이 백그라운드로 이동하면 Xbox의 메모리 제한이 1024MB에서 128MB로 변경됩니다.  
+[MemoryManager.AppMemoryUsageLimitChanging](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagelimitchanging.aspx)은 앱에서 사용할 수 있는 총 메모리 제한이 변경되기 직전에 발생합니다. 예를 들어 앱이 백그라운드로 이동하면 Xbox의 메모리 제한이 1024MB에서 128MB로 변경됩니다.  
 이 이벤트는 앱이 일시 중단 또는 종료되지 않도록 플랫폼을 유지하기 위해 처리해야 하는 가장 중요한 이벤트입니다.
 
-[MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx)는 [AppMemoryUsageLevel](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.appmemoryusagelevel.aspx) 열거에서 앱의 메모리 소비가 더 높은 값으로 증가할 때 발생합니다. 예를 들어 **Low**에서 **Medium**으로 변경될 때 발생합니다. 이 이벤트의 처리는 선택 사항이지만 응용 프로그램을 제한 이하로 유지해야 하므로 권장됩니다.
+[MemoryManager.AppMemoryUsageIncreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusageincreased.aspx)는 [AppMemoryUsageLevel](https://msdn.microsoft.com/library/windows/apps/windows.system.appmemoryusagelevel.aspx) 열거에서 앱의 메모리 소비가 더 높은 값으로 증가할 때 발생합니다. 예를 들어 **Low**에서 **Medium**으로 변경될 때 발생합니다. 이 이벤트의 처리는 선택 사항이지만 응용 프로그램을 제한 이하로 유지해야 하므로 권장됩니다.
 
-[MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx)는 **AppMemoryUsageLevel** 열거에서 앱의 메모리 소비가 더 낮은 값으로 줄어들 때 발생합니다. 예를 들어 **High**에서 **Low**로 변경될 때 발생합니다. 이 이벤트의 처리는 선택 사항이지만 필요한 경우 응용 프로그램에서 추가 메모리를 할당할 수 있다는 것을 나타냅니다.
+[MemoryManager.AppMemoryUsageDecreased](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.appmemoryusagedecreased.aspx)는 **AppMemoryUsageLevel** 열거에서 앱의 메모리 소비가 더 낮은 값으로 줄어들 때 발생합니다. 예를 들어 **High**에서 **Low**로 변경될 때 발생합니다. 이 이벤트의 처리는 선택 사항이지만 필요한 경우 응용 프로그램에서 추가 메모리를 할당할 수 있다는 것을 나타냅니다.
 
-## 포그라운드와 백그라운드 간 전환 처리
+## <a name="handle-the-transition-between-foreground-and-background"></a>포그라운드와 백그라운드 간 전환 처리
 
 앱이 포그라운드에서 백그라운드로 이동하면 [**EnteredBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.EnteredBackground) 이벤트가 발생합니다. 앱이 포그라운드로 반환되면 [**LeavingBackground**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Core.CoreApplication.LeavingBackground) 이벤트가 발생합니다. 앱을 만들 때 이러한 이벤트에 대한 처리기를 등록할 수 있습니다. 기본 프로젝트 템플릿에서 이는 App.xaml.cs의 **App** 클래스 생성자에서 수행됩니다.
 
@@ -72,13 +79,13 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 [!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
 
-**CreateRootFrame** 도우미 메서드는 앱 보기 콘텐츠를 다시 만듭니다. 이 메서드의 코드는 기본 프로젝트 템플릿에 제공된 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 처리기 코드와 거의 같습니다. 한 가지 차이점은 **Launching** 처리기는 [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)의 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState) 속성에서 이전 실행 상태를 확인하고 **CreateRootFrame** 메서드는 단순히 인수로 전달된 이전 실행 상태를 가져온다는 것입니다. 중복 코드를 최소화하기 위해 **CreateRootFrame**을 호출하도록 기본 **Launching** 이벤트 처리기 코드를 리팩터링할 수 있습니다.
+**CreateRootFrame** 도우미 메서드는 앱 보기 콘텐츠를 다시 만듭니다. 이 메서드의 코드는 기본 프로젝트 템플릿에 제공된 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 처리기 코드와 거의 같습니다. 한 가지 차이점은 **Launching** 처리기는 [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.PreviousExecutionState)의 [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) 속성에서 이전 실행 상태를 확인하고 **CreateRootFrame** 메서드는 단순히 인수로 전달된 이전 실행 상태를 가져온다는 것입니다. 중복 코드를 최소화하기 위해 **CreateRootFrame**을 호출하도록 기본 **Launching** 이벤트 처리기 코드를 리팩터링할 수 있습니다.
 
 [!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
-## 지침
+## <a name="guidelines"></a>지침
 
-### 포그라운드에서 백그라운드로 이동
+### <a name="moving-from-the-foreground-to-the-background"></a>포그라운드에서 백그라운드로 이동
 
 앱이 포그라운드에서 백그라운드로 이동하면 시스템에서 앱 대신 백그라운드에 필요하지 않은 리소스를 해제합니다. 예를 들어 UI 프레임워크가 캐시된 텍스처를 플러시하고 비디오 하위 시스템에서 앱 대신 할당된 메모리를 해제합니다. 그러나 앱은 시스템에 의해 일시 중단 또는 종료되지 않도록 메모리 사용량을 계속 주의 깊게 모니터링합니다.
 
@@ -91,19 +98,14 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 - **고려 사항** 성능 최적화로 **EnteredBackground** 처리기 대신 **AppMemoryUsageLimitChanging** 이벤트 처리기에서 UI 리소스를 해제합니다. **EnteredBackground/LeavingBackground** 이벤트 처리기에 설정된 부울 값을 사용하여 앱이 백그라운드 또는 포그라운드에서 실행 중인지 추적합니다. 그런 다음 **AppMemoryUsageLimitChanging** 이벤트 처리기에서 **AppMemoryUsage**가 제한을 초과하고 앱이 백그라운드에서 실행되는 경우(부울 값 기준) UI 리소스를 해제할 수 있습니다.
 - **작업** 응용 프로그램 간의 전환 속도가 사용자에게 느리게 보일 수 있으므로 **EnteredBackground** 이벤트에서 장기 실행 작업을 수행하면 안 됩니다.
 
-### 백그라운드에서 포그라운드로 이동
+### <a name="moving-from-the-background-to-the-foreground"></a>백그라운드에서 포그라운드로 이동
 
 앱이 백그라운드에서 포그라운드로 이동할 때 앱에서는 **AppMemoryUsageLimitChanging** 이벤트와 **LeavingBackground** 이벤트를 차례로 가져옵니다.
 
 - **작업** **LeavingBackground** 이벤트를 사용하여 백그라운드로 이동할 때 앱에서 취소한 UI 리소스를 다시 만듭니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [백그라운드 미디어 재생 샘플](http://go.microsoft.com/fwlink/p/?LinkId=800141) - 앱이 백그라운드 상태로 이동할 때 메모리를 해제하는 방법을 보여 줍니다.
 * [진단 도구](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/16/diagnostic-tools-debugger-window-in-visual-studio-2015/) - 진단 도구를 사용하여 가비지 수집 이벤트를 관찰하고 앱이 올바른 방법으로 메모리를 해제하고 있는지 확인합니다.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

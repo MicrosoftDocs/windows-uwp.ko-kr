@@ -3,16 +3,23 @@ author: mtoepke
 title: "게임의 오디오"
 description: "음악 및 사운드를 개발하여 DirectX 게임에 통합하는 방법 및 오디오 신호를 처리하여 동적 및 위치 사운드를 만드는 방법을 알아봅니다."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 오디오, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2fd568b8424585106c83d128a55f85909f35f2b8
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임의 오디오
+# <a name="audio-for-games"></a>게임의 오디오
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 음악 및 사운드를 개발하여 DirectX 게임에 통합하는 방법 및 오디오 신호를 처리하여 동적 및 위치 사운드를 만드는 방법을 알아봅니다.
 
@@ -20,7 +27,7 @@ ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
 
 또한 [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197)을 사용하여 간단한 오디오 및 음악 재생을 구현할 수 있습니다. Microsoft Media Foundation은 오디오 및 비디오의 미디어 파일과 스트림 재생을 위해 설계되었지만 게임에서 사용할 수도 있으며, 영화 장면이나 대화형이 아닌 게임 구성 요소에 특히 유용합니다.
 
-## 개념 개요
+## <a name="concepts-at-a-glance"></a>개념 개요
 
 
 다음은 이 섹션에서 사용되는 몇 가지 오디오 프로그래밍 개념입니다.
@@ -33,17 +40,17 @@ ms.openlocfilehash: 51e941becdaa55de3ec81757dddf01e6c04aed2d
 -   사운드 송신기(또는 원본). XAudio2에서 사운드 송신기는 사운드를 방출하는 위치입니다. 여기서 사운드는 단순히 배경 노이즈의 삑하는 소리이거나 게임 내 주크박스에서 재생되는 락 음악 트랙일 수 있습니다. 송신기는 월드 좌표로 지정합니다.
 -   사운드 수신기. 사운드 수신기는 플레이어이거나 고급 게임에서는 수신기로부터 받은 사운드를 처리하는 AI 엔터티일 수 있습니다. 해당 사운드를 오디오 스트림으로 서브믹싱하여 플레이어에게 재생하거나 수신기로 표시된 AI 가드 활성화 같이 게임 내에서 특정 작업을 수행하는 데 사용할 수 있습니다.
 
-## 디자인 고려 사항
+## <a name="design-considerations"></a>디자인 고려 사항
 
 
 오디오는 게임 디자인 및 개발에서 엄청나게 중요한 부분입니다. 많은 게이머는 단순히 인상적인 사운드 트랙, 뛰어난 음성 작업 및 사운드 믹싱 또는 전체적으로 우수한 오디오 생성 때문에 전설적인 상태로 향상된 평범한 게임을 다시 즐길 수 있습니다. 음악 및 사운드는 게임의 개성을 정의하며 게임을 정의하는 주요 동기를 설정하고 다른 유사한 게임과 구분되도록 합니다. 게임의 오디오 프로필을 디자인하고 개발하는 데 들이는 노력은 매우 가치가 있습니다.
 
 위치 3D 오디오는 3D 그래픽에서 제공하는 수준 이상으로 몰입을 추가할 수 있습니다. 월드를 시뮬레이트하거나 영화 스타일이 필요한 복잡한 게임을 개발하고 있는 경우 3D 위치 오디오 기술을 사용하여 플레이어가 실제로 몰입하도록 만들어 보세요.
 
-## DirectX 오디오 개발 로드맵
+## <a name="directx-audio-development-roadmap"></a>DirectX 오디오 개발 로드맵
 
 
-### XAudio2 개념 리소스
+### <a name="xaudio2-conceptual-resources"></a>XAudio2 개념 리소스
 
 XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임용 고성능 오디오 엔진을 개발하는 것입니다. 자신의 게임에 소리 효과 및 배경 음악을 추가하고자 하는 개발자에게 XAudio2는 대기 시간이 짧고 동적 버퍼, 동기식 고밀도 샘플 재생, 암시적 원본 속도 변환을 지원하는 믹싱 엔진과 오디오 그래프를 제공합니다.
 
@@ -104,7 +111,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 
  
 
-### XAudio2 "방법" 리소스
+### <a name="xaudio2-how-to-resources"></a>XAudio2 "방법" 리소스
 
 <table>
 <colgroup>
@@ -191,7 +198,7 @@ XAudio2는 DirectX용 오디오 믹싱 라이브러리로, 주 용도는 게임�
 
  
 
-### Media Foundation 리소스
+### <a name="media-foundation-resources"></a>Media Foundation 리소스
 
 MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위한 미디어 플랫폼입니다. Media Foundation API를 사용하면 다양한 알고리즘을 통해 인코딩 및 압축된 오디오와 비디오를 스트리밍 할 수 있습니다. 실시간 게임 플레이 시나리오에는 적합하지 않지만, 오디오 및 동영상 구성 요소의 선형 캡처와 표현을 위한 강력한 도구와 광범위한 코덱 지원을 제공합니다.
 
@@ -252,7 +259,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
  
 
-### Windows 런타임 XAML 미디어 유형
+### <a name="windows-runtime-xaml-media-types"></a>Windows 런타임 XAML 미디어 유형
 
 [DirectX-XAML interop](https://msdn.microsoft.com/library/windows/apps/hh825871)을 사용 중이면 비교적 간단한 게임 시나리오인 경우 DirectX 및 C++를 사용하여 Windows 런타임 XAML 미디어 API를 Windows 스토어 앱에 통합할 수 있습니다.
 
@@ -293,7 +300,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
  
 
-## 참조
+## <a name="reference"></a>참조
 
 
 -   [XAudio2 소개](https://msdn.microsoft.com/library/windows/desktop/ee415813)
@@ -305,7 +312,7 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 -   [XAudio2 프로그래밍 지침](https://msdn.microsoft.com/library/windows/desktop/ee415737)
@@ -316,10 +323,5 @@ MF(Media Foundation)는 오디오 및 비디오 재생을 스트리밍하기 위
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

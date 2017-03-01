@@ -3,13 +3,20 @@ author: mtoepke
 title: "셰이더 및 그리기 기본 요소 만들기"
 description: "여기에서는 HLSL 소스 파일을 사용해 셰이더를 컴파일하고 만드는 방법을 설명합니다. 이 셰이더를 사용하면 디스플레이에 원형을 그릴 수 있습니다."
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 셰이더, 기본 형식, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 셰이더 및 그리기 기본 요소 만들기
+# <a name="create-shaders-and-drawing-primitives"></a>셰이더 및 그리기 기본 요소 만들기
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -20,7 +27,7 @@ ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
 
 **목표:** 셰이더를 만들고 원형을 그리기 위함입니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 사용자가 C++에 익숙하다고 가정합니다. 그래픽 프로그래밍 개념에 대한 기본 경험도 필요합니다.
@@ -29,9 +36,9 @@ ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
 
 **완료 시간:** 20분입니다.
 
-## 지침
+## <a name="instructions"></a>지침
 
-### 1. HLSL 소스 파일 컴파일
+### <a name="1-compiling-hlsl-source-files"></a>1. HLSL 소스 파일 컴파일
 
 Microsoft Visual Studio에서는 [fxc.exe](https://msdn.microsoft.com/library/windows/desktop/bb232919) HLSL 코드 컴파일러를 사용하여 .hlsl 소스 파일(SimpleVertexShader.hlsl 및 SimplePixelShader.hlsl)을 .cso 이진 셰이더 개체 파일(SimpleVertexShader.cso 및 SimplePixelShader.cso)로 컴파일합니다. HLSL 코드 컴파일러에 대한 자세한 내용은 효과 컴파일러 도구를 참조하세요. 셰이더 코드 컴파일에 대한 자세한 내용은 [셰이더 컴파일](https://msdn.microsoft.com/library/windows/desktop/bb509633)을 참조하세요.
 
@@ -74,11 +81,11 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-### 2. 디스크에서 데이터 읽기
+### <a name="2-reading-data-from-disk"></a>2. 디스크에서 데이터 읽기
 
 DirectX 11 앱(유니버설 Windows) 템플릿에서 DirectXHelper.h의 DX::ReadDataAsync 함수를 사용하여 디스크의 파일에서 데이터를 비동기적으로 읽습니다.
 
-### 3. 꼭짓점 및 픽셀 셰이더 만들기
+### <a name="3-creating-vertex-and-pixel-shaders"></a>3. 꼭짓점 및 픽셀 셰이더 만들기
 
 SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderBytecode* 바이트 배열에 할당합니다. 바이트 배열과 함께 [**ID3D11Device::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)를 호출하여 꼭짓점 셰이더([**ID3D11VertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476641))를 만듭니다. 삼각형을 그릴 수 있도록 SimpleVertexShader.hlsl 소스에서 꼭짓점 깊이 값을 0.5로 설정합니다. [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) 구조의 배열을 채워 꼭짓점 셰이더 코드의 레이아웃을 설명한 다음 [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512)을 호출하여 레이아웃을 만듭니다. 배열에는 꼭짓점 위치를 정의하는 하나의 레이아웃 요소가 있습니다. SimplePixelShader.cso 파일의 데이터를 읽고 데이터를 *pixelShaderBytecode* 바이트 배열에 할당합니다. 해당 바이트 배열과 함께 [**ID3D11Device::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)를 호출하여 픽셀 셰이더([**ID3D11PixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476576))를 만듭니다. 삼각형을 노란색으로 만들기 위해 SimplePixelShader.hlsl 소스에서 픽셀 값을 (1,1,1,1)로 설정합니다. 이 값을 변경하여 색을 변경할 수 있습니다.
 
@@ -197,7 +204,7 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 꼭짓점 및 픽셀 셰이더, 꼭짓점 셰이더 레이아웃, 꼭짓점 및 인덱스 버퍼를 사용하여 노란색 삼각형을 그립니다.
 
-### 4. 삼각형 그리기 및 렌더링된 이미지 표시
+### <a name="4-drawing-the-triangle-and-presenting-the-rendered-image"></a>4. 삼각형 그리기 및 렌더링된 이미지 표시
 
 장면을 계속해서 렌더링 및 표시하기 위해 무한 루프를 입력합니다. [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464)를 호출하여 렌더링 대상을 출력 대상으로 지정합니다. { 0.071f, 0.04f, 0.561f, 1.0f }와 함께 [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388)를 호출하여 렌더링 대상을 파란색 단색으로 지웁니다.
 
@@ -277,7 +284,7 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
                 );
 ```
 
-## 요약 및 다음 단계
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 
 꼭짓점 및 픽셀 셰이더를 사용하여 노란색 삼각형을 만들어 그립니다.
@@ -292,10 +299,5 @@ SimpleVertexShader.cso 파일의 데이터를 읽고 데이터를 *vertexShaderB
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

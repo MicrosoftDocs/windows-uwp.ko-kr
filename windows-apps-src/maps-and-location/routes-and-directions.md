@@ -3,13 +3,20 @@ author: msatranjr
 title: "지도에 경로 및 길 찾기 표시"
 description: "경로 및 길 찾기를 요청하고 앱에 표시합니다."
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 경로, 지도, 위치, 길 찾기"
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11519df0c6655d663b31759e9064337a706bbc53
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지도에 경로 및 길 찾기 표시
+# <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -21,11 +28,11 @@ ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
 
 -   [UWP(유니버설 Windows 플랫폼) 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
-**팁** 지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
+**팁**  지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://msdn.microsoft.com/library/windows/apps/mt228341)을 참조하세요.
 
  
 
-## MapRouteFinder 결과 소개
+## <a name="an-intro-to-maproutefinder-results"></a>MapRouteFinder 결과 소개
 
 
 다음은 경로 및 길 찾기 클래스의 관계입니다.
@@ -36,7 +43,7 @@ ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
 -   [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://msdn.microsoft.com/library/windows/apps/dn636973) 속성을 통해 이 컬렉션에 액세스합니다.
 -   각 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)에는 [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) 개체 컬렉션이 포함됩니다. **MapRouteLeg**의 [**Maneuvers**](https://msdn.microsoft.com/library/windows/apps/dn636959) 속성을 통해 이 컬렉션에 액세스합니다.
 
-## 길 찾기 표시
+## <a name="display-directions"></a>길 찾기 표시
 
 
 [**MapRouteFinder**](https://msdn.microsoft.com/library/windows/apps/dn636938) 클래스의 메서드(예제: [**GetDrivingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636943) 또는 [**GetWalkingRouteAsync**](https://msdn.microsoft.com/library/windows/apps/dn636953))를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. [**MapRouteFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn636939) 개체에는 [**Route**](https://msdn.microsoft.com/library/windows/apps/dn636940) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) 개체가 포함됩니다.
@@ -49,7 +56,7 @@ ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
 
 계산된 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)에는 경로를 따라 이동하는 데 소요되는 시간, 경로 길이, 그리고 경로 구간을 포함하는 [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955) 개체를 제공하는 속성이 있습니다. 각 **MapRouteLeg** 개체에는 [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961) 개체 컬렉션이 포함됩니다. **MapRouteManeuver** 개체에는 [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964) 속성을 통해 액세스할 수 있는 길 찾기가 포함됩니다.
 
-**중요** 지도 서비스를 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+**중요**  지도 서비스를 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
  
 
@@ -126,12 +133,12 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## 경로 표시
+## <a name="display-routes"></a>경로 표시
 
 
 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)에 [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937)를 표시하려면 **MapRoute**를 사용하여 [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122)를 생성합니다. 그런 다음 **MapRouteView**를 **MapControl**의 [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047) 컬렉션에 추가합니다.
 
-**중요** 지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+**중요**  지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
  
 
@@ -184,17 +191,11 @@ private async void ShowRouteOnMap()
 
 ![경로를 표시하는 지도 컨트롤](images/routeonmap.png)
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [지도에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/dn596102)
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

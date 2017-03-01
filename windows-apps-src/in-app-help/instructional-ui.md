@@ -1,22 +1,30 @@
 ---
 author: QuinnRadich
-Description: "Windows 앱 작동 방법을 안내하는 사용 안내 UI를 디자인합니다."
+Description: "Windows 스토어 앱 작동 방법을 안내하는 사용 안내 UI(사용자 인터페이스)를 디자인합니다."
 title: "사용 안내 UI 디자인에 대한 지침"
 label: Instructional UI
 template: detail.hbs
+ms.author: quradic
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 translationtype: Human Translation
-ms.sourcegitcommit: 08b0b88e8ef17c2a8f264df5db4f971c8c49ab2e
-ms.openlocfilehash: 6fc4840ce37d05bbaf0e423049d79b4e0c4febfc
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b9734304b813794d615eca4d0c9d852dc8df31c1
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 사용 안내 UI 지침
+# <a name="instructional-ui-guidelines"></a>사용 안내 UI 지침
 
-\[ Windows 10의 UWP(유니버설 Windows 플랫폼) 앱에 대해 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.
 
-## <span id="when_to_use_instructional_ui"></span><span id="WHEN_TO_USE_INSTRUCTIONAL_UI"></span>사용 안내 UI를 사용하는 경우
+상황에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 사용할 수 있도록 UI(사용자 인터페이스)를 통해 사용자에게 지침을 제공해야 합니다.
+
+## <a name="when-to-use-instructional-ui"></a>사용 안내 UI를 사용하는 경우
 
 사용 안내 UI를 사용할 때는 주의해야 합니다. 과도하게 사용할 경우 쉽게 무시되거나 사용자를 방해하여 비효과적일 수 있습니다.
 
@@ -24,7 +32,7 @@ ms.openlocfilehash: 6fc4840ce37d05bbaf0e423049d79b4e0c4febfc
 
 앱이 터치 제스처에 의존하지 않는 한 사용 안내 UI를 사용하여 앱의 기본 기능을 설명해서는 안 됩니다.
 
-## <span id="writing_instructional_ui"></span><span id="WRITING_INSTRUCTIONAL_UI"></span>사용 안내 UI 작성 원칙
+## <a name="principles-of-writing-instructional-ui"></a>사용 안내 UI 작성 원칙
 
 좋은 사용 안내 UI는 사용자에게 관련된 교육 정보를 제공하며 사용자 환경을 개선합니다. 다음 원칙을 따라야 합니다.
 
@@ -36,7 +44,7 @@ ms.openlocfilehash: 6fc4840ce37d05bbaf0e423049d79b4e0c4febfc
 
 -   **기본 기능:** 사용자에게 앱을 사용하는 지침이 필요한 경우 앱 디자인을 보다 직관적으로 만드는 것이 좋습니다.
 -   **명백한 기능:** 사용자가 지침 없이 기능을 이해할 수 있는 경우 사용 안내 UI는 방해가 될 뿐입니다.
--   **복잡한 기능:** 사용 안내 UI가 간결해야 합니다. 복잡한 기능에 관심이 있는 사용자는 대개 지침을 찾아내는 것을 꺼리지 않습니다.
+-   **복잡한 기능:** 사용 안내 UI는 간결해야 하며, 일반적으로 복잡한 기능에 관심이 있는 사용자는 기꺼이 지침을 검색하므로 제공할 필요가 없습니다.
 
 사용 안내 UI로 인해 사용자에게 불편을 주지 않도록 합니다. 다음과 같은 작업은 하지 마세요.
 
@@ -44,34 +52,29 @@ ms.openlocfilehash: 6fc4840ce37d05bbaf0e423049d79b4e0c4febfc
 -   **사용자 참여 강제:** 사용자가 사용 안내 UI를 무시하고 앱을 진행할 수 있어야 합니다.
 -   **반복 정보 표시:** 처음에 무시한 경우에도 사용 안내 UI를 계속 표시하여 사용자를 귀찮게 하지 마세요. 사용 안내 UI를 표시하는 설정을 다시 추가하는 것이 좋습니다.
 
-## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>사용 안내 UI의 예
+## <a name="examples-of-instructional-ui"></a>사용 안내 UI의 예
 
-사용자에게 도움이 될 수 있는 사용 안내 UI의 몇 가지 예는 다음과 같습니다.
+다음은 사용 안내 UI를 통해 사용자에게 정보를 제공할 수 있는 몇 가지 경우입니다.
 
--   **사용자의 터치 조작 검색을 지원합니다.** 다음 스크린샷은 *Cut the Rope* 게임에서 터치 제스처를 사용하는 방법을 플레이어에게 설명하는 사용 안내 UI를 보여 줍니다.
+-   **사용자의 터치 조작 검색 지원.** 다음 스크린샷은 Cut the Rope 게임에서 터치 제스처를 사용하는 방법을 플레이어에게 설명하는 사용 안내 UI를 보여 줍니다.
 
     ![사용 안내 UI 메시지 "slide acress to cut the rope"를 보여 주는 게임의 스크린샷](images/in-game-controls-3.png)
 
--   **좋은 첫인상을 주세요.** 나만의 동영상을 처음 실행하면 사용 안내 UI에서 사용자 경험을 방해하지 않고 동영상 만들기를 시작하라는 메시지를 표시합니다.
+-   **좋은 첫인상 주기.** 나만의 동영상을 처음 실행하면 사용 안내 UI에서 사용자 경험을 방해하지 않고 동영상 만들기를 시작하라는 메시지를 표시합니다.
 
     ![나만의 동영상 앱의 실행 화면](images/instructional-ui-movie.png)
 
--   **사용자를 복잡한 작업의 다음 단계로 안내합니다.** Windows 메일 앱에서 받은 편지함의 맨 아래에 있는 힌트는 사용자에게 이전 메시지를 액세스하려면 **설정**으로 이동하도록 알려줍니다.
+-   **사용자를 복잡한 작업의 다음 단계로 안내.** Windows 메일 앱에서 받은 편지함의 맨 아래에 있는 힌트는 사용자에게 이전 메시지를 액세스하려면 **설정**으로 이동하도록 알려줍니다.
 
     ![사용 안내 UI 메시지를 보여 주는 Windows 메일 앱의 잘린 스크린샷](images/instructional-ui-mail-inbox.png)
 
-    사용자가 메시지를 클릭하면 앱의 **설정** 플라이아웃이 화면 오른쪽에 표시되어 사용자가 작업을 완료할 수 있게 합니다. 다음 스크린샷은 사용자가 사용 안내 UI 메시지를 선택하기 전과 후의 메일 앱을 보여 줍니다.
+    사용자가 메시지를 클릭하면 앱의 **설정** 플라이아웃이 화면 오른쪽에 표시되어 사용자가 작업을 완료할 수 있게 합니다. 다음 스크린샷은 사용자가 사용 안내 UI 메시지를 클릭하기 전과 이후의 메일 앱을 보여 줍니다.
 
     | 이전                                                               | 이후                                                                                                        |
     |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
     | ![Windows 메일 앱의 스크린샷](images/instructional-ui-mail.png) | ![설정 플라이아웃이 확장된 Windows 메일 앱의 스크린샷](images/instructional-ui-mail-flyout.png) |
 
-## <span id="related_topics"></span>관련 문서
+## <a name="related-articles"></a>관련 문서
 
 * [앱 도움말에 대한 지침](guidelines-for-app-help.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

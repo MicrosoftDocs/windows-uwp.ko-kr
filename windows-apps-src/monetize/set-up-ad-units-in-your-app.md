@@ -3,14 +3,20 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "스토어에 앱을 제출하기 전에 Windows 개발자 센터 대시보드의 응용 프로그램 ID 및 광고 단위 ID 값을 앱에 추가하는 방법을 알아봅니다."
 title: "앱에서 광고 단위 설정"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10 uwp, 광고, 광고, 광고 단위"
 translationtype: Human Translation
-ms.sourcegitcommit: c6e0cf98c6eb2cdc656d5b4555d794ff6a94d2bc
-ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 32a934f1d113d561c72ab3ac48a8ef3d0820c176
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱에서 광고 단위 설정
+# <a name="set-up-ad-units-in-your-app"></a>앱에서 광고 단위 설정
 
 
 
@@ -32,7 +38,7 @@ ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 [테스트 모드 값](test-mode-values.md)
 
@@ -40,9 +46,4 @@ ms.openlocfilehash: 705955faf7ddd67f80098f8c3ac7b2844553de95
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,9 +3,16 @@ author: eliotcowley
 ms.assetid: DD8FFA8C-DFF0-41E3-8F7A-345C5A248FC2
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PlayReady 보호된 미디어 콘텐츠를 추가하는 방법을 설명합니다."
 title: PlayReady DRM
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3c0b72b674ce02a1802a50c512e98b9aeba3bfe1
-ms.openlocfilehash: 97a3002c1e61d8f7d31b81a3a80d7473a5dc6077
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 161a048a4bfa9479821aec542db17ded8243d231
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -35,7 +42,7 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 -   PlayReady 오류 코드를 정의하는 Windows.Media.Protection.PlayReadyErrors.h 및 Windows.Media.Protection.PlayReadyResults.h 헤더는 이제 Windows SDK(소프트웨어 개발 키트)의 일부입니다.
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 
-    PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 미리 취득할 수 없습니다. 이 버전에는 이 기능이 추가되었습니다. 따라서 첫 번째 프레임의 시간이 단축될 수 있습니다. 자세한 내용은 [재생하기 전에 미리 비영구 라이선스 취득](#proactively_acquire_a_non_persistent_license_before_playback)을 참조하세요.
+    PlayReady DRM의 이전 버전에서는 비영구적 라이선스를 미리 취득할 수 없습니다. 이 버전에는 이 기능이 추가되었습니다. 따라서 첫 번째 프레임의 시간이 단축될 수 있습니다. 자세한 내용은 [재생하기 전에 미리 비영구 라이선스 취득](#proactively-acquire-a-non-persistent-license-before-playback)을 참조하세요.
 
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
@@ -49,7 +56,7 @@ PlayReady DRM 미디어 요소를 사용하면 개발자가 UWP 앱을 만들어
 -   비영구적 라이선스에서 시간 기반 제한 사항 지원이 추가되었습니다(만료, 첫 번째 재생 후 만료 및 실시간 만료 등).
 -   HDCP 유형 1(Windows 10의 버전 2.2) 정책 지원이 추가되었습니다.
 
-    자세한 내용은 [고려 사항](#things_to_consider)을 참조하세요.
+    자세한 내용은 [고려 사항](#things-to-consider)을 참조하세요.
 
 -   이제 출력으로서의 Miracast는 암시적입니다.
 -   보안 중지가 추가되었습니다.
@@ -397,7 +404,8 @@ PlayReady 보호된 UWP 앱 만들기를 시작하기 전에 다음 소프트웨
 -   Windows 10.
 -   UWP용 PlayReady DRM의 샘플을 컴파일하는 경우 Microsoft Visual Studio 2015 이상을 사용하여 샘플을 컴파일해야 합니다. Windows 8.1 스토어 앱용 PlayReady DRM의 샘플을 컴파일하는 데도 Microsoft Visual Studio 2013을 사용할 수 있습니다.
 
-앱에서 MPEG-2/H.262 콘텐츠를 재생하려는 경우 [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876)도 다운로드하여 설치해야 합니다.
+<!--This is no longer available-->
+<!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-windows-store-app-migration-guide"></a>PlayReady Windows 스토어 앱 마이그레이션 가이드
 
@@ -509,10 +517,5 @@ Xbox One의 UWP 앱에서 PlayReady DRM을 사용하려면 먼저 앱을 게시�
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

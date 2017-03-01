@@ -2,16 +2,24 @@
 author: WilliamsJason
 title: "디바이스 포털 Fiddler API 참조"
 description: "프로그래밍 방식으로 Fiddler 추적을 사용/사용하지 않는 방법을 알아봅니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 translationtype: Human Translation
-ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
-ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 24e966f953928d238f9197359e0b539b8a3e5c3c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Fiddler 설정 API 참조   
+# <a name="fiddler-settings-api-reference"></a>Fiddler 설정 API 참조   
 REST API를 사용하여 devkit에서 Fiddler 네트워크 추적을 사용하거나 사용하지 않을 수 있습니다.
 
-## Fiddler 추적 사용
+## <a name="enable-fiddler-tracing"></a>Fiddler 추적 사용
 
 **요청**
 
@@ -54,7 +62,7 @@ HTTP 상태 코드      | 설명
 4XX | 오류 코드
 5XX | 오류 코드
 
-## devkit에서 Fiddler 추적 사용 중지
+## <a name="disable-fiddler-tracing-on-the-devkit"></a>devkit에서 Fiddler 추적 사용 중지
 
 **요청**
 
@@ -95,12 +103,7 @@ HTTP 상태 코드      | 설명
 
 * Windows Xbox
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox에서 UWP용 Fiddler 구성](uwp-fiddler.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

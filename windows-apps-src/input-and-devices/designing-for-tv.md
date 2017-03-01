@@ -13,8 +13,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8a040033f99d6e8cac04b44dcec58c6b306eda54
-ms.openlocfilehash: a138e0ba73da792a63f1c22ee4342a8157f2a136
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 572073c2c577f3f6833b9cbee303875e378d6030
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -416,7 +417,7 @@ public App()
 }
 ```
 
-HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 모드를 사용하지 않도록 설정하는 방법](https://msdn.microsoft.com/windows/uwp/xbox-apps/how-to-disable-mouse-mode)을 참조하세요.
+HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 모드를 사용하지 않도록 설정하는 방법](../xbox-apps/how-to-disable-mouse-mode.md)을 참조하세요.
 
 다음 다이어그램은 마우스 모드의 게임 패드/리모컨에 대한 단추 매핑을 보여 줍니다.
 
@@ -595,7 +596,7 @@ HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [마우스 
 
 ![텍스트, 앱 및 기타 항목의 크기 변경](images/designing-for-tv/ui-scaling.png) 
 
-Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%**, HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다. UI 요소가 다른 디바이스에 적절한 크기로 조정되기만 하면 TV에서도 적절한 크기로 조정됩니다. Xbox One은 앱을 1080p(1920 x 1080픽셀)로 렌더링합니다. 따라서 PC 등의 다른 디바이스에서 앱을 가져오는 경우 [적응형 기술](https://msdn.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 이용하여 100% 배율의 960 x 540px(또는 HTML 앱의 경우 100% 배율의 1280 x 720px)에서 UI가 멋지게 표시되도록 합니다.
+Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%**, HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다. UI 요소가 다른 디바이스에 적절한 크기로 조정되기만 하면 TV에서도 적절한 크기로 조정됩니다. Xbox One은 앱을 1080p(1920 x 1080픽셀)로 렌더링합니다. 따라서 PC 등의 다른 디바이스에서 앱을 가져오는 경우 [적응형 기술](../layout/screen-sizes-and-breakpoints-for-responsive-design.md) 이용하여 100% 배율의 960 x 540px(또는 HTML 앱의 경우 100% 배율의 1280 x 720px)에서 UI가 멋지게 표시되도록 합니다.
 
 Xbox용 디자인은 1920 x 1080이라는 하나의 해상도만 고려하면 되기 때문에 PC용 디자인과 약간 다릅니다. 사용자에게 더 나은 해상도의 TV가 있는지 여부는 중요하지 않습니다. UWP 앱은 항상 1080p로 크기가 조정됩니다.
 
@@ -639,7 +640,7 @@ bool result =
 
 `result` 에서 성공적으로 옵트아웃 했는지 여부를 알려줍니다.
 
-HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [크기 조정을 끄는 방법](https://msdn.microsoft.com/windows/uwp/xbox-apps/disable-scaling)을 참조하세요.
+HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [크기 조정을 끄는 방법](../xbox-apps/disable-scaling.md)을 참조하세요.
 
 이 항목에 설명된 *유효* 픽셀 값의 2배(또는 HTML 앱의 경우 1.5배)인 *실제* 픽셀 값을 구하여 UI 요소의 적절한 크기를 계산해야 합니다.
 
@@ -675,7 +676,7 @@ HTML/JavaScript용 샘플 코드를 포함하여 자세한 내용은 [크기 조
 
 ### <a name="drawing-ui-to-the-edge"></a>가장자리까지 UI 그리기
 
-사용자에게 더 몰입감을 제공하기 위해 특정 UI 요소를 사용하여 화면 가장자리까지 확장하는 것이 좋습니다. 여기에는 [ScrollViewers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [탐색 창](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane), [CommandBars](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) 등이 포함됩니다.
+사용자에게 더 몰입감을 제공하기 위해 특정 UI 요소를 사용하여 화면 가장자리까지 확장하는 것이 좋습니다. 여기에는 [ScrollViewers](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), [탐색 창](../controls-and-patterns/nav-pane.md), [CommandBars](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx) 등이 포함됩니다.
 
 반면, 대화형 요소와 텍스트의 경우 항상 화면 가장자리를 피하여 일부 TV에서 잘리지 않도록 하는 것이 중요합니다. 화면 가장자리의 5% 내에는 중요하지 않은 시각 효과만 그리는 것이 좋습니다. [UI 요소 크기 지정](#ui-element-sizing)에 설명된 것처럼 Xbox One 콘솔의 기본 배율 인수 200%를 따르는 UWP 앱은 960 x 540 epx 영역을 이용하므로 앱의 UI에서 다음 영역에는 필수 UI를 배치하지 않도록 해야 합니다.
 
@@ -981,7 +982,7 @@ if (IsTenFoot)
 
 ![Pivot focus around headers](images/designing-for-tv/pivot-headers-focus.png)-->
 
-선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot)을 참조하세요.
+선택한 피벗 헤더가 항상 첫 번째 위치로 이동하도록 하는 대신 피벗이 항상 동일한 위치를 유지하도록 [Pivot.IsHeaderItemsCarouselEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabled.aspx) 속성을 `true`로 설정할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 헤더가 한 번에 화면에 들어가지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 표시됩니다. 그러나 최상의 환경을 제공하려면 모두 화면에 들어가도록 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/tabs-pivot.md)을 참조하세요.
 
 <!--If you find it necessary to wrap headers, you can set it so that it doesn't show the selected header in the left-most position, like it does by default. When you set `Pivot.IsHeaderItemsCarouselEnabled="False"`, the selected header will move left by the minimal amount required to become fully visible. This is the recommended approach for 10-foot design.
 
@@ -991,7 +992,7 @@ if (IsTenFoot)
 
 탐색 창(*햄버거 메뉴*라고도 함)은 UWP 앱에서 일반적으로 사용되는 탐색 컨트롤입니다. 주로 목록 스타일 메뉴에서 선택하며 사용자를 다른 페이지로 이동하는 여러 옵션이 있는 창입니다. 일반적으로 이 창은 공간을 절약하기 위해 축소된 형태로 시작되며 사용자가 단추를 클릭하여 열 수 있습니다. 
 
-탐색 창은 마우스와 터치를 사용한 접근성이 높은 반면, 사용자가 창을 여는 단추로 이동해야 하기 때문에 게임 패드/리모컨의 접근성은 낮습니다. 따라서 **보기** 버튼을 통해 탐색 창을 여는 것뿐 아니라 사용자가 페이지의 왼쪽으로 이동하여 창을 열 수 있도록 하는 것이 좋습니다. 이렇게 하면 사용자가 창의 내용에 쉽게 액세스할 수 있습니다. 탐색 창이 다양한 화면 크기에서 동작하는 방식 및 게임 패드/리모컨 탐색 모범 사례에 대한 자세한 내용은 [탐색 창](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/nav-pane)을 참조하세요.
+탐색 창은 마우스와 터치를 사용한 접근성이 높은 반면, 사용자가 창을 여는 단추로 이동해야 하기 때문에 게임 패드/리모컨의 접근성은 낮습니다. 따라서 **보기** 버튼을 통해 탐색 창을 여는 것뿐 아니라 사용자가 페이지의 왼쪽으로 이동하여 창을 열 수 있도록 하는 것이 좋습니다. 이렇게 하면 사용자가 창의 내용에 쉽게 액세스할 수 있습니다. 탐색 창이 다양한 화면 크기에서 동작하는 방식 및 게임 패드/리모컨 탐색 모범 사례에 대한 자세한 내용은 [탐색 창](../controls-and-patterns/nav-pane.md)을 참조하세요.
 
 ### <a name="commandbar-labels"></a>CommandBar 레이블
 
@@ -1011,7 +1012,7 @@ if (IsTenFoot)
 
 ### <a name="button-styles"></a>단추 스타일
 
-표준 UWP 단추는 TV에서 잘 작동하지만 단추의 일부 시각적 스타일은 UI를 더 명확하게 표시하므로 모든 플랫폼, 특히 포커스가 있는 위치를 명확하게 전달하면 도움이 되는 3m 환경에서 고려하는 것이 좋습니다. 이러한 스타일에 대한 자세한 내용은 [단추](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/buttons)를 참조하세요.
+표준 UWP 단추는 TV에서 잘 작동하지만 단추의 일부 시각적 스타일은 UI를 더 명확하게 표시하므로 모든 플랫폼, 특히 포커스가 있는 위치를 명확하게 전달하면 도움이 되는 3m 환경에서 고려하는 것이 좋습니다. 이러한 스타일에 대한 자세한 내용은 [단추](../controls-and-patterns/buttons.md)를 참조하세요.
 
 ### <a name="nested-ui-elements"></a>중첩된 UI 요소
 
@@ -1124,9 +1125,4 @@ bool IsTenFoot = (Windows.System.Profile.AnaylticsInfo.VersionInfo.DeviceFamily 
 - [UWP(유니버설 Windows 플랫폼) 앱용 디바이스 입문서](device-primer.md)
 - [게임 패드 및 리모컨 조작](gamepad-and-remote-interactions.md)
 - [UWP 앱의 소리](../style/sound.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

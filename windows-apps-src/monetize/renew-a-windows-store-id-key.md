@@ -3,18 +3,25 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "이 메서드를 사용하여 Windows 스토어 키를 갱신합니다."
 title: "Windows 스토어 ID 키 갱신"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, Windows 스토어 컬렉션 API, Windows 스토어 구매 API, Windows 스토어 ID 키, 갱신"
 translationtype: Human Translation
-ms.sourcegitcommit: ac9c921c7f39a1bdc6dc9fc9283bc667f67cd820
-ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b740cf431607f1748a8513a02746a70560d09da2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 스토어 ID 키 갱신
+# <a name="renew-a-windows-store-id-key"></a>Windows 스토어 ID 키 갱신
 
 
 이 메서드를 사용하여 Windows 스토어 키를 갱신합니다. [Windows 스토어 ID 키를 생성](view-and-grant-products-from-a-service.md#step-4)하면 키의 유효 기간은 90일입니다. 키가 만료되면 만료된 키를 사용하여 이 메서드를 통해 새 키를 다시 협상할 수 있습니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 이 메서드를 사용하려면 다음이 필요합니다.
@@ -22,11 +29,11 @@ ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 * `https://onestore.microsoft.com` 대상 URI를 사용하여 만든 Azure AD 액세스 토큰
 * [앱의 클라이언트 쪽 코드에서 생성된](view-and-grant-products-from-a-service.md#step-4) 만료된 Windows 스토어 ID 키입니다.
 
-자세한 내용은 [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)를 참조하세요.
+자세한 내용은 참조 [서비스에서 제품 권리 유형 관리](view-and-grant-products-from-a-service.md)를 참조하세요.
 
-## 요청
+## <a name="request"></a>요청
 
-### 요청 구문
+### <a name="request-syntax"></a>요청 구문
 
 | 키 유형    | 메서드 | 요청 URI                                              |
 |-------------|--------|----------------------------------------------------------|
@@ -35,7 +42,7 @@ ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 <span/>
 
-### 요청 헤더
+### <a name="request-header"></a>요청 헤더
 
 | 헤더         | 유형   | 설명                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 <span/>
 
-### 요청 본문
+### <a name="request-body"></a>요청 본문
 
 | 매개 변수     | 유형   | 설명                       | 필수 |
 |---------------|--------|-----------------------------------|----------|
@@ -54,7 +61,7 @@ ms.openlocfilehash: 4e0ca6fe88218faef1f7c9192a5e19569e9c00b4
 
 <span/> 
 
-### 요청 예제
+### <a name="request-example"></a>요청 예제
 
 ```syntax
 POST https://collections.mp.microsoft.com/v6.0/b2b/keys/renew HTTP/1.1
@@ -68,10 +75,10 @@ Host: collections.mp.microsoft.com
 }
 ```
 
-## 응답
+## <a name="response"></a>응답
 
 
-### 응답 본문
+### <a name="response-body"></a>응답 본문
 
 | 매개 변수 | 유형   | 설명                                                                                                            | 필수 |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
@@ -79,7 +86,7 @@ Host: collections.mp.microsoft.com
 
 <span/>
 
-### 응답 예제
+### <a name="response-example"></a>응답 예제
 
 ```syntax
 HTTP/1.1 200 OK
@@ -96,7 +103,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 }
 ```
 
-## 오류 코드
+## <a name="error-codes"></a>오류 코드
 
 
 | 코드 | 오류        | 내부 오류 코드           | 설명                                                                                                                                                                           |
@@ -106,16 +113,11 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 <span/>
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
-* [서비스에서 제품 보기 및 권한 부여](view-and-grant-products-from-a-service.md)
+* [서비스에서 제품 권한 관리](view-and-grant-products-from-a-service.md)
 * [제품에 대한 쿼리](query-for-products.md)
 * [소모성 제품을 처리됨으로 보고](report-consumable-products-as-fulfilled.md)
 * [무료 제품에 대한 권한 부여](grant-free-products.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

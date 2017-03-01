@@ -2,28 +2,42 @@
 author: mcleanbyron
 description: "앱을 업데이트하여 지원되는 최신 Microsoft 광고 라이브러리를 사용하고 앱이 배너 광고를 계속 받도록 하는 방법을 알아봅니다."
 title: "최신 Microsoft Advertising 라이브러리로 앱 업데이트"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션"
+ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
-
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 3cdb1f41fda7bd4e4af1ce9e5f8fb4396da53f63
+ms.lasthandoff: 02/08/2017
 
 ---
 
 # <a name="update-your-app-to-the-latest-microsoft-advertising-libraries"></a>최신 Microsoft Advertising 라이브러리로 앱 업데이트
 
-2017년 1월부터 Microsoft의 이전 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고를 제공하지 않을 예정입니다. **AdControl** 또는 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 기존 앱(스토어에 이미 들어 있거나 개발 중인)이 2017년 1월 이후에도 배너 광고를 계속 받으려면 최신 광고 SDK를 사용할 수 있도록 앱을 업데이트해야 할 수 있습니다. 이 변경이 앱에 해당되는지 여부를 확인하고 필요한 경우 앱 업데이트 방법을 알아보려면 이 문서의 지침을 따릅니다.
+다음 SDK만 **AdControl** 또는 **AdMediatorControl**을 사용하여 앱에 있는 Microsoft 광고에서 배너 광고를 보여주도록 지원됩니다.
 
-이 변경이 앱에 해당되는데 최신 광고 SDK를 사용하도록 앱을 업데이트하지 않은 경우 2017년 1월부터 다음과 같은 동작이 발생합니다.
+* [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱의 경우)
+* [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱의 경우)
 
-* 앱의 **AdControl** 또는 **AdMediatorControl** 컨트롤에 배너 광고가 더 이상 제공되지 않을 것이며 해당 컨트롤에서 광고 수익을 얻지 못합니다.
+이러한 SDK가 제공되기 전에 Microsoft에서는 Windows 및 Windows Phone 앱용으로 여러 이전 광고 SDK 릴리스를 출시했습니다. 이러한 이전 광고 SDK 릴리스는 더 이상 지원되지 않습니다. 향후 이러한 이전 SDK를 사용하는 앱에 대한 배너 광고를 제공하지 않도록 중지할 계획입니다.
 
-* 앱의 **AdControl** 또는 **AdMediatorControl**이 새 광고를 요청하는 경우 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
+**AdControl** 또는 **AdMediatorControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 스토어에 있거나 개발 중인)이 향후에도 배너 광고를 계속 받으려면 대상 플랫폼에 최신 광고 SDK를 사용할 수 있도록 앱을 업데이트해야 할 수 있습니다. 본 문서의 지침에 따라 이 변경 내용이 본인의 앱에 영향을 미치는지 확인하고, 필요한 경우 앱 업데이트 방법을 알아보세요.
 
-이러한 변경에 대한 추가 컨텍스트를 제공하기 위해 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)을 통해 HTML5 리치 미디어를 제공하는 기능을 비롯한 최소 기능 집합을 지원하지 않는 이전 광고 SDK 릴리스에 대한 지원이 제거될 예정입니다. 많은 광고주가 이러한 기능을 원하고 있으므로 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 사용자가 더 많은 수익을 보도록 이러한 변경을 진행하고 있습니다.
+이 변경 내용이 본인의 앱에 영향을 주며 최신 광고 SDK를 사용하도록 앱을 업데이트하지 않은 경우 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 대한 배너 광고가 중지되면 다음 동작이 발생합니다.
 
-문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](http://go.microsoft.com/fwlink/?LinkId=393643)하세요.
+* 앱의 **AdControl** 또는 **AdMediatorControl** 컨트롤에 배너 광고가 더 이상 제공되지 않으며 해당 컨트롤에서 더 이상 광고 수익을 얻지 못합니다.
 
->**참고**&nbsp;&nbsp;[Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱용) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱용)를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 사용 가능한 최신 광고 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
+* 앱의 **AdControl** 또는 **AdMediatorControl**이 새 광고를 요청하면 해당 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
+
+이 변경 내용에 대한 추가 컨텍스트를 제공하기 위해 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](http://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)을 통해 HTML5 리치 미디어를 제공하는 기능을 비롯한 최소 기능 집합을 지원하지 않는 이전 광고 SDK 릴리스를 더 이상 지원하지 않습니다. 많은 광고주가 이러한 기능을 원하고 있으므로 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 사용자가 더 많은 수익을 보도록 이러한 변경을 진행하고 있습니다.
+
+문제가 발생하거나 도움이 필요한 경우 [고객 지원에 문의](http://go.microsoft.com/fwlink/?LinkId=393643)하세요.
+
+>**참고**&nbsp;&nbsp;앱에서 이미 [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)(UWP 앱의 경우) 또는 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)(Windows 8.1 및 Windows Phone 8.x 앱의 경우)를 사용하고 있거나 이러한 SDK 중 하나를 사용하도록 이전에 앱을 업데이트한 경우에는 이미 앱에서 최신 SDK를 사용하고 있으므로 추가로 앱을 변경할 필요가 없습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -123,13 +137,13 @@ ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
 
 **Windows 8.0 앱**
 
-* Windows 8.0을 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 8.0 앱 트래픽은 Windows 10 디바이스에서 실행됩니다.
+* 향후 Windows 8.0을 대상으로 하는 앱에는 더 이상 배너 광고가 제공되지 않을 수 있습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 8.0 앱 트래픽은 Windows 10 디바이스에서 실행됩니다.
 
 <span/>
 
 **Windows Phone 7.x 앱**
 
-* Windows Phone 7.x를 대상으로 하는 앱에는 2017년 1월부터 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows 10 디바이스에서 실행됩니다.
+* Windows Phone 7.x를 대상으로 하는 앱에는 나중에 더 이상 배너 광고가 제공되지 않습니다. 광고 노출 손실을 방지하려면 프로젝트를 Windows Phone 8.1 앱을 대상으로 하도록 변환하거나 Windows 10을 대상으로 하는 UWP 앱으로 변환하는 것이 좋습니다. 대부분의 Windows 7.x 앱 트래픽은 Windows Phone 8.1 또는 Windows 10 디바이스에서 실행됩니다.
 
 <span/>
 
@@ -167,9 +181,9 @@ ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
 
   >**참고**&nbsp;&nbsp;개발 컴퓨터에 Visual Studio가 열려 있으면 먼저 닫은 후 다음 단계를 수행해야 합니다.
 
-1.  개발 컴퓨터에서 Microsoft Advertising SDK 및 Ad Mediator SDK의 모든 이전 버전을 제거합니다.
+1.    개발 컴퓨터에서 Microsoft Advertising SDK 및 Ad Mediator SDK의 모든 이전 버전을 제거합니다.
 
-2.  **명령 프롬프트** 창을 열고 다음 명령을 실행하여 Visual Studio와 함께 설치되었을 수 있으나 컴퓨터에 설치된 프로그램 목록에 나타나지 않을 수 있는 SDK 버전을 모두 정리합니다.
+2.    **명령 프롬프트** 창을 열고 다음 명령을 실행하여 Visual Studio와 함께 설치되었을 수 있으나 컴퓨터에 설치된 프로그램 목록에 나타나지 않을 수 있는 SDK 버전을 모두 정리합니다.
 
   > [!div class="tabbedCodeSnippets"]
   ```syntax
@@ -178,7 +192,7 @@ ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
   MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
   ```
 
-3.  앱용 최신 SDK를 설치합니다.
+3.    앱용 최신 SDK를 설치합니다.
   * Windows 10용 UWP 앱의 경우 [Microsoft Store Services SDK](http://aka.ms/store-services-sdk)를 설치합니다.
   * 이전 OS 버전을 대상으로 하는 앱의 경우 [Windows 및 Windows Phone 8.x용 Microsoft Advertising SDK](http://aka.ms/store-8-sdk)를 설치합니다.
 
@@ -238,16 +252,11 @@ ms.openlocfilehash: 5333c3f8ab834a4646c63499565ef28a634f850d
 
 앱을 테스트하여 앱이 예상대로 배너 광고를 표시하는지 확인합니다.
 
-앱의 이전 버전을 스토어에서 이미 사용할 수 있는 경우 Windows 개발자 센터 대시보드에서 업데이트된 앱에 대한 [새 제출을 만들어](https://msdns.microsoft.com/windows/uwp/publish/app-submissions) 앱을 다시 게시합니다.
+앱의 이전 버전을 스토어에서 이미 사용할 수 있는 경우 Windows 개발자 센터 대시보드에서 업데이트된 앱에 대한 [새 제출을 만들어](../publish/app-submissions.md) 앱을 다시 게시합니다.
 
 
 
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

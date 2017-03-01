@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다."
+Description: "체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경 사항을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다."
 title: "UWP 앱의 동작 및 애니메이션"
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fc0c4f50cc7970fe6ff4cfa5c631a03a9f216470
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -15,7 +22,7 @@ ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-체계적으로 잘 디자인된 애니메이션은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
+어떤 목적을 달성하기 위해 잘 디자인한 애니메이션은 앱에 생명력을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 
 ## <a name="benefits-of-animation"></a>애니메이션의 이점
 
@@ -106,9 +113,4 @@ ms.openlocfilehash: 53b6108a472e021caa0d11327c1457b3f6ca8aac
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

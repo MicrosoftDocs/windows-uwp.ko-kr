@@ -3,19 +3,27 @@ author: GrantMeStrength
 Description: "iOS, Android, Windows 10 간의 플랫폼 기능을 비교합니다."
 Search.Product: eADQiWindows 10XVcnh
 title: "Android 및 iOS 개발자용 Windows 앱 개념 매핑"
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 translationtype: Human Translation
-ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
-ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e5cf0a75515458a558e94a9f8bb54913e7df4a14
+ms.lasthandoff: 02/08/2017
 
 ---
 
-#Android 및 iOS 개발자용 Windows 앱 개념 매핑
+#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
 Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니버설 Windows 플랫폼)로 이동하려는 개발자의 경우 세 가지 플랫폼 간에 플랫폼 기능과 지식을 매핑하는 데 필요한 모든 정보가 들어 있는 이 리소스를 참조하세요.
 
 [iOS에서 UWP로 이동](ios-to-uwp-root.md)의 포팅 콘텐츠도 참조하세요. 이 문서는 [다운로드](https://www.microsoft.com/download/details.aspx?id=52041)를 위해서도 사용할 수 있습니다.
 
-## UI(사용자 인터페이스)
+## <a name="user-interface-ui"></a>UI(사용자 인터페이스)
 
 
 <table style="width:100%">
@@ -38,7 +46,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>디자인 언어.</strong><br><br>플랫폼의 앱 모양과 동작을 규정하는 규칙 집합입니다.</td>
 <td align="left"><strong>Android 자료 디자인</strong> 지침에서는 Android 디자이너 및 개발자를 위한 시각적 언어를 제공합니다.</td>
 <td align="left"><strong>휴먼 인터페이스 지침</strong>에서는 iOS 디자이너 및 개발자를 위한 권장 사항을 제공합니다.</td>
-<td align="left"><a href="https://dev.windows.com/design"><strong>UWP Windows 앱 디자인</strong></a>에서는 모든 Windows 10 디바이스에서 올바르게 표시되는 앱을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
+<td align="left"><a href="https://dev.windows.com/design"><strong>UWP Windows 앱 디자인</strong></a>에서는 모든 Windows 10 장치에서 올바르게 표시되는 앱을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 인터페이스 생성 언어.</strong> <br><br>UI와 해당 구성 요소를 렌더링 및 설명하는 생성 언어입니다. 각 플랫폼은 디자인 및 태그 편집을 위한 편집기를 제공합니다.<br/></td>
@@ -127,7 +135,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>계층적 탐색.</strong> <br><br>계층에서 부모와 자식 페이지 간을 탐색합니다.</td>
-<td align="left"><strong>목록</strong>, <strong>그리드 목록</strong>, <strong>단추</strong> 및 기타 컨트롤은 <strong>의도</strong>와 함께 사용하여 다른 <strong>활동</strong>을 로드할 때 <strong>하위 탐색</strong>을 제공합니다.</td>
+<td align="left"><strong>목록</strong>, <strong>눈금 목록</strong>, <strong>단추</strong> 및 기타 컨트롤은 <strong>의도</strong>와 함께 사용하여 다른 <strong>활동</strong>을 로드할 때 <strong>하위 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탐색 컨트롤러</strong>를 사용하면 사용자가 계층 구조 수준 간을 탐색할 수 있습니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">허브</a></strong>를 사용하면 하위 페이지로 이동하는 데 선택할 수 있도록 사용자에게 콘텐츠의 미리 보기를 표시합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">마스터/세부 정보</a></strong>를 사용하면 사용자가 해당 세부 정보 섹션 옆에 표시되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
@@ -166,13 +174,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>음성.</strong> <br><br>음성 입식 및 추가 음성 기능을 위해 음성을 인식합니다.</td>
 <td align="left">음성 입력은 <strong>Google 음성 검색</strong> 등의 <strong>RecognizerIntent</strong>를 구현하는 앱에서 제공할 수 있습니다. <strong>SpeechRecognizer</strong> 클래스를 사용하면 앱에서 Google의 음성 인식 API를 사용할 수 있습니다.</td>
 <td align="left">기본 제공 음성 인식 또는 음성 입력 API는 없습니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">음성 인식</a></strong> API를 사용하여 포그라운드에서 앱을 조작할 수 있습니다. 음성 기반 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana 조작</a></strong>을 사용하여 포그라운드 또는 백그라운드에서 앱을 시작하고 백그라운드 앱을 조작합니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">음성 조작</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185615.aspx">음성 인식</a></strong> API를 사용하여 포그라운드에서 앱을 조작할 수 있습니다. 음성 기반 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185598.aspx">Cortana 조작</a></strong>을 사용하여 포그라운드 또는 백그라운드에서 앱을 시작하고 백그라운드 앱을 조작할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185614.aspx">음성 조작</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 지정 사용자 입력.</strong> <br><br>키보드, 마우스, 스타일러스 및 기타 입력을 처리합니다.</td>
-<td align="left"><strong>터치</strong>, <strong>터치 패드</strong>, <strong>스타일러스</strong>, <strong>마우스</strong> 및 <strong>키보드</strong> 조작이 지원됩니다. 동작 및 입력은 터치와 동일한 방식으로 보고되지만 <strong>입력 디바이스</strong>에 대한 더 많은 정보를 검색할 수 있습니다.</td>
+<td align="left"><strong>터치</strong>, <strong>터치 패드</strong>, <strong>스타일러스</strong>, <strong>마우스</strong> 및 <strong>키보드</strong> 조작이 지원됩니다. 동작 및 입력은 터치와 동일한 방식으로 보고되지만 <strong>입력 장치</strong>에 대한 더 많은 정보를 검색할 수 있습니다.</td>
 <td align="left"><strong>터치</strong>, <strong>Apple 연필</strong> 및 하드웨어 <strong>키보드</strong>에 대한 지원이 제공됩니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">터치</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187313.aspx">터치 패드</a></strong>, 디지털 잉크를 사용하는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187311.aspx">펜/스타일러스</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187308.aspx">마우스</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185607.aspx">키보드</a></strong>를 포함하여 다양한 조작이 지원됩니다. 사용된 입력 디바이스와 필요한 경우 원시 입력 디바이스 데이터에 액세스할 수 있는 여부를 몰라도 앱에서 데이터를 처리할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404610.aspx">포인터 입력 처리</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx">사용자 지정 사용자 조작</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185617.aspx">터치</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187313.aspx">터치 패드</a></strong>, 디지털 잉크를 사용하는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187311.aspx">펜/스타일러스</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt187308.aspx">마우스</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt185607.aspx">키보드</a></strong>를 포함하여 다양한 조작이 지원됩니다. 사용된 입력 장치와 필요한 경우 원시 입력 장치 데이터에 액세스할 수 있는 여부를 몰라도 앱에서 데이터를 처리할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404610.aspx">포인터 입력 처리</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185599.aspx">사용자 지정 사용자 조작</a></td>
 </tr>
 </tbody>
 </table>
@@ -215,7 +223,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>클라우드 백업 서비스.</strong> <br><br>앱 데이터를 위해 플랫폼에서 제공한 백업 서비스입니다.</td>
 <td align="left">Android의 <strong>백업 관리자</strong>는 Google의 <strong>Android 백업 서비스</strong>에서 응용 프로그램 데이터 백업을 처리합니다.</td>
 <td align="left"><strong>사용자가 앱 데이터를 포함하여 해당 백업을 처리하도록 ###iCloud 백업</strong>을 구성할 수 있습니다. iCloud 호환 <strong>핵심 데이터</strong>, <strong>iCloud 키-값 저장소</strong> 및 <strong>iCloud 문서 저장소</strong>를 사용하는 앱입니다.</td>
-<td align="left">로밍 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx">ApplicationData API</a></strong>(<strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingfolder.aspx">RoamingFolder</a></strong> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingsettings.aspx"><strong>RoamingSettings</strong></a> 포함)를 사용하여 저장한 모든 앱 데이터는 자동으로 클라우드 및 사용자의 기타 디바이스와 동기화됩니다. 동기화는 사용자의 Microsoft 계정을 통해 수행됩니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465094.aspx">로밍 중인 앱 데이터 지침</a></td>
+<td align="left">로밍 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx">ApplicationData API</a></strong>(<strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingfolder.aspx">RoamingFolder</a></strong> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.roamingsettings.aspx"><strong>RoamingSettings</strong></a> 포함)를 사용하여 저장한 모든 앱 데이터는 자동으로 클라우드 및 사용자의 기타 장치와 동기화됩니다. 동기화는 사용자의 Microsoft 계정을 통해 수행됩니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465094.aspx">로밍 중인 앱 데이터 지침</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>HTTP 파일 다운로드.</strong> <br><br>HTTP를 통해 크고 작은 파일을 다운로드합니다.</td>
@@ -224,7 +232,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.aspx">백그라운드 전송 API</a></strong>를 사용하면 HTTP(S) 및 FTP를 통해 파일을 안정적으로 전송하고, 앱 일시 중단, 연결 해제 및 연결성과 배터리 사용 시간에 따른 조정을 고려합니다. 적은 파일에 적합한 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx">HttpClient</a></strong>를 사용할 수도 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280235.aspx">네트워킹 기술 선택</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280377.aspx">백그라운드 전송</a></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>소켓.</strong> <br><br>낮은 수준의 UDP 데이터그램 및 TCP 소켓을 만들어 사용자 고유의 프로토콜을 통해 다른 디바이스와 통신합니다.</td>
+<td align="left"><strong>소켓.</strong> <br><br>낮은 수준의 UDP 데이터그램 및 TCP 소켓을 만들어 사용자 고유의 프로토콜을 통해 다른 장치와 통신합니다.</td>
 <td align="left"><strong>Socket</strong> 클래스는 TCP 소켓을 제공하고 <strong>DatagramSocket</strong> 클래스는 UDP 소켓을 제공합니다.</td>
 <td align="left"><strong>NSStream</strong> 및 <strong>CFStream</strong>은 TCP 소켓을 제공하고 <strong>CFSocket</strong>은 UDP 소켓을 제공합니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/br241319">DatagramSocket</a></strong> 클래스를 사용하여 UDP 데이터그램 소켓을 통해 통신하고 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br226882">StreamSocket</a></strong> 클래스를 사용하여 TCP 또는 Bluetooth RFCOMM을 통해 통신할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280233.aspx">네트워킹 기본 사항</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280235.aspx">네트워킹 기술 선택</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt280234.aspx">소켓 개요</a></td>
@@ -238,8 +246,8 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="even">
 <td align="left"><strong>OAuth 라이브러리.</strong> <br><br>타사 OAuth 공급자에 대한 액세스를 허용하는 OAuth 라이브러리와 플랫폼에 기본 제공되는 계정 관리입니다.</td>
 <td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. Google Play Services를 사용한 OAuth 인증을 위해 <strong>GoogleAuthUtil</strong> 클래스가 제공됩니다.<br/></td>
-<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 디바이스에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
-<td align="left">일반 OAuth 라이브러리 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270196.aspx">웹 인증 브로커</a></strong>를 사용하여 타사 ID 공급자 서비스에 연결할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270189.aspx">자격 증명 보관</a></strong>을 사용하여 사용자가 로그인을 저장하고 여러 디바이스에서 사용하도록 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn896755.aspx">Microsoft.Live</a></strong> 네임스페이스를 사용하면 Microsoft 서비스 액세스를 위해 Live SDK OAuth에 쉽게 액세스할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt270184.aspx">인증 및 사용자 ID</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.aspx">Windows.Security.Authentication.Web API 설명서</a><br/><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker">WebAuthenticationBroker 코드 예제</a></td>
+<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 장치에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
+<td align="left">일반 OAuth 라이브러리 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270196.aspx">웹 인증 브로커</a></strong>를 사용하여 타사 ID 공급자 서비스에 연결할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt270189.aspx">자격 증명 보관</a></strong>을 사용하여 사용자가 로그인을 저장하고 여러 장치에서 사용하도록 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn896755.aspx">Microsoft.Live</a></strong> 네임스페이스를 사용하면 Microsoft 서비스 액세스를 위해 Live SDK OAuth에 쉽게 액세스할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt270184.aspx">인증 및 사용자 ID</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.web.aspx">Windows.Security.Authentication.Web API 설명서</a><br/><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker">WebAuthenticationBroker 코드 예제</a></td>
 </tr>
 </tbody>
 </table>
@@ -264,7 +272,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>IDE.</strong> <br><br>앱을 만드는 데 사용되는 도구 집합입니다.</td>
 <td align="left"><strong>Android의 Studio</strong> 및 <strong>Eclipse</strong>. Google에서는 개발자에게 Android Studio를 사용하도록 권장합니다.</td>
 <td align="left"><strong>Xcode</strong></td>
-<td align="left"><strong><a href="https://www.visualstudio.com/features/universal-windows-platform-vs.aspx">Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>에는 UWP 앱을 코딩, 디자인, 연결, 디버그, 분석, 최적화 및 테스트하는 데 필요한 모든 도구가 있습니다. Visual Studio에서는 Windows 10 디바이스용 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt188754.aspx">에뮬레이터</a></strong>를 제공하므로 다양한 에뮬레이트 디바이스에서 앱을 테스트할 수 있습니다.<br/><br/><a href="https://dev.windows.com/downloads">UWP용 다운로드 및 도구</a></td>
+<td align="left"><strong><a href="https://www.visualstudio.com/features/universal-windows-platform-vs.aspx">Visual Studio</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend for Visual Studio</a></strong>에는 UWP 앱을 코딩, 디자인, 연결, 디버그, 분석, 최적화 및 테스트하는 데 필요한 모든 도구가 있습니다. Visual Studio에서는 Windows 10 장치용 <strong><a href="https://msdn.microsoft.com/library/windows/apps/mt188754.aspx">에뮬레이터</a></strong>를 제공하므로 다양한 에뮬레이트 장치에서 앱을 테스트할 수 있습니다.<br/><br/><a href="https://dev.windows.com/downloads">UWP용 다운로드 및 도구</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>코드 구성.</strong> <br><br>앱의 기본 폴더 구조로, 초기 템플릿에서 생성됩니다.</td>
@@ -344,10 +352,10 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>비동기 프로그래밍.</strong> <br><br>비동기 프로그래밍 패턴을 통해 UI 스레드 응답을 유지하여 스레딩 복잡성을 방지합니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
 <td align="left">자체 비동기 클래스를 만들려면 <strong>스레딩 필요</strong>를 사용합니다. 일부 기본 제공 클래스는 비동기입니다.</td>
-<td align="left">자체 API를 만들 때 비동기 패턴(예: C# 및 Visual Basic의 <strong>async</strong> 및 <strong>await</strong>)을 사용하여 주 스레드 차단을 방지할 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187335.aspx">비동기 프로그래밍</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187337.aspx">C# 또는 Visual Basic에서 비동기식 API 호출</a></td>
+<td align="left">자체 API를 만들 때 비동기 패턴(예: C# 및 Visual Basic의 <strong>async</strong> 및 <strong>await</strong>)을 사용하여 주 스레드 차단을 방지할 수 있습니다. 단어가 <strong>Async</strong>로 끝나는 비동기 기본 제공 API를 사용할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187335.aspx">비동기 프로그래밍</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187337.aspx">C# 또는 Visual Basic에서 비동기 API 호출</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>목록 보기 최적화.</strong> <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>
+<td align="left"><strong>목록 뷰 최적화.</strong> <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>
 <td align="left"><strong>ViewHolder</strong> 디자인 패턴은 여러 보기 조회를 방지하는 데 사용됩니다. 이를 통해 재사용 가능한 UI 요소를 사용할 수 있습니다.</td>
 <td align="left">다양한 최적화를 통해 <strong>UITableView</strong>의 성능을 향상시킬 수 있습니다. 기본 제공되는 항목은 없습니다.</td>
 <td align="left">기본 <strong>UI 가상화</strong>를 제공하는 <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx">ListView</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx">GridView</a> 컨트롤을 사용하여 이동 및 스크롤 환경을 제공하고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="https://msdn.microsoft.com/library/windows/apps/system.collections.ilist.aspx">IList</a> 및 <a href="https://msdn.microsoft.com/library/windows/apps/system.collections.specialized.inotifycollectionchanged.aspx">INotifyCollectionChanged</a>를 구현하여 <strong>데이터 가상화</strong> 및 개선된 성능을 제공할 수도 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204776.aspx">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt574120.aspx">ListView 및 GridView 데이터 가상화</a></td>
@@ -433,13 +441,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstate.aspx">VisualState</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager.aspx">VisualStateManager</a></strong> 및 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.aspx">AdaptiveTrigger</a></strong>를 사용한 창 크기 변경에 대한 응답으로 런타임 시 UI에 대해 쉽게 재배치, 위치 변경, 크기 변경, 노출 또는 섹션 바꾸기 등을 수행할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx#visual_states_and_state_triggers">XAML을 사용하여 레이아웃 정의 - 시각적 상태 및 상태 트리거</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/dn958435.aspx">반응형 디자인 101</a></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>다른 디바이스 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 디바이스를 지원합니다.</td>
-<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 디바이스 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
-<td align="left">런타임 시 디바이스 기능을 테스트하기 위해 수행할 수 있는 <strong>단일 검사는 없으며</strong> 특정 방법으로 각 기능을 테스트하여 하드웨어 관련 코드를 실행할 수 있는지 확인합니다.</td>
+<td align="left"><strong>다른 장치 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
+<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 장치 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
+<td align="left">런타임 시 장치 기능을 테스트하기 위해 수행할 수 있는 <strong>단일 검사는 없으며</strong> 특정 방법으로 각 기능을 테스트하여 하드웨어 관련 코드를 실행할 수 있는지 확인합니다.</td>
 <td align="left"><strong>플랫폼 확장 SDK</strong>를 패키지에 추가하여 휴대폰, 데스크톱, IoT 등 다른 장치 패밀리의 추가 기능을 대상으로 할 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx">ApiInformation API</a></strong>를 사용하여 런타임 시 형식과 멤버의 존재 여부를 테스트하고 있는 경우에만 이러한 형식 및 멤버를 호출할 수 있습니다.</td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>다른 디바이스 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 디바이스를 지원합니다.</td>
+<td align="left"><strong>다른 장치 기능 지원.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
 <td align="left"><strong>Android 지원 라이브러리</strong>를 앱과 패키징하면 이전 버전의 Android 앱에서 일부 최신 API를 사용할 수 있습니다. 런타임 시 API 수준에 대한 테스트는 <strong>Build.Version.SDK_INT</strong>를 사용하여 수행할 수 있습니다.</td>
 <td align="left">표준 런타임 검사는 API 사용 가능 여부를 확인하는 데 사용됩니다. 예를 들어 <strong>class</strong> 메서드는 클래스 존재 여부를 확인하고 <strong>respondsToSelector:</strong>는 클래스의 메서드를 확인합니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn949005.aspx">ApiInformation.IsApiContractPresent</a></strong>를 사용하여 지정된 주 및 부 번호의 API 계약이 있는지 확인할 수 있습니다. 또한 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx">ApiInformation API</a></strong>를 사용하여 런타임 시 형식과 멤버의 존재 여부를 테스트하고 있는 경우에만 이러한 형식 및 멤버를 호출할 수 있습니다.</td>
@@ -538,7 +546,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>센서.</strong> <br><br>디바이스 이동, 위치 및 환경 속성을 검색합니다.</td>
+<td align="left"><strong>센서.</strong> <br><br>장치 이동, 위치 및 환경 속성을 검색합니다.</td>
 <td align="left"><strong>센서 프레임워크</strong>는 <strong>SensorManager</strong> 및 <strong>SensorEvent</strong> 등의 클래스를 사용하여 하드웨어 및 소프트웨어 센서에 액세스할 수 있습니다.</td>
 <td align="left"><strong>Core Motion 프레임워크</strong>는 원시 및 처리된 센서 데이터에 액세스하는 데 사용됩니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.aspx">Windows.Devices.Sensors</a></strong>의 클래스를 사용하여 센서 읽기 및 센서에서 새 읽기 데이터가 수신될 때 트리거되는 이벤트에 액세스할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt187358.aspx">센서</a></td>
@@ -563,10 +571,10 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>위치.</strong> <br><br>디바이스의 <strong>현재</strong> 위치를 찾고 <strong>변경 내용</strong>을 추적합니다.</td>
+<td align="left"><strong>위치.</strong> <br><br>장치의 <strong>현재</strong> 위치를 찾고 <strong>변경 내용</strong>을 추적합니다.</td>
 <td align="left">Google Play Services 위치 API는 <strong>getLastLocation</strong> 및 <strong>requestLocationUpdates</strong> 메서드를 사용하여 <strong>퓨즈 위치 공급자</strong>에게 <strong>마지막으로 알려진 위치</strong>에 대한 높은 수준 액세스를 제공합니다. <strong>LocationManager</strong>를 사용하여 Android 라이브러리에 낮은 수준 액세스를 제공합니다.</td>
-<td align="left"><strong>핵심 위치</strong> <strong>CLLocationManager</strong> 클래스는 표준 위치 서비스에 대한 <strong>startUpdatingLocation</strong> 및 표준 위치 서비스 및 <strong>중요한 변경</strong> 위치 서비스에 대한 <strong>startMonitoringSignificantLocationChanges</strong>를 사용하여 디바이스의 위치를 모니터링하는데 사용됩니다.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.aspx">Windows.Devices.Geolocation</a></strong>의 클래스를 사용하여 디바이스 위치를 추적할 수 있습니다. 한 번 읽으려면 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br225537.aspx">Geolocator.GetGeopositionAsync</a></strong>를 사용합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.positionchanged.aspx">Geolocator.PositionChanged</a></strong>를 사용하여 타이머를 통해 위치를 정기적으로 가져오거나 위치가 변경될 때 알림을 받을 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219698.aspx">사용자 위치 가져오기</a></td>
+<td align="left"><strong>핵심 위치</strong> <strong>CLLocationManager</strong> 클래스는 표준 위치 서비스에 대한 <strong>startUpdatingLocation</strong> 및 표준 위치 서비스 및 <strong>중요한 변경</strong> 위치 서비스에 대한 <strong>startMonitoringSignificantLocationChanges</strong>를 사용하여 장치의 위치를 모니터링하는데 사용됩니다.</td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.aspx">Windows.Devices.Geolocation</a></strong>의 클래스를 사용하여 장치 위치를 추적할 수 있습니다. 한 번 읽으려면 <strong><a href="https://msdn.microsoft.com/library/windows/apps/br225537.aspx">Geolocator.GetGeopositionAsync</a></strong>를 사용합니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.positionchanged.aspx">Geolocator.PositionChanged</a></strong>를 사용하여 타이머를 통해 위치를 정기적으로 가져오거나 위치가 변경될 때 알림을 받을 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt219698.aspx">사용자 위치 가져오기</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>지도 표시.</strong> <br><br><strong>대화형 기본 제공 지도</strong>를 표시하고 <strong>관심 지점</strong>을 추가합니다.</td>
@@ -613,7 +621,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>다른 앱 호출.</strong> <br><br>다른 앱을 시작하고 필요에 따라 링크, 텍스트, 사진, 동영상 및 파일을 공유합니다.</td>
-<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 선택적 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
+<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 옵션 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
 <td align="left"><strong>앱 확장</strong>은 앱 데이터에 대한 액세스를 다른 앱에 제공하는 데 사용할 수 있습니다. <strong>URL 체계</strong>를 사용하면 URL을 다른 앱에 전달할 수 있습니다.</td>
 <td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriasync.aspx">Launcher.LaunchUriAsync</a></strong> 또는 <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.system.launcher.launchuriforresultsasync.aspx">Launcher.LaunchUriForResultsAsync</a></strong>를 사용하여 URI에 등록된 다른 앱을 실행하여 결과를 실행하고 실행된 앱에서 데이터를 다시 가져올 수 있습니다. <strong><a href="https://msdn.microsoft.com/library/windows/apps/hh701471.aspx">Launcher.LaunchFileAsync</a></strong>를 사용하여 다른 앱에서 처리하도록 파일을 전달할 수 있습니다.<br/><br/><strong>공유 계약</strong>을 사용하여 앱 간에 데이터를 쉽게 공유할 수 있습니다.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228340.aspx">URI에 대한 기본 앱 실행</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt269386.aspx">결과에 대한 앱 실행</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt299102.aspx">파일에 대한 기본 앱 시작</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt243293.aspx">데이터 공유</a></td>
 </tr>
@@ -662,9 +670,4 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 </tbody>
 </table>
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

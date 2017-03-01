@@ -3,25 +3,32 @@ author: mtoepke
 title: "렌더링 프레임워크 어셈블"
 description: "이제 샘플 게임에서 해당 구조 및 상태를 사용하여 그래픽을 표시하는 방법을 살펴보아야 합니다."
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 렌더링"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7b97a70094c953e9614a84979c9f98fc91a82451
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 렌더링 프레임워크 어셈블
+# <a name="assemble-the-rendering-framework"></a>렌더링 프레임워크 어셈블
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 지금까지 Windows 런타임에서 작동하도록UWP(유니버설 Windows 플랫폼) 게임을 구조화하는 방법 및 게임의 흐름을 처리하도록 상태 시스템을 정의하는 방법에 대해 살펴보았습니다. 이제 샘플 게임에서 해당 구조 및 상태를 사용하여 그래픽을 표시하는 방법을 살펴보아야 합니다. 여기서는 그래픽 장치의 초기화에서 시작하여 표시할 그래픽 개체의 제공까지 렌더링 프레임워크를 구현하는 방법을 살펴보겠습니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   UWP DirectX 게임의 그래픽 출력을 표시하도록 기본 렌더링 프레임워크를 설정하는 방법을 이해합니다.
 
-> **참고** 다음 코드 파일은 여기에서 설명하지 않지만 [이 항목의 끝에 코드로 제공](#code_sample)된 클래스 및 메서드와 이 항목의 코드 샘플을 제공합니다.
+> **참고** 다음 코드 파일은 여기에서 설명하지 않지만 이 항목에서 참조되고 [이 항목의 끝에 코드로 제공](#complete-sample-code-for-this-section)된 클래스 및 메서드를 제공합니다.
 -   **Animate.h/.cpp**.
 -   **BasicLoader.h/.cpp**. 동기적 및 비동기적으로 메시, 셰이더 및 텍스처를 로드하는 메서드를 제공합니다. 매우 유용합니다.
 -   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** 및 **WorldMesh.h/.cpp**. 탄약 구형, 원통형 및 원추형 장애물과 슈팅 갤러리의 벽 등 게임에서 사용되는 개체 기본 요소에 대한 정의가 포함됩니다. 이 항목에 간단하게 설명된 **GameObject.cpp**에는 이러한 기본 요소를 렌더링하는 메서드가 포함되어 있습니다.
@@ -32,7 +39,7 @@ ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
 
  
 
-이 섹션에서는 [이 항목의 끝에 코드로 제공된](#code_sample) 게임 샘플의 세 가지 주요 파일에 대해 다룹니다.
+이 섹션에서는 [이 항목의 끝에 코드로 제공된](#complete-sample-code-for-this-section) 게임 샘플의 세 가지 주요 파일에 대해 다룹니다.
 
 -   **Camera.h/.cpp**
 -   **GameRenderer.h/.cpp**
@@ -41,7 +48,7 @@ ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
 메시, 꼭짓점, 텍스처 등의 기본 3D 프로그래밍 개념을 이해하고 있다고 가정합니다. 일반적인 Direct3D 11 프로그래밍에 대한 자세한 내용은 [Direct3D 11에 대한 프로그래밍 가이드](https://msdn.microsoft.com/library/windows/desktop/ff476345)를 참조하세요.
 이제 게임을 화면에 배치하기 위해 수행해야 하는 작업을 살펴보겠습니다.
 
-## Windows 런타임 및 DirectX 개요
+## <a name="an-overview-of-the-windows-runtime-and-directx"></a>Windows 런타임 및 DirectX 개요
 
 
 DirectX는 Windows 런타임 및 Windows 10 환경의 기본적인 부분입니다. Windows 10의 모든 화면 효과는 DirectX를 기반으로 하며 낮은 수준의 동일한 그래픽 인터페이스인 [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)에 동일하게 직접 연결하여 그래픽 하드웨어 및 해당 드라이버에 추상화 계층을 제공합니다. 모든 Direct3D 11 API를 사용하여 DXGI에 직접 연결할 수 있습니다. 따라서 모든 최신 그래픽 하드웨어 기능에 대한 액세스 기능을 제공하는 고성능의 신속한 그래픽을 게임에서 얻을 수 있습니다.
@@ -50,7 +57,7 @@ UWP 앱에 DirectX 지원을 추가하려면 [**IFrameworkViewSource**](https://
 
 [게임의 UWP 프레임워크 정의](tutorial--building-the-games-metro-style-app-framework.md)에서 게임 샘플의 앱 프레임워크에 렌더러를 맞추는 방법을 살펴보았습니다. 이제 게임 렌더러가 보기에 연결하여 게임의 모양을 정의하는 그래픽을 구성하는 방법을 살펴보겠습니다.
 
-## 렌더러 정의
+## <a name="defining-the-renderer"></a>렌더러 정의
 
 
 **GameRenderer** 추상 형식은 **DirectXBase** 렌더러 형식에서 상속하고, 스테레오 3D에 대한 지원을 추가하며, 그래픽 기본 요소를 만들고 정의하는 셰이더에 대한 상수 버퍼와 리소스를 선언합니다.
@@ -143,7 +150,7 @@ Direct3D 11 API는 COM API로 정의되므로 이러한 API가 정의하는 개�
 
 이제 이 개체를 만드는 방법을 살펴보겠습니다.
 
-## 렌더러 초기화
+## <a name="initializing-the-renderer"></a>렌더러 초기화
 
 
 샘플 게임에서는 이 **Initialize** 메서드를 **App::SetWindow**에서 CoreApplication 초기화 시퀀스의 일부로 호출합니다.
@@ -179,7 +186,7 @@ void GameRenderer::Initialize(
 
 DirectXBase 초기화가 완료되면 **GameInfoOverlay** 개체가 초기화됩니다. 초기화가 완료되면 게임에 대한 그래픽 리소스를 만들고 로드하는 메서드를 살펴보아야 합니다.
 
-## DirectX 그래픽 리소스 만들기 및 로드
+## <a name="creating-and-loading-directx-graphics-resources"></a>DirectX 그래픽 리소스 만들기 및 로드
 
 
 모든 게임에서 작업 순서는 먼저 그래픽 인터페이스에 대한 연결을 설정하고 그래픽을 그리는 데 필요한 리소스를 만든 다음 해당 그래픽을 그릴 수 있는 렌더링 대상을 설정하는 것입니다. 게임 샘플 및 Microsoft Visual Studio**DirectX 11 앱(유니버설 Windows)** 템플릿에서 이 프로세스는 다음과 같은 세 가지 메서드로 구현됩니다.
@@ -689,7 +696,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 게임에는 현재 창에 그래픽을 표시하는 리소스가 있으며 창이 변경되면 해당 리소스를 다시 만들 수 있습니다. 이제 해당 창에서 플레이어의 장면 보기를 정의하는 데 사용되는 카메라를 살펴보겠습니다.
 
-## 카메라 개체 구현
+## <a name="implementing-the-camera-object"></a>카메라 개체 구현
 
 
 게임에는 고유한 좌표계로 월드(경우에 따라 월드 공간 또는 장면 공간이라고 함)를 업데이트하는 코드가 있습니다. 카메라를 포함한 모든 개체를 이 공간에 배치하고 방향을 지정합니다. 샘플 게임에서는 보기 벡터(카메라에서 장면을 직접 가리키는 "보기" 벡터 및 카메라와 수직으로 위쪽에 있는 "보기" 벡터)와 함께 카메라의 위치가 카메라 공간을 정의합니다. 투영 매개 변수는 해당 공간이 최종 장면에서 실제로 표시되는 양을 결정하고 FoV(시야각), 가로 세로 비율 및 클리핑 거리는 투영 변환을 정의합니다. 정점 셰이더는 다음 알고리즘을 사용하여 모델 좌표에서 장치 좌표로 변환하는 어려운 작업을 수행합니다. 여기서 V는 벡터이고 M은 매트릭스입니다.
@@ -851,7 +858,7 @@ void Camera::SetProjParams(
 
 이제 게임에서 카메라를 사용하여 게임 그래픽을 그릴 프레임워크 만드는 방법을 살펴보겠습니다. 여기에는 게임 월드 및 해당 요소를 구성하는 원형 정의가 포함됩니다.
 
-## 원형 정의
+## <a name="defining-the-primitives"></a>원형 정의
 
 
 게임 샘플 코드에서는 원형을 두 가지 기본 클래스와 각 원형 유형에 해당하는 전문화로 정의하고 구현합니다.
@@ -963,7 +970,7 @@ protected private:
 
 게임 샘플에 있는 원형의 기본 렌더링에 대해 살펴보겠습니다.
 
-## 원형 렌더링
+## <a name="rendering-the-primitives"></a>원형 렌더링
 
 
 게임 샘플의 원형에서는 다음과 같이 부모 **GameObject** 클래스에 구현된 기본 **Render** 메서드를 사용합니다.
@@ -1048,7 +1055,7 @@ void MeshObject::Render(_In_ ID3D11DeviceContext *context)
 
 이 작업은 실제 렌더링 프로세스에서 일어납니다.
 
-## 정점 및 픽셀 셰이더 만들기
+## <a name="creating-the-vertex-and-pixel-shaders"></a>정점 및 픽셀 셰이더 만들기
 
 
 이때 게임 샘플은 그릴 기본 요소와 렌더링을 정의하는 상수 버퍼를 정의했습니다. 이러한 상수 버퍼는 그래픽 장치에서 실행되는 셰이더에 대한 매개 변수 집합 역할을 합니다. 이 셰이더 프로그램은 다음 두 가지 형식으로 제공됩니다.
@@ -1181,7 +1188,7 @@ float4 main(PixelShaderInput input) : SV_Target
 
 이제 이러한 개념(원형, 카메라, 셰이더)을 종합하여 샘플 게임에서 완전한 렌더링 프로세스를 빌드하는 방법을 살펴보겠습니다.
 
-## 출력을 위한 프레임 렌더링
+## <a name="rendering-the-frame-for-output"></a>출력을 위한 프레임 렌더링
 
 
 이 메서드는 [주 게임 개체 정의](tutorial--defining-the-main-game-loop.md)에서 간략하게 살펴보았습니다. 이제 좀더 자세히 살펴보겠습니다.
@@ -1348,12 +1355,12 @@ void GameRenderer::Render()
 
 게임에서 디스플레이를 업데이트했습니다. 여기까지가 게임의 그래픽 프레임워크를 구현하는 기본 프로세스입니다. 물론 게임이 클수록 개체 유형의 전체 계층 구조 및 애니메이션 동작과 같은 복잡성을 처리하려면 더 많은 추상화를 배치해야 하며 메시 및 텍스처 같은 자산을 로드하고 관리하는 메서드가 더 복잡해집니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 다음으로 [사용자 인터페이스 오버레이](tutorial--adding-a-user-interface.md), [입력 컨트롤](tutorial--adding-controls.md), [사운드](tutorial--adding-sound.md) 등 간략하게만 검토한 게임 샘플의 몇 가지 중요한 요소에 대해 살펴보겠습니다.
 
-## 이 섹션에 대한 전체 샘플 코드
+## <a name="complete-sample-code-for-this-section"></a>이 섹션에 대한 전체 샘플 코드
 
 
 Camera.h
@@ -6311,7 +6318,7 @@ void Material::RenderSetup(
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
@@ -6322,10 +6329,5 @@ void Material::RenderSetup(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

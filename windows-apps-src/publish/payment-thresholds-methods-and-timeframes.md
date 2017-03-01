@@ -2,9 +2,17 @@
 author: jnHs
 Description: "예상 지급 전달 시간, 적용 가능한 지급 임계값 및 지급을 받을 수 있는 Microsoft 마켓플레이스는 국가/지역 및 지급 계좌 형식에 따라 달라질 수 있습니다."
 title: "지급 임계값, 방법 및 기간"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 translationtype: Human Translation
-ms.sourcegitcommit: d5ec64bbd1e8b10c17ff5c43d89e6652eadb2367
-ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 7da8727d3f901cfbab7c68d0b7f7362438d3fc65
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -24,7 +32,7 @@ ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
 
 | 결제 방법 | 지급 계좌에 입금되기까지의 일 수 |
 |--------------------|--------------------------------------------|
-| PayPal | 1일(영업일 기준) | 
+| PayPal | 1일(영업일 기준) |    
 | ACH/SEPA |2-3일(영업일 기준) |
 | 전신 송금 | 7-10일(영업일 기준) |
 
@@ -4161,9 +4169,4 @@ ms.openlocfilehash: 4fd7a23f6d6c880e490f93dba248b6c1e43c7053
     <td>해당 없음</td>
   </tr>
 </table>
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -1,14 +1,22 @@
 ---
 author: TylerMSFT
 description: "확장 실행을 사용하여 앱이 최소화된 상태에서 계속 실행되도록 하는 방법을 알아봅니다."
-title: "확장 실행으로 최소화된 상태에서 실행"
+title: "확장된 실행을 사용할 경우 최소화된 상태로 실행"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 translationtype: Human Translation
-ms.sourcegitcommit: e9fcb1f0d1248de25d576029d50070792ad72182
-ms.openlocfilehash: 40b2a15379129142a84c4a5caf4317dc50041e06
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: b7bda3b25e2c268926223da429abf559524ad38c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="run-while-minimized-with-extended-execution"></a>확장 실행으로 최소화된 상태에서 실행
+# <a name="run-while-minimized-with-extended-execution"></a>확장된 실행을 사용할 경우 최소화된 상태로 실행
 
 이 문서에서는 확장 실행을 사용하여 앱이 일시 중단되는 경우 중단 연기를 통해 앱이 최소화된 상태에서 실행될 수 있도록 하는 방법을 보여 줍니다.
 
@@ -241,9 +249,4 @@ static class ExtendedExecutionHelper
 [백그라운드 전송](https://msdn.microsoft.com/en-us/windows/uwp/networking/background-transfers)  [배터리 인식 및 백그라운드 작업](https://blogs.windows.com/buildingapps/2016/08/01/battery-awareness-and-background-activity/#I2bkQ6861TRpbRjr.97)  
 [MemoryManager 클래스](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.memorymanager.aspx)  
 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

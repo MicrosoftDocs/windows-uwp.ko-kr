@@ -5,9 +5,16 @@ title: "앱 설정에 대한 지침"
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: e995023cd8a4216c60d5691f9f87be3aff9d8498
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -20,7 +27,7 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 
 ## <a name="should-i-include-a-settings-page-in-my-app"></a>앱에 설정 페이지를 포함해야 하나요?
 
-다음은 앱 설정 페이지에 속한 앱 옵션의 예입니다. 
+다음은 앱 설정 페이지에 속한 앱 옵션의 예입니다.
 
 -   날씨 앱에서 온도 기본 단위로 섭씨 또는 화씨 선택, 메일 앱의 계정 설정 변경, 알림 설정 또는 내게 필요한 옵션 등 앱 동작에 영향을 주고 자주 재조정할 필요가 없는 구성 옵션
 -   음악, 사운드 효과 또는 색 테마와 같이 사용자의 기본 설정에 따라 달라지는 옵션
@@ -51,21 +58,21 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 
 **앱 바**
 
-일반적으로 허브 또는 탭/피벗 탐색 레이아웃에 포함된 앱 바 또는 도구 모음을 사용 중인 경우 "자세히" 플라이아웃 메뉴에 진입점의 마지막 항목을 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 "자세히" 플라이아웃 메뉴가 아니라 앱 바에 직접 진입점을 배치하세요.
+[앱 바](../controls-and-patterns/app-bars.md) 또는 도구 모음을 사용하는 경우, "자세히" 오버플로 메뉴에서 설정 진입점을 마지막 항목으로 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 오버플로가 아니라 앱 바에 직접 진입점을 배치하세요.
 
 ![앱 바의 앱 설정 진입점](images/appsettings-entrypoint-tabs.png)
 
 **허브**
 
-허브 레이아웃을 사용하고 있으면 앱 설정 진입점을 앱 바의 "자세히" 플라이아웃 메뉴 내부에 배치해야 합니다.
+허브 레이아웃을 사용하고 있으면 앱 설정 진입점을 앱 바의 "자세히" 오버플로 메뉴 내부에 배치해야 합니다.
 
 **탭/피벗**
 
-탭 또는 피벗 레이아웃에서는 앱 설정 진입점을 탐색 창 내의 최상위 항목 중 하나로 배치하지 않는 것이 좋습니다. 대신 앱 설정 진입점을 앱 바의 "자세히" 플라이아웃 메뉴 내부에 배치해야 합니다.
+탭 또는 피벗 레이아웃에서는 앱 설정 진입점을 탐색 창 내의 최상위 항목 중 하나로 배치하지 않는 것이 좋습니다. 대신 앱 설정 진입점을 앱 바의 "자세히" 오버플로 메뉴 내부에 배치해야 합니다.
 
-**마스터-세부**
+**마스터-세부 정보**
 
-앱 설정 진입점을 마스터-세부 창 내에 깊이 포함하는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
+앱 설정 진입점을 마스터-세부 정보 창 내에 깊이 넣는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
 
 ## <a name="layout"></a>레이아웃
 
@@ -80,6 +87,22 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 
 ![휴대폰의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-mobile.png)
 
+## <a name="color-mode-settings"></a>"컬러 모드" 설정
+
+
+앱에서 사용자가 앱의 컬러 모드를 선택하도록 허용하는 경우, "모드 선택" 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/lists.md#drop-down-lists)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
+- 밝게
+- 어둡게
+- Windows 기본
+
+사용자가 Windows 기본 테마를 확인할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 텍스트에 "Windows 색 설정"이라는 문자열을 사용하십시오.
+
+!["모드 선택" 섹션](images/appsettings_mode.png)
+
+<div class=”microsoft-internal-note”>
+"모드 선택" 섹션에 사용할 수 있는 기본 텍스트 문자열을 보여 주는 자세한 수정 내용은 [UNI](http://uni/DesignDepot.FrontEnd/#/ProductNav/2543/0/dv/?t=Windows%7CControls%7CColorMode&f=RS2)에서 볼 수 있습니다.
+</div>
+
 ## <a name="about-section-and-give-feedback-button"></a>"정보" 섹션 및 "피드백 보내기" 단추
 
 
@@ -89,10 +112,8 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 
 !["피드백 보내기" 단추가 있는 "이 앱에 대한 정보" 섹션](images/appsettings-about.png)
 
-## <a name="recommendations"></a>권장 사항
 
-
-## <a name="app-settings-page-content"></a>앱 설정 페이지 콘텐츠
+## <a name="recommended-page-content"></a>권장되는 페이지 콘텐츠
 
 
 앱 설정 페이지에 포함할 항목 목록이 있으면 다음 지침을 고려해 보세요.
@@ -105,9 +126,7 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 -   더 일반적인 설정이 각각 자체 진입점을 가질 수 있도록 덜 사용하는 설정을 단일 진입점으로 결합합니다. "정보" 설정에는 정보만 포함된 콘텐츠나 링크를 배치합니다.
 -   "사용 권한" 창에서 기능을 중복하지 마세요. 이 창은 Windows에서 기본적으로 제공되며 수정할 수 없습니다.
 
-##  <a name="add-settings-content-to-settings-flyouts"></a>설정 플라이아웃에 설정 콘텐츠 추가
-
-
+-   설정 플라이아웃에 설정 콘텐츠 추가
 -   필요한 경우 스크롤 가능한 단일 열에 위쪽에서 아래쪽으로 콘텐츠를 제공합니다. 스크롤을 화면 높이의 최대 두 배로 제한합니다.
 -   앱 설정에 다음 컨트롤을 사용합니다.
 
@@ -131,10 +150,4 @@ ms.openlocfilehash: dc2fb58250ed1cc032271adc4bae98872e6f612a
 * [진행률 컨트롤에 대한 지침](https://msdn.microsoft.com/library/windows/apps/hh465469)
 * [앱 데이터 저장 및 검색](https://msdn.microsoft.com/library/windows/apps/mt299098)
 * [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

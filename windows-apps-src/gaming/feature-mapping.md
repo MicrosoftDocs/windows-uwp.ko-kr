@@ -3,13 +3,20 @@ author: mtoepke
 title: "DirectX 11 API에 DirectX 9 기능 매핑"
 description: "Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx 9, directx 11, 포팅"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6ab76921f1e8b613010f99eba6a141daca128ea5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 58847adcb94f7e730bcdcd98767282811d555016
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 11 API에 DirectX 9 기능 매핑
+# <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,7 +30,7 @@ ms.openlocfilehash: 6ab76921f1e8b613010f99eba6a141daca128ea5
 
 Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
 
-## DirectX 11 API에 Direct3D 9 매핑
+## <a name="mapping-direct3d-9-to-directx-11-apis"></a>DirectX 11 API에 Direct3D 9 매핑
 
 
 [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)는 여전히 DirectX 그래픽의 기반이지만 API는 DirectX 9 이후로 변경되었습니다.
@@ -34,7 +41,7 @@ Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 
 
 Direct3D 11의 전체 기능 목록은 [Direct3D 11 기능](https://msdn.microsoft.com/library/windows/desktop/ff476342) 및 [Direct3D 11 기능](https://msdn.microsoft.com/library/windows/desktop/hh404562)을 참조하세요.
 
-## Direct2D 9에서 Direct2D 11로 이동
+## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Direct2D 9에서 Direct2D 11로 이동
 
 
 [Direct2D(Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990)는 여전히 DirectX 그래픽 및 Windows의 중요한 부분입니다. 여전히 Direct2D를 사용하여 2D 게임을 그리고 Direct3D 위에 오버레이(HUD)를 그릴 수 있습니다.
@@ -45,7 +52,7 @@ Direct2D는 Direct3D를 기반으로 하므로 역시 DXGI 및 디바이스 컨�
 
 [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) API는 Direct2D를 사용하여 서식 있는 텍스트에 대한 지원을 추가합니다. [DirectWrite 소개](https://msdn.microsoft.com/library/windows/desktop/dd371554)를 참조하세요.
 
-## 사용되지 않는 도우미 라이브러리 바꾸기
+## <a name="replace-deprecated-helper-libraries"></a>사용되지 않는 도우미 라이브러리 바꾸기
 
 
 D3DX 및 DXUT는 더 이상 사용되지 않으며 UWP 게임에서 사용할 수 없습니다. 이러한 도우미 라이브러리는 텍스처 로드 및 메시 로드와 같은 작업에 대한 리소스를 제공했습니다.
@@ -54,7 +61,7 @@ D3DX 및 DXUT는 더 이상 사용되지 않으며 UWP 게임에서 사용할 �
 -   [DirectX로 작성한 간단한 UWP 게임](tutorial--create-your-first-metro-style-directx-game.md) 연습에서는 그래픽, 파일 로드, UI, 컨트롤 및 소리를 비롯한 일반적인 게임 프로그래밍 작업을 보여 줍니다.
 -   [DirectX 도구 키트](http://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-## FX에서 HLSL로 셰이더 프로그램 이동
+## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 
 
 효과를 포함한 D3DX 유틸리티 라이브러리(D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서는 사용되지 않습니다. 모든 UWP용 DirectX 게임은 효과 없이 [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)을 사용하여 그래픽 파이프라인을 구동합니다.
@@ -65,21 +72,21 @@ Visual Studio에서는 여전히 내부의 FXC를 사용하여 셰이더 개체�
 
 Direct3D 11은 셰이더 모델 5에 도입되었으며, 이 모델에는 Direct3D 기능 수준 11\_0 이상이 필요합니다. [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://msdn.microsoft.com/library/windows/desktop/ff471419)을 참조하세요.
 
-## XNAMath 및 D3DXMath 바꾸기
+## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
 
 
 XNAMath(또는 D3DXMath)를 사용하여 코드를 [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 포팅 가능한 형식이 포함되어 있습니다. [XNA 수학 라이브러리에서 코드 마이그레이션](https://msdn.microsoft.com/library/windows/desktop/ee418730)을 참조하세요.
 
 DirectXMath float 형식은 셰이더에 사용하기 편리합니다. 예를 들어, [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) 및 [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621)는 편리하게 상수 버퍼에 맞게 데이터를 정렬합니다.
 
-## DirectSound를 XAudio2(및 백그라운드 오디오)로 바꾸기
+## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>DirectSound를 XAudio2(및 백그라운드 오디오)로 바꾸기
 
 
 DirectSound는 UWP에 지원되지 않음
 
 -   [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049)를 사용하여 게임에 소리 효과를 추가합니다.
 
-##  DirectInput을 XInput 및 UWP API로 바꾸기
+##  <a name="replace-directinput-with-xinput-and-uwp-apis"></a>DirectInput을 XInput 및 UWP API로 바꾸기
 
 
 DirectInput은 UWP에 지원되지 않음
@@ -88,12 +95,12 @@ DirectInput은 UWP에 지원되지 않음
 -   게임 컨트롤러 지원(및 게임 컨트롤러 헤드셋 지원)에 [XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001) 1.4를 사용합니다. 데스크톱 및 UWP에 공유 코드베이스를 사용하는 경우 이전 버전과의 호환성에 대한 자세한 내용은 [XInput 버전](https://msdn.microsoft.com/library/windows/desktop/hh405051)을 참조하세요.
 -   게임에 앱 바를 사용해야 하는 경우 [**EdgeGesture**](https://msdn.microsoft.com/library/windows/apps/hh701600) 이벤트를 등록합니다.
 
-## DirectShow 대신 Microsoft 미디어 파운데이션 사용
+## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>DirectShow 대신 Microsoft 미디어 파운데이션 사용
 
 
 DirectShow는 더 이상 DirectX API(또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](https://msdn.microsoft.com/library/windows/desktop/ms694197)은 공유 화면을 사용하여 Direct3D에 비디오 콘텐츠를 제공합니다. [Direct3D 11 비디오 API](https://msdn.microsoft.com/library/windows/desktop/hh447677)를 참조하세요.
 
-## DirectPlay를 네트워킹 코드로 바꾸기
+## <a name="replace-directplay-with-networking-code"></a>DirectPlay를 네트워킹 코드로 바꾸기
 
 
 Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서비스를 사용하는 경우 UWP 요구 사항을 준수하는 네트워킹 코드를 제공해야 합니다. 다음 API를 사용합니다.
@@ -113,7 +120,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 
 모든 UWP 앱(게임 포함)은 특정 유형의 백그라운드 작업을 사용하여, 앱이 일시 중단된 동안에도 연결을 유지합니다. 게임이 일시 중단된 동안 연결 상태를 유지해야 하는 경우 [네트워킹 기본 사항](https://msdn.microsoft.com/library/windows/apps/mt280233)을 참조하세요.
 
-## 함수 매핑
+## <a name="function-mapping"></a>함수 매핑
 
 
 다음 표는 Direct3D 9에서 Direct3D 11로 코드를 변환하는 데 도움이 됩니다. 또한 장치와 디바이스 컨텍스트를 구별하는 데에도 도움이 될 수 있습니다.
@@ -235,7 +242,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 
  
 
-## 화면 형식 매핑
+## <a name="surface-format-mapping"></a>화면 형식 매핑
 
 
 다음 표를 사용하여 Direct3D 9 형식을 DXGI 형식으로 변환합니다.
@@ -670,10 +677,5 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -5,9 +5,16 @@ title: "스크롤 막대에 대한 지침"
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 8ead56e84e21aaf5005530ed0509efa9440bce59
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ffa13b2bfc89a94370beee7fa47372f948c3f700
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="scroll-bars"></a>스크롤 막대
@@ -119,9 +126,4 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 
 **개발자용(XAML)**
 * [**ScrollViewer 클래스**](https://msdn.microsoft.com/library/windows/apps/br209527)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

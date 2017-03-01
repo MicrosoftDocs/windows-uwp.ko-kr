@@ -2,14 +2,21 @@
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 추가 기능의 집계 구입 데이터를 가져옵니다."
-title: "추가 기능 구입 가져오기"
+title: "추가 기능 구입 정보 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 저장소 서비스, Windows 스토어 분석 API, 추가 기능 구입 정보"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: a79cd324d57151318445df0dedd35a98d9c9f915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: be69a45586f4b7d66740d141dcc350eafd16bb53
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="get-add-on-acquisitions"></a>추가 기능 구입 가져오기
+# <a name="get-add-on-acquisitions"></a>추가 기능 구입 정보 가져오기
 
 
 
@@ -177,9 +184,4 @@ Authorization: Bearer <your access token>
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

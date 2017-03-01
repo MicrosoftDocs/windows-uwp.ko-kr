@@ -1,11 +1,18 @@
 ---
-author: jnHs
+author: shawjohn
 Description: "광고 캠페인에 대한 일반적인 질문"
 title: "광고 캠페인에 대한 일반적인 질문"
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 584407ea0e0fee4ec74dac0b656db59b7f694391
-ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 20a05337052392446d733af7da180f9466fef05f
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -33,7 +40,7 @@ ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
 
 ## <a name="where-will-my-ad-appear"></a>내 광고는 어디에 나타납니까?
 
-광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Windows 스토어에서 앱을 게시할 때 이러한 속성을 설정합니다.
+광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Windows 스토어에서 앱을 게시할 때 이러한 속성을 설정합니다. "유니버설" 캠페인의 경우 광고가 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에도 표시됩니다.
 
 광고 캠페인은 현재 다음 국가 및 지역에서 지원됩니다.
 
@@ -64,9 +71,4 @@ ms.openlocfilehash: ac18d3b036c1ec9290212097a0f9a0feb962d915
 * [하우스 광고 정보](about-house-ads.md)
 * [커뮤니티 광고 정보](about-community-ads.md)
 * [앱 설치 광고 보고서](app-install-ads-reports.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

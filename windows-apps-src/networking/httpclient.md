@@ -3,15 +3,22 @@ author: DelfCo
 description: "HttpClient와 Windows.Web.Http 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다."
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fad4c4c215c209971d2a76b4c1ac6f160f8ebced
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# HttpClient
+# <a name="httpclient"></a>HttpClient
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 **중요 API**
 
@@ -21,7 +28,7 @@ ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
 
 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)와 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 
-## HttpClient 및 Windows.Web.Http 네임스페이스 개요
+## <a name="overview-of-httpclient-and-the-windowswebhttp-namespace"></a>HttpClient 및 Windows.Web.Http 네임스페이스 개요
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 및 [**Windows.Web.Http.Filters**](https://msdn.microsoft.com/library/windows/apps/dn298623) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
 
@@ -53,7 +60,7 @@ ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
 
 [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/apps/dn252713) 네임스페이스에서는 HTTP 머리글 및 쿠키 만들기를 지원하며 이러한 항목이 이후 속성으로 [**HttpRequestMessage**](https://msdn.microsoft.com/library/windows/apps/dn279617) 및 [**HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 개체와 연결됩니다.
 
-## HTTP를 통해 간단한 GET 요청 보내기
+## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
 이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http://www.contoso.com으로 GET 요청을 전송하는 방법을 보여 줍니다.
 
@@ -97,11 +104,11 @@ catch (Exception ex)
 }
 ```
 
-## Windows.Web.Http의 예외
+## <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 
 잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
 
-**.NET:** [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 형식은 C# 및 VB에서 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)로 표시됩니다.
+**.NET:** [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 형식은 C#과 VB에서 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)로 표시됩니다.
 
 C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 클래스와 [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) 메서드 중 하나를 통해 URI가 생성되기 전에 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
 
@@ -114,10 +121,5 @@ C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception]
 관리되는 C++을 사용하는 앱에서 [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

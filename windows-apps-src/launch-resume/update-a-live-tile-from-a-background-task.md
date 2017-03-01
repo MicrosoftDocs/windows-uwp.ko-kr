@@ -4,14 +4,21 @@ title: "백그라운드 작업에서 라이브 타일 업데이트"
 description: "백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다."
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 76521772e4f93ee143ad698ad798f4b88ebcf3a7
+ms.lasthandoff: 02/07/2017
 
 ---
 
 
-# 백그라운드 작업에서 라이브 타일 업데이트
+# <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -28,7 +35,7 @@ ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
 
 <iframe src="https://hubs-video.ssl.catalog.video.msn.com/embed/afb47cc5-edd3-4262-ae45-8f0e3ae664ac/IA?csid=ux-en-us&MsnPlayerLeadsWith=html&PlaybackMode=Inline&MsnPlayerDisplayShareBar=false&MsnPlayerDisplayInfoButton=false&iframe=true&QualityOverride=HD" width="720" height="405" allowFullScreen="true" frameBorder="0" scrolling="no">개발 1분 - 백그라운드 작업에서 라이브 타일 업데이트</iframe>
 
-## 백그라운드 작업 프로젝트 만들기
+## <a name="create-the-background-task-project"></a>백그라운드 작업 프로젝트 만들기
 
 
 앱에 라이브 타일을 사용하도록 설정하려면 새 Windows 런타임 구성 요소 프로젝트를 솔루션에 추가합니다. 이것은 사용자가 앱을 설치할 때 OS를 통해 로드되고 백그라운드에서 실행되는 별도 어셈블리입니다.
@@ -38,7 +45,7 @@ ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
 3.  프로젝트 이름을 BackgroundTasks로 지정하고 **확인**을 클릭하거나 탭합니다. Microsoft Visual Studio에서 새 프로젝트를 솔루션에 추가합니다.
 4.  기본 프로젝트에서 BackgroundTasks 프로젝트에 대한 참조를 추가합니다.
 
-## 백그라운드 작업 구현
+## <a name="implement-the-background-task"></a>백그라운드 작업 구현
 
 
 앱의 라이브 타일을 업데이트하는 클래스를 만드는 [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) 인터페이스를 구현합니다. 백그라운드 작업은 Run 메서드에 포함됩니다. 이 경우 작업이 MSDN 블로그에 대한 배포 피드를 가져옵니다. 비동기 코드가 실행되는 동안 작업이 중간에 닫히지 않도록 하려면 지연을 가져옵니다.
@@ -141,7 +148,7 @@ namespace BackgroundTasks
 }
 ```
 
-## 패키지 매니페스트 설정
+## <a name="set-up-the-package-manifest"></a>패키지 매니페스트 설정
 
 
 패키지 매니페스트를 설정하려면 패키지 매니페스트를 열고 새 백그라운드 작업 선언을 추가합니다. 작업의 진입점을 네임스페이스가 포함된 클래스 이름으로 설정합니다.
@@ -158,12 +165,12 @@ namespace BackgroundTasks
 9.  **작은 로고** 필드에 30x30 픽셀 아이콘의 경로를 설정합니다.
 10. **큰 로고** 필드에 310x150 픽셀 아이콘의 경로를 설정합니다.
 
-## 백그라운드 작업 등록
+## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
 
 작업을 등록할 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다.
 
-> **참고** Windows 8.1부터 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
+> **참고** Windows 8.1부터 백그라운드 작업 등록 매개 변수는 등록 시 유효성을 검사합니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
  
 
 앱의 기본 페이지에 **RegisterBackgroundTask** 메서드를 추가하고 **OnNavigatedTo** 이벤트 처리기에서 호출합니다.
@@ -240,7 +247,7 @@ namespace ContosoApp
 }
 ```
 
-## 백그라운드 작업 디버그
+## <a name="debug-the-background-task"></a>백그라운드 작업 디버그
 
 
 백그라운드 작업을 디버그하려면 작업의 Run 메서드에 중단점을 설정합니다. **디버그 위치** 도구 모음에서 백그라운드 작업을 선택합니다. 그러면 시스템에서 Run 메서드를 즉시 호출합니다.
@@ -255,7 +262,7 @@ namespace ContosoApp
 8.  Shift+F5를 누르거나 **디버그 &gt; 디버깅 중지**를 탭하여 디버깅을 중지합니다.
 9.  시작 화면의 앱 타일로 돌아갑니다. 몇 초 후에 타일 알림이 앱 타일에 표시됩니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
@@ -267,9 +274,4 @@ namespace ContosoApp
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

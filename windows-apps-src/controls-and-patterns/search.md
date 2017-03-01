@@ -5,9 +5,16 @@ title: "검색 및 페이지에서 찾기"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: af8ee5679fe9bb152718b57bd198238bf9a3f6cd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0a92a3962a6e46f6086b07e548ea39887a780c21
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
@@ -226,9 +233,4 @@ Windows 도구 모음에서 작업으로 검색:
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

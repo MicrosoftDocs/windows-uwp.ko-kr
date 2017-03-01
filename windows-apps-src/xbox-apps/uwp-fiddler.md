@@ -2,13 +2,21 @@
 author: WilliamsJason
 title: "UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법"
 description: "프리웨어 Fiddler 도구를 사용하여 UWP Xbox One 개발 키트의 네트워크 트래픽을 확인하는 방법을 설명합니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 translationtype: Human Translation
-ms.sourcegitcommit: 11c6cffab7934937b6d89c30e4d03ae752f6b3b7
-ms.openlocfilehash: 241fa495c7277fe2bf4feafeb4062842f97e59b1
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: c7ebd56205db2674df5da6d64ecc9332aa96230e
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
+# <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a>UWP용으로 개발하는 경우 Xbox One에서 Fiddler를 사용하는 방법
 
 Fiddler는 Xbox One 개발 키트와 인터넷 간의 모든 HTTP 및 HTTPS 트래픽을 기록하는 웹 디버깅 프록시입니다. Fiddler를 사용하여 Xbox 서비스와 신뢰 당사자 웹 서비스를 들어오고 나가는 트래픽을 기록하고 검사하여 웹 서비스 호출을 파악하고 디버깅합니다. 
 
@@ -18,7 +26,7 @@ Fiddler는 프리웨어이며, [Fiddler 웹 사이트](http://www.fiddler2.com/f
 
 Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 있습니다. Fiddler를 실행하는 컴퓨터에서 업스트림 연결이 사용되지 않는 경우 콘솔의 인증이 만료될 때까지 콘솔이 연결 끊김을 검색하지 못할 수 있습니다. Fiddler를 사용하는 경우 Fiddler를 사용하여 연결 끊김을 시뮬레이션하는 대신 콘솔과 Fiddler를 실행하는 컴퓨터 간의 연결을 끊어야 합니다.
 
-### 개발 PC에서 Fiddler를 설치하여 사용하려면
+### <a name="to-install-and-enable-fiddler-on-your-development-pc"></a>개발 PC에서 Fiddler를 설치하여 사용하려면
 다음 단계를 따라 Fiddler를 설치하고 사용하여 개발 키트에서 트래픽을 모니터링하세요.
 
 1. [Fiddler 웹 사이트](http://www.fiddler2.com/fiddler2/)의 지침에 따라 개발 PC에 Fiddler를 설치합니다. 
@@ -52,7 +60,7 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
   4. **Export Root Certificate to Desktop**(데스크톱으로 루트 인증서 내보내기)을 클릭합니다.
 7. Fiddler를 종료하고 다시 시작합니다.
 
-### Fiddler를 인터넷의 프록시로 사용하도록 개발 키트를 구성하려면
+### <a name="to-configure-a-dev-kit-to-use-fiddler-as-its-proxy-to-the-internet"></a>Fiddler를 인터넷의 프록시로 사용하도록 개발 키트를 구성하려면
 
 1. Xbox 디바이스 포털 UI의 **네트워크** 도구로 이동합니다.
 2. 바탕 화면으로 내보낸 Fiddler 루트 인증서를 찾습니다. 
@@ -60,7 +68,7 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
 4. Fiddler에서 수신 대기하는 포트 번호(기본적으로 Fiddler에서 포트 8888 사용)를 입력합니다. 
 5. **사용**을 클릭합니다. 이렇게 하면 개발 키트가 다시 시작됩니다.
 
-### Fiddler 사용을 중지하려면
+### <a name="to-stop-using-fiddler"></a>Fiddler 사용을 중지하려면
 인터넷의 프록시로 Fiddler 사용을 중지(그리고 Fiddler에서 개발 키트의 네트워크 트래픽의 모든 추적을 중지)하려면 다음을 수행합니다.
 
 1. Xbox 디바이스 포털 UI의 **네트워크** 도구로 이동합니다.
@@ -69,16 +77,11 @@ Fiddler는 콘솔에서 보고하는 네트워크 상태에 영향을 줄 수 �
 > [!NOTE]
 > Fiddler가 설치된 각 PC마다 다른 Fiddler 루트 인증서를 사용합니다. 개발 키트용 Fiddler 프록시를 제공하는 데 사용되는 PC가 두 대 이상인 경우 두 PC 간에 전환할 때 새 루트 인증서를 선택해야 합니다. PC를 한 대만 사용하는 경우 Fiddler를 처음 사용할 때만 루트 인증서를 선택하면 됩니다. IP 주소 및 포트는 여전히 지정해야 합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Fiddler 설정 API 참조](wdp-fiddler-api.md)
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

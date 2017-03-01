@@ -1,13 +1,22 @@
 ---
+author: JordanEllis6809
 title: "기존 게임을 Xbox로 가져오기"
 description: "기존 게임을 UWP가 있는 Xbox로 가져오기."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 9ac96766-df89-4403-89f2-200549436921
 translationtype: Human Translation
-ms.sourcegitcommit: eec992d19d63778a46f97b76f3c8dea252a6a87b
-ms.openlocfilehash: 383e0f77ff9b810d5e5627b8df9ca09b03f4d0ae
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e82eacae06141c873690cccde04c3d871ae9d0eb
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 기존 게임을 Xbox로 가져오기
+# <a name="bringing-existing-games-to-xbox"></a>기존 게임을 Xbox로 가져오기
 
 
 게임에서 사용하는 기술에 따라 Xbox의 UWP로 게임을 가져오는 몇 가지 단계는 다음과 같습니다.
@@ -21,12 +30,7 @@ ms.openlocfilehash: 383e0f77ff9b810d5e5627b8df9ca09b03f4d0ae
 |[Unity](development-lanes-unity.md)| Unity에서 Xbox로 기존 게임을 가져오는 데 도움을 주는 자습서입니다. |
 |[HTML / JS](development-lanes-html.md)| Xbox에서 HTML 게임을 개발하는 것과 관련된 정보입니다. |
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

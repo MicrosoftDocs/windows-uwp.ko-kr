@@ -3,13 +3,20 @@ author: mtoepke
 title: "게임 프로그래밍용 Visual Studio 도구"
 description: "Visual Studio에서 사용할 수 있는 DirectX 관련 도구 개요."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, visual studio, 도구, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 59fe007601d16f6586ec52c0026e161ad6350a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임 프로그래밍용 Visual Studio 도구
+# <a name="visual-studio-tools-for-game-programming"></a>게임 프로그래밍용 Visual Studio 도구
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -24,7 +31,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 이 항목에서는 이러한 그래픽 도구에 대해 전체적으로 간략히 설명합니다.
 
-## 이미지 편집기
+## <a name="image-editor"></a>이미지 편집기
 
 
 이미지 편집기를 사용하여 DirectX가 사용하는 여러 가지 풍부한 텍스처와 이미지 형식으로 작업할 수 있습니다. 이미지 편집기는 다음 형식을 지원합니다.
@@ -38,18 +45,18 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 -   .tif, .tiff
 -   .tga
 
-[사용자 지정 빌드 파일](#custom)을 만들어 빌드 시 이러한 파일을 .dds 파일로 변환합니다.
+[사용자 지정 빌드 파일](#build-customizations-for-3d-assets)을 만들어 빌드 시 이러한 파일을 .dds 파일로 변환합니다.
 
 자세한 내용은 [텍스처 및 이미지 작업](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx)을 참조하세요.
 
-> **참고** 이미지 편집기는 전체 기능의 이미지 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
+> **참고**  이미지 편집기는 전체 기능의 이미지 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
 
  
 
-## 모델 편집기
+## <a name="model-editor"></a>모델 편집기
 
 
-모델 편집기를 사용하여 처음부터 기본 3D 모델을 만들거나 모든 기능을 갖춘 3D 모델링 도구에서 더 복잡한 3D 모델을 보고 수정할 수 있습니다. 모델 편집기는 DirectX 앱 개발에 사용되는 여러 가지 3D 모델 형식을 지원합니다. [사용자 지정 빌드 파일](#custom)을 만들어 빌드 시 이러한 파일을 .cmo 파일로 변환할 수 있습니다.
+모델 편집기를 사용하여 처음부터 기본 3D 모델을 만들거나 모든 기능을 갖춘 3D 모델링 도구에서 더 복잡한 3D 모델을 보고 수정할 수 있습니다. 모델 편집기는 DirectX 앱 개발에 사용되는 여러 가지 3D 모델 형식을 지원합니다. [사용자 지정 빌드 파일](#build-customizations-for-3d-assets)을 만들어 빌드 시 이러한 파일을 .cmo 파일로 변환할 수 있습니다.
 
 -   .fbx
 -   .dae
@@ -61,11 +68,11 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 
 자세한 내용은 [3D 모델 작업](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx)을 참조하세요.
 
-> **참고** 모델 편집기는 전체 기능의 모델 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
+> **참고**  모델 편집기는 전체 기능의 모델 편집 앱에 대한 대체용이 아니지만 단순한 여러 가지 보기 및 편집 시나리오에 적합합니다.
 
  
 
-## 셰이더 디자이너
+## <a name="shader-designer"></a>셰이더 디자이너
 
 
 셰이더 디자이너를 사용하여 HLSL 프로그래밍을 모르는 경우에도 게임 또는 앱에 대한 사용자 지정 시각 효과를 만들 수 있습니다.
@@ -80,7 +87,7 @@ Visual Studio Ultimate을 사용하여 DirectX 앱을 개발하는 경우 이미
 -   .cso(바이트코드)
 -   .h(HLSL 바이트코드 배열)
 
-[사용자 지정 빌드 파일](#custom)을 만들어 빌드 시 이러한 형식을 .cso 파일로 변환합니다.
+[사용자 지정 빌드 파일](#build-customizations-for-3d-assets)을 만들어 빌드 시 이러한 형식을 .cso 파일로 변환합니다.
 
 셰이더 편집기에서 내보낸 HLSL 코드의 일부는 다음과 같습니다. Lambert 조명 노드에 대한 코드만 나옵니다.
 
@@ -108,7 +115,7 @@ float3 LambertLighting(
 
 자세한 내용은 [셰이더 작업](https://msdn.microsoft.com/library/windows/apps/hh873117.aspx)을 참조하세요.
 
-## 3D 자산에 대한 사용자 지정 빌드
+## <a name="build-customizations-for-3d-assets"></a>3D 자산에 대한 사용자 지정 빌드
 
 
 Visual Studio가 리소스를 사용할 수 있는 형식으로 변환하도록 프로젝트에 사용자 지정 빌드를 추가할 수 있습니다. 그 후 다른 DirectX 앱에서와 마찬가지로 DirectX 리소스를 만들고 채워서 앱에 자산을 로드하고 사용할 수 있습니다.
@@ -121,7 +128,7 @@ Visual Studio가 리소스를 사용할 수 있는 형식으로 변환하도록 
 
 자세한 내용은 [게임 또는 앱에서 3D 자산 사용](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx)을 참조하세요.
 
-## DirectX 그래픽 디버깅
+## <a name="debugging-directx-graphics"></a>DirectX 그래픽 디버깅
 
 
 Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한 도구를 사용하여 다음과 같은 사항을 디버그합니다.
@@ -138,7 +145,7 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 
 자세한 내용은 [DirectX 그래픽 디버깅](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx)을 참조하세요.
 
-> **참고** 이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
+> **참고**  이 문서는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 Windows 10 개발자용입니다. Windows 8.x 또는 Windows Phone 8.x를 개발하는 경우 [보관된 문서](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요.
 
  
 
@@ -148,10 +155,5 @@ Visual Studio는 그래픽 관련 디버깅 도구를 제공합니다. 이러한
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,13 +3,20 @@ author: jwmsft
 description: "CLR(공용 언어 런타임)과 C++ 등 다른 프로그래밍 언어의 특정 데이터 형식에 제공되는 Windows 런타임에 대한 XAML의 언어 수준 지원이 나열됩니다."
 title: "XAML 기본 데이터 형식"
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
-ms.openlocfilehash: a204f1d000dd28a9159b4ca795107046ca4ef92e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f6a1ca4850ffbc19afc8defa6d2d373dbfbf2b2b
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# XAML 기본 데이터 형식
+# <a name="xaml-intrinsic-data-types"></a>XAML 기본 데이터 형식
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -30,22 +37,17 @@ Windows 런타임용 XAML이 언어 수준 지원을 제공하는 형식은 다�
 
 **참고** 통상적으로 XAML의 언어 primitive 및 다른 모든 XAML 언어 요소는 "x:" 접두사를 포함하여 표시됩니다. 이는 XAML 언어 요소가 실제 태그에서 일반적으로 어떻게 사용되는지를 보여 줍니다. 이는 XAML용 설명서 및 XAML 사양에서도 준수됩니다.
 
-## 기타 XAML primitive
+## <a name="other-xaml-primitives"></a>기타 XAML primitive
 
 XAML 2009 사양에서는 **x:Uri** 및 **x:Single** 같은 다른 XAML 언어 수준 primitive를 표시합니다. 이 항목의 표에 나열되어 있지 않은 기타 XAML 어휘 또는 XAML 2009 사양에서 정의된 기타 XAML 언어 기본 요소는 현재 Windows 런타임에 대한 XAML에서 지원되지 않습니다.
 
 **참고** 날짜 및 시간([**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576) 또는 [**DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx), [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/br225996) 또는 [**System.TimeSpan**](https://msdn.microsoft.com/library/windows/apps/xaml/system.timespan.aspx)을 사용하는 속성)은 XAML 기본 요소로 설정할 수 없습니다. Windows 런타임 XAML 파서에 날짜 및 시간에 대한 기본 from-string 변환 동작이 없기 때문에 일반적으로 이러한 속성은 XAML에서 설정할 수 없습니다. 날짜 및 시간 속성의 초기화 값에는 페이지 또는 요소가 로드될 때 실행되는 코드 숨김을 사용해야 합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [XAML 개요](xaml-overview.md)
 * [XAML 구문 가이드](xaml-syntax-guide.md)
 * [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

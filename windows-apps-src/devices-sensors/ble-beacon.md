@@ -2,9 +2,17 @@
 author: msatranjr
 title: "Bluetooth 광고"
 description: "이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher API 사용자를 통해 Bluetooth LE(저에너지) 광고를 UWP(유니버설 Windows 플랫폼) 앱에 통합하는 방법에 대한 문서가 포함되어 있습니다."
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 translationtype: Human Translation
-ms.sourcegitcommit: b454e08015ea9bd6240c836563b1fec78e38dc2c
-ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: bfdb1b218676503699674c97fc962ad8161769dd
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -37,7 +45,7 @@ ms.openlocfilehash: e21567bf2ffa5b05861cf96099290e1bb66dbf03
 
 ## <a name="publishing-advertisements"></a>광고 게시
 
-Bluetooth LE 광고를 사용하면 디바이스가 광고라는 특정 페이로드 비콘을 지속적으로 보낼 수 있습니다. 이 특정 광고를 수신 대기하도록 설정된 경우 근처의 모든 Bluetooth LE 지원 디바이스에서 이 광고를 볼 수 있습니다.
+Bluetooth LE 광고를 사용하면 장치가 광고라는 특정 페이로드 비콘을 지속적으로 보낼 수 있습니다. 이 특정 광고를 수신 대기하도록 설정된 경우 근처의 모든 Bluetooth LE 지원 장치에서 이 광고를 볼 수 있습니다.
 
 **참고** 사용자 개인 정보 보호를 위해 광고 수명은 앱 수명에 연결됩니다. BluetoothLEAdvertisementPublisher를 만들고 광고에 대한 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대한 자세한 내용은 [실행, 다시 시작 및 백그라운드 작업](https://msdn.microsoft.com/windows/uwp/launch-resume/index)을 참조하세요.
 
@@ -45,7 +53,7 @@ Bluetooth LE 광고를 사용하면 디바이스가 광고라는 특정 페이�
 
 광고에 데이터를 추가하는 방법에는 여러 가지가 있습니다. 이 예제에서는 회사별 광고를 만드는 일반적인 방법을 보여 줍니다. 
 
-첫 번째로, 디바이스에서 특정 광고 비콘을 보낼지 여부를 제어하는 광고 게시자를 만듭니다.
+첫 번째로, 장치에서 특정 광고 비콘을 보낼지 여부를 제어하는 광고 게시자를 만듭니다.
 
 ```csharp
 BluetoothLEAdvertisementPublisher publisher = new BluetoothLEAdvertisementPublisher();
@@ -85,7 +93,7 @@ publisher.Start();
 BluetoothLEAdvertisementWatcher watcher = new BluetoothLEAdvertisementWatcher();
 watcher.Received += OnAdvertisementReceived;
 watcher.Start();
-``` 
+```    
 
 ```csharp
 private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watcher, BluetoothLEAdvertisementReceivedEventArgs eventArgs)
@@ -120,7 +128,7 @@ watcher.AdvertisementFilter.Advertisement.ManufacturerData.Add(manufacturerData)
 
 ### <a name="watching-for-a-nearby-advertisement"></a>근처 광고 감시
 
-디바이스 광고가 범위 내에 들어오는 경우에만 감시자를 트리거하려는 경우도 있습니다. 고유한 범위를 정의할 수 있지만 0에서 -128 사이의 범위로 값이 잘립니다. 
+장치 광고가 범위 내에 들어오는 경우에만 감시자를 트리거하려는 경우도 있습니다. 고유한 범위를 정의할 수 있지만 0에서 -128 사이의 범위로 값이 잘립니다. 
 
 ```csharp
 // Set the in-range threshold to -70dBm. This means advertisements with RSSI >= -70dBm 
@@ -153,8 +161,3 @@ private async void OnAdvertisementReceived(BluetoothLEAdvertisementWatcher watch
 이 값을 대략적으로 거리로 환산할 수는 있지만, 무선 송수신 장치마다 다르기 때문에 실제 거리를 측정하는 데 사용하면 안 됩니다. 벽, 라디오, 무선 송수신 장치 케이스, 공기 습도 등 다양한 환경 요인 때문에 거리를 측정하기 어려울 수 있습니다.
 
 순수 거리를 파악하기 위한 대체 방법은 "버킷"을 정의하는 것입니다. 대체로 무선 송수신 장치는 매우 가까이 있을 때 0~-50DBm, 중간 거리에 있을 때 -50~-90, 멀리 떨어져 있을 때 -90 미만의 값을 보고합니다. 시행착오를 통해 앱에 적합한 버킷을 확인하는 것이 좋습니다.
-
-
-<!--HONumber=Dec16_HO3-->
-
-

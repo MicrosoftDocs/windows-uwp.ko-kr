@@ -3,15 +3,22 @@ author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: "Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법에 알아봅니다."
 title: "중간 광고"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 중간"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: fae0fc57eca3477bf46a6f3ac43ec35781241a6e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: fb1cdd018ed496b59290825ee84d10ac70a0e46d
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="interstitial-ads"></a>중간 광고
 
-이 연습에서는 Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법을 보여 줍니다.
+이 연습에서는 Microsoft Store Services SDK의 Microsoft Advertising 라이브러리를 사용하여 Windows 10, Windows 8.1 또는 Windows Phone 8.1 앱에 중간 광고를 포함하는 방법을 보여줍니다.
 
 C# 및 C++를 사용하여 JavaScript/HTML 앱 및 XAML 앱에 중간 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](http://aka.ms/githubads)을 참조하세요.
 
@@ -230,9 +237,4 @@ Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어�
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

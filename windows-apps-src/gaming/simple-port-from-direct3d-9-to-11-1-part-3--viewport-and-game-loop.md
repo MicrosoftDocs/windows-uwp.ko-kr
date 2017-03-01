@@ -3,13 +3,20 @@ author: mtoepke
 title: "게임 루프 포팅"
 description: "IFrameworkView를 작성하여 전체 화면 CoreWindow를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다."
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 포팅, 게임 루프, direct3d 9, directx 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 23631bf464095e1d2f2aab97740d89c6a82f4a70
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임 루프 포팅
+# <a name="port-the-game-loop"></a>게임 루프 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,14 +30,14 @@ ms.openlocfilehash: 8d843d8b22623dfbba3a76eb7ef19a82cc07f04f
 
 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 작성하여 전체 화면 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 제어하는 방법을 포함하여 UWP(유니버설 Windows 플랫폼) 게임의 창을 구현하는 방법 및 게임 루프로 가져오는 방법을 보여 줍니다. [DirectX 11 및 UWP로 간단한 Direct3D 9 앱 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 3부.
 
-## 창 만들기
+## <a name="create-a-window"></a>창 만들기
 
 
 Direct3D 9 뷰포트를 사용하여 바탕 화면 창을 설정하려면 데스크톱 앱에 대한 기존의 앱 프레임 워크를 구현해야 했습니다. HWND를 만들고, 창 크기를 설정하고, 창 처리 콜백을 제공하고, 이 창이 표시되게 하는 등의 작업을 수행해야 했습니다.
 
 UWP 환경에는 훨씬 간단한 시스템이 있습니다. 기존의 창을 설정하는 대신 DirectX를 사용하여 Windows 스토어 게임이 [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)를 구현합니다. 앱 컨테이너 내 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)에서 직접 실행하도록 DirectX 앱 및 게임에 대한 이 인터페이스가 존재합니다.
 
-> **참고** Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)와 같은 리소스에 관리되는 포인터를 제공합니다. [**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx을 참조하세요.
+> **참고**   Windows는 원본 응용 프로그램 개체 및 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)와 같은 리소스에 관리되는 포인터를 제공합니다. [**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx을 참조하세요.
 
  
 
@@ -69,7 +76,7 @@ public:
 };
 ```
 
-## 게임 루프 포팅
+## <a name="port-the-game-loop"></a>게임 루프 포팅
 
 
 Direct3D 9 구현에서 게임 루프를 살펴보겠습니다. 이 코드는 앱의 main 함수에 존재합니다. 이 루프의 각 반복에서는 창 메시지를 처리하거나 프레임을 렌더링합니다.
@@ -121,7 +128,7 @@ while (true)
 
 이제 같은 기본 그래픽 인프라를 설정하는 UWP 앱이 있고 DirectX 9 예제에서와 같은 다채로운 색상의 큐브를 렌더링합니다.
 
-## 여기에서 이동할 위치
+## <a name="where-do-i-go-from-here"></a>여기에서 이동할 위치
 
 
 [DirectX 11 포팅 FAQ](directx-porting-faq.md)를 책갈피로 지정합니다.
@@ -140,10 +147,5 @@ DirectX UWP 템플릿에는 UWP 게임에 사용할 수 있는 강력한 Direct3
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

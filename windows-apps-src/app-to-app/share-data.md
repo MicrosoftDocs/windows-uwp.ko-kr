@@ -1,21 +1,28 @@
 ---
-description: "이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다."
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 공유 계약을 지원하는 방법을 설명합니다."
 title: "데이터 공유"
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 554a2cd1db0f950b8a04a5d562f6a6ba43f1be23
-ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 59039fbd2cc54c757acabba7f0c981059ef95c56
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 데이터 공유
+# <a name="share-data"></a>데이터 공유
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다.
 
-## 이벤트 처리기 설정
+## <a name="set-up-an-event-handler"></a>이벤트 처리기 설정
 
 사용자가 공유를 호출할 때마다 호출될 [**DataRequested**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.DataRequested) 이벤트 처리기를 추가합니다. 이는 사용자가 앱에서 컨트롤(예: 단추 또는 앱 바 명령)을 탭할 때 발생하거나 특정 시나리오(예: 사용자가 한 레벨을 마치고 높은 점수를 얻는 경우)에서 자동으로 발생할 수 있습니다.
 
@@ -25,7 +32,7 @@ ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
-## 데이터 선택
+## <a name="choose-data"></a>데이터 선택
 
 다음과 같은 다양한 형식의 데이터를 공유할 수 있습니다.
 
@@ -42,7 +49,7 @@ ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## 속성 설정
+## <a name="set-properties"></a>속성 설정
 
 공유할 데이터를 패키지로 만들 경우 공유할 내용에 대한 추가 정보를 제공하는 다양한 속성을 제공할 수 있습니다. 이러한 속성을 사용하면 대상 앱의 사용자 경험을 향상할 수 있습니다. 예를 들어, 사용자가 두 개 이상의 앱과 콘텐츠를 공유하는 경우 설명이 있으면 도움이 됩니다. 이미지나 웹 페이지 링크를 공유할 때 미리 보기를 추가하면 사용자에게 시각적 참조를 제공할 수 있습니다. 자세한 내용은 [**DataPackagePropertySet**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackagePropertySet)을 참조하세요.
 
@@ -50,17 +57,17 @@ ms.openlocfilehash: 8b4f9ae45ed549ba5f10062e6bad25a4fb2e2a6f
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
-## 공유 UI 시작
+## <a name="launch-the-share-ui"></a>공유 UI 시작
 
 공유를 위한 UI가 시스템에서 제공됩니다. 시작하려면 [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI) 메서드를 호출합니다.
 
 [!code-cs[기본](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
-## 오류 처리
+## <a name="handle-errors"></a>오류 처리
 
 대부분의 경우 콘텐츠 공유는 간단한 프로세스입니다. 그러나 항상 예기치 않은 문제가 발생할 수 있습니다. 예를 들어 앱에서 사용자가 공유할 콘텐츠를 선택해야 하지만 아무것도 선택하지 않았을 수 있습니다. 이러한 상황을 처리하려면 잘못된 부분이 있는 경우 사용자에게 메시지를 표시하는 [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)) 메서드를 사용합니다.
 
-## 대리자와 공유 지연
+## <a name="delay-share-with-delegates"></a>대리자와 공유 지연
 
 사용자가 공유하려는 데이터를 즉시 준비하는 것이 비효율적인 경우도 있습니다. 예를 들어, 앱에서 여러 다른 형식으로 용량이 큰 이미지 파일을 전송하도록 지원하는 경우 사용자가 선택하기 전에 해당 이미지를 모두 만드는 것은 비효율적입니다.
 
@@ -91,7 +98,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## 참고 항목 
+## <a name="see-also"></a>참고 항목 
 
 * [앱 간 통신](index.md)
 * [데이터 수신](receive-data.md)
@@ -102,10 +109,5 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 * [FailWithDisplayText](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext.aspx)
 * [ShowShareUi](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datatransfermanager.showshareui.aspx)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

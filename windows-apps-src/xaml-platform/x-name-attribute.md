@@ -3,31 +3,38 @@ author: jwmsft
 description: "코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다."
 title: "xName 특성"
 ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
-ms.openlocfilehash: 1a70bffd6e6990ece4565b919846503b95ae8f61
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a80a5cdeae5adc2af59072400aa42428eac28431
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Name 특성
+# <a name="xname-attribute"></a>x:Name 특성
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 코드 숨김 또는 일반 코드에서 인스턴스화된 개체에 액세스하기 위해 개체 요소를 고유하게 식별합니다. 백업 프로그래밍 모델에 적용하는 경우 **x:Name**은 생성자에서 반환한 개체 참조를 보유하는 변수와 같은 것으로 간주됩니다.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 ``` syntax
 <object x:Name="XAMLNameValue".../>
 ```
 
-## XAML 값
+## <a name="xaml-values"></a>XAML 값
 
 | 용어 | 설명 |
 |------|-------------|
 | XAMLNameValue | XamlName 문법의 제한을 따르는 문자열입니다. |
 
-##  XamlName 문법
+##  <a name="xamlname-grammar"></a>XamlName 문법
 
 다음은 이 XAML 구현에서 키로 사용되는 문자열에 대한 규범 문법입니다.
 
@@ -44,7 +51,7 @@ CombiningCharacter::= none
 -   유니코드 문자 범위는 지원되지 않습니다.
 -   이름은 숫자로 시작될 수 없습니다. 일부 도구 구현에서는 사용자가 최초 문자로 숫자를 입력하거나, 도구가 숫자를 포함하는 다른 값을 기반으로 **x:Name** 값을 자동으로 생성하는 경우 문자열 앞에 밑줄(\_)이 붙습니다.
 
-## 설명
+## <a name="remarks"></a>설명
 
 지정한 **x:Name**은 XAML이 처리될 때 기본 코드에서 만들어지는 필드의 이름으로 사용되며, 이 필드에는 개체에 대한 참조가 저장됩니다. 이 필드를 만드는 프로세스는 MSBuild 대상 단계에서 수행되며, 이 때 XAML 파일 및 해당 코드 숨김에 대한 partial 클래스의 결합도 처리됩니다. 이 동작이 XAML 언어로 지정될 필요는 없습니다. 이 동작은 **x:Name**을 자체 프로그래밍 및 응용 프로그램 모델에서 사용하기 위해 XAML용 UWP(유니버설 Windows 플랫폼) 프로그래밍에서 적용하는 특별한 구현입니다.
 
@@ -56,7 +63,7 @@ CombiningCharacter::= none
 
 **참고** 특히 C++/CX 앱의 경우 **x:Name** 참조의 지원 필드는 XAML 파일 또는 페이지의 루트 요소에 대해 만들어지지 않습니다. C++ 코드 숨김에서 루트 개체를 참조해야 하는 경우 다른 API나 트리 통과를 사용합니다. 예를 들어 알려진 명명된 자식 요소에 대해 [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)을 호출한 다음 [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739)를 호출할 수 있습니다.
 
-### x:Name 및 기타 Name 속성
+### <a name="xname-and-other-name-properties"></a>x:Name 및 기타 Name 속성
 
 UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습니다. 예를 들어 [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) 및 [**TextElement.Name**](https://msdn.microsoft.com/library/windows/apps/hh702125)입니다.
 
@@ -64,13 +71,8 @@ UWP XAML에서 사용된 일부 형식에는 **Name**이라는 속성도 있습�
 
 **참고** 일반적으로 [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735)은 원래 **x:Name**으로 설정된 값을 변경하기 위한 방법으로 사용해서는 안 됩니다. 단, 이 일반 규칙에 대한 예외 시나리오도 있습니다. XAML 이름 범위의 생성 및 정의는 XAML 프로세서 작업입니다. 런타임에 **FrameworkElement.Name**을 수정하면 XAML 이름 범위/전용 필드의 이름 지정이 일치하지 않게 되므로 코드 숨김에서 추적하기 어렵습니다.
 
-### x:Name 및 x:Key
+### <a name="xname-and-xkey"></a>x:Name 및 x:Key
 
 **x:Name**은 [x:Key 특성](x-key-attribute.md)의 대체 항목으로 작용하도록 [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) 내의 요소에 특성으로 적용할 수 있습니다. 일반적으로 **ResourceDictionary**의 모든 요소에는 x:Key 또는 x:Name 특성이 있어야 합니다. 이는 [스토리보드 애니메이션](https://msdn.microsoft.com/library/windows/apps/mt187354)에서 일반적입니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://msdn.microsoft.com/library/windows/apps/mt187273) 섹션을 참조하세요.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

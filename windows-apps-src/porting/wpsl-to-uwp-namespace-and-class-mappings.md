@@ -3,9 +3,16 @@ author: mcleblanc
 description: "이 항목에서는 Windows Phone Silverlight API를 해당 UWP(유니버설 Windows 플랫폼) API에 포괄적으로 매핑합니다."
 title: "Windows Phone Silverlight를 UWP 네임스페이스 및 클래스에 매핑"
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 751c0c0355e8f6c02248c6f6d61f8c62c709cd95
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -245,10 +252,5 @@ ms.openlocfilehash: dcdf17263dadd71572c942bff5e795928e855c03
  
 
 다음 항목은 [프로젝트 포팅](wpsl-to-uwp-porting-to-a-uwp-project.md)입니다.
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

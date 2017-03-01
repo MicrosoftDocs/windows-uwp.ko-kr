@@ -3,13 +3,20 @@ author: mtoepke
 title: "연습 - 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅"
 description: "이 포팅 연습에서는 간단한 렌더링 프레임워크를 Direct3D 9에서 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 가져오는 방법을 보여 줍니다."
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 53e0b3f5a69f133e74430b1a2e32a13180569f06
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1e3f9b7fbfaa110661ebb111c60d0089757dc885
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
+# <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)로 포팅
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -62,36 +69,23 @@ ms.openlocfilehash: 53e0b3f5a69f133e74430b1a2e32a13180569f06
 
 이 연습에서는 간소하게 하기 위해 XAML 상호 운용성이 지원되지 않는 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)를 사용합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 [UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿은 필요하지 않지만 이 연습을 위한 코드 샘플을 로드하려면 Microsoft Visual Studio 2015가 필요합니다.
 
 이 연습에 나온 DirectX 11 및 UWP 프로그래밍 개념을 더 잘 이해하려면 [포팅 개념 및 고려 사항](porting-considerations.md)을 참조하세요.
 
-## 관련 항목
-
+## <a name="related-topics"></a>관련 항목
 
 **Direct3D**
-[Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
 
-[UWP용 새 DirectX 11 프로젝트 만들기](user-interface.md)
+* [Direct3D 9에서 HLSL 셰이더 작성](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [DirectX 게임 프로젝트 템플릿](user-interface.md)
 
 **Windows 스토어**
-[**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
 
-[**개체 연산자에 대한 핸들(^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx
-
- 
-
- 
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
+* [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
+* [**개체 운영자에 대한 핸들(^)**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)
 
 

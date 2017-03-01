@@ -2,9 +2,17 @@
 author: shawjohn
 Description: "프로모션 또는 참여를 목적으로 고객의 하위 집합을 대상으로 지정할 수 있도록 고객층을 만드는 방법을 알아봅니다."
 title: "고객층 만들기"
+ms.author: johnshaw
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 translationtype: Human Translation
-ms.sourcegitcommit: eed71b2fc06db71fd105df37a73bd0cd0832931f
-ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1c1aa77ee989344f5e09ddaeb864d5ddceb03660
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -18,13 +26,13 @@ ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
 
 ## <a name="to-create-a-customer-segment"></a>고객층을 만들려면
 
-1.  [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)의 위쪽 메뉴에서 **고객**을 선택합니다.
-2.  **고객 그룹** 페이지에서 다음 중 하나를 수행합니다.
+1.    [Windows 개발자 센터 대시보드](https://developer.microsoft.com/dashboard/overview)의 위쪽 메뉴에서 **고객**을 선택합니다.
+2.    **고객 그룹** 페이지에서 다음 중 하나를 수행합니다.
  - **내 고객 그룹** 섹션에서 **새 그룹 만들기**를 선택하여 처음부터 고객층을 정의합니다. **그룹 유형** 드롭다운 목록에서 **세그먼트**를 선택해야 합니다.
  - **세그먼트 템플릿** 섹션에서 필요에 따라 그대로 사용하거나 수정할 수 있는 **Copy to use a predefined segment**(미리 정의된 세그먼트를 복사하여 사용)를 선택합니다.
-3.  **이 앱의 고객 포함** 목록에서 대상으로 지정할 앱 중 하나를 선택합니다.
-4.  **세그먼트 이름** 상자에서 세그먼트의 이름을 선택합니다.
-5.  **포함 조건 정의** 섹션에서 세그먼트에 대한 필터 조건을 선택합니다.
+3.    **이 앱의 고객 포함** 목록에서 대상으로 지정할 앱 중 하나를 선택합니다.
+4.    **세그먼트 이름** 상자에서 세그먼트의 이름을 선택합니다.
+5.    **포함 조건 정의** 섹션에서 세그먼트에 대한 필터 조건을 선택합니다.
 
     **취득 소스**, **취득**, **인구 통계**, **평점**, **스토어 취득**, **스토어 구매** 및 **스토어 지출** 등 다양한 필터 조건에서 선택할 수 있습니다.
 
@@ -57,9 +65,4 @@ ms.openlocfilehash: 28906c98d2826f5312e01713e2621159c6b24923
 
 - **포함 조건 정의** 섹션에서 세그먼트에 더 많은 고객이 포함되도록 필터 조건을 조정합니다.
 - **고객 그룹** 페이지의 **비활성화 상태인 세그먼트** 섹션에서 **새로 고침**을 선택하여 현재 세그먼트에 충분한 고객이 포함되어 있는지 확인합니다. 예를 들어 세그먼트를 처음 만든 이후 앱을 다운로드한 고객 수가 세그먼트 조건을 충족할 경우 이 방식이 적용됩니다.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -2,9 +2,17 @@
 author: TylerMSFT
 title: "In-process 백그라운드 작업 만들기 및 등록"
 description: "포그라운드 앱과 같은 프로세스에서 실행되는 In-process 작업을 만들고 등록합니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 translationtype: Human Translation
-ms.sourcegitcommit: b9acb35645ee4f069f2ddb999865c3fd087fb792
-ms.openlocfilehash: 2ab02b8edda9aeadc9962464a63e08f1fb407777
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1955f4981f09c2632fe2236ebd6a772e7b0ed8a1
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -18,7 +26,7 @@ ms.openlocfilehash: 2ab02b8edda9aeadc9962464a63e08f1fb407777
 
 이 항목에서는 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록하는 방법을 보여 줍니다.
 
-In-process 백그라운드 작업은 Out-of-process 백그라운드 작업보다 구현하기가 더 쉽습니다. 그러나 복원 가능성이 더 낮습니다. In-process 백그라운드 작업에서 실행되는 코드가 중지되면 앱이 중단됩니다. 또한 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) 및 **IoTStartupTask**는 In-process 모델에서 사용할 수 없습니다. 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화도 가능하지 않습니다. 이러한 트리거 및 작업은 Out-of-process 백그라운드 작업 모델을 사용하여 계속 지원됩니다.
+In-process 백그라운드 작업은 Out-of-process 백그라운드 작업보다 구현하기가 더 쉽습니다. 그러나 복원 가능성이 더 낮습니다. In-process 백그라운드 작업에서 실행되는 코드가 중지되면 앱이 중단됩니다. 또한 [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx) 및 **IoTStartupTask**는 In-process 모델에서 사용할 수 없습니다. 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화도 가능하지 않습니다. 이러한 트리거 및 작업은 Out-of-process 백그라운드 작업 모델을 사용하여 계속 지원됩니다.
 
 백그라운드 작업은 실행 시간 제한을 초과하여 실행되는 경우 앱의 포그라운드 프로세스 내에서 실행 중인 경우에도 종료될 수 있습니다. 몇 가지 용도로 작업을 별도 프로세스에서 실행되는 백그라운드 작업으로 구분하는 복원력은 계속 유용합니다. 백그라운드 작업을 포그라운드 응용 프로그램에서 분리된 작업으로 유지하는 것이 포그라운드 응용 프로그램과의 통신이 필요하지 않은 작업에 대한 가장 적합한 옵션일 수 있습니다.
 
@@ -107,9 +115,4 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 **백그라운드 작업 API 참조**
 
 * [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/br224847)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

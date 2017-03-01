@@ -3,15 +3,22 @@ author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: "이 문서에서는 MediaProcessingTrigger 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다."
 title: "백그라운드에서 미디어 파일 처리"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fb0e8a535ff4e27530fa45aca80b21f17a523c7b
-ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f3262c30797c8ce447b3e97a5cb7dd6d2ea025
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 백그라운드에서 미디어 파일 처리
+# <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 백그라운드 작업을 사용하여 백그라운드에서 미디어 파일을 처리하는 방법을 보여 줍니다.
@@ -24,7 +31,7 @@ ms.openlocfilehash: 8a65ce9ed9de050bbcee2612bf53c5bfd44ffc72
 -   [다시 시작 및 백그라운드 작업 시작](https://msdn.microsoft.com/library/windows/apps/mt227652)
 -   [타일, 배지 및 알림](https://msdn.microsoft.com/library/windows/apps/mt185606)
 
-## 미디어 처리 백그라운드 작업 만들기
+## <a name="create-a-media-processing-background-task"></a>미디어 처리 백그라운드 작업 만들기
 
 Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추가하려면 구성 요소의 이름을 입력합니다.
 
@@ -82,7 +89,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
 
-## 백그라운드 작업 등록 및 시작
+## <a name="register-and-launch-the-background-task"></a>백그라운드 작업 등록 및 시작
 
 앱에서 백그라운드 작업을 사용함을 시스템에 알릴 수 있도록 포그라운드 앱의 Package.appmanifest 파일을 업데이트해야 포그라운드 앱에서 백그라운드 작업을 시작할 수 있습니다.
 
@@ -115,7 +122,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 백그라운드 작업을 등록하기 위해 새 [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) 및 새 [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)를 만듭니다. 나중에 식별할 수 있도록 백그라운드 작업 작성기의 이름을 설정합니다. 매니페스트 파일에서 사용하는 네임스페이스 및 클래스 이름 문자열과 동일하게 [**TaskEntryPoint**](https://msdn.microsoft.com/library/windows/apps/br224774)를 설정합니다. [**Trigger**](https://msdn.microsoft.com/library/windows/apps/dn641725) 속성을 **MediaProcessingTrigger** 인스턴스로 설정합니다.
 
-작업을 등록하기 전에 [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 컬렉션에서 루프 실행하고 [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br224771) 속성에 지정한 이름의 작업에서 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br229870)를 호출하여 이전에 등록한 작업의 등록을 취소하세요.
+작업을 등록하기 전에 [**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787) 컬렉션에서 루프 실행하고 [**BackgroundTaskBuilder.Name**](https://msdn.microsoft.com/library/windows/apps/br229870) 속성에 지정한 이름의 작업에서 [**Unregister**](https://msdn.microsoft.com/library/windows/apps/br224771)를 호출하여 이전에 등록한 작업의 등록을 취소하세요.
 
 [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)를 호출하여 백그라운드 작업을 등록합니다. [**Completed**](https://msdn.microsoft.com/library/windows/apps/br224788) 및 [**Progress**](https://msdn.microsoft.com/library/windows/apps/br224808) 이벤트에 대한 처리기를 등록합니다.
 
@@ -140,10 +147,5 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

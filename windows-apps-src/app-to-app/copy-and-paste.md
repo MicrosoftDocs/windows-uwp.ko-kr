@@ -3,23 +3,30 @@ description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 
 title: "복사 및 붙여넣기"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0dceeb53737cc790e1c3810b0487e0a839968bef
-ms.openlocfilehash: 2655dc67b14ba665deabc879f13340202d97c494
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c9cef41c5c4671d85854f3daf79cb7d6fd51a6f8
+ms.lasthandoff: 02/07/2017
 
 ---
-#복사 및 붙여넣기
+#<a name="copy-and-paste"></a>복사 및 붙여넣기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다.
 
-## 기본 제공 클립보드 지원 확인
+## <a name="check-for-built-in-clipboard-support"></a>기본 제공 클립보드 지원 확인
 
 대부분의 경우에는 클립보드 작업을 지원하는 코드를 작성할 필요가 없습니다. 앱을 만드는 데 사용할 수 있는 많은 기본 XAML 컨트롤이 클립보드 작업을 이미 지원합니다. 
 
-## 설정 방법
+## <a name="get-set-up"></a>설정 방법
 
 먼저 앱에 [**Windows.ApplicationModel.DataTransfer**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer) 네임스페이스를 포함합니다. 그런 후 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체의 인스턴스를 추가합니다. 이 개체에는 사용자가 복사하려는 데이터와 포함할 속성(예: 설명)이 모두 포함되어 있습니다.
 
@@ -30,7 +37,7 @@ DataPackage dataPackage = new DataPackage();
 
 <!-- AuthenticateAsync-->
 
-## 복사 및 잘라내기
+## <a name="copy-and-cut"></a>복사 및 잘라내기
 
 복사 및 잘라내기(*이동*이라고도 함)는 거의 정확히 동일하게 작동합니다. [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation) 속성을 사용하여 수행하려는 작업을 선택합니다.
 
@@ -40,7 +47,7 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-## 끌어서 놓기
+## <a name="drag-and-drop"></a>끌어서 놓기
 
 이제 사용자가 선택한 데이터를 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에 추가할 수 있습니다. **DataPackage** 클래스에서 이 데이터를 지원하는 경우 **DataPackage** 개체에서 해당 방법 중 하나를 사용할 수 있습니다. 텍스트를 추가하는 방법은 다음과 같습니다.
 
@@ -53,7 +60,7 @@ dataPackage.SetText("Hello World!");
 ```cs
 Clipboard.SetContent(dataPackage);
 ```
-## 붙여넣기
+## <a name="paste"></a>붙여넣기
 
 클립보드 내용을 가져오려면 정적 [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent) 메서드를 호출합니다. 이 메서드는 콘텐츠를 포함하는 [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView)를 반환합니다. 이 개체는 콘텐츠가 읽기 전용이라는 점만 제외하고 [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage) 개체와 거의 동일합니다. 이 개체에서 [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats) 또는 [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String)) 메서드를 사용하여 사용 가능한 형식을 식별할 수 있습니다. 그런 다음 해당 [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) 메서드를 호출하여 데이터를 가져올 수 있습니다.
 
@@ -67,7 +74,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 }
 ```
 
-## 클립보드 변경 내용 추적
+## <a name="track-changes-to-the-clipboard"></a>클립보드 변경 내용 추적
 
 복사 및 붙여넣기 명령 외에도, 클립보드 변경 내용을 추적할 수 있습니다. 이 작업을 수행하려면 클립보드의 [**ContentChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.ContentChanged) 이벤트를 처리합니다.
 
@@ -84,7 +91,7 @@ Clipboard.ContentChanged += (s, e) =>
 }
 ```
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 * [앱 간 통신](index.md)
 * [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
@@ -102,10 +109,5 @@ Clipboard.ContentChanged += (s, e) =>
 * [AvailableFormats](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.availableformats.aspx)
 * [포함](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.contains.aspx)
 * [ContentChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.datatransfer.clipboard.contentchanged.aspx)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

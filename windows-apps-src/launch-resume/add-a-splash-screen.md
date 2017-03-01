@@ -3,21 +3,28 @@ author: TylerMSFT
 title: "시작 화면 추가"
 description: "Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다."
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 4d8a00cf7bd151ab97e9abc10a09a3794a0e292f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4b8d8b81b1807681d3aa3c5ed61359a5da64dfac
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작 화면 추가
+# <a name="add-a-splash-screen"></a>시작 화면 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 Microsoft Visual Studio 2015를 사용하여 앱의 시작 화면 이미지와 배경색을 설정합니다.
 
-## Visual Studio 2015에서 시작 화면 이미지와 배경색을 설정합니다.
+## <a name="set-the-splash-screen-image-and-background-color-in-visual-studio-2015"></a>Visual Studio 2015에서 시작 화면 이미지와 배경색을 설정합니다.
 
 
 Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이미지가 프로젝트에 추가되고 시작 화면 이미지로 설정됩니다. 시작 화면의 배경색은 기본적으로 연한 회색으로 설정됩니다. 앱 시작 화면의 기본 이미지 또는 색을 변경하려면 다음 단계를 따르세요.
@@ -38,21 +45,21 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
 4.  UWP 앱에 대해 새로운 시작 화면 이미지를 선택하려면 **크기 조정된 자산** 아래의 **1240x600 px** 레이블 옆에 표시되는 줄임표 단추를 누릅니다. 시작 화면 이미지로 사용하려는 1240x600 픽셀 이미지(.png, .jpg 또는 .jpeg)를 선택합니다.
 
-    **중요** 선택하는 시작 화면 이미지는 1x 배율 인수를 사용하는 620x300 픽셀이어야 합니다. 또한 스플래시 화면을 디자인할 때는 화면 가운데에 표시되고 화면보다 작아야 한다는 것에 주의해야 합니다. Windows Phone 스토어 앱용 시작 화면과 같이 화면을 모두 채우지 않습니다.
+    **중요**  선택하는 시작 화면 이미지는 1x 배율 인수를 사용하는 620x300 픽셀이어야 합니다. 또한 스플래시 화면을 디자인할 때는 화면 가운데에 표시되고 화면보다 작아야 한다는 것에 주의해야 합니다. Windows Phone 스토어 앱용 시작 화면과 같이 화면을 모두 채우지 않습니다.
 
      
 
 5.  Windows Phone 스토어 앱에 대해 새로운 시작 화면 이미지를 선택하려면 **크기 조정된 자산** 아래의 **1152x1920 px** 레이블 옆에 표시되는 줄임표 단추를 누릅니다. 시작 화면 이미지로 사용하려는 1152x1920 픽셀 이미지(.png, .jpg 또는 .jpeg)를 선택합니다.
 
-    **중요** 선택하는 시작 화면 이미지는 2.4배율 인수에 올바른 크기인 1152x1920 픽셀이어야 합니다. 이 자산이 사용자가 제공하는 유일한 자산인 경우, 1.4 및 1배율 인수로 축소됩니다.
+    **중요**  선택하는 시작 화면 이미지는 2.4배율 인수에 올바른 크기인 1152x1920 픽셀이어야 합니다. 이 자산이 사용자가 제공하는 유일한 자산인 경우, 1.4 및 1배율 인수로 축소됩니다.
 
      
 
 6.  **시작 화면** 섹션의 **배경색** 필드에서 시작 화면 이미지와 함께 표시할 배경색을 설정합니다. 색 이름이나 '\#'과 색의 16진수 값을 입력할 수 있습니다. 사용 가능한 색 이름 목록은 [**SplashScreen element**](https://msdn.microsoft.com/library/windows/apps/br211467)를 참조하세요.
 
-    시작 화면의 배경색을 설정하는 것은 선택적인 작업입니다. UWP 앱의 색을 지정하지 않으면 시작 화면 배경색이 기본적으로 연한 회색(16진수 값 \#464646)으로 설정됩니다. 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
+    시작 화면의 배경색을 설정하는 것은 옵션입니다. UWP 앱의 색을 지정하지 않으면 시작 화면 배경색이 기본적으로 연한 회색(16진수 값 \#464646)으로 설정됩니다. 이 색은 기본 **타일** 배경색과 같습니다(**시각적 자산** 탭에 있는 **타일 이미지 및 로고** 섹션의 **배경색** 필드 참조). Windows Phone의 색을 지정하지 않거나 "투명"으로 설정하면 시작 화면 배경색이 투명하게 됩니다.
 
-## 요약 및 다음 단계
+## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
 
 앱을 로드하는 데 시간이 걸리는 경우 연장된 시작 화면을 추가하는 것이 좋습니다. 단계별 지침은 [사용자 지정된 시작 화면 만들기](create-a-customized-splash-screen.md)를 참조하세요.
@@ -62,7 +69,7 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [사용자 지정된 시작 화면 만들기](create-a-customized-splash-screen.md)
 
@@ -74,9 +81,4 @@ Visual Studio 2015 템플릿을 사용하여 앱을 만드는 경우 기본 이�
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

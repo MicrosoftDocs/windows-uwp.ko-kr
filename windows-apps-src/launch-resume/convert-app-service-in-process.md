@@ -2,13 +2,21 @@
 author: TylerMSFT
 title: "앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환"
 description: "별도 백그라운드 프로세스에서 실행된 앱 서비스 코드를 앱 서비스 공급자와 동일한 프로세스 내에서 실행되는 코드로 변환합니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 translationtype: Human Translation
-ms.sourcegitcommit: 7d1c160f8b725cd848bf8357325c6ca284b632ae
-ms.openlocfilehash: 80402d12a51ea970f5927dc50cae587be8809b87
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1fea72237a9ac7d18fb415d5957f959542a833e8
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
+# <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환
 
 [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx)을 사용하면 응용 프로그램이 백그라운드에 있는 앱의 절전 모드를 해제하고 직접 통신 회선을 시작할 수 있습니다.
 
@@ -74,9 +82,4 @@ Out-of-process 모델 앱 서비스를 In-process 모델로 전환하려면 두 
 앱이 요청을 받고 제공된 [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx)를 읽어 `Key` 및 `Value` 문자열이 있는지 확인합니다. 문자열이 있으면 앱 서비스에서 `Response` 및 `True` 문자열 값 쌍을 **AppServiceConnection**의 반대쪽에 있는 앱에 다시 반환합니다.
 
 다른 앱에 연결하고 통신하는 방법에 대한 자세한 내용은 [앱 서비스 만들기 및 사용](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396)을 참조하세요.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

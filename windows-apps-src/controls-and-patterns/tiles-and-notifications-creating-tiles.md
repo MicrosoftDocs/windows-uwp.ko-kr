@@ -5,18 +5,25 @@ title: "타일"
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
-ms.openlocfilehash: 37de1a413ac9b5e74c905c140899ec7577a6fae5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 11640527ffdb6883885345646310e5e4b786ad2b
+ms.lasthandoff: 02/07/2017
 
 ---
-# UWP 앱의 타일
+# <a name="tiles-for-uwp-apps"></a>UWP 앱의 타일
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 *타일*은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에 타일이 있습니다. Microsoft Visual Studio에서 새 UWP(유니버설 Windows 플랫폼) 앱 프로젝트를 만들면 앱 이름 및 로고를 표시하는 기본 타일이 포함됩니다. Windows에서는 앱이 처음 설치될 때 이 타일을 표시합니다. 앱이 설치된 후 알림을 통해 타일 콘텐츠를 변경할 수 있습니다. 예를 들어 뉴스 헤드라인 또는 읽지 않은 가장 최근 메시지의 제목과 같은 새 정보를 사용자에게 전달하기 위해 타일을 변경할 수 있습니다.
 
-## 기본 타일 구성
+## <a name="configure-the-default-tile"></a>기본 타일 구성
 
 
 Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고를 표시하는 간단한 기본 타일이 만들어집니다.
@@ -76,7 +83,7 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
       </Applications>
 ```
 
-## 알림을 사용하여 타일 사용자 지정
+## <a name="use-notifications-to-customize-your-tile"></a>알림을 사용하여 타일 사용자 지정
 
 
 앱이 설치된 후 알림을 사용하여 타일을 사용자 지정할 수 있습니다. 앱이 처음 실행되거나 푸시 알림과 같은 일부 이벤트에 응답할 때 이렇게 할 수 있습니다.
@@ -100,10 +107,5 @@ Visual Studio에서 새 프로젝트를 만든 경우 앱의 이름 및 로고�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

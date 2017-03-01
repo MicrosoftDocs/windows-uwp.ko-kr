@@ -1,15 +1,23 @@
 ---
 author: normesta
-description: "연락처 카드의 작업 옆에 앱을 추가하는 방법을 보여 줍니다."
+description: "연락처 카드의 작업 옆에 앱을 추가하는 방법을 보여줍니다."
 MSHAttr: PreferredLib:/library/windows/apps
 title: "연락처 카드의 작업에 앱 연결"
+ms.author: normesta
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 연락처, 연락처 카드, 주석"
+ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 translationtype: Human Translation
-ms.sourcegitcommit: 5c0f6ef1f1a346a66ca554a415d9f24c8a314ae1
-ms.openlocfilehash: 034dc2b7be69763416192014abe24b9bf924c443
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: da64e23714035b6763104d48430371469272a939
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 연락처 카드의 작업에 앱 연결
+# <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
 연락처 카드 또는 미니 연락처 카드의 작업 옆에 앱을 표시할 수 있습니다. 사용자는 앱을 선택하여 프로필 페이지 열기, 전화 걸기, 메시지 보내기 등의 작업을 수행할 수 있습니다.
 
@@ -19,11 +27,11 @@ ms.openlocfilehash: 034dc2b7be69763416192014abe24b9bf924c443
 
 전체 샘플을 보려면 [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)을 참조하세요.
 
-## 연락처 찾기 또는 만들기
+## <a name="find-or-create-a-contact"></a>연락처 찾기 또는 만들기
 
 앱에서 사람들 간의 연결을 도와주는 경우 Windows에서 연락처를 검색한 다음 주석을 답니다. 앱에서 연락처를 관리하는 경우 Windows 연락처 목록에 추가한 다음 주석을 달 수 있습니다.
 
-### 연락처 찾기
+### <a name="find-a-contact"></a>연락처 찾기
 
 이름, 메일 주소 또는 전화 번호를 사용하여 연락처를 찾습니다.
 
@@ -37,7 +45,7 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 Contact contact = contacts[0];
 ```
 
-### 연락처 만들기
+### <a name="create-a-contact"></a>연락처 만들기
 
 앱이 주소록과 유사한 경우 연락처를 만든 다음 연락처 목록에 추가합니다.
 
@@ -71,7 +79,7 @@ await contactList.SaveContactAsync(contact);
 
 ```
 
-## 주석을 사용하여 각 연락처에 태그 지정
+## <a name="tag-each-contact-with-an-annotation"></a>주석을 사용하여 각 연락처에 태그 지정
 
 앱에서 수행할 수 있는 작업 목록(예: 영상 통화, 메시지)을 사용하여 각 연락처에 태그를 지정합니다.
 
@@ -101,7 +109,7 @@ annotation.SupportedOperations = ContactAnnotationOperations.Message |
 await annotationList.TrySaveAnnotationAsync(annotation);
 ```
 
-## 각 작업 등록
+## <a name="register-for-each-operation"></a>각 작업 등록
 
 패키지 매니페스트에서 주석에 나열한 각 작업을 등록합니다.
 
@@ -135,7 +143,7 @@ Visual Studio 매니페스트 디자이너의 **선언** 탭에서 이러한 처
 
 ![매니페스트 디자이너의 선언 탭](images/manifest-designer-protocols.png)
 
-## 연락처 카드의 작업 옆에서 앱 찾기
+## <a name="find-your-app-next-to-actions-in-a-contact-card"></a>연락처 카드의 작업 옆에서 앱 찾기
 
 피플 앱을 엽니다. 주석 및 패키지 매니페스트에서 지정한 각 작업 옆에 앱이 나타납니다.
 
@@ -143,7 +151,7 @@ Visual Studio 매니페스트 디자이너의 **선언** 탭에서 이러한 처
 
 사용자가 작업에 대해 해당 앱을 선택할 경우 다음에 연락처 카드를 열면 이 작업의 기본 앱으로 표시됩니다.
 
-## 미니 연락처 카드의 작업 옆에서 앱 찾기
+## <a name="find-your-app-next-to-actions-in-a-mini-contact-card"></a>미니 연락처 카드의 작업 옆에서 앱 찾기
 
 미니 연락처 카드에서 작업을 나타내는 탭에 앱이 나타납니다.
 
@@ -174,7 +182,7 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 
 연락처 카드와 마찬가지로 각 탭은 사용자가 앱으로 돌아가기 쉽도록 마지막으로 사용한 앱을 저장합니다.
 
-## 사용자가 연락처 카드에서 앱을 선택할 때 작업 수행
+## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>사용자가 연락처 카드에서 앱을 선택할 때 작업 수행
 
 **App.cs** 파일의 [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) 메서드를 재정의하고 사용자를 앱의 페이지로 이동합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)에서는 이 작업을 수행하는 한 가지 방법을 보여 줍니다.
 
@@ -209,9 +217,4 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 ```
 
 ```args.uri.scheme``` 속성에는 작업 이름이 포함되고 ```args.uri.Query``` 속성에는 사용자 ID가 포함됩니다.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

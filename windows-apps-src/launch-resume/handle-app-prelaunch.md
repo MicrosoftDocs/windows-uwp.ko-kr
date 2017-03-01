@@ -3,23 +3,30 @@ author: TylerMSFT
 title: "앱 사전 실행 처리"
 description: "OnLaunched 메서드를 재정의하고 CoreApplication.EnablePrelaunch(true)를 호출하여 앱 사전 실행을 처리하는 방법을 알아봅니다."
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea9aa37e15dbb6c977b0c0be4f91f77f3879e622
-ms.openlocfilehash: cf7cb9f81207f4f25eb8e78283079df27f83d7dc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6107fe07fc8e98db7d197354246784a31a9c902c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 앱 사전 실행 처리
+# <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
 
-## 소개
+## <a name="introduction"></a>소개
 
 사용 가능한 시스템 리소스를 허용하면 사용자가 가장 자주 사용하는 앱을 백그라운드로 미리 시작하여 데스크톱 디바이스 패밀리 디바이스에서 Windows 스토어 앱의 시작 성능을 향상시킵니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
 
-Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows 10 버전 1511에서는 모든 UWP(유니버설 Windows 플랫폼) 앱이 사전 실행되는 데 적합했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
+Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows 10 버전 1511에서는 모든 UWP(유니버설 Windows 플랫폼) 앱이 사전 실행되는 데 적합했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
 
 앱의 사전 실행 여부는 시스템 리소스에 따라 달라집니다. 시스템에 리소스가 부족하면 앱은 사전 실행되지 않습니다.
 
@@ -27,11 +34,11 @@ Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하
 
 XAML 프로젝트(C#, VB, C++)와 WinJS의 기본 템플릿은 Visual Studio 2015 업데이트 3에서 사전 실행을 수용합니다.
 
-## 사전 실행 및 앱 수명 주기
+## <a name="prelaunch-and-the-app-lifecycle"></a>사전 실행 및 앱 수명 주기
 
 앱이 사전 실행되면 일시 중단 상태가 됩니다. ([앱 일시 중단 처리](suspend-an-app.md)를 참조하세요.)
 
-## 사전 실행 감지 및 처리
+## <a name="detect-and-handle-prelaunch"></a>사전 실행 감지 및 처리
 
 앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 수신합니다. 이 플래그를 사용하여 다음 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)의 발췌에 표시된 대로 사용자가 명시적으로 앱을 시작할 때에만 실행해야 하는 코드를 실행합니다.
 
@@ -76,9 +83,9 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**팁** Windows 10 1607 이전 버전을 대상으로 사전 실행을 옵트아웃(opt-out)하려면 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 확인합니다. 이 플래그가 설정되어 있으면 프레임을 만들거나 창을 활성화하는 작업을 수행하기 전에 OnLaunched()에서 반환합니다.
+**팁** Windows 10 1607 이전 버전을 대상으로 사전 실행을 옵트아웃하려면 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740) 플래그를 확인합니다. 이 플래그가 설정되어 있으면 프레임을 만들거나 창을 활성화하는 작업을 수행하기 전에 OnLaunched()에서 반환합니다.
 
-## VisibilityChanged 이벤트 사용
+## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 
 사전 실행으로 활성화된 앱이 사용자에게 표시되지 않습니다. 사용자가 전환할 때 표시됩니다. 앱의 주 창이 표시될 때까지 특정 작업을 지연시킬 수 있습니다. 예를 들어 앱이 피드에서 새 항목 목록을 표시하면 앱이 사전 실행되었을 때 작성되어 사용자가 앱을 활성화하는 시점까지 상태가 오래될 수 있기 때문에 목록을 사용하는 대신 [**VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458) 이벤트가 발생하는 동안 목록을 업데이트할 수 있습니다. 다음 코드는 **MainPage**의 **VisibilityChanged** 이벤트를 처리합니다.
 
@@ -100,9 +107,9 @@ public sealed partial class MainPage : Page
 }
 ```
 
-## DirectX 게임 지침
+## <a name="directx-games-guidance"></a>DirectX 게임 지침
 
-많은 DirectX 게임이 사전 실행을 검색하기 전에 초기화를 수행하므로 DirectX 게임은 일반적으로 사전 실행을 사용하지 않아야 합니다. Windows 1607 1주년 버전부터 게임은 기본적으로 사전 실행되지 않습니다.  게임에 사전 실행을 활용하려면 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출합니다.
+많은 DirectX 게임이 사전 실행을 검색하기 전에 초기화를 수행하므로 DirectX 게임은 일반적으로 사전 실행을 사용하지 않아야 합니다. Windows 1607 1주년 버전부터 게임은 기본적으로 사전 실행되지 않습니다.  게임에 사전 실행을 활용하려면 [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)를 호출합니다.
 
 게임이 Windows 10의 이전 버전을 대상으로 하는 경우 사전 실행 조건을 처리하여 응용 프로그램을 종료할 수 있습니다.
 
@@ -122,9 +129,9 @@ void ViewProvider::OnActivated(CoreApplicationView^ appView,IActivatedEventArgs^
 }
 ```
 
-## WinJS 앱 지침
+## <a name="winjs-app-guidance"></a>WinJS 앱 지침
 
-WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactivated](https://msdn.microsoft.com/en-us/library/windows/apps/br212679.aspx) 처리기에서 사전 실행 조건을 처리할 수 있습니다.
+WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactivated](https://msdn.microsoft.com/library/windows/apps/br212679.aspx) 처리기에서 사전 실행 조건을 처리할 수 있습니다.
 
 ```js
     app.onactivated = function (args) {
@@ -137,7 +144,7 @@ WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactiva
     }
 ```
 
-## 일반 지침
+## <a name="general-guidance"></a>일반 지침
 
 -   앱이 신속하게 일시 중단 상태가 되지 못하면 앱이 종료되므로 사전 실행 동안에는 장기 실행 작업을 수행하면 안 됩니다.
 -   앱이 표시되지 않고 오디오 재생의 이유가 명확하지 않으므로 앱을 사전 실행할 때 앱이 [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)의 오디오 재생을 시작하면 안 됩니다.
@@ -149,13 +156,8 @@ WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactiva
 -   앱에 대한 원격 분석으로 일반적인 타일 활성화와 사전 실행된 활성화를 구별하여 문제 발생 시 시나리오의 범위를 쉽게 좁힐 수 있습니다.
 -   Microsoft Visual Studio 2015 업데이트 1 및 Windows 10, 버전 1511을 사용하는 경우 **디버그** &gt; **기타 디버그 대상** &gt; **Debug Windows Universal App PreLaunch**(Windows 유니버설 앱 사전 실행 디버그)를 선택하여 Visual Studio 2015에서 앱에 대한 사전 실행을 시뮬레이트할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
-* [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
-
-
-
-<!--HONumber=Aug16_HO4-->
-
+* [CoreApplication.EnablePrelaunch](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx)
 

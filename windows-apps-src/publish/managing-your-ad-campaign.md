@@ -3,13 +3,20 @@ author: jnHs
 Description: "앱의 광고 캠페인을 관리하려면 Windows 개발자 센터 대시보드의 앱 페이지에서 수익 창출 &gt; 앱 홍보를 클릭합니다."
 title: "광고 캠페인 관리"
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 71fb1e13c3db45043b312d24ea739ae68751dfb0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b73b8c1ac467bce3d1edcec3582d247e7a90bd29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 광고 캠페인 관리
+# <a name="managing-your-ad-campaign"></a>광고 캠페인 관리
 
 
 앱의 광고 캠페인을 관리하려면 Windows 개발자 센터 대시보드의 앱 페이지에서 **수익 창출** &gt; **앱 홍보**를 클릭합니다. **앱 홍보** 페이지에는 앱과 연결된 모든 광고 캠페인이 나열되고 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [앱 설치 광고 보고서](app-install-ads-reports.md)에서 이러한 용어에 대한 정의를 참조하세요.
@@ -24,17 +31,17 @@ ms.openlocfilehash: 71fb1e13c3db45043b312d24ea739ae68751dfb0
     -   **주의 필요**는 광고 캠페인에 청구 실패 또는 사용자 지정 광고 디자인의 유효성 검사 실패 등 주의가 필요한 문제가 있음을 나타냅니다. 문제를 수정하려면 광고 캠페인 테이블의 **작업** 열에서 텍스트를 클릭합니다.
 -   **캠페인 종류**: 유료 또는 [하우스](about-house-ads.md) 광고 캠페인을 표시할지 여부를 지정합니다.
 
-## 보고서
+## <a name="report"></a>보고서
 
 
 광고 캠페인을 수행하는 방법을 보려면 대시보드의 탐색 창에서 **분석** &gt; **앱 설치 광고**를 클릭합니다. 이 보고서에 대한 자세한 내용은 [앱 설치 광고 보고서](app-install-ads-reports.md)를 참조하세요.
 
-## 광고 캠페인 편집
+## <a name="edit-an-ad-campaign"></a>광고 캠페인 편집
 
 
 광고 캠페인을 변경하려면 해당 이름을 클릭하여 광고 캠페인의 세부 정보 페이지로 이동합니다. 변경한 후 **검토**를 클릭하고, 세부 정보를 검토한 다음 **확인**을 클릭합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
@@ -47,10 +54,5 @@ ms.openlocfilehash: 71fb1e13c3db45043b312d24ea739ae68751dfb0
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

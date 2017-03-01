@@ -1,11 +1,18 @@
 ---
 author: TylerMSFT
 title: "예약된 파일 및 URI 체계 이름"
-description: "이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다."
+description: "이 항목에는 앱에 사용할 수 없는 예약된 파일 및 URI 스키마 이름이 나열됩니다."
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6f46f5973b9c18ffd7c38bd27cee0a0a21be50e5
-ms.openlocfilehash: c514ae4831f21b4c471b0445b3cf54a6a08ff92a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a0c0b2cee4512bdd6dd888aceae53eec061dac72
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>예약된 파일 및 URI 체계 이름
@@ -115,9 +122,4 @@ URI 연결을 사용하여 다른 앱이 특정 URI 체계를 시작할 때 자�
 <tr><td>inffile</td><td>ms-settings:network-dialup</td><td>scrfile</td><td></td></tr>
 <tr><td>insfile</td><td>ms-settings:network-ethernet</td><td>scriptletfile</td><td></td></tr>
 </table>
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

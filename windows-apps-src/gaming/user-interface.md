@@ -3,27 +3,34 @@ author: mtoepke
 title: "DirectX 게임 프로젝트 템플릿"
 description: "UWP(유니버설 Windows 플랫폼) 및 DirectX 게임을 만드는 템플릿에 대해 알아봅니다."
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx, 템플릿"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1e91814825a0944f9a70fdc7bbc6e8ef78215f29
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b25dcd0de8d82e8bf8b6bf651ac6c264ade48c9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DirectX 게임 프로젝트 템플릿
+# <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 DirectX 및 UWP(유니버설 Windows 플랫폼) 템플릿을 사용하여 게임의 시작 지점으로 프로젝트를 신속하게 만들 수 있습니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 프로젝트를 만들려면 다음을 수행해야 합니다.
 
 -   [Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions)를 다운로드합니다 Visual Studio 2015에는 그래픽 프로그래밍을 위한 도구(예: 디버깅 도구)가 포함되어 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
 
-## 템플릿 선택
+## <a name="choosing-a-template"></a>템플릿 선택
 
 
 Visual Studio 2015에는 다음 세 가지 DirectX 및 UWP 템플릿이 포함되어 있습니다.
@@ -34,7 +41,7 @@ Visual Studio 2015에는 다음 세 가지 DirectX 및 UWP 템플릿이 포함�
 
 어떤 템플릿을 선택할지는 성능과 사용하려는 기술에 따라 다릅니다.
 
-## 템플릿 구조
+## <a name="template-structure"></a>템플릿 구조
 
 
 DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
@@ -60,7 +67,7 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
     -   d3dx12.h - D3DX12 유틸리티 라이브러리를 포함합니다. 이 파일은 DirectX 12 앱(유니버설 Windows)에만 표시됩니다.
 -   자산 - 응용 프로그램에서 사용되는 로고 및 시작 화면 이미지
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 시작점이 있으므로 여기에 추가하여 게임 개발 지식과 Windows 스토어 게임 개발 기술을 쌓으세요.
@@ -86,10 +93,5 @@ DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

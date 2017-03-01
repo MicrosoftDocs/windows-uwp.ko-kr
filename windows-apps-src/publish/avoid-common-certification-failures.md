@@ -3,18 +3,25 @@ author: jnHs
 Description: "이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요."
 title: "일반적인 인증 실패 방지"
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7de2083b2a29baed5a0e6baf0a1e4c4c2f71c9e4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f8b61d14b46614680b84da5aa7e4413159a0cfb1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 일반적인 인증 실패 방지
+# <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
 
 이 목록을 검토하여 빈번하게 앱이 인증되지 않도록 하거나, 앱이 게시된 후 임의 추출 검사 중 식별할 수 있는 문제를 방지하세요.
 
-> **참고** [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 검토하여 앱이 해당 정책에 나열된 모든 요구 사항을 충족하는지 확인해야 합니다.
+> **참고**  [Windows 스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944)을 검토하여 앱이 해당 정책에 나열된 모든 요구 사항을 충족하는지 확인해야 합니다.
 
  
 
@@ -41,10 +48,5 @@ ms.openlocfilehash: 7de2083b2a29baed5a0e6baf0a1e4c4c2f71c9e4
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

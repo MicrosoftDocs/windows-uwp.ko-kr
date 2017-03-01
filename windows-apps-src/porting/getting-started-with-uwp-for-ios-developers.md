@@ -3,13 +3,20 @@ author: mcleblanc
 description: "iOS 개발자용 UWP 시작"
 title: "iOS 개발자용 UWP 시작"
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14f93a3cc8f5ada23f95a503acd2703044defe61
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b1d7259d16ba963d19c7656ff2572fa659a1710
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# iOS 개발자용 UWP 시작
+# <a name="getting-started-with-uwp-for-ios-developers"></a>iOS 개발자용 UWP 시작
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -21,7 +28,7 @@ Windows 10에서는 데스크톱, 랩톱, 태블릿 및 휴대폰 장치 등에�
 
 앱을 포팅하지만 말고 **reimagine**하여 새로운 기능 및 새 장치를 활용하는 것이 좋습니다. 비슷한 기능에 안주하지 말고 라이브 타일, 알림, Cortana와의 상호 작용 등 고유한 Windows 10 기능을 사용하는 풍부한 환경을 만들어 보세요.
 
-연습을 시작하려면 컴퓨터에 Windows 10과 Microsoft Visual Studio가 둘 다 설치되어 있어야 합니다. 이러한 프로그램은 [Windows 스토어 앱 프로그래밍을 위한 개발자 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=302144)에서 다운로드할 수 있습니다. PC가 없는 경우 걱정하지 마세요. Mac을 사용할 수 있습니다. [Mac에 Windows 및 개발 도구 설치](setting-up-your-mac-with-windows-10.md)를 참조하세요.
+연습을 시작하려면 컴퓨터에 Windows 10과 Microsoft Visual Studio가 둘 다 설치되어 있어야 합니다. 이러한 프로그램은 [Windows 스토어 앱 프로그래밍을 위한 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads)에서 다운로드할 수 있습니다. PC가 없는 경우 걱정하지 마세요. Mac을 사용할 수 있습니다. [Mac에 Windows 및 개발 도구 설치](setting-up-your-mac-with-windows-10.md)를 참조하세요.
 
 | 항목 | 설명 |
 |-------|-------------|
@@ -39,9 +46,4 @@ Windows 10에서는 데스크톱, 랩톱, 태블릿 및 휴대폰 장치 등에�
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

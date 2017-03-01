@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: "선택기를 사용하여 파일 저장"
 description: "사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 FileSavePicker를 사용합니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 46f79b34762eeb3424b887662418105e2e8a3ec2
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -22,7 +29,7 @@ ms.openlocfilehash: ae6a9806e982a866834371a60788f7a788b04e47
 
 사용자가 앱에서 파일을 저장할 이름과 위치를 지정할 수 있도록 하려면 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다.
 
-> **참고** [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)도 참조하세요.
+> **참고**  [파일 선택기 샘플](http://go.microsoft.com/fwlink/p/?linkid=619994)도 참조하세요.
 
  
 
@@ -58,14 +65,14 @@ savePicker.SuggestedFileName = "New Document";
 
 이 예제에서는 세 가지 속성 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) 및 [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878)을 설정합니다.
 
-> **참고** [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 개체는 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891)를 사용하여 파일 선택기를 표시합니다.
+> **참고**  [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) 개체는 [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891)를 사용하여 파일 선택기를 표시합니다.
 
      
-- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+- 사용자가 문서나 텍스트 파일을 저장하고 있으므로 이 샘플에서는 [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br207880)를 사용하여 [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br241621)를 앱의 로컬 폴더로 설정합니다. [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854)을 저장하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
 - 파일이 저장된 후 앱에서 파일을 열 수 있는지 확인하려고 하므로 [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875)를 사용하여 샘플에서 지원하는 파일 형식(Microsoft Word 문서 및 텍스트 파일)을 지정합니다. 지정하는 모든 파일 형식이 앱에서 지원되는지 확인합니다. 사용자는 자신의 파일을 지정한 파일 형식으로 저장할 수 있습니다. 또한 지정된 다른 파일 형식을 선택하여 파일 형식을 변경할 수 있습니다. 목록에서 첫 번째 파일 형식 항목은 기본적으로 선택됩니다. 이를 제어하려면 [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873) 속성을 설정합니다.
 
-> **참고** 파일 선택기는 현재 선택된 파일 형식을 사용하여 표시되는 파일을 필터링하기도 하므로 선택한 파일 형식과 일치하는 파일 형식만 사용자에게 표시됩니다.
+> **참고**  파일 선택기는 현재 선택된 파일 형식을 사용하여 표시되는 파일을 필터링하기도 하므로 선택한 파일 형식과 일치하는 파일 형식만 사용자에게 표시됩니다.
 
 - 사용자 입력을 저장하기 위해 예제에서는 [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878)을 설정합니다. 제안된 파일 이름을 저장하려는 파일과 연관되게 만듭니다. 예를 들어, Word처럼, 사용자가 이름이 아직 지정되지 않은 파일을 저장하려 하면 문서의 첫 줄을 이름으로 제안하거나 이름이 있으면 기존 파일 이름을 제안할 수 있습니다.
 
@@ -104,16 +111,11 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 예제에서는 파일이 유효한지 확인하고 자체 파일 이름을 씁니다. [파일 만들기, 쓰기 및 읽기](quickstart-reading-and-writing-files.md)도 참조하세요.
 
-**팁** 다른 처리를 수행하기 전에 항상 저장된 파일을 검사하여 유효한지 확인해야 합니다. 그런 다음 파일을 앱에 맞게 저장하고 선택한 파일이 잘못된 경우 적절한 동작을 제공할 수 있습니다.
+**팁**  다른 처리를 수행하기 전에 항상 저장된 파일을 검사하여 유효한지 확인해야 합니다. 그런 다음 파일을 앱에 맞게 저장하고 선택한 파일이 잘못된 경우 적절한 동작을 제공할 수 있습니다.
 
      
 
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

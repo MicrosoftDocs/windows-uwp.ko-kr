@@ -3,20 +3,27 @@ author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: "이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다."
 title: "카메라 프레임 분석 효과"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c7f46130feac43211bccf57191d940acb8198965
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 카메라 프레임 분석 효과
+# <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) 및 [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
 
-## 장면 분석 효과
+## <a name="scene-analysis-effect"></a>장면 분석 효과
 
 [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)는 미디어 캡처 미리 보기 스트림의 비디오 프레임을 분석하고 캡처 결과를 개선하는 처리 옵션을 권장합니다. 현재 효과는 HDR(High Dynamic Range) 처리를 사용하여 캡처를 향상할 수 있는지 여부를 감지할 수 있도록 지원합니다.
 
@@ -28,13 +35,13 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 -   [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573)을 사용하여 프레임 시퀀스를 캡처하며 그런 다음 사용자 지정 HDR 구현을 사용하여 복합적으로 구성할 수 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
 
-### 장면 분석 네임스페이스
+### <a name="scene-analysis-namespaces"></a>장면 분석 네임스페이스
 
 장면 분석을 사용하려면 앱에 기본적인 미디어 캡처에 필요한 네임스페이스 외에도 다음 네임스페이스가 있어야 합니다.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### 장면 분석 효과를 초기화하고 미리 보기 스트림에 추가
+### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>장면 분석 효과를 초기화하고 미리 보기 스트림에 추가
 
 비디오 효과는 두 개의 API, 효과 정의(캡처 장치가 효과를 초기화하는 데 필요한 설정을 제공함), 효과 인스턴스(효과를 제어하는 데 사용할 수 있음)를 사용하여 구현됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스해야 할 수도 있으므로, 일반적으로 개체를 보유하도록 멤버 변수를 선언해야 합니다.
 
@@ -50,7 +57,7 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 [!code-cs[CreateSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateSceneAnalysisEffectAsync)]
 
-### SceneAnalyzed 이벤트 처리기 구현
+### <a name="implement-the-sceneanalyzed-event-handler"></a>SceneAnalyzed 이벤트 처리기 구현
 
 장면 분석의 결과는 **SceneAnalyzed** 이벤트 처리기에 반환됩니다. 처리기에 전달된 [**SceneAnalyzedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948922) 개체에는 [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) 개체가 포함된 [**SceneAnalysisEffectFrame**](https://msdn.microsoft.com/library/windows/apps/dn948907) 개체가 있습니다. High Dynamic Range 출력의 [**Certainty**](https://msdn.microsoft.com/library/windows/apps/dn948833) 속성은 0과 1.0 사이의 값을 제공합니다(0은 HDR 처리가 캡처 결과 개선에 도움이 되지 않음을 나타내고 1.0은 HDR 처리가 도움이 된다는 것을 나타냄). HDR을 사용하거나 결과를 사용자에게 표시하고 사용자가 결정하도록 할 임계값 포인트를 결정할 수 있습니다.
 
@@ -58,23 +65,23 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 처리기에 전달된 [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) 개체에는 HDR 처리를 위해 가변 사진 시퀀스를 캡처하는 데 권장되는 프레임 컨트롤러가 포함된 [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834) 속성도 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
 
-### 장면 분석 효과 정리
+### <a name="clean-up-the-scene-analysis-effect"></a>장면 분석 효과 정리
 
 앱이 캡처를 완료하면 **MediaCapture** 개체를 처분하기 전에 먼저 효과의 [**HighDynamicRangeAnalyzer.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827) 속성을 false로 설정하고 [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920) 이벤트 처리기를 등록 취소하여 장면 분석 효과를 사용하지 않도록 설정해야 합니다. [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)를 호출하고 효과가 추가된 비디오 미리 보기 스트림을 지정합니다. 마지막으로, 멤버 변수를 null로 설정합니다.
 
 [!code-cs[CleanUpSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpSceneAnalysisEffectAsync)]
 
-## 얼굴 감지 효과
+## <a name="face-detection-effect"></a>얼굴 감지 효과
 
 [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)는 미디어 캡처 미리 보기 스트림 내에서 얼굴의 위치를 식별합니다. 이 효과는 미리 보기 스트림에서 얼굴이 감지될 때마다 알림을 받을 수 있게 하며 미리 보기 프레임 내에서 감지된 각 얼굴에 대해 경계 상자를 제공합니다. 지원되는 장치에서 얼굴 감지 효과를 사용하면 장면에서 가장 중요한 얼굴에 대한 노출과 포커스가 향상됩니다.
 
-### 얼굴 감지 네임스페이스
+### <a name="face-detection-namespaces"></a>얼굴 감지 네임스페이스
 
 얼굴 감지를 사용하려면 앱에 기본적인 미디어 캡처에 필요한 네임스페이스 외에도 다음 네임스페이스가 있어야 합니다.
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### 얼굴 감지 효과를 초기화하고 미리 보기 스트림에 추가
+### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>얼굴 감지 효과를 초기화하고 미리 보기 스트림에 추가
 
 비디오 효과는 두 개의 API, 효과 정의(캡처 장치가 효과를 초기화하는 데 필요한 설정을 제공함), 효과 인스턴스(효과를 제어하는 데 사용할 수 있음)를 사용하여 구현됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스해야 할 수도 있으므로, 일반적으로 개체를 보유하도록 멤버 변수를 선언해야 합니다.
 
@@ -88,7 +95,7 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 [!code-cs[CreateFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFaceDetectionEffectAsync)]
 
-### 얼굴이 감지되면 알림 수신
+### <a name="receive-notifications-when-faces-are-detected"></a>얼굴이 감지되면 알림 수신
 
 얼굴 감지 시 비디오 미리 보기에서 감지된 얼굴 주변에 상자를 그리는 것과 같은 일부 작업이 수행되도록 하려면 [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820) 이벤트에 대해 등록할 수 있습니다.
 
@@ -98,19 +105,19 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
-### 얼굴 감지 효과 정리
+### <a name="clean-up-the-face-detection-effect"></a>얼굴 감지 효과 정리
 
 앱이 캡처를 완료하면 **MediaCapture** 개체를 처분하기 전에 먼저 효과의 [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818)를 사용하여 얼굴 감지 효과를 사용하지 않도록 설정하고 이전에 등록해 둔 [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820) 이벤트 처리기를 등록 취소해야 합니다. [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)를 호출하고 효과가 추가된 비디오 미리 보기 스트림을 지정합니다. 마지막으로, 멤버 변수를 null로 설정합니다.
 
 [!code-cs[CleanUpFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpFaceDetectionEffectAsync)]
 
-### 감지된 얼굴에 대한 포커스 및 노출 지원 확인
+### <a name="check-for-focus-and-exposure-support-for-detected-faces"></a>감지된 얼굴에 대한 포커스 및 노출 지원 확인
 
 일부 장치에는 감지된 얼굴을 기반으로 포커스 및 노출을 조정할 수 있는 캡처 장치가 없습니다. 얼굴 감지에는 장치 리소스가 사용되기 때문에, 이 기능을 사용하여 캡처를 향상할 수 있는 장치에서만 얼굴 감지를 사용하도록 설정해야 할 수 있습니다. 얼굴 기반 캡처 최적화를 사용할 수 있는지 여부를 알아보려면 초기화된 [MediaCapture](capture-photos-and-video-with-mediacapture.md)에 대한 [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)를 가져온 다음 비디오 디바이스 컨트롤러의 [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064)을 가져옵니다. [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069)가 하나 이상의 영역을 지원하는지 확인합니다. 그런 다음, [**AutoExposureSupported**](https://msdn.microsoft.com/library/windows/apps/dn279065) 또는 [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066)가 true인지 여부를 확인합니다. 이러한 조건이 충족되는 경우 디바이스는 얼굴 감지를 활용하여 캡처를 향상할 수 있습니다.
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
@@ -120,10 +127,5 @@ ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -1,22 +1,29 @@
 ---
 author: msatranjr
 title: "Windows 런타임 형식의 .NET Framework 매핑"
-description: "다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다."
+description: "다음 표에는 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 간에 .NET Framework가 수행하는 매핑이 나열되어 있습니다."
 ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 1367664cc4278bb555764cbfdf13ce6653f94920
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ab2c2307376f3fad8cd404f7ddf8056f1ef2e8d3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 런타임 형식의 .NET Framework 매핑
+# <a name="net-framework-mappings-of-windows-runtime-types"></a>Windows 런타임 형식의 .NET Framework 매핑
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 다음 표에 UWP(유니버설 Windows 플랫폼) 형식과 .NET Framework 형식 사이에서 .NET Framework가 만드는 매핑을 나열합니다. 관리 코드로 작성된 유니버설 Windows 앱에서 IntelliSense는 UWP 형식 대신 .NET Framework 형식을 보여 줍니다. 예를 들어 Windows 런타임 메서드가 IVector&lt;string&gt; 형식의 매개 변수를 사용하는 경우 IntelliSense가 IList&lt;string&gt; 형식의 매개 변수를 표시합니다. 마찬가지로 관리 코드로 작성한 Windows 런타임 구성 요소에서 멤버 서명에 .NET Framework 형식을 사용합니다. [Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)](https://msdn.microsoft.com/library/hh925576.aspx)가 Windows 런타임 구성 요소를 생성할 때 .NET Framework 형식은 해당하는 UWP 형식이 됩니다.
 
-## 매핑 표
+## <a name="mapping-tables"></a>매핑 표
 
 
 UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일한 대부분의 형식은 구조(또는 열거 등의 구조와 관련된 형식)입니다. UWP에서 구조에는 필드 외에 다른 멤버가 없기 때문에 .NET Framework가 숨기고 있는 도우미 형식이 필요합니다. 이러한 구조의 .NET Framework 버전에는 숨겨진 도우미 형식의 기능을 제공하는 속성 및 메서드가 있습니다.
@@ -80,12 +87,7 @@ UWP와 .NET Framework에서 네임스페이스 이름과 형식 이름이 동일
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [C# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

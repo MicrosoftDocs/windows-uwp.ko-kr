@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: "파일 및 폴더 열거 및 쿼리"
 description: "폴더, 라이브러리, 디바이스 또는 네트워크 위치에 있는 파일 및 폴더에 액세스합니다. 파일 및 폴더 쿼리를 작성하여 위치에 있는 파일 및 폴더를 쿼리할 수도 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6822bb63ac99efdcdd0e71c4445883f4df5f471d
-ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: def5e4e75f4208eb91f129160807728e57322064
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
@@ -18,7 +25,7 @@ ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 유니버설 Windows 플랫폼 앱의 데이터를 저장하는 방법에 대한 자세한 내용은 [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) 클래스를 참조하세요.
 
-**참고** [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
+**참고**  [폴더 열거 샘플](http://go.microsoft.com/fwlink/p/?linkid=619993)도 참조하세요.
 
  
 ## <a name="prerequisites"></a>필수 조건
@@ -33,7 +40,7 @@ ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 ## <a name="enumerate-files-and-folders-in-a-location"></a>위치에 있는 파일 및 폴더 열거
 
-> **참고** **picturesLibrary** 기능을 선언해야 합니다.
+> **참고**  **picturesLibrary** 기능을 선언해야 합니다.
 
 이 예제에서는 먼저 [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276) 메서드를 사용하여 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일을 가져오고 각 파일의 이름을 나열합니다. 그런 다음 [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280) 메서드를 사용하여 **PicturesLibrary**의 모든 하위 폴더를 가져오고 각 하위 폴더의 이름을 나열합니다.
 
@@ -138,7 +145,7 @@ ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 > ```
 
 
-> **참고** C# 또는 Visual Basic에서 **await** 연산자를 사용하는 메서드의 메서드 선언에 **async** 키워드를 넣어야 합니다.
+> **참고**  C# 또는 Visual Basic에서 **await** 연산자를 사용하는 메서드의 메서드 선언에 **async** 키워드를 넣어야 합니다.
  
 
 또는 [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286) 메서드를 사용하여 특정 위치에 있는 모든 항목(파일과 하위 폴더)을 가져올 수 있습니다. 다음 예제에서는 **GetItemsAsync** 메서드를 사용하여 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)의 루트 폴더(하위 폴더가 아님)에 있는 모든 파일과 하위 폴더를 가져옵니다. 그런 다음 각 파일 및 하위 폴더의 이름을 나열합니다. 항목이 하위 폴더인 경우 이름에 `"folder"`를 추가합니다.
@@ -214,7 +221,7 @@ ms.openlocfilehash: 80c9a2f37b7744d983f3f742895e9ac2408850df
 
 다음 예제에서는 월별로 그룹화된 [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262)를 호출하고 [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066) 개체가 제공됩니다.
 
-그런 다음 가상 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
+그런 다음 가상 폴더를 나타내는 [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br208074) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227230)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -323,9 +330,4 @@ July ‎2015 (2)
    MyImage1.png
    MyImage2.png
 ```
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

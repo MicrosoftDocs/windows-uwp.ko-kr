@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: c0450f7b-5c81-4d8c-92ef-2b1190d18af7
 description: "AdControl 클래스를 사용하여 Windows Phone 8.1 또는 Windows Phone 8.0용 Silverlight 앱에서 배너 광고를 표시하는 방법을 알아봅니다."
 title: "Windows Phone Silverlight의 AdControl"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 광고, AdControl, Silverlight, Windows Phone"
 translationtype: Human Translation
-ms.sourcegitcommit: f88a71491e185aec84a86248c44e1200a65ff179
-ms.openlocfilehash: f4b519b56e8f656f75405a946c646e9f7b89ba99
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1f4606f5bb5446d8749f80e2bf4772a0b6db48b3
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -128,9 +135,4 @@ ms.openlocfilehash: f4b519b56e8f656f75405a946c646e9f7b89ba99
 
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

@@ -3,19 +3,26 @@ author: jnHs
 Description: "Windows 개발자 센터 대시보드에서 새 추가 기능을 만드는 경우 제품 유형을 지정하고 제품 ID를 할당해야 합니다."
 title: "추가 기능 제품 유형 및 제품 ID 설정"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
-ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: abd6c27367476e5f1da11cde14b7d7f08105ad3e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 추가 기능 제품 유형 및 제품 ID 설정
+# <a name="set-your-add-on-product-type-and-product-id"></a>추가 기능 제품 유형 및 제품 ID 설정
 
 아직 앱을 제출하지 않았더라도 이미 대시보드에서 만든 앱과 추가 기능을 연결해야 합니다. 앱의 **개요** 페이지나 **추가 기능** 페이지에서 **새 추가 기능 만들기** 단추를 찾을 수 있습니다.
 
 단추를 클릭하면 **새 추가 기능 만들기** 페이지가 표시됩니다. 여기에서 제품 유형을 지정하고 제품 ID를 할당해야 합니다.
 
-## 제품 유형
+## <a name="product-type"></a>제품 유형
 
 먼저 제공할 추가 기능 유형을 표시해야 합니다. 이 선택은 고객이 추가 기능을 사용하는 방법을 나타냅니다.
 
@@ -30,7 +37,7 @@ ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
 
 제품을 한 번만 구매할 수 있는 경우 **지속형**을 선택합니다. 지속형 추가 기능은 일반적으로 앱에서 추가 기능을 잠금 해제하는 데 사용됩니다. 지속형 추가 기능은 소비되지 않지만 1~365일 옵션으로 정해진 기간 후에 만료되도록 **제품 수명**을 설정할 수 있습니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 추가 기능 제출 프로세스의 [추가 기능 속성](enter-add-on-properties.md) 단계에서 제품 수명을 다른 기간으로 변경할 수 있습니다.
 
-## 제품 ID
+## <a name="product-id"></a>제품 ID
 
 추가 기능에 대한 고유한 제품 ID를 입력합니다. 이는 [추가 기능을 호출하기 위해 앱 코드](https://msdn.microsoft.com/library/windows/apps/mt219684)에서 참조해야 하는 것과 동일한 식별자입니다.
 
@@ -46,10 +53,5 @@ ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

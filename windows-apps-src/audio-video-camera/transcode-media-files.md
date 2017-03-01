@@ -1,15 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
-description: "동영상 파일을 한 형식에서 다른 형식으로 코드 변환하려면 Windows.Media.Transcoding API를 사용할 수 있습니다."
+description: "Windows.Media.Transcoding API를 사용하여 동영상 파일을 한 형식에서 다른 형식으로 코드 변환할 수 있습니다."
 title: "미디어 파일 코드 변환"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bcf9532f65b9f0574942d1fb4dd23f5a63613ec9
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 미디어 파일 코드 변환
+# <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,19 +25,19 @@ ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
 
 *코드 변환*은 동영상 또는 오디오 파일과 같은 디지털 미디어 파일을 한 형식에서 다른 형식으로 변환하는 작업입니다. 이 작업은 일반적으로 파일을 디코드한 후 다시 인코드하여 수행됩니다. 예를 들어 MP4 형식을 지원하는 휴대용 디바이스에서 재생할 수 있도록 Windows Media 파일을 MP4로 변환할 수 있습니다. 또는 HD 동영상 파일을 저해상도로 변환할 수 있습니다. 이 경우 다시 인코딩된 파일은 원본 파일과 동일한 코덱을 사용할 수 있지만 다른 인코딩 프로필을 갖게 됩니다.
 
-## 코드 변환에 대한 프로젝트 설정
+## <a name="set-up-your-project-for-transcoding"></a>코드 변환에 대한 프로젝트 설정
 
 기본 프로젝트 템플릿이 참조하는 네임스페이스 외에도, 이 문서에서 제공되는 코드를 사용하여 미디어 파일의 코드를 변환하려면 이러한 네임스페이스를 참조해야 합니다.
 
 [!code-cs[사용](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
 
-## 원본 파일 및 대상 파일 선택
+## <a name="select-source-and-destination-files"></a>원본 파일 및 대상 파일 선택
 
 앱이 코드 변환을 위해 원본 파일 및 대상 파일을 결정하는 방법은 구현에 따라 다릅니다. 이 예제에서는 사용자가 원본 파일 및 대상 파일을 선택할 수 있도록 만들기 위해 [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) 및 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용합니다.
 
 [!code-cs[TranscodeGetFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeGetFile)]
 
-## 미디어 인코딩 프로필 만들기
+## <a name="create-a-media-encoding-profile"></a>미디어 인코딩 프로필 만들기
 
 인코딩 프로필에는 대상 파일의 인코드 방법을 결정하는 설정이 포함되어 있습니다. 파일을 코드 변환하는 경우 여기서 가장 많은 옵션을 사용할 수 있습니다.
 
@@ -54,13 +61,13 @@ ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
 
 또는 [**MediaEncodingProfile.CreateFromFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701047) 메서드를 사용하여 기존 미디어 파일과 일치하는 프로필을 만들 수 있습니다. 또는 원하는 인코딩 설정을 정확하게 알고 있는 경우 새 [**MediaEncodingProfile**](https://msdn.microsoft.com/library/windows/apps/hh701026) 개체를 만들고 프로필 세부 정보를 채울 수 있습니다.
 
-## 파일 코드 변환
+## <a name="transcode-the-file"></a>파일 코드 변환
 
 파일을 트랜스코딩하려면 새 [**MediaTranscoder**](https://msdn.microsoft.com/library/windows/apps/br207080) 개체를 만들고 [**MediaTranscoder.PrepareFileTranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700936) 메서드를 호출합니다. 원본 파일, 대상 파일 및 인코딩 프로필을 전달합니다. 그런 다음 비동기 코드 변환 작업에서 반환된 [**PrepareTranscodeResult**](https://msdn.microsoft.com/library/windows/apps/hh700941) 개체의 [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946) 메서드를 호출합니다.
 
 [!code-cs[TranscodeTranscodeFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeTranscodeFile)]
 
-## 코드 변환 진행률에 응답
+## <a name="respond-to-transcoding-progress"></a>코드 변환 진행률에 응답
 
 비동기 [**TranscodeAsync**](https://msdn.microsoft.com/library/windows/apps/hh700946)의 진행이 변경되면 응답하도록 이벤트를 등록할 수 있습니다. 이러한 이벤트는 UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 프레임워크의 일부이며 코드 변환 API와 관련이 없습니다.
 
@@ -72,10 +79,5 @@ ms.openlocfilehash: 7e96f12881e4f210a1bba57d2a9c298dbb1c32e3
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

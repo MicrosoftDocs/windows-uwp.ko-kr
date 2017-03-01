@@ -3,17 +3,24 @@ author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: "앱에서 인쇄하기"
 description: "유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 334b6d5faad641bbce67f7267be43700cd540569
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 041a591cc3e53ee6f5e4b5d51e41a0e1032c6cac
+ms.lasthandoff: 02/07/2017
 
 ---
-# 앱에서 인쇄하기
+# <a name="print-from-your-app"></a>앱에서 인쇄하기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489)
 -   [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325)
@@ -21,13 +28,13 @@ ms.openlocfilehash: 334b6d5faad641bbce67f7267be43700cd540569
 
 유니버설 Windows 앱에서 문서를 인쇄하는 방법을 알아봅니다. 이 항목에서는 특정 페이지를 인쇄하는 방법도 보여 줍니다. 인쇄 미리 보기 UI에 대한 고급 변경 내용은 [인쇄 미리 보기 UI 사용자 지정](customize-the-print-preview-ui.md)을 참조하세요.
 
-**팁** 이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619979)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)을 다운로드하세요.
+**팁**  이 항목의 예제는 대부분 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](http://go.microsoft.com/fwlink/p/?LinkId=619984)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619979)을 다운로드하세요.
 
-## 인쇄 등록
+## <a name="register-for-printing"></a>인쇄 등록
 
 앱에 인쇄 기능을 추가하는 첫 번째 단계는 인쇄 계약을 등록하는 것입니다. 고객이 인쇄할 수 있도록 할 모든 화면에 대해 앱에서 이 작업을 수행해야 합니다. 사용자에게 표시되는 화면에서만 인쇄를 등록 할 수 있습니다. 앱의 한 화면에서 인쇄를 등록한 경우 이 화면을 나갈 때 인쇄 등록을 취소해야 합니다. 이 화면이 다른 화면으로 바뀔 경우 다음 화면이 열릴 때 새 인쇄 계약을 등록해야 합니다.
 
-**팁** 앱에서 여러 페이지 인쇄를 지원해야 하는 경우 이 인쇄 코드를 공통 도우미 클래스에 넣고 앱 페이지에서 재사용하도록 합니다. 이 작업을 수행하는 방법의 예제를 보려면 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)에서 `PrintHelper` 클래스를 참조하세요.
+**팁**  앱에서 여러 페이지 인쇄를 지원해야 하는 경우, 이 인쇄 코드를 공통 도우미 클래스에 넣고 앱 페이지에서 재사용하도록 합니다. 이 작업을 수행하는 방법의 예제를 보려면 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)에서 `PrintHelper` 클래스를 참조하세요.
 
 먼저 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) 및 [**PrintDocument**](https://msdn.microsoft.com/library/windows/apps/BR243314)를 선언합니다. **PrintManager** 유형은 다른 Windows 인쇄 기능을 지원하는 유형과 함께 [**Windows.Graphics.Printing**](https://msdn.microsoft.com/library/windows/apps/BR226489) 네임스페이스에 있습니다. **PrintDocument** 유형은 인쇄용 XAML 콘텐츠 준비를 지원하는 다른 유형과 함께 [**Windows.UI.Xaml.Printing**](https://msdn.microsoft.com/library/windows/apps/BR243325) 네임스페이스에 있습니다. 페이지에 다음 **using** 또는 **Imports** 문을 추가하여 인쇄 코드를 쉽게 작성할 수 있습니다.
 
@@ -82,7 +89,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
    }
 }
 ```
-## 인쇄 단추 만들기
+## <a name="create-a-print-button"></a>인쇄 단추 만들기
 
 인쇄 단추를 표시하려는 앱 화면에 추가합니다. 인쇄 단추가 인쇄할 콘텐츠에 방해가 되지 않도록 합니다.
 
@@ -129,9 +136,9 @@ async private void OnPrintButtonClick(object sender, RoutedEventArgs e)
 
 이 예제에서는 단추 클릭에 대한 이벤트 처리기에 인쇄 창이 표시됩니다. 당시에 인쇄를 수행할 수 없기 때문에 메서드가 예외를 throw한 경우 [**ContentDialog**](https://msdn.microsoft.com/library/windows/apps/Dn633972) 컨트롤은 사용자에게 상황을 알려 줍니다.
 
-## 앱 콘텐츠 형식 지정
+## <a name="format-your-apps-content"></a>앱 콘텐츠 형식 지정
 
-**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx) 메서드를 호출하여 [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
+**ShowPrintUIAsync**가 호출되면 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트가 발생합니다. 이 단계에 나오는 **PrintTaskRequested** 이벤트 처리기는 [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436) 메서드를 호출하여 [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx)를 만들고 인쇄 페이지의 제목과 [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) 대리자의 이름을 전달합니다. 이 예제에서 **PrintTaskSourceRequestedHandler**는 인라인으로 정의되어 있습니다. **PrintTaskSourceRequestedHandler**는 인쇄용 콘텐츠를 제공하고 나중에 설명됩니다.
 
 이 예제에서는 완료 처리기가 catch 오류에도 정의되어 있습니다. 완료 이벤트를 처리하는 것은 오류가 발생했을 때 이를 사용자에게 알리고 가능한 해결 방법도 제공할 수 있으므로 좋은 방법입니다. 또한 인쇄 작업이 성공한 후 사용자가 수행할 다음 단계를 안내하는 데도 완료 이벤트를 사용할 수 있습니다.
 
@@ -161,7 +168,7 @@ protected virtual void PrintTaskRequested(PrintManager sender, PrintTaskRequeste
 
 인쇄 작업이 만들어진 후 [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426)는 [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate) 이벤트를 발생시켜 인쇄 미리 보기 UI에 인쇄 페이지 모음을 표시하도록 요청합니다. 이는 **IPrintPreviewPageCollection** 인터페이스의 **Paginate** 메서드에 해당합니다. 이때는 등록하는 동안 만든 이벤트 처리기가 호출됩니다.
 
-**중요** 사용자가 인쇄 설정을 변경한 경우에는 콘텐츠를 재배치할 수 있도록 페이지 매김 이벤트 처리기가 다시 호출됩니다. 최상의 사용자 환경을 위해 콘텐츠를 재배치하기 전에 설정을 확인하고 필요 없을 때 페이지가 매겨진 콘텐츠를 다시 초기화하지 않는 것이 좋습니다.
+**중요**  사용자가 인쇄 설정을 변경한 경우에는 콘텐츠를 재배치할 수 있도록 페이지 매김 이벤트 처리기가 다시 호출됩니다. 최상의 사용자 환경을 위해 콘텐츠를 재배치하기 전에 설정을 확인하고 필요 없을 때 페이지가 매겨진 콘텐츠를 다시 초기화하지 않는 것이 좋습니다.
 
 [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate) 이벤트 처리기([UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `CreatePrintPreviewPages` 메서드)에서 인쇄 미리 보기 UI에 표시되고 프린터로 전송되는 페이지를 만듭니다. 인쇄용 앱 콘텐츠를 준비하는 데 사용되는 코드는 앱 및 인쇄할 콘텐츠마다 다릅니다. 인쇄용 콘텐츠의 형식을 지정하는 방법을 보려면 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984) 소스 코드를 참조하세요.
 
@@ -239,16 +246,16 @@ protected virtual void AddPrintPages(object sender, AddPagesEventArgs e)
 }
 ```
 
-## 인쇄 옵션 준비
+## <a name="prepare-print-options"></a>인쇄 옵션 준비
 
 이제 인쇄 옵션을 준비합니다. 예를 들어 이 섹션에서는 특정 페이지를 인쇄할 수 있도록 페이지 범위 옵션을 설정하는 방법을 설명합니다. 고급 옵션에 대한 자세한 내용은 [인쇄 미리 보기 UI 사용자 지정](customize-the-print-preview-ui.md)을 참조하세요.
 
 이 단계에서는 새 인쇄 옵션을 만들고, 옵션이 지원하는 값 목록을 정의한 다음 이 옵션을 인쇄 미리 보기 UI에 추가합니다. 페이지 범위 옵션의 설정은 다음과 같습니다.
 
-| 옵션 이름          | 작업 | 
+| 옵션 이름          | 작업 |
 |----------------------|--------|
 | **모두 인쇄**        | 문서의 모든 페이지를 인쇄합니다. |
-| **인쇄 선택**  | 사용자가 선택한 콘텐츠만 인쇄합니다. | 
+| **인쇄 선택**  | 사용자가 선택한 콘텐츠만 인쇄합니다. |
 | **인쇄 범위**      | 사용자가 인쇄할 페이지를 입력할 수 있는 편집 컨트롤을 표시합니다. |
  
 먼저 [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597) 이벤트 처리기를 수정하여 [**PrintTaskOptionDetails**](https://msdn.microsoft.com/library/windows/apps/Hh701256) 개체를 가져오는 코드를 추가합니다.
@@ -259,7 +266,7 @@ PrintTaskOptionDetails printDetailedOptions = PrintTaskOptionDetails.GetFromPrin
 
 인쇄 미리 보기 UI에 표시된 옵션 목록을 지우고 사용자가 앱에서 인쇄를 하고자 할 때 표시할 옵션을 추가합니다.
 
-**참고** 추가된 순서대로 첫 번째 옵션이 창의 맨 위에 오도록 인쇄 미리 보기 UI에 옵션이 표시됩니다.
+**참고**  추가된 순서대로 첫 번째 옵션이 창의 맨 위에 오도록 인쇄 미리 보기 UI에 옵션이 표시됩니다.
 
 ```csharp
 IList<string> displayedOptions = printDetailedOptions.DisplayedOptions;
@@ -295,7 +302,7 @@ printDetailedOptions.OptionChanged += printDetailedOptions_OptionChanged;
 
 [**CreateTextOption**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.optiondetails.printtaskoptiondetails.createtextoption) 메서드는 **범위** 입력란을 만듭니다. 이 텍스트 상자에는 사용자가 **인쇄 범위** 옵션을 선택할 때 인쇄할 특정 페이지를 입력합니다.
 
-## 인쇄 옵션 변경 처리
+## <a name="handle-print-option-changes"></a>인쇄 옵션 변경 처리
 
 **OptionChanged** 이벤트 처리기는 두 가지 기능을 담당합니다. 첫째, 사용자가 선택한 페이지 범위 옵션에 따라 페이지 범위의 텍스트 편집 필드를 표시하거나 숨깁니다. 둘째, 페이지 범위 텍스트 상자에 입력된 텍스트가 문서에서 유효한 페이지 범위를 나타내는지 테스트합니다.
 
@@ -375,9 +382,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-**팁** 사용자가 범위 입력란에 입력하는 페이지 범위를 구문 분석하는 방법은 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `GetPagesInRange` 메서드를 참조하세요.
+**팁**  사용자가 범위 입력란에 입력하는 페이지 범위를 구문 분석하는 방법은 [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)의 `GetPagesInRange` 메서드를 참조하세요.
 
-## 선택한 페이지 미리 보기
+## <a name="preview-selected-pages"></a>선택한 페이지 미리 보기
 
 앱의 인쇄용 콘텐츠 형식을 지정하는 방법은 앱 및 앱 콘텐츠의 특성에 따라 다릅니다. [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)은 인쇄 도우미 클래스를 사용하여 인쇄할 콘텐츠 형식을 지정합니다.
 
@@ -387,15 +394,9 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 -   사용자의 페이지 범위로 선택한 페이지만 인쇄 미리 보기에 표시하고 사용자가 페이지 범위를 변경할 때마다 표시를 업데이트합니다.
 -   인쇄 미기 보기에 모든 페이지를 표시하지만 사용자가 선택한 페이지 범위에 없는 페이지는 회색으로 표시합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [인쇄에 대한 디자인 지침](https://msdn.microsoft.com/library/windows/apps/Hh868178)
 * [//빌드 2015 동영상: Windows 10에서 인쇄하는 앱 개발](https://channel9.msdn.com/Events/Build/2015/2-94)
 * [UWP 인쇄 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619984)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

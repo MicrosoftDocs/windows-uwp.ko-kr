@@ -3,17 +3,24 @@ author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: "Xbox용 디바이스 포털"
 description: "Xbox One용 디바이스 포털을 사용하는 방법에 대해 알아봅니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4321e799e8633dc31cc0d73889a0b0b6056f6d3b
+ms.lasthandoff: 02/07/2017
 
 ---
-# Xbox용 디바이스 포털
+# <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
 
-## Xbox에서 디바이스 포털 설정
+## <a name="set-up-device-portal-on-xbox"></a>Xbox에서 디바이스 포털 설정
 
-### 디바이스 포털 사용
+### <a name="enable-device-portal"></a>디바이스 포털 사용
 
 **디바이스 포털을 사용하도록 설정하려면**
 
@@ -28,16 +35,11 @@ ms.openlocfilehash: 77f542b2fed80271082e97437790b33ea7b54172
 8. 제공된 인증서에 대해 아래 그림과 비슷한 경고를 받게 됩니다. 미리 보기로 Windows Device Portal에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭해야 합니다.
 ![디바이스 포털 인증서 오류](images/device-portal/xbox-certificate-error.png)
 
-## 디바이스 포털 페이지
+## <a name="device-portal-pages"></a>디바이스 포털 페이지
 
 Xbox에서 디바이스 포털은 표준 페이지 집합을 제공합니다. 자세한 설명은 [Windows Device Portal 개요](device-portal.md)를 참조하세요.
 
 - 앱
 - 성능
 - 네트워킹
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

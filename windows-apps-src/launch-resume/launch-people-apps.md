@@ -3,21 +3,28 @@ author: TylerMSFT
 title: "피플 앱 시작"
 description: "이 항목에서는 ms-people URI 체계에 대해 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다."
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 25abea87eaf374a1a8b5432c522d51bd7bbc1c1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 피플 앱 실행
+# <a name="launch-the-people-app"></a>피플 앱 실행
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 항목에서는 **ms-people:** URI 스키마를 설명합니다. 앱에서 이 URI 스키마를 사용하여 특정 작업에 대한 피플 앱을 실행할 수 있습니다.
 
-## ms-people: URI 스키마 참조
+## <a name="ms-people-uri-scheme-reference"></a>ms-people: URI 스키마 참조
 
 
 <table>
@@ -82,7 +89,7 @@ ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
 
  
 
-## ms-people:search: 매개 변수 참조
+## <a name="ms-peoplesearch-parameter-reference"></a>ms-people:search: 매개 변수 참조
 
 
 <table>
@@ -111,7 +118,7 @@ ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
 
  
 
-## ms-people:viewcontact: 매개 변수 참조
+## <a name="ms-peopleviewcontact-parameter-reference"></a>ms-people:viewcontact: 매개 변수 참조
 
 
 <table>
@@ -163,7 +170,7 @@ ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
 
  
 
-## ms-people:savetocontact: 매개 변수 참조
+## <a name="ms-peoplesavetocontact-parameter-reference"></a>ms-people:savetocontact: 매개 변수 참조
 
 
 <table>
@@ -206,9 +213,4 @@ ms.openlocfilehash: 3125ec2a73410f3d3f5b13e154ea30b1319a9a1e
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

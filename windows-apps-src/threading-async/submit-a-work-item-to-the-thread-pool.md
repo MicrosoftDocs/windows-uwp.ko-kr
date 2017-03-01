@@ -2,10 +2,17 @@
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: "스레드 풀에 작업 항목 제출"
-description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다."
+description: "스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스레드, 스레드 풀"
 translationtype: Human Translation
-ms.sourcegitcommit: 41f0847dd7aa52465186cb8415cbe41342ff93f0
-ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d5141467e474f26a8aa681b4478cf60c979ae83b
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
@@ -25,7 +32,7 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593)를 사용할 수 있습니다.
 
-**참고** [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 작업 항목의 진행률을 표시합니다.
+**참고**  [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317)를 사용하여 UI 스레드에 액세스하고 작업 항목의 진행률을 표시합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
@@ -113,12 +120,12 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 > ``` csharp
 > // The nth prime number to find.
 > const uint n = 9999;
-> 
+>
 > // A shared pointer to the result.
 > // We use a shared pointer to keep the result alive until the
 > // thread is done.
 > ulong nthPrime = 0;
-> 
+>
 > // Simulates work by searching for the nth prime number. Uses a
 > // naive algorithm and counts 2 as the first prime number.
 > IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
@@ -127,23 +134,23 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 >     uint  progress = 0; // For progress reporting.
 >     uint  primes = 0;   // Number of primes found so far.
 >     ulong i = 2;        // Number iterator.
-> 
+>
 >     if ((n >= 0) && (n <= 2))
 >     {
 >         nthPrime = n;
 >         return;
 >     }
-> 
+>
 >     while (primes < (n - 1))
 >     {
 >         if (workItem.Status == AsyncStatus.Canceled)
 >         {
 >             break;
 >         }
-> 
+>
 >         // Go to the next number.
 >         i++;
-> 
+>
 >         // Check for prime.
 >         bool prime = true;
 >         for (uint j = 2; j < i; ++j)
@@ -154,22 +161,22 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 >                 break;
 >             }
 >         };
-> 
+>
 >         if (prime)
 >         {
 >             // Found another prime number.
 >             primes++;
-> 
+>
 >             // Report progress at every 10 percent.
 >             uint temp = progress;
 >             progress = (uint)(10.0*primes/n);
-> 
+>
 >             if (progress != temp)
 >             {
 >                 String updateString;
 >                 updateString = "Progress to " + n + "th prime: "
 >                     + (10 * progress) + "%\n";
-> 
+>
 >                 // Update the UI thread with the CoreDispatcher.
 >                 CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
 >                     CoreDispatcherPriority.High,
@@ -180,11 +187,11 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 >             }
 >         }
 >     }
-> 
+>
 >     // Return the nth prime number.
 >     nthPrime = i;
 > });
-> 
+>
 > // A reference to the work item is cached so that we can trigger a
 > // cancellation when the user presses the Cancel button.
 > m_workItem = asyncAction;
@@ -209,11 +216,11 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 >     {
 >         return;
 >     }
-> 
+>
 >     String^ updateString;
 >     updateString = "\n" + "The " + n + "th prime number is "
 >         + (*nthPrime).ToString() + ".\n";
-> 
+>
 >     // Update the UI thread with the CoreDispatcher.
 >     CoreApplication::MainView->CoreWindow->Dispatcher->RunAsync(
 >         CoreDispatcherPriority::High,
@@ -231,11 +238,11 @@ ms.openlocfilehash: 2d73b44933ed71dc388b3d37793b7c99b8d0a3dd
 >     {
 >         return;
 >     }
-> 
+>
 >     String updateString;
 >     updateString = "\n" + "The " + n + "th prime number is "
 >         + nthPrime + ".\n";
-> 
+>
 >     // Update the UI thread with the CoreDispatcher.
 >     CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
 >         CoreDispatcherPriority.High,
@@ -258,9 +265,4 @@ Windows 8.1용으로 작성된 [ThreadPool 작업 항목 샘플 만들기](http:
 * [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

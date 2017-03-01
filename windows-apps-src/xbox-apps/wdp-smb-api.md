@@ -2,13 +2,21 @@
 author: payzer
 title: "디바이스 포털 SMB API 참조"
 description: "프로그래밍 방식으로 SMB API에 액세스하는 방법을 알아봅니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 translationtype: Human Translation
-ms.sourcegitcommit: 3d76bf181baa9dfd973467d43241230fddf2daf7
-ms.openlocfilehash: d6a097c84e6b967c41507d9e60c266f0bacb93fe
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: fc52bd3d326a20d0b561ad06b9f4245e7b557f82
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 개발자 폴더 API 참조   
+# <a name="developer-folder-api-reference"></a>개발자 폴더 API 참조   
 표준 파일 탐색기를 사용하여 Xbox One의 개발 관련 파일에 액세스할 수 있습니다. 이렇게 하면 PC에서 쉽게 파일을 보고 콘솔로 이동할 수 있습니다.
 
 **요청**
@@ -52,9 +60,4 @@ HTTP 상태 코드      | 설명
 **사용 가능한 디바이스 패밀리**
 
 * Windows Xbox
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

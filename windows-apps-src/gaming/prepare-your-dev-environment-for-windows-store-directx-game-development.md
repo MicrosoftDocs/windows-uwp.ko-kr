@@ -3,13 +3,20 @@ author: mtoepke
 title: "게임용 프로젝트 템플릿 및 도구"
 description: "UWP(유니버설 Windows 플랫폼)용 DirectX 게임 프로그래밍을 시작하는 데 필요한 사항을 보여 줍니다."
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 템플릿, 도구, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 2991efd40862eb1cd8842432b3eed3bbe49c8eb2
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임용 프로젝트 템플릿 및 도구
+# <a name="project-templates-and-tools-for-games"></a>게임용 프로젝트 템플릿 및 도구
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -19,7 +26,7 @@ ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
 
 먼저 Visual Studio가 필요합니다.
 
-## Visual Studio 다운로드
+## <a name="get-visual-studio"></a>Visual Studio 다운로드
 
 
 [Microsoft Visual Studio 2015를 다운로드하여 설치합니다](https://www.visualstudio.com/vs-2015-product-editions).
@@ -53,7 +60,7 @@ ms.openlocfilehash: 360ffe86a6b2033510cb7d4b790477c80d5d1205
 
  
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 기존 게임을 포팅하려면 다음 항목을 참조하세요.
@@ -77,10 +84,5 @@ DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -4,9 +4,15 @@ title: "앱 서비스 만들기 및 사용"
 description: "다른 UWP 앱에 서비스를 제공할 수 있는 UWP(유니버설 Windows 플랫폼) 앱을 작성하는 방법과 해당 서비스를 사용하는 방법을 알아봅니다."
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: "앱 간 통신, 프로세스 간 통신, IPC, 백그라운드 메시징, 백그라운드 통신, 앱 간"
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fadfab2f03d5cfda46d5c9f29c28ad561e6ab2db
-ms.openlocfilehash: 81786f6bf76d1d3840d5cd8c6191550b98a248b2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3dcf6a8191553deac5821346718a202bc362c7ff
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -377,9 +383,4 @@ namespace MyAppService
 
 * [앱 서비스가 호스트 앱과 동일한 프로세스에서 실행되도록 변환](convert-app-service-in-process.md)
 * [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

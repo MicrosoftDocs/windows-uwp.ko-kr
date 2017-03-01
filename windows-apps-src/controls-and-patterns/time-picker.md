@@ -5,9 +5,16 @@ title: "시간 선택기"
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Time picker
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: cfe38564f54f61b2d48918f5dd5bf41e7c57b965
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5cd0b42f05ca246005b09faa0e926bc2e625d2c1
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="time-picker"></a>시간 선택기
@@ -62,9 +69,4 @@ arrivalTimePicker.Header = "Arrival time";
 - [달력 날짜 선택](calendar-date-picker.md)
 - [달력 보기](calendar-view.md)
 - [날짜 선택기](date-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

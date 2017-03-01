@@ -3,15 +3,22 @@ author: mcleanbyron
 ms.assetid: FABA802F-9CB2-4894-9848-9BB040F9851F
 description: "이 섹션의 C# 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
 title: "Windows 스토어 제출 API에 대한 C# 코드 예제"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: d2fc29f8f2fc6cc78c1cb04c68844215a3e3eafe
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c71555eb854e5dcf6cbccf89e9b0b8ffe35ab0e4
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="c-code-examples-for-the-windows-store-submission-api"></a>Windows 스토어 제출 API에 대한 C\# 코드 예제
 
-이 문서는 *Windows 스토어 제출 API*를 사용하기 위한 C# 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
+이 문서는 *Windows 스토어 제출 API* 사용을 위한 C# 코드 예제를 제공합니다. 이 API에 대한 자세한 내용은 [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 이러한 코드 예제는 다음 작업을 보여 줍니다.
 
@@ -52,7 +59,7 @@ ms.openlocfilehash: d2fc29f8f2fc6cc78c1cb04c68844215a3e3eafe
 
 다음 예제는 Windows 스토어 제출 API에서 여러 메서드를 사용하여 앱 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunAppSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunAppSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
-1. 먼저 이 메서드는 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
+1. 먼저 해당 메서드를 통해 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
 2. 다음으로 [앱의 현재 보류 중인 제출을 삭제](delete-an-app-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [앱에 대한 새 제출 만들기](create-an-app-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 새 제출에 대한 세부 정보를 변경하고 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
@@ -81,7 +88,7 @@ ms.openlocfilehash: d2fc29f8f2fc6cc78c1cb04c68844215a3e3eafe
 
 다음 예제는 Windows 스토어 제출 API에서 여러 메서드를 사용하여 기존의 추가 기능 제출을 업데이트하는 클래스를 구현합니다. 이 클래스의 ```RunInAppProductSubmissionUpdateSample``` 메서드는 마지막으로 게시된 제출의 복제본으로 새 제출을 만든 다음 복제한 제출을 Windows 개발자 센터에 업데이트하고 커밋합니다. ```RunInAppProductSubmissionUpdateSample``` 메서드는 구체적으로 다음과 같은 작업을 수행합니다.
 
-1. 먼저 이 메서드는 [지정된 추가 기능의 데이터 가져오기](get-an-add-on.md) 작업을 수행합니다.
+1. 먼저 해당 메서드를 통해 [지정된 추가 기능의 데이터 가져오기](get-an-add-on.md) 작업을 수행합니다.
 2. 다음으로 [추가 기능의 현재 보류 중인 제출을 삭제](delete-an-add-on-submission.md)합니다(보류 중인 제출이 있을 경우).
 3. 그런 다음 [추가 기능에 대한 새 제출 만들기](create-an-add-on-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-add-on-submission.md)한 다음 [커밋](commit-an-add-on-submission.md)합니다.
@@ -120,9 +127,4 @@ ms.openlocfilehash: d2fc29f8f2fc6cc78c1cb04c68844215a3e3eafe
 ## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

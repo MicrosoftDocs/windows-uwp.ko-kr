@@ -1,16 +1,24 @@
 ---
 author: Mtoepke
 title: "다중 사용자 응용 프로그램 소개"
-description: "Xbox 다중 사용자 모델에 대해 간단히 소개합니다."
+description: "Xbox 다중 사용자 모델에 대한 높은 수준의 간략한 소개입니다."
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
+ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 translationtype: Human Translation
-ms.sourcegitcommit: 098683ae1ad594eee3cb3b197431ddfa3998a30d
-ms.openlocfilehash: e9696cb20fa53b2fb5fe7f2cb06d4e5585639faf
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 31866c400683c61b432c3fe620487f93a9187771
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 다중 사용자 응용 프로그램 소개
+# <a name="introduction-to-multi-user-applications"></a>다중 사용자 응용 프로그램 소개
 
-이 항목은 Xbox 다중 사용자 모델을 간단하게 소개하기 위한 것입니다.
+이 항목은 Xbox 다중 사용자 모델에 대한 높은 수준의 소개를 간략히 드리기 위한 것입니다.
 
 > [!NOTE]
 > 다중 사용자 응용 프로그램은 현재 사용할 수 없습니다. 
@@ -22,10 +30,10 @@ Xbox One 사용자 모델은 하나의 디바이스에서 여러 사용자가 �
 
 Xbox One 사용자 모델의 각 사용자는 로컬 사용자 계정의 지원을 받습니다. 이 로컬 사용자 계정은 Xbox Live 계정(및 Microsoft 계정)과 연결됩니다. 따라서 Xbox 사용자 계정과 Xbox Live 계정 및 Microsoft 계정 간에 엄격한 일대일 매핑이 있습니다.
 
-## 단일 사용자 응용 프로그램
+## <a name="single-user-applications"></a>단일 사용자 응용 프로그램
 기본적으로 UWP(유니버설 Windows 플랫폼) 앱은 응용 프로그램을 시작한 사용자의 컨텍스트에서 실행됩니다. 이러한 SUA(*단일 사용자 응용 프로그램*)는 해당 단일 사용자만 인식하고 다른 Windows 디바이스의 사용자 모델과 호환되는 모드로 실행됩니다. Xbox 사용자 모델은 앱과 연결된 사용자를 관리하고, 앱을 시작할 때 사용자가 로그인되었는지 확인합니다. 이 모델에서 UWP 앱 및 게임 작성자는 Xbox에서 실행하기 위해 특별한 작업을 수행할 필요가 없습니다. 
 
-## 다중 사용자 응용 프로그램
+## <a name="multi-user-applications"></a>다중 사용자 응용 프로그램
 UWP 게임은 Xbox One 다중 사용자 모델에 옵트인(opt in)하도록 선택할 수 있습니다. 이러한 MUA(*다중 사용자 응용 프로그램*)는 시스템 계정(기본 계정이라고 함)의 컨텍스트에서 실행되며, Xbox One 사용자 모델의 유연성과 기능을 최대한 활용할 수 있습니다. 이러한 게임의 경우 Xbox 사용자 모델은 게임과 연결된 사용자를 관리하지 않으며, 게임을 실행하기 위해 사용자 로그인을 요구하지도 않습니다. 따라서 로그인한 사용자를 요구하는지 여부, 현재 사용자의 개념을 구현하는지 여부, 여러 사용자의 동시 입력을 허용하는지 여부 등의 사용자 요구 사항을 명시적으로 인식하고 관리하도록 게임을 작성해야 합니다.
    
 다중 사용자 모델을 옵트인(opt in)하려면:   
@@ -38,21 +46,16 @@ UWP 게임은 Xbox One 다중 사용자 모델에 옵트인(opt in)하도록 선
 <uap:SupportedUsers>multiple</uap:SupportedUsers>
 ```
 
-### 사용자 및 입력 식별
+### <a name="identifying-users-and-inputs"></a>사용자 및 입력 식별
 개발자는 KeyUp 및 KeyDown 라우트된 이벤트에서 사용되는 KeyRoutedEventArgs.DeviceId를 사용하여 다른 입력에서 생성된 이벤트를 차별화할 수 있습니다.
 Windows.System.UserDeviceAssociation.FindUserFromDeviceId 메서드를 사용하면 특정 입력과 연결된 사용자를 식별할 수 있습니다.
 
-자세한 내용은 [KeyRoutedEventArgs.DeviceId](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조하세요.
+자세한 내용은 [KeyRoutedEventArgs.DeviceId](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조하세요.
 
 
-## 선택할 모델에 대한 지침
+## <a name="guidance-on-which-model-to-choose"></a>선택할 모델에 대한 지침
 모든 UWP 앱과 대다수 단일 사용자 게임은 SUA로 작성할 수 있습니다. 협력적인 멀티 플레이어 게임의 경우에만 Xbox One 다중 사용자 모델을 옵트인(opt in)하는 것이 좋습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

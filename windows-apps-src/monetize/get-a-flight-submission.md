@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: A0DFF26B-FE06-459B-ABDC-3EA4FEB7A21E
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다."
 title: "Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 플라이트 제출"
 translationtype: Human Translation
-ms.sourcegitcommit: 27d8385c7250feba89c6970033ad7ec170f0646c
-ms.openlocfilehash: e2929ad3e2bb71ba3de5f74a82c4b0a43504dbd6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a989e9d081ec9cb709b59e1ff4ceff2d517ae48f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기
+# <a name="get-a-package-flight-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출 가져오기
 
 
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키지 플라이트 제출에 대한 데이터를 가져옵니다. Windows 스토어 제출 API를 사용하여 패키지 플라이트 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [패키지 플라이트 제출 관리](manage-flight-submissions.md)를 참조하세요.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -24,9 +31,9 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키�
 * 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 * 개발자 센터 계정의 앱에 대한 패키지 플라이트 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [패키지 플라이트 제출 만들기](create-a-flight-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 
->**참고**  이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## 요청
+## <a name="request"></a>요청
 
 이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
@@ -37,7 +44,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키�
 <span/>
  
 
-### 요청 헤더
+### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -45,7 +52,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키�
 
 <span/>
 
-### 요청 매개 변수
+### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -55,11 +62,11 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 기존 패키�
 
 <span/>
 
-### 요청 본문
+### <a name="request-body"></a>요청 본문
 
 이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
-### 요청 예제
+### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 스토어 ID가 9WZDNCRD91MD인 앱에 대한 패키지 플라이트 제출을 가져오는 방법을 보여 줍니다.
 
@@ -68,7 +75,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/fl
 Authorization: Bearer <your access token>
 ```
 
-## 응답
+## <a name="response"></a>응답
 
 다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 지정된 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 [패키지 플라이트 제출 리소스](manage-flight-submissions.md#flight-submission-object)를 참조하세요.
 
@@ -111,7 +118,7 @@ Authorization: Bearer <your access token>
 }
 ```
 
-## 오류 코드
+## <a name="error-codes"></a>오류 코드
 
 요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
@@ -123,7 +130,7 @@ Authorization: Bearer <your access token>
 <span/>
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
 * [패키지 플라이트 제출 관리](manage-flight-submissions.md)
@@ -131,9 +138,4 @@ Authorization: Bearer <your access token>
 * [패키지 플라이트 제출 커밋](commit-a-flight-submission.md)
 * [패키지 플라인트 제출 업데이트](update-a-flight-submission.md)
 * [패키지 플라이트 제출 삭제](delete-a-flight-submission.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

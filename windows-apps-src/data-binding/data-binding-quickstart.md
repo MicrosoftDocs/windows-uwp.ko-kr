@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "데이터 바인딩 개요"
 description: "이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: e89580ef62d5d6ae095aa27628181181aaac9666
-ms.openlocfilehash: d452751fd4ab0cc422c3eae94507923440ec45df
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: 3abf2b7e9ff59099dafaa753f3a8ccf257dbc19a
+ms.lasthandoff: 01/19/2017
 
 ---
-데이터 바인딩 개요
+<a name="data-binding-overview"></a>데이터 바인딩 개요
 =====================
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -16,17 +23,17 @@ ms.openlocfilehash: d452751fd4ab0cc422c3eae94507923440ec45df
 
 이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에서 컨트롤(또는 다른 UI 요소)을 단일 항목에 바인딩하거나 항목 컨트롤을 항목 컬렉션에 바인딩하는 방법을 보여 줍니다. 또한 항목의 렌더링을 제어하고 선택 항목을 기반으로 세부 정보 보기를 구현하고, 표시할 데이터를 변환하는 방법을 보여 줍니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
-필수 조건
+<a name="prerequisites"></a>필수 조건
 -------------------------------------------------------------------------------------------------------------
 
-이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [Windows 앱 시작](https://developer.microsoft.com/en-us/windows/getstarted)을 참조하세요.
+이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [Windows 앱 시작](https://developer.microsoft.com/windows/getstarted)을 참조하세요.
 
-프로젝트 만들기
+<a name="create-the-project"></a>프로젝트 만들기
 ---------------------------------------------------------------------------------------------------------------------------------
 
 **비어 있는 응용 프로그램(Windows 유니버설)** 프로젝트를 만듭니다. 이름을 "Quickstart"로 지정합니다.
 
-단일 항목에 바인딩
+<a name="binding-to-a-single-item"></a>단일 항목에 바인딩
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 모든 바인딩은 바인딩 대상과 바인딩 소스로 구성됩니다. 일반적으로 대상은 컨트롤 또는 기타 UI 요소의 속성이고, 소스는 클래스 인스턴스(데이터 모델 또는 뷰 모델)의 속성입니다. 이 예제에서는 컨트롤을 단일 항목에 바인딩하는 방법을 보여 줍니다. 대상은 **TextBlock**의 **Text** 속성입니다. 소스는 오디오 녹음을 나타내는 **Recording**이라는 단순 클래스의 인스턴스를 나타냅니다. 먼저 클래스를 살펴보겠습니다.
@@ -181,7 +188,7 @@ namespace Quickstart
 
 ![Textblock 바인딩](images/xaml-databinding0.png)
 
-항목 컬렉션에 바인딩
+<a name="binding-to-a-collection-of-items"></a>항목 컬렉션에 바인딩
 ------------------------------------------------------------------------------------------------------------------
 
 비즈니스 개체 컬렉션에 바인딩하는 것이 일반적인 시나리오입니다. C# 및 Visual Basic에서 일반 [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx) 클래스는 [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx) 및 [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) 인터페이스를 구현하므로 데이터 바인딩에 유용한 컬렉션 옵션이 됩니다. 이러한 인터페이스는 항목이 추가 또는 변경되거나 목록 자체의 속성이 변경될 경우 바인딩에 대한 변경 알림을 제공합니다. 또한 바인딩된 컨트롤을 컬렉션에 있는 개체의 속성 변경 사항으로 업데이트하려면 비즈니스 개체에서 **INotifyPropertyChanged**를 구현해야 합니다. 자세한 내용은 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
@@ -301,7 +308,7 @@ namespace Quickstart
 
 XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들기](https://msdn.microsoft.com/library/windows/apps/Mt228349)를 참조하세요. 컨트롤 레이아웃에 대한 자세한 내용은 [XAML을 사용하여 레이아웃 정의](https://msdn.microsoft.com/library/windows/apps/Mt228350)를 참조하세요.
 
-자세히 보기 추가
+<a name="adding-a-details-view"></a>자세히 보기 추가
 -----------------------------------------------------------------------------------------------------
 
 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 항목에서 **Recording** 개체의 모든 세부 정보를 표시할 수 있습니다. 그러나 이러한 정보는 많은 공간을 차지합니다. 따라서 대신 항목을 식별하는 데 충분한 데이터만 표시한 다음, 사용자가 선택한 경우 세부 정보 보기라는 UI의 별도 부분에 선택한 항목의 모든 세부 정보를 표시할 수 있습니다. 이 정렬을 마스터/세부 정보 보기 또는 목록/세부 정보 보기라고도 합니다.
@@ -375,7 +382,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 
 ![목록 보기 바인딩](images/xaml-databinding4.png)
 
-표시할 데이터 값 필터링 또는 변환
+<a name="formatting-or-converting-data-values-for-display"></a>표시할 데이터 값 필터링 또는 변환
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 위 렌더링에는 사소한 문제가 하나 있습니다. **ReleaseDateTime** 속성이 날짜가 아니라 [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)이므로 필요한 것보다 더 정밀하게 표시됩니다. 한 가지 해결 방법은 `this.ReleaseDateTime.ToString("d")`을 반환하는 **Recording** 클래스에 문자열 속성을 추가하는 것입니다. 이 속성의 이름을 **ReleaseDate**로 지정하면 날짜 및 시간이 아니라 날짜가 반환되고, **ReleaseDateAsString**으로 지정하면 문자열이 반환됩니다.
@@ -433,11 +440,6 @@ public class StringFormatter : Windows.UI.Xaml.Data.IValueConverter
 > [!NOTE]
 > Windows 10 버전 1607부터 XAML 프레임워크는 기본 제공 부울-표시 변환기를 제공합니다. 변환기는 **Visible** 열거형 값에 **true**를, **Collapsed**에 **false**를 매핑하므로 변환기를 만들지 않고 Visibility 속성을 부울에 바인딩할 수 있습니다. 기본 제공 변환기를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 기본 제공 변환기를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [데이터 바인딩](index.md)
-
-
-
-<!--HONumber=Sep16_HO1-->
-
 

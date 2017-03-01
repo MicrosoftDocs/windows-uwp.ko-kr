@@ -1,20 +1,27 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "사람이 서로 커뮤니케이션할 때 음성과 제스처를 결합해서 사용하는 것처럼, 앱을 조작할 때도 여러 유형 및 모드의 입력이 유용할 수 있습니다."
+Description: "사람이 서로 커뮤니케이션할 때 목소리와 몸짓을 조합하여 사용하는 것처럼 앱을 조작할 때도 여러 유형 및 모드의 입력을 활용할 수 있습니다."
 title: "여러 입력 디자인 지침"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
+ms.author: kbridge
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: a433660665eeaa0caad3f380a587de89b8c74441
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 4311ab1c817beaac5a57b12a4426f26ac8710fdf
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="multiple-inputs"></a>여러 입력
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-사람이 서로 커뮤니케이션할 때 음성과 제스처를 결합해서 사용하는 것처럼, 앱을 조작할 때도 여러 유형 및 모드의 입력이 유용할 수 있습니다.
+사람이 서로 커뮤니케이션할 때 목소리와 몸짓을 조합하여 사용하는 것처럼 앱을 조작할 때도 여러 유형 및 모드의 입력을 활용할 수 있습니다.
 
 
 가능한 한 많은 사용자와 장치를 수용하려면 가능한 한 많은 입력 유형(제스처, 음성, 터치, 터치 패드, 마우스 및 키보드)과 작동하도록 앱을 디자인하는 것이 좋습니다. 이렇게 하면 유연성, 유용성 및 접근성이 극대화됩니다.
@@ -42,10 +49,5 @@ ms.openlocfilehash: a433660665eeaa0caad3f380a587de89b8c74441
 사용자가 길게 눌러 사진을 선택한 다음 "사진 보내기"라고 말합니다.
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

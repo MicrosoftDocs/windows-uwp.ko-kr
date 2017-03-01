@@ -3,9 +3,16 @@ author: msatranjr
 title: "C++로 기본적인 Windows 런타임 구성 요소를 만들고 JavaScript 또는 C에서 호출#"
 description: "이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
+ms.sourcegitcommit: 3c073879ab847a3e1af454e0c1550d8af0f78b3e
+ms.openlocfilehash: e02d7fabf6337fa23ab97858046c3b089c39a087
+ms.lasthandoff: 01/19/2017
 
 ---
 
@@ -16,13 +23,13 @@ ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
 
 이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx)를 참조하세요.
 
-## C++ 구성 요소 DLL 만들기
+## <a name="creating-the-c-component-dll"></a>C++ 구성 요소 DLL 만들기
 
 이 예제에서는 구성 요소 프로젝트를 먼저 만들지만 JavaScript 프로젝트를 먼저 만들 수도 있습니다. 순서는 중요하지 않습니다.
 
 구성 요소의 기본 클래스에는 속성 및 메서드 정의의 예와 이벤트 선언이 포함되어 있습니다. 이러한 항목은 작업 방식을 보여 주기 위해서만 제공됩니다. 필수는 아니며, 이 예제에서는 생성된 코드를 고유한 코드로 바꿀 것입니다.
 
-## **C++ 구성 요소 프로젝트를 만들려면**
+## **<a name="to-create-the-c-component-project"></a>C++ 구성 요소 프로젝트를 만들려면**
 
 Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 선택합니다.
 
@@ -32,7 +39,7 @@ Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 
 
 **확인** 단추를 선택합니다.
 
-## **구성 요소에 활성화 가능 클래스를 추가하려면**
+## **<a name="to-add-an-activatable-class-to-the-component"></a>구성 요소에 활성화 가능 클래스를 추가하려면**
 
 활성화 가능 클래스는 **new** 식(Visual Basic의 **New** 또는 C++의 **ref new**)을 사용하여 클라이언트 코드에서 만들 수 있는 클래스입니다. 구성 요소에서 **public ref class sealed**로 선언합니다. 실제로 Class1.h 및 .cpp 파일에는 이미 ref 클래스가 있습니다. 이름을 변경할 수 있지만 이 예제에서는 기본 이름인 Class1을 사용합니다. 필요한 경우 구성 요소에서 추가 ref 클래스 또는 일반 클래스를 정의할 수 있습니다. ref 클래스에 대한 자세한 내용은 [형식 시스템(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822.aspx)을 참조하세요.
 
@@ -47,7 +54,7 @@ Class1.h에 다음 \#include 지시문을 추가합니다.
 
 collection.h는 Windows 런타임에서 정의된 언어 중립 인터페이스를 구현하는 Platform::Collections::Vector 클래스 및 Platform::Collections::Map 클래스 등의 C++ 구체적 클래스에 대한 헤더 파일입니다. amp 헤더는 GPU에서 계산을 실행하는 데 사용됩니다. 동등한 Windows 런타임 항목은 없으며 private이므로 문제가 되지 않습니다. 일반적으로 성능상의 이유로 구성 요소 내에서는 내부적으로 ISO C++ 코드 및 표준 라이브러리를 사용해야 합니다. Windows 런타임 형식으로 표시해야 하는 것은 Windows 런타임 인터페이스뿐입니다.
 
-## 네임스페이스 범위에서 대리자를 추가하려면
+## <a name="to-add-a-delegate-at-namespace-scope"></a>네임스페이스 범위에서 대리자를 추가하려면
 
 대리자는 메서드에 대한 매개 변수 및 반환 형식을 정의하는 구문입니다. 이벤트는 특정 대리자 형식의 인스턴스이며 이벤트를 구독하는 모든 이벤트 처리기 메서드에 대리자에 지정된 서명이 있어야 합니다. 다음 코드는 int를 받아서 void를 반환하는 대리자 형식을 정의합니다. 그런 후에 코드는 이 형식의 public 이벤트를 선언합니다. 이 경우 클라이언트 코드를 통해 이벤트 발생 시 호출되는 메서드를 제공할 수 있습니다.
 
@@ -59,7 +66,7 @@ public delegate void PrimeFoundHandler(int result);
 
 Visual Studio에 붙여넣을 때 코드가 올바르게 정렬되지 않는 경우 Ctrl+K+D를 눌러 전체 파일에 대한 들여쓰기를 수정합니다.
 
-## public 멤버를 추가하려면
+## <a name="to-add-the-public-members"></a>public 멤버를 추가하려면
 
 클래스는 public 메서드 3개와 public 이벤트 1개를 노출합니다. 첫 번째 메서드는 항상 매우 빠르게 실행되기 때문에 동기적입니다. 다른 두 메서드는 시간이 걸릴 수 있으므로 UI 스레드를 차단하지는 않도록 비동기적입니다. 이러한 메서드는 IAsyncOperationWithProgress 및 IAsyncActionWithProgress를 반환합니다. 전자는 결과를 반환하는 비동기 메서드를 정의하고 후자는 void를 반환하는 비동기 메서드를 정의합니다. 이러한 인터페이스를 통해 클라이언트 코드에서 작업 진행률에 대한 업데이트를 받을 수도 있습니다.
 
@@ -78,7 +85,7 @@ public:
         event PrimeFoundHandler^ primeFoundEvent;
 
 ```
-## private 멤버를 추가하려면
+## <a name="to-add-the-private-members"></a>private 멤버를 추가하려면
 
 클래스는 private 멤버 3개를 포함합니다. 숫자 계산에 사용되는 도우미 메서드 2개와 작업자 스레드의 이벤트 호출을 다시 UI 스레드로 마샬링하는 데 사용되는 CoreDispatcher 개체 1개입니다.
 
@@ -88,7 +95,7 @@ private:
         Windows::UI::Core::CoreDispatcher^ m_dispatcher;
 ```
 
-## 헤더 및 네임스페이스 지시문을 추가하려면
+## <a name="to-add-the-header-and-namespace-directives"></a>헤더 및 네임스페이스 지시문을 추가하려면
 
 Class1.cpp에서 다음 #include 지시문을 추가합니다.
 
@@ -107,7 +114,7 @@ using namespace Windows::Foundation;
 using namespace Windows::UI::Core;
 ```
 
-## ComputeResult 구현을 추가하려면
+## <a name="to-add-the-implementation-for-computeresult"></a>ComputeResult 구현을 추가하려면
 
 Class1.cpp에서 다음 메서드 구현을 추가합니다. 이 메서드는 호출 스레드에서 동기적으로 실행되지만 C++ AMP를 사용하여 GPU에서 계산을 병렬화하기 때문에 매우 빠릅니다. 자세한 내용은 C++ AMP 개요를 참조하세요. 결과는 반환 시 Windows::Foundation::Collections::IVector<T>로 암시적으로 변환되는 Platform::Collections::Vector<T> 구체적 형식에 추가됩니다.
 
@@ -141,7 +148,7 @@ IVector<double>^ Class1::ComputeResult(double input)
     return res;
 }
 ```
-## GetPrimesOrdered 및 해당 도우미 메서드 구현을 추가하려면
+## <a name="to-add-the-implementation-for-getprimesordered-and-its-helper-method"></a>GetPrimesOrdered 및 해당 도우미 메서드 구현을 추가하려면
 
 Class1.cpp에서 GetPrimesOrdered 및 is_prime 도우미 메서드 구현을 추가합니다. GetPrimesOrdered는 concurrent_vector 클래스 및 parallel_for 함수 루프를 사용하여 작업을 나누고 프로그램이 실행되는 컴퓨터의 최대 리소스를 사용하여 결과를 생성합니다. 결과가 계산, 저장 및 정렬된 후 Platform::Collections::Vector<T>에 추가되며 클라이언트 코드에 Windows::Foundation::Collections::IVector<T>로 반환됩니다.
 
@@ -211,7 +218,7 @@ IAsyncOperationWithProgress<IVector<int>^, double>^ Class1::GetPrimesOrdered(int
 }
 ```
 
-## GetPrimesUnordered 구현을 추가하려면
+## <a name="to-add-the-implementation-for-getprimesunordered"></a>GetPrimesUnordered 구현을 추가하려면
 
 C++ 구성 요소를 만드는 마지막 단계는 Class1.cpp에 GetPrimesUnordered 구현을 추가하는 것입니다. 이 메서드는 모든 결과를 찾을 때까지 기다리지 않고 발견되는 대로 각 결과를 반환합니다. 각 결과가 이벤트 처리기에 반환되고 실시간으로 UI에 표시됩니다. 다시 진행률 보고자가 사용되는 것을 확인합니다. 이 메서드는 is_prime 도우미 메서드도 사용합니다.
 
@@ -273,11 +280,11 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 }
 ```
 
-## JavaScript 클라이언트 앱 만들기
+## <a name="creating-a-javascript-client-app"></a>JavaScript 클라이언트 앱 만들기
 
 C# 클라이언트를 만들려는 경우 이 섹션을 건너뛸 수 있습니다.
 
-## JavaScript 프로젝트를 만들려면
+## <a name="to-create-a-javascript-project"></a>JavaScript 프로젝트를 만들려면
 
 솔루션 탐색기에서 솔루션 노드의 바로 가기 메뉴를 열고 **추가, 새 프로젝트**를 선택합니다.
 
@@ -295,7 +302,7 @@ WinRT_CPP에 대한 프로젝트 참조를 추가합니다.
 
 가운데 창에서 WinRT_CPP를 선택한 다음 **확인** 단추를 선택합니다.
 
-## JavaScript 이벤트 처리기를 호출하는 HTML을 추가하려면
+## <a name="to-add-the-html-that-invokes-the-javascript-event-handlers"></a>JavaScript 이벤트 처리기를 호출하는 HTML을 추가하려면
 
 default.html 페이지의 <body> 노드에 이 HTML을 붙여 넣습니다.
 
@@ -333,7 +340,7 @@ default.html 페이지의 <body> 노드에 이 HTML을 붙여 넣습니다.
  </div>
 ```
 
-## 스타일을 추가하려면
+## <a name="to-add-styles"></a>스타일을 추가하려면
 
 Default.css에서 본문 스타일을 제거하고 다음 스타일을 추가합니다.
 
@@ -368,7 +375,7 @@ font-size:smaller;
 }
 ```
 
-## DLL 구성 요소를 호출하는 JavaScript 이벤트 처리기를 추가하려면
+## <a name="to-add-the-javascript-event-handlers-that-call-into-the-component-dll"></a>DLL 구성 요소를 호출하는 JavaScript 이벤트 처리기를 추가하려면
 
 default.js 파일의 끝에 다음 함수를 추가합니다. 이러한 함수는 기본 페이지의 단추를 선택할 때 호출됩니다. JavaScript에서 C++ 클래스를 활성화한 다음 해당 메서드를 호출하고 반환 값을 사용하여 HTML 레이블을 채우는 방법을 확인합니다.
 
@@ -450,9 +457,9 @@ args.setPromise(WinJS.UI.processAll().then( function completed() {
 
 F5 키를 눌러 앱을 실행합니다.
 
-## C# 클라이언트 앱 만들기
+## <a name="creating-a-c-client-app"></a>C# 클라이언트 앱 만들기
 
-## C# 프로젝트를 만들려면
+## <a name="to-create-a-c-project"></a>C# 프로젝트를 만들려면
 
 솔루션 탐색기에서 솔루션 노드의 바로 가기 메뉴를 열고 **추가, 새 프로젝트**를 선택합니다.
 
@@ -470,7 +477,7 @@ WinRT_CPP에 대한 프로젝트 참조를 추가합니다.
 
 가운데 창에서 WinRT_CPP를 선택한 다음 **확인** 단추를 선택합니다.
 
-## 사용자 인터페이스를 정의하는 XAML을 추가하려면
+## <a name="to-add-the-xaml-that-defines-the-user-interface"></a>사용자 인터페이스를 정의하는 XAML을 추가하려면
 
 MainPage.xaml의 Grid 요소에 다음 코드를 복사합니다.
 
@@ -492,7 +499,7 @@ MainPage.xaml의 Grid 요소에 다음 코드를 복사합니다.
 </ScrollViewer>
 ```
 
-## 단추에 대한 이벤트 처리기를 추가하려면
+## <a name="to-add-the-event-handlers-for-the-buttons"></a>단추에 대한 이벤트 처리기를 추가하려면
 
 솔루션 탐색기에서 MainPage.xaml.cs를 엽니다. MainPage.xaml 아래에 파일이 중첩되어 있을 수 있습니다. System.Text에 대해 using 지시문을 추가한 다음 MainPage 클래스에 로그 계산에 대한 이벤트 처리기를 추가합니다.
 
@@ -593,25 +600,25 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 앱 실행
+## <a name="running-the-app"></a>앱 실행
 
 솔루션 탐색기에서 프로젝트 노드의 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택하여 C# 프로젝트 또는 JavaScript 프로젝트를 시작 프로젝트로 선택합니다. 그런 다음 디버깅을 사용하여 실행하려면 F5 키를 누르고, 디버깅을 사용하지 않고 실행하려면 Ctrl+F5를 누릅니다.
 
-## 개체 브라우저에서 구성 요소 검사(옵션)
+## <a name="inspecting-your-component-in-object-browser-optional"></a>개체 브라우저에서 구성 요소 검사(옵션)
 
 개체 브라우저에서 .winmd 파일에 정의된 모든 Windows 런타임 형식을 검사할 수 있습니다. 여기에는 플랫폼 네임스페이스와 기본 네임스페이스의 형식이 포함됩니다. 그러나 Platform::Collections 네임스페이스의 형식은 winmd 파일이 아니라 헤더 파일 collections.h에 정의되어 있으므로 개체 브라우저에 표시되지 않습니다.
 
-## **구성 요소를 검사하려면**
+## **<a name="to-inspect-a-component"></a>구성 요소를 검사하려면**
 
 메뉴 모음에서 **보기, 개체 브라우저**(Ctrl+Alt+J)를 선택합니다.
 
 개체 브라우저의 왼쪽 창에서 WinRT\_CPP 노드를 확장하여 구성 요소에 정의된 형식 및 메서드를 표시합니다.
 
-## 디버깅 팁
+## <a name="debugging-tips"></a>디버깅 팁
 
 디버깅 환경을 개선하려면 공용 Microsoft 기호 서버에서 디버깅 기호를 다운로드하세요.
 
-## **디버깅 기호를 다운로드하려면**
+## **<a name="to-download-debugging-symbols"></a>디버깅 기호를 다운로드하려면**
 
 메뉴 모음에서 **도구, 옵션**을 선택합니다.
 
@@ -629,12 +636,7 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 
 솔루션에서 C++ Windows 런타임 구성 요소 프로젝트를 제거하는 경우 JavaScript 프로젝트에서 프로젝트 참조를 수동으로 제거해야 합니다. 이렇게 하지 않으면 이후 디버그 또는 빌드 작업을 수행할 수 없습니다. 필요한 경우 DLL에 대한 어셈블리 참조를 추가할 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [C++로 Windows 런타임 구성 요소 만들기](creating-windows-runtime-components-in-cpp.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

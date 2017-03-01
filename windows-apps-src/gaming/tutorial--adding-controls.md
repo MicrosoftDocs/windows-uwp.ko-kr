@@ -3,25 +3,32 @@ author: mtoepke
 title: "컨트롤 추가"
 description: "이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 컨트롤, 입력"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d70e9ef8efffd2a78f6c49596e716770a9162b5c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 컨트롤 추가
+# <a name="add-controls"></a>컨트롤 추가
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이제 게임 샘플이 3D 게임에서 이동-보기 컨트롤을 구현하는 방법 및 기본 터치, 마우스 및 게임 컨트롤러 컨트롤을 개발하는 방법을 살펴보겠습니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임에서 마우스/키보드, 터치 및 Xbox 컨트롤러 컨트롤을 구현합니다.
 
-## UWP 게임 앱 및 컨트롤
+## <a name="uwp-game-apps-and-controls"></a>UWP 게임 앱 및 컨트롤
 
 
 좋은 UWP 게임은 광범위한 인터페이스를 지원합니다. 플레이어는 실제 단추가 없는 태블릿, Xbox 컨트롤러가 연결된 미디어 PC 또는 고성능 마우스 및 게임용 키보드가 있는 최신 데스크톱 게임 리그에서 Windows 10을 사용할 수 있습니다. 게임 디자인에서 허용하는 경우 실행 중인 게임에서 이러한 장치를 모두 지원해야 합니다.
@@ -30,7 +37,7 @@ ms.openlocfilehash: 49214f3bc14b6a475a77c5dbb7c0f08bb0818df6
 
 컨트롤 및 특히 이동-보기 컨트롤에 대한 자세한 내용은 [게임용 이동-보기 컨트롤](tutorial--adding-move-look-controls-to-your-directx-game.md) 및 [게임용 터치 컨트롤](tutorial--adding-touch-controls-to-your-directx-game.md)을 참조하세요.
 
-## 공용 컨트롤 동작
+## <a name="common-control-behaviors"></a>공용 컨트롤 동작
 
 
 터치 컨트롤 및 마우스/키보드 컨트롤의 핵심 구현은 매우 유사합니다. UWP 앱에서 포인터는 화면에 표시되는 점일 뿐입니다. 마우스를 밀거나 터치 스크린에서 손가락을 밀어 이동할 수 있습니다. 따라서 단일 이벤트 집합을 등록할 수 있으며 플레이어가 포인터를 이동하고 누르는 데 마우스를 사용하는지 터치 스크린을 사용하는지에 대해 걱정하지 않아도 됩니다.
@@ -197,11 +204,11 @@ bool MoveLookController::IsFiring()
 
 플레이어가 게임의 주 창 외부로 포인터를 이동하거나 일시 중지 단추(P 키 또는 Xbox 컨트롤러 시작 단추)를 누르면 게임이 일시 중지되어야 합니다. **MoveLookController**에 누르기가 등록되었으면 **IsPauseRequested** 메서드가 호출될 때 게임 루프에 알립니다. 이때 **IsPauseRequested**에서 **true**를 반환하면 게임 루프에서 **MoveLookController**의 **WaitForPress**를 호출하여 컨트롤러를 **WaitForInput** 상태로 전환합니다. 그러면 **MoveLookController**는 플레이어가 로드할 메뉴 항목 중 하나를 선택할 때까지 기다리거나 게임을 종료하고 **Active** 상태로 돌아갈 때까지 게임 플레이 입력 이벤트 처리를 중지합니다.
 
-[이 섹션의 전체 코드 샘플](#code_sample)을 참조하세요.
+[이 섹션의 전체 코드 샘플](#complete-sample-code-for-this-section)을 참조하세요.
 
 이제 세 가지 컨트롤 유형의 구현에 대해 좀더 자세히 살펴보겠습니다.
 
-## 상대 마우스 컨트롤 구현
+## <a name="implementing-relative-mouse-controls"></a>상대 마우스 컨트롤 구현
 
 
 마우스 이동이 감지되면 해당 이동을 사용하여 카메라의 새 피치와 요를 결정하려고 합니다. 이를 위해 상대 마우스 컨트롤을 구현합니다. 여기서는 이동의 절대 x-y 픽셀 좌표 기록과 반대로 마우스가 이동한 상태 거리(이동의 시작과 정지 사이의 델타)를 처리합니다.
@@ -250,7 +257,7 @@ void MoveLookController::OnMouseMoved(
 }
 ```
 
-## 터치 컨트롤 구현
+## <a name="implementing-touch-controls"></a>터치 컨트롤 구현
 
 
 터치 컨트롤은 가장 복잡하고 적용하려면 가장 많은 미세 조정 작업을 수행해야 하므로 개발이 가장 까다롭습니다. 게임 샘플에서 화면의 오른쪽 아래 사분면에 있는 사각형은 방향 패드로 사용됩니다. 이 공간의 왼쪽과 오른쪽으로 엄지 손가락을 밀면 카메라가 왼쪽과 오른쪽으로 밀리고 위쪽과 아래쪽으로 밀면 카메라가 앞뒤로 이동합니다. 화면의 오른쪽 아래 사분면에 있는 사각형을 누르면 구를 실행할 수 있습니다. 목표(피치 및 요)는 이동 및 실행에 예약되지 않은 화면 부분에서 손가락을 밀어 제어합니다. 손가락을 이동하면 고정된 십자 모양이 있는 카메라도 이동합니다.
@@ -471,7 +478,7 @@ void MoveLookController::OnPointerReleased(
 
 이는 게임 샘플에서 터치 스크린 컨트롤이 구현되는 방식의 기본입니다. 이제 마우스 및 키보드 컨트롤을 살펴보겠습니다.
 
-## 마우스 및 키보드 컨트롤 구현
+## <a name="implementing-mouse-and-keyboard-controls"></a>마우스 및 키보드 컨트롤 구현
 
 
 게임 샘플에서는 다음과 같은 마우스 및 키보드 컨트롤을 구현합니다.
@@ -664,7 +671,7 @@ void MoveLookController::OnPointerReleased(
 
 이제 마지막 컨트롤 유형인 Xbox 컨트롤러를 살펴보겠습니다. 이 컨트롤은 포인터 개체를 사용하지 않으므로 터치 및 마우스 컨트롤과 별개로 처리됩니다.
 
-## Xbox 컨트롤러 컨트롤 구현
+## <a name="implementing-xbox-controller-controls"></a>Xbox 컨트롤러 컨트롤 구현
 
 
 게임 샘플에서 Xbox 컨트롤러 지원은 게임 컨트롤러에 대한 프로그래밍을 간소화하기 위해 설계된 API 집합인 [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053) API 호출을 통해 추가됩니다. 게임 샘플에서는 플레이어 이동에 Xbox 컨트롤러의 왼쪽 아날로그 스틱을 사용하고, 보기 컨트롤에는 오른쪽 아날로그 스틱을, 실행에는 오른쪽 트리거를 사용합니다. 시작 단추를 사용하여 게임을 일시 중지하고 다시 시작합니다.
@@ -805,12 +812,12 @@ void MoveLookController::UpdateGameController()
 
 이 샘플에서 전체 컨트롤 옵션 집합을 구현하는 방법입니다. 또한 좋은 UWP 앱은 광범위한 컨트롤 옵션을 지원하므로 다른 폼 팩터 및 장치를 사용하는 플레이어가 원하는 방식으로 플레이할 수 있습니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 지금까지 오디오를 제외하고 UWP DirectX 게임의 주요 구성 요소를 모두 검토했습니다. 음악과 사운드 효과는 게임에서 중요하므로 [사운드 추가](tutorial--adding-sound.md)에 대해 살펴보겠습니다.
 
-## 이 섹션에 대한 전체 샘플 코드
+## <a name="complete-sample-code-for-this-section"></a>이 섹션에 대한 전체 샘플 코드
 
 
 MoveLookController.h
@@ -1905,7 +1912,7 @@ void MoveLookController::UpdateGameController()
 
  
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-metro-style-directx-game.md)
@@ -1916,10 +1923,5 @@ void MoveLookController::UpdateGameController()
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

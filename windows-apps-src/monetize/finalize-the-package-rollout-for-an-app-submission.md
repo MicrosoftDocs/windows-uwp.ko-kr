@@ -2,18 +2,26 @@
 author: mcleanbyron
 description: "Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 패키지 출시를 마무리합니다."
 title: "Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 마무리"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 패키지 롤아웃, 앱 제출, 완료"
+ms.assetid: c7dd39e6-5162-455a-b03b-1ed76bffcf6e
 translationtype: Human Translation
-ms.sourcegitcommit: 9b76a11adfab838b21713cb384cdf31eada3286e
-ms.openlocfilehash: 5a6bbf5e242b7284fb2a5de66252b354bfa09909
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 6c7fa8fc509faf2c662732e7e6b998d355fcbd66
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 마무리
+# <a name="finalize-the-package-rollout-for-an-app-submission-using-the-windows-store-submission-api"></a>Windows 스토어 제출 API를 사용하여 앱 제출에 대한 패키지 출시 마무리
 
 
 Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플라이트 제출에 대한 [패키지 출시를 마무리](../publish/gradual-package-rollout.md#completing-the-rollout)합니다. Windows 스토어 제출 API를 사용하여 앱 제출을 만드는 프로세스의 절차에 대한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
 
@@ -22,9 +30,9 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플�
 * 개발자 센터 계정의 앱에 대한 제출을 만듭니다. 이 작업은 개발자 센터 대시보드에서 수행하거나 [앱 제출 만들기](create-an-app-submission.md) 메서드를 사용하여 수행할 수 있습니다.
 * 제출에 대한 점진적 패키지 출시를 사용하도록 설정합니다. 이 작업은 [개발자 센터 대시보드](../publish/gradual-package-rollout.md)에서 수행하거나 [Windows 스토어 제출 API를 사용하여](manage-app-submissions.md#manage-gradual-package-rollout) 수행할 수 있습니다.
 
->**참고**  이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
+>**참고**&nbsp;&nbsp;이 메서드는 Windows 스토어 제출 API를 사용할 수 있는 권한이 부여된 Windows 개발자 센터 계정에만 사용할 수 있습니다. 일부 계정은 이 권한을 사용할 수 없습니다.
 
-## 요청
+## <a name="request"></a>요청
 
 이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 매개 변수의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
@@ -35,7 +43,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플�
 <span/>
  
 
-### 요청 헤더
+### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -43,7 +51,7 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플�
 
 <span/>
 
-### 요청 매개 변수
+### <a name="request-parameters"></a>요청 매개 변수
 
 | 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
@@ -52,11 +60,11 @@ Windows 스토어 제출 API에서 이 메서드를 사용하여 패키지 플�
 
 <span/>
 
-### 요청 본문
+### <a name="request-body"></a>요청 본문
 
 이 메서드에 대한 요청 본문을 제공하지 않습니다.
 
-### 요청 예제
+### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 패키지 플라이트 제출에 대한 패키지 출시를 마무리하는 방법을 보여 줍니다.
 
@@ -65,7 +73,7 @@ POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/su
 Authorization: Bearer <your access token>
 ```
 
-## 응답
+## <a name="response"></a>응답
 
 다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문의 값에 대한 자세한 내용은 [패키지 출시 리소스](manage-app-submissions.md#package-rollout-object)를 참조하세요.
 
@@ -79,7 +87,7 @@ Authorization: Bearer <your access token>
 ```
 
 
-## 오류 코드
+## <a name="error-codes"></a>오류 코드
 
 요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
 
@@ -91,14 +99,9 @@ Authorization: Bearer <your access token>
 <span/>
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [점진적 패키지 배포](../publish/gradual-package-rollout.md)
 * [Windows 스토어 제출 API를 사용하여 앱 제출 관리](manage-app-submissions.md)
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

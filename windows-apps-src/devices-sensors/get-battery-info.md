@@ -3,12 +3,19 @@ author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: "배터리 정보 가져오기"
 description: "Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0671ad8deef7c0062172e3a441d206efb15de7dd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f78c828faded1d7efbd82bc41245052ce95862c7
+ms.lasthandoff: 02/07/2017
 
 ---
-# 배터리 정보 가져오기
+# <a name="get-battery-information"></a>배터리 정보 가져오기
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 0671ad8deef7c0062172e3a441d206efb15de7dd
 
 [**Windows.Devices.Power**](https://msdn.microsoft.com/library/windows/apps/Dn895017) 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다. *배터리 보고서*([**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005))는 배터리의 충전, 용량 및 상태 또는 배터리의 집계를 설명합니다. 이 항목에서는 앱에서 배터리 보고서를 가져오고 변경 알림을 받을 수 있는 방법을 보여 줍니다. 코드 예제는 이 항목의 끝에 나열된 기본 배터리 앱에서 발췌한 것입니다.
 
-## 배터리 집계 보고서 가져오기
+## <a name="get-aggregate-battery-report"></a>배터리 집계 보고서 가져오기
 
 
 일부 장치에는 둘 이상의 배터리가 있으며, 각 배터리가 장치의 전체 에너지 용량에 기여하는 정도가 명확하지 않을 수 있습니다. 이때는 [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011) 클래스가 필요합니다. *배터리 집계*는 장치에 연결된 모든 배터리 컨트롤러를 나타내며 전체 단일 [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체를 제공할 수 있습니다.
@@ -42,7 +49,7 @@ private void RequestAggregateBatteryReport()
 }
 ```
 
-## 개별 배터리 보고서 가져오기
+## <a name="get-individual-battery-reports"></a>개별 배터리 보고서 가져오기
 
 개별 배터리에 대한 [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체를 만들 수도 있습니다. [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432) 메서드와 함께 [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getdeviceselector.aspx)를 사용하여 장치에 연결된 모든 배터리 컨트롤러를 나타내는 [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393) 개체의 컬렉션을 가져옵니다. 그런 다음 원하는 **DeviceInformation** 개체의 **Id** 속성을 사용하여 [**FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.fromidasync.aspx) 메서드로 해당 [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)를 만듭니다. 마지막으로 [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport)를 호출하여 개별 배터리 보고서를 가져옵니다.
 
@@ -71,7 +78,7 @@ async private void RequestIndividualBatteryReports()
 }
 ```
 
-## 보고서 세부 정보 액세스
+## <a name="access-report-details"></a>보고서 세부 정보 액세스
 
 [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체는 많은 배터리 정보를 제공합니다. 자세한 내용은 해당 속성에 대한 API 참조를 참조하세요(**Status**([**BatteryStatus**](https://msdn.microsoft.com/library/windows/apps/Dn818458) 열거), [**ChargeRateInMilliwatts**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.chargerateinmilliwatts.aspx), [**DesignCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.designcapacityinmilliwatthours.aspx), [**FullChargeCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours.aspx) 및 [**RemainingCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours)). 이 예제에서는 이 항목의 뒷부분에 나와 있는 기본 배터리 앱에서 사용되는 일부 배터리 보고서 속성을 보여 줍니다.
 
@@ -85,7 +92,7 @@ TextBlock txt6 = new TextBlock { Text = "Remaining energy capacity (mWh): " + re
 ...
 ```
 
-## 보고서 업데이트 요청
+## <a name="request-report-updates"></a>보고서 업데이트 요청
 
 [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004) 개체는 배터리의 충전, 용량 또는 상태가 변경된 경우 [**ReportUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.reportupdated) 이벤트를 트리거합니다. 일반적으로 이는 상태 변경 시 즉시 발생하고, 다른 모든 변경 시 주기적으로 발생합니다. 이 예제에서는 배터리 보고서 업데이트에 등록하는 방법을 보여 줍니다.
 
@@ -95,7 +102,7 @@ Battery.AggregateBattery.ReportUpdated += AggregateBattery_ReportUpdated;
 ...
 ```
 
-## 보고서 업데이트 처리
+## <a name="handle-report-updates"></a>보고서 업데이트 처리
 
 배터리 업데이트가 발생한 경우 [**ReportUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.reportupdated) 이벤트는 해당 [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004) 개체를 이벤트 처리기 메서드로 전달합니다. 그러나 이 이벤트 처리기는 UI 스레드에서 호출되지 않습니다. 이 예제에 표시된 대로 [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/BR208211) 개체를 사용하여 UI 변경 내용을 호출해야 합니다.
 
@@ -126,7 +133,7 @@ async private void AggregateBattery_ReportUpdated(Battery sender, object args)
 }
 ```
 
-## 예제: 기본 배터리 앱
+## <a name="example-basic-battery-app"></a>예제: 기본 배터리 앱
 
 Microsoft Visual Studio에서 다음 기본 배터리 앱을 빌드하여 이러한 API를 테스트합니다. Visual Studio 시작 페이지에서 **새 프로젝트**를 클릭한 다음 **Visual C# &gt; Windows &gt; Universal** 템플릿에서 **빈 앱** 템플릿을 사용하여 새 앱을 만듭니다.
 
@@ -335,10 +342,5 @@ namespace App1
 **팁** [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) 개체에서 숫자 값을 받으려면 **로컬 컴퓨터** 또는 외부 **디바이스**(예: Windows Phone)에서 앱을 디버그합니다. 장치 에뮬레이터에서 디버그하는 경우 **BatteryReport** 개체는 용량 및 속도 속성에 **null**을 반환합니다.
 
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

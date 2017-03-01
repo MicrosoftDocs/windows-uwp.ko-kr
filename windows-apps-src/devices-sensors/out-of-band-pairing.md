@@ -2,17 +2,24 @@
 author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: "대역 외 페어링"
-description: "대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 디바이스에 연결할 수 있습니다."
+description: "대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 장치에 연결할 수 있습니다."
+ms.author: ivorb
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: dc0bad7d8625817cfffcc84f89afeed96a07a21f
+ms.lasthandoff: 02/07/2017
 
 ---
-# 대역 외 페어링
+# <a name="out-of-band-pairing"></a>대역 외 페어링
 
-대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 디바이스에 연결할 수 있습니다. 앱은 [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) 네임스페이스를 사용하고 구체적으로 서식이 지정된 문자열(대역 외 Blob)을 원하는 주변 디바이스에 적합한 **FromIdAsync** 메서드에 전달해야 합니다. **FromIdAsync**를 실행하면 작업이 호출자에게 반환되기 전에 호스트 디바이스가 페어링되고 주변 디바이스에 연결합니다.
+대역 외 페어링을 사용하면 앱이 검색 없이 POS(Point-of-Service) 주변 장치에 연결할 수 있습니다. 앱은 [**Windows.Devices.PointOfService**](https://msdn.microsoft.com/library/windows/apps/windows.devices.pointofservice.aspx) 네임스페이스를 사용하고 구체적으로 서식이 지정된 문자열(대역 외 Blob)을 원하는 주변 디바이스에 적합한 **FromIdAsync** 메서드에 전달해야 합니다. **FromIdAsync**를 실행하면 작업이 호출자에게 반환되기 전에 호스트 디바이스가 페어링되고 주변 디바이스에 연결합니다.
 
-## 대역 외 Blob 형식
+## <a name="out-of-band-blob-format"></a>대역 외 Blob 형식
 
 ```json
     "connectionKind":"Network",
@@ -60,7 +67,7 @@ ms.openlocfilehash: 283f0a0cfc7b3827e70ea79490818bc259d98ad1
 | 현금 출납기 | CashDrawerProtocolProvider.dll |
 | 스캐너 | BarcodeScannerProtocolProvider.dll |
 
-## 사용 예: 네트워크 프린터
+## <a name="usage-example-network-printer"></a>사용 예: 네트워크 프린터
 
 ```csharp
 String oobBlobNetworkPrinter =
@@ -74,7 +81,7 @@ String oobBlobNetworkPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobNetworkPrinter);
 ```
 
-## 사용 예: Bluetooth 프린터
+## <a name="usage-example-bluetooth-printer"></a>사용 예: Bluetooth 프린터
 
 ```csharp
 string oobBlobBTPrinter =
@@ -87,9 +94,4 @@ string oobBlobBTPrinter =
 printer = await PosPrinter.FromIdAsync(oobBlobBTPrinter);
 
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

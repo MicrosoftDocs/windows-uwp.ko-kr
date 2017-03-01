@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: "성능"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 73b19e54b863693aece045e5b653bc0583a676bb
-ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 38a78b8af1555bdb4409c967bd27e5967b5c40aa
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="performance"></a>성능
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다. 이 섹션에서는 성능 워크플로를 구성하고, 애니메이션 결함 및 프레임 속도 문제를 해결하고, 시작 시간과 페이지 탐색 시간 및 메모리 사용량을 조정하는 방법을 설명합니다.
 
@@ -33,10 +40,5 @@ ms.openlocfilehash: b9395e80bca7a46076e20e42fa7ceee5df7cc0d5
 | [파일 액세스 최적화](optimize-file-access.md) | 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP 앱을 만듭니다. |
 | [Windows 런타임 구성 요소 및 interop 최적화](windows-runtime-components-and-optimizing-interop.md) | Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP 구성 요소를 사용하는 UWP 앱을 만듭니다. |
 | [프로파일링 및 성능 도구](tools-for-profiling-and-performance.md) | Microsoft는 UWP 앱의 성능을 개선하는 데 도움이 되는 여러 도구를 제공합니다.|
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

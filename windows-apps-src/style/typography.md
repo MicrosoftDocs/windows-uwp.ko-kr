@@ -1,12 +1,19 @@
 ---
 author: mijacobs
-description: "언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다."
+description: "언어의 시각적 표현인 입력 체계의 주요 작업은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로써 디자인의 밀도 및 복잡성에 큰 영향을 미치고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다."
 title: "입력 체계"
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: e13e9c8b559c16676628ab6e77ddad019a4c22e0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a10d1b164513f9abce48c51bdfe5f6e4c3bdf79d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -14,7 +21,7 @@ ms.openlocfilehash: e13e9c8b559c16676628ab6e77ddad019a4c22e0
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-언어의 시각적인 표현으로써 입력 체계의 주요 작업은 명확하게 하는 것입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
+언어를 시각적으로 표현하는 입력 체계의 핵심은 명확성입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 그러나 입력 체계는 레이아웃 구성 요소로서(디자인의 밀도 및 복잡성에 큰 영향을 미침), 그리고 해당 디자인의 사용자 환경에서도 중요한 역할을 합니다.
 
 ## <a name="typeface"></a>서체
 
@@ -211,9 +218,4 @@ Green shows where all caps should be used. Red shows where it should not.
 * [텍스트 컨트롤](../controls-and-patterns/text-controls.md)
 * [글꼴](fonts.md)
 * [Segoe MDL2 아이콘](segoe-ui-symbol-font.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

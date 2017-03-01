@@ -3,9 +3,16 @@ author: mcleblanc
 description: "Windows Phone Silverlight 앱을 사용하는 개발자는 Windows 10으로 이동하는 과정에서 자신의 기술과 소스 코드를 최대한 활용할 수 있습니다."
 title: "Windows Phone Silverlight에서 UWP로 이동"
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9dc441422637fe6984f0ab0f036b2dfba7d61ec7
-ms.openlocfilehash: 05831f3e357086b338d32e83146d380ca9c78a74
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 06409936f37368351f6c8ad47e50a7d980d522f4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -79,16 +86,13 @@ Windows Phone Silverlight의 XAML UI 프레임워크는 Silverlight 4.0 기반�
 * [Windows 10 개발자를 위한 새로운 기능](https://dev.windows.com/getstarted/whats-new-windows-10)
 * [UWP(유니버설 Windows 플랫폼) 앱 지침](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [C# 또는 Visual Basic을 사용한 UWP(유니버설 Windows 플랫폼) 앱용 로드맵](https://msdn.microsoft.com/library/windows/apps/br229583)
-* [Windows Phone 8 개발자를 위한 다음 계획](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+* [Windows Phone 8 개발자용 추가 사항](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
+
 **잡지 기사**
 * [Visual Studio Magazine: Windows Phone 8.1: 수렴을 위한 큰 도약](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+
 **프레젠테이션**
 * [Windows Phone에서 Windows 8으로 Nokia Music 가져오기](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -1,19 +1,25 @@
 ---
 author: mcleanbyron
-Description: "평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다."
+Description: "체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하면, 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다."
 title: "평가판의 기능 제외 또는 제한"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: "무료 체험 코드 샘플"
+keywords: "windows 10, uwp, 평가판, 앱에서 바로 구매, IAP, Windows.ApplicationModel.Store"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 8b55c837e63792e6da4e684602e79d99ad7cff1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
 
->**참고**  이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여 줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 평가판을 구현하는 것이 좋습니다. 자세한 내용은 [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)을 참조하세요.
+>**참고**&nbsp;&nbsp;이 문서에서는 [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) 네임스페이스의 멤버를 사용하는 방법을 보여줍니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) 네임스페이스의 멤버를 사용하여 평가판을 구현하는 것이 좋습니다. 자세한 내용은 [앱의 평가판 구현](implement-a-trial-version-of-your-app.md)을 참조하세요.
 
 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. 코딩을 시작하기 전에 제한할 기능을 결정한 다음 정식 라이선스를 구입한 다음에만 해당 기능이 작동하도록 해야 합니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
@@ -100,7 +106,7 @@ ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
 
 시뮬레이트된 라이선스 서버로 앱을 테스트한 후, 인증을 위해 앱을 스토어로 제출하기 전에 다음 코드 샘플과 같이 **CurrentAppSimulator**를 **CurrentApp**으로 바꾸세요.
 
->**중요**  앱을 스토어로 제출할 때 앱에서 **CurrentApp** 개체를 사용해야 합니다. 그러지 않으면 앱 인증에 실패합니다.
+>**중요**&nbsp;&nbsp;앱을 스토어로 제출할 때 앱에서 **CurrentApp** 개체를 사용해야 합니다. 그러지 않으면 앱 인증에 실패합니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
@@ -120,9 +126,4 @@ ms.openlocfilehash: 0d377677237264e2dad290c7d49c47800c255138
  
 
  
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: "이 섹션의 Java 코드 예제를 사용하여 Windows 스토어 제출 API를 사용하는 방법에 대해 자세히 알아봅니다."
 title: "Windows 스토어 제출 API에 대한 Java 코드 예제"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Windows 스토어 제출 API, 코드 예제"
 translationtype: Human Translation
-ms.sourcegitcommit: ccc7cfea885cc9c8803cfc70d2e043192a7fee84
-ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9bf6885129176a75265d073c3f92b9f899bc265d
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -66,7 +73,7 @@ ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
 
 1. 먼저 해당 메서드를 통해 [지정된 앱의 데이터 가져오기](get-an-app.md) 작업을 수행합니다.
 2. 다음으로 [앱의 현재 보류 중인 제출을 삭제](delete-an-app-submission.md)합니다(보류 중인 제출이 있을 경우).
-3. 그런 다음 [앱에 대한 새 제출 만들기](create-an-app-submission.md)를 진행합니다(새 제출은 마지막으로 게시된 제출의 사본).
+3. 그런 다음 [앱에 대한 새 제출 만들기](create-an-app-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 새 제출에 대한 세부 정보를 변경하고 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
 5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-app-submission.md)한 다음 [커밋](commit-an-app-submission.md)합니다.
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-app-submission.md)을 수행합니다.
@@ -83,7 +90,7 @@ ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
 3. 그런 다음 [추가 기능에 대한 새 제출 만들기](create-an-add-on-submission.md)를 진행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 제출할 아이콘이 포함된 ZIP 보관 파일을 Azure Blob Storage에 업로드합니다.
 5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-an-add-on-submission.md)한 다음 [커밋](commit-an-add-on-submission.md)합니다.
-6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-an-add-on-submission.md)합니다.
+6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태 확인](get-status-for-an-add-on-submission.md)합니다.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
 
@@ -94,7 +101,7 @@ ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
 
 1. 먼저 이 메서드는 [지정된 패키지 플라이트의 데이터 가져오기](get-a-flight.md) 작업을 수행합니다.
 2. 다음으로 [패키지 플라이트의 현재 보류 중인 제출을 삭제](delete-a-flight-submission.md)합니다(보류 중인 제출이 있을 경우).
-3. 그런 다음 [패키지 플라이트에 대한 새 제출 만들기](create-a-flight-submission.md)를 진행합니다(새 제출은 마지막으로 게시된 제출의 사본).
+3. 그런 다음 [패키지 플라이트에 대한 새 제출 만들기](create-a-flight-submission.md) 작업을 수행합니다(새 제출은 마지막으로 게시된 제출의 사본).
 4. 제출할 새 패키지를 Azure Blob Storage에 업로드합니다.
 5. 다음으로 Windows 개발자 센터에 새 제출을 [업데이트](update-a-flight-submission.md)한 다음 [커밋](commit-a-flight-submission.md)합니다.
 6. 마지막으로 제출이 성공적으로 커밋될 때까지 정기적으로 [새 제출의 상태를 확인](get-status-for-a-flight-submission.md)합니다.
@@ -121,9 +128,4 @@ ms.openlocfilehash: 7f7de7c7d9fa9131d38da48e13ce449f4440962d
 ## <a name="related-topics"></a>관련 항목
 
 * [Windows 스토어 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

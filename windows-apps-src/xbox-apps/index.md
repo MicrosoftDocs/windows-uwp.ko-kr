@@ -2,13 +2,21 @@
 author: Mtoepke
 title: "Xbox One의 UWP"
 description: "Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱을 빌드하는 방법"
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 translationtype: Human Translation
-ms.sourcegitcommit: 7a53a7a9e786ebe04963a827bdfbc5beb69819eb
-ms.openlocfilehash: d46add99bccd41b4d278e58f79b356714fa4a038
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 36d19f660bc3c03377f864b1d659a19396917130
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Xbox One의 UWP
+# <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 
 Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱의 빌드를 시작합니다.
 
@@ -34,14 +42,9 @@ Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. [ID@Xbox](ht
 |[Xbox One에서 개발자 모드 사용 안 함](devkit-deactivation.md)| Xbox One에서 개발자 모드를 사용하지 않도록 설정하는 방법을 설명합니다. |
 |[Xbox One에서 아직 지원되지 않는 UWP 기능](http://go.microsoft.com/fwlink/p/?LinkId=760755)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|  
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [Xbox One의 UWP 앱 개요](http://go.microsoft.com/fwlink/p/?LinkId=780786) 
 - [Windows 10 UWP 앱 시작 자동화](automate-launching-uwp-apps.md)
 - [게임 개발용 CPUSets](cpusets-games.md)
   
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

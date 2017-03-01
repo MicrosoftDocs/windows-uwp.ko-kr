@@ -2,13 +2,21 @@
 author: WilliamsJason
 title: "디바이스 포털 느슨한 폴더 등록 API 참조"
 description: "프로그래밍 방식으로 느슨한 폴더 등록 API에 액세스하는 방법을 알아봅니다."
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 translationtype: Human Translation
-ms.sourcegitcommit: ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd
-ms.openlocfilehash: 42dc5e16065f1a2252f63743269970cf85fb0b95
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 5d1926655f44fb54b07e7222911c94ef0e526cd0
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 느슨한 폴더에 앱 등록  
+# <a name="register-an-app-in-a-loose-folder"></a>느슨한 폴더에 앱 등록  
 
 **요청**
 
@@ -58,10 +66,5 @@ HTTP 상태 코드      | 설명
 두 번째 방법은 /api/filesystem/apps/file에 대해 POST를 수행하여 개별 파일을 올바른 위치로 복사하는 것입니다. 여기서 knownfolderid는 DevelopmentFiles이고, packagefullname은 비어 있고, 파일 이름 및 경로를 올바르게 제공해야 합니다(경로는 LooseApps로 시작해야 함).
 
 세 번째 방법은 [/api/app/packagemanager/upload](wdp-folder-upload.md)를 통해 전체 폴더를 한 번에 복사하는 것입니다. destinationFolder는 d:\developmentfiles\looseapps 아래에 배치할 폴더의 이름이고 페이로드는 디렉터리 내용의 다중 파트 준수 http 본문입니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

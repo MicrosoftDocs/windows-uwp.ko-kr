@@ -3,20 +3,27 @@ author: mcleanbyron
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 광고 성능 집계 데이터를 가져옵니다."
 title: "광고 성과 데이터 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 광고, 성과"
 translationtype: Human Translation
-ms.sourcegitcommit: 67845c76448ed13fd458cb3ee9eb2b75430faade
-ms.openlocfilehash: 551416caf19e16b6d6ab95fcd98aa8fbbb1587f1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a9d6226ebb06c1a9322ab44c3001a8b86aab1e5d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 광고 성과 데이터 가져오기
+# <a name="get-ad-performance-data"></a>광고 성과 데이터 가져오기
 
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택 필터 동안 응용 프로그램의 광고 성능 집계 데이터를 가져옵니다. 이 메서드는 JSON 형식의 데이터를 반환합니다.
 
 이 메서드는 Windows 개발자 센터 대시보드의 [광고 성과 보고서](../publish/advertising-performance-report.md)에서 제공하는 데이터와 동일합니다.
 
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 
 이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
@@ -26,10 +33,10 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 자세한 내용은 [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)를 참조하세요.
 
-## 요청
+## <a name="request"></a>요청
 
 
-### 요청 구문
+### <a name="request-syntax"></a>요청 구문
 
 | 메서드 | 요청 URI                                                              |
 |--------|--------------------------------------------------------------------------|
@@ -37,7 +44,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 <span />
 
-### 요청 헤더
+### <a name="request-header"></a>요청 헤더
 
 | 헤더        | 유형   | 설명           |
 |---------------|--------|--------------------------------|
@@ -45,7 +52,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 <span />
 
-### 요청 매개 변수
+### <a name="request-parameters"></a>요청 매개 변수
 
 특정 앱에 대한 광고 성과 데이터를 검색하려면 *applicationId* 매개 변수를 사용합니다. 개발자 계정과 연결된 모든 앱에 대한 광고 성과 데이터를 검색하려면 *applicationId* 매개 변수를 생략합니다.
 
@@ -63,7 +70,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 <span />
  
-### 필드 필터링
+### <a name="filter-fields"></a>필드 필터링
 
 요청 본문의 *filter* 매개 변수에는 응답에서 행을 필터링하는 하나 이상의 문이 포함되어 있습니다. 각 문에는 **eq** 또는 **ne** 연산자와 연결된 필드 및 값이 포함되어 있으며 문은 **and** 또는 **or**를 사용하여 결합될 수 있습니다. 다음은 *filter* 매개 변수에 대한 예제입니다.
 
@@ -82,7 +89,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 
 <span /> 
 
-### 요청 예제
+### <a name="request-example"></a>요청 예제
 
 다음 예제에서는 광고 성과 데이터를 가져오는 데 필요한 몇 가지 요청을 보여 줍니다. *applicationId* 값을 앱의 스토어 ID로 바꿉니다.
 
@@ -94,10 +101,10 @@ GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/adsperformance?appl
 Authorization: Bearer <your access token>
 ```
 
-## 응답
+## <a name="response"></a>응답
 
 
-### 응답 본문
+### <a name="response-body"></a>응답 본문
 
 | 값      | 유형   | 설명                                                                                                                                                                                                                                                                            |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,7 +113,7 @@ Authorization: Bearer <your access token>
 | TotalCount | int    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.                                                                                                                                                                                                                             |
 
 <span id="ad-performance-values" />
-### 광고 성과 값
+### <a name="ad-performance-values"></a>광고 성과 값
 
 *값* 배열의 요소에는 다음 값이 포함됩니다.
 
@@ -130,7 +137,7 @@ Authorization: Bearer <your access token>
 
 <span />
 
-### 응답 예제
+### <a name="response-example"></a>응답 예제
 
 다음 예제에서는 이 요청에 대한 예제 JSON 응답 본문을 보여 줍니다.
 
@@ -172,13 +179,8 @@ Authorization: Bearer <your access token>
 
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [광고 성과 보고서](../publish/advertising-performance-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

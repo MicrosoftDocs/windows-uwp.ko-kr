@@ -1,11 +1,18 @@
 ---
 author: mcleanbyron
-ms.assetid: 
+ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 앱의 특정 오류에 대한 자세한 데이터를 가져올 수 있습니다."
 title: "앱에서 오류에 대한 세부 정보 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 오류, 세부 정보"
 translationtype: Human Translation
-ms.sourcegitcommit: 767097f068630e5ec171415c05d6dc395c8b26b3
-ms.openlocfilehash: cd72e58ec252c556cf0f2e5ce071744e8fac6c9e
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 1aaf5b6864c678d26289270be6a9ad96f5b5e004
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -160,9 +167,4 @@ Authorization: Bearer <your access token>
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱에서 오류에 대한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

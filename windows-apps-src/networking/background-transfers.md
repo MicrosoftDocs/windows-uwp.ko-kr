@@ -3,13 +3,20 @@ author: DelfCo
 description: "백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다."
 title: "백그라운드 전송"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 177ada6ea8934ca74636454946dfa9c450285167
-ms.openlocfilehash: f8548c85e571d3f0f72f775af4ca40d85e86c163
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 26cf0e8330b9a57d082de7b7255a86ddde3b77d4
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 백그라운드 전송
+# <a name="background-transfers"></a>백그라운드 전송
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -26,18 +33,18 @@ ms.openlocfilehash: f8548c85e571d3f0f72f775af4ca40d85e86c163
 
 빠르게 완료되는 작은 리소스를 다운로드하는 경우 백그라운드 전송 대신 [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) API를 사용해야 합니다.
 
-## Windows.Networking.BackgroundTransfer 사용
+## <a name="using-windowsnetworkingbackgroundtransfer"></a>Windows.Networking.BackgroundTransfer 사용
 
 
-### 백그라운드 전송 기능은 어떻게 작동하나요?
+### <a name="how-does-the-background-transfer-feature-work"></a>백그라운드 전송 기능은 어떻게 작동하나요?
 
 앱에서 백그라운드 전송을 사용하여 전송을 시작하면 [**BackgroundDownloader**](https://msdn.microsoft.com/library/windows/apps/br207126) 또는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) 클래스 개체를 사용하여 요청이 구성 및 초기화됩니다. 각 전송 작업은 호출 앱과는 별도로 시스템에서 개별적으로 처리됩니다. 앱의 UI를 통해 사용자에게 상태를 제공하려는 경우 진행률 정보를 사용할 수 있으며, 전송 중에도 앱이 일시 중지, 다시 시작 또는 취소되거나 데이터를 읽을 수 있습니다. 시스템에서 전송을 처리하는 방법에서는 스마트 전원 사용이 이루어지며, 연결된 앱에서 앱 일시 중단, 종료 또는 갑작스러운 네트워크 상태 변경 등의 이벤트 발생 시 생길 수 있는 문제가 방지됩니다.
 
-### 백그라운드 전송을 사용하여 인증된 파일 요청 수행
+### <a name="performing-authenticated-file-requests-with-background-transfer"></a>백그라운드 전송을 사용하여 인증된 파일 요청 수행
 
 백그라운드 전송은 기본 서버 및 프록시 자격 증명, 쿠키를 지원하는 방법을 제공하는 것은 물론, 각 전송 작업에 대한 사용자 지정 HTTP 헤더 사용([**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)를 통해)도 지원합니다.
 
-### 이 기능은 네트워크 상태 변경 또는 예기치 못한 종료 시 어떻게 대응하나요?
+### <a name="how-does-this-feature-adapt-to-network-status-changes-or-unexpected-shutdowns"></a>이 기능은 네트워크 상태 변경 또는 예기치 못한 종료 시 어떻게 대응하나요?
 
 백그라운드 전송 기능은 네트워크 상태 변경 발생 시 각 전송 작업에 대해 일관된 환경을 유지 관리하여, [연결](https://msdn.microsoft.com/library/windows/apps/hh452990) 기능이 제공하는 연결 및 통신사 요금제 상태 정보를 지능적으로 활용합니다. 네트워크 시나리오별 동작을 정의하기 위해 앱은 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 정의된 값을 사용하여 각 작업에 대한 비용 정책을 설정합니다.
 
@@ -45,7 +52,7 @@ ms.openlocfilehash: f8548c85e571d3f0f72f775af4ca40d85e86c163
 
 백그라운드 전송 기능은 네트워크 상태 변경을 처리하는 자체 메커니즘을 가지고 있지만, 네트워크에 연결된 앱에 대한 다른 일반적인 연결 고려 사항도 있습니다. 자세한 내용은 [사용 가능한 네트워크 연결 정보 활용](https://msdn.microsoft.com/library/windows/apps/hh452983)을 읽어보세요.
 
-> **참고** 모바일 디바이스에서 실행되는 앱에는 연결 형식, 로밍 상태 및 사용자의 데이터 요금제에 따라 전송되는 데이터 양을 사용자가 모니터링하고 제한할 수 있는 기능이 있습니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
+> **참고**  모바일 장치에서 실행되는 앱에는 연결 형식, 로밍 상태 및 사용자의 데이터 요금제에 따라 전송되는 데이터 양을 사용자가 모니터링하고 제한할 수 있는 기능이 있습니다. 이 때문에 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)에 전송이 진행 중으로 표시되는 경우에도 휴대폰에서 백그라운드 전송이 일시 중지될 수도 있습니다.
 
 다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
 
@@ -59,14 +66,14 @@ ms.openlocfilehash: f8548c85e571d3f0f72f775af4ca40d85e86c163
 
  
 
-## 파일 업로드
+## <a name="uploading-files"></a>파일 업로드
 
 
 백그라운드 전송을 사용할 경우 업로드는 작업을 다시 시작하거나 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **UploadOperation**별로 자동으로 처리되며 업로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 또한 [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 업로드를 시작할지를 나타냅니다.
 
 다음 예에서는 기본 업로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
 
-### 단일 파일 업로드
+### <a name="uploading-a-single-file"></a>단일 파일 업로드
 
 업로드 만들기는 [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140)로 시작합니다. 이 클래스는 결과 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) 개체를 만들기 전에 앱에서 업로드를 구성할 수 있는 방법을 제공합니다. 다음 예에서는 필요한 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 및 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) 개체를 사용하여 이 작업을 수행하는 방법을 보여 줍니다.
 
@@ -94,7 +101,7 @@ promise = upload.startAsync().then(complete, error, progress);
 
 비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
 
-### 여러 파일 업로드
+### <a name="uploading-multiple-files"></a>여러 파일 업로드
 
 **파일 및 업로드 대상 식별**
 
@@ -160,7 +167,7 @@ function uploadFiles() {
      };
 ```
 
-### 중단된 업로드 작업 다시 시작
+### <a name="restarting-interrupted-upload-operations"></a>중단된 업로드 작업 다시 시작
 
 [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 장치 리소스를 계속해서 차지하게 됩니다.
 
@@ -172,7 +179,7 @@ function uploadFiles() {
 
     [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "지속형 작업 열거")]
 
-## 파일 다운로드
+## <a name="downloading-files"></a>파일 다운로드
 
 백그라운드 전송을 사용할 경우 각 다운로드는 작업을 일시 중지, 다시 시작 및 취소하는 데 사용된 많은 컨트롤 메서드를 노출하는 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)으로 존재합니다. 앱 이벤트(예: 일시 중단 또는 종료) 및 연결 변경은 **DownloadOperation**별로 자동으로 처리되며 다운로드는 앱 일시 중단 또는 일시 중지 중에도 계속되며 앱 종료 후에도 유지됩니다. 모바일 네트워크 시나리오의 경우 [**CostPolicy**](https://msdn.microsoft.com/library/windows/apps/hh701018) 속성을 설정하여 데이터 통신 연결 네트워크로 인터넷에 연결한 동안 앱에서 다운로드를 시작하거나 계속할지를 나타냅니다.
 
@@ -180,7 +187,7 @@ function uploadFiles() {
 
 다음 예에서는 기본 다운로드를 만들고 초기화하는 방법과 이전 앱 세션의 지속형 작업을 열거 및 다시 시도하는 방법을 안내합니다.
 
-### 백그라운드 전송 파일 다운로드 구성 및 시작
+### <a name="configure-and-start-a-background-transfer-file-download"></a>백그라운드 전송 파일 다운로드 구성 및 시작
 
 다음 예에서는 URI 및 파일 이름을 나타내는 문자열을 사용하여 [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체 및 요청한 파일을 포함할 [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)을 만들 수 있는 방법을 보여 줍니다. 이 예에서 새 파일은 미리 정의된 위치에 자동으로 배치됩니다. 또는 [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)를 사용하여 사용자가 장치에서 파일을 저장할 위치를 나타내도록 할 수 있습니다. [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)에 콜백을 다시 할당하기 위해 호출되는 **load** 메서드는 앱 종료 기간 동안 지속될 경우 이 섹션의 뒷 부분에서 정의하는 DownloadOp 클래스에 있습니다.
 
@@ -194,13 +201,13 @@ promise = download.startAsync().then(complete, error, progress);
 
 비동기 메서드 호출 뒤에 then 문이 오며, 비동기 메서드 호출에서 결과가 반환되면 호출되는, 앱에 의해 정의된 메서드를 나타냅니다. 이 프로그래밍 패턴에 대한 자세한 내용은 [Promises를 사용하는 JavaScript의 비동기 프로그래밍](http://msdn.microsoft.com/library/windows/apps/hh464930.aspx)을 참조하세요.
 
-### 작업 컨트롤 메서드 추가
+### <a name="adding-additional-operation-control-methods"></a>작업 컨트롤 메서드 추가
 
 제어 수준은 추가 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154) 메서드를 구현하여 높일 수 있습니다. 예를 들어 위의 예에 다음 코드를 추가하여 다운로드 취소 기능을 적용할 수 있습니다.
 
 [!code-js[uploadFile](./code/backgroundtransfer/download_quickstart/js/main.js#Snippetdownload_quickstart_B)]
 
-### 시작할 때 지속형 작업 열거
+### <a name="enumerating-persisted-operations-at-start-up"></a>시작할 때 지속형 작업 열거
 
 [**DownloadOperation**](https://msdn.microsoft.com/library/windows/apps/br207154)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 이러한 이벤트가 발생하기 이전에 앱이 종료될 경우 다운로드는 일시 중지되고 백그라운드에서 지속됩니다. 다음 예에서는 지속형 다운로드를 새 앱 세션에서 다시 사용하는 방법을 보여 줍니다.
 
@@ -214,7 +221,7 @@ promise = download.startAsync().then(complete, error, progress);
 
 1.  이제 채워진 목록을 사용하여 보류 중인 작업을 다시 시작할 수 있습니다.
 
-## 사후 처리
+## <a name="post-processing"></a>사후 처리
 
 Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우에도 백그라운드 전송 완료 시 응용 프로그램 코드를 실행하는 기능입니다. 예를 들어 앱을 시작할 때마다 새 동영상을 검색하는 대신 영화 다운로드가 완료된 후 앱에서 사용 가능한 동영상 목록을 업데이트할 수 있습니다. 또는 앱에서 다른 서버나 포트를 다시 사용하여 실패한 파일 전송을 처리할 수 있습니다. 사후 처리는 성공한 전송과 실패한 전송 모두에 대해 호출되므로 이를 사용하여 사용자 지정 오류 처리 및 다시 시도 논리를 구현할 수 있습니다.
 
@@ -270,7 +277,7 @@ Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우�
 
 사후 처리는 포그라운드 완료 처리기를 대체하지 않습니다. 앱에서 포그라운드 완료 처리기를 정의한 경우 앱이 실행 중일 때 파일 전송이 완료되면 포그라운드 완료 처리기와 백그라운드 완료 처리기가 둘 다 호출됩니다. 포그라운드 작업과 백그라운드 작업이 호출되는 순서는 보장되지 않습니다. 둘 다 정의한 경우 두 작업이 제대로 작동하고 동시에 실행될 때 서로 간섭하지 않는지 확인해야 합니다.
 
-## 요청 시간 제한
+## <a name="request-timeouts"></a>요청 시간 제한
 
 두 가지 주요 연결 시간 제한 시나리오를 고려해야 합니다.
 
@@ -278,9 +285,9 @@ Windows 10의 한 가지 새로운 기능은 앱이 실행되지 않는 경우�
 
 -   연결이 설정되면 2분 이내에 응답을 받지 못한 모든 HTTP 요청 메시지가 중단됩니다.
 
-> **참고** 두 경우 모두 인터넷 연결이 있고 백그라운드 전송에서 요청을 최대 세 번까지 자동으로 다시 시도한다고 가정합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
+> **참고**  두 경우 모두 인터넷 연결이 있고 백그라운드 전송에서 요청을 최대 세 번까지 자동으로 다시 시도한다고 가정합니다. 인터넷 연결이 검색되지 않는 경우 추가 요청은 인터넷에 연결될 때까지 대기합니다.
 
-## 디버깅 지침
+## <a name="debugging-guidance"></a>디버깅 지침
 
 Microsoft Visual Studio에서 디버깅 세션을 중지하는 것은 앱을 닫는 것과 같습니다. PUT 업로드가 일시 중지되고 POST 업로드가 종료됩니다. 디버깅 중에도 앱이 지속형 업로드를 열거한 다음 다시 시작하거나 취소해야 합니다. 예를 들어 해당 디버그 세션의 이전 작업에 관심이 없는 경우 앱을 시작할 때 앱에서 열거된 지속형 업로드 작업을 취소하도록 할 수 있습니다.
 
@@ -298,11 +305,11 @@ Visual Studio를 사용한 네 가지 시나리오에서 이 문제가 발생할
 접근 권한 값을 추가하거나 제거하는 매니페스트 업데이트를 비롯한 정기 앱 서비스는 앱의 최종 사용자 배포에서 이 문제를 트리거하지 않습니다.
 이 문제를 해결하려면 앱의 모든 버전을 완전히 제거하고 새로운 언어, 아키텍처, 문화권 또는 접근 권한 값으로 다시 배포합니다. **시작** 화면이나 PowerShell 및 **Remove-AppxPackage** cmdlet을 사용하여 이 작업을 수행할 수 있습니다.
 
-## Windows.Networking.BackgroundTransfer의 예외
+## <a name="exceptions-in-windowsnetworkingbackgroundtransfer"></a>Windows.Networking.BackgroundTransfer의 예외
 
 잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
 
-**.NET:** [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 형식은 C# 및 VB에서 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)로 표시됩니다.
+**.NET:  **[**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 형식은 C# 및 VB에서 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)로 표시됩니다.
 
 C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 클래스와 [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx) 메서드 중 하나를 통해 URI가 생성되기 전에 앱 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
 
@@ -313,10 +320,5 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 [**Windows.Networking.backgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242) 네임스페이스의 비동기 메서드에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. [**BackgroundTransferError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701093) 메서드는 백그라운드 전송 작업의 네트워크 오류를 [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818) 열거형 값으로 변환하는 데 사용됩니다. 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 또는 FTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 매개 변수 유효성 검사 오류의 경우 앱은 또한 예외에서 **HRESULT**를 사용하여 예외의 원인이 된 오류에 대한 더 자세한 정보를 알 수 있습니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

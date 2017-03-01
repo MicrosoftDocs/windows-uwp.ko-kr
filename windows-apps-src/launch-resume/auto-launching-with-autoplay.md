@@ -1,25 +1,32 @@
 ---
 author: TylerMSFT
 title: "자동 실행을 사용한 자동 시작"
-description: "자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다."
+description: "자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어와 같은 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다."
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 2c7dc2ad19867c9f721f7f4cc51c8a7096bc9501
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 60d4e40d056671f19149a031eb7774809060729e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
+# <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행을 사용한 자동 시작
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
+**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어와 같은 볼륨 이외의 장치나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
 
-> **참고** 디바이스 제조업체이며 해당 [Windows 스토어 디바이스 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381)을 디바이스의 **자동 실행** 처리기로 연결하려는 경우 디바이스 메타데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Windows 스토어 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
+> **참고**  장치 제조업체이며 해당 [Windows 스토어 장치 앱](http://go.microsoft.com/fwlink/p/?LinkID=301381)을 장치의 **자동 실행** 처리기로 연결하려는 경우 장치 메타데이터에서 앱을 식별할 수 있습니다. 자세한 내용은 [Windows 스토어 장치 앱의 자동 실행](http://go.microsoft.com/fwlink/p/?LinkId=306684)을 참조하세요.
 
-## 콘텐츠 자동 실행을 위해 등록
+## <a name="register-for-autoplay-content"></a>콘텐츠 자동 실행을 위해 등록
 
 **자동 실행** 콘텐츠 이벤트에 대한 옵션으로 앱을 등록할 수 있습니다. **자동 실행** 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 장치가 PC에 삽입될 때 발생합니다. 여기서는 카메라에서 볼륨 장치가 삽입될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다.
 
@@ -35,7 +42,7 @@ ms.openlocfilehash: 2c7dc2ad19867c9f721f7f4cc51c8a7096bc9501
  
 파일이 근접 연결을 사용하여 공유되는 경우 **FileActivatedEventArgs** 개체의 **Files** 속성에 모든 공유 파일이 있는 루트 폴더에 대한 참조가 포함됩니다.
 
-### 1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
+### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
 
 1.  Microsoft Visual Studio를 열고 **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **Visual C#** 섹션의 **Windows** 아래에서 **비어 있는 앱(범용 Windows)**을 선택합니다. 앱의 이름을 **AutoPlayDisplayOrCopyImages**로 지정하고 **확인**을 클릭합니다.
 2.  Package.appxmanifest 파일을 열고 **기능** 탭을 선택합니다. **이동식 저장소** 및 **사진 라이브러리** 기능을 선택합니다. 이렇게 하면 앱이 카메라 메모리용 이동식 저장 장치와 로컬 사진에 액세스할 수 있습니다.
@@ -64,7 +71,7 @@ ms.openlocfilehash: 2c7dc2ad19867c9f721f7f4cc51c8a7096bc9501
 | 작업 표시 이름 | Copy Pictures Into Library(사진을 라이브러리로 복사) |
 | 콘텐츠 이벤트       | ShowPicturesOnArrival      |
 
-### 2단계: XAML UI 추가
+### <a name="step-2-add-xaml-ui"></a>2단계: XAML UI 추가
 
 MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
@@ -76,7 +83,7 @@ MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추�
         Margin="260,20,0,0" Height="280" Width="100"/>
 ```
 
-### 3단계: 초기화 코드 추가
+### <a name="step-3-add-initialization-code"></a>3단계: 초기화 코드 추가
 
 이 단계의 코드는 **OnFileActivated** 이벤트 중 앱에 전달된 시작 인수에 중 하나인 **Verb** 속성에서 동사 값을 확인합니다. 그러면 코드는 사용자가 선택한 옵션과 관련된 메서드를 호출합니다. 카메라 메모리 이벤트의 경우 자동 실행은 카메라 저장소의 루트 폴더를 앱에 전달합니다. **Files** 속성의 첫 번째 요소에서 이 폴더를 검색할 수 있습니다.
 
@@ -107,9 +114,9 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **참고** `DisplayImages` 및 `CopyImages` 메서드는 다음 단계에서 추가됩니다.
+> **참고**  `DisplayImages` 및 `CopyImages` 메서드는 다음 단계에서 추가됩니다.
 
-### 4단계: 이미지 표시 코드 추가
+### <a name="step-4-add-code-to-display-images"></a>4단계: 이미지 표시 코드 추가
 
 MainPage.xaml.cs 파일에서 **MainPage** 클래스에 다음 코드를 추가합니다.
 
@@ -169,7 +176,7 @@ private async void WriteMessageText(string message, bool overwrite = false)
 }
 ```
 
-### 5단계: 이미지 복사 코드 추가
+### <a name="step-5-add-code-to-copy-images"></a>5단계: 이미지 복사 코드 추가
 
 MainPage.xaml.cs 파일에서 **MainPage** 클래스에 다음 코드를 추가합니다.
 
@@ -215,24 +222,24 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 }
 ```
 
-### 6단계: 앱 빌드 및 실행
+### <a name="step-6-build-and-run-the-app"></a>6단계: 앱 빌드 및 실행
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 카메라 메모리 카드나 카메라의 다른 저장 장치를 PC에 삽입합니다. 그런 다음 자동 실행 옵션 목록에서 package.appxmanifest 파일에 지정한 콘텐츠 이벤트 옵션 중 하나를 선택합니다. 이 샘플 코드에서는 카메라 메모리 카드의 DCIM 폴더에 있는 사진을 표시하거나 복사하기만 합니다. 카메라 메모리 카드에서 사진을 AVCHD 또는 PRIVATE\\ACHD 폴더에 저장하는 경우 그에 따라 코드를 업데이트해야 합니다.
-    **참고** 카메라 메모리 카드가 없는 경우 루트에 **DCIM**이라는 폴더가 있고 DCIM 폴더에 이미지가 포함된 하위 폴더가 있는 경우 플래시 드라이브를 사용할 수 있습니다.
+    **참고**  카메라 메모리 카드가 없는 경우 루트에 **DCIM**이라는 폴더가 있고 DCIM 폴더에 이미지가 포함된 하위 폴더가 있는 경우 플래시 드라이브를 사용할 수 있습니다.
 
-## 장치 자동 실행을 위해 등록
+## <a name="register-for-an-autoplay-device"></a>장치 자동 실행을 위해 등록
 
 
 앱을 **자동 실행** 장치 이벤트에 대한 옵션으로 등록할 수 있습니다. **자동 실행** 장치 이벤트는 장치가 PC에 연결될 때 발생합니다.
 
 여기에서는 카메라가 PC에 연결될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다. 앱은 **WPD\\ImageSourceAutoPlay** 이벤트에 대한 처리기로 등록됩니다. 이는 카메라 및 기타 이미징 장치가 MTP를 사용하는 ImageSource임을 알릴 경우 WPD(Windows 휴대용 장치)에서 발생하는 일반적인 이벤트입니다. 자세한 내용은 [Windows 휴대용 장치](https://msdn.microsoft.com/library/windows/hardware/ff597729)를 참조하세요.
 
-**중요** [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) API는 [데스크톱 디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 PC와 같은 데스크톱 디바이스 패밀리의 Windows 10 장치에서만 이러한 API를 사용할 수 있습니다.
+**중요**  [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) API는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 앱은 PC와 같은 데스크톱 장치 패밀리의 Windows 10 장치에서만 이러한 API를 사용할 수 있습니다.
 
  
 
-### 1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
+### <a name="step-1-create-a-new-project-and-add-autoplay-declarations"></a>1단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
 
 1.  Visual Studio를 열고 **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **Visual C#** 섹션의 **Windows** 아래에서 **비어 있는 앱(범용 Windows)**을 선택합니다. 앱의 이름을 **AutoPlayDevice\_Camera**로 지정하고 **확인**을 클릭합니다.
 2.  Package.appxmanifest 파일을 열고 **기능** 탭을 선택합니다. **이동식 저장소** 기능을 선택합니다. 이렇게 하면 앱이 이동식 저장 볼륨 장치로 카메라의 데이터에 액세스할 수 있습니다.
@@ -247,17 +254,17 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 | 작업 표시 이름 | 사진 표시    |
 | 콘텐츠 이벤트       | WPD\\ImageSource |
 
-**작업 표시 이름** 설정은 자동 실행이 앱에 대해 표시하는 문자열을 식별합니다. **동사** 설정은 선택한 옵션에 대해 앱에 전달된 값을 식별합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 **동사** 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 **verb** 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. **동사** 설정에는 예약된 **open**을 제외한 모든 값을 사용할 수 있습니다. 단일 앱에서 여러 동사를 사용하는 예제는 [콘텐츠 자동 실행을 위해 등록](#autoplaycontent)을 참조하세요.
+**작업 표시 이름** 설정은 자동 실행이 앱에 대해 표시하는 문자열을 식별합니다. **동사** 설정은 선택한 옵션에 대해 앱에 전달된 값을 식별합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 **동사** 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 **verb** 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. **동사** 설정에는 예약된 **open**을 제외한 모든 값을 사용할 수 있습니다. 단일 앱에서 여러 동사를 사용하는 예제는 [콘텐츠 자동 실행을 위해 등록](#register-for-autoplay-content)을 참조하세요.
 
-### 2단계: 데스크톱 확장에 대한 어셈블리 참조 추가
+### <a name="step-2-add-assembly-reference-for-the-desktop-extensions"></a>2단계: 데스크톱 확장에 대한 어셈블리 참조 추가
 
-Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)는 [데스크톱 디바이스 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 디바이스 패밀리의 장치에서만 작동한다는 것입니다.
+Windows 휴대용 장치의 저장소에 액세스하는 데 필요한 API인 [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)는 [데스크톱 장치 패밀리](https://msdn.microsoft.com/library/windows/apps/dn894631)의 일부입니다. 이는 API를 사용하려면 특수 어셈블리가 필요하고 해당 호출은 PC와 같은 데스크톱 장치 패밀리의 장치에서만 작동한다는 것입니다.
 
 1.  **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가...**를 클릭합니다.
 2.  **유니버설 Windows**를 확장하고 **확장**을 클릭합니다.
 3.  그런 다음 **UWP용 Windows 데스크톱 확장**을 선택하고 **확인**을 클릭합니다.
 
-### 3단계: XAML UI 추가
+### <a name="step-3-add-xaml-ui"></a>3단계: XAML UI 추가
 
 MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
@@ -285,7 +292,7 @@ MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추�
 </StackPanel>
 ```
 
-### 4단계: 활성화 코드 추가
+### <a name="step-4-add-activation-code"></a>4단계: 활성화 코드 추가
 
 이 단계의 코드는 카메라의 장치 정보 ID를 [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655) 메서드에 전달하여 카메라를 [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654)로 참조합니다. 카메라의 장치 정보 ID는 먼저 이벤트 인수를 [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710)로 캐스팅한 다음 [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711) 속성에서 값을 가져와 얻을 수 있습니다.
 
@@ -337,9 +344,9 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-> **참고** `ShowImages` 메서드는 다음 단계에서 추가됩니다.
+> **참고**  `ShowImages` 메서드는 다음 단계에서 추가됩니다.
 
-### 5단계: 장치 정보 표시 코드 추가
+### <a name="step-5-add-code-to-display-device-information"></a>5단계: 장치 정보 표시 코드 추가
 
 [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) 클래스의 속성에서 카메라에 대한 정보를 가져올 수 있습니다. 이 단계의 코드는 앱이 실행될 때 장치 이름 및 기타 정보를 사용자에게 표시합니다. 그런 후 다음 단계에서 추가할 GetImageList 및 GetThumbnail 메서드를 호출하여 카메라에 저장된 이미지의 미리 보기를 표시합니다.
 
@@ -365,11 +372,11 @@ internal async void ShowImages(Windows.Storage.StorageFolder folder)
 }
 ```
 
-> **참고** `GetImageList` 및 `GetThumbnail` 메서드는 다음 단계에서 추가됩니다.
+> **참고**  `GetImageList` 및 `GetThumbnail` 메서드는 다음 단계에서 추가됩니다.
 
  
 
-### 6단계: 이미지 표시 코드 추가
+### <a name="step-6-add-code-to-display-images"></a>6단계: 이미지 표시 코드 추가
 
 이 단계의 코드는 카메라에 저장된 이미지의 미리 보기를 표시합니다. 이 코드는 카메라를 비동기 호출하여 미리 보기 이미지를 가져옵니다. 그러나 다음 비동기 호출은 이전 비동기 호출이 완료된 다음에야 실행됩니다. 따라서 카메라에 대해 한 번에 하나만 요청해야 합니다.
 
@@ -406,39 +413,39 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 }
 ```
 
-### 7단계: 앱 빌드 및 실행
+### <a name="step-7-build-and-run-the-app"></a>7단계: 앱 빌드 및 실행
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 컴퓨터에 카메라를 연결합니다. 그런 다음 옵션의 자동 실행 목록에서 앱을 선택합니다.
-    **참고** 일부 카메라에서는 **WPD\\ImageSource** 자동 실행 디바이스 이벤트에 대해 알리지 않습니다.
+    **참고**  일부 카메라에서는 **WPD\\ImageSource** 자동 실행 장치 이벤트에 대해 알리지 않습니다.
 
      
 
-## 이동식 저장소 구성
+## <a name="configure-removable-storage"></a>이동식 저장소 구성
 
 
 볼륨 장치가 PC에 연결된 경우 메모리 카드나 썸 드라이브(thumb drive) 같은 볼륨 장치를 **자동 실행** 장치로 식별할 수 있습니다. 이 기능은 **자동 실행**에 대한 특정 앱을 연결하여 사용자에게 볼륨 장치로 제공하려는 경우에 특히 유용합니다.
 
 여기서는 볼륨 장치를 **자동 실행** 장치로 식별하는 방법을 보여 줍니다.
 
-볼륨 디바이스를 **자동 실행** 디바이스로 식별하려면 디바이스의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 디바이스가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 디바이스로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
+볼륨 장치를 **자동 실행** 장치로 식별하려면 장치의 루트 드라이브에 autorun.inf 파일을 추가합니다. autorun.inf 파일에서 **CustomEvent** 키를 **AutoRun** 섹션에 추가합니다. 볼륨 장치가 PC에 연결되면 **자동 실행**에서 autorun.inf 파일을 찾고 볼륨을 장치로 처리합니다. **자동 실행**에서 **CustomEvent** 키에 제공한 이름을 사용하여 **자동 실행** 이벤트를 만듭니다. 그런 다음 앱을 만들고 해당 **자동 실행** 이벤트에 대한 처리기로 등록할 수 있습니다. 장치가 PC에 연결되면 **자동 실행**에서 앱을 볼륨 장치에 대한 처리기로 표시합니다. autorun.inf 파일에 대한 자세한 내용은 [autorun.inf 항목](https://msdn.microsoft.com/library/windows/desktop/cc144200)을 참조하세요.
 
-### 1단계: autorun.inf 파일 만들기
+### <a name="step-1-create-an-autoruninf-file"></a>1단계: autorun.inf 파일 만들기
 
-볼륨 디바이스의 루트 드라이브에서 autorun.inf라는 파일을 추가합니다. autorun.inf 파일을 열고 다음 텍스트를 추가합니다.
+볼륨 장치의 루트 드라이브에서 autorun.inf라는 파일을 추가합니다. autorun.inf 파일을 열고 다음 텍스트를 추가합니다.
 
 ``` syntax
 [AutoRun]
 CustomEvent=AutoPlayCustomEventQuickstart
 ```
 
-### 2단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
+### <a name="step-2-create-a-new-project-and-add-autoplay-declarations"></a>2단계: 새 프로젝트 만들기 및 자동 실행 선언 추가
 
 1.  Visual Studio를 열고 **파일** 메뉴에서 **새 프로젝트**를 선택합니다. **Visual C#** 섹션의 **Windows** 아래에서 **비어 있는 앱(범용 Windows)**을 선택합니다. 응용 프로그램의 이름을 **AutoPlayCustomEvent**로 지정하고 **확인**을 클릭합니다.
 2.  Package.appxmanifest 파일을 열고 **기능** 탭을 선택합니다. **이동식 저장소** 기능을 선택합니다. 그러면 앱이 이동식 저장 장치의 파일 및 폴더에 액세스할 수 있습니다.
 3.  매니페스트 파일에서 **선언** 탭을 선택합니다. **사용 가능한 선언** 드롭다운 목록에서 **자동 실행 콘텐츠**를 선택하고 **추가**를 클릭합니다. **지원되는 선언** 목록에 추가된 새 **자동 실행 콘텐츠** 항목을 선택합니다.
 
-    **참고** 또는 사용자 지정 자동 실행 이벤트에 대해 **자동 실행 디바이스** 선언을 추가하도록 선택할 수도 있습니다.
+    **참고**  또는 사용자 지정 자동 실행 이벤트에 대해 **자동 실행 장치** 선언을 추가하도록 선택할 수도 있습니다.
     
 4.  **콘텐츠 자동 실행** 이벤트 선언에 대한 **시작 작업** 섹션에서 첫 번째 시작 작업에 대해 아래 표의 값을 입력합니다.
 5.  **사용 가능한 선언** 드롭다운 목록에서 **파일 형식 연결**을 선택하고 **추가**를 클릭합니다. 새 **파일 형식 연결** 선언에서 **표시 이름** 필드를 **Show .ms Files**로 설정하고 **이름** 필드를 **ms\_association**로 설정합니다. **지원되는 파일 형식** 섹션에서 **새로 추가**를 클릭합니다. **파일 형식** 필드를 **.ms**로 설정합니다. 콘텐츠 이벤트의 경우 자동 실행에서 앱에 명시적으로 연결되지 않은 파일 형식을 필터링합니다.
@@ -452,7 +459,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 
 **콘텐츠 이벤트** 값은 autorun.inf 파일에서 **CustomEvent** 키에 제공한 텍스트입니다. **작업 표시 이름** 설정은 자동 실행이 앱에 대해 표시하는 문자열을 식별합니다. **동사** 설정은 선택한 옵션에 대해 앱에 전달된 값을 식별합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 **동사** 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 **verb** 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. **동사** 설정에는 예약된 **open**을 제외한 모든 값을 사용할 수 있습니다.
 
-### 3단계: XAML UI 추가
+### <a name="step-3-add-xaml-ui"></a>3단계: XAML UI 추가
 
 MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추가합니다.
 
@@ -463,7 +470,7 @@ MainPage.xaml 파일을 열고 다음 XAML을 기본 &lt;Grid&gt; 섹션에 추�
 </StackPanel>
 ```
 
-### 4단계: 활성화 코드 추가
+### <a name="step-4-add-activation-code"></a>4단계: 활성화 코드 추가
 
 이 단계의 코드에서는 메서드를 호출하여 볼륨 장치의 루트 드라이브에 폴더를 표시합니다. 콘텐츠 자동 실행 이벤트의 경우 자동 실행은 **OnFileActivated** 이벤트 중 응용 프로그램에 전달된 시작 인수에 저장 장치의 루트 폴더를 전달합니다. **Files** 속성의 첫 번째 요소에서 이 폴더를 검색할 수 있습니다.
 
@@ -482,11 +489,11 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 }
 ```
 
-> **참고** `DisplayFiles` 메서드는 다음 단계에서 추가됩니다.
+> **참고**  `DisplayFiles` 메서드는 다음 단계에서 추가됩니다.
 
  
 
-### 5단계: 폴더 표시 코드 추가
+### <a name="step-5-add-code-to-display-folders"></a>5단계: 폴더 표시 코드 추가
 
 MainPage.xaml.cs 파일에서 **MainPage** 클래스에 다음 코드를 추가합니다.
 
@@ -511,12 +518,12 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
 }
 ```
 
-### 6단계: 앱 빌드 및 실행
+### <a name="step-6-build-and-run-the-qpp"></a>6단계: 앱 빌드 및 실행
 
 1.  F5 키를 눌러 앱을 빌드하고 배포합니다(디버그 모드).
 2.  앱을 실행하려면 메모리 카드나 다른 저장 장치를 PC에 삽입합니다. 그런 다음 자동 실행 처리기 옵션 목록에서 앱을 선택합니다.
 
-## 자동 실행 이벤트 참조
+## <a name="autoplay-event-reference"></a>자동 실행 이벤트 참조
 
 
 **자동 실행** 시스템을 사용하여 앱은 다양한 장치 및 볼륨(디스크) 도착 이벤트를 등록할 수 있습니다. **자동 실행** 콘텐츠 이벤트를 등록하려면 패키지 매니페스트에서 **이동식 저장소** 접근 권한 값을 사용하도록 설정해야 합니다. 다음 표에서는 등록할 수 있는 이벤트와 해당 이벤트가 발생하는 경우를 보여 줍니다.
@@ -577,9 +584,4 @@ internal async System.Threading.Tasks.Task<IReadOnlyList<Windows.Storage.Storage
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: "셰이프 그리기"
 description: "타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법을 알아봅니다. Path 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
-ms.openlocfilehash: 1d3c0f50487aa6204f758303e0e5b05b9087eae5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ed405a14f1059f374432a587a24611f16d042a9c
+ms.lasthandoff: 02/07/2017
 
 ---
-# 셰이프 그리기
+# <a name="draw-shapes"></a>셰이프 그리기
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 **중요 API**
@@ -21,19 +28,19 @@ ms.openlocfilehash: 1d3c0f50487aa6204f758303e0e5b05b9087eae5
 
 타원, 사각형, 다각형, 패스 같은 다양한 셰이프를 그리는 방법에 대해 알아봅니다. [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355) 클래스를 사용하면 XAML UI에서 매우 복잡한 벡터 기반 그리기 언어를 시각화할 수 있습니다. 예를 들어 베지어 곡선을 그릴 수 있습니다.
 
-## 소개
+## <a name="introduction"></a>소개
 
 두 개의 클래스 집합([**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) 클래스 및 [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) 클래스)이 XAML UI의 공간 영역을 정의합니다. 이 두 클래스의 주요 차이점은 **Shape**에는 연결된 브러시가 있어 화면으로 렌더링될 수 있고, **Geometry**는 또 다른 UI 속성에 정보를 제공하는 데 도움이 되지 않는 경우 단순히 공간 영역만 정의하고 렌더링되지는 않는다는 점입니다. **Shape**를 **Geometry**에 의해 정의된 경계를 가진 [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911)로 생각할 수 있습니다. 이 항목에서는 주로 **Shape** 클래스에 대해 설명합니다.
 
 [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) 클래스는 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343), [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) 및 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)입니다. **Path**는 임의의 기하 도형을 정의할 수 있기 때문에 흥미롭고, [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) 클래스는 **Path**의 일부를 정의하는 한 가지 방법이기 때문에 여기에 포함됩니다.
 
-## 셰이프 채우기 및 스트로크
+## <a name="fill-and-stroke-for-shapes"></a>셰이프 채우기 및 스트로크
 
 [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)를 앱 캔버스에 렌더링하려면 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)를 연결해야 합니다. **Shape**의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill) 속성을 원하는 **Brush**로 설정합니다. 브러시에 대한 자세한 내용은 [브러시 사용](using-brushes.md)을 참조하세요.
 
 [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)에는 셰이프 경계 주변에 그려진 선인 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke)도 있을 수 있습니다. **Stroke**에도 모양을 정의하는 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)가 필요하며 0이 아닌 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) 값이 있어야 합니다. **StrokeThickness**는 셰이프 가장자리 주변의 경계 두께를 정의하는 속성입니다. **Stroke**에 대해 **Brush** 값을 지정하지 않거나 **StrokeThickness**를 0으로 설정하면 셰이프 주변 경계가 그려지지 않습니다.
 
-## 타원
+## <a name="ellipse"></a>타원
 
 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343)은 경계가 곡선인 셰이프입니다. 기본 **Ellipse**를 만들려면 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 대해 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751), [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) 및 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)를 지정합니다.
 
@@ -62,7 +69,7 @@ UI 레이아웃에 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps
 
 6개의 [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343) 요소 집합은 [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/BR227538) 컨트롤에 대한 컨트롤 템플릿의 요소이며, 2개의 동심원 **Ellipse** 요소는 [**RadioButton**](https://msdn.microsoft.com/library/windows/apps/BR227544)의 일부입니다.
 
-## <span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>사각형
+## <a name="span-idrectanglespanspan-idrectanglespanspan-idrectanglespanrectangle"></a><span id="Rectangle"></span><span id="rectangle"></span><span id="RECTANGLE"></span>사각형
 
 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 대변이 동일한 4개의 변을 가진 셰이프입니다. 기본 **Rectangle**을 만들려면 [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751), [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718) 및 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)을 지정합니다.
 
@@ -98,13 +105,13 @@ layoutRoot.Children.Add(rectangle1);
 
 ![렌더링된 사각형](images/shapes-rectangle.jpg)
 
-**Tip** [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 사용하는 대신 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)가 더 적합할 수 있는 UI 정의 시나리오도 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
+**팁** [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)을 사용하는 대신 [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)가 더 적합할 수 있는 UI 정의 시나리오도 있습니다. 다른 콘텐츠 주위에 사각형 셰이프를 만들려는 경우 **Border**를 사용하는 것이 더 나을 수 있습니다. 그러면 자식 콘텐츠를 사용할 수 있고 **Rectangle**처럼 높이와 너비에 고정 치수를 사용하는 대신 해당 콘텐츠를 둘러싸도록 크기가 자동으로 지정됩니다. **Border**에는 [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.border.cornerradius) 속성을 설정할 경우 모서리를 둥글게 하는 옵션도 있습니다.
 
  
 
 반면에 [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)은 컨트롤 컴퍼지션에 더 적합한 선택일 수 있습니다. **Rectangle** 셰이프는 포커스 가능 컨트롤의 "FocusVisual" 부분을 사용되므로 많은 컨트롤 템플릿에 표시됩니다. 이 직사각형은 컨트롤이 "Focused" 시각적 상태일 때마다 표시되며 다른 상태에서는 숨겨집니다.
 
-## 다각형
+## <a name="polygon"></a>다각형
 
 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)은 임의 개수의 점으로 정의된 경계가 있는 셰이프입니다. 한 점에서 다음 점으로 선을 연결하고 마지막 점이 첫 번째 점으로 연결되어 경계가 만들어집니다. [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polygon.points.aspx) 속성은 경계를 구성하는 점의 컬렉션을 정의합니다. XAML에서는 쉼표로 구분된 목록으로 점을 정의합니다. 코드 숨김에서는 [**PointCollection**](https://msdn.microsoft.com/library/windows/apps/BR210220)을 사용하여 점을 정의하고 각 개별 점을 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값으로 컬렉션에 추가합니다.
 
@@ -137,7 +144,7 @@ layoutRoot.Children.Add(polygon1);
 
 **팁** [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) 값은 셰이프의 정점 선언이 아닌 다른 시나리오에 대한 XAML에서 한 형식으로 자주 사용됩니다. 예를 들어 **Point**는 터치 이벤트에 대한 이벤트 데이터의 일부이므로 좌표 공간에서 터치 작업이 발생한 위치를 정확하게 알 수 있습니다. **Point** 및 XAML 또는 코드에서 사용하는 방법에 대한 자세한 내용은 [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)에 대한 API 참조 항목을 참조하세요.
 
-## 선
+## <a name="line"></a>선
 
 [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345)은 좌표 공간에서 두 점 사이에 그려진 선입니다. **Line**은 내부 공간이 없기 때문에 [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)에 제공된 값을 모두 무시합니다. **Line**에 대해서는 [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) 및 [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) 속성의 값을 지정해야 하며, 그러지 않으면 **Line**이 렌더링되지 않습니다.
 
@@ -156,7 +163,7 @@ layoutRoot.Children.Add(line1);
 
 ```
 
-## <span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
+## <a name="span-idpolylinespanspan-idpolylinespanspan-idpolylinespan-polyline"></a><span id="_Polyline"></span><span id="_polyline"></span><span id="_POLYLINE"></span> 폴리라인
 
 [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365)은 **Polyline**의 마지막 점이 첫 번째 점에 연결되지 않는다는 것을 제외하고, 점 집합에 의해 셰이프의 경계가 정의된다는 점에서 [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359)과 유사합니다.
 
@@ -194,7 +201,7 @@ layoutRoot.Children.Add(polyline1);
 
 ![렌더링된 폴리라인](images/shapes-polyline.jpg)
 
-## 패스
+## <a name="path"></a>패스
 
 [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)는 임의의 기하 도형을 정의하는 데 사용할 수 있기 때문에 가장 유용한 [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)입니다. 하지만 유용성에는 복잡성이 따릅니다. 이제 XAML에서 기본 **Path**를 만드는 방법을 살펴보겠습니다.
 
@@ -311,10 +318,5 @@ layoutRoot.Children.Add(path1);
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

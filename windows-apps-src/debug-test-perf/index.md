@@ -3,12 +3,19 @@ author: mcleblanc
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: "디버깅, 테스트 및 성능"
 description: "Microsoft Visual Studio를 사용하여 앱을 디버깅 및 테스트할 수 있습니다. Windows 스토어 인증 프로세스에 맞게 앱을 준비하려면 Windows 앱 인증 키트를 사용합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3867bca43bef549fc67b202e329e884ee1ff8fa0
-ms.openlocfilehash: 527ad3c4ade1df2a4737df5fba81a1a72ee35c0f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 831a29950d8f8658e1a584d8a33256ff4121c706
+ms.lasthandoff: 02/07/2017
 
 ---
-# 디버깅, 테스트 및 성능
+# <a name="debugging-testing-and-performance"></a>디버깅, 테스트 및 성능
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -24,10 +31,5 @@ Microsoft Visual Studio를 사용하여 앱을 디버깅 및 테스트할 수 �
 | [Windows Device Portal](device-portal.md) | Windows Device Portal을 사용하면 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있습니다. |
 | [Windows 앱 인증 키트](windows-app-certification-kit.md) | 앱이 인증될 가능성을 높이려면 [Windows 앱 인증 키트](http://go.microsoft.com/fwlink/p/?LinkID=309666)를 사용하여 앱의 유효성을 검사합니다. |
 | [성능](performance-and-xaml-ui.md) | 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다. |
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

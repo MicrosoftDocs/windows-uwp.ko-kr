@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "백그라운드 작업 지침"
 description: "앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다."
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 5e03fbb7971e5526d542d409bccb1c7fee6fd3ee
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -19,7 +26,7 @@ ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
 
 백그라운드 작업을 개발할 때와 앱을 게시하기 전에 다음 지침을 고려하세요.
 
-백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
+백그라운드 작업을 사용하여 백그라운드에서 미디어를 재생하는 경우 이 작업을 훨씬 용이하게 하는 Windows 10 버전 1607의 향상된 기능에 대한 자세한 내용은 [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)을 참조하세요.
 
 
   **In-process 및 Out-of-process 백그라운드 작업:** Windows 10 버전 1607에서는 포그라운드 앱과 동일한 프로세스에서 백그라운드 코드를 실행할 수 있는 [In-process 프로세스 백그라운드 작업](create-and-register-an-inproc-background-task.md)이 도입되었습니다. 백그라운드 작업에 대해 In-process를 사용할지 또는 Out-of-process를 사용할지를 결정할 때 고려할 요소는 다음과 같습니다.
@@ -28,14 +35,14 @@ ms.openlocfilehash: 2d03c7f47461422fef7a0905df7e68b3e65c33f0
 |--------------|--------|
 |복원력   | 다른 프로세스에서 백그라운드 프로세스를 실행하는 경우 백그라운드 프로세스에서 충돌이 발생해도 포그라운드 응용 프로그램이 중단되지 않습니다. 또한 실행 시간 제한을 초과해서 실행될 경우 앱 내에서도 백그라운드 작업을 종료할 수 있습니다. In-process 프로세스 백그라운드 작업의 주요 이점 중 하나는 프로세스 간에 통신할 필요가 없다는 것이므로 포그라운드 및 백그라운드 프로세스에서 서로 통신할 필요가 없는 경우 백그라운드 작업을 포그라운드 앱과 별개인 작업으로 구분하는 것이 유용할 수 있습니다. |
 |단순함    | In-process 프로세스 백그라운드 작업의 경우 프로세스 간에 통신할 필요가 없으며 보다 간단하게 작성할 수 있습니다.  |
-|사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx), **IoTStartupTask** 등의 트리거를 지원하지 않습니다. |
+|사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceusetrigger.aspx?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.deviceservicingtrigger.aspx), **IoTStartupTask** 등의 트리거를 지원하지 않습니다. |
 |VoIP | In-process 프로세스 백그라운드 작업은 응용 프로그램 내에서 VoIP 백그라운드 작업 활성화를 지원하지 않습니다. |  
 
 **CPU 할당량:** 백그라운드 작업은 트리거 유형에 따라 가져오는 벽시계로 측정하는 시간으로 제한됩니다. 대부분의 트리거는 벽시계로 측정하는 30초로 제한되지만 일부는 집중적인 작업을 완료하기 위해 최대 10분을 실행할 수 있습니다. 배터리 사용 시간을 절약하고 포그라운드 앱에 대한 효율적인 사용자 환경을 제공하도록 백그라운드 작업은 간결해야 합니다. 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 **백그라운드 작업 관리:** 앱에서는 등록된 백그라운드 작업 목록을 가져오고, 진행률 및 완료 처리기를 등록하고, 해당 이벤트를 적절하게 처리해야 합니다. 백그라운드 작업 클래스는 진행률, 취소 및 완료를 보고해야 합니다. 자세한 내용은 [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md) 및 [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)을 참조하세요.
 
-**[BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:** 백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 사용하지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드(또는 In-process 프로세스 백그라운드 작업의 경우 [OnBackgroundActivated](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 메서드)가 완료될 때 백그라운드 작업이 중간에 종료될 수 있습니다. 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+**[BackgroundTaskDeferral](https://msdn.microsoft.com/library/windows/apps/hh700499) 사용:** 백그라운드 작업 클래스가 비동기 코드를 실행하는 경우 지연을 사용해야 합니다. 사용하지 않으면 [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) 메서드(또는 In-process 프로세스 백그라운드 작업의 경우 [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) 메서드)가 완료될 때 백그라운드 작업이 중간에 종료될 수 있습니다. 자세한 내용은 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 또는 지연을 요청하고 **async/await**를 사용하여 비동기 메서드 호출을 완료합니다. **await** 메서드가 호출된 후 지연을 닫습니다.
 
@@ -94,7 +101,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
-* [백그라운드에서 미디어 재생](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio)
+* [백그라운드에서 미디어 재생](https://msdn.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
@@ -109,9 +116,4 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
  
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

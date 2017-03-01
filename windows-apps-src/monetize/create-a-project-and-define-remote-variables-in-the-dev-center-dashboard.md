@@ -1,21 +1,28 @@
 ---
 author: mcleanbyron
 Description: "A/B 테스트로 UWP(유니버설 Windows 플랫폼) 앱에서 실험을 실행하려면 먼저 프로젝트를 만들고 개발자 센터 대시보드에서 원격 변수를 정의해야 합니다."
-title: "개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의"
+title: "Windows 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의"
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Microsoft 스토어 서비스 SDK, A/B 테스트, 실험"
 translationtype: Human Translation
-ms.sourcegitcommit: 32c1b379ee3913e267664e6d125fbc3daf480bb3
-ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ad24e9a52458b826f3ce1bc7aba3dbdcf302f87d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의
+# <a name="create-a-project-and-define-remote-variables-in-the-dev-center-dashboard"></a>Windows 개발자 센터 대시보드에서 프로젝트 만들기 및 원격 변수 정의
 
 실험을 시작하려면 개발자 센터 대시보드에서 앱에 대한 실험 [프로젝트](run-app-experiments-with-a-b-testing.md#terms)를 만들고 앱이 액세스할 수 있는 원격 변수를 정의합니다.
 
 다음 지침에서는 프로젝트를 만들 때 중요한 단계에 대해 설명합니다. 프로젝트를 만들고 실험을 실행하는 종단 간 프로세스를 보여 주는 연습에 대한 자세한 내용은 [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조하세요.
 
-## 지침
+## <a name="instructions"></a>지침
 
 1. [개발자 센터 대시보드](https://dev.windows.com/overview)에 로그인합니다.
 2. **앱**에서 실험을 만들 앱을 선택합니다.
@@ -28,23 +35,18 @@ ms.openlocfilehash: 88a55c9ed64d5f52f959a1c68618dc5296dc24d6
   3. 변수 추가를 마쳤으면 **저장**을 클릭합니다.
 3. **SDK 통합** 섹션에서 [프로젝트 ID](run-app-experiments-with-a-b-testing.md#terms) 값을 적어둡니다. [실험용 앱을 코딩](code-your-experiment-in-your-app.md)하는 경우 변형 데이터를 받고 보기 및 변환 이벤트를 개발자 센터에 보고할 수 있도록 코드에서 이 프로젝트 ID를 참조해야 합니다.
 
->**참고**  프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.
+>**참고**&nbsp;&nbsp;프로젝트에서 실험이 활성화된 경우에는 원격 변수를 편집, 추가 또는 제거할 수 없습니다. 이 제한 사항은 활성 실험의 컨트롤 그룹에 대해 데이터 무결성을 보호하는 데 도움이 됩니다.
 
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 프로젝트를 만든 후 [실험용 앱을 코딩](code-your-experiment-in-your-app.md)하여 앱에서 원격 변수 값 검색을 시작하고 [프로젝트에서 실험을 만들](define-your-experiment-in-the-dev-center-dashboard.md) 수 있습니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [실험용 앱 코딩](code-your-experiment-in-your-app.md)
 * [개발자 센터 대시보드에서 실험 정의](define-your-experiment-in-the-dev-center-dashboard.md)
 * [개발자 센터 대시보드에서 실험 관리](manage-your-experiment.md)
 * [A/B 테스트로 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [A/B 테스트로 앱 실험 실행](run-app-experiments-with-a-b-testing.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

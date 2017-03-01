@@ -2,13 +2,20 @@
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: "Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트"
-description: "Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 디바이스 조작을 시뮬레이트하고 앱의 기능을 테스트합니다."
+description: "Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 장치 조작을 시뮬레이트하고 앱의 기능을 테스트합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
-ms.openlocfilehash: 6889c80d9879295fec31685aa3fd9bea9e6aea3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c20b64cdc2a1335d4739d6790512eddd76bc8a08
+ms.lasthandoff: 02/07/2017
 
 ---
-# Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
+# <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -18,7 +25,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터에 포함된 도구를 사용하�
 
 다양한 화면 해상도 및 화면 크기 구성에 고유한 Windows 10 Mobile K 에뮬레이터 이미지를 사용하여 유니버설 앱을 테스트할 수 있습니다. Microsoft 에뮬레이터에 포함된 도구를 사용하여 실제 디바이스 조작을 시뮬레이트하고 앱의 다양한 기능을 테스트할 수 있습니다.
 
-## 시스템 요구 사항
+## <a name="system-requirements"></a>시스템 요구 사항
 
 컴퓨터는 다음 요구 사항을 만족해야 합니다.
 
@@ -46,7 +53,7 @@ Windows 10 Mobile K용 Microsoft 에뮬레이터에는 Visual Studio 2015가 필
 
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 버전의 Windows Phone OS를 대상으로 하는 앱을 로드할 수 없습니다.
 
-## 설치 및 제거
+## <a name="installing-and-uninstalling"></a>설치 및 제거
 
 -   **설치**.
 
@@ -60,7 +67,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 
     Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이터에서 사용하도록 생성된 Hyper-V 가상 이더넷 어댑터는 자동으로 제거되지 않습니다. 이 가상 어댑터는 **제어판**의 **네트워크 연결**에서 수동으로 제거할 수 있습니다.
 
-## Windows 10 Mobile K용 Microsoft 에뮬레이터의 새로운 기능
+## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile K용 Microsoft 에뮬레이터의 새로운 기능
 
 에뮬레이터는 UWP(유니버설 Windows 플랫폼)에 대한 지원을 제공할 뿐만 아니라 다음 기능도 추가되었습니다.
 
@@ -68,7 +75,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 -   NFC 지원. 에뮬레이터를 사용하면 NFC를 시뮬레이트하고 NFC/근접 연결 사용 유니버설 앱을 테스트 및 개발할 수 있습니다.
 -   기본 하드웨어 가속은 로컬 그래픽 카드를 사용하여 에뮬레이터의 그래픽 성능을 향상시킵니다. 지원되는 그래픽 카드가 설치되어 있어야 하며 에뮬레이터의 **추가 도구** 설정 사용자 인터페이스의 **센서** 탭에서 가속을 사용하도록 설정해야 가속을 사용할 수 있습니다.
 
-## 에뮬레이터에서 테스트할 수 있는 기능
+## <a name="features-that-you-can-test-in-the-emulator"></a>에뮬레이터에서 테스트할 수 있는 기능
 
 이전 섹션에서 설명한 새로운 기능 외에도 Windows 10 Mobile용 Microsoft 에뮬레이터에서 자주 사용되는 다음과 같은 기능을 테스트할 수 있습니다.
 
@@ -96,7 +103,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 
 -   **잠금 화면**. 에뮬레이터를 열고 컴퓨터 키보드에서 F12 키를 두 번 누릅니다. F12 키는 휴대폰의 전원 버튼을 에뮬레이션합니다. 첫 번째 키를 누르면 화면이 꺼집니다. 두 번째 키를 누르면 화면이 다시 켜지고 잠금 화면이 표시됩니다. 마우스를 사용하여 잠금 화면을 위로 밀어 올려 화면의 잠금을 해제합니다.
 
-## 에뮬레이터에서 테스트할 수 없는 기능
+## <a name="features-that-you-cant-test-in-the-emulator"></a>에뮬레이터에서 테스트할 수 없는 기능
 
 다음 기능은 실제 디바이스에서만 테스트합니다.
 
@@ -106,7 +113,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 -   밝기. 에뮬레이터의 밝기 수준은 항상 높습니다.
 -   고해상도 동영상. 특히 512MB의 메모리만 사용하는 에뮬레이터 이미지에서 VGA 해상도(640 x 480)보다 높은 해상도의 동영상은 안정적으로 표시할 수 없습니다.
 
-## 마우스 입력
+## <a name="mouse-input"></a>마우스 입력
 
 Windows PC에서 실제 마우스 또는 트랙 패드를 사용하고 에뮬레이터 도구 모음에서 마우스 입력 단추를 사용하여 마우스 입력을 시뮬레이트합니다. 이 기능은 앱에서 Windows 10 디바이스와 쌍으로 연결된 마우스를 활용하는 기능을 사용자에게 제공하여 입력을 제공하는 경우에 유용합니다.
 
@@ -120,7 +127,7 @@ Windows PC에서 실제 마우스 또는 트랙 패드를 사용하고 에뮬레
 
 에뮬레이터 도구 모음의 마우스 입력 단추입니다.
 
-## 키보드 입력
+## <a name="keyboard-input"></a>키보드 입력
 
 에뮬레이터는 개발 컴퓨터의 하드웨어 키보드를 Windows Phone의 키보드에 매핑하도록 지원합니다. 키보드 동작은 Windows Phone 디바이스와 동일합니다. 
 
@@ -151,7 +158,7 @@ Esc | WIN + ESC | 뒤로 | 길게 누르기가 예상대로 작동합니다.
  
 
 
-## NFC(근거리 통신)
+## <a name="near-field-communications-nfc"></a>NFC(근거리 통신)
 
 에뮬레이터에서 **추가 도구** 메뉴의 **NFC** 탭을 사용하여 Windows 10 Mobile K의 NFC(근거리 통신) 사용 기능을 이용하는 앱을 빌드 및 테스트합니다. NFC는 근접 시나리오(예: 공유하기 위해 탭)에서 카드 에뮬레이션(예: 지급하기 위해 탭)에 이르기까지 여러 시나리오에 유용합니다.
 
@@ -169,11 +176,11 @@ NFC 탭은 다음의 세 가지 모드를 지원합니다.
 -   오른쪽 상단 섹션에서는 로그를 나열합니다. 한 쌍의 디바이스를 함께 탭(또는 POS 터미널에 탭)할 때 탭 이벤트가 기록되며 디바이스가 언탭될 때 언탭 이벤트가 기록됩니다. 또한 이 섹션은 연결이 끊어지기 전에 또는 타임스탬프와 함께 에뮬레이터 UI에서 수행한 다른 작업 전에 앱에서 응답한 경우를 기록합니다. 로그는 모드 전환 간에 지속되며, **로그** 화면 위의 **지우기** 단추를 눌러 언제든지 로그를 지울 수 있습니다.
 -   화면의 아래쪽은 메시지 로그이며, 선택한 모드에 따라 현재 선택한 연결을 통해 주고받은 모든 메시지 기록을 보여 줍니다.
 
-> **중요** 태퍼 도구를 처음 시작하면 Windows 방화벽 프롬프트가 표시됩니다. 3가지 확인란을 모두 선택하고 방화벽을 통한 도구를 허용해야 합니다. 그러지 않으면 도구가 자동으로 작동하지 않습니다.
+> **중요**  태퍼 도구를 처음 시작하면 Windows 방화벽 프롬프트가 표시됩니다. 3가지 확인란을 모두 선택하고 방화벽을 통한 도구를 허용해야 합니다. 그러지 않으면 도구가 자동으로 작동하지 않습니다.
 
 빠른 시작 설치 관리자를 시작한 후 위의 지침에 따라 방화벽 프롬프트에서 3가지 확인란을 모두 선택했는지 확인합니다. 또한 Microsoft 에뮬레이터와 동일한 실제 호스트 컴퓨터에서 태퍼 도구를 설치하고 사용해야 합니다.
 
-### 근접 연결 모드
+### <a name="proximity-mode"></a>근접 연결 모드
 
 한 쌍의 휴대폰을 함께 탭하는 것을 시뮬레이트하려면 한 쌍의 Windows Phone 8 에뮬레이터를 시작해야 합니다. Visual Studio에서 두 개의 동일한 에뮬레이터 동시 실행을 지원하지 않으므로 각 에뮬레이터에 서로 다른 해상도를 선택하여 이를 해결해야 합니다.
 
@@ -211,7 +218,7 @@ NFC 탭은 다음의 세 가지 모드를 지원합니다.
 
 WDK(Windows 8 드라이버 키트)에는 Windows Phone 8 에뮬레이터와 동일한 프로토콜을 표시하는 드라이버 샘플이 포함되어 있습니다. Windows 8 디바이스에 DDK를 다운로드하고 해당 샘플 드라이버를 빌드하고 설치한 후 Windows 8 디바이스의 IP 주소 또는 호스트 이름을 디바이스 목록에 추가하고 다른 Windows 8 디바이스 또는 Windows Phone 8 에뮬레이터와 함께 탭해야 합니다.
 
-### HCE(호스트 카드 에뮬레이션) 모드
+### <a name="host-card-emulation-hce-mode"></a>HCE(호스트 카드 에뮬레이션) 모드
 
 HCE(호스트 카드 에뮬레이션) 모드에서 POS(Point of Sale) 터미널과 같은 스마트 카드 판독기 터미널을 시뮬레이트하도록 고유한 사용자 지정 스크립트를 작성하여 HCE 기반 카드 에뮬레이션 응용 프로그램을 테스트할 수 있습니다. 이 도구에서는 판독기 터미널(예: POS, 배지 판독기 또는 대중교통 카드 판독기)과 응용 프로그램에서 에뮬레이션하는 스마트 카드 간에 전송되는 명령 응답 쌍(ISO-7816-4 규격)에 익숙하다고 가정합니다.
 
@@ -231,7 +238,7 @@ HCE(호스트 카드 에뮬레이션) 모드에서 POS(Point of Sale) 터미널�
 
 HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대한 자세한 내용을 알아보려면 [Microsoft NFC 팀 블로그](http://go.microsoft.com/fwlink/?LinkId=534749)를 참조하세요.
 
-### HCE 테스트를 위한 스크립트를 작성하는 방법
+### <a name="how-to-create-scripts-for-hce-testing"></a>HCE 테스트를 위한 스크립트를 작성하는 방법
 
 스크립트는 C# 코드로 작성하며, **재생** 단추를 클릭할 때 스크립트의 Run 메서드가 호출됩니다. 이 메서드는 APDU 명령의 송수신, 로그 창으로의 출력 및 휴대폰의 APDU 응답을 기다리는 시간 제한 제어에 사용되는 IScriptProcessor 인터페이스를 사용합니다.
 
@@ -258,13 +265,13 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
         }
 ```
 
-### 스마트 카드 판독기 모드
+### <a name="smart-card-reader-mode"></a>스마트 카드 판독기 모드
 
 에뮬레이터를 호스트 컴퓨터의 스마트 카드 판독기 디바이스에 연결할 수 있습니다. 이렇게 스마트 카드를 삽입하거나 탭하면 휴대폰 응용 프로그램에 표시되고 [**Windows.Devices.SmartCards.SmartCardConnection**](https://msdn.microsoft.com/library/windows/apps/Dn608002) 클래스를 사용하여 APDU와 통신할 수 있습니다. 이렇게 하려면 호환되는 스마트 카드 판독기 디바이스를 컴퓨터에 연결해야 합니다. USB 스마트 카드 판독기(NFC/비접촉 및 삽입/접촉)는 폭넓게 사용할 수 있습니다. 에뮬레이터가 연결된 스마트 카드 판독기를 작동하려면 먼저 **카드 판독기** 모드를 선택하여 호스트 시스템에 연결된 호환되는 모든 스마트 카드 판독기를 나열하는 드롭다운 상자를 표시한 다음 드롭다운 메뉴에서 연결할 스마트 카드 판독기 디바이스를 선택합니다.
 
 일부 NFC 지원 스마트 카드 판독기는 몇 가지 NFC 카드 유형을 지원하지 않으며 일부는 표준 PC/SC 저장소 카드 APDU 명령을 지원하지 않습니다.
 
-## 다중 지점 입력
+## <a name="multi-point-input"></a>다중 지점 입력
 
 에뮬레이터 도구 모음의 **멀티 터치 입력** 버튼을 사용하여 개체를 확대/축소, 회전 및 이동하는 멀티 터치 입력을 시뮬레이트합니다. 이 기능은 앱에서 사진, 지도 또는 사용자가 확대/축소, 회전 또는 이동할 수 있는 기타 시각적 요소를 표시하는 경우 유용합니다.
 
@@ -281,7 +288,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ![에뮬레이터 도구 모음의 다중 지점 입력 옵션](images/em-multipoint.png)
 
-## 가속도계
+## <a name="accelerometer"></a>가속도계
 
 에뮬레이터의 **추가 도구 모음**에 있는 **가속도계** 탭을 사용하여 전화의 움직임을 추적하는 앱을 테스트합니다.
 
@@ -305,7 +312,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ![에뮬레이터의 추가 도구에 있는 가속도계 페이지](images/em-accelerometer.png)
 
-## 위치 및 운전
+## <a name="location-and-driving"></a>위치 및 운전
 
 에뮬레이터의 **추가 도구**에 있는 **위치** 탭을 사용하여 탐색 또는 지오펜스를 사용하는 앱을 테스트합니다. 이 기능은 실제 세계와 비슷한 조건에서 운전, 자전거 타기 또는 걷기를 시뮬레이트하는 데 유용합니다.
 
@@ -385,7 +392,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 -   시뮬레이트되는 위치 속성은 위도, 경도, 정확도 및 PositionSource뿐입니다. 위치 시뮬레이터는 속도, 방향 등의 기타 속성을 시뮬레이트하지 않습니다.
 
-## 네트워크
+## <a name="network"></a>네트워크
 
 에뮬레이터의 **추가 도구**에 있는 **네트워크** 탭을 사용하여 여러 다른 네트워크 속도와 여러 다른 신호 강도로 앱을 테스트합니다. 이 기능은 앱에서 웹 서비스를 호출하거나 데이터를 전송하는 경우 유용합니다.
 
@@ -409,7 +416,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ![에뮬레이터의 추가 도구에 있는 네트워크 페이지](images/em-network.png)
 
-## SD 카드
+## <a name="sd-card"></a>SD 카드
 
 에뮬레이터의 **추가 도구**의 **SD 카드** 탭을 사용하여 시뮬레이트된 이동식 SD 카드로 앱을 테스트합니다. 이 기능은 앱에서 파일을 읽거나 쓰는 경우 유용합니다.
 
@@ -444,11 +451,11 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
         -   동기화 작업이 진행 중인 동안 **동기화 취소**를 클릭하면 카드가 나오고 동기화 작업의 결과는 불완전합니다.
     -   **SD 카드 꺼내기** 버튼이 다시 **SD 카드 삽입**으로 변경됩니다.
 
-> **참고** 휴대폰에서 사용하는 SD 카드는 FAT32 파일 시스템으로 포맷되므로 32GB가 최대 크기입니다.
+> **참고**  휴대폰에서 사용하는 SD 카드는 FAT32 파일 시스템으로 포맷되므로 32GB가 최대 크기입니다.
 
 시뮬레이트된 SD 카드에서 읽고 쓰는 속도는 실제 속도에 맞게 조절됩니다. SD 카드에 액세스하는 것은 컴퓨터의 하드 드라이브에 액세스하는 것보다 느립니다.
 
-## 알림
+## <a name="notifications"></a>알림
 
 에뮬레이터의 **추가 도구**에 있는 **알림** 탭을 사용하여 앱에 푸시 알림을 보냅니다. 이 기능은 앱이 푸시 알림을 받는 경우 유용합니다.
 
@@ -520,7 +527,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ![에뮬레이터의 추가 도구에 있는 알림 페이지](images/em-notifications.png)
 
-## 센서
+## <a name="sensors"></a>센서
 
 에뮬레이터의 **추가 도구**에 있는 **센서** 탭을 사용하여 모든 선택적 센서나 카메라 기능이 없는 저가 휴대폰에서 앱이 작동하는 방식을 테스트합니다. 이 기능은 앱에서 휴대전화의 일부 센서나 카메라를 사용하며 앱이 최대한 광범위한 시장에 진출하기를 바라는 경우 유용합니다.
 
@@ -562,7 +569,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 | 비디오 해상도   | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 미리 보기 해상도 | 640 x 480(VGA)          | 640 x 480(VGA)           |
 
-## 프레임 속도 카운터
+## <a name="frame-rate-counters"></a>프레임 속도 카운터
 
 Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실행 중인 앱의 성능을 모니터합니다.
 
@@ -607,31 +614,31 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 >End If
 >```
 
-## 알려진 문제
+## <a name="known-issues"></a>알려진 문제
 
 다음은 에뮬레이터와 관련해서 알려진 문제이며, 발생할 경우 문제를 해결하는 제안 방법이 포함되어 있습니다.
 
-### 오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다."
+### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다."
 
 새 Windows 10 플라이트로 업데이트한 후를 포함하여 에뮬레이터와 관련된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 전환되는 경우가 있습니다.
 
 이 상황에서 복구하려면 관리자 명령 프롬프트에서 "netcfg -d"를 실행합니다. `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. 명령 실행이 완료되면 컴퓨터를 다시 부팅하여 복구 프로세스를 완료합니다.
 
-**참고** 이 명령은 에뮬레이터와 관련된 디바이스뿐만 아니라 모든 네트워킹 디바이스를 삭제합니다. 컴퓨터가 다시 시작되면 모든 하드웨어 네트워킹 디바이스가 자동으로 검색됩니다.
+**참고**  이 명령은 에뮬레이터와 관련된 장치뿐만 아니라 모든 네트워킹 장치를 삭제합니다. 컴퓨터가 다시 시작되면 모든 하드웨어 네트워킹 디바이스가 자동으로 검색됩니다.
  
-### 에뮬레이터를 시작할 수 없음
+### <a name="unable-to-launch-the-emulators"></a>에뮬레이터를 시작할 수 없음
 
 Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특정 네트워크 스위치를 삭제하는 도구인 XDECleanup.exe를 포함하며, 에뮬레이터(XDE) 이진 파일과 함께 제공됩니다. 잘못된 상태로 전환될 경우 이 도구를 사용하여 에뮬레이터 VM을 정리해야 합니다. 관리자 명령 프롬프트에서 도구를 실행합니다.`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **참고** XDECleanup.exe는 모든 에뮬레이터 특정 Hyper-V VM을 삭제하며, 모든 VM 검사점 또는 저장된 상태도 삭제합니다.
+> **참고**  XDECleanup.exe는 모든 에뮬레이터 특정 Hyper-V VM을 삭제하며, 모든 VM 검사점 또는 저장된 상태도 삭제합니다.
 
-### 모바일용 Windows 10 이미지 제거
+### <a name="uninstall-windows-10-for-mobile-image"></a>모바일용 Windows 10 이미지 제거
 
 에뮬레이터를 설치하면 모바일용 Windows 10 VHD 이미지가 설치되고 제어판의 **프로그램 및 기능** 목록에 해당 항목이 표시됩니다. 이미지를 제거하려면 설치된 프로그램 목록에서 **모바일용 Windows 10 이미지 - <version>**을 찾아 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.
 
 그런 다음 현재 릴리스에서 에뮬레이터용 VHD 파일을 수동으로 삭제해야 합니다. 기본 경로에 에뮬레이터를 설치한 경우 VHD 파일은 C:\\Program Files (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd에 있습니다.
 
-###하드웨어 가속 그래픽을 사용하지 않도록 설정하는 방법
+###<a name="how-to-disable-hardware-accelerated-graphics"></a>하드웨어 가속 그래픽을 사용하지 않도록 설정하는 방법
 
 기본적으로 Windows 10 Mobile 에뮬레이터는 하드웨어 가속 그래픽을 사용합니다. 하드웨어 가속을 사용하도록 설정하여 에뮬레이터를 시작하는 데 문제가 있는 경우 레지스트리 값을 설정하여 끌 수 있습니다.
 
@@ -646,19 +653,14 @@ Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특�
 
 **참고:** 이 레지스트리 값을 설정한 후 Visual Studio에서 시작한 구성에 대한 Hyper-V 관리자의 가상 컴퓨터를 삭제하고 소프트웨어 렌더링된 그래픽을 사용하여 에뮬레이터를 다시 시작해야 합니다.
 
-## 지원 리소스
+## <a name="support-resources"></a>지원 리소스
 
 Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문제를 해결하려면 [Windows 10 도구 포럼](http://go.microsoft.com/fwlink/?LinkId=534765)을 방문하세요. Windows 10 개발을 위한 모든 포럼을 확인하려면 [이 링크](http://go.microsoft.com/fwlink/?LinkId=535000)를 방문하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [에뮬레이터에서 Windows Phone 앱 실행](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Windows 및 Windows Phone SDK 아카이브](https://dev.windows.com/downloads/sdk-archive)
  
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

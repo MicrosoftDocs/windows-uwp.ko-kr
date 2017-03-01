@@ -2,9 +2,17 @@
 author: Mtoepke
 title: "Xbox One 개발자 프로그램의 UWP에 대해 알려진 문제"
 description: 
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 translationtype: Human Translation
-ms.sourcegitcommit: 3f0647bb76340ccbd538e9e4fefe173924d6baf4
-ms.openlocfilehash: 18c8d1fcd696f336601dc6c531424fe8bfb78304
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 4b13b9bbbc75de47ed69112680894d5e3f34d8a1
+ms.lasthandoff: 02/08/2017
 
 ---
 
@@ -177,12 +185,52 @@ Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알
 Occasionally, selecting the “Manage Windows Device Portal” option in Dev Home will cause Dev Home to silently exit to the Home screen. 
 This is caused by a failure in the WDP infrastructure on the console and can be resolved by restarting the console.-->
 
+## <a name="knownfoldersmediaserverdevices-caveat-on-xbox"></a>Xbox에서 KnownFolders.MediaServerDevices 주의
+
+데스크톱에서 미디어 서버는 PC와 "페어링"되고 장치 연결 서비스는 현재 어떤 서버가 온라인 상태인지 계속 추적하므로 초기 파일 시스템 쿼리가 즉시 현재 온라인 상태의 페어링된 서버 목록을 반환할 수 있습니다.
+
+Xbox에서는 서버를 추가하거나 제거할 UI가 없어 초기 파일 시스템 쿼리가 항상 빈 값을 반환합니다. 쿼리를 작성하고 ContentsChanged 이벤트를 구독하고 알림을 받을 때마다 쿼리를 새로 고쳐야 합니다. 서버가 점차 연결되고 대부분은 3초 이내에 발견됩니다.
+
+단순한 예제 코드:
+
+```
+namespace TestDNLA {
+
+    public sealed partial class MainPage : Page {
+        public MainPage() {
+            this.InitializeComponent();
+        }
+
+        private async void FindFiles_Click(object sender, RoutedEventArgs e) {
+            try {
+                StorageFolder library = KnownFolders.MediaServerDevices;
+                var folderQuery = library.CreateFolderQuery();
+                folderQuery.ContentsChanged += FolderQuery_ContentsChanged;
+                IReadOnlyList<StorageFolder> rootFolders = await folderQuery.GetFoldersAsync();
+                if (rootFolders.Count == 0) {
+                    Debug.WriteLine("No Folders found");
+                } else {
+                    Debug.WriteLine("Folders found");
+                }
+            } catch (Exception ex) {
+                Debug.WriteLine("Error: " + ex.Message);
+            } finally {
+                Debug.WriteLine("Done");
+            }
+        }
+
+        private async void FolderQuery_ContentsChanged(Windows.Storage.Search.IStorageQueryResultBase sender, object args) {
+            Debug.WriteLine("Folder added " + sender.Folder.Name);
+            IReadOnlyList<StorageFolder> topLevelFolders = await sender.Folder.GetFoldersAsync();
+            foreach (StorageFolder topLevelFolder in topLevelFolders) {
+                Debug.WriteLine(topLevelFolder.Name);
+            }
+        }
+    }
+}
+```
+
 ## <a name="see-also"></a>참고 항목
 - [질문과 대답](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -6,9 +6,16 @@ ms.assetid: 8D4E4162-1C9C-48F4-8A94-34976FB17079
 label: Page layouts with XAML
 template: detail.hbs
 op-migration-status: ready
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: b8bb8a9468f8ac8eee9b94c5551246753016e3c1
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c4c03e48c9957d78cfa8c4287c4e99b73b5609b0
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="define-page-layouts-with-xaml"></a>XAML을 사용하여 페이지 레이아웃 정의
@@ -444,8 +451,3 @@ else
 ## <a name="sample-code"></a>샘플 코드
 *   [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
     대화형 형식의 모든 XAML 컨트롤을 참조하세요.
-
-
-<!--HONumber=Dec16_HO2-->
-
-

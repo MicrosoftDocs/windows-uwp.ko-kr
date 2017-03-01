@@ -1,15 +1,22 @@
 ---
 title: "MAC, 해시, 서명"
-description: "이 문서에서는 UWP(유니버설 Windows 플랫폼)에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법에 대해 설명합니다."
+description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법에 대해 설명합니다."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f29b77317e0b03aff7e56087aa3a882720170b29
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MAC, 해시, 서명
+# <a name="macs-hashes-and-signatures"></a>MAC, 해시, 서명
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,7 +24,7 @@ ms.openlocfilehash: 2c43e8ea726827d263fd397ea28058c04d30a7aa
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼)에서 MAC(메시지 인증 코드), 해시 및 서명을 사용하여 메시지 변조를 감지하는 방법에 대해 설명합니다.
 
-## MAC(메시지 인증 코드)
+## <a name="message-authentication-codes-macs"></a>MAC(메시지 인증 코드)
 
 
 암호화는 권한이 없는 개인이 메시지를 읽지 못하도록 할 수는 있지만 메시지를 변조하는 것을 막을 수는 없습니다. 변조한 결과가 무의미한 내용에 불과하더라도 변조된 메시지로 인해 손실이 발생할 수 있습니다. MAC(메시지 인증 코드)를 사용하면 메시지 변조를 막는 데 도움이 됩니다. 예를 들어, 다음 시나리오를 가정해 봅시다.
@@ -122,7 +129,7 @@ namespace SampleMacAlgorithmProvider
 }
 ```
 
-## 해시
+## <a name="hashes"></a>해시
 
 
 암호화 해시 함수는 데이터의 임의 크기 블록을 가져가서 고정 크기 비트 문자열로 반환합니다. 해시 함수는 일반적으로 데이터에 서명할 때 사용됩니다. 대부분의 공개 키 서명 작업은 집중적인 계산이 필요하므로 주로 원본 메시지에 서명하는 것보다 메시지 해시에 서명(암호화)하는 것이 보다 효과적입니다. 다음 과정은 간소화되기는 했지만 일반적인 시나리오를 나타냅니다.
@@ -179,7 +186,7 @@ public void SampleReusableHash()
 
 ```
 
-## 디지털 서명
+## <a name="digital-signatures"></a>디지털 서명
 
 
 디지털 서명은 개인 키 MAC(메시지 인증 코드)와 동일한 공개 키입니다. MAC는 메시지 수신자가 해당 메시지가 전송 중에 변경되지 않았음을 확인하는 데 개인 키를 사용하는 반면, 서명은 개인/공개 키 쌍을 사용합니다.
@@ -189,8 +196,3 @@ public void SampleReusableHash()
 서명은 원래 메시지가 변경되지 않았고, 발신자의 공개 키가 사용되었고, 개인 키에 액세스할 수 있는 누군가가 메시지 해시에 서명했다는 점만 보장합니다.
 
 [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) 개체를 사용하면 사용 가능한 서명 알고리즘을 열거하고 키 쌍을 생성하거나 가져올 수 있습니다. [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498) 클래스에서 정적 메서드를 사용하면 메시지에 서명하거나 서명을 확인할 수 있습니다.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

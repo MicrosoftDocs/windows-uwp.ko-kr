@@ -3,13 +3,20 @@ author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다."
 title: "PlayReady를 사용한 적응 스트리밍"
+ms.author: elcowle
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8534598b1f3cf49b15a73d03f6f19e67877b25d0
-ms.openlocfilehash: 22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 861ec2823080192a5b2d9b557af14ca5e3ab43fb
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# PlayReady를 사용한 적응 스트리밍
+# <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -58,7 +65,7 @@ private string playReadyChallengeCustomData = "";
 private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 ```
 
-## MediaProtectionManager 설정
+## <a name="setting-up-the-mediaprotectionmanager"></a>MediaProtectionManager 설정
 
 PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://msdn.microsoft.com/library/windows/apps/br207040) 개체를 설정해야 합니다. [**AdaptiveMediaSource**](https://msdn.microsoft.com/library/windows/apps/dn946912) 개체를 초기화할 때 이 작업을 수행합니다.
 
@@ -136,7 +143,7 @@ private async void ProtectionManager_ServiceRequested(
 }
 ```
 
-## 개별화 서비스 요청
+## <a name="individualization-service-requests"></a>개별화 서비스 요청
 
 다음 코드는 사후 대응적으로 PlayReady 개별화 서비스 요청을 만듭니다. 함수에 매개 변수로 요청을 전달합니다. 호출을 try/catch 블록으로 둘러싸고 예외가 없는 경우 요청이 성공적으로 완료되었다고 합니다.
 
@@ -187,7 +194,7 @@ async void ProActiveIndivRequest()
 }
 ```
 
-## 라이선스 취득 서비스 요청
+## <a name="license-acquisition-service-requests"></a>라이선스 취득 서비스 요청
 
 요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285)인 경우에는 다음 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 **MediaProtectionServiceCompletion** 개체에 알리고 요청을 완료합니다.
 
@@ -269,7 +276,7 @@ async void LicenseAcquisitionRequest(
 }
 ```
 
-## AdaptiveMediaSource 초기화
+## <a name="initializing-the-adaptivemediasource"></a>AdaptiveMediaSource 초기화
 
 마지막으로, 지정된 [Uri](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) 및 [MediaElement](https://msdn.microsoft.com/library/windows/apps/br242926)에서 만든 [AdaptiveMediaSource](https://msdn.microsoft.com/library/windows/apps/dn946912)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
 
@@ -292,15 +299,10 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 
 적응 스트리밍의 시작을 처리하는 모든 이벤트(예: 단추 Click 이벤트)에서 이 기능을 호출할 수 있습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

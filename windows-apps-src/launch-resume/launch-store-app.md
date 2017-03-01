@@ -3,20 +3,27 @@ author: TylerMSFT
 title: "Windows 스토어 앱 시작"
 description: "이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 스토어 앱을 실행하여 스토어의 특정 페이지를 표시할 수 있습니다."
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b66ae37adec1b68653c0fe7d552a84f61d57acd9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d80055e8c8ca1e8586cb8f2a54612206301282a1
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 스토어 앱 실행
+# <a name="launch-the-windows-store-app"></a>Windows 스토어 앱 실행
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 이 항목에서는 **ms-windows-store:** URI 스키마를 설명합니다. 이 URI 스키마로 Windows 스토어 앱을 실행하여 스토어의 특정 페이지를 표시할 수 있습니다.
 
-## ms-windows-store: URI 스키마 참조
+## <a name="ms-windows-store-uri-scheme-reference"></a>ms-windows-store: URI 스키마 참조
 
 <table>
 <tr><th>설명</th><th></th><th>URI 스키마</th></tr>
@@ -129,9 +136,4 @@ ms.openlocfilehash: b66ae37adec1b68653c0fe7d552a84f61d57acd9
  
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

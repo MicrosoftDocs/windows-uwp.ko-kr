@@ -3,9 +3,16 @@ author: TylerMSFT
 title: "취소된 백그라운드 작업 처리"
 description: "영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ea862ef33f58b33b70318ddfc1d09d9aca9b3517
-ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7211ba08f1b697fb79cfca767300c92e6e41fb68
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -344,9 +351,4 @@ ms.openlocfilehash: ba40aefe83a02d29150dd25e1303ec15bb032b8c
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [Windows 스토어 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법(디버깅 시)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

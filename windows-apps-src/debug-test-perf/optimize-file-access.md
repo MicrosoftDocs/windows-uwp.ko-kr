@@ -3,14 +3,21 @@ author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: "파일 액세스 최적화"
 description: "파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 53fd6f4c28eaa7d3976658a84dd0aefb4255ff91
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 31869b116096052bed9e1c462de3f93e4d1335c2
+ms.lasthandoff: 02/07/2017
 
 ---
-# 파일 액세스 최적화
+# <a name="optimize-file-access"></a>파일 액세스 최적화
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 
@@ -125,9 +132,9 @@ ms.openlocfilehash: 53fd6f4c28eaa7d3976658a84dd0aefb4255ff91
 > ```
 Windows.Storage 개체(예: `Windows.Storage.ApplicationData.Current.LocalFolder`)에 대해 여러 작업을 수행하는 경우, 액세스할 때마다 중간 개체를 만들지 않도록 저장소 원본을 가리키는 로컬 변수를 만듭니다.
 
-## C# 및 Visual Basic에서 스트림 성능
+## <a name="stream-performance-in-c-and-visual-basic"></a>C# 및 Visual Basic에서 스트림 성능
 
-### UWP와 .NET 스트림 간의 버퍼링
+### <a name="buffering-between-uwp-and-net-streams"></a>UWP와 .NET 스트림 간의 버퍼링
 
 UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) 또는 [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728))을 .NET 스트림([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 지원하려면 Windows 스토어 앱용 .NET API에서 .NET 및 UWP 스트림 유형 간을 변환할 수 있는 확장 메서드를 제공해야 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx)를 참조하세요.
 
@@ -188,11 +195,11 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 이 기본 버퍼링 동작은 UWP 스트림을 .NET 스트림으로 변환하는 대부분의 시나리오에서 적합합니다. 그러나 일부 시나리오에서는 성능을 늘리기 위해 버퍼링 동작을 조정할 수 있습니다.
 
-### 큰 데이터 집합 작업
+### <a name="working-with-large-data-sets"></a>큰 데이터 집합 작업
 
 큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
-> **참고** 버퍼 크기를 약 80KB보다 크게 설정할 때는 주의해야 합니다. 이 경우 가비지 수집기 힙에서 조각화가 발생할 수 있습니다([가비지 수집 성능 향상](improve-garbage-collection-performance.md) 참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
+> **참고**   버퍼 크기를 약 80KB보다 크게 설정할 때는 주의해야 합니다. 이 경우 가비지 수집기 힙에서 조각화가 발생할 수 있습니다([가비지 수집 성능 향상](improve-garbage-collection-performance.md) 참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -228,16 +235,11 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 
 많은 수의 스트림을 동시에 사용하는 경우에는 버퍼의 메모리 오버헤드를 줄이거나 제거할 수 있습니다. 더 작은 버퍼를 지정하거나 *bufferSize* 매개 변수를 0으로 설정하여 해당 스트림 어댑터에 대한 버퍼링을 완전히 끌 수 있습니다. 관리 스트림에 대한 많은 읽기 및 쓰기를 수행하는 경우 버퍼링 없이도 적합한 처리 성능을 얻을 수 있습니다.
 
-### 대기 시간이 중요한 작업 수행
+### <a name="performing-latency-sensitive-operations"></a>대기 시간이 중요한 작업 수행
 
 읽기 및 쓰기의 대기 시간이 짧아야 하고 기본 UWP 스트림에서 큰 블록을 읽지 않는 경우에도 버퍼링을 방지할 수 있습니다. 예를 들어 네트워크 통신을 위해 스트림을 사용하는 경우 읽기 및 쓰기의 대기 시간이 짧아야 합니다.
 
 채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) 및 [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

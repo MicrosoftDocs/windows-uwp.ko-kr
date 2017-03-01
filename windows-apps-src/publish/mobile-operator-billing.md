@@ -3,9 +3,16 @@ author: jnHs
 Description: "Windows 스토어는 이 기능을 지원하는 통신사를 위한 대금 결제 방법으로 통신사 청구 기능을 제공합니다."
 title: "통신사 청구"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 694c3223278c8666bfb47bf9898ac7c02ac981f4
-ms.openlocfilehash: 831e3fbd1524ce452a4346b6c52f3f1c76385d68
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cbf519d5755adb13f6a41845b4771ac459d880cc
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,6 +33,7 @@ Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하
 
 | 국가/ 지역  | 통신사 |
 |-----------------|------------------|
+| 오스트리아         | Hutchison 3G Austria |
 | 핀란드         | DNA, Elisa       |
 | 프랑스          | Orange           |
 | 독일         | O2               |
@@ -37,7 +45,7 @@ Windows 10의 통신사 청구 구현은 현재 이들 통신사에서 지원하
 | 스웨덴          | Telenor          |
 | 스위스     | Swisscom         |
 | 미국   | Sprint           |
-| 영국  | O2               |
+| 영국  | O2, 3 UK         |
 
  
 
@@ -55,20 +63,16 @@ Windows Phone 8.x 장치에서는 통신사 청구의 레거시 구현이 가능
 | 벨기에              | BASE, Mobistar, Proximus                                           |
 | 브라질               | Claro                                                              |
 | 캐나다               | Fido, Rogers                                                       |
-| 중국                | China Mobile                                                       |
-| 콜롬비아             | Movistar                                                           |
-| 체코 공화국       | T-Mobile, Vodafone, O2                                             |
-| 에콰도르              | Claro                                                              |
-| 핀란드              | Elisa, TeliaSonera, DNA                                            |
+| 체코       | T-Mobile, Vodafone, O2                                             |
+| 핀란드              | TeliaSonera DNA                                            |
 | 프랑스               | Orange, SFR, Bouygues                                              |
 | 독일              | Telefonica, Telekom Deutschland, Vodafone                          |
 | 그리스               | Vodafone                                                           |
 | 헝가리              | Telenor, T-Mobile                                                  |
 | 인도                | Idea                                                               |
 | 인도네시아            | Indosat, Telkomsel, HCPT(Hutchinson CP Telecommunications)        |
-| 아일랜드              | O2, Vodafone, 3                                                |
+| 아일랜드              | O2, Vodafone, Three                                                |
 | 이탈리아                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
-| 요르단               | Umniah                                                             |
 | 멕시코               | Iusacell, Telcel, Movistar                                         |
 | 네덜란드          | T-Mobile, Vodafone                                                 |
 | 폴란드               | T-Mobile, Orange, Polkomtel(Plus), Play                           |
@@ -91,10 +95,5 @@ Windows Phone 8.x 장치에서는 통신사 청구의 레거시 구현이 가능
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

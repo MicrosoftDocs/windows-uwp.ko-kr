@@ -1,13 +1,20 @@
 ---
 author: mijacobs
-Description: "좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다."
+Description: "좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징은 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다."
 title: "아이콘"
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9ae92b196015fb958e90409f947c1e42184ec0d4
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -15,7 +22,7 @@ ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-좋은 아이콘은 입력 체계 및 디자인 언어의 나머지 부분과 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
+좋은 아이콘은 입력 체계 및 나머지 디자인 언어와 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다. 
 
 ## <a name="linear-scaling-size-ramps"></a>선형 배율 크기 램프 
 
@@ -176,9 +183,4 @@ ms.openlocfilehash: f8cb9c36b42936b8dfd24bbd5f88e2cf500e930f
 ## <a name="related-articles"></a>관련 문서
 
 * [타일 및 아이콘 자산에 대한 지침](../controls-and-patterns/tiles-and-notifications-app-assets.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

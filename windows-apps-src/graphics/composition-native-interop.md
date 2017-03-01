@@ -1,28 +1,35 @@
 ---
 author: scottmill
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: "BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용"
+title: "DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용"
 description: "Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 네이티브 상호 운용 인터페이스를 제공합니다."
+ms.author: scotmi
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
+ms.sourcegitcommit: 3a929e044a6edaa4a6e2393c80d6de6d54875a9e
+ms.openlocfilehash: 8be1827350e8489106ff29bd2a1f310fd06dea38
+ms.lasthandoff: 02/06/2017
 
 ---
-# BeginDraw 및 EndDraw를 사용하여 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용
+# <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D를 사용하여 컴퍼지션 네이티브 상호 운용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있는 [**ICompositorInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620068), [**ICompositionDrawingSurfaceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620058), 및 [**ICompositionGraphicsDeviceInterop**](https://msdn.microsoft.com/library/windows/apps/Mt620065) 네이티브 상호 운용 인터페이스를 제공합니다.
 
 네이티브 상호 운용은 DirectX 텍스처가 지원되는 표면 개체 주위로 구조화됩니다. 표면은 [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749)라는 팩터리 개체에서 만들어집니다. 이 개체는 기본 Direct3D 또는 Direct2D 장치 개체에 의해 지원되며 표면의 비디오 메모리를 할당하는 데 사용됩니다. 컴퍼지션 API는 기본 DirectX 장치를 만들지 않습니다. 기본 DirectX 장치를 만들어 **CompositionGraphicsDevice** 개체로 전달하는 것은 응용 프로그램에서 담당합니다. 응용 프로그램은 한 번에 둘 이상의 **CompositionGraphicsDevice** 개체를 만들 수 있으며, 여러 **CompositionGraphicsDevice** 개체에 대한 렌더링 장치로 동일한 DirectX 장치를 사용할 수 있습니다.
 
-## 표면 만들기
+## <a name="creating-a-surface"></a>표면 만들기
 
 각 [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749)는 표면 팩터리 역할을 합니다. 각 표면은 만들어질 때 초기 크기(0,0이 될 수 있음)가 설정되며 유효 픽셀은 없습니다. 초기 상태의 표면은 시각적 트리에서 즉시 사용될 수 있지만(예를 들어 [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) 및 [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433)을 통해) 초기 상태의 표면은 화면 출력에 영향을 주지 않습니다. 이 표면은 완전히 투명하며 지정된 알파 모드가 "불투명"인 경우에도 마찬가지입니다.
 
 경우에 따라 DirectX 장치를 사용할 수 없도록 렌더링될 수 있습니다. 이러한 문제가 발생하는 원인은 대부분 응용 프로그램에서 특정 DirectX API에 잘못된 인수를 전달하거나, 시스템에 의해 그래픽 어댑터가 초기화되거나, 드라이버가 업데이트되었기 때문입니다. Direct3D에는 어떤 이유로든 장치가 분실된 경우 응용 프로그램에서 비동기적으로 검색하는 데 사용할 수 있는 API가 있습니다. DirectX 장치가 분실된 경우 응용 프로그램은 이를 삭제하고 새로 만든 다음 잘못된 DirectX 장치에 이전에 연결되었던 모든 [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749) 개체에 전달해야 합니다.
 
-## 표면에 픽셀 로드
+## <a name="loading-pixels-into-a-surface"></a>표면에 픽셀 로드
 
 표면에 픽셀을 로드하려면 응용 프로그램의 요청에 따라 Direct2D 컨텍스트 또는 텍스처를 나타내는 DirectX 인터페이스를 반환하는 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 메서드를 응용 프로그램에서 호출해야 합니다. 그런 다음 응용 프로그램은 픽셀을 해당 텍스처로 렌더링하거나 업로드해야 합니다. 응용 프로그램이 완료되면 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 메서드를 호출해야 합니다. 이 시점에서만 컴퍼지션에서 새 픽셀을 사용할 수 있지만 다음에 시각적 트리에 대한 모든 변경 사항이 커밋될 때까지 화면에 표시되지 않습니다. **EndDraw**가 호출되기 전에 시각적 트리가 커밋되면 진행 중인 업데이트가 화면에 표시되지 않고 표면에 **BeginDraw** 전의 콘텐츠가 계속 표시됩니다. **EndDraw**가 호출되면 BeginDraw에서 반환한 텍스처 또는 Direct2D 컨텍스트 포인터가 무효화됩니다. **EndDraw** 호출 후에는 응용 프로그램에서 해당 포인터를 캐시할 수 없습니다.
 
@@ -30,11 +37,11 @@ Windows.UI.Composition API는 콘텐츠를 작성자로 직접 이동할 수 있
 
 응용 프로그램에서 잘못된 인수를 전달하거나 한 표면에서 **EndDraw**를 호출하기 전에 다른 표면에서 **BeginDraw**를 호출하는 등 잘못된 작업을 수행한 경우 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 메서드에서 오류를 반환합니다. 이러한 오류는 응용 프로그램 버그를 의미하므로 빠른 오류로 처리되어야 합니다. 기본 DirectX 장치가 분실된 경우에도 **BeginDraw**에서 오류를 반환할 수 있습니다. 응용 프로그램에서 해당 DirectX 장치를 다시 만든 다음 다시 시도할 수 있으므로 이 오류는 치명적이지 않습니다. 따라서 응용 프로그램은 렌더링을 생략하여 장치 분실을 처리해야 합니다. 어떤 이유로든 **BeginDraw**가 실패한 경우 시작되지 않았으므로 응용 프로그램에서 **EndDraw**를 호출해서는 안 됩니다.
 
-## 스크롤
+## <a name="scrolling"></a>스크롤
 
 성능상의 이유로 응용 프로그램에서 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx)를 호출하는 경우 반환된 텍스처의 콘텐츠가 반드시 표면의 이전 콘텐츠라는 보장이 없습니다. 응용 프로그램에서는 콘텐츠가 임의적이라는 것을 감안하여 렌더링 전에 표면을 지우거나 업데이트된 사각형이 모두 채워지도록 충분히 불투명한 콘텐츠를 그려 모든 픽셀이 터치되도록 해야 합니다. 그 외에 **BeginDraw** 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) 호출 사이에서만 텍스처 포인터가 유효하므로 응용 프로그램이 표면 외부에서 이전 콘텐츠를 복사할 수 없습니다. 이러한 이유로 Microsoft에서는 응용 프로그램에서 동일 표면 픽셀 복사를 수행할 수 있는 [**Scroll**](https://msdn.microsoft.com/library/windows/apps/mt620063) 메서드를 제공합니다.
 
-## 사용 예제
+## <a name="usage-example"></a>사용 예제
 
 다음 샘플에서는 응용 프로그램에서 그리기 표면을 만들고 [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) 및 [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060)를 사용하여 표면을 텍스트로 채우는 매우 간단한 시나리오를 설명합니다. 응용 프로그램에서는 DirectWrite를 사용하여 텍스트의 레이아웃을 지정하고(세부 항목은 표시되지 않음) Direct2D를 사용하여 렌더링합니다. 컴퍼지션 그래픽 장치는 초기화 시 직접 Direct2D 장치를 사용합니다. 그러므로 **BeginDraw**는 ID2D1DeviceContext 인터페이스 포인터를 반환할 수 있습니다. 이 방법은 그리기 작업을 수행할 때마다 응용 프로그램에서 Direct2D 컨텍스트를 만들어 반환된 ID3D11Texture2D 인터페이스를 래핑하는 것보다 훨씬 효율적입니다.
 
@@ -266,10 +273,5 @@ private:
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

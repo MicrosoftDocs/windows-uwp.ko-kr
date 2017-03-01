@@ -1,27 +1,34 @@
 ---
 author: mtoepke
 title: "게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의"
-description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다."
+description: "DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 작업은 게임 개체가 Windows와 상호 작용할 수 있는 프레임워크를 구축하는 것입니다."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 82a44a3499297b3988815ad10091cd351a194cbd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-#  게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
+#  <a name="define-the-games-universal-windows-platform-uwp-app-framework"></a>게임의 UWP(유니버설 Windows 플랫폼) 앱 프레임워크 정의
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 번째 부분은 게임 개체가 Windows와 조작할 수 있도록 하는 프레임워크의 구축입니다. 여기에는 사용자 인터페이스에 대한 이벤트, 조작 및 전환뿐만 아니라 이벤트 처리 일시 중단/다시 시작, 창 포커스 및 스내핑 같은 Windows 런타임 속성이 포함됩니다. 샘플 게임을 구조화하는 방법 및 플레이어 및 시스템 조작을 위한 상위 수준 상태 시스템을 정의하는 방법을 검토합니다.
 
-## 목표
+## <a name="objective"></a>목표
 
 
 -   UWP DirectX 게임용 프레임워크를 설정하고 전체적인 게임 흐름을 정의하는 상태 시스템을 구현합니다.
 
-## 뷰 공급자 초기화 및 시작
+## <a name="initializing-and-starting-the-view-provider"></a>뷰 공급자 초기화 및 시작
 
 
 모든 UWP DirectX 게임에서는 실행 중인 앱의 인스턴스를 정의하는 앱 단일 항목인 Windows 런타임 개체에서 필요한 그래픽 리소스에 액세스하는 데 사용할 수 있는 뷰 공급자를 가져와야 합니다. Windows 런타임을 통해 앱은 그래픽 인터페이스에 직접 연결되지만 필요한 리소스와 해당 리소스를 처리하는 방법을 지정해야 합니다.
@@ -38,7 +45,7 @@ DirectX로 작성된 UWP(유니버설 Windows 플랫폼) 게임 코딩의 첫 �
 -   [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)
 -   [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523)
 
-DirectX11 앱(유니버설 Windows) 템플릿에는 [App.h](#code_sample)의 **App**개체에 정의된 다음 5가지 메서드가 있습니다. 이 게임에서 이러한 메서드를 구현하는 방법을 살펴보겠습니다.
+DirectX11 앱(유니버설 Windows) 템플릿에는 [App.h](#complete-sample-code-for-this-section)의 **App**개체에 정의된 다음 5가지 메서드가 있습니다. 이 게임에서 이러한 메서드를 구현하는 방법을 살펴보겠습니다.
 
 뷰 공급자의 Initialize 메서드
 
@@ -237,7 +244,7 @@ void App::Uninitialize()
 
 이 자습서의 5가지 메서드를 다시 참조하여 기억해 두어야 합니다. 이제 게임 엔진의 전체 구조 및 해당 구조를 정의하는 상태 시스템에 대해 살펴보겠습니다.
 
-## 게임 엔진 상태 초기화
+## <a name="initializing-the-game-engine-state"></a>게임 엔진 상태 초기화
 
 
 사용자는 언제든지 일시 중단 상태에서 UWP 게임 앱을 다시 시작할 수 있으므로 앱의 가능한 상태 수에 제한이 없습니다.
@@ -289,12 +296,12 @@ void App::InitializeGameState()
 
 게임 샘플은 일시 중단 이벤트 없이 처음 시작되는 게임인 콜드 부팅 게임과 일시 중단 상태에서 다시 시작되는 게임을 구분하지 않습니다. 이 디자인은 모든 UWP 앱에 적합합니다.
 
-## 이벤트 처리
+## <a name="handling-events"></a>이벤트 처리
 
 
 샘플 코드에서는 **Initialize**, **SetWindow** 및 **Load**의 특정 이벤트에 대해 많은 처리기를 등록했습니다. 게임 방법이나 그래픽 개발을 진행하기 전에도 코드 샘플에서 이 작업을 제대로 수행했으므로 이러한 이벤트가 모두 중요하다는 사실도 추측할 수 있습니다. 맞습니다. 이러한 이벤트는 적절한 UWP 앱 환경에 기본적인 요소이며 UWP 앱은 언제든지 활성화, 비활성화, 크기 조정, 스냅, 스냅 취소, 일시 중단 또는 다시 시작할 수 있으므로 게임에서 최대한 빨리 해당 이벤트를 등록하고 환경을 원활하며 플레이어가 예측할 수 있게 유지하는 방식으로 처리해야 합니다.
 
-다음은 샘플에 있는 이벤트 처리기와 해당 처리기에서 처리하는 이벤트입니다. 이러한 이벤트 처리기에 대한 전체 코드는 [이 섹션에 대한 전체 코드](#code_sample)에서 확인할 수 있습니다.
+다음은 샘플에 있는 이벤트 처리기와 해당 처리기에서 처리하는 이벤트입니다. 이러한 이벤트 처리기에 대한 전체 코드는 [이 섹션에 대한 전체 코드](#complete-sample-code-for-this-section)에서 확인할 수 있습니다.
 
 <table>
 <colgroup>
@@ -353,7 +360,7 @@ void App::InitializeGameState()
 
 이러한 이벤트는 UWP 앱 디자인의 일부이므로 직접 만든 게임에서 해당 이벤트를 처리해야 합니다.
 
-## 게임 엔진 업데이트
+## <a name="updating-the-game-engine"></a>게임 엔진 업데이트
 
 
 샘플에서는 플레이어가 수행할 수 있는 모든 주요 작업을 처리하는 기본 상태 시스템을 **Run**의 게임 루프 내에서 구현했습니다. 이 상태 시스템의 최상위 수준에서는 게임 로드, 특정 레벨 플레이 또는 시스템 또는 플레이어에 의해 게임이 일시 중지된 후 레벨 진행을 처리합니다.
@@ -364,7 +371,7 @@ void App::InitializeGameState()
 -   **Waiting for press**. 게임 루프가 순환되며 특정 사용자 입력을 기다립니다. 이 입력은 게임을 로드하거나, 수준을 시작하거나, 수준을 계속하는 플레이어 작업입니다. 이 샘플 코드에서는 이러한 하위 상태를 PressResultState 열거형 값으로 나타냅니다.
 -   **Dynamics**. 게임 루프가 사용자 플레이로 실행되고 있습니다. 사용자가 플레이하는 동안 게임이 전환할 수 있는 세 가지 상태(수준에 대해 설정된 시간 만료, 플레이어의 수준 완료 또는 플레이어의 모든 수준 완료)를 확인합니다.
 
-다음은 코드 구조입니다. 전체 코드는 [이 섹션에 대한 전체 코드](#code_sample)에 있습니다.
+다음은 코드 구조입니다. 전체 코드는 [이 섹션에 대한 전체 코드](#complete-sample-code-for-this-section)에 있습니다.
 
 게임 엔진을 업데이트하는 데 사용된 상태 시스템의 구조
 
@@ -473,7 +480,7 @@ void App::Update()
 
 물론 앞에서 살펴본 대로 상태 시스템은 상태 시스템 내에 있습니다. 컨트롤러에 대해 하나의 상태 시스템이 있으며, 플레이어가 생성할 수 있는 모든 허용되는 입력을 처리합니다. 다이어그램에서 누르기는 특정 형식의 사용자 입력입니다. 이 상태 시스템은 더 높은 수준에서 작동하므로 정의가 중요하지 않으며, 컨트롤러에 대한 상태 시스템에서 이동 및 슈팅 동작에 영향을 주는 모든 전환과 연관된 렌더링 업데이트를 처리한다고 가정합니다. 입력 상태 관리는 [컨트롤 추가](tutorial--adding-controls.md)에서 검토합니다.
 
-## 사용자 인터페이스 업데이트
+## <a name="updating-the-user-interface"></a>사용자 인터페이스 업데이트
 
 
 플레이어가 시스템 상태에 대한 알림을 계속 받도록 하여 계임 규칙에 따라 상위 수준 상태를 변경할 수 있도록 해야 합니다. 이 게임 샘플에 포함된 대부분의 게임에서 이 동작은 게임 상태의 표현 및 점수, 탄약, 남은 기회 수 같은 기타 플레이 관련 정보를 포함하는 주의 표시를 통해 수행됩니다. 이 동작은 주 그래픽 파이프라인과 별도로 렌더링되고 3D 투영 위에 배치되므로 오버레이라고 합니다. 샘플 게임에서 이 오버레이는 Direct2D API를 사용하여 만듭니다. XAML을 사용하여 이 오버레이를 만들 수도 있으며, [게임 샘플 확장](tutorial-resources.md)에서 설명합니다.
@@ -525,14 +532,14 @@ void App::SetGameInfoOverlay(GameInfoOverlayState state)
 
 게임의 그래픽 파이프라인에서 사용자 인터페이스를 분리하면 게임의 독립적인 그래픽 렌더링 엔진에서 작업을 수행하여 게임 코드의 복잡성을 현저하게 줄일 수 있습니다.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 게임 샘플의 기본 구조를 살펴보고 DirectX를 사용하여 UWP 게임 앱을 개발하는 데 적합한 모델을 제공합니다. 그 외의 내용도 많이 있지만 여기서는 게임의 기본 구조만을 다룹니다. 이제 게임과 게임 기술 및 핵심 게임 개체로 해당 기술을 구현하는 방법을 자세히 살펴보겠습니다. 이 부분은 [주 게임 개체 정의](tutorial--defining-the-main-game-loop.md)에서 검토합니다.
 
 또한 샘플 게임의 그래픽 엔진에 대해서도 더 자세히 살펴보아야 합니다. 이 부분은 [렌더링 파이프라인 어셈블](tutorial--assembling-the-rendering-pipeline.md)에서 검토합니다.
 
-## 이 섹션에 대한 전체 샘플 코드
+## <a name="complete-sample-code-for-this-section"></a>이 섹션에 대한 전체 샘플 코드
 
 
 App.h
@@ -1423,10 +1430,5 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

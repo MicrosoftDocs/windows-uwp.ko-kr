@@ -3,9 +3,16 @@ author: laurenhughes
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "선택기를 사용하여 파일 및 폴더 열기"
 description: "사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. FileOpenPicker 및 FileSavePicker 클래스를 사용하여 파일에 액세스하고 FolderPicker 클래스를 사용하여 폴더에 액세스할 수 있습니다."
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 99a21818fc3b8552de18792f408da860bf6dea22
-ms.openlocfilehash: 08782286228fa25dc492b0e7ccc90958bdec5a7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96a1cdbf5420978ae8889c86eeafd7825d568261
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -175,8 +182,3 @@ else
 ```
 
 **팁**  앱이 선택기를 통해 파일 또는 폴더에 액세스할 경우 해당 항목을 앱의 [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) 또는 [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)에 추가하여 추적합니다. 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [최근에 사용한 파일 및 폴더를 추적하는 방법](how-to-track-recently-used-files-and-folders.md)을 참조하세요.
-
-
-<!--HONumber=Jan17_HO1-->
-
-

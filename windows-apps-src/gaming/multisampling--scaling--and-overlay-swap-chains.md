@@ -1,29 +1,36 @@
 ---
 author: mtoepke
 title: "스왑 체인 확장 및 오버레이"
-description: "모바일 디바이스에서 보다 신속한 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다."
+description: "모바일 디바이스에서 더 빠른 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 스왑 체인 크기 조정, 오버레이, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 1eea87b2175872e5a3bc7c41e82cda47bb555f82
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 스왑 체인 크기 조정 및 오버레이
+# <a name="swap-chain-scaling-and-overlays"></a>스왑 체인 크기 조정 및 오버레이
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 모바일 디바이스에서 보다 신속한 렌더링을 위해 크기 조정된 스왑 체인을 만들고 오버레이 스왑 체인(사용 가능한 경우)을 사용하여 시각적 품질을 향상시키는 방법을 알아봅니다.
 
-## DirectX 11.2의 스왑 체인
+## <a name="swap-chains-in-directx-112"></a>DirectX 11.2의 스왑 체인
 
 
 Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 스왑 체인으로 UWP(유니버설 Windows 플랫폼) 앱을 만들어 채우기 속도를 향상시킬 수 있습니다. Direct3D 11.2에는 하드웨이 오버레이로 렌더링하기 위한 API도 포함되어 있어 다른 스왑 체인의 UI를 기본 해상도로 제공할 수 있습니다. 따라서 게임에서 높은 프레임 속도를 유지하면서 전체 기본 해상도로 UI를 그릴 수 있으므로 모바일 장치 및 높은 DPI 디스플레이(예: 3840 x 2160)를 최대한 활용할 수 있습니다. 이 문서에서는 겹치는 스왑 체인을 사용하는 방법에 대해 설명 합니다.
 
 또한 Direct3D 11.2에서는 전환 모델 스왑 체인으로 대기 시간을 단축하는 새로운 기능을 제공합니다. [DXGI 1.3 스왑 체인으로 대기 시간 단축](reduce-latency-with-dxgi-1-3-swap-chains.md)을 참조하세요.
 
-## 스왑 체인 크기 조정 사용
+## <a name="use-swap-chain-scaling"></a>스왑 체인 크기 조정 사용
 
 
 게임이 하위 수준 하드웨어 또는 절전에 최적화된 하드웨어에서 실행되는 경우 디스플레이에서 기본적으로 가능한 것보다 낮은 해상도에서 실시간 게임 콘텐츠를 렌더링하는 것이 좋을 수 있습니다. 이렇게 하려면 게임 콘텐츠 렌더링에 사용되는 스왑 체인이 기본 해상도보다 작거나 스왑 체인의 하위 영역을 사용해야 합니다.
@@ -113,7 +120,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 4.  Direct2D를 사용하는 경우 회전 변형을 조정하여 원본 영역을 보완해야 합니다.
 
-## UI 요소에 대한 하드웨어 오버레이 스왑 체인 만들기
+## <a name="create-a-hardware-overlay-swap-chain-for-ui-elements"></a>UI 요소에 대한 하드웨어 오버레이 스왑 체인 만들기
 
 
 스왑 체인 크기 조정을 사용하는 경우 UI 크기도 축소되어 흐리게 표시되므로 사용하기 어려울 수 있다는 단점이 내재되어 있습니다. 하드웨어가 오버레이 스왑 체인을 지원하는 장치에서 이 문제는 실시간 게임 콘텐츠와 구분되는 UI를 스왑 체인에서 기본 해상도로 렌더링하면 완전히 해결됩니다. 이 기술은 [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) 스왑 체인에만 적용되며 XAML interop에서는 사용할 수 없습니다.
@@ -145,7 +152,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **참고** DXGI 어댑터가 오버레이를 지원하는 경우 다음 단계를 계속 진행합니다. 디바이스가 오버레이를 지원하지 않는 경우에는 여러 스왑 체인을 사용하는 렌더링이 효율적이지 않습니다. 대신 실시간 게임 콘텐츠와 동일한 스왑 체인에서 축소된 해상도로 UI를 렌더링합니다.
+    > **참고** DXGI 어댑터가 오버레이를 지원하는 경우, 다음 단계로 넘어갑니다. 디바이스가 오버레이를 지원하지 않는 경우에는 여러 스왑 체인을 사용하는 렌더링이 효율적이지 않습니다. 대신 실시간 게임 콘텐츠와 동일한 스왑 체인에서 축소된 해상도로 UI를 렌더링합니다.
 
      
 
@@ -196,7 +203,7 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 4.  포그라운드 스왑 체인은 항상 프리멀티플라이된 알파를 사용합니다. 각 픽셀의 색 값은 프레임을 표시하기 전에 이미 알파 값이 곱해져 있어야 합니다. 예를 들어 50% 알파의 100% 흰색 BGRA 픽셀은 (0.5, 0.5, 0.5, 0.5)로 설정됩니다.
 
-    알파 미리 곱하기 단계는 [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476200) 구조의 **SrcBlend** 필드가 **D3D11\_SRC\_ALPHA**로 설정된 앱 혼합 상태([**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476349) 참조)를 적용하여 출력 병합 단계에서 수행할 수 있습니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
+    알파 미리 곱하기 단계는 [**D3D11\_RENDER\_TARGET\_BLEND\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476349) 구조의 **SrcBlend** 필드가 **D3D11\_SRC\_ALPHA**로 설정된 앱 혼합 상태([**ID3D11BlendState**](https://msdn.microsoft.com/library/windows/desktop/ff476200) 참조)를 적용하여 출력 병합 단계에서 수행할 수 있습니다. 프리멀티플라이된 알파 값이 있는 자산을 사용할 수도 있습니다.
 
     알파 미리 곱하기 단계를 수행하지 않으면 포그라운드 스왑 체인의 색이 예상보다 밝아집니다.
 
@@ -325,10 +332,5 @@ Direct3D 11.2에서는 기본이 아닌 축소된 해상도에서 확대되는 �
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -3,9 +3,16 @@ author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 가져옵니다."
 title: "앱 리뷰 가져오기"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 스토어 서비스, Windows 스토어 분석 API, 리뷰"
 translationtype: Human Translation
-ms.sourcegitcommit: 7d05c8953f1f50be0b388a044fe996f345d45006
-ms.openlocfilehash: 49d3f3cb608f3207306af443c67b684a0ae9f319
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 68ad995341d0d4bedbe566e8a491a80b9b0a8ed2
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -13,6 +20,8 @@ ms.openlocfilehash: 49d3f3cb608f3207306af443c67b684a0ae9f319
 
 
 Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날짜 범위 및 다른 선택적 필터에 대한 리뷰 데이터를 JSON 형식으로 가져옵니다. 이 정보는 Windows 개발자 센터 대시보드의 [검토 보고서](../publish/reviews-report.md)를 통해서도 사용할 수 있습니다.
+
+리뷰를 검색한 다음 Windows 스토어에 리뷰 API에서 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 및 [앱 리뷰에 응답 제출](submit-responses-to-app-reviews.md) 메서드를 사용하여 프로그래밍 방식으로 리뷰에 응답할 수 있습니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -82,7 +91,7 @@ Windows 스토어 분석 API에서 이 메서드를 사용하여 지정된 날�
 | notHelpfulCount  | eq, ne  | 리뷰가 유용하지 않다고 표시된 횟수입니다.  |
 | responseDate  | eq, ne  | 응답이 제출된 날짜입니다.  |
 | responseText  | eq, ne, contains  | 응답의 텍스트 콘텐츠입니다.  |
-
+| id  | eq, ne  | 리뷰의 ID(GUID)입니다.        |
 
 <span/> 
 
@@ -139,6 +148,7 @@ Authorization: Bearer <your access token>
 | notHelpfulCount        | 숫자  | 리뷰가 유용하지 않다고 표시된 횟수입니다.               |
 | responseDate           | 문자열  | 응답이 제출된 날짜입니다.                 |
 | responseText           | 문자열  | 응답의 텍스트 콘텐츠입니다.        |
+| id                     | 문자열  | 리뷰의 ID(GUID)입니다. 이 ID를 [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md) 및 [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드에서 사용할 수 있습니다.       |
 
 <span/> 
 
@@ -171,7 +181,8 @@ Authorization: Bearer <your access token>
       "helpfulCount": 0,
       "notHelpfulCount": 0,
       "responseDate": "2015-08-07T01:50:22.9874488Z",
-      "responseText": "1"
+      "responseText": "1",
+      "id": "6be543ff-1c9c-4534-aced-af8b4fbe0316"
     }
   ],
   "@nextLink": null,
@@ -183,13 +194,10 @@ Authorization: Bearer <your access token>
 
 * [리뷰 보고서](../publish/reviews-report.md)
 * [Windows 스토어 서비스를 사용하여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [앱 획득 가져오기](get-app-acquisitions.md)
-* [추가 기능 구입 가져오기](get-in-app-acquisitions.md)
+* [앱 리뷰에 대한 응답 정보 가져오기](get-response-info-for-app-reviews.md)
+* [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md)
+* [앱 집계 정보 가져오기](get-app-acquisitions.md)
+* [추가 기능 집계 정보 가져오기](get-in-app-acquisitions.md)
 * [오류 보고 데이터 가져오기](get-error-reporting-data.md)
 * [앱 평점 가져오기](get-app-ratings.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

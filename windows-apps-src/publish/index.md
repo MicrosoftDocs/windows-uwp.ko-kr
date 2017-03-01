@@ -1,14 +1,22 @@
 ---
 author: jnHs
 Description: "Windows 스토어에 Windows 앱을 게시하는 방법을 참조하세요."
+title: "Windows 앱 게시"
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 translationtype: Human Translation
-ms.sourcegitcommit: f894decad6a88ad3923e0bd5c54a6f4906555081
-ms.openlocfilehash: 6e2b6158a586fa82780664cd2ef2de0b425a1f1d
-
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 43cd6db99001974283175cb611d2e06c5da2221c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# Windows 앱 게시
+# <a name="publish-windows-apps"></a>Windows 앱 게시
 
 Windows 개발자 센터 대시보드를 사용하여 Windows 스토어에 앱을 게시할 수 있습니다. 
 
@@ -29,9 +37,4 @@ Windows 개발자 센터 대시보드를 사용하여 Windows 스토어에 앱�
 | [지급 받기](getting-paid-apps.md) | 앱을 통해 획득한 수익 받기, 추가 기능 및 Microsoft Advertising에 대한 자세한 정보를 확인합니다. |
 | [스토어 정책 및 준수 사항](https://msdn.microsoft.com/library/windows/apps/dn764939.aspx) | 이 섹션에는 Windows 앱 및 콘텐츠에 적용되는 [스토어 정책](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx) 및 [앱 품질](https://msdn.microsoft.com/library/windows/apps/mt652261.aspx) 기준과 개발자가 따라야 하는 [준수 사항](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx)이 포함되어 있습니다. |
  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

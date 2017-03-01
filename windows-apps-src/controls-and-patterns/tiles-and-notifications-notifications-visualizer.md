@@ -5,9 +5,16 @@ title: "알림 시각화 도우미"
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
+ms.author: mijacobs
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10 uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d51aacb31f41cbd9c065b013ffb95b83a6edaaf4
-ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f7269e3fde1f5dbca278b2b9047b392049ee452c
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
@@ -30,7 +37,7 @@ ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 
 알림 시각화 도우미를 사용하면 앱 자체를 편집 및 배포하지 않고도 적응형 타일 페이로드를 만들어 테스트할 수 있습니다. 원하는 시각적 결과가 포함된 페이로드를 만들었다면 이를 앱에 통합할 수 있습니다. 자세한 내용은 [로컬 타일 알림 보내기](tiles-and-notifications-sending-a-local-tile-notification.md)를 참조하세요.
 
-**참고** 알림 시각화 도우미의 Windows 시작 메뉴 시뮬레이션은 항상 완전히 정확하지는 않으며 [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712)와 같은 일부 페이로드 속성을 지원하지 않습니다. 원하는 타일 디자인을 얻으면 실제 시작 메뉴에 타일을 고정해 보고 테스트하여 의도한 대로 나타나는지 확인합니다.
+**참고**  알림 시각화 도우미의 Windows 시작 메뉴 시뮬레이션은 항상 완전히 정확하지는 않으며 [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712)와 같은 일부 페이로드 속성을 지원하지 않습니다. 원하는 타일 디자인을 얻으면 실제 시작 메뉴에 타일을 고정해 보고 테스트하여 의도한 대로 나타나는지 확인합니다.
 
  
 
@@ -56,8 +63,3 @@ ms.openlocfilehash: 20e73c2de82bcc76c94fff38163dddac7ef9d8a9
 * [적응형 타일 만들기](tiles-and-notifications-create-adaptive-tiles.md)
 * [적응형 타일 템플릿: 스키마 및 설명서](tiles-and-notifications-adaptive-tiles-schema.md)
 * [타일 및 알림(MSDN 블로그)](http://blogs.msdn.com/b/tiles_and_toasts/)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

@@ -3,13 +3,20 @@ author: msatranjr
 Description: "이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다."
 title: "위치 인식 앱에 대한 지침"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 위치, 지도, 지리적 위치"
 translationtype: Human Translation
-ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
-ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f52f2f7a33edcbb0bd360c7b336cc3988abb80f5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 위치 인식 앱에 대한 지침
+# <a name="guidelines-for-location-aware-apps"></a>위치 인식 앱에 대한 지침
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -22,7 +29,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 이 항목에서는 사용자 위치에 액세스해야 하는 앱에 대한 성능 지침에 대해 설명합니다.
 
-## 권장 사항
+## <a name="recommendations"></a>권장 사항
 
 
 -   앱에 위치 데이터가 필요한 경우에만 위치 개체 사용을 시작합니다.
@@ -100,13 +107,13 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
     Windows 런타임 API는 자력계를 제외한 모든 센서에 액세스할 수 있습니다. 퓨전 센서는 원시 센서보다 더 정확하고 안정적이지만 전원을 더 많이 사용합니다. 따라서 용도에 적합한 센서를 사용해야 합니다. 자세한 내용은 [센서](https://msdn.microsoft.com/library/windows/apps/mt187358)를 참조하세요.
 
-**연결된 대기 상태** 
+**연결된 대기 상태**
 - PC가 연결된 대기 상태이면 [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) 개체를 항상 인스턴스화할 수 있습니다. 그러나 **Geolocator** 개체에서 집계할 센서를 찾을 수 없으므로 [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) 호출은 7초 후 시간 초과되고 [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) 이벤트 수신기가 호출되지 않으며 [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) 이벤트 수신기는 **NoData** 상태로 한 번 호출됩니다.
 
-## 추가 사용법 지침
+## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
 
-### 위치 설정의 변경 검색
+### <a name="detecting-changes-in-location-settings"></a>위치 설정의 변경 검색
 
 사용자는 **설정** 앱의 **위치 개인 정보 설정**을 사용하여 위치 기능을 끌 수 있습니다.
 
@@ -119,7 +126,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 위치 서비스는 사용 가능해지면 데이터를 반환합니다. 먼저 오차 반경이 더 큰 위치를 반환한 다음 사용 가능해지면 보다 정확한 정보로 위치를 업데이트할 수 있습니다. 사용자의 위치를 표시하는 앱은 일반적으로 보다 정확한 정보가 사용 가능해지면 위치를 업데이트하려고 합니다.
 
-### 위치에 대한 그래픽 표현
+### <a name="graphical-representations-of-location"></a>위치에 대한 그래픽 표현
 
 앱에서 [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)를 사용하여 맵에 사용자의 현재 위치를 명시적으로 표시해야 합니다. 정확성에 대한 세 가지 주요 밴드가 있습니다. 즉, 약 10미터의 오차 반경, 약 100미터의 오차 반경 및 1킬로미터 이상의 오차 반경이 있습니다. 정확성 정보를 사용하면 앱이 사용 가능한 데이터 컨텍스트에 정확하게 위치를 표시하도록 할 수 있습니다. 지도 컨트롤을 사용하는 방법에 대한 일반적인 정보는 [2D, 3D 및 거리 뷰가 있는 지도 표시](https://msdn.microsoft.com/library/windows/apps/mt219695)를 참조하세요.
 
@@ -140,7 +147,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 -   전환 애니메이션을 원활하게 하고 전환을 신속하고 유연하게 유지합니다.
 -   몇 가지 연속되는 보고서에서 정확성의 변경을 확인할 때까지 기다려 원하지 않는 확대/축소가 너무 자주 수행되지 않도록 합니다.
 
-### 위치에 대한 텍스트 표현
+### <a name="textual-representations-of-location"></a>위치에 대한 텍스트 표현
 
 일부 유형의 앱(예: 날씨 앱 또는 지역 정보 앱)에는 다른 정확성 밴드의 위치를 텍스트로 표현할 방법이 필요합니다. 위치를 명확하게 표시하고 데이터에 제공된 정확성 수준으로만 표시해야 합니다.
 
@@ -148,7 +155,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 -   정확성이 약 100미터(Wi-Fi 해상도)인 경우 수신된 위치 데이터가 적당히 정확하므로 정보를 구/군/시 이름 수준으로 표시하는 것이 좋습니다. 주변 이름은 사용하지 마세요.
 -   정확성이 1킬로미터보다 큰 경우(IP 해상도) 시/도 또는 국가/지역 이름만 표시합니다.
 
-### 개인 정보 고려 사항
+### <a name="privacy-considerations"></a>개인 정보 고려 사항
 
 사용자의 지리적 위치는 PII(개인 식별이 가능한 정보)입니다. 다음 웹 사이트에서는 사용자 개인 정보 보호에 대한 지침을 제공합니다.
 
@@ -156,7 +163,7 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 <!--For more info, see [Guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md).-->
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [지오펜스 설정](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [현재 위치 가져오기](https://msdn.microsoft.com/library/windows/apps/mt219698)
@@ -166,13 +173,4 @@ ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

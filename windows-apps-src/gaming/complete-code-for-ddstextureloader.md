@@ -3,13 +3,20 @@ author: mtoepke
 title: "DDSTextureLoader의 전체 코드"
 description: "메모리에서 DDS 텍스처를 로드하는 클래스 및 메서드의 전체 코드입니다."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, ddstextureloader"
 translationtype: Human Translation
-ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: edcddb162d58b5f05248c7cd94b6079207e4a318
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 7daf10ad577b2b67c6ca5554f6555deb89f16229
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# DDSTextureLoader의 전체 코드
+# <a name="complete-code-for-ddstextureloader"></a>DDSTextureLoader의 전체 코드
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -23,27 +30,27 @@ ms.openlocfilehash: edcddb162d58b5f05248c7cd94b6079207e4a318
 -   [코드 보기(C++)](#view-the-code-c)
 
 
-## 다운로드 위치
+## <a name="download-location"></a>다운로드 위치
 
 
 이 샘플은 다운로드할 수 없습니다.
 
-## 기술
+## <a name="technologies"></a>기술
 
 **프로그래밍 언어** - C++    
 **프로그래밍 모델** - Windows 런타임
 
-## 요구 사항
+## <a name="requirements"></a>요구 사항
 
 **지원되는 최소 클라이언트** - Windows 10                               
 **지원되는 최소 서버** - Windows Server 2016 Technical Preview
 
 
 
-## 코드 보기(C++)
+## <a name="view-the-code-c"></a>코드 보기(C++)
 
 
-## DDSTextureLoader.h
+## <a name="ddstextureloaderh"></a>DDSTextureLoader.h
 
 
 ```cpp
@@ -76,7 +83,7 @@ void CreateDDSTextureFromMemory(
     );
 ```
 
-## DDSTextureLoader.cpp
+## <a name="ddstextureloadercpp"></a>DDSTextureLoader.cpp
 
 
 ```cpp
@@ -1222,10 +1229,5 @@ void CreateDDSTextureFromMemory(
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

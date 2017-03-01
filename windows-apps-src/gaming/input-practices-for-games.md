@@ -3,13 +3,20 @@ author: mithom
 title: "게임 입력 장치 사용 방법"
 description: "입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다."
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10 uwp, 게임, 입력"
 translationtype: Human Translation
-ms.sourcegitcommit: 858bf6a0862d6459b2bac22d8ab9431b51332fef
-ms.openlocfilehash: 15e5096c00334bf200fa0076d227e42fc463e25d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 15d56a27ad914b258bb19b80b3498510d01105cd
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# <a name="input-practices-for-games"></a>게임 입력 장치 사용 방법
+# <a name="input-practices-for-games"></a>게임용 입력 시스템
 
 이 페이지는 UWP(유니버설 Windows 플랫폼) 게임에서 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 설명합니다.
 
@@ -146,9 +153,4 @@ if (buttonArrangement == buttonSelection)
 [igamecontroller.user]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.user.aspx
 [igamecontroller.userchanged]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.userchanged.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

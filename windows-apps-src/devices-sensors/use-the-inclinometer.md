@@ -2,36 +2,43 @@
 author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: "경사계 사용"
-description: "경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다."
+description: "경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
-ms.openlocfilehash: 17828018f2c8db8a5a60d839e7f73904de7a1a24
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b8ebfaf4c294fccf61534203bce0326f9dbec977
+ms.lasthandoff: 02/07/2017
 
 ---
-# 경사계 사용
+# <a name="use-the-inclinometer"></a>경사계 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-** 중요 API **
+**중요 API**
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
 -   [**경사계**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
-경사계를 사용하여 피치, 롤 및 요를 판단하는 방법을 알아봅니다.
+경사계를 사용하여 피치, 롤 및 요를 확인하는 방법을 알아봅니다.
 
 일부 3차원 게임에는 입력 장치로서 경사계가 필요합니다. 일반적인 한 예로, 경사계의 세 축(X, Y 및 Z)을 항공기의 승강키, 보조 날개 및 방향타 입력에 매핑하는 비행 시뮬레이터가 있습니다.
 
- ## 사전 요구 사항
+ ## <a name="prerequisites"></a>사전 요구 사항
 
 XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트에 대해 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 경사계를 지원해야 합니다.
 
- ## 간단한 경사계 앱 만들기
+ ## <a name="create-a-simple-inclinometer-app"></a>간단한 경사계 앱 만들기
 
 이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 간단한 경사계 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
 
-###  지침
+###  <a name="instructions"></a>지침
 
 -   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)**를 선택하여 새 프로젝트를 만듭니다.
 
@@ -65,7 +72,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
         {
             private Inclinometer _inclinometer;
 
-            // This event handler writes the current inclinometer reading to 
+            // This event handler writes the current inclinometer reading to
             // the three text blocks on the app' s main page.
 
             private async void ReadingChanged(object sender, InclinometerReadingChangedEventArgs e)
@@ -83,7 +90,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
             {
                 this.InitializeComponent();
                 _inclinometer = Inclinometer.GetDefault();
-     
+
 
                 if (_inclinometer != null)
                 {
@@ -134,7 +141,7 @@ XAML(Extensible Application Markup Language), Microsoft Visual C# 및 이벤트�
 
 -   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
 
-###  설명
+###  <a name="explanation"></a>설명
 
 앞의 예는 앱에서 경사계 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
 
@@ -155,7 +162,7 @@ _inclinometer.ReportInterval = reportInterval;
 새 경사계 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
 
 ```csharp
-_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
+_inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer,
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
@@ -170,13 +177,7 @@ InclinometerReadingChangedEventArgs>(ReadingChanged);
  <TextBlock x:Name="txtYaw" HorizontalAlignment="Left" Height="19" Margin="55,56,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="54" Foreground="#FFF6F2F2"/>
 ```
 
- ## 관련 항목
+ ## <a name="related-topics"></a>관련 항목
 
 * [경사계 샘플](http://go.microsoft.com/fwlink/p/?linkid=241380)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

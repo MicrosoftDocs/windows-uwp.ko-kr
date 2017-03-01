@@ -3,9 +3,16 @@ author: msatranjr
 title: "2D, 3D 및 Streetside 뷰가 있는 지도 표시"
 description: "MapControl 클래스를 사용하여 앱에서 사용자 지정 가능한 지도를 표시하세요. 이 항목에서는 3D 위성뷰 및 Streetside 뷰도 소개합니다."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+ms.author: misatran
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 지도, 위치, 지도 제어, 지도 보기"
 translationtype: Human Translation
-ms.sourcegitcommit: d00ba80ac7d0f033a69ad070dc8ee681cbd0ed18
-ms.openlocfilehash: 09f87f66802e5143c8eac7fce8fc2118f3d31340
+ms.sourcegitcommit: 32b5230d62f23430393fc51c73f80fa46bd525fa
+ms.openlocfilehash: 7a1687ceb188fdd28943f807b877b28e93ae6937
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,7 +33,7 @@ ms.openlocfilehash: 09f87f66802e5143c8eac7fce8fc2118f3d31340
 
 [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)을 추가하여 XAML 페이지에 지도를 표시합니다. **MapControl**을 사용하려면 XAML 페이지 또는 코드에서 [**Windows.UI.Xaml.Controls.Maps**](https://msdn.microsoft.com/library/windows/apps/dn610751) 네임스페이스를 선언해야 합니다. 도구 상자에서 이 컨트롤을 끌면 이 네임스페이스 선언이 자동으로 추가됩니다. **MapControl**을 XAML 페이지에 수동으로 추가할 경우 페이지 맨 위에 네임스페이스 선언을 수동으로 추가해야 합니다.
 
-다음 예제에서는 기본 지도 컨트롤을 표시하며, 터치식 입력을 허용하는 것 외에 확대/축소 및 이동(상하) 컨트롤을 표시하도록 지도를 구성합니다. 지도의 모양을 사용자 지정하는 방법에 대한 자세한 내용은 [지도 구성](#mapconfig)을 참조하세요.
+다음 예제에서는 기본 지도 컨트롤을 표시하며, 터치식 입력을 허용하는 것 외에 확대/축소 및 이동(상하) 컨트롤을 표시하도록 지도를 구성합니다. 지도의 모양을 사용자 지정하는 방법에 대한 자세한 내용은 [지도 구성](#configure-the-map)을 참조하세요.
 
 ```xml
 <Page
@@ -46,7 +53,7 @@ ms.openlocfilehash: 09f87f66802e5143c8eac7fce8fc2118f3d31340
        ZoomInteractionMode="GestureAndControl"
        TiltInteractionMode="GestureAndControl"   
        MapServiceToken="EnterYourAuthenticationKeyHere"/>
-  
+
  </Grid>
 </Page>
 ```
@@ -137,7 +144,7 @@ switch (accessStatus)
 
 2D 지도에 표시된 위치를 변경하려면 [**TrySetViewAsync**](https://msdn.microsoft.com/library/windows/apps/dn637060) 메서드의 오버로드 중 하나를 호출합니다. 이 메서드를 사용하여 [**Center**](https://msdn.microsoft.com/library/windows/apps/dn637005), [**ZoomLevel**](https://msdn.microsoft.com/library/windows/apps/dn637068), [**Heading**](https://msdn.microsoft.com/library/windows/apps/dn637019) 및 [**Pitch**](https://msdn.microsoft.com/library/windows/apps/dn637044)에 대한 새 값을 지정할 수 있습니다. 또한 [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) 열거형에서 상수를 제공하여 보기가 변경될 때 사용할 애니메이션(옵션)을 지정할 수도 있습니다.
 
-3D 지도의 위치를 변경하려면 대신 [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) 메서드를 사용합니다. 자세한 내용은 [3D 뷰 표시](#display3d)를 참조하세요.
+3D 지도의 위치를 변경하려면 대신 [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) 메서드를 사용합니다. 자세한 내용은 [3D 뷰 표시](#display-aerial-3d-views)를 참조하세요.
 
 [**TrySetViewBoundsAsync**](https://msdn.microsoft.com/library/windows/apps/dn637065) 메서드를 호출하여 지도에 [**GeoboundingBox**](https://msdn.microsoft.com/library/windows/apps/dn607949)의 콘텐츠를 표시합니다. 예를 들어 이 메서드를 사용하여 지도에 경로 또는 경로의 일부를 표시합니다. 자세한 내용은 [지도에 경로 및 길 찾기 표시](routes-and-directions.md)를 참조하세요.
 
@@ -316,11 +323,4 @@ private async void display3DLocation()
 * [빌드 2015 동영상: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
-
-
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

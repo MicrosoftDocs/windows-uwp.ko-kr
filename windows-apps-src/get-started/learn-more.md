@@ -10,8 +10,9 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 7a6f0be15105bc70e580eaaf581152338c56bed7
-ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 0bf7959be6278577cc8fe93011591e4523bee623
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -19,9 +20,9 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 # <a name="whats-next"></a>다음 작업
 
-앱을 작성하고 Windows 스토어에 게시하려면 무엇부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://www.microsoftvirtualacademy.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
+앱을 작성하고 Windows 스토어에 게시하려면 무엇부터 시작해야 할까요? UWP 플랫폼을 처음 접하는 경우 <a href="https://channel9.msdn.com/">Channel 9</a> 비디오 및 <a href="https://mva.microsoft.com">Microsoft Virtual Academy</a> 과정을 살펴보세요. XAML과 C#을 잘 알고 있는 경우 아래 항목을 살펴보거나 [일부 샘플 다운로드](https://msdn.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 바로 이동할 수 있습니다.
 
-앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a>을 살펴보는 것이 좋습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 장치에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
+앱을 작성하는 데 도움이 되는 많은 도구와 프레임워크를 사용할 수 있으며, 대부분 플랫폼 간 개발을 지원합니다. 예를 들어 2D 게임을 작성하려는 경우 <a href="http://www.monogame.net">Monogame</a> 또는 다양한 [JavaScript/HTML 프레임워크](https://html5gameengine.com/)를 참조할 수 있습니다. 3D 게임의 경우 <a href="http://www.unity3d.com">Unity</a>가 있으며, 모바일 장치에 집중한다면 <a href="http://www.xamarin.com">Xamarin</a>을 살펴보세요.
 
 시작하는 경우 UWP 항목을 검토하여 플랫폼에 대해 살펴본 다음 XAML 컨트롤을 사용하고 사용자 지정하여 사용자 인터페이스를 만드는 방법을 알아보는 것이 좋습니다. XAML을 사용하여 앱의 레이아웃을 지정하지만(방법을 안내하는 [자습서](../layout/grid-tutorial.md) 참조), XAML의 주요 강점은 앱에서 표시하려는 정보에 컨트롤을 연결하는 *데이터 바인딩*을 사용하는 것입니다. Windows 플랫폼을 처음 접하는 경우 이 개념을 이해하는 것이 중요합니다. 
 <table class="wdg-noborder">
@@ -94,7 +95,7 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 ## <a name="finding-help-in-the-dev-center"></a>개발자 센터에서 도움말 검색
 
-[Microsoft 개발자 센터](http://devcenter.microsoft.com)에는 다양한 도구, 프레임워크 및 플랫폼에 대한 방대한 문서가 포함되어 있습니다. 항목과 샘플을 검색할 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. 올바른 콘텐츠를 읽고 있는지 어떻게 확인할 수 있나요?
+[Microsoft 개발자 센터](http://developer.microsoft.com)에는 다양한 도구, 프레임워크 및 플랫폼에 대한 방대한 문서가 포함되어 있습니다. 항목과 샘플을 검색할 때 UWP 특정 콘텐츠를 읽고 있는지 확인해야 합니다. 올바른 콘텐츠를 읽고 있는지 어떻게 확인할 수 있나요?
 개념 콘텐츠, 즉 비API 참조 콘텐츠는 항목의 URL에 UWP가 있습니다. API 콘텐츠에는 Windows 런타임 API가 포함된 경로가 있습니다. 
 
 ![예제 UWP 개념 항목](images/devcenter-topic2.png)
@@ -147,7 +148,7 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 <td align="left"><strong>포팅</strong></td>
 <td align="left"><a href="https://msdn.microsoft.com/library/windows/apps/Mt238321">Android 및 iOS 기술을 활용하여 UWP 앱을 신속하게 만듭니다.</a></td>
 </tr>
-<tr class="odd" style="background-color: #f2f2f2">
+<tr class="even" style="background-color: #f2f2f2">
 <td align="left"><strong>Windows 브리지</strong></td>
 <td align="left"><a href="https://developer.microsoft.com/windows/bridges">이전 앱 및 iOS 앱을 UWP로 업데이트하기 위한 도구입니다.</a></td>
 </tr>
@@ -155,13 +156,17 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 <td align="left"><strong>Xamarin</strong></td>
 <td align="left"><a href="https://www.xamarin.com">C#을 사용하여 iOS, Android 및 Windows 10용 앱을 작성합니다.</a></td>
 </tr>
-<tr class="odd" style="background-color: #ffffff">
+<tr class="even" style="background-color: #f2f2f2">
 <td align="left"><strong>작업 코드 조각</strong></td>
 <td align="left"><a href="https://github.com/Microsoft/Windows-task-snippets">작지만 유용한 작업을 수행하는 즉시 사용할 수 있는 코드입니다.</a></td>
 </tr>
-<tr class="odd" style="background-color: #f2f2f2">
+<tr class="odd" style="background-color: #ffffff">
 <td align="left"><strong>방법 항목</strong></td>
 <td align="left"><a href="https://developer.microsoft.com/windows/develop">특정 UWP 기능을 다루는 샘플 코드입니다.</a></td>
+</tr>
+<tr class="even" style="background-color: #f2f2f2">
+<td align="left"><strong>하드웨어</strong></td>
+<td align="left"><a href="https://www.microsoftstore.com/store/msusa/en_US/cat/Developer/categoryID.69418300?icid=en_US_Store_UH_BusEd_Dev">Microsoft 스토어의 개발자용 하드웨어입니다.</a></td>
 </tr>
 </table>
 
@@ -169,10 +174,5 @@ ms.openlocfilehash: 7b1d2c1dc83bf0b6d24c1de134102f14542c907d
 
 
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
 
 

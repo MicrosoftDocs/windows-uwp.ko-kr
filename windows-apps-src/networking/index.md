@@ -3,13 +3,20 @@ author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "네트워크 및 웹 서비스에 액세스하는 기술입니다."
 title: "네트워킹 및 웹 서비스"
+ms.author: bobdel
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
-ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 1bb0e25e9368a6e2f7568ac51620c7a064a01ce3
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 네트워킹 및 웹 서비스
+# <a name="networking-and-web-services"></a>네트워킹 및 웹 서비스
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -25,9 +32,4 @@ ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
 | [HttpClient](httpclient.md)                                                             | [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스 API를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.             |
 | [RSS/Atom 피드](web-feeds.md)                                                          | [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632) 네임스페이스의 기능을 사용하여 RSS 및 Atom 표준에 따라 생성된 신디케이티드 피드로 인기 있는 최신 웹 콘텐츠를 검색하거나 만듭니다.                   |
 | [백그라운드 전송](background-transfers.md)                                         | 백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다.           |
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

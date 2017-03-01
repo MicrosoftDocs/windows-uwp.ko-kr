@@ -3,20 +3,23 @@ author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: "설정 방법"
 description: "생각보다 쉽게 설정할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요."
+ms.author: jken
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
-ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96b6b477efd42b46b8aaf553de2482e1946c9cd7
+ms.lasthandoff: 02/07/2017
 
 ---
-# 설정 방법
+# <a name="get-set-up"></a>설정
 
 생각보다 쉽게 시작할 수 있습니다. 다음 지침에 따라 Windows 10용 UWP(유니버설 Windows 플랫폼) 앱 만들기를 시작해 보세요.
 
-> [!NOTE]
-> Mac 사용자인가요? 아니면 아직 PC에 아무것도 설치하고 싶지 않은가요? [Build2016의 코딩 챌린지에 대한 웹 기반 가상 컴퓨터 설정](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges)을 사용해 보세요.
-
-
-## 1. Windows 10 다운로드
+## <a name="1-get-windows-10"></a>1. Windows 10 다운로드
 
 UWP 앱을 개발하려면 최신 버전의 Windows가 필요합니다.
 
@@ -28,7 +31,7 @@ MSDN 구독자인 경우 다음 위치에서 ISO 다운로드를 가져올 수 �
 
 
 
-## 2. Visual Studio 다운로드 또는 업데이트
+## <a name="2-download-or-update-visual-studio"></a>2. Visual Studio 다운로드 또는 업데이트
 
 Microsoft Visual Studio 2015는 앱을 디자인, 코딩, 테스트 및 디버그하는 데 도움이 됩니다.
 
@@ -40,31 +43,28 @@ Visual Studio를 설치하는 경우 사용자 지정 옵션을 사용하고 다
 
 ![UWP용 Visual Studio 도구](images/vs-2015-community-setup.png)
 
-## 3. 디바이스를 개발에 사용하도록 설정
+Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](https://www.visualstudio.com/vs/getting-started)을 참조하세요.
+
+## <a name="3-enable-your-device-for-development"></a>3. 디바이스를 개발에 사용하도록 설정
 
 실제 PC 및 휴대폰에서 UWP 앱을 테스트하는 것이 중요합니다. 앱을 PC 또는 Windows Phone에 배포하려면 먼저 개발용으로 사용할 수 있도록 설정해야 합니다.
 
 -   자세한 지침은 [장치를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 참조하세요.
 
-## 4. 앱 개발자로 등록
+## <a name="4-register-as-an-app-developer"></a>4. 앱 개발자로 등록
 
 이제 앱 개발을 시작할 수 있지만 스토어에 제출하려면 개발자 계정이 필요합니다.
 
 -   개발자 계정을 받으려면 [등록](sign-up.md) 페이지로 이동하세요.
 
-## 다음 작업
+## <a name="whats-next"></a>다음 작업
 
 도구를 설치하고 개발자 라이선스나 개발자 계정을 받았으면 자습서에 따라 첫 번째 앱을 만드세요.
 
 -   [첫 번째 앱 만들기](your-first-app.md) 자습서
 
-## 더 많은 도구와 다운로드가 필요한 경우
+## <a name="want-more-tools-and-downloads"></a>더 많은 도구와 다운로드가 필요한 경우
 
 도구 및 다운로드의 전체 목록을 보려면 [다운로드](http://go.microsoft.com/fwlink/p/?linkid=285935)를 참조하세요.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

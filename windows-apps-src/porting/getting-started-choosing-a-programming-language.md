@@ -3,17 +3,24 @@ author: mcleblanc
 title: "프로그래밍 언어 선택"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "프로그래밍 언어 선택"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c7d99923a0deac61e289d3a2796b8dd1720430b4
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 440fb76aac128490366677278254a5f5b2e095ed
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 프로그래밍 언어 선택
+# <a name="getting-started-choosing-a-programming-language"></a>시작: 프로그래밍 언어 선택
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 프로그래밍 언어 선택
+## <a name="choosing-a-programming-language"></a>프로그래밍 언어 선택
 
 이제 UWP(유니버설 Windows 플랫폼) 앱을 개발할 때 선택할 수 있는 프로그래밍 언어에 대해 알아야 합니다. 이 문서의 연습에서는 C#을 사용하지만 개발자는 하나 이상의 프로그래밍 언어를 사용하여 UWP 앱을 개발할 수 있습니다([언어, 도구 및 프레임워크](https://msdn.microsoft.com/library/windows/apps/dn465799) 참조).
 
@@ -33,7 +40,7 @@ C++, C#, Microsoft Visual Basic 및 JavaScript를 사용하여 개발할 수 있
 -   [DirectX를 사용하는 Windows 스토어 앱 샘플](http://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [DirectX SDK 위치](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
-## C#
+## <a name="giving-c-a-go"></a>C#
 
 iOS 개발자는 Objective-C 및 Swift에 익숙합니다. 두 언어 모두에 가장 가까운 Microsoft 프로그래밍 언어는 C#입니다. 대부분의 개발자와 대부분의 앱의 경우 가장 쉽고 짧은 기간 안에 배워서 사용할 수 있는 언어는 C#이므로 이 문서의 정보와 연습에서는 이 언어를 중심으로 설명합니다. C#에 대한 자세한 내용은 다음을 참조하세요.
 
@@ -139,12 +146,7 @@ int result = mySampleClass.AddTwoNumbers(1, 2);
 
 C#은 간편한 언어이며 .NET을 구성하는 많은 지원 클래스 및 프레임워크와 함께 제공합니다. 대괄호 없이도 코드를 빠르고 쉽게 작성할 수 있습니다.
 
-## 다음 단계
+## <a name="next-step"></a>다음 단계
 
 [시작: Visual Studio 둘러보기](getting-started-getting-around-in-visual-studio.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -1,16 +1,24 @@
 ---
 author: mcleanbyron
 Description: "UWP 앱에서 Windows 개발자 센터에서 보낸 푸시 알림을 받도록 등록하는 방법을 알아봅니다."
-title: "개발자 센터 푸시 알림을 받도록 앱 구성"
+title: "Windows 개발자 센터 푸시 알림을 받도록 앱 구성"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, Microsoft 스토어 서비스 SDK, 대상 푸시 알림, Windows 개발자 센터"
+ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 translationtype: Human Translation
-ms.sourcegitcommit: ffda100344b1264c18b93f096d8061570dd8edee
-ms.openlocfilehash: d840fbe66e5ccb439148c7849e44b923a5586740
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: a7a4c9800d5053e4b20cea578ff03a970179c7bf
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="configure-your-app-to-receive-dev-center-push-notifications"></a>개발자 센터 푸시 알림을 받도록 앱 구성
+# <a name="configure-your-app-to-receive-dev-center-push-notifications"></a>Windows 개발자 센터 푸시 알림을 받도록 앱 구성
 
-Windows 개발자 센터 대시보드의 **푸시 알림** 페이지에서 UWP(유니버설 Windows 플랫폼) 앱이 설치된 디바이스에 대상 푸시 알림을 보내 고객 참여를 직접 유도할 수 있습니다. 예를 들어 대상 푸시 알림을 사용하면 앱 평가, 새 기능 확인 등 고객의 참여를 유도할 수 있습니다. 알림 메시지, 타일 알림, 원시 XML 알림과 같이 여러 가지 유형의 푸시 알림을 보낼 수 있습니다. 푸시 알림을 통해 앱 실행 속도 결과를 추적할 수도 있습니다. 이 기능에 대한 자세한 내용은 [앱의 고객에 게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)를 참조하세요.
+Windows 개발자 센터 대시보드의 **푸시 알림** 페이지에서 UWP(유니버설 Windows 플랫폼) 앱이 설치된 장치에 대상 푸시 알림을 보내 고객 참여를 직접 유도할 수 있습니다. 예를 들어 대상 푸시 알림을 사용하면 앱 평가, 새 기능 확인 등 고객의 참여를 유도할 수 있습니다. 알림 메시지, 타일 알림, 원시 XML 알림과 같이 여러 가지 유형의 푸시 알림을 보낼 수 있습니다. 푸시 알림을 통해 앱 실행 속도 결과를 추적할 수도 있습니다. 이 기능에 대한 자세한 내용은 [앱의 고객에 게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
 개발자 센터에서 고객에게 대상 푸시 알림을 보내려면 먼저 Microsoft Store Services SDK에서 [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx) 클래스의 메서드를 사용하여 알림을 받도록 앱을 등록해야 합니다. 이 클래스에서 별도의 메서드를 사용하여 대상 푸시 알림에 대한 응답으로 앱이 시작되었음을 개발자 센터에 알리고(알림으로 발생한 앱 실행 속도를 추적하려는 경우) 알림 수신을 중지할 수 있습니다.
 
@@ -42,9 +50,9 @@ Windows 개발자 센터 대시보드의 **푸시 알림** 페이지에서 UWP(�
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
 
     <span/>
-    >**중요**  앱에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx)를 호출하여 WNS에 대한 알림 채널도 만드는 경우 코드에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) 및 [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 오버로드를 동시에 호출하지 않도록 하세요. 이 두 메서드를 모두 호출해야 하는 경우 순차적으로 호출하고 다른 메서드를 호출하기 전에 한 메서드가 반환될 때까지 기다려야 합니다.
+    >**중요**&nbsp;&nbsp;앱에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx)를 호출하여 WNS에 대한 알림 채널도 만드는 경우 코드에서 [CreatePushNotificationChannelForApplicationAsync](https://msdn.microsoft.com/library/windows/apps/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync.aspx) 및 [RegisterNotificationChannelAsync()](https://msdn.microsoft.com/library/windows/apps/mt771190.aspx) 오버로드를 동시에 호출하지 않도록 하세요. 이 두 메서드를 모두 호출해야 하는 경우 순차적으로 호출하고 다른 메서드를 호출하기 전에 한 메서드가 반환될 때까지 기다려야 합니다.
 
-  * 개발자 센터의 대상 푸시 알림에 사용할 채널 URI를 지정하려면 [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx) 오버로드를 호출합니다. 예를 들어 앱에서 이미 WNS(Windows 푸시 알림 서비스)를 사용하는 데 동일한 채널 URI를 사용하려는 경우 이 작업이 필요할 수도 있습니다. 먼저 [StoreServicesNotificationChannelParameters](https://msdns.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) 개체를 만들고 채널 URI에 [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) 속성을 할당해야 합니다.
+  * 개발자 센터의 대상 푸시 알림에 사용할 채널 URI를 지정하려면 [RegisterNotificationChannelAsync(StoreServicesNotificationChannelParameters)](https://msdn.microsoft.com/library/windows/apps/mt771191.aspx) 오버로드를 호출합니다. 예를 들어 앱에서 이미 WNS(Windows 푸시 알림 서비스)를 사용하는 데 동일한 채널 URI를 사용하려는 경우 이 작업이 필요할 수도 있습니다. 먼저 [StoreServicesNotificationChannelParameters](https://msdn.microsoft.com/en-us/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.aspx) 개체를 만들고 채널 URI에 [CustomNotificationChannelUri](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri.aspx) 속성을 할당해야 합니다.
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
@@ -90,11 +98,6 @@ Windows 개발자 센터 대시보드의 **푸시 알림** 페이지에서 UWP(�
 
 * [앱의 고객에게 푸시 알림 보내기](../publish/send-push-notifications-to-your-apps-customers.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
-* [알림 채널 요청, 만들기 및 저장 방법](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868221)
+* [알림 채널 요청, 만들기 및 저장 방법](https://msdn.microsoft.com/library/windows/apps/xaml/hh868221)
 * [Microsoft Store Services SDK](https://msdn.microsoft.com/windows/uwp/monetize/microsoft-store-services-sdk)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -3,9 +3,16 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "ListView 및 GridView UI 최적화"
 description: "UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 ListView 및 GridView의 성능과 시작 시간을 개선합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 8dee2c7bf5ec44f913e34f1150223c1172ba6c02
-ms.openlocfilehash: dca6c9c2cde4240da4b2eff4f4786ec5b81051c6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 96902d7532aed1510d959b45528cc71e0e6dca70
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
@@ -29,7 +36,7 @@ UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [
 
 UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 및 [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)(및 기타 표준 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
-사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)과 같은 가상화 패널을 사용해야 합니다. [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)을 사용하는 경우에는 가상화할 수 없습니다. 또한 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)을 사용할 경우에만 [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) 및 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging)과 같은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) 이벤트가 발생됩니다.
+사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795)과 같은 가상화 패널을 사용해야 합니다. [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) 또는 [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)을 사용하는 경우에는 가상화할 수 없습니다. 또한 [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR242878) 또는 [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298849)을 사용할 경우에만 [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/Dn298795), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) 및 [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)과 같은 [**ListView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트가 발생됩니다.
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803)의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)의 뷰포트는 **ListView** 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527) 및 [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704))에 무제한 공간을 허용합니다. 가상화된 **ItemsControl**이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 이 경우 **ItemsControl**에서 너비와 높이를 설정하여 가상화를 복원합니다.
 
@@ -79,7 +86,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 **x:Phase를 사용한 점진적 데이터 템플릿 업데이트**
 
-[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) 바인딩과 함께 [x:Phase 특성](https://msdn.microsoft.com/library/windows/apps/Mt204790)을 사용하여 점진적 데이터 템플릿 업데이트를 구현하는 방법은 다음과 같습니다.
+[{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204790) 바인딩과 함께 [x:Phase 특성](https://msdn.microsoft.com/library/windows/apps/Mt204783)을 사용하여 점진적 데이터 템플릿 업데이트를 구현하는 방법은 다음과 같습니다.
 
 1.  다음은 바인딩 원본의 모양입니다(바인딩할 데이터 원본임).
 
@@ -317,10 +324,5 @@ private void lst-ChoosingItemContainer
 다른 항목 템플릿을 사용하는 균등하지 않은 항목 배포가 있는 경우 이동 중 새 항목 템플릿이 만들어져야 하며 그렇게 되면 가상화에서 제공되는 많은 이점을 사용할 수 없습니다. 게다가 항목 템플릿 선택기는 특정 컨테이너를 현재 데이터 항목에 재사용할 수 있는 여부를 평가할 때 다섯 가지의 가능한 후보만 고려합니다. 따라서 앱에서 사용하기 전에 데이터가 항목 템플릿 선택기에서 사용하기에 적절한지 여부를 주의 깊게 고려해야 합니다. 컬렉션이 대부분 같은 유형인 경우에는 선택기가 거의 또는 항상 같은 유형을 반환합니다. 이러한 동질성에 대한 드문 예외에 치러야 할 대가를 인식하고 [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)(또는 두 개의 항목 컨트롤)를 사용하는 것이 바람직한지 고려합니다.
 
  
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

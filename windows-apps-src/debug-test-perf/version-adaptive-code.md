@@ -2,19 +2,27 @@
 author: jwmsft
 title: "버전 적응 코드"
 description: "이전 버전과 호환성을 유지하면서 새로운 API를 활용하는 방법을 알아봅니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 translationtype: Human Translation
-ms.sourcegitcommit: 24a62c9331d4f651937f3f795fb1e7c9704af2ca
-ms.openlocfilehash: 7656018c61688bddbf23f889a82af4fd6d58c3ea
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: f8d6c28daea2a3d5be67ad2b5da5a05a46f736cc
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 버전 적응 코드: 이전 버전과 호환성을 유지하면서 새로운 API 사용
+# <a name="version-adaptive-code-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 코드: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
 Windows 10 SDK의 각 릴리스에서는 활용하고 싶어할 만한 멋진 기능이 새로 추가됩니다. 그러나 모든 고객이 동시에 최신 버전의 Windows 10으로 디바이스를 업데이트하지는 않을 것이므로 앱이 가능한 한 가장 광범위한 디바이스에서 작동하도록 해야 합니다. 여기서는 이전 버전의 Windows 10에서 실행되지만 최신 업데이트가 설치된 디바이스에서 앱이 실행될 때마다 새로운 기능도 활용하도록 앱을 설계하는 방법을 보여 줍니다.
 
 앱이 가장 광범위한 Windows 10 디바이스를 지원하도록 하려면 두 단계를 수행해야 합니다. 첫째, 최신 API를 대상으로 하도록 Visual Studio 프로젝트를 구성합니다. 이렇게 하면 앱을 컴파일할 때 발생하는 상황에 영향을 주게 됩니다. 둘째, 앱이 실행되고 있는 디바이스에 있는 API만 호출하도록 런타임 검사를 수행합니다.
 
-## Visual Studio 프로젝트 구성
+## <a name="configure-your-visual-studio-project"></a>Visual Studio 프로젝트 구성
 
 여러 Windows 10 버전을 지원하기 위한 첫 번째 단계는 Visual Studio 프로젝트에서 *대상* 및 *최소* 지원 OS/SDK 버전을 지정하는 것입니다.
 - *대상*: Visual Studio에서 앱 코드를 컴파일하고 모든 도구를 실행하는 SDK 버전입니다. 이 SDK 버전의 모든 API 및 리소스는 컴파일 시에 앱 코드에서 사용할 수 있습니다.
@@ -44,11 +52,11 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 
 출시된 모든 버전의 SDK는 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/downloads/sdk-archive)에서 다운로드할 수 있습니다. 최신 Windows Insider Preview SDK는 [Windows 참가자](https://insider.windows.com/) 사이트의 개발자 섹션에서 다운로드할 수 있습니다.
 
-## 적응 코드 작성
+## <a name="write-adaptive-code"></a>적응 코드 작성
 
 [적응 UI를 만드는](https://msdn.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
 
-### 런타임 API 검사
+### <a name="runtime-api-checks"></a>런타임 API 검사
 
 코드의 조건에서 [Windows.Foundation.Metadata.ApiInformation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.aspx) 클래스를 사용하여 호출할 API의 존재 여부를 테스트합니다. 그러면 앱이 실행되는 모든 디바이스에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 디바이스에 대해서만 **true**로 평가합니다. 이렇게 하면 특정 OS 버전에서만 사용할 수 있는 API를 사용하는 앱을 만들기 위해 버전 적응 코드를 작성할 수 있습니다.
 
@@ -57,7 +65,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 > [!TIP]
 > 많은 API 런타임 검사는 앱의 성능에 영향을 미칠 수 있습니다. 여기서는 예제에서 즉시 처리되는 검사를 보여 줍니다. 프로덕션 코드에서는 검사를 한 번 수행하고 결과를 캐시한 다음 캐시된 결과를 앱 전체에서 사용해야 합니다. 
 
-### 지원되지 않는 시나리오
+### <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 
 대부분의 경우 앱의 최소 버전을 SDK 버전 10240으로 설정된 상태로 두고 런타임 검사를 사용하여 앱이 이후 버전에서 실행될 때 새 API를 사용하도록 설정할 수 있습니다. 그러나 새로운 기능을 사용하기 위해 앱의 최소 버전을 증가시켜야 하는 경우도 있습니다.
 
@@ -65,7 +73,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 - 이전 버전에서 사용할 수 없는 기능을 필요로 하는 새로운 API. 지원되는 최소 버전을 해당 기능이 포함된 버전으로 증가시켜야 합니다. 자세한 내용은 [앱 접근 권한 값 선언](../packaging/app-capability-declarations.md)을 참조하세요.
 - generic.xaml에 추가되고 이전 버전에서 사용할 수 없는 새로운 리소스 키. 런타임에 사용되는 generic.xaml의 버전은 디바이스가 실행되고 있는 OS 버전에 의해 결정됩니다. API 런타임 검사를 사용하여 XAML 리소스의 존재 여부를 확인할 수 없습니다. 따라서 앱이 지원하는 최소 버전에서 사용할 수 있는 리소스 키만 사용해야 합니다. 그러지 않으면 [XAMLParseException](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.markup.xamlparseexception.aspx)으로 인해 런타임에 앱의 작동이 중단됩니다.
 
-### 적응 코드 옵션
+### <a name="adaptive-code-options"></a>적응 코드 옵션
 
 두 가지 방법으로 적응 코드를 만들 수 있습니다. 대부분의 경우에 최소 버전에서 실행할 앱 태그를 작성한 다음 앱 코드를 사용하여 최신 OS 기능이 있는 경우 해당 기능을 활용합니다. 그러나 시각적 상태에서 속성을 업데이트해야 하는 경우 OS 버전 간에 속성 또는 열거형 값 변경 사항만 있으면 API의 존재 여부에 따라 활성화되는 확장 가능한 상태 트리거를 만들 수 있습니다.
 
@@ -96,11 +104,11 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 - Setter를 사용하여 값 변경을 지정해야 하므로 간단한 변경만 가능합니다.
 - 사용자 지정 상태 트리거는 설정하고 사용하기가 꽤 번거롭습니다.
 
-## 적응 코드 예제
+## <a name="adaptive-code-examples"></a>적응 코드 예제
 
 이 섹션에서는 Windows 10, 버전 1607(Windows Insider Preview)에서 새로 추가된 API를 사용하는 적응 코드의 몇 가지를 예제를 보여 줍니다.
 
-### 예제 1: 새 열거형 값
+### <a name="example-1-new-enum-value"></a>예제 1: 새 열거형 값
 
 Windows 10, 버전 1607에서는 새로운 값인 **ChatWithoutEmoji**를 [InputScopeNameValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.inputscopenamevalue.aspx) 열거형에 추가합니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
 
@@ -183,9 +191,9 @@ private void messageBox_Loaded(object sender, RoutedEventArgs e)
 
 XAML이나 코드에서 검사 없이 ChatWithoutEmoji 값을 사용하는 경우 이 값이 대상 OS 버전에 있기 때문에 오류 없이 컴파일됩니다. 또한 대상 OS 버전을 사용하는 시스템에서 오류 없이 실행됩니다. 그러나 앱이 최소 OS 버전을 사용하는 시스템에서 실행되는 경우 ChatWithoutEmoji 열거형 값이 없기 때문에 런타임에 작동이 중단됩니다. 따라서 이 값을 코드에서만 사용하고 런타임 API 검사에 래핑하여 현재 시스템에서 지원되는 경우에만 호출되도록 해야 합니다.
 
-### 예제 2: 새 컨트롤
+### <a name="example-2-new-control"></a>예제 2: 새 컨트롤
 
-일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤의 존재를 활용하려면 [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용합니다.
+일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤을 활용하려면 [ApiInformation.IsTypePresent](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.apiinformation.istypepresent.aspx) 메서드를 사용합니다.
 
 Windows 10, 버전 1607에서는 [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)라는 새로운 미디어 컨트롤을 도입했습니다. 이 컨트롤은 [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) 클래스를 기반으로 하므로 배경 오디오에 쉽게 연결하는 기능 등을 제공하며 미디어 스택의 향상된 아키텍처를 이용합니다.
 
@@ -326,13 +334,13 @@ public MainPage()
 > [!IMPORTANT]
 > 이 검사는 `mediaControl` 개체를 `MediaPlayerUserControl` 또는 `MediaElementUserControl`로만 설정한다는 점에 유의하세요. MediaPlayerElement API를 사용할지, 아니면 MediaElement API를 사용할지를 결정해야 하는 코드의 어느 부분에서든 이러한 조건부 검사를 수행해야 합니다. 검사를 한 번 수행하고 결과를 캐시한 다음 캐시된 결과를 앱 전체에서 사용해야 합니다.
 
-## 상태 트리거 예제
+## <a name="state-trigger-examples"></a>상태 트리거 예제
 
 확장 가능한 상태 트리거를 사용하면 태그와 코드를 함께 사용하여 코드에서 검사하는 조건(이 경우에는 특정 API의 존재 여부)에 따라 시각적 상태 변경을 트리거할 수 있습니다. 오버헤드가 발생하고 시각적 상태로만 제한되기 때문에 일반적인 적응 코드 시나리오에는 상태 트리거를 권장하지 않습니다. 
 
 나머지 UI에 영향을 주지 않을 서로 다른 OS 버전 간의 작은 UI 변경(예: 컨트롤의 속성 또는 열거형 값 변경)이 있는 경우에만 적응 코드에 상태 트리거를 사용해야 합니다.
 
-### 예제 1: 새 속성
+### <a name="example-1-new-property"></a>예제 1: 새 속성
 
 확장 가능한 상태 트리거를 설정하는 첫 번째 단계는 [StateTriggerBase](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.statetriggerbase.aspx) 클래스를 하위 클래스화하여 API의 존재 여부에 따라 활성화될 사용자 지정 트리거를 만드는 것입니다. 이 예제에서는 속성 존재 여부가 XAML에서 설정된 `_isPresent` 변수와 일치하는 경우 활성화되는 트리거를 보여 줍니다.
 
@@ -368,7 +376,7 @@ class IsPropertyPresentTrigger : StateTriggerBase
 
 다음 단계는 API의 존재 여부에 따라 두 가지 시각적 상태가 발생하도록 XAML에서 시각적 상태 트리거를 설정하는 것입니다. 
 
-Windows 10, 버전 1607에서는 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) 클래스에 [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx)이라는 새 속성을 도입했습니다. 이 속성은 사용자가 컨트롤을 사용할 때 컨트롤이 포커스를 받는지 여부를 결정합니다. 이는 사용자가 단추를 클릭하는 동안 데이터 입력을 위해 텍스트 상자에 포커스를 유지하고 터치 키보드를 계속 표시하려는 경우에 유용합니다.
+Windows 10 버전 1607에서는 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx) 클래스에 [AllowFocusOnInteraction](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.allowfocusoninteraction.aspx)이라는 새 속성을 도입했습니다. 이 속성은 사용자가 컨트롤을 사용할 때 컨트롤이 포커스를 받는지 여부를 결정합니다. 이는 사용자가 단추를 클릭하는 동안 데이터 입력을 위해 텍스트 상자에 포커스를 유지하고 터치 키보드를 계속 표시하려는 경우에 유용합니다.
 
 이 예제에서 트리거는 속성이 있는지 여부를 검사합니다. 속성이 있으면 Button의 **AllowFocusOnInteraction** 속성을 **false**로 설정하고, 속성이 없으면 Button이 원래 상태를 유지합니다. 코드를 실행할 때 이 속성의 효과를 쉽게 확인할 수 있도록 하기 위해 TextBox가 포함되었습니다.
 
@@ -400,7 +408,7 @@ Windows 10, 버전 1607에서는 [FrameworkElement](https://msdn.microsoft.com/l
 </Grid>
 ```
 
-### 예제 2: 새 열거형 값
+### <a name="example-2-new-enum-value"></a>예제 2: 새 열거형 값
 
 이 예제에서는 값의 존재 여부에 따라 다른 열거형 값을 설정하는 방법을 보여 줍니다. 이 예제에서는 사용자 지정 상태 트리거를 사용하여 이전 채팅 예제와 동일한 결과를 얻습니다. 이 예제에서는 디바이스에서 Windows 10, 버전 1607이 실행되면 새로운 ChatWithoutEmoji 입력 범위를 사용하고, 그렇지 않으면 **Chat** 입력 범위를 사용합니다. 이 트리거를 사용하는 시각적 상태는 입력 범위가 새 열거형 값의 존재 여부에 따라 선택되는 *if-else* 스타일에서 설정됩니다.
 
@@ -471,13 +479,8 @@ class IsEnumPresentTrigger : StateTriggerBase
     </VisualStateManager.VisualStateGroups>
 </Grid>
 ```
-## 관련 문서
+## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱 가이드](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 - [Dynamically detecting features with API contracts(API 계약을 사용하여 동적으로 기능 검색)](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

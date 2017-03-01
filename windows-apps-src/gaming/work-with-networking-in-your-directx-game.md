@@ -3,20 +3,27 @@ author: mtoepke
 title: "게임의 네트워킹"
 description: "네트워킹 기능을 개발하고 DirectX 게임에 통합하는 방법을 알아봅니다."
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 네트워킹, directx"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2a9b42ab2cab6a1f4330759c0ff114e985eb3c20
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: ce94dda0eaf156f1e09fefbd76f50bc764050970
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 게임의 네트워킹
+# <a name="networking-for-games"></a>게임의 네트워킹
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 네트워킹 기능을 개발하고 DirectX 게임에 통합하는 방법을 알아봅니다.
 
-## 개념 개요
+## <a name="concepts-at-a-glance"></a>개념 개요
 
 
 간단한 독립 실행형 게임에서 대규모 멀티 플레이어 게임에 이르기까지 DirectX 게임에서 다양한 네트워킹 기능을 사용할 수 있습니다. 가장 간단한 네트워킹 사용은 중앙 네트워크 서버에 사용자 이름과 게임 점수를 저장하는 것입니다.
@@ -35,7 +42,7 @@ ms.openlocfilehash: 2a9b42ab2cab6a1f4330759c0ff114e985eb3c20
 
 네트워크 격리는 Windows에서 사용하는 앱 보안 모델의 일부입니다. Windows에서는 적극적으로 네트워크 경계를 검색하고 네트워크 격리를 위한 네트워크 액세스 제한을 적용합니다. 앱은 네트워크 액세스 범위를 정의하기 위해 네트워크 격리 기능을 선언해야 합니다. 이러한 기능을 선언하지 않으면 앱이 네트워크 리소스에 액세스할 수 없습니다. Windows에서 앱에 네트워크 격리를 적용하는 방법에 대한 자세한 내용은 [네트워크 격리 기능을 구성하는 방법](https://msdn.microsoft.com/library/windows/apps/hh770532)을 참조하세요.
 
-## 디자인 고려 사항
+## <a name="design-considerations"></a>디자인 고려 사항
 
 
 DirectX 게임에서는 다양한 네트워킹 API를 사용할 수 있습니다. 따라서 올바른 API를 선택하는 것이 중요합니다. Windows는 앱이 인터넷이나 개인 네트워크를 통해 다른 컴퓨터 및 장치와 통신하는 데 사용할 수 있는 다양한 네트워킹 API를 지원합니다. 첫 번째로 수행할 단계는 앱에 필요한 네트워킹 기능이 무엇인지 파악하는 것입니다.
@@ -47,7 +54,7 @@ DirectX 게임에서는 다양한 네트워킹 API를 사용할 수 있습니다
 -   UDP 및 소켓 - 오버헤드가 작은 신뢰할 수 없는 네트워크 전송을 제공합니다. UDP는 짧은 대기 시간이 필요하고 일부 패킷 손실을 허용할 수 있는 게임 작업에 사용됩니다. 전투 게임, 슈팅 및 추적 프로그램, 네트워크 오디오 및 음성 채팅에 주로 사용됩니다. [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319) 클래스는 Windows 스토어 게임에 사용할 수 있는 UDP 소켓을 제공합니다. **DatagramSocket** 클래스는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) 네임스페이스의 관련 클래스와 함께 사용됩니다.
 -   HTTP 클라이언트 - HTTP 서버에 대한 안정적인 연결을 제공합니다. 가장 일반적인 네트워킹 시나리오는 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스하는 것입니다. 간단한 예로 웹 사이트를 사용하여 사용자 정보와 게임 점수를 저장하는 게임이 있습니다. 보안을 위해 SSL과 함께 사용할 경우 HTTP 클라이언트를 로그인, 구매, 거래 자산, 게임 문자 생성 및 관리에 사용할 수 있습니다. [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) 클래스는 Windows 스토어 게임에 사용하기 위한 최신 HTTP 클라이언트 API를 제공합니다. **HttpClient** 클래스는 [**Windows::Web::Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) 네임스페이스의 관련 클래스와 함께 사용됩니다.
 
-## DirectX 게임에서 네트워크 예외 처리
+## <a name="handling-network-exceptions-in-your-directx-game"></a>DirectX 게임에서 네트워크 예외 처리
 
 
 DirectX 게임에서 네트워크 예외가 발생하면 이는 중요한 문제나 오류가 있음을 나타냅니다. 네트워킹 API 사용 시 여러 가지 이유로 예외가 발생할 수 있습니다. 예외는 종종 네트워크 연결의 변경 또는 원격 호스트나 서버의 기타 네트워킹 문제로 인해 발생할 수 있습니다.
@@ -74,7 +81,7 @@ UWP 앱인 DirectX 게임에 예외가 발생하면 오류의 원인으로 **HRE
 -   예외를 일으킨 오류의 **HRESULT** 값을 검색하기 위한 메서드. 잠재적 **HRESULT** 값의 가능한 목록은 크기가 크며 지정되지 않습니다. 네트워킹 API를 사용할 경우 **HRESULT** 값을 검색할 수 있습니다.
 -   **HRESULT** 값을 열거형 값으로 변환하는 도우미 메서드. 가능한 열거 값의 목록은 지정되며 비교적 크기가 작습니다. 도우미 메서드는 [**Windows::Networking::Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)의 소켓 클래스에 사용할 수 있습니다.
 
-### Windows.Networking.Sockets의 예외
+### <a name="exceptions-in-windowsnetworkingsockets"></a>Windows.Networking.Sockets의 예외
 
 전달된 문자열이 유효한 호스트 이름이 아닌 경우(호스트 이름에 허용되지 않는 문자 포함) 소켓과 함께 사용된 [**HostName**](https://msdn.microsoft.com/library/windows/apps/br207113) 클래스에 대한 생성자에서 예외가 발생할 수 있습니다. 앱이 게이밍을 위한 피어 연결의 **HostName**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
@@ -217,7 +224,7 @@ using namespace Windows::Networking::Sockets;
 
 ```
 
-### Windows.Web.Http의 예외
+### <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 
 전달된 문자열이 유효한 URI가 아닌 경우(URI에 허용되지 않는 문자 포함) [**Windows::Web::Http::HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)과(와) 함께 사용되는 [**Windows::Foundation::Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) 클래스의 생성자가 예외를 일으킬 수 있습니다. C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 **Windows::Foundation::Uri**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱은 사용자에게 알리고 새 URI를 요청할 수 있습니다.
 
@@ -362,7 +369,7 @@ using namespace Windows::Web::Http;
 
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 **다른 리소스**
@@ -389,9 +396,4 @@ using namespace Windows::Web::Http;
 * [HttpClient 샘플]( http://go.microsoft.com/fwlink/p/?linkid=242550)
 * [근접 연결 샘플](http://go.microsoft.com/fwlink/p/?linkid=245082)
 * [StreamSocket 샘플](http://go.microsoft.com/fwlink/p/?linkid=243037)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

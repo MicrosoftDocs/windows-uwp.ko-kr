@@ -3,20 +3,27 @@ author: jnHs
 Description: "100개 이상 언어로 Windows 스토어에 앱을 제출할 수 있습니다."
 title: "지원되는 언어"
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3d14f1d11290942a90498f7aff4dc324daa3a84e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: b9d0720ee56430320cfc4ca2725fb3e0ac8049e5
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지원되는 언어
+# <a name="supported-languages"></a>지원되는 언어
 
 
 100개 이상 언어로 Windows 스토어에 앱을 제출할 수 있습니다.
 
 앱의 언어를 구성하는 방법에 대한 자세한 내용은 [세계화 및 지역화](../globalizing/globalizing-portal.md)와 [언어 및 지역 관리](../globalizing/manage-language-and-region.md)를 참조하세요. 여러 언어를 지원하는 앱을 작성하는 데 도움이 되는 [다국어 앱 도구 키트](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370)도 있습니다.
 
-## 지원되는 언어
+## <a name="supported-languages"></a>지원되는 언어
 
 
 다음은 Windows 스토어에서 지원되는 언어입니다. 앱이 이러한 언어를 하나 이상 지원해야 하며, 여기에 포함되지 않은 언어 코드를 지정해서는 안 됩니다.
@@ -135,10 +142,5 @@ ms.openlocfilehash: 3d14f1d11290942a90498f7aff4dc324daa3a84e
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

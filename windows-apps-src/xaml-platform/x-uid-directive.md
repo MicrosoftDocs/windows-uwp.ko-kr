@@ -3,31 +3,38 @@ author: jwmsft
 description: "태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다."
 title: "xUid 지시어"
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c94db1dc1095f53dc836f78768ecc826470343d5
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 3fa6cf80bf569703a7fbbc532c9114bee89c7403
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# x:Uid 지시어
+# <a name="xuid-directive"></a>x:Uid 지시어
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 태그 요소의 고유 식별자를 제공합니다. UWP(유니버설 Windows 플랫폼) XAML의 경우 이 고유 식별자는 .resw 리소스 파일의 리소스 사용과 같은 XAML 지역화 프로세스 및 도구에서 사용됩니다.
 
-## XAML 특성 사용
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
 ``` syntax
 <object x:Uid="stringID".../>
 ```
 
-## XAML 값
+## <a name="xaml-values"></a>XAML 값
 
 | 용어 | 설명 |
 |------|-------------|
 | stringID | 앱에서 XAML 요소를 고유하게 식별하는 문자열로, 리소스 파일에서 리소스 경로의 일부가 됩니다. 설명을 참조하세요.| 
 
-## 설명
+## <a name="remarks"></a>설명
 
 **x:Uid**를 사용하여 XAML에서 개체 요소를 식별합니다. 일반적으로 이 개체 요소는 컨트롤 클래스 또는 UI에 표시되는 다른 요소의 인스턴스입니다. **x:Uid**에서 사용하는 문자열과 리소스 파일에서 사용하는 문자열 간의 관계에서 리소스 파일 문자열은 **x:Uid** 뒤에 점(.)과 지역화되는 요소의 특정 속성 이름이 추가된 것입니다. 다음 예를 참조하세요.
 
@@ -46,10 +53,5 @@ UWP XAML은 **x:Uid** 고유성에 있어서 이전에 활용된 XAML 기술하�
 PRI(패키지 리소스 인덱스) 시스템의 기본 제공 기능이 아니라 리소스 경로를 사용하는 경우도 있습니다. **x:Uid** 값으로 사용된 문자열은 모두 ms-resource:///Resources/로 시작하는 리소스 경로를 정의하며 **x:Uid** 문자열을 포함합니다. 경로는 리소스 파일에 지정되거나 달리 대상으로 지정된 속성 이름으로 완료됩니다.
 
 Windows 런타임 XAML에서 허용되지 않는 **x:Uid**를 속성 요소에 사용하지 마세요.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

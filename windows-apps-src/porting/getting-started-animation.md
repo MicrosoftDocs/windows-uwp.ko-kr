@@ -2,18 +2,25 @@
 author: mcleblanc
 title: "애니메이션 시작"
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
-description: "이 프로젝트에서는 사각형을 이동하여 사라지게 한 다음 다시 보기로 가져옵니다."
+description: "이 프로젝트에서는 사각형을 움직이고, 사라지게 한 다음, 다시 표시합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: ae08bb25d8ac56ca6e03a5c200e8a0d4e05fbfe3
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 9dcf81c0c0aee42d6278a3e1eeccc6dd4da61010
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 시작: 애니메이션
+# <a name="getting-started-animation"></a>시작: 애니메이션
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
-## 애니메이션 추가
+## <a name="adding-animations"></a>애니메이션 추가
 
 iOS에서는 애니메이션 효과를 프로그래밍 방식으로 만드는 경우가 많습니다. 예를 들어 블록 기반 **UIView** 클래스의 **animateWithDuration** 메서드 또는 이전의 비블록 기반 메서드에서 제공한 애니메이션을 사용할 수 있습니다. 또는 **CALayer** 클래스를 명시적으로 사용하여 계층에 애니메이션 효과를 줄 수 있습니다. Windows 앱에서는 애니메이션을 프로그래밍 방식으로 만들 수 있지만 XAML(Extensible Application Markup Language)을 사용하여 선언적으로 정의할 수도 있습니다. Microsoft Visual Studio를 사용하여 XAML 코드를 직접 편집할 수 있지만 Visual Studio에서는 디자이너에서 애니메이션 작업을 할 때 XAML 코드를 자동으로 생성하는 **Blend**라는 도구를 제공합니다. 실제로 Blend를 사용하여 전체 Visual Studio 프로젝트를 그래픽적으로 열고, 디자인, 빌드 및 실행할 수 있습니다. 다음 연습을 통해 해보세요.
 
@@ -125,12 +132,7 @@ MainPage.xaml 파일을 열면 **XAML** 보기에 디자이너에서 작업할 �
 
 **참고** JavaScript 및 HTML을 사용하는 Windows 스토어 앱용 애니메이션에 대한 자세한 내용은 [UI 애니메이션(HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165)을 참조하세요.
 
-### 다음 단계
+### <a name="next-step"></a>다음 단계
 
 [시작: 다음에 할 일](getting-started-what-next.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

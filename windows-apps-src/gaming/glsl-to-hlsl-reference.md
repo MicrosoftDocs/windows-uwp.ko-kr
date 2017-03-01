@@ -3,30 +3,37 @@ author: mtoepke
 title: "GLSL-HLSL 참조"
 description: "OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, glsl, hlsl, opengl, directx, 셰이더"
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 1be2c49dc88dcaecfa1d349f9dda7a9cc0619b92
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f2d5f5a363abf026e865ed07221ba9075a6a67e7
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# GLSL-HLSL 참조
+# <a name="glsl-to-hlsl-reference"></a>GLSL-HLSL 참조
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 [OpenGL ES 2.0에서 Direct3D 11로 그래픽 아키텍처를 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)하여 UWP(유니버설 Windows 플랫폼)용 게임을 만드는 경우 GLSL(OpenGL Shader Language) 코드를 Microsoft HLSL(High Level Shader Language) 코드로 포팅합니다. 여기서 참조되는 GLSL은 OpenGL ES 2.0과 호환됩니다. HLSL은 Direct3D 11과 호환됩니다. Direct3D 11과 Direct3D의 이전 버전과의 차이점에 대한 자세한 내용은 [기능 매핑](feature-mapping.md)을 참조하세요.
 
--   [OpenGL ES 2.0과 Direct3D 11 비교](#compare)
--   [HLSL로 GLSL 변수 포팅](#variables)
--   [GLSL 형식을 HLSL로 포팅](#types)
--   [GLSL 미리 정의된 전역 변수를 HLSL로 포팅](#porting_glsl_pre-defined_global_variables_to_hlsl)
--   [HLSL로의 GLSL 변수 포팅 예](#example1)
-    -   [GLSL의 uniform, attribute 및 varying](#uniform___attribute__and_varying_in_glsl)
-    -   [HLSL의 상수 버퍼 및 데이터 전송](#constant_buffers_and_data_transfers_in_hlsl)
--   [Direct3D로의 OpenGL 렌더링 코드 포팅 예](#example2)
--   [관련 항목](#related_topics)
+-   [OpenGL ES 2.0과 Direct3D 11 비교](#comparing-opengl-es-20-with-direct3d-11)
+-   [HLSL로 GLSL 변수 포팅](#porting-glsl-variables-to-hlsl)
+-   [GLSL 형식을 HLSL로 포팅](#porting-glsl-types-to-hlsl)
+-   [GLSL 미리 정의된 전역 변수를 HLSL로 포팅](#porting-glsl-pre-defined-global-variables-to-hlsl)
+-   [HLSL로의 GLSL 변수 포팅 예](#examples-of-porting-glsl-variables-to-hlsl)
+    -   [GLSL의 uniform, attribute 및 varying](#uniform-attribute-and-varying-in-glsl)
+    -   [HLSL의 상수 버퍼 및 데이터 전송](#constant-buffers-and-data-transfers-in-hlsl)
+-   [Direct3D로의 OpenGL 렌더링 코드 포팅 예](#examples-of-porting-opengl-rendering-code-to-direct3d)
+-   [관련 항목](#related-topics)
 
-## OpenGL ES 2.0과 Direct3D 11 비교
+## <a name="comparing-opengl-es-20-with-direct3d-11"></a>OpenGL ES 2.0과 Direct3D 11 비교
 
 
 OpenGL ES 2.0과 Direct3D 11은 유사점이 많습니다. 이 둘의 렌더링 파이프라인 및 그래픽 기능은 유사합니다. 그러나 Direct3D 11은 렌더링 구현 및 API이며, 사양이 아닙니다. OpenGL ES 2.0은 렌더링 사양 및 API이며, 구현이 아닙니다. Direct3D 11과 OpenGL ES 2.0은 일반적으로 다음과 같은 방식에서 다릅니다.
@@ -69,11 +76,11 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left">[변수](#variables) 저장소 한정자</td>
+<td align="left">[변수](#porting-glsl-variables-to-hlsl) 저장소 한정자</td>
 <td align="left">입력 레이아웃 선언을 통한 데이터 전송 및 상수 버퍼</td>
 </tr>
 <tr class="even">
-<td align="left"><p>[형식](#types)</p>
+<td align="left"><p>[형식](#porting-glsl-types-to-hlsl)</p>
 <p>일반적인 벡터 형식: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>일반적인 벡터 형식: float2/3/4</p>
@@ -106,13 +113,13 @@ GLSL과 HLSL은 일반적으로 다음과 같은 방식에서 다릅니다.
 
  
 
-> **참고** HLSL에서는 텍스처와 샘플러가 별도의 객체 두 개로 존재합니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
+> **참고** HLSL에서는 텍스처와 샘플러가 별도의 개체 두 개로 존재합니다. Direct3D 9와 마찬가지로, GLSL에서 텍스처 바인딩은 샘플러 상태의 일부입니다.
 
  
 
 GLSL에서 상당수의 OpenGL 상태는 미리 정의된 전역 변수로 표시됩니다. 예를 들어, GLSL에서는 **gl\_Position** 변수를 사용하여 꼭짓점 위치를 지정하고 **gl\_FragColor** 변수를 사용하여 조각 색을 지정합니다. HLSL에서는 Direct3D 상태를 명시적으로 앱 코드에서 셰이더로 전달합니다. 예를 들어, Direct3D와 HLSL을 사용하는 경우 꼭짓점 셰이더에 대한 입력은 꼭짓점 버퍼의 데이터 형식과 일치해야 하고, 앱 코드의 상수 버퍼 구조는 셰이더 코드의 상수 버퍼([cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)) 구조와 일치해야 합니다.
 
-## HLSL로 GLSL 변수 포팅
+## <a name="porting-glsl-variables-to-hlsl"></a>HLSL로 GLSL 변수 포팅
 
 
 GLSL에서는 전역 셰이더 변수 선언에 한정자를 적용하여 셰이더에서 해당 변수에 특정 동작을 제공합니다. HLSL에서는 셰이더에 전달하고 셰이더로부터 반환되는 인수로 셰이더의 흐름을 정의하기 때문에 이러한 한정자가 필요하지 않습니다.
@@ -161,7 +168,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 
 데이터를 텍스처(HLSL의 경우 [Texture2D](https://msdn.microsoft.com/library/windows/desktop/ff471525)) 및 연결된 해당 샘플러(HLSL의 경우 [SamplerState](https://msdn.microsoft.com/library/windows/desktop/bb509644))로 전달하는 경우 일반적으로 픽셀 셰이더에서 해당 데이터를 전역 변수로 선언합니다.
 
-## GLSL 형식을 HLSL로 포팅
+## <a name="porting-glsl-types-to-hlsl"></a>GLSL 형식을 HLSL로 포팅
 
 
 다음 표를 사용하여 GLSL 형식을 HLSL로 포팅합니다.
@@ -269,7 +276,7 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 
  
 
-## GLSL 미리 정의된 전역 변수를 HLSL로 포팅
+## <a name="porting-glsl-pre-defined-global-variables-to-hlsl"></a>GLSL 미리 정의된 전역 변수를 HLSL로 포팅
 
 
 이 표를 사용하여 GLSL 미리 정의된 전역 변수를 HLSL로 포팅합니다.
@@ -377,14 +384,14 @@ GLSL에서 한정자가 없는 변수는 각 셰이더에 private인 일반 전�
 
  
 
-의미 체계를 사용하여 꼭짓점 셰이더 입력 및 픽셀 셰이더 입력에 대한 위치, 색 등을 지정합니다. 입력 레이아웃의 의미 체계 값을 꼭짓점 셰이더 입력과 일치시켜야 합니다. 예는 [HLSL로의 GLSL 변수 포팅 예](#example1)를 참조하세요. HLSL 의미 체계에 대한 자세한 내용은 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 참조하세요.
+의미 체계를 사용하여 꼭짓점 셰이더 입력 및 픽셀 셰이더 입력에 대한 위치, 색 등을 지정합니다. 입력 레이아웃의 의미 체계 값을 꼭짓점 셰이더 입력과 일치시켜야 합니다. 예는 [HLSL로의 GLSL 변수 포팅 예](#examples-of-porting-glsl-variables-to-hlsl)를 참조하세요. HLSL 의미 체계에 대한 자세한 내용은 [의미 체계](https://msdn.microsoft.com/library/windows/desktop/bb509647)를 참조하세요.
 
-## HLSL로의 GLSL 변수 포팅 예
+## <a name="examples-of-porting-glsl-variables-to-hlsl"></a>HLSL로의 GLSL 변수 포팅 예
 
 
 여기서는 OpenGL/GLSL 코드에서 GLSL 변수를 사용하는 예와 Direct3D/HLSL 코드에서의 동일한 예를 보여 줍니다.
 
-### GLSL의 uniform, attribute 및 varying
+### <a name="uniform-attribute-and-varying-in-glsl"></a>GLSL의 uniform, attribute 및 varying
 
 OpenGL 앱 코드
 
@@ -428,7 +435,7 @@ gl_FragColor = vec4(colorVarying, 1.0);
 }
 ```
 
-### HLSL의 상수 버퍼 및 데이터 전송
+### <a name="constant-buffers-and-data-transfers-in-hlsl"></a>HLSL의 상수 버퍼 및 데이터 전송
 
 다음은 데이터를 HLSL 꼭짓점 셰이더로 전달한 다음 해당 데이터가 픽셀 셰이더로 흐르는 방식을 보여 주는 예입니다. 앱 코드에서 꼭짓점 및 상수 버퍼를 정의합니다. 그런 다음 꼭짓점 셰이더 코드에서 [cbuffer](https://msdn.microsoft.com/library/windows/desktop/bb509581)로 상수 버퍼를 정의하고 꼭짓점별 데이터와 픽셀 셰이더 입력 데이터를 저장합니다. 여기서는 **VertexShaderInput** 및 **PixelShaderInput**이라는 구조를 사용합니다.
 
@@ -507,7 +514,7 @@ float4 main(PixelShaderInput input) : SV_Target
 }
 ```
 
-## Direct3D로의 OpenGL 렌더링 코드 포팅 예
+## <a name="examples-of-porting-opengl-rendering-code-to-direct3d"></a>Direct3D로의 OpenGL 렌더링 코드 포팅 예
 
 
 여기서는 OpenGL ES 2.0 코드의 렌더링 예와 Direct3D 11 코드의 동일한 예를 보여 줍니다.
@@ -556,7 +563,7 @@ m_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST
 m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 ```
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [OpenGL ES 2.0에서 Direct3D 11로 포팅](port-from-opengl-es-2-0-to-directx-11-1.md)
@@ -567,10 +574,5 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

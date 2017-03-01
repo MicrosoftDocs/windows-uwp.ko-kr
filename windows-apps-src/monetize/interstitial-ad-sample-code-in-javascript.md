@@ -3,10 +3,16 @@ author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "JavaScript/HTML을 사용하여 중간 광고를 실행하는 방법을 알아봅니다."
 title: "JavaScript의 중간 광고 샘플 코드"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 중간, javascript, 샘플 코드"
 translationtype: Human Translation
-ms.sourcegitcommit: 2b5dbf872dd7aad48373f6a6df3dffbcbaee8090
-ms.openlocfilehash: 5d7f81e16f3ecdc73fba5010cfbc6082a19cd24c
-
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 91a54bdd2e41b3e7df0ee0aad32448ab9ed66ac0
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -47,9 +53,4 @@ ms.openlocfilehash: 5d7f81e16f3ecdc73fba5010cfbc6082a19cd24c
 * [GitHub의 광고 샘플](http://aka.ms/githubads)
 
  
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

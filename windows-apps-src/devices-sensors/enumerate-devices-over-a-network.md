@@ -3,23 +3,30 @@ author: DBirtolo
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
 title: "네트워크를 통해 디바이스 열거"
 description: "로컬로 연결된 디바이스를 검색하는 것 외에 Windows.Devices.Enumeration API를 사용하여 무선 및 네트워크 프로토콜을 통해 디바이스를 열거할 수 있습니다."
+ms.author: dbirtolo
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6eca7156c8f81a9a89e006c09a232a255f3a8725
-ms.openlocfilehash: 5f62063a7b9c80b8c3715b539a9ebe2505dc9ae0
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 70362ebd77f62aea3bba694b9f6592771d4ad273
+ms.lasthandoff: 02/07/2017
 
 ---
-# 네트워크를 통해 디바이스 열거
+# <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
-** 중요 API **
+**중요 API**
 
--   [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)
+- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 로컬로 연결된 장치를 검색하는 것 외에 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API를 사용하여 무선 및 네트워크 프로토콜을 통해 장치를 열거할 수 있습니다.
 
-## 네트워크 또는 무선 프로토콜을 통해 디바이스 열거
+## <a name="enumerating-devices-over-networked-or-wireless-protocols"></a>네트워크 또는 무선 프로토콜을 통해 디바이스 열거
 
 경우에 따라 로컬로 연결되어 있지 않고 무선 또는 네트워킹 프로토콜을 통해서만 검색할 수 있는 장치를 열거해야 합니다. 이렇게 하기 위해 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459) API에는 세 가지 종류의 디바이스 개체인 **AssociationEndpoint**(AEP), **AssociationEndpointContainer**(AEP 컨테이너) 및 **AssociationEndpointService**(AEP 서비스)가 포함되어 있습니다. 이들을 묶어서 AEP 또는 AEP 개체라고 합니다.
 
@@ -45,7 +52,7 @@ ms.openlocfilehash: 5f62063a7b9c80b8c3715b539a9ebe2505dc9ae0
 
  
 
-## AQS 예제
+## <a name="aqs-examples"></a>AQS 예제
 
 각 AEP 종류에는 열거형을 특정 프로토콜로 제한하는 데 사용할 수 있는 속성이 있습니다. AQS 필터의 OR 연산자를 사용하여 여러 프로토콜을 결합할 수 있습니다. 다음은 AEP 장치 쿼리 방법을 보여 주는 AQS 필터 문자열의 몇 가지 예입니다.
 
@@ -58,7 +65,7 @@ System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 이 AQS는 [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)가 **AsssociationEndpoint**로 설정된 모든 UPnP 및 WSD **AssociationEndpoint** 개체를 쿼리합니다.
 
 ``` syntax
-System.Devices.Aep.ProtocolId:="{782232aa-a2f9-4993-971b-aedc551346b0}" OR 
+System.Devices.Aep.ProtocolId:="{782232aa-a2f9-4993-971b-aedc551346b0}" OR
 System.Devices.Aep.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}"
 ```
 
@@ -77,13 +84,4 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
  
 
  
-
-
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

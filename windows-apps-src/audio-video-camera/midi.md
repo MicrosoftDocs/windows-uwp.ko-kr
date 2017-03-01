@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: "이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다."
+description: "이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법에 대해 살펴봅니다."
 title: MIDI
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
-ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bd494a814155d72642bb721a939fcc8c50668a2d
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# MIDI
+# <a name="midi"></a>MIDI
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 이 문서에서는 MIDI(Musical Instrument Digital Interface) 디바이스를 열거하고 유니버설 Windows 앱에서 MIDI 메시지를 보내고 받는 방법을 보여 줍니다.
 
-## MIDI 장치 열거
+## <a name="enumerate-midi-devices"></a>MIDI 장치 열거
 
 MIDI 디바이스를 열거하고 사용하기 전에 먼저 프로젝트에 다음 네임스페이스를 추가합니다.
 
@@ -34,7 +41,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 [!code-cs[EnumerateMidiOutputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiOutputDevices)]
 
-## 디바이스 감시자 도우미 클래스 만들기
+## <a name="create-a-device-watcher-helper-class"></a>디바이스 감시자 도우미 클래스 만들기
 
 [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/br225459) 네임스페이스는 디바이스가 시스템에서 추가되거나 제거되는 경우 또는 디바이스에 대한 정보가 업데이트되는 경우 이를 앱에 알릴 수 있는 [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/br225446)를 제공합니다. MIDI 지원 앱은 일반적으로 입력 디바이스와 출력 디바이스 모두에 관심이 있으므로, 이 예제에서는 복제할 필요 없이 동일한 코드를 MIDI 입력 디바이스와 MIDI 출력 디바이스에 모두 사용할 수 있도록 **DeviceWatcher** 패턴을 구현하는 도우미 클래스를 만듭니다.
 
@@ -84,7 +91,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 [!code-cs[WatcherDestructor](./code/MIDIWin10/cs/MyMidiDeviceWatcher.cs#SnippetWatcherDestructor)]
 
-## 메시지를 보내고 받는 MIDI 포트 만들기
+## <a name="create-midi-ports-to-send-and-receive-messages"></a>메시지를 보내고 받는 MIDI 포트 만들기
 
 페이지에 대한 코드 숨김에서 **MyMidiDeviceWatcher** 도우미 클래스의 인스턴스 두 개(입력 디바이스용과 출력 디바이스용)를 보유하도록 멤버 변수를 선언합니다.
 
@@ -100,7 +107,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 사용자가 MIDI 입력 **ListBox**에서 항목을 선택하면 [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/br209776) 이벤트가 발생합니다. 이 이벤트에 대한 처리기에서 도우미 클래스의 **DeviceInformationCollection** 속성에 액세스하여 현재 디바이스 목록을 가져옵니다. 선택 목록에 항목이 있는 경우 **ListBox** 컨트롤의 [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/br209768)와 일치하는 인덱스를 가진 **DeviceInformation** 개체를 선택합니다.
 
-[**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894776)를 호출하고 선택한 디바이스의 [**Id**](https://msdn.microsoft.com/library/windows/apps/br225437) 속성을 전달하여 선택한 입력 디바이스를 나타내는 [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/dn894770) 개체를 만듭니다.
+[**MidiInPort.FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/dn894770)를 호출하고 선택한 디바이스의 [**Id**](https://msdn.microsoft.com/library/windows/apps/dn894776) 속성을 전달하여 선택한 입력 디바이스를 나타내는 [**MidiInPort**](https://msdn.microsoft.com/library/windows/apps/br225437) 개체를 만듭니다.
 
 지정된 디바이스를 통해 MIDI 메시지를 수신할 때마다 발생하는 [**MessageReceived**](https://msdn.microsoft.com/library/windows/apps/dn894781) 이벤트에 대한 처리기를 등록합니다.
 
@@ -114,7 +121,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 [!code-cs[OutPortSelectionChanged](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetOutPortSelectionChanged)]
 
-출력 디바이스가 만들어지면 보내려는 메시지 유형에 대한 새 [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508)를 만들어 메시지를 보낼 수 있습니다. 이 예제에서 메시지는 [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817)입니다. [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894727) 개체의 [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894730) 메서드가 호출되어 메시지를 보냅니다.
+출력 디바이스가 만들어지면 보내려는 메시지 유형에 대한 새 [**IMidiMessage**](https://msdn.microsoft.com/library/windows/apps/dn911508)를 만들어 메시지를 보낼 수 있습니다. 이 예제에서 메시지는 [**NoteOnMessage**](https://msdn.microsoft.com/library/windows/apps/dn894817)입니다. [**IMidiOutPort**](https://msdn.microsoft.com/library/windows/apps/dn894730) 개체의 [**SendMessage**](https://msdn.microsoft.com/library/windows/apps/dn894727) 메서드가 호출되어 메시지를 보냅니다.
 
 [!code-cs[SendMessage](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetSendMessage)]
 
@@ -122,7 +129,7 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 [!code-cs[CleanUp](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetCleanUp)]
 
-## 기본 제공 Windows 일반 MIDI 신시사이저 사용
+## <a name="using-the-built-in-windows-general-midi-synth"></a>기본 제공 Windows 일반 MIDI 신시사이저 사용
 
 위에서 설명한 기술을 사용하여 출력 MIDI 디바이스를 열거하면 앱이 "Microsoft GS Wavetable Synth"라는 MIDI 디바이스를 검색합니다. 이는 앱에서 재생할 수 있는 기본 제공 일반 MIDI 신시사이저입니다. 그러나 기본 제공 신시사이저에 대한 SDK 확장을 프로젝트에 포함하지 않은 경우 이 디바이스에 MIDI 출력을 만들려고 하면 실패합니다.
 
@@ -141,10 +148,5 @@ MIDI 출력 디바이스 열거는 **FindAllAsync**를 호출할 때 [**MidiOutP
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

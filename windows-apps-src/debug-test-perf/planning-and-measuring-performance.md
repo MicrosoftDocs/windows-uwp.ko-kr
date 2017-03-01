@@ -3,19 +3,26 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: "성능 계획"
 description: "사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다."
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: f66617e3131399a1cfcac17f258cc3b42c6810d2
+ms.lasthandoff: 02/07/2017
 
 ---
-# 성능 계획
+# <a name="planning-for-performance"></a>성능 계획
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다. 기술적으로 성능은 기능적 요구 사항이 아니지만 성능을 기능으로 간주하는 것이 사용자의 기대를 충족하는 데 도움이 됩니다. 목표 지정 및 측정이 중요한 요소입니다. 성능에 중요한 시나리오가 무엇인지 결정하고 우수한 성능이란 무엇인지 정의하세요. 그런 다음 초기에 측정하고 프로젝트의 수명 주기 동안 목표를 달성할 수 있는지 확인합니다.
 
-## 목표 지정
+## <a name="specifying-goals"></a>목표 지정
 
 우수한 성능을 정의하기 위한 기본적인 조건은 사용자 환경입니다. 앱 시작 시간은 성능에 대한 사용자의 인식에 영향을 미칠 수 있습니다. 사용자는 앱 실행 시간이 1초 미만인 경우 성능이 우수하고, 5초 미만인 경우 양호하고, 5초 이상인 경우 불량하다고 생각할 수 있습니다.
 
@@ -23,7 +30,7 @@ ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 목표를 한 번에 설정하는 것보다 초기 목표를 설정한 다음 나중에 수정하는 것이 더 좋습니다. 앱의 성능 목표는 구체적이고 측정 가능해야 하며, 사용자 또는 앱이 작업을 완료하는 데 걸리는 시간(시간), 앱이 사용자 조작에 응답하여 자체적으로 다시 그리는 속도 및 연속성(유연성) 및 앱이 배터리 전원을 포함하여 시스템 리소스를 절약하는 정도(효율성)라는 세 가지 범주에 속해야 합니다.
 
-## 시간
+## <a name="time"></a>시간
 
 사용자가 앱에서 작업을 완료하는 데 걸리는 시간의 허용 범위(*조작 클래스*)를 고려합니다. 각 조작 클래스에 대해 레이블, 인지된 사용자 정서 및 적합한 기간과 최대 기간을 할당합니다. 다음은 몇 가지 제안 사항입니다.
 
@@ -55,7 +62,7 @@ ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 목표를 지정했으면 이제 앱을 보다 잘 테스트, 분석 및 최적화할 수 있습니다.
 
-## 유연성
+## <a name="fluidity"></a>유연성
 
 앱에 대해 측정 가능한 특정 유연성 목표에는 다음이 포함될 수 있습니다.
 
@@ -63,7 +70,7 @@ ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 -   애니메이션이 초당 60프레임(FPS)에 렌더링됩니다.
 -   사용자가 이동/스크롤할 때 앱에서 초당 3~6페이지의 콘텐츠를 제공합니다.
 
-## 효율성
+## <a name="efficiency"></a>효율성
 
 앱에 대해 측정 가능한 특정 효율성 목표에는 다음이 포함될 수 있습니다.
 
@@ -71,7 +78,7 @@ ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 -   앱이 비활성 상태인 경우 *N*과 *M*은 앱 프로세스에 대해 0입니다.
 -   *X* 시간의 배터리 전원 동안 앱을 활발히 사용할 수 있습니다. 앱이 비활성 상태인 경우 디바이스는 *Y* 시간 동안 충전 상태를 유지합니다.
 
-## 성능을 위한 앱 디자인
+## <a name="design-your-app-for-performance"></a>성능을 위한 앱 디자인
 
 이제 성능 목표를 사용하여 앱의 디자인에 영향을 줄 수 있습니다. 예제 음식 및 식사 앱을 사용하는 경우 사용자가 조리법 페이지로 이동하면 조리법 이름이 먼저 렌더링된 다음 재료 표시가 지연되고 이미지 표시가 더 지연되도록 [항목을 증분식으로 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)할 수 있습니다. 이렇게 하면 이동/스크롤하는 동안 응답성 및 유연한 UI가 유지되며, UI 스레드가 따라갈 수 있을 정도로 조작 속도가 느려진 후 완전한 충실도가 실현됩니다. 다음은 고려해야 할 몇 가지 다른 측면입니다.
 
@@ -110,7 +117,7 @@ ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 성능 관련 디자인을 사용하여 앱 코딩을 시작할 수 있습니다.
 
-## 성능 계측
+## <a name="instrument-for-performance"></a>성능 계측
 
 코딩할 때 앱이 실행되는 동안 특정 지점에서 메시지 및 이벤트를 기록하는 코드를 추가합니다. 나중에 앱을 테스트할 때 Windows Performance Recorder 및 Windows Performance Analyzer(둘 다 [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)에 포함되어 있음)와 같은 프로파일링 도구를 사용하여 앱의 성능에 대한 보고서를 만들고 볼 수 있습니다. 이 보고서에서 이러한 메시지 및 이벤트를 검색하면 보고서 결과를 보다 쉽게 분석할 수 있습니다.
 
@@ -152,7 +159,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 
 앱을 계측한 후에는 앱의 성능을 테스트하고 측정할 수 있습니다.
 
-## 성능 목표 테스트 및 측정
+## <a name="test-and-measure-against-performance-goals"></a>성능 목표 테스트 및 측정
 
 계획의 일부로 개발하는 동안 성능을 측정할 모든 지점을 정의합니다. 이는 프로토타입 제작, 개발 또는 배포 중에 측정할지에 따라 여러 가지 목적에 사용됩니다. 프로토타입 제작 초기 단계 중에 성능을 측정하는 것이 매우 유용할 수 있으므로 의미 있는 작업을 수행하는 코드를 만드는 즉시 이렇게 하는 것이 좋습니다. 앱에 중요한 비용이 있고 디자인 결정을 알리는 경우 초기에 측정하는 것이 좋습니다. 이렇게 하면 잘 확장되는 성능이 우수한 앱을 만들 수 있습니다. 나중보다 초기에 디자인을 변경하는 것이 일반적으로 비용이 적게 됩니다. 제품 주기에서 늦게 성능을 측정하면 마지막 순간 해킹이 발생하거나 성능이 저하될 수 있습니다.
 
@@ -177,7 +184,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 -   //Build/ 세션 [XAML 성능](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   //Build/ 세션 [Visual Studio 2015의 새로운 XAML 도구](https://channel9.msdn.com/Events/Build/2015/2-697)
 
-## 성능 테스트 결과에 응답
+## <a name="respond-to-the-performance-test-results"></a>성능 테스트 결과에 응답
 
 성능 테스트 결과를 분석한 후 변경이 필요한지 여부를 결정합니다. 예를 들면 다음과 같습니다.
 
@@ -187,13 +194,8 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 
 변경이 필요한 경우 변경한 후 계측 또는 테스트로 돌아가 반복하세요.
 
-## 최적화
+## <a name="optimizing"></a>최적화
 
 앱에서 성능에 중요한 코드 경로만 최적화하세요. 이는 대부분 시간이 소요되는 경로입니다. 프로파일링을 통해 확인할 수 있습니다. 종종 좋은 디자인 사례에 따라 소프트웨어를 만드는 작업과 최고로 최적화된 성능을 제공하는 코드를 작성하는 작업은 서로 상충되는 점이 있습니다. 일반적으로 성능이 중요하지 않은 영역에서는 개발자 생산성과 양호한 소프트웨어 디자인을 우선적으로 처리하는 것이 더 좋습니다.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

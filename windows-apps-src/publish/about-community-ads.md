@@ -3,13 +3,20 @@ author: jnHs
 Description: "개발자 앱을 다른 개발자가 게시한 앱과 함께 서로 홍보할 수 있습니다. 이 기능을 커뮤니티 광고라고 합니다."
 title: "커뮤니티 광고 정보"
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
-ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 13963ddf9f745c6de2e6d7ef7d948f649b2f6f5e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 커뮤니티 광고 정보
+# <a name="about-community-ads"></a>커뮤니티 광고 정보
 
 **AdMediatorControl** 또는 **AdControl**을 사용하여 배너 광고를 표시하는 개발자 앱을 Windows 스토어에서 무료로 다른 개발자의 앱과 함께 서로 홍보할 수 있습니다. 이 기능을 *커뮤니티 광고*라고 합니다.  
 
@@ -22,24 +29,19 @@ ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
 * 크레딧은 운영 중인 모든 커뮤니티 광고 캠페인에서 공평하게 분배되며 커뮤니티 광고 캠페인 대상 국가의 현재 시장 환율 eCPM 값에 따라 앱에 대한 광고 노출로 변환됩니다.
 * 앱에서 커뮤니티 광고의 성과를 추적하려면 [계정 수준 광고 성과 보고서](advertising-performance-report.md#account-level-advertising-performance-report)를 참조하세요.
 
-## 커뮤니티 광고에 옵트인(opt in)하는 방법
+## <a name="how-to-opt-in-to-community-ads"></a>커뮤니티 광고에 옵트인(opt in)하는 방법
 
 커뮤니티 광고에 옵트인(opt in)하려면
 
 1. Windows 개발자 센터 대시보드에서 **수익 창출** &gt; **광고로 수익 창출** 페이지로 이동합니다.
 2. **커뮤니티 광고** 섹션에서 **내 앱에 커뮤니티 광고 표시** 확인란을 선택합니다.
-   > **참고** 이 확인란을 선택하거나 선택 취소한 후 변경 내용을 적용하기 위해 앱을 다시 게시할 필요가 없습니다.
+   > **참고**  이 확인란을 선택하거나 선택 취소한 후 변경 내용을 적용하기 위해 앱을 다시 게시할 필요가 없습니다.
 
 3. 앱에 대한 [앱 광고 캠페인을 만듭니다](create-an-ad-campaign-for-your-app.md). 캠페인 종류의 경우 **무료 커뮤니티 광고**를 선택합니다.
 
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [광고를 통한 수익 창출](monetize-with-ads.md)
 * [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

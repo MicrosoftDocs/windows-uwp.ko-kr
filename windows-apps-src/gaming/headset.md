@@ -3,9 +3,16 @@ author: mithom
 title: "헤드셋"
 description: "Windows.Gaming.Input 헤드셋 API를 이용하여 헤드셋을 감지하고 플레이어 음성을 캡처하며 오디오를 재생합니다."
 ms.assetid: 021CCA26-D339-4C8B-B084-0D499BD83ABE
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 헤드셋"
 translationtype: Human Translation
-ms.sourcegitcommit: 31dc2428175fc0afc84f30537898748300c7b242
-ms.openlocfilehash: 5306ef31bf20b25a5f2a24dee8bd8b55de2773da
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 04baee2a3011cee63933fe1fdab759d1b6d29c89
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -70,9 +77,4 @@ XAudio 사용에 대한 세부 내용은 여기에서 다루지 않습니다. �
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
 [headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

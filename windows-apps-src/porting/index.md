@@ -3,13 +3,20 @@ author: mcleblanc
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
 description: "이 섹션에서는 고객이 모든 유형의 디바이스에 설치할 수 있는 단일 Windows 10 앱 패키지를 만들 수 있는 UWP(유니버설 Windows 플랫폼)로 기존 앱을 포팅하는 방법을 설명합니다. 앱은 흥미로운 새 하드웨어, 엄청난 수익 창출 기회, 최신 API 집합, 적응 UI 컨트롤, 마우스/키보드, 터치 및 음성을 포함하여 다양한 입력 양식을 활용할 수 있습니다."
 title: "Windows 10으로 앱 포팅"
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 5b7b5f985eccf905698d7995d1574967bbec176f
-ms.openlocfilehash: 777542dd6a105b432e25db082cb0e1b7b87101f2
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cbb3b501fcaf1e51ca313423e812a4119ffca49c
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 10으로 앱 포팅
+# <a name="porting-apps-to-windows-10"></a>Windows 10으로 앱 포팅
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -29,14 +36,9 @@ WinRT(Windows 런타임)는 UWP(유니버설 Windows 플랫폼) 앱을 빌드할
 | [데스크톱에서 UWP로 이동](desktop-to-uwp-root.md) | Win32 및.NET 4.6.1 데스크톱 응용 프로그램을 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다. |
 | [UWP로 웹앱 이동](hwa-to-uwp-root.md) | 웹 응용 프로그램을 UWP(유니버설 Windows 플랫폼) 앱으로 변환합니다. *UWP에서 사용할 수 있도록 Chrome 앱을 변환하는 지침뿐만 아니라 Windows 또는 Mac을 개발 플랫폼으로 사용하는 지침이 포함되어 있습니다. |
  
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [WPF 및 Silverlight에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/dn263237)
 * [Android에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/jj945421)
 * [웹에서 WinRT로 이동](https://msdn.microsoft.com/library/windows/apps/hh465151)
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

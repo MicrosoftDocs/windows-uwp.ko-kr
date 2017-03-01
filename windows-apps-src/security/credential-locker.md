@@ -3,16 +3,23 @@ title: "자격 증명 보관"
 description: "이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 자격 증명 보관을 사용하여 사용자 자격 증명을 안전하게 저장 및 검색하고 사용자의 Microsoft 계정을 사용하여 장치 간에 로밍하는 방법을 설명합니다."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+ms.author: alkoren
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: d72432aa5f9ccc40d4f822f5d76c1e09b606e33a
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 자격 증명 보관
+# <a name="credential-locker"></a>자격 증명 보관
 
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱에서 자격 증명 보관을 사용하여 사용자 자격 증명을 안전하게 저장 및 검색하고 사용자의 Microsoft 계정을 사용하여 장치 간에 로밍하는 방법을 설명합니다.
@@ -21,7 +28,7 @@ ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
 
 도메인 계정의 경우 자격 증명 보관이 약간 다른 방식으로 작동합니다. Microsoft 계정과 함께 저장된 자격 증명이 있으며 해당 계정을 도메인 계정(예: 회사에서 사용하는 계정)과 연결하는 경우 자격 증명이 도메인 계정에 로밍됩니다. 그러나 도메인 계정으로 로그온한 상태에서 추가된 새 자격 증명은 로밍되지 않습니다. 따라서 도메인의 개인 자격 증명은 도메인 외부에 노출되지 않습니다.
 
-## 사용자 자격 증명 저장
+## <a name="storing-user-credentials"></a>사용자 자격 증명 저장
 
 
 1.  [**Windows.Security.Credentials**](https://msdn.microsoft.com/library/windows/apps/br227089) 네임스페이스의 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체를 사용하여 자격 증명 보관 참조를 가져옵니다.
@@ -33,7 +40,7 @@ vault.Add(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## 사용자 자격 증명 검색
+## <a name="retrieving-user-credentials"></a>사용자 자격 증명 검색
 
 
 [**PasswordVault**](https://msdn.microsoft.com/library/windows/apps/br227081) 개체 참조를 가져온 후 자격 증명 보관에서 사용자 자격 증명을 검색하는 여러 가지 옵션이 있습니다.
@@ -104,7 +111,7 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
 }
 ```
 
-## 사용자 자격 증명 삭제
+## <a name="deleting-user-credentials"></a>사용자 자격 증명 삭제
 
 
 두 단계로 이루어진 빠른 프로세스를 통해 자격 증명 보관에서 사용자 자격 증명을 삭제할 수도 있습니다.
@@ -119,7 +126,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## 모범 사례
+## <a name="best-practices"></a>모범 사례
 
 
 자격 증명 보관은 암호에만 사용하고 큰 데이터 blob에는 사용하지 않습니다.
@@ -130,8 +137,3 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
 -   사용자가 암호를 저장하도록 선택했습니다.
 
 앱 데이터 또는 로밍 설정을 사용하여 자격 증명을 일반 텍스트로 저장하지 마세요.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

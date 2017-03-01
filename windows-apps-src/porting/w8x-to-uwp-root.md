@@ -1,15 +1,22 @@
 ---
 author: mcleblanc
-description: "Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관계없이 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는지 확인합니다."
+description: "&\\#8212;Windows 8.1, Windows Phone 8.1 또는 둘 모두를 대상으로 하는&\\#8212; 유니버설 8.1 앱이 있는 경우 소스 코드 및 기술이 Windows 10으로 원활하게 포팅되는 것을 확인하실 수 있습니다."
 title: "Windows 런타임 8.x에서 UWP로 이동&quot;"
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+ms.author: markl
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e1f0e9727a36536fe292902fa7313dcc851932f6
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: a4ee1fd29b276958ed6a18b4eadcd89d5ea914b6
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Windows 런타임 8.x에서 UWP로 이동
+# <a name="move-from-windows-runtime-8x-to-uwp"></a>Windows 런타임 8.x에서 UWP로 이동
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
@@ -17,7 +24,7 @@ Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관�
 
 포팅하는 동안 Windows 10은 이전 플랫폼과 대부분의 API, XAML 태그, UI 프레임워크 및 도구를 공유하므로 이러한 모든 항목이 이미 익숙하다는 것을 알게 됩니다. 이전과 마찬가지로 C++, C# 및 Visual Basic 중에서 XAML UI 프레임워크와 함께 사용할 프로그래밍 언어를 선택할 수 있습니다. 처음에 현재 앱을 사용해서 수행할 작업을 정확히 계획할 때는 앱 및 프로젝트 종류를 고려해야 합니다. 이 내용은 다음 섹션에서 설명합니다.
 
-## 유니버설 8.1 앱이 있는 경우
+## <a name="if-you-have-a-universal-81-app"></a>유니버설 8.1 앱이 있는 경우
 
 유니버설 8.1 앱은 8.1 유니버설 앱 프로젝트에서 빌드합니다. 프로젝트의 이름을 AppName\_81이라고 하겠습니다. 여기에는 다음과 같은 하위 프로젝트가 포함되어 있습니다.
 
@@ -34,19 +41,19 @@ Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관�
 3.  범용 디바이스 패밀리를 대상으로 하는 앱에 Windows 프로젝트의 콘텐츠를 포팅합니다. 해당되는 경우 무조건 또는 적응 방식으로 WindowsPhone 프로젝트의 다른 콘텐츠를 복구합니다.
 4.  Windows 프로젝트의 내용을 범용 또는 데스크톱 디바이스 패밀리를 대상으로 하는 앱으로 포팅하고, WindowsPhone 프로젝트의 내용을 범용 또는 모바일 디바이스 패밀리를 대상으로 하는 앱으로 포팅합니다. 공유 프로젝트를 사용하여 솔루션을 만들 수 있으며 두 프로젝트 간에 소스 코드, 태그 파일 및 기타 자산과 리소스를 계속 공유할 수 있습니다. 또는 다른 솔루션을 만들고 링크를 사용하여 동일한 항목을 계속 공유할 수 있습니다.
 
-## Windows 8.1 앱이 있는 경우
+## <a name="if-you-have-a-windows-81-app"></a>Windows 8.1 앱이 있는 경우
 
 유니버설 또는 데스크톱 디바이스 패밀리를 대상으로 하는 앱에 프로젝트를 포팅합니다. 유니버설 디바이스 패밀리를 선택하며 앱이 데스크톱 디바이스 패밀리에서만 구현되는 API를 호출하는 경우 적응 코드로 이러한 호출을 지원할 수 있습니다.
 
-## Windows Phone 8.1 앱이 있는 경우
+## <a name="if-you-have-a-windows-phone-81-app"></a>Windows Phone 8.1 앱이 있는 경우
 
 유니버설 또는 모바일 디바이스 패밀리를 대상으로 하는 앱에 프로젝트를 포팅합니다. 유니버설 디바이스 패밀리를 선택하며 앱이 모바일 디바이스 패밀리에서만 구현되는 API를 호출하는 경우 적응 코드로 이러한 호출을 지원할 수 있습니다.
 
-## 여러 양식 요소에 맞게 앱 조정
+## <a name="adapting-your-app-to-multiple-form-factors"></a>여러 양식 요소에 맞게 앱 조정
 
 이전 섹션에서 선택한 옵션에 따라 앱이 실행되는 장치 범위가 결정되며, 이러한 장치는 다양할 수 있습니다. 앱을 모바일 디바이스 패밀리로 제한해도 지원할 화면 크기는 무척 다양합니다. 따라서 앱을 이전에는 지원하지 않았던 양식 요소에서 실행하려는 경우 해당 양식 요소에서 UI를 테스트하고 UI가 각 양식 요소에 잘 맞도록 필요한 사항을 변경하도록 합니다. 이것을 포팅 후 작업 또는 포팅 추가 목표로 생각해도 되며 [Bookstore2](w8x-to-uwp-case-study-bookstore2.md) 및 [QuizGame](w8x-to-uwp-case-study-quizgame.md) 사례 연구의 연습에 몇 가지 예가 있습니다.
 
-## 계층별 포팅에 대한 접근법
+## <a name="approaching-porting-layer-by-layer"></a>계층별 포팅에 대한 접근법
 
 유니버설 8.1 앱을 UWP 앱 모델로 포팅할 경우 대부분의 지식과 경험은 물론이고, 소스 코드와 태그 및 사용 중인 소프트웨어 패턴도 이전됩니다.
 
@@ -56,7 +63,7 @@ Windows 8.1, Windows Phone 8.1 또는 둘 다를 대상으로 하는지에 관�
 
 포팅 전이나 포팅 중에 비슷한 용도를 가진 코드가 임의적으로 분산되지 않고 계층으로 함께 수집되도록 앱을 리펙터링하여 개선할 수 있는지 여부를 고려하세요. 위에서 설명한 것처럼 앱을 계층으로 팩터링하면 앱을 수정하고 테스트한 다음 지속적으로 읽고 유지 관리하기가 쉬워집니다. Model-View-ViewModel([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)) 패턴에 따라 기능을 재사용하기 쉽게 만들 수 있습니다. 이 패턴은 앱의 데이터, 비즈니스 및 UI 부분을 서로 별도로 유지합니다. UI 내에서도 상태와 동작을 시각적으로 분리하고 별도로 테스트할 수 있습니다. MVVM을 사용하면 데이터와 비즈니스 논리를 한 번 작성하여 UI에 관계없이 모든 장치에서 사용할 수 있습니다. 또한 장치 간에 많은 보기 모델 및 보기 부분이 다시 사용될 수 있습니다.
 
-## Microsoft Visual Studio 2015 RC 프로젝트가 있는 경우
+## <a name="if-you-have-a-microsoft-visual-studio-2015-rc-project"></a>Microsoft Visual Studio 2015 RC 프로젝트가 있는 경우
 
 Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트가 있는 경우 [RTM으로 UWP Microsoft Visual Studio 2015 RC 프로젝트 업데이트](update-your-visual-studio-2015-rc-project-to-rtm.md)를 참조하세요.
  
@@ -70,16 +77,11 @@ Microsoft Visual Studio 2015 RC를 사용하여 만든 Windows 10 프로젝트�
 | [사례 연구: Bookstore2](w8x-to-uwp-case-study-bookstore2.md) | [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/hh702601) 컨트롤에 제공된 정보를 기반으로 하는 이 사례 연구입니다. 보기 모델에서 Author 클래스의 각 인스턴스는 해당 저자가 쓴 책의 그룹을 나타내며, SemanticZoom에서 저자가 그룹화한 책 목록을 보거나 저자의 점프 목록을 축소할 수 있습니다. |
 | [사례 연구: QuizGame](w8x-to-uwp-case-study-quizgame.md) | 이 항목에서는 작동하는 피어 투 피어 퀴즈 게임 WinRT 8.1 샘플 앱을 Windows 10 UWP 앱에 포팅하는 사례 연구를 제공합니다. |
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 **설명서**
 * [Windows 런타임 참조](https://msdn.microsoft.com/library/windows/apps/br211377)
 * [모든 Windows 장치용 유니버설 Windows 앱 빌드](http://go.microsoft.com/fwlink/p/?LinkID=397871)
 * [앱용 UX 디자인](https://msdn.microsoft.com/library/windows/apps/hh767284)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

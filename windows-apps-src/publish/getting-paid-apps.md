@@ -3,18 +3,25 @@ author: jnHs
 Description: "다음은 앱과 IAP(앱에서 바로 구매 제품) 및 Microsoft Advertising 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다."
 title: "지급 받기"
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
+ms.author: wdg-dev-content
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: eaf2c2d7032d7df1184a988afce7dbd4f28d3622
-ms.openlocfilehash: 76bce0070da266cc2bc53cda785136a372e2f3bc
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: af5c30aae3927f901bb93fd2c79bfee202754a1e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 지급 받기
+# <a name="getting-paid"></a>지급 받기
 다음은 앱과 추가 기능 및 Microsoft Advertising 수익에 대한 지급을 받는 데 필요한 중요한 정보입니다.
 
 > **중요** Windows 스토어의 앱 판매에서 번 돈을 받으려면 먼저 [지급 계좌를 설정하고 필요한 세금 양식을 입력](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
 
-## 스토어 수수료
+## <a name="store-fee"></a>스토어 수수료
 
 [개발자 계정에 등록](http://go.microsoft.com/fwlink/p/?LinkID=615100)할 때 [앱 개발자 계약](https://msdn.microsoft.com/library/windows/apps/hh694058)에 동의합니다. 이 계약에서는 Microsoft에서 각 판매에 대해 청구하는 스토어 수수료를 포함하여 Windows 스토어에서 앱을 판매할 때 적용되는 개발자와 Microsoft 간의 관계에 대해 설명합니다.
 
@@ -22,7 +29,7 @@ ms.openlocfilehash: 76bce0070da266cc2bc53cda785136a372e2f3bc
 
 Windows 스토어 수수료는 추가 기능을 포함하여 Windows 스토어가 수금하는 모든 앱 매출에 적용됩니다.
 
-## 기준 가격
+## <a name="price-tiers"></a>기준 가격
 
 기준 가격은 앱을 배포하기로 선택한 모든 국가에서 판매가를 설정합니다. 무료 앱을 제공하거나 고객이 앱 취득을 위해 지불해야 하는 가격을 선택할 수 있습니다. 기준 가격은 미화 0.99달러에서 시작하여 증가합니다(1.29 USD, 1.49 USD, 1.99 USD 등). 가격이 높아질수록 기준 가격 간 증분도 커집니다.
 
@@ -32,15 +39,15 @@ Windows 스토어 수수료는 추가 기능을 포함하여 Windows 스토어�
 
 선택한 기준 가격에는 고객이 지불해야 하는 판매세 또는 부가가치세가 포함될 수 있습니다. 자세한 내용은 [유료 앱의 세금 세부 정보](tax-details-for-paid-apps.md)를 참조하세요.
 
-## 지급 보고
+## <a name="payout-reporting"></a>지급 보고
 
 Windows 개발자 센터 대시보드의 **지급 요약**에서 결제 정보에 대한 세부 정보에 액세스하고 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
-## 지급 기간
+## <a name="payout-timeframe"></a>지급 기간
 
 해당 결제 임계값이 충족되고 아래에 설명된 대로 지급을 보류하지 않은 경우 결제는 월 단위로 이루어집니다. 일반적으로 해당 월의 15일에 지정된 월에 대한 결제 대금을 보냅니다. 결제는 일반적으로 영업일 3~10일 내에 지급 계좌로 입금됩니다. 자세한 내용은 [지급 임계값, 방법 및 기간](payment-thresholds-methods-and-timeframes.md)을 참조하세요.
 
-##  지급 보류 상태
+##  <a name="payout-hold-status"></a>지급 보류 상태
 
 기본적으로 위에서 설명한 대로 월 단위로 결제 대금을 보냅니다. 그러나 지급을 보류하여 결제 대금을 계좌로 보내지 않도록 할 수 있습니다. 지급을 보류하도록 선택하는 경우에도 계속해서 모든 수익을 기록하고 **지급 요약**에 세부 정보를 제공합니다. 그러나 보류를 제거할 때까지 결제 대금을 계좌로 보내지 않습니다. 
 
@@ -57,10 +64,5 @@ Windows 개발자 센터 대시보드의 **지급 요약**에서 결제 정보�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO5-->
 
 

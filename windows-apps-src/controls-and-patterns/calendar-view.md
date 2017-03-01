@@ -5,9 +5,16 @@ title: "달력 보기"
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
 template: detail.hbs
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: a3924fef520d7ba70873d6838f8e194e5fc96c62
-ms.openlocfilehash: 86062f744efa487cc70adb9648ff3f3584226000
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: c3779262c24ef1bd124330fc7709b38abead1a7a
+ms.lasthandoff: 02/07/2017
 
 ---
 # <a name="calendar-view"></a>달력 보기
@@ -200,9 +207,4 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [달력 날짜 선택](calendar-date-picker.md)
 - [날짜 선택기](date-picker.md)
 - [시간 선택기](time-picker.md)
-
-
-
-<!--HONumber=Dec16_HO2-->
-
 

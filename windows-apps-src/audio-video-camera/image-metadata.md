@@ -3,20 +3,27 @@ author: laurenhughes
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
 description: "이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 GeotagHelper 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다."
 title: "이미지 메타데이터"
+ms.author: lahugh
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: fd5b52a1d431b9396a4b162077d4f8d6246cd597
-ms.openlocfilehash: 958033bc054da292c85f8df0a57cf964696c82bd
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: af9a4c243c939ddc04e5d0763b58df00e70d7017
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 이미지 메타데이터
+# <a name="image-metadata"></a>이미지 메타데이터
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [아카이브](http://go.microsoft.com/fwlink/p/?linkid=619132)를 참조하세요. \]
 
 
 이 문서에서는 이미지 메타데이터를 읽고 쓰는 방법과 [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683) 유틸리티 클래스를 사용하여 파일에 지오태그를 추가하는 방법을 보여 줍니다.
 
-## 이미지 속성
+## <a name="image-properties"></a>이미지 속성
 
 [**StorageFile.Properties**](https://msdn.microsoft.com/library/windows/apps/br227225) 속성은 파일에 대한 콘텐츠 관련 정보에 액세스할 수 있도록 하는 [**StorageItemContentProperties**](https://msdn.microsoft.com/library/windows/apps/hh770642) 개체를 반환합니다. [**GetImagePropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/hh770646)를 호출하여 이미지 관련 속성을 가져옵니다. 반환된 [**ImageProperties**](https://msdn.microsoft.com/library/windows/apps/br207718) 개체는 이미지의 제목 및 캡처 날짜와 같은 기본적인 이미지 메타데이터 필드를 포함하는 멤버를 노출합니다.
 
@@ -32,7 +39,7 @@ ms.openlocfilehash: 958033bc054da292c85f8df0a57cf964696c82bd
 
 -   지원되지 않는 속성은 검색 시 null 값을 반환할 수 있으므로 반환된 메타데이터 값을 사용하기 전에 null이 있는지 확인합니다.
 
-## 지오태그 도우미
+## <a name="geotag-helper"></a>지오태그 도우미
 
 GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 생성할 필요 없이 [**Windows.Devices.Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603) API를 직접 사용하여 지리적 데이터가 있는 이미지에 쉽게 태그를 지정하는 유틸리티 클래스입니다.
 
@@ -54,7 +61,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 [!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
 
-## 이미지 메타데이터 디코드 및 인코드
+## <a name="decode-and-encode-image-metadata"></a>이미지 메타데이터 디코드 및 인코드
 
 이미지 데이터로 작업하는 좀 더 수준 높은 방법은 [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) 또는 [BitmapEncoder](bitmapencoder-options-reference.md)를 사용하여 스트림 수준에서 속성을 읽고 쓰는 것입니다. 이러한 작업의 경우 Windows 속성을 사용하여 읽거나 쓰는 데이터를 지정할 수 있지만 요청된 속성에 대한 경로를 지정하기 위해 WIC(Windows 이미징 구성 요소)에서 제공하는 메타데이터 쿼리 언어를 사용할 수도 있습니다.
 
@@ -79,7 +86,7 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 -   [**SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252)는 요청된 속성 중 하나가 인코더와 연결된 이미지에서 지원하지 않는 경우 0x88982F41 오류 코드로 실패합니다.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 * [이미징](imaging.md)
  
@@ -88,10 +95,5 @@ GeotagHelper는 메타데이터 형식을 수동으로 구문 분석하거나 �
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

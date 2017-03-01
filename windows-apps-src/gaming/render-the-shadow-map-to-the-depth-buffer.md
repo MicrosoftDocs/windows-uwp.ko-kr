@@ -3,13 +3,20 @@ author: mtoepke
 title: "그림자 맵을 깊이 버퍼로 렌더링"
 description: "광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "Windows 10, uwp, 게임, 렌더링, 그림자 지도, 깊이 버퍼, direct3d"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 27b7c9a5fb69a19eed5941bf06068d5237ec101e
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# 그림자 맵을 깊이 버퍼로 렌더링
+# <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -17,7 +24,7 @@ ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
 
 광원의 관점에서 렌더링하여 그림자 볼륨을 나타내는 2차원 깊이 맵을 만듭니다. 깊이 맵은 그림자에서 렌더링되는 공간을 마스킹합니다. [연습의 2부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
 
-## 깊이 버퍼 지우기
+## <a name="clear-the-depth-buffer"></a>깊이 버퍼 지우기
 
 
 항상 여기에 렌더링하기 전에 깊이 버퍼를 지웁니다.
@@ -27,7 +34,7 @@ context->ClearRenderTargetView(m_deviceResources->GetBackBufferRenderTargetView(
 context->ClearDepthStencilView(m_shadowDepthView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 ```
 
-## 그림자 맵을 깊이 버퍼로 렌더링
+## <a name="render-the-shadow-map-to-the-depth-buffer"></a>그림자 맵을 깊이 버퍼로 렌더링
 
 
 그림자 렌더링 단계에서 깊이 버퍼를 지정하지만 렌더링 대상은 지정하지 않습니다.
@@ -122,9 +129,9 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**보기 절두체 최적화**: 깊이 버퍼에서 최고의 정밀도를 얻을 수 있도록 구현에서 세밀한 보기 절두체를 계산해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
+**보기 절두체 최적화:**  깊이 버퍼에서 최고의 정밀도를 얻을 수 있도록 구현에서 세밀한 보기 절두체를 계산해야 합니다. 그림자 기술에 대한 자세한 팁은 [그림자 깊이 맵 향상을 위한 일반 기술](https://msdn.microsoft.com/library/windows/desktop/ee416324)을 참조하세요.
 
-## 그림자 단계의 꼭짓점 셰이더
+## <a name="vertex-shader-for-shadow-pass"></a>그림자 단계의 꼭짓점 셰이더
 
 
 단순화된 버전의 꼭짓점 셰이더를 사용하여 조명 공간에서 꼭짓점 위치를 렌더링합니다. 조명 법선, 보조 변환 등을 포함하지 마세요.
@@ -153,10 +160,5 @@ PixelShaderInput main(VertexShaderInput input)
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

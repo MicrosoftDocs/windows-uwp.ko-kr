@@ -1,15 +1,22 @@
 ---
 author: mtoepke
 title: "Marble Maze 샘플 기본 사항"
-description: "이 문서에서는 프로젝트가 Windows 런타임 환경에서 Visual C++를 사용하는 방법, 프로젝트를 만들고 구성하는 방법, 프로젝트 빌드 방법 등 Marble Maze 프로젝트의 기본 특성에 대해 설명합니다."
+description: "이 문서에서는 Marble Maze 프로젝트의 기본 특성, 즉 이 프로젝트가 Windows 런타임 환경에서 Visual C++를 사용하는 방식, 이 프로젝트를 만들고 구성하는 방식, 이 프로젝트를 빌드하는 방식 등에 대해 설명합니다."
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+ms.author: mtoepke
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 게임, 샘플, directx, 기본 사항"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: cc155d7a454cabe5c0d820f5d74313dfeaf01830
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Marble Maze 샘플 기본 사항
+# <a name="marble-maze-sample-fundamentals"></a>Marble Maze 샘플 기본 사항
 
 
 \[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
@@ -29,7 +36,7 @@ ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
 -   대부분의 경우 결과 코드 대신 예외 처리를 사용하여 예기치 않은 오류를 처리합니다.
 -   앱에서 오류를 찾는 데 도움이 되도록 SAL 주석을 코드 분석 도구와 함께 사용합니다.
 
-## Visual Studio 프로젝트 만들기
+## <a name="creating-the-visual-studio-project"></a>Visual Studio 프로젝트 만들기
 
 
 샘플을 다운로드하여 압축을 푼 경우 Visual Studio에서 MarbleMaze.sln 솔루션 파일을 열어 코드를 직접 확인할 수 있습니다. **Browse Code(코드 찾아보기)** 탭을 선택하여 [DirectX Marble Maze 게임 샘플](http://go.microsoft.com/fwlink/?LinkId=624011)(영문) MSDN 샘플 갤러리 페이지에서 소스를 볼 수도 있습니다.
@@ -44,7 +51,7 @@ Marble Maze에 대한 Visual Studio 프로젝트를 만들 때는 기존 프로�
 
 Windows 스토어에서 가져오는 모든 UWP 앱은 앱 패키지 형태로 제공됩니다. 앱 패키지에는 앱 정보가 포함된 패키지 매니페스트가 있습니다. 예를 들어 앱의 기능(즉, 보호된 시스템 리소스 또는 사용자 데이터에 대해 필요한 액세스)을 지정할 수 있습니다. 앱이 특정 기능을 사용하도록 결정하면 패키지 매니페스트를 사용하여 필요한 기능을 선언합니다. 매니페스트를 사용하여 지원되는 장치 회전, 타일 이미지 및 시작 화면과 같은 프로젝트 속성을 지정할 수도 있습니다. 앱 패키지에 대한 자세한 내용은 [앱 패키징](https://msdn.microsoft.com/library/windows/apps/mt270969)을 참조하세요.
 
-##  게임 빌드, 배포 및 실행
+##  <a name="building-deploying-and-running-the-game"></a>게임 빌드, 배포 및 실행
 
 
 표준 프로젝트를 빌드하는 방식으로 UWP 앱 프로젝트를 빌드합니다. 메뉴 모음에서 **빌드, 솔루션 빌드**를 선택합니다. 빌드 단계에서 코드를 컴파일하고 UWP 앱으로 사용하기 위해 패키징합니다.
@@ -53,7 +60,7 @@ Windows 스토어에서 가져오는 모든 UWP 앱은 앱 패키지 형태로 �
 
 프로젝트를 배포한 후 Marble Maze 타일을 선택하여 게임을 실행합니다. 또는 Visual Studio의 메뉴 모음에서 **디버그, 디버깅 시작**을 선택합니다.
 
-###  게임 제어
+###  <a name="controlling-the-game"></a>게임 제어
 
 터치, 가속도계, Xbox 360 컨트롤러 또는 마우스를 사용하여 Marble Maze를 제어할 수 있습니다.
 
@@ -65,7 +72,7 @@ Windows 스토어에서 가져오는 모든 UWP 앱은 앱 패키지 형태로 �
 -   컨트롤러의 뒤로 단추 또는 키보드의 Home 키를 사용하여 게임을 다시 시작합니다.
 -   최소 점수 테이블이 표시될 때 뒤로 단추 또는 Home 키를 사용하여 모든 점수를 지웁니다.
 
-##  코드 규칙
+##  <a name="code-conventions"></a>코드 규칙
 
 
 Windows 런타임은 특수 응용 프로그램 환경에서만 실행되는 UWP 앱을 만드는 데 사용할 수 있는 프로그래밍 인터페이스입니다. 이러한 앱은 인증된 기능, 데이터 형식 및 장치를 사용하고 Windows 스토어에서 배포 됩니다. 최하위 수준에서 Windows 런타임은 ABI(응용 프로그램 이진 인터페이스)로 구성됩니다. ABI는 JavaScript, .NET 언어, Visual C++ 등 여러 프로그래밍 언어가 Windows 런타임 API에 액세스할 수 있게 하는 하위 수준 이진 계약입니다.
@@ -81,7 +88,7 @@ Marble Maze는 **^**을 [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/
 
 C++ UWP 앱에서 사용할 수 있는 언어 확장에 대한 자세한 내용은 [Visual C++ 언어 참조(C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh699871)를 참조하세요.
 
-###  오류 처리
+###  <a name="error-handling"></a>오류 처리
 
 Marble Maze는 예기치 않은 오류를 처리하는 주요 방법으로 예외 처리를 사용합니다. 일반적으로 게임 코드는 **HRESULT** 값과 같은 로깅 또는 오류 코드를 사용하여 오류를 나타내지만 예외 처리에는 두 가지 주요 장점이 있습니다. 먼저, 코드를 읽고 유지 관리하기 쉽게 만들 수 있습니다. 코드 관점에서 예외 처리는 오류를 처리할 수 있는 루틴에 오류를 전파하는 보다 효율적인 방법입니다. 오류 코드를 사용할 경우 일반적으로 각 함수에서 명시적으로 오류를 전파해야 합니다. 두 번째 장점은 오류 위치와 컨텍스트에서 즉시 중지할 수 있도록 예외가 발생할 때 중단되도록 Visual Studio 디버거를 구성할 수 있다는 것입니다. 또한 Windows 런타임은 예외 처리를 광범위하게 사용합니다. 따라서 코드에 예외 처리를 사용하여 모든 오류 처리를 하나의 모델로 결합할 수 있습니다.
 
@@ -104,7 +111,7 @@ Marble Maze는 예기치 않은 오류를 처리하는 주요 방법으로 예�
 
 -   예기치 않은 오류에는 **HRESULT**를 사용하지 않는 것이 좋지만 코드 흐름을 제어하는 데 예외 처리를 사용하지 않는 것이 더 중요합니다. 따라서 필요한 경우 **HRESULT** 반환 값을 사용하여 코드 흐름을 제어하는 것이 좋습니다.
 
-###  SAL 주석
+###  <a name="sal-annotations"></a>SAL 주석
 
 앱에서 오류를 찾는 데 도움이 되도록 SAL 주석을 코드 분석 도구와 함께 사용합니다.
 
@@ -126,12 +133,12 @@ void LoadMesh(
 
 사용 가능한 주석의 전체 목록은 sal.h에 정의되어 있습니다. 자세한 내용은 [SAL 주석](https://msdn.microsoft.com/library/windows/apps/ms235402.aspx)을 참조하세요.
 
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 
 Marble Maze 응용 프로그램 코드가 구성된 방식 및 DirectX UWP 앱의 구조와 일반적인 데스크톱 응용 프로그램 구조 간의 차이점에 대한 자세한 내용은 [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)를 참조하세요.
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 
 * [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)
@@ -143,10 +150,5 @@ Marble Maze 응용 프로그램 코드가 구성된 방식 및 DirectX UWP 앱�
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

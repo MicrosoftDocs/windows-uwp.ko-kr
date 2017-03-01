@@ -1,16 +1,24 @@
 ---
 author: TylerMSFT
-title: "원격 디바이스에서 앱 실행"
-description: Learn how to launch an app on a remote device using Project "Rome".
+title: "원격 장치에서 앱 시작"
+description: "프로젝트 &quot;로마&quot;를 사용하여 원격 장치에서 앱을 시작하는 방법을 알아봅니다."
+ms.author: twhitney
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
+ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 translationtype: Human Translation
-ms.sourcegitcommit: 4e94ee5b3c56f3ec20e3592b97348c291297a670
-ms.openlocfilehash: d429ea4a6f8d52445c99cb170bb41c3fc1515dde
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: e3ef31ed9a90122ae0634274ac5794e67017bc2f
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 실행
+# <a name="launch-an-app-on-a-remote-device"></a>원격 장치에서 앱 시작
 
-이 문서에서는 원격 디바이스에서 Windows 앱을 실행하는 방법을 설명합니다.
+이 문서에서는 원격 장치에서 Windows 앱을 실행하는 방법을 설명합니다.
 
 Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Microsoft 계정)로 서명된 경우 Windows 10 버전 1607 이상을 실행하는 다른 디바이스에서 UWP 앱 또는 Windows 데스크톱 응용 프로그램을 원격으로 실행할 수 있습니다.
 
@@ -59,13 +67,8 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 ## <a name="related-topics"></a>관련 항목
 
-[원격 시스템 API 참조](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)  
+[원격 시스템 API 참조](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
 [연결된 앱 및 디바이스(프로젝트 "로마") 개요](connected-apps-and-devices.md)  
 [원격 디바이스 검색](discover-remote-devices.md)  
 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)은 원격 시스템을 검색하고, 원격 시스템에서 앱을 실행하고, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지를 보내는 방법을 보여 줍니다.
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

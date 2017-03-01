@@ -3,14 +3,21 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: "브러시 사용"
 description: "Brush 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다."
+ms.author: jimwalk
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: f5934600cc185c952acc57ae38e0b190466e0dfa
-ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: bf3e4e169108f4cab98dcb460552daff8822c64c
+ms.lasthandoff: 02/07/2017
 
 ---
-# 브러시 사용
+# <a name="use-brushes"></a>브러시 사용
 
-\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
+\[ Windows 10의 UWP 앱에 맞게 업데이트되었습니다. Windows 8.x 문서는 [보관](http://go.microsoft.com/fwlink/p/?linkid=619132)을 참조하세요. \]
 
 
 **중요 API**
@@ -19,15 +26,15 @@ ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
 
 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 개체는 그릴 개체가 UI에 표시되도록 셰이프, 텍스트 및 컨트롤 일부의 내부나 윤곽선을 그리는 데 사용됩니다. 사용 가능한 브러시와 이러한 브러시를 사용하는 방법을 살펴보겠습니다.
 
-## 브러시 소개
+## <a name="introduction-to-brushes"></a>브러시 소개
 
 앱 캔버스에 표시되는 [**Control**](https://msdn.microsoft.com/library/windows/apps/BR209390)의 일부나 [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377) 등의 개체를 그리려면 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)를 사용합니다. 예를 들어 **Shape**의 [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx) 속성이나 **Control**의 [**Background**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.background.aspx) 및 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.foreground.aspx) 속성을 **Brush** 값으로 설정하면 **Brush**는 UI 요소가 UI에 그려지거나 렌더링되는 방식을 결정합니다. 브러시 유형은 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962), [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108), [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101), [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) 등 다양합니다.
 
-## 단색 브러시
+## <a name="solid-color-brushes"></a>단색 브러시
 
 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)는 빨간색 또는 파란색 같은 단일 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)로 영역을 칠합니다. 가장 기본 브러시입니다. XAML에서는 미리 정의된 색 이름, 16진수 색 값, 속성 요소 구문의 세 가지 방법으로 **SolidColorBrush**와 지정 단색을 정의합니다.
 
-### 미리 정의된 색 이름
+### <a name="predefined-color-names"></a>미리 정의된 색 이름
 
 [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx), [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) 등의 미리 정의된 색 이름을 사용할 수 있습니다. 이름이 지정된 256개 색을 사용할 수 있습니다. XAML 파서가 올바른 색 채널을 통해 색 이름을 [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) 구조로 변환합니다. 이름이 지정된 256개 색은 CSS3(CSS 스타일시트, Level 3) 사양의 *X11* 색 이름을 기반으로 하므로 이전에 웹 개발 또는 디자인 경험이 있는 경우 이름이 지정된 색 목록을 이미 알고 있을 수도 있습니다.
 
@@ -43,7 +50,7 @@ ms.openlocfilehash: dc415135a05a63226a6b2d0b828245fe2f713788
 
 XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 정의하는 경우 이름이 지정된 각 색을 [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors) 클래스의 정적 속성 값으로 사용할 수 있습니다. 예를 들어 **SolidColorBrush**의 [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx) 값을 선언하여 이름이 지정된 색 "Orchid"를 나타내려면 **Color** 값을 정적 값 [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx)로 설정합니다.
 
-### 16진수 색 값
+### <a name="hexadecimal-color-values"></a>16진수 색 값
 
 16진수 형식 문자열을 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)에 대해 정밀한 24비트 색 값과 8비트 알파 채널을 선언할 수 있습니다. 0에서 F 범위의 두 문자는 각 구성 요소 값을 정의하며 16진수 문자열의 구성 요소 값 순서는 알파 채널(불투명도), 빨간색 채널, 녹색 채널 및 파란색 채널(**ARGB**)입니다. 예를 들어 16진수 값 "\#FFFF0000"은 완전히 불투명한 빨간색입니다(알파="FF", 빨간색="FF", 녹색="00", 파란색="00").
 
@@ -55,7 +62,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 </StackPanel>
 ```
 
-### <span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>속성 요소 구문
+### <a name="span-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanspan-idpropertyelementsyntaxspanproperty-element-syntax"></a><span id="Property_element_syntax__"></span><span id="property_element_syntax__"></span><span id="PROPERTY_ELEMENT_SYNTAX__"></span>속성 요소 구문
 
 속성 요소 구문을 사용하여 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 정의할 수 있습니다. 이 구문은 이전 방법보다 더 자세하지만 [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.opacity.aspx) 같은 요소의 추가 속성 값을 지정할 수 있습니다. 속성 요소 구문을 포함한 XAML 구문에 대한 자세한 내용은 [XAML 개요](https://msdn.microsoft.com/library/windows/apps/Mt185595) 및 [XAML 구문 가이드](https://msdn.microsoft.com/library/windows/apps/Mt185596)를 참조하세요.
 
@@ -69,7 +76,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 </Rectangle>
 ```
 
-## <span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>선형 그라데이션 브러시
+## <a name="span-idlineargradientbrushesspanspan-idlineargradientbrushesspanspan-idlineargradientbrushesspanlinear-gradient-brushes"></a><span id="Linear_gradient_brushes_"></span><span id="linear_gradient_brushes_"></span><span id="LINEAR_GRADIENT_BRUSHES_"></span>선형 그라데이션 브러시
 
 [**LinearGradientBrush**](https://msdn.microsoft.com/library/windows/apps/BR210108)는 선을 따라 정의된 그라데이션으로 영역을 칠합니다. 이 선을 *그라데이션 축*이라고 합니다. [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 개체를 사용하여 그라데이션 축을 따라 그라데이션의 색과 위치를 지정합니다. 기본적으로 그라데이션 축은 브러시가 칠하는 영역의 왼쪽 위에서 오른쪽 아래로 실행되어 대각선 음영을 생성합니다.
 
@@ -99,7 +106,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ![그라데이션 중지점](images/linear-gradients-stops.png) [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx) 및 [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx) 속성을 시작 기본값인 `(0,0)` 및 `(1,1)`과는 다른 값으로 설정하여 그라데이션 중지점이 배치되는 선을 변경할 수 있습니다. **StartPoint** 및 **EndPoint** 좌표 값을 변경하여 가로 또는 세로 그라데이션을 만들거나, 그라데이션 방향을 반대로 하거나, 칠해진 전체 영역보다 적은 범위에 적용하기 위해 그라데이션 범위를 좁힐 수 있습니다. 그라데이션 범위를 좁히려면 **StartPoint** 및/또는 **EndPoint**의 값을 0에서 1 사이의 값으로 설정합니다. 예를 들어 브러시 왼쪽 절반에서 모두 페이드하고 오른쪽은 마지막 [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078) 색으로 고정되는 가로 그라데이션을 만들려는 경우 **StartPoint**를 `(0,0)`으로, **EndPoint**를 `(0.5,0)`으로 각각 지정합니다.
 
-### <span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>도구를 사용하여 그라데이션 만들기
+### <a name="span-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanspan-idusetoolstomakegradientsspanuse-tools-to-make-gradients"></a><span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>도구를 사용하여 그라데이션 만들기
 
 이제 선형 그라데이션의 작동 방식을 알았으므로 Visual Studio 또는 Blend를 사용하여 이러한 그라데이션을 보다 쉽게 만들 수 있습니다. 그라데이션을 만들려면 디자인 화면 또는 XAML 뷰에서 그라데이션을 적용할 개체를 선택합니다. **브러시**를 확장하고 **선형 그라데이션** 탭을 선택합니다(다음 스크린샷 참조).
 
@@ -109,7 +116,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 ![그라데이션 중지점을 제어하는 속성 창의 아래쪽에 있는 막대](images/tool-gradient-brush-2.png)
 
-## <span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>이미지 브러시
+## <a name="span-idimagebrushesspanspan-idimagebrushesspanspan-idimagebrushesspanimage-brushes"></a><span id="Image_brushes"></span><span id="image_brushes"></span><span id="IMAGE_BRUSHES"></span>이미지 브러시
 
 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101)는 이미지를 사용하여 영역을 그립니다. 그릴 이미지는 이미지 파일 원본에서 제공됩니다. 로드할 이미지의 경로를 사용하여 [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/BR210107) 속성을 설정합니다. 일반적으로 이미지 원본은 앱 리소스에 포함된 **Content** 항목에서 제공됩니다.
 
@@ -131,21 +138,21 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](https://msdn.microsoft.
 
 [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) 및 [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 여러 가능한 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://msdn.microsoft.com/library/windows/apps/Mt280382)를 참조하세요.
 
-## 브러시 및 텍스트
+## <a name="brushes-and-text"></a>브러시 및 텍스트
 
 브러시를 사용하여 텍스트 요소에 렌더링 특성을 적용할 수도 있습니다. 예를 들어 [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)의 [**Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) 속성은 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)를 사용합니다. 여기에 설명된 모든 브러시를 텍스트에 적용할 수 있습니다. 그러나 텍스트에 브러시를 적용할 때는 주의해야 합니다. 텍스트가 위에 렌더링되는 배경에 번지거나 텍스트 문자의 윤곽선을 흐리게 하는 브러시를 사용할 경우 텍스트를 읽을 수 없게 됩니다. 텍스트 요소를 주로 장식용으로 사용하려는 경우가 아니라면 대개의 경우 가독성을 위해 [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)를 사용하시기 바랍니다.
 
 단색을 사용하는 경우에도 선택한 텍스트 색이 텍스트 레이아웃 컨테이너의 배경색과 충분히 대비되는지 확인하세요. 텍스트 전경과 텍스트 컨테이너 배경 사이의 대비 수준은 접근성과 관련된 고려 사항입니다.
 
-## WebViewBrush
+## <a name="webviewbrush"></a>WebViewBrush
 
 [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703)는 일반적으로 [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) 컨트롤에 표시되는 콘텐츠에 액세스할 수 있는 특수 유형의 브러시입니다. 사각형 **WebView** 컨트롤 영역에 콘텐츠를 렌더링하는 대신 **WebViewBrush**는 렌더 화면에 대한 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 유형 속성이 있는 다른 요소에 해당 콘텐츠를 그립니다. **WebViewBrush**는 모든 브러시 시나리오에 적합하지는 않지만 **WebView** 전환에 유용합니다. 자세한 내용은 **WebViewBrush**를 참조하세요.
 
-## XAML 리소스인 브러시
+## <a name="brushes-as-xaml-resources"></a>XAML 리소스인 브러시
 
 XAML 리소스 사전에서 임의 브러시를 키 입력 XAML 리소스로 선언할 수 있습니다. 이렇게 하면 UI의 여러 요소에 적용할 때 동일한 브러시 값을 쉽게 복제할 수 있습니다. 그런 다음 브러시 값을 공유하고 XAML에서 브러시 리소스를 [{StaticResource}](https://msdn.microsoft.com/library/windows/apps/Mt185588) 사용으로 참조하는 모든 경우에 적용할 수 있습니다. 공유 브러시를 참조하는 XAML 컨트롤 템플릿이 있고 컨트롤 템플릿 자체가 키 입력 XAML 리소스인 경우도 여기에 포함됩니다.
 
-## 코드의 브러시
+## <a name="brushes-in-code"></a>코드의 브러시
 
 코드를 사용하여 브러시를 정의하는 것보다 XAML을 사용하여 브러시를 지정하는 것이 훨씬 더 일반적입니다. 왜냐하면 브러시는 보통 XAML 리소스로 정의되고 브러시 값은 디자인 도구에서 출력되거나 XAML UI 정의의 일부로 출력되는 경우가 자주 있기 때문입니다. 코드를 사용하여 브러시를 정의하는 특별한 경우에도 모든 [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) 유형을 코드 인스턴스화에 사용할 수 있습니다.
 
@@ -175,10 +182,5 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

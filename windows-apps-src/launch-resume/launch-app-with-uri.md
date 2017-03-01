@@ -2,9 +2,17 @@
 author: PatrickFarley
 title: "URI를 사용하여 앱 실행"
 description: "이 섹션에서는 URI(Uniform Resource Identifier)를 사용하여 다른 앱에서 앱을 실행하는 방법을 설명합니다."
+ms.assetid: a40c4ce2-4f41-4a55-aeb3-1beb3e84e839
+ms.author: pafarley
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: dfbfe75d19c08e549263b97350dfca1dbfb96447
-ms.openlocfilehash: e4b070db5180538732e08b10ace1aaa196ae5eaa
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 6dceda60b60b29f772ec4fab8b142b45cc387e75
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -26,8 +34,3 @@ ms.openlocfilehash: e4b070db5180538732e08b10ace1aaa196ae5eaa
 
 ## <a name="related-topics"></a>관련 항목
 * [원격 디바이스에서 앱 실행](launch-a-remote-app.md)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

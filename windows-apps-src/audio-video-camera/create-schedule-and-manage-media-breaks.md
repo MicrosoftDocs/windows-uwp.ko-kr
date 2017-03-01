@@ -1,22 +1,29 @@
 ---
 author: drewbatgit
-ms.assetid: 
+ms.assetid: 0309c7a1-8e4c-4326-813a-cbd9f8b8300d
 description: "이 문서에서는 미디어 재생 앱에서 미디어 중단을 만들고, 예약하고, 관리하는 방법을 보여 줍니다."
-title: "미디어 중단 만들기, 예약 및 관리"
+title: "미디어 휴지 만들기, 예약 및 관리"
+ms.author: drewbat
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: windows 10, uwp
 translationtype: Human Translation
-ms.sourcegitcommit: 2e969e53a29a98223f26353a5444ca9d9ebe2641
-ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
+ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
+ms.openlocfilehash: 8d4e9a87009b50538adac2357badc0a7dfe8f88c
+ms.lasthandoff: 02/08/2017
 
 ---
 
-# 미디어 중단 만들기, 예약 및 관리
+# <a name="create-schedule-and-manage-media-breaks"></a>미디어 휴지 만들기, 예약 및 관리
 
 이 문서에서는 미디어 재생 앱에서 미디어 중단을 만들고, 예약하고, 관리하는 방법을 보여 줍니다. 미디어 중단은 일반적으로 미디어 콘텐츠에 오디오 또는 비디오 광고를 추가하는 데 사용됩니다. Windows 10 버전 1607부터 [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) 클래스를 사용하여 [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)에서 재생하는 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)에 미디어 중단을 쉽고 빠르게 추가할 수 있습니다.
 
 
 하나 이상의 미디어 중단을 예약하면 재생 중 지정된 시간에 미디어 콘텐츠가 자동으로 재생됩니다. **MediaBreakManager**는 미디어 중단이 시작되거나 종료될 때 또는 사용자가 건너뛸 때 앱에서 반응할 수 있도록 이벤트를 제공합니다. 미디어 중단에 대한 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)에 액세스하여 다운로드 및 버퍼링 진행 업데이트와 같은 이벤트를 모니터링할 수도 있습니다.
 
-## 미디어 중단 예약
+## <a name="schedule-media-breaks"></a>미디어 중단 예약
 모든 **MediaPlaybackItem** 개체에는 항목을 재생할 때 재생되는 미디어 중단을 구성하는 데 사용하는 해당 [**MediaBreakSchedule**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakSchedule)이 있습니다. 앱에서 미디어 중단을 사용하기 위한 첫 번째 단계는 기본 재생 콘텐츠에 대한 [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)을 만드는 것입니다. 
 
 [!code-cs[MoviePlaybackItem](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMoviePlaybackItem)]
@@ -51,12 +58,12 @@ ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
 
 [!code-cs[MidrollBreak2](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetMidrollBreak2)]
 
-## 미디어 중단 건너뛰기
+## <a name="skip-media-breaks"></a>미디어 중단 건너뛰기
 이 문서의 앞부분에서 설명한 것처럼 사용자가 기본 제공 컨트롤을 사용하여 콘텐츠를 건너뛰지 못하도록 **MediaPlaybackItem**의 [**CanSkip**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.CanSkip) 속성을 설정할 수 있습니다. 하지만 언제든지 코드에서 [**SkipCurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.SkipCurrentBreak)를 호출하여 현재 중단을 건너뛸 수 있습니다.
 
 [!code-cs[SkipButtonClick](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetSkipButtonClick)]
 
-## MediaBreak 이벤트 처리
+## <a name="handle-mediabreak-events"></a>MediaBreak 이벤트 처리
 
 미디어 중단 상태 변경에 따라 작업을 수행하기 위해 등록할 수 있는 여러 개의 미디어 중단 관련 이벤트가 있습니다.
 
@@ -80,12 +87,12 @@ ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## 현재 미디어 중단에 대한 정보 가져오기
+## <a name="get-information-about-the-current-media-break"></a>현재 미디어 중단에 대한 정보 가져오기
 이 문서의 앞부분에서 설명한 것처럼 [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex) 속성을 사용하여 현재 재생 중인 미디어 중단의 미디어 항목을 확인할 수 있습니다. UI를 업데이트하기 위해 현재 재생 중인 항목을 정기적으로 확인하는 것이 좋습니다. 먼저 [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak) 속성이 null인지 확인해야 합니다. 속성이 null이면 현재 재생 중인 미디어 중단이 없습니다.
 
 [!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
-## 현재 재생 세션 액세스
+## <a name="access-the-current-playback-session"></a>현재 재생 세션 액세스
 [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) 개체는 **MediaPlayer** 클래스를 사용하여 현재 재생 중인 미디어 콘텐츠와 관련된 데이터 및 이벤트를 제공합니다. [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager)에는 특히 재생 중인 미디어 중단 콘텐츠와 관련된 데이터 및 이벤트를 가져오기 위해 액세스할 수 있는 **MediaPlaybackSession**도 있습니다. 재생 세션에서 가져올 수 있는 정보에는 현재 재생 상태(재생 중 또는 일시 중지됨), 콘텐츠 내의 현재 재생 위치 등이 포함됩니다. 미디어 중단 콘텐츠의 가로 세로 비율이 기본 콘텐츠와 다른 경우 [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) 및 [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) 속성과 [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged)를 사용하여 비디오 UI를 조정할 수 있습니다. 앱 성능에 대한 중요한 원격 분석을 제공할 수 있는 [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded), [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged) 등의 이벤트를 받을 수도 있습니다.
 
 다음 예제에서는 **BufferingProgressChanged 이벤트**의 처리기를 등록합니다. 이벤트 처리기에서 UI를 업데이트하여 현재 버퍼링 진행 상황을 표시합니다.
@@ -94,7 +101,7 @@ ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
 
 [!code-cs[BufferingProgressChanged](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBufferingProgressChanged)]
 
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
 * [MediaPlayer를 사용하여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
 * [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)
@@ -105,10 +112,5 @@ ms.openlocfilehash: 0fe495f3eb2c15ccff4a672abd904dc43cfdf193
 
 
 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

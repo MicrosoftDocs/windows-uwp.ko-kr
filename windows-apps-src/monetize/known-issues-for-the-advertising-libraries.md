@@ -3,46 +3,53 @@ author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: "Microsoft Store Services SDK에 있는 Microsoft Advertising 라이브러리 최신 릴리스의 알려진 문제에 대해 알아봅니다."
 title: "Microsoft Advertising 라이브러리의 알려진 문제"
+ms.author: mcleans
+ms.date: 02/08/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: "windows 10, uwp, 광고, 알려진 문제"
 translationtype: Human Translation
-ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
-ms.openlocfilehash: 7d0eeda4deac304fb9b573b6ed206a191f037a3e
+ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+ms.openlocfilehash: 54e3361ce9fdfc67495d41903b8b291931b7ee9f
+ms.lasthandoff: 02/07/2017
 
 ---
 
-# Microsoft Advertising 라이브러리의 알려진 문제
+# <a name="known-issues-for-the-microsoft-advertising-libraries"></a>Microsoft Advertising 라이브러리의 알려진 문제
 
 
 
 
 이 항목에서는 Microsoft Store Services SDK(UWP 앱용)와 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x(Windows 8.1 및 Windows Phone 8.x 앱용)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에 대한 알려진 문제를 나열합니다.
 
-## Microsoft Store Services SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools가 필요합니다.
+## <a name="installation-of-microsoft-store-services-sdk-requires-visual-studio-tools-for-universal-windows-apps"></a>Microsoft Store Services SDK를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools가 필요합니다.
 
 Visual Studio 2015와 함께 [Microsoft Store Services SDK](http://aka.ms/store-em-sdk)를 설치하려면 유니버설 Windows 앱용 Visual Studio Tools 버전 1.1 이상이 설치되어 있어야 합니다. 자세한 내용은 Visual Studio [릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=624516)를 참조하세요.
 
-## Windows Phone 8.x Silverlight 프로젝트
+## <a name="windows-phone-8x-silverlight-projects"></a>Windows Phone 8.x Silverlight 프로젝트
 
 Microsoft Advertising SDK for Windows 및 Windows Phone 8.x는 Windows Phone 8.x Silverlight 프로젝트를 제한적으로 지원합니다. 자세한 내용은 [앱에서 광고 표시](display-ads-in-your-app.md#silverlight_support)를 참조하세요.
 
 Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리를 가져오려면 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](http://aka.ms/store-8-sdk)를 설치하고 Visual Studio에서 프로젝트를 연 다음 **프로젝트** > **연결된 서비스 추가** > **Ad Mediator**로 이동하여 어셈블리를 자동으로 다운로드 합니다. 이 작업을 수행한 후 광고 조정을 사용하지 않으려면 프로젝트에서 광고 조정자 참조를 제거할 수 있습니다. 자세한 내용은 [Windows Phone Silverlight의 AdControl](adcontrol-in-windows-phone-silverlight.md)을 참조하세요.
 
-## XAML의 알 수 없는 AdControl 인터페이스
+## <a name="adcontrol-interface-unknown-in-xaml"></a>XAML의 알 수 없는 AdControl 인터페이스
 
 [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)의 XAML 태그는 해당 인터페이스가 알 수 없음을 암시하는 파란색 곡선을 잘못 표시할 수 있습니다. 이 문제는 X86을 대상으로 하는 경우에만 발생하며 무시해도 됩니다.
 
-## 이전 광고 요청의 lastError
+## <a name="lasterror-from-previous-ad-request"></a>이전 광고 요청의 lastError
 
 이전 광고 요청에서 남은 **lastError**가 있으면 다음 광고 호출 동안 이 이벤트가 두 번 발생할 수 있습니다. 새 광고 요청은 여전히 진행되고 유효한 광고를 생성할 수 있지만 이 동작 때문에 혼동을 일으킬 수 있습니다.
 
-## 휴대폰의 중간 광고 및 탐색 단추
+## <a name="interstitial-ads-and-navigation-buttons-on-phones"></a>휴대폰의 중간 광고 및 탐색 단추
 
 하드웨어 단추 대신 소프트웨어 **뒤로**, **시작**, 및 **검색** 단추가 있는 휴대폰(또는 에뮬레이터)에서 동영상 중간 광고에 대한 카운트다운 타이와 클릭 단추가 가려질 수 있습니다.
 
-## 최근에 만든된 광고가 앱에 제공되지 않음
+## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 만든된 광고가 앱에 제공되지 않음
 
 최근(하루 이내)에 광고를 만든 경우 즉시 사용하지 못할 수도 있습니다. 광고의 편집 콘텐츠가 승인되면 광고 서버에서 해당 광고를 처리하고 광고가 제공됩니다. 그러면 광고를 인벤토리로 사용할 수 있게 됩니다.
 
-## 앱에 광고가 표시되지 않음
+## <a name="no-ads-are-shown-in-your-app"></a>앱에 광고가 표시되지 않음
 
 광고를 볼 수 없는 이유는 네트워크 오류를 포함하여 다양합니다. 다양한 이유는 다음과 같습니다.
 
@@ -56,7 +63,7 @@ Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리
 
 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=401266)에서 질문을 게시할 수도 있습니다.
 
-## 라이브 광고가 아닌 테스트 광고가 앱에 표시됨
+## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>라이브 광고가 아닌 테스트 광고가 앱에 표시됨
 
 라이브 광고가 나와야 하는데 테스트 광고가 표시될 수 있습니다. 이러한 상황은 다음과 같은 시나리오에서 발생할 수 있습니다.
 
@@ -66,7 +73,7 @@ Windows Phone 8.x Silverlight 프로젝트용 Microsoft Advertising 어셈블리
 
 라이브 광고 단위가 테스트 광고를 제공하는 경우 Windows 개발자 센터에서 광고 단위의 상태가 **활성 및 테스트 광고 제공**으로 표시됩니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
-## 광고 단위 ID 및 응용 프로그램 ID에 대한 이전 테스트 값이 더 이상 작동하지 않음
+## <a name="obsolete-test-values-for-ad-unit-id-and-application-id-no-longer-working"></a>광고 단위 ID 및 응용 프로그램 ID에 대한 이전 테스트 값이 더 이상 작동하지 않음
 
 Windows Phone Silverlight 앱에 대한 다음 테스트 값은 더 이상 사용되지 않으므로 작동하지 않습니다. 이러한 테스트 값을 사용하는 기존 프로젝트가 있는 경우 [테스트 모드 값](test-mode-values.md)에 제공된 값을 사용하도록 프로젝트를 업데이트합니다.
 
@@ -78,7 +85,7 @@ Windows Phone Silverlight 앱에 대한 다음 테스트 값은 더 이상 사�
 | test_client     |  Image480_80   |
 
 <span id="reference_errors"/>
-## 프로젝트에서 모든 CPU를 대상으로 할 경우 발생하는 참조 오류
+## <a name="reference-errors-caused-by-targeting-any-cpu-in-your-project"></a>프로젝트에서 모든 CPU를 대상으로 할 경우 발생하는 참조 오류
 
 Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어떤 CPU**도 대상으로 지정할 수 없습니다. 프로젝트의 대상이 **모든 CPU** 플랫폼인 경우 다음과 유사한 참조를 추가한 후 경고가 나타날 수 있습니다.
 
@@ -94,21 +101,21 @@ Microsoft Advertising 라이브러리를 사용할 때는 프로젝트의 **어�
 
 ![createapppackages](images/13-16280cb1-a838-42b9-9256-eac7f33f5603.png)
 
-## JavaScript/HTML 앱의 Z-순서
+## <a name="z-order-in-javascripthtml-apps"></a>JavaScript/HTML 앱의 Z-순서
 
 JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치하지 않아야 합니다. 유일한 예외는 인터럽트 오버레이(예: Skype 앱에 대한 인바운드 호출 알림)입니다.
 
 <span id="bkmk-ui"/>
-## 테두리를 사용하지 않음
+## <a name="do-not-use-borders"></a>테두리를 사용하지 않음
 
 **AdControl**에 의해 부모 클래스에서 상속된 테두리 관련 속성을 설정하면 광고 배치가 잘못될 수 있습니다.
 
-## 추가 정보
+## <a name="more-information"></a>추가 정보
 
 
 Microsoft Advertising 라이브러리와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](http://go.microsoft.com/fwlink/p/?LinkId=401266)을 방문하세요.
 
-## 지원
+## <a name="support"></a>지원
 
 
 Microsoft Advertising 라이브러리 관련 문제를 해결하기 위해 제품 지원 서비스에 문의하려면 [지원 페이지](https://go.microsoft.com/fwlink/p/?LinkId=331508)를 방문하고 **앱에서 바로 광고**를 선택합니다.
@@ -116,9 +123,4 @@ Microsoft Advertising 라이브러리 관련 문제를 해결하기 위해 제�
  
 
  
-
-
-
-<!--HONumber=Sep16_HO2-->
-
 
